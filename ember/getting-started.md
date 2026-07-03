@@ -1,6 +1,6 @@
 ---
-slug: first-step
-title: Getting Started
+slug: first-steps
+title: Quick Start Guide
 ---
 import Image from '@theme/IdealImage';
 
@@ -10,9 +10,6 @@ Welcome! This page helps you **power up** your HARDWARIO **EMBER** and choose wh
 - Run a **managed LoRaWAN backend** via **EMBER Cloud Service** (ChirpStack + Node-RED)
 - Connect EMBER to your own **ChirpStack**
 - Connect EMBER to **The Things Stack (TTS)**
-
-Official documentation:
-- https://docs.hardwario.com/ember/
 
 ---
 
@@ -39,7 +36,7 @@ Hardware description: https://docs.hardwario.com/ember/hardware-description/
 
 ---
 
-## 1) Set up your EMBER
+## Step 1: Set up your EMBER
 
 #### 1.1 Attach antennas (important)
 - **Attach the LoRaWAN antenna before powering on.**
@@ -64,7 +61,7 @@ For outdoor installations, **EMBER Hotspot** has to be mounted with connectors f
 
 ---
 
-## 2) Connect for local access
+## Step 2: Connect for local access
 
 EMBER runs **MikroTik RouterOS**.  
 For initial access and management, use the WAN interface (leftmost RJ-45 port) and standard RouterOS tools.
@@ -84,7 +81,7 @@ After opening the application, look at the list where you should see your **EMBE
 
 ---
 
-## 3) Initial RouterOS Configuration Script
+## Step 3: Initial RouterOS Configuration Script
 
 ### 3.1 Set Password
 **Open a New Terminal window** (or connect via SSH to your EMBER at `172.31.255.254`):
@@ -193,7 +190,7 @@ After upgrade you need to reboot the Ember. In the left panel, go to **System â†
 
 ---
 
-## 4) Choose your LoRaWAN backend 
+## Step 4: Choose your LoRaWAN backend
 
 ### EMBER Cloud Service (managed backend)
 
@@ -257,7 +254,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 
 ---
 
-## 5) Summary checklist
+## Step 5: Summary checklist
 
 - LoRaWAN antenna attached (required)
 - Power connected (24 V DC or 24 V passive PoE via WAN)

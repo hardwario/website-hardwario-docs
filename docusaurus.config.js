@@ -177,6 +177,29 @@ const config = {
       },
     ],
     require.resolve('docusaurus-plugin-image-zoom'),
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/chester/first-step',
+            to: '/chester/first-steps',
+          },
+          {
+            from: '/sticker/first-step',
+            to: '/sticker/first-steps',
+          },
+          {
+            from: '/glider/first-step',
+            to: '/glider/first-steps',
+          },
+          {
+            from: '/ember/first-step',
+            to: '/ember/first-steps',
+          },
+        ],
+      },
+    ],
   ],
 
   themeConfig:

@@ -9,38 +9,36 @@ title: Introduction
 
 The device hosts a web based user interface used for it’s configuration. It can also be controlled through an HTTP API. The counter values can be read via Modbus TCP.
 
-## Basic Features
+:::tip
+### To get your GAUGER running, read the [**Initial Configuration**](operation-instructions/initial-configuration.md) guide.
+:::
 
-- galvanically separated digital inputs
-- 10/100 Base-T Ethernet connectivity
-- 2.4GHz WiFi (802.11 b/g/n) connectivity
-- DIN rail mount
-- Modbus TCP server for reading couter values
-- Configuration web site
-- HTTP based configuration API
-- Over-the-air firmware update functionality
+<img src="/img/gauger-intro.webp" data-zoom-src="/img/gauger-intro.webp" width="540" alt="GAUGER" />
 
-## Applications
+## Quick Links
 
-- Remotely collect values from various electricity, water consumption and gas meters installed in hard-to-reach places
-- Connect to infrared gates you can log and monitor the number of people at various transition or transport stations to ensure smooth traffic and operation
-- Track the yield on production lines and thus ensure the overall production is always up to speed without downtime
+* [**Initial Configuration**](operation-instructions/initial-configuration.md) – Connect to and set up your GAUGER for the first time.
+* [**Hardware Description**](hardware-description.md) – Electrical, physical, and input specifications.
+* [**Detailed Description**](category/detailed-description) – Connectors, device states, DHCP behavior, HTTP API, Modbus registers, power supply.
+* [**Operation Instructions**](category/operation-instructions) – Configuration reset, device discovery, firmware management.
+* [**Changelog**](changelog) – Latest firmware and platform changes.
 
-## Basic Parameters
+## Typical Use Cases
 
-| **Electrical**            |                  |
-| :------------------------ | ---------------: |
-| Minimal supply voltage    |               9V |
-| Maximum supply voltage    |              36V |
-| Maximum input voltage     |              60V |
-| Input threshold voltage   |              12V |
-| Typical power consumption |               1W |
-| Maximum power consumption |              24W |
-| **Physical**              |                  |
-| Enclosure Dimensions      |       80x90x33mm |
-| Enclosure material        |              ABS |
-| Operation temperature     | -40 °C to +85 °C |
-| **Inputs**                |                  |
-| Ethernet class            |            CAT 5 |
-| Maximum input voltage     |          26 V DC |
-| Type of input logic       |              PNP |
+- Water flow and gas consumption metering in hard-to-reach places
+- People counting via infrared gates at transition or transport stations
+- Device RPM and production line yield tracking
+- Industrial IoT sensing in buildings and urban areas
+
+## Key Features
+
+| Feature | Description |
+|---|---|
+| **Galvanically Separated Inputs** | Up to four isolated digital pulse-counting inputs. |
+| **Ethernet Connectivity** | 10/100 Base-T wired networking. |
+| **WiFi Connectivity** | 2.4GHz WiFi (802.11 b/g/n). |
+| **DIN Rail Mount** | Industrial DIN rail enclosure. |
+| **Modbus TCP Server** | Read counter values over Modbus TCP. |
+| **Web Configuration** | Built-in configuration web site. |
+| **HTTP API** | HTTP-based configuration API. |
+| **OTA Updates** | Over-the-air firmware update functionality. |

@@ -9,43 +9,26 @@ import Image from '@theme/IdealImage';
 **HARDWARIO CHESTER** is a highly configurable IoT **LPWAN** gateway. Its primary function is to connect as many devices and environments as possible to the Internet, especially from places where there is no standard connection to the power grid and the Internet.
 
 :::tip
-### To get your CHESTER running, read the [**Quick Start Guide**](first-step.md).
+### To get your CHESTER running, read the [**Quick Start Guide**](first-steps.md).
 :::
 
-This documentation helps users and gateway integrators to navigate these essential areas:
+<img src="/img/chester.png" data-zoom-src="/img/chester.png" width="540" alt="CHESTER" />
 
-* How to get started with CHESTER - see the article:<br/>
-  [**Quick Start Guide**](first-step.md)
+## Quick Links
 
-* How to configure and manage the platform - see the article:<br/>
-  [**Platform Connectivity**](category/platform-connectivity)
-
-* What ready-made firmware applications are available (with devices in stock) - see the article:<br/>
-  [**Catalog Applications**](catalog-applications/index.md)
-
-* Extendsion modules for connecting sensors and enviroments to the platform and how - see the article:<br/>
-  [**Extension Modules**](extension-modules/index.md)
-
-* Which sensors and environments can be connected to the platform and how - see the article:<br/>
-  [**Supported Sensors**](supported-devices/index.md)
-
-* What are the main parts and parameters of the **CHESTER** platform - see the article:<br/>
-  [**Hardware Description**](category/hardware-description)
-
-* What are the platform's powering options - see the article:<br/>
-  [**Power Management**](power-management.md)
-
-* For the options to upload device firmware - see the article:<br/>
-  [**Firmware Flashing**](./firmware-flashing/index.md)
-
-* How to create or modify firmware application - see the article:<br/>
-  [**Firmware SDK**](category/firmware-sdk)
-
-* On tool ecosystem for platform developers - see the article:<br/>
-  [**Developer Tools**](category/developer-tools)
-
-* How the platform handles data security - see the article:<br/>
-  [**Platform Security**](./platform-security/index.md)
+* [**Quick Start Guide**](first-steps.md) – Step-by-step setup guide.
+* [**Platform Connectivity**](category/platform-connectivity) – Configure and manage the platform.
+* [**Catalog Applications**](catalog-applications/index.md) – Ready-made firmware applications for devices in stock.
+* [**Extension Modules**](extension-modules/index.md) – Connect sensors and environments to the platform.
+* [**Hardware Description**](category/hardware-description) – Main parts and parameters of the CHESTER platform.
+* [**Ordering Codes**](./ordering-codes.md) – Complete reference of product ordering codes.
+* [**Supported Sensors**](supported-devices/index.md) – Which sensors and environments can be connected, and how.
+* [**Power Management**](power-management.md) – The platform's powering options.
+* [**Firmware Flashing**](./firmware-flashing/index.md) – Options to upload device firmware.
+* [**Firmware SDK**](category/firmware-sdk) – Create or modify a firmware application.
+* [**Developer Tools**](category/developer-tools) – Tool ecosystem for platform developers.
+* [**Platform Security**](./platform-security/index.md) – How the platform handles data security.
+* [**Video Tutorials**](videos-chester/index.md) – Short videos on connecting, updating, and pairing CHESTER.
 
 <!--
 
@@ -62,14 +45,24 @@ TODO Enable these articles
 
 -->
 
-* For a complete reference on the product ordering codes - see the article:<br/>
-  [**Ordering Codes**](./ordering-codes.md)
+* [**Product Certification**](./product-certification.md) – Complete reference of product certification.
+* [**Catalog Application Changelog**](catalog-applications/changelog.md) – Latest SDK releases, firmware versions, and per-application changes.
+* [**CHESTER Platform Changelog**](./changelog.md) – Complete platform log including SDK changes and hardware revisions.
 
-* To see the complete reference of the product certification - see the article:<br/>
-  [**Product Certification**](./product-certification.md)
+## Typical Use Cases
 
-* For the latest SDK releases, firmware versions, and per-application changes - see the article:<br/>
-  [**Catalog Application Changelog**](catalog-applications/changelog.md)
+- Remote monitoring systems in places without standard power or internet
+- Asset tracking and condition monitoring across LoRaWAN networks
+- Smart agriculture: soil moisture, weather, and irrigation monitoring
+- Industrial automation solutions
+- Reliable deployment in harsh, rugged environments
 
-* For the complete platform log including all SDK changes and hardware revisions - see the article:<br/>
-  [**CHESTER Platform Changelog**](./changelog.md)
+## Key Features
+
+| Feature | Description |
+|---|---|
+| **Multi-Radio LPWAN** | NB-IoT, LTE-M, LoRaWAN, BLE, and GNSS radio technologies in a single gateway. |
+| **Catalog Applications** | Ready-to-use firmware for common sensing and control use cases. |
+| **Extension Modules** | Extensible hardware for connecting sensors and external environments. |
+| **HARDWARIO Cloud** | Managed and monitored through the HARDWARIO Cloud platform. |
+| **Firmware SDK** | Open SDK for building fully custom applications. |

@@ -28,9 +28,7 @@ The following parameters can be set via NFC:
 - Capability flags
 - Calibration mode
 
-:::info
-A HARDWARIO NFC provisioning and configuration application is currently under development.
-:::
+Once configured, you can read and write these parameters using the [**HARDWARIO STICKER NFC Configurator**](nfc-configurator-app/setup.md).
 
 For more details on NFC energy harvesting and power behavior, see [**Power Management**](https://docs.hardwario.com/sticker/power-management/).
 

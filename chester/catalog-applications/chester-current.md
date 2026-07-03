@@ -3,7 +3,7 @@
 This article describes the core functionality, hardware description, default configuration, example JSON message, and channel calibration of the catalog application **CHESTER Current**.
 
 > **Caution:** Some of the basics are not provided, as they are common for all CHESTER catalog applications. Please see:
-> - [**Getting started**](https://docs.hardwario.com/chester/getting-started/first-step) on how to connect device to Cloud.
+> - [**Getting started**](https://docs.hardwario.com/chester/first-steps) on how to connect device to Cloud.
 > - [**Common functionality**](https://docs.hardwario.com/chester/catalog-applications/common-functionality) to know how LED, button and network configuration works.
 > - [**Platform Management**](https://docs.hardwario.com/chester/category/platform-connectivity) on how to work with the interactive console.
 

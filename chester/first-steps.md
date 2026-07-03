@@ -1,5 +1,5 @@
 ---
-slug: first-step
+slug: first-steps
 title: Quick Start Guide
 ---
 import Image from '@theme/IdealImage';

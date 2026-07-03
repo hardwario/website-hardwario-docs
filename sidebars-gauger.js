@@ -4,6 +4,7 @@
 const sidebars = {
   docs: [
     'introduction',
+    'hardware-description',
     {
       type: 'category',
       label: 'Detailed Description',

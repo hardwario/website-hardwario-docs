@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 GLIDER ships ready to talk to **HARDWARIO Cloud** out of the box. All you need is to register the device in the web UI using two pieces of information that are unique to every unit: the **serial number** and the **claim token**.
 
 :::tip
-This page is a focused walk-through of the cloud pairing. For the full end-to-end setup (Cloud account, space, device, power-up, LED check), see the [**Quick Start Guide**](first-step.md).
+This page is a focused walk-through of the cloud pairing. For the full end-to-end setup (Cloud account, space, device, power-up, LED check), see the [**Quick Start Guide**](first-steps.md).
 :::
 
 ## What you will need

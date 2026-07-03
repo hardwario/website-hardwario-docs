@@ -21,7 +21,7 @@ import Image from '@theme/IdealImage';
 
 Some of the basics are not provided, as they are common for all CHESTER catalog applications. Please see:
 
-- [**Getting started**](https://docs.hardwario.com/chester/getting-started/first-step) on how to connect device to Cloud.
+- [**Getting started**](https://docs.hardwario.com/chester/first-steps) on how to connect device to Cloud.
 - [**Common functionality**](common-functionality.md) to know how LED, button and network configuration works.
 - [**Platform Management**](../category/platform-connectivity) on how to work with the interactive console.
 

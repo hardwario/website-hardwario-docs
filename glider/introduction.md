@@ -8,37 +8,39 @@ import Image from '@theme/IdealImage';
 
 **HARDWARIO GLIDER** is a compact **LTE-M / NB-IoT** IoT device built around the Nordic **nRF9151** SoC. It is designed for long-term, low-power monitoring of temperature, pulse counters, dry-contact events and **Modbus RTU** devices, and ships preconfigured to talk to **HARDWARIO Cloud**.
 
-<Image img={require('./images/glider.png')} />
-
 :::tip
-### To get your GLIDER running, read the [**Quick Start Guide**](first-step.md).
+### To get your GLIDER running, read the [**Quick Start Guide**](first-steps).
 :::
 
-This documentation helps users and integrators to navigate these essential areas:
+<img src="/img/glider.png" data-zoom-src="/img/glider.png" width="540" alt="GLIDER" />
 
-* How to get started with GLIDER - see the article:<br/>
- [**Quick Start Guide**](first-step.md)
+## Quick Links
 
-* How to pair the device with the platform - see the article:<br/>
- [**HARDWARIO Cloud Setup**](cloud-setup.md)
+* [**Quick Start Guide**](first-steps.md) – Step-by-step setup guide.
+* [**HARDWARIO Cloud Setup**](cloud-setup.md) – Pair the device with the platform.
+* [**Hardware Description**](hardware-description.md) – Main parts and parameters of the GLIDER device.
+* [**External Sensors**](external-sensors/index.md) – Wire and configure external sensors.
+* [**Firmware Flashing**](firmware-flashing/index.md) – Options to upload device firmware.
+* [**Console Access**](category/console-access) – Talk to GLIDER over USB-C or J-Link.
+* [**Configuration**](configuration.md) – Fine-tune the firmware behavior.
+* [**Commands**](category/commands) – What commands the device understands.
+* [**CBOR Payload**](payload.md) – How the device encodes the data it sends to the cloud.
 
-* How to talk to GLIDER over USB-C or J-Link - see the article:<br/>
- [**Console Access**](category/console-access)
+## Typical Use Cases
 
-* How to wire and configure external sensors - see the article:<br/>
- [**External Sensors**](external-sensors/index.md)
+- Remote temperature monitoring in cold chains, warehouses, or greenhouses
+- Utility metering via pulse counting (water, gas, electricity)
+- Door, window, or other dry-contact event logging
+- Integrating Modbus RTU industrial sensors into HARDWARIO Cloud
 
-* How to fine-tune the firmware behavior - see the article:<br/>
- [**Configuration**](configuration.md)
+## Key Features
 
-* What commands the device understands - see the article:<br/>
- [**Commands**](category/commands)
+| Feature | Description |
+|---|---|
+| **Cellular Connectivity** | Compact LTE-M / NB-IoT built on the Nordic nRF9151. |
+| **Long-Term Monitoring** | Low-power tracking of temperature, pulse counters, and dry-contact events. |
+| **Modbus RTU Support** | Native integration with industrial Modbus RTU sensors. |
+| **HARDWARIO Cloud Ready** | Ships preconfigured to connect straight to HARDWARIO Cloud. |
+| **USB-C / J-Link Consoles** | Configurable and diagnosable over either console. |
 
-* How the device encodes the data it sends to the cloud - see the article:<br/>
- [**CBOR Payload**](payload.md)
 
-* What are the main parts and parameters of the **GLIDER** device - see the article:<br/>
- [**Hardware Description**](hardware-description.md)
-
-* For the options to upload device firmware - see the article:<br/>
- [**Firmware Flashing**](firmware-flashing/index.md)

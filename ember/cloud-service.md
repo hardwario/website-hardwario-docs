@@ -14,6 +14,8 @@ Access is secured by the **HTTPS/TLSv1.3** protocol, and the user identity is cr
 
 You do not need any specialized software on your PC/mobile to manage the service. An up-to-date web browser is sufficient.
 
+The **EMBER Cloud** service operates on the virtual private servers of the [**Digital Ocean**](https://www.digitalocean.com/products/droplets) cloud computing service.
+
 ## Web Management
 
 The web management provides access to **ChirpStack** and **Node-RED** applications through the **Teleport** service.

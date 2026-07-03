@@ -96,11 +96,25 @@ Device status is indicated by a **multi-color LED (R/G/Y)** and communication is
 
 ---
 
-## Enclosures
+## Technical Specification
 
-| **Parameter**        | **Value**             |
-|-----------------------|-----------------------|
-| **Enclosure material**| ABS                   |
-| **Dimension**         | 91 × 36.5 × 33.3 mm   |
+| **Category** | **Parameter** | **Value** |
+|-------------------|---------------------------|------------------------------------|
+| **Structure** | Enclosure material        | ABS                                |
+|                   | Dimension                 | 91 × 36.5 × 33.3 mm                |
+| **Power** | Nominal cell voltage      | 1.5 V                              |
+|                   | Nominal battery capacity  | 3000 mAh                           |
+|                   | Operating voltage range   | 1.8 V to 3.6 V                     |
+|                   | Idle power consumption    | < 80 µA                            |
+|                   | Peak power consumption    | < 100 mA                           |
+| **Environment** | Operating temperature     | -30 °C to +70 °C                   |
+|                   | Storage temperature       | -40 °C to +85 °C                   |
+|                   | Enclosure protection      | IP40                               |
+| **Sensors** | Integrated thermometer – Measurement range   | -40 °C to +105 °C     |
+|                   | Integrated thermometer – Measurement accuracy| ±0.2 % (0 °C to 65 °C) |
+|                   | Integrated hygrometer – Measurement range    | 0 % to 100 %           |
+|                   | Integrated hygrometer – Measurement accuracy | ±2 % (from 10 % to 90 %) |
+|                   | PIR – Detection range     | 4 m                                |
+|                   | PIR – Viewing angle       | ≥ 50°                              |
 
 ![Sticker - Catalog](images/sticker.png)

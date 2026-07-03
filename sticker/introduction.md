@@ -8,15 +8,20 @@ import Image from '@theme/IdealImage';
 
 **STICKER** is an open IoT platform based on STM32WL with integrated LoRaWAN connectivity. It is a compact, battery-powered device with long lifetime and ready-to-use applications such as STICKER Clime, Input, and Motion, making it ideal for flexible sensor deployments.
 
-![Sticker - Catalog](images/sticker.png)
+:::tip
+### To get your STICKER running, read the [**Quick Start Guide**](first-steps).
+:::
+
+<img src="/img/sticker.png" data-zoom-src="/img/sticker.png" width="540" alt="Sticker - Catalog" />
 
 ## Quick Links
 
-* [**Getting Started Guide**](https://docs.hardwario.com/sticker/getting-started) – Step-by-step setup guide.
+* [**Quick Start Guide**](first-steps) – Step-by-step setup guide.
 * [**Buy STICKER**](https://www.hardwario.store/sticker) – Purchase on our store.
 * [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes) - List of components and part numbers.
 * [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description) - Technical details and hardware overview.
 * [**Official Product Page**](https://www.hardwario.com/sticker) – Features and overview.
+* [**Changelog**](changelog) – Latest SDK releases, firmware versions, and per-application changes.
 
 ## Typical Use Cases
 
@@ -38,25 +43,3 @@ import Image from '@theme/IdealImage';
 | **Industrial Logic Inputs**| Supports up to 2 digital inputs for 24V industrial logic.                                                   |
 | **Voltage Measurement** | Measure up to 2 channels of voltage up to 30V.                                                              |
 | **Open-source SDK** | Built on the Zephyr OS SDK, can be easily customized.                                                       |
-
-
-## Technical Specification
-
-| **Category** | **Parameter** | **Value** |
-|-------------------|---------------------------|------------------------------------|
-| **Structure** | Enclosure material        | ABS                                |
-|                   | Dimension                 | 91 × 36.5 × 33.3 mm                |
-| **Power** | Nominal cell voltage      | 1.5 V                              |
-|                   | Nominal battery capacity  | 3000 mAh                           |
-|                   | Operating voltage range   | 1.8 V to 3.6 V                     |
-|                   | Idle power consumption    | < 80 µA                            |
-|                   | Peak power consumption    | < 100 mA                           |
-| **Environment** | Operating temperature     | -30 °C to +70 °C                   |
-|                   | Storage temperature       | -40 °C to +85 °C                   |
-|                   | Enclosure protection      | IP40                               |
-| **Sensors** | Integrated thermometer – Measurement range   | -40 °C to +105 °C     |
-|                   | Integrated thermometer – Measurement accuracy| ±0.2 % (0 °C to 65 °C) |
-|                   | Integrated hygrometer – Measurement range    | 0 % to 100 %           |
-|                   | Integrated hygrometer – Measurement accuracy | ±2 % (from 10 % to 90 %) |
-|                   | PIR – Detection range     | 4 m                                |
-|                   | PIR – Viewing angle       | ≥ 50°                              |

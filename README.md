@@ -1,51 +1,81 @@
-# docs
 # HARDWARIO Documentation
-# Technical Resources for Products and Services
 
-This website is built using [Docusaurus 3](https://docusaurus.io), a modern static website generator.
+Technical documentation for HARDWARIO products and services —
+[docs.hardwario.com](https://docs.hardwario.com). Built with
+[Docusaurus 3](https://docusaurus.io). A multi-instance site: each product has its
+own doc set served under `/<product>/`.
 
-## Requirements
+## Tech stack
 
-* Node.js version 18+.
+- **Docusaurus 3** — React + MDX static site generator
+- **Multi-instance docs** — one `@docusaurus/plugin-content-docs` instance per product
+- **Local search** — offline site-wide search via `@easyops-cn/docusaurus-search-local`
+- **Cloudflare Workers** — hosting (static assets, auto-deploy via Workers Builds)
 
-## Installation
+## Develop
 
-Clone the repository:
-
-```
-$ git clone git@github.com:hardwario/docs.git
-```
-
-Install the required packages:
-
-```
-$ npm install
-```
-
-## Development
-
-Start the development server:
-
-```
-$ npm start
+```bash
+npm install        # first time / after dependency changes (Node 18+)
+npm start          # dev server → http://localhost:3000, hot reload
+npm run build      # production build → build/ (fails on broken links)
+npm run serve      # serve the production build locally
+npm run clear      # clear the Docusaurus cache
 ```
 
-> This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-Start the production build:
+## Project structure
 
 ```
-$ npm run build
+docusaurus.config.js     # site config: presets, plugin instances, navbar, footer, search, theme
+sidebars-<product>.js    # one sidebar per product instance
+<product>/               # one content folder per product, served at /<product>/:
+                         #   chester, sticker, ember, fiber, gauger, tapper, tower,
+                         #   cloud, cloud-new, apps, milesight, glider, rakwireless
+src/
+  pages/index.js         # custom homepage
+  css/custom.css         # global styles / CSS variables
+static/                  # assets; reference images by absolute path (/img/…)
+                         #   incl. static/_redirects (same-domain slug redirects)
+wrangler.jsonc           # Cloudflare Worker config — serves build/ as static assets
 ```
 
-> This command generates static content into the `build` directory and can be served using any static contents hosting service.
+The main preset is the `chester` instance; the others are configured in the
+`plugins` array of `docusaurus.config.js`. See the `docusaurus-sites` skill in the
+website-admin repo for the multi-instance details.
 
-## License
+## Content
 
-This project is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0) - see the [LICENSE](LICENSE) file for details.
+- Docs are **Markdown/MDX** inside the relevant `<product>/` directory — identify
+  the right folder first, then preserve frontmatter.
+- Add new pages to the matching `sidebars-<product>.js`.
+- Internal links are relative within a product; cross-product links use absolute
+  paths (e.g. `/cloud/api`). **Broken internal links fail the build**
+  (`onBrokenLinks: 'throw'`).
+- Images live in `static/`, referenced as `/img/…`; the ideal-image and
+  image-zoom plugins handle optimization and click-to-zoom.
+- Match the existing technical, concise style and consistent product terminology.
+
+### Adding a new product doc set
+1. Create `<newproduct>/` at the repo root.
+2. Create `sidebars-<newproduct>.js` from an existing one.
+3. Add a `@docusaurus/plugin-content-docs` instance in `docusaurus.config.js`.
+4. Add a navbar entry under `themeConfig.navbar.items`.
+5. Add `introduction.md` as the entry point.
+
+## Search
+
+Offline/local search via the `@easyops-cn/docusaurus-search-local` theme,
+configured in `docusaurus.config.js` (the `themes` array). The index is built at
+`npm run build`; contextual search is disabled, so search spans all products.
+
+## Deployment
+
+Hosted on **Cloudflare Workers** (static assets) — **pushing to `main` auto-deploys**
+(Workers Builds runs `npm run build` then `npx wrangler deploy`, serving `build/`).
+After a push, confirm the live URL returns 200.
+`editUrl` in `docusaurus.config.js` points "Edit this page" links at this repo.
 
 ---
 
-Made with ❤️ by [**HARDWARIO a.s.**](https://www.hardwario.com) in the heart of Europe.
+Part of the [HARDWARIO websites](https://github.com/hardwario/website-admin) —
+managed from the **website-admin** control repo (shared Claude Code commands,
+skills, and environment). Content licensed under [CC BY-SA 4.0](LICENSE).

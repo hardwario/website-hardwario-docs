@@ -11,7 +11,7 @@ Here is list of tested sensors by HARDWARIO with basic configuration to use:
 
 # M-Bus (Meter-Bus) Communication Overview
 
-![M-Bus Architecture](images/m-bus_topology.png)
+![M-Bus Architecture](images/m-bus-topology.png)
 
 *Figure: Example of M-Bus topology with master and multiple slave meters connected via 2-wire bus.*
 

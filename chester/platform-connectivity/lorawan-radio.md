@@ -4,7 +4,7 @@ title: LoRaWAN Networks
 ---
 import Image from '@theme/IdealImage';
 
-CHESTER-M mainboard contains also LoRaWAN radio. [Catalog applications](catalog-applications/index.md) have both NB-IoT/LTE-M and LoRaWAN radio populated. Thanks to this you can easily switch to different radio just by a software reconfiguration.
+CHESTER-M mainboard contains also LoRaWAN radio. [Catalog applications](../catalog-applications/index.md) have both NB-IoT/LTE-M and LoRaWAN radio populated. Thanks to this you can easily switch to different radio just by a software reconfiguration.
 
 CHESTER is using **CMWX1ZZABZ-078** module from **Murata**. This module has manufacturer firmware that takes care of all the LoRaWAN communication. It is also possible to flash our own [lora-modem](https://github.com/hardwario/lora-modem) open-source firmware, which is backward-compatible with the manufacturer's, but also adds more functionality and higer LoRaWAN version support. It is also [very well documented](https://github.com/hardwario/lora-modem/wiki/AT-Command-Interface), however this AT communication is handled by CHESTER so all you need is to set-up keys as explained below.
 
@@ -37,7 +37,7 @@ Then apply changes by typing `config save`. The device will reboot and use the c
 
 ## EMBER LoRaWAN Gateway
 
-We also offer **LoRaWAN gateway EMBER** ([EMBER docs](../../ember), [EMBER e-shop](https://shop.hardwario.com/ember/)). This gateway can manage LoRaWAN communication with CHESTER and network software could be running in our HARDWARIO Cloud, or completely in your infrastructure. LoRaWAN network is very flexible, reliable with long range and we use it in big factories or large open areas.
+We also offer **LoRaWAN gateway EMBER** ([EMBER docs](../../ember), [EMBER e-shop](https://www.hardwario.store/ember/)). This gateway can manage LoRaWAN communication with CHESTER and network software could be running in our HARDWARIO Cloud, or completely in your infrastructure. LoRaWAN network is very flexible, reliable with long range and we use it in big factories or large open areas.
 
 EMBER is using [CHIRPSTACK](https://www.chirpstack.io/) and [Node-RED](https://nodered.org/) for device management and further integrations.
 

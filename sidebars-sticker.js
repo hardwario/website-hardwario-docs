@@ -5,7 +5,7 @@ const sidebars = {
   docs: [
     'introduction',
     'first-steps',
-    'configuration',
+    'features',
     {
       type: 'category',
       label: 'NFC Configurator APP',
@@ -13,6 +13,7 @@ const sidebars = {
       items: [
         'nfc-configurator-app/setup',
         'nfc-configurator-app/config',
+        'nfc-configurator-app/template-generator',
       ],
     },
     {
@@ -81,9 +82,28 @@ const sidebars = {
             'lorawan-network-server/tts-abp',
           ],
         },
+        'lorawan-network-server/downlink-commands-generator',
+        'lorawan-network-server/downlink-commands',
       ],
     },
-    'developer-mode',
+    {
+      type: 'category',
+      label: 'Developer Access',
+      link: {
+        type: 'doc',
+        id: 'developer-mode',
+      },
+      collapsed: true,
+      items: [
+        'developer-access/firmware-setup',
+        'developer-access/configuration',
+        'developer-access/alarm-rules',
+        'developer-access/sensor-history',
+        'developer-access/clock',
+        'developer-access/maintenance',
+        'developer-access/diagnostics',
+      ],
+    },
     'hardware-description',
     'power-management',
     'ordering-codes',

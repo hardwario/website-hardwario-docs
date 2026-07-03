@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 **Roles** define specific permissions and actions, and they are used within groups to assign those exact rights to a specific item or entity.
 
 :::info
-**Need to manage user access?** See the tutorial: [**How to Create Groups with Different Permissions**](apps\thingsboard\user-groups.md). It covers how to create new groups, assign generic or entity-specific roles, and control access to specific devices or dashboards.
+**Need to manage user access?** See the tutorial: [**How to Create Groups with Different Permissions**](./user-groups.md). It covers how to create new groups, assign generic or entity-specific roles, and control access to specific devices or dashboards.
 :::
 
 ## Creating New Roles

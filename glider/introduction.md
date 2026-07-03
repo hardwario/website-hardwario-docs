@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
 ### To get your GLIDER running, read the [**Quick Start Guide**](first-steps).
 :::
 
-<img src="/img/glider.png" data-zoom-src="/img/glider.png" width="540" alt="GLIDER" />
+<img src="/img/glider.webp" data-zoom-src="/img/glider.webp" width="540" alt="GLIDER" />
 
 ## Quick Links
 

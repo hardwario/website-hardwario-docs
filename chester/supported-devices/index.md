@@ -11,8 +11,8 @@ import Image from '@theme/IdealImage';
 
 | Supported Sensors |
 |-------------------|
-| [M-Bus Sensors](chester/supported-devices/m-bus.md)   |
-| [Modbus Sensors](chester/supported-devices/modbus.md)    |
-| [wm-Bus Sensors](chester/supported-devices/wm-bus.md)    |
-| [Serial Devices](chester/supported-devices/serial.md)    |
+| [M-Bus Sensors](./m-bus.md)   |
+| [Modbus Sensors](./modbus.md)    |
+| [wm-Bus Sensors](./wm-bus.md)    |
+| [Serial Devices](./serial.md)    |
 

@@ -19,7 +19,7 @@ https://mikrotik.com/download/winbox
 
 On the page, click **Windows (64-bit)** — this will download a `.zip` file.
 
-![Winbox 4 download page](images/Winbox-1.png)    
+![Winbox 4 download page](images/winbox-1.png)    
 
 ---
 
@@ -27,11 +27,11 @@ On the page, click **Windows (64-bit)** — this will download a `.zip` file.
 
 Open the folder where the file was downloaded. Right-click on the file and click **Extract All**.
 
-![Winbox 4 extract zip file](images/Winbox-2.png)
+![Winbox 4 extract zip file](images/winbox-2.png)
 
 Click the **Extract** button to extract the file.
 
-![Winbox 4 aply extract zip file](images/Winbox-3.png)
+![Winbox 4 aply extract zip file](images/winbox-3.png)
 
 
 ---
@@ -54,7 +54,7 @@ Click the link below and go to the MikroTik download page:
 
 On the page, click **Linux (64-bit)** — this will download a `.zip` file. Make sure to place it somewhere easy to access, like the **Downloads** folder.
 
-![Winbox 4 download page](images/Winbox-4.png)
+![Winbox 4 download page](images/winbox-4.png)
 
 ---
 

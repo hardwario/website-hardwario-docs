@@ -26,7 +26,7 @@ The application supports two communication interfaces, depending on the installe
 * **RS-485** (with Module [**CHESTER-X2**](../extension-modules/chester-x2.md)) — Modbus RTU Master, multi-drop bus, up to 8 slave devices
 * **RS-232** (with Module [**CHESTER-X12**](../extension-modules/chester-x12.md)) — point-to-point connection, 1 device
 
-It supports 10 device types including energy meters, environmental sensors, and generic Modbus devices. Data is transmitted via LTE (CBOR encoding) or LoRaWAN (optimized binary encoding with multi-device packing).
+It supports 11 device types including energy meters, environmental sensors, and generic Modbus devices. Data is transmitted via LTE (CBOR encoding) or LoRaWAN (optimized binary encoding with multi-device packing).
 
 ## Application Variants
 
@@ -81,6 +81,7 @@ The firmware includes native support for the following devices:
 | **SenseCAP S1000 / S500** | `sensecap_s1000` | RS-485 Modbus | Temperature, Humidity, Pressure, Light, Wind |
 | **CUBIC 6303** | `cubic_6303` | RS-485 Modbus | PM1.0, PM2.5, PM10 |
 | **Lambrecht** | `lambrecht` | RS-485 Modbus | Weather station data |
+| **Piketronic RPP-R** | `piketronic` | RS-485 Modbus | Radon concentration (Bq/m³), Temperature, Humidity |
 | **Generic Modbus** | `generic` | RS-485 Modbus | Custom register mapping |
 | **Carlo Gavazzi EM1XX** | `em1xx` | RS-485 Modbus | Voltage, Current, Power, Frequency, Energy in/out (single-phase) |
 | **Carlo Gavazzi EM5XX** | `em5xx` | RS-485 Modbus | Voltage, Current, Power, Frequency, Energy per phase (three-phase) |

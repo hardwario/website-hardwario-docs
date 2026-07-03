@@ -45,7 +45,7 @@ Choose a device from the list to connect, or use a **QR code** button in the top
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('./images/manager_scan_list.png')} /></div>
+      <div><Image img={require('./images/manager-scan-list.png')} /></div>
     </div>
     <div class="col col--8">
     </div>
@@ -76,7 +76,7 @@ This page shows basic information about hardware version, variant, firmware vers
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('./images/manager_general_info.png')} /></div>
+      <div><Image img={require('./images/manager-general-info.png')} /></div>
     </div>
     <div class="col col--8">
     </div>
@@ -103,7 +103,7 @@ The purpose of the **Command Terminal** is to easily make changes in the setting
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('./images/manager_console.png')} /></div>
+      <div><Image img={require('./images/manager-console.png')} /></div>
     </div>
     <div class="col col--8">
     </div>
@@ -127,7 +127,7 @@ Firmware Update Interruption: Should the phone disconnect during a firmware swap
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/manager_firmware_update.png')} /></div>
+      <div><Image img={require('./images/manager-firmware-update.png')} /></div>
     </div>
     <div class="col col--12">
     </div>
@@ -145,7 +145,7 @@ This screen will let you remotely restart your device.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/manager_restart_device.png')} /></div>
+      <div><Image img={require('./images/manager-restart-device.png')} /></div>
     </div>
     <div class="col col--8">
     </div>

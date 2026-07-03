@@ -131,7 +131,7 @@ chmod +x install.sh
 
   ```bash
   sudo apt install -y nginx curl zip wget apt-transport-https openssl
-  WEB_ZIP_URL=$(curl -L -s https://api.github.com/repos/bigclownlabs/bch-hub-web/releases/latest | grep browser_download_url | grep zip | head -n 1 | cut -d '"' -f 4)
+  WEB_ZIP_URL=$(curl -L -s https://api.github.com/repos/hardwario/bch-hub-web/releases/latest | grep browser_download_url | grep zip | head -n 1 | cut -d '"' -f 4)
   wget "$WEB_ZIP_URL" -O /tmp/web.zip
   sudo unzip /tmp/web.zip -d /var/www/html
   rm /tmp/web.zip

@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div style={{ width: '376px', height: '376px' }}>
-        <Image img={require('./images/carlo_gavazzi_em5xx.png')} />
+        <Image img={require('./images/carlo-gavazzi-em5xx.png')} />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -53,7 +53,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 #### Connection Diagram (EM530)
 
-![Carlo Gavazzi - EM530 - Connection Diagram](images/CG-EM530.png)
+![Carlo Gavazzi - EM530 - Connection Diagram](images/cg-em530.png)
 
  ---
 ### Sensor Installation
@@ -69,7 +69,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 #### Connection Diagram (CTA6X200A5A)
 
-![Carlo Gavazzi - CTA6X200A5A - Connection Diagram ](images/CTA6X200A5A.png)
+![Carlo Gavazzi - CTA6X200A5A - Connection Diagram ](images/cta6x200a5a.png)
 
 ---
 
@@ -85,7 +85,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 #### Modbus communication (EM530)
 
-![Carlo Gavazzi - EM530 - Modbus communication](images/CG-EM530-modbus.png)
+![Carlo Gavazzi - EM530 - Modbus communication](images/cg-em530-modbus.png)
 
 ---
 

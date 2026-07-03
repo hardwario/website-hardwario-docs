@@ -58,7 +58,7 @@ We all know that the “security by obscurity” approach does not work in long 
 
 ## System Concept
 
-<Image img={require('./images/system_concept.png')}/>
+<Image img={require('./images/system-concept.png')}/>
 
 <br />
 

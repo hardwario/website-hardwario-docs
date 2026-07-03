@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters_iwm-tx3.png')} width={376} height={376} />
+        <Image img={require('./images/bmeters-iwm-tx3.png')} width={376} height={376} />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -40,7 +40,7 @@ Download the **B METERS NFC Config** application from the Google Play Store:
 
 You can scan the QR code below to go directly to the app:
 
-![QR Code - B Meters NFC Config](images/bmeters_app_qr.png)
+![QR Code - B Meters NFC Config](images/bmeters-app-qr.png)
 
 ---
 
@@ -86,7 +86,7 @@ Adjust the following settings:
 
 Your water meter is now successfully configured.
 
-![Read data via config](images/bmeters_iwm-tx3_data.png)
+![Read data via config](images/bmeters-iwm-tx3-data.png)
 
 ---
 
@@ -100,7 +100,7 @@ The address is located **in the center above the barcode**, following the letter
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters_iwm-tx3.png')} width={376} height={376} />
+        <Image img={require('./images/bmeters-iwm-tx3.png')} width={376} height={376} />
       </div>
     </div>
     <div class="col col--24"></div>

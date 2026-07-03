@@ -1,0 +1,38 @@
+---
+slug: nfc-configurator-template-generator
+title: Template Generator
+---
+import StickerTemplateGenerator from '@site/src/components/StickerTemplateGenerator';
+
+
+:::info Firmware v1.4.0
+Building NFC config templates for intervals, LoRaWAN basics and sensors also applies to v1.3.x. The **alarm-rule slots** and the template's `AppConfigMessage` wire format (renumbered protobuf fields, native-bytes encoding) target the upcoming **STICKER firmware v1.4.0**.
+:::
+
+# Configuration Template Generator
+
+Build a STICKER configuration **template** below: open a section, tick the settings you want, set their values, and the tool encodes them into the `AppConfigMessage` payload the device ingests over NFC. The result is shown as a **hex** string and a **QR code**, and you can paste an existing template's hex back in to decode it into the form.
+
+Only ticked settings are encoded, so a template carries just what you choose and can be reused across many devices. The form covers the template-friendly settings only; per-device identity and secrets (serial number, LoRaWAN keys and EUIs, session keys, 1-Wire ROMs, and similar) are intentionally left out because they cannot be shared across devices.
+
+<StickerTemplateGenerator />
+
+## How to use it
+
+1. **Open a section** (LoRaWAN basics, Interval, Sensors or Alarms; they are collapsed by default) and tick the settings you want. Hover or focus a setting to see a short clue with its meaning and allowed values.
+2. Numbers are range-checked (for example sample interval 5 to 3600 s, report interval 60 to 86400 s); an out-of-range value is flagged and left out of the payload until you correct it.
+3. For **Alarms**, click **+ Add alarm rule** to add a slot (up to 16), then choose its source and quantity and set the thresholds. Use **Remove** to drop a rule, or set **Action** to *Clear slot* to wipe that slot on the device. With no rules added, the template carries no alarms.
+4. Copy the **hex** string, or use the **QR code** (it carries the same hex), to store or share the template.
+5. To inspect an existing template, paste its hex into **Read a template from hex** and click **Load template**. The form, including any alarm rules, is repopulated with what the template contains, and the sections it sets are **expanded automatically** so you can see what changed (settings outside this form are ignored).
+
+:::caution This is the plaintext template
+The bytes shown here are the **unencrypted** `AppConfigMessage`. On a normal device the tag payload must be encrypted with the device's secret key (AES-CCM), so you cannot write this hex straight to a production STICKER. The [**NFC Configurator**](config.md) performs that per-device encryption for you when it writes the configuration. The raw payload is accepted directly only by a plaintext validation build.
+:::
+
+:::info Field notes
+- **Switches** are explicit: a capability set to *off* writes that capability = false, it does not leave it untouched. Tick a row only for settings you want the template to carry.
+- **Numbers** show their allowed range in the help clue and are validated. Sample interval also accepts `0` (sample right before each report) and alarm limit accepts `0` (disabled).
+- **Alarm rules** are encoded into the same 17-byte packed slots used by the [**Downlink Commands Generator**](../lorawan-network-server/downlink-commands-generator.mdx) and the `alarm` shell command; here you build them with the rule editor instead of pasting hex.
+:::
+
+For the full list of configurable parameters and their meaning, see [**Configuration**](../developer-access/configuration.md). To write a finished template to a device, see the [**NFC Configurator**](config.md) and its [**Setup**](setup.md) guide.

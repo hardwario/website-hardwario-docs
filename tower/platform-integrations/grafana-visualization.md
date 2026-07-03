@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 :::info
 
-This tutorial is made for the [**Air Quality Monitor**](https://shop.hardwario.com/indoor-air-quality-tester/) connected to the **Raspberry Pi** with the Hub installed on it.
+This tutorial is made for the [**Air Quality Monitor**](https://www.hardwario.store/indoor-air-quality-tester/) connected to the **Raspberry Pi** with the Hub installed on it.
 
 You can use our [**Pre-Installed Image**](../server-raspberry-pi/installation-os.md) or your [**own Raspberry where you will install the Hub**](../server-raspberry-pi/installation-clean-os.md)
 
@@ -185,7 +185,7 @@ To make this part work without any additional configuration you need to follow t
 
 Select **Add Data Source** and fill in the data
 
-<Image img={require('./images/add_data_source.png')} />
+<Image img={require('./images/add-data-source.png')} />
 <br />
 
 - Enter the Name: `node`
@@ -199,7 +199,7 @@ Select **Add Data Source** and fill in the data
 - Enter the Database: `node`
 - Click on `Save & Test` button to check if everything is OK. You should see the same green notification as in the picture.
 
-<Image img={require('./images/set_db_name_and_test.png')} />
+<Image img={require('./images/set-db-name-and-test.png')} />
 
 ## Import dashboard
 
@@ -209,24 +209,24 @@ Select **Add Data Source** and fill in the data
 - Click on the **+** icon to expand the submenu (2)
 - Click on the **Import** (3)
 
-<Image img={require('./images/grafana-import_step_1.png')} />
+<Image img={require('./images/grafana-import-step-1.png')} />
 <br />
 
 - Click on the **Upload .json File** (4)
 
-<Image img={require('./images/grafana-import_step_2.png')} />
+<Image img={require('./images/grafana-import-step-2.png')} />
 <br />
 
 - Choose your JSON file (in our case **dashboard.json**) (5)
 - Select the file to upload (6)
 
-<Image img={require('./images/grafana-import_step_3.png')} />
+<Image img={require('./images/grafana-import-step-3.png')} />
 <br />
 
 - Select your database (7)
 - Click on the **Import** button (8)
 
-<Image img={require('./images/grafana-import_step_4.png')} />
+<Image img={require('./images/grafana-import-step-4.png')} />
 <br />
 
 - Your dashboard is imported.

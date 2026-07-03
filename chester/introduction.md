@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
 ### To get your CHESTER running, read the [**Quick Start Guide**](first-steps.md).
 :::
 
-<img src="/img/chester.png" data-zoom-src="/img/chester.png" width="540" alt="CHESTER" />
+<img src="/img/chester.webp" data-zoom-src="/img/chester.webp" width="540" alt="CHESTER" />
 
 ## Quick Links
 

@@ -1,0 +1,56 @@
+---
+slug: downlink-commands-generator
+title: Downlink Commands Generator
+---
+import StickerDownlinkGenerator from '@site/src/components/StickerDownlinkGenerator';
+import Image from '@theme/IdealImage';
+
+
+:::info Firmware v1.4.0
+The functionality described on this page is part of the upcoming **STICKER firmware v1.4.0** and is not available in v1.3.x.
+:::
+
+# Downlink Commands Generator
+
+Build a STICKER downlink command below. Choose a command, fill in its parameters, and the **JSON** and the **fPort 85** byte payload (hex) update live. The encoding runs entirely in your browser using the firmware's `ttn.js` codec, so nothing is sent anywhere.
+
+<StickerDownlinkGenerator />
+
+## How to use it
+
+1. Pick a command. For **Set alarm rule**, choose the slot, source, quantity and thresholds; for **Set configuration parameter**, pick the field and value. The **Custom JSON** option lets you author any command by hand.
+2. Copy the **JSON** if your network server has the STICKER codec installed as the **downlink** payload formatter, then enqueue it on fPort 85.
+3. Or copy the **hex** and queue it directly as a downlink byte payload on fPort 85, with no codec.
+
+:::tip Persisting a configuration change
+For `set_param` commands, keep **Save and reboot** ticked so the change is written to flash (the device persists the config and reboots). Untick it to apply a change live without saving, or when staging several `set_param` downlinks: in that case set save only on the last one.
+:::
+
+## Queue it on fPort 85
+
+Once the generator gives you a payload, enqueue it as a downlink on **fPort 85** in your network server. The screenshots below queue the device-info request, hex `08012200` (the encoding of `{"command":"get_info","seq":1}`); swap in whichever payload you built above.
+
+### The Things Stack
+
+<Image img={require('../images/tts-downlink.png')} />
+
+1. Open the device and select **Messaging**, then the **Schedule downlink** tab.
+2. Set **Insert Mode** to **Push to downlink queue (append)**.
+3. Enter `85` in **FPort**.
+4. Set **Payload type** to **Bytes** and paste the hex payload (for example `08 01 22 00`).
+5. Keep **Confirmed downlink** ticked so the device acknowledges the command, then click **Schedule downlink**.
+
+### ChirpStack
+
+<Image img={require('../images/chirpstack-downlink.png')} />
+
+1. Open the device and select the **Queue** tab.
+2. Enter `85` in **FPort** and leave **Is encrypted** off.
+3. On the **HEX** tab, paste the hex payload (for example `08012200`).
+4. Turn on **Confirmed** so the device acknowledges the command, then click **Enqueue**.
+
+:::info Queuing JSON instead of hex
+The screenshots use the raw **hex** payload, which needs no codec. To send the **JSON** form, install the STICKER codec as the downlink formatter (see the setup pages linked below) and switch the payload type to JSON.
+:::
+
+For the command reference and copy-ready examples, see [**Downlink Commands**](downlink-commands.md). For installing the codec, see the [**ChirpStack**](lorawan-chirpstack.md) or [**The Things Stack**](lorawan-tts.md) setup pages.

@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 
 Thanks to its modular and open architecture, **FIBER** supports standard **Raspberry Pi OS** distributions as well as **custom Linux images built with Yocto**, making it suitable both as a turnkey measurement appliance and a versatile development platform. Designed for deployment in industrial and commercial environments, the device provides wireless and wired communication channels for reliable sensor acquisition, local visualization on its integrated display, and robust network connectivity through **Ethernet**, **WiFi**, or optional **LTE**.
 
-<img src="/img/fiber.png" data-zoom-src="/img/fiber.png" width="540" alt="FIBER" />
+<img src="/img/fiber.webp" data-zoom-src="/img/fiber.webp" width="540" alt="FIBER" />
 
 ## Quick Links
 

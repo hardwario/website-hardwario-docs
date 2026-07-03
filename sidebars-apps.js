@@ -151,7 +151,7 @@ const sidebars = {
           label: 'ChirpStack v4',
           collapsed: true,
           items: [
-            
+            'videos-apps/chirpstack-configuration',
             'videos-apps/chirpstack-ember',
             'videos-apps/chirpstack-devices',
             'videos-apps/chirpstack-decoding',

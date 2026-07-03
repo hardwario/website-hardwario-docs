@@ -62,6 +62,6 @@ To learn about the next tab visit [**Data Visualization**](./data-visualization.
 
 If you prefer a video guide, you can watch this video for the older Playground version, but it works the same.
 
-<ReactPlayer controls url='https://youtu.be/VW_-RCIZ9rY' />
+<ReactPlayer controls src='https://youtu.be/VW_-RCIZ9rY' />
 
 

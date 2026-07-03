@@ -14,7 +14,7 @@ You need to use a [**Power Module**](../../hardware-modules/about-power-module.m
 
 ## Available Colors
 
-LEDs featured [**on our strip**](https://shop.hardwario.com/led-strip-rgbw-1m-144-leds/) are RGBW. This means they include a separate light source for **Red**, **Green**, **Blue** and **White** (warm white) colors.
+LEDs featured [**on our strip**](https://www.hardwario.store/led-strip-rgbw-1m-144-leds/) are RGBW. This means they include a separate light source for **Red**, **Green**, **Blue** and **White** (warm white) colors.
 
 :::info
 

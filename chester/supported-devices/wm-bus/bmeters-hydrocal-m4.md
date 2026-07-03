@@ -40,7 +40,7 @@ Download the **B METERS NFC Config** application from the Google Play Store:
 
 You can scan the QR code below to go directly to the app:
 
-![QR Code - B Meters NFC Config](images/bmeters_app_qr.png)
+![QR Code - B Meters NFC Config](images/bmeters-app-qr.png)
 
 ---
 

@@ -86,7 +86,7 @@ After opening the application, look at the list where you should see your **EMBE
 ### 3.1 Set Password
 **Open a New Terminal window** (or connect via SSH to your EMBER at `172.31.255.254`):
 
-![Winbox 4 Open new Terminal](images/Winbox-open-terminal.png)    
+![Winbox 4 Open new Terminal](images/winbox-open-terminal.png)    
 
 **Set a secure admin password**
 Then paste the following script, or you can do it manually.
@@ -96,7 +96,7 @@ Then paste the following script, or you can do it manually.
 
 In the left panel, open **System**→ **Password**.
 
-![Winbox 4 Open new Terminal](images/Winbox-change-pass-1.png)
+![Winbox 4 Open new Terminal](images/winbox-change-pass-1.png)
 
 Fill the box: 
  - Old Password: **ember** (default password) 
@@ -104,7 +104,7 @@ Fill the box:
  - Confirm Password: `<YOUR_PASSWORD>`
  - Click **Change**
 
-![Winbox 4 Open new Terminal](images/Winbox-change-pass-2.png)
+![Winbox 4 Open new Terminal](images/winbox-change-pass-2.png)
 
 ### 3.2 Run Base Configuration
 Then paste the following script, or you can do it manually.

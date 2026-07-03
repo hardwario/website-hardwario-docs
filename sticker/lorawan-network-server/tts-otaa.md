@@ -80,6 +80,12 @@ Set the formatter type to **Custom Javascript formatter** and paste the STICKER 
 
 Click **Save changes**.
 
+:::tip Generating downlink commands
+_Downlink command encoding is part of the upcoming **STICKER firmware v1.4.0** (not in v1.3.x)._
+
+The same `ttn.js` codec also **encodes downlink commands** (via its `encodeDownlink` function), so you can send commands to the device, for example to force a report, change a setting, or set an alarm rule. Add the same file again as the **Downlink** formatter at **Application → (YOUR_DEVICE) → Payload formatters → Downlink** (Custom Javascript formatter), then queue a command as a JSON object on fPort **85** and The Things Stack encodes it to bytes. Use the [**Downlink Commands Generator**](downlink-commands-generator.mdx) to build a command and get its JSON and hex.
+:::
+
 ---
 
 ## 4) Verify uplinks

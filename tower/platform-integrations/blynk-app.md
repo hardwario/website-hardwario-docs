@@ -40,7 +40,7 @@ In Node-RED, install the Blynk package `node-red-contrib-blynk-ws` if you cannot
 
 If you prefer a video guide, you can watch this video for the older Playground version, but it works the same.
 
-<ReactPlayer controls url='https://youtu.be/cVC_tFuCYTM' />
+<ReactPlayer controls src='https://youtu.be/cVC_tFuCYTM' />
 
 ## ZeRGBA to hex RGB values - Example
 

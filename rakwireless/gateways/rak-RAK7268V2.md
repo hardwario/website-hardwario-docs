@@ -15,7 +15,7 @@ It supports Ethernet and Wi-Fi connectivity (and optional LTE), making it a vers
   <div class="row">
     <div class="col col--8">
       <div style={{ width: '500px', height: '500px' }}>
-        <Image img={require('./images/rak-RAK7268V2.png')} />
+        <Image img={require('./images/rak-rak7268v2.png')} />
       </div>
     </div>
     <div class="col col--24"></div>

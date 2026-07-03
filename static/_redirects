@@ -1,0 +1,52 @@
+# Cloudflare Workers static-asset redirects (migrated from netlify.toml).
+# Same-domain CHESTER slug-fix redirects. Cross-domain (tower/chester/doc/cooper)
+# legacy-subdomain redirects live in the website-redirects Worker (in website-admin), not here.
+/chester/power-mgmt                                  /chester/power-management                                      301
+/chester/chester-z-over-j-link                       /chester/firmware-flashing/chester-z-over-j-link               301
+/chester/lte-modem-over-j-link                       /chester/firmware-flashing/lte-modem-over-j-link               301
+/chester/lorawan-modem-over-j-link                   /chester/firmware-flashing/lorawan-modem-over-j-link           301
+/chester/application-over-j-link                     /chester/firmware-flashing/application-over-j-link             301
+/chester/application-over-bluetooth                  /chester/firmware-flashing/application-over-bluetooth          301
+/chester/extension-modules                           /chester/extension-modules/extension-modules                   301
+/chester/chester-x3                                  /chester/extension-modules/chester-x3                          301
+/chester/chester-x7                                  /chester/extension-modules/chester-x7                          301
+/chester/chester-x4                                  /chester/extension-modules/chester-x4                          301
+/chester/chester-x9                                  /chester/extension-modules/chester-x9                          301
+/chester/chester-k1                                  /chester/extension-modules/chester-k1                          301
+/chester/chester-x6                                  /chester/extension-modules/chester-x6                          301
+/chester/chester-x2                                  /chester/extension-modules/chester-x2                          301
+/chester/chester-x1                                  /chester/extension-modules/chester-x1                          301
+/chester/chester-x0                                  /chester/extension-modules/chester-x0                          301
+/chester/chester-x10                                 /chester/extension-modules/chester-x10                         301
+/chester/chester-x8                                  /chester/extension-modules/chester-x8                          301
+/chester/cellular-networks                           /chester/platform-connectivity/cellular-networks               301
+/chester/hardwario-manager                           /chester/platform-connectivity/hardwario-manager               301
+/chester/power-profiler-kit-ii                       /chester/developer-tools/power-profiler-kit-ii                 301
+/chester/command-line-tools                          /chester/developer-tools/command-line-tools                    301
+/chester/segger-j-link                               /chester/developer-tools/segger-j-link                         301
+/chester/connector-description                       /chester/hardware-description/chester-m#connector-description  301
+/chester/basic-parameters                            /chester/hardware-description/chester-m#basic-parameters       301
+/chester/enclosures                                  /chester/hardware-description/enclosures                       301
+/chester/block-diagram                               /chester/hardware-description/chester-m#block-diagram          301
+/chester/i2c-address-space                           /chester/hardware-description/i2c-address-space                301
+/chester/chester-push                                /chester/catalog-applications/chester-push                     301
+/chester/chester-input                               /chester/catalog-applications/legacy/chester-input             301
+/chester/chester-clime                               /chester/catalog-applications/chester-clime                    301
+/chester/chester-current                             /chester/catalog-applications/chester-current                  301
+/chester/installation-on-ubuntu                      /chester/firmware-sdk/installation-on-ubuntu                   301
+/chester/how-to-i2c-bus                              /chester/firmware-sdk/how-to-i2c-bus                           301
+/chester/j-link-installation                         /chester/firmware-sdk/j-link-installation                      301
+/chester/requirements                                /chester/firmware-sdk/requirements                             301
+/chester/build-and-deploy                            /chester/firmware-sdk/build-and-deploy                         301
+/chester/installation-on-windows                     /chester/firmware-sdk/installation-on-windows                  301
+/chester/how-to-kconfig                              /chester/firmware-sdk/how-to-kconfig                           301
+/chester/installation-on-macos                       /chester/firmware-sdk/installation-on-macos                    301
+/chester/application-customization                   /chester/firmware-sdk/application-customization                301
+/chester/hardware-description/basic-parameters       /chester/hardware-description/chester-m                        301
+/chester/hardware-description/block-diagram          /chester/hardware-description/chester-m                        301
+/chester/hardware-description/connector-description  /chester/hardware-description/chester-m                        301
+/chester/hardware-description/layout-placement       /chester/hardware-description/chester-m                        301
+/chester/hardware-description/schematic-diagram      /chester/hardware-description/chester-m                        301
+
+# Fixed a typo'd slug (chirpstack-ataa -> chirpstack-otaa)
+/sticker/lorawan-network-server/chirpstack-ataa      /sticker/lorawan-network-server/chirpstack-otaa                301

@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters_iwm-tx5.png')} width={376} height={376} />
+        <Image img={require('./images/bmeters-iwm-tx5.png')} width={376} height={376} />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -41,7 +41,7 @@ Download the **B METERS NFC Config** application from the Google Play Store:
 
 You can scan the QR code below to go directly to the app:
 
-![QR Code - B Meters NFC Config](images/bmeters_app_qr.png)
+![QR Code - B Meters NFC Config](images/bmeters-app-qr.png)
 
 ---
 
@@ -86,7 +86,7 @@ Adjust the following settings:
 
 Your water meter is now successfully configured.
 
-![Read data via config](images/bmeters_iwm_tx5_data.png)
+![Read data via config](images/bmeters-iwm-tx5-data.png)
 
 ## Wireless M-Bus Address Configuration
 
@@ -98,7 +98,7 @@ The address is located **in the center below the barcode**, after the **CE mark*
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters_iwm-tx5.png')} width={376} height={376} />
+        <Image img={require('./images/bmeters-iwm-tx5.png')} width={376} height={376} />
       </div>
     </div>
     <div class="col col--24"></div>

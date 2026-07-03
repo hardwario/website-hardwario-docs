@@ -171,7 +171,7 @@ You can add your custom blocks with the use of **Blocks Creator**.
 
 :::info
 
-The first example is one of our pre-made modules for the [**Button Module**](https://shop.hardwario.com/button-module/) of TOWER. You can see the structure of the file here.
+The first example is one of our pre-made modules for the [**Button Module**](https://www.hardwario.store/button-module/) of TOWER. You can see the structure of the file here.
 
 - `category` - determines which category will be used for the blocks of this module (the category has to be included in the pre-made or your categories).
 

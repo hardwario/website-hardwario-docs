@@ -164,4 +164,4 @@ pm2 save
 ```
 
 
-**TODO, CONFIG FILE DESCRIPTION**
+{/* TODO (maintainer note, hidden from rendered page): document the mqtt2influxdb.yml config file. */}

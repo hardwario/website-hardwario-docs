@@ -24,13 +24,13 @@ This article walks you through the process of installing and configuring ChirpSt
 
 In this guide, you will learn how to install the ChirpStack Network Server and its components. It explains the required environment setup, package installation, and initial configuration needed to get ChirpStack running on your system.  
 
-👉 **Step-by-Step guide: [https://docs.hardwario.com/ember/chirpstack/chirpstack-installation](apps\chirpstack\chirpstack-installation.md)**  
+👉 **Step-by-Step guide: [https://docs.hardwario.com/apps/chirpstack/chirpstack-installation](../chirpstack-installation.md)**  
 
 ### 2. Configure ChirpStack v4
 
 In this guide, you will configure ChirpStack v4 by adding gateways, registering devices, and setting up payload decoders. It shows how to manage LoRaWAN device profiles, assign network parameters, and create custom codec functions to transform raw data into meaningful values.  
 
-👉 **Step-by-Step guide: [https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration](apps\chirpstack\chirpstack-configuration.md)**  
+👉 **Step-by-Step guide: [https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration](../chirpstack-configuration.md)**  
 
 ---
 

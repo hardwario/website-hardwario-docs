@@ -19,7 +19,7 @@ To identify the devices on the bus each device has a unique 64-bit identificatio
 
 We made it easy for our users to connect 1-Wire devices to the TOWER device. For this we developed a [**Sensor Module**](../hardware-modules/about-sensor-module.md) which you can use to simply connect, for example, one of the following devices.
 
-- [**Soil Sensor**](https://shop.hardwario.com/soil-sensor/)
-- [**Machine Probe**](https://shop.hardwario.com/machine-probe-2m-cable/)
-- [**Temperature sensor DS18B20**](https://shop.hardwario.com/temperature-sensor-ds18b20-original-10m-cable/)
+- [**Soil Sensor**](https://www.hardwario.store/soil-sensor/)
+- [**Machine Probe**](https://www.hardwario.store/machine-probe-2m-cable/)
+- [**Temperature sensor DS18B20**](https://www.hardwario.store/temperature-sensor-ds18b20-original-10m-cable/)
 

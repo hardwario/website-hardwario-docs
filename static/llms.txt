@@ -1,0 +1,24 @@
+# HARDWARIO Documentation
+
+> Technical documentation for HARDWARIO products and services — hardware,
+> firmware, APIs, integrations and guides for the company's industrial /
+> wireless IoT (LPWAN: NB-IoT, LTE-M, LoRaWAN) platform. Published by
+> HARDWARIO a.s., a Czech IoT manufacturer based in Liberec. English. Welcomes
+> AI crawlers; the full page list is in the sitemap below.
+
+## Documentation
+
+- [Documentation home](https://docs.hardwario.com/): entry point to all product and service documentation
+- [Sitemap](https://docs.hardwario.com/sitemap.xml): complete, machine-readable list of every documentation page
+- [Search](https://docs.hardwario.com/search): full-text search across the docs
+
+## More from HARDWARIO
+
+- [HARDWARIO a.s.](https://www.hardwario.com): company site — products, solutions and services
+- [HARDWARIO STEM](https://stem.hardwario.com): STEM learning platform for schools
+- [HARDWARIO Academy](https://hardwario.academy): teaching IoT in practice with the TOWER kit
+- [HARDWARIO Store](https://www.hardwario.store): shop for HARDWARIO products
+
+## Contact
+
+- [Email ask@hardwario.com](mailto:ask@hardwario.com): product and integration enquiries (phone +420 775 159 734)

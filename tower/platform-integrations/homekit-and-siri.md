@@ -99,7 +99,7 @@ Now unplug the **Core Module** from the computer and connect it to the [**Batter
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/homekit-and-siri-Core-standart-battery.jpg')} /></div>
+      <div><Image img={require('./images/homekit-and-siri-core-standart-battery.jpg')} /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -199,7 +199,7 @@ Select **Add anyway** on the next screen. On the screen where you have to input 
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/homekit-and-siri-iPhones-screens-1.png')} /></div>
+      <div><Image img={require('./images/homekit-and-siri-iphones-screens-1.png')} /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -213,7 +213,7 @@ Now just setup where is your bridge and temperature sensor.
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/homekit-and-siri-iPhones-screens-2.png')} /></div>
+      <div><Image img={require('./images/homekit-and-siri-iphones-screens-2.png')} /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -233,7 +233,7 @@ So if you want to get the temperature from **Core Module** which we just set up,
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/homekit-and-siri-iPhones-screens-siri.png')} /></div>
+      <div><Image img={require('./images/homekit-and-siri-iphones-screens-siri.png')} /></div>
     </div>
     <div class="col col--1">
     </div>

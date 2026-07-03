@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        The <b>Cover Module</b> is a simple mechanical part that helps to cover the front face of the HARDWARIO electronics (larger format 88 x 55 mm). It <b>looks great</b> when combined with one of our <a href="https://shop.hardwario.com/enclosures/"><b>3D-printed enclosures</b></a>. You simply snap it in the HARDWARIO socket header using the bottom pins.
+        The <b>Cover Module</b> is a simple mechanical part that helps to cover the front face of the HARDWARIO electronics (larger format 88 x 55 mm). It <b>looks great</b> when combined with one of our <a href="https://www.hardwario.store/enclosures/"><b>3D-printed enclosures</b></a>. You simply snap it in the HARDWARIO socket header using the bottom pins.
       </p>
     </div>
   </div>

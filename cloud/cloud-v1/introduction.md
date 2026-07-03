@@ -12,7 +12,7 @@ The **HARDWARIO Cloud** is an infrastructure that provides IoT connectivity and 
 <Image img={require('./images/hardwario-cloud.png')}/><br/>
 
 1. To discover the basic features of **HARDWARIO Cloud**, see the chapter:<br/>
-   [**Basic Features**](#basic-feautures)
+   [**Basic Features**](#basic-features)
 
 1. To understand security precautions, go to the chapter:<br/>
    [**Security Precautions**](#security-precautions)

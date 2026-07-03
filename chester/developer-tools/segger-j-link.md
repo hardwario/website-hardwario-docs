@@ -148,7 +148,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/chester_segger_app.png')}/></div>
+      <div><Image img={require('./images/chester-segger-app.png')}/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -172,7 +172,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/chester_segger_lte.png')}/></div>
+      <div><Image img={require('./images/chester-segger-lte.png')}/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -196,7 +196,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/chester_segger_lrw.png')}/></div>
+      <div><Image img={require('./images/chester-segger-lrw.png')}/></div>
     </div>
     <div class="col col--2">
     </div>

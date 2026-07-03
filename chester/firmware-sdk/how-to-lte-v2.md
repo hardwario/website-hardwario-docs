@@ -47,7 +47,7 @@ CHESTER Control also contains configuration definitions through macros. So you d
 
 ### Other Catalogue Apps
 
-Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to Cloud v2 and you can take an inspiration. Or use pre-built [**firmware**](../catalog-applications/catalog-applications#application-firmware-cloud-v2)
+Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to Cloud v2 and you can take an inspiration. Or use pre-built [**firmware**](../catalog-applications/catalog-applications#application-firmware)
 
 ## Changes for LTE v2
 

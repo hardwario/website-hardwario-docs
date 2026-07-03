@@ -25,7 +25,7 @@ import Image from '@theme/IdealImage';
 
 :::info
 
-The aluminum knob on the photo is not a part of the module and is sold as an [**optional accessory separately**](https://shop.hardwario.com/encoder-knob-small-black/).
+The aluminum knob on the photo is not a part of the module and is sold as an [**optional accessory separately**](https://www.hardwario.store/encoder-knob-small-black/).
 
 :::
 

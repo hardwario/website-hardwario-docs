@@ -16,7 +16,7 @@ Also if you want to create your own project, feel free to use any HARDWARIO TOWE
 
 Most of the code, schematics and applications that we create are under MIT License and available on our GitHub page.
 
-<Image img={require('./images/MIT_License.png')}/>
+<Image img={require('./images/mit-license.png')}/>
 <br />
 
 If you need to start your project and don't want to start from scratch you can find some already made firmware that mostly suits your needs and change it a bit. Or you can get parts of multiple firmware and put them together so your project is as you want it.

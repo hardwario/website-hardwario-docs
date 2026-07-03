@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
 ### To get your STICKER running, read the [**Quick Start Guide**](first-steps).
 :::
 
-<img src="/img/sticker.png" data-zoom-src="/img/sticker.png" width="540" alt="Sticker - Catalog" />
+<img src="/img/sticker.webp" data-zoom-src="/img/sticker.webp" width="540" alt="Sticker - Catalog" />
 
 ## Quick Links
 

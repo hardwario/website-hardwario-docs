@@ -21,7 +21,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 ## Application Overview
 
-**CHESTER Range** measures distance using the [MaxBotix MB7066](https://shop.hardwario.com/ultrasonic-sensor/) ultrasonic sensor. It can also measure temperature using the DS18B20 one-wire sensor and humidity using **CHESTER-S2**.
+**CHESTER Range** measures distance using the [MaxBotix MB7066](https://www.hardwario.store/ultrasonic-sensor/) ultrasonic sensor. It can also measure temperature using the DS18B20 one-wire sensor and humidity using **CHESTER-S2**.
 
 ## Application Variants
 

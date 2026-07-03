@@ -213,7 +213,7 @@ Place the file in the **root folder** of the application. The file name must be 
 
 ```csv
 Serial number,Product type,Date Time,DevEUI,AppKey,JoinEui,Secret key,Nonce counter
-8473920156,STICKER_Clime,2024-01-01 00:00:00,a1b2c3d4e5f60718,9f3e7a2b1c8d4e5f6071829304a5b6c7,0000000000000000,7c4e9b2a8f1d6053e9a47b28c3f15d6b,1
+1234567890,STICKER_Clime,2024-01-01 00:00:00,a1b2c3d4e5f60718,9f3e7a2b1c8d4e5f6071829304a5b6c7,0000000000000000,7c4e9b2a8f1d6053e9a47b28c3f15d6b,1
 ```
 
 :::caution

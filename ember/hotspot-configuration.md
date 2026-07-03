@@ -87,7 +87,32 @@ The **EMBER Hotspot** name is a compound of the customer identifier + **EMBER Cl
 ```
 /system identity set name=ember-<customer identifier>-<01>-hotspot-<01>
 ```
+## Update LTE
 
+Keep the **LTE** modem firmware up to date to ensure stable connectivity.
+
+1. In the left menu, select **Interfaces**.
+2. Select your `lte1` interface and click **Disable**.
+3. Double-click the `lte1` interface and select **Upgrade firmware**.
+4. Click **Start** to check for available updates.
+5. If an update is available, check **Upgrade** and click **Start**.
+6. Once the installation finishes, reboot the device.
+
+:::tip
+
+The SIM card requirement depends on the size of the version jump.
+For an upgrade of only one or two versions, the SIM card must be;
+inserted and configured for the upgrade to work. For a larger version
+jump, the upgrade completes without a SIM card present.
+:::
+
+:::caution
+
+Do not disconnect power or interrupt the device during the firmware
+upgrade. An interrupted upgrade can leave the modem in an unusable state.
+:::
+
+![LTE update](./images/ember-update-lte.png)
 ## Interface Configuration
 
 ### LAN

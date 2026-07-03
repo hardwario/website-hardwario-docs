@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 **TOWER** is a modular, wireless, open-source/open-hardware IoT platform for rapid prototyping and deployment.
 It is used in industrial applications, STEM education, and hobby projects (home automation, gardening, lighting, escape rooms, etc.).
 
-<img src="/img/tower.png" data-zoom-src="/img/tower.png" width="540" alt="TOWER" />
+<img src="/img/tower.webp" data-zoom-src="/img/tower.webp" width="540" alt="TOWER" />
 
 ## Quick Links
 

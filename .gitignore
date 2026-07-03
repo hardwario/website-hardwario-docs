@@ -7,7 +7,9 @@
 # Generated files
 .docusaurus
 .cache-loader
-package-lock.json
+
+# Cloudflare (wrangler local cache / Pages dev)
+/.wrangler
 
 # Misc
 .DS_Store
@@ -24,3 +26,7 @@ yarn-error.log*
 
 # IDE
 .idea
+
+# Claude context lives in hardwario/website-admin, not here
+.claude/
+CLAUDE.md

@@ -85,7 +85,7 @@ To connect to your **Raspberry Pi** you have two options that you can put into t
   <div class="container">
     <div class="row">
       <div class="col col--10">
-        <div><Image img={require('./images/hardwario_hub.png')} /></div>
+        <div><Image img={require('./images/hardwario-hub.png')} /></div>
       </div>
       <div class="col col--3">
       </div>

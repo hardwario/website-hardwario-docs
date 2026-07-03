@@ -1,175 +1,186 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 
-const FeatureList = [
+const OurProducts = [
   {
     title: 'CHESTER',
     subtitle: 'Configurable IoT Gateway',
     link: '/chester/',
     src: '/img/chester.png',
-    width: 300,
-    height: 200,
-    description: (
-      <>
-        CHESTER is an extensible IoT gateway platform featuring NB-IoT, LTE-M, LoRaWAN, BLE, and GNSS radio technologies.
-      </>
-    ),
+    description: 'Extensible IoT gateway with NB-IoT, LTE-M, LoRaWAN, BLE, and GNSS radio technologies.',
   },
   {
     title: 'STICKER',
     subtitle: 'LoRaWAN Sensor Platform',
     link: '/sticker/',
     src: '/img/sticker.png',
-    width: 300,
-    height: 200,
-    description: (
-      <>
-        STICKER is an STM32WL-based IoT platform with integrated LoRaWAN, designed as a compact, low-power, long-lifetime module for sensor applications.
-      </>
-    ),
+    description: 'STM32WL-based compact, low-power LoRaWAN module for long-lifetime sensor applications.',
   },
   {
     title: 'EMBER',
     subtitle: 'LoRaWAN IoT Hotspot',
     link: '/ember/',
     src: '/img/ember.png',
-    width: 267,
-    height: 200,
-    description: (
-      <>
-        EMBER is a RouterBOARD-based waterproof industrial IoT gateway (with LTE card) for LoRaWAN sensors and actuators.
-      </>
-    ),
+    description: 'Industrial waterproof LoRaWAN gateway with integrated LTE for sensors and actuators.',
   },
   {
     title: 'FIBER',
     subtitle: 'Sensor IoT Monitor',
     link: '/fiber/',
     src: '/img/fiber.png',
-    width: 250,
-    height: 200,
-    description: (
-      <>
-        FIBER is an IoT device for precise industrial temperature monitoring, offering seamless connectivity and intuitive interfaces.
-      </>
-    ),
+    description: 'Precise industrial temperature monitoring with seamless connectivity and intuitive interfaces.',
   },
-   {
+  {
     title: 'GAUGER',
     subtitle: 'Wi-Fi/LAN Input Module',
     link: '/gauger/',
     src: '/img/gauger.png',
-    width: 200,
-    height: 200,
-    description: (
-      <>
-        GAUGER is an industrial IoT device designed to enable seamless data acquisition from production lines, connecting to existing PLCs or standalone machinery.
-      </>
-    ),
+    description: 'Industrial IoT device for seamless data acquisition from production lines and PLCs.',
   },
   {
     title: 'GLIDER',
     subtitle: 'Cellular IoT Sensor Logger',
     link: '/glider/',
     src: '/img/glider.png',
-    width: 200,
-    height: 200,
-    description: (
-      <>
-        GLIDER is a compact LTE-M / NB-IoT device built around the Nordic nRF9151, designed for temperature, pulse, and Modbus RTU monitoring with HARDWARIO Cloud integration.
-      </>
-    ),
+    description: 'Compact LTE-M/NB-IoT logger for temperature, pulse, and Modbus RTU monitoring.',
   },
   {
     title: 'TAPPER',
     subtitle: 'NFC Tag Reader',
     link: '/tapper/',
     src: '/img/tapper.png',
-    width: 200,
-    height: 200,
-    description: (
-      <>
-        TAPPER is an NFC tag reader using Raspberry Pi Zero 2 W and PN532, designed for secure tag verification over MQTT.
-      </>
-    ),
+    description: 'NFC tag reader using Raspberry Pi Zero 2 W and PN532 for secure tag verification over MQTT.',
   },
   {
     title: 'TOWER',
     subtitle: 'Pluggable IoT Platform',
     link: '/tower/',
     src: '/img/tower.png',
-    width: 300,
-    height: 200,
-    description: (
-      <>
-        TOWER is an open-source IoT platform for rapid deployment, featuring sub-GHz radio and a very low power consumption.
-      </>
-    ),
+    description: 'Open-source IoT platform for rapid deployment with sub-GHz radio and ultra-low power consumption.',
   },
+];
+
+const SmartDevices = [
+  {
+    title: 'Milesight',
+    subtitle: 'LoRaWAN Sensors & Gateways',
+    link: '/smart-devices/milesight',
+    src: '/img/milesight.png',
+    description: 'Wide range of LoRaWAN sensors and gateways for industrial and smart-building deployments.',
+  },
+  {
+    title: 'RAKwireless',
+    subtitle: 'LoRaWAN Gateways',
+    link: '/smart-devices/rakwireless',
+    src: '/img/rakwireless.svg',
+    description: 'Industrial LoRaWAN gateways and modules for building robust, scalable IoT networks.',
+  },
+  {
+    title: 'OnLogic',
+    subtitle: 'Industrial Computers',
+    link: '/smart-devices/onlogic',
+    src: '/img/onlogic.png',
+    description: 'Fanless industrial computers engineered for edge computing in harsh environments.',
+  },
+  {
+    title: 'Raspberry Pi',
+    subtitle: 'Computing Modules',
+    link: '/smart-devices/raspberry-pi',
+    src: '/img/raspberry-pi.png',
+    description: 'Compact computing modules for IoT gateways, edge processing, and custom hardware.',
+  },
+  {
+    title: 'MikroTik',
+    subtitle: 'LoRaWAN Networking',
+    link: '/smart-devices/mikrotik',
+    src: '/img/mikrotik.png',
+    description: 'RouterBOARD-based LoRaWAN gateways and networking equipment for IoT infrastructure.',
+  },
+  {
+    title: 'Carlo Gavazzi',
+    subtitle: 'Energy Meters',
+    link: '/smart-devices/carlo-gavazzi',
+    src: '/img/carlo-gavazzi.svg',
+    description: 'Certified single-phase and three-phase energy meters with Modbus RTU for industrial metering.',
+  },
+  {
+    title: 'Nexelec',
+    subtitle: 'IoT Safety Sensors',
+    link: '/smart-devices/nexelec',
+    src: '/img/nexelec.svg',
+    description: 'LoRaWAN-connected fire and CO detection sensors compliant with European safety standards.',
+  },
+];
+
+const CloudAndApps = [
   {
     title: 'CLOUD',
     subtitle: 'Middleware IoT Service',
     link: '/cloud/',
-    src: '/img/cloud.svg',
-    width: 200,
-    height: 200,
-    description: (
-      <>
-        CLOUD is a device and data management platform providing REST API services for seamless integration for customers.
-      </>
-    ),
+    src: '/img/cloud.png',
+    description: 'Device and data management platform with REST API services for seamless IoT integration.',
   },
   {
-    title: 'APPS',
-    subtitle: 'Dashboards and Applications',
-    link: '/apps/',
-    src: '/img/apps.png',
-    width: 200,
-    height: 200,
-    description: (
-      <>
-        APPS is a collection of custom dashboards and applications for visualizing and managing data from your IoT devices.
-      </>
-    ),
+    title: 'ThingsBoard',
+    subtitle: 'Data Visualization Platform',
+    link: '/apps/thingsboard/index',
+    src: '/img/thingsboard.svg',
+    imageWide: true,
+    description: 'Open-source IoT platform for data collection, processing, visualization, and device management.',
+  },
+  {
+    title: 'ChirpStack',
+    subtitle: 'LoRaWAN Network Server',
+    link: '/apps/chirpstack/index',
+    src: '/img/chirpstack.png',
+    description: 'Open-source LoRaWAN Network Server for connecting and managing LoRaWAN devices.',
+  },
+  {
+    title: 'The Things Stack',
+    subtitle: 'LoRaWAN Network Solution',
+    link: '/apps/the-things-stack/index',
+    src: '/img/the-things-stack.svg',
+    description: 'Enterprise LoRaWAN network server for connecting IoT devices at scale.',
   },
 ];
 
-function Feature({ src, width, height, title, subtitle, link, description }) {
+function ProductCard({ title, subtitle, link, src, imageWide, small, description }) {
   return (
-    <div className={clsx('col col--3')}>
-      <div className="text--center">
-        <Link to={link}>
-          <img src={src} width={width} height={height} />
-        </Link>
+    <Link to={link} className={styles.card}>
+      <div className={`${styles.cardImageWrapper}${small ? ' ' + styles.cardImageWrapperSmall : ''}`}>
+        <img src={src} alt={title} className={[styles.cardImage, imageWide ? styles.cardImageWide : '', small ? styles.cardImageSmall : ''].filter(Boolean).join(' ')} />
       </div>
-      <div className='text--center padding-horiz--md'>
-        <Link to={link} className='link-unstyled'>
-          <h2>{title}</h2>
-          <h3>{subtitle}</h3>
-        </Link>
-        <div className={styles.buttons}>
-          <Link className = 'button button--secondary button--md' to={link}>
-            👉 Go to {title} documentation
-          </Link>
-        </div>
-        <p>{description}</p>
+      <div className={styles.cardName}>{title}</div>
+      <div className={styles.cardSubtitle}>{subtitle}</div>
+      <p className={styles.cardDescription}>{description}</p>
+    </Link>
+  );
+}
+
+function Section({ label, items, gridClass, smallImages }) {
+  return (
+    <section className={styles.section}>
+      <div className={styles.sectionHeader}>
+        <span className={styles.sectionLabel}>{label}</span>
       </div>
-    </div >
+      <div className={`${styles.grid} ${gridClass || ''}`}>
+        {items.map((item, idx) => (
+          <ProductCard key={idx} {...item} small={smallImages} />
+        ))}
+      </div>
+    </section>
   );
 }
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <div className={styles.wrapper}>
       <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+        <Section label="Products" items={OurProducts} />
+        <Section label="Smart Devices" items={SmartDevices} smallImages />
+        <Section label="Cloud &amp; Applications" items={CloudAndApps} gridClass={styles.gridWide} smallImages />
       </div>
-    </section>
+    </div>
   );
 }

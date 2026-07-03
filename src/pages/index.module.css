@@ -1,8 +1,3 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
@@ -12,6 +7,26 @@
 
 @media screen and (max-width: 966px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 2.5rem 1.5rem;
   }
+}
+
+/* ─── Prevent character-level word breaking on mobile ─────── */
+.heroBanner :global(.hero__title),
+.heroBanner :global(.hero__subtitle) {
+  word-break: normal;
+  overflow-wrap: normal;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+/* Scale title with viewport so it never needs to break mid-word */
+.heroBanner :global(.hero__title) {
+  font-size: clamp(1.6rem, 5.5vw, 3rem);
+  line-height: 1.2;
+}
+
+.heroBanner :global(.hero__subtitle) {
+  font-size: clamp(0.95rem, 2.8vw, 1.5rem);
+  line-height: 1.4;
 }

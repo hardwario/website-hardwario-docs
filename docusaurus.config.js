@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const { themes: prismThemes } = require('prism-react-renderer');
+const lightCodeTheme = prismThemes.github;
+const darkCodeTheme = prismThemes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -12,6 +13,32 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
+
+  // Organization structured data (schema.org JSON-LD) — consistent across HARDWARIO sites
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: { type: 'application/ld+json' },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'HARDWARIO',
+        legalName: 'HARDWARIO a.s.',
+        url: 'https://www.hardwario.com',
+        logo: 'https://docs.hardwario.com/img/logo.svg',
+        description:
+          'Czech manufacturer of industrial / wireless IoT (LPWAN) hardware and software.',
+        address: { '@type': 'PostalAddress', addressCountry: 'CZ' },
+        areaServed: 'Europe',
+        sameAs: [
+          'https://www.linkedin.com/company/13187032',
+          'https://twitter.com/hardwario_en',
+          'https://www.youtube.com/c/hardwario',
+          'https://github.com/hardwario',
+        ],
+      }),
+    },
+  ],
 
   // ✅ Přesunuto z kořene: onBrokenMarkdownLinks → markdown.hooks.onBrokenMarkdownLinks
   markdown: {
@@ -34,10 +61,20 @@ const config = {
           routeBasePath: 'chester',
           path: 'chester',
           sidebarPath: require.resolve('./sidebars-chester.js'),
-          editUrl: 'https://github.com/hardwario/docs/edit/main',
+          editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        sitemap: {
+          // Emit <lastmod> so crawlers can prioritize fresh pages, and keep the
+          // Docusaurus boilerplate (the tutorial /markdown-page and the /search
+          // UI) out of the sitemap.
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/search', '/markdown-page'],
+          filename: 'sitemap.xml',
         },
       }),
     ],
@@ -64,7 +101,7 @@ const config = {
         path: 'ember',
         routeBasePath: 'ember',
         sidebarPath: require.resolve('./sidebars-ember.js'),
-        editUrl: 'https://github.com/hardwario/docs/edit/main',
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
     [
@@ -74,7 +111,7 @@ const config = {
         path: 'fiber',
         routeBasePath: 'fiber',
         sidebarPath: require.resolve('./sidebars-fiber.js'),
-        editUrl: 'https://github.com/hardwario/docs/edit/main',
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
     [
@@ -84,7 +121,7 @@ const config = {
         path: 'tapper',
         routeBasePath: 'tapper',
         sidebarPath: require.resolve('./sidebars-tapper.js'),
-        editUrl: 'https://github.com/hardwario/docs/edit/main',
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
     [
@@ -94,7 +131,7 @@ const config = {
         path: 'tower',
         routeBasePath: 'tower',
         sidebarPath: require.resolve('./sidebars-tower.js'),
-        editUrl: 'https://github.com/hardwario/docs/edit/main',
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
     [
@@ -104,7 +141,7 @@ const config = {
         path: 'cloud',
         routeBasePath: 'cloud',
         sidebarPath: require.resolve('./sidebars-cloud.js'),
-        editUrl: 'https://github.com/hardwario/docs/edit/main',
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
     [
@@ -114,7 +151,7 @@ const config = {
         path: 'cloud-new',
         routeBasePath: 'cloud-new',
         sidebarPath: require.resolve('./sidebars-cloud-new.js'),
-        editUrl: 'https://github.com/hardwario/docs/edit/main',
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
     [
@@ -124,7 +161,7 @@ const config = {
         path: 'gauger',
         routeBasePath: 'gauger',
         sidebarPath: require.resolve('./sidebars-gauger.js'),
-        editUrl: 'https://github.com/hardwario/docs/edit/main',
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
     [
@@ -134,7 +171,7 @@ const config = {
         path: 'glider',
         routeBasePath: 'glider',
         sidebarPath: require.resolve('./sidebars-glider.js'),
-        editUrl: 'https://github.com/hardwario/docs/edit/main',
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
     [
@@ -144,6 +181,7 @@ const config = {
         path: 'apps',
         routeBasePath: 'apps',
         sidebarPath: require.resolve('./sidebars-apps.js'),
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
     [
@@ -153,6 +191,7 @@ const config = {
         path: 'sticker',
         routeBasePath: 'sticker',
         sidebarPath: require.resolve('./sidebars-sticker.js'),
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
     // ➜ Smart Devices (Milesight, RAKwireless, OnLogic, RPi, MikroTik, Carlo Gavazzi, Nexelec)
@@ -163,7 +202,7 @@ const config = {
         path: 'smart-devices',
         routeBasePath: 'smart-devices',
         sidebarPath: require.resolve('./sidebars-smart-devices.js'),
-        editUrl: 'https://github.com/hardwario/docs/edit/main',
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
     [
@@ -177,34 +216,12 @@ const config = {
       },
     ],
     require.resolve('docusaurus-plugin-image-zoom'),
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          {
-            from: '/chester/first-step',
-            to: '/chester/first-steps',
-          },
-          {
-            from: '/sticker/first-step',
-            to: '/sticker/first-steps',
-          },
-          {
-            from: '/glider/first-step',
-            to: '/glider/first-steps',
-          },
-          {
-            from: '/ember/first-step',
-            to: '/ember/first-steps',
-          },
-        ],
-      },
-    ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/social-card.jpg',
       navbar: {
         logo: {
           alt: 'HARDWARIO Logo',
@@ -261,7 +278,7 @@ const config = {
             ],
           },
           {
-            href: 'https://github.com/hardwario/docs',
+            href: 'https://github.com/hardwario/website-hardwario-docs',
             label: 'GitHub',
             position: 'right',
           },

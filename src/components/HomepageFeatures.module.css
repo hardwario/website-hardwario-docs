@@ -1,15 +1,156 @@
-.features {
+.wrapper {
+  padding: 2.5rem 0 3.5rem;
+}
+
+/* ─── Section ─────────────────────────────────────────────── */
+
+.section {
+  margin-bottom: 2.75rem;
+}
+
+.sectionHeader {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.sectionHeader::before,
+.sectionHeader::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--ifm-color-primary);
+  opacity: 0.45;
 }
 
-.buttons {
-  margin-bottom: 16px;
+.sectionLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ifm-color-primary);
+  white-space: nowrap;
+}
+
+/* ─── Grid ────────────────────────────────────────────────── */
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Wide grid for sections with fewer items — max 4 columns but centers nicely */
+.gridWide {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 996px) {
+  .grid,
+  .gridWide {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid,
+  .gridWide {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Card ────────────────────────────────────────────────── */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem 1.25rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  text-align: center;
+  background: var(--ifm-background-surface-color);
+  transition: box-shadow 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  color: var(--ifm-font-color-base);
+  text-decoration: none !important;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 6px 20px rgba(227, 4, 39, 0.12);
+  transform: translateY(-3px);
+  color: var(--ifm-font-color-base);
+}
+
+/* ─── Card image / icon ───────────────────────────────────── */
+
+.cardImageWrapper {
+  height: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.cardImage {
+  max-height: 168px;
+  max-width: 330px;
+  width: auto;
+  object-fit: contain;
+}
+
+.cardImageWide {
+  max-width: 465px;
+}
+
+.cardImageWrapperSmall {
+  height: 88px;
+}
+
+.cardImageSmall {
+  max-height: 88px;
+  max-width: 190px;
+}
+
+.cardIcon {
+  height: 64px;
+  width: 64px;
+  border-radius: 8px;
+  background: var(--ifm-color-emphasis-100);
+  border: 2px solid var(--ifm-color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  letter-spacing: 0.04em;
+}
+
+/* ─── Card text ───────────────────────────────────────────── */
+
+.cardName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  letter-spacing: 0.07em;
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.cardSubtitle {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.cardDescription {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+  flex: 1;
 }

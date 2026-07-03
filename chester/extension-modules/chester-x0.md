@@ -49,6 +49,11 @@ Each channel can be used for these applications:
 
 _\* CHESTER-M main board has on Ax and Bx terminal block pins TVS protection that starts to protect GPIO above 28 V. Theoretically you can measure higher voltage than 26 V but the protection distorts measurements or you need to request or remove these TVS._
 
+## Electrical Specification
+
+* Continues output current: 50 mA
+* Peak output current limit: 150 mA
+
 ## Channel Schematic Diagram
 
 Depending on the application these configuration options are available for each channel:

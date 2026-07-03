@@ -4,7 +4,7 @@
 const sidebars = {
   docs: [
     'introduction',
-    'first-step',
+    'first-steps',
    {
           type: 'category',
           label: 'Video Tutorials',

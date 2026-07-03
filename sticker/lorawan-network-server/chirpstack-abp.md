@@ -36,7 +36,7 @@ https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
 
 ## 1) Collect the required LoRaWAN identifiers & keys
 
-The required LoRaWAN identifiers and keys are **provided together with the STICKER** (device provisioning).
+Use the [**HARDWARIO STICKER NFC Configurator**](../nfc-configurator-app/setup.md) to get the required identifiers and keys for your STICKER.
 
 You will need:
 
@@ -44,11 +44,6 @@ You will need:
 - **DevAddr**
 - **NwkSKey** (Network Session Key)
 - **AppSKey** (Application Session Key)
-
-:::info
-STICKER supports configuration via **NFC**.  
-A HARDWARIO provisioning and configuration application using NFC is currently under development.
-:::
 
 ---
 

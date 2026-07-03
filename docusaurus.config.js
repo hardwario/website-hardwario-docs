@@ -88,7 +88,7 @@ const config = {
         language: ['en'],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
-        docsRouteBasePath: ['chester', 'ember', 'fiber', 'tapper', 'tower', 'cloud', 'gauger', 'glider', 'apps', 'sticker', 'milesight', 'rakwireless'],
+        docsRouteBasePath: ['chester', 'ember', 'fiber', 'tapper', 'tower', 'cloud', 'gauger', 'glider', 'apps', 'sticker', 'smart-devices'],
       },
     ],
   ],
@@ -194,25 +194,14 @@ const config = {
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
-    // ➜ Milesight docs plugin
+    // ➜ Smart Devices (Milesight, RAKwireless, OnLogic, RPi, MikroTik, Carlo Gavazzi, Nexelec)
     [
       '@docusaurus/plugin-content-docs',
       ({
-        id: 'milesight',
-        path: 'milesight',
-        routeBasePath: 'milesight',
-        sidebarPath: require.resolve('./sidebars-milesight.js'),
-        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-      }),
-    ],
-    // ➜ NEW: RAKwireless docs plugin
-    [
-      '@docusaurus/plugin-content-docs',
-      ({
-        id: 'rakwireless',
-        path: 'rakwireless',
-        routeBasePath: 'rakwireless',
-        sidebarPath: require.resolve('./sidebars-rakwireless.js'),
+        id: 'smart-devices',
+        path: 'smart-devices',
+        routeBasePath: 'smart-devices',
+        sidebarPath: require.resolve('./sidebars-smart-devices.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
@@ -260,8 +249,13 @@ const config = {
             label: 'SMART DEVICES',
             position: 'left',
             items: [
-              { to: '/milesight/', label: 'MILESIGHT', activeBaseRegex: `/milesight/` },
-              { to: '/rakwireless/', label: 'RAKwireless', activeBaseRegex: `/rakwireless/` },
+              { to: '/smart-devices/milesight', label: 'MILESIGHT', activeBaseRegex: `/smart-devices/milesight` },
+              { to: '/smart-devices/rakwireless', label: 'RAKwireless', activeBaseRegex: `/smart-devices/rakwireless` },
+              { to: '/smart-devices/onlogic', label: 'OnLogic', activeBaseRegex: `/smart-devices/onlogic` },
+              { to: '/smart-devices/raspberry-pi', label: 'Raspberry Pi', activeBaseRegex: `/smart-devices/raspberry-pi` },
+              { to: '/smart-devices/mikrotik', label: 'MikroTik', activeBaseRegex: `/smart-devices/mikrotik` },
+              { to: '/smart-devices/carlo-gavazzi', label: 'Carlo Gavazzi', activeBaseRegex: `/smart-devices/carlo-gavazzi` },
+              { to: '/smart-devices/nexelec', label: 'Nexelec', activeBaseRegex: `/smart-devices/nexelec` },
             ],
           },
           // 3) CLOUD (bez podmenu)
@@ -276,7 +270,7 @@ const config = {
             label: 'APPS',
             position: 'left',
             items: [
-              { to: '/apps/ubidots/index', label: 'UBIDOTS', activeBaseRegex: `/apps/ubidots/index` },
+              // { to: '/apps/ubidots/index', label: 'UBIDOTS', activeBaseRegex: `/apps/ubidots/index` },
               { to: '/apps/thingsboard/index', label: 'THINGSBOARD', activeBaseRegex: `/apps/thingsboard/index` },
               { to: '/apps/chirpstack/index', label: 'CHIRPSTACK', activeBaseRegex: `/apps/chirpstack/index` },
               { to: '/apps/the-things-stack/index', label: 'THE THINGS STACK', activeBaseRegex: `/apps/the-things-stack/index` },
@@ -307,27 +301,56 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Sites',
-            items: [{ label: 'Homepage', href: 'https://www.hardwario.com' }],
-          },
-          {
-            title: 'Community',
+            title: 'Branches',
             items: [
-              { label: 'Forum', href: 'https://forum.hardwario.com' },
-              { label: 'LinkedIn', href: 'https://www.linkedin.com/company/hardwario' },
-              { label: 'Twitter (EN)', href: 'https://twitter.com/hardwario_en' },
-              { label: 'Twitter (CZ)', href: 'https://twitter.com/hardwario_cz' },
+              { label: 'HARDWARIO a.s. — Czech Republic', href: 'https://hardwario.com' },
+              { label: 'HARDWARIO LLC — United States', href: 'https://hardwario.com' },
+              { label: 'HARDWARIO LTD — United Kingdom', href: 'https://hardwario.com' },
             ],
           },
           {
-            title: 'More',
+            title: 'Navigation',
             items: [
+              { label: 'Products', href: 'https://hardwario.com/products/' },
+              { label: 'Solutions', href: 'https://hardwario.com/solutions/' },
+              { label: 'Customers', href: 'https://hardwario.com/customers/' },
+              { label: 'Resources', href: 'https://hardwario.com/resources/' },
+              { label: 'Online Store', href: 'https://hardwario.store/' },
+            ],
+          },
+          {
+            title: 'Connect',
+            items: [
+              { label: 'LinkedIn', href: 'https://www.linkedin.com/company/hardwario' },
+              { label: 'Twitter / X', href: 'https://twitter.com/hardwario_en' },
+              { label: 'Instagram', href: 'https://www.instagram.com/hardwario/' },
+              { label: 'YouTube', href: 'https://www.youtube.com/@hardwario' },
               { label: 'GitHub', href: 'https://github.com/hardwario' },
-              { label: 'GitLab', href: 'https://gitlab.hardwario.com' },
+              { label: 'Forum', href: 'https://forum.hardwario.com' },
+            ],
+          },
+          {
+            title: 'Company',
+            items: [
+              { label: 'Support', href: 'https://hardwario.com/support/' },
+              { label: 'Contact', href: 'https://hardwario.com/contact/' },
+              { label: 'About', href: 'https://hardwario.com/about/' },
+              { label: 'Partners', href: 'https://hardwario.com/partners/' },
+              { label: 'Investors', href: 'https://hardwario.com/investors/' },
+              { label: 'Newsroom', href: 'https://hardwario.com/newsroom/' },
+            ],
+          },
+          {
+            title: 'Legal',
+            items: [
+              { label: 'Privacy Policy', href: 'https://hardwario.com/privacy-policy/' },
+              { label: 'Terms of Service', href: 'https://hardwario.com/terms-of-service/' },
+              { label: 'Cookie Policy', href: 'https://hardwario.com/cookie-policy/' },
+              { label: 'Recycling', href: 'https://hardwario.com/recycling/' },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} HARDWARIO a.s. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} HARDWARIO a.s. | Created by a passionate team from all over the world.`,
       },
       docs: {
         sidebar: { hideable: true },

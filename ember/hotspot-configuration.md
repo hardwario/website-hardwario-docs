@@ -8,6 +8,26 @@ import Image from '@theme/IdealImage';
 
 In this article, you will find details on the EMBER Hotspot configuration. It is defined by the [**RouterOS configuration script**](https://help.mikrotik.com/docs/display/ROS/Getting+started).
 
+## System Concept
+
+There is at least one site for **EMBER** service, but you can use several cloud services and several sites.
+
+The minimal site configuration is:
+
+* One **LoRaWAN** device (such as CHESTER)
+
+* One **LoRaWAN** gateway (EMBER Hotspot)
+
+* One instance of a **LoRaWAN** server (e.g., **EMBER Cloud** operated by **HARDWARIO**)
+
+Every **EMBER Hotspot** can serve more than 100 **LoRaWAN** devices if these are within the radio coverage.
+
+:::tip
+
+The redundant site configuration comes with a minimum of two **EMBER Hotspot** units (both within the radio coverage of the devices).
+
+:::
+
 ## IP Addresses
 
 These are the interfaces to which **IP** addresses apply:
@@ -45,6 +65,20 @@ The management is available through these services:
 * **RouterOS API** - HTTP REST API
 
 The access is limited from the **LAN** IP network `172.31.255.0/24` and **EMBER Cloud** VPN endpoints `192.168.16.1` + `192.168.17.1`.
+
+## VPN Tunnels
+
+**EMBER Cloud** is interconnected with all **EMBER Hotspot** units by two independent VPN tunnels over the **LTE** internet connectivity:
+
+* **OpenVPN** - TCP-based VPN for **LoRaWAN** traffic
+
+* **WireGuard** - UDP-based VPN for remote management of **EMBER Hotspot**
+
+## Protocol Basis
+
+The supported **LoRaWAN** protocol is based on the [**LoRaWAN specification**](https://lora-alliance.org/about-lorawan/).
+
+The supported **LTE** connectivity is based on **3GPP** specifications.
 
 ## Naming Convention
 

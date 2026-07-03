@@ -5,6 +5,7 @@ const sidebars = {
     docs: [
       'introduction',
       'installation',
+      'hardware-description',
       {
         type: 'doc',
         id: 'changelog',

@@ -1,6 +1,7 @@
 ---
 slug: one-wire-bus
-title: 1-Wire Bus
+title: "1-Wire Bus"
+description: 1-Wire is a serial bus that uses only two wires for half-duplex bidirectional communication with multiple 1-Wire slave devices.
 ---
 import Image from '@theme/IdealImage';
 

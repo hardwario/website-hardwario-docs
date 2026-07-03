@@ -50,3 +50,9 @@
 
 # Fixed a typo'd slug (chirpstack-ataa -> chirpstack-otaa)
 /sticker/lorawan-network-server/chirpstack-ataa      /sticker/lorawan-network-server/chirpstack-otaa                301
+
+# Quick Start Guide slug rename (first-step -> first-steps)
+/chester/first-step                                  /chester/first-steps                                           301
+/sticker/first-step                                  /sticker/first-steps                                           301
+/glider/first-step                                   /glider/first-steps                                            301
+/ember/first-step                                    /ember/first-steps                                             301

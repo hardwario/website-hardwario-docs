@@ -30,6 +30,9 @@ const sidebars = {
   {
   type: 'category',
   label: 'Video Tutorials',
+  link: {
+    type: 'generated-index',
+  },
   collapsed: true,
   items: [
     {

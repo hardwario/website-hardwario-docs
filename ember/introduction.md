@@ -6,56 +6,37 @@ import Image from '@theme/IdealImage';
 
 # EMBER
 
-**EMBER** platform provides transmission and processing of measured sensor values and control of actuators in industrial sites.
-
-We utilize **LoRaWAN** for industrial site **LPWAN**, **LTE** for connectivity to cloud services, cloud components for **LoRaWAN** server, and **Node-RED** for **REST** integrations.
-
-It is composed of those parts:
-
-* The industrial sites where **EMBER IoT Hotspot** and **CHESTER** are located
-
-  * **EMBER Hotspot** - Outdoor **LoRaWAN** gateway
-
-  * **CHESTER** - Outdoor sensing and control device with **LoRaWAN** modem
-
-* **LTE** transport from **Onomondo**
-
-* **EMBER Cloud** service with those services
-
-  * **ChirpStack** - **LoRaWAN Network Server**
-
-  * **Node-RED** - Low-code programming for event-driven integrations
-
-Data visualization and processing can be done using specialized cloud services or on-premise applications.
-
-## System Concept
-
-There is at least one site for **EMBER** service, but you can use several cloud services and several sites.
-
-The minimal site configuration is:
-
-* One **LoRaWAN** device (such as CHESTER)
-
-* One **LoRaWAN** gateway (EMBER Hotspot)
-
-* One instance of a **LoRaWAN** server (e.g., **EMBER Cloud** operated by **HARDWARIO**)
-
-Every **EMBER Hotspot** can serve more than 100 **LoRaWAN** devices if these are within the radio coverage.
+**EMBER** is an industrial LoRaWAN platform that transmits and processes measured sensor values and controls actuators across industrial sites. Each site combines an outdoor **EMBER Hotspot** gateway with LoRaWAN devices such as **CHESTER**, **LTE** backhaul via **Onomondo**, and the managed **EMBER Cloud** service — running **ChirpStack** as the LoRaWAN Network Server and **Node-RED** for low-code REST integrations — so data can be visualized and processed either in the cloud or on-premise.
 
 :::tip
-
-The redundant site configuration comes with a minimum of two **EMBER Hotspot** units (both within the radio coverage of the devices).
-
+### To get your EMBER running, read the [**Quick Start Guide**](getting-started.md).
 :::
 
-The supported **LoRaWAN** protocol is based on the [**LoRaWAN specification**](https://lora-alliance.org/about-lorawan/).
+<img src="/img/ember-top.webp" data-zoom-src="/img/ember-top.webp" width="540" alt="EMBER" />
 
-The supported **LTE** connectivity is based on **3GPP** specifications.
+## Quick Links
 
-The **EMBER Cloud** service operates on the virtual private servers of the [**Digital Ocean**](https://www.digitalocean.com/products/droplets) cloud computing service.
+* [**Quick Start Guide**](getting-started.md) – Step-by-step setup guide.
+* [**Hotspot Configuration**](hotspot-configuration.md) – System concept, RouterOS configuration, IP addresses, and VPN tunnels.
+* [**Cloud Service**](cloud-service.md) – Managed ChirpStack and Node-RED via EMBER Cloud.
+* [**Hardware Description**](hardware-description.md) – Main parts and parameters of the EMBER Hotspot.
+* [**Ordering Codes**](ordering-codes.md) – Complete reference of product ordering codes.
+* [**Changelog**](changelog) – Latest firmware and platform changes.
+* [**Video Tutorials**](category/video-tutorials) – Short videos on ChirpStack and MikroTik setup.
 
-The **EMBER Cloud** is interconnected with all **EMBER Hotspot** units by two independent **VPN** tunnels (Virtual Private Networks) over the **LTE** internet connectivity:
+## Typical Use Cases
 
-* **OpenVPN** TCP-based VPN for **LoRaWAN** traffic
+- Industrial IoT deployments across factories and campuses
+- Commercial environments needing reliable LoRaWAN coverage
+- Home automation systems
+- Reliable LoRaWAN infrastructure management at scale
 
-* **WireGuard** UDP-based VPN for remote management of **EMBER Hotspot**
+## Key Features
+
+| Feature | Description |
+|---|---|
+| **Industrial LoRaWAN Hotspot** | Waterproof outdoor gateway built on the MikroTik RBM33G platform. |
+| **LTE Backhaul** | Integrated cellular connectivity via Onomondo. |
+| **EMBER Cloud** | Managed ChirpStack and Node-RED service with remote configuration and monitoring. |
+| **Redundant Deployments** | Site configurations for high-availability coverage. |
+| **Secure VPN Tunnels** | Independent tunnels for LoRaWAN data and remote management. |

@@ -28,7 +28,10 @@
       "Bash(powershell:*)",
       "WebFetch(domain:sdk.hardwario.com)",
       "WebFetch(domain:www.hackster.io)",
-      "PowerShell(gh api *)"
+      "PowerShell(gh api *)",
+      "PowerShell(ollama pull *)",
+      "PowerShell(Get-CimInstance *)",
+      "Skill(artifact-design)"
     ],
     "deny": [],
     "ask": []

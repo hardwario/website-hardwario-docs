@@ -36,7 +36,7 @@ import Image from '@theme/IdealImage';
 | Feature                   | Description                                                                                                 |
 |----------------------------|-------------------------------------------------------------------------------------------------------------|
 | **Wireless Connectivity** | Supports LoRaWAN for efficient wireless data transmission.                                                  |
-| **Long Battery Life** | Designed for low energy consumption, ensuring at least one year of operation on standard AA batteries. |
+| **Long Battery Life** | Designed for low energy consumption, ensuring 2+ years of operation on standard AA batteries. |
 | **Compact Size** | Miniature dimensions for easy installation and use.                                                         |
 | **Integrated PIR Motion Sensor** | Detects motion with an integrated PIR sensor up to 4 meters.                                              |
 | **NFC Ready** | Connect to the device using an NFC-enabled smartphone.                                                      |

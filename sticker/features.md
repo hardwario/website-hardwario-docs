@@ -33,7 +33,7 @@ When enabled, the device records sensor readings to flash and can replay a reque
 
 ## Operating and power modes
 
-STICKER runs for months on two AA cells. On a provisioned device the firmware samples the sensors and sends LoRaWAN uplinks on the configured intervals, sleeping between them. In addition, two special states further reduce power draw.
+STICKER runs for 2+ years on two AA cells. On a provisioned device the firmware samples the sensors and sends LoRaWAN uplinks on the configured intervals, sleeping between them. In addition, two special states further reduce power draw.
 
 ### Radio-silent mode (unprovisioned device)
 

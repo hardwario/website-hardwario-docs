@@ -115,10 +115,8 @@
 # "Supported sensors" section renamed "Supported devices" (children kept their slugs)
 /chester/supported-sensors                           /chester/supported-devices/supported-devices                   301
 /chester/supported-sensors/                          /chester/supported-devices/supported-devices                   301
-/chester/supported-sensors/*                         /chester/supported-devices/:splat                              301
 
 # Old getting-started children moved (bare /chester/getting-started is still a live page)
-/chester/getting-started/                            /chester/getting-started                                       301
 /chester/getting-started/first-step                  /chester/first-steps                                           301
 /chester/getting-started/first-step/                 /chester/first-steps                                           301
 /chester/getting-started/hardwario-manager           /chester/platform-connectivity/hardwario-manager               301
@@ -127,10 +125,8 @@
 /chester/getting-started/hardwario-monitor/          /chester/platform-connectivity/hardwario-monitor               301
 /chester/getting-started/videos-chester/chester-cloud   /chester/videos-chester/chester-cloud                       301
 /chester/getting-started/videos-chester/chester-cloud/  /chester/videos-chester/chester-cloud                       301
-/chester/getting-started/*                           /chester/getting-started                                       301
 
 # platform-management section renamed platform-connectivity
-/chester/platform-management/*                       /chester/platform-connectivity/:splat                          301
 
 # Crawled .md-suffixed strays
 /chester/platform-connectivity/cellular-networks.md  /chester/platform-connectivity/cellular-networks               301
@@ -139,14 +135,9 @@
 # Cloud v2 docs superseded by the current /cloud/ instance
 /cloud/cloud-v2                                      /cloud/                                                        301
 /cloud/cloud-v2/                                     /cloud/                                                        301
-/cloud/cloud-v2/*                                    /cloud/:splat                                                  301
 
 # TOWER split/compact-split module children flattened into hardware-modules
 # (the two bare "about-*-split-module" pages are still live)
-/tower/hardware-modules/about-split-module/          /tower/hardware-modules/about-split-module                     301
-/tower/hardware-modules/about-compact-split-module/  /tower/hardware-modules/about-compact-split-module             301
-/tower/hardware-modules/about-split-module/*         /tower/hardware-modules/:splat                                 301
-/tower/hardware-modules/about-compact-split-module/* /tower/hardware-modules/:splat                                 301
 
 # EMBER moves
 /ember/getting-started                               /ember/first-steps                                             301
@@ -167,5 +158,32 @@
 /fiber/troubleshooting/                              /fiber/                                                        301
 
 # Ubidots creating-dashboard had no index page; land on the app intro
-/apps/ubidots/creating-dashboard                     /apps/ubidots/index                                            301
-/apps/ubidots/creating-dashboard/                    /apps/ubidots/index                                            301
+/apps/ubidots/creating-dashboard                     /apps/ubidots/index/                                   301
+/apps/ubidots/creating-dashboard/                    /apps/ubidots/index/                                   301
+
+# TOWER split/compact-split module children flattened into hardware-modules
+# (statics only: a catch-all splat would empty-match the live bare pages)
+/tower/hardware-modules/about-split-module/about-pir-module  /tower/hardware-modules/about-pir-module  301
+/tower/hardware-modules/about-split-module/about-pir-module/  /tower/hardware-modules/about-pir-module  301
+/tower/hardware-modules/about-split-module/about-lcd-module  /tower/hardware-modules/about-lcd-module  301
+/tower/hardware-modules/about-split-module/about-lcd-module/  /tower/hardware-modules/about-lcd-module  301
+/tower/hardware-modules/about-split-module/about-climate-module  /tower/hardware-modules/about-climate-module  301
+/tower/hardware-modules/about-split-module/about-climate-module/  /tower/hardware-modules/about-climate-module  301
+/tower/hardware-modules/about-compact-split-module/about-pir-module  /tower/hardware-modules/about-pir-module  301
+/tower/hardware-modules/about-compact-split-module/about-pir-module/  /tower/hardware-modules/about-pir-module  301
+/tower/hardware-modules/about-compact-split-module/about-lcd-module  /tower/hardware-modules/about-lcd-module  301
+/tower/hardware-modules/about-compact-split-module/about-lcd-module/  /tower/hardware-modules/about-lcd-module  301
+/tower/hardware-modules/about-compact-split-module/about-climate-module  /tower/hardware-modules/about-climate-module  301
+/tower/hardware-modules/about-compact-split-module/about-climate-module/  /tower/hardware-modules/about-climate-module  301
+
+# platform-management section index (children handled by the splat below)
+/chester/platform-management                                /chester/platform-connectivity/platform-connectivity   301
+/chester/platform-management/                               /chester/platform-connectivity/platform-connectivity   301
+
+# --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
+# --- every rule after the first splat toward the 100-dynamic-rule limit and
+# --- fails the deploy beyond it; static rules also only win when listed first.
+
+/chester/supported-sensors/*                         /chester/supported-devices/:splat                              301
+/chester/platform-management/*                       /chester/platform-connectivity/:splat                          301
+/cloud/cloud-v2/*                                    /cloud/:splat                                                  301

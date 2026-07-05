@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Power Management
 
-This article provides useful information about various power management options for CHESTER, which is a low-power device with a typical idle current in the range of 100-200 µA. Therefore, it can be powered by batteries in many applications for several years.
+This article provides useful information about various power management options for CHESTER, which is a low-power device with a typical idle current in the range of 100-200 µA. Therefore, it can be powered by batteries in many applications for 3+ years.
 
 :::info
 

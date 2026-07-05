@@ -10,7 +10,7 @@ In this article, you will find details on the EMBER Hotspot configuration. It is
 
 ## System Concept
 
-There is at least one site for **EMBER** service, but you can use several cloud services and several sites.
+There is at least one site for **EMBER** service, but you can use several network server instances and several sites.
 
 The minimal site configuration is:
 
@@ -18,7 +18,7 @@ The minimal site configuration is:
 
 * One **LoRaWAN** gateway (EMBER Hotspot)
 
-* One instance of a **LoRaWAN** server (e.g., **EMBER Cloud** operated by **HARDWARIO**)
+* One instance of a **LoRaWAN** server (**ChirpStack** or **The Things Stack** — self-hosted, or operated by **HARDWARIO** as a [managed service](cloud-service.md))
 
 Every **EMBER Hotspot** can serve more than 100 **LoRaWAN** devices if these are within the radio coverage.
 
@@ -64,11 +64,11 @@ The management is available through these services:
 
 * **RouterOS API** - HTTP REST API
 
-The access is limited from the **LAN** IP network `172.31.255.0/24` and **EMBER Cloud** VPN endpoints `192.168.16.1` + `192.168.17.1`.
+The access is limited from the **LAN** IP network `172.31.255.0/24` and the managed service VPN endpoints `192.168.16.1` + `192.168.17.1`.
 
 ## VPN Tunnels
 
-**EMBER Cloud** is interconnected with all **EMBER Hotspot** units by two independent VPN tunnels over the **LTE** internet connectivity:
+The HARDWARIO [managed service](cloud-service.md) is interconnected with all **EMBER Hotspot** units by two independent VPN tunnels over the **LTE** internet connectivity:
 
 * **OpenVPN** - TCP-based VPN for **LoRaWAN** traffic
 
@@ -82,7 +82,7 @@ The supported **LTE** connectivity is based on **3GPP** specifications.
 
 ## Naming Convention
 
-The **EMBER Hotspot** name is a compound of the customer identifier + **EMBER Cloud** service index + **EMBER Hotspot** index.
+The **EMBER Hotspot** name is a compound of the customer identifier + managed service index + **EMBER Hotspot** index.
 
 ```
 /system identity set name=ember-<customer identifier>-<01>-hotspot-<01>
@@ -193,7 +193,7 @@ LTE connectivity has precedence over WAN by router distance (default LTE router 
 
 :::tip
 
-Certificates (Certificate Authority, **EMBER Hotspot** certificate, **EMBER Hotspot** private key) are imported from the **EMBER Cloud** service.
+Certificates (Certificate Authority, **EMBER Hotspot** certificate, **EMBER Hotspot** private key) are imported from the managed service.
 
 :::
 
@@ -203,7 +203,7 @@ Certificates (Certificate Authority, **EMBER Hotspot** certificate, **EMBER Hots
 
 ### WireGuard
 
-The **WireGuard** keys (public key for **EMBER Cloud** service + private key for **EMBER Hotspot**) are taken from the **EMBER Cloud** service.
+The **WireGuard** keys (public key for the managed service + private key for **EMBER Hotspot**) are taken from the managed service.
 
 ```
 /interface wireguard add disabled=no listen-port=51820 mtu=1420 name=wireguard1
@@ -226,7 +226,7 @@ You can ignore the default **TTN** servers.
 
 :::caution
 
-In case you do not use the **EMBER Cloud** service, you have to use your **LoRaWAN** server IP address, and you don't have to configure the VPN tunnels.
+In case you do not use the HARDWARIO managed service, you have to use your **LoRaWAN** server IP address, and you don't have to configure the VPN tunnels.
 
 :::
 

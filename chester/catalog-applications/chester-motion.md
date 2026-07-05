@@ -48,7 +48,7 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 | Enclosure material | ASA |
 | Dimensions | 130×175×45 mm |
 | Operating temperature | -20 to +60 °C |
-| Storage temperature | -20 to +60 °C |
+| Storage temperature | -30 to +70 °C |
 | Enclosure protection | IP67 |
 | Nominal battery voltage | 3.6 V |
 | Nominal battery capacity | 7700 mAh |

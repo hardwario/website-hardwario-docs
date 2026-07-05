@@ -16,7 +16,7 @@ Welcome! This page helps you **power up (revive)** your STICKER and choose what 
 
 #### What STICKER is
 
-**STICKER** is an open IoT platform based on STM32WL with integrated LoRaWAN connectivity. It is a compact, battery-powered device with long lifetime and ready-to-use applications such as STICKER Clime, Input, and Motion, making it ideal for flexible sensor deployments.
+**STICKER** is an open IoT platform based on STM32WL with integrated LoRaWAN connectivity and a software-selectable proprietary **LoRa P2P** mode that enables direct links to **HARDWARIO FIBER**. It is a compact, battery-powered device with long lifetime and ready-to-use applications such as STICKER Clime, Input, and Motion, making it ideal for flexible sensor deployments.
 
 For detailed technical specifications of the hardware, please refer to the [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description/) page.
 

@@ -24,7 +24,7 @@ https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
 ## Prerequisites
 - Access to the EMBER management interface (**WebFig** or **WinBox**)
 - Your ChirpStack gateway endpoint (hostname/IP + UDP ports) — typically the **Gateway Bridge** endpoint
-- If you are not using the EMBER Cloud service, point the LoRaWAN server address to **your own** LoRaWAN server (no VPN tunnels needed).
+- If you are not using the HARDWARIO managed network server, point the LoRaWAN server address to **your own** LoRaWAN server (no VPN tunnels needed).
 
 ---
 

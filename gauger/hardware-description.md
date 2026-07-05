@@ -18,7 +18,7 @@ title: Hardware Description
 | **Physical**              |                  |
 | Enclosure Dimensions      |       80x90x33mm |
 | Enclosure material        |              ABS |
-| Operation temperature     | -40 °C to +85 °C |
+| Operation temperature     | -20 °C to +70 °C |
 | **Inputs**                |                  |
 | Ethernet class            |            CAT 5 |
 | Maximum input voltage     |          28 V DC |

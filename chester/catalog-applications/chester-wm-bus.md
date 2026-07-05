@@ -38,7 +38,7 @@ The device has **two antennas** that can be switched during reception to achieve
 
 The device can be configured to do **periodic**, **daily**, **weekly** or **monthly scans**.
 
-The device has a sufficiently low power consumption that it can operate from batteries for many years. A version with an external power supply can also be ordered.
+The device has a sufficiently low power consumption that it can operate from batteries for 7+ years at a daily readout. A version with an external power supply can also be ordered.
 
 CHESTER wM-Bus only receives raw hexadecimal wireless M-BUS packets. The device itself or HARDWARIO Cloud doesn’t decode the wM-Bus sensors data. Each wM-Bus sensor has its own representation of encoded data, or the packets might be encrypted. Decoding of the raw hexadecimal values to meaningful units is up to the customer or integrator.
 

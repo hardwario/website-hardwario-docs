@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 # EMBER Quick Start Guide
 
 Welcome! This page helps you **power up** your HARDWARIO **EMBER** and choose what to do next:
-- Run a **managed LoRaWAN backend** via **EMBER Cloud Service** (ChirpStack + Node-RED)
+- Run a **managed LoRaWAN backend** operated by HARDWARIO (ChirpStack + Node-RED)
 - Connect EMBER to your own **ChirpStack**
 - Connect EMBER to **The Things Stack (TTS)**
 
@@ -26,13 +26,13 @@ Hardware description: https://docs.hardwario.com/ember/hardware-description/
   - 24 V DC adapter / 24 V DC power supply, or
   - 24 V DC passive PoE via the **WAN** port
 - Internet connectivity (WAN and/or LTE, depending on your setup)
-- A LoRaWAN backend (EMBER Cloud Service / ChirpStack / TTS / other)
+- A LoRaWAN backend (HARDWARIO managed service / self-hosted ChirpStack / TTS / other)
 
 
 #### Quick links
 - EMBER product page (datasheet + overview): https://www.hardwario.com/ember
 - Hotspot configuration (LAN IP, login, RouterOS script): https://docs.hardwario.com/ember/hotspot-configuration/
-- EMBER Cloud Service (managed ChirpStack + Node-RED): https://docs.hardwario.com/ember/cloud-service/
+- Managed network server (ChirpStack + Node-RED operated by HARDWARIO): https://docs.hardwario.com/ember/cloud-service/
 
 ---
 
@@ -192,9 +192,9 @@ After upgrade you need to reboot the Ember. In the left panel, go to **System â†
 
 ## Step 4: Choose your LoRaWAN backend
 
-### EMBER Cloud Service (managed backend)
+### HARDWARIO managed network server (managed backend)
 
-**EMBER Cloud Service** is a fully managed LoRaWAN backend operated by HARDWARIO.  
+HARDWARIO can operate the LoRaWAN Network Server for you as a fully **managed service**.  
 It is designed for a fast start without the need to run your own infrastructure.
 
 What the service typically provides:
@@ -202,19 +202,21 @@ What the service typically provides:
 - **Node-RED** â€“ data processing, payload decoding, and forwarding  
 - Preconfigured connectivity between the gateway, LNS, and integrations
 
+Around EMBER, HARDWARIO also optionally provides a **SIM card with connectivity** for the LTE backhaul and **secure remote access via OpenVPN**.
+
 Recommended if you want to **get data from devices quickly** and forward it to applications or dashboards.
 
 #### Key links
 - Service overview and concept:  
   **https://docs.hardwario.com/ember/cloud-service/**
 
-- EMBER Cloud web portal (service management):  
+- Web portal (service management):  
   https://docs.hardwario.com/ember/cloud-service/#web-management
 
-- ChirpStack in EMBER Cloud Service:  
+- ChirpStack in the managed service:  
   https://docs.hardwario.com/ember/cloud-service/#chirpstack-lorawan-server
 
-- Node-RED in EMBER Cloud Service:  
+- Node-RED in the managed service:  
   https://docs.hardwario.com/ember/cloud-service/#node-red-application
 
 ---
@@ -247,7 +249,7 @@ Additional resources:
 If you already run another LoRaWAN server, you can set EMBER to forward packets to your server.
 
 Key note from the official Hotspot Configuration:
-- If you **do not use EMBER Cloud service**, use **your LoRaWAN server IP address**
+- If you **do not use the HARDWARIO managed service**, use **your LoRaWAN server IP address**
   and you **don't need to configure VPN tunnels**.
 
 Reference: https://docs.hardwario.com/ember/hotspot-configuration/
@@ -266,7 +268,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 - IoT package installed
 - LoRa interface configured (antenna set to uFL)
 - Bootloader updated
-- Gateway is configured to your backend (EMBER Cloud / ChirpStack / TTS / other)
+- Gateway is configured to your backend (HARDWARIO managed / ChirpStack / TTS / other)
 - In the LoRaWAN server UI, gateway status shows **Last seen / connected**
 - You can see uplinks from at least one LoRaWAN device
 
@@ -286,7 +288,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 - Verify WAN/LTE Internet connectivity.
 - Ensure the IoT package is installed (check with `/system package print`).
 - Verify LoRa interface is configured (check with `/iot lora print`).
-- If using EMBER Cloud, confirm you are using the provided service URL and correct configuration guidance.
+- If using the HARDWARIO managed service, confirm you are using the provided service URL and correct configuration guidance.
 
 #### Reset device
 Unplug the power cable, hold the reset button and plug the power cable back in. After 5 seconds the LED will start blinking, release the button. The reset button location can be found in the image [here](#21-connect-to-ember-using-winbox-4).

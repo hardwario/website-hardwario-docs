@@ -37,7 +37,7 @@ This article provides basic parameters of the CHESTER platform:
 | Enclosure dimensions           | 130(w) x 175(h) x 45(d) mm | Standard enclosure                                            |
 | Enclosure dimensions           | 200(w) x 280(h) x 45(d) mm | Carrier board - low profile                                   |
 | Enclosure dimensions           | 200(w) x 280(h) x 65(d) mm | Carrier board - high profile                                  |
-| Operating temperature range    | -30 to +60 °C              |                                                               |
+| Operating temperature range    | -20 to +60 °C              |                                                               |
 | Storage temperature range      | -30 to +70 °C              |                                                               |
 | Protection level               | IP 67                      | Can be immersed in 1 m depth for 30 minutes                   |
 

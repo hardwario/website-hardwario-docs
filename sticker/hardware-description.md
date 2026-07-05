@@ -110,11 +110,11 @@ Device status is indicated by a **multi-color LED (R/G/Y)** and communication is
 | **Environment** | Operating temperature     | -30 °C to +70 °C                   |
 |                   | Storage temperature       | -40 °C to +85 °C                   |
 |                   | Enclosure protection      | IP40                               |
-| **Sensors** | Integrated thermometer – Measurement range   | -40 °C to +105 °C     |
-|                   | Integrated thermometer – Measurement accuracy| ±0.2 % (0 °C to 65 °C) |
+| **Sensors** | Integrated thermometer – Measurement range   | -20 °C to +60 °C     |
+|                   | Integrated thermometer – Measurement accuracy| ±0.2 °C (0 °C to 65 °C) |
 |                   | Integrated hygrometer – Measurement range    | 0 % to 100 %           |
 |                   | Integrated hygrometer – Measurement accuracy | ±2 % (from 10 % to 90 %) |
-|                   | PIR – Detection range     | 4 m                                |
+|                   | PIR – Detection range     | 5 m                                |
 |                   | PIR – Viewing angle       | ≥ 50°                              |
 
 ![Sticker - Catalog](images/sticker.png)

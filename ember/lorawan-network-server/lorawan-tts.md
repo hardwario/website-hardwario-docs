@@ -16,7 +16,7 @@ This guide shows how to connect the **HARDWARIO EMBER** LoRaWAN gateway (MikroTi
 ## Prerequisites
 - Access to the EMBER management interface (**WinBox**)
 - A TTS account with permissions to create gateways
-- If you are not using the EMBER Cloud service, point the LoRaWAN server address to **your own** LoRaWAN server (no VPN tunnels needed).
+- If you are not using the HARDWARIO managed network server, point the LoRaWAN server address to **your own** LoRaWAN server (no VPN tunnels needed).
 
 ---
 

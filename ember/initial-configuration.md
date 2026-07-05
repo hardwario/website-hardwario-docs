@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 # Initial Setup and Configuration
 
 Welcome! This page helps you **power up (revive)** your HARDWARIO **EMBER** and choose what to do next:
-- run a **managed LoRaWAN backend** via **EMBER Cloud Service** (ChirpStack + Node-RED),
+- run a **managed LoRaWAN backend** operated by HARDWARIO (ChirpStack + Node-RED),
 - connect EMBER to your own **ChirpStack**,
 - connect EMBER to **The Things Stack (TTS)**,
 - or forward packets to **your own LoRaWAN Network Server**,
@@ -31,13 +31,13 @@ Hardware description: https://docs.hardwario.com/ember/hardware-description/
   - 24 V DC adapter / 24 V DC power supply, or
   - 24 V DC passive PoE via the **WAN** port
 - Internet connectivity (WAN and/or LTE, depending on your setup)
-- A LoRaWAN backend (EMBER Cloud Service / ChirpStack / TTS / other)
+- A LoRaWAN backend (HARDWARIO managed service / self-hosted ChirpStack / TTS / other)
 - (Optional) A dashboard platform (Ubidots / ThingsBoard)
 
 #### Quick links
 - EMBER product page (datasheet + overview): https://www.hardwario.com/ember
 - Hotspot configuration (LAN IP, login, RouterOS script): https://docs.hardwario.com/ember/hotspot-configuration/
-- EMBER Cloud Service (managed ChirpStack + Node-RED): https://docs.hardwario.com/ember/cloud-service/
+- Managed network server (ChirpStack + Node-RED operated by HARDWARIO): https://docs.hardwario.com/ember/cloud-service/
 
 ---
 
@@ -199,9 +199,9 @@ Additional references:
 At a high level:
 **LoRaWAN devices → EMBER (gateway) → LoRaWAN Network Server → Integrations → Dashboards / Apps**
 
-### EMBER Cloud Service (managed backend)
+### HARDWARIO managed network server (managed backend)
 
-**EMBER Cloud Service** is a fully managed LoRaWAN backend operated by HARDWARIO.  
+HARDWARIO can operate the LoRaWAN Network Server for you as a fully **managed service**.  
 It is designed for a fast start without the need to run your own infrastructure.
 
 What the service typically provides:
@@ -209,19 +209,21 @@ What the service typically provides:
 - **Node-RED** – data processing, payload decoding, and forwarding  
 - Preconfigured connectivity between the gateway, LNS, and integrations
 
+Around EMBER, HARDWARIO also optionally provides a **SIM card with connectivity** for the LTE backhaul and **secure remote access via OpenVPN**.
+
 👉 Recommended if you want to **get data from devices quickly** and forward it to applications or dashboards.
 
 #### Key links
 - Service overview and concept:  
   **https://docs.hardwario.com/ember/cloud-service/**
 
-- EMBER Cloud web portal (service management):  
+- Web portal (service management):  
   https://docs.hardwario.com/ember/cloud-service/#web-management
 
-- ChirpStack in EMBER Cloud Service:  
+- ChirpStack in the managed service:  
   https://docs.hardwario.com/ember/cloud-service/#chirpstack-lorawan-server
 
-- Node-RED in EMBER Cloud Service:  
+- Node-RED in the managed service:  
   https://docs.hardwario.com/ember/cloud-service/#node-red-application
 
 ---
@@ -268,7 +270,7 @@ Reference:
 If you already run another LoRaWAN server, you can set EMBER to forward packets to your server.
 
 Key note from the official Hotspot Configuration:
-- If you **do not use EMBER Cloud service**, use **your LoRaWAN server IP address**
+- If you **do not use the HARDWARIO managed service**, use **your LoRaWAN server IP address**
   and you **don't need to configure VPN tunnels**.
 
 Reference: https://docs.hardwario.com/ember/hotspot-configuration/
@@ -280,7 +282,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 Once your LoRaWAN server receives uplinks, you typically:
 1) decode payload → 2) transform to JSON/telemetry → 3) send to a dashboard via HTTP/MQTT.
 
-If you use **EMBER Cloud Service**, **Node-RED** is usually the fastest way to transform and forward data.
+If you use the HARDWARIO **managed network server**, **Node-RED** is usually the fastest way to transform and forward data.
 
 ### Ubidots
 
@@ -326,7 +328,7 @@ Additional resources:
 - [ ] IoT package installed
 - [ ] LoRa interface configured (antenna set to uFL)
 - [ ] Bootloader updated
-- [ ] Gateway is configured to your backend (EMBER Cloud / ChirpStack / TTS / other)
+- [ ] Gateway is configured to your backend (HARDWARIO managed / ChirpStack / TTS / other)
 - [ ] In the LoRaWAN server UI, gateway status shows **Last seen / connected**
 - [ ] You can see uplinks from at least one LoRaWAN device
 
@@ -345,7 +347,7 @@ Additional resources:
 - Verify WAN/LTE Internet connectivity.
 - Ensure the IoT package is installed (check with `/system package print`).
 - Verify LoRa interface is configured (check with `/iot lora print`).
-- If using EMBER Cloud, confirm you are using the provided service URL and correct configuration guidance.
+- If using the HARDWARIO managed service, confirm you are using the provided service URL and correct configuration guidance.
 
 #### Script execution errors
 - Ensure you have a stable internet connection on the WAN port (ether1).

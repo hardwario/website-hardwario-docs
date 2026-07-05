@@ -1,20 +1,20 @@
 ---
 slug: cloud-service
-title: Cloud Service
+title: Managed Network Server
 ---
 import Image from '@theme/IdealImage';
 
-# Cloud Service
+# Managed Network Server
 
-To get the **EMBER Cloud** service, you need to have at least one **EMBER Hotspot**.
+The LoRaWAN Network Server for **EMBER** — **ChirpStack** or **The Things Stack** — can be either self-hosted on your own infrastructure (see [**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) and [**The Things Stack**](lorawan-network-server/lorawan-tts.md)) or operated by **HARDWARIO** as a managed service. This page describes the managed service. Besides the managed network server, **HARDWARIO** optionally provides a SIM card with connectivity for the **LTE** backhaul and secure remote access via **OpenVPN**.
+
+To get the managed service, you need to have at least one **EMBER Hotspot**.
 
 With this service, you get your own instance of [**ChirpStack**](https://www.chirpstack.io/) and [**Node-RED**](https://nodered.org/) accessible through the web management UI.
 
-Access is secured by the **HTTPS/TLSv1.3** protocol, and the user identity is created in the **EMBER Cloud** service by the **HARDWARIO** team during service setup.
+Access is secured by the **HTTPS/TLSv1.3** protocol, and the user identity is created in the managed service by the **HARDWARIO** team during service setup.
 
 You do not need any specialized software on your PC/mobile to manage the service. An up-to-date web browser is sufficient.
-
-The **EMBER Cloud** service operates on the virtual private servers of the [**Digital Ocean**](https://www.digitalocean.com/products/droplets) cloud computing service.
 
 ## Web Management
 
@@ -112,7 +112,7 @@ The **Teleport** service will bring the user to the following URL:
 https://ember-<customer identifier>-<service index>-nr.tp.hardwario.com/
 ```
 
-Data are passed from the **LoRaWAN** server to **Node-RED** by **Mosquitto** (the **MQTT** server). The MQTT server is provided by the **EMBER Cloud** service at `localhost:1883`.
+Data are passed from the **LoRaWAN** server to **Node-RED** by **Mosquitto** (the **MQTT** server). The MQTT server is provided by the managed service at `localhost:1883`.
 
 The uplink data are published using this topic:
 

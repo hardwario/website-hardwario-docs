@@ -180,6 +180,40 @@
 /chester/platform-management                                /chester/platform-connectivity/platform-connectivity   301
 /chester/platform-management/                               /chester/platform-connectivity/platform-connectivity   301
 
+# --- cloud-new instance merged into /cloud/ (2026-07-05, owner ruling) ---
+/cloud-new                                           /cloud/                                                        301
+/cloud-new/                                          /cloud/                                                        301
+/cloud-new/api                                       /cloud/api                                                     301
+/cloud-new/api/                                      /cloud/api                                                     301
+/cloud-new/category/cloud-v1                         /cloud/category/cloud-v1                                       301
+/cloud-new/category/cloud-v1/                        /cloud/category/cloud-v1                                       301
+/cloud-new/cloud-v1/overview                         /cloud/cloud-v1/overview                                       301
+/cloud-new/cloud-v1/overview/                        /cloud/cloud-v1/overview                                       301
+/cloud-new/connectors                                /cloud/connectors                                              301
+/cloud-new/connectors/                               /cloud/connectors                                              301
+/cloud-new/devices                                   /cloud/devices                                                 301
+/cloud-new/devices/                                  /cloud/devices                                                 301
+/cloud-new/downlink                                  /cloud/downlink                                                301
+/cloud-new/downlink/                                 /cloud/downlink                                                301
+/cloud-new/fota                                      /cloud/fota                                                    301
+/cloud-new/fota/                                     /cloud/fota                                                    301
+/cloud-new/introduction                              /cloud/introduction                                            301
+/cloud-new/introduction/                             /cloud/introduction                                            301
+/cloud-new/messages                                  /cloud/messages                                                301
+/cloud-new/messages/                                 /cloud/messages                                                301
+/cloud-new/spaces                                    /cloud/spaces                                                  301
+/cloud-new/spaces/                                   /cloud/spaces                                                  301
+/cloud-new/tags                                      /cloud/tags                                                    301
+/cloud-new/tags/                                     /cloud/tags                                                    301
+/cloud-new/users                                     /cloud/users                                                   301
+/cloud-new/users/                                    /cloud/users                                                   301
+/cloud-new/variables                                 /cloud/variables                                               301
+/cloud-new/variables/                                /cloud/variables                                               301
+/cloud-new/videos-cloud/cloud-chester-add            /cloud/videos-cloud/cloud-chester-add                          301
+/cloud-new/videos-cloud/cloud-chester-add/           /cloud/videos-cloud/cloud-chester-add                          301
+/cloud-new/videos-cloud/videos-cloud                 /cloud/videos-cloud/videos-cloud                               301
+/cloud-new/videos-cloud/videos-cloud/                /cloud/videos-cloud/videos-cloud                               301
+
 # --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
 # --- every rule after the first splat toward the 100-dynamic-rule limit and
 # --- fails the deploy beyond it; static rules also only win when listed first.

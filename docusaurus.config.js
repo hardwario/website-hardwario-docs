@@ -147,16 +147,6 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       ({
-        id: 'cloud-new',
-        path: 'cloud-new',
-        routeBasePath: 'cloud-new',
-        sidebarPath: require.resolve('./sidebars-cloud-new.js'),
-        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-      }),
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      ({
         id: 'gauger',
         path: 'gauger',
         routeBasePath: 'gauger',

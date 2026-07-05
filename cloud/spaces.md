@@ -25,7 +25,7 @@ Typical use cases:
 
 1. Click your account name in the top-right corner
 2. Select **New Space**
-3. Enter a name following the [naming conventions](/cloud-new/#naming-conventions)
+3. Enter a name following the [naming conventions](/cloud/#naming-conventions)
 4. Click **Create**
 
 The new space appears in your space switcher immediately.

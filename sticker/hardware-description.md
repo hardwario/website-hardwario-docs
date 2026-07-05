@@ -108,7 +108,7 @@ Device status is indicated by a **multi-color LED (R/G/Y)** and communication is
 |                   | Idle power consumption    | < 80 µA                            |
 |                   | Peak power consumption    | < 100 mA                           |
 | **Environment** | Operating temperature     | -30 °C to +70 °C                   |
-|                   | Storage temperature       | -40 °C to +85 °C                   |
+|                   | Storage temperature       | -30 °C to +70 °C                   |
 |                   | Enclosure protection      | IP40                               |
 | **Sensors** | Integrated thermometer – Measurement range   | -20 °C to +60 °C     |
 |                   | Integrated thermometer – Measurement accuracy| ±0.2 °C (0 °C to 65 °C) |

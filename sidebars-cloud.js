@@ -4,6 +4,7 @@
 const sidebars = {
   docs: [
     'index',
+    'spaces',
     'devices',
     'messages',
     'tags',

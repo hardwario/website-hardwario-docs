@@ -2,53 +2,61 @@
 slug: /
 title: HARDWARIO Cloud
 ---
-import Image from '@theme/IdealImage';
 
-# CLOUD v2
+# HARDWARIO Cloud
 
-[**HARDWARIO Cloud v2**](https://prod.hardwario.cloud/) offers new CHESTER device management with bidirectional communication support.
+[**HARDWARIO Cloud**](https://hardwario.cloud/) is a device management platform for CHESTER and other HARDWARIO IoT devices. It provides a web interface and REST API for managing devices, receiving messages, configuring devices remotely, and pushing firmware updates over the air.
 
-Thanks to this, even low-power battery devices can be controlled and configured remotely with:
-- [**Web interface**](https://prod.hardwario.cloud/)
-- [**API**](api.md)
+## Key Features
 
-**Cloud v2** improves the device's codecs. In Cloud v1 codecs had to be set manually, in v2 codecs are directly in the device's firmware and they are uploaded automatically.
+| Feature | Description |
+|---|---|
+| **Spaces** | Isolated workspaces — each with its own devices, users, tags and connectors |
+| **Devices** | Add and manage IoT devices, view real-time status and firmware info |
+| **Messages** | Browse uplink/downlink messages with JSON viewer and basic dashboard |
+| **Tags** | Label groups of devices and connect them to connectors |
+| **Connectors** | Webhook-based data forwarding with JavaScript transformation |
+| **Downlink** | Send config, data or shell commands to devices remotely |
+| **FOTA** | Push firmware updates over the air |
+| **API** | Full REST API access with API keys |
 
-**Cloud v2** together with the **LTE v2** subsystem in CHESTER also adds automatic packet fragmentation (supports packets with many kilobytes of payload), receive acknowledgment with retransmission and messages are SHA-256 signed.
+## How It Works
+
+```
+CHESTER device  ──LTE/LoRaWAN──▶  HARDWARIO Cloud  ──Connector──▶  Your system
+                                        │
+                                   Web interface
+                                   REST API
+```
+
+All devices belong to a **Space**. A space is the top-level container for everything — devices, users, tags, connectors and variables. You can have multiple spaces (e.g. one per customer or project).
+
+See [**Spaces**](spaces.md) for more details.
+
+## Automatic Codecs
+
+In Cloud v2, device codecs (encoders and decoders) are bundled directly in the firmware and uploaded automatically when the device first connects. There is no need to configure codecs manually.
+
+## Reliable Delivery
+
+Cloud v2 together with the **LTE v2** subsystem in CHESTER adds:
+- Automatic packet fragmentation (supports payloads of many kilobytes)
+- Receive acknowledgment with automatic retransmission
+- SHA-256 message signing
 
 :::info
 
-For information how to use or upgrade CHESTER code to use LTE v2. You can read this [How To: LTE v2](../../chester/firmware-sdk/how-to-lte-v2) article.
+For information on how to use or upgrade CHESTER firmware to LTE v2, see [How To: LTE v2](/chester/firmware-sdk/how-to-lte-v2).
 
 :::
 
-## Cloud v2 structure
-
-All your devices are placed in a **Space**. You can self-provision devices to your or other spaces.
-
-Every device can have a **name**, **tags** and **labels**.
-
-### Name
-
-You can name your device so it can fill in for example its address or a specific note with it.
-
-### Tags
-
-Tags are useful for organizing similar devices together, or you can create a callback and connect it to the tag. So tagged devices will trigger your callback when sending uplink messages.
-
-Tags might also help you filter and categorize different types of devices.
-
-You can have multiple tags assigned to a device.
-
-### Labels
-
-Labels are key-value information you can put on every device. Labels are also passed to the callback, so your callback can react to specific labels on that device.
-
 ## Naming Conventions
 
-- Only lowercase letters (a-z), numbers (0-9), and hyphens (-) are allowed.
-- The name must be at least 3 characters long.
-- The name cannot start with a number.
-- The name cannot begin or end with a hyphen (-).
+Names for spaces, devices, tags and connectors follow the same rules:
 
-This is the regular expression rule `/^[a-z][a-z0-9-]+[a-z0-9]$/`
+- Only lowercase letters (`a–z`), digits (`0–9`), and hyphens (`-`)
+- At least 3 characters long
+- Cannot start with a digit
+- Cannot start or end with a hyphen
+
+Regex: `/^[a-z][a-z0-9-]+[a-z0-9]$/`

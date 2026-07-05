@@ -41,9 +41,9 @@ Here you can find step-by-step guides that will help you configure ChirpStack v4
 
 | Tutorial | Step-by-step guide | Video tutorial |
 |-----------|--------------------|----------------|
-| **Ember (Gateways)** | [Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration#1-gateways) | [Video](https://docs.hardwario.com/apps/videos-apps/chirpstack-ember) |
-| **End Devices** | [Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration#2-device-profiles) | [Video](https://docs.hardwario.com/apps/videos-apps/chirpstack-devices) |
-| **Decode Data** | [Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration#4-codec) | [Video](https://docs.hardwario.com/apps/videos-apps/chirpstack-decoding) |
+| **Ember (Gateways)** | [Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-gateways) | [Video](https://docs.hardwario.com/apps/videos-apps/chirpstack-ember) |
+| **End Devices** | [Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices) | [Video](https://docs.hardwario.com/apps/videos-apps/chirpstack-devices) |
+| **Decode Data** | [Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding) | [Video](https://docs.hardwario.com/apps/videos-apps/chirpstack-decoding) |
 
 ---
 

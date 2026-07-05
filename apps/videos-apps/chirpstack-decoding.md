@@ -31,4 +31,4 @@ In this guide, you’ll learn how to decode LoRaWAN payloads in ChirpStack v4 an
   ></iframe>
 </div>
 
-👉 **Step-by-Step Text Guide: https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration#4-codec**
+👉 **Step-by-Step Text Guide: https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding**

@@ -30,4 +30,4 @@ In this guide, you’ll learn how to connect your EMBER gateway to ChirpStack v4
 
 ---
 
-👉 **Step-by-Step Text Guide: https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration#1-gateways**
+👉 **Step-by-Step Text Guide: https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-gateways**

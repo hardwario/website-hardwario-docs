@@ -12,6 +12,7 @@ const sidebars = {
       collapsed: true,
       items: [
         'lorawan-network-server/lorawan-chirpstack',
+        'chirpstack/chirpstack-ember',
         'lorawan-network-server/lorawan-tts',
       ],
     },

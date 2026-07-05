@@ -30,4 +30,4 @@ In this guide, you’ll learn how to create device profiles and add end devices 
   ></iframe>
 </div>
 
-👉 **Step-by-Step Text Guide: https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration#2-device-profiles**
+👉 **Step-by-Step Text Guide: https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices**

@@ -38,7 +38,6 @@ Next, there are the chapters that talk about the use of SDK modules and how to u
 - [**How To: PWM**](./how-to/pwm.md)
 - [**How To: Relay Module**](./how-to/relay-module.md)
 - [**How To: RTC Clock**](./how-to/rtc-clock.md)
-- [**How To: Servo Motor**](./how-to/servo-motor.md)
 - [**How To: Smart LED Strip**](./how-to/smart-led-strip.md)
 - [**How To: Soil Sensor**](./how-to/soil-sensor.md)
 - [**How To: SPI Bus**](./how-to/spi-bus.md)

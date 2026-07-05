@@ -117,9 +117,7 @@ const sidebars = {
         'firmware-sdk/how-to/push-button',
         'firmware-sdk/how-to/pwm',
         'firmware-sdk/how-to/relay-module',
-        //'firmware-sdk/how-to/rs-485-module',
         'firmware-sdk/how-to/rtc-clock',
-        //'firmware-sdk/how-to/servo-motor',
         'firmware-sdk/how-to/smart-led-strip',
         'firmware-sdk/how-to/soil-sensor',
         'firmware-sdk/how-to/spi-bus',
@@ -167,18 +165,6 @@ const sidebars = {
         'platform-integrations/homekit-and-siri'
       ],
     },
-    /*{
-      type: 'category',
-      label: 'Step-by-Step Projects',
-      link: {
-        type: 'doc',
-        id: 'step-by-step-projects/index',
-      },
-      collapsed: true,
-      items: [
-
-      ],
-    },*/
     {
       type: 'link',
       label: 'Step-by-Step Projects',
@@ -202,7 +188,6 @@ const sidebars = {
         'hardware-modules/about-bridge-module',
         'hardware-modules/about-button-module',
         'hardware-modules/about-climate-module',
-        //'hardware-modules/about-cloony',
         'hardware-modules/about-co2-module',
         'hardware-modules/about-compact-split-module',
         'hardware-modules/about-core-module',
@@ -210,21 +195,16 @@ const sidebars = {
         'hardware-modules/about-encoder-module',
         'hardware-modules/about-gps-module',
         'hardware-modules/about-humidity-tag',
-        //'hardware-modules/about-infragrid-module',
         'hardware-modules/about-lcd-module',
         'hardware-modules/about-lora-module',
         'hardware-modules/about-lux-meter-tag',
         'hardware-modules/about-maxi-base-module',
-        //'hardware-modules/about-micro-bit-module',
         'hardware-modules/about-mini-battery-module',
         'hardware-modules/about-mini-cover-module',
-        //'hardware-modules/about-nfc-tag',
         'hardware-modules/about-pir-module',
         'hardware-modules/about-power-module',
-        //'hardware-modules/about-probe-module',
         'hardware-modules/about-radio-dongle',
         'hardware-modules/about-relay-module',
-        //'hardware-modules/about-rs-485-module',
         'hardware-modules/about-sensor-module',
         'hardware-modules/about-soil-sensor',
         'hardware-modules/about-split-module',

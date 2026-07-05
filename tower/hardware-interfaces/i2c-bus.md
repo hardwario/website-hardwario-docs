@@ -49,7 +49,7 @@ Addresses **0x00-0x07** and **0x78-0x7F** are I²C **reserved addresses** and ca
 
 | Address | Chip      | TOWER product                                                                                                                               | Remark                                  |
 | :------ | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------- |
-| 0x08    | NT3H2011  | [**NFC Tag**](../hardware-modules/about-nfc-tag.md)                                                                                         | Changed from default to avoid collision |
+| 0x08    | NT3H2011  | **NFC Tag**                                                                                                                                 | Changed from default to avoid collision |
 | 0x19    | LIS2DH12  | [**Core Module**](../hardware-modules/about-core-module.md)                                                                                 | Channel I2C0                            |
 | 0x20    | TCA9534   | **IQRF Module**                                                                                                                             |                                         |
 | 0x21    | TCA9534   | [**GPS Module**](../hardware-modules/about-gps-module.md)                                                                                   |                                         |
@@ -82,7 +82,7 @@ Addresses **0x00-0x07** and **0x78-0x7F** are I²C **reserved addresses** and ca
 | 0x58    | SGP30     | **VOC Tag**                                                                                                                                 | Default address                         |
 | 0x5f    | HTS221    | [**Humidity Tag (R1.x)**](../hardware-modules/about-humidity-tag.md)                                                                        |                                         |
 | 0x60    | MPL3115A2 | [**Barometer Tag**](../hardware-modules/about-barometer-tag.md)<br/>[**Climate Module**](../hardware-modules/about-climate-module.md)       |                                         |
-| 0x64    | ATSHA204A | [**Radio Dongle**](../hardware-modules/about-nfc-tag.md)                                                                                         | Channel I2C0                            |
+| 0x64    | ATSHA204A | [**Radio Dongle**](../hardware-modules/about-radio-dongle.md)                                                                               | Channel I2C0                            |
 | 0x64    | ATSHA204A | [**Radio Dongle**](../hardware-modules/about-radio-dongle.md)                                                                               | Channel I2C1                            |
 
 

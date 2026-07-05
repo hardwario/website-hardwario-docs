@@ -232,7 +232,7 @@ Additional resources:
   https://docs.hardwario.com/ember/chirpstack/chirpstack-ember/
 
 - (Optional) Install ChirpStack v4 (Debian/Ubuntu):  
-  https://docs.hardwario.com/ember/chirpstack-v4-installation/
+  https://docs.hardwario.com/apps/chirpstack/chirpstack-installation/
 
 ---
 

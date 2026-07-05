@@ -116,7 +116,8 @@
 /chester/supported-sensors                           /chester/supported-devices/supported-devices                   301
 /chester/supported-sensors/                          /chester/supported-devices/supported-devices                   301
 
-# Old getting-started children moved (bare /chester/getting-started is still a live page)
+# Old getting-started children moved (the bare page's own redirect is in the
+# orphan-docs cleanup block below)
 /chester/getting-started/first-step                  /chester/first-steps                                           301
 /chester/getting-started/first-step/                 /chester/first-steps                                           301
 /chester/getting-started/hardwario-manager           /chester/platform-connectivity/hardwario-manager               301
@@ -142,10 +143,10 @@
 # EMBER moves
 /ember/getting-started                               /ember/first-steps                                             301
 /ember/getting-started/                              /ember/first-steps                                             301
-/ember/chirpstack/chirpstack-installation            /ember/chirpstack-v4-installation                              301
-/ember/chirpstack/chirpstack-installation/           /ember/chirpstack-v4-installation                              301
-/ember/mikrotik/gateway-configuration                /ember/initial-configuration                                   301
-/ember/mikrotik/gateway-configuration/               /ember/initial-configuration                                   301
+/ember/chirpstack/chirpstack-installation            /apps/chirpstack/chirpstack-installation                       301
+/ember/chirpstack/chirpstack-installation/           /apps/chirpstack/chirpstack-installation                       301
+/ember/mikrotik/gateway-configuration                /ember/first-steps                                             301
+/ember/mikrotik/gateway-configuration/               /ember/first-steps                                             301
 
 # FIBER docs restructured (project-structure/troubleshooting retired -> section index)
 /fiber/installation-setup                            /fiber/installation                                            301
@@ -177,8 +178,8 @@
 /tower/hardware-modules/about-compact-split-module/about-climate-module/  /tower/hardware-modules/about-climate-module  301
 
 # platform-management section index (children handled by the splat below)
-/chester/platform-management                                /chester/platform-connectivity/platform-connectivity   301
-/chester/platform-management/                               /chester/platform-connectivity/platform-connectivity   301
+/chester/platform-management                                /chester/category/platform-connectivity                 301
+/chester/platform-management/                               /chester/category/platform-connectivity                 301
 
 # --- cloud-new instance merged into /cloud/ (2026-07-05, owner ruling) ---
 /cloud-new                                           /cloud/                                                        301
@@ -213,6 +214,67 @@
 /cloud-new/videos-cloud/cloud-chester-add/           /cloud/videos-cloud/cloud-chester-add                          301
 /cloud-new/videos-cloud/videos-cloud                 /cloud/videos-cloud/videos-cloud                               301
 /cloud-new/videos-cloud/videos-cloud/                /cloud/videos-cloud/videos-cloud                               301
+
+# --- Orphan-docs cleanup (2026-07-05, owner ruling): 22 orphaned pages deleted ---
+
+# apps/chirpstack: old duplicate overview + monolithic v4 guide (split into
+# chirpstack-gateways / chirpstack-end-devices / chirpstack-decoding)
+/apps/chirpstack/chirpstack-configuration/index      /apps/chirpstack/index/                                        301
+/apps/chirpstack/chirpstack-configuration/index/     /apps/chirpstack/index/                                        301
+/apps/chirpstack/chirpstack-configuration            /apps/chirpstack/chirpstack-configuration/chirpstack-gateways  301
+/apps/chirpstack/chirpstack-configuration/           /apps/chirpstack/chirpstack-configuration/chirpstack-gateways  301
+
+# apps/thingsboard: superseded / Czech-only drafts
+/apps/thingsboard/notifications                      /apps/thingsboard/notifications-manager                        301
+/apps/thingsboard/notifications/                     /apps/thingsboard/notifications-manager                        301
+/apps/thingsboard/public-link-cz                     /apps/thingsboard/public-link                                  301
+/apps/thingsboard/public-link-cz/                    /apps/thingsboard/public-link                                  301
+/apps/thingsboard/user-groups                        /apps/thingsboard/users-managing                               301
+/apps/thingsboard/user-groups/                       /apps/thingsboard/users-managing                               301
+/apps/thingsboard/user-roles                         /apps/thingsboard/users-managing                               301
+/apps/thingsboard/user-roles/                        /apps/thingsboard/users-managing                               301
+/apps/thingsboard/users-managing-cz                  /apps/thingsboard/users-managing                               301
+/apps/thingsboard/users-managing-cz/                 /apps/thingsboard/users-managing                               301
+
+# chester: old getting-started page + platform-connectivity stub
+/chester/getting-started                             /chester/first-steps                                           301
+/chester/getting-started/                            /chester/first-steps                                           301
+/chester/platform-connectivity/platform-connectivity   /chester/category/platform-connectivity                      301
+/chester/platform-connectivity/platform-connectivity/  /chester/category/platform-connectivity                      301
+
+# ember: duplicate ChirpStack overview/installation + old initial-configuration
+/ember/chirpstack/index                              /apps/chirpstack/index/                                        301
+/ember/chirpstack/index/                             /apps/chirpstack/index/                                        301
+/ember/chirpstack-v4-installation                    /apps/chirpstack/chirpstack-installation                       301
+/ember/chirpstack-v4-installation/                   /apps/chirpstack/chirpstack-installation                       301
+/ember/initial-configuration                         /ember/first-steps                                             301
+/ember/initial-configuration/                        /ember/first-steps                                             301
+
+# sticker: old ChirpStack stub
+/sticker/chirpstack                                  /sticker/lorawan-network-server/lorawan-chirpstack             301
+/sticker/chirpstack/                                 /sticker/lorawan-network-server/lorawan-chirpstack             301
+
+# tower: empty how-to stubs + discontinued modules (Cloony / Infra Grid / NFC Tag)
+/tower/firmware-sdk/how-to/how-to-rs-485-module      /tower/firmware-sdk/                                           301
+/tower/firmware-sdk/how-to/how-to-rs-485-module/     /tower/firmware-sdk/                                           301
+/tower/firmware-sdk/how-to/how-to-servo-motor        /tower/firmware-sdk/                                           301
+/tower/firmware-sdk/how-to/how-to-servo-motor/       /tower/firmware-sdk/                                           301
+/tower/hardware-modules/about-cloony                 /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-cloony/                /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-infragrid-module       /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-infragrid-module/      /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-micro-bit-module       /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-micro-bit-module/      /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-nfc-tag                /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-nfc-tag/               /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-probe-module           /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-probe-module/          /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-rs-485-module          /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-rs-485-module/         /tower/hardware-modules/                                       301
+
+# tower: empty step-by-step-projects stub -> Hackster (matches the sidebar's external link)
+/tower/step-by-step-projects                         https://www.hackster.io/hardwario/projects                     301
+/tower/step-by-step-projects/                        https://www.hackster.io/hardwario/projects                     301
 
 # --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
 # --- every rule after the first splat toward the 100-dynamic-rule limit and

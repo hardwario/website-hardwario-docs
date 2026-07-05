@@ -22,4 +22,4 @@ In this guide, you’ll learn how to add gateways, create device profiles, regis
 </iframe>
 
 
-👉 **Step-by-Step Text Guide: https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration**
+👉 **Step-by-Step Text Guide: https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-gateways**

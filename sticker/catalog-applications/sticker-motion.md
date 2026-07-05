@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
 
 ## Quick Links
 
-* [**Getting Started Guide**](https://docs.hardwario.com/sticker/getting-started) – Step-by-step setup guide.
+* [**Getting Started Guide**](https://docs.hardwario.com/sticker/first-steps) – Step-by-step setup guide.
 * [**Buy STICKER Motion**](https://www.hardwario.store/p/sticker-motion) – Purchase on our store.
 * [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes) - List of components and part numbers.
 * [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description) - Technical details and hardware overview.

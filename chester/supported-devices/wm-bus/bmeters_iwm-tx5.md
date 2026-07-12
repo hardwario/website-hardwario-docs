@@ -110,7 +110,7 @@ The address is located **in the center below the barcode**, after the **CE mark*
 
 ### Mapping the wM-Bus Address to CHESTER
 
-The mapping must be carried out using the **CHESTER terminal**, for example with:  
+The mapping must be carried out using the **CHESTER Terminal**, for example with:  
 
 - [**HARDWARIO Monitor (Windows)**](https://github.com/hardwario/hio-monitor/releases)
 - [**HARDWARIO Manager (Android)**](https://play.google.com/store/apps/details?id=com.hardwario.manager)

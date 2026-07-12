@@ -96,7 +96,7 @@ Connect the RS-485 lines to the energy meter:
 
 #### 2. Using the CHESTER Terminal
 
-You can access the CHESTER terminal using one of the following options:
+You can access the CHESTER Terminal using one of the following options:
 
 - Use the **HARDWARIO Manager app** (desktop or mobile)
 - Use the **Cloud Terminal** in **[HARDWARIO Cloud](https://hardwario.cloud/)**
@@ -106,7 +106,7 @@ You can access the CHESTER terminal using one of the following options:
 
 #### Modbus Communication Configuration for CHESTER
 
-Use the following commands to configure communication parameters via the CHESTER terminal:
+Use the following commands to configure communication parameters via the CHESTER Terminal:
 
 #### Configuration of CHESTER
 

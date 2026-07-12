@@ -106,7 +106,7 @@ There are multiple options to access the terminal:
 
 #### Modbus Communication Configuration for CHESTER
 
-Use the following commands to configure communication parameters via CHESTER terminal:
+Use the following commands to configure communication parameters via CHESTER Terminal:
 
 
 #### Configuration of CHESTER

@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # CHESTER BLE Tag Subsystem
 
-The **Chester** platform includes a dedicated **Teltonika EYE Sensor subsystem**, enabling seamless integration with up to eight Bluetooth tags for monitoring temperature and humidity.  
+The **CHESTER** platform includes a dedicated **Teltonika EYE Sensor subsystem**, enabling seamless integration with up to eight Bluetooth tags for monitoring temperature and humidity.  
 This subsystem provides reliable wireless environmental sensing for a wide range of applications.
 
 ---

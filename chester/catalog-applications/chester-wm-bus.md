@@ -400,7 +400,7 @@ Each JSON cloud message contains up to 20 wM-Bus packets. If CHESTER is configur
 
 
 
-## Hardwario Cloud – Decryption Keys
+## HARDWARIO Cloud – Decryption Keys
 
 The **transmitted messages from wM-Bus devices are encrypted** to optimize energy consumption during data transmission, which extends the overall battery life.  
 
@@ -409,7 +409,7 @@ The **received data must therefore be decrypted**, which is done using **decrypt
 In this section, we will show **how to add individual decryption keys** into the Cloud using the **Variables** section.  
 
 :::tip
-If you are not sure how to **get started with the Cloud**, follow this tutorial: [**Hardwario Cloud v2**](/cloud/)
+If you are not sure how to **get started with the Cloud**, follow this tutorial: [**HARDWARIO Cloud v2**](/cloud/)
 :::
 
 ### Step-by-Step Instructions

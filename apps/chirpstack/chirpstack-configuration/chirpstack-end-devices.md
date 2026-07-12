@@ -30,7 +30,7 @@ After adding gateways, the next step is to create device profiles in ChirpStack.
 
 ### Example for HARDWARIO devices
 
-If you are using Chester or Sticker as an end device, you can find examples of device profile configurations in the following links:
+If you are using CHESTER or STICKER as an end device, you can find examples of device profile configurations in the following links:
 
 | **Device** | **Documentation Link** |
 |-------------|-------------------------|

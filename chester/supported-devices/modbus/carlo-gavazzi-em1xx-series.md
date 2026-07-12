@@ -93,9 +93,9 @@ If long presses don’t respond, try pressing the `◄` **(Left)** button closer
 
 ---
 
-### Modbus Communication Configuration for Chester
+### Modbus Communication Configuration for CHESTER
 
-Use the following commands to configure communication parameters via Chester terminal:
+Use the following commands to configure communication parameters via CHESTER terminal:
 
 
 ```

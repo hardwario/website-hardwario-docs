@@ -119,9 +119,9 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 ---
 
-### Modbus Communication Configuration for Chester
+### Modbus Communication Configuration for CHESTER
 
-Use the following commands to configure communication parameters via Chester terminal:
+Use the following commands to configure communication parameters via CHESTER terminal:
 
 
 ```

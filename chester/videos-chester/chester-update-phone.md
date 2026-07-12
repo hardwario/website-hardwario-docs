@@ -1,6 +1,6 @@
 ---
 slug: chester-update-phone
-title: How to update Chester with phone
+title: How to update CHESTER with phone
 ---
 
 import Image from '@theme/IdealImage';

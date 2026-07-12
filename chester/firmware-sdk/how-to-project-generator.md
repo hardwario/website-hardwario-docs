@@ -313,7 +313,7 @@ features:
   |      BT Observer      |      subsystem-bt-observer      |                 `CONFIG_BT_OBSERVER=y`                  |
 </details>
 
-#### Hardware Chester feature
+#### Hardware CHESTER feature
 
 The term `hardware-chester-` refers to a specific hardware component or device within the project's hardware ecosystem. Example:
 ```yaml

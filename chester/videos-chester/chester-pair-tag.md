@@ -1,6 +1,6 @@
 ---
 slug: chester-pair-tag
-title: How to pair Bluetooth tag with Chester
+title: How to pair Bluetooth tag with CHESTER
 ---
 
 import Image from '@theme/IdealImage';

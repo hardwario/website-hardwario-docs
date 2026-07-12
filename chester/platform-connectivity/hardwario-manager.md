@@ -15,7 +15,7 @@ The **HARDWARIO Manager** mobile app allows you via **Bluetooth Low Energy** to:
 - Update device firmware
 
 :::info
-We also provide a [video tutorial](https://docs.hardwario.com/chester/videos-chester/chester-connect-phone) demonstrating the procedure for pairing the Chester device with a mobile phone using the Hardwario Manager application.
+We also provide a [video tutorial](https://docs.hardwario.com/chester/videos-chester/chester-connect-phone) demonstrating the procedure for pairing the CHESTER device with a mobile phone using the HARDWARIO Manager application.
 :::
 
 ## App Installation
@@ -86,7 +86,7 @@ This page shows basic information about hardware version, variant, firmware vers
 
 :::tip
 
-If the firmware application is supported by **HARDWARIO MANAGER**, the **OPEN APPLICATION** button appears at the bottom of the information page.
+If the firmware application is supported by **HARDWARIO Manager**, the **OPEN APPLICATION** button appears at the bottom of the information page.
 
 :::
 

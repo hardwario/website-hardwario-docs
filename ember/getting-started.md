@@ -67,13 +67,13 @@ EMBER runs **MikroTik RouterOS**.
 For initial access and management, use the WAN interface (leftmost RJ-45 port) and standard RouterOS tools.
 
 **If you don't already have Winbox 4 installed, follow the [Winbox 4 Installation guide](/ember/mikrotik/winbox4-installation).**
-#### 2.1 Connect to Ember using Winbox 4
+#### 2.1 Connect to EMBER using Winbox 4
 
 After opening the application, look at the list where you should see your **EMBER**.
 - If there is more than one device, look at the EMBER board — on its left side there are two ethernet connectors with a sticker on them. On the sticker, find the **MAC address** — a combination of numbers and letters after the text **E01** (for example: **E01: 48:A5:8A:4F:17:A6**).
 - Go back to **Winbox** and find the device with the **matching MAC address**. Click on the device in the list to select it.
 - Make sure the **jumper** on the board is **removed**. The location of the jumper is shown in the picture below.
-![Ember jumper, ethernet ports and reset](images/ember-jumper-eth-ports.png)
+![EMBER jumper, ethernet ports and reset](images/ember-jumper-eth-ports.png)
 
 **Main documentation (recommended start):**
 - EMBER Hotspot configuration & local access:  
@@ -124,11 +124,11 @@ Now you need to update RouterOS. Go to [Checks for RouterOS updates and installs
 #### Manual Setup:
 Sets the system identity to "ember".
 - **System → Identity** change your identity to **ember** and click **OK**.
-![Ember change identity](images/ember-change-identity.png)
+![EMBER change identity](images/ember-change-identity.png)
 
 Creates a bridge interface (bridge0) and adds ether2 and ether3 to it.
 - **Bridge → New**  change name to **bridge0** and click **OK**.
-![Ember create bridge0](images/ember-bridge-add.png)
+![EMBER create bridge0](images/ember-bridge-add.png)
 
 Assigns IP address 172.31.255.1/24 to the bridge for LAN access and add ports to the bridge.
 - **IP → Addresses →  New** and fill **Address**, **Network** and select **Interface**:
@@ -137,32 +137,32 @@ Assigns IP address 172.31.255.1/24 to the bridge for LAN access and add ports to
   - Interface: **bridge0**
 - Confirm it by clicking **OK**
 
-![Ember ether2 add to bridge0](images/ember-bridge-add-ip.png)
+![EMBER ether2 add to bridge0](images/ember-bridge-add-ip.png)
 
 - In Bridge window go to **Ports → New**, select interface **ether2**. Make sure, that the **bridge0** is selected and click **OK**
-![Ember ether2 add to bridge0](images/ember-bridge-ether2.png)
+![EMBER ether2 add to bridge0](images/ember-bridge-ether2.png)
 
 - In Bridge window go to **Ports → New**, select interface **ether3**. Make sure, that the **bridge0** is selected and click **OK**
-![Ember ether3 add to bridge0](images/ember-bridge-ether3.png)
+![EMBER ether3 add to bridge0](images/ember-bridge-ether3.png)
 
 
 Enables DHCP client on ether1 (WAN) for internet connectivity.
 - In the left panel **IP → DHCP Client → New**, select **ether1** as interface and click **OK**.
-![Ember ether1 dhcp client](images/ember-ether1-dhcp-client.png) 
+![EMBER ether1 dhcp client](images/ember-ether1-dhcp-client.png) 
 
 Turn on welcome note.
 - In the left panel **System → Note**, uncheck **Show At Login** and click **OK**.
-![Ember ether3 add to bridge0](images/ember-note.png)
+![EMBER ether3 add to bridge0](images/ember-note.png)
 
 #### Checks for RouterOS updates and installs if available.
 - In the left panel **System → Packages → Check for Updates**. A new window will open, check if the versions match. If not, click **Download&Install** and wait a few minutes.
-![Ember RouterOS update](images/ember-update-routeros.png)
+![EMBER RouterOS update](images/ember-update-routeros.png)
 
 ---
 
 ### 3.3 Install IoT Package
 After reconnecting, go to the left panel **System → Packages → Check for Updates**. At the list, find **iot**, click on it. In the right panel, click **Enable** and then **Apply Changes**. A new window will open, click **OK** and wait a few seconds.
-![Ember IoT package install](images/ember-install-iot-package.png)
+![EMBER IoT package install](images/ember-install-iot-package.png)
 
 ---
 
@@ -182,10 +182,10 @@ Press **Enter** to execute.
 
 ### 3.5 Upgrade RouterBOARD
 In the left panel, go to **System → RouterBOARD** and click **Upgrade**. A new window will open, click **OK**.
-![Ember upgrade RouterBOARD](images/ember-upgrade-routerboard.png)
+![EMBER upgrade RouterBOARD](images/ember-upgrade-routerboard.png)
 
-After upgrade you need to reboot the Ember. In the left panel, go to **System → Reboot**. A new window will open, click **OK**.
-![Ember reboot](images/ember-reboot.png)
+After upgrade you need to reboot the EMBER. In the left panel, go to **System → Reboot**. A new window will open, click **OK**.
+![EMBER reboot](images/ember-reboot.png)
 
 
 ---

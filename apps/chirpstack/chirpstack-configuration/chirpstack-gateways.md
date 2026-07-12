@@ -22,12 +22,12 @@ Once completed, click **Submit**.
 ![ChirStack v4 - Gateways](images/chirpstack-tutorial-1.png)
 
 :::info
-If you are using our **Ember gateway**, the **Gateway ID** can be found in the **MikroTik software** under **LoRa → Devices**.  
+If you are using our **EMBER gateway**, the **Gateway ID** can be found in the **MikroTik software** under **LoRa → Devices**.  
 :::
 
 ---
 
-## Ember Gateways – MikroTik Software  
+## EMBER Gateways – MikroTik Software  
 
 If you are using our **EMBER** as the gateway, all of its configuration must be done directly in the **MikroTik system**.
 Once configured, the gateway should become visible and ready to connect with the ChirpStack system.

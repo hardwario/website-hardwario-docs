@@ -24,7 +24,7 @@ This guide shows how to connect the **HARDWARIO EMBER** LoRaWAN gateway (MikroTi
 On MikroTik RouterOS, the gateway EUI is shown as **Gateway ID**:
 
 - **IoT → LoRa → Devices → Gateway ID**
-![Ember Gateway ID](images/ember-geteway-id.png)
+![EMBER Gateway ID](images/ember-geteway-id.png)
 ---
 
 ## 2) Register the gateway in The Things Stack
@@ -46,7 +46,7 @@ On MikroTik RouterOS, the gateway EUI is shown as **Gateway ID**:
 > RouterOS typically requires the LoRa card to be **Disabled** while you change LoRa settings.
 
 In the left panel, open **IoT**→ **LoRa**. Click on line at the list and  aply disable. 
-![Ember disable lrw card](images/ember-disable-lrw-card.png)
+![EMBER disable lrw card](images/ember-disable-lrw-card.png)
 You’ll use the downloaded keys in RouterOS.
 
 
@@ -57,11 +57,11 @@ You’ll use the downloaded keys in RouterOS.
 - Enable **SSL/TLS**
 
 In the left panel, open **IoT**→ **LoRa**→ **Servers**. Select **New** and fill boxes:
-- Name: **TTS-Hardwario cups**
+- Name: **TTS-HARDWARIO cups**
 - Address: **hardwario-com.eu1.cloud.thethings.industries**
 - Port: **443**
 - Auth Key: (Value of file **"cups.key"**)
-![Ember add TTS server](images/ember-tts-server.png)
+![EMBER add TTS server](images/ember-tts-server.png)
 
 ### Root certificates (required for SSL/TLS)
 
@@ -71,20 +71,20 @@ To establish a secure TLS connection to **The Things Stack (LNS / CUPS)**, impor
   https://www.thethingsindustries.com/docs/reference/root-certificates/
   
 In the left panel, open **Files**→ **Upload** and choose file "ca.pem".
-![Ember add TTS certificate](images/ember-upload-file.png)
+![EMBER add TTS certificate](images/ember-upload-file.png)
 
 In the left panel, open **System**→ **Certificates**→ **Import**. Click on dropdown arrow, select file "ca.pem" and click at **Import**.
-![Ember import TTS certificate](images/ember-import-certificate.png)
+![EMBER import TTS certificate](images/ember-import-certificate.png)
 
 ### Select Network server
 You need to select a network server.
 
 - In the left panel, open **IoT → LoRa** click on the device. A new window will show, click **+** to select TTS server, after that click **OK**.
-![Ember add TTS server](images/ember-add-select-network-server.png)
+![EMBER add TTS server](images/ember-add-select-network-server.png)
 ---
 ## 4) Enable and verify
 1. In RouterOS: **IoT → LoRa → Devices → Enable**
-![Ember enable lrw card](images/ember-enable-lrw.png)
+![EMBER enable lrw card](images/ember-enable-lrw.png)
 2. In TTS Console, open the gateway and confirm **Live data** updates.
 
 ---

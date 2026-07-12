@@ -95,7 +95,7 @@ Then, connect the RS485 side of the converter to the energy meter’s communicat
 
 
 
-#### 2. Using the Chester Terminal
+#### 2. Using the CHESTER Terminal
 
 There are multiple options to access the terminal:
 
@@ -104,12 +104,12 @@ There are multiple options to access the terminal:
 - Use the **Google Chrome terminal** at **[terminal.hardwario.com](https://terminal.hardwario.com/)**
 
 
-#### Modbus Communication Configuration for Chester
+#### Modbus Communication Configuration for CHESTER
 
-Use the following commands to configure communication parameters via Chester terminal:
+Use the following commands to configure communication parameters via CHESTER terminal:
 
 
-#### Configuration of chester
+#### Configuration of CHESTER
 
 To configure the energy meter in the CHESTER application, enter the following set of commands into the terminal. These commands set the correct serial communication mode, define the connected device, and determine the intervals for measurement and data transmission.
 
@@ -169,8 +169,8 @@ app config show
 :::info
 The table above shows the default communication settings used in our setup.  
 However, the energy meter may have different values already configured.  
-Before applying these settings in Chester, you should check the actual communication parameters in the energy analyzer's menu. [➡️Navigation in the energy meter menu⬅️](#browsing-and-configuration-buttons)  
-Make sure to match the settings in Chester according to the values configured in the energy meter.
+Before applying these settings in CHESTER, you should check the actual communication parameters in the energy analyzer's menu. [➡️Navigation in the energy meter menu⬅️](#browsing-and-configuration-buttons)  
+Make sure to match the settings in CHESTER according to the values configured in the energy meter.
 :::
 
 ### Measured values

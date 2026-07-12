@@ -95,10 +95,10 @@ CHESTER to match the switches actually configured on the probe.
 
 ---
 
-### Modbus Communication Configuration for Chester
+### Modbus Communication Configuration for CHESTER
 
 Use the following commands to configure the CHESTER Serial application via the
-Chester terminal. The probe is added as a Modbus device of type `piketronic`.
+CHESTER terminal. The probe is added as a Modbus device of type `piketronic`.
 
 ```
 app config serial-mode "modbus"

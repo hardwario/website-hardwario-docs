@@ -47,23 +47,23 @@ Device status is indicated by a **multi-color LED (R/G/Y)** and communication is
 
 ### NFC Configuration Architecture
 
-![Sticker - NFC Configuration Architecture](images/sticker-nfc.drawio.png)
+![STICKER - NFC Configuration Architecture](images/sticker-nfc.drawio.png)
 
 ---
 
 ## Overview
 
-#### Sticker Clime - Enclosure, Mainboard, and Battery Holder
+#### STICKER Clime - Enclosure, Mainboard, and Battery Holder
 
-![Sticker Clime](images/sticker-clime-overview.png)
+![STICKER Clime](images/sticker-clime-overview.png)
 
-#### Sticker Input - Enclosure, Mainboard, and Battery Holder
+#### STICKER Input - Enclosure, Mainboard, and Battery Holder
 
-![Sticker Input](images/sticker-input-overview.png)
+![STICKER Input](images/sticker-input-overview.png)
 
-#### Sticker Motion - Enclosure, Mainboard, and Battery Holder
+#### STICKER Motion - Enclosure, Mainboard, and Battery Holder
 
-![Sticker Motion](images/sticker-motion-overview.png)
+![STICKER Motion](images/sticker-motion-overview.png)
 
 ---
 
@@ -72,27 +72,27 @@ Device status is indicated by a **multi-color LED (R/G/Y)** and communication is
 ### Power
 
 **[Download Power Schematic (PDF)](hardware-diagrams/power.pdf)**
-![Sticker - Power](images/power.png)
+![STICKER - Power](images/power.png)
 
 ### Antenna
 
 **[Download Antenna Schematic (PDF)](hardware-diagrams/antenna.pdf)**
-![Sticker - Antenna](images/antenna.png)
+![STICKER - Antenna](images/antenna.png)
 
 ### MCU
 
 **[Download MCU Schematic (PDF)](hardware-diagrams/mcu.pdf)**
-![Sticker - MCU](images/mcu.png)
+![STICKER - MCU](images/mcu.png)
 
 ### Sensors
 
 **[Download Sensors Schematic (PDF)](hardware-diagrams/sensors.pdf)**
-![Sticker - Sensors](images/sensors.png)
+![STICKER - Sensors](images/sensors.png)
 
 ### NFC
 
 **[Download NFC Schematic (PDF)](hardware-diagrams/nfc.pdf)**
-![Sticker - NFC](images/nfc.png)
+![STICKER - NFC](images/nfc.png)
 
 ---
 
@@ -117,4 +117,4 @@ Device status is indicated by a **multi-color LED (R/G/Y)** and communication is
 |                   | PIR – Detection range     | 5 m                                |
 |                   | PIR – Viewing angle       | ≥ 50°                              |
 
-![Sticker - Catalog](images/sticker.png)
+![STICKER - Catalog](images/sticker.png)

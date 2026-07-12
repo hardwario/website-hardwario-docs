@@ -1,14 +1,14 @@
 ---
 slug: sticker-clime
-title: Sticker Clime
+title: STICKER Clime
 ---
 import Image from '@theme/IdealImage';
 
-# Sticker Clime
+# STICKER Clime
 
 **STICKER Clime** is a compact, wireless LoRaWAN sensor designed for accurate temperature and humidity monitoring. Powered by two AA batteries, it delivers long-term operation and is ideal for applications such as climate control in buildings, storage monitoring, or environmental analysis in industrial and agricultural settings.
 
-![Sticker Clime](images/sticker-clime-top.png)
+![STICKER Clime](images/sticker-clime-top.png)
 
 ## Quick Links
 

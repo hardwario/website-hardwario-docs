@@ -12,7 +12,7 @@ To make it easier to work with certain 1-Wire devices we implemented a module ca
 
 :::info
 
-In the example we allow the **relays** to be controlled with a **button integrated into the Core module**.
+In the example we allow the **relays** to be controlled with a **button integrated into the Core Module**.
 
 With every press of the button, one more relay will be activated. When all relays are active, the next push of the button will switch off all of them and the cycle repeats.
 

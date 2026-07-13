@@ -22,6 +22,7 @@ const sidebars = {
       collapsed: true,
       items: [
         'mikrotik/gateway-update',
+        'mikrotik/antenna-gain',
         'mikrotik/winbox-setup',
       ],
     },

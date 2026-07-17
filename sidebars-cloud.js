@@ -4,13 +4,16 @@
 const sidebars = {
   docs: [
     'index',
+    'first-steps',
     'spaces',
     'devices',
+    'bulk-actions',
     'messages',
     'tags',
     'connectors',
     'variables',
     'users',
+    'uplink',
     'downlink',
     'fota',
     'api',

@@ -109,7 +109,7 @@ Then apply changes by typing `config save`. The device will reboot and use the c
 
 ## Application Firmware Cloud v1
 
-These firmwares are for older [**Cloud v1**](../../cloud/category/cloud-v1) communication.
+These firmwares are for older [**Cloud v1**](../../cloud/legacy) communication.
 
 The table below provides an overview of the available application firmware builds for **catalog applications**.
 

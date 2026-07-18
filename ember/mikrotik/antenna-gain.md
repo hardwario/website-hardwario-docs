@@ -18,6 +18,46 @@ exceed the legal EIRP limit.
 
 ---
 
+## What is antenna gain?
+
+Antenna gain describes how much an antenna concentrates radio energy in certain
+directions, compared to a theoretical antenna that radiates equally in every
+direction (an **isotropic radiator**). It's expressed in **dBi** — decibels
+relative to isotropic.
+
+:::note Gain reshapes power, it doesn't create it
+A higher-gain antenna doesn't transmit more energy — it takes the same total
+power and squeezes it into a narrower radiation pattern, concentrating more of
+it toward the horizon and less straight up/down. Total radiated power stays
+the same; gain only redistributes it.
+:::
+
+### Range vs. coverage radius
+
+Two things are easy to confuse:
+
+- **Range** — how far the signal reaches in the antenna's strongest direction
+  (for an omnidirectional antenna, that's toward the horizon).
+- **Coverage radius** — how much of the surrounding space, in every direction
+  (including straight down, straight up, nearby floors of a building),
+  actually gets usable signal.
+
+A higher-gain omnidirectional antenna increases horizontal **range** by
+narrowing the vertical beamwidth. That's good for long links over flat, open
+terrain — but it can leave a **coverage gap directly under or very close to
+the gateway**, since less energy goes that way. A device right below a
+high-mounted, high-gain antenna can have worse signal than one much farther
+away on the horizon.
+
+| Antenna gain | Vertical beamwidth | Best for |
+| --- | --- | --- |
+| Low (~0–2 dBi) | Wide | Devices close by / at many different heights — e.g. indoors, multi-floor buildings |
+| Higher (~6+ dBi) | Narrower | Long-range outdoor links, devices roughly level with or below the gateway, spread horizontally |
+
+Match the antenna's gain to the deployment, not just to "more range = better."
+
+---
+
 ## How TX power actually works
 
 A MikroTik LoRa gateway does **not** set its own transmit power. The value comes from

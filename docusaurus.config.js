@@ -63,17 +63,19 @@ const config = {
           sidebarPath: require.resolve('./sidebars-chester.js'),
           editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
         },
+        // This property has no blog content. Disabling the preset's default
+        // blog prevents an empty /blog page from being built and indexed.
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {
           // Emit <lastmod> so crawlers can prioritize fresh pages, and keep the
-          // Docusaurus boilerplate (the tutorial /markdown-page and the /search
-          // UI) out of the sitemap.
+          // visitor-only /search UI out of the sitemap.
           lastmod: 'date',
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/search', '/markdown-page'],
+          ignorePatterns: ['/search'],
           filename: 'sitemap.xml',
         },
       }),
@@ -88,6 +90,8 @@ const config = {
         language: ['en'],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
+        indexBlog: false,
+        docsDir: ['chester', 'ember', 'fiber', 'fiber-lite', 'tapper', 'tower', 'cloud', 'gauger', 'glider', 'apps', 'sticker', 'smart-devices'],
         docsRouteBasePath: ['chester', 'ember', 'fiber', 'fiber-lite', 'tapper', 'tower', 'cloud', 'gauger', 'glider', 'apps', 'sticker', 'smart-devices'],
       },
     ],
@@ -338,7 +342,7 @@ const config = {
               { label: 'About', href: 'https://www.hardwario.com/company/' },
               { label: 'Partners', href: 'https://www.hardwario.com/partners/' },
               { label: 'Investors', href: 'https://www.hardwario.com/investors/' },
-              { label: 'Newsroom', href: 'https://www.hardwario.com/newsroom/' },
+              { label: 'Blog', href: 'https://www.hardwario.com/blog/' },
             ],
           },
           {

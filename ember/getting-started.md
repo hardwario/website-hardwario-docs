@@ -30,7 +30,7 @@ Hardware description: https://docs.hardwario.com/ember/hardware-description/
 
 
 #### Quick links
-- EMBER product page (datasheet + overview): https://www.hardwario.com/ember
+- EMBER product page (datasheet + overview): https://www.hardwario.com/products/ember/
 - Hotspot configuration (LAN IP, login, RouterOS script): https://docs.hardwario.com/ember/hotspot-configuration/
 - Managed network server (ChirpStack + Node-RED operated by HARDWARIO): https://docs.hardwario.com/ember/cloud-service/
 

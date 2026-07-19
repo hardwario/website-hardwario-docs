@@ -9,6 +9,13 @@
 ## Documentation
 
 - [Documentation home](https://docs.hardwario.com/): entry point to all product and service documentation
+- [CHESTER](https://docs.hardwario.com/chester/): configurable industrial IoT gateway documentation
+- [STICKER](https://docs.hardwario.com/sticker/): compact LoRaWAN sensor-platform documentation
+- [EMBER](https://docs.hardwario.com/ember/): LoRaWAN gateway documentation
+- [TOWER](https://docs.hardwario.com/tower/): modular IoT platform documentation
+- [HARDWARIO Cloud](https://docs.hardwario.com/cloud/): device and data service documentation
+- [Applications](https://docs.hardwario.com/apps/): integration guides for third-party IoT applications
+- [Smart devices](https://docs.hardwario.com/smart-devices/): supported third-party sensors, gateways and industrial computers
 - [Sitemap](https://docs.hardwario.com/sitemap.xml): complete, machine-readable list of every documentation page
 - [Search](https://docs.hardwario.com/search): full-text search across the docs
 

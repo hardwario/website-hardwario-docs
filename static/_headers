@@ -13,6 +13,15 @@
 /img/*
   Cache-Control: public, max-age=2592000
 
+# Interactive board-viewer exports are support artifacts, not standalone
+# documentation pages; keep them accessible without putting them in search.
+/download/ibom/*
+  X-Robots-Tag: noindex
+
+# Site search is useful to visitors but not a useful landing page for crawlers.
+/search*
+  X-Robots-Tag: noindex
+
 # Security response headers for every route (HTML + assets).
 # No Content-Security-Policy: Docusaurus relies on inline <script>/<style>
 # (hydration, JSON-LD, search, embeds), so a meaningful CSP needs dedicated

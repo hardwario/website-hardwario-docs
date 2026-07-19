@@ -9,7 +9,8 @@ const sidebars = {
       type: 'category',
       label: 'Detailed Description',
       link: {
-        type: 'generated-index'
+        type: 'generated-index',
+        description: 'Detailed GAUGER connector, operating-state, communication, and power documentation.'
       },
       collapsed: true,
       items: [
@@ -25,7 +26,8 @@ const sidebars = {
       type: 'category',
       label: 'Operation Instructions',
       link: {
-        type: 'generated-index'
+        type: 'generated-index',
+        description: 'Instructions for configuring, resetting, updating, and operating GAUGER.'
       },
       collapsed: true,
       items: [

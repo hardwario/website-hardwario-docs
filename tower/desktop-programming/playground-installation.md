@@ -8,11 +8,11 @@ We tried to make sure that the installation of Playground is as easy as possible
 
 ## Download
 
-To download Playground you can visit the [**Download Page**](https://www.hardwario.com/download/#), there is a link to the **latest version** of Playground and you will be offered downloads based on **your operating system**.
+Download the latest Playground release from the [**official GitHub releases page**](https://github.com/hardwario/hardwario-playground/releases/latest). Choose the installation package for your operating system.
 
 :::tip
 
-If you want to download any other version or are interested in the application itself, you can visit the [**Playground GitHub repository**](https://github.com/hardwario/bch-playground/releases).
+If you need another version or want to inspect the application itself, visit the [**complete Playground release history**](https://github.com/hardwario/hardwario-playground/releases).
 
 :::
 

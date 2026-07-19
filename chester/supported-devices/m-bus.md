@@ -5,11 +5,11 @@ title: M-Bus Sensors
 
 import Image from '@theme/IdealImage';
 
-# M-Bus Sensors
-Here is list of tested sensors by HARDWARIO with basic configuration to use:
+This page summarizes the M-Bus interface and the configuration concepts used
+with CHESTER.
 
 
-# M-Bus (Meter-Bus) Communication Overview
+## M-Bus (Meter-Bus) Communication Overview
 
 ![M-Bus Architecture](images/m-bus-topology.png)
 

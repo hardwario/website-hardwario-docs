@@ -28,7 +28,7 @@ For detailed technical specifications of the hardware, please refer to the [**Ha
 
 #### Useful links
 - STICKER overview: https://docs.hardwario.com/sticker/
-- STICKER product page: https://www.hardwario.com/sticker
+- STICKER product page: https://www.hardwario.com/products/sticker/
 - STICKER store page: https://www.hardwario.store/sticker
 - STICKER **Decoder**: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
 - HARDWARIO datasheets hub (includes STICKER datasheet link): https://www.hardwario.com/resources/datasheets

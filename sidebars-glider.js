@@ -11,6 +11,7 @@ const sidebars = {
       label: 'Console Access',
       link: {
         type: 'generated-index',
+        description: 'Access the GLIDER console over USB or RTT with J-Link.',
       },
       collapsed: true,
       items: [
@@ -36,6 +37,7 @@ const sidebars = {
       label: 'Commands',
       link: {
         type: 'generated-index',
+        description: 'AT-command and shell-command reference for GLIDER.',
       },
       collapsed: true,
       items: [

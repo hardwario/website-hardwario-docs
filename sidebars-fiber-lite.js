@@ -10,6 +10,7 @@ const sidebars = {
         label: 'Troubleshooting',
         link: {
           type: 'generated-index',
+          description: 'Common FIBER Lite installation and runtime problems, with step-by-step fixes.',
         },
         collapsed: true,
         items: [

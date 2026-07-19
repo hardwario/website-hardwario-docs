@@ -16,7 +16,7 @@ import Image from '@theme/IdealImage';
 * [**Buy STICKER Input**](https://www.hardwario.store/p/sticker-input) – Purchase on our store.
 * [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes) - List of components and part numbers.
 * [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description) - Technical details and hardware overview.
-* [**Official Product Page**](https://www.hardwario.com/sticker) – Features and overview.
+* [**Official Product Page**](https://www.hardwario.com/products/sticker/) – Features and overview.
 
 ## Typical use cases
 

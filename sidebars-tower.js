@@ -9,6 +9,7 @@ const sidebars = {
       label: 'Getting Started',
       link: {
         type: 'generated-index',
+        description: 'Start with the HARDWARIO TOWER architecture, design principles, programming, and resources.',
       },
       collapsed: true,
       items: [
@@ -24,6 +25,7 @@ const sidebars = {
       label: 'Desktop Programming',
       link: {
         type: 'generated-index',
+        description: 'Install and use HARDWARIO Playground for radio, MQTT, Node-RED, dashboards, and firmware flashing.',
       },
       collapsed: true,
       items: [
@@ -156,6 +158,7 @@ const sidebars = {
       label: 'Platform Integrations',
       link: {
         type: 'generated-index',
+        description: 'Connect HARDWARIO TOWER with visualization, automation, and third-party IoT services.',
       },
       collapsed: true,
       items: [
@@ -217,6 +220,7 @@ const sidebars = {
       label: 'Hardware Interfaces',
       link: {
         type: 'generated-index',
+        description: 'Electrical and software interfaces available on HARDWARIO TOWER modules.',
       },
       collapsed: true,
       items: [

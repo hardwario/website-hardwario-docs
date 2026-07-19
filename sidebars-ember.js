@@ -34,6 +34,7 @@ const sidebars = {
   label: 'Video Tutorials',
   link: {
     type: 'generated-index',
+    description: 'Video guides for configuring and using EMBER.',
   },
   collapsed: true,
   items: [

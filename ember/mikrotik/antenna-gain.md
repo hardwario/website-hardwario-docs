@@ -25,7 +25,7 @@ directions, compared to a theoretical antenna that radiates equally in every
 direction (an **isotropic radiator**). It's expressed in **dBi** — decibels
 relative to isotropic.
 
-:::note Gain reshapes power, it doesn't create it
+:::info Gain reshapes power, it doesn't create it
 A higher-gain antenna doesn't transmit more energy — it takes the same total
 power and squeezes it into a narrower radiation pattern, concentrating more of
 it toward the horizon and less straight up/down. Total radiated power stays
@@ -75,7 +75,7 @@ radiated EIRP                    = radio output + antenna gain − cable loss
   a boost. It exists so that after the antenna adds its gain back, the radiated EIRP
   matches what the server asked for.
 
-:::note Counter-intuitive
+:::info Counter-intuitive
 A **higher** `antenna-gain` value produces **lower** power out of the radio. It is a
 compensation knob for regulatory compliance, not a way to increase range.
 :::
@@ -86,7 +86,7 @@ compensation knob for regulatory compliance, not a way to increase range.
 
 Enter the **real gain of the attached antenna in dBi, minus cable loss**.
 
-:::note
+:::info
 For the full list of LoRa parameters and their exact definitions, see the MikroTik
 documentation: [LoRa General Properties](https://help.mikrotik.com/docs/spaces/ROS/pages/16351619/General+Properties).
 :::

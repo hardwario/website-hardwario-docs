@@ -3,6 +3,7 @@ slug: /
 sidebar_position: 1
 title: Introduction
 ---
+import Image from '@theme/IdealImage';
 
 # FIBER Lite
 
@@ -18,24 +19,14 @@ LoRaWAN data pipeline out of the box.
 
 ## Data Flow
 
-```
-LoRaWAN device (STICKER, CHESTER)
-        │  RF
-        ▼
-RAK5146 concentrator (RAK2287 Pi HAT, SPI)
-        │
-        ▼
-ChirpStack v4  (LoRaWAN Network Server)
-        │  MQTT (uplink/downlink)
-        ▼
-Node-RED  (payload decoding, routing)
-        │  write
-        ▼
-InfluxDB  (time-series database)
-        │  query
-        ▼
-Grafana  (visualization, dashboards)
-```
+<div style={{ width: '600px', margin: '0 auto' }}>
+
+<Image img={require('./images/data-flow.png')} />
+
+</div>
+
+ChirpStack, Node-RED, InfluxDB, and Grafana all run **on the Raspberry Pi 5 itself** — no
+separate servers or cloud services required.
 
 A landing page on port 80 links to every service and shows live system stats (CPU, memory, disk,
 temperature, uptime), so the device is usable without memorizing ports or IP-to-service mappings.

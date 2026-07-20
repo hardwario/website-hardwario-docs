@@ -1,7 +1,9 @@
 ---
 slug: rtc-remoteio-error
-title: 'dmesg shows "rtc-pcf85063 ...: error -EREMOTEIO: RTC chip is not present"'
+title: RTC -EREMOTEIO Error
 ---
+
+**Symptom:** `dmesg` shows `rtc-pcf85063 ...: error -EREMOTEIO: RTC chip is not present`.
 
 This is expected and harmless on FIBER Lite — it means the [**Configure Hardware**](/fiber-lite/installation#configure-hardware)
 step was followed using the CM4-based FIBER guide's config.txt block verbatim, including the

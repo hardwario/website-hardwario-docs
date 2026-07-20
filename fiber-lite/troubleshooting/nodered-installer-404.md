@@ -1,7 +1,10 @@
 ---
 slug: nodered-installer-404
-title: The Node-RED install command returns a 404 page instead of running
+title: Node-RED Installer 404
 ---
+
+**Symptom:** the Node-RED install command downloads a 404 error page instead of running the
+installer.
 
 Release asset filenames on the `node-red/linux-installers` GitHub repository have changed
 between versions — a URL that worked previously (or that's quoted in an older guide) can 404

@@ -1,6 +1,6 @@
 ---
 slug: ssh-connection-refused
-title: SSH connection is refused outright
+title: SSH Connection Refused
 ---
 
 If `ssh <user>@<ip>` fails with **"Connection refused"** rather than a password prompt, the SSH
@@ -25,6 +25,6 @@ cloud-init timing.
 
 If you're working with more than one similar microSD card at a time, make sure you're editing
 the card that's actually in this device — see the card mix-up warning in
-**SSH accepts connections, but every password is "Permission denied"** in this section.
+**SSH Permission Denied** in this section.
 
 :::

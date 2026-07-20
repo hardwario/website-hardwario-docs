@@ -1,6 +1,6 @@
 ---
 slug: ssh-permission-denied
-title: SSH accepts connections, but every password is "Permission denied"
+title: SSH Permission Denied
 ---
 
 If SSH is reachable (you get a password prompt) but the password you set in Imager is always
@@ -95,8 +95,8 @@ runcmd:
 ```
 
 The `runcmd` line is a belt-and-suspenders backup for enabling `sshd` on top of cloud-init's own
-`ssh_pwauth` — the boot-partition `ssh` flag file (see **SSH connection is refused outright** in
-this section) is still the more reliable mechanism, since it doesn't depend on cloud-init timing
-at all.
+`ssh_pwauth` — the boot-partition `ssh` flag file (see **SSH Connection Refused** in this
+section) is still the more reliable mechanism, since it doesn't depend on cloud-init timing at
+all.
 
 :::

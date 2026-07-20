@@ -734,7 +734,14 @@ but not required.
    mkdir -p ~/fiber-lite-dashboard
    ```
 
-1. Write `index.html`:
+1. Write `index.html` — this is the dashboard's web page (layout, styling, and the little script
+   that fills in your device's IP and refreshes the live stats). The block below is collapsed by
+   default since it's long; click the bar to expand it, then copy the whole thing into the
+   command:
+
+   <details>
+   <summary><b>Click to expand: full index.html code</b></summary>
+   <p>
 
    ```sh
    cat << 'EOF' > ~/fiber-lite-dashboard/index.html
@@ -991,6 +998,9 @@ but not required.
    EOF
    ```
 
+   </p>
+   </details>
+
    :::tip
 
    The service tiles and SSH command use `window.location.hostname` to fill in the target IP
@@ -999,9 +1009,14 @@ but not required.
 
    :::
 
-1. Write `serve.py` — a small, dependency-free Python `http.server` subclass. It serves the
-   static files above and exposes a `/api/stats` JSON endpoint reading live CPU/memory/disk usage
-   from `/proc` and temperature from `/sys/class/thermal/thermal_zone0/temp`, plus system uptime:
+1. Write `serve.py` — this is the small program that actually runs the dashboard: a
+   dependency-free Python web server that serves the `index.html` page above and exposes a
+   `/api/stats` endpoint with live CPU/memory/disk usage and temperature. Same as above, click
+   to expand the code, then copy the whole thing into the command:
+
+   <details>
+   <summary><b>Click to expand: full serve.py code</b></summary>
+   <p>
 
    ```sh
    cat << 'EOF' > ~/fiber-lite-dashboard/serve.py
@@ -1101,6 +1116,9 @@ but not required.
        server.serve_forever()
    EOF
    ```
+
+   </p>
+   </details>
 
 1. Run it as a systemd service (root is required to bind port 80 without `setcap`/`authbind`):
 

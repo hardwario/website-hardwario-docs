@@ -62,7 +62,7 @@ https://docs.hardwario.com/sticker/catalog-applications/catalog-applications/
 5. Wait for the first uplink (the timing depends on the installed catalog app and reporting interval).
 
 #### NFC note (optional, but useful)
-STICKER is **NFC-ready** and can be configured even when batteries are not inserted (NFC energy harvesting). Use the [**HARDWARIO STICKER NFC Configurator**](nfc-configurator-app/setup.md) to write LoRaWAN settings (DevEUI, AppEUI/JoinEUI, AppKey) before installation:
+STICKER is **NFC-ready** and can be configured even when batteries are not inserted (NFC energy harvesting). Use the [**Hardwario Manager**](nfc-configurator-app/setup.md) to write LoRaWAN settings (DevEUI, AppEUI/JoinEUI, AppKey) before installation:
 - STICKER Power Management: https://docs.hardwario.com/sticker/power-management/
 
 
@@ -70,7 +70,7 @@ STICKER is **NFC-ready** and can be configured even when batteries are not inser
 
 ## Step 3: Choose your LoRaWAN backend
 
-Before registering the device, find your STICKER's **DevEUI**, **AppEUI/JoinEUI** and **AppKey** using the [**HARDWARIO STICKER NFC Configurator**](nfc-configurator-app/setup.md).
+Before registering the device, find your STICKER's **DevEUI**, **AppEUI/JoinEUI** and **AppKey** using the [**Hardwario Manager**](nfc-configurator-app/setup.md).
 
 ### ChirpStack v4
 Best if you want a private LoRaWAN network you control.
@@ -105,7 +105,7 @@ Step-by-step sections:
 STICKER can be configured to adjust reporting intervals, set alarm thresholds, or change LoRaWAN keys.
 
 Configuration is available via two methods:
-- **NFC** — configure with a smartphone using the [**HARDWARIO STICKER NFC Configurator**](nfc-configurator-app/setup.md), no tools needed
+- **NFC** — configure with a smartphone using the [**Hardwario Manager**](nfc-configurator-app/setup.md), no tools needed
 - **Shell (RTT terminal)** — for developers via a debug connection
 
 For a full list of all configuration parameters and commands, see:

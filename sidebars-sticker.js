@@ -8,12 +8,29 @@ const sidebars = {
     'features',
     {
       type: 'category',
-      label: 'NFC Configurator APP',
+      label: 'Hardwario Manager',
       collapsed: true,
       items: [
         'nfc-configurator-app/setup',
+        'nfc-configurator-app/features',
         'nfc-configurator-app/config',
         'nfc-configurator-app/template-generator',
+        {
+          type: 'category',
+          label: 'Guides',
+          collapsed: true,
+          items: [
+            'nfc-configurator-app/guides/read-info-and-keys',
+            'nfc-configurator-app/guides/scan-multiple',
+            'nfc-configurator-app/guides/templates',
+            'nfc-configurator-app/guides/one-wire-sensors',
+            'nfc-configurator-app/guides/sample-data',
+            'nfc-configurator-app/guides/sensor-history',
+            'nfc-configurator-app/guides/resets',
+            'nfc-configurator-app/guides/manage-tags',
+            'nfc-configurator-app/guides/change-log',
+          ],
+        },
       ],
     },
     {

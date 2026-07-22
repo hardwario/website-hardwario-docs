@@ -17,9 +17,28 @@ This page describes notable behaviors of the STICKER firmware: how the device ma
 
 ## Data retention
 
-### Identity and provisioning are preserved
+### The reset ladder — identity preserved by tier
 
-A reset or firmware update must never un-provision a field device. The device identity (serial number, secret key, claim token) and the full LoRaWAN provisioning (DevEUI, JoinEUI, keys, DevAddr, session keys, region, sub-band, network, activation, ADR) are a protected set that survives every reset path: `settings reset`, the over-the-air `factory_reset` command, an NFC config reset, and config-schema migration on a firmware update. Only the local, shell-only `settings erase` wipes them.
+A reset or firmware update must never un-provision a field device beyond the tier you explicitly ask for. STICKER's resets form a **severity ladder**; each tier keeps a strict subset of the one above it:
+
+| Reset | What it keeps |
+|---|---|
+| **Reboot** | Everything — a plain restart. |
+| **Device reset** | Device identity **and the full LoRaWAN provisioning** (keys and session): the device stays provisioned and connected, only the configuration returns to defaults. Reachable over shell, NFC, or a LoRaWAN downlink. |
+| **Factory reset** | Device identity only — serial number, vendor token, secret key, nonce, claim token, DevEUI and JoinEUI. It **drops the LoRaWAN session and keys**, so the device re-joins the network. **NFC/shell only** — rejected over a LoRaWAN downlink, which would destroy the very session needed to confirm it. |
+| **Vendor reset** | Serial number and vendor token only — the configuration, LoRaWAN keys and secret key are all erased, and a **new secret key must be supplied** as part of the reset. Authorised by the vendor token, over the shell or the dedicated NFC vendor channel only. |
+| **`settings erase`** | Nothing — a full wipe back to a blank device, including the serial number. A shell-only "return to blank" escape hatch. |
+
+The identity set (serial number, secret key, nonce counter, vendor token) and the LoRaWAN provisioning each record which tiers preserve them, so a config-schema migration on a firmware update restores the protected set after applying new defaults.
+
+### The vendor token
+
+Alongside the secret key, each device holds a **vendor token** — a privileged, per-device credential kept by the device owner. The two credentials do different jobs:
+
+- The **secret key** secures the everyday encrypted NFC channel used to read and write configuration.
+- The **vendor token** authorizes the privileged operations the secret key cannot: **changing the secret key** (re-keying the device) and the **vendor reset** tier above — which wipes the device back to its serial number and vendor token, setting a new secret key in the process.
+
+Because it unlocks re-keying and the deepest reset, the vendor token is never needed for routine configuration and is held only by the device owner. In [**Hardwario Manager**](nfc-configurator-app/setup.md) it is stored per device under **Saved Stickers** and used under **Tools → Vendor changes**; see the [**Reset guide**](nfc-configurator-app/guides/resets.md).
 
 ### Pulse counters persist across power loss
 
@@ -42,7 +61,7 @@ If the configured **DevEUI is all-zero** (a device that has never been provision
 The device stays radio-silent until it is given a real DevEUI (and the rest of the LoRaWAN keys) and **rebooted**. On a developer console, `ats lrw status` reports `DISABLED`.
 
 :::tip
-A device can be provisioned over NFC while powered off. See the [**NFC Configurator APP**](nfc-configurator-app/setup.md). After writing the keys, the device leaves radio-silent mode on its next boot.
+A device can be provisioned over NFC while powered off. See the [**Hardwario Manager**](nfc-configurator-app/setup.md). After writing the keys, the device leaves radio-silent mode on its next boot.
 :::
 
 ### Debug deep-sleep (auto-suspend)

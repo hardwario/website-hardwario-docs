@@ -29,7 +29,7 @@ Before registering your STICKER, make sure you have access to a **The Things Sta
 
 ## 1) Collect the required LoRaWAN identifiers & keys
 
-Use the [**HARDWARIO STICKER NFC Configurator**](../nfc-configurator-app/setup.md) to get the required identifiers and keys for your STICKER.
+Use the [**Hardwario Manager**](../nfc-configurator-app/setup.md) to get the required identifiers and keys for your STICKER.
 
 You will need:
 
@@ -58,7 +58,7 @@ Under **Provisioning Information**, enter the **JoinEUI (AppEUI)** and click **C
 
 Under **Device Identifiers**, fill in:
 - DevEUI – **DEVICE_EUI** (unique identifier printed on the device)
-- AppKey – **APPLICATION_KEY** (from the NFC Configurator App)
+- AppKey – **APPLICATION_KEY** (from Hardwario Manager)
 - Device ID – your chosen name for this device (e.g. **sticker-ox**)
 
 Click **Register end device**.

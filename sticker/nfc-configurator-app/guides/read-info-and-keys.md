@@ -13,7 +13,7 @@ Reading the LoRaWAN keys uses the encrypted channel, so the STICKER must be save
 
 ## Read device info
 
-1. Open **Hardwario Manager** and go to **Sticker → Device info**.
+1. Open **HARDWARIO Manager** and go to **STICKER → Device info**.
 2. Hold the phone against the STICKER and keep still.
 3. The app shows the **serial number**, **firmware version**, **uptime**, and **clock**.
 
@@ -21,7 +21,7 @@ Reading the LoRaWAN keys uses the encrypted channel, so the STICKER must be save
 
 ## Read LoRaWAN keys
 
-1. Go to **Sticker → LoRaWAN keys**.
+1. Go to **STICKER → LoRaWAN keys**.
 2. Hold the phone against the STICKER.
 3. The app shows the **DevEUI** and the LoRaWAN keys for the device's activation mode — for **OTAA** the JoinEUI and AppKey, for **ABP** the DevAddr and session keys.
 

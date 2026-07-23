@@ -235,7 +235,7 @@ const config = {
         items: [
           // 1) PRODUCTS (podmenu)
           {
-            label: 'PRODUCTS',
+            label: 'Products',
             position: 'left',
             items: [
               { to: '/chester/', label: 'CHESTER', activeBaseRegex: `/chester/` },
@@ -251,10 +251,10 @@ const config = {
           },
           // 2) SMART DEVICES (podmenu)
           {
-            label: 'SMART DEVICES',
+            label: 'Smart Devices',
             position: 'left',
             items: [
-              { to: '/smart-devices/milesight', label: 'MILESIGHT', activeBaseRegex: `/smart-devices/milesight` },
+              { to: '/smart-devices/milesight', label: 'Milesight', activeBaseRegex: `/smart-devices/milesight` },
               { to: '/smart-devices/rakwireless', label: 'RAKwireless', activeBaseRegex: `/smart-devices/rakwireless` },
               { to: '/smart-devices/onlogic', label: 'OnLogic', activeBaseRegex: `/smart-devices/onlogic` },
               { to: '/smart-devices/raspberry-pi', label: 'Raspberry Pi', activeBaseRegex: `/smart-devices/raspberry-pi` },
@@ -266,20 +266,20 @@ const config = {
           // 3) CLOUD (bez podmenu)
           {
             to: '/cloud/',
-            label: 'CLOUD',
+            label: 'Cloud',
             position: 'left',
             activeBaseRegex: `/cloud/`,
           },
           // 4) APPS (podmenu)
           {
-            label: 'APPS',
+            label: 'Apps',
             position: 'left',
             items: [
-              // { to: '/apps/ubidots/index', label: 'UBIDOTS', activeBaseRegex: `/apps/ubidots/index` },
-              { to: '/apps/thingsboard/index', label: 'THINGSBOARD', activeBaseRegex: `/apps/thingsboard/index` },
-              { to: '/apps/chirpstack/index', label: 'CHIRPSTACK', activeBaseRegex: `/apps/chirpstack/index` },
-              { to: '/apps/the-things-stack/index', label: 'THE THINGS STACK', activeBaseRegex: `/apps/the-things-stack/index` },
-              { to: '/apps/videos-apps/videos-apps', label: 'VIDEO TUTORIALS', activeBaseRegex: `/apps/videos-apps/videos-apps` },
+              // { to: '/apps/ubidots/index', label: 'Ubidots', activeBaseRegex: `/apps/ubidots/index` },
+              { to: '/apps/thingsboard/index', label: 'ThingsBoard', activeBaseRegex: `/apps/thingsboard/index` },
+              { to: '/apps/chirpstack/index', label: 'ChirpStack', activeBaseRegex: `/apps/chirpstack/index` },
+              { to: '/apps/the-things-stack/index', label: 'The Things Stack', activeBaseRegex: `/apps/the-things-stack/index` },
+              { to: '/apps/videos-apps/videos-apps', label: 'Video Tutorials', activeBaseRegex: `/apps/videos-apps/videos-apps` },
             ],
           },
           {
@@ -327,7 +327,7 @@ const config = {
             title: 'Connect',
             items: [
               { label: 'LinkedIn', href: 'https://www.linkedin.com/company/13187032' },
-              { label: 'Twitter / X', href: 'https://twitter.com/hardwario_en' },
+              { label: 'X', href: 'https://x.com/hardwario_en' },
               { label: 'Instagram', href: 'https://www.instagram.com/hardwario/' },
               { label: 'YouTube', href: 'https://www.youtube.com/c/hardwario' },
               { label: 'GitHub', href: 'https://github.com/hardwario' },

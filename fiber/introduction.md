@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 **FIBER** is a robust industrial IoT device built on an **embedded Linux** platform and designed for **Industrial IoT applications**. It integrates both **wireless 868/915 MHz radio** and **8-channel 1-Wire sensor/actuator** hub.
 
-Thanks to its modular and open architecture, **FIBER** supports standard **Raspberry Pi OS** distributions as well as **custom Linux images built with Yocto**, making it suitable both as a turnkey measurement appliance and a versatile development platform. Designed for deployment in industrial and commercial environments, the device provides wireless and wired communication channels for reliable sensor acquisition, local visualization on its integrated display, and robust network connectivity through **Ethernet**, **WiFi**, or optional **LTE**.
+Thanks to its modular and open architecture, **FIBER** supports standard **Raspberry Pi OS** distributions as well as **custom Linux images built with Yocto**, making it usable as a preconfigured measurement appliance or as a development platform. Designed for deployment in industrial and commercial environments, the device provides wireless and wired communication channels for reliable sensor acquisition, local visualization on its integrated display, and robust network connectivity through **Ethernet**, **WiFi**, or optional **LTE**.
 
 <img src="/img/fiber.webp" data-zoom-src="/img/fiber.webp" width="540" alt="FIBER" />
 

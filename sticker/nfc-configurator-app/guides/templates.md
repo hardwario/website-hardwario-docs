@@ -11,7 +11,7 @@ A template is a reusable configuration preset — **capture once, apply to many*
 
 ## Create a template
 
-Go to **Sticker → Templates → New** and choose a source:
+Go to **STICKER → Templates → New** and choose a source:
 
 - **From a device** — read a STICKER and capture its current settings.
 - **Create manually** — build one from scratch.

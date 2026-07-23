@@ -3,13 +3,13 @@ slug: hardwario-manager-features
 title: Features
 ---
 
-# Hardwario Manager — Features
+# HARDWARIO Manager — Features
 
-**Hardwario Manager** is the mobile app for the HARDWARIO ecosystem. For STICKER it is a full **NFC configurator**; it also provisions HARDWARIO **FIBER** gateways over Bluetooth. This page summarises what the app can do with a STICKER.
+**HARDWARIO Manager** is the mobile app for the HARDWARIO ecosystem. For STICKER it is a full **NFC configurator**; it also provisions HARDWARIO **FIBER** gateways over Bluetooth. This page summarises what the app can do with a STICKER.
 
-Everything under **Sticker** works over **NFC** — hold the back of the phone against the tag. The app keeps credentials primed automatically (serial and nonce from the tag, secret key from your saved devices), so most actions need no typing.
+Everything under **STICKER** works over **NFC** — hold the back of the phone against the tag. The app keeps credentials primed automatically (serial and nonce from the tag, secret key from your saved devices), so most actions need no typing.
 
-<img src="/img/hw-manager/hw-manager-sticker.jpg" alt="The Sticker menu in Hardwario Manager" width="320" />
+<img src="/img/hw-manager/hw-manager-sticker.jpg" alt="The STICKER menu in HARDWARIO Manager" width="320" />
 
 ## Device info and keys
 

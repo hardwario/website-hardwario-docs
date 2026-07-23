@@ -7,7 +7,7 @@ title: Sensor history
 
 STICKER can store measurements on the device (store-and-forward), so readings taken while it was offline aren't lost. Read those stored records back over NFC.
 
-1. Open **Hardwario Manager** and go to **Sticker → Tools → Sensor history**.
+1. Open **HARDWARIO Manager** and go to **STICKER → Tools → Sensor history**.
 2. Hold the phone against the STICKER and keep still.
 3. The stored records are read into a **table** for review.
 

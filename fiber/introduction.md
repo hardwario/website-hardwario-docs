@@ -22,7 +22,7 @@ Thanks to its modular and open architecture, **FIBER** supports standard **Raspb
 ## Typical Use Cases
 
 - Hospital environmental monitoring across wards, pharmacies, and storage
-- Pharmaceutical cold chain with GDP-compliant audit trails and instant excursion alerts
+- Pharmaceutical cold-chain monitoring with logged temperature history and excursion alerts
 - Retail refrigeration monitoring to prevent spoilage
 - Laboratory environments requiring precision temperature control
 - Energy infrastructure temperature monitoring (transformers, switchgear)

@@ -355,7 +355,7 @@ const config = {
             ],
           },
         ],
-        copyright: `<nav aria-label="Other HARDWARIO websites" style="margin-bottom:8px"><span class="footer-sites-label">Other HARDWARIO websites:</span> <a href="https://www.hardwario.com/" target="_blank" rel="noopener noreferrer">HARDWARIO.com</a> · <a href="https://hardwario.engineering/" target="_blank" rel="noopener noreferrer">Engineering</a> · <a href="https://hardwario.studio/" target="_blank" rel="noopener noreferrer">Studio</a> · <a href="https://hardwario.academy/" target="_blank" rel="noopener noreferrer">Academy</a></nav>Copyright © ${new Date().getFullYear()} HARDWARIO a.s. | Created by a passionate team from all over the world.`,
+        copyright: `<nav aria-label="Other HARDWARIO websites" style="margin-bottom:8px"><span class="footer-sites-label">Other HARDWARIO websites:</span> <a href="https://www.hardwario.com/" target="_blank" rel="noopener noreferrer">HARDWARIO.com</a> · <a href="https://hardwario.engineering/" target="_blank" rel="noopener noreferrer">Engineering</a> · <a href="https://hardwario.studio/" target="_blank" rel="noopener noreferrer">Studio</a> · <a href="https://hardwario.academy/" target="_blank" rel="noopener noreferrer">Academy</a></nav>Copyright © ${new Date().getFullYear()} HARDWARIO a.s. | Designed and built in Europe.`,
       },
       docs: {
         sidebar: { hideable: true },

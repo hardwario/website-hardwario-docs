@@ -22,7 +22,7 @@ The first step is to define roles, which act as sets of permissions.
 3.  To create a new role, click the **plus (+) icon** in the top right corner.
 4.  Enter the **Role Name**, **Description**, and choose the **Role Type**.
 
-![](images/roles-2.png)
+![Add Role dialog with the role name filled in and the Role type dropdown open, offering Generic and Group](images/roles-2.png)
 
 ### Difference between Role Types:
 * **Group:** In this type, you only specify the operations (e.g., read, write) the user can perform. This role is linked to a specific entity (device, dashboard, etc.) later when setting up user groups.
@@ -30,17 +30,17 @@ The first step is to define roles, which act as sets of permissions.
 
 <Tabs>
   <TabItem value="lte" label="Group">
-![](images/roles-3.png)
+![Add Role dialog of Group type where Permissions list only the allowed operations, here Read](images/roles-3.png)
   </TabItem>
   <TabItem value="lora" label="Generic">
-![](images/roles-4.png)
+![Add Role dialog of Generic type with per-resource permissions: Device with Read and Write, Dashboard with All](images/roles-4.png)
   </TabItem>
 </Tabs>
 
 **IMPORTANT (User Profile Management):**
 For users with restricted access, it is recommended to create a **Generic** role where you allow **All** operations for the **Profile** resource. Adding this role to a user group allows users to change their own passwords and account details.
 
-![](images/roles-6.png)
+![Generic Edit Profile role granting the All operation on the Profile resource so users can manage their own account](images/roles-6.png)
 
 ---
 
@@ -52,12 +52,12 @@ Next, you need to create groups to which you will assign the roles created above
 2.  You will see default groups: *Customer Administrators* (full access) and *Customer Users* (read-only access to everything).
 3.  Click the **plus (+) icon** in the top right, enter a name and description.
 
-![](images/groups-2.png)
+![Add entity group dialog over the User groups list, with the group name filled in and the default groups visible behind](images/groups-2.png)
 
 4.  Once created, click the arrow to the left of your group name to enter the group settings.
 5.  Navigate to the **Roles** tab.
 
-![](images/groups-4.png)
+![User group details panel open on the Roles tab, showing an empty User group roles table with the plus icon](images/groups-4.png)
 
 ### Adding Permissions to the Group:
 1.  Click the **plus (+) icon** located to the left of the search bar.
@@ -67,7 +67,7 @@ Next, you need to create groups to which you will assign the roles created above
     * **Type:** Define what the rules apply to (e.g., *Device* or *Dashboard*).
     * **Entity Group:** The specific group of entities the user should have access to.
 
-![](images/groups-6.png)
+![Add group permission dialog with a Group role type, the role, group owner, Device type, and entity group selected](images/groups-6.png)
 
 :::info
 You must have your **Entity Groups** ready beforehand. This means your devices or dashboards should already be organized into groups. You will pair these groups with the user group in this step. Creating groups for devices/dashboards is similar to creating user groups.
@@ -75,7 +75,7 @@ You must have your **Entity Groups** ready beforehand. This means your devices o
 
 If you are adding a **Generic** role (like the profile editing role), you only need to select the role, and it will apply globally to the user's account permissions.
 
-![](images/groups-7.png)
+![Add group permission dialog with a Generic role type where only the role itself needs to be selected](images/groups-7.png)
 
 ---
 
@@ -85,14 +85,14 @@ You can add users to your newly configured group in two ways:
 
 1.  **New Users:** Directly within your group (under the Users tab), click the **plus (+) icon**.
 
-![](images/groups-3.png)
+![Empty Users tab of a user group with the plus icon in the top-right corner for adding a new user](images/groups-3.png)
 
 2.  **Existing Users:** * Go to the main **Users** -> **Users** section.
     * Click on a specific user.
     * In the **Details** tab, click the **Manage owner and groups** button.
     * Select the desired user group and click **Update**.
 
-![](images/user-2.png)
+![Manage owner and groups dialog on a user's details with the entity group list open to pick the user group](images/user-2.png)
 
 ---
 

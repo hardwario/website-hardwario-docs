@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/split-module.png')} /></div>
+      <div><Image img={require('./images/split-module.png')} alt="Split Module, a green board with two sets of socket headers for two top modules" /></div>
     </div>
     <div class="col col--6">
       <p>

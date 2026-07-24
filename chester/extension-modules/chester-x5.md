@@ -11,7 +11,7 @@ This article describes the CHESTER-X5 extension module.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x5-top.png')} /></div>
+      <div><Image img={require('./images/chester-x5-top.png')} alt="Top view of the CHESTER-X5 module with two AMC3301 isolated amplifiers and an ADS122C ADC"/></div>
     </div>
     <div class="col col--10">
     </div>
@@ -25,7 +25,7 @@ CHESTER-X5 implements two **isolated** voltage inputs. Each can measure voltage 
 
 ## CHESTER Pin Configuration Diagram
 
-![](images/tb-chester-x5.png)
+![Terminal block pins 1–8: INP1 on pin 2, INM1 on pin 3, INM2 on pin 6, INP2 on pin 7, others not connected](images/tb-chester-x5.png)
 
 ## Pin Configuration and Functions
 
@@ -47,8 +47,8 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [Schematic (PDF)](schematics/hio-chester-x5-r2.1.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x5-r2.1.html)
 
-![](images/hio-chester-x5-r2.1-1.png)
+![CHESTER-X5 R2.1 schematic: two AMC3330 isolated input channels, TPS22917 load switches, and ADS122C04 ADC](images/hio-chester-x5-r2.1-1.png)
 
 ## Module Drawing
 
-![](images/pc-chester-x5.png)
+![CHESTER-X5 placement drawing with slot signals on top and isolated input terminals INP1–INP2 on bottom](images/pc-chester-x5.png)

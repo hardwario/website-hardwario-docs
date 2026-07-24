@@ -48,7 +48,7 @@ Because **nRF Connect for Desktop** is multitool application, you have to instal
 <div class="container">
     <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/nrf-connect-ppk2-install.png')}/></div>
+      <div><Image img={require('./images/nrf-connect-ppk2-install.png')} alt="nRF Connect for Desktop app list with the Power Profiler app and its Install button highlighted"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -61,7 +61,7 @@ You should see **Power Profiler** at the top of the apps, when is installation c
 <div class="container">
     <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/nrf-connect-ppk2-open.png')}/></div>
+      <div><Image img={require('./images/nrf-connect-ppk2-open.png')} alt="Installed Power Profiler app in nRF Connect for Desktop with the Open button shown"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -74,7 +74,7 @@ After clicking at **Open** button, you should see window similir to this one:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/nrf-connect-plain.png')}/></div>
+      <div><Image img={require('./images/nrf-connect-plain.png')} alt="Power Profiler app main window before a device is connected, with an empty measurement chart"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -102,7 +102,7 @@ Please make sure that power cable is in **PPK2** connected same way as on the pi
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/ppk2-chester-device.jpg')}/></div>
+      <div><Image img={require('./images/ppk2-chester-device.jpg')} alt="PPK2 board wired to the CHESTER mainboard battery connector, with USB in the DATA/POWER port"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -115,13 +115,13 @@ Now, you have to connect to your **PPK2**. Plug micro USB end of the cable to th
 Then you have to select your **PPK2** in **nRF Connect for Desktop**.
 
 
-<Image img={require('./images/nrf-connect-select-device.png')}/>
+<Image img={require('./images/nrf-connect-select-device.png')} alt="Power Profiler app with the SELECT DEVICE button highlighted in the top-left corner"/>
 
 <br />
 
 Click to **SELECT DEVICE** and choose your **PPK2** device.
 
-<Image img={require('./images/nrf-connect-choose-device.png')}/>
+<Image img={require('./images/nrf-connect-choose-device.png')} alt="SELECT DEVICE list expanded with the PPK2 device shown by its serial number"/>
 
 <br />
 
@@ -142,7 +142,7 @@ To start capturing some data, you have to:
 <div class="container">
     <div class="row">
     <div class="col col--12">
-      <div><Image img={require('./images/nrf-connect-main-window.png')}/></div>
+      <div><Image img={require('./images/nrf-connect-main-window.png')} alt="Power Profiler window with numbered steps: meter mode, 3600 mV supply voltage, power output, Start, Live view"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -155,7 +155,7 @@ When you click **Start** to capture data, your **PPK2** will start pulsing in co
 <div class="container">
     <div class="row">
     <div class="col col--12">
-      <div><Image img={require('./images/nrf-connect-running.png')}/></div>
+      <div><Image img={require('./images/nrf-connect-running.png')} alt="Power Profiler capturing data, showing current-consumption spikes and average/max values of the window"/></div>
     </div>
     <div class="col col--2">
     </div>

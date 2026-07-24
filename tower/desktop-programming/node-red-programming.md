@@ -20,7 +20,7 @@ We can't cover everything about this tool in this tutorial so if you want to lea
 
 You should see a screen that looks like this
 
-<Image img={require('./images/playground-functions.png')}/>
+<Image img={require('./images/playground-functions.png')} alt="Functions tab with the embedded Node-RED editor: node palette, empty Flow 1, and info sidebar" />
 
 ### Nodes
 
@@ -35,7 +35,7 @@ There are a lot of nodes available for Node-RED that you can install but you sho
 <div class="container">
   <div class="row">
     <div class="col col--2">
-      <div><Image img={require('./images/node-red-mqtt-node.png')}/></div>
+      <div><Image img={require('./images/node-red-mqtt-node.png')} alt="The mqtt in node from the Node-RED palette" /></div>
     </div>
     <div class="col col--8">
     </div>

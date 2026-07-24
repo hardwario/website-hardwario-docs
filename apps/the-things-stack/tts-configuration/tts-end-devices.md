@@ -15,7 +15,7 @@ This tutorial guides you through the process of creating device profiles and add
 1. On the **Home** tab, click **Create application**.  
    - If you are on a different tab, click the blue **+ Add** button in the top right and choose **Add application**.
 
-![](images/tts-end-device-0.png)
+![The Things Stack Home dashboard with the Create application button in the quick-action row](images/tts-end-device-0.png)
 
 2. You will be taken to the application creation page. Fill in the following fields:
    - **Application ID (app id)**
@@ -25,7 +25,7 @@ This tutorial guides you through the process of creating device profiles and add
 
 3. Click the blue **Create application** button.
 
-![](images/tts-end-device-1.png)
+![Create application form with Application ID, name, description, labels, and the Create application button](images/tts-end-device-1.png)
 
 ---
 
@@ -42,7 +42,7 @@ In The Things Stack, end devices can be registered in two ways:
 1. Inside the application, click the blue **+ Register end device** button.  
    - Alternatively, click **+ Add** and choose **Register end device in an application**.
 
-![](images/tts-end-device-2.png)
+![Application overview page of an empty application with the Register end device button](images/tts-end-device-2.png)
 
 2. Select **Select the end device in the LoRaWAN Device Repository**.
 
@@ -67,7 +67,7 @@ This method is recommended whenever the device is available in the LoRaWAN Devic
 
 6. Click the blue **Register end device** button.
 
-![](images/tts-end-device-4.png)
+![Provisioning information form with JoinEUI, DevEUI, AppKey, and End device ID fields and the Register end device button](images/tts-end-device-4.png)
 
 ---
 
@@ -94,7 +94,7 @@ This method is used when the device is **not available** in the LoRaWAN Device R
      - Select the matching regional parameters version  
        (e.g. **RP002 Regional Parameters 1.0.4**).
 
-![](images/tts-end-device-5.png)
+![Manual end device registration with frequency plan, LoRaWAN version, and Regional Parameters version selectors](images/tts-end-device-5.png)
 
 ---
 
@@ -122,7 +122,7 @@ This method is used when the device is **not available** in the LoRaWAN Device R
 
 8. Click the blue **Register end device** button.
 
-![](images/tts-end-device-6.png)
+![Completed provisioning form with DevEUI, AppKey, and End device ID filled in, ready to register the end device](images/tts-end-device-6.png)
 
 ---
 

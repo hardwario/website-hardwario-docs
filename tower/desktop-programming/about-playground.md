@@ -21,4 +21,4 @@ The playground can be used for:
 - [**Data Visualization**](./data-visualization.md) (**Dashboard**)
 - [**Firmware Flashing**](./firmware-flashing.md) (**Firmware**)
 
-<Image img={require('./images/playground-fresh.png')}/>
+<Image img={require('./images/playground-fresh.png')} alt="HARDWARIO Playground opened on the Devices tab with Radio Dongle selection and an empty device list" />

@@ -11,7 +11,7 @@ This article describes the CHESTER-X2 extension module.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x2-top.png')} /></div>
+      <div><Image img={require('./images/chester-x2-top.png')} alt="Top view of the red CHESTER-X2 R3.0 extension module board" /></div>
     </div>
     <div class="col col--10">
     </div>
@@ -25,7 +25,7 @@ CHESTER-X2 provides TTL/UART interface and RS-485 interface (e.g., for Modbus co
 
 ## CHESTER Pin Configuration Diagram
 
-![](images/tb-chester-x2.png)
+![CHESTER-X2 terminal block pinout: GND, VDD, RX, TX, EN, B, A, +V on pins 1-8](images/tb-chester-x2.png)
 
 ## Pin Configuration and Functions
 
@@ -49,8 +49,8 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [Schematic (PDF)](schematics/hio-chester-x2-r3.0.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x2-r3.0.html)
 
-![](images/hio-chester-x2-r3.0-1.png)
+![Schematic of CHESTER-X2 with SC16IS740 UART bridge and THVD1450 RS-485 transceiver](images/hio-chester-x2-r3.0-1.png)
 
 ## Module Drawing
 
-![](images/pc-chester-x2.png)
+![CHESTER-X2 R3.0 board layout drawing with component placement and edge pin labels](images/pc-chester-x2.png)

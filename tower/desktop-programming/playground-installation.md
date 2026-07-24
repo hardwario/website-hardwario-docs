@@ -21,7 +21,7 @@ If you need another version or want to inspect the application itself, visit the
 There is always an **installation package** and also just an **executable option**. It is up to you which you choose to download, they should work the same.
 
 :::
-<Image img={require('./images/playground-download.png')}/>
+<Image img={require('./images/playground-download.png')} alt="HARDWARIO Playground download page with Windows installer and portable executable options" />
 
 ## Installation
 

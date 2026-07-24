@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-hydrocal-m4.png')} width={376} height={376} />
+        <Image img={require('./images/bmeters-hydrocal-m4.png')} width={376} height={376} alt="BMeters Hydrocal M4 heat meter with LCD, red buttons, and brass flow body" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -102,7 +102,7 @@ The address is located on the **left side below the barcode**, as shown in the i
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-hydrocal-m4.png')} width={376} height={376} />
+        <Image img={require('./images/bmeters-hydrocal-m4.png')} width={376} height={376} alt="Hydrocal M4 label with the 8-digit wM-Bus address outlined to the left below the barcode" />
       </div>
     </div>
     <div class="col col--24"></div>

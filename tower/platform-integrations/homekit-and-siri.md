@@ -35,7 +35,7 @@ node-red-contrib-homekit-bridged
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/node-red-pallete.png')} /></div>
+      <div><Image img={require('./images/node-red-pallete.png')} alt="Node-RED palette manager with node-red-contrib-homekit-bridged highlighted for install" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -52,7 +52,7 @@ When a message with the title Installing **'node-red-contrib-homekit-bridged'** 
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/node-red-advanced-tab.png')} /></div>
+      <div><Image img={require('./images/node-red-advanced-tab.png')} alt="Node-RED palette with the homekit node in the advanced section" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -71,7 +71,7 @@ When a message with the title Installing **'node-red-contrib-homekit-bridged'** 
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/playgroud-flash-firmware.png')} /></div>
+      <div><Image img={require('./images/playgroud-flash-firmware.png')} alt="Playground Firmware tab with hardwario/bcf-radio-push-button selected and the Flash firmware button" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -85,7 +85,7 @@ Open **HARDWARIO Hub** page in the browser, same as in the chapter **Installatio
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/playgroud-pair-hardware.png')} /></div>
+      <div><Image img={require('./images/playgroud-pair-hardware.png')} alt="Playground Devices tab connected to the Radio Dongle, with the Start pairing button ready" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -99,7 +99,7 @@ Now unplug the **Core Module** from the computer and connect it to the [**Batter
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/homekit-and-siri-core-standart-battery.jpg')} /></div>
+      <div><Image img={require('./images/homekit-and-siri-core-standart-battery.jpg')} alt="Core Module seated on the Battery Module, ready to report temperature" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -127,7 +127,7 @@ The imported flow should look like the following
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/playground-flow-basic.png')} /></div>
+      <div><Image img={require('./images/playground-flow-basic.png')} alt="Imported flow: Temperature from Core Module wired to Convert payload to HomeKit JSON format" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -139,7 +139,7 @@ The imported flow should look like the following
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/homekit-connected.png')} /></div>
+      <div><Image img={require('./images/homekit-connected.png')} alt="The flow with the Service homekit node connected after the template node" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -151,7 +151,7 @@ The imported flow should look like the following
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/homekit-settings.png')} /></div>
+      <div><Image img={require('./images/homekit-settings.png')} alt="Edit homekit node dialog opened in Node-RED with Service, Bridge, and revision fields" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -171,7 +171,7 @@ Click on the **little pencil icon** next to the bridge part of the setting and f
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('./images/home-kit-bridge-settings.png')} /></div>
+      <div><Image img={require('./images/home-kit-bridge-settings.png')} alt="homekit-bridge config: Pin Code 111-11-111, Manufacturer HARDWARIO, Model and Name HARDWARIO Bridge" /></div>
     </div>
     <div class="col col--5">
     </div>
@@ -183,7 +183,7 @@ Click on the **little pencil icon** next to the bridge part of the setting and f
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('./images/home-kit-settings.png')} /></div>
+      <div><Image img={require('./images/home-kit-settings.png')} alt="homekit node properties: Service TemperatureSensor, Bridge HARDWARIO Bridge, Name Temperature Sensor" /></div>
     </div>
     <div class="col col--5">
     </div>
@@ -199,7 +199,7 @@ Select **Add anyway** on the next screen. On the screen where you have to input 
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/homekit-and-siri-iphones-screens-1.png')} /></div>
+      <div><Image img={require('./images/homekit-and-siri-iphones-screens-1.png')} alt="iPhone Home app: Add Accessory, the HomeKit setup-code scanner, and the nearby bridge accessory" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -213,7 +213,7 @@ Now just setup where is your bridge and temperature sensor.
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/homekit-and-siri-iphones-screens-2.png')} /></div>
+      <div><Image img={require('./images/homekit-and-siri-iphones-screens-2.png')} alt="Home app setup assigning the bridge and temperature sensor to rooms; the sensor then shows in Home" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -233,7 +233,7 @@ So if you want to get the temperature from **Core Module** which we just set up,
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/homekit-and-siri-iphones-screens-siri.png')} /></div>
+      <div><Image img={require('./images/homekit-and-siri-iphones-screens-siri.png')} alt="Siri answering the bedroom temperature question with 26 degrees Celsius" /></div>
     </div>
     <div class="col col--1">
     </div>

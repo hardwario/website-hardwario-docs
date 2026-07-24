@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/zenner-minomess.png')} width={376} height={376} />
+        <Image img={require('./images/zenner-minomess.png')} width={376} height={376} alt="Zenner Minomess water meter with roller register and wM-Bus marking on the face" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -41,7 +41,7 @@ The address is displayed **on the device screen, to the left of the unit m³**, 
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/zenner-minomess.png')} width={376} height={376} />
+        <Image img={require('./images/zenner-minomess.png')} width={376} height={376} alt="Minomess dial with the 8-digit wM-Bus address outlined left of the m3 unit on the screen" />
       </div>
     </div>
     <div class="col col--24"></div>

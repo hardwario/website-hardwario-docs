@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/tag-module.png')} /></div>
+      <div><Image img={require('./images/tag-module.png')} alt="Tag Module with socket headers and three tag sockets on each of the two I2C buses" /></div>
     </div>
     <div class="col col--6">
       <p>

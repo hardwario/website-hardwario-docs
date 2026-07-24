@@ -22,7 +22,7 @@ In both modes, you should see the **HARDWARIO logo on the side panel**.
   <div class="row">
     <div class="col col--4">
       <div>
-        <Image img={require('./images/hardwario-sidebar-icon.png')}/>
+        <Image img={require('./images/hardwario-sidebar-icon.png')} alt="VS Code left sidebar with an arrow pointing to the HARDWARIO icon" />
       </div>
     </div>
     <div class="col col--6">
@@ -36,7 +36,7 @@ In both modes, you should see the **HARDWARIO logo on the side panel**.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/firmware-mode.png')}/></div>
+      <div><Image img={require('./images/firmware-mode.png')} alt="TOWER palette in Firmware Mode with Start, Commands, Maintenance, and Resources sections" /></div>
     </div>
     <div class="col col--6">
     </div>
@@ -47,7 +47,7 @@ In both modes, you should see the **HARDWARIO logo on the side panel**.
   <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/basic-mode.png')}/></div>
+      <div><Image img={require('./images/basic-mode.png')} alt="TOWER palette in Basic Mode with only the Start and Resources sections" /></div>
     </div>
     <div class="col col--6">
     </div>
@@ -92,7 +92,7 @@ In this mode, you will get some additional controls on the **bottom panel** and 
 
 On the **bottom panel**, there are some important controls that you can quickly use, without the need for the **side panel controls**
 
-<Image img={require('./images/bottom-panel.png')}/>
+<Image img={require('./images/bottom-panel.png')} alt="VS Code status bar with the HARDWARIO extension controls: build, flash, firmware type, and device" />
 
 #### Device selection `Device: COM3 - bc-core-module`
 
@@ -182,7 +182,7 @@ If you want to just run the debug and not change anything in the `launch.json` y
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/start-debugger.png')}/></div>
+      <div><Image img={require('./images/start-debugger.png')} alt="Select debugger dropdown with TOWER: Debugger highlighted" /></div>
     </div>
     <div class="col col--2">
     </div>

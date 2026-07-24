@@ -15,21 +15,21 @@ This widget allows you to visualize how your variable changes over time. It’s 
 1. #### **Open Dashboards**  
    In the top navigation bar, click on `Data`, then select `Dashboards`. This will open the dashboard management area.
 
-    ![](images/ubidots-chart-0.png)
+    ![Ubidots Data menu open in the top bar with the Dashboards option highlighted](images/ubidots-chart-0.png)
 
 ---
 
 2. #### **Add a New Widget**  
    Click the `Add new Widget` button (marked with a + icon).
 
-    ![](images/ubidots-chart-1.png)
+    ![Empty Ubidots dashboard with the dashed Add new Widget tile and + button](images/ubidots-chart-1.png)
 
 ---
 
 3. #### **Choose a Widget Type**  
    From the list of available widgets, scroll to the `Charts` section and choose a `Line Chart`.
 
-    ![](images/ubidots-chart-2.png)
+    ![Add new widget panel showing the Charts section with the Line chart option](images/ubidots-chart-2.png)
 
 ---
 
@@ -39,7 +39,7 @@ This widget allows you to visualize how your variable changes over time. It’s 
    • Choose the desired variable  
    • Confirm the selection by clicking `SELECT`
 
-    ![](images/ubidots-chart-3.png)
+    ![Widget SETTINGS tab with the + ADD VARIABLES link for selecting a device variable](images/ubidots-chart-3.png)
 
 ---
 
@@ -51,7 +51,7 @@ This widget allows you to visualize how your variable changes over time. It’s 
    • Bar Width  
    • ...
 
-   ![](images/ubidots-chart-7.png)
+   ![Line chart SETTINGS tab with aggregation method, span, sample period, and type options](images/ubidots-chart-7.png)
 
 ---
 
@@ -62,7 +62,7 @@ This widget allows you to visualize how your variable changes over time. It’s 
    • Value range  
    • ...
 
-    ![](images/ubidots-chart-8.png)
+    ![Edit Y-axis dialog with axis name, position, range, and SI prefix options](images/ubidots-chart-8.png)
 
 ---
 
@@ -73,21 +73,21 @@ This widget allows you to visualize how your variable changes over time. It’s 
    • Date format  
    • ...
 
-   ![](images/ubidots-chart-9.png)
+   ![APPEARANCE tab with widget name, font, decimal points, date format, and color options](images/ubidots-chart-9.png)
 
 ---
 
 8. #### **Resize the Chart**  
    Once the widget is added to your dashboard, resize it using the arrow icon in the bottom-right corner of the chart.
 
-    ![](images/ubidots-chart-10.png)
+    ![Small humidity line chart on the dashboard with the resize handle in its bottom-right corner](images/ubidots-chart-10.png)
 
 ---
 
 9. #### **View Data Points**  
    Hover over the chart line to view individual data values as tooltips.
 
-    ![](images/ubidots-chart-12.png)
+    ![Humidity line chart with a hover tooltip showing timestamp and measured value](images/ubidots-chart-12.png)
     
 ---
 

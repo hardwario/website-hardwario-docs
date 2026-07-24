@@ -14,21 +14,21 @@ Before you can send data to [Ubidots](https://ubidots.hardwario.com/) or create 
 1. #### **Click the Plus Button**  
    After logging into the [Ubidots web interface](https://ubidots.hardwario.com/), click the `+` button in the upper-right corner, just below your profile icon.
 
-   ![](images/ubidots-device-0.png)
+   ![Empty Devices list in Ubidots with the red plus button in the upper-right corner](images/ubidots-device-0.png)
 
 ---
 
 2. #### **Choose to Create a Device**  
    A dialog will appear with two options. Click on `Create a device`.
 
-  ![](images/ubidots-device-1.png)
+  ![Plus button menu expanded with Create a device and Create bulk devices options](images/ubidots-device-1.png)
 
 ---
 
 3. #### **Select Blank Device**  
    A new window will open. Click on the `Blank Device` option.
 
-  ![](images/ubidots-device-2.png)
+  ![Create new device panel offering the Blank Device option for receiving data through the Data API](images/ubidots-device-2.png)
 
 ---
 
@@ -38,7 +38,7 @@ Before you can send data to [Ubidots](https://ubidots.hardwario.com/) or create 
    • `Label` – the unique identifier used in API and dashboard references  
    After filling both fields, click `SAVE`.
 
-   ![](images/ubidots-device-3.png)
+   ![Blank Device form with Device name and Device label fields and the SAVE button](images/ubidots-device-3.png)
 
 ---
 
@@ -52,7 +52,7 @@ Before you can send data to [Ubidots](https://ubidots.hardwario.com/) or create 
    • `Tags`  
    • and more
 
-   ![](images/ubidots-device-5.png)
+   ![Device detail page with the sidebar showing description, API label, ID, token, and tags, and an empty variables list](images/ubidots-device-5.png)
 
 ---
 

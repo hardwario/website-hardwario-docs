@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/hardwario-monitor.png')} /></div>
+      <div><Image img={require('./images/hardwario-monitor.png')} alt="HARDWARIO Monitor window with Interactive shell and Device Log panes and Console, Bluetooth, Flash options on the left" /></div>
     </div>
     <div class="col col--12">
     </div>

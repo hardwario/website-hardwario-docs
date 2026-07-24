@@ -15,21 +15,21 @@ This widget allows you to create custom visualizations using HTML, CSS, and Java
 1. #### **Open Dashboards**  
    In the top navigation bar, click on `Data`, then select `Dashboards`. This will open the dashboard management area.
 
-   ![](images/ubidots-metric-0.png)
+   ![Ubidots Data menu open in the top bar with the Dashboards option highlighted](images/ubidots-metric-0.png)
 
 ---
 
 2. #### **Add a New Widget**  
    Click the `Add new Widget` button (marked with a + icon).
 
-   ![](images/ubidots-metric-1.png)
+   ![Empty Ubidots dashboard with the dashed Add new Widget tile and + button](images/ubidots-metric-1.png)
 
 ---
 
 3. #### **Choose a Widget Type**  
    From the list of available widgets, choose the `HTML Canvas`.
 
-   ![](images/ubidots-html-0.png)
+   ![Add new widget panel with HTML Canvas selected in the Advanced section](images/ubidots-html-0.png)
 
 ---
 
@@ -43,14 +43,14 @@ This is where you can enable or disable features such as:
 
 After configuration, click **`Edit code`** under **Code editor** and insert your HTML, CSS, and JavaScript.
 
-![](images/ubidots-html-1.png)
+![HTML Canvas SETTINGS tab with Code editor, 3rd party libraries, and Preload dashboard data enabled](images/ubidots-html-1.png)
 
 ---
 
 5. #### **Add HTML Code to the Canvas**
 In the **Code Editor**, insert your desired layout and logic.  
 
-![](images/ubidots-html-2.png)
+![Code Editor dialog with HTML, CSS, and JavaScript tabs and sample HTML markup](images/ubidots-html-2.png)
 
 ---
 
@@ -62,13 +62,13 @@ You can set:
 - Option to **hide the header**  
 - Add a **custom style** (JSON format)
 
-![](images/ubidots-html-4.png)
+![Edit custom style dialog on the APPEARANCE tab with JSON style overrides](images/ubidots-html-4.png)
 
 ---
 
 ## Example of HTML Canvas (Floor Plan)
 
-![](images/ubidots-html-5.png)
+![Finished HTML Canvas widget showing a floor plan with BLE tag pins reporting temperature and humidity](images/ubidots-html-5.png)
 
 ---
 
@@ -325,7 +325,7 @@ These define your Ubidots connection, the floor plan image, and the BLE tag posi
 
 ## Example of HTML Canvas (Data Table)
 
-![](images/ubidots-html-6.png)
+![HTML Canvas data table listing BLE tags with RSSI, voltage, temperature, and humidity columns](images/ubidots-html-6.png)
 
 ---
 

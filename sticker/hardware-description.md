@@ -34,7 +34,7 @@ Device status is indicated by a **multi-color LED (R/G/Y)** and communication is
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/block-diagram-sticker.png')} />
+        <Image img={require('./images/block-diagram-sticker.png')} alt="STICKER block diagram: STM32WLE5CC LoRa SoC with sensors, NFC memory, 2x AA power chain, and status LED" />
       </div>
     </div>
     <div class="col col--24">

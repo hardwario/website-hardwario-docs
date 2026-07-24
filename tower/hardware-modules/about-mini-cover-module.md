@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/mini-cover-module.png')} /></div>
+      <div><Image img={require('./images/mini-cover-module.png')} alt="Mini Cover Module, a small plain black face plate with ventilation slots" /></div>
     </div>
     <div class="col col--6">
       <p>

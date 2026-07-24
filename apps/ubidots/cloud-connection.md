@@ -22,7 +22,7 @@ If you have not yet completed the initial Cloud setup steps, you can follow the 
    • `Trigger` – choose `Data`  
    • `Tag` – assign the tag you created earlier
    
-   ![](images/ubidots-cloud-7.png)
+   ![HARDWARIO Cloud CREATE NEW CONNECTOR dialog with name, up direction, webhook type, data trigger, and tags fields](images/ubidots-cloud-7.png)
 
 ---
    
@@ -30,14 +30,14 @@ If you have not yet completed the initial Cloud setup steps, you can follow the 
    Ubidots requires a specific data format. You need to adjust your device data using a **transformation code**.  
    In the connector page, scroll down to the `Transformation` section and click the magnifying glass icon 📄🔍 to open the code editor.
 
-   ![](images/ubidots-cloud-10.png)
+   ![Connector page's Transformation section with the code editor icon next to the default webhook transformation code](images/ubidots-cloud-10.png)
 
 ---
 
 3. #### **Insert the Transformation Code**  
    Add the transformation logic that converts incoming data to a Ubidots-compatible format.
 
-   ![](images/ubidots-cloud-11.png)
+   ![Edit connector view with the transformation code editor and the preview section for testing the output](images/ubidots-cloud-11.png)
 
    **Example of transformation code here:**
 
@@ -168,7 +168,7 @@ import EditCodeBlock from './edit-code-block.js';
 1.  #### **Set Ubidots Token in Headers**  
     Make sure to include your **Ubidots device token** in the header of the transformation code to authorize data transmission.
 
-   ![](images/ubidots-cloud-12.png)
+   ![Ubidots device detail with the Token field highlighted and the Show control for revealing the token value](images/ubidots-cloud-12.png)
 
 ---
 
@@ -177,7 +177,7 @@ import EditCodeBlock from './edit-code-block.js';
     On the left side, you'll see **incoming data** from the device.  
     On the right side, you'll see the **transformed data** being sent to Ubidots.
 
-   ![](images/ubidots-cloud-13.png)
+   ![Connector preview: incoming device message on the left and the transformed Ubidots payload with token header on the right](images/ubidots-cloud-13.png)
 
 
 ---

@@ -41,7 +41,7 @@ If you are a Customer User and need to modify a rule, contact your Customer Admi
 
 ## Interface Overview
 
-![](images/notifications-manager-1.png)
+![Empty Notification Rules Manager widget with the search field and the Add Rule button in the header](images/notifications-manager-1.png)
 
 ### Table Columns Explained
 
@@ -142,7 +142,7 @@ Once all required fields are filled in, click **Save Rule**. The rule is saved i
 - At least one recipient (e-mail or SMS)
 :::
 
-![](images/notifications-manager-2.png)
+![New Rule form with devices, variables, condition, timing, notification type, message template, and recipients sections](images/notifications-manager-2.png)
 
 ---
 
@@ -172,7 +172,7 @@ Deletion is permanent and cannot be undone. If you only want to temporarily stop
 
 Each rule has a toggle switch in the **Enabled** column. Switching it off deactivates the rule — no notifications will be sent, but the rule remains saved and can be re-enabled at any time.
 
-![](images/notifications-manager-3.png)
+![Rules table with two temperature rules, Enabled checkboxes, and Edit, Copy, and Delete action buttons](images/notifications-manager-3.png)
 
 ---
 

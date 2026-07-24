@@ -19,7 +19,7 @@ On this tab, you can display **gauges**, **graphs**, **buttons** and **other wid
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/dashboard-tab.png')}/></div>
+      <div><Image img={require('./images/dashboard-tab.png')} alt="Dashboard tab showing gauges for temperature, CO2, and humidity above a CO2 line graph" /></div>
     </div>
     <div class="col col--2">
     </div>

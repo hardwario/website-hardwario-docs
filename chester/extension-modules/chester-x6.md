@@ -11,7 +11,7 @@ This article describes the CHESTER-X6 extension module.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x6-top.png')} /></div>
+      <div><Image img={require('./images/chester-x6-top.png')} alt="Top view of the CHESTER-X6 module with SC16IS740 UART bridge and TCA9534A expander"/></div>
     </div>
     <div class="col col--10">
     </div>
@@ -24,7 +24,7 @@ The CHESTER-X6 provides interface for HARDWARIO S-Wire protocol targeting low-po
 
 ## CHESTER Pin Configuration Diagram
 
-![](images/tb-chester-x6.png)
+![Terminal block pins 1–8 mapped to +V, +5V, GND, DATA, DATA, GND, +5V, +V](images/tb-chester-x6.png)
 
 ## Pin Configuration and Functions
 
@@ -48,8 +48,8 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [Schematic (PDF)](schematics/hio-chester-x6-r1.0.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x6-r1.0.html)
 
-![](images/hio-chester-x6-r1.0-1.png)
+![CHESTER-X6 R1.0 schematic: SC16IS740 I2C-UART bridge, TCA9534A expander, S-Wire line driver, and 5V boost converter](images/hio-chester-x6-r1.0-1.png)
 
 ## Module Drawing
 
-![](images/pc-chester-x6.png)
+![CHESTER-X6 placement drawing with slot signals on top and S-Wire power and DATA terminals on bottom](images/pc-chester-x6.png)

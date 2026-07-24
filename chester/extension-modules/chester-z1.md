@@ -10,7 +10,7 @@ This article describes the **CHESTER-Z1** top-cover extension module.
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('./images/chester-z-top.png')} /></div>
+      <div><Image img={require('./images/chester-z-top.png')} alt="Top view of the CHESTER-Z board with 18650 battery holder, buzzer, bypass button, VIN and SYSTEM connectors"/></div>
     </div>
     <div class="col col--10">
     </div>
@@ -79,7 +79,7 @@ Due to low charging current (100 mA) The charging temperature range is extended 
 
 ## Module Drawing
 
-![](images/chester-z1.png)
+![CHESTER-Z1 board drawing locating battery holder BT1, bypass button S6, VIN inputs JP1/JP2, and SYSTEM connector](images/chester-z1.png)
 
 ## Input / Output and Functions
 
@@ -96,10 +96,10 @@ _\* Use the BYPASS BUTTON to initiate start from the battery without DC input po
 
 ## SYSTEM Connector Pinout Description
 
-![](images/system.png)
+![SYSTEM connector pins 1–7 mapped to NC, +V, GND, VDD, SCL, SDA, INT](images/system.png)
 
 ## Block Diagram
-![](images/chester-z-block-diagram.png)
+![Block diagram: protected DC input, regulators, Li-Ion charger and protection, Cortex-M0+ MCU, HMI, system connector](images/chester-z-block-diagram.png)
 
 ## Schematic Diagram
 
@@ -111,8 +111,8 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [TODO Interactive PCB connector, part, testpoint and signal browser]
 -->
 
-![](images/hio-chester-z1-r2.1-1.png)
-![](images/hio-chester-z1-r2.1-2.png)
-![](images/hio-chester-z1-r2.1-3.png)
-![](images/hio-chester-z1-r2.1-4.png)
-![](images/hio-chester-z1-r2.1-5.png)
+![CHESTER-Z1 R2.1 schematic page 1: 6-26 V DC input, eFuse, step-down converters, and SYSTEM connector](images/hio-chester-z1-r2.1-1.png)
+![CHESTER-Z1 R2.1 schematic page 2: MCP73833 Li-Ion charger, AP9101C battery protection, and bypass button](images/hio-chester-z1-r2.1-2.png)
+![CHESTER-Z1 R2.1 schematic page 3: STM32L010 MCU, debug header, interrupt output, and voltage measurement](images/hio-chester-z1-r2.1-3.png)
+![CHESTER-Z1 R2.1 schematic page 4: KIT header pinout for HARDWARIO TOWER with the INT signal transistor](images/hio-chester-z1-r2.1-4.png)
+![CHESTER-Z1 R2.1 schematic page 5: two LP55231 RGB LED drivers, five push buttons, and buzzer](images/hio-chester-z1-r2.1-5.png)

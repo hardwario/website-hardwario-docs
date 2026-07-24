@@ -16,7 +16,7 @@ You can use our [**Pre-Installed Image**](../server-raspberry-pi/installation-os
 
 [**Grafana**](https://grafana.com) is an open platform for beautiful analytics and monitoring. It allows you to create nice-looking dashboards that will give you quick insights into your sensor data.
 
-<Image img={require('./images/grafana-for-visualization-grafana.png')} />
+<Image img={require('./images/grafana-for-visualization-grafana.png')} alt="Grafana climate-station dashboard with gauges and graphs for temperature, humidity, illuminance, and pressure" />
 
 ## Install Grafana
 
@@ -185,7 +185,7 @@ To make this part work without any additional configuration you need to follow t
 
 Select **Add Data Source** and fill in the data
 
-<Image img={require('./images/add-data-source.png')} />
+<Image img={require('./images/add-data-source.png')} alt="Grafana Home Dashboard with the Add data source shortcut" />
 <br />
 
 - Enter the Name: `node`
@@ -193,13 +193,13 @@ Select **Add Data Source** and fill in the data
 - Enter the URL: **http://localhost:8086**
 
 
-<Image img={require('./images/grafana-data-source.png')} />
+<Image img={require('./images/grafana-data-source.png')} alt="New data source form with Name node, Type InfluxDB, and URL http://localhost:8086" />
 <br />
 
 - Enter the Database: `node`
 - Click on `Save & Test` button to check if everything is OK. You should see the same green notification as in the picture.
 
-<Image img={require('./images/set-db-name-and-test.png')} />
+<Image img={require('./images/set-db-name-and-test.png')} alt="InfluxDB details with Database node and the green Data source is working notification" />
 
 ## Import dashboard
 
@@ -209,30 +209,30 @@ Select **Add Data Source** and fill in the data
 - Click on the **+** icon to expand the submenu (2)
 - Click on the **Import** (3)
 
-<Image img={require('./images/grafana-import-step-1.png')} />
+<Image img={require('./images/grafana-import-step-1.png')} alt="Grafana side menu with the logo (1), the plus icon (2), and the Import entry (3) marked" />
 <br />
 
 - Click on the **Upload .json File** (4)
 
-<Image img={require('./images/grafana-import-step-2.png')} />
+<Image img={require('./images/grafana-import-step-2.png')} alt="Grafana Import page with the Upload .json File button marked (4)" />
 <br />
 
 - Choose your JSON file (in our case **dashboard.json**) (5)
 - Select the file to upload (6)
 
-<Image img={require('./images/grafana-import-step-3.png')} />
+<Image img={require('./images/grafana-import-step-3.png')} alt="Open File dialog with dashboard.json selected (5) and the Select button (6)" />
 <br />
 
 - Select your database (7)
 - Click on the **Import** button (8)
 
-<Image img={require('./images/grafana-import-step-4.png')} />
+<Image img={require('./images/grafana-import-step-4.png')} alt="Import options with the node database selected (7) and the Import button (8)" />
 <br />
 
 - Your dashboard is imported.
 
 #### Example output for [**Wireless Climate Monitor**](https://www.hackster.io/jakub-smejkal/radio-climate-monitor-96de57) and [**Wireless CO2 Monitor**](https://www.hackster.io/jakub-smejkal/radio-co2-monitor-311d2c) projects
 
-<Image img={require('./images/grafana-dashboard.png')} />
+<Image img={require('./images/grafana-dashboard.png')} alt="Imported dashboard showing climate and CO2 monitor stats with temperature and humidity graphs" />
 
 

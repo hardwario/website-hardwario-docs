@@ -17,7 +17,7 @@ If you need to create a new variable derived from your existing data (for exampl
    You will see a list of all your devices.  
    Find your device and click on it.
 
-   ![](images/ubidots-synthetic-variable-0.png)
+   ![Ubidots Devices list with the searched device row ready to open](images/ubidots-synthetic-variable-0.png)
 
 ---
 
@@ -25,7 +25,7 @@ If you need to create a new variable derived from your existing data (for exampl
    In the top-right corner, click the red `+` button  
    and select **Synthetic Variable** from the menu.
 
-   ![](images/ubidots-synthetic-variable-1.png)
+   ![Device detail page with the red + Create new menu open and Synthetic variable option](images/ubidots-synthetic-variable-1.png)
 
 ---
 
@@ -37,7 +37,7 @@ If you need to create a new variable derived from your existing data (for exampl
    On the **left side**, enter your formula.  
    You can combine multiple variables and mathematical operators to create new logic.
 
-   ![](images/ubidots-synthetic-variable-2.png)
+   ![Synthetic Variable editor with a formula on the left and device variable picker on the right](images/ubidots-synthetic-variable-2.png)
 
 ---
 

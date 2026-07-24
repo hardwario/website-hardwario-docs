@@ -10,7 +10,7 @@ This article describes the CHESTER-10 extension module.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x10-top.png')} /></div>
+      <div><Image img={require('./images/chester-x10-top.png')} alt="CHESTER-X10 module, a red PCB dominated by the step-down converter inductor and charger circuitry" /></div>
     </div>
     <div class="col col--10">
     </div>
@@ -37,7 +37,7 @@ CHESTER-X10 is a backup power supply module for CHESTER. The primary power input
 
 ## CHESTER Pin Configuration Diagram
 
-![](images/tb-chester-x10.png)
+![CHESTER-X10 terminal block pinout, pins 1-8: GND, BAT-, BAT-, BAT+, BAT+, GND, GND, VIN](images/tb-chester-x10.png)
 
 ## Pin Configuration and Functions
 
@@ -61,9 +61,9 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [Schematic (PDF)](schematics/hio-chester-x10-r1.1.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x10-r1.1.html)
 
-![](images/hio-chester-x10-r1.1-1.png)
-![](images/hio-chester-x10-r1.1-2.png)
+![CHESTER-X10 schematic sheet 1: TPS62933 step-down converter and MCP73833 Li-Ion charger set to 450 mA](images/hio-chester-x10-r1.1-1.png)
+![CHESTER-X10 schematic sheet 2: TLA2024 ADC with dividers for measuring VIN and battery voltage](images/hio-chester-x10-r1.1-2.png)
 
 ## Module Drawing
 
-![](images/pc-chester-x10.png)
+![CHESTER-X10 board outline with edge signals: +V, GP0-GP3, SDA, SCL, VDD, GND on top; VIN, GND, BAT+, BAT- on bottom](images/pc-chester-x10.png)

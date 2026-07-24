@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/zenner-caltos-e.png')} width={376} height={376} />
+        <Image img={require('./images/zenner-caltos-e.png')} width={376} height={376} alt="White Zenner caltos E heat cost allocator with small LCD and QR code" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -41,7 +41,7 @@ The address is located **at the very bottom of the device**, as shown in the ima
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/zenner-caltos-e.png')} width={376} height={376} />
+        <Image img={require('./images/zenner-caltos-e.png')} width={376} height={376} alt="caltos E with the 8-digit wM-Bus address outlined at the very bottom of the housing" />
       </div>
     </div>
     <div class="col col--24"></div>

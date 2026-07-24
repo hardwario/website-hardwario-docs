@@ -44,16 +44,16 @@ HARDWARIO can provide ECAD footprints for your integration.
 
 In this view, the signals are placed exactly as you look at the module from the top side. Signal placement has been optimized so you can easily route your wires on a two-layer printed circuit board.
 
-![](images/hio-chester-u1-r1.1-1.png)
+![Schematic 1/4: CHESTER-U1 interface pinout with signals JP1–JP38 placed as seen from the module top](images/hio-chester-u1-r1.1-1.png)
 
 ### MCU
-![](images/hio-chester-u1-r1.1-2.png)
+![Schematic 2/4: MDBT50Q MCU/BLE, temperature and tilt sensors, NOR flash, 1-Wire master, and LED drivers](images/hio-chester-u1-r1.1-2.png)
 
 ### LTE
-![](images/hio-chester-u1-r1.1-3.png)
+![Schematic 3/4: nRF9160 LTE modem, SIM interfaces, antenna connectors, and GPS load switch](images/hio-chester-u1-r1.1-3.png)
 
 ### Power
-![](images/hio-chester-u1-r1.1-4.png)
+![Schematic 4/4: TPS61023 boost converter, LDO, power LED, load switching, and TLA2021 ADC](images/hio-chester-u1-r1.1-4.png)
 
 ## CHESTER-C4 Carrier Board
 

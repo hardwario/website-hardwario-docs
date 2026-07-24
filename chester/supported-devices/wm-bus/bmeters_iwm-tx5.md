@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-iwm-tx5.png')} width={376} height={376} />
+        <Image img={require('./images/bmeters-iwm-tx5.png')} width={376} height={376} alt="White BMeters IWM-TX5 wM-Bus radio module with barcode label and NFC mark" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -98,7 +98,7 @@ The address is located **in the center below the barcode**, after the **CE mark*
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-iwm-tx5.png')} width={376} height={376} />
+        <Image img={require('./images/bmeters-iwm-tx5.png')} width={376} height={376} alt="IWM-TX5 with the 8-digit wM-Bus address outlined below the barcode after the CE mark" />
       </div>
     </div>
     <div class="col col--24"></div>

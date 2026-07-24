@@ -327,7 +327,7 @@ const config = {
             title: 'Connect',
             items: [
               { label: 'LinkedIn', href: 'https://www.linkedin.com/company/13187032' },
-              { label: 'X', href: 'https://x.com/hardwario_en' },
+              { label: 'X (Twitter)', href: 'https://x.com/hardwario_en' },
               { label: 'Instagram', href: 'https://www.instagram.com/hardwario/' },
               { label: 'YouTube', href: 'https://www.youtube.com/c/hardwario' },
               { label: 'GitHub', href: 'https://github.com/hardwario' },

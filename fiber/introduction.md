@@ -40,4 +40,4 @@ Thanks to its modular and open architecture, **FIBER** supports standard **Raspb
 | **Power-over-Ethernet** | PoE powered, with an onboard Li-Ion backup battery. |
 | **Full Root Linux Access** | Docker support for custom firmware and application development. |
 | **Secure MQTT** | MQTT protocol with TLS encryption for secure data transmission. |
-| **Cloud Integration** | Compatible with HARDWARIO Cloud and the ProXimos visualization system. |
+| **Open Data Destinations** | Data streams to your own systems — the open Linux platform can run essentially any protocol your project needs. |

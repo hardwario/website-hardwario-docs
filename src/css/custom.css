@@ -138,3 +138,12 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
     margin-bottom: 2px;
   }
 }
+
+/* Cap the on-page size of tall portrait UI screenshots (e.g. the Cloud
+   connector dialogs). The image files stay full-resolution, so click-to-zoom
+   still opens them large. */
+.screenshot-narrow img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+}

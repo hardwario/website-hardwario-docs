@@ -92,4 +92,4 @@ Shows firmware update history and allows scheduling a FOTA update. See [FOTA](fo
 
 ### Downlink
 
-Schedule downlink commands to be delivered on the device's next connection. See [Downlink](downlink.md).
+Schedule downlink commands to be delivered on the device's next connection. See [Downlink](/cloud/downlink).

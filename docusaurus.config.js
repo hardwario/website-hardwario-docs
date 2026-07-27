@@ -42,6 +42,7 @@ const config = {
 
   // ✅ Přesunuto z kořene: onBrokenMarkdownLinks → markdown.hooks.onBrokenMarkdownLinks
   markdown: {
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
@@ -95,6 +96,7 @@ const config = {
         docsRouteBasePath: ['chester', 'ember', 'fiber', 'fiber-lite', 'tapper', 'tower', 'cloud', 'gauger', 'glider', 'apps', 'sticker', 'smart-devices'],
       },
     ],
+    '@docusaurus/theme-mermaid',
   ],
 
   plugins: [
@@ -226,6 +228,21 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/social-card.jpg',
+      mermaid: {
+        theme: { light: 'base', dark: 'base' },
+        options: {
+          themeVariables: {
+            fontFamily: 'inherit',
+            primaryColor: '#e8f4ff',
+            primaryBorderColor: '#009cfa',
+            primaryTextColor: '#252532',
+            secondaryColor: '#eef0f3',
+            tertiaryColor: '#ffffff',
+            lineColor: '#6b6a6a',
+            edgeLabelBackground: '#eef0f3',
+          },
+        },
+      },
       navbar: {
         logo: {
           alt: 'HARDWARIO Logo',

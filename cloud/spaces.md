@@ -23,10 +23,13 @@ Typical use cases:
 
 ## Creating a Space
 
-1. Click your account name in the top-right corner
-2. Select **New Space**
-3. Enter a name following the [naming conventions](/cloud/#naming-conventions)
-4. Click **Create**
+1. In the top-right corner, open **SPACES** and click **+ NEW SPACE**.
+
+   ![The SPACES page with the "+ NEW SPACE" button highlighted](images/spaces-new-space.png)
+
+2. Enter a name following the [naming conventions](/cloud/#naming-conventions), then click **CREATE**.
+
+   ![The "Create new space" dialog — enter a name and click CREATE](images/create-space.png)
 
 The new space appears in your space switcher immediately.
 
@@ -51,17 +54,7 @@ You can invite other users to collaborate in your space. Each member has a role:
 | **Admin** | Full access — can add/remove devices, manage connectors, invite users, change settings |
 | **User** | Read-only access — can view devices and messages but cannot make changes |
 
-### Inviting a User
-
-1. Go to **Users** in the left sidebar
-2. Click **+ INVITE USER**
-3. Enter their email address and select a role
-4. Click **Send Invite**
-
-The invited user receives an email with a link to accept the invitation. They can sign in with:
-- Email & password
-- Google account
-- Microsoft account
+To invite members and manage their roles, see [**Users**](/cloud/users) under **Administration**.
 
 :::info
 
@@ -71,6 +64,6 @@ A user can be a member of multiple spaces with different roles in each.
 
 ## API Keys
 
-Each space has its own API keys for programmatic access. API keys are scoped to the space and can be used to list devices, retrieve messages, and send downlinks via the [REST API](api.md).
+Each space has its own API keys for programmatic access. API keys are scoped to the space and can be used to list devices, retrieve messages, and send downlinks via the [REST API](/cloud/api).
 
 To create an API key, go to **Settings → API Keys** in your space.

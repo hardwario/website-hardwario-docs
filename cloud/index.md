@@ -22,11 +22,14 @@ title: HARDWARIO Cloud
 
 ## How It Works
 
-```
-CHESTER device  ──LTE/LoRaWAN──▶  HARDWARIO Cloud  ──Connector──▶  Your system
-                                        │
-                                   Web interface
-                                   REST API
+```mermaid
+flowchart LR
+  CHESTER([CHESTER device]) -->|LTE / LoRaWAN| Cloud[(HARDWARIO Cloud)]
+  Cloud -->|Connector| System[Your system]
+  Cloud --> Web[Web interface]
+  Cloud --> API[REST API]
+  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  class Cloud hero;
 ```
 
 All devices belong to a **Space**. A space is the top-level container for everything — devices, users, tags, connectors and variables. You can have multiple spaces (e.g. one per customer or project).

@@ -17,11 +17,17 @@ Tags let you route messages flexibly without hardcoding device IDs anywhere:
 
 ## Creating a Tag
 
-1. Go to **Tags** in the left sidebar
-2. Click **+ NEW TAG**
-3. Enter a name following the [naming conventions](/cloud/#naming-conventions)
-4. Pick a color (used for visual identification in device lists and connector views)
-5. Click **Create**
+1. Open **Tags** in the left sidebar and click **+&nbsp;NEW TAG**.
+
+   ![The Tags page with the "+ NEW TAG" button highlighted](images/tags-list.png)
+
+2. Enter a name (following the [naming conventions](/cloud/#naming-conventions)), pick a **color** for visual identification in device and connector views, then click **CREATE**.
+
+   <div className="screenshot-narrow">
+
+   ![The "Create new tag" dialog — name, color picker, and live preview](images/tag-create.png)
+
+   </div>
 
 ## Assigning Tags
 

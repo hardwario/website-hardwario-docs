@@ -26,7 +26,7 @@ progress afterwards, then click **RUN** to apply the action to every selected de
 ### Config
 
 Send `app config` commands to every selected device — the same as a
-[**Config downlink**](/cloud/downlink#config), applied in bulk. Enter the commands as **Text** or
+[**Config downlink**](/cloud/downlink/config), applied in bulk. Enter the commands as **Text** or
 **JSON**. For CHESTER wM-Bus deployments you can also import device addresses from a file.
 
 ![Bulk Actions dialog on the Config tab with app config commands](images/bulk-config.png)

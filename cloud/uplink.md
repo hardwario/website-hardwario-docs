@@ -17,7 +17,7 @@ A device reports on a schedule set by its configuration:
 - **`interval-aggreg`** — how often those samples are aggregated
 - **`interval-report`** — how often the aggregated data is sent to the Cloud as an uplink
 
-You can change these remotely with a [**Config downlink**](/cloud/downlink#config).
+You can change these remotely with a [**Config downlink**](/cloud/downlink/config).
 
 ## Payload and Decoding
 

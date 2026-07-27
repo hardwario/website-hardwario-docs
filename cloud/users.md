@@ -5,39 +5,45 @@ title: Users
 
 # Users
 
-The **Users** page shows all members of your space and lets you invite new collaborators.
+The **Users** page lists everyone with access to your Space and lets you invite new
+members and manage their roles. A person can belong to several Spaces at once, with a
+different role in each.
 
 ## Roles
 
+Every member has one of two roles in a Space:
+
 | Role | What they can do |
 |---|---|
-| **Admin** | Full access — add/remove devices, manage tags, connectors, invite users, change space settings |
-| **User** | Read-only — view devices and messages, cannot make changes |
+| **Admin** | Full access — manage devices, tags, connectors, variables, and firmware; invite and manage other members; change Space settings. |
+| **User** | Read-only — view devices and their messages, but cannot make changes. |
 
-## Inviting a User
+## Inviting a member
 
-1. Go to **Users** in the left sidebar
-2. Click **+ INVITE USER**
-3. Enter the user's email address
-4. Select their role (**Admin** or **User**)
-5. Click **Send Invite**
+1. Open **Users** in the left sidebar and click **+ INVITE USER**.
+2. Enter the person's **email address**.
+3. Choose their **role** — **Admin** or **User**.
+4. Click **Send Invite**.
 
-The invited person receives an email with a link. They can accept the invitation and sign in with:
+They receive an email with an invitation link. To accept, they sign in — or register —
+with an **email & password**, a **Google** account, or a **Microsoft** account. Once
+accepted, they appear in the Users list with the role you assigned.
 
-- **Email & password** (register a new account if they don't have one)
-- **Google account**
-- **Microsoft account**
+## Managing members
 
-:::info
+Use the menu next to a member in the Users list to:
 
-A user can be a member of multiple spaces simultaneously, with different roles in each.
+- **Change their role** between **Admin** and **User**.
+- **Remove** them — they lose access to this Space immediately. Their account is not
+  deleted, and their access to any other Spaces is unaffected.
 
+## Transferring ownership
+
+The Space owner can hand ownership to another **Admin** member from
+**Space Settings → Transfer Ownership**.
+
+:::tip Manage members via the API
+Everything here is also available through the [**REST API**](/cloud/api) — the users
+endpoints (`POST …/users/invite`, `GET/PUT/DELETE …/users/{id}`) let you automate
+member management.
 :::
-
-## Removing a User
-
-Open the three-dot menu next to the user's name and select **Remove**. The user loses access to the space immediately. Their account is not deleted — they simply no longer have access to this space.
-
-## Transferring Ownership
-
-The space owner can transfer ownership to another Admin member via **Space Settings → Transfer Ownership**.

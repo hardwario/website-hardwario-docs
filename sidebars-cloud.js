@@ -20,7 +20,16 @@ const sidebars = {
           items: [
             { type: 'doc', id: 'messages', label: 'Overview' },
             'uplink',
-            'downlink',
+            {
+              type: 'category',
+              label: 'Downlink',
+              link: { type: 'doc', id: 'downlink/index' },
+              items: [
+                'downlink/data',
+                'downlink/config',
+                'downlink/shell',
+              ],
+            },
           ],
         },
         'tags',
@@ -34,7 +43,20 @@ const sidebars = {
       items: [
         'connectors',
         'fota',
-        'api',
+        {
+          type: 'category',
+          label: 'REST API',
+          link: { type: 'doc', id: 'api/index' },
+          items: [
+            'api/authentication',
+            'api/reading-data',
+            'api/devices',
+            'api/tags',
+            'api/variables',
+            'api/downlinks',
+            'api/examples',
+          ],
+        },
       ],
     },
     {

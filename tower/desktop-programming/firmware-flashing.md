@@ -29,7 +29,7 @@ If you are flashing **Radio Dongle** make sure that you have it **Disconnected**
 
 :::
 
-<Image img={require('./images/playground-firmware.png')}/>
+<Image img={require('./images/playground-firmware.png')} alt="Firmware tab with a firmware selected, device dropdown, and the red Flash firmware button" />
 
 ## Video Tutorial
 

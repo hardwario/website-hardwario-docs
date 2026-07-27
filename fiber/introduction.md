@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 **FIBER** is a robust industrial IoT device built on an **embedded Linux** platform and designed for **Industrial IoT applications**. It integrates both **wireless 868/915 MHz radio** and **8-channel 1-Wire sensor/actuator** hub.
 
-Thanks to its modular and open architecture, **FIBER** supports standard **Raspberry Pi OS** distributions as well as **custom Linux images built with Yocto**, making it suitable both as a turnkey measurement appliance and a versatile development platform. Designed for deployment in industrial and commercial environments, the device provides wireless and wired communication channels for reliable sensor acquisition, local visualization on its integrated display, and robust network connectivity through **Ethernet**, **WiFi**, or optional **LTE**.
+Thanks to its modular and open architecture, **FIBER** supports standard **Raspberry Pi OS** distributions as well as **custom Linux images built with Yocto**, making it usable as a preconfigured measurement appliance or as a development platform. Designed for deployment in industrial and commercial environments, the device provides wireless and wired communication channels for reliable sensor acquisition, local visualization on its integrated display, and robust network connectivity through **Ethernet**, **WiFi**, or optional **LTE**.
 
 <img src="/img/fiber.webp" data-zoom-src="/img/fiber.webp" width="540" alt="FIBER" />
 
@@ -22,7 +22,7 @@ Thanks to its modular and open architecture, **FIBER** supports standard **Raspb
 ## Typical Use Cases
 
 - Hospital environmental monitoring across wards, pharmacies, and storage
-- Pharmaceutical cold chain with GDP-compliant audit trails and instant excursion alerts
+- Pharmaceutical cold-chain monitoring with logged temperature history and excursion alerts
 - Retail refrigeration monitoring to prevent spoilage
 - Laboratory environments requiring precision temperature control
 - Energy infrastructure temperature monitoring (transformers, switchgear)
@@ -40,4 +40,4 @@ Thanks to its modular and open architecture, **FIBER** supports standard **Raspb
 | **Power-over-Ethernet** | PoE powered, with an onboard Li-Ion backup battery. |
 | **Full Root Linux Access** | Docker support for custom firmware and application development. |
 | **Secure MQTT** | MQTT protocol with TLS encryption for secure data transmission. |
-| **Cloud Integration** | Compatible with HARDWARIO Cloud and the ProXimos visualization system. |
+| **Open Data Destinations** | Data streams to your own systems — the open Linux platform can run essentially any protocol your project needs. |

@@ -13,7 +13,7 @@ Go to **Settings → STICKER change log** and choose a retention period: **Off**
 
 ## Open a device's log
 
-1. Go to **Sticker → Saved Stickers** and open a device's **Detail**.
+1. Go to **STICKER → Saved Stickers** and open a device's **Detail**.
 2. Open its **Change log**.
 3. For any entry you can review it, **apply** it back to a device, **export** it, or **delete** it.
 

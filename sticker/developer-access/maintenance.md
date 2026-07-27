@@ -10,7 +10,7 @@ The reset ladder below is **new in the upcoming STICKER firmware v1.4.0** (#299)
 
 The `settings` command persists and resets stored configuration over the developer shell (see [**Firmware Setup**](firmware-setup.md) for opening the console). A `config` change applies in RAM immediately but is lost on reboot until it is saved.
 
-The resets form a **severity ladder** — each tier keeps a strict subset of the one above it, and every one reboots. For the conceptual view (and the NFC equivalents in Hardwario Manager) see the [**reset ladder**](../features.md) on the Firmware Features page.
+The resets form a **severity ladder** — each tier keeps a strict subset of the one above it, and every one reboots. For the conceptual view (and the NFC equivalents in HARDWARIO Manager) see the [**reset ladder**](../features.md) on the Firmware Features page.
 
 | Command | What it does |
 |---|---|

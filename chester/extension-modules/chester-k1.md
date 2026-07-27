@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/chester-k1-top.png')} /></div>
+      <div><Image img={require('./images/chester-k1-top.png')} alt="CHESTER-K1 extension module, a red PCB with operational amplifiers and castellated edges for both slots" /></div>
     </div>
     <div class="col col--10">
     </div>
@@ -19,7 +19,7 @@ import Image from '@theme/IdealImage';
 
 ## CHESTER Pin Configuration Diagram
 
-<Image img={require('./images/tb-chester-k1.png')} />
+<Image img={require('./images/tb-chester-k1.png')} alt="CHESTER-K1 terminal blocks: slot A carries GND, INP1, INM1, VOUT1, GND, INP2, INM2, VOUT2; slot B the same for channels 3 and 4" />
 
 <br />
 
@@ -41,6 +41,6 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [Schematic (PDF)](schematics/hio-chester-k1-r1.4.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-k1-r1.4.html)
 
-![](images/hio-chester-k1-r1.4-1.png)
-![](images/hio-chester-k1-r1.4-2.png)
-![](images/hio-chester-k1-r1.4-3.png)
+![CHESTER-K1 schematic sheet 1: TCA9534A expander, step-up and LDO supply, and four TPS22917 load switches](images/hio-chester-k1-r1.4-1.png)
+![CHESTER-K1 schematic sheet 2: differential amplifier circuits for input channels 1 and 2](images/hio-chester-k1-r1.4-2.png)
+![CHESTER-K1 schematic sheet 3: differential amplifier circuits for input channels 3 and 4](images/hio-chester-k1-r1.4-3.png)

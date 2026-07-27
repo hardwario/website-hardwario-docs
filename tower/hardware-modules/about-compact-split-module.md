@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/compact-split-module.png')} /></div>
+      <div><Image img={require('./images/compact-split-module.png')} alt="Compact Split Module, a bare board with two sets of labeled module header footprints" /></div>
     </div>
     <div class="col col--6">
       <p>

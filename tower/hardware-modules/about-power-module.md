@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/power-module.png')} /></div>
+      <div><Image img={require('./images/power-module.png')} alt="Power Module with high-current relay, DC barrel jack, and terminal block for a digital LED strip" /></div>
     </div>
     <div class="col col--6">
       <p>

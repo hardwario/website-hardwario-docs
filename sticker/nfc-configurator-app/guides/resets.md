@@ -7,9 +7,9 @@ title: Reset a device
 
 The reset options range from a harmless reboot to a full vendor erase. Pick the **least destructive** option that solves your problem.
 
-Open **Hardwario Manager → Sticker → Tools → Reset**, choose an option, and hold the phone against the STICKER.
+Open **HARDWARIO Manager → STICKER → Tools → Reset**, choose an option, and hold the phone against the STICKER.
 
-<img src="/img/hw-manager/hw-manager-resets.png" alt="The Reset menu in Hardwario Manager" width="320" />
+<img src="/img/hw-manager/hw-manager-resets.png" alt="The Reset menu in HARDWARIO Manager" width="320" />
 
 | Reset | What it does |
 |---|---|
@@ -21,7 +21,7 @@ Open **Hardwario Manager → Sticker → Tools → Reset**, choose an option, an
 
 ## Vendor changes
 
-**Sticker → Tools → Vendor changes** (authenticated by the device **vendor-token**) can:
+**STICKER → Tools → Vendor changes** (authenticated by the device **vendor-token**) can:
 
 - **Change secret key** — set a new secret key (this also resets the configuration).
 - **Vendor reset** — wipe the device back to its serial number and vendor token, setting a new secret key.

@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/chester-wm-bus.png')} width={376} height={376} />
+        <Image img={require('./images/chester-wm-bus.png')} width={376} height={376} alt="CHESTER wM-Bus gateway in a white wall-mount enclosure with two external antennas" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -3,9 +3,9 @@ slug: nfc-configurator-setup
 title: Setup
 ---
 
-# Hardwario Manager — Setup
+# HARDWARIO Manager — Setup
 
-**Hardwario Manager** is the mobile app for setting up STICKER devices over **NFC**. Hold your phone against the STICKER to read its info, write LoRaWAN keys and settings, run device commands, and manage your saved devices — no cables, programmers, or desktop software required.
+**HARDWARIO Manager** is the mobile app for setting up STICKER devices over **NFC**. Hold your phone against the STICKER to read its info, write LoRaWAN keys and settings, run device commands, and manage your saved devices — no cables, programmers, or desktop software required.
 
 STICKER is **NFC-ready** and can be configured even with **no batteries inserted** (NFC energy harvesting), so you can prepare a device before you install it.
 
@@ -20,7 +20,7 @@ STICKER configuration over NFC is done from an **Android phone with NFC** (most 
 | Item | Notes |
 |---|---|
 | **Android phone with NFC** | NFC lets the phone talk to the STICKER when you hold them together. |
-| **Hardwario Manager** | Install it from Google Play (below). |
+| **HARDWARIO Manager** | Install it from Google Play (below). |
 | **STICKER device(s)** | Any variant: Clime, Input, Motion. |
 | **Device secret key** | STICKER uses an encrypted NFC channel. Each device's secret key is provided with your devices; you add it in the app the first time you save a device (see [**Configuration →**](./config.md)). |
 
@@ -36,12 +36,12 @@ If no NFC result appears, your phone does not have NFC and cannot configure a ST
 
 ---
 
-## 2) Install Hardwario Manager
+## 2) Install HARDWARIO Manager
 
-Hardwario Manager is available on the **Google Play Store**:
+HARDWARIO Manager is available on the **Google Play Store**:
 
 1. Open **Google Play** on your Android phone.
-2. Search for **Hardwario Manager** and open its listing.
+2. Search for **HARDWARIO Manager** and open its listing.
 3. Tap **Install**, then **Open**.
 
 Updates are delivered automatically through Google Play, and your saved devices are kept across updates.
@@ -61,9 +61,9 @@ There is no permission prompt for NFC — you just switch it on once in Step 1.
 
 ## 4) Open the app
 
-<img src="/img/hw-manager/hw-manager-landing-page.jpg" alt="Hardwario Manager home screen — choose Sticker or Fiber" width="320" />
+<img src="/img/hw-manager/hw-manager-landing-page.jpg" alt="HARDWARIO Manager home screen — choose STICKER or Fiber" width="320" />
 
-1. Open **Hardwario Manager** and choose **Sticker**.
+1. Open **HARDWARIO Manager** and choose **STICKER**.
 2. Pick what you want to do — for example **Device info** or **Configuration**.
 3. When the screen says *Hold the phone against the …*, touch the back of your phone to the STICKER and keep still for a second or two.
 

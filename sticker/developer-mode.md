@@ -13,7 +13,7 @@ STICKER is an **open platform** built on the Zephyr RTOS. A **debug build** of t
 The STICKER can be delivered in **Debug Mode**, which is intended primarily for developers. In this configuration, the device is supplied in an open state, allowing direct access for development, so you can explore, modify, and extend its functionality.
 
 :::info
-End users normally configure STICKER over **NFC** with a smartphone, with no cable or console required. See the [**Hardwario Manager**](nfc-configurator-app/setup.md). The pages below are for firmware development and shell-based configuration.
+End users normally configure STICKER over **NFC** with a smartphone, with no cable or console required. See the [**HARDWARIO Manager**](nfc-configurator-app/setup.md). The pages below are for firmware development and shell-based configuration.
 :::
 
 ---

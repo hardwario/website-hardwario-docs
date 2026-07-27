@@ -11,7 +11,7 @@ Tags let you label and filter the STICKERs in your saved list — for example by
 
 ## Tag a device
 
-1. Open **Hardwario Manager** and go to **Sticker → Saved Stickers**.
+1. Open **HARDWARIO Manager** and go to **STICKER → Saved Stickers**.
 2. On a device row (or in its **Detail**), choose **Edit tags**.
 3. Pick existing tags or create a new one, then confirm.
 

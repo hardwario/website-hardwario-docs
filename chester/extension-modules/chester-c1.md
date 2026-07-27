@@ -10,7 +10,7 @@ This article describes the **CHESTER-C1** carrier board.
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/chester-c1-top.png')} /></div>
+      <div><Image img={require('./images/chester-c1-top.png')} alt="CHESTER-C1 carrier board with two power relays, C-cell battery holder, and green terminal blocks along the bottom" /></div>
     </div>
     <div class="col col--10">
     </div>
@@ -44,7 +44,7 @@ For more details see [**Ordering Codes**](../ordering-codes.md#chester-m).
 
 ## Module drawing
 
-![](images/chester-c1.png)
+![CHESTER-C1 board drawing with battery positions BT1-BT4, relays K1/K2, and terminal connectors JP16 to JP5](images/chester-c1.png)
 
 ## Inputs and outputs overview
 
@@ -70,23 +70,23 @@ _\** Use the BYPASS BUTTON to initiate start from the battery without DC input p
 
 ### Block A Connectors
 
-![](images/block-a.png)
+![Block A connector pinout, pins 1-8: +V, A, B, EN, TX, RX, VDD, GND](images/block-a.png)
 
 ### 1-Wire Connectors
 
-![](images/1-wire.png)
+![1-Wire connector pinout, pins 1-3: VDD, DQ, GND](images/1-wire.png)
 
 ### I2C Connector
 
-![](images/i2c.png)
+![I2C connector pinout, pins 1-5: INT, SDA, SCL, VDD, GND](images/i2c.png)
 
 ### SYSTEM Connector
 
-![](images/system.png)
+![SYSTEM connector pinout, pins 1-7: NC, +V, GND, VDD, SCL, SDA, INT](images/system.png)
 
 ### Block B Connectors
 
-![](images/block-b.png)
+![Block B connector pinout, pins 1-8: +V, DI2, GND, DI1, AI2, GND, AI1, VDD](images/block-b.png)
 
 ## Schematic Diagram
 
@@ -98,8 +98,8 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [TODO Interactive PCB connector, part, testpoint and signal browser]
 -->
 
-![](images/hio-chester-c1-r1.1-1.png)
-![](images/hio-chester-c1-r1.1-2.png)
-![](images/hio-chester-c1-r1.1-3.png)
+![CHESTER-C1 schematic sheet 1: X0 and X2 mainboard connectors, 1-Wire, SYSTEM, RS-485, relays, M-Bus, and I2C](images/hio-chester-c1-r1.1-1.png)
+![CHESTER-C1 schematic sheet 2: TCA9534A GPIO expander, RGY LED, and relay driver circuits](images/hio-chester-c1-r1.1-2.png)
+![CHESTER-C1 schematic sheet 3: battery C-cell/D-cell wiring, power input, and 5V step-down converter](images/hio-chester-c1-r1.1-3.png)
 
 

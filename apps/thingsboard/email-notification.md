@@ -13,7 +13,7 @@ We will also extract the device's assigned "Label" to use in the email text, and
 
 Here is what the final notification Rule Chain will look like:
 
-![](images/email-notification-1.png)
+![Notification Rule Chain: labels and device filter feed four threshold scripts, each building Email Info for one Send Email node](images/email-notification-1.png)
 
 ---
 
@@ -183,7 +183,7 @@ Your custom notification Rule Chain is now fully built, but ThingsBoard doesn't 
 Here is how the connection in the Root Rule Chain should look:
 *(The data will now successfully flow from the device, save to the database, and proceed to your custom email notification chain!)*
 
-![](images/email-notification-2.png)
+![Root Rule Chain detail: the Save Timeseries node linked with a Success connection to the email notifications rule chain node](images/email-notification-2.png)
 
 ## Limiting Email Frequency
 
@@ -193,7 +193,7 @@ This involves modifying the Rule Chain to read a server attribute (`lastEmailTim
 
 Here is the modified flow:
 
-![](images/email-notification-3.png)
+![Modified Rule Chain: Get Last Email Time feeds the threshold filters; each True branch also saves the last email timestamp attribute](images/email-notification-3.png)
 
 ### Step 1: Read the Last Email Time
 Add a node at the very beginning of the flow (before your threshold filters) to retrieve the timestamp of the last sent email.

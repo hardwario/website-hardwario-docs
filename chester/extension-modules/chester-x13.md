@@ -14,7 +14,7 @@ CHESTER-X13 provides a CAN Bus interface with support for CAN FD standard. It al
 
 ## CHESTER Pin Configuration Diagram
 
-![](images/tb-chester-x13.png)
+![CHESTER-X13 terminal block pinout: INT, RH, CANH, CANL, RL, GND, GND, +V on pins 1-8](images/tb-chester-x13.png)
 
 ## Pin Configuration and Functions
 
@@ -34,7 +34,7 @@ CHESTER-X13 provides a CAN Bus interface with support for CAN FD standard. It al
 
 The module provides an interrupt output (pin 1), which needs to be connected to the INT pin on the CHESTER mainboard.
 
-![](images/int-pin.png)
+![CHESTER mainboard drawing with a wire linking the slot B INT terminal to the module interrupt pin](images/int-pin.png)
 
 * Example of interrupt connection for module in slot B
 
@@ -54,9 +54,9 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 
 - [Schematic (PDF)](schematics/hio-chester-x13-r1.2.pdf)
 
-![](images/hio-chester-x13-r1.2-stepdown.png)
-![](images/hio-chester-x13-r1.2-can.png)
+![Schematic of the CHESTER-X13 step-down converter based on the TPS62933 regulator](images/hio-chester-x13-r1.2-stepdown.png)
+![Schematic of the CHESTER-X13 CAN interface with MCP2518FDT controller and TCAN3413 transceiver](images/hio-chester-x13-r1.2-can.png)
 
 ## Module Drawing
 
-![](images/pc-chester-x13.png)
+![CHESTER-X13 R1.2 board layout drawing with component placement and edge pin labels](images/pc-chester-x13.png)

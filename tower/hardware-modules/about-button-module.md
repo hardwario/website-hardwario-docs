@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/button-module.png')} /></div>
+      <div><Image img={require('./images/button-module.png')} alt="Button Module faceplate with one big round push button" /></div>
     </div>
     <div class="col col--6">
       <p>

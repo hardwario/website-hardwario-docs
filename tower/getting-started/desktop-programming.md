@@ -19,7 +19,7 @@ To learn more about HARDWARIO Playground, visit the [**Desktop Programming secti
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/download-playground.png')}/></div>
+      <div><Image img={require('./images/download-playground.png')} alt="HARDWARIO Playground download page listing packages for Linux, macOS, and Windows" /></div>
     </div>
     <div class="col col--2">
     </div>

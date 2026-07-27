@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/radio-dongle.png')} /></div>
+      <div><Image img={require('./images/radio-dongle.png')} alt="Radio Dongle, a black USB stick with a red HARDWARIO label" /></div>
     </div>
     <div class="col col--6">
       <p>

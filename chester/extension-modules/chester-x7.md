@@ -11,7 +11,7 @@ This article describes the CHESTER-X7 extension module.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x7-top.png')} /></div>
+      <div><Image img={require('./images/chester-x7-top.png')} alt="Top view of the CHESTER-X7 module with its input amplifier and boost converter circuitry"/></div>
     </div>
     <div class="col col--10">
     </div>
@@ -24,7 +24,7 @@ The CHESTER-X7 provides one differential input for current probes or other indus
 
 ## CHESTER Pin Configuration Diagram
 
-![](images/tb-chester-x7.png)
+![Terminal block pins 1–8 mapped to +V, GND, VDD, VIN, GND, INP, INM, VOUT](images/tb-chester-x7.png)
 
 ## Pin Configuration and Functions
 
@@ -48,9 +48,9 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [Schematic (PDF)](schematics/hio-chester-x7-r2.1.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x7-r2.1.html)
 
-![](images/hio-chester-x7-r2.1-1.png)
-![](images/hio-chester-x7-r2.1-2.png)
+![CHESTER-X7 R2.1 schematic page 1: TPS61099 5V step-up converter and LDO supplying the VOUT probe power](images/hio-chester-x7-r2.1-1.png)
+![CHESTER-X7 R2.1 schematic page 2: OPA4387 differential input buffers and 0-28 V voltage input divider](images/hio-chester-x7-r2.1-2.png)
 
 ## Module Drawing
 
-![](images/pc-chester-x7.png)
+![CHESTER-X7 placement drawing with slot signals on top and VOUT, INM, INP, VIN terminals on bottom](images/pc-chester-x7.png)

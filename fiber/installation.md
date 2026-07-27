@@ -59,31 +59,31 @@ In the article, we use two terms:
 
 1. In the **Device** step, select **Raspberry Pi 4** (this includes Compute Module 4).
 
-   <Image img={require('./images/rpi-imager-select-device.png')} />
+   <Image img={require('./images/rpi-imager-select-device.png')} alt="Raspberry Pi Imager Device step with Raspberry Pi 4 selected in the device list" />
 
 1. In the **OS** step, select **Raspberry Pi OS (other)**.
 
-   <Image img={require('./images/rpi-imager-choose-os.png')} />
+   <Image img={require('./images/rpi-imager-choose-os.png')} alt="Raspberry Pi Imager OS step with the Raspberry Pi OS (other) category selected" />
 
 1. Select **Raspberry Pi OS Lite (64-bit)**.
 
-   <Image img={require('./images/rpi-imager-choose-os-lite.png')} />
+   <Image img={require('./images/rpi-imager-choose-os-lite.png')} alt="Raspberry Pi Imager OS list with Raspberry Pi OS Lite (64-bit) selected" />
 
 1. In the **Storage** step, select the **FIBER** device (shown as **RPi-MSD-0001 Media**).
 
-   <Image img={require('./images/rpi-imager-select-storage.png')} />
+   <Image img={require('./images/rpi-imager-select-storage.png')} alt="Raspberry Pi Imager Storage step with the RPi-MSD-0001 Media USB device selected" />
 
 1. In the **Customisation** step, enter a hostname for your **FIBER** device (e.g. `fiber`).
 
-   <Image img={require('./images/rpi-imager-hostname.png')} />
+   <Image img={require('./images/rpi-imager-hostname.png')} alt="Raspberry Pi Imager Customisation step with the hostname field set to fiber" />
 
 1. In the **Localisation** section, select your location, time zone, and keyboard layout.
 
-   <Image img={require('./images/rpi-imager-localisation.png')} />
+   <Image img={require('./images/rpi-imager-localisation.png')} alt="Raspberry Pi Imager Localisation section with capital city, time zone, and keyboard layout selectors" />
 
 1. In the **User** section, enter a username and password.
 
-   <Image img={require('./images/rpi-imager-user.png')} />
+   <Image img={require('./images/rpi-imager-user.png')} alt="Raspberry Pi Imager User section with the username fiber and password fields filled in" />
 
    :::tip
 
@@ -99,27 +99,27 @@ In the article, we use two terms:
 
 1. Optional: In the **Wi-Fi** section, enter your wireless network's SSID and password.
 
-   <Image img={require('./images/rpi-imager-wifi.png')} />
+   <Image img={require('./images/rpi-imager-wifi.png')} alt="Raspberry Pi Imager Wi-Fi section with SSID, password, and confirm password fields for a secure network" />
 
 1. In the **Remote access** section, enable **SSH** and select your preferred authentication method.
 
-   <Image img={require('./images/rpi-imager-ssh.png')} />
+   <Image img={require('./images/rpi-imager-ssh.png')} alt="Raspberry Pi Imager SSH authentication section with Enable SSH on and password authentication selected" />
 
 1. Optional: In the **Raspberry Pi Connect** section, you can enable remote access via Raspberry Pi Connect. For this guide, we leave it disabled.
 
-   <Image img={require('./images/rpi-imager-connect.png')} />
+   <Image img={require('./images/rpi-imager-connect.png')} alt="Raspberry Pi Imager Raspberry Pi Connect section with the enable toggle left off" />
 
 1. Review the summary and click **WRITE** to start the flashing process.
 
-   <Image img={require('./images/rpi-imager-summary.png')} />
+   <Image img={require('./images/rpi-imager-summary.png')} alt="Raspberry Pi Imager Write image summary listing device, OS, storage, and customisations before writing" />
 
 1. Confirm the warning dialog by clicking **I UNDERSTAND, ERASE AND WRITE**.
 
-   <Image img={require('./images/rpi-imager-confirm.png')} />
+   <Image img={require('./images/rpi-imager-confirm.png')} alt="Raspberry Pi Imager warning dialog with the I UNDERSTAND, ERASE AND WRITE confirmation button" />
 
 1. Wait for the writing process to complete.
 
-   <Image img={require('./images/rpi-imager-writing.png')} />
+   <Image img={require('./images/rpi-imager-writing.png')} alt="Raspberry Pi Imager writing the OS image to the storage device with a progress bar" />
 
 1. When finished, press the **RESET** button on the **TARGET** (located next to the USB connector).
 

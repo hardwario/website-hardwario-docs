@@ -27,7 +27,7 @@ The MACHINE PROBE is not limited to STICKER Input — it is also fully compatibl
 
 ### Description and real-world use
 
-The probe has already proven itself in the field — for example monitoring **shakers** at OK SERVIS, where it reliably:
+The probe has already proven itself in the field — for example monitoring **shakers** in the ProXimos project, where it reliably:
 
 - measures the **temperature** of the monitored equipment,
 - measures the **relative humidity** of the surroundings,

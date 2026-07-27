@@ -13,7 +13,7 @@ The module features an I2C to UART bridge controller (**SC16IS740IPW**) and an R
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x12-top.png')} /></div>
+      <div><Image img={require('./images/chester-x12-top.png')} alt="CHESTER-X12 board layout drawing with the UART bridge U3, RS-232 transceiver U2, and converter inductor L1" /></div>
     </div>
     <div class="col col--10">
     </div>
@@ -108,11 +108,11 @@ The CHESTER-X12 module can be used with various CHESTER mainboard configurations
   <div class="row">
     <div class="col col--6">
       <h4>CHESTER-M (CGLS)</h4>
-      <div><Image img={require('./images/chester-x12-cgls.png')} /></div>
+      <div><Image img={require('./images/chester-x12-cgls.png')} alt="CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks" /></div>
     </div>
     <div class="col col--6">
       <h4>CHESTER-C4</h4>
-      <div><Image img={require('./images/chester-x12-c4.png')} /></div>
+      <div><Image img={require('./images/chester-x12-c4.png')} alt="CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks" /></div>
     </div>
   </div>
 </div>

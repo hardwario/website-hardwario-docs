@@ -35,7 +35,7 @@ In the left navigation menu, navigate to **Entities** → **Assets**.
 
 Click the **"+"** icon in the top right corner and select **Add new asset**.
 
-![](images/assets-1.png)
+![Empty Assets list in ThingsBoard with an arrow pointing to the plus icon for adding a new asset](images/assets-1.png)
 
 ### Step 4: Fill In the Details
 
@@ -44,7 +44,7 @@ Enter the asset information:
 - **Asset Profile:** Select a profile (the default is *default*). Profiles determine the rules for data processing.
 - **Label:** An optional label for better organization and filtering.
 
-![](images/assets-2.png)
+![Add asset dialog with name, label, default asset profile, and owner fields, with an arrow to the Add button](images/assets-2.png)
 
 ### Step 5: Save
 
@@ -54,7 +54,7 @@ Click **Add**. The Asset is now created.
 
 In the **Relations** tab, you can create relations to other devices or parent Assets (e.g., creating a "Contains" relation pointing down to your sensors).
 
-![](images/assets-3.png)
+![Add relation dialog on the asset's Relations tab with the Contains relation type and a device selected as target entity](images/assets-3.png)
 
 ---
 

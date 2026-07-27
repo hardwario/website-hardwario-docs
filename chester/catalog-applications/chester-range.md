@@ -69,7 +69,7 @@ Connect the sensor to the **left terminal block A**
 | A3 (GND)                                                            | black                | GND    |
 | A4 (CH2)                                                            | yellow               | Pulse  |
 
-![](../extension-modules/images/tb-chester-x0.png)
+![CHESTER-X0 terminal block pinout: VDD, CH1, GND, CH2, CH3, GND, CH4, +V](../extension-modules/images/tb-chester-x0.png)
 
 
 ## Default Configuration

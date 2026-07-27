@@ -5,7 +5,7 @@ title: Configuration
 
 # Configuring a STICKER
 
-This guide walks through configuring a STICKER with **Hardwario Manager** over NFC — from adding the device to writing settings and reading them back. If you have not installed the app yet, start with the [**Setup**](./setup.md) guide; for everything the app can do, see [**Features**](./features.md).
+This guide walks through configuring a STICKER with **HARDWARIO Manager** over NFC — from adding the device to writing settings and reading them back. If you have not installed the app yet, start with the [**Setup**](./setup.md) guide; for everything the app can do, see [**Features**](./features.md).
 
 :::info NFC energy harvesting
 STICKER can be configured even with no batteries inserted. The NFC field from the phone powers the chip long enough to store settings; the device applies them the next time it wakes on battery power.
@@ -17,7 +17,7 @@ STICKER can be configured even with no batteries inserted. The NFC field from th
 
 Each STICKER talks over an **encrypted** NFC channel, so the app needs the device's **secret key** before it can read or write. You add a device once and the app remembers it.
 
-1. Open **Hardwario Manager** and go to **Sticker → Saved Stickers**.
+1. Open **HARDWARIO Manager** and go to **STICKER → Saved Stickers**.
 2. Add your device by **tapping it over NFC**, **scanning its QR code**, or **entering its details by hand**.
 3. Enter the **secret key** supplied with the device.
 
@@ -29,7 +29,7 @@ From now on the app fills the key in automatically whenever you work with that S
 
 ## Write a configuration
 
-Go to **Sticker → Configuration** and choose **Read configuration from the device**. The other entry actions handle batch export, writing to a powered-off device, and loading a saved file.
+Go to **STICKER → Configuration** and choose **Read configuration from the device**. The other entry actions handle batch export, writing to a powered-off device, and loading a saved file.
 
 <img src="/img/hw-manager/hw-manager-configuration.png" alt="The Configuration entry actions" width="320" />
 
@@ -47,13 +47,13 @@ For every parameter and its meaning, see [**Configuration parameters →**](../d
 
 ## Read a configuration
 
-To check what is on a device, go to **Sticker → Configuration → Read configuration from the device** and hold the phone against the STICKER. The current settings are shown for review — nothing is written until you tap **Save to device**.
+To check what is on a device, go to **STICKER → Configuration → Read configuration from the device** and hold the phone against the STICKER. The current settings are shown for review — nothing is written until you tap **Save to device**.
 
 ---
 
 ## Configure a powered-off device
 
-To prepare a STICKER that has no batteries, use **Sticker → Configuration → Configure without reading**. Build the configuration — **Apply template**, or open each section and set the values (the size counter shows how much of the tag's budget you've used) — then tap **Save to device** and hold the phone against the STICKER. The phone's NFC field powers the tag and stores the settings, which the device applies on its next boot.
+To prepare a STICKER that has no batteries, use **STICKER → Configuration → Configure without reading**. Build the configuration — **Apply template**, or open each section and set the values (the size counter shows how much of the tag's budget you've used) — then tap **Save to device** and hold the phone against the STICKER. The phone's NFC field powers the tag and stores the settings, which the device applies on its next boot.
 
 <img src="/img/hw-manager/hw-manager-configuration-without-reading.png" alt="Configure without reading — build a config offline and save it to the tag" width="320" />
 
@@ -61,10 +61,10 @@ To prepare a STICKER that has no batteries, use **Sticker → Configuration → 
 
 ## Reuse a configuration across devices
 
-To set up many STICKERs the same way, save a **template** (**Configuration → Save as template**, or **Sticker → Templates**) and apply it to each device over NFC or offline. You can also build a template in a browser with the [**Template Generator**](./template-generator.mdx).
+To set up many STICKERs the same way, save a **template** (**Configuration → Save as template**, or **STICKER → Templates**) and apply it to each device over NFC or offline. You can also build a template in a browser with the [**Template Generator**](./template-generator.mdx).
 
 :::danger Factory and vendor resets
-A **factory reset** (under **Sticker → Tools → Reset**) drops the device's LoRaWAN session and keys, so it re-joins the network; a **vendor reset** wipes it back to its serial number and vendor token (and sets a new secret key). There is no undo.
+A **factory reset** (under **STICKER → Tools → Reset**) drops the device's LoRaWAN session and keys, so it re-joins the network; a **vendor reset** wipes it back to its serial number and vendor token (and sets a new secret key). There is no undo.
 :::
 
 ---

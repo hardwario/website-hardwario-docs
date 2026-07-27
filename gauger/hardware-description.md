@@ -22,4 +22,4 @@ title: Hardware Description
 | **Inputs**                |                  |
 | Ethernet class            |            CAT 5 |
 | Maximum input voltage     |          28 V DC |
-| Type of input logic       |              PNP |
+| Type of input logic       |        NPN / PNP |

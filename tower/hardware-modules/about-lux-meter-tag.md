@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/lux-meter-tag.png')} /></div>
+      <div><Image img={require('./images/lux-meter-tag.png')} alt="Lux Meter Tag, a coin-sized board with the OPT3001 light-intensity sensor" /></div>
     </div>
     <div class="col col--6">
       <p>

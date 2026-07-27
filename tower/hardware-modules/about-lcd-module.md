@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/lcd-module.png')} /></div>
+      <div><Image img={require('./images/lcd-module.png')} alt="LCD Module with the 1.28-inch Sharp memory display and two push buttons" /></div>
     </div>
     <div class="col col--6">
       <p>

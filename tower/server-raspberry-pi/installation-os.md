@@ -34,7 +34,7 @@ If you already have your Raspberry Pi running with **Raspberry Pi OS** and you j
     <div class="container">
     <div class="row">
       <div class="col col--7">
-        <div><Image img={require('./images/raspberry-pi-imager-set-up.png')} /></div>
+        <div><Image img={require('./images/raspberry-pi-imager-set-up.png')} alt="Raspberry Pi Imager with the HARDWARIO Raspbian image and SDHC card selected, ready to write" /></div>
       </div>
       <div class="col col--3">
       </div>
@@ -50,7 +50,7 @@ If you already have your Raspberry Pi running with **Raspberry Pi OS** and you j
   <div class="container">
     <div class="row">
       <div class="col col--7">
-        <div><Image img={require('./images/raspberry-pi-imager-advanced.png')} /></div>
+        <div><Image img={require('./images/raspberry-pi-imager-advanced.png')} alt="Imager advanced options: hostname hub, SSH with password authentication, username, and wireless LAN" /></div>
       </div>
       <div class="col col--3">
       </div>
@@ -85,7 +85,7 @@ To connect to your **Raspberry Pi** you have two options that you can put into t
   <div class="container">
     <div class="row">
       <div class="col col--10">
-        <div><Image img={require('./images/hardwario-hub.png')} /></div>
+        <div><Image img={require('./images/hardwario-hub.png')} alt="HARDWARIO Hub web interface at hub.local with the Devices tab and Start pairing button" /></div>
       </div>
       <div class="col col--3">
       </div>

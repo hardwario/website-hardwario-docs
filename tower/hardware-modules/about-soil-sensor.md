@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/soil-sensor.png')} /></div>
+      <div><Image img={require('./images/soil-sensor.png')} alt="Soil Moisture Sensor probe with a printed depth scale and a long cable ending in three ferruled wires" /></div>
     </div>
     <div class="col col--6">
       <p>
@@ -36,7 +36,7 @@ It is also possible to use the sensor to **measure water level**.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/soil-sensor-connection.png')} /></div>
+      <div><Image img={require('./images/soil-sensor-connection.png')} alt="Wiring guide: black GND, red VDD, and yellow data wires of the soil sensor on Sensor Module R1.1 and R1.0" /></div>
     </div>
     <div class="col col--6">
       <p>

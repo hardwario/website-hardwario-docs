@@ -11,7 +11,7 @@ This article describes the CHESTER-X3A, CHESTER-X3B and CHESTER-X3C extension mo
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x3-top.png')} /></div>
+      <div><Image img={require('./images/chester-x3-top.png')} alt="Top view of the CHESTER-X3 module with two ADS122C precision ADCs"/></div>
     </div>
     <div class="col col--10">
     </div>
@@ -39,7 +39,7 @@ CHESTER-X3C provides 2 inputs for load-cell (strain gauge) that can be used for 
 
 ## CHESTER Pin Configuration Diagram
 
-![](images/tb-chester-x3.png)
+![Terminal block pins 1–8 mapped to signals CH1P, CH1A, CH1B, CH1M, CH2P, CH2A, CH2B, CH2M](images/tb-chester-x3.png)
 
 ## Pin Configuration and Functions
 
@@ -61,8 +61,8 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [Schematic (PDF)](schematics/hio-chester-x3-r3.2.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x3-r3.2.html)
 
-![](images/hio-chester-x3-r3.2-1.png)
+![CHESTER-X3 R3.2 schematic: two ADS122C04 ADC channels with input filtering and I2C interface](images/hio-chester-x3-r3.2-1.png)
 
 ## Module Drawing
 
-![](images/pc-chester-x3.png)
+![CHESTER-X3 placement drawing with slot signals on top and channel terminals CH1P–CH2M on bottom](images/pc-chester-x3.png)

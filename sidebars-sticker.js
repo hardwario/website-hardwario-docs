@@ -8,7 +8,7 @@ const sidebars = {
     'features',
     {
       type: 'category',
-      label: 'Hardwario Manager',
+      label: 'HARDWARIO Manager',
       collapsed: true,
       items: [
         'nfc-configurator-app/setup',

@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/bridge-module.png')} /></div>
+      <div><Image img={require('./images/bridge-module.png')} alt="Bridge Module with micro-USB connector and USB-UART converter for connecting modules to a USB host" /></div>
     </div>
     <div class="col col--6">
       <p>

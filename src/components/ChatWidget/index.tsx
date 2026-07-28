@@ -123,7 +123,10 @@ export default function ChatWidget() {
       {open && (
         <div className={styles.panel}>
           <div className={styles.header}>
-            <span>HARDWARIO Docs Assistant</span>
+            <div className={styles.headerText}>
+              <span className={styles.headerTitle}>HARDWARIO Docs Assistant</span>
+              <span className={styles.headerBeta}>Beta version</span>
+            </div>
             <button className={styles.close} onClick={() => setOpen(false)}>✕</button>
           </div>
 

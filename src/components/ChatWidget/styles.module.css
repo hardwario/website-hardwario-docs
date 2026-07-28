@@ -66,6 +66,26 @@
   flex-shrink: 0;
 }
 
+/* Title plus the beta note stack vertically; the close button stays on the right,
+   so the header must not lose its space-between row layout. */
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.headerTitle {
+  line-height: 1.2;
+}
+
+.headerBeta {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.2;
+  opacity: 0.85;
+}
+
 .close {
   background: none;
   border: none;

@@ -217,7 +217,7 @@ After completing the configuration, you need to confirm everything.
 
 When configuring over BLE, you need to apply the configuraiton changes with `config save` command.
 
-When configuring over [Cloud config downlink commands](../../cloud/downlink#config), don't add `config save` command, it is applied automatically. Othwerwise the configuration is not
+When configuring over [Cloud config downlink commands](../../cloud/downlink/config), don't add `config save` command, it is applied automatically. Othwerwise the configuration is not
 
 ### Interval and wM-BUS Packets Every 2 Minutes
 

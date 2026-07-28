@@ -62,7 +62,20 @@ const sidebars = {
               collapsed: true,
               items: []
             },
-            'sticker-input-wiring/external-sensors',
+            {
+              type: 'category',
+              label: 'External Sensor Support',
+              link: {
+                type: 'doc',
+                id: 'sticker-input-wiring/external-sensors',
+              },
+              collapsed: true,
+              items: [
+                'sticker-input-wiring/machine-probe',
+                'sticker-input-wiring/one-wire-dallas',
+                'sticker-input-wiring/s0-interface',
+              ],
+            },
           ]
         },
         'catalog-applications/sticker-motion',

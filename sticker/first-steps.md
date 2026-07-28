@@ -61,8 +61,8 @@ https://docs.hardwario.com/sticker/catalog-applications/catalog-applications/
 4. For the first test, place the device **close to your LoRaWAN gateway** (best RF conditions).
 5. Wait for the first uplink (the timing depends on the installed catalog app and reporting interval).
 
-#### NFC note (optional, but useful)
-STICKER is **NFC-ready** and can be configured even when batteries are not inserted (NFC energy harvesting). Use the [**HARDWARIO Manager**](nfc-configurator-app/setup.md) to write LoRaWAN settings (DevEUI, AppEUI/JoinEUI, AppKey) before installation:
+#### Configure over NFC
+STICKER is configured over **NFC** — this is the standard way to set it up, and it works even when batteries are not inserted (NFC energy harvesting). Use the [**HARDWARIO Manager**](nfc-configurator-app/setup.md) to write LoRaWAN settings (DevEUI, AppEUI/JoinEUI, AppKey) before installation:
 - STICKER Power Management: https://docs.hardwario.com/sticker/power-management/
 
 
@@ -78,11 +78,7 @@ Best if you want a private LoRaWAN network you control.
 Start here (HARDWARIO guide):
 - **https://docs.hardwario.com/sticker/lorawan-network-server/lorawan-chirpstack**
 
-Step-by-step sections:
-- Installation: https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
-- Gateways: https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-gateways
-- End devices: https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices
-- Payload decoding: https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding
+Then add the STICKER payload decoder:
 - STICKER **Decoder**: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
 
 ---
@@ -93,22 +89,18 @@ Best if you want to use TTS (managed or self-hosted), including TTN/TTI workflow
 Start here (HARDWARIO guide):
 - **https://docs.hardwario.com/sticker/lorawan-network-server/lorawan-tts**
 
-Step-by-step sections:
-- Gateways: https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-gateways
-- End devices: https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-end-devices
+Then add the STICKER payload decoder:
 - STICKER **Decoder**: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
 
 ---
 
-## Step 4: Configure the device (optional)
+## Step 4: Configure the device
 
 STICKER can be configured to adjust reporting intervals, set alarm thresholds, or change LoRaWAN keys.
 
-Configuration is available via two methods:
-- **NFC** — configure with a smartphone using the [**HARDWARIO Manager**](nfc-configurator-app/setup.md), no tools needed
-- **Shell (RTT terminal)** — for developers via a debug connection
+Configuration is done over **NFC** — use a smartphone with the [**HARDWARIO Manager**](nfc-configurator-app/setup.md) to write the settings, no tools or cables needed.
 
-For a full list of all configuration parameters and commands, see:
+For a full list of all configuration parameters and commands — and the shell (RTT terminal) used over a debug connection — see:
 
 **[Developer Access →](developer-mode)**
 

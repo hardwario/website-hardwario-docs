@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/encoder-module.png')} /></div>
+      <div><Image img={require('./images/encoder-module.png')} alt="Encoder Module with a rotary encoder knob and three TAG I2C0 sockets" /></div>
     </div>
     <div class="col col--6">
       <p>
@@ -17,7 +17,7 @@ import Image from '@theme/IdealImage';
         The rotary encoder has <b>12 positions per revolution</b>. The rotation range is not limited such as with a potentiometer and can be rotated in either direction at any number of revolutions.
       </p>
       <p>
-        The module was designed primarily to complement the <a href="./about-lcd-module"><b>LCD Module</b></a>. A typical application is a wireless thermostat for setting up the temperature by rotating with the encoder or it could be used as a convenient navigation control in the graphical menu.
+        The module was designed primarily to complement the <a href="../about-lcd-module"><b>LCD Module</b></a>. A typical application is a wireless thermostat for setting up the temperature by rotating with the encoder or it could be used as a convenient navigation control in the graphical menu.
       </p>
     </div>
   </div>

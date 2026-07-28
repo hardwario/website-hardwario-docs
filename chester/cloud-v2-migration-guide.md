@@ -24,7 +24,7 @@ In this guide, you will learn how to flash application firmware to the CHESTER d
 
 ## 3. Insert the SIM Card
 
-![Chester - SIM card holder](images/chester-sim-holder.png)
+![CHESTER - SIM card holder](images/chester-sim-holder.png)
 
 ## 4. Add the Device to Cloud v2
 

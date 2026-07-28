@@ -5,10 +5,10 @@ import styles from './HomepageFeatures.module.css';
 const OurProducts = [
   {
     title: 'CHESTER',
-    subtitle: 'Configurable IoT Gateway',
+    subtitle: 'Configurable IoT Platform',
     link: '/chester/',
     src: '/img/chester.webp',
-    description: 'Extensible IoT gateway with NB-IoT, LTE-M, LoRaWAN, BLE, and GNSS radio technologies.',
+    description: 'Extensible IoT platform with NB-IoT, LTE-M, LoRaWAN, BLE, and GNSS radio technologies.',
   },
   {
     title: 'STICKER',
@@ -29,14 +29,21 @@ const OurProducts = [
     subtitle: 'Sensor IoT Monitor',
     link: '/fiber/',
     src: '/img/fiber.webp',
-    description: 'Precise industrial temperature monitoring with seamless connectivity and intuitive interfaces.',
+    description: 'Industrial temperature monitoring with 1-Wire and 868/915 MHz wireless sensors; Ethernet, WiFi, or optional LTE.',
+  },
+  {
+    title: 'FIBER Lite',
+    subtitle: 'LoRaWAN Test Appliance',
+    link: '/fiber-lite/',
+    src: '/img/raspberry-pi.png', // TODO: replace with a real FIBER Lite product photo once available
+    description: 'Raspberry Pi 5 based all-in-one appliance for quickly bringing up and testing LoRaWAN devices.',
   },
   {
     title: 'GAUGER',
     subtitle: 'Wi-Fi/LAN Input Module',
     link: '/gauger/',
     src: '/img/gauger.webp',
-    description: 'Industrial IoT device for seamless data acquisition from production lines and PLCs.',
+    description: 'Industrial WiFi/Ethernet device counting pulses from production lines; counters readable via Modbus TCP and HTTP API.',
   },
   {
     title: 'GLIDER',
@@ -119,7 +126,7 @@ const CloudAndApps = [
     subtitle: 'Middleware IoT Service',
     link: '/cloud/',
     src: '/img/cloud.png',
-    description: 'Device and data management platform with REST API services for seamless IoT integration.',
+    description: 'Device and data management platform with REST API, webhook connectors, and firmware updates over the air.',
   },
   {
     title: 'ThingsBoard',

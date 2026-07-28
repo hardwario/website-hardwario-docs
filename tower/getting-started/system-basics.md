@@ -58,7 +58,7 @@ We all know that the “security by obscurity” approach does not work in long 
 
 ## System Concept
 
-<Image img={require('./images/system-concept.png')}/>
+<Image img={require('./images/system-concept.png')} alt="System concept: TOWER nodes link by 868/915 MHz radio to a gateway, hub services, cloud platforms, and user apps" />
 
 <br />
 

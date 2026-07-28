@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/breadboard-module.png')} /></div>
+      <div><Image img={require('./images/breadboard-module.png')} alt="Breadboard Module with module socket headers and a narrow breakout for a solderless breadboard" /></div>
     </div>
     <div class="col col--6">
       <p>

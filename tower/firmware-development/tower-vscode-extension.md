@@ -27,7 +27,7 @@ After a while, the extension should be installed and ready to use.
 <div class="container">
   <div class="row">
     <div class="col col--6">
-      <div><Image img={require('./images/extension-install-guide.png')}/></div>
+      <div><Image img={require('./images/extension-install-guide.png')} alt="VS Code Extensions marketplace with the HARDWARIO TOWER extension found by search, ready to install" /></div>
     </div>
     <div class="col col--4">
     </div>

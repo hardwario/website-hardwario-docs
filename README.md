@@ -29,7 +29,7 @@ docusaurus.config.js     # site config: presets, plugin instances, navbar, foote
 sidebars-<product>.js    # one sidebar per product instance
 <product>/               # one content folder per product, served at /<product>/:
                          #   chester, sticker, ember, fiber, gauger, tapper, tower,
-                         #   cloud, cloud-new, apps, milesight, glider, rakwireless
+                         #   cloud, apps, milesight, glider, rakwireless
 src/
   pages/index.js         # custom homepage
   css/custom.css         # global styles / CSS variables

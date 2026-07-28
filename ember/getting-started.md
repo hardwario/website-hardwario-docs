@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 # EMBER Quick Start Guide
 
 Welcome! This page helps you **power up** your HARDWARIO **EMBER** and choose what to do next:
-- Run a **managed LoRaWAN backend** via **EMBER Cloud Service** (ChirpStack + Node-RED)
+- Run a **managed LoRaWAN backend** operated by HARDWARIO (ChirpStack + Node-RED)
 - Connect EMBER to your own **ChirpStack**
 - Connect EMBER to **The Things Stack (TTS)**
 
@@ -26,13 +26,13 @@ Hardware description: https://docs.hardwario.com/ember/hardware-description/
   - 24 V DC adapter / 24 V DC power supply, or
   - 24 V DC passive PoE via the **WAN** port
 - Internet connectivity (WAN and/or LTE, depending on your setup)
-- A LoRaWAN backend (EMBER Cloud Service / ChirpStack / TTS / other)
+- A LoRaWAN backend (HARDWARIO managed service / self-hosted ChirpStack / TTS / other)
 
 
 #### Quick links
-- EMBER product page (datasheet + overview): https://www.hardwario.com/ember
+- EMBER product page (datasheet + overview): https://www.hardwario.com/products/ember/
 - Hotspot configuration (LAN IP, login, RouterOS script): https://docs.hardwario.com/ember/hotspot-configuration/
-- EMBER Cloud Service (managed ChirpStack + Node-RED): https://docs.hardwario.com/ember/cloud-service/
+- Managed network server (ChirpStack + Node-RED operated by HARDWARIO): https://docs.hardwario.com/ember/cloud-service/
 
 ---
 
@@ -67,13 +67,13 @@ EMBER runs **MikroTik RouterOS**.
 For initial access and management, use the WAN interface (leftmost RJ-45 port) and standard RouterOS tools.
 
 **If you don't already have Winbox 4 installed, follow the [Winbox 4 Installation guide](/ember/mikrotik/winbox4-installation).**
-#### 2.1 Connect to Ember using Winbox 4
+#### 2.1 Connect to EMBER using Winbox 4
 
 After opening the application, look at the list where you should see your **EMBER**.
 - If there is more than one device, look at the EMBER board — on its left side there are two ethernet connectors with a sticker on them. On the sticker, find the **MAC address** — a combination of numbers and letters after the text **E01** (for example: **E01: 48:A5:8A:4F:17:A6**).
 - Go back to **Winbox** and find the device with the **matching MAC address**. Click on the device in the list to select it.
 - Make sure the **jumper** on the board is **removed**. The location of the jumper is shown in the picture below.
-![Ember jumper, ethernet ports and reset](images/ember-jumper-eth-ports.png)
+![EMBER jumper, ethernet ports and reset](images/ember-jumper-eth-ports.png)
 
 **Main documentation (recommended start):**
 - EMBER Hotspot configuration & local access:  
@@ -124,11 +124,11 @@ Now you need to update RouterOS. Go to [Checks for RouterOS updates and installs
 #### Manual Setup:
 Sets the system identity to "ember".
 - **System → Identity** change your identity to **ember** and click **OK**.
-![Ember change identity](images/ember-change-identity.png)
+![EMBER change identity](images/ember-change-identity.png)
 
 Creates a bridge interface (bridge0) and adds ether2 and ether3 to it.
 - **Bridge → New**  change name to **bridge0** and click **OK**.
-![Ember create bridge0](images/ember-bridge-add.png)
+![EMBER create bridge0](images/ember-bridge-add.png)
 
 Assigns IP address 172.31.255.1/24 to the bridge for LAN access and add ports to the bridge.
 - **IP → Addresses →  New** and fill **Address**, **Network** and select **Interface**:
@@ -137,32 +137,32 @@ Assigns IP address 172.31.255.1/24 to the bridge for LAN access and add ports to
   - Interface: **bridge0**
 - Confirm it by clicking **OK**
 
-![Ember ether2 add to bridge0](images/ember-bridge-add-ip.png)
+![EMBER ether2 add to bridge0](images/ember-bridge-add-ip.png)
 
 - In Bridge window go to **Ports → New**, select interface **ether2**. Make sure, that the **bridge0** is selected and click **OK**
-![Ember ether2 add to bridge0](images/ember-bridge-ether2.png)
+![EMBER ether2 add to bridge0](images/ember-bridge-ether2.png)
 
 - In Bridge window go to **Ports → New**, select interface **ether3**. Make sure, that the **bridge0** is selected and click **OK**
-![Ember ether3 add to bridge0](images/ember-bridge-ether3.png)
+![EMBER ether3 add to bridge0](images/ember-bridge-ether3.png)
 
 
 Enables DHCP client on ether1 (WAN) for internet connectivity.
 - In the left panel **IP → DHCP Client → New**, select **ether1** as interface and click **OK**.
-![Ember ether1 dhcp client](images/ember-ether1-dhcp-client.png) 
+![EMBER ether1 dhcp client](images/ember-ether1-dhcp-client.png) 
 
 Turn on welcome note.
 - In the left panel **System → Note**, uncheck **Show At Login** and click **OK**.
-![Ember ether3 add to bridge0](images/ember-note.png)
+![EMBER ether3 add to bridge0](images/ember-note.png)
 
 #### Checks for RouterOS updates and installs if available.
 - In the left panel **System → Packages → Check for Updates**. A new window will open, check if the versions match. If not, click **Download&Install** and wait a few minutes.
-![Ember RouterOS update](images/ember-update-routeros.png)
+![EMBER RouterOS update](images/ember-update-routeros.png)
 
 ---
 
 ### 3.3 Install IoT Package
 After reconnecting, go to the left panel **System → Packages → Check for Updates**. At the list, find **iot**, click on it. In the right panel, click **Enable** and then **Apply Changes**. A new window will open, click **OK** and wait a few seconds.
-![Ember IoT package install](images/ember-install-iot-package.png)
+![EMBER IoT package install](images/ember-install-iot-package.png)
 
 ---
 
@@ -182,19 +182,19 @@ Press **Enter** to execute.
 
 ### 3.5 Upgrade RouterBOARD
 In the left panel, go to **System → RouterBOARD** and click **Upgrade**. A new window will open, click **OK**.
-![Ember upgrade RouterBOARD](images/ember-upgrade-routerboard.png)
+![EMBER upgrade RouterBOARD](images/ember-upgrade-routerboard.png)
 
-After upgrade you need to reboot the Ember. In the left panel, go to **System → Reboot**. A new window will open, click **OK**.
-![Ember reboot](images/ember-reboot.png)
+After upgrade you need to reboot the EMBER. In the left panel, go to **System → Reboot**. A new window will open, click **OK**.
+![EMBER reboot](images/ember-reboot.png)
 
 
 ---
 
 ## Step 4: Choose your LoRaWAN backend
 
-### EMBER Cloud Service (managed backend)
+### HARDWARIO managed network server (managed backend)
 
-**EMBER Cloud Service** is a fully managed LoRaWAN backend operated by HARDWARIO.  
+HARDWARIO can operate the LoRaWAN Network Server for you as a fully **managed service**.  
 It is designed for a fast start without the need to run your own infrastructure.
 
 What the service typically provides:
@@ -202,19 +202,21 @@ What the service typically provides:
 - **Node-RED** – data processing, payload decoding, and forwarding  
 - Preconfigured connectivity between the gateway, LNS, and integrations
 
+Around EMBER, HARDWARIO also optionally provides a **SIM card with connectivity** for the LTE backhaul and **secure remote access via OpenVPN**.
+
 Recommended if you want to **get data from devices quickly** and forward it to applications or dashboards.
 
 #### Key links
 - Service overview and concept:  
   **https://docs.hardwario.com/ember/cloud-service/**
 
-- EMBER Cloud web portal (service management):  
+- Web portal (service management):  
   https://docs.hardwario.com/ember/cloud-service/#web-management
 
-- ChirpStack in EMBER Cloud Service:  
+- ChirpStack in the managed service:  
   https://docs.hardwario.com/ember/cloud-service/#chirpstack-lorawan-server
 
-- Node-RED in EMBER Cloud Service:  
+- Node-RED in the managed service:  
   https://docs.hardwario.com/ember/cloud-service/#node-red-application
 
 ---
@@ -230,7 +232,7 @@ Additional resources:
   https://docs.hardwario.com/ember/chirpstack/chirpstack-ember/
 
 - (Optional) Install ChirpStack v4 (Debian/Ubuntu):  
-  https://docs.hardwario.com/ember/chirpstack-v4-installation/
+  https://docs.hardwario.com/apps/chirpstack/chirpstack-installation/
 
 ---
 
@@ -247,7 +249,7 @@ Additional resources:
 If you already run another LoRaWAN server, you can set EMBER to forward packets to your server.
 
 Key note from the official Hotspot Configuration:
-- If you **do not use EMBER Cloud service**, use **your LoRaWAN server IP address**
+- If you **do not use the HARDWARIO managed service**, use **your LoRaWAN server IP address**
   and you **don't need to configure VPN tunnels**.
 
 Reference: https://docs.hardwario.com/ember/hotspot-configuration/
@@ -266,7 +268,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 - IoT package installed
 - LoRa interface configured (antenna set to uFL)
 - Bootloader updated
-- Gateway is configured to your backend (EMBER Cloud / ChirpStack / TTS / other)
+- Gateway is configured to your backend (HARDWARIO managed / ChirpStack / TTS / other)
 - In the LoRaWAN server UI, gateway status shows **Last seen / connected**
 - You can see uplinks from at least one LoRaWAN device
 
@@ -286,7 +288,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 - Verify WAN/LTE Internet connectivity.
 - Ensure the IoT package is installed (check with `/system package print`).
 - Verify LoRa interface is configured (check with `/iot lora print`).
-- If using EMBER Cloud, confirm you are using the provided service URL and correct configuration guidance.
+- If using the HARDWARIO managed service, confirm you are using the provided service URL and correct configuration guidance.
 
 #### Reset device
 Unplug the power cable, hold the reset button and plug the power cable back in. After 5 seconds the LED will start blinking, release the button. The reset button location can be found in the image [here](#21-connect-to-ember-using-winbox-4).

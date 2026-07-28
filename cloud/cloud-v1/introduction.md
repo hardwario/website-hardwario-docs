@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 The **HARDWARIO Cloud** is an infrastructure that provides IoT connectivity and enables the management of HARDWARIO IoT devices and provides access to the transmitted device data via REST APIs or callbacks.
 
-<Image img={require('./images/hardwario-cloud.png')}/><br/>
+<Image img={require('./images/hardwario-cloud.png')} alt="Diagram: CHESTER connects to HARDWARIO Cloud over LTE-M/NB-IoT/LoRaWAN; data flows via webhook and REST API to integrations"/><br/>
 
 1. To discover the basic features of **HARDWARIO Cloud**, see the chapter:<br/>
    [**Basic Features**](#basic-features)

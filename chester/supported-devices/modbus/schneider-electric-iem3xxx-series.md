@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div style={{ width: '376px', height: '376px' }}>
-        <Image img={require('./images/schneider-electric-iem3000-series.png')} />
+        <Image img={require('./images/schneider-electric-iem3000-series.png')} alt="Schneider Electric iEM3255 DIN-rail energy meter with LCD and OK, ESC, arrow buttons" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -118,9 +118,9 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 ---
 
-### Modbus Communication Configuration for Chester
+### Modbus Communication Configuration for CHESTER
 
-Use the following commands to configure communication parameters via Chester terminal:
+Use the following commands to configure communication parameters via CHESTER Terminal:
 
 
 ```

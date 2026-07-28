@@ -8,7 +8,7 @@ import Link from '@docusaurus/Link';
 
 # APPS
 
-HARDWARIO Apps transform raw IoT measurements into clear, interactive visualizations. Easily track, analyze, and understand your device data through customizable dashboards, charts, and reports. From real-time monitoring to historical trends, our visualization tools give you the insights you need to make informed decisions—anytime, anywhere.
+These applications visualize and process data from HARDWARIO devices. The table below lists each platform with its documentation, difficulty level, and a short description.
 
 ---
 

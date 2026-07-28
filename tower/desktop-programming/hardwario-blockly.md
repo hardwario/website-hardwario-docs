@@ -31,7 +31,7 @@ This is a **Low-code/No-code environment** which means that you don't need to kn
 
 It is designed to make firmware creation fast and easy for users on any level of knowledge.
 
-<Image img={require('./images/blockly-showcase.png')}/>
+<Image img={require('./images/blockly-showcase.png')} alt="HARDWARIO Blockly workspace with initialization blocks and event blocks publishing data over the radio" />
 
 ### Examples
 
@@ -49,7 +49,7 @@ Working with blockly is pretty straightforward but we had to make some changes.
 
 This image shows a basic project in HARDWARIO Blockly, here we will go over some important elements.
 
-<Image img={require('./images/blockly-showcase.png')}/>
+<Image img={require('./images/blockly-showcase.png')} alt="HARDWARIO Blockly workspace with initialization blocks and event blocks publishing data over the radio" />
 
 #### Workspace
 
@@ -90,7 +90,7 @@ This tool provides the possibility to **show live-generated C code** that is ide
 
 Thanks to this, you can create some basic firmware with the use of blocks, then take the code and finalize it in the [**HARDWARIO Code**](../firmware-development/about-hardwario-code.md).
 
-<Image img={require('./images/blockly-code.png')}/>
+<Image img={require('./images/blockly-code.png')} alt="Blockly workspace with Show Code enabled: the generated C code appears next to the blocks" />
 
 ### Compiling and Flashing
 

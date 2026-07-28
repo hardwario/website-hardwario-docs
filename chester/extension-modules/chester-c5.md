@@ -40,11 +40,11 @@ For initial start powering from the battery without DC input power supply** it i
 
 ## Module drawing: top
 
-![](images/chester-c5-top.png)
+![CHESTER-C5 top drawing: 18650 battery holder BT1, two 1-Wire RJ-45 jacks, buttons, and terminal rows A1-A8/B1-B8](images/chester-c5-top.png)
 
 ## Module drawing: bottom
 
-![](images/chester-c5-bot.png)
+![CHESTER-C5 bottom drawing with CHESTER-X soldering slots A2/A3 and the power-supply circuitry](images/chester-c5-bot.png)
 
 ## Module drawing description
 
@@ -85,19 +85,19 @@ _\** Use the BYPASS BUTTON to initiate start from the battery without DC input p
 
 ### BT/LED Connector
 
-![](images/btn-ext.png)
+![BT/LED connector pinout, pins 1-4: VDD, LED EXT, GND, BTN EXT](images/btn-ext.png)
 
 ### SYSTEM Connector
 
-![](images/system.png)
+![SYSTEM connector pinout, pins 1-7: NC, +V, GND, VDD, SCL, SDA, INT](images/system.png)
 
 ### BATTERY Connector
 
-![](images/batt.png)
+![BATTERY connector pinout, pins 1-2: +BATT EXT, GND](images/batt.png)
 
 ### 1-Wire RJ-45 Connectors
 
-![](images/rj-45.png)
+![RJ-45 pinouts: JP12 carries 1-Wire channels A1-A4, JP13 carries A5-A8, each alternating with GND](images/rj-45.png)
 
 ## Schematic diagram
 
@@ -109,9 +109,9 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [TODO Interactive PCB connector, part, testpoint and signal browser]
 -->
 
-![](images/hio-chester-c5-r1.1-1.png)
-![](images/hio-chester-c5-r1.1-2.png)
-![](images/hio-chester-c5-r1.1-3.png)
-![](images/hio-chester-c5-r1.1-4.png)
-![](images/hio-chester-c5-r1.1-5.png)
+![CHESTER-C5 schematic sheet 1: CHESTER-U1 module, two CHESTER-X slots, and APP/NET SWD debug headers](images/hio-chester-c5-r1.1-1.png)
+![CHESTER-C5 schematic sheet 2: Block A/B terminals, 1-Wire RJ-45 jacks, I2C, QWIIC, buttons, tamper, and RGY LED](images/hio-chester-c5-r1.1-2.png)
+![CHESTER-C5 schematic sheet 3: external battery input, 6-28 V DC input, and TPS62933 step-down converter](images/hio-chester-c5-r1.1-3.png)
+![CHESTER-C5 schematic sheet 4: MCP73833 charger, AP9101C battery protection with bypass button, GPIO expander, and ADC](images/hio-chester-c5-r1.1-4.png)
+![CHESTER-C5 schematic sheet 5: 6 V boost and 5.5 V LDO rails plus the DS2482S-800 8-channel 1-Wire master](images/hio-chester-c5-r1.1-5.png)
 

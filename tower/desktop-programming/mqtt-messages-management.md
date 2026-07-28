@@ -25,7 +25,7 @@ If you don't know much about MQTT protocol and MQTT messages, you can visit an [
 
 By default, the messages that will show up will be just from **HARDWARIO TOWER devices**.
 
-<Image img={require('./images/messages-tab.png')}/>
+<Image img={require('./images/messages-tab.png')} alt="Messages tab listing incoming thermometer MQTT messages, with Publish and Subscribed topics sections below" />
 
 ### Messages
 The main part of this tab is at the top where all the messages are shown.
@@ -50,7 +50,7 @@ In this part of the tab, you can **Publish MQTT messages**
 
 After you click the **Publish** button you should see the message appear in the top part (if you are subscribed to the topic you selected)
 
-<Image img={require('./images/messages-publish.png')}/>
+<Image img={require('./images/messages-publish.png')} alt="Publish message fields with topic node/test, payload test message, and the Publish button" />
 
 ### Subscribed topics
 At the bottom of the tab, you can select what **topics you want to subscribe to**.
@@ -61,7 +61,7 @@ This determines what messages will be shown at the top part of the tab. By defau
 
 :::
 
-<Image img={require('./images/messages-subscribe.png')}/>
+<Image img={require('./images/messages-subscribe.png')} alt="Subscribed topics list with the default node/# and bridge/# subscriptions" />
 
 If you want to add any new topic, you can just type it into the field and press the **Subscribe button**. The new topic will appear on the list.
 

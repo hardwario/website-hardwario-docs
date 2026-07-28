@@ -5,6 +5,7 @@ const sidebars = {
   docs: [
     'introduction',
     'first-steps',
+    'features',
    {
           type: 'category',
           label: 'Video Tutorials',
@@ -25,6 +26,7 @@ const sidebars = {
   label: 'Platform Connectivity',
   link: {
     type: 'generated-index',
+    description: 'CHESTER connectivity, device-management, cellular, satellite, and networking documentation.',
   },
   collapsed: true,
   items: [
@@ -199,6 +201,7 @@ const sidebars = {
       label: 'Hardware Description',
       link: {
         type: 'generated-index',
+        description: 'CHESTER hardware, enclosure, connector, bus, and extension-module documentation.',
       },
       collapsed: true,
       items: [
@@ -230,6 +233,7 @@ const sidebars = {
       label: 'Developer Tools',
       link: {
         type: 'generated-index',
+        description: 'Tools for configuring, flashing, profiling, and developing with CHESTER.',
       },
       collapsed: true,
       items: [
@@ -243,6 +247,7 @@ const sidebars = {
       label: 'Firmware SDK',
       link: {
         type: 'generated-index',
+        description: 'Set up the CHESTER firmware SDK and build customer applications.',
       },
       collapsed: true,
       items: [

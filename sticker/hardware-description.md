@@ -34,7 +34,7 @@ Device status is indicated by a **multi-color LED (R/G/Y)** and communication is
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/block-diagram-sticker.png')} />
+        <Image img={require('./images/block-diagram-sticker.png')} alt="STICKER block diagram: STM32WLE5CC LoRa SoC with sensors, NFC memory, 2x AA power chain, and status LED" />
       </div>
     </div>
     <div class="col col--24">
@@ -47,23 +47,23 @@ Device status is indicated by a **multi-color LED (R/G/Y)** and communication is
 
 ### NFC Configuration Architecture
 
-![Sticker - NFC Configuration Architecture](images/sticker-nfc.drawio.png)
+![STICKER - NFC Configuration Architecture](images/sticker-nfc.drawio.png)
 
 ---
 
 ## Overview
 
-#### Sticker Clime - Enclosure, Mainboard, and Battery Holder
+#### STICKER Clime - Enclosure, Mainboard, and Battery Holder
 
-![Sticker Clime](images/sticker-clime-overview.png)
+![STICKER Clime](images/sticker-clime-overview.png)
 
-#### Sticker Input - Enclosure, Mainboard, and Battery Holder
+#### STICKER Input - Enclosure, Mainboard, and Battery Holder
 
-![Sticker Input](images/sticker-input-overview.png)
+![STICKER Input](images/sticker-input-overview.png)
 
-#### Sticker Motion - Enclosure, Mainboard, and Battery Holder
+#### STICKER Motion - Enclosure, Mainboard, and Battery Holder
 
-![Sticker Motion](images/sticker-motion-overview.png)
+![STICKER Motion](images/sticker-motion-overview.png)
 
 ---
 
@@ -72,27 +72,27 @@ Device status is indicated by a **multi-color LED (R/G/Y)** and communication is
 ### Power
 
 **[Download Power Schematic (PDF)](hardware-diagrams/power.pdf)**
-![Sticker - Power](images/power.png)
+![STICKER - Power](images/power.png)
 
 ### Antenna
 
 **[Download Antenna Schematic (PDF)](hardware-diagrams/antenna.pdf)**
-![Sticker - Antenna](images/antenna.png)
+![STICKER - Antenna](images/antenna.png)
 
 ### MCU
 
 **[Download MCU Schematic (PDF)](hardware-diagrams/mcu.pdf)**
-![Sticker - MCU](images/mcu.png)
+![STICKER - MCU](images/mcu.png)
 
 ### Sensors
 
 **[Download Sensors Schematic (PDF)](hardware-diagrams/sensors.pdf)**
-![Sticker - Sensors](images/sensors.png)
+![STICKER - Sensors](images/sensors.png)
 
 ### NFC
 
 **[Download NFC Schematic (PDF)](hardware-diagrams/nfc.pdf)**
-![Sticker - NFC](images/nfc.png)
+![STICKER - NFC](images/nfc.png)
 
 ---
 
@@ -108,13 +108,13 @@ Device status is indicated by a **multi-color LED (R/G/Y)** and communication is
 |                   | Idle power consumption    | < 80 µA                            |
 |                   | Peak power consumption    | < 100 mA                           |
 | **Environment** | Operating temperature     | -30 °C to +70 °C                   |
-|                   | Storage temperature       | -40 °C to +85 °C                   |
+|                   | Storage temperature       | -30 °C to +70 °C                   |
 |                   | Enclosure protection      | IP40                               |
-| **Sensors** | Integrated thermometer – Measurement range   | -40 °C to +105 °C     |
-|                   | Integrated thermometer – Measurement accuracy| ±0.2 % (0 °C to 65 °C) |
+| **Sensors** | Integrated thermometer – Measurement range   | -20 °C to +60 °C     |
+|                   | Integrated thermometer – Measurement accuracy| ±0.2 °C (0 °C to 65 °C) |
 |                   | Integrated hygrometer – Measurement range    | 0 % to 100 %           |
 |                   | Integrated hygrometer – Measurement accuracy | ±2 % (from 10 % to 90 %) |
-|                   | PIR – Detection range     | 4 m                                |
+|                   | PIR – Detection range     | 5 m                                |
 |                   | PIR – Viewing angle       | ≥ 50°                              |
 
-![Sticker - Catalog](images/sticker.png)
+![STICKER - Catalog](images/sticker.png)

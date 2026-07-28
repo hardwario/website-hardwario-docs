@@ -8,12 +8,29 @@ const sidebars = {
     'features',
     {
       type: 'category',
-      label: 'NFC Configurator APP',
+      label: 'HARDWARIO Manager',
       collapsed: true,
       items: [
         'nfc-configurator-app/setup',
+        'nfc-configurator-app/features',
         'nfc-configurator-app/config',
         'nfc-configurator-app/template-generator',
+        {
+          type: 'category',
+          label: 'Guides',
+          collapsed: true,
+          items: [
+            'nfc-configurator-app/guides/read-info-and-keys',
+            'nfc-configurator-app/guides/scan-multiple',
+            'nfc-configurator-app/guides/templates',
+            'nfc-configurator-app/guides/one-wire-sensors',
+            'nfc-configurator-app/guides/sample-data',
+            'nfc-configurator-app/guides/sensor-history',
+            'nfc-configurator-app/guides/resets',
+            'nfc-configurator-app/guides/manage-tags',
+            'nfc-configurator-app/guides/change-log',
+          ],
+        },
       ],
     },
     {
@@ -45,7 +62,20 @@ const sidebars = {
               collapsed: true,
               items: []
             },
-            'sticker-input-wiring/external-sensors',
+            {
+              type: 'category',
+              label: 'External Sensor Support',
+              link: {
+                type: 'doc',
+                id: 'sticker-input-wiring/external-sensors',
+              },
+              collapsed: true,
+              items: [
+                'sticker-input-wiring/machine-probe',
+                'sticker-input-wiring/one-wire-dallas',
+                'sticker-input-wiring/s0-interface',
+              ],
+            },
           ]
         },
         'catalog-applications/sticker-motion',

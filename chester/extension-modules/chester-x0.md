@@ -12,7 +12,7 @@ This article describes the CHESTER-X0 four-channel I/O extension module. Two var
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x0a-top.png')} /></div>
+      <div><Image img={require('./images/chester-x0a-top.png')} alt="CHESTER-X0A module, a red PCB with boost converter fitted in the top-left corner" /></div>
     </div>
     <div class="col col--10">
     </div>
@@ -25,7 +25,7 @@ This article describes the CHESTER-X0 four-channel I/O extension module. Two var
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x0b-top.png')} /></div>
+      <div><Image img={require('./images/chester-x0b-top.png')} alt="CHESTER-X0B module, a red PCB with the boost-converter position unpopulated and solder bridges instead" /></div>
     </div>
     <div class="col col--10">
     </div>
@@ -65,7 +65,7 @@ Depending on the application these configuration options are available for each 
 
 This picture show the electric circuit of each channel:
 
-![](images/sc-chester-x0.png)
+![Single-channel circuit: CHX input with varistor, PUX pull-up, PDX pull-down, CLX divider, and ONX 5V switch to GPX/AX](images/sc-chester-x0.png)
 
 ## Configuration Table
 
@@ -88,7 +88,7 @@ However, this is just to understand the modes. You only need to know which mode 
 
 ## CHESTER Pin Configuration Diagram
 
-![](images/tb-chester-x0.png)
+![CHESTER-X0 terminal block pinout, pins 1-8: VDD, CH1, GND, CH2, CH3, GND, CH4, +V](images/tb-chester-x0.png)
 
 ## Pin Configuration and Functions
 
@@ -112,12 +112,12 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [Schematic (PDF)](schematics/hio-chester-x0-r2.0.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x0-r2.0.html)
 
-![](images/hio-chester-x0-r2.0-1.png)
-![](images/hio-chester-x0-r2.0-2.png)
-![](images/hio-chester-x0-r2.0-3.png)
+![CHESTER-X0 schematic sheet 1: PCAL6416A GPIO expander and TPS61099 boost converter with module pin headers](images/hio-chester-x0-r2.0-1.png)
+![CHESTER-X0 schematic sheet 2: configuration switch circuits for channels 1 and 2](images/hio-chester-x0-r2.0-2.png)
+![CHESTER-X0 schematic sheet 3: configuration switch circuits for channels 3 and 4](images/hio-chester-x0-r2.0-3.png)
 
 ## Module Drawing
-![](images/pc-chester-x0.png)
+![CHESTER-X0 board outline with edge signals: +V, GP0-GP3, SDA, SCL, VDD, GND on top; +V, CH1-CH4, GND, VDD on bottom](images/pc-chester-x0.png)
 
 ## CHESTER SDK
 

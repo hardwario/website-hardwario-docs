@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # ChirpStack v4 - Adding EMBER
 
-This tutorial walks you through the process of adding HARDWARIO Ember (gateways) to ChirpStack v4.
+This tutorial walks you through the process of adding HARDWARIO EMBER (gateways) to ChirpStack v4.
 
 ---
 

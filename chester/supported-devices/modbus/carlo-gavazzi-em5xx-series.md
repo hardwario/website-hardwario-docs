@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div style={{ width: '376px', height: '376px' }}>
-        <Image img={require('./images/carlo-gavazzi-em5xx.png')} />
+        <Image img={require('./images/carlo-gavazzi-em5xx.png')} alt="Carlo Gavazzi EM530 DIN-rail energy analyzer with LCD showing energy and power readings" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -119,9 +119,9 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 ---
 
-### Modbus Communication Configuration for Chester
+### Modbus Communication Configuration for CHESTER
 
-Use the following commands to configure communication parameters via Chester terminal:
+Use the following commands to configure communication parameters via CHESTER Terminal:
 
 
 ```

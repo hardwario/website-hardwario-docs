@@ -18,7 +18,7 @@ This guide walks you through updating RouterOS packages and the RouterBOARD (fir
 ## 1. Update RouterOS Software
 
 In the left panel **System → Packages → Check for Updates**. A new window will open, check if the versions match. If not, click **Download&Install** and wait a few minutes.
-![Ember RouterOS update](images/ember-update-routeros.png)
+![EMBER RouterOS update](images/ember-update-routeros.png)
 
 ---
 
@@ -27,7 +27,7 @@ In the left panel **System → Packages → Check for Updates**. A new window wi
 1. In the left menu, open **System → RouterBOARD**.
 2. Compare **Current Firmware** with **Upgrade Firmware**.
 3. If an upgrade is available, click **Upgrade**.
-![Ember upgrade RouterBOARD](images/ember-upgrade-routerboard.png)
+![EMBER upgrade RouterBOARD](images/ember-upgrade-routerboard.png)
 
 
 ---
@@ -37,7 +37,7 @@ In the left panel **System → Packages → Check for Updates**. A new window wi
 1. In the left menu, open **System → Reboot**.
 2. Confirm the reboot to apply the RouterBOARD firmware upgrade.
 
-![Ember reboot](images/ember-reboot.png)
+![EMBER reboot](images/ember-reboot.png)
 
 3. Wait for the device to come back online, then log in again.
 

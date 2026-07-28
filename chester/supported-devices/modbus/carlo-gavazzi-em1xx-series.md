@@ -34,7 +34,7 @@ This energy meter **does not require** any **external sensor** for current measu
 
 #### Connection Diagram (EM111)
 
-![](images/carlo-gavazzi-em111-power.png)
+![Wiring diagram of the EM111 single-phase connection with L1 and N through terminals 1, 2 and N](images/carlo-gavazzi-em111-power.png)
 
 ---
 
@@ -50,7 +50,7 @@ This energy meter **does not require** any **external sensor** for current measu
 
 #### Modbus communication (EM111)
 
-![](images/carlo-gavazzi-em111-modbus.png)
+![RS-485 bus diagram linking EM111 terminals A- 8, B+ 6, GND 7 to the Modbus master and PC](images/carlo-gavazzi-em111-modbus.png)
 
 ---
 
@@ -93,9 +93,9 @@ If long presses don’t respond, try pressing the `◄` **(Left)** button closer
 
 ---
 
-### Modbus Communication Configuration for Chester
+### Modbus Communication Configuration for CHESTER
 
-Use the following commands to configure communication parameters via Chester terminal:
+Use the following commands to configure communication parameters via CHESTER Terminal:
 
 
 ```

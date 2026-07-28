@@ -36,12 +36,12 @@ In this article, you will find the details about the TAPPER hardware configurati
 
 ### Power
 
-![](images/hio-tapper-r1.1-schematic-1.png)
+![TAPPER R1.1 power schematic: 10-30 V input via terminal block or DC jack, L6981CDR buck converter producing 5 V](images/hio-tapper-r1.1-schematic-1.png)
 
 ### Raspberry Pi + PN532 Breakout Board
 
-![](images/hio-tapper-r1.1-schematic-2.png)
+![TAPPER R1.1 schematic: Raspberry Pi Zero 2 W GPIO wiring to the PN532 breakout board over SPI](images/hio-tapper-r1.1-schematic-2.png)
 
 ### Peripherals
 
-![](images/hio-tapper-r1.1-schematic-3.png)
+![TAPPER R1.1 peripherals schematic: transistor-driven RGB LED and buzzer, plus the tamper switch input](images/hio-tapper-r1.1-schematic-3.png)

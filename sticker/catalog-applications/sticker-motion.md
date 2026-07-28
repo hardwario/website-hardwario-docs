@@ -1,22 +1,22 @@
 ---
 slug: sticker-motion
-title: Sticker Motion
+title: STICKER Motion
 ---
 import Image from '@theme/IdealImage';
 
-# Sticker Motion
+# STICKER Motion
 
 **STICKER Motion** is a compact, wireless LoRaWAN motion detector built for ultra-low-power operation. Powered by two AA batteries, it uses a precise PIR sensor to detect movement and transmit events, making it suitable for security, facility monitoring, retail analytics, and logistics tracking.
 
-![Sticker Motion](images/sticker-motion-top.png)
+![STICKER Motion](images/sticker-motion-top.png)
 
 ## Quick Links
 
-* [**Getting Started Guide**](https://docs.hardwario.com/sticker/getting-started) – Step-by-step setup guide.
+* [**Getting Started Guide**](https://docs.hardwario.com/sticker/first-steps) – Step-by-step setup guide.
 * [**Buy STICKER Motion**](https://www.hardwario.store/p/sticker-motion) – Purchase on our store.
 * [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes) - List of components and part numbers.
 * [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description) - Technical details and hardware overview.
-* [**Official Product Page**](https://www.hardwario.com/sticker) – Features and overview.
+* [**Official Product Page**](https://www.hardwario.com/products/sticker/) – Features and overview.
 
 ## Typical use cases
 

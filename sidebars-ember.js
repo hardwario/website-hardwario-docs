@@ -12,6 +12,7 @@ const sidebars = {
       collapsed: true,
       items: [
         'lorawan-network-server/lorawan-chirpstack',
+        'chirpstack/chirpstack-ember',
         'lorawan-network-server/lorawan-tts',
       ],
     },
@@ -21,6 +22,7 @@ const sidebars = {
       collapsed: true,
       items: [
         'mikrotik/gateway-update',
+        'mikrotik/antenna-gain',
         'mikrotik/winbox-setup',
       ],
     },
@@ -32,6 +34,7 @@ const sidebars = {
   label: 'Video Tutorials',
   link: {
     type: 'generated-index',
+    description: 'Video guides for configuring and using EMBER.',
   },
   collapsed: true,
   items: [

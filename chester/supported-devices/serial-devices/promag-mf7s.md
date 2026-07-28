@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/promag-rf7s.png')} width={376} height={376} />
+        <Image img={require('./images/promag-rf7s.png')} width={376} height={376} alt="Black Promag MF7S RFID card reader with attached cable" />
       </div>
     </div>
     <div class="col col--24"></div>

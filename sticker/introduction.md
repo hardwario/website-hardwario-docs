@@ -6,13 +6,13 @@ import Image from '@theme/IdealImage';
 
 # STICKER
 
-**STICKER** is an open IoT platform based on STM32WL with integrated LoRaWAN connectivity. It is a compact, battery-powered device with long lifetime and ready-to-use applications such as STICKER Clime, Input, and Motion, making it ideal for flexible sensor deployments.
+**STICKER** is an open IoT platform based on STM32WL with integrated LoRaWAN connectivity and a software-selectable proprietary **LoRa P2P** mode that enables direct links to **HARDWARIO FIBER**. It is a compact, battery-powered device with long lifetime and ready-to-use applications such as STICKER Clime, Input, and Motion.
 
 :::tip
 ### To get your STICKER running, read the [**Quick Start Guide**](first-steps).
 :::
 
-<img src="/img/sticker.webp" data-zoom-src="/img/sticker.webp" width="540" alt="Sticker - Catalog" />
+<img src="/img/sticker.webp" data-zoom-src="/img/sticker.webp" width="540" alt="STICKER - Catalog" />
 
 ## Quick Links
 
@@ -20,7 +20,7 @@ import Image from '@theme/IdealImage';
 * [**Buy STICKER**](https://www.hardwario.store/sticker) – Purchase on our store.
 * [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes) - List of components and part numbers.
 * [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description) - Technical details and hardware overview.
-* [**Official Product Page**](https://www.hardwario.com/sticker) – Features and overview.
+* [**Official Product Page**](https://www.hardwario.com/products/sticker/) – Features and overview.
 * [**Changelog**](changelog) – Latest SDK releases, firmware versions, and per-application changes.
 
 ## Typical Use Cases
@@ -35,10 +35,10 @@ import Image from '@theme/IdealImage';
 
 | Feature                   | Description                                                                                                 |
 |----------------------------|-------------------------------------------------------------------------------------------------------------|
-| **Wireless Connectivity** | Supports LoRaWAN for efficient wireless data transmission.                                                  |
-| **Long Battery Life** | Designed for low energy consumption, ensuring at least one year of operation on standard AA batteries. |
+| **Wireless Connectivity** | Supports LoRaWAN for efficient wireless data transmission, plus a proprietary LoRa P2P mode (software-selectable) for direct links to HARDWARIO FIBER. |
+| **Long Battery Life** | Designed for low energy consumption, ensuring 2+ years of operation on standard AA batteries. |
 | **Compact Size** | Miniature dimensions for easy installation and use.                                                         |
-| **Integrated PIR Motion Sensor** | Detects motion with an integrated PIR sensor up to 4 meters.                                              |
+| **Integrated PIR Motion Sensor** | Detects motion with an integrated PIR sensor up to 5 meters.                                              |
 | **NFC Ready** | Connect to the device using an NFC-enabled smartphone.                                                      |
 | **Industrial Logic Inputs**| Supports up to 2 digital inputs for 24V industrial logic.                                                   |
 | **Voltage Measurement** | Measure up to 2 channels of voltage up to 30V.                                                              |

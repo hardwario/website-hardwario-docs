@@ -56,3 +56,230 @@
 /sticker/first-step                                  /sticker/first-steps                                           301
 /glider/first-step                                   /glider/first-steps                                            301
 /ember/first-step                                    /ember/first-steps                                             301
+
+# --- Trailing-slash twins of the rules above (Workers-assets matching is exact) ---
+/chester/power-mgmt/                                 /chester/power-management                                      301
+/chester/chester-z-over-j-link/                      /chester/firmware-flashing/chester-z-over-j-link               301
+/chester/lte-modem-over-j-link/                      /chester/firmware-flashing/lte-modem-over-j-link               301
+/chester/lorawan-modem-over-j-link/                  /chester/firmware-flashing/lorawan-modem-over-j-link           301
+/chester/application-over-j-link/                    /chester/firmware-flashing/application-over-j-link             301
+/chester/application-over-bluetooth/                 /chester/firmware-flashing/application-over-bluetooth          301
+/chester/extension-modules/                          /chester/extension-modules/extension-modules                   301
+/chester/chester-x3/                                 /chester/extension-modules/chester-x3                          301
+/chester/chester-x7/                                 /chester/extension-modules/chester-x7                          301
+/chester/chester-x4/                                 /chester/extension-modules/chester-x4                          301
+/chester/chester-x9/                                 /chester/extension-modules/chester-x9                          301
+/chester/chester-k1/                                 /chester/extension-modules/chester-k1                          301
+/chester/chester-x6/                                 /chester/extension-modules/chester-x6                          301
+/chester/chester-x2/                                 /chester/extension-modules/chester-x2                          301
+/chester/chester-x1/                                 /chester/extension-modules/chester-x1                          301
+/chester/chester-x0/                                 /chester/extension-modules/chester-x0                          301
+/chester/chester-x10/                                /chester/extension-modules/chester-x10                         301
+/chester/chester-x8/                                 /chester/extension-modules/chester-x8                          301
+/chester/cellular-networks/                          /chester/platform-connectivity/cellular-networks               301
+/chester/hardwario-manager/                          /chester/platform-connectivity/hardwario-manager               301
+/chester/power-profiler-kit-ii/                      /chester/developer-tools/power-profiler-kit-ii                 301
+/chester/command-line-tools/                         /chester/developer-tools/command-line-tools                    301
+/chester/segger-j-link/                              /chester/developer-tools/segger-j-link                         301
+/chester/connector-description/                      /chester/hardware-description/chester-m#connector-description  301
+/chester/basic-parameters/                           /chester/hardware-description/chester-m#basic-parameters       301
+/chester/enclosures/                                 /chester/hardware-description/enclosures                       301
+/chester/block-diagram/                              /chester/hardware-description/chester-m#block-diagram          301
+/chester/i2c-address-space/                          /chester/hardware-description/i2c-address-space                301
+/chester/chester-push/                               /chester/catalog-applications/chester-push                     301
+/chester/chester-input/                              /chester/catalog-applications/legacy/chester-input             301
+/chester/chester-clime/                              /chester/catalog-applications/chester-clime                    301
+/chester/chester-current/                            /chester/catalog-applications/chester-current                  301
+/chester/installation-on-ubuntu/                     /chester/firmware-sdk/installation-on-ubuntu                   301
+/chester/how-to-i2c-bus/                             /chester/firmware-sdk/how-to-i2c-bus                           301
+/chester/j-link-installation/                        /chester/firmware-sdk/j-link-installation                      301
+/chester/requirements/                               /chester/firmware-sdk/requirements                             301
+/chester/build-and-deploy/                           /chester/firmware-sdk/build-and-deploy                         301
+/chester/installation-on-windows/                    /chester/firmware-sdk/installation-on-windows                  301
+/chester/how-to-kconfig/                             /chester/firmware-sdk/how-to-kconfig                           301
+/chester/installation-on-macos/                      /chester/firmware-sdk/installation-on-macos                    301
+/chester/application-customization/                  /chester/firmware-sdk/application-customization                301
+/chester/hardware-description/basic-parameters/      /chester/hardware-description/chester-m                        301
+/chester/hardware-description/block-diagram/         /chester/hardware-description/chester-m                        301
+/chester/hardware-description/connector-description/ /chester/hardware-description/chester-m                        301
+/chester/hardware-description/layout-placement/      /chester/hardware-description/chester-m                        301
+/chester/hardware-description/schematic-diagram/     /chester/hardware-description/chester-m                        301
+/sticker/lorawan-network-server/chirpstack-ataa/     /sticker/lorawan-network-server/chirpstack-otaa                301
+/chester/first-step/                                 /chester/first-steps                                           301
+/sticker/first-step/                                 /sticker/first-steps                                           301
+/glider/first-step/                                  /glider/first-steps                                            301
+/ember/first-step/                                   /ember/first-steps                                             301
+
+# --- GSC 404 remediation (2026-07-04) ---
+
+# "Supported sensors" section renamed "Supported devices" (children kept their slugs)
+/chester/supported-sensors                           /chester/supported-devices/supported-devices                   301
+/chester/supported-sensors/                          /chester/supported-devices/supported-devices                   301
+
+# Old getting-started children moved (the bare page's own redirect is in the
+# orphan-docs cleanup block below)
+/chester/getting-started/first-step                  /chester/first-steps                                           301
+/chester/getting-started/first-step/                 /chester/first-steps                                           301
+/chester/getting-started/hardwario-manager           /chester/platform-connectivity/hardwario-manager               301
+/chester/getting-started/hardwario-manager/          /chester/platform-connectivity/hardwario-manager               301
+/chester/getting-started/hardwario-monitor           /chester/platform-connectivity/hardwario-monitor               301
+/chester/getting-started/hardwario-monitor/          /chester/platform-connectivity/hardwario-monitor               301
+/chester/getting-started/videos-chester/chester-cloud   /chester/videos-chester/chester-cloud                       301
+/chester/getting-started/videos-chester/chester-cloud/  /chester/videos-chester/chester-cloud                       301
+
+# platform-management section renamed platform-connectivity
+
+# Crawled .md-suffixed strays
+/chester/platform-connectivity/cellular-networks.md  /chester/platform-connectivity/cellular-networks               301
+/chester/firmware-sdk/how-to-lte-v2.md               /chester/firmware-sdk/how-to-lte-v2                            301
+
+# Cloud v2 docs superseded by the current /cloud/ instance
+/cloud/cloud-v2                                      /cloud/                                                        301
+/cloud/cloud-v2/                                     /cloud/                                                        301
+
+# TOWER split/compact-split module children flattened into hardware-modules
+# (the two bare "about-*-split-module" pages are still live)
+
+# EMBER moves
+/ember/getting-started                               /ember/first-steps                                             301
+/ember/getting-started/                              /ember/first-steps                                             301
+/ember/chirpstack/chirpstack-installation            /apps/chirpstack/chirpstack-installation                       301
+/ember/chirpstack/chirpstack-installation/           /apps/chirpstack/chirpstack-installation                       301
+/ember/mikrotik/gateway-configuration                /ember/first-steps                                             301
+/ember/mikrotik/gateway-configuration/               /ember/first-steps                                             301
+
+# FIBER docs restructured (project-structure/troubleshooting retired -> section index)
+/fiber/installation-setup                            /fiber/installation                                            301
+/fiber/installation-setup/                           /fiber/installation                                            301
+/fiber/configuration                                 /fiber/installation                                            301
+/fiber/configuration/                                /fiber/installation                                            301
+/fiber/project-structure                             /fiber/                                                        301
+/fiber/project-structure/                            /fiber/                                                        301
+/fiber/troubleshooting                               /fiber/                                                        301
+/fiber/troubleshooting/                              /fiber/                                                        301
+
+# Ubidots creating-dashboard had no index page; land on the app intro
+/apps/ubidots/creating-dashboard                     /apps/ubidots/index/                                   301
+/apps/ubidots/creating-dashboard/                    /apps/ubidots/index/                                   301
+
+# TOWER split/compact-split module children flattened into hardware-modules
+# (statics only: a catch-all splat would empty-match the live bare pages)
+/tower/hardware-modules/about-split-module/about-pir-module  /tower/hardware-modules/about-pir-module  301
+/tower/hardware-modules/about-split-module/about-pir-module/  /tower/hardware-modules/about-pir-module  301
+/tower/hardware-modules/about-split-module/about-lcd-module  /tower/hardware-modules/about-lcd-module  301
+/tower/hardware-modules/about-split-module/about-lcd-module/  /tower/hardware-modules/about-lcd-module  301
+/tower/hardware-modules/about-split-module/about-climate-module  /tower/hardware-modules/about-climate-module  301
+/tower/hardware-modules/about-split-module/about-climate-module/  /tower/hardware-modules/about-climate-module  301
+/tower/hardware-modules/about-compact-split-module/about-pir-module  /tower/hardware-modules/about-pir-module  301
+/tower/hardware-modules/about-compact-split-module/about-pir-module/  /tower/hardware-modules/about-pir-module  301
+/tower/hardware-modules/about-compact-split-module/about-lcd-module  /tower/hardware-modules/about-lcd-module  301
+/tower/hardware-modules/about-compact-split-module/about-lcd-module/  /tower/hardware-modules/about-lcd-module  301
+/tower/hardware-modules/about-compact-split-module/about-climate-module  /tower/hardware-modules/about-climate-module  301
+/tower/hardware-modules/about-compact-split-module/about-climate-module/  /tower/hardware-modules/about-climate-module  301
+
+# platform-management section index (children handled by the splat below)
+/chester/platform-management                                /chester/category/platform-connectivity                 301
+/chester/platform-management/                               /chester/category/platform-connectivity                 301
+
+# --- cloud-new instance merged into /cloud/ (2026-07-05, owner ruling) ---
+/cloud-new                                           /cloud/                                                        301
+/cloud-new/                                          /cloud/                                                        301
+/cloud-new/api                                       /cloud/api                                                     301
+/cloud-new/api/                                      /cloud/api                                                     301
+/cloud-new/category/cloud-v1                         /cloud/category/cloud-v1                                       301
+/cloud-new/category/cloud-v1/                        /cloud/category/cloud-v1                                       301
+/cloud-new/cloud-v1/overview                         /cloud/cloud-v1/overview                                       301
+/cloud-new/cloud-v1/overview/                        /cloud/cloud-v1/overview                                       301
+/cloud-new/connectors                                /cloud/connectors                                              301
+/cloud-new/connectors/                               /cloud/connectors                                              301
+/cloud-new/devices                                   /cloud/devices                                                 301
+/cloud-new/devices/                                  /cloud/devices                                                 301
+/cloud-new/downlink                                  /cloud/downlink                                                301
+/cloud-new/downlink/                                 /cloud/downlink                                                301
+/cloud-new/fota                                      /cloud/fota                                                    301
+/cloud-new/fota/                                     /cloud/fota                                                    301
+/cloud-new/introduction                              /cloud/introduction                                            301
+/cloud-new/introduction/                             /cloud/introduction                                            301
+/cloud-new/messages                                  /cloud/messages                                                301
+/cloud-new/messages/                                 /cloud/messages                                                301
+/cloud-new/spaces                                    /cloud/spaces                                                  301
+/cloud-new/spaces/                                   /cloud/spaces                                                  301
+/cloud-new/tags                                      /cloud/tags                                                    301
+/cloud-new/tags/                                     /cloud/tags                                                    301
+/cloud-new/users                                     /cloud/users                                                   301
+/cloud-new/users/                                    /cloud/users                                                   301
+/cloud-new/variables                                 /cloud/variables                                               301
+/cloud-new/variables/                                /cloud/variables                                               301
+/cloud-new/videos-cloud/cloud-chester-add            /cloud/videos-cloud/cloud-chester-add                          301
+/cloud-new/videos-cloud/cloud-chester-add/           /cloud/videos-cloud/cloud-chester-add                          301
+/cloud-new/videos-cloud/videos-cloud                 /cloud/videos-cloud/videos-cloud                               301
+/cloud-new/videos-cloud/videos-cloud/                /cloud/videos-cloud/videos-cloud                               301
+
+# --- Orphan-docs cleanup (2026-07-05, owner ruling): 22 orphaned pages deleted ---
+
+# apps/chirpstack: old duplicate overview + monolithic v4 guide (split into
+# chirpstack-gateways / chirpstack-end-devices / chirpstack-decoding)
+/apps/chirpstack/chirpstack-configuration/index      /apps/chirpstack/index/                                        301
+/apps/chirpstack/chirpstack-configuration/index/     /apps/chirpstack/index/                                        301
+/apps/chirpstack/chirpstack-configuration            /apps/chirpstack/chirpstack-configuration/chirpstack-gateways  301
+/apps/chirpstack/chirpstack-configuration/           /apps/chirpstack/chirpstack-configuration/chirpstack-gateways  301
+
+# apps/thingsboard: superseded / Czech-only drafts
+/apps/thingsboard/notifications                      /apps/thingsboard/notifications-manager                        301
+/apps/thingsboard/notifications/                     /apps/thingsboard/notifications-manager                        301
+/apps/thingsboard/public-link-cz                     /apps/thingsboard/public-link                                  301
+/apps/thingsboard/public-link-cz/                    /apps/thingsboard/public-link                                  301
+/apps/thingsboard/user-groups                        /apps/thingsboard/users-managing                               301
+/apps/thingsboard/user-groups/                       /apps/thingsboard/users-managing                               301
+/apps/thingsboard/user-roles                         /apps/thingsboard/users-managing                               301
+/apps/thingsboard/user-roles/                        /apps/thingsboard/users-managing                               301
+/apps/thingsboard/users-managing-cz                  /apps/thingsboard/users-managing                               301
+/apps/thingsboard/users-managing-cz/                 /apps/thingsboard/users-managing                               301
+
+# chester: old getting-started page + platform-connectivity stub
+/chester/getting-started                             /chester/first-steps                                           301
+/chester/getting-started/                            /chester/first-steps                                           301
+/chester/platform-connectivity/platform-connectivity   /chester/category/platform-connectivity                      301
+/chester/platform-connectivity/platform-connectivity/  /chester/category/platform-connectivity                      301
+
+# ember: duplicate ChirpStack overview/installation + old initial-configuration
+/ember/chirpstack/index                              /apps/chirpstack/index/                                        301
+/ember/chirpstack/index/                             /apps/chirpstack/index/                                        301
+/ember/chirpstack-v4-installation                    /apps/chirpstack/chirpstack-installation                       301
+/ember/chirpstack-v4-installation/                   /apps/chirpstack/chirpstack-installation                       301
+/ember/initial-configuration                         /ember/first-steps                                             301
+/ember/initial-configuration/                        /ember/first-steps                                             301
+
+# sticker: old ChirpStack stub
+/sticker/chirpstack                                  /sticker/lorawan-network-server/lorawan-chirpstack             301
+/sticker/chirpstack/                                 /sticker/lorawan-network-server/lorawan-chirpstack             301
+
+# tower: empty how-to stubs + discontinued modules (Cloony / Infra Grid / NFC Tag)
+/tower/firmware-sdk/how-to/how-to-rs-485-module      /tower/firmware-sdk/                                           301
+/tower/firmware-sdk/how-to/how-to-rs-485-module/     /tower/firmware-sdk/                                           301
+/tower/firmware-sdk/how-to/how-to-servo-motor        /tower/firmware-sdk/                                           301
+/tower/firmware-sdk/how-to/how-to-servo-motor/       /tower/firmware-sdk/                                           301
+/tower/hardware-modules/about-cloony                 /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-cloony/                /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-infragrid-module       /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-infragrid-module/      /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-micro-bit-module       /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-micro-bit-module/      /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-nfc-tag                /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-nfc-tag/               /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-probe-module           /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-probe-module/          /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-rs-485-module          /tower/hardware-modules/                                       301
+/tower/hardware-modules/about-rs-485-module/         /tower/hardware-modules/                                       301
+
+# tower: empty step-by-step-projects stub -> Hackster (matches the sidebar's external link)
+/tower/step-by-step-projects                         https://www.hackster.io/hardwario/projects                     301
+/tower/step-by-step-projects/                        https://www.hackster.io/hardwario/projects                     301
+
+# --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
+# --- every rule after the first splat toward the 100-dynamic-rule limit and
+# --- fails the deploy beyond it; static rules also only win when listed first.
+
+/chester/supported-sensors/*                         /chester/supported-devices/:splat                              301
+/chester/platform-management/*                       /chester/platform-connectivity/:splat                          301
+/cloud/cloud-v2/*                                    /cloud/:splat                                                  301

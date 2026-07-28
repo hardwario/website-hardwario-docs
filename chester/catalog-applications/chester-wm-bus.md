@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/chester-wm-bus.png')} width={376} height={376} />
+        <Image img={require('./images/chester-wm-bus.png')} width={376} height={376} alt="CHESTER wM-Bus gateway in a white wall-mount enclosure with two external antennas" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -38,7 +38,7 @@ The device has **two antennas** that can be switched during reception to achieve
 
 The device can be configured to do **periodic**, **daily**, **weekly** or **monthly scans**.
 
-The device has a sufficiently low power consumption that it can operate from batteries for many years. A version with an external power supply can also be ordered.
+The device has a sufficiently low power consumption that it can operate from batteries for 7+ years at a daily readout. A version with an external power supply can also be ordered.
 
 CHESTER wM-Bus only receives raw hexadecimal wireless M-BUS packets. The device itself or HARDWARIO Cloud doesn’t decode the wM-Bus sensors data. Each wM-Bus sensor has its own representation of encoded data, or the packets might be encrypted. Decoding of the raw hexadecimal values to meaningful units is up to the customer or integrator.
 
@@ -217,7 +217,7 @@ After completing the configuration, you need to confirm everything.
 
 When configuring over BLE, you need to apply the configuraiton changes with `config save` command.
 
-When configuring over [Cloud config downlink commands](../../cloud/downlink#config), don't add `config save` command, it is applied automatically. Othwerwise the configuration is not
+When configuring over [Cloud config downlink commands](../../cloud/downlink/config), don't add `config save` command, it is applied automatically. Othwerwise the configuration is not
 
 ### Interval and wM-BUS Packets Every 2 Minutes
 
@@ -400,7 +400,7 @@ Each JSON cloud message contains up to 20 wM-Bus packets. If CHESTER is configur
 
 
 
-## Hardwario Cloud – Decryption Keys
+## HARDWARIO Cloud – Decryption Keys
 
 The **transmitted messages from wM-Bus devices are encrypted** to optimize energy consumption during data transmission, which extends the overall battery life.  
 
@@ -409,7 +409,7 @@ The **received data must therefore be decrypted**, which is done using **decrypt
 In this section, we will show **how to add individual decryption keys** into the Cloud using the **Variables** section.  
 
 :::tip
-If you are not sure how to **get started with the Cloud**, follow this tutorial: [**Hardwario Cloud v2**](/cloud/)
+If you are not sure how to **get started with the Cloud**, follow this tutorial: [**HARDWARIO Cloud v2**](/cloud/)
 :::
 
 ### Step-by-Step Instructions

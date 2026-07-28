@@ -36,7 +36,7 @@ https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
 
 ## 1) Collect the required LoRaWAN identifiers & keys
 
-Use the [**HARDWARIO STICKER NFC Configurator**](../nfc-configurator-app/setup.md) to get the required identifiers and keys for your STICKER.
+Use the [**HARDWARIO Manager**](../nfc-configurator-app/setup.md) to get the required identifiers and keys for your STICKER.
 
 You will need:
 
@@ -54,7 +54,7 @@ In ChirpStack v4:
 ![Chirpstack create device profile](images/chripstack-add-profile.png)
 
 Next, configure the following parameters:
-- Name: **Sticker - ABP** (or your chosen identifier for the device)
+- Name: **STICKER - ABP** (or your chosen identifier for the device)
 - MAC Version: **LoRaWAN 1.0.4**
 - Region: **EU866** (or US915 if you are outside the EU)
 - Expected uplink interval: **X** (according to your STICKER firmware configuration)
@@ -80,7 +80,7 @@ This codec also **encodes downlink commands** (via its `encodeDownlink` function
 ## 3) Create an Application in ChirpStack
 
 In ChirpStack, go to **Applications → Add Application** and fill in the fields:
-- Name: **Sticker** (or any name of your choice)
+- Name: **STICKER** (or any name of your choice)
 ![Chirpstack add Application](images/chirpstack-add-appliaction.png)
 
 Save by clicking **Submit**.

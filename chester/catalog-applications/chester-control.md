@@ -71,7 +71,7 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | Use inputs **CH1** to **CH4** and **GND**   | Use **VIN** and **GND** to supply external power.                                            |
 |                                             | Use **CH1** to **CH4** outputs, which supply voltage from **VIN** when the output is enabled |
-| ![](../extension-modules/images/tb-chester-x0.png) | ![](../extension-modules/images/tb-chester-x4.png)                                                  |
+| ![CHESTER-X0 terminal block pinout: VDD, CH1, GND, CH2, CH3, GND, CH4, +V](../extension-modules/images/tb-chester-x0.png) | ![CHESTER-X4 terminal block pinout: GND, CH1, CH2, CH3, CH4, GND, GND, VIN](../extension-modules/images/tb-chester-x4.png)                                                  |
 
 ## Input Parameters and Behavior
 

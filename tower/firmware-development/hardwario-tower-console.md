@@ -12,7 +12,7 @@ This tutorial expects that you have a running Visual Studio Code with our HARDWA
 
 For logging with the **HARDWARIO Code** there is an available tab in the bottom panel.
 
-<Image img={require('./images/hardwario-console-showcase.png')}/>
+<Image img={require('./images/hardwario-console-showcase.png')} alt="TOWER tab highlighted in the VS Code bottom panel, showing NO DEVICE ATTACHED" />
 <br />
 
 In this console, there will be some logs displayed from your connected device.
@@ -31,11 +31,11 @@ There are several buttons on the right side if you open the HARDWARIO TOWER Cons
   <div class="row">
     <div class="col col--3">
       <h4>No device connected</h4>
-      <div><Image img={require('./images/console-commands-disconnected.png')}/></div>
+      <div><Image img={require('./images/console-commands-disconnected.png')} alt="TOWER console toolbar icons available while no device is connected" /></div>
     </div>
     <div class="col col--3">
       <h4>TOWER device connected</h4>
-      <div><Image img={require('./images/console-commands-connected.png')}/></div>
+      <div><Image img={require('./images/console-commands-connected.png')} alt="TOWER console toolbar icons available with a TOWER device connected, including device restart" /></div>
     </div>
   </div>
 </div>

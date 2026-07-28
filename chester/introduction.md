@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # CHESTER
 
-**HARDWARIO CHESTER** is a highly configurable IoT **LPWAN** gateway. Its primary function is to connect as many devices and environments as possible to the Internet, especially from places where there is no standard connection to the power grid and the Internet.
+**HARDWARIO CHESTER** is a highly configurable IoT **LPWAN** platform. Its primary function is to connect as many devices and environments as possible to the Internet, especially from places where there is no standard connection to the power grid and the Internet.
 
 :::tip
 ### To get your CHESTER running, read the [**Quick Start Guide**](first-steps.md).
@@ -61,7 +61,7 @@ TODO Enable these articles
 
 | Feature | Description |
 |---|---|
-| **Multi-Radio LPWAN** | NB-IoT, LTE-M, LoRaWAN, BLE, and GNSS radio technologies in a single gateway. |
+| **Multi-Radio LPWAN** | NB-IoT, LTE-M, LoRaWAN, BLE, and GNSS radio technologies in a single platform. |
 | **Catalog Applications** | Ready-to-use firmware for common sensing and control use cases. |
 | **Extension Modules** | Extensible hardware for connecting sensors and external environments. |
 | **HARDWARIO Cloud** | Managed and monitored through the HARDWARIO Cloud platform. |

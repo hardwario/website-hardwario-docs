@@ -44,7 +44,7 @@ You can use **PuTTY**, which is an application that allows you to connect to a r
 <div class="container">
   <div class="row">
     <div class="col col--6">
-      <div><Image img={require('./images/putty-login.png')} /></div>
+      <div><Image img={require('./images/putty-login.png')} alt="PuTTY configuration with Host Name hub.local, port 22, SSH selected, and the Open button marked" /></div>
     </div>
     <div class="col col--4">
     </div>

@@ -48,6 +48,7 @@ const config = {
 
   // ✅ Přesunuto z kořene: onBrokenMarkdownLinks → markdown.hooks.onBrokenMarkdownLinks
   markdown: {
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
@@ -69,17 +70,19 @@ const config = {
           sidebarPath: require.resolve('./sidebars-chester.js'),
           editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
         },
+        // This property has no blog content. Disabling the preset's default
+        // blog prevents an empty /blog page from being built and indexed.
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {
           // Emit <lastmod> so crawlers can prioritize fresh pages, and keep the
-          // Docusaurus boilerplate (the tutorial /markdown-page and the /search
-          // UI) out of the sitemap.
+          // visitor-only /search UI out of the sitemap.
           lastmod: 'date',
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/search', '/markdown-page'],
+          ignorePatterns: ['/search'],
           filename: 'sitemap.xml',
         },
       }),
@@ -94,9 +97,12 @@ const config = {
         language: ['en'],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
-        docsRouteBasePath: ['chester', 'ember', 'fiber', 'tapper', 'tower', 'cloud', 'gauger', 'glider', 'apps', 'sticker', 'smart-devices'],
+        indexBlog: false,
+        docsDir: ['chester', 'ember', 'fiber', 'fiber-lite', 'tapper', 'tower', 'cloud', 'gauger', 'glider', 'apps', 'sticker', 'smart-devices'],
+        docsRouteBasePath: ['chester', 'ember', 'fiber', 'fiber-lite', 'tapper', 'tower', 'cloud', 'gauger', 'glider', 'apps', 'sticker', 'smart-devices'],
       },
     ],
+    '@docusaurus/theme-mermaid',
   ],
 
   plugins: [
@@ -117,6 +123,16 @@ const config = {
         path: 'fiber',
         routeBasePath: 'fiber',
         sidebarPath: require.resolve('./sidebars-fiber.js'),
+        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
+      }),
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      ({
+        id: 'fiber-lite',
+        path: 'fiber-lite',
+        routeBasePath: 'fiber-lite',
+        sidebarPath: require.resolve('./sidebars-fiber-lite.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
@@ -147,16 +163,6 @@ const config = {
         path: 'cloud',
         routeBasePath: 'cloud',
         sidebarPath: require.resolve('./sidebars-cloud.js'),
-        editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-      }),
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      ({
-        id: 'cloud-new',
-        path: 'cloud-new',
-        routeBasePath: 'cloud-new',
-        sidebarPath: require.resolve('./sidebars-cloud-new.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
       }),
     ],
@@ -228,6 +234,21 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/social-card.jpg',
+      mermaid: {
+        theme: { light: 'base', dark: 'base' },
+        options: {
+          themeVariables: {
+            fontFamily: 'inherit',
+            primaryColor: '#e8f4ff',
+            primaryBorderColor: '#009cfa',
+            primaryTextColor: '#252532',
+            secondaryColor: '#eef0f3',
+            tertiaryColor: '#ffffff',
+            lineColor: '#6b6a6a',
+            edgeLabelBackground: '#eef0f3',
+          },
+        },
+      },
       navbar: {
         logo: {
           alt: 'HARDWARIO Logo',
@@ -237,13 +258,14 @@ const config = {
         items: [
           // 1) PRODUCTS (podmenu)
           {
-            label: 'PRODUCTS',
+            label: 'Products',
             position: 'left',
             items: [
               { to: '/chester/', label: 'CHESTER', activeBaseRegex: `/chester/` },
               { to: '/sticker/', label: 'STICKER', activeBaseRegex: `/sticker/` },
               { to: '/ember/',   label: 'EMBER',   activeBaseRegex: `/ember/` },
               { to: '/fiber/',   label: 'FIBER',   activeBaseRegex: `/fiber/` },
+              { to: '/fiber-lite/', label: 'FIBER Lite', activeBaseRegex: `/fiber-lite/` },
               { to: '/gauger/',  label: 'GAUGER',  activeBaseRegex: `/gauger/` },
               { to: '/glider/',  label: 'GLIDER',  activeBaseRegex: `/glider/` },
               { to: '/tapper/',  label: 'TAPPER',  activeBaseRegex: `/tapper/` },
@@ -252,10 +274,10 @@ const config = {
           },
           // 2) SMART DEVICES (podmenu)
           {
-            label: 'SMART DEVICES',
+            label: 'Smart Devices',
             position: 'left',
             items: [
-              { to: '/smart-devices/milesight', label: 'MILESIGHT', activeBaseRegex: `/smart-devices/milesight` },
+              { to: '/smart-devices/milesight', label: 'Milesight', activeBaseRegex: `/smart-devices/milesight` },
               { to: '/smart-devices/rakwireless', label: 'RAKwireless', activeBaseRegex: `/smart-devices/rakwireless` },
               { to: '/smart-devices/onlogic', label: 'OnLogic', activeBaseRegex: `/smart-devices/onlogic` },
               { to: '/smart-devices/raspberry-pi', label: 'Raspberry Pi', activeBaseRegex: `/smart-devices/raspberry-pi` },
@@ -267,20 +289,20 @@ const config = {
           // 3) CLOUD (bez podmenu)
           {
             to: '/cloud/',
-            label: 'CLOUD',
+            label: 'Cloud',
             position: 'left',
             activeBaseRegex: `/cloud/`,
           },
           // 4) APPS (podmenu)
           {
-            label: 'APPS',
+            label: 'Apps',
             position: 'left',
             items: [
-              // { to: '/apps/ubidots/index', label: 'UBIDOTS', activeBaseRegex: `/apps/ubidots/index` },
-              { to: '/apps/thingsboard/index', label: 'THINGSBOARD', activeBaseRegex: `/apps/thingsboard/index` },
-              { to: '/apps/chirpstack/index', label: 'CHIRPSTACK', activeBaseRegex: `/apps/chirpstack/index` },
-              { to: '/apps/the-things-stack/index', label: 'THE THINGS STACK', activeBaseRegex: `/apps/the-things-stack/index` },
-              { to: '/apps/videos-apps/videos-apps', label: 'VIDEO TUTORIALS', activeBaseRegex: `/apps/videos-apps/videos-apps` },
+              // { to: '/apps/ubidots/index', label: 'Ubidots', activeBaseRegex: `/apps/ubidots/index` },
+              { to: '/apps/thingsboard/index', label: 'ThingsBoard', activeBaseRegex: `/apps/thingsboard/index` },
+              { to: '/apps/chirpstack/index', label: 'ChirpStack', activeBaseRegex: `/apps/chirpstack/index` },
+              { to: '/apps/the-things-stack/index', label: 'The Things Stack', activeBaseRegex: `/apps/the-things-stack/index` },
+              { to: '/apps/videos-apps/videos-apps', label: 'Video Tutorials', activeBaseRegex: `/apps/videos-apps/videos-apps` },
             ],
           },
           {
@@ -295,7 +317,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       zoom: {
-        selector: '.markdown :not(em) > img:not([data-zoomable="false"])',
+        selector: '.markdown :not(em) > img:not([data-zoomable="false"]), .markdown > img:not([data-zoomable="false"])',
         config: {
           background: {
             light: 'rgb(255, 255, 255)',
@@ -309,28 +331,28 @@ const config = {
           {
             title: 'Branches',
             items: [
-              { label: 'HARDWARIO a.s. — Czech Republic', href: 'https://hardwario.com' },
-              { label: 'HARDWARIO LLC — United States', href: 'https://hardwario.com' },
-              { label: 'HARDWARIO LTD — United Kingdom', href: 'https://hardwario.com' },
+              { label: 'HARDWARIO a.s. — Czech Republic', href: 'https://maps.app.goo.gl/uwNsT2fuUmTaoXc48' },
+              { label: 'HARDWARIO LLC — United States', href: 'https://maps.app.goo.gl/YyUsBivFKc6yYVTr8' },
+              { label: 'HARDWARIO LTD — United Kingdom', href: 'https://maps.app.goo.gl/BPVS4T61Ao1h5HVJ9' },
             ],
           },
           {
             title: 'Navigation',
             items: [
-              { label: 'Products', href: 'https://hardwario.com/products/' },
-              { label: 'Solutions', href: 'https://hardwario.com/solutions/' },
-              { label: 'Customers', href: 'https://hardwario.com/customers/' },
-              { label: 'Resources', href: 'https://hardwario.com/resources/' },
-              { label: 'Online Store', href: 'https://hardwario.store/' },
+              { label: 'Products', href: 'https://www.hardwario.com/products/' },
+              { label: 'Solutions', href: 'https://www.hardwario.com/solutions/' },
+              { label: 'Customers', href: 'https://www.hardwario.com/customers/' },
+              { label: 'Resources', href: 'https://www.hardwario.com/resources/' },
+              { label: 'Online Store', href: 'https://www.hardwario.store/' },
             ],
           },
           {
             title: 'Connect',
             items: [
-              { label: 'LinkedIn', href: 'https://www.linkedin.com/company/hardwario' },
-              { label: 'Twitter / X', href: 'https://twitter.com/hardwario_en' },
+              { label: 'LinkedIn', href: 'https://www.linkedin.com/company/13187032' },
+              { label: 'X (Twitter)', href: 'https://x.com/hardwario_en' },
               { label: 'Instagram', href: 'https://www.instagram.com/hardwario/' },
-              { label: 'YouTube', href: 'https://www.youtube.com/@hardwario' },
+              { label: 'YouTube', href: 'https://www.youtube.com/c/hardwario' },
               { label: 'GitHub', href: 'https://github.com/hardwario' },
               { label: 'Forum', href: 'https://forum.hardwario.com' },
             ],
@@ -338,25 +360,25 @@ const config = {
           {
             title: 'Company',
             items: [
-              { label: 'Support', href: 'https://hardwario.com/support/' },
-              { label: 'Contact', href: 'https://hardwario.com/contact/' },
-              { label: 'About', href: 'https://hardwario.com/about/' },
-              { label: 'Partners', href: 'https://hardwario.com/partners/' },
-              { label: 'Investors', href: 'https://hardwario.com/investors/' },
-              { label: 'Newsroom', href: 'https://hardwario.com/newsroom/' },
+              { label: 'Support', href: 'https://www.hardwario.com/support/' },
+              { label: 'Contact', href: 'https://www.hardwario.com/contact/' },
+              { label: 'About', href: 'https://www.hardwario.com/company/' },
+              { label: 'Partners', href: 'https://www.hardwario.com/partners/' },
+              { label: 'Investors', href: 'https://www.hardwario.com/investors/' },
+              { label: 'Blog', href: 'https://www.hardwario.com/blog/' },
             ],
           },
           {
             title: 'Legal',
             items: [
-              { label: 'Privacy Policy', href: 'https://hardwario.com/privacy-policy/' },
-              { label: 'Terms of Service', href: 'https://hardwario.com/terms-of-service/' },
-              { label: 'Cookie Policy', href: 'https://hardwario.com/cookie-policy/' },
-              { label: 'Recycling', href: 'https://hardwario.com/recycling/' },
+              { label: 'Privacy Policy', href: 'https://www.hardwario.com/legal/privacy/' },
+              { label: 'Terms of Service', href: 'https://www.hardwario.com/legal/terms/' },
+              { label: 'Cookie Policy', href: 'https://www.hardwario.com/legal/cookies/' },
+              { label: 'Recycling', href: 'https://www.hardwario.com/downloads/legal/take-back-electrical-equipment-en.pdf' },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} HARDWARIO a.s. | Created by a passionate team from all over the world.`,
+        copyright: `<nav aria-label="Other HARDWARIO websites" style="margin-bottom:8px"><span class="footer-sites-label">Other HARDWARIO websites:</span> <a href="https://www.hardwario.com/" target="_blank" rel="noopener noreferrer">HARDWARIO.com</a> · <a href="https://hardwario.engineering/" target="_blank" rel="noopener noreferrer">Engineering</a> · <a href="https://hardwario.studio/" target="_blank" rel="noopener noreferrer">Studio</a> · <a href="https://hardwario.academy/" target="_blank" rel="noopener noreferrer">Academy</a></nav>Copyright © ${new Date().getFullYear()} HARDWARIO a.s. | Designed and built in Europe.`,
       },
       docs: {
         sidebar: { hideable: true },

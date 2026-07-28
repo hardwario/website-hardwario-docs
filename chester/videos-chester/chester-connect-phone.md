@@ -1,6 +1,6 @@
 ---
 slug: chester-connect-phone
-title: How to connect Chester to your phone
+title: How to connect CHESTER to your phone
 ---
 
 import Image from '@theme/IdealImage';

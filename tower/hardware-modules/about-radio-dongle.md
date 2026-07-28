@@ -7,11 +7,11 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/radio-dongle.png')} /></div>
+      <div><Image img={require('./images/radio-dongle.png')} alt="Radio Dongle, a black USB stick with a red HARDWARIO label" /></div>
     </div>
     <div class="col col--6">
       <p>
-        The Radio Dongle is the main element of the HARDWARIO radio network. This product works as a gateway for the HARWDARIO nodes. It looks like a USB stick. You can plug it into your desktop, Raspberry Pi, or Turris Omnia. Also, you can look at it as an access point for up to 32 HARDWARIO TOWER nodes.
+        The Radio Dongle is the main element of the HARDWARIO radio network. This product works as a gateway for HARDWARIO nodes. It looks like a USB stick. You can plug it into your desktop, Raspberry Pi, or Turris Omnia. Also, you can look at it as an access point for up to 32 HARDWARIO TOWER nodes.
       </p>
       <p>
         This item is fully compatible with the Core Module. It has a 32-bit ARM microcontroller with 192 kB of flash memory and 20 kB of RAM. Besides the integrated sub-GHz radio for the 868/915 MHz band, it also features two security chips - to have enough space for up to 32 HARDWARIO TOWER nodes.

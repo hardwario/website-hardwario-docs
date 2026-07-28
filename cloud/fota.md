@@ -2,28 +2,61 @@
 slug: fota
 title: FOTA
 ---
-import Image from '@theme/IdealImage';
 
-# Firmware Over The Air updates (FOTA)
+# Firmware Over-The-Air Updates (FOTA)
 
-You can also update firmware in your CHESTER.
+You can update a CHESTER's firmware remotely from the Cloud — no physical access
+needed.
 
-First you need to build and deploy a firmware to our cloud using `hardwario chester app fw upload` command. Please see the [**CHESTER Deploy**](/chester/firmware-sdk/build-and-deploy#deploy) and [**Firmware Upload**](/chester/firmware-sdk/build-and-deploy#firmware-upload) chapters.
+## 1. Get the firmware Identifier
 
-After you obtain the unique firmware ID like af637aa1c5b842c18f9b10b070cb0292 (newer ones have hyphens), you can click in the device's detail in the **Firmware** tab on the **+ DOWNLOAD FIRMWARE** button and paste the unique value there.
+Most updates use a **ready-made catalog firmware** — you don't have to build
+anything yourself. Open the CHESTER
+[**Catalog Applications → Application Firmware**](/chester/catalog-applications/catalog-applications#application-firmware)
+table, find your application and variant, and copy its **Identifier** (a value like
+`424ab48d4d9a4b3880bd18faefe4ce0c`).
 
-![](images/fota-download-firmware.png)
+:::info Build your own firmware
+You can build and upload your **own** firmware with the HARDWARIO CLI and use its
+Identifier the same way — see
+[**Build and Deploy**](/chester/firmware-sdk/build-and-deploy) in the CHESTER docs.
+:::
 
-Once the CHESTER boots, send or polls for cloud data, it will start updating.
+## 2. Schedule the download on the device
 
-The update takes around 30 minutes. During this time, the download to the CHESTER will run in the background, so the device will still function normally, measure and send the data.
+Open the device's detail, switch to the **Firmware** tab, and click
+**+ DOWNLOAD FIRMWARE**.
 
-![](images/fota-list.png)
+![The device's Firmware tab with the + DOWNLOAD FIRMWARE button](images/fota-firmware-tab.png)
 
-In the detail, you can see all the steps during the update.
+Paste the firmware **Identifier** and click **ADD**.
 
-![](images/fota-timeline.png)
+![The DOWNLOAD FIRMWARE dialog with the firmware identifier field](images/fota-download-dialog.png)
 
-After the new firmware is downloaded, it is swapped between external SPI FLASH and internal MCU FLASH. This takes up to two minutes and the status LED on the CHESTER will blink with green/yellow/red colors. After swapping the CHESTER connects to the HARDWARIO Cloud with the new firmware. This new firmware is validated as _healthy_ and it is confirmed to the cloud that the update finished sucessfully.
+## 3. The device updates itself
 
-The MCUBoot bootloader has a protection, that in case the new firmware don't works correctly, it is swapped to the old version and device connects with the previous old firmware.
+The next time the CHESTER boots, sends data, or polls the Cloud, it starts
+downloading the new firmware. The download runs **in the background for around 30
+minutes**, so the device keeps measuring and sending data normally.
+
+The **Firmware** list shows each scheduled download with its **state** (Scheduled,
+Downloading, Swapping, Succeeded, Cancelled):
+
+![The firmware list showing each download and its state](images/fota-list.png)
+
+Open an entry to follow the whole update step by step on its timeline:
+
+![A firmware update timeline: Scheduled, Downloading, Swapping, Succeeded](images/fota-timeline.png)
+
+## What happens on the device
+
+Once the new firmware is downloaded, it is swapped between the external SPI flash
+and the internal MCU flash. This takes up to two minutes, during which the status
+LED blinks green/yellow/red. The CHESTER then reconnects to the HARDWARIO Cloud with
+the new firmware, which is validated as _healthy_ and confirmed to the Cloud as a
+successful update.
+
+:::info Automatic rollback
+The MCUboot bootloader is protected: if the new firmware doesn't run correctly, the
+device swaps back to the previous version and reconnects with the old firmware.
+:::

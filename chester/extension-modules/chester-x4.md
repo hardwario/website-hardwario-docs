@@ -11,7 +11,7 @@ This article describes the CHESTER-X4 extension module.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x4-top.png')} /></div>
+      <div><Image img={require('./images/chester-x4-top.png')} alt="Top view of the CHESTER-X4 module with the TPS62175 step-down converter"/></div>
     </div>
     <div class="col col--10">
     </div>
@@ -27,7 +27,7 @@ Each of the four outputs has a resetable PTC fuse protection (femtoSMDC005F). Ea
 
 ## CHESTER Pin Configuration Diagram
 
-![](images/tb-chester-x4.png)
+![Terminal block pins 1–8 mapped to GND, CH1, CH2, CH3, CH4, GND, GND, VIN](images/tb-chester-x4.png)
 
 ## Pin Configuration and Functions
 
@@ -49,8 +49,8 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 - [Schematic (PDF)](schematics/hio-chester-x4-r3.1.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x4-r3.1.html)
 
-![](images/hio-chester-x4-r3.1-1.png)
+![CHESTER-X4 R3.1 schematic: TPS62175 step-down converter, TLA2021 ADC, and four fused P-MOS output switches](images/hio-chester-x4-r3.1-1.png)
 
 ## Module Drawing
 
-![](images/pc-chester-x4.png)
+![CHESTER-X4 placement drawing with slot signals on top and VIN, GND, and CH1–CH4 terminals on bottom](images/pc-chester-x4.png)

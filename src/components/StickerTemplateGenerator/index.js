@@ -27,12 +27,31 @@ const LORAWAN = [
     help: 'Join method: OTAA (over-the-air activation) or ABP (activation by personalization).'},
 ];
 
-// --- Interval (AppConfigMessage.Application, field 6) ---
+// --- Application (AppConfigMessage.Application, field 6): intervals, history, power ---
+// history_sensors is a 32-bit channel bitmask; bit i = enum app_history_sensor i
+// (app/src/app_history.h). This order is fixed by the firmware — do not reorder.
+const HISTORY_CHANNELS = [
+  'Temperature', 'Humidity',
+  'Slot 1 temp', 'Slot 1 hum', 'Slot 2 temp', 'Slot 2 hum',
+  'Slot 3 temp', 'Slot 3 hum', 'Slot 4 temp', 'Slot 4 hum',
+  'Hall left', 'Hall right', 'Input A', 'Input B', 'Motion (PIR)',
+  'Pressure', 'Illuminance', 'Orientation', 'Accel motion',
+];
 const INTERVAL = [
   {n: 2, key: 'interval_sample', type: 'uint32', label: 'Sample interval', unit: 's', def: 60, min: 5, max: 3600, zeroOk: true,
     help: 'How often the device measures. 5 to 3600 s, or 0 to sample once right before each report.'},
-  {n: 3, key: 'interval_report', type: 'uint32', label: 'Report interval', unit: 's', def: 900, min: 60, max: 86400,
+  {n: 3, key: 'interval_report', type: 'uint32', label: 'Report interval', unit: 's', def: 900, min: 60, max: 86400, divider: true,
     help: 'How often the device sends an uplink. 60 to 86400 s (default 900).'},
+  {n: 4, key: 'history_enable', type: 'bool', label: 'Sensor history recording', def: false,
+    help: 'Store-and-forward: record readings to flash for later replay. Default off.'},
+  {n: 5, key: 'history_sensors', type: 'bitmask', channels: HISTORY_CHANNELS, def: 3, divider: true,
+    help: 'Which channels to record when history is enabled (default Temperature + Humidity). A channel whose capability is off is not recorded.'},
+  {n: 6, key: 'battery_level', type: 'uint32', label: 'Low-battery threshold', unit: 'mV', def: 2400,
+    help: 'Voltage below which a low-battery alarm fires, in millivolts (default 2400 = 2.4 V).'},
+  {n: 7, key: 'vendor_reset_allow', type: 'bool', label: 'Allow vendor reset', def: true, divider: true,
+    help: 'Permit the vendor-token "Vendor reset" on this device. Default on.'},
+  {n: 1, key: 'calibration', type: 'bool', label: 'Calibration mode', def: false,
+    help: 'Factory calibration mode. Leave off for normal operation.'},
 ];
 
 // --- Sensors (AppConfigMessage.Sensors, field 7) ---
@@ -68,7 +87,7 @@ const ALARMS_DECODE_FIELDS = [...ALARM_SCALARS, ...ALARM_SLOTS];
 // Groups rendered with the generic field editor (alarms is handled separately).
 const GENERIC_GROUPS = [
   {n: 5, key: 'lorawan', label: 'LoRaWAN basics', fields: LORAWAN},
-  {n: 6, key: 'application', label: 'Interval', fields: INTERVAL},
+  {n: 6, key: 'application', label: 'Application', fields: INTERVAL},
   {n: 7, key: 'sensors', label: 'Sensors', fields: SENSORS},
 ];
 
@@ -218,7 +237,7 @@ function writeField(out, def, value) {
   if (def.type === 'bool') {
     writeKey(out, def.n, 0);
     writeVarint(out, value ? 1 : 0);
-  } else if (def.type === 'uint32' || def.type === 'enum') {
+  } else if (def.type === 'uint32' || def.type === 'enum' || def.type === 'bitmask') {
     writeKey(out, def.n, 0);
     writeVarint(out, parseInt(value, 10) || 0);
   } else if (def.type === 'bytes') {
@@ -368,6 +387,20 @@ function renderValue(f, cell, onChange) {
         onChange={(e) => onChange({value: parseInt(e.target.value, 10)})}>
         {f.options.map(([l, v]) => <option key={v} value={v}>{l}</option>)}
       </select>
+    );
+  }
+  if (f.type === 'bitmask') {
+    const mask = parseInt(cell.value, 10) || 0;
+    return (
+      <div style={{display: 'flex', flexWrap: 'wrap', gap: '0.2rem 0.9rem', maxWidth: '100%'}}>
+        {f.channels.map((label, bit) => (
+          <label key={bit} style={{display: 'inline-flex', alignItems: 'center', gap: '0.3rem', fontWeight: 'normal', fontSize: '0.85em'}}>
+            <input type="checkbox" checked={(mask & (1 << bit)) !== 0}
+              onChange={(e) => onChange({value: (e.target.checked ? (mask | (1 << bit)) : (mask & ~(1 << bit))) >>> 0})} />
+            {label}
+          </label>
+        ))}
+      </div>
     );
   }
   // uint32

@@ -55,6 +55,7 @@ const sidebars = {
           items: [
             'thingsboard/assets',
             'thingsboard/notifications-manager',
+            'thingsboard/email-notification',
             'thingsboard/email-reports',
             'thingsboard/rule-engine',
             'thingsboard/embedding-dashboards',

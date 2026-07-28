@@ -5,7 +5,7 @@ import Image from '@theme/IdealImage';
 
 
 :::info Firmware v1.4.0
-The `config` command and most parameters on this page also work on v1.3.x firmware. **New in the upcoming STICKER firmware v1.4.0**: `config claim-token` (the write-once device claim token) and the LoRaWAN link-supervision keys (`lrw-link-check-interval`, `lrw-link-check-fail-rejoin`).
+The `config` command and most parameters on this page also work on v1.3.x firmware. **New in the upcoming STICKER firmware v1.4.0**: `config claim-token` (the write-once device claim token), the LoRaWAN link-supervision keys (`lrw-link-check-interval`, `lrw-link-check-fail-rejoin`), and sensor-history recording (`config history-enable` / `config history-sensors` — see [**Sensor History**](sensor-history.md)).
 :::
 
 # Configuration (`config`)

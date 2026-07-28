@@ -1,87 +1,92 @@
 ---
+slug: messages
 title: Messages
 ---
-import Image from '@theme/IdealImage';
 
 # Messages
 
-Page to display device messages.
+The **Messages** page shows all messages exchanged between devices and the Cloud. You can access it from two places:
 
-When you click on the **Messages** in the **left menu**, you will see all the messages from all your devices in the space.
+- **Left sidebar → Messages** — shows messages from all devices in the space
+- **Device detail → Messages tab** — shows messages for that specific device only
 
-When you click on the **Message** icon in the **device list** or **device detail**, you will see only messages from that specific device.
+## Message Types
 
-## List
+| Type | Direction | Description |
+|---|---|---|
+| **data** | up | Periodic uplink payload with sensor readings |
+| **session** | up/down | Exchanged during device boot — contains firmware info, config hash, network parameters |
+| **config** | down | Configuration sent to the device (only when config hash changed) |
+| **encoder** | up | JSON key mapping used to compress data messages |
+| **decoder** | up | JSON key mapping used to decompress data messages |
+| **shell** | down | Shell commands scheduled for the device |
+| **firmware** | down | FOTA firmware update packets |
 
-The list of messages shows by default messages from **last 10 days**. You might need to change filter to see more messages.
+## Downlink States
 
-In the list, you might show **message quick view** by clicking on **down arrow** symbol on the right side of the message.
+Downlink messages (direction: `down`) have a delivery state:
 
-You might also open message completely by clicking on the **ⓘ** symbol.
+| State | Meaning |
+|---|---|
+| **pending** | Waiting for the device to wake up and poll the Cloud |
+| **sent** | Delivered to the device |
+| **cancelled** | Cancelled manually — the device will not receive this message |
 
-You can compare two messages by clicking on the **Compare messages** icon on two messages.
+## Filtering
 
-## Types
+By default the list shows messages from the **last 10 days**. Use the filter bar to change:
 
-Messages can be one of the type
+- **Time range** — extend or narrow the period
+- **Type** — filter by message type (data, session, config, …)
+- **Direction** — uplink only, downlink only, or both
 
-- **Data** - contains uplink data
-- **Session** - messages which are exchanged during boot of the device
-- **Config** - configuration messages, the device sends them only when config has changed (hash of config in session down message differs from the device config hash)
-- **Encoder** - encoder JSON keys (used for more efficient of encoding **data** messages)
-- **Decoder** - decoder JSON keys
-- **Shell** - shell commands
-- **Firmware** - firmware update packets
+## Viewing a Message
 
-And one of two directions:
-- **up** - uplink message from device to the Cloud
-- **down** - downlink message from Cloud to the device
-
-You might also filter on message type and direction
-
-Downlink messages have a **down state**
-- **pending** - waiting for device to wake-up and read message
-- **sent** - message was received by a device
-- **cancelled** - message was cancelled in cloud and device will not see it
+- Click the **arrow icon** on a message row for a quick JSON preview inline
+- Click the **ⓘ icon** to open the full message detail
+- Click the **compare icon** on two messages to see a diff of their JSON bodies
 
 ## Basic Dashboard
 
-**This function is for debugging purporses.**
+The dashboard is a **debugging tool** that lets you plot values from messages using a small JavaScript function.
 
-For basic troubleshooting, you might click on the Dashboard icon and use JavaScript function to graph some values from displayed messages.
+Click the **Dashboard** icon above the message list, paste a function that extracts values from each message, and the chart updates in real time.
 
-### Example 1
-```
-//{"Temperature":"red"}
-const messageBody = message.body;
+**Example — plot thermometer temperature:**
+
+<details>
+<summary><b>Show Example</b></summary>
+<p>
+
+```js
 return {
-    date: message.created_at,
-    Temperature: messageBody?.thermometer?.temperature,
+  date: message.created_at,
+  Temperature: message.body?.thermometer?.temperature,
 }
 ```
 
-### Example 2
-```
-//{"Temperature":"red"}
-const messageBody = message.body;
-const points = messageBody?.hygrometer?.temperature?.measurements?.map((measurement) => {
-    return measurement.value;
-});
+</p>
+</details>
+
+**Example — plot all measurements from an aggregated array:**
+
+<details>
+<summary><b>Show Example</b></summary>
+<p>
+
+```js
+const points = message.body?.hygrometer?.temperature?.measurements?.map(m => m.avg);
 return {
-    date: message.created_at,
-    Temperature: messageBody?.hygrometer?.temperature?.measurements[0]?.value,
+  date: message.created_at,
+  Temperature: points,
 }
 ```
 
-### Example 3
-```
-//{"Temperature":"red"}
-const messageBody = message.body;
-const points = messageBody?.hygrometer?.temperature?.measurements?.map((measurement) => {
-    return measurement.value;
-});
-return {
-    date: message.created_at,
-    Temperature: points,
-}
-```
+</p>
+</details>
+
+:::info
+
+For production dashboards and data visualization, use a [Connector](connectors.md) to push data to a dedicated service such as Grafana, Ubidots, or ThingsBoard.
+
+:::

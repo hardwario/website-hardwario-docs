@@ -15,7 +15,7 @@ The **HARDWARIO Manager** mobile app allows you via **Bluetooth Low Energy** to:
 - Update device firmware
 
 :::info
-We also provide a [video tutorial](https://docs.hardwario.com/chester/videos-chester/chester-connect-phone) demonstrating the procedure for pairing the Chester device with a mobile phone using the Hardwario Manager application.
+We also provide a [video tutorial](https://docs.hardwario.com/chester/videos-chester/chester-connect-phone) demonstrating the procedure for pairing the CHESTER device with a mobile phone using the HARDWARIO Manager application.
 :::
 
 ## App Installation
@@ -45,7 +45,7 @@ Choose a device from the list to connect, or use a **QR code** button in the top
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('./images/manager-scan-list.png')} /></div>
+      <div><Image img={require('./images/manager-scan-list.png')} alt="SCAN LIST page listing nearby CHESTER devices with signal strength and Connect buttons" /></div>
     </div>
     <div class="col col--8">
     </div>
@@ -76,7 +76,7 @@ This page shows basic information about hardware version, variant, firmware vers
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('./images/manager-general-info.png')} /></div>
+      <div><Image img={require('./images/manager-general-info.png')} alt="Device information page showing vendor, product name, hardware variant, firmware version, and uptime" /></div>
     </div>
     <div class="col col--8">
     </div>
@@ -86,7 +86,7 @@ This page shows basic information about hardware version, variant, firmware vers
 
 :::tip
 
-If the firmware application is supported by **HARDWARIO MANAGER**, the **OPEN APPLICATION** button appears at the bottom of the information page.
+If the firmware application is supported by **HARDWARIO Manager**, the **OPEN APPLICATION** button appears at the bottom of the information page.
 
 :::
 
@@ -103,7 +103,7 @@ The purpose of the **Command Terminal** is to easily make changes in the setting
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('./images/manager-console.png')} /></div>
+      <div><Image img={require('./images/manager-console.png')} alt="Command Terminal with the info command output and Command history panel, steps 1-4 marked" /></div>
     </div>
     <div class="col col--8">
     </div>
@@ -127,7 +127,7 @@ Firmware Update Interruption: Should the phone disconnect during a firmware swap
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/manager-firmware-update.png')} /></div>
+      <div><Image img={require('./images/manager-firmware-update.png')} alt="Firmware Update screens: SCAN QR CODE, firmware file details, UPDATE FIRMWARE and START OVER, steps 1-4 marked" /></div>
     </div>
     <div class="col col--12">
     </div>
@@ -145,7 +145,7 @@ This screen will let you remotely restart your device.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/manager-restart-device.png')} /></div>
+      <div><Image img={require('./images/manager-restart-device.png')} alt="App menu with Reboot device selected and a confirmation dialog asking to reboot the connected CHESTER" /></div>
     </div>
     <div class="col col--8">
     </div>

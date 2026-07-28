@@ -94,9 +94,9 @@ Connect the RS-485 lines to the energy meter:
 
 ---
 
-#### 2. Using the Chester Terminal
+#### 2. Using the CHESTER Terminal
 
-You can access the Chester terminal using one of the following options:
+You can access the CHESTER Terminal using one of the following options:
 
 - Use the **HARDWARIO Manager app** (desktop or mobile)
 - Use the **Cloud Terminal** in **[HARDWARIO Cloud](https://hardwario.cloud/)**
@@ -104,11 +104,11 @@ You can access the Chester terminal using one of the following options:
 
 ---
 
-#### Modbus Communication Configuration for Chester
+#### Modbus Communication Configuration for CHESTER
 
-Use the following commands to configure communication parameters via the Chester terminal:
+Use the following commands to configure communication parameters via the CHESTER Terminal:
 
-#### Configuration of Chester
+#### Configuration of CHESTER
 
 ```
 app config modbus-baud "9600"
@@ -132,10 +132,10 @@ config save
 The table above shows the default communication settings.
 However, the energy meter may already be configured differently.
 
-Before applying these settings in Chester, verify the actual communication parameters
+Before applying these settings in CHESTER, verify the actual communication parameters
 using the ORNO configuration software.
 
-Make sure the Chester configuration **matches the meter configuration**.
+Make sure the CHESTER configuration **matches the meter configuration**.
 
 :::
 

@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/zenner-caltos-e.png')} width={376} height={376} />
+        <Image img={require('./images/zenner-caltos-e.png')} width={376} height={376} alt="White Zenner caltos E heat cost allocator with small LCD and QR code" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -41,7 +41,7 @@ The address is located **at the very bottom of the device**, as shown in the ima
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/zenner-caltos-e.png')} width={376} height={376} />
+        <Image img={require('./images/zenner-caltos-e.png')} width={376} height={376} alt="caltos E with the 8-digit wM-Bus address outlined at the very bottom of the housing" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -51,17 +51,17 @@ The address is located **at the very bottom of the device**, as shown in the ima
 
 ---
 
-### Mapping the wM-Bus Address to Chester
+### Mapping the wM-Bus Address to CHESTER
 
-The mapping must be carried out using the **Chester terminal**, for example with:  
+The mapping must be carried out using the **CHESTER Terminal**, for example with:  
 
-- [**Hardwario Monitor (Windows)**](https://github.com/hardwario/hio-monitor/releases)
-- [**Hardwario Manager (Android)**](https://play.google.com/store/apps/details?id=com.hardwario.manager)
+- [**HARDWARIO Monitor (Windows)**](https://github.com/hardwario/hio-monitor/releases)
+- [**HARDWARIO Manager (Android)**](https://play.google.com/store/apps/details?id=com.hardwario.manager)
 - [**Google Chrome Terminal**](https://terminal.hardwario.com/)
 
 ---
 
-### Managing and Adding wM-Bus Device Addresses in Chester
+### Managing and Adding wM-Bus Device Addresses in CHESTER
 
 Here you can manage the list of **wM-Bus addresses** (**add/remove**), adjust scan settings, and review example configurations for typical setups.  
 
@@ -78,5 +78,5 @@ The **transmitted messages are encrypted** to optimize energy consumption during
 The **received data must therefore be decrypted**, which is done using **decryption keys**.  
 To achieve this, there are two options:
 
-- [**Hardwario Cloud**](/chester/catalog-applications/chester-wm-bus#hardwario-cloud--decryption-keys) – tutorial on how to enter and manage decryption keys  
+- [**HARDWARIO Cloud**](/chester/catalog-applications/chester-wm-bus#hardwario-cloud--decryption-keys) – tutorial on how to enter and manage decryption keys  
 - [**Decryption page**](https://wmbusmeters.org/) – online tool for manual data decryption and analysis  

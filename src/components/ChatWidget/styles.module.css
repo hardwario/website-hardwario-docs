@@ -30,10 +30,22 @@
   transform: scale(1.05);
 }
 
+/* The mark is 48 x 60, so height is what governs how big it looks. 34px keeps
+   it legible at 52px without crowding the circle's edge. */
+.fabIcon {
+  height: 34px;
+  width: auto;
+  display: block;
+  pointer-events: none;
+}
+
 .panel {
   width: 360px;
   height: 500px;
-  background: var(--ifm-background-color);
+  /* NOT --ifm-background-color: Infima defines that as `transparent` in the light
+     theme, which made the panel see-through. --ifm-background-surface-color is
+     the opaque floating-surface colour (#fff light, #242526 dark). */
+  background-color: var(--ifm-background-surface-color, #fff);
   border: 1px solid var(--ifm-toc-border-color);
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.15);
@@ -148,7 +160,10 @@
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 14px;
-  background: var(--ifm-background-color);
+  /* NOT --ifm-background-color: Infima defines that as `transparent` in the light
+     theme, which made the panel see-through. --ifm-background-surface-color is
+     the opaque floating-surface colour (#fff light, #242526 dark). */
+  background-color: var(--ifm-background-surface-color, #fff);
   color: var(--ifm-font-color-base);
   outline: none;
 }

@@ -40,8 +40,13 @@
 }
 
 .panel {
-  width: 360px;
-  height: 500px;
+  /* The panel is anchored bottom-right, so a fixed 360px hangs off the left edge
+     on any viewport narrower than 360 + 2*24. Clamp against the viewport instead.
+     The vh line is a fallback for browsers without dvh; dvh is what actually
+     accounts for mobile browser chrome appearing and disappearing. */
+  width: min(360px, calc(100vw - 32px));
+  height: min(500px, calc(100vh - 120px));
+  height: min(500px, calc(100dvh - 120px));
   /* NOT --ifm-background-color: Infima defines that as `transparent` in the light
      theme, which made the panel see-through. --ifm-background-surface-color is
      the opaque floating-surface colour (#fff light, #242526 dark). */
@@ -94,6 +99,16 @@
   font-size: 16px;
   padding: 0;
   line-height: 1;
+  /* Without this the X gets squashed by the title on a narrow panel. */
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+/* Truncate rather than push the close button off the edge. */
+.headerTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .messages {
@@ -210,4 +225,42 @@
 .inputRow button:disabled {
   opacity: 0.5;
   cursor: default;
+}
+
+/* Phones. The wrapper gets both left and right insets so it spans the screen and
+   the panel can simply be 100% wide; align-items: flex-end still parks the button
+   on the right. Height leaves room for the button (52) + gap + inset, plus a
+   little breathing space at the top. */
+@media (max-width: 480px) {
+  .wrapper {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    gap: 10px;
+  }
+
+  .panel {
+    width: 100%;
+    height: min(560px, calc(100vh - 96px));
+    height: min(560px, calc(100dvh - 96px));
+  }
+
+  .messages {
+    padding: 12px;
+  }
+
+  .inputRow {
+    padding: 10px;
+  }
+}
+
+/* Very narrow phones: keep the title on one line next to the close button. */
+@media (max-width: 360px) {
+  .header {
+    padding: 12px 12px;
+  }
+
+  .headerTitle {
+    font-size: 13px;
+  }
 }

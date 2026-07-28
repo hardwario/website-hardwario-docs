@@ -14,6 +14,12 @@ const config = {
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
 
+  customFields: {
+    // Backend for the docs chat widget. Override at build time with
+    // CHAT_API_URL so moving the backend never needs a code change.
+    chatApiUrl: process.env.CHAT_API_URL || 'https://docs-chatbot-beta.vercel.app/api/chat',
+  },
+
   // Organization structured data (schema.org JSON-LD) — consistent across HARDWARIO sites
   headTags: [
     {

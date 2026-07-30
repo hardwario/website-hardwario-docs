@@ -32,13 +32,6 @@ const OurProducts = [
     description: 'Industrial temperature monitoring with 1-Wire and 868/915 MHz wireless sensors; Ethernet, WiFi, or optional LTE.',
   },
   {
-    title: 'FIBER Lite',
-    subtitle: 'LoRaWAN Test Appliance',
-    link: '/fiber-lite/',
-    src: '/img/raspberry-pi.png', // TODO: replace with a real FIBER Lite product photo once available
-    description: 'Raspberry Pi 5 based all-in-one appliance for quickly bringing up and testing LoRaWAN devices.',
-  },
-  {
     title: 'GAUGER',
     subtitle: 'Wi-Fi/LAN Input Module',
     link: '/gauger/',

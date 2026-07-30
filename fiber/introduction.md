@@ -1,11 +1,24 @@
 ---
 slug: /
-sidebar_position: 1
 title: Introduction
 ---
 import Image from '@theme/IdealImage';
 
 # FIBER
+
+:::info Have a FIBER Lite?
+
+**FIBER Lite** is a Raspberry Pi 5 based bench-test variant of FIBER. Everything on this page
+describes the industrial CM4-based FIBER, but setup is two steps either way:
+
+1. Go through [**Installation**](installation) (or the [**Quick Start Guide**](first-steps))
+   below — it's the **same core procedure for both variants**, with tabs at the few points where
+   it diverges.
+1. Then continue with [**FIBER Lite**](fiber-lite/introduction) in the sidebar for its
+   additional, Lite-only services (InfluxDB, Grafana, the branded Dashboard) — you're not done
+   until you've done both.
+
+:::
 
 **FIBER** is a robust industrial IoT device built on an **embedded Linux** platform and designed for **Industrial IoT applications**. It integrates both **wireless 868/915 MHz radio** and **8-channel 1-Wire sensor/actuator** hub.
 
@@ -16,7 +29,7 @@ Thanks to its modular and open architecture, **FIBER** supports standard **Raspb
 ## Quick Links
 
 * [**Installation**](installation) – Bootstrap and configure the Linux system on FIBER.
-* [**Hardware Description**](hardware-description) – Processing platform, sensor interfaces, connectivity, and full technical specifications.
+* [**Hardware Description**](category/hardware-description) – Processing platform, sensor interfaces, connectivity, and full technical specifications.
 * [**Changelog**](changelog) – Latest firmware and platform changes.
 
 ## Typical Use Cases

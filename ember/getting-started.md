@@ -20,8 +20,10 @@ EMBER is an industrial **LoRaWAN gateway (IoT Hotspot)** based on **MikroTik RBM
 Hardware description: https://docs.hardwario.com/ember/hardware-description/
 
 #### You will need
-- EMBER gateway (Hotspot)
-- **LoRaWAN antenna** (required)
+- EMBER gateway (Hotspot) — its **LoRaWAN and LTE antennas are already fitted inside** and connected from
+  the factory, so there is no antenna to attach
+- *(Optional)* an **external LoRaWAN antenna** with an N-type connector, if the internal one will not give
+  you the range you need — ordered separately, and fitting it means opening the enclosure
 - Power source:
   - 24 V DC adapter / 24 V DC power supply, or
   - 24 V DC passive PoE via the **WAN** port
@@ -38,11 +40,26 @@ Hardware description: https://docs.hardwario.com/ember/hardware-description/
 
 ## Step 1: Set up your EMBER
 
-#### 1.1 Attach antennas (important)
-- **Attach the LoRaWAN antenna before powering on.**
-- If your unit includes LTE, it may use **two LTE antennas** (internal/external depending on configuration).
+#### 1.1 Antennas — already connected
 
-More details: https://docs.hardwario.com/ember/hardware-description/#antennas
+EMBER arrives with **two antennas fitted inside the enclosure** — one for **LoRaWAN**, one for **LTE** —
+both connected at the factory. **There is nothing to attach**, and the radio is never left without an
+antenna, so you can power the gateway straight up.
+
+An **external** antenna is optional. Because the internal antenna occupies the card's u.FL connector,
+fitting one means opening the enclosure and moving that plug onto the **LRW** connector's pigtail — see
+[Switching to an external antenna](hardware-description.md#switching-to-an-external-antenna).
+
+Whichever antenna is in use, set **`antenna-gain`** in RouterOS to that antenna's gain. Left at the wrong
+value the gateway radiates outside the legal EIRP limit — see
+[Antenna Gain & Output Power](mikrotik/antenna-gain.md).
+
+:::caution If you open the enclosure
+Never power the gateway with the LoRa card's u.FL connector left empty — transmitting into an open
+connector can damage the card. Reseal the enclosure carefully; its **IP67** rating depends on it.
+:::
+
+More details: [Hardware Description → Antennas](hardware-description.md#antennas)
 
 #### 1.2 Power the gateway
 EMBER can be powered by:
@@ -175,10 +192,14 @@ After reconnecting following the reboot, paste this script in the terminal to co
 ```
 
 **What this script does:**
-- Sets the LoRa antenna to use the uFL connector
 - Removes any preconfigured LoRaWAN Network Server (LNS) entries
 
 Press **Enter** to execute.
+
+The LoRa interface itself — including the `antenna=uFL` selection and the `antenna-gain` value for the
+antenna you attached — is set together with your backend. See
+[Hotspot Configuration → LoRaWAN](hotspot-configuration.md#lorawan) and
+[Antenna Gain & Output Power](mikrotik/antenna-gain.md).
 
 ### 3.5 Upgrade RouterBOARD
 In the left panel, go to **System → RouterBOARD** and click **Upgrade**. A new window will open, click **OK**.
@@ -258,7 +279,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 
 ## Step 5: Summary checklist
 
-- LoRaWAN antenna attached (required)
+- An antenna is connected to the LoRa card — the internal one from the factory, or an external one on **LRW**
 - Power connected (24 V DC or 24 V passive PoE via WAN)
 - Outdoor installation: connectors facing down
 - PC connected to **WAN**, receives DHCP lease, can reach `172.31.255.1` (updated from default)
@@ -267,6 +288,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 - RouterOS updated to latest version
 - IoT package installed
 - LoRa interface configured (antenna set to uFL)
+- `antenna-gain` set to the gain of the attached antenna ([why this matters](mikrotik/antenna-gain.md))
 - Bootloader updated
 - Gateway is configured to your backend (HARDWARIO managed / ChirpStack / TTS / other)
 - In the LoRaWAN server UI, gateway status shows **Last seen / connected**

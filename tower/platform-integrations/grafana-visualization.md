@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 :::info
 
-This tutorial is made for the [**Air Quality Monitor**](https://www.hardwario.store/indoor-air-quality-tester/) connected to the **Raspberry Pi** with the Hub installed on it.
+This tutorial is made for the [**Air Quality Monitor**](https://www.hardwario.store/p/clime-xl-set) connected to the **Raspberry Pi** with the Hub installed on it.
 
 You can use our [**Pre-Installed Image**](../server-raspberry-pi/installation-os.md) or your [**own Raspberry where you will install the Hub**](../server-raspberry-pi/installation-clean-os.md)
 

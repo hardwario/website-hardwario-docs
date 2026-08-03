@@ -108,8 +108,10 @@ documentation: [LoRa General Properties](https://help.mikrotik.com/docs/spaces/R
 /lora set [find] antenna-gain=2
 ```
 
-> On newer RouterOS builds the menu may be `/iot lora` instead of `/lora`. If `/lora`
-> is not found, use `/iot lora set [find] antenna-gain=2`.
+:::info
+On newer RouterOS builds the menu may be `/iot lora` instead of `/lora`. If `/lora` is not found, use
+`/iot lora set [find] antenna-gain=2`.
+:::
 
 ---
 
@@ -120,6 +122,10 @@ documentation: [LoRa General Properties](https://help.mikrotik.com/docs/spaces/R
 | wAP LR8G kit built-in antenna (868 MHz) | 2 dBi | `2` |
 | MikroTik omni LoRa antenna kit (`TOF-0809-...`) | 6.5 dBi | `6.5` |
 | Other external antenna | see its datasheet | antenna dBi − cable loss |
+
+On **EMBER** the value has to match whichever antenna is actually connected to the LoRa card — the
+internal LoRaWAN antenna it ships with, or an external antenna on the **LRW** connector (its gain minus the
+loss of the cable between them). Update the setting whenever you switch between the two.
 
 If the antenna gain is unknown, err on the **higher** side — the gateway will back off
 its power further and stay within legal limits.
@@ -149,10 +155,10 @@ firmware or ADR from the server), not the gateway.
 To increase real-world range, use a better antenna and/or shorter, lower-loss cable —
 then update `antenna-gain` accordingly. The setting itself never adds power.
 
-:::caution wAP LR8G kit — connect the internal antenna first
-On the wAP LR8G kit the internal antenna is **not connected from the factory**. Attach
-it to the card's **RFIO** u.FL connector (with the device powered off) before use, or
-the card cannot transmit or receive over the antenna at all.
+:::caution MikroTik wAP LR8G kit — connect the internal antenna first
+On MikroTik's standalone **wAP LR8G kit**, the internal antenna is **not connected from the factory**.
+Attach it to the card's **RFIO** u.FL connector (with the device powered off) before use, or the card
+cannot transmit or receive over the antenna at all.
 :::
 
 ---

@@ -22,6 +22,9 @@ const sidebars = {
           'installation/mqtt-forwarder',
           'installation/register-device',
           'installation/node-red',
+          'installation/influxdb',
+          'installation/grafana',
+          'installation/dashboard',
           'installation/firewall',
           'installation/ports-and-credentials',
         ],
@@ -31,11 +34,6 @@ const sidebars = {
         label: 'FIBER Lite',
         items: [
           'fiber-lite/introduction',
-          'fiber-lite/docker',
-          'fiber-lite/node-red-hardening',
-          'fiber-lite/influxdb',
-          'fiber-lite/grafana',
-          'fiber-lite/dashboard',
           {
             type: 'category',
             label: 'Troubleshooting',
@@ -46,12 +44,23 @@ const sidebars = {
             items: [
               'fiber-lite/troubleshooting/ssh-connection-refused',
               'fiber-lite/troubleshooting/ssh-permission-denied',
-              'fiber-lite/troubleshooting/docker-compose-plugin-not-found',
-              'fiber-lite/troubleshooting/nodered-installer-404',
               'fiber-lite/troubleshooting/rtc-remoteio-error',
               'fiber-lite/troubleshooting/concentratord-spi-not-detected',
             ],
           },
+        ],
+      },
+      {
+        type: 'category',
+        label: 'FIBER Hardware Guides',
+        link: {
+          type: 'generated-index',
+          description: 'Guides for the hardware only FIBER (CM4) has — the display and 1-Wire sensors.',
+        },
+        collapsed: true,
+        items: [
+          'fiber-hardware-guides/one-wire-node-red-grafana',
+          'fiber-hardware-guides/using-the-display',
         ],
       },
       {

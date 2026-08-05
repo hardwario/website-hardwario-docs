@@ -52,6 +52,9 @@ Then, in order (see [Installation](installation) for the full commands and confi
 1. [Install ChirpStack Concentratord](installation/concentratord) — USB-connected RAK5146
 1. [Install ChirpStack MQTT Forwarder](installation/mqtt-forwarder)
 1. [Install Node-RED](installation/node-red)
+1. [Install InfluxDB](installation/influxdb)
+1. [Install Grafana](installation/grafana)
+1. [Dashboard](installation/dashboard)
 
 ---
 
@@ -82,6 +85,9 @@ registration.
 |---|---|
 | ChirpStack | `http://[TARGET IP ADDRESS]:8080/` |
 | Node-RED | `http://[TARGET IP ADDRESS]:1880/` |
+| InfluxDB | `http://[TARGET IP ADDRESS]:8086/` |
+| Grafana | `http://[TARGET IP ADDRESS]:3000/` |
+| Dashboard | `http://[TARGET IP ADDRESS]/` |
 
 :::danger
 
@@ -99,9 +105,9 @@ Your FIBER is flashed, running ChirpStack, and receiving real LoRaWAN uplinks.
 
 ## FIBER Lite Variant
 
-**FIBER Lite** (Raspberry Pi 5) runs the same core stack, but with a different flashing
-procedure and a larger, pre-integrated software stack on top. Only what's different from the
-steps above:
+**FIBER Lite** (Raspberry Pi 5) runs the exact same software stack as FIBER — ChirpStack,
+Node-RED, InfluxDB, Grafana, and the Dashboard are all installed the same way, no extra steps.
+The only differences are hardware:
 
 - **Flashing**: no BOOT jumper, no `rpiboot`, no bootloader activation at all — flash a plain
   microSD card directly with Raspberry Pi Imager and insert it. See
@@ -112,12 +118,9 @@ steps above:
   different config and install procedure (see the FIBER Lite tab in
   [Install ChirpStack Concentratord](installation/concentratord)),
   currently **not yet verified on real hardware**.
-- **Additional services**: install [Docker](fiber-lite/docker), then continue with
-  [InfluxDB](fiber-lite/influxdb), [Grafana](fiber-lite/grafana), and the branded
-  [Dashboard](fiber-lite/dashboard) under **FIBER Lite** in the sidebar — its complete pipeline
-  beyond what FIBER ships by default. See [Ports & Default Credentials](installation/ports-and-credentials)
-  for the full list of services and ports once everything is running.
-- Full FIBER Lite specifics (BOM, hardware differences): see
-  [FIBER Lite Introduction](fiber-lite/introduction) in the sidebar.
+- FIBER Lite has no display or 1-Wire sensors — full FIBER Lite specifics (BOM, hardware
+  differences): see [FIBER Lite Introduction](fiber-lite/introduction) in the sidebar. Have a
+  classic FIBER instead? See [**FIBER Hardware Guides**](category/fiber-hardware-guides) in the
+  sidebar for what to do with its display and 1-Wire sensors.
 
 If anything doesn't behave as expected, see **Troubleshooting** under FIBER Lite in the sidebar.

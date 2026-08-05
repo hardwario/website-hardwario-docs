@@ -4,9 +4,9 @@ title: Dashboard
 
 # Dashboard
 
-Part of FIBER Lite's complete pre-integrated software stack. Not part of a stock FIBER install.
+Available on both FIBER and FIBER Lite.
 
-FIBER Lite ships a landing page on port 80 with tiles linking to every service, live system
+FIBER ships a landing page on port 80 with tiles linking to every service, live system
 metrics, and an SSH quick-copy button — styled to the HARDWARIO brand (colors, typography, logo).
 It is a self-contained static page with a small Python backend for live stats — no external
 framework or Docker container required for the page itself. The logo and font below are fetched
@@ -16,7 +16,7 @@ but not required.
 1. Create the dashboard directory:
 
    ```sh
-   mkdir -p ~/fiber-lite-dashboard
+   mkdir -p ~/fiber-dashboard
    ```
 
 1. Write `index.html` — this is the dashboard's web page (layout, styling, and the little script
@@ -29,13 +29,13 @@ but not required.
    <p>
 
    ```sh
-   cat << 'EOF' > ~/fiber-lite-dashboard/index.html
+   cat << 'EOF' > ~/fiber-dashboard/index.html
    <!DOCTYPE html>
    <html lang="en">
    <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>FIBER Lite</title>
+   <title>FIBER</title>
    <style>
    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -127,8 +127,8 @@ but not required.
          <div class="hp-brand">
            <img src="https://www.hardwario.com/hw-mark-pos.svg" alt="HARDWARIO">
            <div>
-             <div class="hp-title">FIBER Lite</div>
-             <div class="hp-glabel" style="margin-top:3px;">Raspberry Pi 5</div>
+             <div class="hp-title">FIBER</div>
+             <div class="hp-glabel" style="margin-top:3px;">LoRaWAN Gateway</div>
            </div>
          </div>
          <div class="hp-head-right">
@@ -152,7 +152,7 @@ but not required.
          <div class="hp-sys-head">
            <div class="hp-sys-title">
              <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"></path></svg></span>
-             <span class="label">Raspberry Pi 5</span>
+             <span class="label">System</span>
            </div>
            <div class="hp-sys-up"><span class="hp-dot"></span><span class="uptime hp-mono" id="uptime">UP --</span></div>
          </div>
@@ -187,7 +187,7 @@ but not required.
          <div class="hp-card hp-ssh hp-access-card">
            <div class="hp-access-left">
              <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m4 17 6-6-6-6M12 19h8"></path></svg></span>
-             <div><div class="hp-access-name">SSH</div><div class="hp-access-cmd hp-mono" id="sshCmd">ssh fiberlite@TARGET_IP</div></div>
+             <div><div class="hp-access-name">SSH</div><div class="hp-access-cmd hp-mono" id="sshCmd">ssh SSH_USER_PLACEHOLDER@TARGET_IP</div></div>
            </div>
            <button class="hp-copy-btn" id="copyBtn">COPY</button>
          </div>
@@ -206,14 +206,14 @@ but not required.
 
      <footer class="hp-foot">
        <img id="footerLogo" src="https://www.hardwario.com/logo-dark.svg" alt="HARDWARIO">
-       <span class="tag">FIBER Lite · Engineered in the heart of Europe</span>
+       <span class="tag">FIBER · Engineered in the heart of Europe</span>
      </footer>
    </div>
 
    <script>
    (function () {
-     var THEME_KEY = 'fiber-lite-theme';
-     var sshTarget = 'fiberlite@' + window.location.hostname;
+     var THEME_KEY = 'fiber-theme';
+     var sshTarget = 'SSH_USER_PLACEHOLDER@' + window.location.hostname;
      document.getElementById('sshCmd').textContent = 'ssh ' + sshTarget;
      document.querySelectorAll('a[href*="TARGET_IP"]').forEach(function (a) {
        a.href = a.href.replace('TARGET_IP', window.location.hostname);
@@ -286,6 +286,13 @@ but not required.
    </p>
    </details>
 
+1. Fill in your actual SSH username — the page can't detect it from the browser, so bake it in
+   now with the username you're currently logged in as:
+
+   ```sh
+   sed -i "s/SSH_USER_PLACEHOLDER/$USER/g" ~/fiber-dashboard/index.html
+   ```
+
    :::tip
 
    The service tiles and SSH command use `window.location.hostname` to fill in the target IP
@@ -304,7 +311,7 @@ but not required.
    <p>
 
    ```sh
-   cat << 'EOF' > ~/fiber-lite-dashboard/serve.py
+   cat << 'EOF' > ~/fiber-dashboard/serve.py
    #!/usr/bin/env python3
    import http.server
    import json
@@ -408,15 +415,15 @@ but not required.
 1. Run it as a systemd service (root is required to bind port 80 without `setcap`/`authbind`):
 
    ```sh
-   cat << EOF | sudo tee /etc/systemd/system/fiber-lite-dashboard.service > /dev/null
+   cat << EOF | sudo tee /etc/systemd/system/fiber-dashboard.service > /dev/null
    [Unit]
-   Description=FIBER Lite Dashboard
+   Description=FIBER Dashboard
    After=network.target
 
    [Service]
    Type=simple
-   WorkingDirectory=$HOME/fiber-lite-dashboard
-   ExecStart=/usr/bin/python3 $HOME/fiber-lite-dashboard/serve.py
+   WorkingDirectory=$HOME/fiber-dashboard
+   ExecStart=/usr/bin/python3 $HOME/fiber-dashboard/serve.py
    Restart=on-failure
    RestartSec=2
 
@@ -425,7 +432,7 @@ but not required.
    EOF
 
    sudo systemctl daemon-reload
-   sudo systemctl enable --now fiber-lite-dashboard.service
+   sudo systemctl enable --now fiber-dashboard.service
    ```
 
 1. Now, you can access the dashboard at this address: `http://[TARGET IP ADDRESS]/`

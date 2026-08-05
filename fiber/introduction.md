@@ -9,14 +9,11 @@ import Image from '@theme/IdealImage';
 :::info Have a FIBER Lite?
 
 **FIBER Lite** is a Raspberry Pi 5 based bench-test variant of FIBER. Everything on this page
-describes the industrial CM4-based FIBER, but setup is two steps either way:
-
-1. Go through [**Installation**](installation) (or the [**Quick Start Guide**](first-steps))
-   below — it's the **same core procedure for both variants**, with tabs at the few points where
-   it diverges.
-1. Then continue with [**FIBER Lite**](fiber-lite/introduction) in the sidebar for its
-   additional, Lite-only services (InfluxDB, Grafana, the branded Dashboard) — you're not done
-   until you've done both.
+describes the industrial CM4-based FIBER, but [**Installation**](installation) (or the
+[**Quick Start Guide**](first-steps)) below is the **same procedure for both variants**, with
+tabs at the few points where it diverges — including the full ChirpStack, Node-RED, InfluxDB,
+Grafana, and Dashboard stack. The only real differences are hardware (no display, no 1-Wire
+sensors on FIBER Lite) — see [**FIBER Lite**](fiber-lite/introduction) in the sidebar.
 
 :::
 

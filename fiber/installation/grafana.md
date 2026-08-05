@@ -4,7 +4,7 @@ title: Install Grafana
 
 # Install Grafana
 
-Part of FIBER Lite's complete pre-integrated software stack. Not part of a stock FIBER install.
+Available on both FIBER and FIBER Lite.
 
 1. Install prerequisites and add the **Grafana** repository:
 
@@ -38,9 +38,9 @@ Part of FIBER Lite's complete pre-integrated software stack. Not part of a stock
    curl -X POST http://localhost:3000/api/datasources \
      -u admin:<new password> -H "Content-Type: application/json" \
      -d '{
-       "name": "InfluxDB fiber-lite", "type": "influxdb", "access": "proxy",
+       "name": "InfluxDB fiber", "type": "influxdb", "access": "proxy",
        "url": "http://localhost:8086",
-       "jsonData": {"version": "Flux", "organization": "fiber-lite", "defaultBucket": "fiber-lite", "tlsSkipVerify": true},
+       "jsonData": {"version": "Flux", "organization": "fiber", "defaultBucket": "fiber", "tlsSkipVerify": true},
        "secureJsonData": {"token": "<influxdb token from the InfluxDB setup step>"}
      }'
    ```

@@ -1,7 +1,6 @@
 ---
 title: Introduction
 ---
-import Image from '@theme/IdealImage';
 
 # FIBER Lite
 
@@ -10,14 +9,14 @@ and testing **LoRaWAN** devices — in particular **HARDWARIO STICKER** and **HA
 CHESTER** — bench-side, without needing to stand up a separate LoRaWAN network server, database,
 and visualization stack for every test.
 
-Setting it up is two steps: first [**Installation**](/fiber/installation) (or the
-[**Quick Start Guide**](/fiber/first-steps)) — the **same core procedure as FIBER**, with tabs at
-the few points where it diverges — then the additional, Lite-only pages further down in this
-**FIBER Lite** section of the sidebar (Install Docker, InfluxDB, Grafana, and the Dashboard).
-You're not done until you've done both. See [**Introduction**](/fiber/) and
-[**Hardware Description**](/fiber/category/hardware-description) for everything FIBER already
-covers — general setup, HOST/TARGET terminology, the ChirpStack/Node-RED software it already
-runs.
+Setup is the **same procedure as FIBER** — see [**Installation**](/fiber/installation) (or the
+[**Quick Start Guide**](/fiber/first-steps)), with tabs at the few points where it genuinely
+diverges. There's no separate FIBER Lite install flow: ChirpStack, Node-RED, InfluxDB, Grafana,
+and the branded Dashboard are all part of the one shared stack, available on both variants. This
+page (and the Troubleshooting section below it) covers only what's actually **different** about
+the Lite variant — which comes down to hardware. See [**Introduction**](/fiber/) and
+[**Hardware Description**](/fiber/category/hardware-description) for everything else FIBER
+already covers.
 
 ## What's Different
 
@@ -31,23 +30,9 @@ runs.
 | 1-Wire hub, LCD, buzzer | Present | Not present |
 | BLE, LTE | Present | Not present (LAN or Wi-Fi only) |
 | LoRaWAN concentrator | RAK5146, **USB**-connected | RAK5146 on a RAK2287 HAT, **SPI**-connected (not yet verified on real hardware) |
-| Software stack | ChirpStack + Node-RED | ChirpStack + Node-RED **plus** InfluxDB, Grafana, and a branded dashboard — a complete pre-integrated pipeline |
 
-## Data Flow
-
-FIBER Lite's additional software stack is real, FIBER-Lite-only content — the full pipeline it
-adds on top of FIBER's own ChirpStack/Node-RED install:
-
-<div style={{ width: '600px', margin: '0 auto' }}>
-
-<Image img={require('./images/data-flow.png')} />
-
-</div>
-
-ChirpStack, Node-RED, InfluxDB, and Grafana all run **on the Raspberry Pi 5 itself** — no
-separate servers or cloud services required. A landing page on port 80 links to every service
-and shows live system stats, so the device is usable without memorizing ports or
-IP-to-service mappings.
+See [Data Flow](/fiber/installation#data-flow) on the Installation landing page for how the
+shared software stack fits together — it's identical on both variants.
 
 ## Bill of Materials (FIBER Lite specific)
 

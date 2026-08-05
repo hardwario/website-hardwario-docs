@@ -6,6 +6,14 @@ const sidebars = {
     'introduction',
     {
       type: 'category',
+      label: 'HARDWARIO Manager',
+      collapsed: true,
+      items: [
+        'hardwario-manager/first-steps',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Ubidots',
       link: {
         type: 'doc',

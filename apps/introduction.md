@@ -12,6 +12,12 @@ These applications visualize and process data from HARDWARIO devices. The table 
 
 ---
 
+## HARDWARIO Manager
+
+**[HARDWARIO Manager](/apps/hardwario-manager/first-steps)** is the HARDWARIO mobile app for setting devices up in the field over NFC or Bluetooth Low Energy — the step before their data reaches any of the platforms below.
+
+---
+
 | Platform | Web | Difficulty | Description |
 |----------|-----|------------|-------------|
 | **[Ubidots](/apps/ubidots/index)** | [Website](https://ubidots.hardwario.com/) | Easy | Cloud IoT platform with simple dashboards, alerts, and fast setup. |

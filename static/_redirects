@@ -276,6 +276,29 @@
 /tower/step-by-step-projects                         https://www.hackster.io/hardwario/projects                     301
 /tower/step-by-step-projects/                        https://www.hackster.io/hardwario/projects                     301
 
+# --- Search Console 404 drilldown (2026-08-05). Sections moved under
+# --- /smart-devices/, supported-sensors renamed to supported-devices, and one
+# --- malformed path with two doc slugs concatenated. The supported-sensors
+# --- splat below rewrote to a page that does not exist, so this static rule
+# --- has to win over it. Every target verified 200.
+/chester/catalog-applications                              /chester/catalog-applications/catalog-applications       301
+/chester/catalog-applications/                             /chester/catalog-applications/catalog-applications       301
+/chester/supported-sensors/supported-sensors               /chester/supported-devices/supported-devices             301
+/chester/supported-sensors/supported-sensors/              /chester/supported-devices/supported-devices             301
+/milesight/sensors/milesight-vs373                         /smart-devices/milesight/sensors/milesight-vs373         301
+/milesight/sensors/milesight-vs373/                        /smart-devices/milesight/sensors/milesight-vs373         301
+/milesight/sensors/milesight-ws303                         /smart-devices/milesight/sensors/milesight-ws303         301
+/milesight/sensors/milesight-ws303/                        /smart-devices/milesight/sensors/milesight-ws303         301
+/rakwireless/gateways/rak-RAK7268V2                        /smart-devices/rakwireless/gateways/rak-RAK7268V2        301
+/rakwireless/gateways/rak-RAK7268V2/                       /smart-devices/rakwireless/gateways/rak-RAK7268V2        301
+/rakwireless/gateways/rak-RAK7289V2                        /smart-devices/rakwireless/gateways/rak-RAK7289V2        301
+/rakwireless/gateways/rak-RAK7289V2/                       /smart-devices/rakwireless/gateways/rak-RAK7289V2        301
+/sticker/getting-started                                   /sticker/                                                301
+/sticker/getting-started/                                  /sticker/                                                301
+/tower/hardware-modules/about-encoder-module/about-lcd-module /tower/hardware-modules/about-lcd-module                 301
+/tower/hardware-modules/about-encoder-module/about-lcd-module/ /tower/hardware-modules/about-lcd-module                 301
+
+
 # --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
 # --- every rule after the first splat toward the 100-dynamic-rule limit and
 # --- fails the deploy beyond it; static rules also only win when listed first.

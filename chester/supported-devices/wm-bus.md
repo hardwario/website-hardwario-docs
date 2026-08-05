@@ -7,10 +7,11 @@ import Image from '@theme/IdealImage';
 
 # wM-Bus Sensors
 
-Here is list of tested sensors by HARDWARIO with basic configuration to use:
+:::info
+The following list includes only devices that have been officially tested and are fully supported. Please note that the CHESTER wM-Bus gateway is **fully capable of communicating with a much wider range of wM-Bus compatible devices on the market.**
+:::
 
 ### BMeters
-
 
 | Name                                                                 | Type                   | Resources                                                                                                  |
 |----------------------------------------------------------------------|------------------------|------------------------------------------------------------------------------------------------------------|

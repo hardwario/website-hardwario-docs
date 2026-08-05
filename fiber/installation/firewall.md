@@ -15,19 +15,15 @@ title: Firewall
    ```sh
    sudo ufw allow 22/tcp
    sudo ufw allow from 10.0.0.0/24 to any port 8080
+   sudo ufw allow from 10.0.0.0/24 to any port 1880
+   sudo ufw allow from 10.0.0.0/24 to any port 80
+   sudo ufw allow from 10.0.0.0/24 to any port 8086
+   sudo ufw allow from 10.0.0.0/24 to any port 3000
    ```
 
    :::tip
 
-   Adjust `10.0.0.0/24` to match your actual LAN subnet. Add the extra FIBER Lite ports too if
-   you installed its full stack:
-
-   ```sh
-   sudo ufw allow from 10.0.0.0/24 to any port 80
-   sudo ufw allow from 10.0.0.0/24 to any port 1880
-   sudo ufw allow from 10.0.0.0/24 to any port 8086
-   sudo ufw allow from 10.0.0.0/24 to any port 3000
-   ```
+   Adjust `10.0.0.0/24` to match your actual LAN subnet.
 
    :::
 

@@ -4,7 +4,7 @@ title: Install InfluxDB
 
 # Install InfluxDB
 
-Part of FIBER Lite's complete pre-integrated software stack. Not part of a stock FIBER install.
+Available on both FIBER and FIBER Lite.
 
 1. Download the **InfluxData** repository GPG key and verify its fingerprint before trusting it:
 
@@ -35,8 +35,8 @@ Part of FIBER Lite's complete pre-integrated software stack. Not part of a stock
 1. Initialize the organization, bucket, and API token non-interactively:
 
    ```sh
-   influx setup --username fiberlite --password '<choose a password>' \
-     --org fiber-lite --bucket fiber-lite --token "$(openssl rand -hex 32)" --force
+   influx setup --username fiber --password '<choose a password>' \
+     --org fiber --bucket fiber --token "$(openssl rand -hex 32)" --force
    ```
 
    :::tip

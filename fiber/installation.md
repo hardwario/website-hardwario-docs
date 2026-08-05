@@ -2,19 +2,27 @@
 slug: installation
 title: Installation
 ---
+import Image from '@theme/IdealImage';
 
 # Installation
 
-This section covers bootstrap and configuration of the Linux system and LoRaWAN software stack
-for both FIBER hardware variants:
+This section covers bootstrap and configuration of the Linux system and the full LoRaWAN +
+monitoring software stack — **one shared procedure for both FIBER hardware variants**:
 
 - **FIBER** — the industrial version, based on **Compute Module 4**.
-- **FIBER Lite** — a Raspberry Pi 5 based bench-test appliance that additionally ships a
-  complete pre-integrated data pipeline (InfluxDB, Grafana, a branded dashboard) — see
-  [**FIBER Lite**](fiber-lite/introduction) in the sidebar for its exclusive install steps.
+- **FIBER Lite** — a Raspberry Pi 5 based bench-test appliance.
 
-Most of the procedure is identical between the two — where it genuinely diverges (flashing, the
-concentrator's hardware path), the page itself has tabs for each variant.
+The two variants only diverge at the hardware level (flashing, RTC, the LoRaWAN concentrator's
+USB vs. SPI connection) — the page itself has tabs at those few points. Everything else,
+including InfluxDB, Grafana, and the branded Dashboard, is identical and installed on both.
+
+:::info
+
+See [**FIBER Lite**](fiber-lite/introduction) in the sidebar for FIBER Lite's hardware
+differences (no display, no 1-Wire sensors), and [**FIBER Hardware Guides**](category/fiber-hardware-guides)
+for what to do with the display/1-Wire hardware that only FIBER has.
+
+:::
 
 In this guide, we use two terms:
 
@@ -31,9 +39,22 @@ Follow the pages below in order:
 1. [**Install ChirpStack MQTT Forwarder**](installation/mqtt-forwarder)
 1. [**Register a Gateway and a Device**](installation/register-device)
 1. [**Install Node-RED**](installation/node-red)
+1. [**Install InfluxDB**](installation/influxdb)
+1. [**Install Grafana**](installation/grafana)
+1. [**Dashboard**](installation/dashboard)
 1. [**Firewall**](installation/firewall)
 1. [**Ports & Default Credentials**](installation/ports-and-credentials)
 
-Running a **FIBER Lite**? Once you reach the end of this list, continue with its additional
-services under [**FIBER Lite**](fiber-lite/introduction) in the sidebar — Install Docker,
-Install InfluxDB, Install Grafana, and the branded Dashboard.
+## Data Flow
+
+ChirpStack, Node-RED, InfluxDB, and Grafana all run **on the device itself** — no separate
+servers or cloud services required:
+
+<div style={{ width: '600px', margin: '0 auto' }}>
+
+<Image img={require('./fiber-lite/images/data-flow.png')} />
+
+</div>
+
+A landing page on port 80 links to every service and shows live system stats, so the device is
+usable without memorizing ports or IP-to-service mappings.

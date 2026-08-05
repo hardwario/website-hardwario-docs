@@ -10,7 +10,7 @@ This article describes the CHESTER-X13 extension module.
 
 ## Module Overview
 
-CHESTER-X13 provides a CAN Bus interface with support for CAN FD standard. It also comes with a built-in step-down with support of up to 28 V.
+CHESTER-X13 provides a CAN Bus interface with support for CAN FD standard. It also comes with a built-in step-down with an input voltage range of 5-28 V.
 
 ## CHESTER Pin Configuration Diagram
 
@@ -27,7 +27,7 @@ CHESTER-X13 provides a CAN Bus interface with support for CAN FD standard. It al
 | 5        | RL          | CAN termination resistor |
 | 6        | GND         | System ground signal     |
 | 7        | GND         | System ground signal     |
-| 8        | +VIN        | Step-down input voltage  |
+| 8        | +VIN        | Step-down input voltage (5-28V) |
 
 
 ## Interrupt Pin

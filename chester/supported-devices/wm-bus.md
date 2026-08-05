@@ -7,10 +7,15 @@ import Image from '@theme/IdealImage';
 
 # wM-Bus Sensors
 
-Here is list of tested sensors by HARDWARIO with basic configuration to use:
+:::info Universal wM-Bus Gateway
+**CHESTER wM-Bus is not limited to the devices listed below.** 
+
+It operates as a universal, transparent gateway and can read data from **any meter or sensor** that communicates using the wM-Bus (Wireless M-Bus) standard, regardless of the manufacturer.
+:::
+
+The list below contains specific devices that have been **officially tested** by the HARDWARIO team. For these devices, we provide basic configuration guidelines, data decoders, and guaranteed technical support. If you don't see your wM-Bus device in this list, CHESTER will still be able to receive and transmit its data.
 
 ### BMeters
-
 
 | Name                                                                 | Type                   | Resources                                                                                                  |
 |----------------------------------------------------------------------|------------------------|------------------------------------------------------------------------------------------------------------|

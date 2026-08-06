@@ -7,8 +7,10 @@ import Image from '@theme/IdealImage';
 
 # wM-Bus Sensors
 
+**CHESTER wM-Bus supports all wM-Bus meters of the T1 and C1 classes, regardless of manufacturer.** It works as a **pass-thru gateway** — it forwards the received telegrams as they are, and the decoding into meaningful units happens in the end IoT application.
+
 :::info
-The following list includes only devices that have been officially tested and are fully supported. Please note that the CHESTER wM-Bus gateway is **fully capable of communicating with a much wider range of wM-Bus compatible devices on the market.**
+The list below is therefore not a compatibility list. It contains the meters we have tested in-house and documented; any other T1/C1 wM-Bus device on the market works with the gateway as well.
 :::
 
 ### BMeters

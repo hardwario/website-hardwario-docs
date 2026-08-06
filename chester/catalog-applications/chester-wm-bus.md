@@ -30,7 +30,9 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 ## Application Overview
 
-**CHESTER wM-Bus** is a **Wireless M-Bus** gateway. This device listens for configured **wM-Bus T1 and C1** devices in specific intervals, aggregates the raw received wM-Bus packets and sends them over the **NB-IoT/LTE-M** network.
+**CHESTER wM-Bus** is a **Wireless M-Bus** gateway. It **supports all wM-Bus meters of the T1 and C1 classes, regardless of manufacturer**, and works as a **pass-thru gateway** — the decoding of the received telegrams into meaningful units happens in the end IoT application.
+
+The device listens for the configured wM-Bus meters in specific intervals, aggregates the raw received wM-Bus packets and sends them over the **NB-IoT/LTE-M** network.
 
 It is used in homes and apartments for measuring the consumption of **heat**, **gas**, **electricity**, **water** and reading **other wM-Bus devices**.
 
@@ -40,7 +42,7 @@ The device can be configured to do **periodic**, **daily**, **weekly** or **mont
 
 The device has a sufficiently low power consumption that it can operate from batteries for 7+ years at a daily readout. A version with an external power supply can also be ordered.
 
-CHESTER wM-Bus only receives raw hexadecimal wireless M-BUS packets. The device itself or HARDWARIO Cloud doesn’t decode the wM-Bus sensors data. Each wM-Bus sensor has its own representation of encoded data, or the packets might be encrypted. Decoding of the raw hexadecimal values to meaningful units is up to the customer or integrator.
+CHESTER wM-Bus only receives raw hexadecimal wM-Bus telegrams. Neither the device nor HARDWARIO Cloud interprets the meter data — each wM-Bus meter has its own representation of the encoded data, and the telegrams may also be encrypted. Decoding the raw hexadecimal values into meaningful units is up to the customer or integrator. Encrypted telegrams can optionally be decrypted on the Cloud side, see [HARDWARIO Cloud – Decryption Keys](#hardwario-cloud--decryption-keys).
 
 This device supports the newer **LTEv2** stack and **HARDWARIO Cloud v2**.
 
@@ -219,9 +221,9 @@ When configuring over BLE, you need to apply the configuraiton changes with `con
 
 When configuring over [Cloud config downlink commands](../../cloud/downlink/config), don't add `config save` command, it is applied automatically. Othwerwise the configuration is not
 
-### Interval and wM-BUS Packets Every 2 Minutes
+### Interval and wM-Bus Packets Every 2 Minutes
 
-wM-BUS devices send a packet every 2 minutes.
+wM-Bus devices send a packet every 2 minutes.
 We want to use only one antenna.
 We want to send data to the cloud every 2 hours.
 All devices are year-round, transmitting (the same) in summer and winter.
@@ -236,9 +238,9 @@ app config address add 111111
 app config address add 222222
 ```
 
-### Interval and wM-BUS Packets Every 2 minutes, Two Antennas
+### Interval and wM-Bus Packets Every 2 minutes, Two Antennas
 
-wM-BUS devices send a packet every 2 minutes.
+wM-Bus devices send a packet every 2 minutes.
 We want to use both antennas for better reception, each oriented differently to change polarity.
 We want to send data to the cloud every 2 hours.
 All devices are year-round, transmitting (the same) in summer and winter.
@@ -253,9 +255,9 @@ app config address add 111111
 app config address add 222222
 ```
 
-### Interval and wM-BUS Packets Sending Every Hour
+### Interval and wM-Bus Packets Sending Every Hour
 
-wM-BUS devices send a packet every 1 hour.
+wM-Bus devices send a packet every 1 hour.
 We want to use only one antenna.
 We want to send data to the cloud every hour.
 All devices are year-round, transmitting (the same) in summer and winter.
@@ -274,7 +276,7 @@ app config address add 222222
 
 ### Daily scanning
 
-wM-BUS devices send a packet every 1 hour.
+wM-Bus devices send a packet every 1 hour.
 We want to use only one antenna.
 We want to send data to the cloud once a day.
 All devices are year-round, transmitting (the same) in summer and winter.
@@ -428,13 +430,15 @@ If you are not sure how to **get started with the Cloud**, follow this tutorial:
 There is also the option to take the incoming data from the Cloud and **manually decrypt** it using the **online tool**: [https://wmbusmeters.org/](https://wmbusmeters.org/).  
 :::
 
-## Supported W-MBus Sensors
+## Supported wM-Bus Sensors
 
-For **CHESTER W-MBus**, we support several sensors from **BMeters** and **Zenner**.  
-We offer different types of devices, including **water meters**, **heat meters**, and **environmental sensors**.
+**CHESTER wM-Bus receives packets from any wM-Bus meter transmitting in the T1 or C1 mode, regardless of manufacturer.** There is no compatibility list to check your meters against.
 
-For the complete list and detailed information, see the documentation here:
-➡️ [Supported W-MBus Sensors](https://docs.hardwario.com/chester/supported-devices/wm-bus_sensors)
+The device works as a **pass-thru gateway**: it forwards the received wM-Bus telegrams to the Cloud, and the **decoding into meaningful units happens in the end IoT application**. Optionally, the telegrams can be decrypted on the Cloud side using the [decryption keys](#hardwario-cloud--decryption-keys) stored per device.
+
+The meters listed below are the ones we have tested in-house and documented — including **water meters**, **heat meters** and **heat cost allocators** from **BMeters** and **Zenner**. They are a starting point, not a limitation.
+
+➡️ [Tested wM-Bus Sensors](https://docs.hardwario.com/chester/supported-devices/wm-bus_sensors)
 
 ---
 

@@ -165,7 +165,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'wm-Bus Devices',
+          label: 'wM-Bus Devices',
           link: {
             type: 'doc',
             id: 'supported-devices/wm-bus',

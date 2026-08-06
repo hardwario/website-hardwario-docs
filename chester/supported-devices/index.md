@@ -13,6 +13,6 @@ import Image from '@theme/IdealImage';
 |-------------------|
 | [M-Bus Sensors](./m-bus.md)   |
 | [Modbus Sensors](./modbus.md)    |
-| [wm-Bus Sensors](./wm-bus.md)    |
+| [wM-Bus Sensors](./wm-bus.md)    |
 | [Serial Devices](./serial.md)    |
 

@@ -22,7 +22,7 @@ import Image from '@theme/IdealImage';
 
 ## Description
 
-The IWM-TX3 is a WMBUS radio module for the transmission of consumption data, applicable to the series of multi jet water meters mod. GMDM-I, GMB-I, GMB-RP-I and single jet mod. CPR-M3-I.
+The IWM-TX3 is a wM-Bus radio module for the transmission of consumption data, applicable to the series of multi jet water meters mod. GMDM-I, GMB-I, GMB-RP-I and single jet mod. CPR-M3-I.
 
 ## Configuration
 

@@ -8,41 +8,86 @@ Gateway ID, the ChirpStack gateway page never shows a "Last seen at" timestamp, 
 join-request ever reaches ChirpStack — even though the LoRaWAN end-device is powered on and in
 range.
 
-:::danger
+Work through these in order. The first two are by far the most common, and both look like broken
+hardware while being pure configuration.
 
-This hardware path is **not yet verified on real hardware** (see
-[Install ChirpStack Concentratord](/fiber/installation/concentratord)) — the checks below are
-starting points based on how the SPI/RAK2287 path is documented to work, not a confirmed fix.
-Exact service and binary names depend on whatever RAKwireless's own SX1302 HAL installer sets up
-on your system; adjust the commands below to match what it actually installed.
+## 1. The daemon hangs on "Opening SPI communication interface"
 
-:::
+Check where the service actually stops:
 
-Work through these in order:
+```sh
+sudo journalctl -u chirpstack-concentratord -n 30 --no-pager
+```
 
-1. **Confirm SPI is enabled and the HAT is electrically seated** — the single most common cause
-   of "nothing at all" on any SPI peripheral:
+If the last line is `Opening SPI communication interface` and nothing follows — no error, no
+timeout, just silence — the concentrator is **not** faulty. The vendor profile (`model=`) supplies
+only the pin mapping, RSSI offsets and gain table; it does **not** supply a channel plan. With the
+`[gateway.concentrator]` section missing from the configuration, every radio is configured as
+`enabled: false` at frequency 0 and the underlying HAL blocks indefinitely.
 
-   ```sh
-   grep spi /boot/firmware/config.txt   # expect: dtparam=spi=on (uncommented)
-   ls /dev/spidev*                       # expect: at least one device
-   ```
+Confirm by looking further up the same log:
 
-   If `dtparam=spi=on` is missing or commented out, add/uncomment it and reboot. If
-   `/dev/spidev*` still shows nothing after that, the RAK2287 HAT isn't making contact with the
-   Pi 5's GPIO header — reseat it and check for bent pins before going further.
+```sh
+sudo journalctl -u chirpstack-concentratord | grep 'Configuring radio'
+```
 
-1. **Confirm RAKwireless's own installer actually finished**, rather than silently failing
-   partway. The generic USB ChirpStack Concentratord configuration used on FIBER (CM4) does
-   **not** work here — this path needs RAKwireless's SX1302 HAL installer, which sets up the SPI
-   device path and GPIO reset-pin handling the RAK2287 needs. Re-run it and read its output in
-   full rather than assuming it succeeded.
+Radios reported as `enabled: false, center_freq: 0` mean the channel plan is missing. Add the
+`[gateway.concentrator]` block from
+[Install ChirpStack Concentratord](/fiber/installation/concentratord) and restart the service —
+the radios must come up `enabled: true` with real frequencies.
 
-1. **Check whatever service the installer created is actually running**, and read its logs from
-   the very start of the process — the real failure (SPI open error, wrong device path, chip ID
-   mismatch) shows up in the first few lines, before a crash loop just repeats the same symptom
-   over and over.
+## 2. Concentratord runs, but nothing reaches MQTT
 
-If none of this resolves it, that's a genuinely useful data point — please report exactly what
-you tried, the RAK2287 installer version, and the log output back to HARDWARIO so this page (and
-the underlying procedure) can be corrected against real hardware.
+If Concentratord logs a Gateway ID and `Frame received` lines, but ChirpStack still shows nothing,
+the break is between Concentratord and the MQTT Forwarder. Both services report `active`, so
+`systemctl status` is not enough to spot it.
+
+Check the permissions on the IPC sockets:
+
+```sh
+ls -la /tmp/concentratord_*
+```
+
+They must be group-accessible to the `chirpstack` user, i.e. `root:chirpstack` and mode `srwxrwx---`:
+
+```text
+srwxrwx--- 1 root chirpstack 0 /tmp/concentratord_command
+srwxrwx--- 1 root chirpstack 0 /tmp/concentratord_event
+```
+
+If they are `root:root` mode `srwxr-xr-x`, the forwarder cannot connect — connecting to a unix
+socket requires **write** permission. Add `Group=chirpstack` and `UMask=0007` to the
+`[Service]` section of `/etc/systemd/system/chirpstack-concentratord.service`, then:
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart chirpstack-concentratord
+sudo systemctl restart chirpstack-mqtt-forwarder
+```
+
+## 3. SPI is not enabled, or the HAT is not seated
+
+Only if the service never gets as far as opening SPI at all:
+
+```sh
+grep spi /boot/firmware/config.txt   # expect: dtparam=spi=on (uncommented)
+ls /dev/spidev*                       # expect: /dev/spidev0.0 and /dev/spidev0.1
+```
+
+`dtparam=spi=on` ships commented out in Raspberry Pi OS. If it is commented, uncomment it and
+reboot. If `/dev/spidev*` is still missing afterwards, the RAK2287 HAT is not making contact with
+the Pi 5's GPIO header — reseat it and check for bent pins.
+
+## 4. Proving the concentrator chip itself responds
+
+If you need to separate "dead hardware" from "bad configuration" definitively, read the SX1302's
+registers directly over SPI while toggling the reset line. Install `python3-spidev` and
+`python3-libgpiod`, hold the reset pin (`gpiochip0` line 17) low, and read a register with the
+5-byte frame `[0x00, addr >> 8, addr & 0xFF, 0x00, 0x00]`, taking the result from byte 4.
+
+Register values that **change** between reset held high and reset released mean the chip is alive
+and the fault is in software. Values that stay at `0x00` in both states point at the HAT seating
+or the SPI bus.
+
+If none of this resolves it, please report what you tried and the full service log back to
+HARDWARIO so this page can be extended.

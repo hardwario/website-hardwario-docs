@@ -116,8 +116,9 @@ The only differences are hardware:
 - **Configure Hardware**: skip the RTC overlay line entirely — the Pi 5 has a built-in RTC.
 - **Concentratord**: the RAK5146 connects via **SPI** through a RAK2287 HAT, not USB — a
   different config and install procedure (see the FIBER Lite tab in
-  [Install ChirpStack Concentratord](installation/concentratord)),
-  currently **not yet verified on real hardware**.
+  [Install ChirpStack Concentratord](installation/concentratord)). Follow that tab exactly: the
+  channel plan and the two service-permission lines are both mandatory, and omitting either one
+  fails silently rather than reporting an error.
 - FIBER Lite has no display or 1-Wire sensors — full FIBER Lite specifics (BOM, hardware
   differences): see [FIBER Lite Introduction](fiber-lite/introduction) in the sidebar. Have a
   classic FIBER instead? See [**FIBER Hardware Guides**](category/fiber-hardware-guides) in the

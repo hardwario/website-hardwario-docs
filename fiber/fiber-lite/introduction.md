@@ -29,7 +29,7 @@ already covers.
 | Enclosure | Custom FIBER enclosure, 175×120×35 mm | DIN-rail enclosure |
 | 1-Wire hub, LCD, buzzer | Present | Not present |
 | BLE, LTE | Present | Not present (LAN or Wi-Fi only) |
-| LoRaWAN concentrator | RAK5146, **USB**-connected | RAK5146 on a RAK2287 HAT, **SPI**-connected (not yet verified on real hardware) |
+| LoRaWAN concentrator | RAK5146, **USB**-connected | RAK5146 on a RAK2287 HAT, **SPI**-connected |
 
 See [Data Flow](/fiber/installation#data-flow) on the Installation landing page for how the
 shared software stack fits together — it's identical on both variants.

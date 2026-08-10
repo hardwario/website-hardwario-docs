@@ -11,7 +11,7 @@ This page tracks all notable changes in CHESTER catalog application firmware sin
 
 :::tip Latest Release
 
-**SDK v3.5.5** (2026-06-22) — [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5) · [Firmware Downloads](catalog-applications#application-firmware)
+**SDK v4.0.0** (2026-08-10) — [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Firmware Downloads](catalog-applications#application-firmware)
 
 :::
 
@@ -20,6 +20,43 @@ This page tracks all notable changes in CHESTER catalog application firmware sin
 This changelog covers **SDK version releases** and catalog application changes. For a date-based log of all platform changes including hardware revisions, see the [**CHESTER Platform Changelog**](/chester/changelog).
 
 :::
+
+---
+
+## v4.0.0 (2026-08-10)
+
+**NCS:** 3.4.0 · **Zephyr:** 4.4.1 · [Full commit log](https://github.com/hardwario/chester-sdk/compare/v3.5.5...v4.0.0) · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0)
+
+This breaking release brings all the improvements and fixes from the latest versions of Zephyr and nRF Connect SDK as well as other minor improvements in the SDK itself.
+
+### SDK / Common
+
+- Updated NCS to v3.4.
+  - Switched from Partition Manager to **sysbuild + DTS partitions**.
+  - Removed TinyCrypt in favor of PSA.
+- Added `ctr_rtc_set_event_cb()` for sync notification.
+- Restored `FW_VERSION` support for compatibility purposes.
+- Deprecated `ctr_led` LED sequencer API.
+- Optimized RAM usage, saving about 17 kB.
+- Added `tag read all [timeout]` shell command
+
+### CHESTER Cloud
+
+- Added **message spool** (`CONFIG_CTR_CLOUD_SPOOL`) - a store-and-forward queue backed by LittleFS, so messages survive uplink failures and reboots.
+
+### CHESTER Control
+
+- Lowered 1-Wire thermometer (10 -> 5) and soil-sensor (10 -> 3) capacity.
+
+### CHESTER Serial
+
+- New drivers: SolaX X3-Hybrid G3 inverter; Piketronic RPP-R radon probe.
+
+### Update Guide
+
+This release is not backwards compatible and may require code changes to work. The [v4.0.0 migration guide](/chester/sdk-v4-migration-guide) is the complete procedure. It covers updating `west.yml` and the toolchain, converting the application to sysbuild, and all required source and Kconfig changes, and ends with a checklist.
+
+We recommend starting from a working v3.5.5 workspace rather than jumping an older one straight to v4.0.0.
 
 ---
 

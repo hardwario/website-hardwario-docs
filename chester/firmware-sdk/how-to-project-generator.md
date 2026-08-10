@@ -6,49 +6,13 @@ import Image from '@theme/IdealImage';
 
 # How to: Project Generator
 
-The **CHESTER SDK Project Generator** simplifies project initialization and configuration management by providing a structured approach to project setup, all based on a **YAML** configuration.
+The **CHESTER SDK Project Generator** simplifies project configuration by providing a structured approach to project setup, all based on a **YAML** configuration.
 
 It is also used for generating different **variants** of catalog applications. You can look to `project.yaml` files to see different variants.
 
 Then you call `west chester-update --variant "CHESTER Clime 1W"` to update project files, then you call `west build` to recompile project.
 
-## WEST Commands
-
-### CHESTER Init
-
-
-`west chester-init --list` List all available templates.
-
-
-`west chester-init <name>` Create the project folder and project.yaml (minimal).
-
-
-`west chester-init <name> --template <template-name>` Create the project folder and project.yaml (specified template).
-
-
-:::tip
-
-  If the project already exists, you can add a project.yaml into it calling the command.
-
-:::
-
-:::info
-
-  If there is a `/vendor` folder in your directory, the project will be initialized in `vendor/application/`, otherwise it will be created in `chester/application/`.
-
-:::
-
-### CHESTER Create
-
-`west chester-create <name>` Creates all necessary files to a buildable app.
-
-:::caution
-
-  This command will overwrite all previous files. If you have already created a custom project, prefer to use `chester-update`.
-
-:::
-
-### CHESTER Update
+## WEST Command
 
 `west chester-update <name>` Generate files based on project.yaml features.
 
@@ -76,152 +40,8 @@ Examples:
 
 :::
 
-### CHESTER CBOR v2
-
-`west chester-cbor <name>` Generate CBOR files.
-
-
-## **File generation**
-
-This tool can automatically generate the following files based on the provided YAML configuration:
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-  <TabItem value="init" label="Init">
-    <table style={{ margin: '20px auto' }}>
-      <tr>
-        <td>/project-name</td>
-      </tr>
-      <tr>
-        <td align="left"><code>project.yaml</code></td>
-      </tr>
-    </table>
-  </TabItem>
-  <TabItem value="update" label="Update">
-    <table style={{ display: 'inline-table', margin: '20px' }}>
-      <tr>
-        <td align="center">/project-name</td>
-      </tr>
-      <tr>
-        <td align="left">
-          <code>app.overlay<br /></code>
-          <code>Kconfig<br /></code>
-          <code>Kconfig.variant<br /></code>
-          <code>prj.conf<br /></code>
-          <code>CMakeLists.txt<br /></code>
-          <code>VERSION<br /></code>
-        </td>
-      </tr>
-    </table>
-    <table style={{ display: 'inline-table', margin: '20px' }}>
-      <tr>
-        <td align="center">/project-name/src</td>
-      </tr>
-      <tr>
-        <td align="left">
-          <code>app_config.c<br /></code>
-          <code>app_config.h<br /></code>
-          <code>app_shell.c<br /></code>
-          <code>feature.h<br /></code>
-        </td>
-      </tr>
-    </table>
-  </TabItem>
-  <TabItem value="create" label="Create">
-    <table style={{ display: 'inline-table', margin: '20px' }}>
-      <tr>
-        <td align="center">/project-name/src</td>
-      </tr>
-      <tr>
-        <td align="left">
-          <code>app_config.c<br /></code>
-          <code>app_config.h<br /></code>
-          <code>app_shell.c<br /></code>
-          <code>feature.h<br /></code>
-          <code>app_cbor.c<br /></code>
-          <code>app_cbor.h<br /></code>
-          <code>app_send.c<br /></code>
-          <code>app_send.h<br /></code>
-          <code>app_data.c<br /></code>
-          <code>app_data.h<br /></code>
-          <code>app_sensor.c<br /></code>
-          <code>app_sensor.h<br /></code>
-          <code>app_handler.c<br /></code>
-          <code>app_handler.h<br /></code>
-          <code>app_work.c<br /></code>
-          <code>app_work.h<br /></code>
-          <code>app_init.c<br /></code>
-          <code>app_init.h<br /></code>
-          <code>app_power.c<br /></code>
-          <code>app_power.h<br /></code>
-        </td>
-      </tr>
-    </table>
-    <table style={{ display: 'inline-table', margin: '20px' }}>
-      <tr>
-        <td align="center">/project-name</td>
-      </tr>
-      <tr>
-        <td align="left">
-          <code>app.overlay<br /></code>
-          <code>Kconfig<br /></code>
-          <code>Kconfig.variant<br /></code>
-          <code>prj.conf<br /></code>
-          <code>CMakeLists.txt<br /></code>
-          <code>VERSION<br /></code>
-          <code>pm_static.yml*<br /></code>
-        </td>
-      </tr>
-    </table>
-    <table style={{ display: 'inline-table', margin: '20px' }}>
-      <tr>
-        <td align="center">/project-name/codec</td>
-      </tr>
-      <tr>
-        <td align="left">
-          <code>cbor-decoder.yaml</code><br />
-        </td>
-      </tr>
-    </table>
-    <table style={{ display: 'inline-table', margin: '20px' }}>
-      <tr>
-        <td align="center">/project-name/child_image</td>
-      </tr>
-      <tr>
-        <td align="left">
-          <code>mcuboot.conf<br /></code>
-        </td>
-      </tr>
-    </table>
-        <table style={{ display: 'inline-table', margin: '20px' }}>
-      <tr>
-        <td align="center">/project-name/child_image/boards*</td>
-      </tr>
-      <tr>
-        <td align="left">
-          <code>chester_nrf52840.overlay*<br /></code>
-        </td>
-      </tr>
-    </table>
-  </TabItem>
-  <TabItem value="cbor" label="CBOR">
-    <table style={{ margin: '20px auto' }}>
-      <tr>
-        <td align="center">project-name/src</td>
-      </tr>
-      <tr>
-        <td align="left">
-          <code>app_cbor.c<br /></code>
-          <code>app_cbor.h<br /></code>
-        </td>
-      </tr>
-    </table>
-  </TabItem>
-</Tabs>
-
 ## ** Project YAML **
+
 The `project.yaml` configuration file serves as the cornerstone for setting up and customizing your project.
 
 This comprehensive guide outlines the step-by-step process to effectively configure your project using the provided YAML structure.
@@ -304,8 +124,6 @@ features:
   |      Soil Sensor      |      subsystem-soil-sensor      |               `CONFIG_CTR_SOIL_SENSOR=y`                |
   |         Test          |         subsystem-test          |                   `CONFIG_CTR_TEST=y`                   |
   |         Therm         |         subsystem-therm         |                  `CONFIG_CTR_THERM=y`                   |
-  |   TinyCrypt SHA256    |   subsystem-tinycrypt-sha256    |               `CONFIG_TINYCRYPT_SHA256=y`               |
-  |       TinyCrypt       |       subsystem-tinycrypt       |                  `CONFIG_TINYCRYPT=y`                   |
   |         WDOG          |         subsystem-wdog          |                   `CONFIG_CTR_WDOG=y`                   |
   |          W1           |          subsystem-w1           |                    `CONFIG_CTR_W1=y`                    |
   |         ZCBOR         |         subsystem-zcbor         |     `CONFIG_ZCBOR=y` `CONFIG_ZCBOR_STOP_ON_ERROR=y`     |
@@ -619,118 +437,3 @@ To control the behavior of `clang-format` within the codebase, developers can us
 /* clang-format on */
 /* ^^^ Preserved code "block-name" (end) */
 ```
-
-## **CBOR v2**
-
-The **CHESTER SDK Project Generator** utilizes `cbor-decoder.yaml` and `cbor-encoder.yaml` configuration files to automatically generate `app_cbor.c`and `app_cbor.h` files. These generated files are essential for handling **CBOR (Concise Binary Object Representation)** data encoding and decoding within the project.
-The generator ensures that all fields are correctly initialized and encoded based on the YAML configuration.
-
-### Generated CBOR Files
-
-The generated `app_cbor.c` and `app_cbor.h` files include all the fields specified in the YAML configuration. The generator provides placeholder code for fields, which developers can later customize as needed. For example:
-
-```c
-	/* ### Preserved code "thermometer" (begin) */
-
-	zcbor_uint32_put(zs, CODEC_KEY_E_THERMOMETER);
-	{
-		zcbor_map_start_encode(zs, ZCBOR_VALUE_IS_INDEFINITE_LENGTH);
-
-		zcbor_uint32_put(zs, CODEC_KEY_E_THERMOMETER__TEMPERATURE);
-
-/* Filled in by Project Generator */
-#if 0
-		if (isnan(g_app_data.thermometer_temperature)) {
-			zcbor_nil_put(zs, NULL);
-		} else {
-			zcbor_int32_put(zs, g_app_data._temperature * 100.f);
-		}
-#else
-		zcbor_nil_put(zs, NULL);
-#endif
-
-		zcbor_map_end_encode(zs, ZCBOR_VALUE_IS_INDEFINITE_LENGTH);
-	}
-
-	/* ^^^ Preserved code "thermometer" (end) */
-```
-
-### Special Fields Handling
-
-For certain fields such as **TSO (Time Series Offset)** and **TSP (Time Series Period)**, the generator includes predefined encoding logic. These fields are crucial for handling time series data and are encoded with specific structures.
-
-#### TSO - Time Series Offset
-
-The TSO field is handled with a list encoding approach:
-
-```c
-	/* ### Preserved code "trigger" (begin) */
-
-	zcbor_uint32_put(zs, CODEC_KEY_E_TRIGGER);
-	{
-    zcbor_map_start_encode(zs, ZCBOR_VALUE_IS_INDEFINITE_LENGTH);
-
-		zcbor_uint32_put(zs, CODEC_KEY_E_TRIGGER__EVENTS);
-		{
-			zcbor_list_start_encode(zs, ZCBOR_VALUE_IS_INDEFINITE_LENGTH);
-
-			/* Filled in by Project Generator */
-			/* TSO - Times series offset */
-			zcbor_uint64_put(zs, 1714731120); /* timestamp in seconds */
-
-			for (int j = 0; j < 3; j++) {
-				zcbor_uint32_put(zs, j);         /* offset in seconds */
-				zcbor_uint32_put(zs, j * 100.f); /* samples min */
-			}
-			zcbor_list_end_encode(zs, ZCBOR_VALUE_IS_INDEFINITE_LENGTH);
-		}
-
-		zcbor_map_end_encode(zs, ZCBOR_VALUE_IS_INDEFINITE_LENGTH);
-	}
-
-	/* ^^^ Preserved code "trigger" (end) */
-```
-In this example, the TSO field includes a timestamp followed by multiple data points representing offsets and sample values.
-
-#### TSP - Time Series Period
-
-The TSP field is similarly handled with a list encoding approach:
-
-```c
-	/* ### Preserved code "counter" (begin) */
-
-	zcbor_uint32_put(zs, CODEC_KEY_E_COUNTER);
-	{
-		zcbor_map_start_encode(zs, ZCBOR_VALUE_IS_INDEFINITE_LENGTH);
-
-		zcbor_uint32_put(zs, CODEC_KEY_E_COUNTER__MEASUREMENTS);
-		{
-			zcbor_list_start_encode(zs, ZCBOR_VALUE_IS_INDEFINITE_LENGTH);
-
-			/* Filled in by Project Generator */
-			/* TSP - Times series period */
-			zcbor_uint64_put(zs, 1714731120); /* timestamp in seconds */
-			zcbor_uint32_put(zs, 1);          /* period in seconds */
-
-			for (int j = 0; j < 3; j++) {
-				zcbor_uint32_put(zs, j * 100.f); /* samples min */
-				zcbor_uint32_put(zs, j * 100.f); /* samples max */
-				zcbor_uint32_put(zs, j * 100.f); /* samples avg */
-				zcbor_uint32_put(zs, j * 100.f); /* samples mdn */
-			}
-
-			zcbor_list_end_encode(zs, ZCBOR_VALUE_IS_INDEFINITE_LENGTH);
-		}
-
-		zcbor_map_end_encode(zs, ZCBOR_VALUE_IS_INDEFINITE_LENGTH);
-	}
-
-	/* ^^^ Preserved code "counter" (end) */
-```
-In this example, the TSP field includes a timestamp, a period, and multiple data points representing sample statistics.
-
-:::caution
-
-Any addition changes to `cbor-encoder.yaml` or `cbor-decoder.yaml` can be updated in the project using the command. However, if the addition or removal is made in a previously generated field protected by a preserved code block, simply delete the protected section in the code and call the command again.
-
-:::

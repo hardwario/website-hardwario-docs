@@ -481,6 +481,11 @@ Due to LoRaWAN payload size constraints, device values are encoded using **Float
 
 ## Changelog
 
+### v4.0.0 — 2026-08-10
+
+- **Added**: Driver for the **SolaX X3-Hybrid G3** inverter
+- **Added**: Driver for the [**Piketronic RPP-R**](../supported-devices/modbus/piketronic-rpp-r.md) radon probe (type `piketronic`)
+
 ### v3.5.0 — 2025-12-03
 
 - **Added**: LoRaWAN support — optimized binary encoding with multi-device packing for bandwidth efficiency

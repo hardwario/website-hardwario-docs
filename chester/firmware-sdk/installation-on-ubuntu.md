@@ -76,32 +76,6 @@ Install the **python3-venv** package:
 sudo apt install python3-venv
 ```
 
-### Install Toolchain
-
-1. Create a target directory for the toolchain:
-
-   ```
-   mkdir -p $HOME/.local/opt
-   ```
-
-1. Download and unpack the toolchain:
-
-   ```
-   wget -c https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.0/zephyr-sdk-0.17.0_linux-x86_64.tar.xz -O - | xz -d -c - | tar xv -C $HOME/.local/opt
-   ```
-
-1. Run the **Zephyr SDK** bundle setup script:
-
-   ```
-   $HOME/.local/opt/zephyr-sdk-0.17.0/setup.sh
-   ```
-
-   :::tip
-
-   Answer `Y` to everything.
-
-   :::
-
 ## Create Application
 
 1. Create the directory for your application and switch to it:
@@ -164,41 +138,23 @@ sudo apt install python3-venv
    west update
    ```
 
+1. Install the **Python** dependencies:
+
+   ```
+   west packages pip --install
+   ```
+
 1. Export **Zephyr** environment:
 
    ```
    west zephyr-export
    ```
 
-1. Install the **Python** dependencies:
+1. Install the **Zephyr SDK**:
 
    ```
-   pip install -r zephyr/scripts/requirements.txt
+   west sdk install -t arm-zephyr-eabi
    ```
-
-   ```
-   pip install -r nrf/scripts/requirements.txt
-   ```
-
-   ```
-   pip install -r bootloader/mcuboot/scripts/requirements.txt
-   ```
-
-   ```
-   pip install -r chester/scripts/requirements.txt
-   ```
-
-   :::caution
-
-   At the end of the installation process, you will see this "error" message:
-
-   ```
-   ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts. pyocd 0.35.1 requires pylink-square<2.0,>=1.0, but you have pylink-square 0.12.0 which is incompatible.
-   ```
-
-   It can be considered as a warning only, and it is safe to ignore it.
-
-   :::
 
 ## Test Build and Flash
 

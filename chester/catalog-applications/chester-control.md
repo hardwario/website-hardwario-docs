@@ -472,6 +472,10 @@ import TabItem from '@theme/TabItem';
 
 ## Changelog
 
+### v4.0.0 — 2026-08-10
+
+- **Changed**: Lowered maximum 1-Wire thermometer capacity (10 → 5) and soil sensor capacity (10 → 3) to reduce RAM usage
+
 ### v3.5.5 — 2026-06-22
 
 - **Changed**: Reduced memory footprint — soil sensor and thermometer data now dynamically allocated

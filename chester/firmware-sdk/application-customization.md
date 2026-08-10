@@ -33,11 +33,9 @@ Below is the minimized set of commands that is extracted from the **CHESTER SDK*
    west init -m git@github.com:hardwario/chester-sdk.git --manifest-rev main
    west config build.board chester
    west update
+   west packages pip --install
    west zephyr-export
-   pip install -r zephyr/scripts/requirements.txt
-   pip install -r nrf/scripts/requirements.txt
-   pip install -r bootloader/mcuboot/scripts/requirements.txt
-   pip install -r chester/scripts/requirements.txt
+   west sdk install -t arm-zephyr-eabi
    ```
 
 1. Switch to the **CHESTER SDK** repository directory:

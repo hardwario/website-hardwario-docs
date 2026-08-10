@@ -72,38 +72,38 @@ Then apply changes by typing `config save`. The device will reboot and use the c
 
 #### Available Application Firmware Builds
 
-*SDK **v3.5.5** · NCS **2.9.0** · Zephyr **3.7.99** · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5)*
+*SDK **v4.0.0** · NCS **3.4.0** · Zephyr **4.4.1** · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0)*
 
 <div className="firmware-builds-table">
 
 | Application name | Version | Identifier | Build date | Remark |
 | :--- | :--- | :---: | :---: | :--- |
-| [**CHESTER Clime**](chester-clime.md#chester-clime) | [**v3.5.5**](https://firmware.hardwario.com/chester/424ab48d4d9a4b3880bd18faefe4ce0c) | <small>`424ab48d4d9a4b3880bd18faefe4ce0c`</small> | 2026-06-22 |  |
-| [**CHESTER Clime IAQ**](chester-clime.md#chester-clime-iaq) | [**v3.5.5**](https://firmware.hardwario.com/chester/68951db287094b74b58606e63fd1f3c1) | <small>`68951db287094b74b58606e63fd1f3c1`</small> | 2026-06-22 |  |
-| [**CHESTER Clime RTD**](chester-clime.md#chester-clime-rtd) | [**v3.5.5**](https://firmware.hardwario.com/chester/8fc8cb28e9854c1293a52d0455a4117a) | <small>`8fc8cb28e9854c1293a52d0455a4117a`</small> | 2026-06-22 |  |
-| [**CHESTER Clime TC**](chester-clime.md#chester-clime-tc) | [**v3.5.5**](https://firmware.hardwario.com/chester/99903c46482a4782b292b66418af973a) | <small>`99903c46482a4782b292b66418af973a`</small> | 2026-06-22 |  |
-| [**CHESTER Clime SPS30**](chester-clime.md) | [**v3.5.5**](https://firmware.hardwario.com/chester/0ac95afdee354e23ad293698ddb57822) | <small>`0ac95afdee354e23ad293698ddb57822`</small> | 2026-06-22 |  |
-| [**CHESTER Clime Radon**](chester-clime.md) | [**v3.5.5**](https://firmware.hardwario.com/chester/bb0453d7f90049b486baf07abe8e59e8) | <small>`bb0453d7f90049b486baf07abe8e59e8`</small> | 2026-06-22 |  |
-| [**CHESTER Control**](chester-control.md#chester-control) | [**v3.5.5**](https://firmware.hardwario.com/chester/118e9083252f4f1a9781ef8256c77013) | <small>`118e9083252f4f1a9781ef8256c77013`</small> | 2026-06-22 |  |
-| [**CHESTER Control 8Ch Z**](chester-control.md) | [**v3.5.5**](https://firmware.hardwario.com/chester/ebab57eea2d74f73832d2d1bfd3162ae) | <small>`ebab57eea2d74f73832d2d1bfd3162ae`</small> | 2026-06-22 | Support for second X0 module in slot B (8 channels) and CHESTER-Z |
-| [**CHESTER Control Z**](chester-control.md#chester-control-z) | [**v3.5.5**](https://firmware.hardwario.com/chester/c952d80b7cd9453b985bc519e4d27bbb) | <small>`c952d80b7cd9453b985bc519e4d27bbb`</small> | 2026-06-22 | Support for CHESTER-Z |
-| [**CHESTER Current**](chester-current.md#chester-current-1) | [**v3.5.5**](https://firmware.hardwario.com/chester/4de70ef61ef144e5aa6b9c583f7dfd1e) | <small>`4de70ef61ef144e5aa6b9c583f7dfd1e`</small> | 2026-06-22 |  |
-| [**CHESTER Current Z**](chester-current.md#chester-current-z) | [**v3.5.5**](https://firmware.hardwario.com/chester/c829bfb90f68455e8ed1fb5bb1dba8bc) | <small>`c829bfb90f68455e8ed1fb5bb1dba8bc`</small> | 2026-06-22 | Support for CHESTER-Z |
-| **CHESTER Demo** | [**v3.5.5**](https://firmware.hardwario.com/chester/bdb49519eec74c5083641b3f6525e9f8) | <small>`bdb49519eec74c5083641b3f6525e9f8`</small> | 2026-06-22 |  |
-| [**CHESTER Meteo**](chester-meteo.md#chester-meteo) | [**v3.5.5**](https://firmware.hardwario.com/chester/4ce92afb3f6e485892eded55fa4396b7) | <small>`4ce92afb3f6e485892eded55fa4396b7`</small> | 2026-06-22 |  |
-| [**CHESTER Meteo Z**](chester-meteo.md#chester-meteo-z) | [**v3.5.5**](https://firmware.hardwario.com/chester/2fb09fc8efc74edebdea42d81dc2a708) | <small>`2fb09fc8efc74edebdea42d81dc2a708`</small> | 2026-06-22 | Support for CHESTER-Z |
-| [**CHESTER Meteo P**](chester-meteo.md) | [**v3.5.5**](https://firmware.hardwario.com/chester/7dd48ebc0d8c434993aba57750427612) | <small>`7dd48ebc0d8c434993aba57750427612`</small> | 2026-06-22 | Support for pyranometer |
-| [**CHESTER Meteo M**](chester-meteo.md) | [**v3.5.5**](https://firmware.hardwario.com/chester/641fd76d3ee6404081669bf5548a4062) | <small>`641fd76d3ee6404081669bf5548a4062`</small> | 2026-06-22 | Modbus variant supporting Lambrecht and Sensecap/OPM sensors (select via meteo-type) |
-| [**CHESTER Motion**](chester-motion.md#chester-motion) | [**v3.5.5**](https://firmware.hardwario.com/chester/6e23ffe715194a279e71d252b4f04576) | <small>`6e23ffe715194a279e71d252b4f04576`</small> | 2026-06-22 |  |
-| [**CHESTER Push**](chester-push.md#chester-push) | [**v3.5.5**](https://firmware.hardwario.com/chester/34f55a9546404a22a9e73871799f3405) | <small>`34f55a9546404a22a9e73871799f3405`</small> | 2026-06-22 |  |
-| [**CHESTER Push FM**](chester-push.md) | [**v3.5.5**](https://firmware.hardwario.com/chester/29035a09ed324c88b71bddda2f13efe7) | <small>`29035a09ed324c88b71bddda2f13efe7`</small> | 2026-06-22 |  |
-| [**CHESTER Range**](chester-range.md#chester-range) | [**v3.5.5**](https://firmware.hardwario.com/chester/be6d5d535f654d4db44b2f0cff4d69f2) | <small>`be6d5d535f654d4db44b2f0cff4d69f2`</small> | 2026-06-22 |  |
-| [**CHESTER Range Z**](chester-range.md#chester-range-z) | [**v3.5.5**](https://firmware.hardwario.com/chester/b587c2ce0d9843908559c00a3a60ba70) | <small>`b587c2ce0d9843908559c00a3a60ba70`</small> | 2026-06-22 | Support for CHESTER-Z |
-| [**CHESTER Scale**](chester-scale.md#chester-scale) | [**v3.5.5**](https://firmware.hardwario.com/chester/bd04faaae50b480fa447e38aeaaaddde) | <small>`bd04faaae50b480fa447e38aeaaaddde`</small> | 2026-06-22 |  |
-| [**CHESTER Scale Z**](chester-scale.md#chester-scale-z) | [**v3.5.5**](https://firmware.hardwario.com/chester/b2ab16aa598a433d8594d0731b1e70d9) | <small>`b2ab16aa598a433d8594d0731b1e70d9`</small> | 2026-06-22 | Support for CHESTER-Z |
-| [**CHESTER Serial RS-485**](chester-serial.md#chester-serial-rs-485) | [**v3.5.5**](https://firmware.hardwario.com/chester/4f673e94a6b1450a834669d2bf1df88c) | <small>`4f673e94a6b1450a834669d2bf1df88c`</small> | 2026-06-22 | RS-485 (multi-drop, max 8 devices) |
-| [**CHESTER Serial RS-232**](chester-serial.md#chester-serial-rs-232) | [**v3.5.5**](https://firmware.hardwario.com/chester/2d8cad0a6a554a13aa4364566140b742) | <small>`2d8cad0a6a554a13aa4364566140b742`</small> | 2026-06-22 | RS-232 (point-to-point, max 1 device) |
-| [**CHESTER wM-Bus**](chester-wm-bus.md#chester-wm-bus-1) | [**v3.5.5**](https://firmware.hardwario.com/chester/714424a73abf4bcdaeee7960091dfd93) | <small>`714424a73abf4bcdaeee7960091dfd93`</small> | 2026-06-22 |  |
+| [**CHESTER Clime**](chester-clime.md#chester-clime) | [**v4.0.0**](https://firmware.hardwario.com/chester/86dc4442f17a466e80bbd7899bdc344d) | <small>`86dc4442f17a466e80bbd7899bdc344d`</small> | 2026-08-10 |  |
+| [**CHESTER Clime IAQ**](chester-clime.md#chester-clime-iaq) | [**v4.0.0**](https://firmware.hardwario.com/chester/1d0f4d4bca4d4ac98e3fe1e5694cd756) | <small>`1d0f4d4bca4d4ac98e3fe1e5694cd756`</small> | 2026-08-10 |  |
+| [**CHESTER Clime RTD**](chester-clime.md#chester-clime-rtd) | [**v4.0.0**](https://firmware.hardwario.com/chester/ce650dfedcff467f955f4a6e60dc5fd2) | <small>`ce650dfedcff467f955f4a6e60dc5fd2`</small> | 2026-08-10 |  |
+| [**CHESTER Clime TC**](chester-clime.md#chester-clime-tc) | [**v4.0.0**](https://firmware.hardwario.com/chester/89d1ea185a35468989c3c675f486c141) | <small>`89d1ea185a35468989c3c675f486c141`</small> | 2026-08-10 |  |
+| [**CHESTER Clime SPS30**](chester-clime.md) | [**v4.0.0**](https://firmware.hardwario.com/chester/bb86d55e19904d0295063a1e643715d6) | <small>`bb86d55e19904d0295063a1e643715d6`</small> | 2026-08-10 |  |
+| [**CHESTER Clime Radon**](chester-clime.md) | [**v4.0.0**](https://firmware.hardwario.com/chester/9441cc4abb7d49ec8496f9246ea88865) | <small>`9441cc4abb7d49ec8496f9246ea88865`</small> | 2026-08-10 |  |
+| [**CHESTER Control**](chester-control.md#chester-control) | [**v4.0.0**](https://firmware.hardwario.com/chester/9bfe1038ecec48bfa6515858ebb00c8d) | <small>`9bfe1038ecec48bfa6515858ebb00c8d`</small> | 2026-08-10 |  |
+| [**CHESTER Control 8Ch Z**](chester-control.md) | [**v4.0.0**](https://firmware.hardwario.com/chester/524b75145769423a835e92fe510f6622) | <small>`524b75145769423a835e92fe510f6622`</small> | 2026-08-10 | Support for second X0 module in slot B (8 channels) and CHESTER-Z |
+| [**CHESTER Control Z**](chester-control.md#chester-control-z) | [**v4.0.0**](https://firmware.hardwario.com/chester/6e70c29332114720bee4323e1ae91634) | <small>`6e70c29332114720bee4323e1ae91634`</small> | 2026-08-10 | Support for CHESTER-Z |
+| [**CHESTER Current**](chester-current.md#chester-current-1) | [**v4.0.0**](https://firmware.hardwario.com/chester/218eb822e7d7463b95dd8505d0b715a3) | <small>`218eb822e7d7463b95dd8505d0b715a3`</small> | 2026-08-10 |  |
+| [**CHESTER Current Z**](chester-current.md#chester-current-z) | [**v4.0.0**](https://firmware.hardwario.com/chester/26467563906c433192b557dfdf0a21d9) | <small>`26467563906c433192b557dfdf0a21d9`</small> | 2026-08-10 | Support for CHESTER-Z |
+| **CHESTER Demo** | [**v4.0.0**](https://firmware.hardwario.com/chester/4f5bbf9d912a44e4959e379f9e5e4afc) | <small>`4f5bbf9d912a44e4959e379f9e5e4afc`</small> | 2026-08-10 |  |
+| [**CHESTER Meteo**](chester-meteo.md#chester-meteo) | [**v4.0.0**](https://firmware.hardwario.com/chester/68ca9b1154d54ecf96416644163f0378) | <small>`68ca9b1154d54ecf96416644163f0378`</small> | 2026-08-10 |  |
+| [**CHESTER Meteo Z**](chester-meteo.md#chester-meteo-z) | [**v4.0.0**](https://firmware.hardwario.com/chester/a1480cab823f43ebbe60d17cffa61d37) | <small>`a1480cab823f43ebbe60d17cffa61d37`</small> | 2026-08-10 | Support for CHESTER-Z |
+| [**CHESTER Meteo P**](chester-meteo.md) | [**v4.0.0**](https://firmware.hardwario.com/chester/b3f4f2d6b17241c1a86d922991b8c5eb) | <small>`b3f4f2d6b17241c1a86d922991b8c5eb`</small> | 2026-08-10 | Support for pyranometer |
+| [**CHESTER Meteo M**](chester-meteo.md) | [**v4.0.0**](https://firmware.hardwario.com/chester/0005c49e167441ccad985465a5b9b76f) | <small>`0005c49e167441ccad985465a5b9b76f`</small> | 2026-08-10 | Modbus variant supporting Lambrecht and Sensecap/OPM sensors (select via meteo-type) |
+| [**CHESTER Motion**](chester-motion.md#chester-motion) | [**v4.0.0**](https://firmware.hardwario.com/chester/8f33773522e84b64a767547526914547) | <small>`8f33773522e84b64a767547526914547`</small> | 2026-08-10 |  |
+| [**CHESTER Push**](chester-push.md#chester-push) | [**v4.0.0**](https://firmware.hardwario.com/chester/afa08a5aff3948b7b4238d4c9e044c7d) | <small>`afa08a5aff3948b7b4238d4c9e044c7d`</small> | 2026-08-10 |  |
+| [**CHESTER Push FM**](chester-push.md) | [**v4.0.0**](https://firmware.hardwario.com/chester/b52ef7d705cf42b883fcaee1f024ae1f) | <small>`b52ef7d705cf42b883fcaee1f024ae1f`</small> | 2026-08-10 |  |
+| [**CHESTER Range**](chester-range.md#chester-range) | [**v4.0.0**](https://firmware.hardwario.com/chester/949bf6a1220146849d7ba711632ef7bc) | <small>`949bf6a1220146849d7ba711632ef7bc`</small> | 2026-08-10 |  |
+| [**CHESTER Range Z**](chester-range.md#chester-range-z) | [**v4.0.0**](https://firmware.hardwario.com/chester/2bc41e650fc54b069d7d08c4977b8644) | <small>`2bc41e650fc54b069d7d08c4977b8644`</small> | 2026-08-10 | Support for CHESTER-Z |
+| [**CHESTER Scale**](chester-scale.md#chester-scale) | [**v4.0.0**](https://firmware.hardwario.com/chester/e30ae54e3d00439a92bea441df62993a) | <small>`e30ae54e3d00439a92bea441df62993a`</small> | 2026-08-10 |  |
+| [**CHESTER Scale Z**](chester-scale.md#chester-scale-z) | [**v4.0.0**](https://firmware.hardwario.com/chester/755c61dd167f4244ba456fa244de9bd9) | <small>`755c61dd167f4244ba456fa244de9bd9`</small> | 2026-08-10 | Support for CHESTER-Z |
+| [**CHESTER Serial RS-485**](chester-serial.md#chester-serial-rs-485) | [**v4.0.0**](https://firmware.hardwario.com/chester/163b633d47e546a1bb261d1555eee64f) | <small>`163b633d47e546a1bb261d1555eee64f`</small> | 2026-08-10 | RS-485 (multi-drop, max 8 devices) |
+| [**CHESTER Serial RS-232**](chester-serial.md#chester-serial-rs-232) | [**v4.0.0**](https://firmware.hardwario.com/chester/e8b8facaea3941629c3d254804b429e1) | <small>`e8b8facaea3941629c3d254804b429e1`</small> | 2026-08-10 | RS-232 (point-to-point, max 1 device) |
+| [**CHESTER wM-Bus**](chester-wm-bus.md#chester-wm-bus-1) | [**v4.0.0**](https://firmware.hardwario.com/chester/26e000736e254c588279ee869aae3be0) | <small>`26e000736e254c588279ee869aae3be0`</small> | 2026-08-10 |  |
 
 </div>
 

@@ -116,7 +116,7 @@ You can skip this step if you already have **Chocolatey** installed on your syst
 
 1. Close the **Windows Powershell** application.
 
-### Install Toolchain
+## Create Application
 
 :::caution
 
@@ -124,55 +124,17 @@ Close your previous PowerShell and open new one with user rights. **Do not conti
 
 :::
 
+You should be now in your home directory. However, you might continue the next steps in the different directory where you want the project.
+
+Do not use a folder that has spaces anywhere in the path.
+
 1. Open the **Windows PowerShell** application with **user** rights.
 
-2. Go to your home directory:
+1. Go to your home directory:
 
    ```
    Set-Location ~
    ```
-
-3. Download the toolchain:
-
-   ```
-   wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.0/zephyr-sdk-0.17.0_windows-x86_64.7z -O zephyr-sdk-0.17.0_windows-x86_64.7z
-   ```
-
-4. Unzip the toolchain:
-
-   ```
-   7z x zephyr-sdk-0.17.0_windows-x86_64.7z
-   ```
-
-5. Go to the toolchain directory:
-
-   ```
-   cd zephyr-sdk-0.17.0
-   ```
-
-6. Run the **Zephyr SDK** bundle setup script:
-
-   ```
-   .\setup.cmd
-   ```
-
-   :::tip
-
-   Answer `Y` to everything.
-
-   :::
-
-7. Go back to your home directory
-
-   ```
-   cd ..
-   ```
-
-## Create Application
-
-You should be now in your home directory. However, you might continue the next steps in the different directory where you want the project.
-
-Do not use a folder that has spaces anywhere in the path.
 
 1. Create the directory for your application:
 
@@ -246,41 +208,23 @@ Do not use a folder that has spaces anywhere in the path.
    west update
    ```
 
+1. Install the **Python** dependencies:
+
+   ```
+   west packages pip --install
+   ```
+
 1. Export **Zephyr** environment:
 
    ```
    west zephyr-export
    ```
 
-1. Install the **Python** dependencies:
+1. Install the **Zephyr SDK**:
 
    ```
-   pip install -r zephyr/scripts/requirements.txt
+   west sdk install -t arm-zephyr-eabi
    ```
-
-   ```
-   pip install -r nrf/scripts/requirements.txt
-   ```
-
-   ```
-   pip install -r bootloader/mcuboot/scripts/requirements.txt
-   ```
-
-   ```
-   pip install -r chester/scripts/requirements.txt
-   ```
-
-   :::caution
-
-   At the end of the installation process, you will see this "error" message:
-
-   ```
-   ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts. pyocd 0.35.1 requires pylink-square<2.0,>=1.0, but you have pylink-square 0.12.0 which is incompatible.
-   ```
-
-   It can be considered as a warning only, and it is safe to ignore it.
-
-   :::
 
 ## Test Build and Flash
 

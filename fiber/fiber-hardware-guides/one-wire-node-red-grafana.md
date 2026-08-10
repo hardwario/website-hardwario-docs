@@ -135,19 +135,29 @@ want when comparing a week of history.
 
 :::
 
-## Where InfluxDB and Grafana run
+## Storing and visualizing the readings
 
-FIBER ships a fixed image built around its own application, and **does not include InfluxDB,
-Grafana or Node-RED** — there is no package manager on the device to add them with either. Run
-that half of the stack on a [FIBER Lite](/fiber/fiber-lite/introduction) unit or any other host
-on the network, and point the Node-RED flow above at FIBER over the network.
+Node-RED, InfluxDB and Grafana are part of the same shared stack on both variants — see
+[Install Node-RED](/fiber/installation/node-red), [Install InfluxDB](/fiber/installation/influxdb)
+and [Install Grafana](/fiber/installation/grafana). The flow above therefore writes to InfluxDB on
+the same device, and Grafana reads it back locally.
 
-FIBER does run **Mosquitto**, so publishing readings to MQTT and subscribing from the machine
-that holds InfluxDB is the path of least resistance.
+A time series of `temperature` grouped by the `sensor` tag is the usual starting point for a
+panel.
 
-Once the data is in InfluxDB, build the panels as described in
-[Install Grafana](/fiber/installation/grafana) — a time series of `temperature` grouped by the
-`sensor` tag is the usual starting point.
+:::note
+
+Check that the stack is present before wiring the flow up:
+
+```sh
+command -v influxd grafana-server node-red
+```
+
+If those come back empty, the unit is running an image built before they were included. Point the
+flow at another host that has them — FIBER runs **Mosquitto**, so publishing the readings to MQTT
+and subscribing from that machine is the path of least resistance.
+
+:::
 
 ## Troubleshooting
 

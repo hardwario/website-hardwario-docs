@@ -16,6 +16,20 @@ The two variants only diverge at the hardware level (flashing, RTC, the LoRaWAN 
 USB vs. SPI connection) — the page itself has tabs at those few points. Everything else,
 including InfluxDB, Grafana, and the branded Dashboard, is identical and installed on both.
 
+:::warning Which device is this for?
+
+**A FIBER you received is already set up — there is nothing on these pages for you to run.** It
+ships as a finished appliance: the operating system, ChirpStack, the concentrator and the rest of
+the stack are all part of its image, and it updates as a whole rather than package by package. Go
+straight to [Register a Gateway and a Device](installation/register-device), and to
+[**FIBER Hardware Guides**](category/fiber-hardware-guides) for the display and 1-Wire sensors.
+
+These pages are the **build procedure** — how that image is put together, and how to bring up a
+**FIBER Lite** unit from a blank microSD card. Follow them for FIBER Lite, or when building a
+FIBER image from scratch.
+
+:::
+
 :::info
 
 See [**FIBER Lite**](fiber-lite/introduction) in the sidebar for FIBER Lite's hardware

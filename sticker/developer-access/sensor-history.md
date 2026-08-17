@@ -47,7 +47,7 @@ A channel whose capability is off — or a Dallas slot's humidity — is simply 
 ## Reading the buffer back
 
 - **Over LoRaWAN** — the `req_history` downlink streams the matching records back as `history_frame` messages on fPort 85 (see [**Downlink Commands**](../lorawan-network-server/downlink-commands.md)).
-- **Over NFC** — HARDWARIO Manager reads the buffer a page per tap (`req_history_page`); see the [**Sensor history guide**](../nfc-configurator-app/guides/sensor-history.md).
+- **Over NFC** — HARDWARIO Manager reads the buffer a page per tap (`req_history_page`); see the [**Sensor history guide**](/apps/hardwario-manager/sticker/sensor-history).
 
 ## Storage & capacity
 

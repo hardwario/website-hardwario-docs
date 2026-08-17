@@ -8,15 +8,15 @@ import Link from '@docusaurus/Link';
 
 # APPS
 
+## Configuring devices
+
+**[HARDWARIO Manager](/apps/hardwario-manager)** is the mobile app for setting up HARDWARIO devices in the field — configure a **STICKER** over NFC, or connect to a **CHESTER** over Bluetooth to read its state, edit its configuration, run shell commands, and update its firmware.
+
+---
+
+## Visualizing data
+
 These applications visualize and process data from HARDWARIO devices. The table below lists each platform with its documentation, difficulty level, and a short description.
-
----
-
-## HARDWARIO Manager
-
-**[HARDWARIO Manager](/apps/hardwario-manager/first-steps)** is the HARDWARIO mobile app for setting devices up in the field over NFC or Bluetooth Low Energy — the step before their data reaches any of the platforms below.
-
----
 
 | Platform | Web | Difficulty | Description |
 |----------|-----|------------|-------------|

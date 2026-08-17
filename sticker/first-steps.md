@@ -62,7 +62,7 @@ https://docs.hardwario.com/sticker/catalog-applications/catalog-applications/
 5. Wait for the first uplink (the timing depends on the installed catalog app and reporting interval).
 
 #### Configure over NFC
-STICKER is configured over **NFC** — this is the standard way to set it up, and it works even when batteries are not inserted (NFC energy harvesting). Use the [**HARDWARIO Manager**](nfc-configurator-app/setup.md) to write LoRaWAN settings (DevEUI, AppEUI/JoinEUI, AppKey) before installation:
+STICKER is configured over **NFC** — this is the standard way to set it up, and it works even when batteries are not inserted (NFC energy harvesting). Use the [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration) to write LoRaWAN settings (DevEUI, AppEUI/JoinEUI, AppKey) before installation:
 - STICKER Power Management: https://docs.hardwario.com/sticker/power-management/
 
 
@@ -70,7 +70,7 @@ STICKER is configured over **NFC** — this is the standard way to set it up, an
 
 ## Step 3: Choose your LoRaWAN backend
 
-Before registering the device, find your STICKER's **DevEUI**, **AppEUI/JoinEUI** and **AppKey** using the [**HARDWARIO Manager**](nfc-configurator-app/setup.md).
+Before registering the device, find your STICKER's **DevEUI**, **AppEUI/JoinEUI** and **AppKey** using the [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/device-info).
 
 ### ChirpStack v4
 Best if you want a private LoRaWAN network you control.
@@ -98,7 +98,7 @@ Then add the STICKER payload decoder:
 
 STICKER can be configured to adjust reporting intervals, set alarm thresholds, or change LoRaWAN keys.
 
-Configuration is done over **NFC** — use a smartphone with the [**HARDWARIO Manager**](nfc-configurator-app/setup.md) to write the settings, no tools or cables needed.
+Configuration is done over **NFC** — use a smartphone with the [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration) to write the settings, no tools or cables needed.
 
 For a full list of all configuration parameters and commands — and the shell (RTT terminal) used over a debug connection — see:
 

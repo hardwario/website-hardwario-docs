@@ -7,9 +7,122 @@ const sidebars = {
     {
       type: 'category',
       label: 'HARDWARIO Manager',
+      link: {
+        type: 'doc',
+        id: 'hardwario-manager/index',
+      },
       collapsed: true,
       items: [
         'hardwario-manager/first-steps',
+        'hardwario-manager/install',
+        'hardwario-manager/settings',
+        'hardwario-manager/atelos',
+        {
+          type: 'category',
+          label: 'STICKER',
+          link: {
+            type: 'doc',
+            id: 'hardwario-manager/sticker/index',
+          },
+          collapsed: true,
+          items: [
+            {
+              type: 'category',
+              label: 'Saved STICKERs',
+              link: {
+                type: 'doc',
+                id: 'hardwario-manager/sticker/saved-stickers',
+              },
+              collapsed: true,
+              items: [
+                'hardwario-manager/sticker/tags',
+                'hardwario-manager/sticker/change-log',
+              ],
+            },
+            'hardwario-manager/sticker/device-info',
+            {
+              type: 'category',
+              label: 'Configuration',
+              link: {
+                type: 'doc',
+                id: 'hardwario-manager/sticker/configuration',
+              },
+              collapsed: true,
+              items: [
+                'hardwario-manager/sticker/alarms',
+                'hardwario-manager/sticker/offline-configuration',
+                'hardwario-manager/sticker/batch-export',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Templates',
+              link: {
+                type: 'doc',
+                id: 'hardwario-manager/sticker/templates',
+              },
+              collapsed: true,
+              items: [
+                'hardwario-manager/sticker/template-generator',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Tools',
+              link: {
+                type: 'doc',
+                id: 'hardwario-manager/sticker/tools',
+              },
+              collapsed: true,
+              items: [
+                'hardwario-manager/sticker/one-wire-sensors',
+                'hardwario-manager/sticker/sample-data',
+                'hardwario-manager/sticker/sensor-history',
+                'hardwario-manager/sticker/reset',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'CHESTER',
+          link: {
+            type: 'doc',
+            id: 'hardwario-manager/chester/index',
+          },
+          collapsed: true,
+          items: [
+            'hardwario-manager/chester/connect',
+            'hardwario-manager/chester/device-info',
+            'hardwario-manager/chester/configuration',
+            {
+              type: 'category',
+              label: 'Terminal',
+              link: {
+                type: 'doc',
+                id: 'hardwario-manager/chester/terminal',
+              },
+              collapsed: true,
+              items: [
+                'hardwario-manager/chester/shared-sessions',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Tools',
+              link: {
+                type: 'doc',
+                id: 'hardwario-manager/chester/tools',
+              },
+              collapsed: true,
+              items: [
+                'hardwario-manager/chester/firmware-update',
+              ],
+            },
+            'hardwario-manager/chester/ble-tags',
+            'hardwario-manager/chester/troubleshooting',
+          ],
+        },
       ],
     },
     {

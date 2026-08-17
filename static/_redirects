@@ -298,6 +298,37 @@
 /tower/hardware-modules/about-encoder-module/about-lcd-module /tower/hardware-modules/about-lcd-module                 301
 /tower/hardware-modules/about-encoder-module/about-lcd-module/ /tower/hardware-modules/about-lcd-module                 301
 
+# --- HARDWARIO Manager docs consolidated under APPS (2026-08-12). The app is now
+# --- documented as one app-centric set at /apps/hardwario-manager/ instead of
+# --- being split across the STICKER product docs. The old folder was named for
+# --- the retired "NFC Configurator", so every page below moved.
+/sticker/nfc-configurator-app/nfc-configurator-setup                 /apps/hardwario-manager/install                       301
+/sticker/nfc-configurator-app/nfc-configurator-setup/                /apps/hardwario-manager/install                       301
+/sticker/nfc-configurator-app/hardwario-manager-features             /apps/hardwario-manager                               301
+/sticker/nfc-configurator-app/hardwario-manager-features/            /apps/hardwario-manager                               301
+/sticker/nfc-configurator-app/nfc-configurator-config                /apps/hardwario-manager/sticker/configuration         301
+/sticker/nfc-configurator-app/nfc-configurator-config/               /apps/hardwario-manager/sticker/configuration         301
+/sticker/nfc-configurator-app/nfc-configurator-template-generator    /apps/hardwario-manager/sticker/template-generator    301
+/sticker/nfc-configurator-app/nfc-configurator-template-generator/   /apps/hardwario-manager/sticker/template-generator    301
+/sticker/nfc-configurator-app/guides/hm-guide-read-info-keys         /apps/hardwario-manager/sticker/device-info           301
+/sticker/nfc-configurator-app/guides/hm-guide-read-info-keys/        /apps/hardwario-manager/sticker/device-info           301
+/sticker/nfc-configurator-app/guides/hm-guide-scan-multiple          /apps/hardwario-manager/sticker/batch-export          301
+/sticker/nfc-configurator-app/guides/hm-guide-scan-multiple/         /apps/hardwario-manager/sticker/batch-export          301
+/sticker/nfc-configurator-app/guides/hm-guide-templates              /apps/hardwario-manager/sticker/templates             301
+/sticker/nfc-configurator-app/guides/hm-guide-templates/             /apps/hardwario-manager/sticker/templates             301
+/sticker/nfc-configurator-app/guides/hm-guide-1wire                  /apps/hardwario-manager/sticker/one-wire-sensors      301
+/sticker/nfc-configurator-app/guides/hm-guide-1wire/                 /apps/hardwario-manager/sticker/one-wire-sensors      301
+/sticker/nfc-configurator-app/guides/hm-guide-sample-data            /apps/hardwario-manager/sticker/sample-data           301
+/sticker/nfc-configurator-app/guides/hm-guide-sample-data/           /apps/hardwario-manager/sticker/sample-data           301
+/sticker/nfc-configurator-app/guides/hm-guide-sensor-history         /apps/hardwario-manager/sticker/sensor-history        301
+/sticker/nfc-configurator-app/guides/hm-guide-sensor-history/        /apps/hardwario-manager/sticker/sensor-history        301
+/sticker/nfc-configurator-app/guides/hm-guide-resets                 /apps/hardwario-manager/sticker/reset                 301
+/sticker/nfc-configurator-app/guides/hm-guide-resets/                /apps/hardwario-manager/sticker/reset                 301
+/sticker/nfc-configurator-app/guides/hm-guide-tags                   /apps/hardwario-manager/sticker/tags                  301
+/sticker/nfc-configurator-app/guides/hm-guide-tags/                  /apps/hardwario-manager/sticker/tags                  301
+/sticker/nfc-configurator-app/guides/hm-guide-change-log             /apps/hardwario-manager/sticker/change-log            301
+/sticker/nfc-configurator-app/guides/hm-guide-change-log/            /apps/hardwario-manager/sticker/change-log            301
+
 
 # --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
 # --- every rule after the first splat toward the 100-dynamic-rule limit and

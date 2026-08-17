@@ -38,7 +38,7 @@ Alongside the secret key, each device holds a **vendor token** — a privileged,
 - The **secret key** secures the everyday encrypted NFC channel used to read and write configuration.
 - The **vendor token** authorizes the privileged operations the secret key cannot: **changing the secret key** (re-keying the device) and the **vendor reset** tier above — which wipes the device back to its serial number and vendor token, setting a new secret key in the process.
 
-Because it unlocks re-keying and the deepest reset, the vendor token is never needed for routine configuration and is held only by the device owner. In [**HARDWARIO Manager**](nfc-configurator-app/setup.md) it is stored per device under **Saved Stickers** and used under **Tools → Vendor changes**; see the [**Reset guide**](nfc-configurator-app/guides/resets.md).
+Because it unlocks re-keying and the deepest reset, the vendor token is never needed for routine configuration and is held only by the device owner. In [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/saved-stickers) it is stored per device under **Saved STICKERs** and used under **Tools → Vendor changes**; see the [**Reset guide**](/apps/hardwario-manager/sticker/reset).
 
 ### Pulse counters persist across power loss
 
@@ -61,7 +61,7 @@ If the configured **DevEUI is all-zero** (a device that has never been provision
 The device stays radio-silent until it is given a real DevEUI (and the rest of the LoRaWAN keys) and **rebooted**. On a developer console, `ats lrw status` reports `DISABLED`.
 
 :::tip
-A device can be provisioned over NFC while powered off. See the [**HARDWARIO Manager**](nfc-configurator-app/setup.md). After writing the keys, the device leaves radio-silent mode on its next boot.
+A device can be provisioned over NFC while powered off. See [**Configure a powered-off device**](/apps/hardwario-manager/sticker/offline-configuration). After writing the keys, the device leaves radio-silent mode on its next boot.
 :::
 
 ### Debug deep-sleep (auto-suspend)

@@ -12,7 +12,7 @@ The app reaches a device over one of two wireless links, depending on the produc
 | Link | Used by | Notes |
 |---|---|---|
 | **NFC** | STICKER | Works even with **no batteries inserted** (NFC energy harvesting), so a device can be prepared before it is installed. Needs an **Android** phone with NFC. |
-| **Bluetooth Low Energy** | FIBER | Provisioning and configuration over a paired Bluetooth connection. |
+| **Bluetooth Low Energy** | CHESTER | Configuration, shell access and firmware updates over a paired Bluetooth connection. |
 
 ---
 
@@ -42,7 +42,6 @@ The app also asks for the **Camera** permission, but only the first time you sca
 
 ## 3) Open the app and pick your device
 
-<img src="/img/hw-manager/hw-manager-landing-page.jpg" alt="HARDWARIO Manager home screen listing the supported device families" width="320" />
 
 1. Open **HARDWARIO Manager** and choose the device family you are working with.
 2. Pick what you want to do — for example **Device info** or **Configuration**.
@@ -58,4 +57,5 @@ Each product documents what HARDWARIO Manager can do with it:
 
 | Device | Guide |
 |---|---|
-| **STICKER** | [**Set up STICKER over NFC →**](/sticker/nfc-configurator-app/nfc-configurator-setup) |
+| **STICKER** | [**Set up STICKER over NFC →**](/apps/hardwario-manager/sticker) |
+| **CHESTER** | [**Connect to CHESTER over Bluetooth →**](/apps/hardwario-manager/chester) |

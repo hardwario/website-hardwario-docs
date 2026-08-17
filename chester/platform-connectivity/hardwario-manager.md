@@ -2,152 +2,36 @@
 slug: hardwario-manager
 title: HARDWARIO Manager
 ---
-import Image from '@theme/IdealImage';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # HARDWARIO Manager
 
-The **HARDWARIO Manager** mobile app allows you via **Bluetooth Low Energy** to:
+CHESTER is managed from the **HARDWARIO Manager** mobile app over **Bluetooth
+Low Energy**. Connect the phone to a device and you can read its state, edit its
+configuration, drive its shell, update its firmware, and reboot it.
 
-- Show device information
-- Configure the device over the terminal
-- Update device firmware
+The app is documented in full under **APPS**:
 
-:::info
-We also provide a [video tutorial](https://docs.hardwario.com/chester/videos-chester/chester-connect-phone) demonstrating the procedure for pairing the CHESTER device with a mobile phone using the HARDWARIO Manager application.
+- [**HARDWARIO Manager**](/apps/hardwario-manager) — what the app does, and how to install it
+- [**CHESTER over Bluetooth**](/apps/hardwario-manager/chester) — the CHESTER section
+- [**Connect and pair**](/apps/hardwario-manager/chester/connect) — scanning the device QR code, the passkey, and pairing
+- [**Device info**](/apps/hardwario-manager/chester/device-info) — serial number, firmware, uptime, and the device controls
+- [**Configuration**](/apps/hardwario-manager/chester/configuration) — the guided and full configuration views
+- [**Terminal**](/apps/hardwario-manager/chester/terminal) — the device shell over Bluetooth
+- [**Tools**](/apps/hardwario-manager/chester/tools) — firmware update, reboot, factory reset
+- [**BLE tags**](/apps/hardwario-manager/chester/ble-tags) — bind external BLE sensor tags to slots
+- [**Troubleshooting**](/apps/hardwario-manager/chester/troubleshooting) — connection, pairing and update problems
+
+:::info Which version this describes
+These pages describe the current HARDWARIO Manager app. If the phone has an
+older version installed, its CHESTER screens will differ from what is described
+there.
 :::
 
-## App Installation
+## Firmware Update {#firmware-update}
 
-<Tabs groupId="mobile-platform">
+Firmware is flashed over Bluetooth from a **QR code carrying the firmware link**.
+See [**Firmware update**](/apps/hardwario-manager/chester/firmware-update) for the
+procedure, the update stages, and what happens when an update fails.
 
-<TabItem value="android" label="Android" default>
-
-Download the Android [HARDWARIO Manager](https://play.google.com/store/apps/details?id=com.hardwario.manager) app.
-
-</TabItem>
-
-<TabItem value="ios" label="iOS">
-
-Download the iOS [HARDWARIO Manager](https://apps.apple.com/cz/app/hardwario-manager/id6444803082) app.
-
-</TabItem>
-
-</Tabs>
-
-## Scan List
-
-When you open **HARDWARIO Manager**, you will see the **SCAN LIST** page. Here you will see nearby devices, which use Bluetooth-enabled applications.
-
-Choose a device from the list to connect, or use a **QR code** button in the top right corner. This **QR code** feature can be used only if you already know the **BLE passkey** or your device is already paired with the phone. Otherwise, follow instructions from the next [Device Pairing](#device-pairing) chapter.
-
-<div class="container">
-  <div class="row">
-    <div class="col col--5">
-      <div><Image img={require('./images/manager-scan-list.png')} alt="SCAN LIST page listing nearby CHESTER devices with signal strength and Connect buttons" /></div>
-    </div>
-    <div class="col col--8">
-    </div>
-  </div>
-</div>
-<br />
-
-## Device Pairing
-
-To manage your **CHESTER** device, you have to connect to it via Bluetooth. Every device has a **unique** pairing passkey, which you can obtain if you scan the QR on the back side of your device. Use your favorite QR scan app or camera app to read **QR code** on the back of the **CHESTER** device. This **QR code** will open a webpage that contains the **BLE passkey**, which you need to pair with your phone.
-
-:::caution
-You can't use the built-in QR code reader in **HARDWARIO Manager** app to get the BLE passkey. Use your favorite QR scan app or camera app to read **QR code** to get the BLE passkey to pair your device.
-:::
-
-:::tip
-If you need further assistance or a visual demonstration of the process described in this guide, consult the [Video Guide](https://docs.hardwario.com/chester/videos-chester/chester-connect-phone).
-:::
-
-## App Menu
-
-When you connect to **CHESTER**, you can use a menu to browse the following categories
-
-### Show Information
-
-This page shows basic information about hardware version, variant, firmware version and device uptime.
-
-<div class="container">
-  <div class="row">
-    <div class="col col--5">
-      <div><Image img={require('./images/manager-general-info.png')} alt="Device information page showing vendor, product name, hardware variant, firmware version, and uptime" /></div>
-    </div>
-    <div class="col col--8">
-    </div>
-  </div>
-</div>
-<br />
-
-:::tip
-
-If the firmware application is supported by **HARDWARIO Manager**, the **OPEN APPLICATION** button appears at the bottom of the information page.
-
-:::
-
-### Command Terminal
-
-The purpose of the **Command Terminal** is to easily make changes in the settings of your app or find out what setting is applied.
-
-- You have to type a command (for example here it is **info** command) and send it by black arrow **(1)**
-- The console will return this command to confirm what was sent **(2)**
-- The console will return wanted information or it will set a certain value **(3)**.
-- You can select an already used command in **Command history (4)**.
-
-
-<div class="container">
-  <div class="row">
-    <div class="col col--5">
-      <div><Image img={require('./images/manager-console.png')} alt="Command Terminal with the info command output and Command history panel, steps 1-4 marked" /></div>
-    </div>
-    <div class="col col--8">
-    </div>
-  </div>
-</div>
-<br />
-
-:::tip
-
-Anytime when you feel lost, just type the **help** command.
-
-:::
-
-### Firmware Update
-
-You can update your **CHESTER** device via this page. You can find [**pre-built binaries**](../catalog-applications/index.md#application-firmware) for catalog applications, or you will receive a link to your custom build firmware via e-mail.
-
-Click on **SCAN QR CODE** to get the link to firmware **(1)**. When you do so and scan a valid QR code, you get information about firmware **(2)**. If this information is OK, you can start flashing by pressing **UPDATE FIRMWARE (3)**. You can click at **START OVER**, if you want to update to different firmware **(4)**.
-Firmware Update Interruption: Should the phone disconnect during a firmware swap, please attempt the update again. The final firmware version is stored in the device's memory but requires confirmation for use. Bluetooth communication timeouts may occur.
-
-<div class="container">
-  <div class="row">
-    <div class="col col--8">
-      <div><Image img={require('./images/manager-firmware-update.png')} alt="Firmware Update screens: SCAN QR CODE, firmware file details, UPDATE FIRMWARE and START OVER, steps 1-4 marked" /></div>
-    </div>
-    <div class="col col--12">
-    </div>
-  </div>
-</div>
-
-:::tip
-If you need further assistance or a visual demonstration of the process described in this guide, consult the [Video Guide](https://docs.hardwario.com/chester/videos-chester/chester-update-phone).
-:::
-
-### Device Reboot
-
-This screen will let you remotely restart your device.
-
-<div class="container">
-  <div class="row">
-    <div class="col col--4">
-      <div><Image img={require('./images/manager-restart-device.png')} alt="App menu with Reboot device selected and a confirmation dialog asking to reboot the connected CHESTER" /></div>
-    </div>
-    <div class="col col--8">
-    </div>
-  </div>
-</div>
+You can find [**pre-built binaries**](../catalog-applications/index.md#application-firmware)
+for catalog applications; a custom build arrives as a link by e-mail.

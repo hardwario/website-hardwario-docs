@@ -10,6 +10,37 @@ In this article, you will find details on various supported cellular networks an
 
 ---
 
+## Network Requirements
+
+Before deploying **CHESTER** on a network you have not tested before, compare what the device supports with what the local operator actually provides. The two lists below are meant to be used together — the first one states the device capabilities, the second one is a checklist you can forward to your SIM card provider or mobile operator.
+
+### What the Device Supports
+
+| Capability | CHESTER support |
+| :------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Radio technology**      | **LTE-M** (Cat M1) and **NB-IoT** (Cat NB1). Both technologies are supported and their priority is configurable — see [`mode`](#mode--network-mode-selection).       |
+| **Frequency bands**       | 1, 2, 3, 4, 5, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28 and 66. No band lock is applied by default — the modem scans all supported bands. The scan can be narrowed down with [`bands`](#bands--frequency-band-lock). |
+| **Operator selection**    | Automatic PLMN selection, or a manually forced PLMN ID — see [`network`](#network--plmn-selection).                                                                  |
+| **Data roaming**          | Supported. The device accepts the *registered, roaming* state as a fully valid registration.                                                                         |
+| **APN**                   | Both the default (network-provided) APN and an explicitly configured one — see [`apn`](#apn--network-apn-access-point-name).                                         |
+| **APN authentication**    | `none`, `PAP` or `CHAP` — see [`auth`](#auth--authentication-method).                                                                                                |
+| **SIM form factor**       | **Nano-SIM (4FF)**. A soldered **MFF2** SIM chip variant is available for bulk orders.                                                                               |
+| **Power saving**          | The firmware requests **PSM** (Power Saving Mode). PSM is not a hard requirement — **CHESTER** also works on networks that do not grant it, only at the cost of a higher power consumption. |
+
+### What to Confirm with Your Operator
+
+Each answer below maps directly to one of the [configuration parameters](#configuration-parameters) described later in this article.
+
+* **Bands** — which of the supported bands does the network use at the deployment site, separately for LTE-M and NB-IoT?
+* **APN** — is an explicit APN required, or can the default (network-provided) APN be used?
+* **APN authentication** — is `PAP` or `CHAP` required and, if so, what are the credentials?
+* **PLMN** — must a specific PLMN ID be forced, for example when the SIM operates in permanent roaming?
+* **Data roaming** — is data roaming enabled on the subscription?
+* **PSM** — does the network support and grant **PSM**?
+* **Other network-specific requirements** — IMEI/IMSI whitelisting, fixed IP address assignment, firewall or port restrictions on the operator side.
+
+---
+
 ## Network Mode Configuration
 
 Some catalog firmwares allows configuration to use NB-IoT/LTE or LoRaWAN network. This firmware after power-up is not sending data, the **LED is blinking yellow** and you need to configure correct radio mode.
@@ -140,6 +171,26 @@ Specifies the preferred network connectivity modes and their priority:
 - `nb-iot` – Use **NB-IoT only**.
 
 > ⚠️ Ensure the selected mode is supported by your SIM card and the local network operator.
+
+---
+
+### `bands` – Frequency Band Lock
+Restricts the modem to a subset of the supported frequency bands:
+
+- Leave empty (`""`) to let the modem **scan all supported bands** — this is the default and the recommended setting.
+- Enter a space-separated list of band numbers (for example `"3 8 20"`) to lock the modem to those bands only.
+
+Locking the bands shortens the initial network search, but the device will **not** register if the operator uses a band that is not in the list. Only set it once you have confirmed the bands used at the deployment site with your operator.
+
+---
+
+### `network` – PLMN Selection
+Forces registration to a specific operator, identified by its **PLMN ID** (MCC + MNC, for example `23003`):
+
+- Leave empty (`""`) for **automatic** operator selection — this is the default.
+- Enter a PLMN ID to force **manual** selection, which is typically needed for roaming SIM cards that would otherwise attach to an unsuitable partner network.
+
+The PLMN IDs of the roaming partners used by the **HARDWARIO** Vodafone SIM cards are listed in the [Vodafone SIM EU28+2](#vodafone-sim-eu282) table.
 
 ---
 

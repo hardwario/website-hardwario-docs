@@ -28,7 +28,8 @@ across the device's secret key. It needs an ATELOS login — see
 [**ATELOS account**](../atelos.md).
 
 **Import it.** If you already hold the keys — from a colleague's export, a
-spreadsheet, or a shared QR code — use **Import** instead. No account needed.
+spreadsheet, or a shared QR code — use **Import** instead. No account needed;
+see [**Import from a file**](./import-file.md).
 
 ---
 
@@ -81,7 +82,8 @@ Open the **⋮ menu** and choose **Import**:
 
 - **Import from QR code** — scan one or more codes, using **Import more** to
   continue through a multi-code export.
-- **Import from file** — a CSV or JSON export.
+- **Import from file** — a CSV or JSON export. See
+  [**Import from a file**](./import-file.md) for the file format.
 
 Before anything is written the app confirms what it found, including how many
 devices carry keys and how many new tags will be created. Devices are matched by

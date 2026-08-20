@@ -35,6 +35,7 @@ const sidebars = {
               },
               collapsed: true,
               items: [
+                'hardwario-manager/sticker/import-file',
                 'hardwario-manager/sticker/tags',
                 'hardwario-manager/sticker/change-log',
               ],

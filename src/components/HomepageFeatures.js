@@ -122,6 +122,13 @@ const CloudAndApps = [
     description: 'Device and data management platform with REST API, webhook connectors, and firmware updates over the air.',
   },
   {
+    title: 'HARDWARIO Manager',
+    subtitle: 'NFC & Bluetooth Setup App',
+    link: '/apps/hardwario-manager',
+    src: '/img/hardwario-mark.svg',
+    description: 'Mobile app for Android and iOS: configure STICKER over NFC and CHESTER over Bluetooth, with saved device keys, templates, terminal, and firmware updates.',
+  },
+  {
     title: 'ThingsBoard',
     subtitle: 'Data Visualization Platform',
     link: '/apps/thingsboard/index',

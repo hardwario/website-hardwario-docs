@@ -25,7 +25,7 @@ The **CHESTER-X13** is a **CAN Bus** extension module with **CAN FD** support fo
 
 CHESTER-X13 provides a **CAN / CAN FD** interface based on the **MCP2518FD** external CAN controller, which communicates with the CHESTER mainboard over **SPI**. An on-board **TCAN3413** transceiver drives the physical bus, and the **CANH** / **CANL** lines are brought out to the terminal block. On-board bus-termination resistors are provided but disconnected by default, so the module can sit anywhere on the bus.
 
-The module can run directly from the CHESTER mainboard. Alternatively, an external 6-26 VDC line on +VIN feeds the on-board **TPS62933** step-down converter, whose fixed **5 V** output powers the CHESTER mainboard. Schottky diodes (**PMEG6010ELR**) protect the input. An interrupt output signals the CHESTER mainboard when the CAN controller requires attention.
+The module can run directly from the CHESTER mainboard. Alternatively, an external 5-28 VDC line on +VIN feeds the on-board **TPS62933** step-down converter, whose fixed **5 V** output powers the CHESTER mainboard. Schottky diodes (**PMEG6010ELR**) protect the input. An interrupt output signals the CHESTER mainboard when the CAN controller requires attention.
 
 ## Key Features
 
@@ -33,7 +33,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 * **SPI Host Interface:** Connects to the CHESTER mainboard over SPI.
 * **On-board Transceiver:** TCAN3413 transceiver drives the physical CAN bus.
 * **Selectable Bus Termination:** On-board ~120 Ω termination, disconnected by default.
-* **Flexible Power:** Runs from the CHESTER mainboard, or from an optional 6-26 VDC line on +VIN.
+* **Flexible Power:** Runs from the CHESTER mainboard, or from an optional 5-28 VDC line on +VIN.
 * **Input Protection:** Schottky diodes (PMEG6010ELR) on the power input.
 * **Interrupt Output:** Dedicated interrupt line to the CHESTER mainboard.
 
@@ -55,7 +55,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **CAN Transceiver** | TCAN3413 |
 | **Host Interface** | SPI |
 | **Bus Termination** | On-board ~120 Ω, disconnected by default |
-| **Power Input (+VIN)** | 6-26 VDC (optional external supply) |
+| **Power Input (+VIN)** | 5-28 VDC (optional external supply) |
 | **Power Output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
 | **Bus Output** | CANH / CANL on the terminal block |
 | **Connector** | Standard 2.54 mm pitch header (Soldered) |
@@ -67,7 +67,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | :--- | :--- | :--- |
 | **CAN Controller** | MCP2518FD | External CAN FD controller with SPI interface |
 | **CAN Transceiver** | TCAN3413 | CAN FD transceiver (physical bus interface) |
-| **DC-DC Converter** | TPS62933 | Step-down converter, 6-26 VDC input |
+| **DC-DC Converter** | TPS62933 | Step-down converter, 5-28 VDC input |
 | **Input Protection** | PMEG6010ELR | Schottky barrier diodes for input protection |
 
 ## Pin Configuration
@@ -91,10 +91,10 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 | 5 | RL | CAN Termination | Termination tap for CANL (connect to CANL to enable the on-board termination) |
 | 6 | GND | Ground | System ground reference |
 | 7 | GND | Ground | System ground reference |
-| 8 | +VIN | Power Input | Optional external DC input to the on-board step-down (6-26 VDC) |
+| 8 | +VIN | Power Input | Optional external DC input to the on-board step-down (5-28 VDC) |
 
 :::info
-The module can run directly from the CHESTER mainboard. When an external **6-26 VDC** supply is connected to **+VIN** (Pin 8), the on-board TPS62933 step-down converter produces a fixed **5 V** that powers the CHESTER mainboard.
+The module can run directly from the CHESTER mainboard. When an external **5-28 VDC** supply is connected to **+VIN** (Pin 8), the on-board TPS62933 step-down converter produces a fixed **5 V** that powers the CHESTER mainboard.
 :::
 
 ### Host Interface (SPI)

@@ -25,14 +25,14 @@ The **CHESTER-X14** is a wired **10/100 Ethernet** extension module for the CHES
 
 CHESTER-X14 provides a 10/100 Mbps Ethernet interface based on the **W5500** hardwired TCP/IP controller, which integrates the MAC and PHY and communicates with the CHESTER mainboard over **SPI**. On-board Ethernet magnetics (**ALANL100X1-DE12DT**) provide galvanic isolation and signal conditioning. The differential receive/transmit pairs are brought out to the terminal block, where the individual Ethernet conductors are connected.
 
-The module can run directly from the CHESTER mainboard. Alternatively, an external 6-26 VDC line on +VIN feeds the on-board **TPS62933** step-down converter, whose fixed **5 V** output (+V) powers the CHESTER mainboard. Schottky diodes (**PMEG6010ELR**) protect the input. An interrupt output signals the CHESTER mainboard when the Ethernet controller requires attention.
+The module can run directly from the CHESTER mainboard. Alternatively, an external 5-28 VDC line on +VIN feeds the on-board **TPS62933** step-down converter, whose fixed **5 V** output (+V) powers the CHESTER mainboard. Schottky diodes (**PMEG6010ELR**) protect the input. An interrupt output signals the CHESTER mainboard when the Ethernet controller requires attention.
 
 ## Key Features
 
 * **10/100 Ethernet:** Wired connectivity based on the W5500 hardwired TCP/IP controller.
 * **SPI Host Interface:** Connects to the CHESTER mainboard over SPI.
 * **Integrated Magnetics & Isolation:** On-board Ethernet transformer (ALANL100X1-DE12DT) provides galvanic isolation.
-* **Flexible Power:** Runs from the CHESTER mainboard, or from an optional 6-26 VDC line on +VIN.
+* **Flexible Power:** Runs from the CHESTER mainboard, or from an optional 5-28 VDC line on +VIN.
 * **Input Protection:** Schottky diodes (PMEG6010ELR) on the power input.
 * **Interrupt Output:** Dedicated interrupt line to the CHESTER mainboard.
 * **Status LEDs:** Link (green) and activity (red) indicators driven by the W5500.
@@ -53,7 +53,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **Host Interface** | SPI |
 | **Magnetics** | Integrated (ALANL100X1-DE12DT) |
 | **Galvanic Isolation** | Yes, from the on-board Ethernet magnetics |
-| **Power Input (+VIN)** | 6-26 VDC (optional external supply) |
+| **Power Input (+VIN)** | 5-28 VDC (optional external supply) |
 | **Power Output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
 | **Ethernet Output** | Differential Rx/Tx pairs on the terminal block |
 | **Connector** | Standard 2.54 mm pitch header (Soldered) |
@@ -65,7 +65,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | :--- | :--- | :--- |
 | **Ethernet Controller** | W5500 | Hardwired TCP/IP embedded Ethernet controller with SPI interface (MAC + PHY) |
 | **Ethernet Magnetics** | ALANL100X1-DE12DT | Integrated LAN transformer for the 10/100 interface |
-| **DC-DC Converter** | TPS62933 | Step-down converter, 6-26 VDC input |
+| **DC-DC Converter** | TPS62933 | Step-down converter, 5-28 VDC input |
 | **Input Protection** | PMEG6010ELR | Schottky barrier diodes for input protection |
 
 ## Pin Configuration
@@ -84,7 +84,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 | :---: | :--- | :--- | :--- |
 | 1 | INT | Output | Interrupt output to the CHESTER mainboard |
 | 2 | +V | Power Output | Fixed 5 V from the on-board step-down (powers the CHESTER mainboard) |
-| 3 | +VIN | Power Input | Optional external DC input to the on-board step-down (6-26 VDC) |
+| 3 | +VIN | Power Input | Optional external DC input to the on-board step-down (5-28 VDC) |
 | 4 | GND | Ground | System ground reference |
 | 5 | Rx- | Ethernet | Receive pair (negative) |
 | 6 | Rx+ | Ethernet | Receive pair (positive) |
@@ -92,7 +92,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 | 8 | Tx+ | Ethernet | Transmit pair (positive) |
 
 :::info
-The module can run directly from the CHESTER mainboard. When an external **6-26 VDC** supply is connected to **+VIN** (Pin 3), the on-board TPS62933 step-down converter produces a fixed **5 V** on **+V** (Pin 2), which powers the CHESTER mainboard.
+The module can run directly from the CHESTER mainboard. When an external **5-28 VDC** supply is connected to **+VIN** (Pin 3), the on-board TPS62933 step-down converter produces a fixed **5 V** on **+V** (Pin 2), which powers the CHESTER mainboard.
 :::
 
 ### Host Interface (SPI)

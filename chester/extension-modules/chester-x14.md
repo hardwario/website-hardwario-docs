@@ -110,11 +110,11 @@ The W5500 interrupt output (INTn) is routed to the module's **INT** terminal (pi
 
 ### Interrupt Pin
 
-The W5500 signals events (such as an incoming packet) on its interrupt output, which is brought out to the module's **INT** terminal (pin 1). This interrupt **must be wired to the CHESTER mainboard's INT terminal** so the mainboard can detect it. On the **CHESTER-M CGLS** mainboard, add a jumper wire from the extension module's terminal block to the mainboard's INT terminal, as shown below.
+The W5500 signals events (such as an incoming packet) on its interrupt output, which is brought out to the module's **INT** terminal (pin 1). This interrupt **must be wired to the CHESTER mainboard's INT terminal** so the mainboard can detect it. On the **CHESTER-M CGLS** mainboard, add a jumper wire from the extension module's terminal block to the mainboard's INT terminal. The wiring below is shown for a module in **slot B**; a module in another slot connects to that slot's INT terminal the same way.
 
 ![CHESTER mainboard drawing with a wire linking the slot B INT terminal to the module interrupt pin](images/int-pin.png)
 
-* Example of the interrupt connection for a module in slot B on the CHESTER-M CGLS mainboard.
+* Example: interrupt wiring for a module in slot B (CHESTER-M CGLS).
 
 ## Ethernet Connection
 

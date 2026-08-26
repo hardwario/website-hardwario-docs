@@ -99,7 +99,7 @@ Once registered and connected:
 - **Adjust Schedules:** Use NFC via [**HARDWARIO Manager**](hardwario-manager) or LoRaWAN Downlink commands (fPort 85) to fine-tune sampling and uplink intervals.
 
 :::info STICKER Input Wiring
-If using **STICKER Input**, review the terminal block and DIP switch instructions before connecting external probes: [STICKER Input Wiring Guide](sticker-input-wiring/index).
+If using **STICKER Input**, review the terminal block and DIP switch instructions before connecting external probes: [STICKER Input Wiring Guide](sticker-input-wiring/index.md).
 :::
 
 ---

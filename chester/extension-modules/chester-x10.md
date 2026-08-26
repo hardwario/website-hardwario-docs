@@ -152,18 +152,10 @@ CHESTER-X10 can be used as part of the CHESTER SDK using the `ctr_x10` shield, o
 
 ## Schematic Diagrams
 
-The following diagrams show the internal wiring of the module across its two sheets: the power supply and charger, and the voltage-monitoring ADC.
+The complete schematic — covering the power supply and charger, and the voltage-monitoring ADC — is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x10-r1.1.pdf)
-- [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x10-r1.1.html)
-
-### Power & Charger
-
-![CHESTER-X10 power schematic: TPS62933 step-down converter (5 V output) and MCP73833 single-cell Li-Po charger set to 450 mA, with PMEG Schottky power-path diodes](images/hio-chester-x10-r1.1-1.png)
-
-### Voltage Monitoring
-
-![CHESTER-X10 ADC schematic: TLA2024 12-bit I²C ADC measuring the input voltage and battery voltage through precision dividers](images/hio-chester-x10-r1.1-2.png)
+- [Interactive CHESTER-X10 browser](pathname:///download/ibom/hio-chester-x10-r1.1.html)
 
 ## Module Drawing
 

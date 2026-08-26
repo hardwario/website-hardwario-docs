@@ -165,22 +165,10 @@ CHESTER-X13 can be used as part of the CHESTER SDK using the `ctr_x13_a` and `ct
 
 ## Schematic Diagrams
 
-The following diagrams show the internal wiring of the module across its three sheets: the main page, the CAN interface, and the power supply.
+The complete schematic — covering the main page, the CAN interface, and the power supply — is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x13-r1.2.pdf)
-- [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x13-r1.2.html)
-
-### Main Page
-
-![CHESTER-X13 main-page schematic: the CHESTER-X module connector mapping the terminal-block signals (INT, RH, CANH, CANL, RL, GND, +VIN) and the SPI pins GP0-GP3 (SCK, SDI, SDO, NCS)](images/hio-chester-x13-r1.2-1.png)
-
-### CAN
-
-![CHESTER-X13 CAN schematic: MCP2518FD CAN FD controller with 20 MHz crystal, TCAN3413 transceiver, and the split bus-termination resistors](images/hio-chester-x13-r1.2-3.png)
-
-### Power
-
-![CHESTER-X13 power schematic: TPS62933 step-down converter with PMEG6010ELR input and output Schottky diodes](images/hio-chester-x13-r1.2-2.png)
+- [Interactive CHESTER-X13 browser](pathname:///download/ibom/hio-chester-x13-r1.2.html)
 
 ## Module Drawing
 

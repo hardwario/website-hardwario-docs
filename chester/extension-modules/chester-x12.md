@@ -167,22 +167,10 @@ CHESTER-X12 can be used as part of the CHESTER SDK using the `ctr_x12_a` and `ct
 
 ## Schematic Diagrams
 
-The following diagrams show the internal wiring of the module across its three sheets: the main page, the interface, and the power supply.
+The complete schematic — covering the main page, the interface, and the power supply — is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x12-r1.2.pdf)
-- [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x12-r1.2.html)
-
-### Main Page
-
-![CHESTER-X12 main-page schematic: the CHESTER-X module connector mapping the terminal-block signals (+VIN, GND, +V, RS232 TX/RX, VDD) and the GP pins GP0-GP3 (INVALID#, ADC_EN, UART IRQ, FORCEOFF#)](images/hio-chester-x12-r1.2-1.png)
-
-### Interface
-
-![CHESTER-X12 interface schematic: SC16IS740IPW I²C-to-UART bridge with 14.7456 MHz crystal (I²C address 0x54/0x55) and the MAX3226EEUE+ RS-232 transceiver](images/hio-chester-x12-r1.2-2.png)
-
-### Power
-
-![CHESTER-X12 power schematic: TPS62933 step-down converter (5 V output) with PMEG6010ELR Schottky diodes and the TLA2021 input-voltage-monitoring ADC](images/hio-chester-x12-r1.2-3.png)
+- [Interactive CHESTER-X12 browser](pathname:///download/ibom/hio-chester-x12-r1.2.html)
 
 ## Module Drawing
 

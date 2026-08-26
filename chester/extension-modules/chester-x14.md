@@ -176,22 +176,10 @@ CHESTER-X14 can be used as part of the CHESTER SDK using the `ctr_x14_a` and `ct
 
 ## Schematic Diagrams
 
-The following diagrams show the internal wiring of the module across its three sheets: the main page, the Ethernet interface, and the power supply.
+The complete schematic — covering the main page, the Ethernet interface, and the power supply — is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x14-r1.0.pdf)
-- [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x14-r1.0.html)
-
-### Main Page
-
-![CHESTER-X14 main-page schematic: the CHESTER-X module connector mapping the terminal-block signals (TD+, TD-, RD+, RD-, GND, VIN+, V+, INT), the SPI pins GP0-GP3 (MISO, MOSI, SCLK, CS), and the RJ-45 wire colors](images/hio-chester-x14-r1.0-1.png)
-
-### Ethernet
-
-![CHESTER-X14 Ethernet schematic: W5500 MAC/PHY controller with 25 MHz crystal, link and activity LEDs, and the ALANL100X1-DE12DT magnetics](images/hio-chester-x14-r1.0-2.png)
-
-### Power
-
-![CHESTER-X14 power schematic: TPS62933 step-down converter (5 V output) with PMEG6010ELR input and output Schottky diodes](images/hio-chester-x14-r1.0-3.png)
+- [Interactive CHESTER-X14 browser](pathname:///download/ibom/hio-chester-x14-r1.0.html)
 
 ## Module Drawing
 

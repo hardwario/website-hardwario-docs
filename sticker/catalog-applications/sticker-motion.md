@@ -51,6 +51,16 @@ import Image from '@theme/IdealImage';
 </p>
 </details>
 
+## Status LED
+
+STICKER Motion uses the standard status LED patterns described in [**LED Indication**](/sticker/hardware-description#led-indication) - the boot carousel, the status heartbeat every 3 seconds, and the NFC and alarm patterns are identical across all STICKER applications.
+
+One detail is specific to this application: the PIR detector and the accelerometer are **momentary** sensors, so they only ever report an activation, never a return to idle. Each detected motion event therefore shows the **green-then-orange** activation sequence, and you will never see the orange-then-green release sequence on this unit.
+
+:::warning
+Motion event blinking is a commissioning aid and **stops one hour after power-up**. A device that no longer blinks on movement is still detecting and reporting it - power-cycle the unit if you need the visual confirmation back while testing.
+:::
+
 ## Changelog
 
 ### 2025-11-23 — v1.0.0

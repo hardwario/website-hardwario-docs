@@ -53,6 +53,12 @@ import Image from '@theme/IdealImage';
 </p>
 </details>
 
+## Status LED
+
+STICKER Clime uses the standard status LED patterns described in [**LED Indication**](/sticker/hardware-description#led-indication) - the boot carousel, the status heartbeat every 3 seconds, and the NFC and alarm patterns are identical across all STICKER applications.
+
+Clime measures environmental values rather than discrete inputs, so it normally has no Hall sensors or external inputs configured. In practice this means you will only see the **heartbeat**, the **NFC** patterns and the **red alarm flash** when a temperature or humidity threshold is crossed - the green/orange input activation sequences do not appear on a standard Clime unit.
+
 ## Changelog
 
 ### 2025-11-23 — v1.0.0

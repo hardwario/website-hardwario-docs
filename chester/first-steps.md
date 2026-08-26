@@ -101,8 +101,8 @@ Or check out our **video tutorial** on how to add your CHESTER device to the Clo
 
 If your device still has trouble connecting to the network (especially when using your own SIM card or roaming):
 
-* **Check Network Mode:** You might need to force a specific mode like **NB-IoT** or **LTE-M** based on your region. See the [**Network Mode Configuration guide**](https://docs.hardwario.com/chester/platform-connectivity/cellular-networks/#network-mode-configuration) for details.
-* **Verify APN/PLMN:** If you are outside the Czech Republic or using a non-Vodafone SIM, follow the [**Network Settings guide**](https://docs.hardwario.com/chester/platform-connectivity/cellular-networks#network-settings) to configure your PLMN and APN correctly.
+* **Check Network Mode:** You might need to force a specific mode like **NB-IoT** or **LTE-M** based on your region. See the [**SIM Card Setup guide**](https://docs.hardwario.com/chester/platform-connectivity/cellular-networks/sim-card-setup) for details.
+* **Verify APN/PLMN:** If you are outside the Czech Republic or using a non-Vodafone SIM, follow the [**SIM Card Setup guide**](https://docs.hardwario.com/chester/platform-connectivity/cellular-networks/sim-card-setup) to configure your PLMN and APN correctly, or see the [**Configuration Parameters**](https://docs.hardwario.com/chester/platform-connectivity/cellular-networks/configuration-parameters) reference.
 * **Public IP for Cloud v2:** When using your own SIM, you must also set the [**correct IP and Port parameters**](https://docs.hardwario.com/chester/firmware-sdk/how-to-lte-v2#ip-and-port) for Cloud v2 compatibility.
 
 ---

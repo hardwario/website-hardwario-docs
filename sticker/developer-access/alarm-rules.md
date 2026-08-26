@@ -10,12 +10,13 @@ The functionality described on this page is part of the upcoming **STICKER firmw
 
 # Alarm Rules (`alarm`)
 
-Alarms generate an immediate uplink when a condition is met. The rules are managed with the `alarm` command over the developer shell (see [**Firmware Setup**](firmware-setup.md) for opening the console). Two related `config` parameters control how often alarm uplinks are sent:
+Alarms generate an immediate uplink when a condition is met. The rules are managed with the `alarm` command over the developer shell (see [**Firmware Setup**](firmware-setup.md) for opening the console). One `config` parameter controls how often alarm uplinks are sent:
 
 | Command | Argument | Description |
 |---|---|---|
 | `config alarm-limit` | `0`-`3600` (seconds) | Minimum interval between alarm uplinks. The first alarm is sent immediately; further alarms within the window are suppressed. `0` = disabled. Default `0`. |
-| `config alarm-notif-time` | `1`-`60` (seconds) | Red-LED hold time for pulse and momentary (PIR, accelerometer) alarms. Default `10`. |
+
+Per-alarm timing is no longer a global setting - it is the optional **`dwell`** argument on each individual rule, described below.
 
 ## Dynamic alarm rules
 
@@ -44,21 +45,37 @@ Per-sensor thresholds are **dynamic rules** held in 16 fixed slots (`0`-`15`). T
 
 | Quantity | Kind | Arguments | Valid sources |
 |---|---|---|---|
-| `temperature`, `humidity`, `pressure` | threshold | `<lo> <hi> [hst]` | `onboard`; `temperature`/`humidity` also on `s1`-`s4` |
-| `illuminance`, `magnetic-field` | threshold | `<lo> <hi> [hst]` | `s1`-`s4` |
-| `tilt` | state | `<from> <to>` | `s1`-`s4` |
-| `state` | state | `<from> <to>` | `hall-*`, `input-*`, `pir`, `accel` |
-| `count` | rate | `<N>` | `hall-*`, `input-*`, `pir`, `accel` |
+| `temperature`, `humidity`, `pressure` | threshold | `<lo> <hi> [dwell]` | `onboard`; `temperature`/`humidity` also on `s1`-`s4` |
+| `illuminance`, `magnetic-field` | threshold | `<lo> <hi> [dwell]` | `s1`-`s4` |
+| `tilt` | state | `<from> <to> [dwell]` | `s1`-`s4` |
+| `state` | state | `<from> <to> [dwell]` | `hall-*`, `input-*`, `pir`, `accel` |
+| `count` | rate | `<N> [dwell]` | `hall-*`, `input-*`, `pir`, `accel` |
 
-- **threshold**: the alarm fires when the value leaves the `[lo, hi]` band; `hst` is an optional hysteresis dead band (default `0`).
+- **threshold**: the alarm fires when the value leaves the `[lo, hi]` band.
 - **state**: `<from> <to>` are digital levels (`0`/`1`). `from != to` is an **edge** (fires once on that transition); `from == to` is a **level** (active while the line equals `to`). PIR and accelerometer are momentary sources, so only edge rules are accepted there.
 - **rate**: `<N>` is the maximum number of counter events allowed per report interval.
+
+### The `dwell` argument
+
+`dwell` is an optional duration in **seconds**, available on every rule kind, and defaults to `0` (immediate). It is the single timing knob that replaced the earlier hysteresis and notification-time settings. Its exact role depends on the rule kind:
+
+| Rule kind | What `dwell` does |
+|---|---|
+| threshold | The value must stay outside `[lo, hi]` continuously for this long before the alarm activates. Returning into the band always deactivates immediately. |
+| state - edge | Acts twice: the transition must hold for this long before firing, and the rule then holds for the same duration before it can fire again. |
+| state - level | The line must equal `to` for this long before activating. Deactivation is immediate. |
+| momentary sources (`pir`, `accel`) | Hold time before the rule can fire again. There is no confirmation delay, since a momentary event cannot be held. |
+| rate | Hold time after the rate alarm fires, before it can fire again. |
+
+Use it to suppress false alarms from brief spikes, and to stop a flapping input from generating a burst of uplinks.
 
 **Examples:**
 
 ```
-alarm set 0 onboard temperature 5 30 1   # alarm below 5 C or above 30 C, 1 C hysteresis
-alarm set 1 input-a state 0 1            # fire when input A goes from 0 to 1 (rising edge)
+alarm set 0 onboard temperature 5 30     # alarm below 5 C or above 30 C, immediately
+alarm set 1 onboard temperature 5 30 60  # the same, but only after 60 s continuously out of band
+alarm set 2 input-a state 0 1            # fire when input A goes from 0 to 1 (rising edge)
+alarm set 3 input-a state 0 1 5          # the same, but the edge must hold 5 s to count
 alarm new hall-left count 10             # alarm at 10 or more pulses per report interval
 alarm list                               # review all rules
 alarm clear 1                            # delete slot 1

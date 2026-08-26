@@ -33,7 +33,22 @@ const sidebars = {
     'platform-connectivity/hardwario-manager',
     'platform-connectivity/hardwario-monitor',
     'platform-connectivity/hardwario-terminal',
-    'platform-connectivity/cellular-networks',
+    {
+      type: 'category',
+      label: 'Mobile Networks',
+      link: {
+        type: 'doc',
+        id: 'platform-connectivity/cellular-networks/index',
+      },
+      collapsed: true,
+      items: [
+        'platform-connectivity/cellular-networks/sim-card-setup',
+        'platform-connectivity/cellular-networks/configuration-parameters',
+        'platform-connectivity/cellular-networks/network-requirements',
+        'platform-connectivity/cellular-networks/vodafone-coverage',
+        'platform-connectivity/cellular-networks/diagnostics',
+      ],
+    },
 
     {
       type: 'category',

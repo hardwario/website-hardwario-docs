@@ -4,6 +4,7 @@ title: CHESTER-X14 (Ethernet)
 description: Wired 10/100 Ethernet extension module for the CHESTER platform, based on the W5500 hardwired TCP/IP controller with TCP and UDP support.
 keywords: [CHESTER-X14, Ethernet, 10/100 Ethernet, Ethernet module, W5500, TCP/IP, UDP, RJ-45, wired connectivity, CHESTER]
 ---
+import Image from '@theme/IdealImage';
 
 # CHESTER-X14
 
@@ -12,9 +13,7 @@ The **CHESTER-X14** is a wired **10/100 Ethernet** extension module for the CHES
 <div class="container">
 <div class="row">
 <div class="col col--4">
-
-![3D render of the red CHESTER-X14 R1.0 board showing the W5500 QFP controller, the Ethernet magnetics module, the 25 MHz crystal, and the step-down inductor](images/chester-x14-top.png)
-
+<div><Image img={require('./images/chester-x14-top.png')} alt="3D render of the red CHESTER-X14 R1.0 board showing the W5500 QFP controller, the Ethernet magnetics module, the 25 MHz crystal, and the step-down inductor"/></div>
 </div>
 <div class="col col--10">
 </div>

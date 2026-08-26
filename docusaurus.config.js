@@ -309,6 +309,11 @@ const config = {
       zoom: {
         selector: '.markdown :not(em) > img:not([data-zoomable="false"]), .markdown > img:not([data-zoomable="false"])',
         config: {
+          // Gap (px) kept between the zoomed image and the viewport edges, so
+          // even tall/large images (covers, CGLS renders, schematics, module
+          // drawings) stay fully inside the screen with their edges visible
+          // instead of filling it edge-to-edge (medium-zoom default is 0).
+          margin: 48,
           background: {
             light: 'rgb(255, 255, 255)',
             dark: 'rgb(50, 50, 50)',

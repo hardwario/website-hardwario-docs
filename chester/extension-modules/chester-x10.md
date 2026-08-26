@@ -4,6 +4,7 @@ title: CHESTER-X10 (Li-Po charger)
 description: Backup-power and single-cell Li-Po charger extension module for the CHESTER platform, based on the TPS62933 step-down, MCP73833 charger, and TLA2024 voltage-monitoring ADC.
 keywords: [CHESTER-X10, Li-Po charger, Li-Ion charger, backup power, power supply, battery, TPS62933, MCP73833, TLA2024, step-down, battery monitoring, CHESTER]
 ---
+import Image from '@theme/IdealImage';
 
 # CHESTER-X10
 
@@ -12,9 +13,7 @@ The **CHESTER-X10** is a **backup power** extension module with an on-board **si
 <div class="container">
 <div class="row">
 <div class="col col--4">
-
-![Photo of the red CHESTER-X10 board showing the step-down inductor, the MCP73833 charger, the TLA2024 ADC, and the Schottky power-path diodes](images/chester-x10-top.png)
-
+<div><Image img={require('./images/chester-x10-top.png')} alt="Photo of the red CHESTER-X10 board showing the step-down inductor, the MCP73833 charger, the TLA2024 ADC, and the Schottky power-path diodes"/></div>
 </div>
 <div class="col col--10">
 </div>

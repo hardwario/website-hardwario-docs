@@ -4,6 +4,7 @@ title: CHESTER-X12 (RS-232)
 description: RS-232 serial-communication extension module for the CHESTER platform, based on the SC16IS740IPW I²C-to-UART bridge and the MAX3226 transceiver, with on-board input-voltage monitoring.
 keywords: [CHESTER-X12, RS-232, RS232, serial, SC16IS740IPW, MAX3226, I2C-to-UART, UART bridge, TPS62933, TLA2021, voltage monitoring, CHESTER]
 ---
+import Image from '@theme/IdealImage';
 
 # CHESTER-X12
 
@@ -12,9 +13,7 @@ The **CHESTER-X12** is an **RS-232** serial-communication extension module for t
 <div class="container">
 <div class="row">
 <div class="col col--4">
-
-![Top view of the red CHESTER-X12 board showing the SC16IS740IPW I²C-to-UART bridge, the MAX3226 RS-232 transceiver, the step-down inductor and crystal, and the ADR address solder bridge](images/chester-x12-top.png)
-
+<div><Image img={require('./images/chester-x12-top.png')} alt="Top view of the red CHESTER-X12 board showing the SC16IS740IPW I²C-to-UART bridge, the MAX3226 RS-232 transceiver, the step-down inductor and crystal, and the ADR address solder bridge"/></div>
 </div>
 <div class="col col--10">
 </div>

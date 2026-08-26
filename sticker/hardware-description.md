@@ -6,25 +6,33 @@ import Image from '@theme/IdealImage';
 
 # Hardware Description
 
-
 STICKER is a compact IoT device built on the **STM32WL System-on-Chip** with an integrated **LoRa radio** and ARM Cortex-M4F core.  
 It is powered by two AA batteries, with battery voltage monitoring and efficient power management (boost converter and LDO).
 
 The device includes **NFC memory and antenna** for simple configuration, even without power (energy harvesting).
 
-It features a rich set of **built-in sensors**:
-- Temperature and humidity (SHT43)  
-- Light intensity (OPT3001)  
-- Atmospheric pressure (MPL3115A2)  
-- PIR motion (PYD1698)  
-- 3-axis accelerometer (LIS2DH12)  
-- Dual Hall-effect door opening detector (A1266)  
+---
 
-For flexibility, there is also:
-- **1-Wire bus master** for external sensors  
-- **Terminal block for external inputs**  
+## Sensors & Peripherals
 
-Device status is indicated by a **multi-color LED (R/G/Y)** - see [**LED Indication**](#led-indication) for what each pattern means - and communication is handled via an **internal 868/915 MHz antenna**.
+### Built-in Sensors
+
+Depending on the specific assembly variant, STICKER includes:
+- **Temperature & Humidity:** Sensirion SHT43 sensor for high-accuracy ambient measurement.
+- **Light Intensity:** Texas Instruments OPT3001 ambient light sensor.
+- **Atmospheric Pressure:** NXP MPL3115A2 pressure sensor.
+- **PIR Motion:** Excelitas PYD1698 passive infrared motion sensor for presence detection (up to 5 m, $\ge 50^\circ$).
+- **3-axis Accelerometer:** STMicroelectronics LIS2DH12 accelerometer for tilt, vibration, and orientation tracking.
+- **Door Opening Detection:** Dual Allegro A1266 Hall-effect sensors.
+
+### Physical Interfaces & External Connectivity
+
+- **SWD Interface:** Physical SWD programming pads for firmware flashing and debugging using J-Link (`make flash`). Required for image flashing as the firmware deliberately omits a bootloader and over-the-air updates.
+- **1-Wire Bus Master:** Dedicated 1-Wire interface supporting external digital temperature probes (e.g., Dallas DS18B20) and HARDWARIO Machine Probe sensors.
+- **S0 Interface:** Pulse counting input compatible with standard S0 outputs from electricity, gas, and water meters.
+- **Voltage Measurement & Industrial Logic Inputs:** Supports up to 2 digital inputs accepting industrial logic up to 30 V DC for direct PLC or machine status integration.
+
+Device status is indicated by a **multi-color LED (R/G/Y)** - see [**LED Indication**](#led-indication) for details - and wireless communication is handled via an **internal 868/915 MHz antenna**.
 
 ---
 

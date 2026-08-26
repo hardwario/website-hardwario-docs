@@ -6,138 +6,108 @@ import Image from '@theme/IdealImage';
 
 # STICKER Quick Start Guide
 
-Welcome! This page helps you **power up (revive)** your STICKER and choose what to do next:
-- connect it to **ChirpStack**,
-- connect it to **The Things Stack (TTS)**,
-- or use **your own LoRaWAN network**
----
-
-## Before you start
-
-#### What STICKER is
-
-**STICKER** is an open IoT platform based on STM32WL with integrated LoRaWAN connectivity and a software-selectable proprietary **LoRa P2P** mode that enables direct links to **HARDWARIO FIBER**. It is a compact, battery-powered device with long lifetime and ready-to-use applications such as STICKER Clime, Input, and Motion, making it ideal for flexible sensor deployments.
-
-For detailed technical specifications of the hardware, please refer to the [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description/) page.
-
-#### You will need
-- **STICKER device** (Clime / Input / Motion)
-- **2× AA batteries**
-- A **LoRaWAN gateway** within range (your own or a public network gateway)
-- A **LoRaWAN Network Server** (ChirpStack / TTS / other)
-
-#### Useful links
-- STICKER overview: https://docs.hardwario.com/sticker/
-- STICKER product page: https://www.hardwario.com/products/sticker/
-- STICKER store page: https://www.hardwario.store/sticker
-- STICKER **Decoder**: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
-- HARDWARIO datasheets hub (includes STICKER datasheet link): https://www.hardwario.com/resources/datasheets
+Welcome! This page helps you **power up, provision, and activate** your STICKER device and connect it to your preferred LoRaWAN Network Server (ChirpStack, The Things Stack, or custom backend).
 
 ---
 
-## Step 1: Identify your STICKER variant
+## Before You Start
 
-STICKER ships with a ready-to-use “catalog application”:
+#### What STICKER Is
 
-- **STICKER Clime** — temperature & humidity monitoring  
-  https://docs.hardwario.com/sticker/catalog-applications/sticker-clime/
+**STICKER** is an open IoT platform based on the STM32WL SoC with integrated LoRaWAN connectivity and software-selectable proprietary **LoRa P2P** mode. It is a compact, battery-powered sensor platform built on Zephyr RTOS, running catalog applications like STICKER Clime, Input, and Motion.
 
-- **STICKER Input** — external sensors + analog/digital inputs (1‑Wire, dry contact, 0–24 V analog)  
-  https://docs.hardwario.com/sticker/catalog-applications/sticker-input/
+For technical details, see the [**Hardware Description**](hardware-description).
 
-- **STICKER Motion** — ultra‑low‑power PIR motion detection  
-  https://docs.hardwario.com/sticker/catalog-applications/sticker-motion/
+#### You Will Need
+- **STICKER device** (Clime / Input / Motion variant)
+- **2× AA batteries** (1.5V alkaline or lithium)
+- A **LoRaWAN Gateway** within range
+- A **LoRaWAN Network Server** (ChirpStack / TTS / custom LNS)
+- A smartphone with **NFC** and the [**HARDWARIO Manager**](hardwario-manager) app installed
 
-Catalog overview:  
-https://docs.hardwario.com/sticker/catalog-applications/catalog-applications/
-
----
-
-## Step 2: Set up your STICKER
-
-1. **Open the enclosure** and access the battery holder.
-2. **Insert two AA cells** (check polarity).
-3. STICKER will boot and the **status LED** indicates activity.
-4. For the first test, place the device **close to your LoRaWAN gateway** (best RF conditions).
-5. Wait for the first uplink (the timing depends on the installed catalog app and reporting interval).
-
-#### Configure over NFC
-STICKER is configured over **NFC** — this is the standard way to set it up, and it works even when batteries are not inserted (NFC energy harvesting). Use the [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration) to write LoRaWAN settings (DevEUI, AppEUI/JoinEUI, AppKey) before installation:
-- STICKER Power Management: https://docs.hardwario.com/sticker/power-management/
-
+#### Useful Links
+- NFC Mobile App Guide: [**HARDWARIO Manager**](hardwario-manager)
+- STICKER Decoder: [ttn.js on GitHub](https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js)
+- HARDWARIO Datasheets Hub: [hardwario.com/resources/datasheets](https://www.hardwario.com/resources/datasheets)
 
 ---
 
-## Step 3: Choose your LoRaWAN backend
+## Step 1: Identify Your STICKER Variant
 
-Before registering the device, find your STICKER's **DevEUI**, **AppEUI/JoinEUI** and **AppKey** using the [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/device-info).
+STICKER comes pre-flashed with one of the catalog applications:
 
-### ChirpStack v4
-Best if you want a private LoRaWAN network you control.
-
-Start here (HARDWARIO guide):
-- **https://docs.hardwario.com/sticker/lorawan-network-server/lorawan-chirpstack**
-
-Then add the STICKER payload decoder:
-- STICKER **Decoder**: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- **STICKER Clime** — Temperature, humidity, light & barometric pressure monitoring.  
+  [Documentation →](catalog-applications/sticker-clime)
+- **STICKER Input** — External sensors (1-Wire, Machine Probe) and industrial inputs (S0 pulse, 0–30 V logic).  
+  [Documentation →](catalog-applications/sticker-input)
+- **STICKER Motion** — Ultra-low-power PIR motion detection and 3-axis acceleration tracking.  
+  [Documentation →](catalog-applications/sticker-motion)
 
 ---
 
-### The Things Stack
-Best if you want to use TTS (managed or self-hosted), including TTN/TTI workflows.
+## Step 2: Power Up & Understand Factory Defaults (v1.4.0+)
 
-Start here (HARDWARIO guide):
-- **https://docs.hardwario.com/sticker/lorawan-network-server/lorawan-tts**
+1. **Open the enclosure** and insert two AA batteries according to the polarity markings.
+2. Observe the **LED Boot Sequence**: Red (0.5 s) → Yellow (0.5 s) → Green (1.5 s).
 
-Then add the STICKER payload decoder:
-- STICKER **Decoder**: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
-
----
-
-## Step 4: Configure the device
-
-STICKER can be configured to adjust reporting intervals, set alarm thresholds, or change LoRaWAN keys.
-
-Configuration is done over **NFC** — use a smartphone with the [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration) to write the settings, no tools or cables needed.
-
-For a full list of all configuration parameters and commands — and the shell (RTT terminal) used over a debug connection — see:
-
-**[Developer Access →](developer-mode)**
-
----
-
-## Step 5: Next steps (after first successful uplink)
-
-At this point, your STICKER is connected, data is arriving, and dashboards are working.
-
-Typical next steps:
-
-- **Install the device in its final location** and verify long-term LoRaWAN coverage.
-- **Observe data for several hours or days** to confirm stability and expected update intervals.
-- **Adjust reporting behavior**, see [**Developer Access**](https://docs.hardwario.com/sticker/developer-mode/) to tune sample and report intervals.
-- **Set alerts or thresholds** in your dashboard platform or using STICKER's built-in alarm feature.
-
-:::info
-#### STICKER Input wiring (Input variant only)
-
-If you are using **STICKER Input**, refer to the wiring and DIP switch configuration guide:
-- https://docs.hardwario.com/sticker/sticker-input-wiring/sticker-input-wiring/
+:::note Factory Default: Radio-Silent Mode
+Starting with firmware **v1.4.0**, STICKER ships in **Radio-Silent Mode** (`radio-mode` disabled) to prevent battery drain during shipping. The device will **not** automatically attempt a LoRaWAN Join upon battery insertion until activated via NFC.
 :::
 
+3. **Status LED Indication:** After boot, the LED will flash **1× Yellow every 3 seconds**, indicating that the device is running normally but the radio is switched off.
 
 ---
 
-## Developer / customization path (optional)
-If you want to modify behavior or build custom firmware:
-- Developer Access (Debug Mode): https://docs.hardwario.com/sticker/developer-mode/
-- Open firmware repository: https://github.com/hardwario/sticker-firmware/
+## Step 3: Configure & Activate via NFC
+
+STICKER uses encrypted NFC for local configuration. Configuration works even without batteries inserted thanks to **NFC energy harvesting**.
+
+:::tip Mobile App Setup
+For complete instructions on extracting provisioning keys, configuring parameters, and managing templates, see the [**HARDWARIO Manager**](hardwario-manager) guide.
+:::
+
+1. Open [**HARDWARIO Manager**](hardwario-manager) on your mobile phone.
+2. Read device info to extract the factory **DevEUI**, **AppEUI/JoinEUI**, and **Claim Token**.
+3. Configure your LoRaWAN parameters (DevEUI, AppEUI, AppKey, activation mode).
+4. Tap the phone against the STICKER enclosure to write settings:
+   - Writing configuration automatically **enables `radio-mode`** and triggers a LoRaWAN Join.
+   - The LED status heartbeat will change from **1× Yellow** (radio off) to **Yellow + Red** (joining).
+   - Upon successful join, the LED transitions to **1× Green** heartbeat and transmits a **Device Info on Join** payload.
 
 ---
 
-## Troubleshooting checklist
-- **No uplinks?**
-  - Check battery polarity / replace batteries
-  - Move closer to a gateway (RF coverage)
-  - Verify frequency plan and device profile in your NS
-  - Verify keys / activation method required by your firmware
-  - Check payload decoder settings
+## Step 4: Register on your LoRaWAN Network Server
+
+### ChirpStack v4
+1. Register the device using the DevEUI, JoinEUI, and AppKey obtained via [**HARDWARIO Manager**](hardwario-manager).
+2. Assign the STICKER payload decoder script.
+3. Follow the full setup guide: [ChirpStack LNS Integration](connectivity/lorawan-chirpstack).
+
+### The Things Stack (TTS / TTN)
+1. Add a new end device using OTAA or ABP provisioning keys obtained via [**HARDWARIO Manager**](hardwario-manager).
+2. Import the payload decoder.
+3. Follow the full setup guide: [The Things Stack Integration](connectivity/lorawan-tts).
+
+---
+
+## Step 5: Post-Commissioning Verification
+
+Once registered and connected:
+
+- **Verify Uplinks:** Confirm that the initial **Device Info** uplink (firmware version, battery status, reset cause) and regular sensor data packets arrive at your LNS dashboard.
+- **Check LED Status:** A single green flash every 3 seconds confirms optimal network link and healthy operation.
+- **Adjust Schedules:** Use NFC via [**HARDWARIO Manager**](hardwario-manager) or LoRaWAN Downlink commands (fPort 85) to fine-tune sampling and uplink intervals.
+
+:::info STICKER Input Wiring
+If using **STICKER Input**, review the terminal block and DIP switch instructions before connecting external probes: [STICKER Input Wiring Guide](sticker-input-wiring/index).
+:::
+
+---
+
+## Troubleshooting Checklist
+
+- **Device dark (No LED boot carousel)?** Check battery orientation or replace batteries.
+- **LED flashing 1× Yellow endlessly?** The radio is in Radio-Silent Mode. Apply configuration via NFC using [**HARDWARIO Manager**](hardwario-manager) to activate transmission.
+- **LED flashing Yellow + Red?** The device is attempting to Join the network but receiving no response. Check gateway proximity, frequency plan, and AppKey matching.
+- **LED flashing Red + Yellow (alternating)?** Configuration corrupt. Re-apply device settings using [**HARDWARIO Manager**](hardwario-manager) over NFC.
+- **No uplinks received?** Verify that the payload decoder is properly assigned in ChirpStack or TTS.

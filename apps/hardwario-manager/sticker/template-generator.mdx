@@ -32,7 +32,7 @@ The bytes shown here are the **unencrypted** `AppConfigMessage`. On a normal dev
 :::info Field notes
 - **Switches** are explicit: a capability set to *off* writes that capability = false, it does not leave it untouched. Tick a row only for settings you want the template to carry.
 - **Numbers** show their allowed range in the help clue and are validated. Sample interval also accepts `0` (sample right before each report) and alarm limit accepts `0` (disabled).
-- **Alarm rules** are encoded into the same 17-byte packed slots used by the [**Downlink Commands Generator**](/sticker/lorawan-network-server/downlink-commands-generator) and the `alarm` shell command; here you build them with the rule editor instead of pasting hex.
+- **Alarm rules** are encoded into the same 17-byte packed slots used by the [**Downlink Commands Generator**](/sticker/connectivity/downlink-commands-generator) and the `alarm` shell command; here you build them with the rule editor instead of pasting hex.
 :::
 
 For the full list of configurable parameters and their meaning, see [**Configuration parameters**](/sticker/developer-access/configuration). To load a finished template into the app and write it to a device, see [**Templates**](./templates.md) and [**Install the app**](../install.md).

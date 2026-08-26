@@ -5,14 +5,14 @@ const sidebars = {
   docs: [
     'introduction',
     'first-steps',
-    'features',
+    //'features',
     // One page in the STICKER docs that explains how the app fits in and links
     // out from its body. The app itself is documented in full under APPS
     // (/apps/hardwario-manager) — deliberately not mirrored into this sidebar.
     'hardwario-manager',
     {
       type: 'category',
-      label: 'Catalog Applications',
+      label: 'STICKER Variants',
       link: {
         type: 'doc',
         id: 'catalog-applications/index',
@@ -22,7 +22,7 @@ const sidebars = {
         'catalog-applications/sticker-clime',
         {
           type: 'category',
-          label: 'Sticker Input',
+          label: 'STICKER Input',
           link: {
             type: 'doc',
             id: 'catalog-applications/sticker-input',
@@ -58,39 +58,50 @@ const sidebars = {
         'catalog-applications/sticker-motion',
       ],
     },
-     {
+    {
       type: 'category',
-      label: 'LoRaWAN Network Server',
+      label: 'Connectivity',
+      link: {
+        type: 'doc',
+        id: 'connectivity/index',
+      },
       collapsed: true,
       items: [
         {
           type: 'category',
-          label: 'ChirpStack',
-          link: {
-            type: 'doc',
-            id: 'lorawan-network-server/lorawan-chirpstack',
-          },
-          collapsed: true,
+          label: 'LoRaWAN',
           items: [
-            'lorawan-network-server/chirpstack-otaa',
-            'lorawan-network-server/chirpstack-abp',
+            {
+              type: 'category',
+              label: 'ChirpStack',
+              link: {
+                type: 'doc',
+                id: 'connectivity/lorawan-chirpstack',
+              },
+              collapsed: true,
+              items: [
+                'connectivity/chirpstack-otaa',
+                'connectivity/chirpstack-abp',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'The Things Stack',
+              link: {
+                type: 'doc',
+                id: 'connectivity/lorawan-tts',
+              },
+              collapsed: true,
+              items: [
+                'connectivity/tts-otaa',
+                'connectivity/tts-abp',
+              ],
+            },
+            'connectivity/downlink-commands-generator',
+            'connectivity/downlink-commands',
           ],
         },
-        {
-          type: 'category',
-          label: 'The Things Stack',
-          link: {
-            type: 'doc',
-            id: 'lorawan-network-server/lorawan-tts',
-          },
-          collapsed: true,
-          items: [
-            'lorawan-network-server/tts-otaa',
-            'lorawan-network-server/tts-abp',
-          ],
-        },
-        'lorawan-network-server/downlink-commands-generator',
-        'lorawan-network-server/downlink-commands',
+        'connectivity/lora-p2p',
       ],
     },
     {
@@ -111,8 +122,18 @@ const sidebars = {
         'developer-access/diagnostics',
       ],
     },
-    'hardware-description',
-    'power-management',
+    {
+      type: 'category',
+      label: 'Hardware Description',
+      link: {
+        type: 'doc',
+        id: 'hardware-description',
+      },
+      collapsed: true,
+      items: [
+        'power-management',
+      ],
+    },
     'ordering-codes',
     {
       type: 'doc',

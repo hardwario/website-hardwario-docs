@@ -9,9 +9,11 @@ STICKER has no buttons, no display, and no configuration cable. It is set up
 over **NFC** with **HARDWARIO Manager**, the HARDWARIO mobile app — you hold the
 phone against the device and the app reads or writes its settings.
 
-This page explains how the app fits into working with STICKER. The app itself is
-documented in full under [**APPS → HARDWARIO Manager**](/apps/hardwario-manager).
+:::tip Full App Documentation
+This page explains how HARDWARIO Manager fits into the STICKER deployment workflow. For complete app guides, feature breakdowns, and installation instructions, visit:
 
+→ [**HARDWARIO Manager Documentation**](/apps/hardwario-manager)
+:::
 ---
 
 ## What you need
@@ -51,8 +53,8 @@ LoRaWAN keys: see [**Features**](features.md).
 | Reboot, reset, or re-key a device | [**Reset a device**](/apps/hardwario-manager/sticker/reset) |
 
 Registering the device on a network server afterwards is covered under
-[**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) and
-[**The Things Stack**](lorawan-network-server/lorawan-tts.md).
+[**ChirpStack**](connectivity/lorawan-chirpstack.md) and
+[**The Things Stack**](connectivity/lorawan-tts.md).
 
 ---
 

@@ -1,20 +1,34 @@
 ---
+slug: configuration
 title: Configuration
 ---
 import Image from '@theme/IdealImage';
 
 
-:::info Firmware v1.4.0
-The `config` command and most parameters on this page also work on v1.3.x firmware. **New in the upcoming STICKER firmware v1.4.0**: `config claim-token` (the write-once device claim token), the LoRaWAN link-supervision keys (`lrw-link-check-interval`, `lrw-link-check-fail-rejoin`), and sensor-history recording (`config history-enable` / `config history-sensors` — see [**Sensor History**](sensor-history.md)).
-:::
+
 
 # Configuration (`config`)
 
 Device settings are read and written with the `config` command over the developer shell. See [**Firmware Setup**](firmware-setup.md) for setting up the firmware and opening the console.
 
-## Command syntax
+:::info Firmware v1.4.0
+The `config` command and most parameters on this page apply to STICKER firmware v1.4.0. Key updates in v1.4.0 include:
+- **Radio-Silent Factory Default:** The radio is disabled by default (`radio-mode off`) to save power until activated via NFC using [**HARDWARIO Manager**](../hardwario-manager) or shell.
+- **Encrypted NFC Access:** AES-CCM encrypted local command channel (`hio.stck:cmd` / `hio.stck:rsp`) with anti-replay nonce protection.
+- **Write-Once Claim Token:** Immutable provisioning token (`config claim-token`) for secure cloud onboarding.
+- **Link Supervision:** LoRaWAN link checks (`lrw-link-check-interval`, `lrw-link-check-fail-rejoin`).
+- **Sensor History:** Buffer and replay capabilities (see [**Sensor History**](sensor-history.md)).
+:::
 
-```
+:::tip Field vs. Developer Configuration
+While this page documents interactive shell commands (`config`) accessed via an RTT debug connection, standard field configuration and commissioning are performed wirelessly over NFC using [**HARDWARIO Manager**](../hardwario-manager).
+:::
+
+---
+
+## Command Syntax
+
+```text
 config <subcommand> [value]
 ```
 
@@ -23,7 +37,7 @@ config <subcommand> [value]
 
 Print every current value at once:
 
-```
+```text
 config show
 ```
 
@@ -31,7 +45,9 @@ config show
 A `config` write updates the setting in RAM and takes effect immediately, but it is **not persisted** until you run `settings save`, which writes the configuration to flash and **reboots** the device (see [**Maintenance**](maintenance.md)). A change that is not saved is lost on the next power cycle. Alarm rules set with the `alarm` command (see [**Alarm Rules**](alarm-rules.md)) persist immediately and do not reboot.
 :::
 
-## Sampling and reporting intervals
+---
+
+## Sampling and Reporting Intervals
 
 | Command | Argument | Description |
 |---|---|---|
@@ -40,15 +56,18 @@ A `config` write updates the setting in RAM and takes effect immediately, but it
 
 **Example** - report every 10 minutes:
 
-```
+```bash
 config interval-report 600
 settings save
 ```
 
-## LoRaWAN
+---
+
+## LoRaWAN & Radio Settings
 
 | Command | Argument | Description |
 |---|---|---|
+| `config radio-mode` | `on` / `off` | Enable or disable the LoRaWAN radio. **Default in v1.4.0+ is `off` (Radio-Silent mode)**. |
 | `config lrw-region` | `eu868` / `us915` / `au915` | Frequency region. |
 | `config lrw-sub-band` | `0`-`8` | US915/AU915 sub-band. `0` = all channels. Default `2`. |
 | `config lrw-network` | `public` / `private` | Network type. |
@@ -64,18 +83,21 @@ settings save
 | `config lrw-link-check-interval` | `0`-`255` | Request a LinkCheckReq every Nth uplink. `0` = disabled. Default `5`. |
 | `config lrw-link-check-fail-rejoin` | `1`-`255` | Link-check failures before an OTAA rejoin is attempted. Default `5`. |
 
-**Example** - EU868 with OTAA:
+**Example** - EU868 with OTAA and enabling radio transmission:
 
-```
+```bash
 config lrw-region eu868
 config lrw-activation otaa
 config lrw-deveui 0102030405060708
 config lrw-joineui 0807060504030201
 config lrw-appkey 0102030405060708090A0B0C0D0E0F10
+config radio-mode on
 settings save
 ```
 
-## Sensors and capabilities
+---
+
+## Sensors and Capabilities
 
 **Capability flags** tell the firmware which hardware is present on a given variant. They are normally set during factory provisioning and should not be changed in the field.
 
@@ -91,14 +113,16 @@ settings save
 | `config cap-input-a` | `true` / `false` | External input A present. |
 | `config cap-input-b` | `true` / `false` | External input B present. |
 
-**Sensor settings:**
+**Sensor Settings:**
 
 | Command | Argument | Description |
 |---|---|---|
-| `config accel-motion-sensitivity` | `off` / `low` / `medium` / `high` | Accelerometer motion-detection sensitivity. Default `off`, which powers the accelerometer down (also disables free-fall). |
+| `config accel-motion-sensitivity` | `off` / `low` / `medium` / `high` | Accelerometer motion-detection sensitivity. Default `off`, which powers the accelerometer down. |
 | `config sensor1-rom` ... `config sensor4-rom` | 16 hex digits | Bind a 1-Wire sensor to slot 1-4 by its ROM serial. All-zero = empty slot. |
 
-## Pulse counters
+---
+
+## Pulse Counters
 
 | Command | Argument | Description |
 |---|---|---|
@@ -109,14 +133,24 @@ settings save
 
 For wiring details (DIP switches, 1-Wire, dry contact, analog), see [**STICKER Input Wiring**](../sticker-input-wiring/index.md).
 
-## Device identity
+---
 
-These parameters are set during factory provisioning and commissioning. Avoid changing them in normal operation. For resetting the device, see [**Maintenance**](maintenance.md).
+## Device Identity & NFC Security Architecture
+
+These parameters manage device identity, NFC access control, and claim provisioning. They are set during factory provisioning and should not be altered in standard operation.
 
 | Command | Argument | Description |
 |---|---|---|
-| `config calibration` | `true` / `false` | Enable calibration mode (factory use). |
-| `config secret-key` | 32 hex digits | Device secret key used for the encrypted NFC channel. Readable and writable over the shell only. |
 | `config serial-number` | 10 decimal digits | Device serial number. |
-| `config nonce-counter` | integer | Anti-replay nonce counter for the NFC/LoRaWAN command channel. |
-| `config claim-token` | 32 hex digits | 128-bit device claim token. Write-once: set once at commissioning, then immutable. |
+| `config secret-key` | 32 hex digits | Device secret key used to secure the local NFC channel via AES-CCM. Readable/writable over shell only. |
+| `config nonce-counter` | Integer | Anti-replay nonce counter enforced on the encrypted NFC and LoRaWAN command channels. |
+| `config claim-token` | 32 hex digits | 128-bit write-once device claim token. Once set during commissioning, it becomes immutable to lock unit ownership to a backend. |
+| `config calibration` | `true` / `false` | Enable calibration mode (factory use). |
+
+### Encrypted NFC Local Access Channel
+
+From firmware v1.4.0 onwards, NFC local read/write transactions are secured against eavesdropping and unauthorized reconfiguration:
+
+- **AES-CCM Security:** Smartphone communication via [**HARDWARIO Manager**](../hardwario-manager) uses an encrypted AES-CCM channel operating over NDEF records (`hio.stck:cmd` for requests and `hio.stck:rsp` for responses).
+- **Anti-Replay Mechanism:** Each transaction evaluates and increments the `nonce-counter` to prevent replay attacks from captured NFC sessions.
+- **Claim Token Provisioning:** The 128-bit `claim-token` allows a physical unit to be bound to a customer's cloud instance before or during deployment, without requiring an immediate LoRaWAN Join session.

@@ -59,6 +59,6 @@ Alarm rules can be carried in a **template**, so a fleet can be given the same
 rules in one pass — see [**Templates**](./templates.md). Rules can also be built
 in a browser with the
 [**Template Generator**](./template-generator.mdx), and set over the air with the
-[**Downlink Commands Generator**](/sticker/lorawan-network-server/downlink-commands-generator)
+[**Downlink Commands Generator**](/sticker/connectivity/downlink-commands-generator)
 or the `alarm` shell command — see
 [**Alarm Rules (Developer Access)**](/sticker/developer-access/alarm-rules).

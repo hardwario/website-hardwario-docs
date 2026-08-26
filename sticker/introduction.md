@@ -33,13 +33,7 @@ import Image from '@theme/IdealImage';
 
 ## Key Features
 
-| Feature                   | Description                                                                                                 |
-|----------------------------|-------------------------------------------------------------------------------------------------------------|
-| **Wireless Connectivity** | Supports LoRaWAN for efficient wireless data transmission, plus a proprietary LoRa P2P mode (software-selectable) for direct links to HARDWARIO FIBER. |
-| **Long Battery Life** | Designed for low energy consumption, ensuring 2+ years of operation on standard AA batteries. |
-| **Compact Size** | Miniature dimensions for easy installation and use.                                                         |
-| **Integrated PIR Motion Sensor** | Detects motion with an integrated PIR sensor up to 5 meters.                                              |
-| **NFC Ready** | Connect to the device using an NFC-enabled smartphone.                                                      |
-| **Industrial Logic Inputs**| Supports up to 2 digital inputs for 24V industrial logic.                                                   |
-| **Voltage Measurement** | Measure up to 2 channels of voltage up to 30V.                                                              |
-| **Open-source SDK** | Built on the Zephyr OS SDK, can be easily customized.                                                       |
+* **Ultra Low Power:** Multi-year operation powered by two standard AA batteries with intelligent sleep modes and factory Radio-Silent support.
+* **Flexible Connectivity & NFC:** Long-range LoRaWAN communication combined with encrypted NFC for instant configuration and management.
+* **Modular Ecosystem:** Pre-built catalog applications (Clime, Motion, Input) covering diverse environmental and industrial sensing tasks.
+* **Open & Secure Firmware:** Built on Zephyr RTOS with zero remote attack surface (SWD-only flashing, no field bootloader).

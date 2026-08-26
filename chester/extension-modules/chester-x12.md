@@ -81,7 +81,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 
 ### CHESTER-X12 Connector Pinout
 
-{/* TODO: add ![CHESTER-X12 terminal block pinout](images/tb-chester-x12.png) above the table once the terminal-block image is delivered */}
+![CHESTER-X12 terminal block pinout](images/tb-chester-x12.png)
 
 | Pin | Signal | Type | Description |
 | :---: | :--- | :--- | :--- |

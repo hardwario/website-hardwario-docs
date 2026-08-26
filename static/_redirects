@@ -49,7 +49,7 @@
 /chester/hardware-description/schematic-diagram      /chester/hardware-description/chester-m                        301
 
 # Fixed a typo'd slug (chirpstack-ataa -> chirpstack-otaa)
-/sticker/lorawan-network-server/chirpstack-ataa      /sticker/lorawan-network-server/chirpstack-otaa                301
+/sticker/connectivity/chirpstack-ataa      /sticker/connectivity/chirpstack-otaa                301
 
 # Quick Start Guide slug rename (first-step -> first-steps)
 /chester/first-step                                  /chester/first-steps                                           301
@@ -104,7 +104,7 @@
 /chester/hardware-description/connector-description/ /chester/hardware-description/chester-m                        301
 /chester/hardware-description/layout-placement/      /chester/hardware-description/chester-m                        301
 /chester/hardware-description/schematic-diagram/     /chester/hardware-description/chester-m                        301
-/sticker/lorawan-network-server/chirpstack-ataa/     /sticker/lorawan-network-server/chirpstack-otaa                301
+/sticker/connectivity/chirpstack-ataa/     /sticker/connectivity/chirpstack-otaa                301
 /chester/first-step/                                 /chester/first-steps                                           301
 /sticker/first-step/                                 /sticker/first-steps                                           301
 /glider/first-step/                                  /glider/first-steps                                            301
@@ -251,8 +251,8 @@
 /ember/initial-configuration/                        /ember/first-steps                                             301
 
 # sticker: old ChirpStack stub
-/sticker/chirpstack                                  /sticker/lorawan-network-server/lorawan-chirpstack             301
-/sticker/chirpstack/                                 /sticker/lorawan-network-server/lorawan-chirpstack             301
+/sticker/chirpstack                                  /sticker/connectivity/lorawan-chirpstack             301
+/sticker/chirpstack/                                 /sticker/connectivity/lorawan-chirpstack             301
 
 # tower: empty how-to stubs + discontinued modules (Cloony / Infra Grid / NFC Tag)
 /tower/firmware-sdk/how-to/how-to-rs-485-module      /tower/firmware-sdk/                                           301

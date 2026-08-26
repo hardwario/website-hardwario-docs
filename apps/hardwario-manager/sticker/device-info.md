@@ -74,8 +74,8 @@ actions cover the whole set and **Share all** exports them together.
 <img src="/img/hw-manager/hw-manager-lrw-keys-share.png" alt="Sharing the LoRaWAN keys as JSON, CSV, text or QR code" width="320" />
 
 Use them to register the device in
-[**ChirpStack**](/sticker/lorawan-network-server/lorawan-chirpstack) or
-[**The Things Stack**](/sticker/lorawan-network-server/lorawan-tts).
+[**ChirpStack**](/sticker/connectivity/lorawan-chirpstack) or
+[**The Things Stack**](/sticker/connectivity/lorawan-tts).
 
 :::caution A key export is complete
 Unlike a configuration export, a LoRaWAN-key export strips nothing — the AppKey

@@ -5,21 +5,37 @@ import Image from '@theme/IdealImage';
 
 # Firmware Setup
 
-Set up the STICKER firmware locally, flash a **debug** image (which enables the shell console), and open the console. This is the entry point for the [**Developer Access**](../developer-mode.md) workflow.
+Set up the STICKER firmware repository locally, build binaries, flash a **debug** image (which enables the interactive shell console), and open the console. This is the entry point for the [**Developer Access**](../developer-mode.md) workflow.
 
-## What you need
-
-- A STICKER in Debug Mode (open, programmable).
-- A SEGGER **J-Link** debug probe (SWD) - used for flashing and for the RTT console.
-- A Linux or macOS host with **Python 3** and **git**.
+:::info Firmware v1.4.0
+STICKER firmware is built on **Zephyr RTOS**. This guide covers setting up the development workspace, compiling release/debug binaries, flashing via SWD, and understanding the security model.
+:::
 
 ---
 
-## Set up the firmware repository locally
+## Security Model & Firmware Architecture
 
-The firmware is an open Zephyr project, hosted at [**github.com/hardwario/sticker-firmware**](https://github.com/hardwario/sticker-firmware), and managed with **West** (the Zephyr meta-tool). The steps below create a West workspace, fetch the firmware together with its pinned Zephyr fork, and install the toolchain.
+STICKER uses a **flat application image** linked directly from the base of flash memory:
+- **No Remote Bootloader or FUOTA:** The device does not include MCUboot or a DFU partition. There is no over-the-air (FUOTA) or NFC firmware update capability. The legacy `enter_dfu` command was deliberately removed.
+- **Zero Remote Attack Surface:** Firmware images cannot be replaced, downgraded, or tampered with over LoRaWAN or NFC.
+- **Physical SWD Access Only:** Reprogramming or updating firmware in the field strictly requires physical access to the SWD programming pads using a SEGGER J-Link probe (`make flash`).
 
-### 1. Create a workspace and Python environment
+---
+
+## What You Need
+
+- **STICKER device** with physical SWD access.
+- **SEGGER J-Link debug probe** (SWD connection) for flashing and RTT console output.
+- **Host System:** Linux or macOS with Python 3, Git, and CMake.
+  - *NixOS / Nix users:* A `shell.nix` file is provided at the repository root to automatically set up the ARM toolchain, J-Link, and Python environment via `nix-shell`.
+
+---
+
+## Local Development Workspace Setup
+
+The firmware repository is hosted at [**github.com/hardwario/sticker-firmware**](https://github.com/hardwario/sticker-firmware) and managed using **West** (the Zephyr meta-tool).
+
+### 1. Create a Workspace & Virtual Environment
 
 ```bash
 mkdir sticker && cd sticker
@@ -29,73 +45,67 @@ pip install --upgrade pip
 pip install west
 ```
 
-### 2. Fetch the firmware and Zephyr
+### 2. Fetch Firmware & Zephyr SDK Modules
 
 ```bash
-west init -m https://github.com/hardwario/sticker-firmware.git
+west init -m [https://github.com/hardwario/sticker-firmware.git](https://github.com/hardwario/sticker-firmware.git)
 west update
 west zephyr-export
 west packages pip --install
 ```
 
-`west init` clones the firmware into a `sticker/` folder inside the workspace, and `west update` fetches the pinned Zephyr fork alongside it.
-
-### 3. Install supporting tools
+### 3. Install Supporting Dependencies
 
 ```bash
 pip install rttt
 pip install protobuf grpcio-tools
-```
-
-### 4. Install the Zephyr SDK
-
-```bash
 west sdk install
 ```
 
 ---
 
-## Build and flash
+## Building and Flashing
 
-All firmware commands run from the firmware repository's `app` directory:
+All compilation and flashing commands are executed from the `app` directory of the firmware workspace:
 
 ```bash
 cd sticker/app
 ```
 
-To get the shell console you must flash a **debug** build (the console is compiled out of the release build):
+### Build Targets
+
+| Command | Description |
+|---|---|
+| `make` | Build the **production release** image (shell console disabled for maximum power savings). |
+| `make debug` | Build the **debug** image (interactive shell console enabled). |
+| `make flash` | Program the compiled binary to the device via J-Link SWD. |
+| `make clean` | Purge build artifacts and CMake cache. |
+| `make rttt` | Launch the interactive RTT terminal console. |
+| `make format` | Format source code using `clang-format`. |
+
+**To build and flash a debug image:**
 
 ```bash
 make debug
 make flash
 ```
 
-`make flash` programs the last build through the J-Link probe. Other useful targets:
-
-| Command | Description |
-|---|---|
-| `make` | Build the **release** image (no console). |
-| `make debug` | Build the **debug** image (interactive shell console enabled). |
-| `make flash` | Flash the most recent build to the device. |
-| `make clean` | Remove build outputs. |
-| `make rttt` | Open the RTT terminal (see below). |
-
-:::caution Do not mass-erase a provisioned device
-`make flash` runs a plain `west flash`, which writes only the firmware image and leaves stored settings intact. A full-chip erase (`west flash --erase`, or a J-Link mass erase) wipes the NVS `storage` region, which holds the serial number, secret key, claim token and LoRaWAN keys. Never mass-erase a unit you want to keep provisioned.
+:::caution Protect NVS Storage & Provisioning Keys
+`make flash` executes a standard `west flash` which overwrites only the application flash partition. **Never execute a full chip erase** (`west flash --erase` or J-Link mass erase), as this will erase the non-volatile storage (NVS) containing the serial number, secret key, claim token, and LoRaWAN credentials.
 :::
 
 ---
 
-## Open the console
+## Opening the Console
 
-With a debug image flashed and the J-Link connected, open the RTT terminal from the `app` directory:
+Once a debug image is flashed and the J-Link probe is attached, start the RTT terminal from the `app` directory:
 
 ```bash
 make rttt
 ```
 
-You now have an interactive shell prompt. Configuration and diagnostics are entered here as shell commands; see the command pages under [**Developer Access**](../developer-mode.md).
+This opens an interactive shell prompt where you can execute `config`, `alarm`, `history`, `clock`, and `ats` commands.
 
-:::info Debug builds auto-suspend when idle
-A debug image keeps the CPU awake so the console stays reachable, which drains the battery. After `CONFIG_APP_DEBUG_AUTOSUSPEND_S` of no shell activity (default 2 hours; `0` disables it) the device enters deep sleep; wake it with NRST or a power cycle. See [**Features**](../features.md) for details. The release build is unaffected.
+:::info Console Auto-Suspend
+In debug builds, the MCU remains active to keep the RTT console responsive, which increases battery draw. If no console activity is detected for `CONFIG_APP_DEBUG_AUTOSUSPEND_S` (default: 2 hours), the device enters deep sleep. Reset the MCU or cycle power to re-enable console access. Production release builds are not affected by this behavior and enter deep sleep immediately between sampling intervals.
 :::

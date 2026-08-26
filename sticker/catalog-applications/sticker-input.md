@@ -57,6 +57,23 @@ Here you can find information about STICKER input wiring, including DIP switch s
 </p>
 </details>
 
+## Status LED
+
+STICKER Input uses the standard status LED patterns described in [**LED Indication**](/sticker/hardware-description#led-indication) - the boot carousel, the status heartbeat every 3 seconds, and the NFC and alarm patterns are identical across all STICKER applications.
+
+Because this application is the one that actually uses the digital inputs and Hall sensors, it is where the **input activation** indication matters most. These inputs report both directions, so the color order tells you which edge occurred:
+
+| Event | Pattern |
+|---|---|
+| Input becomes active - contact closes, magnet approaches | Green, then orange |
+| Input returns to inactive - contact opens, magnet leaves | Orange, then green |
+
+This makes it possible to verify wiring and DIP switch settings on site without a console or a network connection: trigger the input and watch the order of the two colors.
+
+:::warning
+Input blinking is a commissioning aid and **stops one hour after power-up**. Counting and reporting continue as normal - power-cycle the unit if you need the visual confirmation back while testing.
+:::
+
 ## Changelog
 
 ### 2025-11-23 — v1.0.0

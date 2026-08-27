@@ -56,7 +56,7 @@ An on-board **TLA2024** 12-bit ADC, read over **I²C**, measures the input volta
 | **Voltage Monitoring** | On-board 12-bit I²C ADC (TLA2024), measures VIN and battery voltage |
 | **Host Interface** | I²C |
 | **Included Battery** | LP103454-PCM-LD, 3.7 V / 2000 mAh (56.0 × 34.5 × 10.3 mm) |
-| **Connector** | Standard 2.54 mm pitch header (Soldered) |
+| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.1 |
 
 ## Key Components

@@ -55,7 +55,7 @@ Each switch is driven **directly by one of the CHESTER-X GPIO pins** (GP0–GP3)
 | **Peak Current Limit** | 5 A per channel |
 | **Control** | Direct GPIO (GP0–GP3) |
 | **Host Interface** | None (no I²C/SPI device; direct GPIO control) |
-| **Connector** | Standard 2.54 mm pitch header (Soldered) |
+| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.0 |
 
 ## Key Components

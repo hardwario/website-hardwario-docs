@@ -55,7 +55,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **Power Input (+VIN)** | 5-28 VDC (optional external supply) |
 | **Power Output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
 | **Ethernet Output** | Differential Rx/Tx pairs on the terminal block |
-| **Connector** | Standard 2.54 mm pitch header (Soldered) |
+| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.0 |
 
 ## Key Components

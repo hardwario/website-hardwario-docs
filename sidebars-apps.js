@@ -128,31 +128,6 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Ubidots',
-      link: {
-        type: 'doc',
-        id: 'ubidots/index',
-      },
-      collapsed: true,
-      items: [
-        'ubidots/creating-device',
-        'ubidots/cloud-connection',
-        {
-          type: 'category',
-          label: 'Creating Dashboard',
-          collapsed: true,
-          items: [
-            'ubidots/creating-dashboard/metric',
-            'ubidots/creating-dashboard/line-chart',
-            'ubidots/creating-dashboard/html-canvas',
-            'ubidots/creating-dashboard/boolean',
-            'ubidots/creating-dashboard/synthetic-variable',
-          ],
-        },
-      ],
-    },
-    {
-      type: 'category',
       label: 'ThingsBoard',
       link: {
         type: 'doc',
@@ -249,16 +224,6 @@ const sidebars = {
       },
       collapsed: true,
       items: [
-        {
-          type: 'category',
-          label: 'Ubidots',
-          collapsed: true,
-          items: [
-            'videos-apps/ubidots-new-device',
-            'videos-apps/ubidots-cloud-connection',
-            'videos-apps/ubidots-dashboard',
-          ],
-        },
         {
           type: 'category',
           label: 'ThingsBoard',

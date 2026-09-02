@@ -158,9 +158,13 @@
 /fiber/troubleshooting                               /fiber/                                                        301
 /fiber/troubleshooting/                              /fiber/                                                        301
 
-# Ubidots creating-dashboard had no index page; land on the app intro
-/apps/ubidots/creating-dashboard                     /apps/ubidots/index/                                   301
-/apps/ubidots/creating-dashboard/                    /apps/ubidots/index/                                   301
+# Ubidots documentation removed. The splat is safe here because no bare
+# /apps/ubidots page survives it to be empty-matched.
+/apps/ubidots                                        /apps/introduction                                             301
+/apps/ubidots/                                       /apps/introduction                                             301
+/apps/ubidots/*                                      /apps/introduction                                             301
+/tower/platform-integrations/ubidots-dashboards      /tower/category/platform-integrations                          301
+/tower/platform-integrations/ubidots-dashboards/     /tower/category/platform-integrations                          301
 
 # TOWER split/compact-split module children flattened into hardware-modules
 # (statics only: a catch-all splat would empty-match the live bare pages)

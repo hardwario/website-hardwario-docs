@@ -288,7 +288,6 @@ const config = {
             position: 'left',
             items: [
               { to: '/apps/hardwario-manager', label: 'HARDWARIO Manager', activeBaseRegex: `/apps/hardwario-manager` },
-              // { to: '/apps/ubidots/index', label: 'Ubidots', activeBaseRegex: `/apps/ubidots/index` },
               { to: '/apps/thingsboard/index', label: 'ThingsBoard', activeBaseRegex: `/apps/thingsboard/index` },
               { to: '/apps/chirpstack/index', label: 'ChirpStack', activeBaseRegex: `/apps/chirpstack/index` },
               { to: '/apps/the-things-stack/index', label: 'The Things Stack', activeBaseRegex: `/apps/the-things-stack/index` },

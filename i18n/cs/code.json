@@ -291,38 +291,38 @@
     "description": "When the image fails to load for unknown error"
   },
   "theme.SearchBar.noResultsText": {
-    "message": "No results"
+    "message": "Žádné výsledky"
   },
   "theme.SearchBar.seeAllOutsideContext": {
-    "message": "See all results outside \"{context}\""
+    "message": "Zobrazit všechny výsledky mimo „{context}“"
   },
   "theme.SearchBar.searchInContext": {
-    "message": "See all results within \"{context}\""
+    "message": "Zobrazit všechny výsledky v „{context}“"
   },
   "theme.SearchBar.seeAll": {
-    "message": "See all results"
+    "message": "Zobrazit všechny výsledky"
   },
   "theme.SearchBar.label": {
-    "message": "Search",
+    "message": "Hledat",
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchPage.existingResultsTitle": {
-    "message": "Search results for \"{query}\"",
+    "message": "Výsledky hledání pro „{query}“",
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
-    "message": "Search the documentation",
+    "message": "Prohledat dokumentaci",
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.searchContext.everywhere": {
-    "message": "Everywhere"
+    "message": "Všude"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "1 document found|{count} documents found",
+    "message": "Nalezeny {count} dokumenty|Nalezeno {count} dokumentu|Nalezen 1 dokument|Nalezeno {count} dokumentů",
     "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.noResultsText": {
-    "message": "No documents were found",
+    "message": "Nenalezeny žádné dokumenty",
     "description": "The paragraph for empty search result"
   },
   "theme.blog.post.plurals": {

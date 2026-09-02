@@ -235,19 +235,15 @@ function linkify(text: string, sources: Source[] = []) {
 // may well ask in English, and gets an English answer inside Czech chrome.
 //
 // Unknown locale falls back to English.
-// The opening bubble, English in every locale for now: the Czech wording is
-// still being reviewed, so both locales point at this one string. Restore the
-// Czech text in UI.cs.greeting to undo.
-const GREETING =
-  'Hello! 👋 I am the AI assistant for HARDWARIO technical documentation. ' +
-  'I will help you find information about our hardware, software and cloud ' +
-  'solutions quickly. What can I help you with today?';
 
 const UI = {
   en: {
     title: 'HARDWARIO Docs Assistant',
     beta: 'Beta v2.0',
-    greeting: GREETING,
+    greeting:
+      'Hello! 👋 I am the AI assistant for HARDWARIO technical documentation. ' +
+      'I will help you find information about our hardware, software and cloud ' +
+      'solutions quickly. What can I help you with today?',
     // Three things the corpus genuinely answers well, spread across product,
     // firmware and integration so the trio does not read as one question asked
     // three ways. Each was checked against the live backend: an opener that
@@ -271,13 +267,18 @@ const UI = {
     moreSources: (n: number) => `${n} more source${n > 1 ? 's' : ''}`,
     failed: 'Something went wrong, please try again.',
     unreachable: 'Could not reach the server. Please try again.',
-    paused: 'The documentation assistant is currently paused. Please write to ask@hardwario.com.',
+    paused:
+      'The documentation assistant ran into an error and is unavailable. Please use the ' +
+      'search at the top of the page, or write to ask@hardwario.com.',
     sites: { docs: 'Documentation', www: 'hardwario.com', store: 'Store' },
   },
   cs: {
     title: 'HARDWARIO Docs Assistant',
     beta: 'Beta v2.0',
-    greeting: GREETING,
+    greeting:
+      'Dobrý den! 👋 Jsem AI asistent technické dokumentace HARDWARIO. ' +
+      'Rychle vám pomůžu najít informace o našem hardwaru, softwaru ' +
+      'a cloudových řešeních. S čím vám dnes mohu pomoci?',
     suggestions: [
       'Co je platforma CHESTER?',
       'Jak nahrát firmware do CHESTERu nebo STICKERu?',
@@ -298,7 +299,9 @@ const UI = {
     moreSources: (n: number) => `${n === 1 ? '1 další zdroj' : n < 5 ? `${n} další zdroje` : `${n} dalších zdrojů`}`,
     failed: 'Něco se pokazilo, zkuste to prosím znovu.',
     unreachable: 'Nepodařilo se spojit se serverem. Zkuste to prosím znovu.',
-    paused: 'Asistent dokumentace je momentálně pozastavený. Napište nám prosím na ask@hardwario.com.',
+    paused:
+      'Asistent dokumentace narazil na chybu a není dostupný. Použijte prosím hledání ' +
+      'v horní části stránky, nebo nám napište na ask@hardwario.com.',
     sites: { docs: 'Dokumentace', www: 'hardwario.com', store: 'E-shop' },
   },
 } as const;
@@ -517,7 +520,10 @@ export default function ChatWidget() {
         markPaused();
         setMessages(m => [...m, {
           role: 'assistant',
-          content: data.error || t.paused,
+          // Not data.error: the backend answers in one language (English) and
+          // this bubble is chrome, so it follows the page like the rest of it.
+          // Both say the same thing and name the same address.
+          content: t.paused,
         }]);
         // Leave the message on screen long enough to read before it vanishes.
         // `finally` below clears the loading state.

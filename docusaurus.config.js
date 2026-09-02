@@ -15,8 +15,11 @@ const config = {
   favicon: 'img/favicon.ico',
 
   customFields: {
-    // Backend for the docs chat widget. Override at build time with
-    // CHAT_API_URL so moving the backend never needs a code change.
+    // Backend for the docs chat widget. Cross-origin: the backend is a Vercel
+    // function (it embeds the question with a bundled ONNX model and searches a
+    // shipped index), not part of this deployment — so /api/chat here would hit
+    // the docs site's own static assets and 404. Override with CHAT_API_URL to
+    // point a local build at a preview deployment.
     chatApiUrl: process.env.CHAT_API_URL || 'https://docs-chatbot-beta.vercel.app/api/chat',
   },
 
@@ -56,7 +59,11 @@ const config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'cs'],
+    localeConfigs: {
+      en: { label: 'English', htmlLang: 'en-US' },
+      cs: { label: 'Čeština', htmlLang: 'cs-CZ' },
+    },
   },
 
   presets: [
@@ -297,6 +304,12 @@ const config = {
           {
             href: 'https://github.com/hardwario/website-hardwario-docs',
             label: 'GitHub',
+            position: 'right',
+          },
+          // Rendered between the color-mode toggle and the search bar by the
+          // ejected src/theme/Navbar/Content component.
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],

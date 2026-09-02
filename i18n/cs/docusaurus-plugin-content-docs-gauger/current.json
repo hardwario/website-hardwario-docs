@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Detailed Description": {
+    "message": "Detailed Description",
+    "description": "The label for category 'Detailed Description' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Detailed Description.link.generated-index.description": {
+    "message": "Detailed GAUGER connector, operating-state, communication, and power documentation.",
+    "description": "The generated-index page description for category 'Detailed Description' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Operation Instructions": {
+    "message": "Operation Instructions",
+    "description": "The label for category 'Operation Instructions' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Operation Instructions.link.generated-index.description": {
+    "message": "Instructions for configuring, resetting, updating, and operating GAUGER.",
+    "description": "The generated-index page description for category 'Operation Instructions' in sidebar 'docs'"
+  },
+  "sidebar.docs.doc.Changelog": {
+    "message": "Changelog",
+    "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
+  }
+}

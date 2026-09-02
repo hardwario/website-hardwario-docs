@@ -1,0 +1,42 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Devices": {
+    "message": "Devices",
+    "description": "The label for category 'Devices' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Messages": {
+    "message": "Messages",
+    "description": "The label for category 'Messages' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Downlink": {
+    "message": "Downlink",
+    "description": "The label for category 'Downlink' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Integrations": {
+    "message": "Integrations",
+    "description": "The label for category 'Integrations' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.REST API": {
+    "message": "REST API",
+    "description": "The label for category 'REST API' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Administration": {
+    "message": "Administration",
+    "description": "The label for category 'Administration' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Video Tutorials": {
+    "message": "Video Tutorials",
+    "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
+  },
+  "sidebar.docs.doc.Device Management": {
+    "message": "Device Management",
+    "description": "The label for the doc item 'Device Management' in sidebar 'docs', linking to the doc devices"
+  },
+  "sidebar.docs.doc.Overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'docs', linking to the doc messages"
+  }
+}

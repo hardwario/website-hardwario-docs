@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.LoRaWAN Network Server": {
+    "message": "LoRaWAN Network Server",
+    "description": "The label for category 'LoRaWAN Network Server' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.MikroTik": {
+    "message": "MikroTik",
+    "description": "The label for category 'MikroTik' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Video Tutorials": {
+    "message": "Video Tutorials",
+    "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Video Tutorials.link.generated-index.description": {
+    "message": "Video guides for configuring and using EMBER.",
+    "description": "The generated-index page description for category 'Video Tutorials' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.ChirpStack v4": {
+    "message": "ChirpStack v4",
+    "description": "The label for category 'ChirpStack v4' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.mikrotik-videos": {
+    "message": "MikroTik",
+    "description": "The label for category 'MikroTik' in sidebar 'docs'"
+  },
+  "sidebar.docs.doc.Changelog": {
+    "message": "Changelog",
+    "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
+  }
+}

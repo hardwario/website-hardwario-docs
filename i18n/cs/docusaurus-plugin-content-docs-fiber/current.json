@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Installation": {
+    "message": "Installation",
+    "description": "The label for category 'Installation' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.FIBER Lite": {
+    "message": "FIBER Lite",
+    "description": "The label for category 'FIBER Lite' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Troubleshooting": {
+    "message": "Troubleshooting",
+    "description": "The label for category 'Troubleshooting' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.FIBER Hardware Guides": {
+    "message": "FIBER Hardware Guides",
+    "description": "The label for category 'FIBER Hardware Guides' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.FIBER Hardware Guides.link.generated-index.description": {
+    "message": "Guides for the hardware only FIBER (CM4) has — the display and 1-Wire sensors.",
+    "description": "The generated-index page description for category 'FIBER Hardware Guides' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Hardware Description": {
+    "message": "Hardware Description",
+    "description": "The label for category 'Hardware Description' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Hardware Description.link.generated-index.description": {
+    "message": "FIBER processing platform, sensor interfaces, connectivity, and technical specifications.",
+    "description": "The generated-index page description for category 'Hardware Description' in sidebar 'docs'"
+  },
+  "sidebar.docs.doc.Changelog": {
+    "message": "Changelog",
+    "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
+  }
+}

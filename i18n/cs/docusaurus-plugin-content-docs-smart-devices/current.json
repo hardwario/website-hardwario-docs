@@ -1,0 +1,62 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.smartDevicesSidebar.category.Milesight": {
+    "message": "Milesight",
+    "description": "The label for category 'Milesight' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.Sensors": {
+    "message": "Sensors",
+    "description": "The label for category 'Sensors' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.AM300": {
+    "message": "AM300",
+    "description": "The label for category 'AM300' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.milesight-gateways": {
+    "message": "Gateways",
+    "description": "The label for category 'Gateways' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.Utility": {
+    "message": "Utility",
+    "description": "The label for category 'Utility' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.Video Tutorials": {
+    "message": "Video Tutorials",
+    "description": "The label for category 'Video Tutorials' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.RAKwireless": {
+    "message": "RAKwireless",
+    "description": "The label for category 'RAKwireless' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.rakwireless-gateways": {
+    "message": "Gateways",
+    "description": "The label for category 'Gateways' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.OnLogic": {
+    "message": "OnLogic",
+    "description": "The label for category 'OnLogic' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.Raspberry Pi": {
+    "message": "Raspberry Pi",
+    "description": "The label for category 'Raspberry Pi' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.MikroTik": {
+    "message": "MikroTik",
+    "description": "The label for category 'MikroTik' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.Carlo Gavazzi": {
+    "message": "Carlo Gavazzi",
+    "description": "The label for category 'Carlo Gavazzi' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.category.Nexelec": {
+    "message": "Nexelec",
+    "description": "The label for category 'Nexelec' in sidebar 'smartDevicesSidebar'"
+  },
+  "sidebar.smartDevicesSidebar.doc.Overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'smartDevicesSidebar', linking to the doc index"
+  }
+}

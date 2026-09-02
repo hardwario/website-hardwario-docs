@@ -12,6 +12,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
+    "verify:i18n": "node scripts/verify-i18n.mjs --locale cs",
     "test": "node --test scripts/chatbot/worker.test.mjs",
     "chatbot:notebook": "node scripts/chatbot/py2ipynb.mjs",
     "chatbot:crawl": "python scripts/chatbot/crawl.py",

@@ -49,6 +49,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'MikroTik',
+      // Disambiguates the i18n translation key from the top-level MikroTik
+      // category above; two identical labels in one sidebar collide.
+      key: 'mikrotik-videos',
       collapsed: true,
       items: [
         'videos-ember/mikrotik-update',

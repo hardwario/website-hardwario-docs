@@ -1,0 +1,90 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.HARDWARIO Manager": {
+    "message": "HARDWARIO Manager",
+    "description": "The label for category 'HARDWARIO Manager' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.STICKER": {
+    "message": "STICKER",
+    "description": "The label for category 'STICKER' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Saved STICKERs": {
+    "message": "Saved STICKERs",
+    "description": "The label for category 'Saved STICKERs' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.manager-sticker-configuration": {
+    "message": "Configuration",
+    "description": "The label for category 'Configuration' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Templates": {
+    "message": "Templates",
+    "description": "The label for category 'Templates' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.manager-sticker-tools": {
+    "message": "Tools",
+    "description": "The label for category 'Tools' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.CHESTER": {
+    "message": "CHESTER",
+    "description": "The label for category 'CHESTER' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Terminal": {
+    "message": "Terminal",
+    "description": "The label for category 'Terminal' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.manager-chester-tools": {
+    "message": "Tools",
+    "description": "The label for category 'Tools' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Creating Dashboard": {
+    "message": "Creating Dashboard",
+    "description": "The label for category 'Creating Dashboard' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.thingsboard": {
+    "message": "ThingsBoard",
+    "description": "The label for category 'ThingsBoard' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Features": {
+    "message": "Features",
+    "description": "The label for category 'Features' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Integrations": {
+    "message": "Integrations",
+    "description": "The label for category 'Integrations' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.ChirpStack": {
+    "message": "ChirpStack",
+    "description": "The label for category 'ChirpStack' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.chirpstack-configuration": {
+    "message": "Configuration",
+    "description": "The label for category 'Configuration' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.the-things-stack": {
+    "message": "The Things Stack",
+    "description": "The label for category 'The Things Stack' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.tts-configuration": {
+    "message": "Configuration",
+    "description": "The label for category 'Configuration' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Video Tutorials": {
+    "message": "Video Tutorials",
+    "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.videos-thingsboard": {
+    "message": "ThingsBoard",
+    "description": "The label for category 'ThingsBoard' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.ChirpStack v4": {
+    "message": "ChirpStack v4",
+    "description": "The label for category 'ChirpStack v4' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.videos-the-things-stack": {
+    "message": "The Things Stack",
+    "description": "The label for category 'The Things Stack' in sidebar 'docs'"
+  }
+}

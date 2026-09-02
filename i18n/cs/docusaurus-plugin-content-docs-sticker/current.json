@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.STICKER Variants": {
+    "message": "STICKER Variants",
+    "description": "The label for category 'STICKER Variants' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.STICKER Input": {
+    "message": "STICKER Input",
+    "description": "The label for category 'STICKER Input' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.External Sensor Support": {
+    "message": "External Sensor Support",
+    "description": "The label for category 'External Sensor Support' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Connectivity": {
+    "message": "Connectivity",
+    "description": "The label for category 'Connectivity' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.LoRaWAN": {
+    "message": "LoRaWAN",
+    "description": "The label for category 'LoRaWAN' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.ChirpStack": {
+    "message": "ChirpStack",
+    "description": "The label for category 'ChirpStack' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.The Things Stack": {
+    "message": "The Things Stack",
+    "description": "The label for category 'The Things Stack' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Developer Access": {
+    "message": "Developer Access",
+    "description": "The label for category 'Developer Access' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Hardware Description": {
+    "message": "Hardware Description",
+    "description": "The label for category 'Hardware Description' in sidebar 'docs'"
+  },
+  "sidebar.docs.doc.Changelog": {
+    "message": "Changelog",
+    "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
+  }
+}

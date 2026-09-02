@@ -1,0 +1,106 @@
+{
+  "logo.alt": {
+    "message": "HARDWARIO Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Products": {
+    "message": "Produkty",
+    "description": "Navbar item with label Products"
+  },
+  "item.label.Smart Devices": {
+    "message": "Chytrá zařízení",
+    "description": "Navbar item with label Smart Devices"
+  },
+  "item.label.Cloud": {
+    "message": "Cloud",
+    "description": "Navbar item with label Cloud"
+  },
+  "item.label.Apps": {
+    "message": "Aplikace",
+    "description": "Navbar item with label Apps"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.CHESTER": {
+    "message": "CHESTER",
+    "description": "Navbar item with label CHESTER"
+  },
+  "item.label.STICKER": {
+    "message": "STICKER",
+    "description": "Navbar item with label STICKER"
+  },
+  "item.label.EMBER": {
+    "message": "EMBER",
+    "description": "Navbar item with label EMBER"
+  },
+  "item.label.FIBER": {
+    "message": "FIBER",
+    "description": "Navbar item with label FIBER"
+  },
+  "item.label.GAUGER": {
+    "message": "GAUGER",
+    "description": "Navbar item with label GAUGER"
+  },
+  "item.label.GLIDER": {
+    "message": "GLIDER",
+    "description": "Navbar item with label GLIDER"
+  },
+  "item.label.TAPPER": {
+    "message": "TAPPER",
+    "description": "Navbar item with label TAPPER"
+  },
+  "item.label.TOWER": {
+    "message": "TOWER",
+    "description": "Navbar item with label TOWER"
+  },
+  "item.label.Milesight": {
+    "message": "Milesight",
+    "description": "Navbar item with label Milesight"
+  },
+  "item.label.RAKwireless": {
+    "message": "RAKwireless",
+    "description": "Navbar item with label RAKwireless"
+  },
+  "item.label.OnLogic": {
+    "message": "OnLogic",
+    "description": "Navbar item with label OnLogic"
+  },
+  "item.label.Raspberry Pi": {
+    "message": "Raspberry Pi",
+    "description": "Navbar item with label Raspberry Pi"
+  },
+  "item.label.MikroTik": {
+    "message": "MikroTik",
+    "description": "Navbar item with label MikroTik"
+  },
+  "item.label.Carlo Gavazzi": {
+    "message": "Carlo Gavazzi",
+    "description": "Navbar item with label Carlo Gavazzi"
+  },
+  "item.label.Nexelec": {
+    "message": "Nexelec",
+    "description": "Navbar item with label Nexelec"
+  },
+  "item.label.HARDWARIO Manager": {
+    "message": "HARDWARIO Manager",
+    "description": "Navbar item with label HARDWARIO Manager"
+  },
+  "item.label.ThingsBoard": {
+    "message": "ThingsBoard",
+    "description": "Navbar item with label ThingsBoard"
+  },
+  "item.label.ChirpStack": {
+    "message": "ChirpStack",
+    "description": "Navbar item with label ChirpStack"
+  },
+  "item.label.The Things Stack": {
+    "message": "The Things Stack",
+    "description": "Navbar item with label The Things Stack"
+  },
+  "item.label.Video Tutorials": {
+    "message": "Videonávody",
+    "description": "Navbar item with label Video Tutorials"
+  }
+}

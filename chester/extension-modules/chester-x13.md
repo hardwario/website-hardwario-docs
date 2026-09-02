@@ -4,6 +4,7 @@ title: CHESTER-X13 (CAN Bus)
 description: CAN and CAN FD extension module for the CHESTER platform, based on the MCP2518FD controller and TCAN3413 transceiver, with on-board bus termination.
 keywords: [CHESTER-X13, CAN, CAN FD, CAN Bus, CANbus, MCP2518FD, TCAN3413, SPI, bus termination, wired connectivity, CHESTER]
 ---
+import Image from '@theme/IdealImage';
 
 # CHESTER-X13
 
@@ -12,9 +13,7 @@ The **CHESTER-X13** is a **CAN Bus** extension module with **CAN FD** support fo
 <div class="container">
 <div class="row">
 <div class="col col--4">
-
-![3D render of the red CHESTER-X13 R1.2 board showing the MCP2518FD CAN controller, the 20 MHz crystal, the TCAN3413 transceiver, and the step-down inductor](images/chester-x13-top.png)
-
+<div><Image img={require('./images/chester-x13-top.png')} alt="3D render of the red CHESTER-X13 R1.2 board showing the MCP2518FD CAN controller, the 20 MHz crystal, the TCAN3413 transceiver, and the step-down inductor"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -58,7 +57,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **Power Input (+VIN)** | 5-28 VDC (optional external supply) |
 | **Power Output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
 | **Bus Output** | CANH / CANL on the terminal block |
-| **Connector** | Standard 2.54 mm pitch header (Soldered) |
+| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.2 |
 
 ## Key Components
@@ -166,22 +165,10 @@ CHESTER-X13 can be used as part of the CHESTER SDK using the `ctr_x13_a` and `ct
 
 ## Schematic Diagrams
 
-The following diagrams show the internal wiring of the module across its three sheets: the main page, the CAN interface, and the power supply.
+The complete schematic — covering the main page, the CAN interface, and the power supply — is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x13-r1.2.pdf)
-- [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x13-r1.2.html)
-
-### Main Page
-
-![CHESTER-X13 main-page schematic: the CHESTER-X module connector mapping the terminal-block signals (INT, RH, CANH, CANL, RL, GND, +VIN) and the SPI pins GP0-GP3 (SCK, SDI, SDO, NCS)](images/hio-chester-x13-r1.2-1.png)
-
-### CAN
-
-![CHESTER-X13 CAN schematic: MCP2518FD CAN FD controller with 20 MHz crystal, TCAN3413 transceiver, and the split bus-termination resistors](images/hio-chester-x13-r1.2-3.png)
-
-### Power
-
-![CHESTER-X13 power schematic: TPS62933 step-down converter with PMEG6010ELR input and output Schottky diodes](images/hio-chester-x13-r1.2-2.png)
+- [Interactive CHESTER-X13 browser](pathname:///download/ibom/hio-chester-x13-r1.2.html)
 
 ## Module Drawing
 

@@ -4,6 +4,7 @@ title: CHESTER-X12 (RS-232)
 description: RS-232 serial-communication extension module for the CHESTER platform, based on the SC16IS740IPW I²C-to-UART bridge and the MAX3226 transceiver, with on-board input-voltage monitoring.
 keywords: [CHESTER-X12, RS-232, RS232, serial, SC16IS740IPW, MAX3226, I2C-to-UART, UART bridge, TPS62933, TLA2021, voltage monitoring, CHESTER]
 ---
+import Image from '@theme/IdealImage';
 
 # CHESTER-X12
 
@@ -12,9 +13,7 @@ The **CHESTER-X12** is an **RS-232** serial-communication extension module for t
 <div class="container">
 <div class="row">
 <div class="col col--4">
-
-![Top view of the red CHESTER-X12 board showing the SC16IS740IPW I²C-to-UART bridge, the MAX3226 RS-232 transceiver, the step-down inductor and crystal, and the ADR address solder bridge](images/chester-x12-top.png)
-
+<div><Image img={require('./images/chester-x12-top.png')} alt="Top view of the red CHESTER-X12 board showing the SC16IS740IPW I²C-to-UART bridge, the MAX3226 RS-232 transceiver, the step-down inductor and crystal, and the ADR address solder bridge"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -59,7 +58,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **Power Input (+VIN)** | 5–28 VDC (optional external supply) |
 | **Power Output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
 | **Voltage Monitoring** | On-board 12-bit I²C ADC (TLA2021), measures the input voltage |
-| **Connector** | Standard 2.54 mm pitch header (Soldered) |
+| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.2 |
 
 ## Key Components
@@ -168,22 +167,10 @@ CHESTER-X12 can be used as part of the CHESTER SDK using the `ctr_x12_a` and `ct
 
 ## Schematic Diagrams
 
-The following diagrams show the internal wiring of the module across its three sheets: the main page, the interface, and the power supply.
+The complete schematic — covering the main page, the interface, and the power supply — is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x12-r1.2.pdf)
-- [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x12-r1.2.html)
-
-### Main Page
-
-![CHESTER-X12 main-page schematic: the CHESTER-X module connector mapping the terminal-block signals (+VIN, GND, +V, RS232 TX/RX, VDD) and the GP pins GP0-GP3 (INVALID#, ADC_EN, UART IRQ, FORCEOFF#)](images/hio-chester-x12-r1.2-1.png)
-
-### Interface
-
-![CHESTER-X12 interface schematic: SC16IS740IPW I²C-to-UART bridge with 14.7456 MHz crystal (I²C address 0x54/0x55) and the MAX3226EEUE+ RS-232 transceiver](images/hio-chester-x12-r1.2-2.png)
-
-### Power
-
-![CHESTER-X12 power schematic: TPS62933 step-down converter (5 V output) with PMEG6010ELR Schottky diodes and the TLA2021 input-voltage-monitoring ADC](images/hio-chester-x12-r1.2-3.png)
+- [Interactive CHESTER-X12 browser](pathname:///download/ibom/hio-chester-x12-r1.2.html)
 
 ## Module Drawing
 

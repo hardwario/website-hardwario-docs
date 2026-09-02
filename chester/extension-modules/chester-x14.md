@@ -4,6 +4,7 @@ title: CHESTER-X14 (Ethernet)
 description: Wired 10/100 Ethernet extension module for the CHESTER platform, based on the W5500 hardwired TCP/IP controller with TCP and UDP support.
 keywords: [CHESTER-X14, Ethernet, 10/100 Ethernet, Ethernet module, W5500, TCP/IP, UDP, RJ-45, wired connectivity, CHESTER]
 ---
+import Image from '@theme/IdealImage';
 
 # CHESTER-X14
 
@@ -12,9 +13,7 @@ The **CHESTER-X14** is a wired **10/100 Ethernet** extension module for the CHES
 <div class="container">
 <div class="row">
 <div class="col col--4">
-
-![3D render of the red CHESTER-X14 R1.0 board showing the W5500 QFP controller, the Ethernet magnetics module, the 25 MHz crystal, and the step-down inductor](images/chester-x14-top.png)
-
+<div><Image img={require('./images/chester-x14-top.png')} alt="3D render of the red CHESTER-X14 R1.0 board showing the W5500 QFP controller, the Ethernet magnetics module, the 25 MHz crystal, and the step-down inductor"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -56,7 +55,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **Power Input (+VIN)** | 5-28 VDC (optional external supply) |
 | **Power Output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
 | **Ethernet Output** | Differential Rx/Tx pairs on the terminal block |
-| **Connector** | Standard 2.54 mm pitch header (Soldered) |
+| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.0 |
 
 ## Key Components
@@ -177,22 +176,10 @@ CHESTER-X14 can be used as part of the CHESTER SDK using the `ctr_x14_a` and `ct
 
 ## Schematic Diagrams
 
-The following diagrams show the internal wiring of the module across its three sheets: the main page, the Ethernet interface, and the power supply.
+The complete schematic — covering the main page, the Ethernet interface, and the power supply — is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x14-r1.0.pdf)
-- [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x14-r1.0.html)
-
-### Main Page
-
-![CHESTER-X14 main-page schematic: the CHESTER-X module connector mapping the terminal-block signals (TD+, TD-, RD+, RD-, GND, VIN+, V+, INT), the SPI pins GP0-GP3 (MISO, MOSI, SCLK, CS), and the RJ-45 wire colors](images/hio-chester-x14-r1.0-1.png)
-
-### Ethernet
-
-![CHESTER-X14 Ethernet schematic: W5500 MAC/PHY controller with 25 MHz crystal, link and activity LEDs, and the ALANL100X1-DE12DT magnetics](images/hio-chester-x14-r1.0-2.png)
-
-### Power
-
-![CHESTER-X14 power schematic: TPS62933 step-down converter (5 V output) with PMEG6010ELR input and output Schottky diodes](images/hio-chester-x14-r1.0-3.png)
+- [Interactive CHESTER-X14 browser](pathname:///download/ibom/hio-chester-x14-r1.0.html)
 
 ## Module Drawing
 

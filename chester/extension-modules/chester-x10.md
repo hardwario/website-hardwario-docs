@@ -4,6 +4,7 @@ title: CHESTER-X10 (Li-Po charger)
 description: Backup-power and single-cell Li-Po charger extension module for the CHESTER platform, based on the TPS62933 step-down, MCP73833 charger, and TLA2024 voltage-monitoring ADC.
 keywords: [CHESTER-X10, Li-Po charger, Li-Ion charger, backup power, power supply, battery, TPS62933, MCP73833, TLA2024, step-down, battery monitoring, CHESTER]
 ---
+import Image from '@theme/IdealImage';
 
 # CHESTER-X10
 
@@ -12,9 +13,7 @@ The **CHESTER-X10** is a **backup power** extension module with an on-board **si
 <div class="container">
 <div class="row">
 <div class="col col--4">
-
-![Photo of the red CHESTER-X10 board showing the step-down inductor, the MCP73833 charger, the TLA2024 ADC, and the Schottky power-path diodes](images/chester-x10-top.png)
-
+<div><Image img={require('./images/chester-x10-top.png')} alt="Photo of the red CHESTER-X10 board showing the step-down inductor, the MCP73833 charger, the TLA2024 ADC, and the Schottky power-path diodes"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -57,7 +56,7 @@ An on-board **TLA2024** 12-bit ADC, read over **I²C**, measures the input volta
 | **Voltage Monitoring** | On-board 12-bit I²C ADC (TLA2024), measures VIN and battery voltage |
 | **Host Interface** | I²C |
 | **Included Battery** | LP103454-PCM-LD, 3.7 V / 2000 mAh (56.0 × 34.5 × 10.3 mm) |
-| **Connector** | Standard 2.54 mm pitch header (Soldered) |
+| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.1 |
 
 ## Key Components
@@ -153,18 +152,10 @@ CHESTER-X10 can be used as part of the CHESTER SDK using the `ctr_x10` shield, o
 
 ## Schematic Diagrams
 
-The following diagrams show the internal wiring of the module across its two sheets: the power supply and charger, and the voltage-monitoring ADC.
+The complete schematic — covering the power supply and charger, and the voltage-monitoring ADC — is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x10-r1.1.pdf)
-- [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x10-r1.1.html)
-
-### Power & Charger
-
-![CHESTER-X10 power schematic: TPS62933 step-down converter (5 V output) and MCP73833 single-cell Li-Po charger set to 450 mA, with PMEG Schottky power-path diodes](images/hio-chester-x10-r1.1-1.png)
-
-### Voltage Monitoring
-
-![CHESTER-X10 ADC schematic: TLA2024 12-bit I²C ADC measuring the input voltage and battery voltage through precision dividers](images/hio-chester-x10-r1.1-2.png)
+- [Interactive CHESTER-X10 browser](pathname:///download/ibom/hio-chester-x10-r1.1.html)
 
 ## Module Drawing
 

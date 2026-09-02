@@ -1,0 +1,116 @@
+[
+  {
+    "question": "How do I set up the SIM card in CHESTER?",
+    "expect": "cellular-networks/sim-card-setup",
+    "kind": "precise",
+    "site": "docs"
+  },
+  {
+    "question": "What are the network requirements for the cellular connection?",
+    "expect": "cellular-networks/network-requirements",
+    "kind": "precise",
+    "site": "docs"
+  },
+  {
+    "question": "How do I flash the LoRaWAN modem?",
+    "expect": "lorawan-modem-over-j-link",
+    "kind": "precise",
+    "site": "docs"
+  },
+  {
+    "question": "Does CHESTER support Bluetooth?",
+    "expect": "platform-connectivity/bluetooth-low-energy",
+    "kind": "precise",
+    "site": "docs"
+  },
+  {
+    "question": "How do I make the device last longer on a battery?",
+    "expect": "(chester|sticker)/power-management",
+    "kind": "vague",
+    "site": "docs"
+  },
+  {
+    "question": "Which water meters can I read wirelessly?",
+    "expect": "wm-bus",
+    "kind": "vague",
+    "site": "docs"
+  },
+  {
+    "question": "wM-Bus supported devices",
+    "expect": "wm-bus",
+    "kind": "precise",
+    "site": "docs"
+  },
+  {
+    "question": "How do I measure how much power the board draws?",
+    "expect": "power-profiler-kit-ii",
+    "kind": "vague",
+    "site": "docs"
+  },
+  {
+    "question": "How do I connect a gateway to ChirpStack?",
+    "expect": "chirpstack",
+    "kind": "precise",
+    "site": "docs"
+  },
+  {
+    "question": "How do I register an end device in The Things Stack?",
+    "expect": "the-things-stack",
+    "kind": "precise",
+    "site": "docs"
+  },
+  {
+    "question": "Where do I change the appearance of the manager app?",
+    "expect": "hardwario-manager/settings",
+    "kind": "vague",
+    "site": "docs"
+  },
+  {
+    "question": "How do I use the battery module on TOWER?",
+    "expect": "how-to-battery-module",
+    "kind": "precise",
+    "site": "docs"
+  },
+  {
+    "question": "What does a CHESTER-C4 cost?",
+    "expect": "store.*chester-c4",
+    "kind": "precise",
+    "site": "store"
+  },
+  {
+    "question": "I want to buy a development kit",
+    "expect": "store.*devkit",
+    "kind": "vague",
+    "site": "store"
+  },
+  {
+    "question": "Do you sell enclosures?",
+    "expect": "store.*enclosure",
+    "kind": "vague",
+    "site": "store"
+  },
+  {
+    "question": "Which antenna should I buy for LoRa?",
+    "expect": "store.*antenna",
+    "kind": "vague",
+    "site": "store"
+  },
+  {
+    "question": "What is CHESTER and what is it for?",
+    "expect": "hardwario\\.com/products/chester",
+    "kind": "vague",
+    "site": "www"
+  },
+  {
+    "question": "Do you have a solution for monitoring indoor air quality?",
+    "expect": "(clime-iaq|clime)",
+    "kind": "vague",
+    "site": "www"
+  },
+  {
+    "question": "How do I monitor a boiler room remotely?",
+    "expect": "boiler",
+    "kind": "vague",
+    "site": "www"
+  }
+]

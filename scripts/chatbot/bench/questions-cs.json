@@ -1,0 +1,58 @@
+[
+  { "question": "Jak nastavím SIM kartu v CHESTERu?",
+    "expect": "cellular-networks/sim-card-setup", "kind": "precise", "site": "docs" },
+
+  { "question": "Jaké jsou požadavky na mobilní síť?",
+    "expect": "cellular-networks/network-requirements", "kind": "precise", "site": "docs" },
+
+  { "question": "Jak nahraju firmware do LoRaWAN modemu?",
+    "expect": "lorawan-modem-over-j-link", "kind": "precise", "site": "docs" },
+
+  { "question": "Podporuje CHESTER Bluetooth?",
+    "expect": "platform-connectivity/bluetooth-low-energy", "kind": "precise", "site": "docs" },
+
+  { "question": "Jak prodloužím výdrž na baterii?",
+    "expect": "(chester|sticker)/power-management", "kind": "vague", "site": "docs" },
+
+  { "question": "Které vodoměry umí odečítat bezdrátově?",
+    "expect": "wm-bus", "kind": "vague", "site": "docs" },
+
+  { "question": "wM-Bus podporovaná zařízení",
+    "expect": "wm-bus", "kind": "precise", "site": "docs" },
+
+  { "question": "Jak změřím spotřebu desky?",
+    "expect": "power-profiler-kit-ii", "kind": "vague", "site": "docs" },
+
+  { "question": "Jak připojím bránu k ChirpStacku?",
+    "expect": "chirpstack", "kind": "precise", "site": "docs" },
+
+  { "question": "Jak zaregistruji zařízení v The Things Stack?",
+    "expect": "the-things-stack", "kind": "precise", "site": "docs" },
+
+  { "question": "Kde změním vzhled aplikace?",
+    "expect": "hardwario-manager/settings", "kind": "vague", "site": "docs" },
+
+  { "question": "Jak použiju bateriový modul na TOWERu?",
+    "expect": "how-to-battery-module", "kind": "precise", "site": "docs" },
+
+  { "question": "Kolik stojí CHESTER-C4?",
+    "expect": "store.*chester-c4", "kind": "precise", "site": "store" },
+
+  { "question": "Chci koupit vývojovou sadu",
+    "expect": "store.*devkit", "kind": "vague", "site": "store" },
+
+  { "question": "Prodáváte krabičky?",
+    "expect": "store.*enclosure", "kind": "vague", "site": "store" },
+
+  { "question": "Jakou anténu koupit pro LoRu?",
+    "expect": "store.*antenna", "kind": "vague", "site": "store" },
+
+  { "question": "Co je CHESTER a k čemu slouží?",
+    "expect": "hardwario\\.com/products/chester", "kind": "vague", "site": "www" },
+
+  { "question": "Máte řešení pro měření kvality vzduchu uvnitř budov?",
+    "expect": "(clime-iaq|clime)", "kind": "vague", "site": "www" },
+
+  { "question": "Jak na dálku hlídat kotelnu?",
+    "expect": "boiler", "kind": "vague", "site": "www" }
+]

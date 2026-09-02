@@ -9,8 +9,8 @@ Here is a list of tested **RAKwireless gateways** by HARDWARIO with reference re
 
 | Name | Type | Overview | Product page | Purchase link |
 | :--- | :--- | :--- | :--- | :--- |
-| [**RAK7268V2**](/smart-devices/rakwireless/gateways/rak-RAK7268V2.md) | Indoor LoRaWAN® Gateway <br/>(WisGate Edge Lite 2) | [Details](/smart-devices/rakwireless/gateways/rak-RAK7268V2.md) | [Official site](https://docs.rakwireless.com/product-categories/wisgate/rak7268v2/overview) | [Buy here](https://www.hardwario.store/p/rak-7268v2) |
-| [**RAK7289V2**](/smart-devices/rakwireless/gateways/rak-RAK7289V2.md) | Outdoor Industrial LoRaWAN® Gateway <br/>(WisGate Edge Pro) | [Details](/smart-devices/rakwireless/gateways/rak-RAK7289V2.md) | [Official site](https://docs.rakwireless.com/product-categories/wisgate/rak7289v2/overview/) | [Buy here](https://www.hardwario.store/p/rak-7289v2) |
+| [**RAK7268V2**](/smart-devices/rakwireless/gateways/rak-RAK7268V2) | Indoor LoRaWAN® Gateway <br/>(WisGate Edge Lite 2) | [Details](/smart-devices/rakwireless/gateways/rak-RAK7268V2) | [Official site](https://docs.rakwireless.com/product-categories/wisgate/rak7268v2/overview) | [Buy here](https://www.hardwario.store/p/rak-7268v2) |
+| [**RAK7289V2**](/smart-devices/rakwireless/gateways/rak-RAK7289V2) | Outdoor Industrial LoRaWAN® Gateway <br/>(WisGate Edge Pro) | [Details](/smart-devices/rakwireless/gateways/rak-RAK7289V2) | [Official site](https://docs.rakwireless.com/product-categories/wisgate/rak7289v2/overview/) | [Buy here](https://www.hardwario.store/p/rak-7289v2) |
 
 ---
 

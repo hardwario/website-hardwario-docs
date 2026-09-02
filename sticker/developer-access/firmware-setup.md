@@ -48,7 +48,7 @@ pip install west
 ### 2. Fetch Firmware & Zephyr SDK Modules
 
 ```bash
-west init -m [https://github.com/hardwario/sticker-firmware.git](https://github.com/hardwario/sticker-firmware.git)
+west init -m https://github.com/hardwario/sticker-firmware.git
 west update
 west zephyr-export
 west packages pip --install

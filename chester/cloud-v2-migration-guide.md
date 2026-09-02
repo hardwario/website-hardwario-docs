@@ -14,13 +14,13 @@ This article walks you through the complete migration process from Cloud v1 to C
 
 In this guide, you will set up the required software tools and hardware to work with the CHESTER device. It explains how to install and verify the HARDWARIO Command Line Tools in a Python virtual environment and how to connect the SEGGER J-Link programmer. Mainly, it walks you through erasing the application firmware, flashing the LTE modem firmware, and then reinstalling the application firmware, which is required to begin migration to HARDWARIO Cloud v2.
 
-👉 **Step-by-Step guide: [https://docs.hardwario.com/chester/firmware-flashing/lte-modem-over-j-link](/chester/firmware-flashing/lte-modem-over-j-link.md)**
+👉 **Step-by-Step guide: [https://docs.hardwario.com/chester/firmware-flashing/lte-modem-over-j-link](/chester/firmware-flashing/lte-modem-over-j-link)**
 
 ## 2. Flash the Application
 
 In this guide, you will learn how to flash application firmware to the CHESTER device using the SEGGER J-Link programmer. It explains the required hardware and software setup, including installing Python, creating a virtual environment, and installing the HARDWARIO Command Line Tools. Mainly, it shows how to connect the J-Link, and then flash the application firmware either from a HEX file or directly using a 128-bit unique ID.
 
-👉 **Step-by-Step guide: [https://docs.hardwario.com/chester/firmware-flashing/application-over-j-link](/chester/firmware-flashing/application-over-j-link.md)**
+👉 **Step-by-Step guide: [https://docs.hardwario.com/chester/firmware-flashing/application-over-j-link](/chester/firmware-flashing/application-over-j-link)**
 
 ## 3. Insert the SIM Card
 

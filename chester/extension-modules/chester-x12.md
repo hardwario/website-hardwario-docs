@@ -162,7 +162,7 @@ The CHESTER-X12 module can be used with various CHESTER mainboard configurations
 
 ## CHESTER SDK usage
 
-CHESTER-X12 can be used as part of the CHESTER SDK using the `ctr_x12_a` and `ctr_x12_b` shields, or `hardware-chester-x12-a` and `hardware-chester-x12-b` [Project Generator](/chester/firmware-sdk/how-to-project-generator.md) features.
+CHESTER-X12 can be used as part of the CHESTER SDK using the `ctr_x12_a` and `ctr_x12_b` shields, or `hardware-chester-x12-a` and `hardware-chester-x12-b` [Project Generator](/chester/firmware-sdk/how-to-project-generator) features.
 
 - [Example SDK usage](https://github.com/hardwario/chester-sdk/tree/main/samples/chester_x12_loop)
 

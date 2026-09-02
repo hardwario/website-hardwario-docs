@@ -271,7 +271,7 @@ const UI = {
     moreSources: (n: number) => `${n} more source${n > 1 ? 's' : ''}`,
     failed: 'Something went wrong, please try again.',
     unreachable: 'Could not reach the server. Please try again.',
-    paused: 'The documentation assistant is currently paused.',
+    paused: 'The documentation assistant is currently paused. Please write to ask@hardwario.com.',
     sites: { docs: 'Documentation', www: 'hardwario.com', store: 'Store' },
   },
   cs: {
@@ -298,7 +298,7 @@ const UI = {
     moreSources: (n: number) => `${n === 1 ? '1 další zdroj' : n < 5 ? `${n} další zdroje` : `${n} dalších zdrojů`}`,
     failed: 'Něco se pokazilo, zkuste to prosím znovu.',
     unreachable: 'Nepodařilo se spojit se serverem. Zkuste to prosím znovu.',
-    paused: 'Asistent dokumentace je momentálně pozastavený.',
+    paused: 'Asistent dokumentace je momentálně pozastavený. Napište nám prosím na ask@hardwario.com.',
     sites: { docs: 'Dokumentace', www: 'hardwario.com', store: 'E-shop' },
   },
 } as const;

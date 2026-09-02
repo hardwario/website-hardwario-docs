@@ -16,7 +16,8 @@
     "test": "node --test scripts/chatbot/worker.test.mjs",
     "chatbot:notebook": "node scripts/chatbot/py2ipynb.mjs",
     "chatbot:crawl": "python scripts/chatbot/crawl.py",
-    "chatbot:embed": "node scripts/chatbot/embed.mjs --out ../../docs-chatbot/index.bin"
+    "chatbot:embed": "node scripts/chatbot/embed.mjs --out ../../docs-chatbot/index.bin",
+    "verify:redirects": "node scripts/check-redirects.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.121.0",

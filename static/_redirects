@@ -158,11 +158,10 @@
 /fiber/troubleshooting                               /fiber/                                                        301
 /fiber/troubleshooting/                              /fiber/                                                        301
 
-# Ubidots documentation removed. The splat is safe here because no bare
-# /apps/ubidots page survives it to be empty-matched.
+# Ubidots documentation removed. The splat for these lives in the dynamic block
+# at the end of the file — see the note there before moving it back.
 /apps/ubidots                                        /apps/introduction                                             301
 /apps/ubidots/                                       /apps/introduction                                             301
-/apps/ubidots/*                                      /apps/introduction                                             301
 /tower/platform-integrations/ubidots-dashboards      /tower/category/platform-integrations                          301
 /tower/platform-integrations/ubidots-dashboards/     /tower/category/platform-integrations                          301
 
@@ -341,3 +340,4 @@
 /chester/supported-sensors/*                         /chester/supported-devices/:splat                              301
 /chester/platform-management/*                       /chester/platform-connectivity/:splat                          301
 /cloud/cloud-v2/*                                    /cloud/:splat                                                  301
+/apps/ubidots/*                                      /apps/introduction                                             301

@@ -144,7 +144,7 @@ The CHESTER-X9 module can be used with various CHESTER mainboard configurations.
 
 ## CHESTER SDK usage
 
-CHESTER-X9 can be used as part of the CHESTER SDK using the `ctr_x9_a` and `ctr_x9_b` shields, or `hardware-chester-x9-a` and `hardware-chester-x9-b` [Project Generator](/chester/firmware-sdk/how-to-project-generator.md) features.
+CHESTER-X9 can be used as part of the CHESTER SDK using the `ctr_x9_a` and `ctr_x9_b` shields, or `hardware-chester-x9-a` and `hardware-chester-x9-b` [Project Generator](/chester/firmware-sdk/how-to-project-generator) features.
 
 - [Example SDK usage](https://github.com/hardwario/chester-sdk/tree/main/samples/chester_x9)
 

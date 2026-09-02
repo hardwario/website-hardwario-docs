@@ -16,10 +16,10 @@ const config = {
 
   customFields: {
     // Backend for the docs chat widget. Cross-origin: the backend is a Vercel
-    // function (it embeds the question with a bundled ONNX model and searches a
-    // shipped index), not part of this deployment — so /api/chat here would hit
-    // the docs site's own static assets and 404. Override with CHAT_API_URL to
-    // point a local build at a preview deployment.
+    // function (it retrieves passages from a shipped snapshot of the corpus),
+    // not part of this deployment — so /api/chat here would hit the docs site's
+    // own static assets and 404. Override with CHAT_API_URL to point a local
+    // build at a preview deployment.
     chatApiUrl: process.env.CHAT_API_URL || 'https://docs-chatbot-beta.vercel.app/api/chat',
   },
 

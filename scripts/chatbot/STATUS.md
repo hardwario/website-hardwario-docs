@@ -136,9 +136,13 @@ Each of these was found by running the thing, not by reading it.
 
 *Resolved since the last revision:* Haiku's Czech (non-English questions now go
 to Sonnet 5) and the retrieval gap against embeddings (closed — see above). The
-Cloudflare escape hatch is therefore no longer needed; `worker/index.mjs`,
-`wrangler.jsonc` and `check-parity.mjs` are kept, unused, in case the corpus
-grows enough to change the picture.
+Cloudflare escape hatch is therefore no longer needed. `worker/index.mjs` and
+`check-parity.mjs` are kept, unused, in case the corpus grows enough to change
+the picture — but `wrangler.jsonc` deliberately does **not** point `main` at the
+Worker, so no deploy can activate it. Switching it on needs a Vectorize index
+and a Workers AI binding on the Cloudflare account that hosts the docs, and
+that account is not reachable from the documentation side; leaving the bindings
+declared would fail the deploy of the whole site, not merely the chat.
 
 ## Trying it locally
 

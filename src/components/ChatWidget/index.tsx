@@ -246,7 +246,7 @@ const GREETING =
 const UI = {
   en: {
     title: 'HARDWARIO Docs Assistant',
-    beta: 'Beta version',
+    beta: 'Beta v2.0',
     greeting: GREETING,
     // Three things the corpus genuinely answers well, spread across product,
     // firmware and integration so the trio does not read as one question asked
@@ -276,7 +276,7 @@ const UI = {
   },
   cs: {
     title: 'HARDWARIO Docs Assistant',
-    beta: 'Beta verze',
+    beta: 'Beta v2.0',
     greeting: GREETING,
     suggestions: [
       'Co je platforma CHESTER?',

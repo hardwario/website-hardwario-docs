@@ -108,9 +108,9 @@ Dynamic mode uses DHCP and sets the address, gateway, and DNS servers automatica
 
 ```yaml
 wifi:
-  network: "MyWiFiSSID"
-  passphrase: "supersecretpassword"
-  mode: "dynamic"
+  network: "MyWiFiSSID"
+  passphrase: "supersecretpassword"
+  mode: "dynamic"
 ```
 
 #### Static
@@ -119,14 +119,14 @@ In static mode you have to set everything manually.
 
 ```yaml
 wifi:
-  network: "MyWiFiSSID"
-  passphrase: "supersecretpassword"
-  mode: "static"
-  address: "192.168.1.100/24"
-  gateway: "192.168.1.1"
-  nameservers:  
-  - 8.8.8.8
-  - 1.1.1.1
+  network: "MyWiFiSSID"
+  passphrase: "supersecretpassword"
+  mode: "static"
+  address: "192.168.1.100/24"
+  gateway: "192.168.1.1"
+  nameservers:  
+  - 8.8.8.8
+  - 1.1.1.1
 ```
 
 The address can have a prefix length or a netmask attached, as shown in the example.
@@ -144,14 +144,14 @@ mqtt:
     certfile: "/home/hardwario/client.crt"
     keyfile: "/home/hardwario/client.key"
 wifi:
-  network: "MyWiFiSSID"
-  passphrase: "supersecretpassword"
-  mode: "static"
-  address: "192.168.1.100/24"
-  gateway: "192.168.1.1"
-  nameservers:  
-  - 8.8.8.8
-  - 1.1.1.1
+  network: "MyWiFiSSID"
+  passphrase: "supersecretpassword"
+  mode: "static"
+  address: "192.168.1.100/24"
+  gateway: "192.168.1.1"
+  nameservers:  
+  - 8.8.8.8
+  - 1.1.1.1
 ```
 
 This would be used with: `sudo tapper run -c /home/hardwario/tapper.conf`

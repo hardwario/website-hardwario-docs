@@ -1,0 +1,57 @@
+---
+slug: downlink-commands-generator
+title: Generátor downlink příkazů
+description: "Funkce popsaná na této stránce je součástí připravovaného firmwaru STICKER v1.4.0 a ve verzi v1.3.x není k dispozici."
+---
+import StickerDownlinkGenerator from '@site/src/components/StickerDownlinkGenerator';
+import Image from '@theme/IdealImage';
+
+
+:::info Firmware v1.4.0
+Funkce popsaná na této stránce je součástí připravovaného **firmwaru STICKER v1.4.0** a ve verzi v1.3.x není k dispozici.
+:::
+
+# Generátor downlink příkazů {#downlink-commands-generator}
+
+Níže si sestavte downlink příkaz pro zařízení STICKER. Vyberte příkaz, vyplňte jeho parametry a **JSON** i bajtový payload pro **fPort 85** (hex) se aktualizují live. Kódování běží celé ve vašem prohlížeči kodekem `ttn.js` z firmwaru, takže se nikam nic neodesílá.
+
+<StickerDownlinkGenerator />
+
+## Jak ho používat {#how-to-use-it}
+
+1. Vyberte příkaz. U **Set alarm rule** zvolte slot, zdroj, veličinu a prahy; u **Set configuration parameter** vyberte pole a hodnotu. Volba **Custom JSON** umožňuje napsat jakýkoli příkaz ručně.
+2. Zkopírujte **JSON**, pokud máte na síťovém serveru nainstalovaný kodek STICKER jako formátovač **downlink** payloadu, a pak ho zařaďte na fPort 85.
+3. Nebo zkopírujte **hex** a zařaďte ho přímo jako bajtový downlink payload na fPort 85, bez kodeku.
+
+:::tip Uložení změny konfigurace
+U příkazů `set_param` nechte zatržené **Save and reboot**, aby se změna zapsala do flash paměti (zařízení konfiguraci uloží a restartuje se). Odškrtněte ji, pokud chcete změnu aplikovat živě bez uložení, nebo když připravujete několik downlinků `set_param` za sebou: v tom případě nastavte uložení jen u posledního.
+:::
+
+## Zařazení na fPort 85 {#queue-it-on-fport-85}
+
+Jakmile vám generátor dá payload, zařaďte ho jako downlink na **fPort 85** ve svém síťovém serveru. Snímky níže zařazují žádost o informace o zařízení, hex `08012200` (zakódování `{"command":"get_info","seq":1}`); místo něj použijte payload, který jste si sestavili výše.
+
+### The Things Stack {#the-things-stack}
+
+<Image img={require('../../../../../sticker/connectivity/../images/tts-downlink.png')} alt="Formulář Schedule downlink v The Things Stack s režimem append, FPort 85, bajtovým payloadem a tlačítkem Schedule downlink" />
+
+1. Otevřete zařízení, zvolte **Messaging** a pak kartu **Schedule downlink**.
+2. Nastavte **Insert Mode** na **Push to downlink queue (append)**.
+3. Do **FPort** zadejte `85`.
+4. Nastavte **Payload type** na **Bytes** a vložte hex payload (například `08 01 22 00`).
+5. Nechte zatržené **Confirmed downlink**, aby zařízení příkaz potvrdilo, a klikněte na **Schedule downlink**.
+
+### ChirpStack {#chirpstack}
+
+<Image img={require('../../../../../sticker/connectivity/../images/chirpstack-downlink.png')} alt="Karta Queue v ChirpStacku se zapnutým Confirmed, FPort 85, hex payloadem 08012200 a zvýrazněným tlačítkem Enqueue" />
+
+1. Otevřete zařízení a zvolte kartu **Queue**.
+2. Do **FPort** zadejte `85` a **Is encrypted** nechte vypnuté.
+3. Na kartě **HEX** vložte hex payload (například `08012200`).
+4. Zapněte **Confirmed**, aby zařízení příkaz potvrdilo, a klikněte na **Enqueue**.
+
+:::info Zařazení JSON místo hexu
+Snímky používají surový **hex** payload, který nepotřebuje kodek. Pro odeslání ve formě **JSON** nainstalujte kodek STICKER jako formátovač downlinků (viz stránky s nastavením odkázané níže) a přepněte typ payloadu na JSON.
+:::
+
+Referenci příkazů a hotové příklady ke zkopírování najdete v [**Downlink příkazy**](downlink-commands.md). Instalaci kodeku popisují stránky s nastavením [**ChirpStack**](lorawan-chirpstack.md) a [**The Things Stack**](lorawan-tts.md).

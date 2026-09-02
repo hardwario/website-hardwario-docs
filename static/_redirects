@@ -158,9 +158,13 @@
 /fiber/troubleshooting                               /fiber/                                                        301
 /fiber/troubleshooting/                              /fiber/                                                        301
 
-# Ubidots creating-dashboard had no index page; land on the app intro
-/apps/ubidots/creating-dashboard                     /apps/ubidots/index/                                   301
-/apps/ubidots/creating-dashboard/                    /apps/ubidots/index/                                   301
+# Ubidots documentation removed. The target is /apps/ and not
+# /apps/introduction: that page carries `slug: /`. The splat for these lives in
+# the dynamic block at the end of the file — see the note there before moving it.
+/apps/ubidots                                        /apps/                                                        301
+/apps/ubidots/                                       /apps/                                                        301
+/tower/platform-integrations/ubidots-dashboards      /tower/category/platform-integrations                          301
+/tower/platform-integrations/ubidots-dashboards/     /tower/category/platform-integrations                          301
 
 # TOWER split/compact-split module children flattened into hardware-modules
 # (statics only: a catch-all splat would empty-match the live bare pages)
@@ -186,8 +190,8 @@
 /cloud-new/                                          /cloud/                                                        301
 /cloud-new/api                                       /cloud/api                                                     301
 /cloud-new/api/                                      /cloud/api                                                     301
-/cloud-new/category/cloud-v1                         /cloud/category/cloud-v1                                       301
-/cloud-new/category/cloud-v1/                        /cloud/category/cloud-v1                                       301
+/cloud-new/category/cloud-v1                         /cloud/cloud-v1/overview                                       301
+/cloud-new/category/cloud-v1/                        /cloud/cloud-v1/overview                                       301
 /cloud-new/cloud-v1/overview                         /cloud/cloud-v1/overview                                       301
 /cloud-new/cloud-v1/overview/                        /cloud/cloud-v1/overview                                       301
 /cloud-new/connectors                                /cloud/connectors                                              301
@@ -337,3 +341,4 @@
 /chester/supported-sensors/*                         /chester/supported-devices/:splat                              301
 /chester/platform-management/*                       /chester/platform-connectivity/:splat                          301
 /cloud/cloud-v2/*                                    /cloud/:splat                                                  301
+/apps/ubidots/*                                      /apps/                                                        301

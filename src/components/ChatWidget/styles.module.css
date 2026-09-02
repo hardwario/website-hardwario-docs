@@ -57,6 +57,43 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  /* Grows out of the launcher it was opened from, rather than appearing whole:
+     the origin is the corner the button sits in. */
+  transform-origin: bottom right;
+  opacity: 0;
+  transform: translateY(12px) scale(0.94);
+  transition:
+    opacity 0.16s ease,
+    transform 0.18s cubic-bezier(0.2, 0.8, 0.3, 1),
+    width 0.18s ease,
+    height 0.18s ease;
+}
+
+/* Added one frame after the panel is mounted, and removed before it is
+   unmounted — so the same two declarations animate both directions. */
+.panelOpen {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Roughly double the reading area. Same clamps as the collapsed panel, so on a
+   small screen this grows only as far as the viewport actually allows and never
+   hangs off an edge. Declared after .panel — equal specificity, so order wins. */
+.panelExpanded {
+  width: min(720px, calc(100vw - 32px));
+  height: min(820px, calc(100vh - 64px));
+  height: min(820px, calc(100dvh - 64px));
+}
+
+/* No transition, and no starting state to be stuck in: the panel has to be
+   fully visible the moment it mounts, because nothing will animate it there.
+   JS skips its matching delay, so the two stay in step. */
+@media (prefers-reduced-motion: reduce) {
+  .panel {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .header {
@@ -68,6 +105,24 @@
   align-items: center;
   font-weight: 600;
   font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Mark and title travel together on the left; the close button keeps the right.
+   min-width: 0 so the title can truncate instead of shoving the button off. */
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* The white mark, on the red header. Sized to the two stacked lines beside it
+   rather than to the launcher, where it is the only thing in the button. */
+.headerIcon {
+  height: 24px;
+  width: auto;
+  display: block;
   flex-shrink: 0;
 }
 
@@ -91,17 +146,73 @@
   opacity: 0.85;
 }
 
+/* Resize and close travel together on the right. Without this the title would
+   squash them on a narrow panel. */
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
 .close {
   background: none;
   border: none;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
-  padding: 0;
+  padding: 3px 5px;
   line-height: 1;
-  /* Without this the X gets squashed by the title on a narrow panel. */
-  flex-shrink: 0;
-  margin-left: 8px;
+  border-radius: 6px;
+}
+
+.expand {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  /* line-height 0 so the box wraps the SVG rather than a text line's leading. */
+  line-height: 0;
+  padding: 5px;
+  border-radius: 6px;
+  opacity: 0.9;
+}
+
+.expand svg {
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+/* Same shape as .expand it sits beside; only the icon differs. */
+.newChat {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  line-height: 0;
+  padding: 5px;
+  border-radius: 6px;
+  opacity: 0.9;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+/* Dimmed on an empty chat: there is no conversation to start over from, and a
+   button that looks live but does nothing is worse than one that says so. */
+.newChat:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.close:hover,
+.close:focus-visible,
+.expand:hover,
+.expand:focus-visible,
+.newChat:hover:not(:disabled),
+.newChat:focus-visible:not(:disabled) {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.16);
 }
 
 /* Truncate rather than push the close button off the edge. */
@@ -118,13 +229,6 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-
-.empty {
-  color: var(--ifm-color-secondary-darkest);
-  font-size: 13px;
-  text-align: center;
-  padding: 24px 8px;
 }
 
 .userMsg {
@@ -155,30 +259,282 @@
   white-space: pre-wrap;
 }
 
+/* The greeting lands just after the panel has finished opening, so it reads as
+   the assistant saying something rather than as furniture that was always
+   there. The delay is roughly the panel's own transition; `both` holds the
+   from-state through it, without which the bubble would show at full opacity
+   first and only then animate.
+
+   Only the greeting animates. Answers arrive after a visible typing indicator,
+   which is already the cue that something new is coming, and the list is
+   scrolling at the same moment. */
+.greetingEnter {
+  animation: greetingIn 0.24s cubic-bezier(0.2, 0.8, 0.3, 1) 0.16s both;
+}
+
+@keyframes greetingIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Matches .panel above: with motion switched off the bubble is simply there. */
+@media (prefers-reduced-motion: reduce) {
+  .greetingEnter {
+    animation: none;
+  }
+}
+
 .sources {
-  margin-top: 8px;
-  font-size: 11px;
-  color: var(--ifm-color-secondary-darkest);
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--ifm-toc-border-color);
 }
 
-.sources span {
+/* The page the answer was written from, and the ellipsis holding the rest. */
+.sourceRow {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+}
+
+/* Deliberately the heaviest thing in the bubble after the answer itself:
+   opening this page is the most likely next thing a reader does, and as one
+   more small grey chip among several it read as a footnote. Filled, in the
+   brand colour, and wide enough to be an obvious target on a phone. */
+.sourcePrimary {
+  flex: 1;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--ifm-color-primary);
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 13.5px;
   font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: filter 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.sources ul {
-  margin: 4px 0 0;
-  padding-left: 16px;
+.sourcePrimary:hover,
+.sourcePrimary:focus-visible {
+  color: #fff;
+  text-decoration: none;
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
 }
 
-.sources a {
-  color: var(--ifm-color-primary);
-  word-break: break-all;
+/* The site label is white-on-red here, not the primary colour it takes on the
+   pale chips below, or it would vanish into the button. */
+.sourcePrimary .sourceChipSite {
+  color: rgba(255, 255, 255, 0.85);
 }
 
-.typing {
-  color: var(--ifm-color-secondary-darkest);
-  font-style: italic;
+.sourcePrimaryTitle {
+  flex: 1;
+  min-width: 0;
+  /* Page titles, not URLs: break at word boundaries. */
+  overflow-wrap: anywhere;
+}
+
+.sourcePrimaryArrow {
   font-size: 13px;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+/* Everything else retrieval found. Present, one tap away, and not competing
+   with the page above it. */
+.sourceMore {
+  flex-shrink: 0;
+  width: 38px;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 10px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-color-secondary-darkest);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.sourceMore:hover,
+.sourceMore:focus-visible {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary-contrast-background);
+}
+
+.sourceChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+/* A pressable chip rather than a list item. Flex, because the site label is
+   only rendered for off-site sources — a fixed grid would leave a gap where it
+   is absent. */
+.sourceChip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  max-width: 100%;
+  padding: 5px 9px;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 999px;
+  background: var(--ifm-background-surface-color);
+  font-size: 11.5px;
+  line-height: 1.35;
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.sourceChip:hover,
+.sourceChip:focus-visible {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary-contrast-background);
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+  transform: translateY(-1px);
+}
+
+.sourceChipSite {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  white-space: nowrap;
+}
+
+.sourceChipTitle {
+  /* Page titles, not URLs: break at word boundaries. break-all would split
+     ordinary words mid-letter. */
+  overflow-wrap: anywhere;
+}
+
+.sourceChipArrow {
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+/* Links the model wrote inline in the answer body. */
+.botMsg p a {
+  color: var(--ifm-color-primary);
+  overflow-wrap: anywhere;
+}
+
+/* Three dots rising in sequence, in the same bubble the answer will appear in —
+   so the wait happens where the reader is already looking, and the bubble does
+   not jump when the text replaces it. Replaces the words "Looking it up…",
+   which had to be read to be understood and said the same thing every time. */
+.typing {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 18px;
+}
+
+.typingDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  animation: typingPulse 1.25s ease-in-out infinite;
+}
+
+/* Staggered, so the three read as one travelling wave rather than a flash. */
+.typingDot:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.typingDot:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+@keyframes typingPulse {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.3;
+  }
+  30% {
+    transform: translateY(-4px) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Motion is the whole effect, so with it switched off the dots have to say
+   "working" some other way: present, dimmed, and still. */
+@media (prefers-reduced-motion: reduce) {
+  .typingDot {
+    animation: none;
+    opacity: 0.5;
+  }
+}
+
+/* Openers, parked between the scrolling message list and the input rather than
+   floating over either. Outlined instead of filled: three solid brand-red pills
+   would shout louder than the greeting they sit under, and these are an offer,
+   not the main action. */
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 0 12px 10px;
+  flex-shrink: 0;
+  /* Arrives just behind the greeting, as the second half of the same beat. */
+  animation: greetingIn 0.24s cubic-bezier(0.2, 0.8, 0.3, 1) 0.28s both;
+}
+
+.suggestion {
+  max-width: 100%;
+  padding: 6px 11px;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ifm-color-primary);
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.suggestion:hover:not(:disabled),
+.suggestion:focus-visible:not(:disabled) {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.suggestion:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .suggestions {
+    animation: none;
+  }
+  .suggestion:hover:not(:disabled),
+  .suggestion:focus-visible:not(:disabled) {
+    transform: none;
+  }
 }
 
 .inputRow {
@@ -243,6 +599,15 @@
     width: 100%;
     height: min(560px, calc(100vh - 96px));
     height: min(560px, calc(100dvh - 96px));
+  }
+
+  /* This rule is further down the file than the one at the top, so without it
+     the narrow-screen .panel above would quietly win and the button would do
+     nothing on a phone. Width is already full here, so expanding means height:
+     as much of the screen as the launcher and the margins leave. */
+  .panelExpanded {
+    height: calc(100vh - 48px);
+    height: calc(100dvh - 48px);
   }
 
   .messages {

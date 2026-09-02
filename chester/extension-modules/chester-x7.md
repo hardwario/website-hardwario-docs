@@ -141,7 +141,7 @@ The CHESTER-X7 module can be used with various CHESTER mainboard configurations.
 
 ## CHESTER SDK usage
 
-CHESTER-X7 can be used as part of the CHESTER SDK using the `ctr_x7_a` and `ctr_x7_b` shields, or `hardware-chester-x7-a` and `hardware-chester-x7-b` [Project Generator](/chester/firmware-sdk/how-to-project-generator.md) features.
+CHESTER-X7 can be used as part of the CHESTER SDK using the `ctr_x7_a` and `ctr_x7_b` shields, or `hardware-chester-x7-a` and `hardware-chester-x7-b` [Project Generator](/chester/firmware-sdk/how-to-project-generator) features.
 
 - [Example SDK usage](https://github.com/hardwario/chester-sdk/tree/main/samples/chester_x7)
 

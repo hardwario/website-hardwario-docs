@@ -45,6 +45,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Gateways',
+          key: 'milesight-gateways',
           link: { type: 'doc', id: 'milesight/gateways/index' },
           collapsed: true,
           items: [
@@ -82,6 +83,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Gateways',
+          key: 'rakwireless-gateways',
           link: { type: 'doc', id: 'rakwireless/gateways/index' },
           collapsed: true,
           items: [

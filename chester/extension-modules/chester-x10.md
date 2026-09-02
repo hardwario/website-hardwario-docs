@@ -146,7 +146,7 @@ The CHESTER-X10 module can be used with various CHESTER mainboard configurations
 
 ## CHESTER SDK usage
 
-CHESTER-X10 can be used as part of the CHESTER SDK using the `ctr_x10` shield, or the `hardware-chester-x10` [Project Generator](/chester/firmware-sdk/how-to-project-generator.md) feature.
+CHESTER-X10 can be used as part of the CHESTER SDK using the `ctr_x10` shield, or the `hardware-chester-x10` [Project Generator](/chester/firmware-sdk/how-to-project-generator) feature.
 
 - [Example SDK usage](https://github.com/hardwario/chester-sdk/tree/main/samples/chester_x10)
 

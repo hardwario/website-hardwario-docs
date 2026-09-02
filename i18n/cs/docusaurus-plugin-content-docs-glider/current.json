@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Console Access": {
+    "message": "Přístup ke konzoli",
+    "description": "The label for category 'Console Access' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Console Access.link.generated-index.description": {
+    "message": "Access the GLIDER console over USB or RTT with J-Link.",
+    "description": "The generated-index page description for category 'Console Access' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.External Sensors": {
+    "message": "Externí senzory",
+    "description": "The label for category 'External Sensors' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Commands": {
+    "message": "Příkazy",
+    "description": "The label for category 'Commands' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Commands.link.generated-index.description": {
+    "message": "AT-command and shell-command reference for GLIDER.",
+    "description": "The generated-index page description for category 'Commands' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Firmware Flashing": {
+    "message": "Nahrání firmwaru",
+    "description": "The label for category 'Firmware Flashing' in sidebar 'docs'"
+  }
+}

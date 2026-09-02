@@ -128,6 +128,7 @@ The combinations below have been validated by **HARDWARIO** in the field. This l
 | **Onomondo** | Multi-operator | NB-IoT, LTE-M | `onomondo` | APN confirmed, no band or PLMN lock required. |
 | **Slovak Telekom** | Slovakia | NB-IoT | `nbiot.telekom.sk` | |
 | **Mobily** | Saudi Arabia | NB-IoT | `M2M-NB` | |
+| **Vodafone Ukraine** | Ukraine | NB-IoT only | *(empty)* | Requires **Nordic nRF9160** modem firmware **v1.3.7** - see [**Nordic nRF9160 Modem Firmware**](../../firmware-flashing/lte-modem-over-j-link.md#nordic-nrf9160-modem-firmware). Apart from that, use the [**Other SIM cards**](#other-sim-cards) settings unchanged. |
 
 :::note
 

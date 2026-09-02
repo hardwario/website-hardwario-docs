@@ -220,3 +220,63 @@ Follow these steps to flash the LTE modem firmware in the **CHESTER** device:
 1. Flash the application firmware.
 
 1. Disconnect the **SEGGER J-Link** adapter.
+
+## Nordic nRF9160 Modem Firmware
+
+The procedure above flashes the **HARDWARIO LTE modem firmware** - the communication stack that connects **CHESTER** to **HARDWARIO Cloud**. That is a different image from the **Nordic modem firmware** (the baseband image, distributed as `mfw_nrf9160_*.zip`), which is the low-level cellular firmware of the **nRF9160** SiP itself. The two images are flashed independently and with different commands.
+
+Most deployments never need to touch the Nordic modem firmware. You need this procedure only when a specific network or SIM card requires a particular modem firmware version - for example a **Vodafone Ukraine** SIM card, which requires **v1.3.7**. See [**Tested SIM cards and operators**](../platform-connectivity/cellular-networks/sim-card-setup.md#tested-sim-cards-and-operators).
+
+:::caution
+
+Flash a specific Nordic modem firmware version only when the operator or **HARDWARIO** support tells you to. Changing this image affects cellular behavior on all networks, not just the one you are troubleshooting.
+
+:::
+
+The hardware setup, the **Python** virtual environment and the cabling rules are the same as in the [**Flashing Procedure**](#flashing-procedure) above.
+
+1. Download the modem firmware package from the **nRF9160** download section at **Nordic Semiconductor**. Direct link for version **1.3.7**: [`mfw_nrf9160_1.3.7.zip`](https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/dev-kits/nrf9160-dk/nrf9160-modem-fw/mfw_nrf9160_1.3.7.zip).
+
+1. Open the **CHESTER** enclosure (6 screws from the bottom side) and connect **SEGGER J-Link** to the [connector labeled `APP`](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) (or `BLE` on hardware revision R3.2 and earlier).
+
+   :::caution
+
+   One of the wires on the flat cable between **SEGGER J-Link** and **CHESTER** has red color. This red color denotes signal number `1`. This red-colored signal has to be oriented toward the black dot located next to the **SWD** connector on the **CHESTER** mainboard. The same rule with the cable applies at the side of **SEGGER J-Link**.
+
+   :::
+
+1. Activate the **Python** virtual environment with the **HARDWARIO Command Line Tools** and run this command to erase the application firmware:
+
+   ```
+   hardwario chester app erase
+   ```
+
+   :::tip
+
+   The application firmware erase is required in order to prevent the reset signal collision between **SEGGER J-Link** and the application firmware.
+
+   :::
+
+1. Move the 10-pin flat cable to the [connector labeled `LTE`](../developer-tools/segger-j-link.md#segger-j-link-to-lte-port-connection).
+
+   :::caution
+
+   One of the wires on the flat cable between **SEGGER J-Link** and **CHESTER** has red color. This red color denotes signal number `1`. This red-colored signal has to be oriented toward the black dot located next to the **SWD** connector on the **CHESTER** mainboard. The same rule with the cable applies at the side of **SEGGER J-Link**.
+
+   :::
+
+1. Run this command to flash the Nordic modem firmware:
+
+   ```
+   hardwario device nrf91 flash mfw_nrf9160_1.3.7.zip
+   ```
+
+   :::info
+
+   Note the different command. `hardwario device nrf91 flash` writes the Nordic baseband image, while `hardwario chester lte flash` writes the **HARDWARIO** LTE modem firmware described [above](#flashing-procedure).
+
+   :::
+
+1. Move the 10-pin flat cable back to the [connector labeled `APP`](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) (or `BLE` on hardware revision R3.2 and earlier), flash the application firmware and disconnect the **SEGGER J-Link** adapter.
+
+1. Configure the SIM card as usual - see [**SIM Card Setup**](../platform-connectivity/cellular-networks/sim-card-setup.md). Flashing the Nordic modem firmware does not change the `lte config` parameters.

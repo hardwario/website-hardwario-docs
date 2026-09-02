@@ -44,6 +44,7 @@ const sidebars = {
             {
               type: 'category',
               label: 'Configuration',
+              key: 'manager-sticker-configuration',
               link: {
                 type: 'doc',
                 id: 'hardwario-manager/sticker/configuration',
@@ -70,6 +71,7 @@ const sidebars = {
             {
               type: 'category',
               label: 'Tools',
+              key: 'manager-sticker-tools',
               link: {
                 type: 'doc',
                 id: 'hardwario-manager/sticker/tools',
@@ -111,6 +113,7 @@ const sidebars = {
             {
               type: 'category',
               label: 'Tools',
+              key: 'manager-chester-tools',
               link: {
                 type: 'doc',
                 id: 'hardwario-manager/chester/tools',
@@ -128,32 +131,8 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Ubidots',
-      link: {
-        type: 'doc',
-        id: 'ubidots/index',
-      },
-      collapsed: true,
-      items: [
-        'ubidots/creating-device',
-        'ubidots/cloud-connection',
-        {
-          type: 'category',
-          label: 'Creating Dashboard',
-          collapsed: true,
-          items: [
-            'ubidots/creating-dashboard/metric',
-            'ubidots/creating-dashboard/line-chart',
-            'ubidots/creating-dashboard/html-canvas',
-            'ubidots/creating-dashboard/boolean',
-            'ubidots/creating-dashboard/synthetic-variable',
-          ],
-        },
-      ],
-    },
-    {
-      type: 'category',
       label: 'ThingsBoard',
+      key: 'thingsboard',
       link: {
         type: 'doc',
         id: 'thingsboard/index',
@@ -210,6 +189,7 @@ const sidebars = {
         {
       type: 'category',
       label: 'Configuration',
+      key: 'chirpstack-configuration',
       collapsed: true,
       items: [
         'chirpstack/chirpstack-configuration/chirpstack-gateways',
@@ -223,6 +203,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'The Things Stack',
+      key: 'the-things-stack',
       link: {
         type: 'doc',
         id: 'the-things-stack/index',
@@ -232,6 +213,7 @@ const sidebars = {
          {
       type: 'category',
       label: 'Configuration',
+      key: 'tts-configuration',
       collapsed: true,
       items: [
         'the-things-stack/tts-configuration/tts-gateways',
@@ -249,19 +231,10 @@ const sidebars = {
       },
       collapsed: true,
       items: [
-        {
-          type: 'category',
-          label: 'Ubidots',
-          collapsed: true,
-          items: [
-            'videos-apps/ubidots-new-device',
-            'videos-apps/ubidots-cloud-connection',
-            'videos-apps/ubidots-dashboard',
-          ],
-        },
-        {
+               {
           type: 'category',
           label: 'ThingsBoard',
+          key: 'videos-thingsboard',
           collapsed: true,
           items: [
             'videos-apps/thingsboard-new-device',
@@ -283,6 +256,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'The Things Stack',
+          key: 'videos-the-things-stack',
           collapsed: true,
           items: [
             'videos-apps/tts-gateways',

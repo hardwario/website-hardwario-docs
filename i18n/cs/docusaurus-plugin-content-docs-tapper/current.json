@@ -1,0 +1,10 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.doc.Changelog": {
+    "message": "Seznam změn",
+    "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
+  }
+}

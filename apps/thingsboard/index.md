@@ -10,6 +10,8 @@ import Image from '@theme/IdealImage';
 
 :::info
 **System Access:** You can log in to the HARDWARIO ThingsBoard platform at **https://app.hardwario.cloud/**.
+
+If you are interested in gaining access to the system to view data visualizations and graphs from your HARDWARIO devices, please contact **ask@hardwario.com**.
 :::
 
 ---

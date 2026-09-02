@@ -1,0 +1,122 @@
+{
+  "link.title.Branches": {
+    "message": "Pobočky",
+    "description": "The title of the footer links column with title=Branches in the footer"
+  },
+  "link.title.Navigation": {
+    "message": "Navigace",
+    "description": "The title of the footer links column with title=Navigation in the footer"
+  },
+  "link.title.Connect": {
+    "message": "Sledujte nás",
+    "description": "The title of the footer links column with title=Connect in the footer"
+  },
+  "link.title.Company": {
+    "message": "Společnost",
+    "description": "The title of the footer links column with title=Company in the footer"
+  },
+  "link.title.Legal": {
+    "message": "Právní informace",
+    "description": "The title of the footer links column with title=Legal in the footer"
+  },
+  "link.item.label.HARDWARIO a.s. — Czech Republic": {
+    "message": "HARDWARIO a.s. — Česká republika",
+    "description": "The label of footer link with label=HARDWARIO a.s. — Czech Republic linking to https://maps.app.goo.gl/uwNsT2fuUmTaoXc48"
+  },
+  "link.item.label.HARDWARIO LLC — United States": {
+    "message": "HARDWARIO LLC — Spojené státy",
+    "description": "The label of footer link with label=HARDWARIO LLC — United States linking to https://maps.app.goo.gl/YyUsBivFKc6yYVTr8"
+  },
+  "link.item.label.HARDWARIO LTD — United Kingdom": {
+    "message": "HARDWARIO LTD — Spojené království",
+    "description": "The label of footer link with label=HARDWARIO LTD — United Kingdom linking to https://maps.app.goo.gl/BPVS4T61Ao1h5HVJ9"
+  },
+  "link.item.label.Products": {
+    "message": "Produkty",
+    "description": "The label of footer link with label=Products linking to https://www.hardwario.com/products/"
+  },
+  "link.item.label.Solutions": {
+    "message": "Řešení",
+    "description": "The label of footer link with label=Solutions linking to https://www.hardwario.com/solutions/"
+  },
+  "link.item.label.Customers": {
+    "message": "Zákazníci",
+    "description": "The label of footer link with label=Customers linking to https://www.hardwario.com/customers/"
+  },
+  "link.item.label.Resources": {
+    "message": "Materiály ke stažení",
+    "description": "The label of footer link with label=Resources linking to https://www.hardwario.com/resources/"
+  },
+  "link.item.label.Online Store": {
+    "message": "E-shop",
+    "description": "The label of footer link with label=Online Store linking to https://www.hardwario.store/"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/company/13187032"
+  },
+  "link.item.label.X (Twitter)": {
+    "message": "X (Twitter)",
+    "description": "The label of footer link with label=X (Twitter) linking to https://x.com/hardwario_en"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "The label of footer link with label=Instagram linking to https://www.instagram.com/hardwario/"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "The label of footer link with label=YouTube linking to https://www.youtube.com/c/hardwario"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/hardwario"
+  },
+  "link.item.label.Forum": {
+    "message": "Fórum",
+    "description": "The label of footer link with label=Forum linking to https://forum.hardwario.com"
+  },
+  "link.item.label.Support": {
+    "message": "Podpora",
+    "description": "The label of footer link with label=Support linking to https://www.hardwario.com/support/"
+  },
+  "link.item.label.Contact": {
+    "message": "Kontakt",
+    "description": "The label of footer link with label=Contact linking to https://www.hardwario.com/contact/"
+  },
+  "link.item.label.About": {
+    "message": "O nás",
+    "description": "The label of footer link with label=About linking to https://www.hardwario.com/company/"
+  },
+  "link.item.label.Partners": {
+    "message": "Partneři",
+    "description": "The label of footer link with label=Partners linking to https://www.hardwario.com/partners/"
+  },
+  "link.item.label.Investors": {
+    "message": "Investoři",
+    "description": "The label of footer link with label=Investors linking to https://www.hardwario.com/investors/"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to https://www.hardwario.com/blog/"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Zásady ochrany osobních údajů",
+    "description": "The label of footer link with label=Privacy Policy linking to https://www.hardwario.com/legal/privacy/"
+  },
+  "link.item.label.Terms of Service": {
+    "message": "Obchodní podmínky",
+    "description": "The label of footer link with label=Terms of Service linking to https://www.hardwario.com/legal/terms/"
+  },
+  "link.item.label.Cookie Policy": {
+    "message": "Zásady používání cookies",
+    "description": "The label of footer link with label=Cookie Policy linking to https://www.hardwario.com/legal/cookies/"
+  },
+  "link.item.label.Recycling": {
+    "message": "Recyklace",
+    "description": "The label of footer link with label=Recycling linking to https://www.hardwario.com/downloads/legal/take-back-electrical-equipment-en.pdf"
+  },
+  "copyright": {
+    "message": "<nav aria-label=\"Další weby HARDWARIO\" style=\"margin-bottom:8px\"><span class=\"footer-sites-label\">Další weby HARDWARIO:</span> <a href=\"https://www.hardwario.com/\" target=\"_blank\" rel=\"noopener noreferrer\">HARDWARIO.com</a> · <a href=\"https://hardwario.engineering/\" target=\"_blank\" rel=\"noopener noreferrer\">Engineering</a> · <a href=\"https://hardwario.studio/\" target=\"_blank\" rel=\"noopener noreferrer\">Studio</a> · <a href=\"https://hardwario.academy/\" target=\"_blank\" rel=\"noopener noreferrer\">Academy</a></nav>Copyright © 2026 HARDWARIO a.s. | Navrženo a vyrobeno v Evropě.",
+    "description": "The footer copyright"
+  }
+}

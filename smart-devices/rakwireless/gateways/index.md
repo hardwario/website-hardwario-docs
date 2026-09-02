@@ -9,8 +9,8 @@ Here is a list of tested **RAKwireless gateways** by HARDWARIO with reference re
 
 | Name | Type | Overview | Product page | Purchase link |
 | :--- | :--- | :--- | :--- | :--- |
-| [**RAK7268V2**](/smart-devices/rakwireless/gateways/rak-RAK7268V2.md) | Indoor LoRaWAN® Gateway <br/>(WisGate Edge Lite 2) | [Details](/smart-devices/rakwireless/gateways/rak-RAK7268V2.md) | [Official site](https://docs.rakwireless.com/product-categories/wisgate/rak7268v2/overview) | [Buy here](https://www.hardwario.store/p/rak-7268v2) |
-| [**RAK7289V2**](/smart-devices/rakwireless/gateways/rak-RAK7289V2.md) | Outdoor Industrial LoRaWAN® Gateway <br/>(WisGate Edge Pro) | [Details](/smart-devices/rakwireless/gateways/rak-RAK7289V2.md) | [Official site](https://docs.rakwireless.com/product-categories/wisgate/rak7289v2/overview/) | [Buy here](https://www.hardwario.store/p/rak-7289v2) |
+| [**RAK7268V2**](/smart-devices/rakwireless/gateways/rak-RAK7268V2) | Indoor LoRaWAN® Gateway <br/>(WisGate Edge Lite 2) | [Details](/smart-devices/rakwireless/gateways/rak-RAK7268V2) | [Official site](https://docs.rakwireless.com/product-categories/wisgate/rak7268v2/overview) | [Buy here](https://www.hardwario.store/p/rak-7268v2) |
+| [**RAK7289V2**](/smart-devices/rakwireless/gateways/rak-RAK7289V2) | Outdoor Industrial LoRaWAN® Gateway <br/>(WisGate Edge Pro) | [Details](/smart-devices/rakwireless/gateways/rak-RAK7289V2) | [Official site](https://docs.rakwireless.com/product-categories/wisgate/rak7289v2/overview/) | [Buy here](https://www.hardwario.store/p/rak-7289v2) |
 
 ---
 
@@ -95,3 +95,21 @@ In **UDP Protocol parameters** category fill the following field:
 - Confirm by clicking **Save changes**.
 
 ![Rak select ChirpStack](images/rak-chirpstack.png)
+
+---
+
+## OpenVPN Configuration
+
+To configure a secure OpenVPN connection on your RAK gateway, follow these steps:
+
+1. Click on the **Extensions** icon (puzzle piece) in the left navigation menu. Open the **Extension gallery** tab and install the **RAK OpenVPN Client** extension if it is not already installed.
+![OpenVPN Extension Gallery](images/OpenVPN-certificate-1.png)
+
+2. Switch to the **Installed** tab, find **RAK OpenVPN Client**, and click **Launch**.
+![Launch OpenVPN Extension](images/OpenVPN-certificate-2.png)
+
+3. On the OpenVPN Client dashboard, click **Configure** under the **VPN Tunnel** overview.
+![Configure VPN Tunnel](images/OpenVPN-certificate-3.png)
+
+4. Go to the **Configuration** tab, toggle **Enable Connection**, upload your `.ovpn` configuration file, and click **Save changes**.
+![Upload OpenVPN Certificate](images/OpenVPN-certificate-4.png)

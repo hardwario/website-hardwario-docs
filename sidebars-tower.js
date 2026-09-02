@@ -164,7 +164,6 @@ const sidebars = {
       items: [
         'platform-integrations/grafana-visualization',
         'platform-integrations/blynk-app',
-        'platform-integrations/ubidots-dashboards',
         'platform-integrations/homekit-and-siri'
       ],
     },

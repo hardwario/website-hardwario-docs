@@ -1,0 +1,74 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Getting Started": {
+    "message": "Začínáme",
+    "description": "The label for category 'Getting Started' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Getting Started.link.generated-index.description": {
+    "message": "Start with the HARDWARIO TOWER architecture, design principles, programming, and resources.",
+    "description": "The generated-index page description for category 'Getting Started' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Desktop Programming": {
+    "message": "Programování na počítači",
+    "description": "The label for category 'Desktop Programming' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Desktop Programming.link.generated-index.description": {
+    "message": "Install and use HARDWARIO Playground for radio, MQTT, Node-RED, dashboards, and firmware flashing.",
+    "description": "The generated-index page description for category 'Desktop Programming' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Server on Raspberry Pi": {
+    "message": "Server na Raspberry Pi",
+    "description": "The label for category 'Server on Raspberry Pi' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Command Line Tools": {
+    "message": "Nástroje příkazové řádky",
+    "description": "The label for category 'Command Line Tools' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Firmware Development": {
+    "message": "Vývoj firmwaru",
+    "description": "The label for category 'Firmware Development' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Firmware SDK": {
+    "message": "Firmware SDK",
+    "description": "The label for category 'Firmware SDK' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Radio Communication": {
+    "message": "Radiová komunikace",
+    "description": "The label for category 'Radio Communication' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.MQTT Protocol": {
+    "message": "Protokol MQTT",
+    "description": "The label for category 'MQTT Protocol' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Platform Integrations": {
+    "message": "Integrace platforem",
+    "description": "The label for category 'Platform Integrations' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Platform Integrations.link.generated-index.description": {
+    "message": "Connect HARDWARIO TOWER with visualization, automation, and third-party IoT services.",
+    "description": "The generated-index page description for category 'Platform Integrations' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Hardware Modules": {
+    "message": "Hardwarové moduly",
+    "description": "The label for category 'Hardware Modules' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Hardware Interfaces": {
+    "message": "Hardwarová rozhraní",
+    "description": "The label for category 'Hardware Interfaces' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Hardware Interfaces.link.generated-index.description": {
+    "message": "Electrical and software interfaces available on HARDWARIO TOWER modules.",
+    "description": "The generated-index page description for category 'Hardware Interfaces' in sidebar 'docs'"
+  },
+  "sidebar.docs.link.Step-by-Step Projects": {
+    "message": "Projekty krok za krokem",
+    "description": "The label for link 'Step-by-Step Projects' in sidebar 'docs', linking to 'https://www.hackster.io/hardwario/projects'"
+  },
+  "sidebar.docs.doc.Changelog": {
+    "message": "Seznam změn",
+    "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
+  }
+}

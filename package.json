@@ -11,9 +11,16 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "verify:i18n": "node scripts/verify-i18n.mjs --locale cs",
+    "test": "node --test scripts/chatbot/worker.test.mjs",
+    "chatbot:notebook": "node scripts/chatbot/py2ipynb.mjs",
+    "chatbot:crawl": "python scripts/chatbot/crawl.py",
+    "chatbot:embed": "node scripts/chatbot/embed.mjs --out ../../docs-chatbot/index.bin",
+    "verify:redirects": "node scripts/check-redirects.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.121.0",
     "@docusaurus/core": "^3.10.1",
     "@docusaurus/module-type-aliases": "^3.10.1",
     "@docusaurus/plugin-ideal-image": "^3.10.1",
@@ -28,6 +35,9 @@
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-player": "^3.4.0"
+  },
+  "devDependencies": {
+    "github-slugger": "^2.0.0"
   },
   "browserslist": {
     "production": [

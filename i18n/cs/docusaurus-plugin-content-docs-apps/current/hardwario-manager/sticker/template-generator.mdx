@@ -1,0 +1,39 @@
+---
+slug: template-generator
+title: Generátor šablon
+description: "Sestavování NFC konfiguračních šablon pro intervaly, základy LoRaWAN a senzory platí i pro v1.3.x. Sloty pravidel alarmů a formát AppConfigMessage v šabloně (přečíslovaná protobuf pole, kódování v nativních bajtech) míří na připravovaný firmware…"
+---
+import StickerTemplateGenerator from '@site/src/components/StickerTemplateGenerator';
+
+
+:::info Firmware v1.4.0
+Sestavování NFC konfiguračních šablon pro intervaly, základy LoRaWAN a senzory platí i pro v1.3.x. **Sloty pravidel alarmů** a formát `AppConfigMessage` v šabloně (přečíslovaná protobuf pole, kódování v nativních bajtech) míří na připravovaný **firmware STICKER v1.4.0**.
+:::
+
+# Generátor konfiguračních šablon {#configuration-template-generator}
+
+Níže si sestavte konfigurační **šablonu** pro zařízení STICKER: otevřete sekci, zaškrtněte požadovaná nastavení, nastavte jejich hodnoty a nástroj je zakóduje do payloadu `AppConfigMessage`, který zařízení přijímá přes NFC. Výsledek se zobrazí jako **hexadecimální** řetězec a **QR kód**, a hex existující šablony můžete vložit zpět a dekódovat ho do formuláře.
+
+Zakódují se jen zaškrtnutá nastavení, takže šablona nese právě to, co zvolíte, a lze ji použít na mnoha zařízeních. Formulář pokrývá jen nastavení vhodná pro šablony; identita a tajné údaje jednotlivých zařízení (sériové číslo, klíče a EUI pro LoRaWAN, klíče session, ROM kódy 1-Wire a podobně) jsou záměrně vynechané, protože je mezi zařízeními sdílet nelze.
+
+<StickerTemplateGenerator />
+
+## Jak ho používat {#how-to-use-it}
+
+1. **Otevřete sekci** (LoRaWAN basics, Interval, Sensors nebo Alarms; ve výchozím stavu jsou sbalené) a zaškrtněte požadovaná nastavení. Po najetí myší nebo zaměření na nastavení se zobrazí krátká nápověda s jeho významem a povolenými hodnotami.
+2. Čísla se kontrolují na rozsah (například vzorkovací interval 5 až 3600 s, interval reportu 60 až 86400 s); hodnota mimo rozsah se označí a do payloadu se nedostane, dokud ji neopravíte.
+3. U **Alarms** klikněte na **+ Add alarm rule** a přidejte slot (až 16), pak zvolte jeho zdroj a veličinu a nastavte prahy. Pravidlo odeberete přes **Remove**, nebo nastavte **Action** na *Clear slot* a slot se na zařízení vymaže. Bez přidaných pravidel šablona žádné alarmy nenese.
+4. Zkopírujte **hexadecimální** řetězec, nebo použijte **QR kód** (nese tentýž hex), a šablonu si uložte či nasdílejte.
+5. Existující šablonu prohlédnete tak, že její hex vložíte do **Read a template from hex** a kliknete na **Load template**. Formulář včetně případných pravidel alarmů se naplní tím, co šablona obsahuje, a sekce, které nastavuje, se **automaticky rozbalí**, abyste viděli, co se změnilo (nastavení mimo tento formulář se ignorují).
+
+:::caution Tohle je šablona v plaintextu
+Zobrazené bajty jsou **nezašifrovaný** `AppConfigMessage`. Na běžném zařízení musí být payload tagu zašifrovaný secret key zařízení (AES-CCM), takže tenhle hex nelze zapsat přímo do produkčního zařízení STICKER. Aplikace HARDWARIO Manager to šifrování pro dané zařízení udělá za vás, když zapisuje [**konfiguraci**](./configuration.md). Surový payload přijme přímo jen validační build v plaintextu.
+:::
+
+:::info Poznámky k polím
+- **Přepínače** jsou explicitní: schopnost nastavená na *off* zapíše tuto schopnost = false, nenechá ji nedotčenou. Zaškrtávejte řádek jen u nastavení, která má šablona nést.
+- **Čísla** mají povolený rozsah v nápovědě a validují se. Vzorkovací interval přijímá i `0` (vzorek těsně před každým reportem) a limit alarmů přijímá `0` (vypnuto).
+- **Pravidla alarmů** se kódují do stejných 17bajtových zabalených slotů, jaké používá [**generátor downlink příkazů**](/sticker/connectivity/downlink-commands-generator) a shell příkaz `alarm`; tady je ale sestavíte editorem pravidel místo vkládání hexu.
+:::
+
+Úplný seznam konfigurovatelných parametrů a jejich význam najdete v [**Konfiguračních parametrech**](/sticker/developer-access/configuration). Načtení hotové šablony do aplikace a její zápis do zařízení popisují [**Šablony**](./templates.md) a [**Instalace aplikace**](../install.md).

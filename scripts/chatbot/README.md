@@ -12,7 +12,7 @@ Current state, open decisions and measured numbers: **[STATUS.md](STATUS.md)**.
 | `crawl.py` | *generated* — the crawler, standalone, no ML dependencies |
 | `build-index.ipynb` | *generated* — the same crawl as a Colab notebook |
 | `py2ipynb.mjs` | regenerates both from `build_index.py` |
-| `embed.mjs` | turns `chunks.jsonl` into the index |
+| `embed.mjs` | turns `chunks.jsonl` into the index — needs `npm i @huggingface/transformers` first |
 | `bench/` | measures candidate embedding models against the real corpus |
 | `worker.test.mjs`, `check-parity.mjs` | for the Cloudflare path — see STATUS.md |
 
@@ -105,7 +105,8 @@ framing. That asymmetry is deliberate.
 
 ```bash
 cd scripts/chatbot/bench
-npm i @huggingface/transformers
+npm i @huggingface/transformers   # not in package.json: ~0.5 GB of ONNX runtime
+                                  # that the site build never touches
 node bench.mjs ../../../chunks.jsonl questions.json questions-cs.json
 ```
 

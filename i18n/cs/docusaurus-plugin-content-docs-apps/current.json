@@ -12,7 +12,7 @@
     "description": "The label for category 'STICKER' in sidebar 'docs'"
   },
   "sidebar.docs.category.Saved STICKERs": {
-    "message": "Saved STICKERs",
+    "message": "Uložené STICKERy",
     "description": "The label for category 'Saved STICKERs' in sidebar 'docs'"
   },
   "sidebar.docs.category.manager-sticker-configuration": {
@@ -20,7 +20,7 @@
     "description": "The label for category 'Configuration' in sidebar 'docs'"
   },
   "sidebar.docs.category.Templates": {
-    "message": "Templates",
+    "message": "Šablony",
     "description": "The label for category 'Templates' in sidebar 'docs'"
   },
   "sidebar.docs.category.manager-sticker-tools": {
@@ -32,7 +32,7 @@
     "description": "The label for category 'CHESTER' in sidebar 'docs'"
   },
   "sidebar.docs.category.Terminal": {
-    "message": "Terminal",
+    "message": "Terminál",
     "description": "The label for category 'Terminal' in sidebar 'docs'"
   },
   "sidebar.docs.category.manager-chester-tools": {
@@ -40,7 +40,7 @@
     "description": "The label for category 'Tools' in sidebar 'docs'"
   },
   "sidebar.docs.category.Creating Dashboard": {
-    "message": "Creating Dashboard",
+    "message": "Vytvoření dashboardu",
     "description": "The label for category 'Creating Dashboard' in sidebar 'docs'"
   },
   "sidebar.docs.category.thingsboard": {
@@ -48,11 +48,11 @@
     "description": "The label for category 'ThingsBoard' in sidebar 'docs'"
   },
   "sidebar.docs.category.Features": {
-    "message": "Features",
+    "message": "Funkce",
     "description": "The label for category 'Features' in sidebar 'docs'"
   },
   "sidebar.docs.category.Integrations": {
-    "message": "Integrations",
+    "message": "Integrace",
     "description": "The label for category 'Integrations' in sidebar 'docs'"
   },
   "sidebar.docs.category.ChirpStack": {
@@ -72,7 +72,7 @@
     "description": "The label for category 'Configuration' in sidebar 'docs'"
   },
   "sidebar.docs.category.Video Tutorials": {
-    "message": "Video Tutorials",
+    "message": "Videonávody",
     "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
   },
   "sidebar.docs.category.videos-thingsboard": {

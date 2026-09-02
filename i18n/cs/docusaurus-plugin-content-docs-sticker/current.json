@@ -4,7 +4,7 @@
     "description": "The label for version current"
   },
   "sidebar.docs.category.STICKER Variants": {
-    "message": "STICKER Variants",
+    "message": "Varianty STICKER",
     "description": "The label for category 'STICKER Variants' in sidebar 'docs'"
   },
   "sidebar.docs.category.STICKER Input": {
@@ -12,11 +12,11 @@
     "description": "The label for category 'STICKER Input' in sidebar 'docs'"
   },
   "sidebar.docs.category.External Sensor Support": {
-    "message": "External Sensor Support",
+    "message": "Podpora externích senzorů",
     "description": "The label for category 'External Sensor Support' in sidebar 'docs'"
   },
   "sidebar.docs.category.Connectivity": {
-    "message": "Connectivity",
+    "message": "Konektivita",
     "description": "The label for category 'Connectivity' in sidebar 'docs'"
   },
   "sidebar.docs.category.LoRaWAN": {
@@ -32,15 +32,15 @@
     "description": "The label for category 'The Things Stack' in sidebar 'docs'"
   },
   "sidebar.docs.category.Developer Access": {
-    "message": "Developer Access",
+    "message": "Přístup pro vývojáře",
     "description": "The label for category 'Developer Access' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hardware Description": {
-    "message": "Hardware Description",
+    "message": "Popis hardwaru",
     "description": "The label for category 'Hardware Description' in sidebar 'docs'"
   },
   "sidebar.docs.doc.Changelog": {
-    "message": "Changelog",
+    "message": "Seznam změn",
     "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
   }
 }

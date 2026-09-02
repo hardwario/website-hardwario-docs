@@ -4,7 +4,7 @@
     "description": "The label for version current"
   },
   "sidebar.docs.category.Detailed Description": {
-    "message": "Detailed Description",
+    "message": "Podrobný popis",
     "description": "The label for category 'Detailed Description' in sidebar 'docs'"
   },
   "sidebar.docs.category.Detailed Description.link.generated-index.description": {
@@ -12,7 +12,7 @@
     "description": "The generated-index page description for category 'Detailed Description' in sidebar 'docs'"
   },
   "sidebar.docs.category.Operation Instructions": {
-    "message": "Operation Instructions",
+    "message": "Návod k obsluze",
     "description": "The label for category 'Operation Instructions' in sidebar 'docs'"
   },
   "sidebar.docs.category.Operation Instructions.link.generated-index.description": {
@@ -20,7 +20,7 @@
     "description": "The generated-index page description for category 'Operation Instructions' in sidebar 'docs'"
   },
   "sidebar.docs.doc.Changelog": {
-    "message": "Changelog",
+    "message": "Seznam změn",
     "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
   }
 }

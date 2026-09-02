@@ -4,11 +4,11 @@
     "description": "The label for version current"
   },
   "sidebar.docs.category.Video Tutorials": {
-    "message": "Video Tutorials",
+    "message": "Videonávody",
     "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
   },
   "sidebar.docs.category.Platform Connectivity": {
-    "message": "Platform Connectivity",
+    "message": "Konektivita platformy",
     "description": "The label for category 'Platform Connectivity' in sidebar 'docs'"
   },
   "sidebar.docs.category.Platform Connectivity.link.generated-index.description": {
@@ -16,47 +16,47 @@
     "description": "The generated-index page description for category 'Platform Connectivity' in sidebar 'docs'"
   },
   "sidebar.docs.category.Mobile Networks": {
-    "message": "Mobile Networks",
+    "message": "Mobilní sítě",
     "description": "The label for category 'Mobile Networks' in sidebar 'docs'"
   },
   "sidebar.docs.category.LoRaWAN Radio": {
-    "message": "LoRaWAN Radio",
+    "message": "Radio LoRaWAN",
     "description": "The label for category 'LoRaWAN Radio' in sidebar 'docs'"
   },
   "sidebar.docs.category.Catalog Applications": {
-    "message": "Catalog Applications",
+    "message": "Katalogové aplikace",
     "description": "The label for category 'Catalog Applications' in sidebar 'docs'"
   },
   "sidebar.docs.category.Common Functionality": {
-    "message": "Common Functionality",
+    "message": "Společné funkce",
     "description": "The label for category 'Common Functionality' in sidebar 'docs'"
   },
   "sidebar.docs.category.Legacy": {
-    "message": "Legacy",
+    "message": "Starší",
     "description": "The label for category 'Legacy' in sidebar 'docs'"
   },
   "sidebar.docs.category.Extension Modules": {
-    "message": "Extension Modules",
+    "message": "Rozšiřující moduly",
     "description": "The label for category 'Extension Modules' in sidebar 'docs'"
   },
   "sidebar.docs.category.Supported Sensors": {
-    "message": "Supported Sensors",
+    "message": "Podporované senzory",
     "description": "The label for category 'Supported Sensors' in sidebar 'docs'"
   },
   "sidebar.docs.category.Modbus Devices": {
-    "message": "Modbus Devices",
+    "message": "Zařízení Modbus",
     "description": "The label for category 'Modbus Devices' in sidebar 'docs'"
   },
   "sidebar.docs.category.wM-Bus Devices": {
-    "message": "wM-Bus Devices",
+    "message": "Zařízení wM-Bus",
     "description": "The label for category 'wM-Bus Devices' in sidebar 'docs'"
   },
   "sidebar.docs.category.Serial Devices": {
-    "message": "Serial Devices",
+    "message": "Sériová zařízení",
     "description": "The label for category 'Serial Devices' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hardware Description": {
-    "message": "Hardware Description",
+    "message": "Popis hardwaru",
     "description": "The label for category 'Hardware Description' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hardware Description.link.generated-index.description": {
@@ -64,11 +64,11 @@
     "description": "The generated-index page description for category 'Hardware Description' in sidebar 'docs'"
   },
   "sidebar.docs.category.Firmware Flashing": {
-    "message": "Firmware Flashing",
+    "message": "Nahrání firmwaru",
     "description": "The label for category 'Firmware Flashing' in sidebar 'docs'"
   },
   "sidebar.docs.category.Developer Tools": {
-    "message": "Developer Tools",
+    "message": "Nástroje pro vývojáře",
     "description": "The label for category 'Developer Tools' in sidebar 'docs'"
   },
   "sidebar.docs.category.Developer Tools.link.generated-index.description": {
@@ -84,15 +84,15 @@
     "description": "The generated-index page description for category 'Firmware SDK' in sidebar 'docs'"
   },
   "sidebar.docs.link.Git Repository": {
-    "message": "Git Repository",
+    "message": "Git repozitář",
     "description": "The label for link 'Git Repository' in sidebar 'docs', linking to 'https://github.com/hardwario/chester-sdk'"
   },
   "sidebar.docs.link.API Reference": {
-    "message": "API Reference",
+    "message": "Reference API",
     "description": "The label for link 'API Reference' in sidebar 'docs', linking to 'https://hardwario.github.io/chester-sdk'"
   },
   "sidebar.docs.doc.Changelog": {
-    "message": "Changelog",
+    "message": "Seznam změn",
     "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
   }
 }

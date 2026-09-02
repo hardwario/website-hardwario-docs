@@ -4,7 +4,7 @@
     "description": "The label for version current"
   },
   "sidebar.docs.category.Console Access": {
-    "message": "Console Access",
+    "message": "Přístup ke konzoli",
     "description": "The label for category 'Console Access' in sidebar 'docs'"
   },
   "sidebar.docs.category.Console Access.link.generated-index.description": {
@@ -12,11 +12,11 @@
     "description": "The generated-index page description for category 'Console Access' in sidebar 'docs'"
   },
   "sidebar.docs.category.External Sensors": {
-    "message": "External Sensors",
+    "message": "Externí senzory",
     "description": "The label for category 'External Sensors' in sidebar 'docs'"
   },
   "sidebar.docs.category.Commands": {
-    "message": "Commands",
+    "message": "Příkazy",
     "description": "The label for category 'Commands' in sidebar 'docs'"
   },
   "sidebar.docs.category.Commands.link.generated-index.description": {
@@ -24,7 +24,7 @@
     "description": "The generated-index page description for category 'Commands' in sidebar 'docs'"
   },
   "sidebar.docs.category.Firmware Flashing": {
-    "message": "Firmware Flashing",
+    "message": "Nahrání firmwaru",
     "description": "The label for category 'Firmware Flashing' in sidebar 'docs'"
   }
 }

@@ -4,7 +4,7 @@
     "description": "The label for version current"
   },
   "sidebar.docs.category.Installation": {
-    "message": "Installation",
+    "message": "Instalace",
     "description": "The label for category 'Installation' in sidebar 'docs'"
   },
   "sidebar.docs.category.FIBER Lite": {
@@ -12,11 +12,11 @@
     "description": "The label for category 'FIBER Lite' in sidebar 'docs'"
   },
   "sidebar.docs.category.Troubleshooting": {
-    "message": "Troubleshooting",
+    "message": "Řešení problémů",
     "description": "The label for category 'Troubleshooting' in sidebar 'docs'"
   },
   "sidebar.docs.category.FIBER Hardware Guides": {
-    "message": "FIBER Hardware Guides",
+    "message": "Hardwarové návody FIBER",
     "description": "The label for category 'FIBER Hardware Guides' in sidebar 'docs'"
   },
   "sidebar.docs.category.FIBER Hardware Guides.link.generated-index.description": {
@@ -24,7 +24,7 @@
     "description": "The generated-index page description for category 'FIBER Hardware Guides' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hardware Description": {
-    "message": "Hardware Description",
+    "message": "Popis hardwaru",
     "description": "The label for category 'Hardware Description' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hardware Description.link.generated-index.description": {
@@ -32,7 +32,7 @@
     "description": "The generated-index page description for category 'Hardware Description' in sidebar 'docs'"
   },
   "sidebar.docs.doc.Changelog": {
-    "message": "Changelog",
+    "message": "Seznam změn",
     "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
   }
 }

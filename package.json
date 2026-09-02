@@ -36,7 +36,8 @@
     "react-player": "^3.4.0"
   },
   "devDependencies": {
-    "@huggingface/transformers": "^3.7.6"
+    "@huggingface/transformers": "^3.7.6",
+    "github-slugger": "^2.0.0"
   },
   "browserslist": {
     "production": [

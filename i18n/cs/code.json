@@ -380,5 +380,140 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tagy",
     "description": "The title of the tag list page"
+  },
+  "home.chester.subtitle": {
+    "message": "Konfigurovatelná IoT platforma"
+  },
+  "home.chester.description": {
+    "message": "Rozšiřitelná IoT platforma s technologiemi NB-IoT, LTE-M, LoRaWAN, BLE a GNSS."
+  },
+  "home.sticker.subtitle": {
+    "message": "Senzorová platforma LoRaWAN"
+  },
+  "home.sticker.description": {
+    "message": "Kompaktní modul LoRaWAN na STM32WL s nízkou spotřebou pro senzorové aplikace s dlouhou životností."
+  },
+  "home.ember.subtitle": {
+    "message": "IoT hotspot LoRaWAN"
+  },
+  "home.ember.description": {
+    "message": "Průmyslová vodotěsná brána LoRaWAN s integrovaným LTE pro senzory a aktory."
+  },
+  "home.fiber.subtitle": {
+    "message": "Senzorový IoT monitor"
+  },
+  "home.fiber.description": {
+    "message": "Průmyslové monitorování teploty se senzory 1-Wire a bezdrátovými senzory 868/915 MHz; Ethernet, Wi-Fi nebo volitelně LTE."
+  },
+  "home.gauger.subtitle": {
+    "message": "Vstupní modul Wi-Fi/LAN"
+  },
+  "home.gauger.description": {
+    "message": "Průmyslové zařízení s Wi-Fi a Ethernetem počítající pulzy z výrobních linek; čítače lze číst přes Modbus TCP a HTTP API."
+  },
+  "home.glider.subtitle": {
+    "message": "Mobilní IoT datalogger"
+  },
+  "home.glider.description": {
+    "message": "Kompaktní logger LTE-M/NB-IoT pro monitorování teploty, pulzů a Modbus RTU."
+  },
+  "home.tapper.subtitle": {
+    "message": "Čtečka NFC tagů"
+  },
+  "home.tapper.description": {
+    "message": "Čtečka NFC tagů na Raspberry Pi Zero 2 W a PN532 pro bezpečné ověřování tagů přes MQTT."
+  },
+  "home.tower.subtitle": {
+    "message": "Modulární IoT platforma"
+  },
+  "home.tower.description": {
+    "message": "Open-source IoT platforma pro rychlé nasazení se sub-GHz radiem a extrémně nízkou spotřebou."
+  },
+  "home.milesight.subtitle": {
+    "message": "Senzory a brány LoRaWAN"
+  },
+  "home.milesight.description": {
+    "message": "Široká nabídka senzorů a bran LoRaWAN pro průmysl a chytré budovy."
+  },
+  "home.rakwireless.subtitle": {
+    "message": "Brány LoRaWAN"
+  },
+  "home.rakwireless.description": {
+    "message": "Průmyslové brány a moduly LoRaWAN pro budování robustních a škálovatelných IoT sítí."
+  },
+  "home.onlogic.subtitle": {
+    "message": "Průmyslové počítače"
+  },
+  "home.onlogic.description": {
+    "message": "Bezventilátorové průmyslové počítače navržené pro edge computing v náročném prostředí."
+  },
+  "home.raspberrypi.subtitle": {
+    "message": "Výpočetní moduly"
+  },
+  "home.raspberrypi.description": {
+    "message": "Kompaktní výpočetní moduly pro IoT brány, edge zpracování a vlastní hardware."
+  },
+  "home.mikrotik.subtitle": {
+    "message": "Sítě pro LoRaWAN"
+  },
+  "home.mikrotik.description": {
+    "message": "Brány LoRaWAN na platformě RouterBOARD a síťové prvky pro IoT infrastrukturu."
+  },
+  "home.carlogavazzi.subtitle": {
+    "message": "Elektroměry"
+  },
+  "home.carlogavazzi.description": {
+    "message": "Certifikované jednofázové a třífázové elektroměry s Modbus RTU pro průmyslové měření."
+  },
+  "home.nexelec.subtitle": {
+    "message": "Bezpečnostní IoT senzory"
+  },
+  "home.nexelec.description": {
+    "message": "Požární senzory a detektory CO připojené přes LoRaWAN, odpovídající evropským bezpečnostním normám."
+  },
+  "home.cloud.subtitle": {
+    "message": "Middlewarová IoT služba"
+  },
+  "home.cloud.description": {
+    "message": "Platforma pro správu zařízení a dat s REST API, webhookovými konektory a aktualizacemi firmwaru na dálku."
+  },
+  "home.manager.subtitle": {
+    "message": "Aplikace pro nastavení přes NFC a Bluetooth"
+  },
+  "home.manager.description": {
+    "message": "Mobilní aplikace pro Android a iOS: nastavení zařízení STICKER přes NFC a CHESTER přes Bluetooth, s uloženými klíči zařízení, šablonami, terminálem a aktualizacemi firmwaru."
+  },
+  "home.thingsboard.subtitle": {
+    "message": "Platforma pro vizualizaci dat"
+  },
+  "home.thingsboard.description": {
+    "message": "Open-source IoT platforma pro sběr, zpracování a vizualizaci dat a správu zařízení."
+  },
+  "home.chirpstack.subtitle": {
+    "message": "Síťový server LoRaWAN"
+  },
+  "home.chirpstack.description": {
+    "message": "Open-source síťový server LoRaWAN pro připojení a správu zařízení LoRaWAN."
+  },
+  "home.tts.subtitle": {
+    "message": "Síťové řešení LoRaWAN"
+  },
+  "home.tts.description": {
+    "message": "Podnikový síťový server LoRaWAN pro připojení IoT zařízení ve velkém."
+  },
+  "home.section.products": {
+    "message": "Produkty"
+  },
+  "home.section.smartDevices": {
+    "message": "Chytrá zařízení"
+  },
+  "home.section.cloudAndApps": {
+    "message": "Cloud a aplikace"
+  },
+  "home.tagline": {
+    "message": "Technická dokumentace produktů a služeb"
+  },
+  "home.metaDescription": {
+    "message": "Technická dokumentace produktů a služeb"
   }
 }

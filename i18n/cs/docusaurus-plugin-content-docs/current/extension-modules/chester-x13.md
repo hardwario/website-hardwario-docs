@@ -1,20 +1,19 @@
 ---
 slug: chester-x13
-title: CHESTER-X13 (CAN Bus)
-description: Rozšiřující modul CAN a CAN FD pro platformu CHESTER, založený na řadiči MCP2518FD a transceiveru TCAN3413, s terminací sběrnice na desce.
-keywords: [CHESTER-X13, CAN, CAN FD, CAN Bus, CANbus, MCP2518FD, TCAN3413, SPI, terminace sběrnice, drátová konektivita, CHESTER]
+title: CHESTER-X13 (sběrnice CAN)
+description: Rozšiřující modul pro CAN a CAN FD pro platformu CHESTER, založený na řadiči MCP2518FD a transceiveru TCAN3413, s terminací sběrnice na desce.
+keywords: [CHESTER-X13, CAN, CAN FD, sběrnice CAN, CANbus, MCP2518FD, TCAN3413, SPI, terminace sběrnice, drátová konektivita, CHESTER]
 ---
+import Image from '@theme/IdealImage';
 
 # CHESTER-X13 {#chester-x13}
 
-**CHESTER-X13** je rozšiřující modul **CAN Bus** s podporou **CAN FD** pro platformu CHESTER.
+**CHESTER-X13** je rozšiřující modul pro **sběrnici CAN** s podporou **CAN FD** pro platformu CHESTER.
 
 <div class="container">
 <div class="row">
 <div class="col col--4">
-
-![3D render červené desky CHESTER-X13 R1.2 s řadičem CAN MCP2518FD, krystalem 20 MHz, transceiverem TCAN3413 a tlumivkou step-down převodníku](../../../../../chester/extension-modules/images/chester-x13-top.png)
-
+<div><Image img={require('../../../../../chester/extension-modules/images/chester-x13-top.png')} alt="3D render červené desky CHESTER-X13 R1.2 s řadičem CAN MCP2518FD, krystalem 20 MHz, transceiverem TCAN3413 a tlumivkou step-down převodníku"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -23,29 +22,29 @@ keywords: [CHESTER-X13, CAN, CAN FD, CAN Bus, CANbus, MCP2518FD, TCAN3413, SPI, 
 
 ## Přehled modulu {#module-overview}
 
-CHESTER-X13 poskytuje rozhraní **CAN / CAN FD** založené na externím řadiči CAN **MCP2518FD**, který komunikuje s hlavní deskou CHESTER přes **SPI**. Fyzickou sběrnici budí transceiver **TCAN3413** na desce a linky **CANH** / **CANL** jsou vyvedeny na svorkovnici. Zakončovací rezistory sběrnice jsou na desce k dispozici, ale ve výchozím stavu odpojené, takže modul může být umístěn kdekoli na sběrnici.
+CHESTER-X13 poskytuje rozhraní **CAN / CAN FD** založené na externím řadiči CAN **MCP2518FD**, který se základní deskou CHESTER komunikuje po **SPI**. Fyzickou sběrnici budí transceiver **TCAN3413** na desce a linky **CANH** / **CANL** jsou vyvedené na svorkovnici. Zakončovací rezistory sběrnice jsou na desce k dispozici, ale ve výchozím stavu odpojené, takže modul může být kdekoli na sběrnici.
 
-Modul může být napájen přímo z hlavní desky CHESTER. Alternativně externí linka 5-28 VDC na +VIN napájí step-down převodník **TPS62933** na desce, jehož pevný výstup **5 V** napájí hlavní desku CHESTER. Vstup chrání Schottkyho diody (**PMEG6010ELR**). Výstup přerušení signalizuje hlavní desce CHESTER, že řadič CAN vyžaduje pozornost.
+Modul může běžet přímo ze základní desky CHESTER. Alternativně přivádí externí linka 5-28 V DC na +VIN energii do step-down převodníku **TPS62933** na desce, jehož pevný výstup **5 V** napájí základní desku CHESTER. Vstup chrání Schottkyho diody (**PMEG6010ELR**). Výstup přerušení signalizuje základní desce CHESTER, že řadič CAN potřebuje obsluhu.
 
 ## Klíčové vlastnosti {#key-features}
 
 * **CAN a CAN FD:** Drátová konektivita založená na řadiči CAN MCP2518FD.
-* **Hostitelské rozhraní SPI:** Připojení k hlavní desce CHESTER přes SPI.
-* **Transceiver na desce:** Transceiver TCAN3413 budí fyzickou sběrnici CAN.
+* **Rozhraní k hostu po SPI:** K základní desce CHESTER se připojuje po SPI.
+* **Transceiver na desce:** Fyzickou sběrnici CAN budí transceiver TCAN3413.
 * **Volitelná terminace sběrnice:** Terminace ~120 Ω na desce, ve výchozím stavu odpojená.
-* **Flexibilní napájení:** Z hlavní desky CHESTER, nebo z volitelné linky 5-28 VDC na +VIN.
+* **Flexibilní napájení:** Běží ze základní desky CHESTER, nebo z volitelné linky 5-28 V DC na +VIN.
 * **Ochrana vstupu:** Schottkyho diody (PMEG6010ELR) na napájecím vstupu.
-* **Výstup přerušení:** Dedikovaná linka přerušení k hlavní desce CHESTER.
+* **Výstup přerušení:** Vyhrazená linka přerušení k základní desce CHESTER.
 
 ## Typické aplikace {#typical-applications}
 
 * **Průmyslové sítě CAN:** Připojení zařízení CHESTER ke sběrnici CAN / CAN FD.
-* **Monitorování strojů a zařízení:** Čtení dat ze zařízení s rozhraním CAN.
-* **Mobilní stroje a vozidla:** Telemetrie zemědělských, stavebních a dalších mobilních strojů.
-* **Energetické systémy:** Monitorování generátorů, invertorů a bateriových systémů s rozhraním CAN.
-* **Dodatečný sběr dat:** Odběr dat z existující sběrnice CAN.
+* **Monitorování strojů a zařízení:** Odečet dat ze zařízení, která nabízejí rozhraní CAN.
+* **Mobilní stroje a vozidla:** Telemetrie ze zemědělských, stavebních a dalších mobilních strojů.
+* **Energetické systémy:** Monitorování generátorů, střídačů a bateriových systémů s rozhraním CAN.
+* **Dodatečný sběr dat:** Odbočení dat z existující sběrnice CAN.
 
-## Technické specifikace {#technical-specifications}
+## Technické parametry {#technical-specifications}
 
 | Parametr | Hodnota |
 | :--- | :--- |
@@ -53,29 +52,29 @@ Modul může být napájen přímo z hlavní desky CHESTER. Alternativně extern
 | **Bitová rychlost** | Až 1 Mbit/s (klasický CAN), až 5 Mbit/s (CAN FD) |
 | **Řadič CAN** | MCP2518FD (externí, SPI) |
 | **Transceiver CAN** | TCAN3413 |
-| **Hostitelské rozhraní** | SPI |
+| **Rozhraní k hostu** | SPI |
 | **Terminace sběrnice** | ~120 Ω na desce, ve výchozím stavu odpojená |
-| **Napájecí vstup (+VIN)** | 5-28 VDC (volitelné externí napájení) |
-| **Napájecí výstup (+V)** | Pevných 5 V, napájí hlavní desku CHESTER |
+| **Napájecí vstup (+VIN)** | 5-28 V DC (volitelné externí napájení) |
+| **Napájecí výstup (+V)** | Pevných 5 V, napájí základní desku CHESTER |
 | **Výstup sběrnice** | CANH / CANL na svorkovnici |
-| **Konektor** | Standardní header s rozestupem 2,54 mm (pájený) |
+| **Rozhraní desky** | Castellated otvory na dvou protilehlých hranách, připájené k základní desce CHESTER |
 | **Revize hardwaru** | R1.2 |
 
-## Klíčové komponenty {#key-components}
+## Klíčové součástky {#key-components}
 
-| Komponenta | Označení | Popis |
+| Součástka | Typové označení | Popis |
 | :--- | :--- | :--- |
 | **Řadič CAN** | MCP2518FD | Externí řadič CAN FD s rozhraním SPI |
-| **Transceiver CAN** | TCAN3413 | Transceiver CAN FD (rozhraní fyzické sběrnice) |
-| **DC-DC převodník** | TPS62933 | Step-down převodník, vstup 5-28 VDC |
+| **Transceiver CAN** | TCAN3413 | Transceiver CAN FD (rozhraní k fyzické sběrnici) |
+| **Převodník DC-DC** | TPS62933 | Snižující převodník, vstup 5-28 V DC |
 | **Ochrana vstupu** | PMEG6010ELR | Schottkyho diody pro ochranu vstupu |
 
-## Konfigurace pinů {#pin-configuration}
+## Zapojení pinů {#pin-configuration}
 
-Modul používá standardizované rozložení headeru kompatibilní s rozšiřujícími slty CHESTER.
+Modul používá standardizované rozvržení konektoru kompatibilní se slotem pro rozšiřující moduly CHESTER.
 
 :::note
-Zobrazená konfigurace pinů platí pro hlavní desku CHESTER-M CGLS.
+Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 :::
 
 ### Zapojení konektoru CHESTER-X13 {#chester-x13-connector-pinout}
@@ -84,22 +83,22 @@ Zobrazená konfigurace pinů platí pro hlavní desku CHESTER-M CGLS.
 
 | Pin | Signál | Typ | Popis |
 | :---: | :--- | :--- | :--- |
-| 1 | INT | Výstup | Výstup přerušení k hlavní desce CHESTER |
-| 2 | RH | Terminace CAN | Odbočka terminace pro CANH (spojte s CANH pro zapnutí terminace na desce) |
+| 1 | INT | Výstup | Výstup přerušení k základní desce CHESTER |
+| 2 | RH | Terminace CAN | Vývod terminace pro CANH (spojením s CANH zapnete terminaci na desce) |
 | 3 | CANH | Sběrnice CAN | Linka sběrnice CAN, high |
 | 4 | CANL | Sběrnice CAN | Linka sběrnice CAN, low |
-| 5 | RL | Terminace CAN | Odbočka terminace pro CANL (spojte s CANL pro zapnutí terminace na desce) |
-| 6 | GND | Zem | Referenční zem systému |
-| 7 | GND | Zem | Referenční zem systému |
-| 8 | +VIN | Napájecí vstup | Volitelný externí vstup DC pro step-down na desce (5-28 VDC) |
+| 5 | RL | Terminace CAN | Vývod terminace pro CANL (spojením s CANL zapnete terminaci na desce) |
+| 6 | GND | Zem | Systémová zemní reference |
+| 7 | GND | Zem | Systémová zemní reference |
+| 8 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do step-down převodníku na desce (5-28 V DC) |
 
 :::info
-Modul může být napájen přímo z hlavní desky CHESTER. Když je k **+VIN** (pin 8) připojeno externí napájení **5-28 VDC**, step-down převodník TPS62933 na desce vytváří pevných **5 V**, které napájejí hlavní desku CHESTER.
+Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 8) připojené externí napájení **5-28 V DC**, vytváří step-down převodník TPS62933 na desce pevných **5 V**, kterými se napájí základní deska CHESTER.
 :::
 
-### Hostitelské rozhraní (SPI) {#host-interface-spi}
+### Rozhraní k hostu (SPI) {#host-interface-spi}
 
-Na rozdíl od většiny modulů CHESTER-X (které používají **I²C**) komunikuje CHESTER-X13 s hlavní deskou CHESTER přes **SPI**. Řadič MCP2518FD je řízen přes piny GP slotu modulu:
+Na rozdíl od většiny modulů CHESTER-X (které používají **I²C**) komunikuje CHESTER-X13 se základní deskou CHESTER po **SPI**. Řadič MCP2518FD se řídí přes piny GP slotu modulu:
 
 | Pin CHESTER-X | Funkce SPI | Signál MCP2518FD |
 | :--- | :--- | :--- |
@@ -108,85 +107,73 @@ Na rozdíl od většiny modulů CHESTER-X (které používají **I²C**) komunik
 | GP2 | MISO | SDO |
 | GP3 | CS | NCS |
 
-Výstup přerušení MCP2518FD (INT) je vyveden na svorku **INT** modulu (pin 1). Viz podsekce [Pin přerušení](#interrupt-pin) níže.
+Výstup přerušení (INT) čipu MCP2518FD je vyvedený na svorku **INT** modulu (pin 1). Viz podsekce [Přerušovací pin](#interrupt-pin) níže.
 
-### Pin přerušení {#interrupt-pin}
+### Přerušovací pin {#interrupt-pin}
 
-MCP2518FD signalizuje události (například přijatý rámec CAN) na svém výstupu přerušení, který je vyveden na svorku **INT** modulu (pin 1). Toto přerušení **musí být připojeno ke svorce INT hlavní desky CHESTER**, aby jej hlavní deska mohla detekovat. Na hlavní desce **CHESTER-M CGLS** přidejte propojovací vodič ze svorkovnice rozšiřujícího modulu na svorku INT hlavní desky. Zapojení níže je zobrazeno pro modul ve **slotu B**; modul v jiném slotu se stejným způsobem připojuje ke svorce INT daného slotu.
+MCP2518FD signalizuje události (například přijatý rámec CAN) na svém výstupu přerušení, který je vyvedený na svorku **INT** modulu (pin 1). Toto přerušení **musí být propojené se svorkou INT základní desky CHESTER**, aby ho deska mohla zaznamenat. Na základní desce **CHESTER-M CGLS** přidejte propojovací vodič ze svorkovnice rozšiřujícího modulu na svorku INT základní desky. Zapojení níže je znázorněné pro modul ve **slotu B**; modul v jiném slotu se stejným způsobem připojí ke svorce INT daného slotu.
 
-![Nákres hlavní desky CHESTER s vodičem spojujícím svorku INT slotu B s pinem přerušení modulu](../../../../../chester/extension-modules/images/int-pin.png)
+![Nákres hlavní desky CHESTER s vodičem spojujícím svorku INT slotu B s přerušovacím pinem modulu](../../../../../chester/extension-modules/images/int-pin.png)
 
 * Příklad: zapojení přerušení pro modul ve slotu B (CHESTER-M CGLS).
 
 ## Připojení sběrnice CAN {#can-bus-connection}
 
-Sběrnice CAN se zapojuje přímo na piny svorkovnice **CANH** (pin 3) a **CANL** (pin 4). Použijte kabel s **kroucenou dvojlinkou** s charakteristickou impedancí **120 Ω**, sběrnici zapojte v **lineární (řetězové) topologii** — vyhněte se hvězdicovému rozložení a dlouhým odbočkám — a jakékoli nekroucené vedení u svorkovnice udržujte **co nejkratší**.
+Sběrnice CAN se zapojuje přímo na piny svorkovnice **CANH** (pin 3) a **CANL** (pin 4). Použijte **kroucenou dvojlinku** s charakteristickou impedancí **120 Ω**, sběrnici veďte v **lineární (řetězové) topologii** — vyhněte se hvězdicovému rozvržení a dlouhým odbočkám — a nekroucenou část kabeláže u svorkovnice udržujte **co nejkratší**.
 
-Rozhraní CAN **není galvanicky oddělené**, takže všechny uzly musí mít společnou referenční zem. Připojte **GND** sběrnice na jeden z pinů GND svorkovnice (pin 6 nebo 7).
+Rozhraní CAN **není galvanicky oddělené**, takže všechny uzly musí mít společnou zemní referenci. Zem sběrnice **GND** připojte na jeden z pinů GND svorkovnice (pin 6 nebo 7).
 
 ### Zakončovací rezistory {#termination-resistors}
 
-Sběrnice CAN musí být zakončena rezistorem **120 Ω** mezi CANH a CANL na **obou fyzických koncích** sběrnice. CHESTER-X13 poskytuje terminaci na desce, která je **ve výchozím stavu odpojená** (uzel uprostřed sběrnice nesmí být zakončen).
+Sběrnice CAN musí být na **obou fyzických koncích** zakončená rezistorem **120 Ω** mezi CANH a CANL. CHESTER-X13 má terminaci na desce, která je ve výchozím stavu **odpojená** (uzel v prostředku sběrnice zakončený být nesmí).
 
-Zapněte ji **pouze tehdy, když je modul na konci sběrnice**, spojením **CANH s RH** (pin 3 s pinem 2) a **CANL s RL** (pin 4 s pinem 5) na svorkovnici.
+Zapněte ji **jen tehdy, když je modul na konci sběrnice**, a to spojením **CANH s RH** (pin 3 s pinem 2) a **CANL s RL** (pin 4 s pinem 5) na svorkovnici.
 
 ### Průchod krabičkou {#enclosure-feed-through}
 
 Kabel CAN lze do krabičky přivést dvěma způsoby:
 
-- **Kabelová průchodka (výchozí):** vodiče CAN veďte kabelovou průchodkou ve stěně krabičky a zapojte je na svorkovnici.
-- **Konektor pro montáž do panelu (na vyžádání):** externí konektor ve stěně krabičky umožňuje uživateli kabel CAN zapojit bez volného vedení uvnitř. Dostupné na vyžádání.
+- **Kabelová vývodka (výchozí):** vodiče CAN protáhnete vývodkou ve stěně krabičky a zapojíte do svorkovnice.
+- **Konektor do panelu (na vyžádání):** externí konektor ve stěně krabičky umožní uživateli kabel CAN zapojit, bez volné kabeláže vevnitř. Na vyžádání.
 
 ## Kompatibilní konfigurace CHESTER {#compatible-chester-configurations}
 
-Modul CHESTER-X13 lze použít s různými konfiguracemi hlavních desek CHESTER. Níže jsou příklady kompatibilních sestav:
+Modul CHESTER-X13 lze použít s různými konfiguracemi základních desek CHESTER. Níže jsou příklady kompatibilních sestav:
 
 <div class="container">
 <div class="row">
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![Hlavní deska CHESTER-M CGLS s baterií typu D, superkondenzátory a svorkovnicemi A/B](../../../../../chester/extension-modules/images/chester-x13-cgls.png)
+![Základní deska CHESTER-M CGLS s baterií velikosti D, superkondenzátory a svorkovnicemi A/B](../../../../../chester/extension-modules/images/chester-x13-cgls.png)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![Nosná deska CHESTER-C4, modrá deska PCB s dvojitým držákem baterií typu D a svorkovnicemi](../../../../../chester/extension-modules/images/chester-x13-c4.png)
+![Nosná deska CHESTER-C4, modrá deska s dvojitým držákem baterií velikosti D a svorkovnicemi](../../../../../chester/extension-modules/images/chester-x13-c4.png)
 
 </div>
 </div>
 </div>
 
-## Použití v CHESTER SDK {#chester-sdk-usage}
+## Použití s CHESTER SDK {#chester-sdk-usage}
 
-CHESTER-X13 lze používat v rámci CHESTER SDK pomocí shieldů `ctr_x13_a` a `ctr_x13_b`, případně funkcí `hardware-chester-x13-a` a `hardware-chester-x13-b` v [Project Generatoru](/chester/firmware-sdk/how-to-project-generator).
+CHESTER-X13 lze v rámci CHESTER SDK použít přes shieldy `ctr_x13_a` a `ctr_x13_b`, případně přes funkce [Project Generatoru](/chester/firmware-sdk/how-to-project-generator) `hardware-chester-x13-a` a `hardware-chester-x13-b`.
 
-- [Příklad použití SDK](https://github.com/hardwario/chester-sdk/tree/main/samples/chester_x13)
+- [Ukázka použití v SDK](https://github.com/hardwario/chester-sdk/tree/main/samples/chester_x13)
 
 ## Schémata {#schematic-diagrams}
 
-Následující schémata zobrazují vnitřní zapojení modulu na jeho třech listech: hlavní stránka, rozhraní CAN a napájení.
+Kompletní schéma — hlavní strana, rozhraní CAN a napájení — je k dispozici jako PDF:
 
 - [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x13-r1.2.pdf)
-- [Interaktivní prohlížeč konektorů, součástek, testovacích bodů a signálů PCB](pathname:///download/ibom/hio-chester-x13-r1.2.html)
+- [Interaktivní prohlížeč CHESTER-X13](pathname:///download/ibom/hio-chester-x13-r1.2.html)
 
-### Hlavní stránka {#main-page}
-
-![Schéma hlavní stránky CHESTER-X13: konektor modulu CHESTER-X mapující signály svorkovnice (INT, RH, CANH, CANL, RL, GND, +VIN) a piny SPI GP0-GP3 (SCK, SDI, SDO, NCS)](../../../../../chester/extension-modules/images/hio-chester-x13-r1.2-1.png)
-
-### CAN {#can}
-
-![Schéma CAN CHESTER-X13: řadič CAN FD MCP2518FD s krystalem 20 MHz, transceiver TCAN3413 a dělené zakončovací rezistory sběrnice](../../../../../chester/extension-modules/images/hio-chester-x13-r1.2-3.png)
-
-### Napájení {#power}
-
-![Schéma napájení CHESTER-X13: step-down převodník TPS62933 se vstupními a výstupními Schottkyho diodami PMEG6010ELR](../../../../../chester/extension-modules/images/hio-chester-x13-r1.2-2.png)
-
-## Nákres modulu {#module-drawing}
+## Výkres modulu {#module-drawing}
 
 <div style={{ maxWidth: '500px' }}>
 
-![Nákres rozložení desky CHESTER-X13 R1.2 s umístěním součástek a popisky pinů na hraně](../../../../../chester/extension-modules/images/pc-chester-x13.png)
+![Výkres rozvržení desky CHESTER-X13 R1.2 s rozmístěním součástek a popisky pinů na hranách](../../../../../chester/extension-modules/images/pc-chester-x13.png)
 
 </div>

@@ -8,7 +8,7 @@
     "description": "The label for category 'Milesight' in sidebar 'smartDevicesSidebar'"
   },
   "sidebar.smartDevicesSidebar.category.Sensors": {
-    "message": "Sensors",
+    "message": "Senzory",
     "description": "The label for category 'Sensors' in sidebar 'smartDevicesSidebar'"
   },
   "sidebar.smartDevicesSidebar.category.AM300": {
@@ -20,11 +20,11 @@
     "description": "The label for category 'Gateways' in sidebar 'smartDevicesSidebar'"
   },
   "sidebar.smartDevicesSidebar.category.Utility": {
-    "message": "Utility",
+    "message": "Pomocné nástroje",
     "description": "The label for category 'Utility' in sidebar 'smartDevicesSidebar'"
   },
   "sidebar.smartDevicesSidebar.category.Video Tutorials": {
-    "message": "Video Tutorials",
+    "message": "Videonávody",
     "description": "The label for category 'Video Tutorials' in sidebar 'smartDevicesSidebar'"
   },
   "sidebar.smartDevicesSidebar.category.RAKwireless": {
@@ -56,7 +56,7 @@
     "description": "The label for category 'Nexelec' in sidebar 'smartDevicesSidebar'"
   },
   "sidebar.smartDevicesSidebar.doc.Overview": {
-    "message": "Overview",
+    "message": "Přehled",
     "description": "The label for the doc item 'Overview' in sidebar 'smartDevicesSidebar', linking to the doc index"
   }
 }

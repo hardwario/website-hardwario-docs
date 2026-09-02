@@ -4,7 +4,7 @@
     "description": "The label for version current"
   },
   "sidebar.docs.category.LoRaWAN Network Server": {
-    "message": "LoRaWAN Network Server",
+    "message": "Síťový server LoRaWAN",
     "description": "The label for category 'LoRaWAN Network Server' in sidebar 'docs'"
   },
   "sidebar.docs.category.MikroTik": {
@@ -12,7 +12,7 @@
     "description": "The label for category 'MikroTik' in sidebar 'docs'"
   },
   "sidebar.docs.category.Video Tutorials": {
-    "message": "Video Tutorials",
+    "message": "Videonávody",
     "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
   },
   "sidebar.docs.category.Video Tutorials.link.generated-index.description": {
@@ -28,7 +28,7 @@
     "description": "The label for category 'MikroTik' in sidebar 'docs'"
   },
   "sidebar.docs.doc.Changelog": {
-    "message": "Changelog",
+    "message": "Seznam změn",
     "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
   }
 }

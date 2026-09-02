@@ -95,3 +95,21 @@ In **UDP Protocol parameters** category fill the following field:
 - Confirm by clicking **Save changes**.
 
 ![Rak select ChirpStack](images/rak-chirpstack.png)
+
+---
+
+## OpenVPN Configuration
+
+To configure a secure OpenVPN connection on your RAK gateway, follow these steps:
+
+1. Click on the **Extensions** icon (puzzle piece) in the left navigation menu. Open the **Extension gallery** tab and install the **RAK OpenVPN Client** extension if it is not already installed.
+![OpenVPN Extension Gallery](images/OpenVPN-certificate-1.png)
+
+2. Switch to the **Installed** tab, find **RAK OpenVPN Client**, and click **Launch**.
+![Launch OpenVPN Extension](images/OpenVPN-certificate-2.png)
+
+3. On the OpenVPN Client dashboard, click **Configure** under the **VPN Tunnel** overview.
+![Configure VPN Tunnel](images/OpenVPN-certificate-3.png)
+
+4. Go to the **Configuration** tab, toggle **Enable Connection**, upload your `.ovpn` configuration file, and click **Save changes**.
+![Upload OpenVPN Certificate](images/OpenVPN-certificate-4.png)

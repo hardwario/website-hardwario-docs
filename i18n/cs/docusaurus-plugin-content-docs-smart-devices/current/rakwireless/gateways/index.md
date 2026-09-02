@@ -96,3 +96,21 @@ V kategorii **UDP Protocol parameters** vyplňte následující pole:
 - Potvrďte kliknutím na **Save changes**.
 
 ![Výběr ChirpStacku v RAK](../../../../../../smart-devices/rakwireless/gateways/images/rak-chirpstack.png)
+
+---
+
+## Konfigurace OpenVPN {#openvpn-configuration}
+
+Zabezpečené připojení OpenVPN na bráně RAK nastavíte takto:
+
+1. Klikněte v levém navigačním menu na ikonu **Extensions** (dílek puzzle). Otevřete kartu **Extension gallery** a nainstalujte rozšíření **RAK OpenVPN Client**, pokud ještě nainstalované není.
+![Galerie rozšíření OpenVPN](../../../../../../smart-devices/rakwireless/gateways/images/OpenVPN-certificate-1.png)
+
+2. Přepněte na kartu **Installed**, najděte **RAK OpenVPN Client** a klikněte na **Launch**.
+![Spuštění rozšíření OpenVPN](../../../../../../smart-devices/rakwireless/gateways/images/OpenVPN-certificate-2.png)
+
+3. Na dashboardu klienta OpenVPN klikněte v přehledu **VPN Tunnel** na **Configure**.
+![Konfigurace tunelu VPN](../../../../../../smart-devices/rakwireless/gateways/images/OpenVPN-certificate-3.png)
+
+4. Přejděte na kartu **Configuration**, zapněte **Enable Connection**, nahrajte svůj konfigurační soubor `.ovpn` a klikněte na **Save changes**.
+![Nahrání certifikátu OpenVPN](../../../../../../smart-devices/rakwireless/gateways/images/OpenVPN-certificate-4.png)

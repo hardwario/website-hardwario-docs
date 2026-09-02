@@ -13,31 +13,6 @@ const FALLBACK_API_URL = 'https://docs-chatbot-beta.vercel.app/api/chat';
 // so a long session does not grow the request without limit.
 const HISTORY_TURNS = 4;
 
-// When the backend reports it is paused (out of credit, or bad credentials), hide
-// the widget entirely instead of leaving a button that only produces errors.
-// Remembered per visitor so only the unlucky first one ever sees the message.
-const PAUSED_KEY = 'hardwario-docs-chat-paused-until';
-// Expires so the widget comes back on its own once the account is topped up —
-// nobody has to remember to clear anything.
-const PAUSED_FOR_MS = 6 * 60 * 60 * 1000;
-
-function readPaused(): boolean {
-  try {
-    const until = Number(window.localStorage.getItem(PAUSED_KEY));
-    return Number.isFinite(until) && until > Date.now();
-  } catch {
-    return false; // private mode / storage disabled — just show the widget
-  }
-}
-
-function markPaused() {
-  try {
-    window.localStorage.setItem(PAUSED_KEY, String(Date.now() + PAUSED_FOR_MS));
-  } catch {
-    /* ignore — hiding for this page view still works via state */
-  }
-}
-
 // A page load starts a clean chat, always.
 //
 // The conversation lives in React state and nowhere else. Persisting it across
@@ -395,10 +370,6 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
-  // null = not checked yet. Stays null through the server render and the first
-  // client render, so prerendered HTML and hydration agree and the button never
-  // flashes up only to disappear.
-  const [paused, setPaused] = useState<boolean | null>(null);
   // Kept across close and reopen: how big someone wants the panel is a
   // preference, not part of the conversation that closing throws away.
   const [expanded, setExpanded] = useState(false);
@@ -410,12 +381,6 @@ export default function ChatWidget() {
   const bottomRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const lastMsgRef = useRef<HTMLDivElement>(null);
-
-  // Client only: reading storage during render would make the prerendered HTML
-  // and the first client render disagree.
-  useEffect(() => {
-    setPaused(readPaused());
-  }, []);
 
   // Closing ends the conversation. Reopening starts a new one, rather than
   // resuming a thread the visitor already decided they were finished with —
@@ -514,10 +479,11 @@ export default function ChatWidget() {
       });
       const data = await res.json();
 
-      // Backend is out of credit or misconfigured: show this one message, then
-      // take the widget away rather than leave a button that cannot work.
+      // Backend is out of credit or misconfigured. The widget stays: this
+      // bubble is what routes people to the support address, and hiding it
+      // after one question meant almost nobody ever read it. A button that
+      // answers "write to us" is worth more than no button at all.
       if (data.paused) {
-        markPaused();
         setMessages(m => [...m, {
           role: 'assistant',
           // Not data.error: the backend answers in one language (English) and
@@ -525,9 +491,6 @@ export default function ChatWidget() {
           // Both say the same thing and name the same address.
           content: t.paused,
         }]);
-        // Leave the message on screen long enough to read before it vanishes.
-        // `finally` below clears the loading state.
-        window.setTimeout(() => setPaused(true), 6000);
         return;
       }
 
@@ -552,10 +515,6 @@ export default function ChatWidget() {
       send();
     }
   }
-
-  // null = still checking storage, true = paused. Render nothing either way, so
-  // there is no icon at all rather than one that leads to an error.
-  if (paused !== false) return null;
 
   return (
     <div className={styles.wrapper}>

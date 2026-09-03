@@ -34,7 +34,7 @@ Send `app config` commands to every selected device — the same as a
 ### Firmware
 
 Update the firmware of every selected device over the air — enter the **firmware identifier** to roll
-out (see [**FOTA**](/cloud/fota)).
+out (see [**Firmware**](/cloud/firmware)).
 
 ![Bulk Actions dialog on the Firmware tab with a firmware identifier field](images/bulk-firmware.png)
 

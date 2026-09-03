@@ -132,7 +132,7 @@ Once connected, you can:
 - Use [**HARDWARIO Manager**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-manager) (mobile app via BLE)
 - Use [**HARDWARIO Monitor**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-monitor) (J-Link or BLE from your PC)
 - Use [**HARDWARIO Terminal**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-terminal) (Google Chrome browser via WebSerial/WebBluetooth)
-- Access a [**Remote shell**](https://docs.hardwario.com/cloud/downlink/#shell-commands) and even perform [**FOTA updates**](https://docs.hardwario.com/cloud/fota)
+- Access a [**Remote shell**](https://docs.hardwario.com/cloud/downlink/#shell-commands) and even perform [**firmware updates over the air**](https://docs.hardwario.com/cloud/firmware)
 
 ---
 
@@ -181,7 +181,7 @@ If a newer version is available, you can update it using one of these methods:
 
 2. **Update Firmware from the Cloud (FOTA)**
    - You can also update your CHESTER **remotely** via the cloud.
-   - For full technical details, see this guide: 👉 [**FOTA documentation**](https://docs.hardwario.com/cloud/fota/)
+   - For full technical details, see this guide: 👉 [**Firmware documentation**](https://docs.hardwario.com/cloud/firmware/)
 
 3. **Manual Update via J-Link**
    - If you prefer flashing manually, see this guide: 👉 [**Application update over J-Link**](https://docs.hardwario.com/chester/firmware-flashing/application-over-j-link)

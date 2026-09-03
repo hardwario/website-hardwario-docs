@@ -60,7 +60,7 @@ Once the device is powered up and connected, its uplinks appear in the Cloud.
 ## Step 5: Act on Your Devices
 
 The Cloud is bidirectional — send configuration, data, or shell commands back with a
-[**Downlink**](/cloud/downlink), and push firmware over the air with [**FOTA**](/cloud/fota).
+[**Downlink**](/cloud/downlink), and push new [**Firmware**](/cloud/firmware) over the air.
 
 ## Step 6: Integrate With Your Systems
 

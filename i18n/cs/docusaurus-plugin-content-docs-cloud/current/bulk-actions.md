@@ -35,7 +35,7 @@ Odešle příkazy `app config` do všech vybraných zařízení — stejně jako
 ### Firmware {#firmware}
 
 Aktualizuje firmware všech vybraných zařízení bezdrátově — zadejte **identifikátor firmwaru**, který
-se má nasadit (viz [**FOTA**](/cloud/fota)).
+se má nasadit (viz [**Firmware**](/cloud/firmware)).
 
 ![Dialog hromadných akcí na kartě Firmware s polem pro identifikátor firmwaru](../../../../cloud/images/bulk-firmware.png)
 

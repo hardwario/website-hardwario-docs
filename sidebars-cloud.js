@@ -32,6 +32,7 @@ const sidebars = {
             },
           ],
         },
+        'firmware',
         'tags',
         'variables',
       ],
@@ -42,7 +43,6 @@ const sidebars = {
       collapsed: true,
       items: [
         'connectors',
-        'fota',
         {
           type: 'category',
           label: 'REST API',

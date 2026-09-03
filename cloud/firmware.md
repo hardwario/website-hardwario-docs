@@ -1,12 +1,13 @@
 ---
-slug: fota
-title: FOTA
+slug: firmware
+title: Firmware
 ---
 
-# Firmware Over-The-Air Updates (FOTA)
+# Firmware Updates
 
-You can update a CHESTER's firmware remotely from the Cloud — no physical access
-needed.
+You can update a CHESTER's firmware remotely from the Cloud — over the air, with no
+physical access to the device. Such updates are also called **FOTA** (Firmware
+Over-The-Air).
 
 ## 1. Get the firmware Identifier
 

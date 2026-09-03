@@ -200,8 +200,8 @@
 /cloud-new/devices/                                  /cloud/devices                                                 301
 /cloud-new/downlink                                  /cloud/downlink                                                301
 /cloud-new/downlink/                                 /cloud/downlink                                                301
-/cloud-new/fota                                      /cloud/fota                                                    301
-/cloud-new/fota/                                     /cloud/fota                                                    301
+/cloud-new/fota                                      /cloud/firmware                                                301
+/cloud-new/fota/                                     /cloud/firmware                                                301
 /cloud-new/introduction                              /cloud/introduction                                            301
 /cloud-new/introduction/                             /cloud/introduction                                            301
 /cloud-new/messages                                  /cloud/messages                                                301
@@ -332,6 +332,11 @@
 /sticker/nfc-configurator-app/guides/hm-guide-tags/                  /apps/hardwario-manager/sticker/tags                  301
 /sticker/nfc-configurator-app/guides/hm-guide-change-log             /apps/hardwario-manager/sticker/change-log            301
 /sticker/nfc-configurator-app/guides/hm-guide-change-log/            /apps/hardwario-manager/sticker/change-log            301
+
+
+# cloud: FOTA page renamed to Firmware (2026-09-03)
+/cloud/fota                                          /cloud/firmware                                                301
+/cloud/fota/                                         /cloud/firmware                                                301
 
 
 # --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts

@@ -1,13 +1,14 @@
 ---
-slug: fota
-title: FOTA
-description: "Firmware zařízení CHESTER můžete aktualizovat na dálku z cloudu — bez potřeby"
+slug: firmware
+title: Firmware
+description: "Firmware zařízení CHESTER můžete aktualizovat na dálku z cloudu, vzduchem a bez fyzického přístupu k zařízení."
 ---
 
-# Aktualizace firmwaru přes vzduch (FOTA) {#firmware-over-the-air-updates-fota}
+# Aktualizace firmwaru {#firmware-updates}
 
-Firmware zařízení CHESTER můžete aktualizovat na dálku z cloudu — bez potřeby
-fyzického přístupu.
+Firmware zařízení CHESTER můžete aktualizovat na dálku z cloudu — vzduchem, bez
+fyzického přístupu k zařízení. Těmto aktualizacím se také říká **FOTA** (Firmware
+Over-The-Air).
 
 ## 1. Získejte identifikátor firmwaru {#1-get-the-firmware-identifier}
 

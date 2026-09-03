@@ -88,7 +88,7 @@ Shows the message history for this specific device. See [Messages](messages.md) 
 
 ### Firmware
 
-Shows firmware update history and allows scheduling a FOTA update. See [FOTA](fota.md).
+Shows firmware update history and allows scheduling an over-the-air update. See [Firmware](firmware.md).
 
 ### Downlink
 

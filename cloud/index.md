@@ -17,7 +17,7 @@ title: HARDWARIO Cloud
 | **Tags** | Label groups of devices and connect them to connectors |
 | **Connectors** | Webhook-based data forwarding with JavaScript transformation |
 | **Downlink** | Send config, data or shell commands to devices remotely |
-| **FOTA** | Push firmware updates over the air |
+| **Firmware** | Push firmware updates over the air (FOTA) |
 | **API** | Full REST API access with API keys |
 
 ## How It Works

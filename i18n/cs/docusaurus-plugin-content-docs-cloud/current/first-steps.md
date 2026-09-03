@@ -61,7 +61,7 @@ Jakmile je zařízení napájené a připojené, jeho uplinky se objeví v Cloud
 ## Krok 5: Zasáhněte do chodu svých zařízení {#step-5-act-on-your-devices}
 
 Cloud je obousměrný — pošlete konfiguraci, data nebo shell příkazy zpět pomocí
-[**Downlink**](/cloud/downlink) a nahrajte firmware vzduchem pomocí [**FOTA**](/cloud/fota).
+[**Downlink**](/cloud/downlink) a nahrajte nový [**Firmware**](/cloud/firmware) vzduchem.
 
 ## Krok 6: Propojte Cloud se svými systémy {#step-6-integrate-with-your-systems}
 

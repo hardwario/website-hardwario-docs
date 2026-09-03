@@ -89,7 +89,7 @@ Zobrazuje historii zpráv tohoto konkrétního zařízení. Podrobnosti viz [Zpr
 
 ### Firmware {#firmware}
 
-Zobrazuje historii aktualizací firmwaru a umožňuje naplánovat aktualizaci FOTA. Viz [FOTA](fota.md).
+Zobrazuje historii aktualizací firmwaru a umožňuje naplánovat aktualizaci vzduchem. Viz [Firmware](firmware.md).
 
 ### Downlink {#downlink}
 

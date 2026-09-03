@@ -133,7 +133,7 @@ Po připojení můžete:
 - Použít [**HARDWARIO Manager**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-manager) (mobilní aplikace přes BLE)
 - Použít [**HARDWARIO Monitor**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-monitor) (J-Link nebo BLE z počítače)
 - Použít [**HARDWARIO Terminal**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-terminal) (prohlížeč Google Chrome přes WebSerial/WebBluetooth)
-- Přistupovat ke [**vzdálenému shellu**](https://docs.hardwario.com/cloud/downlink/#shell-commands) a provádět i [**aktualizace FOTA**](https://docs.hardwario.com/cloud/fota)
+- Přistupovat ke [**vzdálenému shellu**](https://docs.hardwario.com/cloud/downlink/#shell-commands) a provádět i [**aktualizace firmwaru vzduchem**](https://docs.hardwario.com/cloud/firmware)
 
 ---
 
@@ -182,7 +182,7 @@ Pokud je dostupná novější verze, můžete ji aktualizovat jednou z těchto m
 
 2. **Aktualizace firmwaru z cloudu (FOTA)**
    - Zařízení CHESTER můžete aktualizovat i **na dálku** přes cloud.
-   - Kompletní technické podrobnosti najdete v tomto návodu: 👉 [**dokumentace FOTA**](https://docs.hardwario.com/cloud/fota/)
+   - Kompletní technické podrobnosti najdete v tomto návodu: 👉 [**dokumentace k aktualizaci firmwaru**](https://docs.hardwario.com/cloud/firmware/)
 
 3. **Ruční aktualizace přes J-Link**
    - Pokud dáváte přednost ručnímu nahrání firmwaru, podívejte se na tento návod: 👉 [**Aktualizace aplikace přes J-Link**](https://docs.hardwario.com/chester/firmware-flashing/application-over-j-link)

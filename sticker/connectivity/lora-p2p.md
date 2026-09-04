@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 # LoRa P2P (Peer-to-Peer) Mode
 
 :::info Upcoming Feature
-LoRa P2P communication mode and direct edge gateway integrations (such as HARDWARIO FIBER) are introduced in upcoming platform firmware releases.
+LoRa P2P communication mode is introduced in an upcoming platform firmware release.
 :::
 
 **LoRa P2P (Peer-to-Peer)** allows STICKER devices to transmit proprietary, unmanaged radio frames directly to other nodes or edge receivers without connecting to a LoRaWAN Network Server (LNS).
@@ -25,14 +25,18 @@ LoRa P2P communication mode and direct edge gateway integrations (such as HARDWA
 
 ## Architecture & Topology
 
-In LoRa P2P mode, STICKER bypasses the LoRaWAN MAC layer while utilizing the underlying Semtech SX1262 / STM32WL LoRa PHY modulation layer.
+In LoRa P2P mode, STICKER bypasses the LoRaWAN MAC layer while utilizing the underlying Semtech SX1262 / STM32WL LoRa PHY modulation layer. Frames go straight from the device to a receiver you operate — there is no gateway, no Join, and no network server in the path.
 
-```text
-+-------------------+        Direct RF (LoRa PHY)        +-------------------+
-|  STICKER Device   | ---------------------------------> |  HARDWARIO FIBER  |
-| (P2P Transmitter) |                                   |  (Edge Receiver)  |
-+-------------------+                                   +-------------------+
+```mermaid
+flowchart LR
+  S1([STICKER]) -->|LoRa PHY| RX[Edge receiver]
+  S2([STICKER]) -->|LoRa PHY| RX
+  RX --> Backend[Your system]
+  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  class RX hero;
 ```
+
+Compare this with the [**LoRaWAN**](./index.md) path, where uplinks travel STICKER → gateway → network server → your application. In P2P there is no LoRaWAN MAC, so there is also no Join procedure, no ADR, and no network-managed downlink windows — the two sides simply have to agree on the radio parameters below.
 
 ---
 

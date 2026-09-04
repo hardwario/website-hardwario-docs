@@ -10,10 +10,17 @@ over **NFC** with **HARDWARIO Manager**, the HARDWARIO mobile app — you hold t
 phone against the device and the app reads or writes its settings.
 
 :::tip Full App Documentation
-This page explains how HARDWARIO Manager fits into the STICKER deployment workflow. For complete app guides, feature breakdowns, and installation instructions, visit:
+This page explains how HARDWARIO Manager fits into the STICKER deployment
+workflow. The app itself is documented in full under **APPS**:
 
-→ [**HARDWARIO Manager Documentation**](/apps/hardwario-manager)
+- → [**Quick Start Guide**](/apps/hardwario-manager/first-steps) — install the
+  app, switch the wireless link on, and make the first tap. Start here.
+- → [**HARDWARIO Manager Documentation**](/apps/hardwario-manager) — the complete
+  app guides and feature reference.
+- → [**STICKER over NFC**](/apps/hardwario-manager/sticker) — the STICKER menu
+  and how a tap works.
 :::
+
 ---
 
 ## What you need

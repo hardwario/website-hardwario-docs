@@ -17,12 +17,39 @@ import Image from '@theme/IdealImage';
 
 ## Device Credentials & NFC Extraction
 
-Before registering a STICKER unit in ChirpStack v4, extract its factory keys and provision radio settings over NFC:
+Before registering a STICKER unit in ChirpStack v4, read its factory keys over NFC with
+[**HARDWARIO Manager**](/apps/hardwario-manager). There is no cable and no
+programmer — you hold the phone against the device.
 
-1. Open [**HARDWARIO Manager**](../hardwario-manager) on an NFC-enabled smartphone.
-2. Tap the phone against the STICKER enclosure to read device information.
-3. Record the **DevEUI**, **JoinEUI/AppEUI**, and **AppKey** (for OTAA) or static session keys (for ABP).
-4. Verify that **`radio-mode`** is enabled so the device initiates a Join attempt upon provisioning.
+:::tip First time with the app?
+Work through the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager/first-steps)
+first: installing the app, switching NFC on, and granting the permissions it asks
+for. STICKER is read from an **Android** phone with NFC.
+:::
+
+1. **Save the device so the app has its secret key.** STICKER only answers over
+   an encrypted channel, so the app cannot read anything without it. You add each
+   device once — see
+   [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers) — and from
+   then on the app fills the key in automatically.
+2. **Open STICKER → LoRaWAN keys** and choose **Read LoRaWAN keys**.
+3. **Tap the device.** Touch the back of the phone to the STICKER enclosure and
+   keep still for a second or two. The NFC antenna is usually near the **top
+   back** of the phone; if nothing happens, move the phone slowly around that
+   area. On **iOS** the system scan sheet asks you to lift the phone and tap
+   again partway through — that lift is required. See
+   [**STICKER over NFC**](/apps/hardwario-manager/sticker) for the full tap
+   procedure and what the LED shows during the exchange.
+4. **Record the keys the app shows.** Which ones appear depends on the activation
+   mode: **DevEUI**, **JoinEUI (AppEUI)** and **AppKey** for OTAA, or **DevEUI**,
+   **DevAddr** and the session keys for ABP — see
+   [**Device info and LoRaWAN keys**](/apps/hardwario-manager/sticker/device-info).
+5. **Check the radio is switched on.** In **STICKER → Configuration**, the
+   LoRaWAN section's **`radio-mode`** must be set to LoRaWAN — devices ship
+   radio-silent — so the unit starts a Join once it is registered. See
+   [**Configuration**](/apps/hardwario-manager/sticker/configuration), and
+   [**Templates**](/apps/hardwario-manager/sticker/templates) for giving a whole
+   batch the same settings.
 
 ---
 
@@ -46,7 +73,9 @@ When configuring your STICKER **Device Profile** in ChirpStack v4:
 
 ## Useful Links
 
-- [HARDWARIO Manager Setup Guide](../hardwario-manager)
+- [HARDWARIO Manager and STICKER](../hardwario-manager)
+- [HARDWARIO Manager Quick Start Guide](/apps/hardwario-manager/first-steps)
+- [Read device info and LoRaWAN keys over NFC](/apps/hardwario-manager/sticker/device-info)
 - [ChirpStack v4 Installation Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-installation)
 - [ChirpStack End Devices Documentation](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices)
 - [ChirpStack Payload Decoders Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding)

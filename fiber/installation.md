@@ -7,24 +7,24 @@ import Image from '@theme/IdealImage';
 # Installation
 
 This section covers bootstrap and configuration of the Linux system and the full LoRaWAN +
-monitoring software stack — **one shared procedure for both FIBER hardware variants**:
+monitoring software stack, **one shared procedure for both FIBER hardware variants**:
 
-- **FIBER** — the industrial version, based on **Compute Module 4**.
-- **FIBER Lite** — a Raspberry Pi 5 based bench-test appliance.
+- **FIBER**: the industrial version, based on **Compute Module 4**.
+- **FIBER Lite**: a Raspberry Pi 5 based bench-test appliance.
 
 The two variants only diverge at the hardware level (flashing, RTC, the LoRaWAN concentrator's
-USB vs. SPI connection) — the page itself has tabs at those few points. Everything else,
+USB vs. SPI connection). The page itself has tabs at those few points. Everything else,
 including InfluxDB, Grafana, and the branded Dashboard, is identical and installed on both.
 
 :::warning Which device is this for?
 
-**A FIBER you received is already set up — there is nothing on these pages for you to run.** It
+**A FIBER you received is already set up. There is nothing on these pages for you to run.** It
 ships as a finished appliance: the operating system, ChirpStack, the concentrator and the rest of
 the stack are all part of its image, and it updates as a whole rather than package by package. Go
 straight to [Register a Gateway and a Device](installation/register-device), and to
 [**FIBER Hardware Guides**](category/fiber-hardware-guides) for the display and 1-Wire sensors.
 
-These pages are the **build procedure** — how that image is put together, and how to bring up a
+These pages are the **build procedure**: how that image is put together, and how to bring up a
 **FIBER Lite** unit from a blank microSD card. Follow them for FIBER Lite, or when building a
 FIBER image from scratch.
 
@@ -47,7 +47,7 @@ Follow the pages below in order:
 
 1. [**Flash Raspberry Pi OS**](installation/flash)
 1. [**Update System**](installation/update-system)
-1. [**Configure Hardware**](installation/configure-hardware) - I2C bus + RTC
+1. [**Configure Hardware**](installation/configure-hardware): I2C bus + RTC
 1. [**Install ChirpStack**](installation/chirpstack)
 1. [**Install ChirpStack Concentratord**](installation/concentratord)
 1. [**Install ChirpStack MQTT Forwarder**](installation/mqtt-forwarder)
@@ -61,7 +61,7 @@ Follow the pages below in order:
 
 ## Data Flow
 
-ChirpStack, Node-RED, InfluxDB, and Grafana all run **on the device itself** — no separate
+ChirpStack, Node-RED, InfluxDB, and Grafana all run **on the device itself**, with no separate
 servers or cloud services required:
 
 <div style={{ width: '600px', margin: '0 auto' }}>

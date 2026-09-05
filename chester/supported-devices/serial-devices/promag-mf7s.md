@@ -58,7 +58,7 @@ app config save
 |-----------|-------|-------------|
 | `serial-mode` | `transparent` | Promag does not use Modbus |
 | `serial-baudrate` | `19200` | Fixed for MF7S |
-| `device-0` | `promag_mf7s` | Device type (no address — not Modbus) |
+| `device-0` | `promag_mf7s` | Device type (no address, not Modbus) |
 | `mode` | `lte` or `lrw` | Communication mode |
 | `interval-report` | `0` | Event-driven = immediate send on card detection |
 
@@ -73,7 +73,7 @@ When `interval-report > 0`, cards accumulate in the buffer (max 32) and are sent
 
 ---
 
-### Shell Commands — Driver
+### Shell Commands – Driver
 
 #### Read Reader Firmware Version
 
@@ -97,7 +97,7 @@ Performs the sequence: green LED on/off → red LED on/off → triple beep (high
 device promag_mf7s sampling [timeout_s]
 ```
 
-Enters interactive mode — displays card UIDs in the shell. Data is **not stored** in the buffer. The timeout (default 10 s) resets on each card presentation.
+Enters interactive mode. Displays card UIDs in the shell. Data is **not stored** in the buffer. The timeout (default 10 s) resets on each card presentation.
 
 Output:
 ```
@@ -118,7 +118,7 @@ app send               # Force immediate data send
 
 ---
 
-### Payload — LTE (CBOR)
+### Payload – LTE (CBOR)
 
 LTE mode sends a CBOR message (max 8 KB) with all collected cards. The buffer is cleared after a successful send.
 
@@ -203,7 +203,7 @@ LTE mode sends a CBOR message (max 8 KB) with all collected cards. The buffer is
 
 ---
 
-### Payload — LoRaWAN (Binary)
+### Payload – LoRaWAN (Binary)
 
 LoRaWAN sends a compact binary message (max 51 bytes). Each message contains **one device**.
 

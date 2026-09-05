@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 # Configure Hardware
 
 This section configures the I2C bus and real-time clock (RTC) on the device. **The RTC steps
-below differ between the two variants** — pick the tab that matches your device when you reach
+below differ between the two variants**, so pick the tab that matches your device when you reach
 them:
 
 :::info FIBER (CM4)
@@ -18,7 +18,7 @@ Adds an RTC overlay for the external **PCF85063A** real-time clock chip.
 
 :::info FIBER Lite (Pi 5)
 
-Skips the RTC overlay entirely — the Raspberry Pi 5 has a **built-in RTC**, so this step and its
+Skips the RTC overlay entirely, because the Raspberry Pi 5 has a **built-in RTC**, so this step and its
 verification look different.
 
 :::
@@ -76,7 +76,7 @@ verification look different.
    **Do not add an external RTC overlay.** FIBER (CM4) adds
    `dtoverlay=i2c-rtc,pcf85063a,i2c_csi_dsi` for an external PCF85063A real-time clock chip.
    **Do not add this on FIBER Lite.** The Raspberry Pi 5 has a **native built-in RTC** that
-   registers automatically as `rtc0` — the external overlay has no chip to talk to and only
+   registers automatically as `rtc0`. The external overlay has no chip to talk to and only
    produces a harmless-but-noisy `error -EREMOTEIO` in the kernel log (see **Troubleshooting**
    in the sidebar if you hit this).
 
@@ -109,7 +109,7 @@ verification look different.
    </TabItem>
    <TabItem value="fiber-lite" label="FIBER Lite (Pi 5)">
 
-   There's no external RTC to scan for — the Pi 5's built-in RTC needs no verification step here.
+   There's no external RTC to scan for. The Pi 5's built-in RTC needs no verification step here.
 
    </TabItem>
    </Tabs>

@@ -35,7 +35,7 @@ value can be selected and copied.
 
 ## Copy or share it
 
-The actions in the top bar produce the same block of text — the device name
+The actions in the top bar produce the same block of text: the device name
 followed by one `Label: value` line per field:
 
 - **Copy device info** puts it on the clipboard.
@@ -48,7 +48,7 @@ This is the quickest way to send a device's identity to support.
 ## Device controls
 
 The menu describes this screen as *serial, firmware, uptime and device
-controls* — the controls sit below the field list. **Save configuration** writes
+controls*. The controls sit below the field list. **Save configuration** writes
 whatever is currently set on the device into its memory, so the settings survive
 a reboot.
 
@@ -62,6 +62,6 @@ with a **Copy** button.
 :::info Save configuration vs. saving from the config screen
 **Save configuration** here commits whatever is currently set on the device. It
 is the same commit step that [**Configuration**](./configuration.md) performs for
-you after writing your edits — use it when you have changed settings from the
+you after writing your edits. Use it when you have changed settings from the
 [**Terminal**](./terminal.md) and want them to persist.
 :::

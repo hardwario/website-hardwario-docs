@@ -17,11 +17,11 @@ The device hosts a web based user interface used for its configuration. It can a
 
 ## Quick Links
 
-* [**Initial Configuration**](operation-instructions/initial-configuration.md) – Connect to and set up your GAUGER for the first time.
-* [**Hardware Description**](hardware-description.md) – Electrical, physical, and input specifications.
-* [**Detailed Description**](category/detailed-description) – Connectors, device states, DHCP behavior, HTTP API, Modbus registers, power supply.
-* [**Operation Instructions**](category/operation-instructions) – Configuration reset, device discovery, firmware management.
-* [**Changelog**](changelog) – Latest firmware and platform changes.
+* [**Initial Configuration**](operation-instructions/initial-configuration.md): Connect to and set up your GAUGER for the first time.
+* [**Hardware Description**](hardware-description.md): Electrical, physical, and input specifications.
+* [**Detailed Description**](category/detailed-description): Connectors, device states, DHCP behavior, HTTP API, Modbus registers, power supply.
+* [**Operation Instructions**](category/operation-instructions): Configuration reset, device discovery, firmware management.
+* [**Changelog**](changelog): Latest firmware and platform changes.
 
 ## Typical Use Cases
 

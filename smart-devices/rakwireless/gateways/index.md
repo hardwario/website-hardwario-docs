@@ -36,7 +36,7 @@ A cloud-based LoRaWAN Network Server suitable for both small and large deploymen
 4. After entering the Gateway EUI, fill in the following fields:
 - Gateway ID: ( Your chosen identifier for the device → example: **rak-0x**)
 - Gateway Name: (Your chosen name for the device → example **Rak 0x**)
-- Frequency Plan: **Europe 863-870 MHz (SF9 for RX2 - recommended)**
+- Frequency Plan: **Europe 863–870 MHz (SF9 for RX2, recommended)**
 - **(Optional)** Label
 
 Check the box **Require authenticated connection**.

@@ -153,7 +153,7 @@ Accessing the configuration requires a PIN code.
 This PIN can be changed later in the device settings. 
 :::
 
-#### Teltonika EYE App — Device Overview
+#### Teltonika EYE App – Device Overview
 
 <div class="container">
   <div class="row">
@@ -171,7 +171,7 @@ This PIN can be changed later in the device settings.
 The following configuration is recommended for optimal communication performance and power efficiency when using Teltonika EYE Sensors with the CHESTER BLE Tag Subsystem.
 This setup ensures stable data transmission, adequate advertising frequency for reliable sensor discovery, and balanced power consumption.
 
-#### Teltonika EYE App — Device Configuration
+#### Teltonika EYE App – Device Configuration
 
 <div class="container">
   <div class="row">
@@ -216,7 +216,7 @@ Check the **RSSI** value in the output:
 | Temperature             | Ambient temperature of the sensor’s environment.|
 | Humidity                | Relative humidity of the surrounding air. |
 | Movement / Accelerometer| Detects motion, changes in orientation (pitch/roll) of the device. |
-| Magnet Detection        | Detects magnetic field changes — e.g., door open/close via magnet. |
+| Magnet Detection        | Detects magnetic field changes, e.g., door open/close via magnet. |
 | Battery Voltage / Level | Monitors the internal battery’s voltage (to estimate remaining life).|
 
 

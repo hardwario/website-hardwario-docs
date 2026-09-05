@@ -12,11 +12,11 @@ import Image from '@theme/IdealImage';
 
 ## Quick Links
 
-* [**Getting Started Guide**](https://docs.hardwario.com/sticker/first-steps) – Step-by-step setup guide.
-* [**Buy STICKER Motion**](https://www.hardwario.store/p/sticker-motion) – Purchase on our store.
-* [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes) - List of components and part numbers.
-* [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description) - Technical details and hardware overview.
-* [**Official Product Page**](https://www.hardwario.com/products/sticker/) – Features and overview.
+* [**Getting Started Guide**](https://docs.hardwario.com/sticker/first-steps): Step-by-step setup guide.
+* [**Buy STICKER Motion**](https://www.hardwario.store/p/sticker-motion): Purchase on our store.
+* [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes): List of components and part numbers.
+* [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description): Technical details and hardware overview.
+* [**Official Product Page**](https://www.hardwario.com/products/sticker/): Features and overview.
 
 ## Typical use cases
 
@@ -24,7 +24,7 @@ import Image from '@theme/IdealImage';
 - Monitoring aisles in industrial spaces helps optimize logistics routes for material flow and finished products. It reduces downtime and minimizes safety risks caused by overcrowded paths and unpredictable movement.
 
 #### Smarter store layouts with motion data
-- In retail, knowing where customers move -and how often - transforms store layout planning and boosts sales. With STICKER Motion, you can track aisle traffic and identify high-traffic areas to optimize product placement and enhance the shopping experience.
+- In retail, knowing where customers move, and how often, transforms store layout planning and boosts sales. With STICKER Motion, you can track aisle traffic and identify high-traffic areas to optimize product placement and enhance the shopping experience.
 
 #### Smarter comfort in busy spaces
 - The average person emits about 100 W of heat per hour. In places with high foot traffic, like waiting rooms, monitoring motion, temperature, and humidity helps maintain comfort and efficiency. STICKER Motion captures all three for smarter climate control.
@@ -53,19 +53,19 @@ import Image from '@theme/IdealImage';
 
 ## Status LED
 
-STICKER Motion uses the standard status LED patterns described in [**LED Indication**](/sticker/hardware-description#led-indication) - the boot carousel, the status heartbeat every 3 seconds, and the NFC and alarm patterns are identical across all STICKER applications.
+STICKER Motion uses the standard status LED patterns described in [**LED Indication**](/sticker/hardware-description#led-indication). The boot carousel, the status heartbeat every 3 seconds, and the NFC and alarm patterns are identical across all STICKER applications.
 
 One detail is specific to this application: the PIR detector and the accelerometer are **momentary** sensors, so they only ever report an activation, never a return to idle. Each detected motion event therefore shows the **green-then-orange** activation sequence, and you will never see the orange-then-green release sequence on this unit.
 
 :::warning
-Motion event blinking is a commissioning aid and **stops one hour after power-up**. A device that no longer blinks on movement is still detecting and reporting it - power-cycle the unit if you need the visual confirmation back while testing.
+Motion event blinking is a commissioning aid and **stops one hour after power-up**. A device that no longer blinks on movement is still detecting and reporting it. Power-cycle the unit if you need the visual confirmation back while testing.
 :::
 
 ## Changelog
 
-### 2025-11-23 — v1.0.0
+### 2025-11-23 – v1.0.0
 
-- Initial release — PIR motion detection with accelerometer and orientation reporting via LoRaWAN
+- Initial release: PIR motion detection with accelerometer and orientation reporting via LoRaWAN
 
 :::info
 

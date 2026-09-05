@@ -4,11 +4,11 @@ title: Reading 1-Wire Sensors into Grafana
 
 # Reading 1-Wire Sensors into Grafana
 
-**FIBER only** — FIBER Lite has no 1-Wire hub (see [What's Different](/fiber/fiber-lite/introduction#whats-different)).
+**FIBER only**: FIBER Lite has no 1-Wire hub (see [What's Different](/fiber/fiber-lite/introduction#whats-different)).
 
 FIBER's eight isolated 1-Wire ports appear in Linux as eight independent bus masters, so a probe
 on port 3 is visible at a different path than one on port 5. Reading them needs no driver setup
-and no configuration — the kernel already exposes them.
+and no configuration, because the kernel already exposes them.
 
 ## How the eight ports are wired
 
@@ -26,12 +26,12 @@ w1_bus_master5  w1_bus_master6  w1_bus_master7  w1_bus_master8
 ```
 
 `w1_bus_masterN` corresponds to physical port *N*. The bridge and the `ds2482`, `wire` and
-`w1_therm` modules are part of the shipped image — there is nothing to install or enable.
+`w1_therm` modules are part of the shipped image, so there is nothing to install or enable.
 
 ## Finding which ports have probes
 
 Every detected sensor also appears as a symlink directly under `/sys/bus/w1/devices/`, named by
-its family code and unique ROM ID — `28-…` is the DS18B20 family:
+its family code and unique ROM ID (`28-…` is the DS18B20 family):
 
 ```sh
 ls -d /sys/bus/w1/devices/28-*
@@ -54,7 +54,7 @@ w1_bus_master4: 0 ->
 ```
 
 An empty port reports `0` and lists nothing. A port with a sensor that has gone missing keeps its
-last known ROM ID but stops updating — see [Troubleshooting](#troubleshooting) below.
+last known ROM ID but stops updating, see [Troubleshooting](#troubleshooting) below.
 
 ## Reading a temperature
 
@@ -89,14 +89,14 @@ garbage and must be discarded, not averaged in.
 
 Reading these files triggers a conversion on the bus, which takes up to ~750 ms per sensor. The
 FIBER application is already sampling the same probes every 2 seconds, so keep any polling of
-your own modest — a few seconds between reads is plenty, and it keeps the bus free for the
+your own modest. A few seconds between reads is plenty, and it keeps the bus free for the
 application that drives the alarms.
 
 :::
 
 ## Getting the readings into Node-RED
 
-A single `exec` node is enough — no contrib package, no extra dependency. Point it at a small
+A single `exec` node is enough, with no contrib package and no extra dependency. Point it at a small
 shell command and let Node-RED parse the output.
 
 Use an **inject** node on a repeating interval → an **exec** node running:
@@ -130,14 +130,14 @@ by ROM ID, ready to graph.
 :::tip
 
 Tag by **ROM ID**, not by port number. The ROM ID is burned into the probe, so a sensor keeps its
-identity in the database even if someone moves it to another port — which is exactly what you
+identity in the database even if someone moves it to another port, which is exactly what you
 want when comparing a week of history.
 
 :::
 
 ## Storing and visualizing the readings
 
-Node-RED, InfluxDB and Grafana are part of the same shared stack on both variants — see
+Node-RED, InfluxDB and Grafana are part of the same shared stack on both variants, see
 [Install Node-RED](/fiber/installation/node-red), [Install InfluxDB](/fiber/installation/influxdb)
 and [Install Grafana](/fiber/installation/grafana). The flow above therefore writes to InfluxDB on
 the same device, and Grafana reads it back locally.
@@ -154,7 +154,7 @@ command -v influxd grafana-server node-red
 ```
 
 If those come back empty, the unit is running an image built before they were included. Point the
-flow at another host that has them — FIBER runs **Mosquitto**, so publishing the readings to MQTT
+flow at another host that has them. FIBER runs **Mosquitto**, so publishing the readings to MQTT
 and subscribing from that machine is the path of least resistance.
 
 :::
@@ -162,7 +162,7 @@ and subscribing from that machine is the path of least resistance.
 ## Troubleshooting
 
 **A port shows `0` slaves.** Nothing is detected on that physical port. Check the probe's wiring
-first — 1-Wire needs data and ground, and a parasitic-power probe also needs a pull-up. The ports
+first. 1-Wire needs data and ground, and a parasitic-power probe also needs a pull-up. The ports
 are isolated from each other, so a fault on one does not disturb the others.
 
 **`crc=... NO`.** The sensor answered but the frame was corrupt. Usually cable length,

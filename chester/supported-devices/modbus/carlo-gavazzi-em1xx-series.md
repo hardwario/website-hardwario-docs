@@ -25,7 +25,7 @@ This energy meter **does not require** any **external sensor** for current measu
 
 #### Example of Installation: Carlo Gavazzi Energy Analyzer EM111
 
-| **Carlo Gavazzi Energy Analyzer - EM111** | |
+| **Carlo Gavazzi Energy Analyzer EM111** | |
 |----------------------------------------|-----------------------------------------------|
 | Pin 1                                 | **L (IN)**                                         |
 | Pin 2                                 | **L (OUT)**                                         |
@@ -42,7 +42,7 @@ This energy meter **does not require** any **external sensor** for current measu
 
 #### Example of Modbus Communication Installation: Carlo Gavazzi Energy Analyzer EM111
 
-| **Carlo Gavazzi Energy Analyzer – EM111** | **CHESTER Modbus** |
+| **Carlo Gavazzi Energy Analyzer EM111** | **CHESTER Modbus** |
 |---------------------------|--------------------|
 | Pin 8                     | Pin 6 (A−)      |
 | Pin 6                     | Pin 7 (B+)        |

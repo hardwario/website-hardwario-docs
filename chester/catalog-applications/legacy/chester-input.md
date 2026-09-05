@@ -33,10 +33,10 @@ The application **CHESTER Input** is used to measure and observe analog and digi
 
 | **Type** | **Channel** | **Terminal** | **Input type**    | **Input range** | **Typical use-case**                  |
 | :------- | :---------- | :----------- | :---------------- | :-------------- | :------------------------------------ |
-| Trigger  | CH1         | A2           | Digital - NPN/PNP | 0 to 28 V       | Switch, button, relay, PLC sensor     |
-| Counter  | CH2         | A4           | Digital - NPN/PNP | 0 to 28 V       | Energy meter pulse outputs (e.g., S0) |
-| Voltage  | CH3         | A5           | Analog - voltage  | 0 to 28 V       | Various voltage transmitters          |
-| Current  | CH4         | A7           | Analog - current  | 0 to 24 mA      | Various current transmitters          |
+| Trigger  | CH1         | A2           | Digital (NPN/PNP) | 0 to 28 V       | Switch, button, relay, PLC sensor     |
+| Counter  | CH2         | A4           | Digital (NPN/PNP) | 0 to 28 V       | Energy meter pulse outputs (e.g., S0) |
+| Voltage  | CH3         | A5           | Analog (voltage)  | 0 to 28 V       | Various voltage transmitters          |
+| Current  | CH4         | A7           | Analog (current)  | 0 to 24 mA      | Various current transmitters          |
 
 All these inputs and their options are explained in more detail in the article [**Input Parameters and Behavior**](#input-parameters-and-behavior).
 
@@ -48,9 +48,9 @@ All these inputs and their options are explained in more detail in the article [
 
 The catalog **CHESTER Input** hardware consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
+* `CHESTER-M-BCGLS`: Standard mainboard
 
-* `CHESTER-X0B:A` - Input module (4 channels)
+* `CHESTER-X0B:A`: Input module (4 channels)
 
 See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
 
@@ -60,11 +60,11 @@ Firmware build shield options: `ctr_ds18b20 ctr_lte ctr_x0_a`
 
 The catalog **CHESTER Input Z** hardware consists of the following ordering codes:
 
-* `CHESTER-M-CGLS` - Standard mainboard
+* `CHESTER-M-CGLS`: Standard mainboard
 
-* `CHESTER-X0B:A` - Input module (4 channels)
+* `CHESTER-X0B:A`: Input module (4 channels)
 
-* `CHESTER-Z1` - Backup module
+* `CHESTER-Z1`: Backup module
 
 See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
 
@@ -74,13 +74,13 @@ Firmware build shield options: `ctr_ds18b20 ctr_lte ctr_x0_a ctr_z`
 
 **CHESTER Input ZH** with external temperature and hygrometer.
 
-* `CHESTER-M-CGLS` - Standard mainboard
+* `CHESTER-M-CGLS`: Standard mainboard
 
-* `CHESTER-X0B:A` - Input module (4 channels)
+* `CHESTER-X0B:A`: Input module (4 channels)
 
-* `CHESTER-Z1` - Backup module
+* `CHESTER-Z1`: Backup module
 
-* `CHESTER-S2` - External hygrometer
+* `CHESTER-S2`: External hygrometer
 
 See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
 
@@ -188,7 +188,7 @@ app config hygro-interval-aggreg 300
 
 :::info
 
-You can easily explore the whole command tree structure - start with the `help` command.
+You can easily explore the whole command tree structure. Start with the `help` command.
 
 :::
 

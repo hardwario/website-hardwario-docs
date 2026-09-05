@@ -9,8 +9,8 @@ import Image from '@theme/IdealImage';
 
 ## Legenda DIP přepínačů {#dip-switch-legend}
 
-- |🟥←| **ON** — DIP přepínač v poloze ON (červeně)
-- |→⬛| **OFF** — DIP přepínač v poloze OFF (černě)
+- |🟥←| **ON**: DIP přepínač v poloze ON (červeně)
+- |→⬛| **OFF**: DIP přepínač v poloze OFF (černě)
 
 ## Vstup 1-Wire {#1-wire-input}
 Zapojení pro 1-WIRE (Dallas, ...):

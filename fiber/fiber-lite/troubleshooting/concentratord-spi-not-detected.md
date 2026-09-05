@@ -5,7 +5,7 @@ title: FIBER Lite Concentrator Never Shows a Gateway ID
 
 **Symptom:** on FIBER Lite (SPI/RAK2287), the concentrator's own service logs never print a
 Gateway ID, the ChirpStack gateway page never shows a "Last seen at" timestamp, and no
-join-request ever reaches ChirpStack — even though the LoRaWAN end-device is powered on and in
+join-request ever reaches ChirpStack, even though the LoRaWAN end-device is powered on and in
 range.
 
 Work through these in order. The first two are by far the most common, and both look like broken
@@ -19,8 +19,8 @@ Check where the service actually stops:
 sudo journalctl -u chirpstack-concentratord -n 30 --no-pager
 ```
 
-If the last line is `Opening SPI communication interface` and nothing follows — no error, no
-timeout, just silence — the concentrator is **not** faulty. The vendor profile (`model=`) supplies
+If the last line is `Opening SPI communication interface` and nothing follows (no error, no
+timeout, just silence), the concentrator is **not** faulty. The vendor profile (`model=`) supplies
 only the pin mapping, RSSI offsets and gain table; it does **not** supply a channel plan. With the
 `[gateway.concentrator]` section missing from the configuration, every radio is configured as
 `enabled: false` at frequency 0 and the underlying HAL blocks indefinitely.
@@ -33,8 +33,8 @@ sudo journalctl -u chirpstack-concentratord | grep 'Configuring radio'
 
 Radios reported as `enabled: false, center_freq: 0` mean the channel plan is missing. Add the
 `[gateway.concentrator]` block from
-[Install ChirpStack Concentratord](/fiber/installation/concentratord) and restart the service —
-the radios must come up `enabled: true` with real frequencies.
+[Install ChirpStack Concentratord](/fiber/installation/concentratord) and restart the service.
+The radios must come up `enabled: true` with real frequencies.
 
 ## 2. Concentratord runs, but nothing reaches MQTT
 
@@ -55,7 +55,7 @@ srwxrwx--- 1 root chirpstack 0 /tmp/concentratord_command
 srwxrwx--- 1 root chirpstack 0 /tmp/concentratord_event
 ```
 
-If they are `root:root` mode `srwxr-xr-x`, the forwarder cannot connect — connecting to a unix
+If they are `root:root` mode `srwxr-xr-x`, the forwarder cannot connect, because connecting to a unix
 socket requires **write** permission. Add `Group=chirpstack` and `UMask=0007` to the
 `[Service]` section of `/etc/systemd/system/chirpstack-concentratord.service`, then:
 
@@ -76,7 +76,7 @@ ls /dev/spidev*                       # expect: /dev/spidev0.0 and /dev/spidev0.
 
 `dtparam=spi=on` ships commented out in Raspberry Pi OS. If it is commented, uncomment it and
 reboot. If `/dev/spidev*` is still missing afterwards, the RAK2287 HAT is not making contact with
-the Pi 5's GPIO header — reseat it and check for bent pins.
+the Pi 5's GPIO header. Reseat it and check for bent pins.
 
 ## 4. Proving the concentrator chip itself responds
 

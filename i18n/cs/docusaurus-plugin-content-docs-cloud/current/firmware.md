@@ -6,13 +6,13 @@ description: "Firmware zařízení CHESTER můžete aktualizovat na dálku z clo
 
 # Aktualizace firmwaru {#firmware-updates}
 
-Firmware zařízení CHESTER můžete aktualizovat na dálku z cloudu — vzduchem, bez
+Firmware zařízení CHESTER můžete aktualizovat na dálku z cloudu, vzduchem, bez
 fyzického přístupu k zařízení. Těmto aktualizacím se také říká **FOTA** (Firmware
 Over-The-Air).
 
 ## 1. Získejte identifikátor firmwaru {#1-get-the-firmware-identifier}
 
-Většina aktualizací využívá **hotový katalogový firmware** — nemusíte nic
+Většina aktualizací využívá **hotový katalogový firmware**, takže nemusíte nic
 sestavovat sami. Otevřete tabulku
 [**Catalog Applications → Application Firmware**](/chester/catalog-applications/catalog-applications#application-firmware)
 zařízení CHESTER, najděte svou aplikaci a variantu a zkopírujte její **Identifier** (hodnota jako
@@ -20,7 +20,7 @@ zařízení CHESTER, najděte svou aplikaci a variantu a zkopírujte její **Ide
 
 :::info Sestavte si vlastní firmware
 Pomocí HARDWARIO CLI si můžete sestavit a nahrát **vlastní** firmware a jeho
-identifikátor použít stejným způsobem — viz
+identifikátor použít stejným způsobem, viz
 [**Build and Deploy**](/chester/firmware-sdk/build-and-deploy) v dokumentaci zařízení CHESTER.
 :::
 

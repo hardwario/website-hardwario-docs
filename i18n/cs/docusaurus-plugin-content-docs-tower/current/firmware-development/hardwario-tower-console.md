@@ -42,11 +42,11 @@ Pokud otevřete konzoli HARDWARIO TOWER, najdete na pravé straně několik tla�
 </div>
 
 
-- **Clear console** – vymaže všechny přijaté logovací zprávy.
-- **Connect/Disconnect console** – připojí konzoli k zařízení vybranému ve spodním panelu. Pokud je konzole již připojená, odpojí ji. Toto tlačítko nemusíte používat, pokud používáte příkazy rozšíření [**Build + Flash (Console)**](./hardwario-extension-tutorial.md#build--flash-console) nebo [**Attach console**](./hardwario-extension-tutorial.md#attach-console).
-- **Restart device** – tento příkaz restartuje připojené zařízení a spustí program na zařízení od začátku.
-- **Scroll to bottom** – ve výchozím nastavení konzole automaticky roluje spolu se zprávami. Pokud odrolujete, abyste si prohlédli nějakou zprávu, automatické rolování se vypne. Pro jeho opětovné spuštění stačí kliknout na toto tlačítko.
-- **Save Log** – uloží zobrazený log.
-- **Allow Input** – umožní odesílat vstup do zařízení. [**Použitelné pro AT příkazy**](../radio-communication/lora-at-commands.md).
-- **Maximize window** – zvětší konzoli. Jde o standardní tlačítko Visual Studio Code dostupné na většině panelů.
-- **Close panel** – zavře celý panel, nejen konzoli HARDWARIO TOWER.
+- **Clear console**: vymaže všechny přijaté logovací zprávy.
+- **Connect/Disconnect console**: připojí konzoli k zařízení vybranému ve spodním panelu. Pokud je konzole již připojená, odpojí ji. Toto tlačítko nemusíte používat, pokud používáte příkazy rozšíření [**Build + Flash (Console)**](./hardwario-extension-tutorial.md#build--flash-console) nebo [**Attach console**](./hardwario-extension-tutorial.md#attach-console).
+- **Restart device**: tento příkaz restartuje připojené zařízení a spustí program na zařízení od začátku.
+- **Scroll to bottom**: ve výchozím nastavení konzole automaticky roluje spolu se zprávami. Pokud odrolujete, abyste si prohlédli nějakou zprávu, automatické rolování se vypne. Pro jeho opětovné spuštění stačí kliknout na toto tlačítko.
+- **Save Log**: uloží zobrazený log.
+- **Allow Input**: umožní odesílat vstup do zařízení. [**Použitelné pro AT příkazy**](../radio-communication/lora-at-commands.md).
+- **Maximize window**: zvětší konzoli. Jde o standardní tlačítko Visual Studio Code dostupné na většině panelů.
+- **Close panel**: zavře celý panel, nejen konzoli HARDWARIO TOWER.

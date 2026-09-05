@@ -65,37 +65,37 @@ import Image from '@theme/IdealImage';
 
 Callbacky jsou zprávy, které cloud automaticky přeposílá na definovaný **URL** endpoint. Callbacky se vždy zadávají pro danou **skupinu** pomocí ikony **Edit**. Při nastavování callbacku se vyplňují následující pole:
 
-* `Name` - Vámi zvolený název callbacku; doporučujeme uvést název integrované aplikace, např. **[Ubidots](https://ubidots.com)**
+* `Name`: Vámi zvolený název callbacku; doporučujeme uvést název integrované aplikace, např. **[Ubidots](https://ubidots.com)**
 
-* `Enabled` - Callback lze zapnout/vypnout. Funkční je ve stavu Enabled - Yes
+* `Enabled`: Callback lze zapnout/vypnout. Funkční je, když je Enabled nastaveno na Yes
 
-* `Note` - Prostor pro vaši interní poznámku
+* `Note`: Prostor pro vaši interní poznámku
 
-* `Method` - Výběr z následujících HTTP možností:
+* `Method`: Výběr z následujících HTTP možností:
 
-  * `POST` - Nese parametry požadavku v těle zprávy
+  * `POST`: Nese parametry požadavku v těle zprávy
 
-  * `GET` - Nese parametry požadavku připojené v URL řetězci
+  * `GET`: Nese parametry požadavku připojené v URL řetězci
 
-  * `PUT` - Vytvoří nový zdroj nebo nahradí reprezentaci cílového zdroje požadovaným payloadem
+  * `PUT`: Vytvoří nový zdroj nebo nahradí reprezentaci cílového zdroje požadovaným payloadem
 
-  * `PATCH` - Aktualizuje hodnoty vlastností zdroje
+  * `PATCH`: Aktualizuje hodnoty vlastností zdroje
 
-* `URL Address` - URL endpointu, na který budou zprávy odesílány. Důrazně doporučujeme použít protokol HTTPS (technologie TLS).
+* `URL Address`: URL endpointu, na který budou zprávy odesílány. Důrazně doporučujeme použít protokol HTTPS (technologie TLS).
 
-* `Query Parameters` - Volitelné rozšíření URL
+* `Query Parameters`: Volitelné rozšíření URL
 
-* `Name` - Název zadaného parametru
+* `Name`: Název zadaného parametru
 
-* `Value` - Hodnota parametru
+* `Value`: Hodnota parametru
 
-* `HTTP Headers` - Doplňkový kontext HTTP požadavku
+* `HTTP Headers`: Doplňkový kontext HTTP požadavku
 
-* `Name` - Název zadané hlavičky (např. `Authentication`)
+* `Name`: Název zadané hlavičky (např. `Authentication`)
 
-* `Value` - Hodnota, např. autentizační token
+* `Value`: Hodnota, např. autentizační token
 
-* `Content Type` - Výběr z následujících možností:
+* `Content Type`: Výběr z následujících možností:
 
   * `application/json`
 
@@ -103,7 +103,7 @@ Callbacky jsou zprávy, které cloud automaticky přeposílá na definovaný **U
 
   * `application/octet-stream`
 
-* `Payload` - Toto pole umožňuje uživateli transformovat obsah zprávy pomocí funkcionálního jazyka **JSONata**. Pokud další transformace pomocí **JSONata** není potřeba, nechte pole prázdné (payload bude předán tak, jak je). Popis jazyka **JSONata** najdete zde; níže je příklad výběru a transformace části obsahu zprávy:
+* `Payload`: Toto pole umožňuje uživateli transformovat obsah zprávy pomocí funkcionálního jazyka **JSONata**. Pokud další transformace pomocí **JSONata** není potřeba, nechte pole prázdné (payload bude předán tak, jak je). Popis jazyka **JSONata** najdete zde; níže je příklad výběru a transformace části obsahu zprávy:
 
   ```json
   {
@@ -113,9 +113,9 @@ Callbacky jsou zprávy, které cloud automaticky přeposílá na definovaný **U
   }
   ```
 
-* `Original message` - Obsah zprávy před transformací **JSONata**
+* `Original message`: Obsah zprávy před transformací **JSONata**
 
-* `Transformed payload` - Obsah zprávy po transformaci **JSONata**
+* `Transformed payload`: Obsah zprávy po transformaci **JSONata**
 
 Callback uložte tlačítkem **SAVE CALLBACK**.
 

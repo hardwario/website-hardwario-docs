@@ -29,13 +29,13 @@ Choose how the app looks:
 | **English** | Always English. |
 | **Čeština** | Always Czech. |
 
-The change applies immediately — you do not need to restart the app.
+The change applies immediately. You do not need to restart the app.
 
 ---
 
 ## Security
 
-**Lock app with Face ID / passcode** — *Require authentication on launch and when
+**Lock app with Face ID / passcode**: *Require authentication on launch and when
 returning to the app.* Off by default.
 
 When it is on, the app asks for your biometrics or device passcode each time you
@@ -74,8 +74,8 @@ Tapping the HARDWARIO logo at the bottom of the Settings screen **five times**
 turns **Debug mode** on or off. A counter appears after the first tap to show
 how many taps are left.
 
-Debug mode adds the **NFC Console** to the STICKER Tools menu — a low-level
-console for raw NFC commands — and shows a thin `debug mode` strip under the
+Debug mode adds the **NFC Console** to the STICKER Tools menu (a low-level
+console for raw NFC commands) and shows a thin `debug mode` strip under the
 header so you always know it is on. It is a diagnostic aid; leave it off for
 normal use.
 

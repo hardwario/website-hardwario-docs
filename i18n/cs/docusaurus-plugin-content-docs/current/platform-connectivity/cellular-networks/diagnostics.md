@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 Pokud se zařízení nedostane do registrovaného stavu, postupujte v tomto pořadí:
 
-1. Zkontrolujte, že je režim rádia nastaven na `lte` — viz [**Nastavení SIM karty**](sim-card-setup.md).
+1. Zkontrolujte, že je režim rádia nastaven na `lte`, viz [**Nastavení SIM karty**](sim-card-setup.md).
 2. Ověřte aktuální nastavení a stav registrace pomocí `lte config show` a `lte state`.
 3. Proskenujte sítě, které jsou na daném místě skutečně viditelné, jak je popsáno níže.
 4. Porovnejte výsledek s kontrolním seznamem [**Požadavky na síť**](network-requirements.md) a u SIM karet Vodafone s tabulkou [**Vodafone SIM EU28+2**](vodafone-coverage.md).
@@ -61,14 +61,14 @@ Odpověď se objeví v logu aplikace během několika minut (např. ~3 minuty p�
 `%COPS: [(<stat>,long alphanumeric <oper>,short alphanumeric <oper>,numeric <oper>[,<AcT>])]`
 
 `<stat>`
-- 0 – Neznámý
-- 1 – Dostupný
-- 2 – Aktuální
-- 3 – Zakázaný
+- 0: Neznámý
+- 1: Dostupný
+- 2: Aktuální
+- 3: Zakázaný
 
 `<oper>`
 - PLMNID operátora
 
 `<AcT>`
-- 7 – LTE-M
-- 9 – NB-IoT
+- 7: LTE-M
+- 9: NB-IoT

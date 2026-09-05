@@ -23,11 +23,11 @@ HARDWARIO command line tool allows you to:
 
 **HARDWARIO CLI** is a **Python 3** tool. Please install Python by following the steps below based on your operating system.
 
-- **Ubuntu** - Python 3 should already be installed on your OS.
+- **Ubuntu**: Python 3 should already be installed on your OS.
 
-- **macOS** - Follow the [Install Packages](firmware-sdk/../../firmware-sdk/installation-on-macos.md#install-package-manager) chapter to install Homebrew. Then run `brew install python3`.
+- **macOS**: Follow the [Install Packages](firmware-sdk/../../firmware-sdk/installation-on-macos.md#install-package-manager) chapter to install Homebrew. Then run `brew install python3`.
 
-- **Windows** - Follow the [Install Python](firmware-sdk/../../firmware-sdk/installation-on-windows.md#install-python) chapter.
+- **Windows**: Follow the [Install Python](firmware-sdk/../../firmware-sdk/installation-on-windows.md#install-python) chapter.
 
 ## Install HARDWARIO CLI
 

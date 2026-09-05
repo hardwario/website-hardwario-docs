@@ -16,8 +16,8 @@ Go to **STICKER → Configuration**.
 | Entry action | What it does |
 |---|---|
 | **Read configuration from the device** | Read what is on a device, then edit and write it back. The usual path. |
-| **Scan multiple (batch export)** | Capture many devices' configurations in one session — see [**Scan multiple devices**](./batch-export.md) |
-| **Configure without reading** | Build a configuration and write it to a device, including a powered-off one — see [**Configure a powered-off device**](./offline-configuration.md) |
+| **Scan multiple (batch export)** | Capture many devices' configurations in one session, see [**Scan multiple devices**](./batch-export.md) |
+| **Configure without reading** | Build a configuration and write it to a device, including a powered-off one, see [**Configure a powered-off device**](./offline-configuration.md) |
 | **Configure from file** | Load a configuration you saved earlier (see below) |
 
 ---
@@ -32,11 +32,11 @@ change.
 
 | Section | Covers |
 |---|---|
-| **LoRaWAN** | Region, activation mode, EUIs, and — in a **Keys** sub-group — the key material for the selected mode |
+| **LoRaWAN** | Region, activation mode, EUIs, and the key material for the selected mode in a **Keys** sub-group |
 | **Measurement & reporting** | Sample and report intervals |
 | **Sensors** | Which sensors are enabled |
-| **History** | Whether measurements are stored, and which channels — see [**Sensor history**](./sensor-history.md) |
-| **Alarms** | Alarm rule slots — see [**Alarm rules**](./alarms.md) |
+| **History** | Whether measurements are stored, and which channels, see [**Sensor history**](./sensor-history.md) |
+| **Alarms** | Alarm rule slots, see [**Alarm rules**](./alarms.md) |
 
 :::info Keys follow the activation mode
 **Keys** sits inside the LoRaWAN section and is collapsed by default. It shows
@@ -60,7 +60,7 @@ The other actions on the screen:
 
 | Action | Effect |
 |---|---|
-| **Apply template** | Fill the form from a saved template before writing — see [**Templates**](./templates.md) |
+| **Apply template** | Fill the form from a saved template before writing, see [**Templates**](./templates.md) |
 | **Revert changes** | Discard your edits |
 | **Revert to read values** | Put a single field back to what the device reported |
 | **Save as template** | Turn the current settings into a reusable template |
@@ -94,7 +94,7 @@ and in your [**Saved STICKERs**](./saved-stickers.md) list.
 ## Reuse a configuration across devices
 
 To set up many devices the same way, save a **template** and apply it to each
-device — over NFC, or offline to powered-off devices. See
+device, over NFC or offline to powered-off devices. See
 [**Templates**](./templates.md).
 
 :::danger Factory and vendor resets

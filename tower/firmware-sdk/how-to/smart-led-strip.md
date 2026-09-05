@@ -30,9 +30,9 @@ The `_led_strip_buffer ` is mandatory for the LED strip to work. It is basically
 
 To set the color of the pixel(LED on the strip) you will have to provide some information. This is done with the `twr_led_strip_set_pixel_rgbw(twr_led_strip_t *self, int position, uint8_t r, uint8_t g, uint8_t b, uint8_t w)`. The arguments of the function are:
 
-- `*self` - an instance of the LED strip, most likely `&led_strip`
-- `position` - pixel (LED) on the strip that should be set (**starts from 0, not 1**)
-- `r, g, b, w` - representation of **how strongly every color should shine**, values must be between 0 (minimum) and 255 (maximum)
+- `*self`: an instance of the LED strip, most likely `&led_strip`
+- `position`: pixel (LED) on the strip that should be set (**starts from 0, not 1**)
+- `r, g, b, w`: representation of **how strongly every color should shine**, values must be between 0 (minimum) and 255 (maximum)
 
 For the changes to take effect, you have to call `twr_led_strip_write(&led_strip);`. If you don't do that, nothing will happen on the strip.
 

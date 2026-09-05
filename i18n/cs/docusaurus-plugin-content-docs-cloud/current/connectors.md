@@ -37,8 +37,8 @@ flowchart LR
    | Pole | Popis |
    |---|---|
    | **Name** | Identifikátor tohoto konektoru |
-   | **Direction** | `up` — konektor reaguje na uplink zprávy (zařízení → Cloud) |
-   | **Type** | `webhook` — doručí zprávu jako HTTP požadavek |
+   | **Direction** | `up`. Konektor reaguje na uplink zprávy (zařízení → Cloud) |
+   | **Type** | `webhook`. Doručí zprávu jako HTTP požadavek |
    | **Triggers** | Které typy zpráv jej spouští (viz [Spouštěče](#triggers)) |
    | **Tags** | Které tagy zařízení tento konektor odposlouchává |
 
@@ -48,7 +48,7 @@ flowchart LR
 
    </div>
 
-3. Klikněte na **CREATE**. Konektor se otevře na své detailní stránce, kde můžete zkontrolovat jeho nastavení a heatmapu aktivity — a kliknutím na **EDIT** přidat [transformační funkci](#the-transformation-function).
+3. Klikněte na **CREATE**. Konektor se otevře na své detailní stránce, kde můžete zkontrolovat jeho nastavení a heatmapu aktivity, a kliknutím na **EDIT** přidat [transformační funkci](#the-transformation-function).
 
    <div className="screenshot-narrow">
 
@@ -62,7 +62,7 @@ Vyberte, které typy zpráv konektor spouští:
 
 | Spouštěč | Popis |
 |---|---|
-| `data` | Periodický uplink s hodnotami ze senzorů — nejčastější |
+| `data` | Periodický uplink s hodnotami ze senzorů. Nejčastější |
 | `session` | Zpráva po startu s informacemi o firmwaru a síti |
 | `config` | Potvrzení změny konfigurace |
 | `stats` | Interní statistiky Cloudu |
@@ -72,7 +72,7 @@ Vyberte, které typy zpráv konektor spouští:
 
 Každý konektor spouští JavaScriptovou funkci, která přijímá objekt `job` a vrací HTTP požadavek, jenž se má provést. Umožňuje přeskládat payload, přidat autentizační hlavičky nebo filtrovat zprávy.
 
-Na detailní stránce konektoru klikněte na **EDIT**. Editor má tři karty — **DETAILS** (název, směr, typ, spouštěče, tagy), **PLAYGROUND** (funkce a její živý náhled) a **ADVANCED** (nastavení opakování).
+Na detailní stránce konektoru klikněte na **EDIT**. Editor má tři karty: **DETAILS** (název, směr, typ, spouštěče, tagy), **PLAYGROUND** (funkce a její živý náhled) a **ADVANCED** (nastavení opakování).
 
 <div className="screenshot-narrow">
 
@@ -80,7 +80,7 @@ Na detailní stránce konektoru klikněte na **EDIT**. Editor má tři karty —
 
 </div>
 
-Otevřete kartu **PLAYGROUND**. Funkci napište v prostředním panelu; levý panel zobrazuje skutečnou **zprávu ze zařízení (Input)** a pravý panel **požadavek, který by se odeslal (Output)**, průběžně aktualizovaný během psaní. Pomocí **Select device** a **Select message type** si zobrazíte náhled nad skutečnými daty — během editace se žádný HTTP požadavek neodesílá.
+Otevřete kartu **PLAYGROUND**. Funkci napište v prostředním panelu; levý panel zobrazuje skutečnou **zprávu ze zařízení (Input)** a pravý panel **požadavek, který by se odeslal (Output)**, průběžně aktualizovaný během psaní. Pomocí **Select device** a **Select message type** si zobrazíte náhled nad skutečnými daty. Během editace se žádný HTTP požadavek neodesílá.
 
 ![Karta PLAYGROUND: vstupní zpráva vlevo, transformační funkce v prostředku a výsledný výstupní požadavek vpravo](../../../../cloud/images/connector-test-playground.png)
 
@@ -99,7 +99,7 @@ function main(job) {
 }
 ```
 
-Vrácení `null` zruší zpětné volání — což je užitečné pro podmíněné přeposílání:
+Vrácení `null` zruší zpětné volání, což je užitečné pro podmíněné přeposílání:
 
 ```js
 function main(job) {
@@ -157,7 +157,7 @@ Transformační funkce přijímá objekt `job` s následující strukturou:
 
 ## Testování konektoru {#testing-your-connector}
 
-Nejrychlejší způsob, jak potvrdit, že se konektor skutečně spouští — a přesně vidět, co odesílá — je nasměrovat jej na bezplatný, dočasný příjemce, například [**webhook.site**](https://webhook.site). Vlastní backend není potřeba. (PLAYGROUND výše testuje *výstup* vaší funkce; tohle testuje skutečné HTTP *doručení*.)
+Nejrychlejší způsob, jak potvrdit, že se konektor skutečně spouští, a přesně vidět, co odesílá, je nasměrovat jej na bezplatný, dočasný příjemce, například [**webhook.site**](https://webhook.site). Vlastní backend není potřeba. (PLAYGROUND výše testuje *výstup* vaší funkce; tohle testuje skutečné HTTP *doručení*.)
 
 1. **Získejte URL příjemce.** Otevřete [webhook.site](https://webhook.site) a zkopírujte **„Your unique URL“** zobrazenou nahoře (vypadá jako `https://webhook.site/<id>`).
 
@@ -181,7 +181,7 @@ Nejrychlejší způsob, jak potvrdit, že se konektor skutečně spouští — a
 
    Ujistěte se, že **Tags** a **Triggers** konektoru odpovídají vašemu zařízení (např. spouštěč `data`).
 
-3. **Vyvolejte uplink.** Vyčkejte na zprávu ze zařízení v prostoru — nebo ji vynuťte. Konektor se spouští na skutečných uplincích ze zařízení.
+3. **Vyvolejte uplink.** Vyčkejte na zprávu ze zařízení v prostoru, nebo ji vynuťte. Konektor se spouští na skutečných uplincích ze zařízení.
 
 4. **Zkontrolujte výsledek.** Vraťte se na webhook.site: požadavek se objeví ve schránce vlevo. Kliknutím na něj prohlédnete **metodu**, **hlavičky** a **JSON tělo**, které Cloud odeslal. Jeho doručení potvrzuje, že váš konektor funguje od začátku do konce.
 
@@ -192,7 +192,7 @@ Upravte transformační funkci a znovu vyvolejte zprávu, abyste v reálném ča
 :::
 
 :::caution
-URL na webhook.site jsou **veřejné** — během testování používejte pouze testovací data a pro provozní přenosy přepněte na vlastní endpoint.
+URL na webhook.site jsou **veřejné**, proto během testování používejte pouze testovací data a pro provozní přenosy přepněte na vlastní endpoint.
 :::
 
 **Další příjemci**, které lze použít stejným způsobem: [requestinspector.com](https://requestinspector.com/) (okamžitý veřejný endpoint), [ngrok.com](https://ngrok.com/) (tunel na server na vašem počítači), [tailscale.com](https://tailscale.com/) (privátní síť s veřejným funnelem).

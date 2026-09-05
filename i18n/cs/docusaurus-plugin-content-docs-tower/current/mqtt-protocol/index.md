@@ -5,9 +5,9 @@ description: "Zástupný znak # lze použít pouze na konci názvu topicu"
 import Image from '@theme/IdealImage';
 
 - MQTT je otevřený, jednoduchý a nenáročný komunikační protokol pro posílání zpráv mezi mnoha klienty, kteří jsou připojeni k centrálnímu MQTT brokeru.
-- Každá **zpráva** se skládá ze dvou částí – **topicu** a **payloadu**
+- Každá **zpráva** se skládá ze dvou částí: **topicu** a **payloadu**
 - **Topic** popisuje obsah zprávy a identifikuje ji
-- Název **topicu** má **adresářovou strukturu** – jednotlivé úrovně jsou oddělené symbolem `/`
+- Název **topicu** má **adresářovou strukturu**: jednotlivé úrovně jsou oddělené symbolem `/`
   - Topic může být `bedroom/temperature`, `kitchen/light/set` atd.
 - MQTT server se nazývá **broker** a klienti mohou **publikovat zprávy** a **odebírat topicy**
 - Úkolem MQTT brokeru je **doručovat zprávy** od **publisherů** k **odběratelům**

@@ -4,13 +4,13 @@ title: Using the Display
 
 # Using the Display
 
-**FIBER only** — FIBER Lite has no display (see [What's Different](/fiber/fiber-lite/introduction#whats-different)).
+**FIBER only**: FIBER Lite has no display (see [What's Different](/fiber/fiber-lite/introduction#whats-different)).
 
 This guide covers putting your own content on FIBER's backlit LCD.
 
 :::danger
 
-**Content pending.** The display is **not** a Linux framebuffer — there is no `/dev/fb*` device
+**Content pending.** The display is **not** a Linux framebuffer, so there is no `/dev/fb*` device
 and no DRM panel for it. It is wired to **SPI6** (`/dev/spidev6.0`, chip select on GPIO18) and
 driven from user space by the FIBER application (`fiber_app`, started by `fiber.service`), which
 holds that device open for as long as it runs.

@@ -5,7 +5,7 @@ title: Getting Started
 
 # HARDWARIO Cloud Quick Start Guide
 
-Welcome to the **HARDWARIO Cloud** — the platform where your devices are managed and where your live
+Welcome to the **HARDWARIO Cloud**, the platform where your devices are managed and where your live
 data lands. Follow these steps to create an account, register your first device, and start working
 with its messages.
 
@@ -16,7 +16,7 @@ with its messages.
 3. Create an account using a **Google** or **Microsoft** account, or an **email and password** (verify your email).
 4. Once verified, **log in**.
 
-![HARDWARIO Cloud "Create account" screen — email and password fields with Google and Microsoft sign-up options](images/create-account.png)
+![HARDWARIO Cloud "Create account" screen with email and password fields and Google and Microsoft sign-up options](images/create-account.png)
 
 :::info
 For improved security, we recommend authenticating via **Google** or **Microsoft**.
@@ -30,7 +30,7 @@ For improved security, we recommend authenticating via **Google** or **Microsoft
 
 2. Name your space (for example: `my-home`, `office-sensors`, `warehouse`). Follow the [**Naming Conventions**](/cloud/#naming-conventions).
 
-   ![The "Create new space" dialog — enter a name and click CREATE](images/create-space.png)
+   ![The "Create new space" dialog: enter a name and click CREATE](images/create-space.png)
 
 3. This is where your devices will live. See [**Spaces**](/cloud/spaces) for details.
 
@@ -41,11 +41,11 @@ For improved security, we recommend authenticating via **Google** or **Microsoft
 
    ![DEVICES page with the "+ NEW DEVICE" button highlighted in the top-right corner](images/devices-new-device.png)
 
-3. Provide the device information — either **scan the QR code** (`⛶ SCAN DEVICE`) to fill everything in automatically, or enter the **Name**, **HARDWARIO Serial Number (HSN)**, and **Claim Token** manually.
+3. Provide the device information: either **scan the QR code** (`⛶ SCAN DEVICE`) to fill everything in automatically, or enter the **Name**, **HARDWARIO Serial Number (HSN)**, and **Claim Token** manually.
 
-   ![The "Create new device" dialog — scan the QR code, or fill in Name, Serial Number, and Claim Token](images/create-new-device.png)
+   ![The "Create new device" dialog: scan the QR code, or fill in Name, Serial Number, and Claim Token](images/create-new-device.png)
 
-4. Save it — your device is now **registered in the Cloud**. See [**Devices**](/cloud/devices) for everything you can do next.
+4. Save it: your device is now **registered in the Cloud**. See [**Devices**](/cloud/devices) for everything you can do next.
 
 ## Step 4: See Your Data
 
@@ -59,7 +59,7 @@ Once the device is powered up and connected, its uplinks appear in the Cloud.
 
 ## Step 5: Act on Your Devices
 
-The Cloud is bidirectional — send configuration, data, or shell commands back with a
+The Cloud is bidirectional: send configuration, data, or shell commands back with a
 [**Downlink**](/cloud/downlink), and push new [**Firmware**](/cloud/firmware) over the air.
 
 ## Step 6: Integrate With Your Systems

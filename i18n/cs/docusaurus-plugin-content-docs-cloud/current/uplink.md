@@ -6,7 +6,7 @@ description: "downlinku. Uplinky nesou data, která CHESTER hlásí: naměřené
 
 # Uplink {#uplink}
 
-**Uplink** je zpráva odeslaná **ze zařízení do Cloudu** — protějšek
+**Uplink** je zpráva odeslaná **ze zařízení do Cloudu**, protějšek
 [**downlinku**](/cloud/downlink). Uplinky nesou data, která CHESTER hlásí: naměřené hodnoty ze
 senzorů spolu s informacemi o stavu, relaci a kodeku.
 
@@ -14,9 +14,9 @@ senzorů spolu s informacemi o stavu, relaci a kodeku.
 
 Zařízení hlásí data podle plánu daného jeho konfigurací:
 
-- **`interval-sample`** — jak často zařízení odečítá své senzory
-- **`interval-aggreg`** — jak často se tyto vzorky agregují
-- **`interval-report`** — jak často se agregovaná data odesílají do Cloudu jako uplink
+- **`interval-sample`**: jak často zařízení odečítá své senzory
+- **`interval-aggreg`**: jak často se tyto vzorky agregují
+- **`interval-report`**: jak často se agregovaná data odesílají do Cloudu jako uplink
 
 Tyto hodnoty lze změnit vzdáleně pomocí [**Config downlinku**](/cloud/downlink/config).
 

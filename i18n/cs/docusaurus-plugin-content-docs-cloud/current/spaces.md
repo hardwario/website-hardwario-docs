@@ -6,7 +6,7 @@ description: "Typické případy použití:"
 
 # Prostory {#spaces}
 
-**Prostor (Space)** je nejvyšší organizační jednotka v HARDWARIO Cloud. Všechno — zařízení, tagy, konektory, proměnné i uživatelé — se nachází uvnitř prostoru.
+**Prostor (Space)** je nejvyšší organizační jednotka v HARDWARIO Cloud. Všechno (zařízení, tagy, konektory, proměnné i uživatelé) se nachází uvnitř prostoru.
 
 Typické případy použití:
 - Jeden prostor pro nasazení u jednoho **zákazníka**
@@ -17,7 +17,7 @@ Typické případy použití:
 
 | Typ | Popis |
 |---|---|
-| **personal** | Automaticky vytvořen pro každý uživatelský účet — váš soukromý pracovní prostor |
+| **personal** | Automaticky vytvořen pro každý uživatelský účet. Váš soukromý pracovní prostor |
 | **team** | Sdílený pracovní prostor pro skupinu uživatelů |
 | **default** | Standardní typ prostoru pro zákaznická nasazení |
 | **premium** | Prostor s rozšířenými limity nebo funkcemi |
@@ -30,7 +30,7 @@ Typické případy použití:
 
 2. Zadejte název podle [konvencí pojmenování](/cloud/#naming-conventions) a klikněte na **CREATE**.
 
-   ![Dialog „Create new space" — zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
+   ![Dialog „Create new space": zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
 
 Nový prostor se okamžitě objeví v přepínači prostorů.
 
@@ -38,13 +38,13 @@ Nový prostor se okamžitě objeví v přepínači prostorů.
 
 Po otevření prostoru zobrazuje levý postranní panel všechny dostupné sekce:
 
-- **Devices** — všechna zařízení registrovaná v tomto prostoru
-- **Messages** — uplink a downlink zprávy napříč všemi zařízeními
-- **Tags** — správa tagů
-- **Connectors** — webhookové konektory
-- **Variables** — dešifrovací klíče a další proměnné na úrovni prostoru
-- **Users** — členové prostoru a jejich role
-- **FOTA** — správa aktualizací firmwaru
+- **Devices**: všechna zařízení registrovaná v tomto prostoru
+- **Messages**: uplink a downlink zprávy napříč všemi zařízeními
+- **Tags**: správa tagů
+- **Connectors**: webhookové konektory
+- **Variables**: dešifrovací klíče a další proměnné na úrovni prostoru
+- **Users**: členové prostoru a jejich role
+- **FOTA**: správa aktualizací firmwaru
 
 ## Členové {#members}
 
@@ -52,8 +52,8 @@ Do svého prostoru můžete pozvat další uživatele ke spolupráci. Každý č
 
 | Role | Oprávnění |
 |---|---|
-| **Admin** | Plný přístup — může přidávat/odebírat zařízení, spravovat konektory, zvát uživatele, měnit nastavení |
-| **User** | Přístup pouze pro čtení — může prohlížet zařízení a zprávy, ale nemůže provádět změny |
+| **Admin** | Plný přístup. Může přidávat/odebírat zařízení, spravovat konektory, zvát uživatele, měnit nastavení |
+| **User** | Přístup pouze pro čtení. Může prohlížet zařízení a zprávy, ale nemůže provádět změny |
 
 Pro pozvání členů a správu jejich rolí viz [**Users**](/cloud/users) v sekci **Administration**.
 

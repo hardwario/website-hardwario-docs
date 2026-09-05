@@ -19,14 +19,14 @@ Otevřete **CHESTER → BLE tags**.
 ## Sloty {#the-slots}
 
 Záhlaví uvádí název zařízení a počet jeho slotů a seznam zobrazuje, kolik jich je
-využitých — například *Slots (2 of 4)*.
+využitých, například *Slots (2 of 4)*.
 
 Každý obsazený slot zobrazuje **Bluetooth adresu** tagu a jeho poslední hodnoty:
 teplotu, napětí baterie a sílu signálu v dBm. Prázdné sloty jsou ve výchozím
 stavu skryté; **Show empty** je odkryje, takže si můžete vybrat, kam nový tag
 patří.
 
-Menu **⋮** u slotu působí jen na daný slot — použijte ho, když chcete slot
+Menu **⋮** u slotu působí jen na daný slot. Použijte ho, když chcete slot
 vyprázdnit pro další použití.
 
 ---
@@ -37,7 +37,7 @@ vyprázdnit pro další použití.
 2. Vyberte požadovaný tag a navažte ho do slotu.
 3. Klepněte na **Save to device**.
 
-Do zařízení CHESTER se nic nedostane, dokud neuložíte — **Save to device** a
+Do zařízení CHESTER se nic nedostane, dokud neuložíte. **Save to device** a
 **Revert changes** zůstávají neaktivní, dokud něco skutečně nezměníte, takže samotná
 tlačítka vám řeknou, jestli něco čeká.
 
@@ -55,7 +55,7 @@ změna připravená, dokud nedáte **Save to device**.
 
 ## Související nastavení {#related-settings}
 
-Skener tagů má vlastní konfiguraci — jestli je zapnutý, jak často a jak dlouho
+Skener tagů má vlastní konfiguraci: jestli je zapnutý, jak často a jak dlouho
 skenuje. Ta je ve skupině **BLE tags** v
 [**pokročilé konfiguraci**](./configuration.md), a v shellu jsou to příkazy
 `tag config`: `enabled`, `scan-interval`, `scan-duration` a

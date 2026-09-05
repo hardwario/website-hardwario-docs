@@ -9,26 +9,26 @@ title: MACHINE PROBE
 
 :::tip
 
-The MACHINE PROBE is not limited to STICKER Input — it is also fully compatible with **HARDWARIO CHESTER**, which exposes the same 1-Wire interface. The same probe can therefore be reused across both platforms without any hardware modification.
+The MACHINE PROBE is not limited to STICKER Input. It is also fully compatible with **HARDWARIO CHESTER**, which exposes the same 1-Wire interface. The same probe can therefore be reused across both platforms without any hardware modification.
 
 :::
 
 ## Description and real-world use
 
-The probe has already proven itself in the field — for example monitoring **shakers** in the ProXimos project, where it reliably:
+The probe has already proven itself in the field, for example monitoring **shakers** in the ProXimos project, where it reliably:
 
 - measures the **temperature** of the monitored equipment,
 - measures the **relative humidity** of the surroundings,
 - detects **motion, shock and vibration** using its accelerometer.
 
-By combining these quantities you can monitor not only the operating conditions but also the actual operation of the machine — for instance recognizing whether the equipment is genuinely running, has stopped, or is vibrating abnormally.
+By combining these quantities you can monitor not only the operating conditions but also the actual operation of the machine, for instance recognizing whether the equipment is genuinely running, has stopped, or is vibrating abnormally.
 
 ### Example: monitoring motor vibration
 
 A typical use case is **vibration monitoring of electric motors, pumps and fans**. The MACHINE PROBE is mounted directly on the motor housing, and its built-in accelerometer continuously senses mechanical vibration. From the measured data you can:
 
 - confirm whether the motor is **running or stopped** (presence and level of vibration),
-- detect a **gradual increase in vibration** that often precedes a mechanical fault — worn bearings, shaft misalignment or an unbalanced load,
+- detect a **gradual increase in vibration** that often precedes a mechanical fault: worn bearings, shaft misalignment or an unbalanced load,
 - combine the vibration reading with the probe's **temperature** measurement to catch overheating that develops alongside excessive vibration.
 
 This makes the probe a simple building block for **predictive maintenance**: instead of waiting for a motor to fail, the trend in vibration and temperature is sent over LoRaWAN and an alert can be raised before a breakdown occurs.
@@ -37,7 +37,7 @@ This makes the probe a simple building block for **predictive maintenance**: ins
 
 | Parameter | Value |
 | --- | --- |
-| Supply voltage range | **3.0 – 5.5 V** |
+| Supply voltage range | **3.0–5.5 V** |
 | Reverse-polarity protection | **Yes** (integrated) |
 | Sensor bus | I²C (internal), exposed via 1-Wire bridge |
 | Connection | Three-wire interconnecting cable |
@@ -56,7 +56,7 @@ The probe connects with a **three-wire cable** using the following pinout:
 | --- | --- | --- |
 | Minus | **GND** | Ground / common |
 | Data | **DATA** | 1-Wire data bus |
-| Plus | **VDD** | Supply 3.0 – 5.5 V |
+| Plus | **VDD** | Supply 3.0–5.5 V |
 
 ## Onboard sensors and chips
 
@@ -83,17 +83,17 @@ The **DS28E17Q+ (U2)** acts as a bridge between the 1-Wire bus (toward STICKER I
 
 Component reference designators (top side):
 
-![MACHINE PROBE R1.3 — assembly, reference designators](images/machine-probe-asm-names.png)
+![MACHINE PROBE R1.3: assembly, reference designators](images/machine-probe-asm-names.png)
 
 Component values (top side):
 
-![MACHINE PROBE R1.3 — assembly, component values](images/machine-probe-asm-values.png)
+![MACHINE PROBE R1.3: assembly, component values](images/machine-probe-asm-values.png)
 
 <details>
 <summary><b>Show schematic (MACHINE PROBE R1.3)</b></summary>
 <p>
 
-![MACHINE PROBE R1.3 — schematic](images/machine-probe-schematic.png)
+![MACHINE PROBE R1.3: schematic](images/machine-probe-schematic.png)
 
 </p>
 </details>

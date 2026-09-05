@@ -50,6 +50,6 @@ V levém panelu **System → Packages → Check for Updates**. Otevře se nové 
 ## 4. Kontrola aktualizace {#4-verify-the-update}
 
 1. **System → Packages**:  
-   - Klikněte na **Check For Updates** — nyní by se mělo zobrazit **up to date** (obě verze by se měly shodovat).
+   - Klikněte na **Check For Updates**: nyní by se mělo zobrazit **up to date** (obě verze by se měly shodovat).
 2. **System → RouterBOARD**:  
-   - Zkontrolujte, že **Current Firmware** nyní odpovídá **Upgrade Firmware** — to znamená, že firmware byl úspěšně aktualizován.
+   - Zkontrolujte, že **Current Firmware** nyní odpovídá **Upgrade Firmware**: to znamená, že firmware byl úspěšně aktualizován.

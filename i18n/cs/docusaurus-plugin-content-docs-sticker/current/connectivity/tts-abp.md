@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
 Tato stránka vysvětluje, jak zaregistrovat zařízení **HARDWARIO STICKER** jako koncové zařízení LoRaWAN v **The Things Stack (TTS)** pomocí **ABP (aktivace personalizací)** a jak přidat formátovač payloadu (dekodér).
 
 Užitečná dokumentace HARDWARIO:
-- TTS – koncová zařízení  
+- TTS: koncová zařízení  
   https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-end-devices
-- Dekodér STICKER – https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- Dekodér STICKER: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
 
 :::info
 Než zařízení STICKER zaregistrujete, ujistěte se, že máte přístup k nasazení **The Things Stack** (Cloud, Community nebo Enterprise) a že je brána LoRaWAN připojená a online.
@@ -50,15 +50,15 @@ Ve své aplikaci:
 Zvolte **Enter end device specifics manually**.
 
 V části **End Device Type** nastavte:
-- Frequency plan – zvolte svůj region (například **Europe 863–870 MHz**)
-- LoRaWAN version – **LoRaWAN Specification 1.0.4**
-- Regional Parameters version – **RP002 Regional Parameters 1.0.4**
+- Frequency plan: zvolte svůj region (například **Europe 863–870 MHz**)
+- LoRaWAN version: **LoRaWAN Specification 1.0.4**
+- Regional Parameters version: **RP002 Regional Parameters 1.0.4**
 
 Klikněte na **Show advanced activation, LoRaWAN class and cluster settings** a jako **Activation mode** zvolte **Activation by personalization (ABP)**.
 
 V části **Device Identifiers** vyplňte:
-- DevEUI – **DEV_EUI** (unikátní identifikátor vytištěný na zařízení)
-- Device ID – vámi zvolené jméno tohoto zařízení (například **sticker-0x**)
+- DevEUI: **DEV_EUI** (unikátní identifikátor vytištěný na zařízení)
+- Device ID: vámi zvolené jméno tohoto zařízení (například **sticker-0x**)
 
 V části **Activation Information** vyplňte:
 - Device address (DevAddr): **DEVICE_ADDRESS**

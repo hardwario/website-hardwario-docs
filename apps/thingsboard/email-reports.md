@@ -54,7 +54,7 @@ Now we need to combine the previous steps and tell the system when and to whom t
    * **Notification template:** Select the email template you prepared in Step 2.
 4. Go to the **Schedule** settings:
    * Select the correct timezone.
-   * Set the repeat interval – for monthly reports, schedule it to run on the 1st day of every month at your preferred time (e.g., 01:00 AM).
+   * Set the repeat interval: for monthly reports, schedule it to run on the 1st day of every month at your preferred time (e.g., 01:00 AM).
 5. In the **Recipients** / **Targets** section, define who will receive the email. You can select specific Users, Customers, or enter direct email addresses.
 6. Save the schedule.
 

@@ -157,8 +157,8 @@ west serial-console --port /dev/ttyUSB1 --baudrate 1000000
 
 Konzole udržuje dva oddělené proudy:
 
-- **AT příkazy a odpovědi** – co napíšete a co zařízení GLIDER odpoví.
-- **Zprávy `@LOG:`** – živé řádky logu, které projdou po obrazovce, aniž by rušily příkazovou řádku.
+- **AT příkazy a odpovědi**: co napíšete a co zařízení GLIDER odpoví.
+- **Zprávy `@LOG:`**: živé řádky logu, které projdou po obrazovce, aniž by rušily příkazovou řádku.
 
 Užitečné soubory, které `west serial-console` spravuje:
 

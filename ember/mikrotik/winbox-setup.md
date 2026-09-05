@@ -17,7 +17,7 @@ Click the link below and go to the MikroTik download page:
 
 https://mikrotik.com/download/winbox
 
-On the page, click **Windows (64-bit)** — this will download a `.zip` file.
+On the page, click **Windows (64-bit)**. This will download a `.zip` file.
 
 ![Winbox 4 download page](images/winbox-1.png)    
 
@@ -38,7 +38,7 @@ Click the **Extract** button to extract the file.
 
 ### 3. Run Winbox 4
 
-Open the **WinBox.exe** application in the extracted folder. After opening the application, a system window will appear — confirm it by clicking **Allow**.
+Open the **WinBox.exe** application in the extracted folder. After opening the application, a system window will appear. Confirm it by clicking **Allow**.
 
 **Winbox 4 is now ready to use.**
 
@@ -52,7 +52,7 @@ Click the link below and go to the MikroTik download page:
 
 [https://mikrotik.com/download/winbox](https://mikrotik.com/download/winbox)
 
-On the page, click **Linux (64-bit)** — this will download a `.zip` file. Make sure to place it somewhere easy to access, like the **Downloads** folder.
+On the page, click **Linux (64-bit)**. This will download a `.zip` file. Make sure to place it somewhere easy to access, like the **Downloads** folder.
 
 ![Winbox 4 download page](images/winbox-4.png)
 
@@ -60,7 +60,7 @@ On the page, click **Linux (64-bit)** — this will download a `.zip` file. Make
 
 ### 2. Extract the Archive
 
-Right-click on the downloaded **WinBox_Linux.zip** file and select **Extract Here** — or **Extract to…** if you want to place it in a specific folder.
+Right-click on the downloaded **WinBox_Linux.zip** file and select **Extract Here**, or **Extract to…** if you want to place it in a specific folder.
 
 Once the extraction is complete, you will see a folder containing the **WinBox** file and an **assets** folder.
 

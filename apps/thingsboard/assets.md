@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Assets
 
-Assets are logical containers that represent real-world objects — buildings, floors, zones, or equipment — in your ThingsBoard environment. Unlike devices (which represent physical hardware sending data), assets are used to organize your project's overall structure and define how data and access rights are distributed across your customers.
+Assets are logical containers that represent real-world objects (buildings, floors, zones, or equipment) in your ThingsBoard environment. Unlike devices (which represent physical hardware sending data), assets are used to organize your project's overall structure and define how data and access rights are distributed across your customers.
 
 ---
 

@@ -14,7 +14,7 @@ s jeho konfigurací.
 | Nástroj | Co dělá |
 |---|---|
 | [**Firmware update**](./firmware-update.md) | Nahraje nový firmware přes Bluetooth, z QR kódu |
-| **Reboot device** | Restartuje zařízení CHESTER — spojení se přeruší |
+| **Reboot device** | Restartuje zařízení CHESTER. Spojení se přeruší |
 | **Factory reset** | Vrátí konfiguraci zařízení CHESTER na výrobní výchozí hodnoty |
 
 ---
@@ -22,7 +22,7 @@ s jeho konfigurací.
 ## Reboot device {#reboot-device}
 
 Restartuje zařízení. Protože zařízení CHESTER při restartu přeruší své Bluetooth
-spojení, aplikace se odpojí — po pár sekundách, až zařízení naběhne, se znovu
+spojení, aplikace se odpojí. Po pár sekundách, až zařízení naběhne, se znovu
 připojte z průvodce nastavením. Nastavení už zapsaná do zařízení restart přežijí;
 co bylo změněno a neuloženo, ne.
 
@@ -34,7 +34,7 @@ takže aplikace před jejím provedením žádá potvrzení.
 :::danger Factory reset smaže, co jste nastavili
 Intervaly, komunikační režim, nastavení LTE i LoRaWAN a navázané sloty BLE tagů
 se všechny vrátí na výchozí hodnoty. Pokud byste konfiguraci mohli ještě
-potřebovat, nejdřív ji vyexportujte — **Share configuration** na obrazovce
+potřebovat, nejdřív ji vyexportujte. **Share configuration** na obrazovce
 [**Konfigurace**](./configuration.md) ji celou vypíše jako text.
 :::
 

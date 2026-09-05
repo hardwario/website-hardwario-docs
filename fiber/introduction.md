@@ -11,9 +11,9 @@ import Image from '@theme/IdealImage';
 **FIBER Lite** is a Raspberry Pi 5 based bench-test variant of FIBER. Everything on this page
 describes the industrial CM4-based FIBER, but [**Installation**](installation) (or the
 [**Quick Start Guide**](first-steps)) below is the **same procedure for both variants**, with
-tabs at the few points where it diverges — including the full ChirpStack, Node-RED, InfluxDB,
+tabs at the few points where it diverges, including the full ChirpStack, Node-RED, InfluxDB,
 Grafana, and Dashboard stack. The only real differences are hardware (no display, no 1-Wire
-sensors on FIBER Lite) — see [**FIBER Lite**](fiber-lite/introduction) in the sidebar.
+sensors on FIBER Lite), see [**FIBER Lite**](fiber-lite/introduction) in the sidebar.
 
 :::
 
@@ -25,9 +25,9 @@ Thanks to its modular and open architecture, **FIBER** supports standard **Raspb
 
 ## Quick Links
 
-* [**Installation**](installation) – Bootstrap and configure the Linux system on FIBER.
-* [**Hardware Description**](category/hardware-description) – Processing platform, sensor interfaces, connectivity, and full technical specifications.
-* [**Changelog**](changelog) – Latest firmware and platform changes.
+* [**Installation**](installation): Bootstrap and configure the Linux system on FIBER.
+* [**Hardware Description**](category/hardware-description): Processing platform, sensor interfaces, connectivity, and full technical specifications.
+* [**Changelog**](changelog): Latest firmware and platform changes.
 
 ## Typical Use Cases
 
@@ -50,4 +50,4 @@ Thanks to its modular and open architecture, **FIBER** supports standard **Raspb
 | **Power-over-Ethernet** | PoE powered, with an onboard Li-Ion backup battery. |
 | **Full Root Linux Access** | Docker support for custom firmware and application development. |
 | **Secure MQTT** | MQTT protocol with TLS encryption for secure data transmission. |
-| **Open Data Destinations** | Data streams to your own systems — the open Linux platform can run essentially any protocol your project needs. |
+| **Open Data Destinations** | Data streams to your own systems. The open Linux platform can run essentially any protocol your project needs. |

@@ -1,14 +1,14 @@
 ---
 title: Správa zařízení
-description: "Vytvářejte, upravujte a odstraňujte zařízení programově — užitečné při"
+description: "Vytvářejte, upravujte a odstraňujte zařízení programově, užitečné při"
 ---
 
 # Správa zařízení {#managing-devices}
 
-Vytvářejte, upravujte a odstraňujte zařízení programově — užitečné při
+Vytvářejte, upravujte a odstraňujte zařízení programově, užitečné při
 zprovoznění mnoha zařízení z vašeho vlastního systému.
 
-**Vytvoření zařízení** — `POST /v2/spaces/{space_id}/devices`. Zadejte **Name**,
+**Vytvoření zařízení**: `POST /v2/spaces/{space_id}/devices`. Zadejte **Name**,
 **HARDWARIO Serial Number** (`serial_number`) a **Claim Token** zařízení
 (`token`); volitelně přidejte vlastní `external_id` nebo přiložte `tags`:
 
@@ -26,7 +26,7 @@ curl -X POST \
 ```
 
 :::info
-Claim Token je pro každé zařízení unikátní — naskenujte jeho QR kód nebo jej
+Claim Token je pro každé zařízení unikátní. Naskenujte jeho QR kód nebo jej
 načtěte shell příkazem `info show`. Viz [**První kroky**](/cloud/first-steps).
 :::
 

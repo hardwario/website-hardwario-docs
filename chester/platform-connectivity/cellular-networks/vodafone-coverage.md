@@ -18,7 +18,7 @@ The table below applies to the SIM cards provided by **HARDWARIO**. We cannot gu
 
 Vodafone increasingly routes traffic over **shared networks**, and roaming partners change over time. Two consequences to be aware of:
 
-* A combination that works today can stop working without any change on the device. If a previously working deployment stops registering, this table is not the place to look first — run a [**network scan**](diagnostics.md#list-available-networks) at the site to see which operators are actually available.
+* A combination that works today can stop working without any change on the device. If a previously working deployment stops registering, this table is not the place to look first. Run a [**network scan**](diagnostics.md#list-available-networks) at the site to see which operators are actually available.
 * This table is **not an exhaustive list of countries where the SIM card works**. Devices have registered successfully in countries that are not listed here. A missing country means we have not documented it, not that the SIM will fail.
 
 Treat the values below as known-working reference settings rather than as a coverage guarantee.

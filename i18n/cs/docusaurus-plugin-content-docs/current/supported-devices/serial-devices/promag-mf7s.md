@@ -59,7 +59,7 @@ app config save
 |-----------|-------|-------------|
 | `serial-mode` | `transparent` | Promag nepoužívá Modbus |
 | `serial-baudrate` | `19200` | Pevně dané pro MF7S |
-| `device-0` | `promag_mf7s` | Typ zařízení (bez adresy — nejde o Modbus) |
+| `device-0` | `promag_mf7s` | Typ zařízení (bez adresy. Nejde o Modbus) |
 | `mode` | `lte` nebo `lrw` | Komunikační režim |
 | `interval-report` | `0` | Řízeno událostmi = okamžité odeslání při detekci karty |
 
@@ -74,7 +74,7 @@ Pokud je `interval-report > 0`, karty se hromadí v bufferu (max. 32) a odesíla
 
 ---
 
-### Příkazy shellu — ovladač {#shell-commands--driver}
+### Příkazy shellu – ovladač {#shell-commands--driver}
 
 #### Načtení verze firmwaru čtečky {#read-reader-firmware-version}
 
@@ -98,7 +98,7 @@ Provede sekvenci: zelená LED zap/vyp → červená LED zap/vyp → trojí pípn
 device promag_mf7s sampling [timeout_s]
 ```
 
-Přejde do interaktivního režimu — v shellu zobrazuje UID karet. Data se **neukládají** do bufferu. Timeout (výchozí 10 s) se resetuje při každém přiložení karty.
+Přejde do interaktivního režimu. V shellu zobrazuje UID karet. Data se **neukládají** do bufferu. Timeout (výchozí 10 s) se resetuje při každém přiložení karty.
 
 Výstup:
 ```
@@ -119,7 +119,7 @@ app send               # Force immediate data send
 
 ---
 
-### Payload — LTE (CBOR) {#payload--lte-cbor}
+### Payload – LTE (CBOR) {#payload--lte-cbor}
 
 V režimu LTE se odesílá CBOR zpráva (max. 8 kB) se všemi nasbíranými kartami. Po úspěšném odeslání se buffer vymaže.
 
@@ -204,7 +204,7 @@ V režimu LTE se odesílá CBOR zpráva (max. 8 kB) se všemi nasbíranými kart
 
 ---
 
-### Payload — LoRaWAN (binární) {#payload--lorawan-binary}
+### Payload – LoRaWAN (binární) {#payload--lorawan-binary}
 
 LoRaWAN odesílá kompaktní binární zprávu (max. 51 bajtů). Každá zpráva obsahuje **jedno zařízení**.
 

@@ -22,9 +22,9 @@ Milesight AM307 is an **indoor ambience monitoring sensor** that measures **seve
 <br />
 
 :::info
-[**AM307**](milesight-am307.md) – monitors basic indoor air quality.<br />
-[**AM308**](milesight-am308.md) – same as AM307 plus particle measurement (PM2.5/PM10).<br />
-[**AM319**](milesight-am319.md) – the most advanced version with additional HCHO or O₃ measurement; must be powered by USB (no batteries).
+[**AM307**](milesight-am307.md): monitors basic indoor air quality.<br />
+[**AM308**](milesight-am308.md): same as AM307 plus particle measurement (PM2.5/PM10).<br />
+[**AM319**](milesight-am319.md): the most advanced version with additional HCHO or O₃ measurement; must be powered by USB (no batteries).
 :::
 
 ## Integration Links

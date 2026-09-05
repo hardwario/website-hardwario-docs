@@ -26,7 +26,7 @@ its stored secret key. You do not have to enter keys for those devices by hand.
 
 ## Create an account
 
-Choose **Create an ATELOS account** — it is also offered from the login screen —
+Choose **Create an ATELOS account** (it is also offered from the login screen)
 and follow the form.
 
 ## Change your password
@@ -48,9 +48,9 @@ to its secret key.
 1. Open **STICKER** and tap **Claim a STICKER** at the bottom of the menu (or
    open **Saved STICKERs** and add a device from there).
 2. Choose how to identify the device:
-   - **Tap over NFC** — hold the phone against the STICKER.
-   - **Scan QR code** — scan the device's claim QR.
-   - **Enter manually** — type the serial number.
+   - **Tap over NFC**: hold the phone against the STICKER.
+   - **Scan QR code**: scan the device's claim QR.
+   - **Enter manually**: type the serial number.
 3. If you are not signed in, the app offers **Log in and claim**.
 
 :::info The vendor-token is entered by hand
@@ -62,7 +62,7 @@ hand on the device's detail screen.
 
 :::info Adding a device without claiming it
 The **Add** screen claims the device, so it needs an ATELOS login. To add
-devices you already hold keys for — from a colleague's export, a CSV, or a QR
-code — use **Saved STICKERs → Import** instead. See
+devices you already hold keys for (from a colleague's export, a CSV, or a QR
+code), use **Saved STICKERs → Import** instead. See
 [**Saved STICKERs**](./sticker/saved-stickers.md).
 :::

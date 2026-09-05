@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 
 # Config
 
-Change the device's configuration the same way you would over BLE or J-Link RTT — send one or more
+Change the device's configuration the same way you would over BLE or J-Link RTT: send one or more
 `app config` commands, and CHESTER applies them the next time it sends an uplink packet or polls the
 Cloud.
 
@@ -47,7 +47,7 @@ app config interval-report 1800
 :::warning[Do not send config save over the Cloud]
 
 When you configure a device **locally** you finish with `config save` to persist the changes and
-reboot. **Over the Cloud you must not send `config save`** — HARDWARIO Cloud applies and saves the
+reboot. **Over the Cloud you must not send `config save`**, because HARDWARIO Cloud applies and saves the
 configuration for you automatically. Adding it yourself can double-apply the change, so simply omit it.
 
 :::

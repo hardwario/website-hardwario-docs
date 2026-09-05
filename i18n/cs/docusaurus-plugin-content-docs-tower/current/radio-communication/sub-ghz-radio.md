@@ -43,8 +43,8 @@ TOWER podporuje pouze **topologii hvězdy**. Taková konfigurace nabízí vysoko
 
 V rádiové síti TOWER existují dva typy zařízení.
 
-- [**Radio Dongle**](../hardware-modules/about-radio-dongle.md) – můžete spárovat **až 32 zařízení**
-- **Radio Node** – každý uzel musí být spárován s bránou. Uzlem může být nějaký senzor (např. teploty, vlhkosti, CO2) nebo akční člen (výkonové relé, LCD, ovladač LED pásku).
+- [**Radio Dongle**](../hardware-modules/about-radio-dongle.md): můžete spárovat **až 32 zařízení**
+- **Radio Node**: každý uzel musí být spárován s bránou. Uzlem může být nějaký senzor (např. teploty, vlhkosti, CO2) nebo akční člen (výkonové relé, LCD, ovladač LED pásku).
 
 :::info
 
@@ -158,9 +158,9 @@ void application_init(void)
 
 #### Vysvětlení jednotlivých částí {#explanation-of-each-part}
 
-- **PRE(4)** – tato část se nazývá preambule a tvoří ji střídavá sekvence nul a jedniček (32 bitů).
-- **SYN(4)** – tato část se nazývá synchronizační slovo a má pevnou hodnotu 0x88888888.
-- **LEN(1)** – tato část určuje délku pole DATA plus 1 (počítá se i pole DST).
-- **DST(1)** – cílová adresa (pro logické adresování v síti).
-- **DATA(0..60)** – datové pole payloadu s proměnnou délkou.
-- **CRC(2)** – kontrolní součet počítaný přes všechna pole kromě polí PRE a SYN. Polynom CRC je 0x1021.
+- **PRE(4)**: tato část se nazývá preambule a tvoří ji střídavá sekvence nul a jedniček (32 bitů).
+- **SYN(4)**: tato část se nazývá synchronizační slovo a má pevnou hodnotu 0x88888888.
+- **LEN(1)**: tato část určuje délku pole DATA plus 1 (počítá se i pole DST).
+- **DST(1)**: cílová adresa (pro logické adresování v síti).
+- **DATA(0..60)**: datové pole payloadu s proměnnou délkou.
+- **CRC(2)**: kontrolní součet počítaný přes všechna pole kromě polí PRE a SYN. Polynom CRC je 0x1021.

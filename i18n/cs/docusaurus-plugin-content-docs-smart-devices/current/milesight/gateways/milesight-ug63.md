@@ -52,8 +52,8 @@ Milesight UG63 je **kompaktní brána LoRaWAN®** určená pro **menší nasazen
 **Nastavení sítě:**
 1. Přejděte na **WAN** → **Connection Type**
 2. Zvolte jednu z možností:
-   - **DHCP Client** – Brána automaticky získá IP adresu z vašeho routeru
-   - **Static IP** – IP adresu nastavíte ručně
+   - **DHCP Client**: Brána automaticky získá IP adresu z vašeho routeru
+   - **Static IP**: IP adresu nastavíte ručně
 3. Připojte bránu do vaší **LAN sítě** Ethernet kabelem
 4. Při použití DHCP najdete přidělenou IP adresu v **Status** → **Ethernet**
 
@@ -112,8 +112,8 @@ Tento vestavěný network server umožňuje spravovat senzory přímo z webovéh
 ## LNS a CUPS {#lns--cups}
 
 **Co to je?**
-- **LNS** (LoRaWAN Network Server) – Řídí komunikaci mezi bránou a senzory
-- **CUPS** (Configuration and Update Server) – Automaticky konfiguruje a aktualizuje vaši bránu
+- **LNS** (LoRaWAN Network Server): Řídí komunikaci mezi bránou a senzory
+- **CUPS** (Configuration and Update Server): Automaticky konfiguruje a aktualizuje vaši bránu
 
 **Postup nastavení:**
 

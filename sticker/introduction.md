@@ -12,16 +12,16 @@ import Image from '@theme/IdealImage';
 ### To get your STICKER running, read the [**Quick Start Guide**](first-steps).
 :::
 
-<img src="/img/sticker.webp" data-zoom-src="/img/sticker.webp" width="540" alt="STICKER - Catalog" />
+<img src="/img/sticker.webp" data-zoom-src="/img/sticker.webp" width="540" alt="STICKER catalog" />
 
 ## Quick Links
 
-* [**Quick Start Guide**](first-steps) – Step-by-step setup guide.
-* [**Buy STICKER**](https://www.hardwario.store/sticker) – Purchase on our store.
-* [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes) - List of components and part numbers.
-* [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description) - Technical details and hardware overview.
-* [**Official Product Page**](https://www.hardwario.com/products/sticker/) – Features and overview.
-* [**Changelog**](changelog) – Latest SDK releases, firmware versions, and per-application changes.
+* [**Quick Start Guide**](first-steps): Step-by-step setup guide.
+* [**Buy STICKER**](https://www.hardwario.store/sticker): Purchase on our store.
+* [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes): List of components and part numbers.
+* [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description): Technical details and hardware overview.
+* [**Official Product Page**](https://www.hardwario.com/products/sticker/): Features and overview.
+* [**Changelog**](changelog): Latest SDK releases, firmware versions, and per-application changes.
 
 ## Typical Use Cases
 

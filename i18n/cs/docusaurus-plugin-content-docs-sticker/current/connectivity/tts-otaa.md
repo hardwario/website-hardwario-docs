@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
 Tato stránka vysvětluje, jak zaregistrovat zařízení **HARDWARIO STICKER** jako koncové zařízení LoRaWAN v **The Things Stack (TTS)** pomocí **OTAA (aktivace přes vzduch)** a jak přidat formátovač payloadu (dekodér).
 
 Užitečná dokumentace HARDWARIO:
-- TTS – koncová zařízení  
+- TTS: koncová zařízení  
   https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-end-devices
-- Dekodér STICKER – https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- Dekodér STICKER: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
 
 :::info
 Než zařízení STICKER zaregistrujete, ujistěte se, že máte přístup k nasazení **The Things Stack** (Cloud, Community nebo Enterprise) a že je brána LoRaWAN připojená a online.
@@ -49,18 +49,18 @@ Ve své aplikaci:
 Zvolte **Enter end device specifics manually**.
 
 V části **End Device Type** nastavte:
-- Frequency plan – zvolte svůj region (například **Europe 863–870 MHz**)
-- LoRaWAN version – **LoRaWAN Specification 1.0.4**
-- Regional Parameters version – **RP002 Regional Parameters 1.0.4**
+- Frequency plan: zvolte svůj region (například **Europe 863–870 MHz**)
+- LoRaWAN version: **LoRaWAN Specification 1.0.4**
+- Regional Parameters version: **RP002 Regional Parameters 1.0.4**
 
 V části **Provisioning Information** zadejte **JoinEUI (AppEUI)** a klikněte na **Confirm**.
 
 ![Nastavení typu koncového zařízení v TTS](../../../../../sticker/connectivity/images/tts-create-end-device-lrw.png)
 
 V části **Device Identifiers** vyplňte:
-- DevEUI – **DEVICE_EUI** (unikátní identifikátor vytištěný na zařízení)
-- AppKey – **APPLICATION_KEY** (z aplikace HARDWARIO Manager)
-- Device ID – vámi zvolené jméno tohoto zařízení (například **sticker-ox**)
+- DevEUI: **DEVICE_EUI** (unikátní identifikátor vytištěný na zařízení)
+- AppKey: **APPLICATION_KEY** (z aplikace HARDWARIO Manager)
+- Device ID: vámi zvolené jméno tohoto zařízení (například **sticker-ox**)
 
 Klikněte na **Register end device**.
 

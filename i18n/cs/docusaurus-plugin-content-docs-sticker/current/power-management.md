@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 Zařízení STICKER je navržené pro provoz s extrémně nízkou spotřebou, aby vydrželo v terénu několik let bez externího napájení. Napájejí ho **2× běžné baterie AA** (alkalické nebo lithiové články 1,5 V).
 
 :::tip Zprovoznění přes NFC a aktivace radia
-Parametry zařízení, klíče a aktivaci `radio-mode` lze spravovat bezdrátově telefonem s NFC a aplikací [**HARDWARIO Manager**](hardwario-manager) — a to i před vložením baterií.
+Parametry zařízení, klíče a aktivaci `radio-mode` lze spravovat bezdrátově telefonem s NFC a aplikací [**HARDWARIO Manager**](hardwario-manager), a to i před vložením baterií.
 :::
 
 ---

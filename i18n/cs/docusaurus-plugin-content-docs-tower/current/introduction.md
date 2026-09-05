@@ -15,19 +15,19 @@ Používá se v průmyslových aplikacích, ve STEM výuce a v hobby projektech 
 
 ## Rychlé odkazy {#quick-links}
 
-* [**První kroky**](category/getting-started) – Začněte s platformou TOWER od úplného začátku.
-* [**Programování z počítače**](category/desktop-programming) – Rychlý start se zařízením TOWER a váš první projekt.
-* [**Server na Raspberry Pi**](server-raspberry-pi) – Nasaďte svůj projekt na Raspberry Pi v režimu headless.
-* [**Nástroje příkazové řádky**](command-line-tools) – Ovládání komponent TOWER z příkazové řádky.
-* [**Vývoj firmwaru**](firmware-development) – Ponořte se do programování embedded systémů.
-* [**Firmware SDK**](firmware-sdk) – Tvorba vlastního firmwaru od základů.
-* [**Rádiová komunikace**](radio-communication) – Rádiové protokoly podporované platformou TOWER.
-* [**Protokol MQTT**](mqtt-protocol) – Základní pilíř systému TOWER na serveru.
-* [**Integrace platforem**](category/platform-integrations) – Vizualizujte svá data a/nebo propojte svůj projekt na dálku.
-* [**Projekty krok za krokem**](https://www.hackster.io/hardwario/projects) – Recepty na tvorbu reálných a smysluplných projektů.
-* [**Hardwarové moduly**](hardware-modules/) – Podrobné informace o modulech a tagech TOWER.
-* [**Hardwarová rozhraní**](category/hardware-interfaces) – Hardwarové vrstvy, nejen mezi moduly TOWER.
-* [**Seznam změn**](changelog) – Nejnovější změny firmwaru a platformy.
+* [**První kroky**](category/getting-started): Začněte s platformou TOWER od úplného začátku.
+* [**Programování z počítače**](category/desktop-programming): Rychlý start se zařízením TOWER a váš první projekt.
+* [**Server na Raspberry Pi**](server-raspberry-pi): Nasaďte svůj projekt na Raspberry Pi v režimu headless.
+* [**Nástroje příkazové řádky**](command-line-tools): Ovládání komponent TOWER z příkazové řádky.
+* [**Vývoj firmwaru**](firmware-development): Ponořte se do programování embedded systémů.
+* [**Firmware SDK**](firmware-sdk): Tvorba vlastního firmwaru od základů.
+* [**Rádiová komunikace**](radio-communication): Rádiové protokoly podporované platformou TOWER.
+* [**Protokol MQTT**](mqtt-protocol): Základní pilíř systému TOWER na serveru.
+* [**Integrace platforem**](category/platform-integrations): Vizualizujte svá data a/nebo propojte svůj projekt na dálku.
+* [**Projekty krok za krokem**](https://www.hackster.io/hardwario/projects): Recepty na tvorbu reálných a smysluplných projektů.
+* [**Hardwarové moduly**](hardware-modules/): Podrobné informace o modulech a tagech TOWER.
+* [**Hardwarová rozhraní**](category/hardware-interfaces): Hardwarové vrstvy, nejen mezi moduly TOWER.
+* [**Seznam změn**](changelog): Nejnovější změny firmwaru a platformy.
 
 ## Typické případy použití {#typical-use-cases}
 

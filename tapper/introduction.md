@@ -11,13 +11,13 @@ import Image from '@theme/IdealImage';
 
 ## Quick Links
 
-* [**Client Installation**](installation) – Install the TAPPER client on TAPPER.
-* [**Hardware Description**](hardware) – Power connections, operating conditions specification.
-* [**Client Usage**](usage) – Usage of the TAPPER Client.
-* [**Security Enhancements**](security) – Tips for improved security.
-* [**MQTT over TLS**](tls-setup) – Setup guide for MQTT over TLS.
-* [**MQTT Specification**](api-spec) – MQTT API Specification.
-* [**Changelog**](changelog) – Latest firmware and platform changes.
+* [**Client Installation**](installation): Install the TAPPER client on TAPPER.
+* [**Hardware Description**](hardware): Power connections, operating conditions specification.
+* [**Client Usage**](usage): Usage of the TAPPER Client.
+* [**Security Enhancements**](security): Tips for improved security.
+* [**MQTT over TLS**](tls-setup): Setup guide for MQTT over TLS.
+* [**MQTT Specification**](api-spec): MQTT API Specification.
+* [**Changelog**](changelog): Latest firmware and platform changes.
 
 ## Typical Use Cases
 

@@ -5,7 +5,7 @@ title: Spaces
 
 # Spaces
 
-A **Space** is the top-level organizational unit in HARDWARIO Cloud. Everything — devices, tags, connectors, variables, and users — lives inside a space.
+A **Space** is the top-level organizational unit in HARDWARIO Cloud. Everything (devices, tags, connectors, variables, and users) lives inside a space.
 
 Typical use cases:
 - One space per **customer** deployment
@@ -16,7 +16,7 @@ Typical use cases:
 
 | Type | Description |
 |---|---|
-| **personal** | Automatically created for every user account — your private workspace |
+| **personal** | Automatically created for every user account. Your private workspace |
 | **team** | Shared workspace for a group of users |
 | **default** | Standard space type for customer deployments |
 | **premium** | Space with extended limits or features |
@@ -29,7 +29,7 @@ Typical use cases:
 
 2. Enter a name following the [naming conventions](/cloud/#naming-conventions), then click **CREATE**.
 
-   ![The "Create new space" dialog — enter a name and click CREATE](images/create-space.png)
+   ![The "Create new space" dialog: enter a name and click CREATE](images/create-space.png)
 
 The new space appears in your space switcher immediately.
 
@@ -37,13 +37,13 @@ The new space appears in your space switcher immediately.
 
 When you open a space, the left sidebar shows all available sections:
 
-- **Devices** — all devices registered in this space
-- **Messages** — uplink and downlink messages across all devices
-- **Tags** — tag management
-- **Connectors** — webhook connectors
-- **Variables** — decryption keys and other space-level variables
-- **Users** — space members and their roles
-- **FOTA** — firmware update management
+- **Devices**: all devices registered in this space
+- **Messages**: uplink and downlink messages across all devices
+- **Tags**: tag management
+- **Connectors**: webhook connectors
+- **Variables**: decryption keys and other space-level variables
+- **Users**: space members and their roles
+- **FOTA**: firmware update management
 
 ## Members
 
@@ -51,8 +51,8 @@ You can invite other users to collaborate in your space. Each member has a role:
 
 | Role | Permissions |
 |---|---|
-| **Admin** | Full access — can add/remove devices, manage connectors, invite users, change settings |
-| **User** | Read-only access — can view devices and messages but cannot make changes |
+| **Admin** | Full access. Can add/remove devices, manage connectors, invite users, change settings |
+| **User** | Read-only access. Can view devices and messages but cannot make changes |
 
 To invite members and manage their roles, see [**Users**](/cloud/users) under **Administration**.
 

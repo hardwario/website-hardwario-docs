@@ -32,7 +32,7 @@ Hlavička zprávy. CBOR klíč: `0`.
 | Pole | Typ | Jednotka | Popis |
 | :--- | :--- | :--- | :--- |
 | `version` | uint | - | Verze schématu, aktuálně **`1`**. Slouží pro dopřednou kompatibilitu. |
-| `sequence` | uint32 | - | Postupně narůstající sekvenční číslo. Po každém restartu začíná na `0` – cloud podle mezer detekuje ztracené uplinky. |
+| `sequence` | uint32 | - | Postupně narůstající sekvenční číslo. Po každém restartu začíná na `0`. Cloud podle mezer detekuje ztracené uplinky. |
 | `timestamp` | int64 | Unix epoch (s) | Čas odeslání, získaný z RTC. |
 
 ## `system` {#system}
@@ -84,10 +84,10 @@ Hodnota `events` je **plochý seznam** v tomto pořadí:
 [timestamp_abs, offset_1, alarm_1, active_1, offset_2, alarm_2, active_2, …]
 ```
 
-- `timestamp_abs` – Unix epoch (s) **první** události v seznamu (kotva).
-- `offset_N` – sekundy relativně k `timestamp_abs`.
-- `alarm_N` – číslo pravidla (od 1, tedy 1-32).
-- `active_N` – `1` = aktivováno, `0` = deaktivováno.
+- `timestamp_abs`: Unix epoch (s) **první** události v seznamu (kotva).
+- `offset_N`: sekundy relativně k `timestamp_abs`.
+- `alarm_N`: číslo pravidla (od 1, tedy 1-32).
+- `active_N`: `1` = aktivováno, `0` = deaktivováno.
 
 Buffer pojme až **100 událostí** (`APP_ALARM_MAX_EVENTS`).
 
@@ -124,9 +124,9 @@ CBOR klíč: `11`.
 [timestamp_abs, offset_1, active_1, offset_2, active_2, …]
 ```
 
-- `timestamp_abs` – Unix epoch (s) první události.
-- `offset_N` – sekundy relativně k `timestamp_abs`.
-- `active_N` – `1` = aktivace (nástupná hrana), `0` = deaktivace (sestupná hrana).
+- `timestamp_abs`: Unix epoch (s) první události.
+- `offset_N`: sekundy relativně k `timestamp_abs`.
+- `active_N`: `1` = aktivace (nástupná hrana), `0` = deaktivace (sestupná hrana).
 
 Buffer pojme až **64 událostí na kanál** (`APP_INPUTS_MAX_EVENTS`).
 

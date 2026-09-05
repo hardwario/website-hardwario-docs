@@ -6,7 +6,7 @@ description: "Downlink typu data posílá do zařízení objekt JSON. Váš firm
 # Data {#data}
 
 Downlink typu **data** posílá do zařízení objekt JSON. Váš firmware jej dekóduje
-do struktury s vyplněnými hodnotami — použijte jej k ovládání výstupů, změně
+do struktury s vyplněnými hodnotami. Použijte jej k ovládání výstupů, změně
 požadované hodnoty nebo ke spuštění akce.
 
 ## Odeslání data downlinku {#send-a-data-downlink}

@@ -154,7 +154,7 @@ Přístup ke konfiguraci vyžaduje PIN kód.
 Tento PIN lze později změnit v nastavení zařízení. 
 :::
 
-#### Aplikace Teltonika EYE — přehled zařízení {#teltonika-eye-app--device-overview}
+#### Aplikace Teltonika EYE – přehled zařízení {#teltonika-eye-app--device-overview}
 
 <div class="container">
   <div class="row">
@@ -172,7 +172,7 @@ Tento PIN lze později změnit v nastavení zařízení.
 Následující konfiguraci doporučujeme pro optimální výkon komunikace a energetickou účinnost při použití senzorů Teltonika EYE se subsystémem BLE Tag pro CHESTER.
 Toto nastavení zajišťuje stabilní přenos dat, dostatečnou frekvenci vysílání pro spolehlivé vyhledání senzoru a vyváženou spotřebu energie.
 
-#### Aplikace Teltonika EYE — konfigurace zařízení {#teltonika-eye-app--device-configuration}
+#### Aplikace Teltonika EYE – konfigurace zařízení {#teltonika-eye-app--device-configuration}
 
 <div class="container">
   <div class="row">
@@ -217,7 +217,7 @@ Ve výstupu zkontrolujte hodnotu **RSSI**:
 | Teplota                 | Teplota okolního prostředí senzoru.|
 | Vlhkost                 | Relativní vlhkost okolního vzduchu. |
 | Pohyb / akcelerometr    | Detekuje pohyb a změny orientace (pitch/roll) zařízení. |
-| Detekce magnetu         | Detekuje změny magnetického pole — např. otevření/zavření dveří pomocí magnetu. |
+| Detekce magnetu         | Detekuje změny magnetického pole, např. otevření/zavření dveří pomocí magnetu. |
 | Napětí / stav baterie   | Sleduje napětí interní baterie (pro odhad zbývající životnosti).|
 
 

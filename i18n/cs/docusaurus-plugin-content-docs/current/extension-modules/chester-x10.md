@@ -152,7 +152,7 @@ CHESTER-X10 lze v rámci CHESTER SDK použít přes shield `ctr_x10`, případn�
 
 ## Schémata {#schematic-diagrams}
 
-Kompletní schéma — napájení a nabíječka i ADC pro monitorování napětí — je k dispozici jako PDF:
+Kompletní schéma (napájení a nabíječka i ADC pro monitorování napětí) je k dispozici jako PDF:
 
 - [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x10-r1.1.pdf)
 - [Interaktivní prohlížeč CHESTER-X10](pathname:///download/ibom/hio-chester-x10-r1.1.html)

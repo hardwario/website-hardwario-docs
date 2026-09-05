@@ -11,15 +11,15 @@ configuration, drive its shell, update its firmware, and reboot it.
 
 The app is documented in full under **APPS**:
 
-- [**HARDWARIO Manager**](/apps/hardwario-manager) — what the app does, and how to install it
-- [**CHESTER over Bluetooth**](/apps/hardwario-manager/chester) — the CHESTER section
-- [**Connect and pair**](/apps/hardwario-manager/chester/connect) — scanning the device QR code, the passkey, and pairing
-- [**Device info**](/apps/hardwario-manager/chester/device-info) — serial number, firmware, uptime, and the device controls
-- [**Configuration**](/apps/hardwario-manager/chester/configuration) — the guided and full configuration views
-- [**Terminal**](/apps/hardwario-manager/chester/terminal) — the device shell over Bluetooth
-- [**Tools**](/apps/hardwario-manager/chester/tools) — firmware update, reboot, factory reset
-- [**BLE tags**](/apps/hardwario-manager/chester/ble-tags) — bind external BLE sensor tags to slots
-- [**Troubleshooting**](/apps/hardwario-manager/chester/troubleshooting) — connection, pairing and update problems
+- [**HARDWARIO Manager**](/apps/hardwario-manager): what the app does, and how to install it
+- [**CHESTER over Bluetooth**](/apps/hardwario-manager/chester): the CHESTER section
+- [**Connect and pair**](/apps/hardwario-manager/chester/connect): scanning the device QR code, the passkey, and pairing
+- [**Device info**](/apps/hardwario-manager/chester/device-info): serial number, firmware, uptime, and the device controls
+- [**Configuration**](/apps/hardwario-manager/chester/configuration): the guided and full configuration views
+- [**Terminal**](/apps/hardwario-manager/chester/terminal): the device shell over Bluetooth
+- [**Tools**](/apps/hardwario-manager/chester/tools): firmware update, reboot, factory reset
+- [**BLE tags**](/apps/hardwario-manager/chester/ble-tags): bind external BLE sensor tags to slots
+- [**Troubleshooting**](/apps/hardwario-manager/chester/troubleshooting): connection, pairing and update problems
 
 :::info Which version this describes
 These pages describe the current HARDWARIO Manager app. If the phone has an

@@ -5,7 +5,7 @@ title: Modbus Registers
 
 # Modbus Registers
 
-The counted data can be read out from the device through Modbus TCP. There are eight holding registers in total - 2 for each channel. One holds the number of activations of the channel, the other one the number of deactivations.
+The counted data can be read out from the device through Modbus TCP. There are eight holding registers in total, 2 for each channel. One holds the number of activations of the channel, the other one the number of deactivations.
 
 | Address | Reading function | Description                              |
 | :------ | :--------------- | :--------------------------------------- |

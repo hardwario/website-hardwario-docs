@@ -39,8 +39,8 @@ Each channel can be used for these applications:
 
 * Digital input and output
 * Analog input and output
-* Voltage input 0 - 26 V**\***
-* Current loop 4 - 20 mA
+* Voltage input 0–26 V**\***
+* Current loop 4–20 mA
 * Dry contact input
 * NPN and PNP input
 * Power output

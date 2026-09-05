@@ -61,8 +61,8 @@ Modifikátory jsou:
 - `$sub`
 - `$mul`
 - `$div`
-- `$fpp` - počet desetinných míst čísla s plovoucí řádovou tečkou v JSON
-- `$key` - přejmenování klíče v **JSON**
+- `$fpp`: počet desetinných míst čísla s plovoucí řádovou tečkou v JSON
+- `$key`: přejmenování klíče v **JSON**
 
 Příklad níže vytváří klíč s názvem `temperature`. V zařízení **CHESTER** je potřeba hodnotu vynásobit 100, poté je v **HARDWARIO Cloud** automaticky vydělena 100 a ve výsledném **JSON** má číslo dvě desetinná místa.
 

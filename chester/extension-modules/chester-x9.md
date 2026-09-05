@@ -24,7 +24,7 @@ The **CHESTER-X9** is a **4-channel low-side switch** output module for the CHES
 
 CHESTER-X9 switches up to four external loads to ground. Each channel is a self-protected **NCV8412ASTT1G** low-side switch (U1–U4): the channel output is pulled to **GND** when the channel is turned on, and left open (high-impedance) when it is off. Every channel is **current-limited**, so an overload or short circuit is contained without damaging the module.
 
-Each switch is driven **directly by one of the CHESTER-X GPIO pins** (GP0–GP3) — CHESTER-X9 has no I²C or SPI controller of its own. The load and its supply are entirely external: the load is wired between an external DC source (3–28 V) and a channel output, and the external source ground is tied to the module ground. The module does not supply power to the load or to the CHESTER mainboard.
+Each switch is driven **directly by one of the CHESTER-X GPIO pins** (GP0–GP3). CHESTER-X9 has no I²C or SPI controller of its own. The load and its supply are entirely external: the load is wired between an external DC source (3–28 V) and a channel output, and the external source ground is tied to the module ground. The module does not supply power to the load or to the CHESTER mainboard.
 
 ## Key Features
 
@@ -32,7 +32,7 @@ Each switch is driven **directly by one of the CHESTER-X GPIO pins** (GP0–GP3)
 * **Self-Protected Switches:** NCV8412ASTT1G with per-channel current limiting, thermal shutdown, and ESD protection.
 * **Integrated Inductive Clamp:** Built-in drain-to-gate active clamp absorbs the turn-off energy of moderate inductive loads.
 * **Wide Load Voltage:** External load supply from 3 to 28 VDC.
-* **Direct GPIO Control:** Each channel is driven straight from a CHESTER-X GP pin — no I²C/SPI required.
+* **Direct GPIO Control:** Each channel is driven straight from a CHESTER-X GP pin, no I²C/SPI required.
 * **High Current:** 2 A continuous and up to a 5 A current limit per channel.
 
 ## Typical Applications
@@ -102,7 +102,7 @@ Unlike most CHESTER-X modules (which use **I²C** or **SPI**), CHESTER-X9 is con
 | GP2 / A2 | CH3 | U3 | OUT2 |
 | GP3 / A3 | CH4 | U4 | OUT3 |
 
-The slot also carries the I²C bus (SDA/SCL), but CHESTER-X9 uses no I²C device — all four channels are switched by the GP pins alone.
+The slot also carries the I²C bus (SDA/SCL), but CHESTER-X9 uses no I²C device. All four channels are switched by the GP pins alone.
 
 ## Switch and Load Connection
 
@@ -150,7 +150,7 @@ CHESTER-X9 can be used as part of the CHESTER SDK using the `ctr_x9_a` and `ctr_
 
 ## Schematic Diagrams
 
-The complete schematic — showing the four NCV8412ASTT1G low-side switches and the connector mapping — is available as a PDF:
+The complete schematic, showing the four NCV8412ASTT1G low-side switches and the connector mapping, is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x9-r1.0.pdf)
 - [Interactive CHESTER-X9 browser](pathname:///download/ibom/hio-chester-x9-r1.0.html)

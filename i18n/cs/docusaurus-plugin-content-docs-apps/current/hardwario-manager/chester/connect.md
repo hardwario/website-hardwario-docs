@@ -13,7 +13,7 @@ aplikace průvodce **Set up CHESTER**: *Scan QR*, pak *Connect & pair*.
 
 ---
 
-## Naskenování QR kódu zařízení — běžná cesta {#scan-the-device-qr--the-usual-path}
+## Naskenování QR kódu zařízení – běžná cesta {#scan-the-device-qr--the-usual-path}
 
 QR kód na etiketě zařízení CHESTER zařízení identifikuje **a** umožňuje aplikaci
 dohledat jeho Bluetooth passkey, takže párování nevyžaduje žádné psaní.
@@ -26,8 +26,8 @@ dohledat jeho Bluetooth passkey, takže párování nevyžaduje žádné psaní.
 Během práce zobrazuje průvodce **Connecting to CHESTER…**. Jakmile je passkey
 známý, objeví se karta:
 
-> **Pairing automatically** — No need to type anything. If Android shows a
-> Bluetooth passkey prompt, it's already filled in — just confirm it.
+> **Pairing automatically**: No need to type anything. If Android shows a
+> Bluetooth passkey prompt, it's already filled in, just confirm it.
 
 Passkey je na kartě zobrazený a zároveň zkopírovaný do schránky, takže ho můžete
 vložit, kdyby si o něj telefon řekl.
@@ -51,7 +51,7 @@ zaplněný seznam a **Rescan** vyhledá znovu. Klepnutím na zařízení se při
 
 :::caution Bez QR kódu není passkey
 K zařízení dosaženému touhle cestou se žádný passkey nedohledá, takže si párovací
-dialog telefonu o šestimístný passkey řekne. Přečtete ho z QR etikety zařízení —
+dialog telefonu o šestimístný passkey řekne. Přečtete ho z QR etikety zařízení:
 otevřete QR kód v jakékoli aplikaci kamery a stránka, kterou otevře, passkey
 zobrazí. Zařízení připojená touto cestou se navíc nepřidávají do
 **Recent devices**.
@@ -68,7 +68,7 @@ Zařízení, ke kterým jste se připojili přes QR kód, si aplikace pamatuje. 
 je vypisuje pod **Recent devices**, každé s **Tap to reconnect**; ikona koše
 zařízení ze seznamu odebere.
 
-Ukládá se jen sériové číslo a název — žádné klíče ani tajné údaje.
+Ukládá se jen sériové číslo a název, žádné klíče ani tajné údaje.
 
 ---
 
@@ -85,6 +85,6 @@ na dálku. Viz [**Sdílení terminálové session**](./shared-sessions.md).
 Průvodce vystřídá menu CHESTER. Pokračujte na
 [**Informace o zařízení**](./device-info.md) nebo [**Konfiguraci**](./configuration.md).
 
-Pokud připojení selže, podívejte se na [**Řešení problémů**](./troubleshooting.md) —
-aplikace selhání klasifikuje a řekne, co dělat, přičemž surová chyba zůstává pod
+Pokud připojení selže, podívejte se na [**Řešení problémů**](./troubleshooting.md).
+Aplikace selhání klasifikuje a řekne, co dělat, přičemž surová chyba zůstává pod
 rozbalovacím prvkem **Technical details**.

@@ -24,7 +24,7 @@ import Image from '@theme/IdealImage';
 
 CHESTER-X8 měří zrychlení ve třech osách nízkošumovým MEMS akcelerometrem **ADXL355** s malým driftem. Nabízí volitelné rozsahy **±2 g / ±4 g / ±8 g** a rozlišení až **3,9 μg/LSB** (v rozsahu ±2 g) s malým offsetem při nulovém g. ADXL355 se k základní desce CHESTER připojuje po **I²C** na pevné adrese **0x1D**; jeho dva výstupy přerušení (INT1, INT2) jsou vyvedené na piny GP0 a GP1 slotu.
 
-Kromě akcelerometru na desce svorkovnice modulu **vyvádí** sběrnici I²C (SCL/SDA), dvě uživatelské linky GPIO (DIO1, DIO2) a napájecí větve (VDD 3.0 V, +V, GND). Můžete tak na stejnou sběrnici připojit externí zařízení I²C nebo obě linky GPIO použít přímo. Modul nemá na desce žádný regulátor napětí — běží z napájecích větví zařízení CHESTER.
+Kromě akcelerometru na desce svorkovnice modulu **vyvádí** sběrnici I²C (SCL/SDA), dvě uživatelské linky GPIO (DIO1, DIO2) a napájecí větve (VDD 3.0 V, +V, GND). Můžete tak na stejnou sběrnici připojit externí zařízení I²C nebo obě linky GPIO použít přímo. Modul nemá na desce žádný regulátor napětí. Běží z napájecích větví zařízení CHESTER.
 
 ## Klíčové vlastnosti {#key-features}
 
@@ -95,7 +95,7 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 
 ### Rozhraní k hostu (I²C) {#host-interface-ic}
 
-CHESTER-X8 komunikuje se základní deskou CHESTER po standardní sběrnici **I²C**. Akcelerometr **ADXL355** na desce sedí na pevné adrese I²C **0x1D** (propojka ASEL je uzemněná). Tatáž sběrnice I²C je vyvedená na svorkovnici (SCL/SDA), takže ji mohou využívat i externí zařízení I²C — jen se vyhněte druhému zařízení na adrese 0x1D.
+CHESTER-X8 komunikuje se základní deskou CHESTER po standardní sběrnici **I²C**. Akcelerometr **ADXL355** na desce sedí na pevné adrese I²C **0x1D** (propojka ASEL je uzemněná). Tatáž sběrnice I²C je vyvedená na svorkovnici (SCL/SDA), takže ji mohou využívat i externí zařízení I²C. Jen se vyhněte druhému zařízení na adrese 0x1D.
 
 Modul používá piny GP slotu takto:
 
@@ -148,7 +148,7 @@ Modul CHESTER-X8 lze použít s různými konfiguracemi základních desek CHEST
 
 ## Schémata {#schematic-diagrams}
 
-Kompletní schéma — akcelerometr ADXL355, jeho rozhraní I²C a vedení přerušení a vyvedení na svorkovnici — je k dispozici jako PDF:
+Kompletní schéma (akcelerometr ADXL355, jeho rozhraní I²C a vedení přerušení a vyvedení na svorkovnici) je k dispozici jako PDF:
 
 - [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x8-r1.0.pdf)
 - [Interaktivní prohlížeč CHESTER-X8](pathname:///download/ibom/hio-chester-x8-r1.0.html)

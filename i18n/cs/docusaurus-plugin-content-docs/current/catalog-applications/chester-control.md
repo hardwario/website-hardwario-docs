@@ -13,9 +13,9 @@ Tento článek popisuje základní funkcionalitu, hardware a ukázkovou **JSON**
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps) – jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md) – jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](../category/platform-connectivity) – jak pracovat s interaktivní konzolí.
+- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Správa platformy**](../category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -44,11 +44,11 @@ Navíc **CHESTER Control** umožňuje vzdálené řízení 4 digitálních výst
 
 Katalogový hardware **CHESTER Control** se skládá z těchto objednacích kódů:
 
-* `CHESTER-M-BCGLS` – Standardní základní deska
+* `CHESTER-M-BCGLS`: Standardní základní deska
 
-* `CHESTER-X0B:A` – Vstupní modul (4 kanály)
+* `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
-* `CHESTER-X4:B` – Step-down + výstupy (4 kanály)
+* `CHESTER-X4:B`: Step-down + výstupy (4 kanály)
 
 Více podrobností najdete v [**Objednacích kódech**](../ordering-codes.md).
 
@@ -56,13 +56,13 @@ Více podrobností najdete v [**Objednacích kódech**](../ordering-codes.md).
 
 Katalogový hardware **CHESTER Control Z** se skládá z těchto objednacích kódů:
 
-* `CHESTER-M-BCGLS` – Standardní základní deska
+* `CHESTER-M-BCGLS`: Standardní základní deska
 
-* `CHESTER-X0B:A` – Vstupní modul (4 kanály)
+* `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
-* `CHESTER-X4:B` – Step-down + výstupy (4 kanály)
+* `CHESTER-X4:B`: Step-down + výstupy (4 kanály)
 
-* `CHESTER-Z1` – Záložní modul
+* `CHESTER-Z1`: Záložní modul
 
 Více podrobností najdete v [**Objednacích kódech**](../ordering-codes.md).
 
@@ -473,17 +473,17 @@ import TabItem from '@theme/TabItem';
 
 ## Seznam změn {#changelog}
 
-### v4.0.0 — 2026-08-10 {#v400--2026-08-10}
+### v4.0.0 – 2026-08-10 {#v400--2026-08-10}
 
 - **Změněno**: Snížena maximální kapacita termometrů 1-Wire (10 → 5) a kapacita půdních senzorů (10 → 3) pro snížení využití RAM
 
-### v3.5.5 — 2026-06-22 {#v355--2026-06-22}
+### v3.5.5 – 2026-06-22 {#v355--2026-06-22}
 
-- **Změněno**: Zmenšena paměťová náročnost — data půdních senzorů a termometrů se nyní alokují dynamicky
+- **Změněno**: Zmenšena paměťová náročnost: data půdních senzorů a termometrů se nyní alokují dynamicky
 
-### v3.5.0 — 2025-12-03 {#v350--2025-12-03}
+### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Podpora LoRaWAN — jediný firmware binárka pro LTE i LoRaWAN; režim se volí pomocí `app config mode lte` / `app config mode lrw`
+- **Přidáno**: Podpora LoRaWAN: jediný firmware binárka pro LTE i LoRaWAN; režim se volí pomocí `app config mode lte` / `app config mode lrw`
 - **Přidáno**: Interval downlink watchdogu (`downlink-wdg-interval`) pro detekci ztráty komunikace s cloudem
 - **Přidáno**: Konfigurovatelný interval dotazování (`interval-poll`) pro frekvenci dotazování cloudu
 - **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); předchozí firmware pro Cloud v1 zůstává samostatně dostupný

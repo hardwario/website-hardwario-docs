@@ -44,7 +44,7 @@ If you prefer a video guide, you can watch this video for the older Playground v
 
 ## ZeRGBA to hex RGB values - Example
 
-Blynk color values need to be transformed to **proper hexadecimal RGB string**. You can use the function block in the Node-RED and paste the code below. Remember to configure **ZeRGBa to MERGE mode** and the range of values has to be set for all three channels to **0 - 255**
+Blynk color values need to be transformed to **proper hexadecimal RGB string**. You can use the function block in the Node-RED and paste the code below. Remember to configure **ZeRGBa to MERGE mode** and the range of values has to be set for all three channels to **0–255**
 
 :::info
 

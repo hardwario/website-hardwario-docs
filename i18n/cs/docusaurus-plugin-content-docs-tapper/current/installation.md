@@ -56,7 +56,7 @@ Základní instalace klientské aplikace TAPPER.
 
 1. Klikněte na **CHOOSE STORAGE** a vyberte cílovou MicroSD kartu.
 
-1. Klikněte na **NEXT** – nástroj se zeptá na přizpůsobení nastavení – klikněte na **EDIT SETTINGS**.
+1. Klikněte na **NEXT**: nástroj se zeptá na přizpůsobení nastavení – klikněte na **EDIT SETTINGS**.
 
 1. Zaškrtněte **Set hostname**.
 

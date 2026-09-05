@@ -152,7 +152,7 @@ CHESTER-X10 can be used as part of the CHESTER SDK using the `ctr_x10` shield, o
 
 ## Schematic Diagrams
 
-The complete schematic — covering the power supply and charger, and the voltage-monitoring ADC — is available as a PDF:
+The complete schematic, covering the power supply and charger, and the voltage-monitoring ADC, is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x10-r1.1.pdf)
 - [Interactive CHESTER-X10 browser](pathname:///download/ibom/hio-chester-x10-r1.1.html)

@@ -7,14 +7,14 @@ import TabItem from '@theme/TabItem';
 # Sending Downlinks
 
 You can command devices over the API too. A downlink is **queued** and delivered
-the next time the device boots, sends an uplink, or polls the Cloud — so the
+the next time the device boots, sends an uplink, or polls the Cloud, so the
 response may not be immediate (see [**Downlink**](/cloud/downlink)). There are three
 kinds, each with its own endpoint under `/v2/spaces/{space_id}/devices/{device_id}`:
 
 <Tabs>
 <TabItem value="config" label="Config" default>
 
-`POST …/devices/{device_id}/configs` — body is a JSON **array of `app config`
+`POST …/devices/{device_id}/configs`: the body is a JSON **array of `app config`
 commands**:
 
 ```bash
@@ -27,13 +27,13 @@ curl -X POST \
 
 :::warning Do not send `config save`
 The Cloud applies and saves configuration automatically. Adding `config save`
-yourself can double-apply the change — omit it.
+yourself can double-apply the change, so omit it.
 :::
 
 </TabItem>
 <TabItem value="shell" label="Shell command">
 
-`POST …/devices/{device_id}/commands` — body is a JSON **array of shell commands**;
+`POST …/devices/{device_id}/commands`: the body is a JSON **array of shell commands**;
 you'll get each command's response back on the message:
 
 ```bash
@@ -47,7 +47,7 @@ curl -X POST \
 </TabItem>
 <TabItem value="data" label="Data">
 
-`POST …/devices/{device_id}/downlinks` — body is a JSON **object** that your device
+`POST …/devices/{device_id}/downlinks`: the body is a JSON **object** that your device
 firmware decodes:
 
 ```bash

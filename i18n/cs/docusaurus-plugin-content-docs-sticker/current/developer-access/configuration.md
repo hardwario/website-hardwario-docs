@@ -55,7 +55,7 @@ Zápis přes `config` změní nastavení v RAM a projeví se okamžitě, ale **n
 | `config interval-sample` | `0`, nebo `5`-`3600` (sekundy) | Jak často se vzorkují senzory. `0` znamená jeden vzorek vždy těsně před reportem. |
 | `config interval-report` | `60`-`86400` (sekundy) | Jak často se posílá report uplinkem. Výchozí `900` (15 minut). |
 
-**Příklad** - report každých 10 minut:
+**Příklad**: report každých 10 minut:
 
 ```bash
 config interval-report 600
@@ -84,7 +84,7 @@ settings save
 | `config lrw-link-check-interval` | `0`-`255` | Vyžádá LinkCheckReq každý N-tý uplink. `0` = vypnuto. Výchozí `5`. |
 | `config lrw-link-check-fail-rejoin` | `1`-`255` | Počet selhání kontroly spojení, po kterých se zkusí rejoin OTAA. Výchozí `5`. |
 
-**Příklad** - EU868 s OTAA a zapnutím vysílání:
+**Příklad**: EU868 s OTAA a zapnutím vysílání:
 
 ```bash
 config lrw-region eu868

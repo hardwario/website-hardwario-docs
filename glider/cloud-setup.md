@@ -21,8 +21,8 @@ This page is a focused walk-through of the cloud pairing. For the full end-to-en
 :::info
 If you do not have a console set up yet, follow one of these first:
 
-- [**RTT Console (J-Link)**](console/rtt-jlink.md) - for development setups with a J-Link probe.
-- [**AT Console (USB-C)**](console/usb-at.md) - recommended for first-time provisioning.
+- [**RTT Console (J-Link)**](console/rtt-jlink.md): for development setups with a J-Link probe.
+- [**AT Console (USB-C)**](console/usb-at.md): recommended for first-time provisioning.
 :::
 
 ## Step 1 - Read the serial number and claim token
@@ -57,7 +57,7 @@ $INFO: "serial-number","2163212289"
 $INFO: "claim-token","ab01ad36ab1234567890abcdef..."
 ```
 
-Write down the values for **`serial-number`** and **`claim-token`** - you need both in the next step.
+Write down the values for **`serial-number`** and **`claim-token`**. You need both in the next step.
 
 ## Step 2 - Create the device in HARDWARIO Cloud
 
@@ -65,9 +65,9 @@ Write down the values for **`serial-number`** and **`claim-token`** - you need b
 2. Open the **space** you want the device to live in (or create a new one).
 3. Press **Create new device**.
 4. Fill in:
- - **Name** - any human-readable label, e.g. `Warehouse-A freezer`.
- - **Serial number** - the value from Step 1.
- - **Claim token** - the value from Step 1.
+ - **Name**: any human-readable label, e.g. `Warehouse-A freezer`.
+ - **Serial number**: the value from Step 1.
+ - **Claim token**: the value from Step 1.
 5. Press **Create**.
 
 The device now appears in your space.
@@ -96,7 +96,7 @@ The payload structure is documented on the [**CBOR Payload**](payload.md) page.
 | Device shows as **offline** in the cloud | Wait up to 5 minutes for the first uplink. Verify the SIM is active and has data. Force `app send`. |
 | `AT$INFO?` shows an empty claim token | The device has not been provisioned. Contact HARDWARIO support. |
 | Messages arrive but data fields look wrong | Confirm that the cloud has the correct CBOR decoder for this firmware. See [**CBOR Payload**](payload.md). |
-| Device disconnects every 36 hours | Downlink watchdog reset - see `app config downlink-wdg-interval` in [**Configuration**](configuration.md). |
+| Device disconnects every 36 hours | Downlink watchdog reset, see `app config downlink-wdg-interval` in [**Configuration**](configuration.md). |
 
 #### Reading firmware logs
 

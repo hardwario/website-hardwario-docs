@@ -1,7 +1,7 @@
 ---
 slug: chester-x6
 title: CHESTER-X6 (S-Wire bus)
-description: HARDWARIO S-Wire bus extension module for the CHESTER platform — connects low-power S-Wire peripherals over a 3-wire link (+5 V, GND, DATA), with an on-board 5 V boost to power them and an I²C-controlled UART bridge.
+description: HARDWARIO S-Wire bus extension module for the CHESTER platform. It connects low-power S-Wire peripherals over a 3-wire link (+5 V, GND, DATA), with an on-board 5 V boost to power them and an I²C-controlled UART bridge.
 keywords: [CHESTER-X6, S-Wire, S-Wire bus, HARDWARIO S-Wire, peripherals, SC16IS740, TCA9534A, I2C, UART bridge, 5V boost, CHESTER]
 ---
 import Image from '@theme/IdealImage';
@@ -22,14 +22,14 @@ The **CHESTER-X6** is a **HARDWARIO S-Wire bus** extension module for the CHESTE
 
 ## Module Overview
 
-CHESTER-X6 connects low-power **S-Wire** peripherals to the CHESTER platform over a simple 3-wire link — **+5 V**, **GND**, and a single **DATA** line. The S-Wire protocol runs on a UART engine provided by an **SC16IS740** I²C-to-UART bridge; a transistor line driver converts the bridge's UART signals to the single half-duplex 5 V DATA line, with ESD protection. The module is controlled entirely over **I²C** — there are two I²C devices: the UART bridge and a **TCA9534A** GPIO expander that switches the peripheral power, resets the bridge, and handles its interrupt.
+CHESTER-X6 connects low-power **S-Wire** peripherals to the CHESTER platform over a simple 3-wire link: **+5 V**, **GND**, and a single **DATA** line. The S-Wire protocol runs on a UART engine provided by an **SC16IS740** I²C-to-UART bridge; a transistor line driver converts the bridge's UART signals to the single half-duplex 5 V DATA line, with ESD protection. The module is controlled entirely over **I²C**. There are two I²C devices: the UART bridge and a **TCA9534A** GPIO expander that switches the peripheral power, resets the bridge, and handles its interrupt.
 
 An on-board boost converter (**TPS61099**) generates the regulated **5 V** that powers the connected peripherals. Because it steps up from the CHESTER +V rail, the module can supply a clean 5 V to the peripherals **even when the CHESTER runs from a battery**. The 5 V output is switched on under I²C control (via the expander), so peripheral power can be turned off between reads to save energy.
 
 ## Key Features
 
 * **HARDWARIO S-Wire Interface:** Connects low-power S-Wire peripherals over a 3-wire link (+5 V, GND, DATA).
-* **I²C Controlled:** Two I²C devices — the SC16IS740 UART bridge (0x4D) and the TCA9534A expander (0x39); no GP pins are used.
+* **I²C Controlled:** Two I²C devices, the SC16IS740 UART bridge (0x4D) and the TCA9534A expander (0x39); no GP pins are used.
 * **On-board 5 V Boost:** TPS61099 provides a regulated 5 V for the peripherals, even when the CHESTER runs from a battery.
 * **Switchable Peripheral Power:** The 5 V output is enabled over I²C, so it can be turned off between reads.
 * **Protected DATA Line:** Half-duplex single-wire driver with ESD protection.
@@ -96,14 +96,14 @@ CHESTER-X6 is controlled entirely over the standard **I²C** bus; it has two I²
 
 | Device | I²C address | Function |
 | :--- | :--- | :--- |
-| SC16IS740IPW | 0x4D | I²C-to-UART bridge — the S-Wire UART engine (TX/RX to the line driver) |
-| TCA9534APW | 0x39 | GPIO expander — enables the 5 V boost, resets the bridge, and handles the bridge interrupt |
+| SC16IS740IPW | 0x4D | I²C-to-UART bridge. The S-Wire UART engine (TX/RX to the line driver) |
+| TCA9534APW | 0x39 | GPIO expander. Enables the 5 V boost, resets the bridge, and handles the bridge interrupt |
 
-All S-Wire traffic is carried over the UART bridge, and peripheral power, reset, and interrupt handling go through the expander — so the module needs only the I²C bus (SDA/SCL) and power from the slot. The slot's GP pins are not used.
+All S-Wire traffic is carried over the UART bridge, and peripheral power, reset, and interrupt handling go through the expander, so the module needs only the I²C bus (SDA/SCL) and power from the slot. The slot's GP pins are not used.
 
 ## S-Wire Connection
 
-Wire each S-Wire peripheral to the terminal block: **DATA** (pin 4 or 5), **+5V** (pin 2 or 7) for power, and **GND** (pin 3 or 6). Because the DATA, +5 V, +V, and GND pins are mirrored across the block, peripherals can be **daisy-chained** — wire one peripheral to pins 1–4 and another to pins 5–8, or loop the bus through.
+Wire each S-Wire peripheral to the terminal block: **DATA** (pin 4 or 5), **+5V** (pin 2 or 7) for power, and **GND** (pin 3 or 6). Because the DATA, +5 V, +V, and GND pins are mirrored across the block, peripherals can be **daisy-chained**: wire one peripheral to pins 1–4 and another to pins 5–8, or loop the bus through.
 
 All peripherals must share a common **GND** with the module. Enable the 5 V supply over I²C (via the expander) before communicating with the peripherals.
 
@@ -137,7 +137,7 @@ The CHESTER-X6 module can be used with various CHESTER mainboard configurations.
 
 ## Schematic Diagrams
 
-The complete schematic — the SC16IS740 UART bridge, the TCA9534A expander, the S-Wire line driver, and the 5 V boost converter — is available as a PDF:
+The complete schematic (the SC16IS740 UART bridge, the TCA9534A expander, the S-Wire line driver, and the 5 V boost converter) is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x6-r1.0.pdf)
 - [Interactive CHESTER-X6 browser](pathname:///download/ibom/hio-chester-x6-r1.0.html)

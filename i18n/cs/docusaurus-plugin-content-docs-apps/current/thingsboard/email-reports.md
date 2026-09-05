@@ -55,7 +55,7 @@ Nyní je potřeba předchozí kroky spojit a systému říct, kdy a komu se má 
    * **Notification template:** Zvolte e-mailovou šablonu připravenou v kroku 2.
 4. Přejděte na nastavení **Schedule**:
    * Zvolte správné časové pásmo.
-   * Nastavte interval opakování – u měsíčních reportů naplánujte spuštění na 1. den každého měsíce v čase, který vám vyhovuje (například 01:00).
+   * Nastavte interval opakování: u měsíčních reportů naplánujte spuštění na 1. den každého měsíce v čase, který vám vyhovuje (například 01:00).
 5. V sekci **Recipients** / **Targets** určete, kdo e-mail dostane. Můžete zvolit konkrétní uživatele, zákazníky nebo zadat e-mailové adresy přímo.
 6. Uložte rozvrh.
 

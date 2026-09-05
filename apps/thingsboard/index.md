@@ -171,7 +171,7 @@ Create user accounts, assign them to groups, and send activation links so your c
 
 ### 6. Share a Dashboard via Public Link
 
-Generate a read-only public URL for any dashboard and share it with clients or stakeholders — no login required.
+Generate a read-only public URL for any dashboard and share it with clients or stakeholders, with no login required.
 
 👉 [Public Link](public-link)
 

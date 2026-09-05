@@ -8,23 +8,23 @@ import TabItem from '@theme/TabItem';
 # Instalace ChirpStack Concentratord {#install-chirpstack-concentratord}
 
 Tato část instaluje a konfiguruje **ChirpStack Concentratord** pro modul LoRa koncentrátoru.
-**Hardwarová cesta se u obou variant liší** — vyberte níže záložku, která
+**Hardwarová cesta se u obou variant liší**, proto vyberte níže záložku, která
 odpovídá vašemu zařízení:
 
 :::info FIBER (CM4)
 
-Připojuje se přes **USB** — standardní konfigurace ChirpStack Concentratord.
+Připojuje se přes **USB**, standardní konfigurace ChirpStack Concentratord.
 
 :::
 
 :::info FIBER Lite (Pi 5)
 
-Připojuje se přes **SPI** pomocí HAT RAK2287 — jiný postup instalace.
+Připojuje se přes **SPI** pomocí HAT RAK2287, jiný postup instalace.
 
 :::
 
 <Tabs groupId="fiber-variant">
-<TabItem value="fiber" label="USB — FIBER (CM4)" default>
+<TabItem value="fiber" label="USB (FIBER, CM4)" default>
 
 1. Stáhněte a nainstalujte binárku **ChirpStack Concentratord**:
 
@@ -149,10 +149,10 @@ Připojuje se přes **SPI** pomocí HAT RAK2287 — jiný postup instalace.
    :::
 
 </TabItem>
-<TabItem value="fiber-lite" label="SPI, HAT RAK2287 — FIBER Lite (Pi 5)">
+<TabItem value="fiber-lite" label="SPI přes HAT RAK2287 (FIBER Lite, Pi 5)">
 
 Koncentrátor ve FIBER Lite je tatáž LoRaWAN koncentrátorová karta **RAK5146**, ale nasazená na
-Pi HAT **RAK2287** připojený přes **SPI** — jde tedy o jinou hardwarovou cestu (SPI zařízení +
+Pi HAT **RAK2287** připojený přes **SPI**, jde tedy o jinou hardwarovou cestu (SPI zařízení +
 GPIO reset pin) než u výše uvedené varianty připojené přes USB.
 
 :::tip
@@ -173,7 +173,7 @@ i profil výrobce pro tento hardware, který dodává mapování pinů (reset na
 
    Pokud je `dtparam=spi=on` zakomentovaný, odkomentujte ho (nebo ho přidejte) v souboru
    `/boot/firmware/config.txt` a restartujte. Pokud se poté žádné zařízení `/dev/spidev*`
-   neobjeví, HAT není správně nasazen — nepokračujte, dokud nebude.
+   neobjeví, HAT není správně nasazen. Nepokračujte, dokud nebude.
 
 1. Stáhněte a nainstalujte binárku **ChirpStack Concentratord**. ChirpStack nepublikuje
    Concentratord ve svém apt repozitáři ani jako GitHub release asset, pouze jako tarball na
@@ -238,7 +238,7 @@ i profil výrobce pro tento hardware, který dodává mapování pinů (reset na
    :::warning
 
    Kanálový plán `[gateway.concentrator]` je **povinný**. Profil výrobce dodává pouze
-   mapování pinů, RSSI offsety a tabulku zesílení — kanálový plán nedodává. Bez něj se
+   mapování pinů, RSSI offsety a tabulku zesílení, kanálový plán ale nedodává. Bez něj se
    každé rádio nastartuje jako `enabled: false` na frekvenci 0 a démon se natrvalo zablokuje na
    `Opening SPI communication interface` bez jakékoli chybové zprávy, což vypadá naprosto
    stejně jako závada v zapojení nebo detekci, ale jde čistě o problém konfigurace.
@@ -278,12 +278,12 @@ i profil výrobce pro tento hardware, který dodává mapování pinů (reset na
    :::warning
 
    `Group=chirpstack` a `UMask=0007` jsou zásadní. Na rozdíl od varianty s USB běží tato služba
-   jako **root**, aby se dostala k SPI zařízení a GPIO reset pinu — což znamená, že ZeroMQ IPC
+   jako **root**, aby se dostala k SPI zařízení a GPIO reset pinu, což znamená, že ZeroMQ IPC
    sockety, které vytváří v `/tmp`, by měly ve výchozím stavu `root:root` s režimem 0755. MQTT
    Forwarder se k nim připojuje jako neprivilegovaný uživatel `chirpstack` a připojení k unix
    socketu vyžaduje oprávnění pro **zápis**, takže by bylo odmítnuto. Tyto dvě řádky místo toho
    nastaví sockety na `root:chirpstack` s režimem 0770. Obě služby budou hlásit `active` v obou
-   případech — jediným symptomem je, že do MQTT nikdy nedorazí žádné uplinky.
+   případech. Jediným symptomem je, že do MQTT nikdy nedorazí žádné uplinky.
 
    :::
 

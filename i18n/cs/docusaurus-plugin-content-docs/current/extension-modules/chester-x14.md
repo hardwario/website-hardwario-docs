@@ -176,7 +176,7 @@ CHESTER-X14 lze v rámci CHESTER SDK použít přes shieldy `ctr_x14_a` a `ctr_x
 
 ## Schémata {#schematic-diagrams}
 
-Kompletní schéma — hlavní strana, rozhraní Ethernet a napájení — je k dispozici jako PDF:
+Kompletní schéma (hlavní strana, rozhraní Ethernet a napájení) je k dispozici jako PDF:
 
 - [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x14-r1.0.pdf)
 - [Interaktivní prohlížeč CHESTER-X14](pathname:///download/ibom/hio-chester-x14-r1.0.html)

@@ -31,10 +31,10 @@ lrw config show
 
 Důležité parametry:
 
-- `deveui` – Device EUI
-- `joineui` – JoinEUI / AppEUI
-- `band` – region
-- `mode` – OTAA / ABP
+- `deveui`: Device EUI
+- `joineui`: JoinEUI / AppEUI
+- `band`: region
+- `mode`: OTAA / ABP
 
 ### 1.2 Z The Things Stack {#12-from-the-things-stack}
 

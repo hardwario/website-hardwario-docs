@@ -4,10 +4,10 @@ title: Tags
 
 # Tags
 
-Tags group devices — and they're how [**Connectors**](/cloud/connectors) decide which
+Tags group devices, and they're how [**Connectors**](/cloud/connectors) decide which
 devices to forward: a connector processes messages from devices that share its tag.
 
-**Create a tag** — `POST /v2/spaces/{space_id}/tags` with a `name` and a `color`
+**Create a tag**: `POST /v2/spaces/{space_id}/tags` with a `name` and a `color`
 (hex):
 
 ```bash
@@ -18,7 +18,7 @@ curl -X POST \
   -d '{ "name": "temperature-sensors", "color": "#009cfa" }'
 ```
 
-**Assign a tag to a device** — update the device with the tag's `id`:
+**Assign a tag to a device**: update the device with the tag's `id`:
 
 ```bash
 curl -X PUT \

@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Managed Network Server
 
-The LoRaWAN Network Server for **EMBER** — **ChirpStack** or **The Things Stack** — can be either self-hosted on your own infrastructure (see [**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) and [**The Things Stack**](lorawan-network-server/lorawan-tts.md)) or operated by **HARDWARIO** as a managed service. This page describes the managed service. Besides the managed network server, **HARDWARIO** optionally provides a SIM card with connectivity for the **LTE** backhaul and secure remote access via **OpenVPN**.
+The LoRaWAN Network Server for **EMBER** (**ChirpStack** or **The Things Stack**) can be either self-hosted on your own infrastructure (see [**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) and [**The Things Stack**](lorawan-network-server/lorawan-tts.md)) or operated by **HARDWARIO** as a managed service. This page describes the managed service. Besides the managed network server, **HARDWARIO** optionally provides a SIM card with connectivity for the **LTE** backhaul and secure remote access via **OpenVPN**.
 
 To get the managed service, you need to have at least one **EMBER Hotspot**.
 
@@ -38,15 +38,15 @@ You need one of those methods for multifactor authentication:
 
 * **Google Authenticator** or a compatible application on mobile
 
-* **FIDO2** - universal 2nd factor (**U2F**) USB key (e.g., **Security Key Series**)
+* **FIDO2**: universal 2nd factor (**U2F**) USB key (e.g., **Security Key Series**)
 
-* **FIDO2** - universal 2nd Factor (**U2F**) passwordless (e.g., **YubiKey Bio Series**)
+* **FIDO2**: universal 2nd Factor (**U2F**) passwordless (e.g., **YubiKey Bio Series**)
 
 The services mentioned below are accessible through the **Applications** menu item. The services are identified by these abbreviations:
 
-* `cs` - **ChirpStack** application
+* `cs`: **ChirpStack** application
 
-* `nr` - **Node-RED** application
+* `nr`: **Node-RED** application
 
 To access the specific service, click on the **LAUNCH** button.
 
@@ -86,11 +86,11 @@ Every **CHESTER** device has to be registered in the **Application** section.
 
 The recommended option is to use the **ABP** method (Activation By Personalization). For this method, the user will need to specify (or generate) the following parameters:
 
-* **Device EUI** - also referred to as `DevEUI`
+* **Device EUI**: also referred to as `DevEUI`
 
-* **Network session key** - also referred to as `NwkSKey`
+* **Network session key**: also referred to as `NwkSKey`
 
-* **Application session key** - also referred to as `AppSKey`
+* **Application session key**: also referred to as `AppSKey`
 
 :::tip
 
@@ -275,13 +275,13 @@ function decode(buffer) {
 </p>
 </details>
 
-After decoding, you can further process the data - scalarizing, adding attributes, etc. The last action in the flow should be delivering the data through some common connector, e.g., an **HTTPS** request.
+After decoding, you can further process the data: scalarizing, adding attributes, etc. The last action in the flow should be delivering the data through some common connector, e.g., an **HTTPS** request.
 
 To tune and troubleshoot flow, you can use the `debug` node and the console view in **Node-RED**.
 
 ### Integration Examples
 
-Data can be passed to any service via the Internet for processing - e.g., visualization, data storage, and integration with business applications.
+Data can be passed to any service via the Internet for processing, e.g., visualization, data storage, and integration with business applications.
 
 Some common integration examples are:
 

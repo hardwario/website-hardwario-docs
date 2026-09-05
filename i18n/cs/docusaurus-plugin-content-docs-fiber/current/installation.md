@@ -8,24 +8,24 @@ import Image from '@theme/IdealImage';
 # Instalace {#installation}
 
 Tato část popisuje zavedení a konfiguraci systému Linux a celého softwarového stacku LoRaWAN +
-monitoring — **jeden společný postup pro obě hardwarové varianty FIBER**:
+monitoring, **jeden společný postup pro obě hardwarové varianty FIBER**:
 
-- **FIBER** — průmyslová verze založená na **Compute Module 4**.
-- **FIBER Lite** — testovací zařízení postavené na Raspberry Pi 5.
+- **FIBER**: průmyslová verze založená na **Compute Module 4**.
+- **FIBER Lite**: testovací zařízení postavené na Raspberry Pi 5.
 
 Obě varianty se liší pouze na úrovni hardwaru (nahrání firmwaru, RTC, připojení koncentrátoru
-LoRaWAN přes USB vs. SPI) — na těchto několika místech má stránka záložky. Vše ostatní,
+LoRaWAN přes USB vs. SPI). Na těchto několika místech má stránka záložky. Vše ostatní,
 včetně InfluxDB, Grafany a značkového dashboardu, je identické a instaluje se na obě varianty.
 
 :::warning Pro které zařízení to je?
 
-**Zařízení FIBER, které jste obdrželi, je již nastavené — na těchto stránkách není nic, co byste museli spouštět.** Dodává se
+**Zařízení FIBER, které jste obdrželi, je již nastavené. Na těchto stránkách není nic, co byste museli spouštět.** Dodává se
 jako hotové zařízení: operační systém, ChirpStack, koncentrátor i zbytek
 stacku jsou součástí jeho image a aktualizuje se jako celek, ne balíček po balíčku. Přejděte
 přímo na [Registrace brány a zařízení](installation/register-device) a na
 [**Hardwarové návody FIBER**](category/fiber-hardware-guides) kvůli displeji a senzorům 1-Wire.
 
-Tyto stránky popisují **postup sestavení** — jak se takový image skládá a jak rozjet
+Tyto stránky popisují **postup sestavení**: jak se takový image skládá a jak rozjet
 jednotku **FIBER Lite** z prázdné microSD karty. Postupujte podle nich u zařízení FIBER Lite nebo když sestavujete
 image FIBER od nuly.
 
@@ -48,7 +48,7 @@ Postupujte podle níže uvedených stránek v tomto pořadí:
 
 1. [**Nahrání Raspberry Pi OS**](installation/flash)
 1. [**Aktualizace systému**](installation/update-system)
-1. [**Konfigurace hardwaru**](installation/configure-hardware) - sběrnice I2C + RTC
+1. [**Konfigurace hardwaru**](installation/configure-hardware): sběrnice I2C + RTC
 1. [**Instalace ChirpStack**](installation/chirpstack)
 1. [**Instalace ChirpStack Concentratord**](installation/concentratord)
 1. [**Instalace ChirpStack MQTT Forwarder**](installation/mqtt-forwarder)
@@ -62,7 +62,7 @@ Postupujte podle níže uvedených stránek v tomto pořadí:
 
 ## Tok dat {#data-flow}
 
-ChirpStack, Node-RED, InfluxDB a Grafana běží všechny **na samotném zařízení** — nejsou potřeba
+ChirpStack, Node-RED, InfluxDB a Grafana běží všechny **na samotném zařízení**, nejsou potřeba
 žádné oddělené servery ani cloudové služby:
 
 <div style={{ width: '600px', margin: '0 auto' }}>

@@ -21,10 +21,10 @@ EMBER je průmyslová **brána LoRaWAN (IoT Hotspot)** postavená na **MikroTik 
 Popis hardwaru: https://docs.hardwario.com/ember/hardware-description/
 
 #### Budete potřebovat {#you-will-need}
-- Bránu EMBER (Hotspot) — její **antény LoRaWAN a LTE jsou už namontované vevnitř** a připojené
+- Bránu EMBER (Hotspot): její **antény LoRaWAN a LTE jsou už namontované vevnitř** a připojené
   z výroby, takže není potřeba žádnou anténu připojovat
 - *(Volitelně)* **externí anténu LoRaWAN** s konektorem typu N, pokud vám interní anténa nedá
-  potřebný dosah — objednává se zvlášť a její montáž znamená otevření krabičky
+  potřebný dosah. Objednává se zvlášť a její montáž znamená otevření krabičky
 - Zdroj napájení:
   - adaptér 24 V DC / napájecí zdroj 24 V DC, nebo
   - pasivní PoE 24 V DC přes port **WAN**
@@ -41,22 +41,22 @@ Popis hardwaru: https://docs.hardwario.com/ember/hardware-description/
 
 ## Krok 1: Nastavení zařízení EMBER {#step-1-set-up-your-ember}
 
-#### 1.1 Antény — už připojené {#11-antennas--already-connected}
+#### 1.1 Antény – už připojené {#11-antennas--already-connected}
 
-EMBER přichází se **dvěma anténami namontovanými uvnitř krabičky** — jednou pro **LoRaWAN**, jednou pro **LTE** —
-obě jsou připojené z výroby. **Není potřeba nic připojovat** a rádio nikdy nezůstane bez
+EMBER přichází se **dvěma anténami namontovanými uvnitř krabičky**, jednou pro **LoRaWAN** a jednou pro **LTE**,
+obě připojené z výroby. **Není potřeba nic připojovat** a rádio nikdy nezůstane bez
 antény, takže můžete bránu hned zapnout.
 
 **Externí** anténa je volitelná. Protože interní anténa obsazuje konektor u.FL na kartě,
-její montáž znamená otevřít krabičku a přesunout tento konektor na pigtail konektoru **LRW** — viz
+její montáž znamená otevřít krabičku a přesunout tento konektor na pigtail konektoru **LRW**, viz
 [Přechod na externí anténu](hardware-description.md#switching-to-an-external-antenna).
 
 Ať už používáte jakoukoli anténu, nastavte v RouterOS **`antenna-gain`** na zisk dané antény. Při špatné
-hodnotě brána vyzařuje nad zákonným limitem EIRP — viz
+hodnotě brána vyzařuje nad zákonným limitem EIRP, viz
 [Zisk antény a výstupní výkon](mikrotik/antenna-gain.md).
 
 :::caution Pokud otevřete krabičku
-Nikdy nezapínejte bránu s prázdným konektorem u.FL na kartě LoRa — vysílání do otevřeného
+Nikdy nezapínejte bránu s prázdným konektorem u.FL na kartě LoRa. Vysílání do otevřeného
 konektoru může kartu poškodit. Krabičku pečlivě znovu utěsněte; závisí na tom její krytí **IP67**.
 :::
 
@@ -88,7 +88,7 @@ Pro počáteční přístup a správu použijte rozhraní WAN (port RJ-45 nejví
 #### 2.1 Připojení k zařízení EMBER pomocí Winbox 4 {#21-connect-to-ember-using-winbox-4}
 
 Po otevření aplikace se podívejte do seznamu, kde byste měli vidět vaše zařízení **EMBER**.
-- Pokud je v seznamu více zařízení, podívejte se na desku EMBER — na její levé straně jsou dva ethernetové konektory se štítkem. Na štítku najděte **MAC adresu** — kombinaci čísel a písmen za textem **E01** (například: **E01: 48:A5:8A:4F:17:A6**).
+- Pokud je v seznamu více zařízení, podívejte se na desku EMBER. Na její levé straně jsou dva ethernetové konektory se štítkem. Na štítku najděte **MAC adresu**, kombinaci čísel a písmen za textem **E01** (například: **E01: 48:A5:8A:4F:17:A6**).
 - Vraťte se do **Winboxu** a najděte zařízení s **odpovídající MAC adresou**. Kliknutím na zařízení v seznamu jej vyberte.
 - Ujistěte se, že je **propojka** na desce **odstraněná**. Umístění propojky je na obrázku níže.
 ![Propojka, ethernetové porty a reset na zařízení EMBER](../../../../ember/images/ember-jumper-eth-ports.png)
@@ -197,8 +197,8 @@ Po opětovném připojení následujícím po restartu vložte do terminálu ten
 
 Spusťte stisknutím **Enter**.
 
-Samotné rozhraní LoRa — včetně volby `antenna=uFL` a hodnoty `antenna-gain` pro
-připojenou anténu — se nastavuje společně s vaším backendem. Viz
+Samotné rozhraní LoRa, včetně volby `antenna=uFL` a hodnoty `antenna-gain` pro
+připojenou anténu, se nastavuje společně s vaším backendem. Viz
 [Konfigurace Hotspotu → LoRaWAN](hotspot-configuration.md#lorawan) a
 [Zisk antény a výstupní výkon](mikrotik/antenna-gain.md).
 
@@ -220,8 +220,8 @@ HARDWARIO může LoRaWAN Network Server provozovat za vás jako plně **spravova
 Je určena pro rychlý start bez nutnosti provozovat vlastní infrastrukturu.
 
 Co služba obvykle poskytuje:
-- **ChirpStack** – LoRaWAN Network Server  
-- **Node-RED** – zpracování dat, dekódování payloadu a přeposílání  
+- **ChirpStack**: LoRaWAN Network Server  
+- **Node-RED**: zpracování dat, dekódování payloadu a přeposílání  
 - Předkonfigurované propojení mezi bránou, LNS a integracemi
 
 Kolem zařízení EMBER poskytuje HARDWARIO také volitelně **SIM kartu s konektivitou** pro LTE backhaul a **bezpečný vzdálený přístup přes OpenVPN**.
@@ -280,7 +280,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 
 ## Krok 5: Souhrnný kontrolní seznam {#step-5-summary-checklist}
 
-- Ke kartě LoRa je připojená anténa — interní z výroby, nebo externí na **LRW**
+- Ke kartě LoRa je připojená anténa: interní z výroby, nebo externí na **LRW**
 - Napájení připojeno (24 V DC nebo pasivní PoE 24 V přes WAN)
 - Venkovní instalace: konektory směřují dolů
 - PC připojeno k portu **WAN**, dostává DHCP lease, dosáhne na `172.31.255.1` (změněno z výchozí hodnoty)

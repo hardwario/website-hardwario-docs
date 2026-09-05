@@ -23,9 +23,9 @@ Apart from the current measurements, the device can be configured (on demand) to
 
 The catalog **CHESTER Current** hardware consists of the following ordering codes:
 
-- `CHESTER-M-CGLS` - Standard mainboard
-- `CHESTER-K1-C1-C2-C3-C4` - 4x Diff. Input + 5 V Boost
-- `CHESTER-E2-LP` - Enclosure with SMA pigtail
+- `CHESTER-M-CGLS`: Standard mainboard
+- `CHESTER-K1-C1-C2-C3-C4`: 4x Diff. Input + 5 V Boost
+- `CHESTER-E2-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
 
@@ -35,10 +35,10 @@ Firmware build variant: `west chester-update current --variant "CHESTER Current"
 
 The catalog **CHESTER Current Z** hardware consists of the following ordering codes:
 
-- `CHESTER-M-CGLS` - Standard mainboard
-- `CHESTER-K1-C1-C2-C3-C4` - 4x Diff. Input + 5 V Boost
-- `CHESTER-Z1` - Backup module
-- `CHESTER-E2-LP` - Enclosure with SMA pigtail
+- `CHESTER-M-CGLS`: Standard mainboard
+- `CHESTER-K1-C1-C2-C3-C4`: 4x Diff. Input + 5 V Boost
+- `CHESTER-Z1`: Backup module
+- `CHESTER-E2-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
 
@@ -50,9 +50,9 @@ The catalog application **CHESTER Current 1W** supports multiple external DS18B2
 
 The hardware of this application consists of the following ordering codes:
 
-- `CHESTER-M-CGLS` - Standard mainboard
-- `CHESTER-K1-C1-C2-C3-C4` - 4x Diff. Input + 5 V Boost
-- `CHESTER-E2-LP` - Enclosure with SMA pigtail
+- `CHESTER-M-CGLS`: Standard mainboard
+- `CHESTER-K1-C1-C2-C3-C4`: 4x Diff. Input + 5 V Boost
+- `CHESTER-E2-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
 
@@ -140,7 +140,7 @@ app config mode "lte"
 
 ## Specific Commands
 
-> **Info:** You can easily explore the whole command tree structure - start with the `help` command.
+> **Info:** You can easily explore the whole command tree structure. Start with the `help` command.
 
 ### Commands
 
@@ -351,9 +351,9 @@ The latest firmware is available in Catalog Applications [Firmware chapter](http
 </details>
 
 > **Info:** The payload structure for analog channels has changed in **v3.5.1**:
-> - `raw_rms` - Contains RMS measurements in mV
-> - `raw_mean` - Contains mean (average) measurements in mV
-> - `calibration` - Contains calibrated values based on the selected mode (0=avg, 1=rms)
+> - `raw_rms`: Contains RMS measurements in mV
+> - `raw_mean`: Contains mean (average) measurements in mV
+> - `calibration`: Contains calibrated values based on the selected mode (0=avg, 1=rms)
 
 ### LoRaWAN
 
@@ -384,7 +384,7 @@ The latest firmware is available in Catalog Applications [Firmware chapter](http
 
 ## Channel Calibration
 
-> **Danger:** When upgrading firmware from **v1.x.x** to version **v2.0.0 and newer** - it is necessary to [**backup configuration**](https://docs.hardwario.com/chester/catalog-applications/common-functionality#configuration-backup). In the case of using **CHESTER Current** also calibration data.
+> **Danger:** When upgrading firmware from **v1.x.x** to version **v2.0.0 and newer**, it is necessary to [**backup configuration**](https://docs.hardwario.com/chester/catalog-applications/common-functionality#configuration-backup). In the case of using **CHESTER Current** also calibration data.
 
 > **Caution:** The following section is provided only for reference. Usually, the **CHESTER Current** devices are ordered altogether with the current probes, and **HARDWARIO** does the channel calibration for their customers in such a case.
 
@@ -590,7 +590,7 @@ In **HARDWARIO**, we have a calibration kit for **CHESTER Current** made of seve
 6. Measure the channel, and write the reading as the `x1` value.
 7. Set the `y1` parameter to the value `90000`.
 
-   > **Info:** The value represents the multiplication of the number of turns on the coil and the power supply's current limit - in this example `90000`.
+   > **Info:** The value represents the multiplication of the number of turns on the coil and the power supply's current limit, in this example `90000`.
 
 8. Since we assumed a zero-current offset point, we can keep the `x0` parameter set as `0`.
 9. Save the configuration data (using the `config save` command) and verify the applied calibrated values.
@@ -599,17 +599,17 @@ In **HARDWARIO**, we have a calibration kit for **CHESTER Current** made of seve
 
 ## Changelog
 
-### v3.5.1 — 2025-12-08
+### v3.5.1 – 2025-12-08
 
-- **Added**: Shell commands for real-time per-channel calibration — set zero and span points interactively
-- **Added**: Downlink watchdog — detects loss of cloud communication
+- **Added**: Shell commands for real-time per-channel calibration: set zero and span points interactively
+- **Added**: Downlink watchdog: detects loss of cloud communication
 - **Improved**: LoRaWAN reliability and encoding
 - **Fixed**: Calibration range validation
 
-### v3.5.0 — 2025-12-03
+### v3.5.0 – 2025-12-03
 
-- **Added**: New variants — **CHESTER Current Z** (with CHESTER-Z1 backup module) and **CHESTER Current 1W** (with external DS18B20 1-Wire temperature sensors)
-- **Added**: LoRaWAN support — single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
+- **Added**: New variants: **CHESTER Current Z** (with CHESTER-Z1 backup module) and **CHESTER Current 1W** (with external DS18B20 1-Wire temperature sensors)
+- **Added**: LoRaWAN support: single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
 - **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available
 
 :::info

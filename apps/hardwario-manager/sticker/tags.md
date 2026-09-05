@@ -5,7 +5,7 @@ title: Organise devices with tags
 
 # Organise saved devices with tags
 
-Tags label and filter the devices in your saved list — for example by site,
+Tags label and filter the devices in your saved list, for example by site,
 customer, floor, or state of deployment. A device can carry as many tags as you
 need, and each tag has its own colour.
 

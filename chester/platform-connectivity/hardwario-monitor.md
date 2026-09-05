@@ -34,9 +34,9 @@ You can import a batch of console commands with the 📄 **Batch** button on the
 
 ### Console functions and shortcuts
 
-* ꜛ up and ꜜ down arrows - go through the command history
-* `Ctrl` + `R` - Open list of last used commands. By typing parts of the commands, you can search this list.
-* Search - in the bottom right corner 🔍 click and enter text to search, hit enter. Key `n` searches forward, `Shift` + `n` searches backward, F5 or clicking on the `Undo` button in the right column disables search mode.
+* ꜛ up and ꜜ down arrows: go through the command history
+* `Ctrl` + `R`: Open list of last used commands. By typing parts of the commands, you can search this list.
+* Search: in the bottom right corner 🔍 click and enter text to search, hit enter. Key `n` searches forward, `Shift` + `n` searches backward, F5 or clicking on the `Undo` button in the right column disables search mode.
 
 ## Bluetooth
 

@@ -172,8 +172,8 @@ HARDWARIO používá dekodéry, které lze použít v CHIRPSTACK nebo Node-RED. 
 
 Obsahuje soubory:
 
-- [cs-decoder.js](https://github.com/hardwario/chester-sdk/blob/main/applications/clime/codec/cs-decoder.js) – dekodér pro CHIRPSTACK
-- [nr-decoder.js](https://github.com/hardwario/chester-sdk/blob/main/applications/clime/codec/nr-decoder.js) – dekodér pro Node-RED
+- [cs-decoder.js](https://github.com/hardwario/chester-sdk/blob/main/applications/clime/codec/cs-decoder.js): dekodér pro CHIRPSTACK
+- [nr-decoder.js](https://github.com/hardwario/chester-sdk/blob/main/applications/clime/codec/nr-decoder.js): dekodér pro Node-RED
 
 ### Dekodér pro CHIRPSTACK {#chirpstack-decoder}
 

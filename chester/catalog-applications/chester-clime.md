@@ -34,9 +34,9 @@ The catalog application **CHESTER Clime** measures:
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
-* `CHESTER-S2` - External hygrometer
-* `CHESTER-E1-LP` - Enclosure with SMA pigtail
+* `CHESTER-M-BCGLS`: Standard mainboard
+* `CHESTER-S2`: External hygrometer
+* `CHESTER-E1-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -50,10 +50,10 @@ The catalog application **CHESTER Clime Z** measures:
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
-* `CHESTER-Z1` - Backup module
-* `CHESTER-S2` - External hygrometer
-* `CHESTER-E1-LP` - Enclosure with SMA pigtail
+* `CHESTER-M-BCGLS`: Standard mainboard
+* `CHESTER-Z1`: Backup module
+* `CHESTER-S2`: External hygrometer
+* `CHESTER-E1-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -81,10 +81,10 @@ the data buffer might be bigger than the UDP MTU and the packet will not be sent
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
-* `CHESTER-S1-BCMP` - Integrated multi-sensor
-* `CHESTER-X10` - External power 6-28V with Li-Ion battery
-* `CHESTER-E7-LP` - Enclosure with SMA pigtail
+* `CHESTER-M-BCGLS`: Standard mainboard
+* `CHESTER-S1-BCMP`: Integrated multi-sensor
+* `CHESTER-X10`: External power 6-28V with Li-Ion battery
+* `CHESTER-E7-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -98,8 +98,8 @@ The catalog application **CHESTER Clime 1W** supports multiple external DS18B20 
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
-* `CHESTER-E8-LP` - Enclosure with 8 cable glands (RM8L-4S)
+* `CHESTER-M-BCGLS`: Standard mainboard
+* `CHESTER-E8-LP`: Enclosure with 8 cable glands (RM8L-4S)
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -111,9 +111,9 @@ The catalog application **CHESTER Clime 1WH** supports **CHESTER-S2** + multiple
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
-* `CHESTER-S2` - External hygrometer
-* `CHESTER-E8-LP` - Enclosure with 8 cable glands (RM8L-4S)
+* `CHESTER-M-BCGLS`: Standard mainboard
+* `CHESTER-S2`: External hygrometer
+* `CHESTER-E8-LP`: Enclosure with 8 cable glands (RM8L-4S)
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -125,9 +125,9 @@ The catalog application **CHESTER Clime RTD** supports two external Pt1000 4-wir
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
-* `CHESTER-X3A:A` - 2x Pt100/Pt1000 interface
-* `CHESTER-E13-LP` - Enclosure with SMA pigtail and 2 cable PG7 glands
+* `CHESTER-M-BCGLS`: Standard mainboard
+* `CHESTER-X3A:A`: 2x Pt100/Pt1000 interface
+* `CHESTER-E13-LP`: Enclosure with SMA pigtail and 2 cable PG7 glands
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -139,9 +139,9 @@ The catalog application **CHESTER Clime TC** supports two external **type K** th
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
-* `CHESTER-X3B:A` - 2x Type K thermocouple interface
-* `CHESTER-E13-LP` - Enclosure with SMA pigtail and 2 cable PG7 glands
+* `CHESTER-M-BCGLS`: Standard mainboard
+* `CHESTER-X3B:A`: 2x Type K thermocouple interface
+* `CHESTER-E13-LP`: Enclosure with SMA pigtail and 2 cable PG7 glands
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -211,7 +211,7 @@ app config backup-report-disconnected true
 
 :::info
 
-You can easily explore the whole command tree structure - start with the `help` command.
+You can easily explore the whole command tree structure. Start with the `help` command.
 
 :::
 
@@ -1063,16 +1063,16 @@ In each structure with the current configuration, there are six aggregated value
 
 ## Changelog
 
-### v3.5.4 — 2026-04-14
+### v3.5.4 – 2026-04-14
 
-- **Changed**: Runtime CHESTER-Z detection — single firmware now works with or without CHESTER-Z module; separate **CHESTER Clime Z** variant removed
+- **Changed**: Runtime CHESTER-Z detection, so a single firmware now works with or without the CHESTER-Z module; separate **CHESTER Clime Z** variant removed
 - **Fixed**: Build failure for IAQ variant when both CHESTER-Z and CHESTER-X10 features are enabled simultaneously
 
-### v3.5.1 — 2025-12-08
+### v3.5.1 – 2025-12-08
 
-- **Added**: New variants — **CHESTER Clime SPS30** (particulate matter: PM1/PM2.5/PM10) and **CHESTER Clime Radon** (radon gas concentration)
-- **Added**: New variant — **CHESTER Clime TC** for two external Type K thermocouple sensors (via CHESTER-X3B)
-- **Improved**: DS18B20 1-Wire thermometer support — improved reliability and cleaner multi-sensor handling
+- **Added**: New variants: **CHESTER Clime SPS30** (particulate matter: PM1/PM2.5/PM10) and **CHESTER Clime Radon** (radon gas concentration)
+- **Added**: New variant: **CHESTER Clime TC** for two external Type K thermocouple sensors (via CHESTER-X3B)
+- **Improved**: DS18B20 1-Wire thermometer support, with improved reliability and cleaner multi-sensor handling
 - **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); Cloud v1 variants remain available in a separate firmware table
 - **Changed**: Single combined firmware binary for both LTE and LoRaWAN; network selected via `app config mode lte` / `app config mode lrw`
 - **Removed**: Clime 1W and Clime 1WH variants dropped from Cloud v2 firmware builds (remain available under Cloud v1)

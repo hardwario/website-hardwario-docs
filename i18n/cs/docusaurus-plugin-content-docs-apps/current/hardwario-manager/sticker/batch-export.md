@@ -1,12 +1,12 @@
 ---
 slug: batch-export
 title: Načtení více zařízení
-description: "Zachyťte konfiguraci mnoha zařízení v jedné session a vyexportujte je společně —"
+description: "Zachyťte konfiguraci mnoha zařízení v jedné session a vyexportujte je společně."
 ---
 
 # Načtení více zařízení STICKER (dávkový export) {#scan-multiple-stickers-batch-export}
 
-Zachyťte konfiguraci mnoha zařízení v jedné session a vyexportujte je společně —
+Zachyťte konfiguraci mnoha zařízení v jedné session a vyexportujte je společně,
 hodí se na inventuru, audity a záložení před změnou.
 
 ---
@@ -15,7 +15,7 @@ hodí se na inventuru, audity a záložení před změnou.
 
 1. Otevřete **HARDWARIO Manager** a přejděte na
    **STICKER → Configuration → Scan multiple (batch export)**.
-2. Zvolte, které sekce se mají zachytit — **LoRaWAN**, **Application**, **Sensors**,
+2. Zvolte, které sekce se mají zachytit: **LoRaWAN**, **Application**, **Sensors**,
    **Alarms**.
 3. Postupně přiložte telefon ke každému zařízení STICKER. Konfigurace každého
    zařízení se při přiložení zachytí automaticky a průběžný počet roste.

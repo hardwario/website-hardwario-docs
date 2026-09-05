@@ -6,7 +6,7 @@ title: Scan multiple devices
 # Scan multiple STICKERs (batch export)
 
 Capture the configuration of many devices in one session and export them
-together — useful for inventory, audits, and backups before a change.
+together, useful for inventory, audits, and backups before a change.
 
 ---
 
@@ -14,7 +14,7 @@ together — useful for inventory, audits, and backups before a change.
 
 1. Open **HARDWARIO Manager** and go to
    **STICKER → Configuration → Scan multiple (batch export)**.
-2. Choose which sections to capture — **LoRaWAN**, **Application**, **Sensors**,
+2. Choose which sections to capture: **LoRaWAN**, **Application**, **Sensors**,
    **Alarms**.
 3. Tap each STICKER in turn. Every device's configuration is captured
    automatically as you tap it, and the running count grows.

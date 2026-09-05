@@ -35,9 +35,9 @@ Dávku konzolových příkazů můžete importovat tlačítkem 📄 **Batch** na
 
 ### Funkce a klávesové zkratky konzole {#console-functions-and-shortcuts}
 
-* ꜛ nahoru a ꜜ dolů – procházení historie příkazů
+* ꜛ nahoru a ꜜ dolů: procházení historie příkazů
 * `Ctrl` + `R` – otevře seznam posledních použitých příkazů. Zapisováním částí příkazů můžete v tomto seznamu vyhledávat.
-* Vyhledávání – v pravém dolním rohu klikněte na 🔍, zadejte hledaný text a stiskněte enter. Klávesa `n` hledá dopředu, `Shift` + `n` hledá dozadu, F5 nebo kliknutí na tlačítko `Undo` v pravém sloupci režim vyhledávání vypne.
+* Vyhledávání: v pravém dolním rohu klikněte na 🔍, zadejte hledaný text a stiskněte enter. Klávesa `n` hledá dopředu, `Shift` + `n` hledá dozadu, F5 nebo kliknutí na tlačítko `Undo` v pravém sloupci režim vyhledávání vypne.
 
 ## Bluetooth {#bluetooth}
 

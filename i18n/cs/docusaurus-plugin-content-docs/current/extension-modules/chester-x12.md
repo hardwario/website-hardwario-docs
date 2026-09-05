@@ -118,7 +118,7 @@ Kromě SDA/SCL používá modul piny GP slotu:
 
 | Pin CHESTER-X | Signál | Zdroj / funkce |
 | :--- | :--- | :--- |
-| GP0 / A0 | INVALID# | MAX3226EEUE+ — indikace platné úrovně na přijímači RS-232 |
+| GP0 / A0 | INVALID# | MAX3226EEUE+. Indikace platné úrovně na přijímači RS-232 |
 | GP1 / A1 | ADC_EN | Zapíná měření vstupního napětí čipem TLA2021 |
 | GP2 / A2 | IRQ | Přerušení UART čipu SC16IS740IPW |
 | GP3 / A3 | FORCEOFF# | Vypnutí MAX3226EEUE+ (řízení nízké spotřeby) |
@@ -127,7 +127,7 @@ Vstup FORCEON transceiveru je připojený na vysokou úroveň, takže firmware m
 
 ## Připojení RS-232 {#rs-232-connection}
 
-Sériové zařízení zapojte do svorkovnice: **RS232 TX** (pin 5), **RS232 RX** (pin 6) a společná **GND** (pin 2, 4 nebo 8). Vyvedené jsou pouze datové linky pro vysílání a příjem — na konektoru nejsou k dispozici linky hardwarového handshakingu (RTS/CTS).
+Sériové zařízení zapojte do svorkovnice: **RS232 TX** (pin 5), **RS232 RX** (pin 6) a společná **GND** (pin 2, 4 nebo 8). Vyvedené jsou pouze datové linky pro vysílání a příjem. Na konektoru nejsou k dispozici linky hardwarového handshakingu (RTS/CTS).
 
 Rozhraní RS-232 **není galvanicky oddělené**, takže sériové zařízení a uzel CHESTER musí mít společnou zemní referenci.
 
@@ -167,7 +167,7 @@ CHESTER-X12 lze v rámci CHESTER SDK použít přes shieldy `ctr_x12_a` a `ctr_x
 
 ## Schémata {#schematic-diagrams}
 
-Kompletní schéma — hlavní strana, rozhraní a napájení — je k dispozici jako PDF:
+Kompletní schéma (hlavní strana, rozhraní a napájení) je k dispozici jako PDF:
 
 - [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x12-r1.2.pdf)
 - [Interaktivní prohlížeč CHESTER-X12](pathname:///download/ibom/hio-chester-x12-r1.2.html)

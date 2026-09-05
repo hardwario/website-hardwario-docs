@@ -17,8 +17,8 @@ Přejděte na **STICKER → Configuration**.
 | Vstupní akce | Co dělá |
 |---|---|
 | **Read configuration from the device** | Přečte, co je na zařízení, pak to upravíte a zapíšete zpět. Běžná cesta. |
-| **Scan multiple (batch export)** | Zachytí konfigurace mnoha zařízení v jedné session — viz [**Načtení více zařízení**](./batch-export.md) |
-| **Configure without reading** | Sestaví konfiguraci a zapíše ji do zařízení, i vypnutého — viz [**Konfigurace vypnutého zařízení**](./offline-configuration.md) |
+| **Scan multiple (batch export)** | Zachytí konfigurace mnoha zařízení v jedné session, viz [**Načtení více zařízení**](./batch-export.md) |
+| **Configure without reading** | Sestaví konfiguraci a zapíše ji do zařízení, i vypnutého, viz [**Konfigurace vypnutého zařízení**](./offline-configuration.md) |
 | **Configure from file** | Načte konfiguraci, kterou jste si uložili dříve (viz níž) |
 
 ---
@@ -32,11 +32,11 @@ dokud se konfigurace nepřečte. Pak otevřete sekci, kterou chcete změnit.
 
 | Sekce | Pokrývá |
 |---|---|
-| **LoRaWAN** | Region, režim aktivace, EUI a — v podskupině **Keys** — klíčový materiál pro zvolený režim |
+| **LoRaWAN** | Region, režim aktivace, EUI a. V podskupině **Keys**. Klíčový materiál pro zvolený režim |
 | **Measurement & reporting** | Intervaly vzorkování a reportování |
 | **Sensors** | Které senzory jsou zapnuté |
-| **History** | Jestli se měření ukládají a které kanály — viz [**Historie senzorů**](./sensor-history.md) |
-| **Alarms** | Sloty pravidel alarmů — viz [**Pravidla alarmů**](./alarms.md) |
+| **History** | Jestli se měření ukládají a které kanály, viz [**Historie senzorů**](./sensor-history.md) |
+| **Alarms** | Sloty pravidel alarmů, viz [**Pravidla alarmů**](./alarms.md) |
 
 :::info Klíče se řídí režimem aktivace
 **Keys** je uvnitř sekce LoRaWAN a ve výchozím stavu je sbalená. Zobrazuje jen
@@ -60,7 +60,7 @@ Další akce na obrazovce:
 
 | Akce | Efekt |
 |---|---|
-| **Apply template** | Před zápisem vyplní formulář z uložené šablony — viz [**Šablony**](./templates.md) |
+| **Apply template** | Před zápisem vyplní formulář z uložené šablony, viz [**Šablony**](./templates.md) |
 | **Revert changes** | Zahodí vaše úpravy |
 | **Revert to read values** | Vrátí jedno pole na hodnotu, kterou nahlásilo zařízení |
 | **Save as template** | Z aktuálních nastavení udělá znovupoužitelnou šablonu |
@@ -94,7 +94,7 @@ vašem seznamu [**Uložené STICKERy**](./saved-stickers.md).
 ## Použití konfigurace na více zařízeních {#reuse-a-configuration-across-devices}
 
 Pokud chcete mnoho zařízení nastavit stejně, uložte si **šablonu** a aplikujte ji
-na každé zařízení — přes NFC, nebo offline na vypnutá zařízení. Viz
+na každé zařízení, přes NFC nebo offline na vypnutá zařízení. Viz
 [**Šablony**](./templates.md).
 
 :::danger Factory a vendor resety

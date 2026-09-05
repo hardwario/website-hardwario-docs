@@ -13,9 +13,9 @@ Tento článek popisuje základní funkcionalitu, popis hardwaru a ukázkovou **
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps) – jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md) – jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](../category/platform-connectivity) – jak pracovat s interaktivní konzolí.
+- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Správa platformy**](../category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -60,9 +60,9 @@ Aplikace signalizuje události tlačítek na LED dvěma různými způsoby a zá
 
 Hardware katalogové aplikace **CHESTER Push** se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-CGLS` - základní deska CHESTER
-* `CHESTER-Z1-F` - čtyři tlačítka (další varianty viz [**Objednací kódy**](../ordering-codes.md#chester-z))
-* `CHESTER-E2-LP` - krabička se světlovodem a SMA anténním pigtailem
+* `CHESTER-M-CGLS`: základní deska CHESTER
+* `CHESTER-Z1-F`: čtyři tlačítka (další varianty viz [**Objednací kódy**](../ordering-codes.md#chester-z))
+* `CHESTER-E2-LP`: krabička se světlovodem a SMA anténním pigtailem
 
 ## Šablona krabičky {#enclosure-template}
 
@@ -277,9 +277,9 @@ import TabItem from '@theme/TabItem';
 
 ## Seznam změn {#changelog}
 
-### v3.5.0 — 2025-12-03 {#v350--2025-12-03}
+### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Podpora LoRaWAN — jediný binární firmware pro LTE i LoRaWAN; režim lze zvolit pomocí `app config mode lte` / `app config mode lrw`
+- **Přidáno**: Podpora LoRaWAN: jediný binární firmware pro LTE i LoRaWAN; režim lze zvolit pomocí `app config mode lte` / `app config mode lrw`
 - **Změněno**: Refaktorováno na nový LoRaWAN framework `app_lrw` s pokrytím jednotkovými testy
 - **Změněno**: Přijat protokol Cloud v2 (kódování CBOR, nové API endpointy); předchozí firmware pro Cloud v1 zůstává samostatně k dispozici
 

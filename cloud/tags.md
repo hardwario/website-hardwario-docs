@@ -5,7 +5,7 @@ title: Tags
 
 # Tags
 
-Tags are **named labels with a color** that you assign to both devices and connectors. They are the glue that connects devices to connectors — a message from a device is forwarded only to connectors that share at least one tag with that device.
+Tags are **named labels with a color** that you assign to both devices and connectors. They are the glue that connects devices to connectors: a message from a device is forwarded only to connectors that share at least one tag with that device.
 
 ## Why Tags?
 
@@ -25,7 +25,7 @@ Tags let you route messages flexibly without hardcoding device IDs anywhere:
 
    <div className="screenshot-narrow">
 
-   ![The "Create new tag" dialog — name, color picker, and live preview](images/tag-create.png)
+   ![The "Create new tag" dialog with name, color picker, and live preview](images/tag-create.png)
 
    </div>
 
@@ -33,8 +33,8 @@ Tags let you route messages flexibly without hardcoding device IDs anywhere:
 
 Tags can be assigned in two places:
 
-- **Device detail → Tags tab** — assign tags to a device
-- **Connector settings** — select which tags the connector listens to
+- **Device detail → Tags tab**: assign tags to a device
+- **Connector settings**: select which tags the connector listens to
 
 A device with no tags assigned will not trigger any connector.
 
@@ -44,8 +44,8 @@ Tags have an `access_type` field:
 
 | Value | Description |
 |---|---|
-| `write` | Full access — tag can be used for both reading messages and sending downlinks |
-| `read` | Read-only — tag can receive messages but cannot be used for downlinks |
+| `write` | Full access. Tag can be used for both reading messages and sending downlinks |
+| `read` | Read-only. Tag can receive messages but cannot be used for downlinks |
 
 ## Example Setup
 

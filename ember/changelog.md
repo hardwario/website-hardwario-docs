@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 # EMBER Changelog
 
-This page tracks all notable changes across the EMBER platform — including **firmware** and **hardware**. Use the tabs below to filter by change category.
+This page tracks all notable changes across the EMBER platform, including **firmware** and **hardware**. Use the tabs below to filter by change category.
 
 :::info
 
@@ -31,7 +31,7 @@ For RouterOS release notes, refer to [MikroTik Changelog](https://mikrotik.com/d
 
 No HARDWARIO-specific changes have been logged yet. Updates will appear here when new EMBER configurations, enclosure revisions, or HARDWARIO-side software changes are released.
 
-EMBER firmware is RouterOS by MikroTik — updated via the MikroTik update mechanism. No HARDWARIO-specific firmware changelog available.
+EMBER firmware is RouterOS by MikroTik, updated via the MikroTik update mechanism. No HARDWARIO-specific firmware changelog available.
 
 :::
 

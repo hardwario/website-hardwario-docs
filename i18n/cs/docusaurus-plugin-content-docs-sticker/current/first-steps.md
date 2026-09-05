@@ -37,11 +37,11 @@ Technické detaily najdete v [**popisu hardwaru**](hardware-description).
 
 Zařízení STICKER přichází s předinstalovanou jednou z katalogových aplikací:
 
-- **STICKER Clime** — Monitorování teploty, vlhkosti, osvětlení a barometrického tlaku.  
+- **STICKER Clime**: Monitorování teploty, vlhkosti, osvětlení a barometrického tlaku.  
   [Dokumentace →](catalog-applications/sticker-clime)
-- **STICKER Input** — Externí senzory (1-Wire, Machine Probe) a průmyslové vstupy (pulzy S0, logika 0–30 V).  
+- **STICKER Input**: Externí senzory (1-Wire, Machine Probe) a průmyslové vstupy (pulzy S0, logika 0–30 V).  
   [Dokumentace →](catalog-applications/sticker-input)
-- **STICKER Motion** — Detekce pohybu PIR s extrémně nízkou spotřebou a sledování zrychlení ve třech osách.  
+- **STICKER Motion**: Detekce pohybu PIR s extrémně nízkou spotřebou a sledování zrychlení ve třech osách.  
   [Dokumentace →](catalog-applications/sticker-motion)
 
 ---

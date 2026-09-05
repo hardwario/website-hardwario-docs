@@ -12,7 +12,7 @@ Open **HARDWARIO Manager → CHESTER**. If nothing is connected, the app shows t
 
 ---
 
-## Scan the device QR — the usual path
+## Scan the device QR – the usual path
 
 The QR code on the CHESTER label identifies the device **and** lets the app look
 up its Bluetooth passkey, so pairing needs no typing.
@@ -24,8 +24,8 @@ up its Bluetooth passkey, so pairing needs no typing.
 While it works, the wizard shows **Connecting to CHESTER…**. Once the passkey is
 known, a card appears:
 
-> **Pairing automatically** — No need to type anything. If Android shows a
-> Bluetooth passkey prompt, it's already filled in — just confirm it.
+> **Pairing automatically**: No need to type anything. If Android shows a
+> Bluetooth passkey prompt, it's already filled in, just confirm it.
 
 The passkey is also shown on the card and copied to the clipboard, so you can
 paste it if the phone asks for it.
@@ -50,7 +50,7 @@ narrow a crowded list, and **Rescan** to search again. Tap a device to connect.
 :::caution No QR means no passkey
 A device reached this way has no passkey looked up for it, so the phone's pairing
 prompt will ask you for the 6-digit passkey. You can read it from the device's
-QR label — open the QR in any camera app and the page it opens shows the passkey.
+QR label. Open the QR in any camera app and the page it opens shows the passkey.
 Devices connected this way are also not added to **Recent devices**.
 :::
 
@@ -65,7 +65,7 @@ Devices you connected to by QR are remembered. The wizard lists them under
 **Recent devices**, each with **Tap to reconnect**; the delete icon removes one
 from the list.
 
-Only the serial number and name are stored — no keys or secrets.
+Only the serial number and name are stored, no keys or secrets.
 
 ---
 
@@ -82,6 +82,6 @@ console remotely. See [**Share a terminal session**](./shared-sessions.md).
 The wizard is replaced by the CHESTER menu. Continue with
 [**Device info**](./device-info.md) or [**Configuration**](./configuration.md).
 
-If a connection fails, see [**Troubleshooting**](./troubleshooting.md) — the app
+If a connection fails, see [**Troubleshooting**](./troubleshooting.md). The app
 classifies the failure and tells you what to do, with the raw error kept behind a
 **Technical details** expander.

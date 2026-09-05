@@ -23,7 +23,7 @@ https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
 
 ## Prerequisites
 - Access to the EMBER management interface (**WebFig** or **WinBox**)
-- Your ChirpStack gateway endpoint (hostname/IP + UDP ports) — typically the **Gateway Bridge** endpoint
+- Your ChirpStack gateway endpoint (hostname/IP + UDP ports): typically the **Gateway Bridge** endpoint
 - If you are not using the HARDWARIO managed network server, point the LoRaWAN server address to **your own** LoRaWAN server (no VPN tunnels needed).
 
 ---
@@ -77,7 +77,7 @@ On MikroTik RouterOS, the gateway EUI is shown as **Gateway ID**:
 ---
 
 ## Payload decoder links (for end devices)
-EMBER (gateway) forwards packets only — payload decoding is configured **per end device/app** in ChirpStack.
+EMBER (gateway) forwards packets only. Payload decoding is configured **per end device/app** in ChirpStack.
 
 Example decoder (CHESTER Clime):
 - Codec folder: https://github.com/hardwario/chester-sdk/tree/main/applications/clime/codec

@@ -44,7 +44,7 @@ V tomto průvodci se naučíte, jak snadno aktualizovat firmware zařízení CHE
 
 6. Otevřete skener a naskenujte QR kód ze stránky s firmwarem.
 
-7. Firmware se stáhne automaticky — stačí kliknout na UPDATE FIRMWARE.
+7. Firmware se stáhne automaticky: stačí kliknout na UPDATE FIRMWARE.
 
 8. Bude to trvat přibližně 2 minuty. Nejprve se firmware nahraje do zařízení CHESTER.
 

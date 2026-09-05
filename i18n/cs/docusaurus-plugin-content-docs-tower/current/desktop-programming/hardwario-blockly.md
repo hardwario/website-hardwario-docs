@@ -72,12 +72,12 @@ Ve spodní části stránky. Zde najdete další ovládací prvky pro Blockly.
 
 Tlačítka na dolním panelu:
 
-- **Compile And Flash** – [**spustí kompilaci a poté přepne na kartu firmwaru**](#compiling-and-flashing), abyste mohli vytvořený firmware nahrát do zařízení.
-- **Save Workspace** – uloží aktuální pracovní plochu. Automatické ukládání je zapnuto ve výchozím nastavení.
-- **Export Workspace** – pracovní plochu můžete exportovat ve formátu **.xml**, abyste ji mohli distribuovat nebo později **importovat**.
-- **Import Workspace** – zde můžete importovat pracovní plochu ve formátu **.xml**.
-- **Show/Hide Code** – **zobrazí/skryje kód**, takže vidíte **vygenerovaný kód v jazyce C**.
-- **Return Home** – vrátí vás na domovskou stránku.
+- **Compile And Flash**: [**spustí kompilaci a poté přepne na kartu firmwaru**](#compiling-and-flashing), abyste mohli vytvořený firmware nahrát do zařízení.
+- **Save Workspace**: uloží aktuální pracovní plochu. Automatické ukládání je zapnuto ve výchozím nastavení.
+- **Export Workspace**: pracovní plochu můžete exportovat ve formátu **.xml**, abyste ji mohli distribuovat nebo později **importovat**.
+- **Import Workspace**: zde můžete importovat pracovní plochu ve formátu **.xml**.
+- **Show/Hide Code**: **zobrazí/skryje kód**, takže vidíte **vygenerovaný kód v jazyce C**.
+- **Return Home**: vrátí vás na domovskou stránku.
 
 :::note
 
@@ -174,22 +174,22 @@ Vlastní bloky můžete přidávat pomocí nástroje **Blocks Creator**.
 
 První příklad je jeden z našich předpřipravených modulů pro [**Button Module**](https://www.hardwario.store/p/button-module) systému TOWER. Zde vidíte strukturu souboru.
 
-- `category` – určuje, která kategorie bude použita pro bloky tohoto modulu (kategorie musí být obsažena mezi předpřipravenými nebo vašimi kategoriemi).
+- `category`: určuje, která kategorie bude použita pro bloky tohoto modulu (kategorie musí být obsažena mezi předpřipravenými nebo vašimi kategoriemi).
 
-- `global_variable` – zde můžete řádek po řádku přidat cokoli, co chcete umístit na začátek kódu.
+- `global_variable`: zde můžete řádek po řádku přidat cokoli, co chcete umístit na začátek kódu.
 
-- `application_init` – zde definujete blok, který půjde vždy do **kategorie Initialization** –
+- `application_init`: zde definujete blok, který půjde vždy do **kategorie Initialization** –
   - `block`
-    - `text` – zde uvedete, jaký text bude na bloku zobrazen. Pomocí `%` můžete některé části generovat z **arguments**.
-    - `arguments` – zde musíte jeden po druhém uvést argumenty, které nahradí `%` v textu pomocí `dropdown/number/variable/atd.`
-  - `code` – zde řádek po řádku uvedete kód, který bude přidán do `application_init`. Pomocí `{ARGUMENT_NAME}` můžete některé části nechat nahradit podle `arguments`.
+    - `text`: zde uvedete, jaký text bude na bloku zobrazen. Pomocí `%` můžete některé části generovat z **arguments**.
+    - `arguments`: zde musíte jeden po druhém uvést argumenty, které nahradí `%` v textu pomocí `dropdown/number/variable/atd.`
+  - `code`: zde řádek po řádku uvedete kód, který bude přidán do `application_init`. Pomocí `{ARGUMENT_NAME}` můžete některé části nechat nahradit podle `arguments`.
 
-- `handler` – tento blok bude představovat obsluhu událostí vašeho modulu. Bude to blok, do kterého lze vkládat další bloky (rodičovský blok)
+- `handler`: tento blok bude představovat obsluhu událostí vašeho modulu. Bude to blok, do kterého lze vkládat další bloky (rodičovský blok)
 
-- `action` – zde přidáte každou možnou akci, kterou váš modul umí. Každý z těchto prvků bude samostatný blok přidaný do vámi zadané kategorie.
-  - `NAME_OF_THE_ACTION` – uvedete jen název bloku, musí být specifický pro daný modul.
-    - `block` – funguje stejně jako v části `application_init`, blok se jen umístí do zadané kategorie.
-    - `code` – kód funguje také stejně.
+- `action`: zde přidáte každou možnou akci, kterou váš modul umí. Každý z těchto prvků bude samostatný blok přidaný do vámi zadané kategorie.
+  - `NAME_OF_THE_ACTION`: uvedete jen název bloku, musí být specifický pro daný modul.
+    - `block`: funguje stejně jako v části `application_init`, blok se jen umístí do zadané kategorie.
+    - `code`: kód funguje také stejně.
 :::
 
 <details>

@@ -60,8 +60,8 @@ Modificators are:
 - `$sub`
 - `$mul`
 - `$div`
-- `$fpp` - floating point decimal places in JSON
-- `$key` - rename the **JSON** key
+- `$fpp`: floating point decimal places in JSON
+- `$key`: rename the **JSON** key
 
 The example below creates a key with name `temperature`. In **CHESTER** you need to multiply value by 100, then in **HARDWARIO Cloud** it is automatically divided by 100, and in the final **JSON**, the number has two decimal places.
 

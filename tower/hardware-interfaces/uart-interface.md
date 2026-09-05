@@ -26,10 +26,10 @@ As the UART channel does not have a clock signal that would synchronize the comm
 
 There are three parameters that you can set up the UART with
 
-- **Baud rate** - this is the speed with which the data will be sent
-- **Data Bits** - number of data bits in each packet (5-9 bits)
-- **Parity Bits** - you can choose to have Odd, even or none parity
-- **Stop Bits** - this determines the end of one packet. It can be 1 or 2 bits
+- **Baud rate**: this is the speed with which the data will be sent
+- **Data Bits**: number of data bits in each packet (5-9 bits)
+- **Parity Bits**: you can choose to have Odd, even or none parity
+- **Stop Bits**: this determines the end of one packet. It can be 1 or 2 bits
 
 :::tip
 
@@ -53,7 +53,7 @@ TOWER uses UART2 for this, you can use `twr_log_*` SDK API to send the messages 
 
 TOWER logging UART parameters
 
-- **Baud Rate** - **115200**
+- **Baud Rate**: **115200**
 - **8 Data bits**
 - **No Parity**
 - **1 Stop Bit**

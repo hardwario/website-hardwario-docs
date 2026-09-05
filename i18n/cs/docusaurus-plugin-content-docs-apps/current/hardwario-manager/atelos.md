@@ -27,7 +27,7 @@ včetně uloženého secret key. Klíče u těchto zařízení nemusíte zadáva
 
 ## Vytvoření účtu {#create-an-account}
 
-Zvolte **Create an ATELOS account** — nabízí se i z přihlašovací obrazovky — a
+Zvolte **Create an ATELOS account** (nabízí se i z přihlašovací obrazovky) a
 vyplňte formulář.
 
 ## Změna hesla {#change-your-password}
@@ -49,9 +49,9 @@ secret key.
 1. Otevřete **STICKER** a klepněte na **Claim a STICKER** na konci menu (nebo
    otevřete **Saved STICKERs** a přidejte zařízení odtud).
 2. Zvolte, jak zařízení identifikovat:
-   - **Tap over NFC** — přiložte telefon k zařízení STICKER.
-   - **Scan QR code** — naskenujte claim QR kód zařízení.
-   - **Enter manually** — napište sériové číslo.
+   - **Tap over NFC**: přiložte telefon k zařízení STICKER.
+   - **Scan QR code**: naskenujte claim QR kód zařízení.
+   - **Enter manually**: napište sériové číslo.
 3. Pokud nejste přihlášení, aplikace nabídne **Log in and claim**.
 
 :::info Vendor token se zadává ručně
@@ -63,7 +63,7 @@ obrazovce s detailem zařízení.
 
 :::info Přidání zařízení bez nárokování
 Obrazovka **Add** zařízení nárokuje, takže vyžaduje přihlášení do ATELOSu. Pokud
-chcete přidat zařízení, ke kterým už klíče máte — z exportu od kolegy, z CSV nebo
-z QR kódu — použijte místo toho **Saved STICKERs → Import**. Viz
+chcete přidat zařízení, ke kterým už klíče máte (z exportu od kolegy, z CSV nebo
+z QR kódu), použijte místo toho **Saved STICKERs → Import**. Viz
 [**Uložené STICKERy**](./sticker/saved-stickers.md).
 :::

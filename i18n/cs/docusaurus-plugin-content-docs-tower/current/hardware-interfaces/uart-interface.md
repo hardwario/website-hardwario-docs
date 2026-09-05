@@ -27,10 +27,10 @@ Protože kanál UART nemá hodinový signál, který by komunikaci synchronizova
 
 Rozhraní UART lze nastavit třemi parametry
 
-- **Baud rate** – rychlost, s jakou budou data odesílána
-- **Datové bity** – počet datových bitů v každém paketu (5–9 bitů)
-- **Paritní bity** – můžete zvolit lichou, sudou nebo žádnou paritu
-- **Stop bity** – určují konec jednoho paketu. Může jít o 1 nebo 2 bity
+- **Baud rate**: rychlost, s jakou budou data odesílána
+- **Datové bity**: počet datových bitů v každém paketu (5–9 bitů)
+- **Paritní bity**: můžete zvolit lichou, sudou nebo žádnou paritu
+- **Stop bity**: určují konec jednoho paketu. Může jít o 1 nebo 2 bity
 
 :::tip
 
@@ -54,7 +54,7 @@ TOWER k tomu používá UART2, pomocí SDK API `twr_log_*` můžete odesílat zp
 
 Parametry logovacího UART zařízení TOWER
 
-- **Baud rate** – **115200**
+- **Baud rate**: **115200**
 - **8 datových bitů**
 - **Žádná parita**
 - **1 stop bit**

@@ -43,12 +43,12 @@ Please follow our [**Naming Conventions**](https://docs.hardwario.com/cloud/#nam
 
 1. Select your **Space**
 2. Go to **DEVICES → +NEW DEVICE**
-3. Enter the information about your **GLIDER** - you can choose one of the following options:
+3. Enter the information about your **GLIDER**: you can choose one of the following options:
 
- **Option 1 - Scan the QR Code:**
- Use the **`SCAN DEVICE`** feature in the HARDWARIO Cloud to **scan the QR code** on your GLIDER - all the **information** will be **filled in automatically**!
+ **Option 1: Scan the QR Code**
+ Use the **`SCAN DEVICE`** feature in the HARDWARIO Cloud to **scan the QR code** on your GLIDER, and all the **information** will be **filled in automatically**!
 
- **Option 2 - Manually:**
+ **Option 2: Manually**
  You can add a device manually by filling in the following fields:
  - **Name**
  - **Serial Number (SN)**
@@ -58,7 +58,7 @@ Please follow our [**Naming Conventions**](https://docs.hardwario.com/cloud/#nam
 The **Claim Token** and **Serial Number** are unique for each device. You can obtain them by **scanning the QR code** on the device with any QR code reader, by running **`AT$INFO?`** through the [**USB-C AT console**](console/usb-at.md), or by running **`info show`** through the [**J-Link RTT console**](console/rtt-jlink.md).
 :::
 
-4. Save it - your GLIDER is now **registered in the Cloud**!
+4. Save it: your GLIDER is now **registered in the Cloud**!
 
 :::tip
 **Need more details?**
@@ -98,7 +98,7 @@ If your device still has trouble connecting to the network (especially when usin
 
 * **Check Network Mode:** GLIDER ships with **LTE band 8** and **LTE band 20** enabled by default (Europe). For deployments outside the EU you may need to enable other bands.
 * **Verify APN/PLMN:** If you are using a non-default SIM, configure the APN through the AT console.
-* **Read the modem logs:** Attach the [**RTT Console (J-Link)**](console/rtt-jlink.md) - the modem prints every attach attempt, signal level and APN negotiation directly to the log.
+* **Read the modem logs:** Attach the [**RTT Console (J-Link)**](console/rtt-jlink.md). The modem prints every attach attempt, signal level and APN negotiation directly to the log.
 
 ---
 
@@ -113,7 +113,7 @@ GLIDER has three on-board status LEDs (red, green, yellow). Their behaviour is i
 - During boot, none of the LEDs are driven.
 
 :::caution
-The 30 ms pulse is a quick flicker, not a steady blink, and in bright ambient light it can be easy to miss. The LEDs report **alarm state only** - they do not indicate cellular attach or cloud connectivity. Use the cloud dashboard or one of the consoles to verify the device is online.
+The 30 ms pulse is a quick flicker, not a steady blink, and in bright ambient light it can be easy to miss. The LEDs report **alarm state only**. They do not indicate cellular attach or cloud connectivity. Use the cloud dashboard or one of the consoles to verify the device is online.
 :::
 
 :::info
@@ -141,8 +141,8 @@ For an explanation of the payload structure, see [**CBOR Payload**](payload.md).
 
 Once connected, you can:
 
-- Use the [**USB-C AT Console**](console/usb-at.md) - recommended for day-to-day provisioning
-- Use the [**J-Link RTT Console**](console/rtt-jlink.md) - full developer access with logs and Zephyr shell
+- Use the [**USB-C AT Console**](console/usb-at.md), recommended for day-to-day provisioning
+- Use the [**J-Link RTT Console**](console/rtt-jlink.md), which gives full developer access with logs and the Zephyr shell
 
 Common configuration tasks:
 
@@ -190,10 +190,10 @@ You can check it in two ways:
 
 If a newer version is available, you can update GLIDER in two ways:
 
-1. **Over the AT console (USB-C)** - recommended for production units and field updates. No probe required.
+1. **Over the AT console (USB-C)**: recommended for production units and field updates. No probe required.
  [**Application over AT (USB-C)**](firmware-flashing/application-over-at.md)
 
-2. **Over J-Link (SWD)** - recommended for development.
+2. **Over J-Link (SWD)**: recommended for development.
  [**Application over J-Link**](firmware-flashing/application-over-j-link.md)
 
 For an overview of both methods see the [**Firmware Flashing**](firmware-flashing/index.md) article.
@@ -201,14 +201,14 @@ For an overview of both methods see the [**Firmware Flashing**](firmware-flashin
 ---
 
  **That's it!**
-Your GLIDER is now connected, configured, and up to date - ready to collect and send data to the cloud.
+Your GLIDER is now connected, configured, and up to date, ready to collect and send data to the cloud.
 
 ---
 
 ## Step 9: Explore Applications and Integrations
 
 Your GLIDER can do much more than just send data!
-You can extend its functionality using [**HARDWARIO Applications**](https://docs.hardwario.com/apps/) - ready-made modules and tools that help you:
+You can extend its functionality using [**HARDWARIO Applications**](https://docs.hardwario.com/apps/), ready-made modules and tools that help you:
 
 - **Visualize your data** using dashboards and charts
 - **Integrate GLIDER** into existing IoT systems

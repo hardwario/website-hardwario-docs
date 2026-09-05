@@ -176,7 +176,7 @@ CHESTER-X14 can be used as part of the CHESTER SDK using the `ctr_x14_a` and `ct
 
 ## Schematic Diagrams
 
-The complete schematic — covering the main page, the Ethernet interface, and the power supply — is available as a PDF:
+The complete schematic, covering the main page, the Ethernet interface, and the power supply, is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x14-r1.0.pdf)
 - [Interactive CHESTER-X14 browser](pathname:///download/ibom/hio-chester-x14-r1.0.html)

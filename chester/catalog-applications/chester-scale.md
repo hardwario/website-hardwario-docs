@@ -23,10 +23,10 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 **CHESTER Scale** is designed for wireless weight measurement using load cells. The application supports connecting multiple weight probes (up to 4 channels) and provides real-time weight data transmission via NB-IoT/LTE-M or LoRaWAN networks.
 
 The device is ideal for:
-- **Industrial storage tank monitoring** - Track fill levels of tanks, silos, or containers
-- **Pallet and goods tracking** - Monitor weight changes in logistics and warehousing
-- **Livestock weight monitoring** - Optimize feeding schedules and track animal health
-- **Agricultural applications** - Beehive monitoring, feed storage, etc.
+- **Industrial storage tank monitoring**: Track fill levels of tanks, silos, or containers
+- **Pallet and goods tracking**: Monitor weight changes in logistics and warehousing
+- **Livestock weight monitoring**: Optimize feeding schedules and track animal health
+- **Agricultural applications**: Beehive monitoring, feed storage, etc.
 
 ## Application Variants
 
@@ -38,16 +38,16 @@ The catalog application **CHESTER Scale** measures weight from up to 4 load cell
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
-* `CHESTER-X3C:A` or `CHESTER-X3C:B` - Load cell interface (2 channels per module)
-* `CHESTER-E2-LP` - Enclosure with SMA pigtail
+* `CHESTER-M-BCGLS`: Standard mainboard
+* `CHESTER-X3C:A` or `CHESTER-X3C:B`: Load cell interface (2 channels per module)
+* `CHESTER-E2-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
 Firmware build variant: `west chester-update scale --variant "CHESTER Scale"`
 
 :::info
-Since **v3.5.5**, the firmware built with `ctr_x3_b` detects the CHESTER-X3 module in slot B at runtime. A single firmware therefore covers both single-slot (A only) and dual-slot (A+B) hardware — channels B1/B2 are skipped automatically when the slot B module is not installed.
+Since **v3.5.5**, the firmware built with `ctr_x3_b` detects the CHESTER-X3 module in slot B at runtime. A single firmware therefore covers both single-slot (A only) and dual-slot (A+B) hardware. Channels B1/B2 are skipped automatically when the slot B module is not installed.
 :::
 
 ### CHESTER Scale Z {#chester-scale-z}
@@ -56,10 +56,10 @@ The catalog application **CHESTER Scale Z** includes backup battery support for 
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
-* `CHESTER-Z1` - Backup module
-* `CHESTER-X3C:A` or `CHESTER-X3C:B` - Load cell interface (2 channels per module)
-* `CHESTER-E2-LP` - Enclosure with SMA pigtail
+* `CHESTER-M-BCGLS`: Standard mainboard
+* `CHESTER-Z1`: Backup module
+* `CHESTER-X3C:A` or `CHESTER-X3C:B`: Load cell interface (2 channels per module)
+* `CHESTER-E2-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -119,7 +119,7 @@ app config backup-report-disconnected true
 
 :::info
 
-You can easily explore the whole command tree structure - start with the `help` command.
+You can easily explore the whole command tree structure. Start with the `help` command.
 
 :::
 
@@ -381,14 +381,14 @@ Learn how to activate and configure this feature in the [**CHESTER BLE Tag Subsy
 
 ## Changelog
 
-### v3.5.5 — 2026-06-22
+### v3.5.5 – 2026-06-22
 
 - **Added**: Runtime detection of CHESTER-X3 module in slot B
 
-### v3.5.0 — 2025-12-03
+### v3.5.0 – 2025-12-03
 
-- **Added**: New variant — **CHESTER Scale Z** with CHESTER-Z1 backup module support
-- **Added**: BLE tag subsystem integration — wireless temperature and humidity from Teltonika EYE Sensor tags
+- **Added**: New variant: **CHESTER Scale Z** with CHESTER-Z1 backup module support
+- **Added**: BLE tag subsystem integration: wireless temperature and humidity from Teltonika EYE Sensor tags
 - **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available
 - **Changed**: Single combined firmware binary for both LTE and LoRaWAN; LoRaWAN support in progress (planned for next release)
 

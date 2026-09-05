@@ -23,8 +23,8 @@ See [**App settings**](../settings.md).
 ## Open a device's log
 
 1. Go to **STICKER → Saved STICKERs** and open a device's **Detail**.
-2. Open its **Change log** and pick an entry from the **Recorded read** list —
-   each is stamped with its date, time, and which sections it covers.
+2. Open its **Change log** and pick an entry from the **Recorded read** list.
+   Each is stamped with its date, time, and which sections it covers.
 
 <img src="/img/hw-manager/hw-manager-sticker-log.png" alt="A saved device's detail screen with the change log open on a recorded read" width="320" />
 
@@ -32,7 +32,7 @@ For the selected entry you can:
 
 | Action | Effect |
 |---|---|
-| **Configure a STICKER with this** | Write that recorded configuration back to a device — a point-in-time restore |
+| **Configure a STICKER with this** | Write that recorded configuration back to a device. A point-in-time restore |
 | **Export this** | Share the single entry as a file |
 | **Export log** | Share this device's whole log |
 | **Delete this entry** | Remove just that entry |

@@ -116,7 +116,7 @@ config save
 
 ## Tested SIM cards and operators
 
-The combinations below have been validated by **HARDWARIO** in the field. This list grows as further operators are put into service - if your operator is not here, it does not mean the device will not work, only that we have not verified it ourselves.
+The combinations below have been validated by **HARDWARIO** in the field. This list grows as further operators are put into service. If your operator is not here, it does not mean the device will not work, only that we have not verified it ourselves.
 
 {/* Growth table: add a row for every newly validated operator / SIM card variant. Keep the Status column honest - only mark a row as verified once it has actually run in the field. */}
 
@@ -128,7 +128,7 @@ The combinations below have been validated by **HARDWARIO** in the field. This l
 | **Onomondo** | Multi-operator | NB-IoT, LTE-M | `onomondo` | APN confirmed, no band or PLMN lock required. |
 | **Slovak Telekom** | Slovakia | NB-IoT | `nbiot.telekom.sk` | |
 | **Mobily** | Saudi Arabia | NB-IoT | `M2M-NB` | |
-| **Vodafone Ukraine** | Ukraine | NB-IoT only | *(empty)* | Requires **Nordic nRF9160** modem firmware **v1.3.7** - see [**Nordic nRF9160 Modem Firmware**](../../firmware-flashing/lte-modem-over-j-link.md#nordic-nrf9160-modem-firmware). Apart from that, use the [**Other SIM cards**](#other-sim-cards) settings unchanged. |
+| **Vodafone Ukraine** | Ukraine | NB-IoT only | *(empty)* | Requires **Nordic nRF9160** modem firmware **v1.3.7**, see [**Nordic nRF9160 Modem Firmware**](../../firmware-flashing/lte-modem-over-j-link.md#nordic-nrf9160-modem-firmware). Apart from that, use the [**Other SIM cards**](#other-sim-cards) settings unchanged. |
 
 :::note
 

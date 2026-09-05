@@ -29,7 +29,7 @@ Current and voltage are measured directly via internal circuitry.
 
 #### Example of Installation: ORNO Energy Analyzer - OR-WE-504
 
-| **ORNO Energy Analyzer - OR-WE-504** | |
+| **ORNO Energy Analyzer OR-WE-504** | |
 |-------------------------------------|----------------|
 | Pin 1                               | **L (IN)**     |
 | Pin N                               | **N (IN)**     |
@@ -51,7 +51,7 @@ The neutral conductor can be connected either directly to the meter’s **N term
 
 #### Example of Modbus Communication Installation: ORNO Energy Analyzer - OR-WE-504
 
-| **ORNO Energy Analyzer - OR-WE-504** | **CHESTER Modbus** |
+| **ORNO Energy Analyzer OR-WE-504** | **CHESTER Modbus** |
 |-------------------------------------|--------------------|
 | Pin 23                              | Pin 7 (A)          |
 | Pin 25                              | Pin 6 (B)          |

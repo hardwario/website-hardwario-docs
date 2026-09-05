@@ -44,7 +44,7 @@ Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**
 
 1. Vyberte svůj **Space**
 2. Přejděte na **DEVICES → +NEW DEVICE**
-3. Zadejte informace o svém zařízení **GLIDER** – můžete zvolit jednu z následujících možností:
+3. Zadejte informace o svém zařízení **GLIDER**: můžete zvolit jednu z následujících možností:
 
  **Možnost 1 – naskenujte QR kód:**
  Použijte funkci **`SCAN DEVICE`** v HARDWARIO Cloud a **naskenujte QR kód** na zařízení GLIDER – všechny **informace** se **vyplní automaticky**!
@@ -59,7 +59,7 @@ Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**
 **Claim Token** a **sériové číslo** jsou pro každé zařízení jedinečné. Získáte je **naskenováním QR kódu** na zařízení libovolnou čtečkou QR kódů, spuštěním **`AT$INFO?`** přes [**USB-C AT konzoli**](console/usb-at.md) nebo spuštěním **`info show`** přes [**J-Link RTT konzoli**](console/rtt-jlink.md).
 :::
 
-4. Uložte to – vaše zařízení GLIDER je nyní **registrováno v cloudu**!
+4. Uložte to: vaše zařízení GLIDER je nyní **registrováno v cloudu**!
 
 :::tip
 **Potřebujete více podrobností?**
@@ -142,8 +142,8 @@ Vysvětlení struktury payloadu najdete v části [**CBOR Payload**](payload.md)
 
 Po připojení můžete:
 
-- Použít [**USB-C AT konzoli**](console/usb-at.md) – doporučeno pro běžné zprovoznění
-- Použít [**J-Link RTT konzoli**](console/rtt-jlink.md) – plný vývojářský přístup s logy a Zephyr shellem
+- Použít [**USB-C AT konzoli**](console/usb-at.md): doporučeno pro běžné zprovoznění
+- Použít [**J-Link RTT konzoli**](console/rtt-jlink.md): plný vývojářský přístup s logy a Zephyr shellem
 
 Běžné konfigurační úlohy:
 
@@ -191,10 +191,10 @@ Zkontrolovat ji můžete dvěma způsoby:
 
 Pokud je k dispozici novější verze, můžete zařízení GLIDER aktualizovat dvěma způsoby:
 
-1. **Přes AT konzoli (USB-C)** – doporučeno pro produkční jednotky a aktualizace v terénu. Není potřeba programátor.
+1. **Přes AT konzoli (USB-C)**: doporučeno pro produkční jednotky a aktualizace v terénu. Není potřeba programátor.
  [**Aplikace přes AT (USB-C)**](firmware-flashing/application-over-at.md)
 
-2. **Přes J-Link (SWD)** – doporučeno pro vývoj.
+2. **Přes J-Link (SWD)**: doporučeno pro vývoj.
  [**Aplikace přes J-Link**](firmware-flashing/application-over-j-link.md)
 
 Přehled obou metod najdete v článku [**Nahrání firmwaru**](firmware-flashing/index.md).

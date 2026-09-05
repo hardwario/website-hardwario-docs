@@ -19,17 +19,17 @@
     "message": "Právní informace",
     "description": "The title of the footer links column with title=Legal in the footer"
   },
-  "link.item.label.HARDWARIO a.s. — Czech Republic": {
-    "message": "HARDWARIO a.s. — Česká republika",
-    "description": "The label of footer link with label=HARDWARIO a.s. — Czech Republic linking to https://maps.app.goo.gl/uwNsT2fuUmTaoXc48"
+  "link.item.label.HARDWARIO a.s. – Czech Republic": {
+    "message": "HARDWARIO a.s. – Česká republika",
+    "description": "The label of footer link with label=HARDWARIO a.s. – Czech Republic linking to https://maps.app.goo.gl/uwNsT2fuUmTaoXc48"
   },
-  "link.item.label.HARDWARIO LLC — United States": {
-    "message": "HARDWARIO LLC — Spojené státy",
-    "description": "The label of footer link with label=HARDWARIO LLC — United States linking to https://maps.app.goo.gl/YyUsBivFKc6yYVTr8"
+  "link.item.label.HARDWARIO LLC – United States": {
+    "message": "HARDWARIO LLC – Spojené státy",
+    "description": "The label of footer link with label=HARDWARIO LLC – United States linking to https://maps.app.goo.gl/YyUsBivFKc6yYVTr8"
   },
-  "link.item.label.HARDWARIO LTD — United Kingdom": {
-    "message": "HARDWARIO LTD — Spojené království",
-    "description": "The label of footer link with label=HARDWARIO LTD — United Kingdom linking to https://maps.app.goo.gl/BPVS4T61Ao1h5HVJ9"
+  "link.item.label.HARDWARIO LTD – United Kingdom": {
+    "message": "HARDWARIO LTD – Spojené království",
+    "description": "The label of footer link with label=HARDWARIO LTD – United Kingdom linking to https://maps.app.goo.gl/BPVS4T61Ao1h5HVJ9"
   },
   "link.item.label.Products": {
     "message": "Produkty",

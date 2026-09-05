@@ -19,9 +19,9 @@ Tento článek popisuje základní funkcionalitu, hardware, výchozí konfigurac
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps) – jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](https://docs.hardwario.com/chester/catalog-applications/common-functionality) – jak funguje LED, tlačítko a konfigurace sítě.
-- [**Platform Management**](https://docs.hardwario.com/chester/category/platform-connectivity) – jak pracovat s interaktivní konzolí.
+- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**Společná funkcionalita**](https://docs.hardwario.com/chester/catalog-applications/common-functionality): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Platform Management**](https://docs.hardwario.com/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -37,9 +37,9 @@ Aplikace **CHESTER Counter** se používá k počítání pulzů na osmi digitá
 
 Katalogový hardware **CHESTER Counter** se skládá z těchto objednacích kódů:
 
-* `CHESTER-M-BCGLS` - Standardní základní deska
+* `CHESTER-M-BCGLS`: Standardní základní deska
 
-* `CHESTER-X0B:A` - Vstupní modul (4 kanály)
+* `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
 Více podrobností najdete v [**Objednacích kódech**](https://docs.hardwario.com/chester/ordering-codes).
 
@@ -49,11 +49,11 @@ Volby shieldů pro build firmwaru: `ctr_lte ctr_x0_a`
 
 Katalogový hardware **CHESTER Counter Z** se skládá z těchto objednacích kódů:
 
-* `CHESTER-M-CGLS` - Standardní základní deska
+* `CHESTER-M-CGLS`: Standardní základní deska
 
-* `CHESTER-X0B:A` - Vstupní modul (4 kanály)
+* `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
-* `CHESTER-Z1` - Záložní modul
+* `CHESTER-Z1`: Záložní modul
 
 Více podrobností najdete v [**Objednacích kódech**](https://docs.hardwario.com/chester/ordering-codes).
 

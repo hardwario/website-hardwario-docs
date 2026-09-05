@@ -10,7 +10,7 @@ title: Firewall
    sudo apt install -y ufw
    ```
 
-1. **Allow SSH before enabling the firewall** — reversing this order can lock you out:
+1. **Allow SSH before enabling the firewall**: reversing this order can lock you out:
 
    ```sh
    sudo ufw allow 22/tcp

@@ -12,7 +12,7 @@ title: Install Node-RED
 
    :::tip
 
-   The release asset above is named `install-update-nodered-deb` — if it 404s in the future,
+   The release asset above is named `install-update-nodered-deb`. If it 404s in the future,
    check the [node-red/linux-installers releases page](https://github.com/node-red/linux-installers/releases)
    for the current asset name.
 
@@ -42,7 +42,7 @@ title: Install Node-RED
    credentialSecret: "<a random secret>",
    ```
 
-1. Secure the editor. It is **wide open by default** — Node-RED's own install output explicitly
+1. Secure the editor. It is **wide open by default**. Node-RED's own install output explicitly
    warns against exposing it unsecured. Generate a password hash:
 
    ```sh
@@ -75,7 +75,7 @@ title: Install Node-RED
 
    :::tip
 
-   A restart is required — Node-RED does not hot-load newly installed node types while already
+   A restart is required, because Node-RED does not hot-load newly installed node types while already
    running.
 
    :::
@@ -88,7 +88,7 @@ title: Install Node-RED
 
    :::tip
 
-   Without a LoRaWAN gateway/device connected yet, this flow is scaffolding — build it now so
+   Without a LoRaWAN gateway/device connected yet, this flow is scaffolding. Build it now so
    it's ready as soon as a gateway and device are registered (see
    [Register a Gateway and a Device](register-device) above) and passing real uplinks.
 

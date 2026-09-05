@@ -118,7 +118,7 @@ Besides SDA/SCL, the module uses the slot's GP pins:
 
 | CHESTER-X pin | Signal | Source / function |
 | :--- | :--- | :--- |
-| GP0 / A0 | INVALID# | MAX3226EEUE+ — RS-232 receiver level-valid indicator |
+| GP0 / A0 | INVALID# | MAX3226EEUE+. RS-232 receiver level-valid indicator |
 | GP1 / A1 | ADC_EN | Enables the TLA2021 input-voltage measurement |
 | GP2 / A2 | IRQ | SC16IS740IPW UART interrupt |
 | GP3 / A3 | FORCEOFF# | MAX3226EEUE+ shutdown (low-power) control |
@@ -127,7 +127,7 @@ The transceiver's FORCEON input is tied high, so firmware can place the RS-232 t
 
 ## RS-232 Connection
 
-Wire the serial device to the terminal block: **RS232 TX** (Pin 5), **RS232 RX** (Pin 6), and a common **GND** (Pin 2, 4, or 8). Only the transmit and receive data lines are brought out — no hardware handshaking (RTS/CTS) lines are available on the connector.
+Wire the serial device to the terminal block: **RS232 TX** (Pin 5), **RS232 RX** (Pin 6), and a common **GND** (Pin 2, 4, or 8). Only the transmit and receive data lines are brought out. No hardware handshaking (RTS/CTS) lines are available on the connector.
 
 The RS-232 interface is **not galvanically isolated**, so the serial device and the CHESTER node must share a common ground reference.
 
@@ -167,7 +167,7 @@ CHESTER-X12 can be used as part of the CHESTER SDK using the `ctr_x12_a` and `ct
 
 ## Schematic Diagrams
 
-The complete schematic — covering the main page, the interface, and the power supply — is available as a PDF:
+The complete schematic, covering the main page, the interface, and the power supply, is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x12-r1.2.pdf)
 - [Interactive CHESTER-X12 browser](pathname:///download/ibom/hio-chester-x12-r1.2.html)

@@ -12,9 +12,9 @@ import Image from '@theme/IdealImage';
 **FIBER Lite** je varianta zařízení FIBER pro testování na stole, postavená na Raspberry Pi 5. Vše na této stránce
 popisuje průmyslové zařízení FIBER založené na CM4, ale [**Instalace**](installation) (nebo
 [**Rychlý průvodce**](first-steps)) níže je **stejný postup pro obě varianty**, se
-záložkami na několika místech, kde se postup rozchází — včetně kompletního stacku ChirpStack, Node-RED, InfluxDB,
+záložkami na několika místech, kde se postup rozchází, včetně kompletního stacku ChirpStack, Node-RED, InfluxDB,
 Grafana a Dashboard. Jediné skutečné rozdíly jsou hardwarové (žádný displej, žádné senzory 1-Wire
-u zařízení FIBER Lite) — viz [**FIBER Lite**](fiber-lite/introduction) v postranním panelu.
+u zařízení FIBER Lite), viz [**FIBER Lite**](fiber-lite/introduction) v postranním panelu.
 
 :::
 
@@ -26,9 +26,9 @@ Díky své modulární a otevřené architektuře podporuje zařízení **FIBER*
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Instalace**](installation) – Zavedení a konfigurace linuxového systému na zařízení FIBER.
-* [**Popis hardwaru**](category/hardware-description) – Výpočetní platforma, senzorová rozhraní, konektivita a kompletní technické specifikace.
-* [**Seznam změn**](changelog) – Nejnovější změny firmwaru a platformy.
+* [**Instalace**](installation): Zavedení a konfigurace linuxového systému na zařízení FIBER.
+* [**Popis hardwaru**](category/hardware-description): Výpočetní platforma, senzorová rozhraní, konektivita a kompletní technické specifikace.
+* [**Seznam změn**](changelog): Nejnovější změny firmwaru a platformy.
 
 ## Typické případy použití {#typical-use-cases}
 
@@ -51,4 +51,4 @@ Díky své modulární a otevřené architektuře podporuje zařízení **FIBER*
 | **Power-over-Ethernet** | Napájení přes PoE, se zálohovací Li-Ion baterií na desce. |
 | **Plný root přístup k Linuxu** | Podpora Dockeru pro vývoj vlastního firmwaru a aplikací. |
 | **Zabezpečený MQTT** | Protokol MQTT se šifrováním TLS pro bezpečný přenos dat. |
-| **Otevřené cíle pro data** | Datové toky do vašich vlastních systémů — otevřená linuxová platforma zvládne v podstatě jakýkoli protokol, který váš projekt potřebuje. |
+| **Otevřené cíle pro data** | Datové toky do vašich vlastních systémů. Otevřená linuxová platforma zvládne v podstatě jakýkoli protokol, který váš projekt potřebuje. |

@@ -6,11 +6,11 @@ import Image from '@theme/IdealImage';
 
 :::caution
 
-This document goes deep into technical details and explains the HARDWARIO TOWER - Industrial IoT Kit power management on the hardware level.
+This document goes deep into technical details and explains the HARDWARIO TOWER Industrial IoT Kit power management on the hardware level.
 
 :::
 
-The **HARDWARIO TOWER - Industrial IoT Kit** has been designed the way to allow the connection of multiple power sources.
+The **HARDWARIO TOWER Industrial IoT Kit** has been designed the way to allow the connection of multiple power sources.
 
 For example, this allows the [**Core Module**](../hardware-modules/about-core-module.md) to be powered from a **USB cable** and also have **batteries inserted in the Battery Module** at the same time. HARDWARIO TOWER automatically solves the problem by selecting the **appropriate power sources**.
 
@@ -18,7 +18,7 @@ For example, this allows the [**Core Module**](../hardware-modules/about-core-mo
 
   **What does it mean?**
 
-  For example, when an external power supply (adapter or USB) is connected, the **battery is disconnected**. It is also possible to have **multiple external sources connected** at the same time - for example, the **adapter plugged into the Power Module** and the **USB cable in the Core Module**.
+  For example, when an external power supply (adapter or USB) is connected, the **battery is disconnected**. It is also possible to have **multiple external sources connected** at the same time, for example the **adapter plugged into the Power Module** and the **USB cable in the Core Module**.
 
   In this case, the module that is located in the **physically lower layer** will take priority and will be the one **that will deliver power** to the system.
 
@@ -28,10 +28,10 @@ For example, this allows the [**Core Module**](../hardware-modules/about-core-mo
 
 The **TOWER** header has two signals for system power distribution:
 
-- **VDD** - Positive supply rail
+- **VDD**: Positive supply rail
   - 3.1 V when powering from batteries
   - 3.3 V from the external power supply
-- **GND** - Ground (negative rail)
+- **GND**: Ground (negative rail)
 
 The module that can deliver power in the system is called the **energizer**. The energy is supplied either using an **external power supply**, or **batteries**.
 

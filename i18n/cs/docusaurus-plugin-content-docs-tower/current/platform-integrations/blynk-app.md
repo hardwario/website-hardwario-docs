@@ -39,13 +39,13 @@ Pokud v Node-RED nevidíte nody Blynk, nainstalujte balíček Blynk `node-red-co
 
 ### Videotutoriál {#video-tutorial}
 
-Pokud dáváte přednost videoprůvodci, můžete se podívat na toto video pro starší verzi Playground — funguje to stejně.
+Pokud dáváte přednost videoprůvodci, můžete se podívat na toto video pro starší verzi Playground, funguje to stejně.
 
 <ReactPlayer controls src='https://youtu.be/cVC_tFuCYTM' />
 
 ## ZeRGBA na hexadecimální RGB hodnoty – příklad {#zergba-to-hex-rgb-values---example}
 
-Hodnoty barev z Blynk je potřeba převést na **správný hexadecimální RGB řetězec**. Můžete použít funkční blok v Node-RED a vložit do něj níže uvedený kód. Nezapomeňte nastavit **ZeRGBa do režimu MERGE** a rozsah hodnot musí být pro všechny tři kanály nastaven na **0 - 255**
+Hodnoty barev z Blynk je potřeba převést na **správný hexadecimální RGB řetězec**. Můžete použít funkční blok v Node-RED a vložit do něj níže uvedený kód. Nezapomeňte nastavit **ZeRGBa do režimu MERGE** a rozsah hodnot musí být pro všechny tři kanály nastaven na **0–255**
 
 :::info
 

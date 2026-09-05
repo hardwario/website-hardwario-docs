@@ -32,7 +32,7 @@ Standard HARDWARIO DS18B20 cable assemblies have three wires:
 | ⚫ **Black** | GND | `W1G` or `W2G` |
 
 :::tip
-Both ports share the same logical 1-Wire bus inside GLIDER. The 8 logical "slots" the firmware tracks are independent of which physical port the probe is plugged into - bind by ROM code, not by port.
+Both ports share the same logical 1-Wire bus inside GLIDER. The 8 logical "slots" the firmware tracks are independent of which physical port the probe is plugged into. Bind by ROM code, not by port.
 :::
 
 ## Step 1 - Wire the probes
@@ -41,7 +41,7 @@ Both ports share the same logical 1-Wire bus inside GLIDER. The 8 logical "slots
 2. Strip the three wires of each DS18B20 cable and connect them to either `W1` or `W2` as shown above.
 3. Power the device back on.
 
-You may mix probes across `W1` and `W2` freely - both ports drive the same bus. The 8 slots are software-defined and bind to the **ROM serial number** of each DS18B20.
+You may mix probes across `W1` and `W2` freely, because both ports drive the same bus. The 8 slots are software-defined and bind to the **ROM serial number** of each DS18B20.
 
 ## Step 2 - Scan the bus
 

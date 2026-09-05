@@ -15,7 +15,7 @@ the device.
 |---|---|
 | **Reboot device** | Restarts the device; keeps all settings and data |
 | **Reset counters** | Zeroes the Hall and input counters |
-| **Device reset** | Resets settings but keeps the LoRaWAN connection — the device stays provisioned |
+| **Device reset** | Resets settings but keeps the LoRaWAN connection. The device stays provisioned |
 | **Factory reset** | Resets settings and drops the LoRaWAN session and keys, so the device re-joins the network. Keeps the device identity |
 
 ---
@@ -31,7 +31,7 @@ is why they are kept apart from the reset ladder above.
 | Operation | What it does |
 |---|---|
 | **Change secret key** | Sets a new secret key on the device |
-| **Vendor reset** | Wipes the device back to its serial number and vendor token — configuration, LoRaWAN keys and secret key are all erased — and sets a new secret key |
+| **Vendor reset** | Wipes the device back to its serial number and vendor token. Configuration, LoRaWAN keys and secret key are all erased, and sets a new secret key |
 
 The screen can **load the vendor-token from Saved STICKERs**: tap the device to
 read its serial, and the app fills in the token it has stored for it. A dice
@@ -43,13 +43,13 @@ without you copying anything by hand.
 
 :::caution Change secret key also resets the configuration
 The current firmware has no in-place re-key, so **Change secret key** resets the
-device configuration as well. Plan to re-apply the configuration — a
+device configuration as well. Plan to re-apply the configuration. A
 [**template**](./templates.md) makes that a single tap.
 :::
 
 :::danger No undo
 A **factory reset** drops the device's LoRaWAN session and keys, so it re-joins
 the network. A **vendor reset** wipes the device back to its serial number and
-vendor token and sets a new secret key. Neither can be undone — use them only
+vendor token and sets a new secret key. Neither can be undone. Use them only
 when you intend to start from a clean state.
 :::

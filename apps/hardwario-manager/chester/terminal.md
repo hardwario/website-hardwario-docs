@@ -5,7 +5,7 @@ title: Terminal
 
 # CHESTER Terminal
 
-The terminal gives you the device's shell over Bluetooth — the same console you
+The terminal gives you the device's shell over Bluetooth, the same console you
 would reach over a cable, from the phone.
 
 Open **CHESTER → Open Terminal**. An empty terminal suggests where to start:
@@ -35,11 +35,11 @@ The terminal learns the device's own command set rather than guessing:
 - once you type past the first word, it asks that command for its subcommands.
 
 Matching suggestions appear as chips above the input. Tapping one **fills the
-input** — it never runs the command, so you always send it yourself.
+input**. It never runs the command, so you always send it yourself.
 
 <img src="/img/hw-manager/hw-manager-chester-terminal-help.png" alt="The terminal after running help, listing the device's own command groups" width="320" />
 
-Running `help` yourself prints the same list the suggestions are drawn from — the
+Running `help` yourself prints the same list the suggestions are drawn from. The
 command groups this firmware exposes, each with a one-line description.
 
 Suggestions come from the connected device, so they match its firmware. They are
@@ -67,6 +67,6 @@ watch and drive the device from a browser. See
 
 :::tip Persisting what you change
 Settings changed from the shell live in the device's working memory. Use
-**Device info → Save configuration** to commit them so they survive a reboot —
+**Device info → Save configuration** to commit them so they survive a reboot,
 see [**Device info**](./device-info.md).
 :::

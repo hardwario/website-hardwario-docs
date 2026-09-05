@@ -19,7 +19,7 @@ Minimální konfigurace lokality je:
 
 * Jedna brána **LoRaWAN** (EMBER Hotspot)
 
-* Jedna instance serveru **LoRaWAN** (**ChirpStack** nebo **The Things Stack** — vlastní hosting, nebo provozovaný společností **HARDWARIO** jako [managovaná služba](cloud-service.md))
+* Jedna instance serveru **LoRaWAN** (**ChirpStack** nebo **The Things Stack**: vlastní hosting, nebo provozovaný společností **HARDWARIO** jako [managovaná služba](cloud-service.md))
 
 Každé zařízení **EMBER Hotspot** může obsloužit více než 100 zařízení **LoRaWAN**, pokud jsou v rádiovém pokrytí.
 
@@ -33,9 +33,9 @@ Redundantní konfigurace lokality vyžaduje minimálně dvě jednotky **EMBER Ho
 
 Toto jsou rozhraní, na která se **IP** adresy vztahují:
 
-* **WAN Ethernet** – přiřazeno pomocí **DHCP** klienta
+* **WAN Ethernet**: přiřazeno pomocí **DHCP** klienta
 
-* **LAN Ethernet** – neroutovaná `172.31.255.254`
+* **LAN Ethernet**: neroutovaná `172.31.255.254`
 
   :::caution
 
@@ -43,11 +43,11 @@ Toto jsou rozhraní, na která se **IP** adresy vztahují:
 
   :::
 
-* **LTE Modem** – přiřazeno dynamicky operátorem **LTE**
+* **LTE Modem**: přiřazeno dynamicky operátorem **LTE**
 
-* **OpenVPN endpoint** – `192.168.16.10` pro 1. hotspot, `192.168.16.11` pro 2. hotspot atd.
+* **OpenVPN endpoint**: `192.168.16.10` pro 1. hotspot, `192.168.16.11` pro 2. hotspot atd.
 
-* **WireGuard endpoint** – `192.168.17.10` pro 1. hotspot, `192.168.17.11` pro 2. hotspot atd.
+* **WireGuard endpoint**: `192.168.17.10` pro 1. hotspot, `192.168.17.11` pro 2. hotspot atd.
 
 Výchozí zařízení **EMBER Hotspot** má následující přihlašovací údaje:
 
@@ -57,13 +57,13 @@ Výchozí zařízení **EMBER Hotspot** má následující přihlašovací údaj
 
 Správa je dostupná prostřednictvím těchto služeb:
 
-* **SSH** – přístup ke vzdálenému shellu
+* **SSH**: přístup ke vzdálenému shellu
 
-* **WinBox** – konfigurační aplikace pro desktop
+* **WinBox**: konfigurační aplikace pro desktop
 
-* **WebFig** – webová konfigurační aplikace
+* **WebFig**: webová konfigurační aplikace
 
-* **RouterOS API** – HTTP REST API
+* **RouterOS API**: HTTP REST API
 
 Přístup je omezen z **LAN** IP sítě `172.31.255.0/24` a z VPN endpointů managované služby `192.168.16.1` + `192.168.17.1`.
 
@@ -71,9 +71,9 @@ Přístup je omezen z **LAN** IP sítě `172.31.255.0/24` a z VPN endpointů man
 
 [Managovaná služba](cloud-service.md) HARDWARIO je propojena se všemi jednotkami **EMBER Hotspot** dvěma nezávislými VPN tunely přes internetové připojení **LTE**:
 
-* **OpenVPN** – VPN na bázi TCP pro provoz **LoRaWAN**
+* **OpenVPN**: VPN na bázi TCP pro provoz **LoRaWAN**
 
-* **WireGuard** – VPN na bázi UDP pro vzdálenou správu zařízení **EMBER Hotspot**
+* **WireGuard**: VPN na bázi UDP pro vzdálenou správu zařízení **EMBER Hotspot**
 
 ## Základ protokolu {#protocol-basis}
 

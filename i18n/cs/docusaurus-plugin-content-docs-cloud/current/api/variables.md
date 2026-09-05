@@ -6,10 +6,10 @@ description: "Proměnné uchovávají metadata typu klíč–hodnota u zařízen
 # Proměnné {#variables}
 
 [**Proměnné**](/cloud/variables) uchovávají metadata typu klíč–hodnota u zařízení (umístění,
-kalibrační offset, číslo majetku …) — hodí se pro čtení uvnitř transformační
+kalibrační offset, číslo majetku …), hodí se pro čtení uvnitř transformační
 funkce konektoru.
 
-**Vytvoření proměnné** — `POST /v2/spaces/{space_id}/variables`:
+**Vytvoření proměnné**: `POST /v2/spaces/{space_id}/variables`:
 
 ```bash
 curl -X POST \

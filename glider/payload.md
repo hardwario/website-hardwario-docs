@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # CBOR Payload Structure
 
-GLIDER reports measurements to **HARDWARIO Cloud** using the **CBOR** binary format (RFC 8949). To keep messages small, the schema uses **numeric keys** rather than strings - every payload typically fits in **70 to 150 bytes** on the wire.
+GLIDER reports measurements to **HARDWARIO Cloud** using the **CBOR** binary format (RFC 8949). To keep messages small, the schema uses **numeric keys** rather than strings, so every payload typically fits in **70 to 150 bytes** on the wire.
 
 The schema is defined in [`application/codec/cbor-decoder.yaml`](https://github.com/hardwario/) of the GLIDER firmware, and the cloud automatically applies the matching decoder.
 
@@ -31,7 +31,7 @@ Message header. CBOR key: `0`.
 | Field | Type | Unit | Description |
 | :--- | :--- | :--- | :--- |
 | `version` | uint | - | Schema version, currently **`1`**. Used for forward compatibility. |
-| `sequence` | uint32 | - | Incremental sequence number. Starts at `0` after every reboot - the cloud uses gaps to detect lost uplinks. |
+| `sequence` | uint32 | - | Incremental sequence number. Starts at `0` after every reboot. The cloud uses gaps to detect lost uplinks. |
 | `timestamp` | int64 | Unix epoch (s) | Time of transmission, taken from the RTC. |
 
 ## `system`
@@ -44,7 +44,7 @@ CBOR key: `4`.
 
 ## `thermometers`
 
-An array of maps - one entry per configured DS18B20 slot. **Empty slots** (no ROM bound, or not yet validated) are **omitted** from the payload.
+An array of maps, one entry per configured DS18B20 slot. **Empty slots** (no ROM bound, or not yet validated) are **omitted** from the payload.
 
 CBOR key: `6`.
 
@@ -54,7 +54,7 @@ CBOR key: `6`.
 | `temperature` | int (×0.01 °C) or `null` | °C | Last successful read. Encoded as `temperature × 100`; the decoder rescales (`$div: 100`, `$fpp: 2`). `null` = NaN (failed read). |
 
 :::info
-Only the **most recent sample** per slot is sent, not the full history between uplinks. If you need a time series, sample at a higher rate and accept the proportionally higher data cost - or open a feature request.
+Only the **most recent sample** per slot is sent, not the full history between uplinks. If you need a time series, sample at a higher rate and accept the proportionally higher data cost, or open a feature request.
 :::
 
 #### Example
@@ -83,10 +83,10 @@ The `events` value is a **flat list** in this order:
 [timestamp_abs, offset_1, alarm_1, active_1, offset_2, alarm_2, active_2, …]
 ```
 
-- `timestamp_abs` - Unix epoch (s) of the **first** event in the list (anchor).
-- `offset_N` - seconds relative to `timestamp_abs`.
-- `alarm_N` - rule number (1-based, 1-32).
-- `active_N` - `1` = activated, `0` = deactivated.
+- `timestamp_abs`: Unix epoch (s) of the **first** event in the list (anchor).
+- `offset_N`: seconds relative to `timestamp_abs`.
+- `alarm_N`: rule number (1-based, 1-32).
+- `active_N`: `1` = activated, `0` = deactivated.
 
 The buffer holds up to **100 events** (`APP_ALARM_MAX_EVENTS`).
 
@@ -123,13 +123,13 @@ CBOR key: `11`.
 [timestamp_abs, offset_1, active_1, offset_2, active_2, …]
 ```
 
-- `timestamp_abs` - Unix epoch (s) of the first event.
-- `offset_N` - seconds relative to `timestamp_abs`.
-- `active_N` - `1` = activation (rising), `0` = deactivation (falling).
+- `timestamp_abs`: Unix epoch (s) of the first event.
+- `offset_N`: seconds relative to `timestamp_abs`.
+- `active_N`: `1` = activation (rising), `0` = deactivation (falling).
 
 The buffer holds up to **64 events per channel** (`APP_INPUTS_MAX_EVENTS`).
 
-The channel mode (`disabled` / `counter` / `event`) is set via configuration - see [**Configuration → Digital Inputs**](configuration.md#digital-inputs).
+The channel mode (`disabled` / `counter` / `event`) is set via configuration, see [**Configuration → Digital Inputs**](configuration.md#digital-inputs).
 
 #### Example
 

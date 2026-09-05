@@ -16,7 +16,7 @@ measured values. This device is supported by the **CHESTER Serial** application.
 
 :::info
 
-The radon probe is a self-contained sensor — it does **not** require any external
+The radon probe is a self-contained sensor. It does **not** require any external
 sensor. A new radon concentration value becomes available **every 4 minutes**;
 reading more frequently returns the same value.
 
@@ -40,7 +40,7 @@ The RPP-R has a 4-pin connector labelled **B RxTx-**, **A RxTx+**, **GND**, **VC
 :::info
 
 The probe needs a supply on **VCC**. It can be powered from CHESTER's dedicated power
-output (VIN) **if** the voltage and current match the RPP-R's requirement — confirm
+output (VIN) **if** the voltage and current match the RPP-R's requirement. Confirm
 the probe's supply voltage first; otherwise use a separate external supply. RS-485
 A/B labelling varies between manufacturers; if no data is received, swap the **A**
 and **B** lines.
@@ -109,7 +109,7 @@ app config device-0 "piketronic,1"
 config save
 ```
 
-The `device-0` value is `type,address` — here type `piketronic` at Modbus address `1`.
+The `device-0` value is `type,address`, here type `piketronic` at Modbus address `1`.
 
 You can also read the probe directly from the terminal at any time:
 
@@ -124,7 +124,7 @@ humidity, current settings, and the probe's device/firmware/serial identificatio
 
 ### Measured values
 
-Decoder: `com.hardwario.chester.app.serial` — values appear under the `devices`
+Decoder: `com.hardwario.chester.app.serial`. Values appear under the `devices`
 array (`devices → data`).
 
 | Measured Value             | Key / Path                              | Unit   |

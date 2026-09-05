@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 # CHESTER Changelog
 
-This page tracks all notable changes across the CHESTER platform — including **firmware**, **hardware**, and **catalog applications**. Use the tabs below to filter by change category.
+This page tracks all notable changes across the CHESTER platform, including **firmware**, **hardware**, and **catalog applications**. Use the tabs below to filter by change category.
 
 :::info
 
@@ -27,7 +27,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### 2026-06-22
 
-- **[SDK v3.5.5]** SDK **v3.5.5** released — [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5) · [Detailed Changelog](catalog-applications/changelog.md#v355-2026-06-22)
+- **[SDK v3.5.5]** SDK **v3.5.5** released: [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5) · [Detailed Changelog](catalog-applications/changelog.md#v355-2026-06-22)
 - **[FW/SDK]** Added RTC sync status API (`ctr_rtc_is_synced`, `ctr_rtc_get_ts_ms`, `ctr_rtc_set_event_cb`)
 - **[FW/SDK]** Fixed power consumption regression on CHESTER board (vbatt removed)
 - **[FW/SDK]** Added TMP112 shutdown and one-shot power modes
@@ -35,7 +35,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### 2026-04-27
 
-- **[FW/SDK]** LED blink changed to non-blocking, rate-limited approach — prevents blocking during blink sequences
+- **[FW/SDK]** LED blink changed to non-blocking, rate-limited approach: prevents blocking during blink sequences
 - **[FW/SDK]** LoRaWAN payload for 8-channel variant split into two messages to comply with payload size limits
 
 ### 2026-04-14
@@ -55,7 +55,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### 2026-03-11
 
-- **[Apps]** CHESTER Counter and CHESTER Signal moved to `_legacy` — no longer actively maintained
+- **[Apps]** CHESTER Counter and CHESTER Signal moved to `_legacy`, no longer actively maintained
 
 ### 2026-03-10
 
@@ -63,15 +63,15 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### 2026-03-06
 
-- **[Apps]** **CHESTER Serial** added as a new catalog application — supports RS-485 (CHESTER-X2) and RS-232 (CHESTER-X12)
+- **[Apps]** **CHESTER Serial** added as a new catalog application, which supports RS-485 (CHESTER-X2) and RS-232 (CHESTER-X12)
 
 ### 2026-02-11
 
-- **[Apps]** **CHESTER Motion** added as a new catalog application — PIR-based motion detection with configurable sensitivity
+- **[Apps]** **CHESTER Motion** added as a new catalog application, PIR-based motion detection with configurable sensitivity
 
 ### 2026-02-04
 
-- **[Apps]** **CHESTER Meteo M** variant added — Modbus RTU sensor integration for meteorological data
+- **[Apps]** **CHESTER Meteo M** variant added: Modbus RTU sensor integration for meteorological data
 
 ### 2026-01-30
 
@@ -83,35 +83,35 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### 2026-01-02
 
-- **[FW/SDK]** Metrics API added for cloud subsystem — exposes internal counters and diagnostics
+- **[FW/SDK]** Metrics API added for cloud subsystem: exposes internal counters and diagnostics
 
 ### 2025-12-08
 
-- **[Apps]** **CHESTER Clime** v3.5.1 — new variants: SPS30 (particulate matter), Radon, TC (thermocouple); Cloud v2 protocol adopted
+- **[Apps]** **CHESTER Clime** v3.5.1: new variants SPS30 (particulate matter), Radon, TC (thermocouple); Cloud v2 protocol adopted
 
 ### 2025-12-03
 
-- **[Apps]** **CHESTER Serial** v3.5.0 — LoRaWAN support with binary encoding; RS-232 variant added; Cloud v2 protocol
+- **[Apps]** **CHESTER Serial** v3.5.0: LoRaWAN support with binary encoding; RS-232 variant added; Cloud v2 protocol
 
 ### 2025-11-28
 
-- **[Apps]** **CHESTER Meteo** — soil sensor support added
+- **[Apps]** **CHESTER Meteo**: soil sensor support added
 
 ### 2025-10-30
 
-- **[FW/SDK]** Common aggregation data structure (`ctr_data_aggreg`) introduced — unified across all catalog apps
+- **[FW/SDK]** Common aggregation data structure (`ctr_data_aggreg`) introduced, unified across all catalog apps
 
 ### 2025-10-27
 
-- **[FW/SDK]** Configurable LTE attach policy added — allows fine-grained control over modem attach behavior
+- **[FW/SDK]** Configurable LTE attach policy added: allows fine-grained control over modem attach behavior
 
 ### 2025-10-24
 
-- **[Apps]** **CHESTER Control** — LoRaWAN support added
+- **[Apps]** **CHESTER Control**: LoRaWAN support added
 
 ### 2025-10-15
 
-- **[Apps]** **CHESTER wM-Bus** — enroll/teach mode added; scan-all, shell send, manufacturer field, LED and cloud watchdog
+- **[Apps]** **CHESTER wM-Bus**: enroll/teach mode added; scan-all, shell send, manufacturer field, LED and cloud watchdog
 
 ### 2025-08-21
 
@@ -119,23 +119,23 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### 2025-07-14
 
-- **[Apps]** **CHESTER wM-Bus** — initial release
+- **[Apps]** **CHESTER wM-Bus**: initial release
 
 ### 2025-02-14
 
-- **[Apps]** **CHESTER Meteo** — LoRaWAN support added
+- **[Apps]** **CHESTER Meteo**: LoRaWAN support added
 
 ### 2025-01-31
 
-- **[FW/SDK]** Nordic Connect SDK (NCS) updated to **v2.9** — underlying platform upgrade for all CHESTER firmware
+- **[FW/SDK]** Nordic Connect SDK (NCS) updated to **v2.9**, the underlying platform upgrade for all CHESTER firmware
 
 ### 2025-01-20
 
-- **[Apps]** **CHESTER Clime** — SPS30 particulate matter sensor subsystem added
+- **[Apps]** **CHESTER Clime**: SPS30 particulate matter sensor subsystem added
 
 ### 2025-01-16
 
-- **[Apps]** Multiple catalog apps — downlink watchdog added
+- **[Apps]** Multiple catalog apps: downlink watchdog added
 
 {/* separator */}
 </TabItem>
@@ -150,7 +150,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### CHESTER-M R3.3
 
-- **Removed**: ATSHA204A crypto chip (I²C address `0x64`) — no longer populated
+- **Removed**: ATSHA204A crypto chip (I²C address `0x64`), no longer populated
 - **Changed**: J-Link/SWD connector label renamed from `BLE` to `APP`
 
 ### CHESTER-M R3.2
@@ -162,7 +162,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### CHESTER-U1 R1.1 *(current)*
 
-- Compact 38×38 mm module — electrically identical to CHESTER-M
+- Compact 38×38 mm module: electrically identical to CHESTER-M
 - Same firmware binary runs on both CHESTER-M and CHESTER-U1 without changes
 - Schematic: [R1.1 (PDF)](hardware-description/hio-chester-u1-r1.1.pdf)
 

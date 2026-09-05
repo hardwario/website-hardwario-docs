@@ -3,9 +3,9 @@
 Tento článek popisuje základní funkce, popis hardwaru, výchozí konfiguraci, ukázkovou JSON zprávu a kalibraci kanálů katalogové aplikace **CHESTER Current**.
 
 > **Pozor:** Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
-> - [**První kroky**](https://docs.hardwario.com/chester/first-steps) – jak připojit zařízení do Cloudu.
-> - [**Společná funkcionalita**](https://docs.hardwario.com/chester/catalog-applications/common-functionality) – jak fungují LED, tlačítko a konfigurace sítě.
-> - [**Správa platformy**](https://docs.hardwario.com/chester/category/platform-connectivity) – jak pracovat s interaktivní konzolí.
+> - [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+> - [**Společná funkcionalita**](https://docs.hardwario.com/chester/catalog-applications/common-functionality): jak fungují LED, tlačítko a konfigurace sítě.
+> - [**Správa platformy**](https://docs.hardwario.com/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 ## Přehled aplikace {#application-overview}
 
@@ -23,9 +23,9 @@ Zařízení **CHESTER Current** lze objednat v jedné z těchto variant:
 
 Katalogový hardware **CHESTER Current** se skládá z těchto objednacích kódů:
 
-- `CHESTER-M-CGLS` - Standardní základní deska
-- `CHESTER-K1-C1-C2-C3-C4` - 4x diferenciální vstup + 5 V boost
-- `CHESTER-E2-LP` - Krabička s SMA pigtailem
+- `CHESTER-M-CGLS`: Standardní základní deska
+- `CHESTER-K1-C1-C2-C3-C4`: 4x diferenciální vstup + 5 V boost
+- `CHESTER-E2-LP`: Krabička s SMA pigtailem
 
 Více informací najdete v kapitole [**Objednací kódy**](https://docs.hardwario.com/chester/ordering-codes).
 
@@ -35,10 +35,10 @@ Varianta sestavení firmwaru: `west chester-update current --variant "CHESTER Cu
 
 Katalogový hardware **CHESTER Current Z** se skládá z těchto objednacích kódů:
 
-- `CHESTER-M-CGLS` - Standardní základní deska
-- `CHESTER-K1-C1-C2-C3-C4` - 4x diferenciální vstup + 5 V boost
-- `CHESTER-Z1` - Zálohovací modul
-- `CHESTER-E2-LP` - Krabička s SMA pigtailem
+- `CHESTER-M-CGLS`: Standardní základní deska
+- `CHESTER-K1-C1-C2-C3-C4`: 4x diferenciální vstup + 5 V boost
+- `CHESTER-Z1`: Zálohovací modul
+- `CHESTER-E2-LP`: Krabička s SMA pigtailem
 
 Více informací najdete v kapitole [**Objednací kódy**](https://docs.hardwario.com/chester/ordering-codes).
 
@@ -50,9 +50,9 @@ Katalogová aplikace **CHESTER Current 1W** podporuje více externích teplotní
 
 Hardware této aplikace se skládá z těchto objednacích kódů:
 
-- `CHESTER-M-CGLS` - Standardní základní deska
-- `CHESTER-K1-C1-C2-C3-C4` - 4x diferenciální vstup + 5 V boost
-- `CHESTER-E2-LP` - Krabička s SMA pigtailem
+- `CHESTER-M-CGLS`: Standardní základní deska
+- `CHESTER-K1-C1-C2-C3-C4`: 4x diferenciální vstup + 5 V boost
+- `CHESTER-E2-LP`: Krabička s SMA pigtailem
 
 Více informací najdete v kapitole [**Objednací kódy**](https://docs.hardwario.com/chester/ordering-codes).
 
@@ -351,9 +351,9 @@ Nejnovější firmware je k dispozici v kapitole [Firmware](https://docs.hardwar
 </details>
 
 > **Info:** Struktura payloadu pro analogové kanály se ve verzi **v3.5.1** změnila:
-> - `raw_rms` - Obsahuje měření efektivní hodnoty v mV
-> - `raw_mean` - Obsahuje měření střední (průměrné) hodnoty v mV
-> - `calibration` - Obsahuje kalibrované hodnoty podle zvoleného režimu (0=avg, 1=rms)
+> - `raw_rms`: Obsahuje měření efektivní hodnoty v mV
+> - `raw_mean`: Obsahuje měření střední (průměrné) hodnoty v mV
+> - `calibration`: Obsahuje kalibrované hodnoty podle zvoleného režimu (0=avg, 1=rms)
 
 ### LoRaWAN {#lorawan}
 
@@ -599,14 +599,14 @@ Ve firmě **HARDWARIO** máme kalibrační sadu pro **CHESTER Current** složeno
 
 ## Seznam změn {#changelog}
 
-### v3.5.1 — 2025-12-08 {#v351--2025-12-08}
+### v3.5.1 – 2025-12-08 {#v351--2025-12-08}
 
 - **Přidáno**: Shell příkazy pro kalibraci jednotlivých kanálů v reálném čase – interaktivní nastavení nulového bodu a rozsahu
 - **Přidáno**: Downlink watchdog – detekuje ztrátu komunikace s cloudem
 - **Vylepšeno**: Spolehlivost a kódování LoRaWAN
 - **Opraveno**: Validace kalibračního rozsahu
 
-### v3.5.0 — 2025-12-03 {#v350--2025-12-03}
+### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
 - **Přidáno**: Nové varianty – **CHESTER Current Z** (se zálohovacím modulem CHESTER-Z1) a **CHESTER Current 1W** (s externími teplotními senzory DS18B20 na 1-Wire)
 - **Přidáno**: Podpora LoRaWAN – jediný binární firmware pro LTE i LoRaWAN; režim se volí pomocí `app config mode lte` / `app config mode lrw`

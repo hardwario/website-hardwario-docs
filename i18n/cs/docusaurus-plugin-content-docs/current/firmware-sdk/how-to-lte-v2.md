@@ -39,7 +39,7 @@ Po [nahrání firmwaru LTE modemu](#flash-lte-modem-firmware) na verzi `v1.7.0` 
 
 https://github.com/hardwario/chester-sdk/tree/main/applications/control
 
-- Přidány rekonfigurovatelné vstupy – kterýkoli ze 4 vstupů můžete přenastavit na měření napětí, proudu, počítání pulzů nebo reakci na změnu logické úrovně.
+- Přidány rekonfigurovatelné vstupy: kterýkoli ze 4 vstupů můžete přenastavit na měření napětí, proudu, počítání pulzů nebo reakci na změnu logické úrovně.
 - Přidána možnost řízení s modulem [CHESTER-X4](../extension-modules/chester-x4.md) ve slotu B pro přepínání 4 výstupů napájených z externího DC napájení.
 
 Projekt také obsahuje [ukázkové skripty](https://github.com/hardwario/chester-sdk/tree/main/applications/control/codec), jak posílat downlink konfiguraci a zprávy pomocí `curl`.

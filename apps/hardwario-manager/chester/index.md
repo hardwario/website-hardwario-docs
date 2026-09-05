@@ -30,8 +30,8 @@ Open **HARDWARIO Manager** and choose **CHESTER**.
 ## The connected device card
 
 Above the menu, **Connected CHESTER** names the device you are attached to.
-Its arrow expands a summary — firmware, serial number, BLE address and uptime,
-**as of the last connection** — and **Disconnect** closes the link.
+Its arrow expands a summary (firmware, serial number, BLE address and uptime,
+**as of the last connection**), and **Disconnect** closes the link.
 
 <img src="/img/hw-manager/hw-manager-chester-connected-details.png" alt="The connected CHESTER card expanded, showing firmware, serial, BLE address and uptime, with a Disconnect action" width="320" />
 
@@ -45,11 +45,11 @@ the device again under **Recent devices**.
 
 ## Before you start
 
-- Bluetooth must be on, and the app needs the **nearby devices** permission —
+- Bluetooth must be on, and the app needs the **nearby devices** permission,
   see [**Install the app**](../install.md).
 - Pairing uses the 6-digit **passkey** tied to the device. Scanning the QR code
   on the CHESTER label is the path that fetches it for you.
 - Keep the phone near the device. Most connection problems are range or a stale
-  pairing — see [**Troubleshooting**](./troubleshooting.md).
+  pairing, see [**Troubleshooting**](./troubleshooting.md).
 
 Start with [**Connect and pair**](./connect.md).

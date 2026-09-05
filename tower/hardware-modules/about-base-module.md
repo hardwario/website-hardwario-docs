@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        The Base Module works as a <b>mechanical stand for the HARDWARIO TOWER units</b>. Except for the Battery Module, you can plug any other <b>HARDWARIO TOWER - Industrial IoT Kit</b> module into a standardized socket available on the <b>Base Module</b>.
+        The Base Module works as a <b>mechanical stand for the HARDWARIO TOWER units</b>. Except for the Battery Module, you can plug any other <b>HARDWARIO TOWER Industrial IoT Kit</b> module into a standardized socket available on the <b>Base Module</b>.
       </p>
       <p>
         It also features a <b>prototyping area for soldering your circuits</b>.

@@ -51,8 +51,8 @@ Milesight UG63 is a **compact LoRaWAN® gateway** designed for **small-scale dep
 **Network Setup:**
 1. Navigate to **WAN** → **Connection Type**
 2. Choose one of the following:
-   - **DHCP Client** – Gateway automatically receives IP address from your router
-   - **Static IP** – Manually configure IP address
+   - **DHCP Client**: Gateway automatically receives IP address from your router
+   - **Static IP**: Manually configure IP address
 3. Connect gateway to your **LAN network** via Ethernet cable
 4. If using DHCP, find the assigned IP address in **Status** → **Ethernet**
 
@@ -111,8 +111,8 @@ This built-in network server allows you to manage sensors directly through the g
 ## LNS & CUPS
 
 **What is this?**
-- **LNS** (LoRaWAN Network Server) – Manages communication between gateway and sensors
-- **CUPS** (Configuration and Update Server) – Automatically configures and updates your gateway
+- **LNS** (LoRaWAN Network Server): Manages communication between gateway and sensors
+- **CUPS** (Configuration and Update Server): Automatically configures and updates your gateway
 
 **Setup Steps:**
 

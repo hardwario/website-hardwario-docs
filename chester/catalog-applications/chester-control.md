@@ -26,10 +26,10 @@ The application **CHESTER Control** is used to measure and observe analog and di
 
 | **Type** | **Channel** | **Terminal** | **Input type**    | **Input range** | **Typical use-case**                  |
 | :------- | :---------- | :----------- | :---------------- | :-------------- | :------------------------------------ |
-| Trigger  | CH1         | A2           | Digital - NPN/PNP | 0 to 28 V       | Switch, button, relay, PLC sensor     |
-| Counter  | CH2         | A4           | Digital - NPN/PNP | 0 to 28 V       | Energy meter pulse outputs (e.g., S0) |
-| Voltage  | CH3         | A5           | Analog - voltage  | 0 to 28 V       | Various voltage transmitters          |
-| Current  | CH4         | A7           | Analog - current  | 0 to 24 mA      | Various current transmitters          |
+| Trigger  | CH1         | A2           | Digital (NPN/PNP) | 0 to 28 V       | Switch, button, relay, PLC sensor     |
+| Counter  | CH2         | A4           | Digital (NPN/PNP) | 0 to 28 V       | Energy meter pulse outputs (e.g., S0) |
+| Voltage  | CH3         | A5           | Analog (voltage)  | 0 to 28 V       | Various voltage transmitters          |
+| Current  | CH4         | A7           | Analog (current)  | 0 to 24 mA      | Various current transmitters          |
 
 All these inputs and their options are explained in more detail in the article [**Input Parameters and Behavior**](#input-parameters-and-behavior).
 
@@ -43,11 +43,11 @@ Additionally, **CHESTER Control** allows remote control of 4 digital (6-28 V) ou
 
 The catalog **CHESTER Control** hardware consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
+* `CHESTER-M-BCGLS`: Standard mainboard
 
-* `CHESTER-X0B:A` - Input module (4 channels)
+* `CHESTER-X0B:A`: Input module (4 channels)
 
-* `CHESTER-X4:B` - Step-down + outputs (4 channels)
+* `CHESTER-X4:B`: Step-down + outputs (4 channels)
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -55,19 +55,19 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 
 The catalog **CHESTER Control Z** hardware consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
+* `CHESTER-M-BCGLS`: Standard mainboard
 
-* `CHESTER-X0B:A` - Input module (4 channels)
+* `CHESTER-X0B:A`: Input module (4 channels)
 
-* `CHESTER-X4:B` - Step-down + outputs (4 channels)
+* `CHESTER-X4:B`: Step-down + outputs (4 channels)
 
-* `CHESTER-Z1` - Backup module
+* `CHESTER-Z1`: Backup module
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
 ## Terminal Blocks
 
-| CHESTER-X0B in left slot A- signals A1 - A8 | CHESTER-X4 in right slot B - signals B1 - B8                                                 |
+| CHESTER-X0B in left slot A (signals A1–A8) | CHESTER-X4 in right slot B (signals B1–B8)                                                 |
 | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | Use inputs **CH1** to **CH4** and **GND**   | Use **VIN** and **GND** to supply external power.                                            |
 |                                             | Use **CH1** to **CH4** outputs, which supply voltage from **VIN** when the output is enabled |
@@ -180,7 +180,7 @@ app config mode "lte"
 
 :::info
 
-You can easily explore the whole command tree structure - start with the `help` command.
+You can easily explore the whole command tree structure. Start with the `help` command.
 
 :::
 
@@ -472,17 +472,17 @@ import TabItem from '@theme/TabItem';
 
 ## Changelog
 
-### v4.0.0 — 2026-08-10
+### v4.0.0 – 2026-08-10
 
 - **Changed**: Lowered maximum 1-Wire thermometer capacity (10 → 5) and soil sensor capacity (10 → 3) to reduce RAM usage
 
-### v3.5.5 — 2026-06-22
+### v3.5.5 – 2026-06-22
 
-- **Changed**: Reduced memory footprint — soil sensor and thermometer data now dynamically allocated
+- **Changed**: Reduced memory footprint: soil sensor and thermometer data are now dynamically allocated
 
-### v3.5.0 — 2025-12-03
+### v3.5.0 – 2025-12-03
 
-- **Added**: LoRaWAN support — single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
+- **Added**: LoRaWAN support: single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
 - **Added**: Downlink watchdog interval (`downlink-wdg-interval`) to detect loss of cloud communication
 - **Added**: Configurable poll interval (`interval-poll`) for cloud polling frequency
 - **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available

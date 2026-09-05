@@ -16,7 +16,7 @@ than through its configuration.
 | [**Sensor history**](./sensor-history.md) | Read measurements the device stored earlier |
 | **Calibration mode** | Reboot the device into its sensor-calibration service mode |
 | [**Reset**](./reset.md) | The reset ladder, from a reboot to a factory reset |
-| **Vendor changes** | Change the secret key, or perform a vendor reset — see [**Reset a device**](./reset.md) |
+| **Vendor changes** | Change the secret key, or perform a vendor reset, see [**Reset a device**](./reset.md) |
 
 ---
 
@@ -43,6 +43,6 @@ reference. The device returns to normal operation afterwards.
 
 ## NFC Console
 
-If [**Debug mode**](../settings.md) is on, Tools also shows an **NFC Console** —
+If [**Debug mode**](../settings.md) is on, Tools also shows an **NFC Console**,
 a low-level console for raw NFC commands, used for diagnostics. It is not needed
 for normal configuration work.

@@ -21,8 +21,8 @@ Each product lists available parts, i.e. which parts are standard and usually im
 The product always includes a **24 V DC power adapter** with international plugs.
 
 The **LoRaWAN and LTE antennas are fitted inside the enclosure** and connected at the factory, so no
-antenna has to be ordered to put a gateway on the air. **External antennas are not part of the package** —
-order them separately, and note that fitting one means opening the enclosure. See
+antenna has to be ordered to put a gateway on the air. **External antennas are not part of the package**.
+Order them separately, and note that fitting one means opening the enclosure. See
 [Hardware Description → Antennas](hardware-description.md#antennas).
 
 :::

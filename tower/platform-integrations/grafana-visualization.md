@@ -164,9 +164,9 @@ brew services start grafana
 
 To configure Grafana, you will first have to open it and log in:
 
-- [**http://localhost:3000/**](http://localhost:3000/) - Grafana is running on your **local machine**
-- **http://hub.local:3000/** - Grafana is running on [**your Raspberry Pi with our Hub installed**](../server-raspberry-pi/installation-os.md)
-- **http://"IP address":3000/** - Grafana is installed on your device, you should know the IP address of that device
+- [**http://localhost:3000/**](http://localhost:3000/): Grafana is running on your **local machine**
+- **http://hub.local:3000/**: Grafana is running on [**your Raspberry Pi with our Hub installed**](../server-raspberry-pi/installation-os.md)
+- **http://"IP address":3000/**: Grafana is installed on your device, you should know the IP address of that device
 
 :::info
 

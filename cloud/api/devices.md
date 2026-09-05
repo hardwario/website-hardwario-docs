@@ -4,10 +4,10 @@ title: Managing Devices
 
 # Managing Devices
 
-Create, update, and remove devices programmatically — handy for onboarding many
+Create, update, and remove devices programmatically, handy for onboarding many
 devices from your own system.
 
-**Create a device** — `POST /v2/spaces/{space_id}/devices`. Provide the **Name**,
+**Create a device**: `POST /v2/spaces/{space_id}/devices`. Provide the **Name**,
 the **HARDWARIO Serial Number** (`serial_number`), and the device's **Claim Token**
 (`token`); optionally add your own `external_id` or attach `tags`:
 
@@ -25,7 +25,7 @@ curl -X POST \
 ```
 
 :::info
-The Claim Token is unique per device — scan its QR code or read it with the
+The Claim Token is unique per device. Scan its QR code or read it with the
 `info show` shell command. See [**Getting Started**](/cloud/first-steps).
 :::
 

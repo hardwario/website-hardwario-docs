@@ -13,9 +13,9 @@ Tento článek popisuje základní funkce, hardware a příklad **JSON** zprávy
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps) – jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md) – jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](../category/platform-connectivity) – jak pracovat s interaktivní konzolí.
+- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Správa platformy**](../category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -24,10 +24,10 @@ Některé základní informace zde nejsou uvedeny, protože jsou společné pro 
 **CHESTER Scale** je určen pro bezdrátové měření hmotnosti pomocí tenzometrických snímačů. Aplikace podporuje připojení několika hmotnostních sond (až 4 kanály) a poskytuje přenos dat o hmotnosti v reálném čase přes sítě NB-IoT/LTE-M nebo LoRaWAN.
 
 Zařízení je ideální pro:
-- **Monitorování průmyslových zásobníků** – sledování hladiny náplně nádrží, sil nebo kontejnerů
-- **Sledování palet a zboží** – monitorování změn hmotnosti v logistice a skladování
-- **Monitorování hmotnosti hospodářských zvířat** – optimalizace krmných plánů a sledování zdraví zvířat
-- **Zemědělské aplikace** – monitorování úlů, skladování krmiva atd.
+- **Monitorování průmyslových zásobníků**: sledování hladiny náplně nádrží, sil nebo kontejnerů
+- **Sledování palet a zboží**: monitorování změn hmotnosti v logistice a skladování
+- **Monitorování hmotnosti hospodářských zvířat**: optimalizace krmných plánů a sledování zdraví zvířat
+- **Zemědělské aplikace**: monitorování úlů, skladování krmiva atd.
 
 ## Varianty aplikace {#application-variants}
 
@@ -39,16 +39,16 @@ Katalogová aplikace **CHESTER Scale** měří hmotnost až ze 4 kanálů tenzom
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` – standardní základní deska
+* `CHESTER-M-BCGLS`: standardní základní deska
 * `CHESTER-X3C:A` nebo `CHESTER-X3C:B` – rozhraní pro tenzometrické snímače (2 kanály na modul)
-* `CHESTER-E2-LP` – krabička s SMA pigtailem
+* `CHESTER-E2-LP`: krabička s SMA pigtailem
 
 Více podrobností najdete v [**objednacích kódech**](../ordering-codes.md).
 
 Varianta buildu firmwaru: `west chester-update scale --variant "CHESTER Scale"`
 
 :::info
-Od verze **v3.5.5** firmware sestavený s `ctr_x3_b` detekuje modul CHESTER-X3 ve slotu B za běhu. Jediný firmware tak pokrývá hardware s jedním slotem (pouze A) i se dvěma slotu (A+B) — kanály B1/B2 se automaticky přeskočí, pokud modul ve slotu B není nainstalován.
+Od verze **v3.5.5** firmware sestavený s `ctr_x3_b` detekuje modul CHESTER-X3 ve slotu B za běhu. Jediný firmware tak pokrývá hardware s jedním slotem (pouze A) i se dvěma sloty (A+B). Kanály B1/B2 se automaticky přeskočí, pokud modul ve slotu B není nainstalován.
 :::
 
 ### CHESTER Scale Z {#chester-scale-z}
@@ -57,10 +57,10 @@ Katalogová aplikace **CHESTER Scale Z** obsahuje podporu záložní baterie pro
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` – standardní základní deska
-* `CHESTER-Z1` – záložní modul
+* `CHESTER-M-BCGLS`: standardní základní deska
+* `CHESTER-Z1`: záložní modul
 * `CHESTER-X3C:A` nebo `CHESTER-X3C:B` – rozhraní pro tenzometrické snímače (2 kanály na modul)
-* `CHESTER-E2-LP` – krabička s SMA pigtailem
+* `CHESTER-E2-LP`: krabička s SMA pigtailem
 
 Více podrobností najdete v [**objednacích kódech**](../ordering-codes.md).
 
@@ -382,14 +382,14 @@ Jak tuto funkci aktivovat a nakonfigurovat, se dozvíte v dokumentaci [**Subsyst
 
 ## Seznam změn {#changelog}
 
-### v3.5.5 — 2026-06-22 {#v355--2026-06-22}
+### v3.5.5 – 2026-06-22 {#v355--2026-06-22}
 
 - **Přidáno**: Detekce modulu CHESTER-X3 ve slotu B za běhu
 
-### v3.5.0 — 2025-12-03 {#v350--2025-12-03}
+### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Nová varianta — **CHESTER Scale Z** s podporou záložního modulu CHESTER-Z1
-- **Přidáno**: Integrace subsystému BLE tagů — bezdrátová teplota a vlhkost z tagů Teltonika EYE Sensor
+- **Přidáno**: Nová varianta: **CHESTER Scale Z** s podporou záložního modulu CHESTER-Z1
+- **Přidáno**: Integrace subsystému BLE tagů: bezdrátová teplota a vlhkost z tagů Teltonika EYE Sensor
 - **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); předchozí firmware pro Cloud v1 zůstává dostupný samostatně
 - **Změněno**: Jediný společný binární firmware pro LTE i LoRaWAN; podpora LoRaWAN se dokončuje (plánováno pro příští vydání)
 

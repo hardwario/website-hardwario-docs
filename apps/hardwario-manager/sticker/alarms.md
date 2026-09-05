@@ -6,7 +6,7 @@ title: Alarm rules
 # Set up alarm rules
 
 An alarm rule watches one measured quantity and marks the device as alarming
-when the condition holds. Rules live in **slots** on the device — up to **16** —
+when the condition holds. Rules live in **slots** on the device (up to **16**)
 and are edited under **Configuration → Alarms**.
 
 ---
@@ -20,11 +20,11 @@ and are edited under **Configuration → Alarms**.
 
 | Rule kind | Watches |
 |---|---|
-| **Threshold (analog band)** | A measured value entering or leaving a band — for example a temperature above a limit |
+| **Threshold (analog band)** | A measured value entering or leaving a band, for example a temperature above a limit |
 | **State (digital 0/1)** | A digital input reaching a given state |
 | **Rate (count increase)** | A counter rising by more than an allowed amount over the period |
 
-Open **Advanced** on a rule to set its **hysteresis** — the margin a value has to
+Open **Advanced** on a rule to set its **hysteresis**: the margin a value has to
 come back through before the alarm clears. Hysteresis stops a value sitting right
 on the limit from alarming and clearing repeatedly.
 
@@ -56,9 +56,9 @@ tripped on the device. See
 ## Reuse rules across devices
 
 Alarm rules can be carried in a **template**, so a fleet can be given the same
-rules in one pass — see [**Templates**](./templates.md). Rules can also be built
+rules in one pass, see [**Templates**](./templates.md). Rules can also be built
 in a browser with the
 [**Template Generator**](./template-generator.mdx), and set over the air with the
 [**Downlink Commands Generator**](/sticker/connectivity/downlink-commands-generator)
-or the `alarm` shell command — see
+or the `alarm` shell command, see
 [**Alarm Rules (Developer Access)**](/sticker/developer-access/alarm-rules).

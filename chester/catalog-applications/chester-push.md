@@ -59,9 +59,9 @@ The application signals push-button events on LEDs in two different ways and cus
 
 The catalog application **CHESTER Push** hardware consists of the following ordering codes:
 
-* `CHESTER-M-CGLS` - CHESTER mainboard
-* `CHESTER-Z1-F` - Four push buttons (see [**Ordering Codes**](../ordering-codes.md#chester-z) for more variants)
-* `CHESTER-E2-LP` - Enclosure with light pipe and SMA antenna pigtail
+* `CHESTER-M-CGLS`: CHESTER mainboard
+* `CHESTER-Z1-F`: Four push buttons (see [**Ordering Codes**](../ordering-codes.md#chester-z) for more variants)
+* `CHESTER-E2-LP`: Enclosure with light pipe and SMA antenna pigtail
 
 ## Enclosure Template
 
@@ -83,7 +83,7 @@ app config backup-report-disconnected false
 
 :::info
 
-You can easily explore the whole command tree structure - start with the `help` command.
+You can easily explore the whole command tree structure. Start with the `help` command.
 
 :::
 
@@ -276,9 +276,9 @@ import TabItem from '@theme/TabItem';
 
 ## Changelog
 
-### v3.5.0 — 2025-12-03
+### v3.5.0 – 2025-12-03
 
-- **Added**: LoRaWAN support — single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
+- **Added**: LoRaWAN support: single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
 - **Changed**: Refactored to new `app_lrw` LoRaWAN framework with unit test coverage
 - **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available
 

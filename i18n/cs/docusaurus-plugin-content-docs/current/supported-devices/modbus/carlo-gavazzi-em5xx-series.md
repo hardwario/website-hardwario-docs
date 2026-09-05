@@ -146,7 +146,7 @@ config save
 6. Potvrďte nastavení volbou **YES** tlačítkem **nahoru** a poté stiskněte tlačítko **Select**.
 
 :::warning
-Tyto modely jsou **elektroměry certifikované podle MID** (Measuring Instruments Directive — evropská norma legální metrologie).  
+Tyto modely jsou **elektroměry certifikované podle MID** (Measuring Instruments Directive, evropská norma legální metrologie).  
 Převod CT lze změnit **pouze předtím**, než zařízení zaznamená **1 kWh** aktivní energie.  
 Po překročení 1 kWh je převod CT **trvale uzamčen** a **nelze jej změnit**, a to ani po obnovení výrobního nastavení nebo MID resetu.  
 :::

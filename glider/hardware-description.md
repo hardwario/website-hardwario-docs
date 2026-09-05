@@ -41,7 +41,7 @@ The table below lists every GPIO used by GLIDER, taken from `gauger_lte_nrf9151_
 | P0.04 / P0.05 / P0.06 | `RS_DE / RS_RE / RS_ON` | RS-485 driver enable, receive enable, isolator power | `RS_ON` active high; default off. |
 | P0.07 | `SLPZ` | DS2484 sleep / wake | Active low. |
 | P0.08 / P0.09 / P0.10 | `LED_Y / LED_R / LED_G` | Yellow / red / green status LEDs | Active high. |
-| P0.13 - P0.20 | `GP0` - `GP7` | General-purpose analog headers | Routable to `AIN7` - `AIN0`. |
+| P0.13–P0.20 | `GP0`–`GP7` | General-purpose analog headers | Routable to `AIN7`–`AIN0`. |
 | P0.21 | `DI_EN` | Digital input power enable | Active high; default off. |
 | P0.22 / P0.23 | `DI_CH0 / DI_CH1` | Isolated digital inputs (CH1 / CH2) | Active high. |
 | P0.24 / P0.25 | `UART0 RX / TX` | USB-C console (via FT234XD) | 1 000 000 baud. |
@@ -90,7 +90,7 @@ Two electrically equivalent ports on the screw terminal, both driven by the same
 
 - Isolated RS-485 transceiver (**ISO1212DBQ**) on `UART2`.
 - 19 200 baud, 8E1, RTU framing, 500 ms response timeout.
-- Powered only when explicitly enabled (`modbus enable`) - saves current when idle.
+- Powered only when explicitly enabled (`modbus enable`), which saves current when idle.
 - See [**Shell Commands → `modbus`**](commands/shell-commands.md).
 
 ## Power and timing
@@ -102,16 +102,16 @@ Two electrically equivalent ports on the screw terminal, both driven by the same
 | Default sample period | 60 s (`app config interval-sample`) |
 | Default uplink period | 300 s (`app config interval-send`) |
 | Default downlink watchdog | 36 h (`app config downlink-wdg-interval`; `0` disables) |
-| Peripheral power gating | USB bridge, digital inputs and RS-485 isolator default off - only powered when needed |
+| Peripheral power gating | USB bridge, digital inputs and RS-485 isolator default off, only powered when needed |
 
 ## Indicators and controls
 
 - **LEDs (3):** red, green, yellow. Driven by GPIO; controllable via the `led` shell command.
 - **Button (1):** drives `app sample` / `app send` actions depending on click pattern:
- - 1 click - force `send`
- - 2 clicks - force `sample`
- - 3 clicks - `sample` then `send`
- - 4 clicks - reboot the device
+ - 1 click: force `send`
+ - 2 clicks: force `sample`
+ - 3 clicks: `sample` then `send`
+ - 4 clicks: reboot the device
 
 ## Firmware
 
@@ -123,4 +123,4 @@ Build command:
 west build -b gauger_lte/nrf9151/ns application
 ```
 
-The internal board name is `gauger_lte` - GLIDER is the commercial product name; both refer to the same hardware.
+The internal board name is `gauger_lte`, while GLIDER is the commercial product name; both refer to the same hardware.

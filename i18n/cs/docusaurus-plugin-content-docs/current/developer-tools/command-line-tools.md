@@ -24,11 +24,11 @@ Nástroj HARDWARIO pro příkazovou řádku umožňuje:
 
 **HARDWARIO CLI** je nástroj v **Pythonu 3**. Nainstalujte Python podle níže uvedených kroků pro váš operační systém.
 
-- **Ubuntu** – Python 3 by již měl být ve vašem OS nainstalován.
+- **Ubuntu**: Python 3 by již měl být ve vašem OS nainstalován.
 
-- **macOS** – Postupujte podle kapitoly [Instalace balíčků](firmware-sdk/../../firmware-sdk/installation-on-macos.md#install-package-manager) a nainstalujte Homebrew. Poté spusťte `brew install python3`.
+- **macOS**: Postupujte podle kapitoly [Instalace balíčků](firmware-sdk/../../firmware-sdk/installation-on-macos.md#install-package-manager) a nainstalujte Homebrew. Poté spusťte `brew install python3`.
 
-- **Windows** – Postupujte podle kapitoly [Instalace Pythonu](firmware-sdk/../../firmware-sdk/installation-on-windows.md#install-python).
+- **Windows**: Postupujte podle kapitoly [Instalace Pythonu](firmware-sdk/../../firmware-sdk/installation-on-windows.md#install-python).
 
 ## Instalace HARDWARIO CLI {#install-hardwario-cli}
 

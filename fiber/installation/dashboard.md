@@ -7,8 +7,8 @@ title: Dashboard
 Available on both FIBER and FIBER Lite.
 
 FIBER ships a landing page on port 80 with tiles linking to every service, live system
-metrics, and an SSH quick-copy button — styled to the HARDWARIO brand (colors, typography, logo).
-It is a self-contained static page with a small Python backend for live stats — no external
+metrics, and an SSH quick-copy button, styled to the HARDWARIO brand (colors, typography, logo).
+It is a self-contained static page with a small Python backend for live stats, with no external
 framework or Docker container required for the page itself. The logo and font below are fetched
 from `hardwario.com`/Google Fonts at page-load time for simplicity; self-hosting them is possible
 but not required.
@@ -19,7 +19,7 @@ but not required.
    mkdir -p ~/fiber-dashboard
    ```
 
-1. Write `index.html` — this is the dashboard's web page (layout, styling, and the little script
+1. Write `index.html`: this is the dashboard's web page (layout, styling, and the little script
    that fills in your device's IP and refreshes the live stats). The block below is collapsed by
    default since it's long; click the bar to expand it, then copy the whole thing into the
    command:
@@ -286,7 +286,7 @@ but not required.
    </p>
    </details>
 
-1. Fill in your actual SSH username — the page can't detect it from the browser, so bake it in
+1. Fill in your actual SSH username: the page can't detect it from the browser, so bake it in
    now with the username you're currently logged in as:
 
    ```sh
@@ -296,12 +296,12 @@ but not required.
    :::tip
 
    The service tiles and SSH command use `window.location.hostname` to fill in the target IP
-   automatically — open the page from whatever address you actually browse to, and the links/SSH
+   automatically. Open the page from whatever address you actually browse to, and the links/SSH
    command adjust themselves. No need to hand-edit IP addresses into the file.
 
    :::
 
-1. Write `serve.py` — this is the small program that actually runs the dashboard: a
+1. Write `serve.py`: this is the small program that actually runs the dashboard: a
    dependency-free Python web server that serves the `index.html` page above and exposes a
    `/api/stats` endpoint with live CPU/memory/disk usage and temperature. Same as above, click
    to expand the code, then copy the whole thing into the command:

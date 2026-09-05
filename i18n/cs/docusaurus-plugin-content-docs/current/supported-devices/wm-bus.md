@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # Senzory wM-Bus {#wm-bus-sensors}
 
-**CHESTER wM-Bus podporuje všechny měřiče wM-Bus tříd T1 a C1 bez ohledu na výrobce.** Funguje jako **průchozí brána (pass-thru gateway)** — přijaté telegramy přeposílá tak, jak jsou, a jejich dekódování do smysluplných jednotek probíhá až v koncové IoT aplikaci.
+**CHESTER wM-Bus podporuje všechny měřiče wM-Bus tříd T1 a C1 bez ohledu na výrobce.** Funguje jako **průchozí brána (pass-thru gateway)**: přijaté telegramy přeposílá tak, jak jsou, a jejich dekódování do smysluplných jednotek probíhá až v koncové IoT aplikaci.
 
 :::info
 Následující seznam proto není seznamem kompatibility. Obsahuje měřiče, které jsme sami otestovali a zdokumentovali; s bránou funguje i jakékoli jiné zařízení wM-Bus T1/C1 dostupné na trhu.

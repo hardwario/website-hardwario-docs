@@ -7,7 +7,7 @@ description: "Pravidlo alarmu sleduje jednu měřenou veličinu a označí zař�
 # Nastavení pravidel alarmů {#set-up-alarm-rules}
 
 Pravidlo alarmu sleduje jednu měřenou veličinu a označí zařízení jako alarmující,
-když podmínka platí. Pravidla žijí ve **slotech** na zařízení — až **16** — a
+když podmínka platí. Pravidla žijí ve **slotech** na zařízení (až **16**) a
 upravují se v **Configuration → Alarms**.
 
 ---
@@ -21,11 +21,11 @@ upravují se v **Configuration → Alarms**.
 
 | Druh pravidla | Sleduje |
 |---|---|
-| **Threshold (analog band)** | Měřenou hodnotu vstupující do pásma nebo z něj vystupující — například teplotu nad limitem |
+| **Threshold (analog band)** | Měřenou hodnotu vstupující do pásma nebo z něj vystupující, například teplotu nad limitem |
 | **State (digital 0/1)** | Digitální vstup dosahující daného stavu |
 | **Rate (count increase)** | Čítač rostoucí za dané období o víc, než je povoleno |
 
-Otevřením **Advanced** u pravidla nastavíte jeho **hysterezi** — rezervu, o kterou
+Otevřením **Advanced** u pravidla nastavíte jeho **hysterezi**: rezervu, o kterou
 se hodnota musí vrátit, než alarm zmizí. Hystereze zabrání tomu, aby hodnota
 sedící přesně na limitu opakovaně vyvolávala a rušila alarm.
 
@@ -57,9 +57,9 @@ aktuálně vyvolané na zařízení. Viz
 ## Použití pravidel na více zařízeních {#reuse-rules-across-devices}
 
 Pravidla alarmů lze nést v **šabloně**, takže celá flotila může dostat stejná
-pravidla najednou — viz [**Šablony**](./templates.md). Pravidla lze také postavit
+pravidla najednou, viz [**Šablony**](./templates.md). Pravidla lze také postavit
 v prohlížeči pomocí
 [**generátoru šablon**](./template-generator.mdx) a nastavit na dálku pomocí
 [**generátoru downlink příkazů**](/sticker/connectivity/downlink-commands-generator)
-nebo shell příkazem `alarm` — viz
+nebo shell příkazem `alarm`, viz
 [**Pravidla alarmů (přístup pro vývojáře)**](/sticker/developer-access/alarm-rules).

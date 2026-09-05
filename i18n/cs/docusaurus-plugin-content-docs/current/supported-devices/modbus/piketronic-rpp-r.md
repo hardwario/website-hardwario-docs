@@ -17,7 +17,7 @@ podporuje aplikace **CHESTER Serial**.
 
 :::info
 
-Radonová sonda je samostatný senzor — **nevyžaduje** žádný externí senzor. Nová
+Radonová sonda je samostatný senzor. **Nevyžaduje** žádný externí senzor. Nová
 hodnota koncentrace radonu je k dispozici **každé 4 minuty**; častější čtení
 vrací stejnou hodnotu.
 
@@ -42,7 +42,7 @@ Sonda RPP-R má čtyřpinový konektor s označením **B RxTx-**, **A RxTx+**, *
 
 Sonda potřebuje napájení na **VCC**. Lze ji napájet z vyhrazeného napájecího
 výstupu zařízení CHESTER (VIN), **pokud** napětí a proud odpovídají požadavkům
-sondy RPP-R — nejprve ověřte napájecí napětí sondy; jinak použijte samostatný
+sondy RPP-R. Nejprve ověřte napájecí napětí sondy; jinak použijte samostatný
 externí zdroj. Označení linek A/B u RS-485 se mezi výrobci liší; pokud nepřijímáte
 žádná data, prohoďte vodiče **A** a **B**.
 
@@ -110,7 +110,7 @@ app config device-0 "piketronic,1"
 config save
 ```
 
-Hodnota `device-0` má tvar `type,address` — zde typ `piketronic` na Modbus adrese `1`.
+Hodnota `device-0` má tvar `type,address`, zde typ `piketronic` na Modbus adrese `1`.
 
 Sondu můžete také kdykoli přečíst přímo z terminálu:
 
@@ -125,7 +125,7 @@ nastavení a identifikace zařízení/firmwaru/sériového čísla sondy.
 
 ### Naměřené hodnoty {#measured-values}
 
-Dekodér: `com.hardwario.chester.app.serial` — hodnoty se zobrazují v poli `devices`
+Dekodér: `com.hardwario.chester.app.serial`. Hodnoty se zobrazují v poli `devices`
 (`devices → data`).
 
 | Naměřená hodnota           | Klíč / cesta                            | Jednotka |

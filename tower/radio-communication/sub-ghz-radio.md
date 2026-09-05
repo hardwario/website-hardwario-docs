@@ -18,7 +18,7 @@ The radio frequency **868 MHz (for Europe)** or **915 MHz (for the U.S.)** allow
 
 We have done several radio communication tests. We claim, that from a single point, you are typically able to provide full-house radio coverage.
 
-On the other hand, several factors influence the communication distance - the most important is the building material from which you have built your house, obstacles in the path, interference from other appliances, etc.
+On the other hand, several factors influence the communication distance. The most important is the building material from which you have built your house, obstacles in the path, interference from other appliances, etc.
 
 The only objective radio communication range measurement is a so-called line-of-sight distance measured outdoors.
 
@@ -42,8 +42,8 @@ TOWER supports only **star network topology**. Such configuration offers high re
 
 There are two types of devices in the TOWER radio network.
 
-- [**Radio Dongle**](../hardware-modules/about-radio-dongle.md) - You can pair **up to 32 devices**
-- **Radio Node** - Every node has to be paired to the gateway. A node device can be some sensor (e.g. temperature, humidity, CO2) or actuator (power relay, LCD, LED strip controller).
+- [**Radio Dongle**](../hardware-modules/about-radio-dongle.md): You can pair **up to 32 devices**
+- **Radio Node**: Every node has to be paired to the gateway. A node device can be some sensor (e.g. temperature, humidity, CO2) or actuator (power relay, LCD, LED strip controller).
 
 :::info
 
@@ -157,9 +157,9 @@ void application_init(void)
 
 #### Explanation of each part
 
-- **PRE(4)** - This part is called the preamble and consists of an alternating sequence of zeroes and ones (32 bits).
-- **SYN(4)** - This part is called synchronization word and has a fixed value of 0x88888888.
-- **LEN(1)** - This part determines the length of the DATA plus 1 (DST field is also counted).
-- **DST(1)** - This is the destination address (for logic network addressing).
-- **DATA(0..60)** - Variable length payload data field.
-- **CRC(2)** - Checksum calculated over all fields excluding PRE and SYN fields. The polynomial of the CRC engine is 0x1021.
+- **PRE(4)**: This part is called the preamble and consists of an alternating sequence of zeroes and ones (32 bits).
+- **SYN(4)**: This part is called synchronization word and has a fixed value of 0x88888888.
+- **LEN(1)**: This part determines the length of the DATA plus 1 (DST field is also counted).
+- **DST(1)**: This is the destination address (for logic network addressing).
+- **DATA(0..60)**: Variable length payload data field.
+- **CRC(2)**: Checksum calculated over all fields excluding PRE and SYN fields. The polynomial of the CRC engine is 0x1021.

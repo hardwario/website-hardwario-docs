@@ -1,7 +1,7 @@
 ---
 slug: chester-x6
 title: CHESTER-X6 (sběrnice S-Wire)
-description: Rozšiřující modul se sběrnicí HARDWARIO S-Wire pro platformu CHESTER — připojuje periferie S-Wire s nízkou spotřebou po třívodičovém spoji (+5 V, GND, DATA), s boost převodníkem na 5 V pro jejich napájení a s převodníkem na UART řízeným po I²C.
+description: Rozšiřující modul se sběrnicí HARDWARIO S-Wire pro platformu CHESTER. Připojuje periferie S-Wire s nízkou spotřebou po třívodičovém spoji (+5 V, GND, DATA), s boost převodníkem na 5 V pro jejich napájení a s převodníkem na UART řízeným po I²C.
 keywords: [CHESTER-X6, S-Wire, sběrnice S-Wire, HARDWARIO S-Wire, periferie, SC16IS740, TCA9534A, I2C, převodník UART, boost 5V, CHESTER]
 ---
 import Image from '@theme/IdealImage';
@@ -22,14 +22,14 @@ import Image from '@theme/IdealImage';
 
 ## Přehled modulu {#module-overview}
 
-CHESTER-X6 připojuje k platformě CHESTER periferie **S-Wire** s nízkou spotřebou po jednoduchém třívodičovém spoji — **+5 V**, **GND** a jediná linka **DATA**. Protokol S-Wire běží na UART jednotce, kterou poskytuje převodník I²C na UART **SC16IS740**; tranzistorový budič linky převádí signály UART převodníku na jedinou half-duplexní 5V linku DATA s ochranou proti ESD. Modul se řídí výhradně po **I²C** — jsou na něm dvě zařízení I²C: převodník na UART a GPIO expander **TCA9534A**, který přepíná napájení periferií, resetuje převodník a obsluhuje jeho přerušení.
+CHESTER-X6 připojuje k platformě CHESTER periferie **S-Wire** s nízkou spotřebou po jednoduchém třívodičovém spoji: **+5 V**, **GND** a jediná linka **DATA**. Protokol S-Wire běží na UART jednotce, kterou poskytuje převodník I²C na UART **SC16IS740**; tranzistorový budič linky převádí signály UART převodníku na jedinou half-duplexní 5V linku DATA s ochranou proti ESD. Modul se řídí výhradně po **I²C**. Jsou na něm dvě zařízení I²C: převodník na UART a GPIO expander **TCA9534A**, který přepíná napájení periferií, resetuje převodník a obsluhuje jeho přerušení.
 
 Boost převodník na desce (**TPS61099**) vytváří stabilizovaných **5 V**, kterými se napájejí připojené periferie. Protože zvyšuje napětí z napájecí větve +V zařízení CHESTER, umí modul dodávat periferiím čistých 5 V **i když CHESTER běží na baterii**. Výstup 5 V se zapíná pod kontrolou I²C (přes expander), takže lze napájení periferií mezi odečty vypnout a šetřit energii.
 
 ## Klíčové vlastnosti {#key-features}
 
 * **Rozhraní HARDWARIO S-Wire:** Připojuje periferie S-Wire s nízkou spotřebou po třívodičovém spoji (+5 V, GND, DATA).
-* **Řízení po I²C:** Dvě zařízení I²C — převodník UART SC16IS740 (0x4D) a expander TCA9534A (0x39); žádné piny GP se nepoužívají.
+* **Řízení po I²C:** Dvě zařízení I²C, převodník UART SC16IS740 (0x4D) a expander TCA9534A (0x39); žádné piny GP se nepoužívají.
 * **Boost na 5 V na desce:** TPS61099 dodává periferiím stabilizovaných 5 V, i když CHESTER běží na baterii.
 * **Přepínatelné napájení periferií:** Výstup 5 V se zapíná po I²C, takže ho lze mezi odečty vypnout.
 * **Chráněná linka DATA:** Half-duplexní jednovodičový budič s ochranou proti ESD.
@@ -96,14 +96,14 @@ CHESTER-X6 se řídí výhradně po standardní sběrnici **I²C**; jsou na něm
 
 | Zařízení | Adresa I²C | Funkce |
 | :--- | :--- | :--- |
-| SC16IS740IPW | 0x4D | Převodník I²C na UART — UART jednotka pro S-Wire (TX/RX k budiči linky) |
-| TCA9534APW | 0x39 | GPIO expander — zapíná boost na 5 V, resetuje převodník a obsluhuje jeho přerušení |
+| SC16IS740IPW | 0x4D | Převodník I²C na UART. UART jednotka pro S-Wire (TX/RX k budiči linky) |
+| TCA9534APW | 0x39 | GPIO expander. Zapíná boost na 5 V, resetuje převodník a obsluhuje jeho přerušení |
 
-Veškerý provoz S-Wire jde přes převodník UART a napájení periferií, reset i obsluha přerušení přes expander — modul tedy potřebuje jen sběrnici I²C (SDA/SCL) a napájení ze slotu. Piny GP slotu se nepoužívají.
+Veškerý provoz S-Wire jde přes převodník UART a napájení periferií, reset i obsluha přerušení přes expander, modul tedy potřebuje jen sběrnici I²C (SDA/SCL) a napájení ze slotu. Piny GP slotu se nepoužívají.
 
 ## Připojení S-Wire {#s-wire-connection}
 
-Každou periferii S-Wire zapojte do svorkovnice: **DATA** (pin 4 nebo 5), **+5V** (pin 2 nebo 7) pro napájení a **GND** (pin 3 nebo 6). Protože jsou piny DATA, +5 V, +V a GND na svorkovnici zrcadlené, lze periferie **řetězit** — jednu zapojíte na piny 1–4 a druhou na piny 5–8, nebo sběrnici provlečete dál.
+Každou periferii S-Wire zapojte do svorkovnice: **DATA** (pin 4 nebo 5), **+5V** (pin 2 nebo 7) pro napájení a **GND** (pin 3 nebo 6). Protože jsou piny DATA, +5 V, +V a GND na svorkovnici zrcadlené, lze periferie **řetězit**: jednu zapojíte na piny 1–4 a druhou na piny 5–8, nebo sběrnici provlečete dál.
 
 Všechny periferie musí mít s modulem společnou **GND**. Před komunikací s periferiemi zapněte po I²C (přes expander) napájení 5 V.
 
@@ -137,7 +137,7 @@ Modul CHESTER-X6 lze použít s různými konfiguracemi základních desek CHEST
 
 ## Schémata {#schematic-diagrams}
 
-Kompletní schéma — převodník UART SC16IS740, expander TCA9534A, budič linky S-Wire a boost převodník na 5 V — je k dispozici jako PDF:
+Kompletní schéma (převodník UART SC16IS740, expander TCA9534A, budič linky S-Wire a boost převodník na 5 V) je k dispozici jako PDF:
 
 - [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x6-r1.0.pdf)
 - [Interaktivní prohlížeč CHESTER-X6](pathname:///download/ibom/hio-chester-x6-r1.0.html)

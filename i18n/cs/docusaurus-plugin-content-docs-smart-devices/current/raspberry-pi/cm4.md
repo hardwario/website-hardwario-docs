@@ -1,7 +1,7 @@
 ---
 slug: cm4
 title: "Compute Module 4"
-description: Raspberry Pi Compute Module 4 — kompaktní system-on-module pro IoT brány, edge computing a vývoj embedded produktů.
+description: Raspberry Pi Compute Module 4, kompaktní system-on-module pro IoT brány, edge computing a vývoj embedded produktů.
 ---
 
 # Raspberry Pi Compute Module 4 {#raspberry-pi-compute-module-4}
@@ -24,7 +24,7 @@ description: Raspberry Pi Compute Module 4 — kompaktní system-on-module pro I
 
 ### CM4108016 {#cm4108016}
 
-Varianta prodávaná v HARDWARIO Store je **CM4108016** — 8 GB RAM, 16 GB eMMC, s Wi-Fi a Bluetooth.
+Varianta prodávaná v HARDWARIO Store je **CM4108016** s 8 GB RAM, 16 GB eMMC, Wi-Fi a Bluetooth.
 
 ## Integrace s HARDWARIO {#hardwario-integration}
 

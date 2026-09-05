@@ -41,11 +41,11 @@ There are several buttons on the right side if you open the HARDWARIO TOWER Cons
 </div>
 
 
-- **Clear console** - this will just clear all the log messages that you received.
-- **Connect/Disconnect console** - this will attach the console to the device that is selected on the bottom panel. If the console is already attached it will disconnect it. You don’t have to use this button if you are using extension commands [**Build + Flash (Console)**](./hardwario-extension-tutorial.md#build--flash-console) or [**Attach console**](./hardwario-extension-tutorial.md#attach-console).
-- **Restart device** - this command will restart the connected device and start the program on the device from the beginning.
-- **Scroll to bottom** - by default, the console will scroll automatically with the messages. If you scroll to view some message auto scroll will turn off. To start it again, just click this button.
-- **Save Log** - this will save the displayed log.
-- **Allow Input** - this will allow sending input to the device. [**Usable for AT commands**](../radio-communication/lora-at-commands.md).
-- **Maximize window** - this will make the console bigger. It is a standard Visual Studio Code button available on most panels.
-- **Close panel** - this will close the whole panel, not just HARDWARIO TOWER Console.
+- **Clear console**: this will just clear all the log messages that you received.
+- **Connect/Disconnect console**: this will attach the console to the device that is selected on the bottom panel. If the console is already attached it will disconnect it. You don’t have to use this button if you are using extension commands [**Build + Flash (Console)**](./hardwario-extension-tutorial.md#build--flash-console) or [**Attach console**](./hardwario-extension-tutorial.md#attach-console).
+- **Restart device**: this command will restart the connected device and start the program on the device from the beginning.
+- **Scroll to bottom**: by default, the console will scroll automatically with the messages. If you scroll to view some message auto scroll will turn off. To start it again, just click this button.
+- **Save Log**: this will save the displayed log.
+- **Allow Input**: this will allow sending input to the device. [**Usable for AT commands**](../radio-communication/lora-at-commands.md).
+- **Maximize window**: this will make the console bigger. It is a standard Visual Studio Code button available on most panels.
+- **Close panel**: this will close the whole panel, not just HARDWARIO TOWER Console.

@@ -7,7 +7,7 @@ description: "Sdílená session zpřístupní konzoli zařízení CHESTER, ke kt
 # Sdílení terminálové session {#share-a-terminal-session}
 
 Sdílená session zpřístupní konzoli zařízení CHESTER, ke kterému jste připojení,
-na odkazu, takže kolega — třeba podpora HARDWARIO — vidí výstup a může zadávat
+na odkazu, takže kolega (třeba podpora HARDWARIO) vidí výstup a může zadávat
 příkazy ze svého prohlížeče nebo telefonu, zatímco zařízení držíte vy.
 
 :::danger Kdokoli s odkazem zařízení ovládá
@@ -47,7 +47,7 @@ Obrazovka pojmenuje **relay**, přes který session běží, takže ještě pře
 připojením vidíte, kudy provoz konzole jde.
 
 Divák vidí výstup konzole hostitele a má vstupní pole pro spouštění příkazů na
-jeho zařízení. Stavový řádek říká, co hostitel dělá — jestli je připojený, ještě
+jeho zařízení. Stavový řádek říká, co hostitel dělá: jestli je připojený, ještě
 připojuje zařízení, nebo zatím neposlal žádný výstup.
 
 **Leave** ukončí vaši stranu. Pokud hostitel sdílení zastaví, oznámí to pásek
@@ -58,5 +58,5 @@ a vstupní pole se zablokuje.
 ## Co odkazem putuje {#what-travels-over-the-link}
 
 Session přenáší konzoli: odeslané příkazy a vrácený výstup. Cokoli byste viděli
-v terminálu, vidí i divák — včetně hodnot vypsaných příkazem `config show`. Mějte
+v terminálu, vidí i divák, včetně hodnot vypsaných příkazem `config show`. Mějte
 to na paměti, než nasdílíte session na zařízení s produkčními klíči.

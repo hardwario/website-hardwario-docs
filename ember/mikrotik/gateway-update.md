@@ -49,7 +49,7 @@ In the left panel **System → Packages → Check for Updates**. A new window wi
 ## 4. Verify the Update
 
 1. **System → Packages**:  
-   - Click **Check For Updates** — it should now report **up to date** (both versions should match).
+   - Click **Check For Updates**: it should now report **up to date** (both versions should match).
 2. **System → RouterBOARD**:  
-   - Confirm that **Current Firmware** now matches **Upgrade Firmware** — meaning the firmware is successfully updated.
+   - Confirm that **Current Firmware** now matches **Upgrade Firmware**: meaning the firmware is successfully updated.
 

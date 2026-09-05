@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Rule Engine
 
-The Rule Engine is ThingsBoard's visual programming system for processing incoming device messages. A **Rule Chain** is a graph or flowchart that defines the logic of how messages (telemetry, attributes, events) should be processed. It consists of **Nodes** — building blocks that perform a specific action (e.g., saving to a database, sending an email) — and **Relations** — connections between nodes that determine the data flow direction based on the outcome (*Success*, *Failure*, *True*, *False*).
+The Rule Engine is ThingsBoard's visual programming system for processing incoming device messages. A **Rule Chain** is a graph or flowchart that defines the logic of how messages (telemetry, attributes, events) should be processed. It consists of **Nodes**, building blocks that perform a specific action (e.g., saving to a database, sending an email), and **Relations**, connections between nodes that determine the data flow direction based on the outcome (*Success*, *Failure*, *True*, *False*).
 
 ---
 
@@ -38,7 +38,7 @@ The Rule Engine intercepts all communication between devices and the server, all
 
 ## ⚠️ Working with the Root Rule Chain
 
-When a ThingsBoard instance or tenant is created, a **Root Rule Chain** is automatically generated. This acts as the main entry gateway — **every single message from every device passes through this rule chain first**.
+When a ThingsBoard instance or tenant is created, a **Root Rule Chain** is automatically generated. This acts as the main entry gateway: **every single message from every device passes through this rule chain first**.
 
 ### What to Be Careful About
 

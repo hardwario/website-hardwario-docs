@@ -22,8 +22,8 @@ Knihovna automaticky inicializuje vaši konfiguraci, když:
 První parametr, `signature`, je **unikátní číslo pro váš firmware**. Díky tomu, pokud do zařízení **Core Module** nahrajete jiný firmware, který používá konfigurační strukturu se **stejnou délkou**, knihovna to pozná a konfiguraci znovu správně inicializuje.
 
 Poslední parametr `init_config` může být:
-- `NULL` - konfigurační struktura je při inicializaci **vynulována**
-- **Ukazatel na strukturu** - init_config se při inicializaci zkopíruje do konfigurační struktury
+- `NULL`: konfigurační struktura je při inicializaci **vynulována**
+- **Ukazatel na strukturu**: init_config se při inicializaci zkopíruje do konfigurační struktury
 
 :::info
 

@@ -11,7 +11,7 @@ import Link from '@docusaurus/Link';
 
 ## Konfigurace zařízení {#configuring-devices}
 
-**[HARDWARIO Manager](/apps/hardwario-manager)** je mobilní aplikace pro nastavování zařízení HARDWARIO v provozu — přes NFC nastavíte zařízení **STICKER**, nebo se přes Bluetooth připojíte k zařízení **CHESTER**, přečtete jeho stav, upravíte konfiguraci, spustíte shell příkazy a aktualizujete firmware.
+**[HARDWARIO Manager](/apps/hardwario-manager)** je mobilní aplikace pro nastavování zařízení HARDWARIO v provozu: přes NFC nastavíte zařízení **STICKER**, nebo se přes Bluetooth připojíte k zařízení **CHESTER**, přečtete jeho stav, upravíte konfiguraci, spustíte shell příkazy a aktualizujete firmware.
 
 ---
 

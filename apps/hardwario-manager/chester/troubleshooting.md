@@ -7,9 +7,9 @@ title: Troubleshooting
 
 The app classifies every Bluetooth failure into a message that says what
 happened and what to do. The raw error is kept behind a **Technical details**
-expander, with a **Copy** button — include that text when you report a problem.
+expander, with a **Copy** button. Include that text when you report a problem.
 
-Where retrying cannot help — Bluetooth switched off, a permission not granted —
+Where retrying cannot help (Bluetooth switched off, a permission not granted),
 the app offers to open the phone's settings instead of a retry button.
 
 ---
@@ -19,8 +19,8 @@ the app offers to open the phone's settings instead of a retry button.
 | What you see | What to do |
 |---|---|
 | **Bluetooth is off** | Turn the phone's Bluetooth on, then scan again. |
-| **Bluetooth permission needed** | Allow the nearby-devices permission for the app in the phone's settings — see [**Install the app**](../install.md). |
-| **Device not found** — no CHESTER nearby | Check the device is powered on and in range, then scan again. |
+| **Bluetooth permission needed** | Allow the nearby-devices permission for the app in the phone's settings, see [**Install the app**](../install.md). |
+| **Device not found**, no CHESTER nearby | Check the device is powered on and in range, then scan again. |
 | Found devices, but not the serial you wanted | The app lists which serials it did see. Confirm you are looking at the right device. |
 | **Connection failed** | Move the phone closer, power-cycle the device, and try again. |
 | The scan stops on its own | Scanning runs for about 30 seconds. Use **Rescan**. |
@@ -40,7 +40,7 @@ the app offers to open the phone's settings instead of a retry button.
 
 :::tip Forgetting the device is the usual fix
 Most persistent pairing problems are a stale bond on the phone. Forget the
-CHESTER in the phone's own Bluetooth settings — not just in the app — then
+CHESTER in the phone's own Bluetooth settings (not just in the app), then
 connect again from the QR code.
 :::
 
@@ -50,7 +50,7 @@ connect again from the QR code.
 
 | What you see | What to do |
 |---|---|
-| **Connection lost** — the device closed the link | It may have rebooted; a reboot or a firmware update does this. Reconnect. |
+| **Connection lost**. The device closed the link | It may have rebooted; a reboot or a firmware update does this. Reconnect. |
 | The device powered off | Check its power supply or battery, then reconnect. |
 | **No answer from the device** | Keep it close to the phone and try again. If it stays silent, reconnect. |
 | The phone has too many Bluetooth connections | Disconnect another device and try again. |
@@ -72,11 +72,11 @@ Fetching a passkey or a firmware image needs the internet:
 
 ## Things that are expected
 
-- **Leaving the CHESTER screen disconnects the device.** This is by design — the
+- **Leaving the CHESTER screen disconnects the device.** This is by design. The
   connection belongs to that screen.
 - **Only one CHESTER at a time.** Disconnect before connecting to another.
 - **A device connected from the nearby-devices scan is not remembered** and has
   no passkey looked up for it. Connect from the QR code to get both.
 - **BLE tag slots stay empty until you save.** Binding a tag stages the change;
-  it only reaches the device when you tap **Save to device** — see
+  it only reaches the device when you tap **Save to device**, see
   [**BLE tags**](./ble-tags.md).

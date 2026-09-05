@@ -26,7 +26,7 @@ Více o tom, jak vyvíjet vlastní firmware, si můžete přečíst v kapitole [
 
 ### [Diskuzní fórum](https://forum.hardwario.com) {#discussion-forum}
 
-Pokud se při vývoji nebo používání systému TOWER zaseknete, můžete zajít na fórum a zkontrolovat, jestli podobný problém neřešil už někdo před vámi, nebo se prostě zeptat — někdo z vývojového týmu nebo komunity se vám pokusí co nejdříve pomoci.
+Pokud se při vývoji nebo používání systému TOWER zaseknete, můžete zajít na fórum a zkontrolovat, jestli podobný problém neřešil už někdo před vámi, nebo se prostě zeptat. Někdo z vývojového týmu nebo komunity se vám pokusí co nejdříve pomoci.
 
 ### [Firmware SDK](https://sdk.hardwario.com) {#firmware-sdk}
 

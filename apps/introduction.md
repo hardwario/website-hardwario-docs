@@ -10,7 +10,7 @@ import Link from '@docusaurus/Link';
 
 ## Configuring devices
 
-**[HARDWARIO Manager](/apps/hardwario-manager)** is the mobile app for setting up HARDWARIO devices in the field — configure a **STICKER** over NFC, or connect to a **CHESTER** over Bluetooth to read its state, edit its configuration, run shell commands, and update its firmware.
+**[HARDWARIO Manager](/apps/hardwario-manager)** is the mobile app for setting up HARDWARIO devices in the field: configure a **STICKER** over NFC, or connect to a **CHESTER** over Bluetooth to read its state, edit its configuration, run shell commands, and update its firmware.
 
 ---
 

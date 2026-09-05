@@ -16,11 +16,11 @@ V tomto návodu se naučíte, jak připojit svá zařízení k HARDWARIO Cloud v
 
 Než konektor nastavíte, musíte své zařízení připravit v HARDWARIO Cloud, aby vědělo, kam data posílat a jak se autentizovat:
 
-- **Přiřaďte tag** – otevřete detail svého zařízení a přiřaďte mu tag (vytvořený v pravém menu)
-- **Přidejte label s access tokenem** – sjeďte na úplný konec stránky zařízení k sekci `Labels`. Tam vytvořte nový label:
-  - `Name` – zadejte název svého tokenu, například `thingsboardtoken`  
+- **Přiřaďte tag**: otevřete detail svého zařízení a přiřaďte mu tag (vytvořený v pravém menu)
+- **Přidejte label s access tokenem**: sjeďte na úplný konec stránky zařízení k sekci `Labels`. Tam vytvořte nový label:
+  - `Name`: zadejte název svého tokenu, například `thingsboardtoken`  
     *(Poznámka: Název si můžete zvolit jakýkoli, ale musí být úplně stejný u všech zařízení, která tento konektor sdílejí, a musí odpovídat názvu ve vašem transformačním kódu.)*
-  - `Value` – sem vložte svůj access token z ThingsBoardu
+  - `Value`: sem vložte svůj access token z ThingsBoardu
 
 :::info Jak získat access token z ThingsBoardu
 Přihlaste se do svého ThingsBoardu, přejděte na **Entities > Devices** a klikněte na své konkrétní zařízení. V panelu s detailem zařízení, který vyskočí, klikněte na tlačítko **Copy access token**.
@@ -33,10 +33,10 @@ Přihlaste se do svého ThingsBoardu, přejděte na **Entities > Devices** a kli
 Pro navázání komunikace s ThingsBoardem přejděte v levém menu do sekce `Connectors`.  
 Klikněte na `+ New Connector` a nastavte:
 
-- `Name` – pojmenujte svůj konektor
-- `Type` – pro integraci s ThingsBoardem zvolte `Webhook`
-- `Trigger` – zvolte `Data`
-- `Tag` – přiřaďte tag, který jste vytvořili dříve
+- `Name`: pojmenujte svůj konektor
+- `Type`: pro integraci s ThingsBoardem zvolte `Webhook`
+- `Trigger`: zvolte `Data`
+- `Tag`: přiřaďte tag, který jste vytvořili dříve
 
 ![ThingsBoard - vytvoření nového konektoru](../../../../../apps/thingsboard/images/thingsboard-cloud-1.png)
 

@@ -80,7 +80,7 @@ Now that both the devices and the dashboard are public, you can generate and sha
 1. **Stay** in the **Dashboards -> Groups** section.
 2. **Click** directly on the **name** of the Dashboard Group you just made public. This will open the group and display a list of all dashboards inside it.
 3. **Locate** the specific dashboard you want to share.
-4. **Click** the very first icon on the right side of the dashboard's row—the **Chain link icon (🔗)** titled "Public dashboard link".
+4. **Click** the very first icon on the right side of the dashboard's row, the **Chain link icon (🔗)** titled "Public dashboard link".
 5. **Result:** The URL is now copied to your clipboard. 
 
 You can now send this link to your clients or users. Anyone with this link can view the dashboard and its real-time data directly in their browser without needing to log in.

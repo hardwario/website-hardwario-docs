@@ -15,18 +15,18 @@ All parameters are displayed with `lte config show` and stored with `config save
 ### `antenna` – Antenna Type
 Defines the type of antenna connected to the device:
 
-- `internal` – Use the built-in antenna.
-- `external` – Use an externally connected antenna.
+- `internal`: Use the built-in antenna.
+- `external`: Use an externally connected antenna.
 
 ---
 
 ### `mode` – Network Mode Selection
 Specifies the preferred network connectivity modes and their priority:
 
-- `lte-m,nb-iot` – Prefer **LTE-M**, fallback to NB-IoT.
-- `nb-iot,lte-m` – Prefer **NB-IoT**, fallback to LTE-M.
-- `lte-m` – Use **LTE-M only**.
-- `nb-iot` – Use **NB-IoT only**.
+- `lte-m,nb-iot`: Prefer **LTE-M**, fallback to NB-IoT.
+- `nb-iot,lte-m`: Prefer **NB-IoT**, fallback to LTE-M.
+- `lte-m`: Use **LTE-M only**.
+- `nb-iot`: Use **NB-IoT only**.
 
 > ⚠️ Ensure the selected mode is supported by your SIM card and the local network operator.
 
@@ -35,7 +35,7 @@ Specifies the preferred network connectivity modes and their priority:
 ### `bands` – Frequency Band Lock
 Restricts the modem to a subset of the supported frequency bands:
 
-- Leave empty (`""`) to let the modem **scan all supported bands** — this is the default and the recommended setting.
+- Leave empty (`""`) to let the modem **scan all supported bands**. This is the default and the recommended setting.
 - Enter a space-separated list of band numbers (for example `"3 8 20"`) to lock the modem to those bands only.
 
 Locking the bands shortens the initial network search, but the device will **not** register if the operator uses a band that is not in the list. Only set it once you have confirmed the bands used at the deployment site with your operator.
@@ -45,7 +45,7 @@ Locking the bands shortens the initial network search, but the device will **not
 ### `network` – PLMN Selection
 Forces registration to a specific operator, identified by its **PLMN ID** (MCC + MNC, for example `23003`):
 
-- Leave empty (`""`) for **automatic** operator selection — this is the default.
+- Leave empty (`""`) for **automatic** operator selection. This is the default.
 - Enter a PLMN ID to force **manual** selection, which is typically needed for roaming SIM cards that would otherwise attach to an unsuitable partner network.
 
 The PLMN IDs of the roaming partners used by the **HARDWARIO** Vodafone SIM cards are listed in the [**Vodafone SIM EU28+2**](vodafone-coverage.md) table.
@@ -63,9 +63,9 @@ Defines the APN required to connect to the mobile network:
 ### `auth` – Authentication Method
 Defines the method of APN authentication:
 
-- `"none"` – No authentication.
-- `"pap"` – Use PAP authentication (if supported).
-- `"chap"` – Use CHAP authentication (if supported).
+- `"none"`: No authentication.
+- `"pap"`: Use PAP authentication (if supported).
+- `"chap"`: Use CHAP authentication (if supported).
 
 > If your SIM does not require authentication, use `"none"`.
 

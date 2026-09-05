@@ -8,7 +8,7 @@ description: "Zařízení STICKER se konfiguruje přiložením telefonu k zaří
 
 Zařízení STICKER se konfiguruje **přiložením telefonu k zařízení**. Žádné kabely,
 žádný programátor, žádný software na počítači. Zařízení STICKER je připravené na
-NFC a lze ho nastavit i **bez vložených baterií** — pole NFC z telefonu napájí čip
+NFC a lze ho nastavit i **bez vložených baterií**, protože pole NFC z telefonu napájí čip
 dost dlouho na to, aby si nastavení uložil, a zařízení ho aplikuje při dalším
 startu.
 
@@ -28,12 +28,12 @@ Rozvržení obrazovek samotných odpovídá.
 
 | Položka | Co dělá |
 |---|---|
-| **Device info** | Přečte sériové číslo, verzi firmwaru, dobu běhu a hodiny — viz [**Informace o zařízení a klíče LoRaWAN**](./device-info.md) |
+| **Device info** | Přečte sériové číslo, verzi firmwaru, dobu běhu a hodiny, viz [**Informace o zařízení a klíče LoRaWAN**](./device-info.md) |
 | **LoRaWAN keys** | Přečte DevEUI a klíče potřebné k registraci zařízení v síti |
-| **Configuration** | Čtení a úprava celé konfigurace zařízení — viz [**Konfigurace**](./configuration.md) |
-| **Templates** | Znovupoužitelné konfigurační presety — viz [**Šablony**](./templates.md) |
-| **Tools** | Synchronizace času, senzory, historie, resety — viz [**Nástroje**](./tools.md) |
-| **Saved STICKERs** | Zařízení, která spravujete, a jejich uložené klíče — viz [**Uložené STICKERy**](./saved-stickers.md) |
+| **Configuration** | Čtení a úprava celé konfigurace zařízení, viz [**Konfigurace**](./configuration.md) |
+| **Templates** | Znovupoužitelné konfigurační presety, viz [**Šablony**](./templates.md) |
+| **Tools** | Synchronizace času, senzory, historie, resety, viz [**Nástroje**](./tools.md) |
+| **Saved STICKERs** | Zařízení, která spravujete, a jejich uložené klíče, viz [**Uložené STICKERy**](./saved-stickers.md) |
 
 Tlačítko dole, **Claim a STICKER**, zaznamená zařízení k vašemu účtu ATELOS, aby
 aplikace mohla doplnit jeho klíče. Viz [**Účet ATELOS**](../atelos.md).
@@ -49,8 +49,8 @@ telefonem pomalu kolem tohoto místa, dokud nedojde k načtení.
 
 Zařízení STICKER komunikuje **kanálem šifrovaným AES-CCM**, takže aplikace
 potřebuje **secret key** zařízení, aby mohla číst nebo zapisovat. Jakmile je
-zařízení uložené, aplikace klíč doplní automaticky — vezme sériové číslo a nonce
-z tagu a klíč dohledá ve vašem uloženém seznamu — takže většina akcí nevyžaduje
+zařízení uložené, aplikace klíč doplní automaticky. Vezme sériové číslo a nonce
+z tagu a klíč dohledá ve vašem uloženém seznamu, takže většina akcí nevyžaduje
 žádné psaní.
 
 :::info Android a iOS přikládají jinak

@@ -13,7 +13,7 @@ Pokud narazíte na jakékoli problémy nebo potíže s rozšířením či přeno
 
 :::
 
-Tato kapitola se věnuje rozšíření HARDWARIO TOWER pro Visual Studio Code. Aby rozšíření fungovalo plně, budete si muset nainstalovat několik nástrojů. Pokud se s tím nechcete zdržovat, můžete si nainstalovat samostatnou aplikaci HARDWARIO Code — jak na to, se dozvíte v kapitole [**O aplikaci HARDWARIO Code**](./about-hardwario-code.md).
+Tato kapitola se věnuje rozšíření HARDWARIO TOWER pro Visual Studio Code. Aby rozšíření fungovalo plně, budete si muset nainstalovat několik nástrojů. Pokud se s tím nechcete zdržovat, můžete si nainstalovat samostatnou aplikaci HARDWARIO Code. Jak na to, se dozvíte v kapitole [**O aplikaci HARDWARIO Code**](./about-hardwario-code.md).
 
 ## Instalace {#installation}
 

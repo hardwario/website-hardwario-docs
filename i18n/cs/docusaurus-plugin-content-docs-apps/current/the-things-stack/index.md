@@ -13,19 +13,19 @@ import Image from '@theme/IdealImage';
 
 ### Klíčové přínosy {#key-benefits}
 
-- **Bezpečnost na podnikové úrovni** – TTS používá end-to-end šifrování, bezpečné zprovoznění zařízení a architekturu s více nájemci, aby chránil data a zajistil soulad s pravidly.  
-- **Škálovatelnost a spolehlivost** – Postavený pro velká nasazení, s clusterováním, redundancí a podporou více regionů.  
-- **Flexibilní možnosti nasazení** – Dostupný jako spravovaná cloudová služba, privátní cloud nebo instalace na vlastní infrastruktuře.  
-- **Interoperabilita a otevřené standardy** – Plně odpovídá specifikaci LoRaWAN® a snadno se integruje s existujícími IoT platformami přes MQTT, webhooky nebo API.  
+- **Bezpečnost na podnikové úrovni**: TTS používá end-to-end šifrování, bezpečné zprovoznění zařízení a architekturu s více nájemci, aby chránil data a zajistil soulad s pravidly.  
+- **Škálovatelnost a spolehlivost**: Postavený pro velká nasazení, s clusterováním, redundancí a podporou více regionů.  
+- **Flexibilní možnosti nasazení**: Dostupný jako spravovaná cloudová služba, privátní cloud nebo instalace na vlastní infrastruktuře.  
+- **Interoperabilita a otevřené standardy**: Plně odpovídá specifikaci LoRaWAN® a snadno se integruje s existujícími IoT platformami přes MQTT, webhooky nebo API.  
 
 ### Co s TTS zvládnete {#what-you-can-do-with-tts}
 
-S The Things Stack můžete nasadit a provozovat kompletní infrastrukturu LoRaWAN — od registrace zařízení a správy bran po směrování dat a integraci se systémy třetích stran.  
+S The Things Stack můžete nasadit a provozovat kompletní infrastrukturu LoRaWAN, od registrace zařízení a správy bran po směrování dat a integraci se systémy třetích stran.  
 Můžete budovat a škálovat IoT aplikace pro chytré zemědělství, sledování majetku, správu energií, logistiku nebo průmyslové monitorování, a přitom si udržet plnou kontrolu nad sítí i daty.
 
 ---
 
-The Things Stack je základ profesionálních sítí LoRaWAN — bezpečný, škálovatelný a interoperabilní. Ať už budujete privátní IoT řešení, nebo provozujete globální nasazení, TTS vám dá nástroje ke spolehlivé správě zařízení i dat.
+The Things Stack je základ profesionálních sítí LoRaWAN: bezpečný, škálovatelný a interoperabilní. Ať už budujete privátní IoT řešení, nebo provozujete globální nasazení, TTS vám dá nástroje ke spolehlivé správě zařízení i dat.
 
 ---
 

@@ -5,7 +5,7 @@ title: Quick Start Guide
 
 # HARDWARIO Manager Quick Start Guide
 
-**HARDWARIO Manager** is the HARDWARIO mobile app for setting up devices in the field. Hold your phone against a device (or connect to it wirelessly) to read its information, write its configuration, run device commands, and keep a list of the devices you manage — no cables, programmers, or desktop software required.
+**HARDWARIO Manager** is the HARDWARIO mobile app for setting up devices in the field. Hold your phone against a device (or connect to it wirelessly) to read its information, write its configuration, run device commands, and keep a list of the devices you manage, with no cables, programmers, or desktop software required.
 
 The app reaches a device over one of two wireless links, depending on the product:
 
@@ -33,8 +33,8 @@ STICKER configuration over NFC is done from an **Android phone with NFC** (most 
 
 ## 2) Turn on the wireless link
 
-- **NFC** — open **Settings**, type **NFC** in the search box at the top, then switch it **On**. There is no in-app permission prompt for NFC.
-- **Bluetooth** — switch Bluetooth on and tap **Allow** when the app asks for the **Nearby devices** permission.
+- **NFC**: open **Settings**, type **NFC** in the search box at the top, then switch it **On**. There is no in-app permission prompt for NFC.
+- **Bluetooth**: switch Bluetooth on and tap **Allow** when the app asks for the **Nearby devices** permission.
 
 The app also asks for the **Camera** permission, but only the first time you scan a QR code.
 
@@ -44,7 +44,7 @@ The app also asks for the **Camera** permission, but only the first time you sca
 
 
 1. Open **HARDWARIO Manager** and choose the device family you are working with.
-2. Pick what you want to do — for example **Device info** or **Configuration**.
+2. Pick what you want to do: for example **Device info** or **Configuration**.
 3. When the screen says *Hold the phone against the …*, touch the back of your phone to the device and keep still for a second or two.
 
 The NFC antenna is usually near the **top back** of the phone. If nothing happens, move the phone slowly around that area until it reads.

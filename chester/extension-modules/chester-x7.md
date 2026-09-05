@@ -1,7 +1,7 @@
 ---
 slug: chester-x7
 title: CHESTER-X7 (1-ch diff input)
-description: Analog input extension module for the CHESTER platform — one differential input for current probes and industrial sensors, one 0–28 V single-ended voltage input, and a switchable 5 V output to power the probes.
+description: "Analog input extension module for the CHESTER platform: one differential input for current probes and industrial sensors, one 0–28 V single-ended voltage input, and a switchable 5 V output to power the probes."
 keywords: [CHESTER-X7, differential input, analog input, current probe, current sensing, voltage input, 0-28V, OPA4387, TPS61099, industrial sensor, CHESTER]
 ---
 import Image from '@theme/IdealImage';
@@ -22,7 +22,7 @@ The **CHESTER-X7** is an **analog input** extension module for the CHESTER platf
 
 ## Module Overview
 
-CHESTER-X7 provides a **differential input** (INP/INM) for current probes and other industrial sensors, and a single-ended **voltage input** (VIN) for 0–28 V signals. The differential input is buffered by precision zero-drift op-amp stages (**OPA4387**) and presented to the CHESTER analog inputs (INP → A0, INM → A1). The voltage input is scaled by a precision resistor divider and read on A2. CHESTER-X7 has no I²C or SPI interface — all three signals are read directly by the CHESTER mainboard's ADC.
+CHESTER-X7 provides a **differential input** (INP/INM) for current probes and other industrial sensors, and a single-ended **voltage input** (VIN) for 0–28 V signals. The differential input is buffered by precision zero-drift op-amp stages (**OPA4387**) and presented to the CHESTER analog inputs (INP → A0, INM → A1). The voltage input is scaled by a precision resistor divider and read on A2. CHESTER-X7 has no I²C or SPI interface. All three signals are read directly by the CHESTER mainboard's ADC.
 
 The module also generates a regulated **5.0 V output** (VOUT) to power the connected probes. It is produced from the +V rail by a boost converter (**TPS61099**) followed by a low-noise LDO (**TPS7A2050**), and is enabled under firmware control through the slot's **GP3/A3** pin, so probe power can be switched off between measurements to save energy.
 
@@ -30,7 +30,7 @@ The module also generates a regulated **5.0 V output** (VOUT) to power the conne
 
 * **Differential Input:** One differential input (INP/INM) for current probes and industrial sensors, buffered by precision OPA4387 op-amp stages.
 * **Voltage Input:** One single-ended 0–28 V input (VIN), precision-divided for the CHESTER ADC.
-* **Analog Interface:** Signals are read directly on the CHESTER analog inputs (A0/A1/A2) — no I²C or SPI needed.
+* **Analog Interface:** Signals are read directly on the CHESTER analog inputs (A0/A1/A2), no I²C or SPI needed.
 * **Switchable Probe Power:** Regulated 5.0 V output (VOUT) to power the probes, enabled via GP3/A3.
 * **Precision Analog:** Zero-drift OPA4387 op-amp and 0.1% resistors for accurate, low-drift measurements.
 
@@ -38,7 +38,7 @@ The module also generates a regulated **5.0 V output** (VOUT) to power the conne
 
 * **Current Measurement:** Reading current probes, current transformers (CTs), and shunt-based current sensors.
 * **Industrial Sensor Interfacing:** Differential sensors and transducers that need a powered, buffered front-end.
-* **Voltage Monitoring:** Measuring DC voltages up to 28 V — battery banks, supply rails, and industrial signals.
+* **Voltage Monitoring:** Measuring DC voltages up to 28 V: battery banks, supply rails, and industrial signals.
 * **Process & Energy Monitoring:** Load, power, and consumption monitoring in industrial and building systems.
 * **Analog Signal Acquisition:** General-purpose acquisition of low-level differential or single-ended signals.
 
@@ -93,7 +93,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 
 ### Signal Routing (Analog)
 
-CHESTER-X7 has no I²C or SPI device — the measurements are read directly on the CHESTER analog inputs, and one GP pin switches the probe power. The slot pins are used as follows:
+CHESTER-X7 has no I²C or SPI device. The measurements are read directly on the CHESTER analog inputs, and one GP pin switches the probe power. The slot pins are used as follows:
 
 | CHESTER-X pin | Direction | Function |
 | :--- | :--- | :--- |
@@ -147,7 +147,7 @@ CHESTER-X7 can be used as part of the CHESTER SDK using the `ctr_x7_a` and `ctr_
 
 ## Schematic Diagrams
 
-The complete schematic — the boost/LDO probe-power supply and the differential/voltage input front-end — is available as a PDF:
+The complete schematic (the boost/LDO probe-power supply and the differential/voltage input front-end) is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x7-r2.1.pdf)
 - [Interactive CHESTER-X7 browser](pathname:///download/ibom/hio-chester-x7-r2.1.html)

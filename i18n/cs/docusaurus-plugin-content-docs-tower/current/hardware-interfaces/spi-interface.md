@@ -9,10 +9,10 @@ Serial Peripheral Bus (**SPI**) je synchronní sériová sběrnice. Používá s
 
 SPI používá tyto signály:
 
-- **SCK - Serial Clock (P14 Core Module)** - přenosy po SPI jsou synchronní a potřebují hodinový signál
-- **MOSI - Master Out, Slave In (P13 Core Module)** - toto je sériový výstup **z MCU do periferie**
-- **MISO - Master In, Slave Out (P12 Core Module)** - toto je sériový vstup pro data **z periferie do MCU**
-- **NSS - Negative Slave Select (P15 Core Module)** - tento signál aktivuje zařízení slave. Je **aktivní v nízké úrovni**, proto to slovo negative. Pokud máte více zařízení slave, máte **více signálů NSS**. Někdy se také označuje jako **Chip Select CS**.
+- **SCK (Serial Clock, P14 Core Module)**: přenosy po SPI jsou synchronní a potřebují hodinový signál
+- **MOSI (Master Out, Slave In, P13 Core Module)**: toto je sériový výstup **z MCU do periferie**
+- **MISO (Master In, Slave Out, P12 Core Module)**: toto je sériový vstup pro data **z periferie do MCU**
+- **NSS (Negative Slave Select, P15 Core Module)**: tento signál aktivuje zařízení slave. Je **aktivní v nízké úrovni**, proto to slovo negative. Pokud máte více zařízení slave, máte **více signálů NSS**. Někdy se také označuje jako **Chip Select CS**.
 
 :::note
 

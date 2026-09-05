@@ -47,10 +47,10 @@ Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**
 
 1. Vyberte svůj **Space**  
 2. Přejděte na **DEVICES → +NEW DEVICE**  
-3. Zadejte informace o svém zařízení **CHESTER** — můžete zvolit jednu z následujících možností:
+3. Zadejte informace o svém zařízení **CHESTER**: můžete zvolit jednu z následujících možností:
 
    **Možnost 1 – Naskenujte QR kód:**  
-   Použijte funkci **`⛶ SCAN DEVICE`** v HARDWARIO Cloud a **naskenujte QR kód** na svém zařízení CHESTER — všechny **informace** se **vyplní automaticky**!  
+   Použijte funkci **`⛶ SCAN DEVICE`** v HARDWARIO Cloud a **naskenujte QR kód** na svém zařízení CHESTER a všechny **informace** se **vyplní automaticky**!  
 
    **Možnost 2 – Ručně:**  
    Zařízení můžete přidat ručně vyplněním následujících polí:  
@@ -59,11 +59,11 @@ Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**
    - **Claim Token**
 
 :::info
-**Claim Token** je pro každé zařízení unikátní — získáte ho **naskenováním QR kódu** na zařízení jakoukoli čtečkou QR kódů nebo příkazem **`info show`**, když je zařízení připojené přes **J-Link**.
+**Claim Token** je pro každé zařízení unikátní. Získáte ho **naskenováním QR kódu** na zařízení jakoukoli čtečkou QR kódů nebo příkazem **`info show`**, když je zařízení připojené přes **J-Link**.
 :::
 
 
-4. Uložte — vaše zařízení CHESTER je nyní **zaregistrované v cloudu**!
+4. Uložte: vaše zařízení CHESTER je nyní **zaregistrované v cloudu**!
 
 :::tip
 **Potřebujete více podrobností?**  
@@ -86,15 +86,15 @@ Nebo se podívejte na náš **videotutoriál**, jak přidat zařízení CHESTER 
 :::
 
 - Vložte baterie nebo připojte externí zdroj napájení  
-- Vyčkejte několik minut, než se zařízení připojí k HARDWARIO Cloud — po úspěšném připojení bude zařízení **blikat zelenou LED**  
+- Vyčkejte několik minut, než se zařízení připojí k HARDWARIO Cloud. Po úspěšném připojení bude zařízení **blikat zelenou LED**  
   *(Chování LED je vysvětleno níže v [Kroku 5: Zkontrolujte stavovou LED](#step-5-check-the-status-led))*  
-- Pokud používáte starší model **CHESTER-M** se superkondenzátory, vyčkejte po vložení baterií asi **30 sekund** — kondenzátory se musí nabít, než začne LED blikat.  
+- Pokud používáte starší model **CHESTER-M** se superkondenzátory, vyčkejte po vložení baterií asi **30 sekund**, protože kondenzátory se musí nabít, než začne LED blikat.  
 - Pokud se zařízení nepřipojí, vyzkoušejte jednu z těchto rychlých akcí:
 
    🔹 **Stiskněte tlačítko čtyřikrát** → restartuje zařízení  
    🔹 **Vyjměte a znovu vložte baterie**  
    🔹 Pro **CHESTER-M** (s modrými superkondenzátory):  
-     - Držte tlačítko nebo ho stiskněte **pětkrát**, dokud se nerozsvítí **bílá LED** — tím se kondenzátory vybijí (trvá ≈ 30 s)
+     - Držte tlačítko nebo ho stiskněte **pětkrát**, dokud se nerozsvítí **bílá LED**. Tím se kondenzátory vybijí (trvá ≈ 30 s)
 
 ---
 
@@ -112,7 +112,7 @@ Pokud má zařízení stále problém s připojením k síti (zejména při pou�
 ## Krok 5: Zkontrolujte stavovou LED {#step-5-check-the-status-led}
 
 - **Blikání zelenou každých 5 sekund** → připojeno k HARDWARIO Cloud ✅  
-- **Žádné blikání /** [**jiné barvy**](https://docs.hardwario.com/chester/catalog-applications/common-functionality/#led-behaviour) → stále se připojuje nebo došlo k chybě — zkontrolujte SIM, pokrytí sítě nebo napájení  
+- **Žádné blikání /** [**jiné barvy**](https://docs.hardwario.com/chester/catalog-applications/common-functionality/#led-behaviour) → stále se připojuje nebo došlo k chybě. Zkontrolujte SIM, pokrytí sítě nebo napájení  
 
 :::info
 Podrobnosti o všech barevných stavech LED a jejich význam najdete v [**dokumentaci chování LED**](https://docs.hardwario.com/chester/catalog-applications/common-functionality/#led-behaviour).
@@ -190,14 +190,14 @@ Pokud je dostupná novější verze, můžete ji aktualizovat jednou z těchto m
 ---
 
 ✅ **A to je vše!**  
-Vaše zařízení CHESTER je nyní připojené, nakonfigurované a aktuální — připravené sbírat a odesílat data do cloudu.
+Vaše zařízení CHESTER je nyní připojené, nakonfigurované a aktuální, připravené sbírat a odesílat data do cloudu.
 
 ---
 
 ## Krok 9: Prozkoumejte aplikace a integrace {#step-9-explore-applications-and-integrations}
 
 Vaše zařízení CHESTER umí mnohem víc než jen odesílat data!  
-Jeho funkce můžete rozšířit pomocí [**HARDWARIO Applications**](https://docs.hardwario.com/apps/) — hotových modulů a nástrojů, které vám pomohou:
+Jeho funkce můžete rozšířit pomocí [**HARDWARIO Applications**](https://docs.hardwario.com/apps/), hotových modulů a nástrojů, které vám pomohou:
 
 - 📊 **Vizualizovat data** pomocí dashboardů a grafů  
 - 🌐 **Integrovat zařízení CHESTER** do existujících **sítí LoRaWAN** nebo jiných IoT systémů  

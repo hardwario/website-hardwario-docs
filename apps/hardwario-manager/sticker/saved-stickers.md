@@ -13,7 +13,7 @@ Open **STICKER → Saved STICKERs**. The title shows how many devices you have.
 
 <img src="/img/hw-manager/hw-manager-saved-stickers.png" alt="The Saved STICKERs list with a search box, colour-coded tags on each row, and an add button" width="320" />
 
-Use the **Serial or name** box to search, and the tag icon to filter — see
+Use the **Serial or name** box to search, and the tag icon to filter, see
 [**Organise devices with tags**](./tags.md).
 
 ---
@@ -24,11 +24,11 @@ Devices reach the list two ways.
 
 **Claim it.** The **Add** screen claims the device against your ATELOS account:
 tap it over NFC, scan its QR code, or enter its details by hand. Claiming brings
-across the device's secret key. It needs an ATELOS login — see
+across the device's secret key. It needs an ATELOS login, see
 [**ATELOS account**](../atelos.md).
 
-**Import it.** If you already hold the keys — from a colleague's export, a
-spreadsheet, or a shared QR code — use **Import** instead. No account needed;
+**Import it.** If you already hold the keys (from a colleague's export, a
+spreadsheet, or a shared QR code), use **Import** instead. No account needed;
 see [**Import from a file**](./import-file.md).
 
 ---
@@ -62,8 +62,8 @@ Open the **⋮ menu** on the list and choose **Export**.
 
 Select the devices to export, then choose what to include and where to send it:
 
-- **Include vendor token** — off by default.
-- **Include tags** — adds a tags column to the CSV.
+- **Include vendor token**: off by default.
+- **Include tags**: adds a tags column to the CSV.
 
 Then pick a target: **Share as QR code**, **Share as JSON**, or
 **Share as CSV**.
@@ -80,9 +80,9 @@ produces several codes in sequence, with **Share next** to move through them.
 
 Open the **⋮ menu** and choose **Import**:
 
-- **Import from QR code** — scan one or more codes, using **Import more** to
+- **Import from QR code**: scan one or more codes, using **Import more** to
   continue through a multi-code export.
-- **Import from file** — a CSV or JSON export. See
+- **Import from file**: a CSV or JSON export. See
   [**Import from a file**](./import-file.md) for the file format.
 
 Before anything is written the app confirms what it found, including how many

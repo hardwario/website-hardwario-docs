@@ -31,8 +31,8 @@ Otevřete **HARDWARIO Manager** a zvolte **CHESTER**.
 ## Karta připojeného zařízení {#the-connected-device-card}
 
 Nad menu pojmenovává **Connected CHESTER** zařízení, ke kterému jste připojení.
-Jeho šipka rozbalí souhrn — firmware, sériové číslo, BLE adresu a dobu běhu,
-**podle stavu při posledním připojení** — a **Disconnect** spojení ukončí.
+Jeho šipka rozbalí souhrn (firmware, sériové číslo, BLE adresu a dobu běhu,
+**podle stavu při posledním připojení**) a **Disconnect** spojení ukončí.
 
 <img src="/img/hw-manager/hw-manager-chester-connected-details.png" alt="Rozbalená karta připojeného zařízení CHESTER s firmwarem, sériovým číslem, BLE adresou a dobou běhu a akcí Disconnect" width="320" />
 
@@ -47,10 +47,10 @@ nastavením zařízení znovu pod **Recent devices**.
 ## Než začnete {#before-you-start}
 
 - Bluetooth musí být zapnutý a aplikace potřebuje oprávnění k **zařízením
-  v okolí** — viz [**Instalace aplikace**](../install.md).
+  v okolí**, viz [**Instalace aplikace**](../install.md).
 - Párování používá šestimístný **passkey** svázaný se zařízením. Naskenování QR
   kódu na etiketě zařízení CHESTER je cesta, která ho za vás načte.
 - Držte telefon blízko zařízení. Většina problémů s připojením je otázka dosahu
-  nebo zastaralého párování — viz [**Řešení problémů**](./troubleshooting.md).
+  nebo zastaralého párování, viz [**Řešení problémů**](./troubleshooting.md).
 
 Začněte u [**Připojení a párování**](./connect.md).

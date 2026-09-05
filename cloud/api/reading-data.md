@@ -18,7 +18,7 @@ curl -H 'X-API-KEY: <api-key>' \
 
 ## List devices in a space
 
-`GET /v2/spaces/{space_id}/devices` — supports `limit`, `offset`, `name`,
+`GET /v2/spaces/{space_id}/devices`: supports `limit`, `offset`, `name`,
 `serial_number`, `tag_ids`, and `sort_by`/`order_by` query parameters.
 
 <Tabs>
@@ -53,7 +53,7 @@ for d in devices:
 
 ## Read a device's messages
 
-`GET /v2/spaces/{space_id}/messages` — filter with these query parameters:
+`GET /v2/spaces/{space_id}/messages`: filter with these query parameters:
 
 | Parameter | Description |
 |---|---|
@@ -63,7 +63,7 @@ for d in devices:
 | `direction` | `up` (from device) or `down` (to device) |
 | `after` / `before` | Time range (ISO-8601) |
 | `limit` | Max messages to return |
-| `offset` | UUID of the last message read — the pagination cursor |
+| `offset` | UUID of the last message read. The pagination cursor |
 
 ```bash
 curl -H 'X-API-KEY: <api-key>' \
@@ -77,7 +77,7 @@ If you see messages in the web but not over the API, widen `after` and raise
 `limit`.
 :::
 
-**Latest value only** — ask for one message, newest first:
+**Latest value only**: ask for one message, newest first:
 
 ```bash
 curl -H 'X-API-KEY: <api-key>' \

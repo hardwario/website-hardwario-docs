@@ -4,7 +4,7 @@ title: "How To: EEPROM"
 ---
 import Image from '@theme/IdealImage';
 
-**EEPROM** is a special kind of memory. It is small (6 KB on [**Core Module**](../../hardware-modules/about-core-module.md) chip) memory with a limited number of **write/erase cycles**. It is **non-volatile memory** - which means that it does not require power to retain stored information. This means that bytes written/stored inside the EEPROM will **stay there until erased/rewritten** (even without the power)
+**EEPROM** is a special kind of memory. It is small (6 KB on [**Core Module**](../../hardware-modules/about-core-module.md) chip) memory with a limited number of **write/erase cycles**. It is **non-volatile memory**, which means that it does not require power to retain stored information. This means that bytes written/stored inside the EEPROM will **stay there until erased/rewritten** (even without the power)
 
 :::info
 

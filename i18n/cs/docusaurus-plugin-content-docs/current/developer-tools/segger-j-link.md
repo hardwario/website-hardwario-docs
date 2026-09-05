@@ -79,7 +79,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
 **HARDWARIO Command Line Tools** můžete nainstalovat těmito kroky:
 
-1. Pouze na Windows – nainstalujte ovladače SEGGER J-Link:
+1. Pouze na Windows: nainstalujte ovladače SEGGER J-Link:
 
    * Stáhněte [**64bitový instalátor Intel/AMD**](https://www.segger.com/downloads/jlink/JLink_Windows_x86_64.exe)
 

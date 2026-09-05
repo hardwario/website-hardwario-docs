@@ -30,7 +30,7 @@ Proud i napětí se měří přímo interními obvody.
 
 #### Příklad instalace: ORNO Energy Analyzer - OR-WE-504 {#example-of-installation-orno-energy-analyzer---or-we-504}
 
-| **ORNO Energy Analyzer - OR-WE-504** | |
+| **ORNO Energy Analyzer OR-WE-504** | |
 |-------------------------------------|----------------|
 | Pin 1                               | **L (IN)**     |
 | Pin N                               | **N (IN)**     |
@@ -52,7 +52,7 @@ Nulový vodič lze připojit buď přímo ke **svorce N** elektroměru, nebo na 
 
 #### Příklad instalace komunikace Modbus: ORNO Energy Analyzer - OR-WE-504 {#example-of-modbus-communication-installation-orno-energy-analyzer---or-we-504}
 
-| **ORNO Energy Analyzer - OR-WE-504** | **CHESTER Modbus** |
+| **ORNO Energy Analyzer OR-WE-504** | **CHESTER Modbus** |
 |-------------------------------------|--------------------|
 | Pin 23                              | Pin 7 (A)          |
 | Pin 25                              | Pin 6 (B)          |

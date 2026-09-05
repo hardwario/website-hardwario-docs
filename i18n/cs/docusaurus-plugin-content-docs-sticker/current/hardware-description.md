@@ -33,7 +33,7 @@ Podle konkrétní osazovací varianty obsahuje zařízení STICKER:
 - **Rozhraní S0:** Pulzní vstup kompatibilní se standardními výstupy S0 elektroměrů, plynoměrů a vodoměrů.
 - **Měření napětí a průmyslové logické vstupy:** Podporuje až 2 digitální vstupy přijímající průmyslovou logiku až 30 V DC pro přímé napojení na PLC nebo sledování stavu stroje.
 
-Stav zařízení signalizuje **vícebarevná LED (R/G/Y)** - podrobnosti viz [**Signalizace LED**](#led-indication) - a bezdrátovou komunikaci obstarává **vnitřní anténa 868/915 MHz**.
+Stav zařízení signalizuje **vícebarevná LED (R/G/Y)** (podrobnosti viz [**Signalizace LED**](#led-indication)) a bezdrátovou komunikaci obstarává **vnitřní anténa 868/915 MHz**.
 
 ---
 
@@ -62,10 +62,10 @@ Stav zařízení signalizuje **vícebarevná LED (R/G/Y)** - podrobnosti viz [**
 
 ## Signalizace LED {#led-indication}
 
-Zařízení STICKER má jednu stavovou LED se třemi nezávisle řízenými kanály - **červeným**, **zeleným** a **žlutým**. Firmware rozsvěcí červený a zelený kanál i společně, čímž vzniká **oranžová**, kterou vyhrazuje pro servisní režimy. LED je jediná zpětná vazba, kterou zařízení lokálně dává, takže tyto vzory jsou nejrychlejší způsob, jak zjistit, co jednotka dělá, ještě než se objeví v síti.
+Zařízení STICKER má jednu stavovou LED se třemi nezávisle řízenými kanály: **červeným**, **zeleným** a **žlutým**. Firmware rozsvěcí červený a zelený kanál i společně, čímž vzniká **oranžová**, kterou vyhrazuje pro servisní režimy. LED je jediná zpětná vazba, kterou zařízení lokálně dává, takže tyto vzory jsou nejrychlejší způsob, jak zjistit, co jednotka dělá, ještě než se objeví v síti.
 
 :::note
-Vzory a časování níže platí pro **firmware v1.4.0**. Většina stavových bliknutí je záměrně velmi krátká - 5 až 10 ms - kvůli šetření baterie. Čekejte krátký záblesk, ne pohodlné bliknutí.
+Vzory a časování níže platí pro **firmware v1.4.0**. Většina stavových bliknutí je záměrně velmi krátká, 5 až 10 ms, kvůli šetření baterie. Čekejte krátký záblesk, ne pohodlné bliknutí.
 :::
 
 ### Startovní sekvence {#boot-sequence}
@@ -84,14 +84,14 @@ Karusel trvá asi 5 sekund. Pokud ho uvidíte nečekaně, zařízení se restart
 
 ### Stavový heartbeat {#status-heartbeat}
 
-Za provozu zařízení signalizuje svůj stav každé **3 sekundy**. Zobrazuje se vždy jen jeden vzor - firmware kontroluje podmínky níže v uvedeném pořadí a **vyhrává první shoda**, takže závažnější stav vždy zakryje ten méně závažný:
+Za provozu zařízení signalizuje svůj stav každé **3 sekundy**. Zobrazuje se vždy jen jeden vzor. Firmware kontroluje podmínky níže v uvedeném pořadí a **vyhrává první shoda**, takže závažnější stav vždy zakryje ten méně závažný:
 
 | Priorita | Stav zařízení | Vzor LED |
 |---|---|---|
 | 1 | Probíhá výměna přes NFC | LED přebírají [vzory NFC](#nfc-interaction) níže |
-| 2 | **Konfiguraci se nepodařilo načíst** - uložené nastavení je poškozené | Červená a žlutá střídavě, dvakrát, po ~60 ms |
+| 2 | **Konfiguraci se nepodařilo načíst**: uložené nastavení je poškozené | Červená a žlutá střídavě, dvakrát, po ~60 ms |
 | 3 | **Připojování nebo opětovné připojování** k síti LoRaWAN | Jedno žluté bliknutí, pak ~200 ms poté jedno červené |
-| 4 | **Degradované spojení** - kontroly spojení selhávají, ale session stále žije | Dvě žlutá bliknutí ~200 ms po sobě |
+| 4 | **Degradované spojení**: kontroly spojení selhávají, ale session stále žije | Dvě žlutá bliknutí ~200 ms po sobě |
 | 5 | **Radio vypnuté** nastavením `radio-mode` | Jedno žluté bliknutí |
 | 6 | **Je aktivní alarm** | Jedno červené bliknutí |
 | 7 | Normální provoz | Jedno zelené bliknutí |
@@ -103,7 +103,7 @@ Tři žluté stavy tvoří záměrnou stupnici závažnosti, takže vážnost s�
 Priorita 2 stojí nad všemi: zařízení blikající červeno-žlutě přišlo o uloženou identitu a zprovoznění a běží na výrobních výchozích hodnotách. Tam je potřeba technik, ne kontrola sítě.
 
 :::note
-Zařízení bez zeleného bliknutí nemusí být vadné - klidně jen zobrazuje něco s vyšší prioritou. Alarmy se navíc vyhodnocují i tehdy, když LED patří vzoru s vyšší prioritou. Skryté je jen červené bliknutí alarmu; sám alarm se stále vyvolá a stále odešle svůj uplink.
+Zařízení bez zeleného bliknutí nemusí být vadné. Klidně jen zobrazuje něco s vyšší prioritou. Alarmy se navíc vyhodnocují i tehdy, když LED patří vzoru s vyšší prioritou. Skryté je jen červené bliknutí alarmu; sám alarm se stále vyvolá a stále odešle svůj uplink.
 :::
 
 Debug buildy firmwaru nahrazují jedno zelené bliknutí zeleným následovaným žlutým, což je rychlý způsob, jak poznat debug jednotku od release jednotky.
@@ -116,7 +116,7 @@ Dokud je telefon přiložený k zařízení, LED sleduje výměnu krok za krokem
 |---|---|
 | Telefon detekován v poli NFC | Zelená, svítí |
 | Zpracovává se příkaz | Rychlé zelené blikání (~90 ms) |
-| **Příkaz odmítnut** - špatný klíč nebo token, opakovaná či poškozená žádost | Rychlé červené blikání po 2 s, pak zhasne |
+| **Příkaz odmítnut**: špatný klíč nebo token, opakovaná či poškozená žádost | Rychlé červené blikání po 2 s, pak zhasne |
 | Odpověď zapsána, čeká se, než ji telefon přečte | Zelená **a** žlutá, svítí |
 | Výměna dokončena, telefon odebrán | Zhasnuto |
 | Konfigurace úspěšně aplikována | Deset zelených bliknutí, 100 ms svítí / 100 ms zhasnuto |
@@ -129,8 +129,8 @@ Na jednotkách s nakonfigurovanými Hallovými senzory nebo externími vstupy po
 
 | Událost | Vzor |
 |---|---|
-| Vstup se stane aktivním | Zelená, pak oranžová - po 50 ms |
-| Vstup se vrátí do neaktivního stavu | Oranžová, pak zelená - po 50 ms |
+| Vstup se stane aktivním | Zelená, pak oranžová, po 50 ms |
+| Vstup se vrátí do neaktivního stavu | Oranžová, pak zelená, po 50 ms |
 
 Opakované změny jsou omezené na jednu signalizaci za 500 ms.
 
@@ -138,7 +138,7 @@ Opakované změny jsou omezené na jednu signalizaci za 500 ms.
 Tato signalizace se **sama vypne hodinu po zapnutí**. Doba se počítá od startu, ne od poslední události, protože po instalaci už blikání není žádoucí. Pokud ho potřebujete při testování zpět, zařízení vypněte a zapněte.
 :::
 
-PIR a akcelerometr jsou momentové senzory - hlásí vždy jen aktivaci - takže na těchto vstupech uvidíte pouze sekvenci zelená-pak-oranžová.
+PIR a akcelerometr jsou momentové senzory, které hlásí vždy jen aktivaci, takže na těchto vstupech uvidíte pouze sekvenci zelená-pak-oranžová.
 
 ### Kalibrační režim {#calibration-mode}
 
@@ -155,7 +155,7 @@ Když zařízení uspíte do hlubokého spánku, všechny tři kanály se vypnou
 
 ### Testování LED {#testing-the-led}
 
-LED lze řídit přímo z vývojářské konzole příkazy `ats led` - hodí se to při kontrole podezřelé jednotky. Viz [**Diagnostika**](developer-access/diagnostics.md).
+LED lze řídit přímo z vývojářské konzole příkazy `ats led`, hodí se to při kontrole podezřelé jednotky. Viz [**Diagnostika**](developer-access/diagnostics.md).
 
 ---
 

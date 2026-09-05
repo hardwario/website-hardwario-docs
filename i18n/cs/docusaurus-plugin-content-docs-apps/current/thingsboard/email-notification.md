@@ -176,7 +176,7 @@ Vaše vlastní notifikační Rule Chain je hotová, ale ThingsBoard neví, že d
 2. Najděte uzel **Message Type Switch**.
 3. Sledujte linku **Post telemetry** vycházející z tohoto uzlu. Měla by vést k uzlu **Save Timeseries**.
 4. V levém menu najděte uzel **Rule Chain** (v kategorii Rule Chains) a přetáhněte ho na plochu.
-5. V nastavení uzlu zvolte novou Rule Chain, kterou jste právě vytvořili (například „EMAIL - Notifications").
+5. V nastavení uzlu zvolte novou Rule Chain, kterou jste právě vytvořili (například „EMAIL Notifications").
 6. Tažením vytvořte spojení z uzlu **Save Timeseries** do svého nově přidaného uzlu Rule Chain.
 7. Jako popisek linky zvolte **Success**.
 8. Klikněte na tlačítko **Apply changes** (fajfka v pravém dolním rohu).
@@ -234,7 +234,7 @@ return false; // Do not send email
 ### Krok 3: Připravte nový timestamp {#step-3-prepare-the-new-timestamp}
 Pokud filtr propustí zprávu (e-mail se má poslat), musíme vytvořit novou zprávu, která aktuální čas uloží zpět do serverových atributů zařízení. Tok proto musíme rozvětvit do dvou směrů: jeden odešle e-mail, druhý aktualizuje atribut.
 * **Typ uzlu:** `Transformation` -> `script`
-* **Název:** Prepare Timestamp - [název podmínky] (například Prepare Timestamp - Temp < 17)
+* **Název:** Prepare Timestamp: [název podmínky] (například Prepare Timestamp: Temp < 17)
 * **Kód:**
 
 ```javascript

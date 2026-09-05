@@ -172,7 +172,7 @@ Vytvořte uživatelské účty, přiřaďte je do skupin a odešlete aktivační
 
 ### 6. Sdílení dashboardu přes veřejný odkaz {#6-share-a-dashboard-via-public-link}
 
-Vygenerujte pro jakýkoli dashboard veřejnou URL adresu pouze pro čtení a nasdílejte ji klientům nebo partnerům — bez nutnosti přihlášení.
+Vygenerujte pro jakýkoli dashboard veřejnou URL adresu pouze pro čtení a nasdílejte ji klientům nebo partnerům, bez nutnosti přihlášení.
 
 👉 [Veřejný odkaz](public-link)
 

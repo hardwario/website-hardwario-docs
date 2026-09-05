@@ -119,7 +119,7 @@ MCP2518FD signalizuje události (například přijatý rámec CAN) na svém výs
 
 ## Připojení sběrnice CAN {#can-bus-connection}
 
-Sběrnice CAN se zapojuje přímo na piny svorkovnice **CANH** (pin 3) a **CANL** (pin 4). Použijte **kroucenou dvojlinku** s charakteristickou impedancí **120 Ω**, sběrnici veďte v **lineární (řetězové) topologii** — vyhněte se hvězdicovému rozvržení a dlouhým odbočkám — a nekroucenou část kabeláže u svorkovnice udržujte **co nejkratší**.
+Sběrnice CAN se zapojuje přímo na piny svorkovnice **CANH** (pin 3) a **CANL** (pin 4). Použijte **kroucenou dvojlinku** s charakteristickou impedancí **120 Ω**, sběrnici veďte v **lineární (řetězové) topologii** (vyhněte se hvězdicovému rozvržení a dlouhým odbočkám) a nekroucenou část kabeláže u svorkovnice udržujte **co nejkratší**.
 
 Rozhraní CAN **není galvanicky oddělené**, takže všechny uzly musí mít společnou zemní referenci. Zem sběrnice **GND** připojte na jeden z pinů GND svorkovnice (pin 6 nebo 7).
 
@@ -165,7 +165,7 @@ CHESTER-X13 lze v rámci CHESTER SDK použít přes shieldy `ctr_x13_a` a `ctr_x
 
 ## Schémata {#schematic-diagrams}
 
-Kompletní schéma — hlavní strana, rozhraní CAN a napájení — je k dispozici jako PDF:
+Kompletní schéma (hlavní strana, rozhraní CAN a napájení) je k dispozici jako PDF:
 
 - [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x13-r1.2.pdf)
 - [Interaktivní prohlížeč CHESTER-X13](pathname:///download/ibom/hio-chester-x13-r1.2.html)

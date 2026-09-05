@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        The <b>Relay Module</b> is suitable for switching <b>small power appliances</b> - e.g. LED strip, cooling fan, siren, buzzer, garage door opener, etc. It features a <b>bistable (or latching) relay</b> and that makes it suitable for battery-operated applications - the relay simply <b>remembers its state</b>.
+        The <b>Relay Module</b> is suitable for switching <b>small power appliances</b>, e.g. LED strip, cooling fan, siren, buzzer, garage door opener, etc. It features a <b>bistable (or latching) relay</b> and that makes it suitable for battery-operated applications, because the relay simply <b>remembers its state</b>.
       </p>
       <p>
         The energy is needed only during the transition state. Once the new state has been set, it is <b>not necessary to energize the relay’s coil anymore</b>. The switching period is indicated using the <b>green LED</b> (in software referred to as <b>TRUE</b> state), or <b>red LED</b> (in software referred to as <b>FALSE</b> state).

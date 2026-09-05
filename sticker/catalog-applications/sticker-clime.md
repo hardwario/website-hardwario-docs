@@ -12,11 +12,11 @@ import Image from '@theme/IdealImage';
 
 ## Quick Links
 
-* [**Getting Started Guide**](https://docs.hardwario.com/sticker/first-steps) – Step-by-step setup guide.
-* [**Buy STICKER Clime**](https://www.hardwario.store/p/sticker-clime) – Purchase on our store.
-* [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes) - List of components and part numbers.
-* [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description) - Technical details and hardware overview.
-* [**Official Product Page**](https://www.hardwario.com/products/sticker/) – Features and overview.
+* [**Getting Started Guide**](https://docs.hardwario.com/sticker/first-steps): Step-by-step setup guide.
+* [**Buy STICKER Clime**](https://www.hardwario.store/p/sticker-clime): Purchase on our store.
+* [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes): List of components and part numbers.
+* [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description): Technical details and hardware overview.
+* [**Official Product Page**](https://www.hardwario.com/products/sticker/): Features and overview.
 
 ## Typical use cases
 
@@ -30,7 +30,7 @@ import Image from '@theme/IdealImage';
 
 #### Protecting patients with smart sensing
 
-- With rising global temperatures and more climate extremes, maintaining stable conditions in hospital rooms is critical. A failing air conditioner - or even an open window - can put patients at risk. Temperature and humidity sensors in each room enable early warnings and better care.
+- With rising global temperatures and more climate extremes, maintaining stable conditions in hospital rooms is critical. A failing air conditioner, or even an open window, can put patients at risk. Temperature and humidity sensors in each room enable early warnings and better care.
 
 ## Example JSON Message
 
@@ -55,15 +55,15 @@ import Image from '@theme/IdealImage';
 
 ## Status LED
 
-STICKER Clime uses the standard status LED patterns described in [**LED Indication**](/sticker/hardware-description#led-indication) - the boot carousel, the status heartbeat every 3 seconds, and the NFC and alarm patterns are identical across all STICKER applications.
+STICKER Clime uses the standard status LED patterns described in [**LED Indication**](/sticker/hardware-description#led-indication). The boot carousel, the status heartbeat every 3 seconds, and the NFC and alarm patterns are identical across all STICKER applications.
 
-Clime measures environmental values rather than discrete inputs, so it normally has no Hall sensors or external inputs configured. In practice this means you will only see the **heartbeat**, the **NFC** patterns and the **red alarm flash** when a temperature or humidity threshold is crossed - the green/orange input activation sequences do not appear on a standard Clime unit.
+Clime measures environmental values rather than discrete inputs, so it normally has no Hall sensors or external inputs configured. In practice this means you will only see the **heartbeat**, the **NFC** patterns and the **red alarm flash** when a temperature or humidity threshold is crossed. The green/orange input activation sequences do not appear on a standard Clime unit.
 
 ## Changelog
 
-### 2025-11-23 — v1.0.0
+### 2025-11-23 – v1.0.0
 
-- Initial release — temperature, humidity, illuminance, and pressure monitoring via LoRaWAN
+- Initial release: temperature, humidity, illuminance, and pressure monitoring via LoRaWAN
 
 :::info
 

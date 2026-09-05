@@ -6,7 +6,7 @@ description: "Aplikace se k zařízení dostane jedním ze dvou bezdrátových s
 
 # Rychlý průvodce aplikací HARDWARIO Manager {#hardwario-manager-quick-start-guide}
 
-**HARDWARIO Manager** je mobilní aplikace HARDWARIO pro nastavování zařízení v provozu. Přiložte telefon k zařízení (nebo se k němu připojte bezdrátově) a přečtete jeho informace, zapíšete konfiguraci, spustíte příkazy zařízení a povedete si seznam zařízení, která spravujete — bez kabelů, programátorů a softwaru na počítači.
+**HARDWARIO Manager** je mobilní aplikace HARDWARIO pro nastavování zařízení v provozu. Přiložte telefon k zařízení (nebo se k němu připojte bezdrátově) a přečtete jeho informace, zapíšete konfiguraci, spustíte příkazy zařízení a povedete si seznam zařízení, která spravujete, bez kabelů, programátorů a softwaru na počítači.
 
 Aplikace se k zařízení dostane jedním ze dvou bezdrátových spojení, podle produktu:
 
@@ -34,8 +34,8 @@ Konfigurace zařízení STICKER přes NFC se dělá z **telefonu s Androidem a N
 
 ## 2) Zapněte bezdrátové spojení {#2-turn-on-the-wireless-link}
 
-- **NFC** — otevřete **Nastavení**, napište do vyhledávacího pole nahoře **NFC** a přepněte ho na **zapnuto**. Na oprávnění k NFC se aplikace neptá.
-- **Bluetooth** — zapněte Bluetooth a klepněte na **Povolit**, až si aplikace řekne o oprávnění k **zařízením v okolí**.
+- **NFC**: otevřete **Nastavení**, napište do vyhledávacího pole nahoře **NFC** a přepněte ho na **zapnuto**. Na oprávnění k NFC se aplikace neptá.
+- **Bluetooth**: zapněte Bluetooth a klepněte na **Povolit**, až si aplikace řekne o oprávnění k **zařízením v okolí**.
 
 Aplikace si řekne také o oprávnění ke **kameře**, ale až při prvním skenování QR kódu.
 
@@ -45,7 +45,7 @@ Aplikace si řekne také o oprávnění ke **kameře**, ale až při prvním ske
 
 
 1. Otevřete **HARDWARIO Manager** a zvolte rodinu zařízení, se kterou pracujete.
-2. Vyberte, co chcete udělat — například **Device info** nebo **Configuration**.
+2. Vyberte, co chcete udělat: například **Device info** nebo **Configuration**.
 3. Až obrazovka napíše *Hold the phone against the …*, přiložte zadní stranu telefonu k zařízení a nehýbejte s ním sekundu či dvě.
 
 Anténa NFC bývá v telefonu blízko **horní části zadní strany**. Pokud se nic nestane, pohybujte telefonem pomalu kolem tohoto místa, dokud nedojde k načtení.

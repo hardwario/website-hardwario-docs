@@ -1,14 +1,14 @@
 ---
 slug: rule-engine
 title: Rule Engine
-description: "Rule Engine je vizuální programovací systém ThingsBoardu pro zpracování příchozích zpráv ze zařízení. Rule Chain je graf nebo vývojový diagram, který definuje logiku zpracování zpráv (telemetrie, atributy, události). Skládá se z uzlů — stavebních…"
+description: "Rule Engine je vizuální programovací systém ThingsBoardu pro zpracování příchozích zpráv ze zařízení. Rule Chain je graf nebo vývojový diagram, který definuje logiku zpracování zpráv (telemetrie, atributy, události). Skládá se z uzlů, stavebních…"
 ---
 
 import Image from '@theme/IdealImage';
 
 # Rule Engine {#rule-engine}
 
-Rule Engine je vizuální programovací systém ThingsBoardu pro zpracování příchozích zpráv ze zařízení. **Rule Chain** je graf nebo vývojový diagram, který definuje logiku zpracování zpráv (telemetrie, atributy, události). Skládá se z **uzlů** — stavebních bloků, které provádějí konkrétní akci (například uložení do databáze, odeslání e-mailu) — a **relací**, tedy spojení mezi uzly, která podle výsledku určují směr toku dat (*Success*, *Failure*, *True*, *False*).
+Rule Engine je vizuální programovací systém ThingsBoardu pro zpracování příchozích zpráv ze zařízení. **Rule Chain** je graf nebo vývojový diagram, který definuje logiku zpracování zpráv (telemetrie, atributy, události). Skládá se z **uzlů**, stavebních bloků, které provádějí konkrétní akci (například uložení do databáze, odeslání e-mailu), a **relací**, tedy spojení mezi uzly, která podle výsledku určují směr toku dat (*Success*, *Failure*, *True*, *False*).
 
 ---
 
@@ -39,7 +39,7 @@ Rule Engine zachytává veškerou komunikaci mezi zařízeními a serverem, tak�
 
 ## ⚠️ Práce s Root Rule Chain {#️-working-with-the-root-rule-chain}
 
-Při vytvoření instance nebo tenanta ThingsBoardu se automaticky vygeneruje **Root Rule Chain**. Ta funguje jako hlavní vstupní brána — **každá jednotlivá zpráva z každého zařízení prochází nejprve tímto řetězcem**.
+Při vytvoření instance nebo tenanta ThingsBoardu se automaticky vygeneruje **Root Rule Chain**. Ta funguje jako hlavní vstupní brána: **každá jednotlivá zpráva z každého zařízení prochází nejprve tímto řetězcem**.
 
 ### Na co si dát pozor {#what-to-be-careful-about}
 

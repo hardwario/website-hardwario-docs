@@ -15,9 +15,9 @@ This section is about tools for firmware development. If you already have or kno
 
 We offer two ways how to write and manage your firmware:
 
-- [**HARDWARIO Code**](./about-hardwario-code.md) - stand-alone version of **Visual Studio Code**, specifically made for HARDWARIO TOWER firmware development
-- [**HARDWARIO TOWER Extension**](./hardwario-extension-tutorial.md) - extension for **Visual Studio Code** made for HARDWARIO TOWER firmware development
-- [**CLI Tools**](./development-with-cli-tools.md) - set of tools available for development on headless machines or if you just prefer the use of CLI
+- [**HARDWARIO Code**](./about-hardwario-code.md): stand-alone version of **Visual Studio Code**, specifically made for HARDWARIO TOWER firmware development
+- [**HARDWARIO TOWER Extension**](./hardwario-extension-tutorial.md): extension for **Visual Studio Code** made for HARDWARIO TOWER firmware development
+- [**CLI Tools**](./development-with-cli-tools.md): set of tools available for development on headless machines or if you just prefer the use of CLI
 
 :::note
 

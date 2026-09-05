@@ -7,15 +7,15 @@ title: Messages
 
 The **Messages** page shows all messages exchanged between devices and the Cloud. You can access it from two places:
 
-- **Left sidebar → Messages** — shows messages from all devices in the space
-- **Device detail → Messages tab** — shows messages for that specific device only
+- **Left sidebar → Messages**: shows messages from all devices in the space
+- **Device detail → Messages tab**: shows messages for that specific device only
 
 ## Message Types
 
 | Type | Direction | Description |
 |---|---|---|
 | **data** | up | Periodic uplink payload with sensor readings |
-| **session** | up/down | Exchanged during device boot — contains firmware info, config hash, network parameters |
+| **session** | up/down | Exchanged during device boot. Contains firmware info, config hash, network parameters |
 | **config** | down | Configuration sent to the device (only when config hash changed) |
 | **encoder** | up | JSON key mapping used to compress data messages |
 | **decoder** | up | JSON key mapping used to decompress data messages |
@@ -30,15 +30,15 @@ Downlink messages (direction: `down`) have a delivery state:
 |---|---|
 | **pending** | Waiting for the device to wake up and poll the Cloud |
 | **sent** | Delivered to the device |
-| **cancelled** | Cancelled manually — the device will not receive this message |
+| **cancelled** | Cancelled manually. The device will not receive this message |
 
 ## Filtering
 
 By default the list shows messages from the **last 10 days**. Use the filter bar to change:
 
-- **Time range** — extend or narrow the period
-- **Type** — filter by message type (data, session, config, …)
-- **Direction** — uplink only, downlink only, or both
+- **Time range**: extend or narrow the period
+- **Type**: filter by message type (data, session, config, …)
+- **Direction**: uplink only, downlink only, or both
 
 ## Viewing a Message
 
@@ -52,7 +52,7 @@ The dashboard is a **debugging tool** that lets you plot values from messages us
 
 Click the **Dashboard** icon above the message list, paste a function that extracts values from each message, and the chart updates in real time.
 
-**Example — plot thermometer temperature:**
+**Example: plot thermometer temperature**
 
 <details>
 <summary><b>Show Example</b></summary>
@@ -68,7 +68,7 @@ return {
 </p>
 </details>
 
-**Example — plot all measurements from an aggregated array:**
+**Example: plot all measurements from an aggregated array**
 
 <details>
 <summary><b>Show Example</b></summary>

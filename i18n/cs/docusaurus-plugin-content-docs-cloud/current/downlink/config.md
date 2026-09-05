@@ -1,13 +1,13 @@
 ---
 title: Konfigurace
-description: "Konfiguraci zařízení lze změnit stejně jako přes BLE nebo J-Link RTT — odešlete jeden nebo více"
+description: "Konfiguraci zařízení lze změnit stejně jako přes BLE nebo J-Link RTT: odešlete jeden nebo více"
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Konfigurace {#config}
 
-Konfiguraci zařízení lze změnit stejně jako přes BLE nebo J-Link RTT — odešlete jeden nebo více
+Konfiguraci zařízení lze změnit stejně jako přes BLE nebo J-Link RTT: odešlete jeden nebo více
 příkazů `app config` a zařízení CHESTER je použije při dalším odeslání uplink paketu nebo při dotazu
 na Cloud.
 
@@ -48,7 +48,7 @@ app config interval-report 1800
 :::warning[Neposílejte config save přes Cloud]
 
 Při **lokální** konfiguraci zařízení zadáváte na konci `config save`, aby se změny uložily a zařízení
-se restartovalo. **Přes Cloud příkaz `config save` posílat nesmíte** — HARDWARIO Cloud konfiguraci
+se restartovalo. **Přes Cloud příkaz `config save` posílat nesmíte**, protože HARDWARIO Cloud konfiguraci
 použije a uloží automaticky. Pokud jej přidáte sami, může se změna aplikovat dvakrát, proto jej vynechte.
 
 :::

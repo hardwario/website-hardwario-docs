@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        <b>Breadboard Module</b> nabízí snadný způsob, jak připojit libovolný modul <b>HARDWARIO TOWER - Industrial IoT Kit</b> k vašemu kontaktnímu poli. Zúžený vývod poskytuje více prostoru pro <b>zapojování a prototypování</b>.
+        <b>Breadboard Module</b> nabízí snadný způsob, jak připojit libovolný modul <b>HARDWARIO TOWER Industrial IoT Kit</b> k vašemu kontaktnímu poli. Zúžený vývod poskytuje více prostoru pro <b>zapojování a prototypování</b>.
       </p>
       <p>
         <b>Přesné kolíkové lišty</b> na spodní straně umožňují hladké zasunutí do <b>kontaktního pole</b> a nenamáhají jeho dutinky.

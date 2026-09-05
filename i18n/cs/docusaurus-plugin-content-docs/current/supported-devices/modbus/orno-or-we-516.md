@@ -26,7 +26,7 @@ Tento elektroměr **nevyžaduje** žádný **externí senzor** pro měření pro
 
 #### Příklad instalace: ORNO Energy Analyzer - OR-WE-516 {#example-of-installation-orno-energy-analyzer---or-we-516}
 
-| **ORNO Energy Analyzer - OR-WE-516** | |
+| **ORNO Energy Analyzer OR-WE-516** | |
 |----------------------------------------|-----------------------------------------------|
 | Pin 1                                  | **L1 (IN)**                                   |
 | Pin 3                                  | **L2 (IN)**                                   |
@@ -52,7 +52,7 @@ V tomto případě je také možné zapojit analyzátor energie v jednofázovém
 
 #### Příklad instalace komunikace Modbus: ORNO Energy Analyzer - OR-WE-516 {#example-of-modbus-communication-installation-orno-energy-analyzer---or-we-516}
 
-| **ORNO Energy Analyzer - OR-WE-516** | **CHESTER Modbus** |
+| **ORNO Energy Analyzer OR-WE-516** | **CHESTER Modbus** |
 |---------------------------|--------------------|
 | Pin 20                    | Pin 6 (B)          |
 | Pin 21                    | Pin 7 (A)          |

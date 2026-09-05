@@ -5,7 +5,7 @@ title: Templates
 
 # Templates: create, share, edit, and apply
 
-A template is a reusable configuration preset — **capture once, apply to many**.
+A template is a reusable configuration preset: **capture once, apply to many**.
 Templates carry only shareable settings; per-device identity and secrets (serial
 number, LoRaWAN keys and EUIs, session keys) are deliberately left out, so a
 template is safe to reuse across devices and safe to hand to a colleague.
@@ -20,7 +20,7 @@ Open **STICKER → Templates**.
 
 Choose **Add template** and pick a source:
 
-<img src="/img/hw-manager/hw-manager-template-add.png" alt="Creating a new template — choosing a source" width="320" />
+<img src="/img/hw-manager/hw-manager-template-add.png" alt="Creating a new template: choosing a source" width="320" />
 
 | Source | Use it when |
 |---|---|
@@ -57,12 +57,12 @@ Open a template and choose how to write it:
 | Action | What happens |
 |---|---|
 | **Apply over NFC** | Read the device, review the resulting changes, then write |
-| **Apply offline** | Write to powered-off devices in bulk — see [**Configure a powered-off device**](./offline-configuration.md) |
+| **Apply offline** | Write to powered-off devices in bulk, see [**Configure a powered-off device**](./offline-configuration.md) |
 
 Applying offline pre-fills the configuration from the template. Review it, then
 **Write to tag**.
 
-<img src="/img/hw-manager/hw-manager-template-offline.png" alt="Applying a template offline — pre-filled, ready to review and write to the tag" width="320" />
+<img src="/img/hw-manager/hw-manager-template-offline.png" alt="Applying a template offline: pre-filled, ready to review and write to the tag" width="320" />
 
 ---
 

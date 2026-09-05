@@ -1,12 +1,12 @@
 ---
 slug: sample-data
 title: Vzorek dat ze senzorů
-description: "Přečtěte právě teď každý senzor zařízení STICKER a podívejte se na hodnoty — je to"
+description: "Přečtěte právě teď každý senzor zařízení STICKER a podívejte se na hodnoty, je to"
 ---
 
 # Vzorek dat ze senzorů {#sample-sensor-data}
 
-Přečtěte právě teď každý senzor zařízení STICKER a podívejte se na hodnoty — je to
+Přečtěte právě teď každý senzor zařízení STICKER a podívejte se na hodnoty, je to
 nejrychlejší test celé cesty, že zařízení funguje.
 
 1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Tools → Sample data**.
@@ -17,7 +17,7 @@ nejrychlejší test celé cesty, že zařízení funguje.
 
 :::info Vzorkování zároveň odešle uplink
 U zařízení STICKER firmware v jednom kroku senzory přečte **a** hodnoty odešle,
-takže vzniká i **uplink přes LoRaWAN** — odečet jen přes NFC neexistuje.
+takže vzniká i **uplink přes LoRaWAN**. Odečet jen přes NFC neexistuje.
 Aplikace hlásí, jestli bylo odeslání doručeno, takže jedno přiložení potvrdí
 celou cestu od senzoru k síťovému serveru.
 :::

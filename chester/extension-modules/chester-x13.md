@@ -119,7 +119,7 @@ The MCP2518FD signals events (such as a received CAN frame) on its interrupt out
 
 ## CAN Bus Connection
 
-The CAN bus is wired directly to the terminal-block pins **CANH** (pin 3) and **CANL** (pin 4). Use **twisted-pair** cable with a **120 Ω** characteristic impedance, wire the bus as a **linear (daisy-chain) topology** — avoid star layouts and long stubs — and keep any untwisted wiring at the terminal block **as short as possible**.
+The CAN bus is wired directly to the terminal-block pins **CANH** (pin 3) and **CANL** (pin 4). Use **twisted-pair** cable with a **120 Ω** characteristic impedance, wire the bus as a **linear (daisy-chain) topology** (avoid star layouts and long stubs), and keep any untwisted wiring at the terminal block **as short as possible**.
 
 The CAN interface is **not galvanically isolated**, so all nodes must share a common ground reference. Connect the bus **GND** to one of the terminal-block GND pins (pin 6 or 7).
 
@@ -165,7 +165,7 @@ CHESTER-X13 can be used as part of the CHESTER SDK using the `ctr_x13_a` and `ct
 
 ## Schematic Diagrams
 
-The complete schematic — covering the main page, the CAN interface, and the power supply — is available as a PDF:
+The complete schematic, covering the main page, the CAN interface, and the power supply, is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x13-r1.2.pdf)
 - [Interactive CHESTER-X13 browser](pathname:///download/ibom/hio-chester-x13-r1.2.html)

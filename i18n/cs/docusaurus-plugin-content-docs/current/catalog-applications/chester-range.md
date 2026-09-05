@@ -13,9 +13,9 @@ Tento článek popisuje základní funkce, hardware a ukázkovou **JSON** zpráv
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps) – jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md) – jak funguje LED, tlačítko a konfigurace sítě.
-- [**Platform Management**](../category/platform-connectivity) – jak pracovat s interaktivní konzolí.
+- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Platform Management**](../category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -32,9 +32,9 @@ Zařízení **CHESTER Range** lze objednat v jedné z těchto variant:
 
 Katalogový hardware **CHESTER Range** se skládá z těchto objednacích kódů:
 
-* `CHESTER-M-CGLS` - Standardní základní deska
+* `CHESTER-M-CGLS`: Standardní základní deska
 
-* `CHESTER-X0A:A` - Vstupní modul (4 kanály)
+* `CHESTER-X0A:A`: Vstupní modul (4 kanály)
 
 Více podrobností najdete v [**objednacích kódech**](../ordering-codes.md).
 
@@ -44,11 +44,11 @@ Varianta buildu firmwaru: `west chester-update range --variant "CHESTER Range"`
 
 Katalogový hardware **CHESTER Range Z** se skládá z těchto objednacích kódů:
 
-* `CHESTER-M-CGLS` - Standardní základní deska
+* `CHESTER-M-CGLS`: Standardní základní deska
 
-* `CHESTER-X0A:A` - Vstupní modul (4 kanály)
+* `CHESTER-X0A:A`: Vstupní modul (4 kanály)
 
-* `CHESTER-Z1` - Záložní modul
+* `CHESTER-Z1`: Záložní modul
 
 Více podrobností najdete v [**objednacích kódech**](../ordering-codes.md).
 
@@ -269,10 +269,10 @@ Každý dostupný senzor má jedno agregované měření, které obsahuje minim�
 
 ## Seznam změn {#changelog}
 
-### v3.5.0 — 2025-12-03 {#v350--2025-12-03}
+### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Podpora LoRaWAN — jediný binární firmware pro LTE i LoRaWAN; režim se volí pomocí `app config mode lte` / `app config mode lrw`
-- **Přidáno**: Nová varianta — **CHESTER Range Z** s podporou záložního modulu CHESTER-Z1
+- **Přidáno**: Podpora LoRaWAN: jediný binární firmware pro LTE i LoRaWAN; režim se volí pomocí `app config mode lte` / `app config mode lrw`
+- **Přidáno**: Nová varianta: **CHESTER Range Z** s podporou záložního modulu CHESTER-Z1
 - **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); předchozí firmware pro Cloud v1 zůstává dostupný samostatně
 
 :::info

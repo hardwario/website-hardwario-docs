@@ -49,7 +49,7 @@ Available on both FIBER and FIBER Lite.
 
    :::tip
 
-   Dashboard panels are best built once there's real device/gateway data flowing in — there's
+   Dashboard panels are best built once there's real device/gateway data flowing in. There's
    nothing meaningful to visualize before that.
 
    :::

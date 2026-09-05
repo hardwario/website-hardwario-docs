@@ -41,9 +41,9 @@ Tyto klíče se vztahují na celé zařízení.
 
 | Klíč | Typ | Rozsah | Výchozí | Popis |
 | :--- | :--- | :--- | :--- | :--- |
-| `interval-sample` | int (s) | 5 - 3600 | **60** | Jak často firmware čte senzory a vyhodnocuje alarmy. |
-| `interval-send` | int (s) | 30 - 86400 | **300** | Jak často firmware zakóduje payload CBOR a odešle uplink. |
-| `downlink-wdg-interval` | int (s) | 0 - 1209600 | **129600** (36 h) | Watchdog downlinku. Pokud cloud v této době nepošle žádný downlink, zařízení se restartuje. `0` watchdog vypne. |
+| `interval-sample` | int (s) | 5–3600 | **60** | Jak často firmware čte senzory a vyhodnocuje alarmy. |
+| `interval-send` | int (s) | 30–86400 | **300** | Jak často firmware zakóduje payload CBOR a odešle uplink. |
+| `downlink-wdg-interval` | int (s) | 0–1209600 | **129600** (36 h) | Watchdog downlinku. Pokud cloud v této době nepošle žádný downlink, zařízení se restartuje. `0` watchdog vypne. |
 
 #### Příklad {#example}
 
@@ -70,9 +70,9 @@ Stejné klíče existují pro oba kanály, s předponou `1-` (CH1) nebo `2-` (CH
 | Klíč | Typ | Rozsah | Výchozí | Popis |
 | :--- | :--- | :--- | :--- | :--- |
 | `<n>-mode` | enum | `disabled` / `counter` / `event` | `disabled` | Režim kanálu. |
-| `<n>-active-duration` | int (ms) | 0 - 60000 | **100** | Minimální doba, po kterou musí vstup zůstat aktivní (potlačení zákmitů vzestupné hrany). |
-| `<n>-inactive-duration` | int (ms) | 0 - 60000 | **100** | Minimální doba, po kterou musí vstup zůstat neaktivní (potlačení zákmitů klesající hrany). |
-| `<n>-cooldown-time` | int (ms) | 0 - 60000 | **10** | Minimální doba mezi dvěma zaregistrovanými přechody. |
+| `<n>-active-duration` | int (ms) | 0–60000 | **100** | Minimální doba, po kterou musí vstup zůstat aktivní (potlačení zákmitů vzestupné hrany). |
+| `<n>-inactive-duration` | int (ms) | 0–60000 | **100** | Minimální doba, po kterou musí vstup zůstat neaktivní (potlačení zákmitů klesající hrany). |
+| `<n>-cooldown-time` | int (ms) | 0–60000 | **10** | Minimální doba mezi dvěma zaregistrovanými přechody. |
 | `<n>-counter-edge` | enum | `rising` / `falling` / `both` | `both` | Které hrany inkrementují počítadlo (použije se jen v režimu `counter`). |
 | `<n>-event-type` | enum | `activation` / `deactivation` / `both` | `both` | Které přechody vytvářejí události (použije se jen v režimu `event`). |
 
@@ -114,9 +114,9 @@ Stejné čtyři klíče existují pro každé pravidlo, s předponou `<n>-` (1-3
 | Klíč | Typ | Rozsah | Výchozí | Popis |
 | :--- | :--- | :--- | :--- | :--- |
 | `<n>-enabled` | bool | - | `false` | Hlavní vypínač pravidla. Je-li `false`, ostatní klíče tohoto pravidla jsou skryté. |
-| `<n>-therm` | int | 1 - 8 | **1** | Který slot termometru pravidlo sleduje. |
-| `<n>-threshold` | float (°C) | −55 - 125 | **50** | Prahová hodnota aktivace. |
-| `<n>-hysteresis` | float (°C) | 0 - 50 | **5** | Odchylka deaktivace pod prahovou hodnotou. |
+| `<n>-therm` | int | 1–8 | **1** | Který slot termometru pravidlo sleduje. |
+| `<n>-threshold` | float (°C) | −55–125 | **50** | Prahová hodnota aktivace. |
+| `<n>-hysteresis` | float (°C) | 0–50 | **5** | Odchylka deaktivace pod prahovou hodnotou. |
 
 #### Příklad – alarm na slotu 1 při překročení 30 °C {#example---alarm-on-slot-1-if-it-exceeds-30-c}
 

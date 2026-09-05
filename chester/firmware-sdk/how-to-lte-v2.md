@@ -38,7 +38,7 @@ After you [flash LTE modem](#flash-lte-modem-firmware) to `v1.7.0` or higer, you
 
 https://github.com/hardwario/chester-sdk/tree/main/applications/control
 
-- Added reconfigurable inputs - you can reconfigure any of the 4 inputs to measure voltage, current, count pulses or react to logic level change.
+- Added reconfigurable inputs: you can reconfigure any of the 4 inputs to measure voltage, current, count pulses or react to logic level change.
 - Adds a control option with [CHESTER-X4](../extension-modules/chester-x4.md) in slot B for switching 4 outputs that are powered from the external DC power supply.
 
 The project also contains [example scripts](https://github.com/hardwario/chester-sdk/tree/main/applications/control/codec) on how to send downlink configuration and messages with `curl`.

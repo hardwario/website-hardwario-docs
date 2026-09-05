@@ -43,7 +43,7 @@ Dostupné na FIBER i FIBER Lite.
    :::tip
 
    `openssl rand -hex 32` vygeneruje náhodný 64znakový token, takže si žádný nemusíte vymýšlet.
-   Hned poté spusťte `influx auth list`, aby se vypsal — uschovejte si ho společně
+   Hned poté spusťte `influx auth list`, aby se vypsal. Uschovejte si ho společně
    se zvoleným heslem; budou znovu potřeba pro výše uvedený Node-RED flow a pro
    datasource v Grafaně níže.
 

@@ -11,7 +11,7 @@ description: "Upravte 10.0.0.0/24 podle skutečné podsítě vaší LAN."
    sudo apt install -y ufw
    ```
 
-1. **Povolte SSH ještě před zapnutím firewallu** — obrácený postup vás může připravit o přístup:
+1. **Povolte SSH ještě před zapnutím firewallu**: obrácený postup vás může připravit o přístup:
 
    ```sh
    sudo ufw allow 22/tcp

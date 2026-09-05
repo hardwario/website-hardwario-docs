@@ -81,9 +81,9 @@ The mapping must be carried out using the **CHESTER Terminal**, for example with
 
 Here you can manage the list of **wM-Bus addresses** (**add/remove**), adjust scan settings, and review example configurations for typical setups.  
 
-- [**Address List Configuration**](/chester/catalog-applications/chester-wm-bus#address-list-configuration) – **manage and edit** the list of linked wM-Bus **addresses**  
-- [**Scan Configuration**](/chester/catalog-applications/chester-wm-bus#scan-configuration) – **adjust scan settings** for device communication 
-- [**Example Configurations**](/chester/catalog-applications/chester-wm-bus#example-configurations) – reference **templates** for typical setups 
+- [**Address List Configuration**](/chester/catalog-applications/chester-wm-bus#address-list-configuration): **manage and edit** the list of linked wM-Bus **addresses**  
+- [**Scan Configuration**](/chester/catalog-applications/chester-wm-bus#scan-configuration): **adjust scan settings** for device communication 
+- [**Example Configurations**](/chester/catalog-applications/chester-wm-bus#example-configurations): reference **templates** for typical setups 
 
 ---
 
@@ -94,5 +94,5 @@ The **transmitted messages are encrypted** to optimize energy consumption during
 The **received data must therefore be decrypted**, which is done using **decryption keys**.  
 To achieve this, there are two options:
 
-- [**HARDWARIO Cloud**](/chester/catalog-applications/chester-wm-bus#hardwario-cloud--decryption-keys) – tutorial on how to enter and manage decryption keys  
-- [**Decryption page**](https://wmbusmeters.org/) – online tool for manual data decryption and analysis  
+- [**HARDWARIO Cloud**](/chester/catalog-applications/chester-wm-bus#hardwario-cloud--decryption-keys): tutorial on how to enter and manage decryption keys  
+- [**Decryption page**](https://wmbusmeters.org/): online tool for manual data decryption and analysis  

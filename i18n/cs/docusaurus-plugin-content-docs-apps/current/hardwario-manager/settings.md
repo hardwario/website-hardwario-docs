@@ -31,13 +31,13 @@ Zvolte, jak má aplikace vypadat:
 | **English** | Vždy anglicky. |
 | **Čeština** | Vždy česky. |
 
-Změna se projeví okamžitě — aplikaci není potřeba restartovat.
+Změna se projeví okamžitě. Aplikaci není potřeba restartovat.
 
 ---
 
 ## Zabezpečení {#security}
 
-**Lock app with Face ID / passcode** — *Vyžadovat autentizaci při spuštění a při
+**Lock app with Face ID / passcode**: *Vyžadovat autentizaci při spuštění a při
 návratu do aplikace.* Ve výchozím stavu vypnuto.
 
 Když je zapnuté, aplikace si při každém otevření i při každém návratu z jiné
@@ -75,8 +75,8 @@ Klepnutím na logo HARDWARIO ve spodní části obrazovky Settings **pětkrát**
 nebo vypnete **Debug mode**. Po prvním klepnutí se objeví počítadlo, které
 ukazuje, kolik klepnutí zbývá.
 
-Debug mode přidá do menu STICKER Tools **NFC Console** — nízkoúrovňovou konzoli
-pro surové příkazy NFC — a pod záhlavím zobrazí tenký pásek `debug mode`, abyste
+Debug mode přidá do menu STICKER Tools **NFC Console** (nízkoúrovňovou konzoli
+pro surové příkazy NFC) a pod záhlavím zobrazí tenký pásek `debug mode`, abyste
 vždy věděli, že je zapnutý. Je to diagnostická pomůcka; pro běžné použití ho
 nechte vypnutý.
 

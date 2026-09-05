@@ -23,17 +23,17 @@ The Store-and-Forward functionality described on this page is a core feature of 
 | `config history-enable` | `true` / `false` | Master enable for history recording. Default `false`. |
 | `config history-sensors` | Bitmask (uint32) | Channel mask specifying which sensor channels to buffer. Default `0x0003` (**temperature + humidity**). `0` disables channel recording. |
 
-Sensors are sampled and stored on the `interval-sample` schedule (or once per uplink when `interval-sample` is `0`) — see [**Configuration**](configuration.md).
+Sensors are sampled and stored on the `interval-sample` schedule (or once per uplink when `interval-sample` is `0`), see [**Configuration**](configuration.md).
 
 ### Recordable Channels
 
 The `history-sensors` bitmask maps bit $i$ to channel $i$ (up to 19 selectable channels across the 32-bit field):
 
-- **`temperature`**, **`humidity`** — Integrated ambient sensors
-- **`s1-temp`/`s1-hum` … `s4-temp`/`s4-hum`** — 1-Wire sensor slots 1 through 4
-- **`hall-left`**, **`hall-right`**, **`input-a`**, **`input-b`** — Pulse/counter inputs
-- **`motion`** — Integrated PIR motion detection count
-- **`pressure`**, **`illuminance`**, **`orientation`**, **`accel-motion`** — Barometer, ambient light, accelerometer tilt, and motion event counters
+- **`temperature`**, **`humidity`**: Integrated ambient sensors
+- **`s1-temp`/`s1-hum` … `s4-temp`/`s4-hum`**: 1-Wire sensor slots 1 through 4
+- **`hall-left`**, **`hall-right`**, **`input-a`**, **`input-b`**: Pulse/counter inputs
+- **`motion`**: Integrated PIR motion detection count
+- **`pressure`**, **`illuminance`**, **`orientation`**, **`accel-motion`**: Barometer, ambient light, accelerometer tilt, and motion event counters
 
 Channels for unpopulated physical sensors are automatically skipped.
 

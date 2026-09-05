@@ -13,11 +13,11 @@ import Image from '@theme/IdealImage';
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Průvodce prvními kroky**](https://docs.hardwario.com/sticker/first-steps) – Podrobný návod k nastavení.
-* [**Koupit STICKER Input**](https://www.hardwario.store/p/sticker-input) – Nákup v našem obchodě.
-* [**Objednací kódy**](https://docs.hardwario.com/sticker/ordering-codes) - Seznam komponent a objednacích čísel.
-* [**Popis hardwaru**](https://docs.hardwario.com/sticker/hardware-description) - Technické detaily a přehled hardwaru.
-* [**Oficiální stránka produktu**](https://www.hardwario.com/products/sticker/) – Vlastnosti a přehled.
+* [**Průvodce prvními kroky**](https://docs.hardwario.com/sticker/first-steps): Podrobný návod k nastavení.
+* [**Koupit STICKER Input**](https://www.hardwario.store/p/sticker-input): Nákup v našem obchodě.
+* [**Objednací kódy**](https://docs.hardwario.com/sticker/ordering-codes): Seznam komponent a objednacích čísel.
+* [**Popis hardwaru**](https://docs.hardwario.com/sticker/hardware-description): Technické detaily a přehled hardwaru.
+* [**Oficiální stránka produktu**](https://www.hardwario.com/products/sticker/): Vlastnosti a přehled.
 
 ## Typické případy použití {#typical-use-cases}
 
@@ -28,7 +28,7 @@ import Image from '@theme/IdealImage';
 - Digitalizace starších strojů může být oříšek, i když stále spolehlivě fungují. Mnohé nabízejí digitální výstup 24 V, případně lze poblíž výstupního mechanismu doplnit indukční senzor, který detekuje každý vyrobený kus. To umožňuje jednoduché počítání kusů pomocí digitálních signálů.
 
 #### Chytrá detekce otevření/zavření {#smart-openclose-detection}
-- Detekce dveří a oken neslouží jen k zabezpečení – je také klíčová pro chytré vytápění a chlazení. Tradiční systémy mohou být kvůli přísným certifikačním standardům drahé. STICKER Input nabízí jednoduchou a cenově dostupnou alternativu s vestavěným senzorem magnetického pole nebo digitálními vstupy pro běžné spínače.
+- Detekce dveří a oken neslouží jen k zabezpečení: je také klíčová pro chytré vytápění a chlazení. Tradiční systémy mohou být kvůli přísným certifikačním standardům drahé. STICKER Input nabízí jednoduchou a cenově dostupnou alternativu s vestavěným senzorem magnetického pole nebo digitálními vstupy pro běžné spínače.
 
 ## Konfigurace a zapojení externích vstupů {#configuration-and-wiring-of-external-inputs}
 
@@ -77,9 +77,9 @@ Blikání při aktivaci vstupu je pomůcka pro uvedení do provozu a **skončí 
 
 ## Seznam změn {#changelog}
 
-### 2025-11-23 — v1.0.0 {#2025-11-23--v100}
+### 2025-11-23 – v1.0.0 {#2025-11-23--v100}
 
-- První vydání — digitální vstupy, počítání pulzů, teplotní sondy 1-Wire a analogové měření přes LoRaWAN
+- První vydání: digitální vstupy, počítání pulzů, teplotní sondy 1-Wire a analogové měření přes LoRaWAN
 
 :::info
 

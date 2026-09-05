@@ -14,7 +14,7 @@ Otevřete **STICKER → Saved STICKERs**. Titulek ukazuje, kolik zařízení má
 
 <img src="/img/hw-manager/hw-manager-saved-stickers.png" alt="Seznam Saved STICKERs s vyhledávacím polem, barevně odlišenými tagy na řádcích a tlačítkem pro přidání" width="320" />
 
-Polem **Serial or name** hledáte a ikonou tagu filtrujete — viz
+Polem **Serial or name** hledáte a ikonou tagu filtrujete, viz
 [**Organizace zařízení tagy**](./tags.md).
 
 ---
@@ -25,11 +25,11 @@ Do seznamu se zařízení dostanou dvěma cestami.
 
 **Nárokováním.** Obrazovka **Add** zařízení nárokuje k vašemu účtu ATELOS:
 přiložte telefon přes NFC, naskenujte QR kód nebo zadejte údaje ručně. Nárokování
-přenese secret key zařízení. Vyžaduje přihlášení do ATELOSu — viz
+přenese secret key zařízení. Vyžaduje přihlášení do systému ATELOS, viz
 [**Účet ATELOS**](../atelos.md).
 
-**Importem.** Pokud už klíče máte — z exportu od kolegy, z tabulky nebo
-z nasdíleného QR kódu — použijte místo toho **Import**. Účet není potřeba; viz
+**Importem.** Pokud už klíče máte (z exportu od kolegy, z tabulky nebo
+z nasdíleného QR kódu), použijte místo toho **Import**. Účet není potřeba; viz
 [**Import ze souboru**](./import-file.md).
 
 ---
@@ -63,8 +63,8 @@ Otevřete **menu ⋮** v seznamu a zvolte **Export**.
 
 Vyberte zařízení k exportu a pak zvolte, co zahrnout a kam to poslat:
 
-- **Include vendor token** — ve výchozím stavu vypnuto.
-- **Include tags** — přidá do CSV sloupec s tagy.
+- **Include vendor token**: ve výchozím stavu vypnuto.
+- **Include tags**: přidá do CSV sloupec s tagy.
 
 Pak vyberte cíl: **Share as QR code**, **Share as JSON** nebo
 **Share as CSV**.
@@ -81,9 +81,9 @@ několik kódů za sebou a **Share next** vás jimi provede.
 
 Otevřete **menu ⋮** a zvolte **Import**:
 
-- **Import from QR code** — naskenujte jeden nebo víc kódů a přes **Import more**
+- **Import from QR code**: naskenujte jeden nebo víc kódů a přes **Import more**
   projděte export z více kódů.
-- **Import from file** — export ve formátu CSV nebo JSON. Formát souboru popisuje
+- **Import from file**: export ve formátu CSV nebo JSON. Formát souboru popisuje
   [**Import ze souboru**](./import-file.md).
 
 Než se cokoli zapíše, aplikace potvrdí, co našla, včetně toho, kolik zařízení nese

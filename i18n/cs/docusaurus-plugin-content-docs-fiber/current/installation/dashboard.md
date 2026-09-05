@@ -8,8 +8,8 @@ description: "Dostupné na FIBER i FIBER Lite."
 Dostupné na FIBER i FIBER Lite.
 
 FIBER obsahuje úvodní stránku na portu 80 s dlaždicemi odkazujícími na všechny služby, živými
-systémovými metrikami a tlačítkem pro rychlé zkopírování SSH příkazu — vše ve stylu značky HARDWARIO (barvy, typografie, logo).
-Jde o samostatnou statickou stránku s malým Python backendem pro živé statistiky — pro samotnou stránku
+systémovými metrikami a tlačítkem pro rychlé zkopírování SSH příkazu, vše ve stylu značky HARDWARIO (barvy, typografie, logo).
+Jde o samostatnou statickou stránku s malým Python backendem pro živé statistiky, pro samotnou stránku
 není potřeba žádný externí framework ani Docker kontejner. Logo a font níže se pro jednoduchost načítají
 z `hardwario.com`/Google Fonts při načtení stránky; hostovat je lokálně je možné,
 ale není to nutné.
@@ -20,7 +20,7 @@ ale není to nutné.
    mkdir -p ~/fiber-dashboard
    ```
 
-1. Vytvořte `index.html` — to je webová stránka dashboardu (rozvržení, styly a malý skript,
+1. Vytvořte `index.html`: to je webová stránka dashboardu (rozvržení, styly a malý skript,
    který doplní IP adresu vašeho zařízení a obnovuje živé statistiky). Blok níže je kvůli délce
    ve výchozím stavu sbalený; kliknutím na lištu jej rozbalíte a poté celý obsah zkopírujte do
    příkazu:
@@ -287,7 +287,7 @@ ale není to nutné.
    </p>
    </details>
 
-1. Doplňte své skutečné SSH uživatelské jméno — stránka jej z prohlížeče nedokáže zjistit, takže jej
+1. Doplňte své skutečné SSH uživatelské jméno: stránka jej z prohlížeče nedokáže zjistit, takže jej
    nyní natvrdo vložte podle uživatele, pod kterým jste právě přihlášeni:
 
    ```sh
@@ -297,12 +297,12 @@ ale není to nutné.
    :::tip
 
    Dlaždice služeb a SSH příkaz používají `window.location.hostname` k automatickému doplnění cílové
-   IP adresy — otevřete stránku z libovolné adresy, kterou skutečně používáte, a odkazy i SSH příkaz
+   IP adresy. Otevřete stránku z libovolné adresy, kterou skutečně používáte, a odkazy i SSH příkaz
    se přizpůsobí samy. Není potřeba ručně vpisovat IP adresy do souboru.
 
    :::
 
-1. Vytvořte `serve.py` — to je malý program, který dashboard skutečně provozuje: Python webový server
+1. Vytvořte `serve.py`: to je malý program, který dashboard skutečně provozuje: Python webový server
    bez závislostí, který obsluhuje výše uvedenou stránku `index.html` a poskytuje endpoint
    `/api/stats` s živým využitím CPU/paměti/disku a teplotou. Stejně jako výše, kliknutím
    rozbalíte kód a poté celý obsah zkopírujte do příkazu:

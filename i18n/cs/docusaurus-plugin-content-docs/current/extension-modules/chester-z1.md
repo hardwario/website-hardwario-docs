@@ -27,7 +27,7 @@ Tento článek popisuje rozšiřující modul do horního krytu **CHESTER-Z1**.
 
 Přes I2C je k dispozici následující funkcionalita:
 
-1. **HMI příkazy – tj. ovládání LED a bzučáku**
+1. **HMI příkazy: tj. ovládání LED a bzučáku**
    1. Jednorázová popředí indikace
    2. Kontinuální vzory na pozadí
 2. **Detekce událostí**

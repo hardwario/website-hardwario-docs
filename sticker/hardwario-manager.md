@@ -6,18 +6,18 @@ title: HARDWARIO Manager
 # HARDWARIO Manager
 
 STICKER has no buttons, no display, and no configuration cable. It is set up
-over **NFC** with **HARDWARIO Manager**, the HARDWARIO mobile app — you hold the
+over **NFC** with **HARDWARIO Manager**, the HARDWARIO mobile app. You hold the
 phone against the device and the app reads or writes its settings.
 
 :::tip Full App Documentation
 This page explains how HARDWARIO Manager fits into the STICKER deployment
 workflow. The app itself is documented in full under **APPS**:
 
-- → [**Quick Start Guide**](/apps/hardwario-manager/first-steps) — install the
+- → [**Quick Start Guide**](/apps/hardwario-manager/first-steps): install the
   app, switch the wireless link on, and make the first tap. Start here.
-- → [**HARDWARIO Manager Documentation**](/apps/hardwario-manager) — the complete
+- → [**HARDWARIO Manager Documentation**](/apps/hardwario-manager): the complete
   app guides and feature reference.
-- → [**STICKER over NFC**](/apps/hardwario-manager/sticker) — the STICKER menu
+- → [**STICKER over NFC**](/apps/hardwario-manager/sticker): the STICKER menu
   and how a tap works.
 :::
 
@@ -28,8 +28,8 @@ workflow. The app itself is documented in full under **APPS**:
 - A phone with **NFC**, running the app. Getting it onto the phone and switching
   NFC on is covered in [**Install the app**](/apps/hardwario-manager/install).
 - The device's **secret key**. STICKER talks over an encrypted NFC channel, so
-  the app cannot read or write anything without it. You add each device once —
-  see [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers) — and
+  the app cannot read or write anything without it. You add each device once (see
+  [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)), and
   from then on the app fills the key in automatically.
 
 ## Configuring without batteries
@@ -37,7 +37,7 @@ workflow. The app itself is documented in full under **APPS**:
 STICKER is NFC-ready and can be configured with **no batteries inserted**. The
 field from the phone powers the device long enough to store the settings, which
 it applies on its next boot. This is how a batch of devices is prepared before
-installation — see
+installation, see
 [**Configure a powered-off device**](/apps/hardwario-manager/sticker/offline-configuration).
 
 It is also why an unprovisioned device stays radio-silent until it is given real
@@ -50,7 +50,7 @@ LoRaWAN keys: see [**Features**](features.md).
 | Task | Where it is documented |
 |---|---|
 | Read the serial number, firmware, and the LoRaWAN keys needed to register the device | [**Device info and LoRaWAN keys**](/apps/hardwario-manager/sticker/device-info) |
-| Read and edit the full configuration — intervals, sensors, history, LoRaWAN | [**Configuration**](/apps/hardwario-manager/sticker/configuration) |
+| Read and edit the full configuration. Intervals, sensors, history, LoRaWAN | [**Configuration**](/apps/hardwario-manager/sticker/configuration) |
 | Set threshold, state, and rate alarms | [**Alarm rules**](/apps/hardwario-manager/sticker/alarms) |
 | Give many devices the same settings | [**Templates**](/apps/hardwario-manager/sticker/templates) |
 | Capture a whole fleet's configuration in one session | [**Scan multiple devices**](/apps/hardwario-manager/sticker/batch-export) |
@@ -70,6 +70,6 @@ Registering the device on a network server afterwards is covered under
 The app is the standard way to set up a STICKER, and the only one that needs no
 hardware beyond a phone. A device delivered in **Debug Mode** can also be
 configured from a console over a debug connection, which is intended for
-firmware development rather than deployment — see
+firmware development rather than deployment, see
 [**Developer Access**](developer-mode.md) and the full
 [**configuration parameter reference**](developer-access/configuration.md).

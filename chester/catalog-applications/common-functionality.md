@@ -92,7 +92,7 @@ Starting from firmware **v3.5.4**, some applications support **runtime detection
 
 - If CHESTER-Z is detected at boot, backup functionality (DC input monitoring, backup battery voltage, connection/disconnection events) is automatically enabled.
 - If CHESTER-Z is not present, backup features are silently skipped with no impact on other functionality.
-- This eliminates the need for separate "Z" firmware variants — for example, **CHESTER Clime** now covers what was previously **CHESTER Clime Z**.
+- This eliminates the need for separate "Z" firmware variants: for example, **CHESTER Clime** now covers what was previously **CHESTER Clime Z**.
 
 Applications with runtime CHESTER-Z detection:
 
@@ -170,18 +170,18 @@ Available commands:
 
 Starting from firmware **v3.5.0**, all applications include the following diagnostic shell commands:
 
-- **`i2c`** — I2C bus operations (scan, read, write) for hardware diagnostics
-- **`mcuboot`** — MCUboot bootloader commands for firmware management
-- **`gpio`** — GPIO pin control and inspection
-- **`w1`** — 1-Wire bus scanning and device enumeration
-- **`backup`** — CHESTER-Z backup module status (serial number, HW revision, voltages, DC input state)
-- **`cloud`** — Cloud communication commands including `cloud metrics` for connectivity diagnostics
+- **`i2c`**: I2C bus operations (scan, read, write) for hardware diagnostics
+- **`mcuboot`**: MCUboot bootloader commands for firmware management
+- **`gpio`**: GPIO pin control and inspection
+- **`w1`**: 1-Wire bus scanning and device enumeration
+- **`backup`**: CHESTER-Z backup module status (serial number, HW revision, voltages, DC input state)
+- **`cloud`**: Cloud communication commands including `cloud metrics` for connectivity diagnostics
 
 ## Configuration backup v1.x.x → v2.x.x {#configuration-backup}
 
-When upgrading an older **v1.x.x** firmware to **v2.x.x** - it is necessary to backup application configuration. The most important is this step in **CHESTER Current** application, where in configuration there are the **current transformers calibration coefficients**.
+When upgrading an older **v1.x.x** firmware to **v2.x.x**, it is necessary to back up the application configuration. The most important is this step in **CHESTER Current** application, where in configuration there are the **current transformers calibration coefficients**.
 
-In case you forget to back up the data - they are not lost unless you executed `config save` command in newer firmware. However, you need to temporarily downgrade to [older firmware](https://github.com/hardwario/docs/blob/33661ca486dda9e6883d3a82edf0128ab32173d2/chester/catalog-applications/index.md#application-firmware) that can read the old configuration and apply the same configuration after the firmware is updated.
+If you forget to back up the data, they are not lost unless you executed `config save` command in newer firmware. However, you need to temporarily downgrade to [older firmware](https://github.com/hardwario/docs/blob/33661ca486dda9e6883d3a82edf0128ab32173d2/chester/catalog-applications/index.md#application-firmware) that can read the old configuration and apply the same configuration after the firmware is updated.
 
 In the old firmware type `app config show` to the console. Then you need to copy all configuration items. If you use **HARDWARIO Manager** phone app or **HARDWARIO CLI** on your computer, you can highlight and copy current configuration text to your clipboard or text editor.
 

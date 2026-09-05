@@ -17,7 +17,7 @@ platformu si řekněte svému kontaktu v HARDWARIO.
 |---|---|
 | **Telefon s NFC** | Nutný pro konfiguraci zařízení **STICKER**. Většina telefonů z posledních let ho má. |
 | **Bluetooth** | Nutný pro připojení k zařízení **CHESTER**. |
-| **Kameru** | Používá se ke skenování QR kódů — párovacích etiket CHESTER, odkazů na firmware, claim kódů zařízení a nasdílených šablon. |
+| **Kameru** | Používá se ke skenování QR kódů. Párovacích etiket CHESTER, odkazů na firmware, claim kódů zařízení a nasdílených šablon. |
 | **Účet ATELOS** | Potřebný k nárokování zařízení a k natažení jeho uloženého secret key do telefonu. Viz [**Účet ATELOS**](./atelos.md). |
 | **Secret key zařízení** | Zařízení STICKER komunikuje šifrovaným kanálem NFC. Nárokování zařízení klíč vyplní za vás; zadat ho můžete i ručně. |
 
@@ -48,9 +48,9 @@ Nainstalujte build pro svou platformu a otevřete ho. Vaše uložená zařízen�
 Aplikace si o oprávnění řekne, až ho poprvé potřebuje. Klepněte na **Povolit**
 (nebo **Při používání aplikace**):
 
-- **Kamera** — jen když skenujete QR kód.
-- **Zařízení v okolí / Bluetooth** — jen když se připojujete k zařízení CHESTER.
-- **Face ID / biometrika** — jen když si zapnete zámek aplikace v
+- **Kamera**: jen když skenujete QR kód.
+- **Zařízení v okolí / Bluetooth**: jen když se připojujete k zařízení CHESTER.
+- **Face ID / biometrika**: jen když si zapnete zámek aplikace v
   [**nastavení aplikace**](./settings.md).
 
 Pro NFC se na oprávnění nikdo neptá. Zapnete ho jednou, v kroku 1.
@@ -67,8 +67,8 @@ otevření nastavení telefonu, kde je udělíte.
 
 Otevřete **HARDWARIO Manager** a z domovské mřížky vyberte rodinu zařízení:
 
-- **STICKER** — konfigurace přes NFC. Pokračujte na [**STICKER**](./sticker/index.md).
-- **CHESTER** — připojení přes Bluetooth. Pokračujte na [**CHESTER**](./chester/index.md).
+- **STICKER**: konfigurace přes NFC. Pokračujte na [**STICKER**](./sticker/index.md).
+- **CHESTER**: připojení přes Bluetooth. Pokračujte na [**CHESTER**](./chester/index.md).
 
 Anténa NFC bývá v telefonu blízko **horní části zadní strany**. Pokud se přiložení
 nezaregistruje, pohybujte telefonem pomalu kolem tohoto místa, dokud nedojde k

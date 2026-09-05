@@ -1,22 +1,22 @@
 ---
 slug: import-file
 title: Import ze souboru
-description: "Pokud už jsou vaše zařízení někde vypsaná — v tabulce od dodavatele, v exportu"
+description: "Pokud už jsou vaše zařízení někde vypsaná, v tabulce od dodavatele, v exportu"
 ---
 
 # Import zařízení STICKER ze souboru CSV nebo JSON {#import-stickers-from-a-csv-or-json-file}
 
-Pokud už jsou vaše zařízení někde vypsaná — v tabulce od dodavatele, v exportu
-z jiného systému, ve vlastní tabulce — můžete ten seznam nahrát do aplikace
+Pokud už jsou vaše zařízení někde vypsaná (v tabulce od dodavatele, v exportu
+z jiného systému, ve vlastní tabulce), můžete ten seznam nahrát do aplikace
 naráz, místo abyste každé zařízení zadávali ručně.
 
 Fungují dva formáty a oba dělají totéž:
 
-- **CSV** — pro seznam, který žije v tabulkovém procesoru (Excel, Google Sheets,
+- **CSV**: pro seznam, který žije v tabulkovém procesoru (Excel, Google Sheets,
   LibreOffice). Jediný formát, který umí nést i **tagy**.
-- **JSON** — pro seznam vytvořený jiným systémem nebo skriptem.
+- **JSON**: pro seznam vytvořený jiným systémem nebo skriptem.
 
-Import zapisuje jen do vašeho uloženého seznamu — viz
+Import zapisuje jen do vašeho uloženého seznamu, viz
 [**Uložené STICKERy**](./saved-stickers.md).
 
 ---
@@ -32,7 +32,7 @@ serial,name,secret_key,vendor_key,tags
 2162165141,Spare (no key yet),,,unassigned
 ```
 
-Tři ukázkové řádky nahraďte svými a **hlavičkový řádek nechte** — právě ten
+Tři ukázkové řádky nahraďte svými a **hlavičkový řádek nechte**. Právě ten
 aplikaci říká, který sloupec je který.
 
 Povinný je jen `serial`, takže nejkratší platný soubor je:
@@ -82,11 +82,11 @@ Zabalený objekt funguje také, pokud to tak váš systém produkuje:
 
 | Pole | Povinné | Co to je |
 |---|---|---|
-| `serial` | **ano** | Sériové číslo zařízení, jako obyčejné dekadické číslo, například `2162165139`. Je to identita položky — řádky se k zařízením párují podle něj. |
+| `serial` | **ano** | Sériové číslo zařízení, jako obyčejné dekadické číslo, například `2162165139`. Je to identita položky. Řádky se k zařízením párují podle něj. |
 | `name` | ne | Váš vlastní popisek zařízení („Front door"). Když ho necháte prázdný, aplikace zobrazí `STICKER <serial>`. |
-| `secret_key` | ne | Klíč AES-128 zařízení — **32 hex číslic** (16 bajtů). Bez něj se zařízení uloží, ale aplikace ho umí jen číst, ne konfigurovat. |
+| `secret_key` | ne | Klíč AES-128 zařízení. **32 hex číslic** (16 bajtů). Bez něj se zařízení uloží, ale aplikace ho umí jen číst, ne konfigurovat. |
 | `vendor_key` | ne | Vendor token, jen pro vendor a servisní použití. Stejný tvar 32 hex číslic. Nechte prázdný, pokud vám ho dodavatel nedal. |
-| `tags` | ne | Vaše vlastní popisky pro seskupování a filtrování, **oddělené středníky**: `warehouse-a;installed`. **Jen v CSV** — viz níže. |
+| `tags` | ne | Vaše vlastní popisky pro seskupování a filtrování, **oddělené středníky**: `warehouse-a;installed`. **Jen v CSV**, viz níže. |
 
 ### serial {#serial}
 
@@ -100,7 +100,7 @@ písmena (aplikace je ukládá malými) a mezery, dvojtečky a pomlčky se ignor
 
 **Nulový** `secret_key` (`00000000000000000000000000000000`) se odmítá: to je
 nenastavená výchozí hodnota firmwaru a zařízení jí adresovat nelze. Řádek se
-naimportuje, jen bez klíče. Nulový `vendor_key` se **přijímá** — u vendor tokenu
+naimportuje, jen bez klíče. Nulový `vendor_key` se **přijímá**, u vendor tokenu
 samé nuly legitimně znamenají „nezprovozněno".
 
 ### tags {#tags}
@@ -112,7 +112,7 @@ kolik jich bude nových. Viz
 [**Organizace zařízení tagy**](./tags.md).
 
 :::caution Tagy putují jen v CSV
-Pole `tags` v souboru JSON se tiše ignoruje, v obou směrech — JSON export
+Pole `tags` v souboru JSON se tiše ignoruje, v obou směrech. JSON export
 aplikace tagy taky nezapisuje. Pokud váš seznam tagy má, použijte CSV.
 :::
 
@@ -136,15 +136,15 @@ otevřete v jakémkoli textovém editoru a zkontrolujte, že první řádek je
 
 Jak dostat čárky:
 
-- **Google Sheets** — *Soubor › Stáhnout › Hodnoty oddělené čárkami (.csv)*. Vždy
+- **Google Sheets**: *Soubor › Stáhnout › Hodnoty oddělené čárkami (.csv)*. Vždy
   čárky, bez ohledu na jazyk. Nejsnazší náprava.
-- **LibreOffice Calc** — *Uložit jako › Text CSV*, zaškrtněte *Upravit nastavení
+- **LibreOffice Calc**: *Uložit jako › Text CSV*, zaškrtněte *Upravit nastavení
   filtru* a nastavte **Oddělovač polí** na `,`.
-- **Excel na Windows** — změňte systémový oddělovač seznamu: *Nastavení Windows ›
+- **Excel na Windows**: změňte systémový oddělovač seznamu: *Nastavení Windows ›
   Čas a jazyk › Oblast › Další nastavení data, času a oblasti › Změnit formáty
   data, času nebo čísel › Další nastavení* → nastavte **Oddělovač seznamu** na
   `,` a soubor uložte znovu.
-- **Nebo nahraďte ručně** — otevřete uložený soubor v textovém editoru a nahraďte
+- **Nebo nahraďte ručně**: otevřete uložený soubor v textovém editoru a nahraďte
   každý `;` za `,`. Dělejte to jen tehdy, když žádný z vašich názvů ani tagů
   neobsahuje čárku nebo středník, jinak rozdělíte špatné buňky.
 
@@ -165,7 +165,7 @@ Tabulkové procesory to za vás dělají automaticky.
 
 Hlavička se páruje **bez ohledu na velikost písmen** a sloupce mohou být
 v jakémkoli pořadí. Sloupce, které aplikace nezná, se ignorují, takže existující
-tabulka se naimportuje jak je — své sloupce `location` nebo `note` odstraňovat
+tabulka se naimportuje jak je, své sloupce `location` nebo `note` odstraňovat
 nemusíte.
 
 ```csv
@@ -174,8 +174,8 @@ Note,SECRET_KEY,Serial,Tags     ← all fine
 
 ### 4. Kódování a konce řádků {#4-encoding-and-line-endings}
 
-Ukládejte jako **UTF-8**, aby přežily názvy s diakritikou. Byte-order mark — ten,
-který přidává Excel u *CSV UTF-8* — je v pořádku. Fungují konce řádků Windows i
+Ukládejte jako **UTF-8**, aby přežily názvy s diakritikou. Byte-order mark (ten,
+který přidává Excel u *CSV UTF-8*) je v pořádku. Fungují konce řádků Windows i
 Unixu, prázdné řádky se přeskakují a koncový nový řádek je volitelný.
 
 ### 5. Velikost souboru {#5-file-size}
@@ -186,7 +186,7 @@ Maximum 2 MB: tisíce řádků, takže skutečný seznam se k limitu ani nepřib
 
 ## Import souboru {#import-the-file}
 
-1. Umístěte soubor tam, kam telefon dosáhne — pošlete si ho mailem, nebo ho
+1. Umístěte soubor tam, kam telefon dosáhne: pošlete si ho mailem, nebo ho
    zkopírujte do **Downloads** v telefonu, na Google Drive, iCloud Drive a tak dál.
 2. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Saved STICKERs**.
 3. Otevřete **menu ⋮**, zvolte **Import**, pak **Import from file** a vyberte svůj
@@ -199,7 +199,7 @@ kolik z nich nese secret key, kolik nových tagů vznikne a každý řádek, kte
 musela přeskočit. Klepnutím na **Import** to potvrdíte.
 
 Druhá položka v tom menu, **Import from QR code**, dělá totéž pro až 8 zařízení
-naráz a bez souboru — pro seznam nasdílený z jiného telefonu.
+naráz a bez souboru, pro seznam nasdílený z jiného telefonu.
 
 ---
 
@@ -209,10 +209,10 @@ naráz a bez souboru — pro seznam nasdílený z jiného telefonu.
   přidá; to, které tam už je, se aktualizuje. Import nikdy nic nemaže.
 - **Prázdné `name` zachová existující název**, místo aby ho vymazalo, takže lze
   částečný seznam naimportovat znovu bez ztráty popisků nastavených v telefonu.
-- **Tagy se přidávají, ne nahrazují** — tagy ze souboru se sloučí s tím, co
+- **Tagy se přidávají, ne nahrazují**: tagy ze souboru se sloučí s tím, co
   položka už nese.
 - **Klíče jdou do bezpečného úložiště telefonu** (Keychain nebo Keystore), nikdy
-  do obyčejného seznamu — stejně jako ručně zadaný klíč.
+  do obyčejného seznamu, stejně jako ručně zadaný klíč.
 - **Samotných zařízení se to nedotkne.** Import mění jen to, co ví telefon; do
   žádného zařízení STICKER se nic nezapisuje a žádný trezor ATELOS se nemění.
 
@@ -225,14 +225,14 @@ poznámky se ve všech jazycích aplikace zobrazují anglicky.
 
 | Poznámka | Co se stalo | Náprava |
 |---|---|---|
-| `No "serial" column in the header row.` | Hlavička nemá sloupec `serial` — téměř vždy CSV oddělené středníky. | Viz pravidlo 1 výše. |
+| `No "serial" column in the header row.` | Hlavička nemá sloupec `serial`. Téměř vždy CSV oddělené středníky. | Viz pravidlo 1 výše. |
 | `The file has no rows.` | Soubor je prázdný, nebo má jen prázdné řádky. | Zkontrolujte, že jste vyexportovali správný list. |
 | `Row N: skipped — invalid serial "…"` | Sériové číslo v tom řádku není obyčejné číslo větší než nula (mezery, oddělovače tisíců, písmena, `0`). | Napište sériové číslo jako samé číslice. Řádek `N` počítá hlavičku jako řádek 1. |
-| `Row N: skipped — duplicate serial …` | Tentýž serial je v souboru dvakrát; pozdější řádek se zahodí. | Duplikát odstraňte — nebo oba řádky slučte, protože vyhrává první. |
+| `Row N: skipped — duplicate serial …` | Tentýž serial je v souboru dvakrát; pozdější řádek se zahodí. | Duplikát odstraňte, nebo oba řádky slučte, protože vyhrává první. |
 | `Serial S: secret key ignored — must be 32 hex digits.` | Klíč není 16 bajtů hexu. Zařízení se naimportuje, jen bez klíče. | Zkontrolujte, jestli klíč není zkrácený nebo vložený jen částečně. |
 | `Serial S: secret key ignored — an all-zero key …` | Klíč je celý z nul, což je nenastavená hodnota firmwaru. Zařízení se naimportuje, jen bez klíče. | Nechte buňku prázdnou, nebo si sežeňte skutečný klíč. |
 | `Serial S: vendor key ignored — must be 32 hex digits.` | Totéž pro vendor token. | Nechte ho prázdný, pokud vám ho dodavatel nedal. |
-| `Not valid JSON.` | Soubor `.json` se nedá naparsovat — obvykle koncová čárka nebo chybějící hranatá závorka. | Vložte ho do jakéhokoli validátoru JSON. |
+| `Not valid JSON.` | Soubor `.json` se nedá naparsovat, obvykle koncová čárka nebo chybějící hranatá závorka. | Vložte ho do jakéhokoli validátoru JSON. |
 | `JSON is not a list of STICKERs.` | JSON je jediný objekt, ne pole. | Zabalte ho do `[ … ]`, nebo použijte `{"stickers": [ … ]}`. |
 | `Skipped an entry with no serial.` | Objekt JSON bez pole `serial`. | Doplňte sériové číslo. |
 | `That file is too large to import …` | Nad limitem 2 MB. | Soubor rozdělte. |
@@ -247,12 +247,12 @@ soubor k vyplnění: **menu ⋮ → Export**, vyberte zařízení, případně z
 **Share as JSON**. Možnosti exportu popisují [**Uložené STICKERy**](./saved-stickers.md).
 
 Co z toho vypadne, je přesně to, co importér čte zpět, takže je to nejbezpečnější
-výchozí bod — a přesun seznamu mezi dvěma telefony je tím na dva kroky.
+výchozí bod, a přesun seznamu mezi dvěma telefony je tím na dva kroky.
 
 :::caution Soubor držte v bezpečí
 Soubor obsahující hodnoty `secret_key` je stejně citlivý jako samotná zařízení:
 kdokoli, kdo ho drží, může tato zařízení STICKER překonfigurovat. Posílejte ho
 tak, jak byste posílali heslo, a po dokončení importu ho smažte z Downloads i
 z pošty. Pokud chcete nasdílet jen to, *která* zařízení existují, exportujte bez
-klíčů — sloupec `secret_key` nechte prázdný.
+klíčů. Sloupec `secret_key` nechte prázdný.
 :::

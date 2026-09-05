@@ -49,7 +49,7 @@ Prahy pro jednotlivé senzory jsou drženy v 16 fixních slotech (`0`-`15`). Ind
 | Zdroj | Cílový senzor |
 |---|---|
 | `onboard` | Senzory na desce (teplota, vlhkost, atmosférický tlak) |
-| `s1` - `s4` | Kanály senzorů 1-Wire 1 až 4 |
+| `s1`–`s4` | Kanály senzorů 1-Wire 1 až 4 |
 | `hall-left`, `hall-right` | Integrované magnetické dveřní kontakty |
 | `input-a`, `input-b` | Externí průmyslové vstupy |
 | `pir` | Detektor pohybu PIR |

@@ -42,7 +42,7 @@ Tabulka níže uvádí každý GPIO využívaný zařízením GLIDER, převzatý
 | P0.04 / P0.05 / P0.06 | `RS_DE / RS_RE / RS_ON` | Povolení vysílače RS-485, povolení příjmu, napájení izolátoru | `RS_ON` aktivní v log. 1; výchozí stav vypnuto. |
 | P0.07 | `SLPZ` | Spánek / probuzení DS2484 | Aktivní v log. 0. |
 | P0.08 / P0.09 / P0.10 | `LED_Y / LED_R / LED_G` | Žlutá / červená / zelená stavová LED | Aktivní v log. 1. |
-| P0.13 - P0.20 | `GP0` - `GP7` | Univerzální analogové headery | Lze směrovat na `AIN7` - `AIN0`. |
+| P0.13–P0.20 | `GP0`–`GP7` | Univerzální analogové headery | Lze směrovat na `AIN7`–`AIN0`. |
 | P0.21 | `DI_EN` | Povolení napájení digitálních vstupů | Aktivní v log. 1; výchozí stav vypnuto. |
 | P0.22 / P0.23 | `DI_CH0 / DI_CH1` | Izolované digitální vstupy (CH1 / CH2) | Aktivní v log. 1. |
 | P0.24 / P0.25 | `UART0 RX / TX` | Konzole USB-C (přes FT234XD) | 1 000 000 baud. |
@@ -91,7 +91,7 @@ Dva elektricky rovnocenné porty na šroubovací svorkovnici, oba řízené stej
 
 - Izolovaný transceiver RS-485 (**ISO1212DBQ**) na `UART2`.
 - 19 200 baud, 8E1, rámcování RTU, timeout odpovědi 500 ms.
-- Napájen pouze při explicitním zapnutí (`modbus enable`) - v nečinnosti šetří proud.
+- Napájen pouze při explicitním zapnutí (`modbus enable`), v nečinnosti tak šetří proud.
 - Viz [**Příkazy shellu → `modbus`**](commands/shell-commands.md).
 
 ## Napájení a časování {#power-and-timing}
@@ -103,16 +103,16 @@ Dva elektricky rovnocenné porty na šroubovací svorkovnici, oba řízené stej
 | Výchozí perioda vzorkování | 60 s (`app config interval-sample`) |
 | Výchozí perioda uplinku | 300 s (`app config interval-send`) |
 | Výchozí downlink watchdog | 36 h (`app config downlink-wdg-interval`; `0` vypíná) |
-| Hradlování napájení periferií | USB převodník, digitální vstupy a izolátor RS-485 jsou výchozí vypnuté - napájejí se jen když je potřeba |
+| Hradlování napájení periferií | USB převodník, digitální vstupy a izolátor RS-485 jsou výchozí vypnuté a napájejí se, jen když je potřeba |
 
 ## Indikace a ovládání {#indicators-and-controls}
 
 - **LED (3):** červená, zelená, žlutá. Řízené přes GPIO; ovladatelné příkazem shellu `led`.
 - **Tlačítko (1):** spouští akce `app sample` / `app send` podle vzoru stisků:
- - 1 stisk - vynutit `send`
- - 2 stisky - vynutit `sample`
- - 3 stisky - `sample` a poté `send`
- - 4 stisky - restart zařízení
+ - 1 stisk: vynutit `send`
+ - 2 stisky: vynutit `sample`
+ - 3 stisky: `sample` a poté `send`
+ - 4 stisky: restart zařízení
 
 ## Firmware {#firmware}
 
@@ -124,4 +124,4 @@ Příkaz pro build:
 west build -b gauger_lte/nrf9151/ns application
 ```
 
-Interní název desky je `gauger_lte` - GLIDER je komerční název produktu; oba označují tentýž hardware.
+Interní název desky je `gauger_lte`, GLIDER je komerční název produktu; oba označují tentýž hardware.

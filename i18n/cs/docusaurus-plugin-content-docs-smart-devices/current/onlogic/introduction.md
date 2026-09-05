@@ -1,16 +1,16 @@
 ---
 slug: /onlogic
 title: "OnLogic"
-description: "OnLogic navrhuje a vyrábí průmyslové počítače konstruované pro spolehlivý provoz v náročných prostředích — od výrobních hal až po venkovní edge nasazení."
+description: "OnLogic navrhuje a vyrábí průmyslové počítače konstruované pro spolehlivý provoz v náročných prostředích, od výrobních hal až po venkovní edge nasazení."
 ---
 
 # OnLogic {#onlogic}
 
-[OnLogic](https://www.onlogic.com/) navrhuje a vyrábí průmyslové počítače konstruované pro spolehlivý provoz v náročných prostředích — od výrobních hal až po venkovní edge nasazení.
+[OnLogic](https://www.onlogic.com/) navrhuje a vyrábí průmyslové počítače konstruované pro spolehlivý provoz v náročných prostředích, od výrobních hal až po venkovní edge nasazení.
 
 ---
 
-Hardware OnLogic se v projektech HARDWARIO používá jako **edge výpočetní uzel** — kombinuje lokální zpracování dat, překlad protokolů a připojení do cloudu v náročných průmyslových podmínkách.
+Hardware OnLogic se v projektech HARDWARIO používá jako **edge výpočetní uzel**, který kombinuje lokální zpracování dat, překlad protokolů a připojení do cloudu v náročných průmyslových podmínkách.
 
 ## Klíčové produkty {#key-products}
 

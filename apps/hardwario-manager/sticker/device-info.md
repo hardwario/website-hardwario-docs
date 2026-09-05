@@ -6,7 +6,7 @@ title: Device info and LoRaWAN keys
 # Read device info and LoRaWAN keys
 
 Read a STICKER's identity and the LoRaWAN keys you need to register it on a
-network — over NFC, in a few seconds.
+network, over NFC, in a few seconds.
 
 :::info Save the device first
 Both screens use the encrypted channel, so the device must be saved with its
@@ -32,11 +32,11 @@ Both screens use the encrypted channel, so the device must be saved with its
 | **LoRaWAN** | The state of the LoRaWAN connection |
 | **DevEUI** | The device's LoRaWAN identifier |
 | **Health** | A summary of the device's status flags |
-| **Active alarms** | Which alarm rules are currently tripped — see [**Alarm rules**](./alarms.md) |
+| **Active alarms** | Which alarm rules are currently tripped, see [**Alarm rules**](./alarms.md) |
 
 **Advanced** expands further diagnostic detail, such as the firmware build and
 the cause of the last reset. **Read again** repeats the read without leaving the
-screen — hold the phone against the device again.
+screen. Hold the phone against the device again.
 
 ---
 
@@ -78,7 +78,7 @@ Use them to register the device in
 [**The Things Stack**](/sticker/connectivity/lorawan-tts).
 
 :::caution A key export is complete
-Unlike a configuration export, a LoRaWAN-key export strips nothing — the AppKey
+Unlike a configuration export, a LoRaWAN-key export strips nothing. The AppKey
 and session keys are included in full so the file can be used to register the
 device. Treat it accordingly, and be careful where you display the QR code.
 :::

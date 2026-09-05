@@ -15,7 +15,7 @@ import Image from '@theme/IdealImage';
         Modul Sensor Module nabízí až čtyři univerzální vstupy nebo výstupy na odnímatelné svorkovnici s podporou režimu master na sběrnici 1-Wire. Svorky lze použít jako analogový i digitální vstup/výstup. Můžete tak například připojit různé externí digitální, analogové nebo rezistivní senzory. Rovněž můžete komunikovat s dalšími zařízeními na sběrnici 1-Wire.
       </p>
       <p>
-        Svorky jsou připojeny na signály headeru HARDWARIO TOWER. A - P4/A4/DAC0, B - P5/A5/DAC1 a C - P7/A6.
+        Svorky jsou připojeny na signály headeru HARDWARIO TOWER. A je P4/A4/DAC0, B je P5/A5/DAC1 a C je P7/A6.
       </p>
     </div>
   </div>

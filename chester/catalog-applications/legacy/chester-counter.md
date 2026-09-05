@@ -36,9 +36,9 @@ The application **CHESTER Counter** is used to count pulses on eight digital inp
 
 The catalog **CHESTER Counter** hardware consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
+* `CHESTER-M-BCGLS`: Standard mainboard
 
-* `CHESTER-X0B:A` - Input module (4 channels)
+* `CHESTER-X0B:A`: Input module (4 channels)
 
 See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
 
@@ -48,11 +48,11 @@ Firmware build shield options: `ctr_lte ctr_x0_a`
 
 The catalog **CHESTER Counter Z** hardware consists of the following ordering codes:
 
-* `CHESTER-M-CGLS` - Standard mainboard
+* `CHESTER-M-CGLS`: Standard mainboard
 
-* `CHESTER-X0B:A` - Input module (4 channels)
+* `CHESTER-X0B:A`: Input module (4 channels)
 
-* `CHESTER-Z1` - Backup module
+* `CHESTER-Z1`: Backup module
 
 See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
 

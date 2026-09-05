@@ -338,9 +338,9 @@ const config = {
           {
             title: 'Branches',
             items: [
-              { label: 'HARDWARIO a.s. — Czech Republic', href: 'https://maps.app.goo.gl/uwNsT2fuUmTaoXc48' },
-              { label: 'HARDWARIO LLC — United States', href: 'https://maps.app.goo.gl/YyUsBivFKc6yYVTr8' },
-              { label: 'HARDWARIO LTD — United Kingdom', href: 'https://maps.app.goo.gl/BPVS4T61Ao1h5HVJ9' },
+              { label: 'HARDWARIO a.s. – Czech Republic', href: 'https://maps.app.goo.gl/uwNsT2fuUmTaoXc48' },
+              { label: 'HARDWARIO LLC – United States', href: 'https://maps.app.goo.gl/YyUsBivFKc6yYVTr8' },
+              { label: 'HARDWARIO LTD – United Kingdom', href: 'https://maps.app.goo.gl/BPVS4T61Ao1h5HVJ9' },
             ],
           },
           {

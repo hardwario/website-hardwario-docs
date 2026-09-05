@@ -7,10 +7,10 @@ import Image from '@theme/IdealImage';
 # RTT Console over J-Link
 
 :::tip
-The RTT console gives you the **Zephyr shell** plus a live firmware log stream - it is the recommended console for **development and debugging**. For day-to-day configuration, use the [**AT Console over USB-C**](usb-at.md) instead - no special hardware required.
+The RTT console gives you the **Zephyr shell** plus a live firmware log stream, so it is the recommended console for **development and debugging**. For day-to-day configuration, use the [**AT Console over USB-C**](usb-at.md) instead. It requires no special hardware.
 :::
 
-This page shows you how to attach to GLIDER through a **Segger J-Link** debug probe using the **RTT (Real-Time Transfer)** protocol. RTT gives you the full **Zephyr shell** plus live firmware logs - it is the recommended console for development and debugging.
+This page shows you how to attach to GLIDER through a **Segger J-Link** debug probe using the **RTT (Real-Time Transfer)** protocol. RTT gives you the full **Zephyr shell** plus live firmware logs, so it is the recommended console for development and debugging.
 
 ## When to use this console
 
@@ -22,7 +22,7 @@ This page shows you how to attach to GLIDER through a **Segger J-Link** debug pr
 | Best for | Development, debugging, flashing, reset | Day-to-day provisioning |
 
 :::info
-If you do not need full developer access, use the [**AT console over USB-C**](usb-at.md) instead - it requires no special hardware.
+If you do not need full developer access, use the [**AT console over USB-C**](usb-at.md) instead. It requires no special hardware.
 :::
 
 ## Prerequisites
@@ -75,7 +75,7 @@ rttt --device nRF9151_xxCA
 ```
 
 :::caution
-The device identifier must be **`nRF9151_xxCA`** - lowercase `xx`, uppercase `CA`. The default identifier `xxAA` collides with J-Link DLL versions ≥ V9.42 and the connection will silently fail.
+The device identifier must be **`nRF9151_xxCA`**, with lowercase `xx` and uppercase `CA`. The default identifier `xxAA` collides with J-Link DLL versions ≥ V9.42 and the connection will silently fail.
 :::
 
 If you have more than one J-Link plugged in, select one by its serial number:
@@ -109,7 +109,7 @@ log enable wrn # show only warnings and above
 info show # device info: serial number, claim token, version
 ```
 
-GLIDER-specific commands include `app`, `inputs`, `therm`, `alarm`, `modbus`, and `led` - see the [**Shell Commands**](../commands/shell-commands.md) reference for the full list.
+GLIDER-specific commands include `app`, `inputs`, `therm`, `alarm`, `modbus`, and `led`. See the [**Shell Commands**](../commands/shell-commands.md) reference for the full list.
 
 ## Exiting
 
@@ -127,7 +127,7 @@ ps aux | grep -i jlink
 
 #### `Could not find requested device`
 
-- Check the device identifier - it must be `nRF9151_xxCA` (lowercase `xx`, uppercase `CA`).
+- Check the device identifier: it must be `nRF9151_xxCA` (lowercase `xx`, uppercase `CA`).
 - Confirm the GLIDER is powered.
 - Verify SWD wires (`SWDIO`, `SWCLK`, `GND`, `VTref`) are connected correctly.
 - Run `JLinkExe` interactively and `connect` to confirm the probe can see the target.

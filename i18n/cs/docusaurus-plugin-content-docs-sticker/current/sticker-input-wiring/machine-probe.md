@@ -1,7 +1,7 @@
 ---
 slug: machine-probe
 title: MACHINE PROBE
-description: "Sonda MACHINE PROBE není omezená jen na STICKER Input — je plně kompatibilní i se zařízením HARDWARIO CHESTER, které nabízí stejné rozhraní 1-Wire. Tutéž sondu tak lze použít na obou platformách bez jakékoli hardwarové úpravy."
+description: "Sonda MACHINE PROBE není omezená jen na STICKER Input, je plně kompatibilní i se zařízením HARDWARIO CHESTER, které nabízí stejné rozhraní 1-Wire. Tutéž sondu tak lze použít na obou platformách bez jakékoli hardwarové úpravy."
 ---
 
 # MACHINE PROBE (v1.3) {#machine-probe-v13}
@@ -10,26 +10,26 @@ description: "Sonda MACHINE PROBE není omezená jen na STICKER Input — je pln
 
 :::tip
 
-Sonda MACHINE PROBE není omezená jen na STICKER Input — je plně kompatibilní i se zařízením **HARDWARIO CHESTER**, které nabízí stejné rozhraní 1-Wire. Tutéž sondu tak lze použít na obou platformách bez jakékoli hardwarové úpravy.
+Sonda MACHINE PROBE není omezená jen na STICKER Input, je plně kompatibilní i se zařízením **HARDWARIO CHESTER**, které nabízí stejné rozhraní 1-Wire. Tutéž sondu tak lze použít na obou platformách bez jakékoli hardwarové úpravy.
 
 :::
 
 ## Popis a využití v praxi {#description-and-real-world-use}
 
-Sonda se už osvědčila v provozu — například při monitorování **vibračních dopravníků** v projektu ProXimos, kde spolehlivě:
+Sonda se už osvědčila v provozu, například při monitorování **vibračních dopravníků** v projektu ProXimos, kde spolehlivě:
 
 - měří **teplotu** sledovaného zařízení,
 - měří **relativní vlhkost** okolí,
 - detekuje **pohyb, rázy a vibrace** pomocí akcelerometru.
 
-Kombinací těchto veličin lze sledovat nejen provozní podmínky, ale i skutečný chod stroje — třeba rozpoznat, jestli zařízení opravdu běží, stojí, nebo nadměrně vibruje.
+Kombinací těchto veličin lze sledovat nejen provozní podmínky, ale i skutečný chod stroje, třeba rozpoznat, jestli zařízení opravdu běží, stojí, nebo nadměrně vibruje.
 
 ### Příklad: monitorování vibrací motoru {#example-monitoring-motor-vibration}
 
 Typickým použitím je **monitorování vibrací elektromotorů, pump a ventilátorů**. Sonda MACHINE PROBE se montuje přímo na kostru motoru a její vestavěný akcelerometr průběžně snímá mechanické vibrace. Z měřených dat lze:
 
 - potvrdit, jestli motor **běží, nebo stojí** (přítomnost a úroveň vibrací),
-- odhalit **postupný růst vibrací**, který často předchází mechanické závadě — opotřebeným ložiskům, nesouososti hřídele nebo nevyváženému zatížení,
+- odhalit **postupný růst vibrací**, který často předchází mechanické závadě: opotřebeným ložiskům, nesouososti hřídele nebo nevyváženému zatížení,
 - zkombinovat údaj o vibracích s **teplotou** měřenou sondou a zachytit tak přehřívání, které se rozvíjí spolu s nadměrnými vibracemi.
 
 Sonda se tím stává jednoduchým stavebním prvkem **prediktivní údržby**: místo čekání na poruchu motoru se trend vibrací a teploty odesílá přes LoRaWAN a výstrahu lze vyvolat ještě před havárií.
@@ -38,7 +38,7 @@ Sonda se tím stává jednoduchým stavebním prvkem **prediktivní údržby**: 
 
 | Parametr | Hodnota |
 | --- | --- |
-| Rozsah napájecího napětí | **3.0 – 5.5 V** |
+| Rozsah napájecího napětí | **3.0–5.5 V** |
 | Ochrana proti obrácení polarity | **Ano** (integrovaná) |
 | Sběrnice senzorů | I²C (vnitřní), zpřístupněná přes převodník 1-Wire |
 | Připojení | Třívodičový propojovací kabel |
@@ -57,7 +57,7 @@ Sonda se připojuje **třívodičovým kabelem** s tímto zapojením:
 | --- | --- | --- |
 | Minus | **GND** | Zem / společný vodič |
 | Data | **DATA** | Datová sběrnice 1-Wire |
-| Plus | **VDD** | Napájení 3.0 – 5.5 V |
+| Plus | **VDD** | Napájení 3.0–5.5 V |
 
 ## Senzory a čipy na desce {#onboard-sensors-and-chips}
 
@@ -84,17 +84,17 @@ Následující tabulka shrnuje aktivní součástky osazené na desce **MACHINE 
 
 Označení součástek (horní strana):
 
-![MACHINE PROBE R1.3 — osazení, označení součástek](../../../../../sticker/sticker-input-wiring/images/machine-probe-asm-names.png)
+![MACHINE PROBE R1.3: osazení, označení součástek](../../../../../sticker/sticker-input-wiring/images/machine-probe-asm-names.png)
 
 Hodnoty součástek (horní strana):
 
-![MACHINE PROBE R1.3 — osazení, hodnoty součástek](../../../../../sticker/sticker-input-wiring/images/machine-probe-asm-values.png)
+![MACHINE PROBE R1.3: osazení, hodnoty součástek](../../../../../sticker/sticker-input-wiring/images/machine-probe-asm-values.png)
 
 <details>
 <summary><b>Zobrazit schéma (MACHINE PROBE R1.3)</b></summary>
 <p>
 
-![MACHINE PROBE R1.3 — schéma](../../../../../sticker/sticker-input-wiring/images/machine-probe-schematic.png)
+![MACHINE PROBE R1.3: schéma](../../../../../sticker/sticker-input-wiring/images/machine-probe-schematic.png)
 
 </p>
 </details>

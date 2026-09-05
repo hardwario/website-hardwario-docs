@@ -34,9 +34,9 @@ Typical use cases:
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - CHESTER mainboard with C battery holder
-* `CHESTER-E23-LP` - Enclosure with two PIR sensor holes, SMA antenna pigtail and light pipe
-* `CHESTER-S3` - Extension board with two PIR sensors
+* `CHESTER-M-BCGLS`: CHESTER mainboard with C battery holder
+* `CHESTER-E23-LP`: Enclosure with two PIR sensor holes, SMA antenna pigtail and light pipe
+* `CHESTER-S3`: Extension board with two PIR sensors
 * `Battery SAFT LS26500`
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
@@ -99,16 +99,16 @@ A random jitter of 0-20% is added to the report interval to prevent multiple dev
 
 The application offers three preset sensitivity modes and one custom mode:
 
-**Low** — Provides highest false alarm resistance with slower detection:
+**Low**: Provides highest false alarm resistance with slower detection:
 - `motion-sens`: 32, `motion-blind`: 3 s, `motion-pulse`: 3, `motion-window`: 4 s
 
-**Medium** (default) — Balanced ratio between detection speed and false alarm resistance:
+**Medium** (default): Balanced ratio between detection speed and false alarm resistance:
 - `motion-sens`: 64, `motion-blind`: 2 s, `motion-pulse`: 2, `motion-window`: 2 s
 
-**High** — Fastest detection with highest sensitivity. Single pulse triggers detection immediately. Best for security systems or door sensors where immediate response is required:
+**High**: Fastest detection with highest sensitivity. Single pulse triggers detection immediately. Best for security systems or door sensors where immediate response is required:
 - `motion-sens`: 128, `motion-blind`: 1 s, `motion-pulse`: 1, `motion-window`: 0 s
 
-**Individual** — Allows manual adjustment of all four parameters for advanced control.
+**Individual**: Allows manual adjustment of all four parameters for advanced control.
 
 :::tip
 
@@ -169,7 +169,7 @@ app config mode lte
 
 :::info
 
-You can easily explore the whole command tree structure - start with the `help` command.
+You can easily explore the whole command tree structure. Start with the `help` command.
 
 :::
 
@@ -352,10 +352,10 @@ Any value may be `null` if the corresponding sensor read failed.
 
 ## Changelog
 
-### v1.0.0 — 2026-02-11
+### v1.0.0 – 2026-02-11
 
-- **Added**: Initial application release — dual PIR motion detection via CHESTER-S3 module
-- **Added**: Directional movement tracking — distinguishes left-to-right (`motion_right`) and right-to-left (`motion_left`) passage
+- **Added**: Initial application release: dual PIR motion detection via CHESTER-S3 module
+- **Added**: Directional movement tracking: distinguishes left-to-right (`motion_right`) and right-to-left (`motion_left`) passage
 - **Added**: Configurable PIR sensitivity presets: `low`, `medium` (default), `high`, and `individual` for manual parameter tuning
 - **Added**: Lifetime motion totalizers that persist across reports and device reboots
 - **Added**: Service mode (`service-mode-enabled`) with real-time LED feedback for sensor testing and installation

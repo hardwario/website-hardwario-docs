@@ -12,7 +12,7 @@ ThingsBoard offers advanced tools for organizing your IoT infrastructure, automa
 
 ## [Assets](assets)
 
-Assets are logical containers that represent real-world objects — buildings, floors, zones, or equipment — in your ThingsBoard environment. Unlike devices (which represent physical hardware), assets let you build a structured hierarchy that makes access control, dashboard abstraction, and scaling significantly easier.
+Assets are logical containers that represent real-world objects (buildings, floors, zones, or equipment) in your ThingsBoard environment. Unlike devices (which represent physical hardware), assets let you build a structured hierarchy that makes access control, dashboard abstraction, and scaling significantly easier.
 
 **Use assets when you need to:**
 - Create multi-level hierarchies (e.g. Region → City → Building → Floor)
@@ -23,7 +23,7 @@ Assets are logical containers that represent real-world objects — buildings, f
 
 ## [Notification Rules](notifications-manager)
 
-The Notification Rules Manager is a no-code dashboard for setting up threshold-based alerts. Define conditions for your telemetry data and get notified by email or SMS whenever those thresholds are crossed — no programming required.
+The Notification Rules Manager is a no-code dashboard for setting up threshold-based alerts. Define conditions for your telemetry data and get notified by email or SMS whenever those thresholds are crossed, with no programming required.
 
 **Use notification rules when you need to:**
 - Get alerted when a sensor value exceeds a defined limit
@@ -45,7 +45,7 @@ For more advanced notification scenarios, ThingsBoard's Rule Engine lets you bui
 
 ## [Scheduled Reports](email-reports)
 
-Automatically generate and send periodic PDF reports to your customers on a defined schedule. Reports are built in a visual layout designer and delivered via a configurable email template — completely hands-free once set up.
+Automatically generate and send periodic PDF reports to your customers on a defined schedule. Reports are built in a visual layout designer and delivered via a configurable email template, completely hands-free once set up.
 
 **Use scheduled reports when you need to:**
 - Send monthly or weekly data summaries to clients

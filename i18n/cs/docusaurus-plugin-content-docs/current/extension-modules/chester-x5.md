@@ -1,7 +1,7 @@
 ---
 slug: chester-x5
 title: CHESTER-X5 (2kanálový izolovaný vstup 50 V)
-description: Dvoukanálový rozšiřující modul s izolovaným napěťovým vstupem pro platformu CHESTER — každý kanál měří ±50 V přes zesilovač se zesílenou izolací (AMC3330) a 24bitový I²C ADC ADS122C04.
+description: Dvoukanálový rozšiřující modul s izolovaným napěťovým vstupem pro platformu CHESTER. Každý kanál měří ±50 V přes zesilovač se zesílenou izolací (AMC3330) a 24bitový I²C ADC ADS122C04.
 keywords: [CHESTER-X5, izolovaný vstup, izolované měření napětí, 50V, AMC3330, ADS122C04, 24bitový ADC, zesílená izolace, I2C, galvanické oddělení, CHESTER]
 ---
 import Image from '@theme/IdealImage';
@@ -22,7 +22,7 @@ import Image from '@theme/IdealImage';
 
 ## Přehled modulu {#module-overview}
 
-CHESTER-X5 poskytuje **dva izolované napěťové vstupy**, každý s rozsahem **−50 V až +50 V**. Každý kanál používá zesilovač se zesílenou izolací (**AMC3330**) s integrovaným izolovaným DC-DC převodníkem, takže je vstup **galvanicky oddělený** od elektroniky zařízení CHESTER i od druhého kanálu. Přesný dělič s tolerancí 0,1 % převádí vstupních ±50 V na úroveň zesilovače a jeho diferenciální výstup digitalizuje společný 24bitový I²C ADC **ADS122C04** — kanál 1 na AIN0/AIN1, kanál 2 na AIN2/AIN3.
+CHESTER-X5 poskytuje **dva izolované napěťové vstupy**, každý s rozsahem **−50 V až +50 V**. Každý kanál používá zesilovač se zesílenou izolací (**AMC3330**) s integrovaným izolovaným DC-DC převodníkem, takže je vstup **galvanicky oddělený** od elektroniky zařízení CHESTER i od druhého kanálu. Přesný dělič s tolerancí 0,1 % převádí vstupních ±50 V na úroveň zesilovače a jeho diferenciální výstup digitalizuje společný 24bitový I²C ADC **ADS122C04**, kanál 1 na AIN0/AIN1 a kanál 2 na AIN2/AIN3.
 
 Izolovaný zesilovač každého kanálu je napájený vlastním load switchem (**TPS22917**), takže firmware může kanály zapínat nezávisle a v nečinnosti je nechat vypnuté a šetřit energii. Nové vzorky ADC signalizuje na lince data-ready, která je vyvedená na pin GP0 slotu.
 
@@ -91,7 +91,7 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | 8 | DNC | — | Nezapojovat (izolační odstup) |
 
 :::info
-Každý kanál měří **−50 V až +50 V** a je **galvanicky oddělený** od elektroniky zařízení CHESTER i od druhého kanálu. Piny **DNC** (1, 4, 5, 8) nemají nic připojené — nechte je nezapojené; vytvářejí odstup, který zachovává izolaci mezi kanály a logickou stranou.
+Každý kanál měří **−50 V až +50 V** a je **galvanicky oddělený** od elektroniky zařízení CHESTER i od druhého kanálu. Piny **DNC** (1, 4, 5, 8) nemají nic připojené. Nechte je nezapojené; vytvářejí odstup, který zachovává izolaci mezi kanály a logickou stranou.
 :::
 
 ### Rozhraní k hostu (I²C) {#host-interface-ic}
@@ -147,7 +147,7 @@ Modul CHESTER-X5 lze použít s různými konfiguracemi základních desek CHEST
 
 ## Schémata {#schematic-diagrams}
 
-Kompletní schéma — dva izolované vstupní kanály AMC3330, jejich load switche TPS22917 a ADC ADS122C04 — je k dispozici jako PDF:
+Kompletní schéma (dva izolované vstupní kanály AMC3330, jejich load switche TPS22917 a ADC ADS122C04) je k dispozici jako PDF:
 
 - [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x5-r2.1.pdf)
 - [Interaktivní prohlížeč CHESTER-X5](pathname:///download/ibom/hio-chester-x5-r2.1.html)

@@ -13,7 +13,7 @@ ThingsBoard nabízí pokročilé nástroje pro organizaci vaší IoT infrastrukt
 
 ## [Assety](assets) {#assets}
 
-Assety jsou logické kontejnery, které ve vašem prostředí ThingsBoard reprezentují objekty z reálného světa — budovy, podlaží, zóny nebo zařízení. Na rozdíl od zařízení (která reprezentují fyzický hardware) vám assety umožňují postavit strukturovanou hierarchii, která výrazně zjednodušuje řízení přístupu, abstrakci dashboardů a škálování.
+Assety jsou logické kontejnery, které ve vašem prostředí ThingsBoard reprezentují objekty z reálného světa (budovy, podlaží, zóny nebo zařízení). Na rozdíl od zařízení (která reprezentují fyzický hardware) vám assety umožňují postavit strukturovanou hierarchii, která výrazně zjednodušuje řízení přístupu, abstrakci dashboardů a škálování.
 
 **Assety použijte, když potřebujete:**
 - Vytvořit víceúrovňové hierarchie (například region → město → budova → podlaží)
@@ -24,7 +24,7 @@ Assety jsou logické kontejnery, které ve vašem prostředí ThingsBoard reprez
 
 ## [Pravidla notifikací](notifications-manager) {#notification-rules}
 
-Správce pravidel notifikací je no-code dashboard pro nastavení prahových výstrah. Nadefinujete podmínky pro svá telemetrická data a při každém překročení prahu dostanete upozornění e-mailem nebo SMS — bez programování.
+Správce pravidel notifikací je no-code dashboard pro nastavení prahových výstrah. Nadefinujete podmínky pro svá telemetrická data a při každém překročení prahu dostanete upozornění e-mailem nebo SMS, bez programování.
 
 **Pravidla notifikací použijte, když potřebujete:**
 - Dostat výstrahu, když hodnota senzoru překročí nastavený limit
@@ -46,7 +46,7 @@ Pro pokročilejší scénáře notifikací umožňuje Rule Engine v ThingsBoardu
 
 ## [Plánované reporty](email-reports) {#scheduled-reports}
 
-Automaticky generujte a posílejte zákazníkům periodické PDF reporty podle nastaveného rozvrhu. Reporty se skládají ve vizuálním návrháři rozvržení a doručují se konfigurovatelnou e-mailovou šablonou — po nastavení už bez jakéhokoli zásahu.
+Automaticky generujte a posílejte zákazníkům periodické PDF reporty podle nastaveného rozvrhu. Reporty se skládají ve vizuálním návrháři rozvržení a doručují se konfigurovatelnou e-mailovou šablonou, po nastavení už bez jakéhokoli zásahu.
 
 **Plánované reporty použijte, když potřebujete:**
 - Posílat klientům měsíční nebo týdenní souhrny dat

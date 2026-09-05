@@ -22,11 +22,11 @@ zprovozněné se secret key a uložené v telefonu. Viz
 ## Sestavení konfigurace a její zápis {#build-a-configuration-and-write-it}
 
 1. Přejděte na **STICKER → Configuration → Configure without reading**.
-2. Sestavte konfiguraci — buď volbou **Apply template** z uloženého presetu, nebo
+2. Sestavte konfiguraci: buď volbou **Apply template** z uloženého presetu, nebo
    otevřete jednotlivé sekce a hodnoty nastavte ručně.
 3. Klepněte na **Save to device** a přiložte telefon k zařízení STICKER.
 
-<img src="/img/hw-manager/hw-manager-configuration-without-reading.png" alt="Configure without reading — sestavení konfigurace offline s počítadlem velikosti, připravené k zápisu do tagu" width="320" />
+<img src="/img/hw-manager/hw-manager-configuration-without-reading.png" alt="Configure without reading: sestavení konfigurace offline s počítadlem velikosti, připravené k zápisu do tagu" width="320" />
 
 Protože se ze zařízení nic nečetlo, zapíše se každá hodnota, kterou nastavíte,
 tak jak je. Není s čím porovnávat a není tu ani **Revert to read values**.
@@ -37,7 +37,7 @@ tak jak je. Není s čím porovnávat a není tu ani **Revert to read values**.
 
 Offline zápis se musí vejít do tagové paměti zařízení, takže obrazovka průběžně
 zobrazuje **počítadlo velikosti** proti limitu. Pokud ho překročíte, ubírejte
-nastavení, dokud se počítadlo nevejde — nejjednodušší cesta, jak zůstat v limitu,
+nastavení, dokud se počítadlo nevejde. Nejjednodušší cesta, jak zůstat v limitu,
 je šablona, která nese jen to, co skutečně potřebujete.
 
 ---
@@ -48,7 +48,7 @@ Pokud chcete mnoha vypnutým zařízením nastavit totéž, sestavte konfiguraci
 jako šablonu a aplikujte ji z **STICKER → Templates**:
 
 1. Otevřete šablonu a zvolte **Apply offline**.
-2. Konfigurace se ze šablony předvyplní — zkontrolujte ji.
+2. Konfigurace se ze šablony předvyplní: zkontrolujte ji.
 3. Klepněte na **Write to tag** a postupně přikládejte telefon ke každému zařízení.
 4. Pomocí **Verify (read tag)** zařízení přečtěte zpět a ověřte, co se uložilo.
 

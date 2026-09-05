@@ -71,12 +71,12 @@ At the bottom of the page. This is where you can find some additional controls f
 
 Buttons at the bottom panel:
 
-- **Compile And Flash** - This will [**run the compilation and then switch to the firmware tab**](#compiling-and-flashing) to allow you to flash the created firmware to your device.
-- **Save Workspace** - This will save the current workspace. Autosave is enabled by default.
-- **Export Workspace** - You can export the workspace in **.xml** format so you can distribute it or **import** it later.
-- **Import Workspace** - Here you can import the workspace in **.xml** format.
-- **Show/Hide Code** - This will **show/hide code** so you can see the **generated code in C language**.
-- **Return Home** - This will return you to the homepage.
+- **Compile And Flash**: This will [**run the compilation and then switch to the firmware tab**](#compiling-and-flashing) to allow you to flash the created firmware to your device.
+- **Save Workspace**: This will save the current workspace. Autosave is enabled by default.
+- **Export Workspace**: You can export the workspace in **.xml** format so you can distribute it or **import** it later.
+- **Import Workspace**: Here you can import the workspace in **.xml** format.
+- **Show/Hide Code**: This will **show/hide code** so you can see the **generated code in C language**.
+- **Return Home**: This will return you to the homepage.
 
 :::note
 
@@ -173,22 +173,22 @@ You can add your custom blocks with the use of **Blocks Creator**.
 
 The first example is one of our pre-made modules for the [**Button Module**](https://www.hardwario.store/p/button-module) of TOWER. You can see the structure of the file here.
 
-- `category` - determines which category will be used for the blocks of this module (the category has to be included in the pre-made or your categories).
+- `category`: determines which category will be used for the blocks of this module (the category has to be included in the pre-made or your categories).
 
-- `global_variable` - here you can add line by line anything that you want to add at the top of the code.
+- `global_variable`: here you can add line by line anything that you want to add at the top of the code.
 
-- `application_init` - here you can define the block that will always go into the **Initialization category**-
+- `application_init`: here you can define the block that will always go into the **Initialization category**-
   - `block`
-    - `text` - here you should specify what text will be present on the block. You can use `%` to make some parts generated from the **arguments**.
-    - `arguments` - here you have to specify one by one the arguments that will replace the `%` in the text by `dropdown/number/variable/etc.`
-  - `code` - here, line by line you specify the code that will be added to `application_init`. You can use `{ARGUMENT_NAME}` to have some parts replaceable based on the `arguments`.
+    - `text`: here you should specify what text will be present on the block. You can use `%` to make some parts generated from the **arguments**.
+    - `arguments`: here you have to specify one by one the arguments that will replace the `%` in the text by `dropdown/number/variable/etc.`
+  - `code`: here, line by line you specify the code that will be added to `application_init`. You can use `{ARGUMENT_NAME}` to have some parts replaceable based on the `arguments`.
 
-- `handler` - this is the block that will represent the event handler of your module. It will be a block that will allow you to put more blocks in it (parent block)
+- `handler`: this is the block that will represent the event handler of your module. It will be a block that will allow you to put more blocks in it (parent block)
 
-- `action` - this is the place to add every possible action that your module can do. Each of those elements will be a separate block added to your specified category.
-  - `NAME_OF_THE_ACTION` - you just specify the block name, it has to be module specific.
-    - `block` - this is the same as with the `application_init` part, the block will just be placed in the specified category.
-    - `code` - code is the same as well.
+- `action`: this is the place to add every possible action that your module can do. Each of those elements will be a separate block added to your specified category.
+  - `NAME_OF_THE_ACTION`: you just specify the block name, it has to be module specific.
+    - `block`: this is the same as with the `application_init` part, the block will just be placed in the specified category.
+    - `code`: code is the same as well.
 :::
 
 <details>

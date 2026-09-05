@@ -19,9 +19,9 @@ Tento článek popisuje základní funkcionalitu, popis hardwaru, výchozí konf
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps) – jak připojit zařízení do cloudu.
-- [**Společná funkcionalita**](https://docs.hardwario.com/chester/catalog-applications/common-functionality) – jak funguje LED, tlačítko a konfigurace sítě.
-- [**Platform Management**](https://docs.hardwario.com/chester/category/platform-connectivity) – jak pracovat s interaktivní konzolí.
+- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do cloudu.
+- [**Společná funkcionalita**](https://docs.hardwario.com/chester/catalog-applications/common-functionality): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Platform Management**](https://docs.hardwario.com/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -49,9 +49,9 @@ Všechny tyto vstupy a jejich možnosti jsou podrobněji vysvětleny v článku 
 
 Hardware katalogové aplikace **CHESTER Input** se skládá z těchto objednacích kódů:
 
-* `CHESTER-M-BCGLS` – Standardní základní deska
+* `CHESTER-M-BCGLS`: Standardní základní deska
 
-* `CHESTER-X0B:A` – Vstupní modul (4 kanály)
+* `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
 Více podrobností najdete v [**Objednacích kódech**](https://docs.hardwario.com/chester/ordering-codes).
 
@@ -61,11 +61,11 @@ Volby shieldů při sestavení firmwaru: `ctr_ds18b20 ctr_lte ctr_x0_a`
 
 Hardware katalogové aplikace **CHESTER Input Z** se skládá z těchto objednacích kódů:
 
-* `CHESTER-M-CGLS` – Standardní základní deska
+* `CHESTER-M-CGLS`: Standardní základní deska
 
-* `CHESTER-X0B:A` – Vstupní modul (4 kanály)
+* `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
-* `CHESTER-Z1` – Zálohovací modul
+* `CHESTER-Z1`: Zálohovací modul
 
 Více podrobností najdete v [**Objednacích kódech**](https://docs.hardwario.com/chester/ordering-codes).
 
@@ -75,13 +75,13 @@ Volby shieldů při sestavení firmwaru: `ctr_ds18b20 ctr_lte ctr_x0_a ctr_z`
 
 **CHESTER Input ZH** s externím teploměrem a vlhkoměrem.
 
-* `CHESTER-M-CGLS` – Standardní základní deska
+* `CHESTER-M-CGLS`: Standardní základní deska
 
-* `CHESTER-X0B:A` – Vstupní modul (4 kanály)
+* `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
-* `CHESTER-Z1` – Zálohovací modul
+* `CHESTER-Z1`: Zálohovací modul
 
-* `CHESTER-S2` – Externí vlhkoměr
+* `CHESTER-S2`: Externí vlhkoměr
 
 Více podrobností najdete v [**Objednacích kódech**](https://docs.hardwario.com/chester/ordering-codes).
 

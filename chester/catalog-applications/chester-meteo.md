@@ -39,11 +39,11 @@ The catalog application **CHESTER Meteo** measures:
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
-* `CHESTER-X0B:A` - Input module (4 channels)
-* `CHESTER-S2` - External hygrometer
+* `CHESTER-M-BCGLS`: Standard mainboard
+* `CHESTER-X0B:A`: Input module (4 channels)
+* `CHESTER-S2`: External hygrometer
 * External barometer
-* `CHESTER-E1-LP` - Enclosure with SMA pigtail
+* `CHESTER-E1-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -53,12 +53,12 @@ Firmware build variant: `west chester-update meteo --variant "CHESTER Meteo"`
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-BCGLS` - Standard mainboard
-* `CHESTER-X0B:A` - Input module (4 channels)
-* `CHESTER-Z1` - Backup module
-* `CHESTER-S2` - External hygrometer
+* `CHESTER-M-BCGLS`: Standard mainboard
+* `CHESTER-X0B:A`: Input module (4 channels)
+* `CHESTER-Z1`: Backup module
+* `CHESTER-S2`: External hygrometer
 * External barometer
-* `CHESTER-E1-LP` - Enclosure with SMA pigtail
+* `CHESTER-E1-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -90,7 +90,7 @@ app config interval-report 1800
 
 :::info
 
-You can easily explore the whole command tree structure - start with the `help` command.
+You can easily explore the whole command tree structure. Start with the `help` command.
 
 :::
 
@@ -594,17 +594,17 @@ Pressure is in **pascals**.
 
 ## Changelog
 
-### v3.5.1 — 2025-12-08
+### v3.5.1 – 2025-12-08
 
-- **Added**: New variant — **CHESTER Meteo M** (Modbus RTU — supports Lambrecht and Sensecap/OPM sensors; sensor type selectable via `meteo-type`)
-- **Added**: Soil sensor support — moisture and temperature via Modbus soil probes
-- **Added**: LoRaWAN support — single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
+- **Added**: New variant: **CHESTER Meteo M** (Modbus RTU, supports Lambrecht and Sensecap/OPM sensors; sensor type selectable via `meteo-type`)
+- **Added**: Soil sensor support: moisture and temperature via Modbus soil probes
+- **Added**: LoRaWAN support: single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
 - **Improved**: Pyranometer (solar irradiance) support
 
-### v3.5.0 — 2025-12-03
+### v3.5.0 – 2025-12-03
 
-- **Added**: Soil sensor support — moisture and temperature measurement via 1-Wire soil probes (`soil_sensors` in JSON output)
-- **Added**: New variant — **CHESTER Meteo P** with pyranometer input for solar irradiance measurement
+- **Added**: Soil sensor support: moisture and temperature measurement via 1-Wire soil probes (`soil_sensors` in JSON output)
+- **Added**: New variant: **CHESTER Meteo P** with pyranometer input for solar irradiance measurement
 - **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available
 
 :::info

@@ -93,7 +93,7 @@ Počínaje firmwarem **v3.5.4** některé aplikace podporují **detekci za běhu
 
 - Pokud je modul CHESTER-Z detekován při startu, automaticky se zapne zálohovací funkcionalita (monitorování DC vstupu, napětí záložní baterie, události připojení/odpojení).
 - Pokud modul CHESTER-Z není přítomen, zálohovací funkce se tiše přeskočí bez dopadu na ostatní funkcionalitu.
-- Odpadá tak potřeba samostatných „Z" variant firmwaru — například **CHESTER Clime** nyní pokrývá to, co dříve zajišťoval **CHESTER Clime Z**.
+- Odpadá tak potřeba samostatných „Z" variant firmwaru: například **CHESTER Clime** nyní pokrývá to, co dříve zajišťoval **CHESTER Clime Z**.
 
 Aplikace s detekcí CHESTER-Z za běhu:
 
@@ -171,18 +171,18 @@ Available commands:
 
 Počínaje firmwarem **v3.5.0** obsahují všechny aplikace následující diagnostické shellové příkazy:
 
-- **`i2c`** — operace na sběrnici I2C (scan, čtení, zápis) pro hardwarovou diagnostiku
-- **`mcuboot`** — příkazy bootloaderu MCUboot pro správu firmwaru
-- **`gpio`** — ovládání a kontrola pinů GPIO
-- **`w1`** — skenování sběrnice 1-Wire a výpis zařízení
-- **`backup`** — stav zálohovacího modulu CHESTER-Z (sériové číslo, HW revize, napětí, stav DC vstupu)
-- **`cloud`** — příkazy pro komunikaci s cloudem včetně `cloud metrics` pro diagnostiku připojení
+- **`i2c`**: operace na sběrnici I2C (scan, čtení, zápis) pro hardwarovou diagnostiku
+- **`mcuboot`**: příkazy bootloaderu MCUboot pro správu firmwaru
+- **`gpio`**: ovládání a kontrola pinů GPIO
+- **`w1`**: skenování sběrnice 1-Wire a výpis zařízení
+- **`backup`**: stav zálohovacího modulu CHESTER-Z (sériové číslo, HW revize, napětí, stav DC vstupu)
+- **`cloud`**: příkazy pro komunikaci s cloudem včetně `cloud metrics` pro diagnostiku připojení
 
 ## Záloha konfigurace v1.x.x → v2.x.x {#configuration-backup}
 
 Při aktualizaci staršího firmwaru **v1.x.x** na **v2.x.x** je nutné zálohovat konfiguraci aplikace. Nejdůležitější je tento krok u aplikace **CHESTER Current**, kde jsou v konfiguraci uloženy **kalibrační koeficienty proudových transformátorů**.
 
-Pokud zapomenete data zálohovat — nejsou ztracena, dokud v novějším firmwaru neprovedete příkaz `config save`. Je však potřeba dočasně přejít zpět na [starší firmware](https://github.com/hardwario/docs/blob/33661ca486dda9e6883d3a82edf0128ab32173d2/chester/catalog-applications/index.md#application-firmware), který dokáže starou konfiguraci přečíst, a po aktualizaci firmwaru stejnou konfiguraci aplikovat.
+Pokud zapomenete data zálohovat, nejsou ztracena, dokud v novějším firmwaru neprovedete příkaz `config save`. Je však potřeba dočasně přejít zpět na [starší firmware](https://github.com/hardwario/docs/blob/33661ca486dda9e6883d3a82edf0128ab32173d2/chester/catalog-applications/index.md#application-firmware), který dokáže starou konfiguraci přečíst, a po aktualizaci firmwaru stejnou konfiguraci aplikovat.
 
 Ve starém firmwaru napište do konzole `app config show`. Poté je potřeba zkopírovat všechny konfigurační položky. Pokud používáte mobilní aplikaci **HARDWARIO Manager** nebo **HARDWARIO CLI** na počítači, můžete text aktuální konfigurace označit a zkopírovat do schránky nebo textového editoru.
 

@@ -18,13 +18,13 @@ Open **CHESTER → BLE tags**.
 ## The slots
 
 The header names the device and how many slots it has, and the list shows how
-many are in use — for example *Slots (2 of 4)*.
+many are in use, for example *Slots (2 of 4)*.
 
 Each filled slot shows the tag's **Bluetooth address** and its latest readings:
 temperature, battery voltage, and signal strength in dBm. Empty slots are hidden
 by default; **Show empty** reveals them so you can pick where a new tag goes.
 
-The **⋮** menu on a slot acts on that slot alone — use it to clear a slot you
+The **⋮** menu on a slot acts on that slot alone. Use it to clear a slot you
 want to reuse.
 
 ---
@@ -35,7 +35,7 @@ want to reuse.
 2. Pick the tag you want and bind it to a slot.
 3. Tap **Save to device**.
 
-Nothing reaches the CHESTER until you save — **Save to device** and **Revert
+Nothing reaches the CHESTER until you save. **Save to device** and **Revert
 changes** stay disabled until you have actually changed something, so the buttons
 themselves tell you whether there is anything pending.
 
@@ -53,7 +53,7 @@ is staged until you **Save to device**.
 
 ## Related settings
 
-The tag scanner has its own configuration — whether it is enabled, how often it
+The tag scanner has its own configuration: whether it is enabled, how often it
 scans, and for how long. Those sit in the **BLE tags** group under
 [**Advanced Configuration**](./configuration.md), and in the shell they are the
 `tag config` commands: `enabled`, `scan-interval`, `scan-duration`, and

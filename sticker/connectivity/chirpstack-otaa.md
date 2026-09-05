@@ -11,11 +11,11 @@ This page explains how to register **HARDWARIO STICKER** as a LoRaWAN end device
 Useful HARDWARIO docs:
 - ChirpStack v4 Installation  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
-- ChirpStack v4 – End Devices  
+- ChirpStack v4: End Devices  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices
-- ChirpStack v4 – Data Decoding (STICKER codec example)  
+- ChirpStack v4: Data Decoding (STICKER codec example)  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding
-- STICKER Decoder - https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- STICKER Decoder: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
 
 :::info
 Before registering your STICKER, make sure **ChirpStack v4 is installed and running**.
@@ -53,7 +53,7 @@ In ChirpStack v4:
 ![Chirpstack create device profile](images/chripstack-add-profile.png)
 
 Next, configure the following parameters:
-- Name: **STICKER - OTAA** (or your chosen identifier for the device)
+- Name: **STICKER-OTAA** (or your chosen identifier for the device)
 - MAC Version: **LoRaWAN 1.0.4**
 - Region: **EU866** (or US915 if you are outside the EU)
 - Expected uplink interval: **X** (according to your STICKER firmware configuration)

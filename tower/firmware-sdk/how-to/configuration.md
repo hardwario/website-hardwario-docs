@@ -21,8 +21,8 @@ The library will automatically initialize your configuration when:
 The first parameter, `signature`, is a **unique number for your firmware**. This way if you load a different firmware to the **Core Module** that is using a configuration structure with **the same length**, the library will see that and initialize the configuration properly again.
 
 The last parameter `init_config` can be:
-- `NULL` - the config structure is **zeroed** when initialized
-- **Pointer to structure** - the init_config is copied to the config structure when initialized
+- `NULL`: the config structure is **zeroed** when initialized
+- **Pointer to structure**: the init_config is copied to the config structure when initialized
 
 :::info
 

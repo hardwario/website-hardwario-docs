@@ -13,9 +13,9 @@ Tento článek popisuje základní funkcionalitu, popis hardwaru a ukázkovou **
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps) – jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md) – jak funguje LED, tlačítko a konfigurace sítě.
-- [**Platform Management**](../category/platform-connectivity) – jak pracovat s interaktivní konzolí.
+- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Platform Management**](../category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -35,9 +35,9 @@ Typické případy použití:
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` - základní deska CHESTER s držákem baterie typu C
-* `CHESTER-E23-LP` - krabička se dvěma otvory pro PIR senzory, SMA anténním pigtailem a světlovodem
-* `CHESTER-S3` - rozšiřující deska se dvěma PIR senzory
+* `CHESTER-M-BCGLS`: základní deska CHESTER s držákem baterie typu C
+* `CHESTER-E23-LP`: krabička se dvěma otvory pro PIR senzory, SMA anténním pigtailem a světlovodem
+* `CHESTER-S3`: rozšiřující deska se dvěma PIR senzory
 * `Battery SAFT LS26500`
 
 Více podrobností najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
@@ -100,16 +100,16 @@ K intervalu reportování se přidává náhodný rozptyl 0-20 %, aby se zabrán
 
 Aplikace nabízí tři přednastavené režimy citlivosti a jeden vlastní režim:
 
-**Low** — Poskytuje nejvyšší odolnost proti falešným poplachům s pomalejší detekcí:
+**Low**: Poskytuje nejvyšší odolnost proti falešným poplachům s pomalejší detekcí:
 - `motion-sens`: 32, `motion-blind`: 3 s, `motion-pulse`: 3, `motion-window`: 4 s
 
-**Medium** (výchozí) — Vyvážený poměr mezi rychlostí detekce a odolností proti falešným poplachům:
+**Medium** (výchozí): Vyvážený poměr mezi rychlostí detekce a odolností proti falešným poplachům:
 - `motion-sens`: 64, `motion-blind`: 2 s, `motion-pulse`: 2, `motion-window`: 2 s
 
-**High** — Nejrychlejší detekce s nejvyšší citlivostí. Jediný pulz spustí detekci okamžitě. Nejvhodnější pro bezpečnostní systémy nebo dveřní senzory, kde je vyžadována okamžitá reakce:
+**High**: Nejrychlejší detekce s nejvyšší citlivostí. Jediný pulz spustí detekci okamžitě. Nejvhodnější pro bezpečnostní systémy nebo dveřní senzory, kde je vyžadována okamžitá reakce:
 - `motion-sens`: 128, `motion-blind`: 1 s, `motion-pulse`: 1, `motion-window`: 0 s
 
-**Individual** — Umožňuje ruční nastavení všech čtyř parametrů pro pokročilé řízení.
+**Individual**: Umožňuje ruční nastavení všech čtyř parametrů pro pokročilé řízení.
 
 :::tip
 
@@ -353,10 +353,10 @@ Jakákoliv hodnota může být `null`, pokud čtení odpovídajícího senzoru s
 
 ## Seznam změn {#changelog}
 
-### v1.0.0 — 2026-02-11 {#v100--2026-02-11}
+### v1.0.0 – 2026-02-11 {#v100--2026-02-11}
 
-- **Přidáno**: Prvotní vydání aplikace — detekce pohybu dvěma PIR senzory pomocí modulu CHESTER-S3
-- **Přidáno**: Sledování směru pohybu — rozlišuje průchod zleva doprava (`motion_right`) a zprava doleva (`motion_left`)
+- **Přidáno**: Prvotní vydání aplikace: detekce pohybu dvěma PIR senzory pomocí modulu CHESTER-S3
+- **Přidáno**: Sledování směru pohybu: rozlišuje průchod zleva doprava (`motion_right`) a zprava doleva (`motion_left`)
 - **Přidáno**: Konfigurovatelná přednastavení citlivosti PIR: `low`, `medium` (výchozí), `high` a `individual` pro ruční ladění parametrů
 - **Přidáno**: Celoživotní totalizéry pohybu, které přetrvávají napříč reporty a restarty zařízení
 - **Přidáno**: Servisní režim (`service-mode-enabled`) se zpětnou vazbou LED v reálném čase pro testování senzorů a instalaci

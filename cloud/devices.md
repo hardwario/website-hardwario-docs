@@ -29,7 +29,7 @@ Fill in the fields manually:
 |---|---|
 | **Name** | Human-readable name, e.g. `warehouse-sensor-01` |
 | **Serial Number (HSN)** | HARDWARIO Serial Number printed on the device label |
-| **Claim Token** | Unique per-device token — visible on the QR code or via `info show` over J-Link RTT |
+| **Claim Token** | Unique per-device token. Visible on the QR code or via `info show` over J-Link RTT |
 
 ![Create new device dialog](images/device-create.png)
 
@@ -44,9 +44,9 @@ Create at least one [Tag](tags.md) and assign it to the device and a [Connector]
 The device list shows a summary for each device:
 
 - **Name** and optional comment
-- **Last Seen** — timestamp of the last uplink
-- **Firmware** — application name and version
-- **Tags** — assigned tags shown as color-coded chips
+- **Last Seen**: timestamp of the last uplink
+- **Firmware**: application name and version
+- **Tags**: assigned tags shown as color-coded chips
 
 Click a device row to open its detail page.
 
@@ -71,7 +71,7 @@ Shows the full device profile, populated automatically from session messages:
 
 ### Tags
 
-Assign or remove tags on the device. Tags determine which connectors receive this device's messages — a device and a connector must share at least one tag for messages to be forwarded.
+Assign or remove tags on the device. Tags determine which connectors receive this device's messages. A device and a connector must share at least one tag for messages to be forwarded.
 
 ### Labels
 

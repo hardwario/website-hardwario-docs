@@ -4,9 +4,9 @@ title: MQTT Protocol
 import Image from '@theme/IdealImage';
 
 - MQTT is an open, simple and low overhead communication protocol for sending messages between many clients which are connected to the central MQTT broker.
-- Every **message** consists of two parts - **topic** and **payload**
+- Every **message** consists of two parts: **topic** and **payload**
 - The **Topic** describes the content of the message and identifies it
-- The **Topic** name has a **directory structure** - each level is divided with a symbol `/`
+- The **Topic** name has a **directory structure**: each level is divided with a symbol `/`
   - Topic can be `bedroom/temperature`, `kitchen/light/set`, etc.
 - MQTT server is called the **broker** and clients can p**ublish messages** and **subscribe to topics**
 - The task of the MQTT broker is to **deliver messages** from **publishers** to **subscribers**

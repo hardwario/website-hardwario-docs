@@ -13,9 +13,9 @@ Tento článek popisuje základní funkce, hardware a ukázkovou **JSON** zpráv
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps) — jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md) — jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](../category/platform-connectivity) — jak pracovat s interaktivní konzolí.
+- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Správa platformy**](../category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -40,11 +40,11 @@ Katalogová aplikace **CHESTER Meteo** měří:
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` - Standardní základní deska
-* `CHESTER-X0B:A` - Vstupní modul (4 kanály)
-* `CHESTER-S2` - Externí vlhkoměr
+* `CHESTER-M-BCGLS`: Standardní základní deska
+* `CHESTER-X0B:A`: Vstupní modul (4 kanály)
+* `CHESTER-S2`: Externí vlhkoměr
 * Externí barometr
-* `CHESTER-E1-LP` - Krabička s SMA pigtailem
+* `CHESTER-E1-LP`: Krabička s SMA pigtailem
 
 Více podrobností najdete v [**Objednacích kódech**](../ordering-codes.md).
 
@@ -54,12 +54,12 @@ Varianta buildu firmwaru: `west chester-update meteo --variant "CHESTER Meteo"`
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` - Standardní základní deska
-* `CHESTER-X0B:A` - Vstupní modul (4 kanály)
-* `CHESTER-Z1` - Záložní modul
-* `CHESTER-S2` - Externí vlhkoměr
+* `CHESTER-M-BCGLS`: Standardní základní deska
+* `CHESTER-X0B:A`: Vstupní modul (4 kanály)
+* `CHESTER-Z1`: Záložní modul
+* `CHESTER-S2`: Externí vlhkoměr
 * Externí barometr
-* `CHESTER-E1-LP` - Krabička s SMA pigtailem
+* `CHESTER-E1-LP`: Krabička s SMA pigtailem
 
 Více podrobností najdete v [**Objednacích kódech**](../ordering-codes.md).
 
@@ -91,7 +91,7 @@ app config interval-report 1800
 
 :::info
 
-Celou strukturu příkazů můžete snadno prozkoumat — začněte příkazem `help`.
+Celou strukturu příkazů můžete snadno prozkoumat. Začněte příkazem `help`.
 
 :::
 
@@ -595,17 +595,17 @@ Tlak je v **pascalech**.
 
 ## Seznam změn {#changelog}
 
-### v3.5.1 — 2025-12-08 {#v351--2025-12-08}
+### v3.5.1 – 2025-12-08 {#v351--2025-12-08}
 
-- **Přidáno**: Nová varianta — **CHESTER Meteo M** (Modbus RTU — podporuje senzory Lambrecht a Sensecap/OPM; typ senzoru se volí parametrem `meteo-type`)
-- **Přidáno**: Podpora půdních senzorů — vlhkost a teplota přes Modbus půdní sondy
-- **Přidáno**: Podpora LoRaWAN — jediný binární firmware pro LTE i LoRaWAN; režim se volí pomocí `app config mode lte` / `app config mode lrw`
+- **Přidáno**: Nová varianta: **CHESTER Meteo M** (Modbus RTU, podporuje senzory Lambrecht a Sensecap/OPM; typ senzoru se volí parametrem `meteo-type`)
+- **Přidáno**: Podpora půdních senzorů: vlhkost a teplota přes Modbus půdní sondy
+- **Přidáno**: Podpora LoRaWAN: jediný binární firmware pro LTE i LoRaWAN; režim se volí pomocí `app config mode lte` / `app config mode lrw`
 - **Vylepšeno**: Podpora pyranometru (solární osvit)
 
-### v3.5.0 — 2025-12-03 {#v350--2025-12-03}
+### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Podpora půdních senzorů — měření vlhkosti a teploty přes 1-Wire půdní sondy (`soil_sensors` ve JSON výstupu)
-- **Přidáno**: Nová varianta — **CHESTER Meteo P** se vstupem pro pyranometr pro měření solárního osvitu
+- **Přidáno**: Podpora půdních senzorů: měření vlhkosti a teploty přes 1-Wire půdní sondy (`soil_sensors` ve JSON výstupu)
+- **Přidáno**: Nová varianta: **CHESTER Meteo P** se vstupem pro pyranometr pro měření solárního osvitu
 - **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); předchozí firmware pro Cloud v1 zůstává dostupný samostatně
 
 :::info

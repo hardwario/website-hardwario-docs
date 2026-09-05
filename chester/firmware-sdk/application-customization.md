@@ -10,7 +10,7 @@ This article explains workflow when you need to modify the existing catalog appl
 
 ## Creating Application Fork
 
-This chapter will guide you through the process of how to create a **fork of the catalog application**. As an example, we will use the catalog application **CHESTER Current**, but the process can be applied to anything in the **CHESTER SDK** - feel free to enhance the in-tree drivers.
+This chapter will guide you through the process of how to create a **fork of the catalog application**. As an example, we will use the catalog application **CHESTER Current**, but the process can be applied to anything in the **CHESTER SDK**. Feel free to enhance the in-tree drivers.
 
 :::tip
 
@@ -66,7 +66,7 @@ Below is the minimized set of commands that is extracted from the **CHESTER SDK*
 
    :::caution
 
-   Do not just copy/paste the command above - update the address with the real one provided by your **Git** server.
+   Do not just copy/paste the command above. Update the address with the real one provided by your **Git** server.
 
    :::
 

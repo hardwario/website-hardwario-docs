@@ -12,15 +12,15 @@ konfiguraci, ovládat jeho shell, aktualizovat firmware a restartovat jej.
 
 Aplikace je kompletně popsána v sekci **APPS**:
 
-- [**HARDWARIO Manager**](/apps/hardwario-manager) — co aplikace umí a jak ji nainstalovat
-- [**CHESTER přes Bluetooth**](/apps/hardwario-manager/chester) — sekce CHESTER
-- [**Připojení a párování**](/apps/hardwario-manager/chester/connect) — naskenování QR kódu zařízení, passkey a párování
-- [**Informace o zařízení**](/apps/hardwario-manager/chester/device-info) — sériové číslo, firmware, doba běhu a ovládací prvky zařízení
-- [**Konfigurace**](/apps/hardwario-manager/chester/configuration) — průvodce konfigurací a úplné konfigurační zobrazení
-- [**Terminál**](/apps/hardwario-manager/chester/terminal) — shell zařízení přes Bluetooth
-- [**Nástroje**](/apps/hardwario-manager/chester/tools) — aktualizace firmwaru, restart, tovární nastavení
-- [**BLE tagy**](/apps/hardwario-manager/chester/ble-tags) — přiřazení externích BLE senzorových tagů ke slotům
-- [**Řešení problémů**](/apps/hardwario-manager/chester/troubleshooting) — problémy s připojením, párováním a aktualizací
+- [**HARDWARIO Manager**](/apps/hardwario-manager): co aplikace umí a jak ji nainstalovat
+- [**CHESTER přes Bluetooth**](/apps/hardwario-manager/chester): sekce CHESTER
+- [**Připojení a párování**](/apps/hardwario-manager/chester/connect): naskenování QR kódu zařízení, passkey a párování
+- [**Informace o zařízení**](/apps/hardwario-manager/chester/device-info): sériové číslo, firmware, doba běhu a ovládací prvky zařízení
+- [**Konfigurace**](/apps/hardwario-manager/chester/configuration): průvodce konfigurací a úplné konfigurační zobrazení
+- [**Terminál**](/apps/hardwario-manager/chester/terminal): shell zařízení přes Bluetooth
+- [**Nástroje**](/apps/hardwario-manager/chester/tools): aktualizace firmwaru, restart, tovární nastavení
+- [**BLE tagy**](/apps/hardwario-manager/chester/ble-tags): přiřazení externích BLE senzorových tagů ke slotům
+- [**Řešení problémů**](/apps/hardwario-manager/chester/troubleshooting): problémy s připojením, párováním a aktualizací
 
 :::info Které verze se to týká
 Tyto stránky popisují aktuální aplikaci HARDWARIO Manager. Pokud je v telefonu

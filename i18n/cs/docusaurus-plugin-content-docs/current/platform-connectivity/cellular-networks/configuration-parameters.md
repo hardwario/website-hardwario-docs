@@ -16,18 +16,18 @@ Všechny parametry se zobrazí příkazem `lte config show` a uloží příkazem
 ### `antenna` – Typ antény {#antenna--antenna-type}
 Určuje typ antény připojené k zařízení:
 
-- `internal` – Použije vestavěnou anténu.
-- `external` – Použije externě připojenou anténu.
+- `internal`: Použije vestavěnou anténu.
+- `external`: Použije externě připojenou anténu.
 
 ---
 
 ### `mode` – Výběr režimu sítě {#mode--network-mode-selection}
 Určuje preferované režimy síťového připojení a jejich prioritu:
 
-- `lte-m,nb-iot` – Preferovat **LTE-M**, záložně NB-IoT.
-- `nb-iot,lte-m` – Preferovat **NB-IoT**, záložně LTE-M.
-- `lte-m` – Použít **pouze LTE-M**.
-- `nb-iot` – Použít **pouze NB-IoT**.
+- `lte-m,nb-iot`: Preferovat **LTE-M**, záložně NB-IoT.
+- `nb-iot,lte-m`: Preferovat **NB-IoT**, záložně LTE-M.
+- `lte-m`: Použít **pouze LTE-M**.
+- `nb-iot`: Použít **pouze NB-IoT**.
 
 > ⚠️ Ověřte, že je zvolený režim podporován vaší SIM kartou i místním operátorem.
 
@@ -36,7 +36,7 @@ Určuje preferované režimy síťového připojení a jejich prioritu:
 ### `bands` – Uzamčení frekvenčních pásem {#bands--frequency-band-lock}
 Omezuje modem na podmnožinu podporovaných frekvenčních pásem:
 
-- Ponechte prázdné (`""`), aby modem **prohledával všechna podporovaná pásma** — to je výchozí a doporučené nastavení.
+- Ponechte prázdné (`""`), aby modem **prohledával všechna podporovaná pásma**. To je výchozí a doporučené nastavení.
 - Zadejte mezerami oddělený seznam čísel pásem (například `"3 8 20"`), čímž modem uzamknete pouze na tato pásma.
 
 Uzamčení pásem zkracuje počáteční vyhledávání sítě, ale zařízení se **nepřihlásí**, pokud operátor používá pásmo, které v seznamu není. Nastavujte je až poté, co si u operátora ověříte pásma používaná v místě nasazení.
@@ -46,7 +46,7 @@ Uzamčení pásem zkracuje počáteční vyhledávání sítě, ale zařízení 
 ### `network` – Výběr PLMN {#network--plmn-selection}
 Vynutí registraci ke konkrétnímu operátorovi určenému jeho **PLMN ID** (MCC + MNC, například `23003`):
 
-- Ponechte prázdné (`""`) pro **automatický** výběr operátora — to je výchozí nastavení.
+- Ponechte prázdné (`""`) pro **automatický** výběr operátora. To je výchozí nastavení.
 - Zadejte PLMN ID pro vynucení **ručního** výběru, což je obvykle potřeba u roamingových SIM karet, které by se jinak připojily k nevhodné partnerské síti.
 
 PLMN ID roamingových partnerů používaných SIM kartami Vodafone od **HARDWARIO** jsou uvedena v tabulce [**Vodafone SIM EU28+2**](vodafone-coverage.md).
@@ -64,9 +64,9 @@ Definuje APN potřebné pro připojení k mobilní síti:
 ### `auth` – Metoda ověřování {#auth--authentication-method}
 Definuje metodu ověřování APN:
 
-- `"none"` – Bez ověřování.
-- `"pap"` – Použít ověřování PAP (pokud je podporováno).
-- `"chap"` – Použít ověřování CHAP (pokud je podporováno).
+- `"none"`: Bez ověřování.
+- `"pap"`: Použít ověřování PAP (pokud je podporováno).
+- `"chap"`: Použít ověřování CHAP (pokud je podporováno).
 
 > Pokud vaše SIM karta ověřování nevyžaduje, použijte `"none"`.
 

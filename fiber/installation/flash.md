@@ -7,8 +7,8 @@ import TabItem from '@theme/TabItem';
 
 # Flash Raspberry Pi OS
 
-FIBER ships in **two hardware variants**, and the flashing procedure differs between them —
-**pick the tab below that matches your device** before you start:
+FIBER ships in **two hardware variants**, and the flashing procedure differs between them.
+**Pick the tab below that matches your device** before you start:
 
 :::info FIBER (CM4)
 
@@ -19,7 +19,7 @@ jumper to enter flashing mode.
 
 :::info FIBER Lite (Pi 5)
 
-The Raspberry Pi 5 based bench-test variant. Flash a microSD card directly — no bootloader
+The Raspberry Pi 5 based bench-test variant. Flash a microSD card directly, with no bootloader
 activation step.
 
 :::
@@ -49,7 +49,7 @@ activation step.
 
 1. Connect the USB-B cable to **HOST** and the backside USB connector on the **TARGET**.
 
-1. Install the **rpiboot** tool - follow the instructions from this GitHub repository:
+1. Install the **rpiboot** tool: follow the instructions from this GitHub repository:
 
    **https://github.com/raspberrypi/usbboot**
 
@@ -142,7 +142,7 @@ activation step.
 </TabItem>
 <TabItem value="fiber-lite" label="FIBER Lite (Pi 5)">
 
-FIBER Lite uses a plain Raspberry Pi 5 — there is no bootloader-activation step, no BOOT jumper,
+FIBER Lite uses a plain Raspberry Pi 5, so there is no bootloader-activation step, no BOOT jumper,
 and no `rpiboot` tool. You flash a microSD card directly, as with any standard Raspberry Pi.
 
 :::tip
@@ -153,7 +153,7 @@ slightly different in practice: the **Device** picker shows **Raspberry Pi 5** h
 instead of Raspberry Pi 4, the **Storage** step lists your microSD card reader by its own name
 instead of `RPi-MSD-0001 Media` (that name is specific to the CM4's `rpiboot` USB boot mode, not
 used here), and the example hostname/username shown is `fiber`/`fiber` rather than
-`fiber-lite`/`fiberlite` — use the FIBER Lite values given in the steps below regardless of what
+`fiber-lite`/`fiberlite`. Use the FIBER Lite values given in the steps below regardless of what
 the screenshot shows.
 
 :::
@@ -224,11 +224,11 @@ the screenshot shows.
 1. Wait for the device to boot and connect to the network (30-90 seconds on first boot), then
    find its IP address. Try these in order:
 
-   - **Router/DHCP leases** — check your router's admin page for a client named after the
+   - **Router/DHCP leases**: check your router's admin page for a client named after the
      hostname you set (e.g. `fiber-lite`).
-   - **mDNS** — `ping raspberrypi.local` or `ping <hostname>.local` (the hostname you set in
+   - **mDNS**: `ping raspberrypi.local` or `ping <hostname>.local` (the hostname you set in
      Imager), if mDNS resolves on your network.
-   - **Network scan** — from another machine on the same LAN/subnet:
+   - **Network scan**: from another machine on the same LAN/subnet:
 
      ```sh
      nmap -sn 192.168.1.0/24
@@ -236,7 +236,7 @@ the screenshot shows.
 
      replacing `192.168.1.0/24` with your actual subnet. Look for a new host that wasn't there
      before you powered on the device.
-   - **Monitor + keyboard** — as a last resort, connect a display and keyboard directly to the
+   - **Monitor + keyboard**: as a last resort, connect a display and keyboard directly to the
      Pi and run `hostname -I` at the console.
 
    :::tip
@@ -244,7 +244,7 @@ the screenshot shows.
    **Skip the guesswork with a static IP.** Instead of hunting for whatever address DHCP handed
    out, set one yourself before first boot: put the freshly flashed card back into your computer
    and create `network-config` at the root of the boot partition (`bootfs`, the small FAT
-   volume — same partition as `meta-data`/`user-data`):
+   volume, the same partition as `meta-data`/`user-data`):
 
    ```yaml title="network-config"
    version: 2
@@ -259,9 +259,9 @@ the screenshot shows.
    ```
 
    Adjust the address, gateway, and subnet to match your network, then boot the device and SSH
-   straight to `192.168.1.50` — no lease lookup or scan needed.
+   straight to `192.168.1.50`, with no lease lookup or scan needed.
 
-   This only applies on an instance's **first** boot, the same as `user-data` — see the
+   This only applies on an instance's **first** boot, the same as `user-data`, see the
    cloud-init gotcha below. If you're adding this file to a card that has already booted once
    (so the account already exists), also bump `instance-id` in `meta-data` to a new value,
    otherwise cloud-init skips it as "already configured."
@@ -283,7 +283,7 @@ the screenshot shows.
 **Cloud-init gotcha.** Recent Raspberry Pi OS images use **cloud-init** instead of the older
 `ssh`-file/`userconf.txt` mechanism. If you ever need to hand-edit `/boot/firmware/meta-data`
 directly (instead of using Imager's Customisation dialog), the key **must** be `instance-id`
-(hyphen), **not** `instance_id` (underscore) — the underscored key is silently ignored, and
+(hyphen), **not** `instance_id` (underscore). The underscored key is silently ignored, and
 cloud-init will skip user creation on every subsequent boot, causing "Permission denied" on SSH
 indefinitely even after fixing `user-data`. Always use Imager's own dialog for the username/
 password/SSH settings; you should not need to touch cloud-init files by hand in normal use. If

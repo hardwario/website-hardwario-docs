@@ -1,7 +1,7 @@
 ---
 slug: sticker-clime
 title: STICKER Clime
-description: "STICKER Clime používá standardní vzory stavové LED popsané v Signalizace LED - startovní karusel, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné."
+description: "STICKER Clime používá standardní vzory stavové LED popsané v Signalizace LED. Startovní karusel, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné."
 ---
 import Image from '@theme/IdealImage';
 
@@ -13,11 +13,11 @@ import Image from '@theme/IdealImage';
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Rychlý průvodce**](https://docs.hardwario.com/sticker/first-steps) – Postup zprovoznění krok za krokem.
-* [**Koupit STICKER Clime**](https://www.hardwario.store/p/sticker-clime) – Nákup v našem obchodě.
-* [**Objednací kódy**](https://docs.hardwario.com/sticker/ordering-codes) - Seznam součástek a jejich objednacích čísel.
-* [**Popis hardwaru**](https://docs.hardwario.com/sticker/hardware-description) - Technické detaily a přehled hardwaru.
-* [**Oficiální stránka produktu**](https://www.hardwario.com/products/sticker/) – Funkce a přehled.
+* [**Rychlý průvodce**](https://docs.hardwario.com/sticker/first-steps): Postup zprovoznění krok za krokem.
+* [**Koupit STICKER Clime**](https://www.hardwario.store/p/sticker-clime): Nákup v našem obchodě.
+* [**Objednací kódy**](https://docs.hardwario.com/sticker/ordering-codes): Seznam součástek a jejich objednacích čísel.
+* [**Popis hardwaru**](https://docs.hardwario.com/sticker/hardware-description): Technické detaily a přehled hardwaru.
+* [**Oficiální stránka produktu**](https://www.hardwario.com/products/sticker/): Funkce a přehled.
 
 ## Typická použití {#typical-use-cases}
 
@@ -31,7 +31,7 @@ import Image from '@theme/IdealImage';
 
 #### Ochrana pacientů díky chytrému měření {#protecting-patients-with-smart-sensing}
 
-- S rostoucími globálními teplotami a častějšími klimatickými extrémy je udržení stabilních podmínek v nemocničních pokojích kritické. Selhávající klimatizace — nebo i otevřené okno — může pacienty ohrozit. Senzory teploty a vlhkosti v každém pokoji umožňují včasné varování a lepší péči.
+- S rostoucími globálními teplotami a častějšími klimatickými extrémy je udržení stabilních podmínek v nemocničních pokojích kritické. Selhávající klimatizace, nebo i otevřené okno, může pacienty ohrozit. Senzory teploty a vlhkosti v každém pokoji umožňují včasné varování a lepší péči.
 
 ## Ukázková zpráva JSON {#example-json-message}
 
@@ -56,15 +56,15 @@ import Image from '@theme/IdealImage';
 
 ## Stavová LED {#status-led}
 
-STICKER Clime používá standardní vzory stavové LED popsané v [**Signalizace LED**](/sticker/hardware-description#led-indication) - startovní karusel, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
+STICKER Clime používá standardní vzory stavové LED popsané v [**Signalizace LED**](/sticker/hardware-description#led-indication). Startovní karusel, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
 
-Clime měří hodnoty prostředí, ne diskrétní vstupy, takže obvykle nemá nakonfigurované žádné Hallovy senzory ani externí vstupy. V praxi to znamená, že uvidíte jen **heartbeat**, vzory pro **NFC** a **červené bliknutí alarmu** při překročení prahu teploty nebo vlhkosti - zeleno-oranžové sekvence aktivace vstupů se na standardní jednotce Clime neobjeví.
+Clime měří hodnoty prostředí, ne diskrétní vstupy, takže obvykle nemá nakonfigurované žádné Hallovy senzory ani externí vstupy. V praxi to znamená, že uvidíte jen **heartbeat**, vzory pro **NFC** a **červené bliknutí alarmu** při překročení prahu teploty nebo vlhkosti. Zeleno-oranžové sekvence aktivace vstupů se na standardní jednotce Clime neobjeví.
 
 ## Seznam změn {#changelog}
 
-### 2025-11-23 — v1.0.0 {#2025-11-23--v100}
+### 2025-11-23 – v1.0.0 {#2025-11-23--v100}
 
-- První vydání — monitorování teploty, vlhkosti, osvětlení a tlaku přes LoRaWAN
+- První vydání: monitorování teploty, vlhkosti, osvětlení a tlaku přes LoRaWAN
 
 :::info
 

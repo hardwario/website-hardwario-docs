@@ -175,7 +175,7 @@ Your custom notification Rule Chain is now fully built, but ThingsBoard doesn't 
 2. Locate the **Message Type Switch** node.
 3. Follow the **Post telemetry** link coming out of the switch. It should lead to a **Save Timeseries** node.
 4. From the left menu, find the **Rule Chain** node (under the Rule Chains category) and drag it onto the canvas.
-5. In the node settings, select the new Rule Chain you just created (e.g., "EMAIL - Notifications").
+5. In the node settings, select the new Rule Chain you just created (e.g., "EMAIL Notifications").
 6. Drag a connection from the **Save Timeseries** node to your newly added Rule Chain node.
 7. Select **Success** as the link label.
 8. Click the **Apply changes** button (the checkmark in the bottom right corner).
@@ -233,7 +233,7 @@ return false; // Do not send email
 ### Step 3: Prepare the New Timestamp
 If the filter passes (an email should be sent), we need to create a new message to save the current time back to the device's server attributes. We must route the flow in two directions: one to send the email, and one to update the attribute.
 * **Node Type:** `Transformation` -> `script`
-* **Name:** Prepare Timestamp - [Condition Name] (e.g., Prepare Timestamp - Temp < 17)
+* **Name:** Prepare Timestamp: [Condition Name] (e.g., Prepare Timestamp: Temp < 17)
 * **Code:**
 
 ```javascript

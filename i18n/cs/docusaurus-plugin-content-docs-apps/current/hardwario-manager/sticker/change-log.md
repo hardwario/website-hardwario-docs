@@ -24,8 +24,8 @@ Viz [**Nastavení aplikace**](../settings.md).
 ## Otevření historie zařízení {#open-a-devices-log}
 
 1. Přejděte na **STICKER → Saved STICKERs** a otevřete **Detail** zařízení.
-2. Otevřete jeho **Change log** a zvolte položku ze seznamu **Recorded read** —
-   každá má datum, čas a informaci, které sekce pokrývá.
+2. Otevřete jeho **Change log** a zvolte položku ze seznamu **Recorded read**.
+   Každá má datum, čas a informaci, které sekce pokrývá.
 
 <img src="/img/hw-manager/hw-manager-sticker-log.png" alt="Obrazovka s detailem uloženého zařízení s otevřenou historií změn na zaznamenaném čtení" width="320" />
 
@@ -33,7 +33,7 @@ U vybrané položky můžete:
 
 | Akce | Efekt |
 |---|---|
-| **Configure a STICKER with this** | Zapsat zaznamenanou konfiguraci zpět do zařízení — obnovení do daného okamžiku |
+| **Configure a STICKER with this** | Zapsat zaznamenanou konfiguraci zpět do zařízení. Obnovení do daného okamžiku |
 | **Export this** | Nasdílet jednu položku jako soubor |
 | **Export log** | Nasdílet celou historii tohoto zařízení |
 | **Delete this entry** | Odstranit jen tuhle položku |

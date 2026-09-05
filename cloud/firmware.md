@@ -5,13 +5,13 @@ title: Firmware
 
 # Firmware Updates
 
-You can update a CHESTER's firmware remotely from the Cloud — over the air, with no
+You can update a CHESTER's firmware remotely from the Cloud, over the air, with no
 physical access to the device. Such updates are also called **FOTA** (Firmware
 Over-The-Air).
 
 ## 1. Get the firmware Identifier
 
-Most updates use a **ready-made catalog firmware** — you don't have to build
+Most updates use a **ready-made catalog firmware**, so you don't have to build
 anything yourself. Open the CHESTER
 [**Catalog Applications → Application Firmware**](/chester/catalog-applications/catalog-applications#application-firmware)
 table, find your application and variant, and copy its **Identifier** (a value like
@@ -19,7 +19,7 @@ table, find your application and variant, and copy its **Identifier** (a value l
 
 :::info Build your own firmware
 You can build and upload your **own** firmware with the HARDWARIO CLI and use its
-Identifier the same way — see
+Identifier the same way, see
 [**Build and Deploy**](/chester/firmware-sdk/build-and-deploy) in the CHESTER docs.
 :::
 

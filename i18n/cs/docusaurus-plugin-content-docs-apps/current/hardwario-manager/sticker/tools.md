@@ -17,7 +17,7 @@ konfiguraci.
 | [**Sensor history**](./sensor-history.md) | Přečte měření, která zařízení uložilo dříve |
 | **Calibration mode** | Restartuje zařízení do servisního režimu kalibrace senzorů |
 | [**Reset**](./reset.md) | Žebříček resetů, od restartu po factory reset |
-| **Vendor changes** | Změní secret key nebo provede vendor reset — viz [**Reset zařízení**](./reset.md) |
+| **Vendor changes** | Změní secret key nebo provede vendor reset, viz [**Reset zařízení**](./reset.md) |
 
 ---
 
@@ -45,5 +45,5 @@ referenci. Zařízení se potom vrátí do normálního provozu.
 ## NFC Console {#nfc-console}
 
 Pokud je zapnutý [**Debug mode**](../settings.md), zobrazí Tools navíc
-**NFC Console** — nízkoúrovňovou konzoli pro surové příkazy NFC, používanou
+**NFC Console**, nízkoúrovňovou konzoli pro surové příkazy NFC, používanou
 k diagnostice. Pro běžnou konfiguraci není potřeba.

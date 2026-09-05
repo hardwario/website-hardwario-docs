@@ -31,9 +31,9 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 The catalog **CHESTER Range** hardware consists of the following ordering codes:
 
-* `CHESTER-M-CGLS` - Standard mainboard
+* `CHESTER-M-CGLS`: Standard mainboard
 
-* `CHESTER-X0A:A` - Input module (4 channels)
+* `CHESTER-X0A:A`: Input module (4 channels)
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -43,11 +43,11 @@ Firmware build variant: `west chester-update range --variant "CHESTER Range"`
 
 The catalog **CHESTER Range Z** hardware consists of the following ordering codes:
 
-* `CHESTER-M-CGLS` - Standard mainboard
+* `CHESTER-M-CGLS`: Standard mainboard
 
-* `CHESTER-X0A:A` - Input module (4 channels)
+* `CHESTER-X0A:A`: Input module (4 channels)
 
-* `CHESTER-Z1` - Backup module
+* `CHESTER-Z1`: Backup module
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -86,7 +86,7 @@ app config interval-report 1800
 
 :::info
 
-You can easily explore the whole command tree structure - start with the `help` command.
+You can easily explore the whole command tree structure. Start with the `help` command.
 
 :::
 
@@ -268,10 +268,10 @@ Every available sensor has one aggrevated measurement, which contains the minimu
 
 ## Changelog
 
-### v3.5.0 — 2025-12-03
+### v3.5.0 – 2025-12-03
 
-- **Added**: LoRaWAN support — single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
-- **Added**: New variant — **CHESTER Range Z** with CHESTER-Z1 backup module support
+- **Added**: LoRaWAN support: single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
+- **Added**: New variant: **CHESTER Range Z** with CHESTER-Z1 backup module support
 - **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available
 
 :::info

@@ -60,7 +60,7 @@ V tomto průvodci se naučíte, jak spárovat a spravovat až osm tagů se zař�
 
 14. V konzoli zadejte tag enroll. Zařízení CHESTER spustí automatické vyhledávání na 10 sekund.
 
-15. Pokud tag najde, zobrazí jeho MAC adresu — zkontrolujte, že odpovídá (najdete ji na tagu).
+15. Pokud tag najde, zobrazí jeho MAC adresu: zkontrolujte, že odpovídá (najdete ji na tagu).
 
 16. Pokud bylo párování úspěšné, můžete následující kroky přeskočit.
 

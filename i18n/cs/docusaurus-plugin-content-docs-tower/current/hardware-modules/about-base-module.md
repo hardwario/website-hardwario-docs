@@ -1,7 +1,7 @@
 ---
 slug: about-base-module
 title: O modulu Base Module
-description: "Base Module slouží jako mechanický stojan pro jednotky HARDWARIO TOWER. S výjimkou modulu Battery Module můžete do standardizovaného soketu na modulu Base Module zapojit jakýkoli jiný modul ze sady HARDWARIO TOWER - Industrial IoT Kit."
+description: "Base Module slouží jako mechanický stojan pro jednotky HARDWARIO TOWER. S výjimkou modulu Battery Module můžete do standardizovaného soketu na modulu Base Module zapojit jakýkoli jiný modul ze sady HARDWARIO TOWER Industrial IoT Kit."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        Base Module slouží jako <b>mechanický stojan pro jednotky HARDWARIO TOWER</b>. S výjimkou modulu Battery Module můžete do standardizovaného soketu na modulu <b>Base Module</b> zapojit jakýkoli jiný modul ze sady <b>HARDWARIO TOWER - Industrial IoT Kit</b>.
+        Base Module slouží jako <b>mechanický stojan pro jednotky HARDWARIO TOWER</b>. S výjimkou modulu Battery Module můžete do standardizovaného soketu na modulu <b>Base Module</b> zapojit jakýkoli jiný modul ze sady <b>HARDWARIO TOWER Industrial IoT Kit</b>.
       </p>
       <p>
         Součástí je také <b>prototypovací plocha pro pájení vlastních obvodů</b>.

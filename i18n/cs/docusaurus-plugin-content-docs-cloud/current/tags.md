@@ -1,12 +1,12 @@
 ---
 slug: tags
 title: Tagy
-description: "Tagy jsou pojmenované štítky s barvou, které přiřazujete zařízením i konektorům. Jsou lepidlem, které propojuje zařízení s konektory — zpráva ze zařízení se předá jen těm konektorům, které s daným zařízením sdílejí alespoň jeden tag."
+description: "Tagy jsou pojmenované štítky s barvou, které přiřazujete zařízením i konektorům. Jsou lepidlem, které propojuje zařízení s konektory: zpráva ze zařízení se předá jen těm konektorům, které s daným zařízením sdílejí alespoň jeden tag."
 ---
 
 # Tagy {#tags}
 
-Tagy jsou **pojmenované štítky s barvou**, které přiřazujete zařízením i konektorům. Jsou lepidlem, které propojuje zařízení s konektory — zpráva ze zařízení se předá jen těm konektorům, které s daným zařízením sdílejí alespoň jeden tag.
+Tagy jsou **pojmenované štítky s barvou**, které přiřazujete zařízením i konektorům. Jsou lepidlem, které propojuje zařízení s konektory: zpráva ze zařízení se předá jen těm konektorům, které s daným zařízením sdílejí alespoň jeden tag.
 
 ## Proč tagy? {#why-tags}
 
@@ -26,7 +26,7 @@ Tagy umožňují flexibilní směrování zpráv, aniž byste kamkoli natvrdo za
 
    <div className="screenshot-narrow">
 
-   ![Dialog „Create new tag" — název, výběr barvy a živý náhled](../../../../cloud/images/tag-create.png)
+   ![Dialog „Create new tag" s názvem, výběrem barvy a živým náhledem](../../../../cloud/images/tag-create.png)
 
    </div>
 
@@ -34,8 +34,8 @@ Tagy umožňují flexibilní směrování zpráv, aniž byste kamkoli natvrdo za
 
 Tagy lze přiřadit na dvou místech:
 
-- **Detail zařízení → záložka Tags** — přiřazení tagů zařízení
-- **Nastavení konektoru** — výběr tagů, kterým konektor naslouchá
+- **Detail zařízení → záložka Tags**: přiřazení tagů zařízení
+- **Nastavení konektoru**: výběr tagů, kterým konektor naslouchá
 
 Zařízení bez přiřazených tagů nespustí žádný konektor.
 
@@ -45,8 +45,8 @@ Tagy mají pole `access_type`:
 
 | Hodnota | Popis |
 |---|---|
-| `write` | Plný přístup — tag lze použít pro čtení zpráv i pro odesílání downlinků |
-| `read` | Pouze pro čtení — tag může přijímat zprávy, ale nelze jej použít pro downlinky |
+| `write` | Plný přístup. Tag lze použít pro čtení zpráv i pro odesílání downlinků |
+| `read` | Pouze pro čtení. Tag může přijímat zprávy, ale nelze jej použít pro downlinky |
 
 ## Příklad nastavení {#example-setup}
 

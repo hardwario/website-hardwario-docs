@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Notification Rules Manager
 
-The **Notification Rules Manager** is a tool for setting up automatic alerts based on data from your IoT devices (sensors, meters, etc.). It lets you define precise conditions under which you receive an e-mail or SMS — for example when temperature exceeds a set value, humidity drops below a threshold, or a device reports an unexpected reading.
+The **Notification Rules Manager** is a tool for setting up automatic alerts based on data from your IoT devices (sensors, meters, etc.). It lets you define precise conditions under which you receive an e-mail or SMS, for example when temperature exceeds a set value, humidity drops below a threshold, or a device reports an unexpected reading.
 
 :::info Example use case
 A customer operating warehouses wants to be notified when the temperature in any warehouse exceeds 28 °C. They create a rule: *Device = Warehouse_Sensor_A, Variable = temperature, Condition = > 28, Recipient = manager@company.com*. From that point on, an e-mail is sent automatically whenever the sensor reads above 28 °C.
@@ -30,8 +30,8 @@ The **Notifications** menu item is only visible to customers who have been grant
 
 | Role | Access |
 |------|--------|
-| **Customer Administrator** | Full access — can create, edit, copy, delete, and enable/disable rules. |
-| **Customer User** | Read-only — can view rules but cannot create, edit, copy, delete, or toggle them. |
+| **Customer Administrator** | Full access. Can create, edit, copy, delete, and enable/disable rules. |
+| **Customer User** | Read-only. Can view rules but cannot create, edit, copy, delete, or toggle them. |
 
 :::info
 If you are a Customer User and need to modify a rule, contact your Customer Administrator.
@@ -47,7 +47,7 @@ If you are a Customer User and need to modify a rule, contact your Customer Admi
 
 | Column | Description |
 |--------|-------------|
-| **Device(s)** | The first monitored device. If there are more, a **+N more** badge appears — hover to see the full list. |
+| **Device(s)** | The first monitored device. If there are more, a **+N more** badge appears. Hover to see the full list. |
 | **Customer** | The customer(s) the devices belong to (shown when sub-customers exist). If devices span multiple customers, shows the first one with **+N more**. |
 | **Variable(s)** | The telemetry key(s) being watched. |
 | **Condition** | The trigger condition and threshold, plus Duration/Cooldown badges if set. |
@@ -65,7 +65,7 @@ Click **+ Add Rule** in the top-right corner of the widget. The rule form opens 
 
 In the **DEVICES** section, select the device(s) this rule should monitor. A single rule can watch multiple devices at the same time.
 
-1. Click the **Filter devices...** field — a dropdown list of available devices appears.
+1. Click the **Filter devices...** field. A dropdown list of available devices appears.
 2. Start typing to filter by name, or scroll and select from the list.
 3. Click the device in the dropdown or press **+ Add**. It appears as a tag above the field.
 4. Repeat for additional devices. Remove a device by clicking **×** on its tag.
@@ -80,10 +80,10 @@ In the **VARIABLES** section, select or type the telemetry key(s) to monitor.
 
 **Using the variable picker (recommended):**
 
-Once at least one device is selected, click the variable field — a dropdown appears showing all telemetry keys that the selected devices have already sent. When multiple devices are selected, the keys are grouped:
+Once at least one device is selected, click the variable field. A dropdown appears showing all telemetry keys that the selected devices have already sent. When multiple devices are selected, the keys are grouped:
 
-- **Common to all devices (N)** — keys available on every selected device. These are the most useful for multi-device rules.
-- **Per-device groups** — keys that exist only on specific devices.
+- **Common to all devices (N)**: keys available on every selected device. These are the most useful for multi-device rules.
+- **Per-device groups**: keys that exist only on specific devices.
 
 Click a key to add it as a tag. Already-added keys are marked with ✓ and cannot be added twice.
 
@@ -117,7 +117,7 @@ The **TIMING** block contains two optional fields for fine-grained control. Leav
 
 ### Step 5: Add Recipients
 
-**Notification type** — Select **Email** or **SMS** in the **NOTIFICATION TYPE** section. The appropriate recipient field will appear.
+**Notification type**: Select **Email** or **SMS** in the **NOTIFICATION TYPE** section. The appropriate recipient field will appear.
 
 **Email recipients:**
 1. Type an e-mail address in the *user@example.com* field.
@@ -128,7 +128,7 @@ The **TIMING** block contains two optional fields for fine-grained control. Leav
 Enter a phone number in international format: `+420600123456`. Adding works the same way as for e-mail.
 
 :::tip
-You can add any number of recipients to one rule — the notification is sent to all of them simultaneously.
+You can add any number of recipients to one rule. The notification is sent to all of them simultaneously.
 :::
 
 ### Step 6: Save the Rule
@@ -170,7 +170,7 @@ Deletion is permanent and cannot be undone. If you only want to temporarily stop
 
 ### Enabling / Disabling a Rule
 
-Each rule has a toggle switch in the **Enabled** column. Switching it off deactivates the rule — no notifications will be sent, but the rule remains saved and can be re-enabled at any time.
+Each rule has a toggle switch in the **Enabled** column. Switching it off deactivates the rule: no notifications will be sent, but the rule remains saved and can be re-enabled at any time.
 
 ![Rules table with two temperature rules, Enabled checkboxes, and Edit, Copy, and Delete action buttons](images/notifications-manager-3.png)
 
@@ -190,11 +190,11 @@ If your organisation manages sub-customers, a dropdown filter appears in the top
 
 Click any sortable column header to sort. Click again to reverse the order. An arrow indicator ˅/˄ shows the active sort direction. Sortable columns:
 
-- **Device(s)** — device name
-- **Customer** — customer name
-- **Variable(s)** — variable name
-- **Recipients** — notification type (email / SMS)
-- **Enabled** — active / inactive
+- **Device(s)**: device name
+- **Customer**: customer name
+- **Variable(s)**: variable name
+- **Recipients**: notification type (email / SMS)
+- **Enabled**: active / inactive
 
 ---
 
@@ -203,7 +203,7 @@ Click any sortable column header to sort. Click again to reverse the order. An a
 | Setting | What it does | When to use it |
 |---------|-------------|----------------|
 | **Duration** *(minutes)* | The condition must be continuously met for this many minutes before a notification is sent. A brief spike will not trigger an alert. | You want to ignore short or random fluctuations and only react to a sustained state. |
-| **Cooldown** *(minutes)* | Minimum time between two notifications for this rule. Even if the condition remains met, the next message will not be sent until this interval has elapsed. | You want to limit notification frequency — e.g. at most one alert per hour, not fifty. |
+| **Cooldown** *(minutes)* | Minimum time between two notifications for this rule. Even if the condition remains met, the next message will not be sent until this interval has elapsed. | You want to limit notification frequency, e.g. at most one alert per hour, not fifty. |
 
 :::info Recommended starter settings
 If you are unsure, set **Duration = 0** and **Cooldown = 30**. Notifications fire immediately when the condition is met, but no more than once every 30 minutes.
@@ -219,13 +219,13 @@ If you are unsure, set **Duration = 0** and **Cooldown = 30**. Notifications fir
 - Is **Duration** set to a high value? The condition must be met continuously for the full duration.
 - Is **Cooldown** active and has it not elapsed yet?
 - Is the e-mail address or phone number entered correctly?
-- Check your spam/junk folder — the notification e-mail may have been filtered.
+- Check your spam/junk folder: the notification e-mail may have been filtered.
 
 **Can I set one rule to apply to multiple devices and multiple variables at the same time?**  
 Yes. Add multiple devices and multiple variables when creating the rule. The rule is evaluated for each device + variable combination independently. When multiple devices are selected, the variable picker automatically shows which telemetry keys are common to all selected devices and which are specific to individual ones.
 
-**The language of the interface changed — how do I switch it back?**  
-Use the language selector in the top-right corner of the widget. Your choice is saved per user account — other users are not affected.
+**The language of the interface changed. How do I switch it back?**  
+Use the language selector in the top-right corner of the widget. Your choice is saved per user account. Other users are not affected.
 
 **What happens when I delete a rule that was saved on multiple devices?**  
 The rule is removed from all devices it was saved on. This action is irreversible.

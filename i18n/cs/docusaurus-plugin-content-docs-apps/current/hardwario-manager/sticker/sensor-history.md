@@ -15,7 +15,7 @@ přes NFC.
 3. Uložené záznamy se načtou a zobrazí k prohlédnutí.
 
 Protože jedno přiložení NFC přenese vždy jednu stránku, načítá se velký buffer
-po **stránkách** — přikládejte dál, dokud se nenačte všechno.
+po **stránkách**. Přikládejte dál, dokud se nenačte všechno.
 
 ---
 
@@ -29,7 +29,7 @@ Obrazovka je datový pohled, ne surový výpis:
 
 Časové značky závisejí na hodinách zařízení. Pokud byl čas zařízení
 synchronizovaný, nesou záznamy absolutní časové značky v UTC; pokud ne, zobrazí
-se relativně k okamžiku odečtu. Hodiny nastavíte přes **Tools → Sync time** —
+se relativně k okamžiku odečtu. Hodiny nastavíte přes **Tools → Sync time**,
 viz [**Nástroje**](./tools.md).
 
 ---
@@ -37,8 +37,8 @@ viz [**Nástroje**](./tools.md).
 ## Historii je nutné nejdřív zapnout {#history-has-to-be-enabled-first}
 
 Záznamy se ukládají jen tehdy, když je historie zapnutá. Zapněte ji a zvolte,
-které kanály se mají ukládat, v **Configuration → History** — viz
-[**Konfigurace**](./configuration.md) — nebo přes shell příkazy
+které kanály se mají ukládat, v **Configuration → History** (viz
+[**Konfigurace**](./configuration.md)) nebo přes shell příkazy
 `config history-enable` / `config history-sensors`, popsané v
 [**Historii senzorů (přístup pro vývojáře)**](/sticker/developer-access/sensor-history).
 

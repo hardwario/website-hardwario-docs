@@ -8,10 +8,10 @@ A Serial Peripheral Bus (**SPI**) is a synchronous serial bus. It’s used for f
 
 The SPI uses these signals:
 
-- **SCK - Serial Clock (P14 Core Module)** - SPI transfers are synchronous and need the clock signal
-- **MOSI - Master Out, Slave In (P13 Core Module)** - This is serial output **from MCU to the peripheral**
-- **MISO - Master In, Slave Out (P12 Core Module)** - This is serial input for data **from peripheral to MCU**
-- **NSS - Negative Slave Select (P15 Core Module)** - This signal activates the slave device. It’s **active low**, that’s why the word negative. If you have multiple slave devices you have **multiple NSS signals**. It’s sometimes also called the **Chip Select CS**.
+- **SCK (Serial Clock, P14 Core Module)**: SPI transfers are synchronous and need the clock signal
+- **MOSI (Master Out, Slave In, P13 Core Module)**: This is serial output **from MCU to the peripheral**
+- **MISO (Master In, Slave Out, P12 Core Module)**: This is serial input for data **from peripheral to MCU**
+- **NSS (Negative Slave Select, P15 Core Module)**: This signal activates the slave device. It’s **active low**, that’s why the word negative. If you have multiple slave devices you have **multiple NSS signals**. It’s sometimes also called the **Chip Select CS**.
 
 :::note
 

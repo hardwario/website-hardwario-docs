@@ -9,9 +9,9 @@ import Image from '@theme/IdealImage';
 This page explains how to register **HARDWARIO STICKER** as a LoRaWAN end device in **The Things Stack (TTS)** using **OTAA (Over-The-Air Activation)**, and how to add a payload formatter (decoder).
 
 Useful HARDWARIO docs:
-- TTS – End Devices  
+- TTS: End Devices  
   https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-end-devices
-- STICKER Decoder – https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- STICKER Decoder: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
 
 :::info
 Before registering your STICKER, make sure you have access to a **The Things Stack** deployment (Cloud, Community, or Enterprise) and that a LoRaWAN gateway is connected and online.
@@ -48,18 +48,18 @@ Inside your application:
 Select **Enter end device specifics manually**.
 
 Under **End Device Type**, configure:
-- Frequency plan – select your region (e.g. **Europe 863–870 MHz**)
-- LoRaWAN version – **LoRaWAN Specification 1.0.4**
-- Regional Parameters version – **RP002 Regional Parameters 1.0.4**
+- Frequency plan: select your region (e.g. **Europe 863–870 MHz**)
+- LoRaWAN version: **LoRaWAN Specification 1.0.4**
+- Regional Parameters version: **RP002 Regional Parameters 1.0.4**
 
 Under **Provisioning Information**, enter the **JoinEUI (AppEUI)** and click **Confirm**.
 
 ![TTS end device type settings](images/tts-create-end-device-lrw.png)
 
 Under **Device Identifiers**, fill in:
-- DevEUI – **DEVICE_EUI** (unique identifier printed on the device)
-- AppKey – **APPLICATION_KEY** (from HARDWARIO Manager)
-- Device ID – your chosen name for this device (e.g. **sticker-ox**)
+- DevEUI: **DEVICE_EUI** (unique identifier printed on the device)
+- AppKey: **APPLICATION_KEY** (from HARDWARIO Manager)
+- Device ID: your chosen name for this device (e.g. **sticker-ox**)
 
 Click **Register end device**.
 

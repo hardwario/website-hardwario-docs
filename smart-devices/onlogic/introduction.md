@@ -5,11 +5,11 @@ title: "OnLogic"
 
 # OnLogic
 
-[OnLogic](https://www.onlogic.com/) designs and manufactures industrial computers engineered for reliability in challenging environments — from factory floors to outdoor edge deployments.
+[OnLogic](https://www.onlogic.com/) designs and manufactures industrial computers engineered for reliability in challenging environments, from factory floors to outdoor edge deployments.
 
 ---
 
-OnLogic hardware is used in HARDWARIO projects as **edge computing nodes** — combining local data processing, protocol translation, and cloud connectivity in demanding industrial conditions.
+OnLogic hardware is used in HARDWARIO projects as **edge computing nodes**, combining local data processing, protocol translation, and cloud connectivity in demanding industrial conditions.
 
 ## Key Products
 

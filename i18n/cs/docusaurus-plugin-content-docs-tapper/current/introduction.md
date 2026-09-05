@@ -11,13 +11,13 @@ import Image from '@theme/IdealImage';
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Instalace klienta**](installation) – Instalace klienta TAPPER na zařízení TAPPER.
-* [**Popis hardwaru**](hardware) – Napájecí připojení, specifikace provozních podmínek.
-* [**Používání klienta**](usage) – Používání klienta TAPPER.
-* [**Vylepšení zabezpečení**](security) – Tipy pro vyšší bezpečnost.
-* [**MQTT přes TLS**](tls-setup) – Návod na nastavení MQTT přes TLS.
-* [**Specifikace MQTT**](api-spec) – Specifikace MQTT API.
-* [**Seznam změn**](changelog) – Nejnovější změny firmwaru a platformy.
+* [**Instalace klienta**](installation): Instalace klienta TAPPER na zařízení TAPPER.
+* [**Popis hardwaru**](hardware): Napájecí připojení, specifikace provozních podmínek.
+* [**Používání klienta**](usage): Používání klienta TAPPER.
+* [**Vylepšení zabezpečení**](security): Tipy pro vyšší bezpečnost.
+* [**MQTT přes TLS**](tls-setup): Návod na nastavení MQTT přes TLS.
+* [**Specifikace MQTT**](api-spec): Specifikace MQTT API.
+* [**Seznam změn**](changelog): Nejnovější změny firmwaru a platformy.
 
 ## Typické případy použití {#typical-use-cases}
 

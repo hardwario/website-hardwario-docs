@@ -50,8 +50,8 @@ Při práci s **CHESTER SDK** obvykle nebudete muset I²C adresy vyhledávat. V�
 | CHESTER-S1     | `0x44`  | SHT40-AD1B      |                                    |
 | CHESTER-S2     | `0x45`  | SHT30           | Externí senzor                     |
 | CHESTER-G1     | `0x45`  | OPT3001         |                                    |
-| CHESTER-X3     | `0x46`  | ADS122C04 - CH1 | Adresa ve slotu A                  |
-| CHESTER-X3     | `0x47`  | ADS122C04 - CH2 | Adresa ve slotu A                  |
+| CHESTER-X3     | `0x46`  | ADS122C04 (CH1) | Adresa ve slotu A                  |
+| CHESTER-X3     | `0x47`  | ADS122C04 (CH2) | Adresa ve slotu A                  |
 | CHESTER-M      | `0x48`  | TMP112          |                                    |
 | CHESTER-X4     | `0x49`  | TLA2021         |                                    |
 | CHESTER-X10    | `0x49`  | TLA2024         |                                    |
@@ -59,12 +59,12 @@ Při práci s **CHESTER SDK** obvykle nebudete muset I²C adresy vyhledávat. V�
 | CHESTER-X99    | `0x49`  | TLA2021         |                                    |
 | CHESTER-C5     | `0x49`  | TLA2024         |                                    |
 | CHESTER-C6     | `0x49`  | TLA2021         |                                    |
-| CHESTER-X3     | `0x4a`  | ADS122C04 - CH1 | Adresa ve slotu B                  |
+| CHESTER-X3     | `0x4a`  | ADS122C04 (CH1) | Adresa ve slotu B                  |
 | CHESTER-M      | `0x4b`  | TLA2021         |                                    |
 | CHESTER-V1     | `0x4c`  | SC16IS740       |                                    |
 | CHESTER-X6     | `0x4d`  | SC16IS740       |                                    |
 | CHESTER-B1     | `0x4e`  | SC16IS740       |                                    |
-| CHESTER-X3     | `0x4f`  | ADS122C04 - CH2 | Adresa ve slotu B                  |
+| CHESTER-X3     | `0x4f`  | ADS122C04 (CH2) | Adresa ve slotu B                  |
 | CHESTER-X2     | `0x50`  | SC16IS740       | Adresa ve slotu A                  |
 | CHESTER-X2     | `0x51`  | SC16IS740       | Adresa ve slotu B                  |
 | CHESTER-X12    | `0x54`  | SC16IS740IPW    |                                    |

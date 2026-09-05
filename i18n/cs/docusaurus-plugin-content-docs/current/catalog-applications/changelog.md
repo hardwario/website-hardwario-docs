@@ -12,7 +12,7 @@ Tato stránka zachycuje všechny významné změny ve firmwaru katalogových apl
 
 :::tip Nejnovější vydání
 
-**SDK v4.0.0** (2026-08-10) — [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Soubory firmwaru ke stažení](catalog-applications#application-firmware)
+**SDK v4.0.0** (2026-08-10): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Soubory firmwaru ke stažení](catalog-applications#application-firmware)
 
 :::
 
@@ -66,7 +66,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 *NCS **2.9.0** · Zephyr **3.7.99** · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5)*
 
 ### SDK / Common {#sdk--common-1}
-- Blikání LED převedeno na neblokující přístup s omezením frekvence — zabraňuje blokování během blikacích sekvencí
+- Blikání LED převedeno na neblokující přístup s omezením frekvence: zabraňuje blokování během blikacích sekvencí
 - LoRaWAN payload pro 8kanálovou variantu X0 rozdělen do dvou zpráv, aby splňoval limit 51 bajtů
 - Přidáno API pro stav synchronizace RTC: `ctr_rtc_is_synced()`, `ctr_rtc_get_ts_ms()`, `ctr_rtc_set_event_cb()`
 - Přechod na verzování podle git tagů (soubory VERSION odstraněny)
@@ -75,22 +75,22 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 - Rozšířeny ovladače elektroměrů; kódování CBOR převedeno na nativní float32
 
 ### CHESTER Scale {#chester-scale}
-- Přidána detekce CHESTER-X3 ve slotu B za běhu — jediný firmware nyní pokrývá jednoslotový (A) i dvouslotový (A+B) hardware; kanály B1/B2 se při chybějícím modulu přeskočí s informačním logem místo hlášení chyb měření
+- Přidána detekce CHESTER-X3 ve slotu B za běhu: jediný firmware nyní pokrývá jednoslotový (A) i dvouslotový (A+B) hardware; kanály B1/B2 se při chybějícím modulu přeskočí s informačním logem místo hlášení chyb měření
 
 ### CHESTER Control {#chester-control-1}
-- Snížena paměťová náročnost — data půdních senzorů a teploměrů jsou nyní alokována dynamicky
+- Snížena paměťová náročnost: data půdních senzorů a teploměrů jsou nyní alokována dynamicky
 
 ---
 
 ## v3.5.4 (2026-04-14) {#v354-2026-04-14}
 
 ### SDK / Common {#sdk--common-2}
-- Přidána detekce CHESTER-Z za běhu — jediný firmware funguje s modulem Z i bez něj
+- Přidána detekce CHESTER-Z za běhu: jediný firmware funguje s modulem Z i bez něj
 - Přidán shell příkaz pro skenování sběrnice 1-Wire (W1)
 - Deploy skript aktualizován o argumenty CLI a kompletní seznam aplikací
 
 ### CHESTER Clime {#chester-clime}
-- Detekce CHESTER-Z za běhu — odstraněna samostatná varianta Clime Z
+- Detekce CHESTER-Z za běhu: odstraněna samostatná varianta Clime Z
 - Opravena chyba buildu varianty IAQ, když jsou přítomny funkce Z i X10
 
 ### CHESTER Control {#chester-control-2}
@@ -121,7 +121,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 ## v3.5.1 (2025-12-08) {#v351-2025-12-08}
 
 ### SDK / Common {#sdk--common-4}
-- Přidáno API pro cloudové metriky — zpřístupňuje počítadla uplinků/downlinků, chyby a diagnostiku
+- Přidáno API pro cloudové metriky: zpřístupňuje počítadla uplinků/downlinků, chyby a diagnostiku
 - Podpora soft timeoutu pro operace odesílání do cloudu a downlinku
 - Nebezpečné konfigurační příkazy filtrovány z cloudových downloadů
 - Ve všech aplikacích zavedena společná struktura pro agregaci dat (`ctr_data_aggreg`)
@@ -150,7 +150,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 - Opraven kalibrační rozsah, přidán watchdog pro downlink
 
 ### CHESTER Meteo {#chester-meteo}
-- Přidána varianta CHESTER Meteo M (Modbus RTU — senzory Lambrecht, Sensecap/OPM)
+- Přidána varianta CHESTER Meteo M (Modbus RTU: senzory Lambrecht, Sensecap/OPM)
 - Přidána podpora půdních senzorů
 - Přidána podpora LoRaWAN
 - Vylepšena podpora pyranometru
@@ -159,7 +159,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 - Přidána podpora LoRaWAN (LRW)
 
 ### CHESTER Motion {#chester-motion}
-- Přidáno jako nová katalogová aplikace — detekce pohybu založená na PIR
+- Přidáno jako nová katalogová aplikace: detekce pohybu založená na PIR
 
 ### CHESTER wM-Bus {#chester-wm-bus}
 - Přidáno jako nová katalogová aplikace

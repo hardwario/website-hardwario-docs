@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 # FIBER Changelog
 
-This page tracks all notable changes across the FIBER platform — including **firmware** and **hardware**. Use the tabs below to filter by change category.
+This page tracks all notable changes across the FIBER platform, including **firmware** and **hardware**. Use the tabs below to filter by change category.
 
 :::info
 

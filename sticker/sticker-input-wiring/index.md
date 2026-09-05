@@ -8,8 +8,8 @@ import Image from '@theme/IdealImage';
 
 ## DIP Switch Legend
 
-- |🟥←| **ON** — DIP switch in the ON position (red)
-- |→⬛| **OFF** — DIP switch in the OFF position (black)
+- |🟥←| **ON**: DIP switch in the ON position (red)
+- |→⬛| **OFF**: DIP switch in the OFF position (black)
 
 ## 1-Wire Input
 Wiring for 1-WIRE (Dallas, ...):

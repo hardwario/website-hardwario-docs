@@ -24,7 +24,7 @@ https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
 
 ## Předpoklady {#prerequisites}
 - Přístup do správcovského rozhraní zařízení EMBER (**WebFig** nebo **WinBox**)
-- Koncový bod brány v ChirpStack (hostname/IP + UDP porty) — typicky koncový bod **Gateway Bridge**
+- Koncový bod brány v ChirpStack (hostname/IP + UDP porty): typicky koncový bod **Gateway Bridge**
 - Pokud nepoužíváte spravovaný síťový server HARDWARIO, nasměrujte adresu serveru LoRaWAN na **svůj vlastní** LoRaWAN server (žádné VPN tunely nejsou potřeba).
 
 ---
@@ -78,7 +78,7 @@ V systému MikroTik RouterOS se EUI brány zobrazuje jako **Gateway ID**:
 ---
 
 ## Odkazy na dekodéry payloadu (pro koncová zařízení) {#payload-decoder-links-for-end-devices}
-EMBER (brána) pakety pouze přeposílá — dekódování payloadu se v ChirpStack nastavuje **pro každé koncové zařízení/aplikaci** zvlášť.
+EMBER (brána) pakety pouze přeposílá. Dekódování payloadu se v ChirpStack nastavuje **pro každé koncové zařízení/aplikaci** zvlášť.
 
 Ukázkový dekodér (CHESTER Clime):
 - Složka s kodekem: https://github.com/hardwario/chester-sdk/tree/main/applications/clime/codec

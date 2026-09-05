@@ -117,7 +117,7 @@ config save
 
 ## Otestované SIM karty a operátoři {#tested-sim-cards-and-operators}
 
-Níže uvedené kombinace byly ověřeny společností **HARDWARIO** v provozu. Tento seznam se rozšiřuje s uváděním dalších operátorů do provozu - pokud tu váš operátor není, neznamená to, že zařízení nebude fungovat, jen jsme to sami neověřili.
+Níže uvedené kombinace byly ověřeny společností **HARDWARIO** v provozu. Tento seznam se rozšiřuje s uváděním dalších operátorů do provozu. Pokud tu váš operátor není, neznamená to, že zařízení nebude fungovat, jen jsme to sami neověřili.
 
 {/* Growth table: add a row for every newly validated operator / SIM card variant. Keep the Status column honest - only mark a row as verified once it has actually run in the field. */}
 
@@ -129,7 +129,7 @@ Níže uvedené kombinace byly ověřeny společností **HARDWARIO** v provozu. 
 | **Onomondo** | Více operátorů | NB-IoT, LTE-M | `onomondo` | APN potvrzeno, není potřeba uzamčení pásma ani PLMN. |
 | **Slovak Telekom** | Slovensko | NB-IoT | `nbiot.telekom.sk` | |
 | **Mobily** | Saúdská Arábie | NB-IoT | `M2M-NB` | |
-| **Vodafone Ukraine** | Ukrajina | pouze NB-IoT | *(prázdné)* | Vyžaduje firmware modemu **Nordic nRF9160** verze **v1.3.7** - viz [**Firmware modemu Nordic nRF9160**](../../firmware-flashing/lte-modem-over-j-link.md#nordic-nrf9160-modem-firmware). Jinak použijte nastavení z části [**Ostatní SIM karty**](#other-sim-cards) bez úprav. |
+| **Vodafone Ukraine** | Ukrajina | pouze NB-IoT | *(prázdné)* | Vyžaduje firmware modemu **Nordic nRF9160** verze **v1.3.7**, viz [**Firmware modemu Nordic nRF9160**](../../firmware-flashing/lte-modem-over-j-link.md#nordic-nrf9160-modem-firmware). Jinak použijte nastavení z části [**Ostatní SIM karty**](#other-sim-cards) bez úprav. |
 
 :::note
 

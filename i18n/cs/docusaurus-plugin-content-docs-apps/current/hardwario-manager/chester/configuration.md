@@ -7,7 +7,7 @@ description: "Otevřete CHESTER → Configuration. Aplikace přečte konfiguraci
 # Konfigurace zařízení CHESTER {#configure-a-chester}
 
 Otevřete **CHESTER → Configuration**. Aplikace přečte konfiguraci zařízení a pak
-nabídne dva pohledy na ni — vedené **Quick Set-up** a plnou **Advanced
+nabídne dva pohledy na ni: vedené **Quick Set-up** a plnou **Advanced
 Configuration**. Vaše úpravy se mezi nimi přenášejí a do zařízení se nic
 nedostane, dokud neuložíte.
 
@@ -30,7 +30,7 @@ pod polem.
 
 ### Komunikační režim {#communication-mode}
 
-**None**, **LTE** nebo **LoRaWAN**. Sekce níž se této volbě přizpůsobí — zvolte
+**None**, **LTE** nebo **LoRaWAN**. Sekce níž se této volbě přizpůsobí. Zvolte
 LTE a objeví se sekce LTE, zvolte LoRaWAN a dostanete tu pro LoRaWAN.
 
 ### LTE {#lte}
@@ -46,7 +46,7 @@ LTE a objeví se sekce LTE, zvolte LoRaWAN a dostanete tu pro LoRaWAN.
 
 :::info APN je v Advanced Configuration
 Quick Set-up pole **APN** nemá. Pokud vaše SIM potřebuje konkrétní APN, nastavte
-ho v **Advanced Configuration → LTE**, kde je celá sada parametrů LTE — APN, síť,
+ho v **Advanced Configuration → LTE**, kde je celá sada parametrů LTE: APN, síť,
 autentizace a zbytek.
 :::
 
@@ -54,7 +54,7 @@ autentizace a zbytek.
 
 Volba **LoRaWAN** jako komunikačního režimu vám dá režim aktivace
 (**OTAA** nebo **ABP**), regionální **band**, **class** zařízení a identifikátory
-a klíče pro zvolený režim aktivace — DevEUI, JoinEUI a AppKey pro OTAA; DevAddr a
+a klíče pro zvolený režim aktivace: DevEUI, JoinEUI a AppKey pro OTAA; DevAddr a
 klíče session pro ABP.
 
 Pole s klíči přijímají hex s oddělovači i bez nich a zobrazují očekávaný počet
@@ -66,15 +66,15 @@ hodnotu.
 ## Advanced Configuration {#advanced-configuration}
 
 **Go to Advanced Configuration** zobrazí **každý** parametr, který zařízení hlásí,
-seskupený do sbalitelných karet. Které skupiny se objeví, závisí na zařízení — to
+seskupený do sbalitelných karet. Které skupiny se objeví, závisí na zařízení. To
 níže hlásí Application, LoRaWAN, LTE a BLE tags. Podtitulek každé karty počítá
 nastavení, která obsahuje.
 
 <img src="/img/hw-manager/hw-manager-chester-advanced.png" alt="Advanced Configuration se skupinami Application, LoRaWAN, LTE a BLE tags a počty jejich nastavení" width="320" />
 
-Rozbalte skupinu a každé nastavení se vykreslí podle svého typu — přepínač
+Rozbalte skupinu a každé nastavení se vykreslí podle svého typu: přepínač
 u booleanu, rozbalovací nabídka u pevné sady voleb, číselné pole s jednotkou a
-povoleným rozsahem — a pod tím je popis přímo z firmwaru.
+povoleným rozsahem, a pod tím je popis přímo z firmwaru.
 
 <img src="/img/hw-manager/hw-manager-chester-advanced-application.png" alt="Rozbalená skupina Application s přepínačem, dvěma poli intervalů s rozsahy a rozbalovací nabídkou režimu" width="320" />
 
@@ -84,7 +84,7 @@ povoleným rozsahem — a pod tím je popis přímo z firmwaru.
 
 ## Ukládání {#saving}
 
-**Save to CHESTER** — v pokročilém pohledu **Save to device** — zapíše každé
+**Save to CHESTER** (v pokročilém pohledu **Save to device**) zapíše každé
 změněné nastavení a pak je zapíše do paměti zařízení. Tlačítko zůstává neaktivní,
 dokud se něco nezmění a všechno není validní; hodnota mimo rozsah se označí a
 zápis zablokuje.
@@ -94,7 +94,7 @@ přečte a řekne vám, co se stalo:
 
 - pokud zařízení hodnotu odmítne, uložení selže a cituje vlastní slova zařízení;
 - pokud zápis selže v polovině, aplikace pojmenuje nastavení, které selhalo, a
-  upozorní, že konfigurace byla uložená jen částečně — načtěte ji znovu, abyste
+  upozorní, že konfigurace byla uložená jen částečně. Načtěte ji znovu, abyste
   viděli aktuální stav;
 - pokud zápisy projdou, ale závěrečné potvrzení selže, aplikace upozorní, že se
   hodnoty při dalším restartu ztratí.

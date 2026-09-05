@@ -1,7 +1,7 @@
 ---
 slug: about-power-module
 title: O modulu Power Module
-description: "Tento modul dokáže napájet node HARDWARIO TOWER - Industrial IoT Kit díky integrovanému LDO regulátoru. LDO generuje výstup 3,3 V ze vstupu 5 V."
+description: "Tento modul dokáže napájet node HARDWARIO TOWER Industrial IoT Kit díky integrovanému LDO regulátoru. LDO generuje výstup 3,3 V ze vstupu 5 V."
 ---
 import Image from '@theme/IdealImage';
 
@@ -15,7 +15,7 @@ import Image from '@theme/IdealImage';
         <b>Power Module</b> umožňuje připojit 5 V DC napájecí adaptér přes standardní napájecí konektor 2,1 mm. Obsahuje <b>výkonové relé</b> (230 V AC / 16 A) pro ovládání vašich spotřebičů. Také s ním můžete řídit <b>digitální LED pásek</b> (kompatibilní s WS2812B).
       </p>
       <p>
-        Tento modul dokáže napájet node HARDWARIO TOWER - Industrial IoT Kit díky integrovanému LDO regulátoru. LDO generuje výstup 3,3 V ze vstupu 5 V.
+        Tento modul dokáže napájet node HARDWARIO TOWER Industrial IoT Kit díky integrovanému LDO regulátoru. LDO generuje výstup 3,3 V ze vstupu 5 V.
       </p>
       <p>
         Spolehlivost je důležitá – proto jsme na vstupu napájecího konektoru implementovali inteligentní ochranu proti přepětí, podpětí a obrácené polaritě. Tato funkce zaručuje, že vstupní napětí vždy zůstane ve správných limitech.

@@ -16,7 +16,7 @@ k zařízení.
 |---|---|
 | **Reboot device** | Restartuje zařízení; zachová všechna nastavení i data |
 | **Reset counters** | Vynuluje čítače Hallových kontaktů a vstupů |
-| **Device reset** | Vrátí nastavení, ale zachová spojení LoRaWAN — zařízení zůstává zprovozněné |
+| **Device reset** | Vrátí nastavení, ale zachová spojení LoRaWAN. Zařízení zůstává zprovozněné |
 | **Factory reset** | Vrátí nastavení a zahodí session i klíče LoRaWAN, takže se zařízení do sítě připojí znovu. Identitu zařízení zachová |
 
 ---
@@ -32,7 +32,7 @@ Dvě další operace jsou v **STICKER → Tools → Vendor changes**. Autentizuj
 | Operace | Co dělá |
 |---|---|
 | **Change secret key** | Nastaví na zařízení nový secret key |
-| **Vendor reset** | Vymaže zařízení až na sériové číslo a vendor token — konfigurace, klíče LoRaWAN i secret key se smažou — a nastaví nový secret key |
+| **Vendor reset** | Vymaže zařízení až na sériové číslo a vendor token. Konfigurace, klíče LoRaWAN i secret key se smažou, a nastaví nový secret key |
 
 Obrazovka umí **načíst vendor token z Saved STICKERs**: klepnutím na zařízení
 přečtete jeho sériové číslo a aplikace doplní token, který k němu má uložený.
@@ -45,12 +45,12 @@ byste cokoli ručně přepisovali.
 :::caution Change secret key zároveň resetuje konfiguraci
 Současný firmware neumí překlíčování na místě, takže **Change secret key**
 resetuje i konfiguraci zařízení. Počítejte s tím, že ji budete muset znovu
-aplikovat — se [**šablonou**](./templates.md) je to na jedno klepnutí.
+aplikovat. Se [**šablonou**](./templates.md) je to na jedno klepnutí.
 :::
 
 :::danger Bez možnosti vzít zpět
 **Factory reset** zahodí session a klíče LoRaWAN, takže se zařízení do sítě
 připojí znovu. **Vendor reset** vymaže zařízení až na sériové číslo a vendor
-token a nastaví nový secret key. Ani jedno nelze vzít zpět — použijte je jen
+token a nastaví nový secret key. Ani jedno nelze vzít zpět. Použijte je jen
 tehdy, když skutečně chcete začít z čistého stavu.
 :::

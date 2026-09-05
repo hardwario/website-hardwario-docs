@@ -12,11 +12,11 @@ Tato stránka vysvětluje, jak zaregistrovat zařízení **HARDWARIO STICKER** j
 Užitečná dokumentace HARDWARIO:
 - Instalace ChirpStack v4  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
-- ChirpStack v4 – koncová zařízení  
+- ChirpStack v4: koncová zařízení  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices
-- ChirpStack v4 – dekódování dat (ukázka kodeku pro STICKER)  
+- ChirpStack v4: dekódování dat (ukázka kodeku pro STICKER)  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding
-- Dekodér STICKER - https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- Dekodér STICKER: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
 
 :::info
 Než zařízení STICKER zaregistrujete, ujistěte se, že je **ChirpStack v4 nainstalovaný a běží**.
@@ -55,7 +55,7 @@ V ChirpStack v4:
 ![Chirpstack vytvoření profilu zařízení](../../../../../sticker/connectivity/images/chripstack-add-profile.png)
 
 Dále nastavte tyto parametry:
-- Name: **STICKER - ABP** (nebo vlastní označení zařízení)
+- Name: **STICKER-ABP** (nebo vlastní označení zařízení)
 - MAC Version: **LoRaWAN 1.0.4**
 - Region: **EU866** (nebo US915, pokud jste mimo EU)
 - Expected uplink interval: **X** (podle konfigurace firmwaru vašeho zařízení STICKER)

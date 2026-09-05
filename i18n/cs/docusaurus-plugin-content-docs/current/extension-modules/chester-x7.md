@@ -1,7 +1,7 @@
 ---
 slug: chester-x7
 title: CHESTER-X7 (1kanálový diferenciální vstup)
-description: Rozšiřující modul s analogovým vstupem pro platformu CHESTER — jeden diferenciální vstup pro proudové sondy a průmyslové senzory, jeden nesymetrický napěťový vstup 0–28 V a přepínatelný výstup 5 V pro napájení sond.
+description: "Rozšiřující modul s analogovým vstupem pro platformu CHESTER: jeden diferenciální vstup pro proudové sondy a průmyslové senzory, jeden nesymetrický napěťový vstup 0–28 V a přepínatelný výstup 5 V pro napájení sond."
 keywords: [CHESTER-X7, diferenciální vstup, analogový vstup, proudová sonda, měření proudu, napěťový vstup, 0-28V, OPA4387, TPS61099, průmyslový senzor, CHESTER]
 ---
 import Image from '@theme/IdealImage';
@@ -22,7 +22,7 @@ import Image from '@theme/IdealImage';
 
 ## Přehled modulu {#module-overview}
 
-CHESTER-X7 poskytuje **diferenciální vstup** (INP/INM) pro proudové sondy a další průmyslové senzory a nesymetrický **napěťový vstup** (VIN) pro signály 0–28 V. Diferenciální vstup je oddělený přesnými stupni operačních zesilovačů bez driftu (**OPA4387**) a přiveden na analogové vstupy zařízení CHESTER (INP → A0, INM → A1). Napěťový vstup je zmenšený přesným rezistorovým děličem a čte se na A2. CHESTER-X7 nemá rozhraní I²C ani SPI — všechny tři signály čte přímo ADC základní desky CHESTER.
+CHESTER-X7 poskytuje **diferenciální vstup** (INP/INM) pro proudové sondy a další průmyslové senzory a nesymetrický **napěťový vstup** (VIN) pro signály 0–28 V. Diferenciální vstup je oddělený přesnými stupni operačních zesilovačů bez driftu (**OPA4387**) a přiveden na analogové vstupy zařízení CHESTER (INP → A0, INM → A1). Napěťový vstup je zmenšený přesným rezistorovým děličem a čte se na A2. CHESTER-X7 nemá rozhraní I²C ani SPI. Všechny tři signály čte přímo ADC základní desky CHESTER.
 
 Modul také vytváří stabilizovaný **výstup 5.0 V** (VOUT) pro napájení připojených sond. Vzniká z větve +V boost převodníkem (**TPS61099**) a za ním nízkošumovým LDO (**TPS7A2050**) a zapíná se z firmwaru pinem **GP3/A3** slotu, takže lze napájení sond mezi měřeními vypnout a šetřit energii.
 
@@ -30,7 +30,7 @@ Modul také vytváří stabilizovaný **výstup 5.0 V** (VOUT) pro napájení p�
 
 * **Diferenciální vstup:** Jeden diferenciální vstup (INP/INM) pro proudové sondy a průmyslové senzory, oddělený přesnými stupni OPA4387.
 * **Napěťový vstup:** Jeden nesymetrický vstup 0–28 V (VIN), přesně dělený pro ADC zařízení CHESTER.
-* **Analogové rozhraní:** Signály se čtou přímo na analogových vstupech CHESTER (A0/A1/A2) — I²C ani SPI není potřeba.
+* **Analogové rozhraní:** Signály se čtou přímo na analogových vstupech CHESTER (A0/A1/A2), I²C ani SPI není potřeba.
 * **Přepínatelné napájení sond:** Stabilizovaný výstup 5.0 V (VOUT) pro napájení sond, zapínaný přes GP3/A3.
 * **Přesná analogová část:** Operační zesilovač OPA4387 bez driftu a rezistory 0,1 % pro přesné měření s malým driftem.
 
@@ -38,7 +38,7 @@ Modul také vytváří stabilizovaný **výstup 5.0 V** (VOUT) pro napájení p�
 
 * **Měření proudu:** Odečet proudových sond, proudových transformátorů (CT) a senzorů proudu se shuntem.
 * **Připojení průmyslových senzorů:** Diferenciální senzory a snímače, které potřebují napájený a oddělený vstupní stupeň.
-* **Monitorování napětí:** Měření stejnosměrných napětí do 28 V — bateriové banky, napájecí větve a průmyslové signály.
+* **Monitorování napětí:** Měření stejnosměrných napětí do 28 V: bateriové banky, napájecí větve a průmyslové signály.
 * **Monitorování procesů a energií:** Sledování zatížení, výkonu a spotřeby v průmyslových a budovních systémech.
 * **Sběr analogových signálů:** Univerzální sběr nízkoúrovňových diferenciálních i nesymetrických signálů.
 
@@ -93,7 +93,7 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 
 ### Vedení signálů (analogové) {#signal-routing-analog}
 
-CHESTER-X7 nemá žádné zařízení na I²C ani SPI — měření se čtou přímo na analogových vstupech zařízení CHESTER a jeden pin GP přepíná napájení sond. Piny slotu se používají takto:
+CHESTER-X7 nemá žádné zařízení na I²C ani SPI. Měření se čtou přímo na analogových vstupech zařízení CHESTER a jeden pin GP přepíná napájení sond. Piny slotu se používají takto:
 
 | Pin CHESTER-X | Směr | Funkce |
 | :--- | :--- | :--- |
@@ -147,7 +147,7 @@ CHESTER-X7 lze v rámci CHESTER SDK použít přes shieldy `ctr_x7_a` a `ctr_x7_
 
 ## Schémata {#schematic-diagrams}
 
-Kompletní schéma — napájení sond přes boost a LDO a vstupní stupeň pro diferenciální a napěťový vstup — je k dispozici jako PDF:
+Kompletní schéma (napájení sond přes boost a LDO a vstupní stupeň pro diferenciální a napěťový vstup) je k dispozici jako PDF:
 
 - [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x7-r2.1.pdf)
 - [Interaktivní prohlížeč CHESTER-X7](pathname:///download/ibom/hio-chester-x7-r2.1.html)

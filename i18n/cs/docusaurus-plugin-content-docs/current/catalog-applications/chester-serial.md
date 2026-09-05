@@ -13,9 +13,9 @@ Tento článek popisuje základní funkcionalitu, popis hardwaru, výchozí konf
 
 Některé základy zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps) – jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md) – jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](../category/platform-connectivity) – jak pracovat s interaktivní konzolí.
+- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Správa platformy**](../category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -24,8 +24,8 @@ Některé základy zde nejsou uvedeny, protože jsou společné pro všechny kat
 **CHESTER Serial** je univerzální aplikace pro průmyslovou sériovou komunikaci. Funguje jako flexibilní brána pro integraci průmyslových zařízení (senzorů, elektroměrů) do cloudu přes LTE-M/NB-IoT nebo LoRaWAN.
 
 Aplikace podporuje dvě komunikační rozhraní podle nainstalovaného rozšiřujícího modulu:
-* **RS-485** (s modulem [**CHESTER-X2**](../extension-modules/chester-x2.md)) — Modbus RTU Master, sběrnice multi-drop, až 8 podřízených zařízení
-* **RS-232** (s modulem [**CHESTER-X12**](../extension-modules/chester-x12.md)) — spojení bod-bod, 1 zařízení
+* **RS-485** (s modulem [**CHESTER-X2**](../extension-modules/chester-x2.md)): Modbus RTU Master, sběrnice multi-drop, až 8 podřízených zařízení
+* **RS-232** (s modulem [**CHESTER-X12**](../extension-modules/chester-x12.md)): spojení bod-bod, 1 zařízení
 
 Podporuje 11 typů zařízení včetně elektroměrů, environmentálních senzorů a obecných Modbus zařízení. Data jsou přenášena přes LTE (kódování CBOR) nebo LoRaWAN (optimalizované binární kódování s balením více zařízení).
 
@@ -43,10 +43,10 @@ Tato varianta je vybavena rozšiřujícím modulem **CHESTER-X2**. Je určena pr
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-CGLS` - Standardní základní deska
-* `CHESTER-X2` - Modul rozhraní RS-485
-* `CHESTER-X10` - Externí napájecí vstup (5-28 V DC)
-* `CHESTER-E2-LP` - Krabička s SMA pigtailem
+* `CHESTER-M-CGLS`: Standardní základní deska
+* `CHESTER-X2`: Modul rozhraní RS-485
+* `CHESTER-X10`: Externí napájecí vstup (5-28 V DC)
+* `CHESTER-E2-LP`: Krabička s SMA pigtailem
 
 Více informací viz [**Objednací kódy**](../ordering-codes.md).
 
@@ -60,9 +60,9 @@ Tato varianta je vybavena rozšiřujícím modulem **CHESTER-X12**. Je určena p
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-CGLS` - Standardní základní deska
-* `CHESTER-X12` - Modul rozhraní RS-232
-* `CHESTER-E2-LP` - Krabička s SMA pigtailem
+* `CHESTER-M-CGLS`: Standardní základní deska
+* `CHESTER-X12`: Modul rozhraní RS-232
+* `CHESTER-E2-LP`: Krabička s SMA pigtailem
 
 Více informací viz [**Objednací kódy**](../ordering-codes.md).
 
@@ -163,7 +163,7 @@ app config device-7
 
 :::info
 
-Celou strukturu stromu příkazů můžete snadno prozkoumat — začněte příkazem `help`.
+Celou strukturu stromu příkazů můžete snadno prozkoumat. Začněte příkazem `help`.
 
 :::
 
@@ -262,10 +262,10 @@ app config device-<n> "<type>,<addr>,<timeout>"
 ```
 
 Kde:
-* `n` — index slotu zařízení (0–7)
-* `type` — řetězec typu zařízení (viz tabulka Podporovaná zařízení)
-* `addr` — adresa Modbus slave (1–247), vyžadována v režimu Modbus
-* `timeout` — časový limit odpovědi v sekundách (výchozí: 1)
+* `n`: index slotu zařízení (0–7)
+* `type`: řetězec typu zařízení (viz tabulka Podporovaná zařízení)
+* `addr`: adresa Modbus slave (1–247), vyžadována v režimu Modbus
+* `timeout`: časový limit odpovědi v sekundách (výchozí: 1)
 
 **Příklady konfigurace:**
 
@@ -482,14 +482,14 @@ Kvůli omezením velikosti payloadu v LoRaWAN jsou hodnoty zařízení kódován
 
 ## Seznam změn {#changelog}
 
-### v4.0.0 — 2026-08-10 {#v400--2026-08-10}
+### v4.0.0 – 2026-08-10 {#v400--2026-08-10}
 
 - **Přidáno**: Ovladač pro střídač **SolaX X3-Hybrid G3**
 - **Přidáno**: Ovladač pro radonovou sondu [**Piketronic RPP-R**](../supported-devices/modbus/piketronic-rpp-r.md) (typ `piketronic`)
 
-### v3.5.0 — 2025-12-03 {#v350--2025-12-03}
+### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Podpora LoRaWAN — optimalizované binární kódování s balením více zařízení pro efektivní využití přenosového pásma
+- **Přidáno**: Podpora LoRaWAN: optimalizované binární kódování s balením více zařízení pro efektivní využití přenosového pásma
 - **Přidáno**: Podpora rozhraní RS-232 přes rozšiřující modul CHESTER-X12 (vedle stávajícího RS-485/CHESTER-X2)
 - **Přidáno**: 10 profilů typů zařízení včetně elektroměrů, environmentálních senzorů a obecných zařízení Modbus RTU
 - **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); firmware pro Cloud v1 nebyl pro tuto aplikaci k dispozici

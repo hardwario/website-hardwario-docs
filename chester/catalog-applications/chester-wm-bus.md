@@ -30,7 +30,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 ## Application Overview
 
-**CHESTER wM-Bus** is a **Wireless M-Bus** gateway. It **supports all wM-Bus meters of the T1 and C1 classes, regardless of manufacturer**, and works as a **pass-thru gateway** — the decoding of the received telegrams into meaningful units happens in the end IoT application.
+**CHESTER wM-Bus** is a **Wireless M-Bus** gateway. It **supports all wM-Bus meters of the T1 and C1 classes, regardless of manufacturer**, and works as a **pass-thru gateway**: the decoding of the received telegrams into meaningful units happens in the end IoT application.
 
 The device listens for the configured wM-Bus meters in specific intervals, aggregates the raw received wM-Bus packets and sends them over the **NB-IoT/LTE-M** network.
 
@@ -42,7 +42,7 @@ The device can be configured to do **periodic**, **daily**, **weekly** or **mont
 
 The device has a sufficiently low power consumption that it can operate from batteries for 7+ years at a daily readout. A version with an external power supply can also be ordered.
 
-CHESTER wM-Bus only receives raw hexadecimal wM-Bus telegrams. Neither the device nor HARDWARIO Cloud interprets the meter data — each wM-Bus meter has its own representation of the encoded data, and the telegrams may also be encrypted. Decoding the raw hexadecimal values into meaningful units is up to the customer or integrator. Encrypted telegrams can optionally be decrypted on the Cloud side, see [HARDWARIO Cloud – Decryption Keys](#hardwario-cloud--decryption-keys).
+CHESTER wM-Bus only receives raw hexadecimal wM-Bus telegrams. Neither the device nor HARDWARIO Cloud interprets the meter data. Each wM-Bus meter has its own representation of the encoded data, and the telegrams may also be encrypted. Decoding the raw hexadecimal values into meaningful units is up to the customer or integrator. Encrypted telegrams can optionally be decrypted on the Cloud side, see [HARDWARIO Cloud decryption keys](#hardwario-cloud--decryption-keys).
 
 This device supports the newer **LTEv2** stack and **HARDWARIO Cloud v2**.
 
@@ -56,9 +56,9 @@ Battery powered with 6 pcs alkaline "D" cells.
 
 The catalog **CHESTER wM-Bus** hardware consists of the following ordering codes:
 
-* `CHESTER-M-CES` - Standard mainboard w/o supercapacitors
+* `CHESTER-M-CES`: Standard mainboard w/o supercapacitors
 
-* `CHESTER-B1W` - B1 carrier board with wM-Bus radio.
+* `CHESTER-B1W`: B1 carrier board with wM-Bus radio.
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -68,9 +68,9 @@ Externally powered 230V DC adapter.
 
 The catalog **CHESTER wM-Bus DC** hardware consists of the following ordering codes:
 
-* `CHESTER-M-CS` - Standard mainboard w/ supercapacitors
+* `CHESTER-M-CS`: Standard mainboard w/ supercapacitors
 
-* `CHESTER-B1W` - B1 carrier board with wM-Bus radio.
+* `CHESTER-B1W`: B1 carrier board with wM-Bus radio.
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -107,7 +107,7 @@ app config address add 81763000
 
 :::info
 
-You can easily explore the whole command tree structure - start with the `help` command.
+You can easily explore the whole command tree structure. Start with the `help` command.
 
 :::
 
@@ -128,8 +128,8 @@ Performs a scan and lists all devices in range (shows their addresses and manufa
 
 Registers (enrolls) all devices within range.
 
-- `timeout` – duration of the scan in seconds.  
-- `threshold` (RSSI) – minimum signal strength of devices to be accepted (range 0 to -150 dBm).  
+- `timeout`: duration of the scan in seconds.  
+- `threshold` (RSSI): minimum signal strength of devices to be accepted (range 0 to -150 dBm).  
 
 If parameters are not provided, the default value from `config timeout` is used.
 
@@ -166,8 +166,8 @@ Useful to verify the data flow and check if sensors are sending data correctly.
 
 `app config cloud-decode false/true`
 
-- `false` – messages are sent in raw (binary) format.  
-- `true` – the cloud decodes messages into a readable (JSON) format.  
+- `false`: messages are sent in raw (binary) format.  
+- `true`: the cloud decodes messages into a readable (JSON) format.  
   If the messages are encrypted, the decryption key from **Variables** is used.
 
 
@@ -177,11 +177,11 @@ Scanning indicates the time during which CHESTER captures wM-Bus packets. The sc
 
 `app config scan-mode <mode>`
 
-- **off** - automatic scan off, ideal for shipping or location tuning with manual scan start
-- **interval** - scan in intervals. For debug only, `scan-interval` parameter (ignores set months to scan)
-- **daily** - scan once a day, always at the hour set by the `scan-hour` parameter
-- **weekly** - scan once a week, always at the hour and day of the week set by the `scan-hour` and `scan-weekday` parameters
-- **monthly** - scan once a month, always at the hour and day of the month set by the `scan-hour` and `scan-day` parameters
+- **off**: automatic scan off, ideal for shipping or location tuning with manual scan start
+- **interval**: scan in intervals. For debug only, `scan-interval` parameter (ignores set months to scan)
+- **daily**: scan once a day, always at the hour set by the `scan-hour` parameter
+- **weekly**: scan once a week, always at the hour and day of the week set by the `scan-hour` and `scan-weekday` parameters
+- **monthly**: scan once a month, always at the hour and day of the month set by the `scan-hour` and `scan-day` parameters
 
 `app config scan-timeout 480`
 
@@ -199,7 +199,7 @@ It determines the hour at which the scan should start. CHESTER device clocks ope
 
 `app config scan-weekday 2`
 
-Specifies the day of the week to scan for a weekly scan. 0 - Sunday, 1 - Monday, ...
+Specifies the day of the week to scan for a weekly scan. 0 = Sunday, 1 = Monday, ...
 
 `app config scan-day 2`
 
@@ -207,9 +207,9 @@ Specifies the day of the month when scanning 1-28 during the monthly scan
 
 `app config scan-ant <mode>`
 
-**single** - scan uses only one cycle with one antenna, if it receives data from all devices, it sends data immediately, if not, it sends data after the `scan-timeout` timeout
+**single**: scan uses only one cycle with one antenna, if it receives data from all devices, it sends data immediately, if not, it sends data after the `scan-timeout` timeout
 
-**dual** - the scan takes place twice, each time with a different antenna. If all devices are not scanned in the first cycle with antenna 1, a second scan with the second antenna is started. Each scan takes a maximum of scan-timeout seconds. The maximum time when the wM-Bus receiver is active is equal to 2x `scan-timeout`.
+**dual**: the scan takes place twice, each time with a different antenna. If all devices are not scanned in the first cycle with antenna 1, a second scan with the second antenna is started. Each scan takes a maximum of scan-timeout seconds. The maximum time when the wM-Bus receiver is active is equal to 2x `scan-timeout`.
 
 `config save`
 
@@ -436,7 +436,7 @@ There is also the option to take the incoming data from the Cloud and **manually
 
 The device works as a **pass-thru gateway**: it forwards the received wM-Bus telegrams to the Cloud, and the **decoding into meaningful units happens in the end IoT application**. Optionally, the telegrams can be decrypted on the Cloud side using the [decryption keys](#hardwario-cloud--decryption-keys) stored per device.
 
-The meters listed below are the ones we have tested in-house and documented — including **water meters**, **heat meters** and **heat cost allocators** from **BMeters** and **Zenner**. They are a starting point, not a limitation.
+The meters listed below are the ones we have tested in-house and documented, including **water meters**, **heat meters** and **heat cost allocators** from **BMeters** and **Zenner**. They are a starting point, not a limitation.
 
 ➡️ [Tested wM-Bus Sensors](https://docs.hardwario.com/chester/supported-devices/wm-bus_sensors)
 
@@ -444,14 +444,14 @@ The meters listed below are the ones we have tested in-house and documented — 
 
 ## Changelog
 
-### v3.5.1 — 2025-12-08
+### v3.5.1 – 2025-12-08
 
 - **Added**: Enroll (teach) mode for wireless meter pairing
 - **Added**: Scan-all mode with cloud-side decode configuration support
 - **Added**: Shell send command for manual packet injection
 - **Added**: Manufacturer field in decoded data
 
-### v3.5.0 — 2025-12-03
+### v3.5.0 – 2025-12-03
 
 - **Fixed**: Receiving of long wM-Bus packets (previously truncated or dropped)
 - **Added**: Battery-powered variant support (6× D-cell) alongside the existing DC-powered variant

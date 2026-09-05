@@ -27,18 +27,18 @@ The device is equipped with high-quality connectors for power, networking, and w
 
 #### EMBER ships with two internal antennas
 
-Every EMBER leaves the factory with **two antennas fitted inside the enclosure and already connected** —
+Every EMBER leaves the factory with **two antennas fitted inside the enclosure and already connected**:
 one for **LoRaWAN** (on the LoRa card's `RFIO` u.FL connector) and one for **LTE**. The radio therefore
 always has an antenna on it when you unbox the gateway: it is safe to power on, and **nothing has to be
 screwed on before you start**.
 
-The package contains the **24 V DC power adapter** and no loose antennas — see
+The package contains the **24 V DC power adapter** and no loose antennas, see
 [Ordering Codes](ordering-codes.md).
 
 #### Switching to an external antenna
 
 The **LRW**, **LTE1** and **LTE2** connectors on the enclosure are there for **optional external
-antennas** — worth fitting when you need more range than the internal antenna delivers, or when the
+antennas**, worth fitting when you need more range than the internal antenna delivers, or when the
 gateway is mounted somewhere that shields it. The internal antenna occupies the card's u.FL connector, so
 switching over is a manual step:
 
@@ -47,12 +47,12 @@ switching over is a manual step:
 3. Unplug the internal antenna from the card's u.FL connector (`RFIO` on the LoRa card) and plug the
    pigtail of the matching bulkhead connector (**LRW** for LoRaWAN) in its place.
 4. Close the enclosure and screw the external antenna onto the connector.
-5. Update **`antenna-gain`** in RouterOS to the gain of the antenna now in use — see
+5. Update **`antenna-gain`** in RouterOS to the gain of the antenna now in use, see
    [Antenna Gain & Output Power](mikrotik/antenna-gain.md). Left at the value for the old antenna, the
    gateway radiates above or below the legal EIRP limit.
 
 :::caution
-Close the enclosure carefully — the **IP67** rating depends on its seal. And never power the gateway with
+Close the enclosure carefully, because the **IP67** rating depends on its seal. And never power the gateway with
 the LoRa card's u.FL connector left empty: transmitting into an open connector can damage the card's power
 amplifier.
 :::

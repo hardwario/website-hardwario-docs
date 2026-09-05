@@ -1,13 +1,13 @@
 ---
 slug: cloud-service
 title: Managed Network Server
-description: "LoRaWAN Network Server pro EMBER — ChirpStack nebo The Things Stack — může být buď provozován na vaší vlastní infrastruktuře (viz ChirpStack a The Things Stack), nebo provozován společností HARDWARIO jako spravovaná služba. Tato stránka popisuje…"
+description: "LoRaWAN Network Server pro EMBER (ChirpStack nebo The Things Stack) může být buď provozován na vaší vlastní infrastruktuře (viz ChirpStack a The Things Stack), nebo provozován společností HARDWARIO jako spravovaná služba. Tato stránka popisuje…"
 ---
 import Image from '@theme/IdealImage';
 
 # Managed Network Server {#managed-network-server}
 
-LoRaWAN Network Server pro **EMBER** — **ChirpStack** nebo **The Things Stack** — může být buď provozován na vaší vlastní infrastruktuře (viz [**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) a [**The Things Stack**](lorawan-network-server/lorawan-tts.md)), nebo provozován společností **HARDWARIO** jako spravovaná služba. Tato stránka popisuje spravovanou službu. Kromě spravovaného network serveru poskytuje **HARDWARIO** volitelně také SIM kartu s konektivitou pro **LTE** backhaul a bezpečný vzdálený přístup přes **OpenVPN**.
+LoRaWAN Network Server pro **EMBER** (**ChirpStack** nebo **The Things Stack**) může být buď provozován na vaší vlastní infrastruktuře (viz [**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) a [**The Things Stack**](lorawan-network-server/lorawan-tts.md)), nebo provozován společností **HARDWARIO** jako spravovaná služba. Tato stránka popisuje spravovanou službu. Kromě spravovaného network serveru poskytuje **HARDWARIO** volitelně také SIM kartu s konektivitou pro **LTE** backhaul a bezpečný vzdálený přístup přes **OpenVPN**.
 
 Pro získání spravované služby potřebujete mít alespoň jedno zařízení **EMBER Hotspot**.
 
@@ -39,15 +39,15 @@ Pro multifaktorovou autentizaci potřebujete jednu z těchto metod:
 
 * **Google Authenticator** nebo kompatibilní aplikaci na mobilu
 
-* **FIDO2** – univerzální druhý faktor (**U2F**) USB klíč (např. **Security Key Series**)
+* **FIDO2**: univerzální druhý faktor (**U2F**) USB klíč (např. **Security Key Series**)
 
-* **FIDO2** – univerzální druhý faktor (**U2F**) bez hesla (např. **YubiKey Bio Series**)
+* **FIDO2**: univerzální druhý faktor (**U2F**) bez hesla (např. **YubiKey Bio Series**)
 
 Níže uvedené služby jsou přístupné přes položku menu **Applications**. Služby jsou označeny těmito zkratkami:
 
-* `cs` – aplikace **ChirpStack**
+* `cs`: aplikace **ChirpStack**
 
-* `nr` – aplikace **Node-RED**
+* `nr`: aplikace **Node-RED**
 
 Pro přístup ke konkrétní službě klikněte na tlačítko **LAUNCH**.
 
@@ -87,11 +87,11 @@ Každé zařízení **CHESTER** musí být registrováno v sekci **Application**
 
 Doporučenou volbou je použití metody **ABP** (Activation By Personalization). Pro tuto metodu bude uživatel muset zadat (nebo vygenerovat) následující parametry:
 
-* **Device EUI** – označované také jako `DevEUI`
+* **Device EUI**: označované také jako `DevEUI`
 
-* **Network session key** – označovaný také jako `NwkSKey`
+* **Network session key**: označovaný také jako `NwkSKey`
 
-* **Application session key** – označovaný také jako `AppSKey`
+* **Application session key**: označovaný také jako `AppSKey`
 
 :::tip
 

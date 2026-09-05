@@ -20,7 +20,7 @@
     "description": "The label for category 'FIBER Hardware Guides' in sidebar 'docs'"
   },
   "sidebar.docs.category.FIBER Hardware Guides.link.generated-index.description": {
-    "message": "Guides for the hardware only FIBER (CM4) has — the display and 1-Wire sensors.",
+    "message": "Guides for the hardware only FIBER (CM4) has: the display and 1-Wire sensors.",
     "description": "The generated-index page description for category 'FIBER Hardware Guides' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hardware Description": {

@@ -29,8 +29,8 @@ Příklady použití sběrnice I²C v TOWER:
 ## Sběrnice I²C na Core Module {#ic-buses-on-the-core-module}
 Na **Core Module** jsou dvě sběrnice. Jmenují se:
 
-- `TWR_I2C_I2C0` – používá piny `SDA0` a `SCL0` (17, 18) v **pravém dolním rohu** Core Module
-- `TWR_I2C_I2C1` – používá piny `SDA1` a `SCL1` (27, 28) v **pravém horním rohu** Core Module
+- `TWR_I2C_I2C0`: používá piny `SDA0` a `SCL0` (17, 18) v **pravém dolním rohu** Core Module
+- `TWR_I2C_I2C1`: používá piny `SDA1` a `SCL1` (27, 28) v **pravém horním rohu** Core Module
 
 ## Adresní prostor I²C v TOWER {#tower-ic-address-space}
 

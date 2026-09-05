@@ -55,7 +55,7 @@ Basic installation of the TAPPER client application.
 
 1. Click **CHOOSE STORAGE** and select the target MicroSD card.
 
-1. Click **NEXT** - the tool will ask about the settings customization - click **EDIT SETTINGS**.
+1. Click **NEXT**: the tool will ask about the settings customization. Click **EDIT SETTINGS**.
 
 1. Check **Set hostname**.
 

@@ -1,17 +1,17 @@
 ---
 slug: changelog
-title: CHESTER — seznam změn
+title: CHESTER – seznam změn
 toc_min_heading_level: 2
 toc_max_heading_level: 2
-description: "Tato stránka sleduje všechny významné změny v rámci platformy CHESTER — včetně firmwaru, hardwaru a katalogových aplikací. Pomocí záložek níže lze filtrovat podle kategorie změn."
+description: "Tato stránka sleduje všechny významné změny v rámci platformy CHESTER, včetně firmwaru, hardwaru a katalogových aplikací. Pomocí záložek níže lze filtrovat podle kategorie změn."
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# CHESTER — seznam změn {#chester-changelog}
+# CHESTER – seznam změn {#chester-changelog}
 
-Tato stránka sleduje všechny významné změny v rámci platformy CHESTER — včetně **firmwaru**, **hardwaru** a **katalogových aplikací**. Pomocí záložek níže lze filtrovat podle kategorie změn.
+Tato stránka sleduje všechny významné změny v rámci platformy CHESTER, včetně **firmwaru**, **hardwaru** a **katalogových aplikací**. Pomocí záložek níže lze filtrovat podle kategorie změn.
 
 :::info
 
@@ -28,7 +28,7 @@ Tato stránka sleduje změny na úrovni platformy podle **data**. Poznámky k vy
 
 ### 2026-06-22 {#2026-06-22}
 
-- **[SDK v3.5.5]** Vydáno SDK **v3.5.5** — [vydání na GitHubu](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5) · [podrobný seznam změn](catalog-applications/changelog.md#v355-2026-06-22)
+- **[SDK v3.5.5]** Vydáno SDK **v3.5.5**: [vydání na GitHubu](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5) · [podrobný seznam změn](catalog-applications/changelog.md#v355-2026-06-22)
 - **[FW/SDK]** Přidáno API pro stav synchronizace RTC (`ctr_rtc_is_synced`, `ctr_rtc_get_ts_ms`, `ctr_rtc_set_event_cb`)
 - **[FW/SDK]** Opravena regrese spotřeby na desce CHESTER (odstraněno vbatt)
 - **[FW/SDK]** Přidány režimy shutdown a one-shot pro TMP112
@@ -36,7 +36,7 @@ Tato stránka sleduje změny na úrovni platformy podle **data**. Poznámky k vy
 
 ### 2026-04-27 {#2026-04-27}
 
-- **[FW/SDK]** Blikání LED změněno na neblokující přístup s omezením frekvence — zabraňuje blokování během blikacích sekvencí
+- **[FW/SDK]** Blikání LED změněno na neblokující přístup s omezením frekvence, což zabraňuje blokování během blikacích sekvencí
 - **[FW/SDK]** LoRaWAN payload pro 8kanálovou variantu rozdělen do dvou zpráv kvůli dodržení limitů velikosti payloadu
 
 ### 2026-04-14 {#2026-04-14}
@@ -56,7 +56,7 @@ Tato stránka sleduje změny na úrovni platformy podle **data**. Poznámky k vy
 
 ### 2026-03-11 {#2026-03-11}
 
-- **[Apps]** Aplikace CHESTER Counter a CHESTER Signal přesunuty do `_legacy` — nejsou již aktivně udržovány
+- **[Apps]** Aplikace CHESTER Counter a CHESTER Signal přesunuty do `_legacy`, nejsou již aktivně udržovány
 
 ### 2026-03-10 {#2026-03-10}
 
@@ -64,15 +64,15 @@ Tato stránka sleduje změny na úrovni platformy podle **data**. Poznámky k vy
 
 ### 2026-03-06 {#2026-03-06}
 
-- **[Apps]** **CHESTER Serial** přidán jako nová katalogová aplikace — podporuje RS-485 (CHESTER-X2) a RS-232 (CHESTER-X12)
+- **[Apps]** **CHESTER Serial** přidán jako nová katalogová aplikace: podporuje RS-485 (CHESTER-X2) a RS-232 (CHESTER-X12)
 
 ### 2026-02-11 {#2026-02-11}
 
-- **[Apps]** **CHESTER Motion** přidán jako nová katalogová aplikace — detekce pohybu pomocí PIR s konfigurovatelnou citlivostí
+- **[Apps]** **CHESTER Motion** přidán jako nová katalogová aplikace: detekce pohybu pomocí PIR s konfigurovatelnou citlivostí
 
 ### 2026-02-04 {#2026-02-04}
 
-- **[Apps]** Přidána varianta **CHESTER Meteo M** — integrace senzorů Modbus RTU pro meteorologická data
+- **[Apps]** Přidána varianta **CHESTER Meteo M**: integrace senzorů Modbus RTU pro meteorologická data
 
 ### 2026-01-30 {#2026-01-30}
 
@@ -84,35 +84,35 @@ Tato stránka sleduje změny na úrovni platformy podle **data**. Poznámky k vy
 
 ### 2026-01-02 {#2026-01-02}
 
-- **[FW/SDK]** Přidáno API metrik pro cloudový subsystém — zpřístupňuje interní počítadla a diagnostiku
+- **[FW/SDK]** Přidáno API metrik pro cloudový subsystém: zpřístupňuje interní počítadla a diagnostiku
 
 ### 2025-12-08 {#2025-12-08}
 
-- **[Apps]** **CHESTER Clime** v3.5.1 — nové varianty: SPS30 (částice), Radon, TC (termočlánek); přechod na protokol Cloud v2
+- **[Apps]** **CHESTER Clime** v3.5.1: nové varianty SPS30 (částice), Radon, TC (termočlánek); přechod na protokol Cloud v2
 
 ### 2025-12-03 {#2025-12-03}
 
-- **[Apps]** **CHESTER Serial** v3.5.0 — podpora LoRaWAN s binárním kódováním; přidána varianta RS-232; protokol Cloud v2
+- **[Apps]** **CHESTER Serial** v3.5.0: podpora LoRaWAN s binárním kódováním; přidána varianta RS-232; protokol Cloud v2
 
 ### 2025-11-28 {#2025-11-28}
 
-- **[Apps]** **CHESTER Meteo** — přidána podpora půdních senzorů
+- **[Apps]** **CHESTER Meteo**: přidána podpora půdních senzorů
 
 ### 2025-10-30 {#2025-10-30}
 
-- **[FW/SDK]** Zavedena společná datová struktura pro agregaci (`ctr_data_aggreg`) — jednotná pro všechny katalogové aplikace
+- **[FW/SDK]** Zavedena společná datová struktura pro agregaci (`ctr_data_aggreg`), jednotná pro všechny katalogové aplikace
 
 ### 2025-10-27 {#2025-10-27}
 
-- **[FW/SDK]** Přidána konfigurovatelná politika připojení LTE — umožňuje detailní řízení chování modemu při připojování
+- **[FW/SDK]** Přidána konfigurovatelná politika připojení LTE: umožňuje detailní řízení chování modemu při připojování
 
 ### 2025-10-24 {#2025-10-24}
 
-- **[Apps]** **CHESTER Control** — přidána podpora LoRaWAN
+- **[Apps]** **CHESTER Control**: přidána podpora LoRaWAN
 
 ### 2025-10-15 {#2025-10-15}
 
-- **[Apps]** **CHESTER wM-Bus** — přidán režim enroll/teach; scan-all, odesílání ze shellu, pole výrobce, LED a cloudový watchdog
+- **[Apps]** **CHESTER wM-Bus**: přidán režim enroll/teach; scan-all, odesílání ze shellu, pole výrobce, LED a cloudový watchdog
 
 ### 2025-08-21 {#2025-08-21}
 
@@ -120,23 +120,23 @@ Tato stránka sleduje změny na úrovni platformy podle **data**. Poznámky k vy
 
 ### 2025-07-14 {#2025-07-14}
 
-- **[Apps]** **CHESTER wM-Bus** — první vydání
+- **[Apps]** **CHESTER wM-Bus**: první vydání
 
 ### 2025-02-14 {#2025-02-14}
 
-- **[Apps]** **CHESTER Meteo** — přidána podpora LoRaWAN
+- **[Apps]** **CHESTER Meteo**: přidána podpora LoRaWAN
 
 ### 2025-01-31 {#2025-01-31}
 
-- **[FW/SDK]** Nordic Connect SDK (NCS) aktualizováno na **v2.9** — upgrade základní platformy pro veškerý firmware CHESTER
+- **[FW/SDK]** Nordic Connect SDK (NCS) aktualizováno na **v2.9**, upgrade základní platformy pro veškerý firmware CHESTER
 
 ### 2025-01-20 {#2025-01-20}
 
-- **[Apps]** **CHESTER Clime** — přidán subsystém senzoru částic SPS30
+- **[Apps]** **CHESTER Clime**: přidán subsystém senzoru částic SPS30
 
 ### 2025-01-16 {#2025-01-16}
 
-- **[Apps]** Několik katalogových aplikací — přidán downlink watchdog
+- **[Apps]** Několik katalogových aplikací: přidán downlink watchdog
 
 {/* separator */}
 </TabItem>
@@ -151,7 +151,7 @@ Tato stránka sleduje změny na úrovni platformy podle **data**. Poznámky k vy
 
 ### CHESTER-M R3.3 {#chester-m-r33}
 
-- **Odstraněno**: kryptočip ATSHA204A (adresa I²C `0x64`) — již se neosazuje
+- **Odstraněno**: kryptočip ATSHA204A (adresa I²C `0x64`), již se neosazuje
 - **Změněno**: popis konektoru J-Link/SWD přejmenován z `BLE` na `APP`
 
 ### CHESTER-M R3.2 {#chester-m-r32}
@@ -163,7 +163,7 @@ Tato stránka sleduje změny na úrovni platformy podle **data**. Poznámky k vy
 
 ### CHESTER-U1 R1.1 *(aktuální)* {#chester-u1-r11-current}
 
-- Kompaktní modul 38×38 mm — elektricky identický s CHESTER-M
+- Kompaktní modul 38×38 mm: elektricky identický s CHESTER-M
 - Stejný binární firmware běží bez úprav na CHESTER-M i CHESTER-U1
 - Schéma: [R1.1 (PDF)](../../../../chester/hardware-description/hio-chester-u1-r1.1.pdf)
 

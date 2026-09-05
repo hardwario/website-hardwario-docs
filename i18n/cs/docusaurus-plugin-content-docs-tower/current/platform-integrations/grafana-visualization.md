@@ -165,9 +165,9 @@ brew services start grafana
 
 Pro konfiguraci Grafany ji nejprve otevřete a přihlaste se:
 
-- [**http://localhost:3000/**](http://localhost:3000/) – Grafana běží na vašem **lokálním počítači**
-- **http://hub.local:3000/** – Grafana běží na [**vašem Raspberry Pi s nainstalovaným Hubem**](../server-raspberry-pi/installation-os.md)
-- **http://"IP adresa":3000/** – Grafana je nainstalována na vašem zařízení, měli byste znát IP adresu tohoto zařízení
+- [**http://localhost:3000/**](http://localhost:3000/): Grafana běží na vašem **lokálním počítači**
+- **http://hub.local:3000/**: Grafana běží na [**vašem Raspberry Pi s nainstalovaným Hubem**](../server-raspberry-pi/installation-os.md)
+- **http://"IP adresa":3000/**: Grafana je nainstalována na vašem zařízení, měli byste znát IP adresu tohoto zařízení
 
 :::info
 

@@ -46,23 +46,23 @@ Please follow our [**Naming Conventions**](https://docs.hardwario.com/cloud/#nam
 
 1. Select your **Space**  
 2. Go to **DEVICES → +NEW DEVICE**  
-3. Enter the information about your **CHESTER** — you can choose one of the following options:
+3. Enter the information about your **CHESTER**: you can choose one of the following options:
 
-   **Option 1 – Scan the QR Code:**  
-   Use the **`⛶ SCAN DEVICE`** feature in the HARDWARIO Cloud to **scan the QR code** on your CHESTER — all the **information** will be **filled in automatically**!  
+   **Option 1: Scan the QR Code**  
+   Use the **`⛶ SCAN DEVICE`** feature in the HARDWARIO Cloud to **scan the QR code** on your CHESTER, and all the **information** will be **filled in automatically**!  
 
-   **Option 2 – Manually:**  
+   **Option 2: Manually**  
    You can add a device manually by filling in the following fields:  
    - **Name**  
    - **HARDWARIO Serial Number (HSN)**  
    - **Claim Token**
 
 :::info
-The **Claim Token** is unique for each device — you can obtain it by **scanning the QR code** on the device with any QR code reader, or by using the **`info show`** command when the device is connected via **J-Link**.
+The **Claim Token** is unique for each device. You can obtain it by **scanning the QR code** on the device with any QR code reader, or by using the **`info show`** command when the device is connected via **J-Link**.
 :::
 
 
-4. Save it — your CHESTER is now **registered in the Cloud**!
+4. Save it: your CHESTER is now **registered in the Cloud**!
 
 :::tip
 **Need more details?**  
@@ -85,15 +85,15 @@ Or check out our **video tutorial** on how to add your CHESTER device to the Clo
 :::
 
 - Insert the batteries or connect an external power source  
-- Wait a few minutes while your device connects to the HARDWARIO Cloud — the device will **blink the green LED** once it’s successfully connected  
+- Wait a few minutes while your device connects to the HARDWARIO Cloud. The device will **blink the green LED** once it’s successfully connected  
   *(See LED behavior explained below in [Step 5: Check the Status LED](#step-5-check-the-status-led))*  
-- If you are using an older **CHESTER-M** model with supercapacitors, wait about **30 seconds** after inserting the batteries — the capacitors need to charge before the LED starts blinking.  
+- If you are using an older **CHESTER-M** model with supercapacitors, wait about **30 seconds** after inserting the batteries, because the capacitors need to charge before the LED starts blinking.  
 - If it doesn’t connect, try one of these quick actions:
 
    🔹 **Press the button four times** → reboots the device  
    🔹 **Remove and reinsert the batteries**  
    🔹 For **CHESTER-M** (with blue supercapacitors):  
-     - Hold the button or press it **five times** until the **white LED** turns on — this discharges the capacitors (takes ≈ 30 s)
+     - Hold the button or press it **five times** until the **white LED** turns on. This discharges the capacitors (takes ≈ 30 s)
 
 ---
 
@@ -111,7 +111,7 @@ If your device still has trouble connecting to the network (especially when usin
 ## Step 5: Check the Status LED
 
 - **Blinking green every 5 seconds** → Connected to HARDWARIO Cloud ✅  
-- **No blinking /** [**other colors**](https://docs.hardwario.com/chester/catalog-applications/common-functionality/#led-behaviour) → Still connecting or an error occurred — check SIM, network coverage, or power  
+- **No blinking /** [**other colors**](https://docs.hardwario.com/chester/catalog-applications/common-functionality/#led-behaviour) → Still connecting or an error occurred. Check SIM, network coverage, or power  
 
 :::info
 For details about all LED color states and meanings, see the [**LED Behaviour documentation**](https://docs.hardwario.com/chester/catalog-applications/common-functionality/#led-behaviour).
@@ -189,14 +189,14 @@ If a newer version is available, you can update it using one of these methods:
 ---
 
 ✅ **That’s it!**  
-Your CHESTER is now connected, configured, and up to date — ready to collect and send data to the cloud.
+Your CHESTER is now connected, configured, and up to date, ready to collect and send data to the cloud.
 
 ---
 
 ## Step 9: Explore Applications and Integrations
 
 Your CHESTER can do much more than just send data!  
-You can extend its functionality using [**HARDWARIO Applications**](https://docs.hardwario.com/apps/) — ready-made modules and tools that help you:
+You can extend its functionality using [**HARDWARIO Applications**](https://docs.hardwario.com/apps/), ready-made modules and tools that help you:
 
 - 📊 **Visualize your data** using dashboards and charts  
 - 🌐 **Integrate CHESTER** into existing **LoRaWAN networks** or other IoT systems  

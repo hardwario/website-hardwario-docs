@@ -32,7 +32,7 @@ Depending on the specific assembly variant, STICKER includes:
 - **S0 Interface:** Pulse counting input compatible with standard S0 outputs from electricity, gas, and water meters.
 - **Voltage Measurement & Industrial Logic Inputs:** Supports up to 2 digital inputs accepting industrial logic up to 30 V DC for direct PLC or machine status integration.
 
-Device status is indicated by a **multi-color LED (R/G/Y)** - see [**LED Indication**](#led-indication) for details - and wireless communication is handled via an **internal 868/915 MHz antenna**.
+Device status is indicated by a **multi-color LED (R/G/Y)** (see [**LED Indication**](#led-indication) for details), and wireless communication is handled via an **internal 868/915 MHz antenna**.
 
 ---
 
@@ -61,10 +61,10 @@ Device status is indicated by a **multi-color LED (R/G/Y)** - see [**LED Indicat
 
 ## LED Indication
 
-STICKER has one status LED with three independently driven channels - **red**, **green** and **yellow**. The firmware also lights red and green together to produce **orange**, which it reserves for service modes. The LED is the only feedback the device gives locally, so these patterns are the fastest way to tell what a unit is doing before it appears on the network.
+STICKER has one status LED with three independently driven channels: **red**, **green** and **yellow**. The firmware also lights red and green together to produce **orange**, which it reserves for service modes. The LED is the only feedback the device gives locally, so these patterns are the fastest way to tell what a unit is doing before it appears on the network.
 
 :::note
-The patterns and timings below apply to **firmware v1.4.0**. Most status blinks are deliberately very short - 5 to 10 ms - to save battery. Expect a brief blip rather than a comfortable blink.
+The patterns and timings below apply to **firmware v1.4.0**. Most status blinks are deliberately very short, 5 to 10 ms, to save battery. Expect a brief blip rather than a comfortable blink.
 :::
 
 ### Boot sequence
@@ -83,14 +83,14 @@ The carousel takes about 5 seconds. If you see it unexpectedly, the device has r
 
 ### Status heartbeat
 
-Once running, the device shows its status every **3 seconds**. Only one pattern is ever displayed - the firmware checks the conditions below in order and the **first match wins**, so a more serious condition always hides a less serious one:
+Once running, the device shows its status every **3 seconds**. Only one pattern is ever displayed. The firmware checks the conditions below in order and the **first match wins**, so a more serious condition always hides a less serious one:
 
 | Priority | Device state | LED pattern |
 |---|---|---|
 | 1 | NFC exchange in progress | The LED is handed over to the [NFC patterns](#nfc-interaction) below |
-| 2 | **Configuration could not be loaded** - stored settings are corrupt | Red and yellow alternating, twice, ~60 ms each |
+| 2 | **Configuration could not be loaded**: stored settings are corrupt | Red and yellow alternating, twice, ~60 ms each |
 | 3 | **Joining or rejoining** the LoRaWAN network | One yellow flash, then one red flash ~200 ms later |
-| 4 | **Link degraded** - link checks are failing but the session is still alive | Two yellow flashes, ~200 ms apart |
+| 4 | **Link degraded**: link checks are failing but the session is still alive | Two yellow flashes, ~200 ms apart |
 | 5 | **Radio switched off** by the `radio-mode` setting | One yellow flash |
 | 6 | **An alarm is active** | One red flash |
 | 7 | Normal operation | One green flash |
@@ -102,7 +102,7 @@ The three yellow states form a deliberate severity scale, so you can read the se
 Priority 2 sits above all of them: a device flashing red/yellow has lost its stored identity and provisioning, and is running on factory defaults. That needs a technician, not a network check.
 
 :::note
-A device with no green flash is not necessarily faulty - it may simply be busy showing something with a higher priority. Note also that alarms are always evaluated even while a higher-priority pattern owns the LED. Only the red alarm flash is hidden; the alarm itself still triggers and still sends its uplink.
+A device with no green flash is not necessarily faulty. It may simply be busy showing something with a higher priority. Note also that alarms are always evaluated even while a higher-priority pattern owns the LED. Only the red alarm flash is hidden; the alarm itself still triggers and still sends its uplink.
 :::
 
 Debug firmware builds replace the single green flash with a green flash followed by a yellow one, which is a quick way to tell a debug unit from a release unit.
@@ -115,7 +115,7 @@ While a phone is held against the device, the LED tracks the exchange step by st
 |---|---|
 | Phone detected in the NFC field | Green, solid |
 | Command being processed | Fast green blink (~90 ms) |
-| **Command rejected** - wrong key or token, replayed or malformed request | Fast red blink for 2 s, then off |
+| **Command rejected**: wrong key or token, replayed or malformed request | Fast red blink for 2 s, then off |
 | Reply written, waiting for the phone to read it | Green **and** yellow, solid |
 | Exchange finished, phone removed | Off |
 | Configuration successfully applied | Ten green blinks, 100 ms on / 100 ms off |
@@ -128,8 +128,8 @@ On units with Hall sensors or external inputs configured, the LED confirms each 
 
 | Event | Pattern |
 |---|---|
-| Input becomes active | Green, then orange - 50 ms each |
-| Input returns to inactive | Orange, then green - 50 ms each |
+| Input becomes active | Green, then orange, 50 ms each |
+| Input returns to inactive | Orange, then green, 50 ms each |
 
 Repeated changes are limited to one indication per 500 ms.
 
@@ -137,7 +137,7 @@ Repeated changes are limited to one indication per 500 ms.
 This indication **switches itself off one hour after power-up**. The cutoff is measured from boot, not from the last event, because once a unit is installed the blinking is no longer wanted. If you need it back while testing, power-cycle the device.
 :::
 
-PIR and accelerometer are momentary sensors - they only ever report an activation - so on those inputs you will only ever see the green-then-orange sequence.
+PIR and accelerometer are momentary sensors that only ever report an activation, so on those inputs you will only ever see the green-then-orange sequence.
 
 ### Calibration mode
 
@@ -154,7 +154,7 @@ When the device is put into deep sleep, all three channels are switched off. A c
 
 ### Testing the LED
 
-The LED can be driven directly over the developer console with the `ats led` commands - useful for checking a suspect unit. See [**Diagnostics**](developer-access/diagnostics.md).
+The LED can be driven directly over the developer console with the `ats led` commands, useful for checking a suspect unit. See [**Diagnostics**](developer-access/diagnostics.md).
 
 ---
 
@@ -217,11 +217,11 @@ The LED can be driven directly over the developer console with the `ats led` com
 | **Environment** | Operating temperature     | -30 °C to +70 °C                   |
 |                   | Storage temperature       | -30 °C to +70 °C                   |
 |                   | Enclosure protection      | IP40                               |
-| **Sensors** | Integrated thermometer – Measurement range   | -20 °C to +60 °C     |
-|                   | Integrated thermometer – Measurement accuracy| ±0.2 °C (0 °C to 65 °C) |
-|                   | Integrated hygrometer – Measurement range    | 0 % to 100 %           |
-|                   | Integrated hygrometer – Measurement accuracy | ±2 % (from 10 % to 90 %) |
-|                   | PIR – Detection range     | 5 m                                |
-|                   | PIR – Viewing angle       | ≥ 50°                              |
+| **Sensors** | Integrated thermometer: measurement range   | -20 °C to +60 °C     |
+|                   | Integrated thermometer: measurement accuracy| ±0.2 °C (0 °C to 65 °C) |
+|                   | Integrated hygrometer: measurement range    | 0 % to 100 %           |
+|                   | Integrated hygrometer: measurement accuracy | ±2 % (from 10 % to 90 %) |
+|                   | PIR: detection range     | 5 m                                |
+|                   | PIR: viewing angle       | ≥ 50°                              |
 
 ![STICKER - Catalog](images/sticker.png)

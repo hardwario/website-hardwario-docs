@@ -24,7 +24,7 @@ import Image from '@theme/IdealImage';
 
 CHESTER-X9 přepíná až čtyři externí zátěže na zem. Každý kanál je samočinně chráněný low-side switch **NCV8412ASTT1G** (U1–U4): výstup kanálu je při zapnutí stažený na **GND** a při vypnutí zůstává rozpojený (ve vysoké impedanci). Každý kanál má **omezení proudu**, takže se přetížení nebo zkrat udrží pod kontrolou a modul se nepoškodí.
 
-Každý přepínač je řízený **přímo jedním z pinů GPIO CHESTER-X** (GP0–GP3) — CHESTER-X9 nemá vlastní řadič I²C ani SPI. Zátěž i její napájení jsou zcela externí: zátěž se zapojí mezi externí stejnosměrný zdroj (3–28 V) a výstup kanálu a zem externího zdroje se spojí se zemí modulu. Modul nenapájí ani zátěž, ani základní desku CHESTER.
+Každý přepínač je řízený **přímo jedním z pinů GPIO CHESTER-X** (GP0–GP3). CHESTER-X9 nemá vlastní řadič I²C ani SPI. Zátěž i její napájení jsou zcela externí: zátěž se zapojí mezi externí stejnosměrný zdroj (3–28 V) a výstup kanálu a zem externího zdroje se spojí se zemí modulu. Modul nenapájí ani zátěž, ani základní desku CHESTER.
 
 ## Klíčové vlastnosti {#key-features}
 
@@ -32,7 +32,7 @@ Každý přepínač je řízený **přímo jedním z pinů GPIO CHESTER-X** (GP0
 * **Samočinně chráněné přepínače:** NCV8412ASTT1G s omezením proudu na každém kanálu, tepelnou ochranou a ochranou proti ESD.
 * **Integrovaná ochrana proti indukčním špičkám:** Vestavěná aktivní ochrana drain-gate pohltí vypínací energii středně velkých indukčních zátěží.
 * **Široký rozsah napětí zátěže:** Externí napájení zátěže od 3 do 28 V DC.
-* **Přímé řízení přes GPIO:** Každý kanál je řízený přímo z pinu GP CHESTER-X — I²C ani SPI není potřeba.
+* **Přímé řízení přes GPIO:** Každý kanál je řízený přímo z pinu GP CHESTER-X, I²C ani SPI není potřeba.
 * **Vysoký proud:** 2 A trvale a omezení proudu až 5 A na kanál.
 
 ## Typické aplikace {#typical-applications}
@@ -102,7 +102,7 @@ Na rozdíl od většiny modulů CHESTER-X (které používají **I²C** nebo **S
 | GP2 / A2 | CH3 | U3 | OUT2 |
 | GP3 / A3 | CH4 | U4 | OUT3 |
 
-Slot vede i sběrnici I²C (SDA/SCL), ale CHESTER-X9 žádné zařízení I²C nepoužívá — všechny čtyři kanály přepínají samotné piny GP.
+Slot vede i sběrnici I²C (SDA/SCL), ale CHESTER-X9 žádné zařízení I²C nepoužívá. Všechny čtyři kanály přepínají samotné piny GP.
 
 ## Zapojení přepínače a zátěže {#switch-and-load-connection}
 
@@ -150,7 +150,7 @@ CHESTER-X9 lze v rámci CHESTER SDK použít přes shieldy `ctr_x9_a` a `ctr_x9_
 
 ## Schémata {#schematic-diagrams}
 
-Kompletní schéma — čtyři low-side switche NCV8412ASTT1G a mapování konektoru — je k dispozici jako PDF:
+Kompletní schéma (čtyři low-side switche NCV8412ASTT1G a mapování konektoru) je k dispozici jako PDF:
 
 - [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x9-r1.0.pdf)
 - [Interaktivní prohlížeč CHESTER-X9](pathname:///download/ibom/hio-chester-x9-r1.0.html)

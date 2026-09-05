@@ -1,17 +1,17 @@
 ---
 slug: power-management
 title: Správa napájení
-description: "Tento dokument zabíhá do technických detailů a vysvětluje správu napájení sady HARDWARIO TOWER - Industrial IoT Kit na úrovni hardwaru."
+description: "Tento dokument zabíhá do technických detailů a vysvětluje správu napájení sady HARDWARIO TOWER Industrial IoT Kit na úrovni hardwaru."
 ---
 import Image from '@theme/IdealImage';
 
 :::caution
 
-Tento dokument zabíhá do technických detailů a vysvětluje správu napájení sady HARDWARIO TOWER - Industrial IoT Kit na úrovni hardwaru.
+Tento dokument zabíhá do technických detailů a vysvětluje správu napájení sady HARDWARIO TOWER Industrial IoT Kit na úrovni hardwaru.
 
 :::
 
-Sada **HARDWARIO TOWER - Industrial IoT Kit** byla navržena tak, aby umožňovala připojení více zdrojů napájení.
+Sada **HARDWARIO TOWER Industrial IoT Kit** byla navržena tak, aby umožňovala připojení více zdrojů napájení.
 
 Například díky tomu může být modul [**Core Module**](../hardware-modules/about-core-module.md) napájen z **USB kabelu** a zároveň mít **vložené baterie v modulu Battery Module**. HARDWARIO TOWER tento problém řeší automaticky výběrem **vhodného zdroje napájení**.
 
@@ -19,7 +19,7 @@ Například díky tomu může být modul [**Core Module**](../hardware-modules/a
 
   **Co to znamená?**
 
-  Například když je připojen externí zdroj napájení (adaptér nebo USB), **baterie se odpojí**. Je také možné mít současně **připojeno více externích zdrojů** - například **adaptér zapojený do modulu Power Module** a **USB kabel v modulu Core Module**.
+  Například když je připojen externí zdroj napájení (adaptér nebo USB), **baterie se odpojí**. Je také možné mít současně **připojeno více externích zdrojů**, například **adaptér zapojený do modulu Power Module** a **USB kabel v modulu Core Module**.
 
   V takovém případě má prioritu modul, který se nachází ve **fyzicky nižší vrstvě**, a bude to právě on, **kdo bude dodávat napájení** do systému.
 
@@ -29,10 +29,10 @@ Například díky tomu může být modul [**Core Module**](../hardware-modules/a
 
 Konektor **TOWER** má dva signály pro distribuci napájení v systému:
 
-- **VDD** - Kladná napájecí větev
+- **VDD**: Kladná napájecí větev
   - 3,1 V při napájení z baterií
   - 3,3 V z externího zdroje napájení
-- **GND** - Zem (negativní větev)
+- **GND**: Zem (negativní větev)
 
 Modul, který může dodávat napájení do systému, se nazývá **energizer**. Energie je dodávána buď z **externího zdroje napájení**, nebo z **baterií**.
 

@@ -81,7 +81,7 @@ Teď, když jsou veřejná zařízení i dashboard, můžete vygenerovat a nasd�
 1. **Zůstaňte** v sekci **Dashboards -> Groups**.
 2. **Klikněte** přímo na **název** grupy dashboardů, kterou jste právě zveřejnili. Grupa se otevře a zobrazí seznam všech dashboardů v ní.
 3. **Najděte** konkrétní dashboard, který chcete nasdílet.
-4. **Klikněte** na první ikonu na pravé straně řádku dashboardu — **ikonu řetězu (🔗)** s popiskem „Public dashboard link".
+4. **Klikněte** na první ikonu na pravé straně řádku dashboardu, **ikonu řetězu (🔗)** s popiskem „Public dashboard link".
 5. **Výsledek:** URL je nyní ve vaší schránce. 
 
 Tento odkaz můžete poslat svým klientům nebo uživatelům. Kdokoli s tímto odkazem si může dashboard a jeho data v reálném čase zobrazit přímo v prohlížeči, bez přihlašování.

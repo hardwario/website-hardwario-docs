@@ -21,7 +21,7 @@ This tutorial guides you through the process of creating device profiles and add
    - **Application ID (app id)**
    - **Application Name (app name)**
    - (Optional) **Description**
-   - (Optional) **Label** — It is recommended to use the same label for the application, end devices, and gateways.
+   - (Optional) **Label**: It is recommended to use the same label for the application, end devices, and gateways.
 
 3. Click the blue **Create application** button.
 

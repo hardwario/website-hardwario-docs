@@ -17,9 +17,9 @@ API keys are **scoped to a Space**, and you can limit a key to specific devices 
 
    ![The "Create new key" dialog with Name and Tags fields](images/api-key-create.png)
 
-3. Copy the key from the **API Key Created** dialog and store it securely — **it is shown only once**. If you lose it, rotate the key.
+3. Copy the key from the **API Key Created** dialog and store it securely, because **it is shown only once**. If you lose it, rotate the key.
 
-   ![The "API Key Created" dialog — copy the key, which is shown only once](images/api-key-created.png)
+   ![The "API Key Created" dialog with the key, which is shown only once](images/api-key-created.png)
 
 Then send it with every call:
 

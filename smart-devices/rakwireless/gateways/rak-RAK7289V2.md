@@ -86,7 +86,7 @@ When you first access the gateway, you are required to set a password for the **
 * Includes at least one **Latin letter**
 
 :::tip Gateway EUI
-Once the password is set, you will be redirected to the **Dashboard**, where you will define your country and region. Copy the **16-character Gateway EUI** displayed there – you will need it for network server registration.
+Once the password is set, you will be redirected to the **Dashboard**, where you will define your country and region. Copy the **16-character Gateway EUI** displayed there. You will need it for network server registration.
 :::
 
 ### 5. Internet Connectivity

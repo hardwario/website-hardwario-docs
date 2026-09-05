@@ -18,26 +18,26 @@ Tato stránka popisuje důležité chování firmwaru zařízení STICKER: jak z
 
 ## Uchování dat {#data-retention}
 
-### Žebříček resetů — identita zachovaná podle úrovně {#the-reset-ladder--identity-preserved-by-tier}
+### Žebříček resetů – identita zachovaná podle úrovně {#the-reset-ladder--identity-preserved-by-tier}
 
 Reset ani aktualizace firmwaru nesmí zařízení v provozu odstrojit víc, než o co výslovně požádáte. Resety zařízení STICKER tvoří **žebříček podle závažnosti**; každá úroveň zachovává striktní podmnožinu té nad sebou:
 
 | Reset | Co zachovává |
 |---|---|
-| **Restart** | Všechno — jde o obyčejné restartování. |
+| **Restart** | Všechno. Jde o obyčejné restartování. |
 | **Device reset** | Identitu zařízení **a celé zprovoznění LoRaWAN** (klíče i session): zařízení zůstává zprovozněné a připojené, na výchozí hodnoty se vrací jen konfigurace. Dostupné přes shell, NFC i downlink LoRaWAN. |
-| **Factory reset** | Pouze identitu zařízení — sériové číslo, vendor token, secret key, nonce, claim token, DevEUI a JoinEUI. **Zahazuje session a klíče LoRaWAN**, takže se zařízení do sítě připojí znovu. **Jen přes NFC nebo shell** — přes downlink LoRaWAN je odmítnut, protože by zničil právě tu session, kterou je potřeba k jeho potvrzení. |
-| **Vendor reset** | Pouze sériové číslo a vendor token — konfigurace, klíče LoRaWAN i secret key se vymažou a jako součást resetu **musí být zadaný nový secret key**. Autorizuje ho vendor token, a to jen přes shell nebo vyhrazený vendor kanál NFC. |
-| **`settings erase`** | Nic — úplné vymazání do prázdného zařízení včetně sériového čísla. Záchranná brzda „návrat do prázdna", dostupná jen ze shellu. |
+| **Factory reset** | Pouze identitu zařízení. Sériové číslo, vendor token, secret key, nonce, claim token, DevEUI a JoinEUI. **Zahazuje session a klíče LoRaWAN**, takže se zařízení do sítě připojí znovu. **Jen přes NFC nebo shell**. Přes downlink LoRaWAN je odmítnut, protože by zničil právě tu session, kterou je potřeba k jeho potvrzení. |
+| **Vendor reset** | Pouze sériové číslo a vendor token. Konfigurace, klíče LoRaWAN i secret key se vymažou a jako součást resetu **musí být zadaný nový secret key**. Autorizuje ho vendor token, a to jen přes shell nebo vyhrazený vendor kanál NFC. |
+| **`settings erase`** | Nic. Úplné vymazání do prázdného zařízení včetně sériového čísla. Záchranná brzda „návrat do prázdna", dostupná jen ze shellu. |
 
 Sada identity (sériové číslo, secret key, čítač nonce, vendor token) i zprovoznění LoRaWAN si zaznamenávají, které úrovně je zachovávají, takže migrace schématu konfigurace při aktualizaci firmwaru obnoví chráněnou sadu po aplikaci nových výchozích hodnot.
 
 ### Vendor token {#the-vendor-token}
 
-Vedle secret key drží každé zařízení **vendor token** — privilegovaný údaj pro dané zařízení, který má u sebe jeho vlastník. Každý z těch dvou údajů má jinou roli:
+Vedle secret key drží každé zařízení **vendor token**, privilegovaný údaj pro dané zařízení, který má u sebe jeho vlastník. Každý z těch dvou údajů má jinou roli:
 
 - **Secret key** zabezpečuje běžný šifrovaný kanál NFC pro čtení a zápis konfigurace.
-- **Vendor token** autorizuje privilegované operace, na které secret key nestačí: **změnu secret key** (překlíčování zařízení) a úroveň **vendor reset** popsanou výše — ta vymaže zařízení až na sériové číslo a vendor token a nastaví přitom nový secret key.
+- **Vendor token** autorizuje privilegované operace, na které secret key nestačí: **změnu secret key** (překlíčování zařízení) a úroveň **vendor reset** popsanou výše, která vymaže zařízení až na sériové číslo a vendor token a nastaví přitom nový secret key.
 
 Protože odemyká překlíčování a nejhlubší reset, není vendor token pro běžnou konfiguraci vůbec potřeba a drží ho jen vlastník zařízení. V aplikaci [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/saved-stickers) se ukládá pro každé zařízení pod **Saved STICKERs** a používá se v **Tools → Vendor changes**; viz [**průvodce resetem**](/apps/hardwario-manager/sticker/reset).
 
@@ -89,7 +89,7 @@ Tím se nahrazuje dřívější chování, kdy zařízení mohlo po několika zp
 
 ## Spolehlivost senzorů {#sensor-reliability}
 
-Měření ze senzorů se před předáním do telemetrie, historie nebo alarmů kontrolují na rozsah, takže chybný vzorek nevyvolá falešný poplach ani nezkreslí uložená data. Nakonfigurovaný senzor, který přestane dávat platné hodnoty, vyvolá alarm — tiše selhaný senzor se tedy ukáže, místo aby se donekonečna hlásil jako chybějící data.
+Měření ze senzorů se před předáním do telemetrie, historie nebo alarmů kontrolují na rozsah, takže chybný vzorek nevyvolá falešný poplach ani nezkreslí uložená data. Nakonfigurovaný senzor, který přestane dávat platné hodnoty, vyvolá alarm. Tiše selhaný senzor se tedy ukáže, místo aby se donekonečna hlásil jako chybějící data.
 
 ---
 

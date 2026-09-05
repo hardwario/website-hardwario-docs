@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-For storing data from our sensors we like to use **InfluxDB - a time-series database**. As a bridge between **MQTT** and **InfluxDB**, we created a `mqtt2influxdb`. A tool that connects to **InfluxDB** and **MQTT broker** and by user-defined config subscribes to MQTT topics and stores data from messages.
+For storing data from our sensors we like to use **InfluxDB, a time-series database**. As a bridge between **MQTT** and **InfluxDB**, we created a `mqtt2influxdb`. A tool that connects to **InfluxDB** and **MQTT broker** and by user-defined config subscribes to MQTT topics and stores data from messages.
 
 :::caution
 

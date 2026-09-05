@@ -22,8 +22,8 @@ Tato stránka se zaměřuje na spárování s cloudem. Kompletní nastavení od 
 :::info
 Pokud ještě nemáte konzoli připravenou, postupujte nejprve podle jednoho z těchto návodů:
 
-- [**RTT konzole (J-Link)**](console/rtt-jlink.md) - pro vývojová nasazení se sondou J-Link.
-- [**AT konzole (USB-C)**](console/usb-at.md) - doporučeno pro první zprovoznění.
+- [**RTT konzole (J-Link)**](console/rtt-jlink.md): pro vývojová nasazení se sondou J-Link.
+- [**AT konzole (USB-C)**](console/usb-at.md): doporučeno pro první zprovoznění.
 :::
 
 ## Krok 1 - Vyčtěte sériové číslo a claim token {#step-1---read-the-serial-number-and-claim-token}
@@ -58,7 +58,7 @@ $INFO: "serial-number","2163212289"
 $INFO: "claim-token","ab01ad36ab1234567890abcdef..."
 ```
 
-Poznamenejte si hodnoty **`serial-number`** a **`claim-token`** - v dalším kroku budete potřebovat obě.
+Poznamenejte si hodnoty **`serial-number`** a **`claim-token`**. V dalším kroku budete potřebovat obě.
 
 ## Krok 2 - Vytvořte zařízení v HARDWARIO Cloud {#step-2---create-the-device-in-hardwario-cloud}
 
@@ -66,9 +66,9 @@ Poznamenejte si hodnoty **`serial-number`** a **`claim-token`** - v dalším kro
 2. Otevřete **prostor**, ve kterém má zařízení být (nebo vytvořte nový).
 3. Stiskněte **Create new device**.
 4. Vyplňte:
- - **Name** - libovolný srozumitelný popisek, např. `Warehouse-A freezer`.
- - **Serial number** - hodnota z kroku 1.
- - **Claim token** - hodnota z kroku 1.
+ - **Name**: libovolný srozumitelný popisek, např. `Warehouse-A freezer`.
+ - **Serial number**: hodnota z kroku 1.
+ - **Claim token**: hodnota z kroku 1.
 5. Stiskněte **Create**.
 
 Zařízení se nyní objeví ve vašem prostoru.
@@ -97,7 +97,7 @@ Struktura payloadu je popsána na stránce [**CBOR payload**](payload.md).
 | Zařízení je v cloudu vedeno jako **offline** | Vyčkejte až 5 minut na první uplink. Zkontrolujte, že je SIM aktivní a má data. Vynuťte `app send`. |
 | `AT$INFO?` zobrazuje prázdný claim token | Zařízení nebylo zprovozněno. Kontaktujte podporu HARDWARIO. |
 | Zprávy přicházejí, ale datová pole vypadají chybně | Ověřte, že cloud má pro tento firmware správný CBOR dekodér. Viz [**CBOR payload**](payload.md). |
-| Zařízení se každých 36 hodin odpojí | Reset watchdogu pro downlink - viz `app config downlink-wdg-interval` v [**konfiguraci**](configuration.md). |
+| Zařízení se každých 36 hodin odpojí | Reset watchdogu pro downlink, viz `app config downlink-wdg-interval` v [**konfiguraci**](configuration.md). |
 
 #### Čtení logů firmwaru {#reading-firmware-logs}
 

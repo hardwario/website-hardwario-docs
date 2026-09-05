@@ -49,7 +49,7 @@ This V2 model runs on the **WisGateOS 2**, which offers a more modern interface,
 | **Frequency** | EU868 (supports other regions) |
 | **Power Supply** | 12 V DC (Power Adapter) or **PoE (802.3af)** |
 | **Network** | Ethernet, Wi-Fi (802.11b/g/n) |
-| **Cellular** | Optional (LTE Cat 4) - *Check specific SKU* |
+| **Cellular** | Optional (LTE Cat 4), *check specific SKU* |
 | **Operating Temp.** | -10°C to +55°C |
 | **Dimensions** | 166 x 129 x 43 mm |
 | **IP Rating** | IP30 (Indoor use only) |
@@ -86,7 +86,7 @@ When you first access the gateway, you are required to set a password for the **
 * Includes at least one **Latin letter**
 
 :::tip Gateway EUI
-Once the password is set, you will be redirected to the **Dashboard**, where you will define your country and region. Copy the **16-character Gateway EUI** displayed there – you will need it for network server registration.
+Once the password is set, you will be redirected to the **Dashboard**, where you will define your country and region. Copy the **16-character Gateway EUI** displayed there. You will need it for network server registration.
 :::
 
 ### 4. Internet Connectivity

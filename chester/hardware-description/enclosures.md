@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Enclosures
 
-Standard CHESTER housing comes in two colors - light grey and dark grey. The enclosure has dimensions of 130x175x45mm and is IP67 rated.
+Standard CHESTER housing comes in two colors: light grey and dark grey. The enclosure has dimensions of 130x175x45mm and is IP67 rated.
 
 It can be mounted using:
 
@@ -17,7 +17,7 @@ It can be mounted using:
 
 :::tip
 
-You can also place the CHESTER device in an alternative enclosure. HARDWARIO produces carrier boards for larger housings - those can bring the benefit of bigger battery packs and other electrical interfaces. See the article [**Power Management**](../power-management.md).
+You can also place the CHESTER device in an alternative enclosure. HARDWARIO produces carrier boards for larger housings, which can bring the benefit of bigger battery packs and other electrical interfaces. See the article [**Power Management**](../power-management.md).
 
 :::
 

@@ -19,7 +19,7 @@ In short, you need to:
 2. Make the **Device Group** (or Assets) feeding the dashboard public.
 3. Copy the generated public link.
 
-For the full step-by-step procedure — including how to handle sub-customers — follow the [**Public Link**](public-link) guide.
+For the full step-by-step procedure, including how to handle sub-customers, follow the [**Public Link**](public-link) guide.
 
 ---
 
@@ -81,7 +81,7 @@ Because the dashboard contains only one widget, you can use a **smaller height**
 ```
 
 :::tip
-Adjust `height` to match the widget — around `300–450px` usually works well for a single chart. This per-widget dashboard pattern is the cleanest way to embed individual charts until ThingsBoard offers native single-widget public links.
+Adjust `height` to match the widget. Around `300–450px` usually works well for a single chart. This per-widget dashboard pattern is the cleanest way to embed individual charts until ThingsBoard offers native single-widget public links.
 :::
 
 ---

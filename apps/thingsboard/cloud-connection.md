@@ -15,11 +15,11 @@ In this guide, you will learn how to connect your devices to HARDWARIO Cloud by 
 
 Before setting up the connector, you need to prepare your device in the HARDWARIO Cloud so it knows where to send data and how to authenticate:
 
-- **Assign a Tag** – open your device details and assign a tag (created in the right-hand menu)
-- **Add the Access Token Label** – scroll down to the very bottom of the device page to find the `Labels` section. You need to create a new label here:
-  - `Name` – enter a name for your token, e.g., `thingsboardtoken`  
+- **Assign a Tag**: open your device details and assign a tag (created in the right-hand menu)
+- **Add the Access Token Label**: scroll down to the very bottom of the device page to find the `Labels` section. You need to create a new label here:
+  - `Name`: enter a name for your token, e.g., `thingsboardtoken`  
     *(Note: You can choose any name, but it must be exactly the same for all devices sharing this connector and must match the name in your transformation code)*
-  - `Value` – paste your ThingsBoard Access Token here
+  - `Value`: paste your ThingsBoard Access Token here
 
 :::info How to get your ThingsBoard Access Token
 Log in to your ThingsBoard dashboard, navigate to **Entities > Devices**, and click on your specific device. In the device details panel that pops up, click the **Copy access token** button.
@@ -32,10 +32,10 @@ Log in to your ThingsBoard dashboard, navigate to **Entities > Devices**, and cl
 To establish communication with ThingsBoard, go to the `Connectors` section in the left-hand menu.  
 Click `+ New Connector` and configure the following:
 
-- `Name` – give your connector a name
-- `Type` – select `Webhook` for ThingsBoard integration
-- `Trigger` – choose `Data`
-- `Tag` – assign the tag you created earlier
+- `Name`: give your connector a name
+- `Type`: select `Webhook` for ThingsBoard integration
+- `Trigger`: choose `Data`
+- `Tag`: assign the tag you created earlier
 
 ![ThingsBoard - Create a New Connector](images/thingsboard-cloud-1.png)
 

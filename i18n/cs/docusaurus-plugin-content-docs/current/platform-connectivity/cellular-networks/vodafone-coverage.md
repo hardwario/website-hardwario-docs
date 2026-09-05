@@ -19,7 +19,7 @@ Tabulka níže platí pro SIM karty poskytované společností **HARDWARIO**. Po
 
 Vodafone stále častěji směruje provoz přes **sdílené sítě** a roamingoví partneři se v čase mění. Je třeba mít na paměti dva důsledky:
 
-* Kombinace, která dnes funguje, může přestat fungovat bez jakékoli změny na zařízení. Pokud se dříve funkční nasazení přestane registrovat, tato tabulka není první místo, kde hledat — proveďte na místě [**skenování sítí**](diagnostics.md#list-available-networks) a zjistěte, kteří operátoři jsou skutečně dostupní.
+* Kombinace, která dnes funguje, může přestat fungovat bez jakékoli změny na zařízení. Pokud se dříve funkční nasazení přestane registrovat, tato tabulka není první místo, kde hledat. Proveďte na místě [**skenování sítí**](diagnostics.md#list-available-networks) a zjistěte, kteří operátoři jsou skutečně dostupní.
 * Tato tabulka **není vyčerpávajícím seznamem zemí, kde SIM karta funguje**. Zařízení se úspěšně zaregistrovala i v zemích, které zde nejsou uvedeny. Chybějící země znamená, že jsme ji nezdokumentovali, ne že SIM karta nebude fungovat.
 
 Berte hodnoty níže jako referenční nastavení, o kterých víme, že fungují, nikoli jako garanci pokrytí.

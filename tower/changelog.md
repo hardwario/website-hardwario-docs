@@ -10,11 +10,11 @@ import TabItem from '@theme/TabItem';
 
 # TOWER Changelog
 
-This page tracks all notable changes across the TOWER platform — including **firmware / SDK** and **hardware modules**. Use the tabs below to filter by change category.
+This page tracks all notable changes across the TOWER platform, including **firmware / SDK** and **hardware modules**. Use the tabs below to filter by change category.
 
 :::info
 
-TOWER is currently in **maintenance mode** — receiving only bugfixes and minor improvements. Active development continues on [twr-zephyr](https://github.com/hardwario/twr-zephyr), an experimental Zephyr RTOS port for the Core Module.
+TOWER is currently in **maintenance mode**, receiving only bugfixes and minor improvements. Active development continues on [twr-zephyr](https://github.com/hardwario/twr-zephyr), an experimental Zephyr RTOS port for the Core Module.
 
 - SDK source: [hardwario/twr-sdk](https://github.com/hardwario/twr-sdk)
 - Hardware schematics: [hardwario/twr-hardware](https://github.com/hardwario/twr-hardware)
@@ -31,7 +31,7 @@ TOWER is currently in **maintenance mode** — receiving only bugfixes and minor
 
 ### 2025-09-10
 
-- **[FW/SDK]** `twr-zephyr`: Added README and LICENSE — Zephyr RTOS port for Core Module now documented
+- **[FW/SDK]** `twr-zephyr`: Added README and LICENSE, so the Zephyr RTOS port for Core Module is now documented
 
 ### 2025-03-03
 
@@ -51,7 +51,7 @@ TOWER is currently in **maintenance mode** — receiving only bugfixes and minor
 
 ### 2023-02-20
 
-- **[FW/SDK]** `twr-sdk`: Replaced newlib nano with picolibc — fixes `%llx` formatting issues
+- **[FW/SDK]** `twr-sdk`: Replaced newlib nano with picolibc, which fixes `%llx` formatting issues
 
 ### 2023-01-23
 
@@ -72,35 +72,35 @@ TOWER is currently in **maintenance mode** — receiving only bugfixes and minor
 
 ### 2023-10-13
 
-- **Serial Dongle R1.0** — schematics added
+- **Serial Dongle R1.0**: schematics added
 
 ### 2022-04-04
 
-- **Mini Battery Module** — solar panel connector information added to schematics
+- **Mini Battery Module**: solar panel connector information added to schematics
 
 ### 2020-07-14
 
-- **Battery Module** — updated schematics with 3-pin solar connector
+- **Battery Module**: updated schematics with 3-pin solar connector
 
 ### 2020-05-19
 
-- **Maxi Base Module R1.0** — schematic drawing added
+- **Maxi Base Module R1.0**: schematic drawing added
 
 ### 2019-12-09
 
-- **Ethernet Module** and **RS-485 Module** — schematics added
+- **Ethernet Module** and **RS-485 Module**: schematics added
 
 ### 2019-08-05
 
-- **GPS Module 1.2** — schematic added
+- **GPS Module 1.2**: schematic added
 
 ### 2019-05-13
 
-- **LoRa Module R1.4** — schematic added
+- **LoRa Module R1.4**: schematic added
 
 ### 2018-07-11
 
-- **Core Module 2.1** — schematic drawing added
+- **Core Module 2.1**: schematic drawing added
 
 {/* separator */}
 </TabItem>

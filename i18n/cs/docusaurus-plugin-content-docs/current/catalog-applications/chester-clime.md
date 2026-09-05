@@ -13,9 +13,9 @@ Tento článek popisuje základní funkce, hardware a ukázkovou **JSON** zpráv
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps) – jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md) – jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](../category/platform-connectivity) – jak pracovat s interaktivní konzolí.
+- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Správa platformy**](../category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -35,9 +35,9 @@ Katalogová aplikace **CHESTER Clime** měří:
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` - Standardní základní deska
-* `CHESTER-S2` - Externí vlhkoměr
-* `CHESTER-E1-LP` - Krabička se SMA pigtailem
+* `CHESTER-M-BCGLS`: Standardní základní deska
+* `CHESTER-S2`: Externí vlhkoměr
+* `CHESTER-E1-LP`: Krabička se SMA pigtailem
 
 Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
 
@@ -51,10 +51,10 @@ Katalogová aplikace **CHESTER Clime Z** měří:
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` - Standardní základní deska
-* `CHESTER-Z1` - Zálohovací modul
-* `CHESTER-S2` - Externí vlhkoměr
-* `CHESTER-E1-LP` - Krabička se SMA pigtailem
+* `CHESTER-M-BCGLS`: Standardní základní deska
+* `CHESTER-Z1`: Zálohovací modul
+* `CHESTER-S2`: Externí vlhkoměr
+* `CHESTER-E1-LP`: Krabička se SMA pigtailem
 
 Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
 
@@ -82,10 +82,10 @@ může být datový buffer větší než UDP MTU a paket nebude odeslán. Zaří
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` - Standardní základní deska
-* `CHESTER-S1-BCMP` - Integrovaný multisenzor
-* `CHESTER-X10` - Externí napájení 6-28V s Li-Ion baterií
-* `CHESTER-E7-LP` - Krabička se SMA pigtailem
+* `CHESTER-M-BCGLS`: Standardní základní deska
+* `CHESTER-S1-BCMP`: Integrovaný multisenzor
+* `CHESTER-X10`: Externí napájení 6-28V s Li-Ion baterií
+* `CHESTER-E7-LP`: Krabička se SMA pigtailem
 
 Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
 
@@ -99,8 +99,8 @@ Katalogová aplikace **CHESTER Clime 1W** podporuje více externích teplotních
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` - Standardní základní deska
-* `CHESTER-E8-LP` - Krabička s 8 kabelovými průchodkami (RM8L-4S)
+* `CHESTER-M-BCGLS`: Standardní základní deska
+* `CHESTER-E8-LP`: Krabička s 8 kabelovými průchodkami (RM8L-4S)
 
 Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
 
@@ -112,9 +112,9 @@ Katalogová aplikace **CHESTER Clime 1WH** podporuje **CHESTER-S2** + více exte
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` - Standardní základní deska
-* `CHESTER-S2` - Externí vlhkoměr
-* `CHESTER-E8-LP` - Krabička s 8 kabelovými průchodkami (RM8L-4S)
+* `CHESTER-M-BCGLS`: Standardní základní deska
+* `CHESTER-S2`: Externí vlhkoměr
+* `CHESTER-E8-LP`: Krabička s 8 kabelovými průchodkami (RM8L-4S)
 
 Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
 
@@ -126,9 +126,9 @@ Katalogová aplikace **CHESTER Clime RTD** podporuje dva externí čtyřvodičov
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` - Standardní základní deska
-* `CHESTER-X3A:A` - Rozhraní pro 2x Pt100/Pt1000
-* `CHESTER-E13-LP` - Krabička se SMA pigtailem a 2 kabelovými průchodkami PG7
+* `CHESTER-M-BCGLS`: Standardní základní deska
+* `CHESTER-X3A:A`: Rozhraní pro 2x Pt100/Pt1000
+* `CHESTER-E13-LP`: Krabička se SMA pigtailem a 2 kabelovými průchodkami PG7
 
 Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
 
@@ -140,9 +140,9 @@ Katalogová aplikace **CHESTER Clime TC** podporuje dva externí termočlánkov�
 
 Hardware této aplikace se skládá z následujících objednacích kódů:
 
-* `CHESTER-M-BCGLS` - Standardní základní deska
-* `CHESTER-X3B:A` - Rozhraní pro 2x termočlánek typu K
-* `CHESTER-E13-LP` - Krabička se SMA pigtailem a 2 kabelovými průchodkami PG7
+* `CHESTER-M-BCGLS`: Standardní základní deska
+* `CHESTER-X3B:A`: Rozhraní pro 2x termočlánek typu K
+* `CHESTER-E13-LP`: Krabička se SMA pigtailem a 2 kabelovými průchodkami PG7
 
 Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
 
@@ -1064,16 +1064,16 @@ V každé struktuře je při aktuální konfiguraci šest agregovaných hodnot. 
 
 ## Seznam změn {#changelog}
 
-### v3.5.4 — 2026-04-14 {#v354--2026-04-14}
+### v3.5.4 – 2026-04-14 {#v354--2026-04-14}
 
-- **Změněno**: Detekce modulu CHESTER-Z za běhu — jeden firmware nyní funguje s modulem CHESTER-Z i bez něj; samostatná varianta **CHESTER Clime Z** byla odstraněna
+- **Změněno**: Detekce modulu CHESTER-Z za běhu, jeden firmware tak nyní funguje s modulem CHESTER-Z i bez něj; samostatná varianta **CHESTER Clime Z** byla odstraněna
 - **Opraveno**: Selhání sestavení varianty IAQ při současně zapnutých funkcích CHESTER-Z a CHESTER-X10
 
-### v3.5.1 — 2025-12-08 {#v351--2025-12-08}
+### v3.5.1 – 2025-12-08 {#v351--2025-12-08}
 
-- **Přidáno**: Nové varianty — **CHESTER Clime SPS30** (prachové částice: PM1/PM2.5/PM10) a **CHESTER Clime Radon** (koncentrace radonu)
-- **Přidáno**: Nová varianta — **CHESTER Clime TC** pro dva externí termočlánkové senzory typu K (přes CHESTER-X3B)
-- **Vylepšeno**: Podpora teploměrů DS18B20 1-Wire — vyšší spolehlivost a čistší obsluha více senzorů
+- **Přidáno**: Nové varianty: **CHESTER Clime SPS30** (prachové částice: PM1/PM2.5/PM10) a **CHESTER Clime Radon** (koncentrace radonu)
+- **Přidáno**: Nová varianta: **CHESTER Clime TC** pro dva externí termočlánkové senzory typu K (přes CHESTER-X3B)
+- **Vylepšeno**: Podpora teploměrů DS18B20 1-Wire, vyšší spolehlivost a čistší obsluha více senzorů
 - **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); varianty pro Cloud v1 zůstávají dostupné v samostatné tabulce firmwaru
 - **Změněno**: Jediný společný binární firmware pro LTE i LoRaWAN; síť se volí pomocí `app config mode lte` / `app config mode lrw`
 - **Odstraněno**: Varianty Clime 1W a Clime 1WH byly vypuštěny ze sestavení firmwaru pro Cloud v2 (zůstávají dostupné pod Cloud v1)

@@ -23,8 +23,8 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 **CHESTER Serial** is a universal application for industrial serial communications. It works as a flexible gateway for integrating industrial devices (sensors, energy meters) into the cloud via LTE-M/NB-IoT or LoRaWAN.
 
 The application supports two communication interfaces, depending on the installed extension module:
-* **RS-485** (with Module [**CHESTER-X2**](../extension-modules/chester-x2.md)) — Modbus RTU Master, multi-drop bus, up to 8 slave devices
-* **RS-232** (with Module [**CHESTER-X12**](../extension-modules/chester-x12.md)) — point-to-point connection, 1 device
+* **RS-485** (with Module [**CHESTER-X2**](../extension-modules/chester-x2.md)): Modbus RTU Master, multi-drop bus, up to 8 slave devices
+* **RS-232** (with Module [**CHESTER-X12**](../extension-modules/chester-x12.md)): point-to-point connection, 1 device
 
 It supports 11 device types including energy meters, environmental sensors, and generic Modbus devices. Data is transmitted via LTE (CBOR encoding) or LoRaWAN (optimized binary encoding with multi-device packing).
 
@@ -42,10 +42,10 @@ This variant is equipped with the **CHESTER-X2** extension module. It is designe
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-CGLS` - Standard mainboard
-* `CHESTER-X2` - RS-485 interface module
-* `CHESTER-X10` - External power input (5-28V DC)
-* `CHESTER-E2-LP` - Enclosure with SMA pigtail
+* `CHESTER-M-CGLS`: Standard mainboard
+* `CHESTER-X2`: RS-485 interface module
+* `CHESTER-X10`: External power input (5-28V DC)
+* `CHESTER-E2-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -59,9 +59,9 @@ This variant is equipped with the **CHESTER-X12** extension module. It is intend
 
 The hardware of this application consists of the following ordering codes:
 
-* `CHESTER-M-CGLS` - Standard mainboard
-* `CHESTER-X12` - RS-232 interface module
-* `CHESTER-E2-LP` - Enclosure with SMA pigtail
+* `CHESTER-M-CGLS`: Standard mainboard
+* `CHESTER-X12`: RS-232 interface module
+* `CHESTER-E2-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
@@ -162,7 +162,7 @@ app config device-7
 
 :::info
 
-You can easily explore the whole command tree structure — start with the `help` command.
+You can easily explore the whole command tree structure. Start with the `help` command.
 
 :::
 
@@ -261,10 +261,10 @@ app config device-<n> "<type>,<addr>,<timeout>"
 ```
 
 Where:
-* `n` — device slot index (0–7)
-* `type` — device type string (see Supported Devices table)
-* `addr` — Modbus slave address (1–247), required in Modbus mode
-* `timeout` — response timeout in seconds (default: 1)
+* `n`: device slot index (0–7)
+* `type`: device type string (see Supported Devices table)
+* `addr`: Modbus slave address (1–247), required in Modbus mode
+* `timeout`: response timeout in seconds (default: 1)
 
 **Example configurations:**
 
@@ -481,14 +481,14 @@ Due to LoRaWAN payload size constraints, device values are encoded using **Float
 
 ## Changelog
 
-### v4.0.0 — 2026-08-10
+### v4.0.0 – 2026-08-10
 
 - **Added**: Driver for the **SolaX X3-Hybrid G3** inverter
 - **Added**: Driver for the [**Piketronic RPP-R**](../supported-devices/modbus/piketronic-rpp-r.md) radon probe (type `piketronic`)
 
-### v3.5.0 — 2025-12-03
+### v3.5.0 – 2025-12-03
 
-- **Added**: LoRaWAN support — optimized binary encoding with multi-device packing for bandwidth efficiency
+- **Added**: LoRaWAN support: optimized binary encoding with multi-device packing for bandwidth efficiency
 - **Added**: Support for RS-232 interface via CHESTER-X12 extension module (in addition to existing RS-485/CHESTER-X2)
 - **Added**: 10 device type profiles including energy meters, environmental sensors, and generic Modbus RTU devices
 - **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); Cloud v1 firmware was not available for this application

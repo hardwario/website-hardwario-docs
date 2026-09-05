@@ -22,7 +22,7 @@ Tento návod vás provede vytvořením profilů zařízení a přidáním koncov
    - **Application ID (app id)**
    - **Application Name (app name)**
    - (Volitelně) **Description**
-   - (Volitelně) **Label** — doporučujeme použít stejný label pro aplikaci, koncová zařízení i brány.
+   - (Volitelně) **Label**: doporučujeme použít stejný label pro aplikaci, koncová zařízení i brány.
 
 3. Klikněte na modré tlačítko **Create application**.
 

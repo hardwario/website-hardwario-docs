@@ -128,7 +128,7 @@ ps aux | grep -i jlink
 
 #### `Could not find requested device` {#could-not-find-requested-device}
 
-- Zkontrolujte identifikátor zařízení – musí být `nRF9151_xxCA` (malými písmeny `xx`, velkými `CA`).
+- Zkontrolujte identifikátor zařízení: musí být `nRF9151_xxCA` (malými písmeny `xx`, velkými `CA`).
 - Ověřte, že je zařízení GLIDER napájené.
 - Ověřte, že jsou vodiče SWD (`SWDIO`, `SWCLK`, `GND`, `VTref`) správně připojené.
 - Spusťte `JLinkExe` interaktivně a příkazem `connect` ověřte, že sonda vidí cílové zařízení.

@@ -64,37 +64,37 @@ The **HARDWARIO Cloud** is an infrastructure that provides IoT connectivity and 
 
 Callbacks are messages automatically forwarded by the cloud and sent to a defined **URL** endpoint. Callbacks are always entered for a given **Group** using the **Edit** icon. When setting up a callback, the following fields are filled in:
 
-* `Name` - Your chosen callback name; We recommend specifying the name of the integrated application, e.g., **[Ubidots](https://ubidots.com)**
+* `Name`: Your chosen callback name; We recommend specifying the name of the integrated application, e.g., **[Ubidots](https://ubidots.com)**
 
-* `Enabled` - Callback can be switched on/off. It is functional in Enabled - Yes state
+* `Enabled`: Callback can be switched on/off. It is functional when Enabled is set to Yes
 
-* `Note` - Space for your internal memo
+* `Note`: Space for your internal memo
 
-* `Method` - A selection of the following HTTP options:
+* `Method`: A selection of the following HTTP options:
 
-  * `POST` - Carries request parameters in the message body
+  * `POST`: Carries request parameters in the message body
 
-  * `GET` - Carries request parameters appended in the URL string
+  * `GET`: Carries request parameters appended in the URL string
 
-  * `PUT` - Creates a new resource or replaces a representation of the target resource with the requested payload
+  * `PUT`: Creates a new resource or replaces a representation of the target resource with the requested payload
 
-  * `PATCH` - Updates the values of the resource properties
+  * `PATCH`: Updates the values of the resource properties
 
-* `URL Address` - URL of the endpoint to which messages will be sent. We strongly recommend using HTTPS protocol (TLS technology).
+* `URL Address`: URL of the endpoint to which messages will be sent. We strongly recommend using HTTPS protocol (TLS technology).
 
-* `Query Parameters` - Optional URL extension
+* `Query Parameters`: Optional URL extension
 
-* `Name` - Name of the specified parameter
+* `Name`: Name of the specified parameter
 
-* `Value` - Parameter value
+* `Value`: Parameter value
 
-* `HTTP Headers` - Additional HTTP request context
+* `HTTP Headers`: Additional HTTP request context
 
-* `Name` - Name of the specified header (e.g., `Authentication`)
+* `Name`: Name of the specified header (e.g., `Authentication`)
 
-* `Value` - Value, e.g., authentican token
+* `Value`: Value, e.g., authentican token
 
-* `Content Type` - A selection of the following options:
+* `Content Type`: A selection of the following options:
 
   * `application/json`
 
@@ -102,7 +102,7 @@ Callbacks are messages automatically forwarded by the cloud and sent to a define
 
   * `application/octet-stream`
 
-* `Payload` - This field allows the user to transform the message content using the **JSONata** functional language. Leave this field empty if no further **JSONata** transformation is required (the payload will be passed as-is). See here for a description of **JSONata** below for an example of selecting and transforming part of the message content:
+* `Payload`: This field allows the user to transform the message content using the **JSONata** functional language. Leave this field empty if no further **JSONata** transformation is required (the payload will be passed as-is). See here for a description of **JSONata** below for an example of selecting and transforming part of the message content:
 
   ```json
   {
@@ -112,9 +112,9 @@ Callbacks are messages automatically forwarded by the cloud and sent to a define
   }
   ```
 
-* `Original message` - The message content before **JSONata** transformation
+* `Original message`: The message content before **JSONata** transformation
 
-* `Transformed payload` - The message content after **JSONata** transformation
+* `Transformed payload`: The message content after **JSONata** transformation
 
 Save the callback using the **SAVE CALLBACK** button.
 

@@ -7,7 +7,7 @@ description: "Přečtěte identitu zařízení STICKER a klíče LoRaWAN, které
 # Čtení informací o zařízení a klíčů LoRaWAN {#read-device-info-and-lorawan-keys}
 
 Přečtěte identitu zařízení STICKER a klíče LoRaWAN, které potřebujete k jeho
-registraci v síti — přes NFC, za několik sekund.
+registraci v síti, přes NFC, za několik sekund.
 
 :::info Zařízení nejdřív uložte
 Obě obrazovky používají šifrovaný kanál, takže zařízení musí být uložené se svým
@@ -33,11 +33,11 @@ Obě obrazovky používají šifrovaný kanál, takže zařízení musí být ul
 | **LoRaWAN** | Stav připojení LoRaWAN |
 | **DevEUI** | Identifikátor zařízení v LoRaWAN |
 | **Health** | Souhrn stavových příznaků zařízení |
-| **Active alarms** | Která pravidla alarmů jsou právě vyvolaná — viz [**Pravidla alarmů**](./alarms.md) |
+| **Active alarms** | Která pravidla alarmů jsou právě vyvolaná, viz [**Pravidla alarmů**](./alarms.md) |
 
 **Advanced** rozbalí další diagnostické podrobnosti, například build firmwaru a
-příčinu posledního resetu. **Read again** čtení zopakuje bez opuštění obrazovky —
-znovu přiložte telefon k zařízení.
+příčinu posledního resetu. **Read again** čtení zopakuje bez opuštění obrazovky.
+Znovu přiložte telefon k zařízení.
 
 ---
 
@@ -79,7 +79,7 @@ Použijte je k registraci zařízení v
 [**The Things Stack**](/sticker/connectivity/lorawan-tts).
 
 :::caution Export klíčů je úplný
-Na rozdíl od exportu konfigurace export klíčů LoRaWAN nic neodstraňuje — AppKey
+Na rozdíl od exportu konfigurace export klíčů LoRaWAN nic neodstraňuje. AppKey
 i klíče session jsou v něm celé, aby se soubor dal použít k registraci zařízení.
 Zacházejte s ním podle toho a dávejte pozor, kde QR kód zobrazujete.
 :::

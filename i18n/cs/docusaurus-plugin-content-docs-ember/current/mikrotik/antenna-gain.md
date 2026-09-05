@@ -23,11 +23,11 @@ překročit zákonný limit EIRP.
 
 Zisk antény popisuje, jak moc anténa soustřeďuje radiovou energii do určitých
 směrů ve srovnání s teoretickou anténou, která vyzařuje rovnoměrně do všech
-směrů (**izotropní zářič**). Vyjadřuje se v **dBi** — decibelech
+směrů (**izotropní zářič**). Vyjadřuje se v **dBi**, decibelech
 vztažených k izotropnímu zářiči.
 
 :::info Zisk výkon přetváří, nevytváří ho
-Anténa s vyšším ziskem nevysílá více energie — vezme stejný celkový
+Anténa s vyšším ziskem nevysílá více energie. Vezme stejný celkový
 výkon a vtěsná ho do užšího vyzařovacího diagramu, takže více energie míří
 k horizontu a méně přímo nahoru či dolů. Celkový vyzářený výkon zůstává
 stejný; zisk ho jen přerozděluje.
@@ -37,22 +37,22 @@ stejný; zisk ho jen přerozděluje.
 
 Dvě věci se snadno pletou:
 
-- **Dosah** — jak daleko signál dosáhne v nejsilnějším směru antény
+- **Dosah**: jak daleko signál dosáhne v nejsilnějším směru antény
   (u všesměrové antény je to směrem k horizontu).
-- **Poloměr pokrytí** — jak velká část okolního prostoru ve všech směrech
+- **Poloměr pokrytí**: jak velká část okolního prostoru ve všech směrech
   (včetně přímo dolů, přímo nahoru, na sousední patra budovy)
   skutečně dostane použitelný signál.
 
 Všesměrová anténa s vyšším ziskem zvyšuje horizontální **dosah** tím, že
 zužuje vertikální vyzařovací úhel. To je dobré pro dlouhé spoje nad rovným, otevřeným
-terénem — ale může vzniknout **mezera v pokrytí přímo pod bránou nebo velmi blízko
+terénem, ale může vzniknout **mezera v pokrytí přímo pod bránou nebo velmi blízko
 ní**, protože tím směrem jde méně energie. Zařízení přímo pod vysoko umístěnou
 anténou s vysokým ziskem může mít horší signál než zařízení mnohem
 dále na horizontu.
 
 | Zisk antény | Vertikální vyzařovací úhel | Vhodné pro |
 | --- | --- | --- |
-| Nízký (~0–2 dBi) | Široký | Zařízení poblíž / v různých výškách — např. uvnitř budov, vícepatrové objekty |
+| Nízký (~0–2 dBi) | Široký | Zařízení poblíž / v různých výškách, např. uvnitř budov, vícepatrové objekty |
 | Vyšší (~6+ dBi) | Užší | Venkovní spoje na velkou vzdálenost, zařízení zhruba v úrovni brány nebo pod ní, rozmístěná horizontálně |
 
 Zisk antény volte podle konkrétního nasazení, ne podle pravidla „větší dosah = lepší".
@@ -69,10 +69,10 @@ radio output (at the connector) = server_value − antenna-gain
 radiated EIRP                    = radio output + antenna gain − cable loss
 ```
 
-- **`server_value`** — vysílací výkon, který požaduje síťový server, v dBm EIRP
+- **`server_value`**: vysílací výkon, který požaduje síťový server, v dBm EIRP
   (pole `txpk.powe` protokolu Semtech UDP). V ChirpStack je to `downlink_tx_power` v
   regionálním souboru (např. `region_eu868.toml`); `-1` znamená „použij maximum pásma".
-- **`antenna-gain`** — nastavení brány MikroTik, v dBi. Jde o **odečet**, nikoli
+- **`antenna-gain`**: nastavení brány MikroTik, v dBi. Jde o **odečet**, nikoli
   o zesílení. Existuje proto, aby po přičtení zisku antény odpovídal vyzářený EIRP
   tomu, co server požadoval.
 
@@ -124,11 +124,11 @@ V novějších sestaveních RouterOS může být menu `/iot lora` místo `/lora`
 | Všesměrová anténa MikroTik LoRa (`TOF-0809-...`) | 6.5 dBi | `6.5` |
 | Jiná externí anténa | viz její datasheet | dBi antény − ztráty na kabelu |
 
-U zařízení **EMBER** musí hodnota odpovídat té anténě, která je ke kartě LoRa skutečně připojena — ať už je to
+U zařízení **EMBER** musí hodnota odpovídat té anténě, která je ke kartě LoRa skutečně připojena, ať už je to
 interní anténa LoRaWAN dodávaná se zařízením, nebo externí anténa na konektoru **LRW** (její zisk mínus
 ztráta kabelu mezi nimi). Při přepnutí mezi nimi nastavení vždy aktualizujte.
 
-Pokud zisk antény neznáte, volte raději **vyšší** hodnotu — brána sníží
+Pokud zisk antény neznáte, volte raději **vyšší** hodnotu. Brána sníží
 svůj výkon více a zůstane v zákonných limitech.
 
 ---
@@ -149,14 +149,14 @@ Downlink na 869.525 MHz, limit EIRP **27 dBm**, anténa 6.5 dBi, server požaduj
 ## Změna samotného vysílacího výkonu {#changing-the-transmit-power-itself}
 
 Protože brána přebírá výkon ze síťového serveru, měňte vysílací výkon pro **downlink**
-tam — například v ChirpStack parametr `downlink_tx_power` (dBm EIRP) v souboru
+tam, například v ChirpStack parametr `downlink_tx_power` (dBm EIRP) v souboru
 `region_eu868.toml`. Vysílací výkon pro **uplink** je vlastností **koncového zařízení** (firmware
 uzlu nebo ADR ze serveru), nikoli brány.
 
-Skutečný dosah zvýšíte lepší anténou a/nebo kratším kabelem s nižšími ztrátami —
+Skutečný dosah zvýšíte lepší anténou a/nebo kratším kabelem s nižšími ztrátami
 a následnou úpravou hodnoty `antenna-gain`. Samotné nastavení nikdy výkon nepřidá.
 
-:::caution MikroTik wAP LR8G kit — nejprve připojte interní anténu
+:::caution MikroTik wAP LR8G kit: nejprve připojte interní anténu
 U samostatného zařízení **wAP LR8G kit** od MikroTik není interní anténa **z výroby připojena**.
 Před použitím ji připojte k u.FL konektoru **RFIO** na kartě (se zařízením bez napájení), jinak karta
 nemůže přes anténu vůbec vysílat ani přijímat.
@@ -177,5 +177,5 @@ a v místních předpisech.
 
 ## Další čtení {#further-reading}
 
-- [MikroTik — LoRa General Properties](https://help.mikrotik.com/docs/spaces/ROS/pages/16351619/General+Properties)
-  — kompletní reference všech konfiguračních parametrů LoRa včetně `antenna-gain`.
+- [MikroTik – LoRa General Properties](https://help.mikrotik.com/docs/spaces/ROS/pages/16351619/General+Properties)
+  je kompletní reference všech konfiguračních parametrů LoRa včetně `antenna-gain`.

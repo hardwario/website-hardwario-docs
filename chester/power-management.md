@@ -28,7 +28,7 @@ Another disadvantage of LiSoCl<sub>2</sub> chemistry is its relatively higher co
 
 :::tip
 
-In your projects, do not forget to consider battery replacement cost - both the actual battery and the replacement operation itself.
+In your projects, do not forget to consider battery replacement cost, both the actual battery and the replacement operation itself.
 
 :::
 

@@ -24,7 +24,7 @@ The **CHESTER-X8** is a precision **3-axis accelerometer** extension module for 
 
 CHESTER-X8 measures acceleration on three axes with the **ADXL355** low-noise, low-drift MEMS accelerometer. It offers selectable **±2 g / ±4 g / ±8 g** ranges and a resolution of up to **3.9 μg/LSB** (at the ±2 g range), with a low zero-g offset. The ADXL355 connects to the CHESTER mainboard over **I²C** at the fixed address **0x1D**; its two interrupt outputs (INT1, INT2) are routed to the slot's GP0 and GP1 pins.
 
-In addition to the on-board accelerometer, the module's terminal block **breaks out** the I²C bus (SCL/SDA), two user GPIO lines (DIO1, DIO2), and the power rails (VDD 3.0 V, +V, GND). This lets you attach external I²C devices on the same bus or use the two GPIO lines directly. The module has no on-board voltage regulator — it runs from the CHESTER rails.
+In addition to the on-board accelerometer, the module's terminal block **breaks out** the I²C bus (SCL/SDA), two user GPIO lines (DIO1, DIO2), and the power rails (VDD 3.0 V, +V, GND). This lets you attach external I²C devices on the same bus or use the two GPIO lines directly. The module has no on-board voltage regulator. It runs from the CHESTER rails.
 
 ## Key Features
 
@@ -95,7 +95,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 
 ### Host Interface (I²C)
 
-CHESTER-X8 communicates with the CHESTER mainboard over the standard **I²C** bus. The on-board **ADXL355** accelerometer sits at the fixed I²C address **0x1D** (the ASEL strap is tied low). The same I²C bus is exposed on the terminal block (SCL/SDA), so external I²C devices can share it — just avoid a second device at address 0x1D.
+CHESTER-X8 communicates with the CHESTER mainboard over the standard **I²C** bus. The on-board **ADXL355** accelerometer sits at the fixed I²C address **0x1D** (the ASEL strap is tied low). The same I²C bus is exposed on the terminal block (SCL/SDA), so external I²C devices can share it. Just avoid a second device at address 0x1D.
 
 The module uses the slot's GP pins as follows:
 
@@ -148,7 +148,7 @@ The CHESTER-X8 module can be used with various CHESTER mainboard configurations.
 
 ## Schematic Diagrams
 
-The complete schematic — showing the ADXL355 accelerometer, its I²C interface and interrupt routing, and the terminal-block breakout — is available as a PDF:
+The complete schematic, showing the ADXL355 accelerometer, its I²C interface and interrupt routing, and the terminal-block breakout, is available as a PDF:
 
 - [Schematic (PDF)](schematics/hio-chester-x8-r1.0.pdf)
 - [Interactive CHESTER-X8 browser](pathname:///download/ibom/hio-chester-x8-r1.0.html)

@@ -25,7 +25,7 @@ This energy meter **does not require** any **external sensor** for current measu
 
 #### Example of Installation: ORNO Energy Analyzer - OR-WE-516
 
-| **ORNO Energy Analyzer - OR-WE-516** | |
+| **ORNO Energy Analyzer OR-WE-516** | |
 |----------------------------------------|-----------------------------------------------|
 | Pin 1                                  | **L1 (IN)**                                   |
 | Pin 3                                  | **L2 (IN)**                                   |
@@ -51,7 +51,7 @@ In this case, it is also possible to connect the energy analyzer in single-phase
 
 #### Example of Modbus Communication Installation: ORNO Energy Analyzer - OR-WE-516
 
-| **ORNO Energy Analyzer - OR-WE-516** | **CHESTER Modbus** |
+| **ORNO Energy Analyzer OR-WE-516** | **CHESTER Modbus** |
 |---------------------------|--------------------|
 | Pin 20                    | Pin 6 (B)          |
 | Pin 21                    | Pin 7 (A)          |

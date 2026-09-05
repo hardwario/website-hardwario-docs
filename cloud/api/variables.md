@@ -5,10 +5,10 @@ title: Variables
 # Variables
 
 [**Variables**](/cloud/variables) store key–value metadata on a device (a location,
-calibration offset, asset number …) — useful to read inside a connector's
+calibration offset, asset number …), useful to read inside a connector's
 transformation function.
 
-**Create a variable** — `POST /v2/spaces/{space_id}/variables`:
+**Create a variable**: `POST /v2/spaces/{space_id}/variables`:
 
 ```bash
 curl -X POST \

@@ -20,7 +20,7 @@ Ve zkratce potřebujete:
 2. Zveřejnit **grupu zařízení** (nebo assetů), která dashboard plní daty.
 3. Zkopírovat vygenerovaný veřejný odkaz.
 
-Kompletní postup krok za krokem — včetně toho, jak řešit podřízené zákazníky — najdete v návodu [**Veřejný odkaz**](public-link).
+Kompletní postup krok za krokem, včetně toho, jak řešit podřízené zákazníky, najdete v návodu [**Veřejný odkaz**](public-link).
 
 ---
 
@@ -82,7 +82,7 @@ Protože dashboard obsahuje jen jeden widget, můžete použít **menší výšk
 ```
 
 :::tip
-Hodnotu `height` přizpůsobte widgetu — u jednoho grafu obvykle dobře funguje `300–450px`. Tenhle vzor s dashboardem na jeden widget je nejčistší způsob, jak vkládat jednotlivé grafy, dokud ThingsBoard nenabídne nativní veřejné odkazy na jednotlivé widgety.
+Hodnotu `height` přizpůsobte widgetu. U jednoho grafu obvykle dobře funguje `300–450px`. Tenhle vzor s dashboardem na jeden widget je nejčistší způsob, jak vkládat jednotlivé grafy, dokud ThingsBoard nenabídne nativní veřejné odkazy na jednotlivé widgety.
 :::
 
 ---

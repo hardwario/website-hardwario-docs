@@ -1,6 +1,6 @@
 ---
 title: Instalace Node-RED
-description: "Výše uvedený release asset se jmenuje install-update-nodered-deb — pokud v budoucnu vrátí 404,"
+description: "Výše uvedený release asset se jmenuje install-update-nodered-deb. Pokud v budoucnu vrátí 404,"
 ---
 
 # Instalace Node-RED {#install-node-red}
@@ -13,7 +13,7 @@ description: "Výše uvedený release asset se jmenuje install-update-nodered-de
 
    :::tip
 
-   Výše uvedený release asset se jmenuje `install-update-nodered-deb` — pokud v budoucnu vrátí 404,
+   Výše uvedený release asset se jmenuje `install-update-nodered-deb`. Pokud v budoucnu vrátí 404,
    podívejte se na [stránku releasů node-red/linux-installers](https://github.com/node-red/linux-installers/releases)
    a zjistěte aktuální název assetu.
 
@@ -43,7 +43,7 @@ description: "Výše uvedený release asset se jmenuje install-update-nodered-de
    credentialSecret: "<a random secret>",
    ```
 
-1. Zabezpečte editor. **Ve výchozím stavu je zcela otevřený** — samotný instalační výstup Node-RED
+1. Zabezpečte editor. **Ve výchozím stavu je zcela otevřený**. Samotný instalační výstup Node-RED
    výslovně varuje před jeho nezabezpečeným vystavením. Vygenerujte hash hesla:
 
    ```sh
@@ -76,7 +76,7 @@ description: "Výše uvedený release asset se jmenuje install-update-nodered-de
 
    :::tip
 
-   Restart je nutný — Node-RED za běhu nenahrává nově nainstalované typy nodes.
+   Restart je nutný, protože Node-RED za běhu nenahrává nově nainstalované typy nodes.
 
    :::
 
@@ -88,7 +88,7 @@ description: "Výše uvedený release asset se jmenuje install-update-nodered-de
 
    :::tip
 
-   Dokud není připojena žádná brána nebo zařízení LoRaWAN, je toto flow jen přípravou — vytvořte ho
+   Dokud není připojena žádná brána nebo zařízení LoRaWAN, je toto flow jen přípravou. Vytvořte ho
    nyní, aby bylo připraveno, jakmile budou brána a zařízení zaregistrovány (viz
    [Registrace brány a zařízení](register-device) výše) a začnou přicházet skutečné uplinky.
 

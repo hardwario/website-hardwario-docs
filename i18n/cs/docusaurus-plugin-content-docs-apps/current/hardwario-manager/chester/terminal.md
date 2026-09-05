@@ -1,12 +1,12 @@
 ---
 slug: terminal
 title: Terminál
-description: "Terminál vám dá shell zařízení přes Bluetooth — tutéž konzoli, ke které byste se"
+description: "Terminál vám dá shell zařízení přes Bluetooth, tutéž konzoli, ke které byste se"
 ---
 
 # Terminál zařízení CHESTER {#chester-terminal}
 
-Terminál vám dá shell zařízení přes Bluetooth — tutéž konzoli, ke které byste se
+Terminál vám dá shell zařízení přes Bluetooth, tutéž konzoli, ke které byste se
 dostali kabelem, jen z telefonu.
 
 Otevřete **CHESTER → Open Terminal**. Prázdný terminál napovídá, kde začít:
@@ -36,11 +36,11 @@ Terminál se sadu příkazů zařízení naučí, místo aby hádal:
 - jakmile napíšete víc než první slovo, zeptá se daného příkazu na jeho podpříkazy.
 
 Odpovídající návrhy se objeví jako odznaky nad vstupním polem. Klepnutí na některý
-**vyplní vstup** — nikdy příkaz nespustí, takže ho vždycky odesíláte vy sami.
+**vyplní vstup**. Nikdy příkaz nespustí, takže ho vždycky odesíláte vy sami.
 
 <img src="/img/hw-manager/hw-manager-chester-terminal-help.png" alt="Terminál po spuštění help se seznamem skupin příkazů daného zařízení" width="320" />
 
-Když spustíte `help` sami, vypíše se tentýž seznam, ze kterého návrhy čerpají —
+Když spustíte `help` sami, vypíše se tentýž seznam, ze kterého návrhy čerpají:
 skupiny příkazů, které tento firmware nabízí, každá s jednořádkovým popisem.
 
 Návrhy pocházejí z připojeného zařízení, takže odpovídají jeho firmwaru. Při
@@ -69,6 +69,6 @@ sledovat a ovládat z prohlížeče. Viz
 
 :::tip Uchování toho, co změníte
 Nastavení změněná ze shellu žijí v pracovní paměti zařízení. Pomocí
-**Device info → Save configuration** je zapište, aby přežila restart — viz
+**Device info → Save configuration** je zapište, aby přežila restart, viz
 [**Informace o zařízení**](./device-info.md).
 :::

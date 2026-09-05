@@ -5,7 +5,7 @@ title: Data
 # Data
 
 A **data** downlink sends a JSON object down to the device. Your firmware decodes it
-into a structure with the values filled in — use it to control outputs, change a
+into a structure with the values filled in. Use it to control outputs, change a
 setpoint, or trigger an action.
 
 ## Send a data downlink

@@ -16,15 +16,15 @@ import Image from '@theme/IdealImage';
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Rychlý průvodce**](first-steps.md) – Návod k nastavení krok za krokem.
-* [**Nastavení HARDWARIO Cloud**](cloud-setup.md) – Spárování zařízení s platformou.
-* [**Popis hardwaru**](hardware-description.md) – Hlavní části a parametry zařízení GLIDER.
-* [**Externí senzory**](external-sensors/index.md) – Zapojení a konfigurace externích senzorů.
-* [**Nahrání firmwaru**](firmware-flashing/index.md) – Možnosti nahrání firmwaru do zařízení.
-* [**Přístup ke konzoli**](category/console-access) – Komunikace se zařízením GLIDER přes USB-C nebo J-Link.
-* [**Konfigurace**](configuration.md) – Doladění chování firmwaru.
-* [**Příkazy**](category/commands) – Jaké příkazy zařízení rozumí.
-* [**CBOR payload**](payload.md) – Jak zařízení kóduje data odesílaná do cloudu.
+* [**Rychlý průvodce**](first-steps.md): Návod k nastavení krok za krokem.
+* [**Nastavení HARDWARIO Cloud**](cloud-setup.md): Spárování zařízení s platformou.
+* [**Popis hardwaru**](hardware-description.md): Hlavní části a parametry zařízení GLIDER.
+* [**Externí senzory**](external-sensors/index.md): Zapojení a konfigurace externích senzorů.
+* [**Nahrání firmwaru**](firmware-flashing/index.md): Možnosti nahrání firmwaru do zařízení.
+* [**Přístup ke konzoli**](category/console-access): Komunikace se zařízením GLIDER přes USB-C nebo J-Link.
+* [**Konfigurace**](configuration.md): Doladění chování firmwaru.
+* [**Příkazy**](category/commands): Jaké příkazy zařízení rozumí.
+* [**CBOR payload**](payload.md): Jak zařízení kóduje data odesílaná do cloudu.
 
 ## Typické případy použití {#typical-use-cases}
 

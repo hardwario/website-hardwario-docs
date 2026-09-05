@@ -5,11 +5,11 @@ description: "Osm izolovaných portů 1-Wire zařízení FIBER se v Linuxu objev
 
 # Čtení senzorů 1-Wire do Grafany {#reading-1-wire-sensors-into-grafana}
 
-**Pouze FIBER** — zařízení FIBER Lite nemá 1-Wire hub (viz [V čem se liší](/fiber/fiber-lite/introduction#whats-different)).
+**Pouze FIBER**: zařízení FIBER Lite nemá 1-Wire hub (viz [V čem se liší](/fiber/fiber-lite/introduction#whats-different)).
 
 Osm izolovaných portů 1-Wire zařízení FIBER se v Linuxu objevuje jako osm nezávislých bus masterů, takže sonda
 na portu 3 je viditelná na jiné cestě než sonda na portu 5. Jejich čtení nevyžaduje instalaci ovladače
-ani žádnou konfiguraci — jádro je zpřístupňuje samo.
+ani žádnou konfiguraci, jádro je zpřístupňuje samo.
 
 ## Jak je osm portů zapojeno {#how-the-eight-ports-are-wired}
 
@@ -27,12 +27,12 @@ w1_bus_master5  w1_bus_master6  w1_bus_master7  w1_bus_master8
 ```
 
 `w1_bus_masterN` odpovídá fyzickému portu *N*. Převodník a moduly `ds2482`, `wire` a
-`w1_therm` jsou součástí dodávaného image — není co instalovat ani zapínat.
+`w1_therm` jsou součástí dodávaného image, není co instalovat ani zapínat.
 
 ## Jak zjistit, na kterých portech jsou sondy {#finding-which-ports-have-probes}
 
 Každý detekovaný senzor se zároveň objeví jako symlink přímo pod `/sys/bus/w1/devices/`, pojmenovaný podle
-svého rodinného kódu a unikátního ROM ID — `28-…` je rodina DS18B20:
+svého rodinného kódu a unikátního ROM ID (`28-…` je rodina DS18B20):
 
 ```sh
 ls -d /sys/bus/w1/devices/28-*
@@ -55,7 +55,7 @@ w1_bus_master4: 0 ->
 ```
 
 Prázdný port hlásí `0` a nevypisuje nic. Port se senzorem, který zmizel, si ponechá
-poslední známé ROM ID, ale přestane se aktualizovat — viz [Řešení problémů](#troubleshooting) níže.
+poslední známé ROM ID, ale přestane se aktualizovat, viz [Řešení problémů](#troubleshooting) níže.
 
 ## Čtení teploty {#reading-a-temperature}
 
@@ -89,15 +89,15 @@ nesmysl a musí se zahodit, nikoli započítat do průměru.
 :::note
 
 Čtení těchto souborů spustí na sběrnici převod, který trvá až ~750 ms na senzor. Aplikace
-FIBER už stejné sondy vzorkuje každé 2 sekundy, takže vlastní dotazování držte skromné —
-pár sekund mezi čteními bohatě stačí a sběrnice tak zůstane volná pro aplikaci,
+FIBER už stejné sondy vzorkuje každé 2 sekundy, takže vlastní dotazování držte skromné.
+Pár sekund mezi čteními bohatě stačí a sběrnice tak zůstane volná pro aplikaci,
 která řídí alarmy.
 
 :::
 
 ## Jak dostat naměřené hodnoty do Node-RED {#getting-the-readings-into-node-red}
 
-Stačí jediný uzel `exec` — žádný contrib balíček, žádná další závislost. Nasměrujte ho na krátký
+Stačí jediný uzel `exec`, bez contrib balíčku a bez další závislosti. Nasměrujte ho na krátký
 shellový příkaz a nechte Node-RED zpracovat výstup.
 
 Použijte uzel **inject** s opakovaným intervalem → uzel **exec** spouštějící:
@@ -131,14 +131,14 @@ tagem s ROM ID, připravený ke grafování.
 :::tip
 
 Tagujte podle **ROM ID**, ne podle čísla portu. ROM ID je vypálené v sondě, takže si senzor podrží
-svou identitu v databázi i tehdy, když ho někdo přesune na jiný port — a přesně to potřebujete
+svou identitu v databázi i tehdy, když ho někdo přesune na jiný port, a přesně to potřebujete
 při porovnávání týdenní historie.
 
 :::
 
 ## Ukládání a vizualizace naměřených hodnot {#storing-and-visualizing-the-readings}
 
-Node-RED, InfluxDB a Grafana jsou součástí stejného sdíleného stacku u obou variant — viz
+Node-RED, InfluxDB a Grafana jsou součástí stejného sdíleného stacku u obou variant, viz
 [Instalace Node-RED](/fiber/installation/node-red), [Instalace InfluxDB](/fiber/installation/influxdb)
 a [Instalace Grafany](/fiber/installation/grafana). Výše uvedený flow tedy zapisuje do InfluxDB na
 stejném zařízení a Grafana si data čte lokálně.
@@ -155,7 +155,7 @@ command -v influxd grafana-server node-red
 ```
 
 Pokud se nic nevrátí, jednotka běží na image sestaveném dříve, než byly součástí. Nasměrujte
-flow na jiný host, který je má — zařízení FIBER provozuje **Mosquitto**, takže publikování hodnot do MQTT
+flow na jiný host, který je má. Zařízení FIBER provozuje **Mosquitto**, takže publikování hodnot do MQTT
 a odběr z onoho stroje je cesta nejmenšího odporu.
 
 :::
@@ -163,7 +163,7 @@ a odběr z onoho stroje je cesta nejmenšího odporu.
 ## Řešení problémů {#troubleshooting}
 
 **Port ukazuje `0` slave zařízení.** Na daném fyzickém portu není nic detekováno. Zkontrolujte nejprve zapojení
-sondy — 1-Wire potřebuje data a zem a sonda s parazitním napájením potřebuje navíc pull-up. Porty
+sondy. 1-Wire potřebuje data a zem a sonda s parazitním napájením potřebuje navíc pull-up. Porty
 jsou vzájemně izolované, takže porucha na jednom neruší ostatní.
 
 **`crc=... NO`.** Senzor odpověděl, ale rámec byl poškozený. Obvykle jde o délku kabelu,

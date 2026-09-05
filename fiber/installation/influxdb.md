@@ -42,7 +42,7 @@ Available on both FIBER and FIBER Lite.
    :::tip
 
    `openssl rand -hex 32` generates a random 64-character token so you don't have to invent one.
-   Immediately after, run `influx auth list` to print it back out — store it, together with the
+   Immediately after, run `influx auth list` to print it back out. Store it, together with the
    password you chose; they are needed again for the Node-RED flow above and the Grafana
    datasource below.
 

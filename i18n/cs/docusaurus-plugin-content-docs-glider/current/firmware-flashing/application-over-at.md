@@ -53,5 +53,5 @@ Po restartu je nutné odeslat `AT$FW="confirm"`. Pokud tento krok vynecháte, za
 :::
 
 :::info
-Pokud už máte výstup buildu pro GLIDER ve složce `build/`, můžete `--input-file` vynechat - `west bin-to-at` najde `zephyr.signed.bin` automaticky.
+Pokud už máte výstup buildu pro GLIDER ve složce `build/`, můžete `--input-file` vynechat, protože `west bin-to-at` najde `zephyr.signed.bin` automaticky.
 :::

@@ -1,14 +1,14 @@
 ---
 slug: videos-apps
 title: Videotutoriály
-description: "Na této stránce najdete komplexní sbírku technických návodů a videotutoriálů, které vám pomohou s kompletním nasazením řešení HARDWARIO — od zprovoznění zařízení na nízké úrovni a konfigurace brány až po bezpečnou integraci dat s externími IoT…"
+description: "Na této stránce najdete komplexní sbírku technických návodů a videotutoriálů, které vám pomohou s kompletním nasazením řešení HARDWARIO, od zprovoznění zařízení na nízké úrovni a konfigurace brány až po bezpečnou integraci dat s externími IoT…"
 ---
 
 import Image from '@theme/IdealImage';
 
 # Videotutoriály {#video-tutorials}
 
-Na této stránce najdete komplexní sbírku technických návodů a videotutoriálů, které vám pomohou s kompletním nasazením řešení HARDWARIO — od zprovoznění zařízení na nízké úrovni a konfigurace brány až po bezpečnou integraci dat s externími IoT platformami a vizualizačními dashboardy.
+Na této stránce najdete komplexní sbírku technických návodů a videotutoriálů, které vám pomohou s kompletním nasazením řešení HARDWARIO, od zprovoznění zařízení na nízké úrovni a konfigurace brány až po bezpečnou integraci dat s externími IoT platformami a vizualizačními dashboardy.
 
 ---
 

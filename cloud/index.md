@@ -11,7 +11,7 @@ title: HARDWARIO Cloud
 
 | Feature | Description |
 |---|---|
-| **Spaces** | Isolated workspaces — each with its own devices, users, tags and connectors |
+| **Spaces** | Isolated workspaces. Each with its own devices, users, tags and connectors |
 | **Devices** | Add and manage IoT devices, view real-time status and firmware info |
 | **Messages** | Browse uplink/downlink messages with JSON viewer and basic dashboard |
 | **Tags** | Label groups of devices and connect them to connectors |
@@ -32,7 +32,7 @@ flowchart LR
   class Cloud hero;
 ```
 
-All devices belong to a **Space**. A space is the top-level container for everything — devices, users, tags, connectors and variables. You can have multiple spaces (e.g. one per customer or project).
+All devices belong to a **Space**. A space is the top-level container for everything: devices, users, tags, connectors and variables. You can have multiple spaces (e.g. one per customer or project).
 
 See [**Spaces**](spaces.md) for more details.
 

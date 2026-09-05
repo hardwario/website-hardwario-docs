@@ -36,7 +36,7 @@ hodnotu lze vybrat a zkopírovat.
 
 ## Zkopírování a nasdílení {#copy-or-share-it}
 
-Akce v horní liště vytvoří tentýž blok textu — název zařízení a pod ním jeden
+Akce v horní liště vytvoří tentýž blok textu: název zařízení a pod ním jeden
 řádek `Label: hodnota` na každé pole:
 
 - **Copy device info** ho vloží do schránky.
@@ -49,7 +49,7 @@ Je to nejrychlejší způsob, jak poslat identitu zařízení podpoře.
 ## Ovládání zařízení {#device-controls}
 
 Menu tuhle obrazovku popisuje jako *sériové číslo, firmware, dobu běhu a ovládání
-zařízení* — ovládací prvky jsou pod seznamem polí. **Save configuration** zapíše
+zařízení*. Ovládací prvky jsou pod seznamem polí. **Save configuration** zapíše
 to, co je na zařízení právě nastavené, do jeho paměti, takže nastavení přežije
 restart.
 
@@ -63,6 +63,6 @@ s tlačítkem **Copy**.
 :::info Save configuration vs. uložení z obrazovky konfigurace
 **Save configuration** tady zapíše to, co je na zařízení právě nastavené. Je to
 stejný krok zápisu, který za vás po zapsání úprav dělá
-[**Konfigurace**](./configuration.md) — použijte ho, když jste nastavení změnili
+[**Konfigurace**](./configuration.md). Použijte ho, když jste nastavení změnili
 z [**Terminálu**](./terminal.md) a chcete, aby vydrželo.
 :::

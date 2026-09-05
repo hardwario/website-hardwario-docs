@@ -5,7 +5,7 @@ title: Uplink
 
 # Uplink
 
-An **uplink** is a message sent **from the device to the Cloud** — the counterpart to a
+An **uplink** is a message sent **from the device to the Cloud**, the counterpart to a
 [**downlink**](/cloud/downlink). Uplinks carry the data a CHESTER reports: sensor measurements, along
 with status, session, and codec information.
 
@@ -13,9 +13,9 @@ with status, session, and codec information.
 
 A device reports on a schedule set by its configuration:
 
-- **`interval-sample`** — how often the device samples its sensors
-- **`interval-aggreg`** — how often those samples are aggregated
-- **`interval-report`** — how often the aggregated data is sent to the Cloud as an uplink
+- **`interval-sample`**: how often the device samples its sensors
+- **`interval-aggreg`**: how often those samples are aggregated
+- **`interval-report`**: how often the aggregated data is sent to the Cloud as an uplink
 
 You can change these remotely with a [**Config downlink**](/cloud/downlink/config).
 

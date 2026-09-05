@@ -32,11 +32,11 @@ Bez ohledu na zvolený protokol konektivity lze stav radia i přihlašovací úd
 ### Integrace LoRaWAN {#lorawan-integration}
 Standardní provoz LoRaWAN Class A s aktivací OTAA/ABP, dynamickým ADR, šifrovanou telemetrií a vzdálenou správou přes fPort 85.
 
-- **[Integrace ChirpStack v4](./lorawan-chirpstack.md)** — Průvodce nastavením pro vlastní nasazení LNS ChirpStack.
-- **[Integrace The Things Stack](./lorawan-tts.md)** — Průvodce nastavením pro TTS Cloud a Community Edition.
-- **[Downlink příkazy](./downlink-commands.md)** — Referenční přehled vzdálené konfigurace parametrů přes fPort 85.
+- **[Integrace ChirpStack v4](./lorawan-chirpstack.md)**: Průvodce nastavením pro vlastní nasazení LNS ChirpStack.
+- **[Integrace The Things Stack](./lorawan-tts.md)**: Průvodce nastavením pro TTS Cloud a Community Edition.
+- **[Downlink příkazy](./downlink-commands.md)**: Referenční přehled vzdálené konfigurace parametrů přes fPort 85.
 
 ### LoRa P2P (peer-to-peer) {#lora-p2p-peer-to-peer}
 Softwarově volitelný proprietární režim radia, který umožňuje přímé nespravované vysílání radiových paketů bez prostředníka v podobě síťového serveru.
 
-- **[Průvodce LoRa P2P](./lora-p2p.md)** — Přehled architektury, parametry RF rámců a integrace s edge bránou.
+- **[Průvodce LoRa P2P](./lora-p2p.md)**: Přehled architektury, parametry RF rámců a integrace s edge bránou.

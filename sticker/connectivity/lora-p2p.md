@@ -25,7 +25,7 @@ LoRa P2P communication mode is introduced in an upcoming platform firmware relea
 
 ## Architecture & Topology
 
-In LoRa P2P mode, STICKER bypasses the LoRaWAN MAC layer while utilizing the underlying Semtech SX1262 / STM32WL LoRa PHY modulation layer. Frames go straight from the device to a receiver you operate — there is no gateway, no Join, and no network server in the path.
+In LoRa P2P mode, STICKER bypasses the LoRaWAN MAC layer while utilizing the underlying Semtech SX1262 / STM32WL LoRa PHY modulation layer. Frames go straight from the device to a receiver you operate. There is no gateway, no Join, and no network server in the path.
 
 ```mermaid
 flowchart LR
@@ -36,7 +36,7 @@ flowchart LR
   class RX hero;
 ```
 
-Compare this with the [**LoRaWAN**](./index.md) path, where uplinks travel STICKER → gateway → network server → your application. In P2P there is no LoRaWAN MAC, so there is also no Join procedure, no ADR, and no network-managed downlink windows — the two sides simply have to agree on the radio parameters below.
+Compare this with the [**LoRaWAN**](./index.md) path, where uplinks travel STICKER → gateway → network server → your application. In P2P there is no LoRaWAN MAC, so there is also no Join procedure, no ADR, and no network-managed downlink windows. The two sides simply have to agree on the radio parameters below.
 
 ---
 

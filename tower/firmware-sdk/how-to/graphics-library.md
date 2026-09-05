@@ -25,7 +25,7 @@ Example: `twr_gfx_set_font(pgfx, &twr_font_ubuntu_13);`.
 
 :::info
 
-Every change you make - draw a string or a line, rotate the display, etc is **done internally** and no changes are visible until you call the `twr_gfx_update(pgfx)` function.
+Every change you make (draw a string or a line, rotate the display, etc.) is **done internally** and no changes are visible until you call the `twr_gfx_update(pgfx)` function.
 
 This is done for low-power reasons.
 

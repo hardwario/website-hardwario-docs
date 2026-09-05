@@ -18,7 +18,7 @@ Klikněte na odkaz níže a přejděte na stránku pro stažení MikroTik:
 
 https://mikrotik.com/download/winbox
 
-Na stránce klikněte na **Windows (64-bit)** — stáhne se soubor `.zip`.
+Na stránce klikněte na **Windows (64-bit)**. Stáhne se soubor `.zip`.
 
 ![Stránka pro stažení Winbox 4](../../../../../ember/mikrotik/images/winbox-1.png)    
 
@@ -39,7 +39,7 @@ Kliknutím na tlačítko **Extract** soubor rozbalte.
 
 ### 3. Spuštění Winbox 4 {#3-run-winbox-4}
 
-V rozbalené složce otevřete aplikaci **WinBox.exe**. Po otevření aplikace se zobrazí systémové okno — potvrďte jej kliknutím na **Allow**.
+V rozbalené složce otevřete aplikaci **WinBox.exe**. Po otevření aplikace se zobrazí systémové okno. Potvrďte jej kliknutím na **Allow**.
 
 **Winbox 4 je nyní připraven k použití.**
 
@@ -53,7 +53,7 @@ Klikněte na odkaz níže a přejděte na stránku pro stažení MikroTik:
 
 [https://mikrotik.com/download/winbox](https://mikrotik.com/download/winbox)
 
-Na stránce klikněte na **Linux (64-bit)** — stáhne se soubor `.zip`. Umístěte jej někam, kde k němu snadno přistoupíte, například do složky **Downloads**.
+Na stránce klikněte na **Linux (64-bit)**. Stáhne se soubor `.zip`. Umístěte jej někam, kde k němu snadno přistoupíte, například do složky **Downloads**.
 
 ![Stránka pro stažení Winbox 4](../../../../../ember/mikrotik/images/winbox-4.png)
 
@@ -61,7 +61,7 @@ Na stránce klikněte na **Linux (64-bit)** — stáhne se soubor `.zip`. Umíst
 
 ### 2. Rozbalení archivu {#2-extract-the-archive-1}
 
-Klikněte pravým tlačítkem na stažený soubor **WinBox_Linux.zip** a zvolte **Extract Here** — nebo **Extract to…**, pokud jej chcete umístit do konkrétní složky.
+Klikněte pravým tlačítkem na stažený soubor **WinBox_Linux.zip** a zvolte **Extract Here**, nebo **Extract to…**, pokud jej chcete umístit do konkrétní složky.
 
 Po dokončení rozbalení uvidíte složku obsahující soubor **WinBox** a složku **assets**.
 

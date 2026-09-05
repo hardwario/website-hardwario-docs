@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        The <b>Breadboard Module</b> offers an easy way to connect any <b>HARDWARIO TOWER - Industrial IoT Kit</b> module to your breadboard. The narrowed breakout provides more space for <b>wiring and prototyping</b>.
+        The <b>Breadboard Module</b> offers an easy way to connect any <b>HARDWARIO TOWER Industrial IoT Kit</b> module to your breadboard. The narrowed breakout provides more space for <b>wiring and prototyping</b>.
       </p>
       <p>
         The <b>precision pin headers</b> from the bottom side allow smooth insertion to your <b>breadboard</b> and do not stress the breadboard’s sockets.

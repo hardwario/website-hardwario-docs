@@ -19,7 +19,7 @@ curl -H 'X-API-KEY: <api-key>' \
 
 ## Výpis zařízení v prostoru {#list-devices-in-a-space}
 
-`GET /v2/spaces/{space_id}/devices` — podporuje parametry dotazu `limit`, `offset`, `name`,
+`GET /v2/spaces/{space_id}/devices`: podporuje parametry dotazu `limit`, `offset`, `name`,
 `serial_number`, `tag_ids` a `sort_by`/`order_by`.
 
 <Tabs>
@@ -54,7 +54,7 @@ for d in devices:
 
 ## Čtení zpráv zařízení {#read-a-devices-messages}
 
-`GET /v2/spaces/{space_id}/messages` — filtrujte pomocí těchto parametrů dotazu:
+`GET /v2/spaces/{space_id}/messages`: filtrujte pomocí těchto parametrů dotazu:
 
 | Parametr | Popis |
 |---|---|
@@ -64,7 +64,7 @@ for d in devices:
 | `direction` | `up` (ze zařízení) nebo `down` (do zařízení) |
 | `after` / `before` | Časový rozsah (ISO-8601) |
 | `limit` | Maximální počet vrácených zpráv |
-| `offset` | UUID poslední přečtené zprávy — kurzor stránkování |
+| `offset` | UUID poslední přečtené zprávy. Kurzor stránkování |
 
 ```bash
 curl -H 'X-API-KEY: <api-key>' \
@@ -78,7 +78,7 @@ Pokud vidíte zprávy na webu, ale ne přes API, rozšiřte `after` a zvyšte
 `limit`.
 :::
 
-**Pouze poslední hodnota** — vyžádejte si jednu zprávu, nejnovější první:
+**Pouze poslední hodnota**: vyžádejte si jednu zprávu, nejnovější první:
 
 ```bash
 curl -H 'X-API-KEY: <api-key>' \

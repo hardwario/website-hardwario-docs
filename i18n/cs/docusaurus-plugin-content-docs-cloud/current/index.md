@@ -12,7 +12,7 @@ description: "HARDWARIO Cloud je platforma pro správu zařízení CHESTER a dal
 
 | Funkce | Popis |
 |---|---|
-| **Spaces** | Izolované pracovní prostory — každý s vlastními zařízeními, uživateli, tagy a konektory |
+| **Spaces** | Izolované pracovní prostory. Každý s vlastními zařízeními, uživateli, tagy a konektory |
 | **Devices** | Přidávání a správa IoT zařízení, zobrazení stavu v reálném čase a informací o firmwaru |
 | **Messages** | Procházení uplink/downlink zpráv s JSON prohlížečem a základním dashboardem |
 | **Tags** | Označení skupin zařízení a jejich propojení s konektory |
@@ -33,7 +33,7 @@ flowchart LR
   class Cloud hero;
 ```
 
-Všechna zařízení patří do některého **Space**. Space je nejvyšší kontejner pro všechno — zařízení, uživatele, tagy, konektory a proměnné. Můžete mít více prostorů (např. jeden na zákazníka nebo projekt).
+Všechna zařízení patří do některého **Space**. Space je nejvyšší kontejner pro všechno: zařízení, uživatele, tagy, konektory a proměnné. Můžete mít více prostorů (např. jeden na zákazníka nebo projekt).
 
 Více podrobností najdete v sekci [**Spaces**](spaces.md).
 

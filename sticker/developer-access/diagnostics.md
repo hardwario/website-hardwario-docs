@@ -69,8 +69,8 @@ Use `ats led` subcommands to test individual color channels during manufacturing
 
 :::info Raw Command Frame Injection (Debug Builds)
 Debug builds expose raw protobuf message injectors:
-- `ats cmd lrw <hex>` — Feed a raw binary command frame into the LoRaWAN downlink command processor.
-- `ats cmd nfc <hex>` — Feed a raw binary command frame into the encrypted NFC command engine.
+- `ats cmd lrw <hex>`: Feed a raw binary command frame into the LoRaWAN downlink command processor.
+- `ats cmd nfc <hex>`: Feed a raw binary command frame into the encrypted NFC command engine.
 
 Responses are output directly to the console as hex strings. Deferred hardware actions (reboot, factory reset) are validated but suppressed during shell injection.
 :::

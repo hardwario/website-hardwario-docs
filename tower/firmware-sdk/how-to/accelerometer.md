@@ -82,7 +82,7 @@ When the accelerometer checks these settings it uses **logical AND operation** m
 
 In the example below, we set the alarm to be triggered when the Core Module is moved in direction of the X-axis with acceleration > 1g. When triggered, the integrated red LED will switch on for one second.
 
-After flashing, try to move your Core Module very slowly. It will do nothing in any direction. Then try to move it quickly up and down - once again nothing happens, because this movement is on Z-axis. Now try to make a quick move on X-axis and the LED should light up.
+After flashing, try to move your Core Module very slowly. It will do nothing in any direction. Then try to move it quickly up and down. Once again nothing happens, because this movement is on Z-axis. Now try to make a quick move on X-axis and the LED should light up.
 
 :::
 

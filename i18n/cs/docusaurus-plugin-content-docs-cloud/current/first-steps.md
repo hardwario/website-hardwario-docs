@@ -1,12 +1,12 @@
 ---
 slug: first-steps
 title: První kroky
-description: "Vítejte v HARDWARIO Cloud — platformě, kde se spravují vaše zařízení a kam přichází vaše živá"
+description: "Vítejte v HARDWARIO Cloud, platformě, kde se spravují vaše zařízení a kam přichází vaše živá"
 ---
 
 # Rychlý průvodce HARDWARIO Cloud {#hardwario-cloud-quick-start-guide}
 
-Vítejte v **HARDWARIO Cloud** — platformě, kde se spravují vaše zařízení a kam přichází vaše živá
+Vítejte v **HARDWARIO Cloud**, platformě, kde se spravují vaše zařízení a kam přichází vaše živá
 data. Podle následujících kroků si vytvoříte účet, zaregistrujete první zařízení a začnete pracovat
 s jeho zprávami.
 
@@ -17,7 +17,7 @@ s jeho zprávami.
 3. Vytvořte účet pomocí účtu **Google** nebo **Microsoft**, případně přes **e-mail a heslo** (ověřte svůj e-mail).
 4. Po ověření se **přihlaste**.
 
-![Obrazovka HARDWARIO Cloud „Create account" — pole pro e-mail a heslo s možnostmi registrace přes Google a Microsoft](../../../../cloud/images/create-account.png)
+![Obrazovka HARDWARIO Cloud „Create account" s poli pro e-mail a heslo a s možnostmi registrace přes Google a Microsoft](../../../../cloud/images/create-account.png)
 
 :::info
 Pro vyšší bezpečnost doporučujeme ověření přes **Google** nebo **Microsoft**.
@@ -31,7 +31,7 @@ Pro vyšší bezpečnost doporučujeme ověření přes **Google** nebo **Micros
 
 2. Pojmenujte svůj space (například: `my-home`, `office-sensors`, `warehouse`). Řiďte se [**konvencemi pojmenování**](/cloud/#naming-conventions).
 
-   ![Dialog „Create new space" — zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
+   ![Dialog „Create new space": zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
 
 3. Právě zde budou vaše zařízení žít. Podrobnosti viz [**Spaces**](/cloud/spaces).
 
@@ -42,11 +42,11 @@ Pro vyšší bezpečnost doporučujeme ověření přes **Google** nebo **Micros
 
    ![Stránka DEVICES se zvýrazněným tlačítkem „+ NEW DEVICE" v pravém horním rohu](../../../../cloud/images/devices-new-device.png)
 
-3. Zadejte informace o zařízení — buď **naskenujte QR kód** (`⛶ SCAN DEVICE`) a vše se vyplní automaticky, nebo zadejte **Name**, **HARDWARIO Serial Number (HSN)** a **Claim Token** ručně.
+3. Zadejte informace o zařízení: buď **naskenujte QR kód** (`⛶ SCAN DEVICE`) a vše se vyplní automaticky, nebo zadejte **Name**, **HARDWARIO Serial Number (HSN)** a **Claim Token** ručně.
 
-   ![Dialog „Create new device" — naskenujte QR kód, nebo vyplňte Name, Serial Number a Claim Token](../../../../cloud/images/create-new-device.png)
+   ![Dialog „Create new device": naskenujte QR kód, nebo vyplňte Name, Serial Number a Claim Token](../../../../cloud/images/create-new-device.png)
 
-4. Uložte — vaše zařízení je nyní **zaregistrováno v Cloudu**. Vše, co můžete dělat dál, najdete v sekci [**Devices**](/cloud/devices).
+4. Uložte: vaše zařízení je nyní **zaregistrováno v Cloudu**. Vše, co můžete dělat dál, najdete v sekci [**Devices**](/cloud/devices).
 
 ## Krok 4: Podívejte se na svá data {#step-4-see-your-data}
 
@@ -60,7 +60,7 @@ Jakmile je zařízení napájené a připojené, jeho uplinky se objeví v Cloud
 
 ## Krok 5: Zasáhněte do chodu svých zařízení {#step-5-act-on-your-devices}
 
-Cloud je obousměrný — pošlete konfiguraci, data nebo shell příkazy zpět pomocí
+Cloud je obousměrný: pošlete konfiguraci, data nebo shell příkazy zpět pomocí
 [**Downlink**](/cloud/downlink) a nahrajte nový [**Firmware**](/cloud/firmware) vzduchem.
 
 ## Krok 6: Propojte Cloud se svými systémy {#step-6-integrate-with-your-systems}

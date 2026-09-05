@@ -12,19 +12,19 @@ import Image from '@theme/IdealImage';
 
 ### Key Benefits
 
-- **Enterprise-grade security** – TTS implements end-to-end encryption, secure device provisioning, and multi-tenant architecture to protect data and ensure compliance.  
-- **Scalability and reliability** – Built for large-scale deployments, with clustering, redundancy, and multi-region support.  
-- **Flexible deployment options** – Available as a managed cloud service, private cloud, or on-premises installation.  
-- **Interoperability and open standards** – Fully compliant with the LoRaWAN® specification and integrates easily with existing IoT platforms via MQTT, Webhooks, or APIs.  
+- **Enterprise-grade security**: TTS implements end-to-end encryption, secure device provisioning, and multi-tenant architecture to protect data and ensure compliance.  
+- **Scalability and reliability**: Built for large-scale deployments, with clustering, redundancy, and multi-region support.  
+- **Flexible deployment options**: Available as a managed cloud service, private cloud, or on-premises installation.  
+- **Interoperability and open standards**: Fully compliant with the LoRaWAN® specification and integrates easily with existing IoT platforms via MQTT, Webhooks, or APIs.  
 
 ### What You Can Do with TTS
 
-With The Things Stack, you can deploy and operate a complete LoRaWAN infrastructure — from device registration and gateway management to data routing and integration with third-party systems.  
+With The Things Stack, you can deploy and operate a complete LoRaWAN infrastructure, from device registration and gateway management to data routing and integration with third-party systems.  
 You can build and scale IoT applications for smart agriculture, asset tracking, energy management, logistics, or industrial monitoring, while keeping full control over your network and data.
 
 ---
 
-The Things Stack provides the foundation for professional LoRaWAN networks — secure, scalable, and interoperable. Whether you’re building a private IoT solution or operating a global deployment, TTS gives you the tools to manage your devices and data with confidence.
+The Things Stack provides the foundation for professional LoRaWAN networks: secure, scalable, and interoperable. Whether you’re building a private IoT solution or operating a global deployment, TTS gives you the tools to manage your devices and data with confidence.
 
 ---
 

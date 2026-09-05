@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 # TAPPER Changelog
 
-This page tracks all notable changes across the TAPPER platform — including **firmware** and **hardware**. Use the tabs below to filter by change category.
+This page tracks all notable changes across the TAPPER platform, including **firmware** and **hardware**. Use the tabs below to filter by change category.
 
 :::info
 
@@ -25,30 +25,30 @@ Firmware source: [hardwario/tapper](https://github.com/hardwario/tapper) on GitH
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware & Applications" default>
 
-### 2025-08-12 — v1.2.1
+### 2025-08-12 – v1.2.1
 
 - **[FW]** Fixed non-TLS MQTT connection (regression from v1.2.0)
 - **[FW]** Fixed license notice in source files
 
-### 2025-06-26 — v1.2.0
+### 2025-06-26 – v1.2.0
 
-- **[FW]** Network configuration via NetworkManager/dbus — TAPPER can now manage its own network interface
+- **[FW]** Network configuration via NetworkManager/dbus: TAPPER can now manage its own network interface
 - **[FW]** New installation dependencies: `git pipx python3-dev cmake libdbus-1-dev libglib2.0-dev`
 
-### 2025-05-28 — v1.1.0
+### 2025-05-28 – v1.1.0
 
-- **[FW]** TLS support for MQTT connections — secure end-to-end communication
+- **[FW]** TLS support for MQTT connections: secure end-to-end communication
 
-### 2025-05-23 — v1.0.3
+### 2025-05-23 – v1.0.3
 
 - **[FW]** Fixed LED off-request logic
 - **[FW]** README improvements
 
-### 2025-05-23 — v1.0.2
+### 2025-05-23 – v1.0.2
 
 - **[FW]** Minor fixes and stability improvements
 
-### 2025-05-23 — v1.0.1
+### 2025-05-23 – v1.0.1
 
 - **[FW]** Initial release
 - **[FW]** MQTT communication

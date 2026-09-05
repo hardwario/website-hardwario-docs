@@ -7,23 +7,23 @@ import TabItem from '@theme/TabItem';
 # Install ChirpStack Concentratord
 
 This section installs and configures the **ChirpStack Concentratord** for the LoRa concentrator
-module. **The hardware path is different between the two variants** — pick the tab below that
+module. **The hardware path is different between the two variants**, so pick the tab below that
 matches your device:
 
 :::info FIBER (CM4)
 
-Connects via **USB** — the standard ChirpStack Concentratord configuration.
+Connects via **USB**, the standard ChirpStack Concentratord configuration.
 
 :::
 
 :::info FIBER Lite (Pi 5)
 
-Connects via **SPI** through a RAK2287 HAT — a different install path.
+Connects via **SPI** through a RAK2287 HAT, a different install path.
 
 :::
 
 <Tabs groupId="fiber-variant">
-<TabItem value="fiber" label="USB — FIBER (CM4)" default>
+<TabItem value="fiber" label="USB (FIBER, CM4)" default>
 
 1. Download and install the **ChirpStack Concentratord** binary:
 
@@ -142,16 +142,16 @@ Connects via **SPI** through a RAK2287 HAT — a different install path.
 
    :::tip
 
-   Copy the **Gateway ID** from the log output - you will need it to register the gateway in
+   Copy the **Gateway ID** from the log output. You will need it to register the gateway in
    ChirpStack.
 
    :::
 
 </TabItem>
-<TabItem value="fiber-lite" label="SPI, RAK2287 HAT — FIBER Lite (Pi 5)">
+<TabItem value="fiber-lite" label="SPI via RAK2287 HAT (FIBER Lite, Pi 5)">
 
 The FIBER Lite concentrator is the same **RAK5146** LoRaWAN concentrator card, but seated on a
-**RAK2287** Pi HAT connected via **SPI** — a different hardware path (SPI device + GPIO reset
+**RAK2287** Pi HAT connected via **SPI**, a different hardware path (SPI device + GPIO reset
 pin) than the USB-connected variant above.
 
 :::tip
@@ -172,7 +172,7 @@ and ships a vendor profile for this hardware, which supplies the pin mapping (re
 
    If `dtparam=spi=on` is commented out, uncomment it (or append it) in
    `/boot/firmware/config.txt` and reboot. If no `/dev/spidev*` device appears after that, the
-   HAT is not seated — do not continue until it is.
+   HAT is not seated. Do not continue until it is.
 
 1. Download and install the **ChirpStack Concentratord** binary. ChirpStack does not publish
    Concentratord in its apt repository or as a GitHub release asset, only as a tarball on the
@@ -237,7 +237,7 @@ and ships a vendor profile for this hardware, which supplies the pin mapping (re
    :::warning
 
    The `[gateway.concentrator]` channel plan is **mandatory**. The vendor profile supplies only
-   the pin mapping, RSSI offsets and gain table — it does not supply a channel plan. Without it
+   the pin mapping, RSSI offsets and gain table, but it does not supply a channel plan. Without it
    every radio comes up `enabled: false` at frequency 0 and the daemon blocks indefinitely on
    `Opening SPI communication interface` with no error message, which looks exactly like a wiring
    or detection fault but is purely a configuration problem.
@@ -277,11 +277,11 @@ and ships a vendor profile for this hardware, which supplies the pin mapping (re
    :::warning
 
    `Group=chirpstack` and `UMask=0007` are load-bearing. Unlike the USB variant, this service runs
-   as **root** so it can reach the SPI device and the GPIO reset pin — which means the ZeroMQ IPC
+   as **root** so it can reach the SPI device and the GPIO reset pin, which means the ZeroMQ IPC
    sockets it creates in `/tmp` would default to `root:root` mode 0755. The MQTT Forwarder
    connects to them as the unprivileged `chirpstack` user, and connecting to a unix socket
    requires **write** permission, so it would be refused. These two lines make the sockets
-   `root:chirpstack` mode 0770 instead. Both services will report `active` either way — the only
+   `root:chirpstack` mode 0770 instead. Both services will report `active` either way. The only
    symptom is that no uplinks ever reach MQTT.
 
    :::
@@ -316,7 +316,7 @@ and ships a vendor profile for this hardware, which supplies the pin mapping (re
 
    :::tip
 
-   Copy the **Gateway ID** from the log output - you will need it to register the gateway in
+   Copy the **Gateway ID** from the log output. You will need it to register the gateway in
    ChirpStack.
 
    :::

@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Video Tutorials
 
-On this page, you will find a comprehensive repository of technical guides and video tutorials designed to assist with the end-to-end deployment of HARDWARIO solutions—from low-level device provisioning and gateway configuration to secure data integration with external IoT platforms and visualization dashboards.
+On this page, you will find a comprehensive repository of technical guides and video tutorials designed to assist with the end-to-end deployment of HARDWARIO solutions, from low-level device provisioning and gateway configuration to secure data integration with external IoT platforms and visualization dashboards.
 
 ---
 

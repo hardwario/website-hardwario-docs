@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # AT Console over USB-C
 
-This page shows you how to communicate with GLIDER through its **USB-C** connector using **AT commands**. The AT console is the recommended interface for everyday work - provisioning, configuration, firmware updates - and requires no special debug hardware.
+This page shows you how to communicate with GLIDER through its **USB-C** connector using **AT commands**. The AT console is the recommended interface for everyday work (provisioning, configuration, firmware updates) and requires no special debug hardware.
 
 :::tip
 Looking for live logs and the full Zephyr shell? Use the [**RTT Console (J-Link)**](rtt-jlink.md) instead.
@@ -28,7 +28,7 @@ UART0 runs at **1 000 000 baud** (configured in `gauger_lte_nrf9151_common.dtsi`
 When you connect the USB-C cable the firmware:
 
 1. Detects the cable on `USB_DETECT` (P0.26).
-2. After a 50 ms debounce, turns on `USB_EN` (P0.00) - the FT234XD boots.
+2. After a 50 ms debounce, turns on `USB_EN` (P0.00), and the FT234XD boots.
 3. Activates UART0 RX and starts processing AT commands.
 
 ## Prerequisites
@@ -66,7 +66,7 @@ ls -l /dev/ttyUSB0
 # crw-rw---- 1 root dialout ... /dev/ttyUSB0
 ```
 
-If `/dev/ttyUSB0` does not appear, check `dmesg | tail -20` - you should see something like:
+If `/dev/ttyUSB0` does not appear, check `dmesg | tail -20`. You should see something like:
 
 ```text
 usb 1-2: new full-speed USB device
@@ -123,7 +123,7 @@ What you just installed:
 | `west` | Meta-build tool used by Zephyr / nRF Connect SDK |
 | `pyserial` | UART communication library |
 | `loguru` | Structured logging |
-| `rttt` | HARDWARIO console UI library - parses the `@LOG:` framing |
+| `rttt` | HARDWARIO console UI library that parses the `@LOG:` framing |
 
 #### Step 5 - Verify the installation
 
@@ -156,8 +156,8 @@ west serial-console --port /dev/ttyUSB1 --baudrate 1000000
 
 The console keeps two streams separated:
 
-- **AT commands and responses** - what you type and what GLIDER replies.
-- **`@LOG:` messages** - live log lines that scroll past without interfering with the command line.
+- **AT commands and responses**: what you type and what GLIDER replies.
+- **`@LOG:` messages**: live log lines that scroll past without interfering with the command line.
 
 Useful files maintained by `west serial-console`:
 
@@ -181,7 +181,7 @@ If `OK` appears, you are talking to the device.
 
 | Command | What it does |
 | :--- | :--- |
-| `AT` | Connection test - returns `OK` |
+| `AT` | Connection test, returns `OK` |
 | `AT+CLAC` | Lists all registered AT commands |
 | `AT$HELP` | Same as `+CLAC` but with hints |
 | `ATI` | Device identification |

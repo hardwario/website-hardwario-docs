@@ -7,7 +7,7 @@ description: "Příkaz settings ukládá a resetuje uloženou konfiguraci přes 
 
 Příkaz `settings` ukládá a resetuje uloženou konfiguraci přes vývojářský shell (otevření konzole viz [**Nastavení firmwaru**](firmware-setup.md)). Změna přes `config` se okamžitě projeví v RAM, ale do uložení se restartem ztratí.
 
-Resety tvoří **žebříček podle závažnosti** — každá úroveň zachovává striktní podmnožinu té nad sebou a všechny restartují zařízení. Koncepční pohled (a ekvivalenty přes NFC v aplikaci HARDWARIO Manager) najdete v [**žebříčku resetů**](../features.md) na stránce s funkcemi firmwaru.
+Resety tvoří **žebříček podle závažnosti**: každá úroveň zachovává striktní podmnožinu té nad sebou a všechny restartují zařízení. Koncepční pohled (a ekvivalenty přes NFC v aplikaci HARDWARIO Manager) najdete v [**žebříčku resetů**](../features.md) na stránce s funkcemi firmwaru.
 
 :::info Firmware v1.4.0
 Žebříček resetů níže je **nový v připravovaném firmwaru STICKER v1.4.0** (#299). Ve verzi v1.3.x existuje jediný `settings reset` vedle `settings save`; v1.4.0 dělí resety na `device-reset` / `factory-reset` / `vendor-reset` a přidává `settings erase`. Původní `settings reset` se mění na **`settings device-reset`** (stejné chování).

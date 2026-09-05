@@ -18,9 +18,9 @@ API klíče jsou **vázané na Space** a klíč lze pomocí **tagů** omezit na 
 
    ![Dialog „Create new key" s poli Name a Tags](../../../../../cloud/api/images/api-key-create.png)
 
-3. Zkopírujte klíč z dialogu **API Key Created** a bezpečně jej uložte — **zobrazí se pouze jednou**. Pokud jej ztratíte, vytvořte klíč nový.
+3. Zkopírujte klíč z dialogu **API Key Created** a bezpečně jej uložte, **zobrazí se pouze jednou**. Pokud jej ztratíte, vytvořte klíč nový.
 
-   ![Dialog „API Key Created" — zkopírujte klíč, který se zobrazí pouze jednou](../../../../../cloud/api/images/api-key-created.png)
+   ![Dialog „API Key Created": zkopírujte klíč, který se zobrazí pouze jednou](../../../../../cloud/api/images/api-key-created.png)
 
 Potom jej posílejte s každým voláním:
 

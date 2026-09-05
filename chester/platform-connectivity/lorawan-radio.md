@@ -91,7 +91,7 @@ In the **CHIRPSTACK** device profile in the **JOIN (OTAA/ABP)** tab enable **Dev
 
 When you create a device, in CHIRPSTACK you can auto-generate keys and save them to the device.
 
-When you copy Appkey from the CHIRPSTACK, click on the **eye symbol** to show the key and copy it manually - select the key by mouse and choose copy. Do not use copy button in the older CHIRPSTACKs, there is a bug.
+When you copy Appkey from the CHIRPSTACK, click on the **eye symbol** to show the key and copy it manually. Select the key by mouse and choose copy. Do not use copy button in the older CHIRPSTACKs, there is a bug.
 
 Also, the key has spaces so in the CHESTER shell you have to put key in quotation marks **"11 22 33 ... ee ff"**.
 
@@ -152,12 +152,12 @@ The following table provides a summary of the recommended configuration paramete
 
 | **Parameter** | **Value** |
 |----------------|-----------|
-| **General – MAC version** | **LoRaWAN 1.0.4** |
-| **General – Regional parameters revision** | **A** |
-| **General – ADR algorithm** | **Default ADR algorithm (LoRa only)** |
-| **Join (OTAA/ABP) – Device supports OTAA** | **ON** |
-| **Class-B – Device supports Class-B** | **OFF** |
-| **Class-C – Device supports Class-C** | **OFF** |
+| **General → MAC version** | **LoRaWAN 1.0.4** |
+| **General → Regional parameters revision** | **A** |
+| **General → ADR algorithm** | **Default ADR algorithm (LoRa only)** |
+| **Join (OTAA/ABP) → Device supports OTAA** | **ON** |
+| **Class-B → Device supports Class-B** | **OFF** |
+| **Class-C → Device supports Class-C** | **OFF** |
 
 :::info
 If you are unsure about the **ChirpStack setup** or **configuration**, please refer to the following guide, which provides detailed instructions for installing and configuring ChirpStack v4: [**Getting Started with ChirpStack v4**](https://docs.hardwario.com/apps/chirpstack/index#getting-started-with-chirpstack-v4)
@@ -171,8 +171,8 @@ HARDWARIO is using decoders that can be used in CHIRPSTACK or Node-RED. Let's ta
 
 It contains files:
 
-- [cs-decoder.js](https://github.com/hardwario/chester-sdk/blob/main/applications/clime/codec/cs-decoder.js) - CHIRPSTACK decoder
-- [nr-decoder.js](https://github.com/hardwario/chester-sdk/blob/main/applications/clime/codec/nr-decoder.js) - Node-RED decoder
+- [cs-decoder.js](https://github.com/hardwario/chester-sdk/blob/main/applications/clime/codec/cs-decoder.js): CHIRPSTACK decoder
+- [nr-decoder.js](https://github.com/hardwario/chester-sdk/blob/main/applications/clime/codec/nr-decoder.js): Node-RED decoder
 
 ### CHIRPSTACK Decoder
 

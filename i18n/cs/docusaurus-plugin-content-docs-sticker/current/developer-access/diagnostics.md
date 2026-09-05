@@ -70,8 +70,8 @@ Podpříkazy `ats led` slouží k testování jednotlivých barevných kanálů 
 
 :::info Vkládání surových příkazových rámců (debug buildy)
 Debug buildy zpřístupňují injektory surových protobuf zpráv:
-- `ats cmd lrw <hex>` — Vloží surový binární příkazový rámec do procesoru downlink příkazů LoRaWAN.
-- `ats cmd nfc <hex>` — Vloží surový binární příkazový rámec do enginu šifrovaných NFC příkazů.
+- `ats cmd lrw <hex>`: Vloží surový binární příkazový rámec do procesoru downlink příkazů LoRaWAN.
+- `ats cmd nfc <hex>`: Vloží surový binární příkazový rámec do enginu šifrovaných NFC příkazů.
 
 Odpovědi se vypisují přímo do konzole jako hexadecimální řetězce. Odložené hardwarové akce (restart, factory reset) se validují, ale při vložení ze shellu se potlačí.
 :::

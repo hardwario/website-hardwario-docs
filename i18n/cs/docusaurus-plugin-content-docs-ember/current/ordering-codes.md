@@ -21,8 +21,8 @@ U každého produktu jsou uvedeny dostupné varianty, tedy které varianty jsou 
 
 Produkt vždy obsahuje **napájecí adaptér 24 V DC** s mezinárodními vidlicemi.
 
-**Antény pro LoRaWAN a LTE jsou umístěny uvnitř krabičky** a připojeny už z výroby, takže k uvedení brány do provozu není třeba objednávat žádnou anténu. **Externí antény nejsou součástí balení** —
-objednávejte je samostatně a počítejte s tím, že jejich montáž znamená otevření krabičky. Viz
+**Antény pro LoRaWAN a LTE jsou umístěny uvnitř krabičky** a připojeny už z výroby, takže k uvedení brány do provozu není třeba objednávat žádnou anténu. **Externí antény nejsou součástí balení**.
+Objednávejte je samostatně a počítejte s tím, že jejich montáž znamená otevření krabičky. Viz
 [Popis hardwaru → Antény](hardware-description.md#antennas).
 
 :::

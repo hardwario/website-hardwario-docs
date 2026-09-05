@@ -8,7 +8,7 @@ The TOWER Kit emphasizes hardware **modularity** and **reusability**. To achieve
 
 :::info
 
-TOWER sticks to a well-known and widely accepted standard - the so-called headers with a 2.54 mm (0.1 inches) pitch.
+TOWER sticks to a well-known and widely accepted standard, the so-called headers with a 2.54 mm (0.1 inches) pitch.
 
 :::
 
@@ -85,14 +85,14 @@ The following table defines signal assignment on the module header
 
 | Pin  | Signal                                             | Description                                                                                  | STM32 GPIO |
 | :--- | :------------------------------------------------- | :------------------------------------------------------------------------------------------- | :--------- |
-| 1    | P0<br/>A0<br/>TXD0                                 | GPIO channel 0<br/>ADC channel 0<br/>UART channel 0 - TXD signal                             | PA0        |
-| 2    | P1<br/>A1<br/>RXD0                                 | GPIO channel 1<br/>ADC channel 1<br/>UART channel 0 - RXD signal                             | PA1        |
-| 3    | P2<br/>A2<br/>TXD1                                 | GPIO channel 2<br/>ADC channel 2<br/>UART channel 1 - TXD signal                             | PA2        |
-| 4    | P3<br/>A3<br/>RXD1                                 | GPIO channel 3<br/>ADC channel 3<br/>UART channel 1 - RXD signal                             | PA3        |
+| 1    | P0<br/>A0<br/>TXD0                                 | GPIO channel 0<br/>ADC channel 0<br/>UART channel 0 (TXD signal)                             | PA0        |
+| 2    | P1<br/>A1<br/>RXD0                                 | GPIO channel 1<br/>ADC channel 1<br/>UART channel 0 (RXD signal)                             | PA1        |
+| 3    | P2<br/>A2<br/>TXD1                                 | GPIO channel 2<br/>ADC channel 2<br/>UART channel 1 (TXD signal)                             | PA2        |
+| 4    | P3<br/>A3<br/>RXD1                                 | GPIO channel 3<br/>ADC channel 3<br/>UART channel 1 (RXD signal)                             | PA3        |
 | 5    | P4<br/>A4<br/>DAC0<br/>A                           | GPIO channel 4<br/>ADC channel 4<br/>DAC channel 0<br/>Sensor Module Channel A               | PA4        |
 | 6    | P5<br/>A5<br/>DAC1<br/>B                           | GPIO channel 5<br/>ADC channel 5<br/>DAC channel 1<br/>Sensor Module Channel B               | PA5        |
-| 7    | P6<br/>RST1                                        | GPIO channel 6<br/>UART channel 1 - RTS signal                                               | PB1        |
-| 8    | P7<br/>A6<br/>CTS1<br/>C                           | GPIO channel 7<br/>ADC channel 6<br/>UART channel 1 - CTS signal<br/>Sensor Module Channel C | PA6        |
+| 7    | P6<br/>RST1                                        | GPIO channel 6<br/>UART channel 1 (RTS signal)                                               | PB1        |
+| 8    | P7<br/>A6<br/>CTS1<br/>C                           | GPIO channel 7<br/>ADC channel 6<br/>UART channel 1 (CTS signal)<br/>Sensor Module Channel C | PA6        |
 | 9    | P8                                                 | GPIO channel 8                                                                               | PB0        |
 | 10   | P9                                                 | GPIO channel 9                                                                               | PB2        |
 | 11   | RESET                                              | System reset                                                                                 | NRST       |
@@ -101,18 +101,18 @@ The following table defines signal assignment on the module header
 | 14   | [**BAT_OFF**](../firmware-sdk/power-management.md) | Battery disconnect signal                                                                    |            |
 | 15   | GND                                                | System GND (ground)                                                                          |            |
 | 16   | VDD                                                | System VDD (positive rail)                                                                   |            |
-| 17   | SCL0                                               | I²C bus 0 - SCL signal                                                                       | PB10       |
-| 18   | SDA0                                               | I²C bus 0 - SDA signal                                                                       | PB11       |
+| 17   | SCL0                                               | I²C bus 0 (SCL signal)                                                                       | PB10       |
+| 18   | SDA0                                               | I²C bus 0 (SDA signal)                                                                       | PB11       |
 | 19   | INT                                                | System interrupt signal                                                                      | PC13       |
-| 20   |                                                    | Key - no signal                                                                              |            |
-| 21   | P10<br/>RXD2                                       | UART channel 2 - RXD signal                                                                  | PA10       |
-| 22   | P11<br/>TXD2                                       | UART channel 2 - TXD signal                                                                  | PA9        |
-| 23   | P12<br/>MISO                                       | SPI bus - MISO signal                                                                        | PB14       |
-| 24   | P13<br/>MOSI                                       | SPI bus - MOSI signal                                                                        | PB15       |
-| 25   | P14<br/>SCLK                                       | SPI bus - SCLK signal                                                                        | PB13       |
-| 26   | P15<br/>CS                                         | SPI bus - CS signal                                                                          | PB12       |
-| 27   | P16<br/>SCL1                                       | I²C bus 1 - SCL signal                                                                       | PB8        |
-| 28   | P17<br/>SDA1                                       | I²C bus 1 - SDA signal                                                                       | PB9        |
+| 20   |                                                    | Key (no signal)                                                                              |            |
+| 21   | P10<br/>RXD2                                       | UART channel 2 (RXD signal)                                                                  | PA10       |
+| 22   | P11<br/>TXD2                                       | UART channel 2 (TXD signal)                                                                  | PA9        |
+| 23   | P12<br/>MISO                                       | SPI bus (MISO signal)                                                                        | PB14       |
+| 24   | P13<br/>MOSI                                       | SPI bus (MOSI signal)                                                                        | PB15       |
+| 25   | P14<br/>SCLK                                       | SPI bus (SCLK signal)                                                                        | PB13       |
+| 26   | P15<br/>CS                                         | SPI bus (CS signal)                                                                          | PB12       |
+| 27   | P16<br/>SCL1                                       | I²C bus 1 (SCL signal)                                                                       | PB8        |
+| 28   | P17<br/>SDA1                                       | I²C bus 1 (SDA signal)                                                                       | PB9        |
 
 :::caution
 
@@ -125,7 +125,7 @@ Do not connect anything on the **VDD_OFF** and **BAT_OFF** signals unless you ar
 ### Tag Format
 
 The primary purpose of **tag format** is to provide signal break-out for [**I²C peripheral**](../hardware-interfaces/i2c-bus.md) in a compact form factor.
-It can be anything I²C-related - e.g. **sensors**, **memories**, **RTCs**, etc.
+It can be anything I²C-related, e.g. **sensors**, **memories**, **RTCs**, etc.
 
 Format **Tag** defines
 
@@ -151,6 +151,6 @@ The following table defines signal assignment on the tag header:
 | :--- | :----- | :------------------------- |
 | 1    | GND    | System GND (ground)        |
 | 2    | VDD    | System VDD (positive rail) |
-| 3    | SCL    | I²C bus - SCL signal       |
-| 4    | SDA    | I²C bus - SDA signal       |
+| 3    | SCL    | I²C bus (SCL signal)       |
+| 4    | SDA    | I²C bus (SDA signal)       |
 | 5    | INT    | System interrupt signal    |

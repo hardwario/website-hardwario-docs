@@ -26,7 +26,7 @@ This article describes the **CHESTER-Z1** top-cover extension module.
 
 The following functionality is provided through I2C:
 
-1. **HMI commands - i.e., LED and buzzer control**
+1. **HMI commands: i.e., LED and buzzer control**
    1. Single-shot foreground indication
    2. Background continuous patterns
 2. **Event detection**

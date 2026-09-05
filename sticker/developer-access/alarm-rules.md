@@ -48,7 +48,7 @@ Per-sensor thresholds are held in 16 fixed slots (`0`-`15`). The slot index serv
 | Source | Sensor Target |
 |---|---|
 | `onboard` | On-board sensors (temperature, humidity, atmospheric pressure) |
-| `s1` - `s4` | 1-Wire sensor channels 1 to 4 |
+| `s1`–`s4` | 1-Wire sensor channels 1 to 4 |
 | `hall-left`, `hall-right` | Integrated magnetic door switches |
 | `input-a`, `input-b` | External industrial inputs |
 | `pir` | PIR motion detector |

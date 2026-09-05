@@ -6,7 +6,7 @@ title: Share a terminal session
 # Share a terminal session
 
 A shared session puts the CHESTER console you are connected to onto a link, so a
-colleague — HARDWARIO support, for example — can see the output and run commands
+colleague (HARDWARIO support, for example) can see the output and run commands
 from their own browser or phone while you hold the device.
 
 :::danger Anyone with the link controls the device
@@ -46,7 +46,7 @@ The screen names the **relay** the session runs through, so you can see where th
 console traffic is going before you join.
 
 The viewer shows the host's console output and an input for running commands on
-their device. A status line tells you what the host is doing — whether they are
+their device. A status line tells you what the host is doing: whether they are
 connected, still attaching a device, or have not produced output yet.
 
 **Leave** ends your side. If the host stops sharing, a banner says so and the
@@ -57,6 +57,6 @@ input is disabled.
 ## What travels over the link
 
 The session carries the console: the commands sent and the output returned.
-Anything you would see in the terminal, a viewer sees too — including values
+Anything you would see in the terminal, a viewer sees too, including values
 printed by `config show`. Bear that in mind before sharing a session on a device
 holding production keys.

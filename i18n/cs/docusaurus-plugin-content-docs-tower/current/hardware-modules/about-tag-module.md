@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
     <div class="col col--6">
       <p>
         Modul <b>Tag Module</b> umožňuje připojit až <b>šest tagů HARDWARIO</b>.
-        K dispozici jsou dvě nezávislé sběrnice I²C (<b>I2C0</b> a <b>I2C1</b>) - na každé straně jedna.
+        K dispozici jsou dvě nezávislé sběrnice I²C (<b>I2C0</b> a <b>I2C1</b>), na každé straně jedna.
       </p>
     </div>
   </div>

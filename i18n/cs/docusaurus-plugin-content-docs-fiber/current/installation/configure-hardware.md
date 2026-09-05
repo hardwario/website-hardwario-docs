@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 # Konfigurace hardwaru {#configure-hardware}
 
 Tato část nastavuje sběrnici I2C a hodiny reálného času (RTC) na zařízení. **Kroky týkající se RTC
-se u obou variant liší** — až se k nim dostanete, zvolte záložku odpovídající vašemu zařízení:
+se u obou variant liší**, proto až se k nim dostanete, zvolte záložku odpovídající vašemu zařízení:
 
 :::info FIBER (CM4)
 
@@ -18,7 +18,7 @@ Přidává RTC overlay pro externí čip hodin reálného času **PCF85063A**.
 
 :::info FIBER Lite (Pi 5)
 
-RTC overlay se vůbec nepoužívá — Raspberry Pi 5 má **vestavěné RTC**, takže tento krok a jeho
+RTC overlay se vůbec nepoužívá, protože Raspberry Pi 5 má **vestavěné RTC**, takže tento krok a jeho
 ověření vypadají jinak.
 
 :::
@@ -76,7 +76,7 @@ ověření vypadají jinak.
    **Nepřidávejte overlay pro externí RTC.** FIBER (CM4) přidává
    `dtoverlay=i2c-rtc,pcf85063a,i2c_csi_dsi` kvůli externímu čipu hodin reálného času PCF85063A.
    **Na zařízení FIBER Lite tento řádek nepřidávejte.** Raspberry Pi 5 má **nativní vestavěné RTC**,
-   které se automaticky registruje jako `rtc0` — externí overlay nemá s jakým čipem komunikovat a
+   které se automaticky registruje jako `rtc0`. Externí overlay nemá s jakým čipem komunikovat a
    způsobí jen neškodnou, ale rušivou hlášku `error -EREMOTEIO` v logu jádra (pokud na to narazíte,
    podívejte se na **Řešení problémů** v postranním panelu).
 
@@ -109,7 +109,7 @@ ověření vypadají jinak.
    </TabItem>
    <TabItem value="fiber-lite" label="FIBER Lite (Pi 5)">
 
-   Není zde žádné externí RTC, které by šlo naskenovat — vestavěné RTC v Pi 5 tento krok ověření nepotřebuje.
+   Není zde žádné externí RTC, které by šlo naskenovat. Vestavěné RTC v Pi 5 tento krok ověření nepotřebuje.
 
    </TabItem>
    </Tabs>

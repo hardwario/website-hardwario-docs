@@ -83,7 +83,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
 **HARDWARIO Command Line Tools** nainstalujete těmito kroky:
 
-1. Pouze na Windows – nainstalujte ovladače **SEGGER J-Link**:
+1. Pouze na Windows: nainstalujte ovladače **SEGGER J-Link**:
 
    * Stáhněte [64bitový instalátor Intel/AMD](https://www.segger.com/downloads/jlink/JLink_Windows_x86_64.exe)
    * Stáhněte [32bitový instalátor Intel/AMD](https://www.segger.com/downloads/jlink/JLink_Windows.exe)
@@ -280,4 +280,4 @@ Hardwarové zapojení, virtuální prostředí **Python** i pravidla pro kabelá
 
 1. Přesuňte 10pinový plochý kabel zpět na [konektor označený `APP`](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) (nebo `BLE` u hardwarové revize R3.2 a starší), nahrajte aplikační firmware a odpojte adaptér **SEGGER J-Link**.
 
-1. Nakonfigurujte SIM kartu jako obvykle – viz [**Nastavení SIM karty**](../platform-connectivity/cellular-networks/sim-card-setup.md). Nahrání firmwaru modemu Nordic nemění parametry `lte config`.
+1. Nakonfigurujte SIM kartu jako obvykle: viz [**Nastavení SIM karty**](../platform-connectivity/cellular-networks/sim-card-setup.md). Nahrání firmwaru modemu Nordic nemění parametry `lte config`.

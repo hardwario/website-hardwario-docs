@@ -82,7 +82,7 @@ You will need the following hardware and software tools:
 
 You can install **HARDWARIO Command Line Tools** with these steps:
 
-1. On Windows only - Install the **SEGGER J-Link** drivers:
+1. On Windows only: Install the **SEGGER J-Link** drivers:
 
    * Download [64-bit Intel/AMD installer](https://www.segger.com/downloads/jlink/JLink_Windows_x86_64.exe)
    * Download [32-bit Intel/AMD installer](https://www.segger.com/downloads/jlink/JLink_Windows.exe)
@@ -223,9 +223,9 @@ Follow these steps to flash the LTE modem firmware in the **CHESTER** device:
 
 ## Nordic nRF9160 Modem Firmware
 
-The procedure above flashes the **HARDWARIO LTE modem firmware** - the communication stack that connects **CHESTER** to **HARDWARIO Cloud**. That is a different image from the **Nordic modem firmware** (the baseband image, distributed as `mfw_nrf9160_*.zip`), which is the low-level cellular firmware of the **nRF9160** SiP itself. The two images are flashed independently and with different commands.
+The procedure above flashes the **HARDWARIO LTE modem firmware**, the communication stack that connects **CHESTER** to **HARDWARIO Cloud**. That is a different image from the **Nordic modem firmware** (the baseband image, distributed as `mfw_nrf9160_*.zip`), which is the low-level cellular firmware of the **nRF9160** SiP itself. The two images are flashed independently and with different commands.
 
-Most deployments never need to touch the Nordic modem firmware. You need this procedure only when a specific network or SIM card requires a particular modem firmware version - for example a **Vodafone Ukraine** SIM card, which requires **v1.3.7**. See [**Tested SIM cards and operators**](../platform-connectivity/cellular-networks/sim-card-setup.md#tested-sim-cards-and-operators).
+Most deployments never need to touch the Nordic modem firmware. You need this procedure only when a specific network or SIM card requires a particular modem firmware version, for example a **Vodafone Ukraine** SIM card, which requires **v1.3.7**. See [**Tested SIM cards and operators**](../platform-connectivity/cellular-networks/sim-card-setup.md#tested-sim-cards-and-operators).
 
 :::caution
 
@@ -279,4 +279,4 @@ The hardware setup, the **Python** virtual environment and the cabling rules are
 
 1. Move the 10-pin flat cable back to the [connector labeled `APP`](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) (or `BLE` on hardware revision R3.2 and earlier), flash the application firmware and disconnect the **SEGGER J-Link** adapter.
 
-1. Configure the SIM card as usual - see [**SIM Card Setup**](../platform-connectivity/cellular-networks/sim-card-setup.md). Flashing the Nordic modem firmware does not change the `lte config` parameters.
+1. Configure the SIM card as usual: see [**SIM Card Setup**](../platform-connectivity/cellular-networks/sim-card-setup.md). Flashing the Nordic modem firmware does not change the `lte config` parameters.

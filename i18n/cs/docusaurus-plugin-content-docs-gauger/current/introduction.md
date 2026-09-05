@@ -18,11 +18,11 @@ Zařízení hostuje webové uživatelské rozhraní, které slouží k jeho konf
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Prvotní konfigurace**](operation-instructions/initial-configuration.md) – Připojte se k zařízení GAUGER a nastavte jej poprvé.
-* [**Popis hardwaru**](hardware-description.md) – Elektrické, fyzické a vstupní specifikace.
-* [**Podrobný popis**](category/detailed-description) – Konektory, stavy zařízení, chování DHCP, HTTP API, registry Modbus, napájení.
-* [**Návod k obsluze**](category/operation-instructions) – Reset konfigurace, vyhledání zařízení, správa firmwaru.
-* [**Seznam změn**](changelog) – Nejnovější změny firmwaru a platformy.
+* [**Prvotní konfigurace**](operation-instructions/initial-configuration.md): Připojte se k zařízení GAUGER a nastavte jej poprvé.
+* [**Popis hardwaru**](hardware-description.md): Elektrické, fyzické a vstupní specifikace.
+* [**Podrobný popis**](category/detailed-description): Konektory, stavy zařízení, chování DHCP, HTTP API, registry Modbus, napájení.
+* [**Návod k obsluze**](category/operation-instructions): Reset konfigurace, vyhledání zařízení, správa firmwaru.
+* [**Seznam změn**](changelog): Nejnovější změny firmwaru a platformy.
 
 ## Typické případy použití {#typical-use-cases}
 

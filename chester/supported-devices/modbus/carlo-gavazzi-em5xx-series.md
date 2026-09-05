@@ -38,7 +38,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 #### Example of Installation: Carlo Gavazzi Energy Analyzer EM530
 
-| **Carlo Gavazzi Energy Analyzer - EM530** | |
+| **Carlo Gavazzi Energy Analyzer EM530** | |
 |----------------------------------------|-----------------------------------------------|
 | Pin N                                 | **N**                                         |
 | Pin 1                                 | **L1**                                         |
@@ -61,7 +61,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 #### Example of Installation: Split Core Current Transformer CTA6X200A5A
 
 
-| **Carlo Gavazzi Energy Analyzer - EM530** | **Split Core Current Transformer - CTA6X200A5A** |
+| **Carlo Gavazzi Energy Analyzer EM530** | **Split Core Current Transformer CTA6X200A5A** |
 |----------------------------------------|-----------------------------------------------|
 | Pin 13                                 | **K**                                         |
 | Pin 14                                 | **L**                                         |
@@ -77,7 +77,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 #### Example of Modbus Communication Installation: Carlo Gavazzi Energy Analyzer EM530
 
-| **Carlo Gavazzi Energy Analyzer – EM530** | **CHESTER Modbus** |
+| **Carlo Gavazzi Energy Analyzer EM530** | **CHESTER Modbus** |
 |---------------------------|--------------------|
 | Pin 9                     | Pin 6 (A−)      |
 | Pin 8                     | Pin 7 (B+)        |
@@ -145,14 +145,14 @@ config save
 6. Confirm the settings by selecting **YES** using the **Up** button, then press the **Select** button.
 
 :::warning
-These models are **MID-certified meters** (Measuring Instruments Directive — EU legal metrology standard).  
+These models are **MID-certified meters** (Measuring Instruments Directive, the EU legal metrology standard).  
 The CT ratio can be changed **only before** the device registers **1 kWh** of active energy.  
 After exceeding 1 kWh, the CT ratio becomes **permanently locked** and **cannot be modified**, even with a factory reset or MID reset.  
 :::
 
 ### Example of CT Ratio Selection
 
-**Carlo Gavazzi Split Core Current Transformer - CTA6X200A5A**
+**Carlo Gavazzi Split Core Current Transformer CTA6X200A5A**
 
 | Model       | CT Ratio          |
 |-------------|-------------------|

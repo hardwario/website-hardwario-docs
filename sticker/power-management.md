@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 STICKER is engineered for ultra-low power operation to enable multi-year field deployments without external power supplies. It is powered by **2× standard AA batteries** (1.5 V alkaline or lithium cells).
 
 :::tip NFC Provisioning & Radio Activation
-Device parameters, keys, and `radio-mode` activation are managed wirelessly using an NFC-enabled smartphone running [**HARDWARIO Manager**](hardwario-manager) — even before batteries are installed.
+Device parameters, keys, and `radio-mode` activation are managed wirelessly using an NFC-enabled smartphone running [**HARDWARIO Manager**](hardwario-manager), even before batteries are installed.
 :::
 
 ---

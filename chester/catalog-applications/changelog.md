@@ -11,7 +11,7 @@ This page tracks all notable changes in CHESTER catalog application firmware sin
 
 :::tip Latest Release
 
-**SDK v4.0.0** (2026-08-10) — [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Firmware Downloads](catalog-applications#application-firmware)
+**SDK v4.0.0** (2026-08-10): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Firmware Downloads](catalog-applications#application-firmware)
 
 :::
 
@@ -42,7 +42,7 @@ This breaking release brings all the improvements and fixes from the latest vers
 
 ### CHESTER Cloud
 
-- Added **message spool** (`CONFIG_CTR_CLOUD_SPOOL`) - a store-and-forward queue backed by LittleFS, so messages survive uplink failures and reboots.
+- Added **message spool** (`CONFIG_CTR_CLOUD_SPOOL`), a store-and-forward queue backed by LittleFS, so messages survive uplink failures and reboots.
 
 ### CHESTER Control
 
@@ -65,7 +65,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 *NCS **2.9.0** · Zephyr **3.7.99** · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5)*
 
 ### SDK / Common
-- LED blink changed to non-blocking, rate-limited approach — prevents blocking during blink sequences
+- LED blink changed to non-blocking, rate-limited approach: prevents blocking during blink sequences
 - LoRaWAN payload for 8-channel X0 variant split into two messages to comply with 51-byte payload limit
 - Added RTC sync status API: `ctr_rtc_is_synced()`, `ctr_rtc_get_ts_ms()`, `ctr_rtc_set_event_cb()`
 - Switched to git tag-based versioning (VERSION files removed)
@@ -74,22 +74,22 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 - Extended electricity meter drivers; CBOR encoding switched to native float32
 
 ### CHESTER Scale
-- Added runtime detection of CHESTER-X3 in slot B — single firmware now covers both single-slot (A) and dual-slot (A+B) hardware; channels B1/B2 are skipped with an info log when the module is absent instead of emitting measurement errors
+- Added runtime detection of CHESTER-X3 in slot B: single firmware now covers both single-slot (A) and dual-slot (A+B) hardware; channels B1/B2 are skipped with an info log when the module is absent instead of emitting measurement errors
 
 ### CHESTER Control
-- Reduced memory footprint — soil sensor and thermometer data now dynamically allocated
+- Reduced memory footprint: soil sensor and thermometer data now dynamically allocated
 
 ---
 
 ## v3.5.4 (2026-04-14)
 
 ### SDK / Common
-- Added runtime CHESTER-Z detection — single firmware works with or without Z module
+- Added runtime CHESTER-Z detection: single firmware works with or without Z module
 - Added shell command for 1-Wire (W1) bus scanning
 - Deploy script updated with CLI arguments and complete app list
 
 ### CHESTER Clime
-- Runtime CHESTER-Z detection — removed separate Clime Z variant
+- Runtime CHESTER-Z detection: removed separate Clime Z variant
 - Fixed build failure for IAQ variant when both Z and X10 features are present
 
 ### CHESTER Control
@@ -120,7 +120,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 ## v3.5.1 (2025-12-08)
 
 ### SDK / Common
-- Cloud metrics API added — exposes uplink/downlink counters, errors, and diagnostics
+- Cloud metrics API added: exposes uplink/downlink counters, errors, and diagnostics
 - Soft timeout support for cloud send/downlink operations
 - Dangerous config commands filtered from cloud downloads
 - Common aggregation data structure (`ctr_data_aggreg`) introduced across all apps
@@ -149,7 +149,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 - Fixed calibration range, added downlink watchdog
 
 ### CHESTER Meteo
-- Added CHESTER Meteo M variant (Modbus RTU — Lambrecht, Sensecap/OPM sensors)
+- Added CHESTER Meteo M variant (Modbus RTU: Lambrecht, Sensecap/OPM sensors)
 - Added soil sensor support
 - Added LoRaWAN support
 - Improved pyranometer support
@@ -158,7 +158,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 - Added LoRaWAN (LRW) support
 
 ### CHESTER Motion
-- Added as a new catalog application — PIR-based motion detection
+- Added as a new catalog application: PIR-based motion detection
 
 ### CHESTER wM-Bus
 - Added as a new catalog application

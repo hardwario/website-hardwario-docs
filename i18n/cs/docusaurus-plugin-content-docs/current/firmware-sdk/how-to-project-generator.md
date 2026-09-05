@@ -37,7 +37,7 @@ Příklady:
 
 :::info
 
-  Všechny příkazy lze spustit bez zadání `<name>`, pokud už se nacházíte ve složce projektu — s výjimkou příkazu `west chester-init`.
+  Všechny příkazy lze spustit bez zadání `<name>`, pokud už se nacházíte ve složce projektu, s výjimkou příkazu `west chester-init`.
 
 :::
 

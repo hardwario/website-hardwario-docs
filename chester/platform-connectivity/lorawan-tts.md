@@ -30,10 +30,10 @@ lrw config show
 
 Important parameters:
 
-- `deveui` – Device EUI
-- `joineui` – JoinEUI / AppEUI
-- `band` – region
-- `mode` – OTAA / ABP
+- `deveui`: Device EUI
+- `joineui`: JoinEUI / AppEUI
+- `band`: region
+- `mode`: OTAA / ABP
 
 ### 1.2 From The Things Stack
 

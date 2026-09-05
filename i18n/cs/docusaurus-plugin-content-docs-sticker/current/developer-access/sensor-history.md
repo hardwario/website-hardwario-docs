@@ -24,17 +24,17 @@ Funkce store-and-forward popsaná na této stránce je základní funkcí **firm
 | `config history-enable` | `true` / `false` | Hlavní vypínač záznamu historie. Výchozí `false`. |
 | `config history-sensors` | Bitová maska (uint32) | Maska kanálů určující, které kanály senzorů se mají ukládat. Výchozí `0x0003` (**teplota + vlhkost**). `0` vypíná záznam kanálů. |
 
-Senzory se vzorkují a ukládají podle rozvrhu `interval-sample` (nebo jednou za uplink, pokud je `interval-sample` rovno `0`) — viz [**Konfigurace**](configuration.md).
+Senzory se vzorkují a ukládají podle rozvrhu `interval-sample` (nebo jednou za uplink, pokud je `interval-sample` rovno `0`), viz [**Konfigurace**](configuration.md).
 
 ### Zaznamenatelné kanály {#recordable-channels}
 
 Bitová maska `history-sensors` mapuje bit $i$ na kanál $i$ (v 32bitovém poli je volitelných až 19 kanálů):
 
-- **`temperature`**, **`humidity`** — Integrované senzory prostředí
-- **`s1-temp`/`s1-hum` … `s4-temp`/`s4-hum`** — Slot pro senzory 1-Wire 1 až 4
-- **`hall-left`**, **`hall-right`**, **`input-a`**, **`input-b`** — Pulzní a čítačové vstupy
-- **`motion`** — Počet detekcí pohybu integrovaným PIR
-- **`pressure`**, **`illuminance`**, **`orientation`**, **`accel-motion`** — Barometr, okolní osvětlení, náklon z akcelerometru a čítače pohybových událostí
+- **`temperature`**, **`humidity`**: Integrované senzory prostředí
+- **`s1-temp`/`s1-hum` … `s4-temp`/`s4-hum`**: Slot pro senzory 1-Wire 1 až 4
+- **`hall-left`**, **`hall-right`**, **`input-a`**, **`input-b`**: Pulzní a čítačové vstupy
+- **`motion`**: Počet detekcí pohybu integrovaným PIR
+- **`pressure`**, **`illuminance`**, **`orientation`**, **`accel-motion`**: Barometr, okolní osvětlení, náklon z akcelerometru a čítače pohybových událostí
 
 Kanály neosazených fyzických senzorů se automaticky přeskakují.
 

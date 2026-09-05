@@ -65,7 +65,7 @@ You will need the following hardware and software tools:
 
 You can install **HARDWARIO Command Line Tools** with these steps:
 
-1. On Windows only - Install SEGGER J-Link drivers:
+1. On Windows only: Install SEGGER J-Link drivers:
 
    * Download [**64-bit Intel/AMD installer**](https://www.segger.com/downloads/jlink/JLink_Windows_x86_64.exe)
    * Download [**32-bit Intel/AMD installer**](https://www.segger.com/downloads/jlink/JLink_Windows.exe)
@@ -118,7 +118,7 @@ Before you start, check that you have the application HEX file downloaded to you
 
 :::tip
 
-Usually, the firmware application is distributed via the **HARDWARIO Cloud** and a feature called **Shareable Firmware Link** from which you can get both the HEX file and the 128-bit unique ID. With the unique ID, you don't have to send any attachments - just provide the identifier, and the tool will download it automatically.
+Usually, the firmware application is distributed via the **HARDWARIO Cloud** and a feature called **Shareable Firmware Link** from which you can get both the HEX file and the 128-bit unique ID. With the unique ID, you don't have to send any attachments. Just provide the identifier, and the tool will download it automatically.
 
 :::
 

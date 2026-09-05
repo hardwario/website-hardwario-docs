@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 If a device does not reach a registered state, work through this order:
 
-1. Confirm the radio mode is set to `lte` — see [**SIM Card Setup**](sim-card-setup.md).
+1. Confirm the radio mode is set to `lte`, see [**SIM Card Setup**](sim-card-setup.md).
 2. Check the current settings and registration state with `lte config show` and `lte state`.
 3. Scan for the networks actually visible at the site, as described below.
 4. Compare the result against the [**Network Requirements**](network-requirements.md) checklist and, for Vodafone SIM cards, against the [**Vodafone SIM EU28+2**](vodafone-coverage.md) table.
@@ -60,15 +60,15 @@ Response will be in application log during several minutes (e.g. ~3 minutes with
 `%COPS: [(<stat>,long alphanumeric <oper>,short alphanumeric <oper>,numeric <oper>[,<AcT>])]`
 
 `<stat>`
-- 0 – Unknown
-- 1 – Available
-- 2 – Current
-- 3 – Forbidden
+- 0: Unknown
+- 1: Available
+- 2: Current
+- 3: Forbidden
 
 `<oper>`
 - PLMNID of operator
 
 `<AcT>`
-- 7 – LTE-M
-- 9 – NB-IoT
+- 7: LTE-M
+- 9: NB-IoT
 

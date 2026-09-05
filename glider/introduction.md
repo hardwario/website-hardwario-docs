@@ -16,15 +16,15 @@ import Image from '@theme/IdealImage';
 
 ## Quick Links
 
-* [**Quick Start Guide**](first-steps.md) – Step-by-step setup guide.
-* [**HARDWARIO Cloud Setup**](cloud-setup.md) – Pair the device with the platform.
-* [**Hardware Description**](hardware-description.md) – Main parts and parameters of the GLIDER device.
-* [**External Sensors**](external-sensors/index.md) – Wire and configure external sensors.
-* [**Firmware Flashing**](firmware-flashing/index.md) – Options to upload device firmware.
-* [**Console Access**](category/console-access) – Talk to GLIDER over USB-C or J-Link.
-* [**Configuration**](configuration.md) – Fine-tune the firmware behavior.
-* [**Commands**](category/commands) – What commands the device understands.
-* [**CBOR Payload**](payload.md) – How the device encodes the data it sends to the cloud.
+* [**Quick Start Guide**](first-steps.md): Step-by-step setup guide.
+* [**HARDWARIO Cloud Setup**](cloud-setup.md): Pair the device with the platform.
+* [**Hardware Description**](hardware-description.md): Main parts and parameters of the GLIDER device.
+* [**External Sensors**](external-sensors/index.md): Wire and configure external sensors.
+* [**Firmware Flashing**](firmware-flashing/index.md): Options to upload device firmware.
+* [**Console Access**](category/console-access): Talk to GLIDER over USB-C or J-Link.
+* [**Configuration**](configuration.md): Fine-tune the firmware behavior.
+* [**Commands**](category/commands): What commands the device understands.
+* [**CBOR Payload**](payload.md): How the device encodes the data it sends to the cloud.
 
 ## Typical Use Cases
 

@@ -28,18 +28,18 @@ Zařízení je vybaveno kvalitními konektory pro napájení, síťové připoje
 
 #### EMBER se dodává se dvěma vnitřními antén­ami {#ember-ships-with-two-internal-antennas}
 
-Každé zařízení EMBER opouští výrobu se **dvěma antén­ami umístěnými uvnitř krabičky a již připojenými** —
+Každé zařízení EMBER opouští výrobu se **dvěma antén­ami umístěnými uvnitř krabičky a již připojenými**:
 jednou pro **LoRaWAN** (na u.FL konektoru `RFIO` karty LoRa) a jednou pro **LTE**. Rádio tedy
 má vždy připojenou anténu, když bránu vybalíte: je bezpečné ji zapnout a **před začátkem není nutné
 nic přišroubovávat**.
 
-Balení obsahuje **napájecí adaptér 24 V DC** a žádné volné antény — viz
+Balení obsahuje **napájecí adaptér 24 V DC** a žádné volné antény, viz
 [Objednací kódy](ordering-codes.md).
 
 #### Přechod na externí anténu {#switching-to-an-external-antenna}
 
 Konektory **LRW**, **LTE1** a **LTE2** na krabičce jsou určeny pro **volitelné externí
-antény** — vyplatí se je použít, pokud potřebujete větší dosah, než jaký zvládne vnitřní anténa, nebo když je
+antény**, které se vyplatí použít, pokud potřebujete větší dosah, než jaký zvládne vnitřní anténa, nebo když je
 brána namontována někde, kde je odstíněná. Vnitřní anténa obsazuje u.FL konektor karty, takže
 přechod je manuální krok:
 
@@ -48,12 +48,12 @@ přechod je manuální krok:
 3. Odpojte vnitřní anténu z u.FL konektoru karty (`RFIO` na kartě LoRa) a na její místo zapojte
    pigtail odpovídajícího průchodkového konektoru (**LRW** pro LoRaWAN).
 4. Zavřete krabičku a přišroubujte externí anténu na konektor.
-5. Aktualizujte **`antenna-gain`** v RouterOS na zisk nyní použité antény — viz
+5. Aktualizujte **`antenna-gain`** v RouterOS na zisk nyní použité antény, viz
    [Zisk antény a výstupní výkon](mikrotik/antenna-gain.md). Pokud zůstane hodnota pro starou anténu,
    brána vyzařuje nad nebo pod zákonným limitem EIRP.
 
 :::caution
-Krabičku zavírejte opatrně — krytí **IP67** závisí na jejím těsnění. A nikdy bránu nezapínejte s
+Krabičku zavírejte opatrně, protože krytí **IP67** závisí na jejím těsnění. A nikdy bránu nezapínejte s
 prázdným u.FL konektorem karty LoRa: vysílání do otevřeného konektoru může poškodit výkonový
 zesilovač karty.
 :::

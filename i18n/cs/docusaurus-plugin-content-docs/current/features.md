@@ -11,9 +11,9 @@ Tento článek popisuje vlastnosti platformy CHESTER.
 
 * Konektivita LPWAN:
 
-  * NB-IoT – zajišťuje Nordic Semiconductor nRF9160
-  * LTE-M – zajišťuje Nordic Semiconductor nRF9160
-  * LoRaWAN – zajišťuje Murata CMWX1ZZABZ-078
+  * NB-IoT: zajišťuje Nordic Semiconductor nRF9160
+  * LTE-M: zajišťuje Nordic Semiconductor nRF9160
+  * LoRaWAN: zajišťuje Murata CMWX1ZZABZ-078
 
 * Bluetooth Low Energy
   * Komunikace na krátkou vzdálenost se smartphonem, tabletem nebo PC vybaveným BLE

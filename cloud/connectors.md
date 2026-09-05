@@ -36,8 +36,8 @@ flowchart LR
    | Field | Description |
    |---|---|
    | **Name** | Identifier for this connector |
-   | **Direction** | `up` — the connector reacts to uplink messages (device → Cloud) |
-   | **Type** | `webhook` — delivers the message as an HTTP request |
+   | **Direction** | `up`. The connector reacts to uplink messages (device → Cloud) |
+   | **Type** | `webhook`. Delivers the message as an HTTP request |
    | **Triggers** | Which message types fire it (see [Triggers](#triggers)) |
    | **Tags** | Which device tags this connector listens to |
 
@@ -47,7 +47,7 @@ flowchart LR
 
    </div>
 
-3. Click **CREATE**. The connector opens on its detail page, where you can review its settings and activity heatmap — and click **EDIT** to add the [transformation function](#the-transformation-function).
+3. Click **CREATE**. The connector opens on its detail page, where you can review its settings and activity heatmap, and click **EDIT** to add the [transformation function](#the-transformation-function).
 
    <div className="screenshot-narrow">
 
@@ -61,7 +61,7 @@ Select which message types trigger the connector:
 
 | Trigger | Description |
 |---|---|
-| `data` | Periodic uplink with sensor readings — most common |
+| `data` | Periodic uplink with sensor readings. Most common |
 | `session` | Boot message with firmware and network info |
 | `config` | Configuration change acknowledgment |
 | `stats` | Internal Cloud statistics |
@@ -71,7 +71,7 @@ Select which message types trigger the connector:
 
 Every connector runs a JavaScript function that receives a `job` object and returns the HTTP request to make. This lets you reshape the payload, add authentication headers, or filter messages.
 
-On the connector's detail page, click **EDIT**. The editor has three tabs — **DETAILS** (name, direction, type, triggers, tags), **PLAYGROUND** (the function and its live preview), and **ADVANCED** (retry settings).
+On the connector's detail page, click **EDIT**. The editor has three tabs: **DETAILS** (name, direction, type, triggers, tags), **PLAYGROUND** (the function and its live preview), and **ADVANCED** (retry settings).
 
 <div className="screenshot-narrow">
 
@@ -79,7 +79,7 @@ On the connector's detail page, click **EDIT**. The editor has three tabs — **
 
 </div>
 
-Open the **PLAYGROUND** tab. Write the function in the middle pane; the left pane shows a real device **message (Input)** and the right pane shows the **request that would be sent (Output)**, updated live as you type. Use **Select device** and **Select message type** to preview against real data — no HTTP request is sent while you edit.
+Open the **PLAYGROUND** tab. Write the function in the middle pane; the left pane shows a real device **message (Input)** and the right pane shows the **request that would be sent (Output)**, updated live as you type. Use **Select device** and **Select message type** to preview against real data. No HTTP request is sent while you edit.
 
 ![The PLAYGROUND tab: the Input message on the left, the transformation function in the middle, and the resulting Output request on the right](images/connector-test-playground.png)
 
@@ -98,7 +98,7 @@ function main(job) {
 }
 ```
 
-Returning `null` cancels the callback — useful for conditional forwarding:
+Returning `null` cancels the callback, which is useful for conditional forwarding:
 
 ```js
 function main(job) {
@@ -156,7 +156,7 @@ The transformation function receives a `job` object with the following structure
 
 ## Testing Your Connector
 
-The quickest way to confirm a connector actually fires — and to see exactly what it sends — is to point it at a free, temporary receiver such as [**webhook.site**](https://webhook.site). No backend of your own required. (The PLAYGROUND above tests your function's *output*; this tests the real HTTP *delivery*.)
+The quickest way to confirm a connector actually fires, and to see exactly what it sends, is to point it at a free, temporary receiver such as [**webhook.site**](https://webhook.site). No backend of your own required. (The PLAYGROUND above tests your function's *output*; this tests the real HTTP *delivery*.)
 
 1. **Get a receiver URL.** Open [webhook.site](https://webhook.site) and copy the **"Your unique URL"** shown at the top (it looks like `https://webhook.site/<id>`).
 
@@ -180,7 +180,7 @@ The quickest way to confirm a connector actually fires — and to see exactly wh
 
    Make sure the connector's **Tags** and **Triggers** match your device (e.g. the `data` trigger).
 
-3. **Trigger an uplink.** Wait for — or force — a message from a device in the space. A connector runs on real device uplinks.
+3. **Trigger an uplink.** Wait for, or force, a message from a device in the space. A connector runs on real device uplinks.
 
 4. **Check the result.** Go back to webhook.site: the request appears in the inbox on the left. Click it to inspect the **method**, **headers**, and **JSON body** the Cloud sent. Seeing it arrive confirms your connector works end to end.
 
@@ -191,7 +191,7 @@ Edit the transformation function and trigger again to watch your changes land in
 :::
 
 :::caution
-webhook.site URLs are **public** — use only test data while testing, and switch to your own endpoint for production traffic.
+webhook.site URLs are **public**, so use only test data while testing, and switch to your own endpoint for production traffic.
 :::
 
 **Other receivers** you can use the same way: [requestinspector.com](https://requestinspector.com/) (instant public endpoint), [ngrok.com](https://ngrok.com/) (tunnel to a server on your machine), [tailscale.com](https://tailscale.com/) (private network with a public funnel).

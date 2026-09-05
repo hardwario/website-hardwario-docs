@@ -30,7 +30,7 @@ Vyplňte pole ručně:
 |---|---|
 | **Name** | Čitelné jméno, například `warehouse-sensor-01` |
 | **Serial Number (HSN)** | Sériové číslo HARDWARIO vytištěné na etiketě zařízení |
-| **Claim Token** | Token unikátní pro každé zařízení — je vidět na QR kódu nebo přes `info show` po J-Link RTT |
+| **Claim Token** | Token unikátní pro každé zařízení. Je vidět na QR kódu nebo přes `info show` po J-Link RTT |
 
 ![Dialog vytvoření nového zařízení](../../../../cloud/images/device-create.png)
 
@@ -45,9 +45,9 @@ Vytvořte alespoň jeden [tag](tags.md) a přiřaďte ho zařízení a [konektor
 Seznam zařízení zobrazuje u každého zařízení přehled:
 
 - **Name** a volitelný komentář
-- **Last Seen** — čas posledního uplinku
-- **Firmware** — název a verze aplikace
-- **Tags** — přiřazené tagy zobrazené jako barevné odznaky
+- **Last Seen**: čas posledního uplinku
+- **Firmware**: název a verze aplikace
+- **Tags**: přiřazené tagy zobrazené jako barevné odznaky
 
 Kliknutím na řádek zařízení otevřete jeho detail.
 
@@ -72,7 +72,7 @@ Zobrazuje kompletní profil zařízení, vyplněný automaticky ze zpráv sessio
 
 ### Tags {#tags}
 
-Přiřazuje nebo odebírá tagy zařízení. Tagy určují, které konektory dostanou zprávy tohoto zařízení — zařízení a konektor musí mít alespoň jeden tag společný, aby se zprávy přeposílaly.
+Přiřazuje nebo odebírá tagy zařízení. Tagy určují, které konektory dostanou zprávy tohoto zařízení. Zařízení a konektor musí mít alespoň jeden tag společný, aby se zprávy přeposílaly.
 
 ### Labels {#labels}
 

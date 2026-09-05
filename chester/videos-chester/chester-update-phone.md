@@ -43,7 +43,7 @@ In this guide, you’ll learn how to easily update your CHESTER firmware using t
 
 6. Open the scanner and scan the QR code from the firmware page.
 
-7. The firmware will download automatically — just click on UPDATE FIRMWARE.
+7. The firmware will download automatically: just click on UPDATE FIRMWARE.
 
 8. It will take about 2 minutes. First, the firmware is uploaded to CHESTER.
 

@@ -26,7 +26,7 @@ Tento elektroměr **nevyžaduje** pro měření proudu žádný **externí senzo
 
 #### Příklad instalace: analyzátor energie Carlo Gavazzi EM111 {#example-of-installation-carlo-gavazzi-energy-analyzer-em111}
 
-| **Carlo Gavazzi Energy Analyzer - EM111** | |
+| **Carlo Gavazzi Energy Analyzer EM111** | |
 |----------------------------------------|-----------------------------------------------|
 | Pin 1                                 | **L (IN)**                                         |
 | Pin 2                                 | **L (OUT)**                                         |

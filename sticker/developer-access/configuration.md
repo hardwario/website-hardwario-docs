@@ -54,7 +54,7 @@ A `config` write updates the setting in RAM and takes effect immediately, but it
 | `config interval-sample` | `0`, or `5`-`3600` (seconds) | How often sensors are sampled. `0` means sample once, immediately before each report. |
 | `config interval-report` | `60`-`86400` (seconds) | How often an uplink report is sent. Default `900` (15 minutes). |
 
-**Example** - report every 10 minutes:
+**Example**: report every 10 minutes:
 
 ```bash
 config interval-report 600
@@ -83,7 +83,7 @@ settings save
 | `config lrw-link-check-interval` | `0`-`255` | Request a LinkCheckReq every Nth uplink. `0` = disabled. Default `5`. |
 | `config lrw-link-check-fail-rejoin` | `1`-`255` | Link-check failures before an OTAA rejoin is attempted. Default `5`. |
 
-**Example** - EU868 with OTAA and enabling radio transmission:
+**Example**: EU868 with OTAA and enabling radio transmission:
 
 ```bash
 config lrw-region eu868

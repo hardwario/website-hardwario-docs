@@ -28,8 +28,8 @@ Examples of I²C bus usage in TOWER:
 ## I²C Buses on the Core Module
 There are two buses on the **Core Module**. They are called:
 
-- `TWR_I2C_I2C0` - Using `SDA0` and `SCL0` (17, 18) pins in the **bottom right corner** of the Core Module
-- `TWR_I2C_I2C1` - Using `SDA1` and `SCL1` (27, 28) pins in the **top right corner** of the Core Module
+- `TWR_I2C_I2C0`: Using `SDA0` and `SCL0` (17, 18) pins in the **bottom right corner** of the Core Module
+- `TWR_I2C_I2C1`: Using `SDA1` and `SCL1` (27, 28) pins in the **top right corner** of the Core Module
 
 ## TOWER I²C Address Space
 

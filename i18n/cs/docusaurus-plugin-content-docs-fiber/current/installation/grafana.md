@@ -50,7 +50,7 @@ Dostupné na zařízení FIBER i FIBER Lite.
 
    :::tip
 
-   Panely dashboardu se nejlépe staví ve chvíli, kdy už tečou reálná data ze zařízení či brány — do té
+   Panely dashboardu se nejlépe staví ve chvíli, kdy už tečou reálná data ze zařízení či brány. Do té
    doby není co smysluplného vizualizovat.
 
    :::

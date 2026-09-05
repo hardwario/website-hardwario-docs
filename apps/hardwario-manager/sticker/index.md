@@ -7,7 +7,7 @@ title: STICKER
 
 STICKER is configured by **holding the phone against the device**. There are no
 cables, no programmer, and no desktop software. STICKER is NFC-ready and can be
-configured even with **no batteries inserted** — the NFC field from the phone
+configured even with **no batteries inserted**, because the NFC field from the phone
 powers the chip long enough to store settings, which the device applies on its
 next boot.
 
@@ -27,12 +27,12 @@ full capitals throughout. The screens themselves are laid out as shown.
 
 | Entry | What it does |
 |---|---|
-| **Device info** | Read the serial number, firmware version, uptime, and clock — see [**Device info and LoRaWAN keys**](./device-info.md) |
+| **Device info** | Read the serial number, firmware version, uptime, and clock, see [**Device info and LoRaWAN keys**](./device-info.md) |
 | **LoRaWAN keys** | Read the DevEUI and the keys needed to register the device on a network |
-| **Configuration** | Read and edit the full device configuration — see [**Configuration**](./configuration.md) |
-| **Templates** | Reusable configuration presets — see [**Templates**](./templates.md) |
-| **Tools** | Time sync, sensors, history, resets — see [**Tools**](./tools.md) |
-| **Saved STICKERs** | The devices you manage and their stored keys — see [**Saved STICKERs**](./saved-stickers.md) |
+| **Configuration** | Read and edit the full device configuration, see [**Configuration**](./configuration.md) |
+| **Templates** | Reusable configuration presets, see [**Templates**](./templates.md) |
+| **Tools** | Time sync, sensors, history, resets, see [**Tools**](./tools.md) |
+| **Saved STICKERs** | The devices you manage and their stored keys, see [**Saved STICKERs**](./saved-stickers.md) |
 
 The button at the bottom, **Claim a STICKER**, records a device against your
 ATELOS account so the app can fill in its keys. See
@@ -49,8 +49,8 @@ around that area until it reads.
 
 STICKER talks over an **AES-CCM encrypted channel**, so the app needs the
 device's **secret key** before it can read or write. Once a device is saved, the
-app fills the key in automatically — it takes the serial and nonce from the tag
-and looks the key up in your saved list — so most actions need no typing at all.
+app fills the key in automatically. It takes the serial and nonce from the tag
+and looks the key up in your saved list, so most actions need no typing at all.
 
 :::info Android and iOS tap differently
 On **Android** you hold the phone against the device for the whole exchange.

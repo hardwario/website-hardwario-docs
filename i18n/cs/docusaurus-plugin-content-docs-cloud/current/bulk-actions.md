@@ -6,27 +6,27 @@ description: "což se hodí při nasazení celé flotily zařízení CHESTER, kt
 
 # Hromadné akce {#bulk-actions}
 
-**Hromadné akce** umožňují konfigurovat nebo spravovat **mnoho zařízení najednou** místo jednoho po druhém —
+**Hromadné akce** umožňují konfigurovat nebo spravovat **mnoho zařízení najednou** místo jednoho po druhém,
 což se hodí při nasazení celé flotily zařízení CHESTER, která mají mít stejnou konfiguraci, firmware,
 tagy nebo labely.
 
 ## Výběr zařízení {#selecting-devices}
 
 Na stránce **Devices** zaškrtněte políčko u každého zařízení, které chcete zahrnout (nebo políčko
-v záhlaví pro výběr všech). Tlačítko **BULK ACTIONS** ukazuje, kolik zařízení je vybráno — kliknutím
+v záhlaví pro výběr všech). Tlačítko **BULK ACTIONS** ukazuje, kolik zařízení je vybráno. Kliknutím
 na něj otevřete dialog hromadných akcí.
 
 ![Stránka Devices se třemi vybranými zařízeními a aktivním tlačítkem BULK ACTIONS](../../../../cloud/images/bulk-actions.png)
 
 ## Spuštění akce {#running-an-action}
 
-Dialog zobrazuje počet **vybraných zařízení** a nabízí pět karet — jednu pro každý druh akce.
+Dialog zobrazuje počet **vybraných zařízení** a nabízí pět karet, jednu pro každý druh akce.
 Zaškrtnutím **Save as batch (track progress)** se operace zaznamená jako dávka, takže můžete
 následně sledovat její průběh. Kliknutím na **RUN** akci aplikujete na všechna vybraná zařízení.
 
 ### Config {#config}
 
-Odešle příkazy `app config` do všech vybraných zařízení — stejně jako
+Odešle příkazy `app config` do všech vybraných zařízení, stejně jako
 [**Config downlink**](/cloud/downlink/config), ale hromadně. Příkazy zadejte jako **Text** nebo
 **JSON**. U nasazení CHESTER wM-Bus můžete adresy zařízení také importovat ze souboru.
 
@@ -34,7 +34,7 @@ Odešle příkazy `app config` do všech vybraných zařízení — stejně jako
 
 ### Firmware {#firmware}
 
-Aktualizuje firmware všech vybraných zařízení bezdrátově — zadejte **identifikátor firmwaru**, který
+Aktualizuje firmware všech vybraných zařízení bezdrátově. Zadejte **identifikátor firmwaru**, který
 se má nasadit (viz [**Firmware**](/cloud/firmware)).
 
 ![Dialog hromadných akcí na kartě Firmware s polem pro identifikátor firmwaru](../../../../cloud/images/bulk-firmware.png)

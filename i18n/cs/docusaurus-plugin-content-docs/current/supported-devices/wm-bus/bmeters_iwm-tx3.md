@@ -125,9 +125,9 @@ Přiřazení se provádí pomocí terminálu **CHESTER Terminal**, například s
 
 Zde můžete spravovat seznam **wM-Bus adres** (**přidávat/odebírat**), upravovat nastavení skenování a prohlédnout si ukázkové konfigurace pro typická nasazení.  
 
-- [**Konfigurace seznamu adres**](/chester/catalog-applications/chester-wm-bus#address-list-configuration) – **správa a úprava** seznamu propojených wM-Bus **adres**  
-- [**Konfigurace skenování**](/chester/catalog-applications/chester-wm-bus#scan-configuration) – **úprava nastavení skenování** pro komunikaci se zařízeními 
-- [**Ukázkové konfigurace**](/chester/catalog-applications/chester-wm-bus#example-configurations) – referenční **šablony** pro typická nasazení 
+- [**Konfigurace seznamu adres**](/chester/catalog-applications/chester-wm-bus#address-list-configuration): **správa a úprava** seznamu propojených wM-Bus **adres**  
+- [**Konfigurace skenování**](/chester/catalog-applications/chester-wm-bus#scan-configuration): **úprava nastavení skenování** pro komunikaci se zařízeními 
+- [**Ukázkové konfigurace**](/chester/catalog-applications/chester-wm-bus#example-configurations): referenční **šablony** pro typická nasazení 
 
 ---
 
@@ -138,5 +138,5 @@ Zde můžete spravovat seznam **wM-Bus adres** (**přidávat/odebírat**), uprav
 **Přijatá data je proto nutné dešifrovat**, což se provádí pomocí **dešifrovacích klíčů**.  
 K tomu jsou dvě možnosti:
 
-- [**HARDWARIO Cloud**](/chester/catalog-applications/chester-wm-bus#hardwario-cloud--decryption-keys) – návod, jak zadávat a spravovat dešifrovací klíče  
-- [**Dešifrovací stránka**](https://wmbusmeters.org/) – online nástroj pro ruční dešifrování a analýzu dat
+- [**HARDWARIO Cloud**](/chester/catalog-applications/chester-wm-bus#hardwario-cloud--decryption-keys): návod, jak zadávat a spravovat dešifrovací klíče  
+- [**Dešifrovací stránka**](https://wmbusmeters.org/): online nástroj pro ruční dešifrování a analýzu dat

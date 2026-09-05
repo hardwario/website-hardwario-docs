@@ -2,6 +2,7 @@
 slug: /
 title: EMBER
 sidebar_label: Introduction
+description: "EMBER is an industrial LoRaWAN platform that transmits and processes measured sensor values and controls actuators across industrial sites."
 ---
 import Image from '@theme/IdealImage';
 

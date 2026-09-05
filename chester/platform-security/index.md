@@ -1,6 +1,7 @@
 ---
 slug: platform-security
 title: Platform Security
+description: "This article provides a basic security overview of the CHESTER platform. The article is split into multiple chapters, which describe individual domains."
 ---
 import Image from '@theme/IdealImage';
 

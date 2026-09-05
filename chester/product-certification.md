@@ -1,6 +1,7 @@
 ---
 slug: product-certification
 title: Product Certification
+description: "Product certifications available for the CHESTER platform and where to find the declarations of conformity."
 ---
 import Image from '@theme/IdealImage';
 

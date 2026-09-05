@@ -1,6 +1,7 @@
 ---
 slug: devices
 title: Devices
+description: "The Devices page lists all IoT devices registered in your space."
 ---
 
 # Devices

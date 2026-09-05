@@ -1,6 +1,7 @@
 ---
 slug: videos-apps
 title: Video Tutorials
+description: "Video tutorials and step-by-step guides for deploying HARDWARIO devices with HARDWARIO Manager, ThingsBoard and LoRaWAN network servers."
 ---
 
 import Image from '@theme/IdealImage';

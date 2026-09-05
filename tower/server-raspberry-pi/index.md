@@ -1,5 +1,6 @@
 ---
 title: Server on Raspberry Pi
+description: "If you want to start using TOWER in your home or small business applications you will need to run something more permanent than HARDWARIO Playground."
 ---
 import Image from '@theme/IdealImage';
 

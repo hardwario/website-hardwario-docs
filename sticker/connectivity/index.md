@@ -1,6 +1,7 @@
 ---
 slug: /connectivity
 title: Connectivity Overview
+description: "HARDWARIO STICKER supports multiple wireless communication protocols, allowing you to select the optimal radio architecture for your deployment requirements."
 ---
 import Image from '@theme/IdealImage';
 

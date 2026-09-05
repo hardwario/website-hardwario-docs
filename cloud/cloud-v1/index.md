@@ -1,6 +1,7 @@
 ---
 slug: /legacy
 title: Legacy (Cloud v1)
+description: "Reference documentation for the older HARDWARIO Cloud v1. For the current platform, see the main HARDWARIO Cloud documentation."
 ---
 
 # Legacy – HARDWARIO Cloud v1

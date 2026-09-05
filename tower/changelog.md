@@ -3,6 +3,7 @@ slug: changelog
 title: TOWER Changelog
 toc_min_heading_level: 2
 toc_max_heading_level: 2
+description: "This page tracks all notable changes across the TOWER platform, including firmware / SDK and hardware modules."
 ---
 
 import Tabs from '@theme/Tabs';

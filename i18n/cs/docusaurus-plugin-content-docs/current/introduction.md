@@ -1,7 +1,7 @@
 ---
 slug: /
 title: CHESTER
-description: "TODO Enable these articles"
+description: "HARDWARIO CHESTER je konfigurovatelná nízkopříkonová IoT platforma LPWAN pro vzdálený monitoring přes LTE-M, NB-IoT a LoRaWAN, rozšiřitelná zásuvnými moduly."
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';

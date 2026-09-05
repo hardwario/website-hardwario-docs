@@ -1,6 +1,7 @@
 ---
 slug: first-steps
 title: Quick Start Guide
+description: "Quick start guide for FIBER: bring up the gateway, install the LoRaWAN stack and join your first LoRaWAN device."
 ---
 
 # FIBER Quick Start Guide

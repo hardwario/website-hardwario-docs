@@ -1,6 +1,7 @@
 ---
 title: Configuration
 sidebar_position: 5
+description: "GLIDER configuration reference: the settings stored in non-volatile memory and how to change them over the console interfaces."
 ---
 import Image from '@theme/IdealImage';
 

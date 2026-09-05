@@ -1,6 +1,7 @@
 ---
 slug: cloud-service
 title: Managed Network Server
+description: "Managed LoRaWAN network server for EMBER: HARDWARIO can host ChirpStack or The Things Stack for you as an alternative to self-hosting."
 ---
 import Image from '@theme/IdealImage';
 

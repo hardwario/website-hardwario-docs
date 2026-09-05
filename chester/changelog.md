@@ -3,6 +3,7 @@ slug: changelog
 title: CHESTER Changelog
 toc_min_heading_level: 2
 toc_max_heading_level: 2
+description: "This page tracks all notable changes across the CHESTER platform, including firmware, hardware, and catalog applications."
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,7 @@
 ---
 slug: /hardware
 title: Hardware Description
+description: "TAPPER hardware description: Raspberry Pi Zero 2 W, the PN532 NFC module, enclosure and connections."
 ---
 
 import Image from '@theme/IdealImage';

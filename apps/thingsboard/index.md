@@ -1,6 +1,7 @@
 ---
 slug: index
 title: ThingsBoard
+description: "ThingsBoard is an open-source IoT platform that helps businesses connect devices, collect data, and turn it into clear, useful insights."
 ---
 import Image from '@theme/IdealImage';
 

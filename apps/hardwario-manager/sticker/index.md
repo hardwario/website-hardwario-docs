@@ -1,6 +1,7 @@
 ---
 slug: /hardwario-manager/sticker
 title: STICKER
+description: "STICKER is configured by holding the phone against the device. There are no cables, no programmer, and no desktop software."
 ---
 
 # STICKER over NFC

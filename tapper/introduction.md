@@ -2,6 +2,7 @@
 slug: /
 title: TAPPER
 sidebar_label: Introduction
+description: "TAPPER is a secure NFC tag reader powered by a Raspberry Pi Zero 2 W and the PN532 module."
 ---
 
 import Image from '@theme/IdealImage';

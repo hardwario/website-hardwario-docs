@@ -1,6 +1,7 @@
 ---
 slug: /rakwireless
 title: RAKwireless
+description: "RAKwireless is a global pioneer in providing innovative and diverse IoT connectivity solutions."
 ---
 import Image from '@theme/IdealImage';
 

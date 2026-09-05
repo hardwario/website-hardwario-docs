@@ -1,6 +1,7 @@
 ---
 slug: /security
 title: Security Enhancements
+description: "This document depicts a few steps for enhancing the security of your TAPPER."
 ---
 
 import Image from '@theme/IdealImage';

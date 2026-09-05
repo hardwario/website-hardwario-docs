@@ -1,6 +1,7 @@
 ---
 slug: supported-devices
 title: Supported Sensors
+description: "External sensors and devices supported by CHESTER over its digital interfaces, with wiring and configuration notes."
 ---
 
 import Image from '@theme/IdealImage';

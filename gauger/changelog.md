@@ -3,6 +3,7 @@ slug: changelog
 title: GAUGER Changelog
 toc_min_heading_level: 2
 toc_max_heading_level: 2
+description: "This page tracks all notable changes across the GAUGER platform, including firmware and hardware. Use the tabs below to filter by change category."
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,5 +1,6 @@
 ---
 title: Downlink
+description: "Downlink messages in HARDWARIO Cloud: the three kinds of message the Cloud can send to a CHESTER device and how to use each of them."
 ---
 
 # Downlink

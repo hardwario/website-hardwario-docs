@@ -2,6 +2,7 @@
 slug: /
 title: Apps
 sidebar_label: Introduction
+description: "HARDWARIO apps: HARDWARIO Manager for field setup of STICKER and CHESTER, plus guides for ThingsBoard, ChirpStack and The Things Stack integrations."
 ---
 import Image from '@theme/IdealImage';
 import Link from '@docusaurus/Link';

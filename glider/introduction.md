@@ -2,6 +2,7 @@
 slug: /
 title: GLIDER
 sidebar_label: Introduction
+description: "HARDWARIO GLIDER is a compact LTE-M / NB-IoT IoT device built around the Nordic nRF9151 SoC."
 ---
 import Image from '@theme/IdealImage';
 

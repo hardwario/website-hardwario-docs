@@ -1,6 +1,7 @@
 ﻿---
 slug: index
 title: Milesight - Sensors
+description: "Milesight LoRaWAN sensors tested by HARDWARIO, with reference resources for each device."
 ---
 
 import Image from '@theme/IdealImage';

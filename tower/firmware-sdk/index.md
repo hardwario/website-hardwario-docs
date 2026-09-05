@@ -1,5 +1,6 @@
 ---
 title: Firmware SDK
+description: "This section talks about most of the SDK modules and how to use them."
 ---
 import Image from '@theme/IdealImage';
 

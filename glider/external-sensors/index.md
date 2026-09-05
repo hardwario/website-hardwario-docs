@@ -1,6 +1,7 @@
 ---
 title: External Sensors
 sidebar_position: 4
+description: "External sensors and inputs GLIDER accepts in addition to its internal sensors, with wiring and configuration notes."
 ---
 import Image from '@theme/IdealImage';
 

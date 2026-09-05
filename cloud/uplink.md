@@ -1,6 +1,7 @@
 ---
 slug: uplink
 title: Uplink
+description: "An uplink is a message sent from the device to the Cloud, the counterpart to a downlink."
 ---
 
 # Uplink

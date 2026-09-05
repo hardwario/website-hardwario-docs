@@ -1,6 +1,7 @@
 ---
 slug: developer-mode
 title: Developer Access
+description: "Developer access to STICKER: the debug firmware build adds an interactive shell over RTT for development and diagnostics on the Zephyr RTOS platform."
 ---
 import Image from '@theme/IdealImage';
 

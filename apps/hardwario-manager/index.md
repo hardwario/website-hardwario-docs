@@ -1,6 +1,7 @@
 ---
 slug: /hardwario-manager
 title: HARDWARIO Manager
+description: "HARDWARIO Manager is the mobile app for setting up and managing HARDWARIO devices in the field."
 ---
 
 # HARDWARIO Manager

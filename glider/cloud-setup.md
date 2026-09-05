@@ -1,6 +1,7 @@
 ---
 title: HARDWARIO Cloud Setup
 sidebar_position: 3
+description: "Connect GLIDER to HARDWARIO Cloud: the device ships ready for the Cloud, so registering it in the web interface with its two identifiers is all it takes."
 ---
 import Image from '@theme/IdealImage';
 

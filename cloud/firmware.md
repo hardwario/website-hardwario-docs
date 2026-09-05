@@ -1,6 +1,7 @@
 ---
 slug: firmware
 title: Firmware
+description: "You can update a CHESTER's firmware remotely from the Cloud, over the air, with no physical access to the device."
 ---
 
 # Firmware Updates

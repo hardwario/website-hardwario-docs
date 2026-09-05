@@ -1,6 +1,7 @@
 ---
 slug: first-steps
 title: Getting Started
+description: "Welcome to the HARDWARIO Cloud, the platform where your devices are managed and where your live data lands."
 ---
 
 # HARDWARIO Cloud Quick Start Guide

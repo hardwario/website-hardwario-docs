@@ -1,6 +1,7 @@
 ---
 slug: tags
 title: Tags
+description: "Tags are named labels with a color that you assign to both devices and connectors."
 ---
 
 # Tags

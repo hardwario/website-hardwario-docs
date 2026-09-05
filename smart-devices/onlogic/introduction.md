@@ -1,6 +1,7 @@
 ---
 slug: /onlogic
 title: "OnLogic"
+description: "OnLogic designs and manufactures industrial computers engineered for reliability in challenging environments, from factory floors to outdoor edge deployments."
 ---
 
 # OnLogic

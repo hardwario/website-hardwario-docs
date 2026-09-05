@@ -1,6 +1,7 @@
 ---
 slug: index
 title: ChirpStack
+description: "ChirpStack is an open-source solution for building private or public LoRaWAN networks."
 ---
 import Image from '@theme/IdealImage';
 

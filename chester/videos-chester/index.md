@@ -1,6 +1,7 @@
 ---
 slug: videos-chester
 title: Video Tutorials
+description: "Step-by-step guides and video tutorials for setting up and using a CHESTER device."
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: hardware-description
 title: Hardware Description
+description: "GAUGER hardware description and technical specification: supply and input voltages, digital inputs, WiFi and Ethernet interfaces and mechanical data."
 ---
 
 # Hardware Description

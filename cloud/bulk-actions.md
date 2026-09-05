@@ -1,6 +1,7 @@
 ---
 slug: bulk-actions
 title: Bulk Actions
+description: "Bulk actions in HARDWARIO Cloud configure or manage many CHESTER devices at once when a fleet should share the same settings."
 ---
 
 # Bulk Actions

@@ -1,6 +1,7 @@
 ---
 slug: catalog-applications
 title: STICKER Variants
+description: "HARDWARIO STICKER is available in three ready-to-use functional variants: STICKER Clime, STICKER Input, and STICKER Motion."
 ---
 import Image from '@theme/IdealImage';
 

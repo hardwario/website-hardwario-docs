@@ -1,6 +1,7 @@
 ---
 slug: /
 title: HARDWARIO Cloud
+description: "HARDWARIO Cloud is a device management platform for CHESTER and other HARDWARIO IoT devices."
 ---
 
 # HARDWARIO Cloud

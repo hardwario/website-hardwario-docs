@@ -2,6 +2,7 @@
 slug: /
 title: GLIDER
 sidebar_label: Úvod
+description: "HARDWARIO GLIDER je kompaktní IoT zařízení pro LTE-M a NB-IoT postavené na SoC Nordic nRF9151, připravené pro HARDWARIO Cloud."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 title: CBOR Payload
 sidebar_position: 7
+description: "GLIDER reports measurements to HARDWARIO Cloud using the CBOR binary format (RFC 8949)."
 ---
 import Image from '@theme/IdealImage';
 

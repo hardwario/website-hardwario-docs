@@ -2,6 +2,7 @@
 slug: /
 title: FIBER
 sidebar_label: Introduction
+description: "FIBER is a robust industrial IoT device built on an embedded Linux platform and designed for Industrial IoT applications."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,5 +1,6 @@
 ---
 title: Mobile Networks
+description: "The CHESTER platform supports LTE-M and NB-IoT cellular technologies using the nRF9160 System-in-Package from Nordic Semiconductor."
 ---
 import Image from '@theme/IdealImage';
 

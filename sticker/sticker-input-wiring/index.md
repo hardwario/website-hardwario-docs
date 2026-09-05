@@ -1,6 +1,7 @@
 ---
 slug: sticker-input-wiring
 title: STICKER Input Wiring
+description: "Wiring guide for STICKER Input: DIP switch settings and connections for 1-Wire, pulse, contact and analog inputs, with diagrams."
 ---
 import Image from '@theme/IdealImage';
 

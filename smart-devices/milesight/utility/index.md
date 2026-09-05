@@ -1,6 +1,7 @@
 ---
 slug: index
 title: Milesight - Utility Devices
+description: "Milesight utility devices tested by HARDWARIO, with reference resources for each device."
 ---
 
 import Image from '@theme/IdealImage';

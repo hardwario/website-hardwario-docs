@@ -1,6 +1,7 @@
 ---
 slug: features
 title: Features
+description: "This page describes notable behaviors of the STICKER firmware: how the device manages power, keeps its LoRaWAN connection healthy, and protects stored data."
 ---
 import Image from '@theme/IdealImage';
 

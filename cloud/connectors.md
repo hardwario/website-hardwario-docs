@@ -1,6 +1,7 @@
 ---
 slug: connectors
 title: Connectors
+description: "A Connector is a webhook that the Cloud calls every time a device sends an uplink message."
 ---
 
 # Connectors

@@ -1,6 +1,7 @@
 ---
 slug: cloud-v2-migration-guide
 title: Cloud v2 Migration Guide
+description: "This article walks you through the complete migration process from Cloud v1 to Cloud v2."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,7 @@
 ---
 slug: hardware-description
 title: Hardware Description
+description: "This article describes the hardware configuration of the EMBER Hotspot."
 ---
 
 # Hardware Description

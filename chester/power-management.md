@@ -1,6 +1,7 @@
 ---
 slug: power-management
 title: Power Management
+description: "Power management options for CHESTER: battery packs, external supply, idle current, sleep modes and how to estimate battery life."
 ---
 import Image from '@theme/IdealImage';
 

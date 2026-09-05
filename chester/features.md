@@ -1,6 +1,7 @@
 ---
 slug: features
 title: Features
+description: "Overview of the CHESTER platform features: connectivity, power options, extension modules, firmware and cloud integration."
 ---
 import Image from '@theme/IdealImage';
 

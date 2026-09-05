@@ -1,6 +1,7 @@
 ---
 slug: /usage
 title: Client Usage
+description: "TAPPER client command line usage: the commands, options and arguments for operating the NFC reader from the shell."
 ---
 
 import Image from '@theme/IdealImage';

@@ -2,6 +2,7 @@
 slug: /introduction
 sidebar_position: 1
 title: Introduction
+description: "HARDWARIO Cloud v1 (legacy): the infrastructure that provided IoT connectivity, device management and data access for HARDWARIO devices."
 ---
 import Image from '@theme/IdealImage';
 

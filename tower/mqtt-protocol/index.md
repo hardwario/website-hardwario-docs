@@ -1,5 +1,6 @@
 ---
 title: MQTT Protocol
+description: "The MQTT protocol used by HARDWARIO TOWER: the Mosquitto broker, topic structure and message formats that every node and application talks through."
 ---
 import Image from '@theme/IdealImage';
 

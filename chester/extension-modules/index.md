@@ -1,6 +1,7 @@
 ---
 slug: extension-modules
 title: Extension Modules
+description: "The CHESTER mainboard interfaces and the CHESTER-X extension modules that add sensor inputs, I/O, power and connectivity options."
 ---
 import Image from '@theme/IdealImage';
 

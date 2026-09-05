@@ -1,5 +1,6 @@
 ---
 title: Hardwarové moduly
+description: "Přehled hardwarových modulů a tagů HARDWARIO TOWER: Core Module, senzorové a reléové moduly, napájení, displej, rádio a 1-Wire moduly."
 ---
 import Image from '@theme/IdealImage';
 

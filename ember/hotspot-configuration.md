@@ -1,6 +1,7 @@
 ---
 slug: hotspot-configuration
 title: Hotspot Configuration
+description: "In this article, you will find details on the EMBER Hotspot configuration. It is defined by the RouterOS configuration script."
 ---
 import Image from '@theme/IdealImage';
 

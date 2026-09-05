@@ -1,6 +1,7 @@
 ---
 slug: /tls-setup
 title: MQTT TLS Setup
+description: "This guide provides all the information needed to make TLS work with self-signed certificates."
 ---
 
 import Image from '@theme/IdealImage';

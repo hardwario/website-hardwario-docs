@@ -1,6 +1,7 @@
 ﻿---
 slug: index
 title: Milesight - Gateways
+description: "Milesight LoRaWAN gateways tested by HARDWARIO, with reference resources and the supported network server options."
 ---
 
 Here is a list of tested **Milesight gateways** by HARDWARIO with reference resources:

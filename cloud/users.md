@@ -1,6 +1,7 @@
 ---
 slug: users
 title: Users
+description: "The Users page lists everyone with access to your Space and lets you invite new members and manage their roles."
 ---
 
 # Users

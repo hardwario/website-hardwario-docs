@@ -1,6 +1,7 @@
 ﻿---
 slug: index
 title: RAKwireless - Gateways
+description: "RAKwireless LoRaWAN gateways tested by HARDWARIO, with reference resources for each device."
 ---
 
 import Image from '@theme/IdealImage';

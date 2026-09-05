@@ -1,6 +1,7 @@
 ---
 slug: messages
 title: Messages
+description: "The Messages page in HARDWARIO Cloud shows every message exchanged between your devices and the Cloud, with filters and message details."
 ---
 
 # Messages

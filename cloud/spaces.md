@@ -1,6 +1,7 @@
 ---
 slug: spaces
 title: Spaces
+description: "A Space is the top-level organizational unit in HARDWARIO Cloud. Everything (devices, tags, connectors, variables, and users) lives inside a space."
 ---
 
 # Spaces

@@ -2,6 +2,7 @@
 slug: /
 title: TAPPER
 sidebar_label: Úvod
+description: "TAPPER je bezpečná čtečka NFC tagů postavená na Raspberry Pi Zero 2 W a modulu PN532, komunikující přes MQTT."
 ---
 
 import Image from '@theme/IdealImage';

@@ -2,6 +2,7 @@
 slug: /
 title: EMBER
 sidebar_label: Úvod
+description: "EMBER je průmyslová platforma LoRaWAN, která přenáší a zpracovává hodnoty ze senzorů a řídí akční členy v průmyslových areálech."
 ---
 import Image from '@theme/IdealImage';
 

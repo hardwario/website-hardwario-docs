@@ -1,6 +1,7 @@
 ---
 slug: /milesight
 title: Milesight
+description: "Milesight delivers smart IoT and video surveillance products with a focus on AIoT; HARDWARIO tests and resells selected Milesight LoRaWAN devices."
 ---
 import Image from '@theme/IdealImage';
 

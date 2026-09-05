@@ -1,6 +1,7 @@
 ---
 slug: /mikrotik
 title: "MikroTik"
+description: "MikroTik is a Latvian manufacturer of networking equipment and wireless systems used across ISPs, industrial networks, and IoT deployments worldwide."
 ---
 
 # MikroTik

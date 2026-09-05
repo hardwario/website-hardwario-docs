@@ -1,6 +1,7 @@
 ---
 slug: firmware-flashing
 title: Firmware Flashing
+description: "How to update GLIDER firmware: the two supported methods and what each one needs."
 ---
 import Image from '@theme/IdealImage';
 

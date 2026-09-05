@@ -1,5 +1,6 @@
 ---
 title: Introduction
+description: "FIBER Lite is the Raspberry Pi 5 based variant of FIBER for quickly bringing up and testing LoRaWAN devices such as HARDWARIO STICKER."
 ---
 
 # FIBER Lite

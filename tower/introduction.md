@@ -3,6 +3,7 @@ slug: /
 sidebar_position: 1
 title: TOWER
 sidebar_label: Introduction
+description: "TOWER is a modular, wireless, open-source and open-hardware IoT platform for rapid prototyping and deployment, at the heart of HARDWARIO Academy."
 ---
 import Image from '@theme/IdealImage';
 

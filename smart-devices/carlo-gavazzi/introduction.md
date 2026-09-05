@@ -1,6 +1,7 @@
 ---
 slug: /carlo-gavazzi
 title: "Carlo Gavazzi"
+description: "Carlo Gavazzi is a Swiss manufacturer specializing in energy measurement, monitoring, and automation components for industrial and commercial buildings."
 ---
 
 # Carlo Gavazzi

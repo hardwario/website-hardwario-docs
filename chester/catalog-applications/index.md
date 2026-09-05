@@ -1,6 +1,7 @@
 ---
 slug: catalog-applications
 title: Catalog Applications
+description: "Catalog applications are ready-made CHESTER firmware for common use cases: what each one does, which hardware it needs and how its data looks."
 ---
 import Image from '@theme/IdealImage';
 

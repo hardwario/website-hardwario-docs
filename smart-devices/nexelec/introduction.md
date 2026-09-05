@@ -1,6 +1,7 @@
 ---
 slug: /nexelec
 title: "Nexelec"
+description: "Nexelec is a French manufacturer of connected safety sensors for fire detection and indoor air quality monitoring, compliant with European standards."
 ---
 
 # Nexelec

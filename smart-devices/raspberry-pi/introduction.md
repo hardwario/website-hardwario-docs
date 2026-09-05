@@ -1,6 +1,7 @@
 ---
 slug: /raspberry-pi
 title: "Raspberry Pi"
+description: "Raspberry Pi produces affordable, compact computing modules and single-board computers widely used in IoT, embedded systems and edge computing."
 ---
 
 # Raspberry Pi

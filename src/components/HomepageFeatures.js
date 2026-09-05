@@ -97,7 +97,7 @@ const SmartDevices = [
     title: 'Milesight',
     subtitle: translate({ id: 'home.milesight.subtitle', message: 'LoRaWAN Sensors & Gateways' }),
     link: '/smart-devices/milesight',
-    src: '/img/milesight.png',
+    src: '/img/milesight.webp',
     description: translate({
       id: 'home.milesight.description',
       message: 'Wide range of LoRaWAN sensors and gateways for industrial and smart-building deployments.',
@@ -127,7 +127,7 @@ const SmartDevices = [
     title: 'Raspberry Pi',
     subtitle: translate({ id: 'home.raspberrypi.subtitle', message: 'Computing Modules' }),
     link: '/smart-devices/raspberry-pi',
-    src: '/img/raspberry-pi.png',
+    src: '/img/raspberry-pi.webp',
     description: translate({
       id: 'home.raspberrypi.description',
       message: 'Compact computing modules for IoT gateways, edge processing, and custom hardware.',
@@ -170,7 +170,7 @@ const CloudAndApps = [
     title: 'CLOUD',
     subtitle: translate({ id: 'home.cloud.subtitle', message: 'Middleware IoT Service' }),
     link: '/cloud/',
-    src: '/img/cloud.png',
+    src: '/img/cloud.webp',
     description: translate({
       id: 'home.cloud.description',
       message: 'Device and data management platform with REST API, webhook connectors, and firmware updates over the air.',

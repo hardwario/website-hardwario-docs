@@ -12,7 +12,7 @@ Stránka **Devices** vypisuje všechna IoT zařízení zaregistrovaná ve vašem
 
 :::tip Videonávod
 
-Postup krok za krokem najdete ve videu [**Jak přidat CHESTER do cloudu**](videos-cloud/cloud-chester-add).
+Postup krok za krokem najdete ve videu [**Jak přidat CHESTER do cloudu**](/cloud/videos-cloud/cloud-chester-add/).
 
 :::
 

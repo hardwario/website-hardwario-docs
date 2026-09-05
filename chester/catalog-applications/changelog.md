@@ -11,7 +11,7 @@ This page tracks all notable changes in CHESTER catalog application firmware sin
 
 :::tip Latest Release
 
-**SDK v4.0.0** (2026-08-10): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Firmware Downloads](catalog-applications#application-firmware)
+**SDK v4.0.0** (2026-08-10): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Firmware Downloads](/chester/catalog-applications/catalog-applications/#application-firmware)
 
 :::
 

@@ -10,7 +10,7 @@ ThingsBoard offers advanced tools for organizing your IoT infrastructure, automa
 
 ---
 
-## [Assets](assets)
+## [Assets](/apps/thingsboard/assets)
 
 Assets are logical containers that represent real-world objects (buildings, floors, zones, or equipment) in your ThingsBoard environment. Unlike devices (which represent physical hardware), assets let you build a structured hierarchy that makes access control, dashboard abstraction, and scaling significantly easier.
 
@@ -21,7 +21,7 @@ Assets are logical containers that represent real-world objects (buildings, floo
 
 ---
 
-## [Notification Rules](notifications-manager)
+## [Notification Rules](/apps/thingsboard/notifications-manager)
 
 The Notification Rules Manager is a no-code dashboard for setting up threshold-based alerts. Define conditions for your telemetry data and get notified by email or SMS whenever those thresholds are crossed, with no programming required.
 
@@ -32,7 +32,7 @@ The Notification Rules Manager is a no-code dashboard for setting up threshold-b
 
 ---
 
-## [Email Notifications](email-notification)
+## [Email Notifications](/apps/thingsboard/email-notification)
 
 For more advanced notification scenarios, ThingsBoard's Rule Engine lets you build fully custom email notification chains using JavaScript. This approach gives you complete control over device filtering, data formatting, and rate limiting.
 
@@ -43,7 +43,7 @@ For more advanced notification scenarios, ThingsBoard's Rule Engine lets you bui
 
 ---
 
-## [Scheduled Reports](email-reports)
+## [Scheduled Reports](/apps/thingsboard/email-reports)
 
 Automatically generate and send periodic PDF reports to your customers on a defined schedule. Reports are built in a visual layout designer and delivered via a configurable email template, completely hands-free once set up.
 
@@ -54,7 +54,7 @@ Automatically generate and send periodic PDF reports to your customers on a defi
 
 ---
 
-## [Embedding Dashboards](embedding-dashboards)
+## [Embedding Dashboards](/apps/thingsboard/embedding-dashboards)
 
 Embed public ThingsBoard dashboards directly into external web applications using a simple `iframe`. The approach is optimized for React-based documentation frameworks like Docusaurus (MDX), so your live charts render right inside your own pages.
 
@@ -65,7 +65,7 @@ Embed public ThingsBoard dashboards directly into external web applications usin
 
 ---
 
-## [Rule Engine](rule-engine)
+## [Rule Engine](/apps/thingsboard/rule-engine)
 
 The Rule Engine is ThingsBoard's core automation system. It processes every incoming message from your devices using a visual node-based editor, giving you full control over data transformation, alarm management, and third-party integrations.
 
@@ -76,5 +76,5 @@ The Rule Engine is ThingsBoard's core automation system. It processes every inco
 - Route and process device commands (RPC)
 
 :::caution
-When editing the Root Rule Chain, always preserve the **Save Timeseries** and **Save Client Attributes** nodes. Removing them will stop all data from being saved to the database. See the [Rule Engine](rule-engine) guide for safe editing practices.
+When editing the Root Rule Chain, always preserve the **Save Timeseries** and **Save Client Attributes** nodes. Removing them will stop all data from being saved to the database. See the [Rule Engine](/apps/thingsboard/rule-engine) guide for safe editing practices.
 :::

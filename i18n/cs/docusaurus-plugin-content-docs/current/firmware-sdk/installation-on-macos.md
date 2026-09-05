@@ -152,7 +152,7 @@ brew install cmake ninja gperf python3 ccache qemu dtc wget libmagic
         IDT_LIST:          0 GB         2 KB      0.00%
    ```
 
-1. Pokud je vaše zařízení CHESTER APP/BLE [**připojeno**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) k J-Link, jsou nainstalovány [**ovladače**](../developer-tools/segger-j-link) a [**je zapnuté napájení**](../developer-tools/power-profiler-kit-ii.md#basic-usage), můžete zkompilovaný kód blinky nahrát zadáním
+1. Pokud je vaše zařízení CHESTER APP/BLE [**připojeno**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) k J-Link, jsou nainstalovány [**ovladače**](/chester/developer-tools/segger-j-link/) a [**je zapnuté napájení**](../developer-tools/power-profiler-kit-ii.md#basic-usage), můžete zkompilovaný kód blinky nahrát zadáním
 
    ```
    west flash

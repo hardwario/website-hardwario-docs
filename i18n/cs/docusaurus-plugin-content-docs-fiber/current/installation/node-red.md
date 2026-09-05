@@ -83,13 +83,13 @@ description: "Výše uvedený release asset se jmenuje install-update-nodered-de
 1. Vytvořte flow: **MQTT in** (topic `application/+/device/+/event/up`, broker
    `localhost:1883`) → **Function** (parsování uplink JSON z ChirpStack, nastavení `msg.measurement` a
    `msg.payload = [fields, tags]`) → **InfluxDB out** (konfigurační node: `influxdbVersion: "2.0"`,
-   `url: http://localhost:8086`, token z kroku [Instalace InfluxDB](influxdb); node: `org:
+   `url: http://localhost:8086`, token z kroku [Instalace InfluxDB](/fiber/installation/influxdb/); node: `org:
    fiber`, `bucket: fiber`).
 
    :::tip
 
    Dokud není připojena žádná brána nebo zařízení LoRaWAN, je toto flow jen přípravou. Vytvořte ho
    nyní, aby bylo připraveno, jakmile budou brána a zařízení zaregistrovány (viz
-   [Registrace brány a zařízení](register-device) výše) a začnou přicházet skutečné uplinky.
+   [Registrace brány a zařízení](/fiber/installation/register-device/) výše) a začnou přicházet skutečné uplinky.
 
    :::

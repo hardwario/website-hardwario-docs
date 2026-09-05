@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 Zařízení STICKER je navržené pro provoz s extrémně nízkou spotřebou, aby vydrželo v terénu několik let bez externího napájení. Napájejí ho **2× běžné baterie AA** (alkalické nebo lithiové články 1,5 V).
 
 :::tip Zprovoznění přes NFC a aktivace radia
-Parametry zařízení, klíče a aktivaci `radio-mode` lze spravovat bezdrátově telefonem s NFC a aplikací [**HARDWARIO Manager**](hardwario-manager), a to i před vložením baterií.
+Parametry zařízení, klíče a aktivaci `radio-mode` lze spravovat bezdrátově telefonem s NFC a aplikací [**HARDWARIO Manager**](/sticker/hardwario-manager/), a to i před vložením baterií.
 :::
 
 ---
@@ -28,12 +28,12 @@ Parametry zařízení, klíče a aktivaci `radio-mode` lze spravovat bezdrátov�
 Od firmwaru **v1.4.0** se zařízení STICKER dodává z výroby v **režimu Radio-Silent** (`radio-mode` vypnutý):
 
 - **Nulové vysílání při přepravě:** Transceiver LoRaWAN je po vybalení úplně neaktivní, aby se baterie nevybíjela pokusy o připojení bez brány během přepravy nebo skladování.
-- **Aktivace v terénu:** Vysílání (`radio-mode on`) se zapíná na místě při uvedení do provozu přiložením telefonu s aplikací [**HARDWARIO Manager**](hardwario-manager) přes NFC, nebo shell příkazem (`config radio-mode on`).
+- **Aktivace v terénu:** Vysílání (`radio-mode on`) se zapíná na místě při uvedení do provozu přiložením telefonu s aplikací [**HARDWARIO Manager**](/sticker/hardwario-manager/) přes NFC, nebo shell příkazem (`config radio-mode on`).
 
 ---
 
 ## Sběr energie z NFC (konfigurace bez baterií) {#nfc-energy-harvesting-battery-less-configuration}
 
 - **Pasivní konfigurace:** Integrované rozhraní NFC tagu umožňuje plné zprovoznění zařízení **bez vložených baterií** nebo při vybitých bateriích.
-- **Sběr RF energie:** RF pole telefonu s aplikací [**HARDWARIO Manager**](hardwario-manager) dodá dost energie na zápis parametrů přímo do EEPROM NFC tagu na desce.
+- **Sběr RF energie:** RF pole telefonu s aplikací [**HARDWARIO Manager**](/sticker/hardwario-manager/) dodá dost energie na zápis parametrů přímo do EEPROM NFC tagu na desce.
 - **Validace při startu:** Po vložení baterií zařízení STICKER nabootuje, zvaliduje čekající konfiguraci uloženou v EEPROM NFC, aplikuje parametry a spustí normální provoz.

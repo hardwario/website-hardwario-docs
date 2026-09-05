@@ -12,4 +12,4 @@ Zde najdete podrobné návody a video tutoriály, které vám pomohou s konfigur
 
 | Tutoriál                       | Podrobný návod                                  | Video tutoriál                              |
 |--------------------------------|-------------------------------------------------|---------------------------------------------|
-| Jak přidat CHESTER do Cloudu   | [Návod](cloud-chester-add#step-by-step-text-guide) | [Video](https://youtu.be/w0M63Kh03Lc) |
+| Jak přidat CHESTER do Cloudu   | [Návod](/cloud/videos-cloud/cloud-chester-add/#step-by-step-text-guide) | [Video](https://youtu.be/w0M63Kh03Lc) |

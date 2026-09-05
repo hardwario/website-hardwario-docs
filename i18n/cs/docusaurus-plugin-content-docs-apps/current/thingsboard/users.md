@@ -37,7 +37,7 @@ V tomto návodu se naučíte, jak v ThingsBoardu vytvářet nové uživatelské 
 Nového uživatele máte úspěšně vytvořeného!
 
 :::info
-**Potřebujete spravovat přístupy uživatelů?** Ve [**správě uživatelů**](users-managing) se dozvíte, jak vytvářet grupy, přiřazovat role a řídit přístup ke konkrétním zařízením nebo dashboardům.
+**Potřebujete spravovat přístupy uživatelů?** Ve [**správě uživatelů**](/apps/thingsboard/users-managing) se dozvíte, jak vytvářet grupy, přiřazovat role a řídit přístup ke konkrétním zařízením nebo dashboardům.
 :::
 
 ---

@@ -88,7 +88,7 @@ Generate a CSR.
 Sign the CSR with your CA key.  
 `openssl x509 -req -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out client.crt -days 365`
 
-Send the `client.key`, `client.crt`, and `ca.crt` to the TAPPER and update your [TAPPER config](usage#configuration) accordingly.
+Send the `client.key`, `client.crt`, and `ca.crt` to the TAPPER and update your [TAPPER config](/tapper/usage/#configuration) accordingly.
 
 :::tip
 

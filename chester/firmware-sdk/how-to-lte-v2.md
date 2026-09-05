@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # How to: LTE v2
 
-This article will demonstrate how to upgrade existing CHESTER firmware to the LTE v2 and [Cloud v2](../../cloud/).
+This article will demonstrate how to upgrade existing CHESTER firmware to the LTE v2 and [Cloud v2](/cloud/).
 
 LTE v2 is using a newer UDP protocol that supports downlink messages and automatically handles fragmentation, confirmation and signing of the packets with SHA-256.
 
@@ -47,7 +47,7 @@ CHESTER Control also contains configuration definitions through macros. So you d
 
 ### Other Catalogue Apps
 
-Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to Cloud v2 and you can take an inspiration. Or use pre-built [**firmware**](../catalog-applications/catalog-applications#application-firmware)
+Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to Cloud v2 and you can take an inspiration. Or use pre-built [**firmware**](/chester/catalog-applications/catalog-applications/#application-firmware)
 
 ## Changes for LTE v2
 

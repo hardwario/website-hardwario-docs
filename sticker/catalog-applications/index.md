@@ -14,9 +14,9 @@ HARDWARIO STICKER is available in three ready-to-use functional variants: **STIC
 
 | Variant | Primary Purpose | Integrated Sensors / Inputs | External Expansion | Key Use Cases |
 |---|---|---|---|---|
-| [**STICKER Clime**](sticker-clime) | Environmental monitoring | Temperature, Relative Humidity, Ambient Light, Barometric Pressure | — | Indoor climate tracking, cold supply chain, greenhouses, cleanrooms |
-| [**STICKER Input**](sticker-input) | Industrial & probe interface | Temperature, Relative Humidity, 2× Digital/Voltage Inputs (0–30 V) | 1-Wire bus (Dallas, Machine Probe), S0 pulse counters | Energy meter reading, machine status, industrial PLC monitoring |
-| [**STICKER Motion**](sticker-motion) | Presence & motion tracking | PIR motion detector, 3-axis Accelerometer, Dual Hall-effect switches | — | Building security, space occupancy, door monitoring, asset movement |
+| [**STICKER Clime**](/sticker/catalog-applications/sticker-clime/) | Environmental monitoring | Temperature, Relative Humidity, Ambient Light, Barometric Pressure | — | Indoor climate tracking, cold supply chain, greenhouses, cleanrooms |
+| [**STICKER Input**](/sticker/catalog-applications/sticker-input/) | Industrial & probe interface | Temperature, Relative Humidity, 2× Digital/Voltage Inputs (0–30 V) | 1-Wire bus (Dallas, Machine Probe), S0 pulse counters | Energy meter reading, machine status, industrial PLC monitoring |
+| [**STICKER Motion**](/sticker/catalog-applications/sticker-motion/) | Presence & motion tracking | PIR motion detector, 3-axis Accelerometer, Dual Hall-effect switches | — | Building security, space occupancy, door monitoring, asset movement |
 
 ---
 
@@ -30,7 +30,7 @@ HARDWARIO STICKER is available in three ready-to-use functional variants: **STIC
 * **Key Benefit:** Complete overview of environmental quality and ambient conditions without needing external sensor cables.
 * **v1.4.0 Enhancements:** On-flash history log storage (Store-and-Forward) during network outages and configurable threshold alarms for immediate reporting on fPort 3.
 
-→ [**More about STICKER Clime**](sticker-clime)
+→ [**More about STICKER Clime**](/sticker/catalog-applications/sticker-clime/)
 
 ---
 
@@ -42,7 +42,7 @@ HARDWARIO STICKER is available in three ready-to-use functional variants: **STIC
 * **Supported Probes:** Automatic discovery of 1-Wire sensors (Dallas DS18B20) and HARDWARIO Machine Probe industrial sensors.
 * **Key Benefit:** Universal converter for integrating existing industrial infrastructure and utility meters into LoRaWAN networks.
 
-→ [**More about STICKER Input**](sticker-input)
+→ [**More about STICKER Input**](/sticker/catalog-applications/sticker-input/)
 
 ---
 
@@ -54,4 +54,4 @@ HARDWARIO STICKER is available in three ready-to-use functional variants: **STIC
 * **Key Benefit:** Instant detection of human presence and physical tampering with minimal power consumption.
 * **v1.4.0 Enhancements:** Configurable `dwell` parameter in alarm rules to suppress false triggers caused by input bounce or contact wear.
 
-→ [**More about STICKER Motion**](sticker-motion)
+→ [**More about STICKER Motion**](/sticker/catalog-applications/sticker-motion/)

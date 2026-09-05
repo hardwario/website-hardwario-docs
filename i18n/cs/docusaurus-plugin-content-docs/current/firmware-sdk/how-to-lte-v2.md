@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Jak na: LTE v2 {#how-to-lte-v2}
 
-Tento článek ukazuje, jak upgradovat existující firmware pro zařízení CHESTER na LTE v2 a [Cloud v2](../../cloud/).
+Tento článek ukazuje, jak upgradovat existující firmware pro zařízení CHESTER na LTE v2 a [Cloud v2](/cloud/).
 
 LTE v2 používá novější UDP protokol, který podporuje downlink zprávy a automaticky se stará o fragmentaci, potvrzování a podepisování paketů pomocí SHA-256.
 
@@ -48,7 +48,7 @@ CHESTER Control také obsahuje definice konfigurace pomocí maker. Konfiguračn�
 
 ### Ostatní katalogové aplikace {#other-catalogue-apps}
 
-Aktuálně jsou už všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK migrované na Cloud v2 a můžete se jimi inspirovat. Nebo použijte předpřipravený [**firmware**](../catalog-applications/catalog-applications#application-firmware)
+Aktuálně jsou už všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK migrované na Cloud v2 a můžete se jimi inspirovat. Nebo použijte předpřipravený [**firmware**](/chester/catalog-applications/catalog-applications/#application-firmware)
 
 ## Změny pro LTE v2 {#changes-for-lte-v2}
 

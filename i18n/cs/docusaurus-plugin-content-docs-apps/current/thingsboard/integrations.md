@@ -11,7 +11,7 @@ ThingsBoard umožňuje plynulé propojení s externími systémy, cloudovými pl
 
 ---
 
-## [ChirpStack](chirpstack-integration) {#chirpstack}
+## [ChirpStack](/apps/thingsboard/chirpstack-integration) {#chirpstack}
 
 Připojte svou infrastrukturu LoRaWAN přímo k platformě HARDWARIO ThingsBoard. Tato integrace překlenuje mezeru mezi vaším síťovým serverem ChirpStack a ThingsBoardem, takže můžete spravovat zařízení LoRaWAN, zpracovávat uplinky a posílat downlinky z jednoho rozhraní.
 
@@ -21,5 +21,5 @@ Připojte svou infrastrukturu LoRaWAN přímo k platformě HARDWARIO ThingsBoard
 - Posílat downlink příkazy (RPC) přímo do svých zařízení LoRaWAN
 
 :::info
-Před nastavením integrace si připravte svůj certifikát CA a klientský certifikát. Postup nastavení zabezpečeného MQTT připojení krok za krokem najdete v návodu [ChirpStack MQTT přes TLS](chirpstack-integration).
+Před nastavením integrace si připravte svůj certifikát CA a klientský certifikát. Postup nastavení zabezpečeného MQTT připojení krok za krokem najdete v návodu [ChirpStack MQTT přes TLS](/apps/thingsboard/chirpstack-integration).
 :::

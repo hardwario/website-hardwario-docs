@@ -12,7 +12,7 @@ Tato stránka zachycuje všechny významné změny ve firmwaru katalogových apl
 
 :::tip Nejnovější vydání
 
-**SDK v4.0.0** (2026-08-10): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Soubory firmwaru ke stažení](catalog-applications#application-firmware)
+**SDK v4.0.0** (2026-08-10): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Soubory firmwaru ke stažení](/chester/catalog-applications/catalog-applications/#application-firmware)
 
 :::
 

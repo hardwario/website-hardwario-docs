@@ -180,7 +180,7 @@ sudo apt install python3-venv
         IDT_LIST:          0 GB         2 KB      0.00%
    ```
 
-1. Pokud je vaše zařízení CHESTER APP/BLE [**připojeno**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) k J-Link, [**ovladače**](../developer-tools/segger-j-link) jsou nainstalované a [**napájení je zapnuté**](../developer-tools/power-profiler-kit-ii.md#basic-usage), můžete zkompilovaný kód blinky nahrát příkazem
+1. Pokud je vaše zařízení CHESTER APP/BLE [**připojeno**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) k J-Link, [**ovladače**](/chester/developer-tools/segger-j-link/) jsou nainstalované a [**napájení je zapnuté**](../developer-tools/power-profiler-kit-ii.md#basic-usage), můžete zkompilovaný kód blinky nahrát příkazem
 
    ```
    west flash

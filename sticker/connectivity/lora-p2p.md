@@ -58,7 +58,7 @@ When operating in P2P mode, both the transmitter and receiver must be configured
 
 ## Configuration & Management
 
-P2P parameters and radio modes can be set locally over NFC using [**HARDWARIO Manager**](../hardwario-manager) or via the developer RTT shell:
+P2P parameters and radio modes can be set locally over NFC using [**HARDWARIO Manager**](/sticker/hardwario-manager/) or via the developer RTT shell:
 
 ```bash
 config radio-mode p2p
@@ -68,4 +68,4 @@ config p2p-bandwidth 125
 settings save
 ```
 
-For detailed field commissioning workflows, refer to the [**HARDWARIO Manager**](../hardwario-manager) documentation.
+For detailed field commissioning workflows, refer to the [**HARDWARIO Manager**](/sticker/hardwario-manager/) documentation.

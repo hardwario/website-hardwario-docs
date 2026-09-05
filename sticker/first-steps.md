@@ -16,17 +16,17 @@ Welcome! This page helps you **power up, provision, and activate** your STICKER 
 
 **STICKER** is an open IoT platform based on the STM32WL SoC with integrated LoRaWAN connectivity and software-selectable proprietary **LoRa P2P** mode. It is a compact, battery-powered sensor platform built on Zephyr RTOS, running catalog applications like STICKER Clime, Input, and Motion.
 
-For technical details, see the [**Hardware Description**](hardware-description).
+For technical details, see the [**Hardware Description**](/sticker/hardware-description/).
 
 #### You Will Need
 - **STICKER device** (Clime / Input / Motion variant)
 - **2× AA batteries** (1.5V alkaline or lithium)
 - A **LoRaWAN Gateway** within range
 - A **LoRaWAN Network Server** (ChirpStack / TTS / custom LNS)
-- A smartphone with **NFC** and the [**HARDWARIO Manager**](hardwario-manager) app installed
+- A smartphone with **NFC** and the [**HARDWARIO Manager**](/sticker/hardwario-manager/) app installed
 
 #### Useful Links
-- NFC Mobile App Guide: [**HARDWARIO Manager**](hardwario-manager)
+- NFC Mobile App Guide: [**HARDWARIO Manager**](/sticker/hardwario-manager/)
 - STICKER Decoder: [ttn.js on GitHub](https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js)
 - HARDWARIO Datasheets Hub: [hardwario.com/resources/datasheets](https://www.hardwario.com/resources/datasheets)
 
@@ -37,11 +37,11 @@ For technical details, see the [**Hardware Description**](hardware-description).
 STICKER comes pre-flashed with one of the catalog applications:
 
 - **STICKER Clime**: Temperature, humidity, light & barometric pressure monitoring.  
-  [Documentation →](catalog-applications/sticker-clime)
+  [Documentation →](/sticker/catalog-applications/sticker-clime/)
 - **STICKER Input**: External sensors (1-Wire, Machine Probe) and industrial inputs (S0 pulse, 0–30 V logic).  
-  [Documentation →](catalog-applications/sticker-input)
+  [Documentation →](/sticker/catalog-applications/sticker-input/)
 - **STICKER Motion**: Ultra-low-power PIR motion detection and 3-axis acceleration tracking.  
-  [Documentation →](catalog-applications/sticker-motion)
+  [Documentation →](/sticker/catalog-applications/sticker-motion/)
 
 ---
 
@@ -99,14 +99,14 @@ Start with the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager
 ## Step 4: Register on your LoRaWAN Network Server
 
 ### ChirpStack v4
-1. Register the device using the DevEUI, JoinEUI, and AppKey obtained via [**HARDWARIO Manager**](hardwario-manager).
+1. Register the device using the DevEUI, JoinEUI, and AppKey obtained via [**HARDWARIO Manager**](/sticker/hardwario-manager/).
 2. Assign the STICKER payload decoder script.
-3. Follow the full setup guide: [ChirpStack LNS Integration](connectivity/lorawan-chirpstack).
+3. Follow the full setup guide: [ChirpStack LNS Integration](/sticker/connectivity/lorawan-chirpstack/).
 
 ### The Things Stack (TTS / TTN)
-1. Add a new end device using OTAA or ABP provisioning keys obtained via [**HARDWARIO Manager**](hardwario-manager).
+1. Add a new end device using OTAA or ABP provisioning keys obtained via [**HARDWARIO Manager**](/sticker/hardwario-manager/).
 2. Import the payload decoder.
-3. Follow the full setup guide: [The Things Stack Integration](connectivity/lorawan-tts).
+3. Follow the full setup guide: [The Things Stack Integration](/sticker/connectivity/lorawan-tts/).
 
 ---
 
@@ -116,7 +116,7 @@ Once registered and connected:
 
 - **Verify Uplinks:** Confirm that the initial **Device Info** uplink (firmware version, battery status, reset cause) and regular sensor data packets arrive at your LNS dashboard.
 - **Check LED Status:** A single green flash every 3 seconds confirms optimal network link and healthy operation.
-- **Adjust Schedules:** Use NFC via [**HARDWARIO Manager**](hardwario-manager) or LoRaWAN Downlink commands (fPort 85) to fine-tune sampling and uplink intervals.
+- **Adjust Schedules:** Use NFC via [**HARDWARIO Manager**](/sticker/hardwario-manager/) or LoRaWAN Downlink commands (fPort 85) to fine-tune sampling and uplink intervals.
 
 :::info STICKER Input Wiring
 If using **STICKER Input**, review the terminal block and DIP switch instructions before connecting external probes: [STICKER Input Wiring Guide](sticker-input-wiring/index.md).
@@ -130,7 +130,7 @@ The LED is the only feedback STICKER gives locally, so it is the fastest way to
 tell what a unit is doing. The tables below list every pattern in **firmware
 v1.4.0**. Most blinks are deliberately very short (5–10 ms) to save battery, so
 expect a blip rather than a comfortable blink. The full reference, with timings,
-is in [**LED Indication**](hardware-description#led-indication).
+is in [**LED Indication**](/sticker/hardware-description/#led-indication).
 
 ### Status heartbeat – one pattern every 3 seconds
 

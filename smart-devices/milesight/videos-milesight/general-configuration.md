@@ -7,7 +7,7 @@ import Link from '@docusaurus/Link';
 
 # Milesight - General Configuration
 
-This video focuses on **device configuration via NFC using a mobile phone** and the [**Milesight ToolBox**](../sensors/index#general-configuration) application.
+This video focuses on **device configuration via NFC using a mobile phone** and the [**Milesight ToolBox**](/smart-devices/milesight/sensors/index/#general-configuration) application.
 
 While a smartphone is used as an example in this tutorial, configuration can also be performed using the **[Milesight Field Tester FT101](https://docs.hardwario.com/smart-devices/milesight/utility/milesight-ft101)**.
 

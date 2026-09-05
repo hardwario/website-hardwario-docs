@@ -37,7 +37,7 @@ Then apply changes by typing `config save`. The device will reboot and use the c
 
 ## EMBER LoRaWAN Gateway
 
-We also offer **LoRaWAN gateway EMBER** ([EMBER docs](../../ember), [EMBER e-shop](https://www.hardwario.store/ember/)). This gateway can manage LoRaWAN communication with CHESTER and network software could be running in our HARDWARIO Cloud, or completely in your infrastructure. LoRaWAN network is very flexible, reliable with long range and we use it in big factories or large open areas.
+We also offer **LoRaWAN gateway EMBER** ([EMBER docs](/ember/), [EMBER e-shop](https://www.hardwario.store/ember/)). This gateway can manage LoRaWAN communication with CHESTER and network software could be running in our HARDWARIO Cloud, or completely in your infrastructure. LoRaWAN network is very flexible, reliable with long range and we use it in big factories or large open areas.
 
 EMBER is using [CHIRPSTACK](https://www.chirpstack.io/) and [Node-RED](https://nodered.org/) for device management and further integrations.
 

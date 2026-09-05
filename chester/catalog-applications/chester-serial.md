@@ -14,7 +14,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 - [**Getting started**](https://docs.hardwario.com/chester/first-steps) on how to connect device to Cloud.
 - [**Common functionality**](common-functionality.md) to know how LED, button and network configuration works.
-- [**Platform Management**](../category/platform-connectivity) on how to work with the interactive console.
+- [**Platform Management**](/chester/category/platform-connectivity/) on how to work with the interactive console.
 
 :::
 

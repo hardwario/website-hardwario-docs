@@ -89,7 +89,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
    :::caution
 
-   Pokud narazíte na **_An error was reported by NRFJPROG DLL: -101 JLINKARM_DLL_COULD_NOT_BE_OPENED_**, navštivte [tuto](../firmware-sdk/installation-on-ubuntu#set-up-device-rules) stránku.
+   Pokud narazíte na **_An error was reported by NRFJPROG DLL: -101 JLINKARM_DLL_COULD_NOT_BE_OPENED_**, navštivte [tuto](/chester/firmware-sdk/installation-on-ubuntu/#set-up-device-rules) stránku.
 
    :::
 

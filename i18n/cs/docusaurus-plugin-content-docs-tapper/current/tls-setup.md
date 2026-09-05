@@ -89,7 +89,7 @@ Vygenerujte CSR.
 Podepište CSR klíčem své CA.  
 `openssl x509 -req -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out client.crt -days 365`
 
-Odešlete soubory `client.key`, `client.crt` a `ca.crt` do zařízení TAPPER a odpovídajícím způsobem upravte [konfiguraci TAPPER](usage#configuration).
+Odešlete soubory `client.key`, `client.crt` a `ca.crt` do zařízení TAPPER a odpovídajícím způsobem upravte [konfiguraci TAPPER](/tapper/usage/#configuration).
 
 :::tip
 

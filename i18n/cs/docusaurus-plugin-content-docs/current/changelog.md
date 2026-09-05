@@ -179,13 +179,13 @@ Tabulka níže odkazuje přímo na sekci se seznamem změn každé katalogové a
 
 | Aplikace | Seznam změn | Poslední aktualizace |
 |---|---|---|
-| CHESTER Clime | [Seznam změn](catalog-applications/chester-clime#changelog) | 2026-06-24 |
-| CHESTER Control | [Seznam změn](catalog-applications/chester-control#changelog) | 2026-06-22 |
-| CHESTER Current | [Seznam změn](catalog-applications/chester-current#changelog) | 2026-06-24 |
-| CHESTER Meteo | [Seznam změn](catalog-applications/chester-meteo#changelog) | 2026-06-24 |
-| CHESTER Motion | [Seznam změn](catalog-applications/chester-motion#changelog) | 2026-04-01 |
-| CHESTER Push | [Seznam změn](catalog-applications/chester-push#changelog) | 2026-04-01 |
-| CHESTER Range | [Seznam změn](catalog-applications/chester-range#changelog) | 2026-04-01 |
-| CHESTER Scale | [Seznam změn](catalog-applications/chester-scale#changelog) | 2026-06-22 |
-| CHESTER Serial | [Seznam změn](catalog-applications/chester-serial#changelog) | 2026-04-01 |
-| CHESTER wM-Bus | [Seznam změn](catalog-applications/chester-wm-bus#changelog) | 2026-06-24 |
+| CHESTER Clime | [Seznam změn](/chester/catalog-applications/chester-clime/#changelog) | 2026-06-24 |
+| CHESTER Control | [Seznam změn](/chester/catalog-applications/chester-control/#changelog) | 2026-06-22 |
+| CHESTER Current | [Seznam změn](/chester/catalog-applications/chester-current/#changelog) | 2026-06-24 |
+| CHESTER Meteo | [Seznam změn](/chester/catalog-applications/chester-meteo/#changelog) | 2026-06-24 |
+| CHESTER Motion | [Seznam změn](/chester/catalog-applications/chester-motion/#changelog) | 2026-04-01 |
+| CHESTER Push | [Seznam změn](/chester/catalog-applications/chester-push/#changelog) | 2026-04-01 |
+| CHESTER Range | [Seznam změn](/chester/catalog-applications/chester-range/#changelog) | 2026-04-01 |
+| CHESTER Scale | [Seznam změn](/chester/catalog-applications/chester-scale/#changelog) | 2026-06-22 |
+| CHESTER Serial | [Seznam změn](/chester/catalog-applications/chester-serial/#changelog) | 2026-04-01 |
+| CHESTER wM-Bus | [Seznam změn](/chester/catalog-applications/chester-wm-bus/#changelog) | 2026-06-24 |

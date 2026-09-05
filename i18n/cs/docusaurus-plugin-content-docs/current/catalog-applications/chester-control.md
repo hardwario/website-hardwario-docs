@@ -15,7 +15,7 @@ Některé základní informace zde nejsou uvedeny, protože jsou společné pro 
 
 - [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
 - [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](../category/platform-connectivity): jak pracovat s interaktivní konzolí.
+- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -273,7 +273,7 @@ app config hygro-interval-aggreg <value>
 
 ## Řízení výstupů {#output-control}
 
-Podívejte se prosím do dokumentace Cloudu, konkrétně na [Downlink data](../../cloud/downlink) a [API příklady](../../cloud/downlink).
+Podívejte se prosím do dokumentace Cloudu, konkrétně na [Downlink data](/cloud/downlink) a [API příklady](/cloud/downlink).
 
 Výstupy řídíte odesláním tohoto JSON na API endpoint Cloudu (`https://api.prod.hardwario.cloud/v2/messages`) nebo v HARDWARIO Cloud, kde přejdete na zprávy zařízení a kliknete na „Create new downlink message"
 

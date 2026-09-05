@@ -79,7 +79,7 @@ mqtt:
 
 #### TLS {#tls}
 
-Nastavení TLS najdete v [Nastavení TLS](tls-setup).
+Nastavení TLS najdete v [Nastavení TLS](/tapper/tls-setup/).
 
 - Cafile je cesta k souboru CA, kterým se ověřuje certifikát serveru. (Podepisující CA)
 - Certfile je cesta k souboru s klientským certifikátem podepsaným danou CA.
@@ -89,7 +89,7 @@ Nastavení TLS najdete v [Nastavení TLS](tls-setup).
 
 **MQTT host** musí **odpovídat** hodnotě **CN** nebo jednomu ze **SAN** uvedených v X509 certifikátu **serveru**.
 
-Viz [Nastavení MQTT TLS](tls-setup)
+Viz [Nastavení MQTT TLS](/tapper/tls-setup/)
 
 :::
 

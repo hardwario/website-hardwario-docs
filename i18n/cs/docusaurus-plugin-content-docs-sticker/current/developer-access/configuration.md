@@ -14,7 +14,7 @@ Nastavení zařízení se čte a zapisuje příkazem `config` přes vývojářsk
 
 :::info Firmware v1.4.0
 Příkaz `config` a většina parametrů na této stránce platí pro firmware STICKER v1.4.0. Hlavní novinky ve v1.4.0:
-- **Výchozí stav radio-silent:** Radio je ve výchozím stavu vypnuté (`radio-mode off`), aby se šetřila energie, dokud ho neaktivujete přes NFC v aplikaci [**HARDWARIO Manager**](../hardwario-manager) nebo ze shellu.
+- **Výchozí stav radio-silent:** Radio je ve výchozím stavu vypnuté (`radio-mode off`), aby se šetřila energie, dokud ho neaktivujete přes NFC v aplikaci [**HARDWARIO Manager**](/sticker/hardwario-manager/) nebo ze shellu.
 - **Šifrovaný přístup přes NFC:** Lokální příkazový kanál šifrovaný AES-CCM (`hio.stck:cmd` / `hio.stck:rsp`) s ochranou proti opakování pomocí nonce.
 - **Claim token zapisovatelný jen jednou:** Neměnný token pro zprovoznění (`config claim-token`) pro bezpečné napojení na cloud.
 - **Dohled nad spojením:** Kontroly spojení LoRaWAN (`lrw-link-check-interval`, `lrw-link-check-fail-rejoin`).
@@ -22,7 +22,7 @@ Příkaz `config` a většina parametrů na této stránce platí pro firmware S
 :::
 
 :::tip Konfigurace v provozu vs. vývojářská
-Tato stránka dokumentuje interaktivní shell příkazy (`config`) dostupné přes debugovací připojení RTT, ale běžná konfigurace v provozu a uvedení do provozu se dělají bezdrátově přes NFC v aplikaci [**HARDWARIO Manager**](../hardwario-manager).
+Tato stránka dokumentuje interaktivní shell příkazy (`config`) dostupné přes debugovací připojení RTT, ale běžná konfigurace v provozu a uvedení do provozu se dělají bezdrátově přes NFC v aplikaci [**HARDWARIO Manager**](/sticker/hardwario-manager/).
 :::
 
 ---
@@ -152,6 +152,6 @@ Tyto parametry spravují identitu zařízení, řízení přístupu přes NFC a 
 
 Od firmwaru v1.4.0 jsou lokální transakce čtení a zápisu přes NFC zabezpečené proti odposlechu a neoprávněné rekonfiguraci:
 
-- **Zabezpečení AES-CCM:** Komunikace s telefonem přes [**HARDWARIO Manager**](../hardwario-manager) používá šifrovaný kanál AES-CCM nad záznamy NDEF (`hio.stck:cmd` pro žádosti a `hio.stck:rsp` pro odpovědi).
+- **Zabezpečení AES-CCM:** Komunikace s telefonem přes [**HARDWARIO Manager**](/sticker/hardwario-manager/) používá šifrovaný kanál AES-CCM nad záznamy NDEF (`hio.stck:cmd` pro žádosti a `hio.stck:rsp` pro odpovědi).
 - **Mechanismus proti opakování:** Každá transakce vyhodnotí a zvýší `nonce-counter`, což brání útokům přehráním zachycených NFC session.
 - **Zprovoznění claim tokenu:** 128bitový `claim-token` umožňuje svázat fyzickou jednotku s cloudovou instancí zákazníka před nasazením nebo během něj, aniž by bylo potřeba okamžité připojení k LoRaWAN.

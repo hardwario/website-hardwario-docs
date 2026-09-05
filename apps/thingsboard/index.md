@@ -130,7 +130,7 @@ Follow these steps to set up ThingsBoard and start monitoring your devices from 
 Start by logging into [ThingsBoard](https://app.hardwario.cloud/) and creating a new device.
 This device will act as the endpoint that receives and stores data sent from HARDWARIO Cloud.
 
-👉 [Adding a New Device](creating-device)
+👉 [Adding a New Device](/apps/thingsboard/creating-device)
 
 ---
 
@@ -139,7 +139,7 @@ This device will act as the endpoint that receives and stores data sent from HAR
 Go to [HARDWARIO Cloud](https://hardwario.cloud/) and set up a Connector that points to your ThingsBoard device.
 This connector will securely transmit your device data from HARDWARIO Cloud to ThingsBoard.
 
-👉 [Connecting to ThingsBoard](cloud-connection)
+👉 [Connecting to ThingsBoard](/apps/thingsboard/cloud-connection)
 
 ---
 
@@ -148,7 +148,7 @@ This connector will securely transmit your device data from HARDWARIO Cloud to T
 Once the connection is established and data is flowing, create a dashboard in ThingsBoard.
 Add widgets such as cards, charts, and gauges to visualize your data in real time.
 
-👉 [Creating a Dashboard](creating-dashboard)
+👉 [Creating a Dashboard](/apps/thingsboard/creating-dashboard)
 
 ---
 
@@ -157,7 +157,7 @@ Add widgets such as cards, charts, and gauges to visualize your data in real tim
 ThingsBoard lets you precisely control what each user can see and do.
 Define roles with specific permissions and organize users into groups tied to their devices and dashboards.
 
-👉 [User Management](users-managing)
+👉 [User Management](/apps/thingsboard/users-managing)
 
 ---
 
@@ -165,7 +165,7 @@ Define roles with specific permissions and organize users into groups tied to th
 
 Create user accounts, assign them to groups, and send activation links so your customers can log in and access their dashboards.
 
-👉 [Adding Users](users)
+👉 [Adding Users](/apps/thingsboard/users)
 
 ---
 
@@ -173,18 +173,18 @@ Create user accounts, assign them to groups, and send activation links so your c
 
 Generate a read-only public URL for any dashboard and share it with clients or stakeholders, with no login required.
 
-👉 [Public Link](public-link)
+👉 [Public Link](/apps/thingsboard/public-link)
 
 ---
 
 ## Features
 
-ThingsBoard offers a range of advanced features for organizing your data, automating workflows, and delivering reports. See the [Features](features) section for a full overview.
+ThingsBoard offers a range of advanced features for organizing your data, automating workflows, and delivering reports. See the [Features](/apps/thingsboard/features) section for a full overview.
 
 | Feature | Description |
 |---------|-------------|
-| [Assets](assets) | Organize devices into logical hierarchies (buildings, floors, zones) to simplify access control and dashboard abstraction. |
-| [Notification Rules](notifications-manager) | Set up threshold-based email and SMS alerts without writing code, directly from a dashboard widget. |
-| [Email Notifications](email-notification) | Build custom Rule Chains to send conditional email alerts with formatted data and configurable rate limiting. |
-| [Scheduled Reports](email-reports) | Automatically generate and deliver periodic PDF reports to customers on a defined schedule. |
-| [Rule Engine](rule-engine) | Visual programming for data transformation, alarm management, third-party integrations, and device automation. |
+| [Assets](/apps/thingsboard/assets) | Organize devices into logical hierarchies (buildings, floors, zones) to simplify access control and dashboard abstraction. |
+| [Notification Rules](/apps/thingsboard/notifications-manager) | Set up threshold-based email and SMS alerts without writing code, directly from a dashboard widget. |
+| [Email Notifications](/apps/thingsboard/email-notification) | Build custom Rule Chains to send conditional email alerts with formatted data and configurable rate limiting. |
+| [Scheduled Reports](/apps/thingsboard/email-reports) | Automatically generate and deliver periodic PDF reports to customers on a defined schedule. |
+| [Rule Engine](/apps/thingsboard/rule-engine) | Visual programming for data transformation, alarm management, third-party integrations, and device automation. |

@@ -83,13 +83,13 @@ title: Install Node-RED
 1. Build a flow: **MQTT in** (topic `application/+/device/+/event/up`, broker
    `localhost:1883`) → **Function** (parse the ChirpStack uplink JSON, set `msg.measurement` and
    `msg.payload = [fields, tags]`) → **InfluxDB out** (config node: `influxdbVersion: "2.0"`,
-   `url: http://localhost:8086`, token from the [Install InfluxDB](influxdb) step; node: `org:
+   `url: http://localhost:8086`, token from the [Install InfluxDB](/fiber/installation/influxdb/) step; node: `org:
    fiber`, `bucket: fiber`).
 
    :::tip
 
    Without a LoRaWAN gateway/device connected yet, this flow is scaffolding. Build it now so
    it's ready as soon as a gateway and device are registered (see
-   [Register a Gateway and a Device](register-device) above) and passing real uplinks.
+   [Register a Gateway and a Device](/fiber/installation/register-device/) above) and passing real uplinks.
 
    :::

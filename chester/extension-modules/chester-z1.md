@@ -20,7 +20,7 @@ This article describes the **CHESTER-Z1** top-cover extension module.
 
 ## Module Overview
 
-**CHESTER-Z1** combines a rechargeable Lithium-Ion battery backup, wide supply voltage input, and an optional human-machine interface (HMI) with illuminated push buttons and acoustic feedback. Primarily, it is used with **CHESTER-M** (mainboard), but it can also be used with [**HARDWARIO TOWER**](../../tower) and 3rd party ecosystems such as **Raspberry Pi**, **Arduino**, **ESP**, etc. The module is installed below the top cover of the Takachi WP13-18 series enclosure.
+**CHESTER-Z1** combines a rechargeable Lithium-Ion battery backup, wide supply voltage input, and an optional human-machine interface (HMI) with illuminated push buttons and acoustic feedback. Primarily, it is used with **CHESTER-M** (mainboard), but it can also be used with [**HARDWARIO TOWER**](/tower/) and 3rd party ecosystems such as **Raspberry Pi**, **Arduino**, **ESP**, etc. The module is installed below the top cover of the Takachi WP13-18 series enclosure.
 
 **CHESTER-Z1** provides a digital I2C communication interface (slave role).
 

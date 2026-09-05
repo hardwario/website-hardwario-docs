@@ -55,7 +55,7 @@ Při provozu v režimu P2P musí být vysílač i přijímač nastavené na shod
 
 ## Konfigurace a správa {#configuration--management}
 
-Parametry P2P a režimy radia lze nastavit lokálně přes NFC v aplikaci [**HARDWARIO Manager**](../hardwario-manager) nebo přes vývojářský RTT shell:
+Parametry P2P a režimy radia lze nastavit lokálně přes NFC v aplikaci [**HARDWARIO Manager**](/sticker/hardwario-manager/) nebo přes vývojářský RTT shell:
 
 ```bash
 config radio-mode p2p
@@ -65,4 +65,4 @@ config p2p-bandwidth 125
 settings save
 ```
 
-Podrobné postupy uvedení do provozu v terénu najdete v dokumentaci [**HARDWARIO Manager**](../hardwario-manager).
+Podrobné postupy uvedení do provozu v terénu najdete v dokumentaci [**HARDWARIO Manager**](/sticker/hardwario-manager/).

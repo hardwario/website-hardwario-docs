@@ -11,4 +11,4 @@ Here you can find step-by-step guides and video tutorials that will support you 
 
 | Tutorial                       | Step-by-step guide                              | Video tutorial                              |
 |--------------------------------|-------------------------------------------------|---------------------------------------------|
-| How to add CHESTER to Cloud    | [Guide](cloud-chester-add#step-by-step-text-guide) | [Video](https://youtu.be/w0M63Kh03Lc) |
+| How to add CHESTER to Cloud    | [Guide](/cloud/videos-cloud/cloud-chester-add/#step-by-step-text-guide) | [Video](https://youtu.be/w0M63Kh03Lc) |

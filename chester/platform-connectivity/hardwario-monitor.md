@@ -26,7 +26,7 @@ After you start the application, you have connection options on **the left side*
 
 You need **J-Link** programmer to use this option. We use **J-Link RTT** (Real Time Transfer) to transfer logs and shell to the **CHESTER**.
 
-Connect **J-Link** to the **CHESTER** using J-Link connected to the [**APP/BLE SWD connector**](../../chester/developer-tools/segger-j-link#segger-j-link-to-app-port-connection).
+Connect **J-Link** to the **CHESTER** using J-Link connected to the [**APP/BLE SWD connector**](/chester/developer-tools/segger-j-link/#segger-j-link-to-app-port-connection).
 
 Then click on the **Attach** button on the right side of the window.
 

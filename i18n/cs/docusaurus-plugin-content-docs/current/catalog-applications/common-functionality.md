@@ -84,7 +84,7 @@ Reset konfigurace vymaže i parametry připojení pro LTE a LoRaWAN, což může
 
 :::
 
-Konfiguraci můžete také měnit vzdáleně přes HARDWARIO Cloud pomocí [**downlink příkazu Config**](../../cloud/downlink/config).
+Konfiguraci můžete také měnit vzdáleně přes HARDWARIO Cloud pomocí [**downlink příkazu Config**](/cloud/downlink/config).
 V cloudu příkaz `config save` neodesíláte.
 
 ## Detekce CHESTER-Z za běhu {#runtime-chester-z-detection}

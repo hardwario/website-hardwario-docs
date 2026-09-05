@@ -11,7 +11,7 @@ ThingsBoard nabízí pokročilé nástroje pro organizaci vaší IoT infrastrukt
 
 ---
 
-## [Assety](assets) {#assets}
+## [Assety](/apps/thingsboard/assets) {#assets}
 
 Assety jsou logické kontejnery, které ve vašem prostředí ThingsBoard reprezentují objekty z reálného světa (budovy, podlaží, zóny nebo zařízení). Na rozdíl od zařízení (která reprezentují fyzický hardware) vám assety umožňují postavit strukturovanou hierarchii, která výrazně zjednodušuje řízení přístupu, abstrakci dashboardů a škálování.
 
@@ -22,7 +22,7 @@ Assety jsou logické kontejnery, které ve vašem prostředí ThingsBoard reprez
 
 ---
 
-## [Pravidla notifikací](notifications-manager) {#notification-rules}
+## [Pravidla notifikací](/apps/thingsboard/notifications-manager) {#notification-rules}
 
 Správce pravidel notifikací je no-code dashboard pro nastavení prahových výstrah. Nadefinujete podmínky pro svá telemetrická data a při každém překročení prahu dostanete upozornění e-mailem nebo SMS, bez programování.
 
@@ -33,7 +33,7 @@ Správce pravidel notifikací je no-code dashboard pro nastavení prahových vý
 
 ---
 
-## [E-mailové notifikace](email-notification) {#email-notifications}
+## [E-mailové notifikace](/apps/thingsboard/email-notification) {#email-notifications}
 
 Pro pokročilejší scénáře notifikací umožňuje Rule Engine v ThingsBoardu postavit plně vlastní řetězce e-mailových notifikací v JavaScriptu. Tento přístup vám dává plnou kontrolu nad filtrováním zařízení, formátováním dat i omezováním frekvence.
 
@@ -44,7 +44,7 @@ Pro pokročilejší scénáře notifikací umožňuje Rule Engine v ThingsBoardu
 
 ---
 
-## [Plánované reporty](email-reports) {#scheduled-reports}
+## [Plánované reporty](/apps/thingsboard/email-reports) {#scheduled-reports}
 
 Automaticky generujte a posílejte zákazníkům periodické PDF reporty podle nastaveného rozvrhu. Reporty se skládají ve vizuálním návrháři rozvržení a doručují se konfigurovatelnou e-mailovou šablonou, po nastavení už bez jakéhokoli zásahu.
 
@@ -55,7 +55,7 @@ Automaticky generujte a posílejte zákazníkům periodické PDF reporty podle n
 
 ---
 
-## [Vkládání dashboardů](embedding-dashboards) {#embedding-dashboards}
+## [Vkládání dashboardů](/apps/thingsboard/embedding-dashboards) {#embedding-dashboards}
 
 Veřejné dashboardy ThingsBoard vložte přímo do externích webových aplikací jednoduchým `iframe`. Postup je optimalizovaný pro dokumentační frameworky založené na Reactu, jako je Docusaurus (MDX), takže se vaše živé grafy vykreslí přímo ve vašich stránkách.
 
@@ -66,7 +66,7 @@ Veřejné dashboardy ThingsBoard vložte přímo do externích webových aplikac
 
 ---
 
-## [Rule Engine](rule-engine) {#rule-engine}
+## [Rule Engine](/apps/thingsboard/rule-engine) {#rule-engine}
 
 Rule Engine je jádro automatizace v ThingsBoardu. Zpracovává každou příchozí zprávu z vašich zařízení pomocí vizuálního editoru s uzly a dává vám plnou kontrolu nad transformací dat, správou alarmů a integracemi třetích stran.
 
@@ -77,5 +77,5 @@ Rule Engine je jádro automatizace v ThingsBoardu. Zpracovává každou přícho
 - Směrovat a zpracovávat příkazy pro zařízení (RPC)
 
 :::caution
-Při úpravách Root Rule Chain vždy zachovejte uzly **Save Timeseries** a **Save Client Attributes**. Jejich odstraněním se přestanou ukládat veškerá data do databáze. Bezpečné postupy úprav najdete v návodu [Rule Engine](rule-engine).
+Při úpravách Root Rule Chain vždy zachovejte uzly **Save Timeseries** a **Save Client Attributes**. Jejich odstraněním se přestanou ukládat veškerá data do databáze. Bezpečné postupy úprav najdete v návodu [Rule Engine](/apps/thingsboard/rule-engine).
 :::

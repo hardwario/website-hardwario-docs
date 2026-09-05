@@ -20,7 +20,7 @@ Ve zkratce potřebujete:
 2. Zveřejnit **grupu zařízení** (nebo assetů), která dashboard plní daty.
 3. Zkopírovat vygenerovaný veřejný odkaz.
 
-Kompletní postup krok za krokem, včetně toho, jak řešit podřízené zákazníky, najdete v návodu [**Veřejný odkaz**](public-link).
+Kompletní postup krok za krokem, včetně toho, jak řešit podřízené zákazníky, najdete v návodu [**Veřejný odkaz**](/apps/thingsboard/public-link).
 
 ---
 
@@ -36,7 +36,7 @@ Jakmile je dashboard veřejný, zkopírujte vygenerovanou veřejnou URL. Musí o
 https://app.hardwario.cloud/dashboard/<DASHBOARD_ID>?publicId=<PUBLIC_ID>
 ```
 
-Podrobné pokyny, jak takový odkaz získat, najdete v návodu [**Veřejný odkaz**](public-link).
+Podrobné pokyny, jak takový odkaz získat, najdete v návodu [**Veřejný odkaz**](/apps/thingsboard/public-link).
 
 ### Krok 2: Vložte kód pro vložení {#step-2-insert-the-embed-code}
 

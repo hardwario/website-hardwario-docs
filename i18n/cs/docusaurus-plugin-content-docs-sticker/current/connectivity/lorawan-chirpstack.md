@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 
 :::info Předpoklady
 1. Ujistěte se, že je **ChirpStack v4** nainstalovaný a funkční. Viz [průvodce instalací ChirpStacku](https://docs.hardwario.com/apps/chirpstack/chirpstack-installation).
-2. Před vytvořením profilů koncových zařízení v ChirpStacku si přes NFC vytáhněte přihlašovací údaje zařízení pomocí [**HARDWARIO Manager**](../hardwario-manager).
+2. Před vytvořením profilů koncových zařízení v ChirpStacku si přes NFC vytáhněte přihlašovací údaje zařízení pomocí [**HARDWARIO Manager**](/sticker/hardwario-manager/).
 :::
 
 ---
@@ -20,7 +20,7 @@ import Image from '@theme/IdealImage';
 
 Než jednotku STICKER zaregistrujete v ChirpStack v4, vytáhněte přes NFC její výrobní klíče a nastavte radio:
 
-1. Otevřete [**HARDWARIO Manager**](../hardwario-manager) v telefonu s NFC.
+1. Otevřete [**HARDWARIO Manager**](/sticker/hardwario-manager/) v telefonu s NFC.
 2. Přiložte telefon ke krabičce STICKER a přečtěte si informace o zařízení.
 3. Zapište si **DevEUI**, **JoinEUI/AppEUI** a **AppKey** (pro OTAA), případně statické klíče session (pro ABP).
 4. Zkontrolujte, že je **`radio-mode`** zapnutý, aby se zařízení po zprovoznění pokusilo připojit.
@@ -47,7 +47,7 @@ Při konfiguraci **Device Profile** zařízení STICKER v ChirpStack v4:
 
 ## Užitečné odkazy {#useful-links}
 
-- [Průvodce nastavením HARDWARIO Manager](../hardwario-manager)
+- [Průvodce nastavením HARDWARIO Manager](/sticker/hardwario-manager/)
 - [Průvodce instalací ChirpStack v4](https://docs.hardwario.com/apps/chirpstack/chirpstack-installation)
 - [Dokumentace koncových zařízení ChirpStack](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices)
 - [Průvodce dekodéry payloadu v ChirpStacku](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding)

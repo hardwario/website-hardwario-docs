@@ -14,7 +14,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 - [**Getting started**](https://docs.hardwario.com/chester/first-steps) on how to connect device to Cloud.
 - [**Common functionality**](common-functionality.md) to know how LED, button and network configuration works.
-- [**Platform Management**](../category/platform-connectivity) on how to work with the interactive console.
+- [**Platform Management**](/chester/category/platform-connectivity/) on how to work with the interactive console.
 
 :::
 
@@ -272,7 +272,7 @@ app config hygro-interval-aggreg <value>
 
 ## Output Control
 
-Please see the Cloud documentation, specifically [Downlink data](../../cloud/downlink) and [API examples](../../cloud/downlink).
+Please see the Cloud documentation, specifically [Downlink data](/cloud/downlink) and [API examples](/cloud/downlink).
 
 You control outputs by sending this JSON to the cloud API endpoint (`https://api.prod.hardwario.cloud/v2/messages`) or in the HARDWARIO Cloud by going to the device's messages and clicking on "Create new downlink message"
 

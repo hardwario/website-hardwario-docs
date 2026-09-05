@@ -21,8 +21,8 @@ including InfluxDB, Grafana, and the branded Dashboard, is identical and install
 **A FIBER you received is already set up. There is nothing on these pages for you to run.** It
 ships as a finished appliance: the operating system, ChirpStack, the concentrator and the rest of
 the stack are all part of its image, and it updates as a whole rather than package by package. Go
-straight to [Register a Gateway and a Device](installation/register-device), and to
-[**FIBER Hardware Guides**](category/fiber-hardware-guides) for the display and 1-Wire sensors.
+straight to [Register a Gateway and a Device](/fiber/installation/register-device/), and to
+[**FIBER Hardware Guides**](/fiber/category/fiber-hardware-guides/) for the display and 1-Wire sensors.
 
 These pages are the **build procedure**: how that image is put together, and how to bring up a
 **FIBER Lite** unit from a blank microSD card. Follow them for FIBER Lite, or when building a
@@ -32,8 +32,8 @@ FIBER image from scratch.
 
 :::info
 
-See [**FIBER Lite**](fiber-lite/introduction) in the sidebar for FIBER Lite's hardware
-differences (no display, no 1-Wire sensors), and [**FIBER Hardware Guides**](category/fiber-hardware-guides)
+See [**FIBER Lite**](/fiber/fiber-lite/introduction/) in the sidebar for FIBER Lite's hardware
+differences (no display, no 1-Wire sensors), and [**FIBER Hardware Guides**](/fiber/category/fiber-hardware-guides/)
 for what to do with the display/1-Wire hardware that only FIBER has.
 
 :::
@@ -45,19 +45,19 @@ In this guide, we use two terms:
 
 Follow the pages below in order:
 
-1. [**Flash Raspberry Pi OS**](installation/flash)
-1. [**Update System**](installation/update-system)
-1. [**Configure Hardware**](installation/configure-hardware): I2C bus + RTC
-1. [**Install ChirpStack**](installation/chirpstack)
-1. [**Install ChirpStack Concentratord**](installation/concentratord)
-1. [**Install ChirpStack MQTT Forwarder**](installation/mqtt-forwarder)
-1. [**Register a Gateway and a Device**](installation/register-device)
-1. [**Install Node-RED**](installation/node-red)
-1. [**Install InfluxDB**](installation/influxdb)
-1. [**Install Grafana**](installation/grafana)
-1. [**Dashboard**](installation/dashboard)
-1. [**Firewall**](installation/firewall)
-1. [**Ports & Default Credentials**](installation/ports-and-credentials)
+1. [**Flash Raspberry Pi OS**](/fiber/installation/flash/)
+1. [**Update System**](/fiber/installation/update-system/)
+1. [**Configure Hardware**](/fiber/installation/configure-hardware/): I2C bus + RTC
+1. [**Install ChirpStack**](/fiber/installation/chirpstack/)
+1. [**Install ChirpStack Concentratord**](/fiber/installation/concentratord/)
+1. [**Install ChirpStack MQTT Forwarder**](/fiber/installation/mqtt-forwarder/)
+1. [**Register a Gateway and a Device**](/fiber/installation/register-device/)
+1. [**Install Node-RED**](/fiber/installation/node-red/)
+1. [**Install InfluxDB**](/fiber/installation/influxdb/)
+1. [**Install Grafana**](/fiber/installation/grafana/)
+1. [**Dashboard**](/fiber/installation/dashboard/)
+1. [**Firewall**](/fiber/installation/firewall/)
+1. [**Ports & Default Credentials**](/fiber/installation/ports-and-credentials/)
 
 ## Data Flow
 

@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 :::caution
 
-You do not need to install this separately if you use **Firmware SDK**. This tool is installed automatically when you follow **[Firmware SDK](../category/firmware-sdk/) > Installation on ...** articles.
+You do not need to install this separately if you use **Firmware SDK**. This tool is installed automatically when you follow **[Firmware SDK](/chester/category/firmware-sdk/) > Installation on ...** articles.
 
 :::
 

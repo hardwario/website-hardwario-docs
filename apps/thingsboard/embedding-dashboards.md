@@ -19,7 +19,7 @@ In short, you need to:
 2. Make the **Device Group** (or Assets) feeding the dashboard public.
 3. Copy the generated public link.
 
-For the full step-by-step procedure, including how to handle sub-customers, follow the [**Public Link**](public-link) guide.
+For the full step-by-step procedure, including how to handle sub-customers, follow the [**Public Link**](/apps/thingsboard/public-link) guide.
 
 ---
 
@@ -35,7 +35,7 @@ Once the dashboard is public, copy the generated public URL. It must contain the
 https://app.hardwario.cloud/dashboard/<DASHBOARD_ID>?publicId=<PUBLIC_ID>
 ```
 
-For detailed instructions on how to obtain this link, see the [**Public Link**](public-link) guide.
+For detailed instructions on how to obtain this link, see the [**Public Link**](/apps/thingsboard/public-link) guide.
 
 ### Step 2: Insert the Embed Code
 

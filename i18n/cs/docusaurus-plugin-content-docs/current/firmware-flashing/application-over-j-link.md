@@ -125,7 +125,7 @@ Aplikační firmware se obvykle distribuuje přes **HARDWARIO Cloud** a funkci n
 
 Při nahrávání firmwaru aplikace do zařízení CHESTER postupujte takto:
 
-1. Připojte 10pinový plochý kabel ke konektoru označenému [**APP**](../../chester/developer-tools/segger-j-link#segger-j-link-to-app-port-connection) (nebo `BLE` u hardwarové revize R3.2 a starší).
+1. Připojte 10pinový plochý kabel ke konektoru označenému [**APP**](/chester/developer-tools/segger-j-link/#segger-j-link-to-app-port-connection) (nebo `BLE` u hardwarové revize R3.2 a starší).
 
 1. Druhou stranu 10pinového plochého kabelu připojte k adaptérové desce SEGGER J-Link (a adaptérovou desku zapojte do zařízení SEGGER J-Link).
 

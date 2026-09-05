@@ -15,7 +15,7 @@ Některé základní informace zde nejsou uvedeny, protože jsou společné pro 
 
 - [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
 - [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Platform Management**](../category/platform-connectivity): jak pracovat s interaktivní konzolí.
+- [**Platform Management**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 

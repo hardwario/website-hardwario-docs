@@ -74,7 +74,7 @@ Jako uživatelské jméno můžete použít `tapper` a jako heslo `hardwario`.
 
 Toto je doporučeno pouze při SSH autentizaci veřejným klíčem, jinak použijte silné heslo.
 
-Nastavení SSH autentizace veřejným klíčem (doporučeno): [**SSH s autentizací veřejným klíčem**](security#ssh-with-public-key-authentication-only)
+Nastavení SSH autentizace veřejným klíčem (doporučeno): [**SSH s autentizací veřejným klíčem**](/tapper/security/#ssh-with-public-key-authentication-only)
 
 Můžete použít [**generátor hesel Bitwarden**](https://bitwarden.com/password-generator/#password-generator).
        1. V typu vyberte Passphrase.

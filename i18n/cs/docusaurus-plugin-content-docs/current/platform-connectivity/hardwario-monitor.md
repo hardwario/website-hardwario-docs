@@ -27,7 +27,7 @@ Po spuštění aplikace máte na **levé straně** aplikace k dispozici možnost
 
 Pro tuto možnost potřebujete programátor **J-Link**. Pro přenos logů a shellu ze zařízení **CHESTER** používáme **J-Link RTT** (Real Time Transfer).
 
-Připojte **J-Link** k zařízení **CHESTER** pomocí J-Link připojeného ke [**konektoru APP/BLE SWD**](../../chester/developer-tools/segger-j-link#segger-j-link-to-app-port-connection).
+Připojte **J-Link** k zařízení **CHESTER** pomocí J-Link připojeného ke [**konektoru APP/BLE SWD**](/chester/developer-tools/segger-j-link/#segger-j-link-to-app-port-connection).
 
 Poté klikněte na tlačítko **Attach** na pravé straně okna.
 

@@ -134,6 +134,6 @@ No hardware revisions have been logged yet. Hardware updates will appear here wh
 
 | Application | Changelog | Last Updated |
 |---|---|---|
-| STICKER Clime | [Changelog](catalog-applications/sticker-clime#changelog) | 2026-08-26 |
-| STICKER Input | [Changelog](catalog-applications/sticker-input#changelog) | 2026-08-26 |
-| STICKER Motion | [Changelog](catalog-applications/sticker-motion#changelog) | 2026-08-26 |
+| STICKER Clime | [Changelog](/sticker/catalog-applications/sticker-clime/#changelog) | 2026-08-26 |
+| STICKER Input | [Changelog](/sticker/catalog-applications/sticker-input/#changelog) | 2026-08-26 |
+| STICKER Motion | [Changelog](/sticker/catalog-applications/sticker-motion/#changelog) | 2026-08-26 |

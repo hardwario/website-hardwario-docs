@@ -38,7 +38,7 @@ Poté změny uložte příkazem `config save`. Zařízení se restartuje a použ
 
 ## LoRaWAN brána EMBER {#ember-lorawan-gateway}
 
-Nabízíme také **LoRaWAN bránu EMBER** ([dokumentace EMBER](../../ember), [EMBER e-shop](https://www.hardwario.store/ember/)). Tato brána umí zajistit komunikaci LoRaWAN se zařízením CHESTER a síťový software může běžet v našem HARDWARIO Cloud, nebo kompletně ve vaší infrastruktuře. Síť LoRaWAN je velmi flexibilní, spolehlivá, s dlouhým dosahem a používáme ji ve velkých fabrikách nebo na rozsáhlých otevřených plochách.
+Nabízíme také **LoRaWAN bránu EMBER** ([dokumentace EMBER](/ember/), [EMBER e-shop](https://www.hardwario.store/ember/)). Tato brána umí zajistit komunikaci LoRaWAN se zařízením CHESTER a síťový software může běžet v našem HARDWARIO Cloud, nebo kompletně ve vaší infrastruktuře. Síť LoRaWAN je velmi flexibilní, spolehlivá, s dlouhým dosahem a používáme ji ve velkých fabrikách nebo na rozsáhlých otevřených plochách.
 
 Zařízení EMBER používá pro správu zařízení a další integrace [CHIRPSTACK](https://www.chirpstack.io/) a [Node-RED](https://nodered.org/).
 

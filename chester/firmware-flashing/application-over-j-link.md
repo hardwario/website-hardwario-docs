@@ -124,7 +124,7 @@ Usually, the firmware application is distributed via the **HARDWARIO Cloud** and
 
 Follow these steps to flash application firmware in the CHESTER device:
 
-1. Connect the 10-pin flat cable to the connector labeled [**APP**](../../chester/developer-tools/segger-j-link#segger-j-link-to-app-port-connection) (or `BLE` on hardware revision R3.2 and earlier).
+1. Connect the 10-pin flat cable to the connector labeled [**APP**](/chester/developer-tools/segger-j-link/#segger-j-link-to-app-port-connection) (or `BLE` on hardware revision R3.2 and earlier).
 
 1. Connect the other side of the 10-pin flat cable to SEGGER J-Link adapter board (and plug the adapter board to SEGGER J-Link device).
 

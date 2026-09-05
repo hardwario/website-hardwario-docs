@@ -78,7 +78,7 @@ mqtt:
 
 #### TLS
 
-To set up TLS, refer to [TLS Setup](tls-setup).
+To set up TLS, refer to [TLS Setup](/tapper/tls-setup/).
 
 - Cafile is the path to the CA file to verify the server certificate with. (The signing CA)
 - Certfile is the path to the client certificate file, signed by the CA.
@@ -88,7 +88,7 @@ To set up TLS, refer to [TLS Setup](tls-setup).
 
 The **MQTT host** must **match** the **CN** or one of the **SANs** specified in the **server** X509 certificate.
 
-See [MQTT TLS Setup](tls-setup)
+See [MQTT TLS Setup](/tapper/tls-setup/)
 
 :::
 

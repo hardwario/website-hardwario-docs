@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 
 :::info Prerequisites
 1. Ensure **ChirpStack v4** is installed and operational. See the [ChirpStack Installation Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-installation).
-2. Use [**HARDWARIO Manager**](../hardwario-manager) to extract your device credentials via NFC before creating end-device profiles in ChirpStack.
+2. Use [**HARDWARIO Manager**](/sticker/hardwario-manager/) to extract your device credentials via NFC before creating end-device profiles in ChirpStack.
 :::
 
 ---
@@ -73,7 +73,7 @@ When configuring your STICKER **Device Profile** in ChirpStack v4:
 
 ## Useful Links
 
-- [HARDWARIO Manager and STICKER](../hardwario-manager)
+- [HARDWARIO Manager and STICKER](/sticker/hardwario-manager/)
 - [HARDWARIO Manager Quick Start Guide](/apps/hardwario-manager/first-steps)
 - [Read device info and LoRaWAN keys over NFC](/apps/hardwario-manager/sticker/device-info)
 - [ChirpStack v4 Installation Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-installation)

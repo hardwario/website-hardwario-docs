@@ -73,7 +73,7 @@ You can use `tapper` for username and `hardwario` for password.
 
 This is only recommended with public-key SSH authentication, otherwise use a strong passphrase.
 
-Set up public-key SSH authentication (recommended): [**SSH with public-key authentication**](security#ssh-with-public-key-authentication-only)
+Set up public-key SSH authentication (recommended): [**SSH with public-key authentication**](/tapper/security/#ssh-with-public-key-authentication-only)
 
 You can use the [**Bitwarden passphrase generator**](https://bitwarden.com/password-generator/#password-generator).
        1. Select Passphrase in type.

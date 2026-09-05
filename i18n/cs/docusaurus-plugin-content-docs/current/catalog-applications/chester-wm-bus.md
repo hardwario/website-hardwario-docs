@@ -24,7 +24,7 @@ Některé základní informace zde nejsou uvedeny, protože jsou společné pro 
 
 - [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
 - [**Common functionality**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Platform Management**](../category/platform-connectivity): jak pracovat s interaktivní konzolí.
+- [**Platform Management**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -220,7 +220,7 @@ Po dokončení konfigurace je potřeba vše potvrdit.
 
 Při konfiguraci přes BLE je potřeba změny konfigurace uplatnit příkazem `config save`.
 
-Při konfiguraci přes [cloudové config downlink příkazy](../../cloud/downlink/config) příkaz `config save` nepřidávejte, aplikuje se automaticky. Jinak se konfigurace neuplatní
+Při konfiguraci přes [cloudové config downlink příkazy](/cloud/downlink/config) příkaz `config save` nepřidávejte, aplikuje se automaticky. Jinak se konfigurace neuplatní
 
 ### Interval a wM-Bus pakety každé 2 minuty {#interval-and-wm-bus-packets-every-2-minutes}
 

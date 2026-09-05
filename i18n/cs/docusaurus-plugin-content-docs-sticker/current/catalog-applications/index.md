@@ -15,9 +15,9 @@ Zařízení HARDWARIO STICKER je k dispozici ve třech hotových funkčních var
 
 | Varianta | Hlavní účel | Integrované senzory / vstupy | Externí rozšíření | Klíčová použití |
 |---|---|---|---|---|
-| [**STICKER Clime**](sticker-clime) | Monitorování prostředí | Teplota, relativní vlhkost, okolní osvětlení, barometrický tlak | — | Sledování klimatu v interiéru, chlazený dodavatelský řetězec, skleníky, čisté prostory |
-| [**STICKER Input**](sticker-input) | Průmyslové a sondové rozhraní | Teplota, relativní vlhkost, 2× digitální/napěťový vstup (0–30 V) | Sběrnice 1-Wire (Dallas, Machine Probe), pulzní čítače S0 | Odečet měřičů energií, stav stroje, monitorování průmyslových PLC |
-| [**STICKER Motion**](sticker-motion) | Detekce přítomnosti a pohybu | Detektor pohybu PIR, tříosý akcelerometr, dva Hallovy kontakty | — | Zabezpečení budov, obsazenost prostor, monitorování dveří, pohyb majetku |
+| [**STICKER Clime**](/sticker/catalog-applications/sticker-clime/) | Monitorování prostředí | Teplota, relativní vlhkost, okolní osvětlení, barometrický tlak | — | Sledování klimatu v interiéru, chlazený dodavatelský řetězec, skleníky, čisté prostory |
+| [**STICKER Input**](/sticker/catalog-applications/sticker-input/) | Průmyslové a sondové rozhraní | Teplota, relativní vlhkost, 2× digitální/napěťový vstup (0–30 V) | Sběrnice 1-Wire (Dallas, Machine Probe), pulzní čítače S0 | Odečet měřičů energií, stav stroje, monitorování průmyslových PLC |
+| [**STICKER Motion**](/sticker/catalog-applications/sticker-motion/) | Detekce přítomnosti a pohybu | Detektor pohybu PIR, tříosý akcelerometr, dva Hallovy kontakty | — | Zabezpečení budov, obsazenost prostor, monitorování dveří, pohyb majetku |
 
 ---
 
@@ -31,7 +31,7 @@ Zařízení HARDWARIO STICKER je k dispozici ve třech hotových funkčních var
 * **Hlavní přínos:** Kompletní přehled o kvalitě prostředí a okolních podmínkách bez potřeby kabelů k externím senzorům.
 * **Novinky ve v1.4.0:** Ukládání historie do flash paměti (store-and-forward) během výpadků sítě a konfigurovatelné prahové alarmy s okamžitým hlášením na fPort 3.
 
-→ [**Více o STICKER Clime**](sticker-clime)
+→ [**Více o STICKER Clime**](/sticker/catalog-applications/sticker-clime/)
 
 ---
 
@@ -43,7 +43,7 @@ Zařízení HARDWARIO STICKER je k dispozici ve třech hotových funkčních var
 * **Podporované sondy:** Automatické nalezení senzorů 1-Wire (Dallas DS18B20) a průmyslových senzorů HARDWARIO Machine Probe.
 * **Hlavní přínos:** Univerzální převodník pro zapojení existující průmyslové infrastruktury a měřičů médií do sítí LoRaWAN.
 
-→ [**Více o STICKER Input**](sticker-input)
+→ [**Více o STICKER Input**](/sticker/catalog-applications/sticker-input/)
 
 ---
 
@@ -55,4 +55,4 @@ Zařízení HARDWARIO STICKER je k dispozici ve třech hotových funkčních var
 * **Hlavní přínos:** Okamžitá detekce přítomnosti osob a fyzické manipulace při minimální spotřebě.
 * **Novinky ve v1.4.0:** Konfigurovatelný parametr `dwell` v pravidlech alarmů pro potlačení falešných poplachů způsobených zakmitáváním vstupu nebo opotřebením kontaktu.
 
-→ [**Více o STICKER Motion**](sticker-motion)
+→ [**Více o STICKER Motion**](/sticker/catalog-applications/sticker-motion/)

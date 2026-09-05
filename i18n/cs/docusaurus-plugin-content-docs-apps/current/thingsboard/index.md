@@ -131,7 +131,7 @@ Podle následujících kroků nastavíte ThingsBoard a začnete svá zařízení
 Začněte přihlášením do [ThingsBoard](https://app.hardwario.cloud/) a vytvořením nového zařízení.
 Toto zařízení bude fungovat jako koncový bod, který přijímá a ukládá data odesílaná z HARDWARIO Cloud.
 
-👉 [Přidání nového zařízení](creating-device)
+👉 [Přidání nového zařízení](/apps/thingsboard/creating-device)
 
 ---
 
@@ -140,7 +140,7 @@ Toto zařízení bude fungovat jako koncový bod, který přijímá a ukládá d
 Přejděte do [HARDWARIO Cloud](https://hardwario.cloud/) a nastavte konektor, který bude směřovat na vaše zařízení v ThingsBoard.
 Tento konektor bezpečně přenese data vašeho zařízení z HARDWARIO Cloud do ThingsBoard.
 
-👉 [Připojení k ThingsBoard](cloud-connection)
+👉 [Připojení k ThingsBoard](/apps/thingsboard/cloud-connection)
 
 ---
 
@@ -149,7 +149,7 @@ Tento konektor bezpečně přenese data vašeho zařízení z HARDWARIO Cloud do
 Jakmile je spojení navázáno a data proudí, vytvořte v ThingsBoard dashboard.
 Přidejte widgety, jako jsou karty, grafy a ukazatele, a vizualizujte svá data v reálném čase.
 
-👉 [Vytvoření dashboardu](creating-dashboard)
+👉 [Vytvoření dashboardu](/apps/thingsboard/creating-dashboard)
 
 ---
 
@@ -158,7 +158,7 @@ Přidejte widgety, jako jsou karty, grafy a ukazatele, a vizualizujte svá data 
 ThingsBoard umožňuje přesně řídit, co může každý uživatel vidět a dělat.
 Definujte role s konkrétními oprávněními a rozdělte uživatele do skupin propojených s jejich zařízeními a dashboardy.
 
-👉 [Správa uživatelů](users-managing)
+👉 [Správa uživatelů](/apps/thingsboard/users-managing)
 
 ---
 
@@ -166,7 +166,7 @@ Definujte role s konkrétními oprávněními a rozdělte uživatele do skupin p
 
 Vytvořte uživatelské účty, přiřaďte je do skupin a odešlete aktivační odkazy, aby se vaši zákazníci mohli přihlásit a přistupovat ke svým dashboardům.
 
-👉 [Přidání uživatelů](users)
+👉 [Přidání uživatelů](/apps/thingsboard/users)
 
 ---
 
@@ -174,18 +174,18 @@ Vytvořte uživatelské účty, přiřaďte je do skupin a odešlete aktivační
 
 Vygenerujte pro jakýkoli dashboard veřejnou URL adresu pouze pro čtení a nasdílejte ji klientům nebo partnerům, bez nutnosti přihlášení.
 
-👉 [Veřejný odkaz](public-link)
+👉 [Veřejný odkaz](/apps/thingsboard/public-link)
 
 ---
 
 ## Funkce {#features}
 
-ThingsBoard nabízí řadu pokročilých funkcí pro organizaci dat, automatizaci procesů a doručování reportů. Kompletní přehled najdete v sekci [Funkce](features).
+ThingsBoard nabízí řadu pokročilých funkcí pro organizaci dat, automatizaci procesů a doručování reportů. Kompletní přehled najdete v sekci [Funkce](/apps/thingsboard/features).
 
 | Funkce | Popis |
 |---------|-------------|
-| [Assety](assets) | Uspořádejte zařízení do logických hierarchií (budovy, podlaží, zóny) pro snazší řízení přístupu a abstrakci dashboardů. |
-| [Pravidla notifikací](notifications-manager) | Nastavte e-mailová a SMS upozornění na základě mezních hodnot bez programování, přímo z widgetu na dashboardu. |
-| [E-mailové notifikace](email-notification) | Vytvářejte vlastní Rule Chains pro odesílání podmíněných e-mailových upozornění s formátovanými daty a nastavitelným omezením frekvence. |
-| [Plánované reporty](email-reports) | Automaticky generujte a doručujte zákazníkům pravidelné PDF reporty podle definovaného rozvrhu. |
-| [Rule Engine](rule-engine) | Vizuální programování pro transformaci dat, správu alarmů, integrace třetích stran a automatizaci zařízení. |
+| [Assety](/apps/thingsboard/assets) | Uspořádejte zařízení do logických hierarchií (budovy, podlaží, zóny) pro snazší řízení přístupu a abstrakci dashboardů. |
+| [Pravidla notifikací](/apps/thingsboard/notifications-manager) | Nastavte e-mailová a SMS upozornění na základě mezních hodnot bez programování, přímo z widgetu na dashboardu. |
+| [E-mailové notifikace](/apps/thingsboard/email-notification) | Vytvářejte vlastní Rule Chains pro odesílání podmíněných e-mailových upozornění s formátovanými daty a nastavitelným omezením frekvence. |
+| [Plánované reporty](/apps/thingsboard/email-reports) | Automaticky generujte a doručujte zákazníkům pravidelné PDF reporty podle definovaného rozvrhu. |
+| [Rule Engine](/apps/thingsboard/rule-engine) | Vizuální programování pro transformaci dat, správu alarmů, integrace třetích stran a automatizaci zařízení. |

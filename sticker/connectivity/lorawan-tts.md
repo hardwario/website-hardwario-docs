@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 
 :::info Prerequisites
 1. Ensure access to an active **The Things Stack** instance with an operational LoRaWAN gateway within range.
-2. Use [**HARDWARIO Manager**](../hardwario-manager) to extract your device credentials via NFC before creating end-device profiles in TTS.
+2. Use [**HARDWARIO Manager**](/sticker/hardwario-manager/) to extract your device credentials via NFC before creating end-device profiles in TTS.
 :::
 
 ---
@@ -73,7 +73,7 @@ When registering your STICKER end device in TTS:
 
 ## Useful Links
 
-- [HARDWARIO Manager and STICKER](../hardwario-manager)
+- [HARDWARIO Manager and STICKER](/sticker/hardwario-manager/)
 - [HARDWARIO Manager Quick Start Guide](/apps/hardwario-manager/first-steps)
 - [Read device info and LoRaWAN keys over NFC](/apps/hardwario-manager/sticker/device-info)
 - [TTS End Devices Documentation](https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-end-devices)

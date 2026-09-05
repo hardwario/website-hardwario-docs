@@ -25,7 +25,7 @@ MQTT can work using TLS. This is recomended as it prevents eavesdropping and una
 
 ### Procedure
 
-The entire TLS Setup is described in [MQTT TLS Setup](tls-setup).
+The entire TLS Setup is described in [MQTT TLS Setup](/tapper/tls-setup/).
 
 ## WiFi passphrase as a hash instead of clear text
 

@@ -178,13 +178,13 @@ The table below links directly to the changelog section of each catalog applicat
 
 | Application | Changelog | Last Updated |
 |---|---|---|
-| CHESTER Clime | [Changelog](catalog-applications/chester-clime#changelog) | 2026-06-24 |
-| CHESTER Control | [Changelog](catalog-applications/chester-control#changelog) | 2026-06-22 |
-| CHESTER Current | [Changelog](catalog-applications/chester-current#changelog) | 2026-06-24 |
-| CHESTER Meteo | [Changelog](catalog-applications/chester-meteo#changelog) | 2026-06-24 |
-| CHESTER Motion | [Changelog](catalog-applications/chester-motion#changelog) | 2026-04-01 |
-| CHESTER Push | [Changelog](catalog-applications/chester-push#changelog) | 2026-04-01 |
-| CHESTER Range | [Changelog](catalog-applications/chester-range#changelog) | 2026-04-01 |
-| CHESTER Scale | [Changelog](catalog-applications/chester-scale#changelog) | 2026-06-22 |
-| CHESTER Serial | [Changelog](catalog-applications/chester-serial#changelog) | 2026-04-01 |
-| CHESTER wM-Bus | [Changelog](catalog-applications/chester-wm-bus#changelog) | 2026-06-24 |
+| CHESTER Clime | [Changelog](/chester/catalog-applications/chester-clime/#changelog) | 2026-06-24 |
+| CHESTER Control | [Changelog](/chester/catalog-applications/chester-control/#changelog) | 2026-06-22 |
+| CHESTER Current | [Changelog](/chester/catalog-applications/chester-current/#changelog) | 2026-06-24 |
+| CHESTER Meteo | [Changelog](/chester/catalog-applications/chester-meteo/#changelog) | 2026-06-24 |
+| CHESTER Motion | [Changelog](/chester/catalog-applications/chester-motion/#changelog) | 2026-04-01 |
+| CHESTER Push | [Changelog](/chester/catalog-applications/chester-push/#changelog) | 2026-04-01 |
+| CHESTER Range | [Changelog](/chester/catalog-applications/chester-range/#changelog) | 2026-04-01 |
+| CHESTER Scale | [Changelog](/chester/catalog-applications/chester-scale/#changelog) | 2026-06-22 |
+| CHESTER Serial | [Changelog](/chester/catalog-applications/chester-serial/#changelog) | 2026-04-01 |
+| CHESTER wM-Bus | [Changelog](/chester/catalog-applications/chester-wm-bus/#changelog) | 2026-06-24 |

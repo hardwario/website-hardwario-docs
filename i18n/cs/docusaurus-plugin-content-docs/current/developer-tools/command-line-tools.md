@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 :::caution
 
-Pokud používáte **Firmware SDK**, není potřeba tento nástroj instalovat zvlášť. Instaluje se automaticky, když postupujete podle článků **[Firmware SDK](../category/firmware-sdk/) > Instalace na ...**.
+Pokud používáte **Firmware SDK**, není potřeba tento nástroj instalovat zvlášť. Instaluje se automaticky, když postupujete podle článků **[Firmware SDK](/chester/category/firmware-sdk/) > Instalace na ...**.
 
 :::
 

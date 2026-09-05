@@ -26,7 +26,7 @@ MQTT může pracovat pomocí TLS. To je doporučeno, protože zabraňuje odposle
 
 ### Postup {#procedure-1}
 
-Celé nastavení TLS je popsáno v [MQTT TLS Setup](tls-setup).
+Celé nastavení TLS je popsáno v [MQTT TLS Setup](/tapper/tls-setup/).
 
 ## Heslo k Wi-Fi jako hash místo otevřeného textu {#wifi-passphrase-as-a-hash-instead-of-clear-text}
 

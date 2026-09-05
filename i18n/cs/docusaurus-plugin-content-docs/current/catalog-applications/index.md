@@ -51,7 +51,7 @@ Firmwary najdete v kapitole [**Firmware aplikací**](#application-firmware).
 
 ## Firmware aplikací pro Cloud v2 {#application-firmware}
 
-Tyto firmwary jsou pro novější komunikaci s [**Cloud v2**](../../cloud).
+Tyto firmwary jsou pro novější komunikaci s [**Cloud v2**](/cloud/).
 
 Pokud vaše jednotka již komunikovala s Cloud v2, můžete aktualizovat pouze hlavní [**firmware APP/BLE MCU přes BLE**](../platform-connectivity/hardwario-manager.md#firmware-update).
 
@@ -110,7 +110,7 @@ Poté změny uložte příkazem `config save`. Zařízení se restartuje a použ
 
 ## Firmware aplikací pro Cloud v1 {#application-firmware-cloud-v1}
 
-Tyto firmwary jsou pro starší komunikaci s [**Cloud v1**](../../cloud/legacy).
+Tyto firmwary jsou pro starší komunikaci s [**Cloud v1**](/cloud/legacy).
 
 Tabulka níže poskytuje přehled dostupných buildů firmwaru pro **katalogové aplikace**.
 

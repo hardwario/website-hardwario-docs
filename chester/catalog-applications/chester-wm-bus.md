@@ -23,7 +23,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 - [**Getting started**](https://docs.hardwario.com/chester/first-steps) on how to connect device to Cloud.
 - [**Common functionality**](common-functionality.md) to know how LED, button and network configuration works.
-- [**Platform Management**](../category/platform-connectivity) on how to work with the interactive console.
+- [**Platform Management**](/chester/category/platform-connectivity/) on how to work with the interactive console.
 
 :::
 
@@ -219,7 +219,7 @@ After completing the configuration, you need to confirm everything.
 
 When configuring over BLE, you need to apply the configuraiton changes with `config save` command.
 
-When configuring over [Cloud config downlink commands](../../cloud/downlink/config), don't add `config save` command, it is applied automatically. Othwerwise the configuration is not
+When configuring over [Cloud config downlink commands](/cloud/downlink/config), don't add `config save` command, it is applied automatically. Othwerwise the configuration is not
 
 ### Interval and wM-Bus Packets Every 2 Minutes
 

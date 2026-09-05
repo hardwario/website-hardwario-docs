@@ -21,7 +21,7 @@ Tento článek popisuje rozšiřující modul do horního krytu **CHESTER-Z1**.
 
 ## Přehled modulu {#module-overview}
 
-**CHESTER-Z1** kombinuje zálohování pomocí dobíjecí lithium-iontové baterie, široký rozsah vstupního napájecího napětí a volitelné rozhraní člověk-stroj (HMI) s podsvícenými tlačítky a akustickou zpětnou vazbou. Primárně se používá se zařízením **CHESTER-M** (základní deska), ale lze jej použít i s [**HARDWARIO TOWER**](../../tower) a ekosystémy třetích stran, jako jsou **Raspberry Pi**, **Arduino**, **ESP** atd. Modul se instaluje pod horní kryt krabičky řady Takachi WP13-18.
+**CHESTER-Z1** kombinuje zálohování pomocí dobíjecí lithium-iontové baterie, široký rozsah vstupního napájecího napětí a volitelné rozhraní člověk-stroj (HMI) s podsvícenými tlačítky a akustickou zpětnou vazbou. Primárně se používá se zařízením **CHESTER-M** (základní deska), ale lze jej použít i s [**HARDWARIO TOWER**](/tower/) a ekosystémy třetích stran, jako jsou **Raspberry Pi**, **Arduino**, **ESP** atd. Modul se instaluje pod horní kryt krabičky řady Takachi WP13-18.
 
 **CHESTER-Z1** poskytuje digitální komunikační rozhraní I2C (v roli slave).
 

@@ -135,6 +135,6 @@ Zatím nebyly zaznamenány žádné hardwarové revize. Aktualizace hardwaru se 
 
 | Aplikace | Seznam změn | Poslední aktualizace |
 |---|---|---|
-| STICKER Clime | [Seznam změn](catalog-applications/sticker-clime#changelog) | 2026-08-26 |
-| STICKER Input | [Seznam změn](catalog-applications/sticker-input#changelog) | 2026-08-26 |
-| STICKER Motion | [Seznam změn](catalog-applications/sticker-motion#changelog) | 2026-08-26 |
+| STICKER Clime | [Seznam změn](/sticker/catalog-applications/sticker-clime/#changelog) | 2026-08-26 |
+| STICKER Input | [Seznam změn](/sticker/catalog-applications/sticker-input/#changelog) | 2026-08-26 |
+| STICKER Motion | [Seznam změn](/sticker/catalog-applications/sticker-motion/#changelog) | 2026-08-26 |

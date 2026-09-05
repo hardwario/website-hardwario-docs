@@ -13,7 +13,7 @@ Device settings are read and written with the `config` command over the develope
 
 :::info Firmware v1.4.0
 The `config` command and most parameters on this page apply to STICKER firmware v1.4.0. Key updates in v1.4.0 include:
-- **Radio-Silent Factory Default:** The radio is disabled by default (`radio-mode off`) to save power until activated via NFC using [**HARDWARIO Manager**](../hardwario-manager) or shell.
+- **Radio-Silent Factory Default:** The radio is disabled by default (`radio-mode off`) to save power until activated via NFC using [**HARDWARIO Manager**](/sticker/hardwario-manager/) or shell.
 - **Encrypted NFC Access:** AES-CCM encrypted local command channel (`hio.stck:cmd` / `hio.stck:rsp`) with anti-replay nonce protection.
 - **Write-Once Claim Token:** Immutable provisioning token (`config claim-token`) for secure cloud onboarding.
 - **Link Supervision:** LoRaWAN link checks (`lrw-link-check-interval`, `lrw-link-check-fail-rejoin`).
@@ -21,7 +21,7 @@ The `config` command and most parameters on this page apply to STICKER firmware 
 :::
 
 :::tip Field vs. Developer Configuration
-While this page documents interactive shell commands (`config`) accessed via an RTT debug connection, standard field configuration and commissioning are performed wirelessly over NFC using [**HARDWARIO Manager**](../hardwario-manager).
+While this page documents interactive shell commands (`config`) accessed via an RTT debug connection, standard field configuration and commissioning are performed wirelessly over NFC using [**HARDWARIO Manager**](/sticker/hardwario-manager/).
 :::
 
 ---
@@ -151,6 +151,6 @@ These parameters manage device identity, NFC access control, and claim provision
 
 From firmware v1.4.0 onwards, NFC local read/write transactions are secured against eavesdropping and unauthorized reconfiguration:
 
-- **AES-CCM Security:** Smartphone communication via [**HARDWARIO Manager**](../hardwario-manager) uses an encrypted AES-CCM channel operating over NDEF records (`hio.stck:cmd` for requests and `hio.stck:rsp` for responses).
+- **AES-CCM Security:** Smartphone communication via [**HARDWARIO Manager**](/sticker/hardwario-manager/) uses an encrypted AES-CCM channel operating over NDEF records (`hio.stck:cmd` for requests and `hio.stck:rsp` for responses).
 - **Anti-Replay Mechanism:** Each transaction evaluates and increments the `nonce-counter` to prevent replay attacks from captured NFC sessions.
 - **Claim Token Provisioning:** The 128-bit `claim-token` allows a physical unit to be bound to a customer's cloud instance before or during deployment, without requiring an immediate LoRaWAN Join session.

@@ -11,7 +11,7 @@ The **Devices** page lists all IoT devices registered in your space. Each device
 
 :::tip Video Tutorial
 
-Watch [**How to add CHESTER to Cloud**](videos-cloud/cloud-chester-add) for a step-by-step walkthrough.
+Watch [**How to add CHESTER to Cloud**](/cloud/videos-cloud/cloud-chester-add/) for a step-by-step walkthrough.
 
 :::
 

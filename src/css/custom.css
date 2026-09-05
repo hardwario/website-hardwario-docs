@@ -147,3 +147,17 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   max-width: 460px;
   height: auto;
 }
+
+/* WCAG AA contrast (Lighthouse 2026-09-05): the brand red fails on the dark footer
+   (2.4:1 on #303846) and on the active breadcrumb chip (4.3:1 on #f2f2f2), so the
+   footer's cross-site links use the footer link colour and the current-page
+   breadcrumb uses the base text colour. Hover keeps the brand red. */
+:root {
+  --ifm-breadcrumb-color-active: var(--ifm-font-color-base);
+}
+.footer--dark .footer__copyright a {
+  color: var(--ifm-footer-link-color);
+}
+.footer--dark .footer__copyright a:hover {
+  color: var(--ifm-color-primary);
+}

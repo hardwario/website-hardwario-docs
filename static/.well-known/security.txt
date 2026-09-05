@@ -1,0 +1,4 @@
+Contact: mailto:ask@hardwario.com
+Expires: 2027-09-05T00:00:00.000Z
+Preferred-Languages: en, cs
+Canonical: https://docs.hardwario.com/.well-known/security.txt

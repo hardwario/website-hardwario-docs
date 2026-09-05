@@ -141,7 +141,7 @@
 
 .cardSubtitle {
   font-size: 0.75rem;
-  color: var(--ifm-color-emphasis-600);
+  color: var(--ifm-color-emphasis-700); /* AA contrast on white (emphasis-600 was 3.1:1) */
   margin-bottom: 0.75rem;
   font-weight: 500;
   line-height: 1.4;

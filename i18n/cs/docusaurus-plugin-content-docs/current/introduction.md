@@ -1,7 +1,8 @@
 ---
 slug: /
-title: Úvod
+title: CHESTER
 description: "TODO Enable these articles"
+sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
 

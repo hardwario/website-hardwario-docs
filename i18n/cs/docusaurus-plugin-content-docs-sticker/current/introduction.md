@@ -1,6 +1,7 @@
 ---
 slug: /
-title: Úvod
+title: STICKER
+sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
 

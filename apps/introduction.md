@@ -1,6 +1,7 @@
 ---
 slug: /
-title: Introduction
+title: Apps
+sidebar_label: Introduction
 ---
 import Image from '@theme/IdealImage';
 import Link from '@docusaurus/Link';

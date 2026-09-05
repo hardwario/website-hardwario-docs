@@ -1,8 +1,9 @@
 ---
 slug: /
 sidebar_position: 1
-title: Úvod
+title: TOWER
 description: "Používá se v průmyslových aplikacích, ve STEM výuce a v hobby projektech (domácí automatizace, zahradničení, osvětlení, escape roomy atd.)."
+sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
 

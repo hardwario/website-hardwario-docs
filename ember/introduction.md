@@ -1,6 +1,7 @@
 ---
 slug: /
-title: Introduction
+title: EMBER
+sidebar_label: Introduction
 ---
 import Image from '@theme/IdealImage';
 

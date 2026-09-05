@@ -1,7 +1,8 @@
 ---
 slug: /
-title: Úvod
+title: FIBER
 description: "popisuje průmyslové zařízení FIBER založené na CM4, ale Instalace (nebo"
+sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: /
-title: Úvod
+title: EMBER
+sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
 

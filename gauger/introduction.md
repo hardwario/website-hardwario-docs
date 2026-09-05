@@ -1,6 +1,7 @@
 ---
 slug: /
-title: Introduction
+title: GAUGER
+sidebar_label: Introduction
 ---
 
 # GAUGER

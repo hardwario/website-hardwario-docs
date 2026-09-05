@@ -1,6 +1,7 @@
 ---
 slug: /
-title: Úvod
+title: TAPPER
+sidebar_label: Úvod
 ---
 
 import Image from '@theme/IdealImage';

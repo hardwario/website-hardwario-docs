@@ -1,6 +1,7 @@
 ---
 slug: /
-title: Introduction
+title: GLIDER
+sidebar_label: Introduction
 ---
 import Image from '@theme/IdealImage';
 

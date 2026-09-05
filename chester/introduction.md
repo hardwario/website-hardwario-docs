@@ -1,6 +1,7 @@
 ---
 slug: /
-title: Introduction
+title: CHESTER
+sidebar_label: Introduction
 ---
 import Image from '@theme/IdealImage';
 

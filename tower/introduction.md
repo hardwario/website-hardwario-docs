@@ -1,7 +1,8 @@
 ---
 slug: /
 sidebar_position: 1
-title: Introduction
+title: TOWER
+sidebar_label: Introduction
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,8 @@
 ---
 slug: /
-title: Úvod
+title: Apps
 description: "Tyto aplikace vizualizují a zpracovávají data ze zařízení HARDWARIO. Tabulka níže uvádí jednotlivé platformy s odkazem na dokumentaci, úrovní obtížnosti a krátkým popisem."
+sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
 import Link from '@docusaurus/Link';

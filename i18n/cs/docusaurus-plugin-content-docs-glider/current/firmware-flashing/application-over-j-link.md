@@ -2,6 +2,7 @@
 slug: application-over-j-link
 title: Aplikace přes J-Link
 description: "Firmware zařízení GLIDER lze aktualizovat pomocí ladicí sondy SEGGER J-Link. Tohle je nejrychlejší cesta používaná při vývoji firmwaru."
+title_meta: "Aplikace přes J-Link (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 

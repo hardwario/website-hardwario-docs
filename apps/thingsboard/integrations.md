@@ -1,6 +1,7 @@
 ---
 slug: integrations
 title: Integrations
+title_meta: "Integrations (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -2,6 +2,7 @@
 title: Konfigurace
 sidebar_position: 5
 description: "GLIDER ukládá konfiguraci do nevolatilní paměti (NVS), takže nastavení přežije odpojení napájení i restart. Konfiguraci lze měnit přes kteroukoli konzoli:"
+title_meta: "Konfigurace (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 

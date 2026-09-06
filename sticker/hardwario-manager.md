@@ -2,6 +2,7 @@
 slug: hardwario-manager
 title: HARDWARIO Manager
 description: "STICKER has no buttons, no display, and no configuration cable. It is set up over NFC with HARDWARIO Manager, the HARDWARIO mobile app."
+title_meta: "HARDWARIO Manager (STICKER)"
 ---
 
 # HARDWARIO Manager

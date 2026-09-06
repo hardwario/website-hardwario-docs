@@ -2,6 +2,7 @@
 slug: features
 title: Funkce
 description: "Funkce na této stránce přijdou v připravovaném firmwaru STICKER v1.4.0."
+title_meta: "Funkce (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

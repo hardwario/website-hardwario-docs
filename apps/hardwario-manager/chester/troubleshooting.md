@@ -1,6 +1,7 @@
 ---
 slug: troubleshooting
 title: Troubleshooting
+title_meta: "Troubleshooting (HARDWARIO Manager for CHESTER)"
 ---
 
 # CHESTER troubleshooting

@@ -1,6 +1,7 @@
 ---
 slug: lorawan-tts
 title: The Things Stack
+title_meta: "The Things Stack (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

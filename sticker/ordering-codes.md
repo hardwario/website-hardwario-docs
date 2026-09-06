@@ -2,6 +2,7 @@
 slug: ordering-codes
 title: Ordering Codes
 description: "Ordering codes for the STICKER platform: variants, enclosures and accessories with the part numbers to use when ordering."
+title_meta: "Ordering Codes (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

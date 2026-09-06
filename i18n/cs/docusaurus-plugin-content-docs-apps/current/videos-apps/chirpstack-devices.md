@@ -2,6 +2,7 @@
 slug: chirpstack-devices
 title: Přidání koncových zařízení
 description: "V tomto návodu se naučíte, jak vytvořit profily zařízení a přidat do ChirpStack v4 koncová zařízení jako CHESTER nebo STICKER."
+title_meta: "Přidání koncových zařízení (video tutorials, chirpstack devices)"
 ---
 
 import Image from '@theme/IdealImage';

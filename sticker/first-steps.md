@@ -2,6 +2,7 @@
 slug: first-steps
 title: Quick Start Guide
 description: "Quick start guide for STICKER: power up, provision over NFC with HARDWARIO Manager and connect to ChirpStack, The Things Stack or another LoRaWAN server."
+title_meta: "Quick Start Guide (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

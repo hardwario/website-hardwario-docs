@@ -2,6 +2,7 @@
 slug: configuration
 title: Konfigurace
 description: "Tento návod provází čtením, úpravou a zápisem konfigurace zařízení STICKER přes"
+title_meta: "Konfigurace (HARDWARIO Manager for STICKER)"
 ---
 
 # Konfigurace zařízení STICKER {#configure-a-sticker}

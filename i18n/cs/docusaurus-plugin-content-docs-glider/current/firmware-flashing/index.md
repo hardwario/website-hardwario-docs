@@ -2,6 +2,7 @@
 slug: firmware-flashing
 title: Nahrání firmwaru
 description: "Firmware zařízení GLIDER lze aktualizovat dvěma způsoby:"
+title_meta: "Nahrání firmwaru (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 

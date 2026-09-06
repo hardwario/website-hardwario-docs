@@ -3,6 +3,7 @@ slug: /
 title: CHESTER
 description: "HARDWARIO CHESTER je konfigurovatelná nízkopříkonová IoT platforma LPWAN pro vzdálený monitoring přes LTE-M, NB-IoT a LoRaWAN, rozšiřitelná zásuvnými moduly."
 sidebar_label: Úvod
+title_meta: "CHESTER (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

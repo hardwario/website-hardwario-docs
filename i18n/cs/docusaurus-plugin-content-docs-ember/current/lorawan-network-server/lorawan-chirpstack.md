@@ -2,6 +2,7 @@
 slug: lorawan-chirpstack
 title: ChirpStack v4
 description: "Tento návod ukazuje, jak připojit bránu LoRaWAN HARDWARIO EMBER (MikroTik RouterOS) k síťovému serveru ChirpStack v4."
+title_meta: "ChirpStack v4 (EMBER)"
 ---
 import Image from '@theme/IdealImage';
 

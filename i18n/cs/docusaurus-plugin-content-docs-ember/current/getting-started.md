@@ -2,6 +2,7 @@
 slug: first-steps
 title: Rychlý průvodce
 description: "Vítejte! Tato stránka vám pomůže zapnout vaše zařízení HARDWARIO EMBER a vybrat, co dál:"
+title_meta: "Rychlý průvodce (EMBER)"
 ---
 import Image from '@theme/IdealImage';
 

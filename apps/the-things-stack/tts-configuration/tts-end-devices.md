@@ -1,6 +1,7 @@
 ---
 slug: tts-end-devices
 title: End Devices
+title_meta: "End Devices (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';
 

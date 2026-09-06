@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-devices
 title: Adding End Devices
+title_meta: "Adding End Devices (video tutorials, chirpstack devices)"
 ---
 
 import Image from '@theme/IdealImage';

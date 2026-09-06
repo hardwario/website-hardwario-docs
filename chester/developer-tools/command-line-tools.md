@@ -1,6 +1,7 @@
 ---
 slug: command-line-tools
 title: Command Line Tools
+title_meta: "Command Line Tools (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

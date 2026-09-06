@@ -1,6 +1,7 @@
 ---
 slug: creating-device
 title: Devices
+title_meta: "Devices (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';
 

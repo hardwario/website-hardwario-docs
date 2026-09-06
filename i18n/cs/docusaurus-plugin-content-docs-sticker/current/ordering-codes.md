@@ -2,6 +2,7 @@
 slug: ordering-codes
 title: Objednací kódy
 description: "Platforma STICKER je postavená na modulární hardwarové architektuře. Každá varianta produktu se skládá z konkrétních vzájemně zaměnitelných komponent, jako je základní deska, deska NFC, typ krabičky a senzory."
+title_meta: "Objednací kódy (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

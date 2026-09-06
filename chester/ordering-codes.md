@@ -2,6 +2,7 @@
 slug: ordering-codes
 title: Ordering Codes
 description: "This article defines all possible ordering codes for the CHESTER ecosystem."
+title_meta: "Ordering Codes (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

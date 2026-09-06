@@ -2,6 +2,7 @@
 slug: /installation
 title: Installation
 description: "How to install the TAPPER client application on the Raspberry Pi Zero 2 W."
+title_meta: "Installation (TAPPER)"
 ---
 
 import Image from '@theme/IdealImage';

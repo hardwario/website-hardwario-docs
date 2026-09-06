@@ -2,6 +2,7 @@
 slug: first-steps
 title: Quick Start Guide
 description: "Quick start guide for GLIDER: power the device, register it in HARDWARIO Cloud and see the first measurements arrive."
+title_meta: "Quick Start Guide (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 

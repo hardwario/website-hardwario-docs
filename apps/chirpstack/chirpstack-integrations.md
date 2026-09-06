@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-integrations
 title: Integrations
+title_meta: "Integrations (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 

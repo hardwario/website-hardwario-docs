@@ -2,6 +2,7 @@
 title: Příkazy shellu
 sidebar_position: 2
 description: "GLIDER provozuje plnohodnotný Zephyr shell, který zpřístupňuje příkazy na úrovni aplikace pro každý subsystém. Shell je dostupný přes:"
+title_meta: "Příkazy shellu (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 

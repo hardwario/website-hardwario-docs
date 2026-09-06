@@ -2,6 +2,7 @@
 slug: firmware-flashing
 title: Nahrání firmwaru
 description: "Tato kapitola se zaměřuje na záložku Firmware v aplikaci Playground"
+title_meta: "Nahrání firmwaru (HARDWARIO TOWER)"
 ---
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'

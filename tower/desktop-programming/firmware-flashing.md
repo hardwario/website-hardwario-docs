@@ -1,6 +1,7 @@
 ---
 slug: firmware-flashing
 title: Firmware Flashing
+title_meta: "Firmware Flashing (HARDWARIO TOWER)"
 ---
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'

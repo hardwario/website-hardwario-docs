@@ -1,6 +1,7 @@
 ---
 slug: chester-cloud
 title: How to add CHESTER to Cloud
+title_meta: "How to add CHESTER to Cloud (CHESTER video tutorials)"
 ---
 
 import Image from '@theme/IdealImage';

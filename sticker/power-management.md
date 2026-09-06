@@ -2,6 +2,7 @@
 slug: power-management
 title: Power Management
 description: "STICKER is engineered for ultra-low power operation to enable multi-year field deployments without external power supplies."
+title_meta: "Power Management (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

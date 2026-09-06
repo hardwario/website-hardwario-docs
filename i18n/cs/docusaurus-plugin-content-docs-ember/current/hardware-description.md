@@ -2,6 +2,7 @@
 slug: hardware-description
 title: Popis hardwaru
 description: "Tento článek popisuje hardwarovou konfiguraci zařízení EMBER Hotspot."
+title_meta: "Popis hardwaru (EMBER)"
 ---
 
 # Popis hardwaru {#hardware-description}

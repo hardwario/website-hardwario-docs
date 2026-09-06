@@ -2,6 +2,7 @@
 slug: first-steps
 title: Rychlý průvodce
 description: "Děkujeme, že jste si vybrali FIBER."
+title_meta: "Rychlý průvodce (FIBER)"
 ---
 
 # Rychlý průvodce zařízením FIBER {#fiber-quick-start-guide}

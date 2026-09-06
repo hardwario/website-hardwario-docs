@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-ember
 title: Adding Gateways
+title_meta: "Adding Gateways (video tutorials, chirpstack ember)"
 ---
 
 import Image from '@theme/IdealImage';

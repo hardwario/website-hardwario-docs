@@ -1,6 +1,7 @@
 ---
 slug: tools
 title: Tools
+title_meta: "Tools (HARDWARIO Manager for CHESTER)"
 ---
 
 # CHESTER tools

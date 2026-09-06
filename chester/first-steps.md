@@ -2,6 +2,7 @@
 slug: first-steps
 title: Quick Start Guide
 description: "Quick start guide for CHESTER: unpack the device, insert the SIM and battery, connect with HARDWARIO Manager and send the first data to the cloud."
+title_meta: "Quick Start Guide (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

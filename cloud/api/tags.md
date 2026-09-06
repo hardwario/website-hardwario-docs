@@ -1,5 +1,6 @@
 ---
 title: Tags
+title_meta: "Tags (HARDWARIO Cloud API)"
 ---
 
 # Tags

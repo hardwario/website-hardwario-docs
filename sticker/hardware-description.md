@@ -2,6 +2,7 @@
 slug: hardware-description
 title: Hardware Description
 description: "STICKER is a compact IoT device built on the STM32WL System-on-Chip with an integrated LoRa radio and ARM Cortex-M4F core."
+title_meta: "Hardware Description (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

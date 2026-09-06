@@ -2,6 +2,7 @@
 slug: power-management
 title: Správa napájení
 description: "Tento článek přináší užitečné informace o různých možnostech napájení zařízení CHESTER, což je nízkopříkonové zařízení s typickým klidovým proudem v rozsahu 100–200 µA. Díky tomu může být v mnoha aplikacích napájeno z baterií po dobu 3 a více let."
+title_meta: "Správa napájení (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

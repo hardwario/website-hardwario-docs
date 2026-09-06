@@ -2,6 +2,7 @@
 slug: videos-apps
 title: Videotutoriály
 description: "Na této stránce najdete komplexní sbírku technických návodů a videotutoriálů, které vám pomohou s kompletním nasazením řešení HARDWARIO, od zprovoznění zařízení na nízké úrovni a konfigurace brány až po bezpečnou integraci dat s externími IoT…"
+title_meta: "Videotutoriály (video tutorials)"
 ---
 
 import Image from '@theme/IdealImage';

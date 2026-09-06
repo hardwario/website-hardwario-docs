@@ -2,6 +2,7 @@
 slug: tts-end-devices
 title: Přidání koncových zařízení
 description: "Tento návod vysvětluje, jak v The Things Stack vytvořit aplikaci a zaregistrovat koncová zařízení, včetně volby metody registrace, zadání všech potřebných identifikátorů a přípravy zařízení k použití."
+title_meta: "Přidání koncových zařízení (video tutorials, tts end devices)"
 ---
 
 import Image from '@theme/IdealImage';

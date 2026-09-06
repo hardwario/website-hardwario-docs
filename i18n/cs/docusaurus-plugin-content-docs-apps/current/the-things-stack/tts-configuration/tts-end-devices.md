@@ -2,6 +2,7 @@
 slug: tts-end-devices
 title: Koncová zařízení
 description: "Tento návod vás provede vytvořením profilů zařízení a přidáním koncových zařízení v The Things Stack."
+title_meta: "Koncová zařízení (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -93,7 +93,8 @@ const config = {
           lastmod: 'date',
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/search'],
+          // Both spellings: the site emits trailing-slash URLs, so the crawlable path is /search/.
+          ignorePatterns: ['/search', '/search/', '/search/**'],
           filename: 'sitemap.xml',
         },
       }),

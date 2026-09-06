@@ -2,6 +2,7 @@
 slug: first-steps
 title: Quick Start Guide
 description: "Quick start guide for HARDWARIO EMBER: power up the gateway and choose a LoRaWAN backend, managed by HARDWARIO or self-hosted."
+title_meta: "Quick Start Guide (EMBER)"
 ---
 import Image from '@theme/IdealImage';
 

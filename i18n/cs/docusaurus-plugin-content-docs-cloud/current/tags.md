@@ -2,6 +2,7 @@
 slug: tags
 title: Tagy
 description: "Tagy jsou pojmenované štítky s barvou, které přiřazujete zařízením i konektorům. Jsou lepidlem, které propojuje zařízení s konektory: zpráva ze zařízení se předá jen těm konektorům, které s daným zařízením sdílejí alespoň jeden tag."
+title_meta: "Tagy (HARDWARIO Cloud)"
 ---
 
 # Tagy {#tags}

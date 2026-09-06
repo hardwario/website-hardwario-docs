@@ -2,6 +2,7 @@
 slug: devices
 title: Devices
 description: "The Devices page lists all IoT devices registered in your space."
+title_meta: "Devices (HARDWARIO Cloud)"
 ---
 
 # Devices

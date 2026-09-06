@@ -2,6 +2,7 @@
 slug: chirpstack-installation
 title: Instalace
 description: "Tento průvodce popisuje instalaci ChirpStack v4 na systému Debian/Ubuntu. Zahrnuje instalaci potřebných závislostí, konfiguraci serveru ChirpStack a zprovoznění komunikace s branami. Postupujte podle pokynů krok za krokem, aby instalace proběhla bez…"
+title_meta: "Instalace (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 

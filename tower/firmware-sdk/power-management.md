@@ -1,6 +1,7 @@
 ---
 slug: power-management
 title: Power Management
+title_meta: "Power Management (HARDWARIO TOWER)"
 ---
 import Image from '@theme/IdealImage';
 

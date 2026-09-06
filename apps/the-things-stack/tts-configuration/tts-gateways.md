@@ -1,6 +1,7 @@
 ---
 slug: tts-gateways
 title: Gateways
+title_meta: "Gateways (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';
 

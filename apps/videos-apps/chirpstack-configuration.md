@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-configuration
 title: Configuration
+title_meta: "Configuration (video tutorials)"
 ---
 
 import Image from '@theme/IdealImage';

@@ -2,6 +2,7 @@
 slug: ordering-codes
 title: Objednací kódy
 description: "Tento článek definuje všechny možné objednací kódy pro ekosystém CHESTER. Specifikace objednávky musí plně odpovídat níže uvedeným objednacím číslům."
+title_meta: "Objednací kódy (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

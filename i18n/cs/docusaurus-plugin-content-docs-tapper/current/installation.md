@@ -2,6 +2,7 @@
 slug: /installation
 title: Instalace
 description: "Základní instalace klientské aplikace TAPPER."
+title_meta: "Instalace (TAPPER)"
 ---
 
 import Image from '@theme/IdealImage';

@@ -2,6 +2,7 @@
 slug: /hardwario-manager/chester
 title: CHESTER
 description: "Manage CHESTER over Bluetooth Low Energy with HARDWARIO Manager: read device state, edit configuration, drive the shell, bind BLE tags and update firmware."
+title_meta: "CHESTER (HARDWARIO Manager)"
 ---
 
 # CHESTER over Bluetooth

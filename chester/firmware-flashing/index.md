@@ -2,6 +2,7 @@
 slug: firmware-flashing
 title: Firmware Flashing
 description: "How to update the firmware of the CHESTER mainboard components: application, LTE modem, LoRaWAN modem and CHESTER-Z over J-Link or Bluetooth."
+title_meta: "Firmware Flashing (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

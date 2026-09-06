@@ -5,6 +5,7 @@ import type { WrapperProps } from '@docusaurus/types';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
+import { PageMetadata } from '@docusaurus/theme-common';
 
 type Props = WrapperProps<typeof MetadataType>;
 
@@ -14,6 +15,10 @@ type Props = WrapperProps<typeof MetadataType>;
 // Organization block lives in docusaurus.config.js headTags, so neither is repeated here.
 export default function MetadataWrapper(props: Props): React.JSX.Element {
   const { metadata, frontMatter } = useDoc();
+  // `title_meta` front matter (the blog plugin's field, honoured here for docs too) overrides the
+  // <title> and og:title without touching the visible heading, so section pages that share a
+  // heading ("Installation", "Theory") still get unique titles.
+  const titleMeta = (frontMatter as { title_meta?: string }).title_meta;
   const { siteConfig, i18n } = useDocusaurusContext();
   const origin = siteConfig.url.replace(/\/$/, '');
   // Doc permalinks come without the trailing slash even with trailingSlash: true; the
@@ -40,6 +45,7 @@ export default function MetadataWrapper(props: Props): React.JSX.Element {
   return (
     <>
       <Metadata {...props} />
+      {titleMeta && <PageMetadata title={titleMeta} />}
       <Head>
         <script type="application/ld+json">{JSON.stringify(article)}</script>
       </Head>

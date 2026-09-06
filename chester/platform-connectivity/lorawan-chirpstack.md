@@ -1,6 +1,7 @@
 ---
 slug: lorawan-chirpstack
 title: ChirpStack v4
+title_meta: "ChirpStack v4 (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

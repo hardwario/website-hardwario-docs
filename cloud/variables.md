@@ -2,6 +2,7 @@
 slug: variables
 title: Variables
 description: "In the Variables section, you can upload decryption keys used to decode data when encryption is applied."
+title_meta: "Variables (HARDWARIO Cloud)"
 ---
 import Image from '@theme/IdealImage';
 

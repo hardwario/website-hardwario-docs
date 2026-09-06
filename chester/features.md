@@ -2,6 +2,7 @@
 slug: features
 title: Features
 description: "Overview of the CHESTER platform features: connectivity, power options, extension modules, firmware and cloud integration."
+title_meta: "Features (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

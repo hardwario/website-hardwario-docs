@@ -1,6 +1,7 @@
 ---
 slug: application-over-j-link
 title: Application over J-Link
+title_meta: "Application over J-Link (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

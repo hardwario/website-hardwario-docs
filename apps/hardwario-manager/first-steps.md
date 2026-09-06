@@ -1,6 +1,7 @@
 ---
 slug: first-steps
 title: Quick Start Guide
+title_meta: "Quick Start Guide (HARDWARIO Manager)"
 ---
 
 # HARDWARIO Manager Quick Start Guide

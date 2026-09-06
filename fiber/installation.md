@@ -2,6 +2,7 @@
 slug: installation
 title: Installation
 description: "Installation of the FIBER Linux system and the full LoRaWAN and monitoring software stack, one shared procedure for both hardware variants."
+title_meta: "Installation (FIBER)"
 ---
 import Image from '@theme/IdealImage';
 

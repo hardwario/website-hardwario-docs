@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-gateways
 title: Gateways
+title_meta: "Gateways (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 

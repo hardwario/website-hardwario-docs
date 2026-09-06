@@ -2,6 +2,7 @@
 slug: /hardwario-manager/sticker
 title: STICKER
 description: "Zařízení STICKER se konfiguruje přiložením telefonu k zařízení. Žádné kabely,"
+title_meta: "STICKER (HARDWARIO Manager)"
 ---
 
 # STICKER přes NFC {#sticker-over-nfc}

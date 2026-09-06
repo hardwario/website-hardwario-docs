@@ -1,6 +1,7 @@
 ---
 slug: configuration
 title: Configuration
+title_meta: "Configuration (HARDWARIO Manager for STICKER)"
 ---
 
 # Configure a STICKER

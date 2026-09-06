@@ -2,6 +2,7 @@
 slug: chirpstack-end-devices
 title: Koncová zařízení
 description: "Tento návod vás provede vytvořením profilů zařízení a přidáním koncových zařízení v ChirpStack v4."
+title_meta: "Koncová zařízení (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 

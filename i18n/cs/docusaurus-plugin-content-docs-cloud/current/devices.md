@@ -2,6 +2,7 @@
 slug: devices
 title: Zařízení
 description: "Stránka Devices vypisuje všechna IoT zařízení zaregistrovaná ve vašem prostoru. Každé zařízení odpovídá fyzickému zařízení CHESTER (nebo jinému zařízení HARDWARIO) a má vlastní identitu, stav a konfiguraci."
+title_meta: "Zařízení (HARDWARIO Cloud)"
 ---
 
 # Zařízení {#devices}

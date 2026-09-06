@@ -2,6 +2,7 @@
 slug: tts-gateways
 title: Brány
 description: "Tento návod vás provede přidáním a nastavením brány v The Things Stack."
+title_meta: "Brány (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';
 

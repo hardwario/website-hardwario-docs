@@ -2,6 +2,7 @@
 slug: tts-gateways
 title: Přidání bran
 description: "Tento návod vysvětluje, jak v The Things Stack zaregistrovat a nastavit novou bránu, včetně zadání Gateway EUI, nastavení základních parametrů, vygenerování a stažení API klíčů a přípravy brány k použití."
+title_meta: "Přidání bran (video tutorials, tts gateways)"
 ---
 
 import Image from '@theme/IdealImage';

@@ -2,6 +2,7 @@
 slug: hardware-description
 title: Popis hardwaru
 description: "Popis hardwaru GAUGER a technická specifikace: napájecí a vstupní napětí, digitální vstupy, rozhraní WiFi a Ethernet a mechanické údaje."
+title_meta: "Popis hardwaru (GAUGER)"
 ---
 
 # Popis hardwaru {#hardware-description}

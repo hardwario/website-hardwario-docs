@@ -2,6 +2,7 @@
 slug: lorawan-tts
 title: The Things Stack
 description: "Než jednotku STICKER zaregistrujete v The Things Stack, vytáhněte přes NFC její výrobní klíče a nastavte radio:"
+title_meta: "The Things Stack (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

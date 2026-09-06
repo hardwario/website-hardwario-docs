@@ -2,6 +2,7 @@
 title: Hardware Description
 sidebar_position: 6
 description: "GLIDER is built around the Nordic nRF9151 system-in-package, a Cortex-M33 microcontroller with an integrated LTE-M / NB-IoT cellular modem."
+title_meta: "Hardware Description (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 

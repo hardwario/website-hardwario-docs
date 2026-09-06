@@ -1,6 +1,7 @@
 ---
 title: Tagy
 description: "Tagy seskupují zařízení a právě podle nich konektory rozhodují, která"
+title_meta: "Tagy (HARDWARIO Cloud API)"
 ---
 
 # Tagy {#tags}

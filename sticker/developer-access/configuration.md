@@ -1,6 +1,7 @@
 ---
 slug: configuration
 title: Configuration
+title_meta: "Configuration (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

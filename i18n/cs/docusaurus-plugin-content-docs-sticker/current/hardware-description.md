@@ -2,6 +2,7 @@
 slug: hardware-description
 title: Popis hardwaru
 description: "STICKER je kompaktní IoT zařízení postavené na System-on-Chip STM32WL s integrovaným radiem LoRa a jádrem ARM Cortex-M4F."
+title_meta: "Popis hardwaru (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

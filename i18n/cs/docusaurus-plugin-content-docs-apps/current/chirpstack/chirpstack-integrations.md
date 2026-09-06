@@ -2,6 +2,7 @@
 slug: chirpstack-integrations
 title: Integrace
 description: "Tento návod ukazuje, kde v aplikaci ChirpStack najdete integrační endpointy, abyste mohli směrovat data ze zařízení do externích platforem."
+title_meta: "Integrace (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 

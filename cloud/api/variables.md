@@ -1,5 +1,6 @@
 ---
 title: Variables
+title_meta: "Variables (HARDWARIO Cloud API)"
 ---
 
 # Variables

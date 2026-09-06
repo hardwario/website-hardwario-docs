@@ -1,6 +1,7 @@
 ---
 title: Shell Commands
 sidebar_position: 2
+title_meta: "Shell Commands (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 

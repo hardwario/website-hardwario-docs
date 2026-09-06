@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-installation
 title: Installation
+title_meta: "Installation (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 

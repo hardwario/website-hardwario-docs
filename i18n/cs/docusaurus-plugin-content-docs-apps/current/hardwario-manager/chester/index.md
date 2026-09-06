@@ -2,6 +2,7 @@
 slug: /hardwario-manager/chester
 title: CHESTER
 description: "Zařízení CHESTER se spravuje přes Bluetooth Low Energy. Připojte k němu"
+title_meta: "CHESTER (HARDWARIO Manager)"
 ---
 
 # CHESTER přes Bluetooth {#chester-over-bluetooth}

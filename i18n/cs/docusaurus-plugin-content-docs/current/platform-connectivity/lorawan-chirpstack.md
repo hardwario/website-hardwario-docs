@@ -2,6 +2,7 @@
 slug: lorawan-chirpstack
 title: ChirpStack v4
 description: "Tato stránka je praktický checklist pro připojení zařízení HARDWARIO CHESTER k síti LoRaWAN pomocí ChirpStack v4."
+title_meta: "ChirpStack v4 (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

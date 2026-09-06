@@ -2,6 +2,7 @@
 slug: chirpstack-ember
 title: Přidání bran
 description: "V tomto návodu se naučíte, jak připojit svou bránu k ChirpStack v4."
+title_meta: "Přidání bran (video tutorials, chirpstack ember)"
 ---
 
 import Image from '@theme/IdealImage';

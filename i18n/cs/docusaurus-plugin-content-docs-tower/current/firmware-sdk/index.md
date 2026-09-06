@@ -1,6 +1,7 @@
 ---
 title: Firmware SDK
 description: "Tato sekce se věnuje většině modulů SDK a jejich použití."
+title_meta: "Firmware SDK (HARDWARIO TOWER)"
 ---
 import Image from '@theme/IdealImage';
 

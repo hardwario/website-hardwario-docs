@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-end-devices
 title: End Devices
+title_meta: "End Devices (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 

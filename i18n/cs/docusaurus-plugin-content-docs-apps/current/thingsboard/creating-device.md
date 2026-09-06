@@ -2,6 +2,7 @@
 slug: creating-device
 title: Zařízení
 description: "V tomto návodu se naučíte, jak v ThingsBoardu vytvořit nové zařízení a spravovat jeho údaje. Po vytvoření se zařízení objeví ve vašem seznamu a zpřístupní telemetrická data."
+title_meta: "Zařízení (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';
 

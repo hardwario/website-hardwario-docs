@@ -2,6 +2,7 @@
 slug: /hardware
 title: Popis hardwaru
 description: "V tomto článku najdete podrobnosti o hardwarové konfiguraci zařízení TAPPER."
+title_meta: "Popis hardwaru (TAPPER)"
 ---
 
 import Image from '@theme/IdealImage';

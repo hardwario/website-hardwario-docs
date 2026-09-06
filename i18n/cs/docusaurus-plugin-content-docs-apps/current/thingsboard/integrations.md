@@ -2,6 +2,7 @@
 slug: integrations
 title: Integrace
 description: "ThingsBoard umožňuje plynulé propojení s externími systémy, cloudovými platformami a datovými službami. Tato sekce popisuje dostupné způsoby integrace, kterými rozšíříte svůj IoT ekosystém a zapnete pokročilé zpracování dat."
+title_meta: "Integrace (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';
 

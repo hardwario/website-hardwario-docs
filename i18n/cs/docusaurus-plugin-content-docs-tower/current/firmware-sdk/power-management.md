@@ -2,6 +2,7 @@
 slug: power-management
 title: Správa napájení
 description: "Tento dokument zabíhá do technických detailů a vysvětluje správu napájení sady HARDWARIO TOWER Industrial IoT Kit na úrovni hardwaru."
+title_meta: "Správa napájení (HARDWARIO TOWER)"
 ---
 import Image from '@theme/IdealImage';
 

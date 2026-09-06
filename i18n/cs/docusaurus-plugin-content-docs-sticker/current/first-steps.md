@@ -2,6 +2,7 @@
 slug: first-steps
 title: Rychlý průvodce
 description: "Vítejte! Tato stránka vám pomůže zařízení STICKER zapnout, zprovoznit a aktivovat a připojit ho k vámi zvolenému síťovému serveru LoRaWAN (ChirpStack, The Things Stack nebo vlastní backend)."
+title_meta: "Rychlý průvodce (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -2,6 +2,7 @@
 slug: variables
 title: Proměnné
 description: "V sekci Proměnné můžete nahrát dešifrovací klíče používané k dekódování dat v případě, že je použito šifrování. Některá přenášená data mohou být zašifrována kvůli zajištění bezpečné nebo efektivní komunikace a v takovém případě jsou pro čitelnost dat…"
+title_meta: "Proměnné (HARDWARIO Cloud)"
 ---
 import Image from '@theme/IdealImage';
 

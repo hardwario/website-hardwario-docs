@@ -1,6 +1,7 @@
 ---
 title: Příkazy shellu
 description: "Ve zprávách nebo v detailu zařízení klikněte na ikonu shell, čímž otevřete konzoli shellu."
+title_meta: "Příkazy shellu (HARDWARIO Cloud)"
 ---
 
 # Příkazy shellu {#shell-commands}

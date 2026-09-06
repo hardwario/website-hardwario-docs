@@ -1,6 +1,7 @@
 ---
 slug: hardwario-manager
 title: HARDWARIO Manager
+title_meta: "HARDWARIO Manager (CHESTER)"
 ---
 
 # HARDWARIO Manager

@@ -2,6 +2,7 @@
 slug: lorawan-tts
 title: The Things Stack
 description: "Tato stránka popisuje, jak připojit zařízení HARDWARIO CHESTER k LoRaWAN Network Serveru The Things Stack (TTS)."
+title_meta: "The Things Stack (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

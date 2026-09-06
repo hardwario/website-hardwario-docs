@@ -2,6 +2,7 @@
 slug: first-steps
 title: Rychlý průvodce
 description: "Děkujeme, že jste si vybrali zařízení GLIDER."
+title_meta: "Rychlý průvodce (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 

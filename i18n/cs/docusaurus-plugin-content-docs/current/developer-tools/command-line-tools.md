@@ -2,6 +2,7 @@
 slug: command-line-tools
 title: Nástroje pro příkazovou řádku
 description: "Pokud používáte Firmware SDK, není potřeba tento nástroj instalovat zvlášť. Instaluje se automaticky, když postupujete podle článků Firmware SDK > Instalace na ...."
+title_meta: "Nástroje pro příkazovou řádku (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

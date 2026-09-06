@@ -2,6 +2,7 @@
 slug: power-management
 title: Správa napájení
 description: "Zařízení STICKER je navržené pro provoz s extrémně nízkou spotřebou, aby vydrželo v terénu několik let bez externího napájení. Napájejí ho 2× běžné baterie AA (alkalické nebo lithiové články 1,5 V)."
+title_meta: "Správa napájení (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

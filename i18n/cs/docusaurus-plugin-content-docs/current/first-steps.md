@@ -2,6 +2,7 @@
 slug: first-steps
 title: Rychlý průvodce
 description: "Děkujeme, že jste si vybrali zařízení CHESTER."
+title_meta: "Rychlý průvodce (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 

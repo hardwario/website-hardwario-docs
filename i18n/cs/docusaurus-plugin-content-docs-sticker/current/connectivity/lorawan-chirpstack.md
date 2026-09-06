@@ -2,6 +2,7 @@
 slug: lorawan-chirpstack
 title: ChirpStack v4
 description: "Než jednotku STICKER zaregistrujete v ChirpStack v4, vytáhněte přes NFC její výrobní klíče a nastavte radio:"
+title_meta: "ChirpStack v4 (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

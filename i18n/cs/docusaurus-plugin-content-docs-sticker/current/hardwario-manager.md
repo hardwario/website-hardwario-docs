@@ -2,6 +2,7 @@
 slug: hardwario-manager
 title: HARDWARIO Manager
 description: "Zařízení STICKER nemá žádná tlačítka, displej ani konfigurační kabel. Nastavuje se"
+title_meta: "HARDWARIO Manager (STICKER)"
 ---
 
 # HARDWARIO Manager {#hardwario-manager}

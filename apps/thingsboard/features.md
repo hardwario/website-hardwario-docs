@@ -1,6 +1,7 @@
 ---
 slug: features
 title: Features
+title_meta: "Features (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';
 

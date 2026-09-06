@@ -1,14 +1,14 @@
 ---
 slug: lora-p2p
 title: Režim LoRa P2P
-description: "Komunikační režim LoRa P2P a přímé integrace s edge bránami (například HARDWARIO FIBER) přicházejí v připravovaných vydáních firmwaru platformy."
+description: "Komunikační režim LoRa P2P přichází v připravovaném vydání firmwaru platformy."
 ---
 import Image from '@theme/IdealImage';
 
 # Režim LoRa P2P (peer-to-peer) {#lora-p2p-peer-to-peer-mode}
 
 :::info Připravovaná funkce
-Komunikační režim LoRa P2P a přímé integrace s edge bránami (například HARDWARIO FIBER) přicházejí v připravovaných vydáních firmwaru platformy.
+Komunikační režim LoRa P2P přichází v připravovaném vydání firmwaru platformy.
 :::
 
 **LoRa P2P (peer-to-peer)** umožňuje zařízením STICKER vysílat proprietární nespravované radiové rámce přímo dalším uzlům nebo edge přijímačům bez připojení k síťovému serveru LoRaWAN (LNS).
@@ -26,14 +26,18 @@ Komunikační režim LoRa P2P a přímé integrace s edge bránami (například 
 
 ## Architektura a topologie {#architecture--topology}
 
-V režimu LoRa P2P obchází zařízení STICKER vrstvu MAC protokolu LoRaWAN, ale využívá spodní modulační vrstvu LoRa PHY čipů Semtech SX1262 / STM32WL.
+V režimu LoRa P2P obchází zařízení STICKER vrstvu MAC protokolu LoRaWAN, ale využívá spodní modulační vrstvu LoRa PHY čipů Semtech SX1262 / STM32WL. Rámce jdou přímo ze zařízení do přijímače, který provozujete vy. V cestě není žádná brána, žádné připojení k síti (Join) ani síťový server.
 
-```text
-+-------------------+        Direct RF (LoRa PHY)        +-------------------+
-|  STICKER Device   | ---------------------------------> |  HARDWARIO FIBER  |
-| (P2P Transmitter) |                                   |  (Edge Receiver)  |
-+-------------------+                                   +-------------------+
+```mermaid
+flowchart LR
+  S1([STICKER]) -->|LoRa PHY| RX[Edge receiver]
+  S2([STICKER]) -->|LoRa PHY| RX
+  RX --> Backend[Your system]
+  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  class RX hero;
 ```
+
+Porovnejte to s cestou přes [**LoRaWAN**](./index.md), kde uplinky putují STICKER → brána → síťový server → vaše aplikace. V režimu P2P není vrstva MAC protokolu LoRaWAN, a tedy ani procedura připojení (Join), ADR ani síťově řízená okna pro downlinky. Obě strany se prostě musí shodnout na níže uvedených parametrech radia.
 
 ---
 

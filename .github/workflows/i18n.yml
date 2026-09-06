@@ -1,0 +1,17 @@
+# Translation parity: every Czech mirror under i18n/cs must keep the structure of its English
+# source (headings, tables, admonitions, images, links, code blocks). Deploys run on Cloudflare
+# Workers Builds and are not blocked by this check; a red run tells the author of an English
+# edit that the Czech page needs the same edit.
+name: i18n parity
+on:
+  push:
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/verify-i18n.mjs --locale cs

@@ -79,3 +79,8 @@ After a push, confirm the live URL returns 200.
 Part of the [HARDWARIO websites](https://github.com/hardwario/website-admin) —
 managed from the **website-admin** control repo (shared Claude Code commands,
 skills, and environment). Content licensed under [CC BY-SA 4.0](LICENSE).
+
+## Translations
+
+The Czech pages under `i18n/cs/` mirror the English sources one to one. When you edit an English page, make the same edit in its Czech mirror (structure first: headings, tables, admonitions, links, code blocks; then the prose). `npm run verify:i18n` compares every pair and the `i18n parity` GitHub Action runs it on every push.
+

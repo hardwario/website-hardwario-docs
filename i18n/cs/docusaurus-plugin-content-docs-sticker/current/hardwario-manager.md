@@ -12,10 +12,17 @@ přes **NFC** aplikací **HARDWARIO Manager**, mobilní aplikací HARDWARIO. Př
 telefon k zařízení a aplikace přečte nebo zapíše jeho nastavení.
 
 :::tip Kompletní dokumentace aplikace
-Tato stránka vysvětluje, jak HARDWARIO Manager zapadá do postupu nasazení zařízení STICKER. Kompletní návody k aplikaci, rozpis funkcí a pokyny k instalaci najdete zde:
+Tato stránka vysvětluje, jak HARDWARIO Manager zapadá do postupu nasazení zařízení
+STICKER. Aplikaci samotnou najdete kompletně popsanou v sekci **APPS**:
 
-→ [**Dokumentace HARDWARIO Manager**](/apps/hardwario-manager)
+- → [**Rychlý průvodce**](/apps/hardwario-manager/first-steps): instalace
+  aplikace, zapnutí bezdrátového spojení a první přiložení. Začněte tady.
+- → [**Dokumentace HARDWARIO Manager**](/apps/hardwario-manager): kompletní
+  návody k aplikaci a přehled funkcí.
+- → [**STICKER přes NFC**](/apps/hardwario-manager/sticker): nabídka STICKER
+  a jak přiložení funguje.
 :::
+
 ---
 
 ## Co budete potřebovat {#what-you-need}

@@ -44,7 +44,7 @@ const config = {
         address: { '@type': 'PostalAddress', addressCountry: 'CZ' },
         areaServed: 'Europe',
         sameAs: [
-          'https://www.linkedin.com/company/13187032',
+          'https://www.linkedin.com/company/hardwario/',
           'https://twitter.com/hardwario_en',
           'https://www.youtube.com/c/hardwario',
           'https://github.com/hardwario',
@@ -361,7 +361,7 @@ const config = {
           {
             title: 'Connect',
             items: [
-              { label: 'LinkedIn', href: 'https://www.linkedin.com/company/13187032' },
+              { label: 'LinkedIn', href: 'https://www.linkedin.com/company/hardwario/' },
               { label: 'X (Twitter)', href: 'https://x.com/hardwario_en' },
               { label: 'Instagram', href: 'https://www.instagram.com/hardwario/' },
               { label: 'YouTube', href: 'https://www.youtube.com/c/hardwario' },

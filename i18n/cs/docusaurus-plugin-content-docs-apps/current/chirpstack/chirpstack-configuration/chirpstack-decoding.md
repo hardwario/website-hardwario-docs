@@ -2,6 +2,7 @@
 slug: chirpstack-decoding
 title: Dekódování dat
 description: "Tento návod vás provede nastavením kodeků payloadu v ChirpStack v4, aby se vaše data z LoRaWAN správně dekódovala a bylo je možné zobrazit."
+title_meta: "Dekódování dat (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 

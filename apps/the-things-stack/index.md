@@ -2,7 +2,6 @@
 slug: index
 title: The Things Stack
 description: "The Things Stack (TTS) is a modern and scalable LoRaWAN® Network Server designed for secure, reliable, and flexible IoT connectivity."
-title_meta: "The Things Stack (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 title: Úvod
 description: "zprovoznění a testování zařízení LoRaWAN, zejména HARDWARIO STICKER a HARDWARIO"
+title_meta: "Úvod (FIBER Lite)"
 ---
 
 # FIBER Lite {#fiber-lite}

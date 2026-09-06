@@ -2,6 +2,7 @@
 slug: alarms
 title: Pravidla alarmů
 description: "Pravidlo alarmu sleduje jednu měřenou veličinu a označí zařízení jako alarmující,"
+title_meta: "Pravidla alarmů (HARDWARIO Manager for STICKER)"
 ---
 
 # Nastavení pravidel alarmů {#set-up-alarm-rules}

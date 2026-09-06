@@ -2,6 +2,7 @@
 slug: sensor-history
 title: Historie senzorů
 description: "Uložené záznamy přežijí výměnu baterií i ztrátu napájení. Záznam se konfiguruje parametry config a lokálně se spravuje shell příkazem history (viz Nastavení firmwaru)."
+title_meta: "Historie senzorů (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 

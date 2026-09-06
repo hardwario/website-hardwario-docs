@@ -2,6 +2,7 @@
 slug: desktop-programming
 title: Programování na desktopu
 description: "Naše nástroje jsme vyvinuli tak, aby byl začátek s TOWER snazší."
+title_meta: "Programování na desktopu (HARDWARIO TOWER, getting started)"
 ---
 import Image from '@theme/IdealImage';
 

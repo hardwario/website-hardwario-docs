@@ -12,7 +12,7 @@ Tato stránka zachycuje všechny významné změny ve firmwaru katalogových apl
 
 :::tip Nejnovější vydání
 
-**SDK v4.0.0** (2026-08-10): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Soubory firmwaru ke stažení](/chester/catalog-applications/catalog-applications/#application-firmware)
+**SDK v4.0.1** (2026-09-07): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.1) · [Soubory firmwaru ke stažení](/chester/catalog-applications/catalog-applications/#application-firmware)
 
 :::
 
@@ -24,13 +24,27 @@ Tento seznam změn pokrývá **vydání verzí SDK** a změny katalogových apli
 
 ---
 
+## v4.0.1 (2026-09-07) {#v401-2026-09-07}
+
+**NCS:** 3.4.1 · **Zephyr:** 4.4.2 · [Kompletní log commitů](https://github.com/hardwario/chester-sdk/compare/v4.0.0...v4.0.1) · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.1)
+
+Toto vydání opravuje chybu v subsystému `ctr_adc`. Chyba se týká každého firmwaru verze v4.0.0, který čte analogové vstupy CHESTER X0, tedy zejména CHESTER **Control** a **Meteo**. Aktualizace na v4.0.1 problém odstraní; žádné změny konfigurace nejsou potřeba.
+
+### SDK / Common {#sdk--common}
+
+- Opravena regrese analogových vstupů CHESTER-X0 zavedená ve v4.0.0: chyba o jeden index v mapování kanálů způsobovala, že každý kanál vzorkoval svůj sousední pin
+- Sníženo využití RAM o přibližně 500 bajtů
+- Přidán volitelný ladicí subsystém `ctr_trace`
+
+---
+
 ## v4.0.0 (2026-08-10) {#v400-2026-08-10}
 
 **NCS:** 3.4.0 · **Zephyr:** 4.4.1 · [Kompletní log commitů](https://github.com/hardwario/chester-sdk/compare/v3.5.5...v4.0.0) · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0)
 
 Toto vydání přináší nekompatibilní změny a zároveň všechna vylepšení a opravy z nejnovějších verzí Zephyr a nRF Connect SDK, stejně jako další menší vylepšení v samotném SDK.
 
-### SDK / Common {#sdk--common}
+### SDK / Common {#sdk--common-1}
 
 - Aktualizace NCS na v3.4.
   - Přechod z Partition Manageru na **sysbuild + DTS partitions**.
@@ -65,7 +79,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 
 *NCS **2.9.0** · Zephyr **3.7.99** · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5)*
 
-### SDK / Common {#sdk--common-1}
+### SDK / Common {#sdk--common-2}
 - Blikání LED převedeno na neblokující přístup s omezením frekvence: zabraňuje blokování během blikacích sekvencí
 - LoRaWAN payload pro 8kanálovou variantu X0 rozdělen do dvou zpráv, aby splňoval limit 51 bajtů
 - Přidáno API pro stav synchronizace RTC: `ctr_rtc_is_synced()`, `ctr_rtc_get_ts_ms()`, `ctr_rtc_set_event_cb()`
@@ -84,7 +98,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 
 ## v3.5.4 (2026-04-14) {#v354-2026-04-14}
 
-### SDK / Common {#sdk--common-2}
+### SDK / Common {#sdk--common-3}
 - Přidána detekce CHESTER-Z za běhu: jediný firmware funguje s modulem Z i bez něj
 - Přidán shell příkaz pro skenování sběrnice 1-Wire (W1)
 - Deploy skript aktualizován o argumenty CLI a kompletní seznam aplikací
@@ -108,7 +122,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 
 ## v3.5.2 (2026-03-10) {#v352-2026-03-10}
 
-### SDK / Common {#sdk--common-3}
+### SDK / Common {#sdk--common-4}
 - Do všech aplikací přidány shell příkazy pro I2C, MCUboot a GPIO
 - Výchozí LTE režim změněn na `lte-m,nb-iot` (automatický fallback na NB-IoT)
 - CHESTER Counter a CHESTER Signal přesunuty do složky `_legacy`
@@ -120,7 +134,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 
 ## v3.5.1 (2025-12-08) {#v351-2025-12-08}
 
-### SDK / Common {#sdk--common-4}
+### SDK / Common {#sdk--common-5}
 - Přidáno API pro cloudové metriky: zpřístupňuje počítadla uplinků/downlinků, chyby a diagnostiku
 - Podpora soft timeoutu pro operace odesílání do cloudu a downlinku
 - Nebezpečné konfigurační příkazy filtrovány z cloudových downloadů
@@ -171,7 +185,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 
 ## v3.3.0 (2025-07-14) {#v330-2025-07-14}
 
-### SDK / Common {#sdk--common-5}
+### SDK / Common {#sdk--common-6}
 - Všechny katalogové aplikace aktualizovány na v3.3.0
 - Vylepšení subsystému BLE tagů: počet slotů pro tagy zvýšen na 32, snížen dopad na RAM, vylepšeno chování režimu enroll
 - Konfigurační subsystém: přidán factory reset, HEX konfigurační položka, parse callback pro jednotlivé položky
@@ -208,7 +222,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 
 ## v3.0.0 (2024-07-17) {#v300-2024-07-17}
 
-### SDK / Common {#sdk--common-6}
+### SDK / Common {#sdk--common-7}
 - **Velké vydání**: migrace z protokolu Cloud v1 na Cloud v2
 - Zaveden generátor projektů (`west chester-update`) pro správu variant
 - Přidán subsystém LTE v2 s architekturou stavového automatu

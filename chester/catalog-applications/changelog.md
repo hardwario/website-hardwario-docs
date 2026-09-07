@@ -11,7 +11,7 @@ This page tracks all notable changes in CHESTER catalog application firmware sin
 
 :::tip Latest Release
 
-**SDK v4.0.0** (2026-08-10): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Firmware Downloads](/chester/catalog-applications/catalog-applications/#application-firmware)
+**SDK v4.0.1** (2026-09-07): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.1) · [Firmware Downloads](/chester/catalog-applications/catalog-applications/#application-firmware)
 
 :::
 
@@ -20,6 +20,20 @@ This page tracks all notable changes in CHESTER catalog application firmware sin
 This changelog covers **SDK version releases** and catalog application changes. For a date-based log of all platform changes including hardware revisions, see the [**CHESTER Platform Changelog**](/chester/changelog).
 
 :::
+
+---
+
+## v4.0.1 (2026-09-07)
+
+**NCS:** 3.4.1 · **Zephyr:** 4.4.2 · [Full commit log](https://github.com/hardwario/chester-sdk/compare/v4.0.0...v4.0.1) · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.1)
+
+This version fixes a bug affecting the `ctr_adc` subsystem. The bug applies to any v4.0.0 firmware that reads CHESTER X0 analog inputs, namely CHESTER **Control** and **Meteo**. Updating to v4.0.1 fixes the issue; no configuration changes are required.
+
+### SDK / Common
+
+- Fixed CHESTER-X0 analog input regression introduced in v4.0.0: an off-by-one in the channel mapping made every channel sample its neighbouring pin
+- Reduced RAM usage by about 500 bytes
+- Added opt-in debug subsystem `ctr_trace`
 
 ---
 

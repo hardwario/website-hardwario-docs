@@ -95,6 +95,6 @@ Velkou výhodou aplikace HARDWARIO Terminal je funkce **Remote Session** (vzdál
 * **Krok 1:** Klikněte na tlačítko **Join Session** v pravém horním rohu.
 * **Krok 2:** Zadejte **Session ID**, které vám poskytl uživatel fyzicky připojený k zařízení přes Bluetooth.
 * **Krok 3:** Po úspěšném připojení můžete zařízení ovládat na dálku. Výstup terminálu je synchronizovaný, takže vy i hostující uživatel vidíte všechny provedené příkazy a jejich odpovědi v reálném čase.
-* **Krok 4:** Pro odpojení od vzdálené session klikněte na tlačítko **Leave** v pravém horním rohu.
+* **Krok 4:** Chcete-li se odpojit od vzdálené relace, klikněte na tlačítko **Leave** v pravém horním rohu.
 
 ![Dialog připojení ke vzdálené session](../../../../../chester/platform-connectivity/images/hardwario-terminal-5.png)

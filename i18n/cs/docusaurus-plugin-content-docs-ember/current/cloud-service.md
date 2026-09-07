@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 LoRaWAN Network Server pro **EMBER** (**ChirpStack** nebo **The Things Stack**) může být buď provozován na vaší vlastní infrastruktuře (viz [**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) a [**The Things Stack**](lorawan-network-server/lorawan-tts.md)), nebo provozován společností **HARDWARIO** jako spravovaná služba. Tato stránka popisuje spravovanou službu. Kromě spravovaného network serveru poskytuje **HARDWARIO** volitelně také SIM kartu s konektivitou pro **LTE** backhaul a bezpečný vzdálený přístup přes **OpenVPN**.
 
-Pro získání spravované služby potřebujete mít alespoň jedno zařízení **EMBER Hotspot**.
+Abyste mohli spravovanou službu využívat, potřebujete alespoň jedno zařízení **EMBER Hotspot**.
 
 S touto službou získáte vlastní instanci [**ChirpStack**](https://www.chirpstack.io/) a [**Node-RED**](https://nodered.org/) přístupnou přes webové rozhraní pro správu.
 

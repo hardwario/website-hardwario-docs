@@ -71,7 +71,7 @@ Profil zařízení uložte kliknutím na **Submit**.
 :::tip Generování downlink příkazů
 _Kódování downlink příkazů je součástí připravovaného **firmwaru STICKER v1.4.0** (ne v1.3.x)._
 
-Tento kodek zároveň **kóduje downlink příkazy** (funkcí `encodeDownlink`), takže není potřeba nic dalšího nastavovat. Chcete-li zařízení poslat příkaz, například vynutit report, změnit nastavení nebo nastavit pravidlo alarmu, zařaďte ho na kartě **Queue** zařízení jako objekt JSON na fPort **85** a ChirpStack kodekem vytvoří bajtový payload. Pro sestavení příkazu a získání jeho JSON i hex podoby použijte [**generátor downlink příkazů**](downlink-commands-generator.mdx).
+Tento kodek zároveň **kóduje downlink příkazy** (funkcí `encodeDownlink`), takže není potřeba nic dalšího nastavovat. Chcete-li zařízení poslat příkaz, například vynutit report, změnit nastavení nebo nastavit pravidlo alarmu, zařaďte ho na kartě **Queue** zařízení jako objekt JSON na fPort **85** a ChirpStack kodekem vytvoří bajtový payload. Chcete-li příkaz sestavit a získat jeho podobu v JSON i hex, použijte [**generátor downlink příkazů**](downlink-commands-generator.mdx).
 :::
 
 ---

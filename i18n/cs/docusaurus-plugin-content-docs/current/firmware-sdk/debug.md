@@ -39,7 +39,7 @@ Ve VSCode stiskněte `Ctrl` + `P`, napište `ext install nordic-semiconductor.nr
 
 Nepoužívejte **Erase board** ani jinou podobnou možnost. Zařízení CHESTER využívá oblast UICR k uložení sériového čísla a komunikačních klíčů. Pokud ji vymažete, budete muset obnovit [**PIB data**](../developer-tools/command-line-tools.md#product-information-block).
 
-Pro vymazání desky použijte příkaz erase v [**HARDWARIO CLI**](../developer-tools/command-line-tools.md), který oblasti UICR zachová.
+Chcete-li vymazat desku, použijte příkaz erase v [**HARDWARIO CLI**](../developer-tools/command-line-tools.md), který oblasti UICR zachová.
 
 :::
 

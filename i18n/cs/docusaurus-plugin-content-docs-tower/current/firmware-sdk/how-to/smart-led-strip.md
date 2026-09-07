@@ -28,7 +28,7 @@ V tomto příkladu nastavíte prvních 35 LED tak, aby každá svítila o 5 bod�
 
 Pole `_led_strip_buffer ` je pro funkci LED pásku povinné. Jde v podstatě o popis LED pásku pro Core Module.
 
-Pro nastavení barvy pixelu (LED na pásku) musíte poskytnout několik informací. To se dělá pomocí `twr_led_strip_set_pixel_rgbw(twr_led_strip_t *self, int position, uint8_t r, uint8_t g, uint8_t b, uint8_t w)`. Argumenty funkce jsou:
+Chcete-li nastavit barvu pixelu (LED na pásku), musíte poskytnout několik informací. To se dělá pomocí `twr_led_strip_set_pixel_rgbw(twr_led_strip_t *self, int position, uint8_t r, uint8_t g, uint8_t b, uint8_t w)`. Argumenty funkce jsou:
 
 - `*self`: instance LED pásku, nejčastěji `&led_strip`
 - `position`: pixel (LED) na pásku, který se má nastavit (**začíná od 0, nikoli od 1**)

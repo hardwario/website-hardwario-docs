@@ -4,7 +4,7 @@ title: "Jak na: GPIO piny"
 ---
 import Image from '@theme/IdealImage';
 
-Pro propojení modulu Core Module s okolním světem můžete využít mnoho **GPIO pinů** (**G**eneral **P**urpose **I**nput/**O**utput piny).
+Chcete-li modul Core Module propojit s okolním světem, můžete využít mnoho **GPIO pinů** (**G**eneral **P**urpose **I**nput/**O**utput piny).
 Piny jsou popsané v Header Pinout. V SDK mají piny názvy `TWR_GPIO_P0` až `TWR_GPIO_P17`. Existují také dva speciální piny určené pro `TWR_GPIO_LED` a `TWR_GPIO_BUTTON`.
 
 ## Odkazy {#references}

@@ -233,7 +233,7 @@ Pokud nepoužíváte spravovanou službu HARDWARIO, musíte použít IP adresu s
 
 ## Datacake {#datacake}
 
-**Datacake** je IoT platforma, která hostuje server **LoRaWAN**. Pro připojení zařízení **EMBER** ke službě **Datacake** je potřeba zaregistrovat účet a vytvořit dashboard. Přidání zařízení do dashboardu:
+**Datacake** je IoT platforma, která hostuje server **LoRaWAN**. Chcete-li zařízení **EMBER** připojit ke službě **Datacake**, je potřeba zaregistrovat účet a vytvořit dashboard. Přidání zařízení do dashboardu:
 
 * Přidejte server **Datacake** do seznamu serverů spuštěním následujícího příkazu na **RouterOS**
 

@@ -114,7 +114,7 @@ Tyto firmwary jsou pro starší komunikaci s [**Cloud v1**](/cloud/legacy).
 
 Tabulka níže poskytuje přehled dostupných buildů firmwaru pro **katalogové aplikace**.
 
-Pro nahrání firmwaru použijte aplikaci [**HARDWARIO Manager**](../platform-connectivity/hardwario-manager.md) na svém telefonu nebo postupujte podle článku [**Nahrání firmwaru**](../firmware-flashing/index.md).
+Chcete-li nahrát firmware, použijte aplikaci [**HARDWARIO Manager**](../platform-connectivity/hardwario-manager.md) na svém telefonu nebo postupujte podle článku [**Nahrání firmwaru**](../firmware-flashing/index.md).
 
 :::info
 

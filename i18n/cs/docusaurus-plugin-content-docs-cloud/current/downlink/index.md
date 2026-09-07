@@ -12,7 +12,7 @@ druhy downlink zpráv:
 - [**Config**](config.md): změna konfigurace zařízení pomocí příkazů `app config`.
 - [**Shell**](shell.md): spouštění příkaz shelluů a čtení jejich odpovědí.
 
-Pro odeslání downlinku typu **Data** nebo **Config** z webového rozhraní otevřete zprávy zařízení a klikněte
+Chcete-li z webového rozhraní odeslat downlink typu **Data** nebo **Config**, otevřete zprávy zařízení a klikněte
 na **+&nbsp;SCHEDULE DOWNLINK** v pravém horním rohu. Protože zařízení obvykle spí, aby šetřilo
 energii, je downlink **zařazen do fronty** a doručen při příštím startu, odeslání uplinku nebo dotazu
 do Cloudu, odpověď se proto nemusí objevit okamžitě.

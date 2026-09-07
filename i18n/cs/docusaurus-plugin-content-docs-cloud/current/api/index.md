@@ -14,7 +14,7 @@ downlinků a další.
 - **Formát:** JSON. Posílejte `Accept: application/json`; ID jsou UUID.
 
 :::tip Pro živá data preferujte konektory
-Pro doručování zpráv ze zařízení v reálném čase použijte [**konektory**](/cloud/connectors)
+Chcete-li doručovat zprávy ze zařízení v reálném čase, použijte [**konektory**](/cloud/connectors)
 (HTTPS webhooky) místo dotazování REST API. Dotazování zvyšuje zpoždění
 doručení, datový provoz i zátěž služby. Webhook vám každou zprávu odešle
 v okamžiku, kdy dorazí.

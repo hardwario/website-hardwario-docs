@@ -61,7 +61,7 @@ V tomto průvodci se naučíte, jak připojit zařízení CHESTER k telefonu pom
 
 15. Tam se nachází seznam všech nástrojů aplikace.
 
-16. Pro nastavení zařízení CHESTER otevřete Terminal.
+16. Chcete-li zařízení CHESTER nastavit, otevřete Terminal.
 
 17. Nyní můžete posílat příkazy shellu jako info show nebo config show.
 

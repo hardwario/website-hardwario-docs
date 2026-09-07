@@ -29,7 +29,7 @@ Podle konkrétní osazovací varianty obsahuje zařízení STICKER:
 
 ### Fyzická rozhraní a externí konektivita {#physical-interfaces--external-connectivity}
 
-- **Rozhraní SWD:** Fyzické programovací pady SWD pro nahrávání a ladění firmwaru přes J-Link (`make flash`). Pro nahrání image jsou nutné, protože firmware záměrně nemá bootloader ani aktualizace na dálku.
+- **Rozhraní SWD:** Fyzické programovací pady SWD pro nahrávání a ladění firmwaru přes J-Link (`make flash`). Bez nich image nenahrajete, protože firmware záměrně nemá bootloader ani aktualizace na dálku.
 - **Master sběrnice 1-Wire:** Vyhrazené rozhraní 1-Wire s podporou externích digitálních teplotních sond (například Dallas DS18B20) a senzorů HARDWARIO Machine Probe.
 - **Rozhraní S0:** Pulzní vstup kompatibilní se standardními výstupy S0 elektroměrů, plynoměrů a vodoměrů.
 - **Měření napětí a průmyslové logické vstupy:** Podporuje až 2 digitální vstupy přijímající průmyslovou logiku až 30 V DC pro přímé napojení na PLC nebo sledování stavu stroje.

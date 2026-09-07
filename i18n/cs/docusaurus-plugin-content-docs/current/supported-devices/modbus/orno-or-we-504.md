@@ -81,7 +81,7 @@ Komunikační parametry lze nastavit pomocí oficiálního konfiguračního soft
 
 [**Stáhnout konfigurační software ORNO pro OR-WE-504**](https://files.orno.pl/support/Others/ORNO/ORWE504_5901752481282/OR-WE-504_program.zip)
 
-Pro připojení zařízení k počítači použijte **standardní převodník USB–RS-485**.
+Zařízení k počítači připojíte **standardním převodníkem USB–RS-485**.
 
 :::info
 

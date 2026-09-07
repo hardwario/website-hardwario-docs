@@ -15,9 +15,9 @@ Nejprve je potřeba určit, jak bude výsledné PDF vypadat a jaká data bude ob
 2. Klikněte vpravo nahoře na tlačítko **+ Add report template** a zvolte **Create new report template**.
 3. Zadejte název šablony (například *Obecný měsíční report*) a formát nechte na **PDF**.
 4. Nacházíte se ve vizuálním Report Builderu. Přetahujte komponenty z levého panelu:
-   * **Text & Content:** Pro přidání záhlaví, titulků a zápatí (Markdown je podporovaný).
-   * **Charts:** Pro vložení grafů. V nastavení grafu zvolte cílová zařízení a časové okno (například *Previous month*).
-   * **Tables:** Pro vložení datových tabulek. *Tip: Pokud chcete data z více zařízení sloučit do jednoho řádku, nezapomeňte v nastavení tabulky zapnout agregaci dat (například 1 Day).*
+   * **Text & Content:** Slouží k přidání záhlaví, titulků a zápatí (Markdown je podporovaný).
+   * **Charts:** Slouží k vložení grafů. V nastavení grafu zvolte cílová zařízení a časové okno (například *Previous month*).
+   * **Tables:** Slouží k vložení datových tabulek. *Tip: Pokud chcete data z více zařízení sloučit do jednoho řádku, nezapomeňte v nastavení tabulky zapnout agregaci dat (například 1 Day).*
 5. Až budete s rozvržením spokojeni, uložte šablonu kliknutím na **Save** / **Apply**.
 
 :::info

@@ -18,7 +18,7 @@ Seznam firmwaru se **stahuje automaticky**.
 
 :::tip
 
-Pro nahrání firmwaru z počítače použijte **tři tečky** na pravé straně.
+Chcete-li nahrát firmware z počítače, použijte **tři tečky** na pravé straně.
 
 :::
 

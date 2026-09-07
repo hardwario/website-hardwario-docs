@@ -111,7 +111,7 @@ Brána podporuje několik pracovních režimů LoRaWAN. Přejděte na **LoRa > C
 
 ### Basics Station (doporučeno pro TTS) {#basics-station-recommended-for-tts}
 
-Pro připojení k The Things Stack vyberte **Basics Station**:
+Chcete-li se připojit k The Things Stack, vyberte **Basics Station**:
 
 | Nastavení | Hodnota |
 | :--- | :--- |

@@ -21,7 +21,7 @@ Koncoví uživatelé konfigurují zařízení STICKER běžně přes **NFC** pom
 
 ## První kroky {#getting-started}
 
-Pro nastavení firmwaru lokálně, nahrání debug image a otevření konzole postupujte podle [**Nastavení firmwaru**](developer-access/firmware-setup.md).
+Chcete-li si firmware nastavit lokálně, nahrát debug image a otevřít konzoli, postupujte podle [**Nastavení firmwaru**](developer-access/firmware-setup.md).
 
 ---
 

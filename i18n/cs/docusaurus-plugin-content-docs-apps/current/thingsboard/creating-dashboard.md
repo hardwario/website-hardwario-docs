@@ -84,7 +84,7 @@ V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobra
    5. Otevře se konfigurační okno:  
       - Pod **Series → Key** zvolte **zdroj dat** a **proměnnou**, kterou chcete zobrazit.  
       - Upravte vzhled widgetu (label, jednotky, barvu, počet desetinných míst a další).  
-      - Pro přidání více proměnných klikněte na **Add Series**.  
+      - Chcete-li přidat více proměnných, klikněte na **Add Series**.  
       - Sjeďte níž a nastavte **osy Y, legendu a další vlastnosti grafu**.  
    6. Po dokončení klikněte na **Add**.  
 

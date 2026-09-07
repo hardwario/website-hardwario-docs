@@ -130,7 +130,7 @@ LED můžete také ručně přepínat z libovolné konzole příkazem `led`, viz
 2. Klikněte na **ikonu chatu** vedle svého zařízení
 3. Uvidíte **zprávy a živá data** odeslaná ze zařízení GLIDER
 
-Ve výchozím nastavení GLIDER vzorkuje senzory každých **60 sekund** a odesílá payload každých **300 sekund (5 minut)**. Pro vynucení okamžitého uplinku:
+Ve výchozím nastavení GLIDER vzorkuje senzory každých **60 sekund** a odesílá payload každých **300 sekund (5 minut)**. Chcete-li vynutit okamžitý uplink:
 
 - **konzole AT (USB-C):** `AT$SHELL="app send"`
 - **RTT konzole (J-Link):** `app send`

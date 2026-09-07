@@ -86,7 +86,7 @@ Komunikační parametry lze nakonfigurovat přímo pomocí oficiálního softwar
 Konfigurační nástroj si můžete stáhnout zde:  
 **[Stáhnout konfigurační software ORNO pro OR-WE-516](../../../../../../chester/supported-devices/modbus/OR-WE-516_program.7z)**
 
-Pro připojení zařízení k počítači použijte **standardní převodník USB–RS-485**.  
+Zařízení k počítači připojíte **standardním převodníkem USB–RS-485**.  
 
 :::info
 Připojte stranu USB standardního převodníku USB–RS-485 k počítači, kde je nainstalován konfigurační software ORNO.
@@ -106,12 +106,12 @@ K terminálu se lze připojit několika způsoby:
 
 #### Konfigurace komunikace Modbus pro CHESTER {#modbus-communication-configuration-for-chester}
 
-Pro nastavení komunikačních parametrů přes terminál CHESTER použijte následující příkazy:
+Komunikační parametry nastavíte přes terminál CHESTER následujícími příkazy:
 
 
 #### Konfigurace zařízení CHESTER {#configuration-of-chester}
 
-Pro nakonfigurování elektroměru v aplikaci CHESTER zadejte do terminálu následující sadu příkazů. Tyto příkazy nastaví správný režim sériové komunikace, definují připojené zařízení a určí intervaly měření a přenosu dat.
+Chcete-li elektroměr v aplikaci CHESTER nakonfigurovat, zadejte do terminálu následující sadu příkazů. Tyto příkazy nastaví správný režim sériové komunikace, definují připojené zařízení a určí intervaly měření a přenosu dat.
 
 ```bash
 # Configure communication with the energy meter

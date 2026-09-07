@@ -284,7 +284,7 @@ mechanismu se souborem `ssh`/`userconf.txt`. Pokud budete někdy potřebovat ru�
 (místo použití dialogu Customisation v Imageru), klíč **musí** být `instance-id`
 (s pomlčkou), **ne** `instance_id` (s podtržítkem). Klíč s podtržítkem je tiše ignorován a
 cloud-init přeskočí vytvoření uživatele při každém dalším startu, což způsobí trvalé „Permission denied“ při SSH
-i po opravě `user-data`. Pro nastavení uživatelského jména, hesla a SSH vždy používejte vlastní dialog Imageru;
+i po opravě `user-data`. Uživatelské jméno, heslo a SSH vždy nastavujte vlastním dialogem Imageru;
 při běžném použití byste neměli potřebovat sahat na soubory cloud-init ručně. Pokud
 jsou SSH připojení rovnou odmítána (bez jakéhokoliv dotazu na heslo) nebo přijata, ale každé heslo
 je odmítnuto, podívejte se na **Řešení problémů** v postranním panelu.

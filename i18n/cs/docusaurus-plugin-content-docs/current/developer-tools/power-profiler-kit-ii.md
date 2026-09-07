@@ -127,7 +127,7 @@ Klikněte na **SELECT DEVICE** a zvolte své zařízení **PPK2**.
 
 **PPK2** by nyní mělo svítit buď **červeně** (režim měření **Source**), nebo **modře** (režim měření **Ampere**).
 
-Pro zahájení záznamu dat musíte:
+Chcete-li zahájit záznam dat, musíte:
 
 1. Vybrat režim, ve kterém chcete pracovat.
 

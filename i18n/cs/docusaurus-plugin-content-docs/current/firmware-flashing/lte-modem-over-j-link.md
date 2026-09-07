@@ -155,7 +155,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
 ## Postup nahrání firmwaru {#flashing-procedure}
 
-Pro nahrání firmwaru LTE modemu do zařízení **CHESTER** postupujte takto:
+Chcete-li do zařízení **CHESTER** nahrát firmware modemu LTE, postupujte takto:
 
 1. Otevřete krabičku zařízení **CHESTER** (6 šroubů ze spodní strany).
 

@@ -78,7 +78,7 @@ AT$HELP This help
 
 ### Čtení hodnoty {#read-value}
 
-Pro přečtení hodnoty proměnné stačí na konec **odpovídajícího AT příkazu** připojit otazník `?`
+Hodnotu proměnné přečtete tak, že na konec **odpovídajícího AT příkazu** připojit otazník `?`
 
 ```
 AT$APPSKEY?

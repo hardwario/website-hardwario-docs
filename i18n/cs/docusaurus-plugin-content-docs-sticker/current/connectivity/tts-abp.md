@@ -74,7 +74,7 @@ Klikněte na **Register end device**.
 
 ## 3) Přidejte formátovač payloadu (dekodér) {#3-add-a-payload-formatter-decoder}
 
-Pro dekódování surových bajtů uplinku do čitelných polí JSON přejděte na:  
+Chcete-li surové bajty uplinku dekódovat do čitelných polí JSON, přejděte na:  
 **Application → (VAŠE_ZAŘÍZENÍ) → Payload formatters → Uplink**
 
 Nastavte typ formátovače na **Custom Javascript formatter** a vložte dekodér STICKER z odkazu níže:
@@ -87,7 +87,7 @@ Klikněte na **Save changes**.
 :::tip Generování downlink příkazů
 _Kódování downlink příkazů je součástí připravovaného **firmwaru STICKER v1.4.0** (ne v1.3.x)._
 
-Tentýž kodek `ttn.js` zároveň **kóduje downlink příkazy** (funkcí `encodeDownlink`), takže můžete zařízení posílat příkazy, například vynutit report, změnit nastavení nebo nastavit pravidlo alarmu. Přidejte stejný soubor ještě jako formátovač **Downlink** v **Application → (VAŠE_ZAŘÍZENÍ) → Payload formatters → Downlink** (Custom Javascript formatter), pak zařaďte příkaz jako objekt JSON na fPort **85** a The Things Stack ho zakóduje do bajtů. Pro sestavení příkazu a získání jeho JSON i hex podoby použijte [**generátor downlink příkazů**](downlink-commands-generator.mdx).
+Tentýž kodek `ttn.js` zároveň **kóduje downlink příkazy** (funkcí `encodeDownlink`), takže můžete zařízení posílat příkazy, například vynutit report, změnit nastavení nebo nastavit pravidlo alarmu. Přidejte stejný soubor ještě jako formátovač **Downlink** v **Application → (VAŠE_ZAŘÍZENÍ) → Payload formatters → Downlink** (Custom Javascript formatter), pak zařaďte příkaz jako objekt JSON na fPort **85** a The Things Stack ho zakóduje do bajtů. Chcete-li příkaz sestavit a získat jeho podobu v JSON i hex, použijte [**generátor downlink příkazů**](downlink-commands-generator.mdx).
 :::
 
 ---

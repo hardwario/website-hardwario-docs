@@ -10,7 +10,7 @@ Tento návod předpokládá, že máte spuštěné Visual Studio Code s nainstal
 
 :::
 
-Pro logování v **HARDWARIO Code** je k dispozici záložka ve spodním panelu.
+Logování má v **HARDWARIO Code** vlastní záložku ve spodním panelu.
 
 <Image img={require('../../../../../tower/firmware-development/images/hardwario-console-showcase.png')} alt="Zvýrazněná záložka TOWER ve spodním panelu VS Code se zprávou NO DEVICE ATTACHED" />
 <br />

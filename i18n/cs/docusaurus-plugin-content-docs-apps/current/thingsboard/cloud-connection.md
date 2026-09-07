@@ -29,7 +29,7 @@ Přihlaste se do své instance ThingsBoard, přejděte na **Entities > Devices**
 
 ## Krok 2: Vytvořte nový konektor {#step-2-create-a-new-connector}
 
-Pro navázání komunikace s platformou ThingsBoard přejděte v levém menu do sekce `Connectors`.  
+Chcete-li navázat komunikaci s platformou ThingsBoard, přejděte v levém menu do sekce `Connectors`.  
 Klikněte na `+ New Connector` a nastavte:
 
 - `Name`: pojmenujte svůj konektor

@@ -40,7 +40,7 @@ LCD obsahuje **6 malých RGB LED**.
 
 Můžete je ovládat standardními funkcemi `twr_led_*` [**ze SDK**](./led-control.md) hned po získání jejich driveru.
 
-Pro získání driveru musíte použít funkci `const twr_led_driver_t* twr_module_lcd_get_led_driver(void)`, která vrací ukazatel na driver. Poté musíte inicializovat virtuální LED pomocí `void twr_led_init_virtual(twr_led_t *self, int channel, const twr_led_driver_t *driver, int idle_state)`.
+Chcete-li získat driver, musíte použít funkci `const twr_led_driver_t* twr_module_lcd_get_led_driver(void)`, která vrací ukazatel na driver. Poté musíte inicializovat virtuální LED pomocí `void twr_led_init_virtual(twr_led_t *self, int channel, const twr_led_driver_t *driver, int idle_state)`.
 
 Parametr `channel` odpovídá barvě LED:
 

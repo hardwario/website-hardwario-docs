@@ -58,7 +58,7 @@ Ne všechny katalogové firmwary podporují přepnutí NB-IoT/LTE-M na LoRaWAN r
 
 Existuje velké množství konfigurací, například autentizace **ABP** nebo **OTAA**. Modem lze také nastavit na pevnou datovou rychlost pro dosažení nejdelšího dosahu. Podporuje také režimy třídy **A** a **C** pro příjem downlink zpráv.
 
-Pro zobrazení aktuální konfigurace zadejte `lrw config show`, což vypíše kompletní konfiguraci.
+Chcete-li zobrazit aktuální konfiguraci, zadejte `lrw config show`; vypíše kompletní konfiguraci.
 
 ```
 lrw config test false
@@ -119,7 +119,7 @@ V device profilu v CHIRPSTACK na kartě JOIN (OTAA/ABP) **vypněte** Device supp
 - RX2 channel frequency (Hz): `869525000`
 - Factory-preset frequencies (Hz): `868100000, 868300000, 868500000, 867100000, 867300000, 867100000, 867700000, 867900000`
 
-Pro generování klíčů můžete pro testování a vývoj použít tento [online generátor](https://loratools.nl/#/keys), pro produkci použijte pro jistotu offline generátor.
+Klíče si pro testování a vývoj můžete vygenerovat tímto [online generátor](https://loratools.nl/#/keys), pro produkci použijte pro jistotu offline generátor.
 
 Poté nakonfigurujte zařízení CHESTER
 
@@ -201,4 +201,4 @@ Je ale užitečné zkontrolovat, jestli zařízení a brána používají stejn�
 
 Pokud vidíte přicházející pakety, můžete problém dále řešit v CHIRPSTACK v části Gateways na kartě **Live LoRaWAN Frames**. Až teprve poté, co zde uvidíte pakety, přejděte do Applications a hledejte dekódované pakety a řešte například špatné klíče, pokud tam pakety zařízení nejsou vidět.
 
-**Netmore** používá **veřejnou** síť. Pro nastavení typu sítě vašeho zařízení na veřejnou použijte příkaz `lrw config nwk public`.
+**Netmore** používá **veřejnou** síť. Chcete-li typ sítě svého zařízení nastavit na veřejnou, použijte příkaz `lrw config nwk public`.

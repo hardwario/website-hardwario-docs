@@ -140,7 +140,7 @@ Zařízení uložte.
 
 ## 6) Dekodér payloadu (doporučeno) {#6-payload-decoder-recommended}
 
-Pro dekódování uplink payloadů ze zařízení CHESTER:
+Chcete-li dekódovat payloady uplinku ze zařízení CHESTER:
 
 1. Otevřete **Device Profile**
 2. Přejděte na **Codec**

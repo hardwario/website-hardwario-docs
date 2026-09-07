@@ -116,7 +116,7 @@ Pravidla alarmů sledující teplotu, vlhkost, digitální vstupy nebo pulzní p
 
 ## Vzdálené přehrání historie (`req_history`) {#remote-history-replay-reqhistory}
 
-Pro získání offline záznamů ze senzorů, uložených ve flash paměti během výpadků sítě, pošlete downlink `req_history` s požadovaným oknem unixových timestampů. Zařízení STICKER pošle uložená měření zpět jako sekvenci paketů `history_frame` na **fPort 85**.
+Chcete-li získat offline záznamy ze senzorů, uložené ve flash paměti během výpadků sítě, pošlete downlink `req_history` s požadovaným oknem unixových timestampů. Zařízení STICKER pošle uložená měření zpět jako sekvenci paketů `history_frame` na **fPort 85**.
 
 **Žádost o přehrání historie senzorů:**
 

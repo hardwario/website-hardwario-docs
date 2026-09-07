@@ -98,5 +98,5 @@ alarm clear 1                            # Erase rule in slot 1
 ```
 
 :::info Správa na dálku
-Pravidla alarmů lze také vytvářet a aktualizovat přes LoRaWAN nebo NFC binárními downlink payloady na fPort 85. Pro sestavení binárních downlink řetězců pro váš síťový server použijte [**generátor downlink příkazů**](../connectivity/downlink-commands-generator.mdx).
+Pravidla alarmů lze také vytvářet a aktualizovat přes LoRaWAN nebo NFC binárními downlink payloady na fPort 85. Chcete-li sestavit binární řetězce downlinku pro váš síťový server, použijte [**generátor downlink příkazů**](../connectivity/downlink-commands-generator.mdx).
 :::

@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        Modul <b>1-Wire Slave</b> umožňuje připojit zařízení I²C na vzdálenost několika metrů. Protokol I²C je zapouzdřen v protokolu 1-Wire. Data jsou chráněna pomocí <b>16bitového CRC</b>. Pro vytvoření mastera sběrnice 1-Wire můžete použít <b>Sensor Module</b>.
+        Modul <b>1-Wire Slave</b> umožňuje připojit zařízení I²C na vzdálenost několika metrů. Protokol I²C je zapouzdřen v protokolu 1-Wire. Data jsou chráněna pomocí <b>16bitového CRC</b>. Chcete-li vytvořit master sběrnice 1-Wire, můžete použít <b>Sensor Module</b>.
       </p>
     </div>
   </div>

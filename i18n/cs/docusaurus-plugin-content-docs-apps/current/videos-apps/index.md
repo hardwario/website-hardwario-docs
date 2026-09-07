@@ -2,7 +2,6 @@
 slug: videos-apps
 title: Videonávody
 description: "Videonávody a podrobné postupy pro nasazení zařízení HARDWARIO s aplikací HARDWARIO Manager, s platformou ThingsBoard a se servery sítí LoRaWAN."
-title_meta: "Videonávody (videonávody)"
 ---
 
 import Image from '@theme/IdealImage';

@@ -44,6 +44,27 @@ The Things Stack, Zephyr, nRF Connect SDK.
 | `RS-485` | RS485 |
 | `1-Wire` | OneWire |
 
+Tenhle seznam platí **i pro anglické zdroje**. `Wi-Fi` a `RS-485` se dřív psaly
+v angličtině jinak než v češtině; sjednoceno 2026-09-07, aby překlad nemusel
+opravovat, co je špatně už v předloze. Když narazíš na porušení v anglické
+stránce, oprav napřed ji, pak české zrcadlo — jinak to `npm run verify:i18n`
+ohlásí jako odchylku překladu.
+
+Výjimka: doslovné výpisy, potisky desek a popisky v cizím rozhraní zůstávají tak,
+jak je zařízení nebo aplikace opravdu zobrazuje (`WiFi:` ve výpisu GAUGERu,
+`1-WIRE` na svorkovnici CHESTER-C1).
+
+## Popisky rozhraní aplikací
+
+Mobilní ani cloudová aplikace nemá českou lokalizaci, takže **popisky, které
+uživatel vidí na obrazovce, se nepřekládají** — čtenář musí v návodu najít přesně
+to, co má v telefonu. Píšou se tučně a v původním znění: **Saved STICKERs**,
+**Templates**, **Device info**, **Send Test Mail**.
+
+Neplatí to pro *názvy sekcí dokumentace*: ty přeložené jsou (kategorie
+`Administration` je v české navigaci **Správa**), takže odkaz do nich musí
+používat český název.
+
 ## Ustálené překlady
 
 | en | cs |
@@ -77,13 +98,38 @@ The Things Stack, Zephyr, nRF Connect SDK.
 | enabled / disabled | zapnuto / vypnuto |
 | supported | podporováno |
 | see the section below | viz níže |
+| shell command | příkaz shellu |
+| video tutorial | videonávod |
+| SDK library | knihovna SDK |
+| "How To:" (prefix titulku) | „Jak na:" |
+| managed service | spravovaná služba |
+| Space (HARDWARIO Cloud) | prostor |
+| Tags / Labels (HARDWARIO Cloud) | tagy / labely (dvě různé funkce, nezaměňovat) |
+| desktop programming | programování na počítači |
+| over the air | bezdrátově |
+| click | kliknutí (na mobilu „klepnutí") |
+| thermometer | teploměr |
+| illuminance | osvětlenost (ne „osvětlení") |
+| radio | rádio (s délkou) |
+| session | relace |
+| build (podstatné jméno) | sestavení; „build" jen tam, kde je to název příkazu |
+| callback | callback |
+| positive rail | kladná větev |
+| store (odkaz na e-shop) | obchod |
 
 ## Styl
 
 - Vykat, ale co nejméně: preferuj neosobní tvar („Připojte kabel", ne „Měl byste
   připojit kabel"). Návody píšeme v rozkazovacím způsobu.
 - Nadpisy bez tečky na konci.
-- Desetinná čárka v českém textu, ale **v hodnotách z kódu, tabulek registrů
-  a technických parametrů nechat tečku** tak, jak je v originále.
+- Desetinná čárka v českém textu **i v tabulkách a seznamech technických
+  parametrů** („±0,3 °C", „2,5 m"). Tečka zůstává jen tam, kde je hodnota částí
+  kódu: ve výpisech, konfiguračních klíčích, tabulkách registrů a v číslech
+  verzí a revizí desek (`R1.1`, `v1.2.1`).
+- Uvozovky jsou české: `„…“`. Nikdy nezavírej rovnou uvozovkou `"`.
+- Přívlastek se v češtině klade za jméno: „senzory LoRaWAN", ne „LoRaWAN
+  senzory"; „příkazy AT", ne „AT příkazy"; „konzole AT", ne „AT konzole".
+- Vyhýbej se kalku „Pro + podstatné jméno slovesné". Piš „Chcete-li konzoli
+  připojit, …" nebo rovnou rozkazem „Konzoli připojíte pomocí…".
 - Jednotky se od čísla oddělují nedělitelnou mezerou tam, kde to originál dělá
   taky; jinak se formát nemění.

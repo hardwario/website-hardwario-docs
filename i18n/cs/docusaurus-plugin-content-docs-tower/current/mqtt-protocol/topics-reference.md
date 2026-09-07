@@ -92,8 +92,8 @@ Jediné povolené hodnoty payloadu jsou `true/false`.
 | :----------: | :------------------------------------------: | :--------------------------------------: |
 | Levé tlačítko  | `node/{id}/push-button/lcd:left/event-count` |                                          |
 | Pravé tlačítko | `node/{id}/push-button/lcd:right/event-count` |                                          |
-| Smazání obrazovky | `node/{id}/push-button/lcd:left/event-count` |                                          |
-|  Vypsání textu  | `node/{id}/push-button/lcd:left/event-count` | `{"x": 5, "y": 10, "text": "HARDWARIO"}` |
+| Smazání obrazovky | `node/{id}/lcd/-/screen/clear`               |                                          |
+|  Vypsání textu  | `node/{id}/lcd/-/text/set`                   | `{"x": 5, "y": 10, "text": "HARDWARIO"}` |
 
 
 ## Topicy brány {#gateway-topics}

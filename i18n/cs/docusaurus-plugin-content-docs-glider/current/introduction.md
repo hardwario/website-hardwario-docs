@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 **HARDWARIO GLIDER** je kompaktní IoT zařízení **LTE-M / NB-IoT** postavené na SoC Nordic **nRF9151**. Je určeno pro dlouhodobé nízkoenergetické monitorování teploty, pulzních čítačů, událostí bezpotenciálových kontaktů a zařízení **Modbus RTU** a dodává se předkonfigurované pro komunikaci s **HARDWARIO Cloud**.
 
 :::tip
-### Než zařízení GLIDER zprovozníte, přečtěte si [**Rychlý průvodce**](first-steps). {#to-get-your-glider-running-read-the-quick-start-guide}
+### Než zařízení GLIDER zprovozníte, přečtěte si [**Rychlý průvodce**](first-steps) {#to-get-your-glider-running-read-the-quick-start-guide}
 :::
 
 <img src="/img/glider.webp" data-zoom-src="/img/glider.webp" width="540" alt="GLIDER" />

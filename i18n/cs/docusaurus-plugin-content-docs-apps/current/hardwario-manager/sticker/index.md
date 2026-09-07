@@ -17,7 +17,7 @@ Otevřete **HARDWARIO Manager** a zvolte **STICKER**.
 
 <img src="/img/hw-manager/hw-manager-sticker.jpg" alt="Menu STICKER v aplikaci HARDWARIO Manager s položkami Device info, LoRaWAN keys, Configuration, Templates, Tools a Saved STICKERs" width="320" />
 
-:::info K snímkům obrazovky
+:::info Ke snímkům obrazovky
 Snímky v této sekci pocházejí ze staršího buildu, takže několik popisků má jinak
 velká písmena než současná aplikace, která název produktu píše všude velkými.
 Rozvržení obrazovek samotných odpovídá.

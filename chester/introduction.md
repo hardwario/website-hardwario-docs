@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 **HARDWARIO CHESTER** is a highly configurable IoT **LPWAN** platform. Its primary function is to connect as many devices and environments as possible to the Internet, especially from places where there is no standard connection to the power grid and the Internet.
 
 :::tip
-### To get your CHESTER running, read the [**Quick Start Guide**](first-steps.md).
+### To get your CHESTER running, read the [**Quick Start Guide**](first-steps.md)
 :::
 
 <img src="/img/chester.webp" data-zoom-src="/img/chester.webp" width="540" alt="CHESTER" />

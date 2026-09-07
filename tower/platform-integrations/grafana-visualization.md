@@ -150,7 +150,7 @@ After you installed InfluxDB, you can move to [**Grafana**](https://grafana.com)
 
 :::
 
-#### Install InfluxDB and Enable It
+#### Install Grafana and Enable It
 
 ```bash
 brew install grafana
@@ -177,7 +177,7 @@ Default **Password** is `admin`.
 
 :::warning
 
-To make this part work without any additional configuration you need to follow the tutorial for [**MQTT Strorage (mqtt2influxdb)**](../command-line-tools/mqtt-to-influx-db.md)
+To make this part work without any additional configuration you need to follow the tutorial for [**MQTT Storage (mqtt2influxdb)**](../command-line-tools/mqtt-to-influx-db.md)
 
 :::
 

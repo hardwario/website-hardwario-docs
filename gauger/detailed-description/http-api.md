@@ -5,9 +5,9 @@ title: HTTP API
 
 # HTTP API
 
-The device host an HTTP server with an API on port 80. All requests have to be authenticated using HTTP Basic Auth. The user name will always be. The password is by default, but it is configurable using the option. The API can be disabled using the settings option.
+The device hosts an HTTP server with an API on port 80. All requests have to be authenticated using HTTP Basic Auth. The user name will always be. The password is by default, but it is configurable using the option. The API can be disabled using the settings option.
 
-Data is sent in a JSON format. All responses are a JSON object containing a boolean property. It is if the request succeeded, otherwise. If the request succeeded, any response data is contained in the field. If the request failed, there will be a field containing a single error message, or a list of multiple error messages.
+Data is sent in a JSON format. All responses are a JSON object containing a boolean property `ok`. It is `true` if the request succeeded, `false` otherwise. If the request succeeded, any response data is contained in the `data` field. If the request failed, there will be a `msg` field containing a single error message, or a list of multiple error messages.
 
 Example of a failed request:
 
@@ -47,7 +47,7 @@ Upload a firmware update to the device. The update is sent as raw octet stream i
 
 ### POST `/api/v1/rollback`
 
-Initiate a firmware rollback. The device will automatically reboot after seding a response.
+Initiate a firmware rollback. The device will automatically reboot after sending a response.
 
 ### POST `/api/v1/reboot`
 

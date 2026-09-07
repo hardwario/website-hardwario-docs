@@ -91,7 +91,7 @@ Only allowed values for payload are `true/false`.
 | Explanation  |                  MQTT Topic                  |                 Example                  |
 | :----------: | :------------------------------------------: | :--------------------------------------: |
 | Left Button  | `node/{id}/push-button/lcd:left/event-count` |                                          |
-| Right Button | `node/{id}/push-button/lcd:left/event-count` |                                          |
+| Right Button | `node/{id}/push-button/lcd:right/event-count` |                                          |
 | Clear Screen | `node/{id}/push-button/lcd:left/event-count` |                                          |
 |  Write Text  | `node/{id}/push-button/lcd:left/event-count` | `{"x": 5, "y": 10, "text": "HARDWARIO"}` |
 

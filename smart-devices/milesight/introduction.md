@@ -19,7 +19,7 @@ The Milesight portfolio covered in our documentation includes:
 
 * **Environmental Sensors (AM/EM Series):** Advanced devices for monitoring Indoor Air Quality (IAQ), temperature, humidity, CO2, and occupancy. Many models feature e-Ink screens for clear local data visualization.
 * **LoRaWAN Gateways (UG Series):** robust indoor and outdoor gateways that serve as the bridge between sensors and the cloud, featuring embedded network servers and high processing capability.
-* **IoT Controllers (UC Series):** Devices designed to bridge legacy sensors and actuators (4-20mA, Modbus RS485, GPIO) to LoRaWAN networks.
+* **IoT Controllers (UC Series):** Devices designed to bridge legacy sensors and actuators (4-20mA, Modbus RS-485, GPIO) to LoRaWAN networks.
 
 ### Why Choose Milesight?
 

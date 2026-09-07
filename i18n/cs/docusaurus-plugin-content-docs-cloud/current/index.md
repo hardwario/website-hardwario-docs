@@ -50,7 +50,7 @@ Cloud v2 spolu se subsystémem **LTE v2** v zařízení CHESTER přidává:
 
 :::info
 
-Informace o tom, jak používat nebo povýšit firmware zařízení CHESTER na LTE v2, najdete v [How To: LTE v2](/chester/firmware-sdk/how-to-lte-v2).
+Informace o tom, jak používat nebo aktualizovat firmware zařízení CHESTER na LTE v2, najdete v [How To: LTE v2](/chester/firmware-sdk/how-to-lte-v2).
 
 :::
 

@@ -73,7 +73,7 @@ Zobrazuje kompletní profil zařízení, vyplněný automaticky ze zpráv sessio
 
 ### Tags {#tags}
 
-Přiřazuje nebo odebírá tagy zařízení. Tagy určují, které konektory dostanou zprávy tohoto zařízení. Zařízení a konektor musí mít alespoň jeden tag společný, aby se zprávy přeposílaly.
+Přiřaďte nebo odeberte tagy zařízení. Tagy určují, které konektory dostanou zprávy tohoto zařízení. Zařízení a konektor musí mít alespoň jeden tag společný, aby se zprávy přeposílaly.
 
 ### Labels {#labels}
 

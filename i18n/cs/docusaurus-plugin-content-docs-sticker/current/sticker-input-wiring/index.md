@@ -1,7 +1,7 @@
 ---
 slug: sticker-input-wiring
 title: Zapojení vstupů STICKER Input
-description: "Zapojení pro 1-WIRE (Dallas, ...):"
+description: "Zapojení pro 1-Wire (Dallas, ...):"
 ---
 import Image from '@theme/IdealImage';
 
@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
 - |→⬛| **OFF**: DIP přepínač v poloze OFF (černě)
 
 ## Vstup 1-Wire {#1-wire-input}
-Zapojení pro 1-WIRE (Dallas, ...):
+Zapojení pro 1-Wire (Dallas, ...):
 - DIP přepínače povolují datové linky (DQ1/DQ2).
 
 ![STICKER 1-Wire](../../../../../sticker/sticker-input-wiring/images/sticker-1w.png)

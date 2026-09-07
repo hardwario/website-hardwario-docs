@@ -24,7 +24,7 @@ import Image from '@theme/IdealImage';
 
 |            Vysvětlení            |                  MQTT topic                  |
 | :-------------------------------: | :------------------------------------------: |
-|            Osvětlení            |    `node/{id}/lux-meter/0:0/illuminance`     |
+|           Osvětlenost           |    `node/{id}/lux-meter/0:0/illuminance`     |
 |         Relativní vlhkost         | `node/{id}/hygrometer/0:2/relative-humidity` |
 |             Tlak              |      `node/{id}/barometer/0:0/pressure`      |
 |             Nadmořská výška              |      `node/{id}/barometer/0:0/altitude`      |
@@ -92,7 +92,7 @@ Jediné povolené hodnoty payloadu jsou `true/false`.
 | Vysvětlení  |                  MQTT topic                  |                 Příklad                  |
 | :----------: | :------------------------------------------: | :--------------------------------------: |
 | Levé tlačítko  | `node/{id}/push-button/lcd:left/event-count` |                                          |
-| Pravé tlačítko | `node/{id}/push-button/lcd:left/event-count` |                                          |
+| Pravé tlačítko | `node/{id}/push-button/lcd:right/event-count` |                                          |
 | Smazání obrazovky | `node/{id}/push-button/lcd:left/event-count` |                                          |
 |  Vypsání textu  | `node/{id}/push-button/lcd:left/event-count` | `{"x": 5, "y": 10, "text": "HARDWARIO"}` |
 

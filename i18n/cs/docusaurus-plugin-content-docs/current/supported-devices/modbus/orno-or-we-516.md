@@ -87,11 +87,11 @@ Komunikační parametry lze nakonfigurovat přímo pomocí oficiálního softwar
 Konfigurační nástroj si můžete stáhnout zde:  
 **[Stáhnout konfigurační software ORNO pro OR-WE-516](../../../../../../chester/supported-devices/modbus/OR-WE-516_program.7z)**
 
-Pro připojení zařízení k počítači použijte **standardní převodník USB–RS485**.  
+Pro připojení zařízení k počítači použijte **standardní převodník USB–RS-485**.  
 
 :::info
-Připojte stranu USB standardního převodníku USB–RS485 k počítači, kde je nainstalován konfigurační software ORNO.
-Poté připojte stranu RS485 převodníku ke komunikačním svorkám elektroměru – **svorku A na pin 21** a **svorku B na pin 20**.
+Připojte stranu USB standardního převodníku USB–RS-485 k počítači, kde je nainstalován konfigurační software ORNO.
+Poté připojte stranu RS-485 převodníku ke komunikačním svorkám elektroměru – **svorku A na pin 21** a **svorku B na pin 20**.
 :::
 
 

@@ -12,7 +12,7 @@ description: "GAUGER is a configurable WiFi/Ethernet device used for counting pu
 The device hosts a web based user interface used for its configuration. It can also be controlled through an HTTP API. The counter values can be read via Modbus TCP.
 
 :::tip
-### To get your GAUGER running, read the [**Initial Configuration**](operation-instructions/initial-configuration.md) guide.
+### To get your GAUGER running, read the [**Initial Configuration**](operation-instructions/initial-configuration.md) guide
 :::
 
 <img src="/img/gauger-intro.webp" data-zoom-src="/img/gauger-intro.webp" width="540" alt="GAUGER" />

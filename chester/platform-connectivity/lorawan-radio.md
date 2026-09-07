@@ -199,6 +199,6 @@ In your (Mikrotik) gateway check **Network** configuration option, then configur
 Then go to the Mikrotik **Traffic** tab and see if you can see the **JOIN** packet from your device with **Dev Addr**. In this tab you see RAW encrypted packets from all devices around.
 But it is useful to check if the device and gateway is using the same private/public packet prefix.
 
-If you see packets arriving, then you might troubleshoot issues further in the CHIRPSTACK Gateways and **Live LoraWAN Frames** tab. Then only after here you can see packets, go to the Applications and look for decoded packets and troubleshoot for example wrong keys if the device's packets are not visible there.
+If you see packets arriving, then you might troubleshoot issues further in the CHIRPSTACK Gateways and **Live LoRaWAN Frames** tab. Then only after here you can see packets, go to the Applications and look for decoded packets and troubleshoot for example wrong keys if the device's packets are not visible there.
 
 **Netmore** is using the **public** network. To make your device's network type public, use the command `lrw config nwk public`.

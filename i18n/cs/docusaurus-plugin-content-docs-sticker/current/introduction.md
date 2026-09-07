@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 **STICKER** je otevřená IoT platforma založená na STM32WL s integrovanou konektivitou LoRaWAN a softwarově volitelným proprietárním režimem **LoRa P2P**, který umožňuje přímé spojení se zařízením **HARDWARIO FIBER**. Jde o kompaktní zařízení na baterie s dlouhou životností a hotovými aplikacemi, jako jsou STICKER Clime, Input a Motion.
 
 :::tip
-### Než zařízení STICKER rozběhnete, přečtěte si [**rychlého průvodce**](first-steps). {#to-get-your-sticker-running-read-the-quick-start-guide}
+### Než zařízení STICKER rozběhnete, přečtěte si [**rychlého průvodce**](first-steps) {#to-get-your-sticker-running-read-the-quick-start-guide}
 :::
 
 <img src="/img/sticker.webp" data-zoom-src="/img/sticker.webp" width="540" alt="STICKER – katalog" />
@@ -35,7 +35,7 @@ import Image from '@theme/IdealImage';
 
 ## Klíčové vlastnosti {#key-features}
 
-* **Extrémně nízká spotřeba:** Provoz po několik let na dvou běžných bateriích AA díky inteligentním režimům spánku a podpoře výrobního režimu Radio-Silent.
+* **Extrémně nízká spotřeba:** Provoz po několik let na dvou běžných bateriích AA díky inteligentním režimům spánku a podpoře režimu Radio-Silent nastaveného z výroby.
 * **Flexibilní konektivita a NFC:** Komunikace LoRaWAN na velké vzdálenosti v kombinaci se šifrovaným NFC pro okamžitou konfiguraci a správu.
 * **Modulární ekosystém:** Hotové katalogové aplikace (Clime, Motion, Input) pokrývající různé úlohy měření prostředí i průmyslových veličin.
 * **Otevřený a bezpečný firmware:** Postavený na Zephyr RTOS s nulovou plochou pro vzdálený útok (nahrávání pouze přes SWD, žádný bootloader v provozu).

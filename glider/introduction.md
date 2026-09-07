@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 **HARDWARIO GLIDER** is a compact **LTE-M / NB-IoT** IoT device built around the Nordic **nRF9151** SoC. It is designed for long-term, low-power monitoring of temperature, pulse counters, dry-contact events and **Modbus RTU** devices, and ships preconfigured to talk to **HARDWARIO Cloud**.
 
 :::tip
-### To get your GLIDER running, read the [**Quick Start Guide**](first-steps).
+### To get your GLIDER running, read the [**Quick Start Guide**](first-steps)
 :::
 
 <img src="/img/glider.webp" data-zoom-src="/img/glider.webp" width="540" alt="GLIDER" />

@@ -12,7 +12,7 @@ sidebar_label: Úvod
 Zařízení hostuje webové uživatelské rozhraní, které slouží k jeho konfiguraci. Lze jej ovládat také přes HTTP API. Hodnoty počítadel je možné čítat pomocí Modbus TCP.
 
 :::tip
-### Pro zprovoznění zařízení GAUGER si přečtěte návod [**Prvotní konfigurace**](operation-instructions/initial-configuration.md). {#to-get-your-gauger-running-read-the-initial-configuration-guide}
+### Pro zprovoznění zařízení GAUGER si přečtěte návod [**Prvotní konfigurace**](operation-instructions/initial-configuration.md) {#to-get-your-gauger-running-read-the-initial-configuration-guide}
 :::
 
 <img src="/img/gauger-intro.webp" data-zoom-src="/img/gauger-intro.webp" width="540" alt="GAUGER" />

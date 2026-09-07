@@ -16,7 +16,7 @@ Connecting through WiFi is done by connecting to the device’s Access Point. Th
 | Name                     | JSON Key                      | Type    | Default Value | Description                               |
 | :----------------------- | :---------------------------- | :------ | :------------ | :---------------------------------------- |
 | Device name              | `device_name`                 | String  |               | Hostname of the device                    |
-| Passowrd                 | `password`                    | String  |               | Password for the Web UI                   |
+| Password                 | `password`                    | String  |               | Password for the Web UI                   |
 | Web server status        | `enable_server`               | Bool    | true          | If false, HTTP server is disabled         |
 | Ethernet status          | `eth.enabled`                 | Bool    | true          | If false, Ethernet is disabled            |
 | Ethernet DHCP client     | `eth.net.dhcp`                | Bool    | false         | If true, DHCP client is enabled           |

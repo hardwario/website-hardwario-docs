@@ -19,7 +19,7 @@ Portfolio Milesight popsané v naší dokumentaci zahrnuje:
 
 * **Senzory prostředí (řada AM/EM):** Pokročilá zařízení pro monitorování kvality vnitřního ovzduší (IAQ), teploty, vlhkosti, CO2 a obsazenosti. Mnoho modelů má e-Ink displej pro přehlednou lokální vizualizaci dat.
 * **Brány LoRaWAN (řada UG):** robustní vnitřní i venkovní brány, které slouží jako most mezi senzory a cloudem, s vestavěným síťovým serverem a vysokým výpočetním výkonem.
-* **IoT kontroléry (řada UC):** Zařízení navržená k propojení starších senzorů a akčních členů (4-20mA, Modbus RS485, GPIO) se sítěmi LoRaWAN.
+* **IoT kontroléry (řada UC):** Zařízení navržená k propojení starších senzorů a akčních členů (4-20mA, Modbus RS-485, GPIO) se sítěmi LoRaWAN.
 
 ### Proč zvolit Milesight? {#why-choose-milesight}
 

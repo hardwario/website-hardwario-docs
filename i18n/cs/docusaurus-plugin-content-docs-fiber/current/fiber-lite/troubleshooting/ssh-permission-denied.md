@@ -6,7 +6,7 @@ description: "Pokud je SSH dostupné (dostanete výzvu k zadání hesla), ale he
 
 Pokud je SSH dostupné (dostanete výzvu k zadání hesla), ale heslo nastavené v Imageru je vždy
 odmítnuto, i hned po novém nahrání image s nově zadaným heslem, uživatelský účet
-**nebyl nikdy skutečně vytvořen**, bez ohledu na to, co je v `user-data`.
+**nejspíš nikdy nebyl skutečně vytvořen**, bez ohledu na to, co je v `user-data`.
 
 Nejrychlejší potvrzení: připojte kořenový souborový systém karty (větší oddíl `ext4`,
 `rootfs`) na jiném počítači (třeba do `/mnt/rootfs`) a zkontrolujte, zda účet vůbec

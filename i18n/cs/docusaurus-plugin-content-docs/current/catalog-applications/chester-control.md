@@ -475,11 +475,11 @@ import TabItem from '@theme/TabItem';
 
 ### v4.0.0 – 2026-08-10 {#v400--2026-08-10}
 
-- **Změněno**: Snížena maximální kapacita termometrů 1-Wire (10 → 5) a kapacita půdních senzorů (10 → 3) pro snížení využití RAM
+- **Změněno**: Snížena maximální kapacita teploměrů 1-Wire (10 → 5) a kapacita půdních senzorů (10 → 3) pro snížení využití RAM
 
 ### v3.5.5 – 2026-06-22 {#v355--2026-06-22}
 
-- **Změněno**: Zmenšena paměťová náročnost: data půdních senzorů a termometrů se nyní alokují dynamicky
+- **Změněno**: Zmenšena paměťová náročnost: data půdních senzorů a teploměrů se nyní alokují dynamicky
 
 ### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 

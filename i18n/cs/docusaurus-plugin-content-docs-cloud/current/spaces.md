@@ -55,7 +55,7 @@ Do svého prostoru můžete pozvat další uživatele ke spolupráci. Každý č
 | **Admin** | Plný přístup. Může přidávat/odebírat zařízení, spravovat konektory, zvát uživatele, měnit nastavení |
 | **User** | Přístup pouze pro čtení. Může prohlížet zařízení a zprávy, ale nemůže provádět změny |
 
-Pro pozvání členů a správu jejich rolí viz [**Users**](/cloud/users) v sekci **Administration**.
+Pro pozvání členů a správu jejich rolí viz [**Users**](/cloud/users) v sekci **Správa**.
 
 :::info
 

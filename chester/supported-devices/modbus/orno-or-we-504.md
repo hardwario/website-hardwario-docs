@@ -81,11 +81,11 @@ Communication parameters can be configured via the official ORNO configuration s
 
 [**Download ORNO configuration software for OR-WE-504**](https://files.orno.pl/support/Others/ORNO/ORWE504_5901752481282/OR-WE-504_program.zip)
 
-To connect the device to your PC, use a **standard USB–RS485 converter**.
+To connect the device to your PC, use a **standard USB–RS-485 converter**.
 
 :::info
 
-Connect the USB side of the USB–RS485 converter to your computer.
+Connect the USB side of the USB–RS-485 converter to your computer.
 Connect the RS-485 lines to the energy meter:
 - **A → Pin 23**
 - **B → Pin 25**

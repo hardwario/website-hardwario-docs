@@ -28,7 +28,7 @@ Každý člen má ve Space jednu ze dvou rolí:
 
 Obdrží e-mail s odkazem na pozvánku. Pro přijetí se přihlásí, nebo zaregistruje,
 pomocí **e-mailu a hesla**, účtu **Google** nebo účtu **Microsoft**. Po přijetí
-se objeví v seznamu Users s rolí, kterou jste jim přidělili.
+se objeví v seznamu Users s rolí, kterou jste mu přidělili.
 
 ## Správa členů {#managing-members}
 

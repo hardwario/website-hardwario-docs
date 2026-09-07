@@ -26,7 +26,7 @@ Tento článek vysvětluje, jak sestavit, nasadit a nahrát firmware aplikace do
 
 ## Nasazení {#deploy}
 
-Pro finální build firmwaru budete chtít sestavit firmware s názvem a verzí. Verze a název firmwaru budou vidět v aplikaci **HADRWARIO Manager** a v shellu zařízení po zadání příkazu `info show`. Verze firmwaru se také odesílá v NB-IoT paketu.
+Pro finální build firmwaru budete chtít sestavit firmware s názvem a verzí. Verze a název firmwaru budou vidět v aplikaci **HARDWARIO Manager** a v shellu zařízení po zadání příkazu `info show`. Verze firmwaru se také odesílá v NB-IoT paketu.
 
 1. Vyčistěte předchozí build příkazem `rm -rf build/`.
 
@@ -71,4 +71,4 @@ Až bude firmware sestavený, zavolejte ze stejné složky projektu:
 
 `hardwario chester app fw upload --name="hio-chester-input-z" --version="v1.5.0"`
 
-Poté obdržíte e-mail s **odkazy na firmware** a **QR kódem**, který lze naskenovat v mobilní aplikaci **HADRWARIO Manager** pro aktualizaci firmwaru.
+Poté obdržíte e-mail s **odkazy na firmware** a **QR kódem**, který lze naskenovat v mobilní aplikaci **HARDWARIO Manager** pro aktualizaci firmwaru.

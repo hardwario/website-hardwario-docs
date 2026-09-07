@@ -49,7 +49,7 @@ Toto jsou rozhraní, na která se **IP** adresy vztahují:
 
 * **WireGuard endpoint**: `192.168.17.10` pro 1. hotspot, `192.168.17.11` pro 2. hotspot atd.
 
-Výchozí zařízení **EMBER Hotspot** má následující přihlašovací údaje:
+Zařízení **EMBER Hotspot** má z výroby následující přihlašovací údaje:
 
 * Uživatelské jméno: `admin`
 

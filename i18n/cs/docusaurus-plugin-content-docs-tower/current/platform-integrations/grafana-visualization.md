@@ -17,7 +17,7 @@ Můžete použít náš [**předinstalovaný obraz**](../server-raspberry-pi/ins
 
 [**Grafana**](https://grafana.com) je otevřená platforma pro krásnou analytiku a monitoring. Umožňuje vytvářet přehledné dashboardy, které vám dají rychlý přehled o datech ze senzorů.
 
-<Image img={require('../../../../../tower/platform-integrations/images/grafana-for-visualization-grafana.png')} alt="Dashboard climate-station v Grafaně s ukazateli a grafy teploty, vlhkosti, osvětlení a tlaku" />
+<Image img={require('../../../../../tower/platform-integrations/images/grafana-for-visualization-grafana.png')} alt="Dashboard climate-station v Grafaně s ukazateli a grafy teploty, vlhkosti, osvětlenosti a tlaku" />
 
 ## Instalace Grafany {#install-grafana}
 
@@ -151,7 +151,7 @@ Po instalaci InfluxDB můžete přejít ke [**Grafaně**](https://grafana.com).
 
 :::
 
-#### Nainstalujte InfluxDB a povolte ji {#install-influxdb-and-enable-it-1}
+#### Nainstalujte Grafanu a povolte ji {#install-grafana-and-enable-it}
 
 ```bash
 brew install grafana
@@ -178,7 +178,7 @@ Výchozí **heslo** je `admin`.
 
 :::warning
 
-Aby tato část fungovala bez další konfigurace, je potřeba projít návod pro [**MQTT Strorage (mqtt2influxdb)**](../command-line-tools/mqtt-to-influx-db.md)
+Aby tato část fungovala bez další konfigurace, je potřeba projít návod pro [**MQTT Storage (mqtt2influxdb)**](../command-line-tools/mqtt-to-influx-db.md)
 
 :::
 

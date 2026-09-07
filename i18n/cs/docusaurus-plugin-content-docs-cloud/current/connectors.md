@@ -40,7 +40,7 @@ flowchart LR
    | **Direction** | `up`. Konektor reaguje na uplink zprávy (zařízení → Cloud) |
    | **Type** | `webhook`. Doručí zprávu jako HTTP požadavek |
    | **Triggers** | Které typy zpráv jej spouští (viz [Spouštěče](#triggers)) |
-   | **Tags** | Které tagy zařízení tento konektor odposlouchává |
+   | **Tags** | Na které tagy zařízení tento konektor reaguje |
 
    <div className="screenshot-narrow">
 

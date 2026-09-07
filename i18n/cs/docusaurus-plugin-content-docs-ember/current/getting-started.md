@@ -173,7 +173,7 @@ Zapnutí úvodní poznámky.
 - V levém panelu **System → Note** odškrtněte **Show At Login** a klikněte na **OK**.
 ![EMBER přidání ether3 do bridge0](../../../../ember/images/ember-note.png)
 
-#### Kontrola aktualizací RouterOS a jejich instalace, pokud jsou dostupné. {#checks-for-routeros-updates-and-installs-if-available}
+#### Kontrola aktualizací RouterOS a jejich instalace, pokud jsou dostupné {#checks-for-routeros-updates-and-installs-if-available}
 - V levém panelu **System → Packages → Check for Updates**. Otevře se nové okno, zkontrolujte, zda verze odpovídají. Pokud ne, klikněte na **Download&Install** a několik minut vyčkejte.
 ![EMBER aktualizace RouterOS](../../../../ember/images/ember-update-routeros.png)
 

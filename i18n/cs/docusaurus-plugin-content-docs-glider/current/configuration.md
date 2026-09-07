@@ -89,7 +89,7 @@ AT&W
 
 Tímto se počítá každá vzestupná hrana na CH1, pokud vstup zůstane v logické jedničce alespoň 5 ms (a mezi pulzy v nule alespoň 5 ms).
 
-## Slot pro termometry (`therm`) {#thermometer-slots-therm}
+## Sloty pro teploměry (`therm`) {#thermometer-slots-therm}
 
 Osm nezávislých slotů, jeden ROM kód na slot. Prázdné sloty se v payloadu do cloudu vynechávají.
 
@@ -103,7 +103,7 @@ V praxi byste tyto hodnoty neměli upravovat ručně – použijte `therm scan -
 
 ## Alarmy {#alarms}
 
-Nakonfigurovat lze až **32 nezávislých pravidel alarmu**. Každé pravidlo sleduje jeden slot termometru a přepíná mezi stavem **aktivní** a **neaktivní** podle prahové hodnoty s hysterezí:
+Nakonfigurovat lze až **32 nezávislých pravidel alarmu**. Každé pravidlo sleduje jeden slot teploměru a přepíná mezi stavem **aktivní** a **neaktivní** podle prahové hodnoty s hysterezí:
 
 - Pravidlo se **aktivuje**, když `teplota ≥ prahová hodnota`.
 - Pravidlo se **deaktivuje**, když `teplota ≤ prahová hodnota − hystereze`.
@@ -115,7 +115,7 @@ Stejné čtyři klíče existují pro každé pravidlo, s předponou `<n>-` (1-3
 | Klíč | Typ | Rozsah | Výchozí | Popis |
 | :--- | :--- | :--- | :--- | :--- |
 | `<n>-enabled` | bool | - | `false` | Hlavní vypínač pravidla. Je-li `false`, ostatní klíče tohoto pravidla jsou skryté. |
-| `<n>-therm` | int | 1–8 | **1** | Který slot termometru pravidlo sleduje. |
+| `<n>-therm` | int | 1–8 | **1** | Který slot teploměru pravidlo sleduje. |
 | `<n>-threshold` | float (°C) | −55–125 | **50** | Prahová hodnota aktivace. |
 | `<n>-hysteresis` | float (°C) | 0–50 | **5** | Odchylka deaktivace pod prahovou hodnotou. |
 

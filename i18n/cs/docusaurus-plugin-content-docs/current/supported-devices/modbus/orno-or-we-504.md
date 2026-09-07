@@ -82,11 +82,11 @@ Komunikační parametry lze nastavit pomocí oficiálního konfiguračního soft
 
 [**Stáhnout konfigurační software ORNO pro OR-WE-504**](https://files.orno.pl/support/Others/ORNO/ORWE504_5901752481282/OR-WE-504_program.zip)
 
-Pro připojení zařízení k počítači použijte **standardní převodník USB–RS485**.
+Pro připojení zařízení k počítači použijte **standardní převodník USB–RS-485**.
 
 :::info
 
-Připojte stranu USB převodníku USB–RS485 k počítači.
+Připojte stranu USB převodníku USB–RS-485 k počítači.
 Linky RS-485 připojte k elektroměru:
 - **A → Pin 23**
 - **B → Pin 25**

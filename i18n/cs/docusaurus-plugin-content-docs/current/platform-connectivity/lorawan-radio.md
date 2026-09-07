@@ -200,6 +200,6 @@ Ve své bráně (Mikrotik) zkontrolujte konfigurační volbu **Network**, poté 
 Poté přejděte na kartu **Traffic** v Mikrotiku a zkontrolujte, zda vidíte paket **JOIN** ze svého zařízení s **Dev Addr**. Na této kartě vidíte RAW zašifrované pakety ze všech zařízení v okolí.
 Je ale užitečné zkontrolovat, jestli zařízení a brána používají stejný privátní/veřejný prefix paketů.
 
-Pokud vidíte přicházející pakety, můžete problém dále řešit v CHIRPSTACK v části Gateways na kartě **Live LoraWAN Frames**. Až teprve poté, co zde uvidíte pakety, přejděte do Applications a hledejte dekódované pakety a řešte například špatné klíče, pokud tam pakety zařízení nejsou vidět.
+Pokud vidíte přicházející pakety, můžete problém dále řešit v CHIRPSTACK v části Gateways na kartě **Live LoRaWAN Frames**. Až teprve poté, co zde uvidíte pakety, přejděte do Applications a hledejte dekódované pakety a řešte například špatné klíče, pokud tam pakety zařízení nejsou vidět.
 
 **Netmore** používá **veřejnou** síť. Pro nastavení typu sítě vašeho zařízení na veřejnou použijte příkaz `lrw config nwk public`.

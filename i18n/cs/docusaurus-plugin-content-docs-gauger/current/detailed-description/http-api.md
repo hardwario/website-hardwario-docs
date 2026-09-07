@@ -8,7 +8,7 @@ description: "Zařízení na portu 80 provozuje HTTP server s API. Všechny pož
 
 Zařízení na portu 80 provozuje HTTP server s API. Všechny požadavky musí být autentizovány pomocí HTTP Basic Auth. Uživatelské jméno bude vždy. Heslo je výchozí, ale lze jej nastavit pomocí volby. API lze vypnout pomocí volby v nastavení.
 
-Data se odesílají ve formátu JSON. Všechny odpovědi jsou objekt JSON obsahující booleovskou vlastnost. Je-li požadavek úspěšný, jinak. Pokud požadavek uspěl, jsou případná data odpovědi obsažena v poli. Pokud požadavek selhal, bude přítomno pole obsahující jednu chybovou zprávu nebo seznam více chybových zpráv.
+Data se odesílají ve formátu JSON. Všechny odpovědi jsou objekt JSON obsahující booleovskou vlastnost `ok`. Ta je `true`, pokud požadavek uspěl, jinak `false`. Pokud požadavek uspěl, jsou případná data odpovědi obsažena v poli `data`. Pokud požadavek selhal, bude přítomno pole `msg` obsahující jednu chybovou zprávu nebo seznam více chybových zpráv.
 
 Příklad neúspěšného požadavku:
 

@@ -194,7 +194,7 @@ Klikněte na **ikonku tužky** vedle části bridge v nastavení, vyplňte ji n�
 #### Párování {#pairing}
 
 Nyní, jak vidíte na své obrazovce i na snímku níže, zařízení čeká na spárování s kódem `111-11-111`.
-Otevřete aplikaci **Domácnost** na svém iPhonu nebo iPadu a klikněte na **Přidat příslušenství > Nemám kód nebo jej nelze naskenovat > HARDWRIO bridge**.
+Otevřete aplikaci **Domácnost** na svém iPhonu nebo iPadu a klikněte na **Přidat příslušenství > Nemám kód nebo jej nelze naskenovat > HARDWARIO Bridge**.
 Na další obrazovce vyberte **Přesto přidat**. Na obrazovce, kde musíte zadat kód, zadejte do všech políček číslo `1`
 
 <div class="container">

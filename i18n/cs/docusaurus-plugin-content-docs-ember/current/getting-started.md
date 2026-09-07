@@ -141,7 +141,7 @@ Skript spusťte stisknutím **Enter**.
 Nyní je potřeba aktualizovat RouterOS. Přejděte na [Kontrola aktualizací RouterOS a jejich instalace, pokud jsou dostupné.](#checks-for-routeros-updates-and-installs-if-available).
 
 #### Ruční nastavení: {#manual-setup}
-Nastaví identitu systému na „ember".
+Nastaví identitu systému na „ember“.
 - **System → Identity** změňte identitu na **ember** a klikněte na **OK**.
 ![EMBER změna identity](../../../../ember/images/ember-change-identity.png)
 
@@ -306,7 +306,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 - Zkontrolujte LED indikátory ethernetového spoje.
 - Pokud jste ještě nespustili konfigurační skript, výchozí IP může být stále `172.31.255.254`.
 
-#### Brána je zapnutá, ale LoRaWAN server ji „nevidí" {#gateway-is-powered-but-not-seen-in-the-lorawan-server}
+#### Brána je zapnutá, ale LoRaWAN server ji „nevidí“ {#gateway-is-powered-but-not-seen-in-the-lorawan-server}
 - Zkontrolujte, zda je propojka odstraněná. Obrázek najdete [zde](#21-connect-to-ember-using-winbox-4).
 - Potvrďte cíl přeposílání brány (adresa serveru / porty / protokol).
 - Zkontrolujte připojení k internetu přes WAN/LTE.

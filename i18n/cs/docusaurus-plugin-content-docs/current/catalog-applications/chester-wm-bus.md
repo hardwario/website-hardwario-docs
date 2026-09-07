@@ -52,7 +52,7 @@ Toto zařízení podporuje novější stack **LTEv2** a **HARDWARIO Cloud v2**.
 
 ### CHESTER wM-Bus {#chester-wm-bus-1}
 
-Bateriové napájení 6 ks alkalických článků „D".
+Bateriové napájení 6 ks alkalických článků „D“.
 
 Katalogový hardware **CHESTER wM-Bus** se skládá z těchto objednacích kódů:
 

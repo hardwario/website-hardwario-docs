@@ -10,7 +10,7 @@ With our Iot Kit, you can build your network in the Sub-GHz band.
 
 :::info
 
-The radio frequency **868 MHz (for Europe)** or **915 MHz (for the U.S.)** allows long-distance communication and offers low-power operation. Since this frequency band is used for signal messages, you will not encounter interference with streaming protocols like WiFi, Bluetooth, etc.
+The radio frequency **868 MHz (for Europe)** or **915 MHz (for the U.S.)** allows long-distance communication and offers low-power operation. Since this frequency band is used for signal messages, you will not encounter interference with streaming protocols like Wi-Fi, Bluetooth, etc.
 
 :::
 

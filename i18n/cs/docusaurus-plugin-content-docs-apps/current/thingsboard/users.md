@@ -7,21 +7,21 @@ import Image from '@theme/IdealImage';
 
 # Přidávání uživatelů {#adding-users}
 
-V tomto návodu se naučíte, jak v ThingsBoardu vytvářet nové uživatelské účty, posílat aktivační odkazy a spravovat přihlašovací údaje.
+V tomto návodu se naučíte, jak v platformě ThingsBoard vytvářet nové uživatelské účty, posílat aktivační odkazy a spravovat přihlašovací údaje.
 
 ---
 
 ## Krok 1: Vytvořte nového uživatele {#step-1-create-a-new-user}
 
 1. V levém navigačním menu zvolte **Users**.
-2. Klikněte na tlačítko **„+" (plus)** na pravé straně obrazovky.
+2. Klikněte na tlačítko **„+“ (plus)** na pravé straně obrazovky.
 
-![Seznam uživatelů v ThingsBoardu s tlačítkem plus vpravo nahoře pro vytvoření nového uživatele](../../../../../apps/thingsboard/images/users-0.png)
+![Seznam uživatelů v platformě ThingsBoard s tlačítkem plus vpravo nahoře pro vytvoření nového uživatele](../../../../../apps/thingsboard/images/users-0.png)
 
 3. Zadejte potřebné informace o uživateli.
-4. Dole najdete sekci **Activation method**. Máte dvě možnosti, jak uživatele do ThingsBoardu pozvat (jde to udělat i později):
+4. Dole najdete sekci **Activation method**. Máte dvě možnosti, jak uživatele do platformy ThingsBoard pozvat (jde to udělat i později):
    - **Display activation link:** Vygeneruje odkaz, který můžete ručně zkopírovat a uživateli sami poslat.
-   - **Send activation mail:** Pošle automatický e-mail přímo z ThingsBoardu s aktivačním odkazem.
+   - **Send activation mail:** Pošle automatický e-mail přímo z platformy ThingsBoard s aktivačním odkazem.
 
 ![Krok User details v dialogu Add user s poli e-mail, jméno, telefon a volbou Activation method](../../../../../apps/thingsboard/images/users-1.png)
 

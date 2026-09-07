@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 # Jak vytvořit veřejný odkaz jen pro čtení {#how-to-create-a-read-only-public-link}
 
-Tento návod vysvětluje, jak nasdílet dashboard ThingsBoard veřejnou URL. Externí uživatelé si díky tomu můžou dashboard a jeho telemetrická data prohlédnout bez účtu v ThingsBoardu. Tento veřejný přístup je ve výchozím stavu striktně **jen pro čtení**, takže vaše data zůstávají v bezpečí.
+Tento návod vysvětluje, jak nasdílet dashboard ThingsBoard veřejnou URL. Externí uživatelé si díky tomu můžou dashboard a jeho telemetrická data prohlédnout bez účtu v platformě ThingsBoard. Tento veřejný přístup je ve výchozím stavu striktně **jen pro čtení**, takže vaše data zůstávají v bezpečí.
 
 ---
 
@@ -34,7 +34,7 @@ Aby dashboard správně zobrazoval data, potřebuje veřejný uživatel přístu
 **(Volitelně) Jak vytvořit novou grupu zařízení:**
 Pokud ještě žádnou konkrétní grupu nemáte, můžete si ji vytvořit:
 1. **Přejděte** v levém menu na **Devices -> Groups**.
-2. **Klikněte** vpravo nahoře na ikonu **„+"** (plus).
+2. **Klikněte** vpravo nahoře na ikonu **„+“** (plus).
 3. **Zadejte** název nové grupy a klikněte na **Add**.
 
 **Zveřejnění grupy zařízení:**
@@ -43,8 +43,8 @@ Pokud ještě žádnou konkrétní grupu nemáte, můžete si ji vytvořit:
 ![Seznam zařízení se zvýrazněnou kartou Groups v horní liště](../../../../../apps/thingsboard/images/public-link-3.png)
 
 2. **Najděte** grupu zařízení obsahující zařízení, která chcete na dashboardu zobrazit.
-   > **Tip:** Můžete použít vlastní grupu, nebo výchozí grupu **„All"**. Když zveřejníte grupu „All", budou se veřejným odkazem automaticky zobrazovat i všechna zařízení, která tomuto zákazníkovi přidáte v budoucnu, bez dalšího nastavování.
-3. **Klikněte** na **ikonu sdílení** (ikona se třemi spojenými body) na pravé straně řádku grupy. **Případně** klikněte na řádku na ikonu šipky/úpravy a zvolte **„Make entity group public"**.
+   > **Tip:** Můžete použít vlastní grupu, nebo výchozí grupu **„All“**. Když zveřejníte grupu „All“, budou se veřejným odkazem automaticky zobrazovat i všechna zařízení, která tomuto zákazníkovi přidáte v budoucnu, bez dalšího nastavování.
+3. **Klikněte** na **ikonu sdílení** (ikona se třemi spojenými body) na pravé straně řádku grupy. **Případně** klikněte na řádku na ikonu šipky/úpravy a zvolte **„Make entity group public“**.
 4. **Výsledek:** ThingsBoard automaticky přiřadí veřejnému uživateli systému oprávnění jen pro čtení k této grupě zařízení.
 
 ![Seznam grup zařízení s zakroužkovanou ikonou sdílení u grupy All a zobrazeným popiskem Make public](../../../../../apps/thingsboard/images/public-link-4.png)
@@ -58,7 +58,7 @@ Dále je potřeba nasdílet samotný dashboard.
 **(Volitelně) Jak vytvořit novou grupu dashboardů:**
 Pokud pro své dashboardy ještě žádnou konkrétní grupu nemáte:
 1. **Přejděte** v levém menu na **Dashboards -> Groups**.
-2. **Klikněte** vpravo nahoře na ikonu **„+"** (plus).
+2. **Klikněte** vpravo nahoře na ikonu **„+“** (plus).
 3. **Zadejte** název nové grupy a klikněte na **Add**.
 
 **Zveřejnění grupy dashboardů:**
@@ -67,7 +67,7 @@ Pokud pro své dashboardy ještě žádnou konkrétní grupu nemáte:
 ![Seznam dashboardů se zvýrazněnou kartou Groups v horní liště](../../../../../apps/thingsboard/images/public-link-1.png)
 
 2. **Najděte** grupu dashboardů, která obsahuje dashboard, jejž chcete nasdílet.
-3. **Klikněte** na **ikonu sdílení** (ikona se třemi spojenými body) na pravé straně řádku grupy. **Případně** klikněte na řádku na ikonu šipky/úpravy a zvolte **„Make entity group public"**.
+3. **Klikněte** na **ikonu sdílení** (ikona se třemi spojenými body) na pravé straně řádku grupy. **Případně** klikněte na řádku na ikonu šipky/úpravy a zvolte **„Make entity group public“**.
 
 ![Seznam grup dashboardů s zakroužkovanou ikonou sdílení u grupy All a zobrazeným popiskem Make public](../../../../../apps/thingsboard/images/public-link-2.png)
 
@@ -80,7 +80,7 @@ Teď, když jsou veřejná zařízení i dashboard, můžete vygenerovat a nasd�
 1. **Zůstaňte** v sekci **Dashboards -> Groups**.
 2. **Klikněte** přímo na **název** grupy dashboardů, kterou jste právě zveřejnili. Grupa se otevře a zobrazí seznam všech dashboardů v ní.
 3. **Najděte** konkrétní dashboard, který chcete nasdílet.
-4. **Klikněte** na první ikonu na pravé straně řádku dashboardu, **ikonu řetězu (🔗)** s popiskem „Public dashboard link".
+4. **Klikněte** na první ikonu na pravé straně řádku dashboardu, **ikonu řetězu (🔗)** s popiskem „Public dashboard link“.
 5. **Výsledek:** URL je nyní ve vaší schránce. 
 
 Tento odkaz můžete poslat svým klientům nebo uživatelům. Kdokoli s tímto odkazem si může dashboard a jeho data v reálném čase zobrazit přímo v prohlížeči, bez přihlašování.

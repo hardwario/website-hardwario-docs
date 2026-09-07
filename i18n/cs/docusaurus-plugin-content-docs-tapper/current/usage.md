@@ -22,7 +22,7 @@ Vypíše verzi buildu klienta TAPPER na stdout.
 
 Spustí klienta.
 
-`tapper run [OPTIONS]` nebo `sudo ~/.local/bin/tapper run [OPTIONS]`, pokud chcete použít konfiguraci WiFi.
+`tapper run [OPTIONS]` nebo `sudo ~/.local/bin/tapper run [OPTIONS]`, pokud chcete použít konfiguraci Wi-Fi.
 
 :::info 
 
@@ -93,9 +93,9 @@ Viz [Nastavení MQTT TLS](/tapper/tls-setup/)
 
 :::
 
-### WiFi {#wifi}
+### Wi-Fi {#wifi}
 
-- WiFi lze nastavit buď ve statickém, nebo v dynamickém režimu.
+- Wi-Fi lze nastavit buď ve statickém, nebo v dynamickém režimu.
 
 :::tip
 

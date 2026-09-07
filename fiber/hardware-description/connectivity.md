@@ -9,7 +9,7 @@ title: Connectivity
 * **Ethernet (LAN)**
   Reliable wired networking for industrial environments.
 
-* **WiFi**
+* **Wi-Fi**
   For wireless deployments without physical cabling.
 
 * **Bluetooth Low Energy (BLE)**

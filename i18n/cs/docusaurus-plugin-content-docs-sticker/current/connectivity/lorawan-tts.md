@@ -31,7 +31,7 @@ STICKER se čte telefonem s **Androidem** a NFC.
 1. **Uložte zařízení, aby aplikace měla jeho secret key.** STICKER odpovídá jen
    šifrovaným kanálem, takže bez klíče aplikace nic nepřečte. Každé zařízení přidáte
    jednou (viz
-   [**Uložené STICKERy**](/apps/hardwario-manager/sticker/saved-stickers)) a od té
+   [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)) a od té
    doby aplikace klíč doplňuje automaticky.
 2. **Otevřete STICKER → LoRaWAN keys** a zvolte **Read LoRaWAN keys**.
 3. **Přiložte telefon.** Zadní stranou telefonu se dotkněte krabičky STICKER a

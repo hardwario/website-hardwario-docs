@@ -38,7 +38,7 @@ přečtete jeho sériové číslo a aplikace doplní token, který k němu má u
 Tlačítko s kostkou vygeneruje náhodný klíč, takže si ho nemusíte vymýšlet.
 
 Po úspěchu se nový secret key uloží zpět do vašeho seznamu
-[**Uložené STICKERy**](./saved-stickers.md), takže zařízení funguje dál, aniž
+[**Saved STICKERs**](./saved-stickers.md), takže zařízení funguje dál, aniž
 byste cokoli ručně přepisovali.
 
 :::caution Change secret key zároveň resetuje konfiguraci

@@ -16,7 +16,7 @@ GLIDER provozuje plnohodnotný **Zephyr shell**, který zpřístupňuje příkaz
 Ekvivalentní AT příkazy dostupné přes USB-C najdete na stránce [**AT příkazy**](at-commands.md).
 :::
 
-Tato stránka uvádí příkazy specifické pro GLIDER. Obecné příkazy Zephyru (`kernel`, `log`, `device`, …) zde nejsou znovu uváděny.
+Tato stránka uvádí příkazy specifické pro GLIDER. Obecné příkazy systému Zephyr (`kernel`, `log`, `device`, …) zde nejsou znovu uváděny.
 
 ## Obecný pod-příkaz `config` {#generic-config-sub-command}
 

@@ -92,7 +92,7 @@ Kliknutím na klíč ho přidáte jako odznak. Už přidané klíče jsou označ
 Napište název klíče přímo do pole a stiskněte **Enter** nebo klikněte na **+ Add**. To se hodí u zařízení, která ještě žádnou telemetrii neposlala.
 
 :::caution Důležité
-Název proměnné musí přesně odpovídat telemetrickému klíči, jak ho zařízení posílá (rozlišují se velká a malá písmena). Dostupné klíče zkontrolujete tak, že otevřete zařízení v ThingsBoardu → karta *Latest Telemetry*.
+Název proměnné musí přesně odpovídat telemetrickému klíči, jak ho zařízení posílá (rozlišují se velká a malá písmena). Dostupné klíče zkontrolujete tak, že otevřete zařízení v platformě ThingsBoard → karta *Latest Telemetry*.
 :::
 
 ### Krok 3: Nastavte podmínku {#step-3-set-the-condition}
@@ -104,7 +104,7 @@ V bloku **CONDITION** určete, kdy se má notifikace odeslat.
 | **Operator** | Operátor porovnání: větší než, menší než, rovná se, větší nebo rovno, menší nebo rovno. | > greater than |
 | **Threshold** | Hodnota, se kterou se naměřená telemetrie porovnává. | 28 |
 
-Příklad: *Operator = > greater than, Threshold = 28* znamená: „Pošli notifikaci, když hodnota proměnné překročí 28."
+Příklad: *Operator = > greater than, Threshold = 28* znamená: „Pošli notifikaci, když hodnota proměnné překročí 28.“
 
 ### Krok 4: Nastavte časování {#step-4-configure-timing}
 
@@ -231,12 +231,12 @@ Použijte přepínač jazyka v pravém horním rohu widgetu. Vaše volba se ukl�
 Pravidlo se odstraní ze všech zařízení, kde bylo uložené. Tuhle akci nelze vzít zpět.
 
 **Jak zjistím, které telemetrické klíče moje zařízení posílá?**  
-Otevřete v ThingsBoardu detail zařízení (sekce *Devices*) a klikněte na kartu *Latest Telemetry*. Jsou tam vypsané všechny klíče i jejich aktuální hodnoty.
+Otevřete v platformě ThingsBoard detail zařízení (sekce *Devices*) a klikněte na kartu *Latest Telemetry*. Jsou tam vypsané všechny klíče i jejich aktuální hodnoty.
 
 **Můžu nastavit pravidlo pro zařízení podřízeného zákazníka?**  
 Ano. Pokud spravujete podřízené zákazníky, zvolte příslušného zákazníka filtrem v horní liště. Při vytváření pravidla se pak zobrazí jen zařízení tohoto zákazníka.
 
-**Co znamená odznak „1 email" nebo „1 SMS" v tabulce?**  
+**Co znamená odznak „1 email“ nebo „1 SMS“ v tabulce?**  
 Ukazuje počet a typ příjemců daného pravidla. Najetím myší na odznak zobrazíte konkrétní adresy nebo telefonní čísla.
 
 **Jak poznám, že se pravidlo spustilo?**  

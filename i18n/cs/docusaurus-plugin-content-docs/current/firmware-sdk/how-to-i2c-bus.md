@@ -10,7 +10,7 @@ Tento článek ukazuje, jak komunikovat s cílovými zařízeními na sběrnici 
 
 :::caution
 
-Z pohledu Zephyru je správný způsob komunikace s cílovými zařízeními I²C vytvoření řádného ovladače zařízení podle [modelu ovladačů zařízení Zephyr](https://docs.zephyrproject.org/latest/kernel/drivers/index.html).
+Z pohledu systému Zephyr je správný způsob komunikace s cílovými zařízeními I²C vytvoření řádného ovladače zařízení podle [modelu ovladačů zařízení Zephyr](https://docs.zephyrproject.org/latest/kernel/drivers/index.html).
 
 Pro jednoduché ověření konceptu však lze použít následující postup.
 

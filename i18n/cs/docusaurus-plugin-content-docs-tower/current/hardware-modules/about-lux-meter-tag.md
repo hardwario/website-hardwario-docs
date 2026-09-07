@@ -30,9 +30,9 @@ Senzor můžete použít k **detekci dne a noci** nebo jako doplňkovou informac
 - Efektivní dynamický rozsah 23 bitů
 - Volitelný výstup přerušení
 - Spotřeba:
-  - Proud v aktivním režimu: 1.8 µA
-  - Proud ve vypnutém režimu: 0.3 µA
-- Rozsah napájecího napětí: 1.6 V až 3.6 V
+  - Proud v aktivním režimu: 1,8 µA
+  - Proud ve vypnutém režimu: 0,3 µA
+- Rozsah napájecího napětí: 1,6 V až 3,6 V
 - Rozsah provozních teplot: -20 až 70 °C
 - Mechanické rozměry: 16 x 16 mm
 

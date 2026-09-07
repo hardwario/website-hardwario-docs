@@ -16,7 +16,7 @@ Fungují dva formáty a oba dělají totéž:
 - **JSON**: pro seznam vytvořený jiným systémem nebo skriptem.
 
 Import zapisuje jen do vašeho uloženého seznamu, viz
-[**Uložené STICKERy**](./saved-stickers.md).
+[**Saved STICKERs**](./saved-stickers.md).
 
 ---
 
@@ -82,7 +82,7 @@ Zabalený objekt funguje také, pokud to tak váš systém produkuje:
 | Pole | Povinné | Co to je |
 |---|---|---|
 | `serial` | **ano** | Sériové číslo zařízení, jako obyčejné dekadické číslo, například `2162165139`. Je to identita položky. Řádky se k zařízením párují podle něj. |
-| `name` | ne | Váš vlastní popisek zařízení („Front door"). Když ho necháte prázdný, aplikace zobrazí `STICKER <serial>`. |
+| `name` | ne | Váš vlastní popisek zařízení („Front door“). Když ho necháte prázdný, aplikace zobrazí `STICKER <serial>`. |
 | `secret_key` | ne | Klíč AES-128 zařízení. **32 hex číslic** (16 bajtů). Bez něj se zařízení uloží, ale aplikace ho umí jen číst, ne konfigurovat. |
 | `vendor_key` | ne | Vendor token, jen pro vendor a servisní použití. Stejný tvar 32 hex číslic. Nechte prázdný, pokud vám ho dodavatel nedal. |
 | `tags` | ne | Vaše vlastní popisky pro seskupování a filtrování, **oddělené středníky**: `warehouse-a;installed`. **Jen v CSV**, viz níže. |
@@ -100,7 +100,7 @@ písmena (aplikace je ukládá malými) a mezery, dvojtečky a pomlčky se ignor
 **Nulový** `secret_key` (`00000000000000000000000000000000`) se odmítá: to je
 nenastavená výchozí hodnota firmwaru a zařízení jí adresovat nelze. Řádek se
 naimportuje, jen bez klíče. Nulový `vendor_key` se **přijímá**, u vendor tokenu
-samé nuly legitimně znamenají „nezprovozněno".
+samé nuly legitimně znamenají „nezprovozněno“.
 
 ### tags {#tags}
 
@@ -243,7 +243,7 @@ poznámky se ve všech jazycích aplikace zobrazují anglicky.
 Pokud už máte uložené jedno zařízení, umí aplikace vyrobit správně tvarovaný
 soubor k vyplnění: **menu ⋮ → Export**, vyberte zařízení, případně zapněte
 **Include vendor token** a **Include tags** a pak dejte **Share as CSV** nebo
-**Share as JSON**. Možnosti exportu popisují [**Uložené STICKERy**](./saved-stickers.md).
+**Share as JSON**. Možnosti exportu popisují [**Saved STICKERs**](./saved-stickers.md).
 
 Co z toho vypadne, je přesně to, co importér čte zpět, takže je to nejbezpečnější
 výchozí bod, a přesun seznamu mezi dvěma telefony je tím na dva kroky.

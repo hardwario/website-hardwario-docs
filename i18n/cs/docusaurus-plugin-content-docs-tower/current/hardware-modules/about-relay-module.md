@@ -23,12 +23,12 @@ import Image from '@theme/IdealImage';
 ## Vlastnosti {#features}
 - **Bistabilní (latching) relé** pro spínání zátěží do 60 W:
   - **12 V DC / 5 A**
-  - **24 V DC / 2.5 A**
+  - **24 V DC / 2,5 A**
 - Řízení pomocí **sběrnice I²C**
 - Vhodné pro **bateriové aplikace**
 - Energie pro cívku je potřeba pouze během přechodových stavů
 - **Červená a zelená** LED indikují napájení cívky
-- Rozsah provozního napětí: 3.0 až 3.6 V
+- Rozsah provozního napětí: 3,0 až 3,6 V
 - Rozsah provozních teplot: -20 až 70 °C
 - Mechanické rozměry: 33 x 55 mm
 

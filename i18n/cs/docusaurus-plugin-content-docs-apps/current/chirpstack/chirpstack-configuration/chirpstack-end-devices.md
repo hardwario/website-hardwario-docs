@@ -13,7 +13,7 @@ Tento návod vás provede vytvořením profilů zařízení a přidáním koncov
 
 ## 1. Profily zařízení {#1-device-profiles}
 
-Po přidání bran je dalším krokem vytvoření profilů zařízení v ChirpStacku.  
+Po přidání bran je dalším krokem vytvoření profilů zařízení v platformě ChirpStack.  
 
 1. V navigační liště klikněte na **Device Profiles**.  
 2. Klikněte na **Add Device Profile** (vpravo nahoře).  

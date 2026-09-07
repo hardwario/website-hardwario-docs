@@ -132,7 +132,7 @@ Zařízení uložte.
 ### 5.3 Nastavení AppKey v ChirpStack {#53-configure-appkey-in-chirpstack}
 
 - V detailu zařízení nastavte nebo vygenerujte **AppKey**
-- AppKey pečlivě zkopírujte (případně použijte ikonu „oka")
+- AppKey pečlivě zkopírujte (případně použijte ikonu „oka“)
 - Stejný AppKey použijte v konfiguraci zařízení CHESTER
 
 ---

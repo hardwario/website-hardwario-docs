@@ -18,7 +18,7 @@ If you already have your Raspberry Pi running with **Raspberry Pi OS** and you j
 - Raspberry Pi 3B+ or better
 - MicroSD card with a minimum capacity of 4 GB
 - MicroSD Card Reader (+ optional SD Card Adapter)
-- Ethernet cable or WiFi
+- Ethernet cable or Wi-Fi
 - Router (or LAN switch) with the DHCP server set up
 - Computer with one of the following operating systems:
   - Windows 7, 8, 10 (32-bit or 64-bit)
@@ -46,7 +46,7 @@ If you already have your Raspberry Pi running with **Raspberry Pi OS** and you j
     - Use password authentication
   - Set **password**
     - You can set up whatever password you want but we recommend a strong one. Just make sure to remember it. Please keep the username as **pi** since the image relies on this username.
-  - You can also Configure wireless LAN (WiFi) but that is optional if you have a LAN connection
+  - You can also Configure wireless LAN (Wi-Fi) but that is optional if you have a LAN connection
   <div class="container">
     <div class="row">
       <div class="col col--7">
@@ -61,7 +61,7 @@ If you already have your Raspberry Pi running with **Raspberry Pi OS** and you j
 
 :::note
 
-After the flashing is finished insert the microSD card into your Raspberry Pi. If you didn't set up **WiFi**, connect your Ethernet cable. Connect [**Radio Dongle**](../hardware-modules/about-radio-dongle.md) and apply power to your Raspberry Pi.
+After the flashing is finished insert the microSD card into your Raspberry Pi. If you didn't set up **Wi-Fi**, connect your Ethernet cable. Connect [**Radio Dongle**](../hardware-modules/about-radio-dongle.md) and apply power to your Raspberry Pi.
 
 After that, you are ready to start using your server.
 

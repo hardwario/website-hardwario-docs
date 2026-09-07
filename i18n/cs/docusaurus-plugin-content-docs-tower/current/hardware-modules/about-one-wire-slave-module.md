@@ -19,7 +19,7 @@ import Image from '@theme/IdealImage';
 
 ## Vlastnosti {#features}
 - Integrovaný most 1-Wire na I²C master DS28E17 (Maxim)
-- Rozsah provozního napětí: 2.5 V až 3.6 V
+- Rozsah provozního napětí: 2,5 V až 3,6 V
 - Rozsah provozních teplot: -20 až 70 °C
 - Mechanické rozměry: 33 x 55 mm
 

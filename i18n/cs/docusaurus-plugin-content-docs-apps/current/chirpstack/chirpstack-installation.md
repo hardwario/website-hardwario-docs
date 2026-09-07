@@ -25,7 +25,7 @@ sudo apt update && sudo apt upgrade -y
 
 ### Instalace potřebných závislostí {#install-required-dependencies}
 
-Nainstalujte `Mosquitto`, `Redis` a `PostgreSQL`, které jsou pro provoz ChirpStacku nezbytné:
+Nainstalujte `Mosquitto`, `Redis` a `PostgreSQL`, které jsou pro provoz platformy ChirpStack nezbytné:
 
 ```bash
 sudo apt install \
@@ -66,7 +66,7 @@ postgresql
 
 ### Přidání repozitáře ChirpStack {#add-chirpstack-repository}
 
-Standardní nastavení repozitáře (doporučené dokumentací ChirpStacku):
+Standardní nastavení repozitáře (doporučené dokumentací ChirpStack):
 
 1. Nainstalujte potřebné balíčky:
 
@@ -92,7 +92,7 @@ Standardní nastavení repozitáře (doporučené dokumentací ChirpStacku):
    sudo apt update
    ```
 
-### Instalace ChirpStacku a Gateway Bridge {#install-chirpstack-and-gateway-bridge}
+### Instalace platformy ChirpStack a Gateway Bridge {#install-chirpstack-and-gateway-bridge}
 
 Aktualizujte seznam balíčků a nainstalujte `ChirpStack server` a `Gateway Bridge`:
 
@@ -108,9 +108,9 @@ Vygenerujte unikátní secret key pro zabezpečení API a přihlašovacích toke
 openssl rand -base64 32
 ```
 
-### Konfigurace ChirpStacku {#configure-chirpstack}
+### Konfigurace platformy ChirpStack {#configure-chirpstack}
 
-1. Otevřete konfigurační soubor ChirpStacku:
+1. Otevřete konfigurační soubor ChirpStack:
 
    ```bash
    sudo nano /etc/chirpstack/chirpstack.toml
@@ -248,7 +248,7 @@ Abyste se ujistili, že je vaše brána **LoRaWAN** připojená a funkční:
 
 - Řešení problémů s připojením:
 
-  - Zkontrolujte logy brány, abyste se ujistili, že je komunikace s ChirpStackem správně nastavená.
+  - Zkontrolujte logy brány, abyste se ujistili, že je komunikace s platformou ChirpStack správně nastavená.
 
   - Zkontrolujte konfiguraci topiců **MQTT** v souboru `chirpstack-gateway-bridge.toml`.
 
@@ -256,4 +256,4 @@ Abyste se ujistili, že je vaše brána **LoRaWAN** připojená a funkční:
 
 ## Dokončení {#completion}
 
-Instalace ChirpStacku je hotová! Nyní se můžete přihlásit do webového rozhraní ChirpStack a nastavit své brány a zařízení LoRaWAN. Pokud narazíte na problémy, podívejte se do logů nebo do oficiální [dokumentace ChirpStack](https://www.chirpstack.io/docs/index.html).
+Instalace platformy ChirpStack je hotová! Nyní se můžete přihlásit do webového rozhraní ChirpStack a nastavit své brány a zařízení LoRaWAN. Pokud narazíte na problémy, podívejte se do logů nebo do oficiální [dokumentace ChirpStack](https://www.chirpstack.io/docs/index.html).

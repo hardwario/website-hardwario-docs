@@ -59,7 +59,7 @@ K dispozici je také [**Arduino knihovna pro Soil Sensor**](https://github.com/h
 - Možnost připojit více senzorů paralelně
 - Převodník kapacity na digitální signál **ZSSC3123**
 - Digitální **teplotní senzor TMP112**
-- Rozsah napájecího napětí: 2.8 V až 5.5 V
+- Rozsah napájecího napětí: 2,8 V až 5,5 V
 - Rozsah provozních teplot: -40 až +85 °C
 - Krytí IP 68
 

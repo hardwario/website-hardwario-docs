@@ -29,7 +29,7 @@ Reset ani aktualizace firmwaru nesmí zařízení v provozu odstrojit víc, než
 | **Device reset** | Identitu zařízení **a celé zprovoznění LoRaWAN** (klíče i session): zařízení zůstává zprovozněné a připojené, na výchozí hodnoty se vrací jen konfigurace. Dostupné přes shell, NFC i downlink LoRaWAN. |
 | **Factory reset** | Pouze identitu zařízení. Sériové číslo, vendor token, secret key, nonce, claim token, DevEUI a JoinEUI. **Zahazuje session a klíče LoRaWAN**, takže se zařízení do sítě připojí znovu. **Jen přes NFC nebo shell**. Přes downlink LoRaWAN je odmítnut, protože by zničil právě tu session, kterou je potřeba k jeho potvrzení. |
 | **Vendor reset** | Pouze sériové číslo a vendor token. Konfigurace, klíče LoRaWAN i secret key se vymažou a jako součást resetu **musí být zadaný nový secret key**. Autorizuje ho vendor token, a to jen přes shell nebo vyhrazený vendor kanál NFC. |
-| **`settings erase`** | Nic. Úplné vymazání do prázdného zařízení včetně sériového čísla. Záchranná brzda „návrat do prázdna", dostupná jen ze shellu. |
+| **`settings erase`** | Nic. Úplné vymazání do prázdného zařízení včetně sériového čísla. Záchranná brzda „návrat do prázdna“, dostupná jen ze shellu. |
 
 Sada identity (sériové číslo, secret key, čítač nonce, vendor token) i zprovoznění LoRaWAN si zaznamenávají, které úrovně je zachovávají, takže migrace schématu konfigurace při aktualizaci firmwaru obnoví chráněnou sadu po aplikaci nových výchozích hodnot.
 

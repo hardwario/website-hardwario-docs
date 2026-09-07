@@ -10,7 +10,7 @@ registraci v síti, přes NFC, za několik sekund.
 
 :::info Zařízení nejdřív uložte
 Obě obrazovky používají šifrovaný kanál, takže zařízení musí být uložené se svým
-**secret key**. Viz [**Uložené STICKERy**](./saved-stickers.md).
+**secret key**. Viz [**Saved STICKERs**](./saved-stickers.md).
 :::
 
 ---
@@ -74,7 +74,7 @@ akce sdílení pokrývají celou sadu a **Share all** je vyexportuje společně.
 <img src="/img/hw-manager/hw-manager-lrw-keys-share.png" alt="Sdílení klíčů LoRaWAN jako JSON, CSV, text nebo QR kód" width="320" />
 
 Použijte je k registraci zařízení v
-[**ChirpStacku**](/sticker/connectivity/lorawan-chirpstack) nebo
+[**ChirpStack**](/sticker/connectivity/lorawan-chirpstack) nebo
 [**The Things Stack**](/sticker/connectivity/lorawan-tts).
 
 :::caution Export klíčů je úplný

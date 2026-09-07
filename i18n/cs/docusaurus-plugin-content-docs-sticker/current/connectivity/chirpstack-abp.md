@@ -77,9 +77,9 @@ Tento kodek zároveň **kóduje downlink příkazy** (funkcí `encodeDownlink`),
 
 ---
 
-## 3) Vytvořte aplikaci v ChirpStacku {#3-create-an-application-in-chirpstack}
+## 3) Vytvořte aplikaci v platformě ChirpStack {#3-create-an-application-in-chirpstack}
 
-V ChirpStacku přejděte na **Applications → Add Application** a vyplňte pole:
+V platformě ChirpStack přejděte na **Applications → Add Application** a vyplňte pole:
 - Name: **STICKER** (nebo jakékoli jméno)
 ![Chirpstack přidání aplikace](../../../../../sticker/connectivity/images/chirpstack-add-appliaction.png)
 

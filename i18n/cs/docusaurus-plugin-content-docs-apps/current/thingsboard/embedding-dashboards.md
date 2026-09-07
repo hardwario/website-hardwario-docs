@@ -12,7 +12,7 @@ Tento návod vás provede vložením dashboardů ThingsBoard do externích webov
 
 ## Předpoklad: veřejný přístup {#prerequisites-public-access}
 
-Než začnete cokoli vkládat, musí být dashboard **a jeho zdroje dat** veřejně přístupné. Pokud tento krok vynecháte, návštěvníci uvidí místo grafů přihlašovací obrazovku ThingsBoardu.
+Než začnete cokoli vkládat, musí být dashboard **a jeho zdroje dat** veřejně přístupné. Pokud tento krok vynecháte, návštěvníci uvidí místo grafů přihlašovací obrazovku ThingsBoard.
 
 Ve zkratce potřebujete:
 1. Zveřejnit **grupu dashboardů**.

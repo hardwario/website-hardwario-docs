@@ -10,5 +10,5 @@ The device offers both DHCP client and server functionality. Whether the device 
 | Interface         | DHCP Role |
 | :---------------- | :-------- |
 | Ethernet          | Client    |
-| WiFi Access Point | Server    |
-| WiFi Station      | Client    |
+| Wi-Fi Access Point | Server    |
+| Wi-Fi Station      | Client    |

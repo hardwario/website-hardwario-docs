@@ -5,7 +5,7 @@ title: Správa MQTT zpráv
 import Image from '@theme/IdealImage';
 
 
-V této kapitole si projdeme **záložku Messages** v Playgroundu
+V této kapitole si projdeme **záložku Messages** v aplikaci HARDWARIO Playground
 
 :::info
 
@@ -69,7 +69,7 @@ Pokud chcete téma ze **seznamu odebíraných** odstranit, stiskněte **tlačít
 
 :::note
 
-Tento seznam se **resetuje při každém** spuštění Playgroundu.
+Tento seznam se **resetuje při každém** spuštění aplikace HARDWARIO Playground.
 
 :::
 

@@ -71,7 +71,7 @@ Tento postup probíhá v rozhraní vašeho LoRaWAN network serveru (např. TTN, 
 
 ### Kroky registrace {#registration-steps}
 
-1. **Vytvořte aplikaci**: Vytvořte složku nebo kontejner (např. „Field_Testing")
+1. **Vytvořte aplikaci**: Vytvořte složku nebo kontejner (např. „Field_Testing“)
 2. **Přidejte zařízení**:
    - **Name**: Zadejte označení (např. FT101-Tester)
    - **Device EUI**: Zadejte kód získaný z testeru
@@ -91,8 +91,8 @@ Informace o podporovaných platformách LoRaWAN network serverů najdete zde �
 
 Sledujte **Network Status** v horní liště domovské obrazovky.
 
-- **Úspěch**: Stav se změní na „Connected"
-- **Řešení problémů**: Pokud zařízení i po několika minutách stále zobrazuje „Not connected to the gateway":
+- **Úspěch**: Stav se změní na „Connected“
+- **Řešení problémů**: Pokud zařízení i po několika minutách stále zobrazuje „Not connected to the gateway“:
   - Restartujte aplikaci (stiskem prostředního tlačítka otevřete správce úloh a aplikaci zavřete)
   - **Vzdálenost**: Ověřte v logách LNS, že jste v dosahu brány
   - **Chyby v klíčích**: Zkontrolujte překlepy v App Key (např. záměnu '0' za 'O')
@@ -106,7 +106,7 @@ Sledujte **Network Status** v horní liště domovské obrazovky.
 |----------|-------------|-----------|
 | **Testování v reálném čase** | Zobrazuje okamžité hodnoty RSSI a SNR pro vaši aktuální pozici | Okamžité ověření stavu sítě na přesném místě |
 | **Vyhodnocení signálu** | Testuje různé kombinace Data Rate (DR) a Spreading Factor (SF7–SF12) | Nalezení nejstabilnějšího nastavení SF/DR pro spolehlivý provoz |
-| **Noise Scan** | Skenuje spektrum (863–870 MHz) a měří rušivé rádiové pozadí | Odhalení „rádiového smogu", který by mohl blokovat komunikaci senzorů |
+| **Noise Scan** | Skenuje spektrum (863–870 MHz) a měří rušivé rádiové pozadí | Odhalení „rádiového smogu“, který by mohl blokovat komunikaci senzorů |
 | **Mapování pokrytí** | Mapování kvality signálu s GPS záznamem | Určení optimálních míst pro nasazení |
 | **Ping-pong simulace** | Simuluje obousměrnou komunikaci | Testování možností downlinku |
 

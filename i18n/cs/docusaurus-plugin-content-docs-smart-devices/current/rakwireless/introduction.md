@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # RAKwireless {#rakwireless}
 
-[RAKwireless](https://www.rakwireless.com/en-us) je globální průkopník v oblasti inovativních a rozmanitých řešení IoT konektivity. Na rozdíl od tradičních dodavatelů hardwaru se RAKwireless drží filozofie **„IoT Made Easy"** a překlenuje propast mezi složitým návrhem hardwaru a snadným nasazením aplikací.
+[RAKwireless](https://www.rakwireless.com/en-us) je globální průkopník v oblasti inovativních a rozmanitých řešení IoT konektivity. Na rozdíl od tradičních dodavatelů hardwaru se RAKwireless drží filozofie **„IoT Made Easy“** a překlenuje propast mezi složitým návrhem hardwaru a snadným nasazením aplikací.
 
 ---
 

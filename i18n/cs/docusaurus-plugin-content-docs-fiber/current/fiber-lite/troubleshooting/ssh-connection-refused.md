@@ -3,7 +3,7 @@ slug: ssh-connection-refused
 title: SSH – spojení odmítnuto
 ---
 
-Pokud `ssh <user>@<ip>` selže s hláškou **„Connection refused"** místo výzvy k zadání hesla, SSH
+Pokud `ssh <user>@<ip>` selže s hláškou **„Connection refused“** místo výzvy k zadání hesla, SSH
 server se vůbec nespustil, problém tedy zatím není v účtu ani v síti.
 
 Tento konkrétní obraz Raspberry Pi OS ve výchozím stavu `sshd` nezapíná, i když bylo SSH

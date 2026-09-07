@@ -26,11 +26,11 @@ Typické případy použití:
 
 1. V pravém horním rohu otevřete **SPACES** a klikněte na **+ NEW SPACE**.
 
-   ![Stránka SPACES se zvýrazněným tlačítkem „+ NEW SPACE"](../../../../cloud/images/spaces-new-space.png)
+   ![Stránka SPACES se zvýrazněným tlačítkem „+ NEW SPACE“](../../../../cloud/images/spaces-new-space.png)
 
 2. Zadejte název podle [konvencí pojmenování](/cloud/#naming-conventions) a klikněte na **CREATE**.
 
-   ![Dialog „Create new space": zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
+   ![Dialog „Create new space“: zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
 
 Nový prostor se okamžitě objeví v přepínači prostorů.
 

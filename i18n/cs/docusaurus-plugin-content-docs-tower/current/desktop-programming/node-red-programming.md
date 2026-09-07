@@ -5,7 +5,7 @@ title: Programování v Node-RED
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'
 
-V této kapitole si projdeme **záložku Functions** v Playgroundu
+V této kapitole si projdeme **záložku Functions** v aplikaci HARDWARIO Playground
 
 :::info
 
@@ -60,6 +60,6 @@ O další záložce se dozvíte v části [**Vizualizace dat**](./data-visualiza
 
 ## Videotutoriál {#video-tutorial}
 
-Pokud dáváte přednost videoprůvodci, můžete si pustit toto video pro starší verzi Playgroundu, funguje to ale stejně.
+Pokud dáváte přednost videoprůvodci, můžete si pustit toto video pro starší verzi aplikace HARDWARIO Playground, funguje to ale stejně.
 
 <ReactPlayer controls src='https://youtu.be/VW_-RCIZ9rY' />

@@ -31,7 +31,7 @@ STICKER. Aplikaci samotnou najdete kompletně popsanou v sekci **APPS**:
   zapnout NFC, popisuje [**Instalace aplikace**](/apps/hardwario-manager/install).
 - **Secret key** zařízení. Zařízení STICKER komunikuje šifrovaným kanálem NFC, takže
   bez něj aplikace nic nepřečte ani nezapíše. Každé zařízení přidáte jednou (viz
-  [**Uložené STICKERy**](/apps/hardwario-manager/sticker/saved-stickers)) a
+  [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)) a
   od té doby aplikace klíč doplňuje automaticky.
 
 ## Konfigurace bez baterií {#configuring-without-batteries}

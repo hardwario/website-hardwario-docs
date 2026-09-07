@@ -21,7 +21,7 @@ u zařízení FIBER Lite), viz [**FIBER Lite**](fiber-lite/introduction) v postr
 
 **FIBER** je robustní průmyslové IoT zařízení postavené na platformě **embedded Linux** a navržené pro **průmyslové IoT aplikace**. Integruje jak **bezdrátové rádio 868/915 MHz**, tak **8kanálový hub pro senzory/aktuátory 1-Wire**.
 
-Díky své modulární a otevřené architektuře podporuje zařízení **FIBER** standardní distribuce **Raspberry Pi OS** i **vlastní linuxové image vytvořené pomocí Yocto**, takže jej lze použít jako předkonfigurované měřicí zařízení nebo jako vývojovou platformu. Zařízení je navrženo pro nasazení v průmyslovém a komerčním prostředí a poskytuje bezdrátové i drátové komunikační kanály pro spolehlivý sběr dat ze senzorů, lokální vizualizaci na integrovaném displeji a robustní síťové připojení přes **Ethernet**, **WiFi** nebo volitelně **LTE**.
+Díky své modulární a otevřené architektuře podporuje zařízení **FIBER** standardní distribuce **Raspberry Pi OS** i **vlastní linuxové image vytvořené pomocí Yocto**, takže jej lze použít jako předkonfigurované měřicí zařízení nebo jako vývojovou platformu. Zařízení je navrženo pro nasazení v průmyslovém a komerčním prostředí a poskytuje bezdrátové i drátové komunikační kanály pro spolehlivý sběr dat ze senzorů, lokální vizualizaci na integrovaném displeji a robustní síťové připojení přes **Ethernet**, **Wi-Fi** nebo volitelně **LTE**.
 
 <img src="/img/fiber.webp" data-zoom-src="/img/fiber.webp" width="540" alt="FIBER" />
 
@@ -47,7 +47,7 @@ Díky své modulární a otevřené architektuře podporuje zařízení **FIBER*
 | **Platforma embedded Linux** | Kompatibilní s Raspberry Pi OS nebo vlastními image založenými na Yocto. |
 | **Hybridní integrace senzorů** | Bezdrátové senzory v ISM pásmu 868 MHz plus 8 plně nezávislých portů 1-Wire pro drátové senzory. |
 | **Design průmyslové kvality** | Provozní rozsah –20 °C až +60 °C, postaveno na modulu Compute Module 4 pro dlouhodobou spolehlivost. |
-| **Flexibilní konektivita** | Ethernet, WiFi, BLE nebo volitelný modul LTE Cat 4. |
+| **Flexibilní konektivita** | Ethernet, Wi-Fi, BLE nebo volitelný modul LTE Cat 4. |
 | **Lokální vizualizace a diagnostika** | LCD s podsvícením, stavové LED pro každý kanál a integrovaný akustický bzučák. |
 | **Power-over-Ethernet** | Napájení přes PoE, se zálohovací Li-Ion baterií na desce. |
 | **Plný root přístup k Linuxu** | Podpora Dockeru pro vývoj vlastního firmwaru a aplikací. |

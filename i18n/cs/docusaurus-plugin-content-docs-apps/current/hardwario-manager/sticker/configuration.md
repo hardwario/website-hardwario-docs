@@ -74,7 +74,7 @@ Význam jednotlivých parametrů popisují
 :::info Export vynechává tajné údaje
 **Export config to file** zapíše JSON s odstraněným klíčovým materiálem, takže je
 konfigurační soubor bezpečné nasdílet kolegovi. Klíče zůstávají v zařízení a ve
-vašem seznamu [**Uložené STICKERy**](./saved-stickers.md).
+vašem seznamu [**Saved STICKERs**](./saved-stickers.md).
 :::
 
 ---

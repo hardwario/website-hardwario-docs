@@ -45,7 +45,7 @@ aktivace bootloaderu.
 
 1. Připojte PoE adaptér (musí odpovídat standardu 802.3af) do zásuvky.
 
-1. Připojte ethernetový kabel mezi port LAN na PoE adaptéru a váš LAN router (pokud nechcete použít připojení přes WiFi).
+1. Připojte ethernetový kabel mezi port LAN na PoE adaptéru a váš LAN router (pokud nechcete použít připojení přes Wi-Fi).
 
 1. Připojte kabel USB-B do **HOST** a do zadního USB konektoru na **TARGET**.
 
@@ -263,7 +263,7 @@ zde nepoužívá) a zobrazený příklad hostname/uživatelského jména je `fib
    Toto platí pouze při **prvním** startu instance, stejně jako `user-data`, viz
    upozornění na cloud-init níže. Pokud tento soubor přidáváte na kartu, která už jednou nastartovala
    (a účet tedy už existuje), změňte také `instance-id` v `meta-data` na novou hodnotu,
-   jinak cloud-init soubor přeskočí jako „already configured".
+   jinak cloud-init soubor přeskočí jako „already configured“.
 
    :::
 
@@ -283,7 +283,7 @@ zde nepoužívá) a zobrazený příklad hostname/uživatelského jména je `fib
 mechanismu se souborem `ssh`/`userconf.txt`. Pokud budete někdy potřebovat ručně upravit `/boot/firmware/meta-data`
 (místo použití dialogu Customisation v Imageru), klíč **musí** být `instance-id`
 (s pomlčkou), **ne** `instance_id` (s podtržítkem). Klíč s podtržítkem je tiše ignorován a
-cloud-init přeskočí vytvoření uživatele při každém dalším startu, což způsobí trvalé „Permission denied" při SSH
+cloud-init přeskočí vytvoření uživatele při každém dalším startu, což způsobí trvalé „Permission denied“ při SSH
 i po opravě `user-data`. Pro nastavení uživatelského jména, hesla a SSH vždy používejte vlastní dialog Imageru;
 při běžném použití byste neměli potřebovat sahat na soubory cloud-init ručně. Pokud
 jsou SSH připojení rovnou odmítána (bez jakéhokoliv dotazu na heslo) nebo přijata, ale každé heslo

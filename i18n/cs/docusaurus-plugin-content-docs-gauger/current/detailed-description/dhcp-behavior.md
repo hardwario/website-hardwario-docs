@@ -10,5 +10,5 @@ Zařízení nabízí funkci DHCP klienta i serveru. To, zda zařízení funguje 
 | Rozhraní          | Role DHCP |
 | :---------------- | :-------- |
 | Ethernet          | Klient    |
-| WiFi Access Point | Server    |
-| WiFi Station      | Klient    |
+| Wi-Fi Access Point | Server    |
+| Wi-Fi Station      | Klient    |

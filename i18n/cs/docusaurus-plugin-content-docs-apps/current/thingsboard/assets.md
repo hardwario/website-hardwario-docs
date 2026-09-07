@@ -15,7 +15,7 @@ Assety jsou logické kontejnery, které ve vašem prostředí ThingsBoard reprez
 
 **Hlavní přínosy assetů:**
 - **Logická hierarchie:** Můžete vytvořit strukturu jako *region → město → ulice → budova*.
-- **Škálovatelnost:** Místo správy stovek jednotlivých senzorů spravujete jediný asset (například „Hala A"), ke kterému jsou tyto senzory přiřazené.
+- **Škálovatelnost:** Místo správy stovek jednotlivých senzorů spravujete jediný asset (například „Hala A“), ke kterému jsou tyto senzory přiřazené.
 - **Řízení přístupu:** Přístupová práva zákazníků lze definovat na úrovni assetu. Když asset se zákazníkem nasdílíte, může automaticky získat přístup k zařízením, která k němu patří (přes relace).
 - **Abstrakce dashboardů:** Dashboardy mohou být dynamické. Jediný dashboard umí přizpůsobit svá data podle toho, který asset uživatel zvolí.
 
@@ -25,7 +25,7 @@ Assety jsou logické kontejnery, které ve vašem prostředí ThingsBoard reprez
 
 ### Krok 1: Přihlaste se {#step-1-log-in}
 
-Přihlaste se do ThingsBoardu jako *Customer Administrator*.
+Přihlaste se do platformy ThingsBoard jako *Customer Administrator*.
 
 ### Krok 2: Přejděte na Assets {#step-2-navigate-to-assets}
 
@@ -33,9 +33,9 @@ V levém navigačním menu přejděte na **Entities** → **Assets**.
 
 ### Krok 3: Přidejte nový asset {#step-3-add-a-new-asset}
 
-Klikněte vpravo nahoře na ikonu **„+"** a zvolte **Add new asset**.
+Klikněte vpravo nahoře na ikonu **„+“** a zvolte **Add new asset**.
 
-![Prázdný seznam Assets v ThingsBoardu se šipkou na ikonu plus pro přidání nového assetu](../../../../../apps/thingsboard/images/assets-1.png)
+![Prázdný seznam Assets v platformě ThingsBoard se šipkou na ikonu plus pro přidání nového assetu](../../../../../apps/thingsboard/images/assets-1.png)
 
 ### Krok 4: Vyplňte údaje {#step-4-fill-in-the-details}
 
@@ -52,7 +52,7 @@ Klikněte na **Add**. Asset je vytvořený.
 
 ### Krok 6: Přidejte relace (volitelně) {#step-6-add-relations-optional}
 
-Na kartě **Relations** můžete vytvořit relace k jiným zařízením nebo k nadřazeným assetům (například relaci „Contains" směřující dolů k vašim senzorům).
+Na kartě **Relations** můžete vytvořit relace k jiným zařízením nebo k nadřazeným assetům (například relaci „Contains“ směřující dolů k vašim senzorům).
 
 ![Dialog Add relation na kartě Relations assetu s typem relace Contains a zařízením zvoleným jako cílová entita](../../../../../apps/thingsboard/images/assets-3.png)
 
@@ -64,7 +64,7 @@ Assety jsou klíčovým prvkem pro **multi-tenancy** (správu více zákazníků
 
 ### Přiřazování zařízení {#assigning-devices}
 
-Do assetů můžete pomocí relací „vložit" různá zařízení. Například asset s názvem „Budova A" může obsahovat 10 konkrétních senzorů (zařízení) instalovaných v ní.
+Do assetů můžete pomocí relací „vložit“ různá zařízení. Například asset s názvem „Budova A“ může obsahovat 10 konkrétních senzorů (zařízení) instalovaných v ní.
 
 ### Sdílení se zákazníky {#sharing-with-customers}
 

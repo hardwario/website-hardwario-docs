@@ -26,7 +26,7 @@ Prvním krokem je definovat role, které fungují jako sady oprávnění.
 
 ### Rozdíl mezi typy rolí: {#difference-between-role-types}
 * **Group:** U tohoto typu určujete jen operace (například čtení, zápis), které uživatel může provádět. Tato role se ke konkrétní entitě (zařízení, dashboardu a podobně) váže až později, při nastavování uživatelských grup.
-* **Generic:** Tady definujete přesně, co uživatel globálně může a nemůže. Pozor: Pokud tu povolíte přístup k „Devices", uvidí uživatel **všechna zařízení** daného zákazníka, ne jen konkrétní grupu.
+* **Generic:** Tady definujete přesně, co uživatel globálně může a nemůže. Pozor: Pokud tu povolíte přístup k „Devices“, uvidí uživatel **všechna zařízení** daného zákazníka, ne jen konkrétní grupu.
 
 <Tabs>
   <TabItem value="lte" label="Group">

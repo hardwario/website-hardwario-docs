@@ -9,7 +9,7 @@ Zařízení **FIBER** nabízí několik komunikačních rozhraní vhodných pro 
 * **Ethernet (LAN)**
   Spolehlivé kabelové připojení do sítě pro průmyslová prostředí.
 
-* **WiFi**
+* **Wi-Fi**
   Pro bezdrátová nasazení bez fyzické kabeláže.
 
 * **Bluetooth Low Energy (BLE)**

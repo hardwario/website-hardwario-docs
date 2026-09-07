@@ -29,7 +29,7 @@ import Image from '@theme/IdealImage';
 - Detekční úhel: 98° (horizontálně i vertikálně)
 - Maximální detekční vzdálenost: 5 m
 - Spotřeba: přibližně 3μA
-- Rozsah napájecího napětí: 2.5V až 3.6V
+- Rozsah napájecího napětí: 2,5V až 3,6V
 - Rozsah pracovních teplot: -20 až 70 °C
 - Rozměry: 33 x 55 mm
 

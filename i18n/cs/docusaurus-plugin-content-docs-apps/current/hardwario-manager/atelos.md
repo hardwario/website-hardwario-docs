@@ -21,7 +21,7 @@ Otevřete na domovské obrazovce dlaždici **ATELOS account**.
 3. Potvrďte.
 
 Po přihlášení se všechna zařízení, která jste v ATELOSu nárokovali, automaticky
-natáhnou do vašeho seznamu [**Uložené STICKERy**](./sticker/saved-stickers.md),
+natáhnou do vašeho seznamu [**Saved STICKERs**](./sticker/saved-stickers.md),
 včetně uloženého secret key. Klíče u těchto zařízení nemusíte zadávat ručně.
 
 ## Vytvoření účtu {#create-an-account}
@@ -64,5 +64,5 @@ obrazovce s detailem zařízení.
 Obrazovka **Add** zařízení nárokuje, takže vyžaduje přihlášení do ATELOSu. Pokud
 chcete přidat zařízení, ke kterým už klíče máte (z exportu od kolegy, z CSV nebo
 z QR kódu), použijte místo toho **Saved STICKERs → Import**. Viz
-[**Uložené STICKERy**](./sticker/saved-stickers.md).
+[**Saved STICKERs**](./sticker/saved-stickers.md).
 :::

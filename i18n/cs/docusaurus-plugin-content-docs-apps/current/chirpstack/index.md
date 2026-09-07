@@ -13,7 +13,7 @@ ChirpStack je open-source řešení pro budování privátních i veřejných [*
 
 ## Ukázka přehledového dashboardu {#example-of-an-dashboard-overview}
 
-![Přehledový dashboard ChirpStacku](../../../../../apps/chirpstack/images/chirpstack-dashboard.png)
+![Přehledový dashboard ChirpStack](../../../../../apps/chirpstack/images/chirpstack-dashboard.png)
 
 ---
 

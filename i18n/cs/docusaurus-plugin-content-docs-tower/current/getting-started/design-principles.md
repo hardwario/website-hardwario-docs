@@ -30,8 +30,8 @@ Do embedded úrovně jsme přenesli několik inovativních technik – nejvýraz
 
 Také na straně hubu se MQTT drží asynchronních konceptů. To je skvělá příležitost navrhnout vlastní IoT systém v jednom, jednotném, asynchronním konceptu.
 
-## Přístup „CLI first" {#cli-first-approach}
+## Přístup „CLI first“ {#cli-first-approach}
 
-Command Line Interface (CLI) je v systému TOWER občan první kategorie. Právě tím se odlišujeme od většiny ostatních embedded IoT platforem. Přístup přes CLI zdůrazňujeme na prvním místě. Má řadu výhod – především můžete všechny operace provádět na takzvaných „headless" strojích – jako jsou servery, embedded počítače apod. Dále můžete snadno zapojit služby průběžné integrace, které dokážou automatizovat váš pracovní postup.
+Command Line Interface (CLI) je v systému TOWER občan první kategorie. Právě tím se odlišujeme od většiny ostatních embedded IoT platforem. Přístup přes CLI zdůrazňujeme na prvním místě. Má řadu výhod – především můžete všechny operace provádět na takzvaných „headless“ strojích – jako jsou servery, embedded počítače apod. Dále můžete snadno zapojit služby průběžné integrace, které dokážou automatizovat váš pracovní postup.
 
 Navíc ve spojení s Gitem, klientskými nástroji MQTT, logovacím mechanismem apod. rychle uvidíte, že váš pracovní postup je poměrně plynulý a efektivní.

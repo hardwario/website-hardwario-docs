@@ -7,7 +7,7 @@ sidebar_label: Úvod
 
 # GAUGER {#gauger}
 
-**GAUGER** je konfigurovatelné zařízení s WiFi/Ethernetem určené pro počítání pulzů na až čtyřech galvanicky oddělených digitálních vstupech.
+**GAUGER** je konfigurovatelné zařízení s Wi-Fi/Ethernetem určené pro počítání pulzů na až čtyřech galvanicky oddělených digitálních vstupech.
 
 Zařízení hostuje webové uživatelské rozhraní, které slouží k jeho konfiguraci. Lze jej ovládat také přes HTTP API. Hodnoty počítadel je možné čítat pomocí Modbus TCP.
 
@@ -38,7 +38,7 @@ Zařízení hostuje webové uživatelské rozhraní, které slouží k jeho konf
 |---|---|
 | **Galvanicky oddělené vstupy** | Až čtyři izolované digitální vstupy pro počítání pulzů. |
 | **Připojení přes Ethernet** | Drátová síť 10/100 Base-T. |
-| **Připojení přes WiFi** | 2.4GHz WiFi (802.11 b/g/n). |
+| **Připojení přes Wi-Fi** | 2.4GHz Wi-Fi (802.11 b/g/n). |
 | **Montáž na DIN lištu** | Průmyslová krabička na DIN lištu. |
 | **Server Modbus TCP** | Čtení hodnot počítadel přes Modbus TCP. |
 | **Webová konfigurace** | Vestavěný konfigurační web. |

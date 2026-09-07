@@ -21,13 +21,13 @@ Tagy umožňují flexibilní směrování zpráv, aniž byste kamkoli natvrdo za
 
 1. Otevřete **Tags** v levém postranním panelu a klikněte na **+&nbsp;NEW TAG**.
 
-   ![Stránka Tags se zvýrazněným tlačítkem „+ NEW TAG"](../../../../cloud/images/tags-list.png)
+   ![Stránka Tags se zvýrazněným tlačítkem „+ NEW TAG“](../../../../cloud/images/tags-list.png)
 
 2. Zadejte název (podle [konvencí pojmenování](/cloud/#naming-conventions)), zvolte **barvu** pro vizuální identifikaci v pohledech na zařízení a konektory a klikněte na **CREATE**.
 
    <div className="screenshot-narrow">
 
-   ![Dialog „Create new tag" s názvem, výběrem barvy a živým náhledem](../../../../cloud/images/tag-create.png)
+   ![Dialog „Create new tag“ s názvem, výběrem barvy a živým náhledem](../../../../cloud/images/tag-create.png)
 
    </div>
 

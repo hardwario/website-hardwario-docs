@@ -18,7 +18,7 @@ s jeho zprávami.
 3. Vytvořte účet pomocí účtu **Google** nebo **Microsoft**, případně přes **e-mail a heslo** (ověřte svůj e-mail).
 4. Po ověření se **přihlaste**.
 
-![Obrazovka HARDWARIO Cloud „Create account" s poli pro e-mail a heslo a s možnostmi registrace přes Google a Microsoft](../../../../cloud/images/create-account.png)
+![Obrazovka HARDWARIO Cloud „Create account“ s poli pro e-mail a heslo a s možnostmi registrace přes Google a Microsoft](../../../../cloud/images/create-account.png)
 
 :::info
 Pro vyšší bezpečnost doporučujeme ověření přes **Google** nebo **Microsoft**.
@@ -28,11 +28,11 @@ Pro vyšší bezpečnost doporučujeme ověření přes **Google** nebo **Micros
 
 1. V pravém horním rohu klikněte na **SPACES → NEW SPACE**.
 
-   ![Stránka SPACES se zvýrazněným tlačítkem „+ NEW SPACE" v pravém horním rohu](../../../../cloud/images/spaces-new-space.png)
+   ![Stránka SPACES se zvýrazněným tlačítkem „+ NEW SPACE“ v pravém horním rohu](../../../../cloud/images/spaces-new-space.png)
 
 2. Pojmenujte svůj space (například: `my-home`, `office-sensors`, `warehouse`). Řiďte se [**konvencemi pojmenování**](/cloud/#naming-conventions).
 
-   ![Dialog „Create new space": zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
+   ![Dialog „Create new space“: zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
 
 3. Právě zde budou vaše zařízení žít. Podrobnosti viz [**Spaces**](/cloud/spaces).
 
@@ -41,11 +41,11 @@ Pro vyšší bezpečnost doporučujeme ověření přes **Google** nebo **Micros
 1. Vyberte svůj **Space**.
 2. Přejděte na **DEVICES → +NEW DEVICE**.
 
-   ![Stránka DEVICES se zvýrazněným tlačítkem „+ NEW DEVICE" v pravém horním rohu](../../../../cloud/images/devices-new-device.png)
+   ![Stránka DEVICES se zvýrazněným tlačítkem „+ NEW DEVICE“ v pravém horním rohu](../../../../cloud/images/devices-new-device.png)
 
 3. Zadejte informace o zařízení: buď **naskenujte QR kód** (`⛶ SCAN DEVICE`) a vše se vyplní automaticky, nebo zadejte **Name**, **HARDWARIO Serial Number (HSN)** a **Claim Token** ručně.
 
-   ![Dialog „Create new device": naskenujte QR kód, nebo vyplňte Name, Serial Number a Claim Token](../../../../cloud/images/create-new-device.png)
+   ![Dialog „Create new device“: naskenujte QR kód, nebo vyplňte Name, Serial Number a Claim Token](../../../../cloud/images/create-new-device.png)
 
 4. Uložte: vaše zařízení je nyní **zaregistrováno v Cloudu**. Vše, co můžete dělat dál, najdete v sekci [**Devices**](/cloud/devices).
 

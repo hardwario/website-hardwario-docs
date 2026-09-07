@@ -24,8 +24,8 @@ U každého produktu jsou uvedeny dostupné varianty, tedy které varianty jsou 
 
 **Legenda:**
 
-* `A` = Držák baterií velikosti „AA" (2x)
-* `B` = Držák baterií velikosti „C" (1x)
+* `A` = Držák baterií velikosti „AA“ (2x)
+* `B` = Držák baterií velikosti „C“ (1x)
 * `C` = Cellular (modem NB-IoT + LTE-M)
 * `D` = Vývojářská varianta (bez superkondenzátorů a nabíječky, s pružinovými svorkami pro moduly X)
 * `E` = Varianta s externím zdrojem napájení (bez superkondenzátorů a nabíječky)
@@ -70,7 +70,7 @@ Tento produkt se připojuje k systémové sběrnici I²C na CHESTER-M přes 7pin
 
 :::info
 
-Luxmetr a vlhkoměr jsou vždy součástí. U verze „N" je jejich sběrnice I²C připojena přímo k systémovému konektoru I2C.
+Luxmetr a vlhkoměr jsou vždy součástí. U verze „N“ je jejich sběrnice I²C připojena přímo k systémovému konektoru I2C.
 
 :::
 
@@ -127,8 +127,8 @@ Akustický bzučák je instalován pouze v případě, že je přítomno někter
 **Legenda:**
 
 * `A` = Držáky baterií konfigurované pro alkalické články (konfigurace 2S3P nebo 2S4P)
-* `C` = Osm držáků baterií velikosti „C"
-* `D` = Šest držáků baterií velikosti „D"
+* `C` = Osm držáků baterií velikosti „C“
+* `D` = Šest držáků baterií velikosti „D“
 * `L` = Držáky baterií konfigurované pro lithiové články (konfigurace 6P nebo 8P)
 * `W` = Modul Wireless M-Bus (wM-Bus) s konektorem u.FL pro antenu
 
@@ -166,7 +166,7 @@ Akustický bzučák je instalován pouze v případě, že je přítomno někter
 
 :::caution
 
-Tento rozšiřující modul obsazuje oba sloty „A" a „B" na zadní straně.
+Tento rozšiřující modul obsazuje oba sloty „A“ a „B“ na zadní straně.
 
 :::
 
@@ -197,8 +197,8 @@ Tento rozšiřující modul obsazuje oba sloty „A" a „B" na zadní straně.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -213,8 +213,8 @@ Tento rozšiřující modul obsazuje oba sloty „A" a „B" na zadní straně.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -230,8 +230,8 @@ Tento rozšiřující modul obsazuje oba sloty „A" a „B" na zadní straně.
 **Legenda:**
 
 * `G` = Pouze čtyři kanály 1-Wire, každý se zemnící svorkou vedle kanálu
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -248,8 +248,8 @@ Tento rozšiřující modul obsazuje oba sloty „A" a „B" na zadní straně.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -264,8 +264,8 @@ Tento rozšiřující modul obsazuje oba sloty „A" a „B" na zadní straně.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -280,8 +280,8 @@ Tento rozšiřující modul obsazuje oba sloty „A" a „B" na zadní straně.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -296,8 +296,8 @@ Tento rozšiřující modul obsazuje oba sloty „A" a „B" na zadní straně.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -318,8 +318,8 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -340,8 +340,8 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -356,8 +356,8 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -378,8 +378,8 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -394,8 +394,8 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -410,8 +410,8 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A" na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B" na zadní straně
+* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
+* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
 
 **Dostupné varianty:**
 

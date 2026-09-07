@@ -5,7 +5,7 @@ title: VS135
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor VS135 {#milesight-sensor-vs135}
+# Senzor Milesight VS135 {#milesight-sensor-vs135}
 
 Milesight VS135 je **ToF senzor (Time-of-Flight) pro počítání osob s podporou AI**, který zajišťuje **detekci obsazenosti s 99,8% přesností** při plné ochraně soukromí. Nabízí **obousměrné počítání**, podporuje až **4 vlastní zóny** a poskytuje pokročilé analytické funkce včetně **analýzy doby setrvání**, **teplotních map** a **počítání skupin**. Díky **krytí IP65** a několika možnostem konektivity včetně **LoRaWAN**, **Ethernetu**, **4G LTE** a **Wi-Fi HaLow** je ideální pro retail, kanceláře a správu budov.
 

@@ -1,7 +1,7 @@
 ---
 slug: configuration
 title: Konfigurace
-title_meta: "Konfigurace (HARDWARIO Manager for STICKER)"
+title_meta: "Konfigurace (HARDWARIO Manager pro STICKER)"
 ---
 
 # Konfigurace zařízení STICKER {#configure-a-sticker}
@@ -79,7 +79,7 @@ vašem seznamu [**Saved STICKERs**](./saved-stickers.md).
 
 ---
 
-## Configure from file {#configure-from-file}
+## Konfigurace ze souboru {#configure-from-file}
 
 **Configure from file** přijímá tři druhy souborů a každému se přizpůsobí:
 

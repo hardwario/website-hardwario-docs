@@ -1,7 +1,7 @@
 ---
 slug: alarms
 title: Pravidla alarmů
-title_meta: "Pravidla alarmů (HARDWARIO Manager for STICKER)"
+title_meta: "Pravidla alarmů (HARDWARIO Manager pro STICKER)"
 ---
 
 # Nastavení pravidel alarmů {#set-up-alarm-rules}

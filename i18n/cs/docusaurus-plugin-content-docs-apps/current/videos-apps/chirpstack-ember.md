@@ -1,7 +1,7 @@
 ---
 slug: chirpstack-ember
 title: Přidání bran
-title_meta: "Přidání bran (video tutorials, chirpstack ember)"
+title_meta: "Přidání bran (videonávody, chirpstack ember)"
 ---
 
 import Image from '@theme/IdealImage';

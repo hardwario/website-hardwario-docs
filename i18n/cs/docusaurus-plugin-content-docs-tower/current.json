@@ -8,7 +8,7 @@
     "description": "The label for category 'Getting Started' in sidebar 'docs'"
   },
   "sidebar.docs.category.Getting Started.link.generated-index.description": {
-    "message": "Start with the HARDWARIO TOWER architecture, design principles, programming, and resources.",
+    "message": "Začněte architekturou HARDWARIO TOWER, návrhovými principy, programováním a dostupnými zdroji.",
     "description": "The generated-index page description for category 'Getting Started' in sidebar 'docs'"
   },
   "sidebar.docs.category.Desktop Programming": {
@@ -16,7 +16,7 @@
     "description": "The label for category 'Desktop Programming' in sidebar 'docs'"
   },
   "sidebar.docs.category.Desktop Programming.link.generated-index.description": {
-    "message": "Install and use HARDWARIO Playground for radio, MQTT, Node-RED, dashboards, and firmware flashing.",
+    "message": "Instalace a používání aplikace HARDWARIO Playground pro rádio, MQTT, Node-RED, dashboardy a nahrávání firmwaru.",
     "description": "The generated-index page description for category 'Desktop Programming' in sidebar 'docs'"
   },
   "sidebar.docs.category.Server on Raspberry Pi": {
@@ -48,7 +48,7 @@
     "description": "The label for category 'Platform Integrations' in sidebar 'docs'"
   },
   "sidebar.docs.category.Platform Integrations.link.generated-index.description": {
-    "message": "Connect HARDWARIO TOWER with visualization, automation, and third-party IoT services.",
+    "message": "Propojte HARDWARIO TOWER s vizualizačními, automatizačními a dalšími službami IoT.",
     "description": "The generated-index page description for category 'Platform Integrations' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hardware Modules": {
@@ -60,7 +60,7 @@
     "description": "The label for category 'Hardware Interfaces' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hardware Interfaces.link.generated-index.description": {
-    "message": "Electrical and software interfaces available on HARDWARIO TOWER modules.",
+    "message": "Elektrická a softwarová rozhraní dostupná na modulech HARDWARIO TOWER.",
     "description": "The generated-index page description for category 'Hardware Interfaces' in sidebar 'docs'"
   },
   "sidebar.docs.link.Step-by-Step Projects": {

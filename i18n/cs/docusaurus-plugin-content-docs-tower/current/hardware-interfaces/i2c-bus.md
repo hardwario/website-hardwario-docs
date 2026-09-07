@@ -1,6 +1,6 @@
 ---
 slug: i2c-bus
-title: "I²C Bus"
+title: "Sběrnice I²C"
 ---
 import Image from '@theme/IdealImage';
 

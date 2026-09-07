@@ -5,7 +5,7 @@ title: VS373
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor VS373 {#milesight-sensor-vs373}
+# Senzor Milesight VS373 {#milesight-sensor-vs373}
 
 Milesight VS373 je **bezkontaktní senzor detekce pádu** navržený pro **péči o seniory a zdravotnická zařízení**. Využívá pokročilou **4D radarovou technologii milimetrových vln 60 GHz** v kombinaci s **AI algoritmy** k detekci pádů a abnormálních pohybů s **přesností až 99 %**. Senzor poskytuje **nepřetržité monitorování 24/7** i v temném a vlhkém prostředí, nabízí **plnou ochranu soukromí** bez snímání obrazu a disponuje **krytím IP65**. Podporuje více detekčních funkcí včetně přítomnosti v posteli, obsazenosti místnosti, detekce nehybnosti a monitorování dýchání.
 

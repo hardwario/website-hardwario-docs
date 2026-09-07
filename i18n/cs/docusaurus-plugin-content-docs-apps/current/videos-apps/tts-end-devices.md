@@ -1,7 +1,7 @@
 ---
 slug: tts-end-devices
 title: Přidání koncových zařízení
-title_meta: "Přidání koncových zařízení (video tutorials, tts end devices)"
+title_meta: "Přidání koncových zařízení (videonávody, tts end devices)"
 ---
 
 import Image from '@theme/IdealImage';

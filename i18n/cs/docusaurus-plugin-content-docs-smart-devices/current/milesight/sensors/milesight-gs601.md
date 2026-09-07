@@ -5,7 +5,7 @@ title: GS601
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor GS601 {#milesight-sensor-gs601}
+# Senzor Milesight GS601 {#milesight-sensor-gs601}
 
 Milesight GS601 je **stropní detektor vapování a kouře** určený pro **prostředí bez kouře**, včetně škol, bytů, hotelů a schodišť. Využívá **technologii laserového rozptylu** k detekci elektronických cigaret, klasických cigaret a marihuany s **vysokou přesností** a zároveň monitoruje **teplotu**, **vlhkost**, **prachové částice** (PM1.0/2.5/10) a **TVOC**. Senzor nabízí **ochranu proti manipulaci**, **výstrahy v reálném čase** pomocí bzučáku (70 dB) a LED indikátorů, **krytí IP30** a konektivitu **LoRaWAN Class C** pro komplexní monitorování kvality vzduchu a vymáhání pravidel.
 

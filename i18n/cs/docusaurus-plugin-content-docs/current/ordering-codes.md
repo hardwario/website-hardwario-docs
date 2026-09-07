@@ -26,7 +26,7 @@ U každého produktu jsou uvedeny dostupné varianty, tedy které varianty jsou 
 
 * `A` = Držák baterií velikosti „AA“ (2x)
 * `B` = Držák baterií velikosti „C“ (1x)
-* `C` = Cellular (modem NB-IoT + LTE-M)
+* `C` = Mobilní síť (modem NB-IoT + LTE-M)
 * `D` = Vývojářská varianta (bez superkondenzátorů a nabíječky, s pružinovými svorkami pro moduly X)
 * `E` = Varianta s externím zdrojem napájení (bez superkondenzátorů a nabíječky)
 * `G` = GNSS (modul satelitního určování polohy GPS/Galileo/GLONASS/BeiDou)

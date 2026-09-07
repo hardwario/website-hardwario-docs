@@ -1,7 +1,7 @@
 ---
 slug: sensor-history
 title: Historie senzorů
-title_meta: "Historie senzorů (HARDWARIO Manager for STICKER)"
+title_meta: "Historie senzorů (HARDWARIO Manager pro STICKER)"
 ---
 
 # Čtení historie senzorů {#read-sensor-history}

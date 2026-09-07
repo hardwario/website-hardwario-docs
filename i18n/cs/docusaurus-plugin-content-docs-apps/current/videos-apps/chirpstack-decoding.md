@@ -1,7 +1,7 @@
 ---
 slug: chirpstack-decoding
 title: Dekódování dat
-title_meta: "Dekódování dat (video tutorials)"
+title_meta: "Dekódování dat (videonávody)"
 ---
 
 import Image from '@theme/IdealImage';

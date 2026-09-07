@@ -5,7 +5,7 @@ title: WS523
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor WS523 {#milesight-sensor-ws523}
+# Senzor Milesight WS523 {#milesight-sensor-ws523}
 
 Milesight WS523 je **inteligentní přenosná zásuvka** s **konektivitou LoRaWAN** určená pro **vzdálené ovládání a monitorování spotřeby energie**. Umožňuje **plánované zapínání/vypínání** elektronických zařízení, měří **spotřebu energie** (napětí, proud, aktivní výkon, účiník) a nabízí **ochranu proti nadproudu/přetížení**. Díky **přesnosti měření ±3 %**, **konfiguraci přes NFC** a podpoře několika typů zásuvek (US, EU, AU, UK, CN) je ideální pro energetický management, inteligentní domy a automatizaci budov.
 

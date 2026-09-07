@@ -5,7 +5,7 @@ title: WS303
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor WS303 {#milesight-sensor-ws303}
+# Senzor Milesight WS303 {#milesight-sensor-ws303}
 
 Milesight WS303 je **inteligentní detektor zaplavení** se **dvěma sondami z nerezové oceli**, které detekují vodu už od výšky 0,5 mm. Obsahuje **integrovaný bzučák** pro místní upozornění, odesílá notifikace přes **LoRaWAN** a nabízí až **5 let výdrže baterie**. Díky **kompaktní konstrukci s krytím IP67** ho lze instalovat i na obtížně dostupných místech.
 

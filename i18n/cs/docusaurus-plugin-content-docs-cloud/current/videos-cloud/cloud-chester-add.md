@@ -1,7 +1,7 @@
 ---
 slug: cloud-chester-add
 title: Jak přidat CHESTER do Cloudu
-title_meta: "Jak přidat CHESTER do Cloudu (HARDWARIO Cloud video tutorials)"
+title_meta: "Jak přidat CHESTER do Cloudu (videonávody HARDWARIO Cloud)"
 ---
 
 import Image from '@theme/IdealImage';

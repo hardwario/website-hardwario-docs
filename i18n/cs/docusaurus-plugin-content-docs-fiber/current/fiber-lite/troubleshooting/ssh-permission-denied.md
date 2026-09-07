@@ -1,6 +1,6 @@
 ---
 slug: ssh-permission-denied
-title: SSH Permission Denied
+title: SSH odmítá heslo
 ---
 
 Pokud je SSH dostupné (dostanete výzvu k zadání hesla), ale heslo nastavené v Imageru je vždy

@@ -1,10 +1,10 @@
 ---
 slug: debug
-title: Debug
+title: Ladění
 ---
 import Image from '@theme/IdealImage';
 
-# Debug {#debug}
+# Ladění {#debug}
 
 Většinu kódu je možné debugovat pomocí logovacích funkcí Zephyr jako `LOG_INF`, `LOG_HEXDUMP_INF` a dalších.
 

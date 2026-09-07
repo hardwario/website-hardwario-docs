@@ -1,7 +1,7 @@
 ---
 slug: desktop-programming
 title: Programování na počítači
-title_meta: "Programování na počítači (HARDWARIO TOWER, getting started)"
+title_meta: "Programování na počítači (HARDWARIO TOWER, první kroky)"
 ---
 import Image from '@theme/IdealImage';
 

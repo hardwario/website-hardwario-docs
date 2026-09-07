@@ -5,7 +5,7 @@ title: WS201
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor WS201 {#milesight-sensor-ws201}
+# Senzor Milesight WS201 {#milesight-sensor-ws201}
 
 Milesight WS201 je **bezdrátový senzor pro monitorování naplnění**, který pro vysokou přesnost využívá **technologii ToF (Time-of-Flight)**. Podporuje **konektivitu LoRaWAN** se vzdálenou správou v Milesight IoT Cloud, funguje **až 2 roky na knoflíkové baterii** a je ideální pro **údržbu veřejných zařízení**
 

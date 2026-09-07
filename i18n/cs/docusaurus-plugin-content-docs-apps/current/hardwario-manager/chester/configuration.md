@@ -1,7 +1,7 @@
 ---
 slug: configuration
 title: Konfigurace
-title_meta: "Konfigurace (HARDWARIO Manager for CHESTER)"
+title_meta: "Konfigurace (HARDWARIO Manager pro CHESTER)"
 ---
 
 # Konfigurace zařízení CHESTER {#configure-a-chester}
@@ -16,7 +16,7 @@ vyexportuje celou konfiguraci jako text.
 
 ---
 
-## Quick Set-up {#quick-set-up}
+## Rychlé nastavení {#quick-set-up}
 
 Výchozí pohled pokrývá nastavení, která většina nasazení potřebuje. Sekce se
 objeví jen tehdy, když je zařízení skutečně má.
@@ -63,7 +63,7 @@ hodnotu.
 
 ---
 
-## Advanced Configuration {#advanced-configuration}
+## Rozšířená konfigurace {#advanced-configuration}
 
 **Go to Advanced Configuration** zobrazí **každý** parametr, který zařízení hlásí,
 seskupený do sbalitelných karet. Které skupiny se objeví, závisí na zařízení. To

@@ -71,7 +71,7 @@ Ukládá se jen sériové číslo a název, žádné klíče ani tajné údaje.
 
 ---
 
-## Join a shared session {#join-a-shared-session}
+## Připojení ke sdílené relaci {#join-a-shared-session}
 
 **Join a shared session** se k zařízení nepřipojuje vůbec. Napojí se na zařízení
 CHESTER, které kolega sdílí ze svého telefonu, takže můžete jeho konzoli ovládat

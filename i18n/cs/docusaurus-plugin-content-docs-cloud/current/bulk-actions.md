@@ -26,7 +26,7 @@ následně sledovat její průběh. Kliknutím na **RUN** akci aplikujete na vš
 
 ### Config {#config}
 
-Odešle příkazy `app config` do všech vybraných zařízení, stejně jako
+Odešlete příkazy `app config` do všech vybraných zařízení, stejně jako
 [**Config downlink**](/cloud/downlink/config), ale hromadně. Příkazy zadejte jako **Text** nebo
 **JSON**. U nasazení CHESTER wM-Bus můžete adresy zařízení také importovat ze souboru.
 
@@ -34,26 +34,26 @@ Odešle příkazy `app config` do všech vybraných zařízení, stejně jako
 
 ### Firmware {#firmware}
 
-Aktualizuje firmware všech vybraných zařízení bezdrátově. Zadejte **identifikátor firmwaru**, který
+Aktualizujte firmware všech vybraných zařízení bezdrátově. Zadejte **identifikátor firmwaru**, který
 se má nasadit (viz [**Firmware**](/cloud/firmware)).
 
 ![Dialog hromadných akcí na kartě Firmware s polem pro identifikátor firmwaru](../../../../cloud/images/bulk-firmware.png)
 
 ### Tags {#tags}
 
-Přidání, odebrání nebo náhrada [**tagů**](/cloud/tags) na vybraných zařízeních. Zvolte **operaci**
+Přidejte, odeberte nebo nahraďte [**tagy**](/cloud/tags) na vybraných zařízeních. Zvolte **operaci**
 (Add / Remove / Replace) a vyberte tagy, které se mají použít.
 
 ![Dialog hromadných akcí na kartě Tags s operacemi Add / Remove / Replace](../../../../cloud/images/bulk-tags.png)
 
 ### Comment {#comment}
 
-Nastavení, doplnění nebo smazání komentáře na vybraných zařízeních (až 500 znaků).
+Nastavte, doplňte nebo smažte komentář na vybraných zařízeních (až 500 znaků).
 
 ![Dialog hromadných akcí na kartě Comment s operacemi Set / Append / Clear](../../../../cloud/images/bulk-comment.png)
 
 ### Labels {#labels}
 
-Přidání/aktualizace, odebrání nebo náhrada **labelů** (párů název–hodnota) na vybraných zařízeních.
+Přidejte, aktualizujte, odeberte nebo nahraďte **labely** (páry název–hodnota) na vybraných zařízeních.
 
 ![Dialog hromadných akcí na kartě Labels s poli pro název a hodnotu](../../../../cloud/images/bulk-labels.png)

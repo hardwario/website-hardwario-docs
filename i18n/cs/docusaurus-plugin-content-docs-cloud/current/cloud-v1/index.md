@@ -1,6 +1,6 @@
 ---
 slug: /legacy
-title: Legacy (Cloud v1)
+title: Starší verze (Cloud v1)
 description: "Referenční dokumentace ke starší verzi HARDWARIO Cloud v1. Aktuální platformu popisuje hlavní dokumentace HARDWARIO Cloud."
 ---
 

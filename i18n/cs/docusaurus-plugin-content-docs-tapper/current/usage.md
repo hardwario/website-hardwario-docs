@@ -103,7 +103,7 @@ Pole `passphrase` může obsahovat hodnotu `psk` získanou z `wpa_passphrase`.
 
 :::
 
-#### Dynamický {#dynamic}
+#### Dynamický režim {#dynamic}
 
 Dynamický režim používá DHCP a nastavuje adresu, bránu a DNS servery automaticky.
 
@@ -114,7 +114,7 @@ wifi:
   mode: "dynamic"
 ```
 
-#### Statický {#static}
+#### Statický režim {#static}
 
 Ve statickém režimu musíte nastavit vše ručně.
 

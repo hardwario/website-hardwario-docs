@@ -1,7 +1,7 @@
 ---
 slug: troubleshooting
 title: Řešení problémů
-title_meta: "Řešení problémů (HARDWARIO Manager for CHESTER)"
+title_meta: "Řešení problémů (HARDWARIO Manager pro CHESTER)"
 ---
 
 # Řešení problémů se zařízením CHESTER {#chester-troubleshooting}

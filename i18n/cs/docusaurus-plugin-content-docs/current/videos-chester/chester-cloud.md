@@ -1,7 +1,7 @@
 ---
 slug: chester-cloud
 title: Jak přidat CHESTER do Cloudu
-title_meta: "Jak přidat CHESTER do Cloudu (CHESTER video tutorials)"
+title_meta: "Jak přidat CHESTER do Cloudu (videonávody CHESTER)"
 ---
 
 import Image from '@theme/IdealImage';

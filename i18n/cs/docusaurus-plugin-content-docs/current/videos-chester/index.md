@@ -1,8 +1,8 @@
 ---
 slug: videos-chester
-title: Video tutoriály
+title: Videonávody
 description: "Podrobné postupy a videonávody pro nastavení a používání zařízení CHESTER."
-title_meta: "Video tutoriály (CHESTER video tutorials)"
+title_meta: "Videonávody (videonávody CHESTER)"
 ---
 
 import Image from '@theme/IdealImage';

@@ -254,6 +254,100 @@ pages = [r[3] for r in results if r[0] == "ok"]
 failures = [r for r in results if r[0] != "ok"]
 print("\nextracted {} pages, {} failed".format(len(pages), len(failures)))
 
+# 4b — Product repositories on GitHub.
+#
+# The sitemaps above cannot answer "what is the latest STICKER firmware" — the
+# documentation describes how a device works, not which version shipped last
+# week. Release notes do, and they are public.
+#
+# Only the repositories a customer would ask about, and only their README and
+# releases: no source, no issues. The internal GitLab is deliberately absent —
+# it carries firmware source, fix plans, credentials inside release notes and
+# unreleased products, none of which belongs in an index a public chatbot
+# answers from.
+#
+# fiber-agent is excluded on purpose. Its releases are mirrors of an internal
+# build ("Mirror of GitLab release vX"), and the upstream ones are generated
+# commit lists or "Auto-built aarch64 binary" — noise that would outrank real
+# documentation.
+
+import os
+
+GITHUB_REPOS = [
+    "chester-sdk",
+    "sticker-firmware",
+    "sticker-configuration",
+    "tapper",
+    "tower-cli",
+    "py-hardwario",
+    "twr-sdk",
+]
+
+GITHUB_API = "https://api.github.com/repos/hardwario/{}"
+GITHUB_RELEASES_PER_REPO = 20
+
+# Bodies shorter than this are build noise, not release notes: "Initial
+# release", "Auto-built aarch64 binary with --features dev-platform".
+MIN_RELEASE_BODY = 60
+
+
+def github_headers():
+    token = os.environ.get("GITHUB_TOKEN", "").strip()
+    h = {"User-Agent": UA, "Accept": "application/vnd.github+json"}
+    if token:
+        h["Authorization"] = "Bearer " + token
+    return h
+
+
+def github_pages():
+    out = []
+    for repo in GITHUB_REPOS:
+        base = GITHUB_API.format(repo)
+
+        r = requests.get(base + "/readme", headers=dict(
+            github_headers(), Accept="application/vnd.github.raw"), timeout=45)
+        if r.ok and len(r.text) > 200:
+            out.append({
+                "site": "github",
+                "url": "https://github.com/hardwario/" + repo,
+                "title": "{} — repository README".format(repo),
+                "text": r.text,
+                "anchors": {},
+            })
+
+        r = requests.get(
+            base + "/releases",
+            headers=github_headers(),
+            params={"per_page": GITHUB_RELEASES_PER_REPO},
+            timeout=45,
+        )
+        if not r.ok:
+            print("  github: {} releases -> {}".format(repo, r.status_code))
+            continue
+        for rel in r.json():
+            body = (rel.get("body") or "").strip()
+            if len(body) < MIN_RELEASE_BODY:
+                continue
+            tag = rel.get("tag_name") or ""
+            date = (rel.get("published_at") or "")[:10]
+            out.append({
+                "site": "github",
+                "url": rel.get("html_url"),
+                "title": "{} {} release notes".format(repo, tag),
+                # The heading gives the chunker something to split on and puts
+                # the version in the chunk's own text, where a search for
+                # "latest STICKER firmware" can reach it.
+                "text": "# {} {}\n\nReleased {}.\n\n{}".format(repo, tag, date, body),
+                "anchors": {},
+            })
+    return out
+
+
+github = github_pages()
+pages += github
+print("added {} pages from {} GitHub repositories".format(
+    len(github), len(GITHUB_REPOS)))
+
 # 5 — CHECK THE EXTRACTION.
 #
 # The safety brake. Everything from step 6 on costs real time, and a botched

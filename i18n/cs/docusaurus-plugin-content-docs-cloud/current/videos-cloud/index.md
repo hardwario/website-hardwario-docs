@@ -1,7 +1,7 @@
 ---
 slug: videos-cloud
 title: Video tutoriály
-description: "Zde najdete podrobné návody a video tutoriály, které vám pomohou s konfigurací a správou vašich zařízení v HARDWARIO Cloud."
+description: "Zde najdete podrobné návody a videonávody, které vám pomohou s konfigurací a správou vašich zařízení v HARDWARIO Cloud."
 title_meta: "Video tutoriály (HARDWARIO Cloud video tutorials)"
 ---
 
@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 # Video tutoriály {#video-tutorials}
 
-Zde najdete podrobné návody a video tutoriály, které vám pomohou s konfigurací a správou vašich zařízení v HARDWARIO Cloud.
+Zde najdete podrobné návody a videonávody, které vám pomohou s konfigurací a správou vašich zařízení v HARDWARIO Cloud.
 
 | Tutoriál                       | Podrobný návod                                  | Video tutoriál                              |
 |--------------------------------|-------------------------------------------------|---------------------------------------------|

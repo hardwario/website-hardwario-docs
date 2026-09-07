@@ -1,6 +1,6 @@
 ---
 slug: how-to-uart-interface
-title: "How To: Rozhraní UART"
+title: "Jak na: Rozhraní UART"
 ---
 import Image from '@theme/IdealImage';
 

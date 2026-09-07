@@ -32,7 +32,7 @@ Rozvržení obrazovek samotných odpovídá.
 | **Device info** | Přečte sériové číslo, verzi firmwaru, dobu běhu a hodiny, viz [**Informace o zařízení a klíče LoRaWAN**](./device-info.md) |
 | **LoRaWAN keys** | Přečte DevEUI a klíče potřebné k registraci zařízení v síti |
 | **Configuration** | Čtení a úprava celé konfigurace zařízení, viz [**Konfigurace**](./configuration.md) |
-| **Templates** | Znovupoužitelné konfigurační presety, viz [**Šablony**](./templates.md) |
+| **Templates** | Znovupoužitelné konfigurační předlohy, viz [**Šablony**](./templates.md) |
 | **Tools** | Synchronizace času, senzory, historie, resety, viz [**Nástroje**](./tools.md) |
 | **Saved STICKERs** | Zařízení, která spravujete, a jejich uložené klíče, viz [**Saved STICKERs**](./saved-stickers.md) |
 

@@ -17,13 +17,13 @@ Tato stránka se zaměřuje na spárování s cloudem. Kompletní nastavení od 
 
 - Účet v HARDWARIO Cloud: [https://cloud.hardwario.com](https://cloud.hardwario.com)
 - Zařízení GLIDER, které je **zapnuté** a připojené k mobilní síti
-- Přístup buď ke **RTT konzoli**, nebo k **AT konzoli** pro vyčtení přihlašovacích údajů
+- Přístup buď ke **RTT konzoli**, nebo k **konzoli AT** pro vyčtení přihlašovacích údajů
 
 :::info
 Pokud ještě nemáte konzoli připravenou, postupujte nejprve podle jednoho z těchto návodů:
 
 - [**RTT konzole (J-Link)**](console/rtt-jlink.md): pro vývojová nasazení se sondou J-Link.
-- [**AT konzole (USB-C)**](console/usb-at.md): doporučeno pro první zprovoznění.
+- [**konzole AT (USB-C)**](console/usb-at.md): doporučeno pro první zprovoznění.
 :::
 
 ## Krok 1 - Vyčtěte sériové číslo a claim token {#step-1---read-the-serial-number-and-claim-token}
@@ -41,7 +41,7 @@ info serial-number
 info claim-token
 ```
 
-#### Pomocí AT konzole {#using-the-at-console}
+#### Pomocí konzole AT {#using-the-at-console}
 
 ```text
 AT$INFO?
@@ -85,7 +85,7 @@ Během několika minut byste měli vidět první příchozí CBOR payload. Zař�
 
 Okamžitý uplink vynutíte takto:
 
-- **AT konzole:** `AT$SHELL="app send"`
+- **konzole AT:** `AT$SHELL="app send"`
 - **RTT konzole:** `app send`
 
 Struktura payloadu je popsána na stránce [**CBOR payload**](payload.md).

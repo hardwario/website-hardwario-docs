@@ -64,9 +64,9 @@ K dispozici je také [**Arduino knihovna pro Soil Sensor**](https://github.com/h
 - Krytí IP 68
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/soil-sensor-set)
+- [**Obchod**](https://www.hardwario.store/p/soil-sensor-set)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-soil-sensor)
-- [**SDK knihovna**](https://sdk.hardwario.com/group__twr__soil__sensor.html)
+- [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__soil__sensor.html)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_soil_sensor.h)
 - [**Zdrojový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/src/twr_soil_sensor.c)
 - [**Projekty**](https://www.hackster.io/hardwario/projects?part_id=117389)

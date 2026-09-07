@@ -19,7 +19,7 @@ Minimální konfigurace lokality je:
 
 * Jedna brána **LoRaWAN** (EMBER Hotspot)
 
-* Jedna instance serveru **LoRaWAN** (**ChirpStack** nebo **The Things Stack**: vlastní hosting, nebo provozovaný společností **HARDWARIO** jako [managovaná služba](cloud-service.md))
+* Jedna instance serveru **LoRaWAN** (**ChirpStack** nebo **The Things Stack**: vlastní hosting, nebo provozovaný společností **HARDWARIO** jako [spravovaná služba](cloud-service.md))
 
 Každé zařízení **EMBER Hotspot** může obsloužit více než 100 zařízení **LoRaWAN**, pokud jsou v rádiovém pokrytí.
 
@@ -65,7 +65,7 @@ Správa je dostupná prostřednictvím těchto služeb:
 
 * **RouterOS API**: HTTP REST API
 
-Přístup je omezen z **LAN** IP sítě `172.31.255.0/24` a z VPN endpointů managované služby `192.168.16.1` + `192.168.17.1`.
+Přístup je povolen jen z IP sítě **LAN** `172.31.255.0/24` a z VPN endpointů spravované služby `192.168.16.1` + `192.168.17.1`.
 
 ## VPN tunely {#vpn-tunnels}
 
@@ -83,7 +83,7 @@ Podporovaná konektivita **LTE** je založena na specifikacích **3GPP**.
 
 ## Konvence pojmenování {#naming-convention}
 
-Název zařízení **EMBER Hotspot** je složen z identifikátoru zákazníka + indexu managované služby + indexu zařízení **EMBER Hotspot**.
+Název zařízení **EMBER Hotspot** je složen z identifikátoru zákazníka + indexu spravované služby + indexu zařízení **EMBER Hotspot**.
 
 ```
 /system identity set name=ember-<customer identifier>-<01>-hotspot-<01>
@@ -194,7 +194,7 @@ Konektivita LTE má přednost před WAN díky vzdálenosti routeru (výchozí vz
 
 :::tip
 
-Certifikáty (certifikační autorita, certifikát zařízení **EMBER Hotspot**, privátní klíč zařízení **EMBER Hotspot**) se importují z managované služby.
+Certifikáty (certifikační autorita, certifikát zařízení **EMBER Hotspot**, privátní klíč zařízení **EMBER Hotspot**) se importují z spravované služby.
 
 :::
 
@@ -204,7 +204,7 @@ Certifikáty (certifikační autorita, certifikát zařízení **EMBER Hotspot**
 
 ### WireGuard {#wireguard}
 
-Klíče **WireGuard** (veřejný klíč pro managovanou službu + privátní klíč pro zařízení **EMBER Hotspot**) se přebírají z managované služby.
+Klíče **WireGuard** (veřejný klíč pro spravovanou službu + privátní klíč pro zařízení **EMBER Hotspot**) se přebírají z spravované služby.
 
 ```
 /interface wireguard add disabled=no listen-port=51820 mtu=1420 name=wireguard1
@@ -227,7 +227,7 @@ Výchozí servery **TTN** můžete ignorovat.
 
 :::caution
 
-Pokud nepoužíváte managovanou službu HARDWARIO, musíte použít IP adresu svého serveru **LoRaWAN** a nemusíte konfigurovat VPN tunely.
+Pokud nepoužíváte spravovanou službu HARDWARIO, musíte použít IP adresu svého serveru **LoRaWAN** a nemusíte konfigurovat VPN tunely.
 
 :::
 

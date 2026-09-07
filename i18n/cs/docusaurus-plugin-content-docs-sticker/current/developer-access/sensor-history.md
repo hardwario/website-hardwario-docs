@@ -7,9 +7,9 @@ import Image from '@theme/IdealImage';
 
 # Historie senzorů a store-and-forward (`history`) {#sensor-history--store-and-forward-history}
 
-**Engine historie senzorů** zajišťuje pro zařízení STICKER funkci store-and-forward. Když zařízení přijde o konektivitu LoRaWAN, měření ze senzorů se průběžně ukládají do nevolatilní flash paměti. Po obnovení konektivity nebo na žádost backendu lze historické záznamy přehrát přes radiové rozhraní, případně je lokálně přečíst přes NFC.
+**Engine historie senzorů** zajišťuje pro zařízení STICKER funkci store-and-forward. Když zařízení přijde o konektivitu LoRaWAN, měření ze senzorů se průběžně ukládají do nevolatilní flash paměti. Po obnovení konektivity nebo na žádost backendu lze historické záznamy přehrát přes ráiové rozhraní, případně je lokálně přečíst přes NFC.
 
-Uložené záznamy přežijí výměnu baterií i ztrátu napájení. Záznam se konfiguruje parametry `config` a lokálně se spravuje shell příkazem `history` (viz [**Nastavení firmwaru**](firmware-setup.md)).
+Uložené záznamy přežijí výměnu baterií i ztrátu napájení. Záznam se konfiguruje parametry `config` a lokálně se spravuje příkaz shelluem `history` (viz [**Nastavení firmwaru**](firmware-setup.md)).
 
 :::info Firmware v1.4.0
 Funkce store-and-forward popsaná na této stránce je základní funkcí **firmwaru STICKER v1.4.0**. Během výpadků sítě zaznamenává vzorky ze senzorů do flash paměti a na žádost je přehraje.

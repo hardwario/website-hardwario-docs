@@ -1,6 +1,6 @@
 ---
 slug: how-to-temperature-sensor
-title: "How To: Teplotní senzor"
+title: "Jak na: Teplotní senzor"
 ---
 import Image from '@theme/IdealImage';
 

@@ -36,7 +36,7 @@
     "description": "The label for category 'Firmware SDK' in sidebar 'docs'"
   },
   "sidebar.docs.category.Radio Communication": {
-    "message": "Radiová komunikace",
+    "message": "Rádiová komunikace",
     "description": "The label for category 'Radio Communication' in sidebar 'docs'"
   },
   "sidebar.docs.category.MQTT Protocol": {

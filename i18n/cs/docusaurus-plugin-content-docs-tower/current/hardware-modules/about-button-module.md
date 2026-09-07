@@ -24,7 +24,7 @@ import Image from '@theme/IdealImage';
 - Mechanické rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/button-module)
+- [**Obchod**](https://www.hardwario.store/p/button-module)
 - [**Schéma**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-button)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__button)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_button.h)

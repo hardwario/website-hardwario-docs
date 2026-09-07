@@ -23,7 +23,7 @@ Otevřete **HARDWARIO Manager** a zvolte **CHESTER**.
 |---|---|
 | [**Device info**](./device-info.md) | Sériové číslo, firmware, doba běhu a ovládání zařízení |
 | [**Configuration**](./configuration.md) | Čtení a úprava konfigurace zařízení |
-| [**Open Terminal**](./terminal.md) | Odesílání shell příkazů do konzole zařízení |
+| [**Open Terminal**](./terminal.md) | Odesílání příkaz shelluů do konzole zařízení |
 | [**Tools**](./tools.md) | Aktualizace firmwaru, restart, factory reset |
 | [**BLE tags**](./ble-tags.md) | Navázání externích senzorových BLE tagů do slotů a čtení jejich hodnot |
 

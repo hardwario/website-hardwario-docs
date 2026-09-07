@@ -1,6 +1,6 @@
 ---
 slug: about-mini-cover-module
-title: O modulu Mini Cover
+title: O modulu Mini Cover Module
 ---
 import Image from '@theme/IdealImage';
 
@@ -33,5 +33,5 @@ Pokud používáte větší moduly, můžete místo něj použít náš [**modul
 - Mechanické rozměry: 88 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/mini-cover-module)
+- [**Obchod**](https://www.hardwario.store/p/mini-cover-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-cover-mini)

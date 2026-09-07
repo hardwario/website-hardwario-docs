@@ -1,6 +1,6 @@
 ---
 slug: about-one-wire-slave-module
-title: O modulu 1-Wire Slave
+title: O modulu 1-Wire Slave Module
 ---
 import Image from '@theme/IdealImage';
 

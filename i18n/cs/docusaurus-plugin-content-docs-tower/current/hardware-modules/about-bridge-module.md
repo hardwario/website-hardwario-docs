@@ -1,6 +1,6 @@
 ---
 slug: about-bridge-module
-title: O modulu Bridge
+title: O modulu Bridge Module
 ---
 import Image from '@theme/IdealImage';
 
@@ -30,5 +30,5 @@ import Image from '@theme/IdealImage';
 - Mechanické rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/bridge-module)
+- [**Obchod**](https://www.hardwario.store/p/bridge-module)
 - [**Schémata**](https://github.com/hardwario/twr-hardware/tree/master/out/bc-module-bridge)

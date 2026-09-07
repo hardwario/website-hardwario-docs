@@ -14,12 +14,12 @@ Jak nainstalovat Mosquitto:
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
 
-Pro instalaci a spuštění mosquitto na systému Windows můžete postupovat podle návodu [**How to Install The Mosquitto MQTT Broker on Windows**](http://www.steves-internet-guide.com/install-mosquitto-broker/)
+Mosquitto na systému Windows nainstalujete a spustíte podle návodu [**How to Install The Mosquitto MQTT Broker on Windows**](http://www.steves-internet-guide.com/install-mosquitto-broker/)
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-Pro instalaci a spuštění mosquitto na systému Ubuntu můžete postupovat podle návodu [**Install Mosquitto MQTT Broker On Ubuntu 20.04 Server**](https://www.vultr.com/docs/install-mosquitto-mqtt-broker-on-ubuntu-20-04-server/)
+Mosquitto na systému Ubuntu nainstalujete a spustíte podle návodu [**Install Mosquitto MQTT Broker On Ubuntu 20.04 Server**](https://www.vultr.com/docs/install-mosquitto-mqtt-broker-on-ubuntu-20-04-server/)
 
 </TabItem>
 <TabItem value="macOS" label="macOS">
@@ -65,7 +65,7 @@ Abyste mohli získat **Host Management Tool**, potřebujete mít na zařízení 
 
 ## Instalace {#installation}
 
-Pro instalaci nástroje **Host Management Tool** stačí otevřít **CLI** vašeho systému a spustit následující příkaz:
+Chcete-li nástroj **Host Management Tool** nainstalovat, stačí otevřít **CLI** vašeho systému a spustit následující příkaz:
 
 :::tip
 

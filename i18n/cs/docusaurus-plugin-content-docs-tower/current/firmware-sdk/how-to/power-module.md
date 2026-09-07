@@ -1,6 +1,6 @@
 ---
 slug: how-to-power-module
-title: "How To: Power Module"
+title: "Jak na: Power Module"
 ---
 import Image from '@theme/IdealImage';
 

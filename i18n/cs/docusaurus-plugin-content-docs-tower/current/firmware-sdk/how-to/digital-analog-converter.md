@@ -1,6 +1,6 @@
 ---
 slug: how-to-digital-analog-converter
-title: "How To: Digitálně-analogový převodník"
+title: "Jak na: Digitálně-analogový převodník"
 ---
 import Image from '@theme/IdealImage';
 

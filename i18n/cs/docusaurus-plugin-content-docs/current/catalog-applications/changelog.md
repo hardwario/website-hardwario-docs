@@ -38,7 +38,7 @@ Toto vydání přináší nekompatibilní změny a zároveň všechna vylepšen�
 - Obnovena podpora `FW_VERSION` z důvodu kompatibility.
 - API sekvenceru LED `ctr_led` označeno jako zavržené.
 - Optimalizováno využití RAM, úspora přibližně 17 kB.
-- Přidán shell příkaz `tag read all [timeout]`
+- Přidán příkaz shellu `tag read all [timeout]`
 
 ### CHESTER Cloud {#chester-cloud}
 
@@ -85,7 +85,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 
 ### SDK / Common {#sdk--common-2}
 - Přidána detekce CHESTER-Z za běhu: jediný firmware funguje s modulem Z i bez něj
-- Přidán shell příkaz pro skenování sběrnice 1-Wire (W1)
+- Přidán příkaz shellu pro skenování sběrnice 1-Wire (W1)
 - Deploy skript aktualizován o argumenty CLI a kompletní seznam aplikací
 
 ### CHESTER Clime {#chester-clime}
@@ -108,7 +108,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 ## v3.5.2 (2026-03-10) {#v352-2026-03-10}
 
 ### SDK / Common {#sdk--common-3}
-- Do všech aplikací přidány shell příkazy pro I2C, MCUboot a GPIO
+- Do všech aplikací přidány příkazy shellu pro I2C, MCUboot a GPIO
 - Výchozí LTE režim změněn na `lte-m,nb-iot` (automatický fallback na NB-IoT)
 - CHESTER Counter a CHESTER Signal přesunuty do složky `_legacy`
 
@@ -144,7 +144,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 - Opraveno chybějící odemčení mutexu
 
 ### CHESTER Current {#chester-current}
-- Přidány shell příkazy pro kalibraci kanálů
+- Přidány příkazy shellu pro kalibraci kanálů
 - Vylepšena podpora LoRaWAN
 - Opraven kalibrační rozsah, přidán watchdog pro downlink
 
@@ -164,7 +164,7 @@ Doporučujeme začít z funkčního workspace v3.5.5, ne přeskakovat ze starš�
 - Přidáno jako nová katalogová aplikace
 - Přidán režim enroll (teach) pro párování zařízení
 - Přidán scan all s podporou konfigurace cloud-decode
-- Přidán shell příkaz send
+- Přidán příkaz shellu send
 
 ---
 

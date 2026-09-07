@@ -30,11 +30,11 @@ Pro vyšší bezpečnost doporučujeme ověření přes **Google** nebo **Micros
 
    ![Stránka SPACES se zvýrazněným tlačítkem „+ NEW SPACE“ v pravém horním rohu](../../../../cloud/images/spaces-new-space.png)
 
-2. Pojmenujte svůj space (například: `my-home`, `office-sensors`, `warehouse`). Řiďte se [**konvencemi pojmenování**](/cloud/#naming-conventions).
+2. Pojmenujte svůj prostor (například: `my-home`, `office-sensors`, `warehouse`). Řiďte se [**konvencemi pojmenování**](/cloud/#naming-conventions).
 
    ![Dialog „Create new space“: zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
 
-3. Právě zde budou vaše zařízení žít. Podrobnosti viz [**Spaces**](/cloud/spaces).
+3. Právě sem budou vaše zařízení patřit. Podrobnosti viz [**Spaces**](/cloud/spaces).
 
 ## Krok 3: Přidejte zařízení {#step-3-add-a-device}
 
@@ -61,7 +61,7 @@ Jakmile je zařízení napájené a připojené, jeho uplinky se objeví v Cloud
 
 ## Krok 5: Zasáhněte do chodu svých zařízení {#step-5-act-on-your-devices}
 
-Cloud je obousměrný: pošlete konfiguraci, data nebo shell příkazy zpět pomocí
+Cloud je obousměrný: pošlete konfiguraci, data nebo příkazy shellu zpět pomocí
 [**Downlink**](/cloud/downlink) a nahrajte nový [**Firmware**](/cloud/firmware) vzduchem.
 
 ## Krok 6: Propojte Cloud se svými systémy {#step-6-integrate-with-your-systems}

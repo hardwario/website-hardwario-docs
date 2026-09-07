@@ -14,7 +14,7 @@ Standardní modul **CMWX1ZZABZ-078** od firmy **Murata** používá standard LoR
 
 ## Konfigurace režimu sítě {#network-mode-configuration}
 
-Některé katalogové firmwary umožňují nakonfigurovat použití sítě NB-IoT/LTE nebo LoRaWAN. Tento firmware po zapnutí neposílá data, **LED bliká žlutě** a je nutné nakonfigurovat správný režim radia.
+Některé katalogové firmwary umožňují nakonfigurovat použití sítě NB-IoT/LTE nebo LoRaWAN. Tento firmware po zapnutí neposílá data, **LED bliká žlutě** a je nutné nakonfigurovat správný režim ráia.
 
 Tato konfigurace `app mode` je aktuálně potřebná pro tyto katalogové aplikace:
 
@@ -56,7 +56,7 @@ Ne všechny katalogové firmwary podporují přepnutí NB-IoT/LTE-M na LoRaWAN r
 
 :::
 
-Existuje velké množství konfigurací, například autentizace **ABP** nebo **OTAA**. Modem lze také nastavit na fixní datarate pro dosažení nejdelšího dosahu. Podporuje také režimy třídy **A** a **C** pro příjem downlink zpráv.
+Existuje velké množství konfigurací, například autentizace **ABP** nebo **OTAA**. Modem lze také nastavit na pevnou datovou rychlost pro dosažení nejdelšího dosahu. Podporuje také režimy třídy **A** a **C** pro příjem downlink zpráv.
 
 Pro zobrazení aktuální konfigurace zadejte `lrw config show`, což vypíše kompletní konfiguraci.
 
@@ -152,12 +152,12 @@ Následující tabulka uvádí přehled doporučených konfiguračních parametr
 
 | **Parametr** | **Hodnota** |
 |----------------|-----------|
-| **General – MAC version** | **LoRaWAN 1.0.4** |
-| **General – Regional parameters revision** | **A** |
-| **General – ADR algorithm** | **Default ADR algorithm (LoRa only)** |
-| **Join (OTAA/ABP) – Device supports OTAA** | **ON** |
-| **Class-B – Device supports Class-B** | **OFF** |
-| **Class-C – Device supports Class-C** | **OFF** |
+| **General → MAC version** | **LoRaWAN 1.0.4** |
+| **General → Regional parameters revision** | **A** |
+| **General → ADR algorithm** | **Default ADR algorithm (LoRa only)** |
+| **Join (OTAA/ABP) → Device supports OTAA** | **ON** |
+| **Class-B → Device supports Class-B** | **OFF** |
+| **Class-C → Device supports Class-C** | **OFF** |
 
 :::info
 Pokud si nejste jisti nastavením nebo konfigurací **ChirpStack**, podívejte se prosím do následujícího návodu, který obsahuje podrobné instrukce k instalaci a konfiguraci ChirpStack v4: [**Getting Started with ChirpStack v4**](https://docs.hardwario.com/apps/chirpstack/index#getting-started-with-chirpstack-v4)
@@ -180,7 +180,7 @@ Dekodér můžete nastavit v Device-profile na kartě **Codec**.
 
 ### Dekodér pro Node-RED {#node-red-decoder}
 
-Pro Node-RED se připojujeme přímo k MQTT brokeru v CHIRPSTACK pomocí node MQTT out, který má nastavené MQTT téma na `application/<application-id>/device/+/event/up`.
+Pro Node-RED se připojujeme přímo k MQTT brokeru v CHIRPSTACK pomocí uzlu MQTT out, který má nastavené MQTT téma na `application/<application-id>/device/+/event/up`.
 
 Nahraďte `<application-id>` ID své aplikace. Ve starších verzích CHIRPSTACK je to **číslo 0..n**, v novějších verzích je to **unikátní ID**.
 
@@ -190,7 +190,7 @@ Nahraďte `<application-id>` ID své aplikace. Ve starších verzích CHIRPSTACK
 
 ### Veřejná vs. privátní síť {#public-vs-private-network}
 
-Síť LoRaWAN lze nastavit jako privátní nebo veřejnou. Neznamená to, že síť je nebo není viditelná. Znamená to pouze, že radiové pakety používají odlišnou preambuli.
+Síť LoRaWAN lze nastavit jako privátní nebo veřejnou. Neznamená to, že síť je nebo není viditelná. Znamená to pouze, že ráiové pakety používají odlišnou preambuli.
 
 Pokud vaše síť nebo brána nevidí ani jeden paket, obvykle je to právě kvůli tomu.
 

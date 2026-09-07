@@ -1,6 +1,6 @@
 ---
 slug: how-to-one-wire-relay
-title: "Návod: 1-Wire relé"
+title: "Jak na: 1-Wire relé"
 ---
 import Image from '@theme/IdealImage';
 

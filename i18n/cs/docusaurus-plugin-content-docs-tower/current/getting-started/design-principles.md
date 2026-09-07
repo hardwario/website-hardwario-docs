@@ -8,7 +8,7 @@ Věříme, že se věci mají dělat správně, a proto jsme přijali následuj�
 
 ## Radiová frekvence {#radio-frequency}
 
-Pro radiovou komunikaci používáme frekvenci 868/915 MHz. Jde o bezlicenční pásmo určené pro krátké signální zprávy.
+Pro ráiovou komunikaci používáme frekvenci 868/915 MHz. Jde o bezlicenční pásmo určené pro krátké signální zprávy.
 
 Zatěžovat vaše IoT zařízení pásmem 2,4 GHz a bojovat se streamováním po Wi-Fi, Bluetooth, ZigBee a dalšími protokoly spolehlivosti systému nepomůže.
 

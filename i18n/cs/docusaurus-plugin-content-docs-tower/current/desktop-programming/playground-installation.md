@@ -1,6 +1,6 @@
 ---
 slug: playground-installation
-title: Instalace Playground
+title: Instalace aplikace HARDWARIO Playground
 ---
 import Image from '@theme/IdealImage';
 

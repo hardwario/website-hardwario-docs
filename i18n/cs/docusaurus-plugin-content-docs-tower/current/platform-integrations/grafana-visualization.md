@@ -14,7 +14,7 @@ Můžete použít náš [**předinstalovaný obraz**](../server-raspberry-pi/ins
 
 :::
 
-[**Grafana**](https://grafana.com) je otevřená platforma pro krásnou analytiku a monitoring. Umožňuje vytvářet přehledné dashboardy, které vám dají rychlý přehled o datech ze senzorů.
+[**Grafana**](https://grafana.com) je otevřená platforma pro přehlednou analytiku a monitoring. Umožňuje vytvářet přehledné dashboardy, které vám dají rychlý přehled o datech ze senzorů.
 
 <Image img={require('../../../../../tower/platform-integrations/images/grafana-for-visualization-grafana.png')} alt="Dashboard climate-station v Grafaně s ukazateli a grafy teploty, vlhkosti, osvětlenosti a tlaku" />
 
@@ -162,7 +162,7 @@ brew services start grafana
 
 ## Konfigurace Grafany {#configure-grafana}
 
-Pro konfiguraci Grafany ji nejprve otevřete a přihlaste se:
+Chcete-li Grafanu nakonfigurovat, nejprve ji otevřete a přihlaste se:
 
 - [**http://localhost:3000/**](http://localhost:3000/): Grafana běží na vašem **lokálním počítači**
 - **http://hub.local:3000/**: Grafana běží na [**vašem Raspberry Pi s nainstalovaným Hubem**](../server-raspberry-pi/installation-os.md)

@@ -20,7 +20,7 @@ překročit zákonný limit EIRP.
 
 ## Co je zisk antény? {#what-is-antenna-gain}
 
-Zisk antény popisuje, jak moc anténa soustřeďuje radiovou energii do určitých
+Zisk antény popisuje, jak moc anténa soustřeďuje ráiovou energii do určitých
 směrů ve srovnání s teoretickou anténou, která vyzařuje rovnoměrně do všech
 směrů (**izotropní zářič**). Vyjadřuje se v **dBi**, decibelech
 vztažených k izotropnímu zářiči.

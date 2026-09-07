@@ -71,7 +71,7 @@ Tento obrázek ukazuje elektrický obvod každého kanálu:
 
 Konfigurace závisí na aplikaci.
 
-Signály PUx, CLx, PDx, ONx odkazují na schéma výše. Zelená fajfka ✅ znamená, že I2C GPIO expander nebo X0 posílá na tento konfigurační signál logickou jedničku.
+Signály PUx, CLx, PDx, ONx odkazují na schéma výše. Zelené zaškrtnutí ✅ znamená, že I2C GPIO expander nebo X0 posílá na tento konfigurační signál logickou jedničku.
 To slouží pouze pro pochopení režimů. Stačí vědět, který režim je nastaven ve sloupci tabulky `ctr_x0_set_mode`.
 
 | Aplikace             | PUx | CLx | PDx | ONx | SDK `ctr_x0_set_mode`    |

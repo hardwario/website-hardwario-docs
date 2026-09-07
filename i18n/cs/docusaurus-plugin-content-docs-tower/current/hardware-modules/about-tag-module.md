@@ -35,9 +35,9 @@ Modul má také pull-up rezistory na signálech **SDA/SCL** sběrnice **I2C1**.
 - Mechanické rozměry: 44 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/tag-module)
+- [**Obchod**](https://www.hardwario.store/p/tag-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-tag-barometer)
-- [**SDK knihovna**](https://sdk.hardwario.com/group__twr__tag__barometer)
+- [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__tag__barometer)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/HEAD/twr/inc/twr_tag_barometer.h)
 - [**Zdrojový soubor**](https://github.com/hardwario/twr-sdk/blob/HEAD/twr/src/twr_tag_barometer.c)
 - [**Projekty**](https://www.hackster.io/hardwario/projects?part_id=108578)

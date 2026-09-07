@@ -29,7 +29,7 @@ Vyplňte pole ručně:
 
 | Pole | Popis |
 |---|---|
-| **Name** | Čitelné jméno, například `warehouse-sensor-01` |
+| **Name** | Čitelný název, například `warehouse-sensor-01` |
 | **Serial Number (HSN)** | Sériové číslo HARDWARIO vytištěné na etiketě zařízení |
 | **Claim Token** | Token unikátní pro každé zařízení. Je vidět na QR kódu nebo přes `info show` po J-Link RTT |
 
@@ -48,7 +48,7 @@ Seznam zařízení zobrazuje u každého zařízení přehled:
 - **Name** a volitelný komentář
 - **Last Seen**: čas posledního uplinku
 - **Firmware**: název a verze aplikace
-- **Tags**: přiřazené tagy zobrazené jako barevné odznaky
+- **Tags**: přiřazené tagy zobrazené jako barevné štítky
 
 Kliknutím na řádek zařízení otevřete jeho detail.
 

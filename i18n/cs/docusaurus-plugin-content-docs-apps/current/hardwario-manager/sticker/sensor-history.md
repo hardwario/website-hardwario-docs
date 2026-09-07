@@ -38,7 +38,7 @@ viz [**Nástroje**](./tools.md).
 
 Záznamy se ukládají jen tehdy, když je historie zapnutá. Zapněte ji a zvolte,
 které kanály se mají ukládat, v **Configuration → History** (viz
-[**Konfigurace**](./configuration.md)) nebo přes shell příkazy
+[**Konfigurace**](./configuration.md)) nebo přes příkazy shellu
 `config history-enable` / `config history-sensors`, popsané v
 [**Historii senzorů (přístup pro vývojáře)**](/sticker/developer-access/sensor-history).
 

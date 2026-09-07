@@ -41,7 +41,7 @@ Pokud chcete, aby vaše zařízení vydrželo ještě delší dobu, a nezálež�
 - Rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/mini-battery-module)
+- [**Obchod**](https://www.hardwario.store/p/mini-battery-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-battery-mini)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__battery)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_battery.h)

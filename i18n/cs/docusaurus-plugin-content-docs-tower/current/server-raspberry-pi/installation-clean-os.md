@@ -22,7 +22,7 @@ Po dokončení instalace se stačí [**přihlásit k zařízení přes SSH**](./
 
 Můžete také použít náš [**instalační skript**](https://github.com/hardwario/hio-raspbian/blob/master/install.sh), který provede všechny potřebné kroky k přípravě Raspberry pro použití s TOWER.
 
-Pro spuštění skriptu stačí po připojení k Raspberry spustit následující příkazy.
+Skript spustíte tak, že se připojíte k Raspberry a zadáte následující příkazy.
 
 ```
 wget https://raw.githubusercontent.com/hardwario/hio-raspbian/master/install.sh

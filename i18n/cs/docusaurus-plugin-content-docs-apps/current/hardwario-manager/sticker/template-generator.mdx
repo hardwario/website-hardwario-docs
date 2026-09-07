@@ -32,7 +32,7 @@ Zobrazené bajty jsou **nezašifrovaný** `AppConfigMessage`. Na běžném zař�
 :::info Poznámky k polím
 - **Přepínače** jsou explicitní: schopnost nastavená na *off* zapíše tuto schopnost = false, nenechá ji nedotčenou. Zaškrtávejte řádek jen u nastavení, která má šablona nést.
 - **Čísla** mají povolený rozsah v nápovědě a validují se. Vzorkovací interval přijímá i `0` (vzorek těsně před každým reportem) a limit alarmů přijímá `0` (vypnuto).
-- **Pravidla alarmů** se kódují do stejných 17bajtových zabalených slotů, jaké používá [**generátor downlink příkazů**](/sticker/connectivity/downlink-commands-generator) a shell příkaz `alarm`; tady je ale sestavíte editorem pravidel místo vkládání hexu.
+- **Pravidla alarmů** se kódují do stejných 17bajtových zabalených slotů, jaké používá [**generátor downlink příkazů**](/sticker/connectivity/downlink-commands-generator) a příkaz shellu `alarm`; tady je ale sestavíte editorem pravidel místo vkládání hexu.
 :::
 
 Úplný seznam konfigurovatelných parametrů a jejich význam najdete v [**Konfiguračních parametrech**](/sticker/developer-access/configuration). Načtení hotové šablony do aplikace a její zápis do zařízení popisují [**Šablony**](./templates.md) a [**Instalace aplikace**](../install.md).

@@ -24,7 +24,7 @@ V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobra
 
 ![Vytvoření nového dashboardu - 2](../../../../../apps/thingsboard/images/thingsboard-dashboards-2.png)
 
-   7. Přesměruje vás to na váš nově vytvořený dashboard.  
+   7. Budete přesměrováni na svůj nově vytvořený dashboard.  
 
 ---
 

@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 # RTT konzole přes J-Link {#rtt-console-over-j-link}
 
 :::tip
-RTT konzole vám dává **Zephyr shell** a živý tok logů firmwaru – je to doporučená konzole pro **vývoj a ladění**. Pro běžnou konfiguraci použijte raději [**AT konzoli přes USB-C**](usb-at.md) – není potřeba žádný speciální hardware.
+RTT konzole vám dává **Zephyr shell** a živý tok logů firmwaru – je to doporučená konzole pro **vývoj a ladění**. Pro běžnou konfiguraci použijte raději [**konzoli AT přes USB-C**](usb-at.md) – není potřeba žádný speciální hardware.
 :::
 
 Tato stránka ukazuje, jak se připojit k zařízení GLIDER pomocí ladicí sondy **Segger J-Link** protokolem **RTT (Real-Time Transfer)**. RTT poskytuje plný **Zephyr shell** plus živé logy firmwaru – je to doporučená konzole pro vývoj a ladění.
@@ -17,12 +17,12 @@ Tato stránka ukazuje, jak se připojit k zařízení GLIDER pomocí ladicí son
 | | **RTT (`rttt`)** | **AT přes USB-C (`west serial-console`)** |
 | :--- | :--- | :--- |
 | Cesta | J-Link → SWD → RTT | USB-C → FT234XD → UART0 |
-| Co uvidíte | Zephyr shell + logy | AT příkazy + zprávy `@LOG:` |
+| Co uvidíte | Zephyr shell + logy | příkazy AT + zprávy `@LOG:` |
 | Potřebný hardware | Sonda J-Link + vodiče SWD | Jen kabel USB-C |
 | Nejlepší pro | Vývoj, ladění, nahrání firmwaru, reset | Běžné zprovoznění |
 
 :::info
-Pokud nepotřebujete plný vývojářský přístup, použijte raději [**AT konzoli přes USB-C**](usb-at.md) – nevyžaduje žádný speciální hardware.
+Pokud nepotřebujete plný vývojářský přístup, použijte raději [**konzoli AT přes USB-C**](usb-at.md) – nevyžaduje žádný speciální hardware.
 :::
 
 ## Předpoklady {#prerequisites}

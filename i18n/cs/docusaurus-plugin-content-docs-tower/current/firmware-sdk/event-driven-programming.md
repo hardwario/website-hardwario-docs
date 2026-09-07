@@ -18,7 +18,7 @@ Můžete si například nastavit událost, která se zavolá vždy, když se ně
 
 Je potřeba nastavit obslužnou funkci události (event handler), tedy konkrétní funkci, která se zavolá, když nějaká událost nastane.
 
-Funkce musí mít pro každý modul a tag **specifickou signaturu**, kterou najdete v **příkladech** na [**GitHubu**](https://github.com/hardwario) nebo v kapitolách **How To:** v této sekci.
+Funkce musí mít pro každý modul a tag **specifickou signaturu**, kterou najdete v **příkladech** na [**GitHubu**](https://github.com/hardwario) nebo v kapitolách **Jak na:** v této sekci.
 
 :::info
 

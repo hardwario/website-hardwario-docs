@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 - Název **topicu** má **adresářovou strukturu**: jednotlivé úrovně jsou oddělené symbolem `/`
   - Topic může být `bedroom/temperature`, `kitchen/light/set` atd.
 - MQTT server se nazývá **broker** a klienti mohou **publikovat zprávy** a **odebírat topicy**
-- Úkolem MQTT brokeru je **doručovat zprávy** od **publisherů** k **odběratelům**
+- Úkolem MQTT brokeru je **doručovat zprávy** od **vydavatelů** k **odběratelům**
 - Při odebírání MQTT topicu můžete použít dva takzvané **zástupné znaky** (wildcards)
   - Zástupný znak `+` přihlásí odběr všech topiců v zadaném topicu
     - např. `+/light/set` přihlásí odběr `bedroom/light/set`, `kitchen/light/set` atd.

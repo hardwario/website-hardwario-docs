@@ -32,6 +32,6 @@ import Image from '@theme/IdealImage';
 - Mechanické rozměry: 88 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/base-module)
+- [**Obchod**](https://www.hardwario.store/p/base-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-base)
 - [**Projekty**](https://www.hackster.io/hardwario/projects?part_id=73844)

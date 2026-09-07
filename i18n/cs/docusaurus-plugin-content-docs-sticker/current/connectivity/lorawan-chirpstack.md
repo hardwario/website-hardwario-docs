@@ -46,7 +46,7 @@ STICKER se čte telefonem s **Androidem** a NFC.
    [**Informace o zařízení a klíče LoRaWAN**](/apps/hardwario-manager/sticker/device-info).
 5. **Zkontrolujte, že je radio zapnuté.** V **STICKER → Configuration** musí být
    v sekci LoRaWAN parametr **`radio-mode`** nastavený na LoRaWAN, protože zařízení
-   se dodávají s vypnutým radiem; jednotka se pak po registraci pokusí připojit. Viz
+   se dodávají s vypnutým ráiem; jednotka se pak po registraci pokusí připojit. Viz
    [**Konfigurace**](/apps/hardwario-manager/sticker/configuration) a
    [**Šablony**](/apps/hardwario-manager/sticker/templates), když chcete celé dávce
    dát stejné nastavení.

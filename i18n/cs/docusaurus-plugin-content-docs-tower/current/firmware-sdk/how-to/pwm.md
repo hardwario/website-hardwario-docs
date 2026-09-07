@@ -1,6 +1,6 @@
 ---
 slug: how-to-pwm
-title: "How To: PWM"
+title: "Jak na: PWM"
 ---
 import Image from '@theme/IdealImage';
 

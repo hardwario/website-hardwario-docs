@@ -22,7 +22,7 @@ Příkaz `config` a většina parametrů na této stránce platí pro firmware S
 :::
 
 :::tip Konfigurace v provozu vs. vývojářská
-Tato stránka dokumentuje interaktivní shell příkazy (`config`) dostupné přes debugovací připojení RTT, ale běžná konfigurace v provozu a uvedení do provozu se dělají bezdrátově přes NFC v aplikaci [**HARDWARIO Manager**](/sticker/hardwario-manager/).
+Tato stránka dokumentuje interaktivní příkazy shellu (`config`) dostupné přes debugovací připojení RTT, ale běžná konfigurace v provozu a uvedení do provozu se dělají bezdrátově přes NFC v aplikaci [**HARDWARIO Manager**](/sticker/hardwario-manager/).
 :::
 
 ---
@@ -64,7 +64,7 @@ settings save
 
 ---
 
-## Nastavení LoRaWAN a radia {#lorawan--radio-settings}
+## Nastavení LoRaWAN a ráia {#lorawan--radio-settings}
 
 | Příkaz | Argument | Popis |
 |---|---|---|

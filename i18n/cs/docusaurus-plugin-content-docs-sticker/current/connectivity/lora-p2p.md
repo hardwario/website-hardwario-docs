@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 Komunikační režim LoRa P2P přichází v připravovaném vydání firmwaru platformy.
 :::
 
-**LoRa P2P (peer-to-peer)** umožňuje zařízením STICKER vysílat proprietární nespravované radiové rámce přímo dalším uzlům nebo edge přijímačům bez připojení k síťovému serveru LoRaWAN (LNS).
+**LoRa P2P (peer-to-peer)** umožňuje zařízením STICKER vysílat proprietární nespravované ráiové rámce přímo dalším uzlům nebo edge přijímačům bez připojení k síťovému serveru LoRaWAN (LNS).
 
 ---
 
@@ -36,11 +36,11 @@ flowchart LR
   class RX hero;
 ```
 
-Porovnejte to s cestou přes [**LoRaWAN**](./index.md), kde uplinky putují STICKER → brána → síťový server → vaše aplikace. V režimu P2P není vrstva MAC protokolu LoRaWAN, a tedy ani procedura připojení (Join), ADR ani síťově řízená okna pro downlinky. Obě strany se prostě musí shodnout na níže uvedených parametrech radia.
+Porovnejte to s cestou přes [**LoRaWAN**](./index.md), kde uplinky putují STICKER → brána → síťový server → vaše aplikace. V režimu P2P není vrstva MAC protokolu LoRaWAN, a tedy ani procedura připojení (Join), ADR ani síťově řízená okna pro downlinky. Obě strany se prostě musí shodnout na níže uvedených parametrech ráia.
 
 ---
 
-## Parametry radia {#radio-parameters}
+## Parametry ráia {#radio-parameters}
 
 Při provozu v režimu P2P musí být vysílač i přijímač nastavené na shodné fyzické RF parametry:
 
@@ -58,7 +58,7 @@ Při provozu v režimu P2P musí být vysílač i přijímač nastavené na shod
 
 ## Konfigurace a správa {#configuration--management}
 
-Parametry P2P a režimy radia lze nastavit lokálně přes NFC v aplikaci [**HARDWARIO Manager**](/sticker/hardwario-manager/) nebo přes vývojářský RTT shell:
+Parametry P2P a režimy ráia lze nastavit lokálně přes NFC v aplikaci [**HARDWARIO Manager**](/sticker/hardwario-manager/) nebo přes vývojářský RTT shell:
 
 ```bash
 config radio-mode p2p

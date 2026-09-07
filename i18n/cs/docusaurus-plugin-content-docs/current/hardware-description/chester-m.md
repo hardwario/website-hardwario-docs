@@ -115,7 +115,7 @@ Následující tabulka uvádí signály v pořadí zleva doprava, když desku ot
 
 | Pozice   | Název signálu | Popis signálu        | Připojení na nRF52840 |
 | :------: | :---------: | :--------------------- | :--------------------: |
-|    1     |    `+V`     | Systémová pozitivní větev |           -            |
+|    1     |    `+V`     | Systémová kladná větev |           -            |
 |    2     |   `GP3A`    | Univerzální I/O        |      `P0.31/AIN7`      |
 |    3     |   `GP2A`    | Univerzální I/O        |      `P0.02/AIN0`      |
 |    4     |   `GP1A`    | Univerzální I/O        |      `P0.29/AIN5`      |
@@ -135,7 +135,7 @@ Následující tabulka uvádí signály v pořadí zleva doprava, když desku ot
 
 | Pozice   | Název signálu | Popis signálu        | Připojení na nRF52840 |
 | :------: | :---------: | :--------------------- | :--------------------: |
-|    1     |    `+V`     | Systémová pozitivní větev |           -            |
+|    1     |    `+V`     | Systémová kladná větev |           -            |
 |    2     |   `GP3B`    | Univerzální I/O        |      `P0.05/AIN3`      |
 |    3     |   `GP2B`    | Univerzální I/O        |      `P0.04/AIN2`      |
 |    4     |   `GP1B`    | Univerzální I/O        |      `P0.30/AIN6`      |

@@ -1,6 +1,6 @@
 ---
 slug: how-to-battery-module
-title: "How To: Battery Module"
+title: "Jak na: Battery Module"
 ---
 import Image from '@theme/IdealImage';
 

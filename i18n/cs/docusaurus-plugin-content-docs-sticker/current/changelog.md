@@ -27,7 +27,7 @@ Zdrojový kód firmwaru: [hardwario/sticker-firmware](https://github.com/hardwar
 
 Na následujících funkcích a hardwarových rozšířeních se pro příští vydání aktivně pracuje:
 
-- **[FW] Komunikační režim LoRa P2P**: Podpora přímé peer-to-peer radiové komunikace pro samostatná spojení mezi uzly nebo s bránou bez potřeby síťového serveru LoRaWAN
+- **[FW] Komunikační režim LoRa P2P**: Podpora přímé peer-to-peer ráiové komunikace pro samostatná spojení mezi uzly nebo s bránou bez potřeby síťového serveru LoRaWAN
 - **[FW/HW] Modul akustického bzučáku**: Hardwarové rozšíření pro varianty STICKER Clime a STICKER Input (instaluje se místo slotu pro senzor PIR; nekompatibilní s STICKER Motion)
 - **[Apps] Podpora analogového vstupu 0–24 V pro STICKER Input**: Měření a telemetrie průmyslových analogových napěťových signálů 0–24 V DC
 - **[HW/FW] Převodník pro analogové sondy**: Rozšiřující modul rozhraní pro STICKER Input umožňující odečet sond Pt100, Pt1000 a termočlánků
@@ -40,14 +40,14 @@ Na následujících funkcích a hardwarových rozšířeních se pro příští 
 ### 2026-08-26 – v1.4.0 {#2026-08-26--v140}
 
 - **[FW] Vzdálené řízení přes LoRaWAN**: Plná konfigurace, dotazování na stav a řídicí příkazy přes fPort 85 (`set_param`, `get_param`, `get_config`, `get_info`, reset/rejoin) bez fyzického přístupu i bez NFC
-- **[FW] Device Info on Join**: Automatický diagnostický uplink (sériové číslo, verze FW, příčina resetu, claim token, režim radia, napětí baterie) odeslaný při každém připojení do sítě a synchronizaci hodin
+- **[FW] Device Info on Join**: Automatický diagnostický uplink (sériové číslo, verze FW, příčina resetu, claim token, režim ráia, napětí baterie) odeslaný při každém připojení do sítě a synchronizaci hodin
 - **[FW] Hodiny reálného času (RTC)**: Sledování reálného času se synchronizací síťového času (`DeviceTimeReq`), čitelné i nastavitelné přes NFC, downlinky LoRaWAN nebo shell (`clock`)
 - **[FW] Historie senzorů (store-and-forward)**: Vzorky ukládané během výpadků sítě do vyhrazené 32 KB kruhové flash partition s přehráním na žádost přes LoRaWAN (`req_history`) nebo NFC (`req_history_page`)
 - **[FW] Engine alarmů a hlášení na fPort 3**: Dynamická pravidla ve více slotech (prahová, stavová, frekvenční) s integrovaným filtrováním šumu přes `dwell`, hlášení nízké baterie a watchdog při chybějících datech na fPort 3
 - **[FW] Šifrovaný přístup přes NFC**: Zabezpečená lokální komunikace šifrováním AES-CCM (`hio.stck:cmd` / `hio.stck:rsp`) a ochrana proti opakování pomocí nonce
 - **[FW] Claim token zapisovatelný jen jednou**: Neměnný 128bitový claim token (`config claim-token`) pro okamžité napojení na cloud ještě před připojením do sítě
 - **[FW] Výchozí režim Radio-Silent z výroby**: Transceiver je po vybalení vypnutý (`radio-mode off`), aby se chránila baterie během přepravy; aktivuje se přes NFC
-- **[FW] Jednotné schéma signalizace LED**: Heartbeat vzory řazené podle závažnosti (stav připojení, degradované spojení, aktivní alarmy, stav radia) a vyhrazená bliknutí pro akce NFC a vstupů
+- **[FW] Jednotné schéma signalizace LED**: Heartbeat vzory řazené podle závažnosti (stav připojení, degradované spojení, aktivní alarmy, stav ráia) a vyhrazená bliknutí pro akce NFC a vstupů
 - **[FW] Sada diagnostického CLI (`ats`)**: Rodina diagnostických nástrojů přejmenována z `tester` $\rightarrow$ `ats`; přidány `ats lrw reset`, `ats lrw compose`, `ats lrw lc` a vkládání surových protobuf rámců (`ats cmd lrw|nfc`)
 - **[FW] Neměnný bezpečnostní model firmwaru**: Záměrně odstraněná možnost aktualizace přes DFU (`enter_dfu`), aby byla plocha pro vzdálený útok nulová (firmware se nahrává výhradně přes SWD pady)
 
@@ -90,7 +90,7 @@ Na následujících funkcích a hardwarových rozšířeních se pro příští 
 - **[FW]** Přidána kontrola verze konfigurace v NVS: při neshodě schématu po aktualizaci firmwaru obnoví výchozí hodnoty
 - **[FW]** Opravený konflikt pinů GPIO: při zapnutém PIR se přeskakuje inicializace vstupu
 - **[FW]** Přidána prodleva po spuštění ONEBURST na SI7210, aby se nečetly zastaralé hodnoty z Hallova senzoru
-- **[FW]** Přidány shell příkazy `reset_counts` pro čítače Hallových kontaktů a vstupů
+- **[FW]** Přidány příkazy shellu `reset_counts` pro čítače Hallových kontaktů a vstupů
 - **[FW]** Opravené čítače stavového automatu LoRaWAN (změna z `uint8_t` na `int`, aby nepřetékaly)
 - **[FW]** Atomický snapshot a vymazání příznaků notifikací při compose, což brání souběhům
 - **[FW]** Rozdělená fronta zpráv pro LED, aby se snížila spotřeba stacku volajícího blikání

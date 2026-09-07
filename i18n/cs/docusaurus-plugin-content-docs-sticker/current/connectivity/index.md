@@ -1,16 +1,16 @@
 ---
 slug: /connectivity
 title: Přehled konektivity
-description: "Zařízení HARDWARIO STICKER podporuje několik bezdrátových komunikačních protokolů, takže si můžete vybrat radiovou architekturu optimální pro vaše nasazení."
+description: "Zařízení HARDWARIO STICKER podporuje několik bezdrátových komunikačních protokolů, takže si můžete vybrat ráiovou architekturu optimální pro vaše nasazení."
 ---
 import Image from '@theme/IdealImage';
 
 # Přehled konektivity {#connectivity-overview}
 
-Zařízení HARDWARIO STICKER podporuje několik bezdrátových komunikačních protokolů, takže si můžete vybrat radiovou architekturu optimální pro vaše nasazení.
+Zařízení HARDWARIO STICKER podporuje několik bezdrátových komunikačních protokolů, takže si můžete vybrat ráiovou architekturu optimální pro vaše nasazení.
 
-:::tip Zprovoznění a režim radia
-Bez ohledu na zvolený protokol konektivity lze stav radia i přihlašovací údaje nastavit bezdrátově přes NFC v aplikaci [**HARDWARIO Manager**](../hardwario-manager.md).
+:::tip Zprovoznění a režim ráia
+Bez ohledu na zvolený protokol konektivity lze stav ráia i přihlašovací údaje nastavit bezdrátově přes NFC v aplikaci [**HARDWARIO Manager**](../hardwario-manager.md).
 :::
 
 ---
@@ -37,6 +37,6 @@ Standardní provoz LoRaWAN Class A s aktivací OTAA/ABP, dynamickým ADR, šifro
 - **[Downlink příkazy](./downlink-commands.md)**: Referenční přehled vzdálené konfigurace parametrů přes fPort 85.
 
 ### LoRa P2P (peer-to-peer) {#lora-p2p-peer-to-peer}
-Softwarově volitelný proprietární režim radia, který umožňuje přímé nespravované vysílání radiových paketů bez prostředníka v podobě síťového serveru.
+Softwarově volitelný proprietární režim ráia, který umožňuje přímé nespravované vysílání ráiových paketů bez prostředníka v podobě síťového serveru.
 
 - **[Průvodce LoRa P2P](./lora-p2p.md)**: Přehled architektury, parametry RF rámců a integrace s edge bránou.

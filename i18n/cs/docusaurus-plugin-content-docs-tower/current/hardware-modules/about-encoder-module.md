@@ -1,6 +1,6 @@
 ---
 slug: about-encoder-module
-title: O modulu Encoder
+title: O modulu Encoder Module
 ---
 import Image from '@theme/IdealImage';
 
@@ -39,9 +39,9 @@ Aluminiový knoflík na fotografii není součástí modulu a prodává se jako 
 - Rozměry: 88 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/encoder-module)
+- [**Obchod**](https://www.hardwario.store/p/encoder-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-encoder)
-- [**SDK knihovna**](https://sdk.hardwario.com/group__twr__module__encoder)
+- [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__encoder)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_encoder.h)
 - [**Zdrojový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/src/twr_module_encoder.c)
 - [**Projekty**](https://www.hackster.io/hardwario/projects?part_id=738388)

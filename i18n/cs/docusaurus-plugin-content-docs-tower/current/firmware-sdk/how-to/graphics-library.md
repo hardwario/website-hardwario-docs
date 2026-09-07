@@ -1,6 +1,6 @@
 ---
 slug: how-to-gfx-graphics-library
-title: "How To: Grafická knihovna"
+title: "Jak na: Grafická knihovna"
 ---
 import Image from '@theme/IdealImage';
 

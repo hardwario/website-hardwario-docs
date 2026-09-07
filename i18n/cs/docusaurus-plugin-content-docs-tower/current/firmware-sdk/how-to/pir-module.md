@@ -1,6 +1,6 @@
 ---
 slug: how-to-pir-module
-title: "Jak na to: PIR Module"
+title: "Jak na: PIR Module"
 ---
 import Image from '@theme/IdealImage';
 

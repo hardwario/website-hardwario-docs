@@ -45,7 +45,7 @@ Prostřední pin VCC lze ovládat softwarově. Na tomto pinu můžete zapnout 3 
 - Rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/sensor-module)
+- [**Obchod**](https://www.hardwario.store/p/sensor-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-sensor)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__sensor)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_sensor.h)

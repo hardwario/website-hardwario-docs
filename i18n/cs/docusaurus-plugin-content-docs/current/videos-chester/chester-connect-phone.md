@@ -63,7 +63,7 @@ V tomto průvodci se naučíte, jak připojit zařízení CHESTER k telefonu pom
 
 16. Pro nastavení zařízení CHESTER otevřete Terminal.
 
-17. Nyní můžete posílat shell příkazy jako info show nebo config show.
+17. Nyní můžete posílat příkazy shellu jako info show nebo config show.
 
 18. Okamžitě se vrátí odpověď.
 

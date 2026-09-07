@@ -240,7 +240,7 @@ app config channel-calib-mode-<n> <avg/rms>
 
 ### Příkazy kanálů {#channel-commands}
 
-Následující shell příkazy umožňují interaktivní kalibraci a čtení kanálů. `<n>` je číslo kanálu 1-4.
+Následující příkazy shellu umožňují interaktivní kalibraci a čtení kanálů. `<n>` je číslo kanálu 1-4.
 
 | Příkaz | Popis |
 |---------|-------------|

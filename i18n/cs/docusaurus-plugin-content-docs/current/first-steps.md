@@ -35,8 +35,8 @@ Pro vyšší bezpečnost doporučujeme ověřování přes **Google** nebo **Mic
 ## Krok 2: Vytvořte si Space {#step-2-create-your-space}
 
 1. V pravém horním rohu klikněte na **SPACES → NEW SPACE**  
-2. Pojmenujte svůj space (například: `my-home`, `office-sensors`, `warehouse`)  
-3. Zde budou žít vaše **zařízení CHESTER**.
+2. Pojmenujte svůj prostor (například: `my-home`, `office-sensors`, `warehouse`)  
+3. Právě sem budou patřit vaše **zařízení CHESTER**.
 
 :::caution
 Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**](https://docs.hardwario.com/cloud/#naming-conventions).
@@ -71,7 +71,7 @@ Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**
 Podrobnější informace o **HARDWARIO Cloud** najdete zde:  
 👉 [https://docs.hardwario.com/cloud/](https://docs.hardwario.com/cloud/)
 
-Nebo se podívejte na náš **videotutoriál**, jak přidat zařízení CHESTER do cloudu:  
+Nebo se podívejte na náš **videonávod**, jak přidat zařízení CHESTER do cloudu:  
 👉 [https://docs.hardwario.com/chester/videos-chester/chester-cloud](https://docs.hardwario.com/chester/videos-chester/chester-cloud)
 :::
 

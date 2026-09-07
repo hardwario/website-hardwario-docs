@@ -98,7 +98,7 @@ Pokud potřebujete použít primární (nedobíjecí) články a větší bateri
 
   :::caution
 
-  Ve firmě HARDWARIO používáme speciální model lithium-iontové baterie 18650 s rozšířeným provozním teplotním rozsahem -20 °C až +50 °C. Pokud je vyžadován větší rozsah, prostudujte možnosti napájecích zdrojů založených na LiSoCl<sub>2</sub> popsané výše.
+  Ve firmě HARDWARIO odebíráme speciální model lithium-iontové baterie 18650 s rozšířeným provozním teplotním rozsahem -20 °C až +50 °C. Pokud je vyžadován větší rozsah, prostudujte možnosti napájecích zdrojů založených na LiSoCl<sub>2</sub> popsané výše.
 
   :::
 

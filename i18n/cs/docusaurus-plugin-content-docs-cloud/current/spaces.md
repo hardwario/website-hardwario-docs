@@ -55,7 +55,7 @@ Do svého prostoru můžete pozvat další uživatele ke spolupráci. Každý č
 | **Admin** | Plný přístup. Může přidávat/odebírat zařízení, spravovat konektory, zvát uživatele, měnit nastavení |
 | **User** | Přístup pouze pro čtení. Může prohlížet zařízení a zprávy, ale nemůže provádět změny |
 
-Pro pozvání členů a správu jejich rolí viz [**Users**](/cloud/users) v sekci **Správa**.
+Zvaní členů a správu jejich rolí popisuje [**Users**](/cloud/users) v sekci **Správa**.
 
 :::info
 
@@ -67,4 +67,4 @@ Uživatel může být členem více prostorů, v každém s jinou rolí.
 
 Každý prostor má vlastní API klíče pro programový přístup. API klíče jsou omezeny na daný prostor a lze je použít k výpisu zařízení, získávání zpráv a odesílání downlinků přes [REST API](/cloud/api).
 
-Pro vytvoření API klíče přejděte ve svém prostoru do **Settings → API Keys**.
+Chcete-li vytvořit klíč API, přejděte ve svém prostoru do **Settings → API Keys**.

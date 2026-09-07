@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 Sada příkazů `ats` seskupuje diagnostiku pouze pro čtení, nástroje pro ověření hardwaru a pomocníky pro testování na stole, dostupné přes vývojářskou konzoli (viz [**Nastavení firmwaru**](firmware-setup.md)). Na rozdíl od podpříkazů `config` diagnostické příkazy podsystémy zařízení jen zkoumají a testují, aniž by přepisovaly uložené konfigurační parametry.
 
 :::info Firmware v1.4.0
-Ve **firmwaru STICKER v1.4.0** byla rodina diagnostických shell příkazů **přejmenována z `tester` na `ats`** (Automated Test System). Hlavní novinky ve v1.4.0:
+Ve **firmwaru STICKER v1.4.0** byla rodina diagnostických příkaz shelluů **přejmenována z `tester` na `ats`** (Automated Test System). Hlavní novinky ve v1.4.0:
 - **Informace o zařízení při připojení:** Automatický informační paket odeslaný při každém připojení do sítě nebo synchronizaci hodin.
 - **Rozšířené nástroje `ats`:** Přidány `ats lrw reset`, `ats lrw compose`, `ats lrw lc` a vkládání surových příkazů (`ats cmd lrw|nfc`).
 - **Ověření zprovoznění:** `ats device info` zobrazuje sériové číslo, secret key zařízení a claim token zapisovatelný jen jednou.
@@ -28,7 +28,7 @@ Ve firmwaru v1.4.0 a novějším zařízení STICKER automaticky vytvoří a ode
 - Sériové číslo a verzi vydání firmwaru
 - Příčinu resetu (zapnutí, watchdog, softwarový reset, reset pinem)
 - 128bitový claim token zapisovatelný jen jednou
-- Aktivní režim radia (stav `radio-mode`)
+- Aktivní režim ráia (stav `radio-mode`)
 - Napětí baterie pod zatížením
 
 ---
@@ -46,7 +46,7 @@ Ve firmwaru v1.4.0 a novějším zařízení STICKER automaticky vytvoří a ode
 
 ## Testování signalizace LED {#led-signal-testing}
 
-Stavová LED signalizuje heartbeat řazený podle závažnosti (stav připojení do sítě, režim radia, stav alarmu) a jednorázové vzory pro interakci (přístup přes NFC, spuštění vstupu). Definice vzorů viz [**Popis hardwaru**](hardware-description.md#led-indication).
+Stavová LED signalizuje heartbeat řazený podle závažnosti (stav připojení do sítě, režim ráia, stav alarmu) a jednorázové vzory pro interakci (přístup přes NFC, spuštění vstupu). Definice vzorů viz [**Popis hardwaru**](hardware-description.md#led-indication).
 
 Podpříkazy `ats led` slouží k testování jednotlivých barevných kanálů při výrobě nebo diagnostické kontrole:
 

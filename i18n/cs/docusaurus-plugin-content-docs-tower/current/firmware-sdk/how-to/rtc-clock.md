@@ -1,6 +1,6 @@
 ---
 slug: how-to-rtc-clock
-title: "How To: Hodiny RTC"
+title: "Jak na: Hodiny RTC"
 ---
 import Image from '@theme/IdealImage';
 

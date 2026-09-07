@@ -1,6 +1,6 @@
 ---
 slug: how-to-eeprom-twr-config
-title: "Jak na to: Konfigurace"
+title: "Jak na: Konfigurace"
 ---
 import Image from '@theme/IdealImage';
 

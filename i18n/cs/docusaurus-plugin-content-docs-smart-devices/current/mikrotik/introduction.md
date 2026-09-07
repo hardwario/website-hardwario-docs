@@ -10,7 +10,7 @@ description: "MikroTik je lotyšský výrobce síťových zařízení a bezdrát
 
 ---
 
-Platforma **RouterBOARD** od MikroTik nabízí funkce LoRaWAN brány, což umožňuje připojit LoRaWAN senzory k síťovým serverům jako ChirpStack nebo The Things Stack.
+Platforma **RouterBOARD** od MikroTik nabízí funkce brány LoRaWAN, což umožňuje připojit senzory LoRaWAN k síťovým serverům jako ChirpStack nebo The Things Stack.
 
 ## Klíčové produkty {#key-products}
 

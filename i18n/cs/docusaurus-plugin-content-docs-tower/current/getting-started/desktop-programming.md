@@ -1,7 +1,7 @@
 ---
 slug: desktop-programming
-title: Programování na desktopu
-title_meta: "Programování na desktopu (HARDWARIO TOWER, getting started)"
+title: Programování na počítači
+title_meta: "Programování na počítači (HARDWARIO TOWER, getting started)"
 ---
 import Image from '@theme/IdealImage';
 
@@ -13,7 +13,7 @@ Playground je naše desktopová aplikace pro **všechny hlavní operační syst�
 
 :::tip
 
-Více o aplikaci HARDWARIO Playground najdete v [**sekci Programování na desktopu**](../desktop-programming/about-playground.md).
+Více o aplikaci HARDWARIO Playground najdete v [**sekci Programování na počítači**](../desktop-programming/about-playground.md).
 
 :::
 

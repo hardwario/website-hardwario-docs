@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 # Video tutoriály {#video-tutorials}
 
-Zde najdete podrobné návody a video tutoriály, které vám pomohou nastavit a používat zařízení CHESTER.
+Zde najdete podrobné návody a videonávody, které vám pomohou nastavit a používat zařízení CHESTER.
 
 | Tutoriál                                   | Podrobný návod                          | Video tutoriál                          |
 |--------------------------------------------|-----------------------------------------|-----------------------------------------|

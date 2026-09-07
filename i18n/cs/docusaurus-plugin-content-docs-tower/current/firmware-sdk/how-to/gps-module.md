@@ -1,6 +1,6 @@
 ---
 slug: how-to-gps-module
-title: "How To: GPS Module"
+title: "Jak na: GPS Module"
 ---
 import Image from '@theme/IdealImage';
 

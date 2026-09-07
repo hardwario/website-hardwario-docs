@@ -33,9 +33,9 @@ import Image from '@theme/IdealImage';
 - Mechanické rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/relay-module)
+- [**Obchod**](https://www.hardwario.store/p/relay-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-relay)
-- [**SDK knihovna**](https://sdk.hardwario.com/group__twr__module__relay)
+- [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__relay)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_relay.h)
 - [**Zdrojový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/src/twr_module_relay.c)
 - [**Projekty**](https://www.hackster.io/hardwario/projects?part_id=73841)

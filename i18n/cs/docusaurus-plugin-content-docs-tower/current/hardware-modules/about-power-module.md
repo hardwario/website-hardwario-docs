@@ -45,9 +45,9 @@ Maximální dovolený proud je **6 A**.
 - Mechanické rozměry: 88 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/power-module)
+- [**Obchod**](https://www.hardwario.store/p/power-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-power)
-- [**SDK knihovna**](https://sdk.hardwario.com/group__twr__module__power)
+- [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__power)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_power.h)
 - [**Zdrojový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/src/twr_module_power.c)
 - [**Projekty**](https://www.hackster.io/hardwario/projects?part_id=73717)

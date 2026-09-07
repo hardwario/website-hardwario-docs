@@ -44,7 +44,7 @@ Popis hardwaru: https://docs.hardwario.com/ember/hardware-description/
 
 #### 1.1 Antény – už připojené {#11-antennas--already-connected}
 
-EMBER přichází se **dvěma anténami namontovanými uvnitř krabičky**, jednou pro **LoRaWAN** a jednou pro **LTE**,
+EMBER se dodává se **dvěma anténami namontovanými uvnitř krabičky**, jednou pro **LoRaWAN** a jednou pro **LTE**,
 obě připojené z výroby. **Není potřeba nic připojovat** a rádio nikdy nezůstane bez
 antény, takže můžete bránu hned zapnout.
 

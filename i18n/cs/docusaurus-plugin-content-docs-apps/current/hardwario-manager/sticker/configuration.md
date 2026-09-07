@@ -40,7 +40,7 @@ dokud se konfigurace nepřečte. Pak otevřete sekci, kterou chcete změnit.
 
 :::info Klíče se řídí režimem aktivace
 **Keys** je uvnitř sekce LoRaWAN a ve výchozím stavu je sbalená. Zobrazuje jen
-klíče, které platí: JoinEUI a AppKey pro **OTAA**, DevAddr a klíče session pro
+klíče, které platí: JoinEUI a AppKey pro **OTAA**, DevAddr a klíče relace pro
 **ABP**. DevEUI je v základech LoRaWAN nad tím.
 :::
 
@@ -97,7 +97,7 @@ Pokud chcete mnoho zařízení nastavit stejně, uložte si **šablonu** a aplik
 na každé zařízení, přes NFC nebo offline na vypnutá zařízení. Viz
 [**Šablony**](./templates.md).
 
-:::danger Factory a vendor resety
+:::danger Tovární a dodavatelské resety
 **Factory reset** zahodí session a klíče LoRaWAN zařízení, takže se do sítě
 připojí znovu. **Vendor reset** ho vymaže až na sériové číslo a vendor token a
 nastaví nový secret key. Vzít zpět to nelze. Viz

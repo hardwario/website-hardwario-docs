@@ -1,6 +1,6 @@
 ---
 slug: how-to-led-control
-title: "Návod: Ovládání LED"
+title: "Jak na: Ovládání LED"
 ---
 import Image from '@theme/IdealImage';
 

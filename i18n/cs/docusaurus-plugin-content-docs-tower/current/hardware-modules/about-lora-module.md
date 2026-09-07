@@ -1,6 +1,6 @@
 ---
 slug: about-lora-module
-title: O modulu LoRa
+title: O modulu LoRa Module
 ---
 import Image from '@theme/IdealImage';
 
@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        <b>Modul LoRa</b> umožňuje komunikovat v <b>bezdrátové síti LoRaWAN</b>, tedy v síti vytvořené pro IoT. Tato technologie umožňuje komunikaci z bateriově napájeného zařízení přímo na server, a to i po několik let. Modul LoRa využívá <b>radiovou frekvenci 868 MHz</b>.
+        <b>Modul LoRa</b> umožňuje komunikovat v <b>bezdrátové síti LoRaWAN</b>, tedy v síti vytvořené pro IoT. Tato technologie umožňuje komunikaci z bateriově napájeného zařízení přímo na server, a to i po několik let. Modul LoRa využívá <b>ráiovou frekvenci 868 MHz</b>.
       </p>
       <p>
         Díky specifické zig-zag modulaci může zařízení LoRa komunikovat s bránou na vzdálenost desítek kilometrů.
@@ -33,7 +33,7 @@ import Image from '@theme/IdealImage';
 - Rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/lora-module)
+- [**Obchod**](https://www.hardwario.store/p/lora-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-lora)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__cmwx1zzabz)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_cmwx1zzabz.h)

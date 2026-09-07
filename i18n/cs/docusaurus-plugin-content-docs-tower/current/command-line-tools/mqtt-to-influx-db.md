@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Pro ukládání dat z našich senzorů rádi používáme **InfluxDB – databázi pro časové řady**. Jako most mezi **MQTT** a **InfluxDB** jsme vytvořili nástroj `mqtt2influxdb`. Ten se připojí k **InfluxDB** a **MQTT brokeru** a podle uživatelem definované konfigurace se přihlásí k MQTT tématům a ukládá data ze zpráv.
+K ukládání dat z našich senzorů rádi používáme **InfluxDB – databázi pro časové řady**. Jako most mezi **MQTT** a **InfluxDB** jsme vytvořili nástroj `mqtt2influxdb`. Ten se připojí k **InfluxDB** a **MQTT brokeru** a podle uživatelem definované konfigurace se přihlásí k MQTT tématům a ukládá data ze zpráv.
 
 :::caution
 
@@ -32,7 +32,7 @@ Aby bylo možné získat **Gateway Service**, musíte mít na svém zařízení 
 
 ## Nastavení MQTT do InfluxDb {#set-up-mqtt-to-influxdb}
 
-Pro instalaci `mqtt2influxdb` stačí zadat do příkazové řádky následující příkaz
+Nástroj `mqtt2influxdb` nainstalujete zadáním následujícího příkazu do příkazové řádky
 
 ```bash
 sudo pip3 install --upgrade mqtt2influxdb
@@ -44,7 +44,7 @@ Dále bude potřeba vytvořit adresář, do kterého budete ukládat konfigurač
 sudo mkdir /etc/hardwario
 ```
 
-Pro vytvoření konfiguračního souboru můžete použít jakýkoli textový editor, v tomto návodu použijeme `nano`:
+Konfigurační soubor můžete vytvořit v jakémkoli textovém editoru, v tomto návodu použijeme `nano`:
 
 ```bash
 sudo nano /etc/hardwario/mqtt2influxdb.yml

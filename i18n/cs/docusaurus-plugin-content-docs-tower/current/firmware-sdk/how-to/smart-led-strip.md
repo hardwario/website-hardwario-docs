@@ -1,6 +1,6 @@
 ---
 slug: how-to-smart-led-strip
-title: "How To: Smart LED pásek"
+title: "Jak na: Smart LED pásek"
 ---
 import Image from '@theme/IdealImage';
 

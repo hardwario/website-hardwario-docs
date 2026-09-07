@@ -1,6 +1,6 @@
 ---
 slug: how-to-push-button
-title: "Návod: Tlačítko"
+title: "Jak na: Tlačítko"
 ---
 import Image from '@theme/IdealImage';
 

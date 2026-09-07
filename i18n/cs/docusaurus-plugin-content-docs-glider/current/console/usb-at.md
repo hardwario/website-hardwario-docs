@@ -1,12 +1,12 @@
 ---
-title: AT konzole (USB-C)
+title: konzole AT (USB-C)
 sidebar_position: 2
 ---
 import Image from '@theme/IdealImage';
 
-# AT konzole přes USB-C {#at-console-over-usb-c}
+# konzole AT přes USB-C {#at-console-over-usb-c}
 
-Tato stránka popisuje, jak komunikovat se zařízením GLIDER přes jeho konektor **USB-C** pomocí **AT příkazů**. AT konzole je doporučené rozhraní pro každodenní práci – zprovoznění, konfiguraci, aktualizace firmwaru – a nevyžaduje žádný speciální ladicí hardware.
+Tato stránka popisuje, jak komunikovat se zařízením GLIDER přes jeho konektor **USB-C** pomocí **příkazů AT**. konzole AT je doporučené rozhraní pro každodenní práci – zprovoznění, konfiguraci, aktualizace firmwaru – a nevyžaduje žádný speciální ladicí hardware.
 
 :::tip
 Hledáte živé logy a plný Zephyr shell? Použijte místo toho [**RTT konzoli (J-Link)**](rtt-jlink.md).
@@ -14,7 +14,7 @@ Hledáte živé logy a plný Zephyr shell? Použijte místo toho [**RTT konzoli 
 
 ## Jak to funguje {#how-it-works}
 
-Interně zařízení GLIDER propojuje UART0 čipu nRF9151 s převodníkem **FT234XD USB-UART**. Ve chvíli, kdy zapojíte kabel USB-C, firmware převodník napájí a začne přijímat AT příkazy.
+Interně zařízení GLIDER propojuje UART0 čipu nRF9151 s převodníkem **FT234XD USB-UART**. Ve chvíli, kdy zapojíte kabel USB-C, firmware převodník napájí a začne přijímat příkazy AT.
 
 | Signál | Pin nRF9151 | Funkce |
 | :--- | :--- | :--- |
@@ -29,7 +29,7 @@ Když zapojíte kabel USB-C, firmware:
 
 1. Detekuje kabel na `USB_DETECT` (P0.26).
 2. Po 50 ms zákmitové prodlevě zapne `USB_EN` (P0.00) – FT234XD se nastartuje.
-3. Aktivuje UART0 RX a začne zpracovávat AT příkazy.
+3. Aktivuje UART0 RX a začne zpracovávat příkazy AT.
 
 ## Předpoklady {#prerequisites}
 
@@ -156,7 +156,7 @@ west serial-console --port /dev/ttyUSB1 --baudrate 1000000
 
 Konzole udržuje dva oddělené proudy:
 
-- **AT příkazy a odpovědi**: co napíšete a co zařízení GLIDER odpoví.
+- **příkazy AT a odpovědi**: co napíšete a co zařízení GLIDER odpoví.
 - **Zprávy `@LOG:`**: živé řádky logu, které projdou po obrazovce, aniž by rušily příkazovou řádku.
 
 Užitečné soubory, které `west serial-console` spravuje:
@@ -177,12 +177,12 @@ ATI
 
 Pokud se objeví `OK`, komunikujete se zařízením.
 
-## Základní AT příkazy {#basic-at-commands}
+## Základní příkazy AT {#basic-at-commands}
 
 | Příkaz | Co dělá |
 | :--- | :--- |
 | `AT` | Test připojení – vrací `OK` |
-| `AT+CLAC` | Vypíše všechny registrované AT příkazy |
+| `AT+CLAC` | Vypíše všechny registrované příkazy AT |
 | `AT$HELP` | Stejné jako `+CLAC`, ale s nápovědou |
 | `ATI` | Identifikace zařízení |
 | `AT+CGMI` | Název výrobce |
@@ -203,9 +203,9 @@ AT$CONFIG="therm config 1 28ab12cd…" # bind slot 1 to a specific DS18B20
 AT&W # save and reboot
 ```
 
-#### Spouštění shell příkazů z AT konzole {#running-shell-commands-from-the-at-console}
+#### Spouštění příkaz shelluů z konzole AT {#running-shell-commands-from-the-at-console}
 
-AT konzole umí také vykonat jakýkoli **příkaz Zephyr shellu** přes `AT$SHELL`:
+konzole AT umí také vykonat jakýkoli **příkaz Zephyr shellu** přes `AT$SHELL`:
 
 ```text
 AT$SHELL="therm state"
@@ -218,7 +218,7 @@ AT$SHELL="log enable wrn"
 
 #### Aktualizace firmwaru {#firmware-update}
 
-Pro programovou aktualizaci firmwaru viz referenci [**AT příkazy**](../commands/at-commands.md) (`AT$FW`).
+Pro programovou aktualizaci firmwaru viz referenci [**příkazy AT**](../commands/at-commands.md) (`AT$FW`).
 
 ## Údržba {#maintenance}
 
@@ -253,7 +253,7 @@ screen -ls && screen -wipe
 killall screen minicom picocom tio 2>/dev/null
 ```
 
-#### Logy přicházejí, ale AT příkazy se nevracejí zpět {#logs-arrive-but-at-commands-are-not-echoed-back}
+#### Logy přicházejí, ale příkazy AT se nevracejí zpět {#logs-arrive-but-at-commands-are-not-echoed-back}
 
 Váš terminál posílá **pouze CR** místo `LF` nebo `CRLF`. `west serial-console` řeší konce řádků automaticky, jiné terminály ale nemusí. Například při použití `tio`:
 

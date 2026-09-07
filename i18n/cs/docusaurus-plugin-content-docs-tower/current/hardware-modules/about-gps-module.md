@@ -1,6 +1,6 @@
 ---
 slug: about-gps-module
-title: O modulu GPS
+title: O modulu GPS Module
 ---
 import Image from '@theme/IdealImage';
 

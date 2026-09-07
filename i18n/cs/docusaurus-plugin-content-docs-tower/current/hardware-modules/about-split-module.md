@@ -1,6 +1,6 @@
 ---
 slug: about-split-module
-title: O modulu Split
+title: O modulu Split Module
 ---
 import Image from '@theme/IdealImage';
 

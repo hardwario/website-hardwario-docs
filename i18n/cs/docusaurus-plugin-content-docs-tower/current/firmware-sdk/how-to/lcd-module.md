@@ -1,6 +1,6 @@
 ---
 slug: how-to-lcd-module
-title: "How To: LCD modul"
+title: "Jak na: LCD modul"
 ---
 import Image from '@theme/IdealImage';
 

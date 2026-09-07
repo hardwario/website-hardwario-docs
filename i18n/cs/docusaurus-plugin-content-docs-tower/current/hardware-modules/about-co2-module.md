@@ -1,6 +1,6 @@
 ---
 slug: about-co2-module
-title: O modulu CO₂
+title: O modulu CO₂ Module
 ---
 import Image from '@theme/IdealImage';
 

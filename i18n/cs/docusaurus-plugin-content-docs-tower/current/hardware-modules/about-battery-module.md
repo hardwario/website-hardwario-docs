@@ -43,9 +43,9 @@ Vydrží samozřejmě kratší dobu, protože obsahuje jen **2 baterie**.
 - Mechanické rozměry: 88 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/battery-module)
+- [**Obchod**](https://www.hardwario.store/p/battery-module)
 - [**Schéma**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-battery)
-- [**SDK knihovna**](https://sdk.hardwario.com/group__twr__module__battery)
+- [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__battery)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_battery.h)
 - [**Zdrojový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/src/twr_module_battery.c)
 - [**Projekty**](https://www.hackster.io/hardwario/projects?part_id=73734)

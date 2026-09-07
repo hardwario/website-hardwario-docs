@@ -9,13 +9,13 @@ import Image from '@theme/IdealImage';
 
 # Videotutoriály {#video-tutorials}
 
-Na této stránce najdete komplexní sbírku technických návodů a videotutoriálů, které vám pomohou s kompletním nasazením řešení HARDWARIO, od zprovoznění zařízení na nízké úrovni a konfigurace brány až po bezpečnou integraci dat s externími IoT platformami a vizualizačními dashboardy.
+Na této stránce najdete komplexní sbírku technických návodů a videonávodů, které vám pomohou s kompletním nasazením řešení HARDWARIO, od zprovoznění zařízení na nízké úrovni a konfigurace brány až po bezpečnou integraci dat s externími IoT platformami a vizualizačními dashboardy.
 
 ---
 
 ## ThingsBoard {#thingsboard}
 
-Zde najdete podrobné návody a videotutoriály, které vám pomohou nastavit zařízení v ThingsBoard, propojit je s HARDWARIO Cloud a vytvořit dashboardy pro vizualizaci vašich IoT dat.
+Zde najdete podrobné návody a videonávody, které vám pomohou nastavit zařízení v ThingsBoard, propojit je s HARDWARIO Cloud a vytvořit dashboardy pro vizualizaci vašich IoT dat.
 
 | Tutoriál                                   | Podrobný návod                          | Videotutoriál                           |
 |--------------------------------------------|-----------------------------------------|-----------------------------------------|
@@ -39,7 +39,7 @@ Zde najdete podrobné návody, které vám pomohou nakonfigurovat ChirpStack v4.
 
 ## The Things Stack {#the-things-stack}
 
-Zde najdete podrobné návody a videotutoriály, které vám pomohou nakonfigurovat The Things Stack.
+Zde najdete podrobné návody a videonávody, které vám pomohou nakonfigurovat The Things Stack.
 
 | Tutoriál | Podrobný návod | Videotutoriál |
 |-----------|--------------------|----------------|

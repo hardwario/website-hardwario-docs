@@ -1,6 +1,6 @@
 ---
 slug: about-breadboard-module
-title: O modulu Breadboard
+title: O modulu Breadboard Module
 ---
 import Image from '@theme/IdealImage';
 

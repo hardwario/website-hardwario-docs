@@ -58,7 +58,7 @@ Zařízení STICKER vydrží na dvou článcích AA víc než 2 roky. Na zprovoz
 
 ### Režim radio-silent (nezprovozněné zařízení) {#radio-silent-mode-unprovisioned-device}
 
-Pokud je nastavené **DevEUI složené jen z nul** (zařízení, které nikdy nebylo zprovozněné), firmware se do sítě připojit nezkouší. Přejde do stavu **`DISABLED`** a celý start LoRaWAN vynechá: radiový stack se nikdy nespustí a sub-GHz radio se vůbec nenapájí, takže nevzniká žádný provoz při připojování ani radiový výboj při startu. Prázdné zařízení tím pádem nevybíjí baterii pokusy o připojení, které nemohou uspět.
+Pokud je nastavené **DevEUI složené jen z nul** (zařízení, které nikdy nebylo zprovozněné), firmware se do sítě připojit nezkouší. Přejde do stavu **`DISABLED`** a celý start LoRaWAN vynechá: ráiový stack se nikdy nespustí a sub-GHz radio se vůbec nenapájí, takže nevzniká žádný provoz při připojování ani ráiový výboj při startu. Prázdné zařízení tím pádem nevybíjí baterii pokusy o připojení, které nemohou uspět.
 
 Zařízení zůstane radio-silent, dokud nedostane skutečné DevEUI (a zbytek klíčů LoRaWAN) a **nerestartuje se**. Ve vývojářské konzoli hlásí `ats lrw status` stav `DISABLED`.
 

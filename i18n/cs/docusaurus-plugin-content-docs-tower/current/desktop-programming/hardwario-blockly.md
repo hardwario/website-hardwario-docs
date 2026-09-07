@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 :::caution
 
-Pro práci s tímto nástrojem je potřeba [**stáhnout experimentální HARDWARIO Playground**](https://github.com/SmejkalJakub/hardwario-playground/releases)
+K práci s tímto nástrojem je potřeba [**stáhnout experimentální HARDWARIO Playground**](https://github.com/SmejkalJakub/hardwario-playground/releases)
 
 :::
 
@@ -133,7 +133,7 @@ Tuto funkci otevřete kliknutím na tlačítko **Go to Blocks Creator** na úvod
 
 #### Kategorie {#categories}
 
-Pro úpravu kategorií klikněte na tlačítko **Edit your categories** v horní části obrazovky Blocks Creatoru.
+Kategorie upravíte tlačítkem **Edit your categories** v horní části obrazovky Blocks Creatoru.
 
 Kategorie musíte přidat, abyste do nich mohli umístit vlastní bloky. Můžete také použít předpřipravené kategorie, které používáme my, ale není to doporučeno.
 

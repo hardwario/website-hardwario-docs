@@ -94,7 +94,7 @@ Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde
 |---------------|-----------|
 | **Bezdrátový přenos** | |
 | Technologie | LoRaWAN® |
-| Antena | Interní |
+| Anténa | Interní |
 | Frekvence | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
 | Vysílací výkon | 16–20 dBm (podle frekvence) |
 | Citlivost | -137 dBm @300bps |

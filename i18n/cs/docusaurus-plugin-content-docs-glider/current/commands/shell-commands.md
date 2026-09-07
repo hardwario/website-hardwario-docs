@@ -10,10 +10,10 @@ import Image from '@theme/IdealImage';
 GLIDER provozuje plnohodnotný **Zephyr shell**, který zpřístupňuje příkazy na úrovni aplikace pro každý subsystém. Shell je dostupný přes:
 
 - [**RTT konzoli**](../console/rtt-jlink.md) přímo, nebo
-- [**AT konzoli**](../console/usb-at.md) pomocí `AT$SHELL="<command>"`.
+- [**konzoli AT**](../console/usb-at.md) pomocí `AT$SHELL="<command>"`.
 
 :::tip
-Ekvivalentní AT příkazy dostupné přes USB-C najdete na stránce [**AT příkazy**](at-commands.md).
+Ekvivalentní příkazy AT dostupné přes USB-C najdete na stránce [**příkazy AT**](at-commands.md).
 :::
 
 Tato stránka uvádí příkazy specifické pro GLIDER. Obecné příkazy systému Zephyr (`kernel`, `log`, `device`, …) zde nejsou znovu uváděny.

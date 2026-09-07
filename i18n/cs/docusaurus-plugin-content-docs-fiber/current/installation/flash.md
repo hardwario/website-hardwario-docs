@@ -49,7 +49,7 @@ aktivace bootloaderu.
 
 1. Připojte kabel USB-B do **HOST** a do zadního USB konektoru na **TARGET**.
 
-1. Nainstalujte nástroj **rpiboot**: postupujte podle pokynů v tomto GitHub repozitáři:
+1. Nainstalujte nástroj **rpiboot**: postupujte podle pokynů v tomto repozitáři na GitHubu:
 
    **https://github.com/raspberrypi/usbboot**
 

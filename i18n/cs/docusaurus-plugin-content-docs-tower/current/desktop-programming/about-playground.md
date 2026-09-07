@@ -15,7 +15,7 @@ Pokud aplikaci Playground ještě nemáte nainstalovanou, postupujte podle kapit
 :::
 
 Aplikaci Playground lze využít pro:
-- [**Správu radiové sítě**](./radio-network-management.md) (**Devices**)
+- [**Správu ráiové sítě**](./radio-network-management.md) (**Devices**)
 - [**Správu MQTT zpráv**](./mqtt-messages-management.md) (**Messages**)
 - [**Programování v Node-RED**](./node-red-programming.md) (**Functions**)
 - [**Vizualizaci dat**](./data-visualization.md) (**Dashboard**)

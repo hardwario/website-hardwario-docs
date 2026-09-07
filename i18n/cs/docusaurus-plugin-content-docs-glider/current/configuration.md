@@ -95,10 +95,10 @@ Osm nezávislých slotů, jeden ROM kód na slot. Prázdné sloty se v payloadu 
 
 | Klíč | Typ | Velikost | Výchozí | Popis |
 | :--- | :--- | :--- | :--- | :--- |
-| `1` … `8` | hex | 8 bytes | `0x00…` | Sériové číslo ROM senzoru DS18B20 přiřazené danému slotu. `0x00…` = prázdný. |
+| `1` … `8` | hex | 8 bajtů | `0x00…` | Sériové číslo ROM senzoru DS18B20 přiřazené danému slotu. `0x00…` = prázdný. |
 
 :::tip
-V praxi byste tyto hodnoty neměli upravovat ručně – použijte `therm scan --save` pro automatické nalezení a přiřazení senzorů. Viz [**Externí teplotní senzory**](external-sensors/temperature.md).
+V praxi tyto hodnoty ručně neupravujte – použijte `therm scan --save` pro automatické nalezení a přiřazení senzorů. Viz [**Externí teplotní senzory**](external-sensors/temperature.md).
 :::
 
 ## Alarmy {#alarms}

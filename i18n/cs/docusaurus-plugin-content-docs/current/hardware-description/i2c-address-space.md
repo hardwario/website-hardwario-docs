@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 Tento článek poskytuje přehled o přidělení 7bitových adres na sběrnici I²C.
 
-Ke zjištění všech I²C adres senzorů na vašem zařízení CHESTER můžete použít shell příkaz [I²C scan](../firmware-sdk/how-to-i2c-bus.md#i2c-scan).
+Ke zjištění všech I²C adres senzorů na vašem zařízení CHESTER můžete použít příkaz shellu [I²C scan](../firmware-sdk/how-to-i2c-bus.md#i2c-scan).
 
 :::info
 

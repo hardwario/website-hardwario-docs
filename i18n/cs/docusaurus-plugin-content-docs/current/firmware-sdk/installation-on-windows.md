@@ -1,7 +1,6 @@
 ---
 slug: installation-on-windows
 title: Instalace na Windows
-description: "Následující článek vás provede instalací CHESTER SDK na systému Windows. Tento návod byl otestován na Windows verze 10 a 11."
 ---
 import Image from '@theme/IdealImage';
 

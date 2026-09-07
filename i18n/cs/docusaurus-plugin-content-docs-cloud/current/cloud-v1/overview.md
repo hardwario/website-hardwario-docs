@@ -1,7 +1,6 @@
 ---
 slug: overview
 title: Přehled
-description: "HARDWARIO Cloud umožňuje uživatelům spravovat jejich zařízení."
 ---
 import Image from '@theme/IdealImage';
 

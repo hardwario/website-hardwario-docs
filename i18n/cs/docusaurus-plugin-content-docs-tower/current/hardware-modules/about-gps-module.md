@@ -1,6 +1,6 @@
 ---
 slug: about-gps-module
-title: O modulu GPS
+title: O modulu GPS Module
 ---
 import Image from '@theme/IdealImage';
 
@@ -19,13 +19,13 @@ import Image from '@theme/IdealImage';
 
 ## Vlastnosti {#features}
 - Podporuje **GPS, Galileo, GLONASS**
-- Přesnost pozice 2.5m CEP
+- Přesnost pozice 2,5m CEP
 - Komunikace přes **sběrnici I²C**
 - Vestavěná anténa
 - Spotřeba proudu 26mA za provozu
 - Integrovaný spínač napájení pro **provoz s nízkou spotřebou**
 - Studený start 26s, asistovaný start 2s
-- Rozsah napájecího napětí: 2.7V až 3.6V
+- Rozsah napájecího napětí: 2,7V až 3,6V
 - Rozsah provozních teplot: -40 až 85 °C
 
 ## Odkazy {#references}

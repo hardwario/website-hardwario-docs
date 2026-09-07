@@ -1,6 +1,6 @@
 ---
 title: REST API
-description: "HARDWARIO Cloud v2 nabízí kompletní REST API pro vše, co umíte ve webovém"
+description: "REST API pro HARDWARIO Cloud v2: čtení zařízení a zpráv, správa tagů a proměnných, odesílání downlinků a automatizace všeho, co umí webové rozhraní."
 ---
 
 # HARDWARIO Cloud REST API {#hardwario-cloud-rest-api}
@@ -14,7 +14,7 @@ downlinků a další.
 - **Formát:** JSON. Posílejte `Accept: application/json`; ID jsou UUID.
 
 :::tip Pro živá data preferujte konektory
-Pro doručování zpráv ze zařízení v reálném čase použijte [**konektory**](/cloud/connectors)
+Chcete-li doručovat zprávy ze zařízení v reálném čase, použijte [**konektory**](/cloud/connectors)
 (HTTPS webhooky) místo dotazování REST API. Dotazování zvyšuje zpoždění
 doručení, datový provoz i zátěž služby. Webhook vám každou zprávu odešle
 v okamžiku, kdy dorazí.

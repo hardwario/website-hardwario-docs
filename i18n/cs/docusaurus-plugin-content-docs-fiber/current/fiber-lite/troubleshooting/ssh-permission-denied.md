@@ -1,12 +1,11 @@
 ---
 slug: ssh-permission-denied
-title: SSH Permission Denied
-description: "Pokud je SSH dostupné (dostanete výzvu k zadání hesla), ale heslo nastavené v Imageru je vždy"
+title: SSH odmítá heslo
 ---
 
 Pokud je SSH dostupné (dostanete výzvu k zadání hesla), ale heslo nastavené v Imageru je vždy
 odmítnuto, i hned po novém nahrání image s nově zadaným heslem, uživatelský účet
-**nebyl nikdy skutečně vytvořen**, bez ohledu na to, co je v `user-data`.
+**nejspíš nikdy nebyl skutečně vytvořen**, bez ohledu na to, co je v `user-data`.
 
 Nejrychlejší potvrzení: připojte kořenový souborový systém karty (větší oddíl `ext4`,
 `rootfs`) na jiném počítači (třeba do `/mnt/rootfs`) a zkontrolujte, zda účet vůbec
@@ -23,7 +22,7 @@ Pokud příkaz nic nevypíše, účet skutečně nikdy nebyl vytvořen, problém
 Pokud máte poblíž více podobně vypadajících microSD karet (např. při nahrávání image do celé
 série zařízení), pečlivě zkontrolujte, že připojujete a upravujete tu kartu, která opravdu běží
 v tomto zařízení, a ne jinou kartu, která zůstala ve čtečce. Záměna karty nevyvolá žádnou chybu;
-úpravy se prostě tiše nikdy nedostanou do zařízení a tu samou „opravu" budete kontrolovat
+úpravy se prostě tiše nikdy nedostanou do zařízení a tu samou „opravu“ budete kontrolovat
 několikrát, aniž by se kdy projevila. Fyzické označení karty, na které právě pracujete, tomu
 předejde.
 
@@ -52,7 +51,7 @@ které konfigurační moduly už proběhly *pro danou instanci*, pomocí semafor
 v průběhu konfigurace (např. odpojení napájení předtím, než cloud-init dokončí práci; jako
 důkaz hledejte v `/mnt/rootfs/var/log/cloud-init.log` záznam `Received signal 15 resulting in exit`),
 mohou být moduly jako `config_users_groups`, `config_set_passwords` a
-`config_ssh` označeny jako „již proběhlé", i když se nikdy skutečně nedokončily. Protože vadný
+`config_ssh` označeny jako „již proběhlé“, i když se nikdy skutečně nedokončily. Protože vadný
 klíč `instance-id` znamená, že cloud-init každý další start rozpoznává jako tu samou už
 nakonfigurovanou instanci `nocloud`, tyto moduly navždy přeskakuje, bez ohledu na to, jak
 správný je aktuální obsah `user-data`.

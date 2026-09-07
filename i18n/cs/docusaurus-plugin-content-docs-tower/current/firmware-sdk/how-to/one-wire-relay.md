@@ -1,7 +1,6 @@
 ---
 slug: how-to-one-wire-relay
-title: "Návod: 1-Wire relé"
-description: "Abychom usnadnili práci s některými zařízeními 1-Wire, implementovali jsme modul nazvaný twronewirerelay, který umožňuje ovládat reléové moduly připojené přes sběrnici 1-Wire, například reléový modul vyvinutý firmou Denkovi."
+title: "Jak na: 1-Wire relé"
 ---
 import Image from '@theme/IdealImage';
 

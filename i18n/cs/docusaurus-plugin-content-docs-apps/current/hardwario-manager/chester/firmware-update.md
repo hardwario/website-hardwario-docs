@@ -1,7 +1,6 @@
 ---
 slug: firmware-update
 title: Aktualizace firmwaru
-description: "Aplikace stáhne image firmwaru z odkazu a nahraje ho do připojeného zařízení"
 ---
 
 # Aktualizace firmwaru zařízení CHESTER přes Bluetooth {#update-chester-firmware-over-bluetooth}

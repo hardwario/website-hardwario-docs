@@ -1,7 +1,6 @@
 ---
 slug: sticker-clime
 title: STICKER Clime
-description: "STICKER Clime používá standardní vzory stavové LED popsané v Signalizace LED. Startovní karusel, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné."
 ---
 import Image from '@theme/IdealImage';
 
@@ -56,7 +55,7 @@ import Image from '@theme/IdealImage';
 
 ## Stavová LED {#status-led}
 
-STICKER Clime používá standardní vzory stavové LED popsané v [**Signalizace LED**](/sticker/hardware-description#led-indication). Startovní karusel, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
+STICKER Clime používá standardní vzory stavové LED popsané v [**Signalizace LED**](/sticker/hardware-description#led-indication). Startovní přebíhání LED, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
 
 Clime měří hodnoty prostředí, ne diskrétní vstupy, takže obvykle nemá nakonfigurované žádné Hallovy senzory ani externí vstupy. V praxi to znamená, že uvidíte jen **heartbeat**, vzory pro **NFC** a **červené bliknutí alarmu** při překročení prahu teploty nebo vlhkosti. Zeleno-oranžové sekvence aktivace vstupů se na standardní jednotce Clime neobjeví.
 

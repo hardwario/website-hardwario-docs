@@ -1,6 +1,5 @@
 ---
 title: Odesílání downlinků
-description: "Zařízení můžete ovládat i přes API. Downlink se zařadí do fronty a doručí se"
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

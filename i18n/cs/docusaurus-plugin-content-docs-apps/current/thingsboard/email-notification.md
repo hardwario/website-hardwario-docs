@@ -1,16 +1,15 @@
 ---
 slug: email-notification
 title: E-mailové notifikace
-description: "V tomto návodu postavíme vlastní Rule Chain, která sleduje telemetrii (teplotu a vlhkost) z konkrétních zařízení (například „Knihovna\" a „Archiv\"). Když hodnoty překročí předem daný prah, systém vyvolá e-mailovou notifikaci."
 ---
 import Image from '@theme/IdealImage';
 
 # Nastavení e-mailových notifikací {#setting-up-email-notifications}
 
 ## Přehled příkladu {#example-overview}
-V tomto návodu postavíme vlastní Rule Chain, která sleduje telemetrii (teplotu a vlhkost) z konkrétních zařízení (například „Knihovna" a „Archiv"). Když hodnoty překročí předem daný prah, systém vyvolá e-mailovou notifikaci. 
+V tomto návodu postavíme vlastní Rule Chain, která sleduje telemetrii (teplotu a vlhkost) z konkrétních zařízení (například „Knihovna“ a „Archiv“). Když hodnoty překročí předem daný prah, systém vyvolá e-mailovou notifikaci. 
 
-Vytáhneme také „Label" přiřazený zařízení, abychom ho použili v textu e-mailu, a skriptem převedeme výchozí unixový timestamp na čitelný středoevropský čas (CET). 
+Vytáhneme také „Label“ přiřazený zařízení, abychom ho použili v textu e-mailu, a skriptem převedeme výchozí unixový timestamp na čitelný středoevropský čas (CET). 
 
 Takhle bude výsledná notifikační Rule Chain vypadat:
 
@@ -19,17 +18,17 @@ Takhle bude výsledná notifikační Rule Chain vypadat:
 ---
 
 ## Předpoklady {#prerequisites}
-Než začnete, ujistěte se, že má vaše instance ThingsBoardu nastavený odchozí SMTP server. Přejděte na **Settings** -> **Outgoing Mail** a zadejte přihlašovací údaje k SMTP. Tlačítkem „Send Test Mail" si ověříte, že to funguje.
+Než začnete, ujistěte se, že má vaše instance ThingsBoard nastavený odchozí SMTP server. Přejděte na **Settings** -> **Outgoing Mail** a zadejte přihlašovací údaje k SMTP. Tlačítkem „Send Test Mail“ si ověříte, že to funguje.
 
 ---
 
 ## Návod krok za krokem {#step-by-step-guide}
 
 ### Krok 1: Enrichment: Originator Fields (přidání labelů) {#step-1-enrichment-originator-fields-adding-labels}
-ThingsBoard ve výchozím stavu „Label" zařízení do metadat rule enginu nepředává. Musíme si ho nejdřív načíst, abychom ho mohli použít ve skriptech a e-mailech.
+ThingsBoard ve výchozím stavu „Label“ zařízení do metadat rule enginu nepředává. Musíme si ho nejdřív načíst, abychom ho mohli použít ve skriptech a e-mailech.
 * **Typ uzlu:** `Enrichment` -> `originator fields`
 * **Název:** Adding Labels
-* **Konfigurace:** Klikněte na „Add mapping".  
+* **Konfigurace:** Klikněte na „Add mapping“.  
   * Source field: `Label`  
   * Target key: `deviceLabel`  
   * Add mapped originator fields to: `Metadata`
@@ -127,7 +126,7 @@ Tento uzel skládá samotný předmět a tělo e-mailu. Můžete si vybrat, jest
 
 **Varianta A: e-mail v čistém textu**
 Pokud chcete jednoduchý e-mail bez zvláštního formátování, zvolte Plain Text. Zalomení řádků (stisk Enteru) bude fungovat přirozeně.
-* **Mail body type:** Zvolte `Plain Text` (nebo podle verze ThingsBoardu odškrtněte volbu HTML)
+* **Mail body type:** Zvolte `Plain Text` (nebo podle verze ThingsBoard odškrtněte volbu HTML)
 * **Body:**
 ```text
 Hello, measured values in your facility have exceeded the defined limits:
@@ -157,7 +156,7 @@ Measurement Time: ${formattedTime}<br><br>
 Your HARDWARIO IoT Team
 ```
 
-*(U uzlů pro vlhkost text upravte: „Temperature" změňte na „Humidity" a proměnnou na `${formattedHumidity}` %.)*
+*(U uzlů pro vlhkost text upravte: „Temperature“ změňte na „Humidity“ a proměnnou na `${formattedHumidity}` %.)*
 
 * **Spojení:** Spojte příslušný prahový filtr (například Temperature < 17) s tímto uzlem linkou True.
 
@@ -176,7 +175,7 @@ Vaše vlastní notifikační Rule Chain je hotová, ale ThingsBoard neví, že d
 2. Najděte uzel **Message Type Switch**.
 3. Sledujte linku **Post telemetry** vycházející z tohoto uzlu. Měla by vést k uzlu **Save Timeseries**.
 4. V levém menu najděte uzel **Rule Chain** (v kategorii Rule Chains) a přetáhněte ho na plochu.
-5. V nastavení uzlu zvolte novou Rule Chain, kterou jste právě vytvořili (například „EMAIL Notifications").
+5. V nastavení uzlu zvolte novou Rule Chain, kterou jste právě vytvořili (například „EMAIL Notifications“).
 6. Tažením vytvořte spojení z uzlu **Save Timeseries** do svého nově přidaného uzlu Rule Chain.
 7. Jako popisek linky zvolte **Success**.
 8. Klikněte na tlačítko **Apply changes** (fajfka v pravém dolním rohu).
@@ -252,4 +251,4 @@ Nakonec akčním uzlem uložte nový timestamp jako serverový atribut, aby se d
 * **Typ uzlu:** `Action` -> `save attributes`
 * **Název:** Save Last Email Time
 * **Scope:** Server attributes
-* **Spojení:** Spojte uzel „Prepare Timestamp" s tímto uzlem linkou **Success**.
+* **Spojení:** Spojte uzel „Prepare Timestamp“ s tímto uzlem linkou **Success**.

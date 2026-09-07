@@ -1,7 +1,6 @@
 ---
 slug: lte-modem-over-j-link
 title: LTE modem přes J-Link
-description: "Tento článek popisuje, jak nahrát firmware LTE modemu v zařízení CHESTER pomocí SEGGER J-Link."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -156,7 +155,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
 ## Postup nahrání firmwaru {#flashing-procedure}
 
-Pro nahrání firmwaru LTE modemu do zařízení **CHESTER** postupujte takto:
+Chcete-li do zařízení **CHESTER** nahrát firmware modemu LTE, postupujte takto:
 
 1. Otevřete krabičku zařízení **CHESTER** (6 šroubů ze spodní strany).
 

@@ -1,7 +1,6 @@
 ---
 slug: about-hardwario-code
 title: O aplikaci HARDWARIO Code
-description: "Pokud narazíte na potíže s rozšířením nebo přenosnou verzí, dejte nám prosím vědět na našem fóru nebo přímo na GitHubu."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

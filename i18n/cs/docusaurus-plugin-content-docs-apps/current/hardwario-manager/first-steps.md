@@ -1,7 +1,6 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
-description: "Aplikace se k zařízení dostane jedním ze dvou bezdrátových spojení, podle produktu:"
 title_meta: "Rychlý průvodce (HARDWARIO Manager)"
 ---
 

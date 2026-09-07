@@ -1,6 +1,5 @@
 ---
 title: Hodiny reálného času
-description: "Zařízení STICKER udržuje přesný čas pomocí vnitřních hodin reálného času (RTC). Přesný čas je potřeba pro časové značky záznamů v historii senzorů, pro spouštění událostí podle pravidel alarmů a pro stavové zprávy sítě."
 ---
 import Image from '@theme/IdealImage';
 
@@ -25,14 +24,14 @@ Hodiny RTC lze synchronizovat třemi nezávislými způsoby:
 2. **Lokální synchronizace přes šifrované NFC:**
    - Při konfiguraci aplikací **HARDWARIO Manager** v telefonu může systémový čas telefonu automaticky nastavit hodiny RTC zařízení STICKER přes NFC.
 
-3. **Vzdálené a shell příkazy:**
-   - Čas lze zjistit nebo ručně nastavit vývojářskými shell příkazy, případně vzdáleně downlink příkazy LoRaWAN na **fPort 85**.
+3. **Vzdálené a příkazy shellu:**
+   - Čas lze zjistit nebo ručně nastavit vývojářskými příkazy shellu, případně vzdáleně downlink příkazy LoRaWAN na **fPort 85**.
 
 ---
 
-## Vývojářské shell příkazy (`clock`) {#developer-shell-commands-clock}
+## Vývojářské příkazy shellu (`clock`) {#developer-shell-commands-clock}
 
-Vývojářské shell příkazy umožňují hodiny RTC přímo prohlížet a spravovat (otevření konzole viz [**Nastavení firmwaru**](firmware-setup.md)):
+Vývojářské příkazy shellu umožňují hodiny RTC přímo prohlížet a spravovat (otevření konzole viz [**Nastavení firmwaru**](firmware-setup.md)):
 
 | Příkaz | Popis |
 |---|---|

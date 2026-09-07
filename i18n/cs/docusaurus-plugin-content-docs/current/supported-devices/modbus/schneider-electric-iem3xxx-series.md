@@ -1,7 +1,6 @@
 ---
 slug: schneider-electric-iem3xxx-series
 title: Schneider Electric IEM3XXX Series
-description: "Webové stránky"
 ---
 
 import Image from '@theme/IdealImage';

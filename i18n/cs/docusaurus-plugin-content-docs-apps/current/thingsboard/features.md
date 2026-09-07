@@ -1,7 +1,6 @@
 ---
 slug: features
 title: Funkce
-description: "ThingsBoard nabízí pokročilé nástroje pro organizaci vaší IoT infrastruktury, automatizaci procesů a doručování reportů zákazníkům. Tato sekce popisuje klíčové možnosti dostupné na platformě HARDWARIO ThingsBoard."
 title_meta: "Funkce (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';
@@ -36,7 +35,7 @@ Správce pravidel notifikací je no-code dashboard pro nastavení prahových vý
 
 ## [E-mailové notifikace](/apps/thingsboard/email-notification) {#email-notifications}
 
-Pro pokročilejší scénáře notifikací umožňuje Rule Engine v ThingsBoardu postavit plně vlastní řetězce e-mailových notifikací v JavaScriptu. Tento přístup vám dává plnou kontrolu nad filtrováním zařízení, formátováním dat i omezováním frekvence.
+Pro pokročilejší scénáře notifikací umožňuje Rule Engine v platformě ThingsBoard postavit plně vlastní řetězce e-mailových notifikací v JavaScriptu. Tento přístup vám dává plnou kontrolu nad filtrováním zařízení, formátováním dat i omezováním frekvence.
 
 **Tento přístup použijte, když potřebujete:**
 - Filtrovat notifikace podle labelu zařízení nebo vlastních atributů
@@ -63,13 +62,13 @@ Veřejné dashboardy ThingsBoard vložte přímo do externích webových aplikac
 **Vkládání dashboardů použijte, když potřebujete:**
 - Zobrazit živou telemetrii a grafy v externím webu nebo na stránce dokumentace
 - Nasdílet dashboard jen pro čtení, aniž by se návštěvníci museli přihlašovat
-- Integrovat vizuály ThingsBoardu do projektu Docusaurus (MDX) se správnou syntaxí JSX
+- Integrovat vizuály ThingsBoard do projektu Docusaurus (MDX) se správnou syntaxí JSX
 
 ---
 
 ## [Rule Engine](/apps/thingsboard/rule-engine) {#rule-engine}
 
-Rule Engine je jádro automatizace v ThingsBoardu. Zpracovává každou příchozí zprávu z vašich zařízení pomocí vizuálního editoru s uzly a dává vám plnou kontrolu nad transformací dat, správou alarmů a integracemi třetích stran.
+Rule Engine je jádro automatizace v platformě ThingsBoard. Zpracovává každou příchozí zprávu z vašich zařízení pomocí vizuálního editoru s uzly a dává vám plnou kontrolu nad transformací dat, správou alarmů a integracemi třetích stran.
 
 **Rule Engine použijte, když potřebujete:**
 - Transformovat nebo počítat hodnoty z příchozí telemetrie (například převody jednotek, součty fází)

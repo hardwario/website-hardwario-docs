@@ -1,7 +1,6 @@
 ---
 slug: /sdk-v4-migration-guide
 title: Průvodce migrací na SDK v4.0.0
-description: "CHESTER SDK v4.0.0 zvyšuje verzi použitého nRF Connect SDK z v2.9 na v3.4 (Zephyr 4.x, Zephyr SDK 1.0.1). Jde o vydání se zpětně nekompatibilními změnami: mění se Python toolchain, Zephyr SDK a, u aplikací mimo repozitář SDK, také build systém…"
 ---
 
 # Průvodce migrací na CHESTER SDK v4.0.0 {#chester-sdk-v400-migration-guide}

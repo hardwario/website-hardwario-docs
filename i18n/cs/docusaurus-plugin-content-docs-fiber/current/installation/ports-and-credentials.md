@@ -1,6 +1,5 @@
 ---
 title: Porty a výchozí přihlašovací údaje
-description: "rozdíl od Node-RED a Grafana, kterým se heslo nastavuje během instalace, ChirpStack se dodává"
 ---
 
 # Porty a výchozí přihlašovací údaje {#ports--default-credentials}

@@ -1,7 +1,7 @@
 ---
 slug: index
 title: ThingsBoard
-description: "ThingsBoard je open-source IoT platforma, která firmám pomáhá připojovat zařízení, sbírat data a přeměňovat je na přehledné a užitečné informace. Díky připraveným dashboardům, upozorněním a nástrojům pro automatizaci umožňuje snadno sledovat provoz,…"
+description: "ThingsBoard je open-source platforma pro IoT, která pomáhá připojovat zařízení, sbírat data a proměnit je v přehledné a užitečné informace."
 ---
 import Image from '@theme/IdealImage';
 

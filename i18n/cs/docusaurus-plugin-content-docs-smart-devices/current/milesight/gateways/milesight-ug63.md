@@ -1,7 +1,6 @@
 ---
 slug: milesight-ug63
 title: UG63
-description: "Milesight UG63 je kompaktní brána LoRaWAN® určená pro menší nasazení s podporou 8 kanálů a až 2000 koncových uzlů. Nabízí připojení přes Ethernet a 4G LTE, snadnou konfiguraci přes Wi-Fi a zajišťuje cenově efektivní pokrytí sítě."
 ---
 
 import Image from '@theme/IdealImage';

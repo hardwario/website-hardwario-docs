@@ -1,12 +1,11 @@
 ---
 title: Registrace brány a zařízení
-description: "Instalace softwaru zajistí, že ChirpStack i koncentrátor běží, ale do sítě se nic nepřipojí,"
 ---
 
 # Registrace brány a zařízení {#register-a-gateway-and-a-device}
 
 Instalace softwaru zajistí, že ChirpStack i koncentrátor běží, ale do sítě se nic nepřipojí,
-dokud nejsou uvnitř samotného ChirpStacku zaregistrovány **brána** a alespoň jedno **zařízení**.
+dokud nejsou uvnitř samotné platformy ChirpStack zaregistrovány **brána** a alespoň jedno **zařízení**.
 Tuhle část nelze skriptovat. Provádí se přes uživatelské rozhraní ChirpStack, stejným způsobem
 bez ohledu na to, která varianta FIBER ji provozuje.
 
@@ -28,7 +27,7 @@ bez ohledu na to, která varianta FIBER ji provozuje.
    - **Region**: stejný region jako u brány.
    - **MAC version**: musí odpovídat tomu, co vaše testovací zařízení (např. STICKER, CHESTER)
      skutečně používá (LoRaWAN 1.0.x u většiny zařízení HARDWARIO; ověřte v dokumentaci zařízení).
-   - **Regional parameters revision**: ponechte výchozí hodnotu ChirpStacku, pokud zařízení
+   - **Regional parameters revision**: ponechte výchozí hodnotu ChirpStack, pokud zařízení
      nevyžaduje konkrétní revizi.
    - **Join type**: **OTAA** pro typická zařízení HARDWARIO.
 

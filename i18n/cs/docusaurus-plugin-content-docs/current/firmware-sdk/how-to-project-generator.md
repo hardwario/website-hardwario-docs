@@ -1,7 +1,6 @@
 ---
 slug: how-to-project-generator
 title: "Jak na: Project Generator"
-description: "Používá se také ke generování různých variant katalogových aplikací. Různé varianty najdete v souborech project.yaml."
 ---
 import Image from '@theme/IdealImage';
 
@@ -354,7 +353,7 @@ depends_on: defined(VARIANT_<variant_name>)`
 
 :::tip
 
-Pro zahrnutí více závislostí můžete navíc použít logické operátory **&& (AND)** a **|| (OR)**.
+Chcete-li zahrnout více závislostí, můžete navíc použít logické operátory **&& (AND)** a **|| (OR)**.
 
 :::
 
@@ -430,7 +429,7 @@ Jakýkoli kód uzavřený mezi těmito značkami bude zachován bez úprav, což
 
 ### Direktivy `clang-format` {#directives-clang-format}
 
-Pro řízení chování nástroje `clang-format` v kódové bázi mohou vývojáři použít speciální direktivy, které vyloučí konkrétní části z automatického formátování:
+Chování nástroje `clang-format` v kódové bázi mohou vývojáři řídit speciálními direktivami, které vyloučí konkrétní části z automatického formátování:
 ```c
 /* ### Preserved code "block-name" (begin) */
 /* clang-format off */

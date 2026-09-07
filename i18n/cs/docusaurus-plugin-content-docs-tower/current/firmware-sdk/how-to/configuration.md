@@ -1,7 +1,6 @@
 ---
 slug: how-to-eeprom-twr-config
-title: "Jak na to: Konfigurace"
-description: "Funkce twrconfig vám pomohou snadno vytvořit proměnnou nebo strukturu proměnných, které se ukládají do interní EEPROM paměti."
+title: "Jak na: Konfigurace"
 ---
 import Image from '@theme/IdealImage';
 

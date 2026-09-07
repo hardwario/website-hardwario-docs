@@ -1,7 +1,7 @@
 ---
 slug: spaces
 title: Prostory
-description: "Typické případy použití:"
+description: "Prostor (Space) je nejvyšší organizační jednotka v HARDWARIO Cloud. Zařízení, tagy, konektory, proměnné i uživatelé patří vždy do některého prostoru."
 ---
 
 # Prostory {#spaces}
@@ -26,11 +26,11 @@ Typické případy použití:
 
 1. V pravém horním rohu otevřete **SPACES** a klikněte na **+ NEW SPACE**.
 
-   ![Stránka SPACES se zvýrazněným tlačítkem „+ NEW SPACE"](../../../../cloud/images/spaces-new-space.png)
+   ![Stránka SPACES se zvýrazněným tlačítkem „+ NEW SPACE“](../../../../cloud/images/spaces-new-space.png)
 
 2. Zadejte název podle [konvencí pojmenování](/cloud/#naming-conventions) a klikněte na **CREATE**.
 
-   ![Dialog „Create new space": zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
+   ![Dialog „Create new space“: zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
 
 Nový prostor se okamžitě objeví v přepínači prostorů.
 
@@ -55,7 +55,7 @@ Do svého prostoru můžete pozvat další uživatele ke spolupráci. Každý č
 | **Admin** | Plný přístup. Může přidávat/odebírat zařízení, spravovat konektory, zvát uživatele, měnit nastavení |
 | **User** | Přístup pouze pro čtení. Může prohlížet zařízení a zprávy, ale nemůže provádět změny |
 
-Pro pozvání členů a správu jejich rolí viz [**Users**](/cloud/users) v sekci **Administration**.
+Zvaní členů a správu jejich rolí popisuje [**Users**](/cloud/users) v sekci **Správa**.
 
 :::info
 
@@ -67,4 +67,4 @@ Uživatel může být členem více prostorů, v každém s jinou rolí.
 
 Každý prostor má vlastní API klíče pro programový přístup. API klíče jsou omezeny na daný prostor a lze je použít k výpisu zařízení, získávání zpráv a odesílání downlinků přes [REST API](/cloud/api).
 
-Pro vytvoření API klíče přejděte ve svém prostoru do **Settings → API Keys**.
+Chcete-li vytvořit klíč API, přejděte ve svém prostoru do **Settings → API Keys**.

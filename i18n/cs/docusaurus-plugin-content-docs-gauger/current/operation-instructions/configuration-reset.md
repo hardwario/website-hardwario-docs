@@ -1,7 +1,6 @@
 ---
 slug: configuration-reset
 title: Reset konfigurace
-description: "Někdy je potřeba vrátit konfiguraci zařízení do výchozího stavu. To lze provést kliknutím na tlačítko Factory Reset na kartě System ve webovém rozhraní. Tím se konfigurace resetuje a zařízení se restartuje."
 ---
 
 # Reset konfigurace {#configuration-reset}

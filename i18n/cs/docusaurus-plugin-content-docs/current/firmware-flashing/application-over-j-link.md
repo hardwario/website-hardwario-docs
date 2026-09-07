@@ -1,7 +1,6 @@
 ---
 slug: application-over-j-link
 title: Aplikace přes J-Link
-description: "Tento článek popisuje, jak nahrát firmware aplikace do zařízení CHESTER pomocí SEGGER J-Link."
 title_meta: "Aplikace přes J-Link (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

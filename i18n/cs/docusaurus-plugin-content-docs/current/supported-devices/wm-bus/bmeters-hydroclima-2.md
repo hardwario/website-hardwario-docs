@@ -1,7 +1,6 @@
 ---
 slug: bmeters-hydroclima-2
 title: BMeters Hydroclima 2
-description: "Webové stránky"
 ---
 import Image from '@theme/IdealImage';
 

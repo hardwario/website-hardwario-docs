@@ -1,7 +1,6 @@
 ---
 slug: spi-interface
 title: Rozhraní SPI
-description: "Serial Peripheral Bus (SPI) je synchronní sériová sběrnice. Používá se pro rychlé propojení periferií uvnitř zařízení. TOWER využívá SPI například v LCD Module."
 ---
 import Image from '@theme/IdealImage';
 

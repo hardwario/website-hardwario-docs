@@ -1,8 +1,7 @@
 ---
 slug: tools
 title: Nástroje
-description: "konfiguraci."
-title_meta: "Nástroje (HARDWARIO Manager for STICKER)"
+title_meta: "Nástroje (HARDWARIO Manager pro STICKER)"
 ---
 
 # Nástroje {#tools}

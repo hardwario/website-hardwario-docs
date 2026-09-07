@@ -1,12 +1,11 @@
 ---
 slug: milesight-em400
 title: EM400
-description: "Milesight EM400-MUD je multifunkční ultrazvukový senzor vzdálenosti určený pro chytré parkování, odpadové hospodářství a monitorování hladiny. Nabízí úhel svazku 60° s detekčním rozsahem 3–450 cm a vysokou přesností ± (1+0,3 %×S) cm. Senzor nabízí…"
 ---
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor EM400-MUD {#milesight-sensor-em400-mud}
+# Senzor Milesight EM400-MUD {#milesight-sensor-em400-mud}
 
 Milesight EM400-MUD je **multifunkční ultrazvukový senzor vzdálenosti** určený pro **chytré parkování**, **odpadové hospodářství** a **monitorování hladiny**. Nabízí **úhel svazku 60°** s **detekčním rozsahem 3–450 cm** a **vysokou přesností** ± (1+0,3 %×S) cm. Senzor nabízí **tři provozní režimy** (Standard, Bin a Parking Lot), **krabičku s krytím IP67**, **extrémně dlouhou výdrž baterie až 10 let** a podporuje konektivitu **LoRaWAN**, **NB-IoT** a **Cat M**.
 

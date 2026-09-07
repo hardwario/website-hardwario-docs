@@ -1,7 +1,6 @@
 ---
 slug: lorawan-radio
 title: Sítě LoRaWAN
-description: "Základní deska CHESTER-M obsahuje také LoRaWAN radio. Katalogové aplikace mají osazené jak NB-IoT/LTE-M, tak LoRaWAN radio. Díky tomu můžete snadno přepnout na jiné radio pouze softwarovou rekonfigurací."
 ---
 import Image from '@theme/IdealImage';
 
@@ -15,7 +14,7 @@ Standardní modul **CMWX1ZZABZ-078** od firmy **Murata** používá standard LoR
 
 ## Konfigurace režimu sítě {#network-mode-configuration}
 
-Některé katalogové firmwary umožňují nakonfigurovat použití sítě NB-IoT/LTE nebo LoRaWAN. Tento firmware po zapnutí neposílá data, **LED bliká žlutě** a je nutné nakonfigurovat správný režim radia.
+Některé katalogové firmwary umožňují nakonfigurovat použití sítě NB-IoT/LTE nebo LoRaWAN. Tento firmware po zapnutí neposílá data, **LED bliká žlutě** a je nutné nakonfigurovat správný režim ráia.
 
 Tato konfigurace `app mode` je aktuálně potřebná pro tyto katalogové aplikace:
 
@@ -57,9 +56,9 @@ Ne všechny katalogové firmwary podporují přepnutí NB-IoT/LTE-M na LoRaWAN r
 
 :::
 
-Existuje velké množství konfigurací, například autentizace **ABP** nebo **OTAA**. Modem lze také nastavit na fixní datarate pro dosažení nejdelšího dosahu. Podporuje také režimy třídy **A** a **C** pro příjem downlink zpráv.
+Existuje velké množství konfigurací, například autentizace **ABP** nebo **OTAA**. Modem lze také nastavit na pevnou datovou rychlost pro dosažení nejdelšího dosahu. Podporuje také režimy třídy **A** a **C** pro příjem downlink zpráv.
 
-Pro zobrazení aktuální konfigurace zadejte `lrw config show`, což vypíše kompletní konfiguraci.
+Chcete-li zobrazit aktuální konfiguraci, zadejte `lrw config show`; vypíše kompletní konfiguraci.
 
 ```
 lrw config test false
@@ -120,7 +119,7 @@ V device profilu v CHIRPSTACK na kartě JOIN (OTAA/ABP) **vypněte** Device supp
 - RX2 channel frequency (Hz): `869525000`
 - Factory-preset frequencies (Hz): `868100000, 868300000, 868500000, 867100000, 867300000, 867100000, 867700000, 867900000`
 
-Pro generování klíčů můžete pro testování a vývoj použít tento [online generátor](https://loratools.nl/#/keys), pro produkci použijte pro jistotu offline generátor.
+Klíče si pro testování a vývoj můžete vygenerovat tímto [online generátor](https://loratools.nl/#/keys), pro produkci použijte pro jistotu offline generátor.
 
 Poté nakonfigurujte zařízení CHESTER
 
@@ -153,12 +152,12 @@ Následující tabulka uvádí přehled doporučených konfiguračních parametr
 
 | **Parametr** | **Hodnota** |
 |----------------|-----------|
-| **General – MAC version** | **LoRaWAN 1.0.4** |
-| **General – Regional parameters revision** | **A** |
-| **General – ADR algorithm** | **Default ADR algorithm (LoRa only)** |
-| **Join (OTAA/ABP) – Device supports OTAA** | **ON** |
-| **Class-B – Device supports Class-B** | **OFF** |
-| **Class-C – Device supports Class-C** | **OFF** |
+| **General → MAC version** | **LoRaWAN 1.0.4** |
+| **General → Regional parameters revision** | **A** |
+| **General → ADR algorithm** | **Default ADR algorithm (LoRa only)** |
+| **Join (OTAA/ABP) → Device supports OTAA** | **ON** |
+| **Class-B → Device supports Class-B** | **OFF** |
+| **Class-C → Device supports Class-C** | **OFF** |
 
 :::info
 Pokud si nejste jisti nastavením nebo konfigurací **ChirpStack**, podívejte se prosím do následujícího návodu, který obsahuje podrobné instrukce k instalaci a konfiguraci ChirpStack v4: [**Getting Started with ChirpStack v4**](https://docs.hardwario.com/apps/chirpstack/index#getting-started-with-chirpstack-v4)
@@ -181,7 +180,7 @@ Dekodér můžete nastavit v Device-profile na kartě **Codec**.
 
 ### Dekodér pro Node-RED {#node-red-decoder}
 
-Pro Node-RED se připojujeme přímo k MQTT brokeru v CHIRPSTACK pomocí node MQTT out, který má nastavené MQTT téma na `application/<application-id>/device/+/event/up`.
+Pro Node-RED se připojujeme přímo k MQTT brokeru v CHIRPSTACK pomocí uzlu MQTT out, který má nastavené MQTT téma na `application/<application-id>/device/+/event/up`.
 
 Nahraďte `<application-id>` ID své aplikace. Ve starších verzích CHIRPSTACK je to **číslo 0..n**, v novějších verzích je to **unikátní ID**.
 
@@ -191,7 +190,7 @@ Nahraďte `<application-id>` ID své aplikace. Ve starších verzích CHIRPSTACK
 
 ### Veřejná vs. privátní síť {#public-vs-private-network}
 
-Síť LoRaWAN lze nastavit jako privátní nebo veřejnou. Neznamená to, že síť je nebo není viditelná. Znamená to pouze, že radiové pakety používají odlišnou preambuli.
+Síť LoRaWAN lze nastavit jako privátní nebo veřejnou. Neznamená to, že síť je nebo není viditelná. Znamená to pouze, že ráiové pakety používají odlišnou preambuli.
 
 Pokud vaše síť nebo brána nevidí ani jeden paket, obvykle je to právě kvůli tomu.
 
@@ -200,6 +199,6 @@ Ve své bráně (Mikrotik) zkontrolujte konfigurační volbu **Network**, poté 
 Poté přejděte na kartu **Traffic** v Mikrotiku a zkontrolujte, zda vidíte paket **JOIN** ze svého zařízení s **Dev Addr**. Na této kartě vidíte RAW zašifrované pakety ze všech zařízení v okolí.
 Je ale užitečné zkontrolovat, jestli zařízení a brána používají stejný privátní/veřejný prefix paketů.
 
-Pokud vidíte přicházející pakety, můžete problém dále řešit v CHIRPSTACK v části Gateways na kartě **Live LoraWAN Frames**. Až teprve poté, co zde uvidíte pakety, přejděte do Applications a hledejte dekódované pakety a řešte například špatné klíče, pokud tam pakety zařízení nejsou vidět.
+Pokud vidíte přicházející pakety, můžete problém dále řešit v CHIRPSTACK v části Gateways na kartě **Live LoRaWAN Frames**. Až teprve poté, co zde uvidíte pakety, přejděte do Applications a hledejte dekódované pakety a řešte například špatné klíče, pokud tam pakety zařízení nejsou vidět.
 
-**Netmore** používá **veřejnou** síť. Pro nastavení typu sítě vašeho zařízení na veřejnou použijte příkaz `lrw config nwk public`.
+**Netmore** používá **veřejnou** síť. Chcete-li typ sítě svého zařízení nastavit na veřejnou, použijte příkaz `lrw config nwk public`.

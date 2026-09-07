@@ -1,7 +1,7 @@
 ---
 slug: messages
 title: Zprávy
-description: "Stránka Messages zobrazuje všechny zprávy vyměněné mezi zařízeními a Cloudem. Dostanete se na ni ze dvou míst:"
+description: "Stránka Zprávy v HARDWARIO Cloud ukazuje každou zprávu vyměněnou mezi vašimi zařízeními a cloudem, s filtry a detailem zprávy."
 ---
 
 # Zprávy {#messages}
@@ -16,7 +16,7 @@ Stránka **Messages** zobrazuje všechny zprávy vyměněné mezi zařízeními 
 | Typ | Směr | Popis |
 |---|---|---|
 | **data** | up | Periodický uplink payload s hodnotami ze senzorů |
-| **session** | up/down | Vyměněna při startu zařízení. Obsahuje informace o firmwaru, hash konfigurace a parametry sítě |
+| **session** | up/down | Vyměňuje se při startu zařízení. Obsahuje informace o firmwaru, hash konfigurace a parametry sítě |
 | **config** | down | Konfigurace odeslaná do zařízení (pouze při změně hashe konfigurace) |
 | **encoder** | up | Mapování JSON klíčů použité ke komprimaci datových zpráv |
 | **decoder** | up | Mapování JSON klíčů použité k dekomprimaci datových zpráv |
@@ -43,15 +43,15 @@ Ve výchozím stavu seznam zobrazuje zprávy za **posledních 10 dní**. Pomocí
 
 ## Zobrazení zprávy {#viewing-a-message}
 
-- Klepnutím na **ikonu šipky** v řádku zprávy zobrazíte rychlý náhled JSON přímo v seznamu
-- Klepnutím na **ikonu ⓘ** otevřete úplný detail zprávy
-- Klepnutím na **ikonu porovnání** u dvou zpráv zobrazíte rozdíl jejich JSON těl
+- Kliknutím na **ikonu šipky** v řádku zprávy zobrazíte rychlý náhled JSON přímo v seznamu
+- Kliknutím na **ikonu ⓘ** otevřete úplný detail zprávy
+- Kliknutím na **ikonu porovnání** u dvou zpráv zobrazíte rozdíl jejich JSON těl
 
 ## Základní dashboard {#basic-dashboard}
 
 Dashboard je **nástroj pro ladění**, který umožňuje vykreslit hodnoty ze zpráv pomocí krátké JavaScriptové funkce.
 
-Klepněte na ikonu **Dashboard** nad seznamem zpráv, vložte funkci, která z každé zprávy vytáhne hodnoty, a graf se aktualizuje v reálném čase.
+Klikněte na ikonu **Dashboard** nad seznamem zpráv, vložte funkci, která z každé zprávy vytáhne hodnoty, a graf se aktualizuje v reálném čase.
 
 **Příklad: vykreslení teploty z teploměru**
 

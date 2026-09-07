@@ -1,8 +1,7 @@
 ---
 slug: alarms
 title: Pravidla alarmů
-description: "Pravidlo alarmu sleduje jednu měřenou veličinu a označí zařízení jako alarmující,"
-title_meta: "Pravidla alarmů (HARDWARIO Manager for STICKER)"
+title_meta: "Pravidla alarmů (HARDWARIO Manager pro STICKER)"
 ---
 
 # Nastavení pravidel alarmů {#set-up-alarm-rules}
@@ -62,5 +61,5 @@ pravidla najednou, viz [**Šablony**](./templates.md). Pravidla lze také postav
 v prohlížeči pomocí
 [**generátoru šablon**](./template-generator.mdx) a nastavit na dálku pomocí
 [**generátoru downlink příkazů**](/sticker/connectivity/downlink-commands-generator)
-nebo shell příkazem `alarm`, viz
+nebo příkaz shelluem `alarm`, viz
 [**Pravidla alarmů (přístup pro vývojáře)**](/sticker/developer-access/alarm-rules).

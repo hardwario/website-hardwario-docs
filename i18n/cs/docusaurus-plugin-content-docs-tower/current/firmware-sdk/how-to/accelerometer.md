@@ -1,7 +1,6 @@
 ---
 slug: how-to-accelerometer
-title: "How To: Akcelerometr"
-description: "Core Module je vybaven tříosým lineárním akcelerometrem (LIS2DH12) s ultranízkou spotřebou, který je připojen přes sběrnici I²C. Umožňuje detekci pohybu na základě přerušení."
+title: "Jak na: Akcelerometr"
 ---
 import Image from '@theme/IdealImage';
 
@@ -9,7 +8,7 @@ Core Module je vybaven tříosým **lineárním akcelerometrem (LIS2DH12)** s ul
 
 ## Odkazy {#references}
 - [**Modul SDK pro akcelerometr**](https://sdk.hardwario.com/group__twr__lis2dh12.html)
-- Příklad v GitHub repozitáři
+- Příklad v repozitáři na GitHubu
 
 Akcelerometr lze používat dvěma způsoby:
   - **Kontinuální měření zrychlení**

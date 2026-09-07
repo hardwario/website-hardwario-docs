@@ -1,7 +1,6 @@
 ---
 slug: how-to-analog-digital-converter
-title: "Návod: Analogově-digitální převodník"
-description: "Analogově-digitální převodník umí měřit napětí na jednom ze šesti vstupů A0 až A5 a vrátit naměřenou hodnotu. Výsledkem může být 16bitová hodnota nebo číslo typu float ve voltech."
+title: "Jak na: Analogově-digitální převodník"
 ---
 import Image from '@theme/IdealImage';
 

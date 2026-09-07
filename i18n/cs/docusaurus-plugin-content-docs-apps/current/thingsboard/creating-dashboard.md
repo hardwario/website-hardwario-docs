@@ -1,7 +1,6 @@
 ---
 slug: creating-dashboard
 title: Dashboardy
-description: "V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobrazení proměnné a postavit základní graf. Data ze svých zařízení tak budete moci vizualizovat a sledovat v reálném čase."
 ---
 import Image from '@theme/IdealImage';
 
@@ -25,7 +24,7 @@ V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobra
 
 ![Vytvoření nového dashboardu - 2](../../../../../apps/thingsboard/images/thingsboard-dashboards-2.png)
 
-   7. Přesměruje vás to na váš nově vytvořený dashboard.  
+   7. Budete přesměrováni na svůj nově vytvořený dashboard.  
 
 ---
 
@@ -85,7 +84,7 @@ V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobra
    5. Otevře se konfigurační okno:  
       - Pod **Series → Key** zvolte **zdroj dat** a **proměnnou**, kterou chcete zobrazit.  
       - Upravte vzhled widgetu (label, jednotky, barvu, počet desetinných míst a další).  
-      - Pro přidání více proměnných klikněte na **Add Series**.  
+      - Chcete-li přidat více proměnných, klikněte na **Add Series**.  
       - Sjeďte níž a nastavte **osy Y, legendu a další vlastnosti grafu**.  
    6. Po dokončení klikněte na **Add**.  
 

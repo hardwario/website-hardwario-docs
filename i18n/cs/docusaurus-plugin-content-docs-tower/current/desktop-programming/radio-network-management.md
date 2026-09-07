@@ -1,7 +1,6 @@
 ---
 slug: radio-network-management
 title: Správa rádiové sítě
-description: "V této kapitole si projdeme záložku Devices v aplikaci Playground"
 ---
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'

@@ -1,7 +1,6 @@
 ---
 slug: chester-control
 title: CHESTER Control
-description: "Tento článek popisuje základní funkcionalitu, hardware a ukázkovou JSON zprávu katalogové aplikace CHESTER Control."
 ---
 import Image from '@theme/IdealImage';
 
@@ -250,7 +249,7 @@ app config counter-cooldown-time <value>
 
 :::info
 
-- Parametr `duration-active` nastavuje zpoždění v milisekundách mezi změnou vstupního signálu na aktivní úroveň (podle konfigurace `npn` nebo `pnp`) a okamžikem, kdy na tuto změnu zařízení CHESTER zareaguje. Lze to použít k filtrování (debounce) vstupního signálu v případě, že je vstupní signál připojen k „elektricky rušivému" mechanickému přepínači nebo relé. Lze to využít i tehdy, když má zařízení CHESTER reagovat na pulzy delší než nastavená doba.
+- Parametr `duration-active` nastavuje zpoždění v milisekundách mezi změnou vstupního signálu na aktivní úroveň (podle konfigurace `npn` nebo `pnp`) a okamžikem, kdy na tuto změnu zařízení CHESTER zareaguje. Lze to použít k filtrování (debounce) vstupního signálu v případě, že je vstupní signál připojen k „elektricky rušivému“ mechanickému přepínači nebo relé. Lze to využít i tehdy, když má zařízení CHESTER reagovat na pulzy delší než nastavená doba.
 - Parametr `duration-inactive` funguje stejně jako `duration-active` výše, jen nastavuje čas pro opačnou hranu.
 - Parametr `cooldown-time` je zpoždění chránící zařízení CHESTER před příliš velkým počtem příchozích přerušení. Pokud je připojen příliš rychlý signál (>10 kHz), mohla by obsluha přerušení spotřebovat veškerý procesorový čas a zastavit běh ostatních vláken. Tento parametr nastavuje malé zpoždění mezi opětovným spuštěním obsluhy přerušení. Zde lze použít výchozí hodnotu 10 ms.
 
@@ -275,7 +274,7 @@ app config hygro-interval-aggreg <value>
 
 Podívejte se prosím do dokumentace Cloudu, konkrétně na [Downlink data](/cloud/downlink) a [API příklady](/cloud/downlink).
 
-Výstupy řídíte odesláním tohoto JSON na API endpoint Cloudu (`https://api.prod.hardwario.cloud/v2/messages`) nebo v HARDWARIO Cloud, kde přejdete na zprávy zařízení a kliknete na „Create new downlink message"
+Výstupy řídíte odesláním tohoto JSON na API endpoint Cloudu (`https://api.prod.hardwario.cloud/v2/messages`) nebo v HARDWARIO Cloud, kde přejdete na zprávy zařízení a kliknete na „Create new downlink message“
 
 ```
 {
@@ -475,11 +474,11 @@ import TabItem from '@theme/TabItem';
 
 ### v4.0.0 – 2026-08-10 {#v400--2026-08-10}
 
-- **Změněno**: Snížena maximální kapacita termometrů 1-Wire (10 → 5) a kapacita půdních senzorů (10 → 3) pro snížení využití RAM
+- **Změněno**: Snížena maximální kapacita teploměrů 1-Wire (10 → 5) a kapacita půdních senzorů (10 → 3) pro snížení využití RAM
 
 ### v3.5.5 – 2026-06-22 {#v355--2026-06-22}
 
-- **Změněno**: Zmenšena paměťová náročnost: data půdních senzorů a termometrů se nyní alokují dynamicky
+- **Změněno**: Zmenšena paměťová náročnost: data půdních senzorů a teploměrů se nyní alokují dynamicky
 
 ### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 

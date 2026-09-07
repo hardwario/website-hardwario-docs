@@ -1,8 +1,7 @@
 ---
 slug: chirpstack-configuration
 title: Konfigurace
-description: "V tomto návodu se naučíte, jak v ChirpStack v4 přidat brány, vytvořit profily zařízení, zaregistrovat zařízení a dekódovat payloady."
-title_meta: "Konfigurace (video tutorials)"
+title_meta: "Konfigurace (videonávody)"
 ---
 
 import Image from '@theme/IdealImage';

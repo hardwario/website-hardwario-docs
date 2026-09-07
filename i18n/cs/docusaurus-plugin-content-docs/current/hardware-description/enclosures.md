@@ -1,7 +1,6 @@
 ---
 slug: enclosures
 title: Krabičky
-description: "Standardní krabička pro CHESTER se dodává ve dvou barvách – světle šedé a tmavě šedé. Krabička má rozměry 130x175x45 mm a krytí IP67."
 ---
 import Image from '@theme/IdealImage';
 

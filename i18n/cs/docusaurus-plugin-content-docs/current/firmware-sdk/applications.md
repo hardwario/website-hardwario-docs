@@ -1,7 +1,6 @@
 ---
 slug: applications
 title: Aplikace
-description: "V podsložce SDK applications\\ získáte přístup ke kompletnímu kódu našich katalogových aplikací. Kód můžete upravit, doplnit funkcionalitu nebo na základě struktury projektu vyvinout vlastní aplikaci."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,6 @@
 ---
 slug: application-over-at
 title: Aplikace přes USB-C
-description: "Firmware zařízení GLIDER můžete aktualizovat přes kabel USB-C, bez debug sondy."
 ---
 import Image from '@theme/IdealImage';
 
@@ -11,7 +10,7 @@ Firmware zařízení GLIDER můžete aktualizovat přes **kabel USB-C**, bez deb
 
 ## Co budete potřebovat {#what-you-need}
 
-- Funkční [**AT konzoli přes USB-C**](../console/usb-at.md).
+- Funkční [**konzoli AT přes USB-C**](../console/usb-at.md).
 - Soubor s obrazem firmwaru: **`zephyr.signed.bin`**. Buď si ho sestavte sami pomocí `west build`, nebo si o nejnovější vydání řekněte HARDWARIO.
 
 ## Postup {#steps}

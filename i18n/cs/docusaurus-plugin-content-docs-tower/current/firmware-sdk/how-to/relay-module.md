@@ -1,7 +1,6 @@
 ---
 slug: how-to-relay-module
-title: "Jak na to: Relay Module"
-description: "S naším modulem Relay Module můžete snadno ovládat obvody s vysokým napětím/proudem. Tento modul je speciálně navržen tak, aby měl nízkou spotřebu energie."
+title: "Jak na: Relay Module"
 ---
 import Image from '@theme/IdealImage';
 

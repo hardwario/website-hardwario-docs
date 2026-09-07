@@ -1,6 +1,6 @@
 ---
 title: Server na Raspberry Pi
-description: "Pokud chcete začít používat TOWER ve svých domácích nebo firemních aplikacích,"
+description: "Pokud chcete TOWER používat doma nebo v malé firmě, budete potřebovat něco trvalejšího než HARDWARIO Playground."
 ---
 import Image from '@theme/IdealImage';
 

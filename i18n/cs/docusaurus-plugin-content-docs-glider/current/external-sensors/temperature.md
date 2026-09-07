@@ -1,7 +1,6 @@
 ---
 title: Teplotní senzory
 sidebar_position: 1
-description: "GLIDER podporuje až 8 digitálních teploměrů DS18B20 připojených přes sběrnici 1-Wire. Senzory se připojují k jednomu ze dvou portů 1-Wire na svorkovnici zařízení GLIDER (W1 nebo W2)."
 ---
 import Image from '@theme/IdealImage';
 
@@ -78,7 +77,7 @@ Save changes? [y/N]
 
 Poznámka `<- NEW` označuje kód ROM, který firmware dosud neviděl. Stiskněte **`y`** + **Enter**, čímž se nové senzory přiřadí k navrženým slotům a zařízení se restartuje.
 
-Pro přeskočení potvrzovacího kroku (užitečné pro skripty nebo výrobní zprovoznění):
+Chcete-li potvrzovací krok přeskočit (hodí se pro skripty nebo výrobní zprovoznění):
 
 ```text
 therm scan --save
@@ -100,7 +99,7 @@ Když je senzor přiřazen ke slotu, odečtěte jeho teplotu příkazem:
 therm read 1
 ```
 
-(místo `1` zadejte číslo slotu 1–8). Pro odečtení všech obsazených slotů najednou:
+(místo `1` zadejte číslo slotu 1–8). Chcete-li odečíst všechny obsazené sloty najednou:
 
 ```text
 therm readall

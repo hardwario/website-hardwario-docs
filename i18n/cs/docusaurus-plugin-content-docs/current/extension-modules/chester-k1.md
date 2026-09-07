@@ -1,7 +1,6 @@
 ---
 slug: chester-k1
 title: CHESTER-K1 (4kanálový diferenciální vstup)
-description: "Rozšiřující modul CHESTER-K1 využívá oba sloty A a B. Používají se tedy odpovídající svorky A1 až A8 (levá svorkovnice na obrázku výše) a B1 až B8 (pravá svorkovnice na obrázku výše)."
 ---
 import Image from '@theme/IdealImage';
 

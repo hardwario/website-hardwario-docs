@@ -1,7 +1,6 @@
 ---
 slug: common-functionality
 title: Společná funkcionalita
-description: "Některé katalogové firmwary umožňují konfiguraci pro použití sítě NB-IoT/LTE nebo LoRaWAN. Tento firmware po zapnutí neodesílá data, LED bliká žlutě a je potřeba nastavit správný režim rádia."
 ---
 import Image from '@theme/IdealImage';
 
@@ -93,7 +92,7 @@ Počínaje firmwarem **v3.5.4** některé aplikace podporují **detekci za běhu
 
 - Pokud je modul CHESTER-Z detekován při startu, automaticky se zapne zálohovací funkcionalita (monitorování DC vstupu, napětí záložní baterie, události připojení/odpojení).
 - Pokud modul CHESTER-Z není přítomen, zálohovací funkce se tiše přeskočí bez dopadu na ostatní funkcionalitu.
-- Odpadá tak potřeba samostatných „Z" variant firmwaru: například **CHESTER Clime** nyní pokrývá to, co dříve zajišťoval **CHESTER Clime Z**.
+- Odpadá tak potřeba samostatných „Z“ variant firmwaru: například **CHESTER Clime** nyní pokrývá to, co dříve zajišťoval **CHESTER Clime Z**.
 
 Aplikace s detekcí CHESTER-Z za běhu:
 

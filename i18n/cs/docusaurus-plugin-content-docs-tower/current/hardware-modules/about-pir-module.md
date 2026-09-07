@@ -1,7 +1,6 @@
 ---
 slug: about-pir-module
 title: O modulu PIR Module
-description: "Modul PIR Module funguje jako detektor pohybu pracující na pasivním infračerveném principu (PIR). Typickým použitím modulu PIR Module může být bezdrátový detektor pohybu umístěný na stěně nebo na stropě."
 ---
 import Image from '@theme/IdealImage';
 
@@ -30,14 +29,14 @@ import Image from '@theme/IdealImage';
 - Detekční úhel: 98° (horizontálně i vertikálně)
 - Maximální detekční vzdálenost: 5 m
 - Spotřeba: přibližně 3μA
-- Rozsah napájecího napětí: 2.5V až 3.6V
+- Rozsah napájecího napětí: 2,5V až 3,6V
 - Rozsah pracovních teplot: -20 až 70 °C
 - Rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/pir-module)
+- [**Obchod**](https://www.hardwario.store/p/pir-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-pir)
-- [**SDK knihovna**](https://sdk.hardwario.com/group__twr__module__pir)
+- [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__pir)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_pir.h)
 - [**Zdrojový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/src/twr_module_pir.c)
 - [**Projekty**](https://www.hackster.io/hardwario/projects?part_id=73716)

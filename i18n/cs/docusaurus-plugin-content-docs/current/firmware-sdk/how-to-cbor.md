@@ -1,7 +1,6 @@
 ---
 slug: how-to-cbor
 title: "Jak na: CBOR"
-description: "Zařízení CHESTER s Cloud v2 používá CBOR pro kódování a dekódování přenášených dat. Díky CBOR můžete pomocí souboru YAML popsat, jak budou přenášená data vypadat, a poté ve svém kódu v C používat klíče z tohoto souboru YAML."
 ---
 import Image from '@theme/IdealImage';
 

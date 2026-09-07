@@ -1,8 +1,7 @@
 ---
 slug: chester-cloud
 title: Jak přidat CHESTER do Cloudu
-description: "V tomto průvodci se naučíte, jak přidat zařízení CHESTER do HARDWARIO Cloud. Naskenujete QR kód, který automaticky vyplní údaje o zařízení, nastavíte štítky nebo komentář a vytvoříte zařízení ve svém prostoru v Cloudu, kde uvidíte jeho zprávy."
-title_meta: "Jak přidat CHESTER do Cloudu (CHESTER video tutorials)"
+title_meta: "Jak přidat CHESTER do Cloudu (videonávody CHESTER)"
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,6 +1,5 @@
 ---
 title: Konfigurace
-description: "Konfiguraci zařízení lze změnit stejně jako přes BLE nebo J-Link RTT: odešlete jeden nebo více"
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -14,7 +13,7 @@ na Cloud.
 Otevřete u zařízení **Messages** → **+&nbsp;SCHEDULE DOWNLINK**, nastavte **Message type** na **config**,
 zadejte příkazy do pole **Body** jako obyčejný **text** nebo **JSON** a klikněte na **SEND**.
 
-![Dialog „Schedule downlink" s typem zprávy „config" a příkazy app config v poli Body](../../../../../cloud/downlink/images/downlink-config.png)
+![Dialog „Schedule downlink“ s typem zprávy „config“ a příkazy app config v poli Body](../../../../../cloud/downlink/images/downlink-config.png)
 
 <Tabs>
   <TabItem value="text" label="Text" default>

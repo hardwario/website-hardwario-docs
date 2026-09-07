@@ -1,7 +1,6 @@
 ---
 slug: task-scheduler
 title: Task Scheduler
-description: "Náš scheduler jsme vyvinuli na základě potřeby jednoduchosti a nízké spotřeby energie. Plánuje, která úloha se má spustit a kdy. Tento scheduler není plnohodnotný RTOS (Real Time Operating System) a nemá skutečný kooperativní multitasking. Spustí se…"
 ---
 import Image from '@theme/IdealImage';
 
@@ -58,7 +57,7 @@ void application_init(void)
 
 ## Odregistrování úlohy {#unregistering-a-task}
 
-Pro odregistrování úlohy ze **scheduleru** (například když už není potřeba, aby se spouštěla) musíte použít funkci `void twr_scheduler_unregister(twr_scheduler_task_id_t task_id)`.
+Chcete-li úlohu odregistrovat ze **scheduleru** (například když už není potřeba, aby se spouštěla), musíte použít funkci `void twr_scheduler_unregister(twr_scheduler_task_id_t task_id)`.
 
 Ta bere jako parametr **ID** úlohy, která se má odregistrovat.
 

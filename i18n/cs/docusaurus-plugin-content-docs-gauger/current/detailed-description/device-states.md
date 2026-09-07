@@ -1,7 +1,6 @@
 ---
 slug: device-states
 title: Stavy zařízení
-description: "Během svého běhu se zařízení může dostat do několika stavů, přičemž každý z nich je indikován zelenou stavovou LED."
 ---
 
 # Stavy zařízení {#device-states}

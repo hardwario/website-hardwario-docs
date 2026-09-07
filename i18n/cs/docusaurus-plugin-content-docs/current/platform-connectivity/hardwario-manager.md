@@ -1,7 +1,6 @@
 ---
 slug: hardwario-manager
 title: HARDWARIO Manager
-description: "Zařízení CHESTER se spravuje z mobilní aplikace HARDWARIO Manager přes Bluetooth"
 title_meta: "HARDWARIO Manager (CHESTER)"
 ---
 

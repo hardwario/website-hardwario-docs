@@ -1,7 +1,6 @@
 ---
 slug: chester-meteo
 title: CHESTER Meteo
-description: "Tento článek popisuje základní funkce, hardware a ukázkovou JSON zprávu katalogové aplikace CHESTER Meteo."
 ---
 import Image from '@theme/IdealImage';
 

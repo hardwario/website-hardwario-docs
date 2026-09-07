@@ -1,7 +1,6 @@
 ---
 slug: chirpstack-ember
 title: Přidání do ChirpStack v4
-description: "V tomto průvodci se naučíte, jak připojit bránu EMBER do ChirpStack v4."
 ---
 
 import Image from '@theme/IdealImage';

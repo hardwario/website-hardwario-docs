@@ -1,7 +1,6 @@
 ---
 slug: sticker-input
 title: STICKER Input
-description: "Dokumentace → Zapojení STICKER Input"
 ---
 import Image from '@theme/IdealImage';
 
@@ -60,7 +59,7 @@ Zde najdete informace o zapojení vstupů zařízení STICKER Input, včetně na
 
 ## Stavová LED {#status-led}
 
-STICKER Input používá standardní vzory stavové LED popsané v kapitole [**Indikace LED**](/sticker/hardware-description#led-indication) – startovací karusel, stavový heartbeat každé 3 sekundy a vzory pro NFC a alarm jsou u všech aplikací STICKER shodné.
+STICKER Input používá standardní vzory stavové LED popsané v kapitole [**Indikace LED**](/sticker/hardware-description#led-indication) – startovací přebíhání LED, stavový heartbeat každé 3 sekundy a vzory pro NFC a alarm jsou u všech aplikací STICKER shodné.
 
 Protože právě tato aplikace skutečně využívá digitální vstupy a Hallovy senzory, má zde největší význam indikace **aktivace vstupu**. Tyto vstupy hlásí oba směry, takže pořadí barev prozradí, ke které hraně došlo:
 

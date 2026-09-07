@@ -1,16 +1,15 @@
 ---
-title: AT příkazy
+title: Příkazy AT
 sidebar_position: 1
-description: "Tato stránka uvádí všechny AT příkazy implementované ve firmwaru GLIDER. AT příkazy se zadávají přes konzoli USB-C."
 ---
 import Image from '@theme/IdealImage';
 
-# Přehled AT příkazů {#at-commands-reference}
+# Přehled příkazů AT {#at-commands-reference}
 
-Tato stránka uvádí všechny AT příkazy implementované ve firmwaru GLIDER. AT příkazy se zadávají přes [**konzoli USB-C**](../console/usb-at.md).
+Tato stránka uvádí všechny příkazy AT implementované ve firmwaru GLIDER. příkazy AT se zadávají přes [**konzoli USB-C**](../console/usb-at.md).
 
 :::tip
-Hledáte odpovídající příkazy Zephyr shellu (používané přes J-Link nebo přes `AT$SHELL="…"` z AT konzole)? Podívejte se na stránku [**Příkazy shellu**](shell-commands.md).
+Hledáte odpovídající příkazy Zephyr shellu (používané přes J-Link nebo přes `AT$SHELL="…"` z konzole AT)? Podívejte se na stránku [**Příkazy shellu**](shell-commands.md).
 :::
 
 Parser je **ATCI** (AT Command Interpreter) od HARDWARIO. Každý příkaz začíná prefixem `AT`; některé přijímají čtyři různé operace popsané níže.
@@ -41,7 +40,7 @@ Zařízení občas vysílá nevyžádané zprávy, například po startu:
 
 | Příkaz | Operace | Popis |
 | :--- | :--- | :--- |
-| `AT+CLAC` | akce | Vypíše všechny registrované AT příkazy. |
+| `AT+CLAC` | akce | Vypíše všechny registrované příkazy AT. |
 | `AT$HELP` | akce | Totéž jako `AT+CLAC`, ale s nápovědou. |
 | `AT$CRC=<0\|1\|2>` | nastavení | Režim CRC: `0` vypnuto, `1` striktní, `2` volitelné. |
 | `AT$CRC?` | čtení | Aktuální režim CRC. |
@@ -97,7 +96,7 @@ DFU stream obvykle **nesestavujete** ručně, použijte pomocný nástroj `west 
 west bin-to-at --output-file update.at
 ```
 
-Bez parametru `--input-file` nástroj automaticky použije `build/*/zephyr/zephyr.signed.bin`. Výsledný soubor odešlete do AT konzole pomocí:
+Bez parametru `--input-file` nástroj automaticky použije `build/*/zephyr/zephyr.signed.bin`. Výsledný soubor odešlete do konzole AT pomocí:
 
 ```bash
 west serial-console --input update.at
@@ -110,7 +109,7 @@ Kompletní postup krok za krokem (včetně `AT$FW="confirm"` po restartu) najdet
 | Kód | Význam |
 | :--- | :--- |
 | `ERROR: "Invalid command"` | Příkaz nezačíná na `AT` (`-ENOMSG`). |
-| `ERROR: "Command not found"` | Neznámý AT příkaz (`-ENOEXEC`). |
+| `ERROR: "Command not found"` | Neznámý příkaz AT (`-ENOEXEC`). |
 | `ERROR: "Command not supported"` | Příkaz nepodporuje požadovaný typ operace (`-ENOTSUP`). |
 | `ERROR: "Invalid argument"` | Chybný formát argumentu (`-EINVAL`). |
 | `ERROR: "Permission denied"` | Nedostatečná autorizace (`-EACCES`). |

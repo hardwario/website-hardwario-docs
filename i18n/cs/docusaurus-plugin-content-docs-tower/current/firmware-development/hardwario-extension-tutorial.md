@@ -1,7 +1,6 @@
 ---
 slug: hardwario-extension-tutorial
 title: Návod k rozšíření TOWER Extension
-description: "Tento návod předpokládá, že máte nainstalované a funkční Visual Studio Code s naším rozšířením HARDWARIO TOWER nebo HARDWARIO Code."
 ---
 import Image from '@theme/IdealImage';
 

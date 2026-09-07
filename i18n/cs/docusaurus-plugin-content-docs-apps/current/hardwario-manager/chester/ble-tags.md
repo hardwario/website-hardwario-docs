@@ -1,7 +1,6 @@
 ---
 slug: ble-tags
 title: BLE tagy
-description: "Zařízení CHESTER umí číst externí Bluetooth senzorové tagy a hlásit jejich"
 ---
 
 # Navázání senzorových BLE tagů {#bind-ble-sensor-tags}

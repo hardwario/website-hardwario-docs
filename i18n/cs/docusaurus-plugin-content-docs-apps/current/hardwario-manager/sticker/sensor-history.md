@@ -1,8 +1,7 @@
 ---
 slug: sensor-history
 title: Historie senzorů
-description: "Zařízení STICKER umí měření ukládat do sebe (store-and-forward), takže odečty"
-title_meta: "Historie senzorů (HARDWARIO Manager for STICKER)"
+title_meta: "Historie senzorů (HARDWARIO Manager pro STICKER)"
 ---
 
 # Čtení historie senzorů {#read-sensor-history}
@@ -39,7 +38,7 @@ viz [**Nástroje**](./tools.md).
 
 Záznamy se ukládají jen tehdy, když je historie zapnutá. Zapněte ji a zvolte,
 které kanály se mají ukládat, v **Configuration → History** (viz
-[**Konfigurace**](./configuration.md)) nebo přes shell příkazy
+[**Konfigurace**](./configuration.md)) nebo přes příkazy shellu
 `config history-enable` / `config history-sensors`, popsané v
 [**Historii senzorů (přístup pro vývojáře)**](/sticker/developer-access/sensor-history).
 

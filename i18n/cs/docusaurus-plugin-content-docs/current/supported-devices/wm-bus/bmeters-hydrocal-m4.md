@@ -1,7 +1,6 @@
 ---
 slug: bmeters-hydrocal-m4
 title: BMeters Hydrocal M4
-description: "Webové stránky"
 ---
 import Image from '@theme/IdealImage';
 

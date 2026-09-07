@@ -3,7 +3,7 @@ slug: changelog
 title: EMBER – seznam změn
 toc_min_heading_level: 2
 toc_max_heading_level: 2
-description: "Tato stránka sleduje všechny významné změny na platformě EMBER, včetně firmwaru a hardwaru. Pomocí záložek níže můžete filtrovat podle kategorie změn."
+description: "Tato stránka sleduje všechny významné změny na platformě EMBER včetně firmwaru a hardwaru. Kategorie změn filtrujte pomocí záložek níže."
 ---
 
 import Tabs from '@theme/Tabs';
@@ -15,7 +15,7 @@ Tato stránka sleduje všechny významné změny na platformě EMBER, včetně *
 
 :::info
 
-EMBER je založen na hardwaru **MikroTik RBM33G** s operačním systémem **RouterOS**. Aktualizace firmwaru se spravují pomocí vlastního mechanismu aktualizací od MikroTiku (automatická aktualizace RouterOS přes WebFig nebo CLI). Pro EMBER neexistuje samostatný repozitář firmwaru publikovaný společností HARDWARIO.
+EMBER je založen na hardwaru **MikroTik RBM33G** s operačním systémem **RouterOS**. Aktualizace firmwaru se spravují pomocí vlastního mechanismu aktualizací od společnosti MikroTik (automatická aktualizace RouterOS přes WebFig nebo CLI). Pro EMBER neexistuje samostatný repozitář firmwaru publikovaný společností HARDWARIO.
 
 Poznámky k vydání RouterOS najdete v [seznamu změn MikroTik](https://mikrotik.com/download/changelogs).
 
@@ -32,7 +32,7 @@ Poznámky k vydání RouterOS najdete v [seznamu změn MikroTik](https://mikroti
 
 Žádné změny specifické pro HARDWARIO zatím nebyly zaznamenány. Aktualizace se zde objeví, jakmile budou vydány nové konfigurace EMBER, revize krabičky nebo softwarové změny na straně HARDWARIO.
 
-Firmware zařízení EMBER je RouterOS od MikroTiku a aktualizuje se pomocí mechanismu aktualizací MikroTik. Seznam změn firmwaru specifický pro HARDWARIO není k dispozici.
+Firmware zařízení EMBER je RouterOS od společnosti MikroTik a aktualizuje se pomocí mechanismu aktualizací MikroTik. Seznam změn firmwaru specifický pro HARDWARIO není k dispozici.
 
 :::
 

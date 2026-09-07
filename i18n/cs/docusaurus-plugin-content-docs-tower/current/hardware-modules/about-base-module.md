@@ -1,7 +1,6 @@
 ---
 slug: about-base-module
 title: O modulu Base Module
-description: "Base Module slouží jako mechanický stojan pro jednotky HARDWARIO TOWER. S výjimkou modulu Battery Module můžete do standardizovaného soketu na modulu Base Module zapojit jakýkoli jiný modul ze sady HARDWARIO TOWER Industrial IoT Kit."
 ---
 import Image from '@theme/IdealImage';
 
@@ -33,6 +32,6 @@ import Image from '@theme/IdealImage';
 - Mechanické rozměry: 88 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/base-module)
+- [**Obchod**](https://www.hardwario.store/p/base-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-base)
 - [**Projekty**](https://www.hackster.io/hardwario/projects?part_id=73844)

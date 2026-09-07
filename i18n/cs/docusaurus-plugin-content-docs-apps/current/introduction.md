@@ -1,7 +1,7 @@
 ---
 slug: /
 title: Apps
-description: "Tyto aplikace vizualizují a zpracovávají data ze zařízení HARDWARIO. Tabulka níže uvádí jednotlivé platformy s odkazem na dokumentaci, úrovní obtížnosti a krátkým popisem."
+description: "Aplikace HARDWARIO: HARDWARIO Manager pro nastavení zařízení STICKER a CHESTER v terénu a návody na integraci s ThingsBoard, ChirpStack a The Things Stack."
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
@@ -12,7 +12,7 @@ import Link from '@docusaurus/Link';
 
 ## Konfigurace zařízení {#configuring-devices}
 
-**[HARDWARIO Manager](/apps/hardwario-manager)** je mobilní aplikace pro nastavování zařízení HARDWARIO v provozu: přes NFC nastavíte zařízení **STICKER**, nebo se přes Bluetooth připojíte k zařízení **CHESTER**, přečtete jeho stav, upravíte konfiguraci, spustíte shell příkazy a aktualizujete firmware.
+**[HARDWARIO Manager](/apps/hardwario-manager)** je mobilní aplikace pro nastavování zařízení HARDWARIO v provozu: přes NFC nastavíte zařízení **STICKER**, nebo se přes Bluetooth připojíte k zařízení **CHESTER**, přečtete jeho stav, upravíte konfiguraci, spustíte příkazy shellu a aktualizujete firmware.
 
 ---
 

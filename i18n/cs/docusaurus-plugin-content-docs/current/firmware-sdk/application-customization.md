@@ -1,7 +1,6 @@
 ---
 slug: application-customization
 title: Přizpůsobení aplikace
-description: "Tento článek popisuje postup, když potřebujete upravit existující katalogovou aplikaci v CHESTER SDK. Vývojář to může udělat několika způsoby, ale cílem tohoto článku je ukázat proces, který představuje co nejmenší tření, když vývojář potřebuje držet…"
 ---
 import Image from '@theme/IdealImage';
 

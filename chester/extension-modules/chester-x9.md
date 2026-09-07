@@ -1,7 +1,7 @@
 ---
 slug: chester-x9
 title: CHESTER-X9 (4-channel low-side switch)
-description: Four-channel low-side switch output module for the CHESTER platform, based on four self-protected NCV8412ASTT1G low-side switches with per-channel current limiting.
+description: "Four-channel low-side switch output module for CHESTER, based on four self-protected NCV8412ASTT1G switches with per-channel current limiting."
 keywords: [CHESTER-X9, low-side switch, output module, NCV8412, NCV8412ASTT1G, current limit, GPIO, relay driver, solenoid, load switching, CHESTER]
 ---
 import Image from '@theme/IdealImage';

@@ -22,7 +22,7 @@ Write the version of the TAPPER client build into stdout.
 
 Run the client.
 
-`tapper run [OPTIONS]` or `sudo ~/.local/bin/tapper run [OPTIONS]` if you want to use the WiFi config.
+`tapper run [OPTIONS]` or `sudo ~/.local/bin/tapper run [OPTIONS]` if you want to use the Wi-Fi config.
 
 :::info 
 
@@ -93,9 +93,9 @@ See [MQTT TLS Setup](/tapper/tls-setup/)
 
 :::
 
-### WiFi
+### Wi-Fi
 
-- WiFi can be set up either in static or in dynamic mode.
+- Wi-Fi can be set up either in static or in dynamic mode.
 
 :::tip
 

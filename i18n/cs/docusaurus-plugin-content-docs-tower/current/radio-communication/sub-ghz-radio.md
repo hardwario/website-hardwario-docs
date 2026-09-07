@@ -1,7 +1,6 @@
 ---
 slug: sub-ghz-radio
 title: Sub-GHz rádio
-description: "Technologie rádiové komunikace je srdcem TOWER Kit. Tento dokument popisuje základní fungování rádia."
 ---
 import Image from '@theme/IdealImage';
 

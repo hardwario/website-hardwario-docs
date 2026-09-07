@@ -2,17 +2,17 @@
 slug: /
 title: GAUGER
 sidebar_label: Introduction
-description: "GAUGER is a configurable WiFi/Ethernet device used for counting pulses on up to four galvanically separated digital inputs."
+description: "GAUGER is a configurable Wi-Fi/Ethernet device used for counting pulses on up to four galvanically separated digital inputs."
 ---
 
 # GAUGER
 
-**GAUGER** is a configurable WiFi/Ethernet device used for counting pulses on up to four galvanically separated digital inputs.
+**GAUGER** is a configurable Wi-Fi/Ethernet device used for counting pulses on up to four galvanically separated digital inputs.
 
 The device hosts a web based user interface used for its configuration. It can also be controlled through an HTTP API. The counter values can be read via Modbus TCP.
 
 :::tip
-### To get your GAUGER running, read the [**Initial Configuration**](operation-instructions/initial-configuration.md) guide.
+### To get your GAUGER running, read the [**Initial Configuration**](operation-instructions/initial-configuration.md) guide
 :::
 
 <img src="/img/gauger-intro.webp" data-zoom-src="/img/gauger-intro.webp" width="540" alt="GAUGER" />
@@ -38,7 +38,7 @@ The device hosts a web based user interface used for its configuration. It can a
 |---|---|
 | **Galvanically Separated Inputs** | Up to four isolated digital pulse-counting inputs. |
 | **Ethernet Connectivity** | 10/100 Base-T wired networking. |
-| **WiFi Connectivity** | 2.4GHz WiFi (802.11 b/g/n). |
+| **Wi-Fi Connectivity** | 2.4GHz Wi-Fi (802.11 b/g/n). |
 | **DIN Rail Mount** | Industrial DIN rail enclosure. |
 | **Modbus TCP Server** | Read counter values over Modbus TCP. |
 | **Web Configuration** | Built-in configuration web site. |

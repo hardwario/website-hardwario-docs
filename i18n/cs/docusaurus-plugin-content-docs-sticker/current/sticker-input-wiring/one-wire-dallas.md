@@ -1,7 +1,6 @@
 ---
 slug: one-wire-dallas
 title: Teplotní sondy 1-Wire (Dallas)
-description: "Zařízení STICKER Input podporuje standardní teplotní sondy 1-Wire (Dallas) (například řadu DS18B20). Senzory se připojují jediným datovým vodičem a díky adresovatelnosti sběrnice 1-Wire lze na jednu datovou linku zapojit více sond současně. Toto…"
 ---
 
 # Teplotní sondy 1-Wire (Dallas) {#1-wire-temperature-probes-dallas}

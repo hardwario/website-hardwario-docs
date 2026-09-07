@@ -1,7 +1,6 @@
 ---
 slug: development-cli-tools
 title: Vývoj s nástroji příkazové řádky
-description: "Pokud chcete vyvíjet pomocí grafického nástroje, přejděte na kapitolu O aplikaci HARDWARIO Code nebo Rozšíření TOWER VSCode."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -64,7 +63,7 @@ Všechny musí být v **PATH**.
 ## Vývojový cyklus {#development-cycle}
 
 - Nejprve je potřeba naklonovat některý firmware z [**našeho GitHubu**](https://github.com/hardwario). Pro start z čistého listu je k dispozici firmware [**twr-skeleton**](https://github.com/hardwario/twr-skeleton)
-  - Pro naklonování firmwaru použijte:
+  - Firmware naklonujete příkazem:
     ```
     git clone https://github.com/hardwario/twr-skeleton.git --recursive
     ```
@@ -95,7 +94,7 @@ Všechny musí být v **PATH**.
   ```
   bcf log
   ```
-- Pro vyčištění výstupu, abyste mohli vše zkompilovat od začátku, stačí spustit:
+- Chcete-li výstup vyčistit a zkompilovat vše od začátku, stačí spustit:
   ```
   ninja -t clean
   ```

@@ -1,7 +1,7 @@
 ---
 title: Popis hardwaru
 sidebar_position: 6
-description: "Zařízení GLIDER je postaveno na system-in-package Nordic nRF9151, mikrokontroléru Cortex-M33 s integrovaným celulárním modemem LTE-M / NB-IoT. Tato stránka shrnuje technické detaily, které jsou důležité při integraci, zapojení nebo rozšiřování…"
+description: "GLIDER je postavený na system-in-package Nordic nRF9151 — mikrokontroléru Cortex-M33 s integrovaným modemem LTE-M / NB-IoT."
 title_meta: "Popis hardwaru (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
@@ -60,12 +60,12 @@ Tabulka níže uvádí každý GPIO využívaný zařízením GLIDER, převzatý
 - Slot **nano-SIM** přístupný zvenku.
 - Výchozí povolená LTE pásma: **band 8** a **band 20** (Evropa). Pásma lze překonfigurovat při buildu.
 
-#### USB-C (AT konzole) {#usb-c-at-console}
+#### USB-C (konzole AT) {#usb-c-at-console}
 
 - Konektor USB-C → převodník USB-UART **FT234XD** → `UART0` v nRF9151.
 - 1 000 000 baud, 8N1.
 - Firmware zapne převodník automaticky, když zaznamená přechod `USB_DETECT` do log. 0 (debounce 50 ms).
-- Viz [**AT konzole (USB-C)**](console/usb-at.md).
+- Viz [**konzole AT (USB-C)**](console/usb-at.md).
 
 #### J-Link (RTT) {#j-link-rtt}
 

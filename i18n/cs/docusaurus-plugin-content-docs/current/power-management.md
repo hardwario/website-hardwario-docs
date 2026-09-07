@@ -1,7 +1,7 @@
 ---
 slug: power-management
 title: Správa napájení
-description: "Tento článek přináší užitečné informace o různých možnostech napájení zařízení CHESTER, což je nízkopříkonové zařízení s typickým klidovým proudem v rozsahu 100–200 µA. Díky tomu může být v mnoha aplikacích napájeno z baterií po dobu 3 a více let."
+description: "Možnosti napájení zařízení CHESTER: bateriové sady, externí zdroj, klidový odběr, režimy spánku a odhad výdrže baterie."
 title_meta: "Správa napájení (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
@@ -38,7 +38,7 @@ Ve svých projektech nezapomeňte zohlednit náklady na výměnu baterie – jak
 
 Základní deska CHESTER (CHESTER-M) je z pohledu bateriového držáku dodávána ve 3 variantách:
 
-1. Osazená jedním držákem baterie velikosti „C".
+1. Osazená jedním držákem baterie velikosti „C“.
 
    Tato varianta se používá společně s primárním článkem Saft LS 26500 (chemie LiSoCl<sub>2</sub>) s jmenovitým napětím 3,6 V a kapacitou článku 7 700 mAh. Článek poskytuje celkovou energetickou zásobu 27 Wh.
 
@@ -48,7 +48,7 @@ Základní deska CHESTER (CHESTER-M) je z pohledu bateriového držáku dodává
 
    :::
 
-1. Osazená dvěma držáky baterií velikosti „AA".
+1. Osazená dvěma držáky baterií velikosti „AA“.
 
    Tato varianta se používá společně s primárním článkem Saft LS 14500 (chemie LiSoCl<sub>2</sub>) s jmenovitým napětím 3,6 V a kapacitou článku 2 600 mAh. Články jsou zapojeny paralelně a celková energetická zásoba je 18 Wh. Výhodou této varianty je nižší výškový profil.
 
@@ -68,7 +68,7 @@ Pokud potřebujete použít primární (nedobíjecí) články a větší bateri
 
 * Rozšiřující modul CHESTER-B1 (ve formátu nosné desky) může být osazen:
 
-  * Šesti držáky baterií velikosti „D" pro primární článek Saft LS 33600 (chemie LiSoCl<sub>2</sub>) s jmenovitým napětím 3,6 V a kapacitou článku 17 000 mAh. Všechny instalované články poskytnou celkovou energetickou zásobu 367 Wh. Tato varianta se vejde do vysokoprofilové krabičky o rozměrech 200 x 280 x 65 mm.
+  * Šesti držáky baterií velikosti „D“ pro primární článek Saft LS 33600 (chemie LiSoCl<sub>2</sub>) s jmenovitým napětím 3,6 V a kapacitou článku 17 000 mAh. Všechny instalované články poskytnou celkovou energetickou zásobu 367 Wh. Tato varianta se vejde do vysokoprofilové krabičky o rozměrech 200 x 280 x 65 mm.
 
     :::caution
 
@@ -76,7 +76,7 @@ Pokud potřebujete použít primární (nedobíjecí) články a větší bateri
 
     :::
 
-  * Osmi držáky baterií velikosti „C" pro primární článek Saft LS 26500 (chemie LiSoCl<sub>2</sub>) s jmenovitým napětím 3,6 V a kapacitou článku 7 700 mAh. Všechny instalované články poskytnou celkovou energetickou zásobu 201 Wh. Tato varianta se vejde do nízkoprofilové krabičky o rozměrech 200 x 280 x 45 mm.
+  * Osmi držáky baterií velikosti „C“ pro primární článek Saft LS 26500 (chemie LiSoCl<sub>2</sub>) s jmenovitým napětím 3,6 V a kapacitou článku 7 700 mAh. Všechny instalované články poskytnou celkovou energetickou zásobu 201 Wh. Tato varianta se vejde do nízkoprofilové krabičky o rozměrech 200 x 280 x 45 mm.
 
     :::caution
 
@@ -84,7 +84,7 @@ Pokud potřebujete použít primární (nedobíjecí) články a větší bateri
 
     :::
 
-  * Šesti držáky baterií velikosti „D" pro alkalické články (alkalicko-manganové) s jmenovitým napětím 1,5 V a kapacitou článku 17 000 mAh. Všechny instalované články poskytnou celkovou energii 122 Wh. V této konfiguraci jsou vždy dva články v sérii, což tvoří tři paralelní větve. Toto řešení je vhodné pro projekty s teplotním rozsahem -10 až +50 °C. Tato varianta se vejde do vysokoprofilové krabičky o rozměrech 200 x 280 x 65 mm.
+  * Šesti držáky baterií velikosti „D“ pro alkalické články (alkalicko-manganové) s jmenovitým napětím 1,5 V a kapacitou článku 17 000 mAh. Všechny instalované články poskytnou celkovou energii 122 Wh. V této konfiguraci jsou vždy dva články v sérii, což tvoří tři paralelní větve. Toto řešení je vhodné pro projekty s teplotním rozsahem -10 až +50 °C. Tato varianta se vejde do vysokoprofilové krabičky o rozměrech 200 x 280 x 65 mm.
 
     :::caution
 
@@ -92,13 +92,13 @@ Pokud potřebujete použít primární (nedobíjecí) články a větší bateri
 
     :::
 
-  * Osmi držáky baterií velikosti „D" pro alkalické články (alkalicko-manganové) s jmenovitým napětím 1,5 V a kapacitou článku 7 700 mAh. Všechny instalované články poskytnou celkovou energii 74 Wh. V této konfiguraci jsou vždy dva články v sérii, což tvoří tři paralelní větve. Toto řešení je vhodné pro projekty s teplotním rozsahem -10 až +50 °C. Tato varianta se vejde do nízkoprofilové krabičky o rozměrech 200 x 280 x 45 mm.
+  * Osmi držáky baterií velikosti „D“ pro alkalické články (alkalicko-manganové) s jmenovitým napětím 1,5 V a kapacitou článku 7 700 mAh. Všechny instalované články poskytnou celkovou energii 74 Wh. V této konfiguraci jsou vždy dva články v sérii, což tvoří tři paralelní větve. Toto řešení je vhodné pro projekty s teplotním rozsahem -10 až +50 °C. Tato varianta se vejde do nízkoprofilové krabičky o rozměrech 200 x 280 x 45 mm.
 
 * Rozšiřující modul CHESTER-Z1 s dobíjecí (a vyměnitelnou) lithium-iontovou baterií (typ 18650) s jmenovitým napětím 3,7 V a kapacitou 2 000 mAh. Toto řešení je vhodné pro projekty, kde je k dispozici síťové napájení (nebo DC linka), ale je požadován dlouhodobý provoz zařízení v případě výpadku napájení. Případně můžete ke vstupním svorkám CHESTER-Z1 připojit fotovoltaické solární panely místo napájecího adaptéru nebo napětí z DC linky.
 
   :::caution
 
-  Ve firmě HARDWARIO používáme speciální model lithium-iontové baterie 18650 s rozšířeným provozním teplotním rozsahem -20 °C až +50 °C. Pokud je vyžadován větší rozsah, prostudujte možnosti napájecích zdrojů založených na LiSoCl<sub>2</sub> popsané výše.
+  Ve firmě HARDWARIO odebíráme speciální model lithium-iontové baterie 18650 s rozšířeným provozním teplotním rozsahem -20 °C až +50 °C. Pokud je vyžadován větší rozsah, prostudujte možnosti napájecích zdrojů založených na LiSoCl<sub>2</sub> popsané výše.
 
   :::
 

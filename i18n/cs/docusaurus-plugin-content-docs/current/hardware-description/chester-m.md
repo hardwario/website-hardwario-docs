@@ -1,7 +1,6 @@
 ---
 slug: chester-m
 title: Základní deska CHESTER-M
-description: "CHESTER-M je univerzální základní deska s konektivitou LPWAN, rozšiřitelná pomocí rozšiřujících modulů X."
 ---
 import Image from '@theme/IdealImage';
 
@@ -58,7 +57,7 @@ Více informací najdete v kapitole [Moduly na zadní straně](../extension-modu
 
 ### Pájené propojky svorkovnic {#terminal-block-solder-bridges}
 
-Pokud v slotu A nebo B není žádný rozšiřující modul, lze 8pinové svorkovnice nakonfigurovat pomocí pájených propojek.
+Pokud ve slotu A nebo B není žádný rozšiřující modul, lze 8pinové svorkovnice nakonfigurovat pomocí pájených propojek.
 
 Piny svorkovnic mohou mít na základě pájených propojek tyto signály:
 
@@ -83,10 +82,10 @@ Tato tabulka ukazuje připojení 1-Wire ke svorkovnicím a 8pinovým konektorům
 
 | Pozice na svorkovnici   | Název signálu | Popis signálu      |
 | :---------------------: | :---------: | :------------------- |
-|        A1 nebo B1       |    `GND`    | Signál systémové zemi |
+|        A1 nebo B1       |    `GND`    | Systémový signál země |
 |        A2 nebo B2       |    `DQ`     | Data 1-Wire          |
 |        A3 nebo B3       |    `VDD`    | Napájení             |
-|        A4 nebo B4       |    `GND`    | Signál systémové zemi |
+|        A4 nebo B4       |    `GND`    | Systémový signál země |
 |        A5 nebo B5       |    `DQ`     | Data 1-Wire          |
 |        A6 nebo B6       |    `VDD`    | Napájení             |
 |        A7 nebo B7       | `NC or GND` | Nezapojeno nebo GND  |
@@ -94,7 +93,7 @@ Tato tabulka ukazuje připojení 1-Wire ke svorkovnicím a 8pinovým konektorům
 
 ### Modul na zadní straně {#backside-module}
 
-Tato sekce poskytuje informace o mapování signálů pro dva slot na zadní straně (A a B) na základní desce **CHESTER**.
+Tato sekce poskytuje informace o mapování signálů pro dva sloty na zadní straně (A a B) na základní desce **CHESTER**.
 
 Sloty na zadní straně používají dvě řady signálů:
 
@@ -116,7 +115,7 @@ Následující tabulka uvádí signály v pořadí zleva doprava, když desku ot
 
 | Pozice   | Název signálu | Popis signálu        | Připojení na nRF52840 |
 | :------: | :---------: | :--------------------- | :--------------------: |
-|    1     |    `+V`     | Systémová pozitivní větev |           -            |
+|    1     |    `+V`     | Systémová kladná větev |           -            |
 |    2     |   `GP3A`    | Univerzální I/O        |      `P0.31/AIN7`      |
 |    3     |   `GP2A`    | Univerzální I/O        |      `P0.02/AIN0`      |
 |    4     |   `GP1A`    | Univerzální I/O        |      `P0.29/AIN5`      |
@@ -124,7 +123,7 @@ Následující tabulka uvádí signály v pořadí zleva doprava, když desku ot
 |    6     |    `SDA`    | Systémová sběrnice I²C (data) |           -            |
 |    7     |    `SCL`    | Systémová sběrnice I²C (hodiny) |           -            |
 |    8     |    `VDD`    | Systémová větev VDD    |           -            |
-|    9     |    `GND`    | Signál systémové zemi  |           -            |
+|    9     |    `GND`    | Systémový signál země  |           -            |
 
 #### Signály horní řady (slot B) {#top-row-signals-slot-b}
 
@@ -136,7 +135,7 @@ Následující tabulka uvádí signály v pořadí zleva doprava, když desku ot
 
 | Pozice   | Název signálu | Popis signálu        | Připojení na nRF52840 |
 | :------: | :---------: | :--------------------- | :--------------------: |
-|    1     |    `+V`     | Systémová pozitivní větev |           -            |
+|    1     |    `+V`     | Systémová kladná větev |           -            |
 |    2     |   `GP3B`    | Univerzální I/O        |      `P0.05/AIN3`      |
 |    3     |   `GP2B`    | Univerzální I/O        |      `P0.04/AIN2`      |
 |    4     |   `GP1B`    | Univerzální I/O        |      `P0.30/AIN6`      |
@@ -144,7 +143,7 @@ Následující tabulka uvádí signály v pořadí zleva doprava, když desku ot
 |    6     |    `SDA`    | Systémová sběrnice I²C (data) |           -            |
 |    7     |    `SCL`    | Systémová sběrnice I²C (hodiny) |           -            |
 |    8     |    `VDD`    | Systémová větev VDD    |           -            |
-|    9     |    `GND`    | Signál systémové zemi  |           -            |
+|    9     |    `GND`    | Systémový signál země  |           -            |
 
 
 ## Schéma zapojení {#schematic-diagram}

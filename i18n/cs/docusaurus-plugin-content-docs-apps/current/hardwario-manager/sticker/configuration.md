@@ -1,8 +1,7 @@
 ---
 slug: configuration
 title: Konfigurace
-description: "Tento návod provází čtením, úpravou a zápisem konfigurace zařízení STICKER přes"
-title_meta: "Konfigurace (HARDWARIO Manager for STICKER)"
+title_meta: "Konfigurace (HARDWARIO Manager pro STICKER)"
 ---
 
 # Konfigurace zařízení STICKER {#configure-a-sticker}
@@ -20,7 +19,7 @@ Přejděte na **STICKER → Configuration**.
 | **Read configuration from the device** | Přečte, co je na zařízení, pak to upravíte a zapíšete zpět. Běžná cesta. |
 | **Scan multiple (batch export)** | Zachytí konfigurace mnoha zařízení v jedné session, viz [**Načtení více zařízení**](./batch-export.md) |
 | **Configure without reading** | Sestaví konfiguraci a zapíše ji do zařízení, i vypnutého, viz [**Konfigurace vypnutého zařízení**](./offline-configuration.md) |
-| **Configure from file** | Načte konfiguraci, kterou jste si uložili dříve (viz níž) |
+| **Configure from file** | Načte konfiguraci, kterou jste si uložili dříve (viz níže) |
 
 ---
 
@@ -41,7 +40,7 @@ dokud se konfigurace nepřečte. Pak otevřete sekci, kterou chcete změnit.
 
 :::info Klíče se řídí režimem aktivace
 **Keys** je uvnitř sekce LoRaWAN a ve výchozím stavu je sbalená. Zobrazuje jen
-klíče, které platí: JoinEUI a AppKey pro **OTAA**, DevAddr a klíče session pro
+klíče, které platí: JoinEUI a AppKey pro **OTAA**, DevAddr a klíče relace pro
 **ABP**. DevEUI je v základech LoRaWAN nad tím.
 :::
 
@@ -75,12 +74,12 @@ Význam jednotlivých parametrů popisují
 :::info Export vynechává tajné údaje
 **Export config to file** zapíše JSON s odstraněným klíčovým materiálem, takže je
 konfigurační soubor bezpečné nasdílet kolegovi. Klíče zůstávají v zařízení a ve
-vašem seznamu [**Uložené STICKERy**](./saved-stickers.md).
+vašem seznamu [**Saved STICKERs**](./saved-stickers.md).
 :::
 
 ---
 
-## Configure from file {#configure-from-file}
+## Konfigurace ze souboru {#configure-from-file}
 
 **Configure from file** přijímá tři druhy souborů a každému se přizpůsobí:
 
@@ -98,7 +97,7 @@ Pokud chcete mnoho zařízení nastavit stejně, uložte si **šablonu** a aplik
 na každé zařízení, přes NFC nebo offline na vypnutá zařízení. Viz
 [**Šablony**](./templates.md).
 
-:::danger Factory a vendor resety
+:::danger Tovární a dodavatelské resety
 **Factory reset** zahodí session a klíče LoRaWAN zařízení, takže se do sítě
 připojí znovu. **Vendor reset** ho vymaže až na sériové číslo a vendor token a
 nastaví nový secret key. Vzít zpět to nelze. Viz

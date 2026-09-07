@@ -1,7 +1,6 @@
 ---
 slug: bmeters_iwm-tx5
 title: BMeters IWM-TX5
-description: "Webové stránky"
 ---
 import Image from '@theme/IdealImage';
 
@@ -67,7 +66,7 @@ Upravte následující nastavení:
 
 - **AMR**: zaškrtnout (zapnout automatické odečítání měřiče)
 - **Water meter type**: `GSD8-I AF DN15`
-- **Transmit during weekend**: zaškrtnout „Saturday" a „Sunday" a „Send Date and Time"
+- **Transmit during weekend**: zaškrtnout „Saturday“ a „Sunday“ a „Send Date and Time“
 - **Global encryption**: zaškrtnout (použití globálního klíče místo individuálního)
 
 ---

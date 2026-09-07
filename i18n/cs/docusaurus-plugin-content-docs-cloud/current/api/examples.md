@@ -1,6 +1,5 @@
 ---
 title: Příklady
-description: "Vypište všechna zařízení v prostoru a u každého vytiskněte nejnovější zprávu typu data."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

@@ -1,7 +1,7 @@
 ---
 slug: supported-devices
 title: Podporované senzory
-description: "Zařízení HARDWARIO CHESTER podporuje několik variant externích senzorů přes digitální komunikaci. Díky tomu lze ze senzorů sbírat řadu různých hodnot a informací."
+description: "Externí senzory a zařízení, které CHESTER podporuje přes svá digitální rozhraní, včetně zapojení a poznámek ke konfiguraci."
 ---
 
 import Image from '@theme/IdealImage';

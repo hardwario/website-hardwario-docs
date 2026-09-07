@@ -1,7 +1,6 @@
 ---
 slug: how-to-soil-sensor
-title: "How To: Soil Sensor"
-description: "Senzor půdní vlhkosti měří vlhkost a teplotu."
+title: "Jak na: Soil Sensor"
 ---
 import Image from '@theme/IdealImage';
 

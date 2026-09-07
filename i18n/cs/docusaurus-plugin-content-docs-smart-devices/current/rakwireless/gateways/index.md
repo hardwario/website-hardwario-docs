@@ -1,7 +1,6 @@
 ---
 slug: index
 title: RAKwireless - Brány
-description: "Zde je seznam bran RAKwireless otestovaných společností HARDWARIO s odkazy na referenční zdroje:"
 ---
 
 import Image from '@theme/IdealImage';
@@ -74,16 +73,16 @@ Klikněte na **Configure Basics Station server setup** a vyplňte následující
 
 Open-source LoRaWAN Network Server ideální pro on-premise nebo privátní síťové instalace.
 
-#### Registrace brány v ChirpStacku {#gateway-registration-on-chirpstack}
+#### Registrace brány v platformě ChirpStack {#gateway-registration-on-chirpstack}
 1. V **ChirpStack v4** otevřete **Tenant → Gateways**.
 2. Klikněte na **Add Gateway**.
-![Přidání brány v ChirpStacku](../../../../../../smart-devices/rakwireless/gateways/images/chirpstack-add-gateway.png)
+![Přidání brány v platformě ChirpStack](../../../../../../smart-devices/rakwireless/gateways/images/chirpstack-add-gateway.png)
 3. Vyplňte:
    - Name: **Rak-gate** (nebo vámi preferovaný název)
    - Gateway ID: **GATEWAY_ID**
    - Stats Interval: **YOUR_PREFERENCE**
 4. Klikněte na **Submit**.
-![Konfigurace brány v ChirpStacku](../../../../../../smart-devices/rakwireless/gateways/images/chirpstack-config-gateway.png)
+![Konfigurace brány v platformě ChirpStack](../../../../../../smart-devices/rakwireless/gateways/images/chirpstack-config-gateway.png)
 
 #### Konfigurace brány {#gateway-configuration-1}
 Ve své bráně RAK přejděte na **LoRa → Configuration** a jako **Work mode** vyberte **Packet forwarder**.
@@ -95,7 +94,7 @@ V kategorii **UDP Protocol parameters** vyplňte následující pole:
 - Server port down: **1700**
 - Potvrďte kliknutím na **Save changes**.
 
-![Výběr ChirpStacku v RAK](../../../../../../smart-devices/rakwireless/gateways/images/rak-chirpstack.png)
+![Výběr platformy ChirpStack v RAK](../../../../../../smart-devices/rakwireless/gateways/images/rak-chirpstack.png)
 
 ---
 

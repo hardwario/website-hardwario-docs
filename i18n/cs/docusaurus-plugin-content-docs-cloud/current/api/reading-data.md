@@ -1,6 +1,5 @@
 ---
 title: Čtení dat
-description: "Většina zdrojů se nachází pod prostorem (Space): /v2/spaces/{spaceid}/…. Každý příklad potřebuje"
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

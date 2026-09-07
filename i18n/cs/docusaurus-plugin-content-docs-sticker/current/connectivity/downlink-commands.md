@@ -1,7 +1,6 @@
 ---
 slug: downlink-commands
 title: Downlink příkazy
-description: "Zařízení STICKER zpracovává vzdálené příkazy přijaté jako downlinky LoRaWAN na fPort 85 a odpovědi posílá zpět na fPort 85."
 ---
 import Image from '@theme/IdealImage';
 
@@ -40,7 +39,7 @@ Akční příkazy provádějí systémové operace, vyvolávají diagnostické r
 | **Restartovat systém** | `{"command":"reboot","seq":1}` | `08013a00` | Vyvolá okamžitý restart systému. |
 | **Factory reset** | `{"command":"factory_reset","seq":1}` | `08014200` | Vrátí konfiguraci na výrobní výchozí hodnoty a zachová sériové číslo, secret key a claim token. |
 | **Resetovat stack LoRaWAN**| `{"command":"lrw_reset","seq":1}` | `0801820100` | Vynuluje čítače rámců LoRaWAN a hodnoty DevNonce (restartuje MCU). |
-| **Vynutit rejoin** | `{"command":"lrw_join","seq":1}` | `08018a0100` | Vynutí, aby stack LoRaWAN zahájil novou sekvenci připojení OTAA. |
+| **Vynutit opětovné připojení** | `{"command":"lrw_join","seq":1}` | `08018a0100` | Vynutí, aby stack LoRaWAN zahájil novou sekvenci připojení OTAA. |
 | **Vstoupit do kalibrace** | `{"command":"enter_calibration","seq":1}` | `0801920100` | Vstoupí do kalibračního režimu pro Hallovy senzory a analogové vstupy. |
 
 ---
@@ -117,7 +116,7 @@ Pravidla alarmů sledující teplotu, vlhkost, digitální vstupy nebo pulzní p
 
 ## Vzdálené přehrání historie (`req_history`) {#remote-history-replay-reqhistory}
 
-Pro získání offline záznamů ze senzorů, uložených ve flash paměti během výpadků sítě, pošlete downlink `req_history` s požadovaným oknem unixových timestampů. Zařízení STICKER pošle uložená měření zpět jako sekvenci paketů `history_frame` na **fPort 85**.
+Chcete-li získat offline záznamy ze senzorů, uložené ve flash paměti během výpadků sítě, pošlete downlink `req_history` s požadovaným oknem unixových timestampů. Zařízení STICKER pošle uložená měření zpět jako sekvenci paketů `history_frame` na **fPort 85**.
 
 **Žádost o přehrání historie senzorů:**
 

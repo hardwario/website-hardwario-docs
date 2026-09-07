@@ -1,7 +1,6 @@
 ---
 slug: about-maxi-base-module
 title: O modulu Maxi Base Module
-description: "Kromě připojení libovolného modulu TOWER obsahuje sada také svorkovnici pro připojení jednoho modulu CHESTER-X pro připojení externích senzorů, externího tlačítka nebo externího napájení."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,6 @@
 ---
 slug: network-requirements
 title: Požadavky na síť
-description: "Než nasadíte zařízení CHESTER do sítě, kterou jste dosud netestovali, porovnejte, co zařízení podporuje, s tím, co místní operátor skutečně poskytuje. Následující dva seznamy je vhodné používat společně: první uvádí možnosti zařízení, druhý je…"
 ---
 import Image from '@theme/IdealImage';
 

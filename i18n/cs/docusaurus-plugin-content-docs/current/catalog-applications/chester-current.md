@@ -240,7 +240,7 @@ app config channel-calib-mode-<n> <avg/rms>
 
 ### Příkazy kanálů {#channel-commands}
 
-Následující shell příkazy umožňují interaktivní kalibraci a čtení kanálů. `<n>` je číslo kanálu 1-4.
+Následující příkazy shellu umožňují interaktivní kalibraci a čtení kanálů. `<n>` je číslo kanálu 1-4.
 
 | Příkaz | Popis |
 |---------|-------------|
@@ -511,7 +511,7 @@ Channel 1 calibration: x0=1.20 y0=0.00, x1=71.50 y1=10.00, mode=rms
 
 #### Reset kalibrace {#reset-calibration}
 
-Pro vymazání kalibrace a návrat k surovému výstupu v mV:
+Chcete-li vymazat kalibraci a vrátit se k surovému výstupu v mV:
 
 ```
 current channel-1 calib reset

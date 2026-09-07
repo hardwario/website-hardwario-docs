@@ -1,7 +1,6 @@
 ---
 slug: system-basics
 title: Základy systému
-description: "TOWER je platforma zařízení navržená speciálně pro internet věcí. S platformou TOWER si můžete rychle postavit vlastní elektronická zařízení."
 ---
 import Image from '@theme/IdealImage';
 

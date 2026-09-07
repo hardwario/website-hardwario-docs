@@ -1,7 +1,6 @@
 ---
 slug: zenner-caltos-e
 title: Zenner caltos-E
-description: "Webové stránky"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,7 @@
 ---
 slug: chester-x6
 title: CHESTER-X6 (sběrnice S-Wire)
-description: Rozšiřující modul se sběrnicí HARDWARIO S-Wire pro platformu CHESTER. Připojuje periferie S-Wire s nízkou spotřebou po třívodičovém spoji (+5 V, GND, DATA), s boost převodníkem na 5 V pro jejich napájení a s převodníkem na UART řízeným po I²C.
+description: "Rozšiřující modul se sběrnicí HARDWARIO S-Wire pro CHESTER. Připojuje periferie S-Wire po třívodičovém spoji a napájí je z měniče 5 V na desce."
 keywords: [CHESTER-X6, S-Wire, sběrnice S-Wire, HARDWARIO S-Wire, periferie, SC16IS740, TCA9534A, I2C, převodník UART, boost 5V, CHESTER]
 ---
 import Image from '@theme/IdealImage';

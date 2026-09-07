@@ -1,7 +1,6 @@
 ---
 slug: about-compact-split-module
 title: O modulu Compact Split Module
-description: "Modul Compact Split Module umožňuje použít dva horní moduly nebo vytvářet kompaktnější konstrukce. Můžete tak sestavit mnohem více zařízení, která kombinují například LCD Module, Climate Module, PIR Module a mnoho dalších. Tento modul lze také použít…"
 ---
 import Image from '@theme/IdealImage';
 

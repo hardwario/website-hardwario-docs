@@ -1,7 +1,7 @@
 ---
 slug: /hardwario-manager/sticker
 title: STICKER
-description: "Zařízení STICKER se konfiguruje přiložením telefonu k zařízení. Žádné kabely,"
+description: "Zařízení STICKER se konfiguruje přiložením telefonu. Žádné kabely, žádný programátor, žádný software na počítači."
 title_meta: "STICKER (HARDWARIO Manager)"
 ---
 
@@ -17,7 +17,7 @@ Otevřete **HARDWARIO Manager** a zvolte **STICKER**.
 
 <img src="/img/hw-manager/hw-manager-sticker.jpg" alt="Menu STICKER v aplikaci HARDWARIO Manager s položkami Device info, LoRaWAN keys, Configuration, Templates, Tools a Saved STICKERs" width="320" />
 
-:::info K snímkům obrazovky
+:::info Ke snímkům obrazovky
 Snímky v této sekci pocházejí ze staršího buildu, takže několik popisků má jinak
 velká písmena než současná aplikace, která název produktu píše všude velkými.
 Rozvržení obrazovek samotných odpovídá.
@@ -32,9 +32,9 @@ Rozvržení obrazovek samotných odpovídá.
 | **Device info** | Přečte sériové číslo, verzi firmwaru, dobu běhu a hodiny, viz [**Informace o zařízení a klíče LoRaWAN**](./device-info.md) |
 | **LoRaWAN keys** | Přečte DevEUI a klíče potřebné k registraci zařízení v síti |
 | **Configuration** | Čtení a úprava celé konfigurace zařízení, viz [**Konfigurace**](./configuration.md) |
-| **Templates** | Znovupoužitelné konfigurační presety, viz [**Šablony**](./templates.md) |
+| **Templates** | Znovupoužitelné konfigurační předlohy, viz [**Šablony**](./templates.md) |
 | **Tools** | Synchronizace času, senzory, historie, resety, viz [**Nástroje**](./tools.md) |
-| **Saved STICKERs** | Zařízení, která spravujete, a jejich uložené klíče, viz [**Uložené STICKERy**](./saved-stickers.md) |
+| **Saved STICKERs** | Zařízení, která spravujete, a jejich uložené klíče, viz [**Saved STICKERs**](./saved-stickers.md) |
 
 Tlačítko dole, **Claim a STICKER**, zaznamená zařízení k vašemu účtu ATELOS, aby
 aplikace mohla doplnit jeho klíče. Viz [**Účet ATELOS**](../atelos.md).

@@ -1,12 +1,11 @@
 ---
 slug: milesight-em500
 title: EM500
-description: "Milesight EM500-CO2 je venkovní senzor pro monitoring prostředí 4 v 1 určený pro měření hladiny CO₂ společně s podmínkami prostředí v náročném provozu. Nabízí NDIR senzor CO₂ s rozsahem 400–5 000 ppm, integrované senzory teploty, vlhkosti a…"
 ---
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor EM500-CO2 {#milesight-sensor-em500-co2}
+# Senzor Milesight EM500-CO2 {#milesight-sensor-em500-co2}
 
 Milesight EM500-CO2 je **venkovní senzor pro monitoring prostředí 4 v 1** určený pro **měření hladiny CO₂ společně s podmínkami prostředí** v náročném provozu. Nabízí **NDIR senzor CO₂** s **rozsahem 400–5 000 ppm**, integrované **senzory teploty, vlhkosti a barometrického tlaku**, **krabičku s krytím IP65** a **desetiletou výdrž baterie**. Díky **konektivitě LoRaWAN** a **konfiguraci přes NFC** je ideální pro monitoring skleníků, ventilaci budov, skladování ovoce a detekci lesních požárů.
 
@@ -95,7 +94,7 @@ Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde
 |---------------|-----------|
 | **Bezdrátový přenos** | |
 | Technologie | LoRaWAN® |
-| Antena | Interní |
+| Anténa | Interní |
 | Frekvence | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
 | Vysílací výkon | 16–20 dBm (podle frekvence) |
 | Citlivost | -137 dBm @300bps |

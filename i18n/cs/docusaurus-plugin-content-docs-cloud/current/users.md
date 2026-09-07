@@ -1,22 +1,22 @@
 ---
 slug: users
 title: Uživatelé
-description: "Stránka Users obsahuje seznam všech, kdo mají přístup k vašemu Space, a umožňuje zvát nové"
+description: "Stránka Uživatelé vypisuje všechny, kdo mají přístup do vašeho prostoru, a umožňuje zvát nové členy a spravovat jejich role."
 ---
 
 # Uživatelé {#users}
 
-Stránka **Users** obsahuje seznam všech, kdo mají přístup k vašemu Space, a umožňuje zvát nové
-členy a spravovat jejich role. Jedna osoba může patřit do několika Spaces najednou, v každém
+Stránka **Users** obsahuje seznam všech, kdo mají přístup do vašeho prostoru, a umožňuje zvát nové
+členy a spravovat jejich role. Jedna osoba může patřit do několika prostorů najednou, v každém
 s jinou rolí.
 
 ## Role {#roles}
 
-Každý člen má ve Space jednu ze dvou rolí:
+Každý člen má v prostoru jednu ze dvou rolí:
 
 | Role | Co může dělat |
 |---|---|
-| **Admin** | Plný přístup. Správa zařízení, tagů, konektorů, proměnných a firmwaru; zvaní a správa dalších členů; změna nastavení Space. |
+| **Admin** | Plný přístup. Správa zařízení, tagů, konektorů, proměnných a firmwaru; zvaní a správa dalších členů; změna nastavení prostoru. |
 | **User** | Pouze pro čtení. Může prohlížet zařízení a jejich zprávy, ale nemůže provádět změny. |
 
 ## Pozvání člena {#inviting-a-member}
@@ -28,15 +28,15 @@ Každý člen má ve Space jednu ze dvou rolí:
 
 Obdrží e-mail s odkazem na pozvánku. Pro přijetí se přihlásí, nebo zaregistruje,
 pomocí **e-mailu a hesla**, účtu **Google** nebo účtu **Microsoft**. Po přijetí
-se objeví v seznamu Users s rolí, kterou jste jim přidělili.
+se objeví v seznamu Users s rolí, kterou jste mu přidělili.
 
 ## Správa členů {#managing-members}
 
 V nabídce vedle člena v seznamu Users můžete:
 
 - **Změnit jeho roli** mezi **Admin** a **User**.
-- **Odebrat** ho: okamžitě ztratí přístup k tomuto Space. Jeho účet se nesmaže
-  a přístup k ostatním Spaces zůstane nedotčen.
+- **Odebrat** ho: okamžitě ztratí přístup do tohoto prostoru. Jeho účet se nesmaže
+  a přístup do ostatních prostorů zůstane nedotčen.
 
 ## Převod vlastnictví {#transferring-ownership}
 

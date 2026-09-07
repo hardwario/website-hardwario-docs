@@ -8,7 +8,7 @@
     "description": "The label for category 'Console Access' in sidebar 'docs'"
   },
   "sidebar.docs.category.Console Access.link.generated-index.description": {
-    "message": "Access the GLIDER console over USB or RTT with J-Link.",
+    "message": "Přístup ke konzoli zařízení GLIDER přes USB nebo RTT s J-Link.",
     "description": "The generated-index page description for category 'Console Access' in sidebar 'docs'"
   },
   "sidebar.docs.category.External Sensors": {
@@ -20,7 +20,7 @@
     "description": "The label for category 'Commands' in sidebar 'docs'"
   },
   "sidebar.docs.category.Commands.link.generated-index.description": {
-    "message": "AT-command and shell-command reference for GLIDER.",
+    "message": "Přehled příkazů AT a příkazů shellu pro GLIDER.",
     "description": "The generated-index page description for category 'Commands' in sidebar 'docs'"
   },
   "sidebar.docs.category.Firmware Flashing": {

@@ -1,7 +1,6 @@
 ---
 slug: chester-x3
 title: CHESTER-X3 (Precizní ADC)
-description: "Tento článek popisuje rozšiřující moduly CHESTER-X3A, CHESTER-X3B a CHESTER-X3C."
 ---
 import Image from '@theme/IdealImage';
 

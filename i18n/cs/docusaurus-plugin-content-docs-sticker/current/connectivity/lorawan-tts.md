@@ -1,7 +1,6 @@
 ---
 slug: lorawan-tts
 title: The Things Stack
-description: "Než jednotku STICKER zaregistrujete v The Things Stack, přečtěte přes NFC její výrobní klíče aplikací HARDWARIO Manager a zapněte radio."
 title_meta: "The Things Stack (STICKER)"
 ---
 import Image from '@theme/IdealImage';
@@ -32,7 +31,7 @@ STICKER se čte telefonem s **Androidem** a NFC.
 1. **Uložte zařízení, aby aplikace měla jeho secret key.** STICKER odpovídá jen
    šifrovaným kanálem, takže bez klíče aplikace nic nepřečte. Každé zařízení přidáte
    jednou (viz
-   [**Uložené STICKERy**](/apps/hardwario-manager/sticker/saved-stickers)) a od té
+   [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)) a od té
    doby aplikace klíč doplňuje automaticky.
 2. **Otevřete STICKER → LoRaWAN keys** a zvolte **Read LoRaWAN keys**.
 3. **Přiložte telefon.** Zadní stranou telefonu se dotkněte krabičky STICKER a
@@ -47,7 +46,7 @@ STICKER se čte telefonem s **Androidem** a NFC.
    [**Informace o zařízení a klíče LoRaWAN**](/apps/hardwario-manager/sticker/device-info).
 5. **Zkontrolujte, že je radio zapnuté.** V **STICKER → Configuration** musí být
    v sekci LoRaWAN parametr **`radio-mode`** nastavený na LoRaWAN, protože zařízení
-   se dodávají s vypnutým radiem; jednotka se pak po registraci pokusí připojit. Viz
+   se dodávají s vypnutým ráiem; jednotka se pak po registraci pokusí připojit. Viz
    [**Konfigurace**](/apps/hardwario-manager/sticker/configuration) a
    [**Šablony**](/apps/hardwario-manager/sticker/templates), když chcete celé dávce
    dát stejné nastavení.

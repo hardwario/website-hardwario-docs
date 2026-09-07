@@ -1,7 +1,7 @@
 ---
 slug: extension-modules
 title: Rozšiřující moduly
-description: "Základní deska CHESTER (CHESTER-M) obsahuje tato integrovaná rozhraní a periferie:"
+description: "Rozhraní základní desky CHESTER a rozšiřující moduly CHESTER-X, které přidávají vstupy pro senzory, I/O, napájení a možnosti připojení."
 ---
 import Image from '@theme/IdealImage';
 

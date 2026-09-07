@@ -1,7 +1,7 @@
 ---
 slug: index
 title: ChirpStack
-description: "ChirpStack je open-source řešení pro budování privátních i veřejných sítí LoRaWAN. Umožňuje organizacím připojit zařízení s velkým dosahem a nízkou spotřebou, například senzory a měřiče, a spravovat je přes snadno použitelné rozhraní. ChirpStack…"
+description: "ChirpStack je open-source řešení pro budování privátních i veřejných sítí LoRaWAN."
 ---
 import Image from '@theme/IdealImage';
 
@@ -13,7 +13,7 @@ ChirpStack je open-source řešení pro budování privátních i veřejných [*
 
 ## Ukázka přehledového dashboardu {#example-of-an-dashboard-overview}
 
-![Přehledový dashboard ChirpStacku](../../../../../apps/chirpstack/images/chirpstack-dashboard.png)
+![Přehledový dashboard ChirpStack](../../../../../apps/chirpstack/images/chirpstack-dashboard.png)
 
 ---
 

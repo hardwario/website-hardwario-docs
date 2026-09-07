@@ -1,7 +1,6 @@
 ---
 slug: zenner-c5-isf
 title: Zenner C5-ISF
-description: "Webové stránky"
 ---
 import Image from '@theme/IdealImage';
 

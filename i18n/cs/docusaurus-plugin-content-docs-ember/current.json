@@ -16,7 +16,7 @@
     "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
   },
   "sidebar.docs.category.Video Tutorials.link.generated-index.description": {
-    "message": "Video guides for configuring and using EMBER.",
+    "message": "Videonávody pro nastavení a používání zařízení EMBER.",
     "description": "The generated-index page description for category 'Video Tutorials' in sidebar 'docs'"
   },
   "sidebar.docs.category.ChirpStack v4": {

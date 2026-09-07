@@ -1,7 +1,6 @@
 ---
 slug: about-climate-module
 title: O modulu Climate Module
-description: "Modul Climate Module můžete použít společně s Mini Battery Module a Core Module a vytvořit tak velmi kompaktní bezdrátový senzor prostředí."
 ---
 import Image from '@theme/IdealImage';
 
@@ -34,7 +33,7 @@ import Image from '@theme/IdealImage';
 - Mechanické rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/climate-module)
+- [**Obchod**](https://www.hardwario.store/p/climate-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-climate)
 - [**SDK – teplota (TMP112)**](https://sdk.hardwario.com/group__twr__tmp112)
 - [**SDK – vlhkost a teplota (HDC2080)**](https://sdk.hardwario.com/group__twr__hdc2080)

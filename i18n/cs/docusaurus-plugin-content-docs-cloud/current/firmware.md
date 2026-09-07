@@ -1,7 +1,7 @@
 ---
 slug: firmware
 title: Firmware
-description: "Firmware zařízení CHESTER můžete aktualizovat na dálku z cloudu, vzduchem a bez fyzického přístupu k zařízení."
+description: "Firmware zařízení CHESTER můžete aktualizovat na dálku z cloudu, bezdrátově a bez fyzického přístupu k zařízení."
 ---
 
 # Aktualizace firmwaru {#firmware-updates}

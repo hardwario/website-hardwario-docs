@@ -1,7 +1,6 @@
 ---
 slug: s0-interface
 title: Rozhraní S0 (pulzní výstup)
-description: "Podrobný popis zapojení S0 a konfigurace měření pulzů bude doplněn v samostatné sekci."
 ---
 
 # Rozhraní S0 (pulzní výstup) {#s0-interface-pulse-output}

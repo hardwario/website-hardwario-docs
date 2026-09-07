@@ -1,7 +1,6 @@
 ---
 slug: settings
 title: Nastavení aplikace
-description: "obrazovky."
 ---
 
 # Nastavení aplikace {#app-settings}

@@ -1,6 +1,5 @@
 ---
 title: Autentizace
-description: "Každý požadavek se autentizuje pomocí API klíče posílaného v hlavičce X-API-KEY."
 ---
 
 # Autentizace {#authentication}
@@ -12,15 +11,15 @@ API klíče jsou **vázané na Space** a klíč lze pomocí **tagů** omezit na 
 
 1. Otevřete svůj Space, v levém panelu přejděte na **API Keys** a klikněte na **+ NEW KEY**.
 
-   ![Stránka API Keys s tlačítkem „+ NEW KEY"](../../../../../cloud/api/images/api-keys-list.png)
+   ![Stránka API Keys s tlačítkem „+ NEW KEY“](../../../../../cloud/api/images/api-keys-list.png)
 
 2. Zadejte klíči **Name** a případně vyberte **Tags**, které omezí, ke kterým zařízením má přístup, poté klikněte na **CREATE**.
 
-   ![Dialog „Create new key" s poli Name a Tags](../../../../../cloud/api/images/api-key-create.png)
+   ![Dialog „Create new key“ s poli Name a Tags](../../../../../cloud/api/images/api-key-create.png)
 
 3. Zkopírujte klíč z dialogu **API Key Created** a bezpečně jej uložte, **zobrazí se pouze jednou**. Pokud jej ztratíte, vytvořte klíč nový.
 
-   ![Dialog „API Key Created": zkopírujte klíč, který se zobrazí pouze jednou](../../../../../cloud/api/images/api-key-created.png)
+   ![Dialog „API Key Created“: zkopírujte klíč, který se zobrazí pouze jednou](../../../../../cloud/api/images/api-key-created.png)
 
 Potom jej posílejte s každým voláním:
 

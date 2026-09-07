@@ -1,7 +1,6 @@
 ---
 slug: firmware-debugging
 title: Debugování
-description: "Pokud chcete pro pokročilejší debugování použít sondu JLink, můžete si přečíst samostatnou kapitolu."
 ---
 import Image from '@theme/IdealImage';
 
@@ -15,7 +14,7 @@ Pokud chcete pro pokročilejší debugování použít sondu JLink, můžete si 
 
 Nejjednodušší způsob debugování – a také způsob, kterým to všechno začalo – je jen vypisovat vše, co považujete za důležité vědět.
 
-Pro výpis informací přes USB do připojeného PC použijeme sériový port.
+K výpisu informací přes USB do připojeného PC použijeme sériový port.
 
 ## Core Module {#core-module}
 
@@ -131,7 +130,7 @@ Pokud jste to ještě neudělali, nainstalujte si [**HARDWARIO Code**](./about-h
 
 Naše rozšíření pro Visual Studio Code můžete použít k připojení konzole k **připojenému zařízení Core Module.**
 
-Pro připojení konzole můžete v rozšíření použít dva příkazy:
+Chcete-li připojit konzoli, můžete v rozšíření použít dva příkazy:
 
 - [**Build + Flash (Console)**](./hardwario-extension-tutorial.md#build--flash-console)
 - [**Attach Console**](./hardwario-extension-tutorial.md#attach-console)
@@ -157,7 +156,7 @@ Více o této konzoli se dozvíte v kapitole [**Konzole HARDWARIO TOWER**](./har
 
 :::tip
 
-Pro více informací můžete navštívit tyto odkazy:
+Více informací najdete na těchto odkazech:
 
 - [**Tipy a triky pro programování a debugování mikrokontrolérů**](https://www.youtube.com/watch?v=cDaG1CdP5Ew)
 - [**Poor Man’s Trace**](https://mcuoneclipse.com/2015/04/04/poor-mans-trace-free-of-charge-function-entryexit-trace-with-gnu-tools/)

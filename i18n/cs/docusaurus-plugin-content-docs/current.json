@@ -12,7 +12,7 @@
     "description": "The label for category 'Platform Connectivity' in sidebar 'docs'"
   },
   "sidebar.docs.category.Platform Connectivity.link.generated-index.description": {
-    "message": "CHESTER connectivity, device-management, cellular, satellite, and networking documentation.",
+    "message": "Dokumentace ke konektivitě, správě zařízení, mobilním a satelitním sítím a síťování zařízení CHESTER.",
     "description": "The generated-index page description for category 'Platform Connectivity' in sidebar 'docs'"
   },
   "sidebar.docs.category.Mobile Networks": {
@@ -60,7 +60,7 @@
     "description": "The label for category 'Hardware Description' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hardware Description.link.generated-index.description": {
-    "message": "CHESTER hardware, enclosure, connector, bus, and extension-module documentation.",
+    "message": "Dokumentace k hardwaru, krabičce, konektorům, sběrnicím a rozšiřujícím modulům zařízení CHESTER.",
     "description": "The generated-index page description for category 'Hardware Description' in sidebar 'docs'"
   },
   "sidebar.docs.category.Firmware Flashing": {
@@ -72,7 +72,7 @@
     "description": "The label for category 'Developer Tools' in sidebar 'docs'"
   },
   "sidebar.docs.category.Developer Tools.link.generated-index.description": {
-    "message": "Tools for configuring, flashing, profiling, and developing with CHESTER.",
+    "message": "Nástroje pro konfiguraci, nahrávání firmwaru, profilování a vývoj se zařízením CHESTER.",
     "description": "The generated-index page description for category 'Developer Tools' in sidebar 'docs'"
   },
   "sidebar.docs.category.Firmware SDK": {
@@ -80,7 +80,7 @@
     "description": "The label for category 'Firmware SDK' in sidebar 'docs'"
   },
   "sidebar.docs.category.Firmware SDK.link.generated-index.description": {
-    "message": "Set up the CHESTER firmware SDK and build customer applications.",
+    "message": "Zprovoznění firmware SDK pro CHESTER a stavba zákaznických aplikací.",
     "description": "The generated-index page description for category 'Firmware SDK' in sidebar 'docs'"
   },
   "sidebar.docs.link.Git Repository": {

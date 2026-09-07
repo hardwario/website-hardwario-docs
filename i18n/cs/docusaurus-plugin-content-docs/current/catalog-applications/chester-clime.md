@@ -1,7 +1,6 @@
 ---
 slug: chester-clime
 title: CHESTER Clime
-description: "Tento článek popisuje základní funkce, hardware a ukázkovou JSON zprávu katalogové aplikace CHESTER Clime."
 ---
 import Image from '@theme/IdealImage';
 
@@ -163,7 +162,7 @@ může být datový buffer větší než UDP MTU a paket nebude odeslán. Zaří
 
 Pokud je zařízení osazeno modulem **CHESTER-S1**, má také tlačítko. Při stisku tlačítka se na sekundu rozsvítí modrá LED. Zároveň se z integrovaného akustického bzučáku přehraje **pípnutí** jako zvukové potvrzení stisku tlačítka.
 
-Tlačítko na volitelném modulu **CHESTER-S1** navíc svou barvou hlásí stav CO₂ prahy **zelená** (hodnoty jsou v pořádku), **oranžová** (varování) a **červená** (alarm). Při napájení z baterie tlačítko krátce blikne každých 5 sekund a při připojeném externím napájení na X10 svítí trvale. **Úrovně** prahů a **hystereze** jsou **konfigurovatelné**.
+Tlačítko na volitelném modulu **CHESTER-S1** navíc svou barvou hlásí stav CO₂ prahovými barvami: **zelená** (hodnoty jsou v pořádku), **oranžová** (varování) a **červená** (alarm). Při napájení z baterie tlačítko krátce blikne každých 5 sekund a při připojeném externím napájení na X10 svítí trvale. **Úrovně** prahů a **hystereze** jsou **konfigurovatelné**.
 
 ## Výchozí konfigurace {#default-configuration}
 

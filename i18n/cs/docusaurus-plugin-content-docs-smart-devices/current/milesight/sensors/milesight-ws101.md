@@ -1,7 +1,6 @@
 ---
 slug: milesight-ws101
 title: WS101
-description: "Milesight WS101 je kompaktní bateriově napájené chytré tlačítko LoRaWAN určené pro bezdrátové ovládání, spouštění akcí a odesílání alarmů. Podporuje více typů stisknutí (krátké, dlouhé a dvojité) s dobou odezvy do 1 sekundy. Tlačítko se vyznačuje…"
 ---
 
 import Image from '@theme/IdealImage';

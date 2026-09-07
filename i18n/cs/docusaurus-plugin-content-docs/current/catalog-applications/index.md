@@ -1,7 +1,7 @@
 ---
 slug: catalog-applications
 title: Katalogové aplikace
-description: "Tento článek přináší informace o takzvaných katalogových aplikacích pro platformu CHESTER."
+description: "Katalogové aplikace jsou hotové firmwary pro CHESTER na běžné úlohy: co která umí, jaký hardware potřebuje a jak vypadají její data."
 ---
 import Image from '@theme/IdealImage';
 
@@ -114,7 +114,7 @@ Tyto firmwary jsou pro starší komunikaci s [**Cloud v1**](/cloud/legacy).
 
 Tabulka níže poskytuje přehled dostupných buildů firmwaru pro **katalogové aplikace**.
 
-Pro nahrání firmwaru použijte aplikaci [**HARDWARIO Manager**](../platform-connectivity/hardwario-manager.md) na svém telefonu nebo postupujte podle článku [**Nahrání firmwaru**](../firmware-flashing/index.md).
+Chcete-li nahrát firmware, použijte aplikaci [**HARDWARIO Manager**](../platform-connectivity/hardwario-manager.md) na svém telefonu nebo postupujte podle článku [**Nahrání firmwaru**](../firmware-flashing/index.md).
 
 :::info
 

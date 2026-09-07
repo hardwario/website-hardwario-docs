@@ -1,6 +1,5 @@
 ---
 title: Používání displeje
-description: "Tato příručka popisuje, jak zobrazit vlastní obsah na podsvíceném LCD zařízení FIBER."
 ---
 
 # Používání displeje {#using-the-display}

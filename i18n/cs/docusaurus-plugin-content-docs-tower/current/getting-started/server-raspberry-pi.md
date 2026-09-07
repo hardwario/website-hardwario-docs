@@ -1,8 +1,7 @@
 ---
 slug: server-raspberry-pi
 title: Server na Raspberry Pi
-description: "Možná budete chtít využít TOWER pro něco jako Smart Home nebo podobné řešení."
-title_meta: "Server na Raspberry Pi (HARDWARIO TOWER, getting started)"
+title_meta: "Server na Raspberry Pi (HARDWARIO TOWER, první kroky)"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,7 @@
 ---
 slug: chester-x7
 title: CHESTER-X7 (1-ch diff input)
-description: "Analog input extension module for the CHESTER platform: one differential input for current probes and industrial sensors, one 0–28 V single-ended voltage input, and a switchable 5 V output to power the probes."
+description: "Analog input extension module for CHESTER: a differential input for current probes, a 0–28 V single-ended input and a switchable 5 V probe supply."
 keywords: [CHESTER-X7, differential input, analog input, current probe, current sensing, voltage input, 0-28V, OPA4387, TPS61099, industrial sensor, CHESTER]
 ---
 import Image from '@theme/IdealImage';

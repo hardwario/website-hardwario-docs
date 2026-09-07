@@ -1,8 +1,7 @@
 ---
 slug: tools
 title: Nástroje
-description: "s jeho konfigurací."
-title_meta: "Nástroje (HARDWARIO Manager for CHESTER)"
+title_meta: "Nástroje (HARDWARIO Manager pro CHESTER)"
 ---
 
 # Nástroje pro CHESTER {#chester-tools}

@@ -1,7 +1,6 @@
 ---
 slug: ble-tags
 title: Bluetooth Tagy
-description: "Platforma CHESTER obsahuje dedikovaný subsystém pro senzory Teltonika EYE, který umožňuje bezproblémovou integraci až osmi Bluetooth tagů pro monitorování teploty a vlhkosti."
 ---
 
 import Image from '@theme/IdealImage';

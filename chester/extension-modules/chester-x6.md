@@ -1,7 +1,7 @@
 ---
 slug: chester-x6
 title: CHESTER-X6 (S-Wire bus)
-description: HARDWARIO S-Wire bus extension module for the CHESTER platform. It connects low-power S-Wire peripherals over a 3-wire link (+5 V, GND, DATA), with an on-board 5 V boost to power them and an I²C-controlled UART bridge.
+description: "HARDWARIO S-Wire bus extension module for CHESTER. It connects low-power S-Wire peripherals over a 3-wire link and powers them from an on-board 5 V boost."
 keywords: [CHESTER-X6, S-Wire, S-Wire bus, HARDWARIO S-Wire, peripherals, SC16IS740, TCA9534A, I2C, UART bridge, 5V boost, CHESTER]
 ---
 import Image from '@theme/IdealImage';

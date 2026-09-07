@@ -1,8 +1,7 @@
 ---
 slug: configuration
 title: Konfigurace
-description: "Otevřete CHESTER → Configuration. Aplikace přečte konfiguraci zařízení a pak"
-title_meta: "Konfigurace (HARDWARIO Manager for CHESTER)"
+title_meta: "Konfigurace (HARDWARIO Manager pro CHESTER)"
 ---
 
 # Konfigurace zařízení CHESTER {#configure-a-chester}
@@ -17,7 +16,7 @@ vyexportuje celou konfiguraci jako text.
 
 ---
 
-## Quick Set-up {#quick-set-up}
+## Rychlé nastavení {#quick-set-up}
 
 Výchozí pohled pokrývá nastavení, která většina nasazení potřebuje. Sekce se
 objeví jen tehdy, když je zařízení skutečně má.
@@ -36,7 +35,7 @@ LTE a objeví se sekce LTE, zvolte LoRaWAN a dostanete tu pro LoRaWAN.
 
 ### LTE {#lte}
 
-<img src="/img/hw-manager/hw-manager-chester-configuration-lte.png" alt="Sekce LTE s volbami SIM, režimu radia, IP adresy a antény nad tlačítky Go to Advanced Configuration a Save to CHESTER" width="320" />
+<img src="/img/hw-manager/hw-manager-chester-configuration-lte.png" alt="Sekce LTE s volbami SIM, režimu ráia, IP adresy a antény nad tlačítky Go to Advanced Configuration a Save to CHESTER" width="320" />
 
 | Nastavení | Volby |
 |---|---|
@@ -56,7 +55,7 @@ autentizace a zbytek.
 Volba **LoRaWAN** jako komunikačního režimu vám dá režim aktivace
 (**OTAA** nebo **ABP**), regionální **band**, **class** zařízení a identifikátory
 a klíče pro zvolený režim aktivace: DevEUI, JoinEUI a AppKey pro OTAA; DevAddr a
-klíče session pro ABP.
+klíče relace pro ABP.
 
 Pole s klíči přijímají hex s oddělovači i bez nich a zobrazují očekávaný počet
 znaků. Každé má tlačítko pro zkopírování a tlačítko, které vygeneruje náhodnou
@@ -64,7 +63,7 @@ hodnotu.
 
 ---
 
-## Advanced Configuration {#advanced-configuration}
+## Rozšířená konfigurace {#advanced-configuration}
 
 **Go to Advanced Configuration** zobrazí **každý** parametr, který zařízení hlásí,
 seskupený do sbalitelných karet. Které skupiny se objeví, závisí na zařízení. To
@@ -106,7 +105,7 @@ přečte a řekne vám, co se stalo:
 
 ## Když se čtení vrátí prázdné {#if-the-read-comes-back-empty}
 
-Zařízení, které neodpovídá, nebo jehož firmware nepodporuje shell příkazy pro
+Zařízení, které neodpovídá, nebo jehož firmware nepodporuje příkazy shellu pro
 konfiguraci, se ohlásí jako takové, místo aby se zobrazilo jako prázdná
 konfigurace. Držte zařízení blízko telefonu a zkuste to znovu; pokud dál mlčí,
 připojte se znovu. Viz [**Řešení problémů**](./troubleshooting.md).

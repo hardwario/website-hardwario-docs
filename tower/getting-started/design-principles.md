@@ -10,7 +10,7 @@ We believe in doing things the right way, so we have taken the following design 
 
 We use the 868/915 MHz frequency for radio communication. This is a license-free band designated for short signal messages.
 
-Abusing your IoT devices with a 2.4 GHz band and fighting streaming WiFi, Bluetooth, ZigBee and other protocols will not help your system reliability.
+Abusing your IoT devices with a 2.4 GHz band and fighting streaming Wi-Fi, Bluetooth, ZigBee and other protocols will not help your system reliability.
 
 It is also about basic rules from physics: with higher frequency, you get worse penetration through the walls and other obstacles. Also, the power consumption efficiency is better at a lower frequency. As stated earlier, low-power designs are our goal!
 

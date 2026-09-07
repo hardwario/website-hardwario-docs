@@ -1,7 +1,6 @@
 ---
 slug: sample-data
 title: Vzorek dat ze senzorů
-description: "Přečtěte právě teď každý senzor zařízení STICKER a podívejte se na hodnoty, je to"
 ---
 
 # Vzorek dat ze senzorů {#sample-sensor-data}

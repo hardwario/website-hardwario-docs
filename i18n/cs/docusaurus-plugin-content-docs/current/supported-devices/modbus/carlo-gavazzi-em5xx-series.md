@@ -1,7 +1,6 @@
 ---
 slug: carlo-gavazzi-em5xx-series
 title: Carlo Gavazzi EM5XX Series
-description: "Webové stránky"
 ---
 
 import Image from '@theme/IdealImage';
@@ -122,7 +121,7 @@ Tento elektroměr **vyžaduje** použití **externího senzoru**, například pr
 
 ### Konfigurace komunikace Modbus pro CHESTER {#modbus-communication-configuration-for-chester}
 
-Pro nastavení komunikačních parametrů použijte v CHESTER Terminalu následující příkazy:
+Komunikační parametry nastavíte v CHESTER Terminalu následujícími příkazy:
 
 
 ```

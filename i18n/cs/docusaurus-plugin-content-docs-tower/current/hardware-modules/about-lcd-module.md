@@ -1,7 +1,6 @@
 ---
 slug: about-lcd-module
 title: O modulu LCD Module
-description: "LCD Module využívá unikátní technologii – takzvaný paměťový displej vyvinutý společností Sharp. Nabízí rozlišení 128 x 128 pixelů při velikosti 1,28 palce. Obsahuje řadič displeje s extrémně nízkou spotřebou, takže můžete mít aktivní grafický displej…"
 ---
 import Image from '@theme/IdealImage';
 

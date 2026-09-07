@@ -1,7 +1,6 @@
 ---
 slug: how-to-led-control
-title: "Návod: Ovládání LED"
-description: "Ovládání LED integrované na Core Module je něco jako vypsat Hello world. V této kapitole si projdeme několik jednoduchých příkladů, jak na to"
+title: "Jak na: Ovládání LED"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,6 @@
 ---
 slug: about-soil-sensor
 title: O senzoru půdní vlhkosti
-description: "Senzor vrací půdní vlhkost v relativních hodnotách. Senzor je velmi citlivý a získáte rozsah od 6500, když je senzor suchý, do 13000, když je senzor plně ponořen ve vodě. Měření zajišťují dva měděné pásky ve vnitřních vrstvách čtyřvrstvé desky.…"
 ---
 import Image from '@theme/IdealImage';
 
@@ -60,14 +59,14 @@ K dispozici je také [**Arduino knihovna pro Soil Sensor**](https://github.com/h
 - Možnost připojit více senzorů paralelně
 - Převodník kapacity na digitální signál **ZSSC3123**
 - Digitální **teplotní senzor TMP112**
-- Rozsah napájecího napětí: 2.8 V až 5.5 V
+- Rozsah napájecího napětí: 2,8 V až 5,5 V
 - Rozsah provozních teplot: -40 až +85 °C
 - Krytí IP 68
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/soil-sensor-set)
+- [**Obchod**](https://www.hardwario.store/p/soil-sensor-set)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-soil-sensor)
-- [**SDK knihovna**](https://sdk.hardwario.com/group__twr__soil__sensor.html)
+- [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__soil__sensor.html)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_soil_sensor.h)
 - [**Zdrojový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/src/twr_soil_sensor.c)
 - [**Projekty**](https://www.hackster.io/hardwario/projects?part_id=117389)

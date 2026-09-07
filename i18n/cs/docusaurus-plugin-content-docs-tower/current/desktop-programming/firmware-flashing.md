@@ -1,7 +1,6 @@
 ---
 slug: firmware-flashing
 title: Nahrání firmwaru
-description: "Tato kapitola se zaměřuje na záložku Firmware v aplikaci Playground"
 title_meta: "Nahrání firmwaru (HARDWARIO TOWER)"
 ---
 import Image from '@theme/IdealImage';
@@ -19,7 +18,7 @@ Seznam firmwaru se **stahuje automaticky**.
 
 :::tip
 
-Pro nahrání firmwaru z počítače použijte **tři tečky** na pravé straně.
+Chcete-li nahrát firmware z počítače, použijte **tři tečky** na pravé straně.
 
 :::
 

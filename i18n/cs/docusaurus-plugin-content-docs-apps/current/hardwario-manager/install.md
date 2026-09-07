@@ -1,7 +1,6 @@
 ---
 slug: install
 title: Instalace aplikace
-description: "platformu si řekněte svému kontaktu v HARDWARIO."
 ---
 
 # Instalace aplikace HARDWARIO Manager {#install-hardwario-manager}

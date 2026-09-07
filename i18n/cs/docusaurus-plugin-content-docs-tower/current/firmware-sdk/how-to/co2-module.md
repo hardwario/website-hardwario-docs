@@ -1,7 +1,6 @@
 ---
 slug: how-to-co2-module
-title: "How To: Modul CO₂"
-description: "S modulem CO₂ můžete snadno měřit koncentraci oxidu uhličitého."
+title: "Jak na: Modul CO₂"
 ---
 import Image from '@theme/IdealImage';
 

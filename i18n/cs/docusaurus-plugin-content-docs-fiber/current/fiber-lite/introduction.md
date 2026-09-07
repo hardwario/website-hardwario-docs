@@ -1,6 +1,6 @@
 ---
 title: Úvod
-description: "zprovoznění a testování zařízení LoRaWAN, zejména HARDWARIO STICKER a HARDWARIO"
+description: "FIBER Lite je varianta FIBER postavená na Raspberry Pi 5, určená k rychlému zprovoznění a testování zařízení LoRaWAN, například HARDWARIO STICKER."
 title_meta: "Úvod (FIBER Lite)"
 ---
 

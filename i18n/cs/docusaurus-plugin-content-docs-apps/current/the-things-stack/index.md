@@ -1,7 +1,7 @@
 ---
 slug: index
 title: The Things Stack
-description: "The Things Stack (TTS) je moderní a škálovatelný síťový server LoRaWAN® navržený pro bezpečnou, spolehlivou a flexibilní IoT konektivitu. Vyvíjí ho The Things Industries a pohání jím veřejné i privátní sítě LoRaWAN; nabízí pokročilou správu zařízení,…"
+description: "The Things Stack (TTS) je moderní a škálovatelný network server pro LoRaWAN®, navržený pro bezpečné, spolehlivé a flexibilní připojení zařízení IoT."
 ---
 import Image from '@theme/IdealImage';
 

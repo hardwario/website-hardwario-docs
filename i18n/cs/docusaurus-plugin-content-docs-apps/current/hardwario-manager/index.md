@@ -1,7 +1,7 @@
 ---
 slug: /hardwario-manager
 title: HARDWARIO Manager
-description: "HARDWARIO v provozu. Je to jedna aplikace pro celý ekosystém: přiložením telefonu"
+description: "HARDWARIO Manager je mobilní aplikace pro nastavení a správu zařízení HARDWARIO přímo v terénu."
 ---
 
 # HARDWARIO Manager {#hardwario-manager}
@@ -43,11 +43,11 @@ uvidíte, co s ní aplikace umí.
 
 ## Kde začít {#where-to-start}
 
-1. [**Instalace aplikace**](./install.md): dostat ji do telefonu, zapnout NFC a
-   udělit oprávnění, o která si řekne.
+1. [**Instalace aplikace**](./install.md): dostaňte ji do telefonu, zapněte NFC a
+   udělte oprávnění, o která si řekne.
 2. [**Účet ATELOS**](./atelos.md): přihlaste se, aby aplikace mohla zařízení
    nárokovat a vyplnit za vás jejich klíče.
-3. [**STICKER**](./sticker/index.md): nastavování zařízení STICKER přes NFC.
-4. [**CHESTER**](./chester/index.md): připojení k zařízení CHESTER přes Bluetooth.
+3. [**STICKER**](./sticker/index.md): nastavte zařízení STICKER přes NFC.
+4. [**CHESTER**](./chester/index.md): připojte se k zařízení CHESTER přes Bluetooth.
 5. [**Nastavení aplikace**](./settings.md): vzhled, jazyk, zámek aplikace a jak
    dlouho se uchovává historie změn zařízení.

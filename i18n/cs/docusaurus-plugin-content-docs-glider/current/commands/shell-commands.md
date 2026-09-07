@@ -1,7 +1,6 @@
 ---
 title: Příkazy shellu
 sidebar_position: 2
-description: "GLIDER provozuje plnohodnotný Zephyr shell, který zpřístupňuje příkazy na úrovni aplikace pro každý subsystém. Shell je dostupný přes:"
 title_meta: "Příkazy shellu (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
@@ -11,13 +10,13 @@ import Image from '@theme/IdealImage';
 GLIDER provozuje plnohodnotný **Zephyr shell**, který zpřístupňuje příkazy na úrovni aplikace pro každý subsystém. Shell je dostupný přes:
 
 - [**RTT konzoli**](../console/rtt-jlink.md) přímo, nebo
-- [**AT konzoli**](../console/usb-at.md) pomocí `AT$SHELL="<command>"`.
+- [**konzoli AT**](../console/usb-at.md) pomocí `AT$SHELL="<command>"`.
 
 :::tip
-Ekvivalentní AT příkazy dostupné přes USB-C najdete na stránce [**AT příkazy**](at-commands.md).
+Ekvivalentní příkazy AT dostupné přes USB-C najdete na stránce [**příkazy AT**](at-commands.md).
 :::
 
-Tato stránka uvádí příkazy specifické pro GLIDER. Obecné příkazy Zephyru (`kernel`, `log`, `device`, …) zde nejsou znovu uváděny.
+Tato stránka uvádí příkazy specifické pro GLIDER. Obecné příkazy systému Zephyr (`kernel`, `log`, `device`, …) zde nejsou znovu uváděny.
 
 ## Obecný pod-příkaz `config` {#generic-config-sub-command}
 

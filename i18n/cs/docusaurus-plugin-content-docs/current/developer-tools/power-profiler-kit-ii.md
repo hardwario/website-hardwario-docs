@@ -1,7 +1,6 @@
 ---
 slug: power-profiler-kit-ii
 title: Power Profiler Kit II
-description: "Tento článek poskytuje informace o Power Profiler Kit II (dále označovaném jako PPK2) od Nordic Semiconductor."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -128,7 +127,7 @@ Klikněte na **SELECT DEVICE** a zvolte své zařízení **PPK2**.
 
 **PPK2** by nyní mělo svítit buď **červeně** (režim měření **Source**), nebo **modře** (režim měření **Ampere**).
 
-Pro zahájení záznamu dat musíte:
+Chcete-li zahájit záznam dat, musíte:
 
 1. Vybrat režim, ve kterém chcete pracovat.
 

@@ -1,7 +1,6 @@
 ---
 slug: serial_sensors
 title: Sériová zařízení
-description: "Zde je seznam zařízení testovaných společností HARDWARIO včetně základní konfigurace pro použití:"
 ---
 
 import Image from '@theme/IdealImage';

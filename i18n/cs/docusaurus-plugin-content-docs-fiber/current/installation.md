@@ -1,7 +1,7 @@
 ---
 slug: installation
 title: Instalace
-description: "Tato část popisuje zavedení a konfiguraci systému Linux a celého softwarového stacku LoRaWAN +"
+description: "Instalace systému Linux pro FIBER a celého softwarového stacku pro LoRaWAN a monitoring, jedním společným postupem pro obě hardwarové varianty."
 title_meta: "Instalace (FIBER)"
 ---
 import Image from '@theme/IdealImage';

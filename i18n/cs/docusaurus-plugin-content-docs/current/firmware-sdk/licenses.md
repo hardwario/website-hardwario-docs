@@ -1,7 +1,6 @@
 ---
 slug: licenses
 title: Licence
-description: "V tomto článku najdete užitečné informace o licenci CHESTER SDK."
 ---
 import Image from '@theme/IdealImage';
 
@@ -19,7 +18,7 @@ Licence jsou umístěny blízko zdrojových souborů. Soubor `LICENSE` s podrobn
 
 Pokud je složka nebo sada souborů open source a je součástí **nRF Connect SDK** pod vlastní licencí (například některou z licencí **Apache** nebo **MIT**), bude mít ve složce buď vlastní soubor `LICENSE`, nebo budou licenční informace vloženy přímo ve zdrojových souborech.
 
-Pro vygenerování licenční zprávy můžete použít nástroj **West** `ncs-sbom` (poskytovaný **nRF Connect SDK**). Umožňuje vygenerovat zprávu pro **CHESTER SDK**, sestavenou aplikaci nebo konkrétní soubory. Nástroj je vysoce konfigurovatelný. Používá několik metod detekce, například:
+Chcete-li vygenerovat licenční zprávu, můžete použít nástroj **West** `ncs-sbom` (poskytovaný **nRF Connect SDK**). Umožňuje vygenerovat zprávu pro **CHESTER SDK**, sestavenou aplikaci nebo konkrétní soubory. Nástroj je vysoce konfigurovatelný. Používá několik metod detekce, například:
 
 * Vyhledávání na základě značek **SPDX**.
 

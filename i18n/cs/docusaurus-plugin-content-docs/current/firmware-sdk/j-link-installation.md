@@ -1,7 +1,6 @@
 ---
 slug: j-link-installation
 title: Instalace J-Link
-description: "Následující článek vás provede instalací nástroje SEGGER J-Link."
 ---
 import Image from '@theme/IdealImage';
 

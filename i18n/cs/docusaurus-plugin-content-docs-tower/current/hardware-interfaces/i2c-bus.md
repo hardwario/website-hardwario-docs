@@ -1,7 +1,6 @@
 ---
 slug: i2c-bus
-title: "I²C Bus"
-description: "TOWER využívá sběrnici I²C pro velkou část komunikace se senzory. Níže najdete seznam I²C adres, které TOWER používá."
+title: "Sběrnice I²C"
 ---
 import Image from '@theme/IdealImage';
 

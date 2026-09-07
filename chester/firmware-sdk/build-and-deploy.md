@@ -25,7 +25,7 @@ This article will explain how to build, deploy and upload an application firmwar
 
 ## Deploy
 
-For the final firmware build, you would like to build a firmware with the name and version in it. The firmware version and name will be visible in the **HADRWARIO Manager** application and the device's shell when you type `info show` command. The firmware version is also sent in the NB-IoT packet.
+For the final firmware build, you would like to build a firmware with the name and version in it. The firmware version and name will be visible in the **HARDWARIO Manager** application and the device's shell when you type `info show` command. The firmware version is also sent in the NB-IoT packet.
 
 1. Clean previous build with `rm -rf build/`.
 
@@ -70,4 +70,4 @@ When your firmware is built, just call from the same project folder:
 
 `hardwario chester app fw upload --name="hio-chester-input-z" --version="v1.5.0"`
 
-Then you receive an email containing **links to the firmware** and **QR Code**, which can be scanned in **HADRWARIO Manager** phone application for firmware upgrade.
+Then you receive an email containing **links to the firmware** and **QR Code**, which can be scanned in **HARDWARIO Manager** phone application for firmware upgrade.

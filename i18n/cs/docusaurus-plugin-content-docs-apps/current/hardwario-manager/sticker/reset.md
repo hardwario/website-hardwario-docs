@@ -1,7 +1,6 @@
 ---
 slug: reset
 title: Reset zařízení
-description: "Možnosti resetu sahají od neškodného restartu po úplné vymazání vendor resetem."
 ---
 
 # Reset zařízení STICKER {#reset-a-sticker}
@@ -39,7 +38,7 @@ přečtete jeho sériové číslo a aplikace doplní token, který k němu má u
 Tlačítko s kostkou vygeneruje náhodný klíč, takže si ho nemusíte vymýšlet.
 
 Po úspěchu se nový secret key uloží zpět do vašeho seznamu
-[**Uložené STICKERy**](./saved-stickers.md), takže zařízení funguje dál, aniž
+[**Saved STICKERs**](./saved-stickers.md), takže zařízení funguje dál, aniž
 byste cokoli ručně přepisovali.
 
 :::caution Change secret key zároveň resetuje konfiguraci

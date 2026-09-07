@@ -1,7 +1,7 @@
 ---
 slug: product-certification
 title: Certifikace produktu
-description: "Tento článek poskytuje informace o dostupné certifikaci produktu CHESTER."
+description: "Certifikace dostupné pro platformu CHESTER a kde najít prohlášení o shodě."
 ---
 import Image from '@theme/IdealImage';
 

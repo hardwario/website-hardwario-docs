@@ -1,7 +1,6 @@
 ---
 slug: how-to-uart-interface
-title: "How To: Rozhraní UART"
-description: "Core Module má 3 rozhraní UART, která můžete využít. Signály jednotlivých kanálů se jmenují TXDx, RXDx, kde x je 0, 1 nebo 2."
+title: "Jak na: Rozhraní UART"
 ---
 import Image from '@theme/IdealImage';
 

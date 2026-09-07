@@ -1,7 +1,6 @@
 ---
 slug: login-guide
 title: Průvodce přihlášením
-description: "Tento dokument popisuje, jak se přihlásit k Raspberry Pi pomocí vzdáleného terminálu přes protokol SSH."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

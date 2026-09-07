@@ -1,7 +1,6 @@
 ---
 slug: about-lux-meter-tag
 title: O modulu Lux Meter Tag
-description: "Modul Lux Meter Tag využívá senzor intenzity světla OPT3001 s vysokým dynamickým rozsahem, který umí měřit osvětlení od 0,01 do 83 000 lux. Tento senzor je digitální a kalibrovaný. Komunikuje po sběrnici I²C a nabízí velmi nízkou spotřebu a režim…"
 ---
 import Image from '@theme/IdealImage';
 
@@ -31,9 +30,9 @@ Senzor můžete použít k **detekci dne a noci** nebo jako doplňkovou informac
 - Efektivní dynamický rozsah 23 bitů
 - Volitelný výstup přerušení
 - Spotřeba:
-  - Proud v aktivním režimu: 1.8 µA
-  - Proud ve vypnutém režimu: 0.3 µA
-- Rozsah napájecího napětí: 1.6 V až 3.6 V
+  - Proud v aktivním režimu: 1,8 µA
+  - Proud ve vypnutém režimu: 0,3 µA
+- Rozsah napájecího napětí: 1,6 V až 3,6 V
 - Rozsah provozních teplot: -20 až 70 °C
 - Mechanické rozměry: 16 x 16 mm
 

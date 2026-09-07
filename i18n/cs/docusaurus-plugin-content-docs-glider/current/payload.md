@@ -1,7 +1,7 @@
 ---
 title: CBOR Payload
 sidebar_position: 7
-description: "GLIDER hlásí měření do HARDWARIO Cloud pomocí binárního formátu CBOR (RFC 8949). Aby byly zprávy malé, používá schéma numerické klíče místo textových – každý payload se typicky vejde do 70 až 150 bajtů na lince."
+description: "GLIDER hlásí naměřené hodnoty do HARDWARIO Cloud v binárním formátu CBOR (RFC 8949)."
 ---
 import Image from '@theme/IdealImage';
 

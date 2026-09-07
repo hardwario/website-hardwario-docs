@@ -1,7 +1,6 @@
 ---
 slug: installation-os
 title: Předinstalovaný obraz
-description: "Tento návod ukazuje, jak na Raspberry Pi s nainstalovaným systémem Raspberry Pi OS nainstalovat všechny nástroje potřebné pro práci se zařízeními HARDWARIO TOWER."
 ---
 import Image from '@theme/IdealImage';
 
@@ -78,7 +77,7 @@ Bez dalšího nastavení musíte být na **stejné síti jako Raspberry Pi**.
 
 :::
 
-Pro připojení k **Raspberry Pi** máte dvě možnosti, které lze zadat do adresního řádku:
+K **Raspberry Pi** se můžete připojit dvěma způsoby, které lze zadat do adresního řádku:
 - IP adresa Raspberry Pi (jak ji zjistit, najdete v [**průvodci přihlášením**](./login-guide.md#find-out-raspberry-pi-ip) )
 - Hostname, který jste nastavili v předchozím kroku (v tomto návodu je to [**hub.local**](http://hub.local))
 

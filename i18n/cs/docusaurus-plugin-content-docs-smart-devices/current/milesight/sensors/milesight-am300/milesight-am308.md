@@ -1,7 +1,6 @@
 ---
 slug: milesight-am308
 title: AM308(L)
-description: "Milesight AM308 a AM308L jsou vnitřní senzory pro monitorování prostředí, které měří osm parametrů: teplotu, vlhkost, pohyb (PIR), osvětlení, CO₂, TVOC, barometrický tlak, PM2.5 a PM10. Model AM308 je vybaven 4,2\" E-Ink displejem pro zobrazení hodnot…"
 ---
 import Image from '@theme/IdealImage';
 

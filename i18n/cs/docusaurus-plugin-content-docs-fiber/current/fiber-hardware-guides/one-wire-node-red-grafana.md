@@ -1,6 +1,5 @@
 ---
 title: Čtení senzorů 1-Wire do Grafany
-description: "Osm izolovaných portů 1-Wire zařízení FIBER se v Linuxu objevuje jako osm nezávislých bus masterů, takže sonda"
 ---
 
 # Čtení senzorů 1-Wire do Grafany {#reading-1-wire-sensors-into-grafana}

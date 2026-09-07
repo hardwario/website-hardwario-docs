@@ -1,7 +1,7 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
-description: "Vítejte! Tato stránka vám pomůže zapnout vaše zařízení HARDWARIO EMBER a vybrat, co dál:"
+description: "Rychlý start pro HARDWARIO EMBER: zapněte bránu a vyberte si backend LoRaWAN — spravovaný od HARDWARIO, nebo provozovaný vlastními silami."
 title_meta: "Rychlý průvodce (EMBER)"
 ---
 import Image from '@theme/IdealImage';
@@ -44,7 +44,7 @@ Popis hardwaru: https://docs.hardwario.com/ember/hardware-description/
 
 #### 1.1 Antény – už připojené {#11-antennas--already-connected}
 
-EMBER přichází se **dvěma anténami namontovanými uvnitř krabičky**, jednou pro **LoRaWAN** a jednou pro **LTE**,
+EMBER se dodává se **dvěma anténami namontovanými uvnitř krabičky**, jednou pro **LoRaWAN** a jednou pro **LTE**,
 obě připojené z výroby. **Není potřeba nic připojovat** a rádio nikdy nezůstane bez
 antény, takže můžete bránu hned zapnout.
 
@@ -141,7 +141,7 @@ Skript spusťte stisknutím **Enter**.
 Nyní je potřeba aktualizovat RouterOS. Přejděte na [Kontrola aktualizací RouterOS a jejich instalace, pokud jsou dostupné.](#checks-for-routeros-updates-and-installs-if-available).
 
 #### Ruční nastavení: {#manual-setup}
-Nastaví identitu systému na „ember".
+Nastaví identitu systému na „ember“.
 - **System → Identity** změňte identitu na **ember** a klikněte na **OK**.
 ![EMBER změna identity](../../../../ember/images/ember-change-identity.png)
 
@@ -173,7 +173,7 @@ Zapnutí úvodní poznámky.
 - V levém panelu **System → Note** odškrtněte **Show At Login** a klikněte na **OK**.
 ![EMBER přidání ether3 do bridge0](../../../../ember/images/ember-note.png)
 
-#### Kontrola aktualizací RouterOS a jejich instalace, pokud jsou dostupné. {#checks-for-routeros-updates-and-installs-if-available}
+#### Kontrola aktualizací RouterOS a jejich instalace, pokud jsou dostupné {#checks-for-routeros-updates-and-installs-if-available}
 - V levém panelu **System → Packages → Check for Updates**. Otevře se nové okno, zkontrolujte, zda verze odpovídají. Pokud ne, klikněte na **Download&Install** a několik minut vyčkejte.
 ![EMBER aktualizace RouterOS](../../../../ember/images/ember-update-routeros.png)
 
@@ -306,7 +306,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 - Zkontrolujte LED indikátory ethernetového spoje.
 - Pokud jste ještě nespustili konfigurační skript, výchozí IP může být stále `172.31.255.254`.
 
-#### Brána je zapnutá, ale LoRaWAN server ji „nevidí" {#gateway-is-powered-but-not-seen-in-the-lorawan-server}
+#### Brána je zapnutá, ale LoRaWAN server ji „nevidí“ {#gateway-is-powered-but-not-seen-in-the-lorawan-server}
 - Zkontrolujte, zda je propojka odstraněná. Obrázek najdete [zde](#21-connect-to-ember-using-winbox-4).
 - Potvrďte cíl přeposílání brány (adresa serveru / porty / protokol).
 - Zkontrolujte připojení k internetu přes WAN/LTE.

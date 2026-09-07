@@ -1,7 +1,7 @@
 ---
 slug: uplink
 title: Uplink
-description: "downlinku. Uplinky nesou data, která CHESTER hlásí: naměřené hodnoty ze"
+description: "Uplink je zpráva odeslaná ze zařízení do cloudu, protějšek downlinku."
 ---
 
 # Uplink {#uplink}

@@ -1,7 +1,6 @@
 ---
 slug: general-configuration
 title: Obecná konfigurace
-description: "Toto video se věnuje konfiguraci zařízení přes NFC pomocí mobilního telefonu a aplikace Milesight ToolBox."
 ---
 import Image from '@theme/IdealImage';
 import Link from '@docusaurus/Link';

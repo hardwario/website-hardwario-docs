@@ -1,7 +1,6 @@
 ---
 slug: installation-on-macos
 title: Instalace na macOS
-description: "Následující článek vás provede instalací CHESTER SDK na macOS. Tento návod byl otestován na verzích macOS 12 (Monterey) a macOS 13 (Ventura)."
 ---
 import Image from '@theme/IdealImage';
 

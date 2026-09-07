@@ -1,7 +1,6 @@
 ---
 slug: requirements
 title: Požadavky
-description: "Tento článek definuje požadavky, pokud chcete začít s vývojem s CHESTER SDK."
 ---
 import Image from '@theme/IdealImage';
 

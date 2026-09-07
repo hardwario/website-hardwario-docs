@@ -45,7 +45,7 @@ activation step.
 
 1. Connect the PoE adapter (must be 802.3af compliant) to the wall socket.
 
-1. Connect an Ethernet cable between the LAN port of the PoE adapter and your LAN router (unless WiFi connectivity is desired).
+1. Connect an Ethernet cable between the LAN port of the PoE adapter and your LAN router (unless Wi-Fi connectivity is desired).
 
 1. Connect the USB-B cable to **HOST** and the backside USB connector on the **TARGET**.
 

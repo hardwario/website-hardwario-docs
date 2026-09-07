@@ -1,7 +1,7 @@
 ---
 slug: devices
 title: Zařízení
-description: "Stránka Devices vypisuje všechna IoT zařízení zaregistrovaná ve vašem prostoru. Každé zařízení odpovídá fyzickému zařízení CHESTER (nebo jinému zařízení HARDWARIO) a má vlastní identitu, stav a konfiguraci."
+description: "Stránka Zařízení vypisuje všechna zařízení IoT registrovaná ve vašem prostoru."
 title_meta: "Zařízení (HARDWARIO Cloud)"
 ---
 
@@ -29,7 +29,7 @@ Vyplňte pole ručně:
 
 | Pole | Popis |
 |---|---|
-| **Name** | Čitelné jméno, například `warehouse-sensor-01` |
+| **Name** | Čitelný název, například `warehouse-sensor-01` |
 | **Serial Number (HSN)** | Sériové číslo HARDWARIO vytištěné na etiketě zařízení |
 | **Claim Token** | Token unikátní pro každé zařízení. Je vidět na QR kódu nebo přes `info show` po J-Link RTT |
 
@@ -48,7 +48,7 @@ Seznam zařízení zobrazuje u každého zařízení přehled:
 - **Name** a volitelný komentář
 - **Last Seen**: čas posledního uplinku
 - **Firmware**: název a verze aplikace
-- **Tags**: přiřazené tagy zobrazené jako barevné odznaky
+- **Tags**: přiřazené tagy zobrazené jako barevné štítky
 
 Kliknutím na řádek zařízení otevřete jeho detail.
 
@@ -73,7 +73,7 @@ Zobrazuje kompletní profil zařízení, vyplněný automaticky ze zpráv sessio
 
 ### Tags {#tags}
 
-Přiřazuje nebo odebírá tagy zařízení. Tagy určují, které konektory dostanou zprávy tohoto zařízení. Zařízení a konektor musí mít alespoň jeden tag společný, aby se zprávy přeposílaly.
+Přiřaďte nebo odeberte tagy zařízení. Tagy určují, které konektory dostanou zprávy tohoto zařízení. Zařízení a konektor musí mít alespoň jeden tag společný, aby se zprávy přeposílaly.
 
 ### Labels {#labels}
 

@@ -1,7 +1,6 @@
 ---
 slug: header-pinout
 title: Pinout konektorů
-description: "TOWER Kit klade důraz na hardwarovou modularitu a znovupoužitelnost. Aby toho bylo možné dosáhnout, musí se použít vhodný systém propojení."
 ---
 import Image from '@theme/IdealImage';
 

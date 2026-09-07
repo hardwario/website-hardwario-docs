@@ -1,7 +1,6 @@
 ---
 slug: antenna-gain
 title: "Zisk antény a výstupní výkon"
-description: "Tato stránka vysvětluje, jak funguje vysílací (TX) výkon u brány LoRa od MikroTik"
 ---
 
 # Zisk antény a výstupní výkon {#antenna-gain--output-power}
@@ -11,7 +10,7 @@ Tato stránka vysvětluje, jak funguje vysílací (TX) výkon u brány LoRa od M
 zůstala v zákonném limitu vyzářeného výkonu (EIRP).
 
 :::warning Přečtěte si to dřív, než připojíte externí anténu
-Brána **nemá žádné nastavení „TX power"**. Jediná RF regulace karty je
+Brána **nemá žádné nastavení „TX power“**. Jediná RF regulace karty je
 `antenna-gain` a její tovární výchozí hodnota je `0`. Pokud připojíte anténu se ziskem
 a ponecháte výchozí hodnotu, brána bude vyzařovat **nad** zamýšlený výkon a může
 překročit zákonný limit EIRP.
@@ -21,7 +20,7 @@ překročit zákonný limit EIRP.
 
 ## Co je zisk antény? {#what-is-antenna-gain}
 
-Zisk antény popisuje, jak moc anténa soustřeďuje radiovou energii do určitých
+Zisk antény popisuje, jak moc anténa soustřeďuje ráiovou energii do určitých
 směrů ve srovnání s teoretickou anténou, která vyzařuje rovnoměrně do všech
 směrů (**izotropní zářič**). Vyjadřuje se v **dBi**, decibelech
 vztažených k izotropnímu zářiči.
@@ -55,7 +54,7 @@ dále na horizontu.
 | Nízký (~0–2 dBi) | Široký | Zařízení poblíž / v různých výškách, např. uvnitř budov, vícepatrové objekty |
 | Vyšší (~6+ dBi) | Užší | Venkovní spoje na velkou vzdálenost, zařízení zhruba v úrovni brány nebo pod ní, rozmístěná horizontálně |
 
-Zisk antény volte podle konkrétního nasazení, ne podle pravidla „větší dosah = lepší".
+Zisk antény volte podle konkrétního nasazení, ne podle pravidla „větší dosah = lepší“.
 
 ---
 
@@ -71,7 +70,7 @@ radiated EIRP                    = radio output + antenna gain − cable loss
 
 - **`server_value`**: vysílací výkon, který požaduje síťový server, v dBm EIRP
   (pole `txpk.powe` protokolu Semtech UDP). V ChirpStack je to `downlink_tx_power` v
-  regionálním souboru (např. `region_eu868.toml`); `-1` znamená „použij maximum pásma".
+  regionálním souboru (např. `region_eu868.toml`); `-1` znamená „použij maximum pásma“.
 - **`antenna-gain`**: nastavení brány MikroTik, v dBi. Jde o **odečet**, nikoli
   o zesílení. Existuje proto, aby po přičtení zisku antény odpovídal vyzářený EIRP
   tomu, co server požadoval.

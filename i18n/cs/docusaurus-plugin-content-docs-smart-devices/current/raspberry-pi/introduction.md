@@ -1,7 +1,7 @@
 ---
 slug: /raspberry-pi
 title: "Raspberry Pi"
-description: "Raspberry Pi vyrábí cenově dostupné a kompaktní výpočetní moduly a jednodeskové počítače, které se hojně používají v IoT, embedded systémech a aplikacích edge computingu."
+description: "Raspberry Pi vyrábí cenově dostupné kompaktní výpočetní moduly a jednodeskové počítače, hojně používané v IoT, embedded systémech a edge computingu."
 ---
 
 # Raspberry Pi {#raspberry-pi}

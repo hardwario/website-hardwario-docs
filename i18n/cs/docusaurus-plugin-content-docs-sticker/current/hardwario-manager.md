@@ -1,7 +1,7 @@
 ---
 slug: hardwario-manager
 title: HARDWARIO Manager
-description: "Zařízení STICKER nemá žádná tlačítka, displej ani konfigurační kabel. Nastavuje se"
+description: "STICKER nemá tlačítka, displej ani konfigurační kabel. Nastavuje se přes NFC v mobilní aplikaci HARDWARIO Manager."
 title_meta: "HARDWARIO Manager (STICKER)"
 ---
 
@@ -31,7 +31,7 @@ STICKER. Aplikaci samotnou najdete kompletně popsanou v sekci **APPS**:
   zapnout NFC, popisuje [**Instalace aplikace**](/apps/hardwario-manager/install).
 - **Secret key** zařízení. Zařízení STICKER komunikuje šifrovaným kanálem NFC, takže
   bez něj aplikace nic nepřečte ani nezapíše. Každé zařízení přidáte jednou (viz
-  [**Uložené STICKERy**](/apps/hardwario-manager/sticker/saved-stickers)) a
+  [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)) a
   od té doby aplikace klíč doplňuje automaticky.
 
 ## Konfigurace bez baterií {#configuring-without-batteries}

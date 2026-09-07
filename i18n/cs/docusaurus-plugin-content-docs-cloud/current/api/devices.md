@@ -1,6 +1,5 @@
 ---
 title: Správa zařízení
-description: "Vytvářejte, upravujte a odstraňujte zařízení programově, užitečné při"
 ---
 
 # Správa zařízení {#managing-devices}
@@ -27,7 +26,7 @@ curl -X POST \
 
 :::info
 Claim Token je pro každé zařízení unikátní. Naskenujte jeho QR kód nebo jej
-načtěte shell příkazem `info show`. Viz [**První kroky**](/cloud/first-steps).
+načtěte příkaz shelluem `info show`. Viz [**První kroky**](/cloud/first-steps).
 :::
 
 Další endpointy pro zařízení: `PUT …/devices/{id}` (přejmenování, nastavení `external_id`, změna

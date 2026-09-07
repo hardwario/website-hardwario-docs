@@ -1,6 +1,5 @@
 ---
 title: Instalace ChirpStack Concentratord
-description: "Tato část instaluje a konfiguruje ChirpStack Concentratord pro modul LoRa koncentrátoru."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

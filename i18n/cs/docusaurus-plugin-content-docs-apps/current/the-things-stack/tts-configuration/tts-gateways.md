@@ -1,7 +1,6 @@
 ---
 slug: tts-gateways
 title: Brány
-description: "Tento návod vás provede přidáním a nastavením brány v The Things Stack."
 title_meta: "Brány (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';
@@ -19,7 +18,7 @@ Tento návod vás provede přidáním a nastavením brány v The Things Stack.
 
 ![Dashboard Home v The Things Stack s tlačítkem Register gateway v řádku rychlých akcí](../../../../../../apps/the-things-stack/tts-configuration/images/tts-gateways-0.png)
 
-2. Přesměruje vás to na stránku registrace brány.
+2. Budete přesměrováni na stránku registrace brány.
    - TTS si nejprve vyžádá **Gateway EUI** (použijte **Gateway ID** z RouterOS).
    - Gateway EUI najdete vytištěné na své fyzické bráně.
 

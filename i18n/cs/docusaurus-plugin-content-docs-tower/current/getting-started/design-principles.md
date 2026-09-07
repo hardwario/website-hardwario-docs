@@ -1,7 +1,6 @@
 ---
 slug: design-principles
 title: Principy návrhu
-description: "Věříme, že se věci mají dělat správně, a proto jsme přijali následující návrhová rozhodnutí."
 ---
 import Image from '@theme/IdealImage';
 
@@ -9,7 +8,7 @@ Věříme, že se věci mají dělat správně, a proto jsme přijali následuj�
 
 ## Radiová frekvence {#radio-frequency}
 
-Pro radiovou komunikaci používáme frekvenci 868/915 MHz. Jde o bezlicenční pásmo určené pro krátké signální zprávy.
+Pro ráiovou komunikaci používáme frekvenci 868/915 MHz. Jde o bezlicenční pásmo určené pro krátké signální zprávy.
 
 Zatěžovat vaše IoT zařízení pásmem 2,4 GHz a bojovat se streamováním po Wi-Fi, Bluetooth, ZigBee a dalšími protokoly spolehlivosti systému nepomůže.
 
@@ -31,8 +30,8 @@ Do embedded úrovně jsme přenesli několik inovativních technik – nejvýraz
 
 Také na straně hubu se MQTT drží asynchronních konceptů. To je skvělá příležitost navrhnout vlastní IoT systém v jednom, jednotném, asynchronním konceptu.
 
-## Přístup „CLI first" {#cli-first-approach}
+## Přístup „CLI first“ {#cli-first-approach}
 
-Command Line Interface (CLI) je v systému TOWER občan první kategorie. Právě tím se odlišujeme od většiny ostatních embedded IoT platforem. Přístup přes CLI zdůrazňujeme na prvním místě. Má řadu výhod – především můžete všechny operace provádět na takzvaných „headless" strojích – jako jsou servery, embedded počítače apod. Dále můžete snadno zapojit služby průběžné integrace, které dokážou automatizovat váš pracovní postup.
+Command Line Interface (CLI) je v systému TOWER občan první kategorie. Právě tím se odlišujeme od většiny ostatních embedded IoT platforem. Přístup přes CLI zdůrazňujeme na prvním místě. Má řadu výhod – především můžete všechny operace provádět na takzvaných „headless“ strojích – jako jsou servery, embedded počítače apod. Dále můžete snadno zapojit služby průběžné integrace, které dokážou automatizovat váš pracovní postup.
 
 Navíc ve spojení s Gitem, klientskými nástroji MQTT, logovacím mechanismem apod. rychle uvidíte, že váš pracovní postup je poměrně plynulý a efektivní.

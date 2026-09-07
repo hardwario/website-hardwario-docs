@@ -1,7 +1,6 @@
 ---
 slug: how-to-i2c-bus
-title: "How To: Sběrnice I²C"
-description: "Toto je hlavní sběrnice, kterou TOWER používá pro komunikaci s většinou senzorů a modulů. Všechny mají svou adresu v adresním prostoru TOWER I²C."
+title: "Jak na: Sběrnice I²C"
 ---
 import Image from '@theme/IdealImage';
 
@@ -35,7 +34,7 @@ Například `twr_i2c_init(TWR_I2C_I2C0, TWR_I2C_SPEED_400_KHZ);` inicializuje **
 
 ### Čtení {#read}
 
-Pro čtení 8 nebo 16 bitů můžete použít vestavěné funkce SDK
+Chcete-li přečíst 8 nebo 16 bitů, můžete použít vestavěné funkce SDK
 
 ```c showLineNumbers
 bool twr_i2c_memory_read_8b (twr_i2c_channel_t channel, uint8_t device_address, uint32_t memory_address, uint8_t *data)
@@ -66,7 +65,7 @@ Ukázka kódu pro čtení 8 bitů přes I²C
 
 :::info
 
-Pro čtení většího množství dat přes **I²C** musíte vytvořit strukturu `twr_i2c_memory_transfer_t`.
+Chcete-li přes **I²C** přečíst větší množství dat, musíte vytvořit strukturu `twr_i2c_memory_transfer_t`.
 
 :::
 

@@ -1,7 +1,6 @@
 ---
 slug: embedding-dashboards
 title: Vkládání dashboardů
-description: "Tento návod vás provede vložením dashboardů ThingsBoard do externích webových aplikací. Je optimalizovaný pro dokumentační frameworky založené na Reactu, jako je Docusaurus (MDX), ale stejný přístup s iframe funguje na jakékoli HTML stránce."
 ---
 import Image from '@theme/IdealImage';
 
@@ -13,7 +12,7 @@ Tento návod vás provede vložením dashboardů ThingsBoard do externích webov
 
 ## Předpoklad: veřejný přístup {#prerequisites-public-access}
 
-Než začnete cokoli vkládat, musí být dashboard **a jeho zdroje dat** veřejně přístupné. Pokud tento krok vynecháte, návštěvníci uvidí místo grafů přihlašovací obrazovku ThingsBoardu.
+Než začnete cokoli vkládat, musí být dashboard **a jeho zdroje dat** veřejně přístupné. Pokud tento krok vynecháte, návštěvníci uvidí místo grafů přihlašovací obrazovku ThingsBoard.
 
 Ve zkratce potřebujete:
 1. Zveřejnit **grupu dashboardů**.

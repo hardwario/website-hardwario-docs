@@ -1,6 +1,5 @@
 ---
 title: Výpočetní platforma
-description: "Klíčové vlastnosti:"
 ---
 
 # Výpočetní platforma {#processing-platform}

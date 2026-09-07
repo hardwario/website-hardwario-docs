@@ -1,7 +1,6 @@
 ---
 slug: templates
 title: Šablony
-description: "Šablona je znovupoužitelný konfigurační preset: zachyťte jednou, aplikujte na"
 ---
 
 # Šablony: vytvoření, sdílení, úprava a aplikace {#templates-create-share-edit-and-apply}

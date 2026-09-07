@@ -1,7 +1,7 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
-description: "Děkujeme, že jste si vybrali zařízení GLIDER."
+description: "Rychlý start pro GLIDER: zapněte zařízení, zaregistrujte ho v HARDWARIO Cloud a sledujte, jak dorazí první naměřené hodnoty."
 title_meta: "Rychlý průvodce (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
@@ -33,7 +33,7 @@ Pro vyšší bezpečnost doporučujeme přihlašování přes **Google** nebo **
 
 1. V pravém horním rohu klikněte na **SPACES → NEW SPACE**
 2. Pojmenujte svůj space (například: `my-home`, `office-sensors`, `warehouse`)
-3. Zde budou žít vaše **zařízení GLIDER**.
+3. Právě sem budou patřit vaše **zařízení GLIDER**.
 
 :::caution
 Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**](https://docs.hardwario.com/cloud/#naming-conventions).
@@ -57,7 +57,7 @@ Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**
  - **Claim Token**
 
 :::info
-**Claim Token** a **sériové číslo** jsou pro každé zařízení jedinečné. Získáte je **naskenováním QR kódu** na zařízení libovolnou čtečkou QR kódů, spuštěním **`AT$INFO?`** přes [**USB-C AT konzoli**](console/usb-at.md) nebo spuštěním **`info show`** přes [**J-Link RTT konzoli**](console/rtt-jlink.md).
+**Claim Token** a **sériové číslo** jsou pro každé zařízení jedinečné. Získáte je **naskenováním QR kódu** na zařízení libovolnou čtečkou QR kódů, spuštěním **`AT$INFO?`** přes [**USB-C konzoli AT**](console/usb-at.md) nebo spuštěním **`info show`** přes [**J-Link RTT konzoli**](console/rtt-jlink.md).
 :::
 
 4. Uložte to: vaše zařízení GLIDER je nyní **registrováno v cloudu**!
@@ -99,7 +99,7 @@ Pokud se zařízení nepřipojí, zkuste některou z těchto rychlých akcí:
 Pokud má vaše zařízení stále problém připojit se k síti (zejména při použití vlastní SIM karty nebo roamingu):
 
 * **Zkontrolujte síťový režim:** GLIDER se dodává s výchozím zapnutím **LTE pásma 8** a **LTE pásma 20** (Evropa). Pro nasazení mimo EU může být potřeba zapnout další pásma.
-* **Ověřte APN/PLMN:** Pokud používáte jinou než výchozí SIM kartu, nakonfigurujte APN přes AT konzoli.
+* **Ověřte APN/PLMN:** Pokud používáte jinou než výchozí SIM kartu, nakonfigurujte APN přes konzoli AT.
 * **Čtěte logy modemu:** Připojte [**RTT konzoli (J-Link)**](console/rtt-jlink.md) – modem vypisuje každý pokus o připojení, úroveň signálu a vyjednávání APN přímo do logu.
 
 ---
@@ -130,9 +130,9 @@ LED můžete také ručně přepínat z libovolné konzole příkazem `led`, viz
 2. Klikněte na **ikonu chatu** vedle svého zařízení
 3. Uvidíte **zprávy a živá data** odeslaná ze zařízení GLIDER
 
-Ve výchozím nastavení GLIDER vzorkuje senzory každých **60 sekund** a odesílá payload každých **300 sekund (5 minut)**. Pro vynucení okamžitého uplinku:
+Ve výchozím nastavení GLIDER vzorkuje senzory každých **60 sekund** a odesílá payload každých **300 sekund (5 minut)**. Chcete-li vynutit okamžitý uplink:
 
-- **AT konzole (USB-C):** `AT$SHELL="app send"`
+- **konzole AT (USB-C):** `AT$SHELL="app send"`
 - **RTT konzole (J-Link):** `app send`
 
 Vysvětlení struktury payloadu najdete v části [**CBOR Payload**](payload.md).
@@ -143,7 +143,7 @@ Vysvětlení struktury payloadu najdete v části [**CBOR Payload**](payload.md)
 
 Po připojení můžete:
 
-- Použít [**USB-C AT konzoli**](console/usb-at.md): doporučeno pro běžné zprovoznění
+- Použít [**USB-C konzoli AT**](console/usb-at.md): doporučeno pro běžné zprovoznění
 - Použít [**J-Link RTT konzoli**](console/rtt-jlink.md): plný vývojářský přístup s logy a Zephyr shellem
 
 Běžné konfigurační úlohy:
@@ -174,7 +174,7 @@ Vždy je dobré se ujistit, že vaše zařízení GLIDER běží na **nejnověj�
 
 Zkontrolovat ji můžete dvěma způsoby:
 
-1. **Přes USB-C (AT konzole):**
+1. **Přes USB-C (konzole AT):**
  ```text
  AT+CGMR
  ```
@@ -192,7 +192,7 @@ Zkontrolovat ji můžete dvěma způsoby:
 
 Pokud je k dispozici novější verze, můžete zařízení GLIDER aktualizovat dvěma způsoby:
 
-1. **Přes AT konzoli (USB-C)**: doporučeno pro produkční jednotky a aktualizace v terénu. Není potřeba programátor.
+1. **Přes konzoli AT (USB-C)**: doporučeno pro produkční jednotky a aktualizace v terénu. Není potřeba programátor.
  [**Aplikace přes AT (USB-C)**](firmware-flashing/application-over-at.md)
 
 2. **Přes J-Link (SWD)**: doporučeno pro vývoj.

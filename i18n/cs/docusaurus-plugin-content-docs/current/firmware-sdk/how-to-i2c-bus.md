@@ -1,7 +1,6 @@
 ---
 slug: how-to-i2c-bus
 title: "Jak na: sběrnice I²C"
-description: "Tento článek ukazuje, jak komunikovat s cílovými zařízeními na sběrnici I²C (zařízení CHESTER je na sběrnici v roli controlleru)."
 ---
 import Image from '@theme/IdealImage';
 
@@ -11,7 +10,7 @@ Tento článek ukazuje, jak komunikovat s cílovými zařízeními na sběrnici 
 
 :::caution
 
-Z pohledu Zephyru je správný způsob komunikace s cílovými zařízeními I²C vytvoření řádného ovladače zařízení podle [modelu ovladačů zařízení Zephyr](https://docs.zephyrproject.org/latest/kernel/drivers/index.html).
+Z pohledu systému Zephyr je správný způsob komunikace s cílovými zařízeními I²C vytvoření řádného ovladače zařízení podle [modelu ovladačů zařízení Zephyr](https://docs.zephyrproject.org/latest/kernel/drivers/index.html).
 
 Pro jednoduché ověření konceptu však lze použít následující postup.
 

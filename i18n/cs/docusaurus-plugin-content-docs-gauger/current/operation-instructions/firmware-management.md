@@ -1,7 +1,6 @@
 ---
 slug: firmware-management
 title: Správa firmwaru
-description: "Zařízení umožňuje vzdálenou aktualizaci firmwaru přes vzduch (over-the-air). Spustíte ji stisknutím tlačítka Upload Firmware v sekci System webového rozhraní. Po nahrání firmwaru se zařízení restartuje, aby se změna uplatnila. Nahrání můžete ověřit v…"
 ---
 
 # Správa firmwaru {#firmware-management}

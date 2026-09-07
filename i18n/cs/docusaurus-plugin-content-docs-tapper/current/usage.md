@@ -1,7 +1,7 @@
 ---
 slug: /usage
 title: Používání klienta
-description: "Použití: tapper COMMAND [OPTIONS] [ARGS]..."
+description: "Použití klienta TAPPER z příkazové řádky: příkazy, volby a argumenty pro ovládání čtečky NFC ze shellu."
 ---
 
 import Image from '@theme/IdealImage';
@@ -22,7 +22,7 @@ Vypíše verzi buildu klienta TAPPER na stdout.
 
 Spustí klienta.
 
-`tapper run [OPTIONS]` nebo `sudo ~/.local/bin/tapper run [OPTIONS]`, pokud chcete použít konfiguraci WiFi.
+`tapper run [OPTIONS]` nebo `sudo ~/.local/bin/tapper run [OPTIONS]`, pokud chcete použít konfiguraci Wi-Fi.
 
 :::info 
 
@@ -93,9 +93,9 @@ Viz [Nastavení MQTT TLS](/tapper/tls-setup/)
 
 :::
 
-### WiFi {#wifi}
+### Wi-Fi {#wifi}
 
-- WiFi lze nastavit buď ve statickém, nebo v dynamickém režimu.
+- Wi-Fi lze nastavit buď ve statickém, nebo v dynamickém režimu.
 
 :::tip
 
@@ -103,7 +103,7 @@ Pole `passphrase` může obsahovat hodnotu `psk` získanou z `wpa_passphrase`.
 
 :::
 
-#### Dynamický {#dynamic}
+#### Dynamický režim {#dynamic}
 
 Dynamický režim používá DHCP a nastavuje adresu, bránu a DNS servery automaticky.
 
@@ -114,7 +114,7 @@ wifi:
   mode: "dynamic"
 ```
 
-#### Statický {#static}
+#### Statický režim {#static}
 
 Ve statickém režimu musíte nastavit vše ručně.
 

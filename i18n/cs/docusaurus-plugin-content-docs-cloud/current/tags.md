@@ -1,13 +1,13 @@
 ---
 slug: tags
 title: Tagy
-description: "Tagy jsou pojmenované štítky s barvou, které přiřazujete zařízením i konektorům. Jsou lepidlem, které propojuje zařízení s konektory: zpráva ze zařízení se předá jen těm konektorům, které s daným zařízením sdílejí alespoň jeden tag."
+description: "Tagy jsou pojmenované barevné značky, které přiřazujete zařízením i konektorům."
 title_meta: "Tagy (HARDWARIO Cloud)"
 ---
 
 # Tagy {#tags}
 
-Tagy jsou **pojmenované štítky s barvou**, které přiřazujete zařízením i konektorům. Jsou lepidlem, které propojuje zařízení s konektory: zpráva ze zařízení se předá jen těm konektorům, které s daným zařízením sdílejí alespoň jeden tag.
+Tagy jsou **pojmenované barevné značky**, které přiřazujete zařízením i konektorům. Jsou tím pojivem, které propojuje zařízení s konektory: zpráva ze zařízení se předá jen těm konektorům, které s daným zařízením sdílejí alespoň jeden tag.
 
 ## Proč tagy? {#why-tags}
 
@@ -21,13 +21,13 @@ Tagy umožňují flexibilní směrování zpráv, aniž byste kamkoli natvrdo za
 
 1. Otevřete **Tags** v levém postranním panelu a klikněte na **+&nbsp;NEW TAG**.
 
-   ![Stránka Tags se zvýrazněným tlačítkem „+ NEW TAG"](../../../../cloud/images/tags-list.png)
+   ![Stránka Tags se zvýrazněným tlačítkem „+ NEW TAG“](../../../../cloud/images/tags-list.png)
 
 2. Zadejte název (podle [konvencí pojmenování](/cloud/#naming-conventions)), zvolte **barvu** pro vizuální identifikaci v pohledech na zařízení a konektory a klikněte na **CREATE**.
 
    <div className="screenshot-narrow">
 
-   ![Dialog „Create new tag" s názvem, výběrem barvy a živým náhledem](../../../../cloud/images/tag-create.png)
+   ![Dialog „Create new tag“ s názvem, výběrem barvy a živým náhledem](../../../../cloud/images/tag-create.png)
 
    </div>
 

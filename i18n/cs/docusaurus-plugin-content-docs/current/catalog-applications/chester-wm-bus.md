@@ -1,7 +1,6 @@
 ---
 slug: chester-wm-bus
 title: CHESTER wM-Bus
-description: "Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:"
 ---
 import Image from '@theme/IdealImage';
 
@@ -53,7 +52,7 @@ Toto zařízení podporuje novější stack **LTEv2** a **HARDWARIO Cloud v2**.
 
 ### CHESTER wM-Bus {#chester-wm-bus-1}
 
-Bateriové napájení 6 ks alkalických článků „D".
+Bateriové napájení 6 ks alkalických článků „D“.
 
 Katalogový hardware **CHESTER wM-Bus** se skládá z těchto objednacích kódů:
 

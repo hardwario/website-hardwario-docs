@@ -1,7 +1,6 @@
 ---
 slug: about-bridge-module
-title: O modulu Bridge
-description: "Konektor microUSB nejen zajišťuje komunikační linku, ale také dodává napájení pro modul Bridge a periferie k němu připojené."
+title: O modulu Bridge Module
 ---
 import Image from '@theme/IdealImage';
 
@@ -26,10 +25,10 @@ import Image from '@theme/IdealImage';
 - Konektor micro-USB
 - Dvě nezávislé sběrnice I2C zajištěné multiplexerem I2C TCA9543
 - LED červené barvy (řízená z GPIO pinu FT260)
-- Rozsah provozního napětí: 3.0 až 3.6 V nebo z USB hostu
+- Rozsah provozního napětí: 3,0 až 3,6 V nebo z USB hostu
 - Rozsah provozních teplot: -20 až 70 °C
 - Mechanické rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/bridge-module)
+- [**Obchod**](https://www.hardwario.store/p/bridge-module)
 - [**Schémata**](https://github.com/hardwario/twr-hardware/tree/master/out/bc-module-bridge)

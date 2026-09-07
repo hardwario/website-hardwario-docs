@@ -1,7 +1,6 @@
 ---
 slug: chester-x1
 title: CHESTER-X1 (8kanálový 1-Wire)
-description: "Tento článek popisuje rozšiřující modul CHESTER-X1."
 ---
 import Image from '@theme/IdealImage';
 

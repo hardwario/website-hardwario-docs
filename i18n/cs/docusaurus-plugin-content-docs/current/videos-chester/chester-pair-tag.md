@@ -1,7 +1,6 @@
 ---
 slug: chester-pair-tag
 title: Jak spárovat Bluetooth tag se zařízením CHESTER
-description: "V tomto průvodci se naučíte, jak spárovat a spravovat až osm tagů se zařízením CHESTER. Ukážeme vám, jak tagy zaregistrovat, zkontrolovat a jak z nich čítat data přímo v konzoli aplikace HARDWARIO Manager."
 ---
 
 import Image from '@theme/IdealImage';

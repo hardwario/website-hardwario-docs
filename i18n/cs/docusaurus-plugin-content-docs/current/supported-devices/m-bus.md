@@ -1,7 +1,6 @@
 ---
 slug: m-bus_sensors
 title: M-Bus senzory
-description: "Tato stránka shrnuje rozhraní M-Bus a koncepty konfigurace používané"
 ---
 
 import Image from '@theme/IdealImage';

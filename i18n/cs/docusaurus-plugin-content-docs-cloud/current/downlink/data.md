@@ -1,6 +1,5 @@
 ---
 title: Data
-description: "Downlink typu data posílá do zařízení objekt JSON. Váš firmware jej dekóduje"
 ---
 
 # Data {#data}

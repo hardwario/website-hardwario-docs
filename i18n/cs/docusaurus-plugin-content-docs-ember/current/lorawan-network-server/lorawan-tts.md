@@ -1,7 +1,6 @@
 ---
 slug: lorawan-tts
 title: The Things Stack
-description: "Tento návod ukazuje, jak připojit LoRaWAN bránu HARDWARIO EMBER (MikroTik RouterOS) k The Things Stack (TTS)."
 title_meta: "The Things Stack (EMBER)"
 ---
 import Image from '@theme/IdealImage';
@@ -67,7 +66,7 @@ V levém panelu otevřete **IoT**→ **LoRa**→ **Servers**. Vyberte **New** a 
 
 ### Root certifikáty (nutné pro SSL/TLS) {#root-certificates-required-for-ssltls}
 
-Pro vytvoření zabezpečeného TLS připojení k **The Things Stack (LNS / CUPS)** naimportujte do RouterOS oficiální **Root CA certifikáty The Things Stack** a označte je jako **trusted**.
+Chcete-li vytvořit zabezpečené připojení TLS k **The Things Stack (LNS / CUPS)**, naimportujte do RouterOS oficiální **Root CA certifikáty The Things Stack** a označte je jako **trusted**.
 
 - Certifikáty stáhněte zde:  
   https://www.thethingsindustries.com/docs/reference/root-certificates/

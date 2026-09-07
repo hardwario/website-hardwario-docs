@@ -1,7 +1,6 @@
 ---
 slug: playground-installation
-title: Instalace Playground
-description: "Snažili jsme se, aby instalace nástroje Playground byla co nejjednodušší, a proto jsme vytvořili instalační balíčky pro všechny hlavní operační systémy."
+title: Instalace aplikace HARDWARIO Playground
 ---
 import Image from '@theme/IdealImage';
 

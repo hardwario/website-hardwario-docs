@@ -1,17 +1,16 @@
 ---
 slug: concentratord-spi-not-detected
 title: Koncentrátor FIBER Lite nikdy nezobrazí Gateway ID
-description: "Gateway ID, stránka brány v ChirpStack nikdy nezobrazí časové razítko „Last seen at\" a do ChirpStack"
 ---
 
 **Příznak:** na zařízení FIBER Lite (SPI/RAK2287) logy vlastní služby koncentrátoru nikdy nevypíšou
-Gateway ID, stránka brány v ChirpStack nikdy nezobrazí časové razítko „Last seen at" a do ChirpStack
+Gateway ID, stránka brány v ChirpStack nikdy nezobrazí časové razítko „Last seen at“ a do ChirpStack
 nedorazí žádný join-request, přestože koncové zařízení LoRaWAN je zapnuté a v dosahu.
 
 Postupujte v uvedeném pořadí. První dvě příčiny jsou zdaleka nejčastější a obě vypadají jako vadný
 hardware, přitom jde o čistou konfiguraci.
 
-## 1. Démon se zasekne na „Opening SPI communication interface" {#1-the-daemon-hangs-on-opening-spi-communication-interface}
+## 1. Démon se zasekne na „Opening SPI communication interface“ {#1-the-daemon-hangs-on-opening-spi-communication-interface}
 
 Zjistěte, kde se služba skutečně zastaví:
 
@@ -80,7 +79,7 @@ Raspberry Pi 5. Přesaďte jej a zkontrolujte ohnuté piny.
 
 ## 4. Ověření, že samotný čip koncentrátoru odpovídá {#4-proving-the-concentrator-chip-itself-responds}
 
-Pokud potřebujete definitivně odlišit „mrtvý hardware" od „špatné konfigurace", načtěte registry
+Pokud potřebujete definitivně odlišit „mrtvý hardware“ od „špatné konfigurace“, načtěte registry
 čipu SX1302 přímo přes SPI a přitom přepínejte reset linku. Nainstalujte `python3-spidev` a
 `python3-libgpiod`, držte reset pin (`gpiochip0` linka 17) v nízké úrovni a přečtěte registr
 5bajtovým rámcem `[0x00, addr >> 8, addr & 0xFF, 0x00, 0x00]`, přičemž výsledek berte z bajtu 4.

@@ -1,7 +1,6 @@
 ---
 slug: lora-at-commands
 title: Konfigurace pomocí AT příkazů LoRa
-description: "Tento dokument popisuje, jak konfigurovat zařízení HARDWARIO TOWER s LoRa pomocí AT příkazů přes virtuální sériový port USB."
 ---
 import Image from '@theme/IdealImage';
 
@@ -79,7 +78,7 @@ AT$HELP This help
 
 ### Čtení hodnoty {#read-value}
 
-Pro přečtení hodnoty proměnné stačí na konec **odpovídajícího AT příkazu** připojit otazník `?`
+Hodnotu proměnné přečtete tak, že na konec **odpovídajícího AT příkazu** připojit otazník `?`
 
 ```
 AT$APPSKEY?

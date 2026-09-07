@@ -1,7 +1,6 @@
 ---
 slug: lorawan-chirpstack
 title: ChirpStack v4
-description: "Tato stránka je praktický checklist pro připojení zařízení HARDWARIO CHESTER k síti LoRaWAN pomocí ChirpStack v4."
 title_meta: "ChirpStack v4 (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
@@ -133,7 +132,7 @@ Zařízení uložte.
 ### 5.3 Nastavení AppKey v ChirpStack {#53-configure-appkey-in-chirpstack}
 
 - V detailu zařízení nastavte nebo vygenerujte **AppKey**
-- AppKey pečlivě zkopírujte (případně použijte ikonu „oka")
+- AppKey pečlivě zkopírujte (případně použijte ikonu „oka“)
 - Stejný AppKey použijte v konfiguraci zařízení CHESTER
 
 ---
@@ -141,7 +140,7 @@ Zařízení uložte.
 
 ## 6) Dekodér payloadu (doporučeno) {#6-payload-decoder-recommended}
 
-Pro dekódování uplink payloadů ze zařízení CHESTER:
+Chcete-li dekódovat payloady uplinku ze zařízení CHESTER:
 
 1. Otevřete **Device Profile**
 2. Přejděte na **Codec**

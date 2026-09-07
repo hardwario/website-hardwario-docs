@@ -1,7 +1,6 @@
 ---
 slug: bmeters-rfm-tx1.1
 title: BMeters RFM-TX1.1
-description: "Webové stránky"
 ---
 import Image from '@theme/IdealImage';
 

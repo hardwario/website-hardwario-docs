@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
 - |→⬛| **OFF**: DIP switch in the OFF position (black)
 
 ## 1-Wire Input
-Wiring for 1-WIRE (Dallas, ...):
+Wiring for 1-Wire (Dallas, ...):
 - DIP switches enable the data lines (DQ1/DQ2).
 
 ![STICKER 1-Wire](images/sticker-1w.png)

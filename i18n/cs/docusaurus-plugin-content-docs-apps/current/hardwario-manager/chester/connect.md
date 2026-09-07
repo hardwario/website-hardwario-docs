@@ -1,7 +1,6 @@
 ---
 slug: connect
 title: Připojení a párování
-description: "Otevřete HARDWARIO Manager → CHESTER. Pokud není nic připojené, zobrazí"
 ---
 
 # Připojení k zařízení CHESTER {#connect-to-a-chester}
@@ -72,7 +71,7 @@ Ukládá se jen sériové číslo a název, žádné klíče ani tajné údaje.
 
 ---
 
-## Join a shared session {#join-a-shared-session}
+## Připojení ke sdílené relaci {#join-a-shared-session}
 
 **Join a shared session** se k zařízení nepřipojuje vůbec. Napojí se na zařízení
 CHESTER, které kolega sdílí ze svého telefonu, takže můžete jeho konzoli ovládat

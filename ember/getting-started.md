@@ -173,7 +173,7 @@ Turn on welcome note.
 - In the left panel **System → Note**, uncheck **Show At Login** and click **OK**.
 ![EMBER ether3 add to bridge0](images/ember-note.png)
 
-#### Checks for RouterOS updates and installs if available.
+#### Checks for RouterOS updates and installs if available
 - In the left panel **System → Packages → Check for Updates**. A new window will open, check if the versions match. If not, click **Download&Install** and wait a few minutes.
 ![EMBER RouterOS update](images/ember-update-routeros.png)
 

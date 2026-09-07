@@ -86,11 +86,11 @@ Communication parameters can be configured directly via the official software pr
 The configuration tool can be downloaded here:  
 **[Download ORNO configuration software for OR-WE-516](OR-WE-516_program.7z)**
 
-To connect the device to your PC, use a **standard USB–RS485 converter**.  
+To connect the device to your PC, use a **standard USB–RS-485 converter**.  
 
 :::info
-Connect the USB side of a standard USB–RS485 converter to your computer, where the ORNO configuration software is installed.
-Then, connect the RS485 side of the converter to the energy meter’s communication terminals by wiring **terminal A to pin 21** and **terminal B to pin 20**.
+Connect the USB side of a standard USB–RS-485 converter to your computer, where the ORNO configuration software is installed.
+Then, connect the RS-485 side of the converter to the energy meter’s communication terminals by wiring **terminal A to pin 21** and **terminal B to pin 20**.
 :::
 
 

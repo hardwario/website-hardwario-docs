@@ -1,13 +1,12 @@
 ---
 slug: gateway-update
 title: Aktualizace brány
-description: "Tento návod vás provede aktualizací balíčků RouterOS a RouterBOARD (firmware/„BIOS\") pomocí aplikace Winbox 4."
 ---
 import Image from '@theme/IdealImage';
 
 # Aktualizace brány MikroTik {#mikrotik-gateway-update}
 
-Tento návod vás provede aktualizací balíčků RouterOS a RouterBOARD (firmware/„BIOS") pomocí aplikace Winbox 4.
+Tento návod vás provede aktualizací balíčků RouterOS a RouterBOARD (firmware/„BIOS“) pomocí aplikace Winbox 4.
 
 ---
 
@@ -23,7 +22,7 @@ V levém panelu **System → Packages → Check for Updates**. Otevře se nové 
 
 ---
 
-## 2. Aktualizace RouterBOARD (firmware/„BIOS") {#2-update-routerboard-firmwarebios}
+## 2. Aktualizace RouterBOARD (firmware/„BIOS“) {#2-update-routerboard-firmwarebios}
 
 1. V levém menu otevřete **System → RouterBOARD**.
 2. Porovnejte **Current Firmware** s **Upgrade Firmware**.

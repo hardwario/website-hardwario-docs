@@ -1,7 +1,6 @@
 ---
 slug: samples
 title: Ukázky
-description: "V podsložce SDK samples\\ najdete mnoho ukázek vysvětlujících práci s různými senzory a subsystémy. Každá ukázka je samostatný projekt, který můžete zkompilovat a nahrát do zařízení CHESTER."
 ---
 import Image from '@theme/IdealImage';
 

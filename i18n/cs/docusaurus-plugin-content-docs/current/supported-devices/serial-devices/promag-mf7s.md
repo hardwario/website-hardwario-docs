@@ -1,7 +1,6 @@
 ---
 slug: promag-mf7s
 title: Promag MF7S
-description: "Když je interval-report nastaven na 0, CHESTER odešle data okamžitě po přiložení karty:"
 ---
 
 import Image from '@theme/IdealImage';

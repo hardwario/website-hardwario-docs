@@ -1,12 +1,11 @@
 ---
 slug: milesight-am319
 title: AM319
-description: "Milesight AM319 je senzor kvality vnitřního ovzduší, který měří devět parametrů včetně teploty, vlhkosti, CO₂ a pevných částic. Výsledky zobrazuje na 4,2\" E-Ink displeji s přehlednými indikátory a data přenáší pomocí technologie LoRaWAN pro…"
 ---
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor AM319 {#milesight-sensor-am319}
+# Senzor Milesight AM319 {#milesight-sensor-am319}
 
 Milesight AM319 je **senzor kvality vnitřního ovzduší**, který měří **devět parametrů** včetně teploty, vlhkosti, CO₂ a pevných částic. Výsledky zobrazuje na **4,2" E-Ink displeji** s přehlednými indikátory a data přenáší pomocí **technologie LoRaWAN** pro komunikaci na velkou vzdálenost s nízkou spotřebou.
 

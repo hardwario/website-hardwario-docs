@@ -1,7 +1,6 @@
 ---
 slug: about-sensor-module
 title: O modulu Sensor Module
-description: "Modul Sensor Module nabízí až čtyři univerzální vstupy nebo výstupy na odnímatelné svorkovnici s podporou režimu master na sběrnici 1-Wire. Svorky lze použít jako analogový i digitální vstup/výstup. Můžete tak například připojit různé externí…"
 ---
 import Image from '@theme/IdealImage';
 
@@ -46,7 +45,7 @@ Prostřední pin VCC lze ovládat softwarově. Na tomto pinu můžete zapnout 3 
 - Rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Store**](https://www.hardwario.store/p/sensor-module)
+- [**Obchod**](https://www.hardwario.store/p/sensor-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-sensor)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__sensor)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_sensor.h)

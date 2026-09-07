@@ -1,7 +1,6 @@
 ---
 slug: mikrotik-configuration
 title: Konfigurace brány EMBER
-description: "V tomto průvodci se naučíte, jak nakonfigurovat rozhraní LoRa na bráně MikroTik pomocí rozhraní WebFig. Po provedení těchto kroků bude vaše brána připravena k připojení k serveru LoRaWAN a začne přijímat data z koncových zařízení."
 ---
 
 import Image from '@theme/IdealImage';

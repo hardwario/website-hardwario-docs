@@ -1,7 +1,6 @@
 ---
 slug: index
 title: Milesight - Brány
-description: "Zde je seznam bran Milesight testovaných společností HARDWARIO s odkazy na související zdroje:"
 ---
 
 Zde je seznam **bran Milesight** testovaných společností HARDWARIO s odkazy na související zdroje:

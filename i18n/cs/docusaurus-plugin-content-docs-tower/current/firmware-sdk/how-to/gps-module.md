@@ -1,7 +1,6 @@
 ---
 slug: how-to-gps-module
-title: "How To: GPS Module"
-description: "GPS Module lze použít pro získání pozice, času, data a výšky."
+title: "Jak na: GPS Module"
 ---
 import Image from '@theme/IdealImage';
 

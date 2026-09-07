@@ -1,7 +1,6 @@
 ---
 slug: change-log
 title: Historie změn zařízení
-description: "Historie změn zaznamenává u uloženého zařízení STICKER každé čtení konfigurace"
 ---
 
 # Zobrazení historie změn zařízení {#view-a-devices-change-log}

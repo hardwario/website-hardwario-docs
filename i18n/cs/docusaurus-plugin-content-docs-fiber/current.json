@@ -20,7 +20,7 @@
     "description": "The label for category 'FIBER Hardware Guides' in sidebar 'docs'"
   },
   "sidebar.docs.category.FIBER Hardware Guides.link.generated-index.description": {
-    "message": "Guides for the hardware only FIBER (CM4) has: the display and 1-Wire sensors.",
+    "message": "Návody k hardwaru, který má jen FIBER (CM4): displej a senzory 1-Wire.",
     "description": "The generated-index page description for category 'FIBER Hardware Guides' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hardware Description": {
@@ -28,7 +28,7 @@
     "description": "The label for category 'Hardware Description' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hardware Description.link.generated-index.description": {
-    "message": "FIBER processing platform, sensor interfaces, connectivity, and technical specifications.",
+    "message": "Výpočetní platforma FIBER, rozhraní pro senzory, konektivita a technické parametry.",
     "description": "The generated-index page description for category 'Hardware Description' in sidebar 'docs'"
   },
   "sidebar.docs.doc.Changelog": {

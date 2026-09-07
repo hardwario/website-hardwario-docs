@@ -1,7 +1,6 @@
 ---
 slug: integrations
 title: Integrace
-description: "ThingsBoard umožňuje plynulé propojení s externími systémy, cloudovými platformami a datovými službami. Tato sekce popisuje dostupné způsoby integrace, kterými rozšíříte svůj IoT ekosystém a zapnete pokročilé zpracování dat."
 title_meta: "Integrace (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';
@@ -14,10 +13,10 @@ ThingsBoard umožňuje plynulé propojení s externími systémy, cloudovými pl
 
 ## [ChirpStack](/apps/thingsboard/chirpstack-integration) {#chirpstack}
 
-Připojte svou infrastrukturu LoRaWAN přímo k platformě HARDWARIO ThingsBoard. Tato integrace překlenuje mezeru mezi vaším síťovým serverem ChirpStack a ThingsBoardem, takže můžete spravovat zařízení LoRaWAN, zpracovávat uplinky a posílat downlinky z jednoho rozhraní.
+Připojte svou infrastrukturu LoRaWAN přímo k platformě HARDWARIO ThingsBoard. Tato integrace překlenuje mezeru mezi vaším síťovým serverem ChirpStack a platformou ThingsBoard, takže můžete spravovat zařízení LoRaWAN, zpracovávat uplinky a posílat downlinky z jednoho rozhraní.
 
-**Integraci s ChirpStackem použijte, když potřebujete:**
-- Automaticky mapovat zařízení LoRaWAN na assety v ThingsBoardu
+**Integraci s platformou ChirpStack použijte, když potřebujete:**
+- Automaticky mapovat zařízení LoRaWAN na assety v platformě ThingsBoard
 - Vizualizovat telemetrii a metadata z LoRaWAN v reálném čase
 - Posílat downlink příkazy (RPC) přímo do svých zařízení LoRaWAN
 

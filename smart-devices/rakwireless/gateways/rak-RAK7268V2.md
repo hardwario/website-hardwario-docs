@@ -67,7 +67,7 @@ You can power the gateway using:
 
 You can connect to the gateway's local Web UI using one of two methods:
 
-#### WiFi AP Mode (Default)
+#### Wi-Fi AP Mode (Default)
 1. Connect your PC to the Wi-Fi SSID: `RAK7268CV2_XXXX` (where XXXX are the last bytes of the MAC address).
 2. No password is required.
 3. Open a web browser and go to `192.168.230.1`.
@@ -94,7 +94,7 @@ Once the password is set, you will be redirected to the **Dashboard**, where you
 Before the gateway can communicate with a network server, it needs an internet connection. Navigate to **Network > WAN**:
 
 * **Ethernet:** Plug the ETH port into your router; it uses DHCP by default.
-* **WiFi:** Go to **Wi-Fi**, enable the interface, and scan for your local network.
+* **Wi-Fi:** Go to **Wi-Fi**, enable the interface, and scan for your local network.
 * **Cellular (LTE Models):** If using a SIM card, configure the APN under **Cellular**.
 
 If your SIM card requires a PIN code, you need to configure it in the settings. Navigate to **Network → WAN → Cellular → General**, enable LTE Network, enter your SIM card PIN into the **PIN code** field, and click **Save**.

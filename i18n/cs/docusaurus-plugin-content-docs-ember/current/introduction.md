@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 **EMBER** je průmyslová platforma LoRaWAN, která přenáší a zpracovává měřené hodnoty ze senzorů a řídí akční členy v průmyslových areálech. Každá lokalita kombinuje venkovní bránu **EMBER Hotspot** se zařízeními LoRaWAN, jako je **CHESTER**, **LTE** backhaul přes **Onomondo** a **LoRaWAN Network Server** (**ChirpStack** nebo **The Things Stack**, buď provozovaný zákazníkem, nebo spravovaný jako služba společností **HARDWARIO**) s **Node-RED** pro low-code REST integrace, takže data lze vizualizovat a zpracovávat v cloudu i on-premise.
 
 :::tip
-### Pro zprovoznění zařízení EMBER si přečtěte [**Rychlý průvodce**](getting-started.md). {#to-get-your-ember-running-read-the-quick-start-guide}
+### Pro zprovoznění zařízení EMBER si přečtěte [**Rychlý průvodce**](getting-started.md) {#to-get-your-ember-running-read-the-quick-start-guide}
 :::
 
 <img src="/img/ember-top.webp" data-zoom-src="/img/ember-top.webp" width="540" alt="EMBER" />

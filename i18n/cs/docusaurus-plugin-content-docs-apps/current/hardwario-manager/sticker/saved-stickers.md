@@ -1,10 +1,9 @@
 ---
 slug: saved-stickers
-title: Uložené STICKERy
-description: "aniž by se vás na přihlašovací údaje ptaly."
+title: Saved STICKERs
 ---
 
-# Uložené STICKERy {#saved-stickers}
+# Saved STICKERs {#saved-stickers}
 
 **Saved STICKERs** je seznam zařízení, která spravujete. Drží **secret key** a
 **vendor token** každého zařízení, takže všechny ostatní obrazovky mohou pracovat,

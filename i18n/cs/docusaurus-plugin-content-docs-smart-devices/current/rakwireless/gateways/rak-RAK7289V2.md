@@ -1,7 +1,6 @@
 ---
 slug: rak-RAK7289V2
 title: RAK7289V2
-description: "Běží na systému WisGateOS 2 a podporuje více typů připojení k internetu (Ethernet, Wi-Fi, mobilní síť), aby byla zajištěna nepřetržitá dostupnost kritických IoT sítí."
 ---
 
 import Image from '@theme/IdealImage';
@@ -112,7 +111,7 @@ Brána podporuje několik pracovních režimů LoRaWAN. Přejděte na **LoRa > C
 
 ### Basics Station (doporučeno pro TTS) {#basics-station-recommended-for-tts}
 
-Pro připojení k The Things Stack vyberte **Basics Station**:
+Chcete-li se připojit k The Things Stack, vyberte **Basics Station**:
 
 | Nastavení | Hodnota |
 | :--- | :--- |

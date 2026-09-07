@@ -1,7 +1,7 @@
 ---
 title: Konfigurace
 sidebar_position: 5
-description: "GLIDER ukládá konfiguraci do nevolatilní paměti (NVS), takže nastavení přežije odpojení napájení i restart. Konfiguraci lze měnit přes kteroukoli konzoli:"
+description: "Přehled konfigurace zařízení GLIDER: nastavení uložená v nevolatilní paměti a jak je měnit přes konzolová rozhraní."
 title_meta: "Konfigurace (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
@@ -89,21 +89,21 @@ AT&W
 
 Tímto se počítá každá vzestupná hrana na CH1, pokud vstup zůstane v logické jedničce alespoň 5 ms (a mezi pulzy v nule alespoň 5 ms).
 
-## Slot pro termometry (`therm`) {#thermometer-slots-therm}
+## Sloty pro teploměry (`therm`) {#thermometer-slots-therm}
 
 Osm nezávislých slotů, jeden ROM kód na slot. Prázdné sloty se v payloadu do cloudu vynechávají.
 
 | Klíč | Typ | Velikost | Výchozí | Popis |
 | :--- | :--- | :--- | :--- | :--- |
-| `1` … `8` | hex | 8 bytes | `0x00…` | Sériové číslo ROM senzoru DS18B20 přiřazené danému slotu. `0x00…` = prázdný. |
+| `1` … `8` | hex | 8 bajtů | `0x00…` | Sériové číslo ROM senzoru DS18B20 přiřazené danému slotu. `0x00…` = prázdný. |
 
 :::tip
-V praxi byste tyto hodnoty neměli upravovat ručně – použijte `therm scan --save` pro automatické nalezení a přiřazení senzorů. Viz [**Externí teplotní senzory**](external-sensors/temperature.md).
+V praxi tyto hodnoty ručně neupravujte – použijte `therm scan --save` pro automatické nalezení a přiřazení senzorů. Viz [**Externí teplotní senzory**](external-sensors/temperature.md).
 :::
 
 ## Alarmy {#alarms}
 
-Nakonfigurovat lze až **32 nezávislých pravidel alarmu**. Každé pravidlo sleduje jeden slot termometru a přepíná mezi stavem **aktivní** a **neaktivní** podle prahové hodnoty s hysterezí:
+Nakonfigurovat lze až **32 nezávislých pravidel alarmu**. Každé pravidlo sleduje jeden slot teploměru a přepíná mezi stavem **aktivní** a **neaktivní** podle prahové hodnoty s hysterezí:
 
 - Pravidlo se **aktivuje**, když `teplota ≥ prahová hodnota`.
 - Pravidlo se **deaktivuje**, když `teplota ≤ prahová hodnota − hystereze`.
@@ -115,7 +115,7 @@ Stejné čtyři klíče existují pro každé pravidlo, s předponou `<n>-` (1-3
 | Klíč | Typ | Rozsah | Výchozí | Popis |
 | :--- | :--- | :--- | :--- | :--- |
 | `<n>-enabled` | bool | - | `false` | Hlavní vypínač pravidla. Je-li `false`, ostatní klíče tohoto pravidla jsou skryté. |
-| `<n>-therm` | int | 1–8 | **1** | Který slot termometru pravidlo sleduje. |
+| `<n>-therm` | int | 1–8 | **1** | Který slot teploměru pravidlo sleduje. |
 | `<n>-threshold` | float (°C) | −55–125 | **50** | Prahová hodnota aktivace. |
 | `<n>-hysteresis` | float (°C) | 0–50 | **5** | Odchylka deaktivace pod prahovou hodnotou. |
 

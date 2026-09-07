@@ -12,7 +12,7 @@
     "description": "The label for category 'STICKER' in sidebar 'docs'"
   },
   "sidebar.docs.category.Saved STICKERs": {
-    "message": "Uložené STICKERy",
+    "message": "Saved STICKERs",
     "description": "The label for category 'Saved STICKERs' in sidebar 'docs'"
   },
   "sidebar.docs.category.manager-sticker-configuration": {

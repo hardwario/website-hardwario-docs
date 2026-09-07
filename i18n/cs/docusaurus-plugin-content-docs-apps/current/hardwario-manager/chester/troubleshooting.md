@@ -1,14 +1,13 @@
 ---
 slug: troubleshooting
 title: Řešení problémů
-description: "Aplikace každé selhání Bluetooth zařadí do zprávy, která říká, co se stalo a co"
-title_meta: "Řešení problémů (HARDWARIO Manager for CHESTER)"
+title_meta: "Řešení problémů (HARDWARIO Manager pro CHESTER)"
 ---
 
 # Řešení problémů se zařízením CHESTER {#chester-troubleshooting}
 
 Aplikace každé selhání Bluetooth zařadí do zprávy, která říká, co se stalo a co
-dělat. Surová chyba zůstává pod rozbalovacím prvkem **Technical details**
+dělat. Původní text chyby zůstává pod rozbalovacím prvkem **Technical details**
 s tlačítkem **Copy**. Ten text přiložte, když problém hlásíte.
 
 Tam, kde opakování nepomůže (vypnutý Bluetooth, neudělené oprávnění), nabídne
@@ -48,7 +47,7 @@ pak se připojte znovu z QR kódu.
 
 ---
 
-## Za provozu spojení {#while-connected}
+## Během spojení {#while-connected}
 
 | Co vidíte | Co dělat |
 |---|---|
@@ -57,7 +56,7 @@ pak se připojte znovu z QR kódu.
 | **No answer from the device** | Držte ho blízko telefonu a zkuste to znovu. Pokud dál mlčí, připojte se znovu. |
 | Telefon má příliš mnoho připojení Bluetooth | Odpojte jiné zařízení a zkuste to znovu. |
 | **The device refused it** | Firmware tuto operaci nepovoluje. Zkontrolujte, že na zařízení běží aktuální firmware CHESTER. |
-| Čtení konfigurace se vrátilo bez použitelných dat | Firmware možná nepodporuje shell příkazy pro konfiguraci. Viz [**Konfigurace**](./configuration.md). |
+| Čtení konfigurace se vrátilo bez použitelných dat | Firmware možná nepodporuje příkazy shellu pro konfiguraci. Viz [**Konfigurace**](./configuration.md). |
 
 ---
 

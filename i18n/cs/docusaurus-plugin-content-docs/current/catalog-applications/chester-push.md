@@ -1,7 +1,6 @@
 ---
 slug: chester-push
 title: CHESTER Push
-description: "Tento článek popisuje základní funkcionalitu, popis hardwaru a ukázkovou JSON zprávu katalogové aplikace CHESTER Push."
 ---
 import Image from '@theme/IdealImage';
 

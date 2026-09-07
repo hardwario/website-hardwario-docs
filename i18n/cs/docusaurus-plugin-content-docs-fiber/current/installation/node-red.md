@@ -1,6 +1,5 @@
 ---
 title: Instalace Node-RED
-description: "Výše uvedený release asset se jmenuje install-update-nodered-deb. Pokud v budoucnu vrátí 404,"
 ---
 
 # Instalace Node-RED {#install-node-red}

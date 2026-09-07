@@ -193,7 +193,7 @@ Click on the **little pencil icon** next to the bridge part of the setting and f
 #### Pairing
 
 Now as you can see on your screen and screenshot below. The device is waiting for pairing with code `111-11-111`.
-Open the **Home app** on your iPhone or iPad and click **Add Accessory > Don't Have a Code or Can't Scan > HARDWRIO bridge**.
+Open the **Home app** on your iPhone or iPad and click **Add Accessory > Don't Have a Code or Can't Scan > HARDWARIO Bridge**.
 Select **Add anyway** on the next screen. On the screen where you have to input code, input the number `1` to all boxes
 
 <div class="container">

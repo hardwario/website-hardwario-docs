@@ -1,6 +1,6 @@
 ---
 title: Rádiová komunikace
-description: "HARDWARIO TOWER nabízí dvě hlavní metody rádiové komunikace"
+description: "Rádiová komunikace v HARDWARIO TOWER: integrované rádio sub-GHz s Radio Dongle, nebo LoRaWAN s modulem LoRa."
 ---
 import Image from '@theme/IdealImage';
 

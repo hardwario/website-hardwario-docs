@@ -1,7 +1,6 @@
 ---
 slug: chester-m
 title: Základní deska CHESTER-M
-description: "CHESTER-M je univerzální základní deska s konektivitou LPWAN, rozšiřitelná pomocí rozšiřujících modulů X."
 ---
 import Image from '@theme/IdealImage';
 

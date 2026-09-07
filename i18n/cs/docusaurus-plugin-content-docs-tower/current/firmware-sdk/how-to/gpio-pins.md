@@ -1,7 +1,6 @@
 ---
 slug: how-to-gpio-pins
 title: "Jak na: GPIO piny"
-description: "Pro propojení modulu Core Module s okolním světem můžete využít mnoho GPIO pinů (General Purpose Input/Output piny)."
 ---
 import Image from '@theme/IdealImage';
 

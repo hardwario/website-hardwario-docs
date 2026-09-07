@@ -1,7 +1,6 @@
 ---
 slug: about-playground
 title: O aplikaci Playground
-description: "HARDWARIO Playground je naše bezplatná aplikace pro Windows, macOS a Linux. Je určená pro práci se zařízeními TOWER ve vašem desktopovém prostředí."
 ---
 import Image from '@theme/IdealImage';
 

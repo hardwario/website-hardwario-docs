@@ -1,7 +1,6 @@
 ---
 slug: chester-z-over-j-link
 title: CHESTER-Z1 přes J-Link
-description: "Tento článek popisuje, jak nahrát firmware do modulu CHESTER-Z1 pomocí SEGGER J-Link."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

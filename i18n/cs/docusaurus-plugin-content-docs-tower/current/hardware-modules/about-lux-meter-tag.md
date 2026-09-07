@@ -1,7 +1,6 @@
 ---
 slug: about-lux-meter-tag
 title: O modulu Lux Meter Tag
-description: "Modul Lux Meter Tag využívá senzor intenzity světla OPT3001 s vysokým dynamickým rozsahem, který umí měřit osvětlení od 0,01 do 83 000 lux. Tento senzor je digitální a kalibrovaný. Komunikuje po sběrnici I²C a nabízí velmi nízkou spotřebu a režim…"
 ---
 import Image from '@theme/IdealImage';
 

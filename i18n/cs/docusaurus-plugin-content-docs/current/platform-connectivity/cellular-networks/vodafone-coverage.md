@@ -1,7 +1,6 @@
 ---
 slug: vodafone-coverage
 title: Vodafone SIM EU28+2
-description: "Tato tabulka platí pro SIM kartu Vodafone. Sloupec Operátor uvádí, kterého roamingového partnera Vodafone v dané oblasti využívá."
 ---
 import Image from '@theme/IdealImage';
 

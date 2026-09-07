@@ -1,7 +1,7 @@
 ---
 slug: /usage
 title: Používání klienta
-description: "Použití: tapper COMMAND [OPTIONS] [ARGS]..."
+description: "Použití klienta TAPPER z příkazové řádky: příkazy, volby a argumenty pro ovládání čtečky NFC ze shellu."
 ---
 
 import Image from '@theme/IdealImage';

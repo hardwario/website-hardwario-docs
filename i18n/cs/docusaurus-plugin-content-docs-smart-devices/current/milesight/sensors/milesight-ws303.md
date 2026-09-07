@@ -1,7 +1,6 @@
 ---
 slug: milesight-ws303
 title: WS303
-description: "Milesight WS303 je inteligentní detektor zaplavení se dvěma sondami z nerezové oceli, které detekují vodu už od výšky 0,5 mm. Obsahuje integrovaný bzučák pro místní upozornění, odesílá notifikace přes LoRaWAN a nabízí až 5 let výdrže baterie. Díky…"
 ---
 
 import Image from '@theme/IdealImage';

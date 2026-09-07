@@ -1,7 +1,7 @@
 ---
 title: Popis hardwaru
 sidebar_position: 6
-description: "Zařízení GLIDER je postaveno na system-in-package Nordic nRF9151, mikrokontroléru Cortex-M33 s integrovaným celulárním modemem LTE-M / NB-IoT. Tato stránka shrnuje technické detaily, které jsou důležité při integraci, zapojení nebo rozšiřování…"
+description: "GLIDER je postavený na system-in-package Nordic nRF9151 — mikrokontroléru Cortex-M33 s integrovaným modemem LTE-M / NB-IoT."
 title_meta: "Popis hardwaru (GLIDER)"
 ---
 import Image from '@theme/IdealImage';

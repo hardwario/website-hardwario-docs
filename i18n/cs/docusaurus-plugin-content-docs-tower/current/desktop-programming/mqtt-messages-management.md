@@ -1,7 +1,6 @@
 ---
 slug: mqtt-messages-management
 title: Správa MQTT zpráv
-description: "V této kapitole si projdeme záložku Messages v Playgroundu"
 ---
 import Image from '@theme/IdealImage';
 

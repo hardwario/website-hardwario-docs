@@ -1,7 +1,6 @@
 ---
 slug: sim-card-setup
 title: Nastavení SIM karty
-description: "Tato kapitola provede zařízení od vybalení až k registrovanému připojení k síti. Postupujte v uvedeném pořadí: nejprve nastavte režim rádia, potom použijte nastavení pro vaši SIM kartu a nakonec ověřte výsledek."
 ---
 import Image from '@theme/IdealImage';
 

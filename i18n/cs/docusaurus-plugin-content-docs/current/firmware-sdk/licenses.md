@@ -1,7 +1,6 @@
 ---
 slug: licenses
 title: Licence
-description: "V tomto článku najdete užitečné informace o licenci CHESTER SDK."
 ---
 import Image from '@theme/IdealImage';
 

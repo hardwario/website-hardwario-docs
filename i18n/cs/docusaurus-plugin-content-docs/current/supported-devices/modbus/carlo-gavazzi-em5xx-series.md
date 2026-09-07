@@ -1,7 +1,6 @@
 ---
 slug: carlo-gavazzi-em5xx-series
 title: Carlo Gavazzi EM5XX Series
-description: "Webové stránky"
 ---
 
 import Image from '@theme/IdealImage';

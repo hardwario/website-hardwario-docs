@@ -1,7 +1,6 @@
 ---
 slug: carlo-gavazzi-em1xx-series
 title: Carlo Gavazzi EM1XX Series
-description: "Web-Site"
 ---
 
 import Image from '@theme/IdealImage';

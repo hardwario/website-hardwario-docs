@@ -1,7 +1,6 @@
 ---
 slug: firmware-quick-start
 title: Rychlý start s firmwarem
-description: "Vlastní firmware pro TOWER Core Module můžete snadno upravovat nebo vytvářet na každém hlavním operačním systému."
 ---
 import Image from '@theme/IdealImage';
 

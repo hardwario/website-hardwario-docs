@@ -1,7 +1,6 @@
 ---
 slug: lora-at-commands
 title: Konfigurace pomocí AT příkazů LoRa
-description: "Tento dokument popisuje, jak konfigurovat zařízení HARDWARIO TOWER s LoRa pomocí AT příkazů přes virtuální sériový port USB."
 ---
 import Image from '@theme/IdealImage';
 

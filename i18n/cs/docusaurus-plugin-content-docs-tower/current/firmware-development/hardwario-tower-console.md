@@ -1,7 +1,6 @@
 ---
 slug: hardwario-tower-console
 title:  TOWER Console
-description: "Tento návod předpokládá, že máte spuštěné Visual Studio Code s nainstalovaným rozšířením HARDWARIO TOWER. Pokud ne, navštivte prosím O HARDWARIO Code."
 ---
 import Image from '@theme/IdealImage';
 

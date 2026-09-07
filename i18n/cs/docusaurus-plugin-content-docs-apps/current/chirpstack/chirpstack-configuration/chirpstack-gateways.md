@@ -1,7 +1,6 @@
 ---
 slug: chirpstack-gateways
 title: Brány
-description: "Tento návod vás provede přidáním a nastavením brány v ChirpStack v4."
 title_meta: "Brány (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';

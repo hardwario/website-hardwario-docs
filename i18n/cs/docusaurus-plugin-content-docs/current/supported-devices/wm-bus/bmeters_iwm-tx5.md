@@ -1,7 +1,6 @@
 ---
 slug: bmeters_iwm-tx5
 title: BMeters IWM-TX5
-description: "Webové stránky"
 ---
 import Image from '@theme/IdealImage';
 

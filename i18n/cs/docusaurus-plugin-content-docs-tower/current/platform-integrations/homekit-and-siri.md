@@ -1,7 +1,6 @@
 ---
 slug: homekit-and-siri
 title: HomeKit a Siri
-description: "Díky integraci s HomeKit budete moci ovládat své IoT projekty ze zařízení iOS nebo macOS. Jakmile budete mít zařízení v aplikaci Domácnost,"
 ---
 import Image from '@theme/IdealImage';
 

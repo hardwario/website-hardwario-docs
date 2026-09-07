@@ -1,7 +1,6 @@
 ---
 slug: how-to-push-button
 title: "Návod: Tlačítko"
-description: "Core Module je vybaven jedním tlačítkem, které lze použít, pokud na modulu Core Module není nasazen žádný další modul – jinak je poměrně těžko dostupné."
 ---
 import Image from '@theme/IdealImage';
 

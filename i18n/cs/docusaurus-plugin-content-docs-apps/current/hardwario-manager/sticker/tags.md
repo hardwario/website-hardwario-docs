@@ -1,7 +1,6 @@
 ---
 slug: tags
 title: Organizace zařízení tagy
-description: "Tagy označují a filtrují zařízení ve vašem uloženém seznamu, například podle"
 ---
 
 # Organizace uložených zařízení tagy {#organise-saved-devices-with-tags}

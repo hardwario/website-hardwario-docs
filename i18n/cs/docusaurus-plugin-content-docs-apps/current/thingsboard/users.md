@@ -1,7 +1,6 @@
 ---
 slug: users
 title: Přidávání uživatelů
-description: "V tomto návodu se naučíte, jak v ThingsBoardu vytvářet nové uživatelské účty, posílat aktivační odkazy a spravovat přihlašovací údaje."
 ---
 
 import Image from '@theme/IdealImage';

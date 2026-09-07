@@ -1,7 +1,6 @@
 ---
 slug: milesight-ug65
 title: UG65
-description: "Milesight UG65 je poloprůmyslová brána LoRaWAN® postavená na čipsetu SX1302 s podporou 8 kanálů. Umožňuje nasazení přes Ethernet/PoE, nabízí vysokou kapacitu uzlů a je vhodná pro aplikace v inteligentních budovách a průmyslu."
 ---
 
 import Image from '@theme/IdealImage';

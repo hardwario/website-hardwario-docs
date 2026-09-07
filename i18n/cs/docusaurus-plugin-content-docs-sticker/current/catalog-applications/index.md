@@ -1,7 +1,7 @@
 ---
 slug: catalog-applications
 title: Varianty STICKER
-description: "Zařízení HARDWARIO STICKER je k dispozici ve třech hotových funkčních variantách: STICKER Clime, STICKER Input a STICKER Motion. Všechny varianty mají společnou platformu STM32WL, několikaletý provoz na 2× článek AA, šifrovanou konfiguraci přes NFC a…"
+description: "HARDWARIO STICKER je k dispozici ve třech hotových funkčních variantách: STICKER Clime, STICKER Input a STICKER Motion."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,6 @@
 ---
 slug: chester-c5
 title: CHESTER-C5 (1-Wire kolektor)
-description: "Tento článek popisuje nosnou desku CHESTER-C5."
 ---
 import Image from '@theme/IdealImage';
 

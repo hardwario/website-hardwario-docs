@@ -1,7 +1,6 @@
 ---
 slug: how-to-kconfig
 title: "How to: Kconfig"
-description: "Tento článek ukazuje, jak ve svém projektu používat Kconfig."
 ---
 import Image from '@theme/IdealImage';
 

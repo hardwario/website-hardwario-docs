@@ -1,7 +1,6 @@
 ---
 slug: useful-resources
 title: Užitečné zdroje
-description: "V této kapitole najdete odkazy na naše další weby, které mohou být užitečné pro uživatele i vývojáře."
 ---
 import Image from '@theme/IdealImage';
 

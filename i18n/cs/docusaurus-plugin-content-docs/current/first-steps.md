@@ -1,7 +1,7 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
-description: "Děkujeme, že jste si vybrali zařízení CHESTER."
+description: "Rychlý start pro CHESTER: rozbalte zařízení, vložte SIM a baterii, připojte se aplikací HARDWARIO Manager a odešlete první data do cloudu."
 title_meta: "Rychlý průvodce (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,7 +1,6 @@
 ---
 slug: data-visualization
 title: Vizualizace dat
-description: "V této kapitole si projdeme záložku Dashboard v aplikaci Playground"
 ---
 import Image from '@theme/IdealImage';
 

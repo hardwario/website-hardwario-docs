@@ -1,7 +1,6 @@
 ---
 slug: ssh-connection-refused
 title: SSH – spojení odmítnuto
-description: "Pokud ssh @ selže s hláškou „Connection refused\" místo výzvy k zadání hesla, SSH"
 ---
 
 Pokud `ssh <user>@<ip>` selže s hláškou **„Connection refused"** místo výzvy k zadání hesla, SSH

@@ -1,6 +1,5 @@
 ---
 title: Proměnné
-description: "Proměnné uchovávají metadata typu klíč–hodnota u zařízení (umístění,"
 title_meta: "Proměnné (HARDWARIO Cloud API)"
 ---
 

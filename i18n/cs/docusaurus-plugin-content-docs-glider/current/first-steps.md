@@ -1,7 +1,7 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
-description: "Děkujeme, že jste si vybrali zařízení GLIDER."
+description: "Rychlý start pro GLIDER: zapněte zařízení, zaregistrujte ho v HARDWARIO Cloud a sledujte, jak dorazí první naměřené hodnoty."
 title_meta: "Rychlý průvodce (GLIDER)"
 ---
 import Image from '@theme/IdealImage';

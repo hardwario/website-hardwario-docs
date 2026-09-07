@@ -1,7 +1,6 @@
 ---
 slug: about-barometer-tag
 title: O modulu Barometer Tag
-description: "Modul Barometer Tag umožňuje měřit absolutní tlak v rozsahu od 20 kPa do 110 kPa, případně nadmořskou výšku v metrech. Využívá nízkopříkonový I²C senzor MPL3115A2 s absolutní přesností ±0,4 kPa. Vyznačuje se velmi nízkým proudem v aktivním i…"
 ---
 import Image from '@theme/IdealImage';
 

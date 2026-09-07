@@ -1,7 +1,6 @@
 ---
 slug: about-relay-module
 title: O modulu Relay Module
-description: "Modul Relay Module je vhodný pro spínání málo výkonných spotřebičů – např. LED pásku, chladicího ventilátoru, sirény, bzučáku, pohonu garážových dveří atd. Obsahuje bistabilní (latching) relé, což jej předurčuje pro bateriové aplikace – relé si totiž…"
 ---
 import Image from '@theme/IdealImage';
 

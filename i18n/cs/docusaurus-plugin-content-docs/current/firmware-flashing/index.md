@@ -1,7 +1,7 @@
 ---
 slug: firmware-flashing
 title: Nahrání firmwaru
-description: "Firmware je softwarový program nebo sada instrukcí naprogramovaná v hardwarovém zařízení. V zařízení CHESTER, stejně jako ve většině moderních vestavěných zařízení, je firmware uložen v nevolatilním typu paměti zvané flash paměť. Proces zápisu…"
+description: "Jak aktualizovat firmware částí základní desky CHESTER: aplikace, modem LTE, modem LoRaWAN a CHESTER-Z přes J-Link nebo Bluetooth."
 title_meta: "Nahrání firmwaru (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

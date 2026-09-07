@@ -1,7 +1,6 @@
 ---
 slug: how-to-project-generator
 title: "Jak na: Project Generator"
-description: "Používá se také ke generování různých variant katalogových aplikací. Různé varianty najdete v souborech project.yaml."
 ---
 import Image from '@theme/IdealImage';
 

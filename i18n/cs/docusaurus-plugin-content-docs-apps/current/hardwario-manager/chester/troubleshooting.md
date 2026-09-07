@@ -1,7 +1,6 @@
 ---
 slug: troubleshooting
 title: Řešení problémů
-description: "Aplikace každé selhání Bluetooth zařadí do zprávy, která říká, co se stalo a co"
 title_meta: "Řešení problémů (HARDWARIO Manager for CHESTER)"
 ---
 

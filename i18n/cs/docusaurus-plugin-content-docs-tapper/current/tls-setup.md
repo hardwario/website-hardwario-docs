@@ -1,7 +1,7 @@
 ---
 slug: /tls-setup
 title: Nastavení MQTT TLS
-description: "Tento návod obsahuje všechny informace potřebné k zprovoznění TLS s vlastnoručně podepsanými certifikáty."
+description: "Tento návod obsahuje vše potřebné ke zprovoznění TLS s vlastnoručně podepsanými certifikáty."
 ---
 
 import Image from '@theme/IdealImage';

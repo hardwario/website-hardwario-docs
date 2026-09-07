@@ -1,7 +1,6 @@
 ---
 slug: debug
 title: Debug
-description: "Většinu kódu je možné debugovat pomocí logovacích funkcí Zephyr jako LOGINF, LOGHEXDUMPINF a dalších."
 ---
 import Image from '@theme/IdealImage';
 

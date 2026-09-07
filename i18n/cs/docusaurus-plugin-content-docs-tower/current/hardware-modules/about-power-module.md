@@ -1,7 +1,6 @@
 ---
 slug: about-power-module
 title: O modulu Power Module
-description: "Tento modul dokáže napájet node HARDWARIO TOWER Industrial IoT Kit díky integrovanému LDO regulátoru. LDO generuje výstup 3,3 V ze vstupu 5 V."
 ---
 import Image from '@theme/IdealImage';
 

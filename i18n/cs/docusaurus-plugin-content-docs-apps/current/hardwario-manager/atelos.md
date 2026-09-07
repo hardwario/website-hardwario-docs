@@ -1,7 +1,6 @@
 ---
 slug: atelos
 title: Účet ATELOS
-description: "pracuje. Drží tajné údaje každého zařízení a záznam o tom, kdo ho vlastní, takže"
 ---
 
 # Účet ATELOS {#atelos-account}

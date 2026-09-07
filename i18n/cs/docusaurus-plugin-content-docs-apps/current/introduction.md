@@ -1,7 +1,7 @@
 ---
 slug: /
 title: Apps
-description: "Tyto aplikace vizualizují a zpracovávají data ze zařízení HARDWARIO. Tabulka níže uvádí jednotlivé platformy s odkazem na dokumentaci, úrovní obtížnosti a krátkým popisem."
+description: "Aplikace HARDWARIO: HARDWARIO Manager pro nastavení zařízení STICKER a CHESTER v terénu a návody na integraci s ThingsBoard, ChirpStack a The Things Stack."
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';

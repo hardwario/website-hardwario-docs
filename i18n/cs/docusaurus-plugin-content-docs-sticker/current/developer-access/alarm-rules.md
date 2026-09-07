@@ -1,7 +1,6 @@
 ---
 slug: alarm-rules
 title: Pravidla alarmů
-description: "Engine alarmů zařízení STICKER průběžně vyhodnocuje měření senzorů a stavy systému proti aktivním pravidlům. Když je podmínka pravidla splněna nebo zrušena, vznikne okamžitý uplink payload a odešle se na fPort 3."
 title_meta: "Pravidla alarmů (STICKER)"
 ---
 import Image from '@theme/IdealImage';

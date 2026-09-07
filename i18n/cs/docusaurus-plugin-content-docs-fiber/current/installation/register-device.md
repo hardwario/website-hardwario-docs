@@ -1,6 +1,5 @@
 ---
 title: Registrace brány a zařízení
-description: "Instalace softwaru zajistí, že ChirpStack i koncentrátor běží, ale do sítě se nic nepřipojí,"
 ---
 
 # Registrace brány a zařízení {#register-a-gateway-and-a-device}

@@ -1,7 +1,7 @@
 ---
 slug: /nexelec
 title: "Nexelec"
-description: "Nexelec je francouzský výrobce IoT senzorů pro bezpečnost, který se specializuje na detekci požáru a monitoring kvality vnitřního vzduchu v souladu s evropskými normami."
+description: "Nexelec je francouzský výrobce propojených bezpečnostních senzorů pro detekci požáru a sledování kvality vnitřního vzduchu podle evropských norem."
 ---
 
 # Nexelec {#nexelec}

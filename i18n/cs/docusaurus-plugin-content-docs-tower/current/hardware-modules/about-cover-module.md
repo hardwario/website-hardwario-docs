@@ -1,7 +1,6 @@
 ---
 slug: about-cover-module
 title: O modulu Cover Module
-description: "Pokud používáte moduly s menšími rozměry nebo chcete zařízení umístit do menší krabičky,"
 ---
 import Image from '@theme/IdealImage';
 

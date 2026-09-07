@@ -1,7 +1,7 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
-description: "Děkujeme, že jste si vybrali FIBER."
+description: "Rychlý start pro FIBER: zprovozněte bránu, nainstalujte stack LoRaWAN a připojte první zařízení LoRaWAN."
 title_meta: "Rychlý průvodce (FIBER)"
 ---
 

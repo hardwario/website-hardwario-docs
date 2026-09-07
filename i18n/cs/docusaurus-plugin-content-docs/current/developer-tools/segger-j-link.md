@@ -1,7 +1,6 @@
 ---
 slug: segger-j-link
 title: SEGGER J-Link
-description: "Tento článek poskytuje informace o debuggeru SEGGER J-Link."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

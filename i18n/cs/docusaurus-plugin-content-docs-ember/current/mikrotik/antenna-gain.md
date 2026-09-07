@@ -1,7 +1,6 @@
 ---
 slug: antenna-gain
 title: "Zisk antény a výstupní výkon"
-description: "Tato stránka vysvětluje, jak funguje vysílací (TX) výkon u brány LoRa od MikroTik"
 ---
 
 # Zisk antény a výstupní výkon {#antenna-gain--output-power}

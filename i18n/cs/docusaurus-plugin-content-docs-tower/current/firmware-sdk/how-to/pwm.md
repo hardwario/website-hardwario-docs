@@ -1,7 +1,6 @@
 ---
 slug: how-to-pwm
 title: "How To: PWM"
-description: "Pulzně šířková modulace (PWM) je metoda, jak z digitálního výstupu mikrokontroléru vytvořit signál podobný analogovému. Dosahuje toho rychlým přepínáním pinu s různým poměrem logické HIGH a LOW úrovně. Tento poměr se nazývá duty cycle (střída)."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,6 @@
 ---
 slug: how-to-lcd-module
 title: "How To: LCD modul"
-description: "LCD modul poskytuje jednoduchý způsob, jak zobrazit potřebné informace bez připojení k počítači nebo jakékoli síti. Jde o zařízení s extrémně nízkou spotřebou, takže jeho použití by vám nemělo způsobovat problémy ani při napájení z baterií."
 ---
 import Image from '@theme/IdealImage';
 

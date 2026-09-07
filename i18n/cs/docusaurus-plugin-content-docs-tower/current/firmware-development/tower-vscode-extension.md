@@ -1,7 +1,6 @@
 ---
 slug: tower-vscode-extension
 title: Rozšíření TOWER pro VSCode
-description: "Pokud narazíte na jakékoli problémy nebo potíže s rozšířením či přenosnou verzí, dejte nám vědět na našem fóru nebo přímo na GitHubu."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

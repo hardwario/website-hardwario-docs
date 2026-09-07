@@ -1,7 +1,6 @@
 ---
 slug: chester-range
 title: CHESTER Range
-description: "Tento článek popisuje základní funkce, hardware a ukázkovou JSON zprávu katalogové aplikace CHESTER Range."
 ---
 import Image from '@theme/IdealImage';
 

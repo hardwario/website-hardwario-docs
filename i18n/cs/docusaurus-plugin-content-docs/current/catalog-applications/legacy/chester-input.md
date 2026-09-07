@@ -1,7 +1,6 @@
 ---
 slug: chester-input
 title: CHESTER Input
-description: "CHESTER Counter je nahrazen aplikací CHESTER Control, která nabízí stejnou funkcionalitu."
 ---
 import Image from '@theme/IdealImage';
 

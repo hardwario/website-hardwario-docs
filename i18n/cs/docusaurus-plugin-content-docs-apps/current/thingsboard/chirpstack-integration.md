@@ -1,7 +1,6 @@
 ---
 slug: chirpstack-integration
 title: Chirpstack
-description: "Tento návod vysvětluje, jak připojit vaši platformu HARDWARIO ThingsBoard k MQTT brokeru ChirpStacku přes šifrované připojení TLS. Používá obecnou integraci MQTT, která zajišťuje bezpečný přenos dat pomocí klientských certifikátů."
 ---
 
 import Image from '@theme/IdealImage';

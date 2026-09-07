@@ -1,7 +1,6 @@
 ---
 slug: gateway-service
 title: Gateway Service
-description: "Tento multiplatformní nástroj v Pythonu propojuje rádiovou bránu s MQTT."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

@@ -1,7 +1,6 @@
 ---
 slug: about-radio-dongle
 title: O zařízení Radio Dongle
-description: "Radio Dongle je hlavním prvkem radiové sítě HARDWARIO. Tento produkt funguje jako brána pro uzly HARDWARIO. Vypadá jako USB stick. Můžete jej zapojit do stolního počítače, zařízení Raspberry Pi nebo Turris Omnia. Můžete se na něj také dívat jako na…"
 ---
 import Image from '@theme/IdealImage';
 

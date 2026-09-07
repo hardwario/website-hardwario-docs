@@ -1,7 +1,6 @@
 ---
 slug: zenner-minomess
 title: Zenner Minomess
-description: "Web-Site"
 ---
 import Image from '@theme/IdealImage';
 

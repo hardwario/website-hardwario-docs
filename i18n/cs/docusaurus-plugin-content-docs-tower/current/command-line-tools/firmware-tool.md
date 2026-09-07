@@ -1,7 +1,6 @@
 ---
 slug: firmware-tool
 title: Nástroj pro nahrávání firmwaru
-description: "Tento multiplatformní Python nástroj umí nahrát firmware do zařízení Radio Dongle a Core Module, a to buď z lokálního binárního souboru, nebo z posledního vydaného firmwaru z našeho GitHubu."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

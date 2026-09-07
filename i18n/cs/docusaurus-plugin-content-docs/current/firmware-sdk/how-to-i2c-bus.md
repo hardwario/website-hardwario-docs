@@ -1,7 +1,6 @@
 ---
 slug: how-to-i2c-bus
 title: "Jak na: sběrnice I²C"
-description: "Tento článek ukazuje, jak komunikovat s cílovými zařízeními na sběrnici I²C (zařízení CHESTER je na sběrnici v roli controlleru)."
 ---
 import Image from '@theme/IdealImage';
 

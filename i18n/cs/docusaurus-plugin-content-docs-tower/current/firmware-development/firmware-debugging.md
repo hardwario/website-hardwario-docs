@@ -1,7 +1,6 @@
 ---
 slug: firmware-debugging
 title: Debugování
-description: "Pokud chcete pro pokročilejší debugování použít sondu JLink, můžete si přečíst samostatnou kapitolu."
 ---
 import Image from '@theme/IdealImage';
 

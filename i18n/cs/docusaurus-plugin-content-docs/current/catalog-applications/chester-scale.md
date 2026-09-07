@@ -1,7 +1,6 @@
 ---
 slug: chester-scale
 title: CHESTER Scale
-description: "Tento článek popisuje základní funkce, hardware a příklad JSON zprávy katalogové aplikace CHESTER Scale."
 ---
 import Image from '@theme/IdealImage';
 

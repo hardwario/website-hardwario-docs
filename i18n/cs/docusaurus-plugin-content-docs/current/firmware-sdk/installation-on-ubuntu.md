@@ -1,7 +1,6 @@
 ---
 slug: installation-on-ubuntu
 title: Instalace na Ubuntu
-description: "Následující článek vás provede instalací CHESTER SDK na systému Ubuntu. Byla otestována na verzi Ubuntu 22.04 LTS."
 ---
 import Image from '@theme/IdealImage';
 

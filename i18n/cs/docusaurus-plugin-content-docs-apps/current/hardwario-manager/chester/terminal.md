@@ -1,7 +1,6 @@
 ---
 slug: terminal
 title: Terminál
-description: "Terminál vám dá shell zařízení přes Bluetooth, tutéž konzoli, ke které byste se"
 ---
 
 # Terminál zařízení CHESTER {#chester-terminal}

@@ -1,7 +1,7 @@
 ---
 slug: cloud-service
 title: Managed Network Server
-description: "LoRaWAN Network Server pro EMBER (ChirpStack nebo The Things Stack) může být buď provozován na vaší vlastní infrastruktuře (viz ChirpStack a The Things Stack), nebo provozován společností HARDWARIO jako spravovaná služba. Tato stránka popisuje…"
+description: "Spravovaný network server LoRaWAN pro EMBER: HARDWARIO pro vás může hostovat ChirpStack nebo The Things Stack jako alternativu k vlastnímu provozu."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,7 @@
 ---
 slug: sticker-input-wiring
 title: Zapojení vstupů STICKER Input
-description: "Zapojení pro 1-Wire (Dallas, ...):"
+description: "Průvodce zapojením STICKER Input: nastavení přepínačů DIP a připojení vstupů 1-Wire, pulzních, kontaktních a analogových, včetně schémat."
 ---
 import Image from '@theme/IdealImage';
 

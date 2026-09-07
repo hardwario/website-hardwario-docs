@@ -1,7 +1,6 @@
 ---
 slug: chester-x2
 title: CHESTER-X2 (Sériová komunikace)
-description: "Tento článek popisuje rozšiřující modul CHESTER-X2."
 ---
 import Image from '@theme/IdealImage';
 

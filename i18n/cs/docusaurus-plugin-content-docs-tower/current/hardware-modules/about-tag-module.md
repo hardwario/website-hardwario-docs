@@ -1,7 +1,6 @@
 ---
 slug: about-tag-module
 title: O modulu Tag Module
-description: "Modul Tag Module umožňuje připojit až šest tagů HARDWARIO."
 ---
 import Image from '@theme/IdealImage';
 

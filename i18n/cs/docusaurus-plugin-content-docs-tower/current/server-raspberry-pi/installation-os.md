@@ -1,7 +1,6 @@
 ---
 slug: installation-os
 title: Předinstalovaný obraz
-description: "Tento návod ukazuje, jak na Raspberry Pi s nainstalovaným systémem Raspberry Pi OS nainstalovat všechny nástroje potřebné pro práci se zařízeními HARDWARIO TOWER."
 ---
 import Image from '@theme/IdealImage';
 

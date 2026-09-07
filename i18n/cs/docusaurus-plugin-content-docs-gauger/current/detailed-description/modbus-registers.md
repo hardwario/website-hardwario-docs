@@ -1,7 +1,6 @@
 ---
 slug: modbus-registers
 title: Modbus registry
-description: "Napočítaná data lze ze zařízení číst přes Modbus TCP. Celkem je k dispozici osm holding registrů – 2 pro každý kanál. Jeden obsahuje počet aktivací kanálu, druhý počet deaktivací."
 ---
 
 # Modbus registry {#modbus-registers}

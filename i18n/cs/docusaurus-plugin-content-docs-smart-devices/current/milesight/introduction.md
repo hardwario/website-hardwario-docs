@@ -1,7 +1,7 @@
 ---
 slug: /milesight
 title: Milesight
-description: "Milesight je rychle rostoucí high-tech společnost dodávající chytré IoT produkty a řešení pro video dohled se zaměřením na AIoT (Artificial Intelligence of Things). Její řešení kombinují spolehlivou konektivitu s nejmodernějšími senzorickými…"
+description: "Milesight dodává chytré produkty pro IoT a videodohled se zaměřením na AIoT; HARDWARIO vybraná zařízení Milesight pro LoRaWAN testuje a dále prodává."
 ---
 import Image from '@theme/IdealImage';
 

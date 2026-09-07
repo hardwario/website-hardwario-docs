@@ -1,6 +1,5 @@
 ---
 title: Dashboard
-description: "Dostupné na FIBER i FIBER Lite."
 ---
 
 # Dashboard {#dashboard}

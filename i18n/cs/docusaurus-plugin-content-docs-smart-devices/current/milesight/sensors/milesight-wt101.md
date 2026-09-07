@@ -1,7 +1,6 @@
 ---
 slug: milesight-wt101
 title: WT101
-description: "Milesight WT101 je chytrá radiátorová termostatická hlavice s ovládáním přes LoRaWAN pro efektivní řízení vytápění. Obsahuje vysoce přesný teplotní senzor (±0,5 °C), podporuje až 16 topných plánů a nabízí bezpečnostní funkce jako detekci otevřeného…"
 ---
 
 import Image from '@theme/IdealImage';

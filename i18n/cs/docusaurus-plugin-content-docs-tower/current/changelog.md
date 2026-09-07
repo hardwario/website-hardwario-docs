@@ -3,7 +3,7 @@ slug: changelog
 title: Seznam změn TOWER
 toc_min_heading_level: 2
 toc_max_heading_level: 2
-description: "Tato stránka sleduje všechny podstatné změny napříč platformou TOWER, včetně firmwaru / SDK a hardwarových modulů. Pomocí záložek níže můžete filtrovat podle kategorie změn."
+description: "Tato stránka sleduje všechny významné změny na platformě TOWER včetně firmwaru, SDK a hardwarových modulů."
 ---
 
 import Tabs from '@theme/Tabs';

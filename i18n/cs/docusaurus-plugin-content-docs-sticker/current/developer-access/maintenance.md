@@ -1,6 +1,5 @@
 ---
 title: Údržba
-description: "Příkaz settings ukládá a resetuje uloženou konfiguraci přes vývojářský shell (otevření konzole viz Nastavení firmwaru). Změna přes config se okamžitě projeví v RAM, ale do uložení se restartem ztratí."
 ---
 
 # Údržba (`settings`) {#maintenance-settings}

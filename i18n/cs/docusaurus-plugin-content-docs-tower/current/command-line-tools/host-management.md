@@ -1,7 +1,6 @@
 ---
 slug: host-management
 title: Správa hostitele
-description: "Aby to fungovalo, budete potřebovat nainstalovaný a běžící Mosquitto MQTT Broker na svém počítači"
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

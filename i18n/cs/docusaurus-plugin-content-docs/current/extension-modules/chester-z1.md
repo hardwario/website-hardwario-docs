@@ -1,7 +1,6 @@
 ---
 slug: chester-z1
 title: CHESTER-Z1 (Batt. Button LED)
-description: "Tento článek popisuje rozšiřující modul do horního krytu CHESTER-Z1."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,6 @@
 ---
 slug: how-to-power-module
 title: "How To: Power Module"
-description: "Modul Power nabízí dvě funkce:"
 ---
 import Image from '@theme/IdealImage';
 

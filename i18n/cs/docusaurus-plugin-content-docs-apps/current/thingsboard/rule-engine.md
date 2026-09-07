@@ -1,7 +1,6 @@
 ---
 slug: rule-engine
 title: Rule Engine
-description: "Rule Engine je vizuální programovací systém ThingsBoardu pro zpracování příchozích zpráv ze zařízení. Rule Chain je graf nebo vývojový diagram, který definuje logiku zpracování zpráv (telemetrie, atributy, události). Skládá se z uzlů, stavebních…"
 ---
 
 import Image from '@theme/IdealImage';

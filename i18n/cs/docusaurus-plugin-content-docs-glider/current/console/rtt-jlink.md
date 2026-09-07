@@ -1,7 +1,6 @@
 ---
 title: RTT konzole (J-Link)
 sidebar_position: 1
-description: "RTT konzole vám dává Zephyr shell a živý tok logů firmwaru – je to doporučená konzole pro vývoj a ladění. Pro běžnou konfiguraci použijte raději AT konzoli přes USB-C – není potřeba žádný speciální hardware."
 ---
 import Image from '@theme/IdealImage';
 

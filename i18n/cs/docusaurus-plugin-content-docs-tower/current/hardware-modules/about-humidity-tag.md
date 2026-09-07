@@ -1,7 +1,6 @@
 ---
 slug: about-humidity-tag
 title: O modulu Humidity Tag
-description: "Modul Humidity Tag používá velmi přesný senzor vlhkosti SHT20 s typickou přesností ±3 % v rozsahu od 20 % do 80 %. Tento senzor je digitální a kalibrovaný. Komunikuje pomocí sběrnice I²C a nabízí velmi nízkou spotřebu a režim vypnutí."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,6 @@
 ---
 slug: http-api
 title: HTTP API
-description: "Zařízení na portu 80 provozuje HTTP server s API. Všechny požadavky musí být autentizovány pomocí HTTP Basic Auth. Uživatelské jméno bude vždy. Heslo je výchozí, ale lze jej nastavit pomocí volby. API lze vypnout pomocí volby v nastavení."
 ---
 
 # HTTP API {#http-api}

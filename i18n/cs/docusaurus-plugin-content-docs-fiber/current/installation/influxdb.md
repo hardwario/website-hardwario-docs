@@ -1,6 +1,5 @@
 ---
 title: Instalace InfluxDB
-description: "Dostupné na FIBER i FIBER Lite."
 ---
 
 # Instalace InfluxDB {#install-influxdb}

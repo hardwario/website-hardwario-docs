@@ -1,7 +1,6 @@
 ---
 slug: offline-configuration
 title: Konfigurace vypnutého zařízení
-description: "Zařízení STICKER lze konfigurovat bez vložených baterií. Pole NFC z telefonu"
 ---
 
 # Konfigurace vypnutého zařízení STICKER {#configure-a-powered-off-sticker}

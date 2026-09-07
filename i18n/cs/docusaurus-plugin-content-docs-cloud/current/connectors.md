@@ -1,7 +1,7 @@
 ---
 slug: connectors
 title: Konektory
-description: "Vyberte, které typy zpráv konektor spouští:"
+description: "Konektor je webhook, který Cloud zavolá pokaždé, když zařízení odešle zprávu uplink."
 ---
 
 # Konektory {#connectors}

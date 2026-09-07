@@ -1,7 +1,7 @@
 ---
 slug: chester-x7
 title: CHESTER-X7 (1kanálový diferenciální vstup)
-description: "Rozšiřující modul s analogovým vstupem pro platformu CHESTER: jeden diferenciální vstup pro proudové sondy a průmyslové senzory, jeden nesymetrický napěťový vstup 0–28 V a přepínatelný výstup 5 V pro napájení sond."
+description: "Rozšiřující modul s analogovým vstupem pro CHESTER: diferenciální vstup pro proudové sondy, nesymetrický vstup 0–28 V a spínatelné napájení sond 5 V."
 keywords: [CHESTER-X7, diferenciální vstup, analogový vstup, proudová sonda, měření proudu, napěťový vstup, 0-28V, OPA4387, TPS61099, průmyslový senzor, CHESTER]
 ---
 import Image from '@theme/IdealImage';

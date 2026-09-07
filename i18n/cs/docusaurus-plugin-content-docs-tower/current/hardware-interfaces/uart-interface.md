@@ -1,7 +1,6 @@
 ---
 slug: uart-interface
 title: Rozhraní UART
-description: "Více o použití rozhraní UART se zařízením TOWER si můžete přečíst v kapitole How To: Rozhraní UART nebo v kapitole o debugování."
 ---
 import Image from '@theme/IdealImage';
 

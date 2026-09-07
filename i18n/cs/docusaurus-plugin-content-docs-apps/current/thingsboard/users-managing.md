@@ -1,7 +1,6 @@
 ---
 slug: users-managing
 title: Správa uživatelů
-description: "ThingsBoard je mimořádně silný v tom, že umožňuje úplně určit, co zákazník vidí a co ne, a přesně definovat, co v systému může a nemůže dělat. Tím zajistíte čisté a bezpečné prostředí pro všechny své uživatele."
 ---
 
 import Image from '@theme/IdealImage';

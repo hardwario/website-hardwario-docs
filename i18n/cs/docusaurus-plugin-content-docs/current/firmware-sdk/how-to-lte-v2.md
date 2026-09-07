@@ -1,7 +1,6 @@
 ---
 slug: how-to-lte-v2
 title: "Jak na: LTE v2"
-description: "Tento článek ukazuje, jak upgradovat existující firmware pro zařízení CHESTER na LTE v2 a Cloud v2."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,7 @@
 ---
 slug: /
 title: HARDWARIO Cloud
-description: "HARDWARIO Cloud je platforma pro správu zařízení CHESTER a dalších IoT zařízení HARDWARIO. Poskytuje webové rozhraní a REST API pro správu zařízení, příjem zpráv, vzdálenou konfiguraci zařízení a nahrávání aktualizací firmwaru vzduchem."
+description: "HARDWARIO Cloud je platforma pro správu zařízení CHESTER a dalších zařízení IoT od HARDWARIO."
 ---
 
 # HARDWARIO Cloud {#hardwario-cloud}

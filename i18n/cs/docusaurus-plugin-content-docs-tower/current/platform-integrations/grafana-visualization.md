@@ -1,7 +1,6 @@
 ---
 slug: grafana-visualization
 title: Vizualizace v Grafaně
-description: "Tento návod je určen pro Air Quality Monitor připojený k zařízení Raspberry Pi s nainstalovaným Hubem."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

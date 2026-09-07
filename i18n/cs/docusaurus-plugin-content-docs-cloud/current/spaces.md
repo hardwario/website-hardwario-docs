@@ -1,7 +1,7 @@
 ---
 slug: spaces
 title: Prostory
-description: "Typické případy použití:"
+description: "Prostor (Space) je nejvyšší organizační jednotka v HARDWARIO Cloud. Zařízení, tagy, konektory, proměnné i uživatelé patří vždy do některého prostoru."
 ---
 
 # Prostory {#spaces}

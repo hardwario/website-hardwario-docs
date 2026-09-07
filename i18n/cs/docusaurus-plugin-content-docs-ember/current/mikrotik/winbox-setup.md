@@ -1,7 +1,6 @@
 ---
 slug: winbox4-installation
 title: Instalace Winbox 4
-description: "Tento průvodce krok za krokem vysvětluje, jak nainstalovat Winbox 4 na Windows a Linux."
 ---
 
 # Instalace Winbox 4 {#winbox-4-installation}

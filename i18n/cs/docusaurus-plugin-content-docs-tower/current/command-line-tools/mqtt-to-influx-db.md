@@ -1,7 +1,6 @@
 ---
 slug: mqtt-to-influx-db
 title: MQTT Storage
-description: "Pro ukládání dat z našich senzorů rádi používáme InfluxDB – databázi pro časové řady. Jako most mezi MQTT a InfluxDB jsme vytvořili nástroj mqtt2influxdb. Ten se připojí k InfluxDB a MQTT brokeru a podle uživatelem definované konfigurace se přihlásí…"
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

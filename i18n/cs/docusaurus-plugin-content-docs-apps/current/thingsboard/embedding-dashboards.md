@@ -1,7 +1,6 @@
 ---
 slug: embedding-dashboards
 title: Vkládání dashboardů
-description: "Tento návod vás provede vložením dashboardů ThingsBoard do externích webových aplikací. Je optimalizovaný pro dokumentační frameworky založené na Reactu, jako je Docusaurus (MDX), ale stejný přístup s iframe funguje na jakékoli HTML stránce."
 ---
 import Image from '@theme/IdealImage';
 

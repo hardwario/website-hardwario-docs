@@ -1,7 +1,7 @@
 ---
 slug: platform-security
 title: Bezpečnost platformy
-description: "Tento článek poskytuje základní přehled bezpečnosti platformy CHESTER. Článek je rozdělen do několika kapitol, které popisují jednotlivé oblasti."
+description: "Tento článek podává základní přehled o zabezpečení platformy CHESTER. Je rozdělený do kapitol, které popisují jednotlivé oblasti."
 ---
 import Image from '@theme/IdealImage';
 

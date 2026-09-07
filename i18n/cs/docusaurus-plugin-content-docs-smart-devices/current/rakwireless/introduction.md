@@ -1,7 +1,7 @@
 ---
 slug: /rakwireless
 title: RAKwireless
-description: "RAKwireless je globální průkopník v oblasti inovativních a rozmanitých řešení IoT konektivity. Na rozdíl od tradičních dodavatelů hardwaru se RAKwireless drží filozofie „IoT Made Easy\" a překlenuje propast mezi složitým návrhem hardwaru a snadným…"
+description: "RAKwireless je světový průkopník v inovativních a rozmanitých řešeních konektivity pro IoT."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,5 @@
 ---
 title: Instalace ChirpStack
-description: "Výchozí přihlašovací údaje jsou admin / admin. Změňte toto heslo, než zařízení vystavíte"
 ---
 
 # Instalace ChirpStack {#install-chirpstack}

@@ -1,7 +1,6 @@
 ---
 slug: about-bridge-module
 title: O modulu Bridge
-description: "Konektor microUSB nejen zajišťuje komunikační linku, ale také dodává napájení pro modul Bridge a periferie k němu připojené."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,6 @@
 ---
 slug: how-to-temperature-sensor
 title: "How To: Teplotní senzor"
-description: "Core Module je vybaven integrovaným teplotním senzorem TMP112. Jde o velmi přesný senzor s nízkou spotřebou připojený přes sběrnici I²C (viz adresní prostor)."
 ---
 import Image from '@theme/IdealImage';
 

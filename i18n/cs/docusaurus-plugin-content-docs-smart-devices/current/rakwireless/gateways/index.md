@@ -1,7 +1,6 @@
 ---
 slug: index
 title: RAKwireless - Brány
-description: "Zde je seznam bran RAKwireless otestovaných společností HARDWARIO s odkazy na referenční zdroje:"
 ---
 
 import Image from '@theme/IdealImage';

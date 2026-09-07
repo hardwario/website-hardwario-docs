@@ -1,7 +1,7 @@
 ---
 slug: /hardware
 title: Popis hardwaru
-description: "V tomto článku najdete podrobnosti o hardwarové konfiguraci zařízení TAPPER."
+description: "Popis hardwaru TAPPER: Raspberry Pi Zero 2 W, modul NFC PN532, krabička a zapojení."
 title_meta: "Popis hardwaru (TAPPER)"
 ---
 

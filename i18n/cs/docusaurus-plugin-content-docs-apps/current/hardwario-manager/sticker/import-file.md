@@ -1,7 +1,6 @@
 ---
 slug: import-file
 title: Import ze souboru
-description: "Pokud už jsou vaše zařízení někde vypsaná, v tabulce od dodavatele, v exportu"
 ---
 
 # Import zařízení STICKER ze souboru CSV nebo JSON {#import-stickers-from-a-csv-or-json-file}

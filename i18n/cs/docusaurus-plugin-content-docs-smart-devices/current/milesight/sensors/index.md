@@ -1,7 +1,6 @@
 ---
 slug: index
 title: Milesight – Senzory
-description: "Zde je seznam senzorů Milesight otestovaných společností HARDWARIO včetně referenčních zdrojů:"
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,7 +1,6 @@
 ---
 slug: event-driven-programming
 title: Programování řízené událostmi
-description: "Většina firmwaru používá tento typ programování. Funguje tak, že se volají události vždy, když na některém modulu nebo tagu k nějaké události dojde."
 ---
 import Image from '@theme/IdealImage';
 

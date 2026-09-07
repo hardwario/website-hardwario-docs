@@ -1,7 +1,6 @@
 ---
 slug: how-to-spi-bus
 title: "How To: SPI Bus"
-description: "Tato kapitola popisuje, jak používat SDK modul TOWER SPI. Pokud si chcete přečíst o sběrnici samotné, přejděte na kapitolu SPI Interface."
 ---
 import Image from '@theme/IdealImage';
 

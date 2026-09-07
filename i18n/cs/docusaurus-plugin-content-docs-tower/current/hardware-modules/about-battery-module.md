@@ -1,7 +1,6 @@
 ---
 slug: about-battery-module
 title: O modulu Battery Module
-description: "Pokud pro vaši aplikaci nejsou baterie AAA vhodné, můžete využít externí napěťový vstup, který zvládne až 10 V. Externí vstup najdete na dvou pinech v prostředku. Tyto piny jsou kompatibilní s populárním konektorem JST používaným pro lithiové…"
 ---
 import Image from '@theme/IdealImage';
 

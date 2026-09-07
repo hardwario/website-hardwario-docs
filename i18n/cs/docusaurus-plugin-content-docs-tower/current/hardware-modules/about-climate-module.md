@@ -1,7 +1,6 @@
 ---
 slug: about-climate-module
 title: O modulu Climate Module
-description: "Modul Climate Module můžete použít společně s Mini Battery Module a Core Module a vytvořit tak velmi kompaktní bezdrátový senzor prostředí."
 ---
 import Image from '@theme/IdealImage';
 

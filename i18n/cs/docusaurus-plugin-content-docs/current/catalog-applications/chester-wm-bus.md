@@ -1,7 +1,6 @@
 ---
 slug: chester-wm-bus
 title: CHESTER wM-Bus
-description: "Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:"
 ---
 import Image from '@theme/IdealImage';
 

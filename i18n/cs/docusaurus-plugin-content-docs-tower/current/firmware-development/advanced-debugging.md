@@ -1,7 +1,6 @@
 ---
 slug: advanced-debugging
 title: Pokročilé debugování
-description: "Tato kapitola se věnuje debugování pomocí JLink, pokud jej nemáte, můžete vždy debugovat pomocí výpisů do konzole."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

@@ -1,7 +1,6 @@
 ---
 slug: topics-reference
 title: Přehled topiců
-description: "Hodnoty jako 0:0 nebo 0:2 ve výše uvedených topicích popisují, kterou sběrnici I2C senzor používá a jaká je jeho revize. První hodnota před : označuje sběrnici I2C0 (výchozí) nebo I2C1."
 ---
 import Image from '@theme/IdealImage';
 

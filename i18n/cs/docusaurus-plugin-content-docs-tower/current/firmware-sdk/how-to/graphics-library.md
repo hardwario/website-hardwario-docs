@@ -1,7 +1,6 @@
 ---
 slug: how-to-gfx-graphics-library
 title: "How To: Grafická knihovna"
-description: "Protože brána TOWER podporuje stále více typů LCD, vyvinuli jsme univerzální grafickou knihovnu, kterou lze použít s mnoha typy displejů."
 ---
 import Image from '@theme/IdealImage';
 

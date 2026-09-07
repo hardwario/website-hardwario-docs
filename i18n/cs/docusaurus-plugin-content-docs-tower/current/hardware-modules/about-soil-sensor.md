@@ -1,7 +1,6 @@
 ---
 slug: about-soil-sensor
 title: O senzoru půdní vlhkosti
-description: "Senzor vrací půdní vlhkost v relativních hodnotách. Senzor je velmi citlivý a získáte rozsah od 6500, když je senzor suchý, do 13000, když je senzor plně ponořen ve vodě. Měření zajišťují dva měděné pásky ve vnitřních vrstvách čtyřvrstvé desky.…"
 ---
 import Image from '@theme/IdealImage';
 

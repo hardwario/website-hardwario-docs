@@ -1,7 +1,6 @@
 ---
 slug: about-encoder-module
 title: O modulu Encoder
-description: "Modul Encoder může být užitečný pro ovládání vašich aplikací. Modul je vybaven vysoce kvalitním rotačním enkodérem od výrobce Bourns a vyznačuje se vysokou spolehlivostí a dlouhou životností. Rotační enkodér je také vybaven tlačítkovým spínačem."
 ---
 import Image from '@theme/IdealImage';
 

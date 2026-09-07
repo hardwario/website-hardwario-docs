@@ -1,7 +1,7 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
-description: "Rychlý průvodce zařízením STICKER: zapnutí, zprovoznění přes NFC aplikací HARDWARIO Manager a připojení k ChirpStacku, The Things Stacku nebo jinému serveru LoRaWAN."
+description: "Rychlý start pro STICKER: zapnutí, zprovoznění přes NFC v aplikaci HARDWARIO Manager a připojení k ChirpStack, The Things Stack nebo jinému serveru LoRaWAN."
 title_meta: "Rychlý průvodce (STICKER)"
 ---
 import Image from '@theme/IdealImage';

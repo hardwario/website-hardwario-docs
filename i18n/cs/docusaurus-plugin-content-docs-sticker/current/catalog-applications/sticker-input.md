@@ -1,7 +1,6 @@
 ---
 slug: sticker-input
 title: STICKER Input
-description: "Dokumentace → Zapojení STICKER Input"
 ---
 import Image from '@theme/IdealImage';
 

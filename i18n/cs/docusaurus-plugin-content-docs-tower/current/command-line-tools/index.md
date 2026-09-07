@@ -1,6 +1,6 @@
 ---
 title: Nástroje příkazové řádky
-description: "Vyvinuli jsme několik nástrojů příkazové řádky, aby bylo možné pracovat se systémem HARDWARIO TOWER i bez grafických aplikací."
+description: "Vyvinuli jsme několik nástrojů příkazové řádky, aby se s platformou HARDWARIO TOWER dalo pracovat i bez grafických aplikací."
 title_meta: "Nástroje příkazové řádky (HARDWARIO TOWER)"
 ---
 import Image from '@theme/IdealImage';

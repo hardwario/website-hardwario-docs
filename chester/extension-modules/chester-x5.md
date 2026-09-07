@@ -1,7 +1,7 @@
 ---
 slug: chester-x5
 title: CHESTER-X5 (2-ch isol 50V input)
-description: Two-channel isolated voltage-input extension module for the CHESTER platform. Each channel measures ±50 V through a reinforced isolated amplifier (AMC3330) and a 24-bit ADS122C04 I²C ADC.
+description: "Two-channel isolated voltage-input extension module for CHESTER. Each channel measures ±50 V through a reinforced isolated amplifier."
 keywords: [CHESTER-X5, isolated input, isolated voltage measurement, 50V, AMC3330, ADS122C04, 24-bit ADC, reinforced isolation, I2C, galvanic isolation, CHESTER]
 ---
 import Image from '@theme/IdealImage';

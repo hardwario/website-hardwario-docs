@@ -1,7 +1,6 @@
 ---
 slug: email-reports
 title: Reporty
-description: "Tento návod vás provede kompletním nastavením automatických PDF reportů pomocí modulu Reporting. Postup má tři hlavní kroky: vytvoření rozvržení reportu, přípravu e-mailové zprávy a nastavení plánovače."
 ---
 import Image from '@theme/IdealImage';
 

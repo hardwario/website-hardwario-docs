@@ -1,7 +1,6 @@
 ---
 slug: features
 title: Funkce
-description: "ThingsBoard nabízí pokročilé nástroje pro organizaci vaší IoT infrastruktury, automatizaci procesů a doručování reportů zákazníkům. Tato sekce popisuje klíčové možnosti dostupné na platformě HARDWARIO ThingsBoard."
 title_meta: "Funkce (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';

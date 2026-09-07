@@ -1,7 +1,6 @@
 ---
 slug: email-notification
 title: E-mailové notifikace
-description: "V tomto návodu postavíme vlastní Rule Chain, která sleduje telemetrii (teplotu a vlhkost) z konkrétních zařízení (například „Knihovna\" a „Archiv\"). Když hodnoty překročí předem daný prah, systém vyvolá e-mailovou notifikaci."
 ---
 import Image from '@theme/IdealImage';
 

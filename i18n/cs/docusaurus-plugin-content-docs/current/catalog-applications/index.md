@@ -1,7 +1,7 @@
 ---
 slug: catalog-applications
 title: Katalogové aplikace
-description: "Tento článek přináší informace o takzvaných katalogových aplikacích pro platformu CHESTER."
+description: "Katalogové aplikace jsou hotové firmwary pro CHESTER na běžné úlohy: co která umí, jaký hardware potřebuje a jak vypadají její data."
 ---
 import Image from '@theme/IdealImage';
 

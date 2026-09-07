@@ -1,6 +1,5 @@
 ---
 title: Konfigurace
-description: "Konfiguraci zařízení lze změnit stejně jako přes BLE nebo J-Link RTT: odešlete jeden nebo více"
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

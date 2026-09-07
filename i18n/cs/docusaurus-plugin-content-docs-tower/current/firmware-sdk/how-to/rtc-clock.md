@@ -1,7 +1,6 @@
 ---
 slug: how-to-rtc-clock
 title: "How To: Hodiny RTC"
-description: "Do jejích hardwarových registrů můžete uložit datum a čas a hodiny běží dál, i když znovu nahrajete firmware nebo resetujete procesor."
 ---
 import Image from '@theme/IdealImage';
 

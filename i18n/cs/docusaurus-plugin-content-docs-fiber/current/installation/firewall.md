@@ -1,6 +1,5 @@
 ---
 title: Firewall
-description: "Upravte 10.0.0.0/24 podle skutečné podsítě vaší LAN."
 ---
 
 # Firewall {#firewall}

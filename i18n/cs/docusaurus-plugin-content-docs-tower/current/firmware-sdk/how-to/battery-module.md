@@ -1,7 +1,6 @@
 ---
 slug: how-to-battery-module
 title: "How To: Battery Module"
-description: "Battery Module a Mini Battery Module umožňují napájet váš produkt čtyřmi nebo dvěma bateriemi AAA."
 ---
 import Image from '@theme/IdealImage';
 

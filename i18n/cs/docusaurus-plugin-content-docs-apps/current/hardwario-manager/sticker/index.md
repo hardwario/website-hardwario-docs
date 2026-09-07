@@ -1,7 +1,7 @@
 ---
 slug: /hardwario-manager/sticker
 title: STICKER
-description: "Zařízení STICKER se konfiguruje přiložením telefonu k zařízení. Žádné kabely,"
+description: "Zařízení STICKER se konfiguruje přiložením telefonu. Žádné kabely, žádný programátor, žádný software na počítači."
 title_meta: "STICKER (HARDWARIO Manager)"
 ---
 

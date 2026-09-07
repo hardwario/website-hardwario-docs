@@ -1,7 +1,7 @@
 ---
 slug: /
 title: FIBER
-description: "popisuje průmyslové zařízení FIBER založené na CM4, ale Instalace (nebo"
+description: "FIBER je robustní průmyslové zařízení IoT postavené na vestavěné platformě Linux a určené pro průmyslové nasazení."
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';

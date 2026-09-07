@@ -1,7 +1,7 @@
 ---
 slug: /security
 title: Vylepšení zabezpečení
-description: "Tento dokument popisuje několik kroků pro zvýšení zabezpečení vašeho zařízení TAPPER."
+description: "Tento dokument popisuje několik kroků, jak zvýšit zabezpečení zařízení TAPPER."
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,7 +1,6 @@
 ---
 slug: wm-bus_sensors
 title: Senzory wM-Bus
-description: "Následující seznam proto není seznamem kompatibility. Obsahuje měřiče, které jsme sami otestovali a zdokumentovali; s bránou funguje i jakékoli jiné zařízení wM-Bus T1/C1 dostupné na trhu."
 ---
 
 import Image from '@theme/IdealImage';

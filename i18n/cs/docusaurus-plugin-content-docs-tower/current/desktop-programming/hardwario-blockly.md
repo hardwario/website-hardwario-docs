@@ -1,7 +1,6 @@
 ---
 slug: hardwario-blockly
 title: HARDWARIO Blockly
-description: "Pro práci s tímto nástrojem je potřeba stáhnout experimentální HARDWARIO Playground"
 ---
 
 import Image from '@theme/IdealImage';

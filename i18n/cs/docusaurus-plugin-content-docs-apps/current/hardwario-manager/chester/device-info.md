@@ -1,7 +1,6 @@
 ---
 slug: device-info
 title: Informace o zařízení
-description: "Po připojení zařízení otevřete CHESTER → Device info. Nahoře je Uptime,"
 ---
 
 # Informace o zařízení CHESTER {#chester-device-info}

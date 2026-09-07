@@ -1,7 +1,6 @@
 ---
 slug: how-to-digital-analog-converter
 title: "How To: Digitálně-analogový převodník"
-description: "Core Module obsahuje dva analogové výstupy: DAC0 a DAC1. Jde o skutečné analogové výstupy, nejen o PWM výstupy."
 ---
 import Image from '@theme/IdealImage';
 

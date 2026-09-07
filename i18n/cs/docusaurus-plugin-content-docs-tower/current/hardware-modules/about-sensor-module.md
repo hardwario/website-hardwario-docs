@@ -1,7 +1,6 @@
 ---
 slug: about-sensor-module
 title: O modulu Sensor Module
-description: "Modul Sensor Module nabízí až čtyři univerzální vstupy nebo výstupy na odnímatelné svorkovnici s podporou režimu master na sběrnici 1-Wire. Svorky lze použít jako analogový i digitální vstup/výstup. Můžete tak například připojit různé externí…"
 ---
 import Image from '@theme/IdealImage';
 

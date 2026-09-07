@@ -1,7 +1,7 @@
 ---
 slug: messages
 title: Zprávy
-description: "Stránka Messages zobrazuje všechny zprávy vyměněné mezi zařízeními a Cloudem. Dostanete se na ni ze dvou míst:"
+description: "Stránka Zprávy v HARDWARIO Cloud ukazuje každou zprávu vyměněnou mezi vašimi zařízeními a cloudem, s filtry a detailem zprávy."
 ---
 
 # Zprávy {#messages}

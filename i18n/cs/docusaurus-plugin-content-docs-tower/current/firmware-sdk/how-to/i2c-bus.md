@@ -1,7 +1,6 @@
 ---
 slug: how-to-i2c-bus
 title: "How To: Sběrnice I²C"
-description: "Toto je hlavní sběrnice, kterou TOWER používá pro komunikaci s většinou senzorů a modulů. Všechny mají svou adresu v adresním prostoru TOWER I²C."
 ---
 import Image from '@theme/IdealImage';
 

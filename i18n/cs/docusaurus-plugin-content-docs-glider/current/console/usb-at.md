@@ -1,7 +1,6 @@
 ---
 title: AT konzole (USB-C)
 sidebar_position: 2
-description: "Tato stránka popisuje, jak komunikovat se zařízením GLIDER přes jeho konektor USB-C pomocí AT příkazů. AT konzole je doporučené rozhraní pro každodenní práci – zprovoznění, konfiguraci, aktualizace firmwaru – a nevyžaduje žádný speciální ladicí…"
 ---
 import Image from '@theme/IdealImage';
 

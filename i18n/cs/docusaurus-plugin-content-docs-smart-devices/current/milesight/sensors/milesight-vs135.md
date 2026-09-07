@@ -1,7 +1,6 @@
 ---
 slug: milesight-vs135
 title: VS135
-description: "Milesight VS135 je ToF senzor (Time-of-Flight) pro počítání osob s podporou AI, který zajišťuje detekci obsazenosti s 99,8% přesností při plné ochraně soukromí. Nabízí obousměrné počítání, podporuje až 4 vlastní zóny a poskytuje pokročilé analytické…"
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,7 +1,6 @@
 ---
 slug: common-functionality
 title: Společná funkcionalita
-description: "Některé katalogové firmwary umožňují konfiguraci pro použití sítě NB-IoT/LTE nebo LoRaWAN. Tento firmware po zapnutí neodesílá data, LED bliká žlutě a je potřeba nastavit správný režim rádia."
 ---
 import Image from '@theme/IdealImage';
 

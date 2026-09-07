@@ -1,7 +1,7 @@
 ---
 slug: first-steps
 title: První kroky
-description: "Vítejte v HARDWARIO Cloud, platformě, kde se spravují vaše zařízení a kam přichází vaše živá"
+description: "Vítejte v HARDWARIO Cloud — platformě, kde se spravují vaše zařízení a kam přicházejí vaše živá data."
 title_meta: "První kroky (HARDWARIO Cloud)"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Nastavení firmwaru
-description: "Nastavte si lokálně repozitář firmwaru pro zařízení STICKER, sestavte binární soubory, nahrajte debug image (který zapne interaktivní shell konzoli) a otevřete konzoli. Toto je vstupní bod pro workflow Developer Access."
 ---
 import Image from '@theme/IdealImage';
 

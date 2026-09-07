@@ -1,7 +1,6 @@
 ---
 slug: milesight-am307
 title: AM307
-description: "Milesight AM307 je senzor pro monitorování vnitřního prostředí, který měří sedm parametrů: teplotu, vlhkost, pohyb (PIR), osvětlení, CO₂, TVOC a barometrický tlak. Výsledky zobrazuje na 4,2\" E-Ink displeji s přehlednými indikátory a data přenáší…"
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,7 +1,6 @@
 ---
 slug: sensor-history
 title: Historie senzorů
-description: "Zařízení STICKER umí měření ukládat do sebe (store-and-forward), takže odečty"
 title_meta: "Historie senzorů (HARDWARIO Manager for STICKER)"
 ---
 

@@ -1,7 +1,6 @@
 ---
 slug: build-and-deploy
 title: Build a nasazení
-description: "Tento článek vysvětluje, jak sestavit, nasadit a nahrát firmware aplikace do HARDWARIO Cloud."
 ---
 import Image from '@theme/IdealImage';
 

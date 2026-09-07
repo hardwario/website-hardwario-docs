@@ -1,7 +1,6 @@
 ---
 slug: diagnostics
 title: Diagnostika a řešení problémů
-description: "Pokud se zařízení nedostane do registrovaného stavu, postupujte v tomto pořadí:"
 ---
 import Image from '@theme/IdealImage';
 

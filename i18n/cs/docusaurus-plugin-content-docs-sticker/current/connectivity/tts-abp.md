@@ -1,7 +1,6 @@
 ---
 slug: tts-abp
 title: The Things Stack – ABP
-description: "Tato stránka vysvětluje, jak zaregistrovat zařízení HARDWARIO STICKER jako koncové zařízení LoRaWAN v The Things Stack (TTS) pomocí ABP (aktivace personalizací) a jak přidat formátovač payloadu (dekodér)."
 ---
 import Image from '@theme/IdealImage';
 

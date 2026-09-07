@@ -1,7 +1,6 @@
 ---
 slug: application-over-at
 title: Aplikace přes USB-C
-description: "Firmware zařízení GLIDER můžete aktualizovat přes kabel USB-C, bez debug sondy."
 ---
 import Image from '@theme/IdealImage';
 

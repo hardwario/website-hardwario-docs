@@ -1,7 +1,7 @@
 ---
 slug: /mikrotik
 title: "MikroTik"
-description: "MikroTik je lotyšský výrobce síťových zařízení a bezdrátových systémů, které se používají u poskytovatelů internetu, v průmyslových sítích a v IoT nasazeních po celém světě."
+description: "MikroTik je lotyšský výrobce síťových zařízení a bezdrátových systémů používaných u poskytovatelů internetu, v průmyslových sítích i v nasazeních IoT."
 ---
 
 # MikroTik {#mikrotik}

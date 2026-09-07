@@ -1,6 +1,5 @@
 ---
 title: Konfigurace hardwaru
-description: "Tato část nastavuje sběrnici I2C a hodiny reálného času (RTC) na zařízení. Kroky týkající se RTC"
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

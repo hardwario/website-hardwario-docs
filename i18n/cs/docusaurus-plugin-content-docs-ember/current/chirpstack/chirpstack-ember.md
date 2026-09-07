@@ -1,7 +1,6 @@
 ---
 slug: chirpstack-ember
 title: Nastavení první brány
-description: "Tento návod vás provede přidáním bran HARDWARIO EMBER do ChirpStack v4."
 ---
 
 import Image from '@theme/IdealImage';

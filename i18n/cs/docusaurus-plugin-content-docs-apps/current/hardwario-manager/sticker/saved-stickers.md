@@ -1,7 +1,6 @@
 ---
 slug: saved-stickers
 title: Uložené STICKERy
-description: "aniž by se vás na přihlašovací údaje ptaly."
 ---
 
 # Uložené STICKERy {#saved-stickers}

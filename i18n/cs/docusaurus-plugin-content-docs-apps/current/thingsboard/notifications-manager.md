@@ -1,7 +1,6 @@
 ---
 slug: notifications-manager
 title: Notifikace
-description: "Zákazník provozující sklady chce dostat upozornění, když teplota v některém skladu překročí 28 °C. Vytvoří pravidlo: Device = WarehouseSensorA, Variable = temperature, Condition = > 28, Recipient = manager@company.com. Od té chvíle se e-mail odesílá…"
 ---
 import Image from '@theme/IdealImage';
 

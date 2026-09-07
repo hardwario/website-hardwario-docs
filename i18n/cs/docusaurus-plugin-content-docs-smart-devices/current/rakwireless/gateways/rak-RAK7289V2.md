@@ -1,7 +1,6 @@
 ---
 slug: rak-RAK7289V2
 title: RAK7289V2
-description: "Běží na systému WisGateOS 2 a podporuje více typů připojení k internetu (Ethernet, Wi-Fi, mobilní síť), aby byla zajištěna nepřetržitá dostupnost kritických IoT sítí."
 ---
 
 import Image from '@theme/IdealImage';

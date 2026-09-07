@@ -1,7 +1,6 @@
 ---
 slug: milesight-ft101
 title: FT101
-description: "Milesight FT101 je přenosné testovací zařízení pro sítě LoRaWAN® určené pro posouzení a optimalizaci signálu. Obsahuje osmijádrový procesor se systémem Android 12.0, podporuje všechna standardní frekvenční pásma LoRaWAN® a nabízí až 8 hodin…"
 ---
 
 import Image from '@theme/IdealImage';

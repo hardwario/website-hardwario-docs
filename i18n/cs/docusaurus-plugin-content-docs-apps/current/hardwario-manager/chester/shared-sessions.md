@@ -1,7 +1,6 @@
 ---
 slug: shared-sessions
 title: Sdílení terminálové session
-description: "Sdílená session zpřístupní konzoli zařízení CHESTER, ke kterému jste připojení,"
 ---
 
 # Sdílení terminálové session {#share-a-terminal-session}

@@ -1,7 +1,6 @@
 ---
 slug: power-profiler-kit-ii
 title: Power Profiler Kit II
-description: "Tento článek poskytuje informace o Power Profiler Kit II (dále označovaném jako PPK2) od Nordic Semiconductor."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

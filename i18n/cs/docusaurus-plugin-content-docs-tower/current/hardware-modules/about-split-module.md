@@ -1,7 +1,6 @@
 ---
 slug: about-split-module
 title: O modulu Split
-description: "Pokud chcete použít tenčí modul a obejdete se bez dvou konektorů pro tag moduly, můžete použít Compact Split Module. Compact Split Module nelze připojit přímo k modulu Battery Module, mějte to na paměti."
 ---
 import Image from '@theme/IdealImage';
 

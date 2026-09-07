@@ -1,7 +1,7 @@
 ---
 slug: developer-mode
 title: Přístup pro vývojáře
-description: "STICKER je otevřená platforma postavená na Zephyr RTOS. Debug build firmwaru přidává interaktivní shell konzoli přes RTT, kterou vývojáři používají ke konfiguraci zařízení a k diagnostice přímo přes debugovací připojení."
+description: "Vývojářský přístup k zařízení STICKER: debug build firmwaru přidává interaktivní shell přes RTT pro vývoj a diagnostiku na platformě Zephyr RTOS."
 ---
 import Image from '@theme/IdealImage';
 

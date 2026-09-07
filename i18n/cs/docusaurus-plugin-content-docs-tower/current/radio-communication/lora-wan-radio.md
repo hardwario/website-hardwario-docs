@@ -1,7 +1,6 @@
 ---
 slug: lora-wan-radio
 title: LoRaWAN rádio
-description: "Rádiovou modulaci navrhla společnost Semtech a umožňuje velký dosah a dlouhou životnost při napájení zařízení z baterií."
 ---
 import Image from '@theme/IdealImage';
 

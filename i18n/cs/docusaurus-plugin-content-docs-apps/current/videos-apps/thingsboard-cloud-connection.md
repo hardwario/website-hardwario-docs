@@ -1,7 +1,6 @@
 ---
 slug: thingsboard-cloud-connection
 title: Připojení ke cloudu
-description: "V tomto návodu se naučíte, jak připojit svá zařízení k HARDWARIO Cloud vytvořením nového konektoru, transformací dat a jejich odesláním do ThingsBoardu. Na konci vám budou data do platformy plynout automaticky."
 ---
 
 import Image from '@theme/IdealImage';

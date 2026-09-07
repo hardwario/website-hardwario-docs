@@ -1,7 +1,6 @@
 ---
 slug: chester-control
 title: CHESTER Control
-description: "Tento článek popisuje základní funkcionalitu, hardware a ukázkovou JSON zprávu katalogové aplikace CHESTER Control."
 ---
 import Image from '@theme/IdealImage';
 

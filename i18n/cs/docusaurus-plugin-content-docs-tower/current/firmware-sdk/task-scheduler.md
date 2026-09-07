@@ -1,7 +1,6 @@
 ---
 slug: task-scheduler
 title: Task Scheduler
-description: "Náš scheduler jsme vyvinuli na základě potřeby jednoduchosti a nízké spotřeby energie. Plánuje, která úloha se má spustit a kdy. Tento scheduler není plnohodnotný RTOS (Real Time Operating System) a nemá skutečný kooperativní multitasking. Spustí se…"
 ---
 import Image from '@theme/IdealImage';
 

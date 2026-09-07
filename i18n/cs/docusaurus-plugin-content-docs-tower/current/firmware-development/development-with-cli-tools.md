@@ -1,7 +1,6 @@
 ---
 slug: development-cli-tools
 title: Vývoj s nástroji příkazové řádky
-description: "Pokud chcete vyvíjet pomocí grafického nástroje, přejděte na kapitolu O aplikaci HARDWARIO Code nebo Rozšíření TOWER VSCode."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

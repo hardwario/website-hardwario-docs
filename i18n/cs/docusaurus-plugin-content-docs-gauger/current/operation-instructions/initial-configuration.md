@@ -1,7 +1,6 @@
 ---
 slug: initial-configuration
 title: Počáteční konfigurace
-description: "Po prvním zapnutí zařízení se k zařízení připojte."
 ---
 
 # Počáteční konfigurace {#initial-configuration}

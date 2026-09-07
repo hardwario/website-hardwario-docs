@@ -1,7 +1,6 @@
 ---
 slug: configuration
 title: Konfigurace
-description: "Otevřete CHESTER → Configuration. Aplikace přečte konfiguraci zařízení a pak"
 title_meta: "Konfigurace (HARDWARIO Manager for CHESTER)"
 ---
 

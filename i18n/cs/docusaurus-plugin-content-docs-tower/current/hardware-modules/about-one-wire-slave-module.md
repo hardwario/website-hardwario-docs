@@ -1,7 +1,6 @@
 ---
 slug: about-one-wire-slave-module
 title: O modulu 1-Wire Slave
-description: "Modul 1-Wire Slave umožňuje připojit zařízení I²C na vzdálenost několika metrů. Protokol I²C je zapouzdřen v protokolu 1-Wire. Data jsou chráněna pomocí 16bitového CRC. Pro vytvoření mastera sběrnice 1-Wire můžete použít Sensor Module."
 ---
 import Image from '@theme/IdealImage';
 

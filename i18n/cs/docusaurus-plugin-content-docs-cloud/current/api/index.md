@@ -1,6 +1,6 @@
 ---
 title: REST API
-description: "HARDWARIO Cloud v2 nabízí kompletní REST API pro vše, co umíte ve webovém"
+description: "REST API pro HARDWARIO Cloud v2: čtení zařízení a zpráv, správa tagů a proměnných, odesílání downlinků a automatizace všeho, co umí webové rozhraní."
 ---
 
 # HARDWARIO Cloud REST API {#hardwario-cloud-rest-api}

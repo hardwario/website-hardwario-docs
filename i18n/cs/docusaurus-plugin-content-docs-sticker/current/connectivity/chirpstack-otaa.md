@@ -1,7 +1,6 @@
 ---
 slug: chirpstack-otaa
 title: ChirpStack v4 – OTAA
-description: "Tato stránka vysvětluje, jak zaregistrovat zařízení HARDWARIO STICKER jako koncové zařízení LoRaWAN v ChirpStack v4 pomocí OTAA (aktivace přes vzduch), včetně doporučeného nastavení profilu zařízení a přidání dekodéru payloadu."
 ---
 import Image from '@theme/IdealImage';
 

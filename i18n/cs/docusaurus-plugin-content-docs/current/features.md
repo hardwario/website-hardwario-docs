@@ -1,7 +1,7 @@
 ---
 slug: features
 title: Vlastnosti
-description: "Tento článek popisuje vlastnosti platformy CHESTER."
+description: "Přehled vlastností platformy CHESTER: konektivita, možnosti napájení, rozšiřující moduly, firmware a napojení na cloud."
 title_meta: "Vlastnosti (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

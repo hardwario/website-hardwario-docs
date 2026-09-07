@@ -1,7 +1,7 @@
 ---
 slug: chester-x10
 title: CHESTER-X10 (nabíječka Li-Po)
-description: Rozšiřující modul se záložním napájením a nabíječkou jednoho článku Li-Po pro platformu CHESTER, založený na step-down převodníku TPS62933, nabíječce MCP73833 a monitorovacím ADC TLA2024.
+description: "Rozšiřující modul se záložním napájením a nabíječkou jednoho článku Li-Po pro CHESTER, postavený na měniči TPS62933 a nabíječce MCP73833."
 keywords: [CHESTER-X10, nabíječka Li-Po, nabíječka Li-Ion, záložní napájení, napájení, baterie, TPS62933, MCP73833, TLA2024, step-down, monitorování baterie, CHESTER]
 ---
 import Image from '@theme/IdealImage';

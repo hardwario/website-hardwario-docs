@@ -1,7 +1,6 @@
 ---
 slug: chester-x4
 title: CHESTER-X4 (Step-down 4kanálový)
-description: "Tento článek popisuje rozšiřující modul CHESTER-X4."
 ---
 import Image from '@theme/IdealImage';
 

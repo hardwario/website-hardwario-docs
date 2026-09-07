@@ -1,7 +1,6 @@
 ---
 slug: application-over-bluetooth
 title: Aplikace přes Bluetooth
-description: "Použijte mobilní aplikaci HARDWARIO Manager a postupujte podle kapitoly Aktualizace firmwaru."
 ---
 import Image from '@theme/IdealImage';
 

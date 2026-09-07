@@ -1,7 +1,6 @@
 ---
 title: AT příkazy
 sidebar_position: 1
-description: "Tato stránka uvádí všechny AT příkazy implementované ve firmwaru GLIDER. AT příkazy se zadávají přes konzoli USB-C."
 ---
 import Image from '@theme/IdealImage';
 

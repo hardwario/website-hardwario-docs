@@ -1,7 +1,6 @@
 ---
 slug: about-core-module
 title: O modulu Core Module
-description: "Maximální proud pro jeden pin je 16 mA."
 ---
 import Image from '@theme/IdealImage';
 

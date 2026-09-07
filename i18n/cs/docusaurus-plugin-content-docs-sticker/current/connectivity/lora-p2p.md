@@ -1,7 +1,6 @@
 ---
 slug: lora-p2p
 title: Režim LoRa P2P
-description: "Komunikační režim LoRa P2P přichází v připravovaném vydání firmwaru platformy."
 ---
 import Image from '@theme/IdealImage';
 

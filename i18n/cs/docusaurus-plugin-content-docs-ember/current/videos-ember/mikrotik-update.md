@@ -1,7 +1,6 @@
 ---
 slug: mikrotik-update
 title: Aktualizace brány EMBER
-description: "V tomto návodu se naučíte, jak aktualizovat balíčky RouterOS a firmware RouterBOARD na vaší bráně MikroTik pomocí rozhraní WebFig. Udržování systému v aktuálním stavu zajišťuje optimální výkon, stabilitu a kompatibilitu s nejnovějšími funkcemi."
 ---
 
 import Image from '@theme/IdealImage';

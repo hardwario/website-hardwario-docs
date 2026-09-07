@@ -1,6 +1,5 @@
 ---
 title: Správa zařízení
-description: "Vytvářejte, upravujte a odstraňujte zařízení programově, užitečné při"
 ---
 
 # Správa zařízení {#managing-devices}

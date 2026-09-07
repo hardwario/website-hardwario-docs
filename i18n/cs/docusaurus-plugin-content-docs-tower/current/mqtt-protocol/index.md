@@ -1,6 +1,6 @@
 ---
 title: Protokol MQTT
-description: "Zástupný znak # lze použít pouze na konci názvu topicu"
+description: "Protokol MQTT v HARDWARIO TOWER: broker Mosquitto, struktura topiců a formáty zpráv, přes které spolu mluví všechny uzly a aplikace."
 ---
 import Image from '@theme/IdealImage';
 

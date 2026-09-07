@@ -1,7 +1,6 @@
 ---
 slug: milesight-gs601
 title: GS601
-description: "Milesight GS601 je stropní detektor vapování a kouře určený pro prostředí bez kouře, včetně škol, bytů, hotelů a schodišť. Využívá technologii laserového rozptylu k detekci elektronických cigaret, klasických cigaret a marihuany s vysokou přesností a…"
 ---
 
 import Image from '@theme/IdealImage';

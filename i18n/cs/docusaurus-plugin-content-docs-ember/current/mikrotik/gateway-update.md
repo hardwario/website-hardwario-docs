@@ -1,7 +1,6 @@
 ---
 slug: gateway-update
 title: Aktualizace brány
-description: "Tento návod vás provede aktualizací balíčků RouterOS a RouterBOARD (firmware/„BIOS\") pomocí aplikace Winbox 4."
 ---
 import Image from '@theme/IdealImage';
 

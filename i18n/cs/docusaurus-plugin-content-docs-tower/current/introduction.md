@@ -2,7 +2,7 @@
 slug: /
 sidebar_position: 1
 title: TOWER
-description: "Používá se v průmyslových aplikacích, ve STEM výuce a v hobby projektech (domácí automatizace, zahradničení, osvětlení, escape roomy atd.)."
+description: "TOWER je modulární bezdrátová platforma pro IoT s otevřeným softwarem i hardwarem pro rychlé prototypování a nasazení, srdce HARDWARIO Academy."
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';

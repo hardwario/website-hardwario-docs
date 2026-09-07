@@ -1,6 +1,5 @@
 ---
 title: Hodiny reálného času
-description: "Zařízení STICKER udržuje přesný čas pomocí vnitřních hodin reálného času (RTC). Přesný čas je potřeba pro časové značky záznamů v historii senzorů, pro spouštění událostí podle pravidel alarmů a pro stavové zprávy sítě."
 ---
 import Image from '@theme/IdealImage';
 

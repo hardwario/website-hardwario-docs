@@ -1,7 +1,6 @@
 ---
 slug: about-mini-battery-module
 title: O modulu Mini Battery Module
-description: "Obvod pro odpojení zátěže umí odpojit baterie, pokud je k systému připojen jakýkoli jiný zdroj napájení (např. síťový adaptér nebo kabel USB). Napětí baterie lze měřit na jednom z analogových vstupů standardizovaného konektoru (P0/A0/TXD0)."
 ---
 import Image from '@theme/IdealImage';
 

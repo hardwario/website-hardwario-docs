@@ -1,7 +1,6 @@
 ---
 slug: chester-clime
 title: CHESTER Clime
-description: "Tento článek popisuje základní funkce, hardware a ukázkovou JSON zprávu katalogové aplikace CHESTER Clime."
 ---
 import Image from '@theme/IdealImage';
 

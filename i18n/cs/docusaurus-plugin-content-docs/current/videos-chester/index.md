@@ -1,7 +1,7 @@
 ---
 slug: videos-chester
 title: Video tutoriály
-description: "Zde najdete podrobné návody a video tutoriály, které vám pomohou nastavit a používat zařízení CHESTER."
+description: "Podrobné postupy a videonávody pro nastavení a používání zařízení CHESTER."
 title_meta: "Video tutoriály (CHESTER video tutorials)"
 ---
 

@@ -1,7 +1,6 @@
 ---
 slug: lorawan-tts
 title: The Things Stack
-description: "Tento návod ukazuje, jak připojit LoRaWAN bránu HARDWARIO EMBER (MikroTik RouterOS) k The Things Stack (TTS)."
 title_meta: "The Things Stack (EMBER)"
 ---
 import Image from '@theme/IdealImage';

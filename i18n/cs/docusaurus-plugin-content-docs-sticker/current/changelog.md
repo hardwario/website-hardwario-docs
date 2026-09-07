@@ -3,7 +3,7 @@ slug: changelog
 title: Seznam změn STICKER
 toc_min_heading_level: 2
 toc_max_heading_level: 2
-description: "Tato stránka zaznamenává všechny důležité změny na platformě STICKER, včetně firmwaru a katalogových aplikací. Kartami níže můžete filtrovat podle kategorie změn."
+description: "Tato stránka sleduje všechny významné změny na platformě STICKER včetně firmwaru a katalogových aplikací."
 ---
 
 import Tabs from '@theme/Tabs';

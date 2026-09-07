@@ -1,7 +1,6 @@
 ---
 slug: rtc-remoteio-error
 title: Chyba RTC -EREMOTEIO
-description: "Na zařízení FIBER Lite je to očekávané a neškodné. Znamená to, že krok Configure Hardware"
 ---
 
 **Symptom:** `dmesg` vypisuje `rtc-pcf85063 ...: error -EREMOTEIO: RTC chip is not present`.

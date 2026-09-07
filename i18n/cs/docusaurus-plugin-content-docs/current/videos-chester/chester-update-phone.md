@@ -1,7 +1,6 @@
 ---
 slug: chester-update-phone
 title: Jak aktualizovat CHESTER pomocí telefonu
-description: "V tomto průvodci se naučíte, jak snadno aktualizovat firmware zařízení CHESTER pomocí aplikace HARDWARIO Manager. Naskenujte QR kód, spusťte aktualizaci a ověřte, že zařízení používá nejnovější verzi."
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,7 +1,6 @@
 ---
 slug: device-discovery
 title: Vyhledání zařízení
-description: "Pokud jste zařízení nastavili tak, aby získávalo IP adresu přes DHCP, přidělenou adresu pravděpodobně nebudete znát. Pro nalezení zařízení můžete naslouchat UDP broadcast paketům na portu 53914. Každých několik sekund zařízení odešle broadcast paket…"
 ---
 
 # Vyhledání zařízení {#device-discovery}

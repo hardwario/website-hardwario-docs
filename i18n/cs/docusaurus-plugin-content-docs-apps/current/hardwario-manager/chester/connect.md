@@ -1,7 +1,6 @@
 ---
 slug: connect
 title: Připojení a párování
-description: "Otevřete HARDWARIO Manager → CHESTER. Pokud není nic připojené, zobrazí"
 ---
 
 # Připojení k zařízení CHESTER {#connect-to-a-chester}

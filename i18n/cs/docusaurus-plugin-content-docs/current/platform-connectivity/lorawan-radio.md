@@ -1,7 +1,6 @@
 ---
 slug: lorawan-radio
 title: Sítě LoRaWAN
-description: "Základní deska CHESTER-M obsahuje také LoRaWAN radio. Katalogové aplikace mají osazené jak NB-IoT/LTE-M, tak LoRaWAN radio. Díky tomu můžete snadno přepnout na jiné radio pouze softwarovou rekonfigurací."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,7 @@
 ---
 slug: /hardwario-manager/chester
 title: CHESTER
-description: "Zařízení CHESTER se spravuje přes Bluetooth Low Energy. Připojte k němu"
+description: "Správa zařízení CHESTER přes Bluetooth Low Energy v aplikaci HARDWARIO Manager: stav zařízení, konfigurace, shell, párování BLE tagů a aktualizace firmwaru."
 title_meta: "CHESTER (HARDWARIO Manager)"
 ---
 

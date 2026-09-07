@@ -1,7 +1,6 @@
 ---
 slug: assets
 title: Assety
-description: "Assety jsou logické kontejnery, které ve vašem prostředí ThingsBoard reprezentují objekty z reálného světa (budovy, podlaží, zóny nebo zařízení). Na rozdíl od zařízení (která reprezentují fyzický hardware odesílající data) slouží assety k organizaci…"
 ---
 
 import Image from '@theme/IdealImage';

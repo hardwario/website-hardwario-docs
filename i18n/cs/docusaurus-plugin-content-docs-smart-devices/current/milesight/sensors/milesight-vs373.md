@@ -1,7 +1,6 @@
 ---
 slug: milesight-vs373
 title: VS373
-description: "Milesight VS373 je bezkontaktní senzor detekce pádu navržený pro péči o seniory a zdravotnická zařízení. Využívá pokročilou 4D radarovou technologii milimetrových vln 60 GHz v kombinaci s AI algoritmy k detekci pádů a abnormálních pohybů s přesností…"
 ---
 
 import Image from '@theme/IdealImage';

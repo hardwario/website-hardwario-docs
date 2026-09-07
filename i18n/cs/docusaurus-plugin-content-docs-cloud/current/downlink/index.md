@@ -1,6 +1,6 @@
 ---
 title: Downlink
-description: "druhy downlink zpráv:"
+description: "Zprávy downlink v HARDWARIO Cloud: tři druhy zpráv, které může Cloud poslat zařízení CHESTER, a k čemu se každý z nich hodí."
 ---
 
 # Downlink {#downlink}

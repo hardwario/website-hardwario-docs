@@ -3,7 +3,7 @@ slug: changelog
 title: Seznam změn GAUGER
 toc_min_heading_level: 2
 toc_max_heading_level: 2
-description: "Tato stránka sleduje všechny významné změny na platformě GAUGER, včetně firmwaru a hardwaru. Pomocí záložek níže můžete filtrovat podle kategorie změn."
+description: "Tato stránka sleduje všechny významné změny na platformě GAUGER včetně firmwaru a hardwaru. Kategorie změn filtrujte pomocí záložek níže."
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,7 +1,6 @@
 ---
 slug: chester-x0
 title: CHESTER-X0 (4kanálový vstup)
-description: "Tento článek popisuje čtyřkanálový I/O rozšiřující modul CHESTER-X0. Dostupné jsou dvě varianty:"
 ---
 import Image from '@theme/IdealImage';
 

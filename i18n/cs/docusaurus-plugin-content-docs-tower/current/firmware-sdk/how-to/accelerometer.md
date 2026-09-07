@@ -1,7 +1,6 @@
 ---
 slug: how-to-accelerometer
 title: "How To: Akcelerometr"
-description: "Core Module je vybaven tříosým lineárním akcelerometrem (LIS2DH12) s ultranízkou spotřebou, který je připojen přes sběrnici I²C. Umožňuje detekci pohybu na základě přerušení."
 ---
 import Image from '@theme/IdealImage';
 

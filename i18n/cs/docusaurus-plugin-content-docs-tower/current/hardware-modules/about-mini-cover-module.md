@@ -1,7 +1,6 @@
 ---
 slug: about-mini-cover-module
 title: O modulu Mini Cover
-description: "Modul Mini Cover je jednoduchý mechanický díl, který pomáhá zakrýt přední stranu elektroniky HARDWARIO TOWER (menší formát 33 x 55 mm)."
 ---
 import Image from '@theme/IdealImage';
 

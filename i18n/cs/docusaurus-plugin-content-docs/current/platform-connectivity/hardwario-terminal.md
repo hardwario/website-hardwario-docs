@@ -1,7 +1,6 @@
 ---
 slug: hardwario-terminal
 title: HARDWARIO Terminal
-description: "HARDWARIO Terminal je terminálový nástroj založený na prohlížeči Google Chrome, který umožňuje komunikovat přímo se zařízeními a moduly HARDWARIO z prohlížeče, a to bez nutnosti instalovat další software."
 ---
 import Image from '@theme/IdealImage';
 

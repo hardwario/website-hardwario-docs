@@ -1,7 +1,7 @@
 ---
 slug: index
 title: Milesight - Utility zařízení
-description: "Zde je seznam Milesight Utility zařízení otestovaných společností HARDWARIO včetně odkazů na zdroje:"
+description: "Doplňková zařízení Milesight otestovaná společností HARDWARIO, včetně referenčních zdrojů ke každému z nich."
 ---
 
 import Image from '@theme/IdealImage';

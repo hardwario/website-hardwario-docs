@@ -1,7 +1,7 @@
 ---
 slug: cloud-v2-migration-guide
 title: Průvodce migrací na Cloud v2
-description: "Tento článek vás provede celým procesem migrace z Cloud v1 na Cloud v2."
+description: "Tento článek vás provede celým postupem migrace z Cloud v1 na Cloud v2."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

@@ -1,7 +1,6 @@
 ---
 slug: how-to-pir-module
 title: "Jak na to: PIR Module"
-description: "PIR module se nejčastěji používá jako detektor pohybu. Díky nízké spotřebě jej lze bezpečně používat s bateriemi jako jediným zdrojem napájení."
 ---
 import Image from '@theme/IdealImage';
 

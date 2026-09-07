@@ -1,7 +1,7 @@
 ---
 title: Nastavení HARDWARIO Cloud
 sidebar_position: 3
-description: "Zařízení GLIDER je z výroby připraveno komunikovat s HARDWARIO Cloud. Stačí zařízení zaregistrovat ve webovém rozhraní pomocí dvou údajů, které jsou pro každou jednotku unikátní: sériového čísla a claim tokenu."
+description: "Připojení zařízení GLIDER k HARDWARIO Cloud: zařízení je z výroby připravené, stačí ho zaregistrovat ve webovém rozhraní pomocí dvou identifikátorů."
 ---
 import Image from '@theme/IdealImage';
 

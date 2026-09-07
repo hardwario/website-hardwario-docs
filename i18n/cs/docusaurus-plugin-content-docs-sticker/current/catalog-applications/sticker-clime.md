@@ -1,7 +1,6 @@
 ---
 slug: sticker-clime
 title: STICKER Clime
-description: "STICKER Clime používá standardní vzory stavové LED popsané v Signalizace LED. Startovní karusel, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné."
 ---
 import Image from '@theme/IdealImage';
 

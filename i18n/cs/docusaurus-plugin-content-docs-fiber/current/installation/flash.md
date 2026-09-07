@@ -1,6 +1,5 @@
 ---
 title: Nahrání Raspberry Pi OS
-description: "FIBER se dodává ve dvou hardwarových variantách a postup nahrání se mezi nimi liší."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

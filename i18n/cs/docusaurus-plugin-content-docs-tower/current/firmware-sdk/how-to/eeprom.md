@@ -1,7 +1,6 @@
 ---
 slug: how-to-eeprom
 title: "How To: EEPROM"
-description: "Nebojte se omezeného počtu cyklů W/E. Za standardních podmínek čip garantuje 100 000 cyklů. Pamatujte, že tyto cykly jsou zápisové/mazací."
 ---
 import Image from '@theme/IdealImage';
 

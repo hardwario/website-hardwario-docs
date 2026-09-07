@@ -1,7 +1,6 @@
 ---
 slug: node-red-programming
 title: Programování v Node-RED
-description: "V této kapitole si projdeme záložku Functions v Playgroundu"
 ---
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'

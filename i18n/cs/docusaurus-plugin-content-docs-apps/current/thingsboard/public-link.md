@@ -1,7 +1,6 @@
 ---
 slug: public-link
 title: Veřejný odkaz
-description: "Tento návod vysvětluje, jak nasdílet dashboard ThingsBoard veřejnou URL. Externí uživatelé si díky tomu můžou dashboard a jeho telemetrická data prohlédnout bez účtu v ThingsBoardu. Tento veřejný přístup je ve výchozím stavu striktně jen pro čtení,…"
 ---
 
 import Image from '@theme/IdealImage';

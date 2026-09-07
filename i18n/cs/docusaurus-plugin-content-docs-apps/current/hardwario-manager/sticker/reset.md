@@ -1,7 +1,6 @@
 ---
 slug: reset
 title: Reset zařízení
-description: "Možnosti resetu sahají od neškodného restartu po úplné vymazání vendor resetem."
 ---
 
 # Reset zařízení STICKER {#reset-a-sticker}

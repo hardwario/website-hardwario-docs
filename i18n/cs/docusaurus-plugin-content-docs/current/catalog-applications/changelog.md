@@ -3,7 +3,6 @@ slug: changelog
 title: Seznam změn
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-description: "Tato stránka zachycuje všechny významné změny ve firmwaru katalogových aplikací CHESTER od verze v3.0.0 (migrace na Cloud v2)."
 ---
 
 # Seznam změn {#changelog}

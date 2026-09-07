@@ -1,7 +1,6 @@
 ---
 slug: chester-motion
 title: CHESTER Motion
-description: "Tento článek popisuje základní funkcionalitu, popis hardwaru a ukázkovou JSON zprávu katalogové aplikace CHESTER Motion."
 ---
 import Image from '@theme/IdealImage';
 

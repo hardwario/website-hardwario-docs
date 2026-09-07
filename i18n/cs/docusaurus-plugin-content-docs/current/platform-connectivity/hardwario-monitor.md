@@ -1,7 +1,6 @@
 ---
 slug: hardwario-monitor
 title: HARDWARIO Monitor
-description: "Stáhněte si HARDWARIO Monitor na stránce projektu na GitHubu."
 ---
 import Image from '@theme/IdealImage';
 

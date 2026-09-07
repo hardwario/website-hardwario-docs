@@ -1,7 +1,6 @@
 ---
 title: Teplotní senzory
 sidebar_position: 1
-description: "GLIDER podporuje až 8 digitálních teploměrů DS18B20 připojených přes sběrnici 1-Wire. Senzory se připojují k jednomu ze dvou portů 1-Wire na svorkovnici zařízení GLIDER (W1 nebo W2)."
 ---
 import Image from '@theme/IdealImage';
 

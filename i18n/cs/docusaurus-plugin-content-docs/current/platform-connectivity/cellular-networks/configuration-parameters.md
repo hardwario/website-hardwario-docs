@@ -1,7 +1,6 @@
 ---
 slug: configuration-parameters
 title: Konfigurační parametry
-description: "Tato kapitola popisuje každý parametr lte config, hodnoty, které přijímá, a kdy jej změnit. Hotová nastavení podle poskytovatele SIM karty najdete v kapitole Nastavení SIM karty."
 ---
 import Image from '@theme/IdealImage';
 

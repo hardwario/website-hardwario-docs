@@ -1,7 +1,6 @@
 ---
 slug: orno-or-we-516
 title: Orno OR-WE-516
-description: "Webové stránky"
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,7 +1,7 @@
 ---
 slug: bulk-actions
 title: Hromadné akce
-description: "což se hodí při nasazení celé flotily zařízení CHESTER, která mají mít stejnou konfiguraci, firmware,"
+description: "Hromadné akce v HARDWARIO Cloud nastaví nebo spravují mnoho zařízení CHESTER najednou, když má celá flotila sdílet stejné nastavení."
 ---
 
 # Hromadné akce {#bulk-actions}

@@ -1,7 +1,7 @@
 ---
 slug: /hardwario-manager
 title: HARDWARIO Manager
-description: "HARDWARIO v provozu. Je to jedna aplikace pro celý ekosystém: přiložením telefonu"
+description: "HARDWARIO Manager je mobilní aplikace pro nastavení a správu zařízení HARDWARIO přímo v terénu."
 ---
 
 # HARDWARIO Manager {#hardwario-manager}

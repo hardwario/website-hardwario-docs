@@ -1,6 +1,5 @@
 ---
 title: Diagnostika
-description: "Sada příkazů ats seskupuje diagnostiku pouze pro čtení, nástroje pro ověření hardwaru a pomocníky pro testování na stole, dostupné přes vývojářskou konzoli (viz Nastavení firmwaru). Na rozdíl od podpříkazů config diagnostické příkazy podsystémy…"
 ---
 import Image from '@theme/IdealImage';
 

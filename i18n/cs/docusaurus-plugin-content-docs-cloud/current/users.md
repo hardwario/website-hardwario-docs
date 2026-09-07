@@ -1,7 +1,7 @@
 ---
 slug: users
 title: Uživatelé
-description: "Stránka Users obsahuje seznam všech, kdo mají přístup k vašemu Space, a umožňuje zvát nové"
+description: "Stránka Uživatelé vypisuje všechny, kdo mají přístup do vašeho prostoru, a umožňuje zvát nové členy a spravovat jejich role."
 ---
 
 # Uživatelé {#users}

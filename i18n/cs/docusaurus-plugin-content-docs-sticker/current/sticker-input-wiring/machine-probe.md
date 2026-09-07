@@ -1,7 +1,6 @@
 ---
 slug: machine-probe
 title: MACHINE PROBE
-description: "Sonda MACHINE PROBE není omezená jen na STICKER Input, je plně kompatibilní i se zařízením HARDWARIO CHESTER, které nabízí stejné rozhraní 1-Wire. Tutéž sondu tak lze použít na obou platformách bez jakékoli hardwarové úpravy."
 ---
 
 # MACHINE PROBE (v1.3) {#machine-probe-v13}

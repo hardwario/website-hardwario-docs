@@ -1,7 +1,6 @@
 ---
 slug: rak-RAK7268V2
 title: RAK7268V2
-description: "Podporuje připojení přes Ethernet a Wi-Fi (a volitelně LTE), což z ní dělá univerzální volbu pro prostředí SOHO i podnikové sítě. Brána je vybavena vestavěným Network Serverem vhodným pro malá až středně velká nasazení, ale lze ji snadno připojit k…"
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,7 +1,6 @@
 ---
 slug: chirpstack-abp
 title: ChirpStack v4 – ABP
-description: "Tato stránka vysvětluje, jak zaregistrovat zařízení HARDWARIO STICKER jako koncové zařízení LoRaWAN v ChirpStack v4 pomocí ABP (aktivace personalizací), včetně doporučeného nastavení profilu zařízení a přidání dekodéru payloadu."
 ---
 import Image from '@theme/IdealImage';
 

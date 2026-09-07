@@ -1,7 +1,6 @@
 ---
 slug: configuration
 title: Konfigurace
-description: "Nastavení zařízení se čte a zapisuje příkazem config přes vývojářský shell. Nastavení firmwaru a otevření konzole popisuje Nastavení firmwaru."
 title_meta: "Konfigurace (STICKER)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,7 +1,7 @@
 ---
 slug: chester-x9
 title: CHESTER-X9 (4kanálový low-side switch)
-description: Výstupní modul se čtyřmi low-side switchi pro platformu CHESTER, založený na čtyřech samočinně chráněných přepínačích NCV8412ASTT1G s omezením proudu na každém kanálu.
+description: "Výstupní modul se čtyřmi spínači low-side pro CHESTER, postavený na čtyřech samočinně chráněných spínačích NCV8412ASTT1G s omezením proudu na kanál."
 keywords: [CHESTER-X9, low-side switch, výstupní modul, NCV8412, NCV8412ASTT1G, omezení proudu, GPIO, budič relé, solenoid, přepínání zátěže, CHESTER]
 ---
 import Image from '@theme/IdealImage';

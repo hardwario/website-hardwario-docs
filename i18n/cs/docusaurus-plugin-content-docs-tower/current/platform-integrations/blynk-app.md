@@ -1,7 +1,6 @@
 ---
 slug: blynk-app
 title: Mobilní a webová aplikace Blynk
-description: "Blynk je nástroj pro tvorbu mobilního frontendu a signalizační relay (MQTT). Umožňuje vám rychle vytvořit ovládání a zobrazení pro vaše IoT zařízení. Zde vás provedeme procesem sestavení hardwaru a jeho připojení do cloudu."
 ---
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'

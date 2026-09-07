@@ -1,7 +1,7 @@
 ---
 slug: chester-x5
 title: CHESTER-X5 (2kanálový izolovaný vstup 50 V)
-description: Dvoukanálový rozšiřující modul s izolovaným napěťovým vstupem pro platformu CHESTER. Každý kanál měří ±50 V přes zesilovač se zesílenou izolací (AMC3330) a 24bitový I²C ADC ADS122C04.
+description: "Dvoukanálový rozšiřující modul s izolovaným napěťovým vstupem pro CHESTER. Každý kanál měří ±50 V přes zesilovač se zesílenou izolací."
 keywords: [CHESTER-X5, izolovaný vstup, izolované měření napětí, 50V, AMC3330, ADS122C04, 24bitový ADC, zesílená izolace, I2C, galvanické oddělení, CHESTER]
 ---
 import Image from '@theme/IdealImage';

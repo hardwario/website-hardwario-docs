@@ -1,7 +1,7 @@
 ---
 slug: /installation
 title: Instalace
-description: "Základní instalace klientské aplikace TAPPER."
+description: "Jak nainstalovat klientskou aplikaci TAPPER na Raspberry Pi Zero 2 W."
 title_meta: "Instalace (TAPPER)"
 ---
 

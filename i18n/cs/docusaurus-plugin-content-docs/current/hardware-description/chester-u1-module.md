@@ -1,7 +1,6 @@
 ---
 slug: chester-u1-module
 title: Modul CHESTER-U1
-description: "Místo použití zařízení CHESTER-M a vkládání rozšiřujících modulů do něj navrhnete nosnou desku (carrier board) a vložíte do ní CHESTER-U1."
 ---
 import Image from '@theme/IdealImage';
 

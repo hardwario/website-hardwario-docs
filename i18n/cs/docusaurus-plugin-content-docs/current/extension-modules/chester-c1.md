@@ -1,7 +1,6 @@
 ---
 slug: chester-c1
 title: CHESTER-C1 (I/O deska s relé)
-description: "Tento článek popisuje nosnou desku CHESTER-C1."
 ---
 import Image from '@theme/IdealImage';
 

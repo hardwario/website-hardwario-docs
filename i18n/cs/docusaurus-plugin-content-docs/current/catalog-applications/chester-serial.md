@@ -1,7 +1,6 @@
 ---
 slug: chester-serial
 title: CHESTER Serial
-description: "Tento článek popisuje základní funkcionalitu, popis hardwaru, výchozí konfiguraci a ukázkovou JSON zprávu katalogové aplikace CHESTER Serial."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,6 @@
 ---
 slug: downlink-commands
 title: Downlink příkazy
-description: "Zařízení STICKER zpracovává vzdálené příkazy přijaté jako downlinky LoRaWAN na fPort 85 a odpovědi posílá zpět na fPort 85."
 ---
 import Image from '@theme/IdealImage';
 

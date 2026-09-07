@@ -1,7 +1,6 @@
 ---
 slug: thingsboard-dashboard
 title: Základní dashboard
-description: "V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobrazení proměnné a postavit základní graf. Data ze svých zařízení tak budete moci vizualizovat a sledovat v reálném čase."
 ---
 
 import Image from '@theme/IdealImage';

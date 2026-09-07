@@ -1,7 +1,6 @@
 ---
 slug: installation-clean-os
 title: Čistá instalace
-description: "Tento návod ukazuje, jak nainstalovat všechny potřebné nástroje pro práci se zařízeními HARDWARIO TOWER na váš Raspberry Pi s nainstalovaným Raspberry Pi OS."
 ---
 import Image from '@theme/IdealImage';
 

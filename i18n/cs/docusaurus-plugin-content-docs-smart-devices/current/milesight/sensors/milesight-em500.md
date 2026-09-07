@@ -1,7 +1,6 @@
 ---
 slug: milesight-em500
 title: EM500
-description: "Milesight EM500-CO2 je venkovní senzor pro monitoring prostředí 4 v 1 určený pro měření hladiny CO₂ společně s podmínkami prostředí v náročném provozu. Nabízí NDIR senzor CO₂ s rozsahem 400–5 000 ppm, integrované senzory teploty, vlhkosti a…"
 ---
 
 import Image from '@theme/IdealImage';

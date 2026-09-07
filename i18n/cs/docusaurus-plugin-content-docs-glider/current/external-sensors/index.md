@@ -1,7 +1,7 @@
 ---
 title: Externí senzory
 sidebar_position: 4
-description: "GLIDER kromě interních senzorů přijímá i několik typů externích vstupů:"
+description: "Externí senzory a vstupy, které GLIDER přijímá vedle svých interních senzorů, včetně zapojení a poznámek ke konfiguraci."
 ---
 import Image from '@theme/IdealImage';
 

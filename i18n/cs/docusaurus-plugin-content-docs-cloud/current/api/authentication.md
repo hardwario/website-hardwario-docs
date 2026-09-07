@@ -1,6 +1,5 @@
 ---
 title: Autentizace
-description: "Každý požadavek se autentizuje pomocí API klíče posílaného v hlavičce X-API-KEY."
 ---
 
 # Autentizace {#authentication}

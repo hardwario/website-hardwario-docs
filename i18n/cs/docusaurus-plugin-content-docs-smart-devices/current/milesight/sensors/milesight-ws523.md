@@ -1,7 +1,6 @@
 ---
 slug: milesight-ws523
 title: WS523
-description: "Milesight WS523 je inteligentní přenosná zásuvka s konektivitou LoRaWAN určená pro vzdálené ovládání a monitorování spotřeby energie. Umožňuje plánované zapínání/vypínání elektronických zařízení, měří spotřebu energie (napětí, proud, aktivní výkon,…"
 ---
 
 import Image from '@theme/IdealImage';

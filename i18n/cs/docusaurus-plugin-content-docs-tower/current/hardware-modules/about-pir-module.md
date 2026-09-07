@@ -1,7 +1,6 @@
 ---
 slug: about-pir-module
 title: O modulu PIR Module
-description: "Modul PIR Module funguje jako detektor pohybu pracující na pasivním infračerveném principu (PIR). Typickým použitím modulu PIR Module může být bezdrátový detektor pohybu umístěný na stěně nebo na stropě."
 ---
 import Image from '@theme/IdealImage';
 

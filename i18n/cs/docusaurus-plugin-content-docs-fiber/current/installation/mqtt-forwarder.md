@@ -1,6 +1,5 @@
 ---
 title: Instalace ChirpStack MQTT Forwarderu
-description: "V této části se nainstaluje ChirpStack MQTT Forwarder, který propojuje Concentratord s"
 ---
 
 # Instalace ChirpStack MQTT Forwarderu {#install-chirpstack-mqtt-forwarder}

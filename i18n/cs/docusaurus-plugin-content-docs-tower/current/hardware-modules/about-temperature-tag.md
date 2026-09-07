@@ -1,7 +1,6 @@
 ---
 slug: about-temperature-tag
 title: O modulu Temperature Tag
-description: "Modul Temperature Tag využívá vysoce přesný teplotní senzor TMP112 s typickou přesností ±0,1 °C při 25 °C. Tento senzor je digitální a kalibrovaný. Komunikuje po sběrnici I²C a vyznačuje se velmi nízkou spotřebou a režimem vypnutí."
 ---
 import Image from '@theme/IdealImage';
 

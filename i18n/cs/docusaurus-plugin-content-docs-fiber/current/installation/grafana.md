@@ -1,6 +1,5 @@
 ---
 title: Instalace Grafany
-description: "Dostupné na zařízení FIBER i FIBER Lite."
 ---
 
 # Instalace Grafany {#install-grafana}

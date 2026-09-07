@@ -1,7 +1,7 @@
 ---
 slug: chester-x12
 title: CHESTER-X12 (RS-232)
-description: Rozšiřující modul pro sériovou komunikaci RS-232 pro platformu CHESTER, založený na převodníku I²C na UART SC16IS740IPW a transceiveru MAX3226, s monitorováním vstupního napětí na desce.
+description: "Rozšiřující modul pro sériovou komunikaci RS-232 pro CHESTER, postavený na převodníku I²C na UART SC16IS740IPW a transceiveru MAX3226."
 keywords: [CHESTER-X12, RS-232, RS232, sériová linka, SC16IS740IPW, MAX3226, I2C na UART, převodník UART, TPS62933, TLA2021, monitorování napětí, CHESTER]
 ---
 import Image from '@theme/IdealImage';

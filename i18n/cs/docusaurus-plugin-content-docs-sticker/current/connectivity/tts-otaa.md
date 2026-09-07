@@ -1,7 +1,6 @@
 ---
 slug: tts-otaa
 title: The Things Stack – OTAA
-description: "Tato stránka vysvětluje, jak zaregistrovat zařízení HARDWARIO STICKER jako koncové zařízení LoRaWAN v The Things Stack (TTS) pomocí OTAA (aktivace přes vzduch) a jak přidat formátovač payloadu (dekodér)."
 ---
 import Image from '@theme/IdealImage';
 

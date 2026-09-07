@@ -1,7 +1,6 @@
 ---
 slug: device-info
 title: Informace o zařízení a klíče LoRaWAN
-description: "Přečtěte identitu zařízení STICKER a klíče LoRaWAN, které potřebujete k jeho"
 ---
 
 # Čtení informací o zařízení a klíčů LoRaWAN {#read-device-info-and-lorawan-keys}

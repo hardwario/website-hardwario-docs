@@ -1,7 +1,6 @@
 ---
 slug: about-co2-module
 title: O modulu CO₂
-description: "Oxid uhličitý (neboli CO₂) je bezbarvý plyn bez zápachu, který je nezbytný pro život na Zemi. Jeho nominální koncentrace je asi 400 ppm (0,04 %). CO₂ se v přírodě vyskytuje mnoha způsoby. Například lidé produkují CO₂ při výdechu."
 ---
 import Image from '@theme/IdealImage';
 

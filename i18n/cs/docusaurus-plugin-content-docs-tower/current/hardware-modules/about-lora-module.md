@@ -1,7 +1,6 @@
 ---
 slug: about-lora-module
 title: O modulu LoRa
-description: "Díky specifické zig-zag modulaci může zařízení LoRa komunikovat s bránou na vzdálenost desítek kilometrů."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,7 @@
 ---
 slug: chester-x8
 title: CHESTER-X8 (přesný akcelerometr)
-description: Rozšiřující modul s přesným tříosým akcelerometrem pro platformu CHESTER, založený na nízkošumovém MEMS akcelerometru ADXL355 na I²C, s vyvedenou sběrnicí I²C a GPIO na svorkovnici.
+description: "Rozšiřující modul s přesným tříosým akcelerometrem pro CHESTER, postavený na nízkošumovém MEMS akcelerometru ADXL355 na sběrnici I²C."
 keywords: [CHESTER-X8, akcelerometr, tříosý, ADXL355, MEMS, vibrace, náklon, inklinace, I2C, detekce manipulace, CHESTER]
 ---
 import Image from '@theme/IdealImage';

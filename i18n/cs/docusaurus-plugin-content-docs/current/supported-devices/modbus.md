@@ -1,7 +1,6 @@
 ---
 slug: modbus_sensors
 title: Modbus senzory
-description: "Zde je seznam senzorů otestovaných společností HARDWARIO včetně základní konfigurace pro použití:"
 ---
 
 import Image from '@theme/IdealImage';

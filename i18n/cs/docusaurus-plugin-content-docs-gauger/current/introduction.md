@@ -1,7 +1,7 @@
 ---
 slug: /
 title: GAUGER
-description: "Zařízení hostuje webové uživatelské rozhraní, které slouží k jeho konfiguraci. Lze jej ovládat také přes HTTP API. Hodnoty počítadel je možné čítat pomocí Modbus TCP."
+description: "GAUGER je konfigurovatelné zařízení s Wi-Fi a Ethernetem pro počítání pulzů až na čtyřech galvanicky oddělených digitálních vstupech."
 sidebar_label: Úvod
 ---
 

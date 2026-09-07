@@ -1,7 +1,6 @@
 ---
 slug: how-to-lora-module
 title: "How To: LoRa Module"
-description: "LoRa Module poskytuje jednoduchý způsob, jak připojit váš kit k síti LoRa. Pro příjem zpráv ze svého zařízení můžete využít komerční, komunitní nebo vlastní bránu LoRa."
 ---
 import Image from '@theme/IdealImage';
 

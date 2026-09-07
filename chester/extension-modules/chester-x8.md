@@ -1,7 +1,7 @@
 ---
 slug: chester-x8
 title: CHESTER-X8 (Precision accel)
-description: Precision 3-axis accelerometer extension module for the CHESTER platform, based on the low-noise ADXL355 MEMS accelerometer on I²C, with an I²C and GPIO breakout on the terminal block.
+description: "Precision 3-axis accelerometer extension module for CHESTER, based on the low-noise ADXL355 MEMS accelerometer on I²C."
 keywords: [CHESTER-X8, accelerometer, 3-axis, ADXL355, MEMS, vibration, tilt, inclination, I2C, tamper detection, CHESTER]
 ---
 import Image from '@theme/IdealImage';

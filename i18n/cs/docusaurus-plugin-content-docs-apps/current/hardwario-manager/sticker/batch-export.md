@@ -1,7 +1,6 @@
 ---
 slug: batch-export
 title: Načtení více zařízení
-description: "Zachyťte konfiguraci mnoha zařízení v jedné session a vyexportujte je společně."
 ---
 
 # Načtení více zařízení STICKER (dávkový export) {#scan-multiple-stickers-batch-export}

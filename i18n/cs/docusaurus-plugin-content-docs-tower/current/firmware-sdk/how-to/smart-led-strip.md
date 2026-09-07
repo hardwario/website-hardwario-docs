@@ -1,7 +1,6 @@
 ---
 slug: how-to-smart-led-strip
 title: "How To: Smart LED pásek"
-description: "Smart LED pásek vám nabízí snadný způsob, jak zobrazovat hodnoty například teplotu jako barevný rozsah, blikáním apod."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,7 +1,7 @@
 ---
 slug: features
 title: Funkce
-description: "Funkce na této stránce přijdou v připravovaném firmwaru STICKER v1.4.0."
+description: "Tato stránka popisuje důležité chování firmwaru STICKER: jak zařízení hospodaří s energií, udržuje spojení LoRaWAN a chrání uložená data."
 title_meta: "Funkce (STICKER)"
 ---
 import Image from '@theme/IdealImage';

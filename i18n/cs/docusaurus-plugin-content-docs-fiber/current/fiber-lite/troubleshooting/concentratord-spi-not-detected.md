@@ -1,7 +1,6 @@
 ---
 slug: concentratord-spi-not-detected
 title: Koncentrátor FIBER Lite nikdy nezobrazí Gateway ID
-description: "Gateway ID, stránka brány v ChirpStack nikdy nezobrazí časové razítko „Last seen at\" a do ChirpStack"
 ---
 
 **Příznak:** na zařízení FIBER Lite (SPI/RAK2287) logy vlastní služby koncentrátoru nikdy nevypíšou

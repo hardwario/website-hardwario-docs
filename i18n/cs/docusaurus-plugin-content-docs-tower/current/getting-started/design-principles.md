@@ -1,7 +1,6 @@
 ---
 slug: design-principles
 title: Principy návrhu
-description: "Věříme, že se věci mají dělat správně, a proto jsme přijali následující návrhová rozhodnutí."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,5 @@
 ---
 title: Konektivita
-description: "Zařízení FIBER nabízí několik komunikačních rozhraní vhodných pro širokou škálu instalací:"
 ---
 
 # Konektivita {#connectivity}

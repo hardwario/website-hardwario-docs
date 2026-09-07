@@ -1,7 +1,6 @@
 ---
 slug: one-wire-sensors
 title: Senzory 1-Wire
-description: "Přiřaďte externí teplotní senzory 1-Wire připojené k zařízení STICKER Input"
 ---
 
 # Nastavení senzorů 1-Wire {#set-up-1-wire-sensors}

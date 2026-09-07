@@ -5,7 +5,7 @@ title: HTTP API
 
 # HTTP API {#http-api}
 
-Zařízení na portu 80 provozuje HTTP server s API. Všechny požadavky musí být autentizovány pomocí HTTP Basic Auth. Uživatelské jméno bude vždy. Heslo je výchozí, ale lze jej nastavit pomocí volby. API lze vypnout pomocí volby v nastavení.
+Zařízení na portu 80 provozuje HTTP server s API. Všechny požadavky kromě `/api/v1/ping` musí být autentizovány pomocí HTTP Basic Auth. Uživatelské jméno je vždy `admin`. Heslo je ve výchozím stavu `admin`, ale lze jej změnit volbou `password`. API lze vypnout volbou `enable_server` v nastavení.
 
 Data se odesílají ve formátu JSON. Všechny odpovědi jsou objekt JSON obsahující booleovskou vlastnost `ok`. Ta je `true`, pokud požadavek uspěl, jinak `false`. Pokud požadavek uspěl, jsou případná data odpovědi obsažena v poli `data`. Pokud požadavek selhal, bude přítomno pole `msg` obsahující jednu chybovou zprávu nebo seznam více chybových zpráv.
 
@@ -31,7 +31,7 @@ Příklad úspěšného požadavku:
 
 ### GET `/api/v1/ping` {#get-apiv1ping}
 
-Zařízení odpoví .
+Zařízení odpoví hodnotou `"pong"` v poli `data`. Jako jediný endpoint nevyžaduje autentizaci, takže se hodí ke kontrole dostupnosti.
 
 ### GET `/api/v1/config` {#get-apiv1config}
 

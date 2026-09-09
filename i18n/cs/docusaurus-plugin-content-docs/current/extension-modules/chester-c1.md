@@ -92,7 +92,7 @@ _\** Pomocí tlačítka BYPASS BUTTON spustíte zařízení z baterie bez stejno
 
 Schéma zapojení se hodí, pokud programujete nízkoúrovňový kód pracující s hardwarem nebo pokud vás jen zajímá, jak je systém navržen.
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-c1-r1.1.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-c1-r1.1.pdf)
 
 <!--
 - [TODO Interactive PCB connector, part, testpoint and signal browser]

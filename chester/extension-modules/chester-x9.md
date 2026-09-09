@@ -152,7 +152,7 @@ CHESTER-X9 can be used as part of the CHESTER SDK using the `ctr_x9_a` and `ctr_
 
 The complete schematic, showing the four NCV8412ASTT1G low-side switches and the connector mapping, is available as a PDF:
 
-- [Schematic (PDF)](schematics/hio-chester-x9-r1.0.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x9-r1.0.pdf)
 - [Interactive CHESTER-X9 browser](pathname:///download/ibom/hio-chester-x9-r1.0.html)
 
 ## Module Drawing

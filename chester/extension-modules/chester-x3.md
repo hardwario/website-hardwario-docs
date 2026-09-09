@@ -58,7 +58,7 @@ CHESTER-X3C provides 2 inputs for load-cell (strain gauge) that can be used for 
 
 A schematic diagram is useful if you program low-level hardware-related code or if you're just curious about how the system is designed.
 
-- [Schematic (PDF)](schematics/hio-chester-x3-r3.2.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x3-r3.2.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x3-r3.2.html)
 
 ![CHESTER-X3 R3.2 schematic: two ADS122C04 ADC channels with input filtering and I2C interface](images/hio-chester-x3-r3.2-1.png)

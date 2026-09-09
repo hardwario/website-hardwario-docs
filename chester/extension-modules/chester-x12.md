@@ -169,7 +169,7 @@ CHESTER-X12 can be used as part of the CHESTER SDK using the `ctr_x12_a` and `ct
 
 The complete schematic, covering the main page, the interface, and the power supply, is available as a PDF:
 
-- [Schematic (PDF)](schematics/hio-chester-x12-r1.2.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x12-r1.2.pdf)
 - [Interactive CHESTER-X12 browser](pathname:///download/ibom/hio-chester-x12-r1.2.html)
 
 ## Module Drawing

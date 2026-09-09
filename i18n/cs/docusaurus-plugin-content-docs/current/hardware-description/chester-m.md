@@ -150,7 +150,7 @@ Následující tabulka uvádí signály v pořadí zleva doprava, když desku ot
 
 Schéma zapojení je užitečné, pokud programujete nízkoúrovňový kód související s hardwarem nebo pokud jste jen zvědaví, jak je systém navržen.
 
-- [Schéma R3.4 (PDF)](../../../../../chester/hardware-description/hio-chester-m-r3.4.pdf)
+- [Schéma R3.4 (PDF)](pathname:///chester/hardware-description/hio-chester-m-r3.4.pdf)
 - [Interaktivní prohlížeč konektorů, součástek, testovacích bodů a signálů PCB R3.4](pathname:///download/ibom/chester-m-r3.4.html)
 
 ### MCU {#mcu}

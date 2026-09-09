@@ -50,7 +50,7 @@ CHESTER-X1 podporuje připojení metodou parazitního napájení. V takovém př
 
 Schéma zapojení je užitečné, pokud programujete nízkoúrovňový kód pracující s hardwarem nebo pokud vás jen zajímá, jak je systém navržen.
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x1-r3.2.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x1-r3.2.pdf)
 - [Interaktivní prohlížeč konektorů, součástek, testovacích bodů a signálů na PCB](pathname:///download/ibom/hio-chester-x1-r3.2.html)
 
 ![Schéma CHESTER-X1, list 1: 1-Wire master DS2482S-800 s propojením IO0-IO7 pájecími můstky na kanály CH1-CH8](../../../../../chester/extension-modules/images/hio-chester-x1-r3.2-1.png)

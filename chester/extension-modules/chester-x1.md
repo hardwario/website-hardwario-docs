@@ -50,7 +50,7 @@ CHESTER-X1 supports connection using parasitic powering method. In that case onl
 
 A schematic diagram is useful if you program low-level hardware-related code or if you're just curious about how the system is designed.
 
-- [Schematic (PDF)](schematics/hio-chester-x1-r3.2.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x1-r3.2.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x1-r3.2.html)
 
 ![CHESTER-X1 schematic sheet 1: DS2482S-800 1-Wire master with solder-bridge routing of IO0-IO7 to channels CH1-CH8](images/hio-chester-x1-r3.2-1.png)

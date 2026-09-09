@@ -34,7 +34,7 @@ V tomto článku najdete podrobnosti o hardwarové konfiguraci zařízení TAPPE
 
 ## Schéma zapojení {#schematic-diagram}
 
-- [Schéma R1.1 (PDF)](../../../../tapper/media/hio-tapper-r1.1-schematic.pdf)
+- [Schéma R1.1 (PDF)](pathname:///tapper/media/hio-tapper-r1.1-schematic.pdf)
 
 ### Napájení {#power}
 

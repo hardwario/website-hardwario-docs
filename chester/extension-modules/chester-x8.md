@@ -150,7 +150,7 @@ The CHESTER-X8 module can be used with various CHESTER mainboard configurations.
 
 The complete schematic, showing the ADXL355 accelerometer, its I²C interface and interrupt routing, and the terminal-block breakout, is available as a PDF:
 
-- [Schematic (PDF)](schematics/hio-chester-x8-r1.0.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x8-r1.0.pdf)
 - [Interactive CHESTER-X8 browser](pathname:///download/ibom/hio-chester-x8-r1.0.html)
 
 ## Module Drawing

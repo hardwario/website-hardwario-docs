@@ -34,7 +34,7 @@ In this article, you will find the details about the TAPPER hardware configurati
 
 ## Schematic Diagram
 
-- [Schematic R1.1 (PDF)](media/hio-tapper-r1.1-schematic.pdf)
+- [Schematic R1.1 (PDF)](pathname:///tapper/media/hio-tapper-r1.1-schematic.pdf)
 
 ### Power
 

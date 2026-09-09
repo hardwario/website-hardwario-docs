@@ -46,7 +46,7 @@ Modul CHESTER-X2 poskytuje rozhraní TTL/UART a rozhraní RS-485 (např. pro kom
 
 Schéma je užitečné, pokud programujete nízkoúrovňový kód pracující s hardwarem nebo pokud vás jen zajímá, jak je systém navržen.
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x2-r3.0.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x2-r3.0.pdf)
 - [Interaktivní prohlížeč konektorů, součástek, testovacích bodů a signálů na PCB](pathname:///download/ibom/hio-chester-x2-r3.0.html)
 
 ![Schéma modulu CHESTER-X2 s převodníkem UART SC16IS740 a transceiverem RS-485 THVD1450](../../../../../chester/extension-modules/images/hio-chester-x2-r3.0-1.png)

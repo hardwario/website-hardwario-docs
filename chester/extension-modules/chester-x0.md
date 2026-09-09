@@ -109,7 +109,7 @@ However, this is just to understand the modes. You only need to know which mode 
 
 A schematic diagram is useful if you program low-level hardware-related code or if you're just curious about how the system is designed.
 
-- [Schematic (PDF)](schematics/hio-chester-x0-r2.0.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x0-r2.0.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x0-r2.0.html)
 
 ![CHESTER-X0 schematic sheet 1: PCAL6416A GPIO expander and TPS61099 boost converter with module pin headers](images/hio-chester-x0-r2.0-1.png)

@@ -152,7 +152,7 @@ CHESTER-X9 lze v rámci CHESTER SDK použít přes shieldy `ctr_x9_a` a `ctr_x9_
 
 Kompletní schéma (čtyři low-side switche NCV8412ASTT1G a mapování konektoru) je k dispozici jako PDF:
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x9-r1.0.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x9-r1.0.pdf)
 - [Interaktivní prohlížeč CHESTER-X9](pathname:///download/ibom/hio-chester-x9-r1.0.html)
 
 ## Výkres modulu {#module-drawing}

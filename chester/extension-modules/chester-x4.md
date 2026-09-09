@@ -46,7 +46,7 @@ Each of the four outputs has a resetable PTC fuse protection (femtoSMDC005F). Ea
 
 A schematic diagram is useful if you program low-level hardware-related code or if you're just curious about how the system is designed.
 
-- [Schematic (PDF)](schematics/hio-chester-x4-r3.1.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x4-r3.1.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x4-r3.1.html)
 
 ![CHESTER-X4 R3.1 schematic: TPS62175 step-down converter, TLA2021 ADC, and four fused P-MOS output switches](images/hio-chester-x4-r3.1-1.png)

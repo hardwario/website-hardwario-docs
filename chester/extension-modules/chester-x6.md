@@ -139,7 +139,7 @@ The CHESTER-X6 module can be used with various CHESTER mainboard configurations.
 
 The complete schematic (the SC16IS740 UART bridge, the TCA9534A expander, the S-Wire line driver, and the 5 V boost converter) is available as a PDF:
 
-- [Schematic (PDF)](schematics/hio-chester-x6-r1.0.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x6-r1.0.pdf)
 - [Interactive CHESTER-X6 browser](pathname:///download/ibom/hio-chester-x6-r1.0.html)
 
 ## Module Drawing

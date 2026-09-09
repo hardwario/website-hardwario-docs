@@ -46,7 +46,7 @@ CHESTER-X2 provides TTL/UART interface and RS-485 interface (e.g., for Modbus co
 
 A schematic diagram is useful if you program low-level hardware-related code or if you're just curious about how the system is designed.
 
-- [Schematic (PDF)](schematics/hio-chester-x2-r3.0.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x2-r3.0.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-x2-r3.0.html)
 
 ![Schematic of CHESTER-X2 with SC16IS740 UART bridge and THVD1450 RS-485 transceiver](images/hio-chester-x2-r3.0-1.png)

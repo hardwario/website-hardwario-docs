@@ -36,7 +36,7 @@ HARDWARIO can provide ECAD footprints for your integration.
 
 ## Schematics
 
-- [Schematic R1.1 (PDF)](hio-chester-u1-r1.1.pdf)
+- [Schematic R1.1 (PDF)](pathname:///chester/hardware-description/hio-chester-u1-r1.1.pdf)
 
 [comment]: # (PDF to PNG convert command: pdftoppm hio-chester-u1-r1.1.pdf hio-chester-u1-r1.1 -png)
 

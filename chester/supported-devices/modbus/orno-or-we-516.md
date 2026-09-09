@@ -84,7 +84,7 @@ You can edit the communication settings of the ORNO energy meter using one of th
 
 Communication parameters can be configured directly via the official software provided by ORNO.  
 The configuration tool can be downloaded here:  
-**[Download ORNO configuration software for OR-WE-516](OR-WE-516_program.7z)**
+**[Download ORNO configuration software for OR-WE-516](pathname:///chester/supported-devices/modbus/OR-WE-516_program.7z)**
 
 To connect the device to your PC, use a **standard USB–RS-485 converter**.  
 

@@ -180,27 +180,27 @@ The LED can be driven directly over the developer console with the `ats led` com
 
 ### Power
 
-**[Download Power Schematic (PDF)](hardware-diagrams/power.pdf)**
+**[Download Power Schematic (PDF)](pathname:///sticker/hardware-diagrams/power.pdf)**
 ![STICKER - Power](images/power.png)
 
 ### Antenna
 
-**[Download Antenna Schematic (PDF)](hardware-diagrams/antenna.pdf)**
+**[Download Antenna Schematic (PDF)](pathname:///sticker/hardware-diagrams/antenna.pdf)**
 ![STICKER - Antenna](images/antenna.png)
 
 ### MCU
 
-**[Download MCU Schematic (PDF)](hardware-diagrams/mcu.pdf)**
+**[Download MCU Schematic (PDF)](pathname:///sticker/hardware-diagrams/mcu.pdf)**
 ![STICKER - MCU](images/mcu.png)
 
 ### Sensors
 
-**[Download Sensors Schematic (PDF)](hardware-diagrams/sensors.pdf)**
+**[Download Sensors Schematic (PDF)](pathname:///sticker/hardware-diagrams/sensors.pdf)**
 ![STICKER - Sensors](images/sensors.png)
 
 ### NFC
 
-**[Download NFC Schematic (PDF)](hardware-diagrams/nfc.pdf)**
+**[Download NFC Schematic (PDF)](pathname:///sticker/hardware-diagrams/nfc.pdf)**
 ![STICKER - NFC](images/nfc.png)
 
 ---

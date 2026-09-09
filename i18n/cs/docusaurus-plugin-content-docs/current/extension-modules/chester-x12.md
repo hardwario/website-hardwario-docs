@@ -169,7 +169,7 @@ CHESTER-X12 lze v rámci CHESTER SDK použít přes shieldy `ctr_x12_a` a `ctr_x
 
 Kompletní schéma (hlavní strana, rozhraní a napájení) je k dispozici jako PDF:
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x12-r1.2.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x12-r1.2.pdf)
 - [Interaktivní prohlížeč CHESTER-X12](pathname:///download/ibom/hio-chester-x12-r1.2.html)
 
 ## Výkres modulu {#module-drawing}

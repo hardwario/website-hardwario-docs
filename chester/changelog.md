@@ -146,7 +146,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 ### CHESTER-M R3.4 *(current)*
 
 - Current production revision of the CHESTER-M mainboard
-- Schematic: [R3.4 (PDF)](hardware-description/hio-chester-m-r3.4.pdf)
+- Schematic: [R3.4 (PDF)](pathname:///chester/hardware-description/hio-chester-m-r3.4.pdf)
 - Interactive PCB browser: [iBOM R3.4](pathname:///download/ibom/chester-m-r3.4.html)
 
 ### CHESTER-M R3.3
@@ -165,7 +165,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 - Compact 38×38 mm module: electrically identical to CHESTER-M
 - Same firmware binary runs on both CHESTER-M and CHESTER-U1 without changes
-- Schematic: [R1.1 (PDF)](hardware-description/hio-chester-u1-r1.1.pdf)
+- Schematic: [R1.1 (PDF)](pathname:///chester/hardware-description/hio-chester-u1-r1.1.pdf)
 
 {/* separator */}
 </TabItem>

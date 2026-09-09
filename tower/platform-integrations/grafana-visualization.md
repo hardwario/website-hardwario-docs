@@ -203,7 +203,7 @@ Select **Add Data Source** and fill in the data
 
 ## Import dashboard
 
-#### Download [**dashboard.json**](./dashboard.json) and import it to Grafana
+#### Download [**dashboard.json**](pathname:///tower/platform-integrations/dashboard.json) and import it to Grafana
 
 - Click the **Grafana icon on the top left** (1)
 - Click on the **+** icon to expand the submenu (2)

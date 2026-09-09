@@ -84,7 +84,7 @@ Nastavení komunikace elektroměru ORNO můžete upravit jedním z následujíc�
 
 Komunikační parametry lze nakonfigurovat přímo pomocí oficiálního softwaru od firmy ORNO.  
 Konfigurační nástroj si můžete stáhnout zde:  
-**[Stáhnout konfigurační software ORNO pro OR-WE-516](../../../../../../chester/supported-devices/modbus/OR-WE-516_program.7z)**
+**[Stáhnout konfigurační software ORNO pro OR-WE-516](pathname:///chester/supported-devices/modbus/OR-WE-516_program.7z)**
 
 Zařízení k počítači připojíte **standardním převodníkem USB–RS-485**.  
 

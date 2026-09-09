@@ -203,7 +203,7 @@ Zvolte **Add Data Source** a vyplňte údaje
 
 ## Import dashboardu {#import-dashboard}
 
-#### Stáhněte [**dashboard.json**](../../../../../tower/platform-integrations/dashboard.json) a naimportujte jej do Grafany {#download-dashboardjson-and-import-it-to-grafana}
+#### Stáhněte [**dashboard.json**](pathname:///tower/platform-integrations/dashboard.json) a naimportujte jej do Grafany {#download-dashboardjson-and-import-it-to-grafana}
 
 - Klikněte na **ikonu Grafany vlevo nahoře** (1)
 - Kliknutím na ikonu **+** rozbalte podmenu (2)

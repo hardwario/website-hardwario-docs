@@ -180,27 +180,27 @@ LED lze řídit přímo z vývojářské konzole příkazy `ats led`, hodí se t
 
 ### Napájení {#power}
 
-**[Stáhnout schéma napájení (PDF)](../../../../sticker/hardware-diagrams/power.pdf)**
+**[Stáhnout schéma napájení (PDF)](pathname:///sticker/hardware-diagrams/power.pdf)**
 ![STICKER - napájení](../../../../sticker/images/power.png)
 
 ### Anténa {#antenna}
 
-**[Stáhnout schéma antény (PDF)](../../../../sticker/hardware-diagrams/antenna.pdf)**
+**[Stáhnout schéma antény (PDF)](pathname:///sticker/hardware-diagrams/antenna.pdf)**
 ![STICKER - anténa](../../../../sticker/images/antenna.png)
 
 ### MCU {#mcu}
 
-**[Stáhnout schéma MCU (PDF)](../../../../sticker/hardware-diagrams/mcu.pdf)**
+**[Stáhnout schéma MCU (PDF)](pathname:///sticker/hardware-diagrams/mcu.pdf)**
 ![STICKER - MCU](../../../../sticker/images/mcu.png)
 
 ### Senzory {#sensors}
 
-**[Stáhnout schéma senzorů (PDF)](../../../../sticker/hardware-diagrams/sensors.pdf)**
+**[Stáhnout schéma senzorů (PDF)](pathname:///sticker/hardware-diagrams/sensors.pdf)**
 ![STICKER - senzory](../../../../sticker/images/sensors.png)
 
 ### NFC {#nfc}
 
-**[Stáhnout schéma NFC (PDF)](../../../../sticker/hardware-diagrams/nfc.pdf)**
+**[Stáhnout schéma NFC (PDF)](pathname:///sticker/hardware-diagrams/nfc.pdf)**
 ![STICKER - NFC](../../../../sticker/images/nfc.png)
 
 ---

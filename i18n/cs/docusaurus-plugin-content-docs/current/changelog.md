@@ -146,7 +146,7 @@ Tato stránka sleduje změny na úrovni platformy podle **data**. Poznámky k vy
 ### CHESTER-M R3.4 *(aktuální)* {#chester-m-r34-current}
 
 - Aktuální produkční revize základní desky CHESTER-M
-- Schéma: [R3.4 (PDF)](../../../../chester/hardware-description/hio-chester-m-r3.4.pdf)
+- Schéma: [R3.4 (PDF)](pathname:///chester/hardware-description/hio-chester-m-r3.4.pdf)
 - Interaktivní prohlížeč PCB: [iBOM R3.4](pathname:///download/ibom/chester-m-r3.4.html)
 
 ### CHESTER-M R3.3 {#chester-m-r33}
@@ -165,7 +165,7 @@ Tato stránka sleduje změny na úrovni platformy podle **data**. Poznámky k vy
 
 - Kompaktní modul 38×38 mm: elektricky identický s CHESTER-M
 - Stejný binární firmware běží bez úprav na CHESTER-M i CHESTER-U1
-- Schéma: [R1.1 (PDF)](../../../../chester/hardware-description/hio-chester-u1-r1.1.pdf)
+- Schéma: [R1.1 (PDF)](pathname:///chester/hardware-description/hio-chester-u1-r1.1.pdf)
 
 {/* separator */}
 </TabItem>

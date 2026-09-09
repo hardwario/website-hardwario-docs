@@ -150,7 +150,7 @@ The following table lists the signals in the left-to-right order when you flip t
 
 A schematic diagram is useful if you program low-level hardware-related code or if you're just curious about how the system is designed.
 
-- [Schematic R3.4 (PDF)](hio-chester-m-r3.4.pdf)
+- [Schematic R3.4 (PDF)](pathname:///chester/hardware-description/hio-chester-m-r3.4.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser R3.4](pathname:///download/ibom/chester-m-r3.4.html)
 
 ### MCU

@@ -38,7 +38,7 @@ Rozšiřující modul **CHESTER-K1** využívá oba sloty **A** a **B**. Použí
 
 Schéma je užitečné, pokud programujete nízkoúrovňový kód související s hardwarem nebo pokud vás jen zajímá, jak je systém navržen.
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-k1-r1.4.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-k1-r1.4.pdf)
 - [Interaktivní prohlížeč konektorů, součástek, testovacích bodů a signálů PCB](pathname:///download/ibom/hio-chester-k1-r1.4.html)
 
 ![Schéma CHESTER-K1, list 1: expandér TCA9534A, step-up a LDO napájení a čtyři zátěžové přepínače TPS22917](../../../../../chester/extension-modules/images/hio-chester-k1-r1.4-1.png)

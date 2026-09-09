@@ -149,7 +149,7 @@ The CHESTER-X5 module can be used with various CHESTER mainboard configurations.
 
 The complete schematic (the two AMC3330 isolated input channels, their TPS22917 load switches, and the ADS122C04 ADC) is available as a PDF:
 
-- [Schematic (PDF)](schematics/hio-chester-x5-r2.1.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x5-r2.1.pdf)
 - [Interactive CHESTER-X5 browser](pathname:///download/ibom/hio-chester-x5-r2.1.html)
 
 ## Module Drawing

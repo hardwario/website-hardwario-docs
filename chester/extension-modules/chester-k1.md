@@ -38,7 +38,7 @@ The extension module **CHESTER-K1** use both slots **A** and **B**. So you use t
 
 A schematic diagram is useful if you program low-level hardware-related code or if you're just curious about how the system is designed.
 
-- [Schematic (PDF)](schematics/hio-chester-k1-r1.4.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-k1-r1.4.pdf)
 - [Interactive PCB connector, part, testpoint and signal browser](pathname:///download/ibom/hio-chester-k1-r1.4.html)
 
 ![CHESTER-K1 schematic sheet 1: TCA9534A expander, step-up and LDO supply, and four TPS22917 load switches](images/hio-chester-k1-r1.4-1.png)

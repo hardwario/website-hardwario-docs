@@ -46,7 +46,7 @@ Každý ze čtyř výstupů má ochranu vratnou PTC pojistkou (femtoSMDC005F). K
 
 Schéma zapojení se hodí, pokud programujete nízkoúrovňový kód pracující s hardwarem nebo pokud vás jen zajímá, jak je systém navržen.
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x4-r3.1.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x4-r3.1.pdf)
 - [Interaktivní prohlížeč konektorů, součástek, testovacích bodů a signálů PCB](pathname:///download/ibom/hio-chester-x4-r3.1.html)
 
 ![Schéma CHESTER-X4 R3.1: step-down měnič TPS62175, ADC TLA2021 a čtyři jištěné P-MOS výstupní spínače](../../../../../chester/extension-modules/images/hio-chester-x4-r3.1-1.png)

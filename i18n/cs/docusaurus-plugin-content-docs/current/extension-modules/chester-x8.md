@@ -150,7 +150,7 @@ Modul CHESTER-X8 lze použít s různými konfiguracemi základních desek CHEST
 
 Kompletní schéma (akcelerometr ADXL355, jeho rozhraní I²C a vedení přerušení a vyvedení na svorkovnici) je k dispozici jako PDF:
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x8-r1.0.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x8-r1.0.pdf)
 - [Interaktivní prohlížeč CHESTER-X8](pathname:///download/ibom/hio-chester-x8-r1.0.html)
 
 ## Výkres modulu {#module-drawing}

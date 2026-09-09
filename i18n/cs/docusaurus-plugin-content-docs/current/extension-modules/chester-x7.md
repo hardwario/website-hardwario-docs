@@ -149,7 +149,7 @@ CHESTER-X7 lze v rámci CHESTER SDK použít přes shieldy `ctr_x7_a` a `ctr_x7_
 
 Kompletní schéma (napájení sond přes boost a LDO a vstupní stupeň pro diferenciální a napěťový vstup) je k dispozici jako PDF:
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x7-r2.1.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x7-r2.1.pdf)
 - [Interaktivní prohlížeč CHESTER-X7](pathname:///download/ibom/hio-chester-x7-r2.1.html)
 
 ## Výkres modulu {#module-drawing}

@@ -105,7 +105,7 @@ _\* Tlačítko BYPASS použijte pro spuštění z baterie bez DC vstupního nap�
 
 Schéma zapojení je užitečné, pokud programujete nízkoúrovňový kód související s hardwarem nebo pokud vás jen zajímá, jak je systém navržen.
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-z1-r2.1.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-z1-r2.1.pdf)
 
 <!--
 - [TODO Interactive PCB connector, part, testpoint and signal browser]

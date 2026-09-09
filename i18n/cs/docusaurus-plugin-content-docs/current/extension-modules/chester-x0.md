@@ -109,7 +109,7 @@ To slouží pouze pro pochopení režimů. Stačí vědět, který režim je nas
 
 Schéma zapojení je užitečné, pokud programujete nízkoúrovňový kód související s hardwarem nebo pokud vás jen zajímá, jak je systém navržen.
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x0-r2.0.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x0-r2.0.pdf)
 - [Interaktivní prohlížeč konektorů, součástek, testovacích bodů a signálů PCB](pathname:///download/ibom/hio-chester-x0-r2.0.html)
 
 ![Schéma CHESTER-X0, list 1: GPIO expander PCAL6416A a zvyšující měnič TPS61099 s pinovými lištami modulu](../../../../../chester/extension-modules/images/hio-chester-x0-r2.0-1.png)

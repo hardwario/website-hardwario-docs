@@ -58,7 +58,7 @@ CHESTER-X3C poskytuje 2 vstupy pro tenzometrické snímače (load-cell), které 
 
 Schéma je užitečné, pokud programujete nízkoúrovňový kód související s hardwarem nebo pokud vás jen zajímá, jak je systém navržen.
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x3-r3.2.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x3-r3.2.pdf)
 - [Interaktivní prohlížeč konektorů, součástek, testovacích bodů a signálů na PCB](pathname:///download/ibom/hio-chester-x3-r3.2.html)
 
 ![Schéma CHESTER-X3 R3.2: dva kanály ADC ADS122C04 s filtrací vstupů a rozhraním I2C](../../../../../chester/extension-modules/images/hio-chester-x3-r3.2-1.png)

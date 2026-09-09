@@ -167,7 +167,7 @@ CHESTER-X13 can be used as part of the CHESTER SDK using the `ctr_x13_a` and `ct
 
 The complete schematic, covering the main page, the CAN interface, and the power supply, is available as a PDF:
 
-- [Schematic (PDF)](schematics/hio-chester-x13-r1.2.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x13-r1.2.pdf)
 - [Interactive CHESTER-X13 browser](pathname:///download/ibom/hio-chester-x13-r1.2.html)
 
 ## Module Drawing

@@ -167,7 +167,7 @@ CHESTER-X13 lze v rámci CHESTER SDK použít přes shieldy `ctr_x13_a` a `ctr_x
 
 Kompletní schéma (hlavní strana, rozhraní CAN a napájení) je k dispozici jako PDF:
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x13-r1.2.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x13-r1.2.pdf)
 - [Interaktivní prohlížeč CHESTER-X13](pathname:///download/ibom/hio-chester-x13-r1.2.html)
 
 ## Výkres modulu {#module-drawing}

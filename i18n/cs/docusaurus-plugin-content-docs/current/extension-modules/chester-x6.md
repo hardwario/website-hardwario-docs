@@ -139,7 +139,7 @@ Modul CHESTER-X6 lze použít s různými konfiguracemi základních desek CHEST
 
 Kompletní schéma (převodník UART SC16IS740, expander TCA9534A, budič linky S-Wire a boost převodník na 5 V) je k dispozici jako PDF:
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x6-r1.0.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x6-r1.0.pdf)
 - [Interaktivní prohlížeč CHESTER-X6](pathname:///download/ibom/hio-chester-x6-r1.0.html)
 
 ## Výkres modulu {#module-drawing}

@@ -149,7 +149,7 @@ Modul CHESTER-X5 lze použít s různými konfiguracemi základních desek CHEST
 
 Kompletní schéma (dva izolované vstupní kanály AMC3330, jejich load switche TPS22917 a ADC ADS122C04) je k dispozici jako PDF:
 
-- [Schéma (PDF)](../../../../../chester/extension-modules/schematics/hio-chester-x5-r2.1.pdf)
+- [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x5-r2.1.pdf)
 - [Interaktivní prohlížeč CHESTER-X5](pathname:///download/ibom/hio-chester-x5-r2.1.html)
 
 ## Výkres modulu {#module-drawing}

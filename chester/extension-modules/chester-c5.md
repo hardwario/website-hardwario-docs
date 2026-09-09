@@ -103,7 +103,7 @@ _\** Use the BYPASS BUTTON to initiate start from the battery without DC input p
 
 A schematic diagram is useful if you program low-level hardware-related code or if you're just curious about how the system is designed.
 
-- [Schematic (PDF)](schematics/hio-chester-c5-r1.1.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-c5-r1.1.pdf)
 
 <!--
 - [TODO Interactive PCB connector, part, testpoint and signal browser]

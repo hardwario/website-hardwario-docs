@@ -149,7 +149,7 @@ CHESTER-X7 can be used as part of the CHESTER SDK using the `ctr_x7_a` and `ctr_
 
 The complete schematic (the boost/LDO probe-power supply and the differential/voltage input front-end) is available as a PDF:
 
-- [Schematic (PDF)](schematics/hio-chester-x7-r2.1.pdf)
+- [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x7-r2.1.pdf)
 - [Interactive CHESTER-X7 browser](pathname:///download/ibom/hio-chester-x7-r2.1.html)
 
 ## Module Drawing

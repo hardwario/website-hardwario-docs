@@ -8,9 +8,7 @@ title: Terminál
 Terminál vám dá shell zařízení přes Bluetooth, tutéž konzoli, ke které byste se
 dostali kabelem, jen z telefonu.
 
-Otevřete **CHESTER → Open Terminal**. Prázdný terminál napovídá, kde začít:
-
-> Type a command below — try "help" or "config show".
+Otevřete **CHESTER → Open Terminal**. Prázdný terminál napovídá, kde začít: zadejte příkaz, například `help` nebo `config show`.
 
 ---
 

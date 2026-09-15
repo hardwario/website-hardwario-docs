@@ -8,9 +8,7 @@ title: Terminal
 The terminal gives you the device's shell over Bluetooth, the same console you
 would reach over a cable, from the phone.
 
-Open **CHESTER → Open Terminal**. An empty terminal suggests where to start:
-
-> Type a command below — try "help" or "config show".
+Open **CHESTER → Open Terminal**. An empty terminal suggests where to start: type a command, for example `help` or `config show`.
 
 ---
 

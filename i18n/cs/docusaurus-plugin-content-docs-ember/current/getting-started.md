@@ -1,7 +1,7 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
-description: "Rychlý start pro HARDWARIO EMBER: zapněte bránu a vyberte si backend LoRaWAN — spravovaný od HARDWARIO, nebo provozovaný vlastními silami."
+description: "Rychlý start pro HARDWARIO EMBER: zapněte bránu a vyberte si backend LoRaWAN, buď spravovaný od HARDWARIO, nebo provozovaný vlastními silami."
 title_meta: "Rychlý průvodce (EMBER)"
 ---
 import Image from '@theme/IdealImage';

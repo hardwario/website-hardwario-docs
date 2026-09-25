@@ -39,7 +39,7 @@ For improved security, we recommend authenticating via **Google** or **Microsoft
 3. This is where your **CHESTER devices** will live.
 
 :::caution
-Please follow our [**Naming Conventions**](https://docs.hardwario.com/cloud/#naming-conventions) when creating your space.
+Please follow our [**Naming Conventions**](/cloud/#naming-conventions) when creating your space.
 :::
 
 ---
@@ -69,10 +69,10 @@ The **Claim Token** is unique for each device. You can obtain it by **scanning t
 :::tip
 **Need more details?**  
 You can find more in-depth information about the **HARDWARIO Cloud** here:  
-👉 [https://docs.hardwario.com/cloud/](https://docs.hardwario.com/cloud/)
+👉 [https://docs.hardwario.com/cloud/](/cloud/)
 
 Or check out our **video tutorial** on how to add your CHESTER device to the Cloud:  
-👉 [https://docs.hardwario.com/chester/videos-chester/chester-cloud](https://docs.hardwario.com/chester/videos-chester/chester-cloud)
+👉 [https://docs.hardwario.com/chester/videos-chester/chester-cloud](/chester/videos-chester/chester-cloud)
 :::
 
 
@@ -103,9 +103,9 @@ Or check out our **video tutorial** on how to add your CHESTER device to the Clo
 
 If your device still has trouble connecting to the network (especially when using your own SIM card or roaming):
 
-* **Check Network Mode:** You might need to force a specific mode like **NB-IoT** or **LTE-M** based on your region. See the [**SIM Card Setup guide**](https://docs.hardwario.com/chester/platform-connectivity/cellular-networks/sim-card-setup) for details.
-* **Verify APN/PLMN:** If you are outside the Czech Republic or using a non-Vodafone SIM, follow the [**SIM Card Setup guide**](https://docs.hardwario.com/chester/platform-connectivity/cellular-networks/sim-card-setup) to configure your PLMN and APN correctly, or see the [**Configuration Parameters**](https://docs.hardwario.com/chester/platform-connectivity/cellular-networks/configuration-parameters) reference.
-* **Public IP for Cloud v2:** When using your own SIM, you must also set the [**correct IP and Port parameters**](https://docs.hardwario.com/chester/firmware-sdk/how-to-lte-v2#ip-and-port) for Cloud v2 compatibility.
+* **Check Network Mode:** You might need to force a specific mode like **NB-IoT** or **LTE-M** based on your region. See the [**SIM Card Setup guide**](/chester/platform-connectivity/cellular-networks/sim-card-setup) for details.
+* **Verify APN/PLMN:** If you are outside the Czech Republic or using a non-Vodafone SIM, follow the [**SIM Card Setup guide**](/chester/platform-connectivity/cellular-networks/sim-card-setup) to configure your PLMN and APN correctly, or see the [**Configuration Parameters**](/chester/platform-connectivity/cellular-networks/configuration-parameters) reference.
+* **Public IP for Cloud v2:** When using your own SIM, you must also set the [**correct IP and Port parameters**](/chester/firmware-sdk/how-to-lte-v2#ip-and-port) for Cloud v2 compatibility.
 
 ---
 
@@ -113,10 +113,10 @@ If your device still has trouble connecting to the network (especially when usin
 ## Step 5: Check the Status LED
 
 - **Blinking green every 5 seconds** → Connected to HARDWARIO Cloud ✅  
-- **No blinking /** [**other colors**](https://docs.hardwario.com/chester/catalog-applications/common-functionality/#led-behaviour) → Still connecting or an error occurred. Check SIM, network coverage, or power  
+- **No blinking /** [**other colors**](/chester/catalog-applications/common-functionality/#led-behaviour) → Still connecting or an error occurred. Check SIM, network coverage, or power  
 
 :::info
-For details about all LED color states and meanings, see the [**LED Behaviour documentation**](https://docs.hardwario.com/chester/catalog-applications/common-functionality/#led-behaviour).
+For details about all LED color states and meanings, see the [**LED Behaviour documentation**](/chester/catalog-applications/common-functionality/#led-behaviour).
 :::
 
 ## Step 6: See Your Data in the Cloud
@@ -131,10 +131,10 @@ For details about all LED color states and meanings, see the [**LED Behaviour do
 
 Once connected, you can:
 
-- Use [**HARDWARIO Manager**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-manager) (mobile app via BLE)
-- Use [**HARDWARIO Monitor**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-monitor) (J-Link or BLE from your PC)
-- Use [**HARDWARIO Terminal**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-terminal) (Google Chrome browser via WebSerial/WebBluetooth)
-- Access a [**Remote shell**](https://docs.hardwario.com/cloud/downlink/#shell-commands) and even perform [**firmware updates over the air**](https://docs.hardwario.com/cloud/firmware)
+- Use [**HARDWARIO Manager**](/chester/platform-connectivity/hardwario-manager) (mobile app via BLE)
+- Use [**HARDWARIO Monitor**](/chester/platform-connectivity/hardwario-monitor) (J-Link or BLE from your PC)
+- Use [**HARDWARIO Terminal**](/chester/platform-connectivity/hardwario-terminal) (Google Chrome browser via WebSerial/WebBluetooth)
+- Access a [**Remote shell**](/cloud/downlink/shell) and even perform [**firmware updates over the air**](/cloud/firmware)
 
 ---
 
@@ -145,11 +145,11 @@ It’s always a good idea to make sure your CHESTER is running the **latest firm
 ### Check Firmware Version
 You can check it in three ways:
 
-1. **Using** [**HARDWARIO Manager (mobile app)**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-manager)
+1. **Using** [**HARDWARIO Manager (mobile app)**](/chester/platform-connectivity/hardwario-manager)
    - Open the app and connect to your CHESTER via Bluetooth
    - The firmware version will be displayed automatically
 
-2. **Using** [**HARDWARIO Monitor (desktop app)**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-monitor)
+2. **Using** [**HARDWARIO Monitor (desktop app)**](/chester/platform-connectivity/hardwario-monitor)
    - Connect CHESTER via J-Link or BLE
    - Run the command:
      ```bash
@@ -157,7 +157,7 @@ You can check it in three ways:
      ```
    - You'll see firmware and application details in the console
 
-3. **Using** [**HARDWARIO Terminal (Google Chrome)**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-terminal)
+3. **Using** [**HARDWARIO Terminal (Google Chrome)**](/chester/platform-connectivity/hardwario-terminal)
    - Open Chrome and go to [**terminal.hardwario.com**](https://terminal.hardwario.com)
    - Connect CHESTER via J-Link (WebSerial) or BLE (WebBluetooth)
    - Run the command:
@@ -168,7 +168,7 @@ You can check it in three ways:
 
 ### Download the Latest Firmware
 You can always find the newest firmware builds here:  
-👉 [**Available Application Firmware Builds**](https://docs.hardwario.com/chester/catalog-applications/#application-firmware)
+👉 [**Available Application Firmware Builds**](/chester/catalog-applications/catalog-applications#application-firmware)
 
 :::info
  The firmware table is organized by CHESTER type, so make sure to select the correct one for your device.
@@ -179,14 +179,14 @@ If a newer version is available, you can update it using one of these methods:
 
 1. **Update via HARDWARIO Manager (mobile app)**
 
-   - Follow this step-by-step guide: 👉 [**Firmware update using HARDWARIO Manager**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-manager#firmware-update)
+   - Follow this step-by-step guide: 👉 [**Firmware update using HARDWARIO Manager**](/chester/platform-connectivity/hardwario-manager#firmware-update)
 
 2. **Update Firmware from the Cloud (FOTA)**
    - You can also update your CHESTER **remotely** via the cloud.
-   - For full technical details, see this guide: 👉 [**Firmware documentation**](https://docs.hardwario.com/cloud/firmware/)
+   - For full technical details, see this guide: 👉 [**Firmware documentation**](/cloud/firmware/)
 
 3. **Manual Update via J-Link**
-   - If you prefer flashing manually, see this guide: 👉 [**Application update over J-Link**](https://docs.hardwario.com/chester/firmware-flashing/application-over-j-link)
+   - If you prefer flashing manually, see this guide: 👉 [**Application update over J-Link**](/chester/firmware-flashing/application-over-j-link)
 
 ---
 
@@ -198,7 +198,7 @@ Your CHESTER is now connected, configured, and up to date, ready to collect and 
 ## Step 9: Explore Applications and Integrations
 
 Your CHESTER can do much more than just send data!  
-You can extend its functionality using [**HARDWARIO Applications**](https://docs.hardwario.com/apps/), ready-made modules and tools that help you:
+You can extend its functionality using [**HARDWARIO Applications**](/apps/), ready-made modules and tools that help you:
 
 - 📊 **Visualize your data** using dashboards and charts  
 - 🌐 **Integrate CHESTER** into existing **LoRaWAN networks** or other IoT systems  
@@ -208,5 +208,5 @@ All applications are easy to deploy and can transform your CHESTER into a comple
 
 :::info
 👉 Learn more and explore available applications here:  
-[**https://docs.hardwario.com/apps/**](https://docs.hardwario.com/apps/)
+[**https://docs.hardwario.com/apps/**](/apps/)
 :::

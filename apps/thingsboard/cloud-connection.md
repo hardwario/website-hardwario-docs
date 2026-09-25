@@ -236,5 +236,5 @@ You can test the data by opening your device in ThingsBoard and checking whether
 ## Video Tutorial
 
 :::tip
-If you need further assistance or a visual demonstration of the process described in this guide, consult the [Video Guide](https://docs.hardwario.com/apps/videos-apps/thingsboard-cloud-connection).
+If you need further assistance or a visual demonstration of the process described in this guide, consult the [Video Guide](/apps/videos-apps/thingsboard-cloud-connection).
 :::

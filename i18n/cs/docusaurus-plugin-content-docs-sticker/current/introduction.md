@@ -20,8 +20,8 @@ import Image from '@theme/IdealImage';
 
 * [**Rychlý průvodce**](first-steps): Postup zprovoznění krok za krokem.
 * [**Koupit STICKER**](https://www.hardwario.store/sticker): Nákup v našem obchodě.
-* [**Objednací kódy**](https://docs.hardwario.com/sticker/ordering-codes): Seznam součástek a jejich objednacích čísel.
-* [**Popis hardwaru**](https://docs.hardwario.com/sticker/hardware-description): Technické detaily a přehled hardwaru.
+* [**Objednací kódy**](/sticker/ordering-codes): Seznam součástek a jejich objednacích čísel.
+* [**Popis hardwaru**](/sticker/hardware-description): Technické detaily a přehled hardwaru.
 * [**Oficiální stránka produktu**](https://www.hardwario.com/products/sticker/): Funkce a přehled.
 * [**Seznam změn**](changelog): Nejnovější vydání SDK, verze firmwaru a změny v jednotlivých aplikacích.
 

@@ -1,6 +1,7 @@
 ---
 slug: platform-security
 title: Bezpečnost platformy
+sidebar_label: Bezpečnost platformy
 description: "Tento článek podává základní přehled o zabezpečení platformy CHESTER. Je rozdělený do kapitol, které popisují jednotlivé oblasti."
 ---
 import Image from '@theme/IdealImage';
@@ -67,7 +68,7 @@ Zprávy jsou zpracovávány službou **data streaming**, která zvyšuje spolehl
 
 * **REST API** (backend se řídí principem API-first)
 
-* Asynchronní **callbacky** (frontа webhooků)
+* Asynchronní **callbacky** (fronta webhooků)
 
 * **Webový portál** pro uživatele (funguje nad REST API)
 

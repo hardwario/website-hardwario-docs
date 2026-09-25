@@ -50,7 +50,7 @@ V podsložce SDK `samples\` najdete mnoho ukázek vysvětlujících práci s rů
 | opt3001           | Příklad luxmetru OPT3001 pro čtení osvětlení                                                                 |
 | people_counter    |                                                                                                              |
 | pt1000            | Čtení teploty RTD s modulem [**CHESTER-X3**](../extension-modules/chester-x3.md) a senzorem PT1000            |
-| rfmux             | Přepínání RFMUX mezi LTE/LoRaWAN a interní/externí antenou                                                   |
+| rfmux             | Přepínání RFMUX mezi LTE/LoRaWAN a interní/externí anténou                                                   |
 | sensor_pnp_npn    | Detekce změny vstupního pinu modulu [**CHESTER-X0**](../extension-modules/chester-x0.md) pomocí `ctr_edge`    |
 | sleep             | Nízkopříkonový příklad pro test spotřeby v nečinnosti                                                        |
 | sleep_chester_x2  | Nízkopříkonový příklad pro test spotřeby v nečinnosti s [**CHESTER-X2**](../extension-modules/chester-x2.md)  |

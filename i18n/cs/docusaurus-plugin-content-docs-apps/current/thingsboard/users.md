@@ -27,16 +27,16 @@ V tomto návodu se naučíte, jak v platformě ThingsBoard vytvářet nové uži
 
 5. Dále klikněte vpravo nahoře na **Owner and groups**.
 6. Zvolte **Customer** a **User Group**, do které bude uživatel patřit.
-   > **Připomínka:** Přiřazená grupa určuje, které dashboardy a zařízení uživatel uvidí, a také jeho konkrétní oprávnění.
+   > **Připomínka:** Přiřazená skupina určuje, které dashboardy a zařízení uživatel uvidí, a také jeho konkrétní oprávnění.
 
-![Krok Owner and groups v dialogu Add user s vybraným zákazníkem a otevřeným seznamem grup entit](../../../../../apps/thingsboard/images/users-2.png)
+![Krok Owner and groups v dialogu Add user s vybraným zákazníkem a otevřeným seznamem skupin entit](../../../../../apps/thingsboard/images/users-2.png)
 
 7. Nakonec klikněte na **Add**.
 
 Nového uživatele máte úspěšně vytvořeného!
 
 :::info
-**Potřebujete spravovat přístupy uživatelů?** Ve [**správě uživatelů**](/apps/thingsboard/users-managing) se dozvíte, jak vytvářet grupy, přiřazovat role a řídit přístup ke konkrétním zařízením nebo dashboardům.
+**Potřebujete spravovat přístupy uživatelů?** Ve [**správě uživatelů**](/apps/thingsboard/users-managing) se dozvíte, jak vytvářet skupiny, přiřazovat role a řídit přístup ke konkrétním zařízením nebo dashboardům.
 :::
 
 ---

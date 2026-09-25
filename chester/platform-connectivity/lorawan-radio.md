@@ -18,13 +18,13 @@ Some catalog firmwares allows configuration to use NB-IoT/LTE or LoRaWAN network
 
 This `app mode` configuration is needed currently for these catalog applications:
 
-- [CHESTER Clime](https://docs.hardwario.com/chester/catalog-applications/chester-clime)
-- [CHESTER Control](https://docs.hardwario.com/chester/catalog-applications/chester-control)
-- [CHESTER Push](https://docs.hardwario.com/chester/catalog-applications/chester-push)
-- [CHESTER Current](https://docs.hardwario.com/chester/catalog-applications/chester-current)
-- [CHESTER Scale](https://docs.hardwario.com/chester/catalog-applications/chester-scale)
-- [CHESTER Meteo](https://docs.hardwario.com/chester/catalog-applications/chester-meteo)
-- [CHESTER Range](https://docs.hardwario.com/chester/catalog-applications/chester-range)
+- [CHESTER Clime](/chester/catalog-applications/chester-clime)
+- [CHESTER Control](/chester/catalog-applications/chester-control)
+- [CHESTER Push](/chester/catalog-applications/chester-push)
+- [CHESTER Current](/chester/catalog-applications/chester-current)
+- [CHESTER Scale](/chester/catalog-applications/chester-scale)
+- [CHESTER Meteo](/chester/catalog-applications/chester-meteo)
+- [CHESTER Range](/chester/catalog-applications/chester-range)
 
 The default functionality is that a device **does not use any radio** (mode `none`) and you need to set configuration parameter **mode**.
 
@@ -160,7 +160,7 @@ The following table provides a summary of the recommended configuration paramete
 | **Class-C → Device supports Class-C** | **OFF** |
 
 :::info
-If you are unsure about the **ChirpStack setup** or **configuration**, please refer to the following guide, which provides detailed instructions for installing and configuring ChirpStack v4: [**Getting Started with ChirpStack v4**](https://docs.hardwario.com/apps/chirpstack/index#getting-started-with-chirpstack-v4)
+If you are unsure about the **ChirpStack setup** or **configuration**, please refer to the following guide, which provides detailed instructions for installing and configuring ChirpStack v4: [**Getting Started with ChirpStack v4**](/apps/chirpstack/index#getting-started-with-chirpstack-v4)
 :::
 
 ## Decoders and Codecs

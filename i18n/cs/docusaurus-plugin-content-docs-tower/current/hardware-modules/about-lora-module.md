@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        <b>Modul LoRa</b> umožňuje komunikovat v <b>bezdrátové síti LoRaWAN</b>, tedy v síti vytvořené pro IoT. Tato technologie umožňuje komunikaci z bateriově napájeného zařízení přímo na server, a to i po několik let. Modul LoRa využívá <b>ráiovou frekvenci 868 MHz</b>.
+        <b>Modul LoRa</b> umožňuje komunikovat v <b>bezdrátové síti LoRaWAN</b>, tedy v síti vytvořené pro IoT. Tato technologie umožňuje komunikaci z bateriově napájeného zařízení přímo na server, a to i po několik let. Modul LoRa využívá <b>rádiovou frekvenci 868 MHz</b>.
       </p>
       <p>
         Díky specifické zig-zag modulaci může zařízení LoRa komunikovat s bránou na vzdálenost desítek kilometrů.

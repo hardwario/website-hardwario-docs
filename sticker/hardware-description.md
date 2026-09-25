@@ -23,7 +23,7 @@ Depending on the specific assembly variant, STICKER includes:
 - **Temperature & Humidity:** Sensirion SHT43 sensor for high-accuracy ambient measurement.
 - **Light Intensity:** Texas Instruments OPT3001 ambient light sensor.
 - **Atmospheric Pressure:** NXP MPL3115A2 pressure sensor.
-- **PIR Motion:** Excelitas PYD1698 passive infrared motion sensor for presence detection (up to 5 m, $\ge 50^\circ$).
+- **PIR Motion:** Excelitas PYD1698 passive infrared motion sensor for presence detection (up to 5 m, ≥ 50°).
 - **3-axis Accelerometer:** STMicroelectronics LIS2DH12 accelerometer for tilt, vibration, and orientation tracking.
 - **Door Opening Detection:** Dual Allegro A1266 Hall-effect sensors.
 

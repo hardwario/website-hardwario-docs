@@ -52,7 +52,7 @@ CBOR klíč: `6`.
 | Pole | Typ | Jednotka | Popis |
 | :--- | :--- | :--- | :--- |
 | `slot` | uint (1-8) | - | Číslo slotu (`APP_W1_THERM_MAX_SLOTS = 8`). |
-| `temperature` | int (×0.01 °C) nebo `null` | °C | Poslední úspěšné čtení. Kóduje se jako `temperature × 100`; dekodér hodnotu přepočítá (`$div: 100`, `$fpp: 2`). `null` = NaN (neúspěšné čtení). |
+| `temperature` | int (×0,01 °C) nebo `null` | °C | Poslední úspěšné čtení. Kóduje se jako `temperature × 100`; dekodér hodnotu přepočítá (`$div: 100`, `$fpp: 2`). `null` = NaN (neúspěšné čtení). |
 
 :::info
 Na každý slot se odesílá pouze **nejnovější vzorek**, nikoli celá historie mezi uplinky. Pokud potřebujete časovou řadu, vzorkujte častěji a smiřte se s proporcionálně vyššími náklady na data – nebo založte feature request.

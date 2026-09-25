@@ -138,7 +138,7 @@ Poté vložte následující skript, nebo to můžete udělat ručně.
 /system note set show-at-login=no
 ```
 Skript spusťte stisknutím **Enter**.
-Nyní je potřeba aktualizovat RouterOS. Přejděte na [Kontrola aktualizací RouterOS a jejich instalace, pokud jsou dostupné.](#checks-for-routeros-updates-and-installs-if-available).
+Nyní je potřeba aktualizovat RouterOS. Přejděte na [Kontrola aktualizací RouterOS a jejich instalace, pokud jsou dostupné](#checks-for-routeros-updates-and-installs-if-available).
 
 #### Ruční nastavení: {#manual-setup}
 Nastaví identitu systému na „ember“.

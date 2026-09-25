@@ -18,13 +18,13 @@ Some catalog firmwares can use either a cellular (NB-IoT/LTE-M) or a LoRaWAN net
 
 The default is that the device uses **no radio at all** (mode `none`), so this step is mandatory on the following catalog applications:
 
-- [CHESTER Clime](https://docs.hardwario.com/chester/catalog-applications/chester-clime)
-- [CHESTER Control](https://docs.hardwario.com/chester/catalog-applications/chester-control)
-- [CHESTER Push](https://docs.hardwario.com/chester/catalog-applications/chester-push)
-- [CHESTER Current](https://docs.hardwario.com/chester/catalog-applications/chester-current)
-- [CHESTER Scale](https://docs.hardwario.com/chester/catalog-applications/chester-scale)
-- [CHESTER Meteo](https://docs.hardwario.com/chester/catalog-applications/chester-meteo)
-- [CHESTER Range](https://docs.hardwario.com/chester/catalog-applications/chester-range)
+- [CHESTER Clime](/chester/catalog-applications/chester-clime)
+- [CHESTER Control](/chester/catalog-applications/chester-control)
+- [CHESTER Push](/chester/catalog-applications/chester-push)
+- [CHESTER Current](/chester/catalog-applications/chester-current)
+- [CHESTER Scale](/chester/catalog-applications/chester-scale)
+- [CHESTER Meteo](/chester/catalog-applications/chester-meteo)
+- [CHESTER Range](/chester/catalog-applications/chester-range)
 
 Set the `mode` parameter to the network you want to use:
 

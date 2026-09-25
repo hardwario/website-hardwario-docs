@@ -14,7 +14,7 @@ description: Raspberry Pi Compute Module 4, kompaktní system-on-module pro IoT 
 
 | Parametr | Hodnota |
 |---|---|
-| SoC | Broadcom BCM2711, quad-core Cortex-A72 @ 1.5 GHz |
+| SoC | Broadcom BCM2711, quad-core Cortex-A72 @ 1,5 GHz |
 | RAM | 1 / 2 / 4 / 8 GB LPDDR4-3200 SDRAM |
 | Flash | 0 / 8 / 16 / 32 GB eMMC (nebo bez eMMC pro SD kartu) |
 | Bezdrátové rozhraní | 802.11b/g/n/ac Wi-Fi, Bluetooth 5.0 (u bezdrátových variant) |

@@ -37,10 +37,10 @@ Nejprve zjistěte jedinečné identifikační údaje vašeho zařízení FT101.
 
 1. Zapněte zařízení a otevřete aplikaci **Field Tester**
 2. **Pokud zařízení NENÍ registrováno**: Device EUI a Application Key budou viditelné na domovské obrazovce
-3. Přejděte do **Settings > LoRaWAN Settings** a zaznamenejte **Application EUI** (8bitový kód, někdy označovaný jako Join EUI)
+3. Přejděte do **Settings > LoRaWAN Settings** a zaznamenejte **Application EUI** (8bajtový kód, někdy označovaný jako Join EUI)
 4. **Pokud zařízení JE registrováno**: Přejděte do **Settings > Basic Information**, kde najdete:
-   - **Device EUI** (8bitový kód)
-   - **Application Key** (16bitový šifrovací klíč)
+   - **Device EUI** (8bajtový kód)
+   - **Application Key** (16bajtový šifrovací klíč)
 
 :::info
 **AppEUI** (Join EUI) je pevné: **24E124C0002A0001**
@@ -83,7 +83,7 @@ Tento postup probíhá v rozhraní vašeho LoRaWAN network serveru (např. TTN, 
 5. **Confirmed Data**: Ujistěte se, že je server nastaven na odpovídání na potvrzené uplinky (u standardních LNS zapnuto ve výchozím stavu)
 6. **Save**: Potvrďte registraci v LNS
 
-Informace o podporovaných platformách LoRaWAN network serverů najdete zde 👉[**LoRaWAN Network Options**](https://docs.hardwario.com/smart-devices/milesight/utility/index#lorawan-network-options)
+Informace o podporovaných platformách LoRaWAN network serverů najdete zde 👉[**LoRaWAN Network Options**](/smart-devices/milesight/utility/index#lorawan-network-options)
 
 ---
 
@@ -172,7 +172,7 @@ Lze nainstalovat **Milesight ToolBox** pro konfiguraci dalších senzorů Milesi
 | Tx Power | 19 dBm (470MHz) / 16 dBm (868MHz) / 22 dBm (915MHz) |
 | Citlivost | -137 dBm @ 125kHz, SF=12 |
 | **Konektivita** | |
-| Wi-Fi | 802.11 b/g/n (2.4GHz), 802.11 a/n/ac (5GHz) |
+| Wi-Fi | 802.11 b/g/n (2,4GHz), 802.11 a/n/ac (5GHz) |
 | Bluetooth | 4.0 (BLE) |
 | GPS/GNSS | GPS / GLONASS / Beidou / Galileo |
 | **Displej a rozhraní** | |

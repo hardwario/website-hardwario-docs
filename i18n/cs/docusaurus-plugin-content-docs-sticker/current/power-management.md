@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 
 Zařízení STICKER je navržené pro provoz s extrémně nízkou spotřebou, aby vydrželo v terénu několik let bez externího napájení. Napájejí ho **2× běžné baterie AA** (alkalické nebo lithiové články 1,5 V).
 
-:::tip Zprovoznění přes NFC a aktivace ráia
+:::tip Zprovoznění přes NFC a aktivace rádia
 Parametry zařízení, klíče a aktivaci `radio-mode` lze spravovat bezdrátově telefonem s NFC a aplikací [**HARDWARIO Manager**](/sticker/hardwario-manager/), a to i před vložením baterií.
 :::
 
@@ -29,7 +29,7 @@ Parametry zařízení, klíče a aktivaci `radio-mode` lze spravovat bezdrátov�
 Od firmwaru **v1.4.0** se zařízení STICKER dodává z výroby v **režimu Radio-Silent** (`radio-mode` vypnutý):
 
 - **Nulové vysílání při přepravě:** Vysílač LoRaWAN je po vybalení úplně neaktivní, aby se baterie nevybíjela pokusy o připojení bez brány během přepravy nebo skladování.
-- **Aktivace v terénu:** Vysílání (`radio-mode on`) se zapíná na místě při uvedení do provozu přiložením telefonu s aplikací [**HARDWARIO Manager**](/sticker/hardwario-manager/) přes NFC, nebo příkaz shelluem (`config radio-mode on`).
+- **Aktivace v terénu:** Vysílání (`radio-mode on`) se zapíná na místě při uvedení do provozu přiložením telefonu s aplikací [**HARDWARIO Manager**](/sticker/hardwario-manager/) přes NFC, nebo příkazem shellu (`config radio-mode on`).
 
 ---
 

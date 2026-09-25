@@ -79,7 +79,7 @@ Set up public-key SSH authentication (recommended): [**SSH with public-key authe
 
 You can use the [**Bitwarden passphrase generator**](https://bitwarden.com/password-generator/#password-generator).
        1. Select Passphrase in type.
-       1. You can click generate a few times for a more memorable Passphrase, we recommendd oing 6 at most.
+       1. You can click generate a few times for a more memorable Passphrase, we recommend doing 6 at most.
               - Write the passphrases down and then choose the most memorable one.
 
 :::    

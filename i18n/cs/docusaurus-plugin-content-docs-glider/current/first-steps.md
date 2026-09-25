@@ -36,7 +36,7 @@ Pro vyšší bezpečnost doporučujeme přihlašování přes **Google** nebo **
 3. Právě sem budou patřit vaše **zařízení GLIDER**.
 
 :::caution
-Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**](https://docs.hardwario.com/cloud/#naming-conventions).
+Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**](/cloud/#naming-conventions).
 :::
 
 ---
@@ -65,7 +65,7 @@ Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**
 :::tip
 **Potřebujete více podrobností?**
 Podrobnější informace o **HARDWARIO Cloud** najdete zde:
- [https://docs.hardwario.com/cloud/](https://docs.hardwario.com/cloud/)
+ [https://docs.hardwario.com/cloud/](/cloud/)
 :::
 
 ---
@@ -210,7 +210,7 @@ Vaše zařízení GLIDER je nyní připojeno, nakonfigurováno a aktuální – 
 ## Krok 9: Prozkoumejte aplikace a integrace {#step-9-explore-applications-and-integrations}
 
 Vaše zařízení GLIDER umí mnohem víc než jen odesílat data!
-Jeho funkce můžete rozšířit pomocí [**HARDWARIO Applications**](https://docs.hardwario.com/apps/) – hotových modulů a nástrojů, které vám pomohou:
+Jeho funkce můžete rozšířit pomocí [**HARDWARIO Applications**](/apps/) – hotových modulů a nástrojů, které vám pomohou:
 
 - **Vizualizovat data** pomocí dashboardů a grafů
 - **Integrovat zařízení GLIDER** do stávajících IoT systémů
@@ -220,5 +220,5 @@ Všechny aplikace se snadno nasazují a mohou proměnit vaše zařízení GLIDER
 
 :::info
  Zjistěte více a prozkoumejte dostupné aplikace zde:
-[**https://docs.hardwario.com/apps/**](https://docs.hardwario.com/apps/)
+[**https://docs.hardwario.com/apps/**](/apps/)
 :::

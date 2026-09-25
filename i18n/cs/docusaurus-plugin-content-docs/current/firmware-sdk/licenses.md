@@ -26,7 +26,7 @@ Chcete-li vygenerovat licenční zprávu, můžete použít nástroj **West** `n
 
 * [**Scancode-Toolkit**](https://scancode-toolkit.readthedocs.io/en/stable/).
 
-Podle vaší konfigurace se zpráva generuje ve formátu **HTML** nebo **SPDX**, případně v oboufch formátech. Více informací najdete v dokumentaci [**Software Bill of Materials**](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/scripts/west_commands/sbom/README.html#west-sbom).
+Podle vaší konfigurace se zpráva generuje ve formátu **HTML** nebo **SPDX**, případně v obou formátech. Více informací najdete v dokumentaci [**Software Bill of Materials**](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/scripts/west_commands/sbom/README.html#west-sbom).
 
 ## Licenční ujednání {#license-statement}
 

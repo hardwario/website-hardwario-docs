@@ -1,14 +1,14 @@
 ---
 slug: hardware-description
 title: Popis hardwaru
-description: "STICKER je kompaktní IoT zařízení postavené na System-on-Chip STM32WL s integrovaným ráiem LoRa a jádrem ARM Cortex-M4F."
+description: "STICKER je kompaktní IoT zařízení postavené na System-on-Chip STM32WL s integrovaným rádiem LoRa a jádrem ARM Cortex-M4F."
 title_meta: "Popis hardwaru (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 
 # Popis hardwaru {#hardware-description}
 
-STICKER je kompaktní IoT zařízení postavené na **System-on-Chip STM32WL** s integrovaným **ráiem LoRa** a jádrem ARM Cortex-M4F.  
+STICKER je kompaktní IoT zařízení postavené na **System-on-Chip STM32WL** s integrovaným **rádiem LoRa** a jádrem ARM Cortex-M4F.  
 Napájejí ho dvě baterie AA, přičemž zařízení monitoruje napětí baterií a hospodárně řídí napájení (boost převodník a LDO).
 
 Zařízení obsahuje **NFC paměť a anténu** pro snadnou konfiguraci, a to i bez napájení (sběr energie).
@@ -23,7 +23,7 @@ Podle konkrétní osazovací varianty obsahuje zařízení STICKER:
 - **Teplota a vlhkost:** Senzor Sensirion SHT43 pro velmi přesné měření prostředí.
 - **Intenzita osvětlení:** Senzor okolního osvětlení Texas Instruments OPT3001.
 - **Atmosférický tlak:** Senzor tlaku NXP MPL3115A2.
-- **Pohyb PIR:** Pasivní infračervený senzor pohybu Excelitas PYD1698 pro detekci přítomnosti (až 5 m, $\ge 50^\circ$).
+- **Pohyb PIR:** Pasivní infračervený senzor pohybu Excelitas PYD1698 pro detekci přítomnosti (až 5 m, ≥ 50°).
 - **Tříosý akcelerometr:** Akcelerometr STMicroelectronics LIS2DH12 pro sledování náklonu, vibrací a orientace.
 - **Detekce otevření dveří:** Dva Hallovy senzory Allegro A1266.
 
@@ -210,17 +210,17 @@ LED lze řídit přímo z vývojářské konzole příkazy `ats led`, hodí se t
 | **Kategorie** | **Parametr** | **Hodnota** |
 |-------------------|---------------------------|------------------------------------|
 | **Konstrukce** | Materiál krabičky        | ABS                                |
-|                   | Rozměry                 | 91 × 36.5 × 33.3 mm                |
-| **Napájení** | Nominální napětí článku      | 1.5 V                              |
+|                   | Rozměry                 | 91 × 36,5 × 33,3 mm                |
+| **Napájení** | Nominální napětí článku      | 1,5 V                              |
 |                   | Nominální kapacita baterií  | 3000 mAh                           |
-|                   | Rozsah provozního napětí   | 1.8 V až 3.6 V                     |
+|                   | Rozsah provozního napětí   | 1,8 V až 3,6 V                     |
 |                   | Klidová spotřeba    | < 80 µA                            |
 |                   | Špičková spotřeba    | < 100 mA                           |
 | **Prostředí** | Provozní teplota     | -30 °C až +70 °C                   |
 |                   | Skladovací teplota       | -30 °C až +70 °C                   |
 |                   | Krytí krabičky      | IP40                               |
 | **Senzory** | Integrovaný teploměr – rozsah měření   | -20 °C až +60 °C     |
-|                   | Integrovaný teploměr – přesnost měření| ±0.2 °C (0 °C až 65 °C) |
+|                   | Integrovaný teploměr – přesnost měření| ±0,2 °C (0 °C až 65 °C) |
 |                   | Integrovaný vlhkoměr – rozsah měření    | 0 % až 100 %           |
 |                   | Integrovaný vlhkoměr – přesnost měření | ±2 % (od 10 % do 90 %) |
 |                   | PIR – dosah detekce     | 5 m                                |

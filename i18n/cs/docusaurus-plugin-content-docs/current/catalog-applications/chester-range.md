@@ -12,9 +12,9 @@ Tento článek popisuje základní funkce, hardware a ukázkovou **JSON** zpráv
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
 - [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Platform Management**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 

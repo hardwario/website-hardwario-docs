@@ -152,14 +152,8 @@ const sidebars = {
       collapsed: true,
       items: [
         {
-          type: 'category',
-          label: 'M-Bus Devices',
-          link: {
-            type: 'doc',
-            id: 'supported-devices/m-bus',
-          },
-          collapsed: true,
-          items: []
+          type: 'doc',
+          id: 'supported-devices/m-bus',
         },
         {
           type: 'category',
@@ -295,14 +289,8 @@ const sidebars = {
       ],
     },
     {
-      type: 'category',
-      label: 'Platform Security',
-      link: {
-        type: 'doc',
-        id: 'platform-security/index',
-      },
-      collapsed: true,
-      items: [],
+      type: 'doc',
+      id: 'platform-security/index',
     },
 
     'ordering-codes',

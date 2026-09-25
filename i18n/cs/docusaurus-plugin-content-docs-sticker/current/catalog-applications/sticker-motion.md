@@ -12,10 +12,10 @@ import Image from '@theme/IdealImage';
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Rychlý průvodce**](https://docs.hardwario.com/sticker/first-steps): Postup zprovoznění krok za krokem.
+* [**Rychlý průvodce**](/sticker/first-steps): Postup zprovoznění krok za krokem.
 * [**Koupit STICKER Motion**](https://www.hardwario.store/p/sticker-motion): Nákup v našem obchodě.
-* [**Objednací kódy**](https://docs.hardwario.com/sticker/ordering-codes): Seznam součástek a jejich objednacích čísel.
-* [**Popis hardwaru**](https://docs.hardwario.com/sticker/hardware-description): Technické detaily a přehled hardwaru.
+* [**Objednací kódy**](/sticker/ordering-codes): Seznam součástek a jejich objednacích čísel.
+* [**Popis hardwaru**](/sticker/hardware-description): Technické detaily a přehled hardwaru.
 * [**Oficiální stránka produktu**](https://www.hardwario.com/products/sticker/): Funkce a přehled.
 
 ## Typická použití {#typical-use-cases}
@@ -53,7 +53,7 @@ import Image from '@theme/IdealImage';
 
 ## Stavová LED {#status-led}
 
-STICKER Motion používá standardní vzory stavové LED popsané v [**Signalizace LED**](/sticker/hardware-description#led-indication). Startovní karusel, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
+STICKER Motion používá standardní vzory stavové LED popsané v kapitole [**Signalizace LED**](/sticker/hardware-description#led-indication). Startovní karusel, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
 
 Jeden detail je pro tuhle aplikaci specifický: detektor PIR a akcelerometr jsou **momentové** senzory, takže hlásí vždy jen aktivaci, nikdy návrat do klidu. Každá detekovaná pohybová událost proto zobrazí sekvenci aktivace **zelená, pak oranžová** a sekvenci uvolnění oranžová-pak-zelená na téhle jednotce nikdy neuvidíte.
 

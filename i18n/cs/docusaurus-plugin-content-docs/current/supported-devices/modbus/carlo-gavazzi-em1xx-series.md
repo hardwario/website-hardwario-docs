@@ -5,7 +5,7 @@ title: Carlo Gavazzi EM1XX Series
 
 import Image from '@theme/IdealImage';
 
-[Web-Site](https://www.gavazziautomation.com/en-global/product/EM111DINAV51XS1X)
+[Webové stránky](https://www.gavazziautomation.com/en-global/product/EM111DINAV51XS1X)
 
 ![Carlo Gavazzi - EM111](../../../../../../chester/supported-devices/modbus/images/carlo-gavazzi-em111.png)
 

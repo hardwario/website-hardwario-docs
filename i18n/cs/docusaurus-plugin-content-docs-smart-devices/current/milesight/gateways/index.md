@@ -1,6 +1,6 @@
 ---
 slug: index
-title: Milesight - Brány
+title: Milesight – Brány
 ---
 
 Zde je seznam **bran Milesight** testovaných společností HARDWARIO s odkazy na související zdroje:

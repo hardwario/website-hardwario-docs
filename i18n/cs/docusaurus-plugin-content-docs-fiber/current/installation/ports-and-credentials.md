@@ -16,8 +16,8 @@ title: Porty a výchozí přihlašovací údaje
 
 :::danger
 
-**Výchozí přihlášení do ChirpStack (`admin` / `admin`) žádný z výše uvedených kroků nemění**, na
-rozdíl od Node-RED a Grafana, kterým se heslo nastavuje během instalace, ChirpStack se dodává
+**Výchozí přihlášení do ChirpStack (`admin` / `admin`) žádný z výše uvedených kroků nemění**. Na
+rozdíl od Node-RED a Grafany, kterým se heslo nastavuje během instalace, se ChirpStack dodává
 s původním výchozím heslem a nic v tomto průvodci ho nemění. Změňte ho, než zařízení vystavíte do
 jakékoli sdílené sítě: přihlaste se do webového rozhraní a upravte heslo v nastavení uživatelského účtu.
 

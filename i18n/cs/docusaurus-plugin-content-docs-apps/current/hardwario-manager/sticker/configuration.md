@@ -32,7 +32,7 @@ dokud se konfigurace nepřečte. Pak otevřete sekci, kterou chcete změnit.
 
 | Sekce | Pokrývá |
 |---|---|
-| **LoRaWAN** | Region, režim aktivace, EUI a. V podskupině **Keys**. Klíčový materiál pro zvolený režim |
+| **LoRaWAN** | Region, režim aktivace, EUI a klíčový materiál pro zvolený režim v podskupině **Keys** |
 | **Measurement & reporting** | Intervaly vzorkování a reportování |
 | **Sensors** | Které senzory jsou zapnuté |
 | **History** | Jestli se měření ukládají a které kanály, viz [**Historie senzorů**](./sensor-history.md) |

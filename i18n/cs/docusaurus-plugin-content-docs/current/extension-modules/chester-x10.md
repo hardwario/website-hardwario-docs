@@ -55,7 +55,7 @@ CHESTER-X10 napájí základní desku CHESTER z externí linky **5-28 V DC** na 
 | **Min. doporučená kapacita baterie** | 1000 mAh |
 | **Monitorování napětí** | 12bitový ADC na I²C (TLA2024) na desce, měří VIN a napětí baterie |
 | **Rozhraní k hostu** | I²C |
-| **Přiložená baterie** | LP103454-PCM-LD, 3,7 V / 2000 mAh (56.0 × 34.5 × 10.3 mm) |
+| **Přiložená baterie** | LP103454-PCM-LD, 3,7 V / 2000 mAh (56,0 × 34,5 × 10,3 mm) |
 | **Rozhraní desky** | Castellated otvory na dvou protilehlých hranách, připájené k základní desce CHESTER |
 | **Revize hardwaru** | R1.1 |
 

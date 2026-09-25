@@ -222,6 +222,6 @@ Check the **RSSI** value in the output:
 
 :::tip
 If you need additional help or a visual walkthrough, check out the  
-[**Video Guide**](https://docs.hardwario.com/chester/videos-chester/chester-pair-tag).
+[**Video Guide**](/chester/videos-chester/chester-pair-tag).
 :::
 

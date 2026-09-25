@@ -1,6 +1,7 @@
 ---
 slug: /
-title: Apps
+title: Aplikace
+title_meta: "Aplikace a integrace"
 description: "Aplikace HARDWARIO: HARDWARIO Manager pro nastavení zařízení STICKER a CHESTER v terénu a návody na integraci s ThingsBoard, ChirpStack a The Things Stack."
 sidebar_label: Úvod
 ---

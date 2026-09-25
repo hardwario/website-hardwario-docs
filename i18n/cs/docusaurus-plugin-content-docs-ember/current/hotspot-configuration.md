@@ -194,7 +194,7 @@ Konektivita LTE má přednost před WAN díky vzdálenosti routeru (výchozí vz
 
 :::tip
 
-Certifikáty (certifikační autorita, certifikát zařízení **EMBER Hotspot**, privátní klíč zařízení **EMBER Hotspot**) se importují z spravované služby.
+Certifikáty (certifikační autorita, certifikát zařízení **EMBER Hotspot**, privátní klíč zařízení **EMBER Hotspot**) se importují ze spravované služby.
 
 :::
 
@@ -204,7 +204,7 @@ Certifikáty (certifikační autorita, certifikát zařízení **EMBER Hotspot**
 
 ### WireGuard {#wireguard}
 
-Klíče **WireGuard** (veřejný klíč pro spravovanou službu + privátní klíč pro zařízení **EMBER Hotspot**) se přebírají z spravované služby.
+Klíče **WireGuard** (veřejný klíč pro spravovanou službu + privátní klíč pro zařízení **EMBER Hotspot**) se přebírají ze spravované služby.
 
 ```
 /interface wireguard add disabled=no listen-port=51820 mtu=1420 name=wireguard1

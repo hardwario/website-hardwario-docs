@@ -37,7 +37,7 @@ It will of course last less time because of just **2 batteries**.
 - Battery disconnect circuit
 - Battery voltage measurement using an ADC input
 - <b>Prototyping area for soldering</b> custom circuits
-- One extra **position for the HARDWARIO** tag****
+- One extra **position for the HARDWARIO tag**
 - Operating voltage range: 3.3 to 10 V
 - Operating temperature range: -20 to 70 °C
 - Mechanical dimensions: 88 x 55 mm

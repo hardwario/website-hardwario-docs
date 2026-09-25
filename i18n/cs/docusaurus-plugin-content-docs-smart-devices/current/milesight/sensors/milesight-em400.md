@@ -44,7 +44,7 @@ Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](https://docs.hardwario.com/smart-devices/milesight/sensors/index#lorawan-network-options)
+Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
 ---
 
@@ -102,11 +102,11 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | **Měření vzdálenosti** | |
 | Technologie | Ultrazvuk |
 | Detekční rozsah | 3–450 cm |
-| Přesnost | ± (1+0.3%×S) cm, kde S = vzdálenost (-15–60°C) |
+| Přesnost | ± (1+0,3%×S) cm, kde S = vzdálenost (-15–60°C) |
 | Rozlišení | 1 mm |
 | Úhel svazku | 60° |
 | **Další senzory** | |
-| Teplota | -40°C ~ +125°C, rozlišení 0.1°C (NTC termistor) |
+| Teplota | -40°C ~ +125°C, rozlišení 0,1°C (NTC termistor) |
 | Akcelerometr | 3osý (detekce náklonu) |
 | **Funkce** | |
 | Režimy | Standard Mode, Bin Mode, Parking Lot Mode (pouze LoRaWAN) |
@@ -118,7 +118,7 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | Provozní teplota | -30°C ~ +70°C |
 | Vlhkost | 0%–95% RH (nekondenzující) |
 | Krytí | IP67 |
-| Rozměry | 118 × 65 × 32.5 mm |
-| Hmotnost | 181.4 g (s bateriemi) |
+| Rozměry | 118 × 65 × 32,5 mm |
+| Hmotnost | 181,4 g (s bateriemi) |
 | Materiál | ABS+PC (UL94 V0), černo-šedá |
 | **Schválení** | CE, FCC, RoHS |

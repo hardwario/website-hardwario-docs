@@ -16,7 +16,7 @@
     "description": "The label for category 'Saved STICKERs' in sidebar 'docs'"
   },
   "sidebar.docs.category.manager-sticker-configuration": {
-    "message": "Configuration",
+    "message": "Konfigurace",
     "description": "The label for category 'Configuration' in sidebar 'docs'"
   },
   "sidebar.docs.category.Templates": {
@@ -24,7 +24,7 @@
     "description": "The label for category 'Templates' in sidebar 'docs'"
   },
   "sidebar.docs.category.manager-sticker-tools": {
-    "message": "Tools",
+    "message": "Nástroje",
     "description": "The label for category 'Tools' in sidebar 'docs'"
   },
   "sidebar.docs.category.CHESTER": {
@@ -36,7 +36,7 @@
     "description": "The label for category 'Terminal' in sidebar 'docs'"
   },
   "sidebar.docs.category.manager-chester-tools": {
-    "message": "Tools",
+    "message": "Nástroje",
     "description": "The label for category 'Tools' in sidebar 'docs'"
   },
   "sidebar.docs.category.Creating Dashboard": {
@@ -60,7 +60,7 @@
     "description": "The label for category 'ChirpStack' in sidebar 'docs'"
   },
   "sidebar.docs.category.chirpstack-configuration": {
-    "message": "Configuration",
+    "message": "Konfigurace",
     "description": "The label for category 'Configuration' in sidebar 'docs'"
   },
   "sidebar.docs.category.the-things-stack": {
@@ -68,7 +68,7 @@
     "description": "The label for category 'The Things Stack' in sidebar 'docs'"
   },
   "sidebar.docs.category.tts-configuration": {
-    "message": "Configuration",
+    "message": "Konfigurace",
     "description": "The label for category 'Configuration' in sidebar 'docs'"
   },
   "sidebar.docs.category.Video Tutorials": {

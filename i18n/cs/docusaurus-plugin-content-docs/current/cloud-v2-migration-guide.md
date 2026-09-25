@@ -50,11 +50,11 @@ Klikněte na tlačítko v pravém horním rohu s označením + NEW DEVICE.
 - Serial Number
 - Claim Token
   
- (Volitelně můžete přidat také komentář a [tagy](https://docs.hardwario.com/cloud/tags))
+ (Volitelně můžete přidat také komentář a [tagy](/cloud/tags))
 
  :::info
-**[Tagy](https://docs.hardwario.com/cloud/tags)** seskupují zařízení podle firmwaru nebo funkcionality a lze je použít k filtrování.  
-Také propojují zařízení s **[Connectory](https://docs.hardwario.com/cloud/connectors)**, čímž zajišťují správné směrování zpráv.  
+**[Tagy](/cloud/tags)** seskupují zařízení podle firmwaru nebo funkcionality a lze je použít k filtrování.  
+Také propojují zařízení s **[Connectory](/cloud/connectors)**, čímž zajišťují správné směrování zpráv.  
 Každý tag má **název** a **barvu**.  
 :::
 
@@ -66,5 +66,5 @@ Vaše zařízení je nyní **úspěšně přidáno** do Cloud v2.
 
 :::info
 Pro vizualizaci přicházejících dat můžete pokračovat možnostmi vizualizace popsanými zde:  
-👉 [Dokumentace HARDWARIO Apps](https://docs.hardwario.com/apps/)  
+👉 [Dokumentace HARDWARIO Apps](/apps/)  
 :::

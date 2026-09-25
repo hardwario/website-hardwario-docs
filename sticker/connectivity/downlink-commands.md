@@ -130,5 +130,5 @@ To retrieve offline sensor logs buffered in flash memory during network outages,
 
 ## Network Server Downlink Setup
 
-- **ChirpStack v4:** Navigate to **Device $\rightarrow$ Queue**, select **fPort 85**. Enqueue either the raw hexadecimal payload or the structured JSON object (when using the device profile codec).
-- **The Things Stack (TTS):** Navigate to **Device $\rightarrow$ Messaging $\rightarrow$ Downlink**, set **fPort 85**. Paste the hex bytes directly or insert the JSON payload if the codec is assigned as the downlink payload formatter.
+- **ChirpStack v4:** Navigate to **Device → Queue**, select **fPort 85**. Enqueue either the raw hexadecimal payload or the structured JSON object (when using the device profile codec).
+- **The Things Stack (TTS):** Navigate to **Device → Messaging → Downlink**, set **fPort 85**. Paste the hex bytes directly or insert the JSON payload if the codec is assigned as the downlink payload formatter.

@@ -1,7 +1,7 @@
 ---
 slug: chirpstack-devices
 title: Přidání koncových zařízení
-title_meta: "Přidání koncových zařízení (videonávody, chirpstack devices)"
+title_meta: "Přidání koncových zařízení (videonávod ChirpStack)"
 ---
 
 import Image from '@theme/IdealImage';

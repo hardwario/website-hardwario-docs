@@ -38,7 +38,7 @@ Díky své modulární a otevřené architektuře podporuje zařízení **FIBER*
 - Monitorování chlazení v retailu pro zabránění zkažení zboží
 - Laboratorní prostředí vyžadující přesnou regulaci teploty
 - Monitorování teploty v energetické infrastruktuře (transformátory, rozvaděče)
-- Výroba: víicebodové monitorování procesních teplot na výrobních linkách
+- Výroba: vícebodové monitorování procesních teplot na výrobních linkách
 
 ## Klíčové vlastnosti {#key-features}
 

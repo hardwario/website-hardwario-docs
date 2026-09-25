@@ -24,7 +24,7 @@ import Image from '@theme/IdealImage';
 
 CHESTER-X8 měří zrychlení ve třech osách nízkošumovým MEMS akcelerometrem **ADXL355** s malým driftem. Nabízí volitelné rozsahy **±2 g / ±4 g / ±8 g** a rozlišení až **3,9 μg/LSB** (v rozsahu ±2 g) s malým offsetem při nulovém g. ADXL355 se k základní desce CHESTER připojuje po **I²C** na pevné adrese **0x1D**; jeho dva výstupy přerušení (INT1, INT2) jsou vyvedené na piny GP0 a GP1 slotu.
 
-Kromě akcelerometru na desce svorkovnice modulu **vyvádí** sběrnici I²C (SCL/SDA), dvě uživatelské linky GPIO (DIO1, DIO2) a napájecí větve (VDD 3.0 V, +V, GND). Můžete tak na stejnou sběrnici připojit externí zařízení I²C nebo obě linky GPIO použít přímo. Modul nemá na desce žádný regulátor napětí. Běží z napájecích větví zařízení CHESTER.
+Kromě akcelerometru na desce svorkovnice modulu **vyvádí** sběrnici I²C (SCL/SDA), dvě uživatelské linky GPIO (DIO1, DIO2) a napájecí větve (VDD 3,0 V, +V, GND). Můžete tak na stejnou sběrnici připojit externí zařízení I²C nebo obě linky GPIO použít přímo. Modul nemá na desce žádný regulátor napětí. Běží z napájecích větví zařízení CHESTER.
 
 ## Klíčové vlastnosti {#key-features}
 
@@ -33,7 +33,7 @@ Kromě akcelerometru na desce svorkovnice modulu **vyvádí** sběrnici I²C (SC
 * **Vysoké rozlišení:** Až 3,9 μg/LSB (v rozsahu ±2 g) s malým offsetem při nulovém g.
 * **Rozhraní I²C:** Pevná adresa 0x1D, se dvěma linkami přerušení vyvedenými na GP0 a GP1.
 * **Vyvedené I²C a GPIO:** Svorkovnice zpřístupňuje sběrnici I²C, dvě GPIO (DIO1/DIO2) a napájení pro rozšíření.
-* **Bez externího napájení:** Běží přímo z napájecích větví zařízení CHESTER (VDD 3.0 V).
+* **Bez externího napájení:** Běží přímo z napájecích větví zařízení CHESTER (VDD 3,0 V).
 
 ## Typické aplikace {#typical-applications}
 
@@ -56,7 +56,7 @@ Kromě akcelerometru na desce svorkovnice modulu **vyvádí** sběrnici I²C (SC
 | **Adresa I²C** | 0x1D (pevná; ASEL uzemněný) |
 | **Linky přerušení** | INT1 → GP0/A0, INT2 → GP1/A1 |
 | **Uživatelské digitální I/O** | DIO1 (GP2/A2), DIO2 (GP3/A3), na svorkovnici |
-| **Napájení logiky (VDD)** | 3.0 V |
+| **Napájení logiky (VDD)** | 3,0 V |
 | **Rozhraní desky** | Castellated otvory na dvou protilehlých hranách, připájené k základní desce CHESTER |
 | **Revize hardwaru** | R1.0 |
 
@@ -80,7 +80,7 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 
 | Pin | Signál | Typ | Popis |
 | :---: | :--- | :--- | :--- |
-| 1 | VDD | Napájení | Napájení logiky 3.0 V ze základní desky CHESTER |
+| 1 | VDD | Napájení | Napájení logiky 3,0 V ze základní desky CHESTER |
 | 2 | GND | Zem | Systémová zemní reference |
 | 3 | DIO1 | Digitální I/O | Uživatelský digitální vstup/výstup č. 1 (GP2/A2 slotu) |
 | 4 | SCL | I²C | Hodinový signál I²C |
@@ -90,7 +90,7 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | 8 | +V | Napájení | Kladná systémová větev (závisí na napájecí variantě zařízení CHESTER) |
 
 :::info
-`VDD` je logická větev 3.0 V; `+V` je kladná systémová větev a její napětí závisí na napájecí variantě zařízení CHESTER. Kromě napájení akcelerometru ADXL355 na desce svorkovnice vyvádí i **sběrnici I²C** (SCL/SDA) a dvě uživatelská **GPIO** (DIO1, DIO2) pro rozšíření.
+`VDD` je logická větev 3,0 V; `+V` je kladná systémová větev a její napětí závisí na napájecí variantě zařízení CHESTER. Kromě napájení akcelerometru ADXL355 na desce svorkovnice vyvádí i **sběrnici I²C** (SCL/SDA) a dvě uživatelská **GPIO** (DIO1, DIO2) pro rozšíření.
 :::
 
 ### Rozhraní k hostu (I²C) {#host-interface-ic}
@@ -112,9 +112,9 @@ Výstup data-ready (DRDY) čipu ADXL355 vyvedený není; pro vzorkování říze
 
 Svorkovnice kromě akcelerometru na desce vyvádí i sběrnici I²C, dvě linky GPIO a napájecí větve, takže CHESTER-X8 může posloužit i jako malý rozšiřující konektor:
 
-- **Externí zařízení I²C:** zapojte je na **SCL** (pin 4), **SDA** (pin 5), **VDD** (pin 1, 3.0 V) a **GND** (pin 2 nebo 7). Sběrnici dělí s akcelerometrem ADXL355 na desce (adresa 0x1D).
+- **Externí zařízení I²C:** zapojte je na **SCL** (pin 4), **SDA** (pin 5), **VDD** (pin 1, 3,0 V) a **GND** (pin 2 nebo 7). Sběrnici dělí s akcelerometrem ADXL355 na desce (adresa 0x1D).
 - **Uživatelské GPIO:** **DIO1** (pin 3) a **DIO2** (pin 6) jsou linky GP2/GP3 slotu, použitelné jako běžné digitální vstupy nebo výstupy.
-- **Napájení:** **+V** (pin 8) je kladná systémová větev; **VDD** (pin 1) je logická větev 3.0 V.
+- **Napájení:** **+V** (pin 8) je kladná systémová větev; **VDD** (pin 1) je logická větev 3,0 V.
 
 Všechna externě připojená zařízení musí mít s modulem společnou **GND**.
 

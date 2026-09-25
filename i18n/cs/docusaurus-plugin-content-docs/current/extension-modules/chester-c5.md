@@ -18,7 +18,7 @@ Deska obsahuje obvod Maxim DS2482S-800+ poskytující 8 nezávislých kanálů 1
 ## Technická specifikace {#technical-specification}
 
 * Rozsah vstupního stejnosměrného napětí (VIN): **6-28 VDC**, vhodné také pro **solární panely 12-18 V\***
-* Nominální napětí baterie: **3.7 V**
+* Nominální napětí baterie: **3,7 V**
 * Nabíjecí proud baterie: **200 mA**
 * Klidová spotřeba proudu z baterie **&lt;10 μA** (bez CHESTER-M)
 * Doporučený typ baterie pro venkovní použití: Samsung ICR18650-22P**

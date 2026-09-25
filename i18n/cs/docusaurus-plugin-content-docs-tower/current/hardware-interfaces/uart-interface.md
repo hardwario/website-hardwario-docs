@@ -18,7 +18,7 @@ Pokud se chcete o [**UART dozvědět více, existuje o něm článek**](https://
 
 :::
 
-TOWER má 3 kanály UART, **UART0** **UART1** **UART2**, kde je najdete si můžete přečíst v [**kapitole Pinout headerů**](../hardware-modules/header-pinout.md)
+TOWER má 3 kanály UART: **UART0**, **UART1** a **UART2**. Kde je najdete, se dočtete v [**kapitole Pinout headerů**](../hardware-modules/header-pinout.md)
 
 ## Nastavení UART {#uart-setup}
 

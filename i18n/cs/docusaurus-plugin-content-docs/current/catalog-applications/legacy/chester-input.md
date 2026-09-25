@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 :::warning
 
-CHESTER Counter je nahrazen aplikací [**CHESTER Control**](https://docs.hardwario.com/chester/catalog-applications/chester-control), která nabízí stejnou funkcionalitu.
+CHESTER Input je nahrazen aplikací [**CHESTER Control**](/chester/catalog-applications/chester-control), která nabízí stejnou funkcionalitu.
 
 :::
 
@@ -18,9 +18,9 @@ Tento článek popisuje základní funkcionalitu, popis hardwaru, výchozí konf
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do cloudu.
-- [**Společná funkcionalita**](https://docs.hardwario.com/chester/catalog-applications/common-functionality): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Platform Management**](https://docs.hardwario.com/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení do cloudu.
+- [**Společná funkcionalita**](/chester/catalog-applications/common-functionality): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Správa platformy**](/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -52,7 +52,7 @@ Hardware katalogové aplikace **CHESTER Input** se skládá z těchto objednací
 
 * `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
-Více podrobností najdete v [**Objednacích kódech**](https://docs.hardwario.com/chester/ordering-codes).
+Více podrobností najdete v [**Objednacích kódech**](/chester/ordering-codes).
 
 Volby shieldů při sestavení firmwaru: `ctr_ds18b20 ctr_lte ctr_x0_a`
 
@@ -66,7 +66,7 @@ Hardware katalogové aplikace **CHESTER Input Z** se skládá z těchto objednac
 
 * `CHESTER-Z1`: Zálohovací modul
 
-Více podrobností najdete v [**Objednacích kódech**](https://docs.hardwario.com/chester/ordering-codes).
+Více podrobností najdete v [**Objednacích kódech**](/chester/ordering-codes).
 
 Volby shieldů při sestavení firmwaru: `ctr_ds18b20 ctr_lte ctr_x0_a ctr_z`
 
@@ -82,13 +82,13 @@ Volby shieldů při sestavení firmwaru: `ctr_ds18b20 ctr_lte ctr_x0_a ctr_z`
 
 * `CHESTER-S2`: Externí vlhkoměr
 
-Více podrobností najdete v [**Objednacích kódech**](https://docs.hardwario.com/chester/ordering-codes).
+Více podrobností najdete v [**Objednacích kódech**](/chester/ordering-codes).
 
 Volby shieldů při sestavení firmwaru: `ctr_ds18b20 ctr_lte ctr_x0_a ctr_z ctr_s2`
 
 ## Parametry a chování vstupů {#input-parameters-and-behavior}
 
-Schéma zapojení pro **CHESTER Input** najdete v [**popisu svorkovnice**](https://docs.hardwario.com/chester/extension-modules/chester-x0) rozšiřujícího modulu **CHESTER-X0**.
+Schéma zapojení pro **CHESTER Input** najdete v [**popisu svorkovnice**](/chester/extension-modules/chester-x0) rozšiřujícího modulu **CHESTER-X0**.
 Rozšiřující modul **CHESTER-X0** je nainstalován v levém slotu **A**, takže je nutné použít odpovídající svorky **A1** až **A8**.
 
 ### Trigger {#trigger}
@@ -280,7 +280,7 @@ app config hygro-interval-aggreg <value>
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je k dispozici v [kapitole Firmware](https://docs.hardwario.com/chester/catalog-applications/catalog-applications#application-firmware) katalogových aplikací.
+Nejnovější firmware je k dispozici v [kapitole Firmware](/chester/catalog-applications/catalog-applications#application-firmware) katalogových aplikací.
 
 ## Ukázková JSON zpráva {#example-json-message}
 

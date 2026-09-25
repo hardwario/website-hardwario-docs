@@ -39,4 +39,4 @@ Každá z níže uvedených odpovědí odpovídá přímo jednomu z [konfigurač
 * **PSM**: podporuje a poskytuje síť **PSM**?
 * **Další specifické požadavky sítě**: whitelisting IMEI/IMSI, přidělení fixní IP adresy, omezení firewallu nebo portů na straně operátora.
 
-Až budete mít odpovědi, uplatněte je podle postupu v části [**Nastavení SIM karty**](sim-card-setup.md) v sekci *Other SIM cards*.
+Až budete mít odpovědi, uplatněte je podle postupu v části [**Nastavení SIM karty**](sim-card-setup.md) v sekci *Ostatní SIM karty*.

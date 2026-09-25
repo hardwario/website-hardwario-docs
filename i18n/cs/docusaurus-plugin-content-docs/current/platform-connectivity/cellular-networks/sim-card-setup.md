@@ -18,13 +18,13 @@ Některé katalogové firmwary umí použít buď mobilní síť (NB-IoT/LTE-M),
 
 Výchozí stav je, že zařízení **nepoužívá žádné rádio** (režim `none`), takže tento krok je povinný u následujících katalogových aplikací:
 
-- [CHESTER Clime](https://docs.hardwario.com/chester/catalog-applications/chester-clime)
-- [CHESTER Control](https://docs.hardwario.com/chester/catalog-applications/chester-control)
-- [CHESTER Push](https://docs.hardwario.com/chester/catalog-applications/chester-push)
-- [CHESTER Current](https://docs.hardwario.com/chester/catalog-applications/chester-current)
-- [CHESTER Scale](https://docs.hardwario.com/chester/catalog-applications/chester-scale)
-- [CHESTER Meteo](https://docs.hardwario.com/chester/catalog-applications/chester-meteo)
-- [CHESTER Range](https://docs.hardwario.com/chester/catalog-applications/chester-range)
+- [CHESTER Clime](/chester/catalog-applications/chester-clime)
+- [CHESTER Control](/chester/catalog-applications/chester-control)
+- [CHESTER Push](/chester/catalog-applications/chester-push)
+- [CHESTER Current](/chester/catalog-applications/chester-current)
+- [CHESTER Scale](/chester/catalog-applications/chester-scale)
+- [CHESTER Meteo](/chester/catalog-applications/chester-meteo)
+- [CHESTER Range](/chester/catalog-applications/chester-range)
 
 Nastavte parametr `mode` na síť, kterou chcete použít:
 

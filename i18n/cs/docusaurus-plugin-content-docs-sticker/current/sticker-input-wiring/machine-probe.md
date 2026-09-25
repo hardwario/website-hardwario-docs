@@ -37,7 +37,7 @@ Sonda se tím stává jednoduchým stavebním prvkem **prediktivní údržby**: 
 
 | Parametr | Hodnota |
 | --- | --- |
-| Rozsah napájecího napětí | **3.0–5.5 V** |
+| Rozsah napájecího napětí | **3,0–5,5 V** |
 | Ochrana proti obrácení polarity | **Ano** (integrovaná) |
 | Sběrnice senzorů | I²C (vnitřní), zpřístupněná přes převodník 1-Wire |
 | Připojení | Třívodičový propojovací kabel |
@@ -56,7 +56,7 @@ Sonda se připojuje **třívodičovým kabelem** s tímto zapojením:
 | --- | --- | --- |
 | Minus | **GND** | Zem / společný vodič |
 | Data | **DATA** | Datová sběrnice 1-Wire |
-| Plus | **VDD** | Napájení 3.0–5.5 V |
+| Plus | **VDD** | Napájení 3,0–5,5 V |
 
 ## Senzory a čipy na desce {#onboard-sensors-and-chips}
 

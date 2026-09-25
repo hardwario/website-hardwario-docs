@@ -1,7 +1,7 @@
 ---
 slug: tts-gateways
 title: Přidání bran
-title_meta: "Přidání bran (videonávody, tts gateways)"
+title_meta: "Přidání bran (videonávod The Things Stack)"
 ---
 
 import Image from '@theme/IdealImage';

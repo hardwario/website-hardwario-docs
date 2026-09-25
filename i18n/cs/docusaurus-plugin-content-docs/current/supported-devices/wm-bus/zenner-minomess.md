@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Zenner Minomess {#zenner-minomess}
 
-[Web-Site](https://zenner.com/products/wwz_minomess_lorawan_wm-bus-2/)
+[Webové stránky](https://zenner.com/products/wwz_minomess_lorawan_wm-bus-2/)
 
 <div class="container">
   <div class="row">

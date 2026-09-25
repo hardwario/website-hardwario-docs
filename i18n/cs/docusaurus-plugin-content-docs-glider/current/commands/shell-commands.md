@@ -112,7 +112,7 @@ modbus disable
 
 ## `led` – stavové LED {#led---status-leds}
 
-GLIDER má tři signalizační LED na desce: če**r**venou, ze**g**enou, **y** žlutou.
+GLIDER má tři signalizační LED na desce: červenou (**r**), zelenou (**g**) a žlutou (**y**).
 
 | Příkaz | Popis |
 | :--- | :--- |

@@ -40,7 +40,7 @@ Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](https://docs.hardwario.com/smart-devices/milesight/sensors/index#lorawan-network-options)
+Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
 ---
 
@@ -93,14 +93,14 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | Režim | OTAA / ABP Class A |
 | **Řízení ventilu** | |
 | Aktuátor | krokový motor |
-| Výchozí závit | M30 × 1.5 mm |
+| Výchozí závit | M30 × 1,5 mm |
 | Volitelné adaptéry | RA, RAV, RAVL, Giacomini, M28 (Comap, Herz, TA) |
 | Pokročilé funkce | automatická regulace teploty, topné plány, ochrana proti zamrznutí, detekce otevřeného okna, alarm neoprávněné manipulace |
 | **Teplotní senzor** | |
 | Typ | NTC |
 | Rozsah | -20°C ~ +60°C |
-| Přesnost | ±0.5°C (0–50°C) |
-| Rozlišení | 0.1°C |
+| Přesnost | ±0,5°C (0–50°C) |
+| Rozlišení | 0,1°C |
 | **Ostatní** | |
 | Displej | LED displej (bílé světlo) |
 | Tlačítka | ovládací kolečko, kalibrace/tamper (vnitřní), reset (vnitřní) |

@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Přehled příkazů AT {#at-commands-reference}
 
-Tato stránka uvádí všechny příkazy AT implementované ve firmwaru GLIDER. příkazy AT se zadávají přes [**konzoli USB-C**](../console/usb-at.md).
+Tato stránka uvádí všechny příkazy AT implementované ve firmwaru GLIDER. Příkazy AT se zadávají přes [**konzoli USB-C**](../console/usb-at.md).
 
 :::tip
 Hledáte odpovídající příkazy Zephyr shellu (používané přes J-Link nebo přes `AT$SHELL="…"` z konzole AT)? Podívejte se na stránku [**Příkazy shellu**](shell-commands.md).

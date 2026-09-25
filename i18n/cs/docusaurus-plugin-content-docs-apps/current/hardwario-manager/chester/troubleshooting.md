@@ -23,7 +23,7 @@ aplikace otevření nastavení telefonu místo tlačítka pro opakování.
 | **Bluetooth permission needed** | Povolte aplikaci v nastavení telefonu oprávnění k zařízením v okolí, viz [**Instalace aplikace**](../install.md). |
 | **Device not found**. Žádné zařízení CHESTER v okolí | Zkontrolujte, že je zařízení zapnuté a v dosahu, a vyhledejte znovu. |
 | Zařízení se našla, ale ne sériové číslo, které jste chtěli | Aplikace vypíše, která sériová čísla viděla. Ověřte, že se díváte na správné zařízení. |
-| **Connection failed** | Přiblížte telefon, zařízení vypněte a zapněte a zkuste to znovu. |
+| **Connection failed** | Přibližte telefon, zařízení vypněte a zapněte a zkuste to znovu. |
 | Vyhledávání se samo zastaví | Vyhledávání běží asi 30 sekund. Použijte **Rescan**. |
 | **Not a CHESTER** | Zařízení nenabízí služby CHESTER. Zkontrolujte, že na něm běží firmware CHESTER a že nezůstalo v bootloaderu. |
 | Zařízení zmizelo, než se připojilo | Vypadlo z dosahu. Vyhledejte znovu a klepněte na něj, až se zase objeví. |

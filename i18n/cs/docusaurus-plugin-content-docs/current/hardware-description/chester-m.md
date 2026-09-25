@@ -29,7 +29,7 @@ Tento článek uvádí základní parametry platformy CHESTER:
 
 | Název                          | Hodnota                    | Poznámka                                                      |
 | :----------------------------- | :------------------------- | :------------------------------------------------------------ |
-| Rozsah provozního napětí       | 2.0 až 5.25 V              | Pouze pro základní desku – lze zvýšit pomocí rozšiřujících modulů |
+| Rozsah provozního napětí       | 2,0 až 5,25 V              | Pouze pro základní desku – lze zvýšit pomocí rozšiřujících modulů |
 | Typický klidový proud          | 100 μA                     | Bez instalovaného rozšiřujícího modulu a periferie            |
 | Přídavný proud pro BLE         | 50 μA                      | 1sekundový interval advertisingu                              |
 | Přídavný proud pro NB-IoT/LTE-M | 100 μA                    | Pro ECL=0 a 30minutový interval vysílání                      |
@@ -99,11 +99,11 @@ Sloty na zadní straně používají dvě řady signálů:
 
 * **Horní řada** (blíže k anténě)
 
-  Tato řada signálů (s devíti piny s roztečí 2.54 mm) poskytuje napájecí větve + digitální signály s definicí signálů v tabulce níže.
+  Tato řada signálů (s devíti piny s roztečí 2,54 mm) poskytuje napájecí větve + digitální signály s definicí signálů v tabulce níže.
 
 * **Dolní řada** (blíže ke svorkovnicím)
 
-  Tato řada signálů (s osmi piny s roztečí 2.54 mm) je připojena přímo ke svorkovnicím a jejich význam je specifický pro daný modul.
+  Tato řada signálů (s osmi piny s roztečí 2,54 mm) je připojena přímo ke svorkovnicím a jejich význam je specifický pro daný modul.
 
 #### Signály horní řady (slot A) {#top-row-signals-slot-a}
 

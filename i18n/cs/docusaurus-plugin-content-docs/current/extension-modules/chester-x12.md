@@ -91,7 +91,7 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | 4 | GND | Zem | Systémová zemní reference |
 | 5 | RS232 TX | RS-232 | Vysílaná data RS-232 (výstup modulu) |
 | 6 | RS232 RX | RS-232 | Přijímaná data RS-232 (vstup modulu) |
-| 7 | VDD | Napájení | Napájení logiky 3.3 V ze základní desky CHESTER |
+| 7 | VDD | Napájení | Napájení logiky 3,3 V ze základní desky CHESTER |
 | 8 | GND | Zem | Systémová zemní reference |
 
 :::info

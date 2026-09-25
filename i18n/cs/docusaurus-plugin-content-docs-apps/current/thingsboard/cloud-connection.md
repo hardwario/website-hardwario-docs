@@ -236,5 +236,5 @@ Data si můžete otestovat tak, že si své zařízení otevřete v platformě T
 ## Videonávod {#video-tutorial}
 
 :::tip
-Pokud potřebujete další pomoc nebo vizuální ukázku postupu popsaného v tomto návodu, podívejte se na [videonávod](https://docs.hardwario.com/apps/videos-apps/thingsboard-cloud-connection).
+Pokud potřebujete další pomoc nebo vizuální ukázku postupu popsaného v tomto návodu, podívejte se na [videonávod](/apps/videos-apps/thingsboard-cloud-connection).
 :::

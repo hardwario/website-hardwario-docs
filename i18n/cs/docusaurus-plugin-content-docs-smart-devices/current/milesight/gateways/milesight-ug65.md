@@ -142,7 +142,7 @@ Pokud je brána napájena přes ethernetový kabel RJ45 s PoE, **nepřipojujte s
 | **Parametr** | **Hodnota** |
 |---------------|-----------|
 | **Hardwarový systém** | |
-| CPU | Quad-core 1.5 GHz ARM Cortex-A53 |
+| CPU | Quad-core 1,5 GHz ARM Cortex-A53 |
 | Paměť | 512 MB DDR4 |
 | Flash | 8 GB eMMC |
 | **LoRaWAN®** | |
@@ -156,7 +156,7 @@ Pokud je brána napájena přes ethernetový kabel RJ45 s PoE, **nepřipojujte s
 | Funkce | Filtr paketů, analyzátor šumu, retransmise, FUOTA, multicast |
 | **Rozhraní** | |
 | Ethernet | 1 × RJ45 (10/100/1000 Mbps, PoE) |
-| Wi-Fi | 802.11 b/g/n (2.4 GHz) |
+| Wi-Fi | 802.11 b/g/n (2,4 GHz) |
 | Mobilní síť (volitelně) | 4G LTE |
 | USB | 1 × USB-C (napájení/konzole) |
 | Tlačítko Reset | Ano |
@@ -167,9 +167,9 @@ Pokud je brána napájena přes ethernetový kabel RJ45 s PoE, **nepřipojujte s
 | Spolehlivost | WAN failover |
 | **Napájení** | |
 | Zdroj | DC 9–24 V / PoE / 5V USB-C |
-| Spotřeba | 2.9 W typ., 4.2 W max |
+| Spotřeba | 2,9 W typ., 4,2 W max |
 | **Fyzické parametry** | |
-| Rozměry | 180 × 110 × 55.5 mm |
+| Rozměry | 180 × 110 × 55,5 mm |
 | Hmotnost | 548 g |
 | Kryt | PC+ABS, bílá/černá |
 | Krytí | IP65 |

@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 Protože brána TOWER podporuje stále více typů LCD, vyvinuli jsme **univerzální grafickou knihovnu**, kterou lze použít s mnoha typy displejů.
 
-Počínaje naším [**LCD Modulem**](../../hardware-modules/about-lcd-module.md), přes **SSD1306**, **ST7735**, **MAX7219** nebo dokonce použitím digitálního LED pásku [**WS2812B**](./smart-led-strip.md) v maticové konfiguraci jako displeje.
+Funguje s naším [**LCD Modulem**](../../hardware-modules/about-lcd-module.md), s displeji **SSD1306**, **ST7735** a **MAX7219**, a dokonce i s digitálním LED páskem [**WS2812B**](./smart-led-strip.md) v maticové konfiguraci jako displeje.
 
 ## Odkazy {#references}
 - [**GFX SDK Module**](https://sdk.hardwario.com/group__twr__gfx.html)

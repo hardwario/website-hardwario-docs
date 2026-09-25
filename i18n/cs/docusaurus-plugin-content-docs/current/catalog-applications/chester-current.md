@@ -3,9 +3,9 @@
 Tento článek popisuje základní funkce, popis hardwaru, výchozí konfiguraci, ukázkovou JSON zprávu a kalibraci kanálů katalogové aplikace **CHESTER Current**.
 
 > **Pozor:** Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
-> - [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
-> - [**Společná funkcionalita**](https://docs.hardwario.com/chester/catalog-applications/common-functionality): jak fungují LED, tlačítko a konfigurace sítě.
-> - [**Správa platformy**](https://docs.hardwario.com/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
+> - [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
+> - [**Společná funkcionalita**](/chester/catalog-applications/common-functionality): jak fungují LED, tlačítko a konfigurace sítě.
+> - [**Správa platformy**](/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 ## Přehled aplikace {#application-overview}
 
@@ -27,7 +27,7 @@ Katalogový hardware **CHESTER Current** se skládá z těchto objednacích kód
 - `CHESTER-K1-C1-C2-C3-C4`: 4x diferenciální vstup + 5 V boost
 - `CHESTER-E2-LP`: Krabička s SMA pigtailem
 
-Více informací najdete v kapitole [**Objednací kódy**](https://docs.hardwario.com/chester/ordering-codes).
+Více informací najdete v kapitole [**Objednací kódy**](/chester/ordering-codes).
 
 Varianta sestavení firmwaru: `west chester-update current --variant "CHESTER Current"`
 
@@ -40,7 +40,7 @@ Katalogový hardware **CHESTER Current Z** se skládá z těchto objednacích k�
 - `CHESTER-Z1`: Zálohovací modul
 - `CHESTER-E2-LP`: Krabička s SMA pigtailem
 
-Více informací najdete v kapitole [**Objednací kódy**](https://docs.hardwario.com/chester/ordering-codes).
+Více informací najdete v kapitole [**Objednací kódy**](/chester/ordering-codes).
 
 Varianta sestavení firmwaru: `west chester-update current --variant "CHESTER Current Z"`
 
@@ -54,7 +54,7 @@ Hardware této aplikace se skládá z těchto objednacích kódů:
 - `CHESTER-K1-C1-C2-C3-C4`: 4x diferenciální vstup + 5 V boost
 - `CHESTER-E2-LP`: Krabička s SMA pigtailem
 
-Více informací najdete v kapitole [**Objednací kódy**](https://docs.hardwario.com/chester/ordering-codes).
+Více informací najdete v kapitole [**Objednací kódy**](/chester/ordering-codes).
 
 Varianta sestavení firmwaru: `west chester-update current --variant "CHESTER Current"` (podpora DS18B20 1-Wire je součástí základního firmwaru **CHESTER Current**)
 
@@ -72,7 +72,7 @@ Můžete zvolit až 4 proudové sondy s následujícími proudovými rozsahy:
 
 ## Chování aplikace {#application-behavior}
 
-Schéma zapojení pro **CHESTER Current** najdete v [**popisu svorkovnice**](https://docs.hardwario.com/chester/extension-modules/chester-k1) rozšiřujícího modulu **CHESTER-K1**. Rozšiřující modul **CHESTER-K1** využívá oba sloty **A** i **B**. Používáte tedy odpovídající svorky **A1** až **A8** a **B1** až **B8**.
+Schéma zapojení pro **CHESTER Current** najdete v [**popisu svorkovnice**](/chester/extension-modules/chester-k1) rozšiřujícího modulu **CHESTER-K1**. Rozšiřující modul **CHESTER-K1** využívá oba sloty **A** i **B**. Používáte tedy odpovídající svorky **A1** až **A8** a **B1** až **B8**.
 
 ### Analogové vstupy {#analog}
 
@@ -267,7 +267,7 @@ app config w1-therm-interval-aggreg <1-86400>
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je k dispozici v kapitole [Firmware](https://docs.hardwario.com/chester/catalog-applications/catalog-applications#application-firmware) katalogových aplikací.
+Nejnovější firmware je k dispozici v kapitole [Firmware](/chester/catalog-applications/catalog-applications#application-firmware) katalogových aplikací.
 
 ### Firmware v3.5.1 {#firmware-v351}
 
@@ -384,7 +384,7 @@ Zařízení **CHESTER Current** podporuje binární kódování LoRaWAN payloadu
 
 ## Kalibrace kanálů {#channel-calibration}
 
-> **Nebezpečí:** Při aktualizaci firmwaru z verze **v1.x.x** na verzi **v2.0.0 a novější** je nutné [**zálohovat konfiguraci**](https://docs.hardwario.com/chester/catalog-applications/common-functionality#configuration-backup). V případě zařízení **CHESTER Current** také kalibrační data.
+> **Nebezpečí:** Při aktualizaci firmwaru z verze **v1.x.x** na verzi **v2.0.0 a novější** je nutné [**zálohovat konfiguraci**](/chester/catalog-applications/common-functionality#configuration-backup). V případě zařízení **CHESTER Current** také kalibrační data.
 
 > **Pozor:** Následující sekce je uvedena pouze pro referenci. Zařízení **CHESTER Current** se obvykle objednávají společně s proudovými sondami a **HARDWARIO** v takovém případě provádí kalibraci kanálů za zákazníka.
 

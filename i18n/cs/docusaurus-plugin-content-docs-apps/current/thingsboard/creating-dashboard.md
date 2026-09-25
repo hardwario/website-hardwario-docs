@@ -109,5 +109,5 @@ V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobra
 ## Videonávod {#video-tutorial}
 
 :::tip
-Pokud potřebujete další pomoc nebo vizuální ukázku postupu popsaného v tomto návodu, podívejte se na [videonávod](https://docs.hardwario.com/apps/videos-apps/thingsboard-dashboard).
+Pokud potřebujete další pomoc nebo vizuální ukázku postupu popsaného v tomto návodu, podívejte se na [videonávod](/apps/videos-apps/thingsboard-dashboard).
 :::

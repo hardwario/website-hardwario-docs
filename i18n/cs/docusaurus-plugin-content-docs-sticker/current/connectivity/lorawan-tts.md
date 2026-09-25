@@ -46,7 +46,7 @@ STICKER se čte telefonem s **Androidem** a NFC.
    [**Informace o zařízení a klíče LoRaWAN**](/apps/hardwario-manager/sticker/device-info).
 5. **Zkontrolujte, že je radio zapnuté.** V **STICKER → Configuration** musí být
    v sekci LoRaWAN parametr **`radio-mode`** nastavený na LoRaWAN, protože zařízení
-   se dodávají s vypnutým ráiem; jednotka se pak po registraci pokusí připojit. Viz
+   se dodávají s vypnutým rádiem; jednotka se pak po registraci pokusí připojit. Viz
    [**Konfigurace**](/apps/hardwario-manager/sticker/configuration) a
    [**Šablony**](/apps/hardwario-manager/sticker/templates), když chcete celé dávce
    dát stejné nastavení.
@@ -76,5 +76,5 @@ Při registraci koncového zařízení STICKER v TTS:
 - [HARDWARIO Manager a STICKER](/sticker/hardwario-manager/)
 - [Rychlý průvodce HARDWARIO Manager](/apps/hardwario-manager/first-steps)
 - [Čtení informací o zařízení a klíčů LoRaWAN přes NFC](/apps/hardwario-manager/sticker/device-info)
-- [Dokumentace koncových zařízení TTS](https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-end-devices)
+- [Dokumentace koncových zařízení TTS](/apps/the-things-stack/tts-configuration/tts-end-devices)
 - [Dekodér payloadu STICKER (`ttn.js`) na GitHubu](https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js)

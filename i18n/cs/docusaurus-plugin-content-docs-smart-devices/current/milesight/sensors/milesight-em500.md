@@ -44,7 +44,7 @@ Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde 👉[**Možnosti sítě LoRaWAN**](https://docs.hardwario.com/smart-devices/milesight/sensors/index#lorawan-network-options)
+Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
 ---
 
@@ -67,14 +67,14 @@ Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde
 
 | Typ | Odkaz na GitHub |
 |------|--------------|
-| Decoder | [Zobrazit decoder](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em500-co2/em500-co2-decoder.js) |
-| Encoder | [Zobrazit encoder](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em500-co2/em500-co2-encoder.js) |
+| Dekodér | [Zobrazit dekodér](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em500-co2/em500-co2-decoder.js) |
+| Enkodér | [Zobrazit enkodér](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em500-co2/em500-co2-encoder.js) |
 | Codec | [Zobrazit codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em500-co2/em500-co2-codec.json) |
 
 :::info
 ### Přehled terminologie {#terminology-overview}
-**Decoder** -> Převádí binární payload zařízení na čitelný JSON.<br />
-**Encoder** -> Převádí příkazy v JSON na binární payload pro downlinky.<br />
+**Dekodér** -> Převádí binární payload zařízení na čitelný JSON.<br />
+**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlinky.<br />
 **Codec** -> Definuje pravidla pro dekódování a kódování (struktura, položky, porty) používaná síťovými servery.
 :::
 

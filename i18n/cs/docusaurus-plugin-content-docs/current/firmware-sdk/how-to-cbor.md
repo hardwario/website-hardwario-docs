@@ -10,7 +10,7 @@ Zařízení **CHESTER** s Cloud v2 používá [**CBOR**](https://cbor.io/) pro k
 
 V úvodních zprávách session posílá Cloud hash kodeku ve zprávě **session down**. CHESTER porovná tento hash se svým vlastním hashem kodeku a pokud je potřeba, nahraje dekodér zprávou **decoder up** a případně nahraje enkodér ve zprávě **encoder up**.
 
-Abyste mohli s zařízením **CHESTER** používat **CBOR**, je potřeba:
+Abyste mohli se zařízením **CHESTER** používat **CBOR**, je potřeba:
 
 - Vytvořit ve složce aplikace soubor `codec\cbor-decoder.yaml`, který popisuje atributy JSON.
 - Případně vytvořit soubor `codec\cbor-encoder.yaml` pro downlink příkazy (viz kód CHESTER Control)

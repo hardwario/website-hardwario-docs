@@ -55,7 +55,7 @@ Izolovaný zesilovač každého kanálu je napájený vlastním load switchem (*
 | **Rozhraní k hostu** | I²C; data-ready (DRDY) na GP0/A0 |
 | **Adresa I²C** | 0x40 (výchozí); 0x41 pomocí pájecí propojky S1 |
 | **Zapnutí napájení kanálu** | GP2/A2 (kanál 1), GP1/A1 (kanál 2) |
-| **Napájení logiky (VDD)** | 3.0 V |
+| **Napájení logiky (VDD)** | 3,0 V |
 | **Rozhraní desky** | Castellated otvory na dvou protilehlých hranách, připájené k základní desce CHESTER |
 | **Revize hardwaru** | R2.1 |
 

@@ -18,9 +18,9 @@ Here you can find step-by-step guides and video tutorials that will help you set
 
 | Tutorial                                   | Step-by-step guide                     | Video tutorial                         |
 |--------------------------------------------|-----------------------------------------|-----------------------------------------|
-| **How to Create a New Device**     | [Guide](https://docs.hardwario.com/apps/thingsboard/creating-device) | [Video](https://docs.hardwario.com/apps/videos-apps/thingsboard-new-device) |
-| **How to Connect to the HARDWARIO Cloud**           | [Guide](https://docs.hardwario.com/apps/thingsboard/cloud-connection) | [Video](https://docs.hardwario.com/apps/videos-apps/thingsboard-cloud-connection) |
-| **How to Create a Basic Dashboard**     | [Guide](https://docs.hardwario.com/apps/thingsboard/creating-dashboard) | [Video](https://docs.hardwario.com/apps/videos-apps/thingsboard-dashboard) |
+| **How to Create a New Device**     | [Guide](/apps/thingsboard/creating-device) | [Video](/apps/videos-apps/thingsboard-new-device) |
+| **How to Connect to the HARDWARIO Cloud**           | [Guide](/apps/thingsboard/cloud-connection) | [Video](/apps/videos-apps/thingsboard-cloud-connection) |
+| **How to Create a Basic Dashboard**     | [Guide](/apps/thingsboard/creating-dashboard) | [Video](/apps/videos-apps/thingsboard-dashboard) |
 
 ---
 
@@ -30,9 +30,9 @@ Here you can find step-by-step guides that will help you configure ChirpStack v4
 
 | Tutorial | Step-by-step guide | Video tutorial |
 |-----------|--------------------|----------------|
-| **EMBER (Gateways)** | [Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-gateways) | [Video](https://docs.hardwario.com/apps/videos-apps/chirpstack-ember) |
-| **End Devices** | [Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices) | [Video](https://docs.hardwario.com/apps/videos-apps/chirpstack-devices) |
-| **Decode Data** | [Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding) | [Video](https://docs.hardwario.com/apps/videos-apps/chirpstack-decoding) |
+| **EMBER (Gateways)** | [Guide](/apps/chirpstack/chirpstack-configuration/chirpstack-gateways) | [Video](/apps/videos-apps/chirpstack-ember) |
+| **End Devices** | [Guide](/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices) | [Video](/apps/videos-apps/chirpstack-devices) |
+| **Decode Data** | [Guide](/apps/chirpstack/chirpstack-configuration/chirpstack-decoding) | [Video](/apps/videos-apps/chirpstack-decoding) |
 
 ---
 
@@ -42,8 +42,8 @@ Here you can find step-by-step guides and video tutorials that will help you con
 
 | Tutorial | Step-by-step guide | Video tutorial |
 |-----------|--------------------|----------------|
-| **Gateways** | [Guide](https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-gateways) | [Video](https://docs.hardwario.com/apps/videos-apps/tts-gateways) |
-| **End Devices** | [Guide](https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-end-devices) | [Video](https://docs.hardwario.com/apps/videos-apps/tts-end-devices) |
+| **Gateways** | [Guide](/apps/the-things-stack/tts-configuration/tts-gateways) | [Video](/apps/videos-apps/tts-gateways) |
+| **End Devices** | [Guide](/apps/the-things-stack/tts-configuration/tts-end-devices) | [Video](/apps/videos-apps/tts-end-devices) |
 
 ---
 

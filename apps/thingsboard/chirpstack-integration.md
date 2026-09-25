@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-integration
-title: Chirpstack
+title: ChirpStack
+title_meta: "ChirpStack Integration (ThingsBoard)"
 ---
 
 import Image from '@theme/IdealImage';

@@ -35,7 +35,7 @@ LTE a objeví se sekce LTE, zvolte LoRaWAN a dostanete tu pro LoRaWAN.
 
 ### LTE {#lte}
 
-<img src="/img/hw-manager/hw-manager-chester-configuration-lte.png" alt="Sekce LTE s volbami SIM, režimu ráia, IP adresy a antény nad tlačítky Go to Advanced Configuration a Save to CHESTER" width="320" />
+<img src="/img/hw-manager/hw-manager-chester-configuration-lte.png" alt="Sekce LTE s volbami SIM, režimu rádia, IP adresy a antény nad tlačítky Go to Advanced Configuration a Save to CHESTER" width="320" />
 
 | Nastavení | Volby |
 |---|---|

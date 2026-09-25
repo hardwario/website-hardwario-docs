@@ -14,7 +14,7 @@ import Image from '@theme/IdealImage';
         Modul <b>PIR Module</b> funguje jako <b>detektor pohybu</b> pracující na <b>pasivním infračerveném principu (PIR)</b>. Typickým použitím modulu PIR Module může být bezdrátový detektor pohybu umístěný na stěně nebo na stropě.
       </p>
       <p>
-        Modul je osazen <b>digitálním senzorem s extrémně nízkou spotřebou</b> z rodiny <b>Excelitas’ DigiPyro®</b>.
+        Modul je osazen <b>digitálním senzorem s extrémně nízkou spotřebou</b> z rodiny <b>DigiPyro®</b> společnosti Excelitas.
       </p>
     </div>
   </div>

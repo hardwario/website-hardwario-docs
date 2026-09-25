@@ -26,10 +26,10 @@ Chcete-li si firmware nastavit lokálně, nahrát debug image a otevřít konzol
 ---
 
 :::info Firmware v1.4.0
-Několik příkaz shelluů níže (`clock`, `history`, dynamická pravidla `alarm`, `settings erase` a přejmenovaná diagnostika `ats`) je nových v připravovaném **firmwaru STICKER v1.4.0**.
+Několik příkazů shellu níže (`clock`, `history`, dynamická pravidla `alarm`, `settings erase` a přejmenovaná diagnostika `ats`) je nových v připravovaném **firmwaru STICKER v1.4.0**.
 :::
 
-## Přehled příkaz shelluů {#shell-command-reference}
+## Přehled příkazů shellu {#shell-command-reference}
 
 Jakmile je konzole otevřená, konfigurace a diagnostika se zadávají jako příkazy shellu. Každý příkaz má vlastní stránku:
 

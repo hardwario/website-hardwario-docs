@@ -17,7 +17,7 @@ description: "HARDWARIO Cloud je platforma pro správu zařízení CHESTER a dal
 | **Messages** | Procházení uplink/downlink zpráv s JSON prohlížečem a základním dashboardem |
 | **Tags** | Označení skupin zařízení a jejich propojení s konektory |
 | **Connectors** | Přeposílání dat pomocí webhooků s transformací v JavaScriptu |
-| **Downlink** | Vzdálené odesílání konfigurace, dat nebo příkaz shelluů do zařízení |
+| **Downlink** | Vzdálené odesílání konfigurace, dat nebo příkazů shellu do zařízení |
 | **Firmware** | Nahrávání aktualizací firmwaru vzduchem (FOTA) |
 | **API** | Plný přístup k REST API pomocí API klíčů |
 

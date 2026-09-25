@@ -27,6 +27,7 @@ import SearchBar from '@theme/SearchBar';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
 import NavbarLogo from '@theme/Navbar/Logo';
 import NavbarSearch from '@theme/Navbar/Search';
+import {useRestoreSidebarState} from '../MobileSidebar/keepOpenAcrossLocales';
 import styles from './styles.module.css';
 
 function useNavbarItems() {
@@ -77,6 +78,8 @@ function NavbarContentLayout({left, right}) {
 
 export default function NavbarContent() {
   const mobileSidebar = useNavbarMobileSidebar();
+  // Reopens the mobile menu after a language switch (see keepOpenAcrossLocales).
+  useRestoreSidebarState();
   const items = useNavbarItems();
   const [leftItems, rightItems] = splitNavbarItems(items);
   const searchBarItem = items.find((item) => item.type === 'search');

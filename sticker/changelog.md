@@ -48,7 +48,7 @@ The following features and hardware extensions are currently in active developme
 - **[FW] Write-once Claim Token**: Immutable 128-bit claim token (`config claim-token`) for instant cloud onboarding prior to network Join
 - **[FW] Factory default Radio-Silent mode**: Transceiver disabled out of the box (`radio-mode off`) to protect battery life during shipping; activated via NFC
 - **[FW] Unified LED signalling scheme**: Severity-ordered heartbeat patterns (join state, degraded link, active alarms, radio status) and dedicated NFC/input action blinks
-- **[FW] Diagnostic CLI suite (`ats`)**: Renamed diagnostic tool family `tester` $\rightarrow$ `ats`; added `ats lrw reset`, `ats lrw compose`, `ats lrw lc`, and raw protobuf frame injection (`ats cmd lrw|nfc`)
+- **[FW] Diagnostic CLI suite (`ats`)**: Renamed diagnostic tool family `tester` → `ats`; added `ats lrw reset`, `ats lrw compose`, `ats lrw lc`, and raw protobuf frame injection (`ats cmd lrw|nfc`)
 - **[FW] Immutable firmware security model**: Deliberately removed DFU update capabilities (`enter_dfu`) to ensure zero remote attack surface (firmware flashable strictly via SWD pads)
 
 ### 2026-05-25 – v1.3.4

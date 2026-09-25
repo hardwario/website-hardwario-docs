@@ -37,10 +37,10 @@ First, identify the unique identification credentials of your FT101.
 
 1. Power on the device and open the **Field Tester** application
 2. **If the device is NOT registered**: The Device EUI and Application Key will be visible on the home screen
-3. Navigate to **Settings > LoRaWAN Settings** to record the **Application EUI** (8-bit code, sometimes labeled as Join EUI)
+3. Navigate to **Settings > LoRaWAN Settings** to record the **Application EUI** (8-byte code, sometimes labeled as Join EUI)
 4. **If the device IS registered**: Go to **Settings > Basic Information** to find:
-   - **Device EUI** (8-bit code)
-   - **Application Key** (16-bit encryption key)
+   - **Device EUI** (8-byte code)
+   - **Application Key** (16-byte encryption key)
 
 :::info
 The **AppEUI** (Join EUI) is fixed: **24E124C0002A0001**
@@ -83,7 +83,7 @@ This process occurs within your LoRaWAN Network Server interface (e.g., TTN, Chi
 5. **Confirmed Data**: Ensure the server is set to respond to confirmed uplinks (enabled by default on standard LNS)
 6. **Save**: Confirm the registration in the LNS
 
-For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](https://docs.hardwario.com/smart-devices/milesight/utility/index#lorawan-network-options)
+For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/utility/index#lorawan-network-options)
 
 ---
 

@@ -130,5 +130,5 @@ Chcete-li získat offline záznamy ze senzorů, uložené ve flash paměti běhe
 
 ## Nastavení downlinků na síťovém serveru {#network-server-downlink-setup}
 
-- **ChirpStack v4:** Přejděte na **Device $\rightarrow$ Queue** a zvolte **fPort 85**. Zařaďte buď surový hexadecimální payload, nebo strukturovaný objekt JSON (pokud používáte kodek v profilu zařízení).
-- **The Things Stack (TTS):** Přejděte na **Device $\rightarrow$ Messaging $\rightarrow$ Downlink** a nastavte **fPort 85**. Vložte přímo hexadecimální bajty, nebo payload JSON, pokud je kodek přiřazený jako formátovač downlink payloadu.
+- **ChirpStack v4:** Přejděte na **Device → Queue** a zvolte **fPort 85**. Zařaďte buď surový hexadecimální payload, nebo strukturovaný objekt JSON (pokud používáte kodek v profilu zařízení).
+- **The Things Stack (TTS):** Přejděte na **Device → Messaging → Downlink** a nastavte **fPort 85**. Vložte přímo hexadecimální bajty, nebo payload JSON, pokud je kodek přiřazený jako formátovač downlink payloadu.

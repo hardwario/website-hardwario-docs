@@ -65,7 +65,7 @@ Milesight UG63 je **kompaktní brána LoRaWAN®** určená pro **menší nasazen
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serverů najdete zde: 👉[**LoRaWAN Network Options**](https://docs.hardwario.com/smart-devices/milesight/gateways/index#lorawan-network-options)
+Informace o podporovaných platformách LoRaWAN network serverů najdete zde: 👉[**LoRaWAN Network Options**](/smart-devices/milesight/gateways/index#lorawan-network-options)
 
 ---
 
@@ -169,7 +169,7 @@ Tento vestavěný network server umožňuje spravovat senzory přímo z webovéh
 | Konfigurace/aktualizace | Web, API, DeviceHub |
 | **Napájení** | |
 | Zdroj | 5V/2A (USB-C) / 5–12V DC / PoE splitter |
-| Spotřeba | 1.3 W typ., 3.1 W max |
+| Spotřeba | 1,3 W typ., 3,1 W max |
 | **Fyzické vlastnosti** | |
 | Rozměry | Ø115 × 21 mm (bez antény) |
 | Hmotnost | 140 g (bez mobilní sítě), 158 g (s mobilní sítí) |

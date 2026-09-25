@@ -225,7 +225,7 @@ Chcete-li do zařízení **CHESTER** nahrát firmware modemu LTE, postupujte tak
 
 Výše uvedený postup nahrává **firmware LTE modemu HARDWARIO** – komunikační stack, který připojuje **CHESTER** ke službě **HARDWARIO Cloud**. To je jiný image než **firmware modemu Nordic** (baseband image distribuovaný jako `mfw_nrf9160_*.zip`), což je nízkoúrovňový mobilní firmware samotného SiP **nRF9160**. Oba image se nahrávají nezávisle a různými příkazy.
 
-Většina nasazení firmware modemu Nordic nikdy měnit nemusí. Tento postup potřebujete pouze tehdy, když konkrétní síť nebo SIM karta vyžaduje určitou verzi firmwaru modemu – například SIM karta **Vodafone Ukraine**, která vyžaduje **v1.3.7**. Viz [**Testované SIM karty a operátoři**](../platform-connectivity/cellular-networks/sim-card-setup.md#tested-sim-cards-and-operators).
+U většiny nasazení není potřeba firmware modemu Nordic vůbec měnit. Tento postup potřebujete pouze tehdy, když konkrétní síť nebo SIM karta vyžaduje určitou verzi firmwaru modemu – například SIM karta **Vodafone Ukraine**, která vyžaduje **v1.3.7**. Viz [**Testované SIM karty a operátoři**](../platform-connectivity/cellular-networks/sim-card-setup.md#tested-sim-cards-and-operators).
 
 :::caution
 

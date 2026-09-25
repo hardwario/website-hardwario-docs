@@ -20,8 +20,8 @@ import Image from '@theme/IdealImage';
 
 * [**Quick Start Guide**](first-steps): Step-by-step setup guide.
 * [**Buy STICKER**](https://www.hardwario.store/sticker): Purchase on our store.
-* [**Ordering Codes**](https://docs.hardwario.com/sticker/ordering-codes): List of components and part numbers.
-* [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description): Technical details and hardware overview.
+* [**Ordering Codes**](/sticker/ordering-codes): List of components and part numbers.
+* [**Hardware Description**](/sticker/hardware-description): Technical details and hardware overview.
 * [**Official Product Page**](https://www.hardwario.com/products/sticker/): Features and overview.
 * [**Changelog**](changelog): Latest SDK releases, firmware versions, and per-application changes.
 

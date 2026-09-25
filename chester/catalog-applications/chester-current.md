@@ -3,9 +3,9 @@
 This article describes the core functionality, hardware description, default configuration, example JSON message, and channel calibration of the catalog application **CHESTER Current**.
 
 > **Caution:** Some of the basics are not provided, as they are common for all CHESTER catalog applications. Please see:
-> - [**Getting started**](https://docs.hardwario.com/chester/first-steps) on how to connect device to Cloud.
-> - [**Common functionality**](https://docs.hardwario.com/chester/catalog-applications/common-functionality) to know how LED, button and network configuration works.
-> - [**Platform Management**](https://docs.hardwario.com/chester/category/platform-connectivity) on how to work with the interactive console.
+> - [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
+> - [**Common functionality**](/chester/catalog-applications/common-functionality) to know how LED, button and network configuration works.
+> - [**Platform Management**](/chester/category/platform-connectivity) on how to work with the interactive console.
 
 ## Application Overview
 
@@ -27,7 +27,7 @@ The catalog **CHESTER Current** hardware consists of the following ordering code
 - `CHESTER-K1-C1-C2-C3-C4`: 4x Diff. Input + 5 V Boost
 - `CHESTER-E2-LP`: Enclosure with SMA pigtail
 
-See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
+See [**Ordering Codes**](/chester/ordering-codes) for more details.
 
 Firmware build variant: `west chester-update current --variant "CHESTER Current"`
 
@@ -40,7 +40,7 @@ The catalog **CHESTER Current Z** hardware consists of the following ordering co
 - `CHESTER-Z1`: Backup module
 - `CHESTER-E2-LP`: Enclosure with SMA pigtail
 
-See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
+See [**Ordering Codes**](/chester/ordering-codes) for more details.
 
 Firmware build variant: `west chester-update current --variant "CHESTER Current Z"`
 
@@ -54,7 +54,7 @@ The hardware of this application consists of the following ordering codes:
 - `CHESTER-K1-C1-C2-C3-C4`: 4x Diff. Input + 5 V Boost
 - `CHESTER-E2-LP`: Enclosure with SMA pigtail
 
-See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
+See [**Ordering Codes**](/chester/ordering-codes) for more details.
 
 Firmware build variant: `west chester-update current --variant "CHESTER Current"` (DS18B20 1-Wire support is built into the base **CHESTER Current** firmware)
 
@@ -72,7 +72,7 @@ You can choose up to 4 current probes with the following current ranges:
 
 ## Application Behavior
 
-For the wiring diagram to **CHESTER Current**, please follow the [**terminal block description**](https://docs.hardwario.com/chester/extension-modules/chester-k1) of the **CHESTER-K1** extension module. The extension module **CHESTER-K1** uses both slots **A** and **B**. So you use the corresponding terminals **A1** to **A8** and **B1** to **B8**.
+For the wiring diagram to **CHESTER Current**, please follow the [**terminal block description**](/chester/extension-modules/chester-k1) of the **CHESTER-K1** extension module. The extension module **CHESTER-K1** uses both slots **A** and **B**. So you use the corresponding terminals **A1** to **A8** and **B1** to **B8**.
 
 ### Analog
 
@@ -267,7 +267,7 @@ app config w1-therm-interval-aggreg <1-86400>
 
 ## Firmware
 
-The latest firmware is available in Catalog Applications [Firmware chapter](https://docs.hardwario.com/chester/catalog-applications/catalog-applications#application-firmware).
+The latest firmware is available in Catalog Applications [Firmware chapter](/chester/catalog-applications/catalog-applications#application-firmware).
 
 ### Firmware v3.5.1
 
@@ -384,7 +384,7 @@ The latest firmware is available in Catalog Applications [Firmware chapter](http
 
 ## Channel Calibration
 
-> **Danger:** When upgrading firmware from **v1.x.x** to version **v2.0.0 and newer**, it is necessary to [**backup configuration**](https://docs.hardwario.com/chester/catalog-applications/common-functionality#configuration-backup). In the case of using **CHESTER Current** also calibration data.
+> **Danger:** When upgrading firmware from **v1.x.x** to version **v2.0.0 and newer**, it is necessary to [**backup configuration**](/chester/catalog-applications/common-functionality#configuration-backup). In the case of using **CHESTER Current** also calibration data.
 
 > **Caution:** The following section is provided only for reference. Usually, the **CHESTER Current** devices are ordered altogether with the current probes, and **HARDWARIO** does the channel calibration for their customers in such a case.
 

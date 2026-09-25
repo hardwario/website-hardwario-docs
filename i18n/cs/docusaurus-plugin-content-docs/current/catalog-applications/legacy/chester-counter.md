@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 :::warning
 
-CHESTER Counter je nahrazen aplikací [**CHESTER Control**](https://docs.hardwario.com/chester/catalog-applications/chester-control), která nabízí stejnou funkcionalitu.
+CHESTER Counter je nahrazen aplikací [**CHESTER Control**](/chester/catalog-applications/chester-control), která nabízí stejnou funkcionalitu.
 
 :::
 
@@ -18,9 +18,9 @@ Tento článek popisuje základní funkcionalitu, hardware, výchozí konfigurac
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](https://docs.hardwario.com/chester/catalog-applications/common-functionality): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Platform Management**](https://docs.hardwario.com/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**Společná funkcionalita**](/chester/catalog-applications/common-functionality): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Správa platformy**](/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -40,7 +40,7 @@ Katalogový hardware **CHESTER Counter** se skládá z těchto objednacích kód
 
 * `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
-Více podrobností najdete v [**Objednacích kódech**](https://docs.hardwario.com/chester/ordering-codes).
+Více podrobností najdete v [**Objednacích kódech**](/chester/ordering-codes).
 
 Volby shieldů pro build firmwaru: `ctr_lte ctr_x0_a`
 
@@ -54,7 +54,7 @@ Katalogový hardware **CHESTER Counter Z** se skládá z těchto objednacích k�
 
 * `CHESTER-Z1`: Záložní modul
 
-Více podrobností najdete v [**Objednacích kódech**](https://docs.hardwario.com/chester/ordering-codes).
+Více podrobností najdete v [**Objednacích kódech**](/chester/ordering-codes).
 
 Volby shieldů pro build firmwaru: `ctr_lte ctr_x0_a ctr_z`
 
@@ -81,7 +81,7 @@ app config interval-report 1800
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je dostupný v [kapitole Firmware](https://docs.hardwario.com/chester/catalog-applications/catalog-applications#application-firmware) katalogových aplikací.
+Nejnovější firmware je dostupný v [kapitole Firmware](/chester/catalog-applications/catalog-applications#application-firmware) katalogových aplikací.
 
 ## Ukázková zpráva JSON {#example-json-message}
 

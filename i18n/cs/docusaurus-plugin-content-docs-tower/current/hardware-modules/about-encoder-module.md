@@ -25,7 +25,7 @@ import Image from '@theme/IdealImage';
 
 :::info
 
-Aluminiový knoflík na fotografii není součástí modulu a prodává se jako [**volitelné příslušenství samostatně**](https://www.hardwario.store/p/encoder-knob-small-black).
+Hliníkový knoflík na fotografii není součástí modulu a prodává se jako [**volitelné příslušenství samostatně**](https://www.hardwario.store/p/encoder-knob-small-black).
 
 :::
 

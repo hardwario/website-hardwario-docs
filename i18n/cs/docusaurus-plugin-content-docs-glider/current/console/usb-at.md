@@ -1,12 +1,12 @@
 ---
-title: konzole AT (USB-C)
+title: Konzole AT (USB-C)
 sidebar_position: 2
 ---
 import Image from '@theme/IdealImage';
 
-# konzole AT přes USB-C {#at-console-over-usb-c}
+# Konzole AT přes USB-C {#at-console-over-usb-c}
 
-Tato stránka popisuje, jak komunikovat se zařízením GLIDER přes jeho konektor **USB-C** pomocí **příkazů AT**. konzole AT je doporučené rozhraní pro každodenní práci – zprovoznění, konfiguraci, aktualizace firmwaru – a nevyžaduje žádný speciální ladicí hardware.
+Tato stránka popisuje, jak komunikovat se zařízením GLIDER přes jeho konektor **USB-C** pomocí **příkazů AT**. Konzole AT je doporučené rozhraní pro každodenní práci – zprovoznění, konfiguraci, aktualizace firmwaru – a nevyžaduje žádný speciální ladicí hardware.
 
 :::tip
 Hledáte živé logy a plný Zephyr shell? Použijte místo toho [**RTT konzoli (J-Link)**](rtt-jlink.md).
@@ -203,9 +203,9 @@ AT$CONFIG="therm config 1 28ab12cd…" # bind slot 1 to a specific DS18B20
 AT&W # save and reboot
 ```
 
-#### Spouštění příkaz shelluů z konzole AT {#running-shell-commands-from-the-at-console}
+#### Spouštění příkazů shellu z konzole AT {#running-shell-commands-from-the-at-console}
 
-konzole AT umí také vykonat jakýkoli **příkaz Zephyr shellu** přes `AT$SHELL`:
+Konzole AT umí také vykonat jakýkoli **příkaz Zephyr shellu** přes `AT$SHELL`:
 
 ```text
 AT$SHELL="therm state"

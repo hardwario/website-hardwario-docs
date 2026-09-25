@@ -25,8 +25,8 @@ Tento návod vás provede přidáním a nastavením brány v The Things Stack.
 ![Stránka Register gateway s dotazem na Gateway EUI a možností Continue without EUI](../../../../../../apps/the-things-stack/tts-configuration/images/tts-gateways-1.png)
 
 3. Po zadání Gateway EUI vyplňte tato pole:
-   - **Gateway ID** ( vámi zvolený identifikátor zařízení → například: **test-geteway-001**)
-   - **Gateway Name** (vámi zvolené jméno zařízení → například **Test Geteways-001**)
+   - **Gateway ID** ( vámi zvolený identifikátor zařízení → například: **test-gateway-001**)
+   - **Gateway Name** (vámi zvolené jméno zařízení → například **Test Gateway-001**)
    - **Frequency Plan** → zvolte **Europe 868.1 MHz**
    - (Volitelně) **Label**
 
@@ -77,5 +77,5 @@ Pro běžné uživatele je jediným řešením **vytvořit bránu znovu s novým
 ## Videonávod {#video-tutorial}
 
 :::tip
-Pokud potřebujete **další pomoc** nebo vizuální ukázku postupu popsaného v tomto návodu, podívejte se na [**videonávod**](https://docs.hardwario.com/apps/videos-apps/tts-gateways).
+Pokud potřebujete **další pomoc** nebo vizuální ukázku postupu popsaného v tomto návodu, podívejte se na [**videonávod**](/apps/videos-apps/tts-gateways).
 :::

@@ -103,7 +103,7 @@ Relay is coming in hardware r2.
 
 This section is for the on-board LED.
 
-It can either have a `state"` or a `"pattern` element.
+It can either have a `"state"` or a `"pattern"` element.
 
 - State can have the following values: `off`, or `on/` with the color `red`/`green`/`blue`/`yellow` following.  
   Example: `on/red`

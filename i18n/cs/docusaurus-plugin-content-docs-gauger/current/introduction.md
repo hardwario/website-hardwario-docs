@@ -38,7 +38,7 @@ Zařízení hostuje webové uživatelské rozhraní, které slouží k jeho konf
 |---|---|
 | **Galvanicky oddělené vstupy** | Až čtyři izolované digitální vstupy pro počítání pulzů. |
 | **Připojení přes Ethernet** | Drátová síť 10/100 Base-T. |
-| **Připojení přes Wi-Fi** | 2.4GHz Wi-Fi (802.11 b/g/n). |
+| **Připojení přes Wi-Fi** | 2,4GHz Wi-Fi (802.11 b/g/n). |
 | **Montáž na DIN lištu** | Průmyslová krabička na DIN lištu. |
 | **Server Modbus TCP** | Čtení hodnot počítadel přes Modbus TCP. |
 | **Webová konfigurace** | Vestavěný konfigurační web. |

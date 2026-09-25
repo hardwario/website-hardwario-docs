@@ -4,7 +4,7 @@ title: Používání displeje
 
 # Používání displeje {#using-the-display}
 
-**Pouze FIBER**: FIBER Lite displej nemá (viz [Čím se liší](/fiber/fiber-lite/introduction#whats-different)).
+**Pouze FIBER**: FIBER Lite displej nemá (viz [Co je jinak](/fiber/fiber-lite/introduction#whats-different)).
 
 Tato příručka popisuje, jak zobrazit vlastní obsah na podsvíceném LCD zařízení FIBER.
 

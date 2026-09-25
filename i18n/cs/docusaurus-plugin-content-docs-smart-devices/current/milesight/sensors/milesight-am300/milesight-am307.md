@@ -46,7 +46,7 @@ Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serverů najdete zde 👉[**Možnosti sítě LoRaWAN**](https://docs.hardwario.com/smart-devices/milesight/sensors/index#lorawan-network-options)
+Informace o podporovaných platformách LoRaWAN network serverů najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
 ---
 
@@ -104,12 +104,12 @@ Informace o podporovaných platformách LoRaWAN network serverů najdete zde �
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class A |
 | **Senzory** | |
-| Teplota | -20°C ~ 60°C, přesnost ±0.2°C, rozlišení 0.1°C |
-| Vlhkost | 0% ~ 100% RH, přesnost ±2% RH, rozlišení 0.5% |
+| Teplota | -20°C ~ 60°C, přesnost ±0,2°C, rozlišení 0,1°C |
+| Vlhkost | 0% ~ 100% RH, přesnost ±2% RH, rozlišení 0,5% |
 | Pohyb (PIR) | 80° H, 55° V, max 5m, stav: volno/obsazeno |
 | Osvětlení | 0–60000 Lux (6 úrovní) |
 | TVOC | Hodnocení IAQ 1.00–5.00, přesnost ±1, rozlišení 0.01 |
-| Barometrický tlak | 260–1260 hPa, přesnost ±0.5 hPa, rozlišení 0.1 hPa |
+| Barometrický tlak | 260–1260 hPa, přesnost ±0,5 hPa, rozlišení 0,1 hPa |
 | CO₂ | 400–5000 ppm, přesnost ±(50 ppm + 5%) |
 | **Rozhraní a displej** | |
 | Displej | 4,2" E-Ink |

@@ -12,9 +12,9 @@ Tento článek popisuje základní funkcionalitu, popis hardwaru a ukázkovou **
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
 - [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Platform Management**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -50,7 +50,7 @@ Více podrobností najdete v kapitole [**Objednací kódy**](../ordering-codes.m
 | Provozní teplota | -20 až +60 °C |
 | Skladovací teplota | -30 až +70 °C |
 | Krytí krabičky | IP67 |
-| Nominální napětí baterie | 3.6 V |
+| Nominální napětí baterie | 3,6 V |
 | Nominální kapacita baterie | 7700 mAh |
 | Klidová spotřeba | < 180 µA |
 | Špičková spotřeba | < 250 mA |
@@ -93,7 +93,7 @@ K intervalu reportování se přidává náhodný rozptyl 0-20 %, aby se zabrán
 
 :::
 
-- Citlivost detekce pohybu lze nakonfigurovat pomocí přednastavených režimů (**low**, **medium**, **high**) nebo **individual** vlastními parametry.
+- Citlivost detekce pohybu lze nakonfigurovat pomocí přednastavených režimů (**low**, **medium**, **high**) nebo v režimu **individual** vlastními parametry.
 
 ### Režimy citlivosti PIR {#pir-sensitivity-modes}
 

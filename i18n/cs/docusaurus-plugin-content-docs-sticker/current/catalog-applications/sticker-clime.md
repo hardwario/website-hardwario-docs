@@ -12,10 +12,10 @@ import Image from '@theme/IdealImage';
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Rychlý průvodce**](https://docs.hardwario.com/sticker/first-steps): Postup zprovoznění krok za krokem.
+* [**Rychlý průvodce**](/sticker/first-steps): Postup zprovoznění krok za krokem.
 * [**Koupit STICKER Clime**](https://www.hardwario.store/p/sticker-clime): Nákup v našem obchodě.
-* [**Objednací kódy**](https://docs.hardwario.com/sticker/ordering-codes): Seznam součástek a jejich objednacích čísel.
-* [**Popis hardwaru**](https://docs.hardwario.com/sticker/hardware-description): Technické detaily a přehled hardwaru.
+* [**Objednací kódy**](/sticker/ordering-codes): Seznam součástek a jejich objednacích čísel.
+* [**Popis hardwaru**](/sticker/hardware-description): Technické detaily a přehled hardwaru.
 * [**Oficiální stránka produktu**](https://www.hardwario.com/products/sticker/): Funkce a přehled.
 
 ## Typická použití {#typical-use-cases}
@@ -55,7 +55,7 @@ import Image from '@theme/IdealImage';
 
 ## Stavová LED {#status-led}
 
-STICKER Clime používá standardní vzory stavové LED popsané v [**Signalizace LED**](/sticker/hardware-description#led-indication). Startovní přebíhání LED, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
+STICKER Clime používá standardní vzory stavové LED popsané v kapitole [**Signalizace LED**](/sticker/hardware-description#led-indication). Startovní přebíhání LED, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
 
 Clime měří hodnoty prostředí, ne diskrétní vstupy, takže obvykle nemá nakonfigurované žádné Hallovy senzory ani externí vstupy. V praxi to znamená, že uvidíte jen **heartbeat**, vzory pro **NFC** a **červené bliknutí alarmu** při překročení prahu teploty nebo vlhkosti. Zeleno-oranžové sekvence aktivace vstupů se na standardní jednotce Clime neobjeví.
 

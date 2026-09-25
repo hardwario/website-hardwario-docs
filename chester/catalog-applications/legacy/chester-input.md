@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 :::warning
 
-CHESTER Counter is replaced by [**CHESTER Control**](https://docs.hardwario.com/chester/catalog-applications/chester-control) which offers the same functionality.
+CHESTER Input is replaced by [**CHESTER Control**](/chester/catalog-applications/chester-control) which offers the same functionality.
 
 :::
 
@@ -18,9 +18,9 @@ This article describes the core functionality, hardware description, default con
 
 Some of the basics are not provided, as they are common for all CHESTER catalog applications. Please see:
 
-- [**Getting started**](https://docs.hardwario.com/chester/first-steps) on how to connect device to Cloud.
-- [**Common functionality**](https://docs.hardwario.com/chester/catalog-applications/common-functionality) to know how LED, button and network configuration works.
-- [**Platform Management**](https://docs.hardwario.com/chester/category/platform-connectivity) on how to work with the interactive console.
+- [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
+- [**Common functionality**](/chester/catalog-applications/common-functionality) to know how LED, button and network configuration works.
+- [**Platform Management**](/chester/category/platform-connectivity) on how to work with the interactive console.
 
 :::
 
@@ -52,7 +52,7 @@ The catalog **CHESTER Input** hardware consists of the following ordering codes:
 
 * `CHESTER-X0B:A`: Input module (4 channels)
 
-See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
+See [**Ordering Codes**](/chester/ordering-codes) for more details.
 
 Firmware build shield options: `ctr_ds18b20 ctr_lte ctr_x0_a`
 
@@ -66,7 +66,7 @@ The catalog **CHESTER Input Z** hardware consists of the following ordering code
 
 * `CHESTER-Z1`: Backup module
 
-See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
+See [**Ordering Codes**](/chester/ordering-codes) for more details.
 
 Firmware build shield options: `ctr_ds18b20 ctr_lte ctr_x0_a ctr_z`
 
@@ -82,13 +82,13 @@ Firmware build shield options: `ctr_ds18b20 ctr_lte ctr_x0_a ctr_z`
 
 * `CHESTER-S2`: External hygrometer
 
-See [**Ordering Codes**](https://docs.hardwario.com/chester/ordering-codes) for more details.
+See [**Ordering Codes**](/chester/ordering-codes) for more details.
 
 Firmware build shield options: `ctr_ds18b20 ctr_lte ctr_x0_a ctr_z ctr_s2`
 
 ## Input Parameters and Behavior
 
-For the wiring diagram to **CHESTER Input**, please follow the [**terminal block description**](https://docs.hardwario.com/chester/extension-modules/chester-x0) of the **CHESTER-X0** extension module.
+For the wiring diagram to **CHESTER Input**, please follow the [**terminal block description**](/chester/extension-modules/chester-x0) of the **CHESTER-X0** extension module.
 The extension module **CHESTER-X0** is installed in the left slot **A**, so you have to use the corresponding terminals **A1** to **A8**.
 
 ### Trigger
@@ -280,7 +280,7 @@ app config hygro-interval-aggreg <value>
 
 ## Firmware
 
-The latest firmware is available in Catalog Applications [Firmware chapter](https://docs.hardwario.com/chester/catalog-applications/catalog-applications#application-firmware).
+The latest firmware is available in Catalog Applications [Firmware chapter](/chester/catalog-applications/catalog-applications#application-firmware).
 
 ## Example JSON Message
 

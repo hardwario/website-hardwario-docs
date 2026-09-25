@@ -46,7 +46,7 @@ Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](https://docs.hardwario.com/smart-devices/milesight/sensors/index#lorawan-network-options)
+Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
 ---
 
@@ -102,12 +102,12 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class C |
 | **Senzory** | |
-| Teplota | -20°C ~ 60°C, přesnost ±0.2~0.3°C, rozlišení 0.1°C |
-| Vlhkost | 0% ~ 100% RH, přesnost ±2% RH, rozlišení 0.5% |
+| Teplota | -20°C ~ 60°C, přesnost ±0,2~0,3°C, rozlišení 0,1°C |
+| Vlhkost | 0% ~ 100% RH, přesnost ±2% RH, rozlišení 0,5% |
 | Pohyb (PIR) | 80° H, 55° V, max 5m |
 | Osvětlení | 0–60000 Lux (6 úrovní) |
 | TVOC | IAQ hodnocení 1–5 nebo 0–2000 μg/m³ |
-| Barometrický tlak | 260–1260 hPa, přesnost ±0.5 hPa |
+| Barometrický tlak | 260–1260 hPa, přesnost ±0,5 hPa |
 | CO₂ | 400–2000 ppm, přesnost ±(50 ppm + 5%) |
 | PM2.5 a PM10 | 0–1000 μg/m³, ±10 μg/m³ (0–100) |
 | Formaldehyd (HCHO) | 0–1.25 mg/m³, přesnost ±10% |

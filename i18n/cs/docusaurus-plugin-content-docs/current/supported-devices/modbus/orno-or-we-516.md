@@ -179,8 +179,8 @@ Nastavení v zařízení CHESTER musí odpovídat hodnotám nakonfigurovaným v 
 |----------------|----------------------------------------------|
 | Výkon          | E_ENERGY_METER.METER_3.POWER.MEASUREMENTS    |
 | Frekvence      | E_ENERGY_METER.METER_3.FREQUENCY.MEASUREMENTS|
-| Energie In     | E_ENERGY_METER.METER_3.ENERGY_IN.MEASUREMENTS|
-| Energie Out    | E_ENERGY_METER.METER_3.ENERGY_OUT.MEASUREMENTS|
+| Energie na vstupu | E_ENERGY_METER.METER_3.ENERGY_IN.MEASUREMENTS|
+| Energie na výstupu | E_ENERGY_METER.METER_3.ENERGY_OUT.MEASUREMENTS|
 | Napětí L1      | E_ENERGY_METER.METER_3.VOLTAGE_L1.MEASUREMENTS|
 | Napětí L2      | E_ENERGY_METER.METER_3.VOLTAGE_L2.MEASUREMENTS|
 | Napětí L3      | E_ENERGY_METER.METER_3.VOLTAGE_L3.MEASUREMENTS|

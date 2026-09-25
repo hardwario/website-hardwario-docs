@@ -27,9 +27,9 @@ Zařízení je vybaveno kvalitními konektory pro napájení, síťové připoje
 - **LRW (LoRaWAN):** Jeden konektor typu N pro **volitelnou externí** anténu LoRa.
 - **LTE1 a LTE2:** Dva konektory pro LTE antény (Main a Diversity). Používají se, pokud je nainstalován LTE modem zajišťující mobilní backhaul (podporuje 2G / 3G / 4G).
 
-#### EMBER se dodává se dvěma vnitřními antén­ami {#ember-ships-with-two-internal-antennas}
+#### EMBER se dodává se dvěma vnitřními anténami {#ember-ships-with-two-internal-antennas}
 
-Každé zařízení EMBER opouští výrobu se **dvěma antén­ami umístěnými uvnitř krabičky a již připojenými**:
+Každé zařízení EMBER opouští výrobu se **dvěma anténami umístěnými uvnitř krabičky a již připojenými**:
 jednou pro **LoRaWAN** (na u.FL konektoru `RFIO` karty LoRa) a jednou pro **LTE**. Rádio tedy
 má vždy připojenou anténu, když bránu vybalíte: je bezpečné ji zapnout a **před začátkem není nutné
 nic přišroubovávat**.

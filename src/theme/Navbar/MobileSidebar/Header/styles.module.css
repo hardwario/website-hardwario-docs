@@ -1,0 +1,63 @@
+/* The circuit mark alone, sized to the navbar height, so nothing in the header
+   has to overlap it on a narrow phone. */
+.brandMark {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+  padding: 0.4rem 0;
+}
+
+.brandMark img {
+  height: 2rem;
+  width: auto;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.localeSwitch {
+  position: relative;
+}
+
+.localeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  height: 2rem;
+  padding: 0 0.6rem;
+  border: none;
+  border-radius: 1rem;
+  background: none;
+  cursor: pointer;
+  color: var(--ifm-navbar-link-color);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  letter-spacing: 0.04em;
+}
+
+.localeButton:hover,
+.localeButton[aria-expanded='true'] {
+  color: var(--ifm-navbar-link-hover-color);
+  background: var(--ifm-color-emphasis-200);
+}
+
+/* Infima's .dropdown__menu is hidden until its parent gets .dropdown--show, so
+   the visibility and position are set here; the list only renders while open. */
+.localeMenu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  left: auto;
+  min-width: 9rem;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+  z-index: var(--ifm-z-index-dropdown);
+}

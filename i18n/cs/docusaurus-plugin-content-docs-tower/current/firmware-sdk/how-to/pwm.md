@@ -4,7 +4,7 @@ title: "Jak na: PWM"
 ---
 import Image from '@theme/IdealImage';
 
-[**Pulzně šířková modulace (PWM)**](https://en.wikipedia.org/wiki/Pulse-width_modulation) je metoda, jak z digitálního výstupu mikrokontroléru vytvořit signál podobný analogovému. Dosahuje toho rychlým přepínáním pinu s různým poměrem logické **HIGH** a **LOW** úrovně. Tento poměr se nazývá **duty cycle** (střída).
+[**Pulzně šířková modulace (PWM)**](https://en.wikipedia.org/wiki/Pulse-width_modulation) je metoda, jak z digitálního výstupu mikrokontroléru vytvořit signál podobný analogovému. Dosahuje toho rychlým přepínáním pinu s různým poměrem logických úrovní **HIGH** a **LOW**. Tento poměr se nazývá **duty cycle** (střída).
 
 V **pinoutu modulu Core** si ověřte, které piny **podporují PWM**.
 

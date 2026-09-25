@@ -40,7 +40,7 @@ Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](https://docs.hardwario.com/smart-devices/milesight/sensors/index#lorawan-network-options)
+Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
 ---
 
@@ -100,7 +100,7 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | Přesnost | ±10 |
 | Schopnost detekce | Elektronické cigarety, klasické cigarety, marihuana |
 | **Environmentální senzory** | |
-| Teplota | -20°C ~ +60°C, přesnost ±0.2°C |
+| Teplota | -20°C ~ +60°C, přesnost ±0,2°C |
 | Vlhkost | 0% ~ 100% RH, přesnost ±2% |
 | Prachové částice | PM1.0, PM2.5, PM10 (0-1000 μg/m³) |
 | TVOC | 0-2000 μg/m³ |
@@ -119,7 +119,7 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | Vlhkost | 0%–95% RH (nekondenzující) |
 | Krytí | IP30 |
 | Rozměry | Ø128 × 40 mm |
-| Hmotnost | 178.6 g |
+| Hmotnost | 178,6 g |
 | Materiál | ABS+PC |
-| Instalace | Montáž na strop (lepicí páska 3M, výška 2.7-3 m) |
+| Instalace | Montáž na strop (lepicí páska 3M, výška 2,7-3 m) |
 | **Certifikace** | CE, FCC, RoHS |

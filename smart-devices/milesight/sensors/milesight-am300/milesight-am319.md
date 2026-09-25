@@ -46,7 +46,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ## LoRaWAN Network Options
 
-For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](https://docs.hardwario.com/smart-devices/milesight/sensors/index#lorawan-network-options)
+For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
 ---
 

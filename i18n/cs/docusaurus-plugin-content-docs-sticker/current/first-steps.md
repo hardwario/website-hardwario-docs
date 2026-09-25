@@ -53,7 +53,7 @@ Zařízení STICKER se dodává s předinstalovanou jednou z katalogových aplik
 2. Sledujte **startovní sekvenci LED**: červená (0,5 s) → žlutá (0,5 s) → zelená (1,5 s).
 
 :::info Výchozí stav z výroby: radio vypnuté
-Od firmwaru **v1.4.0** se zařízení STICKER dodává s vypnutým ráiem (`radio-mode` vypnutý), aby se baterie nevybíjela během přepravy. Zařízení se po vložení baterií **nepokusí** připojit k LoRaWAN. Mlčí, dokud ho v kroku 3 neaktivujete přes NFC.
+Od firmwaru **v1.4.0** se zařízení STICKER dodává s vypnutým rádiem (`radio-mode` vypnutý), aby se baterie nevybíjela během přepravy. Zařízení se po vložení baterií **nepokusí** připojit k LoRaWAN. Mlčí, dokud ho v kroku 3 neaktivujete přes NFC.
 :::
 
 3. **Signalizace stavovou LED:** Po startu bude LED blikat **1× žlutě každé 3 sekundy**, což znamená, že zařízení běží normálně, ale radio je vypnuté.
@@ -144,7 +144,7 @@ Vždy se ukáže jen jeden vzor. Firmware tyto stavy kontroluje v uvedeném poř
 | **1× zelená** | Normální provoz, připojeno a v pořádku | Nic. To je cílový stav |
 | **Zelená, pak žlutá** | Totéž, ale jednotka běží na **debugovacím** sestavení firmwaru | Na vývojových jednotkách očekávané; pro nasazení nahrajte sestavení release |
 | **1× červená** | **Je aktivní alarm** | Přečtěte aktivní alarmy v [**Informacích o zařízení**](/apps/hardwario-manager/sticker/device-info) a projděte [**pravidla alarmů**](developer-access/alarm-rules.md) |
-| **1× žlutá** | **Radio vypnuté** parametrem `radio-mode`. Výchozí stav z výroby | Zapište konfiguraci LoRaWAN se zapnutým ráiem (krok 3) |
+| **1× žlutá** | **Radio vypnuté** parametrem `radio-mode`. Výchozí stav z výroby | Zapište konfiguraci LoRaWAN se zapnutým rádiem (krok 3) |
 | **2× žlutá**, ~200 ms od sebe | **Zhoršené spojení**. Kontroly spojení selhávají, ale session stále žije | Zkontrolujte pokrytí bránou a umístění antény; jakmile se spojení vrátí, zařízení se zotaví samo |
 | **1× žlutá, pak 1× červená** ~200 ms poté | **Připojuje se nebo se připojuje znovu** a od sítě nedostává odpověď | Zkontrolujte blízkost brány, frekvenční plán / region a shodu DevEUI, JoinEUI a AppKey se síťovým serverem |
 | **Červená a žlutá střídavě, dvakrát** | **Uloženou konfiguraci nešlo načíst**. Identita i zprovoznění jsou pryč a zařízení běží na výchozích hodnotách z výroby | Zapište celou konfiguraci znovu přes NFC aplikací [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration); pokud se stav vrátí, jednotka potřebuje servis |

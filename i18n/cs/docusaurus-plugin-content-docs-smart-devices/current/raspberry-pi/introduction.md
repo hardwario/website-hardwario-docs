@@ -16,7 +16,7 @@ description: "Raspberry Pi vyrábí cenově dostupné kompaktní výpočetní mo
 
 | Produkt | Popis |
 |---|---|
-| [**CM4108016**](/smart-devices/raspberry-pi/cm4) | Compute Module 4 s 8 GB RAM a 16 GB eMMC flash. Broadcom BCM2711 čtyřjádrový Cortex-A72 @ 1.5 GHz, včetně Wi-Fi a Bluetooth. |
+| [**CM4108016**](/smart-devices/raspberry-pi/cm4) | Compute Module 4 s 8 GB RAM a 16 GB eMMC flash. Broadcom BCM2711 čtyřjádrový Cortex-A72 @ 1,5 GHz, včetně Wi-Fi a Bluetooth. |
 
 ## Typické scénáře použití s HARDWARIO {#typical-use-cases-with-hardwario}
 

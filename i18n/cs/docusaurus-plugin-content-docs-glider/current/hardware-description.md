@@ -99,7 +99,7 @@ Dva elektricky rovnocenné porty na šroubovací svorkovnici, oba řízené stej
 
 | | |
 | :--- | :--- |
-| Napájecí větev | Jednotlivá 3.3 V (typické pro nRF9151) |
+| Napájecí větev | Jediná větev 3,3 V (typické pro nRF9151) |
 | Timeout watchdogu | 120 s |
 | Výchozí perioda vzorkování | 60 s (`app config interval-sample`) |
 | Výchozí perioda uplinku | 300 s (`app config interval-send`) |

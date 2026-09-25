@@ -222,5 +222,5 @@ Ve výstupu zkontrolujte hodnotu **RSSI**:
 
 :::tip
 Pokud potřebujete další pomoc nebo vizuální návod, podívejte se na  
-[**video průvodce**](https://docs.hardwario.com/chester/videos-chester/chester-pair-tag).
+[**video průvodce**](/chester/videos-chester/chester-pair-tag).
 :::

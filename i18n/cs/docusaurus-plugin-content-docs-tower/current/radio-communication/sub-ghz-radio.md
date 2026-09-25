@@ -141,12 +141,12 @@ void application_init(void)
 
 | Parametr                          | Hodnota   |
 | :-------------------------------- | :-------- |
-| Komunikační frekvence (Evropa)    | 868.0 MHz |
-| Komunikační frekvence (USA)       | 915.0 MHz |
+| Komunikační frekvence (Evropa)    | 868,0 MHz |
+| Komunikační frekvence (USA)       | 915,0 MHz |
 | Typ modulace                      | GFSK      |
 | Modulační rychlost                | 19.2 kbps |
 | Frekvenční zdvih vysílače         | 20 kHz    |
-| Vysílací výkon                    | 11.6 dBm  |
+| Vysílací výkon                    | 11,6 dBm  |
 | Šířka pásma přijímacího filtru    | 100 kHz   |
 
 

@@ -161,3 +161,28 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 .footer--dark .footer__copyright a:hover {
   color: var(--ifm-color-primary);
 }
+
+/* Back-to-top sits above the chat launcher instead of under it. Both hug the
+   bottom-right corner, so at the default position the chat button covered it.
+   Half the launcher's size (52px -> 26px), centred on it, with the same gap the
+   chat widget uses between the launcher and its panel. The numbers follow
+   src/components/ChatWidget/styles.module.css: inset 24px (12px on phones),
+   gap 12px (10px on phones). */
+button.theme-back-to-top-button {
+  width: 26px;
+  height: 26px;
+  right: calc(24px + (52px - 26px) / 2);
+  bottom: calc(24px + 52px + 12px);
+}
+
+button.theme-back-to-top-button::after {
+  mask-size: 1.1rem 1.1rem;
+  -webkit-mask-size: 1.1rem 1.1rem;
+}
+
+@media (max-width: 480px) {
+  button.theme-back-to-top-button {
+    right: calc(12px + (52px - 26px) / 2);
+    bottom: calc(12px + 52px + 10px);
+  }
+}

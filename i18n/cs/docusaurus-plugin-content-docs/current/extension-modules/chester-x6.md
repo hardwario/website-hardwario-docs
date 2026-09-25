@@ -49,9 +49,9 @@ Boost převodník na desce (**TPS61099**) vytváří stabilizovaných **5 V**, k
 | **Rozhraní periferií** | S-Wire (třívodičové: +5 V, GND, DATA) |
 | **Datová linka** | Jediná half-duplexní linka DATA s ochranou proti ESD |
 | **Rozhraní k hostu** | I²C (převodník UART 0x4D + GPIO expander 0x39) |
-| **Napájení periferií** | Stabilizovaných 5.0 V (boost na desce), přepínatelné po I²C |
-| **Převodník UART** | SC16IS740IPW (13.56 MHz) |
-| **Napájení logiky (VDD)** | 3.0 V |
+| **Napájení periferií** | Stabilizovaných 5,0 V (boost na desce), přepínatelné po I²C |
+| **Převodník UART** | SC16IS740IPW (13,56 MHz) |
+| **Napájení logiky (VDD)** | 3,0 V |
 | **Rozhraní desky** | Castellated otvory na dvou protilehlých hranách, připájené k základní desce CHESTER |
 | **Revize hardwaru** | R1.0 |
 
@@ -78,12 +78,12 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | Pin | Signál | Typ | Popis |
 | :---: | :--- | :--- | :--- |
 | 1 | +V | Napájení | Kladná systémová větev (závisí na napájecí variantě zařízení CHESTER) |
-| 2 | +5V | Napájecí výstup | Stabilizované napájení periferií 5.0 V (z boostu na desce) |
+| 2 | +5V | Napájecí výstup | Stabilizované napájení periferií 5,0 V (z boostu na desce) |
 | 3 | GND | Zem | Systémová zemní reference |
 | 4 | DATA | S-Wire | Datová linka S-Wire |
 | 5 | DATA | S-Wire | Datová linka S-Wire (stejná síť jako pin 4) |
 | 6 | GND | Zem | Systémová zemní reference |
-| 7 | +5V | Napájecí výstup | Stabilizované napájení periferií 5.0 V (stejná síť jako pin 2) |
+| 7 | +5V | Napájecí výstup | Stabilizované napájení periferií 5,0 V (stejná síť jako pin 2) |
 | 8 | +V | Napájení | Kladná systémová větev (stejná síť jako pin 1) |
 
 :::info

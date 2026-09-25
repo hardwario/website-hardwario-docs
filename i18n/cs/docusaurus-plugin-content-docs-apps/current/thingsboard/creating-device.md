@@ -64,5 +64,5 @@ Kliknutím na zařízení uvidíte:
 ## Videonávod {#video-tutorial}
 
 :::tip
-Pokud potřebujete další pomoc nebo vizuální ukázku postupu popsaného v tomto návodu, podívejte se na [videonávod](https://docs.hardwario.com/apps/videos-apps/thingsboard-new-device).
+Pokud potřebujete další pomoc nebo vizuální ukázku postupu popsaného v tomto návodu, podívejte se na [videonávod](/apps/videos-apps/thingsboard-new-device).
 :::

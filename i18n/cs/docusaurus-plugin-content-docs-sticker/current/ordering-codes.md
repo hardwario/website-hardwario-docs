@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 
 Platforma STICKER je postavená na modulární hardwarové architektuře. Každá varianta produktu se skládá z konkrétních vzájemně zaměnitelných komponent, jako je základní deska, deska NFC, typ krabičky a senzory.
 
-Podrobné technické parametry hardwaru najdete na stránce [**Popis hardwaru**](https://docs.hardwario.com/sticker/hardware-description/).
+Podrobné technické parametry hardwaru najdete na stránce [**Popis hardwaru**](/sticker/hardware-description/).
 
 Seznamy níže uvádějí **objednací kódy** jednotlivých hardwarových komponent, ze kterých se každá varianta zařízení STICKER skládá. To se hodí při ověřování konfigurace zařízení nebo při hledání konkrétních náhradních dílů.
 

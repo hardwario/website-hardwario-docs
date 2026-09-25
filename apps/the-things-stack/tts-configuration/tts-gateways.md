@@ -25,8 +25,8 @@ This tutorial guides you through the process of adding and configuring a gateway
 ![Register gateway page asking for the Gateway EUI, with a Continue without EUI option](images/tts-gateways-1.png)
 
 3. After entering the Gateway EUI, fill in the following fields:
-   - **Gateway ID** ( Your chosen identifier for the device → example: **test-geteway-001**)
-   - **Gateway Name** (Your chosen name for the device → example **Test Geteways-001**)
+   - **Gateway ID** ( Your chosen identifier for the device → example: **test-gateway-001**)
+   - **Gateway Name** (Your chosen name for the device → example **Test Gateway-001**)
    - **Frequency Plan** → select **Europe 868.1 MHz**
    - (Optional) **Label**
 
@@ -77,5 +77,5 @@ For regular users, the only available solution is to **create the gateway again 
 ## Video Tutorial
 
 :::tip
-If you need **further assistance** or a visual demonstration of the process described in this guide, consult the [**Video Guide**](https://docs.hardwario.com/apps/videos-apps/tts-gateways).
+If you need **further assistance** or a visual demonstration of the process described in this guide, consult the [**Video Guide**](/apps/videos-apps/tts-gateways).
 :::

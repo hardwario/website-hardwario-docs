@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 **ChirpStack v4** je open-source síťový server LoRaWAN pro privátní nasazení na vlastní infrastruktuře.
 
 :::info Předpoklady
-1. Ujistěte se, že je **ChirpStack v4** nainstalovaný a funkční. Viz [průvodce instalací platformy ChirpStack](https://docs.hardwario.com/apps/chirpstack/chirpstack-installation).
+1. Ujistěte se, že je **ChirpStack v4** nainstalovaný a funkční. Viz [průvodce instalací platformy ChirpStack](/apps/chirpstack/chirpstack-installation).
 2. Před vytvořením profilů koncových zařízení v platformě ChirpStack si přes NFC vytáhněte přihlašovací údaje zařízení pomocí [**HARDWARIO Manager**](/sticker/hardwario-manager/).
 :::
 
@@ -46,7 +46,7 @@ STICKER se čte telefonem s **Androidem** a NFC.
    [**Informace o zařízení a klíče LoRaWAN**](/apps/hardwario-manager/sticker/device-info).
 5. **Zkontrolujte, že je radio zapnuté.** V **STICKER → Configuration** musí být
    v sekci LoRaWAN parametr **`radio-mode`** nastavený na LoRaWAN, protože zařízení
-   se dodávají s vypnutým ráiem; jednotka se pak po registraci pokusí připojit. Viz
+   se dodávají s vypnutým rádiem; jednotka se pak po registraci pokusí připojit. Viz
    [**Konfigurace**](/apps/hardwario-manager/sticker/configuration) a
    [**Šablony**](/apps/hardwario-manager/sticker/templates), když chcete celé dávce
    dát stejné nastavení.
@@ -76,7 +76,7 @@ Při konfiguraci **Device Profile** zařízení STICKER v ChirpStack v4:
 - [HARDWARIO Manager a STICKER](/sticker/hardwario-manager/)
 - [Rychlý průvodce HARDWARIO Manager](/apps/hardwario-manager/first-steps)
 - [Čtení informací o zařízení a klíčů LoRaWAN přes NFC](/apps/hardwario-manager/sticker/device-info)
-- [Průvodce instalací ChirpStack v4](https://docs.hardwario.com/apps/chirpstack/chirpstack-installation)
-- [Dokumentace koncových zařízení ChirpStack](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices)
-- [Průvodce dekodéry payloadu v platformě ChirpStack](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding)
+- [Průvodce instalací ChirpStack v4](/apps/chirpstack/chirpstack-installation)
+- [Dokumentace koncových zařízení ChirpStack](/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices)
+- [Průvodce dekodéry payloadu v platformě ChirpStack](/apps/chirpstack/chirpstack-configuration/chirpstack-decoding)
 - [Dekodér payloadu STICKER (`ttn.js`) na GitHubu](https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js)

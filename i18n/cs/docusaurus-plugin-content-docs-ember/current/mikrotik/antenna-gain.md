@@ -20,7 +20,7 @@ překročit zákonný limit EIRP.
 
 ## Co je zisk antény? {#what-is-antenna-gain}
 
-Zisk antény popisuje, jak moc anténa soustřeďuje ráiovou energii do určitých
+Zisk antény popisuje, jak moc anténa soustřeďuje rádiovou energii do určitých
 směrů ve srovnání s teoretickou anténou, která vyzařuje rovnoměrně do všech
 směrů (**izotropní zářič**). Vyjadřuje se v **dBi**, decibelech
 vztažených k izotropnímu zářiči.
@@ -120,7 +120,7 @@ V novějších sestaveních RouterOS může být menu `/iot lora` místo `/lora`
 | Anténa | Zisk | Hodnota `antenna-gain` |
 | --- | --- | --- |
 | Vestavěná anténa wAP LR8G kit (868 MHz) | 2 dBi | `2` |
-| Všesměrová anténa MikroTik LoRa (`TOF-0809-...`) | 6.5 dBi | `6.5` |
+| Všesměrová anténa MikroTik LoRa (`TOF-0809-...`) | 6,5 dBi | `6.5` |
 | Jiná externí anténa | viz její datasheet | dBi antény − ztráty na kabelu |
 
 U zařízení **EMBER** musí hodnota odpovídat té anténě, která je ke kartě LoRa skutečně připojena, ať už je to
@@ -134,14 +134,14 @@ svůj výkon více a zůstane v zákonných limitech.
 
 ## Příklad výpočtu (EU868) {#worked-example-eu868}
 
-Downlink na 869.525 MHz, limit EIRP **27 dBm**, anténa 6.5 dBi, server požaduje
+Downlink na 869,525 MHz, limit EIRP **27 dBm**, anténa 6,5 dBi, server požaduje
 `powe = 27`:
 
 | `antenna-gain` | Výstup rádia | Vyzářený EIRP | Výsledek |
 | --- | --- | --- | --- |
-| `0` (výchozí) | 27 dBm | **33.5 dBm** | <span style={{color: 'var(--ifm-color-danger)'}}>✗</span> o 6.5 dB nad limitem |
-| `6.5` | 20.5 dBm | 27 dBm | <span style={{color: 'var(--ifm-color-success)'}}>✓</span> správně |
-| `4.5` (anténa 6.5 dBi − 2 dB kabel) | 22.5 dBm | 27 dBm | <span style={{color: 'var(--ifm-color-success)'}}>✓</span> správně |
+| `0` (výchozí) | 27 dBm | **33,5 dBm** | <span style={{color: 'var(--ifm-color-danger)'}}>✗</span> o 6,5 dB nad limitem |
+| `6.5` | 20,5 dBm | 27 dBm | <span style={{color: 'var(--ifm-color-success)'}}>✓</span> správně |
+| `4.5` (anténa 6,5 dBi − 2 dB kabel) | 22,5 dBm | 27 dBm | <span style={{color: 'var(--ifm-color-success)'}}>✓</span> správně |
 
 ---
 
@@ -166,7 +166,7 @@ nemůže přes anténu vůbec vysílat ani přijímat.
 ## Regulační limity (EU868) {#regulatory-limits-eu868}
 
 - **Uplink:** max 25 mW = **14 dBm**
-- **Downlink** na 869.525 MHz (pásmo RX2): až 500 mW = **27 dBm** EIRP
+- **Downlink** na 869,525 MHz (pásmo RX2): až 500 mW = **27 dBm** EIRP
 - **EIRP** = vysílací výkon (dBm) + zisk antény (dBi) − ztráty na kabelu (dB)
 
 Vždy si ověřte hodnoty platné pro vaše nasazení v dokumentu LoRaWAN Regional Parameters

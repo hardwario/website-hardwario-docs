@@ -14,17 +14,17 @@ Standardní modul **CMWX1ZZABZ-078** od firmy **Murata** používá standard LoR
 
 ## Konfigurace režimu sítě {#network-mode-configuration}
 
-Některé katalogové firmwary umožňují nakonfigurovat použití sítě NB-IoT/LTE nebo LoRaWAN. Tento firmware po zapnutí neposílá data, **LED bliká žlutě** a je nutné nakonfigurovat správný režim ráia.
+Některé katalogové firmwary umožňují nakonfigurovat použití sítě NB-IoT/LTE nebo LoRaWAN. Tento firmware po zapnutí neposílá data, **LED bliká žlutě** a je nutné nakonfigurovat správný režim rádia.
 
 Tato konfigurace `app mode` je aktuálně potřebná pro tyto katalogové aplikace:
 
-- [CHESTER Clime](https://docs.hardwario.com/chester/catalog-applications/chester-clime)
-- [CHESTER Control](https://docs.hardwario.com/chester/catalog-applications/chester-control)
-- [CHESTER Push](https://docs.hardwario.com/chester/catalog-applications/chester-push)
-- [CHESTER Current](https://docs.hardwario.com/chester/catalog-applications/chester-current)
-- [CHESTER Scale](https://docs.hardwario.com/chester/catalog-applications/chester-scale)
-- [CHESTER Meteo](https://docs.hardwario.com/chester/catalog-applications/chester-meteo)
-- [CHESTER Range](https://docs.hardwario.com/chester/catalog-applications/chester-range)
+- [CHESTER Clime](/chester/catalog-applications/chester-clime)
+- [CHESTER Control](/chester/catalog-applications/chester-control)
+- [CHESTER Push](/chester/catalog-applications/chester-push)
+- [CHESTER Current](/chester/catalog-applications/chester-current)
+- [CHESTER Scale](/chester/catalog-applications/chester-scale)
+- [CHESTER Meteo](/chester/catalog-applications/chester-meteo)
+- [CHESTER Range](/chester/catalog-applications/chester-range)
 
 Výchozí funkčnost je taková, že zařízení **nepoužívá žádné radio** (režim `none`) a je potřeba nastavit konfigurační parametr **mode**.
 
@@ -160,7 +160,7 @@ Následující tabulka uvádí přehled doporučených konfiguračních parametr
 | **Class-C → Device supports Class-C** | **OFF** |
 
 :::info
-Pokud si nejste jisti nastavením nebo konfigurací **ChirpStack**, podívejte se prosím do následujícího návodu, který obsahuje podrobné instrukce k instalaci a konfiguraci ChirpStack v4: [**Getting Started with ChirpStack v4**](https://docs.hardwario.com/apps/chirpstack/index#getting-started-with-chirpstack-v4)
+Pokud si nejste jisti nastavením nebo konfigurací **ChirpStack**, podívejte se prosím do následujícího návodu, který obsahuje podrobné instrukce k instalaci a konfiguraci ChirpStack v4: [**Getting Started with ChirpStack v4**](/apps/chirpstack/index#getting-started-with-chirpstack-v4)
 :::
 
 ## Dekodéry a kodeky {#decoders-and-codecs}
@@ -190,7 +190,7 @@ Nahraďte `<application-id>` ID své aplikace. Ve starších verzích CHIRPSTACK
 
 ### Veřejná vs. privátní síť {#public-vs-private-network}
 
-Síť LoRaWAN lze nastavit jako privátní nebo veřejnou. Neznamená to, že síť je nebo není viditelná. Znamená to pouze, že ráiové pakety používají odlišnou preambuli.
+Síť LoRaWAN lze nastavit jako privátní nebo veřejnou. Neznamená to, že síť je nebo není viditelná. Znamená to pouze, že rádiové pakety používají odlišnou preambuli.
 
 Pokud vaše síť nebo brána nevidí ani jeden paket, obvykle je to právě kvůli tomu.
 

@@ -5,7 +5,7 @@ title: Mobilní a webová aplikace Blynk
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'
 
-[**Blynk**](https://blynk.io) je nástroj pro tvorbu mobilního frontendu a signalizační relay (MQTT). Umožňuje vám rychle vytvořit ovládání a zobrazení pro vaše IoT zařízení. Zde vás provedeme procesem sestavení hardwaru a jeho připojení do cloudu.
+[**Blynk**](https://blynk.io) je nástroj pro tvorbu mobilního frontendu a zároveň signalizační prostředník (relay) přes MQTT. Umožňuje vám rychle vytvořit ovládání a zobrazení pro vaše IoT zařízení. Zde vás provedeme procesem sestavení hardwaru a jeho připojení do cloudu.
 
 Cloud je pak propojen s projektem ve vašem telefonu v aplikaci Blynk. Lokální část projektu je hostována na HARDWARIO Raspbian, který má připravené všechny potřebné komponenty pro propojení.
 
@@ -28,7 +28,7 @@ Začněte stažením **aplikace Blynk** a vytvořením účtu
 
 ## Nastavení Node-RED {#node-red-setup}
 
-Pokud v Node-RED nevidíte nody Blynk, nainstalujte balíček Blynk `node-red-contrib-blynk-ws`.
+Pokud v Node-RED nevidíte uzly Blynk, nainstalujte balíček Blynk `node-red-contrib-blynk-ws`.
 
 :::tip
 

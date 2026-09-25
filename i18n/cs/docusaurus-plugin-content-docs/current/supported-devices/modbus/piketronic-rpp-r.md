@@ -3,7 +3,7 @@ slug: piketronic-rpp-r
 title: Radonová sonda Piketronic RPP-R
 ---
 
-[Web-Site](https://www.piketronic.cz/)
+[Webové stránky](https://www.piketronic.cz/)
 
 ![Piketronic RPP-R](../../../../../../chester/supported-devices/modbus/images/piketronic-rpp-r.jpg)
 

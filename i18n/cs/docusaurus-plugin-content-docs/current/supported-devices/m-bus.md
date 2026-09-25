@@ -1,6 +1,7 @@
 ---
 slug: m-bus_sensors
 title: M-Bus senzory
+sidebar_label: Zařízení M-Bus
 ---
 
 import Image from '@theme/IdealImage';

@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        <b>GPS Module</b> umožňuje zjistit <b>přesnou pozici</b> vašeho zařízení. Používá modul <b>SAM-M8Q</b> od firmy ublox. Rozumí 3 globálním polohovým standardům GPS, Galileo a GLONASS. <b>Přesnost pozice 2,5 m</b> je možná díky kombinaci pozic ze všech tří standardů dohromady.
+        <b>GPS Module</b> umožňuje zjistit <b>přesnou pozici</b> vašeho zařízení. Používá modul <b>SAM-M8Q</b> od firmy ublox. Podporuje 3 globální polohové systémy: GPS, Galileo a GLONASS. <b>Přesnost pozice 2,5 m</b> je možná díky kombinaci pozic ze všech tří standardů dohromady.
       </p>
     </div>
   </div>

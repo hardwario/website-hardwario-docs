@@ -64,7 +64,7 @@ settings save
 
 ---
 
-## Nastavení LoRaWAN a ráia {#lorawan--radio-settings}
+## Nastavení LoRaWAN a rádia {#lorawan--radio-settings}
 
 | Příkaz | Argument | Popis |
 |---|---|---|

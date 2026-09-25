@@ -21,7 +21,7 @@ import Image from '@theme/IdealImage';
 
 Some of the basics are not provided, as they are common for all CHESTER catalog applications. Please see:
 
-- [**Getting started**](https://docs.hardwario.com/chester/first-steps) on how to connect device to Cloud.
+- [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
 - [**Common functionality**](common-functionality.md) to know how LED, button and network configuration works.
 - [**Platform Management**](/chester/category/platform-connectivity/) on how to work with the interactive console.
 
@@ -438,7 +438,7 @@ The device works as a **pass-thru gateway**: it forwards the received wM-Bus tel
 
 The meters listed below are the ones we have tested in-house and documented, including **water meters**, **heat meters** and **heat cost allocators** from **BMeters** and **Zenner**. They are a starting point, not a limitation.
 
-➡️ [Tested wM-Bus Sensors](https://docs.hardwario.com/chester/supported-devices/wm-bus_sensors)
+➡️ [Tested wM-Bus Sensors](/chester/supported-devices/wm-bus_sensors)
 
 ---
 

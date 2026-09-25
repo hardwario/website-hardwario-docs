@@ -50,11 +50,11 @@ Click the button in the top-right corner labeled + NEW DEVICE.
 - Serial Number
 - Claim Token
   
- (Optional: you can also add a comment and [tags](https://docs.hardwario.com/cloud/tags))
+ (Optional: you can also add a comment and [tags](/cloud/tags))
 
  :::info
-**[Tags](https://docs.hardwario.com/cloud/tags)** group devices by firmware or functionality and can be used for filtering.  
-They also link devices with **[Connectors](https://docs.hardwario.com/cloud/connectors)**, ensuring messages are routed correctly.  
+**[Tags](/cloud/tags)** group devices by firmware or functionality and can be used for filtering.  
+They also link devices with **[Connectors](/cloud/connectors)**, ensuring messages are routed correctly.  
 Each tag has a **name** and **color**.  
 :::
 
@@ -66,5 +66,5 @@ Your device is now **successfully added** to Cloud v2.
 
 :::info
 To visualize your incoming data, you can continue with the visualization options described here:  
-👉 [HARDWARIO Apps Documentation](https://docs.hardwario.com/apps/)  
+👉 [HARDWARIO Apps Documentation](/apps/)  
 :::

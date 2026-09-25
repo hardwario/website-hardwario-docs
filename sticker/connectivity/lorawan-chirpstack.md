@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 **ChirpStack v4** is an open-source LoRaWAN Network Server for self-hosted, private network deployments.
 
 :::info Prerequisites
-1. Ensure **ChirpStack v4** is installed and operational. See the [ChirpStack Installation Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-installation).
+1. Ensure **ChirpStack v4** is installed and operational. See the [ChirpStack Installation Guide](/apps/chirpstack/chirpstack-installation).
 2. Use [**HARDWARIO Manager**](/sticker/hardwario-manager/) to extract your device credentials via NFC before creating end-device profiles in ChirpStack.
 :::
 
@@ -77,7 +77,7 @@ When configuring your STICKER **Device Profile** in ChirpStack v4:
 - [HARDWARIO Manager and STICKER](/sticker/hardwario-manager/)
 - [HARDWARIO Manager Quick Start Guide](/apps/hardwario-manager/first-steps)
 - [Read device info and LoRaWAN keys over NFC](/apps/hardwario-manager/sticker/device-info)
-- [ChirpStack v4 Installation Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-installation)
-- [ChirpStack End Devices Documentation](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices)
-- [ChirpStack Payload Decoders Guide](https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding)
+- [ChirpStack v4 Installation Guide](/apps/chirpstack/chirpstack-installation)
+- [ChirpStack End Devices Documentation](/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices)
+- [ChirpStack Payload Decoders Guide](/apps/chirpstack/chirpstack-configuration/chirpstack-decoding)
 - [STICKER Payload Decoder (`ttn.js`) on GitHub](https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js)

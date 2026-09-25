@@ -135,5 +135,5 @@ Your end device is now registered and ready to communicate with The Things Stack
 
 :::tip
 If you need **further assistance** or a visual walkthrough, consult the  
-[**Video Guide**](https://docs.hardwario.com/apps/videos-apps/tts-end-devices).
+[**Video Guide**](/apps/videos-apps/tts-end-devices).
 :::

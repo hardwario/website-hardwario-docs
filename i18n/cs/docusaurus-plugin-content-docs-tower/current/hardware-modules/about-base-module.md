@@ -17,7 +17,7 @@ import Image from '@theme/IdealImage';
         Součástí je také <b>prototypovací plocha pro pájení vlastních obvodů</b>.
       </p>
       <p>
-        Tento modul lze použít jako stojan na stole (čtyři gumové nožičky zajišťují stabilní pozici na povrchu), namontovat na DIN lištu pomocí speciálních plastových klipů nebo umístit na stěnu či jiné svislé plochy pomocí obousranné lepicí pásky.
+        Tento modul lze použít jako stojan na stole (čtyři gumové nožičky zajišťují stabilní pozici na povrchu), namontovat na DIN lištu pomocí speciálních plastových klipů nebo umístit na stěnu či jiné svislé plochy pomocí oboustranné lepicí pásky.
       </p>
     </div>
   </div>

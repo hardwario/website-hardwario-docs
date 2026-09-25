@@ -42,5 +42,5 @@ https://docs.hardwario.com/ember/mikrotik/gateway-update
 ## Videonávod {#video-tutorial}
 
 :::tip
-Pokud potřebujete další pomoc nebo vizuální ukázku postupu popsaného v tomto návodu, podívejte se na [**videonávod**](https://docs.hardwario.com/apps/videos-apps/chirpstack-ember).
+Pokud potřebujete další pomoc nebo vizuální ukázku postupu popsaného v tomto návodu, podívejte se na [**videonávod**](/apps/videos-apps/chirpstack-ember).
 :::

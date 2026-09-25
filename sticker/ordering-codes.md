@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 
 The STICKER platform is built on a modular hardware architecture. Each product variant is composed of specific interchangeable components, such as the mainboard, NFC board, enclosure type, and sensors.
 
-For detailed technical specifications of the hardware, please refer to the [**Hardware Description**](https://docs.hardwario.com/sticker/hardware-description/) page.
+For detailed technical specifications of the hardware, please refer to the [**Hardware Description**](/sticker/hardware-description/) page.
 
 The lists below detail the **ordering codes** (part numbers) for the individual hardware components that constitute each STICKER variant. This information is useful for verifying your device configuration or identifying specific replacement parts.
 

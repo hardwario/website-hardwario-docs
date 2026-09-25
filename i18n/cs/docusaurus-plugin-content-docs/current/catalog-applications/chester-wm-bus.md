@@ -21,9 +21,9 @@ import Image from '@theme/IdealImage';
 
 Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
 
-- [**První kroky**](https://docs.hardwario.com/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Common functionality**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Platform Management**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
+- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
+- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
@@ -155,7 +155,7 @@ Po dokončení konfigurace je potřeba vše potvrdit.
 
 `send`
 
-Odešle hodnoty ze nasbíraných dat do cloudu.  
+Odešle hodnoty z nasbíraných dat do cloudu.  
 Užitečné pro ověření datového toku a kontrolu, zda senzory správně odesílají data.
 
 :::caution
@@ -207,9 +207,9 @@ Určuje den v měsíci 1-28, kdy se skenuje při měsíčním skenování
 
 `app config scan-ant <mode>`
 
-**single**: skenování používá pouze jeden cyklus s jednou antenou; pokud přijme data od všech zařízení, odešle data okamžitě, pokud ne, odešle data po timeoutu `scan-timeout`
+**single**: skenování používá pouze jeden cyklus s jednou anténou; pokud přijme data od všech zařízení, odešle data okamžitě, pokud ne, odešle data po timeoutu `scan-timeout`
 
-**dual**: skenování probíhá dvakrát, každé s jinou antenou. Pokud nejsou v prvním cyklu s antenou 1 naskenována všechna zařízení, spustí se druhé skenování s druhou antenou. Každé skenování trvá maximálně scan-timeout sekund. Maximální doba, kdy je wM-Bus přijímač aktivní, je rovna 2x `scan-timeout`.
+**dual**: skenování probíhá dvakrát, každé s jinou anténou. Pokud nejsou v prvním cyklu s anténou 1 naskenována všechna zařízení, spustí se druhé skenování s druhou anténou. Každé skenování trvá maximálně scan-timeout sekund. Maximální doba, kdy je wM-Bus přijímač aktivní, je rovna 2x `scan-timeout`.
 
 `config save`
 
@@ -438,7 +438,7 @@ Zařízení funguje jako **pass-thru brána**: přijaté wM-Bus telegramy přepo
 
 Měřiče uvedené níže jsou ty, které jsme interně otestovali a zdokumentovali, včetně **vodoměrů**, **měřičů tepla** a **indikátorů rozdělovačů nákladů na teplo** od **BMeters** a **Zenner**. Jde o výchozí bod, nikoli o omezení.
 
-➡️ [Otestované wM-Bus senzory](https://docs.hardwario.com/chester/supported-devices/wm-bus_sensors)
+➡️ [Otestované wM-Bus senzory](/chester/supported-devices/wm-bus_sensors)
 
 ---
 

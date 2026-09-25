@@ -12,10 +12,10 @@ import Image from '@theme/IdealImage';
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Průvodce prvními kroky**](https://docs.hardwario.com/sticker/first-steps): Podrobný návod k nastavení.
+* [**Průvodce prvními kroky**](/sticker/first-steps): Podrobný návod k nastavení.
 * [**Koupit STICKER Input**](https://www.hardwario.store/p/sticker-input): Nákup v našem obchodě.
-* [**Objednací kódy**](https://docs.hardwario.com/sticker/ordering-codes): Seznam komponent a objednacích čísel.
-* [**Popis hardwaru**](https://docs.hardwario.com/sticker/hardware-description): Technické detaily a přehled hardwaru.
+* [**Objednací kódy**](/sticker/ordering-codes): Seznam komponent a objednacích čísel.
+* [**Popis hardwaru**](/sticker/hardware-description): Technické detaily a přehled hardwaru.
 * [**Oficiální stránka produktu**](https://www.hardwario.com/products/sticker/): Vlastnosti a přehled.
 
 ## Typické případy použití {#typical-use-cases}
@@ -59,7 +59,7 @@ Zde najdete informace o zapojení vstupů zařízení STICKER Input, včetně na
 
 ## Stavová LED {#status-led}
 
-STICKER Input používá standardní vzory stavové LED popsané v kapitole [**Indikace LED**](/sticker/hardware-description#led-indication) – startovací přebíhání LED, stavový heartbeat každé 3 sekundy a vzory pro NFC a alarm jsou u všech aplikací STICKER shodné.
+STICKER Input používá standardní vzory stavové LED popsané v kapitole [**Signalizace LED**](/sticker/hardware-description#led-indication) – startovací přebíhání LED, stavový heartbeat každé 3 sekundy a vzory pro NFC a alarm jsou u všech aplikací STICKER shodné.
 
 Protože právě tato aplikace skutečně využívá digitální vstupy a Hallovy senzory, má zde největší význam indikace **aktivace vstupu**. Tyto vstupy hlásí oba směry, takže pořadí barev prozradí, ke které hraně došlo:
 

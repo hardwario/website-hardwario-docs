@@ -65,7 +65,7 @@ Milesight UG63 is a **compact LoRaWAN® gateway** designed for **small-scale dep
 
 ## LoRaWAN Network Options
 
-For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](https://docs.hardwario.com/smart-devices/milesight/gateways/index#lorawan-network-options)
+For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/gateways/index#lorawan-network-options)
 
 ---
 

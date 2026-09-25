@@ -135,5 +135,5 @@ Vaše koncové zařízení je zaregistrované a připravené komunikovat s The T
 
 :::tip
 Pokud potřebujete **další pomoc** nebo vizuální ukázku, podívejte se na  
-[**videonávod**](https://docs.hardwario.com/apps/videos-apps/tts-end-devices).
+[**videonávod**](/apps/videos-apps/tts-end-devices).
 :::

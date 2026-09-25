@@ -56,7 +56,7 @@ Toto vydání přináší nekompatibilní změny a zároveň všechna vylepšen�
 
 ### CHESTER Cloud {#chester-cloud}
 
-- Přidána **frontnaonta zpráv** (`CONFIG_CTR_CLOUD_SPOOL`) – store-and-forward frontnaonta postavená na LittleFS, takže zprávy přežijí selhání uplinku i restarty.
+- Přidán **spool zpráv** (`CONFIG_CTR_CLOUD_SPOOL`), fronta typu store-and-forward postavená na LittleFS, takže zprávy přežijí selhání uplinku i restarty.
 
 ### CHESTER Control {#chester-control}
 

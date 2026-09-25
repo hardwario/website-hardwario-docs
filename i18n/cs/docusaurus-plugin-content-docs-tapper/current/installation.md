@@ -79,7 +79,7 @@ Nastavení SSH autentizace veřejným klíčem (doporučeno): [**SSH s autentiza
 
 Můžete použít [**generátor hesel Bitwarden**](https://bitwarden.com/password-generator/#password-generator).
        1. V typu vyberte Passphrase.
-       1. Můžete kliknout na generovat několikrát pro lépe zapamatovatelné heslo, doporučujeme nejvýše 6 slov.
+       1. Heslo můžete nechat vygenerovat několikrát, dokud nedostanete snadno zapamatovatelné; doporučujeme nejvýše 6 slov.
               - Hesla si zapište a poté vyberte to nejlépe zapamatovatelné.
 
 :::    

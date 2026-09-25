@@ -4,7 +4,7 @@ title: Čtení senzorů 1-Wire do Grafany
 
 # Čtení senzorů 1-Wire do Grafany {#reading-1-wire-sensors-into-grafana}
 
-**Pouze FIBER**: zařízení FIBER Lite nemá 1-Wire hub (viz [V čem se liší](/fiber/fiber-lite/introduction#whats-different)).
+**Pouze FIBER**: zařízení FIBER Lite nemá 1-Wire hub (viz [Co je jinak](/fiber/fiber-lite/introduction#whats-different)).
 
 Osm izolovaných portů 1-Wire zařízení FIBER se v Linuxu objevuje jako osm nezávislých bus masterů, takže sonda
 na portu 3 je viditelná na jiné cestě než sonda na portu 5. Jejich čtení nevyžaduje instalaci ovladače

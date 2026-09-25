@@ -60,7 +60,7 @@ Koncová zařízení, například **senzory nebo aktory**, bývají napájená z
 Po zpracování předá síťový server zprávy na **aplikační server**. Tam lze data **vizualizovat na dashboardech**, **integrovat do cloudových aplikací** nebo je použít ke spouštění **automatizačních scénářů**.  
 
 ### Topologie a případy použití {#topology-and-use-cases}
-LoRaWAN používá **topologii hvězdy hvězd**, kde se koncová zařízení připojují k několika branám a ty jsou připojené k centrálnímu serveru. Tato architektura je ideální pro aplikace, které potřebují **velký dosah**, **nízkou spotřebu** a **malé, nepříliš časté zprávy**. Typicky se používá ve **chytrém zemědělství, chytrých městech, sledování majetku, měření spotřeb a průmyslovém monitorování**.  
+LoRaWAN používá topologii **„hvězda hvězd“** (star-of-stars), kde se koncová zařízení připojují k několika branám a ty jsou připojené k centrálnímu serveru. Tato architektura je ideální pro aplikace, které potřebují **velký dosah**, **nízkou spotřebu** a **malé, nepříliš časté zprávy**. Typicky se používá ve **chytrém zemědělství, chytrých městech, sledování majetku, měření spotřeb a průmyslovém monitorování**.  
 
 ### Topologie sítě LoRaWAN {#lorawan-network-topology}
 

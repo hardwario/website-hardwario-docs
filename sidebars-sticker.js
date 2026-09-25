@@ -30,14 +30,8 @@ const sidebars = {
           collapsed: true,
           items: [
             {
-              type: 'category',
-              label: 'Wiring',
-              link: {
-                type: 'doc',
-                id: 'sticker-input-wiring/index',
-              },
-              collapsed: true,
-              items: []
+              type: 'doc',
+              id: 'sticker-input-wiring/index',
             },
             {
               type: 'category',

@@ -103,7 +103,7 @@ Relé přichází s hardwarem r2.
 
 Tato sekce se týká LED na desce.
 
-Může obsahovat buď prvek `state"`, nebo `"pattern`.
+Může obsahovat buď prvek `"state"`, nebo `"pattern"`.
 
 - State může mít následující hodnoty: `off`, nebo `on/` s následující barvou `red`/`green`/`blue`/`yellow`.  
   Příklad: `on/red`

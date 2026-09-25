@@ -112,7 +112,7 @@ Slot 1: 23.50 °C
 Slot 2: 24.62 °C
 ```
 
-Teplota se hlásí ve **°C s rozlišením 0.01 °C**. Neúspěšné odečty (odpojená sonda, chyba CRC, …) vracejí `NaN` a do cloudového payloadu se posílají jako `null`.
+Teplota se hlásí ve **°C s rozlišením 0,01 °C**. Neúspěšné odečty (odpojená sonda, chyba CRC, …) vracejí `NaN` a do cloudového payloadu se posílají jako `null`.
 
 ## Krok 4 – Kontrola stavu slotů {#step-4---inspect-slot-state}
 

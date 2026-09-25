@@ -39,7 +39,7 @@ Pro vyšší bezpečnost doporučujeme ověřování přes **Google** nebo **Mic
 3. Právě sem budou patřit vaše **zařízení CHESTER**.
 
 :::caution
-Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**](https://docs.hardwario.com/cloud/#naming-conventions).
+Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**](/cloud/#naming-conventions).
 :::
 
 ---
@@ -69,10 +69,10 @@ Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**
 :::tip
 **Potřebujete více podrobností?**  
 Podrobnější informace o **HARDWARIO Cloud** najdete zde:  
-👉 [https://docs.hardwario.com/cloud/](https://docs.hardwario.com/cloud/)
+👉 [https://docs.hardwario.com/cloud/](/cloud/)
 
 Nebo se podívejte na náš **videonávod**, jak přidat zařízení CHESTER do cloudu:  
-👉 [https://docs.hardwario.com/chester/videos-chester/chester-cloud](https://docs.hardwario.com/chester/videos-chester/chester-cloud)
+👉 [https://docs.hardwario.com/chester/videos-chester/chester-cloud](/chester/videos-chester/chester-cloud)
 :::
 
 
@@ -103,9 +103,9 @@ Nebo se podívejte na náš **videonávod**, jak přidat zařízení CHESTER do 
 
 Pokud má zařízení stále problém s připojením k síti (zejména při použití vlastní SIM karty nebo roamingu):
 
-* **Zkontrolujte režim sítě:** Podle regionu může být potřeba vynutit konkrétní režim, například **NB-IoT** nebo **LTE-M**. Podrobnosti viz [**průvodce nastavením SIM karty**](https://docs.hardwario.com/chester/platform-connectivity/cellular-networks/sim-card-setup).
-* **Zkontrolujte APN/PLMN:** Pokud jste mimo Českou republiku nebo používáte SIM jiného operátora než Vodafone, nastavte správně PLMN a APN podle [**průvodce nastavením SIM karty**](https://docs.hardwario.com/chester/platform-connectivity/cellular-networks/sim-card-setup), případně viz referenci [**konfiguračních parametrů**](https://docs.hardwario.com/chester/platform-connectivity/cellular-networks/configuration-parameters).
-* **Veřejná IP pro Cloud v2:** Při použití vlastní SIM karty musíte také nastavit [**správné parametry IP a portu**](https://docs.hardwario.com/chester/firmware-sdk/how-to-lte-v2#ip-and-port) pro kompatibilitu s Cloud v2.
+* **Zkontrolujte režim sítě:** Podle regionu může být potřeba vynutit konkrétní režim, například **NB-IoT** nebo **LTE-M**. Podrobnosti viz [**průvodce nastavením SIM karty**](/chester/platform-connectivity/cellular-networks/sim-card-setup).
+* **Zkontrolujte APN/PLMN:** Pokud jste mimo Českou republiku nebo používáte SIM jiného operátora než Vodafone, nastavte správně PLMN a APN podle [**průvodce nastavením SIM karty**](/chester/platform-connectivity/cellular-networks/sim-card-setup), případně viz referenci [**konfiguračních parametrů**](/chester/platform-connectivity/cellular-networks/configuration-parameters).
+* **Veřejná IP pro Cloud v2:** Při použití vlastní SIM karty musíte také nastavit [**správné parametry IP a portu**](/chester/firmware-sdk/how-to-lte-v2#ip-and-port) pro kompatibilitu s Cloud v2.
 
 ---
 
@@ -113,10 +113,10 @@ Pokud má zařízení stále problém s připojením k síti (zejména při pou�
 ## Krok 5: Zkontrolujte stavovou LED {#step-5-check-the-status-led}
 
 - **Blikání zelenou každých 5 sekund** → připojeno k HARDWARIO Cloud ✅  
-- **Žádné blikání /** [**jiné barvy**](https://docs.hardwario.com/chester/catalog-applications/common-functionality/#led-behaviour) → stále se připojuje nebo došlo k chybě. Zkontrolujte SIM, pokrytí sítě nebo napájení  
+- **Žádné blikání /** [**jiné barvy**](/chester/catalog-applications/common-functionality/#led-behaviour) → stále se připojuje nebo došlo k chybě. Zkontrolujte SIM, pokrytí sítě nebo napájení  
 
 :::info
-Podrobnosti o všech barevných stavech LED a jejich význam najdete v [**dokumentaci chování LED**](https://docs.hardwario.com/chester/catalog-applications/common-functionality/#led-behaviour).
+Podrobnosti o všech barevných stavech LED a jejich význam najdete v [**dokumentaci chování LED**](/chester/catalog-applications/common-functionality/#led-behaviour).
 :::
 
 ## Krok 6: Podívejte se na data v cloudu {#step-6-see-your-data-in-the-cloud}
@@ -131,10 +131,10 @@ Podrobnosti o všech barevných stavech LED a jejich význam najdete v [**dokume
 
 Po připojení můžete:
 
-- Použít [**HARDWARIO Manager**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-manager) (mobilní aplikace přes BLE)
-- Použít [**HARDWARIO Monitor**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-monitor) (J-Link nebo BLE z počítače)
-- Použít [**HARDWARIO Terminal**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-terminal) (prohlížeč Google Chrome přes WebSerial/WebBluetooth)
-- Přistupovat ke [**vzdálenému shellu**](https://docs.hardwario.com/cloud/downlink/#shell-commands) a provádět i [**aktualizace firmwaru vzduchem**](https://docs.hardwario.com/cloud/firmware)
+- Použít [**HARDWARIO Manager**](/chester/platform-connectivity/hardwario-manager) (mobilní aplikace přes BLE)
+- Použít [**HARDWARIO Monitor**](/chester/platform-connectivity/hardwario-monitor) (J-Link nebo BLE z počítače)
+- Použít [**HARDWARIO Terminal**](/chester/platform-connectivity/hardwario-terminal) (prohlížeč Google Chrome přes WebSerial/WebBluetooth)
+- Přistupovat ke [**vzdálenému shellu**](/cloud/downlink/shell) a provádět i [**aktualizace firmwaru vzduchem**](/cloud/firmware)
 
 ---
 
@@ -145,11 +145,11 @@ Vždy je dobré se ujistit, že vaše zařízení CHESTER běží na **nejnověj
 ### Kontrola verze firmwaru {#check-firmware-version}
 Zkontrolovat ji můžete třemi způsoby:
 
-1. **Pomocí** [**HARDWARIO Manager (mobilní aplikace)**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-manager)
+1. **Pomocí** [**HARDWARIO Manager (mobilní aplikace)**](/chester/platform-connectivity/hardwario-manager)
    - Otevřete aplikaci a připojte se k zařízení CHESTER přes Bluetooth
    - Verze firmwaru se zobrazí automaticky
 
-2. **Pomocí** [**HARDWARIO Monitor (desktopová aplikace)**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-monitor)
+2. **Pomocí** [**HARDWARIO Monitor (desktopová aplikace)**](/chester/platform-connectivity/hardwario-monitor)
    - Připojte zařízení CHESTER přes J-Link nebo BLE
    - Spusťte příkaz:
      ```bash
@@ -157,7 +157,7 @@ Zkontrolovat ji můžete třemi způsoby:
      ```
    - V konzoli uvidíte informace o firmwaru a aplikaci
 
-3. **Pomocí** [**HARDWARIO Terminal (Google Chrome)**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-terminal)
+3. **Pomocí** [**HARDWARIO Terminal (Google Chrome)**](/chester/platform-connectivity/hardwario-terminal)
    - Otevřete Chrome a přejděte na [**terminal.hardwario.com**](https://terminal.hardwario.com)
    - Připojte zařízení CHESTER přes J-Link (WebSerial) nebo BLE (WebBluetooth)
    - Spusťte příkaz:
@@ -168,7 +168,7 @@ Zkontrolovat ji můžete třemi způsoby:
 
 ### Stažení nejnovějšího firmwaru {#download-the-latest-firmware}
 Nejnovější buildy firmwaru najdete vždy zde:  
-👉 [**Dostupné buildy aplikačního firmwaru**](https://docs.hardwario.com/chester/catalog-applications/#application-firmware)
+👉 [**Dostupné buildy aplikačního firmwaru**](/chester/catalog-applications/catalog-applications#application-firmware)
 
 :::info
  Tabulka firmwaru je řazená podle typu zařízení CHESTER, proto vyberte správný typ pro své zařízení.
@@ -179,14 +179,14 @@ Pokud je dostupná novější verze, můžete ji aktualizovat jednou z těchto m
 
 1. **Aktualizace přes HARDWARIO Manager (mobilní aplikace)**
 
-   - Postupujte podle tohoto podrobného návodu: 👉 [**Aktualizace firmwaru pomocí HARDWARIO Manager**](https://docs.hardwario.com/chester/platform-connectivity/hardwario-manager#firmware-update)
+   - Postupujte podle tohoto podrobného návodu: 👉 [**Aktualizace firmwaru pomocí HARDWARIO Manager**](/chester/platform-connectivity/hardwario-manager#firmware-update)
 
 2. **Aktualizace firmwaru z cloudu (FOTA)**
    - Zařízení CHESTER můžete aktualizovat i **na dálku** přes cloud.
-   - Kompletní technické podrobnosti najdete v tomto návodu: 👉 [**dokumentace k aktualizaci firmwaru**](https://docs.hardwario.com/cloud/firmware/)
+   - Kompletní technické podrobnosti najdete v tomto návodu: 👉 [**dokumentace k aktualizaci firmwaru**](/cloud/firmware/)
 
 3. **Ruční aktualizace přes J-Link**
-   - Pokud dáváte přednost ručnímu nahrání firmwaru, podívejte se na tento návod: 👉 [**Aktualizace aplikace přes J-Link**](https://docs.hardwario.com/chester/firmware-flashing/application-over-j-link)
+   - Pokud dáváte přednost ručnímu nahrání firmwaru, podívejte se na tento návod: 👉 [**Aktualizace aplikace přes J-Link**](/chester/firmware-flashing/application-over-j-link)
 
 ---
 
@@ -198,7 +198,7 @@ Vaše zařízení CHESTER je nyní připojené, nakonfigurované a aktuální, p
 ## Krok 9: Prozkoumejte aplikace a integrace {#step-9-explore-applications-and-integrations}
 
 Vaše zařízení CHESTER umí mnohem víc než jen odesílat data!  
-Jeho funkce můžete rozšířit pomocí [**HARDWARIO Applications**](https://docs.hardwario.com/apps/), hotových modulů a nástrojů, které vám pomohou:
+Jeho funkce můžete rozšířit pomocí [**HARDWARIO Applications**](/apps/), hotových modulů a nástrojů, které vám pomohou:
 
 - 📊 **Vizualizovat data** pomocí dashboardů a grafů  
 - 🌐 **Integrovat zařízení CHESTER** do existujících **sítí LoRaWAN** nebo jiných IoT systémů  
@@ -208,5 +208,5 @@ Všechny aplikace se snadno nasazují a dokážou vaše zařízení CHESTER pře
 
 :::info
 👉 Více informací a dostupné aplikace najdete zde:  
-[**https://docs.hardwario.com/apps/**](https://docs.hardwario.com/apps/)
+[**https://docs.hardwario.com/apps/**](/apps/)
 :::

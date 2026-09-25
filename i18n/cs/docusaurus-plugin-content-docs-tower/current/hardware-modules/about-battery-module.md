@@ -37,7 +37,7 @@ Vydrží samozřejmě kratší dobu, protože obsahuje jen **2 baterie**.
 - Obvod pro odpojení baterie
 - Měření napětí baterie pomocí vstupu ADC
 - <b>Prototypovací plocha pro pájení</b> vlastních obvodů
-- Jedna doplňková **pozice pro tag HARDWARIO******
+- Jedna doplňková **pozice pro tag HARDWARIO**
 - Rozsah provozního napětí: 3,3 až 10 V
 - Rozsah provozních teplot: -20 až 70 °C
 - Mechanické rozměry: 88 x 55 mm

@@ -77,5 +77,5 @@ When registering your STICKER end device in TTS:
 - [HARDWARIO Manager and STICKER](/sticker/hardwario-manager/)
 - [HARDWARIO Manager Quick Start Guide](/apps/hardwario-manager/first-steps)
 - [Read device info and LoRaWAN keys over NFC](/apps/hardwario-manager/sticker/device-info)
-- [TTS End Devices Documentation](https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-end-devices)
+- [TTS End Devices Documentation](/apps/the-things-stack/tts-configuration/tts-end-devices)
 - [STICKER Payload Decoder (`ttn.js`) on GitHub](https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js)

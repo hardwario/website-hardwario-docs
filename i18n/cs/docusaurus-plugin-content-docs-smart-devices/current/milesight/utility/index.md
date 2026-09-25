@@ -1,6 +1,6 @@
 ---
 slug: index
-title: Milesight - Utility zařízení
+title: Milesight – Utility zařízení
 description: "Doplňková zařízení Milesight otestovaná společností HARDWARIO, včetně referenčních zdrojů ke každému z nich."
 ---
 

@@ -36,7 +36,7 @@ For improved security, we recommend authenticating via **Google** or **Microsoft
 3. This is where your **GLIDER devices** will live.
 
 :::caution
-Please follow our [**Naming Conventions**](https://docs.hardwario.com/cloud/#naming-conventions) when creating your space.
+Please follow our [**Naming Conventions**](/cloud/#naming-conventions) when creating your space.
 :::
 
 ---
@@ -65,7 +65,7 @@ The **Claim Token** and **Serial Number** are unique for each device. You can ob
 :::tip
 **Need more details?**
 You can find more in-depth information about the **HARDWARIO Cloud** here:
- [https://docs.hardwario.com/cloud/](https://docs.hardwario.com/cloud/)
+ [https://docs.hardwario.com/cloud/](/cloud/)
 :::
 
 ---
@@ -210,7 +210,7 @@ Your GLIDER is now connected, configured, and up to date, ready to collect and s
 ## Step 9: Explore Applications and Integrations
 
 Your GLIDER can do much more than just send data!
-You can extend its functionality using [**HARDWARIO Applications**](https://docs.hardwario.com/apps/), ready-made modules and tools that help you:
+You can extend its functionality using [**HARDWARIO Applications**](/apps/), ready-made modules and tools that help you:
 
 - **Visualize your data** using dashboards and charts
 - **Integrate GLIDER** into existing IoT systems
@@ -220,5 +220,5 @@ All applications are easy to deploy and can transform your GLIDER into a complet
 
 :::info
  Learn more and explore available applications here:
-[**https://docs.hardwario.com/apps/**](https://docs.hardwario.com/apps/)
+[**https://docs.hardwario.com/apps/**](/apps/)
 :::

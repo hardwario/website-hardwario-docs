@@ -27,7 +27,7 @@ Sensors are sampled and stored on the `interval-sample` schedule (or once per up
 
 ### Recordable Channels
 
-The `history-sensors` bitmask maps bit $i$ to channel $i$ (up to 19 selectable channels across the 32-bit field):
+The `history-sensors` bitmask maps bit *i* to channel *i* (up to 19 selectable channels across the 32-bit field):
 
 - **`temperature`**, **`humidity`**: Integrated ambient sensors
 - **`s1-temp`/`s1-hum` … `s4-temp`/`s4-hum`**: 1-Wire sensor slots 1 through 4

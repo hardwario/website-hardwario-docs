@@ -25,7 +25,9 @@ Typically, you will not need to search for the I²C addresses while working with
 | CHESTER-M      | `0x18`  | DS2484          |                                    |
 | CHESTER-M      | `0x19`  | LIS2DH12        |                                    |
 | CHESTER-X8     | `0x1d`  | ADXL355         |                                    |
+| CHESTER-X1     | `0x1e`  | DS2482S-800+    | Address in slot A                  |
 | CHESTER-C5     | `0x1e`  | DS2482S-800+    |                                    |
+| CHESTER-X1     | `0x1f`  | DS2482S-800+    | Address in slot B                  |
 | CHESTER-X0     | `0x20`  | PCAL6416A       | Address in slot A                  |
 | CHESTER-X0     | `0x21`  | PCAL6416A       | Address in slot B                  |
 | CHESTER-Z1     | `0x32`  | LP55231SQ       |                                    |
@@ -67,9 +69,11 @@ Typically, you will not need to search for the I²C addresses while working with
 | CHESTER-X3     | `0x4f`  | ADS122C04 (CH2) | Address in slot B                  |
 | CHESTER-X2     | `0x50`  | SC16IS740       | Address in slot A                  |
 | CHESTER-X2     | `0x51`  | SC16IS740       | Address in slot B                  |
-| CHESTER-X12    | `0x54`  | SC16IS740IPW    |                                    |
-| CHESTER-X12    | `0x55`  | SC16IS740IPW    |                                    |
+| CHESTER-X12    | `0x54`  | SC16IS740IPW    | Address in slot A                  |
+| CHESTER-X12    | `0x55`  | SC16IS740IPW    | Address in slot B                  |
 | CHESTER-S1     | `0x60`  | MPL3115A2       |                                    |
 | CHESTER-M      | `0x64`  | ATSHA204A       | Removed in CHESTER-M R3.3          |
 | CHESTER-S1     | `0x68`  | SENSEAIR-SUNRISE |                                   |
 | People Counter | `0x7f`  | People Counter  | Proprietary module of Adastra Labs |
+
+CHESTER-X7 and CHESTER-X9 have no I²C device, and CHESTER-X13 and CHESTER-X14 communicate over SPI, so these modules do not occupy any I²C address.

@@ -25,7 +25,9 @@ Při práci s **CHESTER SDK** obvykle nebudete muset I²C adresy vyhledávat. V�
 | CHESTER-M      | `0x18`  | DS2484          |                                    |
 | CHESTER-M      | `0x19`  | LIS2DH12        |                                    |
 | CHESTER-X8     | `0x1d`  | ADXL355         |                                    |
+| CHESTER-X1     | `0x1e`  | DS2482S-800+    | Adresa ve slotu A                  |
 | CHESTER-C5     | `0x1e`  | DS2482S-800+    |                                    |
+| CHESTER-X1     | `0x1f`  | DS2482S-800+    | Adresa ve slotu B                  |
 | CHESTER-X0     | `0x20`  | PCAL6416A       | Adresa ve slotu A                  |
 | CHESTER-X0     | `0x21`  | PCAL6416A       | Adresa ve slotu B                  |
 | CHESTER-Z1     | `0x32`  | LP55231SQ       |                                    |
@@ -67,9 +69,11 @@ Při práci s **CHESTER SDK** obvykle nebudete muset I²C adresy vyhledávat. V�
 | CHESTER-X3     | `0x4f`  | ADS122C04 (CH2) | Adresa ve slotu B                  |
 | CHESTER-X2     | `0x50`  | SC16IS740       | Adresa ve slotu A                  |
 | CHESTER-X2     | `0x51`  | SC16IS740       | Adresa ve slotu B                  |
-| CHESTER-X12    | `0x54`  | SC16IS740IPW    |                                    |
-| CHESTER-X12    | `0x55`  | SC16IS740IPW    |                                    |
+| CHESTER-X12    | `0x54`  | SC16IS740IPW    | Adresa ve slotu A                  |
+| CHESTER-X12    | `0x55`  | SC16IS740IPW    | Adresa ve slotu B                  |
 | CHESTER-S1     | `0x60`  | MPL3115A2       |                                    |
 | CHESTER-M      | `0x64`  | ATSHA204A       | Odstraněno v CHESTER-M R3.3        |
 | CHESTER-S1     | `0x68`  | SENSEAIR-SUNRISE |                                   |
 | People Counter | `0x7f`  | People Counter  | Proprietární modul Adastra Labs    |
+
+Moduly CHESTER-X7 a CHESTER-X9 nemají žádné zařízení I²C a moduly CHESTER-X13 a CHESTER-X14 komunikují po SPI, takže na sběrnici I²C nezabírají žádnou adresu.

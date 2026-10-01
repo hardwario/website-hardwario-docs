@@ -39,7 +39,8 @@
     "react-player": "^3.4.0"
   },
   "devDependencies": {
-    "github-slugger": "^2.0.0"
+    "github-slugger": "^2.0.0",
+    "wrangler": "^4.146.0"
   },
   "browserslist": {
     "production": [

@@ -3,6 +3,13 @@
   "name": "website-hardwario-docs",
   "compatibility_date": "2026-09-01",
   "compatibility_flags": ["nodejs_compat"],
+  // The site is served only on its custom domain. Keep the <name>.hardwario.workers.dev
+  // route off so the whole site is not reachable (and indexable) on a second host.
+  // Version URLs stay on explicitly: the "Deploy non-production branches" Workers Builds
+  // trigger runs `wrangler versions upload` for pull-request previews, and Cloudflare
+  // derives their default from workers_dev when the setting is absent.
+  "workers_dev": false,
+  "preview_urls": true,
   "observability": {
     "enabled": true
   },

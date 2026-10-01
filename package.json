@@ -20,7 +20,7 @@
     "verify:redirects": "node scripts/check-redirects.mjs"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.124.0",
+    "@anthropic-ai/sdk": "^0.131.0",
     "@docusaurus/core": "^3.10.2",
     "@docusaurus/module-type-aliases": "^3.10.2",
     "@docusaurus/plugin-ideal-image": "^3.10.2",
@@ -32,8 +32,8 @@
     "docusaurus-plugin-image-zoom": "^3.0.1",
     "prism-react-renderer": "^2.4.1",
     "qrcode": "^1.5.4",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
     "react-player": "^3.4.0"
   },
   "devDependencies": {

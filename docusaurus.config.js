@@ -32,6 +32,32 @@ const config = {
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
 
+  // Docusaurus Faster (@docusaurus/faster): Rspack bundler, SWC JS loader and
+  // minifier, Lightning CSS, SSG worker threads. The worker threads need the v4
+  // flag that drops the legacy postBuild({head}) API, which no plugin here uses;
+  // the other v4 flags (CSS cascade layers, storage namespacing) would change
+  // the site and stay off. Two faster options stay off on purpose:
+  // - swcHtmlMinimizer: some pages put a raw <p> inside the <b> of a <details>
+  //   summary or around a code block (invalid HTML). The SWC HTML minifier then
+  //   omits a </p> the browser parser needs, which changed the DOM of 72 built
+  //   pages; the default minifier leaves the markup as written.
+  // - gitEagerVcs: in a submodule checkout it lost <lastmod> for 481 of 497
+  //   sitemap URLs. The default per-file git strategy keeps them.
+  future: {
+    v4: { removeLegacyPostBuildHeadAttribute: true },
+    faster: {
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: false,
+      lightningCssMinimizer: true,
+      mdxCrossCompilerCache: true,
+      rspackBundler: true,
+      rspackPersistentCache: true,
+      ssgWorkerThreads: true,
+      gitEagerVcs: false,
+    },
+  },
+
   customFields: {
     // Backend for the docs chat widget. Cross-origin: the backend is a Vercel
     // function (it retrieves passages from a shipped snapshot of the corpus),

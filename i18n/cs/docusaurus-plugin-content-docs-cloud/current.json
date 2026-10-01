@@ -23,9 +23,17 @@
     "message": "REST API",
     "description": "The label for category 'REST API' in sidebar 'docs'"
   },
+  "sidebar.docs.category.Device Protocol": {
+    "message": "Protokol zařízení",
+    "description": "The label for category 'Device Protocol' in sidebar 'docs'"
+  },
   "sidebar.docs.category.Administration": {
     "message": "Správa",
     "description": "The label for category 'Administration' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Technical Reference": {
+    "message": "Technická reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'docs'"
   },
   "sidebar.docs.category.Video Tutorials": {
     "message": "Videonávody",

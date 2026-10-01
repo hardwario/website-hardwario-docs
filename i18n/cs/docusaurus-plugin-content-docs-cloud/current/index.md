@@ -46,7 +46,9 @@ V Cloud v2 jsou kodeky zařízení (enkodéry a dekodéry) obsaženy přímo ve 
 Cloud v2 spolu se subsystémem **LTE v2** v zařízení CHESTER přidává:
 - Automatickou fragmentaci paketů (podporuje payload o velikosti mnoha kilobajtů)
 - Potvrzování příjmu s automatickým opakovaným odesláním
-- Podepisování zpráv pomocí SHA-256
+- Autentizaci zpráv 64bitovým kódem založeným na SHA-256
+
+Přenosový protokol popisuje stránka [**Protokol zařízení (FLAP)**](device-protocol/index.md).
 
 :::info
 

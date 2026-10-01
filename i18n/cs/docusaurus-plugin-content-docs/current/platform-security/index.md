@@ -54,6 +54,10 @@ Interval **re-keying** u navázaného tunelu je kratší než **60 minut**.
 
 Tunel **IPsec** používá IKEv2 (`aes256-sha256-modp2048`).
 
+## Komunikace zařízení {#device-communication}
+
+Zařízení **CHESTER** komunikuje s **HARDWARIO Cloud** protokolem **FLAP** přes UDP. Každý paket FLAP putuje v **obálce MAC** s 64bitovým autentizačním kódem zprávy (MAC) založeným na SHA-256 s klíčem, kterým je jedinečný **claim token** zařízení, takže paket nelze na cestě podvrhnout ani změnit. Obálka MAC data nešifruje: důvěrnost zajišťuje privátní APN s tunelem IPsec popsaným výše. Zařízení postavená na nRF9151 mohou místo ní použít obálku **DTLS 1.2** s předsdíleným klíčem. Viz [**Obálka MAC protokolu FLAP**](/cloud/device-protocol/mac-envelope) a [**Obálka DTLS protokolu FLAP**](/cloud/device-protocol/dtls-envelope).
+
 ## Bezpečnost HARDWARIO Cloud {#hardwario-cloud-security}
 
 Infrastruktura **HARDWARIO Cloud** běží v datových centrech cloudového poskytovatele **DigitalOcean**. Celá infrastruktura běží na linuxové serverové distribuci **Ubuntu LTS**. Tým **HARDWARIO** provádí pravidelné bezpečnostní audity a údržbu celé infrastruktury.

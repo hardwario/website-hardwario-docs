@@ -79,6 +79,24 @@ const sidebars = {
         'videos-cloud/cloud-chester-add',
       ],
     },
+    {
+      type: 'category',
+      label: 'Technical Reference',
+      collapsed: true,
+      items: [
+        {
+          type: 'category',
+          label: 'Device Protocol',
+          link: { type: 'doc', id: 'device-protocol/index' },
+          items: [
+            'device-protocol/transfers',
+            'device-protocol/messages',
+            'device-protocol/mac-envelope',
+            'device-protocol/dtls-envelope',
+          ],
+        },
+      ],
+    },
   ],
 };
 

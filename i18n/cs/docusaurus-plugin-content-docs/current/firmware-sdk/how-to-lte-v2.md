@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 Tento článek ukazuje, jak upgradovat existující firmware pro zařízení CHESTER na LTE v2 a [Cloud v2](/cloud/).
 
-LTE v2 používá novější UDP protokol, který podporuje downlink zprávy a automaticky se stará o fragmentaci, potvrzování a podepisování paketů pomocí SHA-256.
+LTE v2 používá novější UDP protokol, který podporuje downlink zprávy a automaticky se stará o fragmentaci, potvrzování a autentizaci paketů autentizačním kódem zprávy založeným na SHA-256. Protokol popisuje stránka [**Protokol zařízení (FLAP)**](/cloud/device-protocol/).
 
 Downlink zprávy nebo konfigurační zprávy lze posílat přes API nebo v uživatelském rozhraní HARDWARIO Cloud v2.
 

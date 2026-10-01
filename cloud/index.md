@@ -46,7 +46,9 @@ In Cloud v2, device codecs (encoders and decoders) are bundled directly in the f
 Cloud v2 together with the **LTE v2** subsystem in CHESTER adds:
 - Automatic packet fragmentation (supports payloads of many kilobytes)
 - Receive acknowledgment with automatic retransmission
-- SHA-256 message signing
+- Message authentication with a 64-bit code based on SHA-256
+
+The wire protocol is described in [**Device Protocol (FLAP)**](device-protocol/index.md).
 
 :::info
 

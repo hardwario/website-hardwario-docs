@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 // Used only if docusaurus.config.js somehow carries no chatApiUrl. Relative,
@@ -37,7 +36,56 @@ type Message = {
   role: 'user' | 'assistant';
   content: string;
   sources?: Source[];
+  // Set on real answers only, which are the only bubbles worth rating: an error
+  // or the "paused" notice says nothing about how well the assistant answers.
+  // Carries the question so a rating arrives with what it is a rating of.
+  question?: string;
 };
+
+// A rating, per answer. `id` ties the comment that may follow a 👎 to the
+// response the 👎 itself already sent: the form cannot amend a response, so a
+// comment arrives as a second one carrying the same id and no rating.
+type Rating = {
+  id: string;
+  value: 'up' | 'down';
+  comment: string;
+  commentSent: boolean;
+};
+
+// Answers can run long; the sheet only needs enough to recognise one. A Sheets
+// cell also tops out at 50 000 characters.
+const FEEDBACK_ANSWER_CHARS = 4000;
+
+function newRatingId(): string {
+  try {
+    return crypto.randomUUID();
+  } catch {
+    // Non-secure contexts (plain-http previews) have no randomUUID.
+    return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+  }
+}
+
+// Where ratings go: a Google Form, whose responses land in a linked sheet.
+// `fields` maps each value to the form's question id (entry.N); the ids come
+// from the published form and change only if a question is deleted and
+// re-added. Set in docusaurus.config.js; absent, no rating buttons are shown.
+type FeedbackForm = {
+  url: string;
+  fields: Record<FeedbackField, string>;
+};
+type FeedbackField = 'id' | 'rating' | 'comment' | 'question' | 'answer' | 'sources' | 'page' | 'locale';
+
+// Fire and forget. A form-encoded POST is a "simple" request, so no CORS
+// preflight; Google sends no CORS headers either, so the response is opaque
+// and unread. A failure costs one rating, never the chat.
+function postFeedback(form: FeedbackForm, values: Partial<Record<FeedbackField, string>>) {
+  const body = new URLSearchParams();
+  for (const [field, value] of Object.entries(values)) {
+    const entry = form.fields[field as FeedbackField];
+    if (entry && value) body.append(entry, value);
+  }
+  fetch(form.url, { method: 'POST', mode: 'no-cors', body }).catch(() => {});
+}
 
 // The backend has shipped two shapes for `sources`: a bare URL string per
 // source, and an object carrying the title and site alongside the URL. The
@@ -236,6 +284,13 @@ const UI = {
     shrink: 'Shrink the chat',
     close: 'Close the chat',
     launch: 'Ask about the documentation',
+    rateUp: 'Helpful',
+    rateDown: 'Not helpful',
+    rateThanks: 'Thanks for the feedback!',
+    rateComment: 'What was wrong? (optional)',
+    rateCommentSend: 'Send',
+    teaser: '👋 Hi! Stuck on something? Ask me anything about HARDWARIO devices.',
+    teaserClose: 'Hide this message',
     launchClose: 'Close the documentation assistant',
     hideSources: 'Hide the other pages',
     morePages: (n: number) => `${n} more page${n > 1 ? 's' : ''}`,
@@ -266,6 +321,13 @@ const UI = {
     shrink: 'Zmenšit chat',
     close: 'Zavřít chat',
     launch: 'Zeptejte se na dokumentaci',
+    rateUp: 'Užitečné',
+    rateDown: 'Neužitečné',
+    rateThanks: 'Děkujeme za zpětnou vazbu!',
+    rateComment: 'Co bylo špatně? (nepovinné)',
+    rateCommentSend: 'Odeslat',
+    teaser: '👋 Dobrý den! Potřebujete poradit? Zeptejte se mě na cokoli o zařízeních HARDWARIO.',
+    teaserClose: 'Skrýt tuto zprávu',
     launchClose: 'Zavřít asistenta dokumentace',
     hideSources: 'Skrýt ostatní stránky',
     // 2–4 "stránky", 5+ "stránek" — Czech does not pluralise the way a
@@ -291,6 +353,35 @@ function textFor(locale: string): UiText {
 // element vanishes mid-animation; too long and the launcher sits over a panel
 // nobody can see any more.
 const PANEL_EXIT_MS = 180;
+
+// The speech bubble beside the launcher waits this long, so it arrives after
+// the page has settled rather than as part of the page loading, and once dismissed
+// it stays dismissed for the rest of the visit. Dismissing is either its ✕ or
+// opening the chat: either way the visitor has found the assistant, and saying
+// hello again on every page is nagging. Session storage, not local: a returning
+// visitor gets greeted again, rather than never seeing the bubble after the
+// first time they touched the chat.
+const TEASER_DELAY_MS = 2500;
+const TEASER_DISMISSED_KEY = 'hwio-chat-teaser-dismissed';
+
+// Storage can throw outright (blocked site data, some private windows), and a
+// greeting is not worth an error. Unreadable counts as not dismissed;
+// unwritable means it may show again on the next page, which is harmless.
+function teaserDismissed(): boolean {
+  try {
+    return sessionStorage.getItem(TEASER_DISMISSED_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function dismissTeaser() {
+  try {
+    sessionStorage.setItem(TEASER_DISMISSED_KEY, '1');
+  } catch {
+    // See teaserDismissed().
+  }
+}
 
 function exitDelay() {
   try {
@@ -357,14 +448,194 @@ function ResizeIcon({ expanded }: { expanded: boolean }) {
   );
 }
 
+// The chat mascot: the robot from the brand artwork, redrawn whole, so the
+// launcher shows the same figure as the illustration. Inline rather than an
+// <img> so CSS can reach its parts: the head bobs, the eyes blink, the right
+// arm waves now and then, and the launcher's hover tilts the head. `still`
+// drops every animation hook, for the header, where motion next to text is a
+// distraction; `head` frames just the head and the top of the shoulders, so
+// the header shows a close-up of the same robot rather than a second drawing.
+//
+// Drawn in the illustration's own 2000px coordinates and scaled down by the
+// outer transform, so each part can be checked against the artwork. Strokes are
+// thicker than the artwork's, since they have to survive at 56px.
+//
+// The glow under the face is a wider, translucent copy of the same strokes
+// instead of an SVG filter: a filter needs an id, and two robots on one page
+// would share it.
+const ROBOT_INK = '#2b2f33';
+
+function RobotArm() {
+  // The robot's right arm as it hangs, drawn relative to its shoulder (0, 0) so
+  // the wave can rotate it about that point. The left arm is the same drawing
+  // mirrored.
+  return (
+    <g fill="#e3e8ee" stroke={ROBOT_INK} strokeWidth="26" strokeLinejoin="round">
+      <path d="M0 0C-80-10-145 75-160 195L-145 245C-100 265-40 260-20 245C-10 165 5 75 0 0Z" />
+      {/* Forearm and hand nudged in toward the body: as drawn they stood off
+          it, leaving a gap down the side that made the arms look stuck on.
+          Drawn behind the body, so any overlap tucks under it. */}
+      <g transform="translate(30 0)">
+        <path d="M-170 190C-205 190-235 310-230 450C-210 490-120 500-70 470C-55 350-50 270-55 210C-90 190-140 185-170 190Z" />
+        <path d="M-195 460C-205 530-180 590-130 595L-135 540C-130 510-110 510-100 530L-80 570C-60 550-65 490-75 460Z" />
+      </g>
+    </g>
+  );
+}
+
+function RobotIcon({
+  className,
+  still,
+  head,
+  intro,
+}: {
+  className?: string;
+  still?: boolean;
+  head?: boolean;
+  intro?: boolean;
+}) {
+  const a = (name: string) => (still ? undefined : styles[name]);
+  const face = 'M755 560Q807 490 860 560M1070 560Q1122 490 1175 560M870 640Q967 725 1065 640';
+  const svgClass = [className, !still && (intro ? styles.robotIntro : styles.robotBack)]
+    .filter(Boolean)
+    .join(' ');
+  return (
+    <svg className={svgClass} viewBox={head ? '22 3 56 56' : '0 0 100 100'} aria-hidden="true" focusable="false">
+      <g className={a('robotRise')}>
+        <g transform="translate(50 12) scale(0.05) translate(-967 -215)">
+          {/* The waving arm is the one on the viewer's left, which the
+              speech bubble's tail points away from. Unmirrored, a positive
+              rotation still swings it up and outward, so the wave keyframes
+              serve either arm. */}
+          <g transform="translate(600 990)">
+            <g className={a('robotArm')}>
+              <RobotArm />
+            </g>
+          </g>
+          <g transform="translate(1334 990) scale(-1 1)">
+            <RobotArm />
+          </g>
+          <rect x="825" y="880" width="285" height="60" fill="#6b7680" stroke={ROBOT_INK} strokeWidth="22" />
+          <path
+            d="M967 908C1180 908 1345 960 1345 1150C1345 1450 1170 1690 967 1690C765 1690 590 1450 590 1150C590 960 755 908 967 908Z"
+            fill="#e3e8ee"
+            stroke={ROBOT_INK}
+            strokeWidth="26"
+          />
+          {/* The HARDWARIO mark across the chest: the official artwork from
+              static/img/hardwario-mark.svg (48 x 60), paths unchanged, scaled
+              to fill the chest. Whole and large, it reads as the logo even at
+              launcher size; the earlier hand-drawn trace version was small
+              enough to blur into a red ✕. */}
+          <g transform="translate(799 1020) scale(7)">
+            <path
+              fill="#e30427"
+              d="m5.4,0C2.42,0,0,2.42,0,5.4h0c0,2.28,1.45,4.32,3.6,5.08v13.52c0,.99.81,1.8,1.8,1.8.19,0,.37-.03.55-.09l13.77-4.44c1.02,1.34,2.6,2.12,4.28,2.13,2.98,0,5.4-2.42,5.4-5.4h0c0-2.98-2.42-5.4-5.4-5.4-2.92,0-5.31,2.33-5.39,5.25l-11.41,3.68v-11.05c2.15-.76,3.59-2.79,3.6-5.08C10.8,2.42,8.38,0,5.4,0h0s0,0,0,0Z"
+            />
+            <path
+              fill="#e30427"
+              d="m42.6,60c2.98,0,5.4-2.42,5.4-5.4h0c0-2.28-1.45-4.32-3.6-5.08v-13.52c0-.99-.81-1.8-1.8-1.8-.19,0-.37.03-.55.09l-13.77,4.44c-1.02-1.34-2.6-2.12-4.28-2.13-2.98,0-5.4,2.42-5.4,5.4h0c0,2.98,2.42,5.4,5.4,5.4h0c2.92,0,5.31-2.33,5.39-5.25l11.41-3.68v11.05c-2.15.76-3.59,2.79-3.6,5.08,0,2.98,2.42,5.4,5.4,5.4h0Z"
+            />
+            <path
+              fill="#6b6a6a"
+              d="m42.6,0c-2.98,0-5.4,2.42-5.4,5.4h0c0,2.29,1.44,4.33,3.6,5.09v12.2L4.85,34.29c-.74.24-1.25.93-1.24,1.71v13.51C1.44,50.27,0,52.31,0,54.6c0,2.98,2.42,5.4,5.4,5.4h0c2.98,0,5.4-2.42,5.4-5.4h0c0-2.29-1.44-4.33-3.6-5.09v-12.2l35.95-11.6c.74-.24,1.25-.93,1.25-1.71v-13.52c2.15-.76,3.6-2.8,3.6-5.09C48,2.42,45.58,0,42.6,0h0s0,0,0,0Z"
+            />
+          </g>
+          <g className={a('robotHead')}>
+            <rect x="455" y="440" width="90" height="265" rx="45" fill="#d5dbe2" stroke={ROBOT_INK} strokeWidth="26" />
+            <rect x="1390" y="440" width="90" height="265" rx="45" fill="#d5dbe2" stroke={ROBOT_INK} strokeWidth="26" />
+            <rect x="510" y="215" width="915" height="675" rx="300" fill="#eef1f5" stroke={ROBOT_INK} strokeWidth="26" />
+            <rect x="578" y="318" width="778" height="487" rx="150" fill="#c0272d" stroke={ROBOT_INK} strokeWidth="22" />
+            <g className={a('robotFace')} fill="none" strokeLinecap="round">
+              <path d={face} stroke="#e8fbff" strokeOpacity="0.35" strokeWidth="70" />
+              <path d={face} stroke="#e8fbff" strokeWidth="36" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+// The 👍 / 👎 row under an answer. Before rating: both thumbs. After 👍: thanks.
+// After 👎: thanks plus an optional box for what went wrong, since a 👎 alone
+// says that an answer failed but not how.
+function Feedback({
+  rating,
+  t,
+  onRate,
+  onComment,
+  onSend,
+}: {
+  rating?: Rating;
+  t: UiText;
+  onRate: (value: Rating['value']) => void;
+  onComment: (comment: string) => void;
+  onSend: () => void;
+}) {
+  if (!rating) {
+    return (
+      <div className={styles.feedback}>
+        <button
+          type="button"
+          className={styles.feedbackBtn}
+          onClick={() => onRate('up')}
+          title={t.rateUp}
+          aria-label={t.rateUp}
+        >
+          👍
+        </button>
+        <button
+          type="button"
+          className={styles.feedbackBtn}
+          onClick={() => onRate('down')}
+          title={t.rateDown}
+          aria-label={t.rateDown}
+        >
+          👎
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.feedback}>
+      <span className={styles.feedbackThanks}>
+        {rating.value === 'up' ? '👍' : '👎'} {t.rateThanks}
+      </span>
+      {rating.value === 'down' && !rating.commentSent && (
+        <form
+          className={styles.feedbackComment}
+          onSubmit={e => {
+            e.preventDefault();
+            onSend();
+          }}
+        >
+          <input
+            type="text"
+            value={rating.comment}
+            onChange={e => onComment(e.target.value)}
+            placeholder={t.rateComment}
+            aria-label={t.rateComment}
+            maxLength={2000}
+          />
+          <button type="submit" disabled={!rating.comment.trim()}>
+            {t.rateCommentSend}
+          </button>
+        </form>
+      )}
+    </div>
+  );
+}
+
 export default function ChatWidget() {
   const { siteConfig, i18n } = useDocusaurusContext();
   // The chrome speaks the language of the page it is sitting on.
   const t = textFor(i18n.currentLocale);
   const apiUrl = (siteConfig.customFields?.chatApiUrl as string) || FALLBACK_API_URL;
-  // Hooks must run unconditionally, so resolve this here rather than inside the
-  // button's open/closed ternary below.
-  const iconUrl = useBaseUrl('img/hardwario-mark-white.svg');
+  // No URL, no rating buttons: offering a 👍 that goes nowhere would be worse
+  // than not asking.
+  const feedbackForm = siteConfig.customFields?.feedbackForm as FeedbackForm | undefined;
 
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -378,6 +649,13 @@ export default function ChatWidget() {
   const [shown, setShown] = useState(false);
   // Which answers have their extra sources unfolded, by message index.
   const [showAllSources, setShowAllSources] = useState<Record<number, boolean>>({});
+  const [teaser, setTeaser] = useState(false);
+  // The robot's entrance (rising into the circle, then a few waves) is for the
+  // page load only. Closing the chat remounts the robot, and replaying the
+  // entrance then left the circle half empty for most of a second.
+  const [intro, setIntro] = useState(true);
+  // Ratings by message index, cleared with the conversation they belong to.
+  const [ratings, setRatings] = useState<Record<number, Rating>>({});
   const bottomRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const lastMsgRef = useRef<HTMLDivElement>(null);
@@ -392,6 +670,24 @@ export default function ChatWidget() {
     setOpen(false);
   }
 
+  function closeTeaser() {
+    setTeaser(false);
+    dismissTeaser();
+  }
+
+  // Read after mount, not during render: the server-rendered page has no
+  // storage, and the two renders have to agree.
+  useEffect(() => {
+    if (open) {
+      setIntro(false);
+      if (teaser) closeTeaser();
+      return;
+    }
+    if (teaserDismissed()) return;
+    const timer = window.setTimeout(() => setTeaser(true), TEASER_DELAY_MS);
+    return () => window.clearTimeout(timer);
+  }, [open]);
+
   // Same clearing that closing performs, minus the closing. `loading` is left
   // alone on purpose: the button is disabled while a request is in flight, so
   // there is no way to reach this mid-answer and strand the spinner.
@@ -399,6 +695,35 @@ export default function ChatWidget() {
     setMessages([]);
     setInput('');
     setShowAllSources({});
+    setRatings({});
+  }
+
+  // One click rates, and the thumbs are replaced by a thank-you, so an answer
+  // is rated once.
+  function rate(i: number, value: Rating['value']) {
+    const m = messages[i];
+    if (!feedbackForm || ratings[i] || !m) return;
+    const id = newRatingId();
+    setRatings(r => ({ ...r, [i]: { id, value, comment: '', commentSent: false } }));
+    postFeedback(feedbackForm, {
+      id,
+      rating: value,
+      question: m.question ?? '',
+      answer: m.content.slice(0, FEEDBACK_ANSWER_CHARS),
+      sources: (m.sources ?? []).slice(0, 3).map(s => s.url).join(' '),
+      // Path only: a query string can carry anything, and the sheet does not
+      // need it to know which page the reader was on.
+      page: window.location.pathname,
+      locale: i18n.currentLocale,
+    });
+  }
+
+  function sendComment(i: number) {
+    const r = ratings[i];
+    const comment = r?.comment.trim();
+    if (!feedbackForm || !r || !comment || r.commentSent) return;
+    setRatings(rs => ({ ...rs, [i]: { ...r, commentSent: true } }));
+    postFeedback(feedbackForm, { id: r.id, comment: comment.slice(0, 2000) });
   }
 
   // Two flags, because an element cannot animate out of the DOM. `mounted` is
@@ -431,6 +756,7 @@ export default function ChatWidget() {
       setMessages([]);
       setInput('');
       setShowAllSources({});
+      setRatings({});
     }, exitDelay());
     return () => window.clearTimeout(timer);
   }, [open]);
@@ -498,6 +824,7 @@ export default function ChatWidget() {
         role: 'assistant',
         content: data.answer || data.error || t.failed,
         sources: normalizeSources(data.sources),
+        question: data.answer ? query : undefined,
       }]);
     } catch {
       setMessages(m => [...m, {
@@ -530,11 +857,12 @@ export default function ChatWidget() {
         >
           <div className={styles.header}>
             <div className={styles.headerLeft}>
-              {/* The same mark as the launcher button, so the panel is visibly
+              {/* The same robot as the launcher button, so the panel is visibly
                   the thing that was just clicked. Decorative: the title beside
-                  it already names it, and a screen reader saying "HARDWARIO"
-                  twice helps nobody. */}
-              <img className={styles.headerIcon} src={iconUrl} alt="" />
+                  it already names it. */}
+              <span className={styles.headerAvatar}>
+                <RobotIcon className={styles.headerIcon} still head />
+              </span>
               <div className={styles.headerText}>
                 <span className={styles.headerTitle}>{t.title}</span>
                 <span className={styles.headerBeta}>{t.beta}</span>
@@ -582,6 +910,27 @@ export default function ChatWidget() {
             {messages.length === 0 && (
               <div className={`${styles.botMsg} ${styles.greetingEnter}`}>
                 <p>{t.greeting}</p>
+              </div>
+            )}
+            {/* Openers, on an empty chat only: three questions this assistant
+                answers well, so nobody has to guess what it knows. Right under
+                the greeting they answer, not parked by the input with a blank
+                gap between the two. They go as soon as the conversation starts:
+                by then the visitor has their own question and these would only
+                be in the way. */}
+            {messages.length === 0 && (
+              <div className={styles.suggestions}>
+                {t.suggestions.map(q => (
+                  <button
+                    key={q}
+                    type="button"
+                    className={styles.suggestion}
+                    onClick={() => send(q)}
+                    disabled={loading}
+                  >
+                    {q}
+                  </button>
+                ))}
               </div>
             )}
             {messages.map((m, i) => {
@@ -657,6 +1006,17 @@ export default function ChatWidget() {
                       )}
                     </div>
                   )}
+                  {feedbackForm && m.role === 'assistant' && m.question && (
+                    <Feedback
+                      rating={ratings[i]}
+                      t={t}
+                      onRate={value => rate(i, value)}
+                      onComment={comment =>
+                        setRatings(rs => ({ ...rs, [i]: { ...rs[i], comment } }))
+                      }
+                      onSend={() => sendComment(i)}
+                    />
+                  )}
                 </div>
               );
             })}
@@ -675,25 +1035,6 @@ export default function ChatWidget() {
             <div ref={bottomRef} />
           </div>
 
-          {/* Openers, on an empty chat only: three questions this assistant
-              answers well, so nobody has to guess what it knows. They go as
-              soon as the conversation starts — by then the visitor has their
-              own question and these would only be in the way. */}
-          {messages.length === 0 && (
-            <div className={styles.suggestions}>
-              {t.suggestions.map(q => (
-                <button
-                  key={q}
-                  type="button"
-                  className={styles.suggestion}
-                  onClick={() => send(q)}
-                  disabled={loading}
-                >
-                  {q}
-                </button>
-              ))}
-            </div>
-          )}
 
           <div className={styles.inputRow}>
             <input
@@ -711,18 +1052,37 @@ export default function ChatWidget() {
         </div>
       )}
 
+      {teaser && !open && (
+        <div className={styles.teaser}>
+          {/* The message is itself a way in: clicking it opens the chat, as
+              the robot it points at would. */}
+          <button type="button" className={styles.teaserText} onClick={() => setOpen(true)}>
+            {t.teaser}
+          </button>
+          <button
+            type="button"
+            className={styles.teaserClose}
+            onClick={closeTeaser}
+            title={t.teaserClose}
+            aria-label={t.teaserClose}
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       {/* Shows ✕ while the panel is open, so it is the same gesture as the one
           in the header and has to do the same thing — end the conversation. */}
       <button
-        className={styles.fab}
+        className={[styles.fab, open && styles.fabOpen].filter(Boolean).join(' ')}
         onClick={() => (open ? close() : setOpen(true))}
         title={t.launch}
         aria-label={open ? t.launchClose : t.launch}
       >
         {open ? (
-          '✕'
+          <span className={styles.fabX} aria-hidden="true">✕</span>
         ) : (
-          <img className={styles.fabIcon} src={iconUrl} alt="" />
+          <RobotIcon className={styles.fabIcon} intro={intro} />
         )}
       </button>
     </div>

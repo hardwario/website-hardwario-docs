@@ -9,34 +9,282 @@
   gap: 12px;
 }
 
-.fab {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--ifm-color-primary);
-  color: #fff;
+/* The robot's speech bubble, above the launcher. Its tail points down at the
+   robot, so the message is plainly his. Follows the page theme, unlike the
+   launcher: it is text, and text should sit on the reader's chosen surface. */
+.teaser {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  max-width: min(260px, calc(100vw - 48px));
+  margin-right: 4px;
+  padding: 10px 6px 10px 14px;
+  background: var(--ifm-background-surface-color, #fff);
+  color: var(--ifm-font-color-base);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  animation: teaserIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  transform-origin: 85% 100%;
+}
+
+/* The tail: a rotated square sharing the bubble's border and surface, half of
+   it tucked behind the bubble. */
+.teaser::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  right: 22px;
+  width: 12px;
+  height: 12px;
+  background: inherit;
+  border-right: 1px solid var(--ifm-toc-border-color);
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  transform: rotate(45deg);
+}
+
+.teaserText {
+  flex: 1;
+  padding: 0;
   border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+}
+
+.teaserText:hover {
+  color: var(--ifm-color-primary);
+}
+
+.teaserClose {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 12px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.teaserClose:hover {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+}
+
+@keyframes teaserIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.9); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .teaser {
+    animation: none;
+  }
+}
+
+/* A light disc rather than the red one: the robot's face is the brand red,
+   and red on red would leave only an outline. The red ring keeps the button
+   recognisably HARDWARIO. Fixed light colours in both themes, since it is a
+   floating object, not part of the page surface. overflow: hidden keeps the
+   waving arm inside the circle at the top of its swing. */
+.fab {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, #ffffff 0%, #e9edf2 100%);
+  color: #fff;
+  border: 2px solid var(--ifm-color-primary);
   font-size: 22px;
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  transition: background 0.2s, transform 0.1s;
+  /* Size too, so swapping robot for ✕ shrinks the button rather than
+     snapping it to the smaller disc. */
+  transition: background 0.2s, transform 0.1s, width 0.18s ease, height 0.18s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .fab:hover {
-  background: #b80320;
   transform: scale(1.05);
 }
 
-/* The mark is 48 x 60, so height is what governs how big it looks. 34px keeps
-   it legible at 52px without crowding the circle's edge. */
+/* Bigger on a desktop, where there is room to spare and the robot's waving and
+   blinking deserve to be seen. Phones keep the smaller button, which already
+   covers enough of a narrow page. 997px is Infima's desktop breakpoint, the
+   same one at which the navbar stops collapsing. */
+@media (min-width: 997px) {
+  .fab {
+    width: 76px;
+    height: 76px;
+    border-width: 3px;
+  }
+}
+
+/* Open, the button shows ✕ and goes back to the plain red disc: the robot is
+   now in the panel header, and the white ✕ needs the red behind it. It also
+   shrinks, on every screen: the size is for the robot, and a ✕ that large
+   outweighs the panel it closes. After the desktop rule, so it wins there. */
+.fabOpen {
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+  background: var(--ifm-color-primary);
+}
+
+.fabOpen:hover {
+  background: #b80320;
+}
+
+/* The ✕ turns in as the robot leaves, and the robot pops back when the chat
+   closes, so the button changes rather than blinks from one face to the other. */
+.fabX {
+  display: block;
+  animation: fabXIn 0.18s ease-out both;
+}
+
+@keyframes fabXIn {
+  from { opacity: 0; transform: rotate(-90deg) scale(0.6); }
+  to   { opacity: 1; transform: none; }
+}
+
+.robotBack {
+  animation: robotBack 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes robotBack {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: none; }
+}
+
 .fabIcon {
-  height: 34px;
-  width: auto;
+  width: 100%;
+  height: 100%;
   display: block;
   pointer-events: none;
+}
+
+/* The robot's idle life. Every part animates with transform only, so it stays
+   on the compositor; transform-box makes each part turn about its own centre
+   rather than the SVG's origin. */
+.robotRise,
+.robotHead,
+.robotFace {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+/* Peeks up into the circle once, a moment after the page settles. Only on the
+   page load (.robotIntro): after the chat closes the robot is simply back. */
+.robotIntro .robotRise {
+  animation: robotRise 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s both;
+}
+
+/* Bobs gently, the neck staying put. */
+.robotHead {
+  transform-origin: 50% 100%;
+  animation: robotBob 3.2s ease-in-out 1.5s infinite;
+  transition: rotate 0.3s ease;
+}
+
+/* Blinks: the happy eyes squeeze shut and open again. A double blink now and
+   then reads as alive; a metronome does not. */
+.robotFace {
+  animation: robotBlink 5s ease-in-out 2s infinite;
+}
+
+/* Waves hello: the arm swings up about the shoulder, waves three times and
+   drops back. Three greetings after the page loads, then it stops: a figure
+   waving in the corner every few seconds pulls the eye off what the reader is
+   reading. After that it waves only when hovered. The arm's group sits at the
+   shoulder in its own coordinates, so the rotation pivots at 0 0 rather than
+   at its bounding box, which would move as the arm swings. */
+.robotArm {
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+.robotIntro .robotArm {
+  animation: robotWave 6s ease-in-out 1.6s 3;
+}
+
+/* After the intro's place in the cascade, so hovering mid-intro takes over. */
+.fab:hover .robotArm {
+  animation: robotHi 4.4s ease-in-out infinite;
+}
+
+/* Hover tilts the head, as if listening. `rotate` rather than `transform`, so
+   it composes with the bob instead of replacing it. */
+.fab:hover .robotHead {
+  rotate: -9deg;
+}
+
+@keyframes robotRise {
+  from { transform: translateY(45%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes robotBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-1.5px); }
+}
+
+/* Up to about 125°, not further: past that the forearm points straight out
+   of the circle's edge and reads as a stick. */
+@keyframes robotWave {
+  0%, 100% { transform: rotate(0deg); }
+  12%      { transform: rotate(125deg); }
+  18%      { transform: rotate(100deg); }
+  24%      { transform: rotate(127deg); }
+  30%      { transform: rotate(100deg); }
+  36%      { transform: rotate(125deg); }
+  48%      { transform: rotate(0deg); }
+}
+
+/* The hover wave: the arm comes up from rest (no snap), waves for 2.4s, then
+   rests for 2s before the next one, so a pointer left on the button gets a
+   greeting now and then rather than nonstop flapping. */
+@keyframes robotHi {
+  0%, 55%, 100% { transform: rotate(0deg); }
+  14%           { transform: rotate(125deg); }
+  20%           { transform: rotate(100deg); }
+  27%           { transform: rotate(127deg); }
+  34%           { transform: rotate(100deg); }
+  41%           { transform: rotate(125deg); }
+}
+
+@keyframes robotBlink {
+  0%, 86%, 90%, 94%, 100% { transform: scaleY(1); }
+  88%, 92%                { transform: scaleY(0.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .robotRise,
+  .robotHead,
+  .robotFace,
+  .robotArm,
+  .robotIntro .robotRise,
+  .robotIntro .robotArm,
+  .fab:hover .robotArm,
+  .robotBack,
+  .fabX {
+    animation: none;
+    transition: none;
+  }
+  .fab:hover .robotHead {
+    rotate: none;
+  }
 }
 
 .panel {
@@ -117,13 +365,23 @@
   min-width: 0;
 }
 
-/* The white mark, on the red header. Sized to the two stacked lines beside it
-   rather than to the launcher, where it is the only thing in the button. */
-.headerIcon {
-  height: 24px;
-  width: auto;
-  display: block;
+/* The robot, on the red header: the same light disc as the launcher, so its
+   red face does not vanish into the red behind it. Sized to the two stacked
+   lines beside it rather than to the launcher, where it is the only thing in
+   the button. */
+.headerAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, #ffffff 0%, #e9edf2 100%);
+  overflow: hidden;
   flex-shrink: 0;
+}
+
+.headerIcon {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* Title plus the beta note stack vertically; the close button stays on the right,
@@ -486,8 +744,7 @@
   }
 }
 
-/* Openers, parked between the scrolling message list and the input rather than
-   floating over either. Outlined instead of filled: three solid brand-red pills
+/* Openers, in the message list straight under the greeting. Outlined instead of filled: three solid brand-red pills
    would shout louder than the greeting they sit under, and these are an offer,
    not the main action. */
 .suggestions {
@@ -495,7 +752,6 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  padding: 0 12px 10px;
   flex-shrink: 0;
   /* Arrives just behind the greeting, as the second half of the same beat. */
   animation: greetingIn 0.24s cubic-bezier(0.2, 0.8, 0.3, 1) 0.28s both;
@@ -579,14 +835,17 @@
 }
 
 .inputRow button:disabled {
-  opacity: 0.5;
+  /* Grey, not faded red: a washed-out pink reads as broken, not as "type
+     something first". */
+  background: var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-600);
   cursor: default;
 }
 
 /* Phones. The wrapper gets both left and right insets so it spans the screen and
    the panel can simply be 100% wide; align-items: flex-end still parks the button
-   on the right. Height leaves room for the button (52) + gap + inset, plus a
-   little breathing space at the top. */
+   on the right. The open panel hides the button (see .fabOpen below), so its
+   height only leaves the 12px insets. */
 @media (max-width: 480px) {
   .wrapper {
     left: 12px;
@@ -595,10 +854,17 @@
     gap: 10px;
   }
 
+  /* On a phone the open chat is a sheet over the page, so the launcher's ✕
+     would only be a second close button a thumb away from the header's one.
+     It goes, and the panel takes its place at the bottom. */
+  .fabOpen {
+    display: none;
+  }
+
   .panel {
     width: 100%;
-    height: min(560px, calc(100vh - 96px));
-    height: min(560px, calc(100dvh - 96px));
+    height: min(640px, calc(100vh - 24px));
+    height: min(640px, calc(100dvh - 24px));
   }
 
   /* This rule is further down the file than the one at the top, so without it
@@ -606,8 +872,8 @@
      nothing on a phone. Width is already full here, so expanding means height:
      as much of the screen as the launcher and the margins leave. */
   .panelExpanded {
-    height: calc(100vh - 48px);
-    height: calc(100dvh - 48px);
+    height: calc(100vh - 24px);
+    height: calc(100dvh - 24px);
   }
 
   .messages {
@@ -628,4 +894,72 @@
   .headerTitle {
     font-size: 13px;
   }
+}
+
+/* The 👍 / 👎 row under an answer: quiet until hovered, so it does not compete
+   with the answer or its sources for attention. */
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  margin-top: 8px;
+}
+
+.feedbackBtn {
+  padding: 2px 6px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: none;
+  font-size: 15px;
+  line-height: 1.2;
+  cursor: pointer;
+  opacity: 0.55;
+  filter: grayscale(0.6);
+  transition: opacity 0.15s, filter 0.15s, border-color 0.15s;
+}
+
+.feedbackBtn:hover,
+.feedbackBtn:focus-visible {
+  opacity: 1;
+  filter: none;
+  border-color: var(--ifm-toc-border-color);
+}
+
+.feedbackThanks {
+  font-size: 12px;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.feedbackComment {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+}
+
+.feedbackComment input {
+  flex: 1;
+  min-width: 0;
+  padding: 5px 8px;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color, #fff);
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+}
+
+.feedbackComment button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.feedbackComment button:disabled {
+  opacity: 0.4;
+  cursor: default;
 }

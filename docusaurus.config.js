@@ -65,6 +65,25 @@ const config = {
     // own static assets and 404. Override with CHAT_API_URL to point a local
     // build at a preview deployment.
     chatApiUrl: process.env.CHAT_API_URL || 'https://docs-chatbot-beta.vercel.app/api/chat',
+    // Where the chat's 👍 / 👎 ratings go: the Google Form "CHATBOT - Reviews",
+    // whose responses are linked to a sheet. Public by nature, since the
+    // browser posts to it directly. The entry ids are the form's question ids;
+    // if a question is ever deleted and re-added, read the new ones from the
+    // FB_PUBLIC_LOAD_DATA_ blob in the form's viewform page. Remove this to
+    // hide the rating buttons.
+    feedbackForm: {
+      url: 'https://docs.google.com/forms/d/e/1FAIpQLScSNygjUGgiHQYKgqaKaT3XUU8gGsVEuktoLf6SJaIDjfQS5A/formResponse',
+      fields: {
+        id: 'entry.1430143637',
+        rating: 'entry.1603480026',
+        comment: 'entry.230237756',
+        question: 'entry.1941598886',
+        answer: 'entry.1428581215',
+        sources: 'entry.1229661556',
+        page: 'entry.1911132568',
+        locale: 'entry.232482553',
+      },
+    },
   },
 
   // Organization structured data (schema.org JSON-LD) — consistent across HARDWARIO sites

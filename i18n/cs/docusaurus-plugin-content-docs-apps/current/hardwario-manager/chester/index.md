@@ -9,7 +9,7 @@ title_meta: "CHESTER (HARDWARIO Manager)"
 
 Zařízení CHESTER se spravuje přes **Bluetooth Low Energy**. Připojte k němu
 telefon a můžete přečíst jeho stav, upravit konfiguraci, ovládat jeho shell,
-navázat externí senzorové BLE tagy, aktualizovat firmware a restartovat ho.
+přiřadit externí senzorové tagy BLE, aktualizovat firmware a restartovat ho.
 
 Otevřete **HARDWARIO Manager** a zvolte **CHESTER**.
 
@@ -25,13 +25,13 @@ Otevřete **HARDWARIO Manager** a zvolte **CHESTER**.
 | [**Configuration**](./configuration.md) | Čtení a úprava konfigurace zařízení |
 | [**Open Terminal**](./terminal.md) | Odesílání příkazů shellu do konzole zařízení |
 | [**Tools**](./tools.md) | Aktualizace firmwaru, restart, factory reset |
-| [**BLE tags**](./ble-tags.md) | Navázání externích senzorových BLE tagů do slotů a čtení jejich hodnot |
+| [**BLE tags**](./ble-tags.md) | Přiřazení externích senzorových tagů BLE ke slotům a čtení jejich hodnot |
 
 ---
 
 ## Karta připojeného zařízení {#the-connected-device-card}
 
-Nad menu pojmenovává **Connected CHESTER** zařízení, ke kterému jste připojení.
+Nad menu ukazuje **Connected CHESTER** název zařízení, ke kterému jste připojeni.
 Jeho šipka rozbalí souhrn (firmware, sériové číslo, BLE adresu a dobu běhu,
 **podle stavu při posledním připojení**) a **Disconnect** spojení ukončí.
 
@@ -39,8 +39,8 @@ Jeho šipka rozbalí souhrn (firmware, sériové číslo, BLE adresu a dobu běh
 
 :::info Jedno zařízení naráz, a jen dokud je obrazovka otevřená
 Aplikace drží **jedno** připojení k zařízení CHESTER a to patří obrazovce CHESTER.
-Opuštěním obrazovky se zařízení odpojí. Pro opětovné připojení nabídne průvodce
-nastavením zařízení znovu pod **Recent devices**.
+Opuštěním obrazovky se zařízení odpojí. Když se budete chtít znovu připojit, průvodce
+nastavením vám zařízení nabídne v seznamu **Recent devices**.
 :::
 
 ---
@@ -49,9 +49,9 @@ nastavením zařízení znovu pod **Recent devices**.
 
 - Bluetooth musí být zapnutý a aplikace potřebuje oprávnění k **zařízením
   v okolí**, viz [**Instalace aplikace**](../install.md).
-- Párování používá šestimístný **passkey** svázaný se zařízením. Naskenování QR
-  kódu na etiketě zařízení CHESTER je cesta, která ho za vás načte.
+- Párování používá šestimístný **passkey** svázaný se zařízením. Aplikace ho načte
+  za vás, když naskenujete QR kód na štítku zařízení CHESTER.
 - Držte telefon blízko zařízení. Většina problémů s připojením je otázka dosahu
   nebo zastaralého párování, viz [**Řešení problémů**](./troubleshooting.md).
 
-Začněte u [**Připojení a párování**](./connect.md).
+Začněte stránkou [**Připojení a párování**](./connect.md).

@@ -5,11 +5,11 @@ title: Autentizace
 # Autentizace {#authentication}
 
 Každý požadavek se autentizuje pomocí **API klíče** posílaného v hlavičce `X-API-KEY`.
-API klíče jsou **vázané na Space** a klíč lze pomocí **tagů** omezit na konkrétní zařízení.
+API klíče jsou **vázané na prostor** a klíč lze pomocí **tagů** omezit na konkrétní zařízení.
 
 **Vytvoření klíče v HARDWARIO Cloud:**
 
-1. Otevřete svůj Space, v levém panelu přejděte na **API Keys** a klikněte na **+ NEW KEY**.
+1. Otevřete svůj prostor, v levém panelu přejděte na **API Keys** a klikněte na **+ NEW KEY**.
 
    ![Stránka API Keys s tlačítkem „+ NEW KEY“](../../../../../cloud/api/images/api-keys-list.png)
 

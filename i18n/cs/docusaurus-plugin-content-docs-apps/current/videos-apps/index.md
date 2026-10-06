@@ -6,17 +6,17 @@ description: "Videonávody a podrobné postupy pro nasazení zařízení HARDWAR
 
 import Image from '@theme/IdealImage';
 
-# Videotutoriály {#video-tutorials}
+# Videonávody {#video-tutorials}
 
-Na této stránce najdete komplexní sbírku technických návodů a videonávodů, které vám pomohou s kompletním nasazením řešení HARDWARIO, od zprovoznění zařízení na nízké úrovni a konfigurace brány až po bezpečnou integraci dat s externími IoT platformami a vizualizačními dashboardy.
+Na této stránce najdete technické návody a videonávody k celému nasazení řešení HARDWARIO, od nízkoúrovňového zprovoznění zařízení a konfigurace brány až po bezpečnou integraci dat s externími IoT platformami a vizualizačními dashboardy.
 
 ---
 
 ## ThingsBoard {#thingsboard}
 
-Zde najdete podrobné návody a videonávody, které vám pomohou nastavit zařízení v ThingsBoard, propojit je s HARDWARIO Cloud a vytvořit dashboardy pro vizualizaci vašich IoT dat.
+Zde najdete podrobné návody a videonávody, které vám pomohou nastavit zařízení v ThingsBoard, propojit je s HARDWARIO Cloud a vytvořit dashboardy, ve kterých svá IoT data zobrazíte.
 
-| Tutoriál                                   | Podrobný návod                          | Videotutoriál                           |
+| Téma                                       | Podrobný návod                          | Videonávod                              |
 |--------------------------------------------|-----------------------------------------|-----------------------------------------|
 | **Jak vytvořit nové zařízení**     | [Návod](/apps/thingsboard/creating-device) | [Video](/apps/videos-apps/thingsboard-new-device) |
 | **Jak se připojit k HARDWARIO Cloud**           | [Návod](/apps/thingsboard/cloud-connection) | [Video](/apps/videos-apps/thingsboard-cloud-connection) |
@@ -28,7 +28,7 @@ Zde najdete podrobné návody a videonávody, které vám pomohou nastavit zař�
 
 Zde najdete podrobné návody, které vám pomohou nakonfigurovat ChirpStack v4.
 
-| Tutoriál | Podrobný návod | Videotutoriál |
+| Téma | Podrobný návod | Videonávod |
 |-----------|--------------------|----------------|
 | **EMBER (brány)** | [Návod](/apps/chirpstack/chirpstack-configuration/chirpstack-gateways) | [Video](/apps/videos-apps/chirpstack-ember) |
 | **Koncová zařízení** | [Návod](/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices) | [Video](/apps/videos-apps/chirpstack-devices) |
@@ -40,7 +40,7 @@ Zde najdete podrobné návody, které vám pomohou nakonfigurovat ChirpStack v4.
 
 Zde najdete podrobné návody a videonávody, které vám pomohou nakonfigurovat The Things Stack.
 
-| Tutoriál | Podrobný návod | Videotutoriál |
+| Téma | Podrobný návod | Videonávod |
 |-----------|--------------------|----------------|
 | **Brány** | [Návod](/apps/the-things-stack/tts-configuration/tts-gateways) | [Video](/apps/videos-apps/tts-gateways) |
 | **Koncová zařízení** | [Návod](/apps/the-things-stack/tts-configuration/tts-end-devices) | [Video](/apps/videos-apps/tts-end-devices) |

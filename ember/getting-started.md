@@ -169,7 +169,7 @@ Enables DHCP client on ether1 (WAN) for internet connectivity.
 - In the left panel **IP → DHCP Client → New**, select **ether1** as interface and click **OK**.
 ![EMBER ether1 dhcp client](images/ember-ether1-dhcp-client.png) 
 
-Turn on welcome note.
+Turns off the login note.
 - In the left panel **System → Note**, uncheck **Show At Login** and click **OK**.
 ![EMBER ether3 add to bridge0](images/ember-note.png)
 
@@ -225,7 +225,7 @@ What the service typically provides:
 - **Node-RED**: data processing, payload decoding, and forwarding  
 - Preconfigured connectivity between the gateway, LNS, and integrations
 
-Around EMBER, HARDWARIO also optionally provides a **SIM card with connectivity** for the LTE backhaul and **secure remote access via OpenVPN**.
+Alongside EMBER, HARDWARIO optionally also provides a **SIM card with connectivity** for the LTE backhaul and **secure remote access via OpenVPN**.
 
 Recommended if you want to **get data from devices quickly** and forward it to applications or dashboards.
 

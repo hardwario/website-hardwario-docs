@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Krabičky {#enclosures}
 
-Standardní krabička pro CHESTER se dodává ve dvou barvách – světle šedé a tmavě šedé. Krabička má rozměry 130x175x45 mm a krytí IP67.
+Standardní krabička pro CHESTER se dodává ve dvou barvách: světle šedé a tmavě šedé. Krabička má rozměry 130x175x45 mm a krytí IP67.
 
 Namontovat ji lze pomocí:
 
@@ -17,7 +17,7 @@ Namontovat ji lze pomocí:
 
 :::tip
 
-Zařízení CHESTER můžete umístit i do alternativní krabičky. HARDWARIO vyrábí nosné desky pro větší krabičky – ty mohou přinést výhodu větších bateriových packů a dalších elektrických rozhraní. Viz článek [**Power Management**](../power-management.md).
+Zařízení CHESTER můžete umístit i do alternativní krabičky. HARDWARIO vyrábí nosné desky pro větší krabičky, které umožňují použít větší bateriové packy a další elektrická rozhraní. Viz článek [**Správa napájení**](../power-management.md).
 
 :::
 
@@ -52,7 +52,7 @@ Vysvětlení přípon:
 - `-L` Krabička ve světlé barvě
 - `-D` Krabička v tmavé barvě
 - `-H` UV tištěné logo HARDWARIO
-- `-P` Pigtail u.FL/SMA pro externí antenu
+- `-P` Pigtail u.FL/SMA pro externí anténu
 
 ### CHESTER-E1-P {#chester-e1-p}
 

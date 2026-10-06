@@ -32,28 +32,28 @@ Pro vyšší bezpečnost doporučujeme ověřování přes **Google** nebo **Mic
 
 ---
 
-## Krok 2: Vytvořte si Space {#step-2-create-your-space}
+## Krok 2: Vytvořte si prostor {#step-2-create-your-space}
 
 1. V pravém horním rohu klikněte na **SPACES → NEW SPACE**  
 2. Pojmenujte svůj prostor (například: `my-home`, `office-sensors`, `warehouse`)  
-3. Právě sem budou patřit vaše **zařízení CHESTER**.
+3. Do tohoto prostoru budete přidávat svá **zařízení CHESTER**.
 
 :::caution
-Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**](/cloud/#naming-conventions).
+Při vytváření prostoru se prosím řiďte našimi [**konvencemi pojmenování**](/cloud/#naming-conventions).
 :::
 
 ---
 
 ## Krok 3: Přidejte zařízení {#step-3-add-a-device}
 
-1. Vyberte svůj **Space**  
+1. Vyberte svůj prostor (**Space**)  
 2. Přejděte na **DEVICES → +NEW DEVICE**  
-3. Zadejte informace o svém zařízení **CHESTER**: můžete zvolit jednu z následujících možností:
+3. Zadejte údaje o svém zařízení **CHESTER**, a to jedním z těchto způsobů:
 
-   **Možnost 1 – Naskenujte QR kód:**  
-   Použijte funkci **`⛶ SCAN DEVICE`** v HARDWARIO Cloud a **naskenujte QR kód** na svém zařízení CHESTER a všechny **informace** se **vyplní automaticky**!  
+   **Možnost 1: naskenujte QR kód**  
+   Funkcí **`⛶ SCAN DEVICE`** v HARDWARIO Cloud **naskenujte QR kód** na zařízení CHESTER. Všechny **údaje** se pak **vyplní automaticky**.  
 
-   **Možnost 2 – Ručně:**  
+   **Možnost 2: ručně**  
    Zařízení můžete přidat ručně vyplněním následujících polí:  
    - **Name**  
    - **HARDWARIO Serial Number (HSN)**  
@@ -64,7 +64,7 @@ Při vytváření space se prosím řiďte našimi [**konvencemi pojmenování**
 :::
 
 
-4. Uložte: vaše zařízení CHESTER je nyní **zaregistrované v cloudu**!
+4. Zařízení uložte. CHESTER je teď **zaregistrovaný v cloudu**.
 
 :::tip
 **Potřebujete více podrobností?**  
@@ -79,7 +79,7 @@ Nebo se podívejte na náš **videonávod**, jak přidat zařízení CHESTER do 
 
 ---
 
-## Krok 4: Zapněte napájení zařízení CHESTER {#step-4-power-up-your-chester}
+## Krok 4: Zapněte zařízení CHESTER {#step-4-power-up-your-chester}
 
 :::caution
 > **Důležité:** Přidejte zařízení do cloudu **před jeho zapnutím.**  
@@ -104,7 +104,7 @@ Nebo se podívejte na náš **videonávod**, jak přidat zařízení CHESTER do 
 Pokud má zařízení stále problém s připojením k síti (zejména při použití vlastní SIM karty nebo roamingu):
 
 * **Zkontrolujte režim sítě:** Podle regionu může být potřeba vynutit konkrétní režim, například **NB-IoT** nebo **LTE-M**. Podrobnosti viz [**průvodce nastavením SIM karty**](/chester/platform-connectivity/cellular-networks/sim-card-setup).
-* **Zkontrolujte APN/PLMN:** Pokud jste mimo Českou republiku nebo používáte SIM jiného operátora než Vodafone, nastavte správně PLMN a APN podle [**průvodce nastavením SIM karty**](/chester/platform-connectivity/cellular-networks/sim-card-setup), případně viz referenci [**konfiguračních parametrů**](/chester/platform-connectivity/cellular-networks/configuration-parameters).
+* **Zkontrolujte APN/PLMN:** Pokud jste mimo Českou republiku nebo používáte SIM jiného operátora než Vodafone, nastavte správně PLMN a APN podle [**průvodce nastavením SIM karty**](/chester/platform-connectivity/cellular-networks/sim-card-setup), případně se podívejte do přehledu [**konfiguračních parametrů**](/chester/platform-connectivity/cellular-networks/configuration-parameters).
 * **Veřejná IP pro Cloud v2:** Při použití vlastní SIM karty musíte také nastavit [**správné parametry IP a portu**](/chester/firmware-sdk/how-to-lte-v2#ip-and-port) pro kompatibilitu s Cloud v2.
 
 ---
@@ -116,7 +116,7 @@ Pokud má zařízení stále problém s připojením k síti (zejména při pou�
 - **Žádné blikání /** [**jiné barvy**](/chester/catalog-applications/common-functionality/#led-behaviour) → stále se připojuje nebo došlo k chybě. Zkontrolujte SIM, pokrytí sítě nebo napájení  
 
 :::info
-Podrobnosti o všech barevných stavech LED a jejich význam najdete v [**dokumentaci chování LED**](/chester/catalog-applications/common-functionality/#led-behaviour).
+Podrobnosti o všech barevných stavech LED a jejich významu najdete v [**dokumentaci chování LED**](/chester/catalog-applications/common-functionality/#led-behaviour).
 :::
 
 ## Krok 6: Podívejte se na data v cloudu {#step-6-see-your-data-in-the-cloud}
@@ -134,13 +134,13 @@ Po připojení můžete:
 - Použít [**HARDWARIO Manager**](/chester/platform-connectivity/hardwario-manager) (mobilní aplikace přes BLE)
 - Použít [**HARDWARIO Monitor**](/chester/platform-connectivity/hardwario-monitor) (J-Link nebo BLE z počítače)
 - Použít [**HARDWARIO Terminal**](/chester/platform-connectivity/hardwario-terminal) (prohlížeč Google Chrome přes WebSerial/WebBluetooth)
-- Přistupovat ke [**vzdálenému shellu**](/cloud/downlink/shell) a provádět i [**aktualizace firmwaru vzduchem**](/cloud/firmware)
+- Přistupovat ke [**vzdálenému shellu**](/cloud/downlink/shell) a provádět i [**bezdrátové aktualizace firmwaru**](/cloud/firmware)
 
 ---
 
 ## Krok 8: Zkontrolujte a aktualizujte firmware zařízení CHESTER {#step-8-check-and-update-chester-firmware}
 
-Vždy je dobré se ujistit, že vaše zařízení CHESTER běží na **nejnovější verzi firmwaru**.
+Vyplatí se ověřit, že v zařízení CHESTER běží **nejnovější verze firmwaru**.
 
 ### Kontrola verze firmwaru {#check-firmware-version}
 Zkontrolovat ji můžete třemi způsoby:
@@ -167,15 +167,15 @@ Zkontrolovat ji můžete třemi způsoby:
    - V terminálu uvidíte informace o firmwaru a aplikaci
 
 ### Stažení nejnovějšího firmwaru {#download-the-latest-firmware}
-Nejnovější buildy firmwaru najdete vždy zde:  
-👉 [**Dostupné buildy aplikačního firmwaru**](/chester/catalog-applications/catalog-applications#application-firmware)
+Nejnovější sestavení firmwaru najdete vždy zde:  
+👉 [**Dostupná sestavení aplikačního firmwaru**](/chester/catalog-applications/catalog-applications#application-firmware)
 
 :::info
  Tabulka firmwaru je řazená podle typu zařízení CHESTER, proto vyberte správný typ pro své zařízení.
 :::
 
 ### Aktualizace firmwaru {#update-firmware}
-Pokud je dostupná novější verze, můžete ji aktualizovat jednou z těchto metod:
+Pokud je dostupná novější verze, můžete firmware aktualizovat jedním z těchto způsobů:
 
 1. **Aktualizace přes HARDWARIO Manager (mobilní aplikace)**
 

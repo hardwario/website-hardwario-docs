@@ -1,12 +1,12 @@
 ---
 slug: /legacy
 title: Starší verze (Cloud v1)
-description: "Referenční dokumentace ke starší verzi HARDWARIO Cloud v1. Aktuální platformu popisuje hlavní dokumentace HARDWARIO Cloud."
+description: "Referenční dokumentace ke starší verzi HARDWARIO Cloud v1; aktuální platformu popisuje hlavní dokumentace HARDWARIO Cloud."
 ---
 
-# Legacy – HARDWARIO Cloud v1 {#legacy--hardwario-cloud-v1}
+# Starší verze – HARDWARIO Cloud v1 {#legacy--hardwario-cloud-v1}
 
-Referenční dokumentace pro starší **HARDWARIO Cloud v1**. Aktuální platformu najdete v hlavní
+Referenční dokumentace ke starší verzi **HARDWARIO Cloud v1**. Aktuální platformu najdete v hlavní
 dokumentaci [**HARDWARIO Cloud**](/cloud/).
 
 - [**Úvod**](/cloud/introduction): úvod do Cloud v1, základní funkce a zabezpečení.

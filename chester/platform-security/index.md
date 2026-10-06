@@ -2,7 +2,7 @@
 slug: platform-security
 title: Platform Security
 sidebar_label: Platform Security
-description: "This article provides a basic security overview of the CHESTER platform. The article is split into multiple chapters, which describe individual domains."
+description: "Basic security overview of the CHESTER platform: physical security, Bluetooth, LTE and IPsec, device communication and HARDWARIO Cloud."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +12,7 @@ This article provides a basic security overview of the **CHESTER** platform. The
 
 ## Physical Security
 
-For the **CHESTER** hardware device itself, this domain is solely on customer's responsibility. However, the cryptographic keys (e.g., for the **SIM card**) are protected by smartcard platform chips.
+For the **CHESTER** hardware device itself, this domain is solely the customer's responsibility. However, the cryptographic keys (e.g., for the **SIM card**) are protected by smartcard platform chips.
 
 :::tip
 

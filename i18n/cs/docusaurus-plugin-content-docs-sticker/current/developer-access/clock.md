@@ -24,7 +24,7 @@ Hodiny RTC lze synchronizovat třemi nezávislými způsoby:
 2. **Lokální synchronizace přes šifrované NFC:**
    - Při konfiguraci aplikací **HARDWARIO Manager** v telefonu může systémový čas telefonu automaticky nastavit hodiny RTC zařízení STICKER přes NFC.
 
-3. **Vzdálené a příkazy shellu:**
+3. **Příkazy shellu a vzdálené příkazy:**
    - Čas lze zjistit nebo ručně nastavit vývojářskými příkazy shellu, případně vzdáleně downlink příkazy LoRaWAN na **fPort 85**.
 
 ---

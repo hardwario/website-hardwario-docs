@@ -1,7 +1,7 @@
 ---
 slug: /api-spec
 title: Specifikace MQTT API
-description: "Zařízení TAPPER může komunikovat přes MQTT pomocí JSON zpráv."
+description: "Zařízení TAPPER může komunikovat přes MQTT pomocí zpráv JSON."
 ---
 
 import Image from '@theme/IdealImage';

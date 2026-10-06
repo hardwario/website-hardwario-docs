@@ -44,7 +44,7 @@ Because it unlocks re-keying and the deepest reset, the vendor token is never ne
 
 ### Pulse counters persist across power loss
 
-The hall and input pulse totalizers are saved to flash and restored on boot, so a battery swap, brownout, or reset no longer resets a metering total to zero.
+The Hall and input pulse totalizers are saved to flash and restored on boot, so a battery swap, brownout, or reset no longer resets a metering total to zero.
 
 ### Sensor history (store-and-forward)
 

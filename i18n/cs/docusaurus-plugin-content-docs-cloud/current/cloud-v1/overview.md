@@ -1,12 +1,13 @@
 ---
 slug: overview
 title: Přehled
+description: "Struktura starší verze HARDWARIO Cloud v1: konfigurace uživatelů, skupiny, callbacky, zařízení a zprávy."
 ---
 import Image from '@theme/IdealImage';
 
-# Přehled CLOUD {#cloud-overview}
+# Přehled cloudu {#cloud-overview}
 
-[**HARDWARIO Cloud**](https://hardwario.cloud) umožňuje uživatelům spravovat jejich zařízení.
+V [**HARDWARIO Cloud**](https://hardwario.cloud) spravují uživatelé svá zařízení.
 
 **HARDWARIO Cloud** má tuto strukturu:
 

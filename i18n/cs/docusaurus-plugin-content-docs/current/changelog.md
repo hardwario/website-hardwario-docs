@@ -3,7 +3,7 @@ slug: changelog
 title: CHESTER – seznam změn
 toc_min_heading_level: 2
 toc_max_heading_level: 2
-description: "Tato stránka sleduje všechny významné změny na platformě CHESTER včetně firmwaru, hardwaru a katalogových aplikací."
+description: "Přehled všech významných změn platformy CHESTER včetně firmwaru, hardwaru a katalogových aplikací."
 ---
 
 import Tabs from '@theme/Tabs';

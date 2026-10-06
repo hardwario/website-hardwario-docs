@@ -35,7 +35,7 @@ title: Instalace Node-RED
 ## Zabezpečení a tok dat {#hardening--data-flow}
 
 1. Nastavte explicitní tajný klíč pro šifrování přihlašovacích údajů. Bez něj Node-RED generuje nový
-   při každém restartu a všechny uložené přihlašovací údaje flows se stanou neobnovitelnými. V souboru
+   při každém restartu a přihlašovací údaje uložené ve flows už nepůjde obnovit. V souboru
    `~/.node-red/settings.js` odkomentujte a nastavte:
 
    ```js
@@ -43,7 +43,7 @@ title: Instalace Node-RED
    ```
 
 1. Zabezpečte editor. **Ve výchozím stavu je zcela otevřený**. Samotný instalační výstup Node-RED
-   výslovně varuje před jeho nezabezpečeným vystavením. Vygenerujte hash hesla:
+   výslovně varuje, aby editor nebyl bez zabezpečení přístupný ze sítě. Vygenerujte hash hesla:
 
    ```sh
    node-red admin hash-pw
@@ -75,7 +75,7 @@ title: Instalace Node-RED
 
    :::tip
 
-   Restart je nutný, protože Node-RED za běhu nenahrává nově nainstalované typy nodes.
+   Restart je nutný, protože Node-RED za běhu nenačítá nově nainstalované typy uzlů.
 
    :::
 

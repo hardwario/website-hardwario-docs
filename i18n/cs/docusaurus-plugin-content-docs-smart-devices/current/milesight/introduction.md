@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Milesight {#milesight}
 
-[Milesight](https://www.milesight.com/iot-solutions) je rychle rostoucí high-tech společnost dodávající chytré IoT produkty a řešení pro video dohled se zaměřením na **AIoT (Artificial Intelligence of Things)**. Její řešení kombinují spolehlivou konektivitu s nejmodernějšími senzorickými technologiemi pro digitalizaci fyzických prostor.
+[Milesight](https://www.milesight.com/iot-solutions) je rychle rostoucí high-tech společnost dodávající chytré IoT produkty a řešení pro videodohled se zaměřením na **AIoT (Artificial Intelligence of Things)**. Její řešení kombinují spolehlivou konektivitu s nejmodernějšími senzorickými technologiemi pro digitalizaci fyzických prostor.
 
 ---
 

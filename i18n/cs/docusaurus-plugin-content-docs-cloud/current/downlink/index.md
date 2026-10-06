@@ -13,6 +13,6 @@ druhy downlink zpráv:
 - [**Shell**](shell.md): spouštění příkazů shellu a čtení jejich odpovědí.
 
 Chcete-li z webového rozhraní odeslat downlink typu **Data** nebo **Config**, otevřete zprávy zařízení a klikněte
-na **+&nbsp;SCHEDULE DOWNLINK** v pravém horním rohu. Protože zařízení obvykle spí, aby šetřilo
-energii, je downlink **zařazen do fronty** a doručen při příštím startu, odeslání uplinku nebo dotazu
-do Cloudu, odpověď se proto nemusí objevit okamžitě.
+na **+&nbsp;SCHEDULE DOWNLINK** v pravém horním rohu. Zařízení kvůli úspoře energie obvykle spí, proto se downlink
+**zařadí do fronty** a doručí se při příštím startu zařízení, odeslání uplinku nebo dotazu
+do Cloudu. Odpověď se tedy nemusí objevit okamžitě.

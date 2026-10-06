@@ -52,11 +52,11 @@ Zařízení STICKER se dodává s předinstalovanou jednou z katalogových aplik
 1. **Otevřete krabičku** a vložte dvě baterie AA podle značek polarity.
 2. Sledujte **startovní sekvenci LED**: červená (0,5 s) → žlutá (0,5 s) → zelená (1,5 s).
 
-:::info Výchozí stav z výroby: radio vypnuté
-Od firmwaru **v1.4.0** se zařízení STICKER dodává s vypnutým rádiem (`radio-mode` vypnutý), aby se baterie nevybíjela během přepravy. Zařízení se po vložení baterií **nepokusí** připojit k LoRaWAN. Mlčí, dokud ho v kroku 3 neaktivujete přes NFC.
+:::info Výchozí stav z výroby: rádio vypnuté
+Od firmwaru **v1.4.0** se zařízení STICKER dodává s vypnutým rádiem (`radio-mode` vypnutý), aby se baterie nevybíjela během přepravy. Zařízení se po vložení baterií **nepokusí** připojit k síti LoRaWAN. Mlčí, dokud ho v kroku 3 neaktivujete přes NFC.
 :::
 
-3. **Signalizace stavovou LED:** Po startu bude LED blikat **1× žlutě každé 3 sekundy**, což znamená, že zařízení běží normálně, ale radio je vypnuté.
+3. **Signalizace stavovou LED:** Po startu bude LED blikat **1× žlutě každé 3 sekundy**, což znamená, že zařízení běží normálně, ale rádio je vypnuté.
 
 ---
 
@@ -72,7 +72,7 @@ Začněte [**rychlým průvodcem HARDWARIO Manager**](/apps/hardwario-manager/fi
 
 1. **Nainstalujte aplikaci** a zapněte **NFC**. STICKER se konfiguruje z telefonu s Androidem.
 2. **Přidejte zařízení** do seznamu **Saved STICKERs**, aby aplikace měla jeho **secret key**, protože STICKER odpovídá jen šifrovaným kanálem.
-3. **Přečtěte klíče.** Otevřete **STICKER → LoRaWAN keys** a přiložte telefon k zařízení. Zapište si **DevEUI**, **JoinEUI (AppEUI)** a **AppKey** pro OTAA, nebo **DevAddr** a klíče session pro ABP.
+3. **Přečtěte klíče.** Otevřete **STICKER → LoRaWAN keys** a přiložte telefon k zařízení. Zapište si **DevEUI**, **JoinEUI (AppEUI)** a **AppKey** pro OTAA, nebo **DevAddr** a klíče relace pro ABP.
 4. **Zapište konfiguraci.** Otevřete **STICKER → Configuration**, v sekci **LoRaWAN** nastavte region, režim aktivace a klíče, přepněte **`radio-mode`** na LoRaWAN a dalším přiložením konfiguraci zapište zpět.
 
 ### Kde je který krok popsaný {#where-each-step-is-documented}
@@ -93,7 +93,7 @@ Začněte [**rychlým průvodcem HARDWARIO Manager**](/apps/hardwario-manager/fi
 |---|---|---|
 | **Deset zelených bliknutí** | Konfigurace byla aplikována | Nic. Zápis se povedl |
 | **Rychlé červené blikání zhruba 2 sekundy** | **Přiložení bylo odmítnuto.** Aplikace použila špatný **secret key** nebo token, nebo byl požadavek zopakovaný či poškozený. Do zařízení se **nic nezapsalo** | Zkontrolujte, že je zařízení uložené se správným secret key v [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), a přiložte telefon znovu |
-| Heartbeat se změní z **1× žluté** na **žlutou + červenou** | Radio je zapnuté a zařízení se připojuje | Počkejte. Připojení může vyžadovat několik pokusů |
+| Heartbeat se změní z **1× žluté** na **žlutou + červenou** | Rádio je zapnuté a zařízení se připojuje | Počkejte. Připojení může vyžadovat několik pokusů |
 | Heartbeat se ustálí na **1× zelené** | Připojeno. Zařízení odesílá payload **Device Info on Join** | Nic. Zařízení je v provozu |
 
 ---
@@ -118,10 +118,10 @@ Po registraci a připojení:
 
 - **Zkontrolujte uplinky:** Ověřte, že na dashboard vašeho LNS dorazil počáteční uplink **Device Info** (verze firmwaru, stav baterie, příčina resetu) i pravidelné pakety s daty ze senzorů.
 - **Zkontrolujte stav LED:** Jedno zelené bliknutí každé 3 sekundy potvrzuje kvalitní spojení se sítí a bezproblémový provoz.
-- **Upravte intervaly:** Vzorkovací a uplinkové intervaly dolaďte přes NFC v aplikaci [**HARDWARIO Manager**](/sticker/hardwario-manager/) nebo downlink příkazy LoRaWAN (fPort 85).
+- **Upravte intervaly:** Vzorkovací a uplinkové intervaly dolaďte přes NFC v aplikaci [**HARDWARIO Manager**](/sticker/hardwario-manager/) nebo příkazy přes downlink LoRaWAN (fPort 85).
 
 :::info Zapojení vstupů STICKER Input
-Pokud používáte **STICKER Input**, projděte si před připojením externích sond pokyny ke svorkovnici a DIP přepínačům: [průvodce zapojením STICKER Input](sticker-input-wiring/index.md).
+Pokud používáte **STICKER Input**, projděte si před připojením externích sond pokyny ke svorkovnici a přepínačům DIP: [průvodce zapojením STICKER Input](sticker-input-wiring/index.md).
 :::
 
 ---
@@ -131,24 +131,24 @@ Pokud používáte **STICKER Input**, projděte si před připojením externích
 LED je jediná zpětná vazba, kterou STICKER na místě dává, takže je nejrychlejší
 cestou, jak zjistit, co jednotka dělá. Tabulky níže uvádějí všechny vzory ve
 **firmwaru v1.4.0**. Většina bliknutí je kvůli úspoře baterie záměrně velmi krátká
-(5–10 ms), čekejte tedy spíš záblesk než pohodlné bliknutí. Úplnou referenci
+(5–10 ms), čekejte tedy spíš krátký záblesk než zřetelné bliknutí. Úplnou referenci
 s časováním najdete v [**signalizaci LED**](/sticker/hardware-description/#led-indication).
 
 ### Stavový heartbeat – jeden vzor každé 3 sekundy {#status-heartbeat--one-pattern-every-3-seconds}
 
 Vždy se ukáže jen jeden vzor. Firmware tyto stavy kontroluje v uvedeném pořadí a
-**první shoda vyhrává**, takže závažnější stav překryje méně závažný.
+**platí první shoda**, takže závažnější stav překryje méně závažný.
 
 | Vzor LED | Co znamená | Co dělat |
 |---|---|---|
 | **1× zelená** | Normální provoz, připojeno a v pořádku | Nic. To je cílový stav |
 | **Zelená, pak žlutá** | Totéž, ale jednotka běží na **debugovacím** sestavení firmwaru | Na vývojových jednotkách očekávané; pro nasazení nahrajte sestavení release |
 | **1× červená** | **Je aktivní alarm** | Přečtěte aktivní alarmy v [**Informacích o zařízení**](/apps/hardwario-manager/sticker/device-info) a projděte [**pravidla alarmů**](developer-access/alarm-rules.md) |
-| **1× žlutá** | **Radio vypnuté** parametrem `radio-mode`. Výchozí stav z výroby | Zapište konfiguraci LoRaWAN se zapnutým rádiem (krok 3) |
-| **2× žlutá**, ~200 ms od sebe | **Zhoršené spojení**. Kontroly spojení selhávají, ale session stále žije | Zkontrolujte pokrytí bránou a umístění antény; jakmile se spojení vrátí, zařízení se zotaví samo |
-| **1× žlutá, pak 1× červená** ~200 ms poté | **Připojuje se nebo se připojuje znovu** a od sítě nedostává odpověď | Zkontrolujte blízkost brány, frekvenční plán / region a shodu DevEUI, JoinEUI a AppKey se síťovým serverem |
+| **1× žlutá** | **Rádio vypnuté** parametrem `radio-mode`. Výchozí stav z výroby | Zapište konfiguraci LoRaWAN se zapnutým rádiem (krok 3) |
+| **2× žlutá**, ~200 ms od sebe | **Zhoršené spojení**. Kontroly spojení selhávají, ale relace stále trvá | Zkontrolujte pokrytí bránou a umístění antény; jakmile se spojení vrátí, zařízení se zotaví samo |
+| **1× žlutá, pak 1× červená** ~200 ms poté | **Připojuje se nebo znovu připojuje** a od sítě nedostává odpověď | Zkontrolujte blízkost brány, frekvenční plán / region a shodu DevEUI, JoinEUI a AppKey se síťovým serverem |
 | **Červená a žlutá střídavě, dvakrát** | **Uloženou konfiguraci nešlo načíst**. Identita i zprovoznění jsou pryč a zařízení běží na výchozích hodnotách z výroby | Zapište celou konfiguraci znovu přes NFC aplikací [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration); pokud se stav vrátí, jednotka potřebuje servis |
-| **Vůbec nic** | Zařízení je buď v **hlubokém spánku** (všechny kanály vypnuté. Očekávané, ne závada), nebo nemá napájení | Pokud nespí, zkontrolujte polaritu baterií a vyměňte je |
+| **Vůbec nic** | Zařízení je buď v **hlubokém spánku** (všechny kanály zhasnuté; je to očekávané, nejde o závadu), nebo nemá napájení | Pokud nespí, zkontrolujte polaritu baterií a vyměňte je |
 
 ### Během přiložení NFC {#during-an-nfc-tap}
 
@@ -159,7 +159,7 @@ dat.
 |---|---|---|
 | **Zelená, svítí** | Telefon zachycen v poli NFC | Nehýbejte telefonem |
 | **Rychlé zelené blikání** (~90 ms) | Příkaz se zpracovává | Nehýbejte telefonem |
-| **Rychlé červené blikání 2 s, pak zhasne** | **Příkaz odmítnut**: špatný secret key nebo vendor token, zopakovaný požadavek, nebo poškozený požadavek. Do zařízení se **nic nezapsalo** | Zkontrolujte, že je zařízení uložené se správným secret key, viz [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), a přiložte telefon znovu |
+| **Rychlé červené blikání 2 s, pak zhasne** | **Příkaz odmítnut**: špatný secret key nebo vendor token, zopakovaný nebo poškozený požadavek. Do zařízení se **nic nezapsalo** | Zkontrolujte, že je zařízení uložené se správným secret key, viz [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), a přiložte telefon znovu |
 | **Zelená a žlutá, svítí** | Odpověď je zapsaná a zařízení čeká, až si ji telefon přečte | Nehýbejte telefonem; na **iOS** telefon zvedněte a přiložte znovu, když vás k tomu dialog skenování vyzve |
 | **Deset zelených bliknutí**, 100 ms svítí / 100 ms nesvítí | Konfigurace byla úspěšně aplikována | Nic |
 | **Zhasnuto** | Výměna skončila, telefon oddálen | Nic |
@@ -172,7 +172,7 @@ přiložení znamená vždy, že se nic nezapsalo.**
 
 | Kdy | Vzor LED | Co znamená |
 |---|---|---|
-| Zapnutí | **Červená 0,5 s → žlutá 0,5 s → zelená 1,5 s** (karusel ~5 s) | Normální start; zároveň prokazuje, že fungují všechny tři kanály. Nečekaný výskyt znamená, že se zařízení restartovalo |
+| Zapnutí | **Červená 0,5 s → žlutá 0,5 s → zelená 1,5 s** (celkem ~5 s) | Normální start; zároveň prokazuje, že fungují všechny tři kanály. Pokud sekvenci uvidíte nečekaně, zařízení se restartovalo |
 | Vstup se aktivuje | **Zelená, pak oranžová**. Každá 50 ms | Sepnul vstup na STICKER Input nebo Hallův senzor |
 | Vstup se vrátí do klidu | **Oranžová, pak zelená**. Každá 50 ms | Tentýž vstup zase rozepnul |
 | Žádná signalizace vstupů | *(zhasnuto)* | Tato pomůcka pro uvádění do provozu se **hodinu po zapnutí sama vypne**; pro další testování zařízení odpojte a znovu připojte k napájení |
@@ -183,7 +183,7 @@ přiložení znamená vždy, že se nic nezapsalo.**
 
 | Příznak | Co zkontrolovat |
 |---|---|
-| **Na síťovém serveru nepřicházejí uplinky**, ale heartbeat je 1× zelená | Zařízení je připojené a běží. Zkontrolujte, že uplink dorazí až do vaší aplikace a že je v [ChirpStack](connectivity/lorawan-chirpstack.md) nebo [The Things Stacku](connectivity/lorawan-tts.md) přiřazený dekodér payloadu |
-| **Uplinky přicházejí, ale dekódují se jako surové bajty** | Chybí kodek `ttn.js`, nebo je přiřazený špatnému směru, viz průvodce nastavením vašeho síťového serveru |
+| **Na síťovém serveru nepřicházejí uplinky**, ale heartbeat je 1× zelená | Zařízení je připojené a běží. Zkontrolujte, že uplink dorazí až do vaší aplikace a že je v síťovém serveru ([ChirpStack](connectivity/lorawan-chirpstack.md) nebo [The Things Stack](connectivity/lorawan-tts.md)) přiřazený dekodér payloadu |
+| **Uplinky přicházejí, ale dekódují se jako surové bajty** | Chybí kodek `ttn.js`, nebo je přiřazený pro špatný směr, viz průvodce nastavením vašeho síťového serveru |
 | **Telefon zařízení nikdy nepřečte** | Pomalu pohybujte telefonem okolo jeho antény NFC (obvykle u horní části zadní strany) a ověřte, že je NFC zapnuté, viz [**Instalace aplikace**](/apps/hardwario-manager/install) |
-| **Uplinky jsou příliš časté nebo příliš řídké** | Upravte intervaly vzorkování a odesílání přes NFC, nebo [**downlink příkazem**](connectivity/downlink-commands.md) na fPort 85 |
+| **Uplinky jsou příliš časté nebo příliš řídké** | Upravte intervaly vzorkování a odesílání přes NFC, nebo [**příkazem v downlinku**](connectivity/downlink-commands.md) na fPort 85 |

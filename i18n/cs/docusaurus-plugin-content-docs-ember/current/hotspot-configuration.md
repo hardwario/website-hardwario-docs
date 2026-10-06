@@ -1,7 +1,7 @@
 ---
 slug: hotspot-configuration
 title: Konfigurace hotspotu
-description: "V tomto článku najdete podrobnosti o konfiguraci zařízení EMBER Hotspot. Je definována konfiguračním skriptem RouterOS."
+description: "Podrobnosti o konfiguraci zařízení EMBER Hotspot, kterou definuje konfigurační skript RouterOS."
 ---
 import Image from '@theme/IdealImage';
 

@@ -6,7 +6,7 @@ description: "HARDWARIO Cloud v1 (starší verze): infrastruktura, která zajiš
 ---
 import Image from '@theme/IdealImage';
 
-# Úvod do CLOUD {#cloud-introduction}
+# Úvod do cloudu {#cloud-introduction}
 
 **HARDWARIO Cloud** je infrastruktura, která zajišťuje IoT konektivitu, umožňuje správu IoT zařízení HARDWARIO a poskytuje přístup k přenášeným datům zařízení prostřednictvím REST API nebo callbacků.
 
@@ -25,9 +25,9 @@ import Image from '@theme/IdealImage';
 
 * Příchozí spojení jsou zapouzdřena do takzvaných relací, které navazují jednotlivá zařízení. Relace jsou unikátní a plně dohledatelné v komunikačních logech.
 
-* Zprávy procházející socketem se překládají z binárního formátu do **JSON** a předávají se k pipeline zpracování v RabbitMQ.
+* Zprávy procházející socketem se překládají z binárního formátu do **JSON** a předávají se ke zpracování v pipeline RabbitMQ.
 
-* Zpráva se ukládá do databáze, a pokud je nakonfigurován asynchronní callback (zákazníkem), je zpráva okamžitě doručena do zákaznického backendu (webhook).
+* Zpráva se uloží do databáze, a pokud si zákazník nakonfiguroval asynchronní callback, okamžitě se doručí do jeho backendu (webhook).
 
 * Data jsou k dispozici také přes **REST API**.
 
@@ -53,7 +53,7 @@ import Image from '@theme/IdealImage';
 
 - Tým HARDWARIO aktualizuje serverový software v pravidelných měsíčních intervalech spolu s bezpečnostním auditem (běžící procesy, uživatelé, systémové prostředky atd.).
 
-- Veškerá přihlášení k serverům jsou možná pouze z běžného uživatelského účtu (žádné přihlášení jako root).
+- Na servery se lze přihlásit pouze z běžného uživatelského účtu (přihlášení jako root není možné).
 
 - Přihlášení je možné pouze pomocí SSH klíče (žádná hesla). SSH klíč musí být chráněn heslem.
 

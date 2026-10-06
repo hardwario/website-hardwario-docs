@@ -9,7 +9,7 @@ description: "GAUGER is a configurable Wi-Fi/Ethernet device used for counting p
 
 **GAUGER** is a configurable Wi-Fi/Ethernet device used for counting pulses on up to four galvanically separated digital inputs.
 
-The device hosts a web based user interface used for its configuration. It can also be controlled through an HTTP API. The counter values can be read via Modbus TCP.
+The device hosts a web-based user interface used for its configuration. It can also be controlled through an HTTP API. The counter values can be read via Modbus TCP.
 
 :::tip
 ### To get your GAUGER running, read the [**Initial Configuration**](operation-instructions/initial-configuration.md) guide

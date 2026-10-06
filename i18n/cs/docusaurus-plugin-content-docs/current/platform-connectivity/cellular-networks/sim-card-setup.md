@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Nastavení SIM karty {#sim-card-setup}
 
-Tato kapitola provede zařízení od vybalení až k registrovanému připojení k síti. Postupujte v uvedeném pořadí: nejprve nastavte režim rádia, potom použijte nastavení pro vaši SIM kartu a nakonec ověřte výsledek.
+Tato kapitola vás provede od vybalení zařízení až po jeho registraci v síti. Postupujte v uvedeném pořadí: nejprve nastavte režim rádia, potom použijte nastavení pro svou SIM kartu a nakonec ověřte výsledek.
 
 Každou změnu konfigurace je nutné potvrdit příkazem `config save`, který nastavení uloží a zařízení restartuje.
 
@@ -46,7 +46,7 @@ Zařízení se restartuje a začne používat zvolenou síť.
 
 ---
 
-## Krok 2 - Použijte nastavení pro vaši SIM kartu {#step-2---apply-the-settings-for-your-sim-card}
+## Krok 2 - Použijte nastavení pro svou SIM kartu {#step-2---apply-the-settings-for-your-sim-card}
 
 Vyberte sekci odpovídající vaší SIM kartě. Pokud je parametr ponechán **prázdný**, zařízení provede **automatickou konfiguraci** podle dostupného hardwaru a prostředí sítě.
 
@@ -116,7 +116,7 @@ config save
 
 ## Otestované SIM karty a operátoři {#tested-sim-cards-and-operators}
 
-Níže uvedené kombinace byly ověřeny společností **HARDWARIO** v provozu. Tento seznam se rozšiřuje s uváděním dalších operátorů do provozu. Pokud tu váš operátor není, neznamená to, že zařízení nebude fungovat, jen jsme to sami neověřili.
+Níže uvedené kombinace byly ověřeny společností **HARDWARIO** v provozu. Seznam průběžně doplňujeme o další operátory, jakmile je uvedeme do provozu. Pokud tu váš operátor není, neznamená to, že zařízení nebude fungovat, jen jsme to sami neověřili.
 
 {/* Growth table: add a row for every newly validated operator / SIM card variant. Keep the Status column honest - only mark a row as verified once it has actually run in the field. */}
 

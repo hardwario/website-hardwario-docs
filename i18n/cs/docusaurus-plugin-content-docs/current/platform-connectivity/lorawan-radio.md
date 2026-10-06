@@ -4,9 +4,9 @@ title: Sítě LoRaWAN
 ---
 import Image from '@theme/IdealImage';
 
-Základní deska CHESTER-M obsahuje také LoRaWAN radio. [Katalogové aplikace](../catalog-applications/index.md) mají osazené jak NB-IoT/LTE-M, tak LoRaWAN radio. Díky tomu můžete snadno přepnout na jiné radio pouze softwarovou rekonfigurací.
+Základní deska CHESTER-M obsahuje také rádio LoRaWAN. [Katalogové aplikace](../catalog-applications/index.md) mají osazené rádio NB-IoT/LTE-M i LoRaWAN. Na jiné rádio proto snadno přepnete pouhou změnou konfigurace.
 
-Zařízení CHESTER používá modul **CMWX1ZZABZ-078** od firmy **Murata**. Tento modul má firmware od výrobce, který se stará o veškerou komunikaci LoRaWAN. Je také možné nahrát náš vlastní open-source firmware [lora-modem](https://github.com/hardwario/lora-modem), který je zpětně kompatibilní s firmwarem výrobce, ale navíc přidává další funkce a podporu vyšší verze LoRaWAN. Je také [velmi dobře zdokumentovaný](https://github.com/hardwario/lora-modem/wiki/AT-Command-Interface), nicméně tuto AT komunikaci obstarává zařízení CHESTER, takže vše, co potřebujete, je nastavit klíče, jak je vysvětleno níže.
+Zařízení CHESTER používá modul **CMWX1ZZABZ-078** od firmy **Murata**. Tento modul má firmware od výrobce, který se stará o veškerou komunikaci LoRaWAN. Je také možné nahrát náš vlastní open-source firmware [lora-modem](https://github.com/hardwario/lora-modem), který je zpětně kompatibilní s firmwarem výrobce, ale navíc přidává další funkce a podporu vyšší verze LoRaWAN. Je také [velmi dobře zdokumentovaný](https://github.com/hardwario/lora-modem/wiki/AT-Command-Interface), komunikaci přes příkazy AT ale obstarává zařízení CHESTER, takže stačí nastavit klíče podle návodu níže.
 
 Standardní modul **CMWX1ZZABZ-078** od firmy **Murata** používá standard LoRaWAN 1.0.2 release B.
 
@@ -26,7 +26,7 @@ Tato konfigurace `app mode` je aktuálně potřebná pro tyto katalogové aplika
 - [CHESTER Meteo](/chester/catalog-applications/chester-meteo)
 - [CHESTER Range](/chester/catalog-applications/chester-range)
 
-Výchozí funkčnost je taková, že zařízení **nepoužívá žádné radio** (režim `none`) a je potřeba nastavit konfigurační parametr **mode**.
+Ve výchozím stavu zařízení **nepoužívá žádné rádio** (režim `none`) a je potřeba nastavit konfigurační parametr **mode**.
 
 - `app config mode lte` pro síť NB-IoT/LTE
 - `app config mode lrw` pro síť LoRaWAN
@@ -35,9 +35,9 @@ Poté změny uložte příkazem `config save`. Zařízení se restartuje a použ
 
 ---
 
-## LoRaWAN brána EMBER {#ember-lorawan-gateway}
+## Brána LoRaWAN EMBER {#ember-lorawan-gateway}
 
-Nabízíme také **LoRaWAN bránu EMBER** ([dokumentace EMBER](/ember/), [EMBER e-shop](https://www.hardwario.store/ember/)). Tato brána umí zajistit komunikaci LoRaWAN se zařízením CHESTER a síťový software může běžet v našem HARDWARIO Cloud, nebo kompletně ve vaší infrastruktuře. Síť LoRaWAN je velmi flexibilní, spolehlivá, s dlouhým dosahem a používáme ji ve velkých fabrikách nebo na rozsáhlých otevřených plochách.
+Nabízíme také **bránu LoRaWAN EMBER** ([dokumentace EMBER](/ember/), [EMBER e-shop](https://www.hardwario.store/ember/)). Brána obstará komunikaci LoRaWAN se zařízením CHESTER a síťový software může běžet v našem HARDWARIO Cloud, nebo kompletně ve vaší infrastruktuře. Síť LoRaWAN je velmi flexibilní, spolehlivá, s dlouhým dosahem a používáme ji ve velkých továrnách nebo na rozsáhlých otevřených plochách.
 
 Zařízení EMBER používá pro správu zařízení a další integrace [CHIRPSTACK](https://www.chirpstack.io/) a [Node-RED](https://nodered.org/).
 
@@ -52,7 +52,7 @@ Zde je příklad konfiguračních parametrů, které zařízení CHESTER podporu
 
 :::tip
 
-Ne všechny katalogové firmwary podporují přepnutí NB-IoT/LTE-M na LoRaWAN radio pomocí konfigurace. Dejte nám prosím vědět, abychom mohli firmware vytvořit přesně podle vašich potřeb.
+Ne všechny katalogové firmwary podporují přepnutí z NB-IoT/LTE-M na rádio LoRaWAN pomocí konfigurace. Dejte nám prosím vědět, abychom mohli firmware vytvořit přesně podle vašich potřeb.
 
 :::
 
@@ -86,12 +86,12 @@ Rozdíl mezi OTAA a ABP doporučujeme nastudovat v článku [The Thing Industrie
 Klíče se vyměňují automaticky během procesu **Join** při startu zařízení CHESTER.
 Tato konfigurace se nejsnáze nastavuje a používá.
 
-V device profilu v **CHIRPSTACK** na kartě **JOIN (OTAA/ABP)** zapněte **Device supports OTAA**.
+V profilu zařízení (device profile) v **CHIRPSTACK** na kartě **JOIN (OTAA/ABP)** zapněte **Device supports OTAA**.
 ![Zapnutí Device supports OTAA v device profilu v CHIRPSTACK](../../../../../chester/platform-connectivity/images/lorawan-chirpstack-device-profile-otaa.png)
 
 Když vytváříte zařízení, v CHIRPSTACK můžete klíče automaticky vygenerovat a uložit je do zařízení.
 
-Při kopírování Appkey z CHIRPSTACK klikněte na **symbol oka**, aby se klíč zobrazil, a zkopírujte ho ručně – označte klíč myší a zvolte kopírovat. Nepoužívejte kopírovací tlačítko ve starších verzích CHIRPSTACK, je tam chyba.
+Při kopírování Appkey z CHIRPSTACK klikněte na **symbol oka**, aby se klíč zobrazil, a zkopírujte ho ručně: označte klíč myší a zvolte kopírovat. Nepoužívejte kopírovací tlačítko ve starších verzích CHIRPSTACK, je tam chyba.
 
 Klíč navíc obsahuje mezery, takže v shellu zařízení CHESTER musíte klíč vložit do uvozovek **"11 22 33 ... ee ff"**.
 
@@ -111,7 +111,7 @@ config save
 Klíče se zadávají ručně. V některých případech je to lepší řešení u fixní instalace, kdy je signál zařízení na hraně.
 Tuto konfiguraci používáme s vypnutým **ADR** (automatická datová rychlost), aby síť měla fixní rychlost komunikace.
 
-V device profilu v CHIRPSTACK na kartě JOIN (OTAA/ABP) **vypněte** Device supports OTAA a zadejte tyto konfigurační parametry pro EU868:
+V profilu zařízení v CHIRPSTACK na kartě JOIN (OTAA/ABP) **vypněte** Device supports OTAA a zadejte tyto konfigurační parametry pro EU868:
 
 - RX1 delay: `0`
 - RX1 data-rate offset: `0`
@@ -119,7 +119,7 @@ V device profilu v CHIRPSTACK na kartě JOIN (OTAA/ABP) **vypněte** Device supp
 - RX2 channel frequency (Hz): `869525000`
 - Factory-preset frequencies (Hz): `868100000, 868300000, 868500000, 867100000, 867300000, 867100000, 867700000, 867900000`
 
-Klíče si pro testování a vývoj můžete vygenerovat tímto [online generátor](https://loratools.nl/#/keys), pro produkci použijte pro jistotu offline generátor.
+Klíče si pro testování a vývoj můžete vygenerovat tímto [online generátorem](https://loratools.nl/#/keys), pro produkci použijte pro jistotu offline generátor.
 
 Poté nakonfigurujte zařízení CHESTER
 
@@ -199,6 +199,6 @@ Ve své bráně (Mikrotik) zkontrolujte konfigurační volbu **Network**, poté 
 Poté přejděte na kartu **Traffic** v Mikrotiku a zkontrolujte, zda vidíte paket **JOIN** ze svého zařízení s **Dev Addr**. Na této kartě vidíte RAW zašifrované pakety ze všech zařízení v okolí.
 Je ale užitečné zkontrolovat, jestli zařízení a brána používají stejný privátní/veřejný prefix paketů.
 
-Pokud vidíte přicházející pakety, můžete problém dále řešit v CHIRPSTACK v části Gateways na kartě **Live LoRaWAN Frames**. Až teprve poté, co zde uvidíte pakety, přejděte do Applications a hledejte dekódované pakety a řešte například špatné klíče, pokud tam pakety zařízení nejsou vidět.
+Pokud vidíte přicházející pakety, můžete problém dále řešit v CHIRPSTACK v části Gateways na kartě **Live LoRaWAN Frames**. Teprve když tu pakety uvidíte, přejděte do Applications a hledejte dekódované pakety; pokud tam pakety zařízení nejsou, řešte například špatné klíče.
 
 **Netmore** používá **veřejnou** síť. Chcete-li typ sítě svého zařízení nastavit na veřejnou, použijte příkaz `lrw config nwk public`.

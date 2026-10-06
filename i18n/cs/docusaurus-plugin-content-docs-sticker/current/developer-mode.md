@@ -1,7 +1,7 @@
 ---
 slug: developer-mode
 title: Přístup pro vývojáře
-description: "Vývojářský přístup k zařízení STICKER: debug build firmwaru přidává interaktivní shell přes RTT pro vývoj a diagnostiku na platformě Zephyr RTOS."
+description: "Vývojářský přístup k zařízení STICKER: ladicí sestavení firmwaru přidává interaktivní shell přes RTT pro vývoj a diagnostiku na platformě Zephyr RTOS."
 ---
 import Image from '@theme/IdealImage';
 

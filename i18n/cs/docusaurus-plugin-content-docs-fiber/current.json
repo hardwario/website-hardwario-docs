@@ -16,7 +16,7 @@
     "description": "The label for category 'Troubleshooting' in sidebar 'docs'"
   },
   "sidebar.docs.category.FIBER Hardware Guides": {
-    "message": "Hardwarové návody FIBER",
+    "message": "Návody k hardwaru FIBER",
     "description": "The label for category 'FIBER Hardware Guides' in sidebar 'docs'"
   },
   "sidebar.docs.category.FIBER Hardware Guides.link.generated-index.description": {

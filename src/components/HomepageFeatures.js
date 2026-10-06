@@ -47,7 +47,7 @@ const OurProducts = [
     src: '/img/fiber.webp',
     description: translate({
       id: 'home.fiber.description',
-      message: 'Industrial temperature monitoring with 1-Wire and 868/915 MHz wireless sensors; Ethernet, WiFi, or optional LTE.',
+      message: 'Industrial temperature monitoring with 1-Wire and 868/915 MHz wireless sensors; Ethernet, Wi-Fi, or optional LTE.',
     }),
   },
   {
@@ -57,7 +57,7 @@ const OurProducts = [
     src: '/img/gauger.webp',
     description: translate({
       id: 'home.gauger.description',
-      message: 'Industrial WiFi/Ethernet device counting pulses from production lines; counters readable via Modbus TCP and HTTP API.',
+      message: 'Industrial Wi-Fi/Ethernet device counting pulses from production lines; counters readable via Modbus TCP and HTTP API.',
     }),
   },
   {

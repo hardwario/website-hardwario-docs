@@ -6,7 +6,7 @@ description: "HARDWARIO Cloud je platforma pro správu zařízení CHESTER a dal
 
 # HARDWARIO Cloud {#hardwario-cloud}
 
-[**HARDWARIO Cloud**](https://hardwario.cloud/) je platforma pro správu zařízení CHESTER a dalších IoT zařízení HARDWARIO. Poskytuje webové rozhraní a REST API pro správu zařízení, příjem zpráv, vzdálenou konfiguraci zařízení a nahrávání aktualizací firmwaru vzduchem.
+[**HARDWARIO Cloud**](https://hardwario.cloud/) je platforma pro správu zařízení CHESTER a dalších IoT zařízení HARDWARIO. Poskytuje webové rozhraní a REST API pro správu zařízení, příjem zpráv, vzdálenou konfiguraci zařízení a bezdrátové aktualizace firmwaru.
 
 ## Klíčové funkce {#key-features}
 
@@ -18,7 +18,7 @@ description: "HARDWARIO Cloud je platforma pro správu zařízení CHESTER a dal
 | **Tags** | Označení skupin zařízení a jejich propojení s konektory |
 | **Connectors** | Přeposílání dat pomocí webhooků s transformací v JavaScriptu |
 | **Downlink** | Vzdálené odesílání konfigurace, dat nebo příkazů shellu do zařízení |
-| **Firmware** | Nahrávání aktualizací firmwaru vzduchem (FOTA) |
+| **Firmware** | Bezdrátové aktualizace firmwaru (FOTA) |
 | **API** | Plný přístup k REST API pomocí API klíčů |
 
 ## Jak to funguje {#how-it-works}
@@ -35,7 +35,7 @@ flowchart LR
 
 Všechna zařízení patří do některého **prostoru** (Space). Prostor je kontejner nejvyšší úrovně pro všechno: zařízení, uživatele, tagy, konektory a proměnné. Můžete mít více prostorů (např. jeden na zákazníka nebo projekt).
 
-Více podrobností najdete v sekci [**Spaces**](spaces.md).
+Podrobnosti najdete na stránce [**Prostory**](spaces.md).
 
 ## Automatické kodeky {#automatic-codecs}
 

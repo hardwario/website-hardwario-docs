@@ -34,9 +34,9 @@ Standardní provoz LoRaWAN Class A s aktivací OTAA/ABP, dynamickým ADR, šifro
 
 - **[Integrace ChirpStack v4](./lorawan-chirpstack.md)**: Průvodce nastavením pro vlastní nasazení LNS ChirpStack.
 - **[Integrace The Things Stack](./lorawan-tts.md)**: Průvodce nastavením pro TTS Cloud a Community Edition.
-- **[Downlink příkazy](./downlink-commands.md)**: Referenční přehled vzdálené konfigurace parametrů přes fPort 85.
+- **[Příkazy pro downlink](./downlink-commands.md)**: Referenční přehled vzdálené konfigurace parametrů přes fPort 85.
 
 ### LoRa P2P (peer-to-peer) {#lora-p2p-peer-to-peer}
-Softwarově volitelný proprietární režim rádia, který umožňuje přímé nespravované vysílání rádiových paketů bez prostředníka v podobě síťového serveru.
+Softwarově volitelný proprietární režim rádia: pakety se vysílají přímo, bez správy sítě a bez síťového serveru mezi uzly.
 
 - **[Průvodce LoRa P2P](./lora-p2p.md)**: Přehled architektury, parametry RF rámců a integrace s edge bránou.

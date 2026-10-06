@@ -11,7 +11,7 @@ This article will explain how to build, deploy and upload an application firmwar
 ## Build
 
 1. Go to the application folder. It could be:
-    - Your `application/` folder of you your project.
+    - Your `application/` folder of your project.
     - Catalog application from `chester/applications/` folder.
     - Code samples in the `chester/samples/` folder.
 

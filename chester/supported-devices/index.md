@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # Supported Sensors
 
-**HARDWARIO CHESTER** is supporting few variants of external sensors via digital communication. This make benefit to collecting several different values and informations from sensors.
+**HARDWARIO CHESTER** supports several types of external sensors over its digital interfaces, so it can collect a range of different values from them.
 
 | Supported Sensors |
 |-------------------|

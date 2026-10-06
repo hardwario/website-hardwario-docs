@@ -1,6 +1,7 @@
 ---
 slug: index
 title: RAKwireless - Brány
+description: "Brány LoRaWAN od společnosti RAKwireless otestované v HARDWARIO, s referenčními zdroji ke každému zařízení."
 ---
 
 import Image from '@theme/IdealImage';
@@ -9,18 +10,18 @@ Zde je seznam bran **RAKwireless** otestovaných společností HARDWARIO s odkaz
 
 | Název | Typ | Přehled | Stránka produktu | Odkaz na nákup |
 | :--- | :--- | :--- | :--- | :--- |
-| [**RAK7268V2**](/smart-devices/rakwireless/gateways/rak-RAK7268V2) | Vnitřní LoRaWAN® brána <br/>(WisGate Edge Lite 2) | [Podrobnosti](/smart-devices/rakwireless/gateways/rak-RAK7268V2) | [Oficiální stránky](https://docs.rakwireless.com/product-categories/wisgate/rak7268v2/overview) | [Koupit zde](https://www.hardwario.store/p/rak-7268v2) |
-| [**RAK7289V2**](/smart-devices/rakwireless/gateways/rak-RAK7289V2) | Venkovní průmyslová LoRaWAN® brána <br/>(WisGate Edge Pro) | [Podrobnosti](/smart-devices/rakwireless/gateways/rak-RAK7289V2) | [Oficiální stránky](https://docs.rakwireless.com/product-categories/wisgate/rak7289v2/overview/) | [Koupit zde](https://www.hardwario.store/p/rak-7289v2) |
+| [**RAK7268V2**](/smart-devices/rakwireless/gateways/rak-RAK7268V2) | Vnitřní brána LoRaWAN® <br/>(WisGate Edge Lite 2) | [Podrobnosti](/smart-devices/rakwireless/gateways/rak-RAK7268V2) | [Oficiální stránky](https://docs.rakwireless.com/product-categories/wisgate/rak7268v2/overview) | [Koupit zde](https://www.hardwario.store/p/rak-7268v2) |
+| [**RAK7289V2**](/smart-devices/rakwireless/gateways/rak-RAK7289V2) | Venkovní průmyslová brána LoRaWAN® <br/>(WisGate Edge Pro) | [Podrobnosti](/smart-devices/rakwireless/gateways/rak-RAK7289V2) | [Oficiální stránky](https://docs.rakwireless.com/product-categories/wisgate/rak7289v2/overview/) | [Koupit zde](https://www.hardwario.store/p/rak-7289v2) |
 
 ---
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Pro provoz vašeho zařízení LoRaWAN si můžete vybrat ze dvou podporovaných platforem síťového serveru. Obě řešení umožňují spravovat brány, registrovat koncová zařízení, konfigurovat profily a zpracovávat data payloadu.
+Pro provoz zařízení LoRaWAN si můžete vybrat ze dvou podporovaných platforem síťového serveru. Obě řešení umožňují spravovat brány, registrovat koncová zařízení, konfigurovat profily a zpracovávat data payloadu.
 
 ### Možnost 1: The Things Stack (TTS) {#option-1-the-things-stack-tts}
 
-Cloudový LoRaWAN Network Server vhodný pro malá i velká nasazení.
+Cloudový síťový server LoRaWAN vhodný pro malá i velká nasazení.
 
 #### Registrace brány v TTS {#gateway-registration-on-tts}
 
@@ -49,7 +50,7 @@ Klikněte na **Register gateway** a **stáhněte oba API klíče** (CUPS + LNS).
 
 ![Konfigurace brány v TTS](../../../../../../smart-devices/rakwireless/gateways/images/tts-geteway-config.png)
 
-5. Objeví se nové okno. Klikněte na **Download LNS key**, poté na **Download CUPS key** a uložte oba API klíče do svého zařízení. Jakmile jsou oba soubory stažené, klikněte na **I have downloaded the keys**.
+5. Objeví se nové okno. Klikněte na **Download LNS key**, poté na **Download CUPS key** a oba API klíče si uložte. Jakmile jsou oba soubory stažené, klikněte na **I have downloaded the keys**.
 ![Stažení API klíčů v TTS](../../../../../../smart-devices/rakwireless/gateways/images/tts-api-keys.png)
 #### Konfigurace brány {#gateway-configuration}
 
@@ -71,7 +72,7 @@ Klikněte na **Configure Basics Station server setup** a vyplňte následující
 
 ### Možnost 2: ChirpStack v4 {#option-2-chirpstack-v4}
 
-Open-source LoRaWAN Network Server ideální pro on-premise nebo privátní síťové instalace.
+Open-source síťový server LoRaWAN ideální pro instalace on-premise nebo v privátní síti.
 
 #### Registrace brány v platformě ChirpStack {#gateway-registration-on-chirpstack}
 1. V **ChirpStack v4** otevřete **Tenant → Gateways**.

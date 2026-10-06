@@ -19,7 +19,7 @@ import Image from '@theme/IdealImage';
 ## Quick Links
 
 * [**Quick Start Guide**](first-steps): Step-by-step setup guide.
-* [**Buy STICKER**](https://www.hardwario.store/sticker): Purchase on our store.
+* [**Buy STICKER**](https://www.hardwario.store/sticker): Purchase from our store.
 * [**Ordering Codes**](/sticker/ordering-codes): List of components and part numbers.
 * [**Hardware Description**](/sticker/hardware-description): Technical details and hardware overview.
 * [**Official Product Page**](https://www.hardwario.com/products/sticker/): Features and overview.

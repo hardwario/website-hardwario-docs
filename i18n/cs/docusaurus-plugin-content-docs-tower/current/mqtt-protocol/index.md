@@ -1,6 +1,6 @@
 ---
 title: Protokol MQTT
-description: "Protokol MQTT v HARDWARIO TOWER: broker Mosquitto, struktura topiců a formáty zpráv, přes které spolu mluví všechny uzly a aplikace."
+description: "Protokol MQTT v HARDWARIO TOWER: broker Mosquitto, struktura topiců a formáty zpráv, přes které spolu komunikují všechny uzly a aplikace."
 ---
 import Image from '@theme/IdealImage';
 
@@ -36,7 +36,7 @@ Když připojíte **Radio Dongle** s připojeným vzdáleným uzlem, můžete zo
 
 :::note
 
-Jak nainstalovat MQTT broker Mosquitto si můžete přečíst na odkazu výše, nebo můžete [**spustit vlastní server na Raspberry Pi**](../server-raspberry-pi/index.md).
+Jak nainstalovat MQTT broker Mosquitto, najdete na odkazu výše, nebo můžete [**spustit vlastní server na Raspberry Pi**](../server-raspberry-pi/index.md).
 
 :::
 

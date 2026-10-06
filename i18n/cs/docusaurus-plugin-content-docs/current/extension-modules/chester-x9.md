@@ -22,14 +22,14 @@ import Image from '@theme/IdealImage';
 
 ## Přehled modulu {#module-overview}
 
-CHESTER-X9 přepíná až čtyři externí zátěže na zem. Každý kanál je samočinně chráněný low-side switch **NCV8412ASTT1G** (U1–U4): výstup kanálu je při zapnutí stažený na **GND** a při vypnutí zůstává rozpojený (ve vysoké impedanci). Každý kanál má **omezení proudu**, takže se přetížení nebo zkrat udrží pod kontrolou a modul se nepoškodí.
+CHESTER-X9 spíná až čtyři externí zátěže proti zemi. Každý kanál je samočinně chráněný low-side switch **NCV8412ASTT1G** (U1–U4): výstup kanálu je při zapnutí stažený na **GND** a při vypnutí zůstává rozpojený (ve vysoké impedanci). Každý kanál má **omezení proudu**, takže se přetížení nebo zkrat udrží pod kontrolou a modul se nepoškodí.
 
-Každý přepínač je řízený **přímo jedním z pinů GPIO CHESTER-X** (GP0–GP3). CHESTER-X9 nemá vlastní řadič I²C ani SPI. Zátěž i její napájení jsou zcela externí: zátěž se zapojí mezi externí stejnosměrný zdroj (3–28 V) a výstup kanálu a zem externího zdroje se spojí se zemí modulu. Modul nenapájí ani zátěž, ani základní desku CHESTER.
+Každý spínač je řízený **přímo jedním z pinů GPIO CHESTER-X** (GP0–GP3). CHESTER-X9 nemá vlastní řadič I²C ani SPI. Zátěž i její napájení jsou zcela externí: zátěž se zapojí mezi externí stejnosměrný zdroj (3–28 V) a výstup kanálu a zem externího zdroje se spojí se zemí modulu. Modul nenapájí ani zátěž, ani základní desku CHESTER.
 
 ## Klíčové vlastnosti {#key-features}
 
 * **4 nezávislé kanály:** Čtyři low-side switche (CH1–CH4), každý řízený samostatně.
-* **Samočinně chráněné přepínače:** NCV8412ASTT1G s omezením proudu na každém kanálu, tepelnou ochranou a ochranou proti ESD.
+* **Samočinně chráněné spínače:** NCV8412ASTT1G s omezením proudu na každém kanálu, tepelnou ochranou a ochranou proti ESD.
 * **Integrovaná ochrana proti indukčním špičkám:** Vestavěná aktivní ochrana drain-gate pohltí vypínací energii středně velkých indukčních zátěží.
 * **Široký rozsah napětí zátěže:** Externí napájení zátěže od 3 do 28 V DC.
 * **Přímé řízení přes GPIO:** Každý kanál je řízený přímo z pinu GP CHESTER-X, I²C ani SPI není potřeba.
@@ -37,7 +37,7 @@ Každý přepínač je řízený **přímo jedním z pinů GPIO CHESTER-X** (GP0
 
 ## Typické aplikace {#typical-applications}
 
-* **Řízení aktorů a relé:** Přepínání relé, stykačů, solenoidů a ventilů.
+* **Řízení aktorů a relé:** Spínání relé, stykačů, solenoidů a ventilů.
 * **Signalizace:** Ovládání světel, výstražných majáků a bzučáků.
 * **Zapínání zátěže a napájení:** Zapínání a vypínání externích stejnosměrných zátěží z firmwaru.
 * **Obecné digitální výstupy:** Jakýkoli low-side výstup zapnuto/vypnuto v rámci napěťových a proudových limitů.
@@ -48,14 +48,14 @@ Každý přepínač je řízený **přímo jedním z pinů GPIO CHESTER-X** (GP0
 | :--- | :--- |
 | **Typ modulu** | Výstup se čtyřmi low-side switchi |
 | **Kanály** | 4 (CH1–CH4), řízené nezávisle |
-| **Přepínací prvek** | NCV8412ASTT1G (jeden na kanál) |
-| **Typ přepínání** | Low-side (výstup kanálu se přepíná na GND) |
+| **Spínací prvek** | NCV8412ASTT1G (jeden na kanál) |
+| **Typ spínání** | Low-side (výstup kanálu se spíná na GND) |
 | **Napájecí napětí zátěže** | 3–28 V DC (externí), na kanál |
 | **Trvalý proud zátěže** | 2 A na kanál |
 | **Špičkové omezení proudu** | 5 A na kanál |
 | **Řízení** | Přímo přes GPIO (GP0–GP3) |
 | **Rozhraní k hostu** | Žádné (bez zařízení I²C/SPI; přímé řízení přes GPIO) |
-| **Rozhraní desky** | Castellated otvory na dvou protilehlých hranách, připájené k základní desce CHESTER |
+| **Rozhraní desky** | Půlené prokovené otvory (castellated) na dvou protilehlých hranách, připájené k základní desce CHESTER |
 | **Revize hardwaru** | R1.0 |
 
 ## Klíčové součástky {#key-components}
@@ -79,39 +79,39 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | Pin | Signál | Typ | Popis |
 | :---: | :--- | :--- | :--- |
 | 1 | GND | Zem | Systémová zem / návrat externího zdroje |
-| 2 | CH1 | Výstup přepínače | Výstup low-side switche kanálu 1 |
+| 2 | CH1 | Výstup spínače | Výstup low-side switche kanálu 1 |
 | 3 | GND | Zem | Systémová zem / návrat externího zdroje |
-| 4 | CH2 | Výstup přepínače | Výstup low-side switche kanálu 2 |
+| 4 | CH2 | Výstup spínače | Výstup low-side switche kanálu 2 |
 | 5 | GND | Zem | Systémová zem / návrat externího zdroje |
-| 6 | CH3 | Výstup přepínače | Výstup low-side switche kanálu 3 |
+| 6 | CH3 | Výstup spínače | Výstup low-side switche kanálu 3 |
 | 7 | GND | Zem | Systémová zem / návrat externího zdroje |
-| 8 | CH4 | Výstup přepínače | Výstup low-side switche kanálu 4 |
+| 8 | CH4 | Výstup spínače | Výstup low-side switche kanálu 4 |
 
 :::info
-CHESTER-X9 nenapájí zátěž ani základní desku CHESTER. Každý kanál pouze přepíná svůj výstup na **GND**; zátěž se napájí z externího zdroje **3–28 V DC** (viz [Zapojení přepínače a zátěže](#switch-and-load-connection) níže).
+CHESTER-X9 nenapájí zátěž ani základní desku CHESTER. Každý kanál pouze spíná svůj výstup na **GND**; zátěž se napájí z externího zdroje **3–28 V DC** (viz [Zapojení spínače a zátěže](#switch-and-load-connection) níže).
 :::
 
 ### Řízení kanálů (GPIO) {#channel-control-gpio}
 
 Na rozdíl od většiny modulů CHESTER-X (které používají **I²C** nebo **SPI**) se CHESTER-X9 řídí **přímo přes piny GPIO slotu modulu**. Každý pin GP budí hradlo jednoho low-side switche, takže nastavením pinu GP se kanál zapne (jeho výstup se spojí s GND):
 
-| Pin CHESTER-X | Kanál | Přepínač | Síť ve schématu |
+| Pin CHESTER-X | Kanál | Spínač | Síť ve schématu |
 | :--- | :--- | :--- | :--- |
 | GP0 / A0 | CH1 | U1 | OUT0 |
 | GP1 / A1 | CH2 | U2 | OUT1 |
 | GP2 / A2 | CH3 | U3 | OUT2 |
 | GP3 / A3 | CH4 | U4 | OUT3 |
 
-Slot vede i sběrnici I²C (SDA/SCL), ale CHESTER-X9 žádné zařízení I²C nepoužívá. Všechny čtyři kanály přepínají samotné piny GP.
+Slot vede i sběrnici I²C (SDA/SCL), ale CHESTER-X9 žádné zařízení I²C nepoužívá. Všechny čtyři kanály spínají samotné piny GP.
 
-## Zapojení přepínače a zátěže {#switch-and-load-connection}
+## Zapojení spínače a zátěže {#switch-and-load-connection}
 
 Každá zátěž se zapojí mezi **kladný pól externího stejnosměrného zdroje** a **výstup kanálu** (CH1–CH4); low-side switch daného kanálu pak po zapnutí uzavře obvod na **GND**. Zem externího zdroje **musí** být připojená k některé ze svorek **GND** modulu, aby modul a externí zdroj měly společnou zemní referenci.
 
-![Schéma zapojení: zátěž připojená mezi externí zdroj 3-28 V a výstup přepínače kanálu CHESTER-X9](../../../../../chester/extension-modules/images/sc-chester-x9.png)
+![Schéma zapojení: zátěž připojená mezi externí zdroj 3-28 V a výstup spínače kanálu CHESTER-X9](../../../../../chester/extension-modules/images/sc-chester-x9.png)
 
 :::note Ovládání indukčních zátěží
-CHESTER-X9 **nemá externí nulovou (flyback) diodu**. Obvod NCV8412ASTT1G má integrovanou aktivní ochranu drain-gate, která pohltí vypínací energii **středně velkých** indukčních zátěží (malá relé, solenoidy, ventily), takže je lze přepínat přímo. U **velkých indukčností, vysokých proudů nebo rychlého opakovaného přepínání** přidejte přes zátěž externí nulovou diodu, aby přepínač zůstal v mezích své ochrany.
+CHESTER-X9 **nemá externí nulovou (flyback) diodu**. Obvod NCV8412ASTT1G má integrovanou aktivní ochranu drain-gate, která pohltí vypínací energii **středně velkých** indukčních zátěží (malá relé, solenoidy, ventily), takže je lze spínat přímo. U **velkých indukčností, vysokých proudů nebo rychlého opakovaného spínání** přidejte přes zátěž externí nulovou diodu, aby spínač zůstal v mezích své ochrany.
 :::
 
 ### Průchod krabičkou {#enclosure-feed-through}

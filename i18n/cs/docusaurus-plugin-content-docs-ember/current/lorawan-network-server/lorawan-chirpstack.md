@@ -25,7 +25,7 @@ https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
 ## Předpoklady {#prerequisites}
 - Přístup do správcovského rozhraní zařízení EMBER (**WebFig** nebo **WinBox**)
 - Koncový bod brány v ChirpStack (hostname/IP + UDP porty): typicky koncový bod **Gateway Bridge**
-- Pokud nepoužíváte spravovaný síťový server HARDWARIO, nasměrujte adresu serveru LoRaWAN na **svůj vlastní** LoRaWAN server (žádné VPN tunely nejsou potřeba).
+- Pokud nepoužíváte spravovaný síťový server HARDWARIO, nasměrujte adresu serveru LoRaWAN na **svůj vlastní** server LoRaWAN (žádné VPN tunely nejsou potřeba).
 
 ---
 
@@ -38,9 +38,9 @@ V systému MikroTik RouterOS se EUI brány zobrazuje jako **Gateway ID**:
 ---
 
 ## 2) Nastavte EMBER (MikroTik RouterOS) pro připojení k ChirpStack {#2-configure-ember-mikrotik-routeros-to-connect-to-chirpstack}
-> RouterOS obvykle vyžaduje, aby byla LoRa karta při změně nastavení LoRa **vypnutá** (Disabled).
+> RouterOS obvykle vyžaduje, aby byla karta LoRa při změně nastavení LoRa **vypnutá** (Disabled).
 
-1. V levém panelu otevřete **IoT**→ **LoRa**. Klikněte na řádek v seznamu a použijte disable. 
+1. V levém panelu otevřete **IoT**→ **LoRa**. Klikněte na řádek v seznamu a zvolte Disable. 
 ![EMBER vypnutí LoRaWAN karty](../../../../../ember/lorawan-network-server/images/ember-disable-lrw-card.png)
 
 2. V levém panelu otevřete **IoT**→ **LoRa**→ **Servers**. Zvolte **New** a vyplňte pole:
@@ -53,7 +53,7 @@ V systému MikroTik RouterOS se EUI brány zobrazuje jako **Gateway ID**:
 3. Přejděte na **IoT → LoRa → Devices** a poklepejte na zařízení. V poli Network Servers zkontrolujte, že je vybrán ChirpStack. Pokud ne, klikněte na **+** a přidejte jej.
 ![EMBER kontrola síťového serveru](../../../../../ember/lorawan-network-server/images/ember-check-chirpstack-net-ser.png)
 
-4. Zapněte LoRa kartu. Přejděte na **IoT → LoRa → Devices → Enable**
+4. Zapněte kartu LoRa. Přejděte na **IoT → LoRa → Devices → Enable**
 ![EMBER zapnutí LoRaWAN karty](../../../../../ember/lorawan-network-server/images/ember-enable-lrw.png)
 
 ---
@@ -72,7 +72,7 @@ V systému MikroTik RouterOS se EUI brány zobrazuje jako **Gateway ID**:
 ---
 
 ## 4) Ověřte provoz brány {#4-verify-gateway-traffic}
-- Na zařízení EMBER: **WebFig → LoRa → Traffic** by měl zobrazovat příchozí zprávy, když nedaleká koncová zařízení vysílají.
+- Na zařízení EMBER: **WebFig → LoRa → Traffic** by měl zobrazovat příchozí zprávy, když vysílají koncová zařízení v okolí.
 - V ChirpStack: brána by měla vykazovat aktivitu (např. aktualizace stavu / „last seen“).
 
 ---

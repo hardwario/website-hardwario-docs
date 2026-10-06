@@ -1,7 +1,7 @@
 ---
 slug: ordering-codes
 title: Ordering Codes
-description: "This article defines all possible ordering codes for the EMBER ecosystem. The order specifications must be fully compliant with the part numbers stated below."
+description: "All possible ordering codes for the EMBER ecosystem; an order must match the part numbers stated below exactly."
 title_meta: "Ordering Codes (EMBER)"
 ---
 import Image from '@theme/IdealImage';

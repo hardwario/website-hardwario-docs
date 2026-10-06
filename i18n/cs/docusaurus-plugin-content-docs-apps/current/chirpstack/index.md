@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # ChirpStack {#chirpstack}
 
-ChirpStack je open-source řešení pro budování privátních i veřejných [**sítí LoRaWAN**](#lorawan-network). Umožňuje organizacím připojit **zařízení s velkým dosahem a nízkou spotřebou**, například senzory a měřiče, a spravovat je přes snadno použitelné rozhraní. ChirpStack zjednodušuje provoz bezpečných IoT sítí a přitom nabízí flexibilitu při integraci s existujícími podnikovými systémy.
+ChirpStack je open-source řešení pro budování privátních i veřejných [**sítí LoRaWAN**](#lorawan-network). Organizace s ním mohou připojit **zařízení s velkým dosahem a nízkou spotřebou**, například senzory a měřiče, a spravovat je přes snadno použitelné rozhraní. ChirpStack zjednodušuje provoz bezpečných IoT sítí a přitom nabízí flexibilitu při integraci s existujícími podnikovými systémy.
 
 ---
 

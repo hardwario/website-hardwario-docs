@@ -12,7 +12,7 @@ Na této záložce se můžete připojit k zařízení **Radio Dongle**
 
 Vyberte z rozbalovacího seznamu zařízení **Radio Dongle** (na řádku by mělo být `twr-usb-dongle` nebo `bc-usb-dongle`) a klikněte na **Connect**.
 
-Pokud jste zařízení **Radio Dongle** právě zakoupili v našem shopu, mělo by být dodáno se správným firmwarem a vše by mělo fungovat.
+Pokud jste zařízení **Radio Dongle** právě zakoupili v našem e-shopu, mělo by být dodáno se správným firmwarem a vše by mělo fungovat.
 
 <Image img={require('../../../../../tower/desktop-programming/images/devices-dongle-selection.png')} alt="Záložka Devices s vybraným COM portem zařízení Radio Dongle v rozbalovacím seznamu, vedle tlačítka Connect" />
 <br />
@@ -49,8 +49,8 @@ O další záložce se dozvíte v kapitole [**Správa MQTT zpráv**](./mqtt-mess
 
 :::
 
-## Video návod {#video-tutorial}
+## Videonávod {#video-tutorial}
 
-Pokud dáváte přednost video návodu, můžete se podívat na toto video pro starší verzi aplikace Playground, funguje to však stejně.
+Pokud dáváte přednost videonávodu, můžete se podívat na toto video pro starší verzi aplikace Playground, funguje to však stejně.
 
 <ReactPlayer controls src='https://youtu.be/ESrTEdV9PJQ' />

@@ -10,7 +10,7 @@ description: "Carlo Gavazzi je švýcarský výrobce specializující se na komp
 
 ---
 
-Elektroměry Carlo Gavazzi **řady EM** poskytují přesná, certifikovaná měření elektrické energie a lze je integrovat se zařízeními HARDWARIO pro aplikace monitorování energií pomocí Modbus RTU.
+Elektroměry Carlo Gavazzi **řady EM** poskytují přesná, certifikovaná měření elektrické energie a přes Modbus RTU je lze propojit se zařízeními HARDWARIO pro monitorování spotřeby energie.
 
 ## Klíčové produkty {#key-products}
 

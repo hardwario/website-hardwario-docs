@@ -12,7 +12,7 @@ Základní deska CHESTER (CHESTER-M) obsahuje tato integrovaná rozhraní a peri
 * Sběrnice I<sup>2</sup>C (včetně systému Sparkfun Qwiic Connect System)
 * Sběrnice 1-Wire (s hardwarovým budičem sběrnice se silným pull-up)
 * Digitální teploměr I<sup>2</sup>C
-* Tříosý MEMS akcelerometr
+* Tříosý akcelerometr MEMS
 * Paměť NOR flash 8 MB
 * Tříbarevná RGY LED
 * Tlačítko
@@ -21,14 +21,14 @@ Klíčovou vlastností systému CHESTER je jeho hardwarová flexibilita daná š
 
 :::tip
 
-U varianty CHESTER DevKit lze moduly určené pro zadní stranu základní desky instalovat pomocí pružinových konektorů. To umožňuje rychlou výměnu rozhraní během vývojového cyklu. Pro reálné nasazení zařízení se však důrazně doporučuje mít moduly připájené přímo k základní desce (pájení provádí HARDWARIO).
+U varianty CHESTER DevKit lze moduly určené pro zadní stranu základní desky instalovat pomocí pružinových konektorů. Rozhraní tak můžete během vývoje rychle měnit. Pro ostré nasazení však důrazně doporučujeme moduly připájené přímo k základní desce (připájí je HARDWARIO).
 
 :::
 
 ## Moduly na zadní straně {#backside-modules}
 
 Moduly na zadní straně (červené moduly na obrázku níže) dále rozšiřují funkce zařízení CHESTER o další rozhraní.
-Toto rozšíření je modulární i ve vývoji s CHESTER-SDK, kde má každý modul vlastní ovladač pro ZephyrRTOS pro snadnou integraci.
+Modulární je i vývoj v CHESTER-SDK: každý modul má vlastní ovladač pro ZephyrRTOS, takže se snadno integruje.
 
 <div class="container">
   <div class="row">
@@ -88,8 +88,8 @@ Když je zařízení CHESTER namontováno v krabičce, můžete po vyjmutí bate
 | CHESTER-A1A                       | AC/DC měnič pro napájení 110/230 V se dvěma výkonovými relé 230V/16A                                                                                           |
 | CHESTER-G1                        | Osmikanálový galvanicky oddělený vstupní modul s izolovaným DC/DC napájením                                                                                       |
 | CHESTER-S1                        | Modul pro monitoring prostředí se senzory teploty, vlhkosti, oxidu uhličitého (CO2), intenzity osvětlení, atmosférického tlaku, akustického hluku a PIR            |
-| [**CHESTER-Z1**](chester-z1.md)   | Modul zálohování Li-Ion baterií s DC/DC měničem a nabíječkou, vstup z linky 6-28 VDC nebo 12V solárního panelu                                                               |
-| [**CHESTER-Z1-F**](chester-z1.md) | Modul zálohování Li-Ion baterií s DC/DC měničem a nabíječkou, vstup z linky 6-28 VDC nebo 12V solárního panelu + až 4 RGB podsvícená tlačítka s akustickou zpětnou vazbou |
+| [**CHESTER-Z1**](chester-z1.md)   | Modul záložního napájení z baterie Li-Ion s DC/DC měničem a nabíječkou, vstup z linky 6-28 VDC nebo 12V solárního panelu                                                               |
+| [**CHESTER-Z1-F**](chester-z1.md) | Modul záložního napájení z baterie Li-Ion s DC/DC měničem a nabíječkou, vstup z linky 6-28 VDC nebo 12V solárního panelu + až 4 RGB podsvícená tlačítka s akustickou zpětnou vazbou |
 
 ## Nosné desky {#carrier-boards}
 
@@ -102,9 +102,9 @@ Tyto nosné desky vyžadují větší krabičku.
 | Název modulu                    | Popis modulu                                                                                                                                                              |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CHESTER-B1                      | Držáky baterií pro až 6x baterii velikosti D nebo 8x velikosti C + LED mimo základní desku                                                                                     |
-| CHESTER-B1-W                    | Držáky baterií pro až 6x baterii velikosti D nebo 8x velikosti C + LED mimo základní desku + wireless M-Bus (wM-Bus)                                                           |
+| CHESTER-B1-W                    | Držáky baterií pro až 6x baterii velikosti D nebo 8x velikosti C + LED mimo základní desku + bezdrátový M-Bus (wM-Bus)                                                           |
 | [**CHESTER-C1**](chester-c1.md) | Deska rozhraní s DC/DC měničem, 2x výkonové relé, svorkovnice 1-Wire, 4x digitální/analogový vstup a rozhraní RS-485 + držák pro 4x baterii velikosti C          |
-| [**CHESTER-C5**](chester-c5.md) | Zakázková nosná deska pro CHESTER-U1 s až 16 kanály 1-Wire, zálohováním Li-Ion baterií, DC/DC měničem a nabíječkou, vstupem z linky 6-28 VDC nebo 12V solárního panelu, podporou QWIIC OLED |
+| [**CHESTER-C5**](chester-c5.md) | Zakázková nosná deska pro CHESTER-U1 s až 16 kanály 1-Wire, záložním napájením z baterie Li-Ion, DC/DC měničem a nabíječkou, vstupem z linky 6-28 VDC nebo 12V solárního panelu, podporou QWIIC OLED |
 
 :::caution
 

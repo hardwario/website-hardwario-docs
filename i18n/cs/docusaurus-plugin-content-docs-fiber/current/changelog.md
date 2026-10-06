@@ -1,15 +1,15 @@
 ---
 slug: changelog
-title: FIBER – seznam změn
+title: Seznam změn FIBER
 toc_min_heading_level: 2
 toc_max_heading_level: 2
-description: "Tato stránka sleduje všechny významné změny na platformě FIBER včetně firmwaru a hardwaru. Kategorie změn filtrujte pomocí záložek níže."
+description: "Přehled všech významných změn platformy FIBER včetně firmwaru a hardwaru, s filtrováním podle kategorie změn pomocí záložek."
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# FIBER – seznam změn {#fiber-changelog}
+# Seznam změn FIBER {#fiber-changelog}
 
 Tato stránka zaznamenává všechny podstatné změny na platformě FIBER, včetně **firmwaru** a **hardwaru**. Pomocí záložek níže můžete filtrovat podle kategorie změn.
 

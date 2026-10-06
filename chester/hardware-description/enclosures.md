@@ -12,7 +12,7 @@ It can be mounted using:
 
 * Screws through the mounting holes
 * Special zip tie holders (pole is possible)
-* Duck tape
+* Duct tape
 * Double-sided sticker (e.g., 3M Dual-Lock)
 
 :::tip

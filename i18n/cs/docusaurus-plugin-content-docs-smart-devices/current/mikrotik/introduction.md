@@ -16,12 +16,12 @@ Platforma **RouterBOARD** od MikroTik nabízí funkce brány LoRaWAN, což umož
 
 | Produkt | Popis |
 |---|---|
-| [**RouterBOARD LoRa**](/smart-devices/mikrotik/routerboard-lora) | Kompaktní LoRaWAN brána založená na MikroTik RouterOS s integrovanou koncentrátorovou kartou LoRa. Podporuje 8kanálový příjem LoRa a provozuje standardní software Semtech packet forwarder. |
+| [**RouterBOARD LoRa**](/smart-devices/mikrotik/routerboard-lora) | Kompaktní brána LoRaWAN založená na MikroTik RouterOS s integrovanou koncentrátorovou kartou LoRa. Podporuje 8kanálový příjem LoRa a provozuje standardní software Semtech packet forwarder. |
 
 ## Typické případy použití s HARDWARIO {#typical-use-cases-with-hardwario}
 
-- **Brána k LoRaWAN network serveru**: Přeposílání paketů ze zařízení CHESTER nebo STICKER na network server ChirpStack nebo The Things Stack.
-- **Privátní LoRaWAN síť**: Vybudování lokální vnitřní LoRaWAN sítě pro jednu budovu nebo areál.
+- **Brána pro síťový server LoRaWAN**: Přeposílání paketů ze zařízení CHESTER nebo STICKER na síťový server ChirpStack nebo The Things Stack.
+- **Privátní síť LoRaWAN**: Vybudování lokální vnitřní sítě LoRaWAN pro jednu budovu nebo areál.
 
 ## Zdroje {#resources}
 

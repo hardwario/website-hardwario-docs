@@ -4,7 +4,7 @@ title: "Jak na: Tlačítko"
 ---
 import Image from '@theme/IdealImage';
 
-[**Core Module**](../../hardware-modules/about-core-module.md) je vybaven jedním tlačítkem, které lze použít, pokud na modulu Core Module není nasazen žádný další modul – jinak je poměrně těžko dostupné.
+[**Core Module**](../../hardware-modules/about-core-module.md) je vybaven jedním tlačítkem, které lze použít, pokud na modulu Core Module není nasazen žádný další modul, jinak je poměrně těžko dostupné.
 
 Pokud chcete tlačítko používat i v případě, že se k modulu Core Module nedostanete, můžete využít [**Button Module**](../../hardware-modules//about-button-module.md)
 

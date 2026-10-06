@@ -2,29 +2,29 @@
 slug: platform-security
 title: Bezpečnost platformy
 sidebar_label: Bezpečnost platformy
-description: "Tento článek podává základní přehled o zabezpečení platformy CHESTER. Je rozdělený do kapitol, které popisují jednotlivé oblasti."
+description: "Základní přehled zabezpečení platformy CHESTER: fyzická bezpečnost, Bluetooth, LTE a IPsec, komunikace zařízení a HARDWARIO Cloud."
 ---
 import Image from '@theme/IdealImage';
 
 # Bezpečnost platformy {#platform-security}
 
-Tento článek poskytuje základní přehled bezpečnosti platformy **CHESTER**. Článek je rozdělen do několika kapitol, které popisují jednotlivé oblasti.
+Tento článek podává základní přehled zabezpečení platformy **CHESTER**. Každá kapitola popisuje jednu oblast.
 
 ## Fyzická bezpečnost {#physical-security}
 
-U samotného hardwarového zařízení **CHESTER** je tato oblast výhradně odpovědností zákazníka. Kryptografické klíče (například pro **SIM kartu**) jsou však chráněny čipy na platformě smartcard.
+U samotného hardwarového zařízení **CHESTER** je tato oblast výhradně odpovědností zákazníka. Kryptografické klíče (například pro **SIM kartu**) jsou však chráněny čipy typu smartcard.
 
 :::tip
 
-**Základní deska CHESTER** integruje **MEMS akcelerometr**, který umí nahlásit upozornění na manipulaci se zařízením, a pozici zařízení lze sledovat pomocí volitelného **modulu GNSS**.
+Na **základní desce CHESTER** je **akcelerometr MEMS**, který dokáže ohlásit manipulaci se zařízením. Polohu zařízení lze sledovat volitelným **modulem GNSS**.
 
 :::
 
 ## Bluetooth rádio {#bluetooth-radio}
 
-Platforma **CHESTER** používá certifikovaný stack **Bluetooth Low Energy** (BLE) od **Nordic Semiconductor** v jejich implementaci **SoftDevice**. Použitý **System-on-Chip** (nRF52840) podporuje specifikaci BLE verze 5.3. Přístup ke všem vystaveným Bluetooth **službám** a **charakteristikám** je chráněn (šifrované a autentizované spojení) standardními bezpečnostními mechanismy Bluetooth.
+Platforma **CHESTER** používá certifikovaný stack **Bluetooth Low Energy** (BLE) od **Nordic Semiconductor** v implementaci **SoftDevice**. Použitý **System-on-Chip** (nRF52840) podporuje specifikaci BLE verze 5.3. Přístup ke všem vystaveným Bluetooth **službám** a **charakteristikám** je chráněn (šifrované a autentizované spojení) standardními bezpečnostními mechanismy Bluetooth.
 
-Nová spojení jsou možná pouze s protistranami, které znají předem zprovozněný **Bluetooth passkey**. BLE passkey je náhodné číslo generované společností **HARDWARIO** a uživatel jej může změnit.
+Nová spojení jsou možná pouze s protistranami, které znají předem nastavený **Bluetooth passkey**. BLE passkey je náhodné číslo generované společností **HARDWARIO** a uživatel jej může změnit.
 
 :::tip
 
@@ -34,7 +34,7 @@ Nová spojení jsou možná pouze s protistranami, které znají předem zprovoz
 
 ## Konektivita LTE {#lte-connectivity}
 
-Bezpečnost LTE spojení je zajištěna standardním mechanismem v rámci **Evolved Packet System** (EPS). Podrobnosti specifikace EPS najdete v **3GPP LTE Release 13**.
+Spojení LTE zabezpečuje standardní mechanismus systému **Evolved Packet System** (EPS). Podrobnosti specifikace EPS najdete v **3GPP LTE Release 13**.
 
 Identita zařízení a služby konektivity jsou odvozeny z **Universal Integrated Circuit Card** (UICC).
 
@@ -50,7 +50,7 @@ Ačkoli zařízení sdílejí stejný síťový IP prostor, nemohou mezi sebou k
 
 Konektivita mezi **Evolved Packet System** (EPS) a **HARDWARIO Cloud** je zabezpečena tunelem **IPsec**. Tunel **IPsec** je definován standardy **IETF** a používá silnou kryptografii.
 
-Interval **re-keying** u navázaného tunelu je kratší než **60 minut**.
+Klíče navázaného tunelu se obnovují (**re-keying**) v intervalu kratším než **60 minut**.
 
 Tunel **IPsec** používá IKEv2 (`aes256-sha256-modp2048`).
 
@@ -60,11 +60,11 @@ Zařízení **CHESTER** komunikuje s **HARDWARIO Cloud** protokolem **FLAP** př
 
 ## Bezpečnost HARDWARIO Cloud {#hardwario-cloud-security}
 
-Infrastruktura **HARDWARIO Cloud** běží v datových centrech cloudového poskytovatele **DigitalOcean**. Celá infrastruktura běží na linuxové serverové distribuci **Ubuntu LTS**. Tým **HARDWARIO** provádí pravidelné bezpečnostní audity a údržbu celé infrastruktury.
+Infrastruktura **HARDWARIO Cloud** běží v datových centrech cloudového poskytovatele **DigitalOcean**. Všechny servery používají linuxovou distribuci **Ubuntu LTS**. Tým **HARDWARIO** provádí pravidelné bezpečnostní audity a údržbu celé infrastruktury.
 
-Celá cloudová infrastruktura je navržena tak, aby eliminovala jediný bod selhání. Každá komponenta je zálohována pravidelnými **automatizovanými snapshoty**.
+Celá cloudová infrastruktura je navržena tak, aby se pokud možno vyhnula jedinému bodu selhání. Každá komponenta je zálohována pravidelnými **automatizovanými snapshoty**.
 
-Zprávy jsou zpracovávány službou **data streaming**, která zvyšuje spolehlivost doručení dat.
+Zprávy zpracovává služba **data streaming**, která zvyšuje spolehlivost doručení dat.
 
 ## Infrastruktura zákazníka {#customer-infrastructure}
 
@@ -76,6 +76,6 @@ Zprávy jsou zpracovávány službou **data streaming**, která zvyšuje spolehl
 
 * **Webový portál** pro uživatele (funguje nad REST API)
 
-Všechny tyto služby fungují ve veřejné internetové konektivitě nad standardy HTTPS/TLS. Přístup ke službám je zajištěn prostřednictvím **API tokenu**, **Google identity** (OAuth) a přihlášení pomocí **uživatelského jména a hesla**.
+Všechny tyto služby jsou dostupné z veřejného internetu přes HTTPS/TLS. Přihlásit se k nim lze **API tokenem**, přes **Google identity** (OAuth) nebo **uživatelským jménem a heslem**.
 
 API tokeny podporují **omezení úrovně přístupu** (access level scoping) pro autorizaci operací.

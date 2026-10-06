@@ -7,12 +7,12 @@ import Image from '@theme/IdealImage';
 
 # ThingsBoard {#thingsboard}
 
-[**ThingsBoard**](https://app.hardwario.cloud/) je open-source IoT platforma, která firmám pomáhá připojovat zařízení, sbírat data a přeměňovat je na přehledné a užitečné informace. Díky připraveným dashboardům, upozorněním a nástrojům pro automatizaci umožňuje snadno sledovat provoz, zvyšovat efektivitu a rozšiřovat IoT projekty bez potřeby hlubokých technických znalostí.
+[**ThingsBoard**](https://app.hardwario.cloud/) je open-source IoT platforma, která firmám pomáhá připojovat zařízení, sbírat data a přeměňovat je na přehledné a užitečné informace. S připravenými dashboardy, upozorněními a nástroji pro automatizaci snadno sledujete provoz, zvýšíte efektivitu a rozšíříte IoT projekty i bez hlubokých technických znalostí.
 
 :::info
 **Přístup do systému:** Do platformy HARDWARIO ThingsBoard se můžete přihlásit na **https://app.hardwario.cloud/**.
 
-Pokud máte zájem o přístup do systému pro zobrazení vizualizací a grafů dat ze svých zařízení HARDWARIO, kontaktujte prosím **support@hardwario.com**.
+Pokud chcete do systému získat přístup a prohlížet vizualizace a grafy dat ze svých zařízení HARDWARIO, napište prosím na **ask@hardwario.com**.
 :::
 
 ---
@@ -128,7 +128,7 @@ Podle následujících kroků nastavíte ThingsBoard a začnete svá zařízení
 
 ### 1. Vytvoření zařízení v ThingsBoard {#1-create-a-device-in-thingsboard}
 
-Začněte přihlášením do [ThingsBoard](https://app.hardwario.cloud/) a vytvořením nového zařízení.
+Přihlaste se do [ThingsBoard](https://app.hardwario.cloud/) a vytvořte nové zařízení.
 Toto zařízení bude fungovat jako koncový bod, který přijímá a ukládá data odesílaná z HARDWARIO Cloud.
 
 👉 [Přidání nového zařízení](/apps/thingsboard/creating-device)
@@ -155,7 +155,7 @@ Přidejte widgety, jako jsou karty, grafy a ukazatele, a vizualizujte svá data 
 
 ### 4. Nastavení uživatelských rolí a skupin {#4-set-up-user-roles-and-groups}
 
-ThingsBoard umožňuje přesně řídit, co může každý uživatel vidět a dělat.
+V ThingsBoard přesně určíte, co smí který uživatel vidět a dělat.
 Definujte role s konkrétními oprávněními a rozdělte uživatele do skupin propojených s jejich zařízeními a dashboardy.
 
 👉 [Správa uživatelů](/apps/thingsboard/users-managing)
@@ -172,7 +172,7 @@ Vytvořte uživatelské účty, přiřaďte je do skupin a odešlete aktivační
 
 ### 6. Sdílení dashboardu přes veřejný odkaz {#6-share-a-dashboard-via-public-link}
 
-Vygenerujte pro jakýkoli dashboard veřejnou URL adresu pouze pro čtení a nasdílejte ji klientům nebo partnerům, bez nutnosti přihlášení.
+Vygenerujte pro jakýkoli dashboard veřejnou URL adresu pouze pro čtení a sdílejte ji se zákazníky nebo partnery; přihlášení není potřeba.
 
 👉 [Veřejný odkaz](/apps/thingsboard/public-link)
 

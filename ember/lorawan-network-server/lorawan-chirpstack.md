@@ -40,7 +40,7 @@ On MikroTik RouterOS, the gateway EUI is shown as **Gateway ID**:
 ## 2) Configure EMBER (MikroTik RouterOS) to connect to ChirpStack
 > RouterOS typically requires the LoRa card to be **Disabled** while you change LoRa settings.
 
-1. In the left panel, open **IoT**→ **LoRa**. Click on line at the list and  aply disable. 
+1. In the left panel, open **IoT**→ **LoRa**. Click the line in the list and choose Disable. 
 ![EMBER disable lrw card](images/ember-disable-lrw-card.png)
 
 2. In the left panel, open **IoT**→ **LoRa**→ **Servers**. Select **New** and fill boxes:

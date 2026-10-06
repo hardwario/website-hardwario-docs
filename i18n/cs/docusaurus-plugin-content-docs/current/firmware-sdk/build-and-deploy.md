@@ -1,17 +1,17 @@
 ---
 slug: build-and-deploy
-title: Build a nasazení
+title: Sestavení a nasazení
 ---
 import Image from '@theme/IdealImage';
 
-# Build a nasazení {#build-and-deploy}
+# Sestavení a nasazení {#build-and-deploy}
 
 Tento článek vysvětluje, jak sestavit, nasadit a nahrát firmware aplikace do **HARDWARIO Cloud**.
 
-## Build {#build}
+## Sestavení {#build}
 
 1. Přejděte do složky aplikace. Může to být:
-    - Vaše složka `application/` ve vašem projektu.
+    - Složka `application/` ve vašem projektu.
     - Katalogová aplikace ze složky `chester/applications/`.
     - Ukázky kódu ve složce `chester/samples/`.
 
@@ -25,11 +25,11 @@ Tento článek vysvětluje, jak sestavit, nasadit a nahrát firmware aplikace do
 
 ## Nasazení {#deploy}
 
-Pro finální build firmwaru budete chtít sestavit firmware s názvem a verzí. Verze a název firmwaru budou vidět v aplikaci **HARDWARIO Manager** a v shellu zařízení po zadání příkazu `info show`. Verze firmwaru se také odesílá v NB-IoT paketu.
+Při finálním sestavení budete chtít, aby firmware obsahoval název a verzi. Verze a název firmwaru budou vidět v aplikaci **HARDWARIO Manager** a v shellu zařízení po zadání příkazu `info show`. Verze firmwaru se také odesílá v NB-IoT paketu.
 
-1. Vyčistěte předchozí build příkazem `rm -rf build/`.
+1. Smažte předchozí sestavení příkazem `rm -rf build/`.
 
-2. Přidejte do příkazu pro build proměnné prostředí `FW_NAME` a `FW_VERSION`:
+2. Přidejte do příkazu pro sestavení proměnné prostředí `FW_NAME` a `FW_VERSION`:
      - Linux a macOS: `FW_NAME="CHESTER Input Z" FW_VERSION="v1.5.0" west build`.
      - Windows: `cmd /C "set FW_NAME=CHESTER Input Z && set FW_VERSION=v1.5.0 && west build"`.
 

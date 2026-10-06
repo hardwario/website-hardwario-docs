@@ -69,8 +69,8 @@ When CHESTER is mounted in the enclosure, you can check the module **"X_"** numb
 | [**CHESTER-X3B**](chester-x3.md)  | Up to 2 thermocouple channels (type B/C/E/J/K/N/R/S/T)                                                                                                            |
 | [**CHESTER-X3C**](chester-x3.md)  | Up to 2 load-cell (strain gauge) channels that can be used for weight measurements                                                                                |
 | [**CHESTER-X4**](chester-x4.md)   | DC/DC converter providing power from an external 6-28 VDC line (features input voltage measurement)                                                               |
-| [**CHESTER-X5**](chester-x5.md)   | Two channel isolated analog inputs for +/- 50 V voltage measurement                                                                                               |
-| [**CHESTER-X6**](chester-x6.md)   | Interface module for our in-house S-Wire protocol targetting low-power peripherals                                                                                |
+| [**CHESTER-X5**](chester-x5.md)   | Two-channel isolated analog inputs for +/- 50 V voltage measurement                                                                                               |
+| [**CHESTER-X6**](chester-x6.md)   | Interface module for our in-house S-Wire protocol targeting low-power peripherals                                                                                 |
 | [**CHESTER-X7**](chester-x7.md)   | 1-channel differential input converter with software-controlled 5V boost converter for current probes and other industrial sensors                                |
 | [**CHESTER-X8**](chester-x8.md)   | Ultra-precise accelerometer                                                                                                                                       |
 | [**CHESTER-X9**](chester-x9.md)   | 4-channel output module with smart protected switch for controlling relays and solenoids                                                                          |

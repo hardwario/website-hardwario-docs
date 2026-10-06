@@ -1,6 +1,7 @@
 ---
 slug: index
 title: Milesight – Brány
+description: "Brány LoRaWAN od společnosti Milesight otestované v HARDWARIO, s referenčními zdroji a podporovanými síťovými servery."
 ---
 
 Zde je seznam **bran Milesight** testovaných společností HARDWARIO s odkazy na související zdroje:
@@ -14,7 +15,7 @@ Zde je seznam **bran Milesight** testovaných společností HARDWARIO s odkazy n
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Pro provoz vašeho zařízení LoRaWAN můžete zvolit jednu ze dvou podporovaných platforem síťového serveru. Obě řešení umožňují spravovat brány, registrovat koncová zařízení, konfigurovat profily a zpracovávat data payloadu.
+Pro provoz zařízení LoRaWAN můžete zvolit jednu ze dvou podporovaných platforem síťového serveru. Obě řešení umožňují spravovat brány, registrovat koncová zařízení, konfigurovat profily a zpracovávat data payloadu.
 
 ### Možnost 1: The Things Stack {#option-1-the-things-stack}
 

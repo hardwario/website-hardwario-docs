@@ -8,9 +8,9 @@ import Image from '@theme/IdealImage';
 
 # Rychlý průvodce zařízením EMBER {#ember-quick-start-guide}
 
-Vítejte! Tato stránka vám pomůže **zapnout** vaše zařízení HARDWARIO **EMBER** a vybrat, co dál:
+Vítejte! Tato stránka vám pomůže **zapnout** zařízení HARDWARIO **EMBER** a vybrat, jak pokračovat:
 - Provozovat **spravovaný LoRaWAN backend** od HARDWARIO (ChirpStack + Node-RED)
-- Připojit EMBER k vašemu vlastnímu **ChirpStack**
+- Připojit EMBER k vlastnímu serveru **ChirpStack**
 - Připojit EMBER k **The Things Stack (TTS)**
 
 ---
@@ -88,7 +88,7 @@ Pro počáteční přístup a správu použijte rozhraní WAN (port RJ-45 nejví
 **Pokud ještě nemáte nainstalovaný Winbox 4, postupujte podle [průvodce instalací Winbox 4](/ember/mikrotik/winbox4-installation).**
 #### 2.1 Připojení k zařízení EMBER pomocí Winbox 4 {#21-connect-to-ember-using-winbox-4}
 
-Po otevření aplikace se podívejte do seznamu, kde byste měli vidět vaše zařízení **EMBER**.
+Po otevření aplikace byste v seznamu měli vidět své zařízení **EMBER**.
 - Pokud je v seznamu více zařízení, podívejte se na desku EMBER. Na její levé straně jsou dva ethernetové konektory se štítkem. Na štítku najděte **MAC adresu**, kombinaci čísel a písmen za textem **E01** (například: **E01: 48:A5:8A:4F:17:A6**).
 - Vraťte se do **Winboxu** a najděte zařízení s **odpovídající MAC adresou**. Kliknutím na zařízení v seznamu jej vyberte.
 - Ujistěte se, že je **propojka** na desce **odstraněná**. Umístění propojky je na obrázku níže.
@@ -103,12 +103,12 @@ Po otevření aplikace se podívejte do seznamu, kde byste měli vidět vaše za
 ## Krok 3: Počáteční konfigurační skript RouterOS {#step-3-initial-routeros-configuration-script}
 
 ### 3.1 Nastavení hesla {#31-set-password}
-**Otevřete nové okno terminálu** (nebo se připojte přes SSH k vašemu zařízení EMBER na adrese `172.31.255.254`):
+**Otevřete nové okno terminálu** (nebo se připojte přes SSH ke svému zařízení EMBER na adrese `172.31.255.254`):
 
 ![Winbox 4 otevření nového terminálu](../../../../ember/images/winbox-open-terminal.png)    
 
 **Nastavte bezpečné heslo administrátora**
-Poté vložte následující skript, nebo to můžete udělat ručně.
+Poté vložte následující skript, nebo postupujte ručně.
 ```
 /user set admin password=YOUR_NEW_PASSWORD
 ```
@@ -126,7 +126,7 @@ Vyplňte pole:
 ![Winbox 4 otevření nového terminálu](../../../../ember/images/winbox-change-pass-2.png)
 
 ### 3.2 Spuštění základní konfigurace {#32-run-base-configuration}
-Poté vložte následující skript, nebo to můžete udělat ručně.
+Poté vložte následující skript, nebo postupujte ručně.
 
 ```routeros
 /system identity set name=ember
@@ -169,7 +169,7 @@ Zapne DHCP klienta na ether1 (WAN) pro připojení k internetu.
 - V levém panelu **IP → DHCP Client → New**, vyberte jako rozhraní **ether1** a klikněte na **OK**.
 ![EMBER DHCP klient na ether1](../../../../ember/images/ember-ether1-dhcp-client.png) 
 
-Zapnutí úvodní poznámky.
+Vypne úvodní poznámku při přihlášení.
 - V levém panelu **System → Note** odškrtněte **Show At Login** a klikněte na **OK**.
 ![EMBER přidání ether3 do bridge0](../../../../ember/images/ember-note.png)
 
@@ -187,7 +187,7 @@ Po opětovném připojení přejděte v levém panelu na **System → Packages �
 
 ### 3.4 Konfigurace rozhraní LoRa a aktualizace bootloaderu {#34-configure-lora-interface-and-update-bootloader}
 
-Po opětovném připojení následujícím po restartu vložte do terminálu tento skript pro konfiguraci rozhraní LoRa:
+Až se po restartu znovu připojíte, vložte do terminálu tento skript, který nakonfiguruje rozhraní LoRa:
 
 ```routeros
 /iot lora servers remove [find]
@@ -225,7 +225,7 @@ Co služba obvykle poskytuje:
 - **Node-RED**: zpracování dat, dekódování payloadu a přeposílání  
 - Předkonfigurované propojení mezi bránou, LNS a integracemi
 
-Kolem zařízení EMBER poskytuje HARDWARIO také volitelně **SIM kartu s konektivitou** pro LTE backhaul a **bezpečný vzdálený přístup přes OpenVPN**.
+K zařízení EMBER může HARDWARIO volitelně dodat také **SIM kartu s konektivitou** pro LTE backhaul a **bezpečný vzdálený přístup přes OpenVPN**.
 
 Doporučeno, pokud chcete **rychle získat data ze zařízení** a přeposlat je do aplikací nebo dashboardů.
 
@@ -308,11 +308,11 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 
 #### Brána je zapnutá, ale LoRaWAN server ji „nevidí“ {#gateway-is-powered-but-not-seen-in-the-lorawan-server}
 - Zkontrolujte, zda je propojka odstraněná. Obrázek najdete [zde](#21-connect-to-ember-using-winbox-4).
-- Potvrďte cíl přeposílání brány (adresa serveru / porty / protokol).
+- Ověřte, kam brána přeposílá data (adresa serveru / porty / protokol).
 - Zkontrolujte připojení k internetu přes WAN/LTE.
 - Ujistěte se, že je nainstalovaný balíček IoT (zkontrolujte pomocí `/system package print`).
 - Zkontrolujte, že je nakonfigurováno rozhraní LoRa (zkontrolujte pomocí `/iot lora print`).
-- Pokud používáte spravovanou službu HARDWARIO, potvrďte, že používáte poskytnutou URL služby a správné konfigurační pokyny.
+- Pokud používáte spravovanou službu HARDWARIO, ověřte, že používáte URL služby, kterou jste od nás dostali, a správné konfigurační pokyny.
 
 #### Reset zařízení {#reset-device}
 Odpojte napájecí kabel, držte tlačítko reset a napájecí kabel znovu zapojte. Po 5 sekundách začne LED blikat, tlačítko uvolněte. Umístění tlačítka reset najdete na obrázku [zde](#21-connect-to-ember-using-winbox-4).

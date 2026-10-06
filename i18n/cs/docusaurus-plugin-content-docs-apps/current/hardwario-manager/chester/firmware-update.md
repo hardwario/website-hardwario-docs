@@ -15,8 +15,8 @@ Otevřete **CHESTER → Tools → Firmware update**.
 :::info Firmware pochází z QR kódu
 Obrazovka aktualizace bere image z **QR kódu nesoucího odkaz na firmware**.
 Žádný katalog k prohlížení, žádná adresa k opsání, žádný výběr souboru. Ten QR
-kód dostanete se svým vlastním buildem, nebo ho najdete u
-[**předpřipravených binárek**](/chester/catalog-applications/catalog-applications#application-firmware)
+kód dostanete se svým vlastním sestavením, nebo ho najdete u
+[**předpřipravených binárních souborů**](/chester/catalog-applications/catalog-applications#application-firmware)
 katalogových aplikací.
 :::
 
@@ -53,8 +53,8 @@ obojí napájené, dokud aktualizace neskončí.
 
 ## Když aktualizace selže {#if-it-fails}
 
-Selhaná aktualizace je bezpečná. Image se potvrdí až po tom, co zařízení
-restartuje a otestuje ho, takže zařízení, které selže v polovině, **nabootuje do
+Nezdařená aktualizace je bezpečná. Image se potvrdí až poté, co se zařízení
+restartuje a image otestuje, takže zařízení, které selže v polovině, **nabootuje do
 předchozího firmwaru**.
 
 Aplikace řekne, která fáze selhala, protože z toho vyplývá další postup:
@@ -76,4 +76,4 @@ Další zprávy, které můžete vidět:
 - **The device has no room for the image**: restartujte ho a zkuste to znovu.
 - **The downloaded firmware file is empty**: QR kód nemíří na platný image.
 
-Problémy s připojením řeší [**Řešení problémů**](./troubleshooting.md).
+Problémy s připojením popisuje stránka [**Řešení problémů**](./troubleshooting.md).

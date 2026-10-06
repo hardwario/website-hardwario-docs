@@ -1,7 +1,7 @@
 ---
 slug: catalog-applications
 title: Katalogové aplikace
-description: "Katalogové aplikace jsou hotové firmwary pro CHESTER na běžné úlohy: co která umí, jaký hardware potřebuje a jak vypadají její data."
+description: "Katalogové aplikace jsou hotový firmware pro CHESTER na běžné úlohy: co která umí, jaký hardware potřebuje a jak vypadají její data."
 ---
 import Image from '@theme/IdealImage';
 
@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 Tento článek přináší informace o takzvaných **katalogových aplikacích** pro platformu **CHESTER**.
 
-**CHESTER** je rozšiřitelná low-power IoT brána s otevřeným SDK postaveným nad operačním systémem **Zephyr**. Pro okamžité nasazení nabízí **HARDWARIO** několik aplikací pro konkrétní použití. Tyto **katalogové aplikace** jsou od **HARDWARIO** dostupné s krátkou dodací lhůtou. Aplikace mají zdrojové kódy dostupné jako součást **CHESTER SDK** a jsou aktivně vylepšovány, udržovány a podporovány.
+**CHESTER** je rozšiřitelná IoT brána s nízkou spotřebou a otevřeným SDK postaveným nad operačním systémem **Zephyr**. Pro okamžité nasazení nabízí **HARDWARIO** několik aplikací pro konkrétní použití. Tyto **katalogové aplikace** jsou od **HARDWARIO** dostupné s krátkou dodací lhůtou. Jejich zdrojové kódy jsou součástí **CHESTER SDK** a aplikace průběžně vylepšujeme, udržujeme a podporujeme.
 
 **Katalogové aplikace** také slouží jako výborný odrazový můstek pro vaši vlastní firmwarovou aplikaci.
 
@@ -19,7 +19,7 @@ Podrobnosti o tom, jak jednotlivé katalogové aplikace fungují, zobrazíte kli
 
 Společné funkce jsou popsány ve zvláštním článku [**Společná funkcionalita**](common-functionality.md).
 
-Firmwary najdete v kapitole [**Firmware aplikací**](#application-firmware).
+Firmware ke stažení najdete v kapitole [**Firmware aplikací**](#application-firmware).
 
 
 
@@ -33,7 +33,7 @@ Firmwary najdete v kapitole [**Firmware aplikací**](#application-firmware).
 | [**CHESTER Push**](chester-push.md) | Alarmování tlačítkem | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> |
 | [**CHESTER Range**](chester-range.md) | Ultrazvukové měření vzdálenosti | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> |
 | [**CHESTER Scale**](chester-scale.md) | Monitorování hmotnosti na váze | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> |
-| [**CHESTER Serial**](chester-serial.md) | Modbus brána RS-232/RS-485 | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> |
+| [**CHESTER Serial**](chester-serial.md) | Brána Modbus pro RS-232/RS-485 | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> |
 | [**CHESTER wM-Bus**](chester-wm-bus.md) | Brána pro bezdrátový M-Bus | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> |
 
 
@@ -51,18 +51,18 @@ Firmwary najdete v kapitole [**Firmware aplikací**](#application-firmware).
 
 ## Firmware aplikací pro Cloud v2 {#application-firmware}
 
-Tyto firmwary jsou pro novější komunikaci s [**Cloud v2**](/cloud/).
+Tento firmware je určený pro komunikaci s novějším [**Cloud v2**](/cloud/).
 
 Pokud vaše jednotka již komunikovala s Cloud v2, můžete aktualizovat pouze hlavní [**firmware APP/BLE MCU přes BLE**](../platform-connectivity/hardwario-manager.md#firmware-update).
 
-Pokud byla vaše jednotka dříve používána s Cloud v1, musíte nejdříve aktualizovat [**firmware LTE modemu**](../firmware-sdk/how-to-lte-v2.md#flash-lte-modem-firmware).
+Pokud byla vaše jednotka dříve používána s Cloud v1, musíte nejdříve aktualizovat [**firmware modemu LTE**](../firmware-sdk/how-to-lte-v2.md#flash-lte-modem-firmware).
 
 
 :::info
 
-Některé katalogové aplikace jsou postavené tak, že funkcionalita NB-IoT/LTE i LoRaWAN je v jediném firmwaru. Je potřeba nastavit komunikační režim.
+Některé katalogové aplikace obsahují podporu NB-IoT/LTE i LoRaWAN v jediném firmwaru. V takovém případě je potřeba nastavit komunikační režim.
 
-Výchozí chování je, že zařízení **nepoužívá žádné rádio** (režim `none`), bliká oranžová LED a je nutné nastavit konfigurační parametr **mode**.
+Ve výchozím stavu zařízení **nepoužívá žádné rádio** (režim `none`), bliká oranžovou LED a je nutné nastavit konfigurační parametr **mode**.
 
 - `app config mode lte` pro síť NB-IoT/LTE
 - `app config mode lrw` pro síť LoRaWAN
@@ -71,7 +71,7 @@ Poté změny uložte příkazem `config save`. Zařízení se restartuje a použ
 
 :::
 
-#### Dostupné buildy firmwaru aplikací {#available-application-firmware-builds}
+#### Dostupná sestavení firmwaru aplikací {#available-application-firmware-builds}
 
 *SDK **v4.0.1** · NCS **3.4.1** · Zephyr **4.4.2** · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.1)*
 
@@ -110,18 +110,18 @@ Poté změny uložte příkazem `config save`. Zařízení se restartuje a použ
 
 ## Firmware aplikací pro Cloud v1 {#application-firmware-cloud-v1}
 
-Tyto firmwary jsou pro starší komunikaci s [**Cloud v1**](/cloud/legacy).
+Tento firmware je určený pro komunikaci se starším [**Cloud v1**](/cloud/legacy).
 
-Tabulka níže poskytuje přehled dostupných buildů firmwaru pro **katalogové aplikace**.
+V tabulce níže je přehled dostupných sestavení firmwaru **katalogových aplikací**.
 
 Chcete-li nahrát firmware, použijte aplikaci [**HARDWARIO Manager**](../platform-connectivity/hardwario-manager.md) na svém telefonu nebo postupujte podle článku [**Nahrání firmwaru**](../firmware-flashing/index.md).
 
 :::info
 
-Počínaje firmwarem **v2.3.0** jsou katalogové aplikace postavené tak, že funkcionalita NB-IoT/LTE i LoRaWAN je v jediném firmwaru. Režim je potřeba nastavit
+Od verze firmwaru **v2.3.0** obsahují katalogové aplikace podporu NB-IoT/LTE i LoRaWAN v jediném firmwaru. Režim je potřeba nastavit
 nejen u nových zařízení, ale také **při aktualizaci ze starší verze firmwaru**.
 
-Výchozí chování je, že zařízení **nepoužívá žádné rádio** (režim `none`) a je nutné nastavit konfigurační parametr **mode**.
+Ve výchozím stavu zařízení **nepoužívá žádné rádio** (režim `none`) a je nutné nastavit konfigurační parametr **mode**.
 
 - `app config mode lte` pro síť NB-IoT/LTE
 - `app config mode lrw` pro síť LoRaWAN

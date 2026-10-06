@@ -1,6 +1,6 @@
 {
   "theme.ErrorPageContent.title": {
-    "message": "Stránka spadla.",
+    "message": "Stránku se nepodařilo zobrazit.",
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
@@ -64,7 +64,7 @@
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "Stránka dokumentace",
+    "message": "Stránkování dokumentace",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
@@ -76,22 +76,22 @@
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "{count} stránky s tagem|{count} stránky s tagem|Jedna stránka s tagem|{count} stránek s tagem",
+    "message": "Jedna stránka s tagem|{count} stránky s tagem|{count} stránky s tagem|{count} stránek s tagem",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} s „{tagName}“",
+    "message": "{nDocsTagged} „{tagName}“",
     "description": "The title of the page for a docs tag"
   },
   "theme.docs.versionBadge.label": {
     "message": "Verze: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "Tohle je nevydaná dokumentace pro {siteTitle} {versionLabel} verzi.",
+    "message": "Toto je dokumentace k dosud nevydané verzi {siteTitle} {versionLabel}.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "Tato dokumentace je pro {siteTitle} {versionLabel}, která už není aktivně udržována.",
+    "message": "Toto je dokumentace k verzi {siteTitle} {versionLabel}, která už není aktivně udržována.",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
@@ -187,11 +187,11 @@
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
-    "message": "Nepodařilo se nám najít co jste hledal(a).",
+    "message": "Hledanou stránku jsme nenašli.",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Kontaktujte prosím vlastníka webu, který vás odkázal na původní URL a upozorněte ho, že jejich odkaz nefunguje.",
+    "message": "Pokud vás sem přivedl odkaz z jiného webu, dejte prosím jeho provozovateli vědět, že odkaz nefunguje.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
@@ -207,7 +207,7 @@
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "{readingTime} minuty čtení|{readingTime} minuty čtení|Jedna minuta čtení|{readingTime} minut čtení",
+    "message": "Jedna minuta čtení|{readingTime} minuty čtení|{readingTime} minuty čtení|{readingTime} minut čtení",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.CodeBlock.copy": {
@@ -231,11 +231,11 @@
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Zavřít postranní lištu",
+    "message": "Sbalit postranní panel",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Zavřít postranní lištu",
+    "message": "Sbalit postranní panel",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
@@ -263,11 +263,11 @@
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Otevřít postranní lištu",
+    "message": "Rozbalit postranní panel",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Otevřít postranní lištu",
+    "message": "Rozbalit postranní panel",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.IdealImageMessage.loading": {
@@ -318,7 +318,7 @@
     "message": "Všude"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "Nalezeny {count} dokumenty|Nalezeno {count} dokumentu|Nalezen 1 dokument|Nalezeno {count} dokumentů",
+    "message": "Nalezen 1 dokument|Nalezeny {count} dokumenty|Nalezeno {count} dokumentu|Nalezeno {count} dokumentů",
     "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.noResultsText": {
@@ -326,7 +326,7 @@
     "description": "The paragraph for empty search result"
   },
   "theme.blog.post.plurals": {
-    "message": "{count} články|{count} článku|Jeden článek|{count} článků",
+    "message": "Jeden článek|{count} články|{count} článku|{count} článků",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
@@ -366,7 +366,7 @@
     "description": "The draft content banner message"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "{count} položky|{count} položky|1 položka|{count} položek",
+    "message": "1 položka|{count} položky|{count} položky|{count} položek",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -427,7 +427,7 @@
     "message": "Modulární IoT platforma"
   },
   "home.tower.description": {
-    "message": "Open-source IoT platforma pro rychlé nasazení se sub-GHz radiem a extrémně nízkou spotřebou."
+    "message": "Open-source IoT platforma s rádiem sub-GHz a extrémně nízkou spotřebou pro rychlé nasazení."
   },
   "home.milesight.subtitle": {
     "message": "Senzory a brány LoRaWAN"
@@ -511,7 +511,7 @@
     "message": "Cloud a aplikace"
   },
   "home.tagline": {
-    "message": "Technická dokumentace produktů a služeb"
+    "message": "Technické podklady k produktům a službám"
   },
   "home.metaDescription": {
     "message": "Technická dokumentace produktů a služeb"

@@ -14,6 +14,6 @@ Přehled zařízení a hardwaru třetích stran dostupných v ekosystému HARDWA
 | [RAKwireless](/smart-devices/rakwireless) | Brány LoRaWAN | [RAK7268V2](/smart-devices/rakwireless/gateways/rak-RAK7268V2), [RAK7289V2](/smart-devices/rakwireless/gateways/rak-RAK7289V2) |
 | [OnLogic](/smart-devices/onlogic) | Průmyslové počítače | [CL210G-10](/smart-devices/onlogic/cl210g-10) |
 | [Raspberry Pi](/smart-devices/raspberry-pi) | Výpočetní moduly | [CM4108016](/smart-devices/raspberry-pi/cm4) |
-| [MikroTik](/smart-devices/mikrotik) | LoRaWAN síťové prvky | [RouterBOARD LoRa](/smart-devices/mikrotik/routerboard-lora) |
+| [MikroTik](/smart-devices/mikrotik) | Síťové prvky LoRaWAN | [RouterBOARD LoRa](/smart-devices/mikrotik/routerboard-lora) |
 | [Carlo Gavazzi](/smart-devices/carlo-gavazzi) | Elektroměry | [EM111](/smart-devices/carlo-gavazzi/em111), [EM530](/smart-devices/carlo-gavazzi/em530), [EM540](/smart-devices/carlo-gavazzi/em540) |
 | [Nexelec](/smart-devices/nexelec) | Bezpečnostní senzory pro IoT | [ORIGIN+](/smart-devices/nexelec/origin-plus) |

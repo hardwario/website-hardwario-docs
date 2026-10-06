@@ -13,7 +13,7 @@ downlinků a další.
 - **Interaktivní reference:** [**Dokumentace API Swagger**](https://api.hardwario.cloud/v2/documentation/), kompletní, vždy aktuální seznam endpointů a schémat.
 - **Formát:** JSON. Posílejte `Accept: application/json`; ID jsou UUID.
 
-:::tip Pro živá data preferujte konektory
+:::tip Pro data v reálném čase použijte konektory
 Chcete-li doručovat zprávy ze zařízení v reálném čase, použijte [**konektory**](/cloud/connectors)
 (HTTPS webhooky) místo dotazování REST API. Dotazování zvyšuje zpoždění
 doručení, datový provoz i zátěž služby. Webhook vám každou zprávu odešle

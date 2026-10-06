@@ -7,10 +7,10 @@ description: "HARDWARIO Manager je mobilní aplikace pro nastavení a správu za
 # HARDWARIO Manager {#hardwario-manager}
 
 **HARDWARIO Manager** je mobilní aplikace pro nastavování a správu zařízení
-HARDWARIO v provozu. Je to jedna aplikace pro celý ekosystém: přiložením telefonu
+HARDWARIO v terénu. Je to jedna aplikace pro celý ekosystém: přiložením telefonu
 k zařízení **STICKER** ho nastavíte přes NFC, nebo se přes Bluetooth připojíte
-k zařízení **CHESTER**, přečtete jeho stav, upravíte konfiguraci, spustíte shell
-příkazy a aktualizujete firmware.
+k zařízení **CHESTER**, přečtete jeho stav, upravíte konfiguraci, spustíte příkazy
+shellu a aktualizujete firmware.
 
 Aplikace běží na **Androidu a iOS**, v **angličtině a češtině**.
 
@@ -20,8 +20,8 @@ Aplikace běží na **Androidu a iOS**, v **angličtině a češtině**.
 
 | Zařízení | Jak s ním telefon komunikuje | Co aplikace umí |
 |---|---|---|
-| **STICKER** | NFC. Přiložením telefonu k zařízení | Přečíst informace o zařízení a klíče LoRaWAN, přečíst a zapsat celou konfiguraci, postavit a aplikovat konfigurační šablony, spravovat senzory a alarmy, přečíst uložená měření, resetovat zařízení a vést si seznam zařízení, která spravujete |
-| **CHESTER** | Bluetooth Low Energy | Přečíst informace o zařízení, upravit konfiguraci, otevřít shell terminál, nasdílet ten terminál kolegovi, aktualizovat firmware a restartovat zařízení |
+| **STICKER** | NFC. Přiložením telefonu k zařízení | Přečíst informace o zařízení a klíče LoRaWAN, přečíst a zapsat celou konfiguraci, vytvářet a používat konfigurační šablony, spravovat senzory a alarmy, přečíst uložená měření, resetovat zařízení a vést si seznam zařízení, která spravujete |
+| **CHESTER** | Bluetooth Low Energy | Přečíst informace o zařízení, upravit konfiguraci, otevřít shell terminál, sdílet terminál s kolegou, aktualizovat firmware a restartovat zařízení |
 
 Zařízení STICKER lze nastavit i **bez vložených baterií**, protože pole NFC z telefonu
 zařízení napájí dost dlouho na to, aby si nastavení uložilo. Viz
@@ -43,7 +43,7 @@ uvidíte, co s ní aplikace umí.
 
 ## Kde začít {#where-to-start}
 
-1. [**Instalace aplikace**](./install.md): dostaňte ji do telefonu, zapněte NFC a
+1. [**Instalace aplikace**](./install.md): nainstalujte ji do telefonu, zapněte NFC a
    udělte oprávnění, o která si řekne.
 2. [**Účet ATELOS**](./atelos.md): přihlaste se, aby aplikace mohla zařízení
    nárokovat a vyplnit za vás jejich klíče.

@@ -7,11 +7,11 @@ title_meta: "Videonávody (videonávody CHESTER)"
 
 import Image from '@theme/IdealImage';
 
-# Video tutoriály {#video-tutorials}
+# Videonávody {#video-tutorials}
 
 Zde najdete podrobné návody a videonávody, které vám pomohou nastavit a používat zařízení CHESTER.
 
-| Tutoriál                                   | Podrobný návod                          | Video tutoriál                          |
+| Téma                                       | Návod krok za krokem                    | Videonávod                              |
 |--------------------------------------------|-----------------------------------------|-----------------------------------------|
 | Jak připojit zařízení CHESTER k telefonu   | [Návod](/chester/videos-chester/chester-connect-phone/#step-by-step-text-guide) | [Video](/chester/videos-chester/chester-connect-phone/) |
 | Jak aktualizovat zařízení CHESTER telefonem | [Návod](/chester/videos-chester/chester-update-phone/#step-by-step-text-guide) | [Video](/chester/videos-chester/chester-update-phone/) |

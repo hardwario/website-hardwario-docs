@@ -7,12 +7,12 @@ sidebar_label: Úvod
 
 # GAUGER {#gauger}
 
-**GAUGER** je konfigurovatelné zařízení s Wi-Fi/Ethernetem určené pro počítání pulzů na až čtyřech galvanicky oddělených digitálních vstupech.
+**GAUGER** je konfigurovatelné zařízení s Wi-Fi/Ethernetem určené pro počítání pulzů až na čtyřech galvanicky oddělených digitálních vstupech.
 
-Zařízení hostuje webové uživatelské rozhraní, které slouží k jeho konfiguraci. Lze jej ovládat také přes HTTP API. Hodnoty počítadel je možné čítat pomocí Modbus TCP.
+Zařízení se konfiguruje přes vestavěné webové rozhraní a lze ho ovládat také přes HTTP API. Stavy čítačů lze číst přes Modbus TCP.
 
 :::tip
-### Pro zprovoznění zařízení GAUGER si přečtěte návod [**Prvotní konfigurace**](operation-instructions/initial-configuration.md) {#to-get-your-gauger-running-read-the-initial-configuration-guide}
+### Jak zařízení GAUGER zprovoznit, popisuje návod [**Prvotní konfigurace**](operation-instructions/initial-configuration.md) {#to-get-your-gauger-running-read-the-initial-configuration-guide}
 :::
 
 <img src="/img/gauger-intro.webp" data-zoom-src="/img/gauger-intro.webp" width="540" alt="GAUGER" />
@@ -20,7 +20,7 @@ Zařízení hostuje webové uživatelské rozhraní, které slouží k jeho konf
 ## Rychlé odkazy {#quick-links}
 
 * [**Prvotní konfigurace**](operation-instructions/initial-configuration.md): Připojte se k zařízení GAUGER a nastavte jej poprvé.
-* [**Popis hardwaru**](hardware-description.md): Elektrické, fyzické a vstupní specifikace.
+* [**Popis hardwaru**](hardware-description.md): Elektrické a mechanické parametry a specifikace vstupů.
 * [**Podrobný popis**](category/detailed-description): Konektory, stavy zařízení, chování DHCP, HTTP API, registry Modbus, napájení.
 * [**Návod k obsluze**](category/operation-instructions): Reset konfigurace, vyhledání zařízení, správa firmwaru.
 * [**Seznam změn**](changelog): Nejnovější změny firmwaru a platformy.
@@ -30,7 +30,7 @@ Zařízení hostuje webové uživatelské rozhraní, které slouží k jeho konf
 - Měření průtoku vody a spotřeby plynu na obtížně dostupných místech
 - Počítání osob pomocí infračervených bran na přestupních nebo dopravních stanicích
 - Sledování otáček zařízení a výtěžnosti výrobní linky
-- Průmyslové IoT snímání v budovách a městských oblastech
+- Průmyslové IoT měření v budovách a ve městech
 
 ## Klíčové vlastnosti {#key-features}
 
@@ -40,7 +40,7 @@ Zařízení hostuje webové uživatelské rozhraní, které slouží k jeho konf
 | **Připojení přes Ethernet** | Drátová síť 10/100 Base-T. |
 | **Připojení přes Wi-Fi** | 2,4GHz Wi-Fi (802.11 b/g/n). |
 | **Montáž na DIN lištu** | Průmyslová krabička na DIN lištu. |
-| **Server Modbus TCP** | Čtení hodnot počítadel přes Modbus TCP. |
-| **Webová konfigurace** | Vestavěný konfigurační web. |
+| **Server Modbus TCP** | Čtení stavů čítačů přes Modbus TCP. |
+| **Webová konfigurace** | Vestavěné webové rozhraní pro konfiguraci. |
 | **HTTP API** | Konfigurační API na bázi HTTP. |
-| **Aktualizace OTA** | Funkce bezdrátové aktualizace firmwaru. |
+| **Aktualizace OTA** | Bezdrátová aktualizace firmwaru. |

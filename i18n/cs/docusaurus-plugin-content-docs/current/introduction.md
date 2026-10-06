@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 **HARDWARIO CHESTER** je vysoce konfigurovatelná IoT platforma **LPWAN**. Jejím hlavním úkolem je připojit k internetu co nejvíce zařízení a prostředí, zejména z míst, kde není standardní připojení k elektrické síti a internetu.
 
 :::tip
-### Chcete-li zařízení CHESTER uvést do provozu, přečtěte si [**Rychlý průvodce**](first-steps.md) {#to-get-your-chester-running-read-the-quick-start-guide}
+### Než zařízení CHESTER uvedete do provozu, přečtěte si [**Rychlého průvodce**](first-steps.md) {#to-get-your-chester-running-read-the-quick-start-guide}
 :::
 
 <img src="/img/chester.webp" data-zoom-src="/img/chester.webp" width="540" alt="CHESTER" />
@@ -30,7 +30,7 @@ import Image from '@theme/IdealImage';
 * [**Firmware SDK**](category/firmware-sdk): Vytvoření nebo úprava firmwarové aplikace.
 * [**Nástroje pro vývojáře**](category/developer-tools): Ekosystém nástrojů pro vývojáře platformy.
 * [**Bezpečnost platformy**](./platform-security/index.md): Jak platforma zachází s bezpečností dat.
-* [**Video tutoriály**](videos-chester/index.md): Krátká videa o připojení, aktualizaci a párování zařízení CHESTER.
+* [**Videonávody**](videos-chester/index.md): Krátká videa o připojení, aktualizaci a párování zařízení CHESTER.
 
 <!--
 

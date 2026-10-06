@@ -41,7 +41,7 @@ The application signals push-button events on LEDs in two different ways and cus
 
   :::tip
 
-  This variant makes it suitable for low-power operation (months from the integrated **Li-Ion** battery).
+  This variant is suitable for low-power operation (months from the integrated **Li-Ion** battery).
 
   :::
 
@@ -51,7 +51,7 @@ The application signals push-button events on LEDs in two different ways and cus
 
   :::caution
 
-  This variant makes is not suitable for low-power operation as the constantly activated LED quickly discharges the battery.
+  This variant is not suitable for low-power operation as the constantly activated LED quickly discharges the battery.
 
   :::
 

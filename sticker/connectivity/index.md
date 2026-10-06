@@ -34,7 +34,7 @@ Standard LoRaWAN Class A operation with OTAA/ABP activation, dynamic ADR, encryp
 
 - **[ChirpStack v4 Integration](./lorawan-chirpstack.md)**: Setup guide for self-hosted ChirpStack LNS deployments.
 - **[The Things Stack Integration](./lorawan-tts.md)**: Setup guide for TTS Cloud and Community Edition.
-- **[Downlink Commands](./downlink-commands.md)**: Reference guide for remote parameters configuration over fPort 85.
+- **[Downlink Commands](./downlink-commands.md)**: Reference guide for remote parameter configuration over fPort 85.
 
 ### LoRa P2P (Peer-to-Peer)
 Software-selectable proprietary radio mode enabling direct, unmanaged radio packet transmission without an intermediate network server.

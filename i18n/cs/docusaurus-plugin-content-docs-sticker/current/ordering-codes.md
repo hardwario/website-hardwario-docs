@@ -1,7 +1,7 @@
 ---
 slug: ordering-codes
 title: Objednací kódy
-description: "Objednací kódy pro platformu STICKER: varianty, krabičky a příslušenství i s part numbery, které se uvádějí při objednávce."
+description: "Objednací kódy pro platformu STICKER: varianty, krabičky a příslušenství včetně objednacích čísel, která se uvádějí v objednávce."
 title_meta: "Objednací kódy (STICKER)"
 ---
 import Image from '@theme/IdealImage';

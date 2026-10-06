@@ -1,12 +1,13 @@
 ---
 slug: overview
 title: Overview
+description: "Structure of the legacy HARDWARIO Cloud v1: user configuration, groups, callbacks, devices and messages."
 ---
 import Image from '@theme/IdealImage';
 
 # CLOUD Overview
 
-[**HARDWARIO Cloud**](https://hardwario.cloud) allows users to manage it's devices.
+[**HARDWARIO Cloud**](https://hardwario.cloud) lets users manage their devices.
 
 **HARDWARIO Cloud** has this structure:
 

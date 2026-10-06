@@ -2,14 +2,14 @@
 slug: /
 sidebar_position: 1
 title: TOWER
-description: "TOWER je modulární bezdrátová platforma pro IoT s otevřeným softwarem i hardwarem pro rychlé prototypování a nasazení, srdce HARDWARIO Academy."
+description: "TOWER, srdce HARDWARIO Academy, je modulární bezdrátová platforma pro IoT s otevřeným softwarem i hardwarem pro rychlé prototypování a nasazení."
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
 
 # TOWER {#tower}
 
-**TOWER** je modulární, bezdrátová, open-source/open-hardware IoT platforma pro rychlé prototypování a nasazení.
+**TOWER** je modulární bezdrátová IoT platforma s otevřeným softwarem i hardwarem (open source, open hardware) pro rychlé prototypování a nasazení.
 Používá se v průmyslových aplikacích, ve STEM výuce a v hobby projektech (domácí automatizace, zahradničení, osvětlení, escape roomy atd.).
 
 <img src="/img/tower.webp" data-zoom-src="/img/tower.webp" width="540" alt="TOWER" />
@@ -17,14 +17,14 @@ Používá se v průmyslových aplikacích, ve STEM výuce a v hobby projektech 
 ## Rychlé odkazy {#quick-links}
 
 * [**První kroky**](category/getting-started): Začněte s platformou TOWER od úplného začátku.
-* [**Programování na počítači**](category/desktop-programming): Rychlý start se zařízením TOWER a váš první projekt.
+* [**Programování na počítači**](category/desktop-programming): Rychlý start s platformou TOWER a první projekt.
 * [**Server na Raspberry Pi**](server-raspberry-pi): Nasaďte svůj projekt na Raspberry Pi v režimu headless.
 * [**Nástroje příkazové řádky**](command-line-tools): Ovládání komponent TOWER z příkazové řádky.
 * [**Vývoj firmwaru**](firmware-development): Ponořte se do programování embedded systémů.
 * [**Firmware SDK**](firmware-sdk): Tvorba vlastního firmwaru od základů.
 * [**Rádiová komunikace**](radio-communication): Rádiové protokoly podporované platformou TOWER.
 * [**Protokol MQTT**](mqtt-protocol): Základní pilíř systému TOWER na serveru.
-* [**Integrace s platformami**](category/platform-integrations): Vizualizujte svá data a/nebo propojte svůj projekt na dálku.
+* [**Integrace platforem**](category/platform-integrations): Vizualizujte svá data a/nebo propojte svůj projekt na dálku.
 * [**Projekty krok za krokem**](https://www.hackster.io/hardwario/projects): Recepty na tvorbu reálných a smysluplných projektů.
 * [**Hardwarové moduly**](hardware-modules/): Podrobné informace o modulech a tagech TOWER.
 * [**Hardwarová rozhraní**](category/hardware-interfaces): Hardwarové vrstvy, nejen mezi moduly TOWER.
@@ -35,7 +35,7 @@ Používá se v průmyslových aplikacích, ve STEM výuce a v hobby projektech 
 - Domácí automatizace, prototypování a vzdělávací projekty
 - Monitorování prostředí (klima, kvalita vzduchu, stav půdy)
 - Bezdrátové senzorové sítě přes sub-GHz rádio
-- Detekce pohybu a řídicí systémy založené na tlačítkách
+- Detekce pohybu a ovládání tlačítky
 - Monitorování CO2 a kvality vzduchu
 
 ## Klíčové vlastnosti {#key-features}

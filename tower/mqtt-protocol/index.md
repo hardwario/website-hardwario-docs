@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 - The **Topic** describes the content of the message and identifies it
 - The **Topic** name has a **directory structure**: each level is divided with a symbol `/`
   - Topic can be `bedroom/temperature`, `kitchen/light/set`, etc.
-- MQTT server is called the **broker** and clients can p**ublish messages** and **subscribe to topics**
+- MQTT server is called the **broker** and clients can **publish messages** and **subscribe to topics**
 - The task of the MQTT broker is to **deliver messages** from **publishers** to **subscribers**
 - You can use two so-called **wildcards** while subscribing to the MQTT topic
   - `+` wildcard will subscribe to all topics in the specified topic

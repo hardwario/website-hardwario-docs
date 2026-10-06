@@ -8,7 +8,7 @@ title_meta: "Úvod (FIBER Lite)"
 
 **FIBER Lite** je varianta zařízení [**FIBER**](/fiber/) postavená na Raspberry Pi 5, určená k rychlému
 zprovoznění a testování zařízení **LoRaWAN** (zejména **HARDWARIO STICKER** a **HARDWARIO
-CHESTER**) přímo na stole, bez nutnosti pro každý test stavět samostatný LoRaWAN network server, databázi
+CHESTER**) přímo na stole, aniž byste pro každý test museli zprovozňovat samostatný síťový server LoRaWAN, databázi
 a vizualizační vrstvu.
 
 Postup zprovoznění je **stejný jako u zařízení FIBER**, viz [**Instalace**](/fiber/installation) (nebo
@@ -16,8 +16,8 @@ Postup zprovoznění je **stejný jako u zařízení FIBER**, viz [**Instalace**
 liší. Neexistuje žádný samostatný instalační postup pro FIBER Lite: ChirpStack, Node-RED, InfluxDB, Grafana
 i značkový Dashboard jsou součástí jednoho společného stacku dostupného na obou variantách. Tato
 stránka (a sekce Řešení problémů pod ní) popisuje pouze to, co je u varianty Lite skutečně **odlišné**,
-což se týká hardwaru. Vše ostatní najdete v sekcích [**Úvod**](/fiber/) a
-[**Popis hardwaru**](/fiber/category/hardware-description), které už FIBER pokrývá.
+a to je hardware. Vše ostatní, co platí pro FIBER, najdete v sekcích [**Úvod**](/fiber/) a
+[**Popis hardwaru**](/fiber/category/hardware-description).
 
 ## Co je jinak {#whats-different}
 

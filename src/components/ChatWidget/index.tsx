@@ -273,13 +273,13 @@ const UI = {
     // lands on rung 2 ("which product did you mean?") is a bad opener, which is
     // what ruled out the more obvious "how do I connect to HARDWARIO Cloud?".
     suggestions: [
-      'What is CHESTER platform?',
+      'What is the CHESTER platform?',
       'How to flash firmware to CHESTER or STICKER?',
       'How to get started with HARDWARIO Cloud?',
     ],
     placeholder: 'Type your question…',
     searching: 'Searching the documentation',
-    newChat: 'New Conversation',
+    newChat: 'New conversation',
     expand: 'Expand the chat',
     shrink: 'Shrink the chat',
     close: 'Close the chat',
@@ -311,7 +311,7 @@ const UI = {
       'a cloudových řešeních. S čím vám dnes mohu pomoci?',
     suggestions: [
       'Co je platforma CHESTER?',
-      'Jak nahrát firmware do CHESTERu nebo STICKERu?',
+      'Jak nahrát firmware do zařízení CHESTER nebo STICKER?',
       'Jak začít používat HARDWARIO Cloud?',
     ],
     placeholder: 'Napište svůj dotaz…',

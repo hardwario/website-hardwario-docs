@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 CHESTER-M mainboard contains also LoRaWAN radio. [Catalog applications](../catalog-applications/index.md) have both NB-IoT/LTE-M and LoRaWAN radio populated. Thanks to this you can easily switch to different radio just by a software reconfiguration.
 
-CHESTER is using **CMWX1ZZABZ-078** module from **Murata**. This module has manufacturer firmware that takes care of all the LoRaWAN communication. It is also possible to flash our own [lora-modem](https://github.com/hardwario/lora-modem) open-source firmware, which is backward-compatible with the manufacturer's, but also adds more functionality and higer LoRaWAN version support. It is also [very well documented](https://github.com/hardwario/lora-modem/wiki/AT-Command-Interface), however this AT communication is handled by CHESTER so all you need is to set-up keys as explained below.
+CHESTER is using **CMWX1ZZABZ-078** module from **Murata**. This module has manufacturer firmware that takes care of all the LoRaWAN communication. It is also possible to flash our own [lora-modem](https://github.com/hardwario/lora-modem) open-source firmware, which is backward-compatible with the manufacturer's, but also adds more functionality and higher LoRaWAN version support. It is also [very well documented](https://github.com/hardwario/lora-modem/wiki/AT-Command-Interface), however this AT communication is handled by CHESTER so all you need is to set-up keys as explained below.
 
 The standard **CMWX1ZZABZ-078** module from **Murata** uses LoRaWAN standard 1.0.2 release B.
 
@@ -14,7 +14,7 @@ The standard **CMWX1ZZABZ-078** module from **Murata** uses LoRaWAN standard 1.0
 
 ## Network Mode Configuration
 
-Some catalog firmwares allows configuration to use NB-IoT/LTE or LoRaWAN network. This firmware after power-up is not sending data, the **LED is blinking yellow** and you need to configure correct radio mode.
+Some catalog firmwares allow configuration to use NB-IoT/LTE or LoRaWAN network. This firmware after power-up is not sending data, the **LED is blinking yellow** and you need to configure correct radio mode.
 
 This `app mode` configuration is needed currently for these catalog applications:
 
@@ -45,7 +45,7 @@ EMBER is using [CHIRPSTACK](https://www.chirpstack.io/) and [Node-RED](https://n
 
 ## CHESTER LoRaWAN Configuration
 
-Here is an example configuration parameters that CHESTER supports. You can use these tools to configure network keys and configuration:
+Here are example configuration parameters that CHESTER supports. You can use these tools to configure network keys and configuration:
 - [HARDWARIO Manager](../platform-connectivity/hardwario-manager.md)
 - [HARDWARIO Terminal](https://terminal.hardwario.com/) experimental Chrome BLE console
 - J-Link with [HARDWARIO CLI Console](../developer-tools/command-line-tools.md#interactive-console)
@@ -109,7 +109,7 @@ config save
 ### ABP Configuration
 
 Keys are entered manually. In some cases, this is a better solution in fixed installation when the device signal is on the edge.
-We use this configuration with **ADR** (Automatic data rate) disabled to the network has a fixed communication speed.
+We use this configuration with **ADR** (Automatic data rate) disabled so the network has a fixed communication speed.
 
 In the CHIRPSTACK device profile in the JOIN (OTAA/ABP) tab **disable** Device supports OTAA and enter these configuration parameters for EU868:
 
@@ -119,7 +119,7 @@ In the CHIRPSTACK device profile in the JOIN (OTAA/ABP) tab **disable** Device s
 - RX2 channel frequency (Hz): `869525000`
 - Factory-preset frequencies (Hz): `868100000, 868300000, 868500000, 867100000, 867300000, 867100000, 867700000, 867900000`
 
-For generating keys you can this [online generator tool](https://loratools.nl/#/keys) for testing and development, for production use an offline generator just to be safe.
+For generating keys you can use this [online generator tool](https://loratools.nl/#/keys) for testing and development, for production use an offline generator just to be safe.
 
 Then you configure CHESTER
 
@@ -199,6 +199,6 @@ In your (Mikrotik) gateway check **Network** configuration option, then configur
 Then go to the Mikrotik **Traffic** tab and see if you can see the **JOIN** packet from your device with **Dev Addr**. In this tab you see RAW encrypted packets from all devices around.
 But it is useful to check if the device and gateway is using the same private/public packet prefix.
 
-If you see packets arriving, then you might troubleshoot issues further in the CHIRPSTACK Gateways and **Live LoRaWAN Frames** tab. Then only after here you can see packets, go to the Applications and look for decoded packets and troubleshoot for example wrong keys if the device's packets are not visible there.
+If you see packets arriving, then you might troubleshoot issues further in the CHIRPSTACK Gateways and **Live LoRaWAN Frames** tab. Only once you see packets here, go to the Applications and look for decoded packets; if the device's packets are not visible there, troubleshoot for example wrong keys.
 
 **Netmore** is using the **public** network. To make your device's network type public, use the command `lrw config nwk public`.

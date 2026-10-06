@@ -35,8 +35,8 @@ neplatí: na vaší desce není propojka BOOT, `rpiboot` ani PoE adaptér. Přej
 1. Nahrajte systém pomocí Raspberry Pi Imager (Device: **Raspberry Pi 4**, Storage:
    **RPi-MSD-0001 Media**), v kroku Customisation nastavte hostname, uživatelské jméno/heslo a
    zapněte SSH.
-1. Stiskněte **RESET** na zařízení TARGET, vyčkejte na náběh systému a zjistěte jeho IP adresu
-   z přidělených zápůjček na vašem DHCP serveru.
+1. Stiskněte **RESET** na zařízení TARGET, vyčkejte na náběh systému a jeho IP adresu zjistěte
+   v seznamu přidělených adres (leases) na DHCP serveru.
 
 ---
 
@@ -75,7 +75,7 @@ Zapněte fyzické zařízení LoRaWAN. Sledujte v ChirpStack záložku **LoRaWAN
 Pokud je brána v dosahu a vše výše je správně nakonfigurováno, měl by se během několika sekund objevit
 join-request následovaný join-accept.
 
-Pokud se neobjeví vůbec nic, zkontrolujte nejprve u brány časový údaj **Last seen at**, protože pokud k bráně
+Pokud se neobjeví vůbec nic, zkontrolujte nejprve u brány údaj **Last seen at**. Když k bráně
 nepřichází žádný provoz, je problém na straně rádia/koncentrátoru, nikoli v registraci zařízení.
 
 ---
@@ -92,7 +92,7 @@ nepřichází žádný provoz, je problém na straně rádia/koncentrátoru, nik
 
 :::danger
 
-Dříve než zařízení vystavíte do jakékoli sdílené sítě, změňte **výchozí přihlášení `admin`/`admin`
+Než zařízení připojíte do jakékoli sdílené sítě, změňte **výchozí přihlášení `admin`/`admin`
 v ChirpStack**. Žádný z instalačních kroků jej automaticky nemění.
 
 :::
@@ -110,7 +110,7 @@ Vaše zařízení FIBER má nahraný systém, běží na něm ChirpStack a přij
 Node-RED, InfluxDB, Grafana i Dashboard se instalují stejným způsobem, bez dalších kroků.
 Rozdíly jsou pouze v hardwaru:
 
-- **Nahrání firmwaru**: žádná propojka BOOT, žádný `rpiboot`, vůbec žádná aktivace bootloaderu. Pomocí
+- **Nahrání systému**: žádná propojka BOOT, žádný `rpiboot`, vůbec žádná aktivace bootloaderu. Pomocí
   Raspberry Pi Imager nahrajte obraz přímo na běžnou microSD kartu a vložte ji. Metody zjištění IP adresy,
   postup nastavení statické IP a přihlášení přes SSH najdete v části
   [Nahrání Raspberry Pi OS](/fiber/installation/flash/) (záložka FIBER Lite).
@@ -118,11 +118,11 @@ Rozdíly jsou pouze v hardwaru:
 - **Concentratord**: RAK5146 se připojuje přes **SPI** pomocí HAT RAK2287, nikoli přes USB, má tedy
   odlišnou konfiguraci a instalační postup (viz záložka FIBER Lite v části
   [Instalace ChirpStack Concentratord](/fiber/installation/concentratord/)). Postupujte podle této záložky přesně:
-  channel plan i oba řádky s oprávněními služby jsou povinné a vynechání kteréhokoli z nich
-  selže tiše, bez jakéhokoli chybového hlášení.
+  kanálový plán (channel plan) i oba řádky s oprávněními služby jsou povinné: pokud kterýkoli z nich
+  vynecháte, instalace tiše selže bez chybového hlášení.
 - FIBER Lite nemá displej ani senzory 1-Wire: všechna specifika FIBER Lite (BOM, hardwarové
   rozdíly) najdete v části [Úvod do FIBER Lite](/fiber/fiber-lite/introduction/) v postranním panelu. Máte
-  klasický FIBER? V postranním panelu najdete [**Hardwarové návody FIBER**](/fiber/category/fiber-hardware-guides/),
-  kde je popsáno, co s jeho displejem a senzory 1-Wire.
+  klasický FIBER? V postranním panelu najdete [**Návody k hardwaru FIBER**](/fiber/category/fiber-hardware-guides/),
+  kde se dozvíte, co dělat s jeho displejem a senzory 1-Wire.
 
 Pokud se cokoli nechová podle očekávání, podívejte se do části **Řešení problémů** pod FIBER Lite v postranním panelu.

@@ -1,7 +1,7 @@
 ---
 slug: bulk-actions
 title: Hromadné akce
-description: "Hromadné akce v HARDWARIO Cloud nastaví nebo spravují mnoho zařízení CHESTER najednou, když má celá flotila sdílet stejné nastavení."
+description: "Hromadnými akcemi v HARDWARIO Cloud nastavíte nebo spravujete mnoho zařízení CHESTER najednou, když má celá flotila sdílet stejné nastavení."
 ---
 
 # Hromadné akce {#bulk-actions}

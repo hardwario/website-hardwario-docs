@@ -14,7 +14,7 @@ import Image from '@theme/IdealImage';
 ### Než zařízení STICKER rozběhnete, přečtěte si [**rychlého průvodce**](first-steps) {#to-get-your-sticker-running-read-the-quick-start-guide}
 :::
 
-<img src="/img/sticker.webp" data-zoom-src="/img/sticker.webp" width="540" alt="STICKER – katalog" />
+<img src="/img/sticker.webp" data-zoom-src="/img/sticker.webp" width="540" alt="Varianty zařízení STICKER" />
 
 ## Rychlé odkazy {#quick-links}
 
@@ -29,8 +29,8 @@ import Image from '@theme/IdealImage';
 
 - Sledování a udržování optimální teploty v různých místnostech pro komfort a energetickou efektivitu
 - Přesná regulace a kontrola teploty během kritických výrobních operací
-- Udržování vhodných skladovacích podmínek díky měření teploty ve skladech, které chrání uložené zboží
-- Sledování a regulace teploty pro vytvoření ideálních podmínek pro rostliny ve sklenících
+- Hlídání teploty ve skladech, aby uložené zboží zůstalo ve vhodných podmínkách
+- Sledování a regulace teploty ve sklenících pro ideální podmínky pěstování rostlin
 - Integrace s PLC nebo samostatnými senzory pro sběr dat potřebných ve výrobních a průmyslových procesech
 
 ## Klíčové vlastnosti {#key-features}
@@ -38,4 +38,4 @@ import Image from '@theme/IdealImage';
 * **Extrémně nízká spotřeba:** Provoz po několik let na dvou běžných bateriích AA díky inteligentním režimům spánku a podpoře režimu Radio-Silent nastaveného z výroby.
 * **Flexibilní konektivita a NFC:** Komunikace LoRaWAN na velké vzdálenosti v kombinaci se šifrovaným NFC pro okamžitou konfiguraci a správu.
 * **Modulární ekosystém:** Hotové katalogové aplikace (Clime, Motion, Input) pokrývající různé úlohy měření prostředí i průmyslových veličin.
-* **Otevřený a bezpečný firmware:** Postavený na Zephyr RTOS s nulovou plochou pro vzdálený útok (nahrávání pouze přes SWD, žádný bootloader v provozu).
+* **Otevřený a bezpečný firmware:** Postavený na Zephyr RTOS, bez vzdálené útočné plochy (nahrávání jen přes SWD, žádný bootloader v nasazených zařízeních).

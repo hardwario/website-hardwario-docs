@@ -1,4 +1,4 @@
-﻿---
+---
 slug: index
 title: RAKwireless - Gateways
 description: "RAKwireless LoRaWAN gateways tested by HARDWARIO, with reference resources for each device."
@@ -55,7 +55,7 @@ Click **Register gateway** and **download both API keys** (CUPS + LNS).
 #### Gateway Configuration
 
 On your RAK gateway, navigate to **LoRa → Configuration** and select **Basics Station** as **Work mode**.
-- Make sure the **Frequency Plan** and **Country** matches your regional settings.
+- Make sure the **Frequency Plan** and **Country** match your regional settings.
 Click on **Configure Basics Station server setup** and fill the following field:
 - Basics Station Server Type: **LNS Server**
 - Server URL: **wss://hardwario-com.eu1.cloud.thethings.industries**
@@ -87,7 +87,7 @@ An open-source LoRaWAN Network Server ideal for on-premise or private network in
 
 #### Gateway Configuration
 On your RAK gateway, navigate to **LoRa → Configuration** and select **Packet forwarder** as **Work mode**.
-- Make sure the **Frequency Plan** and **Country** matches your regional settings.
+- Make sure the **Frequency Plan** and **Country** match your regional settings.
 Select **Samtech UDP GWMP Protocol** as Protocol.
 In **UDP Protocol parameters** category fill the following field:
 - Server address: **ADDRESS_OF_YOUR_CHIRPSTACK_SERVER**

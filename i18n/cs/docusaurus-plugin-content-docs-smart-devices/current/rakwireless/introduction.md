@@ -11,13 +11,13 @@ import Image from '@theme/IdealImage';
 
 ---
 
-RAKwireless je široce uznávaný pro své robustní **LoRaWAN®** infrastrukturní produkty, modulární systémy nodů (WisBlock) a ekosystém přátelský k vývojářům. Produkty jsou navrženy tak, aby pokryly vše od rychlého prototypování až po masové komerční nasazení v náročných průmyslových prostředích.
+RAKwireless je známý svými robustními infrastrukturními produkty **LoRaWAN®**, modulárními systémy nodů (WisBlock) a ekosystémem vstřícným k vývojářům. Produkty jsou navrženy tak, aby pokryly vše od rychlého prototypování až po masové komerční nasazení v náročných průmyslových prostředích.
 
 ### Hlavní kategorie produktů {#key-product-categories}
 
 Portfolio RAKwireless zahrnuté v naší dokumentaci pokrývá:
 
-* **Komerční a průmyslové brány:** Vysoce výkonné vnitřní i venkovní LoRaWAN brány kompatibilní s hlavními síťovými servery (The Things Stack, ChirpStack, AWS IoT Core).
+* **Komerční a průmyslové brány:** Vysoce výkonné vnitřní i venkovní brány LoRaWAN kompatibilní s hlavními síťovými servery (The Things Stack, ChirpStack, AWS IoT Core).
 * **Senzory a koncové nody:** Senzory připravené k okamžitému použití pro monitorování prostředí, sledování a inteligentní měření.
 * **Modulární IoT (WisBlock):** Modulární systém, který uživatelům umožňuje stavět vlastní senzorové nody skládáním výpočetních, senzorových a komunikačních bloků jako LEGO®.
 
@@ -30,6 +30,6 @@ Portfolio RAKwireless zahrnuté v naší dokumentaci pokrývá:
 ### Aplikace {#applications}
 
 Hardware RAKwireless se aktivně používá v:
-* **Inteligentním zemědělství:** Monitorování půdy a precizní zemědělství.
-* **Smart Cities:** Sledování majetku, odpadové hospodářství a měření parametrů prostředí.
+* **Chytrém zemědělství:** Monitorování půdy a precizní zemědělství.
+* **Chytrých městech:** Sledování majetku, odpadové hospodářství a měření parametrů prostředí.
 * **Průmyslovém IoT (IIoT):** Prediktivní údržba a automatizace výroby.

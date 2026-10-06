@@ -1,15 +1,15 @@
 ---
 slug: changelog
-title: EMBER – seznam změn
+title: Seznam změn EMBER
 toc_min_heading_level: 2
 toc_max_heading_level: 2
-description: "Tato stránka sleduje všechny významné změny na platformě EMBER včetně firmwaru a hardwaru. Kategorie změn filtrujte pomocí záložek níže."
+description: "Přehled všech významných změn platformy EMBER včetně firmwaru a hardwaru, s filtrováním podle kategorie změn pomocí záložek."
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# EMBER – seznam změn {#ember-changelog}
+# Seznam změn EMBER {#ember-changelog}
 
 Tato stránka sleduje všechny významné změny na platformě EMBER, včetně **firmwaru** a **hardwaru**. Pomocí záložek níže můžete filtrovat podle kategorie změn.
 

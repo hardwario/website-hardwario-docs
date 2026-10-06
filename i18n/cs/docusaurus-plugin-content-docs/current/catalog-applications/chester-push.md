@@ -47,7 +47,7 @@ Aplikace signalizuje události tlačítek na LED dvěma různými způsoby a zá
 
 - Alternativní implementace **CHESTER Push FM** (zkratka pro **Flip Mode**):
 
-  LED se přepne (červenou barvou) na tlačítko, které bylo stisknuto (předchozí tlačítko se zhasne).
+  LED se přepne (červenou barvou) na tlačítko, které bylo stisknuto (LED předchozího tlačítka zhasne).
 
   :::caution
 
@@ -83,7 +83,7 @@ app config backup-report-disconnected false
 
 :::info
 
-Celou stromovou strukturu příkazů můžete snadno prozkoumat – začněte příkazem `help`.
+Celou stromovou strukturu příkazů snadno prozkoumáte: začněte příkazem `help`.
 
 :::
 

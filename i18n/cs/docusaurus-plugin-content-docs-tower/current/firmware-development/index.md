@@ -14,7 +14,7 @@ Tato sekce se věnuje nástrojům pro vývoj firmwaru. Pokud je již máte nebo 
 
 :::
 
-Nabízíme dva způsoby, jak firmware psát a spravovat:
+Nabízíme tři způsoby, jak firmware psát a spravovat:
 
 - [**HARDWARIO Code**](./about-hardwario-code.md): samostatná verze **Visual Studio Code**, vytvořená speciálně pro vývoj firmwaru HARDWARIO TOWER
 - [**HARDWARIO TOWER Extension**](./hardwario-extension-tutorial.md): rozšíření pro **Visual Studio Code** určené pro vývoj firmwaru HARDWARIO TOWER
@@ -22,6 +22,6 @@ Nabízíme dva způsoby, jak firmware psát a spravovat:
 
 :::note
 
-Pokud vás vývoj firmwaru nezajímá, můžete se podívat na sekci [**Desktop Programming**](../category/desktop-programming/), která popisuje náš další nástroj HARDWARIO Playground.
+Pokud vás vývoj firmwaru nezajímá, můžete se podívat na sekci [**Programování na počítači**](../category/desktop-programming/), která popisuje náš další nástroj HARDWARIO Playground.
 
 :::

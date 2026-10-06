@@ -1,7 +1,7 @@
 ---
 slug: hardwario-manager
 title: HARDWARIO Manager
-description: "STICKER nemá tlačítka, displej ani konfigurační kabel. Nastavuje se přes NFC v mobilní aplikaci HARDWARIO Manager."
+description: "STICKER nemá tlačítka, displej ani konfigurační kabel a nastavuje se přes NFC v mobilní aplikaci HARDWARIO Manager."
 title_meta: "HARDWARIO Manager (STICKER)"
 ---
 

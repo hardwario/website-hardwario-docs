@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        Modul <b>Relay Module</b> je vhodný pro spínání <b>málo výkonných spotřebičů</b> – např. LED pásku, chladicího ventilátoru, sirény, bzučáku, pohonu garážových dveří atd. Obsahuje <b>bistabilní (latching) relé</b>, což jej předurčuje pro bateriové aplikace – relé si totiž jednoduše <b>pamatuje svůj stav</b>.
+        Modul <b>Relay Module</b> je vhodný pro spínání <b>málo výkonných spotřebičů</b>, např. LED pásku, chladicího ventilátoru, sirény, bzučáku, pohonu garážových dveří atd. Obsahuje <b>bistabilní (latching) relé</b>, což jej předurčuje pro bateriové aplikace, protože relé si jednoduše <b>pamatuje svůj stav</b>.
       </p>
       <p>
         Energie je potřeba pouze během přechodového stavu. Jakmile je nastaven nový stav, <b>již není nutné napájet cívku relé</b>. Okamžik přepnutí je indikován <b>zelenou LED</b> (v softwaru označováno jako stav <b>TRUE</b>), nebo <b>červenou LED</b> (v softwaru označováno jako stav <b>FALSE</b>).

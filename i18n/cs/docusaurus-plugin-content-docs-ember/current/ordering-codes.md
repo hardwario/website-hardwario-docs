@@ -1,7 +1,7 @@
 ---
 slug: ordering-codes
 title: Objednací kódy
-description: "Tento článek definuje všechny možné objednací kódy pro ekosystém EMBER. Objednávka musí přesně odpovídat níže uvedeným part numberům."
+description: "Všechny možné objednací kódy pro ekosystém EMBER; objednávka musí přesně odpovídat níže uvedeným objednacím číslům."
 title_meta: "Objednací kódy (EMBER)"
 ---
 import Image from '@theme/IdealImage';

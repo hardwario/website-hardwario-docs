@@ -51,13 +51,13 @@ The **HARDWARIO Cloud** is an infrastructure that provides IoT connectivity and 
 
 - All servers run the latest **Ubuntu Server** LTS distribution.
 
-- HARDWARIO team updates server software at regular monthly intervals altogether with a security audit (running processes, users, system resources, etc.).
+- HARDWARIO team updates server software at regular monthly intervals together with a security audit (running processes, users, system resources, etc.).
 
 - All server logins are possible only from a regular user account (no root login).
 
 - Login is possible only via SSH key (no password logins). The SSH key must be password protected.
 
-- Every HARDWARIO team member is required to use password managers altogether with 2FA wherever possible. Authentication via trusted identity providers, such as Google, Microsoft, etc., is preferred.
+- Every HARDWARIO team member is required to use password managers together with 2FA wherever possible. Authentication via trusted identity providers, such as Google, Microsoft, etc., is preferred.
 
 ## Cloud Integrations
 
@@ -93,7 +93,7 @@ Callbacks are messages automatically forwarded by the cloud and sent to a define
 
 * `Name`: Name of the specified header (e.g., `Authentication`)
 
-* `Value`: Value, e.g., authentican token
+* `Value`: Value, e.g., authentication token
 
 * `Content Type`: A selection of the following options:
 

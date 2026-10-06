@@ -1,7 +1,7 @@
 ---
 slug: /hardwario-manager/sticker
 title: STICKER
-description: "Zařízení STICKER se konfiguruje přiložením telefonu. Žádné kabely, žádný programátor, žádný software na počítači."
+description: "Zařízení STICKER se konfiguruje přiložením telefonu, bez kabelů, programátoru a softwaru na počítači."
 title_meta: "STICKER (HARDWARIO Manager)"
 ---
 
@@ -18,9 +18,9 @@ Otevřete **HARDWARIO Manager** a zvolte **STICKER**.
 <img src="/img/hw-manager/hw-manager-sticker.jpg" alt="Menu STICKER v aplikaci HARDWARIO Manager s položkami Device info, LoRaWAN keys, Configuration, Templates, Tools a Saved STICKERs" width="320" />
 
 :::info Ke snímkům obrazovky
-Snímky v této sekci pocházejí ze staršího buildu, takže několik popisků má jinak
-velká písmena než současná aplikace, která název produktu píše všude velkými.
-Rozvržení obrazovek samotných odpovídá.
+Snímky v této sekci pocházejí ze staršího sestavení aplikace, takže několik popisků má
+jinak velká písmena než současná verze, která název produktu píše všude velkými
+písmeny. Rozvržení obrazovek ale odpovídá.
 :::
 
 ---
@@ -43,10 +43,10 @@ aplikace mohla doplnit jeho klíče. Viz [**Účet ATELOS**](../atelos.md).
 
 ## Jak funguje přiložení {#how-a-tap-works}
 
-Když obrazovka napíše *hold the phone against the …*, přiložte zadní stranu
+Když se na obrazovce objeví *hold the phone against the …*, přiložte zadní stranu
 telefonu k zařízení STICKER a nehýbejte s ním sekundu či dvě. Anténa NFC bývá
 v telefonu blízko **horní části zadní strany**; pokud se nic nestane, pohybujte
-telefonem pomalu kolem tohoto místa, dokud nedojde k načtení.
+telefonem pomalu kolem tohoto místa, dokud se tag nenačte.
 
 Zařízení STICKER komunikuje **kanálem šifrovaným AES-CCM**, takže aplikace
 potřebuje **secret key** zařízení, aby mohla číst nebo zapisovat. Jakmile je
@@ -78,6 +78,6 @@ zařízeními, zobrazí aplikace obrazovku **Unknown STICKER** a nabídne jeho
 | Problém | Co zkontrolovat |
 |---|---|
 | Zařízení STICKER se nedá přečíst | NFC je zapnuté, v cestě není silný obal, přiložte horní část zadní strany telefonu naplocho k zařízení a několik sekund nehýbejte. |
-| Zápis jako by nic nedělal | Zařízení tiše ignoruje zápisy provedené se špatným secret key. Ověřte, že je uložený secret key pro toto zařízení správný. |
-| Konfigurace je příliš velká | Ubírejte nastavení. Aplikace během úprav zobrazuje velikost proti limitu zařízení. |
+| Zápis se zdánlivě neprojeví | Zařízení tiše ignoruje zápisy provedené se špatným secret key. Ověřte, že je uložený secret key pro toto zařízení správný. |
+| Konfigurace je příliš velká | Snižte počet nastavení. Během úprav aplikace ukazuje velikost konfigurace vzhledem k limitu zařízení. |
 | Po připojení k LoRaWAN žádná odezva | Zkontrolujte klíče a profil zařízení ve svém síťovém serveru. |

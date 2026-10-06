@@ -32,7 +32,7 @@ Standardní kabelové sestavy HARDWARIO DS18B20 mají tři vodiče:
 | ⚫ **Černý** | GND | `W1G` nebo `W2G` |
 
 :::tip
-Oba porty sdílejí uvnitř zařízení GLIDER stejnou logickou sběrnici 1-Wire. Osm logických „slotů“, které firmware sleduje, je nezávislých na tom, do kterého fyzického portu je sonda zapojena – vazba se dělá podle kódu ROM, ne podle portu.
+Oba porty sdílejí uvnitř zařízení GLIDER stejnou logickou sběrnici 1-Wire. Osm logických „slotů“, které firmware sleduje, je nezávislých na tom, do kterého fyzického portu je sonda zapojena. Vazba se dělá podle kódu ROM, ne podle portu.
 :::
 
 ## Krok 1 – Zapojení sond {#step-1---wire-the-probes}
@@ -41,9 +41,9 @@ Oba porty sdílejí uvnitř zařízení GLIDER stejnou logickou sběrnici 1-Wire
 2. Odizolujte tři vodiče každého kabelu DS18B20 a připojte je k `W1` nebo `W2` podle tabulky výše.
 3. Zařízení znovu zapněte.
 
-Sondy můžete libovolně kombinovat mezi `W1` a `W2` – oba porty obsluhují stejnou sběrnici. Osm slotů je definováno softwarově a váže se na **sériové číslo ROM** každého DS18B20.
+Sondy můžete libovolně kombinovat mezi `W1` a `W2`, protože oba porty obsluhují stejnou sběrnici. Osm slotů je definováno softwarově a váže se na **sériové číslo ROM** každého DS18B20.
 
-## Krok 2 – Vyhledání sběrnice {#step-2---scan-the-bus}
+## Krok 2 – Prohledání sběrnice {#step-2---scan-the-bus}
 
 Po zapnutí zařízení požádejte firmware, aby vyhledal připojené senzory.
 
@@ -120,7 +120,7 @@ Teplota se hlásí ve **°C s rozlišením 0,01 °C**. Neúspěšné odečty (od
 therm state
 ```
 
-Zobrazí aktuální vazby slotů, poslední naměřenou teplotu a počítadla odečtů a chyb.
+Zobrazí aktuální vazby slotů, poslední naměřenou teplotu a čítače odečtů a chyb.
 
 ## Ruční přiřazení senzoru ke slotu {#manually-binding-a-sensor-to-a-slot}
 

@@ -13,7 +13,7 @@ Funkce na této stránce přijdou v připravovaném **firmwaru STICKER v1.4.0**.
 
 # Funkce firmwaru {#firmware-features}
 
-Tato stránka popisuje důležité chování firmwaru zařízení STICKER: jak zařízení hospodaří s energií, jak si udržuje zdravé připojení k LoRaWAN a jak chrání uložená data. Shell příkazy a konfigurační parametry, které tohle chování řídí, najdete v [**Přístup pro vývojáře**](developer-mode.md).
+Tato stránka popisuje důležité chování firmwaru zařízení STICKER: jak zařízení hospodaří s energií, jak udržuje spojení LoRaWAN v pořádku a jak chrání uložená data. Příkazy shellu a konfigurační parametry, které toto chování řídí, najdete v části [**Přístup pro vývojáře**](developer-mode.md).
 
 ---
 
@@ -21,21 +21,21 @@ Tato stránka popisuje důležité chování firmwaru zařízení STICKER: jak z
 
 ### Žebříček resetů – identita zachovaná podle úrovně {#the-reset-ladder--identity-preserved-by-tier}
 
-Reset ani aktualizace firmwaru nesmí zařízení v provozu odstrojit víc, než o co výslovně požádáte. Resety zařízení STICKER tvoří **žebříček podle závažnosti**; každá úroveň zachovává striktní podmnožinu té nad sebou:
+Reset ani aktualizace firmwaru nesmí nasazenému zařízení smazat zprovoznění nad rámec úrovně, kterou výslovně zvolíte. Resety zařízení STICKER tvoří **žebříček podle závažnosti**; každá úroveň zachovává vlastní podmnožinu toho, co zachovává úroveň nad ní:
 
 | Reset | Co zachovává |
 |---|---|
 | **Restart** | Všechno. Jde o obyčejné restartování. |
-| **Device reset** | Identitu zařízení **a celé zprovoznění LoRaWAN** (klíče i session): zařízení zůstává zprovozněné a připojené, na výchozí hodnoty se vrací jen konfigurace. Dostupné přes shell, NFC i downlink LoRaWAN. |
-| **Factory reset** | Pouze identitu zařízení. Sériové číslo, vendor token, secret key, nonce, claim token, DevEUI a JoinEUI. **Zahazuje session a klíče LoRaWAN**, takže se zařízení do sítě připojí znovu. **Jen přes NFC nebo shell**. Přes downlink LoRaWAN je odmítnut, protože by zničil právě tu session, kterou je potřeba k jeho potvrzení. |
-| **Vendor reset** | Pouze sériové číslo a vendor token. Konfigurace, klíče LoRaWAN i secret key se vymažou a jako součást resetu **musí být zadaný nový secret key**. Autorizuje ho vendor token, a to jen přes shell nebo vyhrazený vendor kanál NFC. |
-| **`settings erase`** | Nic. Úplné vymazání do prázdného zařízení včetně sériového čísla. Záchranná brzda „návrat do prázdna“, dostupná jen ze shellu. |
+| **Device reset** | Identitu zařízení **a celé zprovoznění LoRaWAN** (klíče i relaci): zařízení zůstává zprovozněné a připojené, na výchozí hodnoty se vrací jen konfigurace. Dostupné přes shell, NFC i downlink LoRaWAN. |
+| **Factory reset** | Pouze identitu zařízení. Sériové číslo, vendor token, secret key, nonce, claim token, DevEUI a JoinEUI. **Zahodí relaci a klíče LoRaWAN**, takže se zařízení do sítě připojí znovu. **Jen přes NFC nebo shell**. Přes downlink LoRaWAN je odmítnut, protože by zničil právě tu relaci, která je potřeba k jeho potvrzení. |
+| **Vendor reset** | Pouze sériové číslo a vendor token. Konfigurace, klíče LoRaWAN i secret key se vymažou a jako součást resetu **je nutné zadat nový secret key**. Autorizuje ho vendor token, a to jen přes shell nebo vyhrazený vendor kanál NFC. |
+| **`settings erase`** | Nic. Úplné vymazání do prázdného zařízení včetně sériového čísla. Nouzová cesta zpět k prázdnému zařízení, dostupná jen ze shellu. |
 
-Sada identity (sériové číslo, secret key, čítač nonce, vendor token) i zprovoznění LoRaWAN si zaznamenávají, které úrovně je zachovávají, takže migrace schématu konfigurace při aktualizaci firmwaru obnoví chráněnou sadu po aplikaci nových výchozích hodnot.
+Identita (sériové číslo, secret key, čítač nonce, vendor token) i zprovoznění LoRaWAN mají zaznamenáno, které úrovně resetu je zachovávají. Migrace schématu konfigurace při aktualizaci firmwaru proto chráněné údaje po použití nových výchozích hodnot obnoví.
 
 ### Vendor token {#the-vendor-token}
 
-Vedle secret key drží každé zařízení **vendor token**, privilegovaný údaj pro dané zařízení, který má u sebe jeho vlastník. Každý z těch dvou údajů má jinou roli:
+Vedle secret key drží každé zařízení **vendor token**, privilegovaný přístupový údaj vázaný na konkrétní zařízení, který má u sebe jeho vlastník. Každý z těch dvou údajů má jinou roli:
 
 - **Secret key** zabezpečuje běžný šifrovaný kanál NFC pro čtení a zápis konfigurace.
 - **Vendor token** autorizuje privilegované operace, na které secret key nestačí: **změnu secret key** (překlíčování zařízení) a úroveň **vendor reset** popsanou výše, která vymaže zařízení až na sériové číslo a vendor token a nastaví přitom nový secret key.
@@ -44,11 +44,11 @@ Protože odemyká překlíčování a nejhlubší reset, není vendor token pro 
 
 ### Pulzní čítače přežijí ztrátu napájení {#pulse-counters-persist-across-power-loss}
 
-Celkové stavy pulzních čítačů z Hallových kontaktů a vstupů se ukládají do flash paměti a po startu se obnovují, takže výměna baterií, podpětí ani reset už nevynulují naměřený součet.
+Celkové stavy pulzních čítačů z Hallových spínačů a vstupů se ukládají do flash paměti a po startu se obnovují, takže výměna baterií, podpětí ani reset už nevynulují naměřený součet.
 
 ### Historie senzorů (store-and-forward) {#sensor-history-store-and-forward}
 
-Když je zapnutá, zařízení zaznamenává měření ze senzorů do flash paměti a dokáže požadované časové okno přehrát přes LoRaWAN. Uložené záznamy přežijí ztrátu napájení. Konfiguraci a příkazy najdete v [**Historie senzorů**](developer-access/sensor-history.md).
+Když je zapnutá, zařízení zaznamenává měření ze senzorů do flash paměti a dokáže požadované časové okno přehrát přes LoRaWAN. Uložené záznamy přežijí ztrátu napájení. Konfiguraci a příkazy najdete na stránce [**Historie senzorů**](developer-access/sensor-history.md).
 
 ---
 
@@ -58,9 +58,9 @@ Zařízení STICKER vydrží na dvou článcích AA víc než 2 roky. Na zprovoz
 
 ### Režim radio-silent (nezprovozněné zařízení) {#radio-silent-mode-unprovisioned-device}
 
-Pokud je nastavené **DevEUI složené jen z nul** (zařízení, které nikdy nebylo zprovozněné), firmware se do sítě připojit nezkouší. Přejde do stavu **`DISABLED`** a celý start LoRaWAN vynechá: rádiový stack se nikdy nespustí a sub-GHz radio se vůbec nenapájí, takže nevzniká žádný provoz při připojování ani rádiový výboj při startu. Prázdné zařízení tím pádem nevybíjí baterii pokusy o připojení, které nemohou uspět.
+Pokud je nastavené **DevEUI složené jen z nul** (zařízení, které nikdy nebylo zprovozněné), firmware se do sítě připojit nezkouší. Přejde do stavu **`DISABLED`** a celý start LoRaWAN vynechá: rádiový stack se nikdy nespustí a sub-GHz rádio se vůbec nenapájí, takže zařízení při startu nevysílá žádné pokusy o připojení ani jiné pakety. Prázdné zařízení tím pádem nevybíjí baterii pokusy o připojení, které nemohou uspět.
 
-Zařízení zůstane radio-silent, dokud nedostane skutečné DevEUI (a zbytek klíčů LoRaWAN) a **nerestartuje se**. Ve vývojářské konzoli hlásí `ats lrw status` stav `DISABLED`.
+Zařízení zůstane v režimu radio-silent, dokud nedostane skutečné DevEUI (a zbytek klíčů LoRaWAN) a **nerestartuje se**. Ve vývojářské konzoli hlásí `ats lrw status` stav `DISABLED`.
 
 :::tip
 Zařízení lze zprovoznit přes NFC i vypnuté. Viz [**Konfigurace vypnutého zařízení**](/apps/hardwario-manager/sticker/offline-configuration). Po zápisu klíčů opustí zařízení režim radio-silent při dalším startu.
@@ -68,11 +68,11 @@ Zařízení lze zprovoznit přes NFC i vypnuté. Viz [**Konfigurace vypnutého z
 
 ### Debug deep-sleep (automatické uspání) {#debug-deep-sleep-auto-suspend}
 
-**Debug** build drží procesor vzhůru, aby zůstala dostupná konzole RTT, což trvale vybíjí baterii. Aby zapomenutá jednotka na stole nedopadla špatně, přejde debug firmware po nastavitelné době nečinnosti bez aktivity shellu do **hlubokého spánku** (STM32 Shutdown) (`CONFIG_APP_DEBUG_AUTOSUSPEND_S`, výchozí `7200` sekund, tedy 2 hodiny; `0` funkci vypíná).
+Sestavení **debug** nechává procesor stále běžet, aby zůstala dostupná konzole RTT, a tím trvale vybíjí baterii. Aby se kus zapomenutý na pracovním stole nevybil, přejde debug firmware po nastavitelné době bez aktivity shellu do **hlubokého spánku** (STM32 Shutdown). Dobu určuje `CONFIG_APP_DEBUG_AUTOSUSPEND_S` (výchozí `7200` sekund, tedy 2 hodiny; `0` funkci vypíná).
 
 - Jakýkoli vstup do shellu časovač nečinnosti resetuje; příkaz `power suspend` uspí zařízení na vyžádání.
-- Probuzení je možné **přes NRST nebo vypnutím a zapnutím napájení**, což je čistý start. Uložená identita a klíče LoRaWAN zůstávají; stav v RAM a čas se obnovují znovu (čas se resynchronizuje ze sítě).
-- **Release** build se to netýká; ten už mezi činnostmi spí díky běžné správě napájení.
+- Probuzení je možné **přes NRST nebo vypnutím a zapnutím napájení**, což je čistý start. Uložená identita a klíče LoRaWAN zůstávají; stav RAM a čas se nastaví znovu (čas se synchronizuje ze sítě).
+- Sestavení **release** se to netýká; to mezi činnostmi spí už díky běžné správě napájení.
 
 ---
 
@@ -81,19 +81,19 @@ Zařízení lze zprovoznit přes NFC i vypnuté. Viz [**Konfigurace vypnutého z
 Firmware dohlíží na spojení LoRaWAN a z výpadků se zotavuje sám:
 
 - Periodicky si vyžádá link check (každý N-tý uplink, nastavuje `config lrw-link-check-interval`).
-- Jedna nedoručená odpověď se toleruje; k OTAA **rejoinu** eskalují jen opakovaná selhání, dokud je spojení degradované, a to po dalších `config lrw-link-check-fail-rejoin` selháních. Pokusy o rejoin se mezi sebou zpožďují.
+- Jedna chybějící odpověď se toleruje; OTAA **rejoin** spustí až opakovaná selhání při zhoršeném spojení, konkrétně po dalších `config lrw-link-check-fail-rejoin` selháních. Odstup mezi pokusy o rejoin se postupně prodlužuje.
 - Zařízení v režimu **ABP** rejoin provést nemohou (nikdy se nepřipojují), takže zůstanou v degradovaném stavu.
 
-Tím se nahrazuje dřívější chování, kdy zařízení mohlo po několika zprávách přestat vysílat.
+Odstraňuje to dřívější chybu, kdy zařízení mohlo po několika zprávách přestat vysílat.
 
 ---
 
 ## Spolehlivost senzorů {#sensor-reliability}
 
-Měření ze senzorů se před předáním do telemetrie, historie nebo alarmů kontrolují na rozsah, takže chybný vzorek nevyvolá falešný poplach ani nezkreslí uložená data. Nakonfigurovaný senzor, který přestane dávat platné hodnoty, vyvolá alarm. Tiše selhaný senzor se tedy ukáže, místo aby se donekonečna hlásil jako chybějící data.
+Měření ze senzorů procházejí kontrolou rozsahu dřív, než se dostanou do telemetrie, historie nebo alarmů, takže chybný vzorek nevyvolá falešný poplach ani nezkreslí uložená data. Nakonfigurovaný senzor, který přestane dávat platné hodnoty, vyvolá alarm. Senzor, který tiše selže, se tak odhalí, místo aby se donekonečna hlásil jako chybějící data.
 
 ---
 
 ## Hodiny reálného času {#real-time-clock}
 
-Zařízení udržuje reálný čas, synchronizovaný ze sítě při připojení (`DeviceTimeReq` protokolu LoRaWAN) a volitelně nastavený z telefonu přes NFC. Používá se k časovým značkám záznamů historie senzorů a alarmových událostí.
+Zařízení udržuje reálný čas, synchronizovaný ze sítě při připojení (`DeviceTimeReq` protokolu LoRaWAN) a volitelně nastavený z telefonu přes NFC. Slouží k označení záznamů historie senzorů a alarmových událostí časovou značkou.

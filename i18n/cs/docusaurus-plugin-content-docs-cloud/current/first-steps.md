@@ -1,14 +1,14 @@
 ---
 slug: first-steps
 title: První kroky
-description: "Vítejte v HARDWARIO Cloud, platformě, kde se spravují vaše zařízení a kam přicházejí vaše živá data."
+description: "Vítejte v HARDWARIO Cloud, platformě pro správu vašich zařízení, kam v reálném čase přicházejí jejich data."
 title_meta: "První kroky (HARDWARIO Cloud)"
 ---
 
 # Rychlý průvodce HARDWARIO Cloud {#hardwario-cloud-quick-start-guide}
 
-Vítejte v **HARDWARIO Cloud**, platformě, kde se spravují vaše zařízení a kam přichází vaše živá
-data. Podle následujících kroků si vytvoříte účet, zaregistrujete první zařízení a začnete pracovat
+Vítejte v **HARDWARIO Cloud**, platformě pro správu vašich zařízení, kam v reálném čase
+přicházejí jejich data. Podle následujících kroků si vytvoříte účet, zaregistrujete první zařízení a začnete pracovat
 s jeho zprávami.
 
 ## Krok 1: Vytvořte si účet HARDWARIO Cloud {#step-1-create-a-hardwario-cloud-account}
@@ -24,7 +24,7 @@ s jeho zprávami.
 Pro vyšší bezpečnost doporučujeme ověření přes **Google** nebo **Microsoft**.
 :::
 
-## Krok 2: Vytvořte svůj Space {#step-2-create-your-space}
+## Krok 2: Vytvořte si prostor {#step-2-create-your-space}
 
 1. V pravém horním rohu klikněte na **SPACES → NEW SPACE**.
 
@@ -34,44 +34,44 @@ Pro vyšší bezpečnost doporučujeme ověření přes **Google** nebo **Micros
 
    ![Dialog „Create new space“: zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
 
-3. Právě sem budou vaše zařízení patřit. Podrobnosti viz [**Spaces**](/cloud/spaces).
+3. Do tohoto prostoru budete přidávat svá zařízení. Podrobnosti najdete na stránce [**Prostory**](/cloud/spaces).
 
 ## Krok 3: Přidejte zařízení {#step-3-add-a-device}
 
-1. Vyberte svůj **Space**.
+1. Vyberte svůj prostor (**Space**).
 2. Přejděte na **DEVICES → +NEW DEVICE**.
 
    ![Stránka DEVICES se zvýrazněným tlačítkem „+ NEW DEVICE“ v pravém horním rohu](../../../../cloud/images/devices-new-device.png)
 
-3. Zadejte informace o zařízení: buď **naskenujte QR kód** (`⛶ SCAN DEVICE`) a vše se vyplní automaticky, nebo zadejte **Name**, **HARDWARIO Serial Number (HSN)** a **Claim Token** ručně.
+3. Zadejte údaje o zařízení: buď **naskenujte QR kód** (`⛶ SCAN DEVICE`) a vše se vyplní automaticky, nebo zadejte **Name**, **HARDWARIO Serial Number (HSN)** a **Claim Token** ručně.
 
    ![Dialog „Create new device“: naskenujte QR kód, nebo vyplňte Name, Serial Number a Claim Token](../../../../cloud/images/create-new-device.png)
 
-4. Uložte: vaše zařízení je nyní **zaregistrováno v Cloudu**. Vše, co můžete dělat dál, najdete v sekci [**Devices**](/cloud/devices).
+4. Zařízení uložte. Teď je **zaregistrované v cloudu**. Co dalšího s ním můžete dělat, popisuje stránka [**Zařízení**](/cloud/devices).
 
 ## Krok 4: Podívejte se na svá data {#step-4-see-your-data}
 
 Jakmile je zařízení napájené a připojené, jeho uplinky se objeví v Cloudu.
 
-- Příchozí payloady si přečtěte v sekci [**Messages**](/cloud/messages).
-- Související zařízení seskupte a filtrujte pomocí [**Tags**](/cloud/tags).
-- Informace typu klíč–hodnota pro jednotlivá zařízení ukládejte pomocí [**Variables**](/cloud/variables).
+- Příchozí payloady najdete na stránce [**Zprávy**](/cloud/messages).
+- Související zařízení seskupte a filtrujte pomocí [**tagů**](/cloud/tags).
+- Informace typu klíč–hodnota pro jednotlivá zařízení ukládejte do [**proměnných**](/cloud/variables).
 
 ![Zobrazení MESSAGES s rozbalenou uplink zprávou zařízení a jejím dekódovaným JSON payloadem](../../../../cloud/images/messages.png)
 
-## Krok 5: Zasáhněte do chodu svých zařízení {#step-5-act-on-your-devices}
+## Krok 5: Ovládejte svá zařízení {#step-5-act-on-your-devices}
 
-Cloud je obousměrný: pošlete konfiguraci, data nebo příkazy shellu zpět pomocí
-[**Downlink**](/cloud/downlink) a nahrajte nový [**Firmware**](/cloud/firmware) vzduchem.
+Cloud funguje oběma směry: konfiguraci, data nebo příkazy shellu pošlete do zařízení
+[**downlinkem**](/cloud/downlink) a nový [**firmware**](/cloud/firmware) nahrajete bezdrátově.
 
 ## Krok 6: Propojte Cloud se svými systémy {#step-6-integrate-with-your-systems}
 
-Data z Cloudu odešlete dál pomocí [**Connectors**](/cloud/connectors) (webhooky), nebo se na ně
+Data z Cloudu předáte dál pomocí [**konektorů**](/cloud/connectors) (webhooků), nebo se na ně
 programově dotazujte přes [**REST API**](/cloud/api).
 
 ## Krok 7: Spravujte přístup {#step-7-manage-access}
 
-Pozvěte kolegy a řiďte, kdo může váš Space vidět a měnit, v sekci [**Users**](/cloud/users).
+Na stránce [**Uživatelé**](/cloud/users) pozvete kolegy a určíte, kdo smí váš prostor vidět a měnit.
 
 ## Další kroky {#next-steps}
 

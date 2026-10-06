@@ -1,7 +1,7 @@
 ---
 slug: /
 title: FIBER
-description: "FIBER je robustní průmyslové zařízení IoT postavené na vestavěné platformě Linux a určené pro průmyslové nasazení."
+description: "FIBER je robustní průmyslové zařízení IoT postavené na platformě embedded Linux a určené pro průmyslové IoT aplikace."
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
@@ -35,7 +35,7 @@ Díky své modulární a otevřené architektuře podporuje zařízení **FIBER*
 
 - Monitorování prostředí v nemocnicích na odděleních, v lékárnách a skladech
 - Monitorování farmaceutického chladového řetězce s ukládanou historií teplot a výstrahami při odchylkách
-- Monitorování chlazení v retailu pro zabránění zkažení zboží
+- Monitorování chladicích zařízení v maloobchodě, aby se zboží nezkazilo
 - Laboratorní prostředí vyžadující přesnou regulaci teploty
 - Monitorování teploty v energetické infrastruktuře (transformátory, rozvaděče)
 - Výroba: vícebodové monitorování procesních teplot na výrobních linkách
@@ -46,10 +46,10 @@ Díky své modulární a otevřené architektuře podporuje zařízení **FIBER*
 |---|---|
 | **Platforma embedded Linux** | Kompatibilní s Raspberry Pi OS nebo vlastními image založenými na Yocto. |
 | **Hybridní integrace senzorů** | Bezdrátové senzory v ISM pásmu 868 MHz plus 8 plně nezávislých portů 1-Wire pro drátové senzory. |
-| **Design průmyslové kvality** | Provozní rozsah –20 °C až +60 °C, postaveno na modulu Compute Module 4 pro dlouhodobou spolehlivost. |
+| **Průmyslové provedení** | Provozní rozsah –20 °C až +60 °C, postaveno na modulu Compute Module 4 pro dlouhodobou spolehlivost. |
 | **Flexibilní konektivita** | Ethernet, Wi-Fi, BLE nebo volitelný modul LTE Cat 4. |
 | **Lokální vizualizace a diagnostika** | LCD s podsvícením, stavové LED pro každý kanál a integrovaný akustický bzučák. |
 | **Power-over-Ethernet** | Napájení přes PoE, se zálohovací Li-Ion baterií na desce. |
 | **Plný root přístup k Linuxu** | Podpora Dockeru pro vývoj vlastního firmwaru a aplikací. |
 | **Zabezpečený MQTT** | Protokol MQTT se šifrováním TLS pro bezpečný přenos dat. |
-| **Otevřené cíle pro data** | Datové toky do vašich vlastních systémů. Otevřená linuxová platforma zvládne v podstatě jakýkoli protokol, který váš projekt potřebuje. |
+| **Otevřené cíle pro data** | Data posíláte do vlastních systémů. Otevřená linuxová platforma zvládne v podstatě jakýkoli protokol, který váš projekt potřebuje. |

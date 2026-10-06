@@ -78,7 +78,7 @@ import Image from '@theme/IdealImage';
   </div>
   <div class="row">
     <div class="col">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/lcd-module.png')} alt="LCD Module s 1,28palcovým pamětovým displejem Sharp a dvěma tlačítky" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/lcd-module.png')} alt="LCD Module s 1,28palcovým paměťovým displejem Sharp a dvěma tlačítky" /></div>
       <div><a href="./about-lcd-module"><h2 style={{textAlign: 'center'}}>LCD Module</h2></a></div>
     </div>
     <div class="col">

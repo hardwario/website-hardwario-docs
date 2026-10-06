@@ -16,7 +16,7 @@ Senzory Nexelec využívají konektivitu **LoRaWAN** a přinášejí certifikova
 
 | Produkt | Popis |
 |---|---|
-| [**ORIGIN+**](/smart-devices/nexelec/origin-plus) | Multisenzorový LoRaWAN detektor požáru kombinující detekci kouře (EN 14604), detekci tepla a detekci CO v jediném zařízení. Certifikace NF a CE. Životnost baterie 10 let. |
+| [**ORIGIN+**](/smart-devices/nexelec/origin-plus) | Multisenzorový detektor požáru LoRaWAN kombinující detekci kouře (EN 14604), detekci tepla a detekci CO v jediném zařízení. Certifikace NF a CE. Životnost baterie 10 let. |
 
 ## Typické případy použití s HARDWARIO {#typical-use-cases-with-hardwario}
 

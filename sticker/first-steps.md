@@ -92,7 +92,7 @@ Start with the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager
 | LED | Meaning | What to do |
 |---|---|---|
 | **Ten green blinks** | The configuration was applied | Nothing. The write succeeded |
-| **Fast red blink for about 2 seconds** | **The tap was refused.** The app used the wrong **secret key** or token, or the request was replayed or malformed. **nothing was written** to the device | Check the device is saved with the right secret key in [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), then tap again |
+| **Fast red blink for about 2 seconds** | **The tap was refused.** The app used the wrong **secret key** or token, or the request was replayed or malformed. **Nothing was written** to the device | Check the device is saved with the right secret key in [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), then tap again |
 | Heartbeat changes from **1× yellow** to **yellow + red** | The radio is on and the device is joining | Wait. A join can take several attempts |
 | Heartbeat settles to **1× green** | Joined. The device sends its **Device Info on Join** payload | Nothing. The device is live |
 
@@ -148,7 +148,7 @@ the **first match wins**, so a more serious condition hides a less serious one.
 | **2× yellow**, ~200 ms apart | **Link degraded**. Link checks are failing, but the session is still alive | Check gateway coverage and antenna placement; the device recovers on its own once the link returns |
 | **1× yellow, then 1× red** ~200 ms later | **Joining or rejoining** and getting no answer from the network | Check gateway proximity, frequency plan / region, and that DevEUI, JoinEUI and AppKey match the network server |
 | **Red and yellow alternating, twice** | **Stored configuration could not be loaded**. Identity and provisioning are gone, and the device is running on factory defaults | Re-apply the full configuration over NFC with [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration); if it comes back, the unit needs service |
-| **Nothing at all** | Either the device is in **deep sleep** (all channels off. Expected, not a fault), or it has no power | If it is not sleeping, check battery polarity and replace the batteries |
+| **Nothing at all** | Either the device is in **deep sleep** (all channels off; expected, not a fault), or it has no power | If it is not sleeping, check battery polarity and replace the batteries |
 
 ### During an NFC tap
 

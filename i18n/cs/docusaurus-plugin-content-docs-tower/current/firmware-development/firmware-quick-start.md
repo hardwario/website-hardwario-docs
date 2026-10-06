@@ -4,7 +4,7 @@ title: Rychlý start s firmwarem
 ---
 import Image from '@theme/IdealImage';
 
-Vlastní firmware pro [**TOWER Core Module**](../hardware-modules/about-core-module.md) můžete snadno upravovat nebo vytvářet na každém hlavním operačním systému.
+Vlastní firmware pro [**TOWER Core Module**](../hardware-modules/about-core-module.md) můžete snadno upravovat nebo vytvářet ve všech běžných operačních systémech.
 
 ## Získání prvního firmwaru TOWER {#getting-your-first-tower-firmware}
 
@@ -28,8 +28,8 @@ Pokud se k projektu vracíte, použijte ve VSCode volbu **Open folder**. Přejd�
 
 - V sekci **TOWER: Start** vyberte **From Skeleton Project...**
 - Vyberte **složku**, ve které se má vytvořit nová složka s projektem firmwaru
-- Budete vyzváni k pojmenování složky, výchozí **twr-skeleton** je zatím dostačující
-- Vyčkejte, než se firmware dokončí stahovat
+- Budete vyzváni k pojmenování složky, výchozí **twr-skeleton** zatím stačí
+- Počkejte, až se firmware stáhne
 - Visual Studio Code se znovu otevře s novým firmwarem
 
 :::info
@@ -76,7 +76,7 @@ Tento projekt lze okamžitě **zkompilovat a nahrát** do [**Core Module**](../h
 └── README.md
 ```
 
-Místo, kde byste měli upravovat svůj kód, je adresář `src`.
+Svůj kód upravujte v adresáři `src`.
 Obvykle nebudete potřebovat upravovat jiné soubory než tyto.
 
 Vaším prvním krokem tedy bude nejspíš otevření souboru src/application.c.
@@ -95,10 +95,10 @@ Pokud si chcete prohlédnout nějaké příklady firmwaru, můžete navštívit 
 
 ## Vývojový cyklus {#development-cycle}
 
-Vývojový cyklus je běžně opakováním **následujících 4 kroků**.
+Vývojový cyklus obvykle tvoří opakování **následujících 4 kroků**.
 
 - Upravte `src/application.c` a uložte změny pomocí **Ctrl + S**
-- Klikněte na [**Build + Flash (Console)**](./hardwario-extension-tutorial.md#build--flash-console) pro **kompilaci**, **nahrání** a **otevření sériové konzole pro logování**.
+- Kliknutím na [**Build + Flash (Console)**](./hardwario-extension-tutorial.md#build--flash-console) firmware **zkompilujete**, **nahrajete** a **otevřete sériovou konzoli s logem**.
   - Můžete také pracovat s [**CLI Tools**](./development-with-cli-tools.md)
 - Otestujte svůj firmware
   - Pokud potřebujete svoji aplikaci debugovat, postupujte podle [**kapitoly Debugování**](./firmware-debugging.md).
@@ -107,7 +107,7 @@ Vývojový cyklus je běžně opakováním **následujících 4 kroků**.
 
 Firmware je implementován v **čistém jazyce C**, což je průmyslově uznávaný jazyk pro embedded zařízení a zařízení s nízkou spotřebou.
 
-Pro volbu této technologie existují následující hlavní důvody.
+Tuto technologii jsme zvolili z těchto hlavních důvodů:
 
 - Efektivní využití hardwarových prostředků
 - Stabilní a dlouhodobě dostupné vývojové prostředí
@@ -124,6 +124,6 @@ Pokud se vám nedaří detekovat nebo naprogramovat **Radio Dongle** nebo **Core
 
 ## Další kroky {#next-steps}
 
-Od této chvíle byste měli být schopni **vytvářet firmware** a **aktualizovat existující**.
+Teď už byste měli umět **vytvářet firmware** a **aktualizovat existující**.
 
 Pokud chcete vědět více o našich modulech a podívat se na příklady, přečtěte si sekci [**Hardwarové moduly**](../hardware-modules/index.md) nebo [**sekci Firmware SDK**](../firmware-sdk/index.md)

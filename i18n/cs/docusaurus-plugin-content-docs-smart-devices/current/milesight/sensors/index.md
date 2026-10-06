@@ -1,6 +1,7 @@
 ---
 slug: index
 title: Milesight – Senzory
+description: "Senzory LoRaWAN od společnosti Milesight otestované v HARDWARIO, s referenčními zdroji ke každému zařízení."
 ---
 
 import Image from '@theme/IdealImage';
@@ -46,7 +47,7 @@ Ke konfiguraci senzorů použijte mobilní aplikaci **Milesight ToolBox**, dostu
 **Instalace a konfigurace**  
 - Konfigurace probíhá přes **NFC**.  
 - Po načtení zařízení přejděte na kartu *Basic Information* a aktualizujte **Device Time**.  
-- Nastavení správného **data a času** je vyžadováno u všech zařízení.  
+- U všech zařízení je nutné nastavit správné **datum a čas**.  
 
 **Připojení LoRaWAN**  
 - Zařízení jsou předkonfigurována s **AppKey pro OTAA** (výchozí hodnoty jsou uvedeny v uživatelské příručce).  
@@ -63,11 +64,11 @@ https://docs.hardwario.com/smart-devices/milesight/videos-milesight/general-conf
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Pro provoz vašeho zařízení LoRaWAN si můžete vybrat ze dvou podporovaných platforem síťového serveru. Obě řešení umožňují správu bran, registraci koncových zařízení, konfiguraci profilů a zpracování dat payloadu.
+Pro provoz zařízení LoRaWAN si můžete vybrat ze dvou podporovaných platforem síťového serveru. Obě řešení umožňují správu bran, registraci koncových zařízení, konfiguraci profilů a zpracování dat payloadu.
 
 ### Možnost 1: The Things Stack {#option-1-the-things-stack}
 
-Cloudový LoRaWAN Network Server vhodný pro malá i velká nasazení.
+Cloudový síťový server LoRaWAN vhodný pro malá i velká nasazení.
 
 ➡️ **Průvodce konfigurací: https://docs.hardwario.com//apps/the-things-stack/index#configure-the-things-stack**  
 
@@ -75,6 +76,6 @@ Cloudový LoRaWAN Network Server vhodný pro malá i velká nasazení.
 
 ### Možnost 2: ChirpStack v4 {#option-2-chirpstack-v4}
 
-Open-source LoRaWAN Network Server ideální pro on-premise nebo privátní instalace sítě.
+Open-source síťový server LoRaWAN ideální pro instalace on-premise nebo v privátní síti.
 
 ➡️ **Průvodce prvními kroky: https://docs.hardwario.com//apps/chirpstack/index#getting-started-with-chirpstack-v4**

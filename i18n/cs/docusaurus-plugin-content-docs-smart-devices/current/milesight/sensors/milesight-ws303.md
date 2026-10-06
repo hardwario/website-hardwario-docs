@@ -32,7 +32,7 @@ Milesight WS303 je **inteligentní detektor zaplavení** se **dvěma sondami z n
 ---
 
 ## Obecná konfigurace {#general-configuration}
-Konfigurace se provádí přes NFC pomocí [aplikace Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
+Konfiguruje se přes NFC pomocí [aplikace Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
 
 Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
 
@@ -40,7 +40,7 @@ Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
+Informace o podporovaných platformách síťového serveru LoRaWAN najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
 ---
 
@@ -70,7 +70,7 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 ### Přehled pojmů {#terminology-overview}
 **Dekodér** -> Převádí binární payload zařízení do čitelného JSON.<br />
 **Enkodér** -> Převádí příkazy v JSON na binární payload pro downlinky.<br />
-**Kodek** -> Definuje pravidla pro dekódování a kódování (struktura, položky, porty), která používají network servery.
+**Kodek** -> Definuje pravidla pro dekódování a kódování (struktura, položky, porty), která používají síťové servery.
 :::
 
 
@@ -89,7 +89,7 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 |---------------|-----------|
 | **Bezdrátový přenos** | |
 | Technologie | LoRaWAN®, Milesight D2D |
-| Antena | Interní |
+| Anténa | Interní |
 | Frekvence | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
 | Vysílací výkon | 16 dBm (868MHz) / 20 dBm (915MHz) / 19 dBm (470MHz) |
 | Citlivost | -137 dBm @300bps |

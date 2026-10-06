@@ -14,7 +14,7 @@ import Image from '@theme/IdealImage';
 ## Rychlé odkazy {#quick-links}
 
 * [**Instalace klienta**](installation): Instalace klienta TAPPER na zařízení TAPPER.
-* [**Popis hardwaru**](hardware): Napájecí připojení, specifikace provozních podmínek.
+* [**Popis hardwaru**](hardware): Připojení napájení a provozní podmínky.
 * [**Používání klienta**](usage): Používání klienta TAPPER.
 * [**Vylepšení zabezpečení**](security): Tipy pro vyšší bezpečnost.
 * [**MQTT přes TLS**](tls-setup): Návod na nastavení MQTT přes TLS.

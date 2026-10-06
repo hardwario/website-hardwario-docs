@@ -5,11 +5,11 @@ title: Počáteční konfigurace
 
 # Počáteční konfigurace {#initial-configuration}
 
-Po prvním zapnutí zařízení se k zařízení připojte.
+Po prvním zapnutí se k zařízení připojte.
 
-Připojení přes Ethernet provedete zapojením kabelu a nastavením počítače do sítě `192.168.255.0/24` (adresu `192.168.255.1` nelze použít). Poté můžete ve webovém prohlížeči přejít na adresu `192.168.255.1` a otevřít webové rozhraní.
+Přes Ethernet se připojíte tak, že zapojíte kabel a nastavíte počítač do sítě `192.168.255.0/24` (adresu `192.168.255.1` nelze použít). Poté můžete ve webovém prohlížeči přejít na adresu `192.168.255.1` a otevřít webové rozhraní.
 
-Připojení přes Wi-Fi provedete připojením k přístupovému bodu zařízení. SSID má následující formát: `hardwario-gauger-IDIDIDIDIDID`. Výchozí heslo je `12345678`. Po připojení k Wi-Fi síti vám bude automaticky přidělena IP adresa. Poté je zařízení dostupné na adrese `192.168.254.1`.
+Přes Wi-Fi se připojíte k přístupovému bodu zařízení. SSID má následující formát: `hardwario-gauger-IDIDIDIDIDID`. Výchozí heslo je `12345678`. Po připojení k Wi-Fi síti vám bude automaticky přidělena IP adresa. Poté je zařízení dostupné na adrese `192.168.254.1`.
 
 ## Možnosti konfigurace {#configuration-options}
 

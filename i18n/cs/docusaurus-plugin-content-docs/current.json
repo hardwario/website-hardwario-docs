@@ -20,7 +20,7 @@
     "description": "The label for category 'Mobile Networks' in sidebar 'docs'"
   },
   "sidebar.docs.category.LoRaWAN Radio": {
-    "message": "Radio LoRaWAN",
+    "message": "Rádio LoRaWAN",
     "description": "The label for category 'LoRaWAN Radio' in sidebar 'docs'"
   },
   "sidebar.docs.category.Catalog Applications": {
@@ -32,7 +32,7 @@
     "description": "The label for category 'Common Functionality' in sidebar 'docs'"
   },
   "sidebar.docs.category.Legacy": {
-    "message": "Starší",
+    "message": "Starší aplikace",
     "description": "The label for category 'Legacy' in sidebar 'docs'"
   },
   "sidebar.docs.category.Extension Modules": {
@@ -80,7 +80,7 @@
     "description": "The label for category 'Firmware SDK' in sidebar 'docs'"
   },
   "sidebar.docs.category.Firmware SDK.link.generated-index.description": {
-    "message": "Zprovoznění firmware SDK pro CHESTER a stavba zákaznických aplikací.",
+    "message": "Zprovozněte firmwarové SDK pro CHESTER a sestavte zákaznické aplikace.",
     "description": "The generated-index page description for category 'Firmware SDK' in sidebar 'docs'"
   },
   "sidebar.docs.link.Git Repository": {

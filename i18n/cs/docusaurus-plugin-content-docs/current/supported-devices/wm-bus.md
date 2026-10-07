@@ -7,15 +7,15 @@ import Image from '@theme/IdealImage';
 
 # Senzory wM-Bus {#wm-bus-sensors}
 
-**CHESTER wM-Bus podporuje všechny měřiče wM-Bus tříd T1 a C1 bez ohledu na výrobce.** Funguje jako **průchozí brána (pass-thru gateway)**: přijaté telegramy přeposílá tak, jak jsou, a jejich dekódování do smysluplných jednotek probíhá až v koncové IoT aplikaci.
+**CHESTER wM-Bus podporuje všechny měřiče wM-Bus tříd T1 a C1 bez ohledu na výrobce.** Funguje jako **průchozí brána (pass-thru gateway)**: přijaté telegramy přeposílá beze změny a na smysluplné jednotky je dekóduje až koncová aplikace IoT.
 
 :::info
-Následující seznam proto není seznamem kompatibility. Obsahuje měřiče, které jsme sami otestovali a zdokumentovali; s bránou funguje i jakékoli jiné zařízení wM-Bus T1/C1 dostupné na trhu.
+Seznam níže proto není výčtem kompatibilních měřičů. Obsahuje měřiče, které jsme sami otestovali a zdokumentovali; s bránou funguje i jakékoli jiné zařízení wM-Bus T1/C1 na trhu.
 :::
 
 ### BMeters {#bmeters}
 
-| Název                                                                 | Typ                   | Zdroje                                                                                                  |
+| Název                                                                 | Typ                   | Odkazy                                                                                                  |
 |----------------------------------------------------------------------|------------------------|------------------------------------------------------------------------------------------------------------|
 | BMeters RFM-TX1.1 | Vodoměr             | [Dokumentace](./wm-bus/bmeters-rfm-tx1.1.md) · [Web](https://www.bmeters.com/en/products/rfm-tx1/) |
 | BMeters IWM-TX3   | Vodoměr             | [Dokumentace](./wm-bus/bmeters_iwm-tx3.md) · [Web](https://www.bmeters.com/en/products/iwm-tx3/) |
@@ -25,7 +25,7 @@ Následující seznam proto není seznamem kompatibility. Obsahuje měřiče, kt
 
 ### Zenner {#zenner}
 
-| Název                                                                 | Typ                 | Zdroje                                                                                                  |
+| Název                                                                 | Typ                 | Odkazy                                                                                                  |
 |----------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------|
 | Zenner C5-ISF        | Měřič tepelné energie | [Dokumentace](./wm-bus/zenner-c5-isf.md) · [Web](https://zenner.com/products/wmz_zelsius_c5_isf-2/) |
 | Zenner caltos-E | Indikátor topných nákladů  | [Dokumentace](./wm-bus/zenner-caltos-e.md) · [Web](https://zenner.com/products/hkv_caltos_e/) |

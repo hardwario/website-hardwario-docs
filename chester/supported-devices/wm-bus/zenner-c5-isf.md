@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Zenner C5-ISF
 
-[Web-Site](https://zenner.com/products/wmz_zelsius_c5_isf-2/)
+[Website](https://zenner.com/products/wmz_zelsius_c5_isf-2/)
 
 <div class="container">
   <div class="row">

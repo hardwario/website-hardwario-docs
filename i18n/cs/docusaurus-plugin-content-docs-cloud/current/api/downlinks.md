@@ -7,14 +7,14 @@ import TabItem from '@theme/TabItem';
 # Odesílání downlinků {#sending-downlinks}
 
 Zařízení můžete ovládat i přes API. Downlink se **zařadí do fronty** a doručí se
-při dalším startu zařízení, při odeslání uplinku nebo když se zařízení dotáže
-Cloudu, odpověď tedy nemusí být okamžitá (viz [**Downlink**](/cloud/downlink)). Existují tři
-druhy, každý má vlastní endpoint pod `/v2/spaces/{space_id}/devices/{device_id}`:
+při příštím startu zařízení, odeslání uplinku nebo dotazu na cloud, takže odpověď
+nemusí přijít hned (viz [**Downlink**](/cloud/downlink)). Existují tři druhy downlinků,
+každý s vlastním endpointem pod `/v2/spaces/{space_id}/devices/{device_id}`:
 
 <Tabs>
 <TabItem value="config" label="Konfigurace" default>
 
-`POST …/devices/{device_id}/configs`: tělo je JSON **pole příkazů `app config`**:
+`POST …/devices/{device_id}/configs`: tělo je **pole příkazů `app config`** ve formátu JSON:
 
 ```bash
 curl -X POST \
@@ -25,14 +25,14 @@ curl -X POST \
 ```
 
 :::warning Neposílejte `config save`
-Cloud konfiguraci použije a uloží automaticky. Když `config save` přidáte sami,
-může se změna aplikovat dvakrát, proto jej vynechte.
+Cloud konfiguraci použije a uloží automaticky. Kdybyste `config save` přidali,
+mohla by se změna použít dvakrát, proto ho vynechte.
 :::
 
 </TabItem>
 <TabItem value="shell" label="Příkaz shellu">
 
-`POST …/devices/{device_id}/commands`: tělo je JSON **pole příkazů shellu**;
+`POST …/devices/{device_id}/commands`: tělo je **pole příkazů shellu** ve formátu JSON;
 odpověď na každý příkaz dostanete zpět ve zprávě:
 
 ```bash
@@ -46,8 +46,8 @@ curl -X POST \
 </TabItem>
 <TabItem value="data" label="Data">
 
-`POST …/devices/{device_id}/downlinks`: tělo je JSON **objekt**, který dekóduje
-firmware vašeho zařízení:
+`POST …/devices/{device_id}/downlinks`: tělo je **objekt** JSON, který dekóduje
+firmware zařízení:
 
 ```bash
 curl -X POST \

@@ -6,11 +6,11 @@ import Image from '@theme/IdealImage';
 
 # Jak na: sběrnice I²C {#how-to-ic-bus}
 
-Tento článek ukazuje, jak komunikovat s cílovými zařízeními na sběrnici I²C (zařízení CHESTER je na sběrnici v roli controlleru).
+Tento článek ukazuje, jak komunikovat s cílovými zařízeními na sběrnici I²C (zařízení CHESTER je na sběrnici řadičem, tzv. controllerem).
 
 :::caution
 
-Z pohledu systému Zephyr je správný způsob komunikace s cílovými zařízeními I²C vytvoření řádného ovladače zařízení podle [modelu ovladačů zařízení Zephyr](https://docs.zephyrproject.org/latest/kernel/drivers/index.html).
+Z pohledu systému Zephyr je správné komunikovat s cílovými zařízeními I²C přes řádný ovladač zařízení podle [modelu ovladačů zařízení Zephyr](https://docs.zephyrproject.org/latest/kernel/drivers/index.html).
 
 Pro jednoduché ověření konceptu však lze použít následující postup.
 
@@ -24,7 +24,7 @@ Zapněte sběrnici I²C v souboru `prj.conf`:
 CONFIG_I2C=y
 ```
 
-Vložte potřebné soubory do svého implementačního souboru:
+Do zdrojového souboru vložte potřebné hlavičkové soubory:
 
 ```c
 #include <zephyr/device.h>
@@ -34,7 +34,7 @@ Vložte potřebné soubory do svého implementačního souboru:
 #include <stdint.h>
 ```
 
-Toto je příklad funkce pro přečtení jednoho datového bajtu z konkrétního registru:
+Příklad funkce, která přečte jeden bajt dat z konkrétního registru:
 
 ```c
 static int read(uint8_t devaddr, uint8_t regaddr, uint8_t *regval)
@@ -58,7 +58,7 @@ static int read(uint8_t devaddr, uint8_t regaddr, uint8_t *regval)
 }
 ```
 
-Toto je příklad funkce pro zápis jednoho datového bajtu do konkrétního registru:
+Příklad funkce, která zapíše jeden bajt dat do konkrétního registru:
 
 ```c
 static int write(uint8_t devaddr, uint8_t regaddr, uint8_t regval)
@@ -86,7 +86,7 @@ static int write(uint8_t devaddr, uint8_t regaddr, uint8_t regval)
 
 ## Sken I²C {#i2c-scan}
 
-Pro sken sběrnice I²C můžete použít příkaz shellu `i2c scan i2c@40003000`.
+Sběrnici I²C proskenujete příkazem shellu `i2c scan i2c@40003000`.
 
 ```
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
@@ -101,9 +101,9 @@ Pro sken sběrnice I²C můžete použít příkaz shellu `i2c scan i2c@40003000
 6 devices found on i2c@40003000
 ```
 
-Adresy senzorů I2C najdete v článku [Adresní prostor I²C](../hardware-description/i2c-address-space.md).
+Adresy senzorů I²C najdete v článku [Adresní prostor I²C](../hardware-description/i2c-address-space.md).
 
 ## Odkazy {#references}
 
-Pokud potřebujete více podrobností o Zephyr API pro I²C, podívejte se do dokumentace Zephyr API:
+Podrobnosti o API pro I²C najdete v dokumentaci API systému Zephyr:
 https://docs.zephyrproject.org/latest/hardware/peripherals/i2c.html

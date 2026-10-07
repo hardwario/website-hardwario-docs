@@ -4,7 +4,7 @@ title: Bluetooth Low Energy
 ---
 import Image from '@theme/IdealImage';
 
-Zařízení **CHESTER** obsahuje ve svém aplikačním procesoru také rádio Bluetooth Low Energy (BLE). Zařízení **CHESTER** vysílá do okolí svůj název a **HSN** (HARDWARIO Serial Number) a pro připojení můžete použít:
+Aplikační procesor zařízení **CHESTER** obsahuje také rádio Bluetooth Low Energy (BLE). **CHESTER** vysílá do okolí svůj název a **HSN** (HARDWARIO Serial Number) a připojit se k němu můžete:
 
-- Mobilní aplikaci [**HARDWARIO Manager**](../platform-connectivity/hardwario-manager.md).
-- Počítačovou aplikaci [**HARDWARIO Monitor**](../platform-connectivity/hardwario-monitor.md).
+- mobilní aplikací [**HARDWARIO Manager**](../platform-connectivity/hardwario-manager.md),
+- počítačovou aplikací [**HARDWARIO Monitor**](../platform-connectivity/hardwario-monitor.md).

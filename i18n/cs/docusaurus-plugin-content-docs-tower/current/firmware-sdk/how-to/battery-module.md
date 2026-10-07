@@ -4,14 +4,14 @@ title: "Jak na: Battery Module"
 ---
 import Image from '@theme/IdealImage';
 
-[**Battery Module**](../../hardware-modules/about-battery-module.md) a [**Mini Battery Module**](../../hardware-modules/about-mini-battery-module.md) umožňují napájet váš produkt **čtyřmi** nebo **dvěma bateriemi AAA**.
+Moduly [**Battery Module**](../../hardware-modules/about-battery-module.md) a [**Mini Battery Module**](../../hardware-modules/about-mini-battery-module.md) napájejí váš produkt ze **čtyř**, resp. **dvou baterií AAA**.
 Modul automaticky rozpozná, že je připojeno externí napájení (AC modul, USB, …), a odpojí baterie od obvodu.
 
-S tímto modulem můžete kontrolovat napětí baterií (**ručně** nebo **periodicky**) a naplánovat vhodné akce pro určité úrovně napětí.
+S tímto modulem můžete kontrolovat napětí baterií (**ručně**, nebo **pravidelně**) a při určitých úrovních napětí spustit vhodné akce.
 
 ## Odkazy {#references}
-- [**Battery SDK Module**](https://sdk.hardwario.com/group__twr__module__battery.html)
-- Příklad v GitHub repozitáři
+- [**Modul SDK pro Battery Module**](https://sdk.hardwario.com/group__twr__module__battery.html)
+- Příklad v repozitáři na GitHubu
 
 ## Prahové hodnoty modulu Battery Module {#battery-module-thresholds}
 
@@ -24,13 +24,13 @@ TWR_MODULE_BATTERY_EVENT_LEVEL_CRITICAL
 
 :::tip
 
-  Tyto prahové hodnoty můžete využít k tomu, abyste se sami upozornili, že zařízení bude mít brzy vybité baterie, a nemuseli se starat o občasnou kontrolu napětí.
+  Podle těchto prahových hodnot se můžete nechat upozornit, že se baterie v zařízení brzy vybijí, a nemusíte napětí průběžně kontrolovat.
 
 :::
 
 :::info
 
-  V tomto příkladu se napětí a úroveň nabití pošlou do vašeho počítače přes USB vždy, když stisknete tlačítko na modulu Core Module.
+  V tomto příkladu se napětí a úroveň nabití pošlou do počítače přes USB pokaždé, když stisknete tlačítko na modulu Core Module.
 
 :::
 
@@ -87,7 +87,7 @@ Příklad kódu: napětí přes USB
 
   V tomto příkladu se napětí posílá přes rádio každých 60 minut.
 
-  A pokud je úroveň napětí kritická, pošle se přes rádio zpráva **"CRITICAL"**.
+  Pokud je napětí kritické, odešle se přes rádio i zpráva **„CRITICAL“**.
 
 :::
 

@@ -83,14 +83,14 @@ Choose one of the following options based on your setup:
 
 This built-in network server allows you to manage sensors directly through the gateway's web interface.
 
-### Option 2: Chirpstack v4 (Local Server)
-**Best for:** Users with local Chirpstack installation
+### Option 2: ChirpStack v4 (Local Server)
+**Best for:** Users with local ChirpStack installation
 
 | Setting      | Value |
 |--------------|-------|
 | Enable       | True  |
 | Type         | Chirpstack-v4 |
-| Server address | Your Chirpstack server IP (e.g., 10.0.0.52) |
+| Server address | Your ChirpStack server IP (e.g., 10.0.0.52) |
 | MQTT port    | 1883  |
 | Region ID    | eu868 |
 

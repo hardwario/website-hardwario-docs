@@ -4,13 +4,13 @@ description: "Radio communication in HARDWARIO TOWER: the integrated sub-GHz rad
 ---
 import Image from '@theme/IdealImage';
 
-HARDWARIO TOWER provides two main radio communication methods
+HARDWARIO TOWER provides two main radio communication methods:
 
 ## [**Sub-GHz Radio**](./sub-ghz-radio.md)
 
 First is using our integrated **SPIRIT1 radio transceiver**, which can provide solid coverage of about **500 meters line-of-sight** and should be enough for a three-story building with a garden around it.
 
-Every [**Core Module**](../hardware-modules/about-core-module.md) has this radio on it, so if you bought it, you will just need the [**Radio Dongle**](../hardware-modules/about-radio-dongle.md) and you can start your network
+Every [**Core Module**](../hardware-modules/about-core-module.md) has this radio on it, so if you bought it, you will just need the [**Radio Dongle**](../hardware-modules/about-radio-dongle.md) and you can start your network.
 
 :::info
 

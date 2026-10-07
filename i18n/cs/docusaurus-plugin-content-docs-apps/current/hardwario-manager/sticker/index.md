@@ -7,10 +7,10 @@ title_meta: "STICKER (HARDWARIO Manager)"
 
 # STICKER přes NFC {#sticker-over-nfc}
 
-Zařízení STICKER se konfiguruje **přiložením telefonu k zařízení**. Žádné kabely,
-žádný programátor, žádný software na počítači. Zařízení STICKER je připravené na
-NFC a lze ho nastavit i **bez vložených baterií**, protože pole NFC z telefonu napájí čip
-dost dlouho na to, aby si nastavení uložil, a zařízení ho aplikuje při dalším
+Zařízení STICKER se konfiguruje **přiložením telefonu k zařízení**. Nepotřebujete
+kabely, programátor ani software na počítači. Zařízení STICKER podporuje NFC a lze
+ho nastavit i **bez vložených baterií**: pole NFC z telefonu napájí čip dost
+dlouho na to, aby nastavení uložil, a zařízení ho začne používat po dalším
 startu.
 
 Otevřete **HARDWARIO Manager** a zvolte **STICKER**.
@@ -29,14 +29,14 @@ písmeny. Rozvržení obrazovek ale odpovídá.
 
 | Položka | Co dělá |
 |---|---|
-| **Device info** | Přečte sériové číslo, verzi firmwaru, dobu běhu a hodiny, viz [**Informace o zařízení a klíče LoRaWAN**](./device-info.md) |
-| **LoRaWAN keys** | Přečte DevEUI a klíče potřebné k registraci zařízení v síti |
+| **Device info** | Čtení sériového čísla, verze firmwaru, doby běhu a hodin, viz [**Informace o zařízení a klíče LoRaWAN**](./device-info.md) |
+| **LoRaWAN keys** | Čtení DevEUI a klíčů potřebných k registraci zařízení v síti |
 | **Configuration** | Čtení a úprava celé konfigurace zařízení, viz [**Konfigurace**](./configuration.md) |
-| **Templates** | Znovupoužitelné konfigurační předlohy, viz [**Šablony**](./templates.md) |
+| **Templates** | Znovu použitelné konfigurační předvolby, viz [**Šablony**](./templates.md) |
 | **Tools** | Synchronizace času, senzory, historie, resety, viz [**Nástroje**](./tools.md) |
-| **Saved STICKERs** | Zařízení, která spravujete, a jejich uložené klíče, viz [**Saved STICKERs**](./saved-stickers.md) |
+| **Saved STICKERs** | Spravovaná zařízení a jejich uložené klíče, viz [**Saved STICKERs**](./saved-stickers.md) |
 
-Tlačítko dole, **Claim a STICKER**, zaznamená zařízení k vašemu účtu ATELOS, aby
+Tlačítkem **Claim a STICKER** dole zařízení zapíšete ke svému účtu ATELOS, aby
 aplikace mohla doplnit jeho klíče. Viz [**Účet ATELOS**](../atelos.md).
 
 ---
@@ -45,22 +45,22 @@ aplikace mohla doplnit jeho klíče. Viz [**Účet ATELOS**](../atelos.md).
 
 Když se na obrazovce objeví *hold the phone against the …*, přiložte zadní stranu
 telefonu k zařízení STICKER a nehýbejte s ním sekundu či dvě. Anténa NFC bývá
-v telefonu blízko **horní části zadní strany**; pokud se nic nestane, pohybujte
+v **horní části zadní strany** telefonu; pokud se nic nestane, pohybujte
 telefonem pomalu kolem tohoto místa, dokud se tag nenačte.
 
-Zařízení STICKER komunikuje **kanálem šifrovaným AES-CCM**, takže aplikace
-potřebuje **secret key** zařízení, aby mohla číst nebo zapisovat. Jakmile je
-zařízení uložené, aplikace klíč doplní automaticky. Vezme sériové číslo a nonce
-z tagu a klíč dohledá ve vašem uloženém seznamu, takže většina akcí nevyžaduje
-žádné psaní.
+Zařízení STICKER komunikuje **kanálem šifrovaným AES-CCM**, takže aplikace může
+číst nebo zapisovat, jen když zná **secret key** zařízení. Jakmile je zařízení
+uložené, aplikace klíč doplní automaticky: z tagu přečte sériové číslo a nonce
+a klíč dohledá v seznamu uložených zařízení. U většiny akcí tak nemusíte nic
+psát.
 
-:::info Android a iOS přikládají jinak
-Na **Androidu** držíte telefon u zařízení po celou dobu výměny.
+:::info Přiložení na Androidu a iOS se liší
+Na **Androidu** držíte telefon u zařízení po celou dobu komunikace.
 
-Na **iOS** běží celá výměna uvnitř jednoho systémového panelu skenování a panel
-vás v polovině vyzve, abyste **telefon zvedli a přiložili znovu**. Tohle zvednutí
-je nutné: dá zařízení okamžik bez pole, který potřebuje. Postupujte podle pokynů
-na panelu a každé přiložení držte v klidu.
+Na **iOS** probíhá celá komunikace v jednom systémovém panelu skenování, který vás
+uprostřed vyzve, abyste **telefon oddálili a znovu přiložili**. Oddálení je
+nutné: zařízení potřebuje na okamžik zůstat bez pole NFC. Postupujte podle pokynů
+v panelu a při každém přiložení držte telefon v klidu.
 :::
 
 ---
@@ -68,8 +68,8 @@ na panelu a každé přiložení držte v klidu.
 ## Když zařízení není ve vašem seznamu {#if-the-device-is-not-in-your-list}
 
 Pokud se tag přečte správně, ale jeho sériové číslo není mezi vašimi uloženými
-zařízeními, zobrazí aplikace obrazovku **Unknown STICKER** a nabídne jeho
-**nárokování**, místo aby prostě selhala. Viz [**Účet ATELOS**](../atelos.md).
+zařízeními, nezobrazí aplikace chybu, ale obrazovku **Unknown STICKER**
+a nabídne jeho **nárokování**. Viz [**Účet ATELOS**](../atelos.md).
 
 ---
 
@@ -77,7 +77,7 @@ zařízeními, zobrazí aplikace obrazovku **Unknown STICKER** a nabídne jeho
 
 | Problém | Co zkontrolovat |
 |---|---|
-| Zařízení STICKER se nedá přečíst | NFC je zapnuté, v cestě není silný obal, přiložte horní část zadní strany telefonu naplocho k zařízení a několik sekund nehýbejte. |
-| Zápis se zdánlivě neprojeví | Zařízení tiše ignoruje zápisy provedené se špatným secret key. Ověřte, že je uložený secret key pro toto zařízení správný. |
+| Zařízení STICKER nejde přečíst | Zkontrolujte, že je NFC zapnuté a nepřekáží silný obal. Přiložte horní část zadní strany telefonu naplocho k zařízení a několik sekund s ním nehýbejte. |
+| Zápis se zdánlivě neprojeví | Zápisy se špatným secret key zařízení bez upozornění ignoruje. Ověřte, že je pro toto zařízení uložený správný secret key. |
 | Konfigurace je příliš velká | Snižte počet nastavení. Během úprav aplikace ukazuje velikost konfigurace vzhledem k limitu zařízení. |
-| Po připojení k LoRaWAN žádná odezva | Zkontrolujte klíče a profil zařízení ve svém síťovém serveru. |
+| Po připojení (join) do sítě LoRaWAN nepřichází odezva | Zkontrolujte klíče a profil zařízení na svém síťovém serveru. |

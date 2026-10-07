@@ -7,14 +7,14 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/bridge-module.png')} alt="Modul Bridge s konektorem micro-USB a převodníkem USB-UART pro připojení modulů k USB hostu" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/bridge-module.png')} alt="Bridge Module s konektorem micro-USB a převodníkem USB-UART pro připojení modulů k USB hostu" /></div>
     </div>
     <div class="col col--6">
       <p>
-        <b>Modul Bridge</b> nabízí snadnou cestu, jak připojit některé z modulů či tagů TOWER k USB hostu, například k zařízení Raspberry Pi nebo k jakémukoli stolnímu či přenosnému počítači.
+        <b>Bridge Module</b> snadno připojí některé moduly nebo tagy TOWER k hostiteli USB, například k Raspberry Pi nebo k libovolnému stolnímu či přenosnému počítači.
       </p>
       <p>
-        Konektor microUSB nejen <b>zajišťuje komunikační linku</b>, ale také <b>dodává napájení</b> pro modul Bridge a periferie k němu připojené.
+        Konektor micro-USB <b>slouží ke komunikaci</b> a zároveň <b>napájí</b> modul Bridge Module i periferie k němu připojené.
       </p>
     </div>
   </div>
@@ -24,11 +24,11 @@ import Image from '@theme/IdealImage';
 - Integrovaný převodník USB HID na I2C/UART FT260
 - Konektor micro-USB
 - Dvě nezávislé sběrnice I2C zajištěné multiplexerem I2C TCA9543
-- LED červené barvy (řízená z GPIO pinu FT260)
+- Červená LED (řízená pinem GPIO obvodu FT260)
 - Rozsah provozního napětí: 3,0 až 3,6 V nebo z USB hostu
 - Rozsah provozních teplot: -20 až 70 °C
 - Mechanické rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/bridge-module)
+- [**E-shop**](https://www.hardwario.store/p/bridge-module)
 - [**Schémata**](https://github.com/hardwario/twr-hardware/tree/master/out/bc-module-bridge)

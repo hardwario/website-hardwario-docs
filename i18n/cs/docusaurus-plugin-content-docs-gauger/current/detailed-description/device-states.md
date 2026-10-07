@@ -5,18 +5,18 @@ title: Stavy zařízení
 
 # Stavy zařízení {#device-states}
 
-Během svého běhu se zařízení může dostat do několika stavů, přičemž každý z nich je indikován zelenou stavovou LED.
+Během provozu se zařízení může nacházet v několika stavech. Každý z nich signalizuje zelená stavová LED.
 
-Prvním stavem, do kterého zařízení vstoupí hned po spuštění, je inicializace. V tomto stavu se postupně inicializují všechny podsystémy zařízení. Ve stavu inicializace LED trvale svítí.
+Hned po spuštění přejde zařízení do prvního stavu, inicializace. V něm se postupně inicializují všechny podsystémy zařízení. Během inicializace LED trvale svítí.
 
-Po úspěšné inicializaci zařízení přejde do stavu běhu. Tento stav je indikován občasnými krátkými bliknutími stavové LED. Navíc, dokud je zařízení v tomto stavu, vysílá informace o sobě samém (viz [Vyhledávání zařízení](../operation-instructions/device-discovery.md)).
+Po úspěšné inicializaci přejde zařízení do stavu běhu, který signalizují občasná krátká bliknutí stavové LED. V tomto stavu zařízení navíc vysílá informace o sobě (viz [Vyhledání zařízení](../operation-instructions/device-discovery.md)).
 
-Pokud zařízení narazí na chybu, nejpravděpodobněji během inicializace (existují i další zdroje chyb, například nezdařené připojení k Wi-Fi), přejde do chybového stavu. V tomto stavu LED bliká v pevných intervalech 500 ms. Chyba je každou sekundu zaznamenána do logu a je součástí vysílaných zpráv. Pokud je to povoleno v sestavení firmwaru, zařízení se po 60 sekundách v chybovém stavu automaticky restartuje. Z tohoto stavu je možné spustit návrat k předchozí verzi firmwaru (viz [Správa firmwaru](../operation-instructions/firmware-management.md)).
+Pokud zařízení narazí na chybu, nejčastěji během inicializace (chyba může mít i jiné příčiny, například neúspěšné připojení k Wi-Fi), přejde do chybového stavu. V něm LED bliká v pravidelných intervalech 500 ms. Chyba se každou sekundu zapisuje do logu a je součástí vysílaných zpráv. Pokud to sestavení firmwaru povoluje, zařízení se po 60 sekundách v chybovém stavu automaticky restartuje. Z tohoto stavu lze také spustit návrat k předchozí verzi firmwaru (viz [Správa firmwaru](../operation-instructions/firmware-management.md)).
 
-Tabulka chování LED podle stavu:
+Chování LED v jednotlivých stavech:
 
-| Stav LED       | Stav zařízení  |
-| :------------- | :------------- |
-| svítí          | inicializace   |
-| krátká bliknutí | běh           |
-| rychlé blikání | chyba          |
+| Stav LED        | Stav zařízení  |
+| :-------------- | :------------- |
+| svítí           | inicializace   |
+| krátce bliká    | běh            |
+| rychle bliká    | chyba          |

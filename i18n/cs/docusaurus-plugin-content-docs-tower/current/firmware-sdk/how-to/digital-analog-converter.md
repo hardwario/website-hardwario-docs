@@ -4,26 +4,26 @@ title: "Jak na: Digitálně-analogový převodník"
 ---
 import Image from '@theme/IdealImage';
 
-Core Module obsahuje dva analogové výstupy: `DAC0` a `DAC1`. Jde o skutečné analogové výstupy, nejen o **PWM výstupy**.
+Modul Core Module má dva analogové výstupy: `DAC0` a `DAC1`. Jde o skutečné analogové výstupy, ne jen o **výstupy PWM**.
 
 Oba kanály mohou běžet úplně samostatně s různými vzorkovacími frekvencemi.
 
 ## Odkazy {#references}
-- [**DAC SDK Module**](https://sdk.hardwario.com/group__twr__dac.html)
-- Ukázka v repozitáři na GitHubu
+- [**Modul SDK pro DAC**](https://sdk.hardwario.com/group__twr__dac.html)
+- Příklad v repozitáři na GitHubu
 
 :::info
 
-  V tomto příkladu je vyhledávací tabulka sinusovky, nejdřív je potřeba připravit výstupní buffer.
+  Příklad používá tabulku hodnot sinusovky (lookup table); nejdřív je potřeba připravit výstupní buffer.
 
-  Vzorkování je nastaveno na `TWR_DAC_SAMPLE_RATE_16K`. To dohromady generuje **sinusovku 125 Hz na výstupu DAC0**.
+  Vzorkovací frekvence je nastavená na `TWR_DAC_SAMPLE_RATE_16K`. Výsledkem je **sinusovka 125 Hz na výstupu DAC0**.
 
 :::
 
 <details>
 <summary>
 <b>
-Ukázka kódu generátoru sinusovky
+Příklad kódu: generátor sinusovky
 </b>
 </summary>
 <p>

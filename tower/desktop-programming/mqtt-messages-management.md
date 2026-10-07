@@ -5,7 +5,7 @@ title: MQTT Messages Management
 import Image from '@theme/IdealImage';
 
 
-In this chapter, we will go over the **Messages Tab** of Playground
+In this chapter, we will go over the **Messages Tab** of Playground.
 
 :::info
 

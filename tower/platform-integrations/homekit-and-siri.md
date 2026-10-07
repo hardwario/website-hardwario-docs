@@ -26,7 +26,7 @@ sudo apt-get install libavahi-compat-libdnssd-dev
 ```
 
 Open **HARDWARIO Hub in your Browser** (Linux and macOS can use `hub.local`, on Windows you have to use the IP address of HARDWARIO Hub).
-In the menu select functions and in the top right corner click on the **hamburger menu**. Click on **manage palette** and select **Install card**, where search:
+In the menu select functions and in the top right corner click on the **hamburger menu**. Click on **manage palette** and select the **Install** tab, where you search for:
 
 ```
 node-red-contrib-homekit-bridged
@@ -194,7 +194,7 @@ Click on the **little pencil icon** next to the bridge part of the setting and f
 
 Now as you can see on your screen and screenshot below. The device is waiting for pairing with code `111-11-111`.
 Open the **Home app** on your iPhone or iPad and click **Add Accessory > Don't Have a Code or Can't Scan > HARDWARIO Bridge**.
-Select **Add anyway** on the next screen. On the screen where you have to input code, input the number `1` to all boxes
+Select **Add anyway** on the next screen. On the screen where you have to input code, input the number `1` to all boxes.
 
 <div class="container">
   <div class="row">

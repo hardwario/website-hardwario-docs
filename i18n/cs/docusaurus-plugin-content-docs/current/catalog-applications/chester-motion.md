@@ -6,40 +6,40 @@ import Image from '@theme/IdealImage';
 
 # CHESTER Motion {#chester-motion}
 
-Tento článek popisuje základní funkcionalitu, popis hardwaru a ukázkovou **JSON** zprávu katalogové aplikace **CHESTER Motion**.
+Tento článek popisuje základní funkce katalogové aplikace **CHESTER Motion**, její hardware a ukázkovou zprávu **JSON**.
 
 :::caution
 
-Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
+Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
 
-- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
+- [**Společné funkce**](common-functionality.md): jak fungují LED, tlačítko a nastavení sítě.
+- [**Konektivita platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
 ## Přehled aplikace {#application-overview}
 
-**CHESTER Motion** je zařízení pro směrovou detekci pohybu, které pomocí dvou PIR senzorů detekuje a sleduje směr pohybu (zleva doprava a zprava doleva). Aplikace počítá pohybové události včetně informace o směru a odesílá agregovaná telemetrická data přes LTE do HARDWARIO Cloud.
+Zařízení **CHESTER Motion** rozpoznává pohyb včetně jeho směru: dvěma senzory PIR zjistí, zda se něco pohybuje zleva doprava, nebo zprava doleva. Aplikace počítá události pohybu se směrem a agregovaná telemetrická data odesílá přes LTE do HARDWARIO Cloud.
 
-Zařízení **CHESTER Motion** je vybaveno dvěma PIR senzory pro sledování průchodu osob kolem zařízení, což z něj dělá ideální řešení pro sledování pohybu osob v továrnách, na nádražích nebo v maloobchodních prostorách. Díky bezdrátové konektivitě a dlouhé výdrži baterie lze zařízení snadno nainstalovat kdekoliv, včetně odlehlých míst pro monitorování chráněných přírodních oblastí.
+Zařízení **CHESTER Motion** sleduje dvěma senzory PIR průchod osob kolem sebe, a hodí se proto ke sledování pohybu lidí v továrnách, na nádražích nebo v prodejnách. Díky bezdrátovému připojení a dlouhé výdrži baterie ho snadno nainstalujete kdekoli, i na odlehlých místech, například v chráněných přírodních oblastech.
 
-Typické případy použití:
-- Sledování pohybu osob v továrních uličkách, na nádražích nebo v obchodních prostorách
+Typické využití:
+- Sledování pohybu osob v uličkách továrních hal, na nádražích nebo v prodejnách
 - Sledování pohybu osob v chráněných přírodních oblastech
-- Zvýšení bezpečnosti a optimalizace provozu díky monitorování přítomnosti osob v různých prostředích
-- Snadná instalace na odlehlých nebo obtížně přístupných místech díky bezdrátovému designu a dlouhé životnosti baterie
+- Vyšší bezpečnost a efektivnější provoz díky sledování přítomnosti osob v různých prostředích
+- Snadná instalace na odlehlých nebo obtížně přístupných místech díky bezdrátovému provedení a dlouhé výdrži baterie
 
 ## Popis hardwaru {#chester-motion}
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: základní deska CHESTER s držákem baterie typu C
-* `CHESTER-E23-LP`: krabička se dvěma otvory pro PIR senzory, SMA anténním pigtailem a světlovodem
-* `CHESTER-S3`: rozšiřující deska se dvěma PIR senzory
+* `CHESTER-E23-LP`: krabička se dvěma otvory pro senzory PIR, anténním pigtailem SMA a světlovodem
+* `CHESTER-S3`: rozšiřující deska se dvěma senzory PIR
 * `Battery SAFT LS26500`
 
-Více podrobností najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 ### Technická specifikace {#technical-specification}
 
@@ -50,69 +50,69 @@ Více podrobností najdete v kapitole [**Objednací kódy**](../ordering-codes.m
 | Provozní teplota | -20 až +60 °C |
 | Skladovací teplota | -30 až +70 °C |
 | Krytí krabičky | IP67 |
-| Nominální napětí baterie | 3,6 V |
-| Nominální kapacita baterie | 7700 mAh |
+| Jmenovité napětí baterie | 3,6 V |
+| Jmenovitá kapacita baterie | 7700 mAh |
 | Klidová spotřeba | < 180 µA |
 | Špičková spotřeba | < 250 mA |
 
-### PIR senzor (CHESTER-S3) {#pir-sensor-chester-s3}
+### Senzor PIR (CHESTER-S3) {#pir-sensor-chester-s3}
 
 | Parametr | Hodnota |
 | :--- | :--- |
 | Dosah detekce | Až 3 metry |
-| Úhel měření | Max 80° |
+| Úhel měření | Max. 80° |
 
 ## Měření a chování {#measurement-and-behavior}
 
-Aplikace pracuje ve třístupňovém řetězci:
+Aplikace zpracovává data ve třech fázích:
 
-1. **Vzorkování** (řízeno parametrem `interval-sample`, výchozí 60 sekund):
-   - Čte interní teploměr (teplota)
-   - Čte akcelerometr (osy X, Y, Z a orientace)
-   - Zachytává nashromážděné počty pohybů od posledního vzorku do bufferu pohybových vzorků
-   - Po každém vzorku resetuje čítače pohybu pro daný cyklus
+1. **Vzorkování** (parametr `interval-sample`, výchozí hodnota 60 sekund):
+   - Přečte vnitřní teploměr (teplota)
+   - Přečte akcelerometr (osy X, Y, Z a orientace)
+   - Uloží počty pohybů zachycené od posledního vzorku do bufferu vzorků pohybu
+   - Po každém vzorku vynuluje čítače pohybu pro daný cyklus
 
-2. **Detekce pohybu** (kontinuální, řízená přerušením):
-   - Modul CHESTER-S3 má dva kanály PIR senzorů: **levý** (L) a **pravý** (R)
-   - Když jeden kanál detekuje pohyb, otevře se **okno 750 ms** pro detekci protilehlého kanálu
-   - Pokud se protilehlý kanál aktivuje do 750 ms, zaznamená se směrová pohybová událost:
+2. **Detekce pohybu** (nepřetržitá, řízená přerušením):
+   - Modul CHESTER-S3 má dva kanály senzorů PIR: **levý** (L) a **pravý** (R)
+   - Když jeden kanál zachytí pohyb, otevře se **okno 750 ms**, během kterého se čeká na druhý kanál
+   - Pokud se druhý kanál aktivuje do 750 ms, zaznamená se událost pohybu se směrem:
      - L pak R = pohyb zleva doprava (`motion_right`)
      - R pak L = pohyb zprava doleva (`motion_left`)
-   - Pokud se protilehlý kanál do 750 ms neaktivuje, započítá se pouze detekce jedním senzorem (`detect_left` nebo `detect_right`)
+   - Pokud se druhý kanál do 750 ms neaktivuje, započítá se jen detekce jedním senzorem (`detect_left` nebo `detect_right`)
 
-3. **Reportování** (řízeno parametrem `interval-report`, výchozí 1800 sekund):
+3. **Odesílání** (parametr `interval-report`, výchozí hodnota 1800 sekund):
    - Zakóduje všechna nasbíraná data do formátu CBOR
-   - Odešle report do HARDWARIO Cloud přes LTE
-   - Za jedno reportovací období lze uložit do bufferu až **30 pohybových vzorků**
-   - Čítače pohybových vzorků se po úspěšném odeslání resetují
-   - Totalizéry (celoživotní čítače) přetrvávají napříč reporty a nikdy se neresetují
+   - Odešle hlášení přes LTE do HARDWARIO Cloud
+   - Za jeden interval hlášení se do bufferu vejde až **30 vzorků pohybu**
+   - Čítače vzorků pohybu se po úspěšném odeslání vynulují
+   - Totalizéry (čítače za celou dobu provozu) se mezi hlášeními zachovávají a nikdy se nenulují
 
 :::info
 
-K intervalu reportování se přidává náhodný rozptyl 0-20 %, aby se zabránilo současnému vysílání více zařízení.
+K intervalu hlášení se přičítá náhodný rozptyl 0–20 %, aby více zařízení nevysílalo současně.
 
 :::
 
-- Citlivost detekce pohybu lze nakonfigurovat pomocí přednastavených režimů (**low**, **medium**, **high**) nebo v režimu **individual** vlastními parametry.
+- Citlivost detekce pohybu nastavíte přednastaveným režimem (**low**, **medium**, **high**) nebo vlastními parametry v režimu **individual**.
 
 ### Režimy citlivosti PIR {#pir-sensitivity-modes}
 
 Aplikace nabízí tři přednastavené režimy citlivosti a jeden vlastní režim:
 
-**Low**: Poskytuje nejvyšší odolnost proti falešným poplachům s pomalejší detekcí:
+**Low**: nejvyšší odolnost proti falešným poplachům za cenu pomalejší detekce:
 - `motion-sens`: 32, `motion-blind`: 3 s, `motion-pulse`: 3, `motion-window`: 4 s
 
-**Medium** (výchozí): Vyvážený poměr mezi rychlostí detekce a odolností proti falešným poplachům:
+**Medium** (výchozí): vyvážený poměr mezi rychlostí detekce a odolností proti falešným poplachům:
 - `motion-sens`: 64, `motion-blind`: 2 s, `motion-pulse`: 2, `motion-window`: 2 s
 
-**High**: Nejrychlejší detekce s nejvyšší citlivostí. Jediný pulz spustí detekci okamžitě. Nejvhodnější pro bezpečnostní systémy nebo dveřní senzory, kde je vyžadována okamžitá reakce:
+**High**: nejrychlejší detekce s nejvyšší citlivostí. Detekci okamžitě spustí jediný impulz. Hodí se pro zabezpečovací systémy nebo dveřní senzory, kde je potřeba okamžitá reakce:
 - `motion-sens`: 128, `motion-blind`: 1 s, `motion-pulse`: 1, `motion-window`: 0 s
 
-**Individual**: Umožňuje ruční nastavení všech čtyř parametrů pro pokročilé řízení.
+**Individual**: ruční nastavení všech čtyř parametrů pro pokročilé ladění.
 
 :::tip
 
-Parametr `motion-sens` řídí, jak silně senzor reaguje na vstup. Vyšší hodnoty znamenají vyšší citlivost reakce.
+Parametr `motion-sens` určuje, jak silně senzor reaguje na podnět. Čím vyšší hodnota, tím citlivější reakce.
 
 :::
 
@@ -122,21 +122,21 @@ Parametr `motion-sens` řídí, jak silně senzor reaguje na vstup. Vyšší hod
 | :--- | :--- | :--- |
 | Červená | Inicializace | Svítí během startu, zhasne po dokončení inicializace |
 | Zelená | Servisní režim + režim LTE | Krátké bliknutí každých 5 sekund |
-| Žlutá | Servisní režim + žádný režim | Krátké bliknutí každých 5 sekund |
-| Zelená | Servisní režim + spuštění levého PIR | Bliknutí 100 ms při detekci levým senzorem |
-| Červená | Servisní režim + spuštění pravého PIR | Bliknutí 100 ms při detekci pravým senzorem |
-| Žlutá | Stisk tlačítka | Pulzuje N krát (N = počet detekovaných kliknutí) |
-| LOAD | Akce 5 kliknutí tlačítkem | Svítí po dobu 2 minut |
+| Žlutá | Servisní režim + nenastavený režim | Krátké bliknutí každých 5 sekund |
+| Zelená | Servisní režim + aktivace levého PIR | Bliknutí 100 ms při detekci levým senzorem |
+| Červená | Servisní režim + aktivace pravého PIR | Bliknutí 100 ms při detekci pravým senzorem |
+| Žlutá | Stisk tlačítka | Blikne N-krát (N = počet rozpoznaných kliknutí) |
+| LOAD | Akce tlačítka na 5 kliknutí | Svítí 2 minuty |
 
 :::info
 
-LED indikátory servisního režimu jsou aktivní pouze tehdy, když je `service-mode-enabled` nastaveno na `true`.
+Indikace servisního režimu na LED funguje jen tehdy, když je `service-mode-enabled` nastavené na `true`.
 
 :::
 
 ### Chování tlačítka {#button-behavior}
 
-Tlačítko INT podporuje akce s více kliknutími:
+Tlačítko INT spouští akce podle počtu kliknutí:
 
 | Kliknutí | Akce |
 | :--- | :--- |
@@ -146,11 +146,11 @@ Tlačítko INT podporuje akce s více kliknutími:
 | 4x | Restart zařízení |
 | 5x | Rozsvícení LED LOAD na 2 minuty (indikace zátěže) |
 
-Každý stisk tlačítka je potvrzen bliknutími žluté LED odpovídajícími počtu detekovaných kliknutí.
+Zařízení každý stisk potvrdí žlutou LED, která blikne tolikrát, kolik kliknutí rozpoznalo.
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná pomocí příkazu `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config interval-sample 60
@@ -165,45 +165,45 @@ app config service-mode-enabled false
 app config mode lte
 ```
 
-## Specifické příkazy {#specific-commands}
+## Příkazy aplikace {#specific-commands}
 
 :::info
 
-Celou strukturu stromu příkazů můžete snadno prozkoumat – začněte příkazem `help`.
+Celou stromovou strukturu příkazů snadno prozkoumáte: začněte příkazem `help`.
 
 :::
 
 :::caution
 
-Pro uplatnění nové konfigurace je potřeba zavolat `config save`, který aplikuje nové konfigurační parametry a restartuje zařízení.
+Novou konfiguraci uplatníte příkazem `config save`, který uloží nové parametry a restartuje zařízení.
 
 :::
 
-Příkaz pro nastavení **provozního režimu**:
+Tímto příkazem nastavíte **provozní režim**:
 
 ```
 app config mode <none|lte>
 ```
 
-Příkaz pro nastavení **intervalu vzorkování** v sekundách:
+Tímto příkazem nastavíte **interval vzorkování** v sekundách:
 
 ```
 app config interval-sample <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu reportování** v sekundách:
+Tímto příkazem nastavíte **interval hlášení** v sekundách:
 
 ```
 app config interval-report <30-86400>
 ```
 
-Příkaz pro nastavení **intervalu dotazování** v sekundách (0 pro vypnutí):
+Tímto příkazem nastavíte **interval dotazování** v sekundách (0 dotazování vypne):
 
 ```
 app config interval-poll <0-86400>
 ```
 
-Příkaz pro nastavení přednastavené **citlivosti PIR**:
+Tímto příkazem zvolíte přednastavenou **citlivost PIR**:
 
 ```
 app config sensitivity <low|medium|high|individual>
@@ -211,41 +211,41 @@ app config sensitivity <low|medium|high|individual>
 
 :::tip
 
-Při nastavení na `individual` můžete doladit všechny čtyři parametry detekce pohybu uvedené níže. V ostatních režimech jsou tyto parametry nastaveny automaticky podle přednastavení.
+V režimu `individual` můžete doladit všechny čtyři níže uvedené parametry detekce pohybu. V ostatních režimech je nastaví zvolená předvolba automaticky.
 
 :::
 
-Příkaz pro nastavení **citlivosti senzoru pohybu** (vyšší hodnota = vyšší citlivost reakce):
+Tímto příkazem nastavíte **citlivost senzoru pohybu** (vyšší hodnota = citlivější reakce):
 
 ```
 app config motion-sens <1-255>
 ```
 
-Příkaz pro nastavení **slepé doby pohybu** v sekundách (doba po detekci, během které jsou další detekce ignorovány):
+Tímto příkazem nastavíte **slepou dobu pohybu** v sekundách (doba po detekci, během které se další detekce ignorují):
 
 ```
 app config motion-blind <0-10>
 ```
 
-Příkaz pro nastavení **počtu pulzů pohybu** (minimální počet detekčních pulzů potřebný ke spuštění pohybové události):
+Tímto příkazem nastavíte **počet impulzů pohybu** (minimální počet detekčních impulzů, který spustí událost pohybu):
 
 ```
 app config motion-pulse <1-10>
 ```
 
-Příkaz pro nastavení **okna detekce pohybu** v sekundách (časové okno, během kterého musí být zaznamenán požadovaný počet pulzů):
+Tímto příkazem nastavíte **okno detekce pohybu** v sekundách (časové okno, během kterého musí přijít požadovaný počet impulzů):
 
 ```
 app config motion-window <0-10>
 ```
 
-Příkaz pro zapnutí/vypnutí **servisního režimu** pro monitorování pohybu v reálném čase:
+Tímto příkazem zapnete nebo vypnete **servisní režim** pro sledování pohybu v reálném čase:
 
 ```
 app config service-mode-enabled <true|false>
 ```
 
-### Akční příkazy {#action-commands}
+### Příkazy akcí {#action-commands}
 
 Okamžité navzorkování všech senzorů:
 
@@ -259,13 +259,13 @@ Okamžité odeslání dat do cloudu:
 send
 ```
 
-Sledování událostí detekce pohybu v reálném čase (výchozí timeout 60 sekund, max 1800 sekund):
+Sledování událostí detekce pohybu v reálném čase (výchozí časový limit 60 sekund, max. 1800 sekund):
 
 ```
 motion detection [timeout_s]
 ```
 
-Zobrazení uložených pohybových vzorků a totalizérů:
+Zobrazení vzorků pohybu z bufferu a totalizérů:
 
 ```
 motion samples
@@ -273,9 +273,9 @@ motion samples
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je k dispozici v [kapitole Firmware](index.md#application-firmware) katalogových aplikací.
+Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](index.md#application-firmware).
 
-## Ukázková JSON zpráva {#example-json-message}
+## Ukázková zpráva JSON {#example-json-message}
 
 ```json
 {
@@ -335,16 +335,16 @@ Nejnovější firmware je k dispozici v [kapitole Firmware](index.md#application
 
 - **message**: Metadata (verze, pořadové číslo, časová značka).
 - **system**: Stav napájení (doba běhu, napětí, proud).
-- **network.parameter**: Detaily LTE připojení (RSRP, SNR, Cell ID atd.).
-- **thermometer**: Interní teplota ve °C.
+- **network.parameter**: Podrobnosti o připojení LTE (RSRP, SNR, Cell ID atd.).
+- **thermometer**: Vnitřní teplota v °C.
 - **accelerometer**: Zrychlení v m/s² a orientace.
 - **motion**:
-  - **totalizer**: Celoživotní čítače událostí (nikdy se neresetují).
-  - **samples**: Pole pohybových událostí kódované jako časová posloupnost offsetů. První prvek je základní časová značka. Každý další prvek je pole: `[offset, detect_left, detect_right, motion_left, motion_right]`.
+  - **totalizer**: Čítače událostí za celou dobu provozu (nikdy se nenulují).
+  - **samples**: Pole událostí pohybu s časy zakódovanými jako offsety. První prvek je výchozí časová značka, každý další prvek je pole: `[offset, detect_left, detect_right, motion_left, motion_right]`.
 
 :::info
 
-Jakákoliv hodnota může být `null`, pokud čtení odpovídajícího senzoru selhalo.
+Kterákoli hodnota může být `null`, pokud se čtení příslušného senzoru nezdařilo.
 
 :::
 
@@ -354,15 +354,15 @@ Jakákoliv hodnota může být `null`, pokud čtení odpovídajícího senzoru s
 
 ### v1.0.0 – 2026-02-11 {#v100--2026-02-11}
 
-- **Přidáno**: Prvotní vydání aplikace: detekce pohybu dvěma PIR senzory pomocí modulu CHESTER-S3
+- **Přidáno**: První vydání aplikace: detekce pohybu dvěma senzory PIR na modulu CHESTER-S3
 - **Přidáno**: Sledování směru pohybu: rozlišuje průchod zleva doprava (`motion_right`) a zprava doleva (`motion_left`)
-- **Přidáno**: Konfigurovatelná přednastavení citlivosti PIR: `low`, `medium` (výchozí), `high` a `individual` pro ruční ladění parametrů
-- **Přidáno**: Celoživotní totalizéry pohybu, které přetrvávají napříč reporty a restarty zařízení
-- **Přidáno**: Servisní režim (`service-mode-enabled`) se zpětnou vazbou LED v reálném čase pro testování senzorů a instalaci
+- **Přidáno**: Nastavitelné předvolby citlivosti PIR: `low`, `medium` (výchozí), `high` a `individual` pro ruční ladění parametrů
+- **Přidáno**: Totalizéry pohybu za celou dobu provozu, které se zachovají i po odeslání hlášení a restartu zařízení
+- **Přidáno**: Servisní režim (`service-mode-enabled`) s okamžitou indikací na LED pro testování senzorů a instalaci
 - **Přidáno**: Akce tlačítka s více kliknutími pro okamžité vzorkování, odesílání a restart zařízení
 
 :::info
 
-Kompletní přehled všech změn platformy najdete v [**seznamu změn CHESTER**](/chester/changelog).
+Kompletní přehled všech změn platformy najdete v [**Seznamu změn CHESTER**](/chester/changelog).
 
 :::

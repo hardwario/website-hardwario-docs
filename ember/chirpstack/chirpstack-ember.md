@@ -22,7 +22,7 @@ A form will appear where you can enter gateway information such as:
 
 Once completed, click **Submit**.  
 
-![ChirStack v4 - Gateways](images/chirpstack-tutorial-1.png)
+![ChirpStack v4 - Gateways](images/chirpstack-tutorial-1.png)
 
 :::info
 The **Gateway ID** can be found in the **MikroTik software** under **LoRa → Devices**.  

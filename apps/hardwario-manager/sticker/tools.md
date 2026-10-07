@@ -26,7 +26,7 @@ than through its configuration.
 Choose **Sync time** and hold the phone against the STICKER. The device clock is
 set from the phone.
 
-A synchronised clock is what lets stored measurements carry absolute timestamps.
+A synchronized clock is what lets stored measurements carry absolute timestamps.
 Without it, [**Sensor history**](./sensor-history.md) can only report records
 relative to the read.
 

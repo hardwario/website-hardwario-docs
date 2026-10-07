@@ -1,25 +1,25 @@
 ---
 slug: /tls-setup
 title: Nastavení MQTT TLS
-description: "Tento návod obsahuje vše potřebné ke zprovoznění TLS s vlastnoručně podepsanými certifikáty."
+description: "Návod obsahuje vše potřebné ke zprovoznění TLS s certifikáty podepsanými vlastní certifikační autoritou (self-signed)."
 ---
 
 import Image from '@theme/IdealImage';
 
 # MQTT přes TLS {#mqtt-over-tls}
 
-Tento návod obsahuje všechny informace potřebné k zprovoznění TLS s vlastnoručně podepsanými certifikáty.
+Tento návod obsahuje vše potřebné ke zprovoznění TLS s certifikáty podepsanými vlastní certifikační autoritou (self-signed).
 
 ## Certifikační autorita {#certificate-authority}
 
-Nejprve je potřeba nastavit certifikační autoritu.
+Nejprve nastavte certifikační autoritu.
 
-Je to poměrně přímočaré:  
+Je to jednoduché:  
 `openssl req -new -x509 -days <duration> -extensions v3_ca -keyout ca.key -out ca.crt`
 
 ## Server {#server}
 
-Za druhé je potřeba nastavit server.
+Potom nastavte server.
 
 ### Certifikát {#certificate}
 
@@ -38,7 +38,7 @@ Vytvořte soubor `v3.ext` s následujícím obsahem.
 subjectAltName         = DNS:hostname, IP:10.0.0.0
 ```
 
-Pokud chcete v SAN pro specifikaci serveru Mosquitto použít `hostname` a `10.0.0.0`, nahraďte je svým hostname a IP adresou.  
+Hodnoty `hostname` a `10.0.0.0` v položce SAN, která identifikuje server Mosquitto, nahraďte názvem hostitele a IP adresou svého serveru.  
 Více informací o SAN najdete v tomto [RFC](https://www.rfc-editor.org/rfc/rfc9525#name-identifying-application-ser).
 
 Podepište CSR klíčem své CA.
@@ -49,9 +49,9 @@ openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out s
 
 ### Nastavení Mosquitto {#mosquitto-setup}
 
-Také je potřeba nakonfigurovat Mosquitto tak, aby tyto certifikáty a klíče skutečně používalo.
+Server Mosquitto je ještě potřeba nastavit tak, aby tyto certifikáty a klíče skutečně používal.
 
-Vytvořte konfigurační soubor pro mosquitto (například `nano mosquitto.conf`).
+Vytvořte konfigurační soubor pro Mosquitto (například příkazem `nano mosquitto.conf`).
 
 ```conf
 per_listener_settings true
@@ -69,11 +69,11 @@ use_identity_as_username true
 acl_file /path/to/acl
 ```
 
-Mosquitto s tímto konfiguračním souborem spustíte pomocí volby `-c`: `mosquitto -c mosquitto.conf`
+Server Mosquitto s tímto konfiguračním souborem spustíte s volbou `-c`: `mosquitto -c mosquitto.conf`
 
 ## Klient {#client}
 
-Nakonec je potřeba klienta také autentizovat a autorizovat.
+Nakonec je potřeba autentizovat a autorizovat klienta.
 
 ### Certifikát {#certificate-1}
 
@@ -89,10 +89,10 @@ Vygenerujte CSR.
 Podepište CSR klíčem své CA.  
 `openssl x509 -req -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out client.crt -days 365`
 
-Odešlete soubory `client.key`, `client.crt` a `ca.crt` do zařízení TAPPER a odpovídajícím způsobem upravte [konfiguraci TAPPER](/tapper/usage/#configuration).
+Zkopírujte soubory `client.key`, `client.crt` a `ca.crt` do zařízení TAPPER a upravte podle nich [konfiguraci zařízení TAPPER](/tapper/usage/#configuration).
 
 :::tip
 
-Soubory můžete odeslat pomocí `scp`
+Soubory můžete zkopírovat příkazem `scp`.
 
 :::

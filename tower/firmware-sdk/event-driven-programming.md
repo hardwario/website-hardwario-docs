@@ -109,7 +109,7 @@ Temperature Sensor Event Handler Code Example
   {
       float value;
 
-      if (event != TWR_TMP112_EVENT_ERROR)
+      if (event == TWR_TMP112_EVENT_ERROR)
       {
           return;
       }

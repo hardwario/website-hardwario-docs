@@ -6,24 +6,24 @@ import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Tento **multiplatformní** Python nástroj umí nahrát firmware do zařízení [**Radio Dongle**](../hardware-modules/about-radio-dongle.md) a [**Core Module**](../hardware-modules/about-core-module.md), a to buď z lokálního binárního souboru, nebo z posledního vydaného firmwaru z [**našeho GitHubu**](https://github.com/orgs/hardwario/repositories?q=twr-&type=all&language=&sort=).
+Tento **multiplatformní** nástroj v Pythonu nahraje do zařízení [**Radio Dongle**](../hardware-modules/about-radio-dongle.md) a [**Core Module**](../hardware-modules/about-core-module.md) firmware z lokálního binárního souboru, nebo nejnovější vydaný firmware z [**našeho GitHubu**](https://github.com/orgs/hardwario/repositories?q=twr-&type=all&language=&sort=).
 
 :::caution
 
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
 
-Abyste mohli **Nástroj pro nahrávání firmwaru** získat, musíte mít na svém zařízení [**nainstalovaný Python a pip a mít je v systémové PATH**](https://www.tutorialspoint.com/how-to-install-python-in-windows)
+Abyste mohli **nástroj pro nahrávání firmwaru** nainstalovat, musíte mít v počítači [**nainstalovaný Python a pip, oba v systémové proměnné PATH**](https://www.tutorialspoint.com/how-to-install-python-in-windows).
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-Abyste mohli **Nástroj pro nahrávání firmwaru** získat, musíte mít na svém zařízení nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-linux/) a mít je v systémové **PATH**
+Abyste mohli **nástroj pro nahrávání firmwaru** nainstalovat, musíte mít v počítači nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-linux/), oba v systémové proměnné **PATH**.
 
 </TabItem>
 <TabItem value="macOS" label="macOS">
 
-Abyste mohli **Nástroj pro nahrávání firmwaru** získat, musíte mít na svém zařízení nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-macos/) a mít je v systémové **PATH**
+Abyste mohli **nástroj pro nahrávání firmwaru** nainstalovat, musíte mít v počítači nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-macos/), oba v systémové proměnné **PATH**.
 
 </TabItem>
 </Tabs>
@@ -32,11 +32,11 @@ Abyste mohli **Nástroj pro nahrávání firmwaru** získat, musíte mít na sv�
 
 ## Instalace {#installation}
 
-Chcete-li **Nástroj pro nahrávání firmwaru** nainstalovat, stačí otevřít **CLI** vašeho systému a spustit následující příkaz:
+**Nástroj pro nahrávání firmwaru** nainstalujete tak, že otevřete příkazovou řádku (**CLI**) a spustíte tento příkaz:
 
 :::tip
 
-Stejný příkaz můžete použít i pro aktualizaci **Nástroje pro nahrávání firmwaru** na nejnovější verzi
+Stejným příkazem **nástroj pro nahrávání firmwaru** také aktualizujete na nejnovější verzi.
 
 :::
 
@@ -54,19 +54,19 @@ pip install --upgrade --no-cache-dir bcf
 sudo pip install --upgrade --no-cache-dir bcf
 ```
 
-Automatické doplňování můžete zapnout přidáním tohoto řádku do **`~/.bashrc`**
+Automatické doplňování zapnete přidáním tohoto řádku do souboru **`~/.bashrc`**:
 
 ```bash
 eval "$(_BCF_COMPLETE=source bcf)"
 ```
 
-A poté **`~/.bashrc`** znovu načtěte pomocí:
+Pak soubor **`~/.bashrc`** znovu načtěte:
 
 ```bash
 source ~/.bashrc
 ```
 
-Díky tomu můžete pro doplňování příkazů **Nástroje pro nahrávání firmwaru** používat klávesu **TAB**
+Potom můžete příkazy **nástroje pro nahrávání firmwaru** doplňovat klávesou **TAB**.
 
 </TabItem>
 <TabItem value="macOS" label="macOS">
@@ -80,7 +80,7 @@ pip install --upgrade --no-cache-dir bcf
 
 :::tip
 
-Všechny dostupné příkazy zobrazíte zadáním **`bcf --help`** do svého **CLI**
+Všechny dostupné příkazy zobrazíte zadáním **`bcf --help`** do příkazové řádky (**CLI**).
 
 <details>
 <summary>
@@ -131,7 +131,7 @@ Výstup bcf --help
 bcf update
 ```
 
-#### Výpis veškerého firmwaru {#list-all-firmware}
+#### Výpis všech firmwarů {#list-all-firmware}
 
 ```bash
 bcf list
@@ -141,7 +141,7 @@ bcf list
 
 :::info
 
-Získáte veškerý firmware, který obsahuje hledaný výraz
+Vypíšou se všechny firmwary, které hledaný výraz obsahují.
 
 :::
 
@@ -153,7 +153,7 @@ bcf search button
 
 :::info
 
-Budete vyzváni k výběru zařízení, do kterého se má firmware nahrát
+Nástroj se zeptá, do kterého zařízení má firmware nahrát.
 
 :::
 
@@ -163,7 +163,7 @@ bcf flash hardwario/twr-radio-push-button:latest
 
 :::tip
 
-Pokud nahráváte firmware několikrát za sebou, můžete použít přepínač **`--device`** a přeskočit tak výzvu k výběru zařízení pokaždé znovu
+Pokud nahráváte firmware několikrát za sebou, použijte přepínač **`--device`**, abyste nemuseli pokaždé vybírat zařízení.
 
 ```bash
 bcf flash --device /dev/ttyUSB0 hardwario/twr-radio-push-button:latest
@@ -171,6 +171,6 @@ bcf flash --device /dev/ttyUSB0 hardwario/twr-radio-push-button:latest
 
 :::
 
-## Více o Nástroji pro nahrávání firmwaru {#more-about-firmware-flashing-tool}
+## Více o nástroji pro nahrávání firmwaru {#more-about-firmware-flashing-tool}
 
 **Nástroj pro nahrávání firmwaru** můžete použít i k výpisu logovacích zpráv ze zařízení. Více informací najdete v kapitole [**Vývoj pomocí nástrojů příkazové řádky**](../firmware-development/development-with-cli-tools.md).

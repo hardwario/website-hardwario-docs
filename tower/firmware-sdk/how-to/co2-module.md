@@ -16,7 +16,7 @@ The module uses [**infrared light for measurements**](https://en.wikipedia.org/w
 
 :::info
 
-  In this example, CO₂ levels will be measured and sent **to the computer over USB** every 2 minutes.
+  In this example, CO₂ levels will be measured and sent **over the radio** every 2 minutes.
 
 :::
 

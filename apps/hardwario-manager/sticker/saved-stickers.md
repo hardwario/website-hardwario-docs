@@ -11,10 +11,10 @@ asking you for credentials.
 
 Open **STICKER → Saved STICKERs**. The title shows how many devices you have.
 
-<img src="/img/hw-manager/hw-manager-saved-stickers.png" alt="The Saved STICKERs list with a search box, colour-coded tags on each row, and an add button" width="320" />
+<img src="/img/hw-manager/hw-manager-saved-stickers.png" alt="The Saved STICKERs list with a search box, color-coded tags on each row, and an add button" width="320" />
 
 Use the **Serial or name** box to search, and the tag icon to filter, see
-[**Organise devices with tags**](./tags.md).
+[**Organize devices with tags**](./tags.md).
 
 ---
 
@@ -45,7 +45,7 @@ Tap a row to open the device.
 | **Serial number** | The device's identity. |
 | **Secret key** | Reveal, copy, or edit it. Required for every encrypted exchange. |
 | **Vendor-token** | Reveal, copy, or edit it. Required for [**Vendor changes**](./reset.md). |
-| **Tags** | See [**Organise devices with tags**](./tags.md). |
+| **Tags** | See [**Organize devices with tags**](./tags.md). |
 | **Change log** | See [**Device change log**](./change-log.md). |
 
 The row menu also offers **Generate QR code**, which produces a claim QR

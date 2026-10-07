@@ -52,7 +52,7 @@ You can select **From Existing Project...** instead of **From Skeleton Project..
 
 This is the file structure of the **twr-skeleton project** that you just cloned. It is a Git-initialized repository ready to be used *out of the box*.
 
-This project can be immediately **compiled and flashed** to the [**Core Module**](../hardware-modules/about-core-module.md) or [**Radio Dongle**](../hardware-modules/about-core-module.md)
+This project can be immediately **compiled and flashed** to the [**Core Module**](../hardware-modules/about-core-module.md) or [**Radio Dongle**](../hardware-modules/about-radio-dongle.md).
 
 ```
 .
@@ -95,7 +95,7 @@ If you want to see some firmware examples, you can visit our [**GitHub**](https:
 
 ## Development Cycle
 
-Normally, the development cycle is the repetition of the **following 4 steps**.
+Normally, the development cycle is the repetition of the **following 3 steps**:
 
 - Edit the `src/application.c` and save changes **Ctrl + S**
 - Click on [**Build + Flash (Console)**](./hardwario-extension-tutorial.md#build--flash-console) to **compile**, **flash** and **open the serial console for logging**.
@@ -126,4 +126,4 @@ If you can't detect or flash the **Radio Dongle** or **Core Module** it can be a
 
 From now you should be able to **create firmware** and **update existing ones**.
 
-To know more about our modules and see some examples you can read the [**Hardware Modules**](../hardware-modules/index.md) section or [**Firmware SDK section**](../firmware-sdk/index.md)
+To know more about our modules and see some examples you can read the [**Hardware Modules**](../hardware-modules/index.md) section or [**Firmware SDK section**](../firmware-sdk/index.md).

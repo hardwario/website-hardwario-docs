@@ -19,7 +19,7 @@ Instead of using **CHESTER-M** and putting extension modules in it, you design a
 - Could be designed into **smaller enclosures**
 - Can be connected to [**CHESTER-X extension**](../extension-modules/index.md) modules the same way as CHESTER-M
 - Contains a **nano SIM card holder** onboard
-- Connect just a **battery** and **u.Fl antenna**
+- Connect just a **battery** and **u.FL antenna**
 
 ![CHESTER-U1 layout](images/chester-u1-description.png)
 

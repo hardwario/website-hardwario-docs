@@ -33,7 +33,7 @@ Run the client.
 #### Options
 
 - `-c PATH` `--config PATH` path to the [configuration](#configuration) file
-- `-d` `---debug` show debug output
+- `-d` `--debug` show debug output
 - `-h IP` `--host IP` MQTT Broker host
 - `-p PORT` `--port PORT` MQTT Broker port
 - `-ca PATH` `--cafile PATH` Path to the CA certificate file
@@ -56,7 +56,7 @@ Run the client.
 |    Behavior     |   Description    |
 | :-------------: | :--------------: |
 | One Short Beep  | NFC tag detected |
-| Continuous Beep | Tamper Detected  |
+| Continuous Beep | Tamper detected  |
 
 ## Configuration
 

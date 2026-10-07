@@ -7,9 +7,9 @@ import Image from '@theme/IdealImage';
 
 # RAK7289V2 WisGate Edge Pro {#rak7289v2-wisgate-edge-pro}
 
-**RAK7289V2 WisGate Edge Pro** je průmyslová venkovní LoRaWAN® brána. Je navržena pro vysokou spolehlivost a umístěna v krabičce s krytím IP67, takže je vhodná pro náročná prostředí a instalace na stožárech.
+**RAK7289V2 WisGate Edge Pro** je venkovní brána LoRaWAN® v průmyslovém provedení. Je navržená pro vysokou spolehlivost a má krabičku s krytím IP67, takže se hodí do náročného prostředí i k instalaci na stožár.
 
-Běží na systému **WisGateOS 2** a podporuje více typů připojení k internetu (Ethernet, Wi-Fi, mobilní síť), aby byla zajištěna nepřetržitá dostupnost kritických IoT sítí.
+Běží na systému **WisGateOS 2** a k internetu se může připojit několika cestami (Ethernet, Wi-Fi, mobilní síť), aby kritické sítě IoT zůstaly stále dostupné.
 
 <div class="container">
   <div class="row">
@@ -25,28 +25,28 @@ Běží na systému **WisGateOS 2** a podporuje více typů připojení k intern
 
 ---
 
-## Hlavní vlastnosti {#key-features}
+## Klíčové vlastnosti {#key-features}
 
-* **Průmyslová konstrukce:** vodotěsná hliníková krabička s krytím IP67.
+* **Průmyslové provedení:** Vodotěsná hliníková krabička s krytím IP67.
 * **Kanály:** 8 nebo 16 kanálů (podle modelu).
-* **Více typů připojení:** Ethernet, Wi-Fi a LTE mobilní síť (u některých modelů s podporou dvou SIM karet).
-* **GPS:** integrovaná GPS pro přesnou synchronizaci času a určení polohy.
-* **Napájení:** napájení přes PoE (Power over Ethernet) pro jednodušší kabeláž.
-* **Správa:** lokální webové rozhraní, SSH a vzdálená správa WisDM.
+* **Více páteřních připojení:** Ethernet, Wi-Fi a mobilní síť LTE (některé modely podporují dvě SIM karty).
+* **GPS:** Vestavěná GPS pro přesnou synchronizaci času a určení polohy.
+* **Napájení:** Přes PoE (Power over Ethernet), což zjednodušuje kabeláž.
+* **Správa:** Lokální webové rozhraní, SSH a vzdálená správa přes WisDM.
 
 ---
 
 ## Technické parametry {#technical-specifications}
 
-| Vlastnost | Parametr |
+| Vlastnost | Specifikace |
 | :--- | :--- |
 | **Model** | RAK7289V2 |
-| **LoRa kanály** | 8 nebo 16 kanálů |
+| **Kanály LoRa** | 8 nebo 16 kanálů |
 | **Frekvence** | EU868 (podporuje i další regiony) |
 | **Napájení** | **PoE (802.3af/at)** (48V) |
-| **Spotřeba** | max. 12 W |
+| **Příkon** | max. 12 W |
 | **Konektivita** | Ethernet, Wi-Fi, LTE Cat 4 |
-| **Antény** | externí konektory typu N (LoRa, LTE, GPS) |
+| **Antény** | Externí konektory typu N (LoRa, LTE, GPS) |
 | **Provozní teplota** | -40 °C až +65 °C |
 | **Krytí** | IP67 |
 
@@ -55,21 +55,21 @@ Běží na systému **WisGateOS 2** a podporuje více typů připojení k intern
 ## Rychlý průvodce {#quick-start-guide}
 
 ### 1. Zapojení hardwaru {#1-hardware-setup}
-1.  **Antény:** Připojte antény LoRa, LTE a GPS **před** zapnutím zařízení, abyste ho nepoškodili.
+1.  **Antény:** Antény LoRa, LTE a GPS připojte **před** zapnutím zařízení, jinak hrozí jeho poškození.
 2.  **SIM karta:** Pokud používáte mobilní síť, vložte SIM kartu do slotu pod vodotěsným krytem.
 3.  **Montáž:** Pomocí přiložené sady namontujte bránu na stožár nebo na zeď.
 
 ### 2. Zapnutí {#2-power-on}
 * Připojte ethernetový kabel z **PoE injektoru** (součást balení) do portu **ETH** na bráně.
-* Zařízení se spustí.
+* Zařízení nastartuje.
 
 ### 3. Přístup k bráně {#3-accessing-the-gateway}
 
 K lokálnímu webovému rozhraní brány se můžete připojit jedním ze dvou způsobů:
 
 #### Režim Wi-Fi AP (výchozí) {#wifi-ap-mode-default}
-1. Připojte počítač k Wi-Fi síti se SSID: `RAK7289CV2_XXXX` (kde XXXX jsou poslední bajty MAC adresy).
-2. Heslo není vyžadováno.
+1. Připojte počítač k síti Wi-Fi se SSID `RAK7289CV2_XXXX` (XXXX jsou poslední bajty MAC adresy).
+2. Heslo není potřeba.
 3. Otevřete webový prohlížeč a přejděte na `192.168.230.1`.
 
 #### Režim Ethernet {#ethernet-mode}
@@ -78,36 +78,36 @@ K lokálnímu webovému rozhraní brány se můžete připojit jedním ze dvou z
 
 ### 4. Nastavení povinného hesla {#4-setting-the-mandatory-password}
 
-Při prvním přístupu k bráně musíte nastavit heslo pro uživatele **root**. Heslo musí splňovat tato kritéria:
+Při prvním přihlášení do brány musíte nastavit heslo uživatele **root**. Heslo musí:
 
-* alespoň **12 znaků**
-* obsahuje alespoň jeden **speciální znak**
-* obsahuje alespoň jednu **číslici**
-* obsahuje alespoň jedno **písmeno latinky**
+* mít alespoň **12 znaků**
+* obsahovat alespoň jeden **speciální znak**
+* obsahovat alespoň jednu **číslici**
+* obsahovat alespoň jedno **písmeno latinky**
 
 :::tip Gateway EUI
-Po nastavení hesla budete přesměrováni na **Dashboard**, kde určíte svou zemi a region. Zkopírujte si **16znakové Gateway EUI**, které je tam zobrazené – budete ho potřebovat pro registraci na síťovém serveru.
+Po nastavení hesla vás brána přesměruje na **Dashboard**, kde zvolíte zemi a region. Zkopírujte si zobrazené **16znakové Gateway EUI**. Budete ho potřebovat při registraci na síťovém serveru.
 :::
 
 ### 5. Připojení k internetu {#5-internet-connectivity}
 
-Aby brána mohla komunikovat se síťovým serverem, potřebuje připojení k internetu. Přejděte na **Network > WAN**:
+Aby brána mohla komunikovat se síťovým serverem, potřebuje připojení k internetu. Přejděte do **Network > WAN**:
 
-* **Ethernet:** Zapojte port ETH do svého routeru; ve výchozím nastavení se používá DHCP.
-* **Wi-Fi:** Přejděte na **Wi-Fi**, zapněte rozhraní a vyhledejte svou místní síť.
+* **Ethernet:** Zapojte port ETH do routeru; brána ve výchozím stavu používá DHCP.
+* **Wi-Fi:** Přejděte na **Wi-Fi**, zapněte rozhraní a vyhledejte svou lokální síť.
 * **Mobilní síť (modely s LTE):** Pokud používáte SIM kartu, nastavte APN v sekci **Cellular**.
 
-Pokud vaše SIM karta vyžaduje PIN kód, musíte ho nastavit v konfiguraci. Přejděte na **Network → WAN → Cellular → General**, zapněte LTE Network, zadejte PIN své SIM karty do pole **PIN code** a klikněte na **Save**.
+Pokud SIM karta vyžaduje PIN, zadejte ho v nastavení. Přejděte do **Network → WAN → Cellular → General**, zapněte LTE Network, do pole **PIN code** zadejte PIN SIM karty a klikněte na **Save**.
 ![PIN kód](../../../../../../smart-devices/rakwireless/gateways/images/sim-pin.png)
-:::warning Cellular Note
-Pokud SIM kartu nepoužíváte, vypněte mobilní rozhraní, abyste zabránili zaplňování logu hlášeními `SIM_ABSENT`.
+:::warning Mobilní síť
+Pokud SIM kartu nepoužíváte, vypněte mobilní rozhraní, jinak log zahltí zprávy `SIM_ABSENT`.
 :::
 
 ---
 
 ## Konfigurace pracovních režimů {#configuring-work-modes}
 
-Brána podporuje několik pracovních režimů LoRaWAN. Přejděte na **LoRa > Configuration** a vyberte požadovaný režim:
+Brána podporuje několik pracovních režimů LoRaWAN. Přejděte do **LoRa > Configuration** a vyberte požadovaný režim:
 
 ### Basics Station (doporučeno pro TTS) {#basics-station-recommended-for-tts}
 
@@ -118,22 +118,22 @@ Chcete-li se připojit k The Things Stack, vyberte **Basics Station**:
 | **Basics Station Mode** | LNS Server |
 | **Server URL** | `wss://hardwario-com.eu1.cloud.thethings.industries` (port 8887) |
 | **Trust (CA Certificate)** | Nahrajte soubor [ISRG Root X1 .pem](https://letsencrypt.org/certs/isrgrootx1.pem) |
-| **Client Token** | Vložte svůj TTS API Key |
+| **Client Token** | Vložte svůj API klíč z TTS |
 
 ### Další dostupné pracovní režimy {#other-available-work-modes}
 
-* **Packet Forwarder:** používá se pro starší připojení Semtech UDP nebo ChirpStack MQTT.
-* **Built-in Network Server:** umožňuje bráně fungovat jako samostatný LNS (ChirpStack).
+* **Packet Forwarder:** Používá se pro starší připojení Semtech UDP nebo ChirpStack MQTT.
+* **Built-in Network Server:** Brána pak sama funguje jako samostatný LNS (ChirpStack).
 
 ---
 
-## Možnosti LoRaWAN sítě {#lorawan-network-options}
+## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách síťových serverů LoRaWAN najdete v části [**Možnosti LoRaWAN sítě**](/smart-devices/rakwireless/gateways/index#lorawan-network-options)
+Podporované platformy síťových serverů LoRaWAN popisuje část [**Možnosti sítě LoRaWAN**](/smart-devices/rakwireless/gateways/index#lorawan-network-options).
 
 ---
 
 ## Zdroje {#resources}
 
-* [Datasheet RAK7289V2](https://docs.rakwireless.com/Product-Categories/WisGate/RAK7289V2/Datasheet/)
+* [Produktový list RAK7289V2](https://docs.rakwireless.com/Product-Categories/WisGate/RAK7289V2/Datasheet/)
 * [Rychlý průvodce](https://docs.rakwireless.com/Product-Categories/WisGate/RAK7289V2/Quickstart/)

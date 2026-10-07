@@ -20,7 +20,7 @@
     "description": "The label for category 'Gateways' in sidebar 'smartDevicesSidebar'"
   },
   "sidebar.smartDevicesSidebar.category.Utility": {
-    "message": "Pomocné nástroje",
+    "message": "Pomocná zařízení",
     "description": "The label for category 'Utility' in sidebar 'smartDevicesSidebar'"
   },
   "sidebar.smartDevicesSidebar.category.Video Tutorials": {

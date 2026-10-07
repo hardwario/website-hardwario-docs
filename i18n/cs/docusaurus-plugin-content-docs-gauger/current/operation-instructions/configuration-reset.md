@@ -5,8 +5,8 @@ title: Reset konfigurace
 
 # Reset konfigurace {#configuration-reset}
 
-Někdy je potřeba vrátit konfiguraci zařízení do výchozího stavu. To lze provést kliknutím na tlačítko **Factory Reset** na kartě System ve webovém rozhraní. Tím se konfigurace resetuje a zařízení se restartuje.
+Konfiguraci zařízení můžete vrátit do výchozího stavu tlačítkem **Factory Reset** na kartě System ve webovém rozhraní. Zařízení konfiguraci obnoví a restartuje se.
 
-Druhá metoda využívá k resetu zařízení tlačítko `USER`. Při použití této metody držte tlačítko `USER` a zároveň zařízení restartujte stisknutím tlačítka `RESET`. Tlačítko `USER` držte, dokud svítí zelená LED. Když začne rychle blikat, tlačítko uvolněte. Zařízení se restartuje a konfigurace se resetuje. Pokud budete tlačítko držet dál, reset se neprovede.
+Druhý způsob využívá tlačítko `USER`: podržte ho a zároveň zařízení restartujte stisknutím tlačítka `RESET`. Tlačítko `USER` držte, dokud svítí zelená LED. Jakmile LED začne rychle blikat, tlačítko uvolněte. Zařízení se restartuje a obnoví výchozí konfiguraci. Pokud budete tlačítko držet dál, k resetu nedojde.
 
-Reset konfigurace nevynuluje hodnoty počítadel. To provedete kliknutím na tlačítko **Counter Reset** na kartě System.
+Reset konfigurace čítače nevynuluje. K tomu slouží tlačítko **Counter Reset** na kartě System.

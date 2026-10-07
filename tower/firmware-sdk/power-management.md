@@ -54,7 +54,7 @@ This signal is physically split into two parts:
 
 - Signal **VDD_OFF_IN**
   - This signal is on the **bottom side of the module (the side with the pins)** and it disconnects the power supply output of the given module.
-  - Each **power source module** (except the battery) uses **VDD_OFF_IN** from **the bottom side**, telling it to disconnect power as there is another active power source (logic ***1*** = **disconnect** power),
+  - Each **power source module** (except the battery) uses **VDD_OFF_IN** from **the bottom side**, telling it to disconnect power as there is another active power source (logic ***1*** = **disconnect** power).
 
 - Signal **VDD_OFF_OUT**
   - This signal is on the **top side of the module (the side with the sockets)** and it is chained to the **VDD_OFF_IN** signal of the module above the given one.

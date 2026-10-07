@@ -183,7 +183,7 @@ bch -H hub.local pairing --start
 
 ```
 bch pairing --stop
-bch -H hub.local pairing --start
+bch -H hub.local pairing --stop
 ```
 
 #### List paired nodes

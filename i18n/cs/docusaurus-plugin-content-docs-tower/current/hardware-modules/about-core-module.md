@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        <b>Core Module</b> je klíčovým prvkem každého <b>zařízení TOWER</b>. Obsahuje 32bitový mikrokontrolér ARM s 192 kB flash paměti a 20 kB RAM. Kromě integrovaného <b>sub-GHz rádia pro pásmo 868/915 MHz</b> je vybaven také digitálním teplotním senzorem, 3D akcelerometrem a bezpečnostním čipem.
+        <b>Core Module</b> je základem každého <b>zařízení TOWER</b>. Má 32bitový mikrokontrolér ARM se 192 kB paměti flash a 20 kB RAM. Kromě integrovaného <b>sub-GHz rádia pro pásmo 868/915 MHz</b> obsahuje také digitální teplotní senzor, 3D akcelerometr a bezpečnostní čip.
       </p>
     </div>
   </div>
@@ -63,12 +63,12 @@ Maximální proud pro **všechny GPIO dohromady je 90 mA**.
 - Bezpečnostní čip ATSHA204A (Microchip)
 - Digitální teplotní senzor TMP112 (TI)
 - 3osý akcelerometr LIS2DH12 (ST)
-- LED červené barvy
-- Tlačítka RESET a BOOT (BOOT je dostupné pro MCU)
+- Červená LED
+- Tlačítka RESET a BOOT (tlačítko BOOT je přístupné z MCU)
 - Snadné programování přes USB (bootloader DFU)
 - 10pinový konektor SWD pro debugování
-- Micro-USB pro komunikaci s hostitelem a/nebo napájení
-- 18x GPIO (kompletně volné pro aplikaci)
+- Micro-USB pro komunikaci s hostitelem nebo napájení
+- 18x GPIO (plně k dispozici aplikaci)
 - 3x UART, 2x I²C, 1x SPI, 5x ADC, 2x DAC
 - Režim hlubokého spánku: < 5 µA
 - Rozsah provozního napětí: 2,0 V až 3,6 V
@@ -76,6 +76,6 @@ Maximální proud pro **všechny GPIO dohromady je 90 mA**.
 - Mechanické rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/core-module)
+- [**E-shop**](https://www.hardwario.store/p/core-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-core)
 - [**Projekty**](https://www.hackster.io/hardwario/projects?part_id=73681)

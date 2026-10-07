@@ -10,7 +10,7 @@ This article will demonstrate how to interface I²C target devices (CHESTER is I
 
 :::caution
 
-From the Zephyr perspective, the correct way to interface I²C target devices, is to create a proper device driver following the [Zephyr device driver model](https://docs.zephyrproject.org/latest/kernel/drivers/index.html).
+From the Zephyr perspective, the correct way to interface I²C target devices is to create a proper device driver following the [Zephyr device driver model](https://docs.zephyrproject.org/latest/kernel/drivers/index.html).
 
 However, for simple proof-of-concept purposes, the following guide can be used.
 
@@ -58,7 +58,7 @@ static int read(uint8_t devaddr, uint8_t regaddr, uint8_t *regval)
 }
 ```
 
-This is an example function to write a single data byte from a specific register:
+This is an example function to write a single data byte to a specific register:
 
 ```c
 static int write(uint8_t devaddr, uint8_t regaddr, uint8_t regval)

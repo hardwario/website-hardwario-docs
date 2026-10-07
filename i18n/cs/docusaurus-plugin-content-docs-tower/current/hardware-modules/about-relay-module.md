@@ -11,10 +11,10 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        Modul <b>Relay Module</b> je vhodný pro spínání <b>málo výkonných spotřebičů</b>, např. LED pásku, chladicího ventilátoru, sirény, bzučáku, pohonu garážových dveří atd. Obsahuje <b>bistabilní (latching) relé</b>, což jej předurčuje pro bateriové aplikace, protože relé si jednoduše <b>pamatuje svůj stav</b>.
+        <b>Relay Module</b> se hodí ke spínání <b>spotřebičů s malým příkonem</b>, např. LED pásku, chladicího ventilátoru, sirény, bzučáku nebo pohonu garážových vrat. Má <b>bistabilní relé</b> (latching), a proto je vhodný pro zařízení na baterie: relé si jednoduše <b>pamatuje svůj stav</b>.
       </p>
       <p>
-        Energie je potřeba pouze během přechodového stavu. Jakmile je nastaven nový stav, <b>již není nutné napájet cívku relé</b>. Okamžik přepnutí je indikován <b>zelenou LED</b> (v softwaru označováno jako stav <b>TRUE</b>), nebo <b>červenou LED</b> (v softwaru označováno jako stav <b>FALSE</b>).
+        Energii relé spotřebuje jen při přepnutí. Jakmile se nový stav nastaví, <b>cívku relé už není nutné napájet</b>. Přepnutí signalizuje <b>zelená LED</b> (v softwaru stav <b>TRUE</b>), nebo <b>červená LED</b> (v softwaru stav <b>FALSE</b>).
       </p>
     </div>
   </div>
@@ -25,15 +25,15 @@ import Image from '@theme/IdealImage';
   - **12 V DC / 5 A**
   - **24 V DC / 2,5 A**
 - Řízení pomocí **sběrnice I²C**
-- Vhodné pro **bateriové aplikace**
-- Energie pro cívku je potřeba pouze během přechodových stavů
+- Vhodný pro **zařízení na baterie**
+- Cívka potřebuje energii jen při přepínání
 - **Červená a zelená** LED indikují napájení cívky
 - Rozsah provozního napětí: 3,0 až 3,6 V
 - Rozsah provozních teplot: -20 až 70 °C
 - Mechanické rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/relay-module)
+- [**E-shop**](https://www.hardwario.store/p/relay-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-relay)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__relay)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_relay.h)

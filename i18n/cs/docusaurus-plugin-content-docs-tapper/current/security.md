@@ -8,29 +8,29 @@ import Image from '@theme/IdealImage';
 
 # Zvýšení zabezpečení {#improving-security}
 
-Tento dokument popisuje několik kroků pro zvýšení zabezpečení vašeho zařízení TAPPER.
+Tento dokument popisuje několik kroků, kterými zvýšíte zabezpečení zařízení TAPPER.
 
 ## SSH pouze s autentizací veřejným klíčem {#ssh-with-public-key-authentication-only}
 
-Umožňuje bezpečnější a rychlejší přihlášení.
+Přihlašování je tak bezpečnější i rychlejší.
 
 ### Postup {#procedure}
 
-- Před nahráním systému na Raspberry Pi pomocí RPi Imager přejděte do [OS Customization](https://www.raspberrypi.com/documentation/computers/getting-started.html#advanced-options) a zapněte SSH pouze s autentizací veřejným klíčem.
-  - Doporučuje se SSH klíč typu EdDSA (Ed25519)
-    - Pokud žádný použitelný SSH klíč nemáte, vytvořte nový příkazem `ssh-keygen -t ed25519`
+- Než nahrajete systém na Raspberry Pi nástrojem RPi Imager, otevřete [OS Customization](https://www.raspberrypi.com/documentation/computers/getting-started.html#advanced-options) a zapněte SSH pouze s autentizací veřejným klíčem.
+  - Doporučujeme klíč SSH typu EdDSA (Ed25519)
+    - Pokud vhodný klíč SSH nemáte, vytvořte si nový příkazem `ssh-keygen -t ed25519`
 
 ## MQTT s TLS {#mqtt-with-tls}
 
-MQTT může pracovat pomocí TLS. To je doporučeno, protože zabraňuje odposlechu a neautorizovaným požadavkům.
+MQTT může komunikovat přes TLS. Doporučujeme to, protože TLS brání odposlechu a neoprávněným požadavkům.
 
 ### Postup {#procedure-1}
 
-Celé nastavení TLS je popsáno v [Nastavení MQTT TLS](/tapper/tls-setup/).
+Celé nastavení TLS popisuje stránka [Nastavení TLS pro MQTT](/tapper/tls-setup/).
 
 ## Heslo k Wi-Fi jako hash místo otevřeného textu {#wifi-passphrase-as-a-hash-instead-of-clear-text}
 
-Heslo k Wi-Fi v konfiguračním souboru může být hash vygenerovaný pomocí `wpa_psk`.
+Místo hesla k Wi-Fi můžete do konfiguračního souboru zapsat jeho hash (`psk`), který vygeneruje `wpa_passphrase`.
 
 ### Postup {#procedrue}
 
@@ -44,7 +44,7 @@ Heslo k Wi-Fi v konfiguračním souboru může být hash vygenerovaný pomocí `
           psk=e8aecc0d08936c19af0f377de39a2412c5025fce8d8140b122c33dc346ae3b10
   }
   ```
-- Zkopírujte `psk` a vložte jej do své konfigurace:
+- Zkopírujte hodnotu `psk` a vložte ji do konfigurace:
   - Příklad:
   ```yaml
   wifi:

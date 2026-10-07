@@ -4,22 +4,22 @@ title: "Jak na: Soil Sensor"
 ---
 import Image from '@theme/IdealImage';
 
-Senzor půdní vlhkosti měří vlhkost a teplotu.
+Senzor půdní vlhkosti (Soil Sensor) měří vlhkost a teplotu půdy.
 
 ## Odkazy {#references}
 - [**Modul SDK pro Soil Sensor**](https://sdk.hardwario.com/group__twr__soil__sensor.html)
-- [**Příklad v GitHub repozitáři**](https://github.com/hardwario/twr-radio-soil-sensor/blob/main/src/application.c)
+- [**Příklad v repozitáři na GitHubu**](https://github.com/hardwario/twr-radio-soil-sensor/blob/main/src/application.c)
 
 :::info
 
-Toto je nejjednodušší příklad s jedním senzorem připojeným k [**Sensor Module**](../../hardware-modules/about-soil-sensor.md).
+Toto je nejjednodušší příklad s jedním senzorem připojeným k modulu [**Sensor Module**](../../hardware-modules/about-soil-sensor.md).
 
 :::
 
 <details>
 <summary>
 <b>
-Příklad kódu pro výpis hodnot jednoho senzoru do konzole
+Příklad kódu: výpis hodnot jednoho senzoru do konzole
 </b>
 </summary>
 <p>
@@ -59,7 +59,7 @@ Příklad kódu pro výpis hodnot jednoho senzoru do konzole
 
 :::info
 
-Když připojíte **více senzorů**, je potřeba je inicializovat pomocí `twr_soil_sensor_init_multiple`. V **event handleru** pak v parametru callbacku dostanete `device_address`, nebo můžete získat index senzoru voláním `twr_soil_sensor_get_index_by_device_address()`.
+Když připojíte **více senzorů**, inicializujte je funkcí `twr_soil_sensor_init_multiple`. V **obslužné funkci události** pak dostanete v parametru `device_address`; index senzoru můžete zjistit také voláním `twr_soil_sensor_get_index_by_device_address()`.
 
 Příklad níže ukazuje, jak pracovat s více senzory.
 
@@ -68,7 +68,7 @@ Příklad níže ukazuje, jak pracovat s více senzory.
 <details>
 <summary>
 <b>
-Příklad kódu pro více připojených senzorů
+Příklad kódu: více připojených senzorů
 </b>
 </summary>
 <p>

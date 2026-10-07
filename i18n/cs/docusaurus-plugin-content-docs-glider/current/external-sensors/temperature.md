@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 GLIDER podporuje až **8 digitálních teploměrů DS18B20** připojených přes sběrnici **1-Wire**. Senzory se připojují k jednomu ze dvou portů 1-Wire na svorkovnici zařízení GLIDER (**W1** nebo **W2**).
 
-Tato stránka vysvětluje, jak sondy zapojit, jak je vyhledat a jak odečítat teploty.
+Tato stránka popisuje, jak sondy zapojit, vyhledat a jak z nich číst teplotu.
 
 :::tip
 Konfiguraci alarmů svázaných s těmito senzory najdete v části [**Konfigurace → Alarmy**](../configuration.md#alarms).
@@ -16,14 +16,14 @@ Konfiguraci alarmů svázaných s těmito senzory najdete v části [**Konfigura
 
 ## Hardware {#hardware}
 
-GLIDER vyvádí sběrnici 1-Wire přes dva fyzické porty, které jsou elektricky rovnocenné a sdílejí stejný interní 1-Wire master Maxim DS2484:
+GLIDER vyvádí sběrnici 1-Wire na dva fyzické porty. Oba jsou elektricky rovnocenné a obsluhuje je stejný interní master 1-Wire Maxim DS2484:
 
 | Port | Napájení | Data | Zem |
 | :--- | :--- | :--- | :--- |
 | **W1** | `W1V` | `W1D` | `W1G` |
 | **W2** | `W2V` | `W2D` | `W2G` |
 
-Standardní kabelové sestavy HARDWARIO DS18B20 mají tři vodiče:
+Standardní kabelové sondy DS18B20 od HARDWARIO mají tři vodiče:
 
 | Barva vodiče | Funkce | Připojit k |
 | :--- | :--- | :--- |
@@ -32,7 +32,7 @@ Standardní kabelové sestavy HARDWARIO DS18B20 mají tři vodiče:
 | ⚫ **Černý** | GND | `W1G` nebo `W2G` |
 
 :::tip
-Oba porty sdílejí uvnitř zařízení GLIDER stejnou logickou sběrnici 1-Wire. Osm logických „slotů“, které firmware sleduje, je nezávislých na tom, do kterého fyzického portu je sonda zapojena. Vazba se dělá podle kódu ROM, ne podle portu.
+Oba porty sdílejí uvnitř zařízení GLIDER stejnou logickou sběrnici 1-Wire. Osm logických „slotů“, které firmware spravuje, nezávisí na tom, do kterého fyzického portu sondu zapojíte. Sondy se ke slotům přiřazují podle kódu ROM, ne podle portu.
 :::
 
 ## Krok 1 – Zapojení sond {#step-1---wire-the-probes}
@@ -41,11 +41,11 @@ Oba porty sdílejí uvnitř zařízení GLIDER stejnou logickou sběrnici 1-Wire
 2. Odizolujte tři vodiče každého kabelu DS18B20 a připojte je k `W1` nebo `W2` podle tabulky výše.
 3. Zařízení znovu zapněte.
 
-Sondy můžete libovolně kombinovat mezi `W1` a `W2`, protože oba porty obsluhují stejnou sběrnici. Osm slotů je definováno softwarově a váže se na **sériové číslo ROM** každého DS18B20.
+Sondy můžete mezi `W1` a `W2` libovolně rozdělit, protože oba porty obsluhují stejnou sběrnici. Osm slotů je čistě softwarových a každý se váže na **sériové číslo ROM** jednoho senzoru DS18B20.
 
 ## Krok 2 – Prohledání sběrnice {#step-2---scan-the-bus}
 
-Po zapnutí zařízení požádejte firmware, aby vyhledal připojené senzory.
+Po zapnutí nechte firmware vyhledat připojené senzory.
 
 #### Přes konzoli RTT {#via-rtt-console}
 
@@ -75,15 +75,15 @@ Found 1 sensor(s):
 Save changes? [y/N]
 ```
 
-Poznámka `<- NEW` označuje kód ROM, který firmware dosud neviděl. Stiskněte **`y`** + **Enter**, čímž se nové senzory přiřadí k navrženým slotům a zařízení se restartuje.
+Značka `<- NEW` označuje kód ROM, který firmware dosud neviděl. Stiskem **`y`** + **Enter** nové senzory přiřadíte k navrženým slotům a zařízení se restartuje.
 
-Chcete-li potvrzovací krok přeskočit (hodí se pro skripty nebo výrobní zprovoznění):
+Potvrzení můžete přeskočit (hodí se pro skripty nebo zprovoznění ve výrobě):
 
 ```text
 therm scan --save
 ```
 
-Tím se vazba uloží a zařízení se restartuje v jednom kroku.
+Příkaz senzory přiřadí a zařízení restartuje v jednom kroku.
 
 Pokud chcete zároveň **smazat** sloty, jejichž kódy ROM už na sběrnici nejsou:
 
@@ -91,15 +91,15 @@ Pokud chcete zároveň **smazat** sloty, jejichž kódy ROM už na sběrnici nej
 therm scan --clear-missing
 ```
 
-## Krok 3 – Odečtení teploty {#step-3---read-a-temperature}
+## Krok 3 – Čtení teploty {#step-3---read-a-temperature}
 
-Když je senzor přiřazen ke slotu, odečtěte jeho teplotu příkazem:
+Teplotu senzoru přiřazeného ke slotu přečtete příkazem:
 
 ```text
 therm read 1
 ```
 
-(místo `1` zadejte číslo slotu 1–8). Chcete-li odečíst všechny obsazené sloty najednou:
+(místo `1` zadejte číslo slotu 1–8). Všechny obsazené sloty najednou přečtete příkazem:
 
 ```text
 therm readall
@@ -112,7 +112,7 @@ Slot 1: 23.50 °C
 Slot 2: 24.62 °C
 ```
 
-Teplota se hlásí ve **°C s rozlišením 0,01 °C**. Neúspěšné odečty (odpojená sonda, chyba CRC, …) vracejí `NaN` a do cloudového payloadu se posílají jako `null`.
+Teplota se udává ve **°C s rozlišením 0,01 °C**. Neúspěšné čtení (odpojená sonda, chyba CRC, …) vrátí `NaN` a do payloadu pro cloud se odešle jako `null`.
 
 ## Krok 4 – Kontrola stavu slotů {#step-4---inspect-slot-state}
 
@@ -120,17 +120,17 @@ Teplota se hlásí ve **°C s rozlišením 0,01 °C**. Neúspěšné odečty (od
 therm state
 ```
 
-Zobrazí aktuální vazby slotů, poslední naměřenou teplotu a čítače odečtů a chyb.
+Zobrazí aktuální přiřazení slotů, poslední naměřenou teplotu a čítače čtení a chyb.
 
 ## Ruční přiřazení senzoru ke slotu {#manually-binding-a-sensor-to-a-slot}
 
-Pokud znáte kód ROM sondy (například z etikety), můžete ji přiřadit přímo bez vyhledávání:
+Pokud znáte kód ROM sondy (například ze štítku), můžete ji přiřadit přímo bez vyhledávání:
 
 ```text
 therm config 1 28ff12b05316031d
 ```
 
-…a poté uložit:
+…a pak konfiguraci uložit:
 
 ```text
 AT&W
@@ -148,13 +148,13 @@ thermometers:
  temperature: 24.62
 ```
 
-Prázdné sloty jsou z payloadu **vynechány** (neobjeví se jako `null`). Neúspěšný odečet se posílá jako `temperature: null`.
+Prázdné sloty se do payloadu **nezahrnují** (neobjeví se ani jako `null`). Neúspěšné čtení se odešle jako `temperature: null`.
 
-Kompletní schéma najdete v části [**Payload CBOR**](../payload.md).
+Úplné schéma najdete na stránce [**CBOR payload**](../payload.md).
 
 ## Kombinace s alarmy {#combining-with-alarms}
 
-Každý slot teploměru lze svázat s jedním nebo více **pravidly alarmu**, která se aktivují, když teplota překročí nastavitelnou mez:
+Každý slot teploměru lze svázat s jedním nebo více **pravidly alarmu**, která se aktivují, když teplota překročí nastavitelnou prahovou hodnotu:
 
 ```text
 alarm config 1-enabled true
@@ -164,4 +164,4 @@ alarm config 1-hysteresis 5 # release at 30 − 5 = 25 °C
 AT&W
 ```
 
-Kompletní přehled alarmů najdete v části [**Konfigurace**](../configuration.md) a na stránce [**Příkazy shellu**](../commands/shell-commands.md).
+Úplný popis alarmů najdete na stránkách [**Konfigurace**](../configuration.md) a [**Příkazy shellu**](../commands/shell-commands.md).

@@ -56,7 +56,7 @@ flowchart TB
 | **MAC** (base64) | CHESTER LTE v2 | 5003 | Claim token | 64bitový MAC s klíčem claim token | Ne | CHESTER (nRF9160) |
 | **DTLS** | `flap-dtls` | 5005 | Předsdílený klíč (PSK) | DTLS 1.2, AES-128-CCM-8 | Ano, AES-128-CCM-8 | Zařízení s nRF9151 |
 
-Tajemství obálky, tedy claim token nebo PSK, ověřuje zařízení a opravňuje ho vystupovat jako zařízení registrované v HARDWARIO Cloud. V obálce MAC je claim token zároveň klíčem MAC, takže stejné tajemství chrání i integritu každého paketu.
+Tajemství obálky, tedy claim token nebo PSK, ověřuje zařízení a opravňuje ho vystupovat jako zařízení zaregistrované v HARDWARIO Cloud. V obálce MAC je claim token zároveň klíčem MAC, takže stejné tajemství chrání i integritu každého paketu.
 
 Pakety FLAP, zprávy i stav zařízení v Cloudu jsou stejné bez ohledu na obálku. Adresa serveru závisí na SIM kartě a APN, viz [**Nastavení SIM karty**](/chester/platform-connectivity/cellular-networks/sim-card-setup).
 

@@ -1,12 +1,12 @@
 ---
 slug: hardwario-tower-console
-title:  TOWER Console
+title: Konzole TOWER
 ---
 import Image from '@theme/IdealImage';
 
 :::info
 
-Tento návod předpokládá, že máte spuštěné Visual Studio Code s nainstalovaným rozšířením HARDWARIO TOWER. Pokud ne, navštivte prosím [**O HARDWARIO Code**](./about-hardwario-code.md).
+Tento návod předpokládá, že máte spuštěné Visual Studio Code s nainstalovaným rozšířením HARDWARIO TOWER. Pokud ne, přečtěte si kapitolu [**O aplikaci HARDWARIO Code**](./about-hardwario-code.md).
 
 :::
 
@@ -19,13 +19,13 @@ V této konzoli se budou zobrazovat logy z připojeného zařízení.
 
 :::info
 
-Aby firmware do této konzole něco vypisoval, musíte do něj zahrnout nějaké logovací zprávy. Více si o tom můžete přečíst v [**kapitole Ladění**](./firmware-debugging.md).
+Aby firmware do konzole něco vypisoval, musí obsahovat logovací zprávy. Více se dozvíte v [**kapitole Debugování**](./firmware-debugging.md).
 
 :::
 
 ## Ovládání {#controls}
 
-Pokud otevřete konzoli HARDWARIO TOWER, najdete na pravé straně několik tlačítek. Uvádíme je zleva doprava
+V otevřené konzoli HARDWARIO TOWER najdete vpravo několik tlačítek. Popisujeme je zleva doprava:
 
 <div class="container">
   <div class="row">
@@ -34,7 +34,7 @@ Pokud otevřete konzoli HARDWARIO TOWER, najdete na pravé straně několik tla�
       <div><Image img={require('../../../../../tower/firmware-development/images/console-commands-disconnected.png')} alt="Ikony na liště konzole TOWER dostupné, když není připojeno žádné zařízení" /></div>
     </div>
     <div class="col col--3">
-      <h4>Připojené zařízení TOWER</h4>
+      <h4>Připojeno zařízení TOWER</h4>
       <div><Image img={require('../../../../../tower/firmware-development/images/console-commands-connected.png')} alt="Ikony na liště konzole TOWER dostupné s připojeným zařízením TOWER, včetně restartu zařízení" /></div>
     </div>
   </div>
@@ -43,9 +43,9 @@ Pokud otevřete konzoli HARDWARIO TOWER, najdete na pravé straně několik tla�
 
 - **Clear console**: vymaže všechny přijaté logovací zprávy.
 - **Connect/Disconnect console**: připojí konzoli k zařízení vybranému ve spodním panelu. Pokud je konzole již připojená, odpojí ji. Toto tlačítko nemusíte používat, pokud používáte příkazy rozšíření [**Build + Flash (Console)**](./hardwario-extension-tutorial.md#build--flash-console) nebo [**Attach console**](./hardwario-extension-tutorial.md#attach-console).
-- **Restart device**: tento příkaz restartuje připojené zařízení a spustí program na zařízení od začátku.
-- **Scroll to bottom**: ve výchozím nastavení konzole automaticky roluje spolu se zprávami. Pokud odrolujete, abyste si prohlédli nějakou zprávu, automatické rolování se vypne. Pro jeho opětovné spuštění stačí kliknout na toto tlačítko.
+- **Restart device**: restartuje připojené zařízení, takže program na něm poběží znovu od začátku.
+- **Scroll to bottom**: ve výchozím nastavení konzole automaticky roluje spolu se zprávami. Když se posunete k nějaké starší zprávě, automatické rolování se vypne. Znovu ho zapnete tímto tlačítkem.
 - **Save Log**: uloží zobrazený log.
-- **Allow Input**: umožní odesílat vstup do zařízení. [**Použitelné pro AT příkazy**](../radio-communication/lora-at-commands.md).
+- **Allow Input**: zapne odesílání vstupu do zařízení. [**Hodí se pro příkazy AT**](../radio-communication/lora-at-commands.md).
 - **Maximize window**: zvětší konzoli. Jde o standardní tlačítko Visual Studio Code dostupné na většině panelů.
 - **Close panel**: zavře celý panel, nejen konzoli HARDWARIO TOWER.

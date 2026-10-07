@@ -11,11 +11,11 @@ import TabItem from '@theme/TabItem';
 
 # Seznam změn FIBER {#fiber-changelog}
 
-Tato stránka zaznamenává všechny podstatné změny na platformě FIBER, včetně **firmwaru** a **hardwaru**. Pomocí záložek níže můžete filtrovat podle kategorie změn.
+Na této stránce najdete všechny významné změny platformy FIBER včetně **firmwaru** a **hardwaru**. Záložkami níže můžete změny filtrovat podle kategorie.
 
 :::info
 
-Zařízení FIBER je založeno na **Raspberry Pi Compute Module 4** s operačním systémem Linux. Aktualizace firmwaru a softwaru jsou spravovány interním procesem vydávání ve firmě HARDWARIO. Pro FIBER v současnosti neexistuje veřejný repozitář firmwaru.
+Zařízení FIBER je postavené na modulu **Raspberry Pi Compute Module 4** se systémem Linux. Aktualizace firmwaru a softwaru vydává HARDWARIO interním procesem. Veřejný repozitář firmwaru FIBER zatím neexistuje.
 
 :::
 
@@ -28,7 +28,7 @@ Zařízení FIBER je založeno na **Raspberry Pi Compute Module 4** s operační
 
 :::info
 
-Dosud nebyly zaznamenány žádné změny. Aktualizace se zde objeví, jakmile budou vydány nové změny firmwaru nebo hardwaru.
+Zatím nebyly zaznamenány žádné změny. Objeví se zde, jakmile vyjdou nové verze firmwaru nebo změny hardwaru.
 
 :::
 
@@ -39,7 +39,7 @@ Dosud nebyly zaznamenány žádné změny. Aktualizace se zde objeví, jakmile b
 
 :::info
 
-Dosud nebyly zaznamenány žádné hardwarové revize.
+Zatím nebyly zaznamenány žádné revize hardwaru.
 
 :::
 

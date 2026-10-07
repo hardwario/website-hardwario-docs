@@ -6,22 +6,22 @@ import Image from '@theme/IdealImage';
 
 # Vodafone SIM EU28+2 {#vodafone-sim-eu282}
 
-Tato tabulka platí pro SIM kartu Vodafone. Sloupec `Operátor` uvádí, kterého roamingového partnera Vodafone v dané oblasti využívá.
+Tato tabulka platí pro SIM kartu Vodafone. Sloupec `Operátor` uvádí, kterého roamingového partnera Vodafone v dané oblasti používá.
 
 :::caution
 
-Tabulka níže platí pro SIM karty poskytované společností **HARDWARIO**. Pokud jsou SIM karty získány odjinud, nemůžeme platnost údajů zaručit.
+Tabulka platí pro SIM karty, které dodává **HARDWARIO**. U SIM karet z jiných zdrojů nemůžeme správnost údajů zaručit.
 
 :::
 
 :::warning Sdílené sítě a měnící se roamingoví partneři
 
-Vodafone stále častěji směruje provoz přes **sdílené sítě** a roamingoví partneři se v čase mění. Je třeba mít na paměti dva důsledky:
+Vodafone stále častěji směruje provoz přes **sdílené sítě** a roamingoví partneři se časem mění. Má to dva důsledky:
 
-* Kombinace, která dnes funguje, může přestat fungovat bez jakékoli změny na zařízení. Pokud se dříve funkční nasazení přestane registrovat, tato tabulka není první místo, kde hledat. Proveďte na místě [**skenování sítí**](diagnostics.md#list-available-networks) a zjistěte, kteří operátoři jsou skutečně dostupní.
-* Tato tabulka **není vyčerpávajícím seznamem zemí, kde SIM karta funguje**. Zařízení se úspěšně zaregistrovala i v zemích, které zde nejsou uvedeny. Chybějící země znamená, že jsme ji nezdokumentovali, ne že SIM karta nebude fungovat.
+* Kombinace, která dnes funguje, může přestat fungovat, aniž by se na zařízení cokoli změnilo. Pokud se dříve funkční zařízení přestane registrovat, nehledejte příčinu nejdřív v této tabulce. Udělejte na místě [**sken sítí**](diagnostics.md#list-available-networks) a zjistěte, kteří operátoři jsou skutečně dostupní.
+* Tato tabulka **není vyčerpávajícím seznamem zemí, kde SIM karta funguje**. Zařízení se úspěšně zaregistrovala i v zemích, které tu nejsou uvedené. Chybějící země znamená, že jsme ji nezdokumentovali, ne že SIM karta nebude fungovat.
 
-Berte hodnoty níže jako referenční nastavení, o kterých víme, že fungují, nikoli jako garanci pokrytí.
+Hodnoty níže berte jako ověřená referenční nastavení, ne jako záruku pokrytí.
 
 :::
 

@@ -6,23 +6,23 @@ import Image from '@theme/IdealImage';
 
 # Instalace na Windows {#installation-on-windows}
 
-Následující článek vás provede instalací **CHESTER SDK** na systému **Windows**. Tento návod byl otestován na **Windows verze 10 a 11**.
+Tento článek vás provede instalací **CHESTER SDK** v systému **Windows**. Postup je otestovaný na **Windows 10 a 11**.
 
 :::caution
 
-Než začnete, ujistěte se, že splňujete požadavky v článku [**Požadavky**](./requirements.md).
+Než začnete, ověřte, že splňujete vše, co uvádí článek [**Požadavky**](./requirements.md).
 
 :::
 
-## Kroky instalace {#installation-steps}
+## Postup instalace {#installation-steps}
 
-Kroky instalace jsou rozděleny do několika sekcí. Na konci budete schopni sestavit ukázku `blinky` z **CHESTER SDK**.
+Instalace je rozdělená do několika částí. Na konci sestavíte ukázku `blinky` z **CHESTER SDK**.
 
 ### Instalace Pythonu {#install-python}
 
 :::tip
 
-Tento krok můžete přeskočit, pokud už máte **Python** v systému nainstalovaný.
+Pokud už máte v systému nainstalovaný **Python**, tento krok přeskočte.
 
 :::
 
@@ -30,7 +30,7 @@ Stáhněte si nejnovější stabilní instalátor z [**tohoto odkazu**](https://
 
 :::caution
 
-Zajistěte, aby instalátor pro Windows mohl upravit proměnnou `PATH`, aby byl spustitelný soubor **Python** dostupný odkudkoliv.
+Povolte instalátoru úpravu proměnné `PATH`, aby šel **Python** spustit z libovolného umístění.
 
 :::
 
@@ -38,7 +38,7 @@ Zajistěte, aby instalátor pro Windows mohl upravit proměnnou `PATH`, aby byl 
 
 :::tip
 
-Tento krok můžete přeskočit, pokud už máte **Chocolatey** v systému nainstalovaný.
+Pokud už máte v systému nainstalovaný **Chocolatey**, tento krok přeskočte.
 
 :::
 
@@ -46,7 +46,7 @@ Tento krok můžete přeskočit, pokud už máte **Chocolatey** v systému nains
 
    :::info
 
-   **Windows PowerShell** můžete rychle spustit jako administrátor z vyhledávacího pole **Windows Search**. Do vyhledávacího pole napište `Windows PowerShell`, klikněte pravým tlačítkem na aplikaci **Windows PowerShell** ve výsledcích hledání a v nabídce zvolte **Spustit jako správce**.
+   **Windows PowerShell** rychle spustíte jako správce přes vyhledávání **Windows Search**: napište `Windows PowerShell`, ve výsledcích hledání klikněte pravým tlačítkem na aplikaci **Windows PowerShell** a v nabídce zvolte **Spustit jako správce**.
 
    :::
 
@@ -74,7 +74,7 @@ Tento krok můžete přeskočit, pokud už máte **Chocolatey** v systému nains
    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
    ```
 
-1. Počkejte několik sekund, než se předchozí příkaz dokončí.
+1. Počkejte několik sekund, než příkaz doběhne.
 
 1. Pokud nevidíte žádné chyby, můžete **Chocolatey** začít používat.
 
@@ -82,7 +82,7 @@ Tento krok můžete přeskočit, pokud už máte **Chocolatey** v systému nains
 
    :::caution
 
-   Je lepší ji zavřít nyní, i když ji v další sekci znovu otevřeme. Některé důležité změny se projeví až v nové relaci aplikace.
+   Aplikaci zavřete hned teď, i když ji v další části znovu otevřete: některé důležité změny se projeví až po jejím novém spuštění.
 
    :::
 
@@ -92,7 +92,7 @@ Tento krok můžete přeskočit, pokud už máte **Chocolatey** v systému nains
 
    :::info
 
-   **Windows PowerShell** můžete rychle spustit jako administrátor z vyhledávacího pole **Windows Search**. Do vyhledávacího pole napište `Windows PowerShell`, klikněte pravým tlačítkem na aplikaci **Windows PowerShell** ve výsledcích hledání a v nabídce zvolte **Spustit jako správce**.
+   **Windows PowerShell** rychle spustíte jako správce přes vyhledávání **Windows Search**: napište `Windows PowerShell`, ve výsledcích hledání klikněte pravým tlačítkem na aplikaci **Windows PowerShell** a v nabídce zvolte **Spustit jako správce**.
 
    :::
 
@@ -124,9 +124,9 @@ Zavřete předchozí PowerShell a otevřete nový s uživatelskými právy. **Ne
 
 :::
 
-Nyní byste měli být ve svém domovském adresáři. Následující kroky ale můžete provádět i v jiném adresáři, kde chcete mít projekt.
+Teď byste měli být ve svém domovském adresáři. Další kroky ale můžete dělat i v jiném adresáři, kde chcete mít projekt.
 
-Nepoužívejte složku, která má kdekoliv v cestě mezery.
+Cesta ke složce nesmí nikde obsahovat mezery.
 
 1. Otevřete aplikaci **Windows PowerShell** s **uživatelskými** právy.
 
@@ -144,13 +144,13 @@ Nepoužívejte složku, která má kdekoliv v cestě mezery.
 
    :::tip
 
-   Změňte parametr `chester-app` na libovolný požadovaný název adresáře vašeho projektu.
+   Místo `chester-app` můžete adresář projektu pojmenovat libovolně.
 
    :::
 
    :::danger
 
-   Na platformě Windows musíte použít cestu k adresáři bez jakýchkoliv mezer. V cestě rovněž ponechte pouze ASCII písmena a číslice. Jinak můžete narazit na problémy s toolchainem.
+   Ve Windows nesmí cesta k adresáři obsahovat žádné mezery a smí obsahovat jen písmena a číslice ASCII. Jinak můžete narazit na problémy s toolchainem.
 
    :::
 
@@ -160,13 +160,13 @@ Nepoužívejte složku, která má kdekoliv v cestě mezery.
    cd chester-app
    ```
 
-1. Inicializujte virtuální prostředí **Python**:
+1. Vytvořte virtuální prostředí pro **Python**:
 
    ```
    python -m venv .venv
    ```
 
-1. Aktivujte virtuální prostředí **Python**:
+1. Aktivujte virtuální prostředí pro **Python**:
 
    ```
    .\.venv\Scripts\Activate.ps1
@@ -174,7 +174,7 @@ Nepoužívejte složku, která má kdekoliv v cestě mezery.
 
    :::caution
 
-   Když zavřete shell (nebo textový editor s integrovaným terminálem), musíte virtuální prostředí Pythonu znovu aktivovat. Zavolejte tento příkaz (použitý v postupu výše): `.\.venv\Scripts\Activate.ps1`. Do budoucna můžete mít různé pracovní prostory **West** s odlišnými verzemi balíčků **Python** a díky konceptu virtuálního prostředí nebudou trpět konflikty verzí.
+   Po zavření shellu (nebo textového editoru s integrovaným terminálem) musíte virtuální prostředí Pythonu znovu aktivovat příkazem z postupu výše: `.\.venv\Scripts\Activate.ps1`. Časem můžete mít několik pracovních prostorů **West** s různými verzemi balíčků pro **Python**; díky virtuálním prostředím mezi nimi nevzniknou konflikty verzí.
 
    :::
 
@@ -190,7 +190,7 @@ Nepoužívejte složku, která má kdekoliv v cestě mezery.
    pip install west
    ```
 
-1. Inicializujte pracovní prostor **West** tam, kde chcete začít svůj projekt:
+1. Inicializujte pracovní prostor **West** ve složce, kde chcete projekt založit:
 
    ```
    west init -m https://github.com/hardwario/chester-skeleton.git --manifest-rev main
@@ -208,7 +208,7 @@ Nepoužívejte složku, která má kdekoliv v cestě mezery.
    west update
    ```
 
-1. Nainstalujte závislosti **Python**:
+1. Nainstalujte závislosti pro **Python**:
 
    ```
    west packages pip --install
@@ -226,15 +226,15 @@ Nepoužívejte složku, která má kdekoliv v cestě mezery.
    west sdk install -t arm-zephyr-eabi
    ```
 
-## Testovací sestavení a nahrání {#test-build-and-flash}
+## Testovací sestavení a nahrání firmwaru {#test-build-and-flash}
 
-1. Přejděte do adresáře ukázky `blinky`:
+1. Přejděte do adresáře s ukázkou `blinky`:
 
    ```
    cd chester/samples/blinky
    ```
 
-1. Ověřte, že ukázku dokážete sestavit:
+1. Zkontrolujte, že ukázku dokážete sestavit:
 
    ```
    west build
@@ -249,7 +249,7 @@ Nepoužívejte složku, která má kdekoliv v cestě mezery.
         IDT_LIST:          0 GB         2 KB      0.00%
    ```
 
-1. Pokud je vaše zařízení CHESTER APP/BLE [**připojeno**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) k J-Link, jsou nainstalovány [**ovladače**](/chester/developer-tools/segger-j-link/) a je [**zapnuté napájení**](../developer-tools/power-profiler-kit-ii.md#basic-usage), můžete zkompilovaný kód blinky nahrát příkazem
+1. Pokud je port APP/BLE zařízení CHESTER [**připojený**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) k programátoru J-Link, [**ovladače**](/chester/developer-tools/segger-j-link/) jsou nainstalované a [**napájení je zapnuté**](../developer-tools/power-profiler-kit-ii.md#basic-usage), nahrajete zkompilovanou ukázku blinky příkazem:
 
    ```
    west flash

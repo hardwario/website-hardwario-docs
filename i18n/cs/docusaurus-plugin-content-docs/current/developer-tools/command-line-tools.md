@@ -13,20 +13,20 @@ Pokud používáte **Firmware SDK**, není potřeba tento nástroj instalovat zv
 
 :::
 
-Nástroj HARDWARIO pro příkazovou řádku umožňuje:
+S nástrojem HARDWARIO pro příkazovou řádku můžete:
 
-- **Nahrát APP/BLE** aplikační firmware (nRF52)
-- Zobrazit interaktivní terminál pro **konfiguraci** a **debugování**
-- Přístup k **Product Information Block** (PIB) v UICR flash paměti, který obsahuje **HARDWARIO Serial Number** (HSN) a další parametry
+- **Nahrát aplikační firmware APP/BLE** (nRF52)
+- Zobrazit interaktivní terminál pro **konfiguraci** a **ladění**
+- Přistupovat k bloku **Product Information Block** (PIB) v paměti flash UICR, který obsahuje **HARDWARIO Serial Number** (HSN) a další parametry
 - Aktualizovat firmware modemu (nRF9160)
 
 ## Instalace Pythonu {#install-python}
 
-**HARDWARIO CLI** je nástroj v **Pythonu 3**. Nainstalujte Python podle níže uvedených kroků pro váš operační systém.
+**HARDWARIO CLI** je nástroj napsaný v **Pythonu 3**. Python nainstalujte podle postupu pro svůj operační systém.
 
-- **Ubuntu**: Python 3 by již měl být ve vašem OS nainstalován.
+- **Ubuntu**: Python 3 už by měl být v systému nainstalovaný.
 
-- **macOS**: Postupujte podle kapitoly [Instalace balíčků](firmware-sdk/../../firmware-sdk/installation-on-macos.md#install-package-manager) a nainstalujte Homebrew. Poté spusťte `brew install python3`.
+- **macOS**: Postupujte podle kapitoly [Instalace správce balíčků](firmware-sdk/../../firmware-sdk/installation-on-macos.md#install-package-manager) a nainstalujte Homebrew. Poté spusťte `brew install python3`.
 
 - **Windows**: Postupujte podle kapitoly [Instalace Pythonu](firmware-sdk/../../firmware-sdk/installation-on-windows.md#install-python).
 
@@ -34,13 +34,13 @@ Nástroj HARDWARIO pro příkazovou řádku umožňuje:
 
 :::caution
 
-Důrazně doporučujeme použít virtuální prostředí Pythonu, jak je vysvětleno v článcích o instalaci pro [Ubuntu](../firmware-sdk/installation-on-ubuntu.md), [macOS](../firmware-sdk/installation-on-macos.md) a [Windows](../firmware-sdk/installation-on-windows.md). Pomůže to zabránit konfliktům se závislostmi jiného balíčku.
+Důrazně doporučujeme virtuální prostředí Pythonu, jak ho popisují návody k instalaci pro [Ubuntu](../firmware-sdk/installation-on-ubuntu.md), [macOS](../firmware-sdk/installation-on-macos.md) a [Windows](../firmware-sdk/installation-on-windows.md). Předejdete tak konfliktům se závislostmi jiných balíčků.
 
-Pokud však Python používáte/instalujete pouze pro HARDWARIO CLI, ke konfliktům balíčků Pythonu by dojít nemělo.
+Pokud ale Python používáte jen kvůli HARDWARIO CLI, ke konfliktům balíčků by dojít nemělo.
 
 :::
 
-HARDWARIO CLI nainstalujete zadáním následujícího příkazu v terminálu:
+HARDWARIO CLI nainstalujete tímto příkazem v terminálu:
 
 ```
 pip install hardwario
@@ -52,7 +52,7 @@ Po instalaci zkuste spustit následující příkaz:
 hardwario --version
 ```
 
-měli byste dostat podobnou odpověď:
+Odpověď by měla vypadat podobně:
 
 ```
 hardwario.chester v1.23.0
@@ -62,22 +62,22 @@ hardwario.common v1.7.2
 
 ## Aplikační firmware APP/BLE {#appble-application-firmware}
 
-Připojte J-Link k [portu APP SWD](segger-j-link.md#segger-j-link-to-app-port-connection).
+Připojte programátor J-Link k [portu APP SWD](segger-j-link.md#segger-j-link-to-app-port-connection).
 
-V této kapitole používáme příkazy `hardwario chester app`. Když zadáte předchozí příkaz, nástroj vám zobrazí všechny možné příkazy, takže si můžete prozkoumat dostupné volby.
+V této kapitole používáme příkazy `hardwario chester app`. Když zadáte samotný tento příkaz, nástroj vypíše všechny dostupné příkazy a můžete si projít jejich možnosti.
 
 ### Interaktivní konzole {#interactive-console}
 
 Interaktivní terminál otevřete příkazem `hardwario chester app console`.
 
-### Nahrání obrazu {#image-flashing}
+### Nahrání firmwaru {#image-flashing}
 
 Firmware nahrajete příkazem `hardwario chester app flash <parameter>`.
 
 Parametr `<parameter>` může být:
 
 - Soubor **BIN** nebo **HEX**.
-- Unikátní ID, které vám bylo zasláno e-mailem nebo z našich [firmwarů katalogových aplikací](../catalog-applications/index.md#application-firmware). Má tento formát: `34677881d57f4b0eb85507f176627bee`.
+- Unikátní ID, které jste dostali e-mailem nebo najdete u [firmwaru katalogových aplikací](../catalog-applications/index.md#application-firmware). Má tento formát: `34677881d57f4b0eb85507f176627bee`.
 
 ### Reset procesoru {#processor-reset}
 
@@ -85,7 +85,7 @@ Firmware resetujete příkazem `hardwario chester app reset`.
 
 ### Product Information Block {#product-information-block}
 
-PIB je samostatný blok UICR flash paměti v NRF52, který obsahuje výrobně naprogramované informace o zařízení.
+PIB je samostatný blok paměti flash UICR v čipu nRF52, který obsahuje informace o zařízení zapsané ve výrobě.
 
 Data PIB přečtete příkazem `hardwario chester app pib read`.
 
@@ -99,25 +99,25 @@ Claim token: 98ae432aa12ea82458ed04b4816bf225
 BLE passkey: 275889
 ```
 
-Můžete také použít příkaz `write` v případě, že PIB omylem smažete. Nástroj se vás zeptá na každý parametr. Původní parametry najdete v poslední **JSON** zprávě v **HARDWARIO Cloud**.
+Pokud PIB omylem smažete, obnovíte ho příkazem `write`. Nástroj se vás postupně zeptá na všechny parametry. Původní hodnoty najdete v poslední zprávě **JSON** v **HARDWARIO Cloud**.
 
-## Firmware LTE modemu {#lte-modem-firmware}
+## Firmware modemu LTE {#lte-modem-firmware}
 
-Připojte J-Link k [portu LTE SWD](segger-j-link.md#segger-j-link-to-lte-port-connection).
+Připojte programátor J-Link k [portu LTE SWD](segger-j-link.md#segger-j-link-to-lte-port-connection).
 
-### Nahrání obrazu {#image-flashing-1}
+### Nahrání firmwaru {#image-flashing-1}
 
 Firmware modemu nahrajete příkazem `hardwario chester lte flash firmware.zip`.
 
-### Smazání flash paměti {#flash-erasing}
+### Smazání paměti flash {#flash-erasing}
 
 ### Reset procesoru {#processor-reset-1}
 
-## Firmware LoRaWAN modemu {#lorawan-modem-firmware}
+## Firmware modemu LoRaWAN {#lorawan-modem-firmware}
 
-### Nahrání obrazu {#image-flashing-2}
+### Nahrání firmwaru {#image-flashing-2}
 
-### Smazání flash paměti {#flash-erasing-1}
+### Smazání paměti flash {#flash-erasing-1}
 
 ### Reset procesoru {#processor-reset-2}
 
@@ -125,31 +125,31 @@ Firmware modemu nahrajete příkazem `hardwario chester lte flash firmware.zip`.
 
 :::caution
 
-V Cloudu v2 zařízení CHESTER pošle kodek samo. Tento krok už není potřeba provádět.
+V Cloud v2 posílá zařízení CHESTER kodek samo, takže tento krok už nemusíte dělat.
 
 :::
 
-Když přiřadíte zařízení do skupiny v **HARDWARIO Cloud**, musíte skupině přiřadit kodek, aby Cloud věděl, jak interpretovat přijatá binární data a převést je do **JSON**. Kodek lze přiřadit i konkrétnímu zařízení, ale doporučujeme přiřazovat ho celé skupině. Jen tak budou nová zařízení používat stejný kodek automaticky.
+Když přiřadíte zařízení do skupiny v **HARDWARIO Cloud**, musíte skupině přiřadit kodek, aby cloud věděl, jak přijatá binární data interpretovat a převést do **JSON**. Kodek můžete přiřadit i konkrétnímu zařízení, doporučujeme ale přiřadit ho celé skupině: jen tak budou stejný kodek automaticky používat i nová zařízení.
 
 :::tip
 
-Pokud vyvíjíte vlastní firmware a měníte **YAML** soubor kodeku: hlavičkový soubor `msg_key.h` se nyní automaticky znovu vygeneruje, když zadáte `west build`.
+Pokud vyvíjíte vlastní firmware a měníte soubor **YAML** kodeku, hlavičkový soubor `msg_key.h` se teď vygeneruje znovu automaticky při příkazu `west build`.
 
 :::
 
-Práce s kodeky vyžaduje nastavení vašeho **API tokenu** buď přímo v příkazu, nebo v prostředí. **API token** získáte v [**HARDWARIO Cloud v1 ve svém profilu**](https://hardwario.cloud/#/profile).
+Pro práci s kodeky musí být **API token** nastavený přímo v příkazu, nebo v proměnné prostředí. **API token** získáte v [**HARDWARIO Cloud v1 ve svém profilu**](https://hardwario.cloud/#/profile).
 
 ```
 hardwario cloud --token <your_token> commands...
 ```
 
-Nebo nastavte proměnnou prostředí příkazové řádky
+Nebo nastavte proměnnou prostředí:
 
 ```
 export HARDWARIO_CLOUD_TOKEN=<your_token>
 ```
 
-Zadáním `hardwario cloud` vám nástroj zobrazí všechny možné příkazy, takže můžete prozkoumat další funkce.
+Příkaz `hardwario cloud` vypíše všechny dostupné příkazy, takže si můžete projít i další funkce.
 
 
 ```
@@ -176,11 +176,11 @@ Commands:
 hardwario cloud codec create --name chester-input-z
 ```
 
-Cloud vám odpoví **ID kodeku**. Uložte si ho někam, budeme ho potřebovat v dalších příkazech.
+Cloud vrátí **ID kodeku**. Poznamenejte si ho, budete ho potřebovat v dalších příkazech.
 
-### Připojení kodeku {#attach-a-codec}
+### Přiřazení kodeku {#attach-a-codec}
 
-Nově vytvořený **kodek** připojíme ke **skupině**. Přejděte do skupiny v **HARDWARIO Cloud** a zkopírujte **ID skupiny** z **URL** nebo ze **stránky s detailem skupiny**.
+Nově vytvořený **kodek** přiřadíte ke **skupině**. Přejděte do skupiny v **HARDWARIO Cloud** a zkopírujte **ID skupiny** z **URL** nebo ze **stránky s detailem skupiny**.
 
 ```
 hardwario cloud codec attach --id <codec-id> --group-id <group-id>
@@ -194,11 +194,11 @@ Posledním krokem je nahrání kodeku.
 hardwario cloud codec upload --id <codec-id> --decoder-type cbor --decoder codec/cbor-decoder.yaml
 ```
 
-Pokud aktualizujete svůj **YAML** soubor a znovu vygenerujete `msg_key.h`, stačí **zopakovat pouze tento krok**.
+Když soubor **YAML** upravíte a znovu vygenerujete `msg_key.h`, stačí **zopakovat jen tento krok**.
 
 ## Aliasy příkazů {#command-aliases}
 
-Pokud vyvíjíte a iterujete poměrně často, mohou se vám tyto aliasy příkazů hodit. Přidejte je do inicializačního skriptu svého terminálu.
+Pokud často sestavujete a zkoušíte, hodí se vám tyto aliasy příkazů. Přidejte je do inicializačního skriptu svého terminálu.
 
 ```
 alias wb='west build'

@@ -25,7 +25,7 @@ It is very hard to predict how exactly the PIR sensor will act in your particula
 
 :::info
 
-This example uses **Medium sensitivity**. When movement is detected, the message **Movement!** is sent to your computer via USB.
+This example uses **Medium sensitivity**. When movement is detected, the message **Movement detected!** is sent to your computer via USB.
 
 :::
 

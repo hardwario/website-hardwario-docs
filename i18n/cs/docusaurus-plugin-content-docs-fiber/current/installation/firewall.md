@@ -10,7 +10,7 @@ title: Firewall
    sudo apt install -y ufw
    ```
 
-1. **Povolte SSH ještě před zapnutím firewallu**: obrácený postup vás může připravit o přístup:
+1. **SSH povolte ještě před zapnutím firewallu**, jinak si můžete zablokovat přístup:
 
    ```sh
    sudo ufw allow 22/tcp
@@ -23,7 +23,7 @@ title: Firewall
 
    :::tip
 
-   Upravte `10.0.0.0/24` podle skutečné podsítě vaší LAN.
+   Upravte `10.0.0.0/24` podle skutečné podsítě své LAN.
 
    :::
 
@@ -33,5 +33,5 @@ title: Firewall
    sudo ufw enable
    ```
 
-1. Než se odpojíte, okamžitě ověřte z jiného počítače v LAN, že SSH a všechna webová
+1. Hned potom, ještě než se odpojíte, ověřte z jiného počítače v LAN, že SSH a všechna webová
    rozhraní jsou stále dostupná.

@@ -1,7 +1,7 @@
 ---
 slug: chester-x5
 title: CHESTER-X5 (2kanálový izolovaný vstup 50 V)
-description: "Dvoukanálový rozšiřující modul s izolovaným napěťovým vstupem pro CHESTER. Každý kanál měří ±50 V přes zesilovač se zesílenou izolací."
+description: "Dvoukanálový rozšiřující modul pro CHESTER s izolovanými napěťovými vstupy, které měří ±50 V přes zesilovač se zesílenou izolací."
 keywords: [CHESTER-X5, izolovaný vstup, izolované měření napětí, 50V, AMC3330, ADS122C04, 24bitový ADC, zesílená izolace, I2C, galvanické oddělení, CHESTER]
 ---
 import Image from '@theme/IdealImage';
@@ -22,25 +22,25 @@ import Image from '@theme/IdealImage';
 
 ## Přehled modulu {#module-overview}
 
-CHESTER-X5 poskytuje **dva izolované napěťové vstupy**, každý s rozsahem **−50 V až +50 V**. Každý kanál používá zesilovač se zesílenou izolací (**AMC3330**) s integrovaným izolovaným DC-DC převodníkem, takže je vstup **galvanicky oddělený** od elektroniky zařízení CHESTER i od druhého kanálu. Přesný dělič s tolerancí 0,1 % převádí vstupních ±50 V na úroveň zesilovače a jeho diferenciální výstup digitalizuje společný 24bitový I²C ADC **ADS122C04**, kanál 1 na AIN0/AIN1 a kanál 2 na AIN2/AIN3.
+Modul CHESTER-X5 má **dva izolované napěťové vstupy**, každý s rozsahem **−50 V až +50 V**. Každý kanál používá zesilovač se zesílenou izolací (**AMC3330**) s integrovaným izolovaným DC-DC převodníkem, takže je vstup **galvanicky oddělený** od elektroniky zařízení CHESTER i od druhého kanálu. Přesný dělič s tolerancí 0,1 % přizpůsobí vstupních ±50 V rozsahu zesilovače. Diferenciální výstup zesilovače pak digitalizuje společný 24bitový převodník ADC **ADS122C04** na sběrnici I²C: kanál 1 na vstupech AIN0/AIN1, kanál 2 na AIN2/AIN3.
 
-Izolovaný zesilovač každého kanálu je napájený vlastním load switchem (**TPS22917**), takže firmware může kanály zapínat nezávisle a v nečinnosti je nechat vypnuté a šetřit energii. Nové vzorky ADC signalizuje na lince data-ready, která je vyvedená na pin GP0 slotu.
+Izolovaný zesilovač každého kanálu se napájí přes vlastní zátěžový spínač (load switch, **TPS22917**), takže firmware může kanály zapínat nezávisle a v nečinnosti je kvůli úspoře energie nechat vypnuté. Nový vzorek hlásí převodník ADC signálem data-ready, který je vyvedený na pin GP0 slotu.
 
 ## Klíčové vlastnosti {#key-features}
 
 * **Dva izolované vstupy:** Dva nezávislé napěťové kanály, každý se zesílenou galvanickou izolací.
 * **Rozsah ±50 V:** Každý kanál měří −50 V až +50 V.
-* **Přesné měření:** Izolované zesilovače AMC3330 s vstupními děliči 0,1 % a 24bitovým ADC ADS122C04.
+* **Přesné měření:** Izolované zesilovače AMC3330 se vstupními děliči 0,1 % a 24bitovým ADC ADS122C04.
 * **Rozhraní I²C:** ADC se čte přes I²C; data-ready se signalizuje na GP0/A0.
-* **Přepínání napájení po kanálech:** Každý kanál je napájený vlastním load switchem (zapíná se přes GP2 pro kanál 1 a GP1 pro kanál 2) kvůli nízké spotřebě.
+* **Spínání napájení jednotlivých kanálů:** Každý kanál má vlastní zátěžový spínač (kanál 1 se zapíná přes GP2, kanál 2 přes GP1), což snižuje spotřebu.
 
-## Typická použití {#typical-applications}
+## Typické aplikace {#typical-applications}
 
 * **Izolované měření napětí:** Měření napětí, která musí být galvanicky oddělená od logiky.
-* **Plovoucí napětí a napětí na horní straně:** Měření signálů, které nejsou vztažené k systémové zemi.
+* **Plovoucí napětí a napětí na straně high-side:** Měření signálů, které nejsou vztažené k systémové zemi.
 * **Monitorování baterií a článků:** Sledování napětí baterií, článků nebo modulů.
-* **Měření průmyslových signálů:** Průmyslová napětí, kde je izolace potřeba z důvodu bezpečnosti nebo přesnosti.
-* **Měření bez zemních smyček:** Vyloučení zemních smyček mezi měřeným obvodem a uzlem CHESTER.
+* **Měření průmyslových signálů:** Průmyslová napětí, u kterých je izolace nutná kvůli bezpečnosti nebo přesnosti.
+* **Měření bez zemních smyček:** Vyloučení zemních smyček mezi měřeným obvodem a zařízením CHESTER.
 
 ## Technické parametry {#technical-specifications}
 
@@ -56,7 +56,7 @@ Izolovaný zesilovač každého kanálu je napájený vlastním load switchem (*
 | **Adresa I²C** | 0x40 (výchozí); 0x41 pomocí pájecí propojky S1 |
 | **Zapnutí napájení kanálu** | GP2/A2 (kanál 1), GP1/A1 (kanál 2) |
 | **Napájení logiky (VDD)** | 3,0 V |
-| **Rozhraní desky** | Castellated otvory na dvou protilehlých hranách, připájené k základní desce CHESTER |
+| **Rozhraní desky** | Půlené prokovené otvory (castellated) na dvou protilehlých hranách, deska je připájená k základní desce CHESTER |
 | **Revize hardwaru** | R2.1 |
 
 ## Klíčové součástky {#key-components}
@@ -65,7 +65,7 @@ Izolovaný zesilovač každého kanálu je napájený vlastním load switchem (*
 | :--- | :--- | :--- |
 | **Izolovaný zesilovač (×2)** | AMC3330DWE | Zesilovač se zesílenou izolací a integrovaným izolovaným DC-DC; jeden na kanál |
 | **ADC** | ADS122C04IPW | 24bitový 4kanálový I²C ADC digitalizující oba kanály |
-| **Load switch (×2)** | TPS22917DBV | Napájecí přepínač izolovaných zesilovačů pro každý kanál |
+| **Zátěžový spínač (×2)** | TPS22917DBV | Spínač napájení izolovaného zesilovače, jeden na kanál |
 
 ## Zapojení pinů {#pin-configuration}
 
@@ -91,19 +91,19 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | 8 | DNC | — | Nezapojovat (izolační odstup) |
 
 :::info
-Každý kanál měří **−50 V až +50 V** a je **galvanicky oddělený** od elektroniky zařízení CHESTER i od druhého kanálu. Piny **DNC** (1, 4, 5, 8) nemají nic připojené. Nechte je nezapojené; vytvářejí odstup, který zachovává izolaci mezi kanály a logickou stranou.
+Každý kanál měří **−50 V až +50 V** a je **galvanicky oddělený** od elektroniky zařízení CHESTER i od druhého kanálu. Piny **DNC** (1, 4, 5, 8) nejsou nikam připojené. Nic na ně nezapojujte: vytvářejí odstup, který zachovává izolaci mezi kanály a logickou stranou.
 :::
 
 ### Rozhraní k hostu (I²C) {#host-interface-ic}
 
-CHESTER-X5 se čte po standardní sběrnici **I²C** přes ADC **ADS122C04** na desce, který digitalizuje oba izolované kanály (kanál 1 na AIN0/AIN1, kanál 2 na AIN2/AIN3). Piny slotu se používají takto:
+Modul CHESTER-X5 se čte po standardní sběrnici **I²C** přes převodník ADC **ADS122C04** na desce, který digitalizuje oba izolované kanály (kanál 1 na AIN0/AIN1, kanál 2 na AIN2/AIN3). Piny slotu se používají takto:
 
 | Pin CHESTER-X | Směr | Funkce |
 | :--- | :--- | :--- |
 | SDA / SCL | I²C | Komunikace s ADS122C04 |
 | GP0 / A0 | Vstup | Data-ready (DRDY) ADS122C04 |
-| GP1 / A1 | Výstup | Zapíná napájení kanálu 2 (load switch) |
-| GP2 / A2 | Výstup | Zapíná napájení kanálu 1 (load switch) |
+| GP1 / A1 | Výstup | Zapíná napájení kanálu 2 (zátěžový spínač) |
+| GP2 / A2 | Výstup | Zapíná napájení kanálu 1 (zátěžový spínač) |
 
 Adresa ADC na I²C je ve výchozím stavu **0x40**; nastavením pájecí propojky **S1** se změní na **0x41**, takže lze na jednom zařízení CHESTER použít dva moduly CHESTER-X5 bez konfliktu. GP3/A3 se nepoužívá.
 
@@ -111,7 +111,7 @@ Adresa ADC na I²C je ve výchozím stavu **0x40**; nastavením pájecí propojk
 
 Zdroj napětí pro **kanál 1** připojte na **INP1** (pin 2) a **INM1** (pin 3), pro **kanál 2** na **INP2** (pin 7) a **INM2** (pin 6).
 
-Protože jsou vstupy galvanicky oddělené, měřený obvod **nemusí** mít společnou zem s uzlem CHESTER a oba kanály jsou oddělené i mezi sebou. Piny **DNC** (1, 4, 5, 8) nechte nezapojené. Před měřením zapněte z firmwaru napájení kanálu (kanál 1 přes GP2, kanál 2 přes GP1).
+Protože jsou vstupy galvanicky oddělené, měřený obvod **nemusí** mít společnou zem se zařízením CHESTER a oba kanály jsou oddělené i mezi sebou. Piny **DNC** (1, 4, 5, 8) nechte nezapojené. Před měřením zapněte z firmwaru napájení kanálu (kanál 1 přes GP2, kanál 2 přes GP1).
 
 :::warning
 Nepřekračujte na žádném kanálu vstupní rozsah **−50 V až +50 V**.
@@ -122,7 +122,7 @@ Nepřekračujte na žádném kanálu vstupní rozsah **−50 V až +50 V**.
 Vstupní kabeláž lze do krabičky přivést dvěma způsoby:
 
 - **Kabelová vývodka (výchozí):** vodiče protáhnete vývodkou ve stěně krabičky a zapojíte do svorkovnice.
-- **Konektor do panelu (na vyžádání):** externí konektor ve stěně krabičky umožní uživateli kabel zapojit, bez volné kabeláže vevnitř. Na vyžádání.
+- **Panelový konektor (na vyžádání):** uživatel kabel jen zapojí do konektoru ve stěně krabičky a uvnitř nezůstane žádná volná kabeláž. Dodáváme na vyžádání.
 
 ## Kompatibilní konfigurace CHESTER {#compatible-chester-configurations}
 
@@ -147,7 +147,7 @@ Modul CHESTER-X5 lze použít s různými konfiguracemi základních desek CHEST
 
 ## Schémata {#schematic-diagrams}
 
-Kompletní schéma (dva izolované vstupní kanály AMC3330, jejich load switche TPS22917 a ADC ADS122C04) je k dispozici jako PDF:
+Kompletní schéma (dva izolované vstupní kanály AMC3330, jejich zátěžové spínače TPS22917 a ADC ADS122C04) je k dispozici jako PDF:
 
 - [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x5-r2.1.pdf)
 - [Interaktivní prohlížeč CHESTER-X5](pathname:///download/ibom/hio-chester-x5-r2.1.html)

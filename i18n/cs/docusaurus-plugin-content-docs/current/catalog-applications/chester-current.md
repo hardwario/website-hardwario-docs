@@ -1,19 +1,19 @@
 # CHESTER Current {#chester-current}
 
-Tento článek popisuje základní funkce, popis hardwaru, výchozí konfiguraci, ukázkovou JSON zprávu a kalibraci kanálů katalogové aplikace **CHESTER Current**.
+Tento článek popisuje základní funkce katalogové aplikace **CHESTER Current**, její hardware, výchozí konfiguraci, ukázkovou zprávu JSON a kalibraci kanálů.
 
-> **Pozor:** Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
-> - [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
-> - [**Společná funkcionalita**](/chester/catalog-applications/common-functionality): jak fungují LED, tlačítko a konfigurace sítě.
-> - [**Správa platformy**](/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
+> **Pozor:** Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
+> - [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
+> - [**Společné funkce**](/chester/catalog-applications/common-functionality): jak fungují LED, tlačítko a nastavení sítě.
+> - [**Konektivita platformy**](/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 ## Přehled aplikace {#application-overview}
 
-Aplikace cílí především na neinvazivní měření proudu pomocí takzvaného **DC Current "Transformer"** (DCCT). Umí měřit až 4 kanály střídavého i stejnosměrného proudu. Proudové sondy jsou kleště kolem měřeného vodiče, které převádějí magnetický tok (úměrný elektrickému proudu) na diferenciální výstupní napětí.
+Aplikace je určená hlavně k neinvazivnímu měření proudu pomocí takzvaného **DC Current "Transformer"** (DCCT). Měří střídavý i stejnosměrný proud až na 4 kanálech. Proudové sondy jsou kleště, které se nasadí na měřený vodič a převádějí magnetický tok (úměrný elektrickému proudu) na diferenciální výstupní napětí.
 
-> **Tip:** Proudové sondy vyžadují během měřicího cyklu napájení 5 V (generované pomocí boost měniče na modulu **CHESTER-K1**). Boost měnič i napájecí větve jednotlivých kanálů jsou softwarově řízené, takže zařízení **CHESTER Current** může fungovat jako nízkopříkonové zařízení napájené z baterie. Interval měření pochopitelně hraje klíčovou roli v životnosti baterie.
+> **Tip:** Proudové sondy potřebují během měřicího cyklu napájení 5 V, které vyrábí zvyšující měnič (boost) na modulu **CHESTER-K1**. Měnič i napájecí větve jednotlivých kanálů řídí software, takže zařízení **CHESTER Current** může běžet na baterii jako zařízení s nízkou spotřebou. Na výdrž baterie má samozřejmě zásadní vliv interval měření.
 
-Kromě měření proudu lze zařízení nakonfigurovat (na vyžádání) i pro měření až 4 napěťových kanálů (v single-ended režimu). Měření proudu a napětí lze kombinovat (celkový počet kanálů nikdy nepřesáhne 4).
+Kromě proudu může zařízení na přání měřit i napětí, a to až na 4 kanálech (v režimu single-ended). Měření proudu a napětí lze kombinovat, celkový počet kanálů ale nikdy nepřesáhne 4.
 
 ## Varianty aplikace {#application-variants}
 
@@ -21,26 +21,26 @@ Zařízení **CHESTER Current** lze objednat v jedné z těchto variant:
 
 ### CHESTER Current {#chester-current-1}
 
-Katalogový hardware **CHESTER Current** se skládá z těchto objednacích kódů:
+Hardware katalogové aplikace **CHESTER Current** tvoří tyto položky (objednací kódy):
 
 - `CHESTER-M-CGLS`: Standardní základní deska
 - `CHESTER-K1-C1-C2-C3-C4`: 4x diferenciální vstup + 5 V boost
-- `CHESTER-E2-LP`: Krabička s SMA pigtailem
+- `CHESTER-E2-LP`: Krabička s pigtailem SMA
 
-Více informací najdete v kapitole [**Objednací kódy**](/chester/ordering-codes).
+Podrobnosti najdete na stránce [**Objednací kódy**](/chester/ordering-codes).
 
 Varianta sestavení firmwaru: `west chester-update current --variant "CHESTER Current"`
 
 ### CHESTER Current Z {#chester-current-z}
 
-Katalogový hardware **CHESTER Current Z** se skládá z těchto objednacích kódů:
+Hardware katalogové aplikace **CHESTER Current Z** tvoří tyto položky (objednací kódy):
 
 - `CHESTER-M-CGLS`: Standardní základní deska
 - `CHESTER-K1-C1-C2-C3-C4`: 4x diferenciální vstup + 5 V boost
-- `CHESTER-Z1`: Zálohovací modul
-- `CHESTER-E2-LP`: Krabička s SMA pigtailem
+- `CHESTER-Z1`: Záložní modul
+- `CHESTER-E2-LP`: Krabička s pigtailem SMA
 
-Více informací najdete v kapitole [**Objednací kódy**](/chester/ordering-codes).
+Podrobnosti najdete na stránce [**Objednací kódy**](/chester/ordering-codes).
 
 Varianta sestavení firmwaru: `west chester-update current --variant "CHESTER Current Z"`
 
@@ -48,19 +48,19 @@ Varianta sestavení firmwaru: `west chester-update current --variant "CHESTER Cu
 
 Katalogová aplikace **CHESTER Current 1W** podporuje více externích teplotních senzorů DS18B20 na sběrnici 1-Wire.
 
-Hardware této aplikace se skládá z těchto objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 - `CHESTER-M-CGLS`: Standardní základní deska
 - `CHESTER-K1-C1-C2-C3-C4`: 4x diferenciální vstup + 5 V boost
-- `CHESTER-E2-LP`: Krabička s SMA pigtailem
+- `CHESTER-E2-LP`: Krabička s pigtailem SMA
 
-Více informací najdete v kapitole [**Objednací kódy**](/chester/ordering-codes).
+Podrobnosti najdete na stránce [**Objednací kódy**](/chester/ordering-codes).
 
-Varianta sestavení firmwaru: `west chester-update current --variant "CHESTER Current"` (podpora DS18B20 1-Wire je součástí základního firmwaru **CHESTER Current**)
+Varianta sestavení firmwaru: `west chester-update current --variant "CHESTER Current"` (podpora senzorů DS18B20 1-Wire je součástí základního firmwaru **CHESTER Current**)
 
 ### Sondy {#probes}
 
-Můžete zvolit až 4 proudové sondy s následujícími proudovými rozsahy:
+Vybrat si můžete až 4 proudové sondy s těmito rozsahy:
 
 - Maximální proud **10 A**
 - Maximální proud **100 A**
@@ -68,32 +68,32 @@ Můžete zvolit až 4 proudové sondy s následujícími proudovými rozsahy:
 - Maximální proud **1 000 A**
 - Maximální proud **1 500 A**
 
-> **Pozor:** Proudový rozsah je uveden pro stejnosměrný proud. Pokud navrhujete systém pro střídavý proud, musíte maximální očekávaný střídavý proud vynásobit koeficientem `1.42` (druhá odmocnina ze dvou), abyste zjistili, zda se proudová sonda vejde do limitu.
+> **Pozor:** Proudový rozsah je uveden pro stejnosměrný proud. Při návrhu systému pro střídavý proud vynásobte maximální očekávaný střídavý proud koeficientem `1.42` (druhá odmocnina ze dvou) a ověřte, že výsledek nepřekročí rozsah sondy.
 
 ## Chování aplikace {#application-behavior}
 
-Schéma zapojení pro **CHESTER Current** najdete v [**popisu svorkovnice**](/chester/extension-modules/chester-k1) rozšiřujícího modulu **CHESTER-K1**. Rozšiřující modul **CHESTER-K1** využívá oba sloty **A** i **B**. Používáte tedy odpovídající svorky **A1** až **A8** a **B1** až **B8**.
+Schéma zapojení zařízení **CHESTER Current** najdete v [**popisu svorkovnice**](/chester/extension-modules/chester-k1) rozšiřujícího modulu **CHESTER-K1**. Modul **CHESTER-K1** zabírá oba sloty **A** i **B**, takže používáte svorky **A1** až **A8** a **B1** až **B8**.
 
 ### Analogové vstupy {#analog}
 
-- Analogové hodnoty se vzorkují periodicky (parametr `interval-sample`). Tyto hodnoty se ukládají do **bufferu vzorků**.
-- Nasbírané vzorky se periodicky **agregují** (parametr `interval-aggreg`). Z uložených vzorků se vypočítá minimum, maximum, průměr a medián. Tyto agregované výsledky se označují jako **měření**.
-- Každé **měření** má přiřazenou časovou značku. Buffer **měření** se pravidelně přenáší jako časová řada (parametr `interval-report`).
+- Analogové hodnoty se pravidelně vzorkují (parametr `interval-sample`) a ukládají do **bufferu vzorků**.
+- Nasbírané vzorky se pravidelně **agregují** (parametr `interval-aggreg`). Ze vzorků v bufferu se spočítá minimum, maximum, průměr a medián. Těmto agregovaným výsledkům říkáme **měření**.
+- Každé **měření** má svou časovou značku. **Měření** z bufferu se pravidelně odesílají jako časové řady (parametr `interval-report`).
 
-### Zálohování {#backup}
+### Záložní napájení {#backup}
 
-Zařízení **CHESTER Current Z** (vybavené modulem **CHESTER-Z1**) může navíc hlásit informace o záložní baterii a stavu externího DC napájení.
+Zařízení **CHESTER Current Z** (s modulem **CHESTER-Z1**) navíc hlásí stav záložní baterie a externího napájení DC.
 
-- Aktuální **napětí baterie** a **externí DC napětí** se odesílají v každém reportu.
-- Při změně stavu DC napájecího vstupu se uloží časová značka události spolu se stavem **připojeno**/**odpojeno**, tato informace se ukládá do bufferu a buffer událostí se odešle (nejpozději) s pravidelným reportem (parametr `interval-report`).
-- Volitelně lze změny DC napájecího vstupu na stav **připojeno** (parametr `backup-report-connected`) nebo **odpojeno** (parametr `backup-report-disconnected`) hlásit **okamžitě** nebo s nastavitelným **zpožděním** (parametr `event-report-delay`), což umožňuje zachytit více po sobě jdoucích změn vstupu.
-- Maximální počet reportů za hodinu je konfigurovatelný (parametr `event-report-rate`). Omezení událostí šetří komunikační pásmo a prodlužuje životnost baterie.
+- Aktuální **napětí baterie** a **napětí externího zdroje DC** se posílají v každém hlášení.
+- Při změně na napájecím vstupu DC se do bufferu uloží časová značka změny spolu se stavem **connected**/**disconnected** a buffer událostí se odešle nejpozději s pravidelným hlášením (parametr `interval-report`).
+- Změny napájecího vstupu DC do stavu **connected** (parametr `backup-report-connected`) nebo **disconnected** (parametr `backup-report-disconnected`) lze volitelně hlásit **okamžitě** nebo s nastavitelným **zpožděním** (parametr `event-report-delay`), aby se do hlášení vešlo i více změn krátce po sobě.
+- Maximální počet hlášení za hodinu lze nastavit (parametr `event-report-rate`). Omezení počtu hlášení šetří komunikační pásmo a prodlužuje výdrž baterie.
 
-> **Pozor:** Interval dalšího reportu se počítá na začátku vysílacího cyklu jako parametr `interval-report` (zadaný v sekundách) ±20 % rozptyl. Tento rozptyl je záměrně náhodný, aby se zabránilo překrývání vysílání více zařízení provozovaných na stejném místě (např. napájených z místní DC linky). Kdyby takový rozptyl nebyl implementován, mohlo by se vysílání zařízení synchronně překrývat.
+> **Pozor:** Interval do dalšího hlášení se počítá na začátku vysílacího cyklu jako hodnota parametru `interval-report` (v sekundách) s rozptylem ±20 %. Rozptyl je záměrně náhodný: zařízení provozovaná na stejném místě (např. napájená ze stejného vedení DC) tak nevysílají souběžně. Bez rozptylu by se jejich vysílání mohlo pravidelně překrývat.
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná pomocí příkazu `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config interval-sample 60
@@ -138,35 +138,35 @@ app config w1-therm-interval-aggreg 300
 app config mode "lte"
 ```
 
-## Specifické příkazy {#specific-commands}
+## Příkazy aplikace {#specific-commands}
 
-> **Info:** Celou stromovou strukturu příkazů můžete snadno prozkoumat – začněte příkazem `help`.
+> **Info:** Celou stromovou strukturu příkazů snadno prozkoumáte: začněte příkazem `help`.
 
 ### Příkazy {#commands}
 
-Příkaz pro **okamžité spuštění vzorkování** (a uložení výsledku do bufferu vzorků):
+Tímto příkazem **okamžitě spustíte vzorkování** (výsledek se uloží do bufferu vzorků):
 
 ```
 sample
 ```
 
-Příkaz pro **okamžité odeslání dat** (a vyprázdnění agregovaných měření):
+Tímto příkazem **okamžitě odešlete data** (a vyprázdníte buffer agregovaných měření):
 
 ```
 send
 ```
 
-### Reportování {#reporting}
+### Hlášení {#reporting}
 
-Tímto příkazem nastavíte **interval reportu** (v sekundách):
+Tímto příkazem nastavíte **interval hlášení** (v sekundách):
 
 ```
 app config interval-report <value>
 ```
 
-### Zálohování {#backup-1}
+### Záložní napájení {#backup-1}
 
-Tímto příkazem nastavíte krátké zpoždění (v sekundách) mezi událostí **zálohování** a jejím reportováním:
+Tímto příkazem nastavíte krátké zpoždění (v sekundách) mezi událostí **backup** a jejím nahlášením:
 
 ```
 app config event-report-delay <value>
@@ -174,15 +174,15 @@ app config event-report-delay <value>
 
 > **Tip:** Tato funkce je užitečná v systémech, kde může krátce po první změně přijít další.
 
-Tímto příkazem omezíte počet asynchronních reportů událostí **zálohování** v jednohodinovém okně:
+Tímto příkazem omezíte počet asynchronních hlášení událostí **backup** za hodinu:
 
 ```
 app config event-report-rate <value>
 ```
 
-> **Tip:** Tato funkce pomáhá šetřit energii u zařízení napájeného z baterie a optimalizuje objem přenesených dat. Pravidelné (periodické) reporty nastavené parametrem `interval-report` se do tohoto limitu nepočítají.
+> **Tip:** Limit šetří baterii zařízení a snižuje objem přenášených dat. Pravidelná hlášení podle parametru `interval-report` se do něj nepočítají.
 
-Těmito příkazy zapnete/vypnete reportování událostí připojení/odpojení napájecího vstupu zálohovacího modulu:
+Těmito příkazy zapnete nebo vypnete hlášení připojení a odpojení napájení na vstupu záložního modulu:
 
 ```
 app config backup-report-connected <true/false>
@@ -191,43 +191,43 @@ app config backup-report-disconnected <true/false>
 
 ### Analogové kanály {#analog-channels}
 
-Příkaz pro **zapnutí/vypnutí** kanálu `n` (index 1-4):
+Tímto příkazem **zapnete nebo vypnete** kanál `n` (index 1–4):
 
 ```
 app config channel-active-<n> <true/false>
 ```
 
-Příkaz pro přepnutí mezi režimy **single-ended/diferenciální** na kanálu `n` (index 1-4):
+Tímto příkazem přepnete kanál `n` (index 1–4) mezi režimy **single-ended/diferenciální**:
 
 ```
 app config channel-differential-<n> <true/false>
 ```
 
-Příkaz pro nastavení **kalibračního bodu X0** (vstup) na kanálu `n` (index 1-4):
+Tímto příkazem nastavíte **kalibrační bod X0** (vstup) kanálu `n` (index 1–4):
 
 ```
 app config channel-calib-x0-<n> <value>
 ```
 
-Příkaz pro nastavení **kalibračního bodu Y0** (výstup) na kanálu `n` (index 1-4):
+Tímto příkazem nastavíte **kalibrační bod Y0** (výstup) kanálu `n` (index 1–4):
 
 ```
 app config channel-calib-y0-<n> <value>
 ```
 
-Příkaz pro nastavení **kalibračního bodu X1** (vstup) na kanálu `n` (index 1-4):
+Tímto příkazem nastavíte **kalibrační bod X1** (vstup) kanálu `n` (index 1–4):
 
 ```
 app config channel-calib-x1-<n> <value>
 ```
 
-Příkaz pro nastavení **kalibračního bodu Y1** (výstup) na kanálu `n` (index 1-4):
+Tímto příkazem nastavíte **kalibrační bod Y1** (výstup) kanálu `n` (index 1–4):
 
 ```
 app config channel-calib-y1-<n> <value>
 ```
 
-Příkaz pro nastavení **kalibračního režimu** na kanálu `n` (index 1-4):
+Tímto příkazem nastavíte **kalibrační režim** kanálu `n` (index 1–4):
 
 ```
 app config channel-calib-mode-<n> <avg/rms>
@@ -240,11 +240,11 @@ app config channel-calib-mode-<n> <avg/rms>
 
 ### Příkazy kanálů {#channel-commands}
 
-Následující příkazy shellu umožňují interaktivní kalibraci a čtení kanálů. `<n>` je číslo kanálu 1-4.
+Následujícími příkazy shellu kanály interaktivně kalibrujete a čtete. `<n>` je číslo kanálu 1–4.
 
 | Příkaz | Popis |
 |---------|-------------|
-| `current channel-<n> read` | Načtení surové a kalibrované hodnoty |
+| `current channel-<n> read` | Přečte surovou a kalibrovanou hodnotu |
 | `current channel-<n> calib set-0 <value>` | Zachytí aktuální surovou hodnotu jako X0, nastaví Y0 na `<value>` |
 | `current channel-<n> calib set-1 <value>` | Zachytí aktuální surovou hodnotu jako X1, nastaví Y1 na `<value>` |
 | `current channel-<n> calib show` | Zobrazí kalibrační parametry |
@@ -253,13 +253,13 @@ Následující příkazy shellu umožňují interaktivní kalibraci a čtení ka
 
 ### Teploměr 1-Wire {#1-wire-thermometer}
 
-Příkaz pro nastavení **intervalu vzorkování teploměru 1-Wire** v sekundách:
+Tímto příkazem nastavíte **interval vzorkování teploměru 1-Wire** v sekundách:
 
 ```
 app config w1-therm-interval-sample <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu agregace teploměru 1-Wire** v sekundách:
+Tímto příkazem nastavíte **interval agregace teploměru 1-Wire** v sekundách:
 
 ```
 app config w1-therm-interval-aggreg <1-86400>
@@ -267,7 +267,7 @@ app config w1-therm-interval-aggreg <1-86400>
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je k dispozici v kapitole [Firmware](/chester/catalog-applications/catalog-applications#application-firmware) katalogových aplikací.
+Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](/chester/catalog-applications/catalog-applications#application-firmware).
 
 ### Firmware v3.5.1 {#firmware-v351}
 
@@ -276,7 +276,7 @@ Nejnovější firmware je k dispozici v kapitole [Firmware](/chester/catalog-app
 | **CHESTER Current** | v3.5.1 | [Stáhnout](https://firmware.hardwario.com/chester/c2ac3f9d94194573b43c56f54962e672) |
 | **CHESTER Current Z** | v3.5.1 | [Stáhnout](https://firmware.hardwario.com/chester/627823995dc34c4a9336d0534ce3e418) |
 
-## Ukázková JSON zpráva {#example-json-message}
+## Ukázková zpráva JSON {#example-json-message}
 
 ### LTE {#lte}
 
@@ -357,7 +357,7 @@ Nejnovější firmware je k dispozici v kapitole [Firmware](/chester/catalog-app
 
 ### LoRaWAN {#lorawan}
 
-Zařízení **CHESTER Current** podporuje binární kódování LoRaWAN payloadu. Příklad s baterií + teploměrem + aktivním kanálem 1:
+Zařízení **CHESTER Current** kóduje payload LoRaWAN binárně. Příklad s baterií, teploměrem a aktivním kanálem 1:
 
 **Hlavička:** `0x25 0x00` (bity: BATT=1, ACCEL=0, THERM=1, W1=0, BACKUP=0, CH1=1)
 
@@ -367,7 +367,7 @@ Zařízení **CHESTER Current** podporuje binární kódování LoRaWAN payloadu
 25 00 45 0E 5A 0D 1C 29 09 00 47 00 48 E4 49
 ```
 
-**Dekódováno:**
+**Dekódované hodnoty:**
 
 | Offset | Bajty | Pole | Hodnota |
 |--------|-------|-------|-------|
@@ -384,15 +384,15 @@ Zařízení **CHESTER Current** podporuje binární kódování LoRaWAN payloadu
 
 ## Kalibrace kanálů {#channel-calibration}
 
-> **Nebezpečí:** Při aktualizaci firmwaru z verze **v1.x.x** na verzi **v2.0.0 a novější** je nutné [**zálohovat konfiguraci**](/chester/catalog-applications/common-functionality#configuration-backup). V případě zařízení **CHESTER Current** také kalibrační data.
+> **Nebezpečí:** Při aktualizaci firmwaru z verze **v1.x.x** na verzi **v2.0.0 a novější** je nutné [**zálohovat konfiguraci**](/chester/catalog-applications/common-functionality#configuration-backup), u zařízení **CHESTER Current** včetně kalibračních dat.
 
-> **Pozor:** Následující sekce je uvedena pouze pro referenci. Zařízení **CHESTER Current** se obvykle objednávají společně s proudovými sondami a **HARDWARIO** v takovém případě provádí kalibraci kanálů za zákazníka.
+> **Pozor:** Následující část slouží jen pro informaci. Zařízení **CHESTER Current** se obvykle objednávají společně s proudovými sondami a kanály pak zákazníkovi zkalibruje **HARDWARIO**.
 
 ### Přehled kalibračního systému {#calibration-system-overview}
 
-Kalibrační systém používá **dvoubodovou lineární interpolaci** pro převod surových hodnot v mV na kalibrované hodnoty (např. ampéry, watty nebo jakoukoli fyzikální jednotku).
+Kalibrace převádí surové hodnoty v mV na kalibrované hodnoty (např. v ampérech, wattech nebo jiné fyzikální jednotce) **dvoubodovou lineární interpolací**.
 
-> **Tip:** Lineární interpolace je pro výpočet výstupu definována tímto vzorcem:
+> **Tip:** Výstup lineární interpolace se vypočítá podle tohoto vzorce:
 >
 > `calibrated = (y0 × (x1 - raw) + y1 × (raw - x0)) / (x1 - x0)`
 >
@@ -417,8 +417,8 @@ Kalibrační systém používá **dvoubodovou lineární interpolaci** pro přev
 
 #### Předpoklady {#prerequisites}
 
-1. Připojte proudový senzor (např. CT kleště) ke kanálu CHESTER-K1
-2. Připojte se k zařízení CHESTER přes RTT shell nebo USB konzoli
+1. Připojte proudový senzor (např. CT kleště) ke kanálu modulu CHESTER-K1
+2. Připojte se k zařízení CHESTER přes shell RTT nebo konzoli USB
 3. Mějte připravené referenční měřidlo (multimetr, klešťový ampérmetr)
 
 #### Kalibrace krok za krokem {#step-by-step-calibration}
@@ -431,7 +431,7 @@ app config channel-active-1 true
 
 ##### 2. Nastavení kalibračního režimu {#2-set-calibration-mode}
 
-Zvolte `rms` pro střídavé proudové transformátory nebo `avg` pro stejnosměrné senzory:
+Pro proudové transformátory na střídavý proud zvolte `rms`, pro stejnosměrné senzory `avg`:
 
 ```
 current channel-1 calib mode rms
@@ -439,7 +439,7 @@ current channel-1 calib mode rms
 
 ##### 3. Ověření surové hodnoty {#3-verify-raw-reading}
 
-Načtěte aktuální surovou hodnotu v mV:
+Přečtěte aktuální surovou hodnotu v mV:
 
 ```
 current channel-1 read
@@ -459,7 +459,7 @@ Přiveďte známý **nízký** proud (např. 0 A) a nastavte kalibraci:
 current channel-1 calib set-0 0
 ```
 
-Tím se aktuální surová hodnota v mV zachytí jako `x0` a nastaví se `y0 = 0`.
+Příkaz uloží aktuální surovou hodnotu v mV jako `x0` a nastaví `y0 = 0`.
 
 Výstup:
 
@@ -475,7 +475,7 @@ Přiveďte známý **vysoký** proud (např. 10 A) a nastavte kalibraci:
 current channel-1 calib set-1 10
 ```
 
-Tím se aktuální surová hodnota v mV zachytí jako `x1` a nastaví se `y1 = 10`.
+Příkaz uloží aktuální surovou hodnotu v mV jako `x1` a nastaví `y1 = 10`.
 
 Výstup:
 
@@ -485,7 +485,7 @@ Channel 1: avg=50.3 rms=71.5 (using rms), point 1 set (x1=71.50, y1=10.00)
 
 ##### 6. Ověření kalibrace {#6-verify-calibration}
 
-Načtěte kanál a zkontrolujte kalibrovaný výstup:
+Přečtěte hodnotu kanálu a zkontrolujte kalibrovaný výstup:
 
 ```
 current channel-1 read
@@ -511,20 +511,20 @@ Channel 1 calibration: x0=1.20 y0=0.00, x1=71.50 y1=10.00, mode=rms
 
 #### Reset kalibrace {#reset-calibration}
 
-Chcete-li vymazat kalibraci a vrátit se k surovému výstupu v mV:
+Kalibraci vymažete a vrátíte se k surovému výstupu v mV takto:
 
 ```
 current channel-1 calib reset
 ```
 ### Kalibrace Hallova senzoru {#hall-effect-sensor-calibration}
 
-Tato sekce popisuje, jak nakonfigurovat firmware pro měření proudu pro Hallovy senzory (např. **YHDC HSTS30**). Pro zajištění přesných hodnot musí být systém nastaven na lineární aproximaci a diferenciální režim vstupu.
+Tato část popisuje, jak nastavit firmware pro měření proudu Hallovými senzory (např. **YHDC HSTS30**). Aby byly hodnoty přesné, musí systém používat lineární aproximaci a diferenciální režim vstupu.
 
 #### Logika kalibrace {#calibration-logic}
 
 Standardní senzor (300 A / 2,5 V ± 0,625 V) používá referenční střed 2,5 V. Při jmenovitém proudu 300 A se výstupní napětí od tohoto středu vychýlí o 625 mV.
 
-Zapnutím **diferenciálního režimu** (měření INP proti INM, kde INM je referenční napětí senzoru 2,5 V) izolujeme relevantní signál a odstraníme stejnosměrný offset.
+Zapnutím **diferenciálního režimu** (měření INP proti INM, kde INM je referenční napětí senzoru 2,5 V) oddělíme užitečný signál a odstraníme stejnosměrný offset.
 
 **Výpočet citlivosti:**
 
@@ -534,7 +534,7 @@ Sensitivity = 625 mV / 300 A = 2.0833 mV/A
 
 #### Teoretické parametry {#theoretical-parameters}
 
-Firmware CHESTER používá pro definici lineárního škálování dva body [x, y], kde **x** je napětí (mV) a **y** je fyzikální hodnota (A).
+Firmware zařízení CHESTER definuje lineární škálování dvěma body [x, y], kde **x** je napětí (mV) a **y** je fyzikální hodnota (A).
 
 | Parametr | Hodnota | Popis |
 | :--- | :--- | :--- |
@@ -545,7 +545,7 @@ Firmware CHESTER používá pro definici lineárního škálování dva body [x,
 
 :::info
 
-Před použitím této konfigurace se ujistěte, že fyzikální hodnoty na štítku senzoru odpovídají výše uvedeným teoretickým hodnotám.
+Než konfiguraci použijete, ověřte, že hodnoty na štítku senzoru odpovídají teoretickým hodnotám výše.
 
 :::
 
@@ -569,31 +569,31 @@ app config channel-differential <n> true
 
 :::caution
 
-Pokud má váš senzor jiný rozsah (např. 100 A / 1 V), musíte pro zachování přesnosti nastavit `x1` na `1000` a `y1` na `100`.
+Pokud má senzor jiné jmenovité hodnoty (např. 100 A / 1 V), nastavte kvůli přesnosti `x1` na `1000` a `y1` na `100`.
 
 :::
 
 ### Původní metoda kalibrace {#legacy-calibration-method}
 
-Ve firmě **HARDWARIO** máme kalibrační sadu pro **CHESTER Current** složenou z několika vzduchových cívek s 10/50/100 závity.
+Pro zařízení **CHESTER Current** máme v **HARDWARIO** kalibrační sadu z několika vzduchových cívek s 10, 50 a 100 závity.
 
 #### Příklad kalibrace proudu (původní metoda) {#example-current-calibration-legacy}
 
 1. Změřte **offsety při nulovém proudu** a zapište je pro každý kanál jako parametr `x0`.
 
-   > **Tip:** Pro spuštění měření použijte příkaz `sample`.
+   > **Tip:** Měření spustíte příkazem `sample`.
 
 2. Předpokládejme kalibraci proudové sondy **100 A** a zvolme **cívku se 100 závity**.
 3. Nastavte proudové omezení laboratorního zdroje na **900 mA** a zdroj připojte k cívce.
 4. **Nasaďte proudovou sondu** na kalibrační cívku.
-5. Ověřte proud protékající cívkou pomocí **multimetru** zapojeného do série.
-6. Změřte kanál a naměřenou hodnotu zapište jako hodnotu `x1`.
+5. Proud protékající cívkou ověřte **multimetrem** zapojeným do série.
+6. Změřte kanál a hodnotu zapište jako `x1`.
 7. Nastavte parametr `y1` na hodnotu `90000`.
 
-   > **Info:** Hodnota představuje součin počtu závitů cívky a proudového omezení zdroje – v tomto příkladu `90000`.
+   > **Info:** Hodnota je součin počtu závitů cívky a proudového omezení zdroje, v tomto příkladu `90000`.
 
-8. Protože jsme předpokládali bod s nulovým proudovým offsetem, můžeme parametr `x0` ponechat nastavený na `0`.
-9. Uložte konfigurační data (příkazem `config save`) a ověřte použité kalibrované hodnoty.
+8. Protože jsme předpokládali nulový offset při nulovém proudu, může parametr `x0` zůstat na hodnotě `0`.
+9. Uložte konfiguraci příkazem `config save` a ověřte výsledné kalibrované hodnoty.
 
 ---
 
@@ -601,19 +601,19 @@ Ve firmě **HARDWARIO** máme kalibrační sadu pro **CHESTER Current** složeno
 
 ### v3.5.1 – 2025-12-08 {#v351--2025-12-08}
 
-- **Přidáno**: Shell příkazy pro kalibraci jednotlivých kanálů v reálném čase – interaktivní nastavení nulového bodu a rozsahu
-- **Přidáno**: Downlink watchdog – detekuje ztrátu komunikace s cloudem
+- **Přidáno**: Příkazy shellu pro kalibraci jednotlivých kanálů v reálném čase: interaktivní nastavení nulového bodu a rozsahu
+- **Přidáno**: Downlink watchdog: detekuje ztrátu komunikace s cloudem
 - **Vylepšeno**: Spolehlivost a kódování LoRaWAN
-- **Opraveno**: Validace kalibračního rozsahu
+- **Opraveno**: Kontrola kalibračního rozsahu
 
 ### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Nové varianty – **CHESTER Current Z** (se zálohovacím modulem CHESTER-Z1) a **CHESTER Current 1W** (s externími teplotními senzory DS18B20 na 1-Wire)
-- **Přidáno**: Podpora LoRaWAN – jediný binární firmware pro LTE i LoRaWAN; režim se volí pomocí `app config mode lte` / `app config mode lrw`
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); předchozí firmware pro Cloud v1 zůstává k dispozici samostatně
+- **Přidáno**: Nové varianty: **CHESTER Current Z** (se záložním modulem CHESTER-Z1) a **CHESTER Current 1W** (s externími teplotními senzory DS18B20 na sběrnici 1-Wire)
+- **Přidáno**: Podpora LoRaWAN: jediný binární soubor firmwaru pro LTE i LoRaWAN; režim se volí příkazem `app config mode lte` / `app config mode lrw`
+- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud v1 zůstává k dispozici samostatně
 
 :::info
 
-Kompletní přehled všech změn platformy najdete v [**seznamu změn CHESTER**](/chester/changelog).
+Kompletní přehled všech změn platformy najdete v [**Seznamu změn CHESTER**](/chester/changelog).
 
 :::

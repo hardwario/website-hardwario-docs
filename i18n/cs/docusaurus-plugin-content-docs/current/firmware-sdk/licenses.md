@@ -6,19 +6,19 @@ import Image from '@theme/IdealImage';
 
 # Licence {#licenses}
 
-V tomto článku najdete užitečné informace o licenci **CHESTER SDK**.
+Tento článek popisuje licenci **CHESTER SDK**.
 
 :::caution
 
-Následující text je upravený obsah z **nRF Connect SDK** a plně se vztahuje na **CHESTER SDK**.
+Následující text je upravenou verzí textu z **nRF Connect SDK** a v plném rozsahu platí i pro **CHESTER SDK**.
 
 :::
 
-Licence jsou umístěny blízko zdrojových souborů. Soubor `LICENSE` s podrobnostmi o licenci najdete v nejvyšší úrovni každého repozitáře **CHESTER SDK**. Každý soubor obsažený v repozitářích má také [**SPDX identifikátor**](https://spdx.dev/ids/), který tuto licenci zmiňuje.
+Licence jsou uložené u zdrojových souborů. Soubor `LICENSE` s podrobnostmi o licenci najdete v kořenové složce každého repozitáře **CHESTER SDK**. Každý soubor v repozitářích má navíc [**identifikátor SPDX**](https://spdx.dev/ids/), který na tuto licenci odkazuje.
 
-Pokud je složka nebo sada souborů open source a je součástí **nRF Connect SDK** pod vlastní licencí (například některou z licencí **Apache** nebo **MIT**), bude mít ve složce buď vlastní soubor `LICENSE`, nebo budou licenční informace vloženy přímo ve zdrojových souborech.
+Pokud je složka nebo sada souborů open source a je součástí **nRF Connect SDK** pod vlastní licencí (například některou z licencí **Apache** nebo **MIT**), má buď ve složce vlastní soubor `LICENSE`, nebo jsou licenční informace přímo ve zdrojových souborech.
 
-Chcete-li vygenerovat licenční zprávu, můžete použít nástroj **West** `ncs-sbom` (poskytovaný **nRF Connect SDK**). Umožňuje vygenerovat zprávu pro **CHESTER SDK**, sestavenou aplikaci nebo konkrétní soubory. Nástroj je vysoce konfigurovatelný. Používá několik metod detekce, například:
+Licenční přehled vygenerujete nástrojem `ncs-sbom` pro **West** (je součástí **nRF Connect SDK**). Přehled může zahrnovat celé **CHESTER SDK**, sestavenou aplikaci nebo jen vybrané soubory. Nástroj má bohaté možnosti nastavení a licence hledá několika způsoby, například:
 
 * Vyhledávání na základě značek **SPDX**.
 
@@ -26,11 +26,11 @@ Chcete-li vygenerovat licenční zprávu, můžete použít nástroj **West** `n
 
 * [**Scancode-Toolkit**](https://scancode-toolkit.readthedocs.io/en/stable/).
 
-Podle vaší konfigurace se zpráva generuje ve formátu **HTML** nebo **SPDX**, případně v obou formátech. Více informací najdete v dokumentaci [**Software Bill of Materials**](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/scripts/west_commands/sbom/README.html#west-sbom).
+Podle nastavení vznikne přehled ve formátu **HTML**, **SPDX** nebo v obou. Více informací najdete v dokumentaci [**Software Bill of Materials**](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/scripts/west_commands/sbom/README.html#west-sbom).
 
-## Licenční ujednání {#license-statement}
+## Znění licence {#license-statement}
 
-Toto je obsah souboru `LICENSE` nalezeného ve složce **CHESTER SDK**:
+Obsah souboru `LICENSE` ve složce **CHESTER SDK**:
 
 ```
 LicenseID: LicenseRef-HARDWARIO-5-Clause

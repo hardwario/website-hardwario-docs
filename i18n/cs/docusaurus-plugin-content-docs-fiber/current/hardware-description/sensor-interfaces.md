@@ -7,10 +7,10 @@ title: Rozhraní pro senzory
 ### Vstupy 1-Wire {#1-wire-inputs}
 
 * **Osm plně izolovaných, nezávislých portů 1-Wire**
-* Určeno pro digitální teplotní sondy a podobné senzory 1-Wire
+* Určené pro digitální teplotní sondy a podobné senzory 1-Wire
 * LED u každého kanálu indikují aktivitu vstupu a stav senzoru
 
-### Rádio ISM 868 MHz {#868-mhz-ism-radio}
+### Rádio ISM 868/915 MHz {#868-mhz-ism-radio}
 
 * Integrované rádio ISM s velkým dosahem (s podporou LoRa) pro komunikaci s bezdrátovými senzory
 * Kompatibilita se senzorovými uzly **HARDWARIO STICKER** (teplota, vlhkost, pohyb atd.)

@@ -1,23 +1,23 @@
 ---
 slug: ordering-codes
 title: Objednací kódy
-description: "Objednací kódy pro platformu STICKER: varianty, krabičky a příslušenství včetně objednacích čísel, která se uvádějí v objednávce."
+description: "Objednací kódy platformy STICKER: varianty, krabičky a příslušenství s čísly dílů, která uvedete v objednávce."
 title_meta: "Objednací kódy (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 
 # Objednací kódy {#ordering-codes}
 
-Platforma STICKER je postavená na modulární hardwarové architektuře. Každá varianta produktu se skládá z konkrétních vzájemně zaměnitelných komponent, jako je základní deska, deska NFC, typ krabičky a senzory.
+Platforma STICKER je postavená na modulární hardwarové architektuře. Každá varianta se skládá z konkrétních zaměnitelných dílů, jako je základní deska, deska NFC, typ krabičky a senzory.
 
 Podrobné technické parametry hardwaru najdete na stránce [**Popis hardwaru**](/sticker/hardware-description/).
 
-Seznamy níže uvádějí **objednací kódy** jednotlivých hardwarových komponent, ze kterých se každá varianta zařízení STICKER skládá. To se hodí při ověřování konfigurace zařízení nebo při hledání konkrétních náhradních dílů.
+Seznamy níže uvádějí **objednací kódy** jednotlivých hardwarových dílů, ze kterých se každá varianta zařízení STICKER skládá. Hodí se při kontrole sestavy zařízení nebo při hledání náhradních dílů.
 
 ---
 
 ## STICKER Clime {#sticker-clime}
-Hardware této varianty tvoří následující objednací kódy:
+Varianta se skládá z dílů s těmito objednacími kódy:
 - **`STICKER M`**: Standardní základní deska  
 - **`STICKER NFC`**: Deska NFC  
 - **`ENC-STICKER-CLIME`**: Krabička se dvěma světlovody a perforací  
@@ -26,7 +26,7 @@ Hardware této varianty tvoří následující objednací kódy:
 ---
 
 ## STICKER Input 1 {#sticker-input-1}
-Hardware této varianty tvoří následující objednací kódy:
+Varianta se skládá z dílů s těmito objednacími kódy:
 - **`STICKER M`**: Standardní základní deska  
 - **`STICKER NFC-INPUT`**: Deska NFC s konektorem  
 - **`ENC-STICKER-INPUT-1`**: Krabička se světlovodem a kabelovou vývodkou  
@@ -35,7 +35,7 @@ Hardware této varianty tvoří následující objednací kódy:
 ---
 
 ## STICKER Input 2 {#sticker-input-2}
-Hardware této varianty tvoří následující objednací kódy:
+Varianta se skládá z dílů s těmito objednacími kódy:
 - **`STICKER M`**: Standardní základní deska  
 - **`STICKER NFC-INPUT`**: Deska NFC s konektorem  
 - **`ENC-STICKER-INPUT-2`**: Krabička se světlovodem a dvěma kabelovými vývodkami  
@@ -44,7 +44,7 @@ Hardware této varianty tvoří následující objednací kódy:
 ---
 
 ## STICKER Motion {#sticker-motion}
-Hardware této varianty tvoří následující objednací kódy:
+Varianta se skládá z dílů s těmito objednacími kódy:
 - **`STICKER M`**: Standardní základní deska  
 - **`STICKER NFC`**: Deska NFC  
 - **`PYQ-1648-7053`**: Senzor PIR  

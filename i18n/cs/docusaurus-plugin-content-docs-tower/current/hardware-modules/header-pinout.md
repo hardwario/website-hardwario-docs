@@ -4,11 +4,11 @@ title: Pinout konektorů
 ---
 import Image from '@theme/IdealImage';
 
-TOWER Kit klade důraz na hardwarovou **modularitu** a **znovupoužitelnost**. Aby toho bylo možné dosáhnout, musí se použít vhodný systém propojení.
+Sada TOWER Kit klade důraz na **modularitu** a **znovupoužitelnost** hardwaru. K tomu je potřeba vhodný systém propojení.
 
 :::info
 
-TOWER se drží dobře známého a široce přijímaného standardu – takzvaných konektorů (headerů) s roztečí 2,54 mm (0,1 palce).
+TOWER používá dobře známý a široce rozšířený standard: takzvané konektory (headery) s roztečí 2,54 mm (0,1 palce).
 
 :::
 
@@ -32,18 +32,18 @@ Více informací najdete v samostatné kapitole [**O modulu Core Module**](./abo
 
 ## Knihovna footprintů pro Eagle {#eagle-footprint-library}
 
-Můžete si stáhnout [**knihovnu TOWER pro software Eagle EDA**](https://github.com/hardwario/twr-hardware/tree/master/lbr), která obsahuje formáty **Standard Module** a **Cloony**.
+Stáhnout si můžete [**knihovnu TOWER pro program Eagle EDA**](https://github.com/hardwario/twr-hardware/tree/master/lbr) s formáty **Standard Module** a **Cloony**.
 
 ## Výkres a pinout modulu {#module-drawing-and-pinout}
 
 ### Formát Module {#module-format}
 
-Formát **Module** definuje
+Formát **Module** definuje:
 
 - Rozteč a signály mezi dvěma řadami 14pinových **konektorů**
 - Polohu čtyř montážních otvorů a jejich průměr
-- Polohu mechanického klíče (zaplněný otvor v konektoru), který brání otočenému zasunutí
-- Polohu **zásuvek** při pohledu shora
+- Polohu mechanického klíče (zaslepený otvor v konektoru), který brání obrácenému zasunutí
+- Polohu **dutinek** při pohledu shora
 - Polohu **pinů** při pohledu zespodu
 - Doporučenou výšku PCB 55 mm
 - Doporučenou tloušťku PCB 1,5 mm
@@ -71,48 +71,48 @@ Formát **Module** definuje
 
 ### Signály modulu {#module-signals}
 
-Toto je přehled základních periferií dostupných na konektoru modulu
+Přehled základních periferií dostupných na konektoru modulu:
 
-- 18x [**GPIO kanálů**](../firmware-sdk/how-to/gpio-pins.md) (General Purpose Input/Output)
-- 6x [**ADC kanálů**](../firmware-sdk/how-to/analog-digital-converter.md) (Analog-to-Digital Converter)
-- 2x [**DAC kanály**](../firmware-sdk/how-to/digital-analog-converter.md) (Digital-to-Analog Converter)
-- 3x [**UART kanály**](../firmware-sdk/how-to/uart-interface.md) (Universal Asynchronous Receiver Transmitter)
-- 2x [**I²C sběrnice**](../firmware-sdk/how-to/i2c-bus.md) (Inter-Integrated Circuit)
-- 1x [**SPI sběrnice**](../firmware-sdk/how-to/spi-bus.md) (Serial Peripheral Interface)
+- 18x [**kanál GPIO**](../firmware-sdk/how-to/gpio-pins.md) (General Purpose Input/Output)
+- 6x [**kanál ADC**](../firmware-sdk/how-to/analog-digital-converter.md) (Analog-to-Digital Converter)
+- 2x [**kanál DAC**](../firmware-sdk/how-to/digital-analog-converter.md) (Digital-to-Analog Converter)
+- 3x [**kanál UART**](../firmware-sdk/how-to/uart-interface.md) (Universal Asynchronous Receiver Transmitter)
+- 2x [**sběrnice I²C**](../firmware-sdk/how-to/i2c-bus.md) (Inter-Integrated Circuit)
+- 1x [**sběrnice SPI**](../firmware-sdk/how-to/spi-bus.md) (Serial Peripheral Interface)
 
-Následující tabulka definuje přiřazení signálů na konektoru modulu
+Přiřazení signálů na konektoru modulu ukazuje tato tabulka:
 
 
 | Pin  | Signál                                             | Popis                                                                                  | STM32 GPIO |
 | :--- | :------------------------------------------------- | :------------------------------------------------------------------------------------------- | :--------- |
-| 1    | P0<br/>A0<br/>TXD0                                 | GPIO kanál 0<br/>ADC kanál 0<br/>UART kanál 0 – signál TXD                             | PA0        |
-| 2    | P1<br/>A1<br/>RXD0                                 | GPIO kanál 1<br/>ADC kanál 1<br/>UART kanál 0 – signál RXD                             | PA1        |
-| 3    | P2<br/>A2<br/>TXD1                                 | GPIO kanál 2<br/>ADC kanál 2<br/>UART kanál 1 – signál TXD                             | PA2        |
-| 4    | P3<br/>A3<br/>RXD1                                 | GPIO kanál 3<br/>ADC kanál 3<br/>UART kanál 1 – signál RXD                             | PA3        |
-| 5    | P4<br/>A4<br/>DAC0<br/>A                           | GPIO kanál 4<br/>ADC kanál 4<br/>DAC kanál 0<br/>Sensor Module kanál A               | PA4        |
-| 6    | P5<br/>A5<br/>DAC1<br/>B                           | GPIO kanál 5<br/>ADC kanál 5<br/>DAC kanál 1<br/>Sensor Module kanál B               | PA5        |
-| 7    | P6<br/>RST1                                        | GPIO kanál 6<br/>UART kanál 1 – signál RTS                                               | PB1        |
-| 8    | P7<br/>A6<br/>CTS1<br/>C                           | GPIO kanál 7<br/>ADC kanál 6<br/>UART kanál 1 – signál CTS<br/>Sensor Module kanál C | PA6        |
-| 9    | P8                                                 | GPIO kanál 8                                                                               | PB0        |
-| 10   | P9                                                 | GPIO kanál 9                                                                               | PB2        |
+| 1    | P0<br/>A0<br/>TXD0                                 | Kanál GPIO 0<br/>Kanál ADC 0<br/>Kanál UART 0 (signál TXD)                             | PA0        |
+| 2    | P1<br/>A1<br/>RXD0                                 | Kanál GPIO 1<br/>Kanál ADC 1<br/>Kanál UART 0 (signál RXD)                             | PA1        |
+| 3    | P2<br/>A2<br/>TXD1                                 | Kanál GPIO 2<br/>Kanál ADC 2<br/>Kanál UART 1 (signál TXD)                             | PA2        |
+| 4    | P3<br/>A3<br/>RXD1                                 | Kanál GPIO 3<br/>Kanál ADC 3<br/>Kanál UART 1 (signál RXD)                             | PA3        |
+| 5    | P4<br/>A4<br/>DAC0<br/>A                           | Kanál GPIO 4<br/>Kanál ADC 4<br/>Kanál DAC 0<br/>Kanál A modulu Sensor Module               | PA4        |
+| 6    | P5<br/>A5<br/>DAC1<br/>B                           | Kanál GPIO 5<br/>Kanál ADC 5<br/>Kanál DAC 1<br/>Kanál B modulu Sensor Module               | PA5        |
+| 7    | P6<br/>RST1                                        | Kanál GPIO 6<br/>Kanál UART 1 (signál RTS)                                               | PB1        |
+| 8    | P7<br/>A6<br/>CTS1<br/>C                           | Kanál GPIO 7<br/>Kanál ADC 6<br/>Kanál UART 1 (signál CTS)<br/>Kanál C modulu Sensor Module | PA6        |
+| 9    | P8                                                 | Kanál GPIO 8                                                                               | PB0        |
+| 10   | P9                                                 | Kanál GPIO 9                                                                               | PB2        |
 | 11   | RESET                                              | Reset systému                                                                                 | NRST       |
 | 12   | BOOT                                               | Režim bootování                                                                                    | BOOT0      |
 | 13   | [**VDD_OFF**](../firmware-sdk/power-management.md) | Z horní strany: **VDD_OFF_OUT**<br/>Ze spodní strany: **VDD_OFF_IN**                          |            |
 | 14   | [**BAT_OFF**](../firmware-sdk/power-management.md) | Signál odpojení baterie                                                                    |            |
 | 15   | GND                                                | Systémová GND (zem)                                                                          |            |
 | 16   | VDD                                                | Systémové VDD (kladná větev)                                                                   |            |
-| 17   | SCL0                                               | I²C sběrnice 0 – signál SCL                                                                       | PB10       |
-| 18   | SDA0                                               | I²C sběrnice 0 – signál SDA                                                                       | PB11       |
+| 17   | SCL0                                               | Sběrnice I²C 0 (signál SCL)                                                                       | PB10       |
+| 18   | SDA0                                               | Sběrnice I²C 0 (signál SDA)                                                                       | PB11       |
 | 19   | INT                                                | Systémový signál přerušení                                                                      | PC13       |
-| 20   |                                                    | Klíč – bez signálu                                                                              |            |
-| 21   | P10<br/>RXD2                                       | UART kanál 2 – signál RXD                                                                  | PA10       |
-| 22   | P11<br/>TXD2                                       | UART kanál 2 – signál TXD                                                                  | PA9        |
-| 23   | P12<br/>MISO                                       | SPI sběrnice – signál MISO                                                                        | PB14       |
-| 24   | P13<br/>MOSI                                       | SPI sběrnice – signál MOSI                                                                        | PB15       |
-| 25   | P14<br/>SCLK                                       | SPI sběrnice – signál SCLK                                                                        | PB13       |
-| 26   | P15<br/>CS                                         | SPI sběrnice – signál CS                                                                          | PB12       |
-| 27   | P16<br/>SCL1                                       | I²C sběrnice 1 – signál SCL                                                                       | PB8        |
-| 28   | P17<br/>SDA1                                       | I²C sběrnice 1 – signál SDA                                                                       | PB9        |
+| 20   |                                                    | Klíč (bez signálu)                                                                              |            |
+| 21   | P10<br/>RXD2                                       | Kanál UART 2 (signál RXD)                                                                  | PA10       |
+| 22   | P11<br/>TXD2                                       | Kanál UART 2 (signál TXD)                                                                  | PA9        |
+| 23   | P12<br/>MISO                                       | Sběrnice SPI (signál MISO)                                                                        | PB14       |
+| 24   | P13<br/>MOSI                                       | Sběrnice SPI (signál MOSI)                                                                        | PB15       |
+| 25   | P14<br/>SCLK                                       | Sběrnice SPI (signál SCLK)                                                                        | PB13       |
+| 26   | P15<br/>CS                                         | Sběrnice SPI (signál CS)                                                                          | PB12       |
+| 27   | P16<br/>SCL1                                       | Sběrnice I²C 1 (signál SCL)                                                                       | PB8        |
+| 28   | P17<br/>SDA1                                       | Sběrnice I²C 1 (signál SDA)                                                                       | PB9        |
 
 :::caution
 
@@ -124,10 +124,10 @@ Na signály **VDD_OFF** a **BAT_OFF** nic nepřipojujte, pokud si nejste jisti, 
 
 ### Formát Tag {#tag-format}
 
-Hlavním účelem **formátu Tag** je vyvedení signálů [**I²C periferie**](../hardware-interfaces/i2c-bus.md) v kompaktním provedení.
-Může jít o cokoli souvisejícího s I²C – např. **senzory**, **paměti**, **RTC** atd.
+Hlavním účelem **formátu Tag** je vyvést signály [**periferie I²C**](../hardware-interfaces/i2c-bus.md) v kompaktním provedení.
+Může jít o cokoli s rozhraním I²C, např. **senzory**, **paměti**, **RTC** atd.
 
-Formát **Tag** definuje
+Formát **Tag** definuje:
 
 - Signály na **5pinovém konektoru** (viz tabulka níže)
 - Obrys PCB ve tvaru písmene „D“
@@ -145,12 +145,12 @@ Formát **Tag** definuje
 
 ### Signály formátu Tag {#tag-signals}
 
-Následující tabulka definuje přiřazení signálů na konektoru Tag:
+Přiřazení signálů na konektoru tagu ukazuje tato tabulka:
 
 | Pin  | Signál | Popis                      |
 | :--- | :----- | :------------------------- |
 | 1    | GND    | Systémová GND (zem)        |
 | 2    | VDD    | Systémové VDD (kladná větev) |
-| 3    | SCL    | I²C sběrnice – signál SCL  |
-| 4    | SDA    | I²C sběrnice – signál SDA  |
+| 3    | SCL    | Sběrnice I²C (signál SCL)  |
+| 4    | SDA    | Sběrnice I²C (signál SDA)  |
 | 5    | INT    | Systémový signál přerušení |

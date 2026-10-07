@@ -73,7 +73,7 @@ Zařízení rozdělí zprávu na fragmenty a pošle je popořadě:
 - První fragment má příznak **F**, poslední příznak **L**, fragmenty mezi nimi nemají žádný. Zpráva, která se vejde do jednoho fragmentu, se posílá jako `[FLxx]`.
 - Cloud potvrdí každý fragment paketem `[xxAx]`.
 - Když Cloud potvrzuje poslední fragment a čeká downlink, potvrzení je `[xxAP]`.
-- Fragmenty nikdy nenesou příznak A ani P. Pro dotaz na downlink pošle zařízení samostatný paket bez dat.
+- Fragmenty nikdy nenesou příznak A ani P. Když se chce zařízení dotázat na downlink, pošle samostatný paket bez dat.
 
 ## Přenos downlinku {#downlink-transfer}
 

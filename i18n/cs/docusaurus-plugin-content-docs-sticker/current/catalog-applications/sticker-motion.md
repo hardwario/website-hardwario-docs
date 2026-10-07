@@ -6,28 +6,28 @@ import Image from '@theme/IdealImage';
 
 # STICKER Motion {#sticker-motion}
 
-**STICKER Motion** je kompaktní bezdrátový detektor pohybu LoRaWAN postavený pro provoz s extrémně nízkou spotřebou. Napájený dvěma bateriemi AA používá přesný senzor PIR k detekci pohybu a odesílání událostí, což ho předurčuje pro zabezpečení, monitorování objektů, retailovou analytiku a sledování logistiky.
+**STICKER Motion** je kompaktní bezdrátový detektor pohybu LoRaWAN s extrémně nízkou spotřebou. Napájejí ho dvě baterie AA; přesným senzorem PIR detekuje pohyb a odesílá události, takže se hodí pro zabezpečení, sledování objektů, analytiku v maloobchodě a sledování logistiky.
 
 ![STICKER Motion](../../../../../sticker/catalog-applications/images/sticker-motion-top.png)
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Rychlý průvodce**](/sticker/first-steps): Postup zprovoznění krok za krokem.
-* [**Koupit STICKER Motion**](https://www.hardwario.store/p/sticker-motion): Nákup v našem obchodě.
-* [**Objednací kódy**](/sticker/ordering-codes): Seznam součástek a jejich objednacích čísel.
-* [**Popis hardwaru**](/sticker/hardware-description): Technické detaily a přehled hardwaru.
+* [**Rychlý průvodce**](/sticker/first-steps): Zprovoznění krok za krokem.
+* [**Koupit STICKER Motion**](https://www.hardwario.store/p/sticker-motion): Nákup v našem e-shopu.
+* [**Objednací kódy**](/sticker/ordering-codes): Seznam součástí a jejich objednacích čísel.
+* [**Popis hardwaru**](/sticker/hardware-description): Technické údaje a přehled hardwaru.
 * [**Oficiální stránka produktu**](https://www.hardwario.com/products/sticker/): Funkce a přehled.
 
 ## Typická použití {#typical-use-cases}
 
 #### Optimalizace pohybu v průmyslových prostorách {#optimizing-movement-in-industrial-spaces}
-- Monitorování uliček v průmyslových prostorách pomáhá optimalizovat logistické trasy pro tok materiálu i hotových výrobků. Snižuje prostoje a minimalizuje bezpečnostní rizika z přeplněných cest a nepředvídatelného pohybu.
+- Sledování uliček v průmyslových prostorách pomáhá optimalizovat logistické trasy pro tok materiálu i hotových výrobků. Snižuje prostoje i bezpečnostní rizika z přeplněných cest a nepředvídatelného pohybu.
 
 #### Chytřejší rozvržení prodejny díky datům o pohybu {#smarter-store-layouts-with-motion-data}
-- V maloobchodě znalost toho, kudy a jak často se zákazníci pohybují, proměňuje plánování rozvržení prodejny a zvyšuje prodeje. Se STICKER Motion můžete sledovat provoz v uličkách a určit nejfrekventovanější místa, a tím optimalizovat umístění produktů a zlepšit zážitek z nákupu.
+- Když v maloobchodě víte, kudy a jak často se zákazníci pohybují, můžete prodejnu lépe rozvrhnout a zvýšit prodeje. Se zařízením STICKER Motion sledujete provoz v uličkách a zjistíte nejfrekventovanější místa, podle kterých optimalizujete umístění zboží a zlepšíte zážitek z nákupu.
 
-#### Chytřejší komfort v rušných prostorách {#smarter-comfort-in-busy-spaces}
-- Průměrný člověk vyzáří asi 100 W tepla za hodinu. V místech s vysokou frekvencí lidí, jako jsou čekárny, pomáhá sledování pohybu, teploty a vlhkosti udržet komfort i efektivitu. STICKER Motion snímá všechny tři veličiny pro chytřejší regulaci klimatu.
+#### Komfort v rušných prostorách {#smarter-comfort-in-busy-spaces}
+- Průměrný člověk vydává teplo o výkonu asi 100 W. V místech, kudy prochází hodně lidí, například v čekárnách, pomáhá sledování pohybu, teploty a vlhkosti udržet pohodlí i hospodárný provoz. STICKER Motion měří všechny tři veličiny, takže regulace klimatu může být chytřejší.
 
 ## Ukázková zpráva JSON {#example-json-message}
 
@@ -55,10 +55,10 @@ import Image from '@theme/IdealImage';
 
 STICKER Motion používá standardní vzory stavové LED popsané v kapitole [**Signalizace LED**](/sticker/hardware-description#led-indication). Startovní sekvence, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
 
-Jeden detail je pro tuhle aplikaci specifický: detektor PIR a akcelerometr hlásí vždy jen **okamžitou** aktivaci, nikdy návrat do klidu. Každá detekovaná pohybová událost proto zobrazí sekvenci aktivace **zelená, pak oranžová** a sekvenci uvolnění oranžová-pak-zelená na téhle jednotce nikdy neuvidíte.
+Jedna věc je pro tuto aplikaci specifická: detektor PIR a akcelerometr hlásí vždy jen **okamžitou** aktivaci, nikdy návrat do klidu. Každá zachycená událost pohybu proto zobrazí sekvenci aktivace **zelená, pak oranžová** a sekvenci uvolnění (oranžová, pak zelená) na tomto zařízení nikdy neuvidíte.
 
 :::warning
-Blikání při pohybových událostech je pomůcka pro uvedení do provozu a **hodinu po zapnutí se zastaví**. Zařízení, které už při pohybu nebliká, ho stále detekuje a hlásí. Pokud potřebujete vizuální potvrzení zpět kvůli testování, jednotku vypněte a zapněte.
+Blikání při událostech pohybu je pomůcka pro uvádění do provozu a **hodinu po zapnutí přestane**. Zařízení, které už při pohybu nebliká, pohyb dál detekuje a hlásí. Pokud vizuální potvrzení při testování potřebujete znovu, odpojte zařízení od napájení a znovu ho připojte.
 :::
 
 ## Seznam změn {#changelog}
@@ -69,6 +69,6 @@ Blikání při pohybových událostech je pomůcka pro uvedení do provozu a **h
 
 :::info
 
-Kompletní přehled všech změn platformy najdete v [**seznamu změn STICKER**](/sticker/changelog).
+Úplný přehled všech změn platformy najdete v [**seznamu změn STICKER**](/sticker/changelog).
 
 :::

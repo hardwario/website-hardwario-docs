@@ -1,6 +1,6 @@
 ---
 slug: schneider-electric-iem3xxx-series
-title: Schneider Electric IEM3XXX Series
+title: Schneider Electric řady iEM3xxx
 ---
 
 import Image from '@theme/IdealImage';
@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div style={{ width: '376px', height: '376px' }}>
-        <Image img={require('../../../../../../chester/supported-devices/modbus/images/schneider-electric-iem3000-series.png')} alt="Elektroměr Schneider Electric iEM3255 na DIN lištu s LCD a tlačítky OK, ESC a se šipkami" />
+        <Image img={require('../../../../../../chester/supported-devices/modbus/images/schneider-electric-iem3000-series.png')} alt="Elektroměr Schneider Electric iEM3255 na DIN lištu s displejem LCD a tlačítky OK, ESC a se šipkou" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -21,21 +21,21 @@ import Image from '@theme/IdealImage';
 
 ### Popis {#description}
 
-Řada iEM3200 se skládá z kompaktních elektroměrů pro montáž na DIN lištu, které jsou určeny pro přesné a certifikované měření elektrické energie v **jednofázových** a **třífázových systémech**. Tyto elektroměry odpovídají směrnici MID, takže jsou vhodné jak pro fakturační měření, tak pro rozúčtování nákladů v bytových, komerčních a lehkých průmyslových instalacích.
+Řadu iEM3200 tvoří kompaktní elektroměry na DIN lištu pro přesné a certifikované měření elektrické energie v **jednofázových** a **třífázových soustavách**. Splňují směrnici MID, a hodí se proto pro fakturační měření i pro rozúčtování nákladů v bytových, komerčních a lehkých průmyslových instalacích.
 
 :::info
 
-Tento elektroměr **vyžaduje** použití **externího senzoru**, například měřicího transformátoru proudu (CT), pro měření proudu. Senzor je nutné vybrat podle očekávané zátěže a konfigurace systému.
+Tento elektroměr **vyžaduje** k měření proudu **externí senzor**, například proudový transformátor (CT). Senzor vyberte podle očekávané zátěže a konfigurace soustavy.
 
 :::
 
  ---
 
-### Instalace napájení {#power-installation}
+### Silové zapojení {#power-installation}
 
-#### Příklad instalace: Schneider Electric Energy Analyzer IEM3250 {#example-of-installation-schneider-electric-energy-analyzer-iem3250}
+#### Příklad zapojení: elektroměr Schneider Electric iEM3250 {#example-of-installation-schneider-electric-energy-analyzer-iem3250}
 
-| **Schneider Electric Energy Analyzer IEM3250** | |
+| **Elektroměr Schneider Electric iEM3250** | |
 |----------------------------------------|-----------------------------------------------|
 | Pin V1                                 | **L1**                                         |
 | Pin V2                                 | **L2**                                         |
@@ -44,49 +44,49 @@ Tento elektroměr **vyžaduje** použití **externího senzoru**, například m�
 
 :::info
 
- V tomto případě je také možné zapojit analyzátor energie v jednofázovém režimu, tedy připojit nulový vodič (N) na svorku Vn a fázi (L) na svorku V1.
+ Elektroměr lze zapojit i jednofázově: nulový vodič (N) připojte na svorku Vn a fázi (L) na svorku V1.
 
 :::
 
 ---
 
-### Instalace senzoru {#sensor-installation}
+### Zapojení senzoru {#sensor-installation}
 
-#### Příklad instalace: Carlo Gavazzi AC Current Transformer CTD-1X 100 5A XXX {#example-of-installation-carlo-gavazzi-ac-current-transformer-ctd-1x-100-5a-xxx}
+#### Příklad zapojení: proudový transformátor Carlo Gavazzi CTD-1X 100 5A XXX {#example-of-installation-carlo-gavazzi-ac-current-transformer-ctd-1x-100-5a-xxx}
 
 
-| **Electric Energy Analyzer IEM3250** | **Carlo Gavazzi AC Current Transformer CTD-1X 100 5A XXX** |
+| **Elektroměr Schneider Electric iEM3250** | **Proudový transformátor Carlo Gavazzi CTD-1X 100 5A XXX** |
 |----------------------------------------|-----------------------------------------------|
 | Pin S1                                 | **S1 (K)**                                         |
 | Pin S2                                | **S2 (L)**                                         |
 
-#### Schéma zapojení (IEM3250) {#connection-diagram-iem3250}
+#### Schéma zapojení (iEM3250) {#connection-diagram-iem3250}
 
-![Schéma zapojení (IEM3250)](../../../../../../chester/supported-devices/modbus/images/connection-diagram-iem3250.png)
+![Schéma zapojení elektroměru iEM3250](../../../../../../chester/supported-devices/modbus/images/connection-diagram-iem3250.png)
 
 ---
 
 ### Komunikace Modbus {#modbus-communication}
 
-#### Příklad zapojení komunikace Modbus: Schneider Electric Energy Analyzer IEM3250 {#example-of-modbus-communication-installation-schneider-electric-energy-analyzer-iem3250}
+#### Příklad zapojení komunikace Modbus: elektroměr Schneider Electric iEM3250 {#example-of-modbus-communication-installation-schneider-electric-energy-analyzer-iem3250}
 
-| **Schneider Electric Energy Analyzer IEM3250** | **CHESTER Modbus** |
+| **Elektroměr Schneider Electric iEM3250** | **CHESTER Modbus** |
 |---------------------------|--------------------|
 | Pin D0/-                     | Pin 6 (A−)      |
 | Pin D1/+                    | Pin 7 (B+)        |
 | Pin 0V                    | Pin 1 (GND)        |
 
-#### Komunikace Modbus (IEM3250) {#modbus-communication-iem3250}
+#### Komunikace Modbus (iEM3250) {#modbus-communication-iem3250}
 
-![Komunikace Modbus (IEM3250)](../../../../../../chester/supported-devices/modbus/images/modbus-communication-iem3250.png)
+![Zapojení komunikace Modbus elektroměru iEM3250](../../../../../../chester/supported-devices/modbus/images/modbus-communication-iem3250.png)
 
 ---
 
-### Procházení a konfigurace {#browsing-and-configuration}
+### Ovládání a konfigurace {#browsing-and-configuration}
 
 * `▼` **Tlačítko se šipkou**
-    1. Navigace v menu
-    2. Zvyšování/snižování hodnoty
+    1. Pohyb v menu
+    2. Zvýšení nebo snížení hodnoty
 
 * `OK` **Tlačítko Select / Enter / Menu**
   
@@ -94,33 +94,32 @@ Tento elektroměr **vyžaduje** použití **externího senzoru**, například m�
 
 ---
 
-### Konfigurace komunikace Modbus a převodu CT pro analyzátor energie {#modbus-communication-and-ct-ratio-configuration-for-energy-analyzer}
+### Konfigurace komunikace Modbus a převodu CT v elektroměru {#modbus-communication-and-ct-ratio-configuration-for-energy-analyzer}
 
-1. Stiskněte a držte tlačítka `OK` a `ESC`, dokud se nezobrazí výzva k zadání hesla.  
-2. Zadejte heslo pomocí tlačítka `▼` (**tlačítko se šipkou**). (Výchozí heslo nových elektroměrů je `0010`.)  
+1. Podržte současně tlačítka `OK` a `ESC`, dokud se nezobrazí výzva k zadání hesla.  
+2. Tlačítkem `▼` (**tlačítko se šipkou**) zadejte heslo. (Výchozí heslo nových elektroměrů je `0010`.)  
 3. Po zadání správného hesla se zobrazí konfigurační menu.  
-4. Tlačítkem `▼` (**tlačítko se šipkou**) přejděte na položku menu: `Communication – Change?`.  
-5. Stiskem tlačítka `OK` vstupte do nastavení komunikace.  
-6. Podle potřeby nastavte následující parametry:  
+4. Tlačítkem `▼` (**tlačítko se šipkou**) přejděte na položku `Communication – Change?`.  
+5. Tlačítkem `OK` otevřete nastavení komunikace.  
+6. Podle potřeby nastavte tyto parametry:  
    • Address  
    • Baud Rate  
    • Parity  
-   • Stop Bit 
    • Stop Bit   
 7. Tlačítkem `▼` (**tlačítko se šipkou**) pokračujte až na konec menu.  
-8. U položky `Exit Config` stiskněte tlačítko `OK` pro potvrzení a uložení nastavení.
+8. U položky `Exit Config` stiskněte tlačítko `OK`; tím nastavení potvrdíte a uložíte.
 
 #### Výchozí konfigurace komunikace Modbus {#default-modbus-communication-configuration}
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Adresa  | Přenosová rychlost | Parita | Stop bit |
 |---------|-----------|--------|-----------|
-| 1       | 9.6k      | None   | 1         |
+| 1       | 9.6k      | Žádná  | 1         |
 
 ---
 
-### Konfigurace komunikace Modbus pro CHESTER {#modbus-communication-configuration-for-chester}
+### Konfigurace komunikace Modbus v zařízení CHESTER {#modbus-communication-configuration-for-chester}
 
-Pomocí následujících příkazů nastavte parametry komunikace v terminálu CHESTER Terminal:
+Parametry komunikace nastavíte v terminálu CHESTER těmito příkazy:
 
 
 ```
@@ -136,7 +135,7 @@ config save
 
 ### Příklad volby převodu CT {#example-of-ct-ratio-selection}
 
-**Carlo Gavazzi AC Current Transformer CTD-1X 100 5A XXX**
+**Proudový transformátor Carlo Gavazzi CTD-1X 100 5A XXX**
 
 | Model       | Převod CT          |
 |-------------|-------------------|
@@ -144,10 +143,10 @@ config save
 
 :::info
 
- Převod CT se vybírá podle maximálního očekávaného primárního proudu. Pokud je například maximální proud v systému okolo 100 A, zvolí se CT 100:5 (CT 20), který jej pro měřicí přístroje sníží na 5 A.
+ Převod CT volte podle nejvyššího očekávaného primárního proudu. Je-li například maximální proud soustavy kolem 100 A, použijte CT 100:5 (převod 20), který proud pro měřicí přístroje sníží na 5 A.
 
 :::
->
+
 ### Měřené hodnoty {#measured-values}
 
 | Měřená hodnota | Klíč / cesta                                 |
@@ -155,8 +154,8 @@ config save
 | Proud          | E_ENERGY_METER.METER_4.CURRENT.MEASUREMENTS  |
 | Výkon          | E_ENERGY_METER.METER_4.POWER.MEASUREMENTS    |
 | Frekvence      | E_ENERGY_METER.METER_4.FREQUENCY.MEASUREMENTS|
-| Energie na vstupu | E_ENERGY_METER.METER_4.ENERGY_IN.MEASUREMENTS|
-| Energie na výstupu | E_ENERGY_METER.METER_4.ENERGY_OUT.MEASUREMENTS|
+| Odebraná energie | E_ENERGY_METER.METER_4.ENERGY_IN.MEASUREMENTS|
+| Dodaná energie | E_ENERGY_METER.METER_4.ENERGY_OUT.MEASUREMENTS|
 | Napětí L1      | E_ENERGY_METER.METER_4.VOLTAGE_L1.MEASUREMENTS|
 | Napětí L2      | E_ENERGY_METER.METER_4.VOLTAGE_L2.MEASUREMENTS|
 | Napětí L3      | E_ENERGY_METER.METER_4.VOLTAGE_L3.MEASUREMENTS|

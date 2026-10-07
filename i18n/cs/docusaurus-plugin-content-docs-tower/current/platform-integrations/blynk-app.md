@@ -5,23 +5,23 @@ title: Mobilní a webová aplikace Blynk
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'
 
-[**Blynk**](https://blynk.io) je nástroj pro tvorbu mobilního frontendu a zároveň signalizační prostředník (relay) přes MQTT. Umožňuje vám rychle vytvořit ovládání a zobrazení pro vaše IoT zařízení. Zde vás provedeme procesem sestavení hardwaru a jeho připojení do cloudu.
+[**Blynk**](https://blynk.io) je nástroj pro tvorbu mobilního rozhraní a zároveň signalizační prostředník (relay) přes MQTT. Rychle v něm vytvoříte ovládání a zobrazení pro svá zařízení IoT. Tento návod vás provede sestavením hardwaru a jeho připojením ke cloudu.
 
-Cloud je pak propojen s projektem ve vašem telefonu v aplikaci Blynk. Lokální část projektu je hostována na HARDWARIO Raspbian, který má připravené všechny potřebné komponenty pro propojení.
+Cloud se pak propojí s projektem v aplikaci Blynk ve vašem telefonu. Lokální část projektu běží na systému HARDWARIO Raspbian, který má pro propojení připravené všechny potřebné komponenty.
 
-Když bude v tomto příkladu vše hotové, měli byste být schopni zapínat a vypínat relé, rozsvítit a zhasnout LED pásek, měnit intenzitu světla pomocí slideru a také sledovat teplotu (a další sbírané hodnoty) doplněnou grafy.
+Na konci příkladu budete umět zapínat a vypínat relé, rozsvěcet a zhasínat LED pásek, měnit intenzitu světla posuvníkem a sledovat teplotu (a další sbírané hodnoty) včetně grafů.
 
 :::tip
 
-Několik příkladů, jak používat [**TOWER s Blynk, najdete na naší stránce hackster.io**](https://www.hackster.io/hardwario/projects?category_id=299).
+Příklady použití [**platformy TOWER s aplikací Blynk najdete na naší stránce na hackster.io**](https://www.hackster.io/hardwario/projects?category_id=299).
 
 :::
 
 <Image img={require('../../../../../tower/platform-integrations/images/blynk-app-showcase.png')} alt="Obrazovky aplikace Blynk: box s widgety, rozpracovaný dashboard a živé ukazatele s teplotou, vlhkostí a grafem CO2" />
 
-## Nastavení Blynk {#setup-blynk}
+## Nastavení aplikace Blynk {#setup-blynk}
 
-Začněte stažením **aplikace Blynk** a vytvořením účtu
+Nejdřív si stáhněte **aplikaci Blynk** a vytvořte si účet:
 - [**App Store**](https://apps.apple.com/us/app/blynk-iot/id1559317868)
 - [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk)
 
@@ -32,25 +32,25 @@ Pokud v Node-RED nevidíte uzly Blynk, nainstalujte balíček Blynk `node-red-co
 
 :::tip
 
-   Můžete se řídit jedním z [**tutoriálů k projektům**](https://www.hackster.io/hardwario/projects?category_id=299), kde je instalace, vytváření a propojování nodů vysvětleno podrobně.
+   Postupujte podle některého z [**návodů k projektům**](https://www.hackster.io/hardwario/projects?category_id=299), kde je instalace, vytváření a propojování uzlů podrobně vysvětlené.
 
 :::
 
-### Videotutoriál {#video-tutorial}
+### Videonávod {#video-tutorial}
 
-Pokud dáváte přednost videoprůvodci, můžete se podívat na toto video pro starší verzi Playground, funguje to stejně.
+Pokud dáváte přednost videonávodu, podívejte se na toto video. Je natočené ve starší verzi aplikace Playground, postup je ale stejný.
 
 <ReactPlayer controls src='https://youtu.be/cVC_tFuCYTM' />
 
-## ZeRGBA na hexadecimální RGB hodnoty – příklad {#zergba-to-hex-rgb-values---example}
+## Příklad: převod ZeRGBA na hexadecimální hodnoty RGB {#zergba-to-hex-rgb-values---example}
 
-Hodnoty barev z Blynk je potřeba převést na **správný hexadecimální RGB řetězec**. Můžete použít funkční blok v Node-RED a vložit do něj níže uvedený kód. Nezapomeňte nastavit **ZeRGBa do režimu MERGE** a rozsah hodnot musí být pro všechny tři kanály nastaven na **0–255**
+Hodnoty barev z aplikace Blynk je potřeba převést na **správný hexadecimální řetězec RGB**. Použijte uzel function v Node-RED a vložte do něj kód níže. Nezapomeňte přepnout **ZeRGBa do režimu MERGE** a nastavit rozsah hodnot všech tří kanálů na **0–255**.
 
 :::info
 
-Níže uvedený **JSON budete muset importovat** do **Node-RED**.
+**JSON** níže je potřeba **importovat** do **Node-RED**.
 
-Pokud nevíte, co je **Node-RED**, můžete si přečíst [**sekci Desktop Programming**](../desktop-programming/about-playground.md) nebo [**sekci Server na Raspberry Pi**](../server-raspberry-pi/index.md).
+Pokud nevíte, co je **Node-RED**, můžete si přečíst [**sekci Programování na počítači**](../desktop-programming/about-playground.md) nebo [**sekci Server na Raspberry Pi**](../server-raspberry-pi/index.md).
 
 :::
 
@@ -337,19 +337,19 @@ JSON flow ukázkového projektu Blynk
 </p>
 </details>
 
-Po importu byste měli vidět tento flow.
+Po importu by se měl zobrazit tento flow:
 
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('../../../../../tower/platform-integrations/images/blynk-flow-example.png')} alt="Node-RED flow propojující události zápisu Pin V1-V7 přes funkční nody do nodu mqtt" /></div>
+      <div><Image img={require('../../../../../tower/platform-integrations/images/blynk-flow-example.png')} alt="Flow v Node-RED, který vede události zápisu Pin V1-V7 přes uzly function do uzlu mqtt" /></div>
     </div>
     <div class="col col--2">
     </div>
   </div>
 </div>
 
-Nyní můžete naskenovat QR kód níže a importovat všechny potřebné widgety do aplikace Blynk
+Teď naskenujte QR kód níže, kterým do aplikace Blynk naimportujete všechny potřebné widgety.
 
 <div class="container">
   <div class="row">
@@ -361,12 +361,12 @@ Nyní můžete naskenovat QR kód níže a importovat všechny potřebné widget
   </div>
 </div>
 
-Po naskenování QR kódu v aplikaci byste měli vidět widgety rozmístěné takto
+Po naskenování QR kódu by aplikace měla zobrazit widgety rozmístěné takto:
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/platform-integrations/images/blynk-example-widget-showcase.png')} alt="Dashboard wireless-led-strip v Blynk se slidery, tlačítky V3-V6 a výběrem barvy LED pásku" /></div>
+      <div><Image img={require('../../../../../tower/platform-integrations/images/blynk-example-widget-showcase.png')} alt="Dashboard wireless-led-strip v Blynk s posuvníky, tlačítky V3-V6 a výběrem barvy LED pásku" /></div>
     </div>
     <div class="col col--6">
     </div>

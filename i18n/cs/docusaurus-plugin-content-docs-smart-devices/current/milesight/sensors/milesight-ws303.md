@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Senzor Milesight WS303 {#milesight-sensor-ws303}
 
-Milesight WS303 je **inteligentní detektor zaplavení** se **dvěma sondami z nerezové oceli**, které detekují vodu už od výšky 0,5 mm. Obsahuje **integrovaný bzučák** pro místní upozornění, odesílá notifikace přes **LoRaWAN** a nabízí až **5 let výdrže baterie**. Díky **kompaktní konstrukci s krytím IP67** ho lze instalovat i na obtížně dostupných místech.
+Milesight WS303 je **chytrý detektor úniku vody** se **dvěma sondami z nerezové oceli**, které zachytí vodu už od výšky hladiny 0,5 mm. **Vestavěný bzučák** spustí poplach přímo na místě, upozornění se zároveň odešle přes **LoRaWAN** a **baterie vydrží až 5 let**. Díky **kompaktní konstrukci s krytím IP67** ho lze instalovat i na obtížně dostupných místech.
 
 <div class="container">
   <div class="row">
@@ -24,23 +24,23 @@ Milesight WS303 je **inteligentní detektor zaplavení** se **dvěma sondami z n
 ## Odkazy k integraci {#integration-links}
 | Zdroj           | Odkaz                                                                |
 |-----------------|----------------------------------------------------------------------|
-| HARDWARIO Store | https://www.hardwario.store/p/milesight-ws303                        |
+| E-shop HARDWARIO | https://www.hardwario.store/p/milesight-ws303                        |
 | Oficiální stránka | https://www.milesight.com/iot/product/lorawan-sensor/ws303           |
 | Uživatelská příručka | https://resource.milesight.com/milesight/iot/document/ws303-user-guide-en.pdf |
-| Katalogový list | https://resource.milesight.com/milesight/iot/document/ws303-datasheet-en.pdf |
+| Produktový list | https://resource.milesight.com/milesight/iot/document/ws303-datasheet-en.pdf |
 
 ---
 
 ## Obecná konfigurace {#general-configuration}
-Konfiguruje se přes NFC pomocí [aplikace Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
+Zařízení se konfiguruje přes NFC v [aplikaci Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
 
-Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
+Postup konfigurace najdete v části 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
 
 ---
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách síťového serveru LoRaWAN najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
+Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options).
 
 ---
 
@@ -52,7 +52,7 @@ Informace o podporovaných platformách síťového serveru LoRaWAN najdete zde 
 | AppKey           | 5572404C696E6B4C6F52613230313823 |
 
 :::info
-**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení jedinečný a najdete ho vytištěný na etiketě zařízení.
+**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení jedinečný a je vytištěný na jeho štítku.
 :::
 
 ---
@@ -68,9 +68,9 @@ Informace o podporovaných platformách síťového serveru LoRaWAN najdete zde 
 
 :::info
 ### Přehled pojmů {#terminology-overview}
-**Dekodér** -> Převádí binární payload zařízení do čitelného JSON.<br />
-**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlinky.<br />
-**Kodek** -> Definuje pravidla pro dekódování a kódování (struktura, položky, porty), která používají síťové servery.
+**Dekodér** -> Převádí binární payload zařízení na čitelný JSON.<br />
+**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlink.<br />
+**Kodek** -> Definuje pravidla dekódování a kódování (strukturu, pole, porty), podle kterých pracují síťové servery.
 :::
 
 
@@ -94,13 +94,13 @@ Informace o podporovaných platformách síťového serveru LoRaWAN najdete zde 
 | Vysílací výkon | 16 dBm (868MHz) / 20 dBm (915MHz) / 19 dBm (470MHz) |
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class A |
-| **Detekce zaplavení** | |
+| **Detekce úniku** | |
 | Typ kapaliny | Vodivá kapalina |
-| Podmínka spuštění | ≥ 0,5 mm hladiny kapaliny |
+| Podmínka spuštění | Hladina kapaliny ≥ 0,5 mm |
 | **Ostatní** | |
 | Bzučák | Ano |
-| Konfigurace | NFC aplikace / downlink |
-| Pokročilé funkce | D2D Controller, alarm zaplavení |
+| Konfigurace | Aplikace NFC / downlink |
+| Pokročilé funkce | D2D Controller, alarm při úniku vody |
 | **Fyzické vlastnosti** | |
 | Napájení | 1 × CR2450 (590 mAh) |
 | Výdrž baterie | ~5,7 roku (typické použití, 25 °C) |
@@ -110,5 +110,5 @@ Informace o podporovaných platformách síťového serveru LoRaWAN najdete zde 
 | Rozměry | 63 × 63 × 14 mm |
 | Hmotnost | 36,4 g (včetně baterie) |
 | Materiál | ABS+PC, bílá |
-| Instalace | 3M páska / na stůl |
+| Instalace | Páska 3M / položení na stůl |
 | **Certifikace** | CE, FCC, RoHS |

@@ -4,18 +4,18 @@ title: "Jak na: Grafická knihovna"
 ---
 import Image from '@theme/IdealImage';
 
-Protože brána TOWER podporuje stále více typů LCD, vyvinuli jsme **univerzální grafickou knihovnu**, kterou lze použít s mnoha typy displejů.
+Platforma TOWER podporuje stále víc typů LCD, a proto jsme vyvinuli **univerzální grafickou knihovnu**, kterou lze použít s mnoha typy displejů.
 
-Funguje s naším [**LCD Modulem**](../../hardware-modules/about-lcd-module.md), s displeji **SSD1306**, **ST7735** a **MAX7219**, a dokonce i s digitálním LED páskem [**WS2812B**](./smart-led-strip.md) v maticové konfiguraci jako displeje.
+Funguje s naším modulem [**LCD Module**](../../hardware-modules/about-lcd-module.md), s displeji **SSD1306**, **ST7735** a **MAX7219**, a dokonce i s digitálním LED páskem [**WS2812B**](./smart-led-strip.md) zapojeným do matice jako displej.
 
 ## Odkazy {#references}
-- [**GFX SDK Module**](https://sdk.hardwario.com/group__twr__gfx.html)
-- [**Příklad v GitHub repozitáři**](https://github.com/hardwario/twr-infra-grid-lcd-mirror/blob/main/src/application.c)
+- [**Modul SDK pro GFX**](https://sdk.hardwario.com/group__twr__gfx.html)
+- [**Příklad v repozitáři na GitHubu**](https://github.com/hardwario/twr-infra-grid-lcd-mirror/blob/main/src/application.c)
 
 
 :::caution
 
-Před vypsáním jakéhokoli textu musíte vždy **nejprve nastavit font**. Jinak se nic nezobrazí. Nepoužité fonty jsou z důvodu optimalizace odstraněny.
+Než vypíšete jakýkoli text, musíte vždy **nejdřív nastavit font**, jinak se nic nezobrazí. Nepoužité fonty se kvůli optimalizaci odstraňují.
 
 Příklad: `twr_gfx_set_font(pgfx, &twr_font_ubuntu_13);`.
 
@@ -25,24 +25,24 @@ Příklad: `twr_gfx_set_font(pgfx, &twr_font_ubuntu_13);`.
 
 :::info
 
-Každá změna, kterou provedete – vykreslení textu nebo linky, rotace displeje atd. – se **provádí interně** a žádné změny nejsou vidět, dokud nezavoláte funkci `twr_gfx_update(pgfx)`.
+Každá změna, kterou uděláte (vykreslení textu nebo čáry, otočení displeje atd.), se **provede interně** a nic z toho není vidět, dokud nezavoláte funkci `twr_gfx_update(pgfx)`.
 
-Je to tak navrženo z důvodu nízké spotřeby.
+Je to tak kvůli nízké spotřebě.
 
 :::
 
-### [**LCD Modul**](../../hardware-modules/about-lcd-module.md) {#lcd-module}
+### [**LCD Module**](../../hardware-modules/about-lcd-module.md) {#lcd-module}
 
 :::info
 
-Toto je jednoduchý příklad výpisu `Hello world` na [**LCD Modul, který je dostupný pro TOWER Kit**](../../hardware-modules/about-lcd-module.md).
+Jednoduchý příklad, který vypíše `Hello world` na [**modul LCD Module ze sady TOWER Kit**](../../hardware-modules/about-lcd-module.md).
 
 :::
 
 <details>
 <summary>
 <b>
-Příklad kódu použití GFX s LCD Modulem
+Příklad kódu: GFX s modulem LCD Module
 </b>
 </summary>
 <p>
@@ -72,14 +72,14 @@ Příklad kódu použití GFX s LCD Modulem
 
 :::info
 
-Toto je příklad podobný předchozímu, ale zde k výpisu textu používáme OLED displej SSD1303.
+Příklad je podobný předchozímu, jen text vypisujeme na displej OLED SSD1303.
 
 :::
 
 <details>
 <summary>
 <b>
-Příklad kódu použití GFX s OLED SSD1303
+Příklad kódu: GFX s displejem OLED SSD1303
 </b>
 </summary>
 <p>
@@ -109,11 +109,11 @@ Příklad kódu použití GFX s OLED SSD1303
 
 :::info
 
-Můžete si také vytvořit vlastní driver pro nějaký speciální displej, který chcete použít.
+Pro speciální displej si můžete napsat i vlastní driver.
 
 :::
 
-Driver musí implementovat alespoň těchto 5 funkcí.
+Driver musí implementovat alespoň těchto 5 funkcí:
 
 ```c showLineNumbers
 #include <application.h>
@@ -136,7 +136,7 @@ void application_init(void)
 <details>
 <summary>
 <b>
-Příklad kódu implementace vlastního GFX driveru
+Příklad kódu: implementace vlastního driveru GFX
 </b>
 </summary>
 <p>

@@ -38,7 +38,7 @@ After that, you should be good to go.
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-You have to update the **UDEV rules** for the **JLink** to work. Just copy the command below and replace `PATH_TO_HARDWARIO_CODE` with the actual path to the `harwdario-code` folder.
+You have to update the **UDEV rules** for the **JLink** to work. Just copy the command below and replace `PATH_TO_HARDWARIO_CODE` with the actual path to the `hardwario-code` folder.
 
 ```bash
 sudo cp PATH_TO_HARDWARIO_CODE/hardwario-code/data/tower/toolchain/SEGGER/JLink/99-jlink.rules /etc/udev/rules.d/99-jlink.rule

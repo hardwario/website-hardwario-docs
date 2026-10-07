@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 [**The Core Module**](../../hardware-modules/about-core-module.md) comes with one button that can be used when there is no other module on top of the Core Module, otherwise, it is pretty hard to reach.
 
-If you want to use the button even when you can't reach the Core Module, you can use [**Button Module**](../../hardware-modules//about-button-module.md)
+If you want to use the button even when you can't reach the Core Module, you can use [**Button Module**](../../hardware-modules//about-button-module.md).
 
 :::note
 

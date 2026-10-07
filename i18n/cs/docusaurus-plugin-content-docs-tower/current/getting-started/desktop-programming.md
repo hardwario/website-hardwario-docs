@@ -5,11 +5,11 @@ title_meta: "Programování na počítači (HARDWARIO TOWER, první kroky)"
 ---
 import Image from '@theme/IdealImage';
 
-Naše nástroje jsme vyvinuli tak, aby byl začátek s TOWER snazší.
+Naše nástroje vám usnadní začátek s platformou TOWER.
 
-Pokud chcete TOWER jen začít používat, připojit zařízení k [**Radio Dongle**](../hardware-modules/about-radio-dongle.md), nahrát firmware do zařízení, analyzovat zprávy nebo si vyzkoušet základní vizuální programování v Node-RED, můžete použít HARDWARIO Playground.
+Pokud chcete platformu TOWER jen začít používat, připojit zařízení k donglu [**Radio Dongle**](../hardware-modules/about-radio-dongle.md), nahrát do nich firmware, analyzovat zprávy nebo si vyzkoušet základní vizuální programování v Node-RED, použijte aplikaci HARDWARIO Playground.
 
-Playground je naše desktopová aplikace pro **všechny hlavní operační systémy**, kterou si stačí **stáhnout** nebo **nainstalovat** do počítače a spravovat s ní zařízení TOWER.
+Playground je naše aplikace pro **všechny hlavní operační systémy**. Stačí si ji **stáhnout** nebo **nainstalovat** do počítače a můžete s ní spravovat zařízení TOWER.
 
 :::tip
 

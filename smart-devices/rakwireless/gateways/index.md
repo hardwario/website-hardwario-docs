@@ -6,7 +6,7 @@ description: "RAKwireless LoRaWAN gateways tested by HARDWARIO, with reference r
 
 import Image from '@theme/IdealImage';
 
-Here is a list of tested **RAKwireless gateways** by HARDWARIO with reference resources:
+Here is a list of **RAKwireless gateways** tested by HARDWARIO, with reference resources:
 
 | Name | Type | Overview | Product page | Purchase link |
 | :--- | :--- | :--- | :--- | :--- |
@@ -27,10 +27,10 @@ A cloud-based LoRaWAN Network Server suitable for both small and large deploymen
 
 1. Log in to your TTS Console (e.g., `hardwario-com.eu1.cloud.thethings.industries`).
 2. Go to **Gateways → Register gateway**.
-![TTS Register Geteway](images/tts-register-geteway.png)
+![TTS Register Gateway](images/tts-register-geteway.png)
 
 3. Paste your **Gateway EUI** (16 characters, found in the gateway Dashboard) and click **Confirm**.
-![TTS Register Geteway](images/tts-geteway-eui.png)
+![TTS Gateway EUI](images/tts-geteway-eui.png)
 
 
 
@@ -48,7 +48,7 @@ Enable the following:
 
 Click **Register gateway** and **download both API keys** (CUPS + LNS).
 
-![TTS Geteway Config](images/tts-geteway-config.png)
+![TTS Gateway Config](images/tts-geteway-config.png)
 
 5. A new window will appear. Click **Download LNS key**, then **Download CUPS key** to save both API keys to your device. Once both files are downloaded, click **I have downloaded the keys**.
 ![TTS Download API Keys](images/tts-api-keys.png)
@@ -56,7 +56,7 @@ Click **Register gateway** and **download both API keys** (CUPS + LNS).
 
 On your RAK gateway, navigate to **LoRa → Configuration** and select **Basics Station** as **Work mode**.
 - Make sure the **Frequency Plan** and **Country** match your regional settings.
-Click on **Configure Basics Station server setup** and fill the following field:
+Click on **Configure Basics Station server setup** and fill in the following fields:
 - Basics Station Server Type: **LNS Server**
 - Server URL: **wss://hardwario-com.eu1.cloud.thethings.industries**
 - Server Port: **8887**
@@ -88,8 +88,8 @@ An open-source LoRaWAN Network Server ideal for on-premise or private network in
 #### Gateway Configuration
 On your RAK gateway, navigate to **LoRa → Configuration** and select **Packet forwarder** as **Work mode**.
 - Make sure the **Frequency Plan** and **Country** match your regional settings.
-Select **Samtech UDP GWMP Protocol** as Protocol.
-In **UDP Protocol parameters** category fill the following field:
+Select **Semtech UDP GWMP Protocol** as Protocol.
+In **UDP Protocol parameters** category fill in the following fields:
 - Server address: **ADDRESS_OF_YOUR_CHIRPSTACK_SERVER**
 - Server Port up: **1700**
 - Server port down: **1700**

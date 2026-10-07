@@ -2,7 +2,7 @@
 slug: sticker-input-wiring
 title: Zapojení vstupů STICKER Input
 sidebar_label: Zapojení
-description: "Průvodce zapojením STICKER Input: nastavení přepínačů DIP a připojení vstupů 1-Wire, pulzních, kontaktních a analogových, včetně schémat."
+description: "Průvodce zapojením STICKER Input: nastavení přepínačů DIP a připojení vstupů 1-Wire, impulzních, kontaktních a analogových, včetně schémat."
 ---
 import Image from '@theme/IdealImage';
 
@@ -22,8 +22,8 @@ Zapojení pro 1-Wire (Dallas, ...):
 ---
 
 ## Vstup pro bezpotenciálový kontakt {#dry-contact-input}
-Zapojení pro DRY CONTACT:  
-- Pull-up 560 kΩ a uzemnění přes 33 kΩ.  
+Zapojení pro bezpotenciálový kontakt:  
+- Pull-up rezistor 560 kΩ a připojení k zemi přes 33 kΩ.  
 
 ![STICKER bezpotenciálový kontakt](../../../../../sticker/sticker-input-wiring/images/sticker-dry-contact.png)
 
@@ -35,6 +35,6 @@ Analogový vstup 0–24 V:
 
 ![STICKER analogový vstup](../../../../../sticker/sticker-input-wiring/images/sticker-analog-input.png)
 
-## Senzor SO {#so-sensor}
+## Senzor S0 {#so-sensor}
 
-![STICKER ](../../../../../sticker/sticker-input-wiring/images/sticker-so-sensor.png)
+![STICKER se senzorem S0](../../../../../sticker/sticker-input-wiring/images/sticker-so-sensor.png)

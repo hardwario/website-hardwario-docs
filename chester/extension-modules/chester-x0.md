@@ -47,11 +47,11 @@ Each channel can be used for these applications:
   * **X0A** with boost converter: 5 V
   * **X0B** w/o boost converter: standard 3.0 V (VDD solder bridge) or on request V+ battery rail (V+ solder bridge)
 
-_\* CHESTER-M main board has on Ax and Bx terminal block pins TVS protection that starts to protect GPIO above 28 V. Theoretically you can measure higher voltage than 26 V but the protection distorts measurements or you need to request or remove these TVS._
+_\* The CHESTER-M mainboard has TVS protection on the Ax and Bx terminal block pins that starts to protect GPIO above 28 V. Theoretically, you can measure voltages higher than 26 V, but the protection distorts the measurements, or you need to request the board without these TVS diodes or remove them._
 
 ## Electrical Specification
 
-* Continues output current: 50 mA
+* Continuous output current: 50 mA
 * Peak output current limit: 150 mA
 
 ## Channel Schematic Diagram
@@ -63,7 +63,7 @@ Depending on the application these configuration options are available for each 
 * Enable voltage divider (gain 1/11) (100 kΩ, 10 kΩ) (CLX)
 * Enable 5V boost converter (CHESTER-X0A only) (ONX)
 
-This picture show the electric circuit of each channel:
+This picture shows the electric circuit of each channel:
 
 ![Single-channel circuit: CHX input with varistor, PUX pull-up, PDX pull-down, CLX divider, and ONX 5V switch to GPX/AX](images/sc-chester-x0.png)
 
@@ -71,7 +71,7 @@ This picture show the electric circuit of each channel:
 
 The configuration depends on the application.
 
-Signals PUx, CLx, PDx, ONx refers to the schematic above. Green tick ✅ means that the I2C GPIO expander or X0 sends a logic high signal to this configuration signal.
+Signals PUx, CLx, PDx, ONx refer to the schematic above. Green tick ✅ means that the I2C GPIO expander or X0 sends a logic high signal to this configuration signal.
 However, this is just to understand the modes. You only need to know which mode is set in the `ctr_x0_set_mode` table column.
 
 | Application          | PUx | CLx | PDx | ONx | SDK `ctr_x0_set_mode`    |

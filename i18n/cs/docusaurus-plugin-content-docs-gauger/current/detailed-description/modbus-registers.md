@@ -1,11 +1,11 @@
 ---
 slug: modbus-registers
-title: Modbus registry
+title: Registry Modbus
 ---
 
-# Modbus registry {#modbus-registers}
+# Registry Modbus {#modbus-registers}
 
-Napočítaná data lze ze zařízení číst přes Modbus TCP. Celkem je k dispozici dvanáct holding registrů. Dva připadají na každý kanál: jeden obsahuje počet aktivací, druhý počet deaktivací. Další registr na každý kanál drží aktuální stav vstupu.
+Napočítané hodnoty lze ze zařízení vyčíst přes Modbus TCP. K dispozici je celkem dvanáct registrů typu holding. Na každý kanál připadají dva čítače: jeden počítá aktivace, druhý deaktivace. Třetí registr každého kanálu obsahuje aktuální stav vstupu.
 
 | Adresa  | Čtecí funkce     | Popis                                    |
 | :------ | :--------------- | :--------------------------------------- |

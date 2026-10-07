@@ -45,7 +45,7 @@ Thanks to its modular and open architecture, **FIBER** supports standard **Raspb
 | Feature | Description |
 |---|---|
 | **Embedded Linux Platform** | Compatible with Raspberry Pi OS or custom Yocto-based images. |
-| **Hybrid Sensor Integration** | Wireless sensors at 868 MHz ISM band plus 8 fully independent 1-Wire ports for wired sensors. |
+| **Hybrid Sensor Integration** | Wireless sensors in the 868/915 MHz ISM bands plus 8 fully independent 1-Wire ports for wired sensors. |
 | **Industrial-Grade Design** | –20 °C to +60 °C operating range, built around the Compute Module 4 for long-term reliability. |
 | **Flexible Connectivity** | Ethernet, Wi-Fi, BLE, or optional LTE Cat 4 module. |
 | **Local Visualization & Diagnostics** | Backlit LCD, per-channel status LEDs, and an integrated acoustic buzzer. |

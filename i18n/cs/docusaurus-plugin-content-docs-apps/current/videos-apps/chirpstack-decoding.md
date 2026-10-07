@@ -6,7 +6,7 @@ title_meta: "Dekódování dat (videonávody)"
 
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4 - jak dekódovat přicházející data LoRaWAN {#chirpstack-v4---how-to-decode-incoming-lorawan-data}
+# ChirpStack v4 – jak dekódovat přicházející data LoRaWAN {#chirpstack-v4---how-to-decode-incoming-lorawan-data}
 
 ## Přehled návodu {#tutorial-overview}
 

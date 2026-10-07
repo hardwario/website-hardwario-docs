@@ -1,7 +1,7 @@
 ---
 slug: hardware-description
 title: Popis hardwaru
-description: "Popis hardwaru GAUGER a technická specifikace: napájecí a vstupní napětí, digitální vstupy, rozhraní Wi-Fi a Ethernet a mechanické údaje."
+description: "Popis hardwaru zařízení GAUGER a technická specifikace: napájecí a vstupní napětí, digitální vstupy, rozhraní Wi-Fi a Ethernet a mechanické údaje."
 title_meta: "Popis hardwaru (GAUGER)"
 ---
 
@@ -9,19 +9,19 @@ title_meta: "Popis hardwaru (GAUGER)"
 
 ## Technická specifikace {#technical-specification}
 
-| **Elektrické**            |                  |
+| **Elektrické parametry**  |                  |
 | :------------------------ | ---------------: |
 | Minimální napájecí napětí |               9V |
 | Maximální napájecí napětí |              28V |
 | Maximální vstupní napětí  |              60V |
 | Prahové vstupní napětí    |              12V |
-| Typická spotřeba          |               1W |
-| Maximální spotřeba        |              24W |
-| **Fyzické**               |                  |
+| Typický příkon            |               1W |
+| Maximální příkon          |              24W |
+| **Mechanické parametry**  |                  |
 | Rozměry krabičky          |       80x90x33mm |
 | Materiál krabičky         |              ABS |
-| Provozní teplota          | -20 °C to +70 °C |
+| Provozní teplota          | -20 °C až +70 °C |
 | **Vstupy**                |                  |
-| Třída Ethernetu           |            CAT 5 |
+| Kategorie Ethernetu       |            CAT 5 |
 | Maximální vstupní napětí  |          28 V DC |
 | Typ vstupní logiky        |        NPN / PNP |

@@ -6,29 +6,29 @@ import Image from '@theme/IdealImage';
 
 # Instalace na macOS {#installation-on-macos}
 
-Následující článek vás provede instalací **CHESTER SDK** na **macOS**. Tento návod byl otestován na verzích **macOS 12 (Monterey)** a **macOS 13 (Ventura)**.
+Tento článek vás provede instalací **CHESTER SDK** v systému **macOS**. Postup je otestovaný na verzích **macOS 12 (Monterey)** a **macOS 13 (Ventura)**.
 
 :::caution
 
-Než začnete, ujistěte se, že splňujete požadavky uvedené v článku [Požadavky](./requirements.md).
+Než začnete, ověřte, že splňujete vše, co uvádí článek [Požadavky](./requirements.md).
 
 :::
 
 ## Postup instalace {#installation-steps}
 
-Kroky instalace jsou rozděleny do několika sekcí. Na konci budete schopni sestavit ukázku `blinky` z **CHESTER SDK**.
+Instalace je rozdělená do několika částí. Na konci sestavíte ukázku `blinky` z **CHESTER SDK**.
 
 ### Instalace správce balíčků {#install-package-manager}
 
 :::tip
 
-Tento krok můžete přeskočit, pokud již máte v systému nainstalovaný **Homebrew**.
+Pokud už máte v systému nainstalovaný **Homebrew**, tento krok přeskočte.
 
 :::
 
 1. Otevřete aplikaci **Terminál**.
 
-1. Nainstalujte správce balíčků **Homebrew** (pokud ještě není ve vašem systému nainstalován):
+1. Nainstalujte správce balíčků **Homebrew** (pokud ho v systému ještě nemáte):
 
    ```
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -50,7 +50,7 @@ brew install cmake ninja gperf python3 ccache qemu dtc wget libmagic
 
 ## Vytvoření aplikace {#create-application}
 
-1. Vytvořte adresář pro svou aplikaci a přepněte se do něj:
+1. Vytvořte adresář pro svou aplikaci a přejděte do něj:
 
    ```
    mkdir chester-app && cd chester-app
@@ -58,17 +58,17 @@ brew install cmake ninja gperf python3 ccache qemu dtc wget libmagic
 
    :::tip
 
-   Parametr `chester-app` změňte na libovolný požadovaný název adresáře vašeho projektu.
+   Místo `chester-app` můžete adresář projektu pojmenovat libovolně.
 
    :::
 
-1. Inicializujte virtuální prostředí **Pythonu**:
+1. Vytvořte virtuální prostředí pro **Python**:
 
    ```
    python3 -m venv .venv
    ```
 
-1. Aktivujte virtuální prostředí **Pythonu**:
+1. Aktivujte virtuální prostředí pro **Python**:
 
    ```
    source .venv/bin/activate
@@ -76,7 +76,7 @@ brew install cmake ninja gperf python3 ccache qemu dtc wget libmagic
 
    :::caution
 
-   Když zavřete shell (nebo svůj textový editor s integrovaným terminálem), musíte virtuální prostředí Pythonu znovu aktivovat. Zadejte tento příkaz (použitý v postupu výše): `source .venv/bin/activate`. V budoucnu můžete mít různé pracovní prostory **West** s odlišnými verzemi balíčků **Pythonu** a díky konceptu virtuálního prostředí nebudou trpět konflikty verzí.
+   Po zavření shellu (nebo textového editoru s integrovaným terminálem) musíte virtuální prostředí Pythonu znovu aktivovat příkazem z postupu výše: `source .venv/bin/activate`. Časem můžete mít několik pracovních prostorů **West** s různými verzemi balíčků pro **Python**; díky virtuálním prostředím mezi nimi nevzniknou konflikty verzí.
 
    :::
 
@@ -92,7 +92,7 @@ brew install cmake ninja gperf python3 ccache qemu dtc wget libmagic
    pip install west
    ```
 
-1. Inicializujte pracovní prostor **West** tam, kde chcete začít svůj projekt:
+1. Inicializujte pracovní prostor **West** ve složce, kde chcete projekt založit:
 
    ```
    west init -m https://github.com/hardwario/chester-skeleton.git --manifest-rev main
@@ -110,7 +110,7 @@ brew install cmake ninja gperf python3 ccache qemu dtc wget libmagic
    west update
    ```
 
-1. Nainstalujte závislosti **Pythonu**:
+1. Nainstalujte závislosti pro **Python**:
 
    ```
    west packages pip --install
@@ -128,9 +128,9 @@ brew install cmake ninja gperf python3 ccache qemu dtc wget libmagic
    west sdk install -t arm-zephyr-eabi
    ```
 
-## Testovací build a nahrání firmwaru {#test-build-and-flash}
+## Testovací sestavení a nahrání firmwaru {#test-build-and-flash}
 
-1. Přejděte do adresáře ukázky `blinky`:
+1. Přejděte do adresáře s ukázkou `blinky`:
 
    ```
    cd chester/samples/blinky
@@ -151,7 +151,7 @@ brew install cmake ninja gperf python3 ccache qemu dtc wget libmagic
         IDT_LIST:          0 GB         2 KB      0.00%
    ```
 
-1. Pokud je vaše zařízení CHESTER APP/BLE [**připojeno**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) k J-Link, jsou nainstalovány [**ovladače**](/chester/developer-tools/segger-j-link/) a [**je zapnuté napájení**](../developer-tools/power-profiler-kit-ii.md#basic-usage), můžete zkompilovaný kód blinky nahrát zadáním
+1. Pokud je port APP/BLE zařízení CHESTER [**připojený**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) k programátoru J-Link, [**ovladače**](/chester/developer-tools/segger-j-link/) jsou nainstalované a [**napájení je zapnuté**](../developer-tools/power-profiler-kit-ii.md#basic-usage), nahrajete zkompilovanou ukázku blinky příkazem:
 
    ```
    west flash

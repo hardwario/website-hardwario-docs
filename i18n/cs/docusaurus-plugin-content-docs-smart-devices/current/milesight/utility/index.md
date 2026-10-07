@@ -1,12 +1,12 @@
 ---
 slug: index
 title: Milesight – Pomocná zařízení
-description: "Pomocná zařízení Milesight otestovaná společností HARDWARIO, včetně referenčních zdrojů ke každému z nich."
+description: "Pomocná zařízení Milesight otestovaná v HARDWARIO, s odkazy na podklady ke každému z nich."
 ---
 
 import Image from '@theme/IdealImage';
 
-Zde je seznam **pomocných zařízení Milesight** otestovaných společností HARDWARIO včetně odkazů na zdroje:
+Přehled **pomocných zařízení Milesight**, která otestovala společnost HARDWARIO, s odkazy na další zdroje:
 
  Název                                  | Typ                          | Přehled                                        | Stránka produktu                                                          | Odkaz na nákup                                     |
 |----------------------------------------|------------------------------|------------------------------------------------|---------------------------------------------------------------------------|----------------------------------------------------|
@@ -16,7 +16,7 @@ Zde je seznam **pomocných zařízení Milesight** otestovaných společností H
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Pro provoz zařízení LoRaWAN si můžete vybrat mezi dvěma podporovanými platformami síťového serveru. Obě řešení umožňují správu bran, registraci koncových zařízení, konfiguraci profilů a zpracování dat payloadu.
+Zařízení LoRaWAN můžete provozovat na jedné ze dvou podporovaných platforem síťového serveru. V obou spravujete brány, registrujete koncová zařízení, konfigurujete profily a zpracováváte data z payloadu.
 
 ### Možnost 1: The Things Stack {#option-1-the-things-stack}
 

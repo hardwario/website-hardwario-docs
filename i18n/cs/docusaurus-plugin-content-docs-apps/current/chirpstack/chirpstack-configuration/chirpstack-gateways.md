@@ -11,16 +11,16 @@ Tento návod vás provede přidáním a nastavením brány v ChirpStack v4.
 
 ---
 
-V levém navigačním menu pod tenantem zvolte **Gateways** a pak klikněte vpravo nahoře na tlačítko **Add Gateway**.  
+V levém navigačním menu zvolte v části tenantu položku **Gateways** a pak klikněte vpravo nahoře na tlačítko **Add Gateway**.  
 
-Objeví se formulář, kde zadáte informace o bráně, jako je:  
+Objeví se formulář pro údaje o bráně, například:  
 - **Name**  
 - **Gateway ID**  
 - **Stats Interval**  
 
 Po vyplnění klikněte na **Submit**.  
 
-![ChirStack v4 - brány](../../../../../../apps/chirpstack/chirpstack-configuration/images/chirpstack-tutorial-1.png)
+![ChirpStack v4 – brány](../../../../../../apps/chirpstack/chirpstack-configuration/images/chirpstack-tutorial-1.png)
 
 :::info
 Pokud používáte naši **bránu EMBER**, **Gateway ID** najdete v **softwaru MikroTik** pod **LoRa → Devices**.  
@@ -30,11 +30,11 @@ Pokud používáte naši **bránu EMBER**, **Gateway ID** najdete v **softwaru M
 
 ## Brány EMBER – software MikroTik {#ember-gateways--mikrotik-software}
 
-Pokud jako bránu používáte naši **EMBER**, celá její konfigurace se dělá přímo v **systému MikroTik**.
-Po nastavení by se brána měla zobrazit a být připravená k připojení k systému ChirpStack.
+Pokud jako bránu používáte naše zařízení **EMBER**, celé ho nastavíte přímo v **systému MikroTik**.
+Po nastavení by se brána měla objevit a být připravená k připojení k systému ChirpStack.
 
 
-Zde je odkaz na **návod krok za krokem** pro **aktualizaci brány přes MikroTik**:
+**Návod krok za krokem** k **aktualizaci brány přes MikroTik** najdete zde:
 https://docs.hardwario.com/ember/mikrotik/gateway-update
 
 

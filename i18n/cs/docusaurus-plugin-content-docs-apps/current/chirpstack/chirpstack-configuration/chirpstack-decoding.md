@@ -7,24 +7,24 @@ import Image from '@theme/IdealImage';
 
 # Dekódování dat {#data-decoding}
 
-Tento návod vás provede nastavením kodeků payloadu v ChirpStack v4, aby se vaše data z LoRaWAN správně dekódovala a bylo je možné zobrazit.
+Tento návod vás provede nastavením kodeků payloadu v ChirpStack v4, aby se data ze sítě LoRaWAN správně dekódovala a dala se zobrazit.
 
 ---
 
-Data z LoRaWAN se přenášejí v komprimovaném formátu a je potřeba je dekódovat.  
+Data v síti LoRaWAN se přenášejí v komprimovaném formátu, a proto je potřeba je dekódovat.  
 
 1. Přejděte na **Device Profiles → Codec**.  
 2. Zvolte **Payload Codec** a vložte svůj dekódovací kód.  
 
 U zařízení **STICKER** zvolte jako payload codec **JavaScript functions** a klikněte na **Submit**.  
 
-![ChirStack v4 - brány](../../../../../../apps/chirpstack/chirpstack-configuration/images/chirpstack-tutorial-17.png)
+![ChirpStack v4 – kodek payloadu](../../../../../../apps/chirpstack/chirpstack-configuration/images/chirpstack-tutorial-17.png)
 
 #### Zobrazení dekódovaných dat {#viewing-decoded-data}
 
 1. Přejděte na **Applications → Events**.  
-2. Zvolte **Up** pro zobrazení uplink zpráv.  
-3. Nyní uvidíte **dekódovaná data**.  
+2. Zvolte **Up**, zobrazí se zprávy uplink.  
+3. Teď uvidíte **dekódovaná data**.  
 
 #### Ukázka kodeku (STICKER) {#example-of-codec-sticker}
 

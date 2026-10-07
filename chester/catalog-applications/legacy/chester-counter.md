@@ -20,7 +20,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 - [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
 - [**Common functionality**](/chester/catalog-applications/common-functionality) to know how LED, button and network configuration works.
-- [**Platform Management**](/chester/category/platform-connectivity) on how to work with the interactive console.
+- [**Platform Connectivity**](/chester/category/platform-connectivity) on how to work with the interactive console.
 
 :::
 
@@ -66,7 +66,7 @@ Firmware build shield options: `ctr_lte ctr_x0_a ctr_z`
 
 * When the DC power input changes, the timestamp of the change event is stored altogether with the **connected**/**disconnected** state, this information is buffered, and the buffer of the events is sent (at the latest) with the regular report (parameter `interval-report`).
 
-* Optionally, DC power input changes to the **connected** (parameter `backup-report-connected`) or **disconnected** (parameter `backup-report-disconnected`) states can be reported **immediately** or with a configurable **delay** (parameter `event-report-delay`) to allow capturing multiple consequent input changes.
+* Optionally, DC power input changes to the **connected** (parameter `backup-report-connected`) or **disconnected** (parameter `backup-report-disconnected`) states can be reported **immediately** or with a configurable **delay** (parameter `event-report-delay`) to allow capturing multiple subsequent input changes.
 
 * The maximum number of reports per hour is configurable (parameter `event-report-rate`). The event throttling limits communication bandwidth and preserves the battery lifespan.
 

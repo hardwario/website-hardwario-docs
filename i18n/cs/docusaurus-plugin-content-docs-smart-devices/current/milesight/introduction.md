@@ -1,35 +1,35 @@
 ---
 slug: /milesight
 title: Milesight
-description: "Milesight dodává chytré produkty pro IoT a videodohled se zaměřením na AIoT; HARDWARIO vybraná zařízení Milesight pro LoRaWAN testuje a dále prodává."
+description: "Milesight vyrábí chytrá zařízení IoT a produkty pro videodohled se zaměřením na AIoT; HARDWARIO vybraná zařízení LoRaWAN od Milesight testuje a dále prodává."
 ---
 import Image from '@theme/IdealImage';
 
 # Milesight {#milesight}
 
-[Milesight](https://www.milesight.com/iot-solutions) je rychle rostoucí high-tech společnost dodávající chytré IoT produkty a řešení pro videodohled se zaměřením na **AIoT (Artificial Intelligence of Things)**. Její řešení kombinují spolehlivou konektivitu s nejmodernějšími senzorickými technologiemi pro digitalizaci fyzických prostor.
+[Milesight](https://www.milesight.com/iot-solutions) je rychle rostoucí technologická firma, která dodává chytrá zařízení IoT a produkty pro videodohled se zaměřením na **AIoT (Artificial Intelligence of Things)**. Její řešení spojují spolehlivou konektivitu s nejmodernějšími senzorovými technologiemi a digitalizují fyzické prostory.
 
 ---
 
-Milesight je obzvláště známý svou produktovou řadou **LoRaWAN®**, která vyniká průmyslovou spolehlivostí v kombinaci s elegantním, moderním designem vhodným pro kancelářská a komerční prostředí.
+Společnost Milesight je známá především svou produktovou řadou **LoRaWAN®**, která spojuje průmyslovou spolehlivost s elegantním moderním designem vhodným do kanceláří a komerčních prostor.
 
 ### Hlavní kategorie produktů {#key-product-categories}
 
-Portfolio Milesight popsané v naší dokumentaci zahrnuje:
+Naše dokumentace pokrývá tyto produkty Milesight:
 
-* **Senzory prostředí (řada AM/EM):** Pokročilá zařízení pro monitorování kvality vnitřního ovzduší (IAQ), teploty, vlhkosti, CO2 a obsazenosti. Mnoho modelů má e-Ink displej pro přehlednou lokální vizualizaci dat.
-* **Brány LoRaWAN (řada UG):** robustní vnitřní i venkovní brány, které slouží jako most mezi senzory a cloudem, s vestavěným síťovým serverem a vysokým výpočetním výkonem.
-* **IoT kontroléry (řada UC):** Zařízení navržená k propojení starších senzorů a akčních členů (4-20mA, Modbus RS-485, GPIO) se sítěmi LoRaWAN.
+* **Senzory prostředí (řada AM/EM):** Pokročilá zařízení, která sledují kvalitu vnitřního ovzduší (IAQ), teplotu, vlhkost, CO2 a obsazenost. Mnoho modelů má displej e-Ink, který data přehledně zobrazuje přímo na místě.
+* **Brány LoRaWAN (řada UG):** Robustní vnitřní i venkovní brány, které propojují senzory s cloudem. Mají vestavěný síťový server a vysoký výpočetní výkon.
+* **Kontroléry IoT (řada UC):** Zařízení, která do sítí LoRaWAN připojí starší senzory a akční členy (4-20mA, Modbus RS-485, GPIO).
 
 ### Proč zvolit Milesight? {#why-choose-milesight}
 
-* **Snadná konfigurace:** Většina senzorů podporuje **konfiguraci přes NFC**, což umožňuje rychlé nasazení pomocí aplikace v chytrém telefonu bez otevírání krabičky zařízení.
+* **Snadná konfigurace:** Většina senzorů se **konfiguruje přes NFC**, takže je aplikací v chytrém telefonu rychle nasadíte, aniž byste otevírali krabičku.
 * **Prémiový design:** Na rozdíl od typického „průmyslově vypadajícího“ hardwaru jsou senzory Milesight (zejména řada AM) navrženy tak, aby hladce zapadly do moderních chytrých budov a kanceláří.
-* **Chytré a efektivní:** Funkce jako „Milesight D2D“ (Device-to-Device) umožňují přímou komunikaci mezi senzory a kontroléry pro řízení s extrémně nízkou latencí bez brány.
+* **Chytré a efektivní:** Díky funkcím jako „Milesight D2D“ (Device-to-Device) spolu senzory a kontroléry komunikují přímo, bez brány, takže řízení má extrémně nízkou latenci.
 
-### Aplikace {#applications}
+### Využití {#applications}
 
-Řešení Milesight jsou špičkovou volbou pro:
-* **Chytré budovy:** Monitorování IAQ, počítání osob a optimalizace pracovních prostor.
-* **Chytré HVAC:** Automatizované řízení ventilace na základě aktuálních hodnot CO2.
-* **Utility a průmysl:** Detekce úniků, monitorování hladin v nádržích a sledování spotřeby energie.
+Řešení Milesight se nejčastěji nasazují v těchto oblastech:
+* **Chytré budovy:** Sledování kvality vnitřního ovzduší (IAQ), počítání osob a optimalizace využití pracovních prostor.
+* **Chytré systémy HVAC:** Automatické řízení větrání podle aktuální koncentrace CO2.
+* **Energetika, vodárenství a průmysl:** Detekce úniků, monitorování hladin v nádržích a sledování spotřeby energie.

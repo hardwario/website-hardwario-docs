@@ -1,18 +1,18 @@
 ---
 slug: lorawan-modem-over-j-link
-title: LoRaWAN modem přes J-Link
+title: Modem LoRaWAN přes J-Link
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# LoRaWAN modem přes J-Link {#lorawan-modem-over-j-link}
+# Modem LoRaWAN přes J-Link {#lorawan-modem-over-j-link}
 
-Tento článek popisuje, jak nahrát firmware LoRaWAN modemu v zařízení CHESTER pomocí SEGGER J-Link.
+Tento článek popisuje, jak nahrát firmware modemu LoRaWAN v zařízení CHESTER programátorem SEGGER J-Link.
 
 ## Požadavky {#requirements}
 
-Budete potřebovat následující hardwarové a softwarové nástroje:
+Budete potřebovat tento hardware a software:
 
 * Jeden z těchto operačních systémů:
 
@@ -20,13 +20,13 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
   * **macOS 11** a **macOS 12**
   * **Windows 10** a **Windows 11**
 
-* Zařízení HARDWARIO CHESTER (bude nutné otevřít horní kryt krabičky se šesti šroubky)
+* Zařízení HARDWARIO CHESTER (bude potřeba otevřít horní kryt krabičky, který drží šest šroubů)
 
-* USB debugger/programátor **SEGGER J-Link** (včetně 10pinového **SWD** adaptéru + plochého kabelu)
+* USB debugger/programátor **SEGGER J-Link** (včetně 10pinového adaptéru **SWD** a plochého kabelu)
 
   :::tip
 
-  **HARDWARIO** dodává **SEGGER J-Link** + veškeré potřebné příslušenství na vyžádání.
+  **HARDWARIO** na požádání dodá **SEGGER J-Link** i veškeré potřebné příslušenství.
 
   :::
 
@@ -34,7 +34,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
   :::danger
 
-  Některé kabely **Micro-USB** poskytují pouze napájení a žádné datové signály. Pokud spojení mezi **SEGGER J-Link** a vaším systémem nefunguje, zkontrolujte v první řadě typ kabelu.
+  Některé kabely **Micro-USB** vedou jen napájení, a ne data. Pokud spojení mezi programátorem **SEGGER J-Link** a počítačem nefunguje, zkontrolujte nejdřív kabel.
 
   :::
 
@@ -90,7 +90,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
 ## Postup nahrání firmwaru {#flashing-procedure}
 
-Firmware LoRaWAN modemu do zařízení CHESTER nahrajete podle těchto kroků:
+Firmware modemu LoRaWAN nahrajete do zařízení CHESTER takto:
 
 1. Otevřete krabičku **CHESTER** (6 šroubků ze spodní strany).
 
@@ -98,15 +98,13 @@ Firmware LoRaWAN modemu do zařízení CHESTER nahrajete podle těchto kroků:
 
    :::caution
 
-   Jeden z vodičů na plochém kabelu mezi J-Link a CHESTER má červenou barvu. Tato červená barva označuje **signál číslo 1**. Tento červeně označený signál musí být orientován k černé tečce umístěné vedle konektoru SWD na základní desce zařízení CHESTER. Stejné pravidlo pro kabel platí na straně **SEGGER J-Link**.
+   Jeden z vodičů plochého kabelu mezi programátorem J-Link a zařízením CHESTER je červený a označuje **signál číslo 1**. Tento vodič musí směřovat k černé tečce vedle konektoru SWD na základní desce zařízení CHESTER. Stejné pravidlo platí i na straně programátoru **SEGGER J-Link**.
 
    :::
 
-1. Připojte druhý konec 10pinového plochého kabelu k adaptérové desce SEGGER J-Link (a zapojte adaptérovou desku do zařízení SEGGER J-Link).
+1. Druhý konec plochého kabelu připojte k desce adaptéru SEGGER J-Link (a adaptér zapojte do programátoru SEGGER J-Link).
 
-1. Připojte kabel Micro-USB k SEGGER J-Link a k vašemu počítači.
-
-1. Připojte kabel **Micro-USB** k vašemu počítači a k **SEGGER J-Link**.
+1. Kabelem **Micro-USB** propojte počítač s programátorem **SEGGER J-Link**.
 
 1. Stáhněte balíček firmwaru **LoRaWAN Modem** [**v1.4.1**](pathname:///download/hio-chester-lrw-v1.4.1.zip).
 
@@ -114,7 +112,7 @@ Firmware LoRaWAN modemu do zařízení CHESTER nahrajete podle těchto kroků:
 
 1. Otevřete aplikaci **Terminál** a přejděte do adresáře s rozbaleným balíčkem.
 
-1. Spusťte proces nahrání firmwaru:
+1. Spusťte nahrávání firmwaru:
 
    <Tabs groupId="operating-system">
 
@@ -144,7 +142,7 @@ Firmware LoRaWAN modemu do zařízení CHESTER nahrajete podle těchto kroků:
 
    </Tabs>
 
-1. Měli byste obdržet zprávu o úspěšném provedení operace.
+1. Měla by se zobrazit zpráva o úspěšném dokončení.
 
 1. Odpojte **SEGGER J-Link** od konektoru **SWD**.
 
@@ -152,6 +150,6 @@ Firmware LoRaWAN modemu do zařízení CHESTER nahrajete podle těchto kroků:
 
    :::danger
 
-   Vynechání kroku s odpojením a připojením napájení může vést k nedefinovanému chování LoRaWAN modemu.
+   Pokud tento krok vynecháte, může se modem LoRaWAN chovat nepředvídatelně.
 
    :::

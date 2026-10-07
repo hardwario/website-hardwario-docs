@@ -9,7 +9,7 @@ import Link from '@docusaurus/Link';
 
 Toto video se věnuje **konfiguraci zařízení přes NFC pomocí mobilního telefonu** a aplikace [**Milesight ToolBox**](/smart-devices/milesight/sensors/index/#general-configuration).
 
-V tomto návodu je jako příklad použit smartphone, konfiguraci lze však provést i pomocí **[Milesight Field Tester FT101](/smart-devices/milesight/utility/milesight-ft101)**.
+Jako příklad je ve videu použit chytrý telefon, konfigurovat ale můžete i pomocí **[Milesight Field Tester FT101](/smart-devices/milesight/utility/milesight-ft101)**.
 
 ---
 
@@ -33,6 +33,6 @@ V tomto návodu je jako příklad použit smartphone, konfiguraci lze však prov
 ---
 
 :::info
-Podrobný **textový návod ke konfiguraci** (včetně odkazů na aplikaci Milesight ToolBox) je k dispozici zde:  
+Podrobný **textový návod ke konfiguraci** (včetně odkazů na aplikaci Milesight ToolBox) najdete zde:  
 https://docs.hardwario.com/smart-devices/milesight/sensors/index#general-configuration
 :::

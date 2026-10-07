@@ -5,7 +5,7 @@ title: Vyhledání zařízení
 
 # Vyhledání zařízení {#device-discovery}
 
-Pokud jste zařízení nastavili tak, aby získávalo IP adresu přes DHCP, přidělenou adresu pravděpodobně nebudete znát. Zařízení najdete tak, že budete naslouchat paketům UDP broadcast na portu 53914. Každých několik sekund zařízení odešle broadcast paket s následujícím obsahem:
+Pokud jste zařízení nastavili tak, aby získávalo IP adresu přes DHCP, přidělenou adresu pravděpodobně nebudete znát. Zařízení najdete tak, že budete na portu 53914 naslouchat broadcastovým paketům UDP. Zařízení každých několik sekund rozešle paket s tímto obsahem:
 
 ```
 <device name>
@@ -13,4 +13,4 @@ Pokud jste zařízení nastavili tak, aby získávalo IP adresu přes DHCP, při
 	Eth: <Ethernet IP>
 ```
 
-Zařízení lze případně vyhledat i přes administrační rozhraní vašeho routeru nebo jiného síťového prvku. Zařízení poznáte podle hostname, které je vždy shodné s dříve nastaveným názvem zařízení.
+Zařízení můžete najít také v administraci routeru nebo jiného síťového prvku. Poznáte ho podle názvu hostitele (hostname), který je vždy stejný jako dříve nastavený název zařízení.

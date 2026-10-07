@@ -19,7 +19,7 @@ Open **HARDWARIO Manager** and choose **STICKER**.
 
 :::info About the screenshots
 The screenshots in this section come from an earlier build, so a few labels are
-capitalised differently from the current app, which writes the product name in
+capitalized differently from the current app, which writes the product name in
 full capitals throughout. The screens themselves are laid out as shown.
 :::
 

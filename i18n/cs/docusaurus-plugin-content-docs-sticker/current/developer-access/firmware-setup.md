@@ -5,10 +5,10 @@ import Image from '@theme/IdealImage';
 
 # Nastavení firmwaru {#firmware-setup}
 
-Nastavte si lokálně repozitář firmwaru pro zařízení STICKER, sestavte binární soubory, nahrajte **debug** image (který zapne interaktivní shell konzoli) a otevřete konzoli. Toto je vstupní bod pro workflow [**Developer Access**](../developer-mode.md).
+Tento návod popisuje, jak si na svém počítači připravit repozitář firmwaru STICKER, sestavit binární soubory, nahrát image **debug** (ten zapíná interaktivní konzoli shellu) a otevřít konzoli. Odtud začíná práce popsaná v části [**Přístup pro vývojáře**](../developer-mode.md).
 
 :::info Firmware v1.4.0
-Firmware pro zařízení STICKER je postaven na **Zephyr RTOS**. Tento návod popisuje nastavení vývojového workspace, kompilaci release/debug binárek, nahrání přes SWD a bezpečnostní model.
+Firmware zařízení STICKER je postavený na **Zephyr RTOS**. Návod popisuje přípravu vývojového prostředí (workspace), kompilaci binárních souborů release a debug, nahrání přes SWD a bezpečnostní model.
 :::
 
 ---
@@ -16,24 +16,24 @@ Firmware pro zařízení STICKER je postaven na **Zephyr RTOS**. Tento návod po
 ## Bezpečnostní model a architektura firmwaru {#security-model--firmware-architecture}
 
 Zařízení STICKER používá **plochý aplikační image** linkovaný přímo od začátku flash paměti:
-- **Žádný vzdálený bootloader ani FUOTA:** Zařízení neobsahuje MCUboot ani DFU partition. Není zde možnost aktualizace firmwaru přes vzduch (FUOTA) ani přes NFC. Původní příkaz `enter_dfu` byl záměrně odstraněn.
-- **Nulová vzdálená plocha pro útok:** Image firmwaru nelze přes LoRaWAN ani NFC vyměnit, downgradovat ani jinak upravit.
-- **Pouze fyzický přístup přes SWD:** Přeprogramování nebo aktualizace firmwaru v terénu vyžaduje striktně fyzický přístup k SWD programovacím ploškám pomocí sondy SEGGER J-Link (`make flash`).
+- **Žádný vzdálený bootloader ani FUOTA:** Zařízení neobsahuje MCUboot ani oddíl DFU. Firmware nelze aktualizovat bezdrátově (FUOTA) ani přes NFC. Původní příkaz `enter_dfu` byl záměrně odstraněn.
+- **Žádná vzdálená útočná plocha:** Image firmwaru nelze přes LoRaWAN ani NFC vyměnit, vrátit na starší verzi ani jinak upravit.
+- **Pouze fyzický přístup přes SWD:** Přeprogramování nebo aktualizace firmwaru v terénu vyžaduje vždy fyzický přístup k programovacím ploškám SWD a sondu SEGGER J-Link (`make flash`).
 
 ---
 
 ## Co budete potřebovat {#what-you-need}
 
 - **Zařízení STICKER** s fyzickým přístupem k SWD.
-- **Debug sonda SEGGER J-Link** (připojení SWD) pro nahrání firmwaru a výstup RTT konzole.
-- **Hostitelský systém:** Linux nebo macOS s Python 3, Git a CMake.
-  - *Uživatelé NixOS / Nix:* V rootu repozitáře je připraven soubor `shell.nix`, který automaticky nastaví ARM toolchain, J-Link a Python prostředí pomocí `nix-shell`.
+- **Ladicí sonda SEGGER J-Link** (připojení SWD) pro nahrání firmwaru a výstup konzole RTT.
+- **Hostitelský systém:** Linux nebo macOS s nástroji Python 3, Git a CMake.
+  - *Uživatelé NixOS / Nix:* V kořeni repozitáře je soubor `shell.nix`, který přes `nix-shell` automaticky připraví toolchain ARM, J-Link a prostředí Pythonu.
 
 ---
 
-## Nastavení lokálního vývojového workspace {#local-development-workspace-setup}
+## Příprava vývojového prostředí na počítači {#local-development-workspace-setup}
 
-Repozitář firmwaru je hostován na [**github.com/hardwario/sticker-firmware**](https://github.com/hardwario/sticker-firmware) a spravován pomocí nástroje **West** (Zephyr meta-tool).
+Repozitář firmwaru je na [**github.com/hardwario/sticker-firmware**](https://github.com/hardwario/sticker-firmware) a spravuje se nástrojem **West** (metanástroj projektu Zephyr).
 
 ### 1. Vytvoření workspace a virtuálního prostředí {#1-create-a-workspace--virtual-environment}
 
@@ -66,46 +66,46 @@ west sdk install
 
 ## Sestavení a nahrání firmwaru {#building-and-flashing}
 
-Všechny příkazy pro kompilaci a nahrání firmwaru se spouští z adresáře `app` ve workspace firmwaru:
+Všechny příkazy pro kompilaci a nahrání firmwaru se spouštějí z adresáře `app` ve workspace firmwaru:
 
 ```bash
 cd sticker/app
 ```
 
-### Build cíle {#build-targets}
+### Cíle sestavení {#build-targets}
 
 | Příkaz | Popis |
 |---|---|
-| `make` | Sestaví **produkční release** image (shell konzole vypnuta pro maximální úsporu energie). |
-| `make debug` | Sestaví **debug** image (interaktivní shell konzole zapnuta). |
-| `make flash` | Nahraje zkompilovanou binárku do zařízení přes J-Link SWD. |
-| `make clean` | Vymaže build artefakty a CMake cache. |
+| `make` | Sestaví **produkční image release**; konzole shellu je kvůli maximální úspoře energie vypnutá. |
+| `make debug` | Sestaví image **debug** se zapnutou interaktivní konzolí shellu. |
+| `make flash` | Nahraje zkompilovaný binární soubor do zařízení přes J-Link SWD. |
+| `make clean` | Smaže výstupy sestavení a cache CMake. |
 | `make rttt` | Spustí interaktivní terminálovou konzoli RTT. |
 | `make format` | Naformátuje zdrojový kód pomocí `clang-format`. |
 
-**Sestavení a nahrání debug image:**
+**Sestavení a nahrání image debug:**
 
 ```bash
 make debug
 make flash
 ```
 
-:::caution Chraňte NVS úložiště a provisioning klíče
-Příkaz `make flash` spustí standardní `west flash`, který přepíše pouze aplikační flash partition. **Nikdy nespouštějte úplné smazání čipu** (`west flash --erase` ani J-Link mass erase), protože to vymaže nevolatilní úložiště (NVS) obsahující sériové číslo, tajný klíč, claim token a přihlašovací údaje LoRaWAN.
+:::caution Chraňte úložiště NVS a klíče zařízení
+Příkaz `make flash` spustí standardní `west flash`, který přepíše jen aplikační oddíl flash paměti. **Nikdy nespouštějte úplné smazání čipu** (`west flash --erase` ani J-Link mass erase), protože to vymaže nevolatilní úložiště (NVS) se sériovým číslem, secret key, claim tokenem a přístupovými údaji LoRaWAN.
 :::
 
 ---
 
 ## Otevření konzole {#opening-the-console}
 
-Jakmile je nahrán debug image a připojena sonda J-Link, spusťte RTT terminál z adresáře `app`:
+Jakmile je nahraný image debug a připojená sonda J-Link, spusťte terminál RTT z adresáře `app`:
 
 ```bash
 make rttt
 ```
 
-Otevře se interaktivní shell prompt, kde můžete spouštět příkazy `config`, `alarm`, `history`, `clock` a `ats`.
+Otevře se interaktivní příkazový řádek shellu, ve kterém můžete spouštět příkazy `config`, `alarm`, `history`, `clock` a `ats`.
 
 :::info Automatické uspání konzole
-V debug buildech zůstává MCU aktivní, aby byla RTT konzole responzivní, což zvyšuje odběr z baterie. Pokud není po dobu `CONFIG_APP_DEBUG_AUTOSUSPEND_S` (výchozí: 2 hodiny) detekována žádná aktivita na konzoli, zařízení přejde do hlubokého spánku. Pro opětovné zpřístupnění konzole resetujte MCU nebo odpojte a znovu připojte napájení. Produkční release buildy se takto nechovají a mezi intervaly měření přecházejí do hlubokého spánku okamžitě.
+V sestavení debug zůstává MCU aktivní, aby konzole RTT pohotově reagovala, a to zvyšuje odběr z baterie. Pokud na konzoli po dobu `CONFIG_APP_DEBUG_AUTOSUSPEND_S` (výchozí: 2 hodiny) neprobíhá žádná aktivita, zařízení přejde do hlubokého spánku. Konzoli znovu zpřístupníte resetem MCU nebo odpojením a připojením napájení. Produkčních sestavení release se to netýká; mezi intervaly měření přecházejí do hlubokého spánku okamžitě.
 :::

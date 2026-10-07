@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-hydroclima-2.png')} width={376} height={376} alt="Bílý indikátor rozdělovače tepla BMeters Hydroclima 2 s čárovým kódem, displejem a tlačítkem" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-hydroclima-2.png')} width={376} height={376} alt="Bílý indikátor topných nákladů BMeters Hydroclima 2 s čárovým kódem, displejem a tlačítkem" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -23,34 +23,34 @@ import Image from '@theme/IdealImage';
 
 ## Popis {#description}
 
-HYDROCLIMA-2 je indikátor rozdělovače nákladů na teplo se dvěma teplotními senzory a záznamem teploty okolí. Nabízí bezdrátovou komunikaci wM-Bus, desetiletou životnost baterie a poskytuje až 24 měsíců historických statistik spotřeby a teplot.
+HYDROCLIMA-2 je indikátor topných nákladů se dvěma teplotními senzory, který zaznamenává i teplotu okolí. Komunikuje bezdrátově přes wireless M-Bus, baterie vydrží 10 let a zařízení uchovává až 24 měsíců historie spotřeby a teplot.
 
 ## Konfigurace {#configuration}
 
 :::info
 
-Zařízení je dodáváno **předkonfigurované**, lze jej však přeprogramovat a přizpůsobit pomocí [**BMetering Software**](http://keygenerator.bmetering.com/API/DownloadBMetering).
+Zařízení se dodává **předkonfigurované**, ale v programu [**BMetering Software**](http://keygenerator.bmetering.com/API/DownloadBMetering) ho můžete přeprogramovat a upravit.
 
 :::
 
 ### Postup konfigurace {#configuration-procedure}
 
-Programování a konfigurace zařízení se provádí bezdrátově pomocí [**přijímače RFM-RX2**](https://www.bmeters.com/en/products/rfm-rx2/) a [**BMetering Software**](http://keygenerator.bmetering.com/API/DownloadBMetering).
+Indikátor se programuje a nastavuje rádiem pomocí [**přijímače RFM-RX2**](https://www.bmeters.com/en/products/rfm-rx2/) a programu [**BMetering Software**](http://keygenerator.bmetering.com/API/DownloadBMetering).
 
-Pro spuštění konfiguračního postupu musí být software BMetering správně nastaven:
+Program BMetering musí být správně nastavený. Konfiguraci pak spustíte tlačítkem na indikátoru:
 
-- u indikátoru ve výrobním stavu stiskněte tlačítko na < 1 s
-- u již nakonfigurovaného indikátoru stiskněte tlačítko na > 5 s, dokud se na displeji
-nezobrazí zpráva „rF“.
+- indikátor v továrním stavu: stiskněte tlačítko na < 1 s,
+- již nastavený indikátor: podržte tlačítko > 5 s, dokud se na displeji
+nezobrazí „rF“.
 
-Způsob konfigurace indikátoru je popsán v dokumentaci
-týkající se **uživatelské příručky softwaru Bmetering**.
+Postup konfigurace indikátoru popisuje
+**uživatelská příručka programu BMetering**.
 
 ## Konfigurace adresy wM-Bus {#wireless-m-bus-address-configuration}
 
-### Kde na zařízení najít adresu {#where-to-find-the-address-on-the-device}
+### Kde na zařízení najdete adresu {#where-to-find-the-address-on-the-device}
 
-Adresa se nachází **nad čárovým kódem a pod displejem**, jak je znázorněno na obrázku níže (8 číslic).
+Adresa (8 číslic) je **nad čárovým kódem a pod displejem**, viz obrázek níže.
 
 <div class="container">
   <div class="row">
@@ -66,19 +66,19 @@ Adresa se nachází **nad čárovým kódem a pod displejem**, jak je znázorně
 
 ---
 
-### Mapování adresy wM-Bus do zařízení CHESTER {#mapping-the-wm-bus-address-to-chester}
+### Přiřazení adresy wM-Bus k zařízení CHESTER {#mapping-the-wm-bus-address-to-chester}
 
-Mapování se musí provést pomocí **CHESTER Terminal**, například s využitím:
+Adresu přiřadíte v **terminálu CHESTER**, například v těchto aplikacích:
 
 - [**HARDWARIO Monitor (Windows)**](https://github.com/hardwario/hio-monitor/releases)
 - [**HARDWARIO Manager (Android)**](https://play.google.com/store/apps/details?id=com.hardwario.manager)
-- [**terminálu v Google Chrome**](https://terminal.hardwario.com/)
+- [**Terminál pro Google Chrome**](https://terminal.hardwario.com/)
 
 ---
 
-### Správa a přidávání adres zařízení wM-Bus v zařízení CHESTER {#managing-and-adding-wm-bus-device-addresses-in-chester}
+### Přidávání a správa adres wM-Bus v zařízení CHESTER {#managing-and-adding-wm-bus-device-addresses-in-chester}
 
-Zde můžete spravovat seznam **adres wM-Bus** (**přidávat/odebírat**), upravovat nastavení skenování a prohlédnout si příklady konfigurací pro typická nasazení.
+Správu seznamu **adres wM-Bus** (**přidávání a odebírání**), nastavení skenování i příklady konfigurací pro typická nasazení popisuje dokumentace aplikace CHESTER wM-Bus:
 
 - [**Konfigurace seznamu adres**](/chester/catalog-applications/chester-wm-bus#address-list-configuration): **správa a úprava** seznamu propojených **adres** wM-Bus
 - [**Konfigurace skenování**](/chester/catalog-applications/chester-wm-bus#scan-configuration): **úprava nastavení skenování** pro komunikaci se zařízeními
@@ -88,10 +88,10 @@ Zde můžete spravovat seznam **adres wM-Bus** (**přidávat/odebírat**), uprav
 
 ## Šifrování zpráv a správa klíčů {#message-encryption-and-key-management}
 
-**Přenášené zprávy jsou šifrované**, aby se optimalizovala spotřeba energie při přenosu dat, což prodlužuje celkovou životnost baterie.
+**Odesílané zprávy jsou šifrované**, aby se při přenosu dat šetřila energie a prodloužila výdrž baterie.
 
-**Přijatá data je proto nutné dešifrovat**, což se provádí pomocí **dešifrovacích klíčů**.  
-K tomu existují dvě možnosti:
+**Přijatá data je proto nutné dešifrovat** pomocí **dešifrovacích klíčů**.  
+Máte dvě možnosti:
 
 - [**HARDWARIO Cloud**](/chester/catalog-applications/chester-wm-bus#hardwario-cloud--decryption-keys): návod, jak zadávat a spravovat dešifrovací klíče
-- [**Stránka pro dešifrování**](https://wmbusmeters.org/): online nástroj pro manuální dešifrování a analýzu dat
+- [**Dešifrovací stránka**](https://wmbusmeters.org/): online nástroj pro ruční dešifrování a analýzu dat

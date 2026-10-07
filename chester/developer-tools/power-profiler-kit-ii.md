@@ -20,13 +20,13 @@ You can purchase **Power Profiler Kit II** directly from **HARDWARIO**.
 
 ## Setup
 
-In order to use **Power Profiler Kit II**, you must install or run ** nRF Connect for Desktop**.
+In order to use **Power Profiler Kit II**, you must install or run **nRF Connect for Desktop**.
 
 You can download installation package for your operating system [here](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-desktop/Download#infotabs).
 
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
-Run installator and install application.
+Run the installer and install the application.
 
 </TabItem>
 <TabItem value="linux" label="Linux">
@@ -56,7 +56,7 @@ Because **nRF Connect for Desktop** is multitool application, you have to instal
 </div>
 <br />
 
-You should see **Power Profiler** at the top of the apps, when is installation complete. You will start application by clicking at **Open** button.
+You should see **Power Profiler** at the top of the apps, when the installation is complete. You will start application by clicking at **Open** button.
 
 <div class="container">
     <div class="row">
@@ -69,7 +69,7 @@ You should see **Power Profiler** at the top of the apps, when is installation c
 </div>
 <br />
 
-After clicking at **Open** button, you should see window similir to this one:
+After clicking at **Open** button, you should see a window similar to this one:
 
 <div class="container">
     <div class="row">

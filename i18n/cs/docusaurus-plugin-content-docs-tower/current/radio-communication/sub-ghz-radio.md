@@ -4,46 +4,46 @@ title: Sub-GHz rádio
 ---
 import Image from '@theme/IdealImage';
 
-Technologie rádiové komunikace je srdcem **TOWER Kit**. Tento dokument popisuje základní fungování rádia.
+Rádiová komunikace je srdcem sady **TOWER Kit**. Tento dokument popisuje, jak rádio v základu funguje.
 
-S naší sadou IoT Kit si můžete vybudovat vlastní síť v pásmu Sub-GHz.
+S naší sadou IoT Kit si vybudujete vlastní síť v pásmu sub-GHz.
 
 :::info
 
-Rádiová frekvence **868 MHz (pro Evropu)** nebo **915 MHz (pro USA)** umožňuje komunikaci na velké vzdálenosti a nabízí nízkou spotřebu. Protože se toto frekvenční pásmo používá pro signálové zprávy, nesetkáte se s rušením od streamovacích protokolů jako Wi-Fi, Bluetooth apod.
+Frekvence **868 MHz (pro Evropu)** nebo **915 MHz (pro USA)** umožňuje komunikaci na velké vzdálenosti s nízkou spotřebou. Toto pásmo slouží pro krátké signální zprávy, takže vás nebudou rušit streamovací protokoly jako Wi-Fi nebo Bluetooth.
 
 :::
 
 ## Dosah komunikace {#communication-range}
 
-Provedli jsme několik testů rádiové komunikace. Tvrdíme, že z jednoho bodu obvykle dokážete pokrýt rádiovým signálem celý dům.
+Rádiovou komunikaci jsme několikrát testovali a můžeme říct, že z jednoho místa obvykle pokryjete signálem celý dům.
 
-Na druhou stranu komunikační vzdálenost ovlivňuje několik faktorů – nejdůležitější je stavební materiál, ze kterého je dům postaven, překážky v cestě, rušení od jiných spotřebičů apod.
+Dosah ale ovlivňuje řada faktorů. Nejdůležitější je materiál, ze kterého je dům postavený, překážky v cestě signálu, rušení od jiných spotřebičů apod.
 
-Jediným objektivním měřením dosahu rádiové komunikace je takzvaná vzdálenost na přímou viditelnost měřená venku.
+Jediným objektivním měřítkem dosahu je takzvaný dosah při přímé viditelnosti, měřený venku.
 
 :::tip
 
-Dosáhli jsme [**více než 500 metrů**](https://www.youtube.com/watch?v=6zdQQdwV3GQ&feature=youtu.be) komunikačního dosahu na přímou viditelnost mezi dvěma moduly Core Module.
+Mezi dvěma moduly Core Module jsme při přímé viditelnosti dosáhli dosahu [**více než 500 metrů**](https://www.youtube.com/watch?v=6zdQQdwV3GQ&feature=youtu.be).
 
-Také jediný Radio Dongle / Core Module stačí na pokrytí třípodlažního domu a celé zahrady kolem něj.
+Jediný Radio Dongle nebo Core Module také pokryje třípodlažní dům i celou zahradu kolem něj.
 
 :::
 
 :::note
 
-Pokud by dosah rádiové komunikace nestačil, lze síť rozšířit na úrovni IP díky replikaci MQTT zpráv na hlavní server.
+Pokud by dosah rádiové komunikace nestačil, lze síť rozšířit na úrovni IP díky replikaci zpráv MQTT na hlavní server.
 
 :::
 
 ## Topologie rádiové sítě {#radio-topology}
 
-TOWER podporuje pouze **topologii hvězdy**. Taková konfigurace nabízí vysokou spolehlivost, snadné řešení problémů a deterministickou dobu provozu z baterií.
+TOWER podporuje jen **topologii hvězda**. Ta je vysoce spolehlivá, snadno se v ní hledají chyby a výdrž na baterie je předvídatelná.
 
-V rádiové síti TOWER existují dva typy zařízení.
+V rádiové síti TOWER jsou dva typy zařízení:
 
-- [**Radio Dongle**](../hardware-modules/about-radio-dongle.md): můžete spárovat **až 32 zařízení**
-- **Radio Node**: každý uzel musí být spárován s bránou. Uzlem může být nějaký senzor (např. teploty, vlhkosti, CO2) nebo akční člen (výkonové relé, LCD, ovladač LED pásku).
+- [**Radio Dongle**](../hardware-modules/about-radio-dongle.md): lze s ním spárovat **až 32 zařízení**
+- **Radio Node**: každý uzel musí být spárovaný s bránou. Uzlem může být senzor (např. teploty, vlhkosti, CO2) nebo akční člen (výkonové relé, LCD, ovladač LED pásku).
 
 :::info
 
@@ -53,21 +53,21 @@ Více o párování uzlů se dočtete v [**kapitole Správa rádiové sítě**](
 
 ## Řízení spotřeby rádia {#radio-power-management}
 
-Protože je brána trvale napájena, neustále naslouchá zprávám. Díky tomu by odeslání zprávy z uzlu do brány nemělo být problém.
+Brána je trvale napájená, takže zprávám naslouchá neustále. Odeslat zprávu z uzlu do brány proto není problém.
 
-Naproti tomu všechny bateriově napájené uzly by měly mít rádio většinu času vypnuté, protože spotřebovává hodně energie.
+Uzly napájené z baterií by naopak měly mít rádio většinu času vypnuté, protože spotřebovává hodně energie.
 
-To není problém, pokud chcete ze zařízení pouze odesílat zprávy – zařízení jednoduše zapne rádio, odešle zprávu a rádio zase vypne.
+To nevadí, pokud chcete ze zařízení jen odesílat zprávy: zařízení zapne rádio, odešle zprávu a rádio zase vypne.
 
-Pokud chcete rádiový uzel ovládat z brány, například když máte k rádiovému uzlu připojený [**Relay Module**](../hardware-modules/about-relay-module.md) (nízkopříkonové relé) a chcete jej ovládat odesíláním zpráv z brány, existují dva způsoby.
+Pokud chcete rádiový uzel ovládat z brány, například uzel s modulem [**Relay Module**](../hardware-modules/about-relay-module.md) (relé s nízkou spotřebou), kterému posíláte příkazy z brány, máte dvě možnosti.
 
 ### Použití napájecího adaptéru {#using-power-adapter}
 
-Při použití trvale napájeného modulu [**Power Module**](../hardware-modules/about-power-module.md) nebo [**Core Module**](../hardware-modules/about-core-module.md) můžete ve firmwaru povolit rádiový režim `TWR_RADIO_MODE_NODE_LISTENING`.
+Pokud je modul [**Power Module**](../hardware-modules/about-power-module.md) nebo [**Core Module**](../hardware-modules/about-core-module.md) trvale napájený, můžete ve firmwaru zapnout rádiový režim `TWR_RADIO_MODE_NODE_LISTENING`.
 
 :::note
 
-Toto lze využít pouze díky trvalému napájení. Pro bateriově napájená zařízení je to na delší dobu nepoužitelné.
+Funguje to jen díky trvalému napájení. Pro zařízení na baterie se tento režim na delší dobu nehodí.
 
 :::
 
@@ -80,26 +80,26 @@ void application_init(void)
 
 ### Nastavení časového limitu naslouchání pro spící uzel {#set-listening-timeout-for-sleeping-node}
 
-Při inicializaci rádia můžete nastavit časový limit naslouchání pro spící uzel pomocí `twr_radio_set_rx_timeout_for_sleeping_node(TIME_IN_MILLISECONDS)`.
+Při inicializaci rádia můžete nastavit časový limit naslouchání pro spící uzel funkcí `twr_radio_set_rx_timeout_for_sleeping_node(TIME_IN_MILLISECONDS)`.
 
 :::info
 
 V příkladu níže se teplota odesílá každých 10 minut a po odeslání teploty bude uzel naslouchat nastavených 400 milisekund.
 
-Díky tomu můžete čekat na zprávu s teplotou například ve [**flow v Node-RED**](../desktop-programming/node-red-programming.md) a na tuto zprávu okamžitě reagovat odesláním požadovaného stavu modulu Relay Module. Stav relé si samozřejmě musíte ve flow uložit a odeslat jej až poté, co přijde zpráva s teplotou.
+Například ve [**flow v Node-RED**](../desktop-programming/node-red-programming.md) tak můžete počkat na zprávu s teplotou a hned na ni odpovědět požadovaným stavem modulu Relay Module. Stav relé si přitom musíte ve flow uložit a poslat ho až po příchodu zprávy s teplotou.
 
 :::
 
 :::caution
 
-Toto je použitelné pouze pro zařízení, u kterých může být před provedením změny dlouhá prodleva.
+Hodí se to jen pro zařízení, u kterých nevadí delší prodleva, než se změna projeví.
 
 :::
 
 <details>
 <summary>
 <b>
-výstup bcf --help
+Příklad kódu: naslouchání spícího uzlu
 </b>
 </summary>
 <p>
@@ -144,7 +144,7 @@ void application_init(void)
 | Komunikační frekvence (Evropa)    | 868,0 MHz |
 | Komunikační frekvence (USA)       | 915,0 MHz |
 | Typ modulace                      | GFSK      |
-| Modulační rychlost                | 19.2 kbps |
+| Modulační rychlost                | 19,2 kbps |
 | Frekvenční zdvih vysílače         | 20 kHz    |
 | Vysílací výkon                    | 11,6 dBm  |
 | Šířka pásma přijímacího filtru    | 100 kHz   |

@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # ChirpStack v4 {#chirpstack-v4}
 
-Tato stránka je praktický checklist pro připojení zařízení **HARDWARIO CHESTER** k **síti LoRaWAN pomocí ChirpStack v4**.  
+Tato stránka je praktický kontrolní seznam pro připojení zařízení **HARDWARIO CHESTER** k **síti LoRaWAN se serverem ChirpStack v4**.  
 Popisuje, kde získat přihlašovací údaje LoRaWAN ze zařízení CHESTER a jak je nastavit v ChirpStack.
 
 ---
@@ -16,10 +16,10 @@ Popisuje, kde získat přihlašovací údaje LoRaWAN ze zařízení CHESTER a ja
 
 - Síť LoRaWAN s bránou a **ChirpStack v4**
 - Přístup ke konzoli zařízení CHESTER (Bluetooth / USB / J-Link)
-- Správný region LoRaWAN (např. **EU868**, **US915**) nastavený konzistentně na:
+- Správný region LoRaWAN (např. **EU868**, **US915**) nastavený stejně na:
   - zařízení CHESTER
   - bráně
-  - Network Serveru
+  - síťovém serveru
 
 ---
 
@@ -27,7 +27,7 @@ Popisuje, kde získat přihlašovací údaje LoRaWAN ze zařízení CHESTER a ja
 
 ### 1.1 Připojení ke konzoli zařízení CHESTER {#11-connect-to-chester-console}
 
-Můžete použít jeden z následujících nástrojů:
+Použijte jeden z těchto nástrojů:
 
 - **HARDWARIO Manager** (mobil, BLE)
 - **HARDWARIO Terminal** (webový BLE terminál v Chrome)
@@ -41,7 +41,7 @@ Spusťte:
 lrw config show
 ```
 
-Uvidíte hodnoty jako:
+Uvidíte například tyto hodnoty:
 
 - `lrw config band` (např. `eu868`)
 - `lrw config mode` (`otaa` / `abp`)
@@ -55,7 +55,7 @@ Uvidíte hodnoty jako:
 
 ## 2) Přepnutí katalogové aplikace do režimu LoRaWAN (pokud je potřeba) {#2-switch-catalog-application-to-lorawan-mode-if-needed}
 
-Některé katalogové firmwary nezačnou vysílat data, dokud není vybrán komunikační režim.
+Firmware některých katalogových aplikací neodesílá data, dokud nezvolíte komunikační režim.
 
 ```bash
 app config mode lrw
@@ -76,7 +76,7 @@ Mezi zařízením CHESTER a ChirpStack:
 - **JoinEUI / AppEUI**
 - **AppKey**
 
-### 3.2 Nastavení parametrů OTAA na zařízení CHESTER {#32-configure-otaa-parameters-on-chester}
+### 3.2 Nastavení parametrů OTAA v zařízení CHESTER {#32-configure-otaa-parameters-on-chester}
 
 ```bash
 lrw config mode otaa
@@ -118,7 +118,7 @@ Vytvořte **Device Profile** s následujícím doporučeným nastavením:
 - Přejděte do **Applications**
 - Vytvořte novou aplikaci
 
-### 5.2 Přidání zařízení CHESTER jako end device {#52-add-chester-as-an-end-device}
+### 5.2 Přidání zařízení CHESTER jako koncového zařízení (end device) {#52-add-chester-as-an-end-device}
 
 Uvnitř aplikace:
 
@@ -140,7 +140,7 @@ Zařízení uložte.
 
 ## 6) Dekodér payloadu (doporučeno) {#6-payload-decoder-recommended}
 
-Chcete-li dekódovat payloady uplinku ze zařízení CHESTER:
+Payloady uplinků ze zařízení CHESTER dekódujete takto:
 
 1. Otevřete **Device Profile**
 2. Přejděte na **Codec**
@@ -155,5 +155,5 @@ Chcete-li dekódovat payloady uplinku ze zařízení CHESTER:
   https://docs.hardwario.com/chester/platform-connectivity/lorawan-radio
 - Doporučená nastavení ChirpStack:  
   https://docs.hardwario.com/chester/platform-connectivity/lorawan-radio#chirpstack-configuration
-- Návod k end device v ChirpStack:  
+- Návod ke koncovým zařízením v ChirpStack:  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices

@@ -21,14 +21,14 @@ Tento článek popisuje nosnou desku **CHESTER-C1**.
 ## Přehled modulu {#module-overview}
 
 **CHESTER-C1** je nosná deska pro **CHESTER-M**, která obsahuje:
-- 4x svorkovnici digitálních/analogových vstupů
-- 2x výkonové relé
+- svorkovnici pro 4 digitální/analogové vstupy
+- 2 výkonová relé
 - svorkovnici rozhraní RS-485
 - dvě svorkovnice 1-Wire
-- DC/DC měnič
-- držák baterií pro 4x baterii velikosti C s napětím 3,6 V
+- měnič DC/DC
+- držák pro 4 baterie velikosti C s napětím 3,6 V
 
-**CHESTER-C1** se hodí do krabičky Takachi WP20-28-5Cx.
+Deska **CHESTER-C1** pasuje do krabičky Takachi WP20-28-5Cx.
 
 ## Technická specifikace {#technical-specification}
 
@@ -36,11 +36,11 @@ Tento článek popisuje nosnou desku **CHESTER-C1**.
 * Podporovaná baterie velikosti C: 1 x **Saft LSH14** nebo 1 x **Saft LS26500\***
 * Na vyžádání až 4 x baterie velikosti C nebo 3 x velikosti D (Saft LSH20 nebo LS33000)
 * Jmenovité napětí baterie: **3,6 V**
-* Klidová spotřeba proudu z baterie **&lt;2 μA** (bez **CHESTER-M**)
+* Klidový odběr z baterie **&lt;2 μA** (bez desky **CHESTER-M**)
 
 _\* Baterii Saft LS26500 nelze použít s variantou CHESTER-M-E (bez superkondenzátorů)._
 
-Více podrobností najdete v [**objednacích kódech**](../ordering-codes.md#chester-m).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md#chester-m).
 
 ## Výkres modulu {#module-drawing}
 
@@ -62,35 +62,35 @@ Více podrobností najdete v [**objednacích kódech**](../ordering-codes.md#che
 | BT5-BT7  | BATTERY   | 3 x držák velikosti D pro primární článek 3,6 V*    |
 
 
-_\* CHESTER-X SLOT A je ve výchozím stavu obsazen integrovaným modulem CHESTER-X1_
+_\* CHESTER-X SLOT A je ve výchozím stavu obsazený integrovaným modulem CHESTER-X1_
 
-_\** Pomocí tlačítka BYPASS BUTTON spustíte zařízení z baterie bez stejnosměrného napájecího vstupu_
+_\** Tlačítkem BYPASS BUTTON spustíte zařízení z baterie, i když není připojené stejnosměrné napájení_
 
-## Popis pinoutu {#pinout-description}
+## Zapojení konektorů {#pinout-description}
 
 ### Konektory bloku A {#block-a-connectors}
 
-![Pinout konektoru bloku A, piny 1-8: +V, A, B, EN, TX, RX, VDD, GND](../../../../../chester/extension-modules/images/block-a.png)
+![Zapojení konektoru bloku A, piny 1-8: +V, A, B, EN, TX, RX, VDD, GND](../../../../../chester/extension-modules/images/block-a.png)
 
 ### Konektory 1-Wire {#1-wire-connectors}
 
-![Pinout konektoru 1-Wire, piny 1-3: VDD, DQ, GND](../../../../../chester/extension-modules/images/1-wire.png)
+![Zapojení konektoru 1-Wire, piny 1-3: VDD, DQ, GND](../../../../../chester/extension-modules/images/1-wire.png)
 
 ### Konektor I2C {#i2c-connector}
 
-![Pinout konektoru I2C, piny 1-5: INT, SDA, SCL, VDD, GND](../../../../../chester/extension-modules/images/i2c.png)
+![Zapojení konektoru I2C, piny 1-5: INT, SDA, SCL, VDD, GND](../../../../../chester/extension-modules/images/i2c.png)
 
 ### Konektor SYSTEM {#system-connector}
 
-![Pinout konektoru SYSTEM, piny 1-7: NC, +V, GND, VDD, SCL, SDA, INT](../../../../../chester/extension-modules/images/system.png)
+![Zapojení konektoru SYSTEM, piny 1-7: NC, +V, GND, VDD, SCL, SDA, INT](../../../../../chester/extension-modules/images/system.png)
 
 ### Konektory bloku B {#block-b-connectors}
 
-![Pinout konektoru bloku B, piny 1-8: +V, DI2, GND, DI1, AI2, GND, AI1, VDD](../../../../../chester/extension-modules/images/block-b.png)
+![Zapojení konektoru bloku B, piny 1-8: +V, DI2, GND, DI1, AI2, GND, AI1, VDD](../../../../../chester/extension-modules/images/block-b.png)
 
 ## Schéma zapojení {#schematic-diagram}
 
-Schéma zapojení se hodí, pokud programujete nízkoúrovňový kód pracující s hardwarem nebo pokud vás jen zajímá, jak je systém navržen.
+Schéma zapojení se hodí, pokud programujete nízkoúrovňový kód blízko hardwaru, nebo když vás zajímá, jak je systém navržený.
 
 - [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-c1-r1.1.pdf)
 
@@ -99,5 +99,5 @@ Schéma zapojení se hodí, pokud programujete nízkoúrovňový kód pracujíc�
 -->
 
 ![Schéma CHESTER-C1, list 1: konektory základní desky X0 a X2, 1-Wire, SYSTEM, RS-485, relé, M-Bus a I2C](../../../../../chester/extension-modules/images/hio-chester-c1-r1.1-1.png)
-![Schéma CHESTER-C1, list 2: GPIO expandér TCA9534A, RGY LED a budicí obvody relé](../../../../../chester/extension-modules/images/hio-chester-c1-r1.1-2.png)
-![Schéma CHESTER-C1, list 3: zapojení baterií velikosti C/D, napájecí vstup a 5V snižující měnič](../../../../../chester/extension-modules/images/hio-chester-c1-r1.1-3.png)
+![Schéma CHESTER-C1, list 2: expandér GPIO TCA9534A, RGY LED a budicí obvody relé](../../../../../chester/extension-modules/images/hio-chester-c1-r1.1-2.png)
+![Schéma CHESTER-C1, list 3: zapojení baterií velikosti C/D, napájecí vstup a snižující měnič 5 V](../../../../../chester/extension-modules/images/hio-chester-c1-r1.1-3.png)

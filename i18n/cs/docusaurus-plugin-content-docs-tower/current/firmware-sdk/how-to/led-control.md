@@ -4,22 +4,22 @@ title: "Jak na: Ovládání LED"
 ---
 import Image from '@theme/IdealImage';
 
-Ovládání **LED integrované na Core Module** je něco jako vypsat `Hello world`. V této kapitole si projdeme několik jednoduchých příkladů, jak na to
+Ovládání **LED integrované na modulu Core Module** je obdoba programu `Hello world`. V této kapitole si ukážeme několik jednoduchých příkladů.
 
 ## Odkazy {#references}
-- [**LED SDK Module**](https://sdk.hardwario.com/group__twr__led.html)
-- [**Příklad v GitHub repozitáři**](https://github.com/hardwario/twr-sdk/blob/master/_examples/led-on-off/application.c)
+- [**Modul SDK pro LED**](https://sdk.hardwario.com/group__twr__led.html)
+- [**Příklad v repozitáři na GitHubu**](https://github.com/hardwario/twr-sdk/blob/master/_examples/led-on-off/application.c)
 
 :::info
 
-V tomto jednoduchém příkladu se LED inicializuje a poté bude nepřetržitě blikat po celou dobu běhu programu.
+V tomto jednoduchém příkladu se LED inicializuje a pak bliká po celou dobu běhu programu.
 
 :::
 
 <details>
 <summary>
 <b>
-Jednoduchý příklad kódu s blikající LED
+Příklad kódu: blikající LED
 </b>
 </summary>
 <p>
@@ -41,16 +41,16 @@ Jednoduchý příklad kódu s blikající LED
 
 :::info
 
-Tento druhý příklad používá tlačítko integrované na Core Module k **zapnutí/vypnutí LED**.
+Druhý příklad **zapíná a vypíná LED** tlačítkem integrovaným na modulu Core Module.
 
-LED navíc blikne na začátku programu. To je užitečné u většiny firmwaru, je to dobrý indikátor toho, že se kód správně spustil.
+Po startu programu LED navíc blikne. To se hodí u většiny firmwarů, protože je to dobrý signál, že se kód správně spustil.
 
 :::
 
 <details>
 <summary>
 <b>
-Příklad kódu s LED ovládanou tlačítkem
+Příklad kódu: LED ovládaná tlačítkem
 </b>
 </summary>
 <p>

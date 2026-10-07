@@ -4,13 +4,13 @@ title: Rychlý start s firmwarem
 ---
 import Image from '@theme/IdealImage';
 
-Vlastní firmware pro [**TOWER Core Module**](../hardware-modules/about-core-module.md) můžete snadno upravovat nebo vytvářet ve všech běžných operačních systémech.
+Vlastní firmware pro modul [**TOWER Core Module**](../hardware-modules/about-core-module.md) můžete snadno upravovat nebo vytvářet ve všech běžných operačních systémech.
 
 ## Získání prvního firmwaru TOWER {#getting-your-first-tower-firmware}
 
 :::tip
 
-Pokud se k projektu vracíte, použijte ve VSCode volbu **Open folder**. Přejděte na `File -> Open Folder...` nebo použijte `Ctrl + K` a pak `Ctrl + O`.
+Pokud se k projektu vracíte, použijte ve VSCode volbu **Open folder**. Zvolte `File -> Open Folder...` nebo stiskněte `Ctrl + K` a pak `Ctrl + O`.
 
 :::
 
@@ -28,13 +28,13 @@ Pokud se k projektu vracíte, použijte ve VSCode volbu **Open folder**. Přejd�
 
 - V sekci **TOWER: Start** vyberte **From Skeleton Project...**
 - Vyberte **složku**, ve které se má vytvořit nová složka s projektem firmwaru
-- Budete vyzváni k pojmenování složky, výchozí **twr-skeleton** zatím stačí
+- Zadejte název složky; výchozí **twr-skeleton** zatím stačí
 - Počkejte, až se firmware stáhne
 - Visual Studio Code se znovu otevře s novým firmwarem
 
 :::info
 
-Firmware si můžete stáhnout také pomocí **příkazu git**.
+Firmware můžete stáhnout i **příkazem git**.
 
 ```bash
 git clone --recursive https://github.com/hardwario/twr-skeleton.git
@@ -44,7 +44,7 @@ git clone --recursive https://github.com/hardwario/twr-skeleton.git
 
 :::tip
 
-Místo **From Skeleton Project...** můžete vybrat **From Existing Project...** a naklonovat tak jakýkoliv jiný projekt z [**GitHubu**](https://github.com/hardwario).
+Místo **From Skeleton Project...** můžete vybrat **From Existing Project...** a naklonovat tak jakýkoli jiný projekt z [**GitHubu**](https://github.com/hardwario).
 
 :::
 
@@ -52,7 +52,7 @@ Místo **From Skeleton Project...** můžete vybrat **From Existing Project...**
 
 Toto je struktura souborů **projektu twr-skeleton**, který jste právě naklonovali. Jde o repozitář inicializovaný v Gitu, připravený k použití *bez dalších úprav*.
 
-Tento projekt lze okamžitě **zkompilovat a nahrát** do [**Core Module**](../hardware-modules/about-core-module.md) nebo [**Radio Dongle**](../hardware-modules/about-core-module.md)
+Projekt můžete hned **zkompilovat a nahrát** do modulu [**Core Module**](../hardware-modules/about-core-module.md) nebo do zařízení [**Radio Dongle**](../hardware-modules/about-radio-dongle.md).
 
 ```
 .
@@ -77,9 +77,9 @@ Tento projekt lze okamžitě **zkompilovat a nahrát** do [**Core Module**](../h
 ```
 
 Svůj kód upravujte v adresáři `src`.
-Obvykle nebudete potřebovat upravovat jiné soubory než tyto.
+Jiné soubory obvykle upravovat nemusíte.
 
-Vaším prvním krokem tedy bude nejspíš otevření souboru src/application.c.
+Nejspíš tedy nejdřív otevřete soubor src/application.c.
 
 :::note
 
@@ -89,13 +89,13 @@ Pokud používáte [**rozšíření HARDWARIO Code pro Visual Studio Code**](./a
 
 :::info
 
-Pokud si chcete prohlédnout nějaké příklady firmwaru, můžete navštívit náš repozitář na [**GitHubu**](https://github.com/hardwario) nebo některou z **kapitol How to:** v [**sekci Firmware SDK**](../firmware-sdk/index.md).
+Příklady firmwaru najdete v našich repozitářích na [**GitHubu**](https://github.com/hardwario) nebo v kapitolách **„Jak na:“** v [**sekci Firmware SDK**](../firmware-sdk/index.md).
 
 :::
 
 ## Vývojový cyklus {#development-cycle}
 
-Vývojový cyklus obvykle tvoří opakování **následujících 4 kroků**.
+Vývojový cyklus obvykle spočívá v opakování **těchto 3 kroků**:
 
 - Upravte `src/application.c` a uložte změny pomocí **Ctrl + S**
 - Kliknutím na [**Build + Flash (Console)**](./hardwario-extension-tutorial.md#build--flash-console) firmware **zkompilujete**, **nahrajete** a **otevřete sériovou konzoli s logem**.
@@ -105,7 +105,7 @@ Vývojový cyklus obvykle tvoří opakování **následujících 4 kroků**.
 
 ## Programovací jazyk {#programming-language}
 
-Firmware je implementován v **čistém jazyce C**, což je průmyslově uznávaný jazyk pro embedded zařízení a zařízení s nízkou spotřebou.
+Firmware je napsaný v **čistém jazyce C**, který se v průmyslu běžně používá pro embedded zařízení a zařízení s nízkou spotřebou.
 
 Tuto technologii jsme zvolili z těchto hlavních důvodů:
 
@@ -113,17 +113,17 @@ Tuto technologii jsme zvolili z těchto hlavních důvodů:
 - Stabilní a dlouhodobě dostupné vývojové prostředí
 - Jednoduchá a pochopitelná syntaxe
 
-Můžete používat všechny známé struktury jazyka C a také [**naše SDK**](../firmware-sdk/index.md), které je implementováno tak, abyste mohli rychle a snadno, bez jakýchkoliv problémů s kompatibilitou, vytvořit svůj vlastní firmware.
+Můžete používat všechny známé konstrukce jazyka C a také [**naše SDK**](../firmware-sdk/index.md), se kterým vlastní firmware vytvoříte rychle, snadno a bez problémů s kompatibilitou.
 
 ## Řešení problémů {#troubleshooting}
 
-Pokud se vám nedaří detekovat nebo naprogramovat **Radio Dongle** nebo **Core Module**, může jít o problém s ovladači nebo operačním systémem. Podle svého systému můžete vyzkoušet některá řešení
+Pokud počítač nerozpozná **Radio Dongle** nebo **Core Module**, nebo do nich nejde nahrát firmware, může jít o problém s ovladači nebo operačním systémem. Vyzkoušejte řešení pro svůj systém:
 
-- Na **Windows** a **macOS** nainstalujte [**FTDI VCP ovladače**](https://ftdichip.com/drivers/vcp-drivers/)
-- Na **Ubuntu** musíte být v uživatelské skupině `dialout`. Použijte příkaz `sudo usermod -a -G dialout $USER` a restartujte počítač
+- Ve **Windows** a **macOS** nainstalujte [**ovladače FTDI VCP**](https://ftdichip.com/drivers/vcp-drivers/)
+- V **Ubuntu** musíte být ve skupině uživatelů `dialout`. Spusťte příkaz `sudo usermod -a -G dialout $USER` a restartujte počítač
 
 ## Další kroky {#next-steps}
 
-Teď už byste měli umět **vytvářet firmware** a **aktualizovat existující**.
+Teď už byste měli umět **vytvářet firmware** a **aktualizovat ten stávající**.
 
-Pokud chcete vědět více o našich modulech a podívat se na příklady, přečtěte si sekci [**Hardwarové moduly**](../hardware-modules/index.md) nebo [**sekci Firmware SDK**](../firmware-sdk/index.md)
+Více o našich modulech i příklady najdete v sekci [**Hardwarové moduly**](../hardware-modules/index.md) nebo v [**sekci Firmware SDK**](../firmware-sdk/index.md).

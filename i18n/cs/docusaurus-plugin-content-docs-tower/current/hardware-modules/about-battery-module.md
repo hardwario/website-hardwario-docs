@@ -11,10 +11,10 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        <b>Battery Module</b> je navržen jako zdroj napájení pro bateriově napájené jednotky. Integrovaný nízkoodběrový buck převodník poskytuje vynikající účinnost při napájení ze <b>čtyř alkalických článků AAA 1,5 V</b>. Obsahuje také <b>5pinovou patici, do které lze připojit tag HARDWARIO TOWER</b>.
+        <b>Battery Module</b> slouží jako zdroj napájení pro jednotky na baterie. Integrovaný snižující převodník (buck) s nízkou spotřebou dosahuje vynikající účinnosti při napájení ze <b>čtyř alkalických článků AAA 1,5 V</b>. Má také <b>5pinovou patici, do které připojíte tag HARDWARIO TOWER</b>.
       </p>
       <p>
-        Pokud pro vaši aplikaci nejsou baterie AAA vhodné, můžete využít <b>externí napěťový vstup</b>, který zvládne až 10 V. Externí vstup najdete na dvou pinech v prostředku. Tyto piny jsou kompatibilní s populárním <b>konektorem JST používaným pro lithiové baterie</b>.
+        Pokud se baterie AAA pro vaše použití nehodí, využijte <b>externí napěťový vstup</b>, který snese až 10 V. Najdete ho na dvou prostředních pinech, které jsou kompatibilní s oblíbeným <b>konektorem JST pro lithiové baterie</b>.
       </p>
     </div>
   </div>
@@ -22,13 +22,13 @@ import Image from '@theme/IdealImage';
 
 :::tip
 
-Pokud chcete, aby vaše zařízení zabíralo méně místa, můžete použít [**Mini Battery Module**](about-mini-battery-module.md).
-Vydrží samozřejmě kratší dobu, protože obsahuje jen **2 baterie**.
+Pokud chcete menší zařízení, použijte [**Mini Battery Module**](about-mini-battery-module.md).
+Se **2 bateriemi** ovšem vydrží kratší dobu.
 
 :::
 
 ## Vlastnosti {#features}
-- Vysoce účinný buck převodník **TPS62745 (TI)**
+- Vysoce účinný snižující převodník (buck) **TPS62745 (TI)**
 - Extrémně nízký klidový proud: 400 nA
 - Doporučené typy baterií:
   - **4x AAA 1,5 V alkalické**
@@ -43,7 +43,7 @@ Vydrží samozřejmě kratší dobu, protože obsahuje jen **2 baterie**.
 - Mechanické rozměry: 88 x 55 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/battery-module)
+- [**E-shop**](https://www.hardwario.store/p/battery-module)
 - [**Schéma**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-battery)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__battery)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_battery.h)

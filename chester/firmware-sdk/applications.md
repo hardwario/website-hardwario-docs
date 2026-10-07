@@ -19,7 +19,7 @@ In the text below, we explain what each file in the project does.
 | app_backup.c <br /> app_backup.h   | CHESTER-Z1 battery back-up functionality                                                    |
 | app_cbor.c <br /> app_cbor.h       | Encoding binary data to CBOR, cloud will then do the JSON conversion (LTE only)             |
 | app_config.c <br /> app_config.h   | Configuration options used with shell `app config` command + custom shell commands handlers |
-| app_data.c <br /> app_data.h       | Structures with measured data ready to be send                                              |
+| app_data.c <br /> app_data.h       | Structures with measured data ready to be sent                                              |
 | app_handler.c <br /> app_handler.h | Callback handlers for LTE or CHESTER-Z1                                                     |
 | app_init.c <br /> app_init.h       | Application initialization                                                                  |
 | app_power.c <br /> app_power.h     | CHESTER-M internal battery voltage measurement                                              |
@@ -36,7 +36,7 @@ In the text below, we explain what each file in the project does.
 The code starts in `main.c` where the `app_init()` function is called. In this `app_init()` all other threads are created and all the `main.c` does after that is feeding the watchdog and blinking the LED.
 
 ### app_init.c
-In this file, all the subsystems and hardware is initialized. Also, the red LED is turned on, and the code is waiting until the LTE Attach is successful. The red LED is turned off, and the code continues.
+In this file, all the subsystems and hardware are initialized. Also, the red LED is turned on, and the code is waiting until the LTE Attach is successful. The red LED is turned off, and the code continues.
 
 Important code is called in `app_work_init()`, which creates timers for sending reports and sampling/aggregating of the sensors.
 
@@ -53,7 +53,7 @@ When the report timer is triggered, the `app_send()` function in `app_send.c` is
 
 ### app_sensor.c
 
-If we look for example to CHESTER Clime `app_sensor.h` file, there are these functions for hygro sensor:
+If we look for example at CHESTER Clime `app_sensor.h` file, there are these functions for hygro sensor:
 
 ```
 int app_sensor_hygro_sample(void);
@@ -87,7 +87,7 @@ For the LoRaWAN variant of the application we use `ctr_buf` functions to create 
 - Add sensor initialization to the `app_init()`
 - Create sensor data structures for samples and measurements in `app_data.h`
 - Create `*_sample`, `*_aggreg` and `*_clear` functions in `app_sensor.c/h`
-- Use existing or create new timers in `app_work.c` that calls `app_sensor` functions above
+- Use existing or create new timers in `app_work.c` that call `app_sensor` functions above
 - Call `*_clear` function in the `send_work_handler()`
 - Create new YAML items in `codec/cbor-decoder.yaml` if necessary. `msg_key.h` will be regenerated after `west build`
 - Upload updated codec to HARDWARIO Cloud with `hardwario cloud codec upload ...`
@@ -100,4 +100,4 @@ For the LoRaWAN variant of the application we use `ctr_buf` functions to create 
 - Create new function `app_config_cmd_config_*` definition and implementation in the `app_config.c/h` files
 - Add new shell command by adding `SHELL_CMD_ARG` to the `app_shell.c`
 - Create and add a new print function to `app_config_cmd_config_show`, which is called when you type shell command `app config show`
-- Add created variable to the list of save and loaded config options using `SETTINGS_SET_SCALAR` and `EXPORT_FUNC_SCALAR`
+- Add created variable to the list of saved and loaded config options using `SETTINGS_SET_SCALAR` and `EXPORT_FUNC_SCALAR`

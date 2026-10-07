@@ -11,13 +11,13 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        <b>Power Module</b> umožňuje připojit 5 V DC napájecí adaptér přes standardní napájecí konektor 2,1 mm. Obsahuje <b>výkonové relé</b> (230 V AC / 16 A) pro ovládání vašich spotřebičů. Také s ním můžete řídit <b>digitální LED pásek</b> (kompatibilní s WS2812B).
+        K modulu <b>Power Module</b> připojíte napájecí adaptér 5 V DC přes standardní napájecí konektor 2,1 mm. Má <b>výkonové relé</b> (230 V AC / 16 A) pro ovládání spotřebičů a můžete s ním řídit i <b>digitální LED pásek</b> (kompatibilní s WS2812B).
       </p>
       <p>
-        Tento modul dokáže napájet node HARDWARIO TOWER Industrial IoT Kit díky integrovanému LDO regulátoru. LDO generuje výstup 3,3 V ze vstupu 5 V.
+        Díky integrovanému regulátoru LDO napájí modul i uzel sady HARDWARIO TOWER Industrial IoT Kit. Regulátor LDO vyrábí ze vstupních 5 V výstupní napětí 3,3 V.
       </p>
       <p>
-        Spolehlivost je důležitá – proto jsme na vstupu napájecího konektoru implementovali inteligentní ochranu proti přepětí, podpětí a obrácené polaritě. Tato funkce zaručuje, že vstupní napětí vždy zůstane ve správných limitech.
+        Na spolehlivosti záleží, a proto má vstup napájecího konektoru inteligentní ochranu proti přepětí, podpětí a přepólování. Vstupní napětí tak vždy zůstane ve správných mezích.
       </p>
     </div>
   </div>
@@ -38,14 +38,14 @@ Maximální dovolený proud je **6 A**.
 - **Výstup pro adresovatelný/digitální RGB(W) LED pásek**
 - Integrovaný převodník napěťových úrovní (3,3 V na 5 V)
 - 2x pozice pro tag HARDWARIO TOWER
-- Ochrana proti **přepětí**, **podpětí** a obrácené polaritě
+- Ochrana proti **přepětí**, **podpětí** a přepólování
 - Odnímatelná 3pinová svorkovnice pro výstup relé
 - Odnímatelná 3pinová svorkovnice pro digitální LED pásek
 - Rozsah provozních teplot: -20 až 70 °C
 - Mechanické rozměry: 88 x 55 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/power-module)
+- [**E-shop**](https://www.hardwario.store/p/power-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-power)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__power)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_power.h)

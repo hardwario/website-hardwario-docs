@@ -5,7 +5,7 @@ title_meta: "Integrations (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 
-# Chirpstack v4 Integrations 
+# ChirpStack v4 Integrations 
 
 This tutorial shows you where to access the integration endpoints within your ChirpStack application so you can route device data to external platforms.
 

@@ -127,8 +127,8 @@ settings save
 
 | Command | Argument | Description |
 |---|---|---|
-| `config hall-left-counter` | `true` / `false` | Count pulses on the left hall switch. |
-| `config hall-right-counter` | `true` / `false` | Count pulses on the right hall switch. |
+| `config hall-left-counter` | `true` / `false` | Count pulses on the left Hall switch. |
+| `config hall-right-counter` | `true` / `false` | Count pulses on the right Hall switch. |
 | `config input-a-counter` | `true` / `false` | Count pulses on external input A. |
 | `config input-b-counter` | `true` / `false` | Count pulses on external input B. |
 

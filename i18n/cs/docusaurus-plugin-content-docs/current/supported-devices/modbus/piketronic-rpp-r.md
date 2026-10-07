@@ -10,25 +10,25 @@ title: Radonová sonda Piketronic RPP-R
 ### Popis {#description}
 
 Piketronic **RPP-R** je radonová sonda, která průběžně měří koncentraci radonu
-spolu s teplotou a vlhkostí vzduchu uvnitř své měřicí komory. Je vybavena
-rozhraním **RS-485 Modbus RTU** pro odečet naměřených hodnot. Toto zařízení
-podporuje aplikace **CHESTER Serial**.
+a také teplotu a vlhkost vzduchu ve své měřicí komoře. Naměřené hodnoty se
+z ní čtou přes rozhraní **RS-485 Modbus RTU**. Sondu podporuje aplikace
+**CHESTER Serial**.
 
 :::info
 
-Radonová sonda je samostatný senzor. **Nevyžaduje** žádný externí senzor. Nová
-hodnota koncentrace radonu je k dispozici **každé 4 minuty**; častější čtení
-vrací stejnou hodnotu.
+Radonová sonda je samostatný senzor a **nepotřebuje** žádný další externí senzor.
+Nová hodnota koncentrace radonu je k dispozici **každé 4 minuty**; při častějším
+čtení dostanete stejnou hodnotu.
 
 :::
 
 ---
 
-### Modbus komunikace {#modbus-communication}
+### Komunikace Modbus {#modbus-communication}
 
-#### Příklad instalace Modbus komunikace: Piketronic RPP-R {#example-of-modbus-communication-installation-piketronic-rpp-r}
+#### Příklad zapojení komunikace Modbus: sonda Piketronic RPP-R {#example-of-modbus-communication-installation-piketronic-rpp-r}
 
-Sonda RPP-R má čtyřpinový konektor s označením **B RxTx-**, **A RxTx+**, **GND**, **VCC**.
+Sonda RPP-R má čtyřpinový konektor s vývody **B RxTx-**, **A RxTx+**, **GND** a **VCC**.
 
 | **Piketronic RPP-R** | **CHESTER Modbus**       |
 |----------------------|------------------------|
@@ -39,25 +39,25 @@ Sonda RPP-R má čtyřpinový konektor s označením **B RxTx-**, **A RxTx+**, *
 
 :::info
 
-Sonda potřebuje napájení na **VCC**. Lze ji napájet z vyhrazeného napájecího
+Sonda potřebuje napájení na svorce **VCC**. Lze ji napájet z vyhrazeného napájecího
 výstupu zařízení CHESTER (VIN), **pokud** napětí a proud odpovídají požadavkům
-sondy RPP-R. Nejprve ověřte napájecí napětí sondy; jinak použijte samostatný
-externí zdroj. Označení linek A/B u RS-485 se mezi výrobci liší; pokud nepřijímáte
-žádná data, prohoďte vodiče **A** a **B**.
+sondy RPP-R. Nejprve si ověřte napájecí napětí sondy; pokud nevyhovuje, použijte
+samostatný externí zdroj. Výrobci značí linky A/B sběrnice RS-485 různě; pokud
+nepřicházejí žádná data, prohoďte vodiče **A** a **B**.
 
 :::
 
 ---
 
-### Procházení a konfigurace {#browsing-and-configuration}
+### Ovládání a konfigurace {#browsing-and-configuration}
 
-Sonda RPP-R nemá **žádný displej ani tlačítka**. Její Modbus adresa a sériové
-parametry se nastavují dvěma bloky DIP přepínačů na sondě. **Po změně kteréhokoli
-přepínače je nutné sondu restartovat (odpojit a znovu připojit napájení).**
+Sonda RPP-R nemá **žádný displej ani tlačítka**. Adresa Modbus a parametry sériové
+linky se nastavují dvěma bloky DIP přepínačů na sondě. **Po změně kteréhokoli
+přepínače sondu restartujte (odpojte a znovu připojte napájení).**
 
 #### Adresa (blok přepínačů `ADDRESS`) {#address-switch-block-address}
 
-Hodnota od **1 do 247**. Přepínač označený `1` je nejméně významný bit; přepínač
+Hodnota od **1 do 247**. Přepínač označený `1` odpovídá nejnižšímu bitu; přepínač
 v poloze **dolů** znamená logickou `0`.
 
 #### Rychlost a parita (blok přepínačů `RATE`, přepínače 4-3-2-1) {#speed-and-parity-switch-block-rate-switches-4-3-2-1}
@@ -80,7 +80,7 @@ v poloze **dolů** znamená logickou `0`.
 
 ---
 
-### Výchozí konfigurace Modbus komunikace {#default-modbus-communication-configuration}
+### Výchozí konfigurace komunikace Modbus {#default-modbus-communication-configuration}
 
 | Adresa  | Přenosová rychlost | Parita | Stop bit |
 |---------|-----------|--------|----------|
@@ -88,17 +88,17 @@ v poloze **dolů** znamená logickou `0`.
 
 :::info
 
-Tabulka výše uvádí doporučené nastavení (všechny přepínače `RATE` dolů). Vždy
-nastavte zařízení CHESTER tak, aby odpovídalo přepínačům skutečně nastaveným na sondě.
+V tabulce je doporučené nastavení (všechny přepínače `RATE` dolů). Zařízení CHESTER
+vždy nastavte podle toho, jak jsou přepínače na sondě skutečně nastavené.
 
 :::
 
 ---
 
-### Konfigurace Modbus komunikace pro CHESTER {#modbus-communication-configuration-for-chester}
+### Konfigurace komunikace Modbus v zařízení CHESTER {#modbus-communication-configuration-for-chester}
 
-Následujícími příkazy nakonfigurujete aplikaci CHESTER Serial přes CHESTER
-Terminal. Sonda se přidává jako Modbus zařízení typu `piketronic`.
+Aplikaci CHESTER Serial nastavíte v terminálu CHESTER těmito příkazy. Sonda se
+přidá jako zařízení Modbus typu `piketronic`.
 
 ```
 app config serial-mode "modbus"
@@ -109,25 +109,25 @@ app config device-0 "piketronic,1"
 config save
 ```
 
-Hodnota `device-0` má tvar `type,address`, zde typ `piketronic` na Modbus adrese `1`.
+Hodnota `device-0` má tvar `type,address`, zde typ `piketronic` s adresou Modbus `1`.
 
-Sondu můžete také kdykoli přečíst přímo z terminálu:
+Hodnoty ze sondy můžete kdykoli přečíst i přímo v terminálu:
 
 ```
 device piketronic sample 1
 ```
 
-Vypíše se koncentrace radonu (hodinový a denní průměr), teplota, vlhkost, aktuální
-nastavení a identifikace zařízení/firmwaru/sériového čísla sondy.
+Příkaz vypíše koncentraci radonu (hodinový a denní průměr), teplotu, vlhkost,
+aktuální nastavení a identifikaci sondy (zařízení, firmware, sériové číslo).
 
 ---
 
-### Naměřené hodnoty {#measured-values}
+### Měřené hodnoty {#measured-values}
 
 Dekodér: `com.hardwario.chester.app.serial`. Hodnoty se zobrazují v poli `devices`
 (`devices → data`).
 
-| Naměřená hodnota           | Klíč / cesta                            | Jednotka |
+| Měřená hodnota             | Klíč / cesta                            | Jednotka |
 |----------------------------|-----------------------------------------|--------|
 | Koncentrace radonu (1 h)   | devices → data → radon_concentration     | Bq/m³  |
 | Koncentrace radonu (1 den) | devices → data → radon_concentration_day | Bq/m³  |
@@ -136,8 +136,8 @@ Dekodér: `com.hardwario.chester.app.serial`. Hodnoty se zobrazují v poli `devi
 
 :::info
 
-Koncentrace radonu je **hodinový klouzavý průměr** (aktualizovaný každé 4 minuty).
-Samostatně se také uvádí **denní klouzavý průměr**.
+Koncentrace radonu se udává jako **hodinový klouzavý průměr** (aktualizuje se každé
+4 minuty). Zvlášť se odesílá i **denní klouzavý průměr**.
 
 :::
 

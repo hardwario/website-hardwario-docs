@@ -7,11 +7,11 @@ import Image from '@theme/IdealImage';
 
 # Aplikace přes J-Link {#application-over-j-link}
 
-Tento článek popisuje, jak nahrát firmware aplikace do zařízení CHESTER pomocí SEGGER J-Link.
+Tento článek popisuje, jak nahrát firmware aplikace do zařízení CHESTER programátorem SEGGER J-Link.
 
 ## Požadavky {#requirements}
 
-Budete potřebovat následující hardwarové a softwarové nástroje:
+Budete potřebovat tento hardware a software:
 
 * Jeden z těchto operačních systémů:
 
@@ -19,15 +19,15 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
   * macOS 11 / 12 (s nainstalovaným Homebrew)
   * Windows 10 / Windows 11
 
-* Distribuci **Python 3** nainstalovanou ve vašem systému:
+* Nainstalovaný **Python 3**:
 
-  * Na Ubuntu spusťte tento příkaz v aplikaci **Terminal**:
+  * Na Ubuntu spusťte tento příkaz v aplikaci **Terminál**:
 
     ```
     sudo apt install python3
     ```
 
-  * Na macOS spusťte tento příkaz v aplikaci **Terminal**:
+  * Na macOS spusťte tento příkaz v aplikaci **Terminál**:
 
     ```
     brew install python3
@@ -37,14 +37,14 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
     :::caution
 
-    Zajistěte, aby instalátor pro Windows mohl upravit proměnnou `PATH`, aby byl spustitelný soubor Pythonu dostupný z jakéhokoli místa.
+    Povolte instalátoru úpravu proměnné `PATH`, aby byl Python dostupný z libovolného adresáře.
 
     :::
 
 
-* Zařízení HARDWARIO CHESTER (bude potřeba otevřít horní kryt krabičky se šesti šroubky)
+* Zařízení HARDWARIO CHESTER (bude potřeba otevřít horní kryt krabičky, který drží šest šroubů)
 
-* USB debugger/programátor SEGGER J-Link (včetně 10pinového SWD adaptéru + plochého kabelu)
+* USB debugger/programátor SEGGER J-Link (včetně 10pinového adaptéru SWD a plochého kabelu)
 
   :::tip
 
@@ -56,11 +56,11 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
   :::danger
 
-  Některé kabely Micro-USB poskytují pouze napájení a žádné datové signály. Pokud spojení mezi J-Link a vaším systémem nefunguje, zkontrolujte v první řadě typ kabelu.
+  Některé kabely Micro-USB vedou jen napájení, a ne data. Pokud spojení mezi programátorem J-Link a počítačem nefunguje, zkontrolujte nejdřív kabel.
 
   :::
 
-* Balíček aplikací v Pythonu **HARDWARIO Command Line Tools**
+* Sada nástrojů **HARDWARIO Command Line Tools** pro Python
 
 ## Instalace {#installation}
 
@@ -72,7 +72,7 @@ Nástroje **HARDWARIO Command Line Tools** nainstalujete takto:
    * Stáhněte [**32bitový instalátor Intel/AMD**](https://www.segger.com/downloads/jlink/JLink_Windows.exe)
    * Stáhněte [**64bitový instalátor ARM**](https://www.segger.com/downloads/jlink/JLink_Windows_arm64.exe)
 
-1. Otevřete aplikaci **Terminal** (Ubuntu nebo macOS) nebo **Command Prompt** (Windows).
+1. Otevřete aplikaci **Terminál** (Ubuntu nebo macOS) nebo **Příkazový řádek** (Windows).
 
 1. Inicializujte virtuální prostředí Pythonu:
 
@@ -88,7 +88,7 @@ Nástroje **HARDWARIO Command Line Tools** nainstalujete takto:
 
    :::caution
 
-   Když zavřete **Terminal** nebo **Command Prompt**, musíte virtuální prostředí Pythonu znovu aktivovat. Stačí zavolat příkaz z výše uvedeného postupu: `source hardwario-venv/bin/activate`.
+   Když zavřete **Terminál** nebo **Příkazový řádek**, musíte virtuální prostředí Pythonu znovu aktivovat. Stačí znovu spustit příkaz z postupu výše: `source hardwario-venv/bin/activate`.
 
    :::
 
@@ -98,13 +98,13 @@ Nástroje **HARDWARIO Command Line Tools** nainstalujete takto:
    pip install hardwario
    ```
 
-1. Instalaci můžete ověřit následujícím příkazem:
+1. Instalaci ověříte tímto příkazem:
 
    ```
    hardwario --version
    ```
 
-   Měl by vypsat výstup podobný tomuto:
+   Výstup by měl vypadat přibližně takto:
 
    ```
    hardwario.chester v1.19.0
@@ -115,29 +115,29 @@ Nástroje **HARDWARIO Command Line Tools** nainstalujete takto:
 
 ## Postup nahrání firmwaru {#flashing-procedure}
 
-Než začnete, zkontrolujte, že máte v systému stažený HEX soubor aplikace; nebo že máte k dispozici 128bitový unikátní ID firmwaru.
+Než začnete, ověřte, že máte stažený soubor HEX aplikace, nebo 128bitové unikátní ID firmwaru.
 
 :::tip
 
-Aplikační firmware se obvykle distribuuje přes **HARDWARIO Cloud** a funkci nazvanou **Shareable Firmware Link**, z níž získáte jak HEX soubor, tak 128bitový unikátní ID. S unikátním ID nemusíte posílat žádné přílohy – stačí zadat identifikátor a nástroj si firmware stáhne automaticky.
+Aplikační firmware se obvykle distribuuje přes **HARDWARIO Cloud** a funkci **Shareable Firmware Link**, ze které získáte soubor HEX i 128bitové unikátní ID. S unikátním ID nemusíte posílat žádné přílohy: stačí zadat identifikátor a nástroj si firmware stáhne sám.
 
 :::
 
-Při nahrávání firmwaru aplikace do zařízení CHESTER postupujte takto:
+Firmware aplikace nahrajete do zařízení CHESTER takto:
 
 1. Připojte 10pinový plochý kabel ke konektoru označenému [**APP**](/chester/developer-tools/segger-j-link/#segger-j-link-to-app-port-connection) (nebo `BLE` u hardwarové revize R3.2 a starší).
 
-1. Druhou stranu 10pinového plochého kabelu připojte k adaptérové desce SEGGER J-Link (a adaptérovou desku zapojte do zařízení SEGGER J-Link).
+1. Druhý konec plochého kabelu připojte k desce adaptéru SEGGER J-Link (a adaptér zapojte do programátoru SEGGER J-Link).
 
-1. Připojte kabel Micro-USB k SEGGER J-Link a k počítači.
+1. Kabelem Micro-USB propojte programátor SEGGER J-Link s počítačem.
 
-1. Otevřete aplikaci **Terminal** (Ubuntu nebo macOS) nebo **Command Prompt** (Windows).
+1. Otevřete aplikaci **Terminál** (Ubuntu nebo macOS) nebo **Příkazový řádek** (Windows).
 
 1. Aktivujte virtuální prostředí Pythonu, do kterého jste nainstalovali **HARDWARIO Command Line Tools** (viz předchozí kapitola).
 
-1. Další operace závisí na scénáři:
+1. Další postup závisí na tom, co máte k dispozici:
 
-   * Pokud máte **HEX soubor aplikace**, můžete firmware nahrát tímto příkazem:
+   * Pokud máte **soubor HEX aplikace**, nahrajte firmware tímto příkazem:
 
      ```
      hardwario chester app flash <PATH-TO-APPLICATION-HEX-FILE>
@@ -145,7 +145,7 @@ Při nahrávání firmwaru aplikace do zařízení CHESTER postupujte takto:
 
      Příklad: `hardwario chester app flash ~/Downloads/hio-chester-clime-v1.0.0.hex`
 
-   * Pokud máte **unikátní ID aplikace**, můžete firmware nahrát tímto příkazem:
+   * Pokud máte **unikátní ID aplikace**, nahrajte firmware tímto příkazem:
 
      ```
      hardwario chester app flash <APPLICATION-UNIQUE-ID>

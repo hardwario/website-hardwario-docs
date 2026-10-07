@@ -6,26 +6,26 @@ description: "MikroTik je lotyšský výrobce síťových zařízení a bezdrát
 
 # MikroTik {#mikrotik}
 
-[MikroTik](https://mikrotik.com/) je lotyšský výrobce síťových zařízení a bezdrátových systémů, které se používají u poskytovatelů internetu, v průmyslových sítích a v IoT nasazeních po celém světě.
+[MikroTik](https://mikrotik.com/) je lotyšský výrobce síťových zařízení a bezdrátových systémů, které se používají u poskytovatelů internetu, v průmyslových sítích a v nasazeních IoT po celém světě.
 
 ---
 
-Platforma **RouterBOARD** od MikroTik nabízí funkce brány LoRaWAN, což umožňuje připojit senzory LoRaWAN k síťovým serverům jako ChirpStack nebo The Things Stack.
+Platforma **RouterBOARD** od společnosti MikroTik umí pracovat jako brána LoRaWAN, takže přes ni připojíte senzory LoRaWAN k síťovým serverům, například ChirpStack nebo The Things Stack.
 
 ## Klíčové produkty {#key-products}
 
 | Produkt | Popis |
 |---|---|
-| [**RouterBOARD LoRa**](/smart-devices/mikrotik/routerboard-lora) | Kompaktní brána LoRaWAN založená na MikroTik RouterOS s integrovanou koncentrátorovou kartou LoRa. Podporuje 8kanálový příjem LoRa a provozuje standardní software Semtech packet forwarder. |
+| [**RouterBOARD LoRa**](/smart-devices/mikrotik/routerboard-lora) | Kompaktní brána LoRaWAN se systémem MikroTik RouterOS a vestavěnou kartou koncentrátoru LoRa. Přijímá LoRa na 8 kanálech a používá standardní software Semtech packet forwarder. |
 
-## Typické případy použití s HARDWARIO {#typical-use-cases-with-hardwario}
+## Typické využití s HARDWARIO {#typical-use-cases-with-hardwario}
 
-- **Brána pro síťový server LoRaWAN**: Přeposílání paketů ze zařízení CHESTER nebo STICKER na síťový server ChirpStack nebo The Things Stack.
-- **Privátní síť LoRaWAN**: Vybudování lokální vnitřní sítě LoRaWAN pro jednu budovu nebo areál.
+- **Brána pro síťový server LoRaWAN**: Brána přeposílá pakety ze zařízení CHESTER nebo STICKER na síťový server ChirpStack nebo The Things Stack.
+- **Privátní síť LoRaWAN**: Lokální vnitřní síť LoRaWAN pro jednu budovu nebo areál.
 
 ## Zdroje {#resources}
 
-- [Oficiální web MikroTik](https://mikrotik.com/)
-- [Produkty MikroTik v HARDWARIO Store](https://www.hardwario.store/cz/smart-devices)
+- [Oficiální web společnosti MikroTik](https://mikrotik.com/)
+- [Produkty MikroTik v e-shopu HARDWARIO Store](https://www.hardwario.store/cz/smart-devices)
 - [Integrace ChirpStack](/apps/chirpstack/index)
 - [Integrace The Things Stack](/apps/the-things-stack/index)

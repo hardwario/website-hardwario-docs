@@ -18,7 +18,7 @@ title: Connectivity
 * **LTE (optional)**
   LTE Cat 4 module available for remote or mobile deployments.
 
-* **868 MHz ISM Radio**
+* **868/915 MHz ISM Radio**
   Enables communication with remote STICKER-based wireless sensors.
 
 These interfaces allow **FIBER** to integrate into both existing industrial networks and modern distributed IoT architectures.

@@ -7,14 +7,14 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/mini-cover-module.png')} alt="Modul Mini Cover, malý jednoduchý černý krycí panel s ventilačními otvory" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/mini-cover-module.png')} alt="Mini Cover Module, malý jednoduchý černý krycí panel s ventilačními otvory" /></div>
     </div>
     <div class="col col--6">
       <p>
-        Modul Mini Cover je jednoduchý mechanický díl, který pomáhá zakrýt přední stranu elektroniky HARDWARIO TOWER (menší formát 33 x 55 mm).
+        Mini Cover Module je jednoduchý mechanický díl, který zakrývá přední stranu elektroniky HARDWARIO TOWER (menší formát 33 x 55 mm).
       </p>
       <p>
-        Vypadá výborně v kombinaci s některou z našich 3D tištěných krabiček. Stačí jej pomocí spodních pinů zacvaknout do dutinkové lišty HARDWARIO TOWER.
+        Skvěle vypadá v kombinaci s některou z našich 3D tištěných krabiček. Stačí ho spodními piny zacvaknout do dutinkové lišty HARDWARIO TOWER.
       </p>
     </div>
   </div>
@@ -22,7 +22,7 @@ import Image from '@theme/IdealImage';
 
 :::tip
 
-Pokud používáte větší moduly, můžete místo něj použít náš [**modul Standard Cover**](./about-cover-module.md).
+Pokud používáte větší moduly, použijte místo něj náš standardní [**Cover Module**](./about-cover-module.md).
 
 :::
 
@@ -33,5 +33,5 @@ Pokud používáte větší moduly, můžete místo něj použít náš [**modul
 - Mechanické rozměry: 88 x 55 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/mini-cover-module)
+- [**E-shop**](https://www.hardwario.store/p/mini-cover-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-cover-mini)

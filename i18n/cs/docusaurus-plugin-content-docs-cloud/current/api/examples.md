@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 ## Poslední hodnoty ze všech zařízení {#latest-reading-from-every-device}
 
-Vypište všechna zařízení v prostoru a u každého vytiskněte nejnovější zprávu typu `data`.
+Příklad vypíše všechna zařízení v prostoru a u každého jeho nejnovější zprávu typu `data`.
 
 <Tabs>
 <TabItem value="curl" label="cURL" default>
@@ -75,8 +75,8 @@ for (const d of devices) {
 </TabItem>
 </Tabs>
 
-## Kompletní referenční dokumentace {#full-reference}
+## Úplná reference {#full-reference}
 
-[**Dokumentace Swagger**](https://api.hardwario.cloud/v2/documentation/) obsahuje
+[**Dokumentace ve Swaggeru**](https://api.hardwario.cloud/v2/documentation/) obsahuje
 všechny endpointy (prostory, zařízení, zprávy, konektory, tagy, proměnné, firmware,
 uživatele, klíče …) včetně schémat požadavků a odpovědí.

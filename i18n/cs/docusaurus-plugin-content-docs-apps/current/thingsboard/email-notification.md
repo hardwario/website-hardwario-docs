@@ -7,25 +7,25 @@ import Image from '@theme/IdealImage';
 # Nastavení e-mailových notifikací {#setting-up-email-notifications}
 
 ## Přehled příkladu {#example-overview}
-V tomto návodu postavíme vlastní Rule Chain, která sleduje telemetrii (teplotu a vlhkost) z konkrétních zařízení (například „Knihovna“ a „Archiv“). Když hodnoty překročí předem daný prah, systém vyvolá e-mailovou notifikaci. 
+V tomto návodu sestavíme vlastní Rule Chain, která sleduje telemetrii (teplotu a vlhkost) z vybraných zařízení (například „Knihovna“ a „Archiv“). Když hodnoty překročí nastavené limity, systém odešle e-mailovou notifikaci. 
 
-Vytáhneme také „Label“ přiřazený zařízení, abychom ho použili v textu e-mailu, a skriptem převedeme výchozí unixový timestamp na čitelný středoevropský čas (CET). 
+Do textu e-mailu také doplníme „Label“ přiřazený zařízení a skriptem převedeme výchozí unixový timestamp na čitelný středoevropský čas (CET). 
 
-Takhle bude výsledná notifikační Rule Chain vypadat:
+Takto bude výsledná notifikační Rule Chain vypadat:
 
-![Notifikační Rule Chain: labely a filtr zařízení vedou do čtyř prahových skriptů, každý staví Email Info pro jeden uzel Send Email](../../../../../apps/thingsboard/images/email-notification-1.png)
+![Notifikační Rule Chain: labely a filtr zařízení vedou do čtyř prahových skriptů, každý sestavuje Email Info pro jeden uzel Send Email](../../../../../apps/thingsboard/images/email-notification-1.png)
 
 ---
 
 ## Předpoklady {#prerequisites}
-Než začnete, ujistěte se, že má vaše instance ThingsBoard nastavený odchozí SMTP server. Přejděte na **Settings** -> **Outgoing Mail** a zadejte přihlašovací údaje k SMTP. Tlačítkem „Send Test Mail“ si ověříte, že to funguje.
+Instance ThingsBoard musí mít nastavený odchozí server SMTP. Přejděte na **Settings** -> **Outgoing Mail** a zadejte přihlašovací údaje k SMTP. Tlačítkem „Send Test Mail“ ověříte, že nastavení funguje.
 
 ---
 
 ## Návod krok za krokem {#step-by-step-guide}
 
 ### Krok 1: Enrichment: Originator Fields (přidání labelů) {#step-1-enrichment-originator-fields-adding-labels}
-ThingsBoard ve výchozím stavu „Label“ zařízení do metadat rule enginu nepředává. Musíme si ho nejdřív načíst, abychom ho mohli použít ve skriptech a e-mailech.
+ThingsBoard ve výchozím stavu nepředává „Label“ zařízení do metadat rule enginu. Nejdřív ho proto načteme, abychom ho mohli použít ve skriptech a e-mailech.
 * **Typ uzlu:** `Enrichment` -> `originator fields`
 * **Název:** Adding Labels
 * **Konfigurace:** Klikněte na „Add mapping“.  
@@ -34,7 +34,7 @@ ThingsBoard ve výchozím stavu „Label“ zařízení do metadat rule enginu n
   * Add mapped originator fields to: `Metadata`
 
 ### Krok 2: Filter: Script (filtr zařízení) {#step-2-filter-script-device-filter}
-Chceme zpracovávat výstrahy jen pro konkrétní zařízení podle jejich labelů.
+Upozornění chceme zpracovávat jen pro vybraná zařízení podle jejich labelů.
 * **Typ uzlu:** `Filter` -> `script`
 * **Název:** Device Filter
 * **Jazyk:** Přepněte z TBEL na **`JavaScript`**
@@ -49,7 +49,7 @@ return deviceLabel === '2159020251' || deviceLabel === '2159020252';
 * **Spojení:** Spojte uzel Adding Labels s tímto uzlem linkou Success.
 
 ### Krok 3: Transformation: Script (formátování dat) {#step-3-transformation-script-formatting-data}
-Klíče telemetrie často obsahují tečky (například hygrometer.temperature.avg), což může rozbít výchozí šablonování e-mailů. Výchozí timestamp je navíc v unixových milisekundách (UTC). Tento skript hodnoty bezpečně vytáhne a čas naformátuje do čitelné podoby (přidá 1 hodinu pro CET).
+Klíče telemetrie často obsahují tečky (například hygrometer.temperature.avg), s čímž si výchozí šablony e-mailů nemusí poradit. Výchozí timestamp je navíc v unixových milisekundách (UTC). Tento skript hodnoty bezpečně načte a čas převede do čitelné podoby (pro CET přičte 1 hodinu).
 
 * **Typ uzlu:** `Transformation` -> `script`
 * **Název:** Temperature & Humidity Formatting
@@ -102,7 +102,7 @@ return {msg: msg, metadata: metadata, msgType: msgType};
 * **Spojení:** Spojte uzel Device Filter s tímto uzlem linkou True.
 
 ### Krok 4: Filter: Script (prahové filtry) {#step-4-filter-script-threshold-filters}
-Teď tok rozdělíme podle konkrétních podmínek. Pro každou podmínku vytvořte filtr. Například kontrola nízké teploty:
+Teď tok rozdělíme podle jednotlivých podmínek. Pro každou podmínku vytvořte filtr, například pro kontrolu nízké teploty:
 
 * **Typ uzlu:** `Filter` -> `script`
 * **Název:** Temperature < 17
@@ -113,19 +113,19 @@ return msg['hygrometer.temperature.avg'] < 17;
 ```
 *(Tento krok zopakujte a vytvořte paralelní filtry pro další prahy, například Temperature > 20, Humidity < 27, Humidity > 58.)*
 
-* **Spojení:** Spojte uzel Temperature & Humidity Formatting se všemi svými prahovými filtry linkami Success.
+* **Spojení:** Spojte uzel Temperature & Humidity Formatting se všemi prahovými filtry linkami Success.
 
 ### Krok 5: Transformation: To Email (Email Info) {#step-5-transformation-to-email-email-info}
-Tento uzel skládá samotný předmět a tělo e-mailu. Můžete si vybrat, jestli poslat jednoduchý e-mail v čistém textu, nebo formátovaný HTML e-mail. Vytvořte jeden pro každý prahový filtr.
+Tento uzel sestaví předmět a tělo e-mailu. Můžete poslat jednoduchý e-mail v prostém textu, nebo e-mail formátovaný v HTML. Pro každý prahový filtr vytvořte jeden takový uzel.
 
 * **Typ uzlu:** `Transformation` -> `to email`
 * **Název:** Email Info
 * **From:** `"System Alert" <dashboards@hardwario.com>`
-* **To:** `your.email@example.com` *(Poznámka: E-mailovou adresu napište jako čistý text, u statické adresy NEPOUŽÍVEJTE proměnné `${}`.)*
+* **To:** `your.email@example.com` *(Poznámka: E-mailovou adresu napište jako prostý text, u pevné adresy **nepoužívejte** proměnné `${}`.)*
 * **Subject:** `Alert: Device ${deviceName} - Low Temperature`
 
-**Varianta A: e-mail v čistém textu**
-Pokud chcete jednoduchý e-mail bez zvláštního formátování, zvolte Plain Text. Zalomení řádků (stisk Enteru) bude fungovat přirozeně.
+**Varianta A: e-mail v prostém textu**
+Pokud chcete jednoduchý e-mail bez zvláštního formátování, zvolte Plain Text. Zalomení řádků (klávesou Enter) se zachová.
 * **Mail body type:** Zvolte `Plain Text` (nebo podle verze ThingsBoard odškrtněte volbu HTML)
 * **Body:**
 ```text
@@ -140,8 +140,8 @@ Measurement Time: ${formattedTime}
 Your HARDWARIO IoT Team
 ```
 
-**Varianta B: HTML e-mail**
-Pokud chcete formátovat, zvolte HTML. Pozor, v HTML se běžná zalomení řádků ignorují, takže nový řádek musíte vytvořit tagem `<br>`. Můžete použít i tagy jako `<b>text</b>` pro **tučný** text nebo `<i>text</i>` pro *kurzivu*.
+**Varianta B: e-mail v HTML**
+Pokud chcete text formátovat, zvolte HTML. Pozor, v HTML se běžná zalomení řádků ignorují, takže nový řádek musíte vytvořit tagem `<br>`. Můžete použít i tagy jako `<b>text</b>` pro **tučný** text nebo `<i>text</i>` pro *kurzivu*.
 * **Mail body type:** Zvolte `HTML`
 * **Body:**
 ```html
@@ -161,37 +161,37 @@ Your HARDWARIO IoT Team
 * **Spojení:** Spojte příslušný prahový filtr (například Temperature < 17) s tímto uzlem linkou True.
 
 ### Krok 6: Action: Send Email {#step-6-action-send-email}
-Tohle je poslední výkonný uzel, který komunikuje s vaším SMTP serverem a složené e-maily odesílá.
+Tento poslední uzel předá sestavené e-maily serveru SMTP k odeslání.
 
 * **Typ uzlu:** `Action` -> `send email`
 * **Název:** Send Email
 * **Konfigurace:** Nechte výchozí (použije systémové nastavení SMTP).
-* **Spojení:** Spojte všechny své uzly Email Info s tímto jediným uzlem Send Email linkami Success.
+* **Spojení:** Spojte všechny uzly Email Info s tímto jediným uzlem Send Email linkami Success.
 
 ### Krok 7: Napojení na Root Rule Chain {#step-7-connecting-to-the-root-rule-chain}
-Vaše vlastní notifikační Rule Chain je hotová, ale ThingsBoard neví, že do ní má příchozí telemetrii směrovat. Musíme ji napojit uvnitř hlavní Root Rule Chain.
+Vlastní notifikační Rule Chain je hotová, ThingsBoard ale zatím neví, že do ní má posílat příchozí telemetrii. Proto ji napojíme do hlavní Root Rule Chain.
 
 1. Přejděte na **Rule Chains** a otevřete svou **Root Rule Chain** (výchozí řetězec, který obsluhuje všechny příchozí zprávy).
 2. Najděte uzel **Message Type Switch**.
 3. Sledujte linku **Post telemetry** vycházející z tohoto uzlu. Měla by vést k uzlu **Save Timeseries**.
 4. V levém menu najděte uzel **Rule Chain** (v kategorii Rule Chains) a přetáhněte ho na plochu.
 5. V nastavení uzlu zvolte novou Rule Chain, kterou jste právě vytvořili (například „EMAIL Notifications“).
-6. Tažením vytvořte spojení z uzlu **Save Timeseries** do svého nově přidaného uzlu Rule Chain.
+6. Tažením vytvořte spojení z uzlu **Save Timeseries** do nově přidaného uzlu Rule Chain.
 7. Jako popisek linky zvolte **Success**.
-8. Klikněte na tlačítko **Apply changes** (fajfka v pravém dolním rohu).
+8. Klikněte na tlačítko **Apply changes** (ikona zaškrtnutí vpravo dole).
 
-Takhle by spojení v Root Rule Chain mělo vypadat:
-*(Data teď úspěšně potečou ze zařízení, uloží se do databáze a půjdou dál do vašeho vlastního řetězce e-mailových notifikací!)*
+Takto má spojení v Root Rule Chain vypadat:
+*(Data teď ze zařízení potečou do databáze a odtud dál do vlastního řetězce e-mailových notifikací.)*
 
 ![Detail Root Rule Chain: uzel Save Timeseries spojený linkou Success s uzlem rule chain pro e-mailové notifikace](../../../../../apps/thingsboard/images/email-notification-2.png)
 
-## Omezení frekvence e-mailů {#limiting-email-frequency}
+## Omezení četnosti e-mailů {#limiting-email-frequency}
 
-Pokud zařízení posílá data překračující prah nepřetržitě (například každých 15 minut), posílalo by výše popsané nastavení e-mail každých 15 minut. Abychom zabránili zaplavení e-maily, můžeme zavést mechanismus, který si zapíše čas posledního odeslaného e-mailu a další e-maily blokuje, dokud neuplyne daný interval (například 24 hodin).
+Pokud zařízení posílá data nad limitem trvale (například každých 15 minut), výše popsané nastavení by posílalo e-mail každých 15 minut. Aby e-maily nezahltily schránku, můžeme si zapamatovat čas posledního odeslaného e-mailu a další e-maily blokovat, dokud neuplyne daný interval (například 24 hodin).
 
-Znamená to upravit Rule Chain tak, aby čítala serverový atribut (`lastEmailTime`), zkontrolovala, jestli uplynul dostatek času, a po odeslání e-mailu tento atribut aktualizovala novým timestampem.
+Rule Chain proto upravíme tak, aby načítala serverový atribut (`lastEmailTime`), kontrolovala, jestli uplynul dostatek času, a po odeslání e-mailu tento atribut aktualizovala novým timestampem.
 
-Takhle vypadá upravený tok:
+Takto vypadá upravený tok:
 
 ![Upravená Rule Chain: Get Last Email Time vede do prahových filtrů; každá větev True navíc ukládá atribut s časem posledního e-mailu](../../../../../apps/thingsboard/images/email-notification-3.png)
 
@@ -200,10 +200,10 @@ Na úplný začátek toku (před prahové filtry) přidejte uzel, který načte 
 * **Typ uzlu:** `Enrichment` -> `originator attributes`
 * **Název:** Get Last Email Time
 * **Server attributes:** Přidejte `lastEmailTime`
-* **Spojení:** Spojte tento uzel se začátkem svých prahových filtrů (například místo spojení z předchozích formátovacích uzlů).
+* **Spojení:** Spojte tento uzel s prahovými filtry (například místo dosavadního spojení z formátovacích uzlů).
 
 ### Krok 2: Upravte prahové filtry, aby kontrolovaly čas {#step-2-modify-the-threshold-filters-to-check-the-time}
-Upravte své existující skripty prahových filtrů (například `Temperature < 17`) tak, aby kromě telemetrické hodnoty kontrolovaly i to, jestli od `lastEmailTime` uplynula požadovaná prodleva.
+Upravte stávající skripty prahových filtrů (například `Temperature < 17`) tak, aby kromě telemetrické hodnoty kontrolovaly i to, jestli od `lastEmailTime` uplynula požadovaná prodleva.
 * **Typ uzlu:** `Filter` -> `script`
 * **Ukázka kódu (kontrola 24hodinové prodlevy = 86400000 milisekund):**
 
@@ -228,10 +228,10 @@ return false; // Do not send email
 </p>
 </details>
 
-*(Tuto logiku použijte u všech svých prahových filtrů.)*
+*(Tuto logiku použijte u všech prahových filtrů.)*
 
 ### Krok 3: Připravte nový timestamp {#step-3-prepare-the-new-timestamp}
-Pokud filtr propustí zprávu (e-mail se má poslat), musíme vytvořit novou zprávu, která aktuální čas uloží zpět do serverových atributů zařízení. Tok proto musíme rozvětvit do dvou směrů: jeden odešle e-mail, druhý aktualizuje atribut.
+Když filtr zprávu propustí (e-mail se má odeslat), vytvoříme novou zprávu, která uloží aktuální čas zpět do serverových atributů zařízení. Tok se proto větví do dvou směrů: jeden odešle e-mail, druhý aktualizuje atribut.
 * **Typ uzlu:** `Transformation` -> `script`
 * **Název:** Prepare Timestamp: [název podmínky] (například Prepare Timestamp: Temp < 17)
 * **Kód:**

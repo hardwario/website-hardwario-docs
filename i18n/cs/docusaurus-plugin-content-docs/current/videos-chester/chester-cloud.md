@@ -1,16 +1,16 @@
 ---
 slug: chester-cloud
-title: Jak přidat CHESTER do Cloudu
-title_meta: "Jak přidat CHESTER do Cloudu (videonávody CHESTER)"
+title: Jak přidat zařízení CHESTER do cloudu
+title_meta: "Jak přidat zařízení CHESTER do cloudu (videonávody CHESTER)"
 ---
 
 import Image from '@theme/IdealImage';
 
-# Jak přidat CHESTER do Cloudu {#how-to-add-chester-to-cloud}
+# Jak přidat zařízení CHESTER do cloudu {#how-to-add-chester-to-cloud}
 
 ## Přehled návodu {#tutorial-overview}
 
-V tomto průvodci se naučíte, jak přidat zařízení CHESTER do HARDWARIO Cloud. Naskenujete QR kód, který automaticky vyplní údaje o zařízení, nastavíte štítky nebo komentář a vytvoříte zařízení ve svém prostoru v Cloudu, kde uvidíte jeho zprávy.
+Tento návod ukazuje, jak přidat zařízení CHESTER do HARDWARIO Cloud: naskenujete QR kód, který automaticky vyplní údaje o zařízení, nastavíte tagy nebo komentář a vytvoříte zařízení ve svém prostoru, kde pak uvidíte jeho zprávy.
 
 ---
 
@@ -36,20 +36,20 @@ V tomto průvodci se naučíte, jak přidat zařízení CHESTER do HARDWARIO Clo
 
 1. Vezměte telefon a přihlaste se do HARDWARIO Cloud.
 
-2. Otevřete svůj prostor v Cloudu.
+2. Otevřete svůj prostor v cloudu.
 
 3. Klikněte na NEW DEVICE.
 
 4. V nové záložce klikněte na SCAN DEVICE.
 
-5. Nyní naskenujte QR kód na zadní straně zařízení CHESTER.
+5. Naskenujte QR kód na zadní straně zařízení CHESTER.
 
-6. Automaticky se vyplní potřebné informace.
+6. Potřebné údaje se vyplní automaticky.
 
-7. Zde můžete přidat komentář a vybrat štítky prostoru pro toto zařízení.
+7. Tady můžete přidat komentář a vybrat pro zařízení tagy prostoru.
 
 8. Po dokončení nastavení klikněte na CREATE DEVICE.
 
-9. Zařízení je nyní přidáno do vašeho prostoru.
+9. Zařízení je teď přidané do vašeho prostoru.
 
-10. Z této stránky máte přístup ke zprávám zařízení.
+10. Na této stránce najdete zprávy zařízení.

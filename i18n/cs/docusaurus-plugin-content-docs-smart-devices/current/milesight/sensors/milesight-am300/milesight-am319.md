@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Senzor Milesight AM319 {#milesight-sensor-am319}
 
-Milesight AM319 je **senzor kvality vnitřního ovzduší**, který měří **devět parametrů** včetně teploty, vlhkosti, CO₂ a pevných částic. Výsledky zobrazuje na **4,2" E-Ink displeji** s přehlednými indikátory a data přenáší pomocí **technologie LoRaWAN** pro komunikaci na velkou vzdálenost s nízkou spotřebou.
+Milesight AM319 je **senzor kvality vnitřního ovzduší**, který měří **devět parametrů**, mimo jiné teplotu, vlhkost, CO₂ a prachové částice. Hodnoty s přehlednými indikátory zobrazuje na **4,2" displeji E-Ink** a data posílá přes **LoRaWAN** na velkou vzdálenost a s nízkou spotřebou.
 
 <div class="container">
   <div class="row">
@@ -22,31 +22,31 @@ Milesight AM319 je **senzor kvality vnitřního ovzduší**, který měří **de
 <br />
 
 :::info
-[**AM307**](milesight-am307.md) – monitoruje základní kvalitu vnitřního ovzduší.<br />
-[**AM308**](milesight-am308.md) – stejné jako AM307 plus měření částic (PM2.5/PM10).<br />
-[**AM319**](milesight-am319.md) – nejpokročilejší verze s dodatečným měřením HCHO nebo O₃; musí být napájena přes USB (bez baterií).
+[**AM307**](milesight-am307.md): měří základní kvalitu vnitřního ovzduší.<br />
+[**AM308**](milesight-am308.md): jako AM307, navíc měří prachové částice (PM2.5/PM10).<br />
+[**AM319**](milesight-am319.md): nejvyšší model, navíc měří HCHO nebo O₃; napájí se pouze přes USB (nemá baterie).
 :::
 
-## Odkazy pro integraci {#integration-links}
+## Odkazy k integraci {#integration-links}
 | Zdroj           | Odkaz                                                                |
 |-----------------|----------------------------------------------------------------------|
-| HARDWARIO Store | https://www.hardwario.store/p/milesight-am319                        |
+| E-shop HARDWARIO | https://www.hardwario.store/p/milesight-am319                        |
 | Oficiální stránka | https://www.milesight.com/iot/product/lorawan-sensor/am319         |
 | Uživatelská příručka | https://resource.milesight.com/milesight/iot/document/am300-series-user-guide-en.pdf |
-| Datasheet       | https://resource.milesight.com/milesight/iot/document/am319-datasheet-en.pdf |
+| Produktový list       | https://resource.milesight.com/milesight/iot/document/am319-datasheet-en.pdf |
 
 ---
 
 ## Obecná konfigurace {#general-configuration}
-Konfigurace se provádí přes NFC pomocí [aplikace Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
+Zařízení se konfiguruje přes NFC v [aplikaci Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
 
-Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
+Postup konfigurace najdete v části 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
 
 ---
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
+Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options).
 
 ---
 
@@ -60,7 +60,7 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | AppKey           | 5572404C696E6B4C6F52613230313823 |
 
 :::info
-**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení unikátní a najdete jej vytištěný na štítku zařízení.
+**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení jedinečný a je vytištěný na jeho štítku.
 :::
 
 ---
@@ -75,9 +75,9 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 
 :::info
 ### Přehled pojmů {#terminology-overview}
-**Dekodér** -> Převádí binární payload zařízení do čitelného JSON.<br />
-**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlinky.<br />
-**Kodek** -> Definuje pravidla pro dekódování a kódování (struktura, pole, porty) používaná network servery.
+**Dekodér** -> Převádí binární payload zařízení na čitelný JSON.<br />
+**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlink.<br />
+**Kodek** -> Definuje pravidla dekódování a kódování (strukturu, pole, porty), podle kterých pracují síťové servery.
 :::
 
 
@@ -105,24 +105,24 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | Teplota | -20°C ~ 60°C, přesnost ±0,2~0,3°C, rozlišení 0,1°C |
 | Vlhkost | 0% ~ 100% RH, přesnost ±2% RH, rozlišení 0,5% |
 | Pohyb (PIR) | 80° H, 55° V, max 5m |
-| Osvětlení | 0–60000 Lux (6 úrovní) |
-| TVOC | IAQ hodnocení 1–5 nebo 0–2000 μg/m³ |
+| Osvětlenost | 0–60000 Lux (6 úrovní) |
+| TVOC | Index IAQ 1–5 nebo 0–2000 μg/m³ |
 | Barometrický tlak | 260–1260 hPa, přesnost ±0,5 hPa |
 | CO₂ | 400–2000 ppm, přesnost ±(50 ppm + 5%) |
 | PM2.5 a PM10 | 0–1000 μg/m³, ±10 μg/m³ (0–100) |
-| Formaldehyd (HCHO) | 0–1.25 mg/m³, přesnost ±10% |
+| Formaldehyd (HCHO) | 0–1,25 mg/m³, přesnost ±10% |
 | Ozon (O₃) | 0–10 ppm, přesnost ±5% FS |
 | **Rozhraní a displej** | |
 | Displej | 4,2" E-Ink |
 | Tlačítka | Power + Reset |
 | LED a bzučák | Stavová LED + poplachový bzučák |
 | USB | Type-C (napájení/konfigurace/konzole) |
-| **Software** | Konfigurace přes NFC / USB, prahové hodnoty, kalibrace, ukládání dat (18k záznamů) |
+| **Software** | Konfigurace přes NFC / USB, prahové hodnoty, kalibrace, ukládání dat (18 000 záznamů) |
 | **Fyzické vlastnosti** | |
 | Napájení | 5V/1A (USB-C) |
 | Provozní teplota | -20°C ~ +60°C (E-Ink: 0°C–40°C) |
 | Kryt | ABS, bílý |
-| Rozměry | 100.8 × 114 × 22 mm |
+| Rozměry | 100,8 × 114 × 22 mm |
 | Hmotnost | 148 g |
-| Instalace | Montáž na stěnu (3M páska nebo šrouby) |
+| Instalace | Montáž na stěnu (páska 3M nebo šrouby) |
 | **Certifikace** | CE, FCC, ISED, RoHS |

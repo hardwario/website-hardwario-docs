@@ -6,13 +6,13 @@ title_meta: "Rychlý průvodce (HARDWARIO Manager)"
 
 # Rychlý průvodce aplikací HARDWARIO Manager {#hardwario-manager-quick-start-guide}
 
-**HARDWARIO Manager** je mobilní aplikace HARDWARIO pro nastavování zařízení v provozu. Přiložte telefon k zařízení (nebo se k němu připojte bezdrátově) a přečtete jeho informace, zapíšete konfiguraci, spustíte příkazy zařízení a povedete si seznam zařízení, která spravujete, bez kabelů, programátorů a softwaru na počítači.
+**HARDWARIO Manager** je mobilní aplikace HARDWARIO pro nastavování zařízení v terénu. Stačí k zařízení přiložit telefon (nebo se k němu připojit bezdrátově) a můžete číst informace o zařízení, zapisovat konfiguraci, spouštět příkazy a vést si seznam zařízení, která spravujete. Kabely, programátor ani software na počítači nepotřebujete.
 
-Aplikace se k zařízení dostane jedním ze dvou bezdrátových spojení, podle produktu:
+Podle produktu komunikuje aplikace se zařízením jedním ze dvou bezdrátových spojení:
 
 | Spojení | Používá | Poznámky |
 |---|---|---|
-| **NFC** | STICKER | Funguje i **bez vložených baterií** (sběr energie z NFC), takže lze zařízení připravit před instalací. Vyžaduje telefon s **Androidem** a NFC. |
+| **NFC** | STICKER | Funguje i **bez vložených baterií** (zařízení se napájí z pole NFC), takže zařízení můžete připravit ještě před instalací. Vyžaduje telefon s **Androidem** a NFC. |
 | **Bluetooth Low Energy** | CHESTER | Konfigurace, přístup k shellu a aktualizace firmwaru přes spárované připojení Bluetooth. |
 
 ---
@@ -24,20 +24,20 @@ Aplikace se k zařízení dostane jedním ze dvou bezdrátových spojení, podle
 | **Android** | [**Google Play**](https://play.google.com/store/apps/details?id=com.hardwario.manager) |
 | **iOS** | [**App Store**](https://apps.apple.com/app/id6444803082) |
 
-Aktualizace přicházejí automaticky ze storu a vaše uložená zařízení se přes aktualizace zachovají.
+Aktualizace se instalují automaticky z obchodu s aplikacemi a uložená zařízení při nich zůstávají zachovaná.
 
 :::info Zařízení STICKER se konfiguruje z Androidu
-Konfigurace zařízení STICKER přes NFC se dělá z **telefonu s Androidem a NFC** (většina telefonů z posledních let ho má).
+Zařízení STICKER se přes NFC konfiguruje z **telefonu s Androidem a NFC** (NFC má většina telefonů z posledních let).
 :::
 
 ---
 
 ## 2) Zapněte bezdrátové spojení {#2-turn-on-the-wireless-link}
 
-- **NFC**: otevřete **Nastavení**, napište do vyhledávacího pole nahoře **NFC** a přepněte ho na **zapnuto**. Na oprávnění k NFC se aplikace neptá.
-- **Bluetooth**: zapněte Bluetooth a klepněte na **Povolit**, až si aplikace řekne o oprávnění k **zařízením v okolí**.
+- **NFC**: otevřete **Nastavení**, do vyhledávacího pole nahoře napište **NFC** a přepínač **zapněte**. O oprávnění k NFC aplikace nežádá.
+- **Bluetooth**: zapněte Bluetooth, a až aplikace požádá o oprávnění **Zařízení v okolí**, klepněte na **Povolit**.
 
-Aplikace si řekne také o oprávnění ke **kameře**, ale až při prvním skenování QR kódu.
+O oprávnění ke **kameře** aplikace požádá také, ale až při prvním skenování QR kódu.
 
 ---
 
@@ -45,18 +45,18 @@ Aplikace si řekne také o oprávnění ke **kameře**, ale až při prvním ske
 
 
 1. Otevřete **HARDWARIO Manager** a zvolte rodinu zařízení, se kterou pracujete.
-2. Vyberte, co chcete udělat: například **Device info** nebo **Configuration**.
-3. Až obrazovka napíše *Hold the phone against the …*, přiložte zadní stranu telefonu k zařízení a nehýbejte s ním sekundu či dvě.
+2. Vyberte, co chcete udělat, například **Device info** nebo **Configuration**.
+3. Až se na obrazovce objeví *Hold the phone against the …*, přiložte zadní stranu telefonu k zařízení a sekundu či dvě s ním nehýbejte.
 
-Anténa NFC bývá v telefonu blízko **horní části zadní strany**. Pokud se nic nestane, pohybujte telefonem pomalu kolem tohoto místa, dokud nedojde k načtení.
+Anténa NFC bývá v **horní části zadní strany** telefonu. Pokud se nic nestane, pohybujte telefonem pomalu kolem tohoto místa, dokud se zařízení nenačte.
 
 ---
 
-## 4) Pokračujte průvodcem svého zařízení {#4-continue-with-your-device-guide}
+## 4) Pokračujte návodem pro své zařízení {#4-continue-with-your-device-guide}
 
-Každý produkt dokumentuje, co s ním aplikace HARDWARIO Manager umí:
+Co aplikace HARDWARIO Manager s jednotlivými produkty umí, popisují jejich návody:
 
-| Zařízení | Průvodce |
+| Zařízení | Návod |
 |---|---|
 | **STICKER** | [**Nastavení zařízení STICKER přes NFC →**](/apps/hardwario-manager/sticker) |
 | **CHESTER** | [**Připojení k zařízení CHESTER přes Bluetooth →**](/apps/hardwario-manager/chester) |

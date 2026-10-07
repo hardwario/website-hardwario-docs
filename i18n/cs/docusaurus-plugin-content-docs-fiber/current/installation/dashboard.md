@@ -4,14 +4,14 @@ title: Dashboard
 
 # Dashboard {#dashboard}
 
-Dostupné na FIBER i FIBER Lite.
+K dispozici na zařízení FIBER i FIBER Lite.
 
-FIBER obsahuje úvodní stránku na portu 80 s dlaždicemi odkazujícími na všechny služby, živými
-systémovými metrikami a tlačítkem pro rychlé zkopírování SSH příkazu, vše ve stylu značky HARDWARIO (barvy, typografie, logo).
-Jde o samostatnou statickou stránku s malým Python backendem pro živé statistiky, pro samotnou stránku
-není potřeba žádný externí framework ani Docker kontejner. Logo a font níže se pro jednoduchost načítají
-z `hardwario.com`/Google Fonts při načtení stránky; hostovat je lokálně je možné,
-ale není to nutné.
+FIBER má na portu 80 úvodní stránku s dlaždicemi, které odkazují na všechny služby, s aktuálními
+systémovými metrikami a s tlačítkem pro rychlé zkopírování příkazu SSH, vše ve firemním vzhledu HARDWARIO
+(barvy, typografie, logo). Jde o samostatnou statickou stránku s malým backendem v Pythonu pro aktuální
+statistiky; samotná stránka nepotřebuje žádný externí framework ani kontejner Docker. Logo a písmo níže
+se pro jednoduchost načítají při otevření stránky z `hardwario.com` a Google Fonts; můžete je hostovat
+i lokálně, ale není to nutné.
 
 1. Vytvořte adresář pro dashboard:
 
@@ -19,13 +19,12 @@ ale není to nutné.
    mkdir -p ~/fiber-dashboard
    ```
 
-1. Vytvořte `index.html`: to je webová stránka dashboardu (rozvržení, styly a malý skript,
-   který doplní IP adresu vašeho zařízení a obnovuje živé statistiky). Blok níže je kvůli délce
-   ve výchozím stavu sbalený; kliknutím na lištu jej rozbalíte a poté celý obsah zkopírujte do
-   příkazu:
+1. Vytvořte `index.html`, webovou stránku dashboardu (rozvržení, styly a malý skript, který
+   doplní IP adresu zařízení a obnovuje aktuální statistiky). Blok níže je kvůli délce sbalený;
+   rozbalte ho kliknutím na lištu a celý obsah vložte do terminálu:
 
    <details>
-   <summary><b>Kliknutím rozbalíte: kompletní kód index.html</b></summary>
+   <summary><b>Rozbalit: kompletní kód index.html</b></summary>
    <p>
 
    ```sh
@@ -286,8 +285,8 @@ ale není to nutné.
    </p>
    </details>
 
-1. Doplňte své skutečné SSH uživatelské jméno: stránka jej z prohlížeče nedokáže zjistit, takže jej
-   nyní natvrdo vložte podle uživatele, pod kterým jste právě přihlášeni:
+1. Doplňte skutečné uživatelské jméno pro SSH. Stránka ho z prohlížeče zjistit nedokáže, proto ho
+   teď napevno vložte podle uživatele, pod kterým jste právě přihlášeni:
 
    ```sh
    sed -i "s/SSH_USER_PLACEHOLDER/$USER/g" ~/fiber-dashboard/index.html
@@ -295,19 +294,19 @@ ale není to nutné.
 
    :::tip
 
-   Dlaždice služeb a SSH příkaz používají `window.location.hostname` k automatickému doplnění cílové
-   IP adresy. Otevřete stránku z libovolné adresy, kterou skutečně používáte, a odkazy i SSH příkaz
-   se přizpůsobí samy. Není potřeba ručně vpisovat IP adresy do souboru.
+   Dlaždice služeb a příkaz SSH doplňují cílovou IP adresu automaticky z `window.location.hostname`.
+   Otevřete stránku na adrese, kterou skutečně používáte, a odkazy i příkaz SSH se přizpůsobí samy.
+   IP adresy do souboru ručně vpisovat nemusíte.
 
    :::
 
-1. Vytvořte `serve.py`: to je malý program, který dashboard skutečně provozuje: Python webový server
-   bez závislostí, který obsluhuje výše uvedenou stránku `index.html` a poskytuje endpoint
-   `/api/stats` s živým využitím CPU/paměti/disku a teplotou. Stejně jako výše, kliknutím
-   rozbalíte kód a poté celý obsah zkopírujte do příkazu:
+1. Vytvořte `serve.py`, malý program, který dashboard provozuje: webový server v Pythonu bez
+   závislostí, který servíruje stránku `index.html` výše a poskytuje endpoint `/api/stats`
+   s aktuálním využitím CPU, paměti a disku a s teplotou. Stejně jako výše kód rozbalte a celý
+   obsah vložte do terminálu:
 
    <details>
-   <summary><b>Kliknutím rozbalíte: kompletní kód serve.py</b></summary>
+   <summary><b>Rozbalit: kompletní kód serve.py</b></summary>
    <p>
 
    ```sh
@@ -412,7 +411,7 @@ ale není to nutné.
    </p>
    </details>
 
-1. Spusťte jej jako systemd službu (pro navázání na port 80 bez `setcap`/`authbind` je potřeba root):
+1. Spusťte ho jako službu systemd (bez `setcap`/`authbind` je k naslouchání na portu 80 potřeba root):
 
    ```sh
    cat << EOF | sudo tee /etc/systemd/system/fiber-dashboard.service > /dev/null
@@ -435,7 +434,7 @@ ale není to nutné.
    sudo systemctl enable --now fiber-dashboard.service
    ```
 
-1. Nyní je dashboard dostupný na této adrese: `http://[TARGET IP ADDRESS]/`
+1. Dashboard je teď dostupný na adrese: `http://[TARGET IP ADDRESS]/`
 
-   Stránka obsahuje přepínač světlého/tmavého motivu (uložený pro daný prohlížeč), filtr pro
-   vyhledávání služeb a stejné čtyři dlaždice služeb plus odkazy na SSH/GitHub popsané výše.
+   Stránka má přepínač světlého a tmavého motivu (volba se ukládá v prohlížeči), filtr pro
+   vyhledávání služeb a čtyři dlaždice služeb a odkazy na SSH a GitHub popsané výše.

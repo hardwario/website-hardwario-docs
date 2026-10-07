@@ -6,15 +6,15 @@ import Image from '@theme/IdealImage';
 
 # Konzole AT přes USB-C {#at-console-over-usb-c}
 
-Tato stránka popisuje, jak komunikovat se zařízením GLIDER přes jeho konektor **USB-C** pomocí **příkazů AT**. Konzole AT je doporučené rozhraní pro každodenní práci – zprovoznění, konfiguraci, aktualizace firmwaru – a nevyžaduje žádný speciální ladicí hardware.
+Tato stránka popisuje, jak se zařízením GLIDER komunikovat **příkazy AT** přes konektor **USB-C**. Konzole AT je doporučené rozhraní pro každodenní práci (zprovoznění, konfigurace, aktualizace firmwaru) a nepotřebuje žádný speciální ladicí hardware.
 
 :::tip
-Hledáte živé logy a plný Zephyr shell? Použijte místo toho [**RTT konzoli (J-Link)**](rtt-jlink.md).
+Pokud potřebujete průběžné logy a plný shell Zephyr, použijte [**konzoli RTT (J-Link)**](rtt-jlink.md).
 :::
 
 ## Jak to funguje {#how-it-works}
 
-Interně zařízení GLIDER propojuje UART0 čipu nRF9151 s převodníkem **FT234XD USB-UART**. Ve chvíli, kdy zapojíte kabel USB-C, firmware převodník napájí a začne přijímat příkazy AT.
+Uvnitř zařízení GLIDER je UART0 čipu nRF9151 připojený k převodníku **USB-UART FT234XD**. Jakmile zapojíte kabel USB-C, firmware převodník zapne a začne přijímat příkazy AT.
 
 | Signál | Pin nRF9151 | Funkce |
 | :--- | :--- | :--- |
@@ -23,12 +23,12 @@ Interně zařízení GLIDER propojuje UART0 čipu nRF9151 s převodníkem **FT23
 | `USB_EN` | `P0.00` | Napájí FT234XD (aktivní v log. 1) |
 | `USB_DETECT` | `P0.26` | Detekuje kabel (aktivní v log. 0) |
 
-UART0 pracuje na **1 000 000 baud** (nastaveno v `gauger_lte_nrf9151_common.dtsi`).
+UART0 pracuje rychlostí **1 000 000 baud** (nastaveno v `gauger_lte_nrf9151_common.dtsi`).
 
 Když zapojíte kabel USB-C, firmware:
 
 1. Detekuje kabel na `USB_DETECT` (P0.26).
-2. Po 50 ms zákmitové prodlevě zapne `USB_EN` (P0.00) – FT234XD se nastartuje.
+2. Po 50 ms ošetření zákmitů zapne `USB_EN` (P0.00) a převodník FT234XD naběhne.
 3. Aktivuje UART0 RX a začne zpracovávat příkazy AT.
 
 ## Předpoklady {#prerequisites}
@@ -42,14 +42,14 @@ sudo apt install python3 python3-venv git
 
 #### Členství ve skupině `dialout` {#membership-in-the-dialout-group}
 
-Linux omezuje přístup k sériovým portům na členy skupiny `dialout`. Přidejte se jednorázově:
+V Linuxu mají k sériovým portům přístup jen členové skupiny `dialout`. Jednou se do ní přidejte:
 
 ```bash
 sudo usermod -aG dialout $USER
 ```
 
 :::caution
-Aby se změna skupiny projevila, musíte se **odhlásit a znovu přihlásit**. Ověření:
+Aby se změna skupiny projevila, musíte se **odhlásit a znovu přihlásit**. Ověříte to příkazem:
 
 ```bash
 groups | grep -o dialout
@@ -57,7 +57,7 @@ groups | grep -o dialout
 ```
 :::
 
-#### Ověření, že se kabel USB-C zaregistruje {#verify-the-usb-c-cable-enumerates}
+#### Ověření, že systém zařízení na USB-C rozpozná {#verify-the-usb-c-cable-enumerates}
 
 Zapojte zařízení GLIDER a zkontrolujte:
 
@@ -66,7 +66,7 @@ ls -l /dev/ttyUSB0
 # crw-rw---- 1 root dialout ... /dev/ttyUSB0
 ```
 
-Pokud se `/dev/ttyUSB0` neobjeví, zkontrolujte `dmesg | tail -20` – měli byste vidět něco jako:
+Pokud se `/dev/ttyUSB0` neobjeví, podívejte se na výstup `dmesg | tail -20`. Měli byste vidět něco jako:
 
 ```text
 usb 1-2: new full-speed USB device
@@ -74,11 +74,11 @@ ftdi_sio 1-2:1.0: FTDI USB Serial Device converter detected
 usb 1-2: FTDI USB Serial Device converter now attached to ttyUSB0
 ```
 
-Pokud místo toho vidíte chyby, je problém na straně hardwaru (nesprávný kabel, vadný konektor, FT234XD není napájen).
+Pokud místo toho vidíte chyby, je problém na straně hardwaru (nevhodný kabel, vadný konektor, převodník FT234XD bez napájení).
 
 ## Kompletní nastavení s virtuálním prostředím Pythonu {#full-setup-with-a-python-virtual-environment}
 
-Doporučený způsob instalace nástrojů HARDWARIO pro příkazovou řádku je uvnitř **virtualenv** Pythonu. Tím se balíčky izolují od systémového Pythonu a funguje to na každé moderní distribuci Linuxu.
+Nástroje HARDWARIO pro příkazovou řádku doporučujeme instalovat do **virtualenv** Pythonu. Balíčky jsou tak oddělené od systémového Pythonu a postup funguje na každé současné distribuci Linuxu.
 
 #### Krok 1 – Ověřte, že je nainstalován `python3-venv` {#step-1---verify-python3-venv-is-installed}
 
@@ -107,7 +107,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-Výzva vašeho shellu by nyní měla mít předponu `(.venv)`.
+Na začátku výzvy shellu by teď mělo být `(.venv)`.
 
 #### Krok 4 – Nainstalujte potřebné balíčky {#step-4---install-the-required-packages}
 
@@ -120,10 +120,10 @@ Co jste právě nainstalovali:
 
 | Balíček | Účel |
 | :--- | :--- |
-| `west` | Meta-build nástroj používaný Zephyr / nRF Connect SDK |
+| `west` | Metanástroj pro sestavení, který používají Zephyr a nRF Connect SDK |
 | `pyserial` | Knihovna pro komunikaci po UART |
 | `loguru` | Strukturované logování |
-| `rttt` | Knihovna konzolového UI od HARDWARIO – zpracovává rámování `@LOG:` |
+| `rttt` | Knihovna konzolového UI od HARDWARIO, která zpracovává rámování `@LOG:` |
 
 #### Krok 5 – Ověřte instalaci {#step-5---verify-the-installation}
 
@@ -154,15 +154,15 @@ Pokud máte více zařízení, zadejte port explicitně:
 west serial-console --port /dev/ttyUSB1 --baudrate 1000000
 ```
 
-Konzole udržuje dva oddělené proudy:
+Konzole drží odděleně dva proudy:
 
-- **příkazy AT a odpovědi**: co napíšete a co zařízení GLIDER odpoví.
-- **Zprávy `@LOG:`**: živé řádky logu, které projdou po obrazovce, aniž by rušily příkazovou řádku.
+- **Příkazy AT a odpovědi**: co napíšete a co zařízení GLIDER odpoví.
+- **Zprávy `@LOG:`**: průběžné řádky logu, které rolují obrazovkou a nepřekážejí na příkazové řádce.
 
 Užitečné soubory, které `west serial-console` spravuje:
 
 - Historie příkazů: `~/.serial_console_history`
-- Kompletní záznam sezení: `~/.serial_console_console`
+- Úplný záznam relace: `~/.serial_console_console`
 - Trasování modemu: `~/.serial_console.mtrace`
 
 ## Rychlá kontrola funkčnosti {#a-quick-sanity-check}
@@ -175,13 +175,13 @@ ATI
 # "GLIDER-R1.1"
 ```
 
-Pokud se objeví `OK`, komunikujete se zařízením.
+Pokud se objeví `OK`, komunikace se zařízením funguje.
 
 ## Základní příkazy AT {#basic-at-commands}
 
 | Příkaz | Co dělá |
 | :--- | :--- |
-| `AT` | Test připojení – vrací `OK` |
+| `AT` | Test spojení, vrací `OK` |
 | `AT+CLAC` | Vypíše všechny registrované příkazy AT |
 | `AT$HELP` | Stejné jako `+CLAC`, ale s nápovědou |
 | `ATI` | Identifikace zařízení |
@@ -191,8 +191,8 @@ Pokud se objeví `OK`, komunikujete se zařízením.
 | `AT+CGSN` | Sériové číslo |
 | `AT$INFO?` | Výpis všech informačních polí (sériové číslo, claim token, …) |
 | `AT$REBOOT` | Restartuje zařízení |
-| `AT&W` | Uloží konfiguraci do flash |
-| `AT&F` | Obnovení výchozího nastavení (vymaže celou konfiguraci) |
+| `AT&W` | Uloží konfiguraci do flash paměti |
+| `AT&F` | Obnoví tovární nastavení (vymaže celou konfiguraci) |
 
 #### Konfigurace přes AT {#configuration-over-at}
 
@@ -205,7 +205,7 @@ AT&W # save and reboot
 
 #### Spouštění příkazů shellu z konzole AT {#running-shell-commands-from-the-at-console}
 
-Konzole AT umí také vykonat jakýkoli **příkaz Zephyr shellu** přes `AT$SHELL`:
+Konzole AT umí přes `AT$SHELL` spustit i libovolný **příkaz shellu Zephyr**:
 
 ```text
 AT$SHELL="therm state"
@@ -218,13 +218,13 @@ AT$SHELL="log enable wrn"
 
 #### Aktualizace firmwaru {#firmware-update}
 
-Pro programovou aktualizaci firmwaru viz referenci [**příkazy AT**](../commands/at-commands.md) (`AT$FW`).
+Skriptovanou aktualizaci firmwaru popisuje reference [**Příkazy AT**](../commands/at-commands.md) (`AT$FW`).
 
 ## Údržba {#maintenance}
 
 | Akce | Příkaz |
 | :--- | :--- |
-| Opuštění virtualenv | `deactivate` |
+| Ukončení virtualenv | `deactivate` |
 | Aktualizace nástrojů | `pip install --upgrade west pyserial loguru rttt` |
 | Odstranění virtualenv | `rm -rf .venv` |
 | Výpis nainstalovaných balíčků | `pip list` |
@@ -245,7 +245,7 @@ sudo usermod -aG dialout $USER
 
 #### Port je obsazený {#the-port-is-busy}
 
-Jiný terminál (`screen`, `minicom`, `picocom`, `tio`, …) jej již drží:
+Port už drží jiný terminál (`screen`, `minicom`, `picocom`, `tio`, …):
 
 ```bash
 sudo lsof /dev/ttyUSB0
@@ -253,15 +253,15 @@ screen -ls && screen -wipe
 killall screen minicom picocom tio 2>/dev/null
 ```
 
-#### Logy přicházejí, ale příkazy AT se nevracejí zpět {#logs-arrive-but-at-commands-are-not-echoed-back}
+#### Logy přicházejí, ale příkazy AT nemají echo {#logs-arrive-but-at-commands-are-not-echoed-back}
 
-Váš terminál posílá **pouze CR** místo `LF` nebo `CRLF`. `west serial-console` řeší konce řádků automaticky, jiné terminály ale nemusí. Například při použití `tio`:
+Terminál posílá **pouze CR** místo `LF` nebo `CRLF`. Nástroj `west serial-console` konce řádků upraví automaticky, jiné terminály ale ne vždy. Například u `tio`:
 
 ```bash
 tio -b 1000000 -m INLCRNL,OCRNL /dev/ttyUSB0
 ```
 
-`OCRNL` mapuje odchozí CR na LF.
+`OCRNL` převádí odchozí CR na LF.
 
 ## Alternativní terminály {#alternative-terminals}
 

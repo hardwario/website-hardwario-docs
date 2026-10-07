@@ -6,21 +6,21 @@ import Image from '@theme/IdealImage';
 
 # Přizpůsobení aplikace {#application-customization}
 
-Tento článek popisuje postup, když potřebujete upravit existující katalogovou aplikaci v **CHESTER SDK**. Vývojář to může udělat několika způsoby, ale cílem tohoto článku je ukázat proces, který představuje co nejmenší tření, když vývojář potřebuje držet krok s aktualizacemi **CHESTER SDK**.
+Tento článek popisuje postup úpravy existující katalogové aplikace v **CHESTER SDK**. Možností je několik; tento článek ukazuje tu, při které vývojář co nejsnáze drží krok s aktualizacemi **CHESTER SDK**.
 
 ## Vytvoření forku aplikace {#creating-application-fork}
 
-Tato kapitola vás provede procesem, jak vytvořit **fork katalogové aplikace**. Jako příklad použijeme katalogovou aplikaci **CHESTER Current**, ale postup lze aplikovat na cokoliv v **CHESTER SDK** – klidně vylepšete i ovladače přímo ve stromu zdrojových kódů.
+Tato kapitola ukazuje, jak vytvořit **fork katalogové aplikace**. Jako příklad použijeme katalogovou aplikaci **CHESTER Current**, postup ale platí pro cokoli v **CHESTER SDK**. Klidně vylepšete i ovladače přímo ve stromu zdrojových kódů.
 
 :::tip
 
-Pokud je vaše změna dostatečně obecná a věříte, že by z ní mohl mít prospěch kdokoliv, promluvte si s námi o jejím začlenění do upstreamu. Vystavení vašeho kódu širšímu publiku přináší výhodu potenciálně vyšší míry testování a velmi pravděpodobně budete mít ruce volné od jeho další údržby.
+Pokud je vaše změna dostatečně obecná a mohla by se hodit i dalším, domluvte se s námi na jejím začlenění do upstreamu. Kód, který používá víc lidí, bývá lépe otestovaný, a jeho další údržba vás nejspíš už nebude zatěžovat.
 
 :::
 
-Tento postup je založen na naklonování repozitáře **Git** a vytvoření vlastní větve **Git** z větve `main` (lokální větev `main` bude synchronizována s větví `main` ze vzdáleného serveru **CHESTER SDK**).
+Postup spočívá v naklonování repozitáře **Git** a vytvoření vlastní větve **Git** z větve `main` (lokální větev `main` se bude synchronizovat s větví `main` na vzdáleném serveru **CHESTER SDK**).
 
-Níže je minimalizovaná sada příkazů převzatá z instalačního postupu **CHESTER SDK** na [**Ubuntu**](./installation-on-ubuntu.md). Jediný rozdíl je v tom, že jako výchozí bod **NEPOUŽÍVÁME** repozitář **Git** `skeleton`, ale jako kořenový repozitář používáme samotné **CHESTER SDK**.
+Níže je zkrácená sada příkazů z instalačního postupu **CHESTER SDK** na [**Ubuntu**](./installation-on-ubuntu.md). Jediný rozdíl: jako výchozí bod **NEPOUŽÍVÁME** repozitář **Git** `skeleton`, ale jako kořenový repozitář použijeme přímo **CHESTER SDK**.
 
 1. Nastavte pracovní prostor **West** s **CHESTER SDK**:
 
@@ -44,7 +44,7 @@ Níže je minimalizovaná sada příkazů převzatá z instalačního postupu **
    cd chester
    ```
 
-1. V tomto repozitáři **Git** změňte **Git remote** s názvem `origin`, který ukazuje na **HARDWARIO**, na `upstream`:
+1. V tomto repozitáři **Git** přejmenujte **Git remote** `origin`, který ukazuje na **HARDWARIO**, na `upstream`:
 
    ```
    git remote rename origin upstream
@@ -66,11 +66,11 @@ Níže je minimalizovaná sada příkazů převzatá z instalačního postupu **
 
    :::caution
 
-   Příkaz výše jen tak nekopírujte – adresu nahraďte tou skutečnou, kterou poskytuje váš **Git** server.
+   Příkaz výše jen tak nekopírujte: adresu nahraďte skutečnou adresou svého **Git** serveru.
 
    :::
 
-1. Odešlete větev `main` nedávno inicializovaného repozitáře **CHESTER SDK** na svůj remote:
+1. Odešlete větev `main` právě inicializovaného repozitáře **CHESTER SDK** do svého remote:
 
    ```
    git push origin main
@@ -86,7 +86,7 @@ Níže je minimalizovaná sada příkazů převzatá z instalačního postupu **
 
    :::tip
 
-   Výsledkem bude jeden až mnoho nových commitů nad větví `awesome-company/current`.
+   Výsledkem bude jeden nebo více nových commitů ve větvi `awesome-company/current`.
 
    :::
 
@@ -96,13 +96,13 @@ Níže je minimalizovaná sada příkazů převzatá z instalačního postupu **
    git push origin awesome-company/current
    ```
 
-V tuto chvíli budete mít ve svém **lokálním** repozitáři (na disku) i na svém **Git** serveru větev `main`, která kopíruje větev `main` z **CHESTER SDK** hostovaného na **GitLab** od **HARDWARIO**. Kromě toho budete mít na svém **Git** remote, označovaném jako `origin`, novou větev **Git** s požadovanými změnami.
+Teď máte v **lokálním** repozitáři (na disku) i na svém **Git** serveru větev `main`, která je kopií větve `main` z **CHESTER SDK** od **HARDWARIO** na **GitHubu**. Na svém **Git** remote `origin` máte navíc novou větev **Git** s požadovanými změnami.
 
-## Aktualizace vaší aplikace {#updating-your-application}
+## Aktualizace aplikace {#updating-your-application}
 
-Doporučujeme pravidelně synchronizovat změny vlastní aplikace s nejnovější verzí **CHESTER SDK**. Následující kroky vás provedou postupem aktualizace.
+Změny ve své aplikaci pravidelně synchronizujte s nejnovější verzí **CHESTER SDK**. Postup aktualizace popisují následující kroky.
 
-1. Za předpokladu, že jste ve větvi **Git** `awesome-company/current`, získejte nejnovější změny v **CHESTER SDK**:
+1. Ve větvi **Git** `awesome-company/current` stáhněte nejnovější změny z **CHESTER SDK**:
 
    ```
    git fetch upstream main:main
@@ -110,7 +110,7 @@ Doporučujeme pravidelně synchronizovat změny vlastní aplikace s nejnovějš�
 
    :::tip
 
-   V tuto chvíli může větev `main` obdržet několik nových commitů **Git**.
+   Do větve `main` tak může přibýt několik nových commitů **Git**.
 
    :::
 
@@ -122,17 +122,17 @@ Doporučujeme pravidelně synchronizovat změny vlastní aplikace s nejnovějš�
 
    :::tip
 
-   Vaše commity **Git** budou přehrány nad commity z větve `main`.
+   Vaše commity **Git** se znovu aplikují nad commity z větve `main`.
 
    :::
 
    :::caution
 
-   Občas mohou být nedávné aktualizace v **CHESTER SDK** v konfliktu s vašimi změnami. Pokud **Git** nedokáže konflikty vyřešit automaticky, provede vás jejich řešením. Pokud jste vytvořili více commitů **Git**, můžete je řešit jeden po druhém. Z tohoto důvodu je někdy jednodušší udržovat své změny jako jediný commit, pokud má změna rozumnou velikost.
+   Občas jsou nové aktualizace **CHESTER SDK** v konfliktu s vašimi změnami. Pokud **Git** konflikty nevyřeší automaticky, provede vás jejich řešením. Máte-li víc commitů **Git**, řešíte konflikty u každého zvlášť. Proto je někdy jednodušší udržovat změny jako jediný commit, pokud není příliš velký.
 
    :::
 
-1. V dalším kroku odešlete svou větev s nedávnými aktualizacemi na svůj **Git** remote:
+1. Pak odešlete aktualizovanou větev do svého **Git** remote:
 
    ```
    git push origin awesome-company/current -f
@@ -140,8 +140,8 @@ Doporučujeme pravidelně synchronizovat změny vlastní aplikace s nejnovějš�
 
    :::tip
 
-   Všimněte si parametru `-f` (force) na konci příkazu. Je to proto, že historie Git byla přepsána příkazem `git rebase` a vaše lokální větev se **rozešla** s vaší vzdálenou větví. Tento parametr říká vzdálenému serveru **Git**, aby vynutil přepsání větve.
+   Všimněte si parametru `-f` (force) na konci příkazu. Příkaz `git rebase` přepsal historii Git a lokální větev se **rozešla** se vzdálenou větví. Parametr proto vzdálenému serveru **Git** říká, že má větev přepsat.
 
    :::
 
-Výše uvedený postup by vám měl pomoci udržet vaši práci synchronizovanou s **CHESTER SDK**. Na svou práci můžete pohlížet jako na sadu patchů, které se přehrávají nad větví `main` **CHESTER SDK**.
+Tímto postupem udržíte svou práci v souladu s **CHESTER SDK**. Své změny si můžete představit jako sadu patchů, které se aplikují nad větví `main` **CHESTER SDK**.

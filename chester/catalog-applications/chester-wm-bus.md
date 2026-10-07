@@ -23,7 +23,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 - [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
 - [**Common functionality**](common-functionality.md) to know how LED, button and network configuration works.
-- [**Platform Management**](/chester/category/platform-connectivity/) on how to work with the interactive console.
+- [**Platform Connectivity**](/chester/category/platform-connectivity/) on how to work with the interactive console.
 
 :::
 
@@ -217,9 +217,9 @@ After completing the configuration, you need to confirm everything.
 
 ## Example Configurations
 
-When configuring over BLE, you need to apply the configuraiton changes with `config save` command.
+When configuring over BLE, you need to apply the configuration changes with the `config save` command; otherwise the configuration is not applied.
 
-When configuring over [Cloud config downlink commands](/cloud/downlink/config), don't add `config save` command, it is applied automatically. Othwerwise the configuration is not
+When configuring over [Cloud config downlink commands](/cloud/downlink/config), don't add the `config save` command; it is applied automatically.
 
 ### Interval and wM-Bus Packets Every 2 Minutes
 

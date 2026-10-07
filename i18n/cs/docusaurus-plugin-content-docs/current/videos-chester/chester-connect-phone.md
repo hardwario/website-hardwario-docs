@@ -5,9 +5,9 @@ title: Jak připojit zařízení CHESTER k telefonu
 
 import Image from '@theme/IdealImage';
 
-## Přehled tutoriálu {#tutorial-overview}
+## Přehled návodu {#tutorial-overview}
 
-V tomto průvodci se naučíte, jak připojit zařízení CHESTER k telefonu pomocí aplikace HARDWARIO Manager. Podle jednoduchých kroků zařízení spárujete přes Bluetooth a získáte přístup ke všem informacím o zařízení i k nástrojům.
+Tento návod ukazuje, jak připojit zařízení CHESTER k telefonu v aplikaci HARDWARIO Manager. V několika jednoduchých krocích ho spárujete přes Bluetooth a získáte přístup ke všem informacím o zařízení i k nástrojům aplikace.
 
 ---
 
@@ -29,7 +29,7 @@ V tomto průvodci se naučíte, jak připojit zařízení CHESTER k telefonu pom
 </div>
 
 
-## Podrobný textový průvodce {#step-by-step-text-guide}
+## Podrobný textový návod {#step-by-step-text-guide}
 
 1. Vezměte telefon a otevřete aplikaci Kamera.
 
@@ -41,9 +41,9 @@ V tomto průvodci se naučíte, jak připojit zařízení CHESTER k telefonu pom
 
 5. Zapamatujte si nebo zkopírujte Bluetooth passkey.
 
-6. Nyní otevřete aplikaci HARDWARIO Manager.
+6. Pak otevřete aplikaci HARDWARIO Manager.
 
-7. Klikněte na ikonu skeneru v pravém horním rohu.
+7. Klepněte na ikonu skeneru v pravém horním rohu.
 
 8. Poté znovu naskenujte QR kód na zadní straně zařízení CHESTER.
 
@@ -51,20 +51,20 @@ V tomto průvodci se naučíte, jak připojit zařízení CHESTER k telefonu pom
 
 10. Zadejte nebo vložte Bluetooth passkey a klepněte na Pair.
 
-11. Několik sekund počkejte, než se párování dokončí.
+11. Počkejte několik sekund, než se párování dokončí.
 
-12. Nyní je zařízení CHESTER připojeno k telefonu.
+12. Zařízení CHESTER je teď připojené k telefonu.
 
 13. Zde vidíte všechny informace o zařízení.
 
-14. Další funkce najdete po otevření hamburger menu vlevo.
+14. Další funkce najdete v nabídce (hamburger menu) vlevo.
 
-15. Tam se nachází seznam všech nástrojů aplikace.
+15. Je v ní seznam všech nástrojů aplikace.
 
 16. Chcete-li zařízení CHESTER nastavit, otevřete Terminal.
 
-17. Nyní můžete posílat příkazy shellu jako info show nebo config show.
+17. Teď můžete posílat příkazy shellu, například info show nebo config show.
 
-18. Okamžitě se vrátí odpověď.
+18. Odpověď přijde okamžitě.
 
 19. Všemi odeslanými příkazy můžete procházet.

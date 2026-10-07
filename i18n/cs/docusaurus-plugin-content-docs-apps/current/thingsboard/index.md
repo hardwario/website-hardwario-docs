@@ -122,7 +122,7 @@ export const DashboardContainer = () => {
 
 ## První kroky {#getting-started}
 
-Podle následujících kroků nastavíte ThingsBoard a začnete svá zařízení sledovat od nuly.
+Podle následujících kroků nastavíte ThingsBoard od začátku a začnete sledovat svá zařízení.
 
 ---
 
@@ -138,7 +138,7 @@ Toto zařízení bude fungovat jako koncový bod, který přijímá a ukládá d
 ### 2. Připojení k HARDWARIO Cloud {#2-connect-to-hardwario-cloud}
 
 Přejděte do [HARDWARIO Cloud](https://hardwario.cloud/) a nastavte konektor, který bude směřovat na vaše zařízení v ThingsBoard.
-Tento konektor bezpečně přenese data vašeho zařízení z HARDWARIO Cloud do ThingsBoard.
+Konektor pak bezpečně přenáší data ze zařízení z HARDWARIO Cloud do ThingsBoard.
 
 👉 [Připojení k ThingsBoard](/apps/thingsboard/cloud-connection)
 
@@ -146,8 +146,8 @@ Tento konektor bezpečně přenese data vašeho zařízení z HARDWARIO Cloud do
 
 ### 3. Vytvoření dashboardu {#3-create-a-dashboard}
 
-Jakmile je spojení navázáno a data proudí, vytvořte v ThingsBoard dashboard.
-Přidejte widgety, jako jsou karty, grafy a ukazatele, a vizualizujte svá data v reálném čase.
+Jakmile spojení funguje a data přicházejí, vytvořte v ThingsBoard dashboard.
+Přidejte do něj widgety, například karty, grafy a ukazatele, a sledujte data v reálném čase.
 
 👉 [Vytvoření dashboardu](/apps/thingsboard/creating-dashboard)
 
@@ -156,7 +156,7 @@ Přidejte widgety, jako jsou karty, grafy a ukazatele, a vizualizujte svá data 
 ### 4. Nastavení uživatelských rolí a skupin {#4-set-up-user-roles-and-groups}
 
 V ThingsBoard přesně určíte, co smí který uživatel vidět a dělat.
-Definujte role s konkrétními oprávněními a rozdělte uživatele do skupin propojených s jejich zařízeními a dashboardy.
+Vytvořte role s konkrétními oprávněními a rozdělte uživatele do skupin, ke kterým patří jejich zařízení a dashboardy.
 
 👉 [Správa uživatelů](/apps/thingsboard/users-managing)
 
@@ -164,7 +164,7 @@ Definujte role s konkrétními oprávněními a rozdělte uživatele do skupin p
 
 ### 5. Přidání uživatelů {#5-add-users}
 
-Vytvořte uživatelské účty, přiřaďte je do skupin a odešlete aktivační odkazy, aby se vaši zákazníci mohli přihlásit a přistupovat ke svým dashboardům.
+Vytvořte uživatelské účty, přiřaďte je do skupin a odešlete aktivační odkazy, aby se zákazníci mohli přihlásit ke svým dashboardům.
 
 👉 [Přidání uživatelů](/apps/thingsboard/users)
 
@@ -185,7 +185,7 @@ ThingsBoard nabízí řadu pokročilých funkcí pro organizaci dat, automatizac
 | Funkce | Popis |
 |---------|-------------|
 | [Assety](/apps/thingsboard/assets) | Uspořádejte zařízení do logických hierarchií (budovy, podlaží, zóny) pro snazší řízení přístupu a abstrakci dashboardů. |
-| [Pravidla notifikací](/apps/thingsboard/notifications-manager) | Nastavte e-mailová a SMS upozornění na základě mezních hodnot bez programování, přímo z widgetu na dashboardu. |
-| [E-mailové notifikace](/apps/thingsboard/email-notification) | Vytvářejte vlastní Rule Chains pro odesílání podmíněných e-mailových upozornění s formátovanými daty a nastavitelným omezením frekvence. |
-| [Plánované reporty](/apps/thingsboard/email-reports) | Automaticky generujte a doručujte zákazníkům pravidelné PDF reporty podle definovaného rozvrhu. |
+| [Pravidla notifikací](/apps/thingsboard/notifications-manager) | Nastavte e-mailová a SMS upozornění při překročení limitů, bez programování a přímo z widgetu na dashboardu. |
+| [E-mailové notifikace](/apps/thingsboard/email-notification) | Ve vlastních řetězcích pravidel (Rule Chains) odesílejte podmíněná e-mailová upozornění s formátovanými daty a nastavitelným omezením četnosti. |
+| [Plánované reporty](/apps/thingsboard/email-reports) | Pravidelné reporty v PDF se automaticky vytvoří a odešlou zákazníkům podle nastaveného plánu. |
 | [Rule Engine](/apps/thingsboard/rule-engine) | Vizuální programování pro transformaci dat, správu alarmů, integrace třetích stran a automatizaci zařízení. |

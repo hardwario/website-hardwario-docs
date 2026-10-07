@@ -8,34 +8,34 @@ import TabItem from '@theme/TabItem';
 
 :::info
 
-Aby to fungovalo, budete potřebovat nainstalovaný a běžící Mosquitto MQTT Broker na svém počítači
+Aby to fungovalo, musíte mít v počítači nainstalovaný a spuštěný broker MQTT Mosquitto.
 
 Jak nainstalovat Mosquitto:
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
 
-Mosquitto na systému Windows nainstalujete a spustíte podle návodu [**How to Install The Mosquitto MQTT Broker on Windows**](http://www.steves-internet-guide.com/install-mosquitto-broker/)
+Ve Windows Mosquitto nainstalujete a spustíte podle návodu [**How to Install The Mosquitto MQTT Broker on Windows**](http://www.steves-internet-guide.com/install-mosquitto-broker/).
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-Mosquitto na systému Ubuntu nainstalujete a spustíte podle návodu [**Install Mosquitto MQTT Broker On Ubuntu 20.04 Server**](https://www.vultr.com/docs/install-mosquitto-mqtt-broker-on-ubuntu-20-04-server/)
+V Ubuntu Mosquitto nainstalujete a spustíte podle návodu [**Install Mosquitto MQTT Broker On Ubuntu 20.04 Server**](https://www.vultr.com/docs/install-mosquitto-mqtt-broker-on-ubuntu-20-04-server/).
 
 </TabItem>
 <TabItem value="macOS" label="macOS">
 
-Na macOS provedete instalaci příkazem:
+V macOS Mosquitto nainstalujete příkazem:
 
 ```
 brew install mosquitto
 ```
 
-Po instalaci je potřeba v terminálu spustit `mosquitto`
+Po instalaci spusťte v terminálu `mosquitto`.
 
 </TabItem>
 </Tabs>
 
-Dále budete potřebovat [**nainstalovanou a běžící službu Gateway Service**](./gateway-service.md)
+Dále potřebujete [**nainstalovanou a spuštěnou službu Gateway Service**](./gateway-service.md).
 
 :::
 
@@ -46,17 +46,17 @@ Tento **multiplatformní** nástroj v Pythonu slouží k ovládání **rádia** 
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
 
-Abyste mohli získat **Host Management Tool**, potřebujete mít na zařízení [**nainstalovaný Python a pip a v systémové PATH**](https://www.tutorialspoint.com/how-to-install-python-in-windows)
+Abyste mohli nástroj **Host Management Tool** nainstalovat, musíte mít v počítači [**nainstalovaný Python a pip, oba v systémové proměnné PATH**](https://www.tutorialspoint.com/how-to-install-python-in-windows).
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-Abyste mohli získat **Host Management Tool**, potřebujete mít na zařízení nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-linux/) a mít je v systémové **PATH**
+Abyste mohli nástroj **Host Management Tool** nainstalovat, musíte mít v počítači nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-linux/), oba v systémové proměnné **PATH**.
 
 </TabItem>
 <TabItem value="macOS" label="macOS">
 
-Abyste mohli získat **Host Management Tool**, potřebujete mít na zařízení nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-macos/) a mít je v systémové **PATH**
+Abyste mohli nástroj **Host Management Tool** nainstalovat, musíte mít v počítači nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-macos/), oba v systémové proměnné **PATH**.
 
 </TabItem>
 </Tabs>
@@ -65,11 +65,11 @@ Abyste mohli získat **Host Management Tool**, potřebujete mít na zařízení 
 
 ## Instalace {#installation}
 
-Chcete-li nástroj **Host Management Tool** nainstalovat, stačí otevřít **CLI** vašeho systému a spustit následující příkaz:
+Nástroj **Host Management Tool** nainstalujete tak, že otevřete příkazovou řádku (**CLI**) a spustíte tento příkaz:
 
 :::tip
 
-Stejným příkazem můžete **Host Management Tool** aktualizovat na nejnovější verzi
+Stejným příkazem nástroj **Host Management Tool** také aktualizujete na nejnovější verzi.
 
 :::
 
@@ -99,12 +99,12 @@ pip install --upgrade --no-cache-dir bch
 
 :::tip
 
-Všechny dostupné příkazy zobrazíte zadáním **`bch --help`** do **CLI**
+Všechny dostupné příkazy zobrazíte zadáním **`bch --help`** do příkazové řádky (**CLI**).
 
 <details>
 <summary>
 <b>
-výstup bch --help
+Výstup bch --help
 </b>
 </summary>
 <p>
@@ -144,29 +144,29 @@ výstup bch --help
 
 :::info
 
-V dalším terminálu nebo na pozadí je potřeba spustit `mosquitto` a `bcg --device YOUR_RADIO_DONGLE`
+V jiném terminálu nebo na pozadí musí běžet `mosquitto` a `bcg --device YOUR_RADIO_DONGLE`.
 
 :::
 
-#### Přihlášení ke všem MQTT tématům (#) {#subscribe-to-all-mqtt-topics-}
+#### Odběr všech topiců MQTT (#) {#subscribe-to-all-mqtt-topics-}
 
 ```
 bch sub
 ```
 
-#### Pokud máte [vlastní server](../server-raspberry-pi/index.md), můžete spustit následující příkaz s hostname nebo IP adresou serveru (v příkladu `hub.local`) {#if-you-have-your-own-server-you-can-run-following-command-with-a-server-hostname-or-ip-address-example-is-hublocal}
+#### Pokud máte [vlastní server](../server-raspberry-pi/index.md), spusťte příkaz s hostname nebo IP adresou serveru (v příkladu `hub.local`) {#if-you-have-your-own-server-you-can-run-following-command-with-a-server-hostname-or-ip-address-example-is-hublocal}
 
 ```
 bch -H hub.local sub
 ```
 
-#### Přihlášení ke konkrétním tématům {#subscribe-to-specific-topics}
+#### Odběr konkrétních topiců {#subscribe-to-specific-topics}
 
 ```
 bch sub node/kitchen/#
 ```
 
-#### Publikování MQTT zprávy na MQTT brokeru běžícím na localhostu {#publish-mqtt-message-on-mqtt-broker-running-localhost}
+#### Publikování zprávy MQTT na brokeru MQTT, který běží na localhostu {#publish-mqtt-message-on-mqtt-broker-running-localhost}
 
 ```
 bch pub node/kitchen/thermometer/0:0/temperature 21.70
@@ -183,7 +183,7 @@ bch -H hub.local pairing --start
 
 ```
 bch pairing --stop
-bch -H hub.local pairing --start
+bch -H hub.local pairing --stop
 ```
 
 #### Výpis spárovaných uzlů {#list-paired-nodes}

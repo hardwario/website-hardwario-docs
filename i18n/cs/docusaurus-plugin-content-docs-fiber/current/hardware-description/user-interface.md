@@ -4,7 +4,7 @@ title: Uživatelské rozhraní
 
 # Uživatelské rozhraní {#user-interface}
 
-**FIBER** nabízí několik lokálních rozhraní navržených pro přehlednost a rychlou diagnostiku:
+Zařízení **FIBER** nabízí několik místních rozhraní navržených pro přehlednost a rychlou diagnostiku:
 
 ### LCD displej {#lcd-display}
 
@@ -23,5 +23,5 @@ title: Uživatelské rozhraní
 
 ### Akustický bzučák {#acoustic-buzzer}
 
-* Poskytuje zvukové výstrahy
-* Užitečný pro alarmy nebo zpětnou vazbu při konfiguraci
+* Zvuková upozornění
+* Hodí se pro alarmy nebo signalizaci při konfiguraci

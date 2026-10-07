@@ -7,17 +7,17 @@ import Image from '@theme/IdealImage';
 
 # Katalogové aplikace {#catalog-applications}
 
-Tento článek přináší informace o takzvaných **katalogových aplikacích** pro platformu **CHESTER**.
+Tento článek popisuje takzvané **katalogové aplikace** pro platformu **CHESTER**.
 
-**CHESTER** je rozšiřitelná IoT brána s nízkou spotřebou a otevřeným SDK postaveným nad operačním systémem **Zephyr**. Pro okamžité nasazení nabízí **HARDWARIO** několik aplikací pro konkrétní použití. Tyto **katalogové aplikace** jsou od **HARDWARIO** dostupné s krátkou dodací lhůtou. Jejich zdrojové kódy jsou součástí **CHESTER SDK** a aplikace průběžně vylepšujeme, udržujeme a podporujeme.
+**CHESTER** je rozšiřitelná IoT brána s nízkou spotřebou a otevřeným SDK postaveným nad operačním systémem **Zephyr**. Pro okamžité nasazení nabízí **HARDWARIO** několik aplikací pro konkrétní využití. Tyto **katalogové aplikace** dodává **HARDWARIO** s krátkou dodací lhůtou. Jejich zdrojové kódy jsou součástí **CHESTER SDK** a aplikace průběžně vylepšujeme, udržujeme a podporujeme.
 
-**Katalogové aplikace** také slouží jako výborný odrazový můstek pro vaši vlastní firmwarovou aplikaci.
+**Katalogové aplikace** jsou také dobrým výchozím bodem pro vlastní firmwarovou aplikaci.
 
 ## Seznam aplikací {#application-list}
 
-Podrobnosti o tom, jak jednotlivé katalogové aplikace fungují, zobrazíte kliknutím na název aplikace v tabulce níže.
+Jak jednotlivé katalogové aplikace fungují, zjistíte po kliknutí na název aplikace v tabulce níže.
 
-Společné funkce jsou popsány ve zvláštním článku [**Společná funkcionalita**](common-functionality.md).
+Funkce společné všem aplikacím popisuje samostatný článek [**Společné funkce**](common-functionality.md).
 
 Firmware ke stažení najdete v kapitole [**Firmware aplikací**](#application-firmware).
 
@@ -29,10 +29,10 @@ Firmware ke stažení najdete v kapitole [**Firmware aplikací**](#application-f
 | [**CHESTER Control**](chester-control.md) | Řízení 4 vstupů/výstupů | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> |
 | [**CHESTER Current**](chester-current.md) | Měření AC/DC proudu (4 kanály) | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> |
 | [**CHESTER Meteo**](chester-meteo.md) | Měření vítru, tlaku a počasí | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> |
-| [**CHESTER Motion**](chester-motion.md) | Detekce pohybu dvěma PIR senzory | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> |
-| [**CHESTER Push**](chester-push.md) | Alarmování tlačítkem | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> |
+| [**CHESTER Motion**](chester-motion.md) | Detekce pohybu dvěma senzory PIR | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> |
+| [**CHESTER Push**](chester-push.md) | Hlášení stiskem tlačítka | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> |
 | [**CHESTER Range**](chester-range.md) | Ultrazvukové měření vzdálenosti | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> |
-| [**CHESTER Scale**](chester-scale.md) | Monitorování hmotnosti na váze | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> |
+| [**CHESTER Scale**](chester-scale.md) | Sledování hmotnosti (váhy) | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> |
 | [**CHESTER Serial**](chester-serial.md) | Brána Modbus pro RS-232/RS-485 | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> |
 | [**CHESTER wM-Bus**](chester-wm-bus.md) | Brána pro bezdrátový M-Bus | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/cross.png" width="27" data-zoomable="false" alt="Nepodporováno" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Podporováno" /> |
 
@@ -40,11 +40,11 @@ Firmware ke stažení najdete v kapitole [**Firmware aplikací**](#application-f
 
 :::info
 
-- Varianta **CHESTER Clime IAQ** používá CHESTER-X10 pro externí vstup napájení (6-28V)
-- **CHESTER Control** používá modul CHESTER-X4 pro step-down napájení a digitální výstupy
-- **CHESTER Push** používá CHESTER-Z1-F, který kombinuje záložní baterii s napájením; může běžet i pouze z baterie
-- **CHESTER wM-Bus** je dostupný v bateriové variantě (6x článek D) nebo ve variantě DC s externím adaptérem 230V
-- **CHESTER Serial** používá CHESTER-X12 (RS-232) nebo CHESTER-X2 (RS-485) s externím vstupem napájení (5-28V)
+- Varianta **CHESTER Clime IAQ** používá pro externí napájení modul CHESTER-X10 (6–28 V)
+- **CHESTER Control** používá modul CHESTER-X4 se snižujícím měničem (step-down) a digitálními výstupy
+- **CHESTER Push** používá modul CHESTER-Z1-F, který kombinuje záložní baterii s napájecím zdrojem; zařízení může běžet i jen na baterii
+- **CHESTER wM-Bus** se dodává v bateriové variantě (6× článek D) nebo ve variantě DC s externím adaptérem 230 V
+- **CHESTER Serial** používá modul CHESTER-X12 (RS-232) nebo CHESTER-X2 (RS-485) s externím napájecím vstupem (5–28 V)
 
 :::
 
@@ -53,9 +53,9 @@ Firmware ke stažení najdete v kapitole [**Firmware aplikací**](#application-f
 
 Tento firmware je určený pro komunikaci s novějším [**Cloud v2**](/cloud/).
 
-Pokud vaše jednotka již komunikovala s Cloud v2, můžete aktualizovat pouze hlavní [**firmware APP/BLE MCU přes BLE**](../platform-connectivity/hardwario-manager.md#firmware-update).
+Pokud jednotka už komunikovala s Cloud v2, stačí aktualizovat jen hlavní [**firmware APP/BLE MCU přes BLE**](../platform-connectivity/hardwario-manager.md#firmware-update).
 
-Pokud byla vaše jednotka dříve používána s Cloud v1, musíte nejdříve aktualizovat [**firmware modemu LTE**](../firmware-sdk/how-to-lte-v2.md#flash-lte-modem-firmware).
+Pokud se jednotka dříve používala s Cloud v1, musíte nejdřív aktualizovat [**firmware modemu LTE**](../firmware-sdk/how-to-lte-v2.md#flash-lte-modem-firmware).
 
 
 :::info
@@ -77,7 +77,7 @@ Poté změny uložte příkazem `config save`. Zařízení se restartuje a použ
 
 <div className="firmware-builds-table">
 
-| Název aplikace | Verze | Identifikátor | Datum buildu | Poznámka |
+| Název aplikace | Verze | Identifikátor | Datum sestavení | Poznámka |
 | :--- | :--- | :---: | :---: | :--- |
 | [**CHESTER Clime**](chester-clime.md#chester-clime) | [**v4.0.1**](https://firmware.hardwario.com/chester/59489e4e91d741da930ab15b1ab9e31f) | <small>`59489e4e91d741da930ab15b1ab9e31f`</small> | 2026-09-07 |  |
 | [**CHESTER Clime IAQ**](chester-clime.md#chester-clime-iaq) | [**v4.0.1**](https://firmware.hardwario.com/chester/5dc54c6153974e879f5499d2483433c9) | <small>`5dc54c6153974e879f5499d2483433c9`</small> | 2026-09-07 |  |
@@ -94,7 +94,7 @@ Poté změny uložte příkazem `config save`. Zařízení se restartuje a použ
 | [**CHESTER Meteo**](chester-meteo.md#chester-meteo) | [**v4.0.1**](https://firmware.hardwario.com/chester/60a5b9b6cddf40659d47cf125e123f86) | <small>`60a5b9b6cddf40659d47cf125e123f86`</small> | 2026-09-07 |  |
 | [**CHESTER Meteo Z**](chester-meteo.md#chester-meteo-z) | [**v4.0.1**](https://firmware.hardwario.com/chester/f3ce30b40ad6404b9ef3e661330d2f24) | <small>`f3ce30b40ad6404b9ef3e661330d2f24`</small> | 2026-09-07 | Podpora CHESTER-Z |
 | [**CHESTER Meteo P**](chester-meteo.md) | [**v4.0.1**](https://firmware.hardwario.com/chester/8ae50ff5d08b436f8caf0926a994bc70) | <small>`8ae50ff5d08b436f8caf0926a994bc70`</small> | 2026-09-07 | Podpora pyranometru |
-| [**CHESTER Meteo M**](chester-meteo.md) | [**v4.0.1**](https://firmware.hardwario.com/chester/0b1d815d983b40118c26ee0e425e9f76) | <small>`0b1d815d983b40118c26ee0e425e9f76`</small> | 2026-09-07 | Varianta Modbus s podporou senzorů Lambrecht a Sensecap/OPM (volba přes meteo-type) |
+| [**CHESTER Meteo M**](chester-meteo.md) | [**v4.0.1**](https://firmware.hardwario.com/chester/0b1d815d983b40118c26ee0e425e9f76) | <small>`0b1d815d983b40118c26ee0e425e9f76`</small> | 2026-09-07 | Varianta Modbus s podporou senzorů Lambrecht a Sensecap/OPM (výběr parametrem meteo-type) |
 | [**CHESTER Motion**](chester-motion.md#chester-motion) | [**v4.0.1**](https://firmware.hardwario.com/chester/56cbeef2fcae46bcb69e76025800a33b) | <small>`56cbeef2fcae46bcb69e76025800a33b`</small> | 2026-09-07 |  |
 | [**CHESTER Push**](chester-push.md#chester-push) | [**v4.0.1**](https://firmware.hardwario.com/chester/a218e5f6eeea4fefaa3656ada720d163) | <small>`a218e5f6eeea4fefaa3656ada720d163`</small> | 2026-09-07 |  |
 | [**CHESTER Push FM**](chester-push.md) | [**v4.0.1**](https://firmware.hardwario.com/chester/001543e218a04ffdbf65082532202736) | <small>`001543e218a04ffdbf65082532202736`</small> | 2026-09-07 |  |
@@ -114,7 +114,7 @@ Tento firmware je určený pro komunikaci se starším [**Cloud v1**](/cloud/leg
 
 V tabulce níže je přehled dostupných sestavení firmwaru **katalogových aplikací**.
 
-Chcete-li nahrát firmware, použijte aplikaci [**HARDWARIO Manager**](../platform-connectivity/hardwario-manager.md) na svém telefonu nebo postupujte podle článku [**Nahrání firmwaru**](../firmware-flashing/index.md).
+Firmware nahrajete mobilní aplikací [**HARDWARIO Manager**](../platform-connectivity/hardwario-manager.md) nebo podle článku [**Nahrání firmwaru**](../firmware-flashing/index.md).
 
 :::info
 
@@ -131,7 +131,7 @@ Poté změny uložte příkazem `config save`. Zařízení se restartuje a použ
 :::
 
 
-| Název aplikace | Verze | Identifikátor | Datum buildu | Poznámka |
+| Název aplikace | Verze | Identifikátor | Datum sestavení | Poznámka |
 | :--- | :--- | :---: | :---: | :--- |
 | [**CHESTER Clime**](chester-clime.md#chester-clime) | [**v2.3.0**](https://firmware.hardwario.com/chester/55e7f6ba38c04b88aa68ad7ec2b3f353) [ℹ️](common-functionality.md#network-mode-configuration "Konfigurace režimu sítě") | <small>`55e7f6ba38c04b88aa68ad7ec2b3f353`</small> | 2023-08-02 |  |
 | [**CHESTER Clime Z**](chester-clime.md#chester-clime-z) | [**v2.3.0**](https://firmware.hardwario.com/chester/ed45be6253344349a9b8ddc71a0cc673) [ℹ️](common-functionality.md#network-mode-configuration "Konfigurace režimu sítě") | <small>`ed45be6253344349a9b8ddc71a0cc673`</small> | 2023-08-02 | Podpora **CHESTER-Z1** |

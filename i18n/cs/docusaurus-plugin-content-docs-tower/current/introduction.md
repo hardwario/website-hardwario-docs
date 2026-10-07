@@ -9,8 +9,8 @@ import Image from '@theme/IdealImage';
 
 # TOWER {#tower}
 
-**TOWER** je modulární bezdrátová IoT platforma s otevřeným softwarem i hardwarem (open source, open hardware) pro rychlé prototypování a nasazení.
-Používá se v průmyslových aplikacích, ve STEM výuce a v hobby projektech (domácí automatizace, zahradničení, osvětlení, escape roomy atd.).
+**TOWER** je modulární bezdrátová platforma IoT s otevřeným softwarem i hardwarem (open source, open hardware) pro rychlé prototypování a nasazení.
+Používá se v průmyslu, ve výuce STEM a v hobby projektech (domácí automatizace, zahradničení, osvětlení, escape roomy atd.).
 
 <img src="/img/tower.webp" data-zoom-src="/img/tower.webp" width="540" alt="TOWER" />
 
@@ -23,14 +23,14 @@ Používá se v průmyslových aplikacích, ve STEM výuce a v hobby projektech 
 * [**Vývoj firmwaru**](firmware-development): Ponořte se do programování embedded systémů.
 * [**Firmware SDK**](firmware-sdk): Tvorba vlastního firmwaru od základů.
 * [**Rádiová komunikace**](radio-communication): Rádiové protokoly podporované platformou TOWER.
-* [**Protokol MQTT**](mqtt-protocol): Základní pilíř systému TOWER na serveru.
-* [**Integrace platforem**](category/platform-integrations): Vizualizujte svá data a/nebo propojte svůj projekt na dálku.
-* [**Projekty krok za krokem**](https://www.hackster.io/hardwario/projects): Recepty na tvorbu reálných a smysluplných projektů.
+* [**Protokol MQTT**](mqtt-protocol): Páteř systému TOWER na serveru.
+* [**Integrace platforem**](category/platform-integrations): Zobrazte svá data v grafech nebo svůj projekt propojte na dálku.
+* [**Projekty krok za krokem**](https://www.hackster.io/hardwario/projects): Postupy, jak postavit skutečné a užitečné projekty.
 * [**Hardwarové moduly**](hardware-modules/): Podrobné informace o modulech a tagech TOWER.
 * [**Hardwarová rozhraní**](category/hardware-interfaces): Hardwarové vrstvy, nejen mezi moduly TOWER.
 * [**Seznam změn**](changelog): Nejnovější změny firmwaru a platformy.
 
-## Typické případy použití {#typical-use-cases}
+## Typické využití {#typical-use-cases}
 
 - Domácí automatizace, prototypování a vzdělávací projekty
 - Monitorování prostředí (klima, kvalita vzduchu, stav půdy)
@@ -46,4 +46,4 @@ Používá se v průmyslových aplikacích, ve STEM výuce a v hobby projektech 
 | **Open-source a open-hardware** | Plně otevřená platforma, kterou lze zdarma zkoumat a rozšiřovat. |
 | **Bezdrátové sub-GHz rádio** | Komunikace mezi moduly bez kabelů. |
 | **Návrh s ultranízkou spotřebou** | Dlouhá výdrž baterie u bezdrátových uzlů. |
-| **Široká využitelnost** | Vhodné pro průmysl, STEM výuku i hobby projekty. |
+| **Široké využití** | Hodí se pro průmysl, výuku STEM i hobby projekty. |

@@ -7,69 +7,69 @@ import Image from '@theme/IdealImage';
 
 # Konfigurace hotspotu {#hotspot-configuration}
 
-V tomto článku najdete podrobnosti o konfiguraci zařízení EMBER Hotspot. Je definována [**konfiguračním skriptem RouterOS**](https://help.mikrotik.com/docs/display/ROS/Getting+started).
+Tento článek podrobně popisuje konfiguraci zařízení EMBER Hotspot, kterou definuje [**konfigurační skript RouterOS**](https://help.mikrotik.com/docs/display/ROS/Getting+started).
 
 ## Koncept systému {#system-concept}
 
-Pro službu **EMBER** existuje alespoň jedna lokalita, ale můžete použít několik instancí síťového serveru a několik lokalit.
+Služba **EMBER** má alespoň jednu lokalitu, můžete ale využít i více lokalit a více instancí síťového serveru.
 
-Minimální konfigurace lokality je:
+Minimální konfigurace lokality:
 
 * Jedno zařízení **LoRaWAN** (například CHESTER)
 
 * Jedna brána **LoRaWAN** (EMBER Hotspot)
 
-* Jedna instance serveru **LoRaWAN** (**ChirpStack** nebo **The Things Stack**: vlastní hosting, nebo provozovaný společností **HARDWARIO** jako [spravovaná služba](cloud-service.md))
+* Jedna instance serveru **LoRaWAN** (**ChirpStack** nebo **The Things Stack** na vlastním serveru, nebo provozovaný společností **HARDWARIO** jako [spravovaná služba](cloud-service.md))
 
-Každé zařízení **EMBER Hotspot** může obsloužit více než 100 zařízení **LoRaWAN**, pokud jsou v rádiovém pokrytí.
+Každé zařízení **EMBER Hotspot** může obsloužit více než 100 zařízení **LoRaWAN**, pokud jsou v jeho rádiovém dosahu.
 
 :::tip
 
-Redundantní konfigurace lokality vyžaduje minimálně dvě jednotky **EMBER Hotspot** (obě v rádiovém pokrytí zařízení).
+Redundantní konfigurace lokality vyžaduje minimálně dvě jednotky **EMBER Hotspot** (obě v rádiovém dosahu zařízení).
 
 :::
 
 ## IP adresy {#ip-addresses}
 
-Toto jsou rozhraní, na která se **IP** adresy vztahují:
+Adresy **IP** mají tato rozhraní:
 
-* **WAN Ethernet**: přiřazeno pomocí **DHCP** klienta
+* **WAN Ethernet**: adresu přiděluje klient **DHCP**
 
-* **LAN Ethernet**: neroutovaná `172.31.255.254`
+* **LAN Ethernet**: neroutovaná adresa `172.31.255.254`
 
   :::caution
 
-  Toto rozhraní poskytuje funkci **DHCP** serveru.
+  Na tomto rozhraní běží server **DHCP**.
 
   :::
 
-* **LTE Modem**: přiřazeno dynamicky operátorem **LTE**
+* **LTE Modem**: adresu dynamicky přiděluje operátor **LTE**
 
 * **OpenVPN endpoint**: `192.168.16.10` pro 1. hotspot, `192.168.16.11` pro 2. hotspot atd.
 
 * **WireGuard endpoint**: `192.168.17.10` pro 1. hotspot, `192.168.17.11` pro 2. hotspot atd.
 
-Zařízení **EMBER Hotspot** má z výroby následující přihlašovací údaje:
+Zařízení **EMBER Hotspot** má z výroby tyto přihlašovací údaje:
 
 * Uživatelské jméno: `admin`
 
 * Heslo: `ember`
 
-Správa je dostupná prostřednictvím těchto služeb:
+Ke správě slouží tyto služby:
 
 * **SSH**: přístup ke vzdálenému shellu
 
-* **WinBox**: konfigurační aplikace pro desktop
+* **WinBox**: desktopová konfigurační aplikace
 
 * **WebFig**: webová konfigurační aplikace
 
 * **RouterOS API**: HTTP REST API
 
-Přístup je povolen jen z IP sítě **LAN** `172.31.255.0/24` a z VPN endpointů spravované služby `192.168.16.1` + `192.168.17.1`.
+Přístup je povolen jen z IP sítě **LAN** `172.31.255.0/24` a z VPN endpointů spravované služby `192.168.16.1` a `192.168.17.1`.
 
 ## VPN tunely {#vpn-tunnels}
 
-[Managovaná služba](cloud-service.md) HARDWARIO je propojena se všemi jednotkami **EMBER Hotspot** dvěma nezávislými VPN tunely přes internetové připojení **LTE**:
+[Spravovaná služba](cloud-service.md) HARDWARIO je se všemi jednotkami **EMBER Hotspot** propojená dvěma nezávislými VPN tunely přes internetové připojení **LTE**:
 
 * **OpenVPN**: VPN na bázi TCP pro provoz **LoRaWAN**
 
@@ -77,23 +77,23 @@ Přístup je povolen jen z IP sítě **LAN** `172.31.255.0/24` a z VPN endpoint�
 
 ## Základ protokolu {#protocol-basis}
 
-Podporovaný protokol **LoRaWAN** je založen na [**specifikaci LoRaWAN**](https://lora-alliance.org/about-lorawan/).
+Podporovaný protokol **LoRaWAN** vychází ze [**specifikace LoRaWAN**](https://lora-alliance.org/about-lorawan/).
 
-Podporovaná konektivita **LTE** je založena na specifikacích **3GPP**.
+Podporované připojení **LTE** vychází ze specifikací **3GPP**.
 
 ## Konvence pojmenování {#naming-convention}
 
-Název zařízení **EMBER Hotspot** je složen z identifikátoru zákazníka + indexu spravované služby + indexu zařízení **EMBER Hotspot**.
+Název zařízení **EMBER Hotspot** se skládá z identifikátoru zákazníka, indexu spravované služby a indexu zařízení **EMBER Hotspot**.
 
 ```
 /system identity set name=ember-<customer identifier>-<01>-hotspot-<01>
 ```
 ## Aktualizace LTE {#update-lte}
 
-Udržujte firmware modemu **LTE** aktuální, abyste zajistili stabilní konektivitu.
+Aby bylo připojení stabilní, udržujte firmware modemu **LTE** aktuální.
 
 1. V levém menu vyberte **Interfaces**.
-2. Vyberte své rozhraní `lte1` a klikněte na **Disable**.
+2. Vyberte rozhraní `lte1` a klikněte na **Disable**.
 3. Dvakrát klikněte na rozhraní `lte1` a vyberte **Upgrade firmware**.
 4. Kliknutím na **Start** zkontrolujte dostupné aktualizace.
 5. Pokud je aktualizace dostupná, zaškrtněte **Upgrade** a klikněte na **Start**.
@@ -101,16 +101,16 @@ Udržujte firmware modemu **LTE** aktuální, abyste zajistili stabilní konekti
 
 :::tip
 
-Požadavek na SIM kartu závisí na velikosti skoku mezi verzemi.
-Při aktualizaci jen o jednu nebo dvě verze musí být SIM karta
-vložena a nakonfigurována, aby aktualizace fungovala. Při větším
-skoku verzí se aktualizace dokončí i bez vložené SIM karty.
+Zda je potřeba SIM karta, závisí na tom, o kolik verzí aktualizujete.
+Při aktualizaci o jednu nebo dvě verze musí být SIM karta vložená
+a nakonfigurovaná, jinak aktualizace neproběhne. Při větším skoku
+se aktualizace dokončí i bez SIM karty.
 :::
 
 :::caution
 
-Během aktualizace firmwaru neodpojujte napájení ani zařízení nijak
-nepřerušujte. Přerušená aktualizace může modem uvést do nepoužitelného stavu.
+Během aktualizace firmwaru neodpojujte napájení a práci zařízení
+nepřerušujte. Přerušená aktualizace může modem vyřadit z provozu.
 :::
 
 ![Aktualizace LTE](../../../../ember/images/ember-update-lte.png)
@@ -140,19 +140,19 @@ nepřerušujte. Přerušená aktualizace může modem uvést do nepoužitelného
 
 :::tip
 
-Nahraďte `internet` hodnotou **APN**, kterou vám poskytl váš mobilní operátor.
+Nahraďte `internet` názvem **APN** od svého mobilního operátora.
 
 :::
 
 #### Odemčení PIN SIM karty {#sim-pin-unlock}
 
-Pokud **SIM** karta vyžaduje **PIN** kód, odemkněte ji pomocí:
+Pokud **SIM** karta vyžaduje kód **PIN**, odemkněte ji příkazem:
 
 ```
 /interface/lte/set lte1 pin="1234"
 ```
 
-Trvalé vypnutí **PIN** kódu na **SIM** kartě (doporučeno pro routery bez obsluhy):
+Kód **PIN** na **SIM** kartě trvale vypnete takto (doporučujeme u routerů bez obsluhy):
 
 ```
 /interface/lte/at-chat lte1 input="AT+CLCK=\"SC\",0,\"1234\""
@@ -160,11 +160,11 @@ Trvalé vypnutí **PIN** kódu na **SIM** kartě (doporučeno pro routery bez ob
 
 :::caution
 
-Nahraďte `1234` skutečným **PIN** kódem vaší **SIM** karty.
+Nahraďte `1234` skutečným kódem **PIN** své **SIM** karty.
 
 :::
 
-#### Verifikace {#verification}
+#### Ověření {#verification}
 
 Zkontrolujte stav připojení **LTE**:
 
@@ -182,7 +182,7 @@ Ověřte připojení k internetu:
 
 :::tip
 
-Konektivita LTE má přednost před WAN díky vzdálenosti routeru (výchozí vzdálenost routeru LTE je 2).
+Připojení LTE má přednost před WAN díky menší vzdálenosti trasy (route distance; výchozí vzdálenost trasy LTE je 2).
 
 :::
 
@@ -204,7 +204,7 @@ Certifikáty (certifikační autorita, certifikát zařízení **EMBER Hotspot**
 
 ### WireGuard {#wireguard}
 
-Klíče **WireGuard** (veřejný klíč pro spravovanou službu + privátní klíč pro zařízení **EMBER Hotspot**) se přebírají ze spravované služby.
+Klíče **WireGuard** (veřejný klíč spravované služby a privátní klíč zařízení **EMBER Hotspot**) se přebírají ze spravované služby.
 
 ```
 /interface wireguard add disabled=no listen-port=51820 mtu=1420 name=wireguard1
@@ -227,15 +227,15 @@ Výchozí servery **TTN** můžete ignorovat.
 
 :::caution
 
-Pokud nepoužíváte spravovanou službu HARDWARIO, musíte použít IP adresu svého serveru **LoRaWAN** a nemusíte konfigurovat VPN tunely.
+Pokud nepoužíváte spravovanou službu HARDWARIO, zadejte IP adresu svého serveru **LoRaWAN**; VPN tunely pak konfigurovat nemusíte.
 
 :::
 
 ## Datacake {#datacake}
 
-**Datacake** je IoT platforma, která hostuje server **LoRaWAN**. Chcete-li zařízení **EMBER** připojit ke službě **Datacake**, je potřeba zaregistrovat účet a vytvořit dashboard. Přidání zařízení do dashboardu:
+**Datacake** je platforma IoT s vlastním serverem **LoRaWAN**. Chcete-li zařízení **EMBER** připojit ke službě **Datacake**, zaregistrujte si účet a vytvořte dashboard. Zařízení do dashboardu přidáte takto:
 
-* Přidejte server **Datacake** do seznamu serverů spuštěním následujícího příkazu na **RouterOS**
+* Přidejte server **Datacake** do seznamu serverů tímto příkazem v **RouterOS**
 
 ```
 /iot lora servers add address=eu1.datacake-lns.com up-port=1700 name=datacake down-port=1700 protocol=UDP
@@ -247,14 +247,14 @@ Pokud nepoužíváte spravovanou službu HARDWARIO, musíte použít IP adresu s
 /iot lora set 0 servers=datacake
 ```
 
-* Přidejte bránu zadáním následujících údajů:
-    - Název brány (jakýkoli název)
-    - `Gateway EUI` (v RouterOS označeno jako `Gateway ID` pod `LoRa` > `Devices` > `gateway`)
-    - Frekvence (podle lokality zařízení)
+* Přidejte bránu a zadejte tyto údaje:
+    - Název brány (libovolný)
+    - `Gateway EUI` (v RouterOS se zobrazuje jako `Gateway ID` v `LoRa` > `Devices` > `gateway`)
+    - Frekvence (podle umístění zařízení)
 
 ## Zabezpečení přístupu {#securing-access}
 
-Zařízení **EMBER Hotspot** je zabezpečeno firewallem a dalšími konfiguračními volbami podle [**tohoto článku MikroTik**](https://help.mikrotik.com/docs/display/ROS/Securing+your+router).
+Zařízení **EMBER Hotspot** chrání firewall a další nastavení podle [**tohoto článku společnosti MikroTik**](https://help.mikrotik.com/docs/display/ROS/Securing+your+router).
 
 ### Seznamy rozhraní {#interface-lists}
 

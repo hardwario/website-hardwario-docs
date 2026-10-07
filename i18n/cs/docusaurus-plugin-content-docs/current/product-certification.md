@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Certifikace produktu {#product-certification}
 
-Tento článek poskytuje informace o dostupné certifikaci produktu **CHESTER**.
+Tento článek shrnuje certifikace produktu **CHESTER**.
 
 ## Certifikace CE (RED) {#ce-red-certification}
 
@@ -102,7 +102,7 @@ Tento článek poskytuje informace o dostupné certifikaci produktu **CHESTER**.
 * `IEEE/ANSI C63.26-2015`
 * `KDB 971168 D01 Power Meas License Digital Systems v03`
 
-**Zkušební protokol FCC pro LoRa část 1 (FGDSS)**
+**Zkušební protokol FCC pro LoRa část 1 (FHDSS)**
 * [**Stáhnout**](pathname:///download/hio-chester-cert-chtew22090077-fcc-part-15-247-lora-fhdss.pdf) (CHTEW22090077)
 * `FCC CFR Title 47 Part 15 Subpart C Section 15.247`
 * `IEEE/ANSI C63.10:2013`
@@ -118,7 +118,7 @@ Tento článek poskytuje informace o dostupné certifikaci produktu **CHESTER**.
 * [**Stáhnout**](pathname:///download/hio-chester-cert-rf-exposure-evaluation.pdf)
 * Odkazy na FCC ID:
   * MDBT50Q-P1MV2 (Raytac)<br/>FCC ID: `SH6MDBT50Q`
-  * MWX1ZZABZ-078 (Murata)<br/>FCC ID: `VPYCMABZ`
+  * CMWX1ZZABZ-078 (Murata)<br/>FCC ID: `VPYCMABZ`
   * nRF9160-SICA-B1A-R7 (Nordic)<br/>FCC ID: `2ANPO00NRF9160`
 
 ## Certifikace RoHS a WEEE {#rohs-and-weee-certification}

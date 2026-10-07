@@ -19,13 +19,13 @@ Tento článek vysvětluje, jak sestavit, nasadit a nahrát firmware aplikace do
 
    :::tip
 
-   Ujistěte se, že je `build.board` nastaven pomocí `west config build.board chester`, viz předchozí kapitola **Instalace**
+   Ověřte, že je `build.board` nastavený příkazem `west config build.board chester` (viz předchozí kapitola **Instalace**).
 
    :::
 
 ## Nasazení {#deploy}
 
-Při finálním sestavení budete chtít, aby firmware obsahoval název a verzi. Verze a název firmwaru budou vidět v aplikaci **HARDWARIO Manager** a v shellu zařízení po zadání příkazu `info show`. Verze firmwaru se také odesílá v NB-IoT paketu.
+Ve finálním sestavení by firmware měl obsahovat svůj název a verzi. Obojí pak uvidíte v aplikaci **HARDWARIO Manager** i v shellu zařízení po zadání příkazu `info show`. Verze firmwaru se odesílá i v paketech NB-IoT.
 
 1. Smažte předchozí sestavení příkazem `rm -rf build/`.
 
@@ -35,15 +35,15 @@ Při finálním sestavení budete chtít, aby firmware obsahoval název a verzi.
 
 :::tip
 
-HARDWARIO používá [Semantic Versioning](https://semver.org/). Nezapomeňte, že ve verzi firmwaru musí být i písmeno **v**, například `v1.2.0`.
+HARDWARIO používá [sémantické verzování](https://semver.org/). Verze firmwaru musí obsahovat i písmeno **v**, například `v1.2.0`.
 
 :::
 
-Nyní můžete binární nebo ZIP soubor distribuovat pro **DFU update**. Nebo jej můžete nahrát do **HARDWARIO Cloud**. Viz následující kapitola.
+Binární soubor nebo soubor ZIP teď můžete distribuovat pro **aktualizaci DFU**, nebo ho nahrát do **HARDWARIO Cloud**, jak popisuje následující kapitola.
 
 :::tip
 
-Název a verzi firmwaru můžete také zapsat přímo do svého projektu. Do souboru projektu `CMakeLists.txt` můžete před příkaz `project` přidat tyto řádky:
+Název a verzi firmwaru můžete zapsat i napevno do projektu. Stačí do souboru projektu `CMakeLists.txt` před příkaz `project` přidat tyto řádky:
 
 ```
 set(ENV{FW_NAME} "CHESTER Input Z")
@@ -56,18 +56,18 @@ project(input)
 
 ## Nahrání firmwaru {#firmware-upload}
 
-Můžete také použít funkci upload v **HARDWARIO CLI**, díky které se firmware nahraje na váš účet v **HARDWARIO Cloud** a můžete jej sdílet se svými zákazníky pomocí **QR kódu**, **URL** nebo **e-mailem**.
+Funkcí upload v **HARDWARIO CLI** můžete firmware nahrát do svého účtu v **HARDWARIO Cloud** a sdílet ho se zákazníky přes **QR kód**, **URL** nebo **e-mailem**.
 
 :::tip
 
-Svůj tajný token pro **HARDWARIO Cloud** musíte mít v proměnné prostředí `HARDWARIO_CLOUD_TOKEN`, nebo jej musíte předat v parametru `--token`. Tento parametr je nutné umístit přesně mezi parametry `fw` a `list`.
+Tajný token pro **HARDWARIO Cloud** musí být v proměnné prostředí `HARDWARIO_CLOUD_TOKEN`, nebo ho předejte v parametru `--token`. Ten musí stát přesně mezi parametry `fw` a `upload`.
 
 Potřebný token najdete v [HARDWARIO Cloud v1 ve svém profilu](https://hardwario.cloud/#/profile) jako `API token`.
 
 :::
 
-Až bude firmware sestavený, zavolejte ze stejné složky projektu:
+Po sestavení firmwaru spusťte ve stejné složce projektu:
 
 `hardwario chester app fw upload --name="hio-chester-input-z" --version="v1.5.0"`
 
-Poté obdržíte e-mail s **odkazy na firmware** a **QR kódem**, který lze naskenovat v mobilní aplikaci **HARDWARIO Manager** pro aktualizaci firmwaru.
+Pak vám přijde e-mail s **odkazy na firmware** a **QR kódem**, který naskenujete v mobilní aplikaci **HARDWARIO Manager** a firmware aktualizujete.

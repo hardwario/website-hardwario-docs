@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 Radio communication technology is the heart of the **TOWER Kit**. This document describes the basic operation of the radio.
 
-With our Iot Kit, you can build your network in the Sub-GHz band.
+With our IoT Kit, you can build your network in the Sub-GHz band.
 
 :::info
 
@@ -99,7 +99,7 @@ This is usable only for devices that can have a long delay before the change tak
 <details>
 <summary>
 <b>
-bcf --help output
+Sleeping Node Listening Code Example
 </b>
 </summary>
 <p>

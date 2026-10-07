@@ -6,31 +6,31 @@ import Image from '@theme/IdealImage';
 
 # Vytváření dashboardů {#creating-dashboards}
 
-V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobrazení proměnné a postavit základní graf. Data ze svých zařízení tak budete moci vizualizovat a sledovat v reálném čase.
+V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobrazení proměnné a vytvořit základní graf. Data ze zařízení tak budete vizualizovat a sledovat v reálném čase.
 
 ---
 
 ## Krok 1: Jak vytvořit dashboard {#step-1-how-to-create-a-dashboard}
 
-   1. Přejděte do **levé navigační lišty**.  
-   2. Klikněte na kartu **Dashboards**.  
-   3. Vpravo nahoře klikněte na **tlačítko ➕** pro přidání nového dashboardu.  
+   1. Otevřete **levou navigační lištu**.  
+   2. Klikněte na položku **Dashboards**.  
+   3. Vpravo nahoře klikněte na **tlačítko ➕**, kterým přidáte nový dashboard.  
    4. Zvolte **Create new dashboard**.  
 
-![Vytvoření nového dashboardu - 1](../../../../../apps/thingsboard/images/thingsboard-dashboards-1.png)
+![Vytvoření nového dashboardu (1)](../../../../../apps/thingsboard/images/thingsboard-dashboards-1.png)
 
    5. Zadejte **Title, Description, Image** a další potřebné údaje.  
    6. Klikněte na **Add**.  
 
-![Vytvoření nového dashboardu - 2](../../../../../apps/thingsboard/images/thingsboard-dashboards-2.png)
+![Vytvoření nového dashboardu (2)](../../../../../apps/thingsboard/images/thingsboard-dashboards-2.png)
 
-   7. Budete přesměrováni na svůj nově vytvořený dashboard.  
+   7. Otevře se nově vytvořený dashboard.  
 
 ---
 
 ## Krok 2: Jak vytvořit jednoduché zobrazení proměnné {#step-2-how-to-create-a-simple-variable-display}
 
-   1. Ve svém dashboardu klikněte na tlačítko **+ Add new widget**.  
+   1. V dashboardu klikněte na tlačítko **+ Add new widget**.  
       - Případně můžete použít volbu **+ Add widget** v horní liště. 
 
 ![Přidání nového widgetu](../../../../../apps/thingsboard/images/thingsboard-variable-0.png)
@@ -51,7 +51,7 @@ V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobra
 
 ![Konfigurační okno widgetu](../../../../../apps/thingsboard/images/thingsboard-variable-3.png)
 
-   7. Widget se nyní objeví na vašem dashboardu.  
+   7. Widget se objeví na dashboardu.  
 
 ![Widget na dashboardu](../../../../../apps/thingsboard/images/thingsboard-variable-4.png)
 
@@ -67,7 +67,7 @@ V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobra
 
 ## Krok 3: Jak vytvořit jednoduchý graf {#step-3-how-to-create-a-simple-chart}
 
-   1. Ve svém dashboardu klikněte na tlačítko **+ Add new widget**.  
+   1. V dashboardu klikněte na tlačítko **+ Add new widget**.  
       - Případně použijte volbu **+ Add widget** v horní liště.  
 
 ![Přidání nového widgetu](../../../../../apps/thingsboard/images/thingsboard-chart-0.png)
@@ -79,7 +79,7 @@ V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobra
    3. Pro jednoduchý spojnicový graf zvolte sadu widgetů **Charts**.  
    4. Z dostupných možností vyberte **Line Chart**.  
 
-![Widgety Cards](../../../../../apps/thingsboard/images/thingsboard-chart-2.png)
+![Widgety Charts](../../../../../apps/thingsboard/images/thingsboard-chart-2.png)
 
    5. Otevře se konfigurační okno:  
       - Pod **Series → Key** zvolte **zdroj dat** a **proměnnou**, kterou chcete zobrazit.  
@@ -90,7 +90,7 @@ V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobra
 
 ![Konfigurační okno widgetu](../../../../../apps/thingsboard/images/thingsboard-chart-3.png)
 
-   7. Graf se nyní objeví na vašem dashboardu.  
+   7. Graf se objeví na dashboardu.  
 
 ![Widget na dashboardu](../../../../../apps/thingsboard/images/thingsboard-chart-4.png)
 

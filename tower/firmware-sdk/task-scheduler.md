@@ -65,7 +65,7 @@ This takes **ID** of the to-be-unregistered task as a parameter.
 
 If you register a task with third parameter as any value, the task will be run **exactly once** after the given time.
 
-For example: `twr_scheduler_register(disableLCD, NULL, twr_tick_get() + 5000);` will run the task after 5 seconds
+For example: `twr_scheduler_register(disableLCD, NULL, twr_tick_get() + 5000);` will run the task after 5 seconds.
 
 ### One time
 
@@ -121,13 +121,13 @@ static void disableLCD(void* param) {
 
     if(lcd_state == true) {
       twr_module_lcd_off();
-      ldc_state = false;
+      lcd_state = false;
     }
     else {
       twr_module_lcd_on();
-      ldc_state = true;
+      lcd_state = true;
     }
-  twr_scheduler_plan_current_from_now(twr_tick_get() + 5000);
+  twr_scheduler_plan_current_from_now(5000);
 }
 
 void application_init(void) {
@@ -173,7 +173,7 @@ static void disableLCD(void* param) {
 
 void button_event_handler(twr_button_t *self, twr_button_event_t event, void *event_param) {
   if (event == TWR_BUTTON_EVENT_CLICK) {
-    twr_scheduler_plan_from_now(turn_off_lcd_task_id, twr_tick_get() + 5000)
+    twr_scheduler_plan_from_now(turn_off_lcd_task_id, 5000);
   }
 }
 

@@ -7,17 +7,17 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/encoder-module.png')} alt="Modul Encoder s knoflíkem rotačního enkodéru a třemi konektory TAG I2C0" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/encoder-module.png')} alt="Encoder Module s knoflíkem rotačního enkodéru a třemi paticemi TAG I2C0" /></div>
     </div>
     <div class="col col--6">
       <p>
-        Modul <b>Encoder</b> může být užitečný pro ovládání vašich aplikací. Modul je vybaven vysoce kvalitním rotačním enkodérem od výrobce <b>Bourns</b> a vyznačuje se vysokou spolehlivostí a dlouhou životností. Rotační enkodér je také vybaven <b>tlačítkovým spínačem</b>.
+        <b>Encoder Module</b> se hodí k ovládání vašich aplikací. Má kvalitní rotační enkodér od výrobce <b>Bourns</b> s vysokou spolehlivostí a dlouhou životností. Enkodér má i <b>tlačítkový spínač</b>.
       </p>
       <p>
-        Rotační enkodér má <b>12 pozic na otáčku</b>. Rozsah otáčení není omezen jako u potenciometru a lze jej otáčet v obou směrech o libovolný počet otáček.
+        Rotační enkodér má <b>12 pozic na otáčku</b>. Na rozdíl od potenciometru nemá omezený rozsah, takže jím můžete otáčet oběma směry o libovolný počet otáček.
       </p>
       <p>
-        Modul byl navržen především jako doplněk k <a href="../about-lcd-module"><b>modulu LCD</b></a>. Typickou aplikací je bezdrátový termostat pro nastavení teploty otáčením enkodéru nebo jej lze použít jako pohodlné navigační ovládání v grafickém menu.
+        Modul vznikl hlavně jako doplněk k modulu <a href="../about-lcd-module"><b>LCD Module</b></a>. Typicky slouží k nastavení teploty na bezdrátovém termostatu nebo jako pohodlné ovládání grafického menu.
       </p>
     </div>
   </div>
@@ -25,7 +25,7 @@ import Image from '@theme/IdealImage';
 
 :::info
 
-Hliníkový knoflík na fotografii není součástí modulu a prodává se jako [**volitelné příslušenství samostatně**](https://www.hardwario.store/p/encoder-knob-small-black).
+Hliníkový knoflík na fotografii není součástí modulu a prodává se samostatně jako [**volitelné příslušenství**](https://www.hardwario.store/p/encoder-knob-small-black).
 
 :::
 
@@ -33,13 +33,13 @@ Hliníkový knoflík na fotografii není součástí modulu a prodává se jako 
 - Rotační enkodér **PEC12R (Bourns)**
 - 12 pozic na otáčku
 - Integrovaný **tlačítkový spínač**
-- 3x konektor pro TOWER Tags
+- 3x patice pro tagy TOWER
 - Rozsah provozních teplot: -20 až 70 °C
 - Minimální životnost: **30 000 cyklů otáčení**
 - Rozměry: 88 x 55 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/encoder-module)
+- [**E-shop**](https://www.hardwario.store/p/encoder-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-encoder)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__encoder)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_encoder.h)

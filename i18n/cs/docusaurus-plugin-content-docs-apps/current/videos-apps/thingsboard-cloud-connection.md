@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 ## Přehled návodu {#tutorial-overview}
 
-V tomto návodu se naučíte, jak připojit svá zařízení k HARDWARIO Cloud vytvořením nového konektoru, transformací dat a jejich odesláním do platformy ThingsBoard. Na konci vám budou data do platformy plynout automaticky.
+V tomto návodu se naučíte propojit zařízení v HARDWARIO Cloud s platformou ThingsBoard: vytvoříte nový konektor, data transformujete a odešlete je do ThingsBoard. Pak už budou data do platformy přicházet automaticky.
 
 ---
 

@@ -4,7 +4,7 @@ title: "How To: LED Control"
 ---
 import Image from '@theme/IdealImage';
 
-Controlling the **LED integrated into Core Module** is like printing `Hello world`. In this chapter, we will go over some simple examples of how to do that
+Controlling the **LED integrated into Core Module** is like printing `Hello world`. In this chapter, we will go over some simple examples of how to do that.
 
 ## References
 - [**LED SDK Module**](https://sdk.hardwario.com/group__twr__led.html)

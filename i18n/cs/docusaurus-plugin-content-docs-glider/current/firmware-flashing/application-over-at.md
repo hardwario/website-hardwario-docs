@@ -6,16 +6,16 @@ import Image from '@theme/IdealImage';
 
 # Aplikace přes USB-C {#application-over-usb-c}
 
-Firmware zařízení GLIDER můžete aktualizovat přes **kabel USB-C**, bez debug sondy.
+Firmware zařízení GLIDER můžete aktualizovat přes **kabel USB-C**, bez ladicí sondy.
 
 ## Co budete potřebovat {#what-you-need}
 
 - Funkční [**konzoli AT přes USB-C**](../console/usb-at.md).
-- Soubor s obrazem firmwaru: **`zephyr.signed.bin`**. Buď si ho sestavte sami pomocí `west build`, nebo si o nejnovější vydání řekněte HARDWARIO.
+- Soubor s obrazem firmwaru: **`zephyr.signed.bin`**. Buď si ho sestavte sami příkazem `west build`, nebo si nejnovější vydání vyžádejte od HARDWARIO.
 
 ## Postup {#steps}
 
-1. Otevřete terminál v pracovním prostoru firmwaru pro GLIDER a aktivujte virtualenv:
+1. Otevřete terminál v pracovním prostoru firmwaru GLIDER a aktivujte virtualenv:
 
     ```bash
     cd ~/Hardwario/firmware
@@ -24,16 +24,16 @@ Firmware zařízení GLIDER můžete aktualizovat přes **kabel USB-C**, bez deb
 
 2. Připojte zařízení GLIDER k počítači kabelem USB-C.
 
-3. Spusťte příkaz pro nahrání firmwaru:
+3. Nahrajte firmware:
 
     ```bash
     west bin-to-at --input-file path/to/zephyr.signed.bin --output-file update.at
     west serial-console --input update.at
     ```
 
-    Konzole přenese nový obraz do zařízení. Po dokončení se GLIDER restartuje do nového firmwaru.
+    Konzole přenese nový obraz do zařízení. Po dokončení se zařízení GLIDER restartuje a spustí nový firmware.
 
-4. Potvrďte nový obraz, aby nedošlo k návratu k předchozí verzi:
+4. Potvrďte nový obraz, jinak se zařízení vrátí k předchozí verzi:
 
     ```text
     AT$FW="confirm"
@@ -48,9 +48,9 @@ Firmware zařízení GLIDER můžete aktualizovat přes **kabel USB-C**, bez deb
 To je celý postup.
 
 :::caution
-Po restartu je nutné odeslat `AT$FW="confirm"`. Pokud tento krok vynecháte, zařízení se při dalším restartu vrátí k předchozímu firmwaru.
+Po restartu musíte odeslat `AT$FW="confirm"`. Pokud tento krok vynecháte, zařízení se při dalším restartu vrátí k předchozímu firmwaru.
 :::
 
 :::info
-Pokud už máte výstup buildu pro GLIDER ve složce `build/`, můžete `--input-file` vynechat, protože `west bin-to-at` najde `zephyr.signed.bin` automaticky.
+Pokud už máte výsledek sestavení firmwaru GLIDER ve složce `build/`, parametr `--input-file` můžete vynechat, protože `west bin-to-at` najde `zephyr.signed.bin` sám.
 :::

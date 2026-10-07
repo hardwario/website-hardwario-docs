@@ -7,20 +7,20 @@ import Image from '@theme/IdealImage';
 
 # Přehled příkazů shellu {#shell-commands-reference}
 
-GLIDER provozuje plnohodnotný **Zephyr shell**, který zpřístupňuje příkazy na úrovni aplikace pro každý subsystém. Shell je dostupný přes:
+Ve firmwaru zařízení GLIDER běží plnohodnotný **shell Zephyr** s aplikačními příkazy pro všechny subsystémy. Shell je dostupný:
 
-- [**RTT konzoli**](../console/rtt-jlink.md) přímo, nebo
-- [**konzoli AT**](../console/usb-at.md) pomocí `AT$SHELL="<command>"`.
+- přímo v [**konzoli RTT**](../console/rtt-jlink.md), nebo
+- v [**konzoli AT**](../console/usb-at.md) přes `AT$SHELL="<command>"`.
 
 :::tip
-Ekvivalentní příkazy AT dostupné přes USB-C najdete na stránce [**příkazy AT**](at-commands.md).
+Odpovídající příkazy AT, dostupné přes USB-C, najdete na stránce [**Příkazy AT**](at-commands.md).
 :::
 
-Tato stránka uvádí příkazy specifické pro GLIDER. Obecné příkazy systému Zephyr (`kernel`, `log`, `device`, …) zde nejsou znovu uváděny.
+Tato stránka uvádí jen příkazy specifické pro GLIDER; obecné příkazy systému Zephyr (`kernel`, `log`, `device`, …) neopakuje.
 
-## Obecný pod-příkaz `config` {#generic-config-sub-command}
+## Obecný podpříkaz `config` {#generic-config-sub-command}
 
-Každý modul, který zpřístupňuje konfiguraci, používá stejnou syntaxi `config`:
+Všechny konfigurovatelné moduly používají stejnou syntaxi `config`:
 
 | Tvar | Význam |
 | :--- | :--- |
@@ -28,21 +28,21 @@ Každý modul, který zpřístupňuje konfiguraci, používá stejnou syntaxi `c
 | `<module> config show <key>` | Vypíše jeden klíč. |
 | `<module> config <key> <value>` | Zapíše hodnotu. |
 
-Po provedení změn je uložte do flash paměti:
+Změny pak uložte do flash paměti:
 
 ```text
 AT&W
 ```
 
-…nebo, ekvivalentně, ze Zephyr shellu restartujte pomocí `kernel reboot cold` – hodnoty zapsané přes `<module> config` se při spuštění `&W` uloží automaticky.
+…nebo ekvivalentně ze shellu Zephyr restartujte zařízení příkazem `kernel reboot cold`. Hodnoty zapsané přes `<module> config` se při spuštění `&W` uloží automaticky.
 
 ## `app` – příkazy pro celou aplikaci {#app---application-wide-commands}
 
 | Příkaz | Popis |
 | :--- | :--- |
-| `app config …` | Konfigurace globálních parametrů aplikace (intervaly měření / odesílání, downlink watchdog). |
-| `app sample` | Vynutí jeden kompletní měřicí cyklus (načtení všech senzorů + vyhodnocení alarmů). |
-| `app send` | Vynutí okamžité CBOR zakódování + uplink. |
+| `app config …` | Konfigurace globálních parametrů aplikace (intervaly vzorkování / odesílání, watchdog downlinku). |
+| `app sample` | Vynutí jeden kompletní měřicí cyklus (čtení všech senzorů + vyhodnocení alarmů). |
+| `app send` | Vynutí okamžité zakódování do CBOR + uplink. |
 
 Konfigurovatelné klíče viz [**Konfigurace → `app`**](../configuration.md#global-app-settings).
 
@@ -50,7 +50,7 @@ Konfigurovatelné klíče viz [**Konfigurace → `app`**](../configuration.md#gl
 
 | Příkaz | Popis |
 | :--- | :--- |
-| `inputs config …` | Konfigurace kanálů CH1 / CH2 (režim, debounce, cooldown, volba hrany). |
+| `inputs config …` | Konfigurace kanálů CH1 / CH2 (režim, ošetření zákmitů, ochranná doba, volba hrany). |
 | `inputs show` | Vypíše aktuální čítače a poslední události pro oba kanály. |
 | `inputs clear` | Vymaže buffer událostí obou kanálů. |
 
@@ -60,15 +60,15 @@ Konfigurovatelné klíče viz [**Konfigurace → Digitální vstupy**](../config
 
 | Příkaz | Popis |
 | :--- | :--- |
-| `therm config …` | Přiřazení / zobrazení ROM kódů pro 8 slotů. |
-| `therm read <1-8>` | Načte jeden slot. |
-| `therm readall` | Načte všechny obsazené sloty. |
+| `therm config …` | Přiřazení / zobrazení kódů ROM pro 8 slotů. |
+| `therm read <1-8>` | Přečte jeden slot. |
+| `therm readall` | Přečte všechny obsazené sloty. |
 | `therm scan` | Vyhledá senzory na sběrnici 1-Wire a navrhne změny (vyžádá si potvrzení). |
 | `therm scan --save` | Vyhledá a automaticky uloží (bez dotazu). |
-| `therm scan --clear-missing` | Jako `scan`, ale navíc vymaže sloty, jejichž ROM kódy už na sběrnici nejsou. |
+| `therm scan --clear-missing` | Jako `scan`, ale navíc vymaže sloty, jejichž kódy ROM už na sběrnici nejsou. |
 | `therm state` | Aktuální přiřazení slotů + poslední teplota + čítače čtení/chyb. |
 
-Podrobný postup krok za krokem najdete v [**Externí teplotní senzory**](../external-sensors/temperature.md).
+Postup krok za krokem popisuje stránka [**Externí teplotní senzory**](../external-sensors/temperature.md).
 
 ## `alarm` – teplotní alarmy {#alarm---temperature-alarms}
 
@@ -80,7 +80,7 @@ Podrobný postup krok za krokem najdete v [**Externí teplotní senzory**](../ex
 
 Konfigurovatelné klíče viz [**Konfigurace → Alarmy**](../configuration.md#alarms).
 
-#### Příklad – nastavení alarmu na vysokou teplotu na slotu 1 {#example---set-up-a-high-temperature-alarm-on-slot-1}
+#### Příklad – alarm při vysoké teplotě na slotu 1 {#example---set-up-a-high-temperature-alarm-on-slot-1}
 
 ```text
 alarm config 1-enabled true
@@ -90,17 +90,17 @@ alarm config 1-hysteresis 5
 AT&W
 ```
 
-Alarm se aktivuje při **≥ 30 °C** a deaktivuje při **≤ 25 °C** (30 − 5).
+Alarm se aktivuje při teplotě **≥ 30 °C** a deaktivuje při **≤ 25 °C** (30 − 5).
 
 ## `modbus` – klient RS-485 Modbus RTU {#modbus---rs-485-modbus-rtu-client}
 
 | Příkaz | Popis |
 | :--- | :--- |
-| `modbus enable` | Zapne napájení izolovaného budiče RS-485 (`RS_ON` v úrovni high). |
+| `modbus enable` | Zapne napájení izolovaného budiče RS-485 (`RS_ON` v log. 1). |
 | `modbus disable` | Odpojí napájení RS-485. |
-| `modbus read <addr> <start> [count]` | Načte vstupní registry (Modbus funkční kód 04). `count` je výchozí 1, maximum 32. |
+| `modbus read <addr> <start> [count]` | Přečte vstupní registry (funkční kód Modbus 04). Výchozí hodnota `count` je 1, maximum 32. |
 
-Rychlost linky je pevně nastavena na **19 200 baud, 8E1** (režim RTU) a timeout odpovědi je **500 ms**.
+Linka má pevně nastavenou rychlost **19 200 baud, 8E1** (režim RTU), časový limit odpovědi je **500 ms**.
 
 #### Příklad – načtení 4 vstupních registrů od adresy 0 ze zařízení 1 {#example---read-4-input-registers-starting-at-address-0-from-slave-1}
 
@@ -112,17 +112,17 @@ modbus disable
 
 ## `led` – stavové LED {#led---status-leds}
 
-GLIDER má tři signalizační LED na desce: červenou (**r**), zelenou (**g**) a žlutou (**y**).
+GLIDER má na desce tři signalizační LED: červenou (**r**), zelenou (**g**) a žlutou (**y**).
 
 | Příkaz | Popis |
 | :--- | :--- |
 | `led on <r\|g\|y\|rg\|ry\|gy\|rgy>` | Rozsvítí jednu LED nebo libovolnou kombinaci. |
 | `led off <r\|g\|y\|rg\|ry\|gy\|rgy>` | Zhasne jednu nebo více LED. |
-| `led test` | Postupně rozbliká každou LED (kontrolní test). |
+| `led test` | Postupně blikne každou LED (kontrola funkce). |
 
 Za běžného provozu firmware používá LED takto:
 
-- Každých **5 sekund** je vyslán krátký **30ms pulz**, zelený když není aktivní žádný alarm, a červený když je aktivní alespoň jedno pravidlo alarmu. Pulz je natolik krátký, že jej lze na ostrém světle snadno přehlédnout.
-- Po rozpoznání kliknutí tlačítkem blikne **žlutá LED** jednou za každé detekované kliknutí (50 ms svítí, 200 ms zhasnuto) jako zpětná vazba o tom, kolik kliknutí bylo zaznamenáno, ještě než se spustí odpovídající akce.
+- Každých **5 sekund** se na **30 ms** krátce rozsvítí zelená LED, když není aktivní žádný alarm, nebo červená, když je aktivní alespoň jedno pravidlo alarmu. Záblesk je tak krátký, že ho na ostrém světle snadno přehlédnete.
+- Když firmware rozpozná stisk tlačítka, **žlutá LED** blikne jednou za každý zaznamenaný stisk (50 ms svítí, 200 ms nesvítí). Ještě před spuštěním odpovídající akce tak vidíte, kolik stisků zařízení zaregistrovalo.
 
-LED **neindikují** připojení k mobilní síti ani konektivitu do cloudu.
+LED **nesignalizují** připojení k mobilní síti ani ke cloudu.

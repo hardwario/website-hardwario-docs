@@ -26,7 +26,7 @@ HARDWARIO command line tool allows you to:
 
 - **Ubuntu**: Python 3 should already be installed on your OS.
 
-- **macOS**: Follow the [Install Packages](firmware-sdk/../../firmware-sdk/installation-on-macos.md#install-package-manager) chapter to install Homebrew. Then run `brew install python3`.
+- **macOS**: Follow the [Install Package Manager](firmware-sdk/../../firmware-sdk/installation-on-macos.md#install-package-manager) chapter to install Homebrew. Then run `brew install python3`.
 
 - **Windows**: Follow the [Install Python](firmware-sdk/../../firmware-sdk/installation-on-windows.md#install-python) chapter.
 
@@ -133,7 +133,7 @@ When you assign your device to the **HARDWARIO Cloud** group, you have to assign
 
 :::tip
 
-If you develop your own firmware and change the codec **YAML** file. The `msg_key.h` header file is now automatically regenerated when you type `west build`.
+If you develop your own firmware and change the codec **YAML** file, the `msg_key.h` header file is now automatically regenerated when you type `west build`.
 
 :::
 

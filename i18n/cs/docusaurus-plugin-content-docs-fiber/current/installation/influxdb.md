@@ -4,9 +4,9 @@ title: Instalace InfluxDB
 
 # Instalace InfluxDB {#install-influxdb}
 
-Dostupné na FIBER i FIBER Lite.
+K dispozici na zařízení FIBER i FIBER Lite.
 
-1. Stáhněte GPG klíč repozitáře **InfluxData** a před tím, než mu začnete věřit, ověřte jeho fingerprint:
+1. Stáhněte klíč GPG repozitáře **InfluxData** a dřív, než mu začnete důvěřovat, ověřte jeho otisk (fingerprint):
 
    ```sh
    curl --silent --location -O https://repos.influxdata.com/influxdata-archive.key
@@ -24,7 +24,7 @@ Dostupné na FIBER i FIBER Lite.
    echo 'deb [signed-by=/etc/apt/keyrings/influxdata-archive.gpg] https://repos.influxdata.com/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list
    ```
 
-1. Aktualizujte seznam balíčků a nainstalujte **InfluxDB 2.x** včetně jeho CLI:
+1. Aktualizujte seznam balíčků a nainstalujte **InfluxDB 2.x** včetně nástroje CLI:
 
    ```sh
    sudo apt update
@@ -32,7 +32,7 @@ Dostupné na FIBER i FIBER Lite.
    sudo systemctl enable --now influxdb
    ```
 
-1. Neinteraktivně inicializujte organizaci, bucket a API token:
+1. Neinteraktivně vytvořte organizaci, bucket a token API:
 
    ```sh
    influx setup --username fiber --password '<choose a password>' \
@@ -42,8 +42,7 @@ Dostupné na FIBER i FIBER Lite.
    :::tip
 
    `openssl rand -hex 32` vygeneruje náhodný 64znakový token, takže si žádný nemusíte vymýšlet.
-   Hned poté spusťte `influx auth list`, aby se vypsal. Uschovejte si ho společně
-   se zvoleným heslem; budou znovu potřeba pro výše uvedený Node-RED flow a pro
-   datasource v Grafaně níže.
+   Hned potom ho vypište příkazem `influx auth list`. Token i zvolené heslo si uložte;
+   budete je znovu potřebovat pro flow v Node-RED výše a pro datový zdroj v Grafaně níže.
 
    :::

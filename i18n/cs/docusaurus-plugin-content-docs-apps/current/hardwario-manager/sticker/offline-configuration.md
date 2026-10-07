@@ -7,12 +7,12 @@ title: Konfigurace vypnutého zařízení
 
 Zařízení STICKER lze konfigurovat **bez vložených baterií**. Pole NFC z telefonu
 zařízení napájí dost dlouho na to, aby si nastavení uložilo, a zařízení ho
-aplikuje při dalším startu na baterie. Díky tomu můžete zařízení připravit ještě
+začne používat po dalším startu z baterií. Díky tomu můžete zařízení připravit ještě
 před instalací.
 
 :::info Zařízení už musí mít svůj secret key
-Offline zápisy jdou stejným šifrovaným kanálem jako běžné, takže zařízení musí být
-zprovozněné se secret key a uložené v telefonu. Viz
+Offline zápis probíhá stejným šifrovaným kanálem jako běžný, takže zařízení musí
+mít nastavený secret key a musí být uložené v telefonu. Viz
 [**Saved STICKERs**](./saved-stickers.md).
 :::
 
@@ -21,30 +21,31 @@ zprovozněné se secret key a uložené v telefonu. Viz
 ## Sestavení konfigurace a její zápis {#build-a-configuration-and-write-it}
 
 1. Přejděte na **STICKER → Configuration → Configure without reading**.
-2. Sestavte konfiguraci: buď volbou **Apply template** z uloženého presetu, nebo
-   otevřete jednotlivé sekce a hodnoty nastavte ručně.
+2. Sestavte konfiguraci: buď ji volbou **Apply template** vyplňte z uložené
+   šablony, nebo otevřete jednotlivé sekce a hodnoty nastavte ručně.
 3. Klepněte na **Save to device** a přiložte telefon k zařízení STICKER.
 
 <img src="/img/hw-manager/hw-manager-configuration-without-reading.png" alt="Configure without reading: sestavení konfigurace offline s počítadlem velikosti, připravené k zápisu do tagu" width="320" />
 
-Protože se ze zařízení nic nečetlo, zapíše se každá hodnota, kterou nastavíte,
-tak jak je. Není s čím porovnávat a není tu ani **Revert to read values**.
+Protože se ze zařízení předem nic nečetlo, zapíše se každá nastavená hodnota
+přesně tak, jak je. Není s čím porovnávat, a proto tu chybí i volba
+**Revert to read values**.
 
 ---
 
 ## Sledujte počítadlo velikosti {#watch-the-size-counter}
 
-Offline zápis se musí vejít do tagové paměti zařízení, takže obrazovka průběžně
-zobrazuje **počítadlo velikosti** proti limitu. Pokud ho překročíte, ubírejte
-nastavení, dokud se počítadlo nevejde. Nejjednodušší cesta, jak zůstat v limitu,
-je šablona, která nese jen to, co skutečně potřebujete.
+Offline zápis se musí vejít do paměti tagu v zařízení, proto obrazovka při
+přidávání nastavení průběžně ukazuje **počítadlo velikosti** vzhledem k limitu.
+Pokud limit překročíte, odebírejte nastavení, dokud se do něj nevejdete. Nejsnáz
+se v limitu udržíte se šablonou, která obsahuje jen to, co skutečně potřebujete.
 
 ---
 
-## Hromadná aplikace šablony offline {#apply-a-template-offline-in-bulk}
+## Hromadné použití šablony offline {#apply-a-template-offline-in-bulk}
 
 Pokud chcete mnoha vypnutým zařízením nastavit totéž, sestavte konfiguraci jednou
-jako šablonu a aplikujte ji z **STICKER → Templates**:
+jako šablonu a použijte ji v **STICKER → Templates**:
 
 1. Otevřete šablonu a zvolte **Apply offline**.
 2. Konfigurace se ze šablony předvyplní: zkontrolujte ji.
@@ -53,8 +54,8 @@ jako šablonu a aplikujte ji z **STICKER → Templates**:
 
 Viz [**Šablony**](./templates.md).
 
-:::tip Ověřte to před instalací
-Takhle nastavené zařízení aplikuje nastavení až při dalším startu, takže se v době
-zápisu nic viditelného nestane. **Verify (read tag)** je způsob, jak si zápis
-potvrdit, ještě než zařízení půjde na zeď.
+:::tip Před instalací zápis ověřte
+Takto nastavené zařízení převezme nastavení až při dalším startu, takže při zápisu
+není nic vidět. Volbou **Verify (read tag)** ověříte, že se zápis povedl, ještě
+než zařízení namontujete na zeď.
 :::

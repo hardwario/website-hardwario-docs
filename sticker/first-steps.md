@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # STICKER Quick Start Guide
 
-Welcome! This page helps you **power up, provision, and activate** your STICKER device and connect it to your preferred LoRaWAN Network Server (ChirpStack, The Things Stack, or custom backend).
+This page helps you **power up, provision, and activate** your STICKER device and connect it to your preferred LoRaWAN Network Server (ChirpStack, The Things Stack, or custom backend).
 
 ---
 

@@ -1,23 +1,23 @@
 ---
 slug: one-wire-bus
 title: "Sběrnice 1-Wire"
-description: 1-Wire je sériová sběrnice, která používá pouze dva vodiče pro poloduplexní dvousměrnou komunikaci s více zařízeními typu slave na sběrnici 1-Wire.
+description: 1-Wire je sériová sběrnice, po které master komunikuje s více podřízenými zařízeními obousměrně a poloduplexně přes pouhé dva vodiče.
 ---
 import Image from '@theme/IdealImage';
 
-1-Wire je sériová sběrnice, která používá pouze **dva vodiče** (datovou linku a zem) pro **poloduplexní dvousměrnou komunikaci** master zařízení 1-Wire s jedním nebo více slave zařízeními 1-Wire.
+1-Wire je sériová sběrnice, po které řídicí zařízení (master) 1-Wire komunikuje s jedním nebo více podřízenými zařízeními (slave) 1-Wire. Stačí jí jen **dva vodiče** (datový a zem) a komunikace je **poloduplexní a obousměrná**.
 
 :::info
 
-Pro identifikaci zařízení na sběrnici má každé zařízení jedinečné 64bitové identifikační číslo (ID).
+Každé zařízení na sběrnici má pro identifikaci jedinečné 64bitové číslo (ID).
 
 :::
 
-1-Wire je zvláštní tím, že pokud některé zařízení ztratí kontakt nebo se odpojí od sběrnice, je uvedeno do výchozího resetovaného stavu. Po opětovném připojení se zařízení probudí a ohlásí svou přítomnost.
+1-Wire je zvláštní tím, že pokud některé zařízení ztratí kontakt nebo se odpojí od sběrnice, přejde do výchozího stavu po resetu. Po opětovném připojení se zařízení probudí a ohlásí svou přítomnost.
 
-## Použití sběrnice 1-Wire v TOWER {#1-wire-bus-usage-in-tower}
+## Sběrnice 1-Wire na platformě TOWER {#1-wire-bus-usage-in-tower}
 
-Připojení zařízení 1-Wire k zařízení TOWER jsme našim uživatelům usnadnili. Za tímto účelem jsme vyvinuli [**Sensor Module**](../hardware-modules/about-sensor-module.md), pomocí kterého můžete jednoduše připojit například jedno z následujících zařízení.
+Zařízení 1-Wire k platformě TOWER připojíte snadno: vyvinuli jsme modul [**Sensor Module**](../hardware-modules/about-sensor-module.md), ke kterému jednoduše připojíte například některé z těchto zařízení:
 
 - [**Soil Sensor**](https://www.hardwario.store/p/soil-sensor)
 - [**Machine Probe**](https://www.hardwario.store/p/machine-probe)

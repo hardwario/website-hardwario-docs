@@ -1,7 +1,7 @@
 ---
 slug: cloud-v2-migration-guide
 title: Průvodce migrací na Cloud v2
-description: "Tento článek vás provede celým postupem migrace z Cloud v1 na Cloud v2."
+description: "Celý postup migrace z Cloud v1 na Cloud v2 krok za krokem."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -9,17 +9,17 @@ import TabItem from '@theme/TabItem';
 
 # Průvodce migrací na Cloud v2 {#cloud-v2-migration-guide}
 
-Tento článek vás provede celým procesem migrace z Cloud v1 na Cloud v2.
+Tento článek vás provede celou migrací z Cloud v1 na Cloud v2.
 
-## 1. Aktualizace LTE modemu {#1-update-the-lte-modem}
+## 1. Aktualizace modemu LTE {#1-update-the-lte-modem}
 
-V této části nastavíte potřebné softwarové nástroje a hardware pro práci se zařízením CHESTER. Popisuje, jak nainstalovat a ověřit HARDWARIO Command Line Tools ve virtuálním prostředí Pythonu a jak připojit programátor SEGGER J-Link. Především vás provede vymazáním aplikačního firmwaru, nahráním firmwaru LTE modemu a následnou opětovnou instalací aplikačního firmwaru, což je nutné pro začátek migrace na HARDWARIO Cloud v2.
+Návod níže vás provede přípravou softwarových nástrojů a hardwaru pro práci se zařízením CHESTER: instalací a ověřením HARDWARIO Command Line Tools ve virtuálním prostředí Pythonu a připojením programátoru SEGGER J-Link. Hlavně ale popisuje, jak vymazat aplikační firmware, nahrát firmware modemu LTE a aplikační firmware znovu nainstalovat. Bez toho migraci na HARDWARIO Cloud v2 nezahájíte.
 
 👉 **Podrobný návod: [https://docs.hardwario.com/chester/firmware-flashing/lte-modem-over-j-link](/chester/firmware-flashing/lte-modem-over-j-link)**
 
 ## 2. Nahrání aplikace {#2-flash-the-application}
 
-V této části se naučíte, jak nahrát aplikační firmware do zařízení CHESTER pomocí programátoru SEGGER J-Link. Popisuje potřebné nastavení hardwaru i softwaru, včetně instalace Pythonu, vytvoření virtuálního prostředí a instalace HARDWARIO Command Line Tools. Především ukazuje, jak připojit J-Link a poté nahrát aplikační firmware buď z HEX souboru, nebo přímo pomocí 128bitového unikátního ID.
+Návod níže ukazuje, jak nahrát aplikační firmware do zařízení CHESTER programátorem SEGGER J-Link. Popisuje potřebný hardware a software včetně instalace Pythonu, vytvoření virtuálního prostředí a instalace HARDWARIO Command Line Tools. Hlavně ale ukazuje, jak připojit J-Link a nahrát aplikační firmware buď ze souboru HEX, nebo přímo podle 128bitového unikátního ID.
 
 👉 **Podrobný návod: [https://docs.hardwario.com/chester/firmware-flashing/application-over-j-link](/chester/firmware-flashing/application-over-j-link)**
 
@@ -32,15 +32,15 @@ V této části se naučíte, jak nahrát aplikační firmware do zařízení CH
 #### 1. Přejděte na [HARDWARIO Cloud v2](https://hardwario.cloud/) {#1-go-to-hardwario-cloud-v2}
 - Otevřete v prohlížeči rozhraní [HARDWARIO Cloud](https://hardwario.cloud/).
 
-#### 2. Vytvořte nový Space {#2-create-a-new-space}
-- Nejprve je potřeba vytvořit nový Space.
-Klikněte na tlačítko v pravém horním rohu s označením + NEW SPACE.
+#### 2. Vytvořte nový prostor {#2-create-a-new-space}
+- Nejprve vytvořte nový prostor (**Space**).
+Klikněte na tlačítko + NEW SPACE v pravém horním rohu.
 
-![Cloud – vytvoření nového Space](../../../../chester/images/cloud-0.png)
+![Cloud – vytvoření nového prostoru](../../../../chester/images/cloud-0.png)
 
 #### 3. Vytvořte nové zařízení {#3-create-a-new-device}
-- Jakmile je Space vytvořen, můžete přidat nové zařízení.
-Klikněte na tlačítko v pravém horním rohu s označením + NEW DEVICE.
+- Jakmile prostor vytvoříte, můžete do něj přidat nové zařízení.
+Klikněte na tlačítko + NEW DEVICE v pravém horním rohu.
 
 ![Cloud – vytvoření nového zařízení](../../../../chester/images/cloud-2.png)
 
@@ -53,8 +53,8 @@ Klikněte na tlačítko v pravém horním rohu s označením + NEW DEVICE.
  (Volitelně můžete přidat také komentář a [tagy](/cloud/tags))
 
  :::info
-**[Tagy](/cloud/tags)** seskupují zařízení podle firmwaru nebo funkcionality a lze je použít k filtrování.  
-Také propojují zařízení s **[Connectory](/cloud/connectors)**, čímž zajišťují správné směrování zpráv.  
+**[Tagy](/cloud/tags)** seskupují zařízení podle firmwaru nebo funkce a dají se použít k filtrování.  
+Propojují také zařízení s **[konektory](/cloud/connectors)**, takže se zprávy směrují správně.  
 Každý tag má **název** a **barvu**.  
 :::
 
@@ -62,9 +62,9 @@ Každý tag má **název** a **barvu**.
  ![Cloud – zadání údajů o zařízení](../../../../chester/images/cloud-3.png)
 
 #### 5. Zařízení přidáno {#5-device-added}
-Vaše zařízení je nyní **úspěšně přidáno** do Cloud v2.
+Zařízení je teď **úspěšně přidané** do Cloud v2.
 
 :::info
-Pro vizualizaci přicházejících dat můžete pokračovat možnostmi vizualizace popsanými zde:  
+Možnosti vizualizace příchozích dat najdete zde:  
 👉 [Dokumentace HARDWARIO Apps](/apps/)  
 :::

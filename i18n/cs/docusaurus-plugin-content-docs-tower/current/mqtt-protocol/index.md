@@ -4,14 +4,14 @@ description: "Protokol MQTT v HARDWARIO TOWER: broker Mosquitto, struktura topic
 ---
 import Image from '@theme/IdealImage';
 
-- MQTT je otevřený, jednoduchý a nenáročný komunikační protokol pro posílání zpráv mezi mnoha klienty, kteří jsou připojeni k centrálnímu MQTT brokeru.
+- MQTT je otevřený, jednoduchý a nenáročný komunikační protokol pro posílání zpráv mezi mnoha klienty připojenými k centrálnímu brokeru MQTT.
 - Každá **zpráva** se skládá ze dvou částí: **topicu** a **payloadu**
 - **Topic** popisuje obsah zprávy a identifikuje ji
 - Název **topicu** má **adresářovou strukturu**: jednotlivé úrovně jsou oddělené symbolem `/`
   - Topic může být `bedroom/temperature`, `kitchen/light/set` atd.
-- MQTT server se nazývá **broker** a klienti mohou **publikovat zprávy** a **odebírat topicy**
-- Úkolem MQTT brokeru je **doručovat zprávy** od **vydavatelů** k **odběratelům**
-- Při odebírání MQTT topicu můžete použít dva takzvané **zástupné znaky** (wildcards)
+- Server MQTT se nazývá **broker** a klienti mohou **publikovat zprávy** a **odebírat topicy**
+- Úkolem brokeru MQTT je **doručovat zprávy** od **vydavatelů** k **odběratelům**
+- Při odebírání topicu MQTT můžete použít dva takzvané **zástupné znaky** (wildcards)
   - Zástupný znak `+` přihlásí odběr všech topiců v zadaném topicu
     - např. `+/light/set` přihlásí odběr `bedroom/light/set`, `kitchen/light/set` atd.
   - Zástupný znak `#` přihlásí odběr všech podřízených topiců zadaného topicu
@@ -24,19 +24,19 @@ import Image from '@theme/IdealImage';
 
 :::tip
 
-Můžete si přečíst [**více o MQTT topicech a o tom, jak je používat**](https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/).
+Přečtěte si [**více o topicech MQTT a o tom, jak je používat**](https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/).
 
 :::
 
-## MQTT broker Mosquitto {#mosquitto-mqtt-broker}
+## Broker MQTT Mosquitto {#mosquitto-mqtt-broker}
 
-IoT Kit používá open-source [**MQTT broker Mosquitto**](https://mosquitto.org). Všechny zprávy jsou směrovány přes MQTT broker. To umožňuje další rozšiřování systému IoT Kit.
+Sada IoT Kit používá open-source [**broker MQTT Mosquitto**](https://mosquitto.org). Všechny zprávy procházejí přes broker MQTT, takže systém IoT Kit lze dál rozšiřovat.
 
-Když připojíte **Radio Dongle** s připojeným vzdáleným uzlem, můžete zobrazit všechny příchozí zprávy pomocí balíčku mosquitto-cli zadáním:
+Když připojíte **Radio Dongle**, ke kterému je připojený vzdálený uzel, zobrazíte všechny příchozí zprávy pomocí balíčku mosquitto-cli tímto příkazem:
 
 :::note
 
-Jak nainstalovat MQTT broker Mosquitto, najdete na odkazu výše, nebo můžete [**spustit vlastní server na Raspberry Pi**](../server-raspberry-pi/index.md).
+Jak nainstalovat broker MQTT Mosquitto, najdete na odkazu výše, případně můžete [**spustit vlastní server na Raspberry Pi**](../server-raspberry-pi/index.md).
 
 :::
 
@@ -55,6 +55,6 @@ node/836d19821664/push-button/-/event-count 5
 
 :::info
 
-Můžete použít **HARDWARIO Playground** ke [**správě rádiových zařízení**](../desktop-programming/radio-network-management.md), [**čtení a odesílání MQTT zpráv**](../desktop-programming/mqtt-messages-management.md) a jejich zpracování pomocí [**Node-RED**](../desktop-programming/node-red-programming.md).
+V aplikaci **HARDWARIO Playground** můžete [**spravovat rádiová zařízení**](../desktop-programming/radio-network-management.md), [**číst a odesílat zprávy MQTT**](../desktop-programming/mqtt-messages-management.md) a zpracovávat je v [**Node-RED**](../desktop-programming/node-red-programming.md).
 
 :::

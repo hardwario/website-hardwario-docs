@@ -115,7 +115,7 @@ Then paste the following script, or you can do it manually.
 
 In the left panel, open **System**→ **Password**.
 
-![Winbox 4 Open new Terminal](images/winbox-change-pass-1.png)
+![Winbox 4 Change password](images/winbox-change-pass-1.png)
 
 Fill the box: 
  - Old Password: **ember** (default password) 
@@ -123,7 +123,7 @@ Fill the box:
  - Confirm Password: `<YOUR_PASSWORD>`
  - Click **Change**
 
-![Winbox 4 Open new Terminal](images/winbox-change-pass-2.png)
+![Winbox 4 New password](images/winbox-change-pass-2.png)
 
 ### 3.2 Run Base Configuration
 Then paste the following script, or you can do it manually.
@@ -156,7 +156,7 @@ Assigns IP address 172.31.255.1/24 to the bridge for LAN access and add ports to
   - Interface: **bridge0**
 - Confirm it by clicking **OK**
 
-![EMBER ether2 add to bridge0](images/ember-bridge-add-ip.png)
+![EMBER bridge0 IP address](images/ember-bridge-add-ip.png)
 
 - In Bridge window go to **Ports → New**, select interface **ether2**. Make sure, that the **bridge0** is selected and click **OK**
 ![EMBER ether2 add to bridge0](images/ember-bridge-ether2.png)
@@ -171,7 +171,7 @@ Enables DHCP client on ether1 (WAN) for internet connectivity.
 
 Turns off the login note.
 - In the left panel **System → Note**, uncheck **Show At Login** and click **OK**.
-![EMBER ether3 add to bridge0](images/ember-note.png)
+![EMBER login note](images/ember-note.png)
 
 #### Checks for RouterOS updates and installs if available
 - In the left panel **System → Packages → Check for Updates**. A new window will open, check if the versions match. If not, click **Download&Install** and wait a few minutes.

@@ -4,24 +4,24 @@ title: Autentizace
 
 # Autentizace {#authentication}
 
-Každý požadavek se autentizuje pomocí **API klíče** posílaného v hlavičce `X-API-KEY`.
-API klíče jsou **vázané na prostor** a klíč lze pomocí **tagů** omezit na konkrétní zařízení.
+Každý požadavek se ověřuje **klíčem API** v hlavičce `X-API-KEY`.
+Klíče API jsou **vázané na prostor** a pomocí **tagů** můžete klíč omezit na konkrétní zařízení.
 
 **Vytvoření klíče v HARDWARIO Cloud:**
 
-1. Otevřete svůj prostor, v levém panelu přejděte na **API Keys** a klikněte na **+ NEW KEY**.
+1. Otevřete prostor, v levém panelu přejděte na **API Keys** a klikněte na **+ NEW KEY**.
 
    ![Stránka API Keys s tlačítkem „+ NEW KEY“](../../../../../cloud/api/images/api-keys-list.png)
 
-2. Zadejte klíči **Name** a případně vyberte **Tags**, které omezí, ke kterým zařízením má přístup, poté klikněte na **CREATE**.
+2. Vyplňte **Name** klíče, případně vyberte **Tags**, které určí, ke kterým zařízením bude mít klíč přístup, a klikněte na **CREATE**.
 
    ![Dialog „Create new key“ s poli Name a Tags](../../../../../cloud/api/images/api-key-create.png)
 
-3. Zkopírujte klíč z dialogu **API Key Created** a bezpečně jej uložte, **zobrazí se pouze jednou**. Pokud jej ztratíte, vytvořte klíč nový.
+3. Zkopírujte klíč z dialogu **API Key Created** a bezpečně ho uložte, protože **se zobrazí jen jednou**. Pokud ho ztratíte, nahraďte ho novým klíčem.
 
    ![Dialog „API Key Created“: zkopírujte klíč, který se zobrazí pouze jednou](../../../../../cloud/api/images/api-key-created.png)
 
-Potom jej posílejte s každým voláním:
+Potom ho posílejte s každým voláním:
 
 ```bash
 curl -H 'X-API-KEY: <api-key>' \
@@ -29,7 +29,7 @@ curl -H 'X-API-KEY: <api-key>' \
 ```
 
 :::caution
-API klíče udržujte v tajnosti a nikdy je neukládejte do repozitáře. Omezte klíč pomocí tagů,
-aby měl přístup jen k zařízením, která potřebuje, a při jeho vyzrazení jej okamžitě smažte
-nebo vyměňte (`.../spaces/{space_id}/keys` umožňuje správu klíčů i programově).
+Klíče API držte v tajnosti a nikdy je neukládejte do repozitáře. Klíč omezte tagy jen na zařízení,
+která potřebuje, a pokud unikne, okamžitě ho smažte nebo vyměňte (klíče lze spravovat i programově
+přes `.../spaces/{space_id}/keys`).
 :::

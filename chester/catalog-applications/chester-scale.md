@@ -14,7 +14,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 - [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
 - [**Common functionality**](common-functionality.md) to know how LED, button and network configuration works.
-- [**Platform Management**](/chester/category/platform-connectivity/) on how to work with the interactive console.
+- [**Platform Connectivity**](/chester/category/platform-connectivity/) on how to work with the interactive console.
 
 :::
 
@@ -71,7 +71,7 @@ Firmware build variant: `west chester-update scale --variant "CHESTER Scale Z"`
 
 - Weight sensors are **sampled** with a configurable period (parameter `interval-sample`).
 - Samples are then **aggregated** in the configurable interval (parameter `interval-aggreg`). Minimum, maximum, average, and median are computed from buffered samples for each channel.
-- Each aggregated value has its timestamp and are sent in a batch in a report interval period (parameter `interval-report`).
+- Each aggregated value has its timestamp; the values are sent in a batch every report interval (parameter `interval-report`).
 - The `weight-measurement-interval` parameter controls how often the weight measurement cycle runs.
 
 ### Channel Configuration

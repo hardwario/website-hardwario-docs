@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 HARDWARIO Playground is our free **Windows**, **macOS** and **Linux** application. It is made for working with TOWER in your desktop environment.
 
-This tool is mostly used while **prototyping** and **developing** your projects. Once you want to run your projects you should [**install and run your server**](../server-raspberry-pi/index.md) that will take care of collecting the data from devices and controlling your devices
+This tool is mostly used while **prototyping** and **developing** your projects. Once you want to run your projects you should [**install and run your server**](../server-raspberry-pi/index.md) that will take care of collecting the data from devices and controlling your devices.
 
 :::tip
 

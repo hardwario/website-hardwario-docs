@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # BMeters RFM-TX1.1
 
-[Web-Site](https://www.bmeters.com/en/products/rfm-tx1/)
+[Website](https://www.bmeters.com/en/products/rfm-tx1/)
 
 <div class="container">
   <div class="row">

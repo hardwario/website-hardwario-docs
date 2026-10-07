@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # SEGGER J-Link
 
-This article provides information on **SEGGER J-Link** debugger tool.
+This article provides information on the **SEGGER J-Link** debugger tool.
 
 ## Requirements
 
@@ -68,13 +68,13 @@ You will need the following hardware and software tools:
 
   :::danger
 
-  Some Micro-USB cables provide only power and no data signals. If the connection between J-Link, and your system does not work, check the cable type in the first place.
+  Some Micro-USB cables provide only power and no data signals. If the connection between J-Link and your system does not work, check the cable type in the first place.
 
   :::
 
 * Python application bundle **HARDWARIO Command Line Tools**
 
-## Instalation
+## Installation {#instalation}
 
 You can install **HARDWARIO Command Line Tools** with these steps:
 

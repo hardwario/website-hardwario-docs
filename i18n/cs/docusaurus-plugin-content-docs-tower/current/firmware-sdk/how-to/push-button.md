@@ -4,26 +4,26 @@ title: "Jak na: Tlačítko"
 ---
 import Image from '@theme/IdealImage';
 
-[**Core Module**](../../hardware-modules/about-core-module.md) je vybaven jedním tlačítkem, které lze použít, pokud na modulu Core Module není nasazen žádný další modul, jinak je poměrně těžko dostupné.
+Modul [**Core Module**](../../hardware-modules/about-core-module.md) má jedno tlačítko. Dobře se k němu dostanete, jen když na modulu Core Module není nasazený žádný další modul; jinak je špatně dostupné.
 
-Pokud chcete tlačítko používat i v případě, že se k modulu Core Module nedostanete, můžete využít [**Button Module**](../../hardware-modules//about-button-module.md)
+Pokud chcete tlačítko používat, i když se k modulu Core Module nedostanete, použijte modul [**Button Module**](../../hardware-modules//about-button-module.md).
 
 :::note
 
-Tento návod ukazuje, jak pracovat s integrovaným tlačítkem nebo modulem Button Module, ale lze jej použít i pro vaše vlastní tlačítka či spínače.
+Tento návod ukazuje, jak pracovat s integrovaným tlačítkem nebo s modulem Button Module; stejný postup ale platí i pro vlastní tlačítka nebo spínače.
 
 :::
 
 ## Odkazy {#references}
-- [**Push Button SDK Module**](https://sdk.hardwario.com/group__twr__button.html)
-- [**Příklad v GitHub repozitáři**](https://github.com/hardwario/twr-sdk/blob/master/_examples/button/application.c)
+- [**Modul SDK pro tlačítko**](https://sdk.hardwario.com/group__twr__button.html)
+- [**Příklad v repozitáři na GitHubu**](https://github.com/hardwario/twr-sdk/blob/master/_examples/button/application.c)
 
 
 ## Příklad {#example}
 
 :::info
 
-V příkladu níže je tlačítko inicializováno s funkcí `button_event_handler` jako obsluhou. Ta bude volána pokaždé, když na tlačítkovém modulu nastane událost.
+V příkladu níže se tlačítko inicializuje s obslužnou funkcí `button_event_handler`. Ta se zavolá pokaždé, když na tlačítku nastane nějaká událost.
 
 Při stisknutí tlačítka se LED na modulu Core Module zhasne.
 
@@ -34,7 +34,7 @@ Pokud tlačítko podržíte 1,5 sekundy, LED na modulu Core Module začne rychle
 <details>
 <summary>
 <b>
-Příklad kódu pro tlačítko
+Příklad kódu: tlačítko
 </b>
 </summary>
 <p>

@@ -11,7 +11,7 @@ ChirpStack is an open-source solution for building private or public [**LoRaWAN 
 
 ---
 
-## Example of an Dashboard Overview
+## Example of a Dashboard Overview {#example-of-an-dashboard-overview}
 
 ![ChirpStack Dashboard Overview](images/chirpstack-dashboard.png)
 

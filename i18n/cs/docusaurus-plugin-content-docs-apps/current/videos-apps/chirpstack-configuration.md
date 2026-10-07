@@ -6,7 +6,7 @@ title_meta: "Konfigurace (videonávody)"
 
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4 - konfigurace {#chirpstack-v4---configuration}
+# ChirpStack v4 – konfigurace {#chirpstack-v4---configuration}
 
 ## Přehled návodu {#tutorial-overview}
 

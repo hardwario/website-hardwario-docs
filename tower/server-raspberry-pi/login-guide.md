@@ -10,13 +10,13 @@ This document describes how to log in to Raspberry Pi using a **remote terminal 
 
 :::caution
 
-This tutorial assumes that you are using a clear [**Raspberry Pi OS**](./installation-clean-os.md) or [**HARDWARIO Raspbian**](./installation-os.md).
+This tutorial assumes that you are using a clean [**Raspberry Pi OS**](./installation-clean-os.md) or [**HARDWARIO Raspbian**](./installation-os.md).
 
 :::
 
 ## Find out Raspberry Pi IP
 
-In the case, you want to connect to your Raspberry Pi by IP Address you need to find out what address the DHCP server assigned to your Raspberry Pi.
+If you want to connect to your Raspberry Pi by IP Address you need to find out what address the DHCP server assigned to your Raspberry Pi.
 
 :::caution
 
@@ -66,14 +66,14 @@ You should be logged in to your Raspberry Pi. We recommend [**changing the passw
 
 ## Connect With Terminal
 
-On all systems, you can open the integrated terminal and connect with the ``ssh`` command
+On all systems, you can open the integrated terminal and connect with the ``ssh`` command.
 
 Open a terminal and run the following command:
 
 <Tabs>
 <TabItem value="hostname" label="Hostname" default>
 
-The hostname will be different based on what installation you went for
+The hostname will be different based on what installation you went for.
 
 [**HARDWARIO Raspbian**](./installation-os.md)
 

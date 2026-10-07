@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Vkládání dashboardů {#embedding-dashboards}
 
-Tento návod vás provede vložením dashboardů ThingsBoard do externích webových aplikací. Je optimalizovaný pro dokumentační frameworky založené na Reactu, jako je Docusaurus (MDX), ale stejný přístup s `iframe` funguje na jakékoli HTML stránce.
+Tento návod vás provede vložením dashboardů ThingsBoard do externích webových aplikací. Postup je optimalizovaný pro dokumentační frameworky založené na Reactu, jako je Docusaurus (MDX), ale stejné řešení s prvkem `iframe` funguje na jakékoli stránce HTML.
 
 ---
 
@@ -25,7 +25,7 @@ Kompletní postup krok za krokem, včetně toho, jak řešit podřízené zákaz
 
 ## Vložení celého dashboardu {#embedding-a-full-dashboard}
 
-Tento způsob použijte, když chcete zobrazit celý dashboard včetně více grafů, struktury rozvržení a ovladačů stavů.
+Tento způsob použijte, když chcete zobrazit celý dashboard včetně všech grafů, rozvržení a ovladačů stavů.
 
 ### Krok 1: Získejte veřejný odkaz {#step-1-get-the-public-link}
 
@@ -37,9 +37,9 @@ https://app.hardwario.cloud/dashboard/<DASHBOARD_ID>?publicId=<PUBLIC_ID>
 
 Podrobné pokyny, jak takový odkaz získat, najdete v návodu [**Veřejný odkaz**](/apps/thingsboard/public-link).
 
-### Krok 2: Vložte kód pro vložení {#step-2-insert-the-embed-code}
+### Krok 2: Přidejte kód iframe {#step-2-insert-the-embed-code}
 
-Do svého dokumentačního souboru vložte následující `iframe`.
+Do souboru dokumentace vložte následující `iframe`.
 
 ```jsx
 <iframe
@@ -52,23 +52,23 @@ Do svého dokumentačního souboru vložte následující `iframe`.
 ```
 
 :::tip
-U celých dashboardů doporučujeme výšku `800px`, aby se zbytečně nescrollovalo uvnitř rámu. Nastavení `width="100%"` zajistí, že se dashboard správně přizpůsobí desktopovým obrazovkám.
+U celých dashboardů doporučujeme výšku `800px`, aby se obsah uvnitř rámu zbytečně neposouval. Díky `width="100%"` se dashboard správně přizpůsobí šířce obrazovky počítače.
 :::
 
 ---
 
 ## Vložení jednoho widgetu {#embedding-a-single-widget}
 
-Někdy chcete zobrazit jen **jeden graf nebo widget**, ne celý dashboard. ThingsBoard v současnosti pro jednotlivý widget čistou veřejnou URL nenabízí, takže doporučený postup je:
+Někdy chcete zobrazit jen **jeden graf nebo widget**, ne celý dashboard. ThingsBoard zatím pro jednotlivý widget samostatnou veřejnou URL nenabízí, proto doporučujeme:
 
 > **Vytvořte pro každý widget, který chcete vložit, samostatný dashboard.**
 
 V praxi:
 1. Vytvořte nový dashboard a přidejte do něj jen **jeden widget**, který chcete zobrazit.
 2. Odstraňte veškeré další prvky rozvržení, záhlaví a ovladače stavů, aby zůstal jen graf.
-3. Tento dashboard s jedním widgetem zveřejněte a vložte přesně podle popisu v [Vložení celého dashboardu](#embedding-a-full-dashboard).
+3. Tento dashboard s jedním widgetem zveřejněte a vložte přesně podle postupu v části [Vložení celého dashboardu](#embedding-a-full-dashboard).
 
-Protože dashboard obsahuje jen jeden widget, můžete použít **menší výšku**, aby se do stránky vešel úhledně:
+Protože dashboard obsahuje jen jeden widget, můžete použít **menší výšku**, aby se do stránky úhledně vešel:
 
 ```jsx
 <iframe
@@ -81,14 +81,14 @@ Protože dashboard obsahuje jen jeden widget, můžete použít **menší výšk
 ```
 
 :::tip
-Hodnotu `height` přizpůsobte widgetu. U jednoho grafu obvykle dobře funguje `300–450px`. Tenhle vzor s dashboardem na jeden widget je nejčistší způsob, jak vkládat jednotlivé grafy, dokud ThingsBoard nenabídne nativní veřejné odkazy na jednotlivé widgety.
+Hodnotu `height` přizpůsobte widgetu. U jednoho grafu obvykle dobře funguje `300–450px`. Samostatný dashboard pro každý widget je nejčistší způsob, jak vkládat jednotlivé grafy, dokud ThingsBoard nenabídne veřejné odkazy přímo na jednotlivé widgety.
 :::
 
 ---
 
 ## Pravidla formátování pro Docusaurus (MDX) {#formatting-rules-for-docusaurus-mdx}
 
-Pokud používáte Docusaurus nebo jiný framework založený na MDX, může čisté HTML shodit build nebo se vykreslit špatně. Vždy se držte těchto dvou pravidel.
+Pokud používáte Docusaurus nebo jiný framework založený na MDX, může prosté HTML rozbít sestavení nebo se vykreslit špatně. Vždy se držte těchto dvou pravidel.
 
 ### 1. Používejte atributy v camelCase {#1-use-camelcase-attributes}
 
@@ -118,5 +118,5 @@ The following text starts here, after an empty line.
 ```
 
 :::caution
-Zapomenuté atributy v camelCase nebo chybějící prázdné řádky kolem bloku jsou nejčastější příčinou selhání buildu Docusaurusu při vkládání dashboardů.
+Zapomenuté atributy v camelCase nebo chybějící prázdné řádky kolem bloku jsou nejčastější příčinou, proč sestavení v Docusaurus při vkládání dashboardů selže.
 :::

@@ -10,7 +10,7 @@ In this chapter, you can find some links to our other websites that can be helpf
 
 Showcase of **projects from real life**. You can **get inspired** or maybe try to replicate some of them to quick start with TOWER.
 
-Also if you want to create your own project, feel free to use any HARDWARIO TOWER **module** or **tag** and you will be featured on our **projects board**. We will like to see any projects made with TOWER.
+Also if you want to create your own project, feel free to use any HARDWARIO TOWER **module** or **tag** and you will be featured on our **projects board**. We would like to see any projects made with TOWER.
 
 ### [GitHub Repositories](https://github.com/hardwario)
 
@@ -25,13 +25,13 @@ You can read more about how to develop your own firmware in [**Firmware Developm
 
 ### [Discussion Forum](https://forum.hardwario.com)
 
-If you get stuck while developing or using TOWER, you can go to the forum to check if anyone had a similar issue before or just ask yourself, someone from the development team or community will try to help you as soon as possible.
+If you get stuck while developing or using TOWER, you can go to the forum to check if anyone had a similar issue before or just ask; someone from the development team or community will try to help you as soon as possible.
 
 ### [Firmware SDK](https://sdk.hardwario.com)
 
 If you are interested in what functions are available for each module of TOWER, you can visit the SDK Doxygen generated website.
 
-There is whole section about [**Firmware SDK**](../firmware-sdk/index.md) if you want to see some examples on how to use SDK functions.
+There is a whole section about [**Firmware SDK**](../firmware-sdk/index.md) if you want to see some examples on how to use SDK functions.
 
 Also every Module and Tag has its own chapter with a link to a corresponding SDK module, for this visit [**Hardware Modules section**](../hardware-modules/index.md).
 

@@ -6,26 +6,26 @@ import Image from '@theme/IdealImage';
 
 # CHESTER Meteo {#chester-meteo}
 
-Tento článek popisuje základní funkce, hardware a ukázkovou **JSON** zprávu katalogové aplikace **CHESTER Meteo**.
+Tento článek popisuje základní funkce katalogové aplikace **CHESTER Meteo**, její hardware a ukázkovou zprávu **JSON**.
 
 :::caution
 
-Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
+Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
 
-- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
+- [**Společné funkce**](common-functionality.md): jak fungují LED, tlačítko a nastavení sítě.
+- [**Konektivita platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
 
 ## Přehled aplikace {#application-overview}
 
-**CHESTER Meteo** je senzor větru a prostředí, který vzorkuje, agreguje a odesílá měřené veličiny.
+Zařízení **CHESTER Meteo** měří vítr a další podmínky prostředí: naměřené veličiny vzorkuje, agreguje a odesílá.
 
 Katalogová aplikace **CHESTER Meteo** měří:
 - Rychlost větru (m/s)
-- Směr větru (0-360°)
+- Směr větru (0–360°)
 - Srážky (mm)
 - Atmosférický tlak (Pa)
 - Teplotu (°C)
@@ -33,52 +33,52 @@ Katalogová aplikace **CHESTER Meteo** měří:
 
 ## Varianty aplikace {#application-variants}
 
-**CHESTER Meteo** lze objednat v jedné z těchto variant:
+Zařízení **CHESTER Meteo** lze objednat v jedné z těchto variant:
 
 ### CHESTER Meteo {#chester-meteo}
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
 * `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 * `CHESTER-S2`: Externí vlhkoměr
 * Externí barometr
-* `CHESTER-E1-LP`: Krabička s SMA pigtailem
+* `CHESTER-E1-LP`: Krabička s pigtailem SMA
 
-Více podrobností najdete v [**Objednacích kódech**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
-Varianta buildu firmwaru: `west chester-update meteo --variant "CHESTER Meteo"`
+Varianta sestavení firmwaru: `west chester-update meteo --variant "CHESTER Meteo"`
 
 ### CHESTER Meteo Z {#chester-meteo-z}
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
 * `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 * `CHESTER-Z1`: Záložní modul
 * `CHESTER-S2`: Externí vlhkoměr
 * Externí barometr
-* `CHESTER-E1-LP`: Krabička s SMA pigtailem
+* `CHESTER-E1-LP`: Krabička s pigtailem SMA
 
-Více podrobností najdete v [**Objednacích kódech**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
-Varianta buildu firmwaru: `west chester-update meteo --variant "CHESTER Meteo Z"`
+Varianta sestavení firmwaru: `west chester-update meteo --variant "CHESTER Meteo Z"`
 
 ## Měření a chování {#measurement-and-behavior}
 
-- Všechny senzory jsou **vzorkovány** s konfigurovatelnou periodou (parametr `interval-sample`).
-- Vzorky jsou následně **agregovány** v konfigurovatelném intervalu. Z uložených vzorků se pro každý senzor vypočítá minimum, maximum, průměr a medián (parametr `interval-aggreg`).
-- Každá agregovaná hodnota má svoji časovou značku a odesílá se v dávce v intervalu reportu (parametr `interval-report`).
+- Všechny senzory se **vzorkují** s nastavitelnou periodou (parametr `interval-sample`).
+- Vzorky se pak **agregují** v nastavitelném intervalu: z uložených vzorků se pro každý senzor spočítá minimum, maximum, průměr a medián (parametr `interval-aggreg`).
+- Každá agregovaná hodnota má svou časovou značku; hodnoty se odesílají v dávkách v intervalu hlášení (parametr `interval-report`).
 
 ### Rychlost větru {#wind-speed}
 
-Rychlost větru se měří průběžně mezi vzorky (`interval-sample`). Každý vzorek rychlosti větru je průměrná rychlost větru mezi dvěma vzorky. Při každé agregaci (`interval-aggreg`) jsou tyto vzorky agregovány a z uložených vzorků se vypočítá minimum, maximum, průměr a medián.
+Rychlost větru se měří nepřetržitě i v době mezi vzorky (`interval-sample`). Každý vzorek je průměrná rychlost větru za dobu od předchozího vzorku. Při každé agregaci (`interval-aggreg`) se tyto vzorky agregují a z uložených vzorků se spočítá minimum, maximum, průměr a medián.
 
-Díky tomuto průběžnému měření získáte přesnou minimální, maximální a průměrnou rychlost větru z každé agregace.
+Díky nepřetržitému měření dává každá agregace přesnou minimální, maximální a průměrnou rychlost větru.
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná příkazem `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config interval-sample 60
@@ -86,39 +86,39 @@ app config interval-aggreg 300
 app config interval-report 1800
 ```
 
-## Specifické příkazy {#specific-commands}
+## Příkazy aplikace {#specific-commands}
 
 :::info
 
-Celou strukturu příkazů můžete snadno prozkoumat. Začněte příkazem `help`.
+Celou stromovou strukturu příkazů snadno prozkoumáte: začněte příkazem `help`.
 
 :::
 
 :::caution
 
-Aby se nová konfigurace použila, je nutné zadat `config save`, což aplikuje nové konfigurační parametry a restartuje zařízení.
+Novou konfiguraci uplatníte příkazem `config save`, který uloží nové parametry a restartuje zařízení.
 
 :::
 
-Příkaz pro nastavení **intervalu vzorkování** v sekundách:
+Tímto příkazem nastavíte **interval vzorkování** v sekundách:
 
 ```
 app config interval-sample <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu agregace** v sekundách:
+Tímto příkazem nastavíte **interval agregace** v sekundách:
 
 ```
 app config interval-aggreg <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu reportu** v sekundách:
+Tímto příkazem nastavíte **interval hlášení** v sekundách:
 
 ```
 app config interval-report <30-86400>
 ```
 
-Příkaz pro načtení **aktuálních hodnot** pro **testovací účely**:
+Tímto příkazem přečtete **aktuální hodnoty** pro **účely testování**:
 
 ```
 meteo read ctr_meteo_a
@@ -126,9 +126,9 @@ meteo read ctr_meteo_a
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je dostupný v [kapitole Firmware](index.md#application-firmware) katalogových aplikací.
+Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](index.md#application-firmware).
 
-## Ukázková JSON zpráva {#example-json-message}
+## Ukázková zpráva JSON {#example-json-message}
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -136,14 +136,14 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="lte" label="LTE">
     
-V každé struktuře je s aktuální konfigurací šest agregovaných hodnot. Každá agregovaná hodnota má svoji časovou značku, je vypočítána z více vzorků a jsou určeny hodnoty `min`, `max`, `avg` a `mdn`.
+Při této konfiguraci obsahuje každá struktura šest agregovaných hodnot. Každá z nich má svou časovou značku a hodnoty `min`, `max`, `avg` a `mdn` vypočtené z několika vzorků.
 
 Rychlost větru je v **metrech za sekundu**.
 
 Tlak je v **pascalech**.
 
 <details>
-<summary><b>Zobrazit JSON příklad</b></summary>
+<summary><b>Zobrazit ukázku JSON</b></summary>
 <p>
 
 ```json
@@ -552,7 +552,7 @@ Tlak je v **pascalech**.
   <TabItem value="lora" label="LoRaWAN">
 
 <details>
-<summary><b>Zobrazit JSON příklad</b></summary>
+<summary><b>Zobrazit ukázku JSON</b></summary>
 <p>
 
 ```json
@@ -597,15 +597,15 @@ Tlak je v **pascalech**.
 ### v3.5.1 – 2025-12-08 {#v351--2025-12-08}
 
 - **Přidáno**: Nová varianta: **CHESTER Meteo M** (Modbus RTU, podporuje senzory Lambrecht a Sensecap/OPM; typ senzoru se volí parametrem `meteo-type`)
-- **Přidáno**: Podpora půdních senzorů: vlhkost a teplota přes Modbus půdní sondy
-- **Přidáno**: Podpora LoRaWAN: jediný binární firmware pro LTE i LoRaWAN; režim se volí pomocí `app config mode lte` / `app config mode lrw`
-- **Vylepšeno**: Podpora pyranometru (solární osvit)
+- **Přidáno**: Podpora půdních senzorů: vlhkost a teplota z půdních sond Modbus
+- **Přidáno**: Podpora LoRaWAN: jediný binární soubor firmwaru pro LTE i LoRaWAN; režim se volí příkazem `app config mode lte` / `app config mode lrw`
+- **Vylepšeno**: Podpora pyranometru (intenzita slunečního záření)
 
 ### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Podpora půdních senzorů: měření vlhkosti a teploty přes 1-Wire půdní sondy (`soil_sensors` ve JSON výstupu)
-- **Přidáno**: Nová varianta: **CHESTER Meteo P** se vstupem pro pyranometr pro měření solárního osvitu
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); předchozí firmware pro Cloud v1 zůstává dostupný samostatně
+- **Přidáno**: Podpora půdních senzorů: měření vlhkosti a teploty půdními sondami 1-Wire (`soil_sensors` ve výstupu JSON)
+- **Přidáno**: Nová varianta: **CHESTER Meteo P** se vstupem pro pyranometr k měření intenzity slunečního záření
+- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud v1 zůstává dostupný samostatně
 
 :::info
 

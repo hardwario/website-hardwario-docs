@@ -10,7 +10,7 @@ title: Sensor Interfaces
 * Designed for digital temperature probes and similar 1-Wire sensors
 * Per-channel LEDs indicate input activity and sensor status
 
-### 868 MHz ISM Radio
+### 868/915 MHz ISM Radio {#868-mhz-ism-radio}
 
 * Integrated long-range ISM radio (LoRa-capable) for communication with wireless sensors
 * Compatibility with **HARDWARIO STICKER** sensor nodes (temperature, humidity, motion, etc.)

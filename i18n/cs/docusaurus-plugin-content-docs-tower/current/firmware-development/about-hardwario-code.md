@@ -12,53 +12,53 @@ Pokud narazíte na potíže s rozšířením nebo přenosnou verzí, dejte nám 
 
 :::
 
-Tato kapitola se věnuje aplikaci **HARDWARIO Code**, což je naše mírně upravená verze [**Visual Studio Code**](https://code.visualstudio.com). Obsahuje všechny nástroje, které jsou potřeba k vývoji firmwaru pro HARDWARIO TOWER.
+Tato kapitola se věnuje aplikaci **HARDWARIO Code**, naší mírně upravené verzi editoru [**Visual Studio Code**](https://code.visualstudio.com). Obsahuje všechny nástroje potřebné k vývoji firmwaru pro HARDWARIO TOWER.
 
 :::note
 
-Pokud už máte **Visual Studio Code** a nechcete instalovat novou verzi, je k dispozici rozšíření, které si můžete nainstalovat.
+Pokud už **Visual Studio Code** máte a nechcete instalovat novou verzi, můžete si do něj nainstalovat rozšíření.
 
-Všechny potřebné nástroje si budete muset nainstalovat sami; jak na to, se dozvíte v [**kapitole o rozšíření TOWER pro VSCode**](./tower-vscode-extension.md).
+Všechny potřebné nástroje si pak ale musíte nainstalovat sami; jak na to, popisuje [**kapitola Rozšíření TOWER pro VSCode**](./tower-vscode-extension.md).
 
 :::
 
 ## Instalace {#installation}
 
-Verze je k dispozici pro každý hlavní operační systém. Instalace se mírně liší.
+K dispozici je verze pro každý hlavní operační systém, instalace se mezi nimi mírně liší.
 
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
 
 - Stáhněte si [**instalátor HARDWARIO Code pro Windows**](https://github.com/hardwario/hardwario-code/releases)
-- Dokončete instalaci
+- Projděte instalačním průvodcem
   :::info
 
     Při volbě umístění doporučujeme ponechat **výchozí cestu**, která vede do vaší **uživatelské složky AppData** (přenosná verze Visual Studio Code nepodporuje instalaci pro více uživatelů).
 
   :::
 - Na ploše byste měli mít ikonu **HARDWARIO Code**
-- Vyčkejte, než se **HARDWARIO Code** otevře
+- Počkejte, až se **HARDWARIO Code** otevře
 - V bočním panelu byste měli vidět logo HARDWARIO a v horní části okna nápis HARDWARIO Code
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
 - Stáhněte si [**HARDWARIO Code**](https://github.com/hardwario/hardwario-code/releases)
-- Rozbalte archiv kamkoli chcete
+- Rozbalte archiv, kam chcete
 - Pokud chcete mít k dispozici **zástupce** a nainstalovat **další ovladače**, můžete z rozbalené složky spustit skript `install.sh`
-- Spusťte binárku **code** z terminálu nebo najděte **HARDWARIO Code** pomocí vyhledávání
-- Vyčkejte, než se **HARDWARIO Code** otevře
+- Spusťte z terminálu binární soubor **code**, nebo **HARDWARIO Code** najděte přes vyhledávání
+- Počkejte, až se **HARDWARIO Code** otevře
 - V bočním panelu byste měli vidět logo HARDWARIO a v horní části okna nápis **HARDWARIO Code**
 
 :::info
 
-Možná bude potřeba nainstalovat doplňkovou knihovnu příkazem `sudo apt-get install libncurses*` (pro ladění pomocí JLink).
+Možná bude potřeba doinstalovat knihovnu příkazem `sudo apt-get install libncurses*` (pro debugování se sondou JLink).
 
 :::
 
 :::caution
 
-Pokud nemáte v systému nainstalovaný **git**, budete jej muset [**nainstalovat**](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), aby rozšíření fungovalo plně.
+Pokud nemáte v systému nainstalovaný **git**, musíte ho [**nainstalovat**](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), aby rozšíření plně fungovalo.
 
 :::
 
@@ -66,12 +66,12 @@ Pokud nemáte v systému nainstalovaný **git**, budete jej muset [**nainstalova
 <TabItem value="macOS" label="macOS">
 
 - Stáhněte si [**instalační balíček HARDWARIO Code**](https://github.com/hardwario/hardwario-code/releases) pro macOS
-  - Je potřeba vybrat správnou verzi pro vaši architekturu
+  - Vyberte verzi pro architekturu svého počítače
 - Spusťte instalátor dvojklikem
 - Postupujte podle pokynů instalátoru
-- Ve složce ~/Applications svého uživatele byste měli vidět složku **hardwario-code**
+- Ve složce ~/Applications ve svém uživatelském adresáři byste měli najít složku **hardwario-code**
 - Spusťte `~Applications/hardwario-code/Visual Studio Code`
-- Vyčkejte, než se **HARDWARIO Code** otevře
+- Počkejte, až se **HARDWARIO Code** otevře
 - V bočním panelu byste měli vidět logo HARDWARIO a v horní části okna nápis **HARDWARIO Code**
 
 </TabItem>
@@ -82,6 +82,6 @@ Pokud nemáte v systému nainstalovaný **git**, budete jej muset [**nainstalova
 
 :::tip
 
-Nyní můžete začít používat **HARDWARIO Code** k vývoji firmwaru pro HARDWARIO TOWER. Základní informace o používání rozšíření najdete v [**tutoriálu k HARDWARIO Code**](./hardwario-extension-tutorial.md), nebo můžete přejít přímo na **kapitolu s rychlým startem firmwaru**.
+Teď už můžete v **HARDWARIO Code** vyvíjet firmware pro HARDWARIO TOWER. Základy práce s rozšířením popisuje [**Návod k rozšíření TOWER**](./hardwario-extension-tutorial.md), případně rovnou přejděte na **kapitolu Rychlý start s firmwarem**.
 
 :::

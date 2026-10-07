@@ -1,31 +1,31 @@
 ---
 slug: carlo-gavazzi-em1xx-series
-title: Carlo Gavazzi EM1XX Series
+title: Carlo Gavazzi řady EM1XX
 ---
 
 import Image from '@theme/IdealImage';
 
 [Webové stránky](https://www.gavazziautomation.com/en-global/product/EM111DINAV51XS1X)
 
-![Carlo Gavazzi - EM111](../../../../../../chester/supported-devices/modbus/images/carlo-gavazzi-em111.png)
+![Analyzátor energie Carlo Gavazzi EM111](../../../../../../chester/supported-devices/modbus/images/carlo-gavazzi-em111.png)
 
 ### Popis {#description}
 
-Série EM1xx zahrnuje kompaktní a snadno použitelné analyzátory energie určené pro **jednofázové systémy**. Tato zařízení jsou ideální pro měření aktivní energie a rozúčtování nákladů v bytových, komerčních a lehkých průmyslových aplikacích. S možností přímého nebo nepřímého měření proudu a s podporou správy dvou tarifů nabízí série EM1xx flexibilitu, přesnost a snadnou integraci.
+Řada EM1xx zahrnuje kompaktní a snadno ovladatelné analyzátory energie pro **jednofázové soustavy**. Hodí se k měření činné energie a k rozúčtování nákladů v bytech, komerčních objektech a lehkém průmyslu. Díky přímému nebo nepřímému měření proudu a podpoře dvou tarifů je řada EM1xx flexibilní, přesná a snadno se integruje.
 
 :::info
 
-Tento elektroměr **nevyžaduje** pro měření proudu žádný **externí senzor**. Měření zvládá díky přímému připojení sám.
+Tento elektroměr **nepotřebuje** k měření proudu žádný **externí senzor**. Proud měří sám, vodiče se do něj zapojují přímo.
 
 :::
 
  ---
 
-### Instalace napájení {#power-installation}
+### Silové zapojení {#power-installation}
 
-#### Příklad instalace: analyzátor energie Carlo Gavazzi EM111 {#example-of-installation-carlo-gavazzi-energy-analyzer-em111}
+#### Příklad zapojení: analyzátor energie Carlo Gavazzi EM111 {#example-of-installation-carlo-gavazzi-energy-analyzer-em111}
 
-| **Carlo Gavazzi Energy Analyzer EM111** | |
+| **Analyzátor energie Carlo Gavazzi EM111** | |
 |----------------------------------------|-----------------------------------------------|
 | Pin 1                                 | **L (IN)**                                         |
 | Pin 2                                 | **L (OUT)**                                         |
@@ -34,15 +34,15 @@ Tento elektroměr **nevyžaduje** pro měření proudu žádný **externí senzo
 
 #### Schéma zapojení (EM111) {#connection-diagram-em111}
 
-![Schéma zapojení jednofázového připojení EM111 s L1 a N přes svorky 1, 2 a N](../../../../../../chester/supported-devices/modbus/images/carlo-gavazzi-em111-power.png)
+![Schéma jednofázového zapojení EM111: L1 a N přes svorky 1, 2 a N](../../../../../../chester/supported-devices/modbus/images/carlo-gavazzi-em111-power.png)
 
 ---
 
 ### Komunikace Modbus {#modbus-communication}
 
-#### Příklad instalace komunikace Modbus: analyzátor energie Carlo Gavazzi EM111 {#example-of-modbus-communication-installation-carlo-gavazzi-energy-analyzer-em111}
+#### Příklad zapojení komunikace Modbus: analyzátor energie Carlo Gavazzi EM111 {#example-of-modbus-communication-installation-carlo-gavazzi-energy-analyzer-em111}
 
-| **Carlo Gavazzi Energy Analyzer – EM111** | **CHESTER Modbus** |
+| **Analyzátor energie Carlo Gavazzi EM111** | **CHESTER Modbus** |
 |---------------------------|--------------------|
 | Pin 8                     | Pin 6 (A−)      |
 | Pin 6                     | Pin 7 (B+)        |
@@ -54,48 +54,48 @@ Tento elektroměr **nevyžaduje** pro měření proudu žádný **externí senzo
 
 ---
 
-### Tlačítka pro procházení a konfiguraci {#browsing-and-configuration-buttons}
+### Ovládací tlačítka {#browsing-and-configuration-buttons}
 
 * `◄` **Levé tlačítko**
-    1. Procházení menu
-    2. Snižování hodnoty
-    3. Přidržením potvrdíte volbu / vstoupíte
+    1. Pohyb v menu
+    2. Snížení hodnoty
+    3. Podržením vyberete položku nebo do ní vstoupíte
 
 * `►` **Pravé tlačítko**
-    1. Procházení menu
-    2. Zvyšování hodnoty
+    1. Pohyb v menu
+    2. Zvýšení hodnoty
 ---
 
-### Konfigurace komunikace Modbus pro analyzátor energie {#modbus-communication-configuration-for-energy-analyzer}
+### Konfigurace komunikace Modbus v analyzátoru energie {#modbus-communication-configuration-for-energy-analyzer}
 
-1. Stiskněte a přidržte `◄` **(levé)** tlačítko po dobu 1,5 sekundy.  
+1. Podržte tlačítko `◄` **(levé)** 1,5 sekundy.  
 2. Na displeji se zobrazí `PASS`.  
-3. Dalším stiskem `◄` **(levého)** tlačítka začnete zadávat heslo.  
-4. Pomocí tlačítek `►` **(pravé)** a `◄` **(levé)** vyberte číslice.  
-5. Každou číslici potvrďte přidržením `◄` **(levého)** tlačítka po dobu 1,5 sekundy, čímž se přesunete na další.  
+3. Dalším stiskem tlačítka `◄` **(levé)** začnete zadávat heslo.  
+4. Tlačítky `►` **(pravé)** a `◄` **(levé)** vybírejte číslice.  
+5. Každou číslici potvrďte podržením tlačítka `◄` **(levé)** po dobu 1,5 sekundy; tím se přesunete na další.  
 6. Výchozí heslo je `0000`.  
-7. Po zadání hesla se na displeji zobrazí `N PASS` s výzvou k zadání nového hesla (pokud je potřeba).  
-8. Po vstupu do menu se pohybujte pomocí tlačítek `►` **(pravé)** a `◄` **(levé)**.  
-9. Chcete-li upravit jakoukoli hodnotu, stiskněte a přidržte `◄` **(levé)** tlačítko na požadované položce alespoň 1,5 sekundy.  
-10. Po úpravě hodnoty ji potvrďte dalším dlouhým stiskem `◄` **(levého)** tlačítka.  
-11. Až budete se všemi nastaveními hotovi, procházejte menu, dokud nenajdete `END`, a poté přidržením `◄` **(levého)** tlačítka nabídku opustíte.  
+7. Po zadání hesla displej zobrazí `N PASS` a vyzve k zadání nového hesla (pokud ho chcete změnit).  
+8. V menu se pohybujete tlačítky `►` **(pravé)** a `◄` **(levé)**.  
+9. Hodnotu upravíte tak, že na požadované položce podržíte tlačítko `◄` **(levé)** alespoň 1,5 sekundy.  
+10. Upravenou hodnotu potvrďte dalším dlouhým stiskem tlačítka `◄` **(levé)**.  
+11. Po dokončení všech nastavení přejděte v menu na položku `END` a podržením tlačítka `◄` **(levé)** menu opusťte.  
 
 :::info
-Pokud dlouhé stisky nereagují, zkuste `◄` **(levé)** tlačítko stiskávat blíže ke středové části displeje.
+Pokud elektroměr na dlouhý stisk nereaguje, tiskněte tlačítko `◄` **(levé)** blíže ke středu displeje.
 :::
 
 
 #### Výchozí konfigurace komunikace Modbus {#default-modbus-communication-configuration}
 
-| Adresa | Baud Rate | Parita | Stop bit |
+| Adresa | Přenosová rychlost | Parita | Stop bit |
 |---------|-----------|--------|-----------|
 | 1       | 9.6k      | Žádná   | 1         |
 
 ---
 
-### Konfigurace komunikace Modbus pro CHESTER {#modbus-communication-configuration-for-chester}
+### Konfigurace komunikace Modbus v zařízení CHESTER {#modbus-communication-configuration-for-chester}
 
-Pomocí následujících příkazů nastavte parametry komunikace přes CHESTER Terminal:
+Parametry komunikace nastavíte v terminálu CHESTER těmito příkazy:
 
 
 ```
@@ -117,7 +117,7 @@ config save
 | Napětí        | E_ENERGY_METER.METER_1.VOLTAGE.MEASUREMENTS  |
 | Výkon          | E_ENERGY_METER.METER_1.POWER.MEASUREMENTS    |
 | Frekvence      | E_ENERGY_METER.METER_1.FREQUENCY.MEASUREMENTS|
-| Energie na vstupu      | E_ENERGY_METER.METER_1.ENERGY_IN.MEASUREMENTS|
-| Energie na výstupu     | E_ENERGY_METER.METER_1.ENERGY_OUT.MEASUREMENTS|
+| Odebraná energie       | E_ENERGY_METER.METER_1.ENERGY_IN.MEASUREMENTS|
+| Dodaná energie         | E_ENERGY_METER.METER_1.ENERGY_OUT.MEASUREMENTS|
 
 ---

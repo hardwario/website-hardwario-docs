@@ -3,7 +3,7 @@ slug: piketronic-rpp-r
 title: Piketronic RPP-R Radon Probe
 ---
 
-[Web-Site](https://www.piketronic.cz/)
+[Website](https://www.piketronic.cz/)
 
 ![Piketronic RPP-R](images/piketronic-rpp-r.jpg)
 

@@ -12,9 +12,8 @@ title: Instalace Node-RED
 
    :::tip
 
-   Výše uvedený release asset se jmenuje `install-update-nodered-deb`. Pokud v budoucnu vrátí 404,
-   podívejte se na [stránku releasů node-red/linux-installers](https://github.com/node-red/linux-installers/releases)
-   a zjistěte aktuální název assetu.
+   Výše uvedený soubor z vydání se jmenuje `install-update-nodered-deb`. Pokud jednou začne vracet
+   chybu 404, zjistěte jeho aktuální název na [stránce vydání node-red/linux-installers](https://github.com/node-red/linux-installers/releases).
 
    :::
 
@@ -24,13 +23,13 @@ title: Instalace Node-RED
    sudo systemctl enable nodered.service
    ```
 
-1. Restartujte systém, čímž se instalace dokončí:
+1. Restartem systému instalaci dokončete:
 
    ```sh
    sudo reboot
    ```
 
-1. Nyní je **Node-RED** dostupný na této adrese: `http://[TARGET IP ADDRESS]:1880/`
+1. **Node-RED** je teď dostupný na adrese: `http://[TARGET IP ADDRESS]:1880/`
 
 ## Zabezpečení a tok dat {#hardening--data-flow}
 
@@ -42,7 +41,7 @@ title: Instalace Node-RED
    credentialSecret: "<a random secret>",
    ```
 
-1. Zabezpečte editor. **Ve výchozím stavu je zcela otevřený**. Samotný instalační výstup Node-RED
+1. Zabezpečte editor. **Ve výchozím stavu je zcela otevřený.** Instalační výstup Node-RED sám
    výslovně varuje, aby editor nebyl bez zabezpečení přístupný ze sítě. Vygenerujte hash hesla:
 
    ```sh
@@ -66,7 +65,7 @@ title: Instalace Node-RED
    sudo systemctl restart nodered.service
    ```
 
-1. Nainstalujte node pro InfluxDB:
+1. Nainstalujte uzel pro InfluxDB:
 
    ```sh
    cd ~/.node-red && npm install node-red-contrib-influxdb
@@ -80,15 +79,15 @@ title: Instalace Node-RED
    :::
 
 1. Vytvořte flow: **MQTT in** (topic `application/+/device/+/event/up`, broker
-   `localhost:1883`) → **Function** (parsování uplink JSON z ChirpStack, nastavení `msg.measurement` a
-   `msg.payload = [fields, tags]`) → **InfluxDB out** (konfigurační node: `influxdbVersion: "2.0"`,
-   `url: http://localhost:8086`, token z kroku [Instalace InfluxDB](/fiber/installation/influxdb/); node: `org:
+   `localhost:1883`) → **Function** (rozparsuje JSON uplinku z ChirpStack a nastaví `msg.measurement` a
+   `msg.payload = [fields, tags]`) → **InfluxDB out** (konfigurační uzel: `influxdbVersion: "2.0"`,
+   `url: http://localhost:8086`, token z kroku [Instalace InfluxDB](/fiber/installation/influxdb/); uzel: `org:
    fiber`, `bucket: fiber`).
 
    :::tip
 
-   Dokud není připojena žádná brána nebo zařízení LoRaWAN, je toto flow jen přípravou. Vytvořte ho
-   nyní, aby bylo připraveno, jakmile budou brána a zařízení zaregistrovány (viz
+   Dokud není připojená žádná brána ani zařízení LoRaWAN, je tento flow jen příprava. Vytvořte ho
+   už teď, aby byl připravený, jakmile zaregistrujete bránu a zařízení (viz
    [Registrace brány a zařízení](/fiber/installation/register-device/) výše) a začnou přicházet skutečné uplinky.
 
    :::

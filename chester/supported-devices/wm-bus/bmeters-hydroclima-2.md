@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # BMeters Hydroclima 2
 
-[Web-Site](https://www.bmeters.com/en/products/hydroclima-2/)
+[Website](https://www.bmeters.com/en/products/hydroclima-2/)
 
 <div class="container">
   <div class="row">
@@ -37,14 +37,14 @@ The device is delivered **pre-configured**, but it can be reprogrammed and custo
 
 Programming and configuration of the device is carried out by radio, using an [**RFM-RX2 receiver**](https://www.bmeters.com/en/products/rfm-rx2/) and [**BMetering Software**](http://keygenerator.bmetering.com/API/DownloadBMetering). 
 
-To trigger the configuration procedure, the BMetering software must be properly configured:
+The BMetering software must be properly configured. Then trigger the configuration procedure with the allocator's button:
 
 - for the factory state of the allocator, press the button for < 1s
 - for the allocator already configured, press the button for > 5s, until the display shows
 the message “rF”. 
 
-The method of configuration the allocator has been described in the documentation
-concerning the **Bmetering software user manual**.
+The configuration of the allocator is described in the
+**BMetering software user manual**.
 
 ## Wireless M-Bus Address Configuration
 

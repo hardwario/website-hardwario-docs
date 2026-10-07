@@ -8,11 +8,11 @@ import TabItem from '@theme/TabItem';
 
 # SEGGER J-Link {#segger-j-link}
 
-Tento článek poskytuje informace o debuggeru **SEGGER J-Link**.
+Tento článek popisuje ladicí nástroj **SEGGER J-Link**.
 
 ## Požadavky {#requirements}
 
-Budete potřebovat následující hardwarové a softwarové nástroje:
+Budete potřebovat tento hardware a software:
 
 * Jeden z těchto operačních systémů:
 
@@ -20,7 +20,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
   * macOS 11 / 12 (s nainstalovaným Homebrew)
   * Windows 10 / Windows 11
 
-* Distribuci **Python 3** nainstalovanou ve vašem systému:
+* Nainstalovanou distribuci **Python 3**:
 
   <Tabs groupId="operating-system">
   <TabItem value="windows" label="Windows" default>
@@ -29,7 +29,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
   :::caution
 
-  V instalátoru zaškrtněte **_Add Python x.x to PATH_**, aby byl spustitelný soubor Pythonu dostupný z jakéhokoli umístění.
+  V instalátoru zaškrtněte **_Add Python x.x to PATH_**, aby šel Python spustit z libovolného umístění.
 
   :::
 
@@ -54,29 +54,29 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
   </TabItem>
   </Tabs>
 
-* Zařízení **HARDWARIO CHESTER** (bude potřeba otevřít horní kryt krabičky se šesti šrouby)
+* Zařízení **HARDWARIO CHESTER** (budete muset povolit šest šroubů a sejmout horní kryt krabičky)
 
-* USB debugger/programátor **SEGGER J-Link** (včetně 10pinového SWD adaptéru + plochého kabelu)
+* USB debugger/programátor **SEGGER J-Link** (včetně 10pinového adaptéru SWD a plochého kabelu)
 
   :::tip
 
-  **HARDWARIO** dodává **SEGGER J-Link** + veškeré potřebné příslušenství na vyžádání.
+  Programátor **SEGGER J-Link** i veškeré potřebné příslušenství vám **HARDWARIO** na vyžádání dodá.
 
   :::
 
-* Micro-USB kabel s odpovídajícím typem konektoru pro váš počítač
+* Kabel Micro-USB s konektorem odpovídajícím vašemu počítači
 
   :::danger
 
-  Některé Micro-USB kabely poskytují pouze napájení a žádné datové signály. Pokud spojení mezi J-Link a vaším systémem nefunguje, zkontrolujte v první řadě typ kabelu.
+  Některé kabely Micro-USB vedou jen napájení, ne data. Pokud spojení mezi programátorem J-Link a počítačem nefunguje, zkontrolujte nejdřív kabel.
 
   :::
 
-* Python aplikační balík **HARDWARIO Command Line Tools**
+* Balík aplikací pro Python **HARDWARIO Command Line Tools**
 
 ## Instalace {#instalation}
 
-**HARDWARIO Command Line Tools** můžete nainstalovat těmito kroky:
+**HARDWARIO Command Line Tools** nainstalujete takto:
 
 1. Pouze na Windows: nainstalujte ovladače SEGGER J-Link:
 
@@ -88,19 +88,19 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
    :::caution
 
-   Pokud narazíte na **_An error was reported by NRFJPROG DLL: -101 JLINKARM_DLL_COULD_NOT_BE_OPENED_**, navštivte [tuto](/chester/firmware-sdk/installation-on-ubuntu/#set-up-device-rules) stránku.
+   Pokud se objeví chyba **_An error was reported by NRFJPROG DLL: -101 JLINKARM_DLL_COULD_NOT_BE_OPENED_**, postupujte podle [této](/chester/firmware-sdk/installation-on-ubuntu/#set-up-device-rules) stránky.
 
    :::
 
 1. Otevřete aplikaci **Terminál** (Ubuntu nebo macOS) nebo **Příkazový řádek** (Windows).
 
-1. Inicializujte virtuální prostředí Pythonu:
+1. Vytvořte virtuální prostředí pro Python:
 
    ```
    python3 -m venv hardwario-venv
    ```
 
-1. Aktivujte virtuální prostředí Pythonu:
+1. Aktivujte virtuální prostředí pro Python:
 
    ```
    source hardwario-venv/bin/activate
@@ -108,7 +108,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
    :::caution
 
-   Když zavřete **Terminál** nebo **Příkazový řádek**, musíte virtuální prostředí Pythonu znovu aktivovat. Stačí zavolat příkaz z výše uvedeného postupu: `source hardwario-venv/bin/activate`.
+   Po zavření aplikace **Terminál** nebo **Příkazový řádek** musíte virtuální prostředí Pythonu znovu aktivovat. Stačí zadat příkaz z postupu výše: `source hardwario-venv/bin/activate`.
 
    :::
 
@@ -118,13 +118,13 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
    pip install hardwario
    ```
 
-1. Instalaci můžete ověřit následujícím příkazem:
+1. Instalaci ověříte tímto příkazem:
 
    ```
    hardwario --version
    ```
 
-   Měl by vypsat výstup podobný tomuto:
+   Výstup by měl vypadat zhruba takto:
 
    ```
    hardwario.chester v1.23.0
@@ -148,7 +148,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-app.png')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do debug konektoru APP na levém okraji"/></div>
+      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-app.png')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do ladicího konektoru APP na levém okraji"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -172,7 +172,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-lte.png')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do debug konektoru LTE na pravé straně"/></div>
+      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-lte.png')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do ladicího konektoru LTE na pravé straně"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -196,7 +196,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-lrw.png')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do debug konektoru LRW"/></div>
+      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-lrw.png')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do ladicího konektoru LRW"/></div>
     </div>
     <div class="col col--2">
     </div>

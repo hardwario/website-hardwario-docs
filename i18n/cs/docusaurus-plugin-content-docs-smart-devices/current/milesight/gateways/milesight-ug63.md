@@ -5,9 +5,9 @@ title: UG63
 
 import Image from '@theme/IdealImage';
 
-# Milesight Gateway UG63-868M {#milesight-gateway-ug63-868m}
+# Brána Milesight UG63-868M {#milesight-gateway-ug63-868m}
 
-Milesight UG63 je **kompaktní brána LoRaWAN®** určená pro **menší nasazení** s **podporou 8 kanálů** a až **2000 koncových uzlů**. Nabízí **připojení přes Ethernet a 4G LTE**, snadnou **konfiguraci přes Wi-Fi** a zajišťuje **cenově efektivní pokrytí sítě**.  
+Milesight UG63 je **kompaktní brána LoRaWAN®** pro **menší nasazení**. Má **podporu 8 kanálů** a obslouží až **2000 koncových zařízení**. Jako **páteřní připojení** používá **Ethernet a 4G LTE**, snadno se **konfiguruje přes Wi-Fi** a nabízí **cenově výhodné pokrytí sítí**.  
 
 <div class="container">
   <div class="row">
@@ -21,13 +21,13 @@ Milesight UG63 je **kompaktní brána LoRaWAN®** určená pro **menší nasazen
 </div>
 <br />
 
-## Odkazy pro integraci {#integration-links}
+## Odkazy k integraci {#integration-links}
 | Zdroj           | Odkaz                                                                 |
 |-----------------|----------------------------------------------------------------------|
-| HARDWARIO Store | Zatím není k dispozici                                                |
+| E-shop HARDWARIO | Zatím není k dispozici                                                |
 | Oficiální stránka | https://www.milesight.com/iot/product/lorawan-gateway/ug63           |
 | Uživatelská příručka | https://resource.milesight.com/milesight/iot/document/ug63-user-guide-en.pdf |
-| Datasheet       | https://resource.milesight.com/milesight/iot/document/ug63-datasheet-en.pdf |
+| Produktový list       | https://resource.milesight.com/milesight/iot/document/ug63-datasheet-en.pdf |
 
 ---
 
@@ -35,43 +35,43 @@ Milesight UG63 je **kompaktní brána LoRaWAN®** určená pro **menší nasazen
 | Typ         | Hodnota                                 |
 |-------------|-----------------------------------------|
 | Wi-Fi       | Připojte se k SSID uvedenému na štítku zařízení |
-| Přístupová URL | http://192.168.1.1                   |
+| Adresa pro přístup | http://192.168.1.1               |
 | Přihlášení  | admin / password                        |
 
 ---
 
 ## Konfigurace sítě {#network-configuration}
 
-**Prvotní nastavení:**
-1. Zapněte bránu přes **USB-C**
-2. Připojte se k **Wi-Fi síti** brány (SSID je uvedeno na štítku zařízení)
+**Úvodní nastavení:**
+1. Připojte bránu k napájení přes **USB-C**
+2. Připojte se k **síti Wi-Fi** brány (SSID je uvedené na štítku zařízení)
 3. Otevřete webový prohlížeč a přejděte na **http://192.168.1.1**
 4. Přihlaste se údaji: **admin** / **password**
 
 **Nastavení sítě:**
 1. Přejděte na **WAN** → **Connection Type**
 2. Zvolte jednu z možností:
-   - **DHCP Client**: Brána automaticky získá IP adresu z vašeho routeru
+   - **DHCP Client**: Brána automaticky získá IP adresu z routeru
    - **Static IP**: IP adresu nastavíte ručně
-3. Připojte bránu do vaší **LAN sítě** Ethernet kabelem
-4. Při použití DHCP najdete přidělenou IP adresu v **Status** → **Ethernet**
+3. Připojte bránu ethernetovým kabelem do **místní sítě (LAN)**
+4. Pokud používáte DHCP, přidělenou IP adresu najdete v **Status** → **Ethernet**
 
 **Závěrečné kroky:**
 - Po konfiguraci z bezpečnostních důvodů **vypněte Wi-Fi**:
   - Přejděte na **Settings** → **WLAN** → **Enable** = **false**
-- Připojte se k bráně znovu pomocí přidělené IP adresy
+- Znovu se k bráně připojte přes přidělenou IP adresu
 
 ---
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serverů najdete zde: 👉[**LoRaWAN Network Options**](/smart-devices/milesight/gateways/index#lorawan-network-options)
+Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/gateways/index#lorawan-network-options).
 
 ---
 
 ## Přeposílání paketů {#packet-forwarding}
 
-Zvolte jednu z následujících možností podle vaší konfigurace:
+Podle svého nasazení zvolte jednu z těchto možností:
 
 ### Možnost 1: Embedded NS (samostatný provoz) {#option-1-embedded-ns-standalone}
 **Vhodné pro:** uživatele bez externího aplikačního serveru
@@ -81,21 +81,21 @@ Zvolte jednu z následujících možností podle vaší konfigurace:
 | Enable  | True  |
 | Type    | Embedded NS |
 
-Tento vestavěný network server umožňuje spravovat senzory přímo z webového rozhraní brány.
+Ve vestavěném síťovém serveru spravujete senzory přímo z webového rozhraní brány.
 
-### Možnost 2: Chirpstack v4 (lokální server) {#option-2-chirpstack-v4-local-server}
-**Vhodné pro:** uživatele s lokální instalací Chirpstack
+### Možnost 2: ChirpStack v4 (lokální server) {#option-2-chirpstack-v4-local-server}
+**Vhodné pro:** uživatele s lokální instalací ChirpStack
 
 | Nastavení    | Hodnota |
 |--------------|-------|
 | Enable       | True  |
 | Type         | Chirpstack-v4 |
-| Server address | IP adresa vašeho Chirpstack serveru (např. 10.0.0.52) |
+| Server address | IP adresa serveru ChirpStack (např. 10.0.0.52) |
 | MQTT port    | 1883  |
 | Region ID    | eu868 |
 
 ### Možnost 3: The Things Stack (cloud) {#option-3-the-things-stack-cloud}
-**Vhodné pro:** uživatele cloudové IoT platformy
+**Vhodné pro:** uživatele cloudových platforem IoT
 
 | Nastavení    | Hodnota |
 |--------------|-------|
@@ -112,7 +112,7 @@ Tento vestavěný network server umožňuje spravovat senzory přímo z webovéh
 
 **Co to je?**
 - **LNS** (LoRaWAN Network Server): Řídí komunikaci mezi bránou a senzory
-- **CUPS** (Configuration and Update Server): Automaticky konfiguruje a aktualizuje vaši bránu
+- **CUPS** (Configuration and Update Server): Automaticky konfiguruje a aktualizuje bránu
 
 **Postup nastavení:**
 
@@ -123,15 +123,15 @@ Tento vestavěný network server umožňuje spravovat senzory přímo z webovéh
 | Nastavení | Hodnota |
 |---------|-------|
 | URI     | `wss://hardwario-com.eu1.cloud.thethings.industries:8887` |
-| CA File | Stáhněte z [TTI root certificates](https://www.thethingsindustries.com/docs/concepts/advanced/root-certificates/), přejmenujte `.pem` na `.trust` |
-| Client Key File | Nahrajte soubor `tc.key` z vašeho účtu The Things Stack |
+| CA File | Stáhněte ze stránky [TTI root certificates](https://www.thethingsindustries.com/docs/concepts/advanced/root-certificates/) a příponu `.pem` změňte na `.trust` |
+| Client Key File | Nahrajte soubor `tc.key` ze svého účtu v The Things Stack |
 
 **Konfigurace CUPS:**
 | Nastavení | Hodnota |
 |---------|-------|
 | URI     | `https://hardwario-com.eu1.cloud.thethings.industries:443` |
-| CA File | Stejný jako výše |
-| Client Key File | Nahrajte soubor `cups.key` z vašeho účtu The Things Stack |
+| CA File | Stejný soubor jako výše |
+| Client Key File | Nahrajte soubor `cups.key` ze svého účtu v The Things Stack |
 ---
 
 ## Napájení {#power-supply}
@@ -172,7 +172,7 @@ Tento vestavěný network server umožňuje spravovat senzory přímo z webovéh
 | Spotřeba | 1,3 W typ., 3,1 W max |
 | **Fyzické vlastnosti** | |
 | Rozměry | Ø115 × 21 mm (bez antény) |
-| Hmotnost | 140 g (bez mobilní sítě), 158 g (s mobilní sítí) |
+| Hmotnost | 140 g (bez mobilního modulu), 158 g (s mobilním modulem) |
 | Materiál krytu | PC+ABS, bílá |
 | Krytí | IP30 |
 | Instalace | Na stůl / na stěnu / na strop |

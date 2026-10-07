@@ -1,11 +1,11 @@
 ---
-title: Instalace ChirpStack MQTT Forwarderu
+title: Instalace ChirpStack MQTT Forwarder
 ---
 
-# Instalace ChirpStack MQTT Forwarderu {#install-chirpstack-mqtt-forwarder}
+# Instalace ChirpStack MQTT Forwarder {#install-chirpstack-mqtt-forwarder}
 
-V této části se nainstaluje **ChirpStack MQTT Forwarder**, který propojuje Concentratord s
-MQTT brokerem. Vyžaduje již běžící Concentratord (viz výše).
+V této části nainstalujete **ChirpStack MQTT Forwarder**, který propojuje Concentratord s brokerem
+MQTT. Concentratord už musí běžet (viz předchozí krok).
 
 1. Nainstalujte balíček **ChirpStack MQTT Forwarder**:
 
@@ -13,7 +13,7 @@ MQTT brokerem. Vyžaduje již běžící Concentratord (viz výše).
    sudo apt install chirpstack-mqtt-forwarder
    ```
 
-1. Vytvořte konfigurační soubor **MQTT Forwarderu**:
+1. Vytvořte konfigurační soubor služby **MQTT Forwarder**:
 
    ```sh
    cat << EOF | sudo tee /etc/chirpstack-mqtt-forwarder/chirpstack-mqtt-forwarder.toml > /dev/null
@@ -45,7 +45,7 @@ MQTT brokerem. Vyžaduje již běžící Concentratord (viz výše).
    sudo systemctl enable --now chirpstack-mqtt-forwarder
    ```
 
-1. Zkontrolujte logy služby a ověřte úspěšné spuštění:
+1. V logu služby ověřte, že se úspěšně spustila:
 
    ```sh
    sudo journalctl -fu chirpstack-mqtt-forwarder

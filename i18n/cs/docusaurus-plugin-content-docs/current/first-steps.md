@@ -1,16 +1,16 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
-description: "Rychlý start pro CHESTER: rozbalte zařízení, vložte SIM a baterii, připojte se aplikací HARDWARIO Manager a odešlete první data do cloudu."
+description: "Rychlý start se zařízením CHESTER: rozbalte ho, vložte SIM a baterii, připojte se aplikací HARDWARIO Manager a odešlete první data do cloudu."
 title_meta: "Rychlý průvodce (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Rychlý průvodce pro CHESTER {#chester-quick-start-guide}
+# Rychlý průvodce zařízením CHESTER {#chester-quick-start-guide}
 
 Děkujeme, že jste si vybrali zařízení CHESTER.
 
-Následujícími kroky ho nastavíte a začnete si zobrazovat živá data v HARDWARIO Cloud.
+Podle následujících kroků zařízení nastavíte a jeho data uvidíte v reálném čase v HARDWARIO Cloud.
 
 Podrobnější informace najdete také v [**manuálu CHESTER (EN/CZ)**](https://drive.google.com/drive/folders/1pFwF87Mc1c_9w0otSzTuk2yR6CwalqVB?usp=drive_link), který si můžete stáhnout ve formátu PDF.
 
@@ -54,7 +54,7 @@ Při vytváření prostoru se prosím řiďte našimi [**konvencemi pojmenován�
    Funkcí **`⛶ SCAN DEVICE`** v HARDWARIO Cloud **naskenujte QR kód** na zařízení CHESTER. Všechny **údaje** se pak **vyplní automaticky**.  
 
    **Možnost 2: ručně**  
-   Zařízení můžete přidat ručně vyplněním následujících polí:  
+   Zařízení přidáte ručně vyplněním těchto polí:  
    - **Name**  
    - **HARDWARIO Serial Number (HSN)**  
    - **Claim Token**
@@ -82,48 +82,48 @@ Nebo se podívejte na náš **videonávod**, jak přidat zařízení CHESTER do 
 ## Krok 4: Zapněte zařízení CHESTER {#step-4-power-up-your-chester}
 
 :::caution
-> **Důležité:** Přidejte zařízení do cloudu **před jeho zapnutím.**  
-> Jinak může připojení trvat delší dobu (až několik hodin).
+> **Důležité:** Zařízení přidejte do cloudu **dřív, než ho zapnete.**  
+> Jinak může připojení trvat déle (až několik hodin).
 :::
 
 - Vložte baterie nebo připojte externí zdroj napájení  
-- Vyčkejte několik minut, než se zařízení připojí k HARDWARIO Cloud. Po úspěšném připojení bude zařízení **blikat zelenou LED**  
-  *(Chování LED je vysvětleno níže v [Kroku 5: Zkontrolujte stavovou LED](#step-5-check-the-status-led))*  
-- Pokud používáte starší model **CHESTER-M** se superkondenzátory, vyčkejte po vložení baterií asi **30 sekund**, protože kondenzátory se musí nabít, než začne LED blikat.  
-- Pokud se zařízení nepřipojí, vyzkoušejte jednu z těchto rychlých akcí:
+- Počkejte několik minut, než se zařízení připojí k HARDWARIO Cloud. Po úspěšném připojení **blikne zelená LED**  
+  *(Chování LED vysvětluje níže [Krok 5: Zkontrolujte stavovou LED](#step-5-check-the-status-led))*  
+- U staršího modelu **CHESTER-M** se superkondenzátory počkejte po vložení baterií asi **30 sekund**: kondenzátory se musí nabít, než LED začne blikat.  
+- Pokud se zařízení nepřipojí, zkuste jeden z těchto rychlých kroků:
 
-   🔹 **Stiskněte tlačítko čtyřikrát** → restartuje zařízení  
+   🔹 **Stiskněte tlačítko čtyřikrát** → zařízení se restartuje  
    🔹 **Vyjměte a znovu vložte baterie**  
-   🔹 Pro **CHESTER-M** (s modrými superkondenzátory):  
-     - Držte tlačítko nebo ho stiskněte **pětkrát**, dokud se nerozsvítí **bílá LED**. Tím se kondenzátory vybijí (trvá ≈ 30 s)
+   🔹 U modelu **CHESTER-M** (s modrými superkondenzátory):  
+     - Podržte tlačítko nebo ho stiskněte **pětkrát**, dokud se nerozsvítí **bílá LED**. Tím se kondenzátory vybijí (trvá to ≈ 30 s)
 
 ---
 
 ### Režim sítě a řešení problémů s připojením {#network-mode--connectivity-troubleshooting}
 
-Pokud má zařízení stále problém s připojením k síti (zejména při použití vlastní SIM karty nebo roamingu):
+Pokud se zařízení stále nedaří připojit k síti (hlavně s vlastní SIM kartou nebo v roamingu):
 
-* **Zkontrolujte režim sítě:** Podle regionu může být potřeba vynutit konkrétní režim, například **NB-IoT** nebo **LTE-M**. Podrobnosti viz [**průvodce nastavením SIM karty**](/chester/platform-connectivity/cellular-networks/sim-card-setup).
+* **Zkontrolujte režim sítě:** Podle regionu může být potřeba vynutit konkrétní režim, například **NB-IoT** nebo **LTE-M**. Podrobnosti najdete v [**průvodci nastavením SIM karty**](/chester/platform-connectivity/cellular-networks/sim-card-setup).
 * **Zkontrolujte APN/PLMN:** Pokud jste mimo Českou republiku nebo používáte SIM jiného operátora než Vodafone, nastavte správně PLMN a APN podle [**průvodce nastavením SIM karty**](/chester/platform-connectivity/cellular-networks/sim-card-setup), případně se podívejte do přehledu [**konfiguračních parametrů**](/chester/platform-connectivity/cellular-networks/configuration-parameters).
-* **Veřejná IP pro Cloud v2:** Při použití vlastní SIM karty musíte také nastavit [**správné parametry IP a portu**](/chester/firmware-sdk/how-to-lte-v2#ip-and-port) pro kompatibilitu s Cloud v2.
+* **Veřejná IP pro Cloud v2:** S vlastní SIM kartou musíte kvůli kompatibilitě s Cloud v2 nastavit také [**správné parametry IP a portu**](/chester/firmware-sdk/how-to-lte-v2#ip-and-port).
 
 ---
 
 
 ## Krok 5: Zkontrolujte stavovou LED {#step-5-check-the-status-led}
 
-- **Blikání zelenou každých 5 sekund** → připojeno k HARDWARIO Cloud ✅  
+- **Zelené bliknutí každých 5 sekund** → připojeno k HARDWARIO Cloud ✅  
 - **Žádné blikání /** [**jiné barvy**](/chester/catalog-applications/common-functionality/#led-behaviour) → stále se připojuje nebo došlo k chybě. Zkontrolujte SIM, pokrytí sítě nebo napájení  
 
 :::info
-Podrobnosti o všech barevných stavech LED a jejich významu najdete v [**dokumentaci chování LED**](/chester/catalog-applications/common-functionality/#led-behaviour).
+Podrobnosti o všech barevných stavech LED a jejich významu najdete v [**dokumentaci k chování LED**](/chester/catalog-applications/common-functionality/#led-behaviour).
 :::
 
 ## Krok 6: Podívejte se na data v cloudu {#step-6-see-your-data-in-the-cloud}
 
 1. V [**HARDWARIO Cloud**](https://hardwario.cloud) otevřete **DEVICES**  
 2. Klikněte na **ikonu chatu** u svého zařízení  
-3. Uvidíte **zprávy a živá data** odesílaná ze zařízení CHESTER 🎉  
+3. Uvidíte **zprávy a data v reálném čase** ze zařízení CHESTER 🎉  
 
 ---
 
@@ -134,7 +134,7 @@ Po připojení můžete:
 - Použít [**HARDWARIO Manager**](/chester/platform-connectivity/hardwario-manager) (mobilní aplikace přes BLE)
 - Použít [**HARDWARIO Monitor**](/chester/platform-connectivity/hardwario-monitor) (J-Link nebo BLE z počítače)
 - Použít [**HARDWARIO Terminal**](/chester/platform-connectivity/hardwario-terminal) (prohlížeč Google Chrome přes WebSerial/WebBluetooth)
-- Přistupovat ke [**vzdálenému shellu**](/cloud/downlink/shell) a provádět i [**bezdrátové aktualizace firmwaru**](/cloud/firmware)
+- Používat [**vzdálený shell**](/cloud/downlink/shell) a dokonce [**bezdrátově aktualizovat firmware**](/cloud/firmware)
 
 ---
 
@@ -171,7 +171,7 @@ Nejnovější sestavení firmwaru najdete vždy zde:
 👉 [**Dostupná sestavení aplikačního firmwaru**](/chester/catalog-applications/catalog-applications#application-firmware)
 
 :::info
- Tabulka firmwaru je řazená podle typu zařízení CHESTER, proto vyberte správný typ pro své zařízení.
+ Tabulka firmwaru je členěná podle typu zařízení CHESTER, vyberte proto ten, který odpovídá vašemu zařízení.
 :::
 
 ### Aktualizace firmwaru {#update-firmware}
@@ -183,28 +183,28 @@ Pokud je dostupná novější verze, můžete firmware aktualizovat jedním z t�
 
 2. **Aktualizace firmwaru z cloudu (FOTA)**
    - Zařízení CHESTER můžete aktualizovat i **na dálku** přes cloud.
-   - Kompletní technické podrobnosti najdete v tomto návodu: 👉 [**dokumentace k aktualizaci firmwaru**](/cloud/firmware/)
+   - Všechny technické podrobnosti najdete zde: 👉 [**dokumentace k aktualizaci firmwaru**](/cloud/firmware/)
 
 3. **Ruční aktualizace přes J-Link**
-   - Pokud dáváte přednost ručnímu nahrání firmwaru, podívejte se na tento návod: 👉 [**Aktualizace aplikace přes J-Link**](/chester/firmware-flashing/application-over-j-link)
+   - Pokud chcete firmware nahrát ručně, postupujte podle tohoto návodu: 👉 [**Aktualizace aplikace přes J-Link**](/chester/firmware-flashing/application-over-j-link)
 
 ---
 
-✅ **A to je vše!**  
-Vaše zařízení CHESTER je nyní připojené, nakonfigurované a aktuální, připravené sbírat a odesílat data do cloudu.
+✅ **Hotovo.**  
+Zařízení CHESTER je připojené, nakonfigurované a aktuální a může sbírat data a odesílat je do cloudu.
 
 ---
 
 ## Krok 9: Prozkoumejte aplikace a integrace {#step-9-explore-applications-and-integrations}
 
-Vaše zařízení CHESTER umí mnohem víc než jen odesílat data!  
-Jeho funkce můžete rozšířit pomocí [**HARDWARIO Applications**](/apps/), hotových modulů a nástrojů, které vám pomohou:
+Zařízení CHESTER umí mnohem víc než jen odesílat data.  
+Jeho funkce rozšíříte pomocí [**HARDWARIO Applications**](/apps/), tedy hotových modulů a nástrojů, se kterými můžete:
 
 - 📊 **Vizualizovat data** pomocí dashboardů a grafů  
-- 🌐 **Integrovat zařízení CHESTER** do existujících **sítí LoRaWAN** nebo jiných IoT systémů  
-- ⚙️ **Vytvářet automatizace a analytiku** pro váš konkrétní případ použití  
+- 🌐 **Integrovat zařízení CHESTER** do existujících **sítí LoRaWAN** nebo jiných systémů IoT  
+- ⚙️ **Vytvářet automatizace a analytiku** pro své konkrétní využití  
 
-Všechny aplikace se snadno nasazují a dokážou vaše zařízení CHESTER přeměnit v kompletní IoT řešení.
+Všechny aplikace se snadno nasazují a ze zařízení CHESTER udělají kompletní řešení IoT.
 
 :::info
 👉 Více informací a dostupné aplikace najdete zde:  

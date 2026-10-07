@@ -6,18 +6,18 @@ import Image from '@theme/IdealImage';
 
 # Krabičky {#enclosures}
 
-Standardní krabička pro CHESTER se dodává ve dvou barvách: světle šedé a tmavě šedé. Krabička má rozměry 130x175x45 mm a krytí IP67.
+Standardní krabička zařízení CHESTER se dodává ve dvou barvách, světle šedé a tmavě šedé. Má rozměry 130x175x45 mm a krytí IP67.
 
 Namontovat ji lze pomocí:
 
 * Šroubů skrz montážní otvory
-* Speciálních držáků na stahovací pásky (možné i na sloup)
+* Speciálních držáků na stahovací pásky (lze i na sloup)
 * Lepicí pásky
 * Dvoustranné samolepky (např. 3M Dual-Lock)
 
 :::tip
 
-Zařízení CHESTER můžete umístit i do alternativní krabičky. HARDWARIO vyrábí nosné desky pro větší krabičky, které umožňují použít větší bateriové packy a další elektrická rozhraní. Viz článek [**Správa napájení**](../power-management.md).
+Zařízení CHESTER můžete umístit i do jiné krabičky. Pro větší krabičky HARDWARIO vyrábí nosné desky, na které se vejdou větší bateriové packy a další elektrická rozhraní. Podrobnosti najdete v článku [**Správa napájení**](../power-management.md).
 
 :::
 
@@ -51,7 +51,7 @@ Vysvětlení přípon:
 
 - `-L` Krabička ve světlé barvě
 - `-D` Krabička v tmavé barvě
-- `-H` UV tištěné logo HARDWARIO
+- `-H` Logo HARDWARIO natištěné UV tiskem
 - `-P` Pigtail u.FL/SMA pro externí anténu
 
 ### CHESTER-E1-P {#chester-e1-p}
@@ -92,7 +92,7 @@ Vysvětlení `1`-`F` nebo `X` najdete v [objednacích kódech CHESTER-Z1](../ord
 ### CHESTER-E7-P {#chester-e7-p}
 
 ![Kótovaný výkres spodní části CHESTER-E7-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e7-p-hwe023-bottom-base.png)
-![Kótovaný výkres horního krytu CHESTER-E7-P se čtyřmi otvory pro senzory a odvětrání na osové linii](../../../../../chester/hardware-description/images/chester-e7-p-hwe023-top-cover-1.png)
+![Kótovaný výkres horního krytu CHESTER-E7-P se čtyřmi otvory pro senzory a odvětrání na středové ose](../../../../../chester/hardware-description/images/chester-e7-p-hwe023-top-cover-1.png)
 ![Kótovaný výkres varianty horního krytu CHESTER-E7-P se třemi otvory pro senzory a odvětrávacím otvorem](../../../../../chester/hardware-description/images/chester-e7-p-hwe023-top-cover-2.png)
 
 ### CHESTER-E8-P {#chester-e8-p}

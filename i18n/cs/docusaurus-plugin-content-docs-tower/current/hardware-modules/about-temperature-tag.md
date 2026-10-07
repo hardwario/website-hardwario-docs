@@ -1,17 +1,17 @@
 ---
 slug: about-temperature-tag
-title: O modulu Temperature Tag
+title: O tagu Temperature Tag
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/temperature-tag.png')} alt="Temperature Tag, deska o velikosti monety s teplotním senzorem TMP112" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/temperature-tag.png')} alt="Temperature Tag, deska velikosti mince s teplotním senzorem TMP112" /></div>
     </div>
     <div class="col col--6">
       <p>
-        Modul <b>Temperature Tag</b> využívá vysoce přesný teplotní senzor <b>TMP112</b> s typickou přesností <b>±0,1 °C při 25 °C</b>. Tento senzor je digitální a kalibrovaný. Komunikuje po <b>sběrnici I²C</b> a vyznačuje se velmi nízkou spotřebou a režimem vypnutí.
+        <b>Temperature Tag</b> používá vysoce přesný teplotní senzor <b>TMP112</b> s typickou přesností <b>±0,1 °C při 25 °C</b>. Senzor je digitální a kalibrovaný, komunikuje po <b>sběrnici I²C</b> a má velmi nízkou spotřebu a režim vypnutí.
       </p>
     </div>
   </div>
@@ -25,16 +25,16 @@ import Image from '@theme/IdealImage';
   - ±0,25 °C v rozsahu od 0 °C do 65 °C
 - ±0,5 °C v rozsahu od -40 °C do 125 °C
 - **12bitové rozlišení (0,0625 °C)**
-- Volitelný přerušovací výstup
+- Volitelný výstup přerušení
 - **Spotřeba:**
   - 7 µA aktivní proud (vzorkovací frekvence 4 Hz)
   - 0,5 µA proud v režimu vypnutí
-- Rozsah napájecího napětí: 1,4 V až 3,6 V
+- Rozsah provozního napětí: 1,4 V až 3,6 V
 - Rozsah provozních teplot: -40 až 125 °C
 - Mechanické rozměry: 16 x 16 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/temperature-tag)
+- [**E-shop**](https://www.hardwario.store/p/temperature-tag)
 - [**Schéma**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-tag-temperature)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__tag__temperature)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_tag_temperature.h)

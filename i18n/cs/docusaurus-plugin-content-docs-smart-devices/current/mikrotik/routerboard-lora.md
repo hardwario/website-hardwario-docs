@@ -1,14 +1,14 @@
 ---
 slug: routerboard-lora
 title: "RouterBOARD LoRa"
-description: LoRaWAN brána na platformě MikroTik RouterBOARD s integrovaným LoRa koncentrátorem a systémem RouterOS.
+description: Brána LoRaWAN na platformě MikroTik RouterBOARD s vestavěným koncentrátorem LoRa a systémem RouterOS.
 ---
 
 # MikroTik RouterBOARD LoRa {#mikrotik-routerboard-lora}
 
 ![MikroTik RouterBOARD LoRa](/img/smart-devices/mikrotik-routerboard-lora.webp)
 
-**MikroTik RouterBOARD LoRa** je kompaktní LoRaWAN brána, která kombinuje síťovou platformu RouterOS od MikroTik s integrovanou kartou LoRa koncentrátoru. Podporuje 8kanálový příjem LoRaWAN a standardní software Semtech packet forwarder.
+**MikroTik RouterBOARD LoRa** je kompaktní brána LoRaWAN, která spojuje síťovou platformu RouterOS od společnosti MikroTik s vestavěnou kartou koncentrátoru LoRa. Přijímá LoRaWAN na 8 kanálech a podporuje standardní software Semtech packet forwarder.
 
 ## Klíčové parametry {#key-specifications}
 
@@ -19,21 +19,21 @@ description: LoRaWAN brána na platformě MikroTik RouterBOARD s integrovaným L
 | Síťový software | RouterOS (MikroTik), Semtech UDP Packet Forwarder |
 | Rozhraní LAN | 1× Gigabit Ethernet |
 | Napájení | PoE (802.3af) nebo DC |
-| Montáž | Kompaktní na stůl / na DIN lištu |
+| Montáž | Kompaktní, na stůl nebo na lištu DIN |
 | Protokoly | UDP Packet Forwarder, Basics Station |
 
 ## Integrace s HARDWARIO {#hardwario-integration}
 
-Brána RouterBOARD LoRa připojuje zařízení CHESTER a STICKER k LoRaWAN Network Serverům:
+Brána RouterBOARD LoRa připojuje zařízení CHESTER a STICKER k síťovým serverům LoRaWAN:
 
-- **ChirpStack**: Nastavte bránu tak, aby přeposílala LoRaWAN pakety do vlastní instance [ChirpStack](/apps/chirpstack/index).
-- **The Things Stack**: Zaregistrujte bránu v [The Things Stack](/apps/the-things-stack/index) a využijte cloudově spravovaný LoRaWAN network server.
+- **ChirpStack**: Nastavte bránu tak, aby přeposílala pakety LoRaWAN do vlastní instance [ChirpStack](/apps/chirpstack/index).
+- **The Things Stack**: Zaregistrujte bránu v [The Things Stack](/apps/the-things-stack/index) a využijte síťový server LoRaWAN spravovaný v cloudu.
 - **Privátní síť LoRaWAN**: Nasaďte lokální síť LoRaWAN pro jednu budovu nebo areál.
 
 ## Zdroje {#resources}
 
-- [Oficiální web MikroTik](https://mikrotik.com/)
-- [Produkty MikroTik v HARDWARIO Store](https://www.hardwario.store/cz/smart-devices)
+- [Oficiální web společnosti MikroTik](https://mikrotik.com/)
+- [Produkty MikroTik v e-shopu HARDWARIO Store](https://www.hardwario.store/cz/smart-devices)
 - [Integrace ChirpStack](/apps/chirpstack/index)
 - [Integrace The Things Stack](/apps/the-things-stack/index)
 - [Dokumentace CHESTER](/chester/)

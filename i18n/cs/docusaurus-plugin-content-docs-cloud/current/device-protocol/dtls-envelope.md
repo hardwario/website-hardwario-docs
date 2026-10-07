@@ -6,7 +6,7 @@ description: "Obálka DTLS protokolu FLAP: DTLS 1.2 s předsdíleným klíčem, 
 
 # Obálka DTLS protokolu FLAP {#flap-dtls-envelope}
 
-V obálce DTLS (nastavení zařízení `flap-dtls`) putují [**pakety FLAP**](transfers.md#flap-packet) uvnitř relace **DTLS 1.2** (RFC 6347) ověřené **předsdíleným klíčem** (PSK). PSK ověřuje zařízení a opravňuje ho vystupovat jako zařízení registrované v HARDWARIO Cloud. DTLS pakety šifruje a chrání jejich integritu i proti opakování.
+V obálce DTLS (nastavení zařízení `flap-dtls`) putují [**pakety FLAP**](transfers.md#flap-packet) uvnitř relace **DTLS 1.2** (RFC 6347) ověřené **předsdíleným klíčem** (PSK). PSK ověřuje zařízení a opravňuje ho vystupovat jako zařízení zaregistrované v HARDWARIO Cloud. DTLS pakety šifruje a chrání jejich integritu i proti opakování.
 
 Dešifrovaný záznam DTLS obsahuje **jen paket FLAP**. Tag MAC ani sériové číslo v něm nejsou: zařízení se ověří a identifikuje svou identitou PSK při navázání relace DTLS.
 

@@ -71,11 +71,11 @@ _\** Appropriate for solar panel application, charging temperature range -20 to 
 
 :::caution
 
-For initial start powering from the battery without DC input power supply** it is necessary to long pres the Bypass button (BYPASS)**.
+For the initial start powered from the battery without a DC input power supply, it is necessary to **long press the Bypass button (BYPASS)**.
 
 :::
 
-Due to low charging current (100 mA) The charging temperature range is extended from -20 to +45°C. Optimal Li-Ion battery type for low temperature outdoor application is Samsung ICR18650-22P.
+Due to the low charging current (100 mA), the charging temperature range is extended to -20 to +45°C. Optimal Li-Ion battery type for low temperature outdoor application is Samsung ICR18650-22P.
 
 ## Module Drawing
 

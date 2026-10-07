@@ -6,31 +6,31 @@ import Image from '@theme/IdealImage';
 
 # Požadavky {#requirements}
 
-Tento **článek** definuje požadavky, pokud chcete začít s vývojem s CHESTER SDK.
+Tento **článek** shrnuje, co potřebujete, pokud chcete začít vyvíjet s CHESTER SDK.
 
 ## Hardwarové vybavení {#hardware-setup}
 
 * Vývojová deska CHESTER DevKit
 
-  * Může poskytnout HARDWARIO
+  * Může dodat HARDWARIO
 
 * USB programátor/debugger SEGGER J-Link Compact Plus + Cortex-M Adapter
 
-  * Může poskytnout HARDWARIO
+  * Může dodat HARDWARIO
 
-* USB zdroj napájení Power Profiler Kit 2 (PPK2)
+* Napájecí zdroj USB Power Profiler Kit 2 (PPK2)
 
-  * Může poskytnout HARDWARIO
+  * Může dodat HARDWARIO
 
-* Dva Micro-USB kabely pro J-Link a PPK2
+* Dva kabely Micro-USB pro J-Link a PPK2
 
-  * Může poskytnout HARDWARIO
+  * Může dodat HARDWARIO
 
 * Jeden z těchto operačních systémů:
 
   :::caution
 
-  Přestože jsou všechny operační systémy podporovány a fungují stejným způsobem, zaznamenali jsme extrémně dlouhé časy sestavení na platformě Windows. Pro seriózní vývoj doporučujeme pořídit PC s Ubuntu nebo macOS. Případně dosáhnete lepších výsledků ve virtualizovaném prostředí (např. [VirtualBox](https://www.virtualbox.org/)).
+  Všechny operační systémy jsou podporované a fungují stejně, na platformě Windows je ale sestavení extrémně pomalé. Pro seriózní vývoj proto doporučujeme počítač s Ubuntu nebo macOS. Lepších výsledků dosáhnete i ve virtualizovaném prostředí (např. [VirtualBox](https://www.virtualbox.org/)).
 
   :::
 
@@ -40,27 +40,27 @@ Tento **článek** definuje požadavky, pokud chcete začít s vývojem s CHESTE
 
 ## Přístup na GitHub {#github-access}
 
-Nejnovější SDK sdílíme na GitHubu v repozitáři [chester-sdk](https://github.com/hardwario/chester-sdk). Vytvořte si prosím účet na GitHubu a pokračujte podle další kapitoly, jak přidat SSH klíč.
+Nejnovější SDK sdílíme na GitHubu v repozitáři [chester-sdk](https://github.com/hardwario/chester-sdk). Založte si účet na GitHubu a podle další kapitoly k němu přidejte klíč SSH.
 
-## Vygenerování SSH klíče {#generate-ssh-key}
+## Vygenerování klíče SSH {#generate-ssh-key}
 
-Pokud jste svůj veřejný/soukromý SSH klíč ještě nevygenerovali, můžete tak učinit tímto příkazem:
+Pokud ještě nemáte vygenerovaný pár klíčů SSH (veřejný a soukromý), vytvořte ho tímto příkazem:
 
 ```
 ssh-keygen
 ```
 
-Ten vám pomůže vygenerovat klíče ve vaší domovské složce. Ve složce `.ssh` ve svém domovském adresáři byste měli mít soubory `id_rsa` (soukromý klíč) a `id_rsa.pub` (veřejný klíč).
+Příkaz vygeneruje klíče do domovské složky: ve složce `.ssh` v domovském adresáři pak najdete soubory `id_rsa` (soukromý klíč) a `id_rsa.pub` (veřejný klíč).
 
 :::warning
 
-Musíte se ujistit, že se soukromý klíč nedostane k nikomu jinému. Ověřte oprávnění souboru s klíčem.
+Soukromý klíč se nesmí dostat k nikomu jinému. Zkontrolujte oprávnění souboru s klíčem.
 
 :::
 
-## Nahrání SSH klíče {#upload-ssh-key}
+## Nahrání klíče SSH {#upload-ssh-key}
 
-Váš veřejný SSH klíč musí být nahrán do vašeho účtu na **GitHubu**. Přihlaste se na **GitHub** a otevřete **Settings** (v pravém horním rohu). Poté klikněte na **SSH Keys and PGP keys**, klikněte na **New SSH key**, vložte obsah svého veřejného klíče do textového pole, pojmenujte jej a klikněte na **Add SSH key**.
+Veřejný klíč SSH nahrajte do svého účtu na **GitHubu**. Přihlaste se na **GitHub** a otevřete **Settings** (v pravém horním rohu). Poté klikněte na **SSH Keys and PGP keys**, klikněte na **New SSH key**, vložte obsah svého veřejného klíče do textového pole, pojmenujte jej a klikněte na **Add SSH key**.
 
 Připojení můžete otestovat tímto příkazem:
 
@@ -68,7 +68,7 @@ Připojení můžete otestovat tímto příkazem:
 ssh -T git@github.com
 ```
 
-Měl by vypsat něco takového:
+Výstup by měl vypadat zhruba takto:
 
 ```
 Hi <YOUR_NICK_NAME>! You've successfully authenticated, but GitHub does not provide shell access.

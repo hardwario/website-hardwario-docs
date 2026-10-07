@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
 ## Quick Links
 
 * [**Getting Started Guide**](/sticker/first-steps): Step-by-step setup guide.
-* [**Buy STICKER Motion**](https://www.hardwario.store/p/sticker-motion): Purchase on our store.
+* [**Buy STICKER Motion**](https://www.hardwario.store/p/sticker-motion): Purchase from our store.
 * [**Ordering Codes**](/sticker/ordering-codes): List of components and part numbers.
 * [**Hardware Description**](/sticker/hardware-description): Technical details and hardware overview.
 * [**Official Product Page**](https://www.hardwario.com/products/sticker/): Features and overview.
@@ -27,7 +27,7 @@ import Image from '@theme/IdealImage';
 - In retail, knowing where customers move, and how often, transforms store layout planning and boosts sales. With STICKER Motion, you can track aisle traffic and identify high-traffic areas to optimize product placement and enhance the shopping experience.
 
 #### Smarter comfort in busy spaces
-- The average person emits about 100 W of heat per hour. In places with high foot traffic, like waiting rooms, monitoring motion, temperature, and humidity helps maintain comfort and efficiency. STICKER Motion captures all three for smarter climate control.
+- The average person gives off about 100 W of heat. In places with high foot traffic, like waiting rooms, monitoring motion, temperature, and humidity helps maintain comfort and efficiency. STICKER Motion captures all three for smarter climate control.
 
 ## Example JSON Message
 

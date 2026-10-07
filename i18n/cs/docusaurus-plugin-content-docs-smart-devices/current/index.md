@@ -1,12 +1,12 @@
 ---
 slug: /
 title: Chytrá zařízení
-description: "Přehled zařízení a hardwaru třetích stran dostupných v ekosystému HARDWARIO a v HARDWARIO Store."
+description: "Přehled zařízení a hardwaru třetích stran dostupných v ekosystému HARDWARIO a v e-shopu HARDWARIO Store."
 ---
 
 # Chytrá zařízení {#smart-devices}
 
-Přehled zařízení a hardwaru třetích stran dostupných v ekosystému HARDWARIO a v [HARDWARIO Store](https://www.hardwario.store/cz/smart-devices).
+Přehled zařízení a hardwaru třetích stran dostupných v ekosystému HARDWARIO a v e-shopu [HARDWARIO Store](https://www.hardwario.store/cz/smart-devices).
 
 | Značka | Kategorie | Hlavní produkty |
 |---|---|---|

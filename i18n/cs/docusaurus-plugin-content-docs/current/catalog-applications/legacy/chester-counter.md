@@ -8,45 +8,45 @@ import Image from '@theme/IdealImage';
 
 :::warning
 
-CHESTER Counter je nahrazen aplikací [**CHESTER Control**](/chester/catalog-applications/chester-control), která nabízí stejnou funkcionalitu.
+Aplikaci CHESTER Counter nahradila aplikace [**CHESTER Control**](/chester/catalog-applications/chester-control) se stejnými funkcemi.
 
 :::
 
-Tento článek popisuje základní funkcionalitu, hardware, výchozí konfiguraci a ukázkové zprávy **JSON** pro katalogovou aplikaci **CHESTER Counter**.
+Tento článek popisuje základní funkce katalogové aplikace **CHESTER Counter**, její hardware, výchozí konfiguraci a ukázkové zprávy **JSON**.
 
 :::caution
 
-Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
+Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
 
-- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](/chester/catalog-applications/common-functionality): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
+- [**Společné funkce**](/chester/catalog-applications/common-functionality): jak fungují LED, tlačítko a nastavení sítě.
+- [**Konektivita platformy**](/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
 
 ## Přehled aplikace {#application-overview}
 
-Aplikace **CHESTER Counter** se používá k počítání pulzů na osmi digitálních vstupech. Ty lze připojit k výstupu PLC/senzoru (NPN/PNP), tlačítku, přepínači, relé atd. Aplikace počítá celkový počet pulzů a také počet pulzů od posledního reportu (konfigurovatelné parametrem `interval-report`).
+Aplikace **CHESTER Counter** počítá impulzy na osmi digitálních vstupech. Vstupy lze připojit k výstupu PLC/senzoru (NPN/PNP), tlačítku, spínači, relé apod. Aplikace počítá celkový počet impulzů a také počet impulzů od posledního hlášení (interval hlášení nastavuje parametr `interval-report`).
 
 ## Varianty aplikace {#application-variants}
 
-**CHESTER Counter** lze objednat v jedné z těchto variant:
+Zařízení **CHESTER Counter** lze objednat v jedné z těchto variant:
 
 ### CHESTER Counter {#chester-counter}
 
-Katalogový hardware **CHESTER Counter** se skládá z těchto objednacích kódů:
+Hardware katalogové aplikace **CHESTER Counter** tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
 
 * `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
-Více podrobností najdete v [**Objednacích kódech**](/chester/ordering-codes).
+Podrobnosti najdete na stránce [**Objednací kódy**](/chester/ordering-codes).
 
-Volby shieldů pro build firmwaru: `ctr_lte ctr_x0_a`
+Shieldy pro sestavení firmwaru: `ctr_lte ctr_x0_a`
 
 ### CHESTER Counter Z {#chester-counter-z}
 
-Katalogový hardware **CHESTER Counter Z** se skládá z těchto objednacích kódů:
+Hardware katalogové aplikace **CHESTER Counter Z** tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-CGLS`: Standardní základní deska
 
@@ -54,25 +54,25 @@ Katalogový hardware **CHESTER Counter Z** se skládá z těchto objednacích k�
 
 * `CHESTER-Z1`: Záložní modul
 
-Více podrobností najdete v [**Objednacích kódech**](/chester/ordering-codes).
+Podrobnosti najdete na stránce [**Objednací kódy**](/chester/ordering-codes).
 
-Volby shieldů pro build firmwaru: `ctr_lte ctr_x0_a ctr_z`
+Shieldy pro sestavení firmwaru: `ctr_lte ctr_x0_a ctr_z`
 
-## Záloha {#backup}
+## Záložní napájení {#backup}
 
-**CHESTER Counter Z** (vybavený modulem **CHESTER-Z1**) může navíc reportovat informace o záložní baterii a stavu externího napájení DC.
+Zařízení **CHESTER Counter Z** (s modulem **CHESTER-Z1**) navíc hlásí stav záložní baterie a externího napájení DC.
 
-* Aktuální **napětí baterie** a **napětí externího DC** se posílají v každém reportu.
+* Aktuální **napětí baterie** a **napětí externího zdroje DC** se posílají v každém hlášení.
 
-* Když se změní stav vstupu napájení DC, uloží se časová značka události spolu se stavem **connected**/**disconnected**, tato informace se ukládá do bufferu a buffer událostí se odešle (nejpozději) s pravidelným reportem (parametr `interval-report`).
+* Při změně na napájecím vstupu DC se do bufferu uloží časová značka změny spolu se stavem **connected**/**disconnected** a buffer událostí se odešle nejpozději s pravidelným hlášením (parametr `interval-report`).
 
-* Volitelně lze změny vstupu napájení DC do stavu **connected** (parametr `backup-report-connected`) nebo **disconnected** (parametr `backup-report-disconnected`) reportovat **okamžitě** nebo s konfigurovatelným **zpožděním** (parametr `event-report-delay`), což umožňuje zachytit více po sobě jdoucích změn vstupu.
+* Změny napájecího vstupu DC do stavu **connected** (parametr `backup-report-connected`) nebo **disconnected** (parametr `backup-report-disconnected`) lze volitelně hlásit **okamžitě** nebo s nastavitelným **zpožděním** (parametr `event-report-delay`), aby se do hlášení vešlo i více změn krátce po sobě.
 
-* Maximální počet reportů za hodinu je konfigurovatelný (parametr `event-report-rate`). Omezení počtu událostí snižuje zatížení komunikačního pásma a prodlužuje životnost baterie.
+* Maximální počet hlášení za hodinu lze nastavit (parametr `event-report-rate`). Omezení počtu hlášení šetří komunikační pásmo a prodlužuje výdrž baterie.
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná příkazem `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config interval-sample 60
@@ -81,7 +81,7 @@ app config interval-report 1800
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je dostupný v [kapitole Firmware](/chester/catalog-applications/catalog-applications#application-firmware) katalogových aplikací.
+Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](/chester/catalog-applications/catalog-applications#application-firmware).
 
 ## Ukázková zpráva JSON {#example-json-message}
 
@@ -91,7 +91,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="lte" label="LTE">
     
-Tato ukázková zpráva byla odeslána zařízením **CHESTER** s modulem **X0** pouze ve slotu A. Zpráva byla odeslána kvůli události tamper.
+Ukázkovou zprávu odeslalo zařízení **CHESTER** s modulem **X0** jen ve slotu A, a to kvůli události tamper.
 
 ```json
 {

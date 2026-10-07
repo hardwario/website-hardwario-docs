@@ -6,9 +6,9 @@ import Image from '@theme/IdealImage';
 
 [**Pulzně šířková modulace (PWM)**](https://en.wikipedia.org/wiki/Pulse-width_modulation) je metoda, jak z digitálního výstupu mikrokontroléru vytvořit signál podobný analogovému. Dosahuje toho rychlým přepínáním pinu s různým poměrem logických úrovní **HIGH** a **LOW**. Tento poměr se nazývá **duty cycle** (střída).
 
-V **pinoutu modulu Core** si ověřte, které piny **podporují PWM**.
+V **pinoutu modulu Core Module** si ověřte, které piny **podporují PWM**.
 
-Jako PWM piny lze použít 9 pinů:
+Pro PWM lze použít 9 pinů:
 ```c showLineNumbers
   TWR_PWM_P0
   TWR_PWM_P1
@@ -22,18 +22,18 @@ Jako PWM piny lze použít 9 pinů:
 ```
 
 ## Odkazy {#references}
-- [**PWM SDK Module**](https://sdk.hardwario.com/group__twr__pwm.html)
-- Ukázka v repozitáři na GitHubu
+- [**Modul SDK pro PWM**](https://sdk.hardwario.com/group__twr__pwm.html)
+- Příklad v repozitáři na GitHubu
 
 ## Duty cycle {#duty-cycle}
 
-Duty cycle určuje, jak dlouho má být pin ve stavu HIGH; změnou tohoto čísla dosáhnete různých výstupů podobných analogovým.
+Duty cycle (střída) určuje, jak dlouho má být pin ve stavu HIGH. Změnou této hodnoty získáte různé výstupy podobné analogovým.
 
-Hodnoty jsou v rozsahu `0-255`, kde `0` znamená vždy **LOW** a `255` znamená vždy **HIGH**
+Hodnoty jsou v rozsahu `0-255`, kde `0` znamená trvale **LOW** a `255` trvale **HIGH**.
 
 :::info
 
-Toto je jen jednoduchý příklad, který zapne PWM signál na výstupech **P6, P7 a P8**.
+Jednoduchý příklad, který zapne signál PWM na výstupech **P6, P7 a P8**.
 Každý výstup má jiný **duty cycle**: 180, 210 a 255.
 
 :::

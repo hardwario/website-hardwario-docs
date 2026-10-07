@@ -1,18 +1,18 @@
 ---
 slug: how-to-spi-bus
-title: "Jak na: SPI Bus"
+title: "Jak na: Sběrnice SPI"
 ---
 import Image from '@theme/IdealImage';
 
 :::info
 
-Tato kapitola popisuje, jak používat SDK modul TOWER SPI. Pokud si chcete přečíst o sběrnici samotné, přejděte na [**kapitolu SPI Interface**](../../hardware-interfaces/spi-interface.md).
+Tato kapitola popisuje, jak používat modul SDK pro SPI. O samotné sběrnici se dočtete v [**kapitole Rozhraní SPI**](../../hardware-interfaces/spi-interface.md).
 
 :::
 
 ## Odkazy {#references}
-- [**SPI SDK Module**](https://sdk.hardwario.com/group__twr__spi.html)
-- GitHub Repository Example
+- [**Modul SDK pro SPI**](https://sdk.hardwario.com/group__twr__spi.html)
+- Příklad v repozitáři na GitHubu
 
 ## Rychlost SPI {#spi-speed}
 
@@ -20,7 +20,7 @@ Můžete vybírat z **několika komunikačních rychlostí**.
 
 :::info
 
-  Komunikační rychlost je omezena maximální rychlostí, kterou zvládne komunikovat podřízené zařízení, dále délkou vodičů, šumem, spotřebou proudu nebo limity elektromagnetického vyzařování.
+  Rychlost komunikace omezuje maximální rychlost podřízeného zařízení, délka vodičů, šum, odběr proudu nebo limity elektromagnetického vyzařování.
 
 :::
 
@@ -34,9 +34,9 @@ TWR_SPI_SPEED_16_MHZ
 
 ## Režim SPI {#spi-mode}
 
-Polarita hodin a fáze hodin určují, kdy jsou výstupní data platná. Tedy zda na nástupné, nebo na spádové hraně.
+Polarita a fáze hodinového signálu určují, kdy jsou výstupní data platná, tedy jestli na náběžné, nebo sestupné hraně.
 
-Tuto informaci najdete v datasheetu podřízeného zařízení.
+Tuto informaci najdete v dokumentaci (datasheetu) podřízeného zařízení.
 
 ```c showLineNumbers
 TWR_SPI_MODE_0 // SPI mode of operation is 0 (CPOL = 0, CPHA = 0)
@@ -52,14 +52,14 @@ TWR_SPI_MODE_3 // SPI mode of operation is 3 (CPOL = 1, CPHA = 1)
 
 Je potřeba vytvořit **vysílací** a **přijímací** buffer.
 
-Poté spustíte **blokující přenos** a musíte počkat na jeho dokončení.
+Pak spustíte **blokující přenos** a počkáte, až skončí.
 
 :::
 
 <details>
 <summary>
 <b>
-Příklad kódu synchronního přenosu SPI
+Příklad kódu: synchronní přenos SPI
 </b>
 </summary>
 <p>
@@ -76,7 +76,7 @@ Příklad kódu synchronního přenosu SPI
 
 :::note
 
-Pokud data pouze **vysíláte**, nahraďte `rx_buffer` hodnotou `NULL` a naopak pro pouhý **příjem**.
+Pokud data jen **vysíláte**, nahraďte `rx_buffer` hodnotou `NULL`; při pouhém **příjmu** naopak.
 
 Funkce vrací `false`, pokud předchozí asynchronní přenos ještě neskončil.
 
@@ -86,14 +86,14 @@ Funkce vrací `false`, pokud předchozí asynchronní přenos ještě neskončil
 ### Asynchronní přenos {#asynchronous-transfer}
 :::info
 
-Jde o **neblokující** přenos, kdy je po dokončení přenosu **vyvolána callback funkce**.
+Jde o **neblokující** přenos: po jeho dokončení se **zavolá funkce callback**.
 
 :::
 
 <details>
 <summary>
 <b>
-Příklad kódu asynchronního přenosu SPI
+Příklad kódu: asynchronní přenos SPI
 </b>
 </summary>
 <p>

@@ -1,6 +1,6 @@
 ---
 slug: orno-or-we-504
-title: Orno OR-WE-504
+title: ORNO OR-WE-504
 ---
 
 import Image from '@theme/IdealImage';
@@ -11,25 +11,25 @@ import Image from '@theme/IdealImage';
 
 ### Popis {#description}
 
-**OR-WE-504** je kompaktní **jednofázový** elektroměr určený pro sledování elektrických parametrů a spotřeby činné energie.
-Je vybaven rozhraním **RS-485 Modbus RTU** pro vzdálené odečítání dat.
+**OR-WE-504** je kompaktní **jednofázový** elektroměr pro sledování elektrických parametrů a spotřeby činné energie.
+Data z něj lze odečítat na dálku přes rozhraní **RS-485 Modbus RTU**.
 
-Toto zařízení **není certifikováno podle MID** a je určeno pro **technický monitoring**, nikoli pro fakturační měření.
+Elektroměr **není certifikovaný podle MID** a slouží k **technickému monitoringu**, nikoli k fakturačnímu měření.
 
 :::info
 
-Tento elektroměr **nevyžaduje žádné externí proudové senzory**.
-Proud i napětí se měří přímo interními obvody.
+Tento elektroměr **nepotřebuje žádné externí proudové senzory**.
+Proud i napětí měří přímo vlastními obvody.
 
 :::
 
 ---
 
-### Silová instalace {#power-installation}
+### Silové zapojení {#power-installation}
 
-#### Příklad instalace: ORNO Energy Analyzer - OR-WE-504 {#example-of-installation-orno-energy-analyzer---or-we-504}
+#### Příklad zapojení: elektroměr ORNO OR-WE-504 {#example-of-installation-orno-energy-analyzer---or-we-504}
 
-| **ORNO Energy Analyzer OR-WE-504** | |
+| **Elektroměr ORNO OR-WE-504** | |
 |-------------------------------------|----------------|
 | Pin 1                               | **L (IN)**     |
 | Pin N                               | **N (IN)**     |
@@ -37,7 +37,7 @@ Proud i napětí se měří přímo interními obvody.
 
 #### Schéma zapojení (OR-WE-504) {#connection-diagram-or-we-504}
 
-![ORNO Energy Analyzer - OR-WE-504 - schéma zapojení](../../../../../../chester/supported-devices/modbus/images/orno-or-we-504-connection-diagram.png)
+![Schéma zapojení elektroměru ORNO OR-WE-504](../../../../../../chester/supported-devices/modbus/images/orno-or-we-504-connection-diagram.png)
 
 :::info
 
@@ -49,9 +49,9 @@ Nulový vodič lze připojit buď přímo ke **svorce N** elektroměru, nebo na 
 
 ### Komunikace Modbus {#modbus-communication}
 
-#### Příklad instalace komunikace Modbus: ORNO Energy Analyzer - OR-WE-504 {#example-of-modbus-communication-installation-orno-energy-analyzer---or-we-504}
+#### Příklad zapojení komunikace Modbus: elektroměr ORNO OR-WE-504 {#example-of-modbus-communication-installation-orno-energy-analyzer---or-we-504}
 
-| **ORNO Energy Analyzer OR-WE-504** | **CHESTER Modbus** |
+| **Elektroměr ORNO OR-WE-504** | **CHESTER Modbus** |
 |-------------------------------------|--------------------|
 | Pin 23                              | Pin 7 (A)          |
 | Pin 25                              | Pin 6 (B)          |
@@ -59,11 +59,11 @@ Nulový vodič lze připojit buď přímo ke **svorce N** elektroměru, nebo na 
 
 #### Schéma zapojení (OR-WE-504) {#connection-diagram-or-we-504-1}
 
-![ORNO Energy Analyzer - OR-WE-504 - komunikace Modbus](../../../../../../chester/supported-devices/modbus/images/orno-or-we-504-modbus.png)
+![Zapojení komunikace Modbus elektroměru ORNO OR-WE-504](../../../../../../chester/supported-devices/modbus/images/orno-or-we-504-modbus.png)
 
 :::info
 
-Pokud převodník RS-485 nemá svorku GND, **Pin 24 není nutné připojovat**.
+Pokud převodník RS-485 nemá svorku GND, **pin 24 nemusíte zapojovat**.
 
 :::
 
@@ -71,13 +71,13 @@ Pokud převodník RS-485 nemá svorku GND, **Pin 24 není nutné připojovat**.
 
 ### Konfigurace komunikace Modbus {#modbus-communication-configuration}
 
-Komunikační parametry zařízení OR-WE-504 lze nastavit jedním z následujících způsobů.
+Parametry komunikace elektroměru OR-WE-504 nastavíte jedním z těchto způsobů.
 
 ---
 
 #### 1. Pomocí oficiálního softwaru ORNO {#1-using-the-official-orno-software}
 
-Komunikační parametry lze nastavit pomocí oficiálního konfiguračního softwaru ORNO.
+Ke konfiguraci slouží oficiální konfigurační software ORNO.
 
 [**Stáhnout konfigurační software ORNO pro OR-WE-504**](https://files.orno.pl/support/Others/ORNO/ORWE504_5901752481282/OR-WE-504_program.zip)
 
@@ -85,8 +85,8 @@ Zařízení k počítači připojíte **standardním převodníkem USB–RS-485*
 
 :::info
 
-Připojte stranu USB převodníku USB–RS-485 k počítači.
-Linky RS-485 připojte k elektroměru:
+Převodník USB–RS-485 připojte stranou USB k počítači.
+Vodiče RS-485 připojte k elektroměru:
 - **A → Pin 23**
 - **B → Pin 25**
 
@@ -98,15 +98,15 @@ Linky RS-485 připojte k elektroměru:
 
 K terminálu CHESTER se dostanete jedním z těchto způsobů:
 
-- Použijte **aplikaci HARDWARIO Manager** (desktopovou nebo mobilní)
-- Použijte **Cloud Terminal** v **[HARDWARIO Cloud](https://hardwario.cloud/)**
-- Použijte terminál v prohlížeči Google Chrome na **[terminal.hardwario.com](https://terminal.hardwario.com/)**
+- v **aplikaci HARDWARIO Manager** (desktopové nebo mobilní),
+- přes **Cloud Terminal** v **[HARDWARIO Cloud](https://hardwario.cloud/)**,
+- v **terminálu pro prohlížeč Google Chrome** na **[terminal.hardwario.com](https://terminal.hardwario.com/)**.
 
 ---
 
-#### Konfigurace komunikace Modbus pro CHESTER {#modbus-communication-configuration-for-chester}
+#### Konfigurace komunikace Modbus v zařízení CHESTER {#modbus-communication-configuration-for-chester}
 
-Pomocí následujících příkazů nastavte komunikační parametry v terminálu CHESTER:
+Parametry komunikace nastavíte v terminálu CHESTER těmito příkazy:
 
 #### Konfigurace zařízení CHESTER {#configuration-of-chester}
 
@@ -129,13 +129,13 @@ config save
 
 :::info
 
-Tabulka výše ukazuje výchozí nastavení komunikace.
-Elektroměr však již může být nastaven jinak.
+V tabulce je výchozí nastavení komunikace.
+Elektroměr ale může být nastavený jinak.
 
-Než tato nastavení použijete v zařízení CHESTER, ověřte skutečné komunikační parametry
-pomocí konfiguračního softwaru ORNO.
+Než hodnoty zadáte do zařízení CHESTER, ověřte skutečné parametry komunikace
+v konfiguračním softwaru ORNO.
 
-Ujistěte se, že konfigurace zařízení CHESTER **odpovídá konfiguraci elektroměru**.
+Konfigurace zařízení CHESTER musí **odpovídat konfiguraci elektroměru**.
 
 :::
 

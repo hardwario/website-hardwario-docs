@@ -1,13 +1,13 @@
 ---
 slug: tags
-title: Organise devices with tags
+title: Organize devices with tags
 ---
 
-# Organise saved devices with tags
+# Organize saved devices with tags
 
 Tags label and filter the devices in your saved list, for example by site,
 customer, floor, or state of deployment. A device can carry as many tags as you
-need, and each tag has its own colour.
+need, and each tag has its own color.
 
 ---
 
@@ -27,11 +27,11 @@ Open the **⋮ menu** on the Saved STICKERs list and choose **Tags**.
 
 <img src="/img/hw-manager/hw-manager-tags.png" alt="The Saved STICKERs overflow menu with Tags, Import, Export, Export logs, Delete all logs and Delete" width="320" />
 
-The registry covers your whole list: **add**, **rename**, **recolour**, and
+The registry covers your whole list: **add**, **rename**, **recolor**, and
 **delete** tags, with a count showing how many devices use each one. Renaming or
-recolouring a tag updates it on every device at once.
+recoloring a tag updates it on every device at once.
 
-<img src="/img/hw-manager/hw-manager-tags-color.png" alt="Choosing a new colour for a tag in the tag registry" width="320" />
+<img src="/img/hw-manager/hw-manager-tags-color.png" alt="Choosing a new color for a tag in the tag registry" width="320" />
 
 ---
 

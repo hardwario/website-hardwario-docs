@@ -1,18 +1,18 @@
 ---
 slug: lora-wan-radio
-title: LoRaWAN rádio
+title: Rádio LoRaWAN
 ---
 import Image from '@theme/IdealImage';
 
-**LoRa** je proprietární rádiová technologie, která umožňuje **posílat malé datové pakety v obou směrech** (uplink & downlink).
+**LoRa** je proprietární rádiová technologie, která **posílá malé datové pakety oběma směry** (uplink a downlink).
 
-Rádiovou modulaci navrhla společnost **Semtech** a umožňuje velký dosah a dlouhou životnost při **napájení zařízení z baterií**.
+Modulaci navrhla společnost **Semtech**. Nabízí velký dosah a dlouhou výdrž zařízení **napájených z baterií**.
 
-Zpráva může obsahovat **52 bajtů** a data lze posílat/přijímat přibližně **každých 10 minut**. Rádio využívá ISM pásmo **868 MHz v Evropě** a **915 MHz v USA**.
+Zpráva může obsahovat **52 bajtů** a data lze posílat a přijímat přibližně **každých 10 minut**. Rádio využívá pásmo ISM **868 MHz v Evropě** a **915 MHz v USA**.
 
 :::tip
 
-Modul LoRa je potřeba nastavit pomocí AT příkazů. Jak na to, se dozvíte v kapitole [**Konfigurace LoRa pomocí AT příkazů**](../radio-communication/lora-at-commands.md).
+Modul LoRa Module se nastavuje příkazy AT. Jak na to, popisuje kapitola [**Konfigurace LoRa pomocí příkazů AT**](../radio-communication/lora-at-commands.md).
 
 :::
 
@@ -20,14 +20,14 @@ Výhodou technologie LoRa je, že si můžete vlastní bránu postavit nebo koup
 
 :::note
 
-Je také možné využít již vybudovanou LoRa síť komerčního poskytovatele.
+Můžete také využít hotovou síť LoRa komerčního poskytovatele.
 
 :::
 
-TOWER má **modul LoRa**, který můžete použít k vytvoření bateriově napájených uzlů posílajících nebo přijímajících data. Modul podporuje LoRaWAN Class A a Class C.
+Pro TOWER je k dispozici **LoRa Module**, se kterým postavíte bateriové uzly pro odesílání i příjem dat. Modul podporuje LoRaWAN třídy A a C.
 
 :::tip
 
-Více se o [**modulu LoRa dočtete v jeho kapitole**](../hardware-modules/about-lora-module.md).
+Více se dočtete v [**kapitole o modulu LoRa Module**](../hardware-modules/about-lora-module.md).
 
 :::

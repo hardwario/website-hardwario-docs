@@ -29,7 +29,7 @@ Please check the **Core Module pinout** to see which pins **allow PWM**.
 
 The duty cycle stands for how long should the pin be in the HIGH state, by changing this number you will achieve different analog-like outputs.
 
-The values range from `0-255` where `0` means always **LOW** and `255` means always **HIGH**
+The values range from `0-255` where `0` means always **LOW** and `255` means always **HIGH**.
 
 :::info
 

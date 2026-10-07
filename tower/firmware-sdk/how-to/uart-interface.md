@@ -20,7 +20,7 @@ Function `twr_uart_write` needs to know how **many bytes to send**. That’s why
 
 :::info
 
-This example will write a `Hello world` through the **UART1** with the baudrade of **115200**.
+This example will write a `Hello world` through the **UART1** with the baud rate of **115200**.
 
 There will be **8 data bits, none parity and 1 stop bit**.
 
@@ -137,7 +137,7 @@ Synchronous UART Read Code Example
 
 :::info
 
-This example does asynchronous send and receives of data on `TWR_UART_UART1` with the baudrade of **115200**.
+This example does asynchronous send and receives of data on `TWR_UART_UART1` with the baud rate of **115200**.
 
 There will be **8 data bits, none parity and 1 stop bit**.
 

@@ -14,7 +14,7 @@ title: Instalace ChirpStack
        redis-tools
    ```
 
-1. Nainstalujte nástroj **GPG** pro verifikaci podpisů balíčků:
+1. Nainstalujte nástroj **GPG** pro ověřování podpisů balíčků:
 
    ```sh
    sudo apt install gpg
@@ -54,7 +54,7 @@ title: Instalace ChirpStack
    sudo install -o chirpstack -g chirpstack -m 0640 /dev/null /var/lib/chirpstack/chirpstack.sqlite
    ```
 
-1. Zapište konfigurační soubor **ChirpStack**:
+1. Vytvořte konfigurační soubor serveru **ChirpStack**:
 
    ```sh
    cat << 'EOF' | sudo tee /etc/chirpstack/chirpstack.toml > /dev/null
@@ -119,17 +119,17 @@ title: Instalace ChirpStack
    sudo systemctl enable --now chirpstack-sqlite
    ```
 
-1. Zkontrolujte logy služby a ověřte úspěšné spuštění:
+1. V logu služby ověřte, že se úspěšně spustila:
 
    ```sh
    sudo journalctl -fu chirpstack-sqlite
    ```
 
-1. Nyní je **ChirpStack** dostupný na této adrese: `http://[TARGET IP ADDRESS]:8080/`
+1. **ChirpStack** je teď dostupný na adrese: `http://[TARGET IP ADDRESS]:8080/`
 
    :::danger
 
-   Výchozí přihlašovací údaje jsou `admin` / `admin`. Změňte toto heslo, než zařízení vystavíte
-   do jakékoli sdílené sítě.
+   Výchozí přihlašovací údaje jsou `admin` / `admin`. Než zařízení připojíte do jakékoli sdílené
+   sítě, heslo změňte.
 
    :::

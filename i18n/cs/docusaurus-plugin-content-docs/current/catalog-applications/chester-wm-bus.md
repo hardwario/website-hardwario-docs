@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../chester/catalog-applications/images/chester-wm-bus.png')} width={376} height={376} alt="Brána CHESTER wM-Bus v bílé krabičce na stěnu se dvěma externími antény" />
+        <Image img={require('../../../../../chester/catalog-applications/images/chester-wm-bus.png')} width={376} height={376} alt="Brána CHESTER wM-Bus v bílé krabičce na stěnu se dvěma externími anténami" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -19,70 +19,70 @@ import Image from '@theme/IdealImage';
 <br />
 :::caution
 
-Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
+Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
 
-- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
+- [**Společné funkce**](common-functionality.md): jak fungují LED, tlačítko a nastavení sítě.
+- [**Konektivita platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
 
 ## Přehled aplikace {#application-overview}
 
-**CHESTER wM-Bus** je brána **Wireless M-Bus**. **Podporuje všechny wM-Bus měřiče tříd T1 a C1 bez ohledu na výrobce** a funguje jako **pass-thru brána**: dekódování přijatých telegramů do smysluplných jednotek probíhá až v koncové IoT aplikaci.
+**CHESTER wM-Bus** je brána **Wireless M-Bus**. **Podporuje všechny měřiče wM-Bus tříd T1 a C1 bez ohledu na výrobce** a funguje jako **průchozí brána (pass-thru)**: přijaté telegramy se na smysluplné jednotky dekódují až v koncové IoT aplikaci.
 
-Zařízení naslouchá nakonfigurovaným wM-Bus měřičům ve stanovených intervalech, agreguje surové přijaté wM-Bus pakety a odesílá je přes síť **NB-IoT/LTE-M**.
+Zařízení v nastavených intervalech naslouchá vybraným měřičům wM-Bus, přijaté surové pakety shromažďuje a odesílá přes síť **NB-IoT/LTE-M**.
 
-Používá se v domech a bytech pro měření spotřeby **tepla**, **plynu**, **elektřiny**, **vody** a pro odečet **dalších wM-Bus zařízení**.
+Používá se v domech a bytech k měření spotřeby **tepla**, **plynu**, **elektřiny** a **vody** a k odečtu **dalších zařízení wM-Bus**.
 
-Zařízení má **dvě antény**, mezi kterými lze během příjmu přepínat, a dosáhnout tak ideálního příjmu při skenování v **obou polarizacích**.
+Zařízení má **dvě antény**, mezi kterými může během příjmu přepínat, a skenovat tak s co nejlepším příjmem v **obou polarizacích**.
 
-Zařízení lze nakonfigurovat pro **periodické**, **denní**, **týdenní** nebo **měsíční skenování**.
+Zařízení může podle nastavení skenovat **periodicky**, **denně**, **týdně** nebo **měsíčně**.
 
-Zařízení má dostatečně nízkou spotřebu, aby při denním odečtu mohlo pracovat z baterií 7+ let. K dispozici je také varianta s externím napájením.
+Spotřeba zařízení je tak nízká, že při denním odečtu vydrží na baterie 7 a více let. Objednat lze i variantu s externím napájením.
 
-CHESTER wM-Bus přijímá pouze surové hexadecimální wM-Bus telegramy. Ani zařízení, ani HARDWARIO Cloud data měřičů neinterpretují. Každý wM-Bus měřič má vlastní reprezentaci zakódovaných dat a telegramy mohou být navíc zašifrované. Dekódování surových hexadecimálních hodnot do smysluplných jednotek je na zákazníkovi nebo integrátorovi. Zašifrované telegramy lze volitelně dešifrovat na straně Cloudu, viz [dešifrovací klíče HARDWARIO Cloud](#hardwario-cloud--decryption-keys).
+Zařízení CHESTER wM-Bus přijímá jen surové hexadecimální telegramy wM-Bus. Data měřičů neinterpretuje ani zařízení, ani HARDWARIO Cloud. Každý měřič wM-Bus kóduje data po svém a telegramy mohou být navíc zašifrované. Dekódování surových hexadecimálních hodnot na smysluplné jednotky je na zákazníkovi nebo integrátorovi. Zašifrované telegramy lze volitelně dešifrovat v cloudu, viz [dešifrovací klíče v HARDWARIO Cloud](#hardwario-cloud--decryption-keys).
 
 Toto zařízení podporuje novější stack **LTEv2** a **HARDWARIO Cloud v2**.
 
 ## Varianty aplikace {#application-variants}
 
-**CHESTER wM-Bus** lze objednat v jedné z těchto variant:
+Zařízení **CHESTER wM-Bus** lze objednat v jedné z těchto variant:
 
 ### CHESTER wM-Bus {#chester-wm-bus-1}
 
-Bateriové napájení 6 ks alkalických článků „D“.
+Napájení šesti alkalickými články „D“.
 
-Katalogový hardware **CHESTER wM-Bus** se skládá z těchto objednacích kódů:
+Hardware katalogové aplikace **CHESTER wM-Bus** tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-CES`: Standardní základní deska bez superkondenzátorů
 
-* `CHESTER-B1W`: Nosná deska B1 s wM-Bus rádiem.
+* `CHESTER-B1W`: Nosná deska B1 s rádiem wM-Bus.
 
-Více podrobností viz [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 ### CHESTER wM-Bus DC {#chester-wm-bus-dc}
 
-Externí napájení adaptérem 230V DC.
+Externí napájení síťovým adaptérem DC (230 V).
 
-Katalogový hardware **CHESTER wM-Bus DC** se skládá z těchto objednacích kódů:
+Hardware katalogové aplikace **CHESTER wM-Bus DC** tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-CS`: Standardní základní deska se superkondenzátory
 
-* `CHESTER-B1W`: Nosná deska B1 s wM-Bus rádiem.
+* `CHESTER-B1W`: Nosná deska B1 s rádiem wM-Bus.
 
-Více podrobností viz [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 ## Skenování a chování {#scanning-and-behavior}
 
-Adresy wM-Bus zařízení a režim zařízení lze importovat a překonfigurovat přes cloud.
+Adresy zařízení wM-Bus i režim zařízení lze importovat a měnit přes cloud.
 
-Zařízení má nastavitelné parametry, díky kterým může skenovat wM-Bus zařízení periodicky, denně, týdně nebo měsíčně. Nastavit lze také dobu skenování a další parametry.
+Zařízení může podle nastavení skenovat zařízení wM-Bus periodicky, denně, týdně nebo měsíčně. Nastavit lze i čas skenování a další parametry.
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná příkazem `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config scan-timeout 130
@@ -96,25 +96,25 @@ app config poll-interval 28800
 app config downlink-wdg-interval 172800
 ```
 
-Pokud máte nakonfigurované nějaké wM-Bus adresy, uvidíte je v logu také, spolu s jejich počtem.
+Pokud máte nastavené adresy wM-Bus, uvidíte je v logu také, spolu s jejich počtem.
 
 ```
 app config address count 1
 app config address add 81763000
 ```
 
-## Specifické příkazy {#specific-commands}
+## Příkazy aplikace {#specific-commands}
 
 :::info
 
-Celou strukturu příkazů můžete snadno prozkoumat – začněte příkazem `help`.
+Celou stromovou strukturu příkazů snadno prozkoumáte: začněte příkazem `help`.
 
 :::
 
 :::caution
 
-Pro uplatnění nové konfigurace je potřeba zadat `config save`, který aplikuje nové konfigurační parametry a restartuje zařízení. To platí pouze tehdy, pokud zařízení konfigurujete přes Bluetooth nebo J-Link.
-Není to potřeba, pokud příkazy aplikujete dávkově přes cloud.
+Novou konfiguraci uplatníte příkazem `config save`, který uloží nové parametry a restartuje zařízení. To platí jen při konfiguraci přes Bluetooth nebo J-Link.
+Když posíláte příkazy dávkově přes cloud, není to potřeba.
 
 :::
 
@@ -129,17 +129,17 @@ Provede skenování a vypíše všechna zařízení v dosahu (zobrazí jejich ad
 Zaregistruje (naučí) všechna zařízení v dosahu.
 
 - `timeout`: délka skenování v sekundách.  
-- `threshold` (RSSI) – minimální síla signálu zařízení, která bude akceptována (rozsah 0 až -150 dBm).  
+- `threshold` (RSSI): minimální síla signálu, od které se zařízení přijme (rozsah 0 až -150 dBm).  
 
 Pokud parametry nezadáte, použije se výchozí hodnota z `config timeout`.
 
 `app config address`
 
-Vypíše všechny uložené adresy zařízení. Pokud tento výpis provádíte přes BLE a obsahuje velké množství zařízení (desítky), doporučujeme po výpisu zařízení restartovat.
+Vypíše všechny uložené adresy zařízení. Pokud výpis spouštíte přes BLE a obsahuje hodně zařízení (desítky), doporučujeme potom zařízení restartovat.
 
 `app config address add 123456`
 
-Přidání senzoru vysílajícího celoročně s adresou 123456.
+Přidání celoročně vysílajícího senzoru s adresou 123456.
 
 `app config address remove 123456`
 
@@ -151,15 +151,15 @@ Odebrání všech senzorů ze seznamu.
 
 `config save`
 
-Po dokončení konfigurace je potřeba vše potvrdit.
+Po dokončení konfigurace vše potvrďte.
 
 `send`
 
-Odešle hodnoty z nasbíraných dat do cloudu.  
-Užitečné pro ověření datového toku a kontrolu, zda senzory správně odesílají data.
+Odešle nasbíraná data do cloudu.  
+Hodí se k ověření toku dat a ke kontrole, zda senzory správně vysílají.
 
 :::caution
-**Chování bez adres** → Pokud nejsou nakonfigurovány žádné adresy, zařízení skenuje všechna dostupná zařízení a odesílá do cloudu všechna jejich data.
+**Chování bez adres** → Pokud nejsou nastavené žádné adresy, zařízení skenuje všechna dostupná zařízení a do cloudu odesílá všechna jejich data.
 :::
 
 ### Konfigurace dekódování v cloudu {#cloud-decode-configuration}
@@ -173,60 +173,60 @@ Užitečné pro ověření datového toku a kontrolu, zda senzory správně odes
 
 ### Konfigurace skenování {#scan-configuration}
 
-Skenování označuje dobu, během které CHESTER zachytává wM-Bus pakety. Metoda skenování se nastavuje parametrem `scan-mode`.
+Skenováním se rozumí doba, po kterou zařízení CHESTER zachytává pakety wM-Bus. Způsob skenování určuje parametr `scan-mode`.
 
 `app config scan-mode <mode>`
 
-- **off**: automatické skenování vypnuto, ideální pro přepravu nebo ladění umístění s ručním spuštěním skenování
-- **interval**: skenování v intervalech. Pouze pro debug, parametr `scan-interval` (ignoruje nastavené měsíce skenování)
+- **off**: automatické skenování vypnuté; vhodné pro přepravu nebo pro hledání vhodného umístění s ručně spouštěným skenováním
+- **interval**: skenování v intervalech daných parametrem `scan-interval`, jen pro ladění (ignoruje nastavené měsíce skenování)
 - **daily**: skenování jednou denně, vždy v hodinu nastavenou parametrem `scan-hour`
 - **weekly**: skenování jednou týdně, vždy v hodinu a den v týdnu nastavené parametry `scan-hour` a `scan-weekday`
 - **monthly**: skenování jednou měsíčně, vždy v hodinu a den v měsíci nastavené parametry `scan-hour` a `scan-day`
 
 `app config scan-timeout 480`
 
-Po spuštění skenování se skenuje maximálně po dobu `scan-timeout` (nastavitelné v rozsahu 10-86400 sekund), nebo dokud nedorazí pakety od všech zařízení ze seznamu adres.
+Spuštěné skenování trvá nejdéle `scan-timeout` (nastavitelné v rozsahu 10–86400 sekund), nebo dokud nedorazí pakety od všech zařízení ze seznamu adres.
 
-Jde o bezpečnostní časovač, který v nejhorším případě zabrání tomu, aby skenování zůstalo neomezeně zapnuté v případě nepřijetí/poruchy senzoru. Timeout se zdvojnásobí, pokud jsou parametrem `scan-ant` aktivovány obě antény.
+Jde o pojistný časovač: když se paket ze senzoru nepodaří přijmout nebo je senzor porouchaný, zabrání tomu, aby skenování běželo donekonečna. Pokud jsou parametrem `scan-ant` zapnuté obě antény, časový limit se zdvojnásobí.
 
 `app config scan-interval 600`
 
-Pevné skenování v intervalech, pokud je `scan-mode` nastaven na **interval**, pouze pro debug, jednotky sekund 0-86400.
+Pevný interval skenování v sekundách (0–86400), pokud je `scan-mode` nastavený na **interval**; jen pro ladění.
 
 `app config scan-hour 12`
 
-Určuje hodinu, ve kterou má skenování začít. Hodiny zařízení CHESTER pracují v UTC. Zařízení nerozlišuje časové zóny ani letní čas. Správnou hodinu je nutné zvážit s určitou rezervou, pokud wM-Bus senzory automaticky přepínají své hodiny na letní/zimní čas.
+Určuje hodinu, kdy má skenování začít. Hodiny zařízení CHESTER běží v UTC a zařízení nerozlišuje časová pásma ani letní čas. Pokud senzory wM-Bus samy přecházejí na letní a zimní čas, zvolte hodinu s dostatečnou rezervou.
 
 `app config scan-weekday 2`
 
-Určuje den v týdnu, kdy se má skenovat při týdenním skenování. 0 = neděle, 1 = pondělí, ...
+Určuje den v týdnu pro týdenní skenování: 0 = neděle, 1 = pondělí, ...
 
 `app config scan-day 2`
 
-Určuje den v měsíci 1-28, kdy se skenuje při měsíčním skenování
+Určuje den v měsíci (1–28) pro měsíční skenování.
 
 `app config scan-ant <mode>`
 
-**single**: skenování používá pouze jeden cyklus s jednou anténou; pokud přijme data od všech zařízení, odešle data okamžitě, pokud ne, odešle data po timeoutu `scan-timeout`
+**single**: skenuje se jen v jednom cyklu jednou anténou; pokud dorazí data od všech zařízení, odešlou se okamžitě, jinak až po uplynutí `scan-timeout`
 
-**dual**: skenování probíhá dvakrát, každé s jinou anténou. Pokud nejsou v prvním cyklu s anténou 1 naskenována všechna zařízení, spustí se druhé skenování s druhou anténou. Každé skenování trvá maximálně scan-timeout sekund. Maximální doba, kdy je wM-Bus přijímač aktivní, je rovna 2x `scan-timeout`.
+**dual**: skenuje se dvakrát, pokaždé jinou anténou. Pokud se v prvním cyklu s anténou 1 nepodaří zachytit všechna zařízení, spustí se druhé skenování s druhou anténou. Každé skenování trvá nejvýše scan-timeout sekund, takže přijímač wM-Bus je aktivní nejdéle 2× `scan-timeout`.
 
 `config save`
 
-Po dokončení konfigurace je potřeba vše potvrdit.
+Po dokončení konfigurace vše potvrďte.
 
 ## Příklady konfigurací {#example-configurations}
 
-Při konfiguraci přes BLE je potřeba změny konfigurace uplatnit příkazem `config save`.
+Při konfiguraci přes BLE je potřeba změny uplatnit příkazem `config save`, jinak se konfigurace nepoužije.
 
-Při konfiguraci přes [cloudové config downlink příkazy](/cloud/downlink/config) příkaz `config save` nepřidávejte, aplikuje se automaticky. Jinak se konfigurace neuplatní
+Při konfiguraci [downlinkovými příkazy Config z cloudu](/cloud/downlink/config) příkaz `config save` nepřidávejte, konfigurace se uplatní automaticky.
 
-### Interval a wM-Bus pakety každé 2 minuty {#interval-and-wm-bus-packets-every-2-minutes}
+### Interval a pakety wM-Bus každé 2 minuty {#interval-and-wm-bus-packets-every-2-minutes}
 
-wM-Bus zařízení odesílají paket každé 2 minuty.
-Chceme použít pouze jednu antenu.
+Zařízení wM-Bus vysílají paket každé 2 minuty.
+Chceme použít jen jednu anténu.
 Chceme odesílat data do cloudu každé 2 hodiny.
-Všechna zařízení jsou celoroční, vysílají (stejně) v letě i v zimě.
+Všechna zařízení jsou celoroční, vysílají (stejně) v létě i v zimě.
 
 ```
 app config scan-mode interval
@@ -238,12 +238,12 @@ app config address add 111111
 app config address add 222222
 ```
 
-### Interval a wM-Bus pakety každé 2 minuty, dvě antény {#interval-and-wm-bus-packets-every-2-minutes-two-antennas}
+### Interval a pakety wM-Bus každé 2 minuty, dvě antény {#interval-and-wm-bus-packets-every-2-minutes-two-antennas}
 
-wM-Bus zařízení odesílají paket každé 2 minuty.
-Chceme použít obě antény pro lepší příjem, každou orientovanou jinak pro změnu polarity.
+Zařízení wM-Bus vysílají paket každé 2 minuty.
+Pro lepší příjem chceme použít obě antény, každou natočenou jinak kvůli změně polarizace.
 Chceme odesílat data do cloudu každé 2 hodiny.
-Všechna zařízení jsou celoroční, vysílají (stejně) v letě i v zimě.
+Všechna zařízení jsou celoroční, vysílají (stejně) v létě i v zimě.
 
 ```
 app config scan-mode interval
@@ -255,14 +255,14 @@ app config address add 111111
 app config address add 222222
 ```
 
-### Interval a wM-Bus pakety odesílané každou hodinu {#interval-and-wm-bus-packets-sending-every-hour}
+### Interval a pakety wM-Bus každou hodinu {#interval-and-wm-bus-packets-sending-every-hour}
 
-wM-Bus zařízení odesílají paket každou 1 hodinu.
-Chceme použít pouze jednu antenu.
+Zařízení wM-Bus vysílají paket jednou za hodinu.
+Chceme použít jen jednu anténu.
 Chceme odesílat data do cloudu každou hodinu.
-Všechna zařízení jsou celoroční, vysílají (stejně) v letě i v zimě.
+Všechna zařízení jsou celoroční, vysílají (stejně) v létě i v zimě.
 
-**Tato konfigurace není pro bateriovou variantu, protože skenuje neustále**
+**Tato konfigurace není vhodná pro bateriovou variantu, protože zařízení skenuje nepřetržitě**
 
 ```
 app config scan-mode interval
@@ -276,10 +276,10 @@ app config address add 222222
 
 ### Denní skenování {#daily-scanning}
 
-wM-Bus zařízení odesílají paket každou 1 hodinu.
-Chceme použít pouze jednu antenu.
+Zařízení wM-Bus vysílají paket jednou za hodinu.
+Chceme použít jen jednu anténu.
 Chceme odesílat data do cloudu jednou denně.
-Všechna zařízení jsou celoroční, vysílají (stejně) v letě i v zimě.
+Všechna zařízení jsou celoroční, vysílají (stejně) v létě i v zimě.
 
 **Tato konfigurace není optimální pro bateriovou variantu**
 
@@ -295,9 +295,9 @@ app config address add 222222
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je k dispozici v katalogových aplikacích v [kapitole Firmware](index.md#application-firmware).
+Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](index.md#application-firmware).
 
-## Příklad JSON zprávy {#example-json-message}
+## Ukázková zpráva JSON {#example-json-message}
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -305,12 +305,12 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="lte" label="LTE">
     
-V tomto příkladu **JSON** vidíte surová data ze dvou wM-Bus senzorů
+Tato ukázka **JSON** obsahuje surová data ze dvou senzorů wM-Bus
 
-Každá cloudová JSON zpráva obsahuje až 20 wM-Bus paketů. Pokud je CHESTER nakonfigurován pro více než 20 zařízení, surové wM-Bus pakety se rozdělí do více JSON zpráv.
+Každá zpráva JSON pro cloud obsahuje až 20 paketů wM-Bus. Pokud je v zařízení CHESTER nastaveno více než 20 zařízení wM-Bus, surové pakety se rozdělí do více zpráv JSON.
 
 <details>
-<summary><b>Zobrazit příklad JSON</b></summary>
+<summary><b>Zobrazit ukázku JSON</b></summary>
 <p>
 
 ```json
@@ -377,7 +377,7 @@ Každá cloudová JSON zpráva obsahuje až 20 wM-Bus paketů. Pokud je CHESTER 
   <TabItem value="lora" label="LoRaWAN">
 
 <details>
-<summary><b>Zobrazit příklad JSON</b></summary>
+<summary><b>Zobrazit ukázku JSON</b></summary>
 <p>
 
 ```json
@@ -404,41 +404,41 @@ Každá cloudová JSON zpráva obsahuje až 20 wM-Bus paketů. Pokud je CHESTER 
 
 ## HARDWARIO Cloud – dešifrovací klíče {#hardwario-cloud--decryption-keys}
 
-**Přenášené zprávy z wM-Bus zařízení jsou zašifrované**, aby se optimalizovala spotřeba energie při přenosu dat, což prodlužuje celkovou životnost baterie.  
+**Zprávy ze zařízení wM-Bus se přenášejí zašifrované**, aby se při přenosu dat šetřila energie a prodloužila výdrž baterie.  
 
-**Přijatá data je proto nutné dešifrovat**, což se provádí pomocí **dešifrovacích klíčů**.  
+**Přijatá data je proto nutné dešifrovat**, k čemuž slouží **dešifrovací klíče**.  
 
-V této sekci si ukážeme, **jak přidat jednotlivé dešifrovací klíče** do Cloudu pomocí sekce **Variables**.  
+V této části ukážeme, **jak přidat jednotlivé dešifrovací klíče** do cloudu v sekci **Variables**.  
 
 :::tip
-Pokud si nejste jistí, **jak začít s Cloudem**, postupujte podle tohoto návodu: [**HARDWARIO Cloud v2**](/cloud/)
+Pokud si nejste jistí, **jak s cloudem začít**, postupujte podle návodu: [**HARDWARIO Cloud v2**](/cloud/)
 :::
 
 ### Podrobný postup {#step-by-step-instructions}
 
 1. V levém panelu vyberte **Variables**.  
 2. Klikněte na tlačítko **+ NEW VARIABLE** v pravém horním rohu.  
-3. Vyplňte následující informace:  
+3. Vyplňte tyto údaje:  
    - **Device** → vyberte své zařízení  
-   - **Name of Variable** → zadejte wM-Bus adresu zařízení  
-   - **Value of Variable** → zadejte dešifrovací klíč přiřazený vašemu zařízení  
+   - **Name of Variable** → zadejte adresu wM-Bus zařízení  
+   - **Value of Variable** → zadejte dešifrovací klíč zařízení  
    - **Environment** → vyberte `wmbus`  
-   - **Comment** → volitelné, můžete přidat komentář  
-4. Vaše data by se nyní měla v Cloudu zobrazovat **dešifrovaná**.  
+   - **Comment** → volitelný komentář  
+4. Data by se teď měla v cloudu zobrazovat **dešifrovaná**.  
 
 :::info
-Existuje také možnost vzít příchozí data z Cloudu a **ručně je dešifrovat** pomocí **online nástroje**: [https://wmbusmeters.org/](https://wmbusmeters.org/).  
+Příchozí data z cloudu můžete také **dešifrovat ručně** v **online nástroji**: [https://wmbusmeters.org/](https://wmbusmeters.org/).  
 :::
 
-## Podporované wM-Bus senzory {#supported-wm-bus-sensors}
+## Podporované senzory wM-Bus {#supported-wm-bus-sensors}
 
-**CHESTER wM-Bus přijímá pakety z jakéhokoli wM-Bus měřiče vysílajícího v režimu T1 nebo C1, bez ohledu na výrobce.** Neexistuje žádný seznam kompatibility, se kterým byste své měřiče museli srovnávat.
+**CHESTER wM-Bus přijímá pakety z jakéhokoli měřiče wM-Bus, který vysílá v režimu T1 nebo C1, bez ohledu na výrobce.** Své měřiče tedy nemusíte ověřovat proti žádnému seznamu kompatibility.
 
-Zařízení funguje jako **pass-thru brána**: přijaté wM-Bus telegramy přeposílá do Cloudu a **dekódování do smysluplných jednotek probíhá v koncové IoT aplikaci**. Volitelně lze telegramy dešifrovat na straně Cloudu pomocí [dešifrovacích klíčů](#hardwario-cloud--decryption-keys) uložených pro jednotlivá zařízení.
+Zařízení funguje jako **průchozí brána (pass-thru)**: přijaté telegramy wM-Bus přeposílá do cloudu a **dekódování na smysluplné jednotky probíhá v koncové IoT aplikaci**. Telegramy lze volitelně dešifrovat v cloudu pomocí [dešifrovacích klíčů](#hardwario-cloud--decryption-keys) uložených pro jednotlivá zařízení.
 
-Měřiče uvedené níže jsou ty, které jsme interně otestovali a zdokumentovali, včetně **vodoměrů**, **měřičů tepla** a **indikátorů rozdělovačů nákladů na teplo** od **BMeters** a **Zenner**. Jde o výchozí bod, nikoli o omezení.
+Níže uvedené měřiče jsme sami otestovali a zdokumentovali, mimo jiné **vodoměry**, **měřiče tepla** a **indikátory topných nákladů** značek **BMeters** a **Zenner**. Seznam je výchozím bodem, ne omezením.
 
-➡️ [Otestované wM-Bus senzory](/chester/supported-devices/wm-bus_sensors)
+➡️ [Otestované senzory wM-Bus](/chester/supported-devices/wm-bus_sensors)
 
 ---
 
@@ -447,15 +447,15 @@ Měřiče uvedené níže jsou ty, které jsme interně otestovali a zdokumentov
 ### v3.5.1 – 2025-12-08 {#v351--2025-12-08}
 
 - **Přidáno**: Režim enroll (učení) pro párování bezdrátových měřičů
-- **Přidáno**: Režim scan-all s podporou konfigurace dekódování na straně cloudu
+- **Přidáno**: Režim scan-all s podporou konfigurace dekódování v cloudu
 - **Přidáno**: Příkaz send v shellu pro ruční vložení paketu
 - **Přidáno**: Pole výrobce v dekódovaných datech
 
 ### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Opraveno**: Příjem dlouhých wM-Bus paketů (dříve byly zkráceny nebo zahozeny)
-- **Přidáno**: Podpora bateriové varianty (6× článek D) vedle existující DC varianty
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); firmware pro Cloud v1 nebyl pro tuto aplikaci dostupný
+- **Opraveno**: Příjem dlouhých paketů wM-Bus (dříve se zkracovaly nebo zahazovaly)
+- **Přidáno**: Podpora bateriové varianty (6× článek D) vedle stávající varianty s napájením DC
+- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); firmware pro Cloud v1 nebyl pro tuto aplikaci dostupný
 
 :::info
 

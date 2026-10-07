@@ -128,7 +128,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### 2025-01-31
 
-- **[FW/SDK]** Nordic Connect SDK (NCS) updated to **v2.9**, the underlying platform upgrade for all CHESTER firmware
+- **[FW/SDK]** nRF Connect SDK (NCS) updated to **v2.9**, the underlying platform upgrade for all CHESTER firmware
 
 ### 2025-01-20
 

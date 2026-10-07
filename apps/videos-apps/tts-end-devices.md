@@ -6,7 +6,7 @@ title_meta: "Adding End Devices (The Things Stack video tutorial)"
 
 import Image from '@theme/IdealImage';
 
-# The Things Stack- How to Add End Devices to a LoRaWAN Network
+# The Things Stack - How to Add End Devices to a LoRaWAN Network {#the-things-stack--how-to-add-end-devices-to-a-lorawan-network}
 
 ## Tutorial Overview
 

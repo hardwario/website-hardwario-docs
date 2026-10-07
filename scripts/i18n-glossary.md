@@ -115,7 +115,39 @@ používat český název.
 | build (podstatné jméno) | sestavení; „build" jen tam, kde je to název příkazu |
 | callback | callback |
 | positive rail | kladná větev |
-| store (odkaz na e-shop) | obchod |
+| store (odkaz na e-shop) | e-shop (stejně jako patička a tlačítka na webech) |
+| over the air (OTA) | bezdrátově, na dálku (OTA); nikdy „přes vzduch“ |
+| OTAA | bezdrátová aktivace (OTAA) |
+| pulse, pulse counting | impulz, čítání impulzů; nikdy „pulz“ |
+| counter | čítač; lifetime counter = čítač za celou dobu provozu |
+| report, report interval (CHESTER) | hlášení, hlásit, interval hlášení |
+| backup module (CHESTER-Z) / backup battery | záložní modul / záložní baterie |
+| Node-RED node | uzel (flow je rodu mužského) |
+| gauge (Node-RED dashboard) | budík |
+| LoRaWAN network server | síťový server LoRaWAN |
+| end device / device profile | koncové zařízení / profil zařízení |
+| backhaul | páteřní připojení |
+| pass-thru gateway | průchozí brána (pass-thru) |
+| API key | klíč API |
+| tab (v rozhraní aplikace) | záložka (karta jen u videa „na kartě“) |
+| downlink commands | příkazy přes downlink |
+| rate rule / rate alarm | četnostní pravidlo / četnostní alarm |
+| momentary source | okamžikový zdroj |
+| Hall switch | Hallův spínač |
+| dry contact | bezpotenciálový kontakt |
+| low-power (electronics) | s nízkou spotřebou; nikdy „nízkoenergetický“, „nízkopříkonový“ |
+| low-side switch / load switch | spínač (ne „přepínač“) / zátěžový spínač |
+| buck / boost converter | snižující / zvyšující měnič („převodník“ jen ADC a můstky) |
+| block diagram / SWD header | blokové schéma / konektor SWD |
+| heat cost allocator | indikátor topných nákladů |
+| split-core CT | rozevírací proudový transformátor |
+| active energy / active power | činná energie / činný výkon |
+| actuator | akční člen |
+| nominal (v tabulce parametrů) | jmenovitý |
+| solar irradiance | intenzita slunečního záření |
+| hostname / hyphen | název hostitele / spojovník |
+| typical use cases | typické využití |
+| cloud (obecné podstatné jméno) | cloud, s malým písmenem (protokol FLAP: „Cloud“ jako strana protokolu) |
 
 ## Styl
 

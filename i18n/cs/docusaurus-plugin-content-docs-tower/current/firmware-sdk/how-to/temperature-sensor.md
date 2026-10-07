@@ -4,22 +4,22 @@ title: "Jak na: Teplotní senzor"
 ---
 import Image from '@theme/IdealImage';
 
-[**Core Module**](../../hardware-modules/about-core-module.md) je vybaven integrovaným teplotním senzorem **TMP112**. Jde o velmi přesný senzor s nízkou spotřebou připojený přes sběrnici I²C (viz adresní prostor).
+Modul [**Core Module**](../../hardware-modules/about-core-module.md) má integrovaný teplotní senzor **TMP112**. Jde o vysoce přesný senzor s nízkou spotřebou připojený přes sběrnici I²C (viz adresní prostor).
 
 :::note
 
-  Pokud se chcete podívat, jak je **TMP112** zapojen, prohlédněte si [**schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-core).
+  Jak je senzor **TMP112** zapojený, ukazují [**schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-core).
 
 :::
 
 ## Odkazy {#references}
-- [**TMP112 SDK Module**](https://sdk.hardwario.com/group__twr__tmp112.html)
-- [**Příklad v GitHub repozitáři**](https://github.com/hardwario/twr-radio-air-quality-monitor/blob/7e8b21a8becbf9e9834c08a17c04bcb95d62233c/src/application.c)
+- [**Modul SDK pro TMP112**](https://sdk.hardwario.com/group__twr__tmp112.html)
+- [**Příklad v repozitáři na GitHubu**](https://github.com/hardwario/twr-radio-air-quality-monitor/blob/7e8b21a8becbf9e9834c08a17c04bcb95d62233c/src/application.c)
 
 <details>
 <summary>
 <b>
-Ukázka kódu pro integrovaný teplotní senzor
+Příklad kódu: integrovaný teplotní senzor
 </b>
 </summary>
 <p>

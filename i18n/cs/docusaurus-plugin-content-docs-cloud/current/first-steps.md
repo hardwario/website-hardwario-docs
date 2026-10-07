@@ -1,13 +1,13 @@
 ---
 slug: first-steps
 title: První kroky
-description: "Vítejte v HARDWARIO Cloud, platformě pro správu vašich zařízení, kam v reálném čase přicházejí jejich data."
+description: "Vítejte v HARDWARIO Cloud, platformě, kde spravujete svá zařízení a kam v reálném čase přicházejí jejich data."
 title_meta: "První kroky (HARDWARIO Cloud)"
 ---
 
 # Rychlý průvodce HARDWARIO Cloud {#hardwario-cloud-quick-start-guide}
 
-Vítejte v **HARDWARIO Cloud**, platformě pro správu vašich zařízení, kam v reálném čase
+Vítejte v **HARDWARIO Cloud**, platformě, kde spravujete svá zařízení a kam v reálném čase
 přicházejí jejich data. Podle následujících kroků si vytvoříte účet, zaregistrujete první zařízení a začnete pracovat
 s jeho zprávami.
 
@@ -15,7 +15,7 @@ s jeho zprávami.
 
 1. Přejděte na [**https://hardwario.cloud**](https://hardwario.cloud)
 2. Klikněte na **SIGN UP**
-3. Vytvořte účet pomocí účtu **Google** nebo **Microsoft**, případně přes **e-mail a heslo** (ověřte svůj e-mail).
+3. Zaregistrujte se účtem **Google** nebo **Microsoft**, případně **e-mailem a heslem** (e-mailovou adresu pak ověřte).
 4. Po ověření se **přihlaste**.
 
 ![Obrazovka HARDWARIO Cloud „Create account“ s poli pro e-mail a heslo a s možnostmi registrace přes Google a Microsoft](../../../../cloud/images/create-account.png)
@@ -30,7 +30,7 @@ Pro vyšší bezpečnost doporučujeme ověření přes **Google** nebo **Micros
 
    ![Stránka SPACES se zvýrazněným tlačítkem „+ NEW SPACE“ v pravém horním rohu](../../../../cloud/images/spaces-new-space.png)
 
-2. Pojmenujte svůj prostor (například: `my-home`, `office-sensors`, `warehouse`). Řiďte se [**konvencemi pojmenování**](/cloud/#naming-conventions).
+2. Pojmenujte prostor (například `my-home`, `office-sensors`, `warehouse`). Řiďte se [**konvencemi pojmenování**](/cloud/#naming-conventions).
 
    ![Dialog „Create new space“: zadejte název a klikněte na CREATE](../../../../cloud/images/create-space.png)
 
@@ -51,7 +51,7 @@ Pro vyšší bezpečnost doporučujeme ověření přes **Google** nebo **Micros
 
 ## Krok 4: Podívejte se na svá data {#step-4-see-your-data}
 
-Jakmile je zařízení napájené a připojené, jeho uplinky se objeví v Cloudu.
+Jakmile je zařízení napájené a připojené, jeho uplinky se objeví v cloudu.
 
 - Příchozí payloady najdete na stránce [**Zprávy**](/cloud/messages).
 - Související zařízení seskupte a filtrujte pomocí [**tagů**](/cloud/tags).
@@ -64,10 +64,10 @@ Jakmile je zařízení napájené a připojené, jeho uplinky se objeví v Cloud
 Cloud funguje oběma směry: konfiguraci, data nebo příkazy shellu pošlete do zařízení
 [**downlinkem**](/cloud/downlink) a nový [**firmware**](/cloud/firmware) nahrajete bezdrátově.
 
-## Krok 6: Propojte Cloud se svými systémy {#step-6-integrate-with-your-systems}
+## Krok 6: Propojte cloud se svými systémy {#step-6-integrate-with-your-systems}
 
-Data z Cloudu předáte dál pomocí [**konektorů**](/cloud/connectors) (webhooků), nebo se na ně
-programově dotazujte přes [**REST API**](/cloud/api).
+Data z cloudu předáte dál [**konektory**](/cloud/connectors) (webhooky), nebo se na ně
+programově dotazujete přes [**REST API**](/cloud/api).
 
 ## Krok 7: Spravujte přístup {#step-7-manage-access}
 

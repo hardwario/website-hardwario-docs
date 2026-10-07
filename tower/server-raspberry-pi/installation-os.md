@@ -4,7 +4,7 @@ title: Pre-Installed Image
 ---
 import Image from '@theme/IdealImage';
 
-This tutorial demonstrates how to install all the needed tools for working with HARDWARIO TOWER devices onto your **Raspberry Pi with a Raspberry Pi OS installed**.
+This tutorial demonstrates how to flash our prepared system image, which already includes all the needed tools for working with HARDWARIO TOWER devices, onto a microSD card for your **Raspberry Pi**.
 
 :::tip
 

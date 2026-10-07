@@ -5,9 +5,9 @@ title: HTTP API
 
 # HTTP API {#http-api}
 
-Zařízení na portu 80 provozuje HTTP server s API. Všechny požadavky kromě `/api/v1/ping` musí být autentizovány pomocí HTTP Basic Auth. Uživatelské jméno je vždy `admin`. Heslo je ve výchozím stavu `admin`, ale lze jej změnit volbou `password`. API lze vypnout volbou `enable_server` v nastavení.
+Zařízení provozuje na portu 80 HTTP server s API. Všechny požadavky kromě `/api/v1/ping` vyžadují autentizaci HTTP Basic Auth. Uživatelské jméno je vždy `admin`. Výchozí heslo je také `admin` a změníte ho volbou `password`. API lze vypnout volbou `enable_server` v nastavení.
 
-Data se odesílají ve formátu JSON. Všechny odpovědi jsou objekt JSON obsahující booleovskou vlastnost `ok`. Ta je `true`, pokud požadavek uspěl, jinak `false`. Pokud požadavek uspěl, jsou případná data odpovědi obsažena v poli `data`. Pokud požadavek selhal, bude přítomno pole `msg` obsahující jednu chybovou zprávu nebo seznam více chybových zpráv.
+Data se přenášejí ve formátu JSON. Každá odpověď je objekt JSON s booleovskou vlastností `ok`, která má hodnotu `true`, pokud požadavek uspěl, a jinak `false`. U úspěšného požadavku jsou případná data odpovědi v poli `data`. Když požadavek selže, odpověď obsahuje pole `msg` s jednou chybovou zprávou nebo se seznamem chybových zpráv.
 
 Příklad neúspěšného požadavku:
 
@@ -35,39 +35,39 @@ Zařízení odpoví hodnotou `"pong"` v poli `data`. Jako jediný endpoint nevy�
 
 ### GET `/api/v1/config` {#get-apiv1config}
 
-Získání aktuální konfigurace.
+Vrátí aktuální konfiguraci.
 
 ### POST `/api/v1/config` {#post-apiv1config}
 
-Aktualizace konfigurace zařízení. Zařízení se automaticky restartuje.
+Aktualizuje konfiguraci zařízení. Zařízení se poté automaticky restartuje.
 
 ### POST `/api/v1/ota` {#post-apiv1ota}
 
-Nahrání aktualizace firmwaru do zařízení. Aktualizace se posílá jako raw octet stream v těle požadavku. Po odeslání odpovědi se zařízení automaticky restartuje.
+Nahraje do zařízení aktualizaci firmwaru. Aktualizace se posílá v těle požadavku jako surová binární data (octet stream). Po odeslání odpovědi se zařízení automaticky restartuje.
 
 ### POST `/api/v1/rollback` {#post-apiv1rollback}
 
-Zahájení návratu firmwaru na předchozí verzi. Po odeslání odpovědi se zařízení automaticky restartuje.
+Spustí návrat k předchozí verzi firmwaru. Po odeslání odpovědi se zařízení automaticky restartuje.
 
 ### POST `/api/v1/reboot` {#post-apiv1reboot}
 
-Restart zařízení.
+Restartuje zařízení.
 
 ### POST `/api/v1/factory_reset` {#post-apiv1factoryreset}
 
-Obnovení konfigurace zařízení na výchozí hodnoty. Po odeslání odpovědi se zařízení automaticky restartuje.
+Obnoví tovární konfiguraci zařízení. Po odeslání odpovědi se zařízení automaticky restartuje.
 
 ### POST `/api/v1/counter_reset` {#post-apiv1counterreset}
 
-Vynulování hodnot počítadel.
+Vynuluje čítače.
 
 ### GET `/api/v1/log` {#get-apiv1log}
 
-Odpoví polem nejnovějších záznamů logu.
+Vrátí pole nejnovějších záznamů logu.
 
 ### GET `/api/v1/meta` {#get-apiv1meta}
 
-Odpoví metadaty o zařízení.
+Vrátí metadata zařízení.
 
 Příklad odpovědi:
 

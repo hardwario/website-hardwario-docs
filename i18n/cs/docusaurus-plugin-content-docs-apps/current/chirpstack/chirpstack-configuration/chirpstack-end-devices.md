@@ -13,25 +13,25 @@ Tento návod vás provede vytvořením profilů zařízení a přidáním koncov
 
 ## 1. Profily zařízení {#1-device-profiles}
 
-Po přidání bran je dalším krokem vytvoření profilů zařízení v platformě ChirpStack.  
+Po přidání bran vytvořte v ChirpStack profily zařízení.  
 
 1. V navigační liště klikněte na **Device Profiles**.  
 2. Klikněte na **Add Device Profile** (vpravo nahoře).  
 
-3. Zadejte potřebné informace, jako je:  
+3. Zadejte potřebné údaje, například:  
    - Name  
    - Region  
    - MAC Version  
    - ADR Algorithm  
    - Expected Uplink Interval  
 
-![ChirStack v4 - brány](../../../../../../apps/chirpstack/chirpstack-configuration/images/chirpstack-tutorial-5.png)
+![ChirpStack v4 – profily zařízení](../../../../../../apps/chirpstack/chirpstack-configuration/images/chirpstack-tutorial-5.png)
 
 ---
 
 ### Příklad pro zařízení HARDWARIO {#example-for-hardwario-devices}
 
-Pokud jako koncové zařízení používáte CHESTER nebo STICKER, příklady konfigurace profilu zařízení najdete na těchto odkazech:
+Pokud jako koncové zařízení používáte CHESTER nebo STICKER, najdete příklady konfigurace profilu zařízení na těchto stránkách:
 
 | **Zařízení** | **Odkaz na dokumentaci** |
 |-------------|-------------------------|
@@ -48,7 +48,7 @@ Dále vytvořte aplikaci:
 
 2. Vytvořte novou aplikaci a otevřete ji.  
 
-3. Přidejte zařízení zadáním údajů, jako je:  
+3. Přidejte zařízení a zadejte jeho údaje, například:  
    - **Name**  
    - **Device EUI** 
    - **Join EUI / AppEUI** 
@@ -56,16 +56,16 @@ Dále vytvořte aplikaci:
 
 Klikněte na **Submit**.  
 
-![ChirStack v4 - brány](../../../../../../apps/chirpstack/chirpstack-configuration/images/chirpstack-tutorial-11.png)
+![ChirpStack v4 – přidání zařízení](../../../../../../apps/chirpstack/chirpstack-configuration/images/chirpstack-tutorial-11.png)
 
-Po vytvoření zařízení přejděte na kartu **Activation** a zadejte:  
+Po vytvoření zařízení přejděte na záložku **Activation** a zadejte:  
 - **Device Address**  
 - **Network Session Key**  
 - **Application Session Key**  
 
 Nakonec klikněte na **(Re)activate Device**.  
 
-![ChirStack v4 - brány](../../../../../../apps/chirpstack/chirpstack-configuration/images/chirpstack-tutorial-13.png)
+![ChirpStack v4 – aktivace zařízení](../../../../../../apps/chirpstack/chirpstack-configuration/images/chirpstack-tutorial-13.png)
 
 ## Videonávod {#video-tutorial}
 

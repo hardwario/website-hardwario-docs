@@ -4,27 +4,27 @@ title: Programování řízené událostmi
 ---
 import Image from '@theme/IdealImage';
 
-Většina firmwaru používá tento typ programování. Funguje tak, že se volají události vždy, když na některém modulu nebo tagu k nějaké události dojde.
+Tento způsob programování používá většina firmwarů. Pokaždé, když na některém modulu nebo tagu dojde k nějaké události, zavolá se její obsluha.
 
-Můžete si například nastavit událost, která se zavolá vždy, když se něco stane na [**Button Module**](../hardware-modules/about-button-module.md), a v této obslužné funkci můžete zjistit, co konkrétně se stalo, a podle toho provést nějakou akci.
+Můžete si například nastavit obsluhu, která se zavolá pokaždé, když se něco stane na modulu [**Button Module**](../hardware-modules/about-button-module.md). V této obslužné funkci pak zjistíte, co přesně se stalo, a podle toho zareagujete.
 
 :::info
 
-  Tento způsob programování firmwaru se mírně liší od toho popsaného v [**kapitole Task Scheduler**](./task-scheduler.md). Události jsou však někdy plánovány právě plánovačem.
+  Tento způsob programování se mírně liší od postupu popsaného v [**kapitole Plánovač úloh**](./task-scheduler.md), i když události někdy plánuje právě plánovač.
 
 :::
 
 ## Příklad programování řízeného událostmi {#example-of-event-driven-programming}
 
-Je potřeba nastavit obslužnou funkci události (event handler), tedy konkrétní funkci, která se zavolá, když nějaká událost nastane.
+Nejdřív nastavíte obslužnou funkci události (event handler), tedy funkci, která se zavolá, když událost nastane.
 
-Funkce musí mít pro každý modul a tag **specifickou signaturu**, kterou najdete v **příkladech** na [**GitHubu**](https://github.com/hardwario) nebo v kapitolách **Jak na:** v této sekci.
+Funkce musí mít pro každý modul a tag **specifickou signaturu**, kterou najdete v **příkladech** na [**GitHubu**](https://github.com/hardwario) nebo v kapitolách **„Jak na:“** v této sekci.
 
 :::info
 
-  V prvním příkladu je funkce volaná pokaždé, když na **Button Module** nastane nějaká událost.
+  V prvním příkladu se funkce volá pokaždé, když na modulu **Button Module** nastane nějaká událost.
 
-  **Button Module** je specifický tím, že u něj nemusíte nastavovat interval aktualizace jako u většiny modulů. Tlačítko lze totiž stisknout kdykoli.
+  Modul **Button Module** je výjimečný tím, že u něj na rozdíl od většiny modulů nenastavujete interval aktualizace. Tlačítko totiž může někdo stisknout kdykoli.
 
 :::
 
@@ -86,9 +86,9 @@ Příklad kódu obslužné funkce události tlačítka
 
 :::info
 
-  Ve druhém příkladu je funkce volaná pokaždé, když dojde k aktualizaci na **teplotním senzoru** integrovaném v Core Module. Interval aktualizace je nastaven na 5 sekund (5 * 1000 milisekund).
+  Ve druhém příkladu se funkce volá pokaždé, když se aktualizuje **teplotní senzor** integrovaný v modulu Core Module. Interval aktualizace je nastavený na 5 sekund (5 * 1000 milisekund).
 
-  Na rozdíl od předchozího příkladu musíte kromě obslužné funkce nastavit i **interval aktualizace**; díky tomuto intervalu bude obslužná funkce volána periodicky.
+  Na rozdíl od předchozího příkladu musíte kromě obslužné funkce nastavit i **interval aktualizace**, se kterým se pak obslužná funkce volá pravidelně.
 
 :::
 
@@ -109,7 +109,7 @@ Příklad kódu obslužné funkce události teplotního senzoru
   {
       float value;
 
-      if (event != TWR_TMP112_EVENT_ERROR)
+      if (event == TWR_TMP112_EVENT_ERROR)
       {
           return;
       }

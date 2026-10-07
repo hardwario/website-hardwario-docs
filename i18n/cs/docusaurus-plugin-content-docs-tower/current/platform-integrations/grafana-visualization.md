@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 :::info
 
-Tento návod je určen pro [**Air Quality Monitor**](https://www.hardwario.store/p/clime-xl-set) připojený k zařízení **Raspberry Pi** s nainstalovaným Hubem.
+Tento návod je určen pro [**Air Quality Monitor**](https://www.hardwario.store/p/clime-xl-set) připojený k **Raspberry Pi** s nainstalovaným Hubem.
 
-Můžete použít náš [**předinstalovaný obraz**](../server-raspberry-pi/installation-os.md) nebo [**vlastní Raspberry, na které Hub nainstalujete**](../server-raspberry-pi/installation-clean-os.md)
+Můžete použít náš [**předinstalovaný obraz**](../server-raspberry-pi/installation-os.md) nebo [**vlastní Raspberry Pi, na které Hub nainstalujete**](../server-raspberry-pi/installation-clean-os.md).
 
 :::
 
-[**Grafana**](https://grafana.com) je otevřená platforma pro přehlednou analytiku a monitoring. Umožňuje vytvářet přehledné dashboardy, které vám dají rychlý přehled o datech ze senzorů.
+[**Grafana**](https://grafana.com) je otevřená platforma pro analýzu a monitoring dat. Vytvoříte v ní vzhledné dashboardy, ze kterých rychle vyčtete, co vaše senzory naměřily.
 
 <Image img={require('../../../../../tower/platform-integrations/images/grafana-for-visualization-grafana.png')} alt="Dashboard climate-station v Grafaně s ukazateli a grafy teploty, vlhkosti, osvětlenosti a tlaku" />
 
@@ -25,11 +25,11 @@ Můžete použít náš [**předinstalovaný obraz**](../server-raspberry-pi/ins
 
 :::info
 
-Nejprve bude potřeba nainstalovat [**InfluxDB**](https://www.influxdata.com).
+Nejdřív musíte nainstalovat [**InfluxDB**](https://www.influxdata.com).
 
 :::
 
-#### Začněte instalací všech potřebných balíčků {#start-by-installing-all-the-needed-packages}
+#### Nainstalujte všechny potřebné balíčky {#start-by-installing-all-the-needed-packages}
 ```bash
 sudo apt install apt-transport-https curl -y
 ```
@@ -111,7 +111,7 @@ sudo apt install adduser libfontconfig -y
   </TabItem>
 </Tabs>
 
-#### Povolte Grafanu při startu {#enable-grafana-on-boot}
+#### Nastavte spouštění Grafany při startu systému {#enable-grafana-on-boot}
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable grafana-server
@@ -133,11 +133,11 @@ Ujistěte se, že máte nainstalovaný [**Homebrew**](https://brew.sh).
 
 :::info
 
-Nejprve bude potřeba nainstalovat [**InfluxDB**](https://www.influxdata.com).
+Nejdřív musíte nainstalovat [**InfluxDB**](https://www.influxdata.com).
 
 :::
 
-#### Nainstalujte InfluxDB a povolte ji {#install-influxdb-and-enable-it}
+#### Nainstalujte InfluxDB a zapněte její službu {#install-influxdb-and-enable-it}
 
 ```bash
 brew install influxdb
@@ -150,7 +150,7 @@ Po instalaci InfluxDB můžete přejít ke [**Grafaně**](https://grafana.com).
 
 :::
 
-#### Nainstalujte Grafanu a povolte ji {#install-grafana-and-enable-it}
+#### Nainstalujte Grafanu a zapněte její službu {#install-grafana-and-enable-it}
 
 ```bash
 brew install grafana
@@ -162,11 +162,11 @@ brew services start grafana
 
 ## Konfigurace Grafany {#configure-grafana}
 
-Chcete-li Grafanu nakonfigurovat, nejprve ji otevřete a přihlaste se:
+Grafanu nejdřív otevřete a přihlaste se do ní:
 
 - [**http://localhost:3000/**](http://localhost:3000/): Grafana běží na vašem **lokálním počítači**
 - **http://hub.local:3000/**: Grafana běží na [**vašem Raspberry Pi s nainstalovaným Hubem**](../server-raspberry-pi/installation-os.md)
-- **http://"IP adresa":3000/**: Grafana je nainstalována na vašem zařízení, měli byste znát IP adresu tohoto zařízení
+- **http://"IP adresa":3000/**: Grafana je nainstalovaná na jiném vašem zařízení; použijte jeho IP adresu
 
 :::info
 
@@ -177,13 +177,13 @@ Výchozí **heslo** je `admin`.
 
 :::warning
 
-Aby tato část fungovala bez další konfigurace, je potřeba projít návod pro [**MQTT Storage (mqtt2influxdb)**](../command-line-tools/mqtt-to-influx-db.md)
+Aby tato část fungovala bez další konfigurace, projděte nejdřív návod [**Ukládání zpráv MQTT (mqtt2influxdb)**](../command-line-tools/mqtt-to-influx-db.md).
 
 :::
 
 #### Vytvoření datového zdroje {#create-a-data-source}
 
-Zvolte **Add Data Source** a vyplňte údaje
+Zvolte **Add Data Source** a vyplňte údaje:
 
 <Image img={require('../../../../../tower/platform-integrations/images/add-data-source.png')} alt="Home Dashboard v Grafaně se zástupcem Add data source" />
 <br />
@@ -203,7 +203,7 @@ Zvolte **Add Data Source** a vyplňte údaje
 
 ## Import dashboardu {#import-dashboard}
 
-#### Stáhněte [**dashboard.json**](pathname:///tower/platform-integrations/dashboard.json) a naimportujte jej do Grafany {#download-dashboardjson-and-import-it-to-grafana}
+#### Stáhněte [**dashboard.json**](pathname:///tower/platform-integrations/dashboard.json) a naimportujte ho do Grafany {#download-dashboardjson-and-import-it-to-grafana}
 
 - Klikněte na **ikonu Grafany vlevo nahoře** (1)
 - Kliknutím na ikonu **+** rozbalte podmenu (2)
@@ -229,8 +229,8 @@ Zvolte **Add Data Source** a vyplňte údaje
 <Image img={require('../../../../../tower/platform-integrations/images/grafana-import-step-4.png')} alt="Možnosti importu s vybranou databází node (7) a tlačítkem Import (8)" />
 <br />
 
-- Váš dashboard je naimportovaný.
+- Dashboard je naimportovaný.
 
-#### Ukázkový výstup pro projekty [**Wireless Climate Monitor**](https://www.hackster.io/jakub-smejkal/radio-climate-monitor-96de57) a [**Wireless CO2 Monitor**](https://www.hackster.io/jakub-smejkal/radio-co2-monitor-311d2c) {#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects}
+#### Příklad výstupu projektů [**Wireless Climate Monitor**](https://www.hackster.io/jakub-smejkal/radio-climate-monitor-96de57) a [**Wireless CO2 Monitor**](https://www.hackster.io/jakub-smejkal/radio-co2-monitor-311d2c) {#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects}
 
 <Image img={require('../../../../../tower/platform-integrations/images/grafana-dashboard.png')} alt="Naimportovaný dashboard se statistikami climate a CO2 monitoru s grafy teploty a vlhkosti" />

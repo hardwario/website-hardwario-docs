@@ -103,7 +103,7 @@ Callbacks are messages automatically forwarded by the cloud and sent to a define
 
   * `application/octet-stream`
 
-* `Payload`: This field allows the user to transform the message content using the **JSONata** functional language. Leave this field empty if no further **JSONata** transformation is required (the payload will be passed as-is). See here for a description of **JSONata** below for an example of selecting and transforming part of the message content:
+* `Payload`: This field allows the user to transform the message content using the **JSONata** functional language. Leave this field empty if no further **JSONata** transformation is required (the payload will be passed as-is). See below for an example of selecting and transforming part of the message content:
 
   ```json
   {

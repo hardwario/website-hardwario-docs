@@ -6,7 +6,7 @@ title_meta: "Přidání koncových zařízení (videonávod ChirpStack)"
 
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4 - jak přidat koncová zařízení do sítě LoRaWAN {#chirpstack-v4---how-to-add-end-devices-to-a-lorawan-network}
+# ChirpStack v4 – jak přidat koncová zařízení do sítě LoRaWAN {#chirpstack-v4---how-to-add-end-devices-to-a-lorawan-network}
 
 ## Přehled návodu {#tutorial-overview}
 

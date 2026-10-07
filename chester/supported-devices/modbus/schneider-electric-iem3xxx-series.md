@@ -1,11 +1,11 @@
 ---
 slug: schneider-electric-iem3xxx-series
-title: Schneider Electric IEM3XXX Series
+title: Schneider Electric iEM3xxx Series
 ---
 
 import Image from '@theme/IdealImage';
 
-[Web-Site](https://www.se.com/cz/cs/product/A9MEM3255/iem3250-elektrom%C4%9Br-ct-modbus-2-digit%C3%A1ln%C3%AD-vstupy/)
+[Website](https://www.se.com/cz/cs/product/A9MEM3255/iem3250-elektrom%C4%9Br-ct-modbus-2-digit%C3%A1ln%C3%AD-vstupy/)
 
 <div class="container">
   <div class="row">
@@ -33,9 +33,9 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 ### Power Installation
 
-#### Example of Installation: Schneider Electric Energy Analyzer IEM3250
+#### Example of Installation: Schneider Electric Energy Analyzer iEM3250
 
-| **Schneider Electric Energy Analyzer IEM3250** | |
+| **Schneider Electric Energy Analyzer iEM3250** | |
 |----------------------------------------|-----------------------------------------------|
 | Pin V1                                 | **L1**                                         |
 | Pin V2                                 | **L2**                                         |
@@ -55,30 +55,30 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 #### Example of Installation: Carlo Gavazzi AC Current Transformer CTD-1X 100 5A XXX
 
 
-| **Electric Energy Analyzer IEM3250** | **Carlo Gavazzi AC Current Transformer CTD-1X 100 5A XXX** |
+| **Schneider Electric Energy Analyzer iEM3250** | **Carlo Gavazzi AC Current Transformer CTD-1X 100 5A XXX** |
 |----------------------------------------|-----------------------------------------------|
 | Pin S1                                 | **S1 (K)**                                         |
 | Pin S2                                | **S2 (L)**                                         |
 
-#### Connection Diagram (IEM3250)
+#### Connection Diagram (iEM3250)
 
-![Connection Diagram (IEM3250)](images/connection-diagram-iem3250.png)
+![Connection Diagram (iEM3250)](images/connection-diagram-iem3250.png)
 
 ---
 
 ### Modbus Communication
 
-#### Example of Modbus Communication Installation: Schneider Electric Energy Analyzer IEM3250
+#### Example of Modbus Communication Installation: Schneider Electric Energy Analyzer iEM3250
 
-| **Schneider Electric Energy Analyzer IEM3250** | **CHESTER Modbus** |
+| **Schneider Electric Energy Analyzer iEM3250** | **CHESTER Modbus** |
 |---------------------------|--------------------|
 | Pin D0/-                     | Pin 6 (A−)      |
 | Pin D1/+                    | Pin 7 (B+)        |
 | Pin 0V                    | Pin 1 (GND)        |
 
-#### Modbus communication (IEM3250)
+#### Modbus communication (iEM3250)
 
-![Modbus communication (IEM3250)](images/modbus-communication-iem3250.png)
+![Modbus communication (iEM3250)](images/modbus-communication-iem3250.png)
 
 ---
 
@@ -105,7 +105,6 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
    • Address  
    • Baud Rate  
    • Parity  
-   • Stop Bit 
    • Stop Bit   
 7. Continue using the `▼` (**Arrow button**) button to scroll to the end of the menu.  
 8. At the `Exit Config` option, press the `OK` button to confirm and save the settings.
@@ -147,7 +146,7 @@ config save
  The CT ratio is selected based on the maximum expected primary current. For example, if the system's maximum current is around 100 A, a 100:5 CT (20 CT) is chosen to step this down to 5 A for measurement devices.
 
 :::
->
+
 ### Measured values
 
 | Measured Value | Key / Path                                   |

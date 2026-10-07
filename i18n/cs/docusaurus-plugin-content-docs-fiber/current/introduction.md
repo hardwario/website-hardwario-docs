@@ -1,7 +1,7 @@
 ---
 slug: /
 title: FIBER
-description: "FIBER je robustní průmyslové zařízení IoT postavené na platformě embedded Linux a určené pro průmyslové IoT aplikace."
+description: "FIBER je robustní průmyslové zařízení IoT postavené na platformě embedded Linux a určené pro aplikace průmyslového IoT."
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
@@ -10,31 +10,31 @@ import Image from '@theme/IdealImage';
 
 :::info Máte zařízení FIBER Lite?
 
-**FIBER Lite** je varianta zařízení FIBER pro testování na stole, postavená na Raspberry Pi 5. Vše na této stránce
-popisuje průmyslové zařízení FIBER založené na CM4, ale [**Instalace**](installation) (nebo
-[**Rychlý průvodce**](first-steps)) níže je **stejný postup pro obě varianty**, se
-záložkami na několika místech, kde se postup rozchází, včetně kompletního stacku ChirpStack, Node-RED, InfluxDB,
-Grafana a Dashboard. Jediné skutečné rozdíly jsou hardwarové (žádný displej, žádné senzory 1-Wire
-u zařízení FIBER Lite), viz [**FIBER Lite**](fiber-lite/introduction) v postranním panelu.
+**FIBER Lite** je varianta zařízení FIBER pro testování na stole, postavená na Raspberry Pi 5. Tato stránka
+popisuje průmyslové zařízení FIBER s modulem CM4, stránky [**Instalace**](installation) (nebo
+[**Rychlý průvodce**](first-steps)) níže ale popisují **stejný postup pro obě varianty** včetně celého stacku
+ChirpStack, Node-RED, InfluxDB, Grafana a Dashboard; na několika místech, kde se postup liší, mají záložky.
+Skutečné rozdíly jsou jen v hardwaru (FIBER Lite nemá displej ani senzory 1-Wire), viz
+[**FIBER Lite**](fiber-lite/introduction) v postranním panelu.
 
 :::
 
-**FIBER** je robustní průmyslové IoT zařízení postavené na platformě **embedded Linux** a navržené pro **průmyslové IoT aplikace**. Integruje jak **bezdrátové rádio 868/915 MHz**, tak **8kanálový hub pro senzory/aktuátory 1-Wire**.
+**FIBER** je robustní průmyslové zařízení IoT postavené na platformě **embedded Linux** a určené pro **aplikace průmyslového IoT**. Integruje **bezdrátové rádio 868/915 MHz** i **8kanálový hub 1-Wire pro senzory a akční členy**.
 
-Díky své modulární a otevřené architektuře podporuje zařízení **FIBER** standardní distribuce **Raspberry Pi OS** i **vlastní linuxové image vytvořené pomocí Yocto**, takže jej lze použít jako předkonfigurované měřicí zařízení nebo jako vývojovou platformu. Zařízení je navrženo pro nasazení v průmyslovém a komerčním prostředí a poskytuje bezdrátové i drátové komunikační kanály pro spolehlivý sběr dat ze senzorů, lokální vizualizaci na integrovaném displeji a robustní síťové připojení přes **Ethernet**, **Wi-Fi** nebo volitelně **LTE**.
+Díky modulární a otevřené architektuře podporuje zařízení **FIBER** standardní distribuce **Raspberry Pi OS** i **vlastní linuxové image sestavené pomocí Yocto**, takže ho lze použít jako předem nakonfigurované měřicí zařízení i jako vývojovou platformu. Zařízení je určené pro nasazení v průmyslovém a komerčním prostředí. Nabízí bezdrátové i drátové komunikační kanály pro spolehlivý sběr dat ze senzorů, lokální vizualizaci na integrovaném displeji a odolné síťové připojení přes **Ethernet**, **Wi-Fi** nebo volitelně **LTE**.
 
 <img src="/img/fiber.webp" data-zoom-src="/img/fiber.webp" width="540" alt="FIBER" />
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Instalace**](installation): Zavedení a konfigurace linuxového systému na zařízení FIBER.
-* [**Popis hardwaru**](category/hardware-description): Výpočetní platforma, senzorová rozhraní, konektivita a kompletní technické specifikace.
+* [**Instalace**](installation): Instalace a konfigurace linuxového systému na zařízení FIBER.
+* [**Popis hardwaru**](category/hardware-description): Výpočetní platforma, rozhraní pro senzory, konektivita a úplné technické specifikace.
 * [**Seznam změn**](changelog): Nejnovější změny firmwaru a platformy.
 
-## Typické případy použití {#typical-use-cases}
+## Typické využití {#typical-use-cases}
 
-- Monitorování prostředí v nemocnicích na odděleních, v lékárnách a skladech
-- Monitorování farmaceutického chladového řetězce s ukládanou historií teplot a výstrahami při odchylkách
+- Monitorování prostředí v nemocnicích: na odděleních, v lékárnách a skladech
+- Monitorování farmaceutického chladového řetězce se záznamem historie teplot a upozorněním na odchylky
 - Monitorování chladicích zařízení v maloobchodě, aby se zboží nezkazilo
 - Laboratorní prostředí vyžadující přesnou regulaci teploty
 - Monitorování teploty v energetické infrastruktuře (transformátory, rozvaděče)
@@ -45,11 +45,11 @@ Díky své modulární a otevřené architektuře podporuje zařízení **FIBER*
 | Vlastnost | Popis |
 |---|---|
 | **Platforma embedded Linux** | Kompatibilní s Raspberry Pi OS nebo vlastními image založenými na Yocto. |
-| **Hybridní integrace senzorů** | Bezdrátové senzory v ISM pásmu 868 MHz plus 8 plně nezávislých portů 1-Wire pro drátové senzory. |
-| **Průmyslové provedení** | Provozní rozsah –20 °C až +60 °C, postaveno na modulu Compute Module 4 pro dlouhodobou spolehlivost. |
+| **Hybridní integrace senzorů** | Bezdrátové senzory v pásmech ISM 868/915 MHz a navíc 8 plně nezávislých portů 1-Wire pro drátové senzory. |
+| **Průmyslové provedení** | Rozsah provozních teplot –20 °C až +60 °C; základem je modul Compute Module 4 kvůli dlouhodobé spolehlivosti. |
 | **Flexibilní konektivita** | Ethernet, Wi-Fi, BLE nebo volitelný modul LTE Cat 4. |
 | **Lokální vizualizace a diagnostika** | LCD s podsvícením, stavové LED pro každý kanál a integrovaný akustický bzučák. |
-| **Power-over-Ethernet** | Napájení přes PoE, se zálohovací Li-Ion baterií na desce. |
+| **Power-over-Ethernet** | Napájení přes PoE se záložní baterií Li-Ion na desce. |
 | **Plný root přístup k Linuxu** | Podpora Dockeru pro vývoj vlastního firmwaru a aplikací. |
 | **Zabezpečený MQTT** | Protokol MQTT se šifrováním TLS pro bezpečný přenos dat. |
-| **Otevřené cíle pro data** | Data posíláte do vlastních systémů. Otevřená linuxová platforma zvládne v podstatě jakýkoli protokol, který váš projekt potřebuje. |
+| **Otevřené cílové systémy pro data** | Data posíláte do vlastních systémů. Na otevřené linuxové platformě poběží v podstatě jakýkoli protokol, který váš projekt potřebuje. |

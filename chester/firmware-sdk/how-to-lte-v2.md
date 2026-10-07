@@ -12,7 +12,7 @@ LTE v2 is using a newer UDP protocol that supports downlink messages and automat
 
 Downlink messages or configuration messages can be sent by API or in the HARDWARIO Cloud v2 user interface.
 
-Configuration messages `app config ...` can be send to any device using LTE v2. There is no need to add anything to your application, the `ctr_cloud` subsystem takes care of all.
+Configuration messages `app config ...` can be sent to any device using LTE v2. There is no need to add anything to your application, the `ctr_cloud` subsystem takes care of all.
 
 Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to Cloud v2 and you can take an inspiration.
 
@@ -22,7 +22,7 @@ Currently all the catalog applications in CHESTER SDK `applications/*` folder ar
 
 Simple example where you need just a CHESTER-M mainboard and you can uplink data and downlink commands to change LED or change configuration.
 
-After you [flash LTE modem](#flash-lte-modem-firmware) to `v1.7.0` or higer, you can flash APP/BLE MCU with CHESTER Demo with [HARDWARIO CLI](../developer-tools/command-line-tools.md) by typing:
+After you [flash LTE modem](#flash-lte-modem-firmware) to `v1.7.0` or higher, you can flash APP/BLE MCU with CHESTER Demo with [HARDWARIO CLI](../developer-tools/command-line-tools.md) by typing:
 
 `hardwario chester app flash f702b81a61a54cd984b4ee0e594e65df`
 
@@ -32,7 +32,7 @@ https://github.com/hardwario/chester-sdk/tree/main/applications/demo
 
 This is an improved [CHESTER Input](../catalog-applications/legacy/chester-input.md) application.
 
-After you [flash LTE modem](#flash-lte-modem-firmware) to `v1.7.0` or higer, you can flash APP/BLE MCU with CHESTER Control with [HARDWARIO CLI](../developer-tools/command-line-tools.md) by typing:
+After you [flash LTE modem](#flash-lte-modem-firmware) to `v1.7.0` or higher, you can flash APP/BLE MCU with CHESTER Control with [HARDWARIO CLI](../developer-tools/command-line-tools.md) by typing:
 
 `hardwario chester app flash a1201384db424cb394b5e9130293f708`
 
@@ -77,11 +77,11 @@ Encoder and decoder `.yaml` files now have these changes:
 - It is fully hierarchical now. You have to define the complete tree that will then become JSON.
 - [Modificators](how-to-cbor.md#modificators) like `div`, `fpp`, `key`, `tso`,... now have `$` prefix.
 
-YAML files are generated to the C `.h` file by using command `west gen-codec` run from your application folder (where your run `west build`).
+YAML files are generated to the C `.h` file by using command `west gen-codec` run from your application folder (where you run `west build`).
 
 Instead of ~~`msg_key.h`~~, now the YAML is generated to the `src/app_codec.h` file.
 
-Update your `app_cbor.c` to the new hierarchival definitions. Each level is divided by double underscores, for example, `CODEC_KEY_E_NETWORK__PARAMETER__EEST`.
+Update your `app_cbor.c` to the new hierarchical definitions. Each level is divided by double underscores, for example, `CODEC_KEY_E_NETWORK__PARAMETER__EEST`.
 Also don't forget to include a new header file `#include "app_codec.h"`.
 
 ### Initialization

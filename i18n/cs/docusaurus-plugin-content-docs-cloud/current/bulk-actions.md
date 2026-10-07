@@ -6,54 +6,54 @@ description: "Hromadnými akcemi v HARDWARIO Cloud nastavíte nebo spravujete mn
 
 # Hromadné akce {#bulk-actions}
 
-**Hromadné akce** umožňují konfigurovat nebo spravovat **mnoho zařízení najednou** místo jednoho po druhém,
-což se hodí při nasazení celé flotily zařízení CHESTER, která mají mít stejnou konfiguraci, firmware,
+**Hromadnými akcemi** nastavíte nebo spravujete **mnoho zařízení najednou**, ne jedno po druhém.
+Hodí se to při plošném nasazení flotily zařízení CHESTER, která mají mít stejnou konfiguraci, firmware,
 tagy nebo labely.
 
 ## Výběr zařízení {#selecting-devices}
 
-Na stránce **Devices** zaškrtněte políčko u každého zařízení, které chcete zahrnout (nebo políčko
-v záhlaví pro výběr všech). Tlačítko **BULK ACTIONS** ukazuje, kolik zařízení je vybráno. Kliknutím
+Na stránce **Devices** zaškrtněte políčko u každého zařízení, které chcete zahrnout (nebo políčkem
+v záhlaví vyberte všechna). Tlačítko **BULK ACTIONS** ukazuje, kolik zařízení je vybráno. Kliknutím
 na něj otevřete dialog hromadných akcí.
 
 ![Stránka Devices se třemi vybranými zařízeními a aktivním tlačítkem BULK ACTIONS](../../../../cloud/images/bulk-actions.png)
 
 ## Spuštění akce {#running-an-action}
 
-Dialog zobrazuje počet **vybraných zařízení** a nabízí pět karet, jednu pro každý druh akce.
-Zaškrtnutím **Save as batch (track progress)** se operace zaznamená jako dávka, takže můžete
-následně sledovat její průběh. Kliknutím na **RUN** akci aplikujete na všechna vybraná zařízení.
+Dialog zobrazuje počet **vybraných zařízení** a nabízí pět záložek, jednu pro každý druh akce.
+Když zaškrtnete **Save as batch (track progress)**, operace se zaznamená jako dávka a její průběh
+můžete později sledovat. Tlačítkem **RUN** akci provedete na všech vybraných zařízeních.
 
 ### Config {#config}
 
-Odešlete příkazy `app config` do všech vybraných zařízení, stejně jako
-[**Config downlink**](/cloud/downlink/config), ale hromadně. Příkazy zadejte jako **Text** nebo
-**JSON**. U nasazení CHESTER wM-Bus můžete adresy zařízení také importovat ze souboru.
+Odešlete příkazy `app config` do všech vybraných zařízení. Funguje to stejně jako
+[**downlink konfigurace**](/cloud/downlink/config), jen hromadně. Příkazy zadejte jako **Text** nebo
+**JSON**. U nasazení se zařízeními CHESTER wM-Bus můžete adresy zařízení importovat také ze souboru.
 
-![Dialog hromadných akcí na kartě Config s příkazy app config](../../../../cloud/images/bulk-config.png)
+![Dialog hromadných akcí na záložce Config s příkazy app config](../../../../cloud/images/bulk-config.png)
 
 ### Firmware {#firmware}
 
 Aktualizujte firmware všech vybraných zařízení bezdrátově. Zadejte **identifikátor firmwaru**, který
-se má nasadit (viz [**Firmware**](/cloud/firmware)).
+chcete nasadit (viz [**Firmware**](/cloud/firmware)).
 
-![Dialog hromadných akcí na kartě Firmware s polem pro identifikátor firmwaru](../../../../cloud/images/bulk-firmware.png)
+![Dialog hromadných akcí na záložce Firmware s polem pro identifikátor firmwaru](../../../../cloud/images/bulk-firmware.png)
 
 ### Tags {#tags}
 
 Přidejte, odeberte nebo nahraďte [**tagy**](/cloud/tags) na vybraných zařízeních. Zvolte **operaci**
 (Add / Remove / Replace) a vyberte tagy, které se mají použít.
 
-![Dialog hromadných akcí na kartě Tags s operacemi Add / Remove / Replace](../../../../cloud/images/bulk-tags.png)
+![Dialog hromadných akcí na záložce Tags s operacemi Add / Remove / Replace](../../../../cloud/images/bulk-tags.png)
 
 ### Comment {#comment}
 
-Nastavte, doplňte nebo smažte komentář na vybraných zařízeních (až 500 znaků).
+Nastavte, doplňte nebo smažte komentář u vybraných zařízení (až 500 znaků).
 
-![Dialog hromadných akcí na kartě Comment s operacemi Set / Append / Clear](../../../../cloud/images/bulk-comment.png)
+![Dialog hromadných akcí na záložce Comment s operacemi Set / Append / Clear](../../../../cloud/images/bulk-comment.png)
 
 ### Labels {#labels}
 
-Přidejte, aktualizujte, odeberte nebo nahraďte **labely** (páry název–hodnota) na vybraných zařízeních.
+Přidejte, aktualizujte, odeberte nebo nahraďte **labely** (páry název–hodnota) u vybraných zařízení.
 
-![Dialog hromadných akcí na kartě Labels s poli pro název a hodnotu](../../../../cloud/images/bulk-labels.png)
+![Dialog hromadných akcí na záložce Labels s poli pro název a hodnotu](../../../../cloud/images/bulk-labels.png)

@@ -1,11 +1,11 @@
 ---
 slug: chester-z1
-title: CHESTER-Z1 (Batt. Button LED)
+title: CHESTER-Z1 (baterie, tlačítka, LED)
 ---
 import Image from '@theme/IdealImage';
 
 # CHESTER-Z1 {#chester-z1}
-Tento článek popisuje rozšiřující modul do horního krytu **CHESTER-Z1**.
+Tento článek popisuje rozšiřující modul **CHESTER-Z1**, který se montuje pod horní kryt.
 
 <div class="container">
   <div class="row">
@@ -20,15 +20,15 @@ Tento článek popisuje rozšiřující modul do horního krytu **CHESTER-Z1**.
 
 ## Přehled modulu {#module-overview}
 
-**CHESTER-Z1** kombinuje zálohování pomocí dobíjecí lithium-iontové baterie, široký rozsah vstupního napájecího napětí a volitelné rozhraní člověk-stroj (HMI) s podsvícenými tlačítky a akustickou zpětnou vazbou. Primárně se používá se zařízením **CHESTER-M** (základní deska), ale lze jej použít i s [**HARDWARIO TOWER**](/tower/) a ekosystémy třetích stran, jako jsou **Raspberry Pi**, **Arduino**, **ESP** atd. Modul se instaluje pod horní kryt krabičky řady Takachi WP13-18.
+Modul **CHESTER-Z1** spojuje záložní napájení z dobíjecí baterie Li-Ion, napájecí vstup se širokým rozsahem napětí a volitelné rozhraní člověk-stroj (HMI) s podsvícenými tlačítky a akustickou zpětnou vazbou. Používá se hlavně se základní deskou **CHESTER-M**, ale funguje i s platformou [**HARDWARIO TOWER**](/tower/) a ekosystémy třetích stran, jako jsou **Raspberry Pi**, **Arduino**, **ESP** atd. Modul se montuje pod horní kryt krabičky řady Takachi WP13-18.
 
-**CHESTER-Z1** poskytuje digitální komunikační rozhraní I2C (v roli slave).
+Modul **CHESTER-Z1** komunikuje přes digitální rozhraní I2C (v roli slave).
 
-Přes I2C je k dispozici následující funkcionalita:
+Přes I2C jsou dostupné tyto funkce:
 
-1. **HMI příkazy: tj. ovládání LED a bzučáku**
-   1. Jednorázová popředí indikace
-   2. Kontinuální vzory na pozadí
+1. **Příkazy HMI, tj. ovládání LED a bzučáku**
+   1. Jednorázová indikace v popředí
+   2. Trvalé vzory na pozadí
 2. **Detekce událostí**
    1. Události tlačítek (stisk, uvolnění, kliknutí, podržení)
    2. Události napětí DC linky (připojení, odpojení)
@@ -38,44 +38,44 @@ Přes I2C je k dispozici následující funkcionalita:
    3. Stav tlačítka
 4. Identifikace produktu a informace o verzi
 
-Toto jsou typické případy použití modulu **CHESTER-Z1** (možné jsou i další scénáře):
+Typická využití modulu **CHESTER-Z1** (možné jsou i další scénáře):
 
-* Případ použití 1 (CHESTER-Z1):
-  * Fotovoltaický solární panel nebo DC napájení se zálohou pro **CHESTER**
-  * Napájení systému z baterie modulu **CHESTER-Z1** (dobíjitelné z fotovoltaického solárního panelu nebo DC napájení 6-28 V)
-* Případ použití 2 (CHESTER-Z1-X):
+* Využití 1 (CHESTER-Z1):
+  * Napájení zařízení **CHESTER** z fotovoltaického panelu nebo stejnosměrného zdroje se zálohou
+  * Napájení systému z baterie modulu **CHESTER-Z1** (baterie se dobíjí z fotovoltaického panelu nebo stejnosměrného zdroje 6-28 V)
+* Využití 2 (CHESTER-Z1-X):
   * Jedno podsvícené tlačítko a akustická zpětná vazba
-  * Napájení systému ze zařízení **CHESTER-M** (2x článek AA nebo **CHESTER-X4**)
-* Případ použití 3 (CHESTER-Z1-F):
+  * Napájení systému ze základní desky **CHESTER-M** (2 články AA nebo modul **CHESTER-X4**)
+* Využití 3 (CHESTER-Z1-F):
   * Čtyři podsvícená tlačítka a akustická zpětná vazba
-  * Napájení systému z baterie modulu **CHESTER-Z1** (dobíjitelné z externího DC napětí)
+  * Napájení systému z baterie modulu **CHESTER-Z1** (baterie se dobíjí z externí stejnosměrné linky)
 
-Více podrobností najdete v [**objednacích kódech**](../ordering-codes.md#chester-z).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md#chester-z).
 
 ## Technická specifikace {#technical-specification}
 
-* Rozsah vstupního DC napětí (VIN): **6-28 VDC**, vhodné i pro **solární panel 12-18 V\***
+* Rozsah vstupního stejnosměrného napětí (VIN): **6-28 VDC**, vhodné i pro **solární panel 12-18 V\***
 * Jmenovité napětí baterie: **3,7 V**
 * Nabíjecí proud baterie: **100 mA**
-* Klidová spotřeba baterie **55 μA** (bez CHESTER-M)
+* Klidový odběr z baterie **55 μA** (bez desky CHESTER-M)
 * Doporučený typ baterie pro venkovní použití: Samsung ICR18650-22P**
-* Provozní teplota: **-40 až +70 °C** (bez Li-Ion baterie)
-* Skladovací teplota: **-40 až +85 °C** (bez Li-Ion baterie)
+* Provozní teplota: **-40 až +70 °C** (bez baterie Li-Ion)
+* Skladovací teplota: **-40 až +85 °C** (bez baterie Li-Ion)
 
-_\*Optimální fotovoltaický solární panel pro CHESTER: 12 V / 10 W_
+_\*Optimální fotovoltaický panel pro zařízení CHESTER: 12 V / 10 W_
 
-_\** Vhodné pro aplikaci se solárním panelem, teplotní rozsah nabíjení -20 až +45 °C, vybíjení -20 až +70 °C_
+_\** Vhodná pro napájení ze solárního panelu; rozsah teplot pro nabíjení -20 až +45 °C, pro vybíjení -20 až +70 °C_
 
-## Nabíječ baterie a ochranný obvod {#battery-charger-and-protection-circuit}
-**CHESTER-Z1** využívá nabíjecí obvod MCP73833 a ochranný obvod AP9101C, který chrání baterii detekcí přepětí při nabíjení, podpětí při vybíjení a nadproudu při nabíjení/vybíjení.
+## Nabíječka baterie a ochranný obvod {#battery-charger-and-protection-circuit}
+Modul **CHESTER-Z1** má nabíjecí obvod MCP73833 a ochranný obvod AP9101C, který baterii chrání: hlídá přepětí při nabíjení, podpětí při vybíjení a nadměrný nabíjecí i vybíjecí proud.
 
 :::caution
 
-Pro první spuštění při napájení z baterie bez DC vstupního napájení** je nutné dlouze stisknout tlačítko Bypass (BYPASS)**.
+Chcete-li zařízení poprvé spustit z baterie bez stejnosměrného napájení, je nutné **dlouze stisknout tlačítko Bypass (BYPASS)**.
 
 :::
 
-Díky nízkému nabíjecímu proudu (100 mA) je teplotní rozsah nabíjení rozšířen na -20 až +45 °C. Optimálním typem Li-Ion baterie pro venkovní aplikace při nízkých teplotách je Samsung ICR18650-22P.
+Díky nízkému nabíjecímu proudu (100 mA) se rozsah teplot pro nabíjení rozšiřuje na -20 až +45 °C. Pro venkovní použití při nízkých teplotách je nejvhodnější baterie Li-Ion Samsung ICR18650-22P.
 
 ## Výkres modulu {#module-drawing}
 
@@ -85,25 +85,25 @@ Díky nízkému nabíjecímu proudu (100 mA) je teplotní rozsah nabíjení roz�
 
 | Pozice   | Název   | Popis signálu                       |
 | -------- | ------- | ----------------------------------- |
-| JP1      | VIN     | JST konektor DC napájení 6-28 V     |
-| JP2      | VIN     | Svorka DC napájení 6-28 V           |
-| JP4      | SYSTEM  | JST konektor CHESTER SYSTEM         |
-| JP5      | SWD     | Konektor MCU SWD / debug            |
-| BT1      | BATTERY | Držák Li-Ion baterie 18650          |
-| S6       | BYPASS  | Tlačítko obejití ochrany baterie*   |
+| JP1      | VIN     | Konektor JST pro stejnosměrné napájení 6-28 V |
+| JP2      | VIN     | Svorkovnice pro stejnosměrné napájení 6-28 V |
+| JP4      | SYSTEM  | Konektor JST CHESTER SYSTEM         |
+| JP5      | SWD     | Ladicí konektor SWD mikrokontroléru |
+| BT1      | BATTERY | Držák baterie Li-Ion 18650          |
+| S6       | BYPASS  | Tlačítko pro obejití ochrany baterie* |
 
-_\* Tlačítko BYPASS použijte pro spuštění z baterie bez DC vstupního napájení_
+_\* Tlačítkem BYPASS spustíte zařízení z baterie, i když není připojené stejnosměrné napájení_
 
-## Popis pinoutu konektoru SYSTEM {#system-connector-pinout-description}
+## Zapojení konektoru SYSTEM {#system-connector-pinout-description}
 
 ![Piny 1–7 konektoru SYSTEM přiřazené k NC, +V, GND, VDD, SCL, SDA, INT](../../../../../chester/extension-modules/images/system.png)
 
 ## Blokové schéma {#block-diagram}
-![Blokové schéma: chráněný DC vstup, regulátory, Li-Ion nabíječ a ochrana, MCU Cortex-M0+, HMI, systémový konektor](../../../../../chester/extension-modules/images/chester-z-block-diagram.png)
+![Blokové schéma: chráněný stejnosměrný vstup, stabilizátory, nabíječka a ochrana baterie Li-Ion, MCU Cortex-M0+, HMI, systémový konektor](../../../../../chester/extension-modules/images/chester-z-block-diagram.png)
 
 ## Schéma zapojení {#schematic-diagram}
 
-Schéma zapojení je užitečné, pokud programujete nízkoúrovňový kód související s hardwarem nebo pokud vás jen zajímá, jak je systém navržen.
+Schéma zapojení se hodí, pokud programujete nízkoúrovňový kód blízko hardwaru, nebo když vás zajímá, jak je systém navržený.
 
 - [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-z1-r2.1.pdf)
 
@@ -111,8 +111,8 @@ Schéma zapojení je užitečné, pokud programujete nízkoúrovňový kód souv
 - [TODO Interactive PCB connector, part, testpoint and signal browser]
 -->
 
-![Schéma CHESTER-Z1 R2.1, strana 1: DC vstup 6-26 V, eFuse, step-down měniče a konektor SYSTEM](../../../../../chester/extension-modules/images/hio-chester-z1-r2.1-1.png)
-![Schéma CHESTER-Z1 R2.1, strana 2: Li-Ion nabíječ MCP73833, ochrana baterie AP9101C a tlačítko bypass](../../../../../chester/extension-modules/images/hio-chester-z1-r2.1-2.png)
-![Schéma CHESTER-Z1 R2.1, strana 3: MCU STM32L010, debug konektor, výstup přerušení a měření napětí](../../../../../chester/extension-modules/images/hio-chester-z1-r2.1-3.png)
-![Schéma CHESTER-Z1 R2.1, strana 4: pinout konektoru KIT pro HARDWARIO TOWER s tranzistorem signálu INT](../../../../../chester/extension-modules/images/hio-chester-z1-r2.1-4.png)
-![Schéma CHESTER-Z1 R2.1, strana 5: dva RGB LED drivery LP55231, pět tlačítek a bzučák](../../../../../chester/extension-modules/images/hio-chester-z1-r2.1-5.png)
+![Schéma CHESTER-Z1 R2.1, list 1: stejnosměrný vstup 6-26 V, eFuse, snižující měniče a konektor SYSTEM](../../../../../chester/extension-modules/images/hio-chester-z1-r2.1-1.png)
+![Schéma CHESTER-Z1 R2.1, list 2: nabíječka Li-Ion MCP73833, ochrana baterie AP9101C a tlačítko bypass](../../../../../chester/extension-modules/images/hio-chester-z1-r2.1-2.png)
+![Schéma CHESTER-Z1 R2.1, list 3: MCU STM32L010, ladicí konektor, výstup přerušení a měření napětí](../../../../../chester/extension-modules/images/hio-chester-z1-r2.1-3.png)
+![Schéma CHESTER-Z1 R2.1, list 4: zapojení konektoru KIT pro HARDWARIO TOWER s tranzistorem signálu INT](../../../../../chester/extension-modules/images/hio-chester-z1-r2.1-4.png)
+![Schéma CHESTER-Z1 R2.1, list 5: dva budiče RGB LED LP55231, pět tlačítek a bzučák](../../../../../chester/extension-modules/images/hio-chester-z1-r2.1-5.png)

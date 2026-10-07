@@ -7,22 +7,22 @@ import EditCodeBlock from '../../../../../apps/thingsboard/edit-code-block.js';
 
 # Připojení k HARDWARIO Cloud {#connecting-to-the-hardwario-cloud}
 
-V tomto návodu se naučíte, jak připojit svá zařízení k HARDWARIO Cloud vytvořením nového konektoru, transformací dat a jejich odesláním do platformy ThingsBoard. Na konci vám budou data do platformy plynout automaticky.
+V tomto návodu se naučíte propojit zařízení v HARDWARIO Cloud s platformou ThingsBoard: vytvoříte nový konektor, data transformujete a odešlete je do ThingsBoard. Pak už budou data do platformy přicházet automaticky.
 
 ---
 
-## Krok 1: Připravte své zařízení {#step-1-prepare-your-device}
+## Krok 1: Připravte zařízení {#step-1-prepare-your-device}
 
-Než konektor nastavíte, musíte své zařízení připravit v HARDWARIO Cloud, aby vědělo, kam data posílat a jak se autentizovat:
+Než konektor nastavíte, připravte zařízení v HARDWARIO Cloud tak, aby vědělo, kam data posílat a jak se autentizovat:
 
-- **Přiřaďte tag**: otevřete detail svého zařízení a přiřaďte mu tag (vytvořený v pravém menu)
-- **Přidejte label s access tokenem**: sjeďte na úplný konec stránky zařízení k sekci `Labels`. Tam vytvořte nový label:
-  - `Name`: zadejte název svého tokenu, například `thingsboardtoken`  
-    *(Poznámka: Název si můžete zvolit jakýkoli, ale musí být úplně stejný u všech zařízení, která tento konektor sdílejí, a musí odpovídat názvu ve vašem transformačním kódu.)*
-  - `Value`: sem vložte svůj access token z platformy ThingsBoard
+- **Přiřaďte tag**: otevřete detail zařízení a přiřaďte mu tag (tagy se vytvářejí v pravém menu)
+- **Přidejte label s access tokenem**: sjeďte na stránce zařízení úplně dolů k sekci `Labels` a vytvořte v ní nový label:
+  - `Name`: zadejte název tokenu, například `thingsboardtoken`  
+    *(Poznámka: Název si můžete zvolit jakýkoli, ale musí být úplně stejný u všech zařízení, která tento konektor sdílejí, a musí odpovídat názvu v transformačním kódu.)*
+  - `Value`: vložte access token zařízení z ThingsBoard
 
 :::info Jak získat access token z platformy ThingsBoard
-Přihlaste se do své instance ThingsBoard, přejděte na **Entities > Devices** a klikněte na své konkrétní zařízení. V panelu s detailem zařízení, který vyskočí, klikněte na tlačítko **Copy access token**.
+Přihlaste se do své instance ThingsBoard, přejděte na **Entities > Devices** a klikněte na příslušné zařízení. V panelu s detailem zařízení, který se otevře, klikněte na tlačítko **Copy access token**.
 :::
 
 ---
@@ -32,21 +32,21 @@ Přihlaste se do své instance ThingsBoard, přejděte na **Entities > Devices**
 Chcete-li navázat komunikaci s platformou ThingsBoard, přejděte v levém menu do sekce `Connectors`.  
 Klikněte na `+ New Connector` a nastavte:
 
-- `Name`: pojmenujte svůj konektor
+- `Name`: pojmenujte konektor
 - `Type`: pro integraci s platformou ThingsBoard zvolte `Webhook`
 - `Trigger`: zvolte `Data`
 - `Tag`: přiřaďte tag, který jste vytvořili dříve
 
-![ThingsBoard - vytvoření nového konektoru](../../../../../apps/thingsboard/images/thingsboard-cloud-1.png)
+![ThingsBoard – vytvoření nového konektoru](../../../../../apps/thingsboard/images/thingsboard-cloud-1.png)
 
 ---
 
 ## Krok 3: Transformujte data do formátu ThingsBoard {#step-3-transform-data-for-thingsboard-format}
 
-ThingsBoard vyžaduje konkrétní formát dat. Data ze svého zařízení proto musíte upravit **transformačním kódem**.  
+ThingsBoard vyžaduje konkrétní formát dat. Data ze zařízení proto upravíte **transformačním kódem**.  
 Na stránce konektoru sjeďte do sekce `Transformation` a kliknutím na ikonu lupy 📄🔍 otevřete editor kódu.
 
-![ThingsBoard - transformace dat do formátu ThingsBoard](../../../../../apps/thingsboard/images/thingsboard-cloud-4.png)
+![ThingsBoard – transformace dat do formátu ThingsBoard](../../../../../apps/thingsboard/images/thingsboard-cloud-4.png)
 
 ---
 
@@ -54,7 +54,7 @@ Na stránce konektoru sjeďte do sekce `Transformation` a kliknutím na ikonu lu
 
 Přidejte transformační logiku, která příchozí data převede do formátu kompatibilního s platformou ThingsBoard.
 
-![ThingsBoard - vložení transformačního kódu](../../../../../apps/thingsboard/images/thingsboard-cloud-6.png)
+![ThingsBoard – vložení transformačního kódu](../../../../../apps/thingsboard/images/thingsboard-cloud-6.png)
 
 **Ukázka transformačního kódu:**
 
@@ -221,17 +221,17 @@ Na levé straně uvidíte **příchozí data** ze zařízení.
 Na pravé straně uvidíte **transformovaná data** odesílaná do platformy ThingsBoard.
 
 
-![ThingsBoard - přiřazení zařízení ke konektoru](../../../../../apps/thingsboard/images/thingsboard-cloud-7.png)
+![ThingsBoard – přiřazení zařízení ke konektoru](../../../../../apps/thingsboard/images/thingsboard-cloud-7.png)
 
 ---
 
-Až bude všechno správně nastavené, měla by data z vašeho zařízení začít do platformy ThingsBoard plynout automaticky.
+Až bude všechno správně nastavené, data ze zařízení by měla začít automaticky přicházet do ThingsBoard.
 
 :::tip
-Data si můžete otestovat tak, že si své zařízení otevřete v platformě ThingsBoard a zkontrolujete, jestli se proměnné aktualizují v reálném čase. Najdete je po kliknutí na zařízení na kartě **Latest Telemetry**.
+Příjem dat ověříte tak, že zařízení otevřete v ThingsBoard a zkontrolujete, jestli se proměnné aktualizují v reálném čase. Najdete je po kliknutí na zařízení na záložce **Latest Telemetry**.
 :::
 
-![Thingsboard - Latest Telemetry](../../../../../apps/thingsboard/images/thingsboard-device-6.png)
+![ThingsBoard – Latest Telemetry](../../../../../apps/thingsboard/images/thingsboard-device-6.png)
 
 ## Videonávod {#video-tutorial}
 

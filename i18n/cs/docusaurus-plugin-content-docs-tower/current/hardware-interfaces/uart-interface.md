@@ -4,36 +4,36 @@ title: Rozhraní UART
 ---
 import Image from '@theme/IdealImage';
 
-**UART** neboli **U**niversal **A**synchronous **R**eceiver-**T**ransmitter je asynchronní komunikační rozhraní používané většinou k přenosu sériových dat mezi zařízeními. K odesílání dat používá pouze dva kanály **RX** (přijímač) a **TX** (vysílač), není potřeba připojovat žádný hodinový signál.
+**UART** neboli **U**niversal **A**synchronous **R**eceiver-**T**ransmitter je asynchronní komunikační rozhraní, které se nejčastěji používá k sériovému přenosu dat mezi zařízeními. Data přenáší jen po dvou kanálech, **RX** (přijímač) a **TX** (vysílač), bez hodinového signálu.
 
 :::info
 
-Více o použití rozhraní UART se zařízením TOWER si můžete přečíst v kapitole [**How To: Rozhraní UART**](../firmware-sdk/how-to/uart-interface.md) nebo v [**kapitole o debugování**](../firmware-development/firmware-debugging.md).
+Jak se rozhraní UART používá na platformě TOWER, popisuje kapitola [**Jak na: Rozhraní UART**](../firmware-sdk/how-to/uart-interface.md) a [**kapitola Debugování**](../firmware-development/firmware-debugging.md).
 
 :::
 
 :::tip
 
-Pokud se chcete o [**UART dozvědět více, existuje o něm článek**](https://www.analog.com/en/analog-dialogue/articles/uart-a-hardware-communication-protocol.html).
+Pokud se chcete o UART dozvědět víc, přečtěte si [**článek o tomto rozhraní**](https://www.analog.com/en/analog-dialogue/articles/uart-a-hardware-communication-protocol.html).
 
 :::
 
-TOWER má 3 kanály UART: **UART0**, **UART1** a **UART2**. Kde je najdete, se dočtete v [**kapitole Pinout headerů**](../hardware-modules/header-pinout.md)
+TOWER má 3 kanály UART: **UART0**, **UART1** a **UART2**. Kde je najdete, se dočtete v [**kapitole Pinout konektorů**](../hardware-modules/header-pinout.md).
 
 ## Nastavení UART {#uart-setup}
 
-Protože kanál UART nemá hodinový signál, který by komunikaci synchronizoval, musíte nastavit obě komunikující zařízení tak, aby byla synchronizovaná a věděla, jak data vysílat a přijímat.
+Kanál UART nemá hodinový signál, který by komunikaci synchronizoval, a proto musíte obě zařízení nastavit stejně, aby byla synchronizovaná a věděla, jak data vysílat a přijímat.
 
-Rozhraní UART lze nastavit třemi parametry
+Rozhraní UART se nastavuje čtyřmi parametry:
 
-- **Baud rate**: rychlost, s jakou budou data odesílána
+- **Baud rate**: rychlost odesílání dat
 - **Datové bity**: počet datových bitů v každém paketu (5–9 bitů)
 - **Paritní bity**: můžete zvolit lichou, sudou nebo žádnou paritu
 - **Stop bity**: určují konec jednoho paketu. Může jít o 1 nebo 2 bity
 
 :::tip
 
-Konfiguraci nastavení UART můžete vidět v krátkém formátu. Například 8 datových bitů, žádná parita a 1 stop bit lze zapsat jako **8N1**.
+Nastavení UART se často zapisuje zkráceně. Například 8 datových bitů, žádnou paritu a 1 stop bit zapíšete jako **8N1**.
 
 :::
 
@@ -43,15 +43,15 @@ Na začátku každého paketu je vždy jeden **Start bit**.
 
 :::
 
-Pokud nastavíte obě zařízení stejně, získáte použitelná data, pokud ne, obdržíte nečitelná data.
+Pokud obě zařízení nastavíte stejně, dostanete čitelná data; jinak budou data nečitelná.
 
 ## Logování {#logging}
 
-Mnoho zařízení používá UART k odesílání sériových dat ze zařízení do terminálu počítače. Takto se odesílají logovací zprávy, aby si je uživatel/vývojář mohl přečíst.
+Mnoho zařízení posílá přes UART sériová data do terminálu počítače. Tak se odesílají logovací zprávy, které si pak uživatel nebo vývojář přečte.
 
-TOWER k tomu používá UART2, pomocí SDK API `twr_log_*` můžete odesílat zprávy přes toto rozhraní UART do svého PC, takže můžete debugovat během vývoje své aplikace.
+TOWER k tomu používá UART2. Funkcemi API `twr_log_*` ze SDK můžete přes toto rozhraní posílat zprávy do počítače a aplikaci tak při vývoji debugovat.
 
-Parametry logovacího UART zařízení TOWER
+Parametry rozhraní UART pro logování na platformě TOWER:
 
 - **Baud rate**: **115200**
 - **8 datových bitů**
@@ -60,6 +60,6 @@ Parametry logovacího UART zařízení TOWER
 
 :::tip
 
-Jak to udělat se dozvíte v samostatné [**kapitole o debugování**](../firmware-development/firmware-debugging.md).
+Jak na to, popisuje samostatná [**kapitola Debugování**](../firmware-development/firmware-debugging.md).
 
 :::

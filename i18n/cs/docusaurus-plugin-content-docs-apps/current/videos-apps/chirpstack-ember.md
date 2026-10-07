@@ -6,11 +6,11 @@ title_meta: "Přidání bran (videonávod ChirpStack)"
 
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4 - jak přidat bránu do sítě LoRaWAN {#chirpstack-v4---how-to-add-gateway-to-a-lorawan-network}
+# ChirpStack v4 – jak přidat bránu do sítě LoRaWAN {#chirpstack-v4---how-to-add-gateway-to-a-lorawan-network}
 
 ## Přehled návodu {#tutorial-overview}
 
-V tomto návodu se naučíte, jak připojit svou bránu k ChirpStack v4.
+V tomto návodu se naučíte, jak připojit bránu k ChirpStack v4.
 
 ---
 

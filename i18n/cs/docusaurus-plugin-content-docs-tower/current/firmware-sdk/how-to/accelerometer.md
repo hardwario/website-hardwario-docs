@@ -4,21 +4,21 @@ title: "Jak na: Akcelerometr"
 ---
 import Image from '@theme/IdealImage';
 
-Core Module je vybaven tříosým **lineárním akcelerometrem (LIS2DH12)** s ultranízkou spotřebou, který je připojen přes sběrnici I²C. Umožňuje detekci pohybu na základě přerušení.
+Modul Core Module má tříosý **lineární akcelerometr (LIS2DH12)** s ultranízkou spotřebou, připojený přes sběrnici I²C. Pohyb umí detekovat pomocí přerušení.
 
 ## Odkazy {#references}
 - [**Modul SDK pro akcelerometr**](https://sdk.hardwario.com/group__twr__lis2dh12.html)
 - Příklad v repozitáři na GitHubu
 
 Akcelerometr lze používat dvěma způsoby:
-  - **Kontinuální měření zrychlení**
+  - **Průběžné měření zrychlení**
   - **Alarm, který spustí obsluhu události při splnění definovaných podmínek**
 
-## Kontinuální měření {#continuous-measurement}
+## Průběžné měření {#continuous-measurement}
 
-Toho lze dosáhnout nastavením intervalu aktualizace ve vašem kódu pomocí funkce `twr_lis2dh12_set_update_interval`, která jako parametry přijímá ukazatel na instanci akcelerometru a dobu mezi měřeními v milisekundách.
+Stačí v kódu nastavit interval aktualizace funkcí `twr_lis2dh12_set_update_interval`. Jejími parametry jsou ukazatel na instanci akcelerometru a doba mezi měřeními v milisekundách.
 
-Dále je potřeba vytvořit instanci struktury `twr_lis2dh12_result_g_t` pro uložení výsledků měření. Tyto hodnoty lze získat voláním funkce `twr_lis2dh12_get_result_g`.
+Dále je potřeba vytvořit instanci struktury `twr_lis2dh12_result_g_t`, do které se ukládají výsledky měření. Hodnoty z ní získáte voláním funkce `twr_lis2dh12_get_result_g`.
 
 :::info
 
@@ -29,7 +29,7 @@ Dále je potřeba vytvořit instanci struktury `twr_lis2dh12_result_g_t` pro ulo
 <details>
 <summary>
 <b>
-Příklad kódu pro kontinuální měření
+Příklad kódu: průběžné měření
 </b>
 </summary>
 <p>
@@ -70,26 +70,26 @@ Příklad kódu pro kontinuální měření
 
 ## Alarm {#alarm}
 
-Alarm je funkce, která umožňuje nastavit určité podmínky, kdy má být alarm spuštěn (například probuzení, když se modul pohne ve směru osy X && zrychlení je vyšší než 1g).
+U alarmu nastavíte podmínky, za kterých se má spustit (například probuzení, když se modul pohne ve směru osy X && zrychlení je vyšší než 1g).
 
-Modul používá přerušení k informování mikrokontroléru. To znamená, že může spát, když se s ním nehýbe, a probudí se pouze při pohybu.
+Modul dává mikrokontroléru vědět přerušením. Mikrokontrolér tak může spát, dokud se s modulem nehýbe, a probudí se jen při pohybu.
 
-Podmínky pro alarm lze nastavit ve struktuře `twr_lis2dh12_alarm_t`.
+Podmínky alarmu nastavíte ve struktuře `twr_lis2dh12_alarm_t`.
 
-Když akcelerometr tato nastavení kontroluje, používá **logickou operaci AND**, což znamená, že pro spuštění alarmu musí nastat každá nastavená podmínka.
+Akcelerometr nastavení vyhodnocuje **logickou operací AND**: alarm se spustí, jen když nastanou všechny nastavené podmínky.
 
 :::info
 
-V příkladu níže nastavíme alarm tak, aby se spustil, když se Core Module pohne ve směru osy X se zrychlením > 1g. Při spuštění se na jednu sekundu rozsvítí integrovaná červená LED.
+V příkladu níže nastavíme alarm tak, aby se spustil, když se modul Core Module pohne ve směru osy X se zrychlením > 1g. Po spuštění alarmu se na jednu sekundu rozsvítí integrovaná červená LED.
 
-Po nahrání firmwaru se pokuste hýbat modulem Core Module velmi pomalu. V žádném směru se nic nestane. Pak se pokuste rychle s ním pohnout nahoru a dolů – opět se nic nestane, protože tento pohyb je v ose Z. Nyní zkuste rychlý pohyb v ose X a LED by se měla rozsvítit.
+Po nahrání firmwaru zkuste modulem Core Module pohybovat velmi pomalu. V žádném směru se nic nestane. Pak s ním rychle pohněte nahoru a dolů. Opět se nic nestane, protože jde o pohyb v ose Z. Teď zkuste rychlý pohyb v ose X a LED by se měla rozsvítit.
 
 :::
 
 <details>
 <summary>
 <b>
-Příklad kódu pro alarm
+Příklad kódu: alarm
 </b>
 </summary>
 <p>

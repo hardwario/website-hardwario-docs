@@ -4,45 +4,45 @@ title: "Jak na: EEPROM"
 ---
 import Image from '@theme/IdealImage';
 
-**EEPROM** je speciální druh paměti. Jde o malou (6 KB na čipu [**Core Module**](../../hardware-modules/about-core-module.md)) paměť s omezeným počtem **zápisových/mazacích cyklů**. Je to **nevolatilní paměť** – to znamená, že k uchování uložených informací nepotřebuje napájení. Bajty zapsané/uložené v EEPROM tedy **zůstanou na svém místě, dokud nejsou vymazány/přepsány** (i bez napájení)
+**EEPROM** je zvláštní druh paměti. Jde o malou paměť (na čipu modulu [**Core Module**](../../hardware-modules/about-core-module.md) má 6 KB) s omezeným počtem **zápisových a mazacích cyklů**. Je to **nevolatilní paměť**, takže k uchování dat nepotřebuje napájení. Bajty zapsané do EEPROM tedy **zůstanou uložené, dokud je nevymažete nebo nepřepíšete** (i bez napájení).
 
 :::info
 
-Nebojte se omezeného počtu cyklů W/E. Za standardních podmínek čip garantuje **100 000 cyklů**. Pamatujte, že tyto cykly jsou **zápisové/mazací**.
+Omezeného počtu cyklů W/E se nebojte. Za standardních podmínek čip zaručuje **100 000 cyklů**. Počítají se jen cykly **zápisu a mazání**.
 
-Čtení z EEPROM se nepočítá, takže je zcela **bezpečné číst** z ní, kolikrát chcete.
+Čtení z EEPROM se nepočítá, takže z ní můžete **bez obav číst**, kolikrát chcete.
 
 :::
 
 
 ## Odkazy {#references}
-- [**EEPROM SDK Module**](https://sdk.hardwario.com/group__twr__eeprom.html)
-- Příklad v GitHub repozitáři
+- [**Modul SDK pro EEPROM**](https://sdk.hardwario.com/group__twr__eeprom.html)
+- Příklad v repozitáři na GitHubu
 
 ### Velikost EEPROM {#eeprom-size}
-[**TOWER Core Module**](../../hardware-modules/about-core-module.md) obsahuje 6 KB EEPROM. Pokud potřebujete tuto hodnotu zjistit ve svém kódu, je v SDK k dispozici funkce: `size_t twr_eeprom_get_size(void)`
+Modul [**TOWER Core Module**](../../hardware-modules/about-core-module.md) má 6 KB EEPROM. Pokud potřebujete tuto hodnotu zjistit v kódu, použijte funkci SDK `size_t twr_eeprom_get_size(void)`.
 
 ## Příklad čtení/zápisu {#readwrite-example}
 
 :::info
 
-  V tomto příkladu zapíšeme do EEPROM hodnotu typu float a řetězec hned po startu modulu Core Module. Při každém stisku tlačítka budou data z EEPROM přečtena a odeslána do počítače. Chcete-li vyzkoušet, že je paměť persistentní, můžete zkusit zakomentovat oba řádky `twr_eeprom_write` (poté, co původní příklad jednou spustíte).
+  V tomto příkladu hned po startu modulu Core Module zapíšeme do EEPROM hodnotu typu float a řetězec. Při každém stisknutí tlačítka se data z EEPROM přečtou a odešlou do počítače. Že paměť data uchová, si ověříte tak, že (po prvním spuštění původního příkladu) zakomentujete oba řádky `twr_eeprom_write`.
 
-  Mělo by to stále fungovat a debug by měl vypsat stejný řetězec.
+  Příklad by měl fungovat dál a v ladicím výpisu by se měl objevit stejný řetězec.
 
 :::
 
 :::note
 
-Vezměte prosím na vědomí, že některé naše moduly (aktuálně pouze modul `twr_radio_*`) používají **posledních několik desítek bajtů** v EEPROM. Pokud tyto moduly používáte, nezapomeňte využívat adresy paměti od **0 do 6000**.
+Některé naše moduly (zatím jen modul `twr_radio_*`) používají **posledních několik desítek bajtů** EEPROM. Pokud je používáte, pracujte jen s adresami od **0 do 6000**.
 
-Tím zajistíte, že žádná data nebudou přepsána.
+Žádná data se tak nepřepíšou.
 
 :::
 
 :::info
 
-Očekávaný výstup níže uvedeného příkladu.
+Očekávaný výstup příkladu níže:
 
 ```bash showLineNumbers
 EEPROM size: 6144
@@ -56,7 +56,7 @@ hello world!
 <details>
 <summary>
 <b>
-Příklad testovacího kódu pro EEPROM
+Příklad kódu: test EEPROM
 </b>
 </summary>
 <p>

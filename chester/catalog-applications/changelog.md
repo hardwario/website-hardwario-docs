@@ -54,7 +54,7 @@ This breaking release brings all the improvements and fixes from the latest vers
 - Optimized RAM usage, saving about 17 kB.
 - Added `tag read all [timeout]` shell command
 
-### CHESTER Cloud
+### Cloud Subsystem {#chester-cloud}
 
 - Added **message spool** (`CONFIG_CTR_CLOUD_SPOOL`), a store-and-forward queue backed by LittleFS, so messages survive uplink failures and reboots.
 

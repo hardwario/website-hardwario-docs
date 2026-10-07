@@ -1,7 +1,7 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
-description: "Rychlý start pro GLIDER: zapněte zařízení, zaregistrujte ho v HARDWARIO Cloud a sledujte, jak dorazí první naměřené hodnoty."
+description: "Rychlý průvodce zařízením GLIDER: zapněte ho, zaregistrujte v HARDWARIO Cloud a sledujte, jak přicházejí první naměřené hodnoty."
 title_meta: "Rychlý průvodce (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 
 Děkujeme, že jste si vybrali zařízení GLIDER.
 
-Podle následujících kroků jej nastavíte a začnete sledovat živá data v **HARDWARIO Cloud**.
+Podle následujících kroků zařízení nastavíte a jeho data pak budete sledovat v reálném čase v **HARDWARIO Cloud**.
 
 ---
 
@@ -24,7 +24,7 @@ Podle následujících kroků jej nastavíte a začnete sledovat živá data v *
 4. Po ověření se **přihlaste**.
 
 :::info
-Pro vyšší bezpečnost doporučujeme přihlašování přes **Google** nebo **Microsoft**, protože tito poskytovatelé identity používají ověřené přihlašovací údaje a **pokročilé mechanismy ochrany účtu**.
+Kvůli vyšší bezpečnosti doporučujeme přihlašovat se přes **Google** nebo **Microsoft**, protože tito poskytovatelé identity používají ověřené přihlašovací údaje a **pokročilé mechanismy ochrany účtu**.
 :::
 
 ---
@@ -32,11 +32,11 @@ Pro vyšší bezpečnost doporučujeme přihlašování přes **Google** nebo **
 ## Krok 2: Vytvořte si prostor {#step-2-create-your-space}
 
 1. V pravém horním rohu klikněte na **SPACES → NEW SPACE**
-2. Pojmenujte svůj prostor (například: `my-home`, `office-sensors`, `warehouse`)
+2. Pojmenujte prostor (například `my-home`, `office-sensors`, `warehouse`)
 3. Do tohoto prostoru budete přidávat svá **zařízení GLIDER**.
 
 :::caution
-Při vytváření prostoru se prosím řiďte našimi [**konvencemi pojmenování**](/cloud/#naming-conventions).
+Při pojmenování prostoru se prosím řiďte [**konvencemi pojmenování**](/cloud/#naming-conventions).
 :::
 
 ---
@@ -51,20 +51,20 @@ Při vytváření prostoru se prosím řiďte našimi [**konvencemi pojmenován�
  Funkcí **`SCAN DEVICE`** v HARDWARIO Cloud **naskenujte QR kód** na zařízení GLIDER. Všechny **údaje** se pak **vyplní automaticky**.
 
  **Možnost 2: ručně**
- Zařízení můžete přidat ručně vyplněním následujících polí:
+ Ručně vyplňte tato pole:
  - **Name**
  - **Serial Number (SN)**
  - **Claim Token**
 
 :::info
-**Claim Token** a **sériové číslo** jsou pro každé zařízení jedinečné. Získáte je **naskenováním QR kódu** na zařízení libovolnou čtečkou QR kódů, spuštěním **`AT$INFO?`** přes [**USB-C konzoli AT**](console/usb-at.md) nebo spuštěním **`info show`** přes [**J-Link RTT konzoli**](console/rtt-jlink.md).
+**Claim Token** a **sériové číslo** jsou pro každé zařízení jedinečné. Zjistíte je tak, že QR kód na zařízení **naskenujete** libovolnou čtečkou QR kódů, nebo spustíte **`AT$INFO?`** v [**konzoli AT přes USB-C**](console/usb-at.md) či **`info show`** v [**konzoli RTT přes J-Link**](console/rtt-jlink.md).
 :::
 
 4. Zařízení uložte. GLIDER je teď **zaregistrovaný v cloudu**.
 
 :::tip
 **Potřebujete více podrobností?**
-Podrobnější informace o **HARDWARIO Cloud** najdete zde:
+Podrobnosti o **HARDWARIO Cloud** najdete v jeho dokumentaci:
  [https://docs.hardwario.com/cloud/](/cloud/)
 :::
 
@@ -77,30 +77,30 @@ Podrobnější informace o **HARDWARIO Cloud** najdete zde:
 > Jinak může připojení trvat déle (až několik hodin).
 :::
 
-1. Vložte svou **nano-SIM kartu** (pokud zařízení nebylo dodáno již zprovozněné).
-2. Pevně našroubujte **LTE anténu** na SMA konektor.
+1. Vložte **nano-SIM kartu** (pokud zařízení nebylo dodáno už zprovozněné).
+2. Pevně našroubujte **anténu LTE** na konektor SMA.
 3. Připojte zařízení ke zdroji napájení. GLIDER se spustí a začne vyhledávat mobilní síť.
 4. Počkejte několik minut, než do HARDWARIO Cloud dorazí první uplink.
 
 :::info
-Zařízení GLIDER **nesignalizuje** připojení k cloudu pomocí LED. Nejrychlejší způsob, jak ověřit, že je zařízení online, je podívat se na **Show device messages** v HARDWARIO Cloud (viz [Krok 6](#step-6-see-your-data-in-the-cloud)), případně připojit [**RTT konzoli (J-Link)**](console/rtt-jlink.md) a číst log modemu přímo.
+Zařízení GLIDER **nesignalizuje** připojení k cloudu pomocí LED. Nejrychleji ověříte, že je zařízení online, v přehledu **Show device messages** v HARDWARIO Cloud (viz [Krok 6](#step-6-see-your-data-in-the-cloud)), případně připojte [**konzoli RTT (J-Link)**](console/rtt-jlink.md) a čtěte přímo log modemu.
 :::
 
-Pokud se zařízení nepřipojí, zkuste některou z těchto rychlých akcí:
+Pokud se zařízení nepřipojí, zkuste rychle některý z těchto kroků:
 
-- **Stiskněte tlačítko čtyřikrát** pro restart zařízení.
+- **Stiskněte tlačítko čtyřikrát**, zařízení se restartuje.
 - **Odpojte a znovu připojte napájení.**
-- Přesuňte zařízení blíže k oknu nebo do otevřeného prostoru pro lepší příjem mobilního signálu.
+- Kvůli lepšímu příjmu mobilního signálu přesuňte zařízení blíž k oknu nebo do otevřeného prostoru.
 
 ---
 
 #### Řešení problémů se síťovým režimem a připojením {#network-mode--connectivity-troubleshooting}
 
-Pokud má vaše zařízení stále problém připojit se k síti (zejména při použití vlastní SIM karty nebo roamingu):
+Pokud se zařízení stále nedaří připojit k síti (zejména s vlastní SIM kartou nebo v roamingu):
 
-* **Zkontrolujte síťový režim:** GLIDER má ve výchozím stavu zapnuté **pásmo LTE 8** a **pásmo LTE 20** (Evropa). Pro nasazení mimo EU může být potřeba zapnout další pásma.
+* **Zkontrolujte síťový režim:** GLIDER má ve výchozím stavu zapnuté **pásmo LTE 8** a **pásmo LTE 20** (Evropa). Při nasazení mimo EU možná budete muset zapnout další pásma.
 * **Ověřte APN/PLMN:** Pokud používáte jinou než výchozí SIM kartu, nakonfigurujte APN přes konzoli AT.
-* **Čtěte logy modemu:** Připojte [**RTT konzoli (J-Link)**](console/rtt-jlink.md). Modem do logu přímo vypisuje každý pokus o připojení, úroveň signálu a vyjednávání APN.
+* **Čtěte logy modemu:** Připojte [**konzoli RTT (J-Link)**](console/rtt-jlink.md). Modem do logu přímo vypisuje každý pokus o připojení, úroveň signálu a vyjednávání APN.
 
 ---
 
@@ -108,18 +108,18 @@ Pokud má vaše zařízení stále problém připojit se k síti (zejména při 
 
 GLIDER má na desce tři stavové LED (červenou, zelenou, žlutou). Kvůli úspoře energie toho záměrně signalizují jen málo:
 
-- Každých **5 sekund** firmware vyšle krátký **30ms pulz**:
-    - **Zelený pulz**, když není aktivní žádné pravidlo alarmu.
-    - **Červený pulz**, když je aktivní alespoň jedno pravidlo alarmu.
-- Po rozpoznání stisku tlačítka **žlutá LED** blikne **jednou za každý detekovaný stisk** (50 ms svítí, 200 ms nesvítí). Například trojitý stisk vyvolá tři krátká žlutá bliknutí, než se spustí odpovídající akce.
+- Každých **5 sekund** firmware na **30 ms** krátce rozsvítí LED:
+    - **zelenou**, když není aktivní žádné pravidlo alarmu,
+    - **červenou**, když je aktivní alespoň jedno pravidlo alarmu.
+- Když firmware rozpozná stisk tlačítka, **žlutá LED** blikne **jednou za každý zaznamenaný stisk** (50 ms svítí, 200 ms nesvítí). Například po trojitém stisku žlutá LED třikrát krátce blikne a teprve pak se spustí odpovídající akce.
 - Během startu jsou všechny LED zhasnuté.
 
 :::caution
-30ms pulz je jen krátké probliknutí, ne zřetelné blikání, a při jasném okolním světle se dá snadno přehlédnout. LED hlásí **pouze stav alarmu**; připojení k mobilní síti ani ke cloudu nesignalizují. K ověření, že je zařízení online, použijte cloudový dashboard nebo některou z konzolí.
+Bliknutí na 30 ms je jen krátký záblesk, ne zřetelné blikání, a na jasném světle se dá snadno přehlédnout. LED hlásí **pouze stav alarmu**; připojení k mobilní síti ani ke cloudu nesignalizují. Zda je zařízení online, ověříte v dashboardu cloudu nebo v některé z konzolí.
 :::
 
 :::info
-LED můžete také ručně přepínat z libovolné konzole příkazem `led`, viz [**Příkazy shellu**](commands/shell-commands.md).
+LED můžete také ručně rozsvítit a zhasnout z libovolné konzole příkazem `led`, viz [**Příkazy shellu**](commands/shell-commands.md).
 :::
 
 ---
@@ -127,24 +127,24 @@ LED můžete také ručně přepínat z libovolné konzole příkazem `led`, viz
 ## Krok 6: Podívejte se na svá data v cloudu {#step-6-see-your-data-in-the-cloud}
 
 1. V [**HARDWARIO Cloud**](https://hardwario.cloud) otevřete **DEVICES**
-2. Klikněte na **ikonu chatu** vedle svého zařízení
-3. Uvidíte **zprávy a živá data** odeslaná ze zařízení GLIDER
+2. Klikněte na **ikonu chatu** vedle zařízení
+3. Zobrazí se **zprávy a aktuální data** odeslaná ze zařízení GLIDER
 
-Ve výchozím nastavení GLIDER vzorkuje senzory každých **60 sekund** a odesílá payload každých **300 sekund (5 minut)**. Chcete-li vynutit okamžitý uplink:
+Ve výchozím nastavení GLIDER vzorkuje senzory každých **60 sekund** a odesílá payload každých **300 sekund (5 minut)**. Okamžitý uplink vynutíte takto:
 
-- **konzole AT (USB-C):** `AT$SHELL="app send"`
-- **RTT konzole (J-Link):** `app send`
+- **Konzole AT (USB-C):** `AT$SHELL="app send"`
+- **Konzole RTT (J-Link):** `app send`
 
-Vysvětlení struktury payloadu najdete v části [**CBOR Payload**](payload.md).
+Strukturu payloadu vysvětluje stránka [**CBOR payload**](payload.md).
 
 ---
 
-## Krok 7: Nakonfigurujte své zařízení {#step-7-configure-your-device}
+## Krok 7: Nakonfigurujte zařízení {#step-7-configure-your-device}
 
-Po připojení můžete:
+Připojené zařízení můžete konfigurovat:
 
-- Použít [**USB-C konzoli AT**](console/usb-at.md): doporučeno pro běžné zprovoznění
-- Použít [**J-Link RTT konzoli**](console/rtt-jlink.md): plný vývojářský přístup s logy a Zephyr shellem
+- v [**konzoli AT přes USB-C**](console/usb-at.md), která je doporučená pro běžné zprovoznění,
+- v [**konzoli RTT přes J-Link**](console/rtt-jlink.md), která dává plný vývojářský přístup k logům a shellu Zephyr.
 
 Běžné konfigurační úlohy:
 
@@ -152,7 +152,7 @@ Běžné konfigurační úlohy:
 | :--- | :--- |
 | Interval vzorkování (výchozí 60 s) | `app config interval-sample <seconds>` |
 | Interval odesílání (výchozí 300 s) | `app config interval-send <seconds>` |
-| Přiřazení DS18B20 ke slotu | `therm scan --save` (automatická detekce) |
+| Přiřazení senzoru DS18B20 ke slotu | `therm scan --save` (automatická detekce) |
 | Zapnutí digitálního vstupu CH1 | `inputs config 1-mode counter` |
 | Konfigurace teplotního alarmu | `alarm config 1-enabled true`, `alarm config 1-threshold 30` |
 
@@ -162,7 +162,7 @@ Změny pak uložte do flash paměti a zařízení restartujte:
 AT&W
 ```
 
-Kompletní referenci najdete v článcích [**Konfigurace**](configuration.md) a [**Příkazy shellu**](commands/shell-commands.md).
+Úplný popis najdete na stránkách [**Konfigurace**](configuration.md) a [**Příkazy shellu**](commands/shell-commands.md).
 
 ---
 
@@ -183,7 +183,7 @@ Zkontrolovat ji můžete dvěma způsoby:
  AT$INFO?
  ```
 
-2. **Přes J-Link (Zephyr shell):**
+2. **Přes J-Link (shell Zephyr):**
  ```bash
  info show
  ```
@@ -192,31 +192,31 @@ Zkontrolovat ji můžete dvěma způsoby:
 
 Pokud je k dispozici novější verze, můžete zařízení GLIDER aktualizovat dvěma způsoby:
 
-1. **Přes konzoli AT (USB-C)**: doporučeno pro produkční jednotky a aktualizace v terénu. Není potřeba programátor.
+1. **Přes konzoli AT (USB-C)**: doporučeno pro zařízení v ostrém provozu a aktualizace v terénu. Ladicí sondu nepotřebujete.
  [**Aplikace přes AT (USB-C)**](firmware-flashing/application-over-at.md)
 
 2. **Přes J-Link (SWD)**: doporučeno pro vývoj.
  [**Aplikace přes J-Link**](firmware-flashing/application-over-j-link.md)
 
-Přehled obou metod najdete v článku [**Nahrání firmwaru**](firmware-flashing/index.md).
+Přehled obou metod najdete na stránce [**Nahrání firmwaru**](firmware-flashing/index.md).
 
 ---
 
  **A je to!**
-Vaše zařízení GLIDER je nyní připojené, nakonfigurované a aktuální, připravené sbírat a odesílat data do cloudu.
+Zařízení GLIDER je teď připojené, nakonfigurované a aktuální a může sbírat a odesílat data do cloudu.
 
 ---
 
 ## Krok 9: Prozkoumejte aplikace a integrace {#step-9-explore-applications-and-integrations}
 
-Vaše zařízení GLIDER umí mnohem víc než jen odesílat data!
+Zařízení GLIDER umí mnohem víc než jen odesílat data.
 Jeho funkce můžete rozšířit pomocí [**HARDWARIO Applications**](/apps/), hotových modulů a nástrojů, které vám pomohou:
 
 - **Vizualizovat data** pomocí dashboardů a grafů
 - **Integrovat zařízení GLIDER** do stávajících IoT systémů
-- **Vytvářet automatizace a analytiku** pro váš konkrétní případ použití
+- **Vytvářet automatizace a analýzy** pro konkrétní využití
 
-Všechny aplikace se snadno nasazují a mohou proměnit vaše zařízení GLIDER v kompletní IoT řešení.
+Všechny aplikace se snadno nasazují a ze zařízení GLIDER udělají kompletní IoT řešení.
 
 :::info
  Více informací a dostupné aplikace najdete zde:

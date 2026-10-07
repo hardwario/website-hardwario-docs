@@ -5,8 +5,8 @@ title: Informace o zařízení a klíče LoRaWAN
 
 # Čtení informací o zařízení a klíčů LoRaWAN {#read-device-info-and-lorawan-keys}
 
-Přečtěte identitu zařízení STICKER a klíče LoRaWAN, které potřebujete k jeho
-registraci v síti, přes NFC, za několik sekund.
+Přes NFC během několika sekund přečtete identifikační údaje zařízení STICKER
+a klíče LoRaWAN, které potřebujete k jeho registraci v síti.
 
 :::info Zařízení nejdřív uložte
 Obě obrazovky používají šifrovaný kanál, takže zařízení musí být uložené se svým
@@ -30,13 +30,13 @@ Obě obrazovky používají šifrovaný kanál, takže zařízení musí být ul
 | **Uptime** | Doba od posledního startu |
 | **Battery** | Naměřené napájecí napětí |
 | **LoRaWAN** | Stav připojení LoRaWAN |
-| **DevEUI** | Identifikátor zařízení v LoRaWAN |
+| **DevEUI** | Identifikátor zařízení v síti LoRaWAN |
 | **Health** | Souhrn stavových příznaků zařízení |
-| **Active alarms** | Která pravidla alarmů jsou právě vyvolaná, viz [**Pravidla alarmů**](./alarms.md) |
+| **Active alarms** | Pravidla alarmů, která jsou právě aktivní, viz [**Pravidla alarmů**](./alarms.md) |
 
-**Advanced** rozbalí další diagnostické podrobnosti, například build firmwaru a
-příčinu posledního resetu. **Read again** čtení zopakuje bez opuštění obrazovky.
-Znovu přiložte telefon k zařízení.
+**Advanced** rozbalí další diagnostické podrobnosti, například sestavení firmwaru
+a příčinu posledního resetu. **Read again** zopakuje čtení, aniž byste museli
+opustit obrazovku; stačí znovu přiložit telefon k zařízení.
 
 ---
 
@@ -52,24 +52,24 @@ Co se zobrazí, závisí na režimu aktivace zařízení:
 | Režim | Zobrazené klíče |
 |---|---|
 | **OTAA** | DevEUI, JoinEUI (AppEUI), AppKey |
-| **ABP** | DevEUI, DevAddr a klíče session |
+| **ABP** | DevEUI, DevAddr a klíče relace |
 
 ---
 
-## Načtení několika zařízení v jedné session {#read-several-devices-in-one-session}
+## Načtení několika zařízení najednou {#read-several-devices-in-one-session}
 
-Obrazovka si vede seznam, místo aby poslední odečet přepsala. Pomocí **Scan next
-STICKER** přidáte další zařízení, mezi zachycenými zařízeními se pohybujete
-stránkovačem a **Clear all** začne znovu. Je to rychlá cesta, jak posbírat klíče
-pro celou dávku zařízení, ještě než je zaregistrujete.
+Obrazovka předchozí čtení nepřepíše, ale vede si seznam. Tlačítkem **Scan next
+STICKER** přidáte další zařízení, mezi načtenými zařízeními přecházíte stránkováním
+a volbou **Clear all** začnete znovu. Takto rychle posbíráte klíče celé série
+zařízení ještě před jejich registrací.
 
 ---
 
-## Nasdílení klíčů {#share-the-keys}
+## Sdílení klíčů {#share-the-keys}
 
-Klíče nasdílejte jako **JSON**, **CSV**, **text** nebo **QR kód**, případně
-použijte **Copy JSON to clipboard**. Když je zachycené víc než jedno zařízení,
-akce sdílení pokrývají celou sadu a **Share all** je vyexportuje společně.
+Klíče můžete sdílet jako **JSON**, **CSV**, **text** nebo **QR kód**, případně
+je zkopírovat volbou **Copy JSON to clipboard**. Když je načtených více zařízení,
+akce sdílení zahrnou všechna a **Share all** je vyexportuje společně.
 
 <img src="/img/hw-manager/hw-manager-lrw-keys-share.png" alt="Sdílení klíčů LoRaWAN jako JSON, CSV, text nebo QR kód" width="320" />
 
@@ -79,6 +79,6 @@ Použijte je k registraci zařízení v
 
 :::caution Export klíčů je úplný
 Na rozdíl od exportu konfigurace export klíčů LoRaWAN nic neodstraňuje. AppKey
-i klíče session jsou v něm celé, aby se soubor dal použít k registraci zařízení.
+i klíče relace jsou v něm celé, aby se soubor dal použít k registraci zařízení.
 Zacházejte s ním podle toho a dávejte pozor, kde QR kód zobrazujete.
 :::

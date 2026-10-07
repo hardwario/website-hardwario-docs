@@ -5,9 +5,9 @@ title: UG65
 
 import Image from '@theme/IdealImage';
 
-# Milesight Gateway UG65-868M {#milesight-gateway-ug65-868m}
+# Brána Milesight UG65-868M {#milesight-gateway-ug65-868m}
 
-Milesight UG65 je **poloprůmyslová brána LoRaWAN®** postavená na **čipsetu SX1302** s **podporou 8 kanálů**. Umožňuje **nasazení přes Ethernet/PoE**, nabízí **vysokou kapacitu uzlů** a je vhodná pro **aplikace v inteligentních budovách a průmyslu**.  
+Milesight UG65 je **poloprůmyslová brána LoRaWAN®** s **čipsetem SX1302** a **podporou 8 kanálů**. Lze ji **nasadit s připojením přes Ethernet/PoE**, **obslouží velký počet koncových zařízení** a hodí se pro **chytré budovy i průmyslové aplikace**.  
 
 <div class="container">
   <div class="row">
@@ -21,13 +21,13 @@ Milesight UG65 je **poloprůmyslová brána LoRaWAN®** postavená na **čipsetu
 </div>
 <br />
 
-## Odkazy pro integraci {#integration-links}
+## Odkazy k integraci {#integration-links}
 | Zdroj           | Odkaz                                                                |
 |-----------------|----------------------------------------------------------------------|
-| HARDWARIO Store | https://www.hardwario.store/p/milesight-ug65                         |
+| E-shop HARDWARIO | https://www.hardwario.store/p/milesight-ug65                         |
 | Oficiální stránka | https://www.milesight.com/iot/product/lorawan-gateway/ug65           |
 | Uživatelská příručka | https://resource.milesight.com/milesight/iot/document/ug65-user-guide-en.pdf |
-| Datasheet       | https://resource.milesight.com/milesight/iot/document/ug65-datasheet-en.pdf |
+| Produktový list       | https://resource.milesight.com/milesight/iot/document/ug65-datasheet-en.pdf |
 
 ---
 
@@ -42,13 +42,13 @@ Milesight UG65 je **poloprůmyslová brána LoRaWAN®** postavená na **čipsetu
 
 ## Konfigurace sítě {#network-configuration}
 
-**Prvotní nastavení:**
-1. Zapněte bránu přes **PoE** nebo **napájecí adaptér**
-2. Připojte se k **Wi-Fi síti** brány:
-   - **SSID:** Gateway_**** (uvedeno na etiketě zařízení)
+**Úvodní nastavení:**
+1. Připojte bránu k napájení přes **PoE** nebo **napájecí adaptér**
+2. Připojte se k **síti Wi-Fi** brány:
+   - **SSID:** Gateway_**** (uvedené na štítku zařízení)
    - **Heslo:** iotpassword
 3. Otevřete webový prohlížeč a přejděte na **http://192.168.1.1**
-4. Přihlaste se pomocí: **admin** / **password**
+4. Přihlaste se údaji: **admin** / **password**
 
 ---
 
@@ -58,11 +58,11 @@ Než začnete konfigurovat přeposílání paketů, nastavte přes webové rozhr
 
 ### System → General Settings {#system--general-settings}
 
-Nastavte **Hostname** na ID zařízení vytištěné na etiketě zařízení (např. `ER10G-XXXX-XX`).
+Do pole **Hostname** zadejte ID zařízení vytištěné na jeho štítku (např. `ER10G-XXXX-XX`).
 
 | Nastavení | Hodnota                                |
 |----------|----------------------------------------|
-| Hostname | ID zařízení z etikety (`ER10G-XXXX-XX`) |
+| Hostname | ID zařízení ze štítku (`ER10G-XXXX-XX`) |
 
 ### System → Time {#system--time}
 
@@ -84,14 +84,14 @@ Změňte výchozí přihlašovací údaje, abyste bránu zabezpečili.
 
 ### Network → Interface → WLAN {#network--interface--wlan}
 
-Vypněte Wi-Fi přístupový bod brány.
+Vypněte přístupový bod Wi-Fi na bráně.
 
 | Nastavení | Hodnota |
 |---------|-------|
 | Enable  | False |
 
 :::note
-Tímto se vypne Wi-Fi přístupový bod používaný pro připojení k webovému rozhraní brány. Před vypnutím se ujistěte, že máte funkční přístup přes Ethernet.
+Vypnete tím přístupový bod Wi-Fi, přes který se připojujete k webovému rozhraní brány. Než ho vypnete, ověřte, že se k bráně dostanete přes Ethernet.
 :::
 
 ---
@@ -99,16 +99,16 @@ Tímto se vypne Wi-Fi přístupový bod používaný pro připojení k webovému
 ## Přeposílání paketů (CUPS) {#packet-forwarding-cups}
 
 :::caution
-Brána je dodávána s **výchozí destinací**, kterou **nelze upravit**. Tuto výchozí destinaci musíte **vypnout** a **vytvořit novou** podle postupu níže.
+Brána má z výroby **výchozí cíl přeposílání**, který **nelze upravit**. Tento výchozí cíl musíte **vypnout** a **vytvořit nový** podle postupu níže.
 :::
 
 **Co je CUPS?**
-CUPS (Configuration and Update Server) nakonfiguruje vaši bránu automaticky. Stačí nahrát klíč CUPS a brána si všechna ostatní nastavení stáhne sama.
+CUPS (Configuration and Update Server) nakonfiguruje bránu automaticky. Stačí nahrát klíč CUPS a brána si všechna ostatní nastavení stáhne sama.
 
 **Postup nastavení:**
 
-1. Ve webovém rozhraní brány **vypněte výchozí destinaci** (ID: 0)
-2. Vytvořte **novou destinaci** s následujícím nastavením:
+1. Ve webovém rozhraní brány **vypněte výchozí cíl** (ID: 0)
+2. Vytvořte **nový cíl** s tímto nastavením:
 
 | Nastavení       | Hodnota                                                               |
 |-----------------|-----------------------------------------------------------------------|
@@ -116,8 +116,8 @@ CUPS (Configuration and Update Server) nakonfiguruje vaši bránu automaticky. S
 | Type            | The Things Industries                                                 |
 | Protocol        | CUPS                                                                  |
 | Server address  | hardwario-com.eu1.cloud.thethings.industries                          |
-| CA File (*.pem) | Stáhněte z [root certifikátů TTI](https://www.thethingsindustries.com/docs/concepts/advanced/root-certificates/) |
-| Client key file | Nahrajte `cups.key` vygenerovaný ve vašem účtu The Things Stack       |
+| CA File (*.pem) | Stáhněte ze stránky [kořenových certifikátů TTI](https://www.thethingsindustries.com/docs/concepts/advanced/root-certificates/) |
+| Client key file | Nahrajte soubor `cups.key` vygenerovaný ve svém účtu v The Things Stack |
 
 **Důležité:**
 - Nahrajte **pouze klíč CUPS** (`cups.key`)
@@ -132,22 +132,22 @@ CUPS (Configuration and Update Server) nakonfiguruje vaši bránu automaticky. S
 | Napájení | PoE nebo napájecí adaptér   |
 
 :::warning
-Pokud je brána napájena přes ethernetový kabel RJ45 s PoE, **nepřipojujte současně externí napájecí adaptér**. Použití obou zdrojů napájení zároveň může zařízení poškodit.
+Pokud bránu napájíte přes ethernetový kabel RJ45 s PoE, **nepřipojujte k ní zároveň externí napájecí adaptér**. Dva zdroje napájení současně mohou zařízení poškodit.
 :::
 
 ---
 
-## Technické specifikace {#technical-specifications}
+## Technické parametry {#technical-specifications}
 
 | **Parametr** | **Hodnota** |
 |---------------|-----------|
 | **Hardwarový systém** | |
-| CPU | Quad-core 1,5 GHz ARM Cortex-A53 |
+| CPU | Čtyřjádrový 1,5 GHz ARM Cortex-A53 |
 | Paměť | 512 MB DDR4 |
 | Flash | 8 GB eMMC |
 | **LoRaWAN®** | |
 | Kanály | 8 (half/full duplex) |
-| Antény | 2 × interní + 1 × N-Female externí |
+| Anténa | 2 × interní + 1 × N-Female externí |
 | Frekvence | CN470 / IN865 / EU868 / RU864 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
 | Vysílací výkon | 27 dBm |
 | Citlivost | -140 dBm @292bps |
@@ -164,11 +164,11 @@ Pokud je brána napájena přes ethernetový kabel RJ45 s PoE, **nepřipojujte s
 | **Síť** | |
 | Protokoly | MQTT, HTTP(S), Modbus TCP, BACnet/IP, VPN (IPSec, OpenVPN, WireGuard…) |
 | Správa | Web, CLI, SNMP, API, DeviceHub |
-| Spolehlivost | WAN failover |
+| Spolehlivost | Záložní WAN (failover) |
 | **Napájení** | |
 | Zdroj | DC 9–24 V / PoE / 5V USB-C |
 | Spotřeba | 2,9 W typ., 4,2 W max |
-| **Fyzické parametry** | |
+| **Fyzické vlastnosti** | |
 | Rozměry | 180 × 110 × 55,5 mm |
 | Hmotnost | 548 g |
 | Kryt | PC+ABS, bílá/černá |

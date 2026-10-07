@@ -4,32 +4,32 @@ title: "Jak na: Power Module"
 ---
 import Image from '@theme/IdealImage';
 
-Modul Power nabízí dvě funkce:
+Modul Power Module nabízí dvě funkce:
 
-- Ovládání výkonového zařízení robustním relé (230 V / 16 A)
+- Ovládání výkonných spotřebičů robustním relé (230 V / 16 A)
 - Připojení 5V adresovatelných LED (**WS2812B**) a jejich ovládání.
 
 :::note
 
-Tento návod se zabývá **ovládáním relé**. Pokud se chcete dozvědět o ovládání LED pásku, podívejte se na samostatnou kapitolu [**Smart LED Strip**](./smart-led-strip.md).
+Tento návod popisuje **ovládání relé**. Ovládání LED pásku popisuje samostatná kapitola [**Smart LED Strip**](./smart-led-strip.md).
 
 :::
 
 ## Odkazy {#references}
-- [**Modul Power v SDK**](https://sdk.hardwario.com/group__twr__module__power.html)
-- [**Příklad v GitHub repozitáři**](https://github.com/hardwario/twr-radio-power-controller/blob/main/src/application.c)
+- [**Modul SDK pro Power Module**](https://sdk.hardwario.com/group__twr__module__power.html)
+- [**Příklad v repozitáři na GitHubu**](https://github.com/hardwario/twr-radio-power-controller/blob/main/src/application.c)
 
 :::info
 
-V níže uvedeném příkladu nastavíme relé po inicializaci do vypnutého stavu.
-Ke přepnutí stavu použijeme [**tlačítko**](./push-button.md).
+V příkladu níže po inicializaci relé vypneme.
+Stav pak přepínáme [**tlačítkem**](./push-button.md).
 
 :::
 
 <details>
 <summary>
 <b>
-Příklad kódu pro ovládání relé modulu Power
+Příklad kódu: ovládání relé modulu Power Module
 </b>
 </summary>
 <p>
@@ -65,6 +65,6 @@ Příklad kódu pro ovládání relé modulu Power
 
 :::info
 
-Ovládání [**Smart LED pásku**](./smart-led-strip.md) popisujeme v samostatném návodu.
+Ovládání pásku [**Smart LED Strip**](./smart-led-strip.md) popisujeme v samostatném návodu.
 
 :::

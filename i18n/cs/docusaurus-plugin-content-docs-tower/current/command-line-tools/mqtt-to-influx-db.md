@@ -1,50 +1,50 @@
 ---
 slug: mqtt-to-influx-db
-title: MQTT Storage
+title: Ukládání zpráv MQTT
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-K ukládání dat z našich senzorů rádi používáme **InfluxDB – databázi pro časové řady**. Jako most mezi **MQTT** a **InfluxDB** jsme vytvořili nástroj `mqtt2influxdb`. Ten se připojí k **InfluxDB** a **MQTT brokeru** a podle uživatelem definované konfigurace se přihlásí k MQTT tématům a ukládá data ze zpráv.
+K ukládání dat z našich senzorů rádi používáme **InfluxDB, databázi pro časové řady**. Jako most mezi **MQTT** a **InfluxDB** jsme vytvořili nástroj `mqtt2influxdb`. Připojí se k **InfluxDB** i k **brokeru MQTT**, podle uživatelské konfigurace odebírá topicy MQTT a ukládá data ze zpráv.
 
 :::caution
 
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
 
-Aby bylo možné získat **Gateway Service**, musíte mít na svém zařízení [**nainstalovaný Python a pip a mít je v systémové PATH**](https://www.tutorialspoint.com/how-to-install-python-in-windows)
+Abyste mohli nástroj **mqtt2influxdb** nainstalovat, musíte mít v počítači [**nainstalovaný Python a pip, oba v systémové proměnné PATH**](https://www.tutorialspoint.com/how-to-install-python-in-windows).
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-Aby bylo možné získat **Gateway Service**, musíte mít na svém zařízení nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-linux/) a mít je v systémové **PATH**
+Abyste mohli nástroj **mqtt2influxdb** nainstalovat, musíte mít v počítači nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-linux/), oba v systémové proměnné **PATH**.
 
 </TabItem>
 <TabItem value="macOS" label="macOS">
 
-Aby bylo možné získat **Gateway Service**, musíte mít na svém zařízení nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-macos/) a mít je v systémové **PATH**
+Abyste mohli nástroj **mqtt2influxdb** nainstalovat, musíte mít v počítači nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-macos/), oba v systémové proměnné **PATH**.
 
 </TabItem>
 </Tabs>
 
 :::
 
-## Nastavení MQTT do InfluxDb {#set-up-mqtt-to-influxdb}
+## Nastavení přenosu z MQTT do InfluxDB {#set-up-mqtt-to-influxdb}
 
-Nástroj `mqtt2influxdb` nainstalujete zadáním následujícího příkazu do příkazové řádky
+Nástroj `mqtt2influxdb` nainstalujete tímto příkazem:
 
 ```bash
 sudo pip3 install --upgrade mqtt2influxdb
 ```
 
-Dále bude potřeba vytvořit adresář, do kterého budete ukládat konfigurační soubory. To provedete příkazem:
+Dále vytvořte adresář, do kterého budete ukládat konfigurační soubory. Stačí spustit příkaz:
 
 ```
 sudo mkdir /etc/hardwario
 ```
 
-Konfigurační soubor můžete vytvořit v jakémkoli textovém editoru, v tomto návodu použijeme `nano`:
+Konfigurační soubor vytvoříte v libovolném textovém editoru; v tomto návodu použijeme `nano`:
 
 ```bash
 sudo nano /etc/hardwario/mqtt2influxdb.yml
@@ -52,7 +52,7 @@ sudo nano /etc/hardwario/mqtt2influxdb.yml
 
 :::tip
 
-V editoru `nano` uložíte změny stisknutím kombinace klávesy `Ctrl + O` a editor ukončíte stisknutím `Ctrl + X`.
+V editoru `nano` uložíte změny klávesovou zkratkou `Ctrl + O` a editor ukončíte zkratkou `Ctrl + X`.
 
 :::
 
@@ -150,13 +150,13 @@ V sekci `tags` můžete použít vlastní identifikátory, např.: `tags: room: 
 
 :::
 
-Chcete-li otestovat, zda váš konfigurační soubor funguje, můžete vložit příkaz:
+Jestli konfigurační soubor funguje, otestujete tímto příkazem:
 
 ```
 mqtt2influxdb -c /etc/hardwario/mqtt2influxdb.yml --test
 ```
 
-Pokud je vše v pořádku, můžete MQTT to InfluxDB spustit také jako službu, takže poběží na pozadí i po restartu
+Pokud je vše v pořádku, můžete nástroj mqtt2influxdb spustit také jako službu, která poběží na pozadí a spustí se i po restartu:
 
 ```
 pm2 start `which python3` --name "mqtt2influxdb" -- `which mqtt2influxdb` -c /etc/hardwario/mqtt2influxdb.yml

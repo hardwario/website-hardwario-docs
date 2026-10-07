@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Gateways Configuration Guide
 
-This tutorial guides you through the process of adding and configuring a gateways in ChirpStack v4.
+This tutorial guides you through the process of adding and configuring a gateway in ChirpStack v4.
 
 ---
 
@@ -20,7 +20,7 @@ A form will appear where you can enter gateway information such as:
 
 Once completed, click **Submit**.  
 
-![ChirStack v4 - Gateways](images/chirpstack-tutorial-1.png)
+![ChirpStack v4 - Gateways](images/chirpstack-tutorial-1.png)
 
 :::info
 If you are using our **EMBER gateway**, the **Gateway ID** can be found in the **MikroTik software** under **LoRa → Devices**.  

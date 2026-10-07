@@ -17,7 +17,7 @@ LoRaWAN data is transmitted in a compressed format and needs to be decoded.
 
 For **STICKER**, choose **JavaScript functions** as the payload codec, then click **Submit**.  
 
-![ChirStack v4 - Gateways](images/chirpstack-tutorial-17.png)
+![ChirpStack v4 - Payload codec](images/chirpstack-tutorial-17.png)
 
 #### Viewing Decoded Data  
 

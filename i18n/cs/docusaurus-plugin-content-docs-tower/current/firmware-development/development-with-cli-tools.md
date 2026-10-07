@@ -8,25 +8,25 @@ import TabItem from '@theme/TabItem';
 
 :::info
 
-Pokud chcete vyvíjet pomocí grafického nástroje, přejděte na kapitolu [**O aplikaci HARDWARIO Code**](./about-hardwario-code.md) nebo [**Rozšíření TOWER VSCode**](./tower-vscode-extension.md).
+Pokud chcete vyvíjet v grafickém nástroji, přejděte na kapitolu [**O aplikaci HARDWARIO Code**](./about-hardwario-code.md) nebo [**Rozšíření TOWER pro VSCode**](./tower-vscode-extension.md).
 
 :::
 
-Tato kapitola se zaměřuje na vývoj firmwaru výhradně pomocí nástrojů příkazové řádky.
+Tato kapitola popisuje vývoj firmwaru výhradně pomocí nástrojů příkazové řádky.
 
 :::caution
 
-V této kapitole si projdeme použití několika nástrojů jako **CMake** a **ninja** a také náš nástroj pro nahrávání firmwaru z příkazové řádky. Samostatná kapitola [**Nástroj pro nahrání firmwaru**](../command-line-tools/firmware-tool.md) popisuje, jak jej nainstalovat.
+Kapitola pracuje s několika nástroji, například **CMake** a **ninja**, a také s naším nástrojem pro nahrávání firmwaru z příkazové řádky. Jak ho nainstalovat, popisuje samostatná kapitola [**Nástroj pro nahrávání firmwaru**](../command-line-tools/firmware-tool.md).
 
 :::
 
 ## Instalace {#installation}
 
-Abyste mohli svůj projekt sestavit, budete potřebovat nainstalovat několik nástrojů:
+K sestavení projektu musíte nainstalovat několik nástrojů:
 
 :::note
 
-Všechny musí být v **PATH**.
+Všechny musí být v proměnné **PATH**.
 
 :::
 
@@ -62,7 +62,7 @@ Všechny musí být v **PATH**.
 
 ## Vývojový cyklus {#development-cycle}
 
-- Nejprve je potřeba naklonovat některý firmware z [**našeho GitHubu**](https://github.com/hardwario). Pro start z čistého listu je k dispozici firmware [**twr-skeleton**](https://github.com/hardwario/twr-skeleton)
+- Nejdřív naklonujte některý firmware z [**našeho GitHubu**](https://github.com/hardwario). Pro začátek od nuly je připravený firmware [**twr-skeleton**](https://github.com/hardwario/twr-skeleton)
   - Firmware naklonujete příkazem:
     ```
     git clone https://github.com/hardwario/twr-skeleton.git --recursive
@@ -73,20 +73,20 @@ Všechny musí být v **PATH**.
 
     :::
 - Otevřete projekt ve svém oblíbeném editoru
-- Proveďte v kódu nějaké změny
+- Upravte kód
 - Spuštěním **CMake** vygenerujte soubory pro sestavení:
   ```
   cmake -B obj/debug . -G Ninja -DTYPE=debug -DCMAKE_TOOLCHAIN_FILE=sdk/toolchain/toolchain.cmake
   ```
-- Spuštěním ninja vygenerujte výsledný binární soubor firmwaru:
+- Nástrojem ninja vygenerujte výsledný binární soubor firmwaru:
   ```
   ninja -C obj/debug
   ```
-- Nahrajte firmware do svého zařízení pomocí `bcf` (budete vyzváni k výběru zařízení, do kterého chcete firmware nahrát)
+- Nahrajte firmware do zařízení nástrojem `bcf` (nástroj se zeptá, do kterého zařízení má firmware nahrát)
   ```
   bcf flash
   ```
-- Pokud chcete k zařízení připojit konzoli pro ladění, spusťte `bcf` s přepínačem `--log` nebo jen spusťte `bcf log`:
+- Pokud chcete k zařízení kvůli debugování připojit konzoli, spusťte `bcf` s přepínačem `--log`, nebo jen `bcf log`:
   ```
   bcf flash --log
   ```
@@ -94,7 +94,7 @@ Všechny musí být v **PATH**.
   ```
   bcf log
   ```
-- Chcete-li výstup vyčistit a zkompilovat vše od začátku, stačí spustit:
+- Výstup sestavení vyčistíte, abyste mohli vše zkompilovat znovu od začátku, tímto příkazem:
   ```
   ninja -t clean
   ```

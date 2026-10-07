@@ -6,23 +6,23 @@ import Image from '@theme/IdealImage';
 
 # Jak na: CBOR {#how-to-cbor}
 
-Zařízení **CHESTER** s Cloud v2 používá [**CBOR**](https://cbor.io/) pro kódování a dekódování přenášených dat. Díky **CBOR** můžete pomocí souboru **YAML** popsat, jak budou přenášená data vypadat, a poté ve svém kódu v C používat klíče z tohoto souboru **YAML**.
+Zařízení **CHESTER** s Cloud v2 kóduje a dekóduje přenášená data ve formátu [**CBOR**](https://cbor.io/). Díky **CBOR** popíšete podobu přenášených dat v souboru **YAML** a v kódu v C pak používáte klíče z tohoto souboru **YAML**.
 
-V úvodních zprávách session posílá Cloud hash kodeku ve zprávě **session down**. CHESTER porovná tento hash se svým vlastním hashem kodeku a pokud je potřeba, nahraje dekodér zprávou **decoder up** a případně nahraje enkodér ve zprávě **encoder up**.
+Na začátku relace pošle cloud ve zprávě **session down** hash kodeku. CHESTER ho porovná s hashem svého kodeku, a pokud je to potřeba, nahraje dekodér zprávou **decoder up** a případně i enkodér zprávou **encoder up**.
 
-Abyste mohli se zařízením **CHESTER** používat **CBOR**, je potřeba:
+Chcete-li se zařízením **CHESTER** používat **CBOR**, je potřeba:
 
 - Vytvořit ve složce aplikace soubor `codec\cbor-decoder.yaml`, který popisuje atributy JSON.
-- Případně vytvořit soubor `codec\cbor-encoder.yaml` pro downlink příkazy (viz kód CHESTER Control)
+- Případně vytvořit soubor `codec\cbor-encoder.yaml` pro příkazy přes downlink (viz kód CHESTER Control)
 - Hlavičkový soubor `src/app_codec.h` se vygeneruje automaticky při zavolání `west build`.
 - Použít tyto definice v `app_cbor.c` a přidat potřebná data.
 
-Soubor YAML má hlavičku a poté v `schema` definujete striktně hierarchickou strukturu.
+Soubor YAML začíná hlavičkou, za ní v sekci `schema` definujete přísně hierarchickou strukturu.
 
-V `src/app_codec.h` jsou vygenerované #define s názvy jako `CODEC_KEY_E_`, kde `E` znamená Encoder (z pohledu zařízení CHESTER).
+V `src/app_codec.h` se vygenerují makra #define s názvy jako `CODEC_KEY_E_`, kde `E` znamená Encoder (z pohledu zařízení CHESTER).
 
 Pokud vnořujete položky do hlubší struktury, uvidíte v hlavičkovém souboru dvojité podtržítko `__`.
-Například `CODEC_KEY_E_NETWORK__MESSAGE__VERSION` pro příklad YAML níže.
+Pro příklad YAML níže je to například `CODEC_KEY_E_NETWORK__MESSAGE__VERSION`.
 
 ```
 version: 2
@@ -40,13 +40,13 @@ schema:
 
 Více praktických příkladů najdete v CHESTER SDK ve složce katalogových aplikací `chester/applications/*`.
 
-Pojmenování `cbor-decoder.yaml` a `cbor-encoder.yaml` vychází z pohledu Cloudu. Zařízení CHESTER tedy kóduje data pomocí souboru **decoder**, protože cloud tento soubor YAML používá k dekódování.
+Pojmenování `cbor-decoder.yaml` a `cbor-encoder.yaml` vychází z pohledu cloudu. Zařízení CHESTER tedy kóduje data pomocí souboru **decoder**, protože cloud tento soubor YAML používá k dekódování.
 
 :::
 
 ## YAML {#yaml}
 
-V **YAML** definujete názvy klíčů, které se později použijí v dekódovaném **JSON**. Soubor **YAML** však může definovat i další věci:
+V souboru **YAML** definujete názvy klíčů, které se pak objeví v dekódovaném **JSON**. Soubor **YAML** ale může definovat i další věci:
 
 - **Modifikátory**
 - **Enumerátory**
@@ -63,7 +63,7 @@ Modifikátory jsou:
 - `$fpp`: počet desetinných míst čísla s plovoucí řádovou tečkou v JSON
 - `$key`: přejmenování klíče v **JSON**
 
-Příklad níže vytváří klíč s názvem `temperature`. V zařízení **CHESTER** je potřeba hodnotu vynásobit 100, poté je v **HARDWARIO Cloud** automaticky vydělena 100 a ve výsledném **JSON** má číslo dvě desetinná místa.
+Příklad níže vytvoří klíč `temperature`. V zařízení **CHESTER** hodnotu vynásobíte 100, **HARDWARIO Cloud** ji automaticky vydělí 100 a ve výsledném **JSON** má číslo dvě desetinná místa.
 
 ```yaml
 - temperature:
@@ -86,7 +86,7 @@ Výstupní **JSON** bude:
 
 ### Enumerátory {#enumerators}
 
-Definujte textové hodnoty a posílejte je efektivně jako celé číslo.
+Textové hodnoty definujete v YAML a posíláte je úsporně jako celé číslo.
 
 ```yaml
 - backup_state:
@@ -110,7 +110,7 @@ Výstupní **JSON** bude:
 
 ### Time Series Period {#time-series-period}
 
-**Time Series Period (TSP)** efektivně kóduje hodnotu nebo více hodnot s časovými značkami. V zařízení **CHESTER** posíláte pouze referenční **timestamp**, **period** a **values**. Dekodér automaticky přidá ke každé hodnotě absolutní časovou značku.
+**Time Series Period (TSP)** úsporně kóduje jednu nebo více hodnot s časovými značkami. Ze zařízení **CHESTER** posíláte jen referenční **timestamp**, **period** a **values**; dekodér pak ke každé hodnotě automaticky doplní absolutní časovou značku.
 
 ```yaml
 - measurements_val:
@@ -161,9 +161,9 @@ Všimněte si, že v JSON je časová značka každého vzorku absolutní. Vypo�
 
 ### Time Series Offset {#time-series-offset}
 
-**Time Series Offset (TSO)** je podobný předchozímu **Time Series Period (TSP)**. Čas mezi vzorky však není periodický a každý vzorek má svůj vlastní offset vůči předchozímu.
+**Time Series Offset (TSO)** funguje podobně jako **Time Series Period (TSP)**, vzorky ale nepřicházejí v pravidelných intervalech a každý má vlastní offset vůči předchozímu.
 
-Tento kód také ukazuje, jak lze kombinovat modifikátory uvnitř TSO.
+Příklad také ukazuje, jak uvnitř TSO kombinovat modifikátory.
 
 ```yaml
 - trigger_events:

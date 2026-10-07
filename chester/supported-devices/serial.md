@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Serial Devices
 
-Here is a list of tested devices by HARDWARIO with basic configuration to use:
+Here is a list of devices tested by HARDWARIO, with their basic configuration:
 
 | Name | Type | Notes |
 |------|------|-------|

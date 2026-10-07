@@ -13,24 +13,24 @@ For storing data from our sensors we like to use **InfluxDB, a time-series datab
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
 
-You need [**Python and pip installed and in system PATH**](https://www.tutorialspoint.com/how-to-install-python-in-windows) on your device for you to be able to get the **Gateway Service**
+You need [**Python and pip installed and in system PATH**](https://www.tutorialspoint.com/how-to-install-python-in-windows) on your device for you to be able to get **mqtt2influxdb**
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-You need [**Python**](https://www.python.org/downloads/) and [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-linux/) installed and in system **PATH** on your device for you to be able to get the **Gateway Service**
+You need [**Python**](https://www.python.org/downloads/) and [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-linux/) installed and in system **PATH** on your device for you to be able to get **mqtt2influxdb**
 
 </TabItem>
 <TabItem value="macOS" label="macOS">
 
-You need [**Python**](https://www.python.org/downloads/) and [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-macos/) installed and in system **PATH** on your device for you to be able to get the **Gateway Service**
+You need [**Python**](https://www.python.org/downloads/) and [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-macos/) installed and in system **PATH** on your device for you to be able to get **mqtt2influxdb**
 
 </TabItem>
 </Tabs>
 
 :::
 
-## Set Up MQTT to InfluxDb
+## Set Up MQTT to InfluxDB
 
 To install `mqtt2influxdb` you will just need to put the next command to your command line
 

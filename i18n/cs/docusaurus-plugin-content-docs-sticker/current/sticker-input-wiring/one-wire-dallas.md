@@ -9,6 +9,6 @@ Zařízení STICKER Input podporuje standardní **teplotní sondy 1-Wire (Dallas
 
 :::info
 
-Podrobný popis zapojení, nastavení DIP přepínačů a maximálního počtu senzorů bude doplněn v samostatné sekci.
+Podrobný popis zapojení, nastavení přepínačů DIP a maximálního počtu senzorů doplníme v samostatné části.
 
 :::

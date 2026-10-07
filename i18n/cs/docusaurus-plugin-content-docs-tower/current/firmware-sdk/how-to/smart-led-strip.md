@@ -1,45 +1,45 @@
 ---
 slug: how-to-smart-led-strip
-title: "Jak na: Smart LED pásek"
+title: "Jak na: Smart LED Strip"
 ---
 import Image from '@theme/IdealImage';
 
-Smart LED pásek vám nabízí snadný způsob, jak zobrazovat hodnoty například **teplotu jako barevný rozsah, blikáním** apod.
+Na pásku Smart LED Strip snadno zobrazíte hodnoty, například **teplotu jako barevnou škálu, blikání** apod.
 
-Je potřeba použít [**Power Module**](../../hardware-modules/about-power-module.md), který se stará o napájení a komunikaci mezi [**Core Module**](../../hardware-modules/about-core-module.md) a **LED páskem**.
+Potřebujete k tomu modul [**Power Module**](../../hardware-modules/about-power-module.md), který se stará o napájení a o komunikaci mezi modulem [**Core Module**](../../hardware-modules/about-core-module.md) a **LED páskem**.
 
 ## Odkazy {#references}
-- [**LED Strip SDK Module**](https://sdk.hardwario.com/twr__led__strip_8h_source.html)
-- [**Příklad v GitHub repozitáři**](https://github.com/hardwario/twr-sdk/blob/master/_examples/led-strip/application.c)
+- [**Modul SDK pro LED Strip**](https://sdk.hardwario.com/twr__led__strip_8h_source.html)
+- [**Příklad v repozitáři na GitHubu**](https://github.com/hardwario/twr-sdk/blob/master/_examples/led-strip/application.c)
 
 ## Dostupné barvy {#available-colors}
 
-LED diody použité [**na našem pásku**](https://www.hardwario.store/p/led-strip-rgbw-1m) jsou RGBW. To znamená, že obsahují samostatný světelný zdroj pro barvy **červenou**, **zelenou**, **modrou** a **bílou** (teplá bílá).
+LED [**na našem pásku**](https://www.hardwario.store/p/led-strip-rgbw-1m) jsou typu RGBW, takže mají samostatný zdroj světla pro **červenou**, **zelenou**, **modrou** a **bílou** barvu (teplá bílá).
 
 :::info
 
-Abyste získali téměř studené bílé světlo, musíte nastavit každou jednotlivou barvu na stejnou hodnotu jako ostatní.
+Téměř studené bílé světlo získáte, když všechny barvy nastavíte na stejnou hodnotu.
 
 :::
 
 ## Příklad {#example}
 
-V tomto příkladu nastavíte prvních 35 LED tak, aby každá svítila o 5 bodů jasněji než ta předchozí. Použije se modrá barva.
+V tomto příkladu nastavíte prvních 35 LED tak, aby každá svítila o 5 bodů jasněji než předchozí. Svítit budou modře.
 
-Pole `_led_strip_buffer ` je pro funkci LED pásku povinné. Jde v podstatě o popis LED pásku pro Core Module.
+Bez pole `_led_strip_buffer ` LED pásek nefunguje. Jde v podstatě o popis LED pásku pro modul Core Module.
 
-Chcete-li nastavit barvu pixelu (LED na pásku), musíte poskytnout několik informací. To se dělá pomocí `twr_led_strip_set_pixel_rgbw(twr_led_strip_t *self, int position, uint8_t r, uint8_t g, uint8_t b, uint8_t w)`. Argumenty funkce jsou:
+Barvu pixelu (LED na pásku) nastavíte funkcí `twr_led_strip_set_pixel_rgbw(twr_led_strip_t *self, int position, uint8_t r, uint8_t g, uint8_t b, uint8_t w)`. Jejími argumenty jsou:
 
 - `*self`: instance LED pásku, nejčastěji `&led_strip`
 - `position`: pixel (LED) na pásku, který se má nastavit (**začíná od 0, nikoli od 1**)
-- `r, g, b, w`: vyjádření **jak silně má každá barva svítit**, hodnoty musí být mezi 0 (minimum) a 255 (maximum)
+- `r, g, b, w`: **jak silně má která barva svítit**; hodnoty musí být mezi 0 (minimum) a 255 (maximum)
 
 Aby se změny projevily, musíte zavolat `twr_led_strip_write(&led_strip);`. Pokud to neuděláte, na pásku se nic nestane.
 
 <details>
 <summary>
 <b>
-Příklad kódu pro nastavení několika LED
+Příklad kódu: nastavení několika LED
 </b>
 </summary>
 <p>
@@ -76,13 +76,13 @@ void application_init(void)
 
 :::tip
 
-Maximální jasnost celého LED pásku můžete omezit funkcí `twr_led_strip_set_brightness(twr_led_strip_t *self, uint8_t brightness)`.
+Maximální jas celého LED pásku můžete omezit funkcí `twr_led_strip_set_brightness(twr_led_strip_t *self, uint8_t brightness)`.
 
 :::
 
 ### Efekty LED pásku {#led-strip-effects}
 
-K dispozici je několik funkcí s efekty.
+K dispozici je několik funkcí pro efekty.
 
 :::tip
 
@@ -90,12 +90,12 @@ Tyto efekty vypadají skvěle a možná je využijete pro nějakou signalizaci, 
 
 :::
 
-Pokud si chcete tyto efekty vyzkoušet, zde je kostra kódu pro pásek se 144 LED.
+Pokud si chcete efekty vyzkoušet, použijte tuto kostru kódu pro pásek se 144 LED.
 
 <details>
 <summary>
 <b>
-Příklad kostry kódu pro efekty LED pásku
+Příklad kódu: kostra pro efekty LED pásku
 </b>
 </summary>
 <p>
@@ -128,7 +128,7 @@ void application_init(void)
 
 #### Efekt Test {#test-effect}
 
-Jde o jednoduchý efekt, kterým můžete ověřit, zda všechny barvy LED pásku fungují správně
+Jednoduchý efekt, kterým ověříte, jestli všechny barvy LED pásku fungují správně.
 
 ```c
 twr_led_strip_effect_test(&led_strip);
@@ -136,7 +136,7 @@ twr_led_strip_effect_test(&led_strip);
 
 #### Efekt Rainbow {#rainbow-effect}
 
-LED pásek se rozsvítí v barvách duhy a bude tyto barvy plynule měnit do kruhu (co skončí na jedné straně pásku, začne na druhé).
+LED pásek se rozsvítí v barvách duhy a bude je plynule posouvat dokola (co na jednom konci pásku skončí, na druhém začne).
 
 :::note
 
@@ -156,7 +156,7 @@ Existuje také funkce `twr_led_strip_effect_rainbow(&led_strip, 100);`, která f
 
 #### Efekt Color Wipe {#color-wipe-effect}
 
-Vyplní celý pásek pixel po pixelu jednou barvou
+Vyplní celý pásek pixel po pixelu jednou barvou.
 
 ```c
 twr_led_strip_effect_color_wipe(&led_strip, 0x10000000, 20);
@@ -164,13 +164,13 @@ twr_led_strip_effect_color_wipe(&led_strip, 0x10000000, 20);
 
 :::tip
 
-První parametr přijímá barvu v hexadecimálním formátu (tato konkrétní je červená) a druhý parametr je rychlost. Čím nižší, tím rychleji.
+První parametr je barva v hexadecimálním formátu (tady červená), druhý je rychlost. Čím nižší hodnota, tím rychlejší změna.
 
 :::
 
 #### Efekt Theater {#theater-effect}
 
-Způsobí přepínání LED podle vzoru níže: `-` znamená, že LED je zhasnutá, `X` znamená, že LED svítí.
+LED se přepínají podle vzoru níže: `-` znamená zhasnutou LED, `X` rozsvícenou.
 
 ```c
 twr_led_strip_effect_color_wipe(&led_strip, 0x10000000, 20);
@@ -182,7 +182,7 @@ X–X–X–X–X–X -X–X–X–X–X– –X–X–X–X–X- X–X–X–X�
 
 :::tip
 
-První parametr je barva v hexadecimálním formátu (uložená v `uint32_t), a druhý je rychlost změn. Čím nižší, tím rychleji.
+První parametr je barva v hexadecimálním formátu (uložená v `uint32_t`), druhý je rychlost změn. Čím nižší hodnota, tím rychlejší změna.
 
 :::
 
@@ -196,7 +196,7 @@ První parametr je barva v hexadecimálním formátu (uložená v `uint32_t), a 
 
 #### Zastavení efektu {#effect-stop}
 
-Efekt můžete snadno zastavit touto funkcí
+Efekt snadno zastavíte touto funkcí:
 
 ```c
 twr_led_strip_effect_stop(&led_strip);
@@ -205,7 +205,7 @@ twr_led_strip_effect_stop(&led_strip);
 <details>
 <summary>
 <b>
-Příklad kódu pro zastavení efektu LED pásku
+Příklad kódu: zastavení efektu LED pásku
 </b>
 </summary>
 <p>

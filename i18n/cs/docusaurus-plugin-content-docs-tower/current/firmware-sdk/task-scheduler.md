@@ -1,26 +1,26 @@
 ---
 slug: task-scheduler
-title: Task Scheduler
+title: Plánovač úloh
 ---
 import Image from '@theme/IdealImage';
 
-Náš scheduler jsme vyvinuli na základě potřeby jednoduchosti a nízké spotřeby energie. Plánuje, která úloha se má spustit a kdy. Tento scheduler není plnohodnotný **RTOS** (**R**eal **T**ime **O**perating **S**ystem) a nemá skutečný kooperativní multitasking. Spustí se jedna úloha a když tato úloha skončí, spustí se další.
+Vlastní plánovač (scheduler) jsme vyvinuli, protože jsme potřebovali jednoduchost a nízkou spotřebu energie. Plánuje, která úloha se má spustit a kdy. Nejde o plnohodnotný **RTOS** (**R**eal **T**ime **O**perating **S**ystem) a nemá skutečný kooperativní multitasking: spustí se jedna úloha, a když skončí, spustí se další.
 
-Je důležité **úlohu neblokovat**, ale provést potřebnou operaci rychle a nechat **scheduler spustit další úlohy**. Pokud potřebujete vytvořit nějakou prodlevu, jedním z řešení je vytvořit například stavový automat a naplánovat volání úlohy později.
+Je důležité **úlohu neblokovat**: potřebnou operaci proveďte rychle a nechte **plánovač spustit další úlohy**. Pokud potřebujete prodlevu, můžete například vytvořit stavový automat a volání úlohy naplánovat na později.
 
 ## Odkazy {#references}
-- [**Scheduler SDK Module**](https://sdk.hardwario.com/group__twr__scheduler.html)
-- [**Příklad v repozitáři GitHub**](https://github.com/hardwario/twr-sdk/blob/master/_examples/scheduler-advanced/application.c)
+- [**Modul Scheduler v SDK**](https://sdk.hardwario.com/group__twr__scheduler.html)
+- [**Příklad v repozitáři na GitHubu**](https://github.com/hardwario/twr-sdk/blob/master/_examples/scheduler-advanced/application.c)
 
 ## Registrace úlohy {#registering-a-task}
 
-První věc, na kterou při práci se **schedulerem** pravděpodobně narazíte, je registrace jednoduché úlohy, která se má spustit ***za x sekund od nynějška***.
+Při práci s **plánovačem** nejspíš nejdřív budete registrovat jednoduchou úlohu, která se má spustit ***za x sekund***.
 
 :::info
 
-V příkladu níže kód inicializuje LCD Module a poté naplánuje úlohu, která se spustí po 5 sekundách a vypne LCD.
+Kód v příkladu níže inicializuje modul LCD Module a naplánuje úlohu, která za 5 sekund displej vypne.
 
-Při registraci úlohy si také můžete uložit její ID. Díky tomu budete moci s úlohou pracovat kdykoli budete chtít (spustit ji znovu, odregistrovat ji).
+Při registraci si můžete uložit ID úlohy. S úlohou pak můžete kdykoli dál pracovat (znovu ji spustit nebo odregistrovat).
 
 :::
 
@@ -57,25 +57,25 @@ void application_init(void)
 
 ## Odregistrování úlohy {#unregistering-a-task}
 
-Chcete-li úlohu odregistrovat ze **scheduleru** (například když už není potřeba, aby se spouštěla), musíte použít funkci `void twr_scheduler_unregister(twr_scheduler_task_id_t task_id)`.
+Úlohu z **plánovače** odregistrujete (například když už se nemá spouštět) funkcí `void twr_scheduler_unregister(twr_scheduler_task_id_t task_id)`.
 
-Ta bere jako parametr **ID** úlohy, která se má odregistrovat.
+Jejím parametrem je **ID** úlohy, kterou chcete odregistrovat.
 
 ## Plánování spuštění registrované úlohy {#planning-to-run-registered-task}
 
-Pokud zaregistrujete úlohu s třetím parametrem s jakoukoli hodnotou, úloha se spustí **právě jednou** po zadaném čase.
+Pokud úlohu zaregistrujete s libovolnou hodnotou třetího parametru, spustí se po zadaném čase **právě jednou**.
 
-Například: `twr_scheduler_register(disableLCD, NULL, twr_tick_get() + 5000);` spustí úlohu po 5 sekundách
+Například `twr_scheduler_register(disableLCD, NULL, twr_tick_get() + 5000);` spustí úlohu za 5 sekund.
 
 ### Jednorázově {#one-time}
 
 :::info
 
-Funkci `twr_scheduler_register` můžete spustit s třetím parametrem `TWR_TICK_INFINITY` (`twr_scheduler_register(disableLCD, NULL, TWR_TICK_INFINITY);`), aby se úloha po registraci nespustila, ale pouze až když sami budete chtít.
+Funkci `twr_scheduler_register` můžete spustit s třetím parametrem `TWR_TICK_INFINITY` (`twr_scheduler_register(disableLCD, NULL, TWR_TICK_INFINITY);`), aby se úloha po registraci nespustila a spustila se až tehdy, kdy budete chtít.
 
 :::
 
-Pro spuštění registrované úlohy ještě jednou v budoucnosti musíte použít jednu z následujících funkcí.
+Chcete-li registrovanou úlohu v budoucnu spustit znovu, použijte jednu z těchto funkcí:
 
 ```c
 void twr_scheduler_plan_current_now()
@@ -93,11 +93,11 @@ void twr_scheduler_plan_from_now(twr_scheduler_task_id_t task_id, twr_tick_t tic
 
 :::info
 
-Pro opětovné spuštění aktuální úlohy můžete použít funkce z první skupiny (s `current` v názvu).
+Aktuální úlohu znovu spustíte funkcemi z první skupiny (s `current` v názvu).
 
 Aby to fungovalo, musíte jednu z těchto funkcí zavolat přímo ve funkci dané úlohy.
 
-Například pokud chcete **zapínat a vypínat LCD po 5 sekundách**, můžete použít tyto funkce.
+Hodí se například tehdy, když chcete **každých 5 sekund přepnout displej LCD (zapnout, nebo vypnout)**.
 
 :::
 
@@ -121,13 +121,13 @@ static void disableLCD(void* param) {
 
     if(lcd_state == true) {
       twr_module_lcd_off();
-      ldc_state = false;
+      lcd_state = false;
     }
     else {
       twr_module_lcd_on();
-      ldc_state = true;
+      lcd_state = true;
     }
-  twr_scheduler_plan_current_from_now(twr_tick_get() + 5000);
+  twr_scheduler_plan_current_from_now(5000);
 }
 
 void application_init(void) {
@@ -145,9 +145,9 @@ void application_init(void) {
 
 :::info
 
-Pro spuštění úlohy odkudkoli můžete použít funkce z druhé skupiny (bez `current` v názvu).
+Úlohu odkudkoli spustíte funkcemi z druhé skupiny (bez `current` v názvu).
 
-Například pokud chcete **vypnout LCD 5 sekund po stisknutí tlačítka**, můžete použít tyto funkce.
+Hodí se například tehdy, když chcete **vypnout displej LCD 5 sekund po stisknutí tlačítka**.
 
 :::
 
@@ -173,7 +173,7 @@ static void disableLCD(void* param) {
 
 void button_event_handler(twr_button_t *self, twr_button_event_t event, void *event_param) {
   if (event == TWR_BUTTON_EVENT_CLICK) {
-    twr_scheduler_plan_from_now(turn_off_lcd_task_id, twr_tick_get() + 5000)
+    twr_scheduler_plan_from_now(turn_off_lcd_task_id, 5000);
   }
 }
 

@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        <b>Mini Battery Module</b> je navržen jako zdroj napájení pro <b>bateriově napájené jednotky</b>. Integrovaný nízkopříkonový zvyšující převodník poskytuje vynikající účinnost <b>ze dvou alkalických článků AAA 1,5 V</b>. Má patici s vývody na spodní straně, takže celkový profil jednotky, kterou postavíte, zůstává nízký.
+        <b>Mini Battery Module</b> slouží jako zdroj napájení pro <b>jednotky na baterie</b>. Integrovaný zvyšující převodník s nízkou spotřebou dosahuje vynikající účinnosti při napájení <b>ze dvou alkalických článků AAA 1,5 V</b>. Patici má vyvedenou na spodní stranu, takže sestavená jednotka zůstane nízká.
       </p>
       <p>
         Obvod pro odpojení zátěže umí <b>odpojit baterie, pokud je k systému připojen jakýkoli jiný zdroj napájení</b> (např. síťový adaptér nebo kabel USB). Napětí baterie lze měřit na jednom z analogových vstupů standardizovaného konektoru (<b>P0/A0/TXD0</b>).
@@ -22,7 +22,7 @@ import Image from '@theme/IdealImage';
 
 :::tip
 
-Pokud chcete, aby vaše zařízení vydrželo ještě delší dobu, a nezáleží vám na zástavbových rozměrech, můžete použít [**Standard Battery Module**](about-battery-module.md).
+Pokud má zařízení vydržet ještě déle a nezáleží vám na rozměrech, použijte standardní [**Battery Module**](about-battery-module.md).
 
 :::
 
@@ -41,7 +41,7 @@ Pokud chcete, aby vaše zařízení vydrželo ještě delší dobu, a nezálež�
 - Rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/mini-battery-module)
+- [**E-shop**](https://www.hardwario.store/p/mini-battery-module)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-battery-mini)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__battery)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_battery.h)

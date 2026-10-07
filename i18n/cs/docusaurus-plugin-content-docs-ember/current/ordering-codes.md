@@ -1,18 +1,18 @@
 ---
 slug: ordering-codes
 title: Objednací kódy
-description: "Všechny možné objednací kódy pro ekosystém EMBER; objednávka musí přesně odpovídat níže uvedeným objednacím číslům."
+description: "Všechny možné objednací kódy pro ekosystém EMBER; objednávka musí přesně odpovídat níže uvedeným objednacím kódům."
 title_meta: "Objednací kódy (EMBER)"
 ---
 import Image from '@theme/IdealImage';
 
 # Objednací kódy {#ordering-codes}
 
-Tento článek definuje všechny možné objednací kódy pro ekosystém **EMBER**. Specifikace objednávky musí plně odpovídat níže uvedeným objednacím kódům.
+Tento článek uvádí všechny možné objednací kódy ekosystému **EMBER**. Objednávka musí přesně odpovídat níže uvedeným objednacím kódům.
 
 :::tip
 
-U každého produktu jsou uvedeny dostupné varianty, tedy které varianty jsou standardní a obvykle ihned k dispozici. Pokud potřebujete konkrétní kombinaci, kontaktujte nás ohledně dostupnosti a podmínek **MOQ** (minimální objednací množství).
+U každého produktu jsou uvedené dostupné varianty, tedy standardní varianty, které jsou obvykle ihned k dispozici. Pokud potřebujete jinou kombinaci, ozvěte se nám a domluvíme dostupnost a podmínky **MOQ** (minimální objednací množství).
 
 :::
 
@@ -20,10 +20,11 @@ U každého produktu jsou uvedeny dostupné varianty, tedy které varianty jsou 
 
 :::info
 
-Produkt vždy obsahuje **napájecí adaptér 24 V DC** s mezinárodními vidlicemi.
+Součástí produktu je vždy **napájecí adaptér 24 V DC** s mezinárodními vidlicemi.
 
-**Antény pro LoRaWAN a LTE jsou umístěny uvnitř krabičky** a připojeny už z výroby, takže k uvedení brány do provozu není třeba objednávat žádnou anténu. **Externí antény nejsou součástí balení**.
-Objednávejte je samostatně a počítejte s tím, že jejich montáž znamená otevření krabičky. Viz
+**Antény pro LoRaWAN a LTE jsou uvnitř krabičky** a připojené už z výroby, takže kvůli zprovoznění brány
+žádnou anténu objednávat nemusíte. **Externí antény nejsou součástí balení.**
+Objednejte je samostatně a počítejte s tím, že při jejich montáži je třeba krabičku otevřít. Viz
 [Popis hardwaru → Antény](hardware-description.md#antennas).
 
 :::
@@ -32,9 +33,9 @@ Objednávejte je samostatně a počítejte s tím, že jejich montáž znamená 
 
 **Legenda:**
 
-* `C` = Cellular (LTE karta podporující 2G/3G/4G)
-* `8` = LoRaWAN karta pro 868 MHz
-* `9` = LoRaWAN karta pro 915 MHz
+* `C` = Cellular (karta LTE s podporou 2G/3G/4G)
+* `8` = karta LoRaWAN pro 868 MHz
+* `9` = karta LoRaWAN pro 915 MHz
 * `S1` = SIM karta Onomondo v balení
 
 **Dostupné varianty:**

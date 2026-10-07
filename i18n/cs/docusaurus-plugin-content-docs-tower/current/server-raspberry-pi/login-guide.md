@@ -6,41 +6,41 @@ import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Tento dokument popisuje, jak se přihlásit k Raspberry Pi pomocí **vzdáleného terminálu přes protokol SSH**.
+Tento návod popisuje, jak se k Raspberry Pi přihlásit ze **vzdáleného terminálu přes protokol SSH**.
 
 :::caution
 
-Tento návod předpokládá, že používáte čistý [**Raspberry Pi OS**](./installation-clean-os.md) nebo [**HARDWARIO Raspbian**](./installation-os.md).
+Návod předpokládá, že používáte čistý systém [**Raspberry Pi OS**](./installation-clean-os.md) nebo [**HARDWARIO Raspbian**](./installation-os.md).
 
 :::
 
 ## Zjištění IP adresy Raspberry Pi {#find-out-raspberry-pi-ip}
 
-Pokud se chcete k zařízení Raspberry Pi připojit pomocí IP adresy, musíte zjistit, jakou adresu mu DHCP server přidělil.
+Pokud se chcete k Raspberry Pi připojit přes IP adresu, musíte zjistit, jakou adresu mu přidělil DHCP server.
 
 :::caution
 
-Každá níže uvedená metoda předpokládá, že jste ve stejné síti jako Raspberry Pi.
+Všechny níže uvedené postupy předpokládají, že jste ve stejné síti jako Raspberry Pi.
 
 :::
 
-Existuje několik způsobů, jak zjistit, jakou adresu DHCP server vašim zařízením přidělil:
-- Přihlaste se do routeru a přejděte na DHCP Clients, LAN Status nebo něco podobného, liší se to podle routeru
-- Použijte počítačové nástroje jako [**Advanced IP Scanner (Windows)**](https://www.advanced-ip-scanner.com/cz/), [**IP Scanner (macOS)**](https://apps.apple.com/us/app/ip-scanner/id404167149?mt=12) nebo některý [**nástroj pro Linux**](https://www.techrepublic.com/article/how-to-scan-for-ip-addresses-on-your-network-with-linux/)
+Adresu, kterou DHCP server zařízením přidělil, zjistíte několika způsoby:
+- Přihlaste se do routeru a otevřete sekci DHCP Clients, LAN Status nebo podobnou; její název se u různých routerů liší
+- Použijte nástroj pro počítač, například [**Advanced IP Scanner (Windows)**](https://www.advanced-ip-scanner.com/cz/), [**IP Scanner (macOS)**](https://apps.apple.com/us/app/ip-scanner/id404167149?mt=12) nebo některý [**nástroj pro Linux**](https://www.techrepublic.com/article/how-to-scan-for-ip-addresses-on-your-network-with-linux/)
 - Použijte mobilní aplikaci, například [**Fing**](https://www.fing.com)
 
 :::tip
 
-Budete hledat zařízení s konkrétním **hostname**, například **raspberry.local**.
+Hledáte zařízení s konkrétním **hostname**, například **raspberry.local**.
 
 :::
 
 ## Připojení pomocí PuTTY {#connect-with-putty}
 
-Můžete použít **PuTTY**, což je aplikace, která umožňuje připojení ke vzdálenému terminálu přes SSH i jinými způsoby.
+Můžete použít aplikaci **PuTTY**, která se ke vzdálenému terminálu připojí přes SSH i jinak.
 
 - Stáhněte si [**aplikaci PuTTY**](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-- Otevřete PuTTY a měli byste vidět **tuto obrazovku**
+- Spusťte PuTTY; měli byste vidět **tuto obrazovku**
 <div class="container">
   <div class="row">
     <div class="col col--6">
@@ -52,7 +52,7 @@ Můžete použít **PuTTY**, což je aplikace, která umožňuje připojení ke 
 </div>
 
 - Zadejte svůj **hostname** nebo **IP adresu** (zde je to ``hub.local``)
-- Vyberte **SSH**, pokud již není vybráno
+- Vyberte **SSH**, pokud ještě není vybrané
 - Klikněte na **Open**
 - Přihlaste se:
   - uživatelské jméno: ``pi``
@@ -60,20 +60,20 @@ Můžete použít **PuTTY**, což je aplikace, která umožňuje připojení ke 
 
 :::info
 
-Nyní byste měli být přihlášeni ke svému Raspberry Pi. Doporučujeme [**změnit heslo**](#change-the-password) (pokud nebylo změněno již při nahrávání systému na microSD kartu) a [**aktualizovat systém**](#update-the-system). Poté můžete navštívit [**sekci nástrojů příkazové řádky**](../command-line-tools/index.md) a seznámit se s nástroji nainstalovanými na Raspberry.
+Teď byste měli být přihlášeni ke svému Raspberry Pi. Doporučujeme [**změnit heslo**](#change-the-password) (pokud jste ho nezměnili už při zápisu na kartu microSD) a [**aktualizovat systém**](#update-the-system). Potom se v [**sekci Nástroje příkazové řádky**](../command-line-tools/index.md) seznamte s nástroji, které jsou na Raspberry Pi nainstalované.
 
 :::
 
 ## Připojení pomocí terminálu {#connect-with-terminal}
 
-Na všech systémech můžete otevřít integrovaný terminál a připojit se příkazem ``ssh``
+V každém operačním systému se můžete připojit z vestavěného terminálu příkazem ``ssh``.
 
 Otevřete terminál a spusťte následující příkaz:
 
 <Tabs>
 <TabItem value="hostname" label="Hostname" default>
 
-Hostname se liší podle toho, kterou instalaci jste zvolili
+Hostname závisí na tom, kterou instalaci jste zvolili:
 
 [**HARDWARIO Raspbian**](./installation-os.md)
 
@@ -98,22 +98,22 @@ ssh pi@IP_ADDRESS
 </Tabs>
 
 - Přihlaste se:
-  - heslo: ``raspberry`` nebo **jakékoli jiné, které jste zvolili**
+  - heslo: ``raspberry`` nebo **jakékoli jiné, které jste si zvolili**
 
 :::info
 
-Nyní byste měli být přihlášeni ke svému Raspberry Pi. Doporučujeme [**změnit heslo**](#change-the-password) (pokud nebylo změněno již při nahrávání systému na microSD kartu) a [**aktualizovat systém**](#update-the-system). Poté můžete navštívit [**sekci nástrojů příkazové řádky**](../command-line-tools/index.md) a seznámit se s nástroji nainstalovanými na Raspberry.
+Teď byste měli být přihlášeni ke svému Raspberry Pi. Doporučujeme [**změnit heslo**](#change-the-password) (pokud jste ho nezměnili už při zápisu na kartu microSD) a [**aktualizovat systém**](#update-the-system). Potom se v [**sekci Nástroje příkazové řádky**](../command-line-tools/index.md) seznamte s nástroji, které jsou na Raspberry Pi nainstalované.
 
 :::
 
 ## Změna hesla {#change-the-password}
 
-Vždy byste měli **změnit výchozí heslo**. Uděláte to jednoduše spuštěním příkazu ``passwd`` v terminálu.
+Vždy byste měli **změnit výchozí heslo**. Stačí v terminálu spustit příkaz ``passwd``.
 
 ## Aktualizace systému {#update-the-system}
 
-Z důvodu bezpečnosti a stability je důležité udržovat systém aktuální.
-Systém se skládá z balíčků a aktualizovat je můžete následujícím příkazem:
+Kvůli bezpečnosti a stabilitě je důležité udržovat systém aktuální.
+Systém se skládá z balíčků, které aktualizujete tímto příkazem:
 
 ```bash
 sudo apt update && sudo apt upgrade

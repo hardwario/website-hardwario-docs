@@ -37,15 +37,15 @@ Základní instalace klientské aplikace TAPPER.
 
    :::tip
 
-   Ze spodní strany zařízení jsou dvě plastové západky. Použijte plochý šroubovák.
+   Na spodní straně zařízení jsou dvě plastové západky. Uvolníte je plochým šroubovákem.
 
    :::
 
-1. Vložte MicroSD kartu do počítače (preferovaná velikost je 16 GB).
+1. Vložte MicroSD kartu do počítače (doporučená velikost je 16 GB).
 
    :::info
 
-   MicroSD karta je se zařízením TAPPER dodávána.
+   MicroSD kartu dostanete spolu se zařízením TAPPER.
 
    :::
 
@@ -57,11 +57,11 @@ Základní instalace klientské aplikace TAPPER.
 
 1. Klikněte na **CHOOSE STORAGE** a vyberte cílovou MicroSD kartu.
 
-1. Klikněte na **NEXT**: nástroj se zeptá na přizpůsobení nastavení – klikněte na **EDIT SETTINGS**.
+1. Klikněte na **NEXT**. Nástroj se zeptá, jestli chcete upravit nastavení; klikněte na **EDIT SETTINGS**.
 
 1. Zaškrtněte **Set hostname**.
 
-1. Do pole **hostname** zadejte název hostitele pro vaše zařízení TAPPER.
+1. Do pole **hostname** zadejte název hostitele zařízení TAPPER.
 
 1. Zaškrtněte **Set username and password**.
 
@@ -73,40 +73,40 @@ Jako uživatelské jméno můžete použít `tapper` a jako heslo `hardwario`.
 
 :::danger
 
-Toto je doporučeno pouze při SSH autentizaci veřejným klíčem, jinak použijte silné heslo.
+Takové heslo použijte jen tehdy, když se přes SSH přihlašujete veřejným klíčem. Jinak zvolte silnou heslovou frázi.
 
 Nastavení SSH autentizace veřejným klíčem (doporučeno): [**SSH s autentizací veřejným klíčem**](/tapper/security/#ssh-with-public-key-authentication-only)
 
-Můžete použít [**generátor hesel Bitwarden**](https://bitwarden.com/password-generator/#password-generator).
-       1. V typu vyberte Passphrase.
-       1. Heslo můžete nechat vygenerovat několikrát, dokud nedostanete snadno zapamatovatelné; doporučujeme nejvýše 6 slov.
-              - Hesla si zapište a poté vyberte to nejlépe zapamatovatelné.
+Můžete použít [**generátor heslových frází Bitwarden**](https://bitwarden.com/password-generator/#password-generator).
+       1. Jako typ vyberte Passphrase.
+       1. Kliknutím na generate můžete nechat vygenerovat několik frází a vybrat si snáze zapamatovatelnou; doporučujeme nejvýše 6 pokusů.
+              - Fráze si zapište a vyberte tu, kterou si nejlépe zapamatujete.
 
 :::    
 
 1. Zaškrtněte **Configure Wireless LAN**.
 
-1. Do polí **SSID** a **Password** zadejte SSID a heslo vaší bezdrátové sítě.
+1. Do polí **SSID** a **Password** zadejte SSID a heslo bezdrátové sítě.
 
-1. V rozbalovací nabídce **Wireless LAN Country** nastavte zemi, kde bude zařízení TAPPER používáno.
+1. V rozbalovacím seznamu **Wireless LAN Country** vyberte zemi, ve které budete zařízení TAPPER používat.
 
 1. Zaškrtněte **Set locale settings**.
 
-1. V rozbalovací nabídce **Time zone** vyberte své časové pásmo.
+1. V rozbalovacím seznamu **Time zone** vyberte své časové pásmo.
 
-1. V rozbalovací nabídce **Keyboard layout** vyberte preferované rozložení klávesnice.
+1. V rozbalovacím seznamu **Keyboard layout** vyberte rozložení klávesnice.
 
 :::caution[Zabezpečení SSH]
 
-Doporučuje se nastavit **SSH pouze s autentizací veřejným klíčem**. Pro jednoduchost můžete použít přihlášení heslem.
+Doporučujeme nastavit **SSH pouze s autentizací veřejným klíčem**. Pro jednoduchost ale můžete použít i přihlášení heslem.
 
-Nástroj **Raspberry Pi Imager** to umožňuje nastavit v rámci [OS Customization](https://www.raspberrypi.com/documentation/computers/getting-started.html#advanced-options).
+V nástroji **Raspberry Pi Imager** to nastavíte v části [OS Customization](https://www.raspberrypi.com/documentation/computers/getting-started.html#advanced-options).
 
 :::
 
 ### Aktualizace Raspberry Pi {#update-raspberry-pi}
 
-1. Připojte se ke svému Raspberry Pi přes SSH:
+1. Připojte se k Raspberry Pi přes SSH:
 
        `ssh tapper@[IP ADDRESS OF TAPPER]`
 
@@ -120,7 +120,7 @@ Nástroj **Raspberry Pi Imager** to umožňuje nastavit v rámci [OS Customizati
 
 ### Instalace a nastavení potřebných balíčků {#install-and-set-up-required-packages}
 
-1. Budeme potřebovat následující balíčky:
+1. Nainstalujte potřebné balíčky:
   
       `sudo apt install cmake git libdbus-1-dev libglib2.0-dev pipx python3-dev`
 
@@ -130,7 +130,7 @@ Nástroj **Raspberry Pi Imager** to umožňuje nastavit v rámci [OS Customizati
   
    :::info
 
-   Tím se přidá záznam do vašeho `~/.bashrc`
+   Příkaz přidá záznam do souboru `~/.bashrc`.
 
    :::
 
@@ -140,7 +140,7 @@ Nástroj **Raspberry Pi Imager** to umožňuje nastavit v rámci [OS Customizati
 
 ### Zapnutí SPI a sériového portu {#enable-spi-and-serial-port}
 
-1. Zapněte rozhraní sériového portu a SPI:
+1. Zapněte sériový port a rozhraní SPI:
 
        `sudo raspi-config`
 
@@ -148,13 +148,13 @@ Nástroj **Raspberry Pi Imager** to umožňuje nastavit v rámci [OS Customizati
 
 ### Instalace klienta TAPPER {#install-tapper-client}
 
-Nainstalujte Python balíček klienta TAPPER:
+Nainstalujte klienta TAPPER jako balíček Pythonu:
 
     `pipx install 'git+https://github.com/hardwario/tapper.git@main#egg=tapper'`
 
 :::danger
 
-Pokud chcete místo toho vyzkoušet nejnovější vývojovou instalaci, můžete použít:
+Pokud chcete místo toho vyzkoušet nejnovější vývojovou verzi, použijte:
 
     `pipx install 'git+https://github.com/hardwario/tapper.git@dev#egg=tapper'`
 
@@ -162,9 +162,9 @@ Pokud chcete místo toho vyzkoušet nejnovější vývojovou instalaci, můžete
 
 :::note
 
-Příkaz `pipx` experimentálně podporuje přípony. Pokud chcete nejnovější vývojovou verzi s podporou přípon, připojte k příkazu `--suffix <suffix>`.
+Příkaz `pipx` experimentálně podporuje přípony. Chcete-li nejnovější vývojovou verzi nainstalovat s příponou, připojte k příkazu `--suffix <suffix>`.
 
-Příklad: `--suffix dev` by vedl k příkazu `tapperdev`
+Například s `--suffix dev` se příkaz bude jmenovat `tapperdev`.
 
 :::
 
@@ -176,5 +176,5 @@ Spusťte TAPPER v režimu ladění:
 
 Parametry:
 
-- `-d` zapne DEBUG logování do CLI
-- `-h` určuje MQTT hostitele
+- `-d` zapne výpis logů úrovně DEBUG do příkazové řádky
+- `-h` určuje hostitele brokeru MQTT

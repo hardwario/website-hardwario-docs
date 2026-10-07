@@ -1,35 +1,35 @@
 ---
 slug: /rakwireless
 title: RAKwireless
-description: "RAKwireless je světový průkopník v inovativních a rozmanitých řešeních konektivity pro IoT."
+description: "RAKwireless je světový průkopník v oblasti řešení konektivity pro IoT se širokou nabídkou produktů."
 ---
 import Image from '@theme/IdealImage';
 
 # RAKwireless {#rakwireless}
 
-[RAKwireless](https://www.rakwireless.com/en-us) je globální průkopník v oblasti inovativních a rozmanitých řešení IoT konektivity. Na rozdíl od tradičních dodavatelů hardwaru se RAKwireless drží filozofie **„IoT Made Easy“** a překlenuje propast mezi složitým návrhem hardwaru a snadným nasazením aplikací.
+[RAKwireless](https://www.rakwireless.com/en-us) je světový průkopník, který nabízí širokou škálu řešení konektivity pro IoT. Na rozdíl od tradičních dodavatelů hardwaru se společnost RAKwireless řídí heslem **„IoT Made Easy“** a propojuje složitý návrh hardwaru se snadným nasazením aplikací.
 
 ---
 
-RAKwireless je známý svými robustními infrastrukturními produkty **LoRaWAN®**, modulárními systémy nodů (WisBlock) a ekosystémem vstřícným k vývojářům. Produkty jsou navrženy tak, aby pokryly vše od rychlého prototypování až po masové komerční nasazení v náročných průmyslových prostředích.
+Společnost RAKwireless je známá odolnými infrastrukturními produkty **LoRaWAN®**, modulárním systémem pro stavbu koncových zařízení (WisBlock) a ekosystémem vstřícným k vývojářům. Její produkty pokrývají vše od rychlého prototypování po rozsáhlé komerční nasazení v náročném průmyslovém prostředí.
 
 ### Hlavní kategorie produktů {#key-product-categories}
 
-Portfolio RAKwireless zahrnuté v naší dokumentaci pokrývá:
+Produkty RAKwireless, které popisuje tato dokumentace, spadají do těchto kategorií:
 
-* **Komerční a průmyslové brány:** Vysoce výkonné vnitřní i venkovní brány LoRaWAN kompatibilní s hlavními síťovými servery (The Things Stack, ChirpStack, AWS IoT Core).
-* **Senzory a koncové nody:** Senzory připravené k okamžitému použití pro monitorování prostředí, sledování a inteligentní měření.
-* **Modulární IoT (WisBlock):** Modulární systém, který uživatelům umožňuje stavět vlastní senzorové nody skládáním výpočetních, senzorových a komunikačních bloků jako LEGO®.
+* **Komerční a průmyslové brány:** Výkonné vnitřní i venkovní brány LoRaWAN kompatibilní s hlavními síťovými servery (The Things Stack, ChirpStack, AWS IoT Core).
+* **Senzory a koncová zařízení:** Hotové senzory pro monitorování prostředí, sledování polohy a chytré měření.
+* **Modulární IoT (WisBlock):** Modulární systém, ve kterém si vlastní senzorová zařízení sestavíte z výpočetních, senzorových a komunikačních bloků jako z kostek LEGO®.
 
 ### Proč zvolit RAKwireless? {#why-choose-rakwireless}
 
 * **Zaměření na vývojáře:** Rozsáhlá dokumentace, open-source knihovny a aktivní podpora komunity.
 * **Škálovatelnost:** Plynulý přechod od prototypu WisBlock k hotovému komerčnímu produktu v průmyslové krabičce.
-* **Univerzálnost:** Řešení vhodná pro privátní sítě i pro veřejná nasazení na operátorské úrovni.
+* **Univerzálnost:** Řešení pro privátní sítě i pro veřejné sítě operátorské třídy.
 
-### Aplikace {#applications}
+### Oblasti využití {#applications}
 
-Hardware RAKwireless se aktivně používá v:
-* **Chytrém zemědělství:** Monitorování půdy a precizní zemědělství.
-* **Chytrých městech:** Sledování majetku, odpadové hospodářství a měření parametrů prostředí.
-* **Průmyslovém IoT (IIoT):** Prediktivní údržba a automatizace výroby.
+Hardware RAKwireless se používá v těchto oblastech:
+* **Chytré zemědělství:** Monitorování půdy a precizní zemědělství.
+* **Chytrá města:** Sledování majetku, odpadové hospodářství a měření parametrů prostředí.
+* **Průmyslový internet věcí (IIoT):** Prediktivní údržba a automatizace výroby.

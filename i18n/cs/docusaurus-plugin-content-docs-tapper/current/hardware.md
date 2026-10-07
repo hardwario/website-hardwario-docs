@@ -9,23 +9,23 @@ import Image from '@theme/IdealImage';
 
 # Popis hardwaru TAPPER {#tapper-hardware-description}
 
-V tomto článku najdete podrobnosti o hardwarové konfiguraci zařízení TAPPER.
+Tento článek popisuje hardwarovou konfiguraci zařízení TAPPER.
 
 ## Základní parametry {#basic-parameters}
 
-| **Elektrické**                       |                           |
+| **Elektrické vlastnosti**            |                           |
 | :----------------------------------- | ------------------------: |
 | Minimální napájecí napětí            |                      10 V |
 | Maximální napájecí napětí            |                      30 V |
 | Typická spotřeba                     |                     1,4 W |
 | Maximální spotřeba                   |                     2,5 W |
 | **Vstupy**                           |                           |
-| Nominální průřez svorkovnice         |        1,5 mm<sup>2</sup> |
-| DC napájecí jack                     |               1.35x3.5 mm |
+| Jmenovitý průřez vodiče svorkovnice  |        1,5 mm<sup>2</sup> |
+| Napájecí konektor DC jack            |               1.35x3.5 mm |
 | **Výstupy**                          |                           |
 | RGB LED                              | 355 mcd, 710 mcd, 140 mcd |
 | Bzučák                               |          80 dBA / 2,7 kHz |
-| **Fyzické**                          |                           |
+| **Fyzické vlastnosti**               |                           |
 | Rozměry krabičky                     |            155x84x21.3 mm |
 | Materiál krabičky                    |        ASA+PC (UL 94 V-0) |
 | Krytí krabičky                       |                      IP40 |
@@ -46,4 +46,4 @@ V tomto článku najdete podrobnosti o hardwarové konfiguraci zařízení TAPPE
 
 ### Periferie {#peripherals}
 
-![Schéma periferií TAPPER R1.1: RGB LED a bzučák řízené tranzistory a vstup tamper spínače](../../../../tapper/images/hio-tapper-r1.1-schematic-3.png)
+![Schéma periferií TAPPER R1.1: RGB LED a bzučák spínané tranzistory a vstup spínače tamper](../../../../tapper/images/hio-tapper-r1.1-schematic-3.png)

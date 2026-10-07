@@ -4,12 +4,12 @@ title: Správa zařízení
 
 # Správa zařízení {#managing-devices}
 
-Vytvářejte, upravujte a odstraňujte zařízení programově, užitečné při
-zprovoznění mnoha zařízení z vašeho vlastního systému.
+Zařízení můžete vytvářet, upravovat a odstraňovat programově, což se hodí, když
+zprovozňujete mnoho zařízení z vlastního systému.
 
 **Vytvoření zařízení**: `POST /v2/spaces/{space_id}/devices`. Zadejte **Name**,
 **HARDWARIO Serial Number** (`serial_number`) a **Claim Token** zařízení
-(`token`); volitelně přidejte vlastní `external_id` nebo přiložte `tags`:
+(`token`); volitelně přidejte vlastní `external_id` nebo připojte `tags`:
 
 ```bash
 curl -X POST \
@@ -25,8 +25,8 @@ curl -X POST \
 ```
 
 :::info
-Claim Token je pro každé zařízení unikátní. Naskenujte jeho QR kód nebo jej
-načtěte příkazem shellu `info show`. Viz [**První kroky**](/cloud/first-steps).
+Claim Token je pro každé zařízení jedinečný. Naskenujte ho z QR kódu, nebo ho
+vypište příkazem shellu `info show`. Viz [**První kroky**](/cloud/first-steps).
 :::
 
 Další endpointy pro zařízení: `PUT …/devices/{id}` (přejmenování, nastavení `external_id`, změna

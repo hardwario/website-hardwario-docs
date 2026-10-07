@@ -26,7 +26,7 @@ The screen is a data view, not a raw dump:
 - **per-day tables** you can expand for the individual records.
 
 Timestamps depend on the device clock. If the device's time has been
-synchronised, records carry absolute UTC timestamps; if it has not, they are
+synchronized, records carry absolute UTC timestamps; if it has not, they are
 shown relative to the read instead. Use **Tools → Sync time** to set the clock,
 see [**Tools**](./tools.md).
 

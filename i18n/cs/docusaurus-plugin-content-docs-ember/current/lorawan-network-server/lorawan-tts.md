@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # The Things Stack {#the-things-stack}
 
-Tento návod ukazuje, jak připojit LoRaWAN bránu **HARDWARIO EMBER** (MikroTik RouterOS) k **The Things Stack (TTS)**.
+Tento návod ukazuje, jak připojit bránu LoRaWAN **HARDWARIO EMBER** (MikroTik RouterOS) k platformě **The Things Stack (TTS)**.
 
 ## Užitečná dokumentace {#useful-docs}
 - Registrace brány v TTS: https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-gateways/
@@ -15,39 +15,39 @@ Tento návod ukazuje, jak připojit LoRaWAN bránu **HARDWARIO EMBER** (MikroTik
 - Konfigurace hotspotu EMBER (základy RouterOS): https://docs.hardwario.com/ember/hotspot-configuration/
 
 ## Předpoklady {#prerequisites}
-- Přístup do administračního rozhraní zařízení EMBER (**WinBox**)
+- Přístup do správcovského rozhraní zařízení EMBER (**WinBox**)
 - Účet v TTS s oprávněním vytvářet brány
-- Pokud nepoužíváte spravovaný network server od HARDWARIO, nastavte adresu LoRaWAN serveru na **váš vlastní** LoRaWAN server (VPN tunely nejsou potřeba).
+- Pokud nepoužíváte spravovaný síťový server HARDWARIO, zadejte jako adresu serveru LoRaWAN **svůj vlastní** server LoRaWAN (VPN tunely nejsou potřeba).
 
 ---
 
-## 1) Zjištění Gateway EUI (EUI-64) {#1-get-the-gateway-eui-eui-64}
+## 1) Zjistěte Gateway EUI (EUI-64) {#1-get-the-gateway-eui-eui-64}
 V systému MikroTik RouterOS se EUI brány zobrazuje jako **Gateway ID**:
 
 - **IoT → LoRa → Devices → Gateway ID**
 ![Gateway ID zařízení EMBER](../../../../../ember/lorawan-network-server/images/ember-geteway-id.png)
 ---
 
-## 2) Registrace brány v The Things Stack {#2-register-the-gateway-in-the-things-stack}
+## 2) Zaregistrujte bránu v The Things Stack {#2-register-the-gateway-in-the-things-stack}
 1. V konzoli TTS klikněte na **Register gateway**.
 2. Zadejte **Gateway EUI** (použijte **Gateway ID** z RouterOS).
 3. Vyplňte údaje o bráně:
-   - **Gateway ID** (vámi zvolený identifikátor zařízení → příklad: **test-gateway-001**)
-   - **Gateway Name** (vámi zvolený název zařízení → příklad **Test Gateways-001**)   
-   - **Frequency plan** (zvolte ten, který odpovídá vašemu regionu/hardwaru; např. Europe 868.1 MHz)
+   - **Gateway ID** (zvolený identifikátor zařízení, např. **test-gateway-001**)
+   - **Gateway Name** (zvolený název zařízení, např. **Test Gateways-001**)   
+   - **Frequency plan** (zvolte plán podle svého regionu a hardwaru, např. Europe 868.1 MHz)
 4. Zapněte **Require authenticated connection**.
 5. Zapněte obě volby:
    - **Generate API key for CUPS**
    - **Generate API key for LNS**
-6. Klikněte na **Register gateway** a **stáhněte oba API klíče** (CUPS + LNS).
+6. Klikněte na **Register gateway** a **stáhněte oba klíče API** (CUPS + LNS).
 
 ---
 
-## 3) Konfigurace zařízení EMBER (MikroTik RouterOS) pro připojení k TTS {#3-configure-ember-mikrotik-routeros-to-connect-to-tts}
-> RouterOS obvykle vyžaduje, aby byla LoRa karta během změny nastavení LoRa ve stavu **Disabled**.
+## 3) Nastavte připojení zařízení EMBER (MikroTik RouterOS) k TTS {#3-configure-ember-mikrotik-routeros-to-connect-to-tts}
+> RouterOS obvykle vyžaduje, aby byla karta LoRa při změně nastavení LoRa **vypnutá** (Disabled).
 
-V levém panelu otevřete **IoT**→ **LoRa**. Klikněte na řádek v seznamu a použijte disable. 
-![Vypnutí LRW karty zařízení EMBER](../../../../../ember/lorawan-network-server/images/ember-disable-lrw-card.png)
+V levém panelu otevřete **IoT**→ **LoRa**. Klikněte na řádek v seznamu a zvolte Disable. 
+![EMBER: vypnutí karty LoRaWAN](../../../../../ember/lorawan-network-server/images/ember-disable-lrw-card.png)
 Stažené klíče použijete v RouterOS.
 
 
@@ -61,31 +61,31 @@ V levém panelu otevřete **IoT**→ **LoRa**→ **Servers**. Vyberte **New** a 
 - Name: **TTS-HARDWARIO cups**
 - Address: **hardwario-com.eu1.cloud.thethings.industries**
 - Port: **443**
-- Auth Key: (hodnota ze souboru **"cups.key"**)
-![Přidání serveru TTS v zařízení EMBER](../../../../../ember/lorawan-network-server/images/ember-tts-server.png)
+- Auth Key: (hodnota ze souboru **„cups.key“**)
+![EMBER: přidání serveru TTS](../../../../../ember/lorawan-network-server/images/ember-tts-server.png)
 
-### Root certifikáty (nutné pro SSL/TLS) {#root-certificates-required-for-ssltls}
+### Kořenové certifikáty (nutné pro SSL/TLS) {#root-certificates-required-for-ssltls}
 
-Chcete-li vytvořit zabezpečené připojení TLS k **The Things Stack (LNS / CUPS)**, naimportujte do RouterOS oficiální **Root CA certifikáty The Things Stack** a označte je jako **trusted**.
+Aby se RouterOS mohl k platformě **The Things Stack (LNS / CUPS)** připojit přes zabezpečené TLS, naimportujte do něj oficiální **kořenové certifikáty CA platformy The Things Stack** a označte je jako důvěryhodné (**trusted**).
 
 - Certifikáty stáhněte zde:  
   https://www.thethingsindustries.com/docs/reference/root-certificates/
   
-V levém panelu otevřete **Files**→ **Upload** a vyberte soubor "ca.pem".
-![Přidání certifikátu TTS v zařízení EMBER](../../../../../ember/lorawan-network-server/images/ember-upload-file.png)
+V levém panelu otevřete **Files**→ **Upload** a vyberte soubor „ca.pem“.
+![EMBER: nahrání certifikátu TTS](../../../../../ember/lorawan-network-server/images/ember-upload-file.png)
 
-V levém panelu otevřete **System**→ **Certificates**→ **Import**. Klikněte na rozbalovací šipku, vyberte soubor "ca.pem" a klikněte na **Import**.
-![Import certifikátu TTS v zařízení EMBER](../../../../../ember/lorawan-network-server/images/ember-import-certificate.png)
+V levém panelu otevřete **System**→ **Certificates**→ **Import**. Klikněte na rozbalovací šipku, vyberte soubor „ca.pem“ a klikněte na **Import**.
+![EMBER: import certifikátu TTS](../../../../../ember/lorawan-network-server/images/ember-import-certificate.png)
 
-### Výběr network serveru {#select-network-server}
-Je potřeba vybrat network server.
+### Výběr síťového serveru {#select-network-server}
+Vyberte síťový server.
 
-- V levém panelu otevřete **IoT → LoRa** a klikněte na zařízení. Otevře se nové okno, kliknutím na **+** vyberte server TTS a poté klikněte na **OK**.
-![Přidání serveru TTS v zařízení EMBER](../../../../../ember/lorawan-network-server/images/ember-add-select-network-server.png)
+- V levém panelu otevřete **IoT → LoRa** a klikněte na zařízení. V novém okně vyberte tlačítkem **+** server TTS a klikněte na **OK**.
+![EMBER: výběr síťového serveru](../../../../../ember/lorawan-network-server/images/ember-add-select-network-server.png)
 ---
-## 4) Zapnutí a kontrola {#4-enable-and-verify}
+## 4) Zapněte a ověřte {#4-enable-and-verify}
 1. V RouterOS: **IoT → LoRa → Devices → Enable**
-![Zapnutí LRW karty zařízení EMBER](../../../../../ember/lorawan-network-server/images/ember-enable-lrw.png)
+![EMBER: zapnutí karty LoRaWAN](../../../../../ember/lorawan-network-server/images/ember-enable-lrw.png)
 2. V konzoli TTS otevřete bránu a zkontrolujte, že se aktualizují **Live data**.
 
 ---

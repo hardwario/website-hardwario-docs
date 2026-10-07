@@ -6,62 +6,62 @@ import Image from '@theme/IdealImage';
 
 # CHESTER Push {#chester-push}
 
-Tento článek popisuje základní funkcionalitu, popis hardwaru a ukázkovou **JSON** zprávu katalogové aplikace **CHESTER Push**.
+Tento článek popisuje základní funkce katalogové aplikace **CHESTER Push**, její hardware a ukázkovou zprávu **JSON**.
 
 :::caution
 
-Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
+Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
 
-- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
+- [**Společné funkce**](common-functionality.md): jak fungují LED, tlačítko a nastavení sítě.
+- [**Konektivita platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
 
 ## Přehled aplikace {#application-overview}
 
-Zařízení **CHESTER Push** má na krabičce tlačítka. Aplikace okamžitě odešle data při stisknutí kteréhokoli z tlačítek. U hromadných objednávek lze počet tlačítek konfigurovat. Standardní konfigurace nabízí čtyři tlačítka na levé straně. Alternativně můžeme dodat verzi s jedním tlačítkem (uprostřed krabičky). Na přání zákazníka také můžeme upravit potisk krabičky a doplnit různé textové popisky (nebo symboly) vedle jednotlivých tlačítek.
+Zařízení **CHESTER Push** má na krabičce tlačítka. Jakmile stisknete kterékoli z nich, aplikace okamžitě odešle data. U větších objednávek lze počet tlačítek přizpůsobit. Standardní provedení má čtyři tlačítka na levé straně, dodat můžeme i verzi s jedním tlačítkem uprostřed krabičky. Na přání zákazníka také upravíme potisk krabičky a vedle jednotlivých tlačítek doplníme textové popisky (nebo symboly).
 
-Aplikace umí rozlišit krátký a dlouhý stisk. V každé zprávě je událost rozlišující, které z tlačítek odeslání vyvolalo. Každá zpráva také obsahuje čítače krátkých a dlouhých stisků pro každé tlačítko.
+Aplikace rozliší krátký a dlouhý stisk. Každá zpráva obsahuje událost, ze které poznáte, které tlačítko odeslání vyvolalo, a také čítače krátkých a dlouhých stisků všech tlačítek.
 
-Každé tlačítko je rovněž vybaveno **LED indikátorem**, takže obsluha vidí, že byl stisk rozpoznán. Pro slyšitelné potvrzení stisku tlačítka se navíc z integrovaného akustického bzučáku přehraje **pípnutí**.
+Každé tlačítko má také **indikační LED**, takže obsluha vidí, že zařízení stisk zaznamenalo. Stisk navíc slyšitelně potvrdí **pípnutí** z vestavěného bzučáku.
 
-Aplikace **CHESTER Push** integruje rozšiřující modul **CHESTER-Z1-F** s dobíjecí baterií **Li-Ion** a DC/DC napájecím zdrojem (rozsah vstupního napětí 6 VDC až 26 VDC), který dokáže nabíjet baterii a zajistit stabilní napájení aplikace. Odesílaná zpráva také poskytuje informace o přítomnosti externího napájení, napětí externí DC linky a napětí baterie. Díky těmto doplňkovým informacím lze **CHESTER Push** použít i pro monitorování výpadků napájení.
+Aplikace **CHESTER Push** využívá rozšiřující modul **CHESTER-Z1-F** s dobíjecí baterií **Li-Ion** a napájecím zdrojem DC/DC (rozsah vstupního napětí 6 VDC až 26 VDC), který nabíjí baterii a zajišťuje stabilní napájení. Zpráva obsahuje také informaci, zda je připojené externí napájení, napětí na externím vstupu DC a napětí baterie. Díky tomu lze zařízení **CHESTER Push** použít i ke sledování výpadků napájení.
 
-Zařízení **CHESTER Push** rovněž hlásí teplotu a orientaci zařízení (pomocí vestavěného akcelerometru). Všechny tyto hodnoty jsou obsaženy v každé zprávě odeslané ze zařízení.
+Zařízení **CHESTER Push** hlásí také teplotu a svou orientaci (z vestavěného akcelerometru). Všechny tyto hodnoty jsou v každé odeslané zprávě.
 
 ### Chování LED {#led-behaviour}
 
-Aplikace signalizuje události tlačítek na LED dvěma různými způsoby a zákazníci mohou určit, která varianta firmwaru jejich potřebám lépe vyhovuje.
+Aplikace umí signalizovat stisky tlačítek na LED dvěma způsoby a zákazník si vybere variantu firmwaru, která mu lépe vyhovuje.
 
-- Standardní implementace **CHESTER Push**:
+- Standardní varianta **CHESTER Push**:
 
-  LED na stisknutém tlačítku svítí po dobu 2 sekund (zeleně při krátkém stisku, červeně při dlouhém stisku).
+  LED na stisknutém tlačítku svítí 2 sekundy (zeleně při krátkém stisku, červeně při dlouhém).
 
   :::tip
 
-  Tato varianta je vhodná pro nízkopříkonový provoz (měsíce z integrované baterie **Li-Ion**).
+  Tato varianta je vhodná pro provoz s nízkou spotřebou (na vestavěnou baterii **Li-Ion** vydrží měsíce).
 
   :::
 
-- Alternativní implementace **CHESTER Push FM** (zkratka pro **Flip Mode**):
+- Alternativní varianta **CHESTER Push FM** (zkratka **Flip Mode**):
 
-  LED se přepne (červenou barvou) na tlačítko, které bylo stisknuto (LED předchozího tlačítka zhasne).
+  Červeně se rozsvítí LED naposledy stisknutého tlačítka a LED předchozího tlačítka zhasne.
 
   :::caution
 
-  Tato varianta není vhodná pro nízkopříkonový provoz, protože trvale svítící LED rychle vybíjí baterii.
+  Tato varianta není vhodná pro provoz s nízkou spotřebou, protože trvale svítící LED rychle vybíjí baterii.
 
   :::
 
 ## Popis hardwaru {#chester-push}
 
-Hardware katalogové aplikace **CHESTER Push** se skládá z následujících objednacích kódů:
+Hardware katalogové aplikace **CHESTER Push** tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-CGLS`: základní deska CHESTER
 * `CHESTER-Z1-F`: čtyři tlačítka (další varianty viz [**Objednací kódy**](../ordering-codes.md#chester-z))
-* `CHESTER-E2-LP`: krabička se světlovodem a SMA anténním pigtailem
+* `CHESTER-E2-LP`: krabička se světlovodem a anténním pigtailem SMA
 
 ## Šablona krabičky {#enclosure-template}
 
@@ -69,7 +69,7 @@ Pro vlastní návrh krabičky můžete použít [**šablonu předního krytu**](
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná příkazem `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config interval-report 1800
@@ -79,7 +79,7 @@ app config backup-report-connected false
 app config backup-report-disconnected false
 ```
 
-## Specifické příkazy {#specific-commands}
+## Příkazy aplikace {#specific-commands}
 
 :::info
 
@@ -99,7 +99,7 @@ Tímto příkazem nastavíte krátké zpoždění (v sekundách) mezi událostí
 app config event-report-delay <value>
 ```
 
-Tímto příkazem omezíte počet asynchronních hlášení událostí **button** nebo **backup** v jednohodinovém okně:
+Tímto příkazem omezíte počet asynchronních hlášení událostí **button** nebo **backup** za hodinu:
 
 ```
 app config event-report-rate <value>
@@ -107,11 +107,11 @@ app config event-report-rate <value>
 
 :::tip
 
-Tato funkce pomáhá šetřit energii u zařízení napájeného z baterie a optimalizuje množství přenášených dat. Pravidelná (periodická) hlášení nastavená parametrem `interval-report` se do tohoto limitu nepočítají.
+Limit šetří baterii zařízení a snižuje objem přenášených dat. Pravidelná hlášení podle parametru `interval-report` se do něj nepočítají.
 
 :::
 
-Těmito příkazy zapnete/vypnete hlášení událostí připojení/odpojení napájecího vstupu zálohovacího modulu:
+Těmito příkazy zapnete nebo vypnete hlášení připojení a odpojení napájení na vstupu záložního modulu:
 
 ```
 app config backup-report-connected false
@@ -120,9 +120,9 @@ app config backup-report-disconnected false
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je k dispozici v kapitole [Firmware](index.md#application-firmware) katalogových aplikací.
+Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](index.md#application-firmware).
 
-## Ukázková JSON zpráva {#example-json-message}
+## Ukázková zpráva JSON {#example-json-message}
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -278,9 +278,9 @@ import TabItem from '@theme/TabItem';
 
 ### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Podpora LoRaWAN: jediný binární firmware pro LTE i LoRaWAN; režim lze zvolit pomocí `app config mode lte` / `app config mode lrw`
-- **Změněno**: Refaktorováno na nový LoRaWAN framework `app_lrw` s pokrytím jednotkovými testy
-- **Změněno**: Přijat protokol Cloud v2 (kódování CBOR, nové API endpointy); předchozí firmware pro Cloud v1 zůstává samostatně k dispozici
+- **Přidáno**: Podpora LoRaWAN: jediný binární soubor firmwaru pro LTE i LoRaWAN; režim se volí příkazem `app config mode lte` / `app config mode lrw`
+- **Změněno**: Přepracováno na nový framework LoRaWAN `app_lrw` pokrytý jednotkovými testy
+- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); firmware pro Cloud v1 je nadále k dispozici samostatně
 
 :::info
 

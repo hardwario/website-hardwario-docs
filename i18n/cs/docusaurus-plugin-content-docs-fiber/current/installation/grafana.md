@@ -4,7 +4,7 @@ title: Instalace Grafany
 
 # Instalace Grafany {#install-grafana}
 
-Dostupné na zařízení FIBER i FIBER Lite.
+K dispozici na zařízení FIBER i FIBER Lite.
 
 1. Nainstalujte potřebné balíčky a přidejte repozitář **Grafana**:
 
@@ -45,11 +45,11 @@ Dostupné na zařízení FIBER i FIBER Lite.
      }'
    ```
 
-1. Nyní je **Grafana** dostupná na této adrese: `http://[TARGET IP ADDRESS]:3000/`
+1. **Grafana** je teď dostupná na adrese: `http://[TARGET IP ADDRESS]:3000/`
 
    :::tip
 
-   Panely dashboardu se nejlépe staví ve chvíli, kdy už tečou reálná data ze zařízení či brány. Do té
-   doby není co smysluplného vizualizovat.
+   Panely dashboardu má smysl vytvářet, až budou přicházet skutečná data ze zařízení a brány. Do té
+   doby není co smysluplně zobrazovat.
 
    :::

@@ -4,27 +4,27 @@ title: "Jak na: GPS Module"
 ---
 import Image from '@theme/IdealImage';
 
-GPS Module lze použít pro získání **pozice**, **času**, **data** a **výšky**.
+Modul GPS Module určí **polohu**, **čas**, **datum** a **nadmořskou výšku**.
 
 ## Odkazy {#references}
-- [**GPS SDK Module**](https://sdk.hardwario.com/group__twr__module__gps.html)
-- [**Příklad v GitHub repozitáři**](https://github.com/hardwario/twr-sdk/blob/master/_examples/gps/application.c)
+- [**Modul SDK pro GPS Module**](https://sdk.hardwario.com/group__twr__module__gps.html)
+- [**Příklad v repozitáři na GitHubu**](https://github.com/hardwario/twr-sdk/blob/master/_examples/gps/application.c)
 
-Díky **SDK** je nastavení a používání modulu GPS Module **velmi jednoduché**. Musíte udělat pouze dvě věci:
+Díky **SDK** je nastavení a používání modulu GPS Module **velmi jednoduché**. Stačí udělat dvě věci:
 
-1. Inicializovat GPS Module
-2. Naprogramovat **obsluhu události** (co se má stát, když se GPS Module aktualizuje)
+1. Inicializovat modul GPS Module
+2. Naprogramovat **obsluhu události** (co se má stát, když modul GPS Module načte nová data)
 
 :::info
 
-Tento příklad odešle datum, čas, pozici, počet satelitů, které modul vidí, a kvalitu fixu pomocí `twr_log` přes UART do PC.
+Tento příklad pošle funkcí `twr_log` přes UART do počítače datum, čas, polohu, počet satelitů, které modul vidí, a kvalitu fixu.
 
 :::
 
 <details>
 <summary>
 <b>
-Příklad kódu funkce GPS
+Příklad kódu: modul GPS Module
 </b>
 </summary>
 <p>

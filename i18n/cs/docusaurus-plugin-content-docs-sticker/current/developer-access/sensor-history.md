@@ -7,12 +7,12 @@ import Image from '@theme/IdealImage';
 
 # Historie senzorů a store-and-forward (`history`) {#sensor-history--store-and-forward-history}
 
-**Engine historie senzorů** zajišťuje pro zařízení STICKER funkci store-and-forward. Když zařízení přijde o konektivitu LoRaWAN, měření ze senzorů se průběžně ukládají do nevolatilní flash paměti. Po obnovení konektivity nebo na žádost backendu lze historické záznamy přehrát přes rádiové rozhraní, případně je lokálně přečíst přes NFC.
+**Historie senzorů** (Sensor History Engine) zajišťuje v zařízení STICKER funkci store-and-forward. Když zařízení ztratí spojení LoRaWAN, měření ze senzorů se průběžně ukládají do nevolatilní flash paměti. Po obnovení spojení nebo na žádost backendu lze uložené záznamy znovu odeslat rádiem, případně je přečíst na místě přes NFC.
 
-Uložené záznamy přežijí výměnu baterií i ztrátu napájení. Záznam se konfiguruje parametry `config` a lokálně se spravuje příkazem shellu `history` (viz [**Nastavení firmwaru**](firmware-setup.md)).
+Uložené záznamy přežijí výměnu baterií i ztrátu napájení. Záznam se nastavuje parametry `config` a na místě se spravuje příkazem shellu `history` (viz [**Nastavení firmwaru**](firmware-setup.md)).
 
 :::info Firmware v1.4.0
-Funkce store-and-forward popsaná na této stránce je základní funkcí **firmwaru STICKER v1.4.0**. Během výpadků sítě zaznamenává vzorky ze senzorů do flash paměti a na žádost je přehraje.
+Store-and-forward popsaný na této stránce je základní funkcí **firmwaru STICKER v1.4.0**. Během výpadků sítě ukládá vzorky ze senzorů do flash paměti a na vyžádání je znovu odešle.
 :::
 
 ---
@@ -26,21 +26,21 @@ Funkce store-and-forward popsaná na této stránce je základní funkcí **firm
 
 Senzory se vzorkují a ukládají podle rozvrhu `interval-sample` (nebo jednou za uplink, pokud je `interval-sample` rovno `0`), viz [**Konfigurace**](configuration.md).
 
-### Zaznamenatelné kanály {#recordable-channels}
+### Kanály, které lze zaznamenávat {#recordable-channels}
 
-Bitová maska `history-sensors` mapuje bit *i* na kanál *i* (v 32bitovém poli je volitelných až 19 kanálů):
+V bitové masce `history-sensors` odpovídá bit *i* kanálu *i* (v 32bitovém poli lze vybrat až 19 kanálů):
 
 - **`temperature`**, **`humidity`**: Integrované senzory prostředí
-- **`s1-temp`/`s1-hum` … `s4-temp`/`s4-hum`**: Slot pro senzory 1-Wire 1 až 4
-- **`hall-left`**, **`hall-right`**, **`input-a`**, **`input-b`**: Pulzní a čítačové vstupy
-- **`motion`**: Počet detekcí pohybu integrovaným PIR
-- **`pressure`**, **`illuminance`**, **`orientation`**, **`accel-motion`**: Barometr, okolní osvětlení, náklon z akcelerometru a čítače pohybových událostí
+- **`s1-temp`/`s1-hum` … `s4-temp`/`s4-hum`**: Sloty senzorů 1-Wire 1 až 4
+- **`hall-left`**, **`hall-right`**, **`input-a`**, **`input-b`**: Impulzní a čítačové vstupy
+- **`motion`**: Počet detekcí pohybu vestavěným senzorem PIR
+- **`pressure`**, **`illuminance`**, **`orientation`**, **`accel-motion`**: Barometr, osvětlenost, náklon z akcelerometru a čítače událostí pohybu
 
 Kanály neosazených fyzických senzorů se automaticky přeskakují.
 
 ---
 
-## Shell příkazy (`history`) {#shell-commands-history}
+## Příkazy shellu (`history`) {#shell-commands-history}
 
 | Příkaz | Popis |
 |---|---|
@@ -50,32 +50,32 @@ Kanály neosazených fyzických senzorů se automaticky přeskakují.
 | `history stats` | Zobrazí minimum, maximum a průměr pro každý zaznamenaný senzor. |
 | `history sensors [<name> on/off]` | Zobrazí aktuálně aktivní kanály historie nebo jednotlivý kanál přepne. |
 | `history enable <on/off>` | Hlavní přepínač pro zapnutí nebo pozastavení záznamu historie. |
-| `history capture` | Vynutí okamžité vzorkování senzorů a zapíše jeden záznam do bufferu (užitečné při testování na stole). |
+| `history capture` | Vynutí okamžité vzorkování senzorů a zapíše jeden záznam do bufferu (hodí se při testování na stole). |
 | `history clear` | Vyprázdní celý kruhový buffer historie. |
 
 ---
 
-## Přehrání a získání historie {#replaying--retrieving-history}
+## Opětovné odeslání a stažení historie {#replaying--retrieving-history}
 
 Data uložená v bufferu historie lze získat dvěma způsoby:
 
-- **Přes LoRaWAN (vzdálené přehrání):** Backend odešle downlink příkaz `req_history` na **fPort 85**. Zařízení STICKER pošle odpovídající historické rámce zpět jako uplinky `history_frame` na fPort 85 (viz [**Downlink příkazy**](../connectivity/downlink-commands.md)).
-- **Přes šifrované NFC (lokální stažení):** Aplikace **HARDWARIO Manager** čte buffer stránku po stránce v šifrované NFC session (`req_history_page`), což umožňuje úplné offline stažení dat bez spotřeby vysílacího času LoRaWAN.
+- **Přes LoRaWAN (opětovné odeslání na dálku):** Backend odešle v downlinku příkaz `req_history` na **fPort 85**. Zařízení STICKER pak pošle odpovídající rámce historie zpět jako uplinky `history_frame` na fPort 85 (viz [**Příkazy přes downlink**](../connectivity/downlink-commands.md)).
+- **Přes šifrované NFC (lokální stažení):** Aplikace **HARDWARIO Manager** čte buffer stránku po stránce v šifrované relaci NFC (`req_history_page`), takže data stáhnete celá offline a nespotřebujete vysílací čas LoRaWAN.
 
 ---
 
 ## Úložiště a kapacita kruhového bufferu {#storage--ring-buffer-capacity}
 
-Záznamy historie se ukládají do vyhrazené **32 KB kruhové flash partition**, striktně oddělené od systémové konfigurace a přihlašovacích údajů LoRaWAN.
+Záznamy historie se ukládají do vyhrazeného **kruhového oddílu flash paměti o velikosti 32 KB**, přísně odděleného od systémové konfigurace a přístupových údajů LoRaWAN.
 
-Zábor paměti se liší podle velikosti vybraného kanálu:
-- Teplota / tlak / osvětlení: 2 bajty každý
-- Vlhkost / orientace: 1 bajt každý
-- Pulzní čítače: 4 bajty každý
+Místo v paměti závisí na velikosti vybraných kanálů:
+- Teplota / tlak / osvětlenost: po 2 bajtech
+- Vlhkost / orientace: po 1 bajtu
+- Čítače impulzů: po 4 bajtech
 
 **Odhad kapacity:**
-Ve výchozí konfiguraci (teplota + vlhkost) uloží 32 KB flash buffer přibližně **9 400 záznamů**, což při vzorkovacím intervalu 15 minut odpovídá **~98 dnům offline záznamu**.
+Ve výchozí konfiguraci (teplota + vlhkost) pojme buffer o velikosti 32 KB přibližně **9 400 záznamů**, což při intervalu vzorkování 15 minut odpovídá **~98 dnům záznamu offline**.
 
 :::caution Chování paměti při aktualizaci firmwaru
-Přehrání nebo aktualizace image firmwaru znovu inicializuje rozvržení 32 KB partition historie a **vymaže uložené záznamy historie**. Systémová konfigurace a přihlašovací údaje LoRaWAN zůstávají zachované.
+Opětovné nahrání nebo aktualizace image firmwaru znovu inicializuje rozvržení oddílu historie (32 KB) a **vymaže uložené záznamy historie**. Systémová konfigurace a přístupové údaje LoRaWAN zůstanou zachované.
 :::

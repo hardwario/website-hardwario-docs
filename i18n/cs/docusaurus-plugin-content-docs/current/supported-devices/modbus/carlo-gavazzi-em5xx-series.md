@@ -1,6 +1,6 @@
 ---
 slug: carlo-gavazzi-em5xx-series
-title: Carlo Gavazzi EM5XX Series
+title: Carlo Gavazzi řady EM5XX
 ---
 
 import Image from '@theme/IdealImage';
@@ -24,21 +24,21 @@ import Image from '@theme/IdealImage';
 
 ### Popis {#description}
 
-Řada EM5xx nabízí sortiment kompaktních a univerzálních analyzátorů energie určených pro monitorování spotřeby a kvality elektrické energie v **jednofázových**, **dvoufázových** a **třífázových soustavách**. Tato zařízení jsou ideální pro použití v domácnostech, komerčních i průmyslových prostředích, kde je zásadní přesné měření, spolehlivost a snadné použití.
+Řada EM5xx zahrnuje kompaktní a univerzální analyzátory energie, které sledují spotřebu a kvalitu elektrické energie v **jednofázových**, **dvoufázových** i **třífázových soustavách**. Hodí se do domácností, komerčních objektů i průmyslu, všude tam, kde záleží na přesném měření, spolehlivosti a snadné obsluze.
 
 :::info
 
-Tento elektroměr **vyžaduje** použití **externího senzoru**, například proudového transformátoru (CT), pro měření proudu. Senzor je nutné vybrat podle očekávané zátěže a konfigurace soustavy.
+Tento elektroměr **vyžaduje** k měření proudu **externí senzor**, například proudový transformátor (CT). Senzor vyberte podle očekávané zátěže a konfigurace soustavy.
 
 :::
 
  ---
 
-### Instalace napájení {#power-installation}
+### Silové zapojení {#power-installation}
 
-#### Příklad instalace: analyzátor energie Carlo Gavazzi EM530 {#example-of-installation-carlo-gavazzi-energy-analyzer-em530}
+#### Příklad zapojení: analyzátor energie Carlo Gavazzi EM530 {#example-of-installation-carlo-gavazzi-energy-analyzer-em530}
 
-| **Analyzátor energie Carlo Gavazzi – EM530** | |
+| **Analyzátor energie Carlo Gavazzi EM530** | |
 |----------------------------------------|-----------------------------------------------|
 | Pin N                                 | **N**                                         |
 | Pin 1                                 | **L1**                                         |
@@ -47,21 +47,21 @@ Tento elektroměr **vyžaduje** použití **externího senzoru**, například pr
 
 :::info
 
- V tomto případě je také možné zapojit analyzátor energie v jednofázovém režimu, a to připojením nulového vodiče (N) na svorku N a fáze (L) na svorku 1.
+ Analyzátor lze zapojit i jednofázově: nulový vodič (N) připojte na svorku N a fázi (L) na svorku 1.
 
 :::
 
 #### Schéma zapojení (EM530) {#connection-diagram-em530}
 
-![Carlo Gavazzi – EM530 – schéma zapojení](../../../../../../chester/supported-devices/modbus/images/cg-em530.png)
+![Schéma zapojení analyzátoru Carlo Gavazzi EM530](../../../../../../chester/supported-devices/modbus/images/cg-em530.png)
 
  ---
-### Instalace senzoru {#sensor-installation}
+### Zapojení senzoru {#sensor-installation}
 
-#### Příklad instalace: rozevírací proudový transformátor CTA6X200A5A {#example-of-installation-split-core-current-transformer-cta6x200a5a}
+#### Příklad zapojení: rozevírací proudový transformátor CTA6X200A5A {#example-of-installation-split-core-current-transformer-cta6x200a5a}
 
 
-| **Analyzátor energie Carlo Gavazzi – EM530** | **Rozevírací proudový transformátor – CTA6X200A5A** |
+| **Analyzátor energie Carlo Gavazzi EM530** | **Rozevírací proudový transformátor CTA6X200A5A** |
 |----------------------------------------|-----------------------------------------------|
 | Pin 13                                 | **K**                                         |
 | Pin 14                                 | **L**                                         |
@@ -69,15 +69,15 @@ Tento elektroměr **vyžaduje** použití **externího senzoru**, například pr
 
 #### Schéma zapojení (CTA6X200A5A) {#connection-diagram-cta6x200a5a}
 
-![Carlo Gavazzi – CTA6X200A5A – schéma zapojení ](../../../../../../chester/supported-devices/modbus/images/cta6x200a5a.png)
+![Schéma zapojení proudového transformátoru Carlo Gavazzi CTA6X200A5A](../../../../../../chester/supported-devices/modbus/images/cta6x200a5a.png)
 
 ---
 
 ### Komunikace Modbus {#modbus-communication}
 
-#### Příklad instalace komunikace Modbus: analyzátor energie Carlo Gavazzi EM530 {#example-of-modbus-communication-installation-carlo-gavazzi-energy-analyzer-em530}
+#### Příklad zapojení komunikace Modbus: analyzátor energie Carlo Gavazzi EM530 {#example-of-modbus-communication-installation-carlo-gavazzi-energy-analyzer-em530}
 
-| **Analyzátor energie Carlo Gavazzi – EM530** | **CHESTER Modbus** |
+| **Analyzátor energie Carlo Gavazzi EM530** | **CHESTER Modbus** |
 |---------------------------|--------------------|
 | Pin 9                     | Pin 6 (A−)      |
 | Pin 8                     | Pin 7 (B+)        |
@@ -85,43 +85,43 @@ Tento elektroměr **vyžaduje** použití **externího senzoru**, například pr
 
 #### Komunikace Modbus (EM530) {#modbus-communication-em530}
 
-![Carlo Gavazzi – EM530 – komunikace Modbus](../../../../../../chester/supported-devices/modbus/images/cg-em530-modbus.png)
+![Zapojení komunikace Modbus analyzátoru Carlo Gavazzi EM530](../../../../../../chester/supported-devices/modbus/images/cg-em530-modbus.png)
 
 ---
 
-### Tlačítka pro navigaci a konfiguraci {#browsing-and-configuration-buttons}
+### Ovládací tlačítka {#browsing-and-configuration-buttons}
 
 * `▲` **Tlačítko nahoru**
-    1. Navigace v menu
-    2. Zvyšování hodnoty
+    1. Pohyb v menu
+    2. Zvýšení hodnoty
 
 * `▼` **Tlačítko dolů**
-    1. Navigace v menu
-    2. Snižování hodnoty
+    1. Pohyb v menu
+    2. Snížení hodnoty
 
 * `⯀` **Tlačítko Select / Enter / Menu**
 
 
 ---
 
-### Konfigurace komunikace Modbus pro analyzátor energie {#modbus-communication-configuration-for-energy-analyzer}
+### Konfigurace komunikace Modbus v analyzátoru energie {#modbus-communication-configuration-for-energy-analyzer}
 
-1. Stiskněte tlačítko **Select** pro otevření menu.  
+1. Tlačítkem **Select** otevřete menu.  
 2. Tlačítkem **Select** vyberte položku **Setting**.  
-3. Tlačítky **nahoru/dolů** vyberte položku menu: `r5485`.  
+3. Tlačítky **nahoru/dolů** vyberte položku `r5485`.  
 4. Zadejte konfigurační hodnoty podle tabulky níže.
 
 #### Výchozí konfigurace komunikace Modbus {#default-modbus-communication-configuration}
 
-| Adresa  | Baud Rate | Parita | Stop bit |
+| Adresa  | Přenosová rychlost | Parita | Stop bit |
 |---------|-----------|--------|-----------|
 | 1       | 9.6k      | Žádná  | 1         |
 
 ---
 
-### Konfigurace komunikace Modbus pro CHESTER {#modbus-communication-configuration-for-chester}
+### Konfigurace komunikace Modbus v zařízení CHESTER {#modbus-communication-configuration-for-chester}
 
-Komunikační parametry nastavíte v CHESTER Terminalu následujícími příkazy:
+Parametry komunikace nastavíte v terminálu CHESTER těmito příkazy:
 
 
 ```
@@ -137,22 +137,22 @@ config save
 
 ### Konfigurace převodu CT {#ct-ratio-configuration}
 
-1. Stiskněte tlačítko **Select** pro otevření menu.  
+1. Tlačítkem **Select** otevřete menu.  
 2. Tlačítkem **Select** vyberte položku **Reset**.  
 3. Tlačítky **nahoru/dolů** přejděte na položku menu **MID res**.  
 4. Stiskněte **Start**.  
 5. Zadejte hodnoty převodu CT.  
-6. Potvrďte nastavení volbou **YES** tlačítkem **nahoru** a poté stiskněte tlačítko **Select**.
+6. Tlačítkem **nahoru** zvolte **YES** a nastavení potvrďte tlačítkem **Select**.
 
 :::warning
-Tyto modely jsou **elektroměry certifikované podle MID** (Measuring Instruments Directive, evropská norma legální metrologie).  
-Převod CT lze změnit **pouze předtím**, než zařízení zaznamená **1 kWh** aktivní energie.  
-Po překročení 1 kWh je převod CT **trvale uzamčen** a **nelze jej změnit**, a to ani po obnovení výrobního nastavení nebo MID resetu.  
+Tyto modely jsou **elektroměry certifikované podle MID** (Measuring Instruments Directive, směrnice EU o měřidlech).  
+Převod CT lze změnit **jen do doby**, než zařízení naměří **1 kWh** činné energie.  
+Po překročení 1 kWh se převod CT **trvale uzamkne** a **nelze ho změnit** ani obnovením továrního nastavení nebo resetem MID.  
 :::
 
 ### Příklad volby převodu CT {#example-of-ct-ratio-selection}
 
-**Rozevírací proudový transformátor Carlo Gavazzi – CTA6X200A5A**
+**Rozevírací proudový transformátor Carlo Gavazzi CTA6X200A5A**
 
 | Model       | Převod CT         |
 |-------------|-------------------|
@@ -160,11 +160,10 @@ Po překročení 1 kWh je převod CT **trvale uzamčen** a **nelze jej změnit**
 
 :::info
 
- Převod CT se vybírá podle maximálního očekávaného primárního proudu. Pokud je například maximální proud soustavy okolo 200 A, zvolí se CT 200:5 (40 CT), který jej pro měřicí přístroje sníží na 5 A.
+ Převod CT volte podle nejvyššího očekávaného primárního proudu. Je-li například maximální proud soustavy kolem 200 A, použijte CT 200:5 (převod 40), který proud pro měřicí přístroje sníží na 5 A.
 
 :::
 
->
 ### Měřené hodnoty {#measured-values}
 
 | Měřená hodnota | Klíč / cesta                                 |
@@ -173,8 +172,8 @@ Po překročení 1 kWh je převod CT **trvale uzamčen** a **nelze jej změnit**
 | Napětí         | E_ENERGY_METER.METER_2.VOLTAGE.MEASUREMENTS  |
 | Výkon          | E_ENERGY_METER.METER_2.POWER.MEASUREMENTS    |
 | Frekvence      | E_ENERGY_METER.METER_2.FREQUENCY.MEASUREMENTS|
-| Energie na vstupu | E_ENERGY_METER.METER_2.ENERGY_IN.MEASUREMENTS|
-| Energie na výstupu | E_ENERGY_METER.METER_2.ENERGY_OUT.MEASUREMENTS|
+| Odebraná energie | E_ENERGY_METER.METER_2.ENERGY_IN.MEASUREMENTS|
+| Dodaná energie | E_ENERGY_METER.METER_2.ENERGY_OUT.MEASUREMENTS|
 | Napětí L1      | E_ENERGY_METER.METER_2.VOLTAGE_L1.MEASUREMENTS|
 | Napětí L2      | E_ENERGY_METER.METER_2.VOLTAGE_L2.MEASUREMENTS|
 | Napětí L3      | E_ENERGY_METER.METER_2.VOLTAGE_L3.MEASUREMENTS|

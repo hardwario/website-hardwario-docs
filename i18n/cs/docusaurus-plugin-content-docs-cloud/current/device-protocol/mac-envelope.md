@@ -31,7 +31,7 @@ Cloud odpovídá ve stejné obálce. Obsahuje sériové číslo zařízení a ta
 
 ## Autentizační kód zprávy {#message-authentication-code}
 
-Tag MAC chrání integritu a autenticitu sériového čísla a paketu FLAP. Jde o **secret-prefix MAC** nad SHA-256, jehož 256bitový výstup se zkrátí na 64 bitů pomocí XOR foldingu:
+Tag MAC chrání integritu a autenticitu sériového čísla a paketu FLAP. Jde o **secret-prefix MAC** nad SHA-256, jehož 256bitový výstup se zkrátí na 64 bitů skládáním pomocí XOR (XOR folding):
 
 ```
 digest = SHA-256( key || serial_number || header || data )
@@ -92,7 +92,7 @@ Zařízení postavená na nRF9151 vybírají obálku a server příkazem shellu 
 
 Výchozí hodnoty adres serveru, portů a `failover` pocházejí z voleb Kconfig firmwaru, takže je lze změnit při sestavení firmwaru.
 
-Přepnutí zařízení na obálku MAC v shellu zařízení:
+Na obálku MAC zařízení přepnete v jeho shellu takto:
 
 ```
 cloud config protocol flap-hash

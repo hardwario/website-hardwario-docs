@@ -37,7 +37,7 @@ The first step is to define roles, which act as sets of permissions.
   </TabItem>
 </Tabs>
 
-**IMPORTANT (User Profile Management):**
+**Important (User Profile Management):**
 For users with restricted access, it is recommended to create a **Generic** role where you allow **All** operations for the **Profile** resource. Adding this role to a user group allows users to change their own passwords and account details.
 
 ![Generic Edit Profile role granting the All operation on the Profile resource so users can manage their own account](images/roles-6.png)
@@ -121,5 +121,5 @@ Once your device group is populated, you need to grant users access to it by lin
 5. Click **Add**.
 
 :::tip
-You can repeat this sharing process across as many user groups as needed. The exact same device group can be shared with "Customer A" (with read-only rights) and your "Service Team" (with full access rights) simultaneously!
+You can repeat this sharing process across as many user groups as needed. The exact same device group can be shared with "Customer A" (with read-only rights) and your "Service Team" (with full access rights) simultaneously.
 :::

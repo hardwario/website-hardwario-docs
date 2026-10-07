@@ -3,7 +3,7 @@ slug: changelog
 title: Seznam změn TOWER
 toc_min_heading_level: 2
 toc_max_heading_level: 2
-description: "Tato stránka sleduje všechny významné změny na platformě TOWER včetně firmwaru, SDK a hardwarových modulů."
+description: "Přehled všech významných změn platformy TOWER včetně firmwaru, SDK a hardwarových modulů."
 ---
 
 import Tabs from '@theme/Tabs';
@@ -11,11 +11,11 @@ import TabItem from '@theme/TabItem';
 
 # Seznam změn TOWER {#tower-changelog}
 
-Tato stránka sleduje všechny podstatné změny napříč platformou TOWER, včetně **firmwaru / SDK** a **hardwarových modulů**. Pomocí záložek níže můžete filtrovat podle kategorie změn.
+Tato stránka shrnuje všechny významné změny platformy TOWER včetně **firmwaru / SDK** a **hardwarových modulů**. Záložkami níže je můžete filtrovat podle kategorie.
 
 :::info
 
-TOWER je aktuálně v **režimu údržby**, dostává pouze opravy chyb a drobná vylepšení. Aktivní vývoj pokračuje na [twr-zephyr](https://github.com/hardwario/twr-zephyr), experimentálním portu Zephyr RTOS pro Core Module.
+Platforma TOWER je v **režimu údržby**: dostává už jen opravy chyb a drobná vylepšení. Aktivní vývoj pokračuje v repozitáři [twr-zephyr](https://github.com/hardwario/twr-zephyr), experimentálním portu Zephyr RTOS pro modul Core Module.
 
 - Zdrojový kód SDK: [hardwario/twr-sdk](https://github.com/hardwario/twr-sdk)
 - Hardwarová schémata: [hardwario/twr-hardware](https://github.com/hardwario/twr-hardware)
@@ -32,7 +32,7 @@ TOWER je aktuálně v **režimu údržby**, dostává pouze opravy chyb a drobn�
 
 ### 2025-09-10 {#2025-09-10}
 
-- **[FW/SDK]** `twr-zephyr`: Přidán README a LICENSE, port Zephyr RTOS pro Core Module je nyní zdokumentován
+- **[FW/SDK]** `twr-zephyr`: Přidány soubory README a LICENSE, port Zephyr RTOS pro modul Core Module je tak zdokumentovaný
 
 ### 2025-03-03 {#2025-03-03}
 
@@ -40,7 +40,7 @@ TOWER je aktuálně v **režimu údržby**, dostává pouze opravy chyb a drobn�
 
 ### 2025-02-11 {#2025-02-11}
 
-- **[FW/SDK]** `twr-zephyr`: Aktivní nízkopříkonový časovač pro desku Core Module
+- **[FW/SDK]** `twr-zephyr`: Zapnut časovač s nízkou spotřebou (low power timer) pro desku Core Module
 
 ### 2025-02-08 {#2025-02-08}
 
@@ -48,11 +48,11 @@ TOWER je aktuálně v **režimu údržby**, dostává pouze opravy chyb a drobn�
 
 ### 2023-10-31 {#2023-10-31}
 
-- **[FW/SDK]** `twr-sdk`: Přidána možnost třetího detektoru zaplavení na Sensor Module
+- **[FW/SDK]** `twr-sdk`: Přidána možnost připojit třetí detektor zaplavení k modulu Sensor Module
 
 ### 2023-02-20 {#2023-02-20}
 
-- **[FW/SDK]** `twr-sdk`: Nahrazeno newlib nano knihovnou picolibc, což opravuje problémy s formátováním `%llx`
+- **[FW/SDK]** `twr-sdk`: Knihovna newlib nano nahrazena knihovnou picolibc, což opravuje problémy s formátováním `%llx`
 
 ### 2023-01-23 {#2023-01-23}
 
@@ -81,7 +81,7 @@ TOWER je aktuálně v **režimu údržby**, dostává pouze opravy chyb a drobn�
 
 ### 2020-07-14 {#2020-07-14}
 
-- **Battery Module**: aktualizovaná schémata s 3pinovým solárním konektorem
+- **Battery Module**: aktualizována schémata s 3pinovým konektorem pro solární panel
 
 ### 2020-05-19 {#2020-05-19}
 

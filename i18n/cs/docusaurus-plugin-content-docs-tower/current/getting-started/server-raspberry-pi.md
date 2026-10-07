@@ -5,17 +5,17 @@ title_meta: "Server na Raspberry Pi (HARDWARIO TOWER, první kroky)"
 ---
 import Image from '@theme/IdealImage';
 
-Možná budete chtít využít TOWER pro něco jako Smart Home nebo podobné řešení.
-K tomu budete potřebovat trvalé řešení, které dokáže běžet většinu času, samostatně a spolehlivě.
+Platformu TOWER možná budete chtít použít třeba pro chytrou domácnost nebo něco podobného.
+Pak potřebujete trvalé řešení, které poběží většinu času, samostatně a spolehlivě.
 
-Rozhodli jsme se použít jako řešení **Raspberry Pi**. Je to široce používané, dostupné a cenově příznivé mini PC, které lze jednoduše přeměnit na server, jaký potřebujete.
+Zvolili jsme **Raspberry Pi**: rozšířený, snadno dostupný a cenově příznivý minipočítač, ze kterého jednoduše uděláte server, jaký potřebujete.
 
-Abychom celý proces ještě více zjednodušili, vytvořili jsme [**systémový obraz, který lze jednoduše nahrát na microSD**](../server-raspberry-pi/installation-os.md) kartu a ihned použít
+Aby to bylo ještě snazší, připravili jsme [**systémový obraz, který stačí nahrát na kartu microSD**](../server-raspberry-pi/installation-os.md) a hned ho používat.
 
-Pokud už máte [**své Raspberry Pi**](../server-raspberry-pi/installation-clean-os.md) nainstalované a spuštěné, můžete si také jen doinstalovat všechny potřebné nástroje.
+Pokud už [**své Raspberry Pi**](../server-raspberry-pi/installation-clean-os.md) máte nainstalované a spuštěné, stačí na něj doinstalovat potřebné nástroje.
 
 :::tip
 
-Jak nahrát obraz na microSD kartu nebo jak nastavit potřebné nástroje se dozvíte v [**sekci Server na Raspberry Pi**](../server-raspberry-pi/index.md).
+Jak nahrát obraz na kartu microSD nebo nastavit potřebné nástroje, se dozvíte v [**sekci Server na Raspberry Pi**](../server-raspberry-pi/index.md).
 
 :::

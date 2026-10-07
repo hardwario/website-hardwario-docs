@@ -33,7 +33,7 @@ In this guide, you will learn how to create new user accounts, send activation l
 
 7. Finally, click **Add**.
 
-You have successfully created a new user!
+You have successfully created a new user.
 
 :::info
 **Need to manage user access?** See [**User Management**](/apps/thingsboard/users-managing) to learn how to create groups, assign roles, and control access to specific devices or dashboards.

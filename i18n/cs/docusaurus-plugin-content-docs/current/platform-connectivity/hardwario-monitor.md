@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # HARDWARIO Monitor {#hardwario-monitor}
 
-**HARDWARIO Monitor** je grafický multiplatformní počítačový program pro **konfiguraci** a **správu** zařízení CHESTER.
+**HARDWARIO Monitor** je multiplatformní grafický program pro počítač, kterým **konfigurujete** a **spravujete** zařízení CHESTER.
 
  [**Stáhněte si HARDWARIO Monitor**](https://github.com/hardwario/hio-monitor/releases) na stránce projektu na GitHubu.
 
@@ -20,40 +20,40 @@ import Image from '@theme/IdealImage';
   </div>
 </div>
 
-Po spuštění aplikace máte na **levé straně** aplikace k dispozici možnosti připojení k zařízení CHESTER pomocí:
+Po spuštění najdete na **levé straně** aplikace tyto způsoby připojení k zařízení CHESTER:
 
 ## Console {#console}
 
-Pro tuto možnost potřebujete programátor **J-Link**. Pro přenos logů a shellu ze zařízení **CHESTER** používáme **J-Link RTT** (Real Time Transfer).
+Tato možnost vyžaduje programátor **J-Link**. Logy a shell se ze zařízení **CHESTER** přenášejí přes **J-Link RTT** (Real Time Transfer).
 
-Připojte **J-Link** k zařízení **CHESTER** pomocí J-Link připojeného ke [**konektoru APP/BLE SWD**](/chester/developer-tools/segger-j-link/#segger-j-link-to-app-port-connection).
+Připojte programátor **J-Link** ke [**konektoru APP/BLE SWD**](/chester/developer-tools/segger-j-link/#segger-j-link-to-app-port-connection) zařízení **CHESTER**.
 
 Poté klikněte na tlačítko **Attach** na pravé straně okna.
 
-Dávku konzolových příkazů můžete importovat tlačítkem 📄 **Batch** na pravé straně okna a vybrat textový soubor s příkazy, které se budou do zařízení CHESTER posílat řádek po řádku. Dá se to využít například pro nasazení konfigurace na více jednotek.
+Tlačítkem 📄 **Batch** na pravé straně okna můžete načíst dávku příkazů konzole: vyberte textový soubor s příkazy a ty se pošlou do zařízení CHESTER řádek po řádku. Hodí se to například k nahrání stejné konfigurace do více zařízení.
 
 ### Funkce a klávesové zkratky konzole {#console-functions-and-shortcuts}
 
-* ꜛ nahoru a ꜜ dolů: procházení historie příkazů
-* `Ctrl` + `R` – otevře seznam posledních použitých příkazů. Zapisováním částí příkazů můžete v tomto seznamu vyhledávat.
-* Vyhledávání: v pravém dolním rohu klikněte na 🔍, zadejte hledaný text a stiskněte enter. Klávesa `n` hledá dopředu, `Shift` + `n` hledá dozadu, F5 nebo kliknutí na tlačítko `Undo` v pravém sloupci režim vyhledávání vypne.
+* šipky ꜛ nahoru a ꜜ dolů: procházení historie příkazů
+* `Ctrl` + `R`: otevře seznam posledních použitých příkazů. Když začnete psát část příkazu, seznam se podle ní vyfiltruje.
+* Vyhledávání: v pravém dolním rohu klikněte na 🔍, zadejte hledaný text a stiskněte Enter. Klávesa `n` hledá dopředu, `Shift` + `n` hledá dozadu, F5 nebo kliknutí na tlačítko `Undo` v pravém sloupci režim vyhledávání vypne.
 
 ## Bluetooth {#bluetooth}
 
-K **CHESTER Shell** se můžete připojit přes Bluetooth. To je užitečné pro použití příkazu `info show` pro zjištění verze firmwaru nebo pro zobrazení/změnu konfigurace zařízení pomocí příkazů `app config show`.
+Ke **CHESTER Shell** se můžete připojit i přes Bluetooth. Hodí se to například pro příkaz `info show`, kterým zjistíte verzi firmwaru, nebo pro zobrazení a změnu konfigurace zařízení příkazy `app config show`.
 
-Pokud se vám nepodaří zařízení spárovat z aplikace **HARDWARIO Monitor**, musíte ho nejprve spárovat pomocí systémového dialogu Bluetooth. Poté se vraťte do aplikace **HARDWARIO Monitor**
+Pokud se zařízení z aplikace **HARDWARIO Monitor** spárovat nepodaří, spárujte ho nejprve v systémovém dialogu Bluetooth. Poté se vraťte do aplikace **HARDWARIO Monitor**
 a připojte se k zařízení znovu.
 
 ## Flash {#flash}
 
-Firmware můžete nahrát přes konektor **APP** na základní desce zařízení **CHESTER** pomocí USB zařízení **J-Link**. Stačí zkopírovat **unikátní ID** z vydaného firmwaru a firmware se stáhne a nahraje.
+Firmware nahrajete přes konektor **APP** na základní desce zařízení **CHESTER** programátorem **J-Link** připojeným přes USB. Stačí zkopírovat **unikátní ID** vydaného firmwaru a aplikace firmware sama stáhne a nahraje.
 
 ## Logy {#logs}
 
-**HARDWARIO Monitor** zaznamenává veškerou komunikaci na váš disk. To je užitečné, pokud byste chtěli při řešení problémů sdílet kompletní logy s HARDWARIO.
+**HARDWARIO Monitor** ukládá záznam veškeré komunikace na disk. Hodí se to, když při řešení problémů chcete poslat HARDWARIO kompletní logy.
 
-Kam se logy ukládají, závisí na typu a verzi vašeho operačního systému:
+Kam se logy ukládají, závisí na typu a verzi operačního systému:
 
 ### Windows {#windows}
 ```

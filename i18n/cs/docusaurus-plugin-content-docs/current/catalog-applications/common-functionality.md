@@ -1,18 +1,18 @@
 ---
 slug: common-functionality
-title: Společná funkcionalita
+title: Společné funkce
 ---
 import Image from '@theme/IdealImage';
 
-# Společná funkcionalita {#common-functionality}
+# Společné funkce {#common-functionality}
 
-**Katalogové aplikace** sdílejí společnou funkcionalitu. Například chování tlačítka nebo způsob, jakým se zpracovává nastavení.
+**Katalogové aplikace** mají řadu společných funkcí, například chování tlačítka nebo práci s nastavením.
 
-## Konfigurace síťového režimu {#network-mode-configuration}
+## Konfigurace režimu sítě {#network-mode-configuration}
 
-Některé katalogové firmwary umožňují konfiguraci pro použití sítě NB-IoT/LTE nebo LoRaWAN. Tento firmware po zapnutí neodesílá data, **LED bliká žlutě** a je potřeba nastavit správný režim rádia.
+Firmware některých katalogových aplikací umí komunikovat přes síť NB-IoT/LTE i LoRaWAN. Takový firmware po zapnutí neodesílá žádná data, **LED bliká žlutě** a je potřeba nastavit správný režim rádia.
 
-Tato konfigurace `app mode` je aktuálně potřeba u těchto katalogových aplikací:
+Nastavení `app mode` je zatím potřeba u těchto katalogových aplikací:
 
 - [CHESTER Clime](chester-clime.md)
 - [CHESTER Control](chester-control.md)
@@ -25,7 +25,7 @@ Tato konfigurace `app mode` je aktuálně potřeba u těchto katalogových aplik
 - [CHESTER Serial](chester-serial.md)
 - [CHESTER wM-Bus](chester-wm-bus.md)
 
-Výchozí chování je, že zařízení **nepoužívá žádné rádio** (režim `none`) a je potřeba nastavit konfigurační parametr **mode**.
+Ve výchozím stavu zařízení **nepoužívá žádné rádio** (režim `none`) a je potřeba nastavit konfigurační parametr **mode**.
 
 - `app config mode lte` pro síť NB-IoT/LTE
 - `app config mode lrw` pro síť LoRaWAN
@@ -34,12 +34,12 @@ Poté změny uložte příkazem `config save`. Zařízení se restartuje a použ
 
 ### Výchozí režim LTE {#default-lte-mode}
 
-Počínaje firmwarem **v3.5.0** byl výchozí režim LTE změněn na **LTE-M s návratem na NB-IoT** (`lte-m,nb-iot`). To znamená, že se zařízení nejprve pokusí připojit pomocí LTE-M a pokud LTE-M není dostupné, přejde na NB-IoT.
+Od firmwaru **v3.5.0** je výchozím režimem LTE **LTE-M s přechodem na NB-IoT** (`lte-m,nb-iot`). Zařízení se nejprve pokusí připojit přes LTE-M, a pokud LTE-M není dostupné, přejde na NB-IoT.
 
 
 ## Chování tlačítka {#button-behaviour}
 
-Aplikace definují akce pro tlačítko na základní desce. Akce se vybírají podle počtu po sobě jdoucích stisků tlačítka. Před provedením akce zařízení **CHESTER** blikne oranžovou LED jednou za každý stisk tlačítka, čímž indikuje počet po sobě jdoucích stisků. Akce jsou:
+Aplikace přiřazují tlačítku na základní desce různé akce. Kterou akci zařízení provede, určuje počet stisků tlačítka za sebou. Před provedením akce zařízení **CHESTER** blikne oranžovou LED tolikrát, kolikrát bylo tlačítko stisknuto. K dispozici jsou tyto akce:
 
 | Počet stisků | Akce                                        |
 | :---------------: | :------------------------------------------ |
@@ -51,13 +51,13 @@ Aplikace definují akce pro tlačítko na základní desce. Akce se vybírají p
 
 ## Chování LED {#led-behaviour}
 
-Když je zařízení **CHESTER** zapnuto, LED svítí červeně, dokud se aplikace neinicializuje. Poté zařízení **CHESTER** bliká zelenou LED každých pět sekund, čímž indikuje, že aplikace běží.
+Po zapnutí zařízení **CHESTER** svítí LED červeně, dokud se aplikace neinicializuje. Potom každých pět sekund blikne zelená LED na znamení, že aplikace běží.
 
 Pokud **LED bliká žlutě**, je potřeba nastavit, [které rádio se má použít](#network-mode-configuration).
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná pomocí příkazu `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config interval-sample 60
@@ -65,7 +65,7 @@ app config interval-aggreg 300
 app config interval-report 1800
 ```
 
-Konfiguraci můžete změnit příkazem `app config` následovaným příkazem `config save`. Příklad:
+Konfiguraci změníte příkazem `app config` a uložíte příkazem `config save`. Příklad:
 
 ```
 app config interval-sample 120
@@ -73,65 +73,65 @@ app config interval-aggreg 600
 config save
 ```
 
-Tím se změny uloží a aplikace se restartuje. Po restartu můžete změněné nastavení ověřit příkazem `app config show`.
+Tím se změny uloží a aplikace se restartuje. Po restartu nové nastavení ověříte příkazem `app config show`.
 
-Pokud chcete konfiguraci vrátit zpět do výchozího stavu, můžete použít `config reset`. Ve vzácných případech, kdy konzole CHESTER není k dispozici, můžete použít manuální postup resetu. Zahájíte jej podržením tlačítka během startu zařízení CHESTER. Po podržení tlačítka přibližně 5 sekund začne zařízení CHESTER rychle blikat. V tuto chvíli můžete tlačítko uvolnit a pokračovat v resetu. Pokud budete tlačítko držet dál, dokud zařízení CHESTER nepřestane blikat, reset bude zrušen.
+Výchozí konfiguraci obnovíte příkazem `config reset`. Ve vzácných případech, kdy konzole zařízení CHESTER není dostupná, můžete konfiguraci resetovat ručně: podržte tlačítko během startu zařízení. Asi po 5 sekundách začne zařízení rychle blikat. Když teď tlačítko pustíte, reset proběhne. Pokud tlačítko držíte dál, dokud zařízení nepřestane blikat, reset se zruší.
 
 :::caution
 
-Reset konfigurace vymaže i parametry připojení pro LTE a LoRaWAN, což může způsobit, že zařízení CHESTER nebude schopno komunikovat.
+Reset konfigurace vymaže i parametry připojení k sítím LTE a LoRaWAN, takže zařízení CHESTER pak nemusí být schopné komunikovat.
 
 :::
 
-Konfiguraci můžete také měnit vzdáleně přes HARDWARIO Cloud pomocí [**downlink příkazu Config**](/cloud/downlink/config).
-V cloudu příkaz `config save` neodesíláte.
+Konfiguraci můžete měnit i na dálku přes HARDWARIO Cloud, a to [**downlinkovým příkazem Config**](/cloud/downlink/config).
+Příkaz `config save` se z cloudu neposílá.
 
 ## Detekce CHESTER-Z za běhu {#runtime-chester-z-detection}
 
-Počínaje firmwarem **v3.5.4** některé aplikace podporují **detekci za běhu** zálohovacího modulu CHESTER-Z. To znamená, že jediný binární firmware funguje jak s nainstalovaným modulem CHESTER-Z, tak bez něj.
+Od firmwaru **v3.5.4** umí některé aplikace rozpoznat záložní modul CHESTER-Z **za běhu**. Stejný binární soubor firmwaru tak funguje s nainstalovaným modulem CHESTER-Z i bez něj.
 
-- Pokud je modul CHESTER-Z detekován při startu, automaticky se zapne zálohovací funkcionalita (monitorování DC vstupu, napětí záložní baterie, události připojení/odpojení).
-- Pokud modul CHESTER-Z není přítomen, zálohovací funkce se tiše přeskočí bez dopadu na ostatní funkcionalitu.
-- Odpadá tak potřeba samostatných „Z“ variant firmwaru: například **CHESTER Clime** nyní pokrývá to, co dříve zajišťoval **CHESTER Clime Z**.
+- Když zařízení při startu modul CHESTER-Z najde, automaticky zapne funkce záložního napájení (sledování vstupu DC, napětí záložní baterie, události připojení a odpojení).
+- Když modul CHESTER-Z chybí, funkce záložního napájení se bez hlášení vynechají a na ostatní funkce to nemá žádný vliv.
+- Samostatné varianty firmwaru „Z“ proto už nejsou potřeba: například **CHESTER Clime** teď pokrývá i to, co dřív obstarával **CHESTER Clime Z**.
 
 Aplikace s detekcí CHESTER-Z za běhu:
 
 - [CHESTER Clime](chester-clime.md)
 
 :::note
-Další aplikace budou detekci Z za běhu postupně přebírat v budoucích vydáních firmwaru.
+Ostatní aplikace dostanou detekci modulu Z za běhu postupně v dalších verzích firmwaru.
 :::
 
 ## Cloudové metriky {#cloud-metrics}
 
-Skupina shellových příkazů `cloud` poskytuje diagnostické informace o komunikaci s cloudem. Pomocí `cloud metrics` zobrazíte statistiky komunikace:
+Skupina příkazů shellu `cloud` slouží k diagnostice komunikace s cloudem. Příkaz `cloud metrics` vypíše statistiky komunikace:
 
 ```
 cloud metrics
 ```
 
-Zobrazí se počty uplink/downlink zpráv, počty fragmentů, počty chyb s časovými značkami a časové značky posledních úspěšných operací. To je užitečné pro diagnostiku problémů s připojením v terénu.
+Výpis obsahuje počty zpráv uplink a downlink, počty fragmentů, počty chyb s časovými značkami a časy posledních úspěšných operací. Hodí se k diagnostice problémů s připojením v terénu.
 
 ## Subsystém BLE Tag {#ble-tag-subsystem}
 
 :::info
-Zařízení **CHESTER** podporuje také integraci s **Bluetooth tagy** (subsystém Teltonika EYE Sensor) pro bezdrátové měření teploty a vlhkosti.  
-Jak tuto funkci aktivovat a nastavit se dozvíte v dokumentaci [**Subsystém CHESTER BLE Tag**](ble-tags.md).
+Zařízení **CHESTER** umí přijímat data také z **Bluetooth tagů** (subsystém Teltonika EYE Sensor) a bezdrátově tak měřit teplotu a vlhkost.  
+Jak tuto funkci zapnout a nastavit, popisuje stránka [**Bluetooth tagy**](ble-tags.md).
 :::
 
 ## Rozptyl intervalu hlášení {#report-interval-jitter}
 
-Periodické odesílání dat pomocí `interval-report` má záměrný rozptyl (jitter). Ten se používá pro případ, kdy je blízko sebe umístěno mnoho zařízení CHESTER, aby nevysílala ve stejnou chvíli, pokud mají nastavený stejný interval. Tento rozptyl je náhodný v rozsahu ±20 % hodnoty `interval-report`.
+Pravidelné odesílání dat v intervalu `interval-report` má záměrný rozptyl (jitter). Když je blízko sebe hodně zařízení CHESTER se stejným intervalem, díky rozptylu nevysílají všechna ve stejnou chvíli. Rozptyl je náhodný v rozsahu ±20 % hodnoty `interval-report`.
 
-Například pokud je `interval-report` nastaven na 100 sekund, můžete přijímat periodická data, kde mají dvě zprávy časový rozdíl od 80 (-20 %) do 120 (+20 %) sekund.
+Je-li například `interval-report` nastavený na 100 sekund, může mezi dvěma pravidelnými zprávami uplynout 80 (-20 %) až 120 (+20 %) sekund.
 
-V aplikacích, kde je více agregovaných hodnot, má tento rozptyl vedlejší efekt, že někdy můžete vidět méně nebo více agregovaných hodnot, než se očekává. Chybějící hodnoty nejsou ztraceny, budou správně odeslány v následující zprávě.
+V aplikacích, které posílají více agregovaných hodnot, má rozptyl vedlejší účinek: zpráva někdy obsahuje méně nebo více agregovaných hodnot, než byste čekali. Chybějící hodnoty se neztrácejí, přijdou v následující zprávě.
 
-Tento rozptyl se neuplatňuje na **události**, jako je stisk tlačítka nebo změna vstupu. Ty jsou hlášeny okamžitě.
+Na **události**, jako je stisk tlačítka nebo změna vstupu, se rozptyl nevztahuje. Ty se hlásí okamžitě.
 
-## Shellové příkazy {#shell-commands}
+## Příkazy shellu {#shell-commands}
 
-Kromě výše zmíněných příkazů nabízí shell mnoho dalších. Lze je vypsat příkazem `help`.
+Kromě výše uvedených příkazů nabízí shell řadu dalších. Vypíšete je příkazem `help`.
 
 Příklad výstupu příkazu `help` z aplikace **CHESTER Clime**:
 
@@ -168,21 +168,21 @@ Available commands:
   w1       :1-Wire bus commands
 ```
 
-Počínaje firmwarem **v3.5.0** obsahují všechny aplikace následující diagnostické shellové příkazy:
+Od firmwaru **v3.5.0** obsahují všechny aplikace tyto diagnostické příkazy shellu:
 
-- **`i2c`**: operace na sběrnici I2C (scan, čtení, zápis) pro hardwarovou diagnostiku
+- **`i2c`**: operace na sběrnici I2C (skenování, čtení, zápis) pro diagnostiku hardwaru
 - **`mcuboot`**: příkazy bootloaderu MCUboot pro správu firmwaru
 - **`gpio`**: ovládání a kontrola pinů GPIO
 - **`w1`**: skenování sběrnice 1-Wire a výpis zařízení
-- **`backup`**: stav zálohovacího modulu CHESTER-Z (sériové číslo, HW revize, napětí, stav DC vstupu)
+- **`backup`**: stav záložního modulu CHESTER-Z (sériové číslo, revize HW, napětí, stav vstupu DC)
 - **`cloud`**: příkazy pro komunikaci s cloudem včetně `cloud metrics` pro diagnostiku připojení
 
 ## Záloha konfigurace v1.x.x → v2.x.x {#configuration-backup}
 
-Při aktualizaci staršího firmwaru **v1.x.x** na **v2.x.x** je nutné zálohovat konfiguraci aplikace. Nejdůležitější je tento krok u aplikace **CHESTER Current**, kde jsou v konfiguraci uloženy **kalibrační koeficienty proudových transformátorů**.
+Před aktualizací staršího firmwaru **v1.x.x** na **v2.x.x** je nutné zálohovat konfiguraci aplikace. Nejdůležitější je to u aplikace **CHESTER Current**, jejíž konfigurace obsahuje **kalibrační koeficienty proudových transformátorů**.
 
-Pokud zapomenete data zálohovat, nejsou ztracena, dokud v novějším firmwaru neprovedete příkaz `config save`. Je však potřeba dočasně přejít zpět na [starší firmware](https://github.com/hardwario/docs/blob/33661ca486dda9e6883d3a82edf0128ab32173d2/chester/catalog-applications/index.md#application-firmware), který dokáže starou konfiguraci přečíst, a po aktualizaci firmwaru stejnou konfiguraci aplikovat.
+Pokud zálohu zapomenete udělat, data se neztratí, dokud v novějším firmwaru nespustíte příkaz `config save`. Musíte ale dočasně nahrát zpět [starší firmware](https://github.com/hardwario/docs/blob/33661ca486dda9e6883d3a82edf0128ab32173d2/chester/catalog-applications/index.md#application-firmware), který starou konfiguraci přečte, a po aktualizaci firmwaru stejnou konfiguraci zadat znovu.
 
-Ve starém firmwaru napište do konzole `app config show`. Poté je potřeba zkopírovat všechny konfigurační položky. Pokud používáte mobilní aplikaci **HARDWARIO Manager** nebo **HARDWARIO CLI** na počítači, můžete text aktuální konfigurace označit a zkopírovat do schránky nebo textového editoru.
+Ve starém firmwaru zadejte do konzole `app config show` a zkopírujte všechny konfigurační položky. V mobilní aplikaci **HARDWARIO Manager** i v nástroji **HARDWARIO CLI** na počítači stačí text aktuální konfigurace označit a zkopírovat do schránky nebo do textového editoru.
 
-Po aktualizaci na novější firmware vložte stejné řádky do konzole. Pokud používáte mobilní aplikaci **HARDWARIO Manager** nebo **HARDWARIO CLI** na počítači, můžete všechny řádky vložit najednou do vstupního řádku a stisknout enter. Všechny příkazy se postupně provedou. Ověřte, že konfigurace byla správně aplikována, zadáním `app config show`. Nezapomeňte změny uložit příkazem `config save`.
+Po aktualizaci na novější firmware vložte stejné řádky do konzole. V aplikaci **HARDWARIO Manager** i v **HARDWARIO CLI** můžete vložit všechny řádky najednou do vstupního řádku a stisknout Enter; příkazy se provedou jeden po druhém. Příkazem `app config show` ověřte, že se konfigurace nastavila správně, a nezapomeňte změny uložit příkazem `config save`.

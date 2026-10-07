@@ -4,7 +4,7 @@ title: Vizualizace dat
 ---
 import Image from '@theme/IdealImage';
 
-V této kapitole si projdeme **záložku Dashboard** v aplikaci Playground
+V této kapitole si projdeme **záložku Dashboard** aplikace Playground.
 
 :::info
 
@@ -14,7 +14,7 @@ Aby **záložka Dashboard** fungovala, je potřeba správně nastavit Node-RED. 
 
 ## Záložka Dashboard {#dashboard-tab}
 
-Na této záložce můžete zobrazit **ukazatele**, **grafy**, **tlačítka** a **další widgety**. To lze využít pro vizualizaci a ovládání domácí automatizace.
+Na této záložce můžete zobrazit **ukazatele**, **grafy**, **tlačítka** a **další widgety**. Hodí se například k zobrazení a ovládání domácí automatizace.
 
 <div class="container">
   <div class="row">
@@ -29,7 +29,7 @@ Na této záložce můžete zobrazit **ukazatele**, **grafy**, **tlačítka** a 
 
 :::info
 
-Pokud se chcete o vizualizaci dat v aplikaci Playground dozvědět více, navštivte [**naše projekty na hackster.io**](https://www.hackster.io/hardwario/projects?part_id=73696). Každý projekt, který používá **záložku Dashboard**, obsahuje spoustu informací o tom, jak s ní pracovat.
+Pokud se chcete o vizualizaci dat v aplikaci Playground dozvědět více, navštivte [**naše projekty na hackster.io**](https://www.hackster.io/hardwario/projects?part_id=73696). Každý projekt, který **záložku Dashboard** používá, podrobně popisuje, jak s ní pracovat.
 
 :::
 

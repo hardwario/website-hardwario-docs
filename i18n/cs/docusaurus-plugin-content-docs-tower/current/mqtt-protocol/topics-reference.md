@@ -8,20 +8,20 @@ import Image from '@theme/IdealImage';
 
 ### Firmware {#firmware}
 
-|  Vysvětlení  |    MQTT topic    |                        Payload                         |
+|  Vysvětlení  |    Topic MQTT    |                        Payload                         |
 | :-----------: | :--------------: | :----------------------------------------------------: |
 | Informace o firmwaru | `node/{id}/info` | `{"firmware": "motion-detector", "version": "v1.3.0"`} |
 
 ### Baterie {#battery}
 
-|         Vysvětlení         |              MQTT topic              | Payload |
+|         Vysvětlení         |              Topic MQTT              | Payload |
 | :-------------------------: | :----------------------------------: | :-----: |
 |   Napětí modulu Battery Module    | `node/{id}/battery/standard/voltage` |  6.21   |
 | Napětí modulu Mini Battery Module |   `node/{id}/battery/mini/voltage`   |  3.12   |
 
 ### Senzory {#sensors}
 
-|            Vysvětlení            |                  MQTT topic                  |
+|            Vysvětlení            |                  Topic MQTT                  |
 | :-------------------------------: | :------------------------------------------: |
 |           Osvětlenost           |    `node/{id}/lux-meter/0:0/illuminance`     |
 |         Relativní vlhkost         | `node/{id}/hygrometer/0:2/relative-humidity` |
@@ -47,38 +47,38 @@ Jediné povolené hodnoty payloadu jsou `true/false`.
 
 :::
 
-|      Vysvětlení       |           MQTT topic            |               Odpověď               |
+|      Vysvětlení       |           Topic MQTT            |               Odpověď               |
 | :--------------------: | :-----------------------------: | :----------------------------------: |
 | Nastavení relé modulu Power Module |  `node/{id}/relay/-/state/set`  |      `node/{id}/relay/-/state`       |
 | Čtení relé modulu Power Module |  `node/{id}/relay/-/state/get`  |      `node/{id}/relay/-/state`       |
 | Nastavení relé modulu Relay Module | `node/{id}/relay/0:0/state/set` |     `node/{id}/relay/0:0/state`      |
 | Čtení relé modulu Relay Module | `node/{id}/relay/0:0/state/get` |     `node/{id}/relay/0:0/state`      |
-|   Pulz modulu Relay Module   | `node/{id}/relay/0:0/pulse/set` | `{"duration":200, "direction":true}` |
+|   Impulz modulu Relay Module   | `node/{id}/relay/0:0/pulse/set` | `{"duration":200, "direction":true}` |
 
 
 ### LED {#led}
 
-|      Vysvětlení       |         MQTT topic          |
+|      Vysvětlení       |         Topic MQTT          |
 | :--------------------: | :-------------------------: |
 | LED na modulu Core Module | `node/{id}/led/-/state/set` |
 
 ### Tlačítko {#button}
 
-|     Vysvětlení      |               MQTT topic                |
+|     Vysvětlení      |               Topic MQTT                |
 | :------------------: | :-------------------------------------: |
 |     Stisk tlačítka     |  `node/{id}/push-button/-/event-count`  |
 |     Podržení tlačítka      |  `node/{id}/push-button/-/hold-count`   |
 | Doba podržení tlačítka | `node/{id}/push-button/-/hold-duration` |
 
-### PIR detektor pohybu {#pir-motion-detector}
+### Detektor pohybu PIR {#pir-motion-detector}
 
-|        Vysvětlení        |          MQTT topic           |
+|        Vysvětlení        |          Topic MQTT           |
 | :-----------------------: | :---------------------------: |
 | Detekce pohybu objektu | `node/{id}/pir/-/event-count` |
 
 ### LED pásek {#led-strip}
 
-|                Vysvětlení                |        MQTT topic / vysvětlení         | Příklad                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|                Vysvětlení                |        Topic MQTT / vysvětlení         | Příklad                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | :---------------------------------------: | :-------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |           Nastavení jasu 0-100 %           | `node/{id}/led-strip/-/brightness/set`  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Nastavení barvy *#250000* nebo RGBW *#250000(80)* |    `node/{id}/led-strip/-/color/set`    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -88,7 +88,7 @@ Jediné povolené hodnoty payloadu jsou `true/false`.
 
 ### LCD Module {#lcd-module}
 
-| Vysvětlení  |                  MQTT topic                  |                 Příklad                  |
+| Vysvětlení  |                  Topic MQTT                  |                 Příklad                  |
 | :----------: | :------------------------------------------: | :--------------------------------------: |
 | Levé tlačítko  | `node/{id}/push-button/lcd:left/event-count` |                                          |
 | Pravé tlačítko | `node/{id}/push-button/lcd:right/event-count` |                                          |
@@ -100,27 +100,27 @@ Jediné povolené hodnoty payloadu jsou `true/false`.
 
 :::tip
 
-  Všechny tyto příkazy jsou zabudované v aplikaci HARDWARIO Playground a všechno tohle můžete udělat v [**záložce Devices**](../desktop-programming/radio-network-management.md).
+  Všechny tyto příkazy jsou zabudované v aplikaci HARDWARIO Playground, takže to všechno zvládnete i na [**záložce Devices**](../desktop-programming/radio-network-management.md).
 
 :::
 
 ### Párování {#pairing}
 
-| Vysvětlení |            MQTT topic             |               Odpověď                |
+| Vysvětlení |            Topic MQTT             |               Odpověď                |
 | :---------: | :-------------------------------: | :-----------------------------------: |
 |    Start    | `gateway/{id}/pairing-mode/start` | `gateway/{id}/pairing-mode` `"start"` |
 |    Stop     | `gateway/{id}/pairing-mode/stop`  | `gateway/{id}/pairing-mode` `"stop"`  |
 
 ### Spárované uzly {#paired-nodes}
 
-|   Vysvětlení   |         MQTT topic         |                                                             Odpověď                                                             |
+|   Vysvětlení   |         Topic MQTT         |                                                             Odpověď                                                             |
 | :-------------: | :------------------------: | :------------------------------------------------------------------------------------------------------------------------------: |
 |      Výpis       |  `gateway/{id}/nodes/get`  | `gateway/{id}/nodes` `[{"id": "a7c8b05762dd", "alias": "generic-node:0"},  {"id": "836d1983718a", "alias": "lcd-thermostat:0"}]` |
 | Smazání všech uzlů | `gateway/{id}/nodes/purge` |                                                    `gateway/{id}/nodes` `[]`                                                     |
 
 ### Ruční přidání/odebrání {#manual-addremove}
 
-| Vysvětlení |                MQTT topic                 |              Odpověď               |
+| Vysvětlení |                Topic MQTT                 |              Odpověď               |
 | :---------: | :---------------------------------------: | :---------------------------------: |
 |     Přidání     |  `gateway/{id}/nodes/add` `"{id-node}"`   | `gateway/{id}/attach` `"{id-node}"` |
 |   Odebrání    | `gateway/{id}/nodes/remove` `"{id-node}"` | `gateway/{id}/detach` `"{id-node}"` |
@@ -128,7 +128,7 @@ Jediné povolené hodnoty payloadu jsou `true/false`.
 
 ### Aliasy {#aliases}
 
-| Vysvětlení  |                            MQTT topic                             |
+| Vysvětlení  |                            Topic MQTT                             |
 | :----------: | :---------------------------------------------------------------: |
 |     Nastavení      | `gateway/{id}/alias/set` `{"id": "id-node", "alias": "new-name"}` |
 |    Odebrání    |             `gateway/{id}/alias/remove` `"{id-node}"`             |
@@ -136,7 +136,7 @@ Jediné povolené hodnoty payloadu jsou `true/false`.
 
 ### Bezdrátové skenování {#scan-wireless}
 
-| Vysvětlení |        MQTT topic         |           Odpověď            |
+| Vysvětlení |        Topic MQTT         |           Odpověď            |
 | :---------: | :-----------------------: | :---------------------------: |
 |    Start    | `gateway/{id}/scan/start` | `gateway/{id}/scan` `"start"` |
 |    Stop     | `gateway/{id}/scan/stop`  | `gateway/{id}/scan` `"stop"`  |

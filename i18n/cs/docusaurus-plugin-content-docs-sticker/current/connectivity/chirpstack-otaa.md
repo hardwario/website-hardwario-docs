@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # ChirpStack v4 – OTAA {#chirpstack-v4--otaa}
 
-Tato stránka vysvětluje, jak zaregistrovat zařízení **HARDWARIO STICKER** jako koncové zařízení LoRaWAN v **ChirpStack v4** pomocí **OTAA (aktivace přes vzduch)**, včetně doporučeného nastavení profilu zařízení a přidání dekodéru payloadu.
+Tato stránka popisuje, jak **HARDWARIO STICKER** zaregistrovat jako koncové zařízení LoRaWAN v **ChirpStack v4** pomocí **OTAA (bezdrátová aktivace)**, včetně doporučeného nastavení profilu zařízení a přidání dekodéru payloadu.
 
 Užitečná dokumentace HARDWARIO:
 - Instalace ChirpStack v4  
@@ -30,13 +30,13 @@ https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
 
 - Funkční brána LoRaWAN připojená k ChirpStack v4 a nastavená pro váš region a frekvenční plán.
 - Tenant v ChirpStack v4, ve kterém je brána vidět a je online.
-- Zařízení STICKER napájené a v pokrytí brány.
+- Napájené zařízení STICKER v dosahu brány.
 
 ---
 
 ## 1) Získejte potřebné identifikátory a klíče LoRaWAN {#1-collect-the-required-lorawan-identifiers--keys}
 
-Potřebné identifikátory a klíče pro vaše zařízení STICKER zjistíte v aplikaci [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/device-info).
+Potřebné identifikátory a klíče zařízení STICKER zjistíte v aplikaci [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/device-info).
 
 Budete potřebovat:
 
@@ -50,39 +50,39 @@ Budete potřebovat:
 
 V ChirpStack v4:  
 **Tenant → Device Profiles → Add Device Profile**
-![Chirpstack vytvoření profilu zařízení](../../../../../sticker/connectivity/images/chripstack-add-profile.png)
+![ChirpStack: vytvoření profilu zařízení](../../../../../sticker/connectivity/images/chripstack-add-profile.png)
 
 Dále nastavte tyto parametry:
 - Name: **STICKER-OTAA** (nebo vlastní označení zařízení)
 - MAC Version: **LoRaWAN 1.0.4**
-- Region: **EU866** (nebo US915, pokud jste mimo EU)
-- Expected uplink interval: **X** (podle konfigurace firmwaru vašeho zařízení STICKER)
-![Chirpstack obecné nastavení profilu](../../../../../sticker/connectivity/images/chripstack-profile-general-otaa.png)
+- Region: **EU868** (nebo US915, pokud jste mimo EU)
+- Expected uplink interval: **X** (podle konfigurace firmwaru zařízení STICKER)
+![ChirpStack: obecné nastavení profilu](../../../../../sticker/connectivity/images/chripstack-profile-general-otaa.png)
 
-Přejděte na kartu **Join (OTAA / ABP)** a zkontrolujte, že je zapnutá volba **Device supports OTAA**.
-![Chirpstack profil OTAA](../../../../../sticker/connectivity/images/chirpstack-profile-join.png)
+Přejděte na záložku **Join (OTAA / ABP)** a zkontrolujte, že je zapnutá volba **Device supports OTAA**.
+![ChirpStack: profil OTAA](../../../../../sticker/connectivity/images/chirpstack-profile-join.png)
 
-Nakonec k profilu zařízení přidejte kodek. Přepněte na kartu Codec, v rozbalovací nabídce Payload codec zvolte JavaScript functions a do vstupního pole vložte kodek z odkazu níže:
+Nakonec k profilu zařízení přidejte kodek. Přepněte na záložku Codec, v rozbalovacím seznamu Payload codec zvolte JavaScript functions a do vstupního pole vložte kodek z odkazu níže:
 - https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
-![Chirpstack vytvoření kodeku zařízení](../../../../../sticker/connectivity/images/chirpstack-profile-codec.png)
+![ChirpStack: nastavení kodeku zařízení](../../../../../sticker/connectivity/images/chirpstack-profile-codec.png)
 
 Profil zařízení uložte kliknutím na **Submit**.
 
-:::tip Generování downlink příkazů
-_Kódování downlink příkazů je součástí připravovaného **firmwaru STICKER v1.4.0** (ne v1.3.x)._
+:::tip Generování příkazů přes downlink
+_Kódování příkazů přes downlink přinesl **firmware STICKER v1.4.0** (verze v1.3.x ho nemají)._
 
-Tento kodek zároveň **kóduje downlink příkazy** (funkcí `encodeDownlink`), takže není potřeba nic dalšího nastavovat. Chcete-li zařízení poslat příkaz, například vynutit report, změnit nastavení nebo nastavit pravidlo alarmu, zařaďte ho na kartě **Queue** zařízení jako objekt JSON na fPort **85** a ChirpStack kodekem vytvoří bajtový payload. Chcete-li příkaz sestavit a získat jeho podobu v JSON i hex, použijte [**generátor downlink příkazů**](downlink-commands-generator.mdx).
+Tento kodek zároveň **kóduje příkazy pro downlink** (funkcí `encodeDownlink`), takže není potřeba nic dalšího nastavovat. Chcete-li zařízení poslat příkaz, například vynutit odeslání hlášení, změnit nastavení nebo nastavit pravidlo alarmu, zařaďte ho na záložce **Queue** zařízení jako objekt JSON na fPort **85**; ChirpStack z něj kodekem vytvoří bajtový payload. Příkaz sestavíte a jeho podobu v JSON i hex získáte v [**generátoru příkazů přes downlink**](downlink-commands-generator.mdx).
 :::
 
 ---
 
-## 3) Vytvořte aplikaci v platformě ChirpStack {#3-create-an-application-in-chirpstack}
+## 3) Vytvořte aplikaci v ChirpStack {#3-create-an-application-in-chirpstack}
 
 
 
-V platformě ChirpStack přejděte na **Applications → Add Application** a vyplňte pole:
-- Name: **STICKER** (nebo jakékoli jméno)
-![Chirpstack přidání aplikace](../../../../../sticker/connectivity/images/chirpstack-add-appliaction.png)
+V ChirpStack přejděte na **Applications → Add Application** a vyplňte pole:
+- Name: **STICKER** (nebo libovolný název)
+![ChirpStack: přidání aplikace](../../../../../sticker/connectivity/images/chirpstack-add-appliaction.png)
 
 Uložte kliknutím na **Submit**.
 
@@ -95,16 +95,16 @@ Ve své aplikaci:
 
 
 Vyplňte:
-- **Name** (čitelné jméno)
+- **Name** (srozumitelný název)
 - **Device EUI (DevEUI)**
 - **Device Profile** → zvolte profil STICKER, který jste vytvořili
-![Chirpstack přidání koncového zařízení](../../../../../sticker/connectivity/images/chirpstack-add-device-config-otaa.png)
+![ChirpStack: přidání koncového zařízení](../../../../../sticker/connectivity/images/chirpstack-add-device-config-otaa.png)
 
 
 Uložte kliknutím na **Submit**.
 
-Vyskočí nové okno. Do pole **Application key** vyplňte App Key vašeho zařízení.
-![Chirpstack přidání App key](../../../../../sticker/connectivity/images/chirpstack-add-otaa-keys.png)
+Otevře se nové okno. Do pole **Application key** zadejte App Key zařízení.
+![ChirpStack: zadání App Key](../../../../../sticker/connectivity/images/chirpstack-add-otaa-keys.png)
 
 ---
 

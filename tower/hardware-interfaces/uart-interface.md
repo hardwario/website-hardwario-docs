@@ -18,13 +18,13 @@ If you want to know more about [**UART there is an article about it**](https://w
 
 :::
 
-TOWER has 3 UART channels, **UART0** **UART1** **UART2**, you can read where to find them in the [**Header Pinout chapter**](../hardware-modules/header-pinout.md)
+TOWER has 3 UART channels, **UART0** **UART1** **UART2**, you can read where to find them in the [**Header Pinout chapter**](../hardware-modules/header-pinout.md).
 
 ## UART Setup
 
 As the UART channel does not have a clock signal that would synchronize the communication you have to set up both communicating devices so they are synchronized and know how to transmit and receive data.
 
-There are three parameters that you can set up the UART with
+There are four parameters that you can set up the UART with:
 
 - **Baud rate**: this is the speed with which the data will be sent
 - **Data Bits**: number of data bits in each packet (5-9 bits)

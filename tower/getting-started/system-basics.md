@@ -8,17 +8,17 @@ TOWER is a device platform, specifically designed for the Internet-of-Things. Wi
 
 Thanks to its open approach, you will have total control of your devices, and the way they communicate, or integrate with 3rd party components. That will give you freedom for future customization and extensibility.
 
-With TOWER, you will **not encounter** things like **black box magi**c or **vendor lock-in**.
+With TOWER, you will **not encounter** things like **black box magic** or **vendor lock-in**.
 
 TOWER offers a **unique set of features** that makes it different from other platforms.
 
 ## Open-source
 
-Open-source is our passion, so we share everything that we do on [**our GitHub**](https://github.com/orgs/hardwario/repositories)
+Open-source is our passion, so we share everything that we do on [**our GitHub**](https://github.com/orgs/hardwario/repositories).
 
-In general, we don’t like hidden catches nor hiding the implementation under the hood. We work hard every day to earn your trust in our products, so anytime you have a chance see the amount of care, passion and quality we put into the design and code.
+In general, we don’t like hidden catches nor hiding the implementation under the hood. We work hard every day to earn your trust in our products, so anytime you have a chance to see the amount of care, passion and quality we put into the design and code.
 
-As we grow and build the community, we sincerely appreciate every single contribution from it
+As we grow and build the community, we sincerely appreciate every single contribution from it.
 
 :::tip
 
@@ -36,7 +36,7 @@ Speaking of the indoor range, in most cases, you will be able to achieve full ho
 
 ## Modular
 
-Why would you constantly reinvent the wheel? We take no shortcomings when it comes down to modularity and reusability.
+Why would you constantly reinvent the wheel? We take no shortcuts when it comes down to modularity and reusability.
 
 You will be able to assemble your hardware similarly as you do with the LEGO® bricks. When you start building multiple devices, you will greatly appreciate the fact that there is no need for wiring or soldering. We use a standardized pin header format, which is compatible across the whole ecosystem of hardware products.
 

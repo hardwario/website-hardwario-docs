@@ -42,7 +42,7 @@ When a ThingsBoard instance or tenant is created, a **Root Rule Chain** is autom
 
 ### What to Be Careful About
 
-1. **Never delete the "Save Timeseries" and "Save Client Attributes" nodes:** These nodes are responsible for actually writing your sensor data into the ThingsBoard database. If you accidentally delete them or break the routing path to them, your devices will appear online, but **no data will show up on your dashboards** because it is not being saved!
+1. **Never delete the "Save Timeseries" and "Save Client Attributes" nodes:** These nodes are responsible for actually writing your sensor data into the ThingsBoard database. If you accidentally delete them or break the routing path to them, your devices will appear online, but **no data will show up on your dashboards** because it is not being saved.
 2. **Do not overload the Root Rule Chain with complex scripts:** If you make a mistake in a JavaScript node within the Root Rule Chain (e.g., creating an infinite loop or a syntax error), you risk blocking data storage for absolutely all devices in your system.
 
 ### Best Practice: Safe Editing

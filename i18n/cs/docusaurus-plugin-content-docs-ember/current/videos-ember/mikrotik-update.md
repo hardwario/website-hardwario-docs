@@ -5,11 +5,11 @@ title: Aktualizace brány EMBER
 
 import Image from '@theme/IdealImage';
 
-# MikroTik – jak aktualizovat bránu {#mikrotik---how-to-update-a-gateway}
+# MikroTik: jak aktualizovat bránu {#mikrotik---how-to-update-a-gateway}
 
 ## Přehled návodu {#tutorial-overview}
 
-V tomto návodu se naučíte, jak aktualizovat balíčky RouterOS a firmware RouterBOARD na vaší bráně MikroTik pomocí rozhraní WebFig. Udržování systému v aktuálním stavu zajišťuje optimální výkon, stabilitu a kompatibilitu s nejnovějšími funkcemi.
+V tomto návodu se dozvíte, jak přes rozhraní WebFig aktualizovat balíčky RouterOS a firmware RouterBOARD na bráně MikroTik. Aktuální systém běží optimálně a stabilně a podporuje nejnovější funkce.
 
 <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginTop: "1.5rem" }}>
   <iframe

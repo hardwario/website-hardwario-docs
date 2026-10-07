@@ -6,10 +6,10 @@ import TabItem from '@theme/TabItem';
 
 # Čtení dat {#reading-data}
 
-Většina zdrojů se nachází pod prostorem (Space): `/v2/spaces/{space_id}/…`. Každý příklad potřebuje
+Většina zdrojů leží pod prostorem (Space): `/v2/spaces/{space_id}/…`. Ke každému příkladu potřebujete
 `<api-key>` (viz [**Autentizace**](authentication.md)) a `<space-id>`.
 
-## Výpis vašich prostorů {#list-your-spaces}
+## Výpis prostorů {#list-your-spaces}
 
 ```bash
 curl -H 'X-API-KEY: <api-key>' \
@@ -73,11 +73,11 @@ curl -H 'X-API-KEY: <api-key>' \
 
 :::caution Výchozí hodnoty se liší od webového rozhraní
 Přes API je výchozí hodnota `after` **24 hodin zpět** a výchozí `limit` je **20**.
-Pokud vidíte zprávy na webu, ale ne přes API, rozšiřte `after` a zvyšte
-`limit`.
+Pokud zprávy vidíte ve webovém rozhraní, ale přes API ne, posuňte `after` dál
+do minulosti a zvyšte `limit`.
 :::
 
-**Pouze poslední hodnota**: vyžádejte si jednu zprávu, nejnovější první:
+**Jen poslední hodnota**: vyžádejte si jedinou zprávu (řazeno od nejnovější):
 
 ```bash
 curl -H 'X-API-KEY: <api-key>' \

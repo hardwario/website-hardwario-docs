@@ -6,17 +6,17 @@ import Image from '@theme/IdealImage';
 
 # Konfigurační parametry {#configuration-parameters}
 
-Tato kapitola popisuje každý parametr `lte config`, hodnoty, které přijímá, a kdy jej změnit. Hotová nastavení podle poskytovatele SIM karty najdete v kapitole [**Nastavení SIM karty**](sim-card-setup.md).
+Tato kapitola popisuje všechny parametry `lte config`: jaké hodnoty přijímají a kdy je změnit. Hotová nastavení pro jednotlivé poskytovatele SIM karet najdete v kapitole [**Nastavení SIM karty**](sim-card-setup.md).
 
-Všechny parametry se zobrazí příkazem `lte config show` a uloží příkazem `config save`.
+Všechny parametry vypíše příkaz `lte config show` a uloží příkaz `config save`.
 
 ---
 
 ### `antenna` – Typ antény {#antenna--antenna-type}
 Určuje typ antény připojené k zařízení:
 
-- `internal`: Použije vestavěnou anténu.
-- `external`: Použije externě připojenou anténu.
+- `internal`: Použít vestavěnou anténu.
+- `external`: Použít externě připojenou anténu.
 
 ---
 
@@ -28,7 +28,7 @@ Určuje preferované režimy síťového připojení a jejich prioritu:
 - `lte-m`: Použít **pouze LTE-M**.
 - `nb-iot`: Použít **pouze NB-IoT**.
 
-> ⚠️ Ověřte, že je zvolený režim podporován vaší SIM kartou i místním operátorem.
+> ⚠️ Ověřte, že zvolený režim podporuje vaše SIM karta i místní operátor.
 
 ---
 
@@ -36,19 +36,19 @@ Určuje preferované režimy síťového připojení a jejich prioritu:
 Omezuje modem na podmnožinu podporovaných frekvenčních pásem:
 
 - Ponechte prázdné (`""`), aby modem **prohledával všechna podporovaná pásma**. To je výchozí a doporučené nastavení.
-- Zadejte mezerami oddělený seznam čísel pásem (například `"3 8 20"`), čímž modem uzamknete pouze na tato pásma.
+- Zadejte čísla pásem oddělená mezerami (například `"3 8 20"`) a modem bude používat jen tato pásma.
 
-Uzamčení pásem zkracuje počáteční vyhledávání sítě, ale zařízení se **nepřihlásí**, pokud operátor používá pásmo, které v seznamu není. Nastavujte je až poté, co si u operátora ověříte pásma používaná v místě nasazení.
+Uzamčení pásem zkracuje počáteční vyhledávání sítě, ale zařízení se **nezaregistruje**, pokud operátor používá pásmo, které v seznamu není. Nastavujte je až poté, co si u operátora ověříte pásma používaná v místě nasazení.
 
 ---
 
 ### `network` – Výběr PLMN {#network--plmn-selection}
-Vynutí registraci ke konkrétnímu operátorovi určenému jeho **PLMN ID** (MCC + MNC, například `23003`):
+Vynutí registraci u konkrétního operátora podle jeho **PLMN ID** (MCC + MNC, například `23003`):
 
-- Ponechte prázdné (`""`) pro **automatický** výběr operátora. To je výchozí nastavení.
-- Zadejte PLMN ID pro vynucení **ručního** výběru, což je obvykle potřeba u roamingových SIM karet, které by se jinak připojily k nevhodné partnerské síti.
+- Prázdná hodnota (`""`) znamená **automatický** výběr operátora. To je výchozí nastavení.
+- Zadáním PLMN ID vynutíte **ruční** výběr. Ten je obvykle potřeba u roamingových SIM karet, které by se jinak připojily k nevhodné partnerské síti.
 
-PLMN ID roamingových partnerů používaných SIM kartami Vodafone od **HARDWARIO** jsou uvedena v tabulce [**Vodafone SIM EU28+2**](vodafone-coverage.md).
+PLMN ID roamingových partnerů, které používají SIM karty Vodafone od **HARDWARIO**, najdete v tabulce [**Vodafone SIM EU28+2**](vodafone-coverage.md).
 
 ---
 
@@ -67,7 +67,7 @@ Definuje metodu ověřování APN:
 - `"pap"`: Použít ověřování PAP (pokud je podporováno).
 - `"chap"`: Použít ověřování CHAP (pokud je podporováno).
 
-> Pokud vaše SIM karta ověřování nevyžaduje, použijte `"none"`.
+> Pokud SIM karta ověřování nevyžaduje, použijte `"none"`.
 
 ---
 
@@ -85,13 +85,13 @@ Ponechte prázdné (`""`), pokud ověřování není vyžadováno.
 
 ### `addr` – Statická IP adresa {#addr--static-ip-address}
 Určuje statickou IP adresu přiřazenou síťovému rozhraní LTE.
-Pro globální připojení použijte `"157.245.24.13"`
+Pro globální připojení použijte `"157.245.24.13"`.
 
 ---
 
-## Legacy: Konfigurace Cloud v1 {#legacy-cloud-v1-configuration}
+## Starší verze: konfigurace Cloud v1 {#legacy-cloud-v1-configuration}
 
-Pro naše starší firmwary [HARDWARIO Cloud v1](https://legacy.hardwario.cloud) (obvykle katalogový firmware CHESTER verze 2.x.x) potřebujete u těchto dvou konfiguračních položek jiné hodnoty:
+Starší firmware pro [HARDWARIO Cloud v1](https://legacy.hardwario.cloud) (obvykle katalogový firmware CHESTER verze 2.x.x) potřebuje u těchto dvou konfiguračních položek jiné hodnoty:
 
 - **IP** s SIM kartou Vodafone: `lte config addr 192.168.168.1`
 - **IP** s SIM kartou jiného operátora: `lte config addr 165.227.146.193`

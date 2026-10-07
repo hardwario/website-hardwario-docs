@@ -5,70 +5,69 @@ title: Instalace aplikace
 
 # Instalace aplikace HARDWARIO Manager {#install-hardwario-manager}
 
-**HARDWARIO Manager** běží na **Androidu** a **iOS**. O aktuální build pro vaši
-platformu si řekněte svému kontaktu v HARDWARIO.
+**HARDWARIO Manager** běží na **Androidu** a **iOS**. O aktuální sestavení pro
+svou platformu požádejte svou kontaktní osobu v HARDWARIO.
 
 ---
 
 ## Co budete potřebovat {#what-you-need}
 
-| Věc | Proč |
+| Co | K čemu |
 |---|---|
-| **Telefon s NFC** | Nutný pro konfiguraci zařízení **STICKER**. Většina telefonů z posledních let ho má. |
-| **Bluetooth** | Nutný pro připojení k zařízení **CHESTER**. |
-| **Kameru** | Používá se ke skenování QR kódů. Párovacích etiket CHESTER, odkazů na firmware, claim kódů zařízení a nasdílených šablon. |
-| **Účet ATELOS** | Potřebný k nárokování zařízení a k natažení jeho uloženého secret key do telefonu. Viz [**Účet ATELOS**](./atelos.md). |
-| **Secret key zařízení** | Zařízení STICKER komunikuje šifrovaným kanálem NFC. Nárokování zařízení klíč vyplní za vás; zadat ho můžete i ručně. |
+| **Telefon s NFC** | Nutný ke konfiguraci zařízení **STICKER**. NFC má většina telefonů z posledních let. |
+| **Bluetooth** | Nutný k připojení k zařízení **CHESTER**. |
+| **Kamera** | Ke skenování QR kódů: párovacích štítků zařízení CHESTER, odkazů na firmware, kódů pro nárokování zařízení a sdílených šablon. |
+| **Účet ATELOS** | Potřebný k nárokování zařízení a ke stažení jeho uloženého secret key do telefonu. Viz [**Účet ATELOS**](./atelos.md). |
+| **Secret key zařízení** | Zařízení STICKER komunikuje šifrovaným kanálem NFC. Když zařízení nárokujete, klíč se vyplní za vás; zadat ho můžete i ručně. |
 
 ---
 
 ## 1. Zapněte NFC {#1-turn-on-nfc}
 
-NFC musí být zapnuté, aby telefon mohl se zařízením STICKER komunikovat.
+Aby telefon mohl komunikovat se zařízením STICKER, musí mít zapnuté NFC.
 
 1. Otevřete v telefonu **Nastavení**.
 2. Vyhledejte **NFC**.
-3. Přepněte ho na **zapnuto**.
+3. Přepínač **zapněte**.
 
-Pokud se žádné nastavení NFC neobjeví, telefon NFC nemá a zařízení STICKER
-nenastaví. Pro zařízení CHESTER přes Bluetooth ho použít lze.
+Pokud nastavení NFC nenajdete, telefon NFC nemá a zařízení STICKER s ním
+nenastavíte. Pro připojení k zařízení CHESTER přes Bluetooth ho ale použít můžete.
 
 ---
 
 ## 2. Nainstalujte aplikaci {#2-install-the-app}
 
-Nainstalujte build pro svou platformu a otevřete ho. Vaše uložená zařízení,
-šablony a nastavení se přes aktualizace zachovají.
+Nainstalujte sestavení pro svou platformu a aplikaci otevřete. Uložená zařízení,
+šablony a nastavení zůstanou zachované i po aktualizacích.
 
 ---
 
 ## 3. Povolte oprávnění {#3-allow-the-permissions}
 
-Aplikace si o oprávnění řekne, až ho poprvé potřebuje. Klepněte na **Povolit**
-(nebo **Při používání aplikace**):
+Aplikace žádá o každé oprávnění až ve chvíli, kdy ho poprvé potřebuje. Klepněte
+na **Povolit** (nebo **Při používání aplikace**):
 
 - **Kamera**: jen když skenujete QR kód.
 - **Zařízení v okolí / Bluetooth**: jen když se připojujete k zařízení CHESTER.
 - **Face ID / biometrika**: jen když si zapnete zámek aplikace v
-  [**nastavení aplikace**](./settings.md).
+  [**Nastavení aplikace**](./settings.md).
 
-Pro NFC se na oprávnění nikdo neptá. Zapnete ho jednou, v kroku 1.
+O oprávnění k NFC aplikace nežádá. NFC zapínáte jen jednou, v kroku 1.
 
 :::info Oprávnění Bluetooth na Androidu
 Na Androidu 12 a novějším potřebuje aplikace pro zařízení v okolí oprávnění
-k **vyhledávání** i k **připojení**. Pokud je odmítnete, obrazovky CHESTER nabídnou
-otevření nastavení telefonu, kde je udělíte.
+k **vyhledávání** i k **připojení**. Pokud je odmítnete, obrazovky zařízení
+CHESTER vám nabídnou otevřít nastavení telefonu, kde je můžete udělit.
 :::
 
 ---
 
 ## 4. Otevřete aplikaci {#4-open-the-app}
 
-Otevřete **HARDWARIO Manager** a z domovské mřížky vyberte rodinu zařízení:
+Otevřete **HARDWARIO Manager** a na domovské obrazovce vyberte rodinu zařízení:
 
-- **STICKER**: konfigurace přes NFC. Pokračujte na [**STICKER**](./sticker/index.md).
-- **CHESTER**: připojení přes Bluetooth. Pokračujte na [**CHESTER**](./chester/index.md).
+- **STICKER**: konfigurace přes NFC. Pokračujte stránkou [**STICKER**](./sticker/index.md).
+- **CHESTER**: připojení přes Bluetooth. Pokračujte stránkou [**CHESTER**](./chester/index.md).
 
-Anténa NFC bývá v telefonu blízko **horní části zadní strany**. Pokud se přiložení
-nezaregistruje, pohybujte telefonem pomalu kolem tohoto místa, dokud nedojde k
-načtení.
+Anténa NFC bývá v **horní části zadní strany** telefonu. Pokud telefon přiložení
+nezaznamená, pohybujte jím pomalu kolem tohoto místa, dokud se zařízení nenačte.

@@ -5,10 +5,10 @@ title: Správa firmwaru
 
 # Správa firmwaru {#firmware-management}
 
-Zařízení umožňuje vzdálenou aktualizaci firmwaru přes vzduch (over-the-air). Spustíte ji stisknutím tlačítka **Upload Firmware** v sekci System webového rozhraní. Po nahrání firmwaru se zařízení restartuje, aby se změna uplatnila. Nahrání můžete ověřit v tabulce na kartě Status, konkrétně v polích s verzí a názvem firmwaru.
+Firmware zařízení lze aktualizovat na dálku (OTA). Aktualizaci spustíte tlačítkem **Upload Firmware** v sekci System webového rozhraní. Po nahrání firmwaru se zařízení restartuje, aby se změna projevila. Zda se nahrání povedlo, ověříte v tabulce na kartě Status podle polí s verzí a názvem firmwaru.
 
-V případě potřeby lze firmware vrátit zpět stisknutím tlačítka **Rollback Firmware** na kartě System. Dostupnost návratu je uvedena v příslušném poli tabulky Status. Zařízení umí uchovat pouze jeden firmware pro návrat. Pokud už byl návrat proveden, další návrat (je-li dostupný) bude na výrobní verzi firmwaru.
+V případě potřeby vrátíte předchozí firmware tlačítkem **Rollback Firmware** na kartě System. Zda je návrat k dispozici, ukazuje příslušné pole tabulky Status. Zařízení uchovává jen jednu verzi firmwaru pro návrat. Po návratu tedy vede další návrat (je-li k dispozici) k tovární verzi firmwaru.
 
-Návrat firmwaru je možné provést i ze chybového stavu (LED rychle bliká). To je užitečné zejména tehdy, když aktualizace poškodí některou část procesu spouštění a webové rozhraní není dostupné. Návrat se spouští podobně jako reset zařízení. Podržte tlačítko USER, chybové blikání se zastaví. Po přibližně 5 sekundách držení tlačítka začne LED blikat ještě rychleji než předtím. Během tohoto blikání tlačítko uvolněte a firmware se vrátí zpět. Pokud tlačítko neuvolníte, zařízení se vrátí do chybového stavu.
+Firmware lze vrátit i z chybového stavu (LED rychle bliká). Hodí se to hlavně tehdy, když aktualizace naruší spouštění zařízení a webové rozhraní je nedostupné. Návrat se spouští podobně jako reset zařízení. Podržte tlačítko USER a chybové blikání ustane. Asi po 5 sekundách držení začne LED blikat ještě rychleji než předtím. Uvolněte tlačítko, dokud LED takto bliká, a firmware se vrátí na předchozí verzi. Pokud tlačítko neuvolníte, zařízení se vrátí do chybového stavu.
 
-Některé aktualizace mohou zneplatnit konfiguraci zařízení. Z tohoto důvodu vždy doporučujeme zálohovat nastavení pomocí tlačítka **Export** na kartě Settings.
+Některé aktualizace mohou konfiguraci zařízení zneplatnit. Proto doporučujeme nastavení vždy zálohovat tlačítkem **Export** na kartě Settings.

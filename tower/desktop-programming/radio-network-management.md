@@ -5,10 +5,10 @@ title: Radio Network Management
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'
 
-In this chapter, we will go over the **Devices Tab** of Playground
+In this chapter, we will go over the **Devices Tab** of Playground.
 ## Devices Tab
 
-On this tab, you can connect to the **Radio Dongle**
+On this tab, you can connect to the **Radio Dongle**.
 
 Choose the **Radio Dongle** (there should be `twr-usb-dongle` or `bc-usb-dongle` on the line) from the dropdown list and click **Connect**.
 

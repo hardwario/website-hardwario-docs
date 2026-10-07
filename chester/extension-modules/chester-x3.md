@@ -21,13 +21,13 @@ This article describes the CHESTER-X3A, CHESTER-X3B and CHESTER-X3C extension mo
 
 ## CHESTER-X3A Module Overview
 
-CHESTER-X3A provides 2 inputs for RTD (resistive temperature devices) sensors, such as Pt 100 and Pt 1000. Each input supports 4 wire sensor connection to improve the accuracy.
+CHESTER-X3A provides 2 inputs for RTD (resistive temperature devices) sensors, such as Pt 100 and Pt 1000. Each input supports a 4-wire sensor connection to improve the accuracy.
 
 ## CHESTER-X3B Module Overview
 
-CHESTER-X3B allows connecting 2 type-K thermocouples (types B/C/E/J/N/R/S/T support on request) using 2 wire sensor connection.
+CHESTER-X3B allows connecting 2 type-K thermocouples (types B/C/E/J/N/R/S/T support on request) using a 2-wire sensor connection.
 
-First sensor connects to **CH1A(-)** and **CH1B(+)**.
+The first sensor connects to **CH1A(-)** and **CH1B(+)**.
 If X3B is in the **slot A**, then you have to use terminals **A2(-)** and **A3(+)**.
 
 The second sensor connects to **CH2A(-)** and **CH2B(+)**.
@@ -35,7 +35,7 @@ If X3B is in the **slot A**, then you have to use terminals **A6(-)** and **A7(+
 
 ## CHESTER-X3C Module Overview
 
-CHESTER-X3C provides 2 inputs for load-cell (strain gauge) that can be used for weight measurements. Each channel use 4 wire connection.
+CHESTER-X3C provides 2 inputs for load cells (strain gauges) that can be used for weight measurements. Each channel uses a 4-wire connection.
 
 ## CHESTER Pin Configuration Diagram
 

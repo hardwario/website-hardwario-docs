@@ -6,11 +6,11 @@ title_meta: "Přidání koncových zařízení (videonávod The Things Stack)"
 
 import Image from '@theme/IdealImage';
 
-# The Things Stack- jak přidat koncová zařízení do sítě LoRaWAN {#the-things-stack--how-to-add-end-devices-to-a-lorawan-network}
+# The Things Stack – jak přidat koncová zařízení do sítě LoRaWAN {#the-things-stack--how-to-add-end-devices-to-a-lorawan-network}
 
 ## Přehled návodu {#tutorial-overview}
 
-Tento návod vysvětluje, jak v The Things Stack vytvořit aplikaci a zaregistrovat koncová zařízení, včetně volby metody registrace, zadání všech potřebných identifikátorů a přípravy zařízení k použití.
+Tento návod vysvětluje, jak v The Things Stack vytvořit aplikaci a zaregistrovat koncová zařízení, včetně volby způsobu registrace, zadání všech potřebných identifikátorů a přípravy zařízení k použití.
 
 ---
 

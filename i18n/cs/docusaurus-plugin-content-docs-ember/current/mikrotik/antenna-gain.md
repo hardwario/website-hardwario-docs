@@ -5,14 +5,14 @@ title: "Zisk antény a výstupní výkon"
 
 # Zisk antény a výstupní výkon {#antenna-gain--output-power}
 
-Tato stránka vysvětluje, jak funguje vysílací (TX) výkon u brány LoRa od MikroTik
+Tato stránka vysvětluje, jak funguje vysílací (TX) výkon u brány LoRa od společnosti MikroTik
 (R11e-LR8G / wAP LR8G kit) a jak nastavit parametr `antenna-gain`, aby brána
 zůstala v zákonném limitu vyzářeného výkonu (EIRP).
 
 :::warning Přečtěte si to dřív, než připojíte externí anténu
-Brána **nemá žádné nastavení „TX power“**. Jediná RF regulace karty je
-`antenna-gain` a její tovární výchozí hodnota je `0`. Pokud připojíte anténu se ziskem
-a ponecháte výchozí hodnotu, brána bude vyzařovat **nad** zamýšlený výkon a může
+Brána **nemá žádné nastavení „TX power“**. Jediným nastavením RF na kartě je
+`antenna-gain` a jeho výchozí hodnota z výroby je `0`. Pokud připojíte anténu se ziskem
+a výchozí hodnotu ponecháte, brána bude vyzařovat **vyšší** výkon, než má, a může
 překročit zákonný limit EIRP.
 :::
 
@@ -32,7 +32,7 @@ k horizontu a méně přímo nahoru či dolů. Celkový vyzářený výkon zůst
 stejný; zisk ho jen přerozděluje.
 :::
 
-### Dosah vs. poloměr pokrytí {#range-vs-coverage-radius}
+### Dosah a poloměr pokrytí {#range-vs-coverage-radius}
 
 Dvě věci se snadno pletou:
 
@@ -43,7 +43,7 @@ Dvě věci se snadno pletou:
   skutečně dostane použitelný signál.
 
 Všesměrová anténa s vyšším ziskem zvyšuje horizontální **dosah** tím, že
-zužuje vertikální vyzařovací úhel. To je dobré pro dlouhé spoje nad rovným, otevřeným
+zužuje vertikální vyzařovací úhel. To se hodí pro dlouhé spoje nad rovným otevřeným
 terénem, ale může vzniknout **mezera v pokrytí přímo pod bránou nebo velmi blízko
 ní**, protože tím směrem jde méně energie. Zařízení přímo pod vysoko umístěnou
 anténou s vysokým ziskem může mít horší signál než zařízení mnohem
@@ -61,7 +61,7 @@ Zisk antény volte podle konkrétního nasazení, ne podle pravidla „větší 
 ## Jak vysílací výkon skutečně funguje {#how-tx-power-actually-works}
 
 Brána LoRa od MikroTik si vysílací výkon **nenastavuje** sama. Hodnota přichází ze
-serveru sítě LoRaWAN a brána pouze kompenzuje anténu:
+síťového serveru LoRaWAN a brána jen kompenzuje zisk antény:
 
 ```
 radio output (at the connector) = server_value − antenna-gain
@@ -88,12 +88,12 @@ Zadejte **skutečný zisk připojené antény v dBi mínus ztráty na kabelu**.
 
 :::info
 Úplný seznam parametrů LoRa a jejich přesné definice najdete v dokumentaci
-MikroTik: [LoRa General Properties](https://help.mikrotik.com/docs/spaces/ROS/pages/16351619/General+Properties).
+společnosti MikroTik: [LoRa General Properties](https://help.mikrotik.com/docs/spaces/ROS/pages/16351619/General+Properties).
 :::
 
 ### WebFig / WinBox {#webfig--winbox}
 
-1. Otevřete **LoRa** v levém menu.
+1. V levé nabídce otevřete **LoRa**.
 2. Klikněte na rozhraní LoRa (např. `lora1`).
 3. Přejděte na záložku **General**.
 4. Nastavte **Antenna Gain** na zisk antény v dBi.
@@ -119,16 +119,16 @@ V novějších sestaveních RouterOS může být menu `/iot lora` místo `/lora`
 
 | Anténa | Zisk | Hodnota `antenna-gain` |
 | --- | --- | --- |
-| Vestavěná anténa wAP LR8G kit (868 MHz) | 2 dBi | `2` |
-| Všesměrová anténa MikroTik LoRa (`TOF-0809-...`) | 6,5 dBi | `6.5` |
-| Jiná externí anténa | viz její datasheet | dBi antény − ztráty na kabelu |
+| Vestavěná anténa zařízení wAP LR8G kit (868 MHz) | 2 dBi | `2` |
+| Sada všesměrové antény LoRa od MikroTik (`TOF-0809-...`) | 6,5 dBi | `6.5` |
+| Jiná externí anténa | viz její katalogový list | dBi antény − ztráty na kabelu |
 
-U zařízení **EMBER** musí hodnota odpovídat té anténě, která je ke kartě LoRa skutečně připojena, ať už je to
-interní anténa LoRaWAN dodávaná se zařízením, nebo externí anténa na konektoru **LRW** (její zisk mínus
-ztráta kabelu mezi nimi). Při přepnutí mezi nimi nastavení vždy aktualizujte.
+U zařízení **EMBER** musí hodnota odpovídat anténě, která je ke kartě LoRa skutečně připojená: buď
+vnitřní anténě LoRaWAN, se kterou se zařízení dodává, nebo externí anténě na konektoru **LRW** (její zisk
+mínus ztráty kabelu mezi nimi). Při každé změně antény nastavení aktualizujte.
 
-Pokud zisk antény neznáte, volte raději **vyšší** hodnotu. Brána sníží
-svůj výkon více a zůstane v zákonných limitech.
+Pokud zisk antény neznáte, volte raději **vyšší** hodnotu. Brána pak sníží
+výkon o něco víc a zůstane v zákonných limitech.
 
 ---
 
@@ -152,13 +152,13 @@ tam, například v ChirpStack parametr `downlink_tx_power` (dBm EIRP) v souboru
 `region_eu868.toml`. Vysílací výkon pro **uplink** je vlastností **koncového zařízení** (firmware
 uzlu nebo ADR ze serveru), nikoli brány.
 
-Skutečný dosah zvýšíte lepší anténou a/nebo kratším kabelem s nižšími ztrátami
-a následnou úpravou hodnoty `antenna-gain`. Samotné nastavení nikdy výkon nepřidá.
+Skutečný dosah zvýšíte lepší anténou nebo kratším kabelem s nižšími ztrátami;
+potom odpovídajícím způsobem upravte `antenna-gain`. Samotné nastavení nikdy výkon nepřidá.
 
-:::caution MikroTik wAP LR8G kit: nejprve připojte interní anténu
-U samostatného zařízení **wAP LR8G kit** od MikroTik není interní anténa **z výroby připojena**.
-Před použitím ji připojte k u.FL konektoru **RFIO** na kartě (se zařízením bez napájení), jinak karta
-nemůže přes anténu vůbec vysílat ani přijímat.
+:::caution MikroTik wAP LR8G kit: nejprve připojte vnitřní anténu
+U samostatné sady **wAP LR8G kit** od společnosti MikroTik **není vnitřní anténa z výroby připojená**.
+Před použitím ji (při vypnutém napájení) připojte ke konektoru u.FL **RFIO** na kartě, jinak karta
+přes anténu vůbec nevysílá ani nepřijímá.
 :::
 
 ---
@@ -174,7 +174,7 @@ a v místních předpisech.
 
 ---
 
-## Další čtení {#further-reading}
+## Další informace {#further-reading}
 
 - [MikroTik – LoRa General Properties](https://help.mikrotik.com/docs/spaces/ROS/pages/16351619/General+Properties)
-  je kompletní reference všech konfiguračních parametrů LoRa včetně `antenna-gain`.
+  je úplná reference všech konfiguračních parametrů LoRa včetně `antenna-gain`.

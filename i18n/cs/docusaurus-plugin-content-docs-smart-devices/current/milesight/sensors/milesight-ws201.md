@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Senzor Milesight WS201 {#milesight-sensor-ws201}
 
-Milesight WS201 je **bezdrátový senzor pro monitorování naplnění**, který pro vysokou přesnost využívá **technologii ToF (Time-of-Flight)**. Podporuje **konektivitu LoRaWAN** se vzdálenou správou v Milesight IoT Cloud, funguje **až 2 roky na knoflíkové baterii** a je ideální pro **údržbu veřejných zařízení**
+Milesight WS201 je **bezdrátový senzor zaplnění**, který pro vysokou přesnost používá **technologii ToF (Time-of-Flight)**. Připojuje se přes **LoRaWAN**, na dálku se spravuje v Milesight IoT Cloud, na **knoflíkovou baterii vydrží až 2 roky** a hodí se pro **údržbu veřejných zařízení**.
 
 <div class="container">
   <div class="row">
@@ -21,26 +21,26 @@ Milesight WS201 je **bezdrátový senzor pro monitorování naplnění**, který
 </div>
 <br />
 
-## Odkazy pro integraci {#integration-links}
+## Odkazy k integraci {#integration-links}
 | Zdroj           | Odkaz                                                                |
 |-----------------|----------------------------------------------------------------------|
-| HARDWARIO Store | Zatím není k dispozici                                                |
+| E-shop HARDWARIO | Zatím není k dispozici                                                |
 | Oficiální stránka | https://www.milesight.com/iot/product/lorawan-sensor/ws201           |
 | Uživatelská příručka | https://resource.milesight.com/milesight/iot/document/ws201-user-guide-en.pdf |
-| Katalogový list | https://resource.milesight.com/milesight/iot/document/ws201-datasheet-en.pdf |
+| Produktový list | https://resource.milesight.com/milesight/iot/document/ws201-datasheet-en.pdf |
 
 ---
 
 ## Obecná konfigurace {#general-configuration}
-Konfigurace se provádí přes NFC pomocí [aplikace Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
+Zařízení se konfiguruje přes NFC v [aplikaci Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
 
-Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
+Postup konfigurace najdete v části 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
 
 ---
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
+Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options).
 
 ---
 
@@ -52,7 +52,7 @@ Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde
 | AppKey           | 5572404C696E6B4C6F52613230313823 |
 
 :::info
-**DevEUI** (Device Extended Unique Identifier) je jedinečný pro každé zařízení a najdete jej vytištěný na štítku zařízení.
+**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení jedinečný a je vytištěný na jeho štítku.
 :::
 
 ---
@@ -66,10 +66,10 @@ Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde
 | Kodek | [Zobrazit kodek](https://github.com/Milesight-IoT/SensorDecoders/blob/main/ws-series/ws201/ws201-codec.json) |
 
 :::info
-### Přehled terminologie {#terminology-overview}
+### Přehled pojmů {#terminology-overview}
 **Dekodér** -> Převádí binární payload zařízení na čitelný JSON.<br />
-**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlinky.<br />
-**Kodek** -> Definuje pravidla pro dekódování a kódování (struktura, pole, porty) používaná síťovými servery.
+**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlink.<br />
+**Kodek** -> Definuje pravidla dekódování a kódování (strukturu, pole, porty), podle kterých pracují síťové servery.
 :::
 
 
@@ -78,11 +78,11 @@ Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde
 ## Napájení {#power-supply}
 | Typ    | Hodnota         |
 |--------|-----------------|
-| Napájení | 2× baterie AA |
+| Napájení | baterie CR2450 |
 
 ---
 
-## Technické specifikace {#technical-specifications}
+## Technické parametry {#technical-specifications}
 
 | **Parametr** | **Hodnota** |
 |---------------|-----------|
@@ -102,7 +102,7 @@ Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde
 | **Ostatní** | |
 | Tlačítko | Reset (interní) |
 | LED | Indikátor (interní) |
-| Konfigurace | NFC aplikace / downlink |
+| Konfigurace | Aplikace NFC / downlink |
 | Pokročilé funkce | Alarm při překročení prahu, režim hibernace |
 | **Fyzické vlastnosti** | |
 | Napájení | 1 × CR2450 (590 mAh) |
@@ -113,5 +113,5 @@ Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde
 | Rozměry | 66 × 38 × 12 mm |
 | Hmotnost | 24,7 g (včetně baterie) |
 | Materiál | ABS+PC (samozhášivý), bílá |
-| Instalace | 3M páska |
+| Instalace | Páska 3M |
 | **Certifikace** | CE, FCC, RoHS |

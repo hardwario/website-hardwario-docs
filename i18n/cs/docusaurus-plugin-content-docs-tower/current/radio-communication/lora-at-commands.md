@@ -1,44 +1,44 @@
 ---
 slug: lora-at-commands
-title: Konfigurace pomocí AT příkazů LoRa
+title: Konfigurace LoRa pomocí příkazů AT
 ---
 import Image from '@theme/IdealImage';
 
-Tento dokument popisuje, jak konfigurovat zařízení HARDWARIO TOWER s LoRa pomocí AT příkazů přes virtuální sériový port USB.
+Tento dokument popisuje, jak zařízení HARDWARIO TOWER s LoRa nakonfigurovat příkazy AT přes virtuální sériový port USB.
 
 :::info
 
-Tento dokument nevysvětluje příkazy a funkce specifické pro firmware konkrétního projektu. Ty jsou vysvětleny přímo v daném projektu.
+Tento dokument nevysvětluje příkazy a funkce specifické pro firmware konkrétního projektu. Ty jsou popsané přímo u daného projektu.
 
-Tyto příkazy platí pro veškerý firmware v [**HARDWARIO Playground**](../desktop-programming/about-playground.md) s prefixem `twr-lora-`.
+Příkazy platí pro všechny firmwary s prefixem `twr-lora-` v aplikaci [**HARDWARIO Playground**](../desktop-programming/about-playground.md).
 
 :::
 
 ## Konfigurace LoRa {#lora-configuration}
 
-Modul LoRa lze konfigurovat pomocí **AT příkazů** odeslaných do [**Core Module**](../hardware-modules/about-core-module.md) přes virtuální sériový port USB.
+Modul LoRa Module se konfiguruje **příkazy AT**, které posíláte do modulu [**Core Module**](../hardware-modules/about-core-module.md) přes virtuální sériový port USB.
 
 :::tip
 
-Nejsnazší způsob, jak modul LoRa nakonfigurovat, je použít naši [**HARDWARIO Console**](../firmware-development/hardwario-tower-console.md), která je součástí [**HARDWARIO Code**](../firmware-development/about-hardwario-code.md).
+Modul LoRa Module nejsnáze nakonfigurujete v naší konzoli [**HARDWARIO Console**](../firmware-development/hardwario-tower-console.md), která je součástí aplikace [**HARDWARIO Code**](../firmware-development/about-hardwario-code.md).
 
 :::
 
-Můžete také použít aplikaci terminálového emulátoru, například [**Hterm**](http://der-hammer.info/pages/terminal.html), [**Putty**](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), [**Picocom**](https://pkgs.org/download/picocom).
+Můžete také použít emulátor terminálu, například [**Hterm**](http://der-hammer.info/pages/terminal.html), [**Putty**](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), [**Picocom**](https://pkgs.org/download/picocom).
 
-Parametry konfigurace jsou:
+Parametry připojení:
 - Rychlost **115200**
 - **8 datových bitů, 1 stop bit, bez parity** (8N1)
 - `CR+LF` jako sekvence **konce řádku** pro vysílání i příjem
 
-## O AT příkazech {#about-at-commands}
+## O příkazech AT {#about-at-commands}
 
-Pro výpis všech možných příkazů použijte `AT$HELP`. Sada podporovaných příkazů závisí na verzi vašeho firmwaru.
+Všechny dostupné příkazy vypíšete příkazem `AT$HELP`. Které příkazy jsou podporované, závisí na verzi firmwaru.
 
 <details>
 <summary>
 <b>
-Ukázkový výstup AT$HELP
+Příklad výstupu AT$HELP
 </b>
 </summary>
 <p>
@@ -78,13 +78,13 @@ AT$HELP This help
 
 ### Čtení hodnoty {#read-value}
 
-Hodnotu proměnné přečtete tak, že na konec **odpovídajícího AT příkazu** připojit otazník `?`
+Hodnotu proměnné přečtete tak, že na konec **odpovídajícího příkazu AT** připojíte otazník `?`:
 
 ```
 AT$APPSKEY?
 ```
 
-Aktuální hodnota proměnné se zobrazí v terminálu
+Aktuální hodnota proměnné se zobrazí v terminálu:
 
 ```
 APPSKEY: BF22C15EB89237A65DAABB05B2C91EB4
@@ -92,7 +92,7 @@ APPSKEY: BF22C15EB89237A65DAABB05B2C91EB4
 
 ### Změna hodnoty {#update-value}
 
-Pro změnu hodnoty proměnné použijte následující zápis proměnné, za nímž následuje `=` a požadovaná hodnota
+Hodnotu proměnné změníte tak, že za název proměnné napíšete `=` a požadovanou hodnotu:
 
 ```
 AT$APPSKEY=BF22C15EB89237A65DAABB05B2C91EB4
@@ -106,7 +106,7 @@ Pro testovací účely můžete použít [**online generátory klíčů**](https
 
 ## OTAA – Over-the-Air Activation {#otaa---over-the-air-activation}
 
-OTAA znamená, že relační klíče (ty s **S** v názvu) se generují v síti LoRa během operace **JOIN**. Klíče jsou pak automaticky přeneseny do vašeho modulu LoRa.
+OTAA znamená, že relační klíče (ty s **S** v názvu) se generují v síti LoRa během operace **JOIN**. Klíče se pak automaticky přenesou do modulu LoRa.
 
 :::info
 
@@ -114,14 +114,14 @@ Pokud vaše síť LoRa nepodporuje aktivační metodu OTAA, **přečtěte si č�
 
 :::
 
-Pro aktivační metodu OTAA potřebuje síť LoRa znát DevEUI vašeho modulu LoRa. Hodnotu přečtete příkazem `AT$DEVEUI?`, měli byste dostat něco takového
+Při aktivaci OTAA musí síť LoRa znát DevEUI vašeho modulu LoRa. Hodnotu přečtete příkazem `AT$DEVEUI?`; odpověď by měla vypadat nějak takto:
 
 ```
 $DEVEUI: 009335FF931FEADC
 OK
 ```
 
-Síť LoRa také potřebuje znát hodnoty `APPKEY` a `APPEUI`. Buď můžete hodnoty přečíst z modulu LoRa a přenést je do své sítě LoRa, nebo můžete nechat síť LoRa vygenerovat nové hodnoty, které pak nastavíte v modulu, například:
+Síť LoRa také potřebuje znát hodnoty `APPKEY` a `APPEUI`. Hodnoty můžete buď přečíst z modulu LoRa a zadat je do sítě LoRa, nebo si nechat od sítě LoRa vygenerovat nové a nastavit je v modulu, například:
 
 ```
 AT$APPEUI=324502A5676BADD7
@@ -132,7 +132,7 @@ OK
 
 :::note
 
-Pokaždé, když dostanete `OK`, znamená to, že hodnota byla uložena do interní flash paměti modulu LoRa.
+Odpověď `OK` znamená, že se hodnota uložila do interní paměti flash modulu LoRa.
 
 :::
 
@@ -142,7 +142,7 @@ Některé sítě LoRa podporují také generování `DEVEUI`, ale změnu této h
 
 :::
 
-Nakonec přepněte modem do režimu **OTAA** a odešlete příkaz **JOIN** pro výměnu relačních klíčů. Ujistěte se, že má váš modem dobrý signál, protože k dokončení operace **JOIN** potřebuje **obousměrnou komunikaci** s bránou.
+Nakonec přepněte modem do režimu **OTAA** a odešlete příkaz **JOIN**, kterým se vymění relační klíče. Ujistěte se, že má váš modem dobrý signál, protože k dokončení operace **JOIN** potřebuje **obousměrnou komunikaci** s bránou.
 
 ```
 AT$MODE=1  // Set OTAA(1)
@@ -156,7 +156,7 @@ $JOIN_OK
 
 :::info
 
-Všimněte si, že odpověď **OK** na příkaz **JOIN** neznamená, že připojení bylo úspěšné. Počkejte několik sekund, než obdržíte buď `$JOIN_OK` (připojení bylo úspěšné), nebo `$JOIN_ERROR` (připojení selhalo). Pokud bylo připojení úspěšné, modul LoRa je připraven komunikovat.
+Pozor: odpověď **OK** na příkaz **JOIN** ještě neznamená, že se připojení podařilo. Počkejte několik sekund na `$JOIN_OK` (připojení se podařilo), nebo `$JOIN_ERROR` (připojení selhalo). Po úspěšném připojení je modul LoRa připravený komunikovat.
 
 :::
 
@@ -164,7 +164,7 @@ Všimněte si, že odpověď **OK** na příkaz **JOIN** neznamená, že připoj
 
 **ABP** znamená, že relační klíče nastavujete ručně. `AT$MODE` musí být **nastaveno na 0 (ABP)**, což je výchozí nastavení po resetu napájení modulu LoRa.
 
-Pokud používáte režim ABP, musíte hodnoty `APPSKEY` a `NWKSKEY` nastavit ručně pomocí odpovídajících AT příkazů.
+Pokud používáte režim ABP, musíte hodnoty `APPSKEY` a `NWKSKEY` nastavit ručně odpovídajícími příkazy AT.
 
 ```
 AT$APPSKEY=5505CA3E4620843B324502A5676BADD7
@@ -175,11 +175,11 @@ OK
 
 :::note
 
-Pokaždé, když dostanete `OK`, znamená to, že hodnota byla uložena do interní flash paměti modulu LoRa.
+Odpověď `OK` znamená, že se hodnota uložila do interní paměti flash modulu LoRa.
 
 :::
 
-Síť LoRa bude potřebovat znát hodnoty `DEVEUI` a `DEVADDR` z vašeho modulu LoRa.
+Síť LoRa musí znát hodnoty `DEVEUI` a `DEVADDR` vašeho modulu LoRa.
 K přečtení hodnot použijte příkazy `AT$DEVEUI?` a `AT$DEVADDR?`.
 
 ```

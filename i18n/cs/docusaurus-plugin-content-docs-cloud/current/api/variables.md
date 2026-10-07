@@ -5,9 +5,9 @@ title_meta: "Proměnné (HARDWARIO Cloud API)"
 
 # Proměnné {#variables}
 
-[**Proměnné**](/cloud/variables) uchovávají metadata typu klíč–hodnota u zařízení (umístění,
-kalibrační offset, číslo majetku …), hodí se pro čtení uvnitř transformační
-funkce konektoru.
+[**Proměnné**](/cloud/variables) uchovávají u zařízení metadata typu klíč–hodnota (umístění,
+kalibrační offset, inventární číslo …), která se hodí číst v transformační
+funkci konektoru.
 
 **Vytvoření proměnné**: `POST /v2/spaces/{space_id}/variables`:
 
@@ -23,6 +23,6 @@ curl -X POST \
   }'
 ```
 
-Výpis a filtrování pomocí `GET …/variables?device_id=<device-id>` (dále `name`,
-`environment`, `secure`). Jednotlivou proměnnou spravujte pomocí `GET/PUT/DELETE
-…/variables/{id}` a hodnoty uzamkněte pomocí `…/variables/{id}/lock` a `/unlock`.
+Proměnné vypíšete a filtrujete pomocí `GET …/variables?device_id=<device-id>` (dále podle `name`,
+`environment`, `secure`). Jednotlivou proměnnou spravujete přes `GET/PUT/DELETE
+…/variables/{id}` a hodnoty uzamknete přes `…/variables/{id}/lock` a `/unlock`.

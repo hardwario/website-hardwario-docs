@@ -1,11 +1,11 @@
 ---
 slug: orno-or-we-504
-title: Orno OR-WE-504
+title: ORNO OR-WE-504
 ---
 
 import Image from '@theme/IdealImage';
 
-[Web-Site](https://www.orno.pl/en/energy-meters-without-mid/340-1-phase-energy-meter-wtih-rs-485-80a-5901752481282.html#download)
+[Website](https://www.orno.pl/en/energy-meters-without-mid/340-1-phase-energy-meter-wtih-rs-485-80a-5901752481282.html#download)
 
 ![ORNO OR-WE-504](images/orno-or-we-504.png)
 

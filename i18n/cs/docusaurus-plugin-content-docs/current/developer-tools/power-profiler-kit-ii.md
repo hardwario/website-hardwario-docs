@@ -10,19 +10,19 @@ import ReactPlayer from 'react-player'
 
 # Power Profiler Kit II {#power-profiler-kit-ii}
 
-Tento článek poskytuje informace o **Power Profiler Kit II** (dále označovaném jako **PPK2**) od **Nordic Semiconductor**.
+Tento článek popisuje přístroj **Power Profiler Kit II** (dále jen **PPK2**) od firmy **Nordic Semiconductor**.
 
 :::info
 
-**Power Profiler Kit II** můžete zakoupit přímo od **HARDWARIO**.
+**Power Profiler Kit II** si můžete koupit přímo u **HARDWARIO**.
 
 :::
 
 ## Nastavení {#setup}
 
-Abyste mohli **Power Profiler Kit II** používat, musíte nainstalovat nebo spustit ** nRF Connect for Desktop**.
+**Power Profiler Kit II** ovládáte z aplikace **nRF Connect for Desktop**, kterou je potřeba nainstalovat nebo spustit.
 
-Instalační balíček pro váš operační systém si můžete stáhnout [zde](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-desktop/Download#infotabs).
+Instalační balíček pro svůj operační systém stáhnete [zde](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-desktop/Download#infotabs).
 
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
@@ -33,7 +33,7 @@ Spusťte instalátor a nainstalujte aplikaci.
 Aplikace je ve formátu .AppImage, takže ji musíte označit jako spustitelnou. Máte dvě možnosti:
 
 - v konzoli spustit ```bash chmod u+x "AppImage File" ```
-- **kliknout pravým tlačítkem** na stažený soubor .appimage a vybrat **Properties**. V dalším okně přejít na kartu **Permissions** a zaškrtnout políčko **“Allow executing file as program”**.
+- **kliknout pravým tlačítkem** na stažený soubor .appimage a vybrat **Properties**. V dalším okně přejít na záložku **Permissions** a zaškrtnout políčko **„Allow executing file as program“**.
 
 </TabItem>
 <TabItem value="macOS" label="macOS">
@@ -43,7 +43,7 @@ Aplikace je ve formátu .AppImage, takže ji musíte označit jako spustitelnou.
 </Tabs>
 <br />
 
-Protože **nRF Connect for Desktop** je multifunkční aplikace, musíte nainstalovat podporu pro **PPK2**.
+**nRF Connect for Desktop** sdružuje více nástrojů, a proto do ní musíte doinstalovat podporu pro **PPK2**.
 
 <div class="container">
     <div class="row">
@@ -89,13 +89,13 @@ K připojení zařízení **CHESTER** k **PPK2** budete potřebovat tento hardwa
 - zařízení **CHESTER**
 - **Power Profiler Kit II**
 - kabel micro USB
-- napájecí kabel z **PPK2** do zařízení **CHESTER** (dodává se s **PPK2**, pokud jej kupujete od **HARDWARIO**)
+- napájecí kabel z **PPK2** do zařízení **CHESTER** (dodává se k **PPK2**, pokud ho kupujete od **HARDWARIO**)
 
 Připojte napájecí kabel z **PPK2** do zařízení **CHESTER**.
 
 :::caution
 
-Ujistěte se, že je napájecí kabel do **PPK2** připojen stejným způsobem jako na obrázku!
+Napájecí kabel musí být do **PPK2** zapojený přesně jako na obrázku.
 
 :::
 
@@ -110,9 +110,9 @@ Ujistěte se, že je napájecí kabel do **PPK2** připojen stejným způsobem j
 </div>
 <br />
 
-Nyní se musíte připojit ke svému **PPK2**. Zapojte konec kabelu micro USB do portu **USB DATA/POWER** na **PPK2** a druhý konec do počítače. **PPK2** by nyní mělo **pulzovat zeleným světlem**.
+Teď připojte **PPK2** k počítači: konec kabelu micro USB zapojte do portu **USB DATA/POWER** na **PPK2** a druhý konec do počítače. **PPK2** by teď mělo **pulzovat zeleným světlem**.
 
-Poté musíte své **PPK2** vybrat v **nRF Connect for Desktop**.
+Pak své **PPK2** vyberte v aplikaci **nRF Connect for Desktop**.
 
 
 <Image img={require('../../../../../chester/developer-tools/images/nrf-connect-select-device.png')} alt="Aplikace Power Profiler s vyznačeným tlačítkem SELECT DEVICE v levém horním rohu"/>
@@ -127,17 +127,17 @@ Klikněte na **SELECT DEVICE** a zvolte své zařízení **PPK2**.
 
 **PPK2** by nyní mělo svítit buď **červeně** (režim měření **Source**), nebo **modře** (režim měření **Ampere**).
 
-Chcete-li zahájit záznam dat, musíte:
+Záznam dat spustíte takto:
 
-1. Vybrat režim, ve kterém chcete pracovat.
+1. Vyberte režim, ve kterém chcete pracovat.
 
-1. Nastavit napájecí napětí na **3600mV**
+1. Nastavte napájecí napětí na **3600 mV**.
 
-1. Zapnout napájení výstupu
+1. Zapněte napájení výstupu.
 
-1. Spustit záznam dat
+1. Spusťte záznam dat.
 
-1. Chcete-li si prohlédnout data v určitém čase, můžete si je buď **přiblížit** myší/trackpadem, nebo můžete kliknout na přepínač **Live view** a vidět data v aktuálním čase.
+1. Data z určitého okamžiku si prohlédnete tak, že je myší nebo trackpadem **přiblížíte**; přepínačem **Live view** zobrazíte aktuální data.
 
 <div class="container">
     <div class="row">
@@ -150,7 +150,7 @@ Chcete-li zahájit záznam dat, musíte:
 </div>
 <br />
 
-Když kliknete na **Start** pro zahájení záznamu dat, vaše **PPK2** začne pulzovat barvou vašeho režimu a v aplikaci uvidíte měření.
+Po kliknutí na **Start** se spustí záznam dat: **PPK2** začne pulzovat barvou zvoleného režimu a v aplikaci uvidíte naměřené hodnoty.
 
 <div class="container">
     <div class="row">
@@ -165,6 +165,6 @@ Když kliknete na **Start** pro zahájení záznamu dat, vaše **PPK2** začne p
 
 ## Videonávod {#video-tutorial}
 
-Zde je krátký videonávod, **jak používat Power Profiler Kit II**, od **Nordic Semiconductor**.
+Krátký videonávod od **Nordic Semiconductor**, **jak používat Power Profiler Kit II**:
 
 <ReactPlayer controls src='https://youtu.be/B42lPvkUSoc' />

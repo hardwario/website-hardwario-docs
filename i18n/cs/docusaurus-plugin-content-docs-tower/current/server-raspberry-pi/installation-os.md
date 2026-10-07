@@ -4,11 +4,11 @@ title: Předinstalovaný obraz
 ---
 import Image from '@theme/IdealImage';
 
-Tento návod ukazuje, jak na **Raspberry Pi s nainstalovaným systémem Raspberry Pi OS** nainstalovat všechny nástroje potřebné pro práci se zařízeními HARDWARIO TOWER.
+Tento návod ukazuje, jak na kartu microSD pro **Raspberry Pi** nahrát náš připravený obraz systému, který už obsahuje všechny nástroje potřebné pro práci se zařízeními HARDWARIO TOWER.
 
 :::tip
 
-Pokud už máte Raspberry Pi v provozu se systémem **Raspberry Pi OS** a chcete jen doplnit všechny potřebné nástroje, můžete se řídit [**kapitolou Čistá instalace**](./installation-clean-os.md).
+Pokud vám Raspberry Pi už běží se systémem **Raspberry Pi OS** a chcete jen doinstalovat potřebné nástroje, postupujte podle [**kapitoly Čistá instalace**](./installation-clean-os.md).
 
 :::
 
@@ -16,8 +16,8 @@ Pokud už máte Raspberry Pi v provozu se systémem **Raspberry Pi OS** a chcete
 - [**HARDWARIO Raspbian**](https://github.com/hardwario/bc-raspbian/releases/latest)
 - [**Raspberry Pi Imager**](https://www.raspberrypi.com/software/)
 - Raspberry Pi 3B+ nebo lepší
-- MicroSD karta s minimální kapacitou 4 GB
-- Čtečka microSD karet (+ volitelně adaptér na SD karty)
+- Karta microSD s kapacitou alespoň 4 GB
+- Čtečka karet microSD (případně i adaptér na kartu SD)
 - Ethernetový kabel nebo Wi-Fi
 - Router (nebo LAN switch) s nastaveným DHCP serverem
 - Počítač s jedním z následujících operačních systémů:
@@ -27,10 +27,10 @@ Pokud už máte Raspberry Pi v provozu se systémem **Raspberry Pi OS** a chcete
 
 ## Nastavení {#set-up}
 
-- Vložte microSD kartu do čtečky připojené k počítači
-- Otevřete **Raspberry Pi Imager**
+- Vložte kartu microSD do čtečky připojené k počítači
+- Spusťte **Raspberry Pi Imager**
 - Zvolte **CHOOSE OS** --> **Scroll Down** --> **Use Custom** --> **vyberte stažený obraz HARDWARIO Raspbian**
-  - Mělo by to vypadat přibližně takto
+  - Mělo by to vypadat přibližně takto:
     <div class="container">
     <div class="row">
       <div class="col col--7">
@@ -40,13 +40,13 @@ Pokud už máte Raspberry Pi v provozu se systémem **Raspberry Pi OS** a chcete
       </div>
     </div>
     </div>
-- Otevřete **nastavení** kliknutím na **kolečko v levém dolním rohu**
-  - Zapněte Set hostname: `hub`
+- Kliknutím na **ozubené kolečko v levém dolním rohu** otevřete **nastavení**
+  - Zapněte volbu Set hostname: `hub`
   - Zapněte **SSH**
-    - Použijte autentizaci heslem
+    - Zvolte autentizaci heslem
   - Nastavte **heslo**
-    - Můžete si nastavit jakékoli heslo, doporučujeme však silné. Jen si ho nezapomeňte. Uživatelské jméno prosím ponechte **pi**, protože na tomto jménu obraz závisí.
-  - Volitelně můžete nastavit i bezdrátovou síť (Wi-Fi), pokud však máte připojení LAN, není to nutné
+    - Heslo si můžete zvolit libovolné, doporučujeme ale silné. Hlavně ho nezapomeňte. Uživatelské jméno ponechte **pi**, obraz s ním počítá.
+  - Volitelně můžete nastavit i bezdrátovou síť (Wi-Fi); pokud máte připojení LAN, není to nutné
   <div class="container">
     <div class="row">
       <div class="col col--7">
@@ -57,29 +57,29 @@ Pokud už máte Raspberry Pi v provozu se systémem **Raspberry Pi OS** a chcete
     </div>
     </div>
   - Klikněte na tlačítko **Save**
-- Klikněte na tlačítko **Write** a vyčkejte na **dokončení zápisu**
+- Klikněte na tlačítko **Write** a počkejte, až se **zápis dokončí**
 
 :::note
 
-Po dokončení zápisu vložte microSD kartu do svého Raspberry Pi. Pokud jste nenastavili **Wi-Fi**, připojte ethernetový kabel. Připojte [**Radio Dongle**](../hardware-modules/about-radio-dongle.md) a zapněte napájení Raspberry Pi.
+Po dokončení zápisu vložte kartu microSD do Raspberry Pi. Pokud jste nenastavili **Wi-Fi**, připojte ethernetový kabel. Připojte [**Radio Dongle**](../hardware-modules/about-radio-dongle.md) a zapněte napájení Raspberry Pi.
 
-Poté můžete začít server používat.
+Pak už můžete server začít používat.
 
 :::
 
 ## Připojení k serveru {#connect-to-server}
 
-Nyní, když máte server v provozu, můžete otevřít **webový prohlížeč na svém počítači** a připojit se k němu.
+Server teď běží, takže můžete otevřít **webový prohlížeč na svém počítači** a připojit se k němu.
 
 :::caution
 
-Bez dalšího nastavení musíte být na **stejné síti jako Raspberry Pi**.
+Bez dalšího nastavení musíte být ve **stejné síti jako Raspberry Pi**.
 
 :::
 
-K **Raspberry Pi** se můžete připojit dvěma způsoby, které lze zadat do adresního řádku:
-- IP adresa Raspberry Pi (jak ji zjistit, najdete v [**průvodci přihlášením**](./login-guide.md#find-out-raspberry-pi-ip) )
-- Hostname, který jste nastavili v předchozím kroku (v tomto návodu je to [**hub.local**](http://hub.local))
+K **Raspberry Pi** se připojíte dvěma způsoby. Do adresního řádku zadejte:
+- IP adresu Raspberry Pi (jak ji zjistit, popisuje [**průvodce přihlášením**](./login-guide.md#find-out-raspberry-pi-ip))
+- hostname, který jste nastavili v předchozím kroku (v tomto návodu je to [**hub.local**](http://hub.local))
 
 
   <div class="container">
@@ -95,10 +95,10 @@ K **Raspberry Pi** se můžete připojit dvěma způsoby, které lze zadat do ad
 
 ## Řešení problémů {#troubleshooting}
 
-Pokud je tlačítko **Start pairing** neaktivní a nelze jej stisknout, ujistěte se, že jste **nejprve připojili Radio Dongle a teprve poté zapnuli napájení Raspberry Pi.**
+Pokud je tlačítko **Start pairing** neaktivní a nelze ho stisknout, ujistěte se, že jste **nejdřív připojili Radio Dongle a teprve potom zapnuli napájení Raspberry Pi.**
 
-Pokud máte s připojením Radio Dongle stále potíže, může to být způsobeno tím, že jste provedli `apt update` a `apt upgrade`. V mosquitto je problém, kdy **anonymní připojení nejsou povolena**.
-Tento problém vyřešíte spuštěním následujícího příkazu:
+Pokud se k zařízení Radio Dongle stále nedaří připojit, může to být tím, že jste spustili `apt update` a `apt upgrade`. Mosquitto pak **nepovoluje anonymní připojení**.
+Problém vyřešíte tímto příkazem:
 
 ```bash
 echo 'allow_anonymous true' | sudo tee /etc/mosquitto/conf.d/auth.conf

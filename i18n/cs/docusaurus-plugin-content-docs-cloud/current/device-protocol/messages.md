@@ -74,10 +74,10 @@ Hlavičky FLAP prvních pěti paketů jsou `c000`, `3001`, `1002`, `c003` a `200
 | 2 | Název produktu | Text |
 | 3 | Varianta hardwaru | Text |
 | 4 | Revize hardwaru | Text |
-| 5 | Balík firmwaru | Text |
+| 5 | Balíček firmwaru | Text |
 | 6 | Název firmwaru | Text |
 | 7 | Verze firmwaru | Text |
-| 8 | Passkey pro Bluetooth | Text |
+| 8 | Přístupový klíč Bluetooth (passkey) | Text |
 | 9 | IMSI | Celé číslo |
 | 10 | IMEI | Celé číslo |
 | 11 | Verze firmwaru modemu | Text |
@@ -123,7 +123,7 @@ Cloud hash nahraného kodeku ověřuje. UPLOAD_DATA a DOWNLOAD_DATA začínají 
 
 ## Aktualizace firmwaru {#firmware-update}
 
-Aktualizace firmwaru bezdrátově používají zprávy **UPLOAD_FIRMWARE** a **DOWNLOAD_FIRMWARE**:
+Bezdrátové aktualizace firmwaru používají zprávy **UPLOAD_FIRMWARE** a **DOWNLOAD_FIRMWARE**:
 
 1. Zařízení požádá o aktualizaci typem `download` s ID firmwaru.
 2. Cloud posílá firmware po částech (typ `chunk`). Zařízení odpoví na každou část typem `next` s offsetem další části.

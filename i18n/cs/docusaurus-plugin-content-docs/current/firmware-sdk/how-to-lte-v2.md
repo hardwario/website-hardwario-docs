@@ -6,23 +6,23 @@ import Image from '@theme/IdealImage';
 
 # Jak na: LTE v2 {#how-to-lte-v2}
 
-Tento článek ukazuje, jak upgradovat existující firmware pro zařízení CHESTER na LTE v2 a [Cloud v2](/cloud/).
+Tento článek ukazuje, jak převést existující firmware zařízení CHESTER na LTE v2 a [Cloud v2](/cloud/).
 
-LTE v2 používá novější UDP protokol, který podporuje downlink zprávy a automaticky se stará o fragmentaci, potvrzování a autentizaci paketů autentizačním kódem zprávy založeným na SHA-256. Protokol popisuje stránka [**Protokol zařízení (FLAP)**](/cloud/device-protocol/).
+LTE v2 používá novější protokol nad UDP, který podporuje zprávy přes downlink a sám se stará o fragmentaci, potvrzování a autentizaci paketů (autentizačním kódem zprávy založeným na SHA-256). Protokol popisuje stránka [**Protokol zařízení (FLAP)**](/cloud/device-protocol/).
 
-Downlink zprávy nebo konfigurační zprávy lze posílat přes API nebo v uživatelském rozhraní HARDWARIO Cloud v2.
+Zprávy přes downlink, včetně konfiguračních, můžete posílat přes API nebo z uživatelského rozhraní HARDWARIO Cloud v2.
 
-Konfigurační zprávy `app config ...` lze poslat na jakékoli zařízení používající LTE v2. Není potřeba nic přidávat do vaší aplikace, o vše se postará subsystém `ctr_cloud`.
+Konfigurační zprávy `app config ...` můžete poslat do každého zařízení s LTE v2. Do aplikace nemusíte nic přidávat, o vše se postará subsystém `ctr_cloud`.
 
-Aktuálně jsou už všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK migrované na Cloud v2 a můžete se jimi inspirovat.
+Všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK už jsou převedené na Cloud v2, takže se jimi můžete inspirovat.
 
 ## Příklady firmwaru CHESTER LTE v2 {#chester-lte-v2-firmware-examples}
 
 ### Demo {#demo}
 
-Jednoduchý příklad, kde potřebujete jen základní desku CHESTER-M a můžete odesílat data uplinkem a příkazy downlinkem pro změnu LED nebo změnu konfigurace.
+Jednoduchý příklad, ke kterému stačí základní deska CHESTER-M: posílá data uplinkem a downlinkem přijímá příkazy pro ovládání LED nebo změnu konfigurace.
 
-Po [nahrání firmwaru LTE modemu](#flash-lte-modem-firmware) na verzi `v1.7.0` nebo vyšší můžete nahrát do APP/BLE MCU aplikaci CHESTER Demo pomocí [HARDWARIO CLI](../developer-tools/command-line-tools.md) zadáním:
+Až [aktualizujete firmware modemu LTE](#flash-lte-modem-firmware) na verzi `v1.7.0` nebo vyšší, nahrajte do MCU APP/BLE aplikaci CHESTER Demo nástrojem [HARDWARIO CLI](../developer-tools/command-line-tools.md) příkazem:
 
 `hardwario chester app flash f702b81a61a54cd984b4ee0e594e65df`
 
@@ -32,30 +32,30 @@ https://github.com/hardwario/chester-sdk/tree/main/applications/demo
 
 Jde o vylepšenou aplikaci [CHESTER Input](../catalog-applications/legacy/chester-input.md).
 
-Po [nahrání firmwaru LTE modemu](#flash-lte-modem-firmware) na verzi `v1.7.0` nebo vyšší můžete nahrát do APP/BLE MCU aplikaci CHESTER Control pomocí [HARDWARIO CLI](../developer-tools/command-line-tools.md) zadáním:
+Až [aktualizujete firmware modemu LTE](#flash-lte-modem-firmware) na verzi `v1.7.0` nebo vyšší, nahrajte do MCU APP/BLE aplikaci CHESTER Control nástrojem [HARDWARIO CLI](../developer-tools/command-line-tools.md) příkazem:
 
 `hardwario chester app flash a1201384db424cb394b5e9130293f708`
 
 https://github.com/hardwario/chester-sdk/tree/main/applications/control
 
-- Přidány rekonfigurovatelné vstupy: kterýkoli ze 4 vstupů můžete přenastavit na měření napětí, proudu, počítání pulzů nebo reakci na změnu logické úrovně.
-- Přidána možnost řízení s modulem [CHESTER-X4](../extension-modules/chester-x4.md) ve slotu B pro přepínání 4 výstupů napájených z externího DC napájení.
+- Přidány rekonfigurovatelné vstupy: kterýkoli ze 4 vstupů můžete přenastavit na měření napětí nebo proudu, čítání impulzů nebo reakci na změnu logické úrovně.
+- Přidána možnost řízení: modul [CHESTER-X4](../extension-modules/chester-x4.md) ve slotu B spíná 4 výstupy napájené z externího stejnosměrného zdroje.
 
-Projekt také obsahuje [ukázkové skripty](https://github.com/hardwario/chester-sdk/tree/main/applications/control/codec), jak posílat downlink konfiguraci a zprávy pomocí `curl`.
+Projekt obsahuje i [ukázkové skripty](https://github.com/hardwario/chester-sdk/tree/main/applications/control/codec), které ukazují, jak pomocí `curl` posílat downlinkem konfiguraci a zprávy.
 
-CHESTER Control také obsahuje definice konfigurace pomocí maker. Konfigurační parametry tedy definujete pouze v souboru `app_config.h` a nastavení, shell a příkazy nápovědy se generují makry.
+Konfigurace je v aplikaci CHESTER Control definovaná makry: parametry definujete jen v souboru `app_config.h` a obsluhu nastavení, příkazy shellu a nápovědu z nich vygenerují makra.
 
 ### Ostatní katalogové aplikace {#other-catalogue-apps}
 
-Aktuálně jsou už všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK migrované na Cloud v2 a můžete se jimi inspirovat. Nebo použijte předpřipravený [**firmware**](/chester/catalog-applications/catalog-applications/#application-firmware)
+Všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK už jsou převedené na Cloud v2, takže se jimi můžete inspirovat. Můžete také použít hotový [**firmware**](/chester/catalog-applications/catalog-applications/#application-firmware).
 
 ## Změny pro LTE v2 {#changes-for-lte-v2}
 
-### Nahrání firmwaru LTE modemu {#flash-lte-modem-firmware}
+### Nahrání firmwaru modemu LTE {#flash-lte-modem-firmware}
 
-LTE modem je potřeba aktualizovat na verzi `v1.7.0` nebo vyšší. Tento firmware není zpětně kompatibilní s verzí `v1.3.0`, která je pouze pro starší LTE v1.
+Modem LTE je potřeba aktualizovat na verzi `v1.7.0` nebo vyšší. Tento firmware není zpětně kompatibilní s verzí `v1.3.0`, která slouží jen pro starší LTE v1.
 
-Postupujte podle článku [LTE modem přes J-Link](../firmware-flashing/lte-modem-over-j-link.md) a [stáhněte firmware v1.7.0](pathname:///download/hio-chester-lte-v1.7.0.zip).
+Postupujte podle článku [Modem LTE přes J-Link](../firmware-flashing/lte-modem-over-j-link.md) a [stáhněte firmware v1.7.0](pathname:///download/hio-chester-lte-v1.7.0.zip).
 
 ### Konfigurace projektu {#project-configuration}
 Do souboru `prj.conf` přidejte `CONFIG_CTR_CLOUD=y`.
@@ -70,18 +70,18 @@ Jako příklad, jak nové soubory kodeků vypadají, použijte projekty [Demo](#
 
 :::
 
-Ve složce `codec` aktualizujte `cbor-decoder.yaml` a volitelně vytvořte `cbor-encoder.yaml`
+Ve složce `codec` aktualizujte `cbor-decoder.yaml` a volitelně vytvořte `cbor-encoder.yaml`.
 
-Soubory `.yaml` enkodéru a dekodéru mají nyní tyto změny:
+V souborech `.yaml` enkodéru a dekodéru se změnilo toto:
 - Přidána hlavička.
-- Nyní jsou plně hierarchické. Musíte definovat kompletní strom, který se pak stane JSON.
-- [Modifikátory](how-to-cbor.md#modificators) jako `div`, `fpp`, `key`, `tso`,… mají nyní prefix `$`.
+- Jsou plně hierarchické: definujete celý strom, ze kterého pak vznikne JSON.
+- [Modifikátory](how-to-cbor.md#modificators) jako `div`, `fpp`, `key`, `tso`,… mají teď předponu `$`.
 
-YAML soubory se generují do C souboru `.h` pomocí příkazu `west gen-codec` spuštěného ve složce vaší aplikace (kde spouštíte `west build`).
+Ze souborů YAML se příkazem `west gen-codec` vygeneruje hlavičkový soubor C (`.h`). Příkaz spusťte ve složce aplikace (tam, kde spouštíte `west build`).
 
-Místo ~~`msg_key.h`~~ se nyní YAML generuje do souboru `src/app_codec.h`.
+Místo do ~~`msg_key.h`~~ se YAML teď generuje do souboru `src/app_codec.h`.
 
-Aktualizujte svůj `app_cbor.c` na nové hierarchické definice. Každá úroveň je oddělena dvojitým podtržítkem, například `CODEC_KEY_E_NETWORK__PARAMETER__EEST`.
+Upravte `app_cbor.c` podle nových hierarchických definic. Úrovně se oddělují dvojitým podtržítkem, například `CODEC_KEY_E_NETWORK__PARAMETER__EEST`.
 Nezapomeňte také vložit nový hlavičkový soubor `#include "app_codec.h"`.
 
 ### Inicializace {#initialization}
@@ -92,20 +92,20 @@ Do souboru `app_init.c` přidejte `#include <chester/ctr_cloud.h>` a použijte `
 
 Volitelně můžete:
 
-- Zavolat `ctr_cloud_set_callback()` pro nastavení callbacku pro downlink zprávy
-- Nastavit interval dotazování pomocí `ctr_cloud_set_pull_interval()`, který definuje, jak často se zařízení CHESTER automaticky dotazuje Cloudu na zařazené downlink zprávy.
-- Použít `ctr_cloud_wait_initialized(K_FOREVER)`, které zastaví hlavní úlohu, dokud není navázáno spojení s cloudem a odeslány všechny kodeky a konfigurace.
+- Funkcí `ctr_cloud_set_callback()` nastavit callback pro zprávy přes downlink.
+- Funkcí `ctr_cloud_set_pull_interval()` nastavit interval dotazování, tedy jak často se zařízení CHESTER samo ptá cloudu na čekající zprávy přes downlink.
+- Použít `ctr_cloud_wait_initialized(K_FOREVER)`, které pozastaví hlavní úlohu, dokud se nenaváže spojení s cloudem a neodešlou se všechny kodeky a konfigurace.
 
 ### Odesílání dat {#send-data}
 
-Místo ~~`ctr_lte_send()`~~ nyní volejte `ctr_cloud_send()`. Vložte nový `#include <chester/ctr_cloud.h>`
+Místo ~~`ctr_lte_send()`~~ nyní volejte `ctr_cloud_send()`. Vložte nový hlavičkový soubor `#include <chester/ctr_cloud.h>`.
 
-V projektu Demo jsme také odstranili soubor `app_send.c`, protože pouze vytvářel nového workera, aniž by ho bylo skutečně potřeba. Odesílání je nyní v `app_work.c`.
+V projektu Demo jsme také odstranili soubor `app_send.c`, protože jen vytvářel nový worker, který nebyl potřeba. Odesílání je nyní v `app_work.c`.
 
-Funkce `ctr_cloud_send()` je nyní blokující, takže návratový kód říká, zda byla data úspěšně odeslána, nebo ne. Není nyní potřeba žádný callback, což také přidávalo další asynchronní složitost.
+Funkce `ctr_cloud_send()` je teď blokující, takže z návratového kódu poznáte, jestli se data odeslala. Callback už není potřeba, a odpadá tak i složitost asynchronního zpracování.
 
 ### IP a port {#ip-and-port}
 
 Pro SIM karty Vodafone použijte APN `hardwario`, IP `192.168.192.4` a port `5002`. Nepoužívejte předchozí název APN ~~`hardwario.com`~~.
 
-U ostatních operátorů jdou data přes veřejný internet, musíte nastavit veřejnou IP serveru `20.101.123.47` a port je stejný `5002`.
+U ostatních operátorů jdou data přes veřejný internet, proto nastavte veřejnou IP adresu serveru `20.101.123.47`; port zůstává stejný (`5002`).

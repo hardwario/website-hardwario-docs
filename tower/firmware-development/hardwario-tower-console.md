@@ -1,6 +1,6 @@
 ---
 slug: hardwario-tower-console
-title:  TOWER Console
+title: TOWER Console
 ---
 import Image from '@theme/IdealImage';
 
@@ -25,7 +25,7 @@ For the firmware to print something to this console you will have to include som
 
 ## Controls
 
-There are several buttons on the right side if you open the HARDWARIO TOWER Console. They will be listed from left to right
+There are several buttons on the right side if you open the HARDWARIO TOWER Console. They are listed from left to right:
 
 <div class="container">
   <div class="row">

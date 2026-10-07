@@ -1,12 +1,12 @@
 ---
 slug: messages
 title: Zprávy
-description: "Stránka Zprávy v HARDWARIO Cloud ukazuje každou zprávu vyměněnou mezi vašimi zařízeními a cloudem, s filtry a detailem zprávy."
+description: "Stránka Messages v HARDWARIO Cloud zobrazuje všechny zprávy mezi vašimi zařízeními a cloudem, s filtry a detailem každé zprávy."
 ---
 
 # Zprávy {#messages}
 
-Stránka **Messages** zobrazuje všechny zprávy vyměněné mezi zařízeními a Cloudem. Dostanete se na ni ze dvou míst:
+Stránka **Messages** zobrazuje všechny zprávy mezi zařízeními a cloudem. Dostanete se na ni ze dvou míst:
 
 - **Levý panel → Messages**: zobrazuje zprávy ze všech zařízení v prostoru
 - **Detail zařízení → záložka Messages**: zobrazuje pouze zprávy daného zařízení
@@ -15,29 +15,29 @@ Stránka **Messages** zobrazuje všechny zprávy vyměněné mezi zařízeními 
 
 | Typ | Směr | Popis |
 |---|---|---|
-| **data** | up | Periodický uplink payload s hodnotami ze senzorů |
+| **data** | up | Pravidelný payload uplinku s naměřenými hodnotami ze senzorů |
 | **session** | up/down | Vyměňuje se při startu zařízení. Obsahuje informace o firmwaru, hash konfigurace a parametry sítě |
 | **config** | down | Konfigurace odeslaná do zařízení (pouze při změně hashe konfigurace) |
-| **encoder** | up | Mapování JSON klíčů použité ke komprimaci datových zpráv |
-| **decoder** | up | Mapování JSON klíčů použité k dekomprimaci datových zpráv |
+| **encoder** | up | Mapování klíčů JSON pro kompresi datových zpráv |
+| **decoder** | up | Mapování klíčů JSON pro dekompresi datových zpráv |
 | **shell** | down | Příkazy shellu naplánované pro zařízení |
 | **firmware** | down | Pakety aktualizace firmwaru FOTA |
 
 ## Stavy downlinku {#downlink-states}
 
-Zprávy typu downlink (směr: `down`) mají stav doručení:
+Zprávy downlink (směr `down`) mají stav doručení:
 
 | Stav | Význam |
 |---|---|
-| **pending** | Čeká, než se zařízení probudí a dotáže se Cloudu |
+| **pending** | Čeká, až se zařízení probudí a zeptá se cloudu |
 | **sent** | Doručeno do zařízení |
 | **cancelled** | Ručně zrušeno. Zařízení tuto zprávu neobdrží |
 
 ## Filtrování {#filtering}
 
-Ve výchozím stavu seznam zobrazuje zprávy za **posledních 10 dní**. Pomocí filtrovací lišty lze změnit:
+Ve výchozím stavu seznam ukazuje zprávy za **posledních 10 dní**. Ve filtrovací liště můžete změnit:
 
-- **Time range**: rozšíření nebo zúžení období
+- **Time range**: delší nebo kratší období
 - **Type**: filtr podle typu zprávy (data, session, config, …)
 - **Direction**: pouze uplink, pouze downlink, nebo obojí
 
@@ -45,11 +45,11 @@ Ve výchozím stavu seznam zobrazuje zprávy za **posledních 10 dní**. Pomocí
 
 - Kliknutím na **ikonu šipky** v řádku zprávy zobrazíte rychlý náhled JSON přímo v seznamu
 - Kliknutím na **ikonu ⓘ** otevřete úplný detail zprávy
-- Kliknutím na **ikonu porovnání** u dvou zpráv zobrazíte rozdíl jejich JSON těl
+- Kliknutím na **ikonu porovnání** u dvou zpráv zobrazíte rozdíly v jejich tělech JSON
 
 ## Základní dashboard {#basic-dashboard}
 
-Dashboard je **nástroj pro ladění**, který umožňuje vykreslit hodnoty ze zpráv pomocí krátké JavaScriptové funkce.
+Dashboard je **ladicí nástroj**: krátkou funkcí v JavaScriptu v něm vykreslíte hodnoty ze zpráv.
 
 Klikněte na ikonu **Dashboard** nad seznamem zpráv, vložte funkci, která z každé zprávy vytáhne hodnoty, a graf se aktualizuje v reálném čase.
 
@@ -88,6 +88,6 @@ return {
 
 :::info
 
-Pro produkční dashboardy a vizualizaci dat použijte [Connector](connectors.md), který data odešle do specializované služby, jako je Grafana, Ubidots nebo ThingsBoard.
+Pro produkční dashboardy a vizualizaci dat použijte [konektor](connectors.md), který data odešle do specializované služby, například Grafana, Ubidots nebo ThingsBoard.
 
 :::

@@ -1,22 +1,22 @@
 ---
 slug: how-to-co2-module
-title: "Jak na: Modul CO₂"
+title: "Jak na: CO₂ Module"
 ---
 import Image from '@theme/IdealImage';
 
-S modulem CO₂ můžete snadno měřit koncentraci **oxidu uhličitého**.
+S modulem CO₂ Module snadno změříte koncentraci **oxidu uhličitého**.
 
-Jde o nízkopříkonový modul, který lze dlouhodobě napájet z baterie. Nezapomeňte, že zařízení může potřebovat několik dní, než dosáhne nejlepších výsledků.
+Jde o modul s nízkou spotřebou, který může dlouho běžet na baterie. Počítejte s tím, že zařízení může potřebovat několik dní, než začne měřit nejpřesněji.
 
-Modul používá k [**měření infračervené světlo**](https://en.wikipedia.org/wiki/Carbon_dioxide_sensor).
+Modul měří pomocí [**infračerveného světla**](https://en.wikipedia.org/wiki/Carbon_dioxide_sensor).
 
 ## Odkazy {#references}
-- [**CO₂ SDK Module**](https://sdk.hardwario.com/group__twr__module__co2.html)
-- [**Ukázka v GitHub repozitáři**](https://github.com/hardwario/twr-radio-co2-monitor/blob/main/src/application.c)
+- [**Modul SDK pro CO₂ Module**](https://sdk.hardwario.com/group__twr__module__co2.html)
+- [**Příklad v repozitáři na GitHubu**](https://github.com/hardwario/twr-radio-co2-monitor/blob/main/src/application.c)
 
 :::info
 
-  V tomto příkladu se bude každé 2 minuty měřit hladina CO₂ a odesílat **do počítače přes USB**.
+  V tomto příkladu se každé 2 minuty změří koncentrace CO₂ a odešle **přes rádio**.
 
 :::
 

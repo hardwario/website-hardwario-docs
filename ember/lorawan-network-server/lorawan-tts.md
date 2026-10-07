@@ -46,7 +46,7 @@ On MikroTik RouterOS, the gateway EUI is shown as **Gateway ID**:
 ## 3) Configure EMBER (MikroTik RouterOS) to connect to TTS
 > RouterOS typically requires the LoRa card to be **Disabled** while you change LoRa settings.
 
-In the left panel, open **IoT**→ **LoRa**. Click on line at the list and  aply disable. 
+In the left panel, open **IoT**→ **LoRa**. Click the line in the list and choose Disable. 
 ![EMBER disable lrw card](images/ember-disable-lrw-card.png)
 You’ll use the downloaded keys in RouterOS.
 

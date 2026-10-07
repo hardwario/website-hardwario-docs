@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Senzor Milesight WS101 {#milesight-sensor-ws101}
 
-Milesight WS101 je **kompaktní bateriově napájené chytré tlačítko LoRaWAN** určené pro **bezdrátové ovládání, spouštění akcí a odesílání alarmů**. Podporuje **více typů stisknutí** (krátké, dlouhé a dvojité) s **dobou odezvy do 1 sekundy**. Tlačítko se vyznačuje **extrémně nízkou spotřebou** s **výdrží baterie více než 5 let**, **konfigurací přes NFC** a možností **komunikace Milesight D2D**. Díky **přenosnému designu** a **krytí IP30** je ideální pro chytré domácnosti, kanceláře, hotely, školy a aplikace tlačítka tísňového volání.
+Milesight WS101 je **kompaktní chytré tlačítko LoRaWAN napájené z baterie** pro **bezdrátové ovládání, spouštění akcí a odesílání alarmů**. Rozlišuje **několik způsobů stisku** (krátký, dlouhý a dvojitý) a **reaguje do 1 sekundy**. Má **extrémně nízkou spotřebu**, **baterie vydrží přes 5 let**, **konfiguruje se přes NFC** a podporuje **komunikaci Milesight D2D**. Díky **přenosnému provedení** a **krytí IP30** se hodí do chytrých domácností, kanceláří, hotelů a škol i jako tísňové tlačítko.
 
 <div class="container">
   <div class="row">
@@ -24,23 +24,23 @@ Milesight WS101 je **kompaktní bateriově napájené chytré tlačítko LoRaWAN
 ## Odkazy k integraci {#integration-links}
 | Zdroj           | Odkaz                                                                |
 |-----------------|----------------------------------------------------------------------|
-| HARDWARIO Store | https://www.hardwario.store/p/milesight-ws101                        |
+| E-shop HARDWARIO | https://www.hardwario.store/p/milesight-ws101                        |
 | Oficiální stránka | https://www.milesight.com/iot/product/lorawan-sensor/ws101           |
 | Uživatelská příručka | https://resource.milesight.com/milesight/iot/document/ws101-user-guide-en.pdf |
-| Datasheet       | https://resource.milesight.com/milesight/iot/document/ws101-datasheet-en.pdf |
+| Produktový list       | https://resource.milesight.com/milesight/iot/document/ws101-datasheet-en.pdf |
 
 ---
 
 ## Obecná konfigurace {#general-configuration}
-Konfigurace se provádí přes NFC pomocí [aplikace Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
+Zařízení se konfiguruje přes NFC v [aplikaci Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
 
-Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
+Postup konfigurace najdete v části 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
 
 ---
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
+Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options).
 
 ---
 
@@ -53,7 +53,7 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | AppKey           | 5572404C696E6B4C6F52613230313823 |
 
 :::info 
-**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení unikátní a najdete jej vytištěný na etiketě zařízení.
+**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení jedinečný a je vytištěný na jeho štítku.
 :::
 
 ---
@@ -64,13 +64,13 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 |------|--------------|
 | Dekodér | [Zobrazit dekodér](https://github.com/Milesight-IoT/SensorDecoders/blob/main/ws-series/ws101/ws101-decoder.js) |
 | Enkodér | [Zobrazit enkodér](https://github.com/Milesight-IoT/SensorDecoders/blob/main/ws-series/ws101/ws101-encoder.js) |
-| Codec | [Zobrazit codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/ws-series/ws101/ws101-codec.json) |
+| Kodek | [Zobrazit kodek](https://github.com/Milesight-IoT/SensorDecoders/blob/main/ws-series/ws101/ws101-codec.json) |
 
 :::info
 ### Přehled pojmů {#terminology-overview}
-**Dekodér** -> Převádí binární payload zařízení do čitelného JSON.<br />
-**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlinky.<br />
-**Codec** -> Definuje pravidla pro dekódování a kódování (struktura, položky, porty) používaná network servery.
+**Dekodér** -> Převádí binární payload zařízení na čitelný JSON.<br />
+**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlink.<br />
+**Kodek** -> Definuje pravidla dekódování a kódování (strukturu, pole, porty), podle kterých pracují síťové servery.
 :::
 
 
@@ -89,16 +89,16 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 |---------------|-----------|
 | **Bezdrátový přenos** | |
 | Technologie | LoRaWAN®, Milesight D2D |
-| Antena | Interní |
+| Anténa | Interní |
 | Frekvence | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
 | Vysílací výkon | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class A |
 | **Funkce tlačítka** | |
 | Typy tlačítek | 1× externí tlačítko, 1× tlačítko napájení/reset (interní) |
-| Typy stisknutí | Krátké stisknutí, dlouhé stisknutí, dvojité stisknutí |
+| Typy stisku | Krátký stisk, dlouhý stisk, dvojitý stisk |
 | Doba odezvy | Méně než 1 sekunda |
-| Uživatelsky definované akce | Všechny typy stisknutí lze přizpůsobit |
+| Uživatelsky definované akce | Akci lze nastavit pro každý typ stisku |
 | **Indikace** | |
 | LED | 1× LED indikátor |
 | Bzučák | Ano |
@@ -108,12 +108,12 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | Pokročilé funkce | Tísňové tlačítko, ovládání scén, spouštěče automatizace |
 | **Fyzické vlastnosti** | |
 | Napájení | 1 × ER14335 (1650 mAh) |
-| Výdrž baterie | Více než 5 let (10 stisknutí denně) |
+| Výdrž baterie | Více než 5 let (10 stisků denně) |
 | Provozní teplota | -20°C ~ +60°C |
 | Vlhkost | ≤90% RH (nekondenzující) |
 | Krytí | IP30 |
 | Rozměry | 50 × 50 × 18 mm |
 | Hmotnost | 38,8 g (s baterií) |
 | Materiál | ABS+PC |
-| Instalace | Montáž na stěnu nebo přenosné |
+| Instalace | Montáž na stěnu nebo přenosné použití |
 | **Certifikace** | CE, FCC, RoHS |

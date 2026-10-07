@@ -11,6 +11,6 @@ This means that you will want to run the **server** that can run most of the tim
 
 For a server, there are several possible devices that you can run it on. For a start, we recommend [**Raspberry Pi**](https://www.raspberrypi.org), because it is quite an **affordable** and **good quality product**.
 
-If you already have a Raspberry Pi and you want to keep your settings, you can still get the HARDWARIO TOWER server running, just follow the [**Clean Installation chapter**](./installation-clean-os.md)
+If you already have a Raspberry Pi and you want to keep your settings, you can still get the HARDWARIO TOWER server running, just follow the [**Clean Installation chapter**](./installation-clean-os.md).
 
 If you just got your first Raspberry Pi or you have a clean one lying around, you can follow the [**Pre-Installed Image chapter**](./installation-os.md) to download and install our prepared image.

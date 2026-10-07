@@ -22,7 +22,7 @@ Wiring for 1-Wire (Dallas, ...):
 ---
 
 ## Dry Contact Input
-Wiring for DRY CONTACT:  
+Wiring for a dry contact:  
 - 560 kΩ pull-up and grounded through 33 kΩ.  
 
 ![STICKER Dry Contact](images/sticker-dry-contact.png)
@@ -35,6 +35,6 @@ Analog input 0–24 V:
 
 ![STICKER Analog Input](images/sticker-analog-input.png)
 
-## SO Sensor
+## S0 Sensor {#so-sensor}
 
-![STICKER ](images/sticker-so-sensor.png)
+![STICKER S0 sensor](images/sticker-so-sensor.png)

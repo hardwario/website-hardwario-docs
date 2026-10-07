@@ -28,7 +28,7 @@ apply to you: no BOOT jumper, no `rpiboot`, no PoE adapter on your board. Skip s
 
 1. Open the top cover (four screws under the rubber feet), put the jumper to the **BOOT**
    position, connect the PoE adapter and a USB-B cable HOST↔TARGET, see
-   [Connect Target to Host](/fiber/installation/flash/) for the full walkthrough.
+   [Flash Raspberry Pi OS](/fiber/installation/flash/) for the full walkthrough.
 1. Install and run **rpiboot** ([raspberrypi/usbboot](https://github.com/raspberrypi/usbboot))
    to switch the TARGET into bootloader mode. It then appears as a USB mass-storage device on
    your HOST.

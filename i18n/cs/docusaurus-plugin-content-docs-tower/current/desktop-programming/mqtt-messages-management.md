@@ -1,80 +1,80 @@
 ---
 slug: mqtt-messages-management
-title: Správa MQTT zpráv
+title: Správa zpráv MQTT
 ---
 import Image from '@theme/IdealImage';
 
 
-V této kapitole si projdeme **záložku Messages** v aplikaci HARDWARIO Playground
+V této kapitole si projdeme **záložku Messages** aplikace HARDWARIO Playground.
 
 :::info
 
-**Záložka Messages** je opravdu užitečná až po připojení k vašemu **Radio Dongle**, o tom, jak to udělat, si můžete přečíst v [**kapitole Správa rádiové sítě**](./radio-network-management.md).
+**Záložka Messages** má smysl hlavně tehdy, když jste připojeni k zařízení **Radio Dongle**. Jak se připojit, popisuje [**kapitola Správa rádiové sítě**](./radio-network-management.md).
 
 :::
 
 ## Záložka Messages {#messages-tab}
 
-V této záložce si můžete zobrazit všechny zprávy z vašich spárovaných zařízení nebo jakoukoli jinou MQTT zprávu, pokud chcete.
+Na této záložce uvidíte všechny zprávy ze spárovaných zařízení, případně i jakékoli jiné zprávy MQTT.
 
 :::note
 
-Pokud o protokolu MQTT a MQTT zprávách moc nevíte, můžete navštívit [**sekci Protokol MQTT**](../mqtt-protocol/index.md).
+Pokud o protokolu MQTT a zprávách MQTT moc nevíte, podívejte se do [**sekce Protokol MQTT**](../mqtt-protocol/index.md).
 
 :::
 
-Ve výchozím nastavení se budou zobrazovat pouze zprávy ze **zařízení HARDWARIO TOWER**.
+Ve výchozím nastavení se zobrazují jen zprávy ze **zařízení HARDWARIO TOWER**.
 
-<Image img={require('../../../../../tower/desktop-programming/images/messages-tab.png')} alt="Záložka Messages s výpisem přicházejících MQTT zpráv z teploměru a sekcemi Publish a Subscribed topics níže" />
+<Image img={require('../../../../../tower/desktop-programming/images/messages-tab.png')} alt="Záložka Messages s výpisem příchozích zpráv MQTT z teploměru a sekcemi Publish a Subscribed topics níže" />
 
 ### Zprávy {#messages}
-Hlavní část této záložky je nahoře, kde jsou zobrazeny všechny zprávy.
+Hlavní část záložky je nahoře: zobrazují se tu všechny zprávy.
 
-Zprávy budete dostávat z [**odebíraných témat**](#subscribed-topics), tato témata můžete změnit v dolní části záložky.
+Zprávy přicházejí z [**odebíraných topiců**](#subscribed-topics), které můžete změnit v dolní části záložky.
 
-Pokud chcete zkopírovat téma zprávy, můžete použít **tlačítko Clipboard** nebo jen kliknout na řádek s tématem, které chcete. To je užitečné pro [**programování v Node-RED**](./node-red-programming.md). V pravém horním rohu by se měl objevit zelený čtvereček.
+Topic zprávy zkopírujete **tlačítkem Clipboard** nebo prostým kliknutím na řádek s požadovaným topicem. Hodí se to při [**programování v Node-RED**](./node-red-programming.md). V pravém horním rohu by se měl objevit zelený čtvereček.
 
-Na pravé straně je **tlačítko Pin**, pokud je pro vás nějaká zpráva důležitá, můžete si ji připnout nahoru.
+Vpravo je **tlačítko Pin**, kterým si důležitou zprávu připnete nahoru.
 
-Můžete také **smazat všechny zprávy** (Clear all messages), což jednoduše vymaže celou historii.
+Můžete také **smazat všechny zprávy** (**Clear all messages**), a tím vymazat celou historii.
 :::caution
 
-Toto je **nevratné**, takže buďte opatrní.
+Tento krok je **nevratný**, buďte proto opatrní.
 
 :::
 
 ### Publikování zprávy {#publish-message}
-V této části záložky můžete **publikovat MQTT zprávy**
-- Do levého vstupního pole zadáte **téma zprávy**, například `node/test`
-- Do pravého vstupního pole zadáte zprávu, kterou chcete poslat pod vybraným tématem, například `test message`
+V této části záložky můžete **publikovat zprávy MQTT**:
+- Do levého pole zadejte **topic zprávy**, například `node/test`
+- Do pravého pole zadejte zprávu, kterou chcete pod tímto topicem poslat, například `test message`
 
-Po kliknutí na tlačítko **Publish** byste měli vidět zprávu v horní části (pokud odebíráte téma, které jste vybrali)
+Po kliknutí na tlačítko **Publish** by se zpráva měla objevit v horní části (pokud zvolený topic odebíráte).
 
-<Image img={require('../../../../../tower/desktop-programming/images/messages-publish.png')} alt="Pole pro publikování zprávy s tématem node/test, payloadem test message a tlačítkem Publish" />
+<Image img={require('../../../../../tower/desktop-programming/images/messages-publish.png')} alt="Pole pro publikování zprávy s topicem node/test, payloadem test message a tlačítkem Publish" />
 
-### Odebíraná témata {#subscribed-topics}
-V dolní části záložky můžete vybrat, **jaká témata chcete odebírat**.
+### Odebírané topicy {#subscribed-topics}
+V dolní části záložky vyberete, **jaké topicy chcete odebírat**.
 
 :::note
 
-Tím určíte, jaké zprávy se budou zobrazovat v horní části záložky. Ve výchozím nastavení se toho nemusíte dotýkat, protože každá zpráva ze zařízení HARDWARIO TOWER začíná na `node/` nebo `bridge/`, které již odebíráte.
+Tím určíte, které zprávy se zobrazí v horní části záložky. Ve výchozím nastavení tu nemusíte nic měnit, protože každá zpráva ze zařízení HARDWARIO TOWER začíná na `node/` nebo `bridge/` a tyto topicy už odebíráte.
 
 :::
 
-<Image img={require('../../../../../tower/desktop-programming/images/messages-subscribe.png')} alt="Seznam odebíraných témat s výchozími odběry node/# a bridge/#" />
+<Image img={require('../../../../../tower/desktop-programming/images/messages-subscribe.png')} alt="Seznam odebíraných topiců s výchozími odběry node/# a bridge/#" />
 
-Pokud chcete přidat nové téma, jednoduše ho napište do pole a stiskněte **tlačítko Subscribe**. Nové téma se objeví v seznamu.
+Chcete-li přidat nový topic, napište ho do pole a stiskněte **tlačítko Subscribe**. Topic se objeví v seznamu.
 
-Pokud chcete téma ze **seznamu odebíraných** odstranit, stiskněte **tlačítko s křížkem** vedle tématu.
+Topic ze **seznamu odebíraných** odstraníte **tlačítkem s křížkem** vedle něj.
 
 :::note
 
-Tento seznam se **resetuje při každém** spuštění aplikace HARDWARIO Playground.
+Seznam se **vrací do výchozího stavu při každém** spuštění aplikace HARDWARIO Playground.
 
 :::
 
 :::tip
 
-Chcete-li se dozvědět o další záložce, navštivte [**Programování v Node-RED**](./node-red-programming.md).
+O další záložce se dozvíte v kapitole [**Programování v Node-RED**](./node-red-programming.md).
 
 :::

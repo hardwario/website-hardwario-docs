@@ -7,13 +7,13 @@ import Image from '@theme/IdealImage';
 
 # Průvodce instalací ChirpStack v4 {#chirpstack-v4-installation-guide}
 
-Tento průvodce popisuje instalaci **ChirpStack v4** na **systému Debian/Ubuntu**. Zahrnuje instalaci potřebných závislostí, konfiguraci serveru ChirpStack a zprovoznění komunikace s branami. Postupujte podle pokynů krok za krokem, aby instalace proběhla bez potíží.
+Tento průvodce popisuje instalaci **ChirpStack v4** v **systému Debian/Ubuntu**. Zahrnuje instalaci potřebných závislostí, konfiguraci serveru ChirpStack a zprovoznění komunikace s branami. Postupujte podle pokynů krok za krokem, aby instalace proběhla bez potíží.
 
 ---
 
 ## Předpoklady {#prerequisites}
 
-Než začnete, ujistěte se, že máte aktuální systém. V terminálu spusťte tento příkaz:
+Než začnete, aktualizujte systém. V terminálu spusťte tento příkaz:
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -60,7 +60,7 @@ postgresql
 
   :::warning
   
-  Následující SQL příkazy spouštějte v PostgreSQL CLI **jeden po druhém**.
+  Následující příkazy SQL spouštějte v PostgreSQL CLI **jeden po druhém**.
   
   :::
 
@@ -102,7 +102,7 @@ sudo apt install chirpstack chirpstack-gateway-bridge
 
 ### Vygenerování secret key {#generate-a-secret-key}
 
-Vygenerujte unikátní secret key pro zabezpečení API a přihlašovacích tokenů. Vygenerovaný klíč si zkopírujte, budete ho potřebovat v konfiguraci:
+Vygenerujte jedinečný secret key, který zabezpečí API a přihlašovací tokeny. Vygenerovaný klíč si zkopírujte, budete ho potřebovat v konfiguraci:
 
 ```bash
 openssl rand -base64 32
@@ -149,9 +149,9 @@ openssl rand -base64 32
    command_topic_template="eu868/gateway/{{ .GatewayID }}/command/#"
    ```
 
-### Kontrola konfigurace hostů {#verify-host-configuration}
+### Kontrola souboru hosts {#verify-host-configuration}
 
-Ujistěte se, že je `127.0.0.1` namapovaná na localhost:
+Ověřte, že je adresa `127.0.0.1` přiřazená názvu localhost:
 
 ```bash
 sudo cat /etc/hosts
@@ -169,7 +169,7 @@ echo "127.0.0.1 localhost" | sudo tee -a /etc/hosts
 
 ### Spuštění a povolení služeb ChirpStack {#start-and-enable-chirpstack-services}
 
-Spusťte a povolte služby ChirpStack a **Gateway Bridge**:
+Spusťte služby ChirpStack a **Gateway Bridge** a povolte jejich automatický start:
 
 ```bash
 sudo systemctl start chirpstack
@@ -180,22 +180,22 @@ sudo systemctl enable chirpstack-gateway-bridge
 
 ### Kontrola stavu služeb {#verify-service-status}
 
-Zkontrolujte logy, abyste se ujistili, že služby běží správně:
+V logech ověřte, že služby běží správně:
 
 ```bash
 sudo journalctl -u chirpstack -f
 sudo journalctl -u chirpstack-gateway-bridge -f
 ```
 
-### Povolení vnějších připojení k MQTT brokeru {#allow-outside-connections-to-mqtt-broker}
+### Povolení připojení k brokeru MQTT zvenčí {#allow-outside-connections-to-mqtt-broker}
 
 :::info
 
-Především pro účely testování a ladění
+Hlavně pro testování a ladění.
 
 :::
 
-- Otevřete konfigurační soubor mosquitto v `/etc/mosquitto/mosquitto.conf`:  
+- Otevřete konfigurační soubor Mosquitto `/etc/mosquitto/mosquitto.conf`:  
   Na konec přidejte:  
   ```
   listener 1883
@@ -213,7 +213,7 @@ Především pro účely testování a ladění
    http://localhost:8080
    ```
 
-   > Pokud ChirpStack běží na vzdáleném serveru, nahraďte `localhost` IP adresou nebo hostname serveru.
+   > Pokud ChirpStack běží na vzdáleném serveru, nahraďte `localhost` IP adresou nebo názvem hostitele serveru.
 
 2. Ujistěte se, že port `8080` není blokovaný a na serveru naslouchá:
 
@@ -234,7 +234,7 @@ Především pro účely testování a ladění
 
 ### Kontrola připojení brány LoRaWAN {#verify-lorawan-gateway-connection}
 
-Abyste se ujistili, že je vaše brána **LoRaWAN** připojená a funkční:
+Ověřte, že je brána **LoRaWAN** připojená a funguje:
 
 - Přejděte ve webovém rozhraní ChirpStack do sekce **Gateway**:
 
@@ -242,13 +242,13 @@ Abyste se ujistili, že je vaše brána **LoRaWAN** připojená a funkční:
 
 - Zkontrolujte stav brány:
 
-  - Ujistěte se, že se vaše brána objevila v seznamu.
+  - Ověřte, že se brána zobrazuje v seznamu.
 
   - Zkontrolujte, že se hodnota `"Last Seen"` aktualizuje.
 
 - Řešení problémů s připojením:
 
-  - Zkontrolujte logy brány, abyste se ujistili, že je komunikace s platformou ChirpStack správně nastavená.
+  - V logech brány ověřte, že je komunikace s ChirpStack správně nastavená.
 
   - Zkontrolujte konfiguraci topiců **MQTT** v souboru `chirpstack-gateway-bridge.toml`.
 
@@ -256,4 +256,4 @@ Abyste se ujistili, že je vaše brána **LoRaWAN** připojená a funkční:
 
 ## Dokončení {#completion}
 
-Instalace platformy ChirpStack je hotová! Nyní se můžete přihlásit do webového rozhraní ChirpStack a nastavit své brány a zařízení LoRaWAN. Pokud narazíte na problémy, podívejte se do logů nebo do oficiální [dokumentace ChirpStack](https://www.chirpstack.io/docs/index.html).
+Instalace ChirpStack je hotová. Teď se můžete přihlásit do webového rozhraní ChirpStack a nastavit brány a zařízení LoRaWAN. Pokud narazíte na problémy, podívejte se do logů nebo do oficiální [dokumentace ChirpStack](https://www.chirpstack.io/docs/index.html).

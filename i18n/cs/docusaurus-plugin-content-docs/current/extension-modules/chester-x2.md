@@ -1,6 +1,6 @@
 ---
 slug: chester-x2
-title: CHESTER-X2 (Sériová komunikace)
+title: CHESTER-X2 (sériová komunikace)
 ---
 import Image from '@theme/IdealImage';
 
@@ -21,7 +21,7 @@ Tento článek popisuje rozšiřující modul CHESTER-X2.
 
 ## Přehled modulu {#module-overview}
 
-Modul CHESTER-X2 poskytuje rozhraní TTL/UART a rozhraní RS-485 (např. pro komunikaci Modbus).
+Modul CHESTER-X2 nabízí rozhraní TTL/UART a RS-485 (např. pro komunikaci Modbus).
 
 ## Schéma zapojení pinů zařízení CHESTER {#chester-pin-configuration-diagram}
 
@@ -31,20 +31,20 @@ Modul CHESTER-X2 poskytuje rozhraní TTL/UART a rozhraní RS-485 (např. pro kom
 
 | Pozice   | Název signálu | Popis signálu            |
 | -------- | ----------- | ------------------------ |
-| 1        | GND         | Zemnící signál systému   |
+| 1        | GND         | Systémová zem            |
 | 2        | VDD         | Systémová větev VDD 3,0 V |
 | 3        | RX          | Vstup přijímače UART     |
 | 4        | TX          | Výstup vysílače UART     |
-| 5        | EN          | Vstup enable             |
+| 5        | EN          | Povolovací vstup         |
 | 6        | B           | Vstup/výstup sběrnice    |
 | 7        | A           | Vstup/výstup sběrnice    |
-| 8        | +V          | Kladná větev systému (*) |
+| 8        | +V          | Systémová kladná větev (*) |
 
-*Poznámka: Napětí kladné větve systému závisí na zvolené variantě napájení zařízení CHESTER.
+*Poznámka: Napětí systémové kladné větve závisí na variantě napájení zařízení CHESTER.
 
-## Schéma {#schematic-diagram}
+## Schéma zapojení {#schematic-diagram}
 
-Schéma je užitečné, pokud programujete nízkoúrovňový kód pracující s hardwarem nebo pokud vás jen zajímá, jak je systém navržen.
+Schéma zapojení se hodí, pokud programujete nízkoúrovňový kód blízko hardwaru, nebo když vás zajímá, jak je systém navržený.
 
 - [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x2-r3.0.pdf)
 - [Interaktivní prohlížeč konektorů, součástek, testovacích bodů a signálů na PCB](pathname:///download/ibom/hio-chester-x2-r3.0.html)

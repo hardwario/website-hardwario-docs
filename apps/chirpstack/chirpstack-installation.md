@@ -256,4 +256,4 @@ To confirm that your **LoRaWAN** gateway is connected and operational:
 
 ## Completion
 
-Your ChirpStack installation is now complete! You can now access the ChirpStack web interface and configure your LoRaWAN gateways and devices. If you encounter any issues, refer to the logs or consult the official [ChirpStack Documentation](https://www.chirpstack.io/docs/index.html).
+Your ChirpStack installation is now complete. You can now access the ChirpStack web interface and configure your LoRaWAN gateways and devices. If you encounter any issues, refer to the logs or consult the official [ChirpStack Documentation](https://www.chirpstack.io/docs/index.html).

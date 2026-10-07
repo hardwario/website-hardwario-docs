@@ -55,7 +55,7 @@ The `idle_state` sets the default on/off behavior.
 
 :::info
 
-This example prints out some text on the screen and lights up LCD LEDs with **blue color** for** 1500 milliseconds** after any LCD button is pressed.
+This example prints out some text on the screen and lights up LCD LEDs with **blue color** for **1500 milliseconds** after any LCD button is pressed.
 
 :::
 

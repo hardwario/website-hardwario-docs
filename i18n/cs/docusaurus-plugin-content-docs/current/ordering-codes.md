@@ -1,18 +1,18 @@
 ---
 slug: ordering-codes
 title: Objednací kódy
-description: "Tento článek definuje všechny možné objednací kódy pro ekosystém CHESTER."
+description: "Přehled všech objednacích kódů produktů ekosystému CHESTER."
 title_meta: "Objednací kódy (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 
 # Objednací kódy {#ordering-codes}
 
-Tento článek definuje všechny možné objednací kódy pro ekosystém **CHESTER**. Specifikace objednávky musí plně odpovídat níže uvedeným objednacím číslům.
+Tento článek uvádí všechny objednací kódy produktů ekosystému **CHESTER**. Objednávka musí přesně odpovídat níže uvedeným objednacím číslům.
 
 :::tip
 
-U každého produktu jsou uvedeny dostupné varianty, tedy které varianty jsou standardní a obvykle okamžitě dostupné. Pokud potřebujete konkrétní kombinaci, kontaktujte nás ohledně dostupnosti a podmínek **MOQ** (minimální objednací množství).
+U každého produktu najdete dostupné varianty, tedy ty, které jsou standardní a obvykle ihned k dispozici. Pokud potřebujete jinou kombinaci, zeptejte se nás na dostupnost a podmínky **MOQ** (minimální objednací množství).
 
 :::
 
@@ -55,7 +55,7 @@ U každého produktu jsou uvedeny dostupné varianty, tedy které varianty jsou 
 
 :::info
 
-Tento produkt se připojuje k systémové sběrnici I²C na CHESTER-M přes 7pinový konektor JST.
+Tento produkt se připojuje k systémové sběrnici I²C desky CHESTER-M 7pinovým konektorem JST.
 
 :::
 
@@ -70,7 +70,7 @@ Tento produkt se připojuje k systémové sběrnici I²C na CHESTER-M přes 7pin
 
 :::info
 
-Luxmetr a vlhkoměr jsou vždy součástí. U verze „N“ je jejich sběrnice I²C připojena přímo k systémovému konektoru I2C.
+Luxmetr a vlhkoměr jsou součástí vždy. U verze „N“ je jejich sběrnice I²C připojená přímo k systémovému konektoru I²C.
 
 :::
 
@@ -83,11 +83,11 @@ Luxmetr a vlhkoměr jsou vždy součástí. U verze „N“ je jejich sběrnice 
 | `CHESTER-S1-N`     |
 | `CHESTER-S1-NP`    |
 
-### CHESTER-Z1: Záloha + tlačítka {#chester-z}
+### CHESTER-Z1: Záložní napájení + tlačítka {#chester-z}
 
 :::caution
 
-Tento produkt se připojuje k systémové sběrnici I²C na CHESTER-M přes 7pinový konektor JST.
+Tento produkt se připojuje k systémové sběrnici I²C desky CHESTER-M 7pinovým konektorem JST.
 
 :::
 
@@ -95,18 +95,18 @@ Tento produkt se připojuje k systémové sběrnici I²C na CHESTER-M přes 7pin
 
 **Legenda:**
 
-* `X` = Zahrnuje středové tlačítko
-* `1-F` = Binární kombinace (reprezentovaná jednou hexadecimální číslicí) instalovaných tlačítek
+* `X` = Včetně středového tlačítka
+* `1-F` = Binární kombinace osazených tlačítek (zapsaná jednou šestnáctkovou číslicí)
 
 :::info
 
-Bit 0 tlačítek reprezentuje nejvýše umístěné tlačítko.
+Bit 0 odpovídá nejvýše umístěnému tlačítku.
 
 :::
 
 :::caution
 
-Akustický bzučák je instalován pouze v případě, že je přítomno některé z tlačítek.
+Akustický bzučák se osazuje jen tehdy, když je osazené alespoň jedno tlačítko.
 
 :::
 
@@ -126,11 +126,11 @@ Akustický bzučák je instalován pouze v případě, že je přítomno někter
 
 **Legenda:**
 
-* `A` = Držáky baterií konfigurované pro alkalické články (konfigurace 2S3P nebo 2S4P)
+* `A` = Držáky baterií zapojené pro alkalické články (zapojení 2S3P nebo 2S4P)
 * `C` = Osm držáků baterií velikosti „C“
 * `D` = Šest držáků baterií velikosti „D“
-* `L` = Držáky baterií konfigurované pro lithiové články (konfigurace 6P nebo 8P)
-* `W` = Modul Wireless M-Bus (wM-Bus) s konektorem u.FL pro antenu
+* `L` = Držáky baterií zapojené pro lithiové články (zapojení 6P nebo 8P)
+* `W` = Modul Wireless M-Bus (wM-Bus) s konektorem u.FL pro anténu
 
 **Dostupné varianty:**
 
@@ -172,14 +172,14 @@ Tento rozšiřující modul obsazuje oba sloty „A“ a „B“ na zadní stran
 
 **Legenda:**
 
-* `1C` = Kanál 1 konfigurován pro měření proudu (diferenciální)
-* `1V` = Kanál 1 konfigurován pro měření napětí (nesymetrické)
-* `2C` = Kanál 2 konfigurován pro měření proudu (diferenciální)
-* `2V` = Kanál 2 konfigurován pro měření napětí (nesymetrické)
-* `3C` = Kanál 3 konfigurován pro měření proudu (diferenciální)
-* `3V` = Kanál 3 konfigurován pro měření napětí (nesymetrické)
-* `4C` = Kanál 4 konfigurován pro měření proudu (diferenciální)
-* `4V` = Kanál 4 konfigurován pro měření napětí (nesymetrické)
+* `1C` = Kanál 1 nastavený na měření proudu (diferenciální)
+* `1V` = Kanál 1 nastavený na měření napětí (nesymetrické)
+* `2C` = Kanál 2 nastavený na měření proudu (diferenciální)
+* `2V` = Kanál 2 nastavený na měření napětí (nesymetrické)
+* `3C` = Kanál 3 nastavený na měření proudu (diferenciální)
+* `3V` = Kanál 3 nastavený na měření napětí (nesymetrické)
+* `4C` = Kanál 4 nastavený na měření proudu (diferenciální)
+* `4V` = Kanál 4 nastavený na měření napětí (nesymetrické)
 
 **Dostupné varianty:**
 
@@ -197,8 +197,8 @@ Tento rozšiřující modul obsazuje oba sloty „A“ a „B“ na zadní stran
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -213,8 +213,8 @@ Tento rozšiřující modul obsazuje oba sloty „A“ a „B“ na zadní stran
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -229,9 +229,9 @@ Tento rozšiřující modul obsazuje oba sloty „A“ a „B“ na zadní stran
 
 **Legenda:**
 
-* `G` = Pouze čtyři kanály 1-Wire, každý se zemnící svorkou vedle kanálu
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `G` = Jen čtyři kanály 1-Wire, vedle každého z nich zemnicí svorka
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -248,8 +248,8 @@ Tento rozšiřující modul obsazuje oba sloty „A“ a „B“ na zadní stran
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -264,8 +264,8 @@ Tento rozšiřující modul obsazuje oba sloty „A“ a „B“ na zadní stran
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -280,8 +280,8 @@ Tento rozšiřující modul obsazuje oba sloty „A“ a „B“ na zadní stran
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -296,8 +296,8 @@ Tento rozšiřující modul obsazuje oba sloty „A“ a „B“ na zadní stran
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -306,11 +306,11 @@ Tento rozšiřující modul obsazuje oba sloty „A“ a „B“ na zadní stran
 | `CHESTER-X3C:A` |
 | `CHESTER-X3C:B` |
 
-### CHESTER-X4: 28 V buck + 4x P přepínač {#chester-x4}
+### CHESTER-X4: 28 V buck + 4x spínač P {#chester-x4}
 
 :::info
 
-Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
+Na desku CHESTER-M lze osadit jen jeden kus tohoto modulu.
 
 :::
 
@@ -318,8 +318,8 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -332,7 +332,7 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 :::info
 
-Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
+Na desku CHESTER-M lze osadit jen jeden kus tohoto modulu.
 
 :::
 
@@ -340,8 +340,8 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -356,8 +356,8 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -370,7 +370,7 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 :::info
 
-Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
+Na desku CHESTER-M lze osadit jen jeden kus tohoto modulu.
 
 :::
 
@@ -378,8 +378,8 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -388,14 +388,14 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 | `CHESTER-X8:A` |
 | `CHESTER-X8:B` |
 
-### CHESTER-X9: 4x chráněný N přepínač {#chester-x9}
+### CHESTER-X9: 4x chráněný spínač N {#chester-x9}
 
 **Formát:** `CHESTER-X9[:{A|B}]`
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -410,8 +410,8 @@ Na CHESTER-M lze instalovat pouze jednu instanci tohoto modulu.
 
 **Legenda:**
 
-* `:A` = Rozšiřující modul konfigurovaný pro pozici slotu „A“ na zadní straně
-* `:B` = Rozšiřující modul konfigurovaný pro pozici slotu „B“ na zadní straně
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
 
 **Dostupné varianty:**
 
@@ -454,7 +454,7 @@ Více podrobností a výkresy najdete v článku [Krabičky](hardware-descriptio
 
 :::info
 
-Tento produkt se připojuje k systémové sběrnici I²C na CHESTER-M přes 5pinový konektor JST.
+Tento produkt se připojuje k systémové sběrnici I²C desky CHESTER-M 5pinovým konektorem JST.
 
 :::
 

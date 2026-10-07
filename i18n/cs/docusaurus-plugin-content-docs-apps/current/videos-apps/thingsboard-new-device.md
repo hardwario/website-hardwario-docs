@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 ## Přehled návodu {#tutorial-overview}
 
-V tomto návodu se naučíte, jak v platformě ThingsBoard vytvořit nové zařízení a spravovat jeho údaje. Po vytvoření se zařízení objeví ve vašem seznamu a zpřístupní telemetrická data.
+V tomto návodu se naučíte, jak v platformě ThingsBoard vytvořit nové zařízení a spravovat jeho údaje. Vytvořené zařízení se objeví v seznamu zařízení a zpřístupní vám svá telemetrická data.
 
 ---
 

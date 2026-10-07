@@ -221,7 +221,7 @@ the screenshot shows.
 
 1. When writing completes, insert the microSD card into the FIBER Lite device and power it on.
 
-1. Wait for the device to boot and connect to the network (30-90 seconds on first boot), then
+1. Wait for the device to boot and connect to the network (30–90 seconds on first boot), then
    find its IP address. Try these in order:
 
    - **Router/DHCP leases**: check your router's admin page for a client named after the

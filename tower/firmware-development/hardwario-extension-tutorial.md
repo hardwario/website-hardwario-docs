@@ -110,7 +110,7 @@ There are other icons that you can use which will be described later, with the *
 
 ### Build + Flash (Console)
 
-This command will do the **whole** cycle that you can use while developing**. It will **build the firmware**, **flash it** to the selected device and then **attach the console** for the device to see the log messages.
+This command will do the **whole cycle** that you can use while developing. It will **build the firmware**, **flash it** to the selected device and then **attach the console** for the device to see the log messages.
 
 :::note
 
@@ -178,7 +178,7 @@ There shouldn't be `launch.json` present in the `.vscode` folder.
 
 :::
 
-If you want to just run the debug and not change anything in the `launch.json` you can just press **F5** and select TOWER Debugger. Debugging should start with no problem
+If you want to just run the debug and not change anything in the `launch.json` you can just press **F5** and select TOWER Debugger. Debugging should start with no problem.
 <div class="container">
   <div class="row">
     <div class="col col--8">
@@ -191,7 +191,7 @@ If you want to just run the debug and not change anything in the `launch.json` y
 
 #### Go to the Run and Debug and create `launch.json`
 
-If you want to have your custom `launch.json` you can go to the **Run and Debug** window on the **side panel** and **click create a launch.json** file and select TOWER Debugger. or add this configuration to an existing one.
+If you want to have your custom `launch.json` you can go to the **Run and Debug** window on the **side panel** and **click create a launch.json** file and select TOWER Debugger, or add this configuration to an existing one.
 
 ```json showLineNumbers
 {

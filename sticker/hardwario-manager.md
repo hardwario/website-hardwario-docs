@@ -52,7 +52,7 @@ LoRaWAN keys: see [**Features**](features.md).
 | Task | Where it is documented |
 |---|---|
 | Read the serial number, firmware, and the LoRaWAN keys needed to register the device | [**Device info and LoRaWAN keys**](/apps/hardwario-manager/sticker/device-info) |
-| Read and edit the full configuration. Intervals, sensors, history, LoRaWAN | [**Configuration**](/apps/hardwario-manager/sticker/configuration) |
+| Read and edit the full configuration: intervals, sensors, history, LoRaWAN | [**Configuration**](/apps/hardwario-manager/sticker/configuration) |
 | Set threshold, state, and rate alarms | [**Alarm rules**](/apps/hardwario-manager/sticker/alarms) |
 | Give many devices the same settings | [**Templates**](/apps/hardwario-manager/sticker/templates) |
 | Capture a whole fleet's configuration in one session | [**Scan multiple devices**](/apps/hardwario-manager/sticker/batch-export) |

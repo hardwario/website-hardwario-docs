@@ -4,7 +4,7 @@ title: "Jak na: Relay Module"
 ---
 import Image from '@theme/IdealImage';
 
-S naším modulem [**Relay Module**](../../hardware-modules/about-relay-module.md) můžete snadno ovládat **obvody s vysokým napětím/proudem**. Tento modul je speciálně navržen tak, aby měl nízkou spotřebu energie.
+Modulem [**Relay Module**](../../hardware-modules/about-relay-module.md) snadno ovládáte **obvody s vysokým napětím nebo proudem**. Modul je navržený speciálně pro nízkou spotřebu energie.
 
 :::info
 
@@ -13,14 +13,14 @@ Relé spotřebovává energii pouze při změně stavu.
 :::
 
 ## Odkazy {#references}
-- [**SDK modul Relay Module**](https://sdk.hardwario.com/group__twr__module__relay.html)
-- Příklad v GitHub repozitáři
+- [**Modul SDK pro Relay Module**](https://sdk.hardwario.com/group__twr__module__relay.html)
+- Příklad v repozitáři na GitHubu
 
 :::tip
 
-V příkladu je I2C adresa relé nastavena jako `TWR_MODULE_RELAY_I2C_ADDRESS_DEFAULT`. Pokud chcete na jednom zařízení použít **druhý modul Relay Module**, můžete použít také `TWR_MODULE_RELAY_I2C_ADDRESS_ALTERNATE`.
+Adresa I2C relé je v příkladu nastavená na `TWR_MODULE_RELAY_I2C_ADDRESS_DEFAULT`. Pokud chcete na jednom zařízení použít **druhý modul Relay Module**, použijte `TWR_MODULE_RELAY_I2C_ADDRESS_ALTERNATE`.
 
-Stačí jen připájet **0ohmový rezistor** do druhé pozice na modulu Relay Module.
+Na modulu Relay Module pak stačí připájet **0ohmový rezistor** na druhou pozici.
 
 :::
 
@@ -28,14 +28,14 @@ Stačí jen připájet **0ohmový rezistor** do druhé pozice na modulu Relay Mo
 
 :::info
 
-V příkladu níže se relé na modulu **Relay Module** **zapne/vypne** pokaždé, když stisknete tlačítko na modulu **Core Module nebo Button Module**.
+V příkladu níže se relé na modulu **Relay Module** při každém stisknutí tlačítka na modulu **Core Module nebo Button Module** **zapne, nebo vypne**.
 
 :::
 
 <details>
 <summary>
 <b>
-Ukázkový kód pulzu pro Relay Module
+Příklad kódu: přepínání relé na modulu Relay Module
 </b>
 </summary>
 <p>

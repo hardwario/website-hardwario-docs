@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 
 :::info Firmware v1.4.0
-The features on this page will be added in the upcoming **STICKER firmware v1.4.0**.
+The features on this page were introduced in **STICKER firmware v1.4.0**.
 :::
 
 # Firmware Features
@@ -27,7 +27,7 @@ A reset or firmware update must never un-provision a field device beyond the tie
 |---|---|
 | **Reboot** | Everything. A plain restart. |
 | **Device reset** | Device identity **and the full LoRaWAN provisioning** (keys and session): the device stays provisioned and connected, only the configuration returns to defaults. Reachable over shell, NFC, or a LoRaWAN downlink. |
-| **Factory reset** | Device identity only. Serial number, vendor token, secret key, nonce, claim token, DevEUI and JoinEUI. It **drops the LoRaWAN session and keys**, so the device re-joins the network. **NFC/shell only**. Rejected over a LoRaWAN downlink, which would destroy the very session needed to confirm it. |
+| **Factory reset** | Device identity only: serial number, vendor token, secret key, nonce, claim token, DevEUI and JoinEUI. It **drops the LoRaWAN session and keys**, so the device re-joins the network. **NFC/shell only**. Rejected over a LoRaWAN downlink, which would destroy the very session needed to confirm it. |
 | **Vendor reset** | Serial number and vendor token only. The configuration, LoRaWAN keys and secret key are all erased, and a **new secret key must be supplied** as part of the reset. Authorised by the vendor token, over the shell or the dedicated NFC vendor channel only. |
 | **`settings erase`** | Nothing. A full wipe back to a blank device, including the serial number. A shell-only "return to blank" escape hatch. |
 

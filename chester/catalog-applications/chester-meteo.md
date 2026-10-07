@@ -14,7 +14,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 - [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
 - [**Common functionality**](common-functionality.md) to know how LED, button and network configuration works.
-- [**Platform Management**](/chester/category/platform-connectivity/) on how to work with the interactive console.
+- [**Platform Connectivity**](/chester/category/platform-connectivity/) on how to work with the interactive console.
 
 :::
 
@@ -68,7 +68,7 @@ Firmware build variant: `west chester-update meteo --variant "CHESTER Meteo Z"`
 
 - All sensors are **sampled** with a configurable period (parameter `interval-sample`).
 - Samples are then **aggregated** in the configurable interval. Minimum, maximum, average, and median are computed from buffered samples for each sensor (parameter `interval-aggreg`).
-- Each aggregated values have its timestamps and are sent in a batch in a report interval period (parameter `interval-report`).
+- Each aggregated value has its timestamp; the values are sent in a batch every report interval (parameter `interval-report`).
 
 ### Wind speed
 

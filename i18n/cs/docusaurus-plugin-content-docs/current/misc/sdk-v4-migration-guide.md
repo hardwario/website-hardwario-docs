@@ -5,9 +5,9 @@ title: Průvodce migrací na SDK v4.0.0
 
 # Průvodce migrací na CHESTER SDK v4.0.0 {#chester-sdk-v400-migration-guide}
 
-CHESTER SDK **v4.0.0** zvyšuje verzi použitého nRF Connect SDK z **v2.9** na **v3.4** (Zephyr 4.x, Zephyr SDK 1.0.1). Jde o vydání se **zpětně nekompatibilními změnami**: mění se Python toolchain, Zephyr SDK a, u aplikací mimo repozitář SDK, také build systém (sysbuild + rozdělení oddílů pomocí DTS).
+CHESTER SDK **v4.0.0** zvyšuje verzi použitého nRF Connect SDK z **v2.9** na **v3.4** (Zephyr 4.x, Zephyr SDK 1.0.1). Jde o vydání se **zpětně nekompatibilními změnami**: mění se toolchain Pythonu, Zephyr SDK a u aplikací mimo repozitář SDK také systém sestavení (sysbuild + rozdělení oddílů v DTS).
 
-> Začněte z workspace ve verzi **v3.5.5** (poslední vydání s NCS v2.9). Ověřte, že se sestaví, a teprve pak postupujte podle tohoto průvodce. Nepřecházejte ze starší workspace přímo na v4.0.0.
+> Vyjděte z workspace ve verzi **v3.5.5** (poslední vydání s NCS v2.9). Ověřte, že se projekt sestaví, a teprve pak postupujte podle tohoto průvodce. Nepřecházejte ze starší workspace přímo na v4.0.0.
 
 ## 0. Aktualizace workspace {#0-update-the-workspace}
 
@@ -37,17 +37,17 @@ west zephyr-export
 west sdk install -t arm-zephyr-eabi
 ```
 
-Smažte případný existující adresář `build` a sestavte projekt od začátku, protože sysbuild mění rozvržení sestavení, takže inkrementální build nad stromem s NCS v2.9 nebude funkční.
+Smažte případný existující adresář `build` a sestavte projekt znovu od začátku: sysbuild mění strukturu sestavení, takže inkrementální sestavení nad stromem s NCS v2.9 nefunguje.
 
-> **Pokud sestavujete pouze aplikace dodávané se SDK, tímto jste hotovi.** Katalogové aplikace už byly migrovány v rámci v4.0.0. Zbytek tohoto průvodce se týká **správců aplikací mimo repozitář SDK**.
+> **Pokud sestavujete jen aplikace dodávané se SDK, máte hotovo.** Katalogové aplikace jsou na verzi v4.0.0 už převedené. Zbytek tohoto průvodce se týká **správců aplikací mimo repozitář SDK**.
 
 ## 1. Migrace na sysbuild + oddíly v DTS {#1-migrate-to-sysbuild--dts-partitions}
 
-NCS v3.4 sestavuje pomocí **sysbuild** a deska CHESTER nyní definuje rozvržení flash paměti v **device tree** místo Nordic Partition Manageru (PM). PM je pro tuto desku vypnutý, takže se `pm_static.yml` ani `child_image/` už nečtou.
+NCS v3.4 sestavuje pomocí **sysbuild** a deska CHESTER nyní definuje rozvržení paměti flash v **device tree** místo nástroje Partition Manager (PM) od Nordicu. PM je pro tuto desku vypnutý, takže se `pm_static.yml` ani `child_image/` už nečtou.
 
-**Každou aplikaci mimo repozitář SDK je nutné převést.** Všechny katalogové aplikace byly migrovány v jednom commitu, který lze použít jako referenci: [ef27da1e applications: Migrate to sysbuild + DTS partitions](https://github.com/hardwario/chester-sdk/commit/ef27da1e).
+**Každou aplikaci mimo repozitář SDK je nutné převést.** Všechny katalogové aplikace převedl jediný commit, ze kterého můžete vyjít: [ef27da1e applications: Migrate to sysbuild + DTS partitions](https://github.com/hardwario/chester-sdk/commit/ef27da1e).
 
-Rozdíl pro jednotlivé aplikace:
+Změny v každé aplikaci:
 
 | Akce                  | Cesta                                 | Obsah |
 |-----------------------|---------------------------------------|---------|
@@ -55,18 +55,18 @@ Rozdíl pro jednotlivé aplikace:
 | **Přesunout**         | `child_image/mcuboot.conf` → `sysbuild/mcuboot.conf` | přidat `CONFIG_BOOT_MAX_IMG_SECTORS_AUTO=n` (nové, povinné) |
 | **Smazat**            | `child_image/` (celý adresář)         | včetně `child_image/mcuboot/boards/chester_nrf52840.overlay` |
 | **Smazat**            | `pm_static.yml`                       | už se nečte |
-| **Upravit** `app.overlay`| odstranit napojení PM na externí flash | vypustit chosen node `nordic,pm-ext-flash` a ruční oddíl `littlefs_storage` na `&spi_flash0`. Nyní přichází z DTS desky |
+| **Upravit** `app.overlay`| odstranit napojení PM na externí flash | vypustit chosen node `nordic,pm-ext-flash` a ruční oddíl `littlefs_storage` na `&spi_flash0`. Obojí teď definuje DTS desky |
 | **Upravit** `prj.conf`| odstranit Kconfig pro PM              | `CONFIG_PM_OVERRIDE_EXTERNAL_DRIVER_CHECK` / `CONFIG_PM_PARTITION_REGION_LITTLEFS_EXTERNAL` |
 
 Výchozí rozvržení v DTS desky (`boards/hardwario/chester/chester_nrf52840.dts`) odpovídá staré mapě PM, takže běžná aktualizace firmwaru zachová data na existujících zařízeních.
 
-**Nestandardní rozvržení:** pokud vaše nasazená zařízení používala *jinou* mapu oddílů, OTA by oddíly přesunula a uložená data by se ztratila. Starou mapu reprodukujte tím, že v `app.overlay` znovu definujete uzly oddílů (overlay aplikace má přednost před DTS desky). Vzor najdete v `applications/control`. Fixuje `littlefs-storage` na historickou velikost 24 KB. Souvislosti: [Migrating to sysbuild](https://nrfconnectdocs.nordicsemi.com/ncs/latest/nrf/releases_and_maturity/migration/migration_sysbuild.html#partition_manager) od Nordicu.
+**Nestandardní rozvržení:** pokud vaše nasazená zařízení používala *jinou* mapu oddílů, bezdrátová aktualizace (OTA) by oddíly přesunula a uložená data by se ztratila. Starou mapu reprodukujte tím, že v `app.overlay` znovu definujete uzly oddílů (overlay aplikace má přednost před DTS desky). Vzor najdete v `applications/control`: oddíl `littlefs-storage` tam zůstává na původní velikosti 24 KB. Podrobnosti popisuje návod [Migrating to sysbuild](https://nrfconnectdocs.nordicsemi.com/ncs/latest/nrf/releases_and_maturity/migration/migration_sysbuild.html#partition_manager) od Nordicu.
 
 ## 2. Zbývající změny ve zdrojových kódech a Kconfigu {#2-remaining-source--kconfig-changes}
 
 ### 2a. Odstraňte zastaralý Kconfig (prohledejte celý strom aplikace, ne jen `prj.conf`) {#2a-remove-stale-kconfig-grep-the-whole-app-tree-not-just-prjconf}
 
-TinyCrypt byl v NCS 3.0 odstraněn; BLE host nyní používá PSA Crypto.
+NCS 3.0 knihovnu TinyCrypt odstranilo; BLE host teď používá PSA Crypto.
 
 ```diff
 -CONFIG_TINYCRYPT=y
@@ -74,9 +74,9 @@ TinyCrypt byl v NCS 3.0 odstraněn; BLE host nyní používá PSA Crypto.
 -CONFIG_ADC_TLA2021_INIT_PRIORITY=60
 ```
 
-U aplikací založených na generátoru odstraňte z `project.yaml` funkce `subsystem-tinycrypt*` / řádky `extras:` a znovu vygenerujte projekt, **nebo** smažte ony tři řádky z `prj.conf` ručně (ne obojí). Aplikace, které používají pouze `CONFIG_CTR_CLOUD` / `CONFIG_CTR_BLE`, získají migraci na PSA automaticky.
+U aplikací založených na generátoru odstraňte z `project.yaml` funkce `subsystem-tinycrypt*` / řádky `extras:` a znovu vygenerujte projekt, **nebo** smažte ony tři řádky z `prj.conf` ručně (ne obojí). Aplikace, které používají pouze `CONFIG_CTR_CLOUD` / `CONFIG_CTR_BLE`, přejdou na PSA automaticky.
 
-### 2b. Podmíněné – proveďte pouze tehdy, pokud danou funkci používáte {#2b-conditional--apply-only-if-the-feature-is-used}
+### 2b. Podmíněné změny: jen pokud danou funkci používáte {#2b-conditional--apply-only-if-the-feature-is-used}
 
 | Pokud…                                         | Změna |
 |------------------------------------------------|--------|
@@ -87,14 +87,14 @@ U aplikací založených na generátoru odstraňte z `project.yaml` funkce `subs
 | máte pevně zapsaný compatible pro **TLA2024**  | `ti,tla2024` → `hardwario,tla2024` (bateriový `ti,tla2021` bez změny) |
 | píšete **surový BLE / nízkoúrovňový** kód      | `BT_LE_ADV_OPT_CONNECTABLE`→`BT_LE_ADV_OPT_CONN`; vypustit `USE_NAME`/`FORCE_NAME_IN_AD` (přidat `BT_DATA_NAME_COMPLETE`); odstraněno: `CONFIG_BT_FIXED_PASSKEY`, `CONFIG_BT_CTLR`, `CONFIG_BT_TINYCRYPT_ECC`; zvyšte `CONFIG_BT_BUF_EVT_RX_COUNT`, pokud jste ho snižovali; callback `shell_set_bypass()` získal `void *user_data`; `#include <nrf52840.h>` → `#include <soc.h>` |
 
-Aplikace, které se těchto věcí dotýkají pouze přes API subsystémů CHESTER (`ctr_cloud`, `ctr_radon`, …), nepotřebují žádnou změnu. Oprava je uvnitř SDK.
+Aplikace, které tyto funkce používají jen přes API subsystémů CHESTER (`ctr_cloud`, `ctr_radon`, …), měnit nemusíte. Úprava je přímo v SDK.
 
 ## Kontrolní seznam {#checklist}
 
 - [ ] Začněte z funkční aplikace ve verzi **v3.5.5** (NCS v2.9)
 - [ ] Aktualizujte `west.yml` na **v4.0.0**
 - [ ] `west update` → `west zephyr-export` → `west sdk install -t arm-zephyr-eabi` → `west packages pip --install -- -U`
-- [ ] `rm -rf build` a čisté sestavení
+- [ ] `rm -rf build` a sestavení načisto
 - [ ] **(aplikace mimo repozitář SDK)** přidejte `sysbuild.conf`; přesuňte konfiguraci mcuboot + přidejte `CONFIG_BOOT_MAX_IMG_SECTORS_AUTO=n`; smažte `child_image/` a `pm_static.yml`; odstraňte napojení PM z `app.overlay`/`prj.conf` (referenční commit `ef27da1e`)
 - [ ] **(nestandardní rozvržení)** reprodukujte starou mapu oddílů v `app.overlay`
 - [ ] Odstraňte `CONFIG_TINYCRYPT*` / `CONFIG_ADC_TLA2021_INIT_PRIORITY`

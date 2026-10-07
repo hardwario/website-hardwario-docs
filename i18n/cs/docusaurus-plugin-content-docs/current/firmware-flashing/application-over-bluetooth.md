@@ -10,6 +10,6 @@ Použijte mobilní aplikaci [HARDWARIO Manager](../platform-connectivity/hardwar
 
 :::caution
 
-Tato metoda vyžaduje, aby na zařízení CHESTER již běžela funkční aplikace s podporou Bluetooth. Pokud zařízení CHESTER v seznamu Bluetooth zařízení nevidíte, musíte použít [metodu přes J-Link](./application-over-j-link.md).
+Tato metoda vyžaduje, aby v zařízení CHESTER už běžela funkční aplikace s podporou Bluetooth. Pokud zařízení CHESTER v seznamu zařízení Bluetooth nevidíte, musíte použít [metodu přes J-Link](./application-over-j-link.md).
 
 :::

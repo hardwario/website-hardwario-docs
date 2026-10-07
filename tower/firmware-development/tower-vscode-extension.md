@@ -75,6 +75,6 @@ The extension will warn you that you are missing some of those and provide you w
 
 :::tip
 
-You can now start using the **Visual Studio Code** for developing HARDWARIO TOWER Firmware. To get some basic information on how to use the extension visit[**HARDWARIO Code Tutorial**](./hardwario-extension-tutorial.md) or you can go straight to the **Firmware Quick Start chapter**.
+You can now start using the **Visual Studio Code** for developing HARDWARIO TOWER Firmware. To get some basic information on how to use the extension visit [**HARDWARIO Code Tutorial**](./hardwario-extension-tutorial.md) or you can go straight to the **Firmware Quick Start chapter**.
 
 :::

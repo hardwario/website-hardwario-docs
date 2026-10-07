@@ -5,7 +5,7 @@ title: Chování DHCP
 
 # Chování DHCP {#dhcp-behavior}
 
-Zařízení nabízí funkci DHCP klienta i serveru. To, zda zařízení funguje jako server, se určuje podle nastavení sítě. Tato tabulka znázorňuje roli DHCP daného rozhraní, pokud je pro něj DHCP zapnuto:
+Zařízení umí pracovat jako klient i jako server DHCP. Zda bude fungovat jako server, závisí na nastavení sítě. Tabulka ukazuje, jakou roli DHCP má rozhraní, na kterém je DHCP zapnuté:
 
 | Rozhraní          | Role DHCP |
 | :---------------- | :-------- |

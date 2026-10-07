@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # BMeters IWM-TX5
 
-[Web-Site](https://www.bmeters.com/en/products/iwm-tx5/)
+[Website](https://www.bmeters.com/en/products/iwm-tx5/)
 
 <div class="container">
   <div class="row">

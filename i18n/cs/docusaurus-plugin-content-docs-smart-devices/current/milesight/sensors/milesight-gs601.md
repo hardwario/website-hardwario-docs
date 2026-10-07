@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Senzor Milesight GS601 {#milesight-sensor-gs601}
 
-Milesight GS601 je **stropní detektor vapování a kouře** určený pro **prostředí bez kouře**, včetně škol, bytů, hotelů a schodišť. Využívá **technologii laserového rozptylu** k detekci elektronických cigaret, klasických cigaret a marihuany s **vysokou přesností** a zároveň monitoruje **teplotu**, **vlhkost**, **prachové částice** (PM1.0/2.5/10) a **TVOC**. Senzor nabízí **ochranu proti manipulaci**, **výstrahy v reálném čase** pomocí bzučáku (70 dB) a LED indikátorů, **krytí IP30** a konektivitu **LoRaWAN Class C** pro komplexní monitorování kvality vzduchu a vymáhání pravidel.
+Milesight GS601 je **stropní detektor vapování a kouře** pro **nekuřácká prostředí**, jako jsou školy, byty, hotely nebo schodiště. Pomocí **laserového rozptylu** odhalí **s vysokou přesností** elektronické cigarety, klasické cigarety i marihuanu a zároveň měří **teplotu**, **vlhkost**, **prachové částice** (PM1.0/2.5/10) a **TVOC**. Je vybavený **ochranou proti neoprávněné manipulaci**, **okamžitě upozorní** bzučákem (70 dB) a LED indikátory a má **krytí IP30**. Díky konektivitě **LoRaWAN třídy C** poslouží ke komplexnímu sledování kvality vzduchu i k vymáhání zákazu kouření.
 
 <div class="container">
   <div class="row">
@@ -21,26 +21,26 @@ Milesight GS601 je **stropní detektor vapování a kouře** určený pro **pros
 </div>
 <br />
 
-## Odkazy pro integraci {#integration-links}
+## Odkazy k integraci {#integration-links}
 | Zdroj           | Odkaz                                                                |
 |-----------------|----------------------------------------------------------------------|
-| HARDWARIO Store | https://www.hardwario.store/p/milesight-gs601                        |
+| E-shop HARDWARIO | https://www.hardwario.store/p/milesight-gs601                        |
 | Oficiální stránka | https://www.milesight.com/iot/product/lorawan-sensor/gs601           |
 | Uživatelská příručka | https://resource.milesight.com/milesight/iot/document/gs601-user-guide-en.pdf |
-| Datasheet       | https://resource.milesight.com/milesight/iot/document/gs601-datasheet-en.pdf |
+| Produktový list       | https://resource.milesight.com/milesight/iot/document/gs601-datasheet-en.pdf |
 
 ---
 
 ## Obecná konfigurace {#general-configuration}
-Konfigurace se provádí přes NFC pomocí [aplikace Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
+Zařízení se konfiguruje přes NFC v [aplikaci Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
 
-Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
+Postup konfigurace najdete v části 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
 
 ---
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
+Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options).
 
 ---
 
@@ -53,7 +53,7 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | AppKey           | 5572404C696E6B4C6F52613230313823 |
 
 :::info 
-**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení unikátní a najdete jej vytištěný na etiketě zařízení.
+**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení jedinečný a je vytištěný na jeho štítku.
 :::
 
 ---
@@ -67,10 +67,10 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | Kodek | [Zobrazit kodek](https://github.com/Milesight-IoT/SensorDecoders/blob/main/gs-series/gs601/gs601-codec.json) |
 
 :::info
-### Přehled terminologie {#terminology-overview}
-**Dekodér** -> Převádí binární payload zařízení do čitelného JSON.<br />
-**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlinky.<br />
-**Kodek** -> Definuje pravidla pro dekódování a kódování (struktura, položky, porty) používaná network servery.
+### Přehled pojmů {#terminology-overview}
+**Dekodér** -> Převádí binární payload zařízení na čitelný JSON.<br />
+**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlink.<br />
+**Kodek** -> Definuje pravidla dekódování a kódování (strukturu, pole, porty), podle kterých pracují síťové servery.
 :::
 
 
@@ -83,7 +83,7 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 
 ---
 
-## Technické specifikace {#technical-specifications}
+## Technické parametry {#technical-specifications}
 
 | **Parametr** | **Hodnota** |
 |---------------|-----------|
@@ -98,21 +98,21 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | Technologie | Laserový rozptyl |
 | Rozsah detekce | 0-100 (stupnice) |
 | Přesnost | ±10 |
-| Schopnost detekce | Elektronické cigarety, klasické cigarety, marihuana |
-| **Environmentální senzory** | |
+| Detekuje | Elektronické cigarety, klasické cigarety, marihuana |
+| **Senzory prostředí** | |
 | Teplota | -20°C ~ +60°C, přesnost ±0,2°C |
 | Vlhkost | 0% ~ 100% RH, přesnost ±2% |
 | Prachové částice | PM1.0, PM2.5, PM10 (0-1000 μg/m³) |
 | TVOC | 0-2000 μg/m³ |
-| **Výstrahy a indikátory** | |
+| **Upozornění a indikace** | |
 | Bzučák | Ano, 70 dB |
-| LED indikátory | Vizuální stavové výstrahy |
+| LED indikátory | Vizuální indikace stavu |
 | Detekce manipulace | Vibrační senzor |
-| Alarm plamene | Na základě teploty (monitorování 20-60°C) |
+| Požární alarm | Podle teploty (sledování v rozsahu 20-60°C) |
 | **Funkce** | |
 | Konfigurace | NFC / downlink |
 | Pokročilé funkce | Ochrana proti manipulaci, nastavitelný bzučák, FUOTA |
-| Odolnost proti vodě/plynům | Odolnost proti falešným alarmům |
+| Odolnost vůči vodě a plynům | Brání planým poplachům |
 | **Fyzické vlastnosti** | |
 | Napájení | 5V/1A USB Type-C nebo PoE splitter |
 | Provozní teplota | -5°C ~ +45°C |

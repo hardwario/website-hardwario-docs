@@ -4,7 +4,7 @@ title: Data Visualization
 ---
 import Image from '@theme/IdealImage';
 
-In this chapter, we will go over the **Dashboard Tab** of Playground
+In this chapter, we will go over the **Dashboard Tab** of Playground.
 
 :::info
 

@@ -40,7 +40,7 @@ This **article** defines the requirements if you want to start development with 
 
 ## GitHub Access
 
-We share the latest SDK on GitHub in [chester-sdk](https://github.com/hardwario/chester-sdk) repository. Please create a GitHub account and add follow next chapter on how to add an SSH key.
+We share the latest SDK on GitHub in [chester-sdk](https://github.com/hardwario/chester-sdk) repository. Please create a GitHub account and follow the next chapter on how to add an SSH key.
 
 ## Generate SSH Key
 

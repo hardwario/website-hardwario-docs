@@ -7,11 +7,11 @@ title_meta: "Tagy (HARDWARIO Cloud)"
 
 # Tagy {#tags}
 
-Tagy jsou **pojmenované barevné značky**, které přiřazujete zařízením i konektorům. Jsou tím pojivem, které propojuje zařízení s konektory: zpráva ze zařízení se předá jen těm konektorům, které s daným zařízením sdílejí alespoň jeden tag.
+Tagy jsou **pojmenované barevné značky**, které přiřazujete zařízením i konektorům. Propojují zařízení s konektory: zpráva ze zařízení se předá jen těm konektorům, které mají s daným zařízením alespoň jeden společný tag.
 
 ## Proč tagy? {#why-tags}
 
-Tagy umožňují flexibilní směrování zpráv, aniž byste kamkoli natvrdo zapisovali ID zařízení:
+S tagy můžete zprávy pružně směrovat, aniž byste kamkoli napevno zapisovali ID zařízení:
 
 - Jedno zařízení → více konektorů (přiřaďte více tagů)
 - Mnoho zařízení → jeden konektor (přiřaďte jim všem stejný tag)
@@ -23,7 +23,7 @@ Tagy umožňují flexibilní směrování zpráv, aniž byste kamkoli natvrdo za
 
    ![Stránka Tags se zvýrazněným tlačítkem „+ NEW TAG“](../../../../cloud/images/tags-list.png)
 
-2. Zadejte název (podle [konvencí pojmenování](/cloud/#naming-conventions)), zvolte **barvu** pro vizuální identifikaci v pohledech na zařízení a konektory a klikněte na **CREATE**.
+2. Zadejte název (podle [konvencí pojmenování](/cloud/#naming-conventions)), zvolte **barvu**, podle které tag poznáte v přehledech zařízení a konektorů, a klikněte na **CREATE**.
 
    <div className="screenshot-narrow">
 
@@ -47,7 +47,7 @@ Tagy mají pole `access_type`:
 | Hodnota | Popis |
 |---|---|
 | `write` | Plný přístup. Tag lze použít pro čtení zpráv i pro odesílání downlinků |
-| `read` | Pouze pro čtení. Tag může přijímat zprávy, ale nelze jej použít pro downlinky |
+| `read` | Pouze pro čtení. Tag může přijímat zprávy, ale nelze ho použít pro downlinky |
 
 ## Příklad nastavení {#example-setup}
 
@@ -59,4 +59,4 @@ Tag: "temperature-sensors"
   Device: chester-floor-3  ──[temperature-sensors]──▶  Connector: my-backend
 ```
 
-Všechna tři zařízení sdílejí stejný tag, takže všechny jejich zprávy jsou prostřednictvím konektoru předány do `my-backend`.
+Všechna tři zařízení mají stejný tag, takže konektor předává všechny jejich zprávy do `my-backend`.

@@ -102,7 +102,7 @@ Keep the **LTE** modem firmware up to date to ensure stable connectivity.
 :::tip
 
 The SIM card requirement depends on the size of the version jump.
-For an upgrade of only one or two versions, the SIM card must be;
+For an upgrade of only one or two versions, the SIM card must be
 inserted and configured for the upgrade to work. For a larger version
 jump, the upgrade completes without a SIM card present.
 :::
@@ -182,7 +182,7 @@ Verify internet connectivity:
 
 :::tip
 
-LTE connectivity has precedence over WAN by router distance (default LTE router distance is 2).
+LTE connectivity has precedence over WAN by route distance (the default LTE route distance is 2).
 
 :::
 
@@ -233,7 +233,7 @@ In case you do not use the HARDWARIO managed service, you have to use your **LoR
 
 ## Datacake
 
-**Datacake** is an IoT platform that hosts a **LoRaWAN** server. To connect **EMBER** to **Datacake**, you need to register an account and create a dashboard. To add your your device to the dashboard:
+**Datacake** is an IoT platform that hosts a **LoRaWAN** server. To connect **EMBER** to **Datacake**, you need to register an account and create a dashboard. To add your device to the dashboard:
 
 * Add the **Datacake** server to the server list by running the following command on **RouterOS**
 

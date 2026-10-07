@@ -79,7 +79,7 @@ In this guide, you will learn how to create a dashboard, add a simple variable d
    3. For a simple line chart, choose the **Charts** widget bundle.  
    4. From the available options, select **Line Chart**.  
 
-![Widgets Cards](images/thingsboard-chart-2.png)
+![Widgets Charts](images/thingsboard-chart-2.png)
 
    5. A configuration window will open:  
       - Select the **data source** and the **variable** you want to display under **Series → Key**.  

@@ -11,10 +11,10 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        <b>Maxi Base Module</b> slouží jako základ pro sestavy IoT kitu, které jednoduše vložíte do průmyslové krabičky Takachi (IP67).
+        <b>Maxi Base Module</b> slouží jako základna pro sestavy ze sady IoT, které pak jednoduše vložíte do průmyslové krabičky Takachi (IP67).
       </p>
       <p>
-        Kromě připojení <b>libovolného modulu TOWER</b> obsahuje sada také svorkovnici pro připojení <b>jednoho modulu CHESTER-X</b> pro připojení externích senzorů, externího tlačítka nebo externího napájení.
+        Kromě <b>libovolného modulu TOWER</b> má i svorkovnici, ke které připojíte <b>jeden modul CHESTER-X</b> pro externí senzory, externí tlačítko nebo externí napájení.
       </p>
     </div>
   </div>
@@ -22,11 +22,11 @@ import Image from '@theme/IdealImage';
 
 ## Vlastnosti {#features}
 - Možnost připojit libovolný **IoT modul ze sady TOWER**
-- Umístění až 2 sloupců velkých modulů TOWER, nebo až 4 sloupců malých modulů TOWER
+- Místo pro až 2 sloupce velkých, nebo až 4 sloupce malých modulů TOWER
 - Svorkovnice pro připojení modulu CHESTER-X (připojení externích senzorů), externího tlačítka nebo externího napájení (přímo na VDD)
-- Uzpůsobeno pro montáž do průmyslové krabičky Takachi
-- Rozsah provozních teplot: -20 ° C až 80 ° C
+- Uzpůsobený pro montáž do průmyslové krabičky Takachi
+- Rozsah provozních teplot: -20 °C až 80 °C
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/maxi-base-module)
+- [**E-shop**](https://www.hardwario.store/p/maxi-base-module)
 - [**Schémata**](https://github.com/hardwario/twr-hardware/tree/master/out/bc-module-base-maxi)

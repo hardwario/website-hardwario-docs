@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Nastavení e-mailových reportů {#setting-up-email-reports}
 
-Tento návod vás provede kompletním nastavením automatických PDF reportů pomocí modulu **Reporting**. Postup má tři hlavní kroky: vytvoření rozvržení reportu, přípravu e-mailové zprávy a nastavení plánovače.
+Tento návod vás provede kompletním nastavením automatických reportů v PDF v modulu **Reporting**. Postup má tři hlavní kroky: vytvoření rozvržení reportu, přípravu e-mailové zprávy a nastavení plánovače.
 
 ## Krok 1: Vytvořte šablonu reportu {#step-1-create-a-report-template}
 Nejprve je potřeba určit, jak bude výsledné PDF vypadat a jaká data bude obsahovat.
@@ -14,8 +14,8 @@ Nejprve je potřeba určit, jak bude výsledné PDF vypadat a jaká data bude ob
 1. V levém hlavním menu přejděte na **Reporting** -> **Overview** (nebo **Templates**).
 2. Klikněte vpravo nahoře na tlačítko **+ Add report template** a zvolte **Create new report template**.
 3. Zadejte název šablony (například *Obecný měsíční report*) a formát nechte na **PDF**.
-4. Nacházíte se ve vizuálním Report Builderu. Přetahujte komponenty z levého panelu:
-   * **Text & Content:** Slouží k přidání záhlaví, titulků a zápatí (Markdown je podporovaný).
+4. Teď jste ve vizuálním editoru Report Builder. Přetahujte do něj komponenty z levého panelu:
+   * **Text & Content:** Slouží k přidání záhlaví, nadpisů a zápatí (podporuje Markdown).
    * **Charts:** Slouží k vložení grafů. V nastavení grafu zvolte cílová zařízení a časové okno (například *Previous month*).
    * **Tables:** Slouží k vložení datových tabulek. *Tip: Pokud chcete data z více zařízení sloučit do jednoho řádku, nezapomeňte v nastavení tabulky zapnout agregaci dat (například 1 Day).*
 5. Až budete s rozvržením spokojeni, uložte šablonu kliknutím na **Save** / **Apply**.
@@ -26,7 +26,7 @@ Nejprve je potřeba určit, jak bude výsledné PDF vypadat a jaká data bude ob
 :::
 
 ## Krok 2: Vytvořte šablonu notifikace {#step-2-create-a-notification-template}
-Aby se report dostal k zákazníkům, musíme vytvořit text e-mailu, který bude PDF přílohu doprovázet.
+Aby se report dostal k zákazníkům, připravíme text e-mailu, ke kterému se PDF přiloží.
 
 1. V levém menu přejděte na **Notification center** -> **Templates**.
 2. Kliknutím na tlačítko **+ Add template** vytvořte novou šablonu notifikace.
@@ -35,7 +35,7 @@ Aby se report dostal k zákazníkům, musíme vytvořit text e-mailu, který bud
 5. V sekci **Delivery methods** zaškrtněte volbu **Email**.
 6. Vyplňte obsah e-mailu:
    * **Subject:** například `Měsíční report monitoringu - %d{MMMM yyyy}`.
-   * **Body:** Napište doprovodný text, který zákazník v e-mailu uvidí. Můžete použít čistý text nebo formátování HTML (odrážky, tučný text a další).
+   * **Body:** Napište doprovodný text, který zákazník v e-mailu uvidí. Můžete použít prostý text nebo formátování HTML (odrážky, tučný text a další).
    * *Poznámka:* ThingsBoard k této e-mailové šabloně automaticky přiloží vygenerovaný soubor PDF, když ji plánovač spustí.
 7. Uložte šablonu.
 
@@ -45,7 +45,7 @@ Aby se report dostal k zákazníkům, musíme vytvořit text e-mailu, který bud
 :::
 
 ## Krok 3: Naplánujte automatické doručování {#step-3-schedule-the-automated-delivery}
-Nyní je potřeba předchozí kroky spojit a systému říct, kdy a komu se má report posílat.
+Teď předchozí kroky propojíme a určíme, kdy a komu se má report posílat.
 
 1. Vraťte se v levém menu do sekce **Reporting** a klikněte na **Scheduling reports**.
 2. Kliknutím na ikonu **+** přidejte nový rozvrh.
@@ -63,4 +63,4 @@ Nyní je potřeba předchozí kroky spojit a systému říct, kdy a komu se má 
 [ThingsBoard Scheduler](https://thingsboard.io/docs/pe/user-guide/scheduler/)
 :::
 
-**Hotovo!** Systém teď bude každý měsíc automaticky generovat PDF podle vašeho návrhu, přiloží ho k připravenému e-mailu a odešle určeným příjemcům.
+**Hotovo.** Systém teď bude každý měsíc automaticky vytvářet PDF podle vašeho návrhu, přikládat ho k připravenému e-mailu a odesílat určeným příjemcům.

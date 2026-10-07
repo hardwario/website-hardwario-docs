@@ -1,6 +1,6 @@
 ---
 slug: changelog
-title: TAPPER – seznam změn
+title: Seznam změn TAPPER
 toc_min_heading_level: 2
 toc_max_heading_level: 2
 description: "Přehled všech významných změn platformy TAPPER včetně firmwaru a hardwaru, s filtrováním podle kategorie změn pomocí záložek."
@@ -9,9 +9,9 @@ description: "Přehled všech významných změn platformy TAPPER včetně firmw
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# TAPPER Seznam změn {#tapper-changelog}
+# Seznam změn TAPPER {#tapper-changelog}
 
-Tato stránka sleduje všechny významné změny napříč platformou TAPPER, včetně **firmwaru** a **hardwaru**. Pomocí záložek níže můžete filtrovat podle kategorie změn.
+Na této stránce najdete všechny významné změny platformy TAPPER včetně **firmwaru** a **hardwaru**. Záložkami níže můžete změny filtrovat podle kategorie.
 
 :::info
 
@@ -28,7 +28,7 @@ Zdrojový kód firmwaru: [hardwario/tapper](https://github.com/hardwario/tapper)
 
 ### 2025-08-12 – v1.2.1 {#2025-08-12--v121}
 
-- **[FW]** Opraveno MQTT připojení bez TLS (regrese z verze v1.2.0)
+- **[FW]** Opraveno připojení MQTT bez TLS (chyba zanesená ve verzi v1.2.0)
 - **[FW]** Opravena licenční poznámka ve zdrojových souborech
 
 ### 2025-06-26 – v1.2.0 {#2025-06-26--v120}
@@ -38,7 +38,7 @@ Zdrojový kód firmwaru: [hardwario/tapper](https://github.com/hardwario/tapper)
 
 ### 2025-05-28 – v1.1.0 {#2025-05-28--v110}
 
-- **[FW]** Podpora TLS pro MQTT připojení: zabezpečená end-to-end komunikace
+- **[FW]** Podpora TLS pro připojení MQTT: zabezpečená komunikace end-to-end
 
 ### 2025-05-23 – v1.0.3 {#2025-05-23--v103}
 
@@ -52,9 +52,9 @@ Zdrojový kód firmwaru: [hardwario/tapper](https://github.com/hardwario/tapper)
 ### 2025-05-23 – v1.0.1 {#2025-05-23--v101}
 
 - **[FW]** První vydání
-- **[FW]** MQTT komunikace
+- **[FW]** Komunikace přes MQTT
 - **[FW]** Čtení NFC karet MIFARE Classic
-- **[FW]** Detekce sabotážního kontaktu
+- **[FW]** Detekce stavu spínače tamper
 - **[FW]** Vzdálené ovládání výstupu
 
 {/* separator */}
@@ -64,7 +64,7 @@ Zdrojový kód firmwaru: [hardwario/tapper](https://github.com/hardwario/tapper)
 
 :::info
 
-Zatím nebyly zaznamenány žádné hardwarové revize. Aktualizace hardwaru se zde objeví, jakmile budou vydány nové revize desky TAPPER.
+Zatím tu nejsou zaznamenané žádné hardwarové revize. Změny hardwaru se tu objeví, jakmile vyjdou nové revize desky TAPPER.
 
 :::
 

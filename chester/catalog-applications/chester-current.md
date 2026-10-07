@@ -5,7 +5,7 @@ This article describes the core functionality, hardware description, default con
 > **Caution:** Some of the basics are not provided, as they are common for all CHESTER catalog applications. Please see:
 > - [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
 > - [**Common functionality**](/chester/catalog-applications/common-functionality) to know how LED, button and network configuration works.
-> - [**Platform Management**](/chester/category/platform-connectivity) on how to work with the interactive console.
+> - [**Platform Connectivity**](/chester/category/platform-connectivity) on how to work with the interactive console.
 
 ## Application Overview
 
@@ -86,7 +86,7 @@ For the wiring diagram to **CHESTER Current**, please follow the [**terminal blo
 
 - The current **battery voltage** and **external DC voltage** are sent in every report.
 - When the DC power input changes, the timestamp of the change event is stored altogether with the **connected**/**disconnected** state, this information is buffered, and the buffer of the events is sent (at the latest) with the regular report (parameter `interval-report`).
-- Optionally, DC power input changes to the **connected** (parameter `backup-report-connected`) or **disconnected** (parameter `backup-report-disconnected`) states can be reported **immediately** or with a configurable **delay** (parameter `event-report-delay`) to allow capturing multiple consequent input changes.
+- Optionally, DC power input changes to the **connected** (parameter `backup-report-connected`) or **disconnected** (parameter `backup-report-disconnected`) states can be reported **immediately** or with a configurable **delay** (parameter `event-report-delay`) to allow capturing multiple subsequent input changes.
 - The maximum number of reports per hour is configurable (parameter `event-report-rate`). The event throttling limits communication bandwidth and preserves the battery lifespan.
 
 > **Caution:** The next report interval is calculated at the beginning of the transmission cycle as the `interval-report` parameter (specified in seconds) ±20 % spread. This spread is intentionally random to avoid transmission aliasing for multiple devices operating in the same place (e.g., powered from a local DC line). If such a spread was not implemented, the device transmission could synchronously overlap.

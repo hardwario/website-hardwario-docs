@@ -6,31 +6,31 @@ import Image from '@theme/IdealImage';
 
 # STICKER Clime {#sticker-clime}
 
-**STICKER Clime** je kompaktní bezdrátový senzor LoRaWAN určený pro přesné monitorování teploty a vlhkosti. Napájený dvěma bateriemi AA vydrží v provozu velmi dlouho a je ideální pro regulaci klimatu v budovách, monitorování skladů nebo analýzu prostředí v průmyslu a zemědělství.
+**STICKER Clime** je kompaktní bezdrátový senzor LoRaWAN pro přesné měření teploty a vlhkosti. Na dvě baterie AA vydrží v provozu dlouho a hodí se například pro regulaci klimatu v budovách, sledování skladů nebo analýzu prostředí v průmyslu a zemědělství.
 
 ![STICKER Clime](../../../../../sticker/catalog-applications/images/sticker-clime-top.png)
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Rychlý průvodce**](/sticker/first-steps): Postup zprovoznění krok za krokem.
-* [**Koupit STICKER Clime**](https://www.hardwario.store/p/sticker-clime): Nákup v našem obchodě.
-* [**Objednací kódy**](/sticker/ordering-codes): Seznam součástek a jejich objednacích čísel.
-* [**Popis hardwaru**](/sticker/hardware-description): Technické detaily a přehled hardwaru.
+* [**Rychlý průvodce**](/sticker/first-steps): Zprovoznění krok za krokem.
+* [**Koupit STICKER Clime**](https://www.hardwario.store/p/sticker-clime): Nákup v našem e-shopu.
+* [**Objednací kódy**](/sticker/ordering-codes): Seznam součástí a jejich objednacích čísel.
+* [**Popis hardwaru**](/sticker/hardware-description): Technické údaje a přehled hardwaru.
 * [**Oficiální stránka produktu**](https://www.hardwario.com/products/sticker/): Funkce a přehled.
 
 ## Typická použití {#typical-use-cases}
 
-#### Chytré monitorování kvality materiálu {#smart-monitoring-for-material-quality}
+#### Chytré sledování kvality materiálu {#smart-monitoring-for-material-quality}
 
-- Sledování teploty a vlhkosti při skladování a používání materiálu je klíčové u procesů jako vstřikování plastů. Vlhkost vzniklá teplotními rozdíly může způsobit kondenzaci na granulátu a tím pórovitost výsledného produktu. Dlouhodobé měření pomáhá tyhle skryté problémy odhalit.
+- Sledování teploty a vlhkosti při skladování a zpracování materiálu je klíčové například při vstřikování plastů. Teplotní rozdíly mohou vést ke kondenzaci vlhkosti na granulátu a ta pak způsobí pórovitost výsledného výrobku. Dlouhodobé měření pomáhá tyto skryté problémy odhalit.
 
-#### Spolehlivé monitorování skladování léků {#reliable-monitoring-for-medicine-storage}
+#### Spolehlivé sledování skladů léčiv {#reliable-monitoring-for-medicine-storage}
 
 - Skladování léků vyžaduje přesnou kontrolu prostředí. Každá výraznější změna teploty nebo vlhkosti se musí hlásit okamžitě. Velké skladovací prostory často potřebují víc senzorů, aby bylo pokrytí úplné a spolehlivé.
 
 #### Ochrana pacientů díky chytrému měření {#protecting-patients-with-smart-sensing}
 
-- S rostoucími globálními teplotami a častějšími klimatickými extrémy je udržení stabilních podmínek v nemocničních pokojích kritické. Selhávající klimatizace, nebo i otevřené okno, může pacienty ohrozit. Senzory teploty a vlhkosti v každém pokoji umožňují včasné varování a lepší péči.
+- S rostoucími globálními teplotami a častějšími klimatickými extrémy jsou stabilní podmínky v nemocničních pokojích zásadní. Pacienty může ohrozit porucha klimatizace, nebo i otevřené okno. Senzory teploty a vlhkosti v každém pokoji včas upozorní na problém a pomohou zlepšit péči.
 
 ## Ukázková zpráva JSON {#example-json-message}
 
@@ -55,18 +55,18 @@ import Image from '@theme/IdealImage';
 
 ## Stavová LED {#status-led}
 
-STICKER Clime používá standardní vzory stavové LED popsané v kapitole [**Signalizace LED**](/sticker/hardware-description#led-indication). Startovní přebíhání LED, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
+STICKER Clime používá standardní vzory stavové LED popsané v kapitole [**Signalizace LED**](/sticker/hardware-description#led-indication). Startovní sekvence, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
 
-Clime měří hodnoty prostředí, ne diskrétní vstupy, takže obvykle nemá nakonfigurované žádné Hallovy senzory ani externí vstupy. V praxi to znamená, že uvidíte jen **heartbeat**, vzory pro **NFC** a **červené bliknutí alarmu** při překročení prahu teploty nebo vlhkosti. Zeleno-oranžové sekvence aktivace vstupů se na standardní jednotce Clime neobjeví.
+Clime měří hodnoty prostředí, ne diskrétní vstupy, takže obvykle nemá nastavené žádné Hallovy spínače ani externí vstupy. V praxi to znamená, že uvidíte jen **heartbeat**, vzory pro **NFC** a **červené bliknutí alarmu** při překročení prahu teploty nebo vlhkosti. Zeleno-oranžové sekvence aktivace vstupů se na standardním zařízení Clime neobjeví.
 
 ## Seznam změn {#changelog}
 
 ### 2025-11-23 – v1.0.0 {#2025-11-23--v100}
 
-- První vydání: monitorování teploty, vlhkosti, osvětlení a tlaku přes LoRaWAN
+- První vydání: měření teploty, vlhkosti, osvětlenosti a tlaku přes LoRaWAN
 
 :::info
 
-Kompletní přehled všech změn platformy najdete v [**seznamu změn STICKER**](/sticker/changelog).
+Úplný přehled všech změn platformy najdete v [**seznamu změn STICKER**](/sticker/changelog).
 
 :::

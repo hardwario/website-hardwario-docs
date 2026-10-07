@@ -96,7 +96,7 @@ Below is the minimized set of commands that is extracted from the **CHESTER SDK*
    git push origin awesome-company/current
    ```
 
-At this point, in your **local** repository (on the disk) and your **Git** server, you will have the `main` branch that copies the `main` branch from the **CHESTER SDK** hosted on **GitLab** from **HARDWARIO**. Also, you will have your new **Git** branch with the requested changes on your **Git** remote, referred to as `origin`.
+At this point, in your **local** repository (on the disk) and your **Git** server, you will have the `main` branch that copies the `main` branch from the **CHESTER SDK** hosted on **GitHub** from **HARDWARIO**. Also, you will have your new **Git** branch with the requested changes on your **Git** remote, referred to as `origin`.
 
 ## Updating Your Application
 

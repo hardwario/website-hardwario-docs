@@ -8,21 +8,21 @@ import TabItem from '@theme/TabItem';
 
 :::note
 
-Tato kapitola se věnuje debugování pomocí [**JLink**](https://www.segger.com/products/debug-probes/j-link/), pokud jej nemáte, můžete vždy [**debugovat pomocí výpisů do konzole**](./firmware-debugging.md).
+Tato kapitola se věnuje debugování se sondou [**JLink**](https://www.segger.com/products/debug-probes/j-link/). Pokud ji nemáte, můžete vždycky [**debugovat pomocí výpisů do konzole**](./firmware-debugging.md).
 
 :::
 
-Pokud máte [**sondu JLink**](https://www.segger.com/products/debug-probes/j-link/), můžete pomocí ní debugovat svůj firmware s využitím HARDWARIO Code nebo rozšíření pro Visual Studio Code. Nejprve je potřeba rozšíření nainstalovat, k tomu máme [**speciální kapitolu v této dokumentaci**](./about-hardwario-code.md).
+Pokud máte [**sondu JLink**](https://www.segger.com/products/debug-probes/j-link/), můžete s ní debugovat svůj firmware v HARDWARIO Code nebo v rozšíření pro Visual Studio Code. Rozšíření je nejdřív potřeba nainstalovat; popisuje to [**samostatná kapitola této dokumentace**](./about-hardwario-code.md).
 
-Mezi instalací s portable verzí a samostatným rozšířením je malý rozdíl.
+Postup se trochu liší podle toho, jestli používáte přenosnou verzi, nebo samostatné rozšíření.
 
-## Debugování s portable verzí {#debugging-with-portable-version}
+## Debugování s přenosnou verzí {#debugging-with-portable-version}
 
 Pokud jste si stáhli [**HARDWARIO Code**](./about-hardwario-code.md#installation), měli byste mít všechny potřebné závislosti ve složce `/data` (Windows/Linux) nebo `code-portable-data` (macOS).
 
 :::info
 
-Jediné, co je potřeba nainstalovat, jsou ovladače JLink, pokud je ještě nemáte.
+Nainstalovat musíte jen ovladače JLink, pokud je ještě nemáte.
 
 :::
 
@@ -31,14 +31,14 @@ Jediné, co je potřeba nainstalovat, jsou ovladače JLink, pokud je ještě nem
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
 
-Přejděte do `%USERPROFILE%/AppData/Local/Programs/HARDWARIO Code/data/tower/toolchain/SEGGER/JLink/USBDriver/` a spusťte binárku `InstDrivers.exe`.
+Přejděte do `%USERPROFILE%/AppData/Local/Programs/HARDWARIO Code/data/tower/toolchain/SEGGER/JLink/USBDriver/` a spusťte program `InstDrivers.exe`.
 
-Poté byste měli mít vše připravené.
+Pak je vše připravené.
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-Pro funkčnost sondy **JLink** je potřeba aktualizovat **pravidla UDEV**. Stačí zkopírovat příkaz níže a nahradit `PATH_TO_HARDWARIO_CODE` skutečnou cestou ke složce `harwdario-code`.
+Aby sonda **JLink** fungovala, musíte aktualizovat **pravidla UDEV**. Zkopírujte příkaz níže a `PATH_TO_HARDWARIO_CODE` nahraďte skutečnou cestou ke složce `hardwario-code`.
 
 ```bash
 sudo cp PATH_TO_HARDWARIO_CODE/hardwario-code/data/tower/toolchain/SEGGER/JLink/99-jlink.rules /etc/udev/rules.d/99-jlink.rule
@@ -46,22 +46,22 @@ sudo cp PATH_TO_HARDWARIO_CODE/hardwario-code/data/tower/toolchain/SEGGER/JLink/
 
 :::info
 
-Po vykonání příkazu je potřeba sondu JLink odpojit a znovu připojit a restartovat systém.
+Po spuštění příkazu sondu JLink odpojte, znovu připojte a restartujte systém.
 
-Poté byste měli být schopni začít debugovat pomocí JLink.
+Pak už můžete začít debugovat se sondou JLink.
 
 :::
 
 </TabItem>
 <TabItem value="macOS" label="macOS">
 
-Na macOS by měla být sonda JLink detekována automaticky.
+V macOS by se sonda JLink měla rozpoznat automaticky.
 
-Nejsou potřeba žádné další kroky.
+Žádné další kroky nejsou potřeba.
 
 </TabItem>
 </Tabs>
 
 ## Debugování s rozšířením pro Visual Studio Code {#debugging-with-visual-studio-code-extension}
 
-Pokud jste se rozhodli používat vlastní **Visual Studio Code** s [**naším nainstalovaným rozšířením**](./tower-vscode-extension.md), musíte postupovat podle [**instalace JLink pro váš systém**](https://eclipse-embed-cdt.github.io/debug/jlink/install/).
+Pokud jste se rozhodli používat vlastní **Visual Studio Code** s [**naším rozšířením**](./tower-vscode-extension.md), nainstalujte JLink podle [**návodu pro svůj systém**](https://eclipse-embed-cdt.github.io/debug/jlink/install/).

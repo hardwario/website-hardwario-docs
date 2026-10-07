@@ -1,13 +1,13 @@
 ---
 slug: usb-interface
 title: Rozhraní USB
-description: Možnosti připojení přes USB pro HARDWARIO TOWER Core Module, Radio Dongle a Bridge Module.
+description: Možnosti připojení přes USB u modulů HARDWARIO TOWER Core Module a Bridge Module a u zařízení Radio Dongle.
 ---
 
 Chování USB závisí na tom, který modul TOWER je k hostiteli připojen:
 
-- [Core Module](../hardware-modules/about-core-module.md) používá svůj konektor Micro-USB pro napájení, komunikaci s hostitelem a programování firmwaru prostřednictvím zavaděče DFU.
-- [Radio Dongle](../hardware-modules/about-radio-dongle.md) připojuje počítač nebo bránu k sub-GHz rádiové síti TOWER přes USB.
-- [Bridge Module](../hardware-modules/about-bridge-module.md) zpřístupňuje podporovaná rozhraní modulů hostiteli USB prostřednictvím svého USB převodníku FT260.
+- Modul [Core Module](../hardware-modules/about-core-module.md) používá konektor Micro-USB k napájení, ke komunikaci s hostitelem a k nahrávání firmwaru přes zavaděč DFU.
+- Zařízení [Radio Dongle](../hardware-modules/about-radio-dongle.md) připojí počítač nebo bránu přes USB k rádiové síti TOWER v pásmu sub-GHz.
+- Modul [Bridge Module](../hardware-modules/about-bridge-module.md) zpřístupní hostiteli USB podporovaná rozhraní modulů přes převodník USB FT260.
 
-Postup pro práci na počítači najdete v kapitolách [instalace aplikace HARDWARIO Playground](../desktop-programming/playground-installation.md), [správa rádiové sítě](../desktop-programming/radio-network-management.md) a [nahrání firmwaru](../desktop-programming/firmware-flashing.md).
+Postup práce na počítači popisují kapitoly [Instalace aplikace HARDWARIO Playground](../desktop-programming/playground-installation.md), [Správa rádiové sítě](../desktop-programming/radio-network-management.md) a [Nahrání firmwaru](../desktop-programming/firmware-flashing.md).

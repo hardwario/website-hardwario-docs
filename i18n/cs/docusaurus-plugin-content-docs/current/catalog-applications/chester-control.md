@@ -6,147 +6,147 @@ import Image from '@theme/IdealImage';
 
 # CHESTER Control {#chester-control}
 
-Tento článek popisuje základní funkcionalitu, hardware a ukázkovou **JSON** zprávu katalogové aplikace **CHESTER Control**.
+Tento článek popisuje základní funkce katalogové aplikace **CHESTER Control**, její hardware a ukázkovou zprávu **JSON**.
 
 :::caution
 
-Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
+Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
 
-- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
+- [**Společné funkce**](common-functionality.md): jak fungují LED, tlačítko a nastavení sítě.
+- [**Konektivita platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
 ## Přehled aplikace {#application-overview}
 
-Aplikace **CHESTER Control** slouží k měření a sledování analogových a digitálních vstupů. Vzorkované analogové hodnoty se agregují, agregovaná měření se ukládají do bufferu a plánují k pozdějšímu přenosu v podobě bufferovaných dat společně s časovými značkami. Rovněž lze sledovat změny na digitálním vstupu (typ **trigger**) včetně typu změny a časové značky. Strategie bufferování umožňuje zaznamenat vyšší počet událostí při současné úspoře přenosového pásma a energie potřebné k přenosu dat.
+Aplikace **CHESTER Control** měří a sleduje analogové a digitální vstupy. Navzorkované analogové hodnoty agreguje, agregovaná měření ukládá do bufferu a později je odešle najednou i s časovými značkami. Na digitálním vstupu (typ **trigger**) navíc zaznamenává změny, jejich typ a časovou značku. Díky bufferování zaznamená více událostí a přitom šetří přenosové pásmo i energii potřebnou k přenosu dat.
 
-**CHESTER Control** má tyto čtyři vstupy:
+Zařízení **CHESTER Control** má tyto čtyři vstupy:
 
 | **Typ**  | **Kanál**   | **Svorka**   | **Typ vstupu**    | **Rozsah vstupu** | **Typické použití**                   |
 | :------- | :---------- | :----------- | :---------------- | :-------------- | :------------------------------------ |
-| Trigger  | CH1         | A2           | Digitální – NPN/PNP | 0 až 28 V      | Přepínač, tlačítko, relé, PLC senzor  |
-| Counter  | CH2         | A4           | Digitální – NPN/PNP | 0 až 28 V      | Pulzní výstupy měřičů energie (např. S0) |
-| Voltage  | CH3         | A5           | Analogový – napětí | 0 až 28 V       | Různé napěťové převodníky             |
-| Current  | CH4         | A7           | Analogový – proud | 0 až 24 mA      | Různé proudové převodníky             |
+| Trigger  | CH1         | A2           | Digitální (NPN/PNP) | 0 až 28 V      | Spínač, tlačítko, relé, senzor PLC    |
+| Counter  | CH2         | A4           | Digitální (NPN/PNP) | 0 až 28 V      | Impulzní výstupy měřičů energie (např. S0) |
+| Voltage  | CH3         | A5           | Analogový (napětí) | 0 až 28 V       | Různé napěťové převodníky             |
+| Current  | CH4         | A7           | Analogový (proud) | 0 až 24 mA      | Různé proudové převodníky             |
 
-Všechny tyto vstupy a jejich možnosti jsou podrobněji vysvětleny v článku [**Parametry a chování vstupů**](#input-parameters-and-behavior).
+Vstupy a jejich možnosti podrobně popisuje kapitola [**Parametry a chování vstupů**](#input-parameters-and-behavior).
 
-Navíc **CHESTER Control** umožňuje vzdálené řízení 4 digitálních výstupů (6–28 V).
+Zařízení **CHESTER Control** navíc umí na dálku ovládat 4 digitální výstupy (6–28 V).
 
 ## Varianty aplikace {#application-variants}
 
-**CHESTER Control** lze objednat v jedné z těchto variant:
+Zařízení **CHESTER Control** lze objednat v jedné z těchto variant:
 
 ### CHESTER Control {#chester-control}
 
-Katalogový hardware **CHESTER Control** se skládá z těchto objednacích kódů:
+Hardware katalogové aplikace **CHESTER Control** tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
 
 * `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
-* `CHESTER-X4:B`: Step-down + výstupy (4 kanály)
+* `CHESTER-X4:B`: Step-down měnič a výstupy (4 kanály)
 
-Více podrobností najdete v [**Objednacích kódech**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 ### CHESTER Control Z {#chester-control-z}
 
-Katalogový hardware **CHESTER Control Z** se skládá z těchto objednacích kódů:
+Hardware katalogové aplikace **CHESTER Control Z** tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
 
 * `CHESTER-X0B:A`: Vstupní modul (4 kanály)
 
-* `CHESTER-X4:B`: Step-down + výstupy (4 kanály)
+* `CHESTER-X4:B`: Step-down měnič a výstupy (4 kanály)
 
 * `CHESTER-Z1`: Záložní modul
 
-Více podrobností najdete v [**Objednacích kódech**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 ## Svorkovnice {#terminal-blocks}
 
-| CHESTER-X0B v levém slotu A – signály A1 – A8 | CHESTER-X4 v pravém slotu B – signály B1 – B8                                                |
+| CHESTER-X0B v levém slotu A (signály A1–A8) | CHESTER-X4 v pravém slotu B (signály B1–B8)                                                |
 | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Použijte vstupy **CH1** až **CH4** a **GND** | Použijte **VIN** a **GND** pro připojení externího napájení.                                 |
-|                                             | Použijte výstupy **CH1** až **CH4**, které při zapnutí výstupu přivádějí napětí z **VIN**    |
-| ![Pinout svorkovnice CHESTER-X0: VDD, CH1, GND, CH2, CH3, GND, CH4, +V](../../../../../chester/catalog-applications/../extension-modules/images/tb-chester-x0.png) | ![Pinout svorkovnice CHESTER-X4: GND, CH1, CH2, CH3, CH4, GND, GND, VIN](../../../../../chester/catalog-applications/../extension-modules/images/tb-chester-x4.png)                                                  |
+| Použijte vstupy **CH1** až **CH4** a **GND** | Externí napájení připojte na **VIN** a **GND**.                                              |
+|                                             | Použijte výstupy **CH1** až **CH4**; zapnutý výstup přivádí napětí z **VIN**                 |
+| ![Rozložení svorek CHESTER-X0: VDD, CH1, GND, CH2, CH3, GND, CH4, +V](../../../../../chester/catalog-applications/../extension-modules/images/tb-chester-x0.png) | ![Rozložení svorek CHESTER-X4: GND, CH1, CH2, CH3, CH4, GND, GND, VIN](../../../../../chester/catalog-applications/../extension-modules/images/tb-chester-x4.png)                                                  |
 
 ## Parametry a chování vstupů {#input-parameters-and-behavior}
 
-Schéma zapojení **CHESTER Control** najdete v [**popisu svorkovnice**](../extension-modules/chester-x0.md) rozšiřujícího modulu **CHESTER-X0**.
-Rozšiřující modul **CHESTER-X0** je nainstalován v levém slotu **A**, takže musíte použít odpovídající svorky **A1** až **A8**.
+Schéma zapojení zařízení **CHESTER Control** najdete v [**popisu svorkovnice**](../extension-modules/chester-x0.md) rozšiřujícího modulu **CHESTER-X0**.
+Rozšiřující modul **CHESTER-X0** je osazený v levém slotu **A**, takže použijte odpovídající svorky **A1** až **A8**.
 
 ### Trigger {#trigger}
 
-Vstup **trigger** lze připojit k výstupu PLC/senzoru (NPN/PNP), tlačítku, přepínači, relé apod. Chování vstupu **trigger** je konfigurovatelné.
+Vstup **trigger** lze připojit k výstupu PLC/senzoru (NPN/PNP), tlačítku, spínači, relé apod. Chování vstupu **trigger** lze nastavit.
 
-* Při změně vstupu se uloží časová značka události změny společně se stavem **active**/**inactive**, tato informace se uloží do bufferu a buffer událostí se odešle (nejpozději) s pravidelným reportem (parametr `interval-report`).
+* Při změně vstupu se do bufferu uloží časová značka změny spolu se stavem **active**/**inactive** a buffer událostí se odešle nejpozději s pravidelným hlášením (parametr `interval-report`).
 
-* Volitelně lze změny vstupu do stavu **active** (parametr `trigger-report-active`) nebo **inactive** (parametr `trigger-report-inactive`) reportovat **okamžitě** nebo s konfigurovatelným **zpožděním** (parametr `event-report-delay`), aby bylo možné zachytit více následných změn vstupu.
+* Změny vstupu do stavu **active** (parametr `trigger-report-active`) nebo **inactive** (parametr `trigger-report-inactive`) lze volitelně hlásit **okamžitě** nebo s nastavitelným **zpožděním** (parametr `event-report-delay`), aby se do hlášení vešlo i více změn krátce po sobě.
 
 * Podporovány jsou oba typy vstupní logiky, **NPN** i **PNP** (parametr `trigger-input-type`).
 
-* Minimální trvání úrovně se konfiguruje zvlášť pro stav **active** (parametr `trigger-duration-active`) a **inactive** (parametr `trigger-duration-inactive`).
+* Minimální trvání úrovně se nastavuje zvlášť pro stav **active** (parametr `trigger-duration-active`) a **inactive** (parametr `trigger-duration-inactive`).
 
-* Maximální počet reportů za hodinu je konfigurovatelný (parametr `event-report-rate`). Omezení počtu událostí limituje využití komunikačního pásma a prodlužuje životnost baterie.
+* Maximální počet hlášení za hodinu lze nastavit (parametr `event-report-rate`). Omezení počtu hlášení šetří komunikační pásmo a prodlužuje výdrž baterie.
 
 ### Counter {#counter}
 
-Vstup **counter** lze připojit k výstupu PLC/senzoru (NPN/PNP), tlačítku, přepínači, relé apod. Tento vstup počítá celkový počet pulzů v čase.
+Vstup **counter** lze připojit k výstupu PLC/senzoru (NPN/PNP), tlačítku, spínači, relé apod. Vstup průběžně počítá celkový počet impulzů.
 
-* Hodnota počítadla se periodicky agreguje (parametr `counter-interval-aggreg`) a buffer agregovaných měření se reportuje v konfigurovatelném intervalu (parametr `interval-report`).
+* Hodnota čítače se pravidelně agreguje (parametr `counter-interval-aggreg`) a buffer agregovaných měření se odesílá v nastavitelném intervalu (parametr `interval-report`).
 
 * Podporovány jsou oba typy vstupní logiky, **NPN** i **PNP** (parametr `counter-input-type`).
 
-* Minimální trvání úrovně se konfiguruje zvlášť pro stav **active** (parametr `counter-duration-active`) a **inactive** (parametr `counter-duration-inactive`).
+* Minimální trvání úrovně se nastavuje zvlášť pro stav **active** (parametr `counter-duration-active`) a **inactive** (parametr `counter-duration-inactive`).
 
 ### Voltage {#voltage}
 
 Vstup **voltage** měří napětí v rozsahu **0–28 V** (pokrývá standard **0–10 V**).
 
-* Hodnoty napětí se vzorkují periodicky (parametr `analog-interval-sample`). Tyto hodnoty se ukládají jako **buffer vzorků**.
+* Napětí se pravidelně vzorkuje (parametr `analog-interval-sample`) a naměřené hodnoty se ukládají do **bufferu vzorků**.
 
-* Nasbírané vzorky se periodicky **agregují** (parametr `analog-interval-aggreg`). Z bufferovaných vzorků se počítá minimum, maximum, průměr a medián. Tyto agregované výsledky se označují jako **měření**.
+* Nasbírané vzorky se pravidelně **agregují** (parametr `analog-interval-aggreg`). Ze vzorků v bufferu se spočítá minimum, maximum, průměr a medián. Těmto agregovaným výsledkům říkáme **měření**.
 
-* Každé **měření** má přiřazenou časovou značku. Bufferovaná **měření** se pravidelně přenášejí jako časové řady (parametr `interval-report`).
+* Každé **měření** má svou časovou značku. **Měření** z bufferu se pravidelně odesílají jako časové řady (parametr `interval-report`).
 
 ### Current {#current}
 
 Tento vstup měří analogový proud v rozsahu **0–24 mA** (pokrývá standard **4–20 mA**).
 
-* Hodnoty proudu se vzorkují periodicky (parametr `analog-interval-sample`). Tyto hodnoty se ukládají jako **buffer vzorků**.
+* Proud se pravidelně vzorkuje (parametr `analog-interval-sample`) a naměřené hodnoty se ukládají do **bufferu vzorků**.
 
-* Nasbírané vzorky se periodicky **agregují** (parametr `analog-interval-aggreg`). Z bufferovaných vzorků se počítá minimum, maximum, průměr a medián. Tyto agregované výsledky se označují jako **měření**.
+* Nasbírané vzorky se pravidelně **agregují** (parametr `analog-interval-aggreg`). Ze vzorků v bufferu se spočítá minimum, maximum, průměr a medián. Těmto agregovaným výsledkům říkáme **měření**.
 
-* Každé **měření** má přiřazenou časovou značku. Bufferovaná **měření** se pravidelně přenášejí jako časové řady (parametr `interval-report`).
+* Každé **měření** má svou časovou značku. **Měření** z bufferu se pravidelně odesílají jako časové řady (parametr `interval-report`).
 
-## Backup {#backup}
+## Záložní napájení {#backup}
 
-**CHESTER Control Z** (vybavený modulem **CHESTER-Z1**) může navíc reportovat informace o záložní baterii a stavu externího DC napájení.
+Zařízení **CHESTER Control Z** (s modulem **CHESTER-Z1**) navíc hlásí stav záložní baterie a externího napájení DC.
 
-* Aktuální **napětí baterie** a **externí DC napětí** se posílají v každém reportu.
+* Aktuální **napětí baterie** a **napětí externího zdroje DC** se posílají v každém hlášení.
 
-* Při změně DC napájecího vstupu se uloží časová značka události změny společně se stavem **connected**/**disconnected**, tato informace se uloží do bufferu a buffer událostí se odešle (nejpozději) s pravidelným reportem (parametr `interval-report`).
+* Při změně na napájecím vstupu DC se do bufferu uloží časová značka změny spolu se stavem **connected**/**disconnected** a buffer událostí se odešle nejpozději s pravidelným hlášením (parametr `interval-report`).
 
-* Volitelně lze změny DC napájecího vstupu do stavu **connected** (parametr `backup-report-connected`) nebo **disconnected** (parametr `backup-report-disconnected`) reportovat **okamžitě** nebo s konfigurovatelným **zpožděním** (parametr `event-report-delay`), aby bylo možné zachytit více následných změn vstupu.
+* Změny napájecího vstupu DC do stavu **connected** (parametr `backup-report-connected`) nebo **disconnected** (parametr `backup-report-disconnected`) lze volitelně hlásit **okamžitě** nebo s nastavitelným **zpožděním** (parametr `event-report-delay`), aby se do hlášení vešlo i více změn krátce po sobě.
 
-* Maximální počet reportů za hodinu je konfigurovatelný (parametr `event-report-rate`). Omezení počtu událostí limituje využití komunikačního pásma a prodlužuje životnost baterie.
+* Maximální počet hlášení za hodinu lze nastavit (parametr `event-report-rate`). Omezení počtu hlášení šetří komunikační pásmo a prodlužuje výdrž baterie.
 
-## Hygrometr {#hygrometer}
+## Vlhkoměr {#hygrometer}
 
-Volitelný hygrometr v aplikaci **CHESTER Control** představuje externí senzor teploty a vlhkosti.
+Volitelný vlhkoměr je v aplikaci **CHESTER Control** externí senzor teploty a vlhkosti.
 
-* Hodnoty se pravidelně vzorkují (parametr `hygro-interval-sample`). Tyto hodnoty se ukládají jako **buffer vzorků**.
+* Hodnoty se pravidelně vzorkují (parametr `hygro-interval-sample`) a ukládají do **bufferu vzorků**.
 
-* Nasbírané vzorky se periodicky **agregují** (parametr `hygro-interval-aggreg`). Z bufferovaných vzorků se počítá minimum, maximum, průměr a medián. Tyto agregované výsledky se označují jako **měření**.
+* Nasbírané vzorky se pravidelně **agregují** (parametr `hygro-interval-aggreg`). Ze vzorků v bufferu se spočítá minimum, maximum, průměr a medián. Těmto agregovaným výsledkům říkáme **měření**.
 
-* Každé **měření** má přiřazenou časovou značku. Bufferovaná **měření** se pravidelně přenášejí jako časové řady (parametr `interval-report`).
+* Každé **měření** má svou časovou značku. **Měření** z bufferu se pravidelně odesílají jako časové řady (parametr `interval-report`).
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná příkazem `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config interval-report 1800
@@ -176,21 +176,21 @@ app config w1-therm-interval-aggreg 300
 app config mode "lte"
 ```
 
-## Specifické příkazy {#specific-commands}
+## Příkazy aplikace {#specific-commands}
 
 :::info
 
-Celou strukturu příkazů můžete snadno prozkoumat – začněte příkazem `help`.
+Celou stromovou strukturu příkazů snadno prozkoumáte: začněte příkazem `help`.
 
 :::
 
-Tímto příkazem nastavíte **interval reportu** (v sekundách):
+Tímto příkazem nastavíte **interval hlášení** (v sekundách):
 
 ```
 app config interval-report <value>
 ```
 
-Tímto příkazem nastavíte krátké zpoždění (v sekundách) mezi událostí **trigger** nebo **backup** a jejím reportováním:
+Tímto příkazem nastavíte krátké zpoždění (v sekundách) mezi událostí **trigger** nebo **backup** a jejím nahlášením:
 
 ```
 app config event-report-delay <value>
@@ -202,7 +202,7 @@ Tato funkce je užitečná v systémech, kde může krátce po první změně p�
 
 :::
 
-Tímto příkazem omezíte počet asynchronních reportů událostí **trigger** nebo **backup** v jednohodinovém okně:
+Tímto příkazem omezíte počet asynchronních hlášení událostí **trigger** nebo **backup** za hodinu:
 
 ```
 app config event-report-rate <value>
@@ -210,25 +210,25 @@ app config event-report-rate <value>
 
 :::tip
 
-Tato funkce pomáhá šetřit energii u zařízení napájeného z baterie a optimalizuje množství přenášených dat. Pravidelné (periodické) reporty nastavené parametrem `interval-report` se do tohoto limitu nepočítají.
+Limit šetří baterii zařízení a snižuje objem přenášených dat. Pravidelná hlášení podle parametru `interval-report` se do něj nepočítají.
 
 :::
 
-Těmito příkazy zapnete/vypnete reportování událostí připojení/odpojení napájecího vstupu záložního modulu:
+Těmito příkazy zapnete nebo vypnete hlášení připojení a odpojení napájení na vstupu záložního modulu:
 
 ```
 app config backup-report-connected false
 app config backup-report-disconnected false
 ```
 
-Těmito příkazy nastavíte typ vstupu pro vstupy **trigger** a **counter**. Platné hodnoty jsou `npn` nebo `pnp`:
+Těmito příkazy nastavíte typ vstupů **trigger** a **counter**. Platné hodnoty jsou `npn` a `pnp`:
 
 ```
 app config trigger-input-type <npn/pnp>
 app config counter-input-type <npn/pnp>
 ```
 
-Těmito příkazy zapnete/vypnete okamžité reportování změny vstupu **trigger** na úroveň **active** nebo **inactive**:
+Těmito příkazy zapnete nebo vypnete okamžité hlášení změny vstupu **trigger** na úroveň **active** nebo **inactive**:
 
 ```
 app config trigger-report-active <true/false>
@@ -249,9 +249,9 @@ app config counter-cooldown-time <value>
 
 :::info
 
-- Parametr `duration-active` nastavuje zpoždění v milisekundách mezi změnou vstupního signálu na aktivní úroveň (podle konfigurace `npn` nebo `pnp`) a okamžikem, kdy na tuto změnu zařízení CHESTER zareaguje. Lze to použít k filtrování (debounce) vstupního signálu v případě, že je vstupní signál připojen k „elektricky rušivému“ mechanickému přepínači nebo relé. Lze to využít i tehdy, když má zařízení CHESTER reagovat na pulzy delší než nastavená doba.
+- Parametr `duration-active` nastavuje zpoždění v milisekundách mezi změnou vstupního signálu na aktivní úroveň (podle konfigurace `npn` nebo `pnp`) a okamžikem, kdy na tuto změnu zařízení CHESTER zareaguje. Hodí se k odfiltrování zákmitů (debounce), když je na vstup připojený „elektricky rušivý“ mechanický spínač nebo relé. Využijete ho i tehdy, když má zařízení CHESTER reagovat jen na impulzy delší než nastavená doba.
 - Parametr `duration-inactive` funguje stejně jako `duration-active` výše, jen nastavuje čas pro opačnou hranu.
-- Parametr `cooldown-time` je zpoždění chránící zařízení CHESTER před příliš velkým počtem příchozích přerušení. Pokud je připojen příliš rychlý signál (>10 kHz), mohla by obsluha přerušení spotřebovat veškerý procesorový čas a zastavit běh ostatních vláken. Tento parametr nastavuje malé zpoždění mezi opětovným spuštěním obsluhy přerušení. Zde lze použít výchozí hodnotu 10 ms.
+- Parametr `cooldown-time` je zpoždění, které chrání zařízení CHESTER před záplavou přerušení. Kdyby byl připojený příliš rychlý signál (>10 kHz), obsluha přerušení by mohla spotřebovat veškerý čas procesoru a zastavit běh ostatních vláken. Parametr proto vkládá krátkou prodlevu před dalším spuštěním obsluhy přerušení. Lze ponechat výchozí hodnotu 10 ms.
 
 
 :::
@@ -263,7 +263,7 @@ app config analog-interval-sample <value>
 app config analog-interval-aggreg <value>
 ```
 
-Těmito příkazy nastavíte intervaly **vzorkování** a **agregace** (v sekundách) pro volitelný **hygrometr** (příslušenství **CHESTER-S2**):
+Těmito příkazy nastavíte intervaly **vzorkování** a **agregace** (v sekundách) pro volitelný **vlhkoměr** (příslušenství **CHESTER-S2**):
 
 ```
 app config hygro-interval-sample <value>
@@ -272,9 +272,9 @@ app config hygro-interval-aggreg <value>
 
 ## Řízení výstupů {#output-control}
 
-Podívejte se prosím do dokumentace Cloudu, konkrétně na [Downlink data](/cloud/downlink) a [API příklady](/cloud/downlink).
+Podrobnosti najdete v dokumentaci HARDWARIO Cloud, konkrétně v kapitolách o [datech v downlinku](/cloud/downlink) a [příkladech API](/cloud/downlink).
 
-Výstupy řídíte odesláním tohoto JSON na API endpoint Cloudu (`https://api.prod.hardwario.cloud/v2/messages`) nebo v HARDWARIO Cloud, kde přejdete na zprávy zařízení a kliknete na „Create new downlink message“
+Výstupy ovládáte tak, že tento JSON odešlete na endpoint API cloudu (`https://api.prod.hardwario.cloud/v2/messages`), nebo v HARDWARIO Cloud otevřete zprávy zařízení a kliknete na „Create new downlink message“.
 
 ```
 {
@@ -285,12 +285,12 @@ Výstupy řídíte odesláním tohoto JSON na API endpoint Cloudu (`https://api.
 }
 ```
 
-JSON nemusí obsahovat stav všech čtyř výstupů. Posíláte pouze `output_X_state` pro výstupy, které se mají změnit.
+JSON nemusí obsahovat stav všech čtyř výstupů, stačí poslat `output_X_state` jen pro výstupy, které chcete změnit.
 
-Zařízení se dotazuje Cloudu v intervalu nastaveném parametrem `interval-poll`, a pokud je ve frontě Cloudu nová řídicí downlink zpráva, je odeslána do zařízení a výstup nebo více výstupů se změní.
+Zařízení se v intervalu daném parametrem `interval-poll` dotazuje cloudu. Pokud ve frontě čeká nová řídicí zpráva downlink, cloud ji předá zařízení, které podle ní přepne jeden nebo více výstupů.
 
 
-## Ukázková JSON zpráva {#example-json-message}
+## Ukázková zpráva JSON {#example-json-message}
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -474,19 +474,19 @@ import TabItem from '@theme/TabItem';
 
 ### v4.0.0 – 2026-08-10 {#v400--2026-08-10}
 
-- **Změněno**: Snížena maximální kapacita teploměrů 1-Wire (10 → 5) a kapacita půdních senzorů (10 → 3) pro snížení využití RAM
+- **Změněno**: Snížen maximální počet teploměrů 1-Wire (10 → 5) a půdních senzorů (10 → 3) kvůli nižšímu využití RAM
 
 ### v3.5.5 – 2026-06-22 {#v355--2026-06-22}
 
-- **Změněno**: Zmenšena paměťová náročnost: data půdních senzorů a teploměrů se nyní alokují dynamicky
+- **Změněno**: Snížena paměťová náročnost: data půdních senzorů a teploměrů se nyní alokují dynamicky
 
 ### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Podpora LoRaWAN: jediný firmware binárka pro LTE i LoRaWAN; režim se volí pomocí `app config mode lte` / `app config mode lrw`
+- **Přidáno**: Podpora LoRaWAN: jediný binární soubor firmwaru pro LTE i LoRaWAN; režim se volí příkazem `app config mode lte` / `app config mode lrw`
 - **Přidáno**: Interval downlink watchdogu (`downlink-wdg-interval`) pro detekci ztráty komunikace s cloudem
-- **Přidáno**: Konfigurovatelný interval dotazování (`interval-poll`) pro frekvenci dotazování cloudu
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); předchozí firmware pro Cloud v1 zůstává samostatně dostupný
-- **Změněno**: Režimy kanálů jsou nyní explicitně konfigurovatelné pro každý kanál (`channel-mode-1` až `channel-mode-4`)
+- **Přidáno**: Nastavitelný interval dotazování cloudu (`interval-poll`)
+- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud v1 zůstává samostatně dostupný
+- **Změněno**: Režim lze nyní nastavit zvlášť pro každý kanál (`channel-mode-1` až `channel-mode-4`)
 
 :::info
 

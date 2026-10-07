@@ -13,24 +13,24 @@ Otevřete **CHESTER → Tools → Firmware update**.
 <img src="/img/hw-manager/hw-manager-chester-firmware-update.png" alt="Obrazovka Firmware update s pokyny a tlačítkem Scan firmware QR" width="320" />
 
 :::info Firmware pochází z QR kódu
-Obrazovka aktualizace bere image z **QR kódu nesoucího odkaz na firmware**.
-Žádný katalog k prohlížení, žádná adresa k opsání, žádný výběr souboru. Ten QR
-kód dostanete se svým vlastním sestavením, nebo ho najdete u
-[**předpřipravených binárních souborů**](/chester/catalog-applications/catalog-applications#application-firmware)
+Obrazovka aktualizace načítá image z **QR kódu s odkazem na firmware**.
+Nenajdete tu katalog, pole pro adresu ani výběr souboru. Tento QR kód dostanete
+se svým vlastním sestavením, nebo ho najdete u
+[**hotových binárních souborů**](/chester/catalog-applications/catalog-applications#application-firmware)
 katalogových aplikací.
 :::
 
 ---
 
-## Průběh aktualizace {#run-the-update}
+## Spuštění aktualizace {#run-the-update}
 
 1. Zvolte **Scan firmware QR** a namiřte kameru na kód.
 2. Aplikace image stáhne: **Downloading firmware…**
-3. Zkontrolujte souhrn: název souboru, jeho **velikost** a jeho digest
-   **SHA-256**. Pokud to není, co jste čekali, použijte **Scan a different firmware**.
+3. Zkontrolujte souhrn: název souboru, **velikost** a otisk **SHA-256**. Pokud
+   to není firmware, který jste čekali, zvolte **Scan a different firmware**.
 4. Zvolte **Start update**.
 
-Aktualizace pak projde svými fázemi, s ukazatelem průběhu:
+Aktualizace pak projde těmito fázemi a ukazatel zobrazuje její průběh:
 
 | Fáze | Co se děje |
 |---|---|
@@ -38,15 +38,15 @@ Aktualizace pak projde svými fázemi, s ukazatelem průběhu:
 | **Uploading… _n_%** | Přenáší se image |
 | **Testing the new image…** | Zařízení kontroluje přijatý image |
 | **Rebooting the device…** | Zařízení se restartuje do nového firmwaru |
-| **Confirming the new image…** | Nový firmware se označí jako dobrý |
+| **Confirming the new image…** | Nový firmware se označí jako funkční |
 | **Done** | |
 
-Po dokončení aplikace potvrdí, že se zařízení restartuje s novým firmwarem, což
-může chvíli trvat.
+Po dokončení aplikace oznámí, že se zařízení restartuje s novým firmwarem a může
+chvíli trvat, než bude znovu dostupné.
 
 :::caution Nechte aplikaci otevřenou a zařízení napájené
-Během aktualizace nemůžete z obrazovky odejít. Držte telefon blízko zařízení a
-obojí napájené, dokud aktualizace neskončí.
+Během aktualizace nemůžete z obrazovky odejít. Dokud aktualizace neskončí, nechte
+telefon blízko zařízení a oba přístroje napájené.
 :::
 
 ---
@@ -54,26 +54,26 @@ obojí napájené, dokud aktualizace neskončí.
 ## Když aktualizace selže {#if-it-fails}
 
 Nezdařená aktualizace je bezpečná. Image se potvrdí až poté, co se zařízení
-restartuje a image otestuje, takže zařízení, které selže v polovině, **nabootuje do
-předchozího firmwaru**.
+restartuje a image otestuje, takže když aktualizace selže uprostřed, zařízení
+**naběhne s předchozím firmwarem**.
 
-Aplikace řekne, která fáze selhala, protože z toho vyplývá další postup:
+Aplikace uvede, ve které fázi aktualizace selhala, protože na tom závisí další postup:
 
 | Kdy selhala | Co to znamená |
 |---|---|
-| Před validací nebo během ní | Aktualizace vůbec nezačala. Zkuste to znovu. |
-| Během nahrávání | Přenos se zastavil před dokončením. Zařízení si drží současný firmware. Opakování je bezpečné. |
+| Před kontrolou nebo během ní | Aktualizace vůbec nezačala. Zkuste to znovu. |
+| Během nahrávání | Přenos se zastavil před dokončením. Zařízení si ponechá současný firmware. Pokus můžete bezpečně zopakovat. |
 | Po nahrání | Zařízení se při dalším restartu vrátí k předchozímu firmwaru. Připojte se znovu a před dalším pokusem zkontrolujte jeho verzi. |
 
-Pokud aktualizace přestane odpovídat (90 sekund bez postupu), aplikace ji přeruší
-a řekne vám to. Obvykle zařízení přišlo o napájení nebo vypadlo z dosahu.
+Pokud se aktualizace zasekne (90 sekund bez postupu), aplikace ji přeruší
+a oznámí vám to. Obvykle zařízení přišlo o napájení nebo se dostalo mimo dosah.
 
-Další zprávy, které můžete vidět:
+Další hlášení, se kterými se můžete setkat:
 
 - **The device refused the firmware image**: image není pro tento hardware
-  platný. Zkontrolujte, že QR kód míří na firmware pro tuto variantu zařízení
+  platný. Zkontrolujte, že QR kód odkazuje na firmware pro tuto variantu zařízení
   CHESTER.
-- **The device has no room for the image**: restartujte ho a zkuste to znovu.
-- **The downloaded firmware file is empty**: QR kód nemíří na platný image.
+- **The device has no room for the image**: zařízení restartujte a zkuste to znovu.
+- **The downloaded firmware file is empty**: QR kód neodkazuje na platný image.
 
 Problémy s připojením popisuje stránka [**Řešení problémů**](./troubleshooting.md).

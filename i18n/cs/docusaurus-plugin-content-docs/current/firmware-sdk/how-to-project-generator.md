@@ -6,11 +6,11 @@ import Image from '@theme/IdealImage';
 
 # Jak na: Project Generator {#how-to-project-generator}
 
-**CHESTER SDK Project Generator** zjednodušuje konfiguraci projektu tím, že poskytuje strukturovaný přístup k jeho nastavení, celý založený na konfiguraci **YAML**.
+**CHESTER SDK Project Generator** zjednodušuje konfiguraci projektu: celé nastavení projektu popíšete strukturovaně v konfiguraci **YAML**.
 
-Používá se také ke generování různých **variant** katalogových aplikací. Různé varianty najdete v souborech `project.yaml`.
+Používá se také ke generování různých **variant** katalogových aplikací. Jednotlivé varianty najdete v souborech `project.yaml`.
 
-Poté zavoláte `west chester-update --variant "CHESTER Clime 1W"` pro aktualizaci souborů projektu a následně `west build` pro rekompilaci projektu.
+Soubory projektu pak aktualizujete příkazem `west chester-update --variant "CHESTER Clime 1W"` a projekt znovu zkompilujete příkazem `west build`.
 
 ## Příkaz WEST {#west-command}
 
@@ -30,21 +30,21 @@ Příklady:
 
 :::tip
 
-  Po jakékoli změně v `project.yaml` lze tento příkaz zavolat a aktualizovat projekt novými změnami.
+  Po každé změně v `project.yaml` můžete tímto příkazem projekt aktualizovat.
 
 :::
 
 :::info
 
-  Všechny příkazy lze spustit bez zadání `<name>`, pokud už se nacházíte ve složce projektu, s výjimkou příkazu `west chester-init`.
+  Pokud jste už ve složce projektu, můžete všechny příkazy kromě `west chester-init` spouštět bez parametru `<name>`.
 
 :::
 
 ## ** Project YAML ** {#project-yaml}
 
-Konfigurační soubor `project.yaml` je základním kamenem pro nastavení a přizpůsobení vašeho projektu.
+Konfigurační soubor `project.yaml` je základem nastavení a přizpůsobení projektu.
 
-Tento kompletní návod popisuje krok za krokem, jak projekt efektivně nakonfigurovat pomocí uvedené struktury YAML.
+Následující návod krok za krokem popisuje, jak projekt nakonfigurovat pomocí uvedené struktury YAML.
 
 ### Informace o projektu {#project-information}
 
@@ -58,7 +58,7 @@ project:
     fw_bundle: com.hardwario.chester.example
     fw_version: v1.0.0
 ```
-Varianta je navíc zahrnuta v `Kconfig.variant`, například:
+Varianta se navíc promítne do `Kconfig.variant`, například:
 ```c
 config VARIANT_<VARIANT-NAME>
     bool "Enable VARIANT_<VARIANT-NAME>"
@@ -72,11 +72,11 @@ V projektu ji lze použít takto:
 ```
 ### Specifikace funkcí {#feature-specification}
 
-Tato část popisuje dostupné funkce nebo subsystémy, které lze zahrnout do konfigurace projektu. Každá funkce představuje konkrétní funkcionalitu nebo komponentu, kterou je možné do projektu integrovat.
+Tato část popisuje dostupné funkce a subsystémy, které můžete zahrnout do konfigurace projektu. Každá funkce představuje konkrétní schopnost nebo komponentu, kterou lze do projektu začlenit.
 
 #### Funkce subsystémů {#subsystem-features}
 
-Označení `subsystem-` odkazuje na funkční modul nebo komponentu v rámci softwarové architektury. Příklad:
+Předpona `subsystem-` označuje funkční modul nebo komponentu softwarové architektury. Příklad:
 ```yaml
 features:
 - subsystem-bluetooth
@@ -133,7 +133,7 @@ features:
 
 #### Hardwarové funkce CHESTER {#hardware-chester-feature}
 
-Označení `hardware-chester-` odkazuje na konkrétní hardwarovou komponentu nebo zařízení v hardwarovém ekosystému projektu. Příklad:
+Předpona `hardware-chester-` označuje konkrétní hardwarovou komponentu nebo zařízení z hardwarového ekosystému projektu. Příklad:
 ```yaml
 features:
 - hardware-chester-z
@@ -141,14 +141,14 @@ features:
 
 #### Vlastní funkce {#custom-feature}
 
-Označuje funkci, kterou si zákazník může přidat podle konkrétních požadavků. Příklad:
+Funkce, kterou si zákazník přidá podle svých konkrétních požadavků. Příklad:
 ```yaml
 features:
 - custom-x
 - custom-y
 ```
 
-Tyto funkce zapnou potřebné konfigurace v: `app.overlay`, `Kconfig`, `prj.conf`. Kromě toho jsou zahrnuty i v `features.h` s předřazeným `FEATURE_*`, například:
+Tyto funkce zapnou potřebná nastavení v souborech `app.overlay`, `Kconfig` a `prj.conf`. Navíc se objeví v `features.h` s předponou `FEATURE_*`, například:
 ```c
 #define FEATURE_SUBSYSTEM_BLE 1
 #define FEATURE_HARDWARE_CHESTER_Z 1
@@ -156,10 +156,10 @@ Tyto funkce zapnou potřebné konfigurace v: `app.overlay`, `Kconfig`, `prj.conf
 #define FEATURE_CUSTOM_Y 1
 ```
 
-Soubor `features.h` je při kompilaci vkládán automaticky a není potřeba ho nikde vkládat pomocí `#include`.
+Soubor `features.h` se při kompilaci vkládá automaticky, takže ho nikde nemusíte vkládat direktivou `#include`.
 
 #### Konfigurační volby {#config-options}
-Každá konfigurační volba umožňuje nastavení konkrétních parametrů, což poskytuje přesnou kontrolu a přizpůsobení chování aplikace. Ty jsou následně generovány do `app_config.c` a `app_config.h`.
+Konfiguračními volbami nastavujete konkrétní parametry a můžete tak přesně řídit a přizpůsobit chování aplikace. Volby se pak vygenerují do `app_config.c` a `app_config.h`.
 
 - **Typ: int**
 
@@ -292,7 +292,7 @@ struct app_config {
 
 :::info
 
-V konfiguračních souborech aplikace (`app_config.c` a `app_config.h`) je valueset přiřazen k indexům enum-name.
+V konfiguračních souborech aplikace (`app_config.c` a `app_config.h`) je valueset přiřazený k indexům enum-name.
 
 :::
 
@@ -315,7 +315,7 @@ parameters:
 
 :::info
 
-Sekce `related` určuje proměnné enum přiřazené k parametru enum-name. Tyto proměnné (trigger, counter atd.) používají stejné hodnoty enum (npn, pnp atd.) a poskytují pro každou proměnnou vlastní výchozí hodnoty a texty nápovědy.
+Sekce `related` určuje proměnné typu enum, které patří k parametru enum-name. Tyto proměnné (trigger, counter atd.) sdílejí stejné hodnoty enum (npn, pnp atd.) a každá má vlastní výchozí hodnotu a text nápovědy.
 :::
 
 V `app_config.c`:
@@ -334,7 +334,7 @@ struct app_config {
 ```
 
 ### Deklarace příkazů {#commands-declaration}
-Příkazy definují konkrétní akce, které lze spustit v prostředí shellu projektu. Příkazy se přidávají do `app_shell.c`. Příklad:
+Příkazy definují konkrétní akce, které lze spouštět v shellu projektu. Přidávají se do `app_shell.c`. Příklad:
 ```yaml
 commands:
 - name: sample  # Name separated by '-'
@@ -342,7 +342,7 @@ commands:
   help: 'Sample immediately.'
 ```
 ### `depends_on` u funkcí a příkazů {#features-and-commands-dependson}
-Po spuštění **Project Generatoru** se na základě vybrané **varianty** a **funkcí** vygenerují soubory `features.h` a `variants.h`. To umožňuje přidat závislosti k jakémukoli parametru nebo příkazu pomocí řádků jako:
+Po spuštění nástroje **Project Generator** se podle vybrané **varianty** a **funkcí** vygenerují soubory `features.h` a `variants.h`. Díky nim můžete k libovolnému parametru nebo příkazu přidat závislosti řádky jako:
 ```yaml
 depends_on: defined(FEATURE_<feature_name>)`
 ```
@@ -353,7 +353,7 @@ depends_on: defined(VARIANT_<variant_name>)`
 
 :::tip
 
-Chcete-li zahrnout více závislostí, můžete navíc použít logické operátory **&& (AND)** a **|| (OR)**.
+Více závislostí můžete kombinovat logickými operátory **&& (AND)** a **|| (OR)**.
 
 :::
 
@@ -400,9 +400,9 @@ struct app_config {
 };
 ```
 ### Deklarace extras {#extras-declaration}
-Tyto extras se používají tehdy, když jsou v souboru `prj.conf` potřeba nevýchozí konfigurace **funkcí**.
+Sekce extras se používá, když v souboru `prj.conf` potřebujete jiné než výchozí nastavení **funkcí**.
 
-Pokud se požadavky projektu odchylují od výchozích konfigurací **funkcí** poskytovaných podkladovými knihovnami či frameworky, využijí se právě tyto extras. Umožňují zákazníkům jemně doladit konfiguraci projektu a pokrýt specifické potřeby, které výchozí nastavení neřeší.
+Když se požadavky projektu liší od výchozího nastavení **funkcí** v použitých knihovnách či frameworcích, použijí se právě extras. Zákazníci jimi mohou konfiguraci projektu jemně doladit pro potřeby, které výchozí nastavení nepokrývá.
 
 Příklad v `prj.conf`:
 ```yaml
@@ -414,7 +414,7 @@ extras:
 ```
 ### Zachované bloky kódu {#preserved-code-blocks}
 
-V rámci této kódové báze jsou zachované bloky kódu úseky kódu určené k tomu, aby zůstaly nezměněné při generování nebo aktualizaci souborů. Tyto bloky se označují speciálními komentářovými značkami:
+Zachované bloky kódu jsou úseky, které při generování nebo aktualizaci souborů zůstanou beze změny. Označují se speciálními značkami v komentářích:
 ```c
 /* ### Preserved code "block-name" (begin) */
 // Preserved code content
@@ -423,7 +423,7 @@ V rámci této kódové báze jsou zachované bloky kódu úseky kódu určené 
 
 :::info
 
-Jakýkoli kód uzavřený mezi těmito značkami bude zachován bez úprav, což vývojářům umožňuje udržovat vlastní nebo kritické části v generovaných souborech.
+Kód mezi těmito značkami zůstane beze změny, takže si vývojáři mohou v generovaných souborech ponechat vlastní nebo kritické části.
 
 :::
 

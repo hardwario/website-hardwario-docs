@@ -12,11 +12,11 @@ Každou změnu konfigurace je nutné potvrdit příkazem `config save`, který n
 
 ---
 
-## Krok 1 - Volba režimu rádia {#step-1---select-the-radio-mode}
+## Krok 1: Zvolte režim rádia {#step-1---select-the-radio-mode}
 
-Některé katalogové firmwary umí použít buď mobilní síť (NB-IoT/LTE-M), nebo síť LoRaWAN. Po zapnutí takový firmware **neodesílá** žádná data, **LED bliká žlutě** a je potřeba nejprve zvolit režim rádia.
+Firmware některých katalogových aplikací umí používat buď mobilní síť (NB-IoT/LTE-M), nebo síť LoRaWAN. Po zapnutí takový firmware **neodesílá** žádná data, **LED bliká žlutě** a je potřeba nejprve zvolit režim rádia.
 
-Výchozí stav je, že zařízení **nepoužívá žádné rádio** (režim `none`), takže tento krok je povinný u následujících katalogových aplikací:
+Ve výchozím stavu zařízení **nepoužívá žádné rádio** (režim `none`), proto je tento krok u následujících katalogových aplikací povinný:
 
 - [CHESTER Clime](/chester/catalog-applications/chester-clime)
 - [CHESTER Control](/chester/catalog-applications/chester-control)
@@ -46,9 +46,9 @@ Zařízení se restartuje a začne používat zvolenou síť.
 
 ---
 
-## Krok 2 - Použijte nastavení pro svou SIM kartu {#step-2---apply-the-settings-for-your-sim-card}
+## Krok 2: Použijte nastavení pro svou SIM kartu {#step-2---apply-the-settings-for-your-sim-card}
 
-Vyberte sekci odpovídající vaší SIM kartě. Pokud je parametr ponechán **prázdný**, zařízení provede **automatickou konfiguraci** podle dostupného hardwaru a prostředí sítě.
+Vyberte část, která odpovídá vaší SIM kartě. Pokud parametr necháte **prázdný**, zařízení se **nakonfiguruje automaticky** podle dostupného hardwaru a síťového prostředí.
 
 ### SIM karta Vodafone {#vodafone-sim-card}
 
@@ -104,7 +104,7 @@ lte config modemtrace false
 | Slovak Telekom         | nbiot.telekom.sk |
 | Mobily Saudi Arabia    | M2M-NB           |
 
-Pokud váš poskytovatel není v seznamu, zjistěte u něj APN a to, zda je vyžadována autentizace APN. Kapitola [**Požadavky na síť**](network-requirements.md) obsahuje kontrolní seznam, který mu můžete přímo předat.
+Pokud váš poskytovatel není v seznamu, zjistěte u něj APN a jestli vyžaduje autentizaci APN. Kapitola [**Požadavky na síť**](network-requirements.md) obsahuje kontrolní seznam, který mu můžete přímo předat.
 
 Nezapomeňte konfiguraci uložit:
 
@@ -116,14 +116,14 @@ config save
 
 ## Otestované SIM karty a operátoři {#tested-sim-cards-and-operators}
 
-Níže uvedené kombinace byly ověřeny společností **HARDWARIO** v provozu. Seznam průběžně doplňujeme o další operátory, jakmile je uvedeme do provozu. Pokud tu váš operátor není, neznamená to, že zařízení nebude fungovat, jen jsme to sami neověřili.
+Následující kombinace jsme v **HARDWARIO** ověřili v terénu. Seznam průběžně doplňujeme o další operátory, jakmile je uvedeme do provozu. Pokud tu váš operátor není, neznamená to, že zařízení nebude fungovat, jen jsme to sami neověřili.
 
 {/* Growth table: add a row for every newly validated operator / SIM card variant. Keep the Status column honest - only mark a row as verified once it has actually run in the field. */}
 
 | SIM karta / operátor | Pokrytí | Technologie | APN | Poznámky |
 | :------------------ | :------- | :--------- | :-- | :---- |
-| **Vodafone** (HARDWARIO) | Evropa + roamingoví partneři po celém světě | NB-IoT, LTE-M | `hardwario` | PLMN ID a APN pro jednotlivé země jsou uvedeny v [**Vodafone SIM EU28+2**](vodafone-coverage.md). |
-| **1NCE** (HARDWARIO) | Neevropské země | NB-IoT, LTE-M | `iot.1nce.net` | Doporučeno mimo Evropu. |
+| **Vodafone** (HARDWARIO) | Evropa + roamingoví partneři po celém světě | NB-IoT, LTE-M | `hardwario` | PLMN ID a APN pro jednotlivé země najdete v tabulce [**Vodafone SIM EU28+2**](vodafone-coverage.md). |
+| **1NCE** (HARDWARIO) | Mimoevropské země | NB-IoT, LTE-M | `iot.1nce.net` | Doporučeno mimo Evropu. |
 | **Vodafone United Kingdom** | Velká Británie | NB-IoT | `hardwario` | Roaming do sítě Vodafone UK, PLMN `23415`. |
 | **Onomondo** | Více operátorů | NB-IoT, LTE-M | `onomondo` | APN potvrzeno, není potřeba uzamčení pásma ani PLMN. |
 | **Slovak Telekom** | Slovensko | NB-IoT | `nbiot.telekom.sk` | |
@@ -132,42 +132,42 @@ Níže uvedené kombinace byly ověřeny společností **HARDWARIO** v provozu. 
 
 :::note
 
-Roamingoví partneři a sdílené sítě se v čase mění, takže funkční kombinace může přestat fungovat bez jakékoli změny na zařízení. Pokud se dříve funkční nasazení přestane registrovat, proveďte na místě [**sken sítě**](diagnostics.md#list-available-networks) před tím, než začnete měnit konfiguraci.
+Roamingoví partneři a sdílené sítě se časem mění, takže kombinace, která fungovala, může přestat fungovat, aniž by se na zařízení cokoli změnilo. Pokud se dříve funkční zařízení přestane registrovat, udělejte na místě nejdřív [**sken sítí**](diagnostics.md#list-available-networks) a teprve potom měňte konfiguraci.
 
 :::
 
 ---
 
-## Krok 3 - Ověřte svá nastavení {#step-3---verify-your-settings}
+## Krok 3: Ověřte nastavení {#step-3---verify-your-settings}
 
-Zobrazení aktuální konfigurace:
+Zobrazte aktuální konfiguraci:
 
 ```
 lte config show
 ```
 
-Dotaz na stav registrace LTE:
+Zjistěte stav registrace LTE:
 
 ```
 lte state
 ```
 
-Přečtení IMSI (International Mobile Subscriber Identity) SIM karty. Funguje i tehdy, když zařízení **CHESTER** není připojeno k síti:
+Přečtěte IMSI (International Mobile Subscriber Identity) SIM karty. Funguje to i tehdy, když zařízení **CHESTER** není připojené k síti:
 
 ```
 lte imsi
 ```
 
-Přečtení ICCID (Integrated Circuit Card Identifier):
+Přečtěte ICCID (Integrated Circuit Card Identifier):
 
 ```
 lte iccid
 ```
 
-Přečtení IMEI zařízení (International Mobile Equipment Identity):
+Přečtěte IMEI zařízení (International Mobile Equipment Identity):
 
 ```
 lte imei
 ```
 
-Pokud se zařízení nedostane do registrovaného stavu, pokračujte kapitolou [**Diagnostika a řešení problémů**](diagnostics.md).
+Pokud se zařízení nezaregistruje do sítě, pokračujte kapitolou [**Diagnostika a řešení problémů**](diagnostics.md).

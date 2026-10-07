@@ -1,18 +1,18 @@
 ---
 slug: lte-modem-over-j-link
-title: LTE modem přes J-Link
+title: Modem LTE přes J-Link
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# LTE modem přes J-Link {#lte-modem-over-j-link}
+# Modem LTE přes J-Link {#lte-modem-over-j-link}
 
-Tento článek popisuje, jak nahrát firmware LTE modemu v zařízení **CHESTER** pomocí **SEGGER J-Link**.
+Tento článek popisuje, jak nahrát firmware modemu LTE v zařízení **CHESTER** programátorem **SEGGER J-Link**.
 
 ## Požadavky {#requirements}
 
-Budete potřebovat následující hardwarové a softwarové nástroje:
+Budete potřebovat tento hardware a software:
 
 * Jeden z těchto operačních systémů:
 
@@ -20,13 +20,13 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
   * **macOS** verze 15 (s nainstalovaným Homebrew)
   * **Windows** verze 11
 
-* Distribuci **Python 3** nainstalovanou ve vašem systému:
+* Nainstalovaný **Python 3**:
 
   <Tabs groupId="operating-system">
 
   <TabItem value="ubuntu" label="Ubuntu" default>
 
-  Spusťte tento příkaz v aplikaci **Terminal**:
+  Spusťte tento příkaz v aplikaci **Terminál**:
 
   ```
   sudo apt install python3
@@ -36,7 +36,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
   <TabItem value="macos" label="macOS">
 
-  Spusťte tento příkaz v aplikaci **Terminal**:
+  Spusťte tento příkaz v aplikaci **Terminál**:
 
   ```
   brew install python3
@@ -50,7 +50,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
   :::caution
 
-  Zajistěte, aby instalátor pro Windows mohl upravit proměnnou `PATH`, aby byl spustitelný soubor **Python** dostupný odkudkoli.
+  Povolte instalátoru úpravu proměnné `PATH`, aby byl **Python** dostupný z libovolného adresáře.
 
   :::
 
@@ -58,13 +58,13 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
   </Tabs>
 
-* Zařízení **CHESTER** (budete muset otevřít horní kryt krabičky se šesti šrouby)
+* Zařízení **CHESTER** (bude potřeba otevřít horní kryt krabičky, který drží šest šroubů)
 
-* USB debugger/programátor **SEGGER J-Link** (včetně 10pinového adaptéru **SWD** + plochého kabelu)
+* USB debugger/programátor **SEGGER J-Link** (včetně 10pinového adaptéru **SWD** a plochého kabelu)
 
   :::tip
 
-  **HARDWARIO** dodává J-Link + veškeré potřebné příslušenství na vyžádání.
+  **HARDWARIO** na požádání dodá J-Link i veškeré potřebné příslušenství.
 
   :::
 
@@ -72,11 +72,11 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
   :::danger
 
-  Některé kabely Micro-USB poskytují pouze napájení a žádné datové signály. Pokud spojení mezi J-Link a vaším systémem nefunguje, zkontrolujte v první řadě typ kabelu.
+  Některé kabely Micro-USB vedou jen napájení, a ne data. Pokud spojení mezi programátorem J-Link a počítačem nefunguje, zkontrolujte nejdřív kabel.
 
   :::
 
-* Balík aplikací v Pythonu **HARDWARIO Command Line Tools**
+* Sada nástrojů **HARDWARIO Command Line Tools** pro Python
 
 ## Instalace {#installation}
 
@@ -88,15 +88,15 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
    * Stáhněte [32bitový instalátor Intel/AMD](https://www.segger.com/downloads/jlink/JLink_Windows.exe)
    * Stáhněte [64bitový instalátor ARM](https://www.segger.com/downloads/jlink/JLink_Windows_arm64.exe)
 
-1. Otevřete aplikaci **Terminal** (Ubuntu nebo macOS) nebo **Command Prompt** (Windows).
+1. Otevřete aplikaci **Terminál** (Ubuntu nebo macOS) nebo **Příkazový řádek** (Windows).
 
-1. Inicializujte virtuální prostředí **Python**:
+1. Vytvořte virtuální prostředí pro **Python**:
 
    ```
    python3 -m venv hardwario-venv
    ```
 
-1. Aktivujte virtuální prostředí **Python**:
+1. Aktivujte virtuální prostředí pro **Python**:
 
    <Tabs groupId="operating-system">
 
@@ -128,7 +128,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
    :::caution
 
-   Když zavřete **Terminal** nebo **Command Prompt**, musíte virtuální prostředí **Python** znovu aktivovat. Jednoduše zopakujte příslušný příkaz pro danou platformu výše.
+   Když zavřete **Terminál** nebo **Příkazový řádek**, musíte virtuální prostředí pro **Python** znovu aktivovat. Stačí zopakovat příkaz pro svou platformu uvedený výše.
 
    :::
 
@@ -138,13 +138,13 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
    pip install hardwario
    ```
 
-1. Instalaci můžete ověřit následujícím příkazem:
+1. Instalaci ověříte tímto příkazem:
 
    ```
    hardwario --version
    ```
 
-   Měl by vypsat výstup podobný tomuto:
+   Výstup by měl vypadat přibližně takto:
 
    ```
    hardwario.chester v1.19.0
@@ -163,19 +163,19 @@ Chcete-li do zařízení **CHESTER** nahrát firmware modemu LTE, postupujte tak
 
    :::caution
 
-   Jeden z vodičů plochého kabelu mezi **SEGGER J-Link** a **CHESTER** má červenou barvu. Tato červená barva označuje signál číslo `1`. Tento červený signál musí být orientován směrem k černé tečce umístěné vedle konektoru **SWD** na základní desce zařízení **CHESTER**. Stejné pravidlo pro kabel platí i na straně **SEGGER J-Link**.
+   Jeden z vodičů plochého kabelu mezi programátorem **SEGGER J-Link** a zařízením **CHESTER** je červený a označuje signál číslo `1`. Tento vodič musí směřovat k černé tečce vedle konektoru **SWD** na základní desce zařízení **CHESTER**. Stejné pravidlo platí i na straně programátoru **SEGGER J-Link**.
 
    :::
 
-1. Připojte druhou stranu 10pinového plochého kabelu k adaptérové desce **SEGGER J-Link** (a zapojte adaptérovou desku do zařízení **SEGGER J-Link**).
+1. Druhý konec plochého kabelu připojte k desce adaptéru **SEGGER J-Link** (a adaptér zapojte do programátoru **SEGGER J-Link**).
 
-1. Připojte kabel **Micro-USB** k počítači a k **SEGGER J-Link**.
+1. Kabelem **Micro-USB** propojte počítač s programátorem **SEGGER J-Link**.
 
-1. Otevřete aplikaci **Terminal** (Ubuntu nebo macOS) nebo **Command Prompt** (Windows).
+1. Otevřete aplikaci **Terminál** (Ubuntu nebo macOS) nebo **Příkazový řádek** (Windows).
 
-1. Aktivujte virtuální prostředí **Python**, kde máte nainstalované **HARDWARIO Command Line Tools** (viz předchozí kapitola).
+1. Aktivujte virtuální prostředí pro **Python**, do kterého jste nainstalovali **HARDWARIO Command Line Tools** (viz předchozí kapitola).
 
-1. Spuštěním tohoto příkazu vymažte aplikační firmware:
+1. Tímto příkazem vymažte aplikační firmware:
 
    ```
    hardwario chester app erase
@@ -183,7 +183,7 @@ Chcete-li do zařízení **CHESTER** nahrát firmware modemu LTE, postupujte tak
 
    :::tip
 
-   Vymazání aplikačního firmwaru je nutné, aby se zabránilo kolizi resetovacího signálu mezi **SEGGER J-Link** a aplikačním firmwarem.
+   Aplikační firmware je nutné vymazat, jinak by se resetovací signál programátoru **SEGGER J-Link** střetl s aplikačním firmwarem.
 
    :::
 
@@ -191,19 +191,19 @@ Chcete-li do zařízení **CHESTER** nahrát firmware modemu LTE, postupujte tak
 
    :::caution
 
-   Jeden z vodičů plochého kabelu mezi **SEGGER J-Link** a **CHESTER** má červenou barvu. Tato červená barva označuje signál číslo `1`. Tento červený signál musí být orientován směrem k černé tečce umístěné vedle konektoru **SWD** na základní desce zařízení **CHESTER**. Stejné pravidlo pro kabel platí i na straně **SEGGER J-Link**.
+   Jeden z vodičů plochého kabelu mezi programátorem **SEGGER J-Link** a zařízením **CHESTER** je červený a označuje signál číslo `1`. Tento vodič musí směřovat k černé tečce vedle konektoru **SWD** na základní desce zařízení **CHESTER**. Stejné pravidlo platí i na straně programátoru **SEGGER J-Link**.
 
    :::
 
-1. Stáhněte balíček firmwaru **LTE modemu** [**v1.7.0**](pathname:///download/hio-chester-lte-v1.7.0.zip).
+1. Stáhněte balíček firmwaru **modemu LTE** [**v1.7.0**](pathname:///download/hio-chester-lte-v1.7.0.zip).
 
    :::info
 
-   Pokud hledáte firmware LTE modemu kompatibilní s komunikačním stackem **LTE v1** pro službu **HARDWARIO Cloud v1**, musíte stáhnout a nahrát [**v1.3.0**](pathname:///download/hio-chester-lte-v1.3.0.zip).
+   Firmware modemu LTE kompatibilní s komunikačním stackem **LTE v1** pro službu **HARDWARIO Cloud v1** je verze [**v1.3.0**](pathname:///download/hio-chester-lte-v1.3.0.zip); stáhněte a nahrajte tu.
 
    :::
 
-1. Spuštěním tohoto příkazu nahrajte firmware LTE modemu:
+1. Tímto příkazem nahrajte firmware modemu LTE:
 
    ```
    hardwario chester lte flash hio-chester-lte-v1.7.0.zip
@@ -213,7 +213,7 @@ Chcete-li do zařízení **CHESTER** nahrát firmware modemu LTE, postupujte tak
 
    :::caution
 
-   Jeden z vodičů plochého kabelu mezi **SEGGER J-Link** a **CHESTER** má červenou barvu. Tato červená barva označuje signál číslo `1`. Tento červený signál musí být orientován směrem k černé tečce umístěné vedle konektoru **SWD** na základní desce zařízení **CHESTER**. Stejné pravidlo pro kabel platí i na straně **SEGGER J-Link**.
+   Jeden z vodičů plochého kabelu mezi programátorem **SEGGER J-Link** a zařízením **CHESTER** je červený a označuje signál číslo `1`. Tento vodič musí směřovat k černé tečce vedle konektoru **SWD** na základní desce zařízení **CHESTER**. Stejné pravidlo platí i na straně programátoru **SEGGER J-Link**.
 
    :::
 
@@ -223,29 +223,29 @@ Chcete-li do zařízení **CHESTER** nahrát firmware modemu LTE, postupujte tak
 
 ## Firmware modemu Nordic nRF9160 {#nordic-nrf9160-modem-firmware}
 
-Výše uvedený postup nahrává **firmware LTE modemu HARDWARIO** – komunikační stack, který připojuje **CHESTER** ke službě **HARDWARIO Cloud**. To je jiný image než **firmware modemu Nordic** (baseband image distribuovaný jako `mfw_nrf9160_*.zip`), což je nízkoúrovňový mobilní firmware samotného SiP **nRF9160**. Oba image se nahrávají nezávisle a různými příkazy.
+Postup výše nahrává **firmware modemu LTE od HARDWARIO**, tedy komunikační stack, který připojuje zařízení **CHESTER** ke službě **HARDWARIO Cloud**. **Firmware modemu Nordic** (baseband image distribuovaný jako `mfw_nrf9160_*.zip`) je jiný image: nízkoúrovňový firmware mobilního modemu v samotném SiP **nRF9160**. Oba image se nahrávají nezávisle a různými příkazy.
 
-U většiny nasazení není potřeba firmware modemu Nordic vůbec měnit. Tento postup potřebujete pouze tehdy, když konkrétní síť nebo SIM karta vyžaduje určitou verzi firmwaru modemu – například SIM karta **Vodafone Ukraine**, která vyžaduje **v1.3.7**. Viz [**Testované SIM karty a operátoři**](../platform-connectivity/cellular-networks/sim-card-setup.md#tested-sim-cards-and-operators).
+U většiny nasazení není potřeba firmware modemu Nordic vůbec měnit. Tento postup potřebujete jen tehdy, když konkrétní síť nebo SIM karta vyžaduje určitou verzi firmwaru modemu; například SIM karta **Vodafone Ukraine** vyžaduje **v1.3.7**. Podrobnosti najdete v části [**Otestované SIM karty a operátoři**](../platform-connectivity/cellular-networks/sim-card-setup.md#tested-sim-cards-and-operators).
 
 :::caution
 
-Konkrétní verzi firmwaru modemu Nordic nahrávejte pouze tehdy, když vám to řekne operátor nebo podpora **HARDWARIO**. Změna tohoto image ovlivní chování mobilní sítě ve všech sítích, nejen v té, kterou právě řešíte.
+Konkrétní verzi firmwaru modemu Nordic nahrávejte pouze tehdy, když vám to řekne operátor nebo podpora **HARDWARIO**. Změna tohoto image ovlivní chování modemu ve všech mobilních sítích, nejen v té, jejíž problém právě řešíte.
 
 :::
 
-Hardwarové zapojení, virtuální prostředí **Python** i pravidla pro kabeláž jsou stejné jako v části [**Postup nahrání firmwaru**](#flashing-procedure) výše.
+Zapojení hardwaru, virtuální prostředí pro **Python** i pravidla pro kabeláž jsou stejné jako v části [**Postup nahrání firmwaru**](#flashing-procedure) výše.
 
-1. Stáhněte balíček firmwaru modemu ze sekce ke stažení pro **nRF9160** u **Nordic Semiconductor**. Přímý odkaz pro verzi **1.3.7**: [`mfw_nrf9160_1.3.7.zip`](https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/dev-kits/nrf9160-dk/nrf9160-modem-fw/mfw_nrf9160_1.3.7.zip).
+1. Stáhněte balíček firmwaru modemu ze stránky ke stažení pro **nRF9160** na webu **Nordic Semiconductor**. Přímý odkaz pro verzi **1.3.7**: [`mfw_nrf9160_1.3.7.zip`](https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/dev-kits/nrf9160-dk/nrf9160-modem-fw/mfw_nrf9160_1.3.7.zip).
 
 1. Otevřete krabičku zařízení **CHESTER** (6 šroubů ze spodní strany) a připojte **SEGGER J-Link** ke [konektoru označenému `APP`](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) (nebo `BLE` u hardwarové revize R3.2 a starší).
 
    :::caution
 
-   Jeden z vodičů plochého kabelu mezi **SEGGER J-Link** a **CHESTER** má červenou barvu. Tato červená barva označuje signál číslo `1`. Tento červený signál musí být orientován směrem k černé tečce umístěné vedle konektoru **SWD** na základní desce zařízení **CHESTER**. Stejné pravidlo pro kabel platí i na straně **SEGGER J-Link**.
+   Jeden z vodičů plochého kabelu mezi programátorem **SEGGER J-Link** a zařízením **CHESTER** je červený a označuje signál číslo `1`. Tento vodič musí směřovat k černé tečce vedle konektoru **SWD** na základní desce zařízení **CHESTER**. Stejné pravidlo platí i na straně programátoru **SEGGER J-Link**.
 
    :::
 
-1. Aktivujte virtuální prostředí **Python** s **HARDWARIO Command Line Tools** a spuštěním tohoto příkazu vymažte aplikační firmware:
+1. Aktivujte virtuální prostředí pro **Python** s nástroji **HARDWARIO Command Line Tools** a tímto příkazem vymažte aplikační firmware:
 
    ```
    hardwario chester app erase
@@ -253,7 +253,7 @@ Hardwarové zapojení, virtuální prostředí **Python** i pravidla pro kabelá
 
    :::tip
 
-   Vymazání aplikačního firmwaru je nutné, aby se zabránilo kolizi resetovacího signálu mezi **SEGGER J-Link** a aplikačním firmwarem.
+   Aplikační firmware je nutné vymazat, jinak by se resetovací signál programátoru **SEGGER J-Link** střetl s aplikačním firmwarem.
 
    :::
 
@@ -261,11 +261,11 @@ Hardwarové zapojení, virtuální prostředí **Python** i pravidla pro kabelá
 
    :::caution
 
-   Jeden z vodičů plochého kabelu mezi **SEGGER J-Link** a **CHESTER** má červenou barvu. Tato červená barva označuje signál číslo `1`. Tento červený signál musí být orientován směrem k černé tečce umístěné vedle konektoru **SWD** na základní desce zařízení **CHESTER**. Stejné pravidlo pro kabel platí i na straně **SEGGER J-Link**.
+   Jeden z vodičů plochého kabelu mezi programátorem **SEGGER J-Link** a zařízením **CHESTER** je červený a označuje signál číslo `1`. Tento vodič musí směřovat k černé tečce vedle konektoru **SWD** na základní desce zařízení **CHESTER**. Stejné pravidlo platí i na straně programátoru **SEGGER J-Link**.
 
    :::
 
-1. Spuštěním tohoto příkazu nahrajte firmware modemu Nordic:
+1. Tímto příkazem nahrajte firmware modemu Nordic:
 
    ```
    hardwario device nrf91 flash mfw_nrf9160_1.3.7.zip
@@ -273,10 +273,10 @@ Hardwarové zapojení, virtuální prostředí **Python** i pravidla pro kabelá
 
    :::info
 
-   Všimněte si odlišného příkazu. `hardwario device nrf91 flash` zapisuje baseband image od Nordic, zatímco `hardwario chester lte flash` zapisuje firmware LTE modemu **HARDWARIO** popsaný [výše](#flashing-procedure).
+   Všimněte si odlišného příkazu. `hardwario device nrf91 flash` zapisuje baseband image od firmy Nordic, zatímco `hardwario chester lte flash` zapisuje firmware modemu LTE od **HARDWARIO** popsaný [výše](#flashing-procedure).
 
    :::
 
 1. Přesuňte 10pinový plochý kabel zpět na [konektor označený `APP`](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) (nebo `BLE` u hardwarové revize R3.2 a starší), nahrajte aplikační firmware a odpojte adaptér **SEGGER J-Link**.
 
-1. Nakonfigurujte SIM kartu jako obvykle: viz [**Nastavení SIM karty**](../platform-connectivity/cellular-networks/sim-card-setup.md). Nahrání firmwaru modemu Nordic nemění parametry `lte config`.
+1. SIM kartu nastavte jako obvykle podle stránky [**Nastavení SIM karty**](../platform-connectivity/cellular-networks/sim-card-setup.md). Nahrání firmwaru modemu Nordic nemění parametry `lte config`.

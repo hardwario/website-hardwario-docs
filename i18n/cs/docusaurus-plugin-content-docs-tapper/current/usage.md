@@ -14,7 +14,7 @@ Použití: `tapper COMMAND [OPTIONS] [ARGS]...`
 
 ### version {#version}
 
-Vypíše verzi buildu klienta TAPPER na stdout.
+Vypíše na stdout verzi sestavení klienta TAPPER.
 
 `tapper version`
 
@@ -26,20 +26,20 @@ Spustí klienta.
 
 :::info 
 
-Pro použití NetworkManageru je vyžadováno `sudo`.
+Bez `sudo` nelze použít NetworkManager.
 
 :::
 
 #### Volby {#options}
 
 - `-c PATH` `--config PATH` cesta ke [konfiguračnímu](#configuration) souboru
-- `-d` `---debug` zobrazí ladicí výstup
-- `-h IP` `--host IP` host MQTT brokeru
-- `-p PORT` `--port PORT` port MQTT brokeru
+- `-d` `--debug` zobrazí ladicí výstup
+- `-h IP` `--host IP` hostitel brokeru MQTT
+- `-p PORT` `--port PORT` port brokeru MQTT
 - `-ca PATH` `--cafile PATH` cesta k souboru s certifikátem CA
-- `-cert PATH` `--certfile PATH` cesta k souboru s klientským certifikátem pro použití s TLS
-- `-key PATH` `--keyfile PATH` cesta k souboru s klíčem pro použití s TLS
-- `--legacy` pro použití se starším hardwarem R1.0
+- `-cert PATH` `--certfile PATH` cesta k souboru s klientským certifikátem pro TLS
+- `-key PATH` `--keyfile PATH` cesta k souboru s klíčem pro TLS
+- `--legacy` pro starší hardware R1.0
 - `--help` zobrazí nápovědu
 
 #### Chování periferií {#peripherals-behavior}
@@ -48,14 +48,14 @@ Pro použití NetworkManageru je vyžadováno `sudo`.
 
 |        Chování        |   Popis    |
 | :--------------------: | :--------------: |
-| Jedno krátké žluté bliknutí | Detekován NFC tag |
-|  Trvalé červené svícení  | Detekováno otevření (tamper)  |
+| Jedno krátké žluté bliknutí | Detekován tag NFC |
+|  Trvale svítí červeně  | Detekováno otevření (tamper)  |
 
 **Bzučák**
 
 |    Chování     |   Popis    |
 | :-------------: | :--------------: |
-| Jedno krátké pípnutí  | Detekován NFC tag |
+| Jedno krátké pípnutí  | Detekován tag NFC |
 | Trvalé pípání | Detekováno otevření (tamper)  |
 
 ## Konfigurace {#configuration}
@@ -64,8 +64,8 @@ Konfigurační soubor zařízení TAPPER používá syntaxi YAML.
 
 ### MQTT {#mqtt}
 
-- Host je host s MQTT brokerem. Minimálně tento údaj je vyžadován.
-- Port je port, na kterém je MQTT broker vystaven.
+- Host je hostitel, na kterém běží broker MQTT. Zadat je nutné alespoň tento údaj.
+- Port je port, na kterém je broker MQTT dostupný.
 
 ```yaml
 mqtt:
@@ -79,17 +79,17 @@ mqtt:
 
 #### TLS {#tls}
 
-Nastavení TLS najdete v [Nastavení TLS](/tapper/tls-setup/).
+Jak TLS nastavit, popisuje stránka [Nastavení TLS](/tapper/tls-setup/).
 
-- Cafile je cesta k souboru CA, kterým se ověřuje certifikát serveru. (Podepisující CA)
-- Certfile je cesta k souboru s klientským certifikátem podepsaným danou CA.
+- Cafile je cesta k certifikátu CA (podepisující autority), kterým se ověřuje certifikát serveru.
+- Certfile je cesta k souboru s klientským certifikátem, který tato CA podepsala.
 - Keyfile je cesta k souboru s klientským klíčem.
 
-:::warning[Certifikát MQTT serveru]
+:::warning[Certifikát serveru MQTT]
 
-**MQTT host** musí **odpovídat** hodnotě **CN** nebo jednomu ze **SAN** uvedených v X509 certifikátu **serveru**.
+**MQTT host** musí **odpovídat** hodnotě **CN** nebo jednomu ze **SAN** uvedených v certifikátu X509 **serveru**.
 
-Viz [Nastavení MQTT TLS](/tapper/tls-setup/)
+Viz [Nastavení TLS pro MQTT](/tapper/tls-setup/)
 
 :::
 
@@ -105,7 +105,7 @@ Pole `passphrase` může obsahovat hodnotu `psk` získanou z `wpa_passphrase`.
 
 #### Dynamický režim {#dynamic}
 
-Dynamický režim používá DHCP a nastavuje adresu, bránu a DNS servery automaticky.
+V dynamickém režimu se adresa, brána a servery DNS nastaví automaticky přes DHCP.
 
 ```yaml
 wifi:
@@ -116,7 +116,7 @@ wifi:
 
 #### Statický režim {#static}
 
-Ve statickém režimu musíte nastavit vše ručně.
+Ve statickém režimu nastavíte vše ručně.
 
 ```yaml
 wifi:
@@ -134,7 +134,7 @@ K adrese lze připojit délku prefixu nebo masku sítě, jak je vidět v příkl
 
 ### Příklad {#example}
 
-Příklad konfiguračního souboru v `/home/hardwario/tapper.conf`:
+Příklad konfiguračního souboru `/home/hardwario/tapper.conf`:
 
 ```yaml
 mqtt:
@@ -155,4 +155,4 @@ wifi:
   - 1.1.1.1
 ```
 
-Ten by se použil takto: `sudo tapper run -c /home/hardwario/tapper.conf`
+Klienta s ním spustíte takto: `sudo tapper run -c /home/hardwario/tapper.conf`

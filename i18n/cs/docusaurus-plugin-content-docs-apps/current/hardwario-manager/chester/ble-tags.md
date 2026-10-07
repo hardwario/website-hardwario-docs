@@ -1,13 +1,13 @@
 ---
 slug: ble-tags
-title: BLE tagy
+title: Tagy BLE
 ---
 
-# Navázání senzorových BLE tagů {#bind-ble-sensor-tags}
+# Přiřazení senzorových tagů BLE {#bind-ble-sensor-tags}
 
-Zařízení CHESTER umí číst externí **Bluetooth senzorové tagy** a hlásit jejich
-hodnoty spolu s vlastními. Každý tag zabírá na zařízení jeden **slot**; navázáním
-tagu do slotu říkáte zařízení CHESTER, aby ho vyhledávalo.
+Zařízení CHESTER umí číst externí **senzorové tagy Bluetooth** a odesílat jejich
+hodnoty spolu s vlastními. Každý tag zabírá na zařízení jeden **slot**;
+přiřazením tagu ke slotu zařízení CHESTER řeknete, aby tag sledovalo.
 
 Otevřete **CHESTER → BLE tags**.
 
@@ -17,28 +17,28 @@ Otevřete **CHESTER → BLE tags**.
 
 ## Sloty {#the-slots}
 
-Záhlaví uvádí název zařízení a počet jeho slotů a seznam zobrazuje, kolik jich je
-využitých, například *Slots (2 of 4)*.
+V záhlaví je název zařízení a počet jeho slotů, seznam ukazuje, kolik jich je
+obsazených, například *Slots (2 of 4)*.
 
-Každý obsazený slot zobrazuje **Bluetooth adresu** tagu a jeho poslední hodnoty:
-teplotu, napětí baterie a sílu signálu v dBm. Prázdné sloty jsou ve výchozím
-stavu skryté; **Show empty** je odkryje, takže si můžete vybrat, kam nový tag
-patří.
+U každého obsazeného slotu je **adresa Bluetooth** tagu a jeho poslední hodnoty:
+teplota, napětí baterie a síla signálu v dBm. Prázdné sloty jsou ve výchozím
+stavu skryté; volbou **Show empty** je zobrazíte a můžete vybrat, ke kterému slotu
+nový tag přiřadit.
 
-Menu **⋮** u slotu působí jen na daný slot. Použijte ho, když chcete slot
-vyprázdnit pro další použití.
+Nabídka **⋮** u slotu se týká jen tohoto slotu. Pomocí ní slot vyprázdníte, když
+ho chcete použít pro jiný tag.
 
 ---
 
-## Navázání tagu {#bind-a-tag}
+## Přiřazení tagu {#bind-a-tag}
 
 1. Pod **Nearby** vyhledejte tagy v dosahu pomocí **Tag actions**.
-2. Vyberte požadovaný tag a navažte ho do slotu.
+2. Vyberte požadovaný tag a přiřaďte ho ke slotu.
 3. Klepněte na **Save to device**.
 
-Do zařízení CHESTER se nic nedostane, dokud neuložíte. **Save to device** a
-**Revert changes** zůstávají neaktivní, dokud něco skutečně nezměníte, takže samotná
-tlačítka vám řeknou, jestli něco čeká.
+Do zařízení CHESTER se nic nezapíše, dokud změny neuložíte. Tlačítka **Save to
+device** a **Revert changes** jsou neaktivní, dokud skutečně něco nezměníte, takže
+už podle nich poznáte, jestli nějaké změny čekají na uložení.
 
 Akcí obnovení v horní liště sloty a jejich aktuální hodnoty ze zařízení znovu
 přečtete.
@@ -47,15 +47,15 @@ přečtete.
 
 ## Vyprázdnění slotů {#clear-the-slots}
 
-**Remove all tags** vyprázdní všechny sloty naráz. Stejně jako u jednoho slotu je
-změna připravená, dokud nedáte **Save to device**.
+**Remove all tags** vyprázdní všechny sloty najednou. Stejně jako u jednoho slotu
+se změna do zařízení zapíše až po klepnutí na **Save to device**.
 
 ---
 
 ## Související nastavení {#related-settings}
 
 Skener tagů má vlastní konfiguraci: jestli je zapnutý, jak často a jak dlouho
-skenuje. Ta je ve skupině **BLE tags** v
-[**pokročilé konfiguraci**](./configuration.md), a v shellu jsou to příkazy
+vyhledává. Najdete ji ve skupině **BLE tags** v
+[**Advanced Configuration**](./configuration.md). V shellu jí odpovídají příkazy
 `tag config`: `enabled`, `scan-interval`, `scan-duration` a
 `slot-0` … `slot-3`. Viz [**Terminál**](./terminal.md).

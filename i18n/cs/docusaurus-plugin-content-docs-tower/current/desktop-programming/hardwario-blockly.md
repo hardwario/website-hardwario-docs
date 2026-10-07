@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 :::caution
 
-K práci s tímto nástrojem je potřeba [**stáhnout experimentální HARDWARIO Playground**](https://github.com/SmejkalJakub/hardwario-playground/releases)
+K práci s tímto nástrojem potřebujete [**experimentální verzi aplikace HARDWARIO Playground**](https://github.com/SmejkalJakub/hardwario-playground/releases).
 
 :::
 
@@ -17,21 +17,21 @@ K práci s tímto nástrojem je potřeba [**stáhnout experimentální HARDWARIO
 
 Tento nástroj je stále ve vývoji a občas se může chovat nestabilně. V takovém případě nás můžete kontaktovat na [**GitHubu**](https://github.com/hardwario/hardwario-blockly/issues) nebo přímo na **ask@hardwario.com**.
 
-Aktuální problém se pravděpodobně podaří vyřešit jen **restartem aplikace Playground**.
+Problém nejspíš vyřeší už **restart aplikace Playground**.
 
 :::
 
-K vytvoření naší implementace **No-Code/Low-Code prostředí pro TOWER** jsme použili [**Google Blockly**](https://developers.google.com/blockly).
+Na knihovně [**Google Blockly**](https://developers.google.com/blockly) jsme postavili vlastní **prostředí No-Code/Low-Code pro platformu TOWER**.
 
 ## Prostředí Blockly {#blockly-environment}
 
-Toto je hlavní funkce nástroje. Poskytuje prostředí pro programování pomocí barevných bloků bez nutnosti napsat jediný řádek kódu.
+To je hlavní funkce nástroje: prostředí, ve kterém programujete skládáním barevných bloků a nemusíte napsat jediný řádek kódu.
 
-Jde o **Low-code/No-code prostředí**, což znamená, že k jeho používání nemusíte umět psát kód.
+Jde o **prostředí Low-code/No-code**, takže k jeho používání nemusíte umět programovat.
 
-Je navrženo tak, aby tvorba firmwaru byla rychlá a snadná pro uživatele na jakékoli úrovni znalostí.
+Firmware v něm rychle a snadno vytvoří uživatel s jakoukoli úrovní znalostí.
 
-<Image img={require('../../../../../tower/desktop-programming/images/blockly-showcase.png')} alt="Pracovní plocha HARDWARIO Blockly s inicializačními bloky a bloky událostí publikujícími data přes radio" />
+<Image img={require('../../../../../tower/desktop-programming/images/blockly-showcase.png')} alt="Pracovní plocha HARDWARIO Blockly s inicializačními bloky a bloky událostí publikujícími data přes rádio" />
 
 ### Příklady {#examples}
 
@@ -45,50 +45,50 @@ Mezi klasickým projektem a příkladem je rozdíl. Příklad nelze uložit, tak
 
 ### Struktura projektu {#project-structure}
 
-Práce s Blockly je poměrně přímočará, ale museli jsme provést několik změn.
+Práce s Blockly je poměrně přímočará, ale několik věcí jsme museli upravit.
 
-Tento obrázek ukazuje základní projekt v HARDWARIO Blockly, projdeme si na něm několik důležitých prvků.
+Na obrázku je základní projekt v HARDWARIO Blockly. Projdeme si na něm nejdůležitější prvky.
 
-<Image img={require('../../../../../tower/desktop-programming/images/blockly-showcase.png')} alt="Pracovní plocha HARDWARIO Blockly s inicializačními bloky a bloky událostí publikujícími data přes radio" />
+<Image img={require('../../../../../tower/desktop-programming/images/blockly-showcase.png')} alt="Pracovní plocha HARDWARIO Blockly s inicializačními bloky a bloky událostí publikujícími data přes rádio" />
 
 #### Pracovní plocha {#workspace}
 
-Většina obrazovky. Sem umístíte všechny bloky, které budou představovat váš firmware.
+Zabírá většinu obrazovky. Sem umístíte všechny bloky, které tvoří váš firmware.
 
 První blok, který na tuto plochu přetáhnete, by měl být vždy blok z kategorie **Initialization** s textem **Application Initialization**. Ten slouží jako výchozí bod vaší aplikace.
 
-Snažili jsme se uživateli práci s prostředím zjednodušit. Je zde zavedena částečná automatizace, například zakazování neinicializovaných bloků, zakazování osamocených bloků, mazání duplicitních inicializací atd.
+Snažili jsme se práci s prostředím co nejvíc zjednodušit, takže některé věci probíhají automaticky: neinicializované a osamocené bloky se deaktivují, duplicitní inicializace se mažou atd.
 
-#### Nástrojová lišta {#toolbox}
+#### Panel nástrojů {#toolbox}
 
-Na levé straně obrazovky. Obsahuje všechny dostupné kategorie a v nich samotné bloky.
+Je na levé straně obrazovky a obsahuje všechny dostupné kategorie, v nich pak samotné bloky.
 
-Trochu jsme to zjednodušili tím, že se zobrazují pouze inicializované kategorie. Pokud tedy některou kategorii v nástrojové liště nevidíte, přejděte do kategorie **Initialization** a inicializujte ji pomocí odpovídajícího bloku.
+Pro přehlednost se zobrazují jen inicializované kategorie. Pokud tedy některou kategorii v panelu nástrojů nevidíte, přejděte do kategorie **Initialization** a inicializujte ji pomocí odpovídajícího bloku.
 
 #### Dolní panel {#bottom-panel}
 
-Ve spodní části stránky. Zde najdete další ovládací prvky pro Blockly.
+Je ve spodní části stránky a najdete na něm další ovládací prvky Blockly.
 
 Tlačítka na dolním panelu:
 
-- **Compile And Flash**: [**spustí kompilaci a poté přepne na kartu firmwaru**](#compiling-and-flashing), abyste mohli vytvořený firmware nahrát do zařízení.
-- **Save Workspace**: uloží aktuální pracovní plochu. Automatické ukládání je zapnuto ve výchozím nastavení.
-- **Export Workspace**: pracovní plochu můžete exportovat ve formátu **.xml**, abyste ji mohli distribuovat nebo později **importovat**.
-- **Import Workspace**: zde můžete importovat pracovní plochu ve formátu **.xml**.
-- **Show/Hide Code**: **zobrazí/skryje kód**, takže vidíte **vygenerovaný kód v jazyce C**.
+- **Compile And Flash**: [**spustí kompilaci a pak přepne na záložku Firmware**](#compiling-and-flashing), abyste mohli vytvořený firmware nahrát do zařízení.
+- **Save Workspace**: uloží aktuální pracovní plochu. Automatické ukládání je ve výchozím nastavení zapnuté.
+- **Export Workspace**: exportuje pracovní plochu ve formátu **.xml**, abyste ji mohli sdílet nebo později znovu **importovat**.
+- **Import Workspace**: importuje pracovní plochu ve formátu **.xml**.
+- **Show/Hide Code**: zobrazí nebo skryje **vygenerovaný kód v jazyce C**.
 - **Return Home**: vrátí vás na domovskou stránku.
 
 :::note
 
-Aby váš projekt fungoval, musíte na pracovní plochu přidat blok **Application Initialization**
+Aby projekt fungoval, musíte na pracovní plochu přidat blok **Application Initialization**.
 
 :::
 
 ### Generování kódu v reálném čase {#live-code-generation}
 
-Tento nástroj umožňuje **zobrazit průběžně generovaný kód v C**, který je identický s bloky na pracovní ploše.
+Nástroj umí **průběžně zobrazovat vygenerovaný kód v C**, který přesně odpovídá blokům na pracovní ploše.
 
-Díky tomu můžete vytvořit základní firmware pomocí bloků, kód si pak vzít a dokončit ho v [**HARDWARIO Code**](../firmware-development/about-hardwario-code.md).
+Základní firmware tak můžete poskládat z bloků a kód pak dokončit v editoru [**HARDWARIO Code**](../firmware-development/about-hardwario-code.md).
 
 <Image img={require('../../../../../tower/desktop-programming/images/blockly-code.png')} alt="Pracovní plocha Blockly se zapnutou funkcí Show Code: vygenerovaný kód v C se zobrazuje vedle bloků" />
 
@@ -96,23 +96,23 @@ Díky tomu můžete vytvořit základní firmware pomocí bloků, kód si pak vz
 
 :::caution
 
-Aby to fungovalo, musíte mít na zařízení nainstalované CMake, Ninja a git, a to v cestě PATH. Více informací najdete v kapitole [**TOWER VSCode Extension**](../firmware-development/tower-vscode-extension.md#tools-setup).
+Aby to fungovalo, musíte mít v počítači nainstalované nástroje CMake, Ninja a git a musí být v proměnné PATH. Více informací najdete v kapitole [**TOWER VSCode Extension**](../firmware-development/tower-vscode-extension.md#tools-setup).
 
 :::
 
-Až budete s firmwarem hotovi, stačí kliknout na tlačítko **Compile and Flash** ve spodní části stránky. Po chvíli se prostředí přepne na kartu firmwaru a vy jen vyberete své zařízení a nahrajete firmware.
+Až budete s firmwarem hotovi, stačí kliknout na tlačítko **Compile and Flash** ve spodní části stránky. Po chvíli se prostředí přepne na záložku Firmware, kde už jen vyberete své zařízení a firmware nahrajete.
 
 :::tip
 
-Více o nahrávání firmwaru v [**kapitole Firmware Flashing**](./firmware-flashing.md)
+Více o nahrávání firmwaru najdete v [**kapitole Nahrání firmwaru**](./firmware-flashing.md).
 
 :::
 
-## Další funkce (POKROČILÉ) {#other-features-advanced}
+## Další funkce (pro pokročilé) {#other-features-advanced}
 
 :::tip
 
-Toto je pokročilá část nástroje. Vůbec ji nemusíte používat, ale může vás zajímat, pokud chcete vytvářet vlastní kategorie a vlastní bloky, které pak můžete použít v **HARDWARIO Blockly**.
+Tato část je pro pokročilé. Vůbec ji nemusíte používat, hodí se ale, pokud chcete vytvářet vlastní kategorie a bloky a používat je pak v **HARDWARIO Blockly**.
 
 :::
 
@@ -124,8 +124,8 @@ Uživatelskou složku otevřete kliknutím na **Open Projects Folder** na úvodn
 
 :::
 
-Pokud chcete distribuovat své projekty nebo vytvořené bloky, stačí zkopírovat uživatelskou složku ze svého souborového systému, zabalit ji například do zip souboru a odeslat.
-Na druhé straně si ji uživatel jen rozbalí do své uživatelské složky a poté v aplikaci Playground znovu načte Blockly.
+Pokud chcete své projekty nebo vytvořené bloky předat dál, stačí zkopírovat uživatelskou složku, zabalit ji třeba do archivu ZIP a poslat.
+Příjemce ji pak jen rozbalí do své uživatelské složky a v aplikaci Playground znovu načte Blockly.
 
 ### Generování bloků {#blocks-generation}
 
@@ -135,13 +135,13 @@ Tuto funkci otevřete kliknutím na tlačítko **Go to Blocks Creator** na úvod
 
 Kategorie upravíte tlačítkem **Edit your categories** v horní části obrazovky Blocks Creatoru.
 
-Kategorie musíte přidat, abyste do nich mohli umístit vlastní bloky. Můžete také použít předpřipravené kategorie, které používáme my, ale není to doporučeno.
+Vlastní bloky se umisťují do kategorií, které si musíte nejdřív přidat. Můžete použít i naše předpřipravené kategorie, ale nedoporučujeme to.
 
 :::info
 
 Zde je příklad, jak přidat základní kategorie. Kategorii můžete přidat bez jakékoli další konfigurace, nebo jí můžete přidat barvu (ve formátu RGB).
 
-Tento příklad přidá kategorii **Ultrasound Sensor** s černou barvou (výchozí barva) a kategorii **External Temperature Sensor** s barvou "#CF0514".
+Tento příklad přidá kategorii **Ultrasound Sensor** s černou barvou (výchozí barva) a kategorii **External Temperature Sensor** s barvou „#CF0514“.
 
 :::
 
@@ -171,24 +171,24 @@ Vlastní bloky můžete přidávat pomocí nástroje **Blocks Creator**.
 
 :::info
 
-První příklad je jeden z našich předpřipravených modulů pro [**Button Module**](https://www.hardwario.store/p/button-module) systému TOWER. Zde vidíte strukturu souboru.
+Prvním příkladem je náš předpřipravený modul pro [**Button Module**](https://www.hardwario.store/p/button-module) platformy TOWER. Je na něm vidět struktura souboru.
 
-- `category`: určuje, která kategorie bude použita pro bloky tohoto modulu (kategorie musí být obsažena mezi předpřipravenými nebo vašimi kategoriemi).
+- `category`: určuje, do které kategorie patří bloky tohoto modulu (kategorie musí být mezi předpřipravenými nebo vašimi vlastními kategoriemi).
 
-- `global_variable`: zde můžete řádek po řádku přidat cokoli, co chcete umístit na začátek kódu.
+- `global_variable`: řádek po řádku sem přidáte cokoli, co chcete mít na začátku kódu.
 
-- `application_init`: zde definujete blok, který půjde vždy do **kategorie Initialization** –
+- `application_init`: tady definujete blok, který půjde vždy do **kategorie Initialization**:
   - `block`
-    - `text`: zde uvedete, jaký text bude na bloku zobrazen. Pomocí `%` můžete některé části generovat z **arguments**.
-    - `arguments`: zde musíte jeden po druhém uvést argumenty, které nahradí `%` v textu pomocí `dropdown/number/variable/atd.`
-  - `code`: zde řádek po řádku uvedete kód, který bude přidán do `application_init`. Pomocí `{ARGUMENT_NAME}` můžete některé části nechat nahradit podle `arguments`.
+    - `text`: text, který se na bloku zobrazí. Znakem `%` označíte části, které se vygenerují z argumentů (**arguments**).
+    - `arguments`: jednotlivé argumenty, které v textu nahradí znaky `%` prvkem typu `dropdown/number/variable/etc.`
+  - `code`: kód, který se řádek po řádku přidá do `application_init`. Zápisem `{ARGUMENT_NAME}` označíte části, které se nahradí hodnotami z `arguments`.
 
-- `handler`: tento blok bude představovat obsluhu událostí vašeho modulu. Bude to blok, do kterého lze vkládat další bloky (rodičovský blok)
+- `handler`: blok, který představuje obsluhu událostí vašeho modulu. Lze do něj vkládat další bloky (rodičovský blok).
 
-- `action`: zde přidáte každou možnou akci, kterou váš modul umí. Každý z těchto prvků bude samostatný blok přidaný do vámi zadané kategorie.
-  - `NAME_OF_THE_ACTION`: uvedete jen název bloku, musí být specifický pro daný modul.
+- `action`: sem přidáte všechny akce, které váš modul umí. Každá z nich bude samostatný blok v zadané kategorii.
+  - `NAME_OF_THE_ACTION`: název bloku; musí být specifický pro daný modul.
     - `block`: funguje stejně jako v části `application_init`, blok se jen umístí do zadané kategorie.
-    - `code`: kód funguje také stejně.
+    - `code`: kód se zapisuje také stejně.
 :::
 
 <details>

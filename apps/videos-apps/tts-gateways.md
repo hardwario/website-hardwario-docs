@@ -6,7 +6,7 @@ title_meta: "Adding Gateways (The Things Stack video tutorial)"
 
 import Image from '@theme/IdealImage';
 
-# The Things Stack - How to Add Gateway to a LoRaWAN Network
+# The Things Stack - How to Add a Gateway to a LoRaWAN Network {#the-things-stack---how-to-add-gateway-to-a-lorawan-network}
 
 ## Tutorial Overview
 

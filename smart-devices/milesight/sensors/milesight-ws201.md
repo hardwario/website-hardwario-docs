@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Milesight Sensor WS201
 
-Milesight WS201 is a **wireless fill level monitoring sensor** using **ToF (Time-of-Flight) technology** for high accuracy. It supports **LoRaWAN connectivity** with remote management in the Milesight IoT Cloud, operates for **up to 2 years on a coin cell battery**, and is ideal for **public facility maintenance**
+Milesight WS201 is a **wireless fill level monitoring sensor** using **ToF (Time-of-Flight) technology** for high accuracy. It supports **LoRaWAN connectivity** with remote management in the Milesight IoT Cloud, operates for **up to 2 years on a coin cell battery**, and is ideal for **public facility maintenance**.
 
 <div class="container">
   <div class="row">
@@ -78,7 +78,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 ## Power supply
 | Type   | Value           |
 |--------|-----------------|
-| Power  | 2× AA batteries |
+| Power  | CR2450 battery |
 
 ---
 

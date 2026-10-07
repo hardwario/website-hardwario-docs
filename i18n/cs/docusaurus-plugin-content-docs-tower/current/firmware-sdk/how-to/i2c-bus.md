@@ -4,29 +4,29 @@ title: "Jak na: Sběrnice I²C"
 ---
 import Image from '@theme/IdealImage';
 
-Toto je hlavní **sběrnice, kterou TOWER používá** pro komunikaci s většinou **senzorů a modulů**. Všechny mají svou adresu v adresním prostoru TOWER I²C.
+Je to hlavní **sběrnice, přes kterou TOWER komunikuje** s většinou **senzorů a modulů**. Každý z nich má svou adresu v adresním prostoru I²C platformy TOWER.
 
 :::info
 
-  Běžně nepotřebujete používat I²C API, protože **všechny senzory mají své knihovny** v [**SDK**](https://sdk.hardwario.com/group__twr__i2c.html), které vám poskytnou naměřená data. I²C API budete potřebovat v případě, že chcete implementovat nový I²C senzor nebo čip.
+  API pro I²C běžně nepotřebujete, protože **všechny senzory mají své knihovny** v [**SDK**](https://sdk.hardwario.com/group__twr__i2c.html), které vám naměřená data předají. API pro I²C budete potřebovat, jen pokud chcete implementovat nový senzor nebo čip s rozhraním I²C.
 
 :::
 
 :::note
 
-Tato kapitola prochází několik ukázek kódu, jak používat I²C API. Více o samotném I²C se dočtete v [**kapitole Sběrnice I²C**](../../hardware-interfaces/i2c-bus.md).
+Tato kapitola na příkladech kódu ukazuje, jak API pro I²C používat. Více o samotné sběrnici I²C se dočtete v [**kapitole Sběrnice I²C**](../../hardware-interfaces/i2c-bus.md).
 
 :::
 
 ## Odkazy {#references}
-- [**I²C SDK Module**](https://sdk.hardwario.com/group__twr__i2c.html)
-- Ukázka v GitHub repozitáři
+- [**Modul SDK pro I²C**](https://sdk.hardwario.com/group__twr__i2c.html)
+- Příklad v repozitáři na GitHubu
 
 :::caution
 
-Než začnete se sběrnicí **I²C** pracovat, musíte ji vždy nejprve inicializovat.
+Než se sběrnicí **I²C** začnete pracovat, musíte ji vždy inicializovat.
 
-Například `twr_i2c_init(TWR_I2C_I2C0, TWR_I2C_SPEED_400_KHZ);` inicializuje **I2C_0** rychlostí **400kHz**.
+Například `twr_i2c_init(TWR_I2C_I2C0, TWR_I2C_SPEED_400_KHZ);` inicializuje **I2C_0** na rychlost **400kHz**.
 
 :::
 
@@ -34,7 +34,7 @@ Například `twr_i2c_init(TWR_I2C_I2C0, TWR_I2C_SPEED_400_KHZ);` inicializuje **
 
 ### Čtení {#read}
 
-Chcete-li přečíst 8 nebo 16 bitů, můžete použít vestavěné funkce SDK
+Ke čtení 8 nebo 16 bitů slouží vestavěné funkce SDK:
 
 ```c showLineNumbers
 bool twr_i2c_memory_read_8b (twr_i2c_channel_t channel, uint8_t device_address, uint32_t memory_address, uint8_t *data)
@@ -50,7 +50,7 @@ Například můžete přečíst 8 bitů dat z adresy paměti `0x01` přes `I2C_0
 <details>
 <summary>
 <b>
-Ukázka kódu pro čtení 8 bitů přes I²C
+Příklad kódu: čtení 8 bitů přes I²C
 </b>
 </summary>
 <p>
@@ -65,14 +65,14 @@ Ukázka kódu pro čtení 8 bitů přes I²C
 
 :::info
 
-Chcete-li přes **I²C** přečíst větší množství dat, musíte vytvořit strukturu `twr_i2c_memory_transfer_t`.
+Ke čtení většího množství dat přes **I²C** musíte vytvořit strukturu `twr_i2c_memory_transfer_t`.
 
 :::
 
 <details>
 <summary>
 <b>
-Ukázka kódu pro čtení libovolného počtu bitů přes I²C
+Příklad kódu: čtení libovolného počtu bitů přes I²C
 </b>
 </summary>
 <p>
@@ -95,7 +95,7 @@ Ukázka kódu pro čtení libovolného počtu bitů přes I²C
 
 ### Zápis {#write}
 
-Pro zápis 8 nebo 16 bitů můžete použít vestavěné funkce SDK
+K zápisu 8 nebo 16 bitů slouží vestavěné funkce SDK:
 
 ```c showLineNumbers
 bool twr_i2c_memory_write_8b (twr_i2c_channel_t channel, uint8_t device_address, uint32_t memory_address, uint8_t data)
@@ -111,7 +111,7 @@ Například můžete zapsat 8 bitů dat, konkrétně `0x81`, na adresu paměti `
 <details>
 <summary>
 <b>
-Ukázka kódu pro zápis 8 bitů přes I²C
+Příklad kódu: zápis 8 bitů přes I²C
 </b>
 </summary>
 <p>
@@ -125,14 +125,14 @@ Ukázka kódu pro zápis 8 bitů přes I²C
 
 :::info
 
-Pro zápis většího množství dat přes **I²C** musíte vytvořit strukturu `twr_i2c_memory_transfer_t`.
+K zápisu většího množství dat přes **I²C** musíte vytvořit strukturu `twr_i2c_memory_transfer_t`.
 
 :::
 
 <details>
 <summary>
 <b>
-Ukázka kódu pro zápis libovolného počtu bitů přes I²C
+Příklad kódu: zápis libovolného počtu bitů přes I²C
 </b>
 </summary>
 <p>

@@ -1,25 +1,25 @@
 ---
 slug: cloud-service
-title: Spravovaný network server
-description: "Spravovaný network server LoRaWAN pro EMBER: HARDWARIO pro vás může hostovat ChirpStack nebo The Things Stack jako alternativu k vlastnímu provozu."
+title: Spravovaný síťový server
+description: "Spravovaný síťový server LoRaWAN pro EMBER: HARDWARIO pro vás může hostovat ChirpStack nebo The Things Stack jako alternativu k vlastnímu provozu."
 ---
 import Image from '@theme/IdealImage';
 
-# Spravovaný network server {#managed-network-server}
+# Spravovaný síťový server {#managed-network-server}
 
-LoRaWAN Network Server pro **EMBER** (**ChirpStack** nebo **The Things Stack**) může být buď provozován na vaší vlastní infrastruktuře (viz [**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) a [**The Things Stack**](lorawan-network-server/lorawan-tts.md)), nebo provozován společností **HARDWARIO** jako spravovaná služba. Tato stránka popisuje spravovanou službu. Kromě spravovaného network serveru poskytuje **HARDWARIO** volitelně také SIM kartu s konektivitou pro **LTE** backhaul a bezpečný vzdálený přístup přes **OpenVPN**.
+Síťový server LoRaWAN pro **EMBER** (**ChirpStack** nebo **The Things Stack**) můžete provozovat na vlastní infrastruktuře (viz [**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) a [**The Things Stack**](lorawan-network-server/lorawan-tts.md)), nebo ho jako spravovanou službu provozuje **HARDWARIO**. Tato stránka popisuje spravovanou službu. Kromě spravovaného síťového serveru může **HARDWARIO** volitelně dodat také SIM kartu s konektivitou pro páteřní připojení **LTE** a bezpečný vzdálený přístup přes **OpenVPN**.
 
-Abyste mohli spravovanou službu využívat, potřebujete alespoň jedno zařízení **EMBER Hotspot**.
+Ke spravované službě potřebujete alespoň jedno zařízení **EMBER Hotspot**.
 
-S touto službou získáte vlastní instanci [**ChirpStack**](https://www.chirpstack.io/) a [**Node-RED**](https://nodered.org/) přístupnou přes webové rozhraní pro správu.
+Ve službě dostanete vlastní instanci [**ChirpStack**](https://www.chirpstack.io/) a [**Node-RED**](https://nodered.org/), obě dostupné přes webové rozhraní pro správu.
 
-Přístup je zabezpečen protokolem **HTTPS/TLSv1.3** a uživatelská identita je ve spravované službě vytvořena týmem **HARDWARIO** při zřizování služby.
+Přístup zabezpečuje protokol **HTTPS/TLSv1.3**. Uživatelskou identitu ve spravované službě vytvoří tým **HARDWARIO** při zřízení služby.
 
-Ke správě služby nepotřebujete žádný specializovaný software na PC ani mobilu. Postačí aktuální webový prohlížeč.
+Ke správě služby nepotřebujete v počítači ani v mobilu žádný zvláštní software. Stačí aktuální webový prohlížeč.
 
 ## Webová správa {#web-management}
 
-Webová správa poskytuje přístup k aplikacím **ChirpStack** a **Node-RED** prostřednictvím služby **Teleport**.
+Webová správa zpřístupňuje aplikace **ChirpStack** a **Node-RED** přes službu **Teleport**.
 
 :::caution
 
@@ -31,35 +31,35 @@ Přihlašovací URL webové správy: `https://<customer identifier>-<service ind
 
 :::tip
 
-Část &lt;customer identifier&gt; musíte nahradit identifikací přidělenou společností **HARDWARIO** (obvykle jméno firmy).
+Místo &lt;customer identifier&gt; zadejte identifikátor, který vám přidělila společnost **HARDWARIO** (obvykle název firmy).
 
 :::
 
-Pro multifaktorovou autentizaci potřebujete jednu z těchto metod:
+K vícefaktorovému ověření potřebujete jednu z těchto metod:
 
 * **Google Authenticator** nebo kompatibilní aplikaci na mobilu
 
-* **FIDO2**: univerzální druhý faktor (**U2F**) USB klíč (např. **Security Key Series**)
+* **FIDO2**: USB klíč pro univerzální druhý faktor (**U2F**) (např. **Security Key Series**)
 
 * **FIDO2**: univerzální druhý faktor (**U2F**) bez hesla (např. **YubiKey Bio Series**)
 
-Níže uvedené služby jsou přístupné přes položku menu **Applications**. Služby jsou označeny těmito zkratkami:
+Níže uvedené služby otevřete přes položku nabídky **Applications**. Označují je tyto zkratky:
 
 * `cs`: aplikace **ChirpStack**
 
 * `nr`: aplikace **Node-RED**
 
-Pro přístup ke konkrétní službě klikněte na tlačítko **LAUNCH**.
+Službu otevřete tlačítkem **LAUNCH**.
 
-## ChirpStack LoRaWAN Server {#chirpstack-lorawan-server}
+## Server LoRaWAN ChirpStack {#chirpstack-lorawan-server}
 
-Služba **Teleport** přesměruje uživatele na následující URL:
+Služba **Teleport** vás přesměruje na tuto adresu URL:
 
 ```
 https://ember-<customer identifier>-<service index>-cs.tp.hardwario.com/
 ```
 
-Toto jsou výchozí přihlašovací údaje:
+Výchozí přihlašovací údaje:
 
 * Uživatelské jméno: `admin`
 
@@ -67,25 +67,25 @@ Toto jsou výchozí přihlašovací údaje:
 
 :::tip
 
-Není potřeba je měnit, protože jste identifikováni a autentizováni přihlášením do webového rozhraní **Teleport**.
+Měnit je nemusíte, protože vaši identitu už ověřilo přihlášení do webového rozhraní **Teleport**.
 
 :::
 
-### LoRaWAN brány {#lorawan-gateways}
+### Brány LoRaWAN {#lorawan-gateways}
 
 Seznam všech zařízení **EMBER Hotspot** s hodnotou **Last seen** a přehledem aktivity.
 
-### LoRaWAN aplikace {#lorawan-applications}
+### Aplikace LoRaWAN {#lorawan-applications}
 
-V této sekci může uživatel definovat způsob předávání dat ze zařízení **LoRaWAN** do **LoRaWAN** aplikací (což mohou být koncové body uživatele).
+V této sekci určíte, jak se data ze zařízení **LoRaWAN** předávají do aplikací **LoRaWAN** (může jít o vaše vlastní koncové body).
 
-Každá aplikace zahrnuje seznam zařízení **LoRaWAN** (např. **CHESTER**).
+Každá aplikace obsahuje seznam zařízení **LoRaWAN** (např. **CHESTER**).
 
-Aktivitu **LoRaWAN** můžete zkontrolovat pro jakékoli zařízení **CHESTER**.
+U každého zařízení **CHESTER** můžete zkontrolovat jeho aktivitu v síti **LoRaWAN**.
 
-Každé zařízení **CHESTER** musí být registrováno v sekci **Application**.
+Každé zařízení **CHESTER** musí být zaregistrované v sekci **Application**.
 
-Doporučenou volbou je použití metody **ABP** (Activation By Personalization). Pro tuto metodu bude uživatel muset zadat (nebo vygenerovat) následující parametry:
+Doporučujeme metodu **ABP** (Activation By Personalization). U ní zadáte (nebo vygenerujete) tyto parametry:
 
 * **Device EUI**: označované také jako `DevEUI`
 
@@ -95,7 +95,7 @@ Doporučenou volbou je použití metody **ABP** (Activation By Personalization).
 
 :::tip
 
-V **ChirpStack** se metoda **ABP** použije, pokud uživatel nezapne zaškrtávací pole `Device supports OTAA` v konkrétním profilu zařízení.
+V **ChirpStack** se metoda **ABP** použije, pokud v profilu zařízení nezaškrtnete `Device supports OTAA`.
 
 :::
 
@@ -107,37 +107,37 @@ Z bezpečnostních důvodů je metoda **ABP** vhodná pro zařízení LoRaWAN, u
 
 ## Aplikace Node-RED {#node-red-application}
 
-Služba **Teleport** přesměruje uživatele na následující URL:
+Služba **Teleport** vás přesměruje na tuto adresu URL:
 
 ```
 https://ember-<customer identifier>-<service index>-nr.tp.hardwario.com/
 ```
 
-Data jsou z **LoRaWAN** serveru předávána do **Node-RED** pomocí **Mosquitto** (**MQTT** server). MQTT server poskytuje spravovaná služba na adrese `localhost:1883`.
+Data ze serveru **LoRaWAN** do **Node-RED** předává **Mosquitto** (server **MQTT**). Spravovaná služba ho provozuje na adrese `localhost:1883`.
 
-Uplink data jsou publikována pod tímto tématem:
+Data uplinků se publikují do tohoto topicu:
 
 ```
 application/+/device/+/event/up
 ```
 
-Tok zpracování dat v aplikaci **Node-RED** začíná zprávou **MQTT**.
+Flow pro zpracování dat v **Node-RED** začíná zprávou **MQTT**.
 
 :::tip
 
-V **Node-RED** použijte node `mqtt client` pro přihlášení k výše uvedenému tématu.
+V **Node-RED** se k výše uvedenému topicu přihlaste uzlem `mqtt client`.
 
 :::
 
-Po přijetí zprávy **MQTT** je potřeba dekódovat payload zařízení podle firmwaru použitého v zařízení **LoRaWAN** (např. **CHESTER**).
+Po přijetí zprávy **MQTT** je třeba payload dekódovat podle firmwaru, který zařízení **LoRaWAN** (např. **CHESTER**) používá.
 
 :::caution
 
-Ačkoli je možné dekódovat payload přímo v **ChirpStack**, doporučujeme to udělat později v **Node-RED**, kde má uživatel k dispozici plnohodnotnou knihovnu **Node.js** pro parsování binárních bufferů a robustnější interpret **JavaScript** s pokročilými nástroji pro debugování.
+Payload lze dekódovat přímo v **ChirpStack**, doporučujeme to ale udělat až v **Node-RED**. Tam máte k dispozici plnohodnotnou knihovnu **Node.js** pro parsování binárních bufferů a robustnější interpret jazyka **JavaScript** s pokročilými nástroji pro ladění.
 
 :::
 
-Níže je uveden příklad funkce **Node-RED** (v **JavaScript**) pro dekódování payloadu **Base64** poskytnutého službou **ChirpStack** ve zprávě **MQTT**:
+Níže je příklad funkce pro **Node-RED** (v jazyce **JavaScript**), která dekóduje payload v kódování **Base64**, jak ho **ChirpStack** posílá ve zprávě **MQTT**:
 
 <details>
 <summary><b>Zobrazit dekódovací funkci pro Node-RED</b></summary>
@@ -276,15 +276,15 @@ function decode(buffer) {
 </p>
 </details>
 
-Po dekódování můžete data dále zpracovávat – skalarizovat, přidávat atributy atd. Poslední akcí v toku by mělo být doručení dat přes nějaký běžný konektor, např. **HTTPS** požadavek.
+Dekódovaná data můžete dále zpracovávat, například je převést na skalární hodnoty nebo k nim přidat atributy. Posledním krokem flow by mělo být doručení dat přes některý běžný konektor, např. požadavkem **HTTPS**.
 
-Pro ladění a řešení problémů s tokem můžete použít node `debug` a konzolové zobrazení v **Node-RED**.
+Flow můžete ladit a hledat v něm chyby pomocí uzlu `debug` a zobrazení konzole v **Node-RED**.
 
 ### Příklady integrace {#integration-examples}
 
-Data mohou být předávána přes internet ke zpracování do jakékoli služby – např. pro vizualizaci, ukládání dat a integraci s podnikovými aplikacemi.
+Data můžete přes internet předat ke zpracování do libovolné služby, například k vizualizaci, k uložení nebo k integraci s podnikovými aplikacemi.
 
-Několik běžných příkladů integrace:
+Běžné příklady integrace:
 
 * **REST API**
 

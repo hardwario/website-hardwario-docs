@@ -14,7 +14,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 - [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
 - [**Common functionality**](common-functionality.md) to know how LED, button and network configuration works.
-- [**Platform Management**](/chester/category/platform-connectivity/) on how to work with the interactive console.
+- [**Platform Connectivity**](/chester/category/platform-connectivity/) on how to work with the interactive console.
 
 :::
 
@@ -74,8 +74,8 @@ The **button LED** color also **signalizes CO₂ concentration levels**.
 
 :::caution
 
-CHESTER IAQ sends in default the configuration about 800 bytes of data. If you increase the report interval without increasing also aggregation interval,
-the data buffer might be bigger than the UDP MTU and the packet will not be sent. Device then appears like it is not sending or sends only a fraction of packets.
+CHESTER IAQ sends about 800 bytes of data in the default configuration. If you increase the report interval without also increasing the aggregation interval,
+the data buffer might be bigger than the UDP MTU and the packet will not be sent. The device then appears not to send at all or to send only a fraction of packets.
 
 :::
 
@@ -151,16 +151,16 @@ Firmware build variant: `west chester-update clime --variant "CHESTER Clime TC"`
 
 - All sensors are **sampled** with a configurable period (parameter `interval-sample`).
 - Samples are then **aggregated** in the configurable interval. Minimum, maximum, average, and median are computed from buffered samples for each sensor (parameter `interval-aggreg`).
-- Each aggregated values have its timestamps and are sent in a batch in a report interval period (parameter `interval-report`).
+- Each aggregated value has its timestamp; the values are sent in a batch every report interval (parameter `interval-report`).
 
 :::caution
 
-CHESTER Clime sends in default the configuration about 500 bytes of data. If you increase the report interval without increasing also aggregation interval,
-the data buffer might be bigger than the UDP MTU and the packet will not be sent. Device then appears like it is not sending or sends only a fraction of packets.
+CHESTER Clime sends about 500 bytes of data in the default configuration. If you increase the report interval without also increasing the aggregation interval,
+the data buffer might be bigger than the UDP MTU and the packet will not be sent. The device then appears not to send at all or to send only a fraction of packets.
 
 :::
 
-When equipped with **CHESTER-S1**. The device also has a push button. When the button is pressed, the blue LED turns on for a second. Also, the **beep sound** is played from the integrated acoustic buzzer for audible confirmation of the push button press.
+When equipped with **CHESTER-S1**, the device also has a push button. When the button is pressed, the blue LED turns on for a second. Also, the **beep sound** is played from the integrated acoustic buzzer for audible confirmation of the push button press.
 
 Also, the button on the optional **CHESTER-S1** by its color reports the state of the CO₂ by **green** (levels are ok), **orange** (warning) and **red** (alarm) thresholds. The button blinks shortly every 5 seconds when powered from a battery and it is permanently on when external power on X10 is applied. Threshold **levels** and **hysteresis** are **configurable**.
 
@@ -266,7 +266,7 @@ Command to set the **delay between the event and report** in seconds (temperatur
 app config event-report-delay <1-86400>
 ```
 
-Command to set the **report rate** in reports per hour (just for event reports, periodic reports are not counter to this limit):
+Command to set the **report rate** in reports per hour (just for event reports, periodic reports are not counted toward this limit):
 
 ```
 app config event-report-rate <1-3600>

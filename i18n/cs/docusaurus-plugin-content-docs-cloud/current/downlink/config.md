@@ -6,9 +6,9 @@ import TabItem from '@theme/TabItem';
 
 # Konfigurace {#config}
 
-Konfiguraci zařízení lze změnit stejně jako přes BLE nebo J-Link RTT: odešlete jeden nebo více
-příkazů `app config` a zařízení CHESTER je použije při dalším odeslání uplink paketu nebo při dotazu
-na Cloud.
+Konfiguraci zařízení změníte stejně jako přes BLE nebo J-Link RTT: odešlete jeden nebo více
+příkazů `app config` a zařízení CHESTER je použije, až příště odešle paket uplink nebo se zeptá
+cloudu.
 
 Otevřete u zařízení **Messages** → **+&nbsp;SCHEDULE DOWNLINK**, nastavte **Message type** na **config**,
 zadejte příkazy do pole **Body** jako obyčejný **text** nebo **JSON** a klikněte na **SEND**.
@@ -44,14 +44,14 @@ app config interval-report 1800
   </TabItem>
 </Tabs>
 
-:::warning[Neposílejte config save přes Cloud]
+:::warning[Neposílejte config save přes cloud]
 
-Při **lokální** konfiguraci zařízení zadáváte na konci `config save`, aby se změny uložily a zařízení
-se restartovalo. **Přes Cloud příkaz `config save` posílat nesmíte**, protože HARDWARIO Cloud konfiguraci
-použije a uloží automaticky. Pokud jej přidáte sami, může se změna aplikovat dvakrát, proto jej vynechte.
+Při **místní** konfiguraci zařízení končíte příkazem `config save`, který změny uloží a zařízení
+restartuje. **Přes cloud příkaz `config save` posílat nesmíte**, protože HARDWARIO Cloud konfiguraci
+použije a uloží automaticky. Kdybyste ho přidali, mohla by se změna použít dvakrát, proto ho vynechte.
 
 :::
 
-Kompletní seznam konfiguračních parametrů najdete v referenci
-[**Default Configuration**](/chester/catalog-applications/common-functionality#default-configuration)
-pro zařízení CHESTER; příkaz `app config show` vypíše aktuální hodnoty zařízení.
+Úplný seznam konfiguračních parametrů najdete v dokumentaci zařízení CHESTER v části
+[**Výchozí konfigurace**](/chester/catalog-applications/common-functionality#default-configuration);
+příkaz `app config show` vypíše aktuální hodnoty zařízení.

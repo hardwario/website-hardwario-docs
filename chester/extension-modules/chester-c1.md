@@ -58,8 +58,8 @@ For more details see [**Ordering Codes**](../ordering-codes.md#chester-m).
 | JP4      | DIGITAL   | 2 x digital I/O                         |
 | JP3      | ANALOG    | 2 x analog I/O + 2 x VIN                |
 | JP12     | NA        | Not used                                |
-| BT1-BT4  | BATTERY   | 4 x C size holder for 3.6 primary cell* |
-| BT5-BT7  | BATTERY   | 3 x D size holder for 3.6 primary cell* |
+| BT1-BT4  | BATTERY   | 4 x C size holder for 3.6 V primary cell* |
+| BT5-BT7  | BATTERY   | 3 x D size holder for 3.6 V primary cell* |
 
 
 _\* CHESTER-X SLOT A is by default occupied with integrated module CHESTER-X1_

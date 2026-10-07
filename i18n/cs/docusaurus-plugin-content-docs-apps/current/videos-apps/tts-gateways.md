@@ -6,7 +6,7 @@ title_meta: "Přidání bran (videonávod The Things Stack)"
 
 import Image from '@theme/IdealImage';
 
-# The Things Stack - jak přidat bránu do sítě LoRaWAN {#the-things-stack---how-to-add-gateway-to-a-lorawan-network}
+# The Things Stack – jak přidat bránu do sítě LoRaWAN {#the-things-stack---how-to-add-gateway-to-a-lorawan-network}
 
 ## Přehled návodu {#tutorial-overview}
 

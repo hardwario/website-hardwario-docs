@@ -31,5 +31,5 @@ můžete místo toho použít náš [**Mini Cover Module**](./about-mini-cover-m
 - Mechanické rozměry: 88 x 55 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/cover-module)
+- [**E-shop**](https://www.hardwario.store/p/cover-module)
 - [**Schéma**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-cover)

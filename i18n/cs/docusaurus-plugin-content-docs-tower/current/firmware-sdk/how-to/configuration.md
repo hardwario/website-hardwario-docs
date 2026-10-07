@@ -4,38 +4,38 @@ title: "Jak na: Konfigurace"
 ---
 import Image from '@theme/IdealImage';
 
-Funkce `twr_config` vám pomohou snadno vytvořit **proměnnou** nebo **strukturu proměnných**, které se ukládají do interní **EEPROM paměti**.
+Funkcemi `twr_config` snadno vytvoříte **proměnnou** nebo **strukturu proměnných**, které se ukládají do interní **paměti EEPROM**.
 
-Knihovna automaticky inicializuje vaši konfiguraci, když:
+Knihovna konfiguraci automaticky inicializuje, když:
   - Běží poprvé
-  - Parametr signature je jiný
+  - Parametr signature se změnil
   - Nová konfigurační struktura má jinou délku
   - EEPROM je poškozená
 
 ## Odkazy {#references}
-- [**EEPROM Config SDK Module**](https://sdk.hardwario.com/group__twr__config.html)
-- Příklad v GitHub repozitáři
+- [**Modul SDK pro konfiguraci v EEPROM**](https://sdk.hardwario.com/group__twr__config.html)
+- Příklad v repozitáři na GitHubu
 
 ## Inicializace {#initialization}
 
-První parametr, `signature`, je **unikátní číslo pro váš firmware**. Díky tomu, pokud do zařízení **Core Module** nahrajete jiný firmware, který používá konfigurační strukturu se **stejnou délkou**, knihovna to pozná a konfiguraci znovu správně inicializuje.
+První parametr, `signature`, je **jedinečné číslo vašeho firmwaru**. Když pak do modulu **Core Module** nahrajete jiný firmware s konfigurační strukturou **stejné délky**, knihovna to pozná a konfiguraci správně inicializuje znovu.
 
 Poslední parametr `init_config` může být:
-- `NULL`: konfigurační struktura je při inicializaci **vynulována**
+- `NULL`: konfigurační struktura se při inicializaci **vynuluje**
 - **Ukazatel na strukturu**: init_config se při inicializaci zkopíruje do konfigurační struktury
 
 :::info
 
 V jednoduchém příkladu níže je struktura pro uložení konfigurace modulu PIR Module (`report_interval`, `pir_sensitivity`, `pir_deadtime`).
 
-Ve funkci `application_init()` je ukázka, jak použít některé z funkcí dostupných v SDK modulu `twr_config_*`.
+Ve funkci `application_init()` je ukázka, jak použít některé funkce z modulu SDK `twr_config_*`.
 
 :::
 
 <details>
 <summary>
 <b>
-Jednoduchý příklad kódu konfigurace modulu PIR Module
+Příklad kódu: jednoduchá konfigurace modulu PIR Module
 </b>
 </summary>
 <p>

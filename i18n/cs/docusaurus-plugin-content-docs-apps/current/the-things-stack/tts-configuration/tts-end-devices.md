@@ -13,8 +13,8 @@ Tento návod vás provede vytvořením profilů zařízení a přidáním koncov
 
 ## Vytvoření aplikace {#creating-an-application}
 
-1. Na kartě **Home** klikněte na **Create application**.  
-   - Pokud jste na jiné kartě, klikněte vpravo nahoře na modré tlačítko **+ Add** a zvolte **Add application**.
+1. Na záložce **Home** klikněte na **Create application**.  
+   - Pokud jste na jiné záložce, klikněte vpravo nahoře na modré tlačítko **+ Add** a zvolte **Add application**.
 
 ![Dashboard Home v The Things Stack s tlačítkem Create application v řádku rychlých akcí](../../../../../../apps/the-things-stack/tts-configuration/images/tts-end-device-0.png)
 
@@ -48,21 +48,21 @@ V The Things Stack lze koncová zařízení zaregistrovat dvěma způsoby:
 2. Zvolte **Select the end device in the LoRaWAN Device Repository**.
 
 3. Vyhledejte výrobce a model svého zařízení a vyberte ho.  
-   - Použití předdefinovaného zařízení automaticky vyplní většinu technických parametrů.
+   - U předdefinovaného zařízení se většina technických parametrů vyplní automaticky.
 
 :::info
-Tento způsob doporučujeme vždy, když je zařízení v LoRaWAN Device Repository dostupné, protože minimalizuje chyby v konfiguraci.
+Tento způsob doporučujeme vždy, když je zařízení v LoRaWAN Device Repository dostupné, protože snižuje riziko chyb v konfiguraci.
 :::
 
 4. Vyplňte potřebné identifikátory:
    - **JoinEUI (AppEUI)**  
      - Najdete ho v naší dokumentaci nebo v dokumentech výrobce.
    - **DevEUI**  
-     - Unikátní pro každé zařízení, vytištěné na samotném zařízení.
+     - Liší se u každého zařízení a je vytištěné přímo na něm.
    - **AppKey**  
      - Najdete ho v naší dokumentaci nebo v dokumentech výrobce.
    - **Device ID**  
-     - Vámi zvolený identifikátor zařízení.
+     - Identifikátor zařízení podle vaší volby.
 
 5. (Volitelně) Přidejte stejný **label**, jaký jste použili u aplikace a brány.
 
@@ -74,7 +74,7 @@ Tento způsob doporučujeme vždy, když je zařízení v LoRaWAN Device Reposit
 
 ### Ruční konfigurace {#manual-configuration}
 
-Tento způsob se používá, když zařízení **není dostupné** v LoRaWAN Device Repository nebo když je potřeba **plná ruční kontrola** nad parametry zařízení.
+Tento způsob použijte, když zařízení v LoRaWAN Device Repository **není dostupné** nebo když chcete mít parametry zařízení **plně pod ruční kontrolou**.
 
 1. V aplikaci klikněte na **+ Register end device**.
 
@@ -113,13 +113,13 @@ Tento způsob se používá, když zařízení **není dostupné** v LoRaWAN Dev
 6. Vyplňte zbývající potřebné identifikátory:
 
    - **DevEUI**  
-     - Unikátní identifikátor zařízení (vytištěný na zařízení nebo obalu).
+     - Jedinečný identifikátor zařízení (je vytištěný na zařízení nebo na obalu).
    - **AppKey**  
      - Aplikační klíč od výrobce.
    - **Device ID**  
-     - Vámi zvolený identifikátor zařízení v rámci aplikace.
+     - Identifikátor zařízení v rámci aplikace podle vaší volby.
 
-7. (Volitelně) Přidejte **label** shodný s aplikací a bránou.
+7. (Volitelně) Přidejte stejný **label** jako u aplikace a brány.
 
 8. Klikněte na modré tlačítko **Register end device**.
 
@@ -129,7 +129,7 @@ Tento způsob se používá, když zařízení **není dostupné** v LoRaWAN Dev
 
 ## Koncové zařízení je připravené {#end-device-ready}
 
-Vaše koncové zařízení je zaregistrované a připravené komunikovat s The Things Stack.
+Koncové zařízení je teď zaregistrované a připravené komunikovat s The Things Stack.
 
 ## Videonávod {#video-tutorial}
 

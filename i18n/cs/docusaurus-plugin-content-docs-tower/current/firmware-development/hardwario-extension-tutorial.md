@@ -1,6 +1,6 @@
 ---
 slug: hardwario-extension-tutorial
-title: Návod k rozšíření TOWER Extension
+title: Návod k rozšíření TOWER
 ---
 import Image from '@theme/IdealImage';
 
@@ -10,9 +10,9 @@ Tento návod předpokládá, že máte nainstalované a funkční [**Visual Stud
 
 :::
 
-Toto rozšíření umožňuje jednoduše **vyvíjet**, **nahrávat** a **debugovat firmware** pro **HARDWARIO TOWER**.
+S tímto rozšířením snadno **vyvíjíte**, **nahráváte** a **debugujete firmware** pro **HARDWARIO TOWER**.
 
-Rozšíření má dva režimy provozu:
+Rozšíření pracuje ve dvou režimech:
 
 :::info
 
@@ -58,25 +58,25 @@ V obou režimech byste měli vidět **logo HARDWARIO v postranním panelu**.
 
 Pokud jste neotevřeli složku s firmwarem pro HARDWARIO TOWER, rozšíření se aktivuje, ale **nabídne méně možností**.
 
-Získáte přístup k několika základním příkazům, které vás dovedou na naše webové stránky, a dále ke dvěma příkazům pro **klonování firmwaru z našeho [GitHubu](https://github.com/hardwario)**.
+K dispozici budete mít několik základních příkazů, které otevřou naše weby, a dva příkazy pro **klonování firmwaru z našeho [GitHubu](https://github.com/hardwario)**.
 
-Tyto příkazy můžete použít, když začínáte s vývojem firmwaru.
+Těmito příkazy můžete začít s vývojem firmwaru.
 
 ### From Skeleton Project… {#from-skeleton-project}
 
-Budete vyzváni k výběru složky, do které se má naklonovat [**firmware twr-skeleton**](https://github.com/hardwario/twr-skeleton) (**vytvoří se nová složka pro firmware**).
+Vyberte složku, do které se má naklonovat [**firmware twr-skeleton**](https://github.com/hardwario/twr-skeleton) (**vytvoří se v ní nová složka pro firmware**).
 
-Po výběru složky byste **měli svou složku s firmwarem pojmenovat**, abyste nenarazili na kolize s jinými složkami firmwaru.
+Pak **složku s firmwarem pojmenujte**, aby nekolidovala s jinými složkami firmwaru.
 
 ### From Existing Project… {#from-existing-project}
 
-Zobrazí se vám seznam existujícího firmwaru pro HARDWARIO TOWER dostupného na našem [**GitHubu**](https://github.com/hardwario). Kterýkoli z nich můžete vybrat podle **názvu** a **popisu** firmwaru.
+Zobrazí se seznam hotových firmwarů pro HARDWARIO TOWER z našeho [**GitHubu**](https://github.com/hardwario). Vybrat si můžete kterýkoli z nich podle **názvu** a **popisu**.
 
-Budete vyzváni k výběru složky, do které se má vybraný firmware naklonovat (**vytvoří se nová složka pro firmware**). Po výběru složky můžete **svou složku s firmwarem pojmenovat**, abyste nenarazili na kolize s jinými složkami firmwaru.
+Pak vyberte složku, do které se má zvolený firmware naklonovat (**vytvoří se v ní nová složka pro firmware**). Nakonec můžete **složku s firmwarem pojmenovat**, aby nekolidovala s jinými složkami firmwaru.
 
 :::note
 
-Po naklonování firmwaru se okno **znovu otevře již se složkou firmwaru**.
+Po naklonování se okno **znovu otevře se složkou firmwaru**.
 
 :::
 
@@ -90,13 +90,13 @@ Pokud používáte standardní firmware, měl by se na začátku otevřít soubo
 
 V tomto režimu získáte několik dalších ovládacích prvků ve **spodním panelu** a v **postranním panelu**.
 
-Ve **spodním panelu** jsou důležité ovládací prvky, které můžete rychle použít bez nutnosti sahat po **ovládacích prvcích v postranním panelu**
+Ve **spodním panelu** najdete důležité ovládací prvky, které rychle použijete i bez **ovládacích prvků v postranním panelu**:
 
 <Image img={require('../../../../../tower/firmware-development/images/bottom-panel.png')} alt="Stavový řádek VS Code s ovládacími prvky rozšíření HARDWARIO: build, flash, typ firmwaru a zařízení" />
 
 #### Výběr zařízení `Device: COM3 - bc-core-module` {#device-selection-device-com3---bc-core-module}
 
-Tímto vyberete zařízení, se kterým chcete pracovat. Pokud nemáte připojené **žádné zařízení HARDWARIO**, zobrazí se výzva `No Device found!`. Pokud máte připojeno více zařízení, můžete je **procházet klikáním na text**.
+Tímto vyberete zařízení, se kterým chcete pracovat. Pokud nemáte připojené **žádné zařízení HARDWARIO**, zobrazí se hlášení `No Device found!`. Pokud máte připojeno více zařízení, můžete je **procházet klikáním na text**.
 
 #### Výběr typu firmwaru `Firmware type: Debug` {#firmware-type-selection-firmware-type-debug}
 
@@ -104,23 +104,23 @@ Můžete zvolit, zda chcete sestavovat v režimu `Debug` nebo `Release`. Pro bě
 
 :::info
 
-Jsou zde i další ikony, které můžete použít; budou popsány dále společně s **příkazy, které vyvolávají**.
+Další ikony popisujeme níže spolu s **příkazy, které spouštějí**.
 
 :::
 
 ### Build + Flash (Console) {#build--flash-console}
 
-Tento příkaz provede **celý** cyklus, který můžete při vývoji používat. **Sestaví firmware**, **nahraje jej** do vybraného zařízení a poté **připojí konzoli** k zařízení, abyste viděli logovací zprávy.
+Tento příkaz provede **celý cyklus**, který při vývoji používáte: **sestaví firmware**, **nahraje ho** do vybraného zařízení a pak k němu **připojí konzoli**, abyste viděli logovací zprávy.
 
 :::note
 
-Tohle budete při vývoji používat většinu času.
+Při vývoji ho budete používat nejčastěji.
 
 :::
 
 :::info
 
-Pro [**konzoli TOWER Console**](./hardwario-tower-console.md) existuje samostatná kapitola.
+[**Konzoli TOWER**](./hardwario-tower-console.md) se věnuje samostatná kapitola.
 
 :::
 
@@ -128,11 +128,11 @@ Pro [**konzoli TOWER Console**](./hardwario-tower-console.md) existuje samostatn
 
 :::caution
 
-Aby to fungovalo správně, budete potřebovat [**sondu JLink**](https://www.segger.com/products/debug-probes/j-link/). Tohle je určeno pro **pokročilé debugování**. Musíte mít `arm-none-eabi-gdb` a `JLinkGDBServerCL` v **PATH**. Pokud používáte naši přenosnou verzi, nemusíte se tím zabývat a potřebujete jen sondu JLink.
+K tomu potřebujete [**sondu JLink**](https://www.segger.com/products/debug-probes/j-link/). Jde o **pokročilé debugování**. Nástroje `arm-none-eabi-gdb` a `JLinkGDBServerCL` musí být v proměnné **PATH**. Pokud používáte naši přenosnou verzi, nemusíte to řešit a stačí vám sonda JLink.
 
 :::
 
-Tento příkaz nepřipojí konzoli jako ten **předchozí**, ale místo toho se pokusí připojit k **debuggeru JLink** pro **pokročilé debugování**. Více o debugování přes JLink si můžete přečíst v [**kapitole Pokročilé debugování**](./advanced-debugging.md).
+Na rozdíl od **předchozího** příkazu nepřipojí konzoli, ale pokusí se připojit **debugger JLink** pro **pokročilé debugování**. Více o debugování se sondou JLink najdete v [**kapitole Pokročilé debugování**](./advanced-debugging.md).
 
 ### Clean All Outputs {#clean-all-outputs}
 
@@ -140,19 +140,19 @@ Tento příkaz vyčistí všechny výstupy, takže můžete **vše zkompilovat o
 
 ### Build Firmware {#build-firmware}
 
-Tento příkaz spustí nad kódem **CMake** a **ninja**. Můžete tak zkontrolovat, zda v kódu nemáte nějaké **chyby** nebo **varování**, ještě než jej nahrajete do zařízení.
+Tento příkaz spustí nad kódem **CMake** a **ninja**. Můžete tak zkontrolovat, zda v kódu nemáte nějaké **chyby** nebo **varování**, ještě než ho nahrajete do zařízení.
 
 ### Flash Firmware {#flash-firmware}
 
-Tento příkaz **nahraje** firmware do **vybraného zařízení**. Zároveň spustí **příkaz pro sestavení**, pokud jste to předtím neudělali nebo jste zapomněli změny znovu sestavit.
+Tento příkaz **nahraje** firmware do **vybraného zařízení**. Předtím ještě spustí **příkaz pro sestavení** pro případ, že jste firmware nesestavili nebo jste zapomněli sestavit poslední změny.
 
 ### Attach Console {#attach-console}
 
-Tento příkaz připojí konzoli k **vybranému zařízení**, takže můžete zobrazit **logovací zprávy**.
+Tento příkaz připojí konzoli k **vybranému zařízení**, abyste viděli **logovací zprávy**.
 
 :::info
 
-Pro [**konzoli TOWER Console**](./hardwario-tower-console.md) existuje samostatná kapitola.
+[**Konzoli TOWER**](./hardwario-tower-console.md) se věnuje samostatná kapitola.
 
 :::
 
@@ -160,13 +160,13 @@ Pro [**konzoli TOWER Console**](./hardwario-tower-console.md) existuje samostatn
 
 :::caution
 
-Aby to fungovalo správně, budete potřebovat [**sondu JLink**](https://www.segger.com/products/debug-probes/j-link/). Tohle je určeno pro pokročilé debugování. Musíte mít `arm-none-eabi-gdb` a `JLinkGDBServerCL` v **PATH**. Pokud používáte naši přenosnou verzi, nemusíte se tím zabývat a potřebujete jen sondu JLink.
+K tomu potřebujete [**sondu JLink**](https://www.segger.com/products/debug-probes/j-link/). Jde o pokročilé debugování. Nástroje `arm-none-eabi-gdb` a `JLinkGDBServerCL` musí být v proměnné **PATH**. Pokud používáte naši přenosnou verzi, nemusíte to řešit a stačí vám sonda JLink.
 
 :::
 
-Tento příkaz se pokusí připojit k JLink pro pokročilé debugování.
+Tento příkaz se pokusí připojit k sondě JLink kvůli pokročilému debugování.
 
-Více o debugování přes JLink si můžete přečíst v [**kapitole Pokročilé debugování**](./advanced-debugging.md).
+Více o debugování se sondou JLink najdete v [**kapitole Pokročilé debugování**](./advanced-debugging.md).
 
 Debugování lze spustit **několika způsoby**:
 
@@ -174,11 +174,11 @@ Debugování lze spustit **několika způsoby**:
 
 :::info
 
-Ve složce `.vscode` by neměl být přítomen soubor `launch.json`.
+Ve složce `.vscode` by neměl být soubor `launch.json`.
 
 :::
 
-Pokud chcete jen spustit debugování a nic v `launch.json` neměnit, stačí stisknout **F5** a vybrat TOWER Debugger. Debugování by mělo bez problémů začít
+Pokud chcete jen spustit debugování a nic v `launch.json` neměnit, stačí stisknout **F5** a vybrat TOWER Debugger. Debugování by mělo bez problémů začít.
 <div class="container">
   <div class="row">
     <div class="col col--8">
@@ -191,7 +191,7 @@ Pokud chcete jen spustit debugování a nic v `launch.json` neměnit, stačí st
 
 #### Přejděte do Run and Debug a vytvořte `launch.json` {#go-to-the-run-and-debug-and-create-launchjson}
 
-Pokud chcete mít vlastní `launch.json`, přejděte do okna **Run and Debug** v **postranním panelu**, klikněte na **create a launch.json** a vyberte TOWER Debugger. Nebo přidejte tuto konfiguraci do již existujícího souboru.
+Pokud chcete mít vlastní `launch.json`, přejděte do okna **Run and Debug** v **postranním panelu**, klikněte na **create a launch.json** a vyberte TOWER Debugger. Nebo tuto konfiguraci přidejte do existujícího souboru.
 
 ```json showLineNumbers
 {

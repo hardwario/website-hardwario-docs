@@ -1,7 +1,7 @@
 ---
 slug: origin-plus
 title: "ORIGIN+"
-description: Nexelec ORIGIN+ multi-sensor LoRaWAN fire detector with smoke, heat, and CO detection. NF and CE certified.
+description: Nexelec ORIGIN+ multi-sensor LoRaWAN fire detector with smoke, heat and CO detection, NF and CE certified.
 ---
 
 # Nexelec ORIGIN+

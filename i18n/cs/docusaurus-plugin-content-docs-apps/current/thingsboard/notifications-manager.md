@@ -6,9 +6,9 @@ import Image from '@theme/IdealImage';
 
 # Správce pravidel notifikací {#notification-rules-manager}
 
-**Správce pravidel notifikací** je nástroj pro nastavení automatických výstrah podle dat z vašich IoT zařízení (senzorů, měřičů a dalších). Umožňuje přesně definovat podmínky, za kterých dostanete e-mail nebo SMS, například když teplota překročí zadanou hodnotu, vlhkost klesne pod prah nebo zařízení nahlásí nečekanou hodnotu.
+**Správce pravidel notifikací** je nástroj pro nastavení automatických upozornění podle dat ze zařízení IoT (senzorů, měřičů a dalších). Přesně v něm určíte podmínky, za kterých dostanete e-mail nebo SMS, například když teplota překročí zadanou hodnotu, vlhkost klesne pod limit nebo zařízení nahlásí neočekávanou hodnotu.
 
-:::info Ukázkový případ použití
+:::info Příklad použití
 Zákazník provozující sklady chce dostat upozornění, když teplota v některém skladu překročí 28 °C. Vytvoří pravidlo: *Device = Warehouse_Sensor_A, Variable = temperature, Condition = > 28, Recipient = manager@company.com*. Od té chvíle se e-mail odesílá automaticky vždy, když senzor naměří víc než 28 °C.
 :::
 
@@ -34,7 +34,7 @@ Položka menu **Notifications** je vidět jen zákazníkům, kterým byl k tomut
 | **Customer User** | Jen pro čtení. Pravidla vidí, ale nemůže je vytvářet, upravovat, kopírovat, mazat ani přepínat. |
 
 :::info
-Pokud jste Customer User a potřebujete pravidlo změnit, obraťte se na svého Customer Administratora.
+Pokud jste Customer User a potřebujete pravidlo změnit, obraťte se na svého správce zákazníka (Customer Administrator).
 :::
 
 ---
@@ -52,7 +52,7 @@ Pokud jste Customer User a potřebujete pravidlo změnit, obraťte se na svého 
 | **Variable(s)** | Sledované telemetrické klíče. |
 | **Condition** | Spouštěcí podmínka a prah, plus odznaky Duration/Cooldown, pokud jsou nastavené. |
 | **Recipients** | Počet a typ příjemců (e-mail nebo SMS). Najetím myší zobrazíte seznam. |
-| **Enabled** | Přepínač pro zapnutí a vypnutí pravidla bez jeho smazání. |
+| **Enabled** | Přepínač, kterým pravidlo zapnete nebo vypnete, aniž byste ho smazali. |
 | **Actions** | **Edit** · **Copy** · **Delete** |
 
 ---
@@ -66,12 +66,12 @@ Klikněte na **+ Add Rule** v pravém horním rohu widgetu. Pod záhlavím se ot
 V sekci **DEVICES** zvolte zařízení, která má pravidlo sledovat. Jedno pravidlo může sledovat víc zařízení současně.
 
 1. Klikněte na pole **Filter devices...**. Objeví se rozbalovací seznam dostupných zařízení.
-2. Začněte psát a filtrujte podle názvu, nebo seznam projděte a vyberte.
-3. Klikněte na zařízení v seznamu nebo stiskněte **+ Add**. Objeví se jako odznak nad polem.
-4. U dalších zařízení postup zopakujte. Zařízení odeberete kliknutím na **×** na jeho odznaku.
+2. Začněte psát název a seznam se podle něj vyfiltruje. Případně zařízení v seznamu najděte posouváním a vyberte.
+3. Klikněte na zařízení v seznamu nebo stiskněte **+ Add**. Objeví se jako štítek nad polem.
+4. U dalších zařízení postup zopakujte. Zařízení odeberete kliknutím na **×** na jeho štítku.
 
 :::tip
-Přidání více zařízení znamená, že se pravidlo vyhodnotí pro *každé* zařízení samostatně. Notifikace se odešle vždy, když podmínku splní *kterékoli* z vybraných zařízení.
+Když přidáte více zařízení, pravidlo se vyhodnocuje pro *každé* zařízení samostatně. Notifikace se odešle vždy, když podmínku splní *kterékoli* z vybraných zařízení.
 :::
 
 ### Krok 2: Vyberte proměnné {#step-2-select-variables}
@@ -85,14 +85,14 @@ Jakmile máte vybrané alespoň jedno zařízení, klikněte na pole s proměnno
 - **Common to all devices (N)**: klíče dostupné na každém vybraném zařízení. Ty jsou pro pravidla nad více zařízeními nejužitečnější.
 - **Skupiny podle zařízení**: klíče, které existují jen na konkrétních zařízeních.
 
-Kliknutím na klíč ho přidáte jako odznak. Už přidané klíče jsou označené ✓ a nelze je přidat dvakrát.
+Kliknutím na klíč ho přidáte jako štítek. Už přidané klíče jsou označené ✓ a nelze je přidat dvakrát.
 
 **Ruční zadání klíče:**
 
 Napište název klíče přímo do pole a stiskněte **Enter** nebo klikněte na **+ Add**. To se hodí u zařízení, která ještě žádnou telemetrii neposlala.
 
 :::caution Důležité
-Název proměnné musí přesně odpovídat telemetrickému klíči, jak ho zařízení posílá (rozlišují se velká a malá písmena). Dostupné klíče zkontrolujete tak, že otevřete zařízení v platformě ThingsBoard → karta *Latest Telemetry*.
+Název proměnné musí přesně odpovídat telemetrickému klíči, jak ho zařízení posílá (rozlišují se velká a malá písmena). Dostupné klíče najdete v ThingsBoard v detailu zařízení na záložce *Latest Telemetry*.
 :::
 
 ### Krok 3: Nastavte podmínku {#step-3-set-the-condition}
@@ -104,7 +104,7 @@ V bloku **CONDITION** určete, kdy se má notifikace odeslat.
 | **Operator** | Operátor porovnání: větší než, menší než, rovná se, větší nebo rovno, menší nebo rovno. | > greater than |
 | **Threshold** | Hodnota, se kterou se naměřená telemetrie porovnává. | 28 |
 
-Příklad: *Operator = > greater than, Threshold = 28* znamená: „Pošli notifikaci, když hodnota proměnné překročí 28.“
+Příklad: *Operator = > greater than, Threshold = 28* znamená: „Odeslat notifikaci, když hodnota proměnné překročí 28.“
 
 ### Krok 4: Nastavte časování {#step-4-configure-timing}
 
@@ -113,7 +113,7 @@ Blok **TIMING** obsahuje dvě volitelná pole pro jemnější řízení. Pro vý
 | Pole | Popis | Výchozí |
 |-------|-------------|---------|
 | **Duration (min)** | Podmínka musí být splněná nepřerušeně tolik minut, než se notifikace odešle. Odfiltruje krátké špičky. | 0 = poslat okamžitě |
-| **Cooldown (min)** | Minimální doba mezi dvěma notifikacemi tohoto pravidla. Zabraňuje zaplavení notifikacemi. | 0 = bez omezení |
+| **Cooldown (min)** | Minimální doba mezi dvěma notifikacemi tohoto pravidla. Zabrání zahlcení notifikacemi. | 0 = bez omezení |
 
 ### Krok 5: Přidejte příjemce {#step-5-add-recipients}
 
@@ -121,7 +121,7 @@ Blok **TIMING** obsahuje dvě volitelná pole pro jemnější řízení. Pro vý
 
 **Příjemci e-mailu:**
 1. Do pole *user@example.com* napište e-mailovou adresu.
-2. Stiskněte **Enter** nebo klikněte na **+ Add**. Adresa se objeví jako odznak.
+2. Stiskněte **Enter** nebo klikněte na **+ Add**. Adresa se objeví jako štítek.
 3. U dalších příjemců postup zopakujte.
 
 **Příjemci SMS:**  
@@ -133,7 +133,7 @@ K jednomu pravidlu můžete přidat libovolný počet příjemců. Notifikace se
 
 ### Krok 6: Uložte pravidlo {#step-6-save-the-rule}
 
-Jakmile jsou vyplněná všechna povinná pole, klikněte na **Save Rule**. Pravidlo se okamžitě uloží a začne se vyhodnocovat v zapnutém stavu. Objeví se v tabulce pravidel.
+Jakmile jsou vyplněná všechna povinná pole, klikněte na **Save Rule**. Pravidlo se okamžitě uloží, je zapnuté a hned se začne vyhodnocovat. Objeví se v tabulce pravidel.
 
 :::caution Povinná pole
 - Alespoň jedno zařízení
@@ -150,14 +150,14 @@ Jakmile jsou vyplněná všechna povinná pole, klikněte na **Save Rule**. Prav
 
 ### Úprava pravidla {#editing-a-rule}
 
-U pravidla, které chcete změnit, klikněte na **Edit**. Otevře se formulář s předvyplněnými hodnotami. Proveďte změny a klikněte na **Save Rule**.
+U pravidla, které chcete změnit, klikněte na **Edit**. Otevře se formulář s předvyplněnými hodnotami. Upravte hodnoty a klikněte na **Save Rule**.
 
 ### Kopírování pravidla {#copying-a-rule}
 
 Klikněte na **Copy**. Otevře se formulář nového pravidla se stejnými hodnotami jako originál. Upravte, co potřebujete (například jiný prah nebo zařízení), a uložte.
 
 :::tip
-Kopírování je ideální, když chcete podobné pravidlo pro jiné zařízení nebo prah, aniž byste všechno vyplňovali od začátku.
+Kopírování se hodí, když chcete podobné pravidlo pro jiné zařízení nebo prah, aniž byste všechno vyplňovali od začátku.
 :::
 
 ### Smazání pravidla {#deleting-a-rule}
@@ -172,7 +172,7 @@ Smazání je trvalé a nelze ho vzít zpět. Pokud chcete notifikace jen dočasn
 
 Každé pravidlo má ve sloupci **Enabled** přepínač. Jeho vypnutím pravidlo deaktivujete: žádné notifikace se nebudou posílat, ale pravidlo zůstane uložené a lze ho kdykoli znovu zapnout.
 
-![Tabulka pravidel se dvěma teplotními pravidly, zaškrtávátky Enabled a akčními tlačítky Edit, Copy a Delete](../../../../../apps/thingsboard/images/notifications-manager-3.png)
+![Tabulka pravidel se dvěma teplotními pravidly, zaškrtávacími políčky Enabled a akčními tlačítky Edit, Copy a Delete](../../../../../apps/thingsboard/images/notifications-manager-3.png)
 
 ---
 
@@ -180,7 +180,7 @@ Každé pravidlo má ve sloupci **Enabled** přepínač. Jeho vypnutím pravidlo
 
 ### Vyhledávání {#search}
 
-Použijte pole *Search rules...* v pravém horním rohu. Výsledky se aktualizují v reálném čase napříč všemi poli (název zařízení, proměnná, příjemce a další).
+Použijte pole *Search rules...* v pravém horním rohu. Výsledky se průběžně aktualizují a hledá se ve všech polích (název zařízení, proměnná, příjemce a další).
 
 ### Filtr zákazníka {#customer-filter}
 
@@ -202,8 +202,8 @@ Kliknutím na záhlaví jakéhokoli řaditelného sloupce seznam seřadíte. Dal
 
 | Nastavení | Co dělá | Kdy ho použít |
 |---------|-------------|----------------|
-| **Duration** *(minuty)* | Podmínka musí být splněná nepřerušeně tolik minut, než se notifikace odešle. Krátká špička výstrahu nevyvolá. | Chcete ignorovat krátké nebo náhodné výkyvy a reagovat jen na trvalý stav. |
-| **Cooldown** *(minuty)* | Minimální doba mezi dvěma notifikacemi tohoto pravidla. I když podmínka platí dál, další zpráva se neodešle, dokud tento interval neuplyne. | Chcete omezit frekvenci notifikací, například nejvýš jedna výstraha za hodinu, ne padesát. |
+| **Duration** *(minuty)* | Podmínka musí být splněná nepřerušeně tolik minut, než se notifikace odešle. Krátká špička upozornění nevyvolá. | Chcete ignorovat krátké nebo náhodné výkyvy a reagovat jen na trvalý stav. |
+| **Cooldown** *(minuty)* | Minimální doba mezi dvěma notifikacemi tohoto pravidla. I když podmínka platí dál, další zpráva se neodešle, dokud tento interval neuplyne. | Chcete omezit četnost notifikací, například na nejvýš jedno upozornění za hodinu místo padesáti. |
 
 :::info Doporučené nastavení pro začátek
 Pokud si nejste jistí, nastavte **Duration = 0** a **Cooldown = 30**. Notifikace se odešle okamžitě po splnění podmínky, ale nejvýš jednou za 30 minut.
@@ -213,7 +213,7 @@ Pokud si nejste jistí, nastavte **Duration = 0** a **Cooldown = 30**. Notifikac
 
 ## Často kladené otázky {#frequently-asked-questions}
 
-**Nedostal jsem notifikaci, i když podmínka měla být splněná. Co mám zkontrolovat?**
+**Nepřišla mi notifikace, i když podmínka měla být splněná. Co mám zkontrolovat?**
 - Je pravidlo zapnuté? Zkontrolujte přepínač **Enabled** v tabulce.
 - Je název proměnné napsaný správně? Musí přesně odpovídat telemetrickému klíči, který zařízení posílá.
 - Není **Duration** nastavené na vysokou hodnotu? Podmínka musí být splněná nepřerušeně po celou dobu.
@@ -221,23 +221,23 @@ Pokud si nejste jistí, nastavte **Duration = 0** a **Cooldown = 30**. Notifikac
 - Je e-mailová adresa nebo telefonní číslo zadané správně?
 - Zkontrolujte složku se spamem: notifikační e-mail mohl být odfiltrovaný.
 
-**Můžu jedním pravidlem pokrýt víc zařízení a víc proměnných současně?**  
+**Mohu jedním pravidlem pokrýt víc zařízení a víc proměnných současně?**  
 Ano. Při vytváření pravidla přidejte víc zařízení a víc proměnných. Pravidlo se vyhodnotí pro každou kombinaci zařízení a proměnné samostatně. Když je vybráno víc zařízení, výběr proměnných automaticky ukáže, které telemetrické klíče jsou společné všem vybraným zařízením a které jsou specifické pro jednotlivá.
 
 **Změnil se jazyk rozhraní. Jak ho přepnu zpátky?**  
-Použijte přepínač jazyka v pravém horním rohu widgetu. Vaše volba se ukládá pro váš uživatelský účet. Ostatních uživatelů se to nedotkne.
+Použijte přepínač jazyka v pravém horním rohu widgetu. Volba se ukládá k vašemu uživatelskému účtu. Ostatních uživatelů se to nedotkne.
 
 **Co se stane, když smažu pravidlo, které bylo uložené na více zařízeních?**  
-Pravidlo se odstraní ze všech zařízení, kde bylo uložené. Tuhle akci nelze vzít zpět.
+Pravidlo se odstraní ze všech zařízení, kde bylo uložené. Tuto akci nelze vzít zpět.
 
-**Jak zjistím, které telemetrické klíče moje zařízení posílá?**  
-Otevřete v platformě ThingsBoard detail zařízení (sekce *Devices*) a klikněte na kartu *Latest Telemetry*. Jsou tam vypsané všechny klíče i jejich aktuální hodnoty.
+**Jak zjistím, které telemetrické klíče zařízení posílá?**  
+Otevřete v platformě ThingsBoard detail zařízení (sekce *Devices*) a klikněte na záložku *Latest Telemetry*. Jsou tam vypsané všechny klíče i jejich aktuální hodnoty.
 
-**Můžu nastavit pravidlo pro zařízení podřízeného zákazníka?**  
+**Mohu nastavit pravidlo pro zařízení podřízeného zákazníka?**  
 Ano. Pokud spravujete podřízené zákazníky, zvolte příslušného zákazníka filtrem v horní liště. Při vytváření pravidla se pak zobrazí jen zařízení tohoto zákazníka.
 
 **Co znamená odznak „1 email“ nebo „1 SMS“ v tabulce?**  
 Ukazuje počet a typ příjemců daného pravidla. Najetím myší na odznak zobrazíte konkrétní adresy nebo telefonní čísla.
 
 **Jak poznám, že se pravidlo spustilo?**  
-Dostanete e-mail nebo SMS podle nastavení. Notifikace obsahuje název zařízení, proměnnou, naměřenou hodnotu a podmínku, která se spustila.
+Dostanete e-mail nebo SMS podle nastavení. Notifikace obsahuje název zařízení, proměnnou, naměřenou hodnotu a podmínku, která byla splněna.

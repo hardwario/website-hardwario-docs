@@ -6,20 +6,20 @@ title_meta: "HARDWARIO Manager (CHESTER)"
 
 # HARDWARIO Manager {#hardwario-manager}
 
-Zařízení CHESTER se spravuje z mobilní aplikace **HARDWARIO Manager** přes **Bluetooth
-Low Energy**. Připojte telefon k zařízení a můžete číst jeho stav, upravovat
-konfiguraci, ovládat jeho shell, aktualizovat firmware a restartovat jej.
+Zařízení CHESTER se spravuje mobilní aplikací **HARDWARIO Manager** přes **Bluetooth
+Low Energy**. Po připojení telefonu k zařízení můžete číst jeho stav, upravovat
+konfiguraci, používat shell, aktualizovat firmware a zařízení restartovat.
 
-Aplikace je kompletně popsána v sekci **APPS**:
+Úplný popis aplikace najdete v sekci **Aplikace**:
 
 - [**HARDWARIO Manager**](/apps/hardwario-manager): co aplikace umí a jak ji nainstalovat
 - [**CHESTER přes Bluetooth**](/apps/hardwario-manager/chester): sekce CHESTER
 - [**Připojení a párování**](/apps/hardwario-manager/chester/connect): naskenování QR kódu zařízení, passkey a párování
 - [**Informace o zařízení**](/apps/hardwario-manager/chester/device-info): sériové číslo, firmware, doba běhu a ovládací prvky zařízení
-- [**Konfigurace**](/apps/hardwario-manager/chester/configuration): průvodce konfigurací a úplné konfigurační zobrazení
+- [**Konfigurace**](/apps/hardwario-manager/chester/configuration): konfigurace s průvodcem a úplné zobrazení konfigurace
 - [**Terminál**](/apps/hardwario-manager/chester/terminal): shell zařízení přes Bluetooth
 - [**Nástroje**](/apps/hardwario-manager/chester/tools): aktualizace firmwaru, restart, tovární nastavení
-- [**BLE tagy**](/apps/hardwario-manager/chester/ble-tags): přiřazení externích BLE senzorových tagů ke slotům
+- [**Tagy BLE**](/apps/hardwario-manager/chester/ble-tags): přiřazení externích senzorových tagů BLE ke slotům
 - [**Řešení problémů**](/apps/hardwario-manager/chester/troubleshooting): problémy s připojením, párováním a aktualizací
 
 :::info Které verze se to týká
@@ -31,8 +31,8 @@ lišit.
 ## Aktualizace firmwaru {#firmware-update}
 
 Firmware se nahrává přes Bluetooth z **QR kódu, který nese odkaz na firmware**.
-Postup, jednotlivé fáze aktualizace a co se stane při selhání aktualizace najdete
-na stránce [**Aktualizace firmwaru**](/apps/hardwario-manager/chester/firmware-update).
+Postup, jednotlivé fáze aktualizace a chování při jejím selhání popisuje
+stránka [**Aktualizace firmwaru**](/apps/hardwario-manager/chester/firmware-update).
 
-Pro katalogové aplikace jsou k dispozici [**předpřipravené binární soubory**](../catalog-applications/index.md#application-firmware);
-vlastní build přijde jako odkaz e-mailem.
+Pro katalogové aplikace najdete [**hotové binární soubory**](../catalog-applications/index.md#application-firmware);
+vlastní sestavení dostanete e-mailem jako odkaz.

@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Přidávání zařízení {#adding-devices}
 
-V tomto návodu se naučíte, jak v platformě ThingsBoard vytvořit nové zařízení a spravovat jeho údaje. Po vytvoření se zařízení objeví ve vašem seznamu a zpřístupní telemetrická data.
+V tomto návodu se naučíte, jak v platformě ThingsBoard vytvořit nové zařízení a spravovat jeho údaje. Vytvořené zařízení se objeví v seznamu zařízení a zpřístupní vám svá telemetrická data.
 
 ---
 
@@ -16,7 +16,7 @@ V tomto návodu se naučíte, jak v platformě ThingsBoard vytvořit nové zař�
 V levé navigační liště klikněte na **Entities** a pak zvolte **Devices**.  
 Vpravo nahoře klikněte na tlačítko **➕ (plus)** a zvolte **Add Device**.
 
-![Thingsboard - přidání nového zařízení](../../../../../apps/thingsboard/images/thingsboard-device-1.png)
+![ThingsBoard – přidání nového zařízení](../../../../../apps/thingsboard/images/thingsboard-device-1.png)
 
 ---
 
@@ -30,7 +30,7 @@ Objeví se okno, kde zadáte:
 
 Po vyplnění klikněte na **Next**.
 
-![Thingsboard - vyplnění údajů o zařízení](../../../../../apps/thingsboard/images/thingsboard-device-2.png)
+![ThingsBoard – vyplnění údajů o zařízení](../../../../../apps/thingsboard/images/thingsboard-device-2.png)
 
 ---
 
@@ -39,15 +39,15 @@ Po vyplnění klikněte na **Next**.
 Objeví se další okno s nastavením konektivity.  
 Pokud nepotřebujete nic měnit, stiskněte na klávesnici **Enter** nebo dialog zavřete.
 
-![Thingsboard - nastavení konektivity](../../../../../apps/thingsboard/images/thingsboard-device-3.png)
+![ThingsBoard – nastavení konektivity](../../../../../apps/thingsboard/images/thingsboard-device-3.png)
 
 ---
 
 ## Krok 4: Zařízení je vytvořené {#step-4-device-created}
 
-Vaše nové zařízení je vytvořené a přidané do seznamu.
+Nové zařízení je vytvořené a přidané do seznamu.
 
-![Thingsboard - zařízení vytvořeno](../../../../../apps/thingsboard/images/thingsboard-device-4.png)
+![ThingsBoard – vytvořené zařízení](../../../../../apps/thingsboard/images/thingsboard-device-4.png)
 
 ---
 
@@ -59,7 +59,7 @@ Kliknutím na zařízení uvidíte:
 - **Latest Telemetry**
 - a další.
 
-![Thingsboard - zobrazení informací o zařízení](../../../../../apps/thingsboard/images/thingsboard-device-5.png)
+![ThingsBoard – zobrazení informací o zařízení](../../../../../apps/thingsboard/images/thingsboard-device-5.png)
 
 ## Videonávod {#video-tutorial}
 

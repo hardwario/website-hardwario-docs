@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # GLIDER {#glider}
 
-**HARDWARIO GLIDER** je kompaktní IoT zařízení **LTE-M / NB-IoT** postavené na SoC Nordic **nRF9151**. Je určené k dlouhodobému a úspornému monitorování teploty, pulzních čítačů, událostí bezpotenciálových kontaktů a zařízení **Modbus RTU**. Z výroby je nastavené pro komunikaci s **HARDWARIO Cloud**.
+**HARDWARIO GLIDER** je kompaktní IoT zařízení **LTE-M / NB-IoT** postavené na SoC Nordic **nRF9151**. Je určené k dlouhodobému a úspornému monitorování teploty, čítačů impulzů, událostí bezpotenciálových kontaktů a zařízení **Modbus RTU**. Z výroby je nastavené pro komunikaci s **HARDWARIO Cloud**.
 
 :::tip
 ### Než zařízení GLIDER zprovozníte, přečtěte si [**Rychlého průvodce**](first-steps) {#to-get-your-glider-running-read-the-quick-start-guide}
@@ -28,11 +28,11 @@ import Image from '@theme/IdealImage';
 * [**Příkazy**](category/commands): Jaké příkazy zařízení rozumí.
 * [**CBOR payload**](payload.md): Jak zařízení kóduje data odesílaná do cloudu.
 
-## Typické případy použití {#typical-use-cases}
+## Typické využití {#typical-use-cases}
 
 - Vzdálené monitorování teploty v chladicích řetězcích, skladech nebo sklenících
-- Odečet měřidel pomocí čítání pulzů (voda, plyn, elektřina)
-- Záznam událostí dveří, oken nebo jiných bezpotenciálových kontaktů
+- Odečet měřidel čítáním impulzů (voda, plyn, elektřina)
+- Záznam událostí ze dveří, oken a dalších bezpotenciálových kontaktů
 - Integrace průmyslových senzorů Modbus RTU do HARDWARIO Cloud
 
 ## Klíčové vlastnosti {#key-features}
@@ -40,7 +40,7 @@ import Image from '@theme/IdealImage';
 | Vlastnost | Popis |
 |---|---|
 | **Mobilní konektivita** | Kompaktní zařízení LTE-M / NB-IoT na čipu Nordic nRF9151. |
-| **Dlouhodobé monitorování** | Úsporné sledování teploty, pulzních čítačů a událostí bezpotenciálových kontaktů. |
+| **Dlouhodobé monitorování** | Úsporné sledování teploty, čítačů impulzů a událostí bezpotenciálových kontaktů. |
 | **Podpora Modbus RTU** | Nativní integrace s průmyslovými senzory Modbus RTU. |
-| **Připraveno pro HARDWARIO Cloud** | Dodává se předkonfigurované pro přímé připojení k HARDWARIO Cloud. |
+| **Připraveno pro HARDWARIO Cloud** | Z výroby je nastavené pro přímé připojení k HARDWARIO Cloud. |
 | **Konzole USB-C / J-Link** | Konfigurace a diagnostika přes kteroukoli z nich. |

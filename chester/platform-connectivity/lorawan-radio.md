@@ -79,7 +79,7 @@ lrw config nwkskey 00000000000000000000000000000000
 lrw config appskey 00000000000000000000000000000000
 ```
 
-To see the difference between OTAA and ABP we suggest reading [The Thing Industries ABP vs OTAA article](https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/).
+To see the difference between OTAA and ABP we suggest reading [The Things Industries ABP vs OTAA article](https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/).
 
 ### OTAA Configuration
 
@@ -109,7 +109,7 @@ config save
 ### ABP Configuration
 
 Keys are entered manually. In some cases, this is a better solution in fixed installation when the device signal is on the edge.
-We use this configuration with **ADR** (Automatic data rate) disabled so the network has a fixed communication speed.
+We use this configuration with **ADR** (Adaptive Data Rate) disabled so the network has a fixed communication speed.
 
 In the CHIRPSTACK device profile in the JOIN (OTAA/ABP) tab **disable** Device supports OTAA and enter these configuration parameters for EU868:
 
@@ -121,7 +121,7 @@ In the CHIRPSTACK device profile in the JOIN (OTAA/ABP) tab **disable** Device s
 
 For generating keys you can use this [online generator tool](https://loratools.nl/#/keys) for testing and development, for production use an offline generator just to be safe.
 
-Then you configure CHESTER
+Then configure CHESTER:
 
 ```
 lrw config mode abp
@@ -180,7 +180,7 @@ You can set the decoder in Device-profile in the **Codec** tab.
 
 ### Node-RED Decoder
 
-For Node-RED we use connecting directly to the CHIRPSTACK MQTT broker with a MQTT out node that has set the MQTT topic to `application/<application-id>/device/+/event/up`.
+For Node-RED we use connecting directly to the CHIRPSTACK MQTT broker with an MQTT in node that has the MQTT topic set to `application/<application-id>/device/+/event/up`.
 
 Replace the `<application-id>` with your application ID. In older CHIRPSTACK it is a **0..n number**, in newer versions it is a **unique ID**.
 
@@ -194,10 +194,10 @@ LoRaWAN network can be set to be private or public. It doesn't mean that the net
 
 If your network or gateway does not see a single packet, it is usually because of this.
 
-In your (Mikrotik) gateway check **Network** configuration option, then configure CHESTER with `lrw config nwk private` or `lrw config nwk public`.
+In your (MikroTik) gateway check **Network** configuration option, then configure CHESTER with `lrw config nwk private` or `lrw config nwk public`.
 
-Then go to the Mikrotik **Traffic** tab and see if you can see the **JOIN** packet from your device with **Dev Addr**. In this tab you see RAW encrypted packets from all devices around.
-But it is useful to check if the device and gateway is using the same private/public packet prefix.
+Then go to the MikroTik **Traffic** tab and see if you can see the **JOIN** packet from your device with **Dev Addr**. In this tab you see RAW encrypted packets from all devices around.
+But it is useful to check if the device and gateway are using the same private/public packet prefix.
 
 If you see packets arriving, then you might troubleshoot issues further in the CHIRPSTACK Gateways and **Live LoRaWAN Frames** tab. Only once you see packets here, go to the Applications and look for decoded packets; if the device's packets are not visible there, troubleshoot for example wrong keys.
 

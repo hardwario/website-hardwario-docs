@@ -1,13 +1,13 @@
 ---
 slug: orno-or-we-516
-title: Orno OR-WE-516
+title: ORNO OR-WE-516
 ---
 
 import Image from '@theme/IdealImage';
 
-[Web-Site](https://www.orno.pl/en/energy-meters-with-mid/349-3-phase-energy-meter-with-rs-485-80a-mid-4-5-modules-din-th-35mm-5902560322415.html#download)
+[Website](https://www.orno.pl/en/energy-meters-with-mid/349-3-phase-energy-meter-with-rs-485-80a-mid-4-5-modules-din-th-35mm-5902560322415.html#download)
 
-![ORNO OR-WE - 516](images/orno-or-we-516.png)
+![ORNO OR-WE-516](images/orno-or-we-516.png)
 
 ### Description
 

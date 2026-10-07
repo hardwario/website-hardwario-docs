@@ -9,7 +9,7 @@ This article describes the **CHESTER-C5** carrier board.
 
 ## Module Overview
 
-**CHESTER-C5** is a custom carrier board for **CHESTER-U1** designed as a **NB-IoT / LTE-M** gateway for connecting arrays of **1-Wire sensors** (i.e. DS18B20) equipped with Lithium-Ion battery backup, implements a step-down DC/DC converter providing power from an external 6-28 VDC line (VIN) or 12V solar panel. It allows to measure input DC voltage, QWIIC interface can by used for connecting OLED display.
+**CHESTER-C5** is a custom carrier board for **CHESTER-U1** designed as an **NB-IoT / LTE-M** gateway for connecting arrays of **1-Wire sensors** (e.g. DS18B20). It is equipped with a Lithium-Ion battery backup and implements a step-down DC/DC converter providing power from an external 6-28 VDC line (VIN) or a 12V solar panel. It can measure the input DC voltage, and the QWIIC interface can be used for connecting an OLED display.
 
 The board implements the Maxim DS2482S-800+ providing 8 independent 1-Wire channels on CHESTER-X slot A. Slot B can be extended with the CHESTER-X1 providing another 8-ch 1-Wire or any other CHESTER-X module.
 
@@ -34,7 +34,7 @@ _\**Appropriate for solar panel application, charging temperature range -20 to +
 
 :::caution
 
-For initial start powering from the battery without DC input power supply** it is necessary to long pres the Bypass button (BYPASS)**.
+For the initial start powered from the battery without a DC input power supply, it is necessary to **long press the Bypass button (BYPASS)**.
 
 :::
 
@@ -67,7 +67,7 @@ For initial start powering from the battery without DC input power supply** it i
 | JP10     | X slot B    | CHESTER-X slot B JST con                  |
 | JP11     | TAMPER      | Tamper input (normally open)              |
 | JP12     | A1-A4       | 1-Wire A1-A4 + 4xGND RJ-45 con.           |
-| JP13     | A5-A8       | 1-Wire A1-A4 + 4xGND RJ-45 con.           |
+| JP13     | A5-A8       | 1-Wire A5-A8 + 4xGND RJ-45 con.           |
 | JP14     | GND         | Terminal with 8xGND                       |
 | JP15     | GND         | Terminal with 8xGND                       |
 | JP16     | BATT        | External battery or PPK input             |

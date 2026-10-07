@@ -10,7 +10,7 @@ The **catalog applications** share common functionality. For example the button 
 
 ## Network Mode Configuration
 
-Some catalog firmwares allows configuration to use NB-IoT/LTE or LoRaWAN network. This firmware after power-up is not sending data, the **LED is blinking yellow** and you need to configure correct radio mode.
+Some catalog firmwares can use either an NB-IoT/LTE or a LoRaWAN network. After power-up, such firmware does not send data, the **LED is blinking yellow** and you need to configure the correct radio mode.
 
 This `app mode` configuration is needed currently for these catalog applications:
 
@@ -75,11 +75,11 @@ config save
 
 This will apply the changes and restart the application. After the restart, you can verify the settings changed using the `app config show` command.
 
-If you want to reset the configuration back to the default state, you can do so using `config reset`. In rare cases, when the CHESTER console isn't available, you can use the manual reset procedure. To initiate this, holding down the button while CHESTER boots. After holding the button for around 5 seconds, CHESTER will start rapidly blinking. At this point, you can release the button to proceed with the reset. If you continue holding the button until CHESTER stops blinking, the reset will be aborted.
+If you want to reset the configuration back to the default state, you can do so using `config reset`. In rare cases, when the CHESTER console isn't available, you can use the manual reset procedure. To initiate this, hold down the button while CHESTER boots. After holding the button for around 5 seconds, CHESTER will start rapidly blinking. At this point, you can release the button to proceed with the reset. If you continue holding the button until CHESTER stops blinking, the reset will be aborted.
 
 :::caution
 
-Reseting the configuration will also reset the connection parameters for LTE and LoRaWAN, which can result in CHESTER unable to communicate.
+Resetting the configuration will also reset the connection parameters for LTE and LoRaWAN, which can leave CHESTER unable to communicate.
 
 :::
 
@@ -121,7 +121,7 @@ Learn how to activate and configure this feature in the [**CHESTER BLE Tag Subsy
 
 ## Report Interval Jitter
 
-The periodic sending of data with `interval-report` has intentional jitter. This is used in case lot of CHESTERs are placed near each other, so they don't transmit at the same time if they have set the same interval. This jitter is random in the range of ±20 % of `interval-report`.
+The periodic sending of data with `interval-report` has intentional jitter. This is used in case a lot of CHESTERs are placed near each other, so they don't transmit at the same time if they have set the same interval. This jitter is random in the range of ±20 % of `interval-report`.
 
 For example, if `interval-report` is set to 100 seconds, you can receive periodic data where two messages have a time difference from 80 (-20%) to 120 (+20%) seconds.
 
@@ -179,7 +179,7 @@ Starting from firmware **v3.5.0**, all applications include the following diagno
 
 ## Configuration backup v1.x.x → v2.x.x {#configuration-backup}
 
-When upgrading an older **v1.x.x** firmware to **v2.x.x**, it is necessary to back up the application configuration. The most important is this step in **CHESTER Current** application, where in configuration there are the **current transformers calibration coefficients**.
+When upgrading an older **v1.x.x** firmware to **v2.x.x**, it is necessary to back up the application configuration. This step is most important for the **CHESTER Current** application, whose configuration holds the **current transformer calibration coefficients**.
 
 If you forget to back up the data, they are not lost unless you executed `config save` command in newer firmware. However, you need to temporarily downgrade to [older firmware](https://github.com/hardwario/docs/blob/33661ca486dda9e6883d3a82edf0128ab32173d2/chester/catalog-applications/index.md#application-firmware) that can read the old configuration and apply the same configuration after the firmware is updated.
 

@@ -31,7 +31,7 @@ Open the folder where the file was downloaded. Right-click on the file and click
 
 Click the **Extract** button to extract the file.
 
-![Winbox 4 aply extract zip file](images/winbox-3.png)
+![Winbox 4 apply extract zip file](images/winbox-3.png)
 
 
 ---

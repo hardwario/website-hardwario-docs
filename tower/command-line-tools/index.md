@@ -15,6 +15,6 @@ These tools can be used to:
 
 :::note
 
-We have a lot of GUI tools as well, if you want to learn more about those, visit [**Desktop Programming Chapter**](../category/desktop-programming) or [**About HARDWARIO Code Chapter**](../firmware-development/about-hardwario-code.md)
+We have a lot of GUI tools as well, if you want to learn more about those, visit [**Desktop Programming Chapter**](../category/desktop-programming) or [**About HARDWARIO Code Chapter**](../firmware-development/about-hardwario-code.md).
 
 :::

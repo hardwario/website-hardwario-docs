@@ -1,19 +1,19 @@
 ---
 slug: how-to-gpio-pins
-title: "Jak na: GPIO piny"
+title: "Jak na: Piny GPIO"
 ---
 import Image from '@theme/IdealImage';
 
-Chcete-li modul Core Module propojit s okolním světem, můžete využít mnoho **GPIO pinů** (**G**eneral **P**urpose **I**nput/**O**utput piny).
-Piny jsou popsané v Header Pinout. V SDK mají piny názvy `TWR_GPIO_P0` až `TWR_GPIO_P17`. Existují také dva speciální piny určené pro `TWR_GPIO_LED` a `TWR_GPIO_BUTTON`.
+S okolním světem propojíte modul Core Module pomocí řady **pinů GPIO** (**G**eneral **P**urpose **I**nput/**O**utput).
+Piny popisuje stránka Pinout konektorů. V SDK mají názvy `TWR_GPIO_P0` až `TWR_GPIO_P17`. Dva speciální piny jsou navíc vyhrazené pro `TWR_GPIO_LED` a `TWR_GPIO_BUTTON`.
 
 ## Odkazy {#references}
-- [**GPIO SDK Module**](https://sdk.hardwario.com/group__twr__gpio.html)
+- [**Modul SDK pro GPIO**](https://sdk.hardwario.com/group__twr__gpio.html)
 - Příklad v repozitáři na GitHubu
 
 :::info
 
-Tento příklad rozsvítí **LED na modulu Core Module**. Běžnější a pohodlnější způsob ovládání LED je použít kód [**`twr_led`**](./led-control.md), ale zde používáme `twr_gpio`, abychom vysvětlili **základy GPIO**.
+Tento příklad rozsvítí **LED na modulu Core Module**. Běžnější a pohodlnější je ovládat LED přes [**`twr_led`**](./led-control.md), tady ale kvůli vysvětlení **základů GPIO** používáme `twr_gpio`.
 
 :::
 
@@ -41,7 +41,7 @@ Příklad kódu: GPIO jako výstup
 
 :::info
 
-Tento příklad **přečte stav tlačítka** a podle něj se **LED nastaví do stavu ON/OFF**.
+Tento příklad **přečte stav tlačítka** a podle něj **LED zapne, nebo vypne**.
 
 :::
 

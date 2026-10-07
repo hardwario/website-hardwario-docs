@@ -1,6 +1,6 @@
 ---
 slug: about-soil-sensor
-title: O senzoru půdní vlhkosti
+title: O senzoru Soil Sensor
 ---
 import Image from '@theme/IdealImage';
 
@@ -11,10 +11,10 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        <b>Soil Moisture Sensor</b> je moderní, kompletně zalitý kapacitní senzor vlhkosti s teplotním senzorem. Používá komunikační protokol 1-Wire a má třívodičový kabel o délce 2 metry. K jedné 1-Wire Master jednotce lze připojit mnoho senzorů. Teplotní senzor je umístěn v horní části nad půdou. Elektronika je kompletně zalitá těsnicí hmotou, aby odolala všem typům povětrnostních vlivů.
+        <b>Soil Moisture Sensor</b> je moderní, zcela utěsněný kapacitní senzor vlhkosti s teplotním senzorem. Komunikuje protokolem 1-Wire a má 2 metry dlouhý třívodičový kabel. K jednomu masteru 1-Wire lze připojit mnoho senzorů. Teplotní senzor je v horní části nad půdou. Elektronika je celá zalitá těsnicí hmotou, takže odolá jakémukoli počasí.
       </p>
       <p>
-        Senzor vrací půdní vlhkost v relativních hodnotách. Senzor je velmi citlivý a získáte rozsah od 6500, když je senzor suchý, do 13000, když je senzor plně ponořen ve vodě. Měření zajišťují dva měděné pásky ve vnitřních vrstvách čtyřvrstvé desky. Kontakty tak nejsou vystaveny přímé vlhkosti a neoxidují.
+        Senzor vrací vlhkost půdy v relativních hodnotách. Je velmi citlivý: na suchu vrací 6500, plně ponořený ve vodě 13000. Měří dvěma měděnými pásky ve vnitřních vrstvách čtyřvrstvé desky plošných spojů, takže kontakty nejsou vystavené přímé vlhkosti a neoxidují.
       </p>
     </div>
   </div>
@@ -48,7 +48,7 @@ K dispozici je také [**Arduino knihovna pro Soil Sensor**](https://github.com/h
 
 :::tip
 
-**Nedoporučujeme** umísťovat horní část senzoru pod zem. Zemnící plochy v této oblasti by mohly ovlivnit měřicí elektrody a přesnost.
+**Nedoporučujeme** umísťovat horní část senzoru pod zem. Zemnicí plochy v této oblasti by mohly ovlivnit měřicí elektrody a přesnost měření.
 
 :::
 
@@ -59,12 +59,12 @@ K dispozici je také [**Arduino knihovna pro Soil Sensor**](https://github.com/h
 - Možnost připojit více senzorů paralelně
 - Převodník kapacity na digitální signál **ZSSC3123**
 - Digitální **teplotní senzor TMP112**
-- Rozsah napájecího napětí: 2,8 V až 5,5 V
+- Rozsah provozního napětí: 2,8 V až 5,5 V
 - Rozsah provozních teplot: -40 až +85 °C
 - Krytí IP 68
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/soil-sensor-set)
+- [**E-shop**](https://www.hardwario.store/p/soil-sensor-set)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-soil-sensor)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__soil__sensor.html)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_soil_sensor.h)

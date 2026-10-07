@@ -1,7 +1,7 @@
 ---
 slug: chester-x10
 title: CHESTER-X10 (nabíječka Li-Po)
-description: "Rozšiřující modul se záložním napájením a nabíječkou jednoho článku Li-Po pro CHESTER, postavený na měniči TPS62933 a nabíječce MCP73833."
+description: "Rozšiřující modul pro CHESTER se záložním napájením a nabíječkou jednoho článku Li-Po, postavený na měniči TPS62933 a nabíječce MCP73833."
 keywords: [CHESTER-X10, nabíječka Li-Po, nabíječka Li-Ion, záložní napájení, napájení, baterie, TPS62933, MCP73833, TLA2024, step-down, monitorování baterie, CHESTER]
 ---
 import Image from '@theme/IdealImage';
@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('../../../../../chester/extension-modules/images/chester-x10-top.png')} alt="Fotografie červené desky CHESTER-X10 s tlumivkou step-down převodníku, nabíječkou MCP73833, ADC TLA2024 a Schottkyho diodami napájecí cesty"/></div>
+<div><Image img={require('../../../../../chester/extension-modules/images/chester-x10-top.png')} alt="Fotografie červené desky CHESTER-X10 s tlumivkou snižujícího měniče, nabíječkou MCP73833, ADC TLA2024 a Schottkyho diodami napájecí cesty"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -22,14 +22,14 @@ import Image from '@theme/IdealImage';
 
 ## Přehled modulu {#module-overview}
 
-CHESTER-X10 napájí základní desku CHESTER z externí linky **5-28 V DC** na **VIN** a udrží ji v provozu, když toto napájení vypadne. Step-down převodník **TPS62933** na desce vytváří pevnou větev **5 V**, která napájí základní desku i nabíječku **MCP73833** pro jeden článek Li-Po / Li-Ion. Výstup step-down převodníku a baterie jsou k napájení základní desky spojené **diodovým OR** (Schottkyho **PMEG6010ELR**), takže dokud je VIN přítomné, běží základní deska z větve 5 V a baterie se nabíjí, a při ztrátě VIN baterie plynule převezme napájení. Stejnosměrný vstup chrání Schottkyho dioda (**PMEG060T030ELPEZ**).
+Modul CHESTER-X10 napájí základní desku CHESTER z externí linky **5-28 V DC** připojené na **VIN** a při výpadku tohoto napájení ji udrží v provozu. Snižující měnič **TPS62933** na desce vytváří pevnou větev **5 V**, ze které se napájí základní deska i nabíječka **MCP73833** pro jeden článek Li-Po / Li-Ion. Výstup měniče a baterie jsou na napájení základní desky spojené přes **diodové OR** (Schottkyho diody **PMEG6010ELR**). Dokud je na VIN napětí, běží základní deska z větve 5 V a baterie se nabíjí; když VIN vypadne, baterie napájení plynule převezme. Stejnosměrný vstup chrání Schottkyho dioda (**PMEG060T030ELPEZ**).
 
-12bitový ADC **TLA2024** na desce, čtený po **I²C**, měří přes přesné děliče vstupní napětí (VIN) a napětí baterie (BAT+), takže firmware může sledovat stejnosměrný vstup i stav nabití baterie. Modul se dodává s chráněným jednočlánkovým akumulátorem Li-Po a nabíjí ho proudem **450 mA**.
+12bitový převodník ADC **TLA2024** na desce, čtený po **I²C**, měří přes přesné děliče vstupní napětí (VIN) a napětí baterie (BAT+), takže firmware může sledovat stejnosměrný vstup i stav nabití baterie. Modul se dodává s chráněným jednočlánkovým akumulátorem Li-Po a nabíjí ho proudem **450 mA**.
 
 ## Klíčové vlastnosti {#key-features}
 
 * **Záložní napájení:** Diodové OR mezi stejnosměrným vstupem a baterií udrží základní desku CHESTER napájenou i při výpadku externího zdroje.
-* **Široký stejnosměrný vstup:** Externích **5-28 V DC** na VIN přes step-down převodník TPS62933 na desce.
+* **Široký stejnosměrný vstup:** Externí napájení **5-28 V DC** na VIN přes snižující měnič TPS62933 na desce.
 * **Nabíjení Li-Po:** Nabíječka MCP73833 na desce pro jeden článek Li-Po / Li-Ion proudem 450 mA.
 * **Baterie v balení:** Chráněný jednočlánkový akumulátor Li-Po **3,7 V / 2000 mAh** je součástí balení.
 * **Monitorování napětí na desce:** 12bitový ADC na I²C (TLA2024) měří vstupní napětí a napětí baterie.
@@ -38,8 +38,8 @@ CHESTER-X10 napájí základní desku CHESTER z externí linky **5-28 V DC** na 
 
 ## Typické aplikace {#typical-applications}
 
-* **Nepřerušovaný provoz:** Udržet uzel CHESTER v běhu i při výpadku sítě nebo stejnosměrného napájení.
-* **Odlehlé a mimosíťové lokality:** Vyrovnat nestálý stejnosměrný zdroj, například solární napájení nebo sběr energie.
+* **Nepřerušovaný provoz:** Chod zařízení CHESTER bez přerušení i při výpadku sítě nebo stejnosměrného napájení.
+* **Odlehlé lokality bez sítě:** Vyrovnání nestálého stejnosměrného zdroje, například solárního panelu nebo sběru energie (energy harvesting).
 * **Instalace s externím napájením:** Provoz zařízení CHESTER z průmyslové stejnosměrné linky se zálohou z baterie.
 * **Monitorování se záložní baterií:** Aplikace, které potřebují sledovat vstupní napětí i stav nabití baterie.
 
@@ -56,17 +56,17 @@ CHESTER-X10 napájí základní desku CHESTER z externí linky **5-28 V DC** na 
 | **Monitorování napětí** | 12bitový ADC na I²C (TLA2024) na desce, měří VIN a napětí baterie |
 | **Rozhraní k hostu** | I²C |
 | **Přiložená baterie** | LP103454-PCM-LD, 3,7 V / 2000 mAh (56,0 × 34,5 × 10,3 mm) |
-| **Rozhraní desky** | Castellated otvory na dvou protilehlých hranách, připájené k základní desce CHESTER |
+| **Rozhraní desky** | Půlené prokovené otvory (castellated) na dvou protilehlých hranách, deska je připájená k základní desce CHESTER |
 | **Revize hardwaru** | R1.1 |
 
 ## Klíčové součástky {#key-components}
 
 | Součástka | Typové označení | Popis |
 | :--- | :--- | :--- |
-| **Step-down převodník** | TPS62933 | Snižující převodník, vstup 5-28 V DC, výstup 5 V |
+| **Snižující měnič** | TPS62933 | Snižující měnič (step-down), vstup 5-28 V DC, výstup 5 V |
 | **Nabíječka baterie** | MCP73833 | Lineární nabíječka jednoho článku Li-Po / Li-Ion (450 mA) |
 | **ADC pro monitorování napětí** | TLA2024 | 12bitový 4kanálový ADC na I²C (adresa 0x49); měří VIN a napětí baterie |
-| **Ochrana vstupu** | PMEG060T030ELPEZ / PMEG6010ELR | Schottkyho diody (ochrana vstupu a spojení napájecích cest) |
+| **Ochrana vstupu** | PMEG060T030ELPEZ / PMEG6010ELR | Schottkyho diody (ochrana vstupu a diodové OR napájecích cest) |
 
 ## Zapojení pinů {#pin-configuration}
 
@@ -82,24 +82,24 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 
 | Pin | Signál | Typ | Popis |
 | :---: | :--- | :--- | :--- |
-| 1 | GND | Zem | Systémová zemní reference |
+| 1 | GND | Zem | Systémová zem |
 | 2 | BAT- | Baterie | Záporný pól baterie (*) |
 | 3 | BAT- | Baterie | Záporný pól baterie (*) |
 | 4 | BAT+ | Baterie | Kladný pól baterie (*) |
 | 5 | BAT+ | Baterie | Kladný pól baterie (*) |
-| 6 | GND | Zem | Systémová zemní reference |
-| 7 | GND | Zem | Systémová zemní reference |
+| 6 | GND | Zem | Systémová zem |
+| 7 | GND | Zem | Systémová zem |
 | 8 | VIN | Napájecí vstup | Vstup externího stejnosměrného napájení (5-28 V DC) |
 
 *Poznámka: Používejte pouze jednočlánkovou baterii Li-Po (nebo Li-Ion) 3,7 V s integrovaným ochranným obvodem. Baterii nezkratujte! Oba piny BAT- i oba piny BAT+ jsou vnitřně spojené (zdvojené kvůli proudové zatížitelnosti).
 
 :::info
-CHESTER-X10 napájí základní desku CHESTER přes slot modulu. Externí napájení **5-28 V DC** na **VIN** (pin 8) přivádí energii do step-down převodníku TPS62933 na desce, jehož pevný výstup **5 V** napájí základní desku a nabíjí baterii připojenou na **BAT+** / **BAT-**. Při ztrátě externího napájení drží základní desku v provozu baterie.
+Modul CHESTER-X10 napájí základní desku CHESTER přes slot modulu. Externí napájení **5-28 V DC** na **VIN** (pin 8) vede do snižujícího měniče TPS62933 na desce, jehož pevný výstup **5 V** napájí základní desku a nabíjí baterii připojenou na **BAT+** / **BAT-**. Při výpadku externího napájení drží základní desku v provozu baterie.
 :::
 
 ### Rozhraní k hostu (I²C) {#host-interface-ic}
 
-CHESTER-X10 komunikuje se základní deskou CHESTER po standardní sběrnici **I²C**. ADC **TLA2024** na desce sedí na adrese I²C **0x49** a umožňuje firmwaru číst vstupní napětí a napětí baterie:
+Modul CHESTER-X10 komunikuje se základní deskou CHESTER po standardní sběrnici **I²C**. Převodník ADC **TLA2024** na desce má adresu I²C **0x49** a firmware z něj čte vstupní napětí a napětí baterie:
 
 | Kanál ADC | Měřený signál | Dělič |
 | :--- | :--- | :--- |
@@ -114,14 +114,14 @@ Externí stejnosměrné napájení připojte na **VIN** (pin 8) a **GND** (pin 1
 Používejte pouze jednočlánkovou baterii Li-Po / Li-Ion **3,7 V** s **integrovaným ochranným obvodem** a baterii nikdy nezkratujte. Doporučená kapacita baterie je alespoň **1000 mAh**.
 :::
 
-Dokud je připojené externí napájení, běží základní deska z výstupu 5 V step-down převodníku a baterie se nabíjí proudem 450 mA. Když se externí napájení odpojí nebo vypadne, napájí baterie základní desku dál přes diody napájecí cesty modulu a poskytuje tak nepřerušené záložní napájení.
+Dokud je připojené externí napájení, běží základní deska z výstupu 5 V snižujícího měniče a baterie se nabíjí proudem 450 mA. Když se externí napájení odpojí nebo vypadne, napájí baterie základní desku dál přes diody napájecí cesty modulu, takže napájení se nepřeruší.
 
 ### Průchod krabičkou {#enclosure-feed-through}
 
 Kabel stejnosměrného napájení lze do krabičky přivést dvěma způsoby:
 
 - **Kabelová vývodka (výchozí):** vodiče protáhnete vývodkou ve stěně krabičky a zapojíte na VIN a GND.
-- **Konektor do panelu (na vyžádání):** externí konektor ve stěně krabičky umožní uživateli napájení zapojit, bez volné kabeláže vevnitř. Na vyžádání.
+- **Panelový konektor (na vyžádání):** uživatel napájecí kabel jen zapojí do konektoru ve stěně krabičky a uvnitř nezůstane žádná volná kabeláž. Dodáváme na vyžádání.
 
 ## Kompatibilní konfigurace CHESTER {#compatible-chester-configurations}
 
@@ -146,13 +146,13 @@ Modul CHESTER-X10 lze použít s různými konfiguracemi základních desek CHES
 
 ## Použití s CHESTER SDK {#chester-sdk-usage}
 
-CHESTER-X10 lze v rámci CHESTER SDK použít přes shield `ctr_x10`, případně přes funkci [Project Generatoru](/chester/firmware-sdk/how-to-project-generator) `hardware-chester-x10`.
+V CHESTER SDK se modul CHESTER-X10 používá přes shield `ctr_x10`, nebo přes funkci `hardware-chester-x10` nástroje [Project Generator](/chester/firmware-sdk/how-to-project-generator).
 
 - [Ukázka použití v SDK](https://github.com/hardwario/chester-sdk/tree/main/samples/chester_x10)
 
 ## Schémata {#schematic-diagrams}
 
-Kompletní schéma (napájení a nabíječka i ADC pro monitorování napětí) je k dispozici jako PDF:
+Kompletní schéma napájení, nabíječky a převodníku ADC pro monitorování napětí je k dispozici jako PDF:
 
 - [Schéma (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x10-r1.1.pdf)
 - [Interaktivní prohlížeč CHESTER-X10](pathname:///download/ibom/hio-chester-x10-r1.1.html)

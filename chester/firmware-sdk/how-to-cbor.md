@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # How to: CBOR
 
-**CHESTER** with Cloud v2 uses [**CBOR**](https://cbor.io/) to encode and decode transmitted data. Thanks to **CBOR**, you can describe how the transmitted data will look like using the **YAML** file, then in your C code, you use the keys from this **YAML** file.
+**CHESTER** with Cloud v2 uses [**CBOR**](https://cbor.io/) to encode and decode transmitted data. Thanks to **CBOR**, you can describe what the transmitted data will look like using the **YAML** file, then in your C code, you use the keys from this **YAML** file.
 
 In the initial session messages, Cloud sends codec hash in the **session down** message. CHESTER compares the hash with its own codec hash and if needed, it uploads decoder with **decoder up** message and optionally uploads encoder in **encoder up** message.
 
@@ -17,11 +17,11 @@ To use **CBOR** with **CHESTER** you need to:
 - Header file `src/app_codec.h` is automatically generated when `west build` is called.
 - Use these definitions in `app_cbor.c` and add the needed data.
 
-YAML file have a header, then in `schema` you define a strictly hiearchical structure.
+The YAML file has a header, then in `schema` you define a strictly hierarchical structure.
 
 In `src/app_codec.h` there are generated #defines with names like `CODEC_KEY_E_` where `E` stands for Encoder (viewed from CHESTER perspective).
 
-In you inherit items to deeper structure, then in header file you will see `__` double underscore.
+If you nest items in a deeper structure, you will see a `__` double underscore in the header file.
 For example `CODEC_KEY_E_NETWORK__MESSAGE__VERSION` for YAML example below.
 
 ```
@@ -40,7 +40,7 @@ schema:
 
 You can see more practical examples in CHESTER SDK in the catalog applications `chester/applications/*` folder.
 
-Naming `cbor-decoder.yaml` and `cbor-encoder.yaml` is took from the Cloud perspective. So CHESTER is encoding data using **decoder** file because cloud is using this YAML file for decoding.
+Naming `cbor-decoder.yaml` and `cbor-encoder.yaml` is taken from the Cloud perspective. So CHESTER is encoding data using **decoder** file because cloud is using this YAML file for decoding.
 
 :::
 

@@ -5,4 +5,4 @@ title: Napájení
 
 # Napájení {#power-supply}
 
-Zařízení podporuje dva způsoby napájení. Buď přes integrovaný konektor Mini USB-B (používaný převážně pro vývojové účely), nebo přes vyhrazené napájecí piny svorkovnice. Napájecí piny akceptují napětí mezi 9 V a 28 V. Je zaveden systém priority napájení. Pokud jsou oba způsoby napájení připojeny současně, bude zařízení napájeno přes vyhrazené napájecí piny.
+Zařízení lze napájet dvěma způsoby: přes konektor Mini USB-B na desce (hlavně při vývoji), nebo přes vyhrazené napájecí piny svorkovnice. Napájecí piny přijímají napětí od 9 V do 28 V. Napájení má pevně danou prioritu: pokud jsou oba zdroje připojené současně, zařízení se napájí přes vyhrazené napájecí piny.

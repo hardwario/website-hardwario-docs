@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Zenner caltos-E
 
-[Web-Site](https://zenner.com/products/hkv_caltos_e/)
+[Website](https://zenner.com/products/hkv_caltos_e/)
 
 <div class="container">
   <div class="row">

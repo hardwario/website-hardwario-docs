@@ -38,7 +38,7 @@ Create a `v3.ext` file with the following contents.
 subjectAltName         = DNS:hostname, IP:10.0.0.0
 ```
 
-If you wish to use the `hostname` and `10.0.0.0` in SANs for Mosquito server specification, replace them with your hostname and IP.  
+If you wish to use the `hostname` and `10.0.0.0` in SANs for Mosquitto server specification, replace them with your hostname and IP.  
 For more information about SANs, refer to this [RFC](https://www.rfc-editor.org/rfc/rfc9525#name-identifying-application-ser).
 
 Sign the CSR with your CA key.
@@ -49,9 +49,9 @@ openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out s
 
 ### Mosquitto Setup
 
-We also need to configure Mosquitto actually to use these certificates and keys.
+We also need to configure Mosquitto to actually use these certificates and keys.
 
-Make a config file for mosquitto (for example, `nano mosquitto.conf`).
+Make a config file for Mosquitto (for example, `nano mosquitto.conf`).
 
 ```conf
 per_listener_settings true
@@ -69,7 +69,7 @@ use_identity_as_username true
 acl_file /path/to/acl
 ```
 
-You can run mosquitto with this config file by specifying the `-c` option: `mosquitto -c mosquitto.conf`
+You can run Mosquitto with this config file by specifying the `-c` option: `mosquitto -c mosquitto.conf`
 
 ## Client
 

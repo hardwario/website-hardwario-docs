@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # The Things Stack {#the-things-stack}
 
-Tato stránka popisuje, jak připojit zařízení **HARDWARIO CHESTER** k LoRaWAN Network Serveru **The Things Stack (TTS)**.
+Tato stránka popisuje, jak připojit zařízení **HARDWARIO CHESTER** k síťovému serveru LoRaWAN **The Things Stack (TTS)**.
 
 ---
 
@@ -15,7 +15,7 @@ Tato stránka popisuje, jak připojit zařízení **HARDWARIO CHESTER** k LoRaWA
 
 - Síť LoRaWAN s bránou a **The Things Stack**
 - Přístup ke konzoli zařízení CHESTER (Bluetooth / USB / J-Link)
-- Správně nastavený LoRaWAN region na zařízení CHESTER, na bráně a v TTS
+- Správně nastavený region LoRaWAN v zařízení CHESTER, v bráně a v TTS
 
 ---
 
@@ -38,7 +38,7 @@ Důležité parametry:
 
 ### 1.2 Z The Things Stack {#12-from-the-things-stack}
 
-Během registrace zařízení nakonfigurujete:
+Při registraci zařízení nastavíte:
 
 - **JoinEUI**
 - **DevEUI**
@@ -99,14 +99,14 @@ Poznámky:
    - **DevEUI**
    - **AppKey**
    - **Device ID**
-4. (Volitelně) přidejte labely (doporučeně stejné jako u brány/aplikace)
+4. (Volitelně) přidejte labely (doporučujeme stejné jako u brány/aplikace)
 5. Klikněte na **Register end device**
 
 ---
 
 ## 6) Dekodér payloadu (doporučeno) {#6-payload-decoder-recommended}
 
-Dekódování uplink payloadů zařízení CHESTER v The Things Stack:
+Payloady uplinků ze zařízení CHESTER dekódujete v The Things Stack takto:
 
 1. Otevřete **End device**
 2. Přejděte na **Payload formatters**
@@ -119,5 +119,5 @@ Dekódování uplink payloadů zařízení CHESTER v The Things Stack:
 
 - Konfigurace rádia LoRaWAN v zařízení CHESTER:  
   https://docs.hardwario.com/chester/platform-connectivity/lorawan-radio
-- Návod na koncová zařízení v The Things Stack:  
+- Návod ke koncovým zařízením v The Things Stack:  
   https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-end-devices

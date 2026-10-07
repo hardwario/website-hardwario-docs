@@ -4,20 +4,20 @@ title: "Jak na: Analogově-digitální převodník"
 ---
 import Image from '@theme/IdealImage';
 
-Analogově-digitální převodník umí měřit napětí na jednom ze šesti vstupů **`A0`** až **`A5`** a vrátit naměřenou hodnotu. Výsledkem může být **`16bitová`** hodnota nebo číslo typu **`float`** ve voltech.
+Analogově-digitální převodník měří napětí na jednom ze šesti vstupů **`A0`** až **`A5`** a vrací naměřenou hodnotu. Výsledkem může být hodnota **`16-bit`** nebo číslo typu **`float`** ve voltech.
 
 ## Odkazy {#references}
-- [**Modul ADC v SDK**](https://sdk.hardwario.com/group__twr__adc.html)
-- Ukázka v repozitáři na GitHubu
+- [**Modul SDK pro ADC**](https://sdk.hardwario.com/group__twr__adc.html)
+- Příklad v repozitáři na GitHubu
 
 ## Typy vzorkování {#sampling-types}
 
 Každý kanál lze nastavit na **jiné rozlišení a převzorkování**.
 
-Bez ohledu na to, jaké rozlišení zvolíte (**6, 8, 10, 12**), je výsledek vždy převeden na **16bitovou** hodnotu v rozsahu **0-65535**.
+Ať zvolíte jakékoli rozlišení (**6, 8, 10, 12**), výsledek se vždy přepočítá na **16bitovou** hodnotu v rozsahu **0-65535**.
 V asynchronním režimu můžete hodnotu získat i přímo ve voltech v datovém typu **float**.
 
-Vzorkování může být **synchronní** a **asynchronní**.
+Vzorkování může být **synchronní**, nebo **asynchronní**.
 
 ## Synchronní vzorkování {#synchronous-sampling}
 
@@ -30,7 +30,7 @@ Vzorkování může být **synchronní** a **asynchronní**.
 <details>
 <summary>
 <b>
-Ukázka kódu pro synchronní vzorkování
+Příklad kódu: synchronní vzorkování
 </b>
 </summary>
 <p>
@@ -65,14 +65,14 @@ Ukázka kódu pro synchronní vzorkování
 
   Asynchronní vzorkování **není blokující** a **běží na pozadí**.
 
-  Jakmile je výsledek k dispozici, zavolá se vaše callback funkce. Je možné **spustit více kanálů**, plánovač navzorkuje každý kanál a zavolá callback **pro každý kanál zvlášť**.
+  Jakmile je výsledek k dispozici, zavolá se vaše funkce callback. Můžete **spustit i více kanálů**: plánovač navzorkuje každý z nich a callback zavolá **pro každý kanál zvlášť**.
 
 :::
 
 <details>
 <summary>
 <b>
-Ukázka kódu pro asynchronní vzorkování
+Příklad kódu: asynchronní vzorkování
 </b>
 </summary>
 <p>

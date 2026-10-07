@@ -8,11 +8,11 @@ import TabItem from '@theme/TabItem';
 
 # CHESTER-Z1 přes J-Link {#chester-z1-over-j-link}
 
-Tento článek popisuje, jak nahrát firmware do modulu **CHESTER-Z1** pomocí **SEGGER J-Link**.
+Tento článek popisuje, jak nahrát firmware do modulu **CHESTER-Z1** programátorem **SEGGER J-Link**.
 
 ## Požadavky {#requirements}
 
-Budete potřebovat následující hardwarové a softwarové nástroje:
+Budete potřebovat tento hardware a software:
 
 * Jeden z těchto operačních systémů:
 
@@ -22,11 +22,11 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
 * Cílové zařízení **CHESTER-Z1** (namontované v horním krytu)
 
-* USB debugger/programátor **SEGGER J-Link** (včetně 10pinového **SWD** adaptéru + plochého kabelu)
+* USB debugger/programátor **SEGGER J-Link** (včetně 10pinového adaptéru **SWD** a plochého kabelu)
 
   :::tip
 
-  **HARDWARIO** nabízí **SEGGER J-Link** + veškeré potřebné příslušenství na vyžádání.
+  **HARDWARIO** na požádání dodá **SEGGER J-Link** i veškeré potřebné příslušenství.
 
   :::
 
@@ -34,7 +34,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
   :::danger
 
-  Některé kabely **Micro-USB** vedou pouze napájení a žádné datové signály. Pokud spojení mezi **SEGGER J-Link** a vaším systémem nefunguje, zkontrolujte v první řadě typ kabelu.
+  Některé kabely **Micro-USB** vedou jen napájení, a ne data. Pokud spojení mezi programátorem **SEGGER J-Link** a počítačem nefunguje, zkontrolujte nejdřív kabel.
 
   :::
 
@@ -90,7 +90,7 @@ Budete potřebovat následující hardwarové a softwarové nástroje:
 
 ## Nahrání firmwaru {#flashing}
 
-Firmware modulu **CHESTER-Z1** nahrajete následujícími kroky:
+Firmware modulu **CHESTER-Z1** nahrajete takto:
 
 1. Otevřete krabičku **CHESTER** (6 šroubů ze spodní strany).
 
@@ -106,11 +106,11 @@ Firmware modulu **CHESTER-Z1** nahrajete následujícími kroky:
 
    :::caution
 
-   Jeden z vodičů na plochém kabelu mezi J-Link a CHESTER má červenou barvu. Tato červená barva označuje **signál číslo 1**. Tento červeně označený signál musí být orientovaný k bílé tečce umístěné vedle konektoru SWD na desce CHESTER-Z1. Stejné pravidlo pro kabel platí na straně **SEGGER J-Link**.
+   Jeden z vodičů plochého kabelu mezi programátorem J-Link a zařízením CHESTER je červený a označuje **signál číslo 1**. Tento vodič musí směřovat k bílé tečce vedle konektoru SWD na desce CHESTER-Z1. Stejné pravidlo platí i na straně programátoru **SEGGER J-Link**.
 
    :::
 
-1. Připojte kabel **Micro-USB** k počítači a k **SEGGER J-Link**.
+1. Kabelem **Micro-USB** propojte počítač s programátorem **SEGGER J-Link**.
 
 1. Stáhněte balíček firmwaru **CHESTER-Z1** [**v1.4.0**](pathname:///download/hio-chester-z-v1.4.0.zip).
 
@@ -118,7 +118,7 @@ Firmware modulu **CHESTER-Z1** nahrajete následujícími kroky:
 
 1. Otevřete aplikaci **Terminál** a přejděte do adresáře s rozbaleným balíčkem.
 
-1. Spusťte proceduru nahrání firmwaru:
+1. Spusťte nahrávání firmwaru:
 
    <Tabs groupId="operating-system">
 
@@ -148,6 +148,6 @@ Firmware modulu **CHESTER-Z1** nahrajete následujícími kroky:
 
    </Tabs>
 
-1. Měli byste obdržet zprávu o úspěšném provedení operace.
+1. Měla by se zobrazit zpráva o úspěšném dokončení.
 
 1. Odpojte **SEGGER J-Link** od konektoru **SWD**.

@@ -6,7 +6,7 @@ title_meta: "Firmware Flashing (HARDWARIO TOWER)"
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'
 
-This chapter focuses on the **Firmware Tab** of Playground
+This chapter focuses on the **Firmware Tab** of Playground.
 
 ## Firmware Tab
 

@@ -6,27 +6,27 @@ import Image from '@theme/IdealImage';
 
 # CHESTER Serial {#chester-serial}
 
-Tento článek popisuje základní funkcionalitu, popis hardwaru, výchozí konfiguraci a ukázkovou **JSON** zprávu katalogové aplikace **CHESTER Serial**.
+Tento článek popisuje základní funkce katalogové aplikace **CHESTER Serial**, její hardware, výchozí konfiguraci a ukázkovou zprávu **JSON**.
 
 :::caution
 
-Některé základy zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
+Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
 
-- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
+- [**Společné funkce**](common-functionality.md): jak fungují LED, tlačítko a nastavení sítě.
+- [**Konektivita platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
 ## Přehled aplikace {#application-overview}
 
-**CHESTER Serial** je univerzální aplikace pro průmyslovou sériovou komunikaci. Funguje jako flexibilní brána pro integraci průmyslových zařízení (senzorů, elektroměrů) do cloudu přes LTE-M/NB-IoT nebo LoRaWAN.
+**CHESTER Serial** je univerzální aplikace pro průmyslovou sériovou komunikaci. Slouží jako flexibilní brána, která průmyslová zařízení (senzory, elektroměry) připojí do cloudu přes LTE-M/NB-IoT nebo LoRaWAN.
 
-Aplikace podporuje dvě komunikační rozhraní podle nainstalovaného rozšiřujícího modulu:
+Podle osazeného rozšiřujícího modulu aplikace podporuje dvě komunikační rozhraní:
 * **RS-485** (s modulem [**CHESTER-X2**](../extension-modules/chester-x2.md)): Modbus RTU Master, sběrnice multi-drop, až 8 podřízených zařízení
 * **RS-232** (s modulem [**CHESTER-X12**](../extension-modules/chester-x12.md)): spojení bod-bod, 1 zařízení
 
-Podporuje 11 typů zařízení včetně elektroměrů, environmentálních senzorů a obecných Modbus zařízení. Data jsou přenášena přes LTE (kódování CBOR) nebo LoRaWAN (optimalizované binární kódování s balením více zařízení).
+Podporuje 11 typů zařízení, mimo jiné elektroměry, senzory prostředí a obecná zařízení Modbus. Data přenáší přes LTE (kódování CBOR) nebo LoRaWAN (optimalizované binární kódování, které do jedné zprávy sdruží data více zařízení).
 
 ## Varianty aplikace {#application-variants}
 
@@ -34,56 +34,56 @@ Aplikaci **CHESTER Serial** lze objednat v jedné z těchto variant:
 
 ### CHESTER Serial RS-485 {#chester-serial-rs-485}
 
-Tato varianta je vybavena rozšiřujícím modulem **CHESTER-X2**. Je určena pro standardní průmyslovou sběrnicovou komunikaci, kde je více zařízení zapojeno v topologii daisy-chain.
+Tato varianta má rozšiřující modul **CHESTER-X2**. Je určená pro běžnou průmyslovou sběrnici, na které je více zařízení zapojeno za sebou (daisy-chain).
 
 * **Rozhraní:** neizolovaná RS-485
 * **Topologie:** sběrnice multi-drop
 * **Kapacita:** až 8 podřízených zařízení Modbus RTU
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-CGLS`: Standardní základní deska
 * `CHESTER-X2`: Modul rozhraní RS-485
-* `CHESTER-X10`: Externí napájecí vstup (5-28 V DC)
-* `CHESTER-E2-LP`: Krabička s SMA pigtailem
+* `CHESTER-X10`: Externí napájecí vstup (5–28 V DC)
+* `CHESTER-E2-LP`: Krabička s pigtailem SMA
 
-Více informací viz [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 ### CHESTER Serial RS-232 {#chester-serial-rs-232}
 
-Tato varianta je vybavena rozšiřujícím modulem **CHESTER-X12**. Je určena pro komunikaci bod-bod s jedním periferním zařízením, staršími zařízeními nebo senzory vyžadujícími přímé sériové spojení.
+Tato varianta má rozšiřující modul **CHESTER-X12**. Je určená pro spojení bod-bod s jedním periferním zařízením, se staršími zařízeními nebo se senzory, které potřebují přímé sériové spojení.
 
 * **Rozhraní:** neizolovaná RS-232
 * **Topologie:** spojení bod-bod
 * **Kapacita:** jedno zařízení (spojení 1:1)
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-CGLS`: Standardní základní deska
 * `CHESTER-X12`: Modul rozhraní RS-232
-* `CHESTER-E2-LP`: Krabička s SMA pigtailem
+* `CHESTER-E2-LP`: Krabička s pigtailem SMA
 
-Více informací viz [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 :::caution
 
-**CHESTER Serial** vyžaduje pro nepřetržitý provoz externí napájení (5–28 V DC). Senzory a sériové rozhraní jsou napájeny nepřetržitě.
+Zařízení **CHESTER Serial** potřebuje pro nepřetržitý provoz externí napájení (5–28 V DC). Senzory i sériové rozhraní jsou napájené trvale.
 
 :::
 
 ## Podporovaná zařízení {#supported-devices}
 
-Firmware obsahuje nativní podporu následujících zařízení:
+Firmware přímo podporuje tato zařízení:
 
 | Zařízení | Řetězec typu | Rozhraní | Měření |
 | :--- | :--- | :--- | :--- |
 | **MicroSENS 180-HS** | `microsens_180hs` | RS-232 (ASCII) | CO2 (obj. %), teplota, tlak |
-| **SenseCAP S1000 / S500** | `sensecap_s1000` | RS-485 Modbus | Teplota, vlhkost, tlak, osvětlení, vítr |
+| **SenseCAP S1000 / S500** | `sensecap_s1000` | RS-485 Modbus | Teplota, vlhkost, tlak, osvětlenost, vítr |
 | **CUBIC 6303** | `cubic_6303` | RS-485 Modbus | PM1.0, PM2.5, PM10 |
 | **Lambrecht** | `lambrecht` | RS-485 Modbus | Data meteostanice |
 | **Piketronic RPP-R** | `piketronic` | RS-485 Modbus | Koncentrace radonu (Bq/m³), teplota, vlhkost |
 | **Generic Modbus** | `generic` | RS-485 Modbus | Vlastní mapování registrů |
-| **Carlo Gavazzi EM1XX** | `em1xx` | RS-485 Modbus | Napětí, proud, výkon, frekvence, energie in/out (jednofázově) |
+| **Carlo Gavazzi EM1XX** | `em1xx` | RS-485 Modbus | Napětí, proud, výkon, frekvence, odebraná a dodaná energie (jednofázově) |
 | **Carlo Gavazzi EM5XX** | `em5xx` | RS-485 Modbus | Napětí, proud, výkon, frekvence, energie po fázích (třífázově) |
 | **ORNO OR-WE-504** | `or_we_504` | RS-485 Modbus | Napětí, proud, výkon, energie (jednofázově) |
 | **ORNO OR-WE-516** | `or_we_516` | RS-485 Modbus | Napětí, proud, výkon po fázích, energie (třífázově) |
@@ -99,28 +99,28 @@ Pro některé typy zařízení můžete použít i krátké aliasy: `microsens`,
 
 ### Režim Modbus RTU {#modbus-rtu-mode}
 
-V režimu Modbus funguje CHESTER jako Modbus RTU Master a periodicky dotazuje všechna nakonfigurovaná podřízená zařízení:
+V režimu Modbus pracuje zařízení CHESTER jako Modbus RTU Master a pravidelně dotazuje všechna nastavená podřízená zařízení:
 
-* Zařízení jsou **vzorkována** s konfigurovatelnou periodou (parametr `interval-sample`).
-* Nasbíraná měření se odesílají hromadně v intervalu reportování (parametr `interval-report`).
-* Na sběrnici RS-485 lze současně nakonfigurovat až **8 zařízení**.
+* Zařízení se **vzorkují** s nastavitelnou periodou (parametr `interval-sample`).
+* Nasbíraná měření se odesílají najednou v intervalu hlášení (parametr `interval-report`).
+* Na sběrnici RS-485 lze současně nastavit až **8 zařízení**.
 * Podporované funkce Modbus: FC01, FC02, FC03, FC04, FC05, FC06, FC0F a FC10.
 
 ### Transparentní režim {#transparent-mode}
 
-V transparentním režimu funguje CHESTER jako obousměrný most mezi sériovým portem a cloudem:
+V transparentním režimu pracuje zařízení CHESTER jako obousměrný most mezi sériovým portem a cloudem:
 
-* Data přijatá na sériové lince jsou přeposílána do cloudu.
-* Připojit lze pouze jedno zařízení (pouze slot `device-0`).
-* Užitečné pro ladění, starší zařízení nebo nestandardní protokoly.
+* Data přijatá po sériové lince se přeposílají do cloudu.
+* Připojit lze jen jedno zařízení (slot `device-0`).
+* Hodí se pro ladění, starší zařízení nebo nestandardní protokoly.
 
-### Balení více zařízení v LoRaWAN {#lorawan-multi-device-packing}
+### Sdružování dat více zařízení v LoRaWAN {#lorawan-multi-device-packing}
 
-Při použití LoRaWAN používá aplikace adaptivní balení více zařízení (Protokol v2) pro optimalizaci airtime:
+V síti LoRaWAN aplikace adaptivně sdružuje data více zařízení (protokol v2), aby co nejlépe využila vysílací čas (airtime):
 
-* Dynamicky zjišťuje aktuální Data Rate pro určení dostupné MTU.
+* Průběžně zjišťuje aktuální Data Rate, a tím i dostupnou MTU.
 * Kde je to možné, sdružuje odečty více zařízení do jediného uplinku.
-* První uplink obsahuje systémová data (baterie, teplota, akcelerometr) plus data zařízení.
+* První uplink obsahuje systémová data (baterie, teplota, akcelerometr) a data zařízení.
 * Následující uplinky obsahují pouze data zařízení.
 
 ## Technické specifikace {#technical-specifications}
@@ -135,7 +135,7 @@ Při použití LoRaWAN používá aplikace adaptivní balení více zařízení 
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná příkazem `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config mode none
@@ -158,29 +158,29 @@ app config device-6
 app config device-7
 ```
 
-## Specifické příkazy {#specific-commands}
+## Příkazy aplikace {#specific-commands}
 
 :::info
 
-Celou strukturu stromu příkazů můžete snadno prozkoumat. Začněte příkazem `help`.
+Celou stromovou strukturu příkazů snadno prozkoumáte: začněte příkazem `help`.
 
 :::
 
 :::caution
 
-Pro použití nové konfigurace je potřeba zavolat `config save`, což aplikuje nové konfigurační parametry a restartuje zařízení.
+Novou konfiguraci uplatníte příkazem `config save`, který uloží nové parametry a restartuje zařízení.
 
 :::
 
-### Akční příkazy {#action-commands}
+### Příkazy akcí {#action-commands}
 
-Příkaz pro **okamžité spuštění vzorkování** (a uložení výsledku do bufferu vzorků):
+Tímto příkazem **okamžitě spustíte vzorkování** (výsledek se uloží do bufferu vzorků):
 
 ```
 sample
 ```
 
-Příkaz pro **okamžité odeslání dat**:
+Tímto příkazem **okamžitě odešlete data**:
 
 ```
 send
@@ -188,33 +188,33 @@ send
 
 ### Režim sítě {#network-mode}
 
-Příkaz pro nastavení **komunikačního režimu**:
+Tímto příkazem nastavíte **komunikační režim**:
 
 ```
 app config mode <none/lte/lrw>
 ```
 
-### Reportování {#reporting}
+### Hlášení {#reporting}
 
-Příkaz pro nastavení **intervalu vzorkování** v sekundách:
+Tímto příkazem nastavíte **interval vzorkování** v sekundách:
 
 ```
 app config interval-sample <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu agregace** v sekundách:
+Tímto příkazem nastavíte **interval agregace** v sekundách:
 
 ```
 app config interval-aggreg <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu reportování** v sekundách:
+Tímto příkazem nastavíte **interval hlášení** v sekundách:
 
 ```
 app config interval-report <30-86400>
 ```
 
-Příkaz pro nastavení **intervalu LTE pollingu** v sekundách (0 = vypnuto):
+Tímto příkazem nastavíte **interval dotazování přes LTE** v sekundách (0 = vypnuto):
 
 ```
 app config interval-poll <0-86400>
@@ -222,31 +222,31 @@ app config interval-poll <0-86400>
 
 ### Sériová linka {#serial-line}
 
-Příkaz pro nastavení **provozního režimu sériové linky**:
+Tímto příkazem nastavíte **provozní režim sériové linky**:
 
 ```
 app config serial-mode <transparent/modbus>
 ```
 
-Příkaz pro nastavení **přenosové rychlosti**:
+Tímto příkazem nastavíte **přenosovou rychlost**:
 
 ```
 app config serial-baudrate <1200-115200>
 ```
 
-Příkaz pro nastavení **datových bitů**:
+Tímto příkazem nastavíte **počet datových bitů**:
 
 ```
 app config serial-data-bits <7-9>
 ```
 
-Příkaz pro nastavení **parity**:
+Tímto příkazem nastavíte **paritu**:
 
 ```
 app config serial-parity <none/odd/even>
 ```
 
-Příkaz pro nastavení **stop bitů**:
+Tímto příkazem nastavíte **počet stop bitů**:
 
 ```
 app config serial-stop-bits <1-2>
@@ -254,7 +254,7 @@ app config serial-stop-bits <1-2>
 
 ### Konfigurace zařízení {#device-configuration}
 
-Nakonfigurujte sloty zařízení 0–7 pomocí formátu `type[,addr[,timeout]]`:
+Sloty zařízení 0–7 nastavíte ve formátu `type[,addr[,timeout]]`:
 
 ```
 app config device-<n> "<type>,<addr>,<timeout>"
@@ -263,7 +263,7 @@ app config device-<n> "<type>,<addr>,<timeout>"
 Kde:
 * `n`: index slotu zařízení (0–7)
 * `type`: řetězec typu zařízení (viz tabulka Podporovaná zařízení)
-* `addr`: adresa Modbus slave (1–247), vyžadována v režimu Modbus
+* `addr`: adresa podřízeného zařízení Modbus (1–247), v režimu Modbus povinná
 * `timeout`: časový limit odpovědi v sekundách (výchozí: 1)
 
 **Příklady konfigurace:**
@@ -287,25 +287,25 @@ app config device-3 ""
 
 :::tip
 
-V režimu Modbus je adresa Modbus slave vyžadována pro všechna zařízení. V transparentním režimu lze nakonfigurovat pouze `device-0`.
+V režimu Modbus je adresa podřízeného zařízení povinná pro všechna zařízení. V transparentním režimu lze nastavit jen `device-0`.
 
 :::
 
 ### Příkazy Modbus {#modbus-commands}
 
-Čtení Modbus registrů z podřízeného zařízení:
+Čtení registrů Modbus z podřízeného zařízení:
 
 ```
 modbus read <slave> <addr> <count> [holding|input]
 ```
 
-Zápis hodnoty do Modbus registru:
+Zápis hodnoty do registru Modbus:
 
 ```
 modbus write <slave> <addr> <value>
 ```
 
-Vzorkování nakonfigurovaného Modbus zařízení:
+Vzorkování nastaveného zařízení Modbus:
 
 ```
 modbus sample
@@ -313,13 +313,13 @@ modbus sample
 
 ### Příkazy sériové linky {#serial-commands}
 
-Odeslání hex dat na sériovou linku a čekání na odpověď:
+Odeslání dat v hex na sériovou linku a čekání na odpověď:
 
 ```
 serial send <hex> [timeout_s]
 ```
 
-Čtení dat ze sériového RX bufferu:
+Čtení dat z přijímacího bufferu (RX) sériové linky:
 
 ```
 serial recv [timeout_s]
@@ -327,7 +327,7 @@ serial recv [timeout_s]
 
 ### Příkazy zařízení {#device-commands}
 
-Výpis všech nakonfigurovaných zařízení:
+Výpis všech nastavených zařízení:
 
 ```
 device list
@@ -345,7 +345,7 @@ Reset konkrétního zařízení:
 device reset <0-7>
 ```
 
-Přístup k příkazům specifickým pro dané zařízení (podle typu zařízení):
+Příkazy pro konkrétní typ zařízení:
 
 ```
 device microsens_180hs <subcommand>
@@ -358,9 +358,9 @@ device iem3000 <subcommand>
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je k dispozici v [kapitole Firmware](index.md#application-firmware) katalogových aplikací.
+Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](index.md#application-firmware).
 
-## Ukázková JSON zpráva {#example-json-message}
+## Ukázková zpráva JSON {#example-json-message}
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -464,13 +464,13 @@ import TabItem from '@theme/TabItem';
   </TabItem>
   <TabItem value="lora" label="LoRaWAN">
 
-**CHESTER Serial** používá binární kódování payloadu pro LoRaWAN s balením více zařízení podle protokolu v2. Payload je komprimován tak, aby se vešel do MTU LoRaWAN (51–222 bajtů podle Data Rate). Odečty více zařízení jsou pokud možno sdruženy do jediného uplinku.
+Zařízení **CHESTER Serial** kóduje payload LoRaWAN binárně a data více zařízení sdružuje podle protokolu v2. Payload je komprimovaný tak, aby se vešel do MTU LoRaWAN (51–222 bajtů podle Data Rate). Odečty více zařízení se pokud možno sdruží do jediného uplinku.
 
-Dekodér pro ChirpStack/TTN je k dispozici v souboru `codec/cs-decoder.js`. Podporuje jak protokol v1 (jedno zařízení, starší), tak protokol v2 (balení více zařízení).
+Dekodér pro ChirpStack/TTN je k dispozici v souboru `codec/cs-decoder.js`. Podporuje starší protokol v1 (jedno zařízení) i protokol v2 (sdružování dat více zařízení).
 
 :::info
 
-Kvůli omezením velikosti payloadu v LoRaWAN jsou hodnoty zařízení kódovány ve formátu **Float16** (IEEE 754 poloviční přesnost). Dekodér je automaticky převede zpět na hodnoty v plné přesnosti.
+Kvůli omezené velikosti payloadu v LoRaWAN se hodnoty zařízení kódují ve formátu **Float16** (IEEE 754, poloviční přesnost). Dekodér je automaticky převede zpět na hodnoty s plnou přesností.
 
 :::
 
@@ -488,10 +488,10 @@ Kvůli omezením velikosti payloadu v LoRaWAN jsou hodnoty zařízení kódován
 
 ### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Podpora LoRaWAN: optimalizované binární kódování s balením více zařízení pro efektivní využití přenosového pásma
+- **Přidáno**: Podpora LoRaWAN: optimalizované binární kódování se sdružováním dat více zařízení pro úsporu přenosového pásma
 - **Přidáno**: Podpora rozhraní RS-232 přes rozšiřující modul CHESTER-X12 (vedle stávajícího RS-485/CHESTER-X2)
-- **Přidáno**: 10 profilů typů zařízení včetně elektroměrů, environmentálních senzorů a obecných zařízení Modbus RTU
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); firmware pro Cloud v1 nebyl pro tuto aplikaci k dispozici
+- **Přidáno**: 10 profilů typů zařízení včetně elektroměrů, senzorů prostředí a obecných zařízení Modbus RTU
+- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); firmware pro Cloud v1 nebyl pro tuto aplikaci k dispozici
 
 :::info
 

@@ -6,21 +6,21 @@ import Image from '@theme/IdealImage';
 
 # CHESTER Clime {#chester-clime}
 
-Tento článek popisuje základní funkce, hardware a ukázkovou **JSON** zprávu katalogové aplikace **CHESTER Clime**.
+Tento článek popisuje základní funkce katalogové aplikace **CHESTER Clime**, její hardware a ukázkovou zprávu **JSON**.
 
 :::caution
 
-Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
+Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
 
-- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
+- [**Společné funkce**](common-functionality.md): jak fungují LED, tlačítko a nastavení sítě.
+- [**Konektivita platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
 ## Přehled aplikace {#application-overview}
 
-**CHESTER Clime** je environmentální senzor, který vzorkuje, agreguje a odesílá naměřené veličiny.
+Zařízení **CHESTER Clime** měří podmínky prostředí: naměřené veličiny vzorkuje, agreguje a odesílá.
 
 ## Varianty aplikace {#application-variants}
 
@@ -32,13 +32,13 @@ Katalogová aplikace **CHESTER Clime** měří:
 - Teplotu
 - Vlhkost
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
 * `CHESTER-S2`: Externí vlhkoměr
-* `CHESTER-E1-LP`: Krabička se SMA pigtailem
+* `CHESTER-E1-LP`: Krabička s pigtailem SMA
 
-Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 Varianta sestavení firmwaru: `west chester-update clime --variant "CHESTER Clime"`
 
@@ -48,45 +48,45 @@ Katalogová aplikace **CHESTER Clime Z** měří:
 - Teplotu
 - Vlhkost
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
-* `CHESTER-Z1`: Zálohovací modul
+* `CHESTER-Z1`: Záložní modul
 * `CHESTER-S2`: Externí vlhkoměr
-* `CHESTER-E1-LP`: Krabička se SMA pigtailem
+* `CHESTER-E1-LP`: Krabička s pigtailem SMA
 
-Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
-Varianta sestavení firmwaru: `west chester-update clime --variant "CHESTER Clime"` (podpora zálohování CHESTER-Z je součástí základního firmwaru **CHESTER Clime**)
+Varianta sestavení firmwaru: `west chester-update clime --variant "CHESTER Clime"` (podpora záložního modulu CHESTER-Z je součástí základního firmwaru **CHESTER Clime**)
 
 ### CHESTER Clime IAQ {#chester-clime-iaq}
 
 Katalogová aplikace **CHESTER Clime IAQ** měří:
 - Teplotu
 - Vlhkost
-- Osvětlení
+- Osvětlenost
 - Koncentraci CO₂
 - Atmosférický tlak
-- Detekci pohybu pomocí PIR senzoru
+- Detekci pohybu senzorem PIR
 
-Aplikace také hlásí **události stisku tlačítka** a poskytuje **akustickou** a **optickou zpětnou vazbu**.
+Aplikace také hlásí **stisky tlačítka** a dává **zvukovou** a **světelnou odezvu**.
 Barva **LED v tlačítku** navíc **signalizuje úrovně koncentrace CO₂**.
 
 :::caution
 
-CHESTER IAQ ve výchozí konfiguraci odesílá přibližně 800 bajtů dat. Pokud zvýšíte interval reportování, aniž byste zvýšili i interval agregace,
-může být datový buffer větší než UDP MTU a paket nebude odeslán. Zařízení pak vypadá, že neodesílá nebo odesílá jen zlomek paketů.
+Varianta IAQ ve výchozí konfiguraci odesílá přibližně 800 bajtů dat. Pokud prodloužíte interval hlášení a nezvýšíte zároveň interval agregace,
+může být datový buffer větší než MTU protokolu UDP a paket se neodešle. Zařízení se pak tváří, jako by neodesílalo nic nebo jen část paketů.
 
 :::
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
 * `CHESTER-S1-BCMP`: Integrovaný multisenzor
-* `CHESTER-X10`: Externí napájení 6-28V s Li-Ion baterií
-* `CHESTER-E7-LP`: Krabička se SMA pigtailem
+* `CHESTER-X10`: Externí napájení 6–28 V s baterií Li-Ion
+* `CHESTER-E7-LP`: Krabička s pigtailem SMA
 
-Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 Varianta sestavení firmwaru: `west chester-update clime --variant "CHESTER Clime IAQ"`
 
@@ -96,77 +96,77 @@ Varianta sestavení firmwaru: `west chester-update clime --variant "CHESTER Clim
 
 Katalogová aplikace **CHESTER Clime 1W** podporuje více externích teplotních senzorů DS18B20 1-Wire.
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
 * `CHESTER-E8-LP`: Krabička s 8 kabelovými průchodkami (RM8L-4S)
 
-Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
-Varianta sestavení firmwaru: `west chester-update clime --variant "CHESTER Clime"` (podpora DS18B20 1-Wire je součástí základního firmwaru **CHESTER Clime**)
+Varianta sestavení firmwaru: `west chester-update clime --variant "CHESTER Clime"` (podpora senzorů DS18B20 1-Wire je součástí základního firmwaru **CHESTER Clime**)
 
 ### CHESTER Clime 1WH {#chester-clime-1wh}
 
-Katalogová aplikace **CHESTER Clime 1WH** podporuje **CHESTER-S2** + více externích teplotních senzorů DS18B20 1-Wire.
+Katalogová aplikace **CHESTER Clime 1WH** podporuje modul **CHESTER-S2** a více externích teplotních senzorů DS18B20 1-Wire.
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
 * `CHESTER-S2`: Externí vlhkoměr
 * `CHESTER-E8-LP`: Krabička s 8 kabelovými průchodkami (RM8L-4S)
 
-Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
-Varianta sestavení firmwaru: `west chester-update clime --variant "CHESTER Clime"` (podpora DS18B20 1-Wire a CHESTER-S2 je součástí základního firmwaru **CHESTER Clime**)
+Varianta sestavení firmwaru: `west chester-update clime --variant "CHESTER Clime"` (podpora senzorů DS18B20 1-Wire a modulu CHESTER-S2 je součástí základního firmwaru **CHESTER Clime**)
 
 ### CHESTER Clime RTD {#chester-clime-rtd}
 
 Katalogová aplikace **CHESTER Clime RTD** podporuje dva externí čtyřvodičové teplotní senzory Pt1000.
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
 * `CHESTER-X3A:A`: Rozhraní pro 2x Pt100/Pt1000
-* `CHESTER-E13-LP`: Krabička se SMA pigtailem a 2 kabelovými průchodkami PG7
+* `CHESTER-E13-LP`: Krabička s pigtailem SMA a 2 kabelovými průchodkami PG7
 
-Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 Varianta sestavení firmwaru: `west chester-update clime --variant "CHESTER Clime RTD"`
 
 ### CHESTER Clime TC {#chester-clime-tc}
 
-Katalogová aplikace **CHESTER Clime TC** podporuje dva externí termočlánkové senzory **typu K**.
+Katalogová aplikace **CHESTER Clime TC** podporuje dva externí termočlánky **typu K**.
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: Standardní základní deska
 * `CHESTER-X3B:A`: Rozhraní pro 2x termočlánek typu K
-* `CHESTER-E13-LP`: Krabička se SMA pigtailem a 2 kabelovými průchodkami PG7
+* `CHESTER-E13-LP`: Krabička s pigtailem SMA a 2 kabelovými průchodkami PG7
 
-Více informací najdete v kapitole [**Objednací kódy**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 Varianta sestavení firmwaru: `west chester-update clime --variant "CHESTER Clime TC"`
 
 ## Měření a chování {#measurement-and-behavior}
 
-- Všechny senzory jsou **vzorkovány** s nastavitelnou periodou (parametr `interval-sample`).
-- Vzorky jsou následně **agregovány** v nastavitelném intervalu. Z uložených vzorků se pro každý senzor počítá minimum, maximum, průměr a medián (parametr `interval-aggreg`).
-- Každá agregovaná hodnota má svou časovou značku a odesílá se v dávce v intervalu reportování (parametr `interval-report`).
+- Všechny senzory se **vzorkují** s nastavitelnou periodou (parametr `interval-sample`).
+- Vzorky se pak **agregují** v nastavitelném intervalu: z uložených vzorků se pro každý senzor spočítá minimum, maximum, průměr a medián (parametr `interval-aggreg`).
+- Každá agregovaná hodnota má svou časovou značku; hodnoty se odesílají v dávkách v intervalu hlášení (parametr `interval-report`).
 
 :::caution
 
-CHESTER Clime ve výchozí konfiguraci odesílá přibližně 500 bajtů dat. Pokud zvýšíte interval reportování, aniž byste zvýšili i interval agregace,
-může být datový buffer větší než UDP MTU a paket nebude odeslán. Zařízení pak vypadá, že neodesílá nebo odesílá jen zlomek paketů.
+Zařízení CHESTER Clime ve výchozí konfiguraci odesílá přibližně 500 bajtů dat. Pokud prodloužíte interval hlášení a nezvýšíte zároveň interval agregace,
+může být datový buffer větší než MTU protokolu UDP a paket se neodešle. Zařízení se pak tváří, jako by neodesílalo nic nebo jen část paketů.
 
 :::
 
-Pokud je zařízení osazeno modulem **CHESTER-S1**, má také tlačítko. Při stisku tlačítka se na sekundu rozsvítí modrá LED. Zároveň se z integrovaného akustického bzučáku přehraje **pípnutí** jako zvukové potvrzení stisku tlačítka.
+Pokud je zařízení osazeno modulem **CHESTER-S1**, má také tlačítko. Po stisku tlačítka se na sekundu rozsvítí modrá LED a stisk zvukově potvrdí **pípnutí** z vestavěného bzučáku.
 
-Tlačítko na volitelném modulu **CHESTER-S1** navíc svou barvou hlásí stav CO₂ prahovými barvami: **zelená** (hodnoty jsou v pořádku), **oranžová** (varování) a **červená** (alarm). Při napájení z baterie tlačítko krátce blikne každých 5 sekund a při připojeném externím napájení na X10 svítí trvale. **Úrovně** prahů a **hystereze** jsou **konfigurovatelné**.
+Tlačítko na volitelném modulu **CHESTER-S1** navíc barvou ukazuje stav koncentrace CO₂ vůči prahovým hodnotám: **zelená** (hodnoty jsou v pořádku), **oranžová** (varování) a **červená** (alarm). Při napájení z baterie tlačítko každých 5 sekund krátce blikne, při externím napájení přes modul X10 svítí trvale. **Prahové hodnoty** i **hysterezi** lze **nastavit**.
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná příkazem `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config interval-sample 60
@@ -185,14 +185,14 @@ app config hygro-t-alarm-lo-thr 0.0
 app config hygro-t-alarm-lo-hst 0.0
 ```
 
-Při osazení modulem **zálohování** (CHESTER-Z1) nebo **vlhkoměrem** (CHESTER-S2):
+Se **záložním modulem** (CHESTER-Z1) nebo **vlhkoměrem** (CHESTER-S2):
 
 ```
 app config event-report-delay 1
 app config event-report-rate 30
 ```
 
-Při osazení modulem **IAQ** (CHESTER-S1) můžete změnit prahy CO₂ a hysterezi, které jsou signalizovány barvou LED v tlačítku:
+S modulem **IAQ** (CHESTER-S1) můžete změnit prahové hodnoty CO₂ a hysterezi, podle kterých se mění barva LED v tlačítku:
 
 ```
 app config iaq-led-thr-warning 800.0
@@ -200,73 +200,73 @@ app config iaq-led-thr-alarm 1600.0
 app config iaq-led-hst 50.0
 ```
 
-Při osazení modulem **zálohování** (CHESTER-Z1) nebo **externího napájení** (CHESTER-X10) můžete okamžitě hlásit změny událostí externího napájení:
+Se **záložním modulem** (CHESTER-Z1) nebo modulem **externího napájení** (CHESTER-X10) může zařízení okamžitě hlásit změny externího napájení:
 
 ```
 app config backup-report-connected true
 app config backup-report-disconnected true
 ```
 
-## Specifické příkazy {#specific-commands}
+## Příkazy aplikace {#specific-commands}
 
 :::info
 
-Celou strukturu stromu příkazů můžete snadno prozkoumat – začněte příkazem `help`.
+Celou stromovou strukturu příkazů snadno prozkoumáte: začněte příkazem `help`.
 
 :::
 
 :::caution
 
-Pro použití nové konfigurace je potřeba zavolat `config save`, což aplikuje nové konfigurační parametry a restartuje zařízení.
+Novou konfiguraci uplatníte příkazem `config save`, který uloží nové parametry a restartuje zařízení.
 
 :::
 
-Příkaz pro nastavení **intervalu vzorkování** v sekundách:
+Tímto příkazem nastavíte **interval vzorkování** v sekundách:
 
 ```
 app config interval-sample <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu agregace** v sekundách:
+Tímto příkazem nastavíte **interval agregace** v sekundách:
 
 ```
 app config interval-aggreg <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu reportování** v sekundách:
+Tímto příkazem nastavíte **interval hlášení** v sekundách:
 
 ```
 app config interval-report <30-86400>
 ```
 
-Příkaz pro zapnutí **hlášení alarmů** vysoké/nízké teploty vlhkoměru:
+Tímto příkazem zapnete **hlášení alarmů** při vysoké a nízké teplotě na vlhkoměru:
 
 ```
 app config hygro-t-alarm-hi-report false
 app config hygro-t-alarm-lo-report false
 ```
 
-Příkaz pro nastavení **prahů** vysoké/nízké teploty vlhkoměru ve **°C**:
+Tímto příkazem nastavíte **prahové hodnoty** vysoké a nízké teploty na vlhkoměru v **°C**:
 
 ```
 app config hygro-t-alarm-hi-thr <-40.0..125.0>
 app config hygro-t-alarm-lo-thr <-40.0..125.0>
 ```
 
-Příkaz pro nastavení **hystereze** vysoké/nízké teploty vlhkoměru ve **°C**:
+Tímto příkazem nastavíte **hysterezi** vysoké a nízké teploty na vlhkoměru v **°C**:
 
 ```
 app config hygro-t-alarm-hi-hst <0.0..100.0>
 app config hygro-t-alarm-lo-hst <0.0..100.0>
 ```
 
-Příkaz pro nastavení **prodlevy mezi událostí a hlášením** v sekundách (teplotní alarm, změna stavu zálohování):
+Tímto příkazem nastavíte **prodlevu mezi událostí a hlášením** v sekundách (teplotní alarm, změna stavu záložního napájení):
 
 ```
 app config event-report-delay <1-86400>
 ```
 
-Příkaz pro nastavení **četnosti hlášení** v počtu hlášení za hodinu (platí jen pro hlášení událostí, periodická hlášení se do tohoto limitu nepočítají):
+Tímto příkazem nastavíte **četnost hlášení** jako počet hlášení za hodinu (platí jen pro hlášení událostí, pravidelná hlášení se do limitu nepočítají):
 
 ```
 app config event-report-rate <1-3600>
@@ -274,34 +274,34 @@ app config event-report-rate <1-3600>
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je k dispozici v kapitole [Firmware](index.md#application-firmware) katalogových aplikací.
+Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](index.md#application-firmware).
 
-## Ukázková JSON zpráva {#example-json-message}
+## Ukázková zpráva JSON {#example-json-message}
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="lte" label="LTE">
-    V tomto ukázkovém **JSON** vidíte data ze všech tří variant
+    Tato ukázka **JSON** obsahuje data ze všech tří variant
 
 - **CHESTER Clime** má vlastní strukturu `hygrometer`.
 - **CHESTER Clime IAQ** má vlastní strukturu `iaq_sensor`.
 - **CHESTER Clime 1W** má vlastní strukturu `w1_thermometers`.
 - **CHESTER Clime RTD** má vlastní strukturu `rtd_thermometers`.
-- **CHESTER Clime** s volitelným **zálohováním** (CHESTER-Z1 nebo CHESTER-X10) má strukturu `backup` s externím a interním napětím, stavem a událostmi.
+- **CHESTER Clime** s volitelným **záložním napájením** (CHESTER-Z1 nebo CHESTER-X10) má strukturu `backup` s externím a vnitřním napětím, stavem a událostmi.
 
-**Události** zálohování jsou:
+**Události** záložního napájení:
 * `connected`
 * `disconnected`
 
-**Události** vlhkoměru jsou:
+**Události** vlhkoměru:
 * `alarm_hi_activated`
 * `alarm_hi_deactivated`
 * `alarm_lo_activated`
 * `alarm_lo_deactivated`
 
-V každé struktuře je při aktuální konfiguraci šest agregovaných hodnot. Každá agregovaná hodnota má svou časovou značku a je vypočtena z několika vzorků; počítají se hodnoty `min`, `max`, `avg` a `mdn`.
+Při této konfiguraci obsahuje každá struktura šest agregovaných hodnot. Každá z nich má svou časovou značku a hodnoty `min`, `max`, `avg` a `mdn` vypočtené z několika vzorků.
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
@@ -1071,11 +1071,11 @@ V každé struktuře je při aktuální konfiguraci šest agregovaných hodnot. 
 ### v3.5.1 – 2025-12-08 {#v351--2025-12-08}
 
 - **Přidáno**: Nové varianty: **CHESTER Clime SPS30** (prachové částice: PM1/PM2.5/PM10) a **CHESTER Clime Radon** (koncentrace radonu)
-- **Přidáno**: Nová varianta: **CHESTER Clime TC** pro dva externí termočlánkové senzory typu K (přes CHESTER-X3B)
+- **Přidáno**: Nová varianta: **CHESTER Clime TC** pro dva externí termočlánky typu K (přes CHESTER-X3B)
 - **Vylepšeno**: Podpora teploměrů DS18B20 1-Wire, vyšší spolehlivost a čistší obsluha více senzorů
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); varianty pro Cloud v1 zůstávají dostupné v samostatné tabulce firmwaru
-- **Změněno**: Jediný společný binární firmware pro LTE i LoRaWAN; síť se volí pomocí `app config mode lte` / `app config mode lrw`
-- **Odstraněno**: Varianty Clime 1W a Clime 1WH byly vypuštěny ze sestavení firmwaru pro Cloud v2 (zůstávají dostupné pod Cloud v1)
+- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); varianty pro Cloud v1 zůstávají dostupné v samostatné tabulce firmwaru
+- **Změněno**: Jediný společný binární soubor firmwaru pro LTE i LoRaWAN; síť se volí příkazem `app config mode lte` / `app config mode lrw`
+- **Odstraněno**: Varianty Clime 1W a Clime 1WH byly vypuštěny ze sestavení firmwaru pro Cloud v2 (pro Cloud v1 zůstávají dostupné)
 
 :::info
 

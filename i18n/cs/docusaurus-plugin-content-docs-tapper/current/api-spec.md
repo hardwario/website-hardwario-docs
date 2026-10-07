@@ -8,11 +8,11 @@ import Image from '@theme/IdealImage';
 
 # Specifikace MQTT API {#mqtt-api-specification}
 
-Zařízení TAPPER může komunikovat přes MQTT pomocí JSON zpráv.
+Zařízení TAPPER může komunikovat přes MQTT pomocí zpráv JSON.
 
 ## Topic {#topic}
 
-Každý MQTT Topic začíná `tapper/$id/`, kde `id` je hardwarová adresa zařízení TAPPER.
+Každý topic MQTT začíná na `tapper/$id/`, kde `id` je hardwarová adresa zařízení TAPPER.
 
 ## Payload {#payload}
 
@@ -22,7 +22,7 @@ Každý payload obsahuje časovou značku.
 
 ## Události {#events}
 
-TAPPER má v API definováno několik událostí.
+API definuje pro TAPPER několik událostí.
 
 |           Topic           |                         Payload                         |
 | :-----------------------: | :-----------------------------------------------------: |
@@ -38,9 +38,9 @@ TAPPER odesílá UID NFC tagu jako hexadecimální řetězec v pořadí big-endi
 
 ## Rozhraní {#interfaces}
 
-TAPPER má RGB LED a bzučák pro interakci s uživatelem.
+Pro komunikaci s uživatelem má TAPPER RGB LED a bzučák.
 
-Ty lze aktivovat požadavkem odeslaným přes MQTT podle této specifikace.
+Obojí aktivujete požadavkem přes MQTT podle této specifikace.
 
 ## Požadavek {#request}
 
@@ -71,20 +71,20 @@ Payload požadavku:
 
 ### Timestamp {#timestamp}
 
-Toto je unixová časová značka požadavku, očekává se float/integer.
+Unixová časová značka požadavku; očekává se float nebo integer.
 
 ### ID {#id}
 
-Toto je ID požadavku, očekává se integer.
+ID požadavku; očekává se integer.
 
 ### Output {#output}
 
 
 
-Tato sekce se týká reléového výstupu.
+Tato část ovládá výstup relé.
 
-- Command může být: `activate`, `deactivate` nebo `pulse`
-    - Příkaz `pulse` vyžaduje také nastavení prvku `duration` (v sekundách), očekává se integer.
+- Command může mít hodnotu `activate`, `deactivate` nebo `pulse`.
+    - Příkaz `pulse` vyžaduje i prvek `duration` (doba v sekundách jako integer).
 
 ```json
 "output": {
@@ -95,17 +95,17 @@ Tato sekce se týká reléového výstupu.
 
 :::info
 
-Relé přichází s hardwarem r2.
+Relé přibude v hardwarové revizi r2.
 
 :::
 
 ### Visual {#visual}
 
-Tato sekce se týká LED na desce.
+Tato část ovládá LED na desce.
 
 Může obsahovat buď prvek `"state"`, nebo `"pattern"`.
 
-- State může mít následující hodnoty: `off`, nebo `on/` s následující barvou `red`/`green`/`blue`/`yellow`.  
+- State může mít hodnotu `off`, nebo `on/`, za kterým následuje barva `red`/`green`/`blue`/`yellow`.  
   Příklad: `on/red`
   ```json
   "visual": {
@@ -113,7 +113,7 @@ Může obsahovat buď prvek `"state"`, nebo `"pattern"`.
   }
   ```
 
-- Prvek `pattern` je velmi podobný, s možnostmi `p1/`, `p2/`, `p3/` nebo `p4/` s následující barvou `red`/`green`/`blue`/`yellow`.  
+- Prvek `pattern` funguje podobně: `p1/`, `p2/`, `p3/` nebo `p4/`, za kterým následuje barva `red`/`green`/`blue`/`yellow`.  
   Příklad: `p4/blue`
   | Vzor |      Popis       |
   | :-----: | :---------------: |
@@ -133,7 +133,7 @@ Může obsahovat buď prvek `"state"`, nebo `"pattern"`.
 
 ### Acoustic {#acoustic}
 
-Tato sekce se týká bzučáku.
+Tato část ovládá bzučák.
 
 Jediným prvkem je `pattern`, který může mít hodnotu `p1`, `p2`, `p3` nebo `p4`.
 
@@ -173,7 +173,7 @@ Jediným prvkem je `pattern`, který může mít hodnotu `p1`, `p2`, `p3` nebo `
 
 Topic pro odpověď je `tapper/$id/control/response`.
 
-Payloady odpovědi jsou:
+Odpověď může mít tyto payloady:
 
 |               Výsledek               |                              Payload                               |
 | :--------------------------------: | :----------------------------------------------------------------: |

@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Milesight Sensor AM308(L)
 
-Milesight AM308 and AM308L are **indoor ambience monitoring sensors** that measure **eight parameters**: temperature, humidity, motion (PIR), light, CO₂, TVOC, barometric pressure, PM2.5, and PM10. The **AM308** features a **4.2" E-Ink screen** for real-time display, while the **AM308L** offers longer battery life without the display. Both transmit data via **LoRaWAN Class A** technology for long-range, low-power communication.
+Milesight AM308 and AM308L are **indoor ambience monitoring sensors** that measure **nine parameters**: temperature, humidity, motion (PIR), light, CO₂, TVOC, barometric pressure, PM2.5, and PM10. The **AM308** features a **4.2" E-Ink screen** for real-time display, while the **AM308L** offers longer battery life without the display. Both transmit data via **LoRaWAN Class A** technology for long-range, low-power communication.
 
 <div class="container">
   <div class="row">

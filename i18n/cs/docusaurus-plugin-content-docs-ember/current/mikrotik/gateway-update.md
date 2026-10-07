@@ -6,18 +6,18 @@ import Image from '@theme/IdealImage';
 
 # Aktualizace brány MikroTik {#mikrotik-gateway-update}
 
-Tento návod vás provede aktualizací balíčků RouterOS a RouterBOARD (firmware/„BIOS“) pomocí aplikace Winbox 4.
+Tento návod popisuje, jak v aplikaci Winbox 4 aktualizovat balíčky RouterOS a RouterBOARD (firmware/„BIOS“).
 
 ---
 
-## Požadavky {#prerequisites}
+## Předpoklady {#prerequisites}
 - Přístup administrátora (uživatelské jméno a heslo)
 
 ---
 
 ## 1. Aktualizace softwaru RouterOS {#1-update-routeros-software}
 
-V levém panelu **System → Packages → Check for Updates**. Otevře se nové okno, zkontrolujte, zda se verze shodují. Pokud ne, klikněte na **Download&Install** a několik minut vyčkejte.
+V levém panelu otevřete **System → Packages → Check for Updates**. V novém okně zkontrolujte, zda se verze shodují. Pokud ne, klikněte na **Download&Install** a několik minut počkejte.
 ![Aktualizace RouterOS v zařízení EMBER](../../../../../ember/mikrotik/images/ember-update-routeros.png)
 
 ---
@@ -32,14 +32,14 @@ V levém panelu **System → Packages → Check for Updates**. Otevře se nové 
 
 ---
 
-## 3. Restart pro aplikování firmwaru {#3-reboot-to-apply-firmware}
+## 3. Restartem dokončete aktualizaci firmwaru {#3-reboot-to-apply-firmware}
 
 1. V levém menu otevřete **System → Reboot**.
-2. Potvrďte restart, aby se aktualizace firmwaru RouterBOARD aplikovala.
+2. Potvrďte restart, aby se aktualizace firmwaru RouterBOARD projevila.
 
 ![Restart zařízení EMBER](../../../../../ember/mikrotik/images/ember-reboot.png)
 
-3. Vyčkejte, než se zařízení vrátí online, a poté se znovu přihlaste.
+3. Počkejte, až bude zařízení znovu online, a přihlaste se.
 
 
 
@@ -51,4 +51,4 @@ V levém panelu **System → Packages → Check for Updates**. Otevře se nové 
 1. **System → Packages**:  
    - Klikněte na **Check For Updates**: nyní by se mělo zobrazit **up to date** (obě verze by se měly shodovat).
 2. **System → RouterBOARD**:  
-   - Zkontrolujte, že **Current Firmware** nyní odpovídá **Upgrade Firmware**: to znamená, že firmware byl úspěšně aktualizován.
+   - Zkontrolujte, že se **Current Firmware** shoduje s **Upgrade Firmware**. Pak je firmware úspěšně aktualizovaný.

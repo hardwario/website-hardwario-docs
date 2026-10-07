@@ -6,22 +6,22 @@ import Image from '@theme/IdealImage';
 
 # CHESTER Range {#chester-range}
 
-Tento článek popisuje základní funkce, hardware a ukázkovou **JSON** zprávu katalogové aplikace **CHESTER Range**.
+Tento článek popisuje základní funkce katalogové aplikace **CHESTER Range**, její hardware a ukázkovou zprávu **JSON**.
 
 :::caution
 
-Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
+Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
 
-- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
+- [**Společné funkce**](common-functionality.md): jak fungují LED, tlačítko a nastavení sítě.
+- [**Konektivita platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
 
 ## Přehled aplikace {#application-overview}
 
-**CHESTER Range** měří vzdálenost pomocí ultrazvukového senzoru [MaxBotix MB7066](https://www.hardwario.store/p/ultrasonic-sensor). Umí také měřit teplotu senzorem DS18B20 na sběrnici 1-Wire a vlhkost pomocí **CHESTER-S2**.
+Zařízení **CHESTER Range** měří vzdálenost ultrazvukovým senzorem [MaxBotix MB7066](https://www.hardwario.store/p/ultrasonic-sensor). Umí také měřit teplotu senzorem DS18B20 na sběrnici 1-Wire a vlhkost modulem **CHESTER-S2**.
 
 ## Varianty aplikace {#application-variants}
 
@@ -29,19 +29,19 @@ Zařízení **CHESTER Range** lze objednat v jedné z těchto variant:
 
 ### CHESTER Range {#chester-range}
 
-Katalogový hardware **CHESTER Range** se skládá z těchto objednacích kódů:
+Hardware katalogové aplikace **CHESTER Range** tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-CGLS`: Standardní základní deska
 
 * `CHESTER-X0A:A`: Vstupní modul (4 kanály)
 
-Více podrobností najdete v [**objednacích kódech**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
-Varianta buildu firmwaru: `west chester-update range --variant "CHESTER Range"`
+Varianta sestavení firmwaru: `west chester-update range --variant "CHESTER Range"`
 
 ### CHESTER Range Z {#chester-range-z}
 
-Katalogový hardware **CHESTER Range Z** se skládá z těchto objednacích kódů:
+Hardware katalogové aplikace **CHESTER Range Z** tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-CGLS`: Standardní základní deska
 
@@ -49,32 +49,32 @@ Katalogový hardware **CHESTER Range Z** se skládá z těchto objednacích kód
 
 * `CHESTER-Z1`: Záložní modul
 
-Více podrobností najdete v [**objednacích kódech**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
-Varianta buildu firmwaru: `west chester-update range --variant "CHESTER Range Z"`
+Varianta sestavení firmwaru: `west chester-update range --variant "CHESTER Range Z"`
 
 ## Měření a chování {#measurement-and-behavior}
 
-- Všechny senzory jsou **vzorkovány** s konfigurovatelnou periodou (parametr `interval-sample`).
-- Vzorky se následně **agregují** v konfigurovatelném intervalu. Z uložených vzorků se pro každý senzor spočítá minimum, maximum, průměr a medián (parametr `interval-aggreg`).
-- Každá agregovaná hodnota má svou časovou značku a hodnoty se odesílají dávkově v intervalu reportu (parametr `interval-report`).
+- Všechny senzory se **vzorkují** s nastavitelnou periodou (parametr `interval-sample`).
+- Vzorky se pak **agregují** v nastavitelném intervalu: z uložených vzorků se pro každý senzor spočítá minimum, maximum, průměr a medián (parametr `interval-aggreg`).
+- Každá agregovaná hodnota má svou časovou značku; hodnoty se odesílají v dávkách v intervalu hlášení (parametr `interval-report`).
 
 ## Svorkovnice {#terminal-blocks}
 
-Senzor připojte k **levé svorkovnici A**
+Senzor připojte k **levé svorkovnici A**:
 
 | [**CHESTER-X0**](../extension-modules/chester-x0.md) v levém slotu A | Barva vodiče Maxbotix | Signál |
 | ------------------------------------------------------------------- | -------------------- | ------ |
-| A2 (CH1)                                                            | červená              | Power  |
+| A2 (CH1)                                                            | červená              | Napájení |
 | A3 (GND)                                                            | černá                | GND    |
-| A4 (CH2)                                                            | žlutá                | Pulse  |
+| A4 (CH2)                                                            | žlutá                | Impulz |
 
-![Zapojení svorkovnice CHESTER-X0: VDD, CH1, GND, CH2, CH3, GND, CH4, +V](../../../../../chester/catalog-applications/../extension-modules/images/tb-chester-x0.png)
+![Rozložení svorek CHESTER-X0: VDD, CH1, GND, CH2, CH3, GND, CH4, +V](../../../../../chester/catalog-applications/../extension-modules/images/tb-chester-x0.png)
 
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná příkazem `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config interval-sample 60
@@ -82,33 +82,33 @@ app config interval-aggreg 300
 app config interval-report 1800
 ```
 
-## Specifické příkazy {#specific-commands}
+## Příkazy aplikace {#specific-commands}
 
 :::info
 
-Celou strukturu příkazů můžete snadno prozkoumat – začněte příkazem `help`.
+Celou stromovou strukturu příkazů snadno prozkoumáte: začněte příkazem `help`.
 
 :::
 
 :::caution
 
-Pro použití nové konfigurace je potřeba zavolat `config save`, což aplikuje nové konfigurační parametry a restartuje zařízení.
+Novou konfiguraci uplatníte příkazem `config save`, který uloží nové parametry a restartuje zařízení.
 
 :::
 
-Příkaz pro nastavení **intervalu vzorkování** v sekundách:
+Tímto příkazem nastavíte **interval vzorkování** v sekundách:
 
 ```
 app config interval-sample <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu agregace** v sekundách:
+Tímto příkazem nastavíte **interval agregace** v sekundách:
 
 ```
 app config interval-aggreg <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu reportu** v sekundách:
+Tímto příkazem nastavíte **interval hlášení** v sekundách:
 
 ```
 app config interval-report <30-86400>
@@ -120,9 +120,9 @@ aggreg
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je dostupný v [kapitole Firmware](index.md#application-firmware) katalogových aplikací.
+Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](index.md#application-firmware).
 
-## Ukázková JSON zpráva {#example-json-message}
+## Ukázková zpráva JSON {#example-json-message}
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -130,9 +130,9 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="lte" label="LTE">
     
-V této ukázce **JSON** vidíte data ze všech tří variant
+Tato ukázka **JSON** obsahuje data ze všech tří variant
 
-Každý dostupný senzor má jedno agregované měření, které obsahuje minimální, maximální, průměrnou a mediánovou hodnotu.
+Každý dostupný senzor má jedno agregované měření s minimem, maximem, průměrem a mediánem.
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
@@ -258,7 +258,7 @@ Každý dostupný senzor má jedno agregované měření, které obsahuje minim�
   <TabItem value="lora" label="LoRaWAN">
 
 :::info
-**CHESTER Range** používá pro komunikaci po LoRaWAN kódování CBOR. Formát dekódované zprávy je identický s formátem LTE uvedeným výše.
+Zařízení **CHESTER Range** kóduje zprávy pro LoRaWAN ve formátu CBOR. Dekódovaná zpráva má stejný formát jako zpráva LTE výše.
 :::
 
   </TabItem>
@@ -270,12 +270,12 @@ Každý dostupný senzor má jedno agregované měření, které obsahuje minim�
 
 ### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
-- **Přidáno**: Podpora LoRaWAN: jediný binární firmware pro LTE i LoRaWAN; režim se volí pomocí `app config mode lte` / `app config mode lrw`
+- **Přidáno**: Podpora LoRaWAN: jediný binární soubor firmwaru pro LTE i LoRaWAN; režim se volí příkazem `app config mode lte` / `app config mode lrw`
 - **Přidáno**: Nová varianta: **CHESTER Range Z** s podporou záložního modulu CHESTER-Z1
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); předchozí firmware pro Cloud v1 zůstává dostupný samostatně
+- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud v1 zůstává dostupný samostatně
 
 :::info
 
-Kompletní přehled všech změn platformy najdete v [**seznamu změn CHESTER**](/chester/changelog).
+Kompletní přehled všech změn platformy najdete v [**Seznamu změn CHESTER**](/chester/changelog).
 
 :::

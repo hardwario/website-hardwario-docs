@@ -1,26 +1,26 @@
 ---
 slug: m-bus_sensors
-title: M-Bus senzory
+title: Senzory M-Bus
 sidebar_label: Zařízení M-Bus
 ---
 
 import Image from '@theme/IdealImage';
 
-Tato stránka shrnuje rozhraní M-Bus a koncepty konfigurace používané
-se zařízením CHESTER.
+Tato stránka stručně popisuje rozhraní M-Bus a pojmy, se kterými se setkáte
+při jeho konfiguraci v zařízení CHESTER.
 
 
 ## Přehled komunikace M-Bus (Meter-Bus) {#m-bus-meter-bus-communication-overview}
 
 ![Architektura M-Bus](../../../../../chester/supported-devices/images/m-bus-topology.png)
 
-*Obrázek: Příklad topologie M-Bus s masterem a několika slave měřiči připojenými přes dvouvodičovou sběrnici.*
+*Obrázek: Příklad topologie M-Bus s jedním masterem a několika podřízenými měřiči (slave) na dvouvodičové sběrnici.*
 
 ## Co je M-Bus? {#what-is-m-bus}
 
-M-Bus (Meter-Bus) je evropská norma (EN 13757) pro vzdálené odečty měřičů spotřeby a senzorů, jako jsou měřiče tepla, vodoměry, plynoměry a elektroměry. Byla navržena tak, aby umožnila komunikaci po dvouvodičové sběrnici s více slave zařízeními (měřiči) připojenými k jednomu masteru (typicky brána nebo datový koncentrátor).
+M-Bus (Meter-Bus) je evropská norma (EN 13757) pro dálkový odečet měřičů spotřeby a senzorů, například měřičů tepla, vodoměrů, plynoměrů a elektroměrů. Komunikace probíhá po dvouvodičové sběrnici, na které je k jednomu masteru (obvykle bráně nebo datovému koncentrátoru) připojeno více podřízených zařízení (slave), tedy měřičů.
 
-M-Bus se běžně používá v systémech automatizace budov a inteligentního měření, kde poskytuje spolehlivý a nákladově efektivní způsob sběru dat z distribuované sítě měřicích zařízení.
+M-Bus je běžný v automatizaci budov a v systémech chytrého měření, kde spolehlivě a s nízkými náklady sbírá data z mnoha rozmístěných měřidel.
 
 ---
 
@@ -28,48 +28,48 @@ M-Bus se běžně používá v systémech automatizace budov a inteligentního m
 
 ### Topologie sběrnice {#bus-topology}
 - **Dvouvodičová sběrnice** (bez polarity)
-- Podporuje velké délky kabelů (až 350 metrů v závislosti na přenosové rychlosti a typu kabelu)
+- Dlouhé kabelové trasy (až 350 metrů podle přenosové rychlosti a typu kabelu)
 
 ### Napětí a napájení {#voltage-and-power}
-- **Nominální napětí sběrnice**: 24 V DC
-- **Typický proudový odběr jednoho slave zařízení**: ~1,5 mA
-- Master musí zajistit dostatečné napájení pro všechna připojená zařízení
-- Některé M-Bus mastery zvládnou až 250 slave zařízení v závislosti na energetickém rozpočtu a kapacitě budiče
+- **Jmenovité napětí sběrnice**: 24 V DC
+- **Typický odběr jednoho podřízeného zařízení**: ~1,5 mA
+- Master musí mít dost výkonu, aby napájel všechna připojená zařízení
+- Některé mastery M-Bus obslouží až 250 podřízených zařízení, podle dostupného výkonu a kapacity budiče
 
 ### Komponenty {#components}
-- **M-Bus master**: Iniciuje komunikaci a napájí sběrnici
-- **M-Bus slave zařízení**: Koncová zařízení jako měřiče a senzory
-- **Převodník úrovní / transceiver**: Volitelné rozhraní mezi UART a fyzickou vrstvou M-Bus (používá se v některých embedded systémech)
+- **Master M-Bus**: Zahajuje komunikaci a napájí sběrnici
+- **Podřízená zařízení M-Bus (slave)**: Koncová zařízení, například měřiče a senzory
+- **Převodník úrovní / transceiver**: Volitelné rozhraní mezi UART a fyzickou vrstvou M-Bus (používá se v některých vestavěných systémech)
 
 ---
 
 ## Formát dat {#data-format}
 
-Komunikace M-Bus je definována ve vrstvách:
+Komunikaci M-Bus definuje několik vrstev:
 
 - **Fyzická vrstva**: Definuje modulaci signálu, napěťové úrovně a kabeláž
 - **Linková vrstva**: Definuje adresování, formáty rámců a detekci chyb
 - **Aplikační vrstva (EN 13757-3)**: Definuje strukturu a kódování dat
 
 ### Struktura zprávy {#message-structure}
-Zprávy M-Bus se skládají z:
-- Start byte
+Zpráva M-Bus se skládá z těchto částí:
+- Počáteční bajt (start)
 - Řídicí pole
 - Adresní pole
 - Pole řídicích informací
 - Uživatelská data (telegramy)
 - Kontrolní součet
-- Stop byte
+- Koncový bajt (stop)
 
 ### Kódování dat {#data-encoding}
-Hodnoty dat se přenášejí v binárním formátu pomocí deskriptorů VIF (Value Information Field) a DIF (Data Information Field). Ty určují typ, jednotku a rozsah měření.
+Hodnoty se přenášejí binárně a popisují je deskriptory VIF (Value Information Field) a DIF (Data Information Field), které určují typ, jednotku a měřítko měřené hodnoty.
 
 Příklad:
 - DIF = Energie  
 - VIF = kilowatthodiny (kWh)  
 - Hodnota = `00071F` (hex) → 182,3 kWh
 
-### Příklad výstupu (parsované JSON) {#example-output-parsed-json}
+### Příklad výstupu (zpracovaný JSON) {#example-output-parsed-json}
 ```json
 {
   "device_id": "MBUS-12345678",
@@ -85,26 +85,26 @@ Příklad:
 
 ## Použití {#applications}
 
-M-Bus se používá především v:
+M-Bus se používá hlavně v těchto oblastech:
 
-- **Inteligentním měření** pro utility (plyn, voda, teplo, elektřina)
-- **Automatizaci budov** pro HVAC, osvětlení a monitoring energetické účinnosti
-- **Průmyslovém monitoringu** senzorů a aktuátorů s nízkou spotřebou
-- **Systémech sběru dat** ve správě budov a infrastruktury
+- **Chytré měření** energií a médií (plyn, voda, teplo, elektřina)
+- **Automatizace budov**: vytápění, větrání a klimatizace (HVAC), osvětlení a sledování energetické účinnosti
+- **Průmyslový monitoring** senzorů a akčních členů s nízkou spotřebou
+- **Systémy sběru dat** ve správě budov a infrastruktury
 
 ---
 
 ## Výhody M-Bus {#advantages-of-m-bus}
 
 - Nízká spotřeba a nízké náklady
-- Velké délky kabelů s vysokou odolností proti rušení
+- Dlouhé kabely a vysoká odolnost proti rušení
 - Podpora velkého počtu zařízení na jedné sběrnici
-- Standardizované a široce rozšířené
+- Standardizovaný a široce rozšířený protokol
 
 ---
 
 ## Omezení {#limitations}
 
-- Nízké přenosové rychlosti (typicky 300 až 9600 bps)
-- Bez nativního šifrování nebo autentizace
-- Vyžaduje fyzickou kabeláž
+- Nízká přenosová rychlost (obvykle 300 až 9600 bps)
+- Žádné vestavěné šifrování ani autentizace
+- Vyžaduje kabelové propojení

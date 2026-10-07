@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 The **CHESTER SDK Project Generator** simplifies project configuration by providing a structured approach to project setup, all based on a **YAML** configuration.
 
-It is also used for generating different **variants** of catalog applications. You can look to `project.yaml` files to see different variants.
+It is also used for generating different **variants** of catalog applications. You can look at `project.yaml` files to see different variants.
 
 Then you call `west chester-update --variant "CHESTER Clime 1W"` to update project files, then you call `west build` to recompile project.
 
@@ -156,7 +156,7 @@ These features will enable the necessary configurations on: `app.overlay`, `Kcon
 #define FEATURE_CUSTOM_Y 1
 ```
 
-File `features.h` is included during compilation automatically and it is not needed to include ty by `#include` anywhere.
+File `features.h` is included during compilation automatically and it is not needed to include it by `#include` anywhere.
 
 #### Config Options
 Each config option allows for specific parameter settings, enabling precise control and customization of the application's behavior. These are then generated to `app_config.c` and `app_config.h`.
@@ -402,7 +402,7 @@ struct app_config {
 ### Extras declaration
 These extras are employed when non-default **feature** configurations are necessary in the `prj.conf` file.
 
-When project requirements diverge from the default **features** configurations provided by underlying libraries or frameworks, these extras are utilized. They enable custumers to finely adjust the project's configuration to address specific needs not covered by default settings.
+When project requirements diverge from the default **features** configurations provided by underlying libraries or frameworks, these extras are utilized. They enable customers to finely adjust the project's configuration to address specific needs not covered by default settings.
 
 Example in `prj.conf`:
 ```yaml

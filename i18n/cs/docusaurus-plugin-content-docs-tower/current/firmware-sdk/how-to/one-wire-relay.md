@@ -4,24 +4,24 @@ title: "Jak na: 1-Wire relé"
 ---
 import Image from '@theme/IdealImage';
 
-Abychom usnadnili práci s některými zařízeními 1-Wire, implementovali jsme modul nazvaný `twr_onewire_relay`, který umožňuje ovládat reléové moduly připojené přes sběrnici 1-Wire, například [**reléový modul vyvinutý firmou Denkovi**](http://denkovi.com/1-wire-eight-channel-relay-module-for-home-automation-with-din-box).
+Kvůli snazší práci s některými zařízeními 1-Wire jsme vytvořili modul `twr_onewire_relay`, kterým ovládáte reléové moduly připojené přes sběrnici 1-Wire, například [**reléový modul od firmy Denkovi**](http://denkovi.com/1-wire-eight-channel-relay-module-for-home-automation-with-din-box).
 
 ## Odkazy {#references}
-- [**1-Wire SDK modul**](https://sdk.hardwario.com/group__twr__onewire__relay.html)
-- [**Příklad v GitHub repozitáři**](https://github.com/hardwario/twr-sdk/blob/master/_examples/onewire-relay/application.c)
+- [**Modul SDK pro 1-Wire relé**](https://sdk.hardwario.com/group__twr__onewire__relay.html)
+- [**Příklad v repozitáři na GitHubu**](https://github.com/hardwario/twr-sdk/blob/master/_examples/onewire-relay/application.c)
 
 :::info
 
-V tomto příkladu umožňujeme ovládat **relé** pomocí **tlačítka integrovaného v modulu Core Module**.
+V tomto příkladu se **relé** ovládají **tlačítkem integrovaným v modulu Core Module**.
 
-S každým stiskem tlačítka se aktivuje o jedno relé více. Když jsou aktivní všechna relé, další stisk tlačítka je všechna vypne a cyklus se opakuje.
+Každým stisknutím tlačítka se sepne o jedno relé víc. Když jsou sepnutá všechna relé, další stisknutí je všechna vypne a cyklus začne znovu.
 
 :::
 
 <details>
 <summary>
 <b>
-Ukázka kódu
+Příklad kódu
 </b>
 </summary>
 <p>

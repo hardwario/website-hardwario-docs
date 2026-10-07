@@ -3,40 +3,38 @@ slug: ssh-permission-denied
 title: SSH odmítá heslo
 ---
 
-Pokud je SSH dostupné (dostanete výzvu k zadání hesla), ale heslo nastavené v Imageru je vždy
-odmítnuto, i hned po novém nahrání image s nově zadaným heslem, uživatelský účet
-**nejspíš nikdy nebyl skutečně vytvořen**, bez ohledu na to, co je v `user-data`.
+Pokud je SSH dostupné (dostanete výzvu k zadání hesla), ale heslo nastavené v nástroji Imager je vždy
+odmítnuto, i hned po novém nahrání systému s novým heslem, uživatelský účet **nejspíš vůbec
+nevznikl**, ať je v `user-data` cokoli.
 
-Nejrychlejší potvrzení: připojte kořenový souborový systém karty (větší oddíl `ext4`,
-`rootfs`) na jiném počítači (třeba do `/mnt/rootfs`) a zkontrolujte, zda účet vůbec
-existuje:
+Nejrychleji to ověříte takto: na jiném počítači připojte kořenový souborový systém karty (větší
+oddíl `ext4`, `rootfs`), třeba do `/mnt/rootfs`, a zkontrolujte, zda účet vůbec existuje:
 
 ```sh
 grep fiberlite /mnt/rootfs/etc/passwd
 ```
 
-Pokud příkaz nic nevypíše, účet skutečně nikdy nebyl vytvořen, problém není v hesle.
+Pokud příkaz nic nevypíše, účet opravdu nevznikl a problém není v hesle.
 
 :::tip
 
-Pokud máte poblíž více podobně vypadajících microSD karet (např. při nahrávání image do celé
-série zařízení), pečlivě zkontrolujte, že připojujete a upravujete tu kartu, která opravdu běží
-v tomto zařízení, a ne jinou kartu, která zůstala ve čtečce. Záměna karty nevyvolá žádnou chybu;
-úpravy se prostě tiše nikdy nedostanou do zařízení a tu samou „opravu“ budete kontrolovat
-několikrát, aniž by se kdy projevila. Fyzické označení karty, na které právě pracujete, tomu
-předejde.
+Pokud máte poblíž několik podobně vypadajících karet microSD (např. při nahrávání systému do celé
+série zařízení), pečlivě zkontrolujte, že připojujete a upravujete kartu, ze které toto zařízení
+skutečně běží, a ne jinou kartu, která je náhodou ve čtečce. Záměna karty žádnou chybu nevyvolá;
+úpravy se jen tiše nedostanou do zařízení a stejnou „opravu“ budete kontrolovat znovu a znovu,
+aniž by se projevila. Předejdete tomu tak, že kartu, se kterou právě pracujete, fyzicky označíte.
 
 :::
 
-## Hlavní příčina {#root-cause}
+## Příčina {#root-cause}
 
-Jde o zvláštnost datasource cloud-init, ne o překlep v hesle. Nastane, pokud `meta-data` na
-boot oddílu (které Imager sám obvykle zapisuje správně, ale je snadné je pokazit ruční úpravou)
-používá klíč `instance_id` (podtržítko) místo `instance-id` (spojovník). Klíč s podtržítkem
-NoCloud datasource cloud-init tiše ignoruje a použije pevnou vnitřní identitu (doslovný řetězec
-`nocloud`), která se nikdy nezmění, ať už `meta-data`/`user-data` upravíte kolikrát chcete.
+Jde o zvláštnost zdroje dat (datasource) v cloud-init, ne o překlep v hesle. Nastane, pokud soubor
+`meta-data` na zaváděcím oddílu (Imager ho sám obvykle zapíše správně, při ruční úpravě se ale snadno
+pokazí) používá klíč `instance_id` (s podtržítkem) místo `instance-id` (se spojovníkem). Datasource
+NoCloud v cloud-init klíč s podtržítkem tiše ignoruje a použije pevnou vnitřní identitu (doslova
+řetězec `nocloud`), která se nezmění, ať `meta-data` a `user-data` upravíte kolikrát chcete.
 
-Potvrďte to kontrolou obou následujících hodnot (stejné připojení `/mnt/rootfs` jako výše):
+Ověříte to kontrolou obou těchto souborů (stejné připojení `/mnt/rootfs` jako výše):
 
 ```sh
 cat /mnt/rootfs/var/lib/cloud/data/instance-id
@@ -45,28 +43,27 @@ cat /mnt/rootfs/var/lib/cloud/data/previous-instance-id
 
 Pokud některý z nich vypíše `nocloud` místo hodnoty, kterou znáte, je to tato chyba.
 
-**Proč samotná oprava `user-data` už nepomůže, když k tomu jednou dojde:** cloud-init sleduje,
-které konfigurační moduly už proběhly *pro danou instanci*, pomocí semaforových souborů v
-`/mnt/rootfs/var/lib/cloud/instances/nocloud/sem/`. Pokud je některý z prvních startů přerušen
-v průběhu konfigurace (např. odpojení napájení předtím, než cloud-init dokončí práci; jako
-důkaz hledejte v `/mnt/rootfs/var/log/cloud-init.log` záznam `Received signal 15 resulting in exit`),
-mohou být moduly jako `config_users_groups`, `config_set_passwords` a
-`config_ssh` označeny jako „již proběhlé“, i když se nikdy skutečně nedokončily. Protože vadný
-klíč `instance-id` znamená, že cloud-init každý další start rozpoznává jako tu samou už
-nakonfigurovanou instanci `nocloud`, tyto moduly navždy přeskakuje, bez ohledu na to, jak
-správný je aktuální obsah `user-data`.
+**Proč po této chybě nestačí opravit jen `user-data`:** cloud-init si *pro každou instanci* zvlášť
+eviduje, které konfigurační moduly už proběhly, a to pomocí semaforových souborů
+v `/mnt/rootfs/var/lib/cloud/instances/nocloud/sem/`. Pokud se některý z prvních startů přeruší
+uprostřed konfigurace (např. odpojením napájení dřív, než cloud-init doběhne; důkazem je záznam
+`Received signal 15 resulting in exit` v `/mnt/rootfs/var/log/cloud-init.log`), mohou být moduly
+jako `config_users_groups`, `config_set_passwords` a `config_ssh` označené jako „už proběhlé“,
+přestože se nikdy nedokončily. Kvůli vadnému klíči `instance-id` pak cloud-init každý další start
+považuje za tutéž, už nakonfigurovanou instanci `nocloud` a tyto moduly trvale přeskakuje, ať je
+aktuální obsah `user-data` jakkoli správný.
 
 ## Oprava {#fix}
 
-Změňte `meta-data` tak, aby používaly `instance-id:` (se spojovníkem) s **novou** hodnotou,
-kterou systém dosud neviděl, a znovu nastartujte. Skutečně nové ID instance přinutí cloud-init
-považovat start za novou instanci a znovu od začátku spustit všechny konfigurační moduly,
-včetně vytvoření uživatele.
+V souboru `meta-data` použijte klíč `instance-id:` (se spojovníkem) s **novou** hodnotou, kterou
+systém dosud neviděl, a zařízení znovu nastartujte. Se skutečně novým ID instance bude cloud-init
+start považovat za novou instanci a znovu od začátku spustí všechny konfigurační moduly včetně
+vytvoření uživatele.
 
 :::tip
 
-Pro bezobslužné zprovoznění větších sérií, kde `meta-data`/`user-data` píšete ručně místo
-použití dialogu v Imageru, vypadá funkční minimální dvojice takto:
+Pro bezobslužné zprovoznění celé flotily, kdy `meta-data`/`user-data` píšete ručně místo dialogu
+v nástroji Imager, vypadá ověřená minimální dvojice takto:
 
 ```yaml title="meta-data"
 dsmode: local
@@ -93,8 +90,8 @@ runcmd:
   - [ systemctl, enable, --now, ssh ]
 ```
 
-Řádek `runcmd` je pojistka pro zapnutí `sshd` navíc k vlastnímu `ssh_pwauth` cloud-init.
-Příznakový soubor `ssh` na boot oddílu (viz **SSH Connection Refused** v této sekci) je stále
-spolehlivější mechanismus, protože vůbec nezávisí na časování cloud-init.
+Řádek `runcmd` je dodatečná pojistka, která zapne `sshd` navíc k vlastní volbě `ssh_pwauth`
+v cloud-init. Spolehlivější je ale stále příznakový soubor `ssh` na zaváděcím oddílu (viz
+**SSH odmítá spojení** v této sekci), protože vůbec nezávisí na časování cloud-init.
 
 :::

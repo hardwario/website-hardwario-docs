@@ -5,33 +5,33 @@ title: MACHINE PROBE
 
 # MACHINE PROBE (v1.3) {#machine-probe-v13}
 
-**MACHINE PROBE** je externí měřicí sonda určená k montáži přímo na sledované zařízení. V jedné krabičce je integrovaná sada digitálních senzorů (teplota, vlhkost, akcelerometr, okolní osvětlení, Hallova sonda), které komunikují po vnitřní sběrnici **I²C**. Převodník 1-Wire na I²C zpřístupňuje celou sondu jedinou datovou linkou **1-Wire**, takže z pohledu zařízení STICKER Input se sonda chová jako jedno zařízení připojené třívodičovým kabelem.
+**MACHINE PROBE** je externí měřicí sonda určená k montáži přímo na sledované zařízení. V jedné krabičce je integrovaná sada digitálních senzorů (teplota, vlhkost, akcelerometr, okolní světlo, Hallův senzor), které komunikují po vnitřní sběrnici **I²C**. Převodník 1-Wire na I²C zpřístupňuje celou sondu jedinou datovou linkou **1-Wire**, takže z pohledu zařízení STICKER Input se sonda chová jako jedno zařízení připojené třívodičovým kabelem.
 
 :::tip
 
-Sonda MACHINE PROBE není omezená jen na STICKER Input, je plně kompatibilní i se zařízením **HARDWARIO CHESTER**, které nabízí stejné rozhraní 1-Wire. Tutéž sondu tak lze použít na obou platformách bez jakékoli hardwarové úpravy.
+Sonda MACHINE PROBE není určená jen pro STICKER Input: je plně kompatibilní i se zařízením **HARDWARIO CHESTER**, které nabízí stejné rozhraní 1-Wire. Tutéž sondu tak lze bez jakékoli úpravy hardwaru použít na obou platformách.
 
 :::
 
 ## Popis a využití v praxi {#description-and-real-world-use}
 
-Sonda se už osvědčila v provozu, například při monitorování **vibračních dopravníků** v projektu ProXimos, kde spolehlivě:
+Sonda se už osvědčila v praxi, například při sledování **laboratorních třepaček** v projektu ProXimos, kde spolehlivě:
 
 - měří **teplotu** sledovaného zařízení,
 - měří **relativní vlhkost** okolí,
 - detekuje **pohyb, rázy a vibrace** pomocí akcelerometru.
 
-Kombinací těchto veličin lze sledovat nejen provozní podmínky, ale i skutečný chod stroje, třeba rozpoznat, jestli zařízení opravdu běží, stojí, nebo nadměrně vibruje.
+Kombinací těchto veličin lze sledovat nejen provozní podmínky, ale i skutečný chod stroje, například rozpoznat, jestli zařízení opravdu běží, stojí, nebo nadměrně vibruje.
 
 ### Příklad: monitorování vibrací motoru {#example-monitoring-motor-vibration}
 
-Typickým použitím je **monitorování vibrací elektromotorů, pump a ventilátorů**. Sonda MACHINE PROBE se montuje přímo na kostru motoru a její vestavěný akcelerometr průběžně snímá mechanické vibrace. Z měřených dat lze:
+Typickým použitím je **sledování vibrací elektromotorů, čerpadel a ventilátorů**. Sonda MACHINE PROBE se montuje přímo na kostru motoru a její vestavěný akcelerometr průběžně snímá mechanické vibrace. Z měřených dat lze:
 
 - potvrdit, jestli motor **běží, nebo stojí** (přítomnost a úroveň vibrací),
 - odhalit **postupný růst vibrací**, který často předchází mechanické závadě: opotřebeným ložiskům, nesouososti hřídele nebo nevyváženému zatížení,
 - zkombinovat údaj o vibracích s **teplotou** měřenou sondou a zachytit tak přehřívání, které se rozvíjí spolu s nadměrnými vibracemi.
 
-Sonda se tím stává jednoduchým stavebním prvkem **prediktivní údržby**: místo čekání na poruchu motoru se trend vibrací a teploty odesílá přes LoRaWAN a výstrahu lze vyvolat ještě před havárií.
+Sonda je tak jednoduchým stavebním prvkem **prediktivní údržby**: místo čekání na poruchu motoru se vývoj vibrací a teploty odesílá přes LoRaWAN a upozornění může přijít ještě před havárií.
 
 ## Elektrické parametry {#electrical-specifications}
 
@@ -68,14 +68,14 @@ Následující tabulka shrnuje aktivní součástky osazené na desce **MACHINE 
 | U4 | SHT30-DIS-B2.5KS | Senzor teploty a vlhkosti | 0x45 |
 | U6 | LIS2DH12TR | Akcelerometr / senzor pohybu | 0x19 |
 | U3 | TMP112AID | Digitální senzor teploty | 0x48 |
-| U7 | OPT3001DNP | Digitální senzor okolního osvětlení | 0x44 |
-| U8 | SI7210-B-03-IV | Hallova sonda / magnetometr | 0x32 |
+| U7 | OPT3001DNP | Digitální senzor okolního světla | 0x44 |
+| U8 | SI7210-B-03-IV | Hallův senzor / magnetometr | 0x32 |
 | U5 | M24C04-FMH6TG | Paměť EEPROM | 0x50 |
 | U1 | TPS7A05285PDB | Lineární regulátor (LDO) | — |
 
 :::note
 
-Čip **DS28E17Q+ (U2)** funguje jako převodník mezi sběrnicí 1-Wire (směrem ke STICKER Input) a vnitřní sběrnicí I²C, na které jsou zapojené všechny senzory sondy. Adresy I²C tedy platí v rámci vnitřní sběrnice sondy, ne přímo na rozhraní zařízení STICKER Input.
+Čip **DS28E17Q+ (U2)** funguje jako převodník mezi sběrnicí 1-Wire (směrem k zařízení STICKER Input) a vnitřní sběrnicí I²C, na které jsou zapojené všechny senzory sondy. Adresy I²C tedy platí v rámci vnitřní sběrnice sondy, ne přímo na rozhraní zařízení STICKER Input.
 
 :::
 

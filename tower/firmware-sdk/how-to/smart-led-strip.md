@@ -128,7 +128,7 @@ void application_init(void)
 
 #### Test Effect
 
-This is a simple effect that you can just use to check if all the colors of the LED strip work well
+This is a simple effect that you can just use to check if all the colors of the LED strip work well.
 
 ```c
 twr_led_strip_effect_test(&led_strip);
@@ -156,7 +156,7 @@ There is also a function `twr_led_strip_effect_rainbow(&led_strip, 100);` which 
 
 #### Color Wipe Effect
 
-Fills the entire strip pixel by pixel with one color
+Fills the entire strip pixel by pixel with one color.
 
 ```c
 twr_led_strip_effect_color_wipe(&led_strip, 0x10000000, 20);
@@ -182,7 +182,7 @@ X–X–X–X–X–X -X–X–X–X–X– –X–X–X–X–X- X–X–X–X�
 
 :::tip
 
-The first parameter is a color in hex format (stored in `uint32_t), and the second one is the speed of changes. The lower, the quicker.
+The first parameter is a color in hex format (stored in `uint32_t`), and the second one is the speed of changes. The lower, the quicker.
 
 :::
 
@@ -196,7 +196,7 @@ The first parameter is a color in hex format (stored in `uint32_t), and the seco
 
 #### Effect Stop
 
-You can easily stop the effect with this function
+You can easily stop the effect with this function:
 
 ```c
 twr_led_strip_effect_stop(&led_strip);

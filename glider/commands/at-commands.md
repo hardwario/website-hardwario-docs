@@ -90,7 +90,7 @@ AT&W
 | `AT$FW="done"` | set | Finalize the transfer and schedule the swap on next boot. |
 | `AT$FW="confirm"` | set | Mark the running image as good after a successful test boot. |
 
-Typically you do **not** build the DFU stream by hand, use the `west bin-to-at` helper:
+Typically you do **not** build the DFU stream by hand; use the `west bin-to-at` helper instead:
 
 ```bash
 west bin-to-at --output-file update.at

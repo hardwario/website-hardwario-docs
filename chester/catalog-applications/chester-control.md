@@ -14,7 +14,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 - [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
 - [**Common functionality**](common-functionality.md) to know how LED, button and network configuration works.
-- [**Platform Management**](/chester/category/platform-connectivity/) on how to work with the interactive console.
+- [**Platform Connectivity**](/chester/category/platform-connectivity/) on how to work with the interactive console.
 
 :::
 
@@ -84,7 +84,7 @@ The **trigger** input can be connected to a PLC/sensor output (NPN/PNP), push bu
 
 * When the input changes, the timestamp of the change event is stored altogether with the **active**/**inactive** state, this information is buffered, and the buffer of the events is sent (at the latest) with the regular report (parameter `interval-report`).
 
-* Optionally, input changes to the **active** (parameter `trigger-report-active`) or **inactive** (parameter `trigger-report-inactive`) states can be reported **immediately** or with a configurable **delay** (parameter `event-report-delay`) to allow capturing multiple consequent input changes.
+* Optionally, input changes to the **active** (parameter `trigger-report-active`) or **inactive** (parameter `trigger-report-inactive`) states can be reported **immediately** or with a configurable **delay** (parameter `event-report-delay`) to allow capturing multiple subsequent input changes.
 
 * Both **NPN** and **PNP** input logic types are supported (parameter `trigger-input-type`).
 
@@ -130,7 +130,7 @@ This input measures the analog current in the range from **0-24 mA** (overlaps t
 
 * When the DC power input changes, the timestamp of the change event is stored altogether with the **connected**/**disconnected** state, this information is buffered, and the buffer of the events is sent (at the latest) with the regular report (parameter `interval-report`).
 
-* Optionally, DC power input changes to the **connected** (parameter `backup-report-connected`) or **disconnected** (parameter `backup-report-disconnected`) states can be reported **immediately** or with a configurable **delay** (parameter `event-report-delay`) to allow capturing multiple consequent input changes.
+* Optionally, DC power input changes to the **connected** (parameter `backup-report-connected`) or **disconnected** (parameter `backup-report-disconnected`) states can be reported **immediately** or with a configurable **delay** (parameter `event-report-delay`) to allow capturing multiple subsequent input changes.
 
 * The maximum number of reports per hour is configurable (parameter `event-report-rate`). The event throttling limits communication bandwidth and preserves the battery lifespan.
 
@@ -249,7 +249,7 @@ app config counter-cooldown-time <value>
 
 :::info
 
-- The parameter `duration-active` sets the millisecond delay between the input signal changes to an active level (based on `npn` or `pnp` configuration) and when CHESTER reacts to this change. This could be used to filter (debounce) input signal in case the input signal is connected to a "electrically noisy" mechanical switch or relay. It could also be used if the CHESTER has to react to longer pulses than the set duration.
+- The parameter `duration-active` sets the millisecond delay between the input signal changes to an active level (based on `npn` or `pnp` configuration) and when CHESTER reacts to this change. This could be used to filter (debounce) input signal in case the input signal is connected to an "electrically noisy" mechanical switch or relay. It could also be used if the CHESTER has to react to longer pulses than the set duration.
 - The parameter `duration-inactive` is the same as for the `duration-active` above, except it sets the time for the opposite edge.
 - The parameter `cooldown-time` is a delay protecting CHESTER from too many incoming interrupt events. If a too-fast signal (>10 kHz) is connected, the interrupt handler could consume all the processor time, stopping the execution of other threads. This parameter sets a small delay between executing the interrupt handler again. A default value of 10 ms could be used here.
 

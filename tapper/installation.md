@@ -37,11 +37,11 @@ Basic installation of the TAPPER client application.
 
    :::tip
 
-   There are two plastic latches from the bottom of the device. Use a flat head screwdriver.
+   There are two plastic latches on the bottom of the device. Use a flat head screwdriver.
 
    :::
 
-1. Insert the MicroSD card to your computer (the size of 16 GB is preferred).
+1. Insert the MicroSD card into your computer (the size of 16 GB is preferred).
 
    :::info
 
@@ -61,7 +61,7 @@ Basic installation of the TAPPER client application.
 
 1. Check **Set hostname**.
 
-1. Enter a hostname for you TAPPER into the **hostname** field.
+1. Enter a hostname for your TAPPER into the **hostname** field.
 
 1. Check **Set username and password**.
 
@@ -124,7 +124,7 @@ The **Raspberry Pi Imager** lets you do this within [OS Customization](https://w
   
       `sudo apt install cmake git libdbus-1-dev libglib2.0-dev pipx python3-dev`
 
-1. The package **pipx** needs to be added to the **PATH** environmental variable:
+1. The package **pipx** needs to be added to the **PATH** environment variable:
 
        `pipx ensurepath`
   

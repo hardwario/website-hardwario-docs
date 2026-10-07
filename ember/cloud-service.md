@@ -67,7 +67,7 @@ These are the default login credentials:
 
 :::tip
 
-You do need to change that because you are identified and authenticated by logging into the **Teleport** web user interface.
+You do not need to change them, because you are identified and authenticated by logging into the **Teleport** web user interface.
 
 :::
 
@@ -95,7 +95,7 @@ The recommended option is to use the **ABP** method (Activation By Personalizati
 
 :::tip
 
-In **ChirpStack**, The **ABP** method is used when the user does not enable the `Device supports OTAA` checkbox under the specific device profile.
+In **ChirpStack**, the **ABP** method is used when the user does not enable the `Device supports OTAA` checkbox under the specific device profile.
 
 :::
 

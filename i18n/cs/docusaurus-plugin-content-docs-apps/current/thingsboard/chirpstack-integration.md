@@ -8,21 +8,21 @@ import Image from '@theme/IdealImage';
 
 # Integrace ChirpStack MQTT přes TLS {#chirpstack-mqtt-integration-via-tls}
 
-Tento návod vysvětluje, jak připojit vaši platformu HARDWARIO ThingsBoard k MQTT brokeru ChirpStack přes šifrované připojení TLS. Používá obecnou integraci MQTT, která zajišťuje bezpečný přenos dat pomocí klientských certifikátů.
+Tento návod vysvětluje, jak platformu HARDWARIO ThingsBoard připojit k brokeru MQTT serveru ChirpStack šifrovaným spojením TLS. Postup využívá obecnou integraci MQTT, která data přenáší bezpečně díky klientským certifikátům.
 
 ## Předpoklady {#prerequisites}
 
-Než integraci v platformě ThingsBoard nastavíte, ujistěte se, že jste v uživatelském rozhraní ChirpStack úspěšně vygenerovali a stáhli tyto tři soubory (pod **Applications** -> **Integrations** -> **MQTT Certificate**):
+Než integraci v ThingsBoard nastavíte, vygenerujte a stáhněte v uživatelském rozhraní ChirpStack tyto tři soubory (v části **Applications** -> **Integrations** -> **MQTT Certificate**):
 
 * **Certifikát CA** (`ca.pem`)
 * **Certifikát TLS** (`client-cert.pem`)
 * **Klíč TLS** (`client-key.pem`)
 
-> **Poznámka:** Ujistěte se, že váš MQTT broker (Mosquitto) má nastavený listener s TLS na portu `8883` a že integrace MQTT v platformě ChirpStack má nastavené `json=true`.
+> **Poznámka:** Broker MQTT (Mosquitto) musí mít na portu `8883` listener s TLS a integrace MQTT v ChirpStack musí mít nastavené `json=true`.
 
 ---
 
-## Kroky konfigurace v platformě ThingsBoard {#configuration-steps-in-thingsboard}
+## Postup nastavení v ThingsBoard {#configuration-steps-in-thingsboard}
 
 Zabezpečenou integraci MQTT nastavíte takto:
 
@@ -32,7 +32,7 @@ Zabezpečenou integraci MQTT nastavíte takto:
 3.  Klikněte na **Add integration** a jako typ zvolte **MQTT**.
 
 ### 2. Nastavení připojení {#2-connection-settings}
-Na kartě **Connection** nastavte tyto parametry:
+Na záložce **Connection** nastavte tyto parametry:
 
 | Pole | Hodnota |
 | :--- | :--- |
@@ -49,20 +49,20 @@ Nahrajte tři soubory získané z rozhraní ChirpStack do odpovídajících pol�
 * **Private key:** nahrajte `client-key.pem`.
 
 ### 4. Konfigurace topicu {#4-topic-configuration}
-Nastavte **Topic filter** pro příjem uplink dat ze svých zařízení:
+Nastavte **Topic filter**, aby integrace přijímala uplinky ze zařízení:
 `application/+/device/+/event/up`
 
 ---
 
 ## Kontrola a řešení problémů {#verification--troubleshooting}
 
-Po uložení ThingsBoard naváže zabezpečené připojení MQTT přes TLS. Broker připojení ověří klientským certifikátem podepsaným vaší CA z platformy ChirpStack. 
+Po uložení ThingsBoard naváže zabezpečené připojení MQTT přes TLS. Broker připojení ověří klientským certifikátem, který podepsala certifikační autorita (CA) vašeho serveru ChirpStack. 
 
 ### Jak to zkontrolovat: {#how-to-verify}
-* **Logy integrace:** V platformě ThingsBoard přejděte na kartu **Logs** své integrace. Pokud je konfigurace správná, měli byste vidět úspěšné události připojení.
+* **Logy integrace:** V ThingsBoard otevřete u integrace záložku **Logs**. Pokud je konfigurace správná, měli byste vidět úspěšné události připojení.
 * **Kontrola na straně serveru:** Pokud se připojení nezdaří, ověřte na serveru tímto příkazem, že Mosquitto skutečně naslouchá na portu 8883: 
     `ss -tlnp | grep mosquitto`
 
 ### Časté chyby: {#common-pitfalls}
-* **Záměna certifikátů:** Ujistěte se, že jste si nezaměnili soubory `Certificate` a `Private key`.
-* **Formát JSON:** Pokud se připojení jeví jako aktivní, ale nepřicházejí žádná data, zkontrolujte znovu, že integrace MQTT v platformě ChirpStack má zapnuté `json=true`.
+* **Záměna certifikátů:** Zkontrolujte, že jste nezaměnili soubory `Certificate` a `Private key`.
+* **Formát JSON:** Pokud se připojení jeví jako aktivní, ale nepřicházejí žádná data, zkontrolujte, že má integrace MQTT v ChirpStack zapnuté `json=true`.

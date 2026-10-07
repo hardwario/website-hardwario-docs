@@ -4,33 +4,33 @@ title: Užitečné zdroje
 ---
 import Image from '@theme/IdealImage';
 
-V této kapitole najdete odkazy na naše další weby, které mohou být užitečné pro uživatele i vývojáře.
+V této kapitole najdete odkazy na naše další weby, které se mohou hodit uživatelům i vývojářům.
 
 ### [Projekty na Hackster.io](https://www.hackster.io/hardwario/projects) {#projects-on-hacksterio}
 
-Přehlídka **projektů z reálného života**. Můžete se **inspirovat** nebo si některé z nich zkusit zopakovat a rychle tak začít se systémem TOWER.
+Ukázky **projektů z praxe**. Můžete se jimi **inspirovat** nebo si některý zkusit postavit a rychle tak začít s platformou TOWER.
 
-A pokud chcete vytvořit vlastní projekt, klidně použijte jakýkoli **modul** nebo **tag** HARDWARIO TOWER a objevíte se na naší **nástěnce projektů**. Rádi uvidíme jakýkoli projekt vytvořený se systémem TOWER.
+Pokud chcete vytvořit vlastní projekt, použijte libovolný **modul** nebo **tag** HARDWARIO TOWER a váš projekt se objeví na naší **nástěnce projektů**. Rádi uvidíme každý projekt postavený na platformě TOWER.
 
 ### [Repozitáře na GitHubu](https://github.com/hardwario) {#github-repositories}
 
-Většina kódu, schémat a aplikací, které vytváříme, je pod licencí MIT a je dostupná na naší stránce na GitHubu.
+Většina kódu, schémat a aplikací, které vytváříme, je pod licencí MIT a najdete ji na našem GitHubu.
 
 <Image img={require('../../../../../tower/getting-started/images/mit-license.png')} alt="Box s licencí na GitHubu zobrazující oprávnění, omezení a podmínky licence MIT" />
 <br />
 
-Pokud potřebujete rozjet svůj projekt a nechcete začínat od nuly, můžete najít již hotový firmware, který nejlépe vyhovuje vašim potřebám, a trochu ho upravit. Nebo můžete vzít části z několika firmwarů a poskládat je dohromady tak, aby byl váš projekt přesně podle vašich představ.
+Pokud chcete rozjet projekt a nezačínat od nuly, najděte si hotový firmware, který vašim potřebám odpovídá nejlépe, a trochu ho upravte. Nebo vezměte části z několika firmwarů a poskládejte je tak, aby projekt fungoval přesně podle vašich představ.
 
-Více o tom, jak vyvíjet vlastní firmware, si můžete přečíst v kapitole [**Vývoj firmwaru**](../firmware-development/index.md).
+Jak vyvíjet vlastní firmware, popisuje kapitola [**Vývoj firmwaru**](../firmware-development/index.md).
 
 ### [Diskuzní fórum](https://forum.hardwario.com) {#discussion-forum}
 
-Pokud se při vývoji nebo používání systému TOWER zaseknete, můžete zajít na fórum a zkontrolovat, jestli podobný problém neřešil už někdo před vámi, nebo se prostě zeptat. Někdo z vývojového týmu nebo komunity se vám pokusí co nejdříve pomoci.
+Pokud se při vývoji nebo používání platformy TOWER zaseknete, podívejte se na fórum, jestli podobný problém už někdo neřešil, nebo se rovnou zeptejte. Někdo z vývojového týmu nebo z komunity se vám pokusí co nejdříve pomoci.
 
 ### [Firmware SDK](https://sdk.hardwario.com) {#firmware-sdk}
 
-Pokud vás zajímá, jaké funkce jsou dostupné pro každý modul systému TOWER, můžete navštívit web SDK vygenerovaný nástrojem Doxygen.
+Jaké funkce jsou k dispozici pro jednotlivé moduly TOWER, se dozvíte na webu SDK vygenerovaném nástrojem Doxygen.
 
-Existuje celá sekce o [**Firmware SDK**](../firmware-sdk/index.md), pokud chcete vidět příklady, jak funkce SDK používat.
+Příklady použití funkcí SDK najdete v samostatné sekci [**Firmware SDK**](../firmware-sdk/index.md).
 
-Také každý modul a tag má vlastní kapitolu s odkazem na odpovídající modul SDK, k tomu navštivte [**sekci Hardwarové moduly**](../hardware-modules/index.md).
+Každý modul a tag má navíc vlastní kapitolu s odkazem na odpovídající modul SDK; najdete je v [**sekci Hardwarové moduly**](../hardware-modules/index.md).

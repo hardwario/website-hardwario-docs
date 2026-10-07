@@ -5,37 +5,37 @@ title: Programování v Node-RED
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'
 
-V této kapitole si projdeme **záložku Functions** v aplikaci HARDWARIO Playground
+V této kapitole si projdeme **záložku Functions** aplikace HARDWARIO Playground.
 
 :::info
 
-**Záložka Functions** používá nástroj [**Node-RED**](https://nodered.org/about/) pro práci s bránou TOWER a dalšími zařízeními.
+Na **záložce Functions** běží nástroj [**Node-RED**](https://nodered.org/about/), ve kterém pracujete se zařízeními TOWER i s dalšími zařízeními.
 
-V tomto tutoriálu nemůžeme pokrýt vše o tomto nástroji, takže pokud se chcete dozvědět více, můžete navštívit [**dokumentaci Node-RED**](https://nodered.org/docs/).
+Tento návod nemůže popsat všechno, co Node-RED umí. Pokud se chcete dozvědět víc, podívejte se do [**dokumentace Node-RED**](https://nodered.org/docs/).
 
 :::
 
 
 ## Záložka Functions {#functions-tab}
 
-Měli byste vidět obrazovku, která vypadá takto
+Měli byste vidět tuto obrazovku:
 
-<Image img={require('../../../../../tower/desktop-programming/images/playground-functions.png')} alt="Záložka Functions s vloženým editorem Node-RED: paleta nodů, prázdný Flow 1 a informační panel" />
+<Image img={require('../../../../../tower/desktop-programming/images/playground-functions.png')} alt="Záložka Functions s vloženým editorem Node-RED: paleta uzlů, prázdný Flow 1 a informační panel" />
 
-### Nody {#nodes}
+### Uzly {#nodes}
 
-Na levé straně obrazovky je seznam nodů, které můžete použít pro různé akce při programování v Node-RED.
+Na levé straně obrazovky je seznam uzlů, které můžete při programování v Node-RED použít k nejrůznějším akcím.
 
 :::info
 
-Pro Node-RED je k dispozici mnoho nodů, které si můžete nainstalovat, ale se zařízeními TOWER byste měli být schopni pracovat i s dostupnými přeinstalovanými nody.
+Pro Node-RED si můžete doinstalovat spoustu dalších uzlů, pro práci se zařízeními TOWER by vám ale měly stačit uzly předinstalované.
 
 :::
 
 <div class="container">
   <div class="row">
     <div class="col col--2">
-      <div><Image img={require('../../../../../tower/desktop-programming/images/node-red-mqtt-node.png')} alt="Node mqtt in z palety Node-RED" /></div>
+      <div><Image img={require('../../../../../tower/desktop-programming/images/node-red-mqtt-node.png')} alt="Uzel mqtt in z palety Node-RED" /></div>
     </div>
     <div class="col col--8">
     </div>
@@ -44,22 +44,22 @@ Pro Node-RED je k dispozici mnoho nodů, které si můžete nainstalovat, ale se
 
 <br />
 
-Nody můžete použít pro různé funkce. Například existuje **vizualizace dat**, která je úzce propojena se [**záložkou Dashboard**](./data-visualization.md).
+Uzly slouží k nejrůznějším účelům. Příkladem je **vizualizace dat**, která úzce souvisí se [**záložkou Dashboard**](./data-visualization.md).
 
 :::info
 
-Chcete-li se dozvědět více o flow v Node-RED, navštivte [**naše projekty na hackster.io**](https://www.hackster.io/hardwario/projects?part_id=73696). Každý projekt, který používá Node-RED, obsahuje mnoho informací o tom, jak s ním pracovat.
+Více o flow v Node-RED najdete v [**našich projektech na hackster.io**](https://www.hackster.io/hardwario/projects?part_id=73696). Každý projekt, který Node-RED používá, podrobně popisuje, jak s ním pracovat.
 
 :::
 
 :::tip
 
-O další záložce se dozvíte v části [**Vizualizace dat**](./data-visualization.md).
+O další záložce se dozvíte v kapitole [**Vizualizace dat**](./data-visualization.md).
 
 :::
 
-## Videotutoriál {#video-tutorial}
+## Videonávod {#video-tutorial}
 
-Pokud dáváte přednost videoprůvodci, můžete si pustit toto video pro starší verzi aplikace HARDWARIO Playground, funguje to ale stejně.
+Pokud dáváte přednost videonávodu, podívejte se na toto video. Je natočené ve starší verzi aplikace Playground, postup je ale stejný.
 
 <ReactPlayer controls src='https://youtu.be/VW_-RCIZ9rY' />

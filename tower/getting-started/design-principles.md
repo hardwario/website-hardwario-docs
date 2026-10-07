@@ -20,7 +20,7 @@ Most developers have somewhat biased opinions about their favorite programming l
 
 That’s why we have chosen the C language as the technology for firmware development. With a solid, battle-tested GCC toolchain and traditional Makefile-based build, your projects will be secured for the future.
 
-Despite the fact how tempting it might be to use a high-level interpreted language like Python, Javascript, etc., you will always do worse in terms of consumed resources and execution time, than with a well-written code in C.
+However tempting it might be to use a high-level interpreted language like Python, JavaScript, etc., you will always do worse in terms of consumed resources and execution time than with well-written code in C.
 
 On the other hand, we have created a framework, a firmware SDK, that makes your firmware development easy and working with the API feels like working in a high-level language.
 

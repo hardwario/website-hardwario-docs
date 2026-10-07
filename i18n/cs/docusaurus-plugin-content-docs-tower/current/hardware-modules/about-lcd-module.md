@@ -7,17 +7,17 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/lcd-module.png')} alt="LCD Module s 1,28palcovým pamětovým displejem Sharp a dvěma tlačítky" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/lcd-module.png')} alt="LCD Module s 1,28palcovým paměťovým displejem Sharp a dvěma tlačítky" /></div>
     </div>
     <div class="col col--6">
       <p>
-        LCD Module využívá unikátní technologii – takzvaný paměťový displej vyvinutý společností Sharp. Nabízí rozlišení 128 x 128 pixelů při velikosti 1,28 palce. Obsahuje řadič displeje s extrémně nízkou spotřebou, takže můžete mít aktivní grafický displej s dlouhou dobou provozu z baterií.
+        LCD Module používá unikátní technologii, takzvaný paměťový displej od společnosti Sharp. Má rozlišení 128 x 128 pixelů při úhlopříčce 1,28 palce. Řadič displeje má ultranízkou spotřebu, takže aktivní grafický displej vydrží dlouho běžet na baterie.
       </p>
       <p>
-        Svou aplikaci můžete ovládat pomocí dvou tlačítek umístěných pod LCD displejem. Modul je také vybaven senzorem gest (Avago APDS-9960). Tento obvod, složený z infračerveného vysílače a čtyř směrových fotodiod reagujících na různé vlnové délky, lze použít také k měření intenzity a barvy světla nebo jako senzor přiblížení.
+        Aplikaci ovládáte dvěma tlačítky pod displejem. Modul má také senzor gest (Avago APDS-9960). Tento obvod s infračerveným vysílačem a čtyřmi směrovými fotodiodami citlivými na různé vlnové délky umí měřit i intenzitu a barvu světla nebo sloužit jako senzor přiblížení.
       </p>
       <p>
-        LCD Module dále obsahuje šest RGB LED, které lze využít k indikaci stavu nebo jako světelný alarm.
+        LCD Module má také šest LED RGB, které mohou indikovat stav nebo sloužit jako světelný alarm.
       </p>
     </div>
   </div>
@@ -25,7 +25,7 @@ import Image from '@theme/IdealImage';
 
 :::tip
 
-Příkladem použití modulu **LCD Module** je bezdrátový termostat, případně může přímo **zobrazovat hodnoty z různých senzorů** umístěných uvnitř i venku.
+Modul **LCD Module** můžete použít například pro bezdrátový termostat nebo k přímému **zobrazení hodnot z různých senzorů** uvnitř i venku.
 
 :::
 
@@ -40,12 +40,12 @@ Příkladem použití modulu **LCD Module** je bezdrátový termostat, případn
   - Přiblížení
 - 6x **miniaturní RGB LED**
 - Typická spotřeba < 16 μA
-- Rozsah napájecího napětí: 2,7 V až 3,3 V
+- Rozsah provozního napětí: 2,7 V až 3,3 V
 - Rozsah provozních teplot: -20 až 70 °C
 - Rozměry: 33 x 55 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/lcd-module-bg)
+- [**E-shop**](https://www.hardwario.store/p/lcd-module-bg)
 - [**Schémata**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-module-lcd)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__module__lcd)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_module_lcd.h)

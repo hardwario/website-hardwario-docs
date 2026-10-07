@@ -11,10 +11,10 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
       <p>
-        Modul <b>Compact Split Module</b> umožňuje použít <b>dva horní moduly</b> nebo vytvářet kompaktnější konstrukce. Můžete tak sestavit mnohem více zařízení, která kombinují například <a href="../about-lcd-module"><b>LCD Module</b></a>, <a href="../about-climate-module"><b>Climate Module</b></a>, <a href="../about-pir-module"><b>PIR Module</b></a> a mnoho dalších. Tento modul lze také použít k vytvoření dvou sloupců modulů a k sestavení <b>kompaktnějších zařízení</b>.
+        S modulem <b>Compact Split Module</b> můžete použít <b>dva vrchní moduly</b> nebo postavit kompaktnější sestavu. Vznikne tak mnohem víc zařízení, která kombinují například <a href="../about-lcd-module"><b>LCD Module</b></a>, <a href="../about-climate-module"><b>Climate Module</b></a>, <a href="../about-pir-module"><b>PIR Module</b></a> a mnoho dalších. Modul také rozdělí sestavu do dvou sloupců, takže postavíte <b>kompaktnější zařízení</b>.
       </p>
       <p>
-        Tento modul má piny vyvedené zespodu, díky čemuž je <b>modul tenčí</b>.
+        Piny má vyvedené zespodu, a proto je <b>modul tenčí</b>.
       </p>
     </div>
   </div>
@@ -22,10 +22,10 @@ import Image from '@theme/IdealImage';
 
 :::caution
 
-Tento modul nelze připojit přímo k modulu [**Battery Module**](./about-battery-module.md) kvůli kolizi s **tag konektorem modulu Battery Module**. Pokud chcete Battery Module připojit přímo, použijte [**Split Module**](./about-split-module.md).
+Tento modul nelze připojit přímo k modulu [**Battery Module**](./about-battery-module.md), protože by kolidoval s **konektorem pro tag na modulu Battery Module**. Pokud chcete modul Battery Module připojit přímo, použijte [**Split Module**](./about-split-module.md).
 
 :::
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/compact-split-module)
+- [**E-shop**](https://www.hardwario.store/p/compact-split-module)
 - [**Schémata**](https://github.com/hardwario/twr-hardware/tree/master/out/bc-module-split-compact)

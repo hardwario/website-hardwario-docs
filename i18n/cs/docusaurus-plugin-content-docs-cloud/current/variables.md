@@ -1,12 +1,12 @@
 ---
 slug: variables
 title: Proměnné
-description: "V sekci Proměnné můžete nahrát dešifrovací klíče, kterými se dešifrují data ze zařízení, která používají šifrování."
+description: "V sekci Variables můžete nahrát dešifrovací klíče, kterými se dešifrují data ze zařízení, která používají šifrování."
 title_meta: "Proměnné (HARDWARIO Cloud)"
 ---
 import Image from '@theme/IdealImage';
 
-V sekci Proměnné můžete nahrát **dešifrovací klíče** používané k dekódování dat v případě, že je použito šifrování. Některá přenášená data mohou být zašifrována kvůli zajištění bezpečné nebo efektivní komunikace a v takovém případě jsou pro čitelnost dat potřeba dešifrovací klíče. Tato sekce vysvětluje, jak do HARDWARIO Cloud přidat jednotlivé dešifrovací klíče prostřednictvím sekce Proměnné.
+V sekci **Variables** můžete nahrát **dešifrovací klíče** k šifrovaným datům. Některá přenášená data mohou být kvůli bezpečné nebo efektivní komunikaci zašifrovaná a bez dešifrovacích klíčů je nelze přečíst. Tato stránka popisuje, jak v sekci Variables přidat do HARDWARIO Cloud jednotlivé dešifrovací klíče.
 
 ---
 
@@ -17,20 +17,20 @@ V sekci Proměnné můžete nahrát **dešifrovací klíče** používané k dek
 1. V levém panelu vyberte **Variables**.  
 2. Klikněte na tlačítko **+ NEW VARIABLE** v pravém horním rohu.  
 
-![Proměnné v Cloudu](../../../../cloud/images/cloud-variables-0.png)
+![Sekce Variables v HARDWARIO Cloud](../../../../cloud/images/cloud-variables-0.png)
 
-3. Vyplňte následující informace:  
+3. Vyplňte tyto údaje:  
    - **Device** → vyberte své zařízení  
-   - **Name of Variable** → zadejte wM-Bus adresu zařízení  
-   - **Value of Variable** → zadejte dešifrovací klíč přiřazený vašemu zařízení  
+   - **Name of Variable** → zadejte adresu wM-Bus zařízení  
+   - **Value of Variable** → zadejte dešifrovací klíč přidělený zařízení  
    - **Environment** → vyberte `wmbus`  
-   - **Comment** → nepovinné, můžete přidat komentář, pokud je potřeba  
+   - **Comment** → nepovinný komentář  
 
 :::info
-Pokud je zařízení specifikováno, dešifrovací klíč se použije **pouze pro toto konkrétní zařízení**.  
-Pokud není vybráno žádné zařízení, klíč se použije **pro celý prostor**.
+Pokud zařízení vyberete, dešifrovací klíč platí **jen pro toto zařízení**.  
+Pokud žádné zařízení nevyberete, klíč platí **pro celý prostor**.
 :::
 
-![Proměnné – informace](../../../../cloud/images/cloud-variables-1.png)
+![Sekce Variables: vyplněné údaje](../../../../cloud/images/cloud-variables-1.png)
 
-4. Vaše data by se nyní v HARDWARIO Cloud měla zobrazovat **dešifrovaná**.
+4. Data by se teď v HARDWARIO Cloud měla zobrazovat **dešifrovaná**.

@@ -4,36 +4,36 @@ title: "Sběrnice I²C"
 ---
 import Image from '@theme/IdealImage';
 
-**I²C** (**I**nter-**I**ntegrated **C**ircuit) je synchronní sběrnice typu multi-controller/multi-target používaná pro komunikaci mezi senzory, čipy atd.
+**I²C** (**I**nter-**I**ntegrated **C**ircuit) je synchronní sběrnice typu multi-controller/multi-target, která slouží ke komunikaci mezi senzory, čipy apod.
 
-TOWER využívá sběrnici I²C pro velkou část komunikace se senzory. Níže najdete seznam I²C adres, které TOWER používá.
+TOWER přes sběrnici I²C komunikuje s mnoha senzory. Níže najdete seznam adres I²C, které TOWER používá.
 
 :::note
 
-Většina senzorů pracuje se svými specifickými SDK moduly, takže se s funkcemi specifickými pro I²C nejspíš nesetkáte, pokud nevyvíjíte ovladač pro nový senzor nebo čip.
+Většina senzorů má vlastní moduly SDK, takže na funkce pro I²C nejspíš narazíte, jen pokud budete vyvíjet ovladač pro nový senzor nebo čip.
 
 :::
 
 :::info
 
-Práci s [**I²C SDK modulem**](../firmware-sdk/how-to/i2c-bus.md) popisuje samostatná kapitola.
+Práci s [**modulem SDK pro I²C**](../firmware-sdk/how-to/i2c-bus.md) popisuje samostatná kapitola.
 
 :::
 
-Příklady použití sběrnice I²C v TOWER:
+Příklady použití sběrnice I²C na platformě TOWER:
 - [**Temperature Tag**](../hardware-modules/about-temperature-tag.md)
 - [**Humidity Tag**](../hardware-modules/about-humidity-tag.md)
 - [**Climate Module**](../hardware-modules/about-climate-module.md)
 
-## Sběrnice I²C na Core Module {#ic-buses-on-the-core-module}
-Na **Core Module** jsou dvě sběrnice. Jmenují se:
+## Sběrnice I²C na modulu Core Module {#ic-buses-on-the-core-module}
+Modul **Core Module** má dvě sběrnice:
 
-- `TWR_I2C_I2C0`: používá piny `SDA0` a `SCL0` (17, 18) v **pravém dolním rohu** Core Module
-- `TWR_I2C_I2C1`: používá piny `SDA1` a `SCL1` (27, 28) v **pravém horním rohu** Core Module
+- `TWR_I2C_I2C0`: používá piny `SDA0` a `SCL0` (17, 18) v **pravém dolním rohu** modulu Core Module
+- `TWR_I2C_I2C1`: používá piny `SDA1` a `SCL1` (27, 28) v **pravém horním rohu** modulu Core Module
 
-## Adresní prostor I²C v TOWER {#tower-ic-address-space}
+## Adresní prostor I²C platformy TOWER {#tower-ic-address-space}
 
-Následující tabulka uvádí I²C adresy používané v rámci TOWER.
+Tabulka uvádí adresy I²C používané na platformě TOWER.
 
 :::note
 
@@ -43,13 +43,13 @@ Následující tabulka uvádí I²C adresy používané v rámci TOWER.
 
 :::info
 
-Adresy **0x00-0x07** a **0x78-0x7F** jsou I²C **vyhrazené adresy** a nelze je použít.
+Adresy **0x00-0x07** a **0x78-0x7F** jsou **vyhrazené adresy** I²C a nelze je použít.
 
 :::
 
 | Adresa  | Čip       | Produkt TOWER                                                                                                                               | Poznámka                                |
 | :------ | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------- |
-| 0x08    | NT3H2011  | **NFC Tag**                                                                                                                                 | Změněno z výchozí kvůli kolizi          |
+| 0x08    | NT3H2011  | **NFC Tag**                                                                                                                                 | Změněná z výchozí kvůli kolizi          |
 | 0x19    | LIS2DH12  | [**Core Module**](../hardware-modules/about-core-module.md)                                                                                 | Kanál I2C0                              |
 | 0x20    | TCA9534   | **IQRF Module**                                                                                                                             |                                         |
 | 0x21    | TCA9534   | [**GPS Module**](../hardware-modules/about-gps-module.md)                                                                                   |                                         |
@@ -57,14 +57,14 @@ Adresy **0x00-0x07** a **0x78-0x7F** jsou I²C **vyhrazené adresy** a nelze je 
 | 0x23    | TCA9534   | **Infragrid Module**                                                                                                                        |                                         |
 | 0x24    | TCA9534   | **Ethernet Module**                                                                                                                         |                                         |
 | 0x25    | TCA9534   | **Audio Module**                                                                                                                            |                                         |
-| 0x26    | TCA9534   |                                                                                                                                             | Rezervováno                             |
-| 0x27    | TCA9534   |                                                                                                                                             | Rezervováno                             |
+| 0x26    | TCA9534   |                                                                                                                                             | Vyhrazeno                               |
+| 0x27    | TCA9534   |                                                                                                                                             | Vyhrazeno                               |
 | 0x38    | TCA9534A  | [**CO2 Module**](../hardware-modules/about-co2-module.md)                                                                                   |                                         |
-| 0x39    | TCA9534A  |                                                                                                                                             | Rezervováno                             |
-| 0x3a    | TCA9534A  |                                                                                                                                             | Rezervováno                             |
+| 0x39    | TCA9534A  |                                                                                                                                             | Vyhrazeno                               |
+| 0x3a    | TCA9534A  |                                                                                                                                             | Vyhrazeno                               |
 | 0x3b    | TCA9534A  | [**Relay Module**](../hardware-modules/about-relay-module.md)                                                                               | Výchozí adresa                          |
 | 0x3c    | TCA9534A  | [**LCD Module**](../hardware-modules/about-lcd-module.md)                                                                                   |                                         |
-| 0x3d    | TCA9534A  |                                                                                                                                             | Rezervováno                             |
+| 0x3d    | TCA9534A  |                                                                                                                                             | Vyhrazeno                               |
 | 0x3e    | TCA9534A  | [**Sensor Module**](../hardware-modules/about-sensor-module.md)                                                                             | Výchozí adresa                          |
 | 0x3f    | TCA9534A  | [**Relay Module**](../hardware-modules/about-relay-module.md)                                                                               | Alternativní adresa                     |
 | 0x40    | SHT20     | [**Humidity Tag (R3.x+)**](../hardware-modules/about-humidity-tag.md)<br/>[**Climate Module**](../hardware-modules/about-climate-module.md) |                                         |

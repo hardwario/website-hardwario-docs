@@ -6,17 +6,17 @@ import Image from '@theme/IdealImage';
 
 # Instalace na Ubuntu {#installation-on-ubuntu}
 
-Následující článek vás provede instalací **CHESTER SDK** na systému **Ubuntu**. Byla otestována na verzi **Ubuntu 22.04 LTS**.
+Tento článek vás provede instalací **CHESTER SDK** v systému **Ubuntu**. Postup je otestovaný na verzi **Ubuntu 22.04 LTS**.
 
 :::caution
 
-Než začnete, ujistěte se, že splňujete požadavky uvedené v článku [**Požadavky**](./requirements.md).
+Než začnete, ověřte, že splňujete vše, co uvádí článek [**Požadavky**](./requirements.md).
 
 :::
 
 ## Postup instalace {#installation-steps}
 
-Kroky instalace jsou rozdělené do několika sekcí. Na konci budete schopni sestavit ukázku `blinky` z **CHESTER SDK**.
+Instalace je rozdělená do několika částí. Na konci sestavíte ukázku `blinky` z **CHESTER SDK**.
 
 ### Aktualizace systému {#update-your-system}
 
@@ -28,7 +28,7 @@ Kroky instalace jsou rozdělené do několika sekcí. Na konci budete schopni se
    sudo apt update
    ```
 
-1. Aktualizujte balíčky:
+1. Nainstalujte novější verze balíčků:
 
    ```
    sudo apt upgrade
@@ -56,7 +56,7 @@ Kroky instalace jsou rozdělené do několika sekcí. Na konci budete schopni se
    sudo dpkg -i nrf-udev_1.0.1-all.deb
    ```
 
-1. Odstraňte balíček s pravidly **udev**:
+1. Smažte stažený soubor balíčku s pravidly **udev**:
 
    ```
    rm nrf-udev_1.0.1-all.deb
@@ -86,17 +86,17 @@ sudo apt install python3-venv
 
    :::tip
 
-   Parametr `chester-app` změňte na libovolný název adresáře vašeho projektu.
+   Místo `chester-app` můžete adresář projektu pojmenovat libovolně.
 
    :::
 
-1. Inicializujte virtuální prostředí **Python**:
+1. Vytvořte virtuální prostředí pro **Python**:
 
    ```
    python3 -m venv .venv
    ```
 
-1. Aktivujte virtuální prostředí **Python**:
+1. Aktivujte virtuální prostředí pro **Python**:
 
    ```
    source .venv/bin/activate
@@ -104,7 +104,7 @@ sudo apt install python3-venv
 
    :::caution
 
-   Když zavřete shell (nebo textový editor s integrovaným terminálem), musíte virtuální prostředí Pythonu znovu aktivovat. Použijte tento příkaz (uvedený v postupu výše): `source .venv/bin/activate`. V budoucnu můžete mít různé pracovní prostory **West** s odlišnými verzemi balíčků **Python** a díky konceptu virtuálního prostředí nebudou trpět konflikty verzí.
+   Po zavření shellu (nebo textového editoru s integrovaným terminálem) musíte virtuální prostředí Pythonu znovu aktivovat příkazem z postupu výše: `source .venv/bin/activate`. Časem můžete mít několik pracovních prostorů **West** s různými verzemi balíčků pro **Python**; díky virtuálním prostředím mezi nimi nevzniknou konflikty verzí.
 
    :::
 
@@ -120,7 +120,7 @@ sudo apt install python3-venv
    pip install west
    ```
 
-1. Inicializujte pracovní prostor **West** tam, kde chcete začít svůj projekt:
+1. Inicializujte pracovní prostor **West** ve složce, kde chcete projekt založit:
 
    ```
    west init -m https://github.com/hardwario/chester-skeleton.git --manifest-rev main
@@ -138,7 +138,7 @@ sudo apt install python3-venv
    west update
    ```
 
-1. Nainstalujte závislosti **Python**:
+1. Nainstalujte závislosti pro **Python**:
 
    ```
    west packages pip --install
@@ -156,7 +156,7 @@ sudo apt install python3-venv
    west sdk install -t arm-zephyr-eabi
    ```
 
-## Testovací build a nahrání firmwaru {#test-build-and-flash}
+## Testovací sestavení a nahrání firmwaru {#test-build-and-flash}
 
 1. Přejděte do adresáře s ukázkou `blinky`:
 
@@ -179,7 +179,7 @@ sudo apt install python3-venv
         IDT_LIST:          0 GB         2 KB      0.00%
    ```
 
-1. Pokud je vaše zařízení CHESTER APP/BLE [**připojeno**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) k J-Link, [**ovladače**](/chester/developer-tools/segger-j-link/) jsou nainstalované a [**napájení je zapnuté**](../developer-tools/power-profiler-kit-ii.md#basic-usage), můžete zkompilovaný kód blinky nahrát příkazem
+1. Pokud je port APP/BLE zařízení CHESTER [**připojený**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) k programátoru J-Link, [**ovladače**](/chester/developer-tools/segger-j-link/) jsou nainstalované a [**napájení je zapnuté**](../developer-tools/power-profiler-kit-ii.md#basic-usage), nahrajete zkompilovanou ukázku blinky příkazem:
 
    ```
    west flash

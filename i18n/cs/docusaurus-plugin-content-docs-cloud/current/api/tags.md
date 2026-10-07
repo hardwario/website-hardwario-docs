@@ -6,7 +6,7 @@ title_meta: "Tagy (HARDWARIO Cloud API)"
 # Tagy {#tags}
 
 Tagy seskupují zařízení a právě podle nich [**konektory**](/cloud/connectors) rozhodují, která
-zařízení přeposílat: konektor zpracovává zprávy ze zařízení, která mají stejný tag.
+zařízení přeposílat: konektor zpracovává zprávy ze zařízení, která mají stejný tag jako on.
 
 **Vytvoření tagu**: `POST /v2/spaces/{space_id}/tags` s hodnotami `name` a `color`
 (hex):
@@ -19,7 +19,7 @@ curl -X POST \
   -d '{ "name": "temperature-sensors", "color": "#009cfa" }'
 ```
 
-**Přiřazení tagu k zařízení**: aktualizujte zařízení pomocí `id` tagu:
+**Přiřazení tagu k zařízení**: aktualizujte zařízení a uveďte `id` tagu:
 
 ```bash
 curl -X PUT \

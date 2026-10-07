@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Senzor Milesight VS373 {#milesight-sensor-vs373}
 
-Milesight VS373 je **bezkontaktní senzor detekce pádu** navržený pro **péči o seniory a zdravotnická zařízení**. Využívá pokročilou **4D radarovou technologii milimetrových vln 60 GHz** v kombinaci s **AI algoritmy** k detekci pádů a abnormálních pohybů s **přesností až 99 %**. Senzor poskytuje **nepřetržité monitorování 24/7** i v temném a vlhkém prostředí, nabízí **plnou ochranu soukromí** bez snímání obrazu a disponuje **krytím IP65**. Podporuje více detekčních funkcí včetně přítomnosti v posteli, obsazenosti místnosti, detekce nehybnosti a monitorování dýchání.
+Milesight VS373 je **bezkontaktní senzor detekce pádů** pro **péči o seniory a zdravotnická zařízení**. Pomocí pokročilého **4D radaru s milimetrovými vlnami 60 GHz** a **algoritmů AI** rozpozná pády a neobvyklé pohyby s **přesností až 99 %**. **Monitoruje nepřetržitě, 24/7**, i ve tmě a ve vlhkém prostředí, **plně chrání soukromí**, protože nepořizuje obraz, a má **krytí IP65**. Umí také zjistit přítomnost v posteli, obsazenost místnosti a nehybnost a sledovat dýchání.
 
 <div class="container">
   <div class="row">
@@ -21,26 +21,26 @@ Milesight VS373 je **bezkontaktní senzor detekce pádu** navržený pro **péč
 </div>
 <br />
 
-## Odkazy pro integraci {#integration-links}
+## Odkazy k integraci {#integration-links}
 | Zdroj           | Odkaz                                                                |
 |-----------------|----------------------------------------------------------------------|
-| HARDWARIO Store | https://www.hardwario.store/p/milesight-vs373                        |
+| E-shop HARDWARIO | https://www.hardwario.store/p/milesight-vs373                        |
 | Oficiální stránka | https://www.milesight.com/iot/product/lorawan-sensor/vs373         |
 | Uživatelská příručka | https://resource.milesight.com/milesight/iot/document/vs373-user-guide-en.pdf |
-| Datasheet       | https://resource.milesight.com/milesight/iot/document/vs373-datasheet-en.pdf |
+| Produktový list       | https://resource.milesight.com/milesight/iot/document/vs373-datasheet-en.pdf |
 
 ---
 
 ## Obecná konfigurace {#general-configuration}
-Konfigurace se provádí přes NFC pomocí [aplikace Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
+Zařízení se konfiguruje přes NFC v [aplikaci Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
 
-Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
+Postup konfigurace najdete v části 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
 
 ---
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serverů najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
+Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options).
 
 ---
 
@@ -53,7 +53,7 @@ Informace o podporovaných platformách LoRaWAN network serverů najdete zde �
 | AppKey           | 5572404C696E6B4C6F52613230313823 |
 
 :::info 
-**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení unikátní a najdete jej vytištěný na etiketě zařízení.
+**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení jedinečný a je vytištěný na jeho štítku.
 :::
 
 ---
@@ -64,13 +64,13 @@ Informace o podporovaných platformách LoRaWAN network serverů najdete zde �
 |------|--------------|
 | Decoder | [Zobrazit decoder](https://github.com/Milesight-IoT/SensorDecoders/blob/main/vs-series/vs373/vs373-decoder.js) |
 | Encoder | [Zobrazit encoder](https://github.com/Milesight-IoT/SensorDecoders/blob/main/vs-series/vs373/vs373-encoder.js) |
-| Codec | [Zobrazit codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/vs-series/vs373/vs373-codec.json) |
+| Kodek | [Zobrazit kodek](https://github.com/Milesight-IoT/SensorDecoders/blob/main/vs-series/vs373/vs373-codec.json) |
 
 :::info
-### Přehled terminologie {#terminology-overview}
+### Přehled pojmů {#terminology-overview}
 **Decoder** -> Převádí binární payload zařízení do čitelného JSON.<br />
 **Encoder** -> Převádí JSON příkazy na binární payload pro downlinky.<br />
-**Codec** -> Definuje pravidla pro dekódování a kódování (struktura, pole, porty) používaná network servery.
+**Kodek** -> Definuje pravidla dekódování a kódování (strukturu, pole, porty), podle kterých pracují síťové servery.
 :::
 
 
@@ -83,13 +83,13 @@ Informace o podporovaných platformách LoRaWAN network serverů najdete zde �
 
 ---
 
-## Technické specifikace {#technical-specifications}
+## Technické parametry {#technical-specifications}
 
 | **Parametr** | **Hodnota** |
 |---------------|-----------|
 | **Bezdrátový přenos** | |
 | Technologie | LoRaWAN®, Milesight D2D, Wi-Fi 2,4 GHz |
-| Antena | Interní |
+| Anténa | Interní |
 | Frekvence | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
 | Vysílací výkon | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
 | Citlivost | -137 dBm @300bps |
@@ -98,7 +98,7 @@ Informace o podporovaných platformách LoRaWAN network serverů najdete zde �
 | Technologie | 4D radar mmWave 60 GHz |
 | Vysílače/přijímače | 24 vysílačů, 22 přijímačů |
 | Zorné pole | 70° H × 140° V |
-| Detekční rozsah | 2m×2m až 4m×5m (při výšce 2,3–3 m) |
+| Detekční rozsah | 2m×2m až 4m×5m (při montážní výšce 2,3–3 m) |
 | Přesnost detekce pádu | Až 99 % |
 | **Detekční funkce** | |
 | Základní funkce | Detekce pádu, přítomnost v posteli, obsazenost místnosti |

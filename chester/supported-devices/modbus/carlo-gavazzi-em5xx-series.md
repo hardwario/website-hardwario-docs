@@ -6,7 +6,7 @@ title: Carlo Gavazzi EM5XX Series
 import Image from '@theme/IdealImage';
 
 
-[Web-Site](https://www.gavazziautomation.com/en-global/product/EM530DINAV53XS1PFB)
+[Website](https://www.gavazziautomation.com/en-global/product/EM530DINAV53XS1PFB)
 
 <div class="container">
   <div class="row">
@@ -164,7 +164,6 @@ After exceeding 1 kWh, the CT ratio becomes **permanently locked** and **cannot 
 
 :::
 
->
 ### Measured values
 
 | Measured Value | Key / Path                                   |

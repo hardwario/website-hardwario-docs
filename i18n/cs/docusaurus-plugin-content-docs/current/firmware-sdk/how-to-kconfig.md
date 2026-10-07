@@ -10,13 +10,13 @@ Tento článek ukazuje, jak ve svém projektu používat **Kconfig**.
 
 :::info
 
-**Kconfig** je systém převzatý z jádra Linuxu do projektu Zephyr. Umožňuje definovat volby (též nazývané symboly) použité při sestavení, jejich typy, omezení a vzájemné vztahy.
+**Kconfig** je systém, který projekt Zephyr převzal z jádra Linuxu. Definují se v něm volby pro sestavení (tzv. symboly), jejich typy, omezení a vzájemné vztahy.
 
 :::
 
 ## Vlastní volby {#custom-options}
 
-Vlastní volbu **Kconfig** můžete ve své aplikaci definovat vytvořením souboru `Kconfig` v kořenovém adresáři aplikace.
+Vlastní volbu **Kconfig** v aplikaci definujete v souboru `Kconfig`, který vytvoříte v kořenovém adresáři aplikace.
 
 V souboru `Kconfig` můžete pomocí této šablony vytvořit booleovskou volbu ano/ne:
 
@@ -52,11 +52,11 @@ Při předzpracování všech voleb Kconfig vznikne jedno z těchto maker:
 
 :::tip
 
-Vygenerované volby Kconfig můžete ladit pohledem do souboru `build/zephyr/include/autoconf.h`. Tento soubor se automaticky vkládá do všech zdrojových a hlavičkových souborů.
+Vygenerované volby Kconfig můžete zkontrolovat v souboru `build/zephyr/include/autoconf.h`. Tento soubor se automaticky vkládá do všech zdrojových a hlavičkových souborů.
 
 :::
 
 ## Odkazy {#references}
 
-Pokud potřebujete více podrobností o Kconfigu, podívejte se do dokumentace Zephyr Kconfig:
+Podrobnosti o Kconfig najdete v dokumentaci projektu Zephyr:
 https://docs.zephyrproject.org/latest/build/kconfig/index.html

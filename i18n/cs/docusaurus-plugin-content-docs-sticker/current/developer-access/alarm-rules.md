@@ -5,52 +5,52 @@ title_meta: "Pravidla alarmů (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Engine a pravidla alarmů (`alarm`) {#alarm-engine--rules-alarm}
+# Systém alarmů a jeho pravidla (`alarm`) {#alarm-engine--rules-alarm}
 
-Engine alarmů zařízení STICKER průběžně vyhodnocuje měření senzorů a stavy systému proti aktivním pravidlům. Když je podmínka pravidla splněna nebo zrušena, vznikne okamžitý uplink payload a odešle se na **fPort 3**.
+Systém alarmů zařízení STICKER průběžně porovnává měření senzorů a stavy systému s aktivními pravidly. Jakmile se podmínka pravidla splní nebo pomine, zařízení okamžitě vytvoří payload a odešle ho uplinkem na **fPort 3**.
 
-Pravidla se spravují z vývojářské konzole příkazem `alarm` (viz [**Nastavení firmwaru**](firmware-setup.md)) nebo se konfigurují na dálku přes NFC a downlinky LoRaWAN (`set_param` na fPort 85).
+Pravidla se spravují z vývojářské konzole příkazem `alarm` (viz [**Nastavení firmwaru**](firmware-setup.md)) nebo se nastavují na dálku přes NFC a downlinky LoRaWAN (`set_param` na fPort 85).
 
 :::info Firmware v1.4.0
-Engine alarmů popsaný na této stránce je základní schopnost představená ve **firmwaru STICKER v1.4.0**. Podporuje dynamická prahová pravidla v několika slotech, stavové přechody, limity rychlosti pulzů, monitorování zdraví systému (nízká baterie, watchdog) a okamžité hlášení událostí uplinkem na **fPort 3**.
+Systém alarmů popsaný na této stránce je základní funkce, kterou přinesl **firmware STICKER v1.4.0**. Podporuje dynamická prahová pravidla v několika slotech, stavové přechody, limity četnosti impulzů, hlídání stavu systému (slabá baterie, watchdog) a okamžité hlášení událostí uplinkem na **fPort 3**.
 :::
 
 ---
 
 ## Globální omezení frekvence a systémové alarmy {#global-rate-limiting--system-alarms}
 
-Globální omezení frekvence alarmů se řídí parametrem `config alarm-limit`:
+Globální omezení frekvence alarmů nastavuje parametr `config alarm-limit`:
 
 | Příkaz | Argument | Popis |
 |---|---|---|
-| `config alarm-limit` | `0`-`3600` (sekundy) | Minimální interval mezi po sobě jdoucími alarmovými uplinky. První událost vyvolá okamžitý uplink; další alarmy v tomto okně se zařadí do fronty nebo potlačí. `0` = omezení frekvence vypnuto. Výchozí `0`. |
+| `config alarm-limit` | `0`-`3600` (sekundy) | Minimální odstup mezi dvěma po sobě jdoucími uplinky s alarmem. První událost se odešle uplinkem okamžitě; další alarmy v tomto okně se zařadí do fronty, nebo se potlačí. `0` = omezení vypnuté. Výchozí hodnota `0`. |
 
 ### Vestavěné systémové alarmy {#built-in-system-alarms}
-Kromě dynamických pravidel nastavených uživatelem spravuje firmware v1.4.0 automaticky dvě systémové podmínky zdraví:
-- **Alarm nízké baterie:** Vyvolá se, když napětí baterie pod zatížením klesne pod kritickou provozní hranici. Hlásí se na fPort 3.
-- **Watchdog alarm bez dat:** Sleduje vnitřní vzorkování senzorů. Pokud fyzický senzor neodpovídá nebo vynechá několik vzorkovacích oken za sebou, vyvolá se watchdog alarm na fPort 3.
+Kromě dynamických pravidel, která nastavuje uživatel, hlídá firmware v1.4.0 automaticky dva systémové stavy:
+- **Alarm slabé baterie:** Vyvolá se, když napětí baterie pod zátěží klesne pod kritickou provozní mez. Hlásí se na fPort 3.
+- **Watchdog alarm chybějících dat:** Hlídá interní vzorkování senzorů. Pokud fyzický senzor neodpoví nebo vynechá několik vzorkovacích oken za sebou, zařízení vyvolá watchdog alarm na fPort 3.
 
 ---
 
 ## Dynamická pravidla alarmů {#dynamic-alarm-rules}
 
-Prahy pro jednotlivé senzory jsou drženy v 16 fixních slotech (`0`-`15`). Index slotu slouží jako stabilní identifikátor pravidla, takže tentýž slot senzoru může sledovat víc pravidel současně (například úroveň varování a kritickou úroveň).
+Prahy pro jednotlivé senzory se ukládají do 16 pevných slotů (`0`-`15`). Index slotu je stálý identifikátor pravidla, takže tentýž senzor může současně hlídat několik pravidel (například pro varovnou a kritickou úroveň).
 
 | Příkaz | Popis |
 |---|---|
 | `alarm list [<index>]` | Vypíše všechna aktivní pravidla alarmů nebo zobrazí konkrétní slot. |
-| `alarm set <index> <source> <quantity> <args>` | Zapíše pravidlo do určeného slotu (`0`-`15`). |
-| `alarm new <source> <quantity> <args>` | Přiřadí pravidlo prvnímu volnému slotu. |
-| `alarm clear <index>` / `alarm clear all` | Smaže jeden slot s pravidlem nebo vyprázdní všechna aktivní pravidla. |
-| `alarm poll` | Vynutí okamžité vzorkování a vyhodnocení všech aktivních pravidel (užitečné při testování na stole). |
+| `alarm set <index> <source> <quantity> <args>` | Zapíše pravidlo do zadaného slotu (`0`-`15`). |
+| `alarm new <source> <quantity> <args>` | Uloží pravidlo do prvního volného slotu. |
+| `alarm clear <index>` / `alarm clear all` | Smaže jeden slot s pravidlem nebo všechna aktivní pravidla. |
+| `alarm poll` | Vynutí okamžité vzorkování a vyhodnocení všech aktivních pravidel (hodí se při testování na stole). |
 
 ### Zdroje pravidel {#rule-sources}
 
-| Zdroj | Cílový senzor |
+| Zdroj | Senzor |
 |---|---|
 | `onboard` | Senzory na desce (teplota, vlhkost, atmosférický tlak) |
 | `s1`–`s4` | Kanály senzorů 1-Wire 1 až 4 |
-| `hall-left`, `hall-right` | Integrované magnetické dveřní kontakty |
+| `hall-left`, `hall-right` | Vestavěné magnetické dveřní spínače |
 | `input-a`, `input-b` | Externí průmyslové vstupy |
 | `pir` | Detektor pohybu PIR |
 | `accel` | Tříosý akcelerometr |
@@ -63,25 +63,25 @@ Prahy pro jednotlivé senzory jsou drženy v 16 fixních slotech (`0`-`15`). Ind
 | `illuminance`, `magnetic-field` | prahové | `<lo> <hi> [dwell]` | `s1`-`s4` |
 | `tilt` | stavové | `<from> <to> [dwell]` | `s1`-`s4` |
 | `state` | stavové | `<from> <to> [dwell]` | `hall-*`, `input-*`, `pir`, `accel` |
-| `count` | frekvenční | `<N> [dwell]` | `hall-*`, `input-*`, `pir`, `accel` |
+| `count` | četnostní | `<N> [dwell]` | `hall-*`, `input-*`, `pir`, `accel` |
 
-- **Prahová pravidla:** Alarm se vyvolá, když měřená hodnota vystoupí mimo okno `[lo, hi]`.
-- **Stavová pravidla:** Vyhodnocují digitální úrovně `<from> <to>` (`0`/`1`). `from != to` znamená **hranu** (vyvolá se jednou při přechodu); `from == to` znamená **úroveň** (aktivní, dokud se linka rovná `to`). Momentové zdroje (`pir`, `accel`) přijímají pouze pravidla na hranu.
-- **Frekvenční pravidla:** Vyvolají se, pokud načítaný čítač překročí `<N>` událostí v jednom reportovacím intervalu.
+- **Prahová pravidla:** Alarm se vyvolá, když měřená hodnota opustí okno `[lo, hi]`.
+- **Stavová pravidla:** Vyhodnocují digitální úrovně `<from> <to>` (`0`/`1`). `from != to` znamená **hranu** (pravidlo se vyvolá jednou při přechodu), `from == to` znamená **úroveň** (pravidlo je aktivní, dokud má linka hodnotu `to`). Okamžikové zdroje (`pir`, `accel`) přijímají jen pravidla na hranu.
+- **Četnostní pravidla:** Vyvolají se, když čítač během jednoho intervalu hlášení napočítá víc než `<N>` událostí.
 
 ---
 
 ## Parametr `dwell` {#the-dwell-parameter}
 
-Volitelná doba **`dwell`** (v sekundách, výchozí `0`) zajišťuje integrované filtrování šumu a hysterezi. Zabraňuje falešným poplachům z krátkých špiček signálu nebo rychlého zakmitávání vstupu.
+Volitelná doba **`dwell`** (v sekundách, výchozí `0`) slouží jako vestavěný filtr šumu a hystereze. Brání planým poplachům z krátkých špiček signálu nebo zákmitů vstupu.
 
 | Druh pravidla | Chování `dwell` |
 |---|---|
-| **Prahové** | Hodnota musí zůstat mimo `[lo, hi]` nepřerušeně `dwell` sekund, než se pravidlo aktivuje. Návrat do pásma alarm okamžitě deaktivuje. |
-| **Stavové (hrana)** | Přechod linky musí být stabilní `dwell` sekund, než se pravidlo vyvolá. Po vyvolání pravidlo drží klidové okno `dwell` sekund, než se může vyvolat znovu. |
-| **Stavové (úroveň)** | Linka musí zůstat ve stavu `to` nepřerušeně `dwell` sekund, než se pravidlo vyvolá. |
-| **Momentové (`pir`, `accel`)** | Drží klidové okno `dwell` sekund, než může novou událost pohybu vyvolat alarm. |
-| **Frekvenční** | Doba blokování, která vynucuje minimální rozestup mezi po sobě jdoucími hlášeními o překročení frekvence. |
+| **Prahové** | Hodnota musí zůstat mimo `[lo, hi]` nepřetržitě `dwell` sekund, než se alarm aktivuje. Po návratu do pásma se alarm okamžitě deaktivuje. |
+| **Stavové (hrana)** | Přechod linky musí stabilně trvat `dwell` sekund, než se pravidlo vyvolá. Po vyvolání pravidlo čeká ochrannou dobu `dwell` sekund, než se může vyvolat znovu. |
+| **Stavové (úroveň)** | Linka musí zůstat ve stavu `to` nepřetržitě `dwell` sekund, než se pravidlo vyvolá. |
+| **Okamžikové (`pir`, `accel`)** | Nová událost pohybu může vyvolat alarm až po ochranné době `dwell` sekund. |
+| **Četnostní** | Ochranná doba, která určuje minimální odstup mezi dvěma hlášeními o překročení četnosti. |
 
 ---
 
@@ -97,6 +97,6 @@ alarm list                               # Review all programmed alarm rules
 alarm clear 1                            # Erase rule in slot 1
 ```
 
-:::info Správa na dálku
-Pravidla alarmů lze také vytvářet a aktualizovat přes LoRaWAN nebo NFC binárními downlink payloady na fPort 85. Chcete-li sestavit binární řetězce downlinku pro váš síťový server, použijte [**generátor downlink příkazů**](../connectivity/downlink-commands-generator.mdx).
+:::info Bezdrátová správa
+Pravidla alarmů lze vytvářet a měnit i přes LoRaWAN nebo NFC binárními payloady downlinku na fPort 85. Binární řetězce downlinku pro svůj síťový server sestavíte v [**generátoru příkazů přes downlink**](../connectivity/downlink-commands-generator.mdx).
 :::

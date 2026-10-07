@@ -6,25 +6,25 @@ import Image from '@theme/IdealImage';
 
 :::info
 
-Pokud chcete pro pokročilejší debugování použít sondu JLink, můžete si [**přečíst samostatnou kapitolu**](./advanced-debugging.md).
+Pokud chcete pro pokročilejší debugování použít sondu JLink, [**přečtěte si samostatnou kapitolu**](./advanced-debugging.md).
 
 :::
 
-## Začínáme jednoduše {#starting-simple}
+## Začněme jednoduše {#starting-simple}
 
-Nejjednodušší způsob debugování – a také způsob, kterým to všechno začalo – je jen vypisovat vše, co považujete za důležité vědět.
+Nejjednodušší způsob debugování, a také ten, kterým to všechno začalo, je prostě vypisovat vše, co považujete za důležité.
 
-K výpisu informací přes USB do připojeného PC použijeme sériový port.
+Informace budeme vypisovat přes sériový port a USB do připojeného počítače.
 
 ## Core Module {#core-module}
 
-[**Core Module**](../hardware-modules/about-core-module.md) má integrovaný čip FTDI připojený k UART2. Nepotřebujete samostatný sériový převodník, stačí připojit USB kabel k počítači.
+Modul [**Core Module**](../hardware-modules/about-core-module.md) má integrovaný čip FTDI připojený k rozhraní UART2. Samostatný sériový převodník nepotřebujete, stačí připojit kabel USB k počítači.
 
 ## Příklad logování {#logging-example}
 
 :::note
 
-Můžete se podívat na [**SDK modul twr_log**](https://sdk.hardwario.com/group__twr__log.html).
+Podívejte se také na [**modul SDK twr_log**](https://sdk.hardwario.com/group__twr__log.html).
 
 :::
 
@@ -91,7 +91,7 @@ Příklad výstupu:
 
 :::info
 
-Logy můžete pomocí příkazů níže obarvit do 4 různých barev.
+Příkazy níže obarvíte logy jednou ze 4 barev.
 
 :::
 
@@ -128,26 +128,26 @@ Pokud jste to ještě neudělali, nainstalujte si [**HARDWARIO Code**](./about-h
 
 :::
 
-Naše rozšíření pro Visual Studio Code můžete použít k připojení konzole k **připojenému zařízení Core Module.**
+Naše rozšíření pro Visual Studio Code umí konzoli napojit na **připojený modul Core Module.**
 
-Chcete-li připojit konzoli, můžete v rozšíření použít dva příkazy:
+Konzoli napojíte jedním ze dvou příkazů rozšíření:
 
 - [**Build + Flash (Console)**](./hardwario-extension-tutorial.md#build--flash-console)
 - [**Attach Console**](./hardwario-extension-tutorial.md#attach-console)
 
 :::note
 
-  Doporučuje se použít první z nich. **Sestaví firmware**, takže obsahuje všechny změny, které jste udělali, a **nahraje jej do zařízení**. Po dokončení nahrání se připojí konzole a uvidíte všechny logy.
+  Doporučujeme ten první. **Sestaví firmware** se všemi vašimi změnami a **nahraje ho do zařízení**. Po nahrání se připojí konzole a uvidíte všechny logy.
 
 :::
 
-Pokud chcete konzoli pouze připojit k **běžícímu zařízení Core Module** bez sestavení a nahrání firmwaru, můžete použít příkaz **Attach console**.
+Pokud chcete konzoli jen napojit na **běžící modul Core Module** bez sestavení a nahrání firmwaru, použijte příkaz **Attach console**.
 
-V obou případech byste měli vidět logovací zprávy v konzoli ve spodní záložce.
+V obou případech byste měli logovací zprávy vidět v konzoli na záložce ve spodním panelu.
 
 :::tip
 
-Více o této konzoli se dozvíte v kapitole [**Konzole HARDWARIO TOWER**](./hardwario-tower-console.md).
+Více o této konzoli se dozvíte v kapitole [**Konzole TOWER**](./hardwario-tower-console.md).
 
 :::
 

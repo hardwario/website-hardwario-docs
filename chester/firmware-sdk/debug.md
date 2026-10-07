@@ -25,7 +25,7 @@ In VSCode hit `Ctrl` + `P` and type `ext install nordic-semiconductor.nrf-connec
 
 ![nRF Connect panel in VS Code with the Open Existing Application button highlighted](images/open-existing-application.png)
 
-2. In the project `prj.conf` comment with `#` or **remove `CONFIG_CTR_BLE=y`. BLE is timing sensitive and when enabled, debugging don't work correctly.**
+2. In the project `prj.conf` comment with `#` or **remove `CONFIG_CTR_BLE=y`. BLE is timing sensitive and when enabled, debugging doesn't work correctly.**
 
 ![prj.conf in the editor with the CONFIG_CTR_BLE=y line commented out](images/disable-ble.png)
 
@@ -45,7 +45,7 @@ For erasing the board use [**HARDWARIO CLI**](../developer-tools/command-line-to
 
 ## Shell over RTT
 
-In the **Connected devices** left panel, you can open RTT communication with the device. It uses channel 0 which is Zehpyr shell. You can type commands to the terminal. The second RTT channel with logs is not displayed here.
+In the **Connected devices** left panel, you can open RTT communication with the device. It uses channel 0 which is Zephyr shell. You can type commands to the terminal. The second RTT channel with logs is not displayed here.
 
 ![Connected devices panel with the RTT item highlighted and the Zephyr shell command list in the terminal](images/rtt-shell.png)
 

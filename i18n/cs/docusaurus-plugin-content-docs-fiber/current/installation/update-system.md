@@ -4,7 +4,7 @@ title: Aktualizace systému
 
 # Aktualizace systému {#update-system}
 
-1. Aktualizujte seznam balíčků, abyste získali informace o nejnovějších verzích balíčků:
+1. Aktualizujte seznam balíčků, aby systém znal jejich nejnovější verze:
 
    ```sh
    sudo apt update
@@ -16,7 +16,7 @@ title: Aktualizace systému
    sudo apt upgrade -y
    ```
 
-1. Restartujte systém, aby se aktualizace uplatnily:
+1. Restartujte systém, aby se aktualizace projevily:
 
    ```sh
    sudo reboot

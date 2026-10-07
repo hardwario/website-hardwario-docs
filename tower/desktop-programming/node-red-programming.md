@@ -5,7 +5,7 @@ title: Node-RED Programming
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'
 
-In this chapter, we will go over the **Functions Tab** of Playground
+In this chapter, we will go over the **Functions Tab** of Playground.
 
 :::info
 

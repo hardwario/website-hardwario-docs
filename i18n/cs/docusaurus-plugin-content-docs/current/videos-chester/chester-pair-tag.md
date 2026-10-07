@@ -5,9 +5,9 @@ title: Jak spárovat Bluetooth tag se zařízením CHESTER
 
 import Image from '@theme/IdealImage';
 
-## Přehled tutoriálu {#tutorial-overview}
+## Přehled návodu {#tutorial-overview}
 
-V tomto průvodci se naučíte, jak spárovat a spravovat až osm tagů se zařízením CHESTER. Ukážeme vám, jak tagy zaregistrovat, zkontrolovat a jak z nich čítat data přímo v konzoli aplikace HARDWARIO Manager.
+Tento návod ukazuje, jak se zařízením CHESTER spárovat a spravovat až osm tagů: jak tagy zaregistrovat, ověřit a číst z nich data přímo v konzoli aplikace HARDWARIO Manager.
 
 ---
 
@@ -29,35 +29,35 @@ V tomto průvodci se naučíte, jak spárovat a spravovat až osm tagů se zař�
 </div>
 
 
-## Podrobný textový průvodce {#step-by-step-text-guide}
+## Podrobný textový návod {#step-by-step-text-guide}
 
 1. Vezměte zařízení CHESTER a připojte se pomocí aplikace HARDWARIO Manager.
 
-2. Pokud to děláte poprvé, podívejte se na video v kartě, kde je celý postup ukázán.
+2. Pokud to děláte poprvé, podívejte se na video na kartě, které celý postup ukazuje.
 
-3. Po připojení přejděte do Terminálu.
+3. Po připojení otevřete Terminal.
 
-4. Zadejte příkaz config show a zkontrolujte, že je vaše nastavení správné.
+4. Zadejte příkaz config show a zkontrolujte nastavení.
 
 5. Ve výstupu najděte položku tag config enabled.
 
-6. Pokud je nastavena na true, můžete následující kroky přeskočit.
+6. Pokud má hodnotu true, můžete následující kroky přeskočit.
 
-7. Pokud je nastavena na false, zadejte tag config enabled true a poté config save.
+7. Pokud má hodnotu false, zadejte tag config enabled true a poté config save.
 
-8. Zařízení CHESTER se restartuje a odpojí vás, proto se připojte znovu.
+8. Zařízení CHESTER se restartuje a spojení se přeruší, proto se připojte znovu.
 
-9. Naskenujte QR kód, klikněte na zařízení a přejděte do Konzole.
+9. Naskenujte QR kód, klepněte na zařízení a přejděte do sekce Console.
 
 10. Se zařízením CHESTER můžete spárovat až 8 tagů.
 
 11. Spárované tagy zobrazíte příkazem tag config devices list.
 
-12. Uvidíte seznam všech osmi slotů, které budou zpočátku prázdné 0000000000.
+12. Uvidíte seznam všech osmi slotů; zpočátku jsou prázdné (0000000000).
 
-13. Vezměte tag, který chcete spárovat, a položte jej k zařízení CHESTER.
+13. Vezměte tag, který chcete spárovat, a položte ho vedle zařízení CHESTER.
 
-14. V konzoli zadejte tag enroll. Zařízení CHESTER spustí automatické vyhledávání na 10 sekund.
+14. V konzoli zadejte tag enroll. Zařízení CHESTER bude 10 sekund automaticky hledat tagy v okolí.
 
 15. Pokud tag najde, zobrazí jeho MAC adresu: zkontrolujte, že odpovídá (najdete ji na tagu).
 
@@ -67,7 +67,7 @@ V tomto průvodci se naučíte, jak spárovat a spravovat až osm tagů se zař�
 
 18. Pokud párování stále nefunguje, musíte MAC adresu uložit ručně.
 
-19. Použijte k tomu příkaz tag config device add MAC_address, přičemž adresu najdete na tagu nebo v QR kódu.
+19. Použijte příkaz tag config device add MAC_address; adresu najdete na tagu nebo v QR kódu.
 
 20. Po zadání se tag automaticky přidá do prvního volného slotu.
 
@@ -79,8 +79,8 @@ V tomto průvodci se naučíte, jak spárovat a spravovat až osm tagů se zař�
 
 24. Pro kontrolu se znovu připojte k zařízení CHESTER a v konzoli zadejte tag devices list.
 
-25. Měl by se zobrazit seznam vašich spárovaných tagů.
+25. Měl by se zobrazit seznam spárovaných tagů.
 
 26. Čtení otestujete příkazem tag read. Zařízení CHESTER načte aktuální hodnoty z tagů.
 
-27. A to je vše. Nyní můžete tagy nainstalovat tam, kde je potřebujete.
+27. Hotovo. Teď můžete tagy rozmístit tam, kde je potřebujete.

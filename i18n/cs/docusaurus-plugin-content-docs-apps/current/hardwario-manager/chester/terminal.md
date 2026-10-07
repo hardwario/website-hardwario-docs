@@ -5,8 +5,8 @@ title: Terminál
 
 # Terminál zařízení CHESTER {#chester-terminal}
 
-Terminál vám dá shell zařízení přes Bluetooth, tutéž konzoli, ke které byste se
-dostali kabelem, jen z telefonu.
+Terminál zpřístupní shell zařízení přes Bluetooth přímo v telefonu. Je to tatáž
+konzole, ke které byste se jinak připojili kabelem.
 
 Otevřete **CHESTER → Open Terminal**. Prázdný terminál napovídá, kde začít: zadejte příkaz, například `help` nebo `config show`.
 
@@ -14,26 +14,27 @@ Otevřete **CHESTER → Open Terminal**. Prázdný terminál napovídá, kde za�
 
 ## Spouštění příkazů {#running-commands}
 
-Napište příkaz do **Enter a shell command** a odešlete ho. Příkaz se do logu
-vypíše jako `$ command` a pod ním následuje výstup zařízení beze změny
-v monospace bloku. Výstup lze vybrat a zkopírovat.
+Napište příkaz do pole **Enter a shell command** a odešlete ho. Příkaz se do
+logu vypíše jako `$ command` a pod ním se v bloku s neproporcionálním písmem
+zobrazí nezměněný výstup zařízení. Výstup lze označit a zkopírovat.
 
-<img src="/img/hw-manager/hw-manager-chester-terminal.png" alt="Terminál zařízení CHESTER s výstupem příkazu config show a odznaky s návrhy příkazů nad vstupním polem" width="320" />
+<img src="/img/hw-manager/hw-manager-chester-terminal.png" alt="Terminál zařízení CHESTER s výstupem příkazu config show a tlačítky s návrhy příkazů nad vstupním polem" width="320" />
 
-Pokud se příkaz nepodaří odeslat, zapíše se selhání do logu jako řádek
-`[error]`, takže přepis drží úplný záznam toho, co se stalo.
+Pokud se příkaz nepodaří odeslat, zapíše se chyba přímo do logu jako řádek
+`[error]`, takže v záznamu toho, co se stalo, nic nechybí.
 
 ---
 
 ## Návrhy příkazů {#command-suggestions}
 
-Terminál se sadu příkazů zařízení naučí, místo aby hádal:
+Terminál nehádá, ale zjistí si sadu příkazů přímo od zařízení:
 
-- při otevření se aplikace zařízení tiše zeptá na seznam jeho příkazů;
-- jakmile napíšete víc než první slovo, zeptá se daného příkazu na jeho podpříkazy.
+- při otevření si aplikace na pozadí vyžádá od zařízení seznam jeho příkazů;
+- jakmile dopíšete první slovo, zjistí si podpříkazy daného příkazu.
 
-Odpovídající návrhy se objeví jako odznaky nad vstupním polem. Klepnutí na některý
-**vyplní vstup**. Nikdy příkaz nespustí, takže ho vždycky odesíláte vy sami.
+Odpovídající návrhy se zobrazí jako tlačítka nad vstupním polem. Klepnutím na
+návrh se **vyplní vstupní pole**. Příkaz se tím nikdy nespustí, odesíláte ho vždy
+sami.
 
 <img src="/img/hw-manager/hw-manager-chester-terminal-help.png" alt="Terminál po spuštění help se seznamem skupin příkazů daného zařízení" width="320" />
 
@@ -47,25 +48,25 @@ odpojení se smažou.
 
 ## Historie výpisu {#scrollback}
 
-Log se drží **pro každé zařízení zvlášť**, takže při opětovném připojení
-k zařízení CHESTER se vrátí to, co jste s ním dělali naposledy. Když odscrollujete
-nahoru, objeví se tlačítko pro skok na konec, a odeslání příkazu skočí zpět na
-nejnovější výstup.
+Log se ukládá **pro každé zařízení zvlášť**, takže po opětovném připojení
+k zařízení CHESTER uvidíte, co jste s ním dělali naposledy. Když se posunete
+nahoru, objeví se tlačítko pro přechod na konec; po odeslání příkazu se výpis
+vrátí na nejnovější výstup.
 
 Pokud zařízení obrazovku vymaže samo, vymaže se s ní i log.
 
 ---
 
-## Sdílení session {#sharing-the-session}
+## Sdílení relace {#sharing-the-session}
 
-Akce v horní liště tenhle terminál nasdílí někomu dalšímu, kdo pak může zařízení
+Akcí v horní liště terminál nasdílíte někomu dalšímu, kdo pak může zařízení
 sledovat a ovládat z prohlížeče. Viz
-[**Sdílení terminálové session**](./shared-sessions.md).
+[**Sdílení relace terminálu**](./shared-sessions.md).
 
 ---
 
-:::tip Uchování toho, co změníte
-Nastavení změněná ze shellu žijí v pracovní paměti zařízení. Pomocí
-**Device info → Save configuration** je zapište, aby přežila restart, viz
+:::tip Jak změny zachovat
+Nastavení změněná ze shellu jsou jen v pracovní paměti zařízení. Uložte je volbou
+**Device info → Save configuration**, aby vydržela i restart, viz
 [**Informace o zařízení**](./device-info.md).
 :::

@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 This tutorial is made for the [**Air Quality Monitor**](https://www.hardwario.store/p/clime-xl-set) connected to the **Raspberry Pi** with the Hub installed on it.
 
-You can use our [**Pre-Installed Image**](../server-raspberry-pi/installation-os.md) or your [**own Raspberry where you will install the Hub**](../server-raspberry-pi/installation-clean-os.md)
+You can use our [**Pre-Installed Image**](../server-raspberry-pi/installation-os.md) or your [**own Raspberry where you will install the Hub**](../server-raspberry-pi/installation-clean-os.md).
 
 :::
 
@@ -177,7 +177,7 @@ Default **Password** is `admin`.
 
 :::warning
 
-To make this part work without any additional configuration you need to follow the tutorial for [**MQTT Storage (mqtt2influxdb)**](../command-line-tools/mqtt-to-influx-db.md)
+To make this part work without any additional configuration you need to follow the tutorial for [**MQTT Storage (mqtt2influxdb)**](../command-line-tools/mqtt-to-influx-db.md).
 
 :::
 

@@ -7,33 +7,33 @@ import Image from '@theme/IdealImage';
 
 # Přístup pro vývojáře (režim Debug) {#developer-access-debug-mode}
 
-STICKER je **otevřená platforma** postavená na Zephyr RTOS. **Debug build** firmwaru přidává interaktivní shell konzoli přes RTT, kterou vývojáři používají ke konfiguraci zařízení a k diagnostice přímo přes debugovací připojení.
+STICKER je **otevřená platforma** postavená na Zephyr RTOS. **Sestavení debug** firmwaru přidává interaktivní konzoli shellu přes RTT, ve které vývojáři zařízení konfigurují a spouštějí diagnostiku přímo přes ladicí připojení.
 
 ## Režim Debug {#debug-mode}
 
-Zařízení STICKER lze dodat v **režimu Debug**, který je určený především vývojářům. V této konfiguraci se zařízení dodává v otevřeném stavu s přímým přístupem pro vývoj, takže můžete jeho funkce zkoumat, upravovat a rozšiřovat.
+Zařízení STICKER lze dodat v **režimu Debug**, který je určený především vývojářům. Zařízení se pak dodává v otevřeném stavu s přímým přístupem pro vývoj, takže jeho funkce můžete zkoumat, upravovat a rozšiřovat.
 
 :::info
-Koncoví uživatelé konfigurují zařízení STICKER běžně přes **NFC** pomocí telefonu, bez kabelu a bez konzole. Viz [**HARDWARIO Manager**](/apps/hardwario-manager/sticker). Stránky níže se týkají vývoje firmwaru a konfigurace přes shell.
+Koncoví uživatelé zařízení STICKER běžně nastavují přes **NFC** telefonem, bez kabelu a bez konzole. Viz [**HARDWARIO Manager**](/apps/hardwario-manager/sticker). Stránky níže se týkají vývoje firmwaru a konfigurace přes shell.
 :::
 
 ---
 
 ## První kroky {#getting-started}
 
-Chcete-li si firmware nastavit lokálně, nahrát debug image a otevřít konzoli, postupujte podle [**Nastavení firmwaru**](developer-access/firmware-setup.md).
+Jak firmware připravit na svém počítači, nahrát image debug a otevřít konzoli, popisuje stránka [**Nastavení firmwaru**](developer-access/firmware-setup.md).
 
 ---
 
 :::info Firmware v1.4.0
-Několik příkazů shellu níže (`clock`, `history`, dynamická pravidla `alarm`, `settings erase` a přejmenovaná diagnostika `ats`) je nových v připravovaném **firmwaru STICKER v1.4.0**.
+Některé z níže uvedených příkazů shellu (`clock`, `history`, dynamická pravidla `alarm`, `settings erase` a přejmenovaná diagnostika `ats`) přinesl až **firmware STICKER v1.4.0**.
 :::
 
 ## Přehled příkazů shellu {#shell-command-reference}
 
-Jakmile je konzole otevřená, konfigurace a diagnostika se zadávají jako příkazy shellu. Každý příkaz má vlastní stránku:
+V otevřené konzoli se konfigurace i diagnostika zadávají příkazy shellu. Každý příkaz má vlastní stránku:
 
-- [**Konfigurace**](developer-access/configuration.md): příkaz `config`: intervaly, LoRaWAN, senzory, schopnosti, pulzní čítače, identita zařízení.
+- [**Konfigurace**](developer-access/configuration.md): příkaz `config`: intervaly, LoRaWAN, senzory, schopnosti, čítače impulzů, identita zařízení.
 - [**Pravidla alarmů**](developer-access/alarm-rules.md): příkaz `alarm` a limity alarmových uplinků.
 - [**Historie senzorů**](developer-access/sensor-history.md): příkaz `history` a záznam store-and-forward.
 - [**Hodiny reálného času**](developer-access/clock.md): příkaz `clock`.

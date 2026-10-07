@@ -70,7 +70,7 @@ Terminal block pins can have these signals based on solder bridges:
 This picture shows how to extend the 1-Wire bus to 8-pin terminal blocks A and B. Solder the highlighted solder bridges so the 1-Wire signals from the 1-Wire terminal
 block are duplicated to the 8-pin terminal blocks.
 
-Please note that the **solder bridges** are on the bottom side of the PCB. So in the picture below the blue solder bridge rectangles **on the right** of the PCB actually connects signals **to the left** 8-pin terminal blocks TB1 and TB2 when looked at the front of the PCB.
+Please note that the **solder bridges** are on the bottom side of the PCB. So in the picture below the blue solder bridge rectangles **on the right** of the PCB actually connect signals **to the left** 8-pin terminal blocks TB1 and TB2 when looking at the front of the PCB.
 
 ![Bottom of the PCB with the 1-Wire VDD and DQ solder bridges and the GND bridges highlighted](images/solder-bridges.png)
 
@@ -78,7 +78,7 @@ This picture shows the terminal blocks connection:
 
 ![Front view: block A terminals TB1/TB2 in blue and block B terminals TB5/TB6 in green beside the 1-Wire and I2C terminals](images/terminal-blocks.png)
 
-This table shows the connection of 1-Wire to terminal blocks and JST 8-pin connectors::
+This table shows the connection of 1-Wire to terminal blocks and JST 8-pin connectors:
 
 | Terminal BLOCK Position | Signal Name | Signal Description   |
 | :---------------------: | :---------: | :------------------- |

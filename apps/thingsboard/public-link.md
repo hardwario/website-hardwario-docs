@@ -23,7 +23,7 @@ To resolve this, you must log in as a **Customer Administrator** for that specif
 2. **Find** the customer, click the **Manage customer users** icon, and log in as one of their administrators. 
 3. **Workaround:** If the sub-customer does not have any Customer Administrator accounts yet, you can create a temporary test profile. You do not need to use a real email address (e.g., `test@temp.local`). Create the user, log in as them to complete this tutorial, and delete the temporary user account afterward.
 
-*(Alternatively, if you only need to grab the public link without logging in as the sub-customer, check out the [**Pro Tip below**](#-pro-tip-how-to-get-the-link-without-logging-in-as-a-sub-customer)!)*
+*(Alternatively, if you only need to grab the public link without logging in as the sub-customer, check out the [**Pro Tip below**](#-pro-tip-how-to-get-the-link-without-logging-in-as-a-sub-customer).)*
 :::
 ---
 

@@ -20,7 +20,7 @@ The network scan is the only method that tells you what is genuinely available a
 ## List Available Networks
 
 You can use CHESTER to scan for networks it can see. This is mainly for troubleshooting purposes.
-you have to use J-Link RTT connection with [HARDWARIO CLI](../../developer-tools/command-line-tools.md), this doesn't work with a BLE connection.
+You have to use a J-Link RTT connection with [HARDWARIO CLI](../../developer-tools/command-line-tools.md); this doesn't work with a BLE connection.
 
 Open HARDWARIO CLI console by typing `hardwario chester app console`
 

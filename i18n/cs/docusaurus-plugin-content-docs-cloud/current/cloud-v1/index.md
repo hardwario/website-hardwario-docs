@@ -4,7 +4,7 @@ title: Starší verze (Cloud v1)
 description: "Referenční dokumentace ke starší verzi HARDWARIO Cloud v1; aktuální platformu popisuje hlavní dokumentace HARDWARIO Cloud."
 ---
 
-# Starší verze – HARDWARIO Cloud v1 {#legacy--hardwario-cloud-v1}
+# Starší verze: HARDWARIO Cloud v1 {#legacy--hardwario-cloud-v1}
 
 Referenční dokumentace ke starší verzi **HARDWARIO Cloud v1**. Aktuální platformu najdete v hlavní
 dokumentaci [**HARDWARIO Cloud**](/cloud/).

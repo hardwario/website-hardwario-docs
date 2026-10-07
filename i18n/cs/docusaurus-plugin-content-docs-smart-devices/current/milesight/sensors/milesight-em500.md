@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Senzor Milesight EM500-CO2 {#milesight-sensor-em500-co2}
 
-Milesight EM500-CO2 je **venkovní senzor pro monitoring prostředí 4 v 1** určený pro **měření hladiny CO₂ společně s podmínkami prostředí** v náročném provozu. Nabízí **NDIR senzor CO₂** s **rozsahem 400–5 000 ppm**, integrované **senzory teploty, vlhkosti a barometrického tlaku**, **krabičku s krytím IP65** a **desetiletou výdrž baterie**. Díky **konektivitě LoRaWAN** a **konfiguraci přes NFC** je ideální pro monitoring skleníků, ventilaci budov, skladování ovoce a detekci lesních požárů.
+Milesight EM500-CO2 je **venkovní senzor prostředí 4 v 1**, který v náročných podmínkách **měří koncentraci CO₂ spolu s dalšími veličinami prostředí**. Má **senzor CO₂ typu NDIR** s **rozsahem 400–5 000 ppm**, vestavěné **senzory teploty, vlhkosti a barometrického tlaku**, **krabičku s krytím IP65** a **baterii s výdrží 10 let**. Díky **konektivitě LoRaWAN** a **konfiguraci přes NFC** se hodí pro monitorování skleníků, řízení větrání budov, sklady ovoce a detekci lesních požárů.
 
 <div class="container">
   <div class="row">
@@ -22,29 +22,29 @@ Milesight EM500-CO2 je **venkovní senzor pro monitoring prostředí 4 v 1** ur�
 <br />
 
 :::info Řada EM500
-Řada EM500 zahrnuje několik variant: **EM500-SWL** (hladina vody), **EM500-PP** (tlak v potrubí), **EM500-LGT** (osvětlení), **EM500-PT100** (teplota), **EM500-CO2** (CO₂), **EM500-SMTC** (vlhkost půdy) a další. Tato dokumentace se věnuje modelu EM500-CO2.
+Řada EM500 má několik variant: **EM500-SWL** (hladina vody), **EM500-PP** (tlak v potrubí), **EM500-LGT** (osvětlení), **EM500-PT100** (teplota), **EM500-CO2** (CO₂), **EM500-SMTC** (vlhkost půdy) a další. Tato stránka popisuje model EM500-CO2.
 :::
 
-## Odkazy pro integraci {#integration-links}
+## Odkazy k integraci {#integration-links}
 | Zdroj           | Odkaz                                                                |
 |-----------------|----------------------------------------------------------------------|
-| HARDWARIO Store | Zatím není dostupné                                                   |
+| E-shop HARDWARIO | Zatím není k dispozici                                                   |
 | Oficiální stránka | https://www.milesight.com/iot/product/lorawan-sensor/em500-co2      |
 | Uživatelská příručka | https://resource.milesight.com/milesight/iot/document/em500-series-user-guide-en.pdf |
-| Datasheet       | https://resource.milesight.com/milesight/iot/document/em500-co2-datasheet-en.pdf |
+| Produktový list       | https://resource.milesight.com/milesight/iot/document/em500-co2-datasheet-en.pdf |
 
 ---
 
 ## Obecná konfigurace {#general-configuration}
-Konfigurace se provádí přes NFC pomocí [aplikace Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
+Zařízení se konfiguruje přes NFC v [aplikaci Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
 
-Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
+Postup konfigurace najdete v části 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
 
 ---
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
+Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options).
 
 ---
 
@@ -58,7 +58,7 @@ Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde
 | AppKey           | 5572404C696E6B4C6F52613230313823 |
 
 :::info 
-**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení jedinečný a najdete ho vytištěný na etiketě zařízení.
+**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení jedinečný a je vytištěný na jeho štítku.
 :::
 
 ---
@@ -69,13 +69,13 @@ Informace o podporovaných platformách síťových serverů LoRaWAN najdete zde
 |------|--------------|
 | Dekodér | [Zobrazit dekodér](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em500-co2/em500-co2-decoder.js) |
 | Enkodér | [Zobrazit enkodér](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em500-co2/em500-co2-encoder.js) |
-| Codec | [Zobrazit codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em500-co2/em500-co2-codec.json) |
+| Kodek | [Zobrazit kodek](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em500-co2/em500-co2-codec.json) |
 
 :::info
-### Přehled terminologie {#terminology-overview}
+### Přehled pojmů {#terminology-overview}
 **Dekodér** -> Převádí binární payload zařízení na čitelný JSON.<br />
-**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlinky.<br />
-**Codec** -> Definuje pravidla pro dekódování a kódování (struktura, položky, porty) používaná síťovými servery.
+**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlink.<br />
+**Kodek** -> Definuje pravidla dekódování a kódování (strukturu, pole, porty), podle kterých pracují síťové servery.
 :::
 
 

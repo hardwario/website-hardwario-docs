@@ -362,7 +362,7 @@
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "Tato stránka je rozpracovaná. Zobrazí se jen ve vývojovém režimu a do produkčního buildu se nedostane.",
+    "message": "Tato stránka je rozpracovaná. Zobrazí se jen ve vývojovém režimu a do produkčního sestavení se nedostane.",
     "description": "The draft content banner message"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
@@ -397,7 +397,7 @@
     "message": "IoT hotspot LoRaWAN"
   },
   "home.ember.description": {
-    "message": "Průmyslová vodotěsná brána LoRaWAN s integrovaným LTE pro senzory a aktory."
+    "message": "Průmyslová vodotěsná brána LoRaWAN s integrovaným LTE pro senzory a akční členy."
   },
   "home.fiber.subtitle": {
     "message": "Senzorový IoT monitor"
@@ -409,13 +409,13 @@
     "message": "Vstupní modul Wi-Fi/LAN"
   },
   "home.gauger.description": {
-    "message": "Průmyslové zařízení s Wi-Fi a Ethernetem počítající pulzy z výrobních linek; čítače lze číst přes Modbus TCP a HTTP API."
+    "message": "Průmyslové zařízení s Wi-Fi a Ethernetem, které počítá impulzy z výrobních linek; čítače lze číst přes Modbus TCP a HTTP API."
   },
   "home.glider.subtitle": {
     "message": "Mobilní IoT datalogger"
   },
   "home.glider.description": {
-    "message": "Kompaktní logger LTE-M/NB-IoT pro monitorování teploty, pulzů a Modbus RTU."
+    "message": "Kompaktní logger LTE-M/NB-IoT pro monitorování teploty, impulzů a zařízení Modbus RTU."
   },
   "home.tapper.subtitle": {
     "message": "Čtečka NFC tagů"

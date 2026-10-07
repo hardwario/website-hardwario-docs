@@ -1,17 +1,17 @@
 ---
-title: CBOR Payload
+title: CBOR payload
 sidebar_position: 7
-description: "GLIDER hlásí naměřené hodnoty do HARDWARIO Cloud v binárním formátu CBOR (RFC 8949)."
+description: "GLIDER posílá naměřené hodnoty do HARDWARIO Cloud v binárním formátu CBOR (RFC 8949)."
 ---
 import Image from '@theme/IdealImage';
 
-# Struktura CBOR payloadu {#cbor-payload-structure}
+# Struktura payloadu CBOR {#cbor-payload-structure}
 
-GLIDER hlásí měření do **HARDWARIO Cloud** pomocí binárního formátu **CBOR** (RFC 8949). Aby byly zprávy malé, používá schéma **numerické klíče** místo textových – každý payload se typicky vejde do **70 až 150 bajtů** na lince.
+GLIDER posílá naměřené hodnoty do **HARDWARIO Cloud** v binárním formátu **CBOR** (RFC 8949). Aby zprávy zůstaly malé, používá schéma místo textových klíčů **číselné klíče**, takže se každý payload při přenosu obvykle vejde do **70 až 150 bajtů**.
 
-Schéma je definováno v souboru [`application/codec/cbor-decoder.yaml`](https://github.com/hardwario/) firmwaru zařízení GLIDER a cloud automaticky použije odpovídající dekodér.
+Schéma definuje soubor [`application/codec/cbor-decoder.yaml`](https://github.com/hardwario/) ve firmwaru zařízení GLIDER a cloud k němu automaticky použije odpovídající dekodér.
 
-Frekvenci odesílání řídí `app config interval-send` (výchozí **300 s** = 5 minut).
+Jak často se zprávy odesílají, určuje `app config interval-send` (výchozí **300 s** = 5 minut).
 
 ## Struktura nejvyšší úrovně {#top-level-structure}
 
@@ -21,23 +21,23 @@ Po dekódování obsahuje každá zpráva pět objektů nejvyšší úrovně:
 | :--- | :--- |
 | `message` | Metadata: verze schématu, sekvenční číslo, časová značka. |
 | `system` | Systémové informace: doba běhu zařízení. |
-| `thermometers` | Pole měřených teplot, jedna položka pro každý obsazený slot DS18B20. |
+| `thermometers` | Pole naměřených teplot, jedna položka pro každý obsazený slot DS18B20. |
 | `alarms` | Historie aktivací / deaktivací alarmů od předchozí zprávy. |
-| `inputs` | Počítadla digitálních vstupů a nedávné události pro CH1 / CH2. |
+| `inputs` | Čítače digitálních vstupů a poslední události pro CH1 / CH2. |
 
 ## `message` {#message}
 
-Hlavička zprávy. CBOR klíč: `0`.
+Hlavička zprávy. Klíč CBOR: `0`.
 
 | Pole | Typ | Jednotka | Popis |
 | :--- | :--- | :--- | :--- |
 | `version` | uint | - | Verze schématu, aktuálně **`1`**. Slouží pro dopřednou kompatibilitu. |
-| `sequence` | uint32 | - | Postupně narůstající sekvenční číslo. Po každém restartu začíná na `0`. Cloud podle mezer detekuje ztracené uplinky. |
-| `timestamp` | int64 | Unix epoch (s) | Čas odeslání, získaný z RTC. |
+| `sequence` | uint32 | - | Postupně narůstající sekvenční číslo. Po každém restartu začíná na `0`. Podle mezer v číslování cloud pozná ztracené uplinky. |
+| `timestamp` | int64 | Unix epoch (s) | Čas odeslání podle RTC. |
 
 ## `system` {#system}
 
-CBOR klíč: `4`.
+Klíč CBOR: `4`.
 
 | Pole | Typ | Jednotka | Popis |
 | :--- | :--- | :--- | :--- |
@@ -45,17 +45,17 @@ CBOR klíč: `4`.
 
 ## `thermometers` {#thermometers}
 
-Pole map – jedna položka pro každý nakonfigurovaný slot DS18B20. **Prázdné sloty** (bez přiřazeného ROM nebo dosud neověřené) jsou z payloadu **vynechány**.
+Pole map s jednou položkou pro každý nakonfigurovaný slot DS18B20. **Prázdné sloty** (bez přiřazeného kódu ROM nebo dosud neověřené) se do payloadu **nezahrnují**.
 
-CBOR klíč: `6`.
+Klíč CBOR: `6`.
 
 | Pole | Typ | Jednotka | Popis |
 | :--- | :--- | :--- | :--- |
 | `slot` | uint (1-8) | - | Číslo slotu (`APP_W1_THERM_MAX_SLOTS = 8`). |
-| `temperature` | int (×0,01 °C) nebo `null` | °C | Poslední úspěšné čtení. Kóduje se jako `temperature × 100`; dekodér hodnotu přepočítá (`$div: 100`, `$fpp: 2`). `null` = NaN (neúspěšné čtení). |
+| `temperature` | int (×0,01 °C) nebo `null` | °C | Hodnota z posledního úspěšného čtení. Kóduje se jako `temperature × 100`; dekodér hodnotu přepočítá (`$div: 100`, `$fpp: 2`). `null` = NaN (neúspěšné čtení). |
 
 :::info
-Na každý slot se odesílá pouze **nejnovější vzorek**, nikoli celá historie mezi uplinky. Pokud potřebujete časovou řadu, vzorkujte častěji a smiřte se s proporcionálně vyššími náklady na data – nebo založte feature request.
+Za každý slot se odesílá jen **nejnovější vzorek**, ne celá historie od posledního uplinku. Pokud potřebujete časovou řadu, vzorkujte častěji a počítejte s úměrně vyššími náklady na přenos dat, nebo požádejte o novou funkci (feature request).
 :::
 
 #### Příklad {#example}
@@ -70,7 +70,7 @@ thermometers:
 
 ## `alarms` {#alarms}
 
-CBOR klíč: `9`.
+Klíč CBOR: `9`.
 
 | Pole | Typ | Popis |
 | :--- | :--- | :--- |
@@ -84,9 +84,9 @@ Hodnota `events` je **plochý seznam** v tomto pořadí:
 [timestamp_abs, offset_1, alarm_1, active_1, offset_2, alarm_2, active_2, …]
 ```
 
-- `timestamp_abs`: Unix epoch (s) **první** události v seznamu (kotva).
-- `offset_N`: sekundy relativně k `timestamp_abs`.
-- `alarm_N`: číslo pravidla (od 1, tedy 1-32).
+- `timestamp_abs`: Unix epoch (s) **první** události v seznamu (výchozí bod).
+- `offset_N`: počet sekund od `timestamp_abs`.
+- `alarm_N`: číslo pravidla (číslováno od 1, 1-32).
 - `active_N`: `1` = aktivováno, `0` = deaktivováno.
 
 Buffer pojme až **100 událostí** (`APP_ALARM_MAX_EVENTS`).
@@ -109,13 +109,13 @@ alarms:
 
 Pole map, jedna položka pro každý kanál digitálního vstupu (`APP_INPUTS_NUM_CHANNELS = 2`).
 
-CBOR klíč: `11`.
+Klíč CBOR: `11`.
 
 | Pole | Typ | Popis |
 | :--- | :--- | :--- |
 | `channel` | uint (1 / 2) | Číslo kanálu. |
-| `counter_rising` | uint64 | Kumulativní počet nástupných hran od startu. Při restartu se nuluje. |
-| `counter_falling` | uint64 | Kumulativní počet sestupných hran od startu. |
+| `counter_rising` | uint64 | Celkový počet vzestupných hran od startu. Restart ho vynuluje. |
+| `counter_falling` | uint64 | Celkový počet sestupných hran od startu. |
 | `events` | TSO list | Časová osa hran (plní se pouze tehdy, je-li kanál v režimu **event**). Po každém odeslání se vymaže. |
 
 #### `events` – formát TSO {#events---tso-format}
@@ -125,12 +125,12 @@ CBOR klíč: `11`.
 ```
 
 - `timestamp_abs`: Unix epoch (s) první události.
-- `offset_N`: sekundy relativně k `timestamp_abs`.
-- `active_N`: `1` = aktivace (nástupná hrana), `0` = deaktivace (sestupná hrana).
+- `offset_N`: počet sekund od `timestamp_abs`.
+- `active_N`: `1` = aktivace (vzestupná hrana), `0` = deaktivace (sestupná hrana).
 
 Buffer pojme až **64 událostí na kanál** (`APP_INPUTS_MAX_EVENTS`).
 
-Režim kanálu (`disabled` / `counter` / `event`) se nastavuje konfigurací – viz [**Konfigurace → Digitální vstupy**](configuration.md#digital-inputs).
+Režim kanálu (`disabled` / `counter` / `event`) se nastavuje v konfiguraci, viz [**Konfigurace → Digitální vstupy**](configuration.md#digital-inputs).
 
 #### Příklad {#example-2}
 
@@ -153,7 +153,7 @@ inputs:
 
 ## Kompletní příklad {#complete-example}
 
-Typický dekódovaný payload ze zařízení GLIDER, které monitoruje dvě sondy DS18B20, bez nedávných alarmových událostí a s jedním vstupem počítajícím pulzy:
+Typický dekódovaný payload ze zařízení GLIDER se dvěma sondami DS18B20, bez nových událostí alarmů a s jedním vstupem, který čítá impulzy:
 
 ```yaml
 message:
@@ -180,26 +180,26 @@ inputs:
  events: []
 ```
 
-Na lince má tento payload **~95 bajtů** CBOR.
+Při přenosu má tento payload v CBOR **~95 bajtů**.
 
 ## Hash kodeku {#codec-hash}
 
-Aby cloud použil správný dekodér pro správný firmware, má každé schéma 64bitový hash zapečený ve firmwaru:
+Aby cloud ke každému firmwaru použil správný dekodér, má každé schéma 64bitový hash, který je pevně zakompilovaný ve firmwaru:
 
 ```c
 #define CODEC_CLOUD_DECODER_HASH ((uint64_t)0xcfef6b4543a9ddb7)
 ```
 
-Změna schématu hash přegeneruje a v cloudu je nutné aktualizovat odpovídající dekodér. Příkaz generátoru je:
+Při změně schématu se hash vygeneruje znovu a v cloudu je nutné nasadit odpovídající dekodér. Generátor spustíte příkazem:
 
 ```bash
 west gen-codec
 ```
 
-Přečte `application/codec/cbor-decoder.yaml`, zapíše `application/src/app_codec.h` s novým hashem a vytvoří binární buffer dekodéru, který se vloží do obrazu firmwaru.
+Příkaz přečte `application/codec/cbor-decoder.yaml`, zapíše `application/src/app_codec.h` s novým hashem a vytvoří binární buffer dekodéru, který se vloží do obrazu firmwaru.
 
 ## Související {#related}
 
 - **Specifikace CBOR:** [RFC 8949](https://www.rfc-editor.org/rfc/rfc8949)
-- **Zdroj enkodéru:** `application/src/app_cbor.c`
-- **Zdroj schématu:** `application/codec/cbor-decoder.yaml`
+- **Zdrojový kód enkodéru:** `application/src/app_cbor.c`
+- **Zdrojový soubor schématu:** `application/codec/cbor-decoder.yaml`

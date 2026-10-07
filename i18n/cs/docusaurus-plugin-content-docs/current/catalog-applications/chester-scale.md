@@ -6,72 +6,72 @@ import Image from '@theme/IdealImage';
 
 # CHESTER Scale {#chester-scale}
 
-Tento článek popisuje základní funkce, hardware a příklad **JSON** zprávy katalogové aplikace **CHESTER Scale**.
+Tento článek popisuje základní funkce katalogové aplikace **CHESTER Scale**, její hardware a ukázkovou zprávu **JSON**.
 
 :::caution
 
-Některé základní informace zde nejsou uvedeny, protože jsou společné pro všechny katalogové aplikace CHESTER. Podívejte se prosím na:
+Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
 
-- [**První kroky**](/chester/first-steps): jak připojit zařízení do Cloudu.
-- [**Společná funkcionalita**](common-functionality.md): jak funguje LED, tlačítko a konfigurace sítě.
-- [**Správa platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
+- [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
+- [**Společné funkce**](common-functionality.md): jak fungují LED, tlačítko a nastavení sítě.
+- [**Konektivita platformy**](/chester/category/platform-connectivity/): jak pracovat s interaktivní konzolí.
 
 :::
 
 ## Přehled aplikace {#application-overview}
 
-**CHESTER Scale** je určen pro bezdrátové měření hmotnosti pomocí tenzometrických snímačů. Aplikace podporuje připojení několika hmotnostních sond (až 4 kanály) a poskytuje přenos dat o hmotnosti v reálném čase přes sítě NB-IoT/LTE-M nebo LoRaWAN.
+Zařízení **CHESTER Scale** slouží k bezdrátovému měření hmotnosti tenzometrickými snímači. Aplikace podporuje připojení několika snímačů hmotnosti (až 4 kanály) a data o hmotnosti přenáší v reálném čase přes sítě NB-IoT/LTE-M nebo LoRaWAN.
 
-Zařízení je ideální pro:
-- **Monitorování průmyslových zásobníků**: sledování hladiny náplně nádrží, sil nebo kontejnerů
-- **Sledování palet a zboží**: monitorování změn hmotnosti v logistice a skladování
-- **Monitorování hmotnosti hospodářských zvířat**: optimalizace krmných plánů a sledování zdraví zvířat
-- **Zemědělské aplikace**: monitorování úlů, skladování krmiva atd.
+Zařízení se hodí například pro:
+- **Sledování průmyslových zásobníků**: stav naplnění nádrží, sil nebo kontejnerů
+- **Sledování palet a zboží**: změny hmotnosti v logistice a ve skladech
+- **Sledování hmotnosti hospodářských zvířat**: lepší plánování krmení a kontrola zdraví zvířat
+- **Zemědělství**: sledování úlů, zásob krmiva atd.
 
 ## Varianty aplikace {#application-variants}
 
-**CHESTER Scale** lze objednat v jedné z těchto variant:
+Zařízení **CHESTER Scale** lze objednat v jedné z těchto variant:
 
 ### CHESTER Scale {#chester-scale}
 
 Katalogová aplikace **CHESTER Scale** měří hmotnost až ze 4 kanálů tenzometrických snímačů.
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: standardní základní deska
-* `CHESTER-X3C:A` nebo `CHESTER-X3C:B` – rozhraní pro tenzometrické snímače (2 kanály na modul)
-* `CHESTER-E2-LP`: krabička s SMA pigtailem
+* `CHESTER-X3C:A` nebo `CHESTER-X3C:B`: rozhraní pro tenzometrické snímače (2 kanály na modul)
+* `CHESTER-E2-LP`: krabička s pigtailem SMA
 
-Více podrobností najdete v [**objednacích kódech**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
-Varianta buildu firmwaru: `west chester-update scale --variant "CHESTER Scale"`
+Varianta sestavení firmwaru: `west chester-update scale --variant "CHESTER Scale"`
 
 :::info
-Od verze **v3.5.5** firmware sestavený s `ctr_x3_b` detekuje modul CHESTER-X3 ve slotu B za běhu. Jediný firmware tak pokrývá hardware s jedním slotem (pouze A) i se dvěma sloty (A+B). Kanály B1/B2 se automaticky přeskočí, pokud modul ve slotu B není nainstalován.
+Od verze **v3.5.5** rozpozná firmware sestavený s `ctr_x3_b` modul CHESTER-X3 ve slotu B za běhu. Stejný firmware tak funguje s jedním osazeným slotem (jen A) i se dvěma (A+B). Když ve slotu B modul není, kanály B1/B2 se automaticky vynechají.
 :::
 
 ### CHESTER Scale Z {#chester-scale-z}
 
-Katalogová aplikace **CHESTER Scale Z** obsahuje podporu záložní baterie pro nepřerušený provoz.
+Katalogová aplikace **CHESTER Scale Z** podporuje záložní baterii pro nepřerušený provoz.
 
-Hardware této aplikace se skládá z následujících objednacích kódů:
+Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-BCGLS`: standardní základní deska
 * `CHESTER-Z1`: záložní modul
-* `CHESTER-X3C:A` nebo `CHESTER-X3C:B` – rozhraní pro tenzometrické snímače (2 kanály na modul)
-* `CHESTER-E2-LP`: krabička s SMA pigtailem
+* `CHESTER-X3C:A` nebo `CHESTER-X3C:B`: rozhraní pro tenzometrické snímače (2 kanály na modul)
+* `CHESTER-E2-LP`: krabička s pigtailem SMA
 
-Více podrobností najdete v [**objednacích kódech**](../ordering-codes.md).
+Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
-Varianta buildu firmwaru: `west chester-update scale --variant "CHESTER Scale Z"`
+Varianta sestavení firmwaru: `west chester-update scale --variant "CHESTER Scale Z"`
 
 ## Měření a chování {#measurement-and-behavior}
 
 ### Měření hmotnosti {#weight-measurement}
 
-- Snímače hmotnosti jsou **vzorkovány** s konfigurovatelnou periodou (parametr `interval-sample`).
-- Vzorky jsou následně **agregovány** v konfigurovatelném intervalu (parametr `interval-aggreg`). Z uložených vzorků se pro každý kanál vypočítá minimum, maximum, průměr a medián.
-- Každá agregovaná hodnota má svoji časovou značku a odesílá se dávkově v intervalu reportu (parametr `interval-report`).
+- Snímače hmotnosti se **vzorkují** s nastavitelnou periodou (parametr `interval-sample`).
+- Vzorky se pak **agregují** v nastavitelném intervalu (parametr `interval-aggreg`): z uložených vzorků se pro každý kanál spočítá minimum, maximum, průměr a medián.
+- Každá agregovaná hodnota má svou časovou značku; hodnoty se odesílají v dávkách v intervalu hlášení (parametr `interval-report`).
 - Parametr `weight-measurement-interval` určuje, jak často se cyklus měření hmotnosti spouští.
 
 ### Konfigurace kanálů {#channel-configuration}
@@ -80,20 +80,20 @@ Aplikace podporuje až 4 kanály měření hmotnosti:
 - **Kanál A1** a **kanál A2** ve slotu A
 - **Kanál B1** a **kanál B2** ve slotu B
 
-Každý kanál lze zapnout nebo vypnout jednotlivě.
+Každý kanál lze zapnout nebo vypnout samostatně.
 
-### Záloha (CHESTER Scale Z) {#backup-chester-scale-z}
+### Záložní napájení (CHESTER Scale Z) {#backup-chester-scale-z}
 
-**CHESTER Scale Z** (vybavený modulem **CHESTER-Z1**) může navíc reportovat informace o záložní baterii a stavu externího DC napájení.
+Zařízení **CHESTER Scale Z** (s modulem **CHESTER-Z1**) navíc hlásí stav záložní baterie a externího napájení DC.
 
-* Aktuální **napětí baterie** a **napětí externího DC** se odesílají v každém reportu.
-* Když se změní stav DC napájecího vstupu, uloží se časová značka této události společně se stavem **connected**/**disconnected**, tato informace se ukládá do bufferu a buffer událostí se odešle (nejpozději) s pravidelným reportem.
-* Volitelně lze změny DC napájecího vstupu reportovat **okamžitě** nebo s konfigurovatelným **zpožděním** (parametr `event-report-delay`).
-* Maximální počet reportů za hodinu je konfigurovatelný (parametr `event-report-rate`).
+* Aktuální **napětí baterie** a **napětí externího zdroje DC** se posílají v každém hlášení.
+* Při změně na napájecím vstupu DC se do bufferu uloží časová značka změny spolu se stavem **connected**/**disconnected** a buffer událostí se odešle nejpozději s pravidelným hlášením.
+* Změny napájecího vstupu DC lze volitelně hlásit **okamžitě** nebo s nastavitelným **zpožděním** (parametr `event-report-delay`).
+* Maximální počet hlášení za hodinu lze nastavit (parametr `event-report-rate`).
 
 ## Výchozí konfigurace {#default-configuration}
 
-Toto je výchozí konfigurace (vypsaná příkazem `app config show`):
+Výchozí konfigurace, jak ji vypíše příkaz `app config show`:
 
 ```
 app config interval-report 900
@@ -106,7 +106,7 @@ app config channel-b1-active true
 app config channel-b2-active true
 ```
 
-Při vybavení **zálohou** (CHESTER-Z1):
+Se **záložním modulem** (CHESTER-Z1):
 
 ```
 app config event-report-delay 1
@@ -115,23 +115,23 @@ app config backup-report-connected true
 app config backup-report-disconnected true
 ```
 
-## Specifické příkazy {#specific-commands}
+## Příkazy aplikace {#specific-commands}
 
 :::info
 
-Celou strukturu příkazů můžete snadno prozkoumat – začněte příkazem `help`.
+Celou stromovou strukturu příkazů snadno prozkoumáte: začněte příkazem `help`.
 
 :::
 
 :::caution
 
-Pro použití nové konfigurace je nutné zavolat `config save`, což aplikuje nové konfigurační parametry a restartuje zařízení.
+Novou konfiguraci uplatníte příkazem `config save`, který uloží nové parametry a restartuje zařízení.
 
 :::
 
-### Reporting {#reporting}
+### Hlášení {#reporting}
 
-Příkaz pro nastavení **intervalu reportu** v sekundách:
+Tímto příkazem nastavíte **interval hlášení** v sekundách:
 
 ```
 app config interval-report <30-86400>
@@ -139,19 +139,19 @@ app config interval-report <30-86400>
 
 ### Vzorkování a agregace {#sampling-and-aggregation}
 
-Příkaz pro nastavení **intervalu vzorkování** v sekundách:
+Tímto příkazem nastavíte **interval vzorkování** v sekundách:
 
 ```
 app config interval-sample <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu agregace** v sekundách:
+Tímto příkazem nastavíte **interval agregace** v sekundách:
 
 ```
 app config interval-aggreg <1-86400>
 ```
 
-Příkaz pro nastavení **intervalu měření hmotnosti** v sekundách:
+Tímto příkazem nastavíte **interval měření hmotnosti** v sekundách:
 
 ```
 app config weight-measurement-interval <30-86400>
@@ -159,51 +159,51 @@ app config weight-measurement-interval <30-86400>
 
 ### Aktivace kanálů {#channel-activation}
 
-Příkaz pro **zapnutí/vypnutí** kanálu A1:
+Tímto příkazem **zapnete nebo vypnete** kanál A1:
 
 ```
 app config channel-a1-active <true/false>
 ```
 
-Příkaz pro **zapnutí/vypnutí** kanálu A2:
+Tímto příkazem **zapnete nebo vypnete** kanál A2:
 
 ```
 app config channel-a2-active <true/false>
 ```
 
-Příkaz pro **zapnutí/vypnutí** kanálu B1:
+Tímto příkazem **zapnete nebo vypnete** kanál B1:
 
 ```
 app config channel-b1-active <true/false>
 ```
 
-Příkaz pro **zapnutí/vypnutí** kanálu B2:
+Tímto příkazem **zapnete nebo vypnete** kanál B2:
 
 ```
 app config channel-b2-active <true/false>
 ```
 
-### Záloha (CHESTER-Z1) {#backup-chester-z1}
+### Záložní napájení (CHESTER-Z1) {#backup-chester-z1}
 
-Příkaz pro nastavení **zpoždění reportu události** v sekundách:
+Tímto příkazem nastavíte **zpoždění hlášení události** v sekundách:
 
 ```
 app config event-report-delay <1-86400>
 ```
 
-Příkaz pro nastavení **frekvence reportů událostí** v reportech za hodinu:
+Tímto příkazem nastavíte **četnost hlášení událostí** (počet hlášení za hodinu):
 
 ```
 app config event-report-rate <1-3600>
 ```
 
-Příkaz pro zapnutí/vypnutí reportování při **připojení** zálohy:
+Tímto příkazem zapnete nebo vypnete hlášení **připojení** napájení záložního modulu:
 
 ```
 app config backup-report-connected <true/false>
 ```
 
-Příkaz pro zapnutí/vypnutí reportování při **odpojení** zálohy:
+Tímto příkazem zapnete nebo vypnete hlášení **odpojení** napájení záložního modulu:
 
 ```
 app config backup-report-disconnected <true/false>
@@ -211,9 +211,9 @@ app config backup-report-disconnected <true/false>
 
 ## Firmware {#firmware}
 
-Nejnovější firmware je dostupný v [kapitole Firmware](index.md#application-firmware) katalogových aplikací.
+Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](index.md#application-firmware).
 
-## Příklad JSON zprávy {#example-json-message}
+## Ukázková zpráva JSON {#example-json-message}
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -222,7 +222,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="lte" label="LTE">
 
 <details>
-<summary><b>Zobrazit příklad JSON</b></summary>
+<summary><b>Zobrazit ukázku JSON</b></summary>
 <p>
 
 ```json
@@ -341,7 +341,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="lora" label="LoRaWAN">
 
 <details>
-<summary><b>Zobrazit příklad JSON</b></summary>
+<summary><b>Zobrazit ukázku JSON</b></summary>
 <p>
 
 ```json
@@ -373,8 +373,8 @@ import TabItem from '@theme/TabItem';
 ## Subsystém BLE Tag {#ble-tag-subsystem}
 
 :::info
-**CHESTER Scale** podporuje také integraci s **Bluetooth tagy** (subsystém Teltonika EYE Sensor) pro bezdrátové monitorování teploty a vlhkosti.
-Jak tuto funkci aktivovat a nakonfigurovat, se dozvíte v dokumentaci [**Subsystém BLE Tag pro CHESTER**](ble-tags.md).
+Zařízení **CHESTER Scale** umí přijímat data také z **Bluetooth tagů** (subsystém Teltonika EYE Sensor) a bezdrátově tak měřit teplotu a vlhkost.
+Jak tuto funkci zapnout a nastavit, popisuje stránka [**Bluetooth tagy**](ble-tags.md).
 :::
 
 ---
@@ -388,12 +388,12 @@ Jak tuto funkci aktivovat a nakonfigurovat, se dozvíte v dokumentaci [**Subsyst
 ### v3.5.0 – 2025-12-03 {#v350--2025-12-03}
 
 - **Přidáno**: Nová varianta: **CHESTER Scale Z** s podporou záložního modulu CHESTER-Z1
-- **Přidáno**: Integrace subsystému BLE tagů: bezdrátová teplota a vlhkost z tagů Teltonika EYE Sensor
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové API endpointy); předchozí firmware pro Cloud v1 zůstává dostupný samostatně
-- **Změněno**: Jediný společný binární firmware pro LTE i LoRaWAN; podpora LoRaWAN se dokončuje (plánováno pro příští vydání)
+- **Přidáno**: Integrace subsystému BLE tagů: bezdrátové měření teploty a vlhkosti tagy Teltonika EYE Sensor
+- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud v1 zůstává dostupný samostatně
+- **Změněno**: Jediný společný binární soubor firmwaru pro LTE i LoRaWAN; podpora LoRaWAN se dokončuje (plánována pro příští vydání)
 
 :::info
 
-Kompletní přehled všech změn platformy najdete v [**seznamu změn CHESTER**](/chester/changelog).
+Kompletní přehled všech změn platformy najdete v [**Seznamu změn CHESTER**](/chester/changelog).
 
 :::

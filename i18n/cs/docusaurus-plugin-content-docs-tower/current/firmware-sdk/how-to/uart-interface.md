@@ -4,34 +4,34 @@ title: "Jak na: Rozhraní UART"
 ---
 import Image from '@theme/IdealImage';
 
-[**Core Module**](../../hardware-modules/about-core-module.md) má 3 rozhraní UART, která můžete využít. Signály jednotlivých kanálů se jmenují TXD**x**, RXD**x**, kde **x** je 0, 1 nebo 2.
+Modul [**Core Module**](../../hardware-modules/about-core-module.md) má 3 rozhraní UART. Signály jednotlivých kanálů se jmenují TXD**x** a RXD**x**, kde **x** je 0, 1 nebo 2.
 
 Pozice signálů najdete ve výkresu s pinoutem modulu.
 
 ## Odkazy {#references}
-- [**UART SDK Module**](https://sdk.hardwario.com/group__twr__uart.html)
+- [**Modul SDK pro UART**](https://sdk.hardwario.com/group__twr__uart.html)
 - Příklad v repozitáři na GitHubu
 
 ## Zápis na UART {#uart-write}
 
 ### Synchronní zápis {#synchronous-write}
 
-Funkce `twr_uart_write` potřebuje vědět, **kolik bajtů se má odeslat**. Proto je nutné použít `sizeof(uart_tx)`.
+Funkce `twr_uart_write` potřebuje vědět, **kolik bajtů má odeslat**, proto použijte `sizeof(uart_tx)`.
 
 :::info
 
 Tento příklad zapíše `Hello world` přes **UART1** s přenosovou rychlostí **115200**.
 
-Nastavení bude **8 datových bitů, bez parity a 1 stop bit**.
+Formát je **8 datových bitů, bez parity, 1 stop bit**.
 
-Tento zápis je blokující, budete muset počkat, dokud se zápis nedokončí.
+Zápis je blokující: program počká, dokud neskončí.
 
 :::
 
 <details>
 <summary>
 <b>
-Příklad kódu pro synchronní zápis na UART
+Příklad kódu: synchronní zápis na UART
 </b>
 </summary>
 <p>
@@ -55,7 +55,7 @@ Příklad kódu pro synchronní zápis na UART
 
 :::info
 
-Tohle je trochu složitější, protože musíte vytvořit strukturu FIFO a pole bufferu FIFO. Potom FIFO inicializujete a přiřadíte ho k rozhraní UART.
+Je to trochu složitější: musíte vytvořit strukturu FIFO a pole pro buffer FIFO, pak FIFO inicializovat a přiřadit k rozhraní UART.
 
 V tomto příkladu ukazujeme pouze **asynchronní zápis**.
 
@@ -64,7 +64,7 @@ V tomto příkladu ukazujeme pouze **asynchronní zápis**.
 <details>
 <summary>
 <b>
-Příklad kódu pro asynchronní zápis na UART
+Příklad kódu: asynchronní zápis na UART
 </b>
 </summary>
 <p>
@@ -102,14 +102,14 @@ Příklad kódu pro asynchronní zápis na UART
 
 ## Čtení z UART {#uart-read}
 
-Pro **čtení přijatých bajtů** máte opět dvě možnosti. Data můžete číst **synchronně** ve své úloze, nebo **asynchronně** pomocí callbacků.
+**Přijaté bajty** můžete opět číst dvěma způsoby: **synchronně** ve své úloze, nebo **asynchronně** pomocí callbacků.
 
 ### Synchronní čtení {#synchronous-read}
 
 <details>
 <summary>
 <b>
-Příklad kódu pro synchronní čtení z UART
+Příklad kódu: synchronní čtení z UART
 </b>
 </summary>
 <p>
@@ -139,13 +139,13 @@ Příklad kódu pro synchronní čtení z UART
 
 Tento příklad asynchronně odesílá a přijímá data na `TWR_UART_UART1` s přenosovou rychlostí **115200**.
 
-Nastavení bude **8 datových bitů, bez parity a 1 stop bit**.
+Formát je **8 datových bitů, bez parity, 1 stop bit**.
 
 :::
 
 :::caution
 
-Tento příklad není energeticky úsporný. Pokud spustíte čtení z UART funkcí `twr_uart_async_read_start`, zařízení **Core Module** nepřejde do režimu spánku, dokud nezavoláte `twr_uart_async_read_stop`.
+Tento příklad nešetří energii. Když spustíte čtení z UART funkcí `twr_uart_async_read_start`, modul **Core Module** neusne, dokud nezavoláte `twr_uart_async_read_stop`.
 
 :::
 
@@ -153,7 +153,7 @@ Tento příklad není energeticky úsporný. Pokud spustíte čtení z UART funk
 <details>
 <summary>
 <b>
-Příklad kódu pro asynchronní čtení z UART
+Příklad kódu: asynchronní čtení z UART
 </b>
 </summary>
 <p>

@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Installation on Ubuntu
 
-The following article will guide you through the **CHESTER SDK** installation on **Ubuntu**. It has been tested on versions **Ubuntu 22.04 LTS**.
+The following article will guide you through the **CHESTER SDK** installation on **Ubuntu**. It has been tested on **Ubuntu 22.04 LTS**.
 
 :::caution
 
@@ -179,7 +179,7 @@ sudo apt install python3-venv
         IDT_LIST:          0 GB         2 KB      0.00%
    ```
 
-1. If your CHESTER APP/BLE is [**connected**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) with J-Link. [**Drivers**](/chester/developer-tools/segger-j-link/) are installed and [**power is on**](../developer-tools/power-profiler-kit-ii.md#basic-usage), you can flash compiled blinky code by typing
+1. If your CHESTER APP/BLE is [**connected**](../developer-tools/segger-j-link.md#segger-j-link-to-app-port-connection) with J-Link, [**drivers**](/chester/developer-tools/segger-j-link/) are installed and [**power is on**](../developer-tools/power-profiler-kit-ii.md#basic-usage), you can flash the compiled blinky code by typing:
 
    ```
    west flash

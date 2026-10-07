@@ -109,7 +109,7 @@ Semicolons separate the tags, so `warehouse-a;installed;q3` is three tags. They
 are trimmed, capped at 32 characters each, de-duplicated ignoring case, and
 sorted. A tag the phone has not seen before is created during the import, and
 the confirmation dialog says how many will be new. See
-[**Organise devices with tags**](./tags.md).
+[**Organize devices with tags**](./tags.md).
 
 :::caution Tags travel in CSV only
 A `tags` field in a JSON file is silently ignored, in both directions. The

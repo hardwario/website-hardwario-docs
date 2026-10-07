@@ -1,4 +1,4 @@
---- 
+---
 slug: i2c-address-space
 title: Adresní prostor I²C
 ---
@@ -6,13 +6,13 @@ import Image from '@theme/IdealImage';
 
 # Adresní prostor I²C {#ic-address-space}
 
-Tento článek poskytuje přehled o přidělení 7bitových adres na sběrnici I²C.
+Tento článek ukazuje, jak jsou na sběrnici I²C přidělené 7bitové adresy.
 
-Ke zjištění všech I²C adres senzorů na vašem zařízení CHESTER můžete použít příkaz shellu [I²C scan](../firmware-sdk/how-to-i2c-bus.md#i2c-scan).
+Adresy I²C všech senzorů ve svém zařízení CHESTER zjistíte příkazem shellu [I²C scan](../firmware-sdk/how-to-i2c-bus.md#i2c-scan).
 
 :::info
 
-Při práci s **CHESTER SDK** obvykle nebudete muset I²C adresy vyhledávat. Vše je předdefinováno ve specifikacích **DeviceTree**. Kontrola případné kolize bude ale potřeba, pokud budete integrovat novou I²C periferii.
+Při práci s **CHESTER SDK** adresy I²C obvykle hledat nemusíte, protože vše je předem definované ve specifikacích **DeviceTree**. Když ale přidáváte novou periferii I²C, zkontrolujte, zda její adresa nekoliduje s některou ze stávajících.
 
 :::
 
@@ -72,7 +72,7 @@ Při práci s **CHESTER SDK** obvykle nebudete muset I²C adresy vyhledávat. V�
 | CHESTER-X12    | `0x54`  | SC16IS740IPW    | Adresa ve slotu A                  |
 | CHESTER-X12    | `0x55`  | SC16IS740IPW    | Adresa ve slotu B                  |
 | CHESTER-S1     | `0x60`  | MPL3115A2       |                                    |
-| CHESTER-M      | `0x64`  | ATSHA204A       | Odstraněno v CHESTER-M R3.3        |
+| CHESTER-M      | `0x64`  | ATSHA204A       | Odstraněno v revizi CHESTER-M R3.3 |
 | CHESTER-S1     | `0x68`  | SENSEAIR-SUNRISE |                                   |
 | People Counter | `0x7f`  | People Counter  | Proprietární modul Adastra Labs    |
 

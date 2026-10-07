@@ -11,11 +11,11 @@ import TabItem from '@theme/TabItem';
 
 # Seznam změn EMBER {#ember-changelog}
 
-Tato stránka sleduje všechny významné změny na platformě EMBER, včetně **firmwaru** a **hardwaru**. Pomocí záložek níže můžete filtrovat podle kategorie změn.
+Na této stránce najdete všechny významné změny platformy EMBER včetně **firmwaru** a **hardwaru**. Záložkami níže můžete změny filtrovat podle kategorie.
 
 :::info
 
-EMBER je založen na hardwaru **MikroTik RBM33G** s operačním systémem **RouterOS**. Aktualizace firmwaru se spravují pomocí vlastního mechanismu aktualizací od společnosti MikroTik (automatická aktualizace RouterOS přes WebFig nebo CLI). Pro EMBER neexistuje samostatný repozitář firmwaru publikovaný společností HARDWARIO.
+Zařízení EMBER je postavené na hardwaru **MikroTik RBM33G** se systémem **RouterOS**. Firmware se aktualizuje vlastním mechanismem společnosti MikroTik (automatická aktualizace RouterOS přes WebFig nebo CLI). Samostatný repozitář firmwaru EMBER od HARDWARIO neexistuje.
 
 Poznámky k vydání RouterOS najdete v [seznamu změn MikroTik](https://mikrotik.com/download/changelogs).
 
@@ -30,9 +30,9 @@ Poznámky k vydání RouterOS najdete v [seznamu změn MikroTik](https://mikroti
 
 :::info
 
-Žádné změny specifické pro HARDWARIO zatím nebyly zaznamenány. Aktualizace se zde objeví, jakmile budou vydány nové konfigurace EMBER, revize krabičky nebo softwarové změny na straně HARDWARIO.
+Zatím nebyly zaznamenány žádné změny na straně HARDWARIO. Objeví se zde, jakmile vyjdou nové konfigurace EMBER, revize krabičky nebo změny softwaru na straně HARDWARIO.
 
-Firmware zařízení EMBER je RouterOS od společnosti MikroTik a aktualizuje se pomocí mechanismu aktualizací MikroTik. Seznam změn firmwaru specifický pro HARDWARIO není k dispozici.
+Firmwarem zařízení EMBER je RouterOS od společnosti MikroTik a aktualizuje se mechanismem aktualizací MikroTik. Vlastní seznam změn firmwaru od HARDWARIO neexistuje.
 
 :::
 
@@ -43,7 +43,7 @@ Firmware zařízení EMBER je RouterOS od společnosti MikroTik a aktualizuje se
 
 :::info
 
-Žádné revize hardwaru zatím nebyly zaznamenány.
+Zatím nebyly zaznamenány žádné revize hardwaru.
 
 :::
 

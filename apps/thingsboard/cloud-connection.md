@@ -231,7 +231,7 @@ Once everything is properly configured, your device’s data should begin flowin
 You can test the data by opening your device in ThingsBoard and checking whether the variables are being updated in real-time.  You can find them by clicking on the device and then selecting the **Latest Telemetry** tab.
 :::
 
-![Thingsboard - Latest Telemetry](images/thingsboard-device-6.png)
+![ThingsBoard - Latest Telemetry](images/thingsboard-device-6.png)
 
 ## Video Tutorial
 

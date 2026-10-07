@@ -5,7 +5,7 @@ title_meta: "Nástroje příkazové řádky (HARDWARIO TOWER)"
 ---
 import Image from '@theme/IdealImage';
 
-Vyvinuli jsme několik **nástrojů příkazové řádky**, aby bylo možné pracovat se systémem HARDWARIO TOWER i bez grafických aplikací.
+Vyvinuli jsme několik **nástrojů příkazové řádky**, se kterými můžete s platformou HARDWARIO TOWER pracovat i bez grafických aplikací.
 
 S těmito nástroji můžete:
 - Provozovat vlastní server se všemi potřebnými nástroji, jak popisuje [**předchozí kapitola**](../server-raspberry-pi/index.md)
@@ -15,6 +15,6 @@ S těmito nástroji můžete:
 
 :::note
 
-Máme také řadu grafických nástrojů. Pokud se o nich chcete dozvědět více, podívejte se na [**kapitolu Programování na počítači**](../category/desktop-programming) nebo [**kapitolu O HARDWARIO Code**](../firmware-development/about-hardwario-code.md)
+Máme také řadu grafických nástrojů. Pokud se o nich chcete dozvědět víc, podívejte se do [**kapitoly Programování na počítači**](../category/desktop-programming) nebo [**kapitoly O aplikaci HARDWARIO Code**](../firmware-development/about-hardwario-code.md).
 
 :::

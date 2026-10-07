@@ -1,15 +1,16 @@
 ---
 slug: /hardwario-manager/chester
 title: CHESTER
-description: "Správa zařízení CHESTER přes Bluetooth Low Energy v aplikaci HARDWARIO Manager: stav zařízení, konfigurace, shell, párování BLE tagů a aktualizace firmwaru."
+description: "Správa zařízení CHESTER přes Bluetooth Low Energy v aplikaci HARDWARIO Manager: stav, konfigurace, shell, přiřazení tagů BLE a aktualizace firmwaru."
 title_meta: "CHESTER (HARDWARIO Manager)"
 ---
 
 # CHESTER přes Bluetooth {#chester-over-bluetooth}
 
-Zařízení CHESTER se spravuje přes **Bluetooth Low Energy**. Připojte k němu
-telefon a můžete přečíst jeho stav, upravit konfiguraci, ovládat jeho shell,
-přiřadit externí senzorové tagy BLE, aktualizovat firmware a restartovat ho.
+Zařízení CHESTER se spravuje přes **Bluetooth Low Energy**. Po připojení
+telefonu můžete číst stav zařízení, upravovat konfiguraci, ovládat shell,
+přiřazovat externí senzorové tagy BLE, aktualizovat firmware a zařízení
+restartovat.
 
 Otevřete **HARDWARIO Manager** a zvolte **CHESTER**.
 
@@ -32,14 +33,14 @@ Otevřete **HARDWARIO Manager** a zvolte **CHESTER**.
 ## Karta připojeného zařízení {#the-connected-device-card}
 
 Nad menu ukazuje **Connected CHESTER** název zařízení, ke kterému jste připojeni.
-Jeho šipka rozbalí souhrn (firmware, sériové číslo, BLE adresu a dobu běhu,
-**podle stavu při posledním připojení**) a **Disconnect** spojení ukončí.
+Šipkou rozbalíte souhrn (firmware, sériové číslo, adresu BLE a dobu běhu,
+**podle stavu při posledním připojení**), tlačítkem **Disconnect** spojení ukončíte.
 
-<img src="/img/hw-manager/hw-manager-chester-connected-details.png" alt="Rozbalená karta připojeného zařízení CHESTER s firmwarem, sériovým číslem, BLE adresou a dobou běhu a akcí Disconnect" width="320" />
+<img src="/img/hw-manager/hw-manager-chester-connected-details.png" alt="Rozbalená karta připojeného zařízení CHESTER s firmwarem, sériovým číslem, adresou BLE, dobou běhu a akcí Disconnect" width="320" />
 
-:::info Jedno zařízení naráz, a jen dokud je obrazovka otevřená
-Aplikace drží **jedno** připojení k zařízení CHESTER a to patří obrazovce CHESTER.
-Opuštěním obrazovky se zařízení odpojí. Když se budete chtít znovu připojit, průvodce
+:::info Vždy jen jedno zařízení, a jen dokud je obrazovka otevřená
+Aplikace udržuje jen **jedno** připojení k zařízení CHESTER a to je vázané na
+obrazovku CHESTER. Když ji opustíte, zařízení se odpojí. Když se budete chtít znovu připojit, průvodce
 nastavením vám zařízení nabídne v seznamu **Recent devices**.
 :::
 
@@ -47,7 +48,7 @@ nastavením vám zařízení nabídne v seznamu **Recent devices**.
 
 ## Než začnete {#before-you-start}
 
-- Bluetooth musí být zapnutý a aplikace potřebuje oprávnění k **zařízením
+- Bluetooth musí být zapnutý a aplikace potřebuje oprávnění **Zařízení
   v okolí**, viz [**Instalace aplikace**](../install.md).
 - Párování používá šestimístný **passkey** svázaný se zařízením. Aplikace ho načte
   za vás, když naskenujete QR kód na štítku zařízení CHESTER.

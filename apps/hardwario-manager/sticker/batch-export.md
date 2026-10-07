@@ -45,5 +45,5 @@ use a [**template**](./templates.md) instead.
 :::
 
 A batch export can be loaded back in later: **Configuration → Configure from
-file** recognises a batch file and asks which device from it to load. See
+file** recognizes a batch file and asks which device from it to load. See
 [**Configuration**](./configuration.md).

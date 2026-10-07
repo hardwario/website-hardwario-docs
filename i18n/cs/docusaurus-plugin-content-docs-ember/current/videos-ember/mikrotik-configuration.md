@@ -5,11 +5,11 @@ title: Konfigurace brány EMBER
 
 import Image from '@theme/IdealImage';
 
-# MikroTik – Jak nakonfigurovat bránu {#mikrotik---how-to-configure-a-gateway}
+# MikroTik: jak nakonfigurovat bránu {#mikrotik---how-to-configure-a-gateway}
 
 ## Přehled návodu {#tutorial-overview}
 
-V tomto průvodci se naučíte, jak nakonfigurovat rozhraní LoRa na bráně MikroTik pomocí rozhraní WebFig. Po provedení těchto kroků bude vaše brána připravena k připojení k serveru LoRaWAN a začne přijímat data z koncových zařízení.
+V tomto návodu se dozvíte, jak přes WebFig nakonfigurovat rozhraní LoRa na bráně MikroTik. Po těchto krocích bude brána připravená k připojení k serveru LoRaWAN a začne přijímat data z koncových zařízení.
 
 <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
   <iframe

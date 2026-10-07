@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # BMeters Hydrocal M4
 
-[Web-Site](https://www.bmeters.com/en/products/hydrocal-m4/)
+[Website](https://www.bmeters.com/en/products/hydrocal-m4/)
 
 <div class="container">
   <div class="row">
@@ -28,7 +28,7 @@ Compact heat/BTU meter capable of measuring the amount of energy used for heatin
 
 ### Configuration Guide for Hydrocal M4 Thermal energy meter via NFC
 
-This guide describes the steps to configure a Hydrocal M4 Thermal energy meter using an Android smartphone.
+This guide describes the steps to configure a Hydrocal M4 thermal energy meter using an Android smartphone.
 
 ---
 
@@ -48,7 +48,7 @@ You can scan the QR code below to go directly to the app:
 
 1. Enable **NFC** on your Android device.
 2. Open the **B METERS NFC Config** app.
-3. Hold your smartphone close to the NFC tag on the water meter until the connection is established.
+3. Hold your smartphone close to the NFC tag on the meter until the connection is established.
 
 ---
 
@@ -90,7 +90,7 @@ Adjust the following settings:
 1. Tap the **Read** button.
 2. Check that the configured values match what was written.
 
-Your water meter is now successfully configured.
+Your meter is now successfully configured.
 
 ## Wireless M-Bus Address Configuration
 

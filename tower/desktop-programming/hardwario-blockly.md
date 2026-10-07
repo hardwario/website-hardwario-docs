@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 :::caution
 
-To work with this tool you need to [**download an experimental HARDWARIO Playground**](https://github.com/SmejkalJakub/hardwario-playground/releases)
+To work with this tool you need to [**download an experimental HARDWARIO Playground**](https://github.com/SmejkalJakub/hardwario-playground/releases).
 
 :::
 
@@ -80,7 +80,7 @@ Buttons at the bottom panel:
 
 :::note
 
-To make your project work you have to add the **Application Initialization** block to the workspace
+To make your project work you have to add the **Application Initialization** block to the workspace.
 
 :::
 
@@ -104,7 +104,7 @@ After you are finished with your firmware, you can simply click the **Compile an
 
 :::tip
 
-More about flashing in the [**Firmware Flashing chapter**](./firmware-flashing.md)
+More about flashing in the [**Firmware Flashing chapter**](./firmware-flashing.md).
 
 :::
 
@@ -141,7 +141,7 @@ You need to add categories to put your custom blocks into them. You can also use
 
 Here is an example of how to add some basic categories. You can add a category without any other configurations or you can add color to the category (in RGB format).
 
-This example will add the category **Ultrasound Sensor**** with black color (default color) and category **External Temperature Sensor** with color "#CF0514".
+This example will add the category **Ultrasound Sensor** with black color (default color) and category **External Temperature Sensor** with color "#CF0514".
 
 :::
 
@@ -177,13 +177,13 @@ The first example is one of our pre-made modules for the [**Button Module**](htt
 
 - `global_variable`: here you can add line by line anything that you want to add at the top of the code.
 
-- `application_init`: here you can define the block that will always go into the **Initialization category**-
+- `application_init`: here you can define the block that will always go into the **Initialization category**:
   - `block`
     - `text`: here you should specify what text will be present on the block. You can use `%` to make some parts generated from the **arguments**.
     - `arguments`: here you have to specify one by one the arguments that will replace the `%` in the text by `dropdown/number/variable/etc.`
   - `code`: here, line by line you specify the code that will be added to `application_init`. You can use `{ARGUMENT_NAME}` to have some parts replaceable based on the `arguments`.
 
-- `handler`: this is the block that will represent the event handler of your module. It will be a block that will allow you to put more blocks in it (parent block)
+- `handler`: this is the block that will represent the event handler of your module. It will be a block that will allow you to put more blocks in it (parent block).
 
 - `action`: this is the place to add every possible action that your module can do. Each of those elements will be a separate block added to your specified category.
   - `NAME_OF_THE_ACTION`: you just specify the block name, it has to be module specific.

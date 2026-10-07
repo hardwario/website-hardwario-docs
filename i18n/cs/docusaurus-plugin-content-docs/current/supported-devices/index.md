@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # Podporované senzory {#supported-sensors}
 
-Zařízení **HARDWARIO CHESTER** podporuje několik typů externích senzorů připojených přes digitální rozhraní a může z nich tak sbírat řadu různých hodnot.
+Zařízení **HARDWARIO CHESTER** podporuje přes svá digitální rozhraní několik typů externích senzorů a může z nich sbírat řadu různých veličin.
 
 | Podporované senzory |
 |-------------------|

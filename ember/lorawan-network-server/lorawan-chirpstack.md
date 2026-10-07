@@ -67,7 +67,7 @@ On MikroTik RouterOS, the gateway EUI is shown as **Gateway ID**:
    - Stats Interval: **YOUR_PREFERENCE**
 4. Click **Submit**.
 
-![ChirStack v4 - Gateways](images/chirpstack-add-geteway.png)
+![ChirpStack v4 - Gateways](images/chirpstack-add-geteway.png)
 
 ---
 

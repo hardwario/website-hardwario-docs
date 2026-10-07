@@ -1,17 +1,17 @@
 ---
 slug: about-lux-meter-tag
-title: O modulu Lux Meter Tag
+title: O tagu Lux Meter Tag
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/lux-meter-tag.png')} alt="Lux Meter Tag, deska velikosti monety se senzorem intenzity světla OPT3001" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/lux-meter-tag.png')} alt="Lux Meter Tag, deska velikosti mince se senzorem intenzity světla OPT3001" /></div>
     </div>
     <div class="col col--6">
       <p>
-        Modul <b>Lux Meter Tag</b> využívá <b>senzor intenzity světla OPT3001</b> s vysokým dynamickým rozsahem, který umí měřit osvětlení od 0,01 do 83 000 lux. Tento senzor je digitální a kalibrovaný. Komunikuje po sběrnici I²C a nabízí velmi nízkou spotřebu a režim vypnutí.
+        <b>Lux Meter Tag</b> používá <b>senzor intenzity světla OPT3001</b> s vysokým dynamickým rozsahem, který měří osvětlenost od 0,01 do 83 000 lux. Senzor je digitální a kalibrovaný, komunikuje po sběrnici I²C a má velmi nízkou spotřebu a režim vypnutí.
       </p>
     </div>
   </div>
@@ -32,12 +32,12 @@ Senzor můžete použít k **detekci dne a noci** nebo jako doplňkovou informac
 - Spotřeba:
   - Proud v aktivním režimu: 1,8 µA
   - Proud ve vypnutém režimu: 0,3 µA
-- Rozsah napájecího napětí: 1,6 V až 3,6 V
+- Rozsah provozního napětí: 1,6 V až 3,6 V
 - Rozsah provozních teplot: -20 až 70 °C
 - Mechanické rozměry: 16 x 16 mm
 
 ## Odkazy {#references}
-- [**Obchod**](https://www.hardwario.store/p/lux-meter-tag)
+- [**E-shop**](https://www.hardwario.store/p/lux-meter-tag)
 - [**Schéma**](https://github.com/hardwario/bc-hardware/tree/master/out/bc-tag-lux-meter)
 - [**Knihovna SDK**](https://sdk.hardwario.com/group__twr__tag__lux__meter)
 - [**Hlavičkový soubor**](https://github.com/hardwario/twr-sdk/blob/master/twr/inc/twr_tag_lux_meter.h)

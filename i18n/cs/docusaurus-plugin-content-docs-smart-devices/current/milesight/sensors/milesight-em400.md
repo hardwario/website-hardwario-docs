@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Senzor Milesight EM400-MUD {#milesight-sensor-em400-mud}
 
-Milesight EM400-MUD je **multifunkční ultrazvukový senzor vzdálenosti** určený pro **chytré parkování**, **odpadové hospodářství** a **monitorování hladiny**. Nabízí **úhel svazku 60°** s **detekčním rozsahem 3–450 cm** a **vysokou přesností** ± (1+0,3 %×S) cm. Senzor nabízí **tři provozní režimy** (Standard, Bin a Parking Lot), **krabičku s krytím IP67**, **extrémně dlouhou výdrž baterie až 10 let** a podporuje konektivitu **LoRaWAN**, **NB-IoT** a **Cat M**.
+Milesight EM400-MUD je **multifunkční ultrazvukový senzor vzdálenosti** pro **chytré parkování**, **odpadové hospodářství** a **monitorování hladiny**. Má **úhel svazku 60°**, **detekční rozsah 3–450 cm** a **vysokou přesnost** ± (1+0,3 %×S) cm. Pracuje ve **třech provozních režimech** (Standard, Bin a Parking Lot), je v **krabičce s krytím IP67**, má **extrémně dlouhou výdrž baterie, až 10 let**, a podporuje konektivitu **LoRaWAN**, **NB-IoT** a **Cat M**.
 
 <div class="container">
   <div class="row">
@@ -22,29 +22,29 @@ Milesight EM400-MUD je **multifunkční ultrazvukový senzor vzdálenosti** urč
 <br />
 
 :::info Řada EM400
-Řada EM400 zahrnuje několik variant: **EM400-TLD** (ToF laser), **EM400-UDL** (ultrazvuk) a **EM400-MUD** (multifunkční ultrazvuk). Tato dokumentace se zaměřuje na model EM400-MUD.
+Řada EM400 má několik variant: **EM400-TLD** (ToF laser), **EM400-UDL** (ultrazvuk) a **EM400-MUD** (multifunkční ultrazvuk). Tato stránka popisuje model EM400-MUD.
 :::
 
-## Odkazy pro integraci {#integration-links}
+## Odkazy k integraci {#integration-links}
 | Zdroj           | Odkaz                                                                |
 |-----------------|----------------------------------------------------------------------|
-| HARDWARIO Store | Zatím není k dispozici                                                |
+| E-shop HARDWARIO | Zatím není k dispozici                                                |
 | Oficiální stránka | https://www.milesight.com/iot/product/lorawan-sensor/em400-mud       |
 | Uživatelská příručka | https://resource.milesight.com/milesight/iot/document/em400-mud-user-guide-en.pdf |
-| Katalogový list | https://resource.milesight.com/milesight/iot/document/em400-mud-datasheet-en.pdf |
+| Produktový list | https://resource.milesight.com/milesight/iot/document/em400-mud-datasheet-en.pdf |
 
 ---
 
 ## Obecná konfigurace {#general-configuration}
-Konfigurace se provádí přes NFC pomocí [aplikace Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
+Zařízení se konfiguruje přes NFC v [aplikaci Milesight ToolBox](/smart-devices/milesight/sensors/index#qr-code--milesight-toolbox).
 
-Pokyny ke konfiguraci senzoru najdete zde 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
+Postup konfigurace najdete v části 👉 [**Obecná konfigurace**](/smart-devices/milesight/sensors/index/#general-configuration).
 
 ---
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options)
+Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části 👉[**Možnosti sítě LoRaWAN**](/smart-devices/milesight/sensors/index#lorawan-network-options).
 
 ---
 
@@ -58,7 +58,7 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | AppKey           | 5572404C696E6B4C6F52613230313823 |
 
 :::info
-**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení unikátní a najdete jej vytištěný na štítku zařízení.
+**DevEUI** (Device Extended Unique Identifier) je pro každé zařízení jedinečný a je vytištěný na jeho štítku.
 :::
 
 ---
@@ -73,9 +73,9 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 
 :::info
 ### Přehled pojmů {#terminology-overview}
-**Dekodér** -> Převádí binární payload zařízení do čitelného JSON.<br />
-**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlinky.<br />
-**Kodek** -> Definuje pravidla pro dekódování a kódování (struktura, pole, porty) používaná network servery.
+**Dekodér** -> Převádí binární payload zařízení na čitelný JSON.<br />
+**Enkodér** -> Převádí příkazy v JSON na binární payload pro downlink.<br />
+**Kodek** -> Definuje pravidla dekódování a kódování (strukturu, pole, porty), podle kterých pracují síťové servery.
 :::
 
 
@@ -107,7 +107,7 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | Úhel svazku | 60° |
 | **Další senzory** | |
 | Teplota | -40°C ~ +125°C, rozlišení 0,1°C (NTC termistor) |
-| Akcelerometr | 3osý (detekce náklonu) |
+| Akcelerometr | Tříosý (detekce náklonu) |
 | **Funkce** | |
 | Režimy | Standard Mode, Bin Mode, Parking Lot Mode (pouze LoRaWAN) |
 | Pokročilé funkce | Monitorování hladiny, detekce parkování, odpadové hospodářství |
@@ -120,5 +120,5 @@ Informace o podporovaných platformách LoRaWAN network serveru najdete zde 👉
 | Krytí | IP67 |
 | Rozměry | 118 × 65 × 32,5 mm |
 | Hmotnost | 181,4 g (s bateriemi) |
-| Materiál | ABS+PC (UL94 V0), černo-šedá |
-| **Schválení** | CE, FCC, RoHS |
+| Materiál | ABS+PC (UL94 V0), černošedá |
+| **Certifikace** | CE, FCC, RoHS |

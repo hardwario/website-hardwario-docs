@@ -5,11 +5,11 @@ title: Přidání do ChirpStack v4
 
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4 – Jak přidat EMBER do sítě LoRaWAN {#chirpstack-v4---how-to-add-ember-to-a-lorawan-network}
+# ChirpStack v4: jak přidat EMBER do sítě LoRaWAN {#chirpstack-v4---how-to-add-ember-to-a-lorawan-network}
 
 ## Přehled návodu {#tutorial-overview}
 
-V tomto průvodci se naučíte, jak připojit bránu EMBER do ChirpStack v4.
+V tomto návodu se dozvíte, jak bránu EMBER připojit k serveru ChirpStack v4.
 
 <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
   <iframe

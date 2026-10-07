@@ -25,7 +25,7 @@ sharing as soon as you are done.
    *Connecting…*, *Waiting for viewers*, or the number of viewers attached.
 4. Send the link with **Copy link** or **Share**.
 
-While a session is live, the share icon changes colour so it is obvious the
+While a session is live, the share icon changes color so it is obvious the
 device is exposed.
 
 **Stop sharing** ends it. Leaving the Terminal screen also ends the session.

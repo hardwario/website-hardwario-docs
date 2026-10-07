@@ -181,7 +181,7 @@ Your custom notification Rule Chain is now fully built, but ThingsBoard doesn't 
 8. Click the **Apply changes** button (the checkmark in the bottom right corner).
 
 Here is how the connection in the Root Rule Chain should look:
-*(The data will now successfully flow from the device, save to the database, and proceed to your custom email notification chain!)*
+*(The data will now successfully flow from the device, save to the database, and proceed to your custom email notification chain.)*
 
 ![Root Rule Chain detail: the Save Timeseries node linked with a Success connection to the email notifications rule chain node](images/email-notification-2.png)
 

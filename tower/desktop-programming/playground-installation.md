@@ -25,9 +25,9 @@ There is always an **installation package** and also just an **executable option
 
 ## Installation
 
-If you downloaded the **installation package** just run it and get through the installation and you should be ready to use Playground
+If you downloaded the **installation package** just run it, go through the installation, and you should be ready to use Playground.
 
-If you downloaded just the **executable**, you can run it you should be ready to use Playground
+If you downloaded just the **executable**, just run it and you should be ready to use Playground.
 
 You can now read about each tab of Playground, to understand what each of them does:
 - [**Radio Network Management**](./radio-network-management.md) (**Devices** and **Messages**)

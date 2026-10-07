@@ -5,13 +5,13 @@ title: Promag MF7S
 
 import Image from '@theme/IdealImage';
 
-# RFID čtečka Promag MF7S {#promag-mf7s-rfid-reader}
+# Čtečka RFID Promag MF7S {#promag-mf7s-rfid-reader}
 
 <div class="container">
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/serial-devices/images/promag-rf7s.png')} width={376} height={376} alt="Černá RFID čtečka karet Promag MF7S s připojeným kabelem" />
+        <Image img={require('../../../../../../chester/supported-devices/serial-devices/images/promag-rf7s.png')} width={376} height={376} alt="Černá čtečka karet RFID Promag MF7S s připojeným kabelem" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -21,7 +21,7 @@ import Image from '@theme/IdealImage';
 
 ### Popis {#description}
 
-**Promag MF7S** je RFID čtečka karet, která komunikuje přes **RS-232** (19200 baud, 8N1). Čtečka automaticky odesílá UID karty, jakmile je karta přiložena. CHESTER provozuje vlákno pro naslouchání na pozadí, které průběžně přijímá karty a ukládá je do bufferu (max. 32 vzorků).
+**Promag MF7S** je čtečka karet RFID, která komunikuje přes rozhraní **RS-232** (19200 baud, 8N1). Jakmile přiložíte kartu, čtečka sama odešle její UID. V zařízení CHESTER běží na pozadí vlákno, které načtené karty průběžně přijímá a ukládá do bufferu (max. 32 vzorků).
 
 **Protokol:** `STX(0x02) + 8 HEX characters (UID) + CR + LF + ETX` = 12 bajtů na kartu.
 
@@ -32,7 +32,7 @@ import Image from '@theme/IdealImage';
 - **Varianta:** CHESTER Serial RS-232 (`hio-chester-serial-rs232`)
 - **Modul:** CHESTER-X12-A (RS-232)
 - **Připojení:** Promag MF7S → RS-232 → CHESTER-X12-A
-- **Přenosová rychlost:** 19200 (pevně nastaveno ovladačem)
+- **Přenosová rychlost:** 19200 (pevně ji nastavuje ovladač)
 
 ---
 
@@ -57,17 +57,17 @@ app config save
 | Parametr | Hodnota | Popis |
 |-----------|-------|-------------|
 | `serial-mode` | `transparent` | Promag nepoužívá Modbus |
-| `serial-baudrate` | `19200` | Pevně dané pro MF7S |
-| `device-0` | `promag_mf7s` | Typ zařízení (bez adresy. Nejde o Modbus) |
+| `serial-baudrate` | `19200` | U MF7S pevně daná |
+| `device-0` | `promag_mf7s` | Typ zařízení (bez adresy, nejde o Modbus) |
 | `mode` | `lte` nebo `lrw` | Komunikační režim |
-| `interval-report` | `0` | Řízeno událostmi = okamžité odeslání při detekci karty |
+| `interval-report` | `0` | Režim řízený událostmi: data se odešlou hned po načtení karty |
 
 #### Režim řízený událostmi (`interval-report = 0`) {#event-driven-mode-interval-report--0}
 
-Když je `interval-report` nastaven na **0**, CHESTER odešle data **okamžitě** po přiložení karty:
+Je-li `interval-report` nastavený na **0**, odešle zařízení CHESTER data **okamžitě** po přiložení karty:
 
-- **Režim LTE:** Každá karta spustí `app_work_send()` → CBOR zpráva s kartou je odeslána okamžitě
-- **Režim LoRaWAN:** Každá karta je vždy odeslána okamžitě (nezávisle na `interval-report`)
+- **Režim LTE:** Každá karta spustí `app_work_send()` → zpráva CBOR s kartou se odešle okamžitě
+- **Režim LoRaWAN:** Každá karta se odešle vždy okamžitě (bez ohledu na `interval-report`)
 
 Pokud je `interval-report > 0`, karty se hromadí v bufferu (max. 32) a odesílají se periodicky.
 
@@ -83,13 +83,13 @@ device promag_mf7s firmware
 
 Výstup: `Firmware: MF7S-1.0`
 
-#### Notifikace (LED + zvuk) {#notifications-led--sound}
+#### Signalizace (LED a zvuk) {#notifications-led--sound}
 
 ```
 device promag_mf7s notify
 ```
 
-Provede sekvenci: zelená LED zap/vyp → červená LED zap/vyp → trojí pípnutí (vysoké, střední, nízké).
+Přehraje sekvenci: zelená LED zap/vyp → červená LED zap/vyp → trojí pípnutí (vysoké, střední, nízké).
 
 #### Režim vzorkování (interaktivní detekce) {#sampling-mode-interactive-detection}
 
@@ -97,7 +97,7 @@ Provede sekvenci: zelená LED zap/vyp → červená LED zap/vyp → trojí pípn
 device promag_mf7s sampling [timeout_s]
 ```
 
-Přejde do interaktivního režimu. V shellu zobrazuje UID karet. Data se **neukládají** do bufferu. Timeout (výchozí 10 s) se resetuje při každém přiložení karty.
+Spustí interaktivní režim, ve kterém shell vypisuje UID přiložených karet. Data se **neukládají** do bufferu. Časový limit (výchozí 10 s) se s každou přiloženou kartou spustí znovu.
 
 Výstup:
 ```
@@ -120,12 +120,12 @@ app send               # Force immediate data send
 
 ### Payload – LTE (CBOR) {#payload--lte-cbor}
 
-V režimu LTE se odesílá CBOR zpráva (max. 8 kB) se všemi nasbíranými kartami. Po úspěšném odeslání se buffer vymaže.
+V režimu LTE se odesílá zpráva CBOR (max. 8 kB) se všemi nasbíranými kartami. Po úspěšném odeslání se buffer vymaže.
 
-#### Příklad dekódovaného JSON payloadu {#example-decoded-json-payload}
+#### Příklad dekódovaného payloadu JSON {#example-decoded-json-payload}
 
 <details>
-<summary><b>Zobrazit příklad dekódovaného JSON payloadu</b></summary>
+<summary><b>Zobrazit příklad dekódovaného payloadu JSON</b></summary>
 <p>
 
 ```json
@@ -197,7 +197,7 @@ V režimu LTE se odesílá CBOR zpráva (max. 8 kB) se všemi nasbíranými kart
 
 :::info
 
-`card_uid` je uint32 (dekadicky). Převod do hex: `305419896` = `0x12345678`, `2864434397` = `0xAABBCCDD`.
+`card_uid` je hodnota uint32 v desítkové soustavě. Převod do šestnáctkové soustavy: `305419896` = `0x12345678`, `2864434397` = `0xAABBCCDD`.
 
 :::
 
@@ -205,7 +205,7 @@ V režimu LTE se odesílá CBOR zpráva (max. 8 kB) se všemi nasbíranými kart
 
 ### Payload – LoRaWAN (binární) {#payload--lorawan-binary}
 
-LoRaWAN odesílá kompaktní binární zprávu (max. 51 bajtů). Každá zpráva obsahuje **jedno zařízení**.
+V režimu LoRaWAN se odesílá kompaktní binární zpráva (max. 51 bajtů). Každá zpráva nese data **jednoho zařízení**.
 
 #### Struktura payloadu (22 bajtů) {#payload-structure-22-bytes}
 
@@ -244,7 +244,7 @@ D0 E0 4B 67            # Last read timestamp: 1735905488 (LE)
 #### Dekódování v Node-RED / JavaScriptu {#decoding-in-node-red--javascript}
 
 <details>
-<summary><b>Zobrazit JavaScript dekodér</b></summary>
+<summary><b>Zobrazit dekodér v JavaScriptu</b></summary>
 <p>
 
 ```javascript
@@ -287,9 +287,9 @@ function decode(payload) {
 
 ---
 
-### Typické případy použití {#typical-use-cases}
+### Typické využití {#typical-use-cases}
 
-#### Řízení přístupu / docházkový systém (okamžité odeslání) {#access-control--attendance-system-immediate-send}
+#### Přístupový nebo docházkový systém (okamžité odeslání) {#access-control--attendance-system-immediate-send}
 
 ```
 app config device-0 promag_mf7s
@@ -298,7 +298,7 @@ app config interval-report 0
 app config save
 ```
 
-Každá karta je odeslána **okamžitě** po přiložení.
+Každá karta se odešle **okamžitě** po přiložení.
 
 #### Sběr dat s periodickým odesíláním (úspora baterie) {#data-collection-with-periodic-upload-battery-saving}
 
@@ -319,4 +319,4 @@ app config mode lrw
 app config save
 ```
 
-Každá karta je odeslána **okamžitě** jako binární zpráva (22 bajtů). Vždy se odesílá **poslední přiložená karta** plus celkový počet načtení.
+Každá karta se odešle **okamžitě** jako binární zpráva (22 bajtů). Zpráva vždy obsahuje **poslední přiloženou kartu** a celkový počet načtení.

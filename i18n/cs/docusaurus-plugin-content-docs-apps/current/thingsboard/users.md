@@ -18,10 +18,10 @@ V tomto návodu se naučíte, jak v platformě ThingsBoard vytvářet nové uži
 
 ![Seznam uživatelů v platformě ThingsBoard s tlačítkem plus vpravo nahoře pro vytvoření nového uživatele](../../../../../apps/thingsboard/images/users-0.png)
 
-3. Zadejte potřebné informace o uživateli.
-4. Dole najdete sekci **Activation method**. Máte dvě možnosti, jak uživatele do platformy ThingsBoard pozvat (jde to udělat i později):
+3. Zadejte potřebné údaje o uživateli.
+4. Dole najdete sekci **Activation method**. Uživatele můžete do ThingsBoard pozvat dvěma způsoby (i později):
    - **Display activation link:** Vygeneruje odkaz, který můžete ručně zkopírovat a uživateli sami poslat.
-   - **Send activation mail:** Pošle automatický e-mail přímo z platformy ThingsBoard s aktivačním odkazem.
+   - **Send activation mail:** ThingsBoard uživateli automaticky pošle e-mail s aktivačním odkazem.
 
 ![Krok User details v dialogu Add user s poli e-mail, jméno, telefon a volbou Activation method](../../../../../apps/thingsboard/images/users-1.png)
 
@@ -33,10 +33,10 @@ V tomto návodu se naučíte, jak v platformě ThingsBoard vytvářet nové uži
 
 7. Nakonec klikněte na **Add**.
 
-Nového uživatele máte úspěšně vytvořeného!
+Tím je nový uživatel vytvořený.
 
 :::info
-**Potřebujete spravovat přístupy uživatelů?** Ve [**správě uživatelů**](/apps/thingsboard/users-managing) se dozvíte, jak vytvářet skupiny, přiřazovat role a řídit přístup ke konkrétním zařízením nebo dashboardům.
+**Potřebujete spravovat přístupy uživatelů?** Na stránce [**Správa uživatelů**](/apps/thingsboard/users-managing) se dozvíte, jak vytvářet skupiny, přiřazovat role a řídit přístup ke konkrétním zařízením nebo dashboardům.
 :::
 
 ---
@@ -46,11 +46,11 @@ Nového uživatele máte úspěšně vytvořeného!
 Pokud jste aktivaci při vytváření přeskočili nebo potřebujete pozvánku poslat znovu, aby se uživatel mohl přihlásit a vytvořit si heslo, postupujte takto:
 
 1. Klikněte v seznamu Users na konkrétního uživatele.
-2. Na kartě **Details** zvolte jednu z těchto akcí:
+2. Na záložce **Details** zvolte jednu z těchto akcí:
    - **Resend activation:** Automaticky pošle uživateli e-mail s aktivačním odkazem.
-   - **Display activation link:** Zobrazí URL, kterou můžete ručně zkopírovat a uživateli poslat. Po kliknutí na odkaz bude vyzván k vytvoření nového hesla.
+   - **Display activation link:** Zobrazí URL, kterou můžete ručně zkopírovat a uživateli poslat. Po kliknutí na odkaz si uživatel vytvoří nové heslo.
 
-![Panel s detailem uživatele s tlačítky Display activation link a Resend activation na kartě Details](../../../../../apps/thingsboard/images/users-3.png)
+![Panel s detailem uživatele s tlačítky Display activation link a Resend activation na záložce Details](../../../../../apps/thingsboard/images/users-3.png)
 
 ---
 
@@ -61,12 +61,12 @@ Pokud jste aktivaci při vytváření přeskočili nebo potřebujete pozvánku p
 
 ![Domovská obrazovka s otevřeným uživatelským menu vpravo nahoře s volbami Account a Logout](../../../../../apps/thingsboard/images/password-change-1.png)
 
-3. Přejdete na kartu **Profile**, kde můžete upravit i obecné informace o svém účtu.
-4. Pro **změnu hesla** přepněte na kartu **Security**.
-5. Zadejte své současné heslo a poté nové heslo.
+3. Otevře se záložka **Profile**, kde můžete upravit i obecné údaje o svém účtu.
+4. Chcete-li **změnit heslo**, přepněte na záložku **Security**.
+5. Zadejte současné heslo a pak nové heslo.
 
 :::info
 Pokud jste dostali **dočasné heslo e-mailem**, zadejte ho do pole pro současné heslo.
 :::
 
-![Karta Security v účtu s poli Change Password pro současné a nové heslo vedle požadavků na heslo](../../../../../apps/thingsboard/images/password-change-2.png)
+![Záložka Security v účtu s poli Change Password pro současné a nové heslo vedle požadavků na heslo](../../../../../apps/thingsboard/images/password-change-2.png)

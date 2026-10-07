@@ -1,7 +1,7 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
-description: "Rychlý start pro FIBER: zprovozněte bránu, nainstalujte stack LoRaWAN a připojte první zařízení LoRaWAN."
+description: "Rychlý průvodce zařízením FIBER: zprovozněte bránu, nainstalujte stack LoRaWAN a připojte první zařízení LoRaWAN."
 title_meta: "Rychlý průvodce (FIBER)"
 ---
 
@@ -9,7 +9,7 @@ title_meta: "Rychlý průvodce (FIBER)"
 
 Děkujeme, že jste si vybrali FIBER.
 
-Podle následujících kroků jej uvedete do provozu a připojíte své první zařízení LoRaWAN.
+Podle následujících kroků ho uvedete do provozu a připojíte své první zařízení LoRaWAN.
 
 Podrobnější informace najdete v části [**Instalace**](/fiber/installation/), která obsahuje kompletní postup
 se snímky obrazovky, a v části [**Popis hardwaru**](/fiber/category/hardware-description/) s parametry platformy.
@@ -20,23 +20,23 @@ se snímky obrazovky, a v části [**Popis hardwaru**](/fiber/category/hardware-
 
 :::tip
 
-**Máte FIBER Lite (Raspberry Pi 5)?** Následující 4 kroky se týkají zařízení FIBER založeného na CM4 a pro vás
-neplatí: na vaší desce není propojka BOOT, `rpiboot` ani PoE adaptér. Přejděte přímo na kapitolu
+**Máte FIBER Lite (Raspberry Pi 5)?** Následující 4 kroky se týkají zařízení FIBER s modulem CM4 a pro vás
+neplatí: nepotřebujete propojku BOOT, `rpiboot` ani adaptér PoE. Přejděte přímo na kapitolu
 [Varianta FIBER Lite](#fiber-lite-variant) na konci tohoto průvodce.
 
 :::
 
 1. Otevřete horní kryt (čtyři šroubky pod gumovými nožičkami), přesuňte propojku do polohy **BOOT**,
-   připojte PoE adaptér a kabel USB-B HOST↔TARGET, kompletní postup najdete v části
-   [Připojení zařízení TARGET k HOST](/fiber/installation/flash/).
+   připojte adaptér PoE a kabelem USB-B propojte HOST a TARGET. Kompletní postup najdete na stránce
+   [Nahrání Raspberry Pi OS](/fiber/installation/flash/).
 1. Nainstalujte a spusťte **rpiboot** ([raspberrypi/usbboot](https://github.com/raspberrypi/usbboot)),
    který přepne TARGET do režimu bootloaderu. Poté se na počítači HOST objeví jako velkokapacitní
    úložiště USB.
-1. Nahrajte systém pomocí Raspberry Pi Imager (Device: **Raspberry Pi 4**, Storage:
-   **RPi-MSD-0001 Media**), v kroku Customisation nastavte hostname, uživatelské jméno/heslo a
-   zapněte SSH.
-1. Stiskněte **RESET** na zařízení TARGET, vyčkejte na náběh systému a jeho IP adresu zjistěte
-   v seznamu přidělených adres (leases) na DHCP serveru.
+1. Nahrajte systém nástrojem Raspberry Pi Imager (Device: **Raspberry Pi 4**, Storage:
+   **RPi-MSD-0001 Media**); v kroku Customisation nastavte název hostitele, uživatelské jméno a heslo
+   a zapněte SSH.
+1. Stiskněte **RESET** na zařízení TARGET, počkejte, až systém naběhne, a jeho IP adresu zjistěte
+   v seznamu přidělených adres (leases) na serveru DHCP.
 
 ---
 
@@ -46,7 +46,7 @@ neplatí: na vaší desce není propojka BOOT, `rpiboot` ani PoE adaptér. Přej
 ssh fiber@<TARGET IP ADDRESS>
 ```
 
-Poté postupně (kompletní příkazy a konfigurace viz [Instalace](/fiber/installation/)):
+Potom postupně projděte tyto stránky (kompletní příkazy a konfigurace najdete na stránce [Instalace](/fiber/installation/)):
 
 1. [Aktualizace systému](/fiber/installation/update-system/)
 1. [Konfigurace hardwaru](/fiber/installation/configure-hardware/): sběrnice I2C + RTC
@@ -55,25 +55,25 @@ Poté postupně (kompletní příkazy a konfigurace viz [Instalace](/fiber/insta
 1. [Instalace ChirpStack MQTT Forwarder](/fiber/installation/mqtt-forwarder/)
 1. [Instalace Node-RED](/fiber/installation/node-red/)
 1. [Instalace InfluxDB](/fiber/installation/influxdb/)
-1. [Instalace Grafana](/fiber/installation/grafana/)
+1. [Instalace Grafany](/fiber/installation/grafana/)
 1. [Dashboard](/fiber/installation/dashboard/)
 
 ---
 
 ## Krok 3: Registrace brány a zařízení {#step-3-register-a-gateway-and-a-device}
 
-Dokud nejsou v ChirpStack zaregistrovány brána a zařízení, nic se k síti nepřipojí. Kompletní postup
-v uživatelském rozhraní najdete v části [Registrace brány a zařízení](/fiber/installation/register-device/):
-přidejte bránu pomocí ID z logů Concentratord, vytvořte profil zařízení a aplikaci a poté přidejte
-DevEUI a OTAA klíče vašeho zařízení STICKER nebo CHESTER.
+Dokud v ChirpStack nezaregistrujete bránu a zařízení, nic se k síti nepřipojí. Kompletní postup
+v uživatelském rozhraní najdete na stránce [Registrace brány a zařízení](/fiber/installation/register-device/):
+přidejte bránu s ID z logů Concentratord, vytvořte profil zařízení a aplikaci a nakonec zadejte
+DevEUI a klíče OTAA svého zařízení STICKER nebo CHESTER.
 
 ---
 
 ## Krok 4: Zapnutí testovacího zařízení {#step-4-power-on-your-test-device}
 
 Zapněte fyzické zařízení LoRaWAN. Sledujte v ChirpStack záložku **LoRaWAN frames** (živý náhled).
-Pokud je brána v dosahu a vše výše je správně nakonfigurováno, měl by se během několika sekund objevit
-join-request následovaný join-accept.
+Pokud je brána v dosahu a vše předchozí je správně nastavené, měl by se během několika sekund objevit
+join-request a po něm join-accept.
 
 Pokud se neobjeví vůbec nic, zkontrolujte nejprve u brány údaj **Last seen at**. Když k bráně
 nepřichází žádný provoz, je problém na straně rádia/koncentrátoru, nikoli v registraci zařízení.
@@ -93,13 +93,13 @@ nepřichází žádný provoz, je problém na straně rádia/koncentrátoru, nik
 :::danger
 
 Než zařízení připojíte do jakékoli sdílené sítě, změňte **výchozí přihlášení `admin`/`admin`
-v ChirpStack**. Žádný z instalačních kroků jej automaticky nemění.
+v ChirpStack**. Žádný z instalačních kroků ho automaticky nezmění.
 
 :::
 
 ---
 
-✅ **A je to!**
+✅ **Hotovo.**
 Vaše zařízení FIBER má nahraný systém, běží na něm ChirpStack a přijímá skutečné uplinky LoRaWAN.
 
 ---
@@ -108,21 +108,21 @@ Vaše zařízení FIBER má nahraný systém, běží na něm ChirpStack a přij
 
 **FIBER Lite** (Raspberry Pi 5) používá zcela stejný softwarový stack jako FIBER: ChirpStack,
 Node-RED, InfluxDB, Grafana i Dashboard se instalují stejným způsobem, bez dalších kroků.
-Rozdíly jsou pouze v hardwaru:
+Rozdíly jsou jen v hardwaru:
 
-- **Nahrání systému**: žádná propojka BOOT, žádný `rpiboot`, vůbec žádná aktivace bootloaderu. Pomocí
-  Raspberry Pi Imager nahrajte obraz přímo na běžnou microSD kartu a vložte ji. Metody zjištění IP adresy,
+- **Nahrání systému**: žádná propojka BOOT, žádný `rpiboot`, vůbec žádná aktivace bootloaderu. Nástrojem
+  Raspberry Pi Imager nahrajte obraz přímo na běžnou kartu microSD a vložte ji do zařízení. Metody zjištění IP adresy,
   postup nastavení statické IP a přihlášení přes SSH najdete v části
   [Nahrání Raspberry Pi OS](/fiber/installation/flash/) (záložka FIBER Lite).
-- **Konfigurace hardwaru**: řádek s overlay pro RTC úplně vynechejte, Pi 5 má RTC integrované.
-- **Concentratord**: RAK5146 se připojuje přes **SPI** pomocí HAT RAK2287, nikoli přes USB, má tedy
-  odlišnou konfiguraci a instalační postup (viz záložka FIBER Lite v části
-  [Instalace ChirpStack Concentratord](/fiber/installation/concentratord/)). Postupujte podle této záložky přesně:
-  kanálový plán (channel plan) i oba řádky s oprávněními služby jsou povinné: pokud kterýkoli z nich
+- **Konfigurace hardwaru**: řádek s overlayem RTC úplně vynechejte, protože Pi 5 má vestavěné RTC.
+- **Concentratord**: RAK5146 se připojuje přes **SPI** pomocí desky HAT RAK2287, ne přes USB, a má proto
+  jinou konfiguraci i instalační postup (viz záložka FIBER Lite na stránce
+  [Instalace ChirpStack Concentratord](/fiber/installation/concentratord/)). Postupujte přesně podle této záložky.
+  Kanálový plán (channel plan) i oba řádky s oprávněními služby jsou povinné; pokud kterýkoli z nich
   vynecháte, instalace tiše selže bez chybového hlášení.
 - FIBER Lite nemá displej ani senzory 1-Wire: všechna specifika FIBER Lite (BOM, hardwarové
   rozdíly) najdete v části [Úvod do FIBER Lite](/fiber/fiber-lite/introduction/) v postranním panelu. Máte
-  klasický FIBER? V postranním panelu najdete [**Návody k hardwaru FIBER**](/fiber/category/fiber-hardware-guides/),
+  klasické zařízení FIBER? V postranním panelu najdete [**Návody k hardwaru FIBER**](/fiber/category/fiber-hardware-guides/),
   kde se dozvíte, co dělat s jeho displejem a senzory 1-Wire.
 
-Pokud se cokoli nechová podle očekávání, podívejte se do části **Řešení problémů** pod FIBER Lite v postranním panelu.
+Pokud se cokoli nechová podle očekávání, podívejte se do sekce **Řešení problémů** pod položkou FIBER Lite v postranním panelu.

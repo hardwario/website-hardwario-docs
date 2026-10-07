@@ -63,4 +63,4 @@ Now we need to combine the previous steps and tell the system when and to whom t
 [ThingsBoard Scheduler](https://thingsboard.io/docs/pe/user-guide/scheduler/)
 :::
 
-**Done!** The system will now automatically generate the PDF based on your design every month, attach it to the prepared email, and send it to the specified recipients.
+**Done.** The system will now automatically generate the PDF based on your design every month, attach it to the prepared email, and send it to the specified recipients.

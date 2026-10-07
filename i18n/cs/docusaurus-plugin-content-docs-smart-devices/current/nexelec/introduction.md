@@ -1,30 +1,30 @@
 ---
 slug: /nexelec
 title: "Nexelec"
-description: "Nexelec je francouzský výrobce propojených bezpečnostních senzorů pro detekci požáru a sledování kvality vnitřního vzduchu podle evropských norem."
+description: "Nexelec je francouzský výrobce bezpečnostních senzorů IoT pro detekci požáru a sledování kvality vnitřního vzduchu podle evropských norem."
 ---
 
 # Nexelec {#nexelec}
 
-[Nexelec](https://nexelec.fr/) je francouzský výrobce IoT senzorů pro bezpečnost, který se specializuje na detekci požáru a monitoring kvality vnitřního vzduchu v souladu s evropskými normami.
+[Nexelec](https://nexelec.fr/) je francouzský výrobce bezpečnostních senzorů IoT. Specializuje se na detekci požáru a sledování kvality vnitřního vzduchu v souladu s evropskými normami.
 
 ---
 
-Senzory Nexelec využívají konektivitu **LoRaWAN** a přinášejí certifikovanou detekci požáru a CO do systémů správy budov, což umožňuje vzdálený monitoring a správu alarmů ve velkém rozsahu.
+Senzory Nexelec komunikují přes **LoRaWAN** a do systémů správy budov přinášejí certifikovanou detekci požáru a CO. Alarmy tak můžete sledovat a spravovat na dálku i ve velkých instalacích.
 
 ## Klíčové produkty {#key-products}
 
 | Produkt | Popis |
 |---|---|
-| [**ORIGIN+**](/smart-devices/nexelec/origin-plus) | Multisenzorový detektor požáru LoRaWAN kombinující detekci kouře (EN 14604), detekci tepla a detekci CO v jediném zařízení. Certifikace NF a CE. Životnost baterie 10 let. |
+| [**ORIGIN+**](/smart-devices/nexelec/origin-plus) | Multisenzorový detektor požáru LoRaWAN, který v jednom zařízení spojuje detekci kouře (EN 14604), tepla a CO. Certifikace NF a CE. Výdrž baterie 10 let. |
 
-## Typické případy použití s HARDWARIO {#typical-use-cases-with-hardwario}
+## Typické využití s HARDWARIO {#typical-use-cases-with-hardwario}
 
-- **Monitoring požární bezpečnosti budov**: Nasazení detektorů ORIGIN+ na více podlažích a příjem alarmů přes LoRaWAN na síťový server připojený k HARDWARIO Cloud.
-- **Správa objektů**: Centralizace stavu detektorů požáru, úrovní baterie a historie alarmů v jediném dashboardu.
-- **Monitoring shody s předpisy**: Vedení auditních záznamů o testech detektorů a alarmech pro splnění regulatorních požadavků.
+- **Monitorování požární bezpečnosti budov**: Detektory ORIGIN+ rozmístíte na více podlažích a alarmy přijímáte přes LoRaWAN na síťový server propojený s HARDWARIO Cloud.
+- **Správa objektů**: Stav detektorů požáru, stav baterií a historie alarmů na jednom dashboardu.
+- **Sledování souladu s předpisy**: Auditní záznamy o testech detektorů a alarmech, které dokládají plnění předpisů.
 
 ## Zdroje {#resources}
 
-- [Oficiální web Nexelec](https://nexelec.fr/)
-- [Produkty Nexelec v HARDWARIO Store](https://www.hardwario.store/cz/smart-devices)
+- [Oficiální web společnosti Nexelec](https://nexelec.fr/)
+- [Produkty Nexelec v e-shopu HARDWARIO Store](https://www.hardwario.store/cz/smart-devices)

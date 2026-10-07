@@ -1,30 +1,30 @@
 ---
 slug: gateway-service
-title: Gateway Service
+title: Služba brány
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 Tento **multiplatformní** nástroj v Pythonu propojuje **rádiovou bránu** s MQTT.
-Rádiová brána komunikuje přes virtuální USB sériový port pomocí souborů JSON.
+Rádiová brána komunikuje přes virtuální sériový port USB pomocí souborů JSON.
 
 :::caution
 
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
 
-Aby bylo možné získat **Gateway Service**, musíte mít na svém zařízení [**nainstalovaný Python a pip a mít je v systémové PATH**](https://www.tutorialspoint.com/how-to-install-python-in-windows)
+Abyste mohli službu **Gateway Service** nainstalovat, musíte mít v počítači [**nainstalovaný Python a pip, oba v systémové proměnné PATH**](https://www.tutorialspoint.com/how-to-install-python-in-windows).
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-Aby bylo možné získat **Gateway Service**, musíte mít na svém zařízení nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-linux/) a mít je v systémové **PATH**
+Abyste mohli službu **Gateway Service** nainstalovat, musíte mít v počítači nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-linux/), oba v systémové proměnné **PATH**.
 
 </TabItem>
 <TabItem value="macOS" label="macOS">
 
-Aby bylo možné získat **Gateway Service**, musíte mít na svém zařízení nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-macos/) a mít je v systémové **PATH**
+Abyste mohli službu **Gateway Service** nainstalovat, musíte mít v počítači nainstalovaný [**Python**](https://www.python.org/downloads/) a [**pip**](https://www.geeksforgeeks.org/how-to-install-pip-in-macos/), oba v systémové proměnné **PATH**.
 
 </TabItem>
 </Tabs>
@@ -33,11 +33,11 @@ Aby bylo možné získat **Gateway Service**, musíte mít na svém zařízení 
 
 ## Instalace {#installation}
 
-Pro instalaci **Gateway Service** stačí otevřít **CLI** vašeho systému a spustit následující příkaz:
+Službu **Gateway Service** nainstalujete tak, že otevřete příkazovou řádku (**CLI**) a spustíte tento příkaz:
 
 :::tip
 
-Stejný příkaz můžete použít i k aktualizaci **Gateway Service** na nejnovější verzi
+Stejným příkazem službu **Gateway Service** také aktualizujete na nejnovější verzi.
 
 :::
 
@@ -67,12 +67,12 @@ pip install --upgrade --no-cache-dir bcg
 
 :::tip
 
-Seznam všech dostupných příkazů získáte zadáním **`bcg --help`** do svého **CLI**
+Všechny dostupné příkazy zobrazíte zadáním **`bcg --help`** do příkazové řádky (**CLI**).
 
 <details>
 <summary>
 <b>
-výstup bcg --help
+Výstup bcg --help
 </b>
 </summary>
 <p>

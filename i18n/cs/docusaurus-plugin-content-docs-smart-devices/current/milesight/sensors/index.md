@@ -1,24 +1,24 @@
 ---
 slug: index
 title: Milesight – Senzory
-description: "Senzory LoRaWAN od společnosti Milesight otestované v HARDWARIO, s referenčními zdroji ke každému zařízení."
+description: "Senzory LoRaWAN od Milesight otestované v HARDWARIO, s odkazy na podklady ke každému zařízení."
 ---
 
 import Image from '@theme/IdealImage';
 
-Zde je seznam **senzorů Milesight** otestovaných společností HARDWARIO včetně referenčních zdrojů:
+Přehled **senzorů Milesight**, které otestovala společnost HARDWARIO, s odkazy na další zdroje:
 
-| Název                               | Typ                           | Přehled                                | Produktová stránka                                           | Odkaz na nákup                                            |
+| Název                               | Typ                           | Přehled                                | Stránka produktu                                             | Odkaz na nákup                                            |
 |-------------------------------------|-------------------------------|------------------------------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [**Milesight AM319**](/smart-devices/milesight/sensors/milesight-am300/milesight-am319) | Senzor prostředí              | [Podrobnosti](/smart-devices/milesight/sensors/milesight-am300/milesight-am319)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/am319) | [Koupit zde](https://www.hardwario.store/p/milesight-am319)             |
-| [**Milesight EM400-MUD**](/smart-devices/milesight/sensors/milesight-em400) | Ultrazvukový senzor vzdálenosti | [Podrobnosti](/smart-devices/milesight/sensors/milesight-em400)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/em400-mud) | *Zatím nedostupné*                                                    |
-| [**Milesight EM500-CO2**](/smart-devices/milesight/sensors/milesight-em500) | Senzor CO₂                    | [Podrobnosti](/smart-devices/milesight/sensors/milesight-em500)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/em500-co2) | *Zatím nedostupné*                                                    |
+| [**Milesight AM319**](/smart-devices/milesight/sensors/milesight-am300/milesight-am319) | Senzor vnitřního prostředí    | [Podrobnosti](/smart-devices/milesight/sensors/milesight-am300/milesight-am319)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/am319) | [Koupit zde](https://www.hardwario.store/p/milesight-am319)             |
+| [**Milesight EM400-MUD**](/smart-devices/milesight/sensors/milesight-em400) | Ultrazvukový senzor vzdálenosti | [Podrobnosti](/smart-devices/milesight/sensors/milesight-em400)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/em400-mud) | *Zatím není k dispozici*                                                    |
+| [**Milesight EM500-CO2**](/smart-devices/milesight/sensors/milesight-em500) | Senzor CO₂                    | [Podrobnosti](/smart-devices/milesight/sensors/milesight-em500)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/em500-co2) | *Zatím není k dispozici*                                                    |
 | [**Milesight GS601**](/smart-devices/milesight/sensors/milesight-gs601) | Detektor vapování a kouře     | [Podrobnosti](/smart-devices/milesight/sensors/milesight-gs601)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/gs601) | [Koupit zde](https://www.hardwario.store/p/milesight-gs601)             |
 | [**Milesight VS135**](/smart-devices/milesight/sensors/milesight-vs135) | Senzor pro počítání osob      | [Podrobnosti](/smart-devices/milesight/sensors/milesight-vs135)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/vs135) | [Koupit zde](https://www.hardwario.store/p/milesight-vs135)             |
-| [**Milesight VS373**](/smart-devices/milesight/sensors/milesight-vs373) | Senzor detekce pádu           | [Podrobnosti](/smart-devices/milesight/sensors/milesight-vs373)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/vs373) | [Koupit zde](https://www.hardwario.store/p/milesight-vs373)             |
+| [**Milesight VS373**](/smart-devices/milesight/sensors/milesight-vs373) | Senzor detekce pádů           | [Podrobnosti](/smart-devices/milesight/sensors/milesight-vs373)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/vs373) | [Koupit zde](https://www.hardwario.store/p/milesight-vs373)             |
 | [**Milesight WS101**](/smart-devices/milesight/sensors/milesight-ws101) | Chytré tlačítko               | [Podrobnosti](/smart-devices/milesight/sensors/milesight-ws101)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/ws101) | [Koupit zde](https://www.hardwario.store/p/milesight-ws101)             |
-| [**Milesight WS201**](/smart-devices/milesight/sensors/milesight-ws201) | Senzor monitorování naplnění  | [Podrobnosti](/smart-devices/milesight/sensors/milesight-ws201)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/ws201) | *Zatím nedostupné*                                                    |
-| [**Milesight WS303**](/smart-devices/milesight/sensors/milesight-ws303) | Senzor detekce zaplavení      | [Podrobnosti](/smart-devices/milesight/sensors/milesight-ws303)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/ws303) | [Koupit zde](https://www.hardwario.store/p/milesight-ws303)             |
+| [**Milesight WS201**](/smart-devices/milesight/sensors/milesight-ws201) | Senzor zaplnění               | [Podrobnosti](/smart-devices/milesight/sensors/milesight-ws201)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/ws201) | *Zatím není k dispozici*                                                    |
+| [**Milesight WS303**](/smart-devices/milesight/sensors/milesight-ws303) | Detektor úniku vody           | [Podrobnosti](/smart-devices/milesight/sensors/milesight-ws303)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/ws303) | [Koupit zde](https://www.hardwario.store/p/milesight-ws303)             |
 | [**Milesight WS523**](/smart-devices/milesight/sensors/milesight-ws523) | Chytrá přenosná zásuvka       | [Podrobnosti](/smart-devices/milesight/sensors/milesight-ws523)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/ws523) | [Koupit zde](https://www.hardwario.store/p/milesight-ws523)             |
 | [**Milesight WT101**](/smart-devices/milesight/sensors/milesight-wt101) | Termostatická hlavice         | [Podrobnosti](/smart-devices/milesight/sensors/milesight-wt101)       | [Oficiální stránky](https://www.milesight.com/iot/product/lorawan-sensor/wt101) | [Koupit zde](https://www.hardwario.store/p/milesight-wt101)             |
 
@@ -27,7 +27,7 @@ Zde je seznam **senzorů Milesight** otestovaných společností HARDWARIO včet
 ## Obecná konfigurace {#general-configuration}
 
 **Přehled**  
-Ke konfiguraci senzorů použijte mobilní aplikaci **Milesight ToolBox**, dostupnou na obou platformách:  
+Ke konfiguraci senzorů použijte mobilní aplikaci **Milesight ToolBox**, která je k dispozici pro obě platformy:  
 - Apple App Store: https://apps.apple.com/us/app/milesight-toolbox/id1518748039  
 - Google Play Store: https://play.google.com/store/apps/details?id=com.ursalinknfc&hl=en&pli=1  
 
@@ -45,16 +45,16 @@ Ke konfiguraci senzorů použijte mobilní aplikaci **Milesight ToolBox**, dostu
 <br />
 
 **Instalace a konfigurace**  
-- Konfigurace probíhá přes **NFC**.  
-- Po načtení zařízení přejděte na kartu *Basic Information* a aktualizujte **Device Time**.  
+- Senzory se konfigurují přes **NFC**.  
+- Po načtení zařízení přejděte na záložku *Basic Information* a aktualizujte **Device Time**.  
 - U všech zařízení je nutné nastavit správné **datum a čas**.  
 
 **Připojení LoRaWAN**  
-- Zařízení jsou předkonfigurována s **AppKey pro OTAA** (výchozí hodnoty jsou uvedeny v uživatelské příručce).  
-- **Brána musí být nastavena jako Public.** Pokud je brána nastavena jako Private, zařízení se nebudou moci připojit k síti.  
+- Zařízení mají z výroby nastavený **AppKey pro OTAA** (výchozí hodnoty uvádí uživatelská příručka).  
+- **Brána musí být nastavená jako Public.** Pokud je nastavená jako Private, zařízení se k síti nepřipojí.  
 
 :::info
-K lepšímu přehledu o konfiguraci zařízení pomocí aplikace **Milesight ToolBox** nabízíme také **kompletní videonávod**:
+Konfiguraci zařízení v aplikaci **Milesight ToolBox** názorně ukazuje také **kompletní videonávod**:
 
 https://docs.hardwario.com/smart-devices/milesight/videos-milesight/general-configuration
 :::
@@ -64,7 +64,7 @@ https://docs.hardwario.com/smart-devices/milesight/videos-milesight/general-conf
 
 ## Možnosti sítě LoRaWAN {#lorawan-network-options}
 
-Pro provoz zařízení LoRaWAN si můžete vybrat ze dvou podporovaných platforem síťového serveru. Obě řešení umožňují správu bran, registraci koncových zařízení, konfiguraci profilů a zpracování dat payloadu.
+Zařízení LoRaWAN můžete provozovat na jedné ze dvou podporovaných platforem síťového serveru. V obou spravujete brány, registrujete koncová zařízení, konfigurujete profily a zpracováváte data z payloadu.
 
 ### Možnost 1: The Things Stack {#option-1-the-things-stack}
 

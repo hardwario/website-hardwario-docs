@@ -218,7 +218,7 @@ LED lze řídit přímo z vývojářské konzole příkazy `ats led`, hodí se t
 |                   | Špičková spotřeba    | < 100 mA                           |
 | **Prostředí** | Provozní teplota     | -30 °C až +70 °C                   |
 |                   | Skladovací teplota       | -30 °C až +70 °C                   |
-|                   | Krytí krabičky      | IP40                               |
+|                   | Krytí krabičky      | IP30                               |
 | **Senzory** | Integrovaný teploměr – rozsah měření   | -20 °C až +60 °C     |
 |                   | Integrovaný teploměr – přesnost měření| ±0,2 °C (0 °C až 65 °C) |
 |                   | Integrovaný vlhkoměr – rozsah měření    | 0 % až 100 %           |

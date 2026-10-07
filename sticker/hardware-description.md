@@ -218,7 +218,7 @@ The LED can be driven directly over the developer console with the `ats led` com
 |                   | Peak power consumption    | < 100 mA                           |
 | **Environment** | Operating temperature     | -30 °C to +70 °C                   |
 |                   | Storage temperature       | -30 °C to +70 °C                   |
-|                   | Enclosure protection      | IP40                               |
+|                   | Enclosure protection      | IP30                               |
 | **Sensors** | Integrated thermometer: measurement range   | -20 °C to +60 °C     |
 |                   | Integrated thermometer: measurement accuracy| ±0.2 °C (0 °C to 65 °C) |
 |                   | Integrated hygrometer: measurement range    | 0 % to 100 %           |

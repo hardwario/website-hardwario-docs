@@ -111,6 +111,7 @@ const sidebars = {
         'developer-access/configuration',
         'developer-access/alarm-rules',
         'developer-access/sensor-history',
+        'developer-access/sensor-history-calculator',
         'developer-access/clock',
         'developer-access/maintenance',
         'developer-access/diagnostics',

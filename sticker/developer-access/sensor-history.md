@@ -21,9 +21,9 @@ The Store-and-Forward functionality described on this page is a core feature of 
 | Command | Argument | Description |
 |---|---|---|
 | `config history-enable` | `true` / `false` | Master enable for history recording. Default `false`. |
-| `config history-sensors` | Bitmask (uint32) | Channel mask specifying which sensor channels to buffer. Default `0x0003` (**temperature + humidity**). `0` disables channel recording. |
+| `config history-sensors` | Bitmask (uint32) | Channel mask specifying which sensor channels to buffer, entered as a decimal number. Default `3` (`0x0003`, **temperature + humidity**). `0` disables channel recording. |
 
-Sensors are sampled and stored on the `interval-sample` schedule (or once per uplink when `interval-sample` is `0`), see [**Configuration**](configuration.md).
+One record is stored per report interval (`interval-report`). It holds the latest sensor sample, taken on the `interval-sample` schedule (or just before the report when `interval-sample` is `0`), see [**Configuration**](configuration.md). The [**Sensor History Calculator**](sensor-history-calculator.mdx) shows how long the buffer lasts for a given channel selection and interval.
 
 ### Recordable Channels
 
@@ -70,10 +70,10 @@ History records are stored in a dedicated **32 KB flash ring partition**, strict
 Memory footprint varies by selected channel size:
 - Temperature / Pressure / Illuminance: 2 bytes each
 - Humidity / Orientation: 1 byte each
-- Pulse Counters: 4 bytes each
+- Counters (pulse inputs, PIR and accelerometer motion): 4 bytes each
 
 **Capacity Estimate:**
-For the default configuration (Temperature + Humidity), the 32 KB flash buffer stores approximately **9,400 records**, representing **~98 days of offline logging** at a 15-minute sampling interval.
+For the default configuration (Temperature + Humidity), the 32 KB flash buffer stores **9,408 records**, representing **98 days of offline logging** at the default 15-minute report interval. For other channels and intervals, use the [**Sensor History Calculator**](sensor-history-calculator.mdx).
 
 :::caution Firmware Update Memory Behavior
 Reflashing or upgrading the firmware image re-initializes the 32 KB history partition layout and **erases stored history records**. System configuration and LoRaWAN credentials remain preserved.

@@ -1,0 +1,203 @@
+.calculator {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-surface-color);
+  padding: 1rem 1.25rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.group {
+  position: relative;
+  margin-top: 0.6rem;
+}
+
+.groupLabel {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.25rem;
+}
+
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  align-items: center;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.size,
+.hint {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* A channel and its on-demand description. The description is an overlay below the
+   channel's group (the positioned ancestor), so it never shifts the layout and never
+   overflows the calculator on a narrow screen. */
+.channel {
+  display: inline-flex;
+}
+
+.help {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.25rem);
+  z-index: 10;
+  display: none;
+  pointer-events: none;
+  width: max-content;
+  max-width: min(32rem, 100%);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--ifm-color-emphasis-900);
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  padding: 0.4rem 0.6rem;
+}
+
+.channel:hover > .help,
+.channel:focus-within > .help {
+  display: block;
+}
+
+.field {
+  margin-top: 1rem;
+}
+
+.input {
+  width: 8rem;
+  box-sizing: border-box;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.95rem;
+}
+
+.results {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.35rem 1.25rem;
+  margin: 0;
+}
+
+.grid dt {
+  font-weight: 600;
+  font-size: 0.85rem;
+  align-self: baseline;
+}
+
+.grid dd {
+  margin: 0;
+  align-self: baseline;
+}
+
+.wrap {
+  margin: 0.75rem 0 1rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.outputHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.outputHead .label {
+  margin-bottom: 0;
+}
+
+.button {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: var(--ifm-global-radius);
+  background: transparent;
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background: var(--ifm-color-primary);
+  color: var(--ifm-background-color);
+}
+
+/* Brand red text on the dark surface stays under 4.5:1, so the dark theme keeps the
+   red border and uses the base text colour, and white on red when hovered. */
+:global([data-theme='dark']) .button {
+  color: var(--ifm-font-color-base);
+}
+
+:global([data-theme='dark']) .button:hover {
+  color: #fff;
+}
+
+.code {
+  display: block;
+  margin-top: 0.4rem;
+  padding: 0.6rem 0.75rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--ifm-code-background);
+  border-radius: var(--ifm-global-radius);
+}
+
+.error,
+.warning {
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--ifm-global-radius);
+  font-size: 0.9rem;
+}
+
+.error {
+  background: var(--ifm-color-danger-contrast-background);
+  color: var(--ifm-color-danger-contrast-foreground);
+}
+
+.warning {
+  background: var(--ifm-color-warning-contrast-background);
+  color: var(--ifm-color-warning-contrast-foreground);
+}
+
+.note {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+}

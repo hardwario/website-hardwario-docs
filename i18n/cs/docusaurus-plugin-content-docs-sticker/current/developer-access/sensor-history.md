@@ -22,9 +22,9 @@ Store-and-forward popsaný na této stránce je základní funkcí **firmwaru ST
 | Příkaz | Argument | Popis |
 |---|---|---|
 | `config history-enable` | `true` / `false` | Hlavní vypínač záznamu historie. Výchozí `false`. |
-| `config history-sensors` | Bitová maska (uint32) | Maska kanálů určující, které kanály senzorů se mají ukládat. Výchozí `0x0003` (**teplota + vlhkost**). `0` vypíná záznam kanálů. |
+| `config history-sensors` | Bitová maska (uint32) | Maska kanálů určující, které kanály senzorů se mají ukládat, zadaná jako desítkové číslo. Výchozí `3` (`0x0003`, **teplota + vlhkost**). `0` vypíná záznam kanálů. |
 
-Senzory se vzorkují a ukládají podle rozvrhu `interval-sample` (nebo jednou za uplink, pokud je `interval-sample` rovno `0`), viz [**Konfigurace**](configuration.md).
+Za každý interval hlášení (`interval-report`) se uloží jeden záznam. Obsahuje poslední vzorek senzorů, odebraný podle rozvrhu `interval-sample` (nebo těsně před hlášením, pokud je `interval-sample` rovno `0`), viz [**Konfigurace**](configuration.md). Jak dlouho buffer při zvolených kanálech a intervalu vydrží, spočítá [**Kalkulačka historie senzorů**](sensor-history-calculator.mdx).
 
 ### Kanály, které lze zaznamenávat {#recordable-channels}
 
@@ -71,10 +71,10 @@ Záznamy historie se ukládají do vyhrazeného **kruhového oddílu flash pamě
 Místo v paměti závisí na velikosti vybraných kanálů:
 - Teplota / tlak / osvětlenost: po 2 bajtech
 - Vlhkost / orientace: po 1 bajtu
-- Čítače impulzů: po 4 bajtech
+- Čítače (impulzní vstupy, pohyb z PIR a akcelerometru): po 4 bajtech
 
 **Odhad kapacity:**
-Ve výchozí konfiguraci (teplota + vlhkost) pojme buffer o velikosti 32 KB přibližně **9 400 záznamů**, což při intervalu vzorkování 15 minut odpovídá **~98 dnům záznamu offline**.
+Ve výchozí konfiguraci (teplota + vlhkost) pojme buffer o velikosti 32 KB **9 408 záznamů**, což při výchozím intervalu hlášení 15 minut odpovídá **98 dnům záznamu offline**. Pro jiné kanály a intervaly použijte stránku [**Kalkulačka historie senzorů**](sensor-history-calculator.mdx).
 
 :::caution Chování paměti při aktualizaci firmwaru
 Opětovné nahrání nebo aktualizace image firmwaru znovu inicializuje rozvržení oddílu historie (32 KB) a **vymaže uložené záznamy historie**. Systémová konfigurace a přístupové údaje LoRaWAN zůstanou zachované.

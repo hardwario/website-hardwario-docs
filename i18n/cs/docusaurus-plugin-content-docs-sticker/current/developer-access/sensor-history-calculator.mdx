@@ -1,0 +1,19 @@
+---
+slug: sensor-history-calculator
+title: Kalkulačka historie senzorů
+---
+import StickerHistoryCalculator from '@site/src/components/StickerHistoryCalculator';
+
+# Kalkulačka historie senzorů {#sensor-history-calculator}
+
+Spočítejte si, jak dlouhou historii senzorů zařízení STICKER udrží. Zaškrtněte kanály, které chcete ukládat, a nastavte interval hlášení: velikost záznamu, počet záznamů v bufferu i doba, kterou pokryjí, se průběžně přepočítávají. Výpočet odpovídá rozvržení flash paměti ve **firmwaru STICKER v1.4.0** a probíhá celý ve vašem prohlížeči.
+
+<StickerHistoryCalculator />
+
+## Co je dobré vědět {#good-to-know}
+
+- **Změna kanálů nebo intervalu začíná novou historii.** Když změníte `history-sensors` nebo `interval-report`, zařízení STICKER uložené záznamy zahodí a začne znovu, protože už neodpovídají novému rozvržení záznamu ani časování. Než kterékoli z těchto nastavení změníte, historii si stáhněte.
+- **Staré záznamy mizí po celých stránkách.** Buffer je rozdělený na 16 stránek. Jakmile se zaplní, zařízení STICKER smaže nejstarší stránku, aby uvolnilo místo novým záznamům, takže je uložená historie hned potom o šestnáctinu kratší. Pokud potřebujete zaručené okno, počítejte s 15/16 pokrytí.
+- **Chybějící senzory nezabírají místo.** Kanály senzorů, které zařízení nemá, firmware z masky vypustí, takže se do velikosti záznamu nezapočítají.
+
+Jak záznam zapnout, historii stáhnout nebo ji znovu odeslat přes LoRaWAN, popisuje stránka [**Historie senzorů**](sensor-history.md).

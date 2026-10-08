@@ -14,7 +14,7 @@ Níže si sestavíte příkaz pro zařízení STICKER, který pak pošlete přes
 
 ## Jak ho používat {#how-to-use-it}
 
-1. Vyberte příkaz. U **Set alarm rules** zvolte slot, zdroj, veličinu a prahy; u **Set configuration parameters** vyberte pole a hodnotu. Ve volbě **Custom JSON** napíšete libovolný příkaz ručně.
+1. Vyberte příkaz. U **Set alarm rules** zvolte slot, zdroj a veličinu, nastavte hodnoty pravidla a **Dwell (s)**, dobu držení v sekundách, kterou používají všechny druhy pravidel (0 až 3600, viz [**Parametr `dwell`**](../developer-access/alarm-rules.md#the-dwell-parameter)); u **Set configuration parameters** vyberte pole a hodnotu. Ve volbě **Custom JSON** napíšete libovolný příkaz ručně.
 2. Zkopírujte **JSON**, pokud máte na síťovém serveru nainstalovaný kodek STICKER jako formátovač payloadu **downlinku**, a zařaďte ho na fPort 85.
 3. Nebo zkopírujte **hex** a zařaďte ho přímo jako bajtový payload downlinku na fPort 85, bez kodeku.
 

@@ -137,7 +137,9 @@ const int = (v, f = 0) => (Number.isFinite(parseInt(v, 10)) ? parseInt(v, 10) : 
 const fmtFloat = (x) => String(Math.round(x * 1e6) / 1e6); // trim float32 noise
 
 // Pack a rule into the 17-byte little-endian slot format and return 34 hex chars.
-function packAlarm({sourceId, quantityId, enabled, lo, hi, hst, from, to}) {
+// The last float is `dwell` (seconds) for every rule kind; it replaced the
+// threshold-only hysteresis in v1.4.0.
+function packAlarm({sourceId, quantityId, enabled, lo, hi, dwell, from, to}) {
   const src = byId(SOURCES, sourceId);
   const q = byId(QUANTITIES, quantityId);
   const buf = new ArrayBuffer(17);
@@ -149,17 +151,15 @@ function packAlarm({sourceId, quantityId, enabled, lo, hi, hst, from, to}) {
   dv.setUint8(4, q.kind === 'state' ? (to ? 1 : 0) : 0);
   let fLo = 0;
   let fHi = 0;
-  let fHst = 0;
   if (q.kind === 'threshold') {
     fLo = lo;
     fHi = hi;
-    fHst = hst;
   } else if (q.kind === 'count') {
     fHi = hi; // hi holds the per-interval rate limit N
   }
   dv.setFloat32(5, fLo, true);
   dv.setFloat32(9, fHi, true);
-  dv.setFloat32(13, fHst, true);
+  dv.setFloat32(13, dwell, true);
   return Array.from(new Uint8Array(buf))
     .map((b) => b.toString(16).padStart(2, '0'))
     .join('');
@@ -167,9 +167,23 @@ function packAlarm({sourceId, quantityId, enabled, lo, hi, hst, from, to}) {
 
 const EMPTY_SLOT = '00'.repeat(17);
 
+// The device drops a rule whose dwell is outside 0 to 3600 s (RULE_DWELL_MAX_S
+// in app_alarm_rules.c). A blank dwell is 0, as in the `alarm` shell command.
+const DWELL_MAX = 3600;
+const dwellOk = (v) => num(v) >= 0 && num(v) <= DWELL_MAX;
+
+// What dwell does for the rule's kind (eval_threshold/eval_state/eval_count in app_alarm.c).
+function dwellHint(r, q) {
+  if (q.kind === 'threshold') return 'Seconds the value must stay outside Low to High before the alarm fires (0 = immediately).';
+  if (q.kind === 'count') return 'Seconds after firing before the alarm can fire again.';
+  if (r.source === 'pir' || r.source === 'accel') return 'Fires on each event, then waits this many seconds before it can fire again.';
+  if (r.from === r.to) return 'Seconds the line must stay at To before the alarm fires (0 = immediately).';
+  return 'Seconds the line must stay at To after the transition before the alarm fires; it then stays active as long before it can fire again (0 = immediately).';
+}
+
 const DEFAULT_RULE = {
   slot: '0', action: 'set', enabled: true, source: 'onboard', quantity: 'temperature',
-  lo: '5', hi: '30', hst: '1', from: '0', to: '1', count: '10',
+  lo: '5', hi: '30', dwell: '0', from: '0', to: '1', count: '10',
 };
 
 // Inverse of packAlarm: turn a 17-byte slot hex back into a rule.
@@ -184,11 +198,11 @@ function unpackAlarm(hex, slot) {
   const q = QUANTITIES.find((x) => x.value === bytes[2]) || QUANTITIES[0];
   const lo = dv.getFloat32(5, true);
   const hi = dv.getFloat32(9, true);
-  const hst = dv.getFloat32(13, true);
+  const dwell = dv.getFloat32(13, true);
   return {
     slot: String(slot), action: 'set', enabled,
     source: src.id, quantity: q.id,
-    lo: fmtFloat(lo), hi: fmtFloat(hi), hst: fmtFloat(hst),
+    lo: fmtFloat(lo), hi: fmtFloat(hi), dwell: fmtFloat(dwell),
     from: String(bytes[3]), to: String(bytes[4]),
     count: q.kind === 'count' ? fmtFloat(hi) : '10',
   };
@@ -506,6 +520,7 @@ export default function StickerTemplateGenerator() {
         aObj[f.key] = cell.value;
       }
       for (const r of aRules) {
+        if (r.action === 'set' && !dwellOk(r.dwell)) continue; // flagged in the rule editor
         const slot = Math.max(0, Math.min(15, int(r.slot, 0)));
         const q = byId(QUANTITIES, r.quantity);
         const packed = r.action === 'clear' ? EMPTY_SLOT : packAlarm({
@@ -514,7 +529,7 @@ export default function StickerTemplateGenerator() {
           enabled: r.enabled,
           lo: num(r.lo),
           hi: q.kind === 'count' ? num(r.count) : num(r.hi),
-          hst: num(r.hst),
+          dwell: num(r.dwell),
           from: r.from === '1',
           to: r.to === '1',
         });
@@ -656,7 +671,6 @@ export default function StickerTemplateGenerator() {
                         <div className={styles.inline}>
                           <div><label className={styles.label}>Low</label><input className={styles.inputSm} type="number" value={r.lo} onChange={(e) => updRule(i, {lo: e.target.value})} /></div>
                           <div><label className={styles.label}>High</label><input className={styles.inputSm} type="number" value={r.hi} onChange={(e) => updRule(i, {hi: e.target.value})} /></div>
-                          <div><label className={styles.label}>Hysteresis</label><input className={styles.inputSm} type="number" value={r.hst} onChange={(e) => updRule(i, {hst: e.target.value})} /></div>
                         </div>
                       )}
                       {q.kind === 'state' && (
@@ -671,6 +685,15 @@ export default function StickerTemplateGenerator() {
                           <div><label className={styles.label}>Events per report interval</label><input className={styles.inputSm} type="number" value={r.count} onChange={(e) => updRule(i, {count: e.target.value})} /></div>
                         </div>
                       )}
+                      <div className={styles.inline}>
+                        <div>
+                          <label className={styles.label}>Dwell (s)</label>
+                          <input className={styles.inputSm} type="number" min="0" max={DWELL_MAX} value={r.dwell}
+                            onChange={(e) => updRule(i, {dwell: e.target.value})} />
+                          {!dwellOk(r.dwell) && <span className={styles.fieldErr}>must be 0 to {DWELL_MAX} s</span>}
+                        </div>
+                        <span className={`${styles.hint} ${styles.dwellHint}`}>{dwellHint(r, q)}</span>
+                      </div>
                     </>
                   )}
                 </div>

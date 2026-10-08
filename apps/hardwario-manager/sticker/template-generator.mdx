@@ -21,7 +21,7 @@ Only ticked settings are encoded, so a template carries just what you choose and
 
 1. **Open a section** (LoRaWAN basics, Interval, Sensors or Alarms; they are collapsed by default) and tick the settings you want. Hover or focus a setting to see a short clue with its meaning and allowed values.
 2. Numbers are range-checked (for example sample interval 5 to 3600 s, report interval 60 to 86400 s); an out-of-range value is flagged and left out of the payload until you correct it.
-3. For **Alarms**, click **+ Add alarm rule** to add a slot (up to 16), then choose its source and quantity and set the thresholds. Use **Remove** to drop a rule, or set **Action** to *Clear slot* to wipe that slot on the device. With no rules added, the template carries no alarms.
+3. For **Alarms**, click **+ Add alarm rule** to add a slot (up to 16), then choose its source and quantity, set the rule's values, and set **Dwell (s)**, the hold time in seconds that every rule kind takes (0 to 3600, see [**The `dwell` parameter**](/sticker/developer-access/alarm-rules#the-dwell-parameter)). A rule with a dwell out of that range is flagged and left out of the payload until you correct it. Use **Remove** to drop a rule, or set **Action** to *Clear slot* to wipe that slot on the device. With no rules added, the template carries no alarms.
 4. Copy the **hex** string, or use the **QR code** (it carries the same hex), to store or share the template.
 5. To inspect an existing template, paste its hex into **Read a template from hex** and click **Load template**. The form, including any alarm rules, is repopulated with what the template contains, and the sections it sets are **expanded automatically** so you can see what changed (settings outside this form are ignored).
 

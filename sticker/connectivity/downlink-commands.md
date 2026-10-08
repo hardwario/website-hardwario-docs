@@ -99,10 +99,10 @@ Alarm rules monitoring temperature, humidity, digital inputs, or pulse threshold
 **Set Slot 0 (Onboard Temperature threshold: alarm below 5 °C or above 30 °C):**
 
 ```json
-{ "command": "set_param", "seq": 1, "set_param": { "alarms": { "alarm_0": "03000000000000a0400000f0410000803f" } } }
+{ "command": "set_param", "seq": 1, "set_param": { "alarms": { "alarm_0": "03000000000000a0400000f04100000000" } } }
 ```
 
-*Hex (fPort 85):* `080112152a131a1103000000000000a0400000f0410000803f`
+*Hex (fPort 85):* `080112152a131a1103000000000000a0400000f04100000000`
 
 **Clear Alarm Rule in Slot 0:**
 

@@ -69,6 +69,18 @@
   align-self: center;
 }
 
+/* Stays beside the dwell field and wraps, instead of dropping below it. */
+.dwellHint {
+  flex: 1 1 14rem;
+}
+
+.fieldErr {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--ifm-color-danger);
+}
+
 .rule {
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: var(--ifm-global-radius);

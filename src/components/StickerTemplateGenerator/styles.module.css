@@ -183,6 +183,11 @@
   color: var(--ifm-color-emphasis-600);
 }
 
+/* Stays beside the dwell field and wraps, instead of dropping below it. */
+.dwellHint {
+  flex: 1 1 14rem;
+}
+
 /* Alarm rule editor */
 .rule {
   border: 1px solid var(--ifm-color-emphasis-200);

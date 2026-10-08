@@ -99,10 +99,10 @@ Pravidla alarmů pro teplotu, vlhkost, digitální vstupy nebo prahy počtu impu
 **Nastavení slotu 0 (prah teploty na desce: alarm pod 5 °C nebo nad 30 °C):**
 
 ```json
-{ "command": "set_param", "seq": 1, "set_param": { "alarms": { "alarm_0": "03000000000000a0400000f0410000803f" } } }
+{ "command": "set_param", "seq": 1, "set_param": { "alarms": { "alarm_0": "03000000000000a0400000f04100000000" } } }
 ```
 
-*Hex (fPort 85):* `080112152a131a1103000000000000a0400000f0410000803f`
+*Hex (fPort 85):* `080112152a131a1103000000000000a0400000f04100000000`
 
 **Smazání pravidla alarmu ve slotu 0:**
 

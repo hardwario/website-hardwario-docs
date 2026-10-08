@@ -515,5 +515,122 @@
   },
   "home.metaDescription": {
     "message": "Technická dokumentace produktů a služeb"
+  },
+  "sticker.historyCalculator.channels": {
+    "message": "Kanály"
+  },
+  "sticker.historyCalculator.group.ambient": {
+    "message": "Integrované senzory prostředí"
+  },
+  "sticker.historyCalculator.group.w1": {
+    "message": "Sloty senzorů 1-Wire"
+  },
+  "sticker.historyCalculator.group.counters": {
+    "message": "Impulzní a čítačové vstupy"
+  },
+  "sticker.historyCalculator.group.pir": {
+    "message": "Detekce pohybu PIR"
+  },
+  "sticker.historyCalculator.group.other": {
+    "message": "Barometr, senzor osvětlenosti a akcelerometr"
+  },
+  "sticker.historyCalculator.interval": {
+    "message": "Interval hlášení"
+  },
+  "sticker.historyCalculator.empty": {
+    "message": "Vyberte aspoň jeden kanál. S prázdnou maskou zařízení STICKER žádnou historii nezaznamenává."
+  },
+  "sticker.historyCalculator.badInterval": {
+    "message": "Zadejte interval hlášení od {min} do {max} sekund."
+  },
+  "sticker.historyCalculator.recordSize": {
+    "message": "Velikost záznamu"
+  },
+  "sticker.historyCalculator.perPage": {
+    "message": "Záznamů na stránku"
+  },
+  "sticker.historyCalculator.capacity": {
+    "message": "Kapacita"
+  },
+  "sticker.historyCalculator.covered": {
+    "message": "Pokrytí"
+  },
+  "sticker.historyCalculator.mask": {
+    "message": "Maska"
+  },
+  "sticker.historyCalculator.wrap": {
+    "message": "Po zaplnění bufferu zařízení STICKER najednou smaže nejstarší stránku ({pageRecords}), aby uvolnilo místo. Uložená historie pak pokrývá {range}."
+  },
+  "sticker.historyCalculator.commands": {
+    "message": "Příkazy shellu"
+  },
+  "sticker.historyCalculator.copy": {
+    "message": "Kopírovat příkazy"
+  },
+  "sticker.historyCalculator.note": {
+    "message": "Velikosti kanálů a rozvržení flash paměti odpovídají firmwaru STICKER v1.4.0."
+  },
+  "sticker.historyCalculator.records": {
+    "message": "{count} záznam|{count} záznamy|{count} záznamu|{count} záznamů",
+    "description": "Czech plural forms in Docusaurus order: one|few|many|other"
+  },
+  "sticker.historyCalculator.hours": {
+    "message": "{count} hodina|{count} hodiny|{count} hodiny|{count} hodin",
+    "description": "Czech plural forms in Docusaurus order: one|few|many|other"
+  },
+  "sticker.historyCalculator.days": {
+    "message": "{count} den|{count} dny|{count} dne|{count} dní",
+    "description": "Czech plural forms in Docusaurus order: one|few|many|other"
+  },
+  "sticker.historyCalculator.weeks": {
+    "message": "{count} týden|{count} týdny|{count} týdne|{count} týdnů",
+    "description": "Czech plural forms in Docusaurus order: one|few|many|other"
+  },
+  "sticker.historyCalculator.months": {
+    "message": "{count} měsíc|{count} měsíce|{count} měsíce|{count} měsíců",
+    "description": "Czech plural forms in Docusaurus order: one|few|many|other"
+  },
+  "sticker.historyCalculator.years": {
+    "message": "{count} rok|{count} roky|{count} roku|{count} let",
+    "description": "Czech plural forms in Docusaurus order: one|few|many|other"
+  },
+  "sticker.historyCalculator.infoHint": {
+    "message": "Když na kanál najedete myší nebo na něj přesunete fokus, zobrazí se, co zaznamenává."
+  },
+  "sticker.historyCalculator.info.temperature": {
+    "message": "Teplota vzduchu z vestavěného senzoru, ukládaná s krokem 0,01 °C."
+  },
+  "sticker.historyCalculator.info.humidity": {
+    "message": "Relativní vlhkost z vestavěného senzoru, ukládaná s krokem 0,5 %."
+  },
+  "sticker.historyCalculator.info.w1Temp": {
+    "message": "Teplota ze senzoru 1-Wire ve slotu {slot}, například ze sondy DS18B20, ukládaná s krokem 0,01 °C."
+  },
+  "sticker.historyCalculator.info.w1Hum": {
+    "message": "Vlhkost ze senzoru 1-Wire ve slotu {slot}. U sond, které měří jen teplotu (například DS18B20), zůstává prázdná."
+  },
+  "sticker.historyCalculator.info.hallLeft": {
+    "message": "Celkový počet sepnutí levého Hallova spínače, například otevření dveří snímaných magnetem."
+  },
+  "sticker.historyCalculator.info.hallRight": {
+    "message": "Celkový počet sepnutí pravého Hallova spínače, například otevření dveří snímaných magnetem."
+  },
+  "sticker.historyCalculator.info.input": {
+    "message": "Celkový počet impulzů na vstupu {input}, například z výstupu S0 měřiče."
+  },
+  "sticker.historyCalculator.info.motion": {
+    "message": "Celkový počet detekcí pohybu senzorem PIR."
+  },
+  "sticker.historyCalculator.info.pressure": {
+    "message": "Atmosférický tlak z vestavěného barometru, ukládaný s krokem 0,1 hPa."
+  },
+  "sticker.historyCalculator.info.illuminance": {
+    "message": "Osvětlenost z vestavěného senzoru světla, ukládaná s krokem 2 lx."
+  },
+  "sticker.historyCalculator.info.orientation": {
+    "message": "Natočení zařízení podle akcelerometru, vyjádřené hodnotou 1 až 6."
+  },
+  "sticker.historyCalculator.info.accelMotion": {
+    "message": "Celkový počet pohybů zachycených akcelerometrem, počítaný odděleně od senzoru PIR."
   }
 }

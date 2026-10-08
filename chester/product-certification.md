@@ -11,9 +11,8 @@ This article provides information on the available **CHESTER** product certifica
 
 ## CE (RED) Certification
 
-**EC Declaration of Conformity**
-* [**Download**](pathname:///download/hio-chester-cert-ec-declaration-of-conformity.pdf)
-* Standards listed in the CE (RED) part
+**EU and UK Declarations of Conformity**
+* The current declaration of every CHESTER product, in all EU languages and for the UK, is published on the [**Declarations of Conformity**](https://www.hardwario.com/resources/declarations/) page.
 
 **CE Certificate (Test Verification of Conformity)**
 * [**Download**](pathname:///download/hio-chester-cert-ctew2209008101-tvoc.pdf) (CTEW2209008101)

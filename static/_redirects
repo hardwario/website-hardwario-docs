@@ -339,6 +339,11 @@
 /cloud/fota/                                         /cloud/firmware/                                                301
 
 
+# CHESTER: the 2022 EC declaration of conformity is superseded by the current
+# declarations on www (HDC set); the old PDF must not stay public (2026-10-08).
+/download/hio-chester-cert-ec-declaration-of-conformity.pdf  https://www.hardwario.com/resources/declarations/  301
+
+
 # --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
 # --- every rule after the first splat toward the 100-dynamic-rule limit and
 # --- fails the deploy beyond it; static rules also only win when listed first.

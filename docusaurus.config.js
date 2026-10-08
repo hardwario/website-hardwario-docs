@@ -20,6 +20,20 @@ const SITE_TEXT = {
   },
 };
 
+// The Legal footer column points at www.hardwario.com in the visitor's
+// language: the Czech docs link the Czech pages and the Czech take-back PDF.
+// Labels stay English here; the cs footer.json translates them.
+function legalLinks(locale) {
+  const www = locale === 'cs' ? 'https://www.hardwario.com/cs' : 'https://www.hardwario.com';
+  return [
+    { label: 'Privacy Policy', href: `${www}/legal/privacy/` },
+    { label: 'Terms of Service', href: `${www}/legal/terms/` },
+    { label: 'Cookie Policy', href: `${www}/legal/cookies/` },
+    { label: 'Recycling', href: `https://www.hardwario.com/take-back/${locale}` },
+    { label: 'All Legal Documents', href: `${www}/legal/` },
+  ];
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   ...SITE_TEXT.en,
@@ -452,12 +466,9 @@ const config = {
           },
           {
             title: 'Legal',
-            items: [
-              { label: 'Privacy Policy', href: 'https://www.hardwario.com/legal/privacy/' },
-              { label: 'Terms of Service', href: 'https://www.hardwario.com/legal/terms/' },
-              { label: 'Cookie Policy', href: 'https://www.hardwario.com/legal/cookies/' },
-              { label: 'Recycling', href: 'https://www.hardwario.com/downloads/legal/take-back-electrical-equipment-en.pdf' },
-            ],
+            // The www legal pages in the locale being built: legalLinks() in
+            // module.exports below swaps these items per locale.
+            items: legalLinks('en'),
           },
         ],
         copyright: `<nav aria-label="Other HARDWARIO websites" style="margin-bottom:8px"><span class="footer-sites-label">Other HARDWARIO websites:</span> <a href="https://www.hardwario.com/" target="_blank" rel="noopener noreferrer">HARDWARIO.com</a> · <a href="https://hardwario.engineering/" target="_blank" rel="noopener noreferrer">Engineering</a> · <a href="https://hardwario.studio/" target="_blank" rel="noopener noreferrer">Studio</a> · <a href="https://hardwario.academy/" target="_blank" rel="noopener noreferrer">Academy</a></nav>Copyright © ${new Date().getFullYear()} HARDWARIO a.s. | Designed and built in Europe.`,
@@ -474,7 +485,18 @@ const config = {
 
 // A function, not the object: the build loads this module once but calls the
 // function for every locale, so the title follows the locale being built.
-module.exports = () => ({
-  ...config,
-  ...(SITE_TEXT[process.env.DOCUSAURUS_CURRENT_LOCALE] || SITE_TEXT.en),
-});
+module.exports = () => {
+  const locale = process.env.DOCUSAURUS_CURRENT_LOCALE === 'cs' ? 'cs' : 'en';
+  const footer = config.themeConfig.footer;
+  return {
+    ...config,
+    ...SITE_TEXT[locale],
+    themeConfig: {
+      ...config.themeConfig,
+      footer: {
+        ...footer,
+        links: footer.links.map((column) => (column.title === 'Legal' ? { ...column, items: legalLinks(locale) } : column)),
+      },
+    },
+  };
+};

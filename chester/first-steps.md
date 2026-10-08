@@ -12,7 +12,7 @@ Thank you for choosing the CHESTER device.
 
 Follow these steps to set it up and start viewing your live data in the HARDWARIO Cloud.
 
-For more detailed information, you can also download the [**CHESTER Manual (EN/CZ)**](https://drive.google.com/drive/folders/1pFwF87Mc1c_9w0otSzTuk2yR6CwalqVB?usp=drive_link) in PDF format.
+The printed [**CHESTER manual**](https://www.hardwario.com/resources/manuals/#chester) that ships in the box (safety, first start, radio, battery and disposal information) is also available as a PDF in English and Czech.
 
 
 ---

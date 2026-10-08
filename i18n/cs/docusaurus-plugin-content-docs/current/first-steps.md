@@ -12,7 +12,7 @@ Děkujeme, že jste si vybrali zařízení CHESTER.
 
 Podle následujících kroků zařízení nastavíte a jeho data uvidíte v reálném čase v HARDWARIO Cloud.
 
-Podrobnější informace najdete také v [**manuálu CHESTER (EN/CZ)**](https://drive.google.com/drive/folders/1pFwF87Mc1c_9w0otSzTuk2yR6CwalqVB?usp=drive_link), který si můžete stáhnout ve formátu PDF.
+Tištěný [**návod k použití CHESTER**](https://www.hardwario.com/cs/resources/manuals/#chester), který je součástí balení (bezpečnost, první spuštění, informace o rádiu, bateriích a likvidaci), si můžete stáhnout i jako PDF v angličtině a češtině.
 
 
 ---

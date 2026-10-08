@@ -11,9 +11,8 @@ Tento článek shrnuje certifikace produktu **CHESTER**.
 
 ## Certifikace CE (RED) {#ce-red-certification}
 
-**ES prohlášení o shodě**
-* [**Stáhnout**](pathname:///download/hio-chester-cert-ec-declaration-of-conformity.pdf)
-* Normy uvedené v části CE (RED)
+**EU a UK prohlášení o shodě**
+* Aktuální prohlášení každého výrobku CHESTER ve všech jazycích EU i pro Spojené království najdete na stránce [**Prohlášení o shodě**](https://www.hardwario.com/cs/resources/declarations/).
 
 **Certifikát CE (Test Verification of Conformity)**
 * [**Stáhnout**](pathname:///download/hio-chester-cert-ctew2209008101-tvoc.pdf) (CTEW2209008101)

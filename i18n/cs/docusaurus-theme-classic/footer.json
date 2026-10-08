@@ -103,10 +103,6 @@
     "message": "Zásady ochrany osobních údajů",
     "description": "The label of footer link with label=Privacy Policy linking to https://www.hardwario.com/legal/privacy/"
   },
-  "link.item.label.Terms of Service": {
-    "message": "Obchodní podmínky",
-    "description": "The label of footer link with label=Terms of Service linking to https://www.hardwario.com/legal/terms/"
-  },
   "link.item.label.Cookie Policy": {
     "message": "Zásady používání cookies",
     "description": "The label of footer link with label=Cookie Policy linking to https://www.hardwario.com/legal/cookies/"
@@ -122,5 +118,9 @@
   "copyright": {
     "message": "<nav aria-label=\"Další weby HARDWARIO\" style=\"margin-bottom:8px\"><span class=\"footer-sites-label\">Další weby HARDWARIO:</span> <a href=\"https://www.hardwario.com/\" target=\"_blank\" rel=\"noopener noreferrer\">HARDWARIO.com</a> · <a href=\"https://hardwario.engineering/\" target=\"_blank\" rel=\"noopener noreferrer\">Engineering</a> · <a href=\"https://hardwario.studio/\" target=\"_blank\" rel=\"noopener noreferrer\">Studio</a> · <a href=\"https://hardwario.academy/\" target=\"_blank\" rel=\"noopener noreferrer\">Academy</a></nav>Copyright © 2026 HARDWARIO a.s. | Navrženo a vyrobeno v Evropě.",
     "description": "The footer copyright"
+  },
+  "link.item.label.Terms of Sale": {
+    "message": "Obchodní podmínky",
+    "description": "The label of footer link with label=Terms of Sale linking to https://www.hardwario.com/downloads/legal/terms-of-sale-cs.pdf"
   }
 }

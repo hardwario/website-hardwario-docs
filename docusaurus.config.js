@@ -30,7 +30,7 @@ function legalLinks(locale) {
   const www = locale === 'cs' ? 'https://www.hardwario.com/cs' : 'https://www.hardwario.com';
   return [
     { label: 'Privacy Policy', href: `${www}/legal/privacy/` },
-    { label: 'Terms of Service', href: `${www}/legal/terms/` },
+    { label: 'Terms of Sale', href: `https://www.hardwario.com/downloads/legal/terms-of-sale-${locale}.pdf` },
     { label: 'Cookie Policy', href: `${www}/legal/cookies/` },
     { label: 'Recycling', href: `https://www.hardwario.com/take-back/${locale}` },
     { label: 'All Legal Documents', href: `${www}/legal/` },

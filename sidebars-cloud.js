@@ -43,6 +43,8 @@ const sidebars = {
       collapsed: true,
       items: [
         'connectors',
+        // the guide lives with the other ThingsBoard docs; Cloud only links to it
+        { type: 'link', label: 'ThingsBoard', href: '/apps/thingsboard/cloud-connection#automatic-connection' },
         {
           type: 'category',
           label: 'REST API',

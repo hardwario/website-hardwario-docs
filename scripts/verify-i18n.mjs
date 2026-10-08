@@ -71,6 +71,14 @@ function linkTargets(text, fileDir) {
     .sort();
 }
 
+/**
+ * www.hardwario.com has a page per language, and a translated docs page links to
+ * the www page in its own language (/cs/resources/… for /resources/…). Both lead
+ * to the same page, so the locale segment is dropped before comparing.
+ */
+const sameWwwPage = (url, locale) =>
+  url.replace(new RegExp(`^(https://www\\.hardwario\\.com)/${locale}(?=[/?#]|$)`), '$1');
+
 const frontMatterSlug = (text) => (text.match(/^slug:\s*(.+)$/m) || [])[1];
 
 const frontMatter = (text) => {
@@ -357,7 +365,7 @@ function main() {
 
       const [la, lb] = [
         linkTargets(en, path.dirname(abs)),
-        linkTargets(cs, path.dirname(target)),
+        linkTargets(cs, path.dirname(target)).map((url) => sameWwwPage(url, locale)),
       ];
       const lost = la.filter((l) => !lb.includes(l));
       if (lost.length) found.push(`link targets changed: ${lost.slice(0, 3).join(', ')}`);

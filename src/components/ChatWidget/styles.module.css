@@ -842,6 +842,29 @@
   cursor: default;
 }
 
+/* One quiet line under the input: questions go to an external AI service, and
+   where the privacy policy is. Small, but the 700 grey keeps it at AA contrast;
+   the link inherits that colour (brand red fails on the dark surface). */
+.privacy {
+  margin: 0;
+  padding: 0 12px 10px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--ifm-color-emphasis-700);
+  flex-shrink: 0;
+}
+
+.privacy a {
+  color: inherit;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+.privacy a:hover,
+.privacy a:focus-visible {
+  color: var(--ifm-font-color-base);
+}
+
 /* Phones. The wrapper gets both left and right insets so it spans the screen and
    the panel can simply be 100% wide; align-items: flex-end still parks the button
    on the right. The open panel hides the button (see .fabOpen below), so its
@@ -882,6 +905,10 @@
 
   .inputRow {
     padding: 10px;
+  }
+
+  .privacy {
+    padding: 0 10px 10px;
   }
 }
 
@@ -962,4 +989,12 @@
 .feedbackComment button:disabled {
   opacity: 0.4;
   cursor: default;
+}
+
+/* Under the comment box: the comment lands in a form with the question and
+   answer, so it should carry nothing personal. */
+.feedbackHint {
+  width: 100%;
+  font-size: 11px;
+  color: var(--ifm-color-emphasis-700);
 }

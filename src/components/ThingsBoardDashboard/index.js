@@ -1,4 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import ClickToLoad from '@site/src/components/ClickToLoad';
 
 const SRC = 'https://app.hardwario.cloud/dashboard/15bcc940-5504-11f1-b26d-7f43ae666fcf?publicId=b11cbfe0-55bc-11f1-b26d-7f43ae666fcf';
 
@@ -9,7 +11,7 @@ const HEIGHT = 900;
 // Inline, the bottom of the dashboard is cut off a little.
 const INLINE_HEIGHT = 880;
 
-export default function ThingsBoardDashboard() {
+function LiveDashboard() {
   const containerRef = useRef(null);
   // 'native' = Fullscreen API, 'overlay' = fixed overlay where the API is missing (iPhone Safari).
   const [fullscreen, setFullscreen] = useState(null);
@@ -143,5 +145,37 @@ export default function ThingsBoardDashboard() {
         )}
       </div>
     </div>
+  );
+}
+
+// The live dashboard connects to app.hardwario.cloud, so it waits behind a click
+// like the videos do: the page itself makes no request there. The poster has the
+// dashboard's inline proportions, so loading it hardly moves the page.
+const TEXT = {
+  en: {
+    caption: 'Load the live dashboard',
+    label: 'Load the live dashboard (ThingsBoard example)',
+    notice: 'Loading the live dashboard connects to app.hardwario.cloud.',
+  },
+  cs: {
+    caption: 'Načíst živý dashboard',
+    label: 'Načíst živý dashboard (ukázka ThingsBoard)',
+    notice: 'Načtení živého dashboardu se připojí k app.hardwario.cloud.',
+  },
+};
+
+export default function ThingsBoardDashboard() {
+  const {i18n} = useDocusaurusContext();
+  const t = TEXT[i18n.currentLocale] ?? TEXT.en;
+  return (
+    <ClickToLoad
+      label={t.label}
+      caption={t.caption}
+      notice={t.notice}
+      icon="dashboard"
+      ratio={`${WIDTH} / ${INLINE_HEIGHT}`}
+    >
+      {() => <LiveDashboard />}
+    </ClickToLoad>
   );
 }

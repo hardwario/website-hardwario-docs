@@ -1,0 +1,8 @@
+.player {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--ifm-global-radius);
+  background: #000;
+}

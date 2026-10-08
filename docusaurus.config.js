@@ -5,6 +5,9 @@ const { themes: prismThemes } = require('prism-react-renderer');
 const lightCodeTheme = prismThemes.github;
 const darkCodeTheme = prismThemes.dracula;
 const absoluteDocsLinks = require('./src/remark/absolute-docs-links');
+// Every YouTube embed becomes a click-to-play poster (no Google request before
+// the click); see the file.
+const youtubeFacade = require('./src/remark/youtube-facade');
 
 // The site title ends every <title> and og:title, and code.json cannot reach
 // it, so it is picked per locale below. Docusaurus sets the variable for each
@@ -153,7 +156,7 @@ const config = {
           path: 'chester',
           sidebarPath: require.resolve('./sidebars-chester.js'),
           editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-          remarkPlugins: [absoluteDocsLinks],
+          remarkPlugins: [absoluteDocsLinks, youtubeFacade],
         },
         // This property has no blog content. Disabling the preset's default
         // blog prevents an empty /blog page from being built and indexed.
@@ -200,7 +203,7 @@ const config = {
         routeBasePath: 'ember',
         sidebarPath: require.resolve('./sidebars-ember.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-        remarkPlugins: [absoluteDocsLinks],
+        remarkPlugins: [absoluteDocsLinks, youtubeFacade],
       }),
     ],
     [
@@ -211,7 +214,7 @@ const config = {
         routeBasePath: 'fiber',
         sidebarPath: require.resolve('./sidebars-fiber.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-        remarkPlugins: [absoluteDocsLinks],
+        remarkPlugins: [absoluteDocsLinks, youtubeFacade],
       }),
     ],
     [
@@ -222,7 +225,7 @@ const config = {
         routeBasePath: 'tapper',
         sidebarPath: require.resolve('./sidebars-tapper.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-        remarkPlugins: [absoluteDocsLinks],
+        remarkPlugins: [absoluteDocsLinks, youtubeFacade],
       }),
     ],
     [
@@ -233,7 +236,7 @@ const config = {
         routeBasePath: 'tower',
         sidebarPath: require.resolve('./sidebars-tower.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-        remarkPlugins: [absoluteDocsLinks],
+        remarkPlugins: [absoluteDocsLinks, youtubeFacade],
       }),
     ],
     [
@@ -244,7 +247,7 @@ const config = {
         routeBasePath: 'cloud',
         sidebarPath: require.resolve('./sidebars-cloud.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-        remarkPlugins: [absoluteDocsLinks],
+        remarkPlugins: [absoluteDocsLinks, youtubeFacade],
       }),
     ],
     [
@@ -255,7 +258,7 @@ const config = {
         routeBasePath: 'gauger',
         sidebarPath: require.resolve('./sidebars-gauger.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-        remarkPlugins: [absoluteDocsLinks],
+        remarkPlugins: [absoluteDocsLinks, youtubeFacade],
       }),
     ],
     [
@@ -266,7 +269,7 @@ const config = {
         routeBasePath: 'glider',
         sidebarPath: require.resolve('./sidebars-glider.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-        remarkPlugins: [absoluteDocsLinks],
+        remarkPlugins: [absoluteDocsLinks, youtubeFacade],
       }),
     ],
     [
@@ -277,7 +280,7 @@ const config = {
         routeBasePath: 'apps',
         sidebarPath: require.resolve('./sidebars-apps.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-        remarkPlugins: [absoluteDocsLinks],
+        remarkPlugins: [absoluteDocsLinks, youtubeFacade],
       }),
     ],
     [
@@ -288,7 +291,7 @@ const config = {
         routeBasePath: 'sticker',
         sidebarPath: require.resolve('./sidebars-sticker.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-        remarkPlugins: [absoluteDocsLinks],
+        remarkPlugins: [absoluteDocsLinks, youtubeFacade],
       }),
     ],
     // ➜ Smart Devices (Milesight, RAKwireless, OnLogic, RPi, MikroTik, Carlo Gavazzi, Nexelec)
@@ -300,7 +303,7 @@ const config = {
         routeBasePath: 'smart-devices',
         sidebarPath: require.resolve('./sidebars-smart-devices.js'),
         editUrl: 'https://github.com/hardwario/website-hardwario-docs/edit/main',
-        remarkPlugins: [absoluteDocsLinks],
+        remarkPlugins: [absoluteDocsLinks, youtubeFacade],
       }),
     ],
     [

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useId } from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
@@ -289,6 +289,8 @@ const UI = {
     rateThanks: 'Thanks for the feedback!',
     rateComment: 'What was wrong? (optional)',
     rateCommentSend: 'Send',
+    // The comment goes to a Google Form with the question and the answer.
+    rateCommentHint: 'Do not include personal data.',
     teaser: '👋 Hi! Stuck on something? Ask me anything about HARDWARIO devices.',
     teaserClose: 'Hide this message',
     launchClose: 'Close the documentation assistant',
@@ -301,6 +303,10 @@ const UI = {
       'The documentation assistant ran into an error and is unavailable. Please use the ' +
       'search at the top of the page, or write to ask@hardwario.com.',
     sites: { docs: 'Documentation', www: 'hardwario.com', store: 'Store' },
+    // Under the input: where a question goes, and the privacy policy in the
+    // reader's language.
+    privacy: 'Your questions are sent to an external AI service to generate the answer. Privacy:',
+    privacyUrl: 'https://www.hardwario.com/legal/privacy/',
   },
   cs: {
     title: 'HARDWARIO Docs Assistant',
@@ -326,6 +332,7 @@ const UI = {
     rateThanks: 'Děkujeme za zpětnou vazbu!',
     rateComment: 'Co bylo špatně? (nepovinné)',
     rateCommentSend: 'Odeslat',
+    rateCommentHint: 'Neuvádějte osobní údaje.',
     teaser: '👋 Dobrý den! Potřebujete poradit? Zeptejte se mě na cokoli o zařízeních HARDWARIO.',
     teaserClose: 'Skrýt tuto zprávu',
     launchClose: 'Zavřít asistenta dokumentace',
@@ -340,6 +347,10 @@ const UI = {
       'Asistent dokumentace narazil na chybu a není dostupný. Použijte prosím hledání ' +
       'v horní části stránky, nebo nám napište na ask@hardwario.com.',
     sites: { docs: 'Dokumentace', www: 'hardwario.com', store: 'E-shop' },
+    privacy:
+      'Vaše dotazy se odesílají externí službě umělé inteligence, která generuje odpověď. ' +
+      'Ochrana osobních údajů:',
+    privacyUrl: 'https://www.hardwario.com/cs/legal/privacy/',
   },
 } as const;
 
@@ -573,6 +584,7 @@ function Feedback({
   onComment: (comment: string) => void;
   onSend: () => void;
 }) {
+  const hintId = useId();
   if (!rating) {
     return (
       <div className={styles.feedback}>
@@ -617,12 +629,18 @@ function Feedback({
             onChange={e => onComment(e.target.value)}
             placeholder={t.rateComment}
             aria-label={t.rateComment}
+            aria-describedby={hintId}
             maxLength={2000}
           />
           <button type="submit" disabled={!rating.comment.trim()}>
             {t.rateCommentSend}
           </button>
         </form>
+      )}
+      {rating.value === 'down' && !rating.commentSent && (
+        <span id={hintId} className={styles.feedbackHint}>
+          {t.rateCommentHint}
+        </span>
       )}
     </div>
   );
@@ -659,6 +677,7 @@ export default function ChatWidget() {
   const bottomRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const lastMsgRef = useRef<HTMLDivElement>(null);
+  const privacyId = useId();
 
   // Closing ends the conversation. Reopening starts a new one, rather than
   // resuming a thread the visitor already decided they were finished with —
@@ -1044,11 +1063,18 @@ export default function ChatWidget() {
               placeholder={t.placeholder}
               disabled={loading}
               maxLength={500}
+              aria-describedby={privacyId}
             />
             <button onClick={() => send()} disabled={loading || !input.trim()}>
               ➤
             </button>
           </div>
+          <p id={privacyId} className={styles.privacy}>
+            {t.privacy}{' '}
+            <a href={t.privacyUrl} target="_blank" rel="noopener noreferrer">
+              {t.privacyUrl.replace(/^https:\/\//, '')}
+            </a>
+          </p>
         </div>
       )}
 

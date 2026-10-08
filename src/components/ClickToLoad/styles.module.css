@@ -1,0 +1,75 @@
+.root {
+  margin: 1.5rem 0 var(--ifm-leading);
+}
+
+/* The poster. Infima's emphasis greys and base font colour follow the theme, so
+   it reads as a quiet surface in light and dark mode alike; only the disc
+   carries the brand red. aspect-ratio is set inline (16:9 for a video); a long
+   title on a phone grows the box instead of overflowing it. */
+.poster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: linear-gradient(135deg, var(--ifm-color-emphasis-100), var(--ifm-color-emphasis-200));
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.poster:focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(3rem, 12vw, 4.5rem);
+  height: clamp(3rem, 12vw, 4.5rem);
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease;
+}
+
+.icon svg {
+  width: 45%;
+  height: 45%;
+}
+
+/* The triangle's visual centre sits right of its box centre. */
+.icon .play {
+  margin-left: 8%;
+}
+
+.poster:hover .icon,
+.poster:focus-visible .icon {
+  transform: scale(1.06);
+}
+
+.caption {
+  max-width: 36rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  line-height: 1.35;
+}
+
+.notice {
+  margin: 0.4rem 0 0;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon {
+    transition: none;
+  }
+}

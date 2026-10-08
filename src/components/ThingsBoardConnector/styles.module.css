@@ -1,0 +1,50 @@
+.box {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  background: var(--ifm-background-surface-color);
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.input {
+  width: 100%;
+  max-width: 44rem;
+  padding: 0.55rem 0.75rem;
+  font-size: 1rem;
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ifm-color-primary-lightest);
+}
+
+.hint,
+.waiting {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.invalid {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-danger);
+}
+
+.check {
+  margin: 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+  border-left: 4px solid var(--ifm-color-warning);
+  background: var(--ifm-color-warning-contrast-background);
+  font-size: 0.95rem;
+}

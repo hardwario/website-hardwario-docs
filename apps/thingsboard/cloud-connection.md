@@ -3,15 +3,104 @@ slug: cloud-connection
 title: Cloud
 ---
 import Image from '@theme/IdealImage';
+import ThingsBoardConnector from '@site/src/components/ThingsBoardConnector';
 import EditCodeBlock from './edit-code-block.js';
 
 # Connecting to the HARDWARIO Cloud
 
-In this guide, you will learn how to connect your devices to HARDWARIO Cloud by creating a new connector, transforming your data, and sending it to ThingsBoard. By the end, your data will flow automatically into the platform.
+There are two ways to get your devices from HARDWARIO Cloud into ThingsBoard:
+
+- **[Automatic connection](#automatic-connection)** (recommended): you add one connector, and every tagged device creates itself in your device group.
+- **[Manual connection](#manual-connection)**: for devices that already exist in ThingsBoard.
 
 ---
 
-## Step 1: Prepare Your Device
+## Automatic Connection {#automatic-connection}
+
+Your devices **appear in your ThingsBoard account by themselves**, in the device group you choose. You add one connector and tag the devices you want to send. There is nothing to set up in ThingsBoard.
+
+```mermaid
+flowchart LR
+  Device([Device]) -->|uplink| Cloud[(HARDWARIO Cloud)]
+  Cloud -->|connector + your group ID| TB[(ThingsBoard)]
+  TB -->|first message| New[Device created<br/>in your group]
+  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  class Cloud hero;
+  class TB hero;
+```
+
+You need a ThingsBoard account. If you do not have one yet, contact us at [ask@hardwario.com](mailto:ask@hardwario.com).
+
+### Step 1: Find Your Device Group
+
+The device group tells ThingsBoard where your devices belong.
+
+1. Sign in to [ThingsBoard](https://app.hardwario.cloud), open **Entities → Devices** and switch to the **Groups** tab.
+2. Click the row of the group you want the devices in. Choose **All** if you do not use groups, or [create a new group](/apps/thingsboard/users-managing#creating-a-device-group) first.
+3. In the group details on the right, click **Copy entity group Id**.
+
+   ![Device group details in ThingsBoard with the "Copy entity group Id" button highlighted](images/thingsboard-copy-group-id.png)
+
+:::tip Keep your devices sorted
+The group ID decides where your devices are created. Create a group for each building, site or project, and add one connector per group - each with its own group ID and its own tag (e.g. `thingsboard-warehouse`, `thingsboard-office`). Every device then lands in the right group by itself.
+:::
+
+### Step 2: Get Your Connector Code
+
+Paste the copied ID below. The code fills itself in.
+
+<ThingsBoardConnector />
+
+### Step 3: Add the Connector
+
+[Create a connector](/cloud/connectors#creating-a-connector) with these settings and paste the code from Step 2 as its [transformation function](/cloud/connectors#the-transformation-function):
+
+| Setting | Value |
+|---|---|
+| **Name** | `thingsboard` |
+| **Triggers** | `data`, `session`, `config` (see [Triggers](/cloud/connectors#triggers)) |
+| **Tags** | a new tag `thingsboard` (see [Creating a Tag](/cloud/tags#creating-a-tag)) |
+
+### Step 4: Tag Your Devices
+
+Add the `thingsboard` tag to each device you want in ThingsBoard, see [Assigning Tags](/cloud/tags#assigning-tags), or tag many devices at once with [Bulk Actions](/cloud/bulk-actions#tags).
+
+### What Happens in ThingsBoard
+
+With the **next message** of each tagged device, the device appears in your device group:
+
+| In ThingsBoard | Value |
+|---|---|
+| **Device name** | `chester-<serial number>`, e.g. `chester-2159012345` |
+| **Label** | the serial number |
+| **Attributes** | device name from HARDWARIO Cloud, product, firmware version, IMEI, ICCID, device configuration, serial numbers of BLE tags |
+| **Telemetry** | all measurements with their original timestamps, rounded to two decimals; BLE tags as `ble_tags.0.…`, `ble_tags.1.…` |
+
+Every next message only adds new data. A device reports at its own interval, so it can take up to one interval before it appears.
+
+- **Renaming a device** in HARDWARIO Cloud only updates its name attribute. The device keeps its name, label and history.
+- **New devices later:** just tag them with `thingsboard`.
+- **A different group:** put the new group's ID into the connector. Devices move there with their next message.
+- **Stopping the data:** remove the `thingsboard` tag. The device and its history stay in ThingsBoard.
+- **Deleting a device in ThingsBoard** does not stop the data. While the device is tagged, its next message adds it again, so remove the tag first.
+- **Devices you already have in ThingsBoard:** do not tag them, they would appear a second time. Use the [manual connection](#manual-connection) for them.
+
+### Troubleshooting
+
+| Problem | What to do |
+|---|---|
+| A device does not appear | Check that it has the `thingsboard` tag and has sent a message since you tagged it. |
+| Devices do not appear in my group | Check the group ID in the connector against your group. After you fix it, devices move there with their next message. |
+
+Anything else: [ask@hardwario.com](mailto:ask@hardwario.com).
+
+---
+
+## Manual Connection {#manual-connection}
+
+Use this guide for devices that already exist in ThingsBoard. You create a connector, transform your data, and send it to ThingsBoard with the device's access token.
+
+### Step 1: Prepare Your Device
 
 Before setting up the connector, you need to prepare your device in the HARDWARIO Cloud so it knows where to send data and how to authenticate:
 
@@ -27,7 +116,7 @@ Log in to your ThingsBoard dashboard, navigate to **Entities > Devices**, and cl
 
 ---
 
-## Step 2: Create a New Connector
+### Step 2: Create a New Connector
 
 To establish communication with ThingsBoard, go to the `Connectors` section in the left-hand menu.  
 Click `+ New Connector` and configure the following:
@@ -41,7 +130,7 @@ Click `+ New Connector` and configure the following:
 
 ---
 
-## Step 3: Transform Data for ThingsBoard Format
+### Step 3: Transform Data for ThingsBoard Format
 
 ThingsBoard requires a specific data format. You need to adjust your device data using a **transformation code**.  
 In the connector page, scroll down to the `Transformation` section and click the magnifying glass icon 📄🔍 to open the code editor.
@@ -50,7 +139,7 @@ In the connector page, scroll down to the `Transformation` section and click the
 
 ---
 
-## Step 4: Insert the Transformation Code
+### Step 4: Insert the Transformation Code
 
 Add the transformation logic that converts incoming data to a ThingsBoard-compatible format.
 
@@ -214,7 +303,7 @@ Add the transformation logic that converts incoming data to a ThingsBoard-compat
 
 ---
 
-## Step 5: Assign Devices to Connector
+### Step 5: Assign Devices to Connector
 
 Scroll down and select which devices (with the matching tag) should be connected.  
 On the left side, you'll see **incoming data** from the device.  
@@ -233,7 +322,7 @@ You can test the data by opening your device in ThingsBoard and checking whether
 
 ![ThingsBoard - Latest Telemetry](images/thingsboard-device-6.png)
 
-## Video Tutorial
+### Video Tutorial
 
 :::tip
 If you need further assistance or a visual demonstration of the process described in this guide, consult the [Video Guide](/apps/videos-apps/thingsboard-cloud-connection).

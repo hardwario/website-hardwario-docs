@@ -15,108 +15,17 @@ import Image from '@theme/IdealImage';
 Pokud chcete do systému získat přístup a prohlížet vizualizace a grafy dat ze svých zařízení HARDWARIO, napište prosím na **ask@hardwario.com**.
 :::
 
+:::tip Zařízení z HARDWARIO Cloudu
+S [automatickým připojením](/apps/thingsboard/cloud-connection#automatic-connection) z HARDWARIO Cloudu se vaše zařízení objeví ve vašem účtu ThingsBoard sama - stačí přidat jeden konektor s ID své skupiny zařízení.
+:::
+
 ---
 
 ## Ukázka dashboardu s IoT daty {#example-of-an-iot-data-dashboard}
 
-import React, { useRef, useState, useEffect } from 'react';
+import ThingsBoardDashboard from '@site/src/components/ThingsBoardDashboard';
 
-export const DashboardContainer = () => {
-  const containerRef = useRef(null);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [scale, setScale] = useState(0.6); // Výchozí měřítko
-
-  // Sledování zapnutí/vypnutí fullscreenu
-  useEffect(() => {
-    const handleFullscreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
-    };
-
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
-  }, []);
-
-  // Sledování šířky kontejneru pro plynulý responzivní design (zoom/menší okna)
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const observer = new ResizeObserver((entries) => {
-      for (let entry of entries) {
-        // Zjistíme, kolik pixelů nám Docusaurus aktuálně dovolí využít
-        const availableWidth = entry.contentRect.width;
-        // Přepočítáme měřítko (1600 je originální šířka iframe)
-        setScale(availableWidth / 1600);
-      }
-    });
-
-    observer.observe(containerRef.current);
-    return () => observer.disconnect();
-  }, []);
-
-  const toggleFullscreen = () => {
-    if (!containerRef.current) return;
-
-    if (!document.fullscreenElement) {
-      containerRef.current.requestFullscreen().catch(err => {
-        console.error(`Chyba při spouštění fullscreenu: ${err.message}`);
-      });
-    } else {
-      document.exitFullscreen();
-    }
-  };
-
-  return (
-    <div style={{ margin: '20px 0' }}>
-      {/* Tlačítko */}
-      <div style={{ textAlign: 'right', marginBottom: '10px' }}>
-        <button 
-          onClick={toggleFullscreen}
-          style={{
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            color: '#666',
-            fontSize: '14px',
-            textDecoration: 'underline'
-          }}
-        >
-          ⛶ Fullscreen
-        </button>
-      </div>
-
-      {/* Kontejner s dynamickou velikostí */}
-      <div 
-        ref={containerRef} 
-        style={{ 
-          width: '100%', // Nyní zabere vždy přesně tolik místa, kolik může
-          height: isFullscreen ? '100vh' : `${880 * scale}px`, // Dynamická výška podle měřítka
-          overflow: 'hidden', 
-          position: 'relative',
-          backgroundColor: '#fff',
-          border: isFullscreen ? 'none' : '1px solid #e0e0e0',
-          borderRadius: isFullscreen ? '0' : '8px'
-        }}
-      >
-        <iframe 
-          src="https://app.hardwario.cloud/dashboard/15bcc940-5504-11f1-b26d-7f43ae666fcf?publicId=b11cbfe0-55bc-11f1-b26d-7f43ae666fcf" 
-          width={isFullscreen ? "100%" : "1600px"} 
-          height={isFullscreen ? "100%" : "900px"} 
-          frameBorder="0" 
-          allowFullScreen
-          style={{ 
-            transform: isFullscreen ? 'none' : `scale(${scale})`, // Aplikace vypočítaného měřítka
-            transformOrigin: '0 0', 
-            position: 'absolute',
-            top: 0,
-            left: 0
-          }}
-        />
-      </div>
-    </div>
-  );
-};
-
-<DashboardContainer />
+<ThingsBoardDashboard />
 
 ---
 

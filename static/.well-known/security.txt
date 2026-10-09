@@ -1,4 +1,5 @@
-Contact: mailto:ask@hardwario.com
-Expires: 2027-09-05T00:00:00.000Z
+Contact: mailto:security@hardwario.com
+Expires: 2027-10-01T00:00:00.000Z
+Policy: https://www.hardwario.com/security/
 Preferred-Languages: en, cs
 Canonical: https://docs.hardwario.com/.well-known/security.txt

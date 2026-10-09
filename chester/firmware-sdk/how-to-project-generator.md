@@ -6,9 +6,7 @@ import Image from '@theme/IdealImage';
 
 # How to: Project Generator
 
-The **CHESTER SDK Project Generator** simplifies project configuration by providing a structured approach to project setup, all based on a **YAML** configuration.
-
-It is also used for generating different **variants** of catalog applications. You can look at `project.yaml` files to see different variants.
+The **CHESTER SDK Project Generator** manages **variants** of catalog applications and generates their configuration from a **YAML** file. You can look at `project.yaml` files to see different variants.
 
 Then you call `west chester-update --variant "CHESTER Clime 1W"` to update project files, then you call `west build` to recompile project.
 
@@ -36,7 +34,7 @@ Examples:
 
 :::info
 
-  All commands can be executed without specifying `<name>` if you are already in the project folder, except for `west chester-init`.
+  The command can be executed without specifying `<name>` if you are already in the project folder.
 
 :::
 
@@ -333,16 +331,8 @@ struct app_config {
 };
 ```
 
-### Commands declaration
-The commands define specific actions that can be executed within the project shell environment. Commands are added to `app_shell.c`. Example:
-```yaml
-commands:
-- name: sample  # Name separated by '-'
-  callback: app_work_sample() # This function should be manually created
-  help: 'Sample immediately.'
-```
-### Features and Commands `depends_on`
-Once the **Project Generator** is executed `features.h` and `variants.h` are generated based on the selected **variant** and **features**. This enables the addition of dependencies to any parameter or commands by including lines such as:
+### Features `depends_on`
+Once the **Project Generator** is executed `features.h` and `variants.h` are generated based on the selected **variant** and **features**. This enables the addition of dependencies to any parameter by including lines such as:
 ```yaml
 depends_on: defined(FEATURE_<feature_name>)`
 ```
@@ -399,41 +389,18 @@ struct app_config {
     int int_array_name[4];
 };
 ```
-### Extras declaration
-These extras are employed when non-default **feature** configurations are necessary in the `prj.conf` file.
-
-When project requirements diverge from the default **features** configurations provided by underlying libraries or frameworks, these extras are utilized. They enable customers to finely adjust the project's configuration to address specific needs not covered by default settings.
-
-Example in `prj.conf`:
-```yaml
-extras:
-- CONFIG_ADC_TLA2021_INIT_PRIORITY=60
-- CONFIG_ADC_NRFX_SAADC=n
-- CONFIG_ADC_SHELL=n
-- CONFIG_NEWLIB_LIBC_NANO=n
-```
 ### Preserved Code Blocks
 
-In the context of this codebase, preserved code blocks are sections of code that are designated to remain unchanged during file generation or updates. These blocks are identified by special comment markers:
-```c
-/* ### Preserved code "block-name" (begin) */
-// Preserved code content
-/* ^^^ Preserved code "block-name" (end) */
+Sections of generated files that are designated to remain unchanged during updates are called preserved code blocks. In `prj.conf` the `config` block is preserved, so put any non-default `CONFIG_*` options of your project there:
+```conf
+# ### Preserved code "config" (begin)
+CONFIG_ADC_TLA2021_INIT_PRIORITY=60
+CONFIG_NEWLIB_LIBC_NANO=n
+# ^^^ Preserved code "config" (end)
 ```
 
 :::info
 
-Any code enclosed between these markers will be preserved without modification, allowing developers to maintain custom or critical sections within generated files.
+Anything enclosed between these markers is kept as is when you run `west chester-update`.
 
 :::
-
-### Directives `clang-format`
-
-To control the behavior of `clang-format` within the codebase, developers can use special directives to exclude specific sections from automatic formatting:
-```c
-/* ### Preserved code "block-name" (begin) */
-/* clang-format off */
-// Preserved code content excluded from formatting
-/* clang-format on */
-/* ^^^ Preserved code "block-name" (end) */
-```

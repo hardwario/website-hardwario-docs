@@ -6,9 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Jak na: Project Generator {#how-to-project-generator}
 
-**CHESTER SDK Project Generator** zjednodušuje konfiguraci projektu: celé nastavení projektu popíšete strukturovaně v konfiguraci **YAML**.
-
-Používá se také ke generování různých **variant** katalogových aplikací. Jednotlivé varianty najdete v souborech `project.yaml`.
+**CHESTER SDK Project Generator** spravuje **varianty** katalogových aplikací a generuje jejich konfiguraci ze souboru **YAML**. Jednotlivé varianty najdete v souborech `project.yaml`.
 
 Soubory projektu pak aktualizujete příkazem `west chester-update --variant "CHESTER Clime 1W"` a projekt znovu zkompilujete příkazem `west build`.
 
@@ -36,7 +34,7 @@ Příklady:
 
 :::info
 
-  Pokud jste už ve složce projektu, můžete všechny příkazy kromě `west chester-init` spouštět bez parametru `<name>`.
+  Pokud jste už ve složce projektu, můžete příkaz spouštět bez parametru `<name>`.
 
 :::
 
@@ -333,16 +331,8 @@ struct app_config {
 };
 ```
 
-### Deklarace příkazů {#commands-declaration}
-Příkazy definují konkrétní akce, které lze spouštět v shellu projektu. Přidávají se do `app_shell.c`. Příklad:
-```yaml
-commands:
-- name: sample  # Name separated by '-'
-  callback: app_work_sample() # This function should be manually created
-  help: 'Sample immediately.'
-```
-### `depends_on` u funkcí a příkazů {#features-and-commands-dependson}
-Po spuštění nástroje **Project Generator** se podle vybrané **varianty** a **funkcí** vygenerují soubory `features.h` a `variants.h`. Díky nim můžete k libovolnému parametru nebo příkazu přidat závislosti řádky jako:
+### `depends_on` u funkcí {#features-dependson}
+Po spuštění nástroje **Project Generator** se podle vybrané **varianty** a **funkcí** vygenerují soubory `features.h` a `variants.h`. Díky nim můžete k libovolnému parametru přidat závislosti řádky jako:
 ```yaml
 depends_on: defined(FEATURE_<feature_name>)`
 ```
@@ -399,41 +389,18 @@ struct app_config {
     int int_array_name[4];
 };
 ```
-### Deklarace extras {#extras-declaration}
-Sekce extras se používá, když v souboru `prj.conf` potřebujete jiné než výchozí nastavení **funkcí**.
-
-Když se požadavky projektu liší od výchozího nastavení **funkcí** v použitých knihovnách či frameworcích, použijí se právě extras. Zákazníci jimi mohou konfiguraci projektu jemně doladit pro potřeby, které výchozí nastavení nepokrývá.
-
-Příklad v `prj.conf`:
-```yaml
-extras:
-- CONFIG_ADC_TLA2021_INIT_PRIORITY=60
-- CONFIG_ADC_NRFX_SAADC=n
-- CONFIG_ADC_SHELL=n
-- CONFIG_NEWLIB_LIBC_NANO=n
-```
 ### Zachované bloky kódu {#preserved-code-blocks}
 
-Zachované bloky kódu jsou úseky, které při generování nebo aktualizaci souborů zůstanou beze změny. Označují se speciálními značkami v komentářích:
-```c
-/* ### Preserved code "block-name" (begin) */
-// Preserved code content
-/* ^^^ Preserved code "block-name" (end) */
+Úseky generovaných souborů, které při aktualizaci zůstanou beze změny, se nazývají zachované bloky kódu. V `prj.conf` se zachovává blok `config`, takže do něj vložte všechny nestandardní volby `CONFIG_*` svého projektu:
+```conf
+# ### Preserved code "config" (begin)
+CONFIG_ADC_TLA2021_INIT_PRIORITY=60
+CONFIG_NEWLIB_LIBC_NANO=n
+# ^^^ Preserved code "config" (end)
 ```
 
 :::info
 
-Kód mezi těmito značkami zůstane beze změny, takže si vývojáři mohou v generovaných souborech ponechat vlastní nebo kritické části.
+Vše mezi těmito značkami zůstane při spuštění `west chester-update` beze změny.
 
 :::
-
-### Direktivy `clang-format` {#directives-clang-format}
-
-Chování nástroje `clang-format` v kódové bázi mohou vývojáři řídit speciálními direktivami, které vyloučí konkrétní části z automatického formátování:
-```c
-/* ### Preserved code "block-name" (begin) */
-/* clang-format off */
-// Preserved code content excluded from formatting
-/* clang-format on */
-/* ^^^ Preserved code "block-name" (end) */
-```

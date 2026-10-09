@@ -24,15 +24,16 @@ const SITE_TEXT = {
 };
 
 // The Legal footer column points at www.hardwario.com in the visitor's
-// language: the Czech docs link the Czech pages and the Czech take-back PDF.
-// Labels stay English here; the cs footer.json translates them.
+// language, always at a document's own address /<lang>/legal/<name>/ (a PDF
+// document redirects to its current file). Labels stay English here; the cs
+// footer.json translates them.
 function legalLinks(locale) {
   const www = locale === 'cs' ? 'https://www.hardwario.com/cs' : 'https://www.hardwario.com';
   return [
-    { label: 'Privacy Policy', href: `${www}/legal/privacy/` },
-    { label: 'Terms of Sale', href: `https://www.hardwario.com/downloads/legal/terms-of-sale-${locale}.pdf` },
+    { label: 'Privacy Notice', href: `${www}/legal/privacy/` },
+    { label: 'Terms of Sale', href: `${www}/legal/terms-of-sale/` },
     { label: 'Cookie Policy', href: `${www}/legal/cookies/` },
-    { label: 'Recycling', href: `https://www.hardwario.com/take-back/${locale}` },
+    { label: 'Recycling', href: `${www}/legal/take-back/` },
     { label: 'All Legal Documents', href: `${www}/legal/` },
   ];
 }

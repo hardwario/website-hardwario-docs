@@ -99,9 +99,9 @@
     "message": "Blog",
     "description": "The label of footer link with label=Blog linking to https://www.hardwario.com/blog/"
   },
-  "link.item.label.Privacy Policy": {
+  "link.item.label.Privacy Notice": {
     "message": "Zásady ochrany osobních údajů",
-    "description": "The label of footer link with label=Privacy Policy linking to https://www.hardwario.com/legal/privacy/"
+    "description": "The label of footer link with label=Privacy Notice linking to https://www.hardwario.com/legal/privacy/"
   },
   "link.item.label.Cookie Policy": {
     "message": "Zásady používání cookies",
@@ -109,7 +109,7 @@
   },
   "link.item.label.Recycling": {
     "message": "Recyklace",
-    "description": "The label of footer link with label=Recycling linking to https://www.hardwario.com/take-back/en"
+    "description": "The label of footer link with label=Recycling linking to https://www.hardwario.com/legal/take-back/"
   },
   "link.item.label.All Legal Documents": {
     "message": "Všechny právní dokumenty",
@@ -120,7 +120,7 @@
     "description": "The footer copyright"
   },
   "link.item.label.Terms of Sale": {
-    "message": "Obchodní podmínky",
-    "description": "The label of footer link with label=Terms of Sale linking to https://www.hardwario.com/downloads/legal/terms-of-sale-cs.pdf"
+    "message": "Všeobecné obchodní podmínky",
+    "description": "The label of footer link with label=Terms of Sale linking to https://www.hardwario.com/legal/terms-of-sale/"
   }
 }

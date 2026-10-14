@@ -118,17 +118,30 @@ config save
 
 The combinations below have been validated by **HARDWARIO** in the field. This list grows as further operators are put into service. If your operator is not here, it does not mean the device will not work, only that we have not verified it ourselves.
 
+To use a row, apply the settings for your SIM card from [Step 2](#step-2---apply-the-settings-for-your-sim-card) and then set `mode` to the listed technology, `network` to the PLMN ID (leave it empty where the table says *automatic*) and `apn` to the listed APN. For example, for a **Slovak Telekom** SIM card:
+
+```
+lte config mode "nb-iot"
+lte config network "23102"
+lte config apn "nbiot.telekom.sk"
+config save
+```
+
 {/* Growth table: add a row for every newly validated operator / SIM card variant. Keep the Status column honest - only mark a row as verified once it has actually run in the field. */}
 
-| SIM card / operator | Coverage | Technology | APN | Notes |
-| :------------------ | :------- | :--------- | :-- | :---- |
-| **Vodafone** (HARDWARIO) | Europe + roaming partners worldwide | NB-IoT, LTE-M | `hardwario` | Per-country PLMN IDs and APNs are listed in [**Vodafone SIM EU28+2**](vodafone-coverage.md). |
-| **1NCE** (HARDWARIO) | Non-European countries | NB-IoT, LTE-M | `iot.1nce.net` | Recommended outside Europe. |
-| **Vodafone United Kingdom** | United Kingdom | NB-IoT | `hardwario` | Roaming onto Vodafone UK, PLMN `23415`. |
-| **Onomondo** | Multi-operator | NB-IoT, LTE-M | `onomondo` | APN confirmed, no band or PLMN lock required. |
-| **Slovak Telekom** | Slovakia | NB-IoT | `nbiot.telekom.sk` | |
-| **Mobily** | Saudi Arabia | NB-IoT | `M2M-NB` | |
-| **Vodafone Ukraine** | Ukraine | NB-IoT only | *(empty)* | Requires **Nordic nRF9160** modem firmware **v1.3.7**, see [**Nordic nRF9160 Modem Firmware**](../../firmware-flashing/lte-modem-over-j-link.md#nordic-nrf9160-modem-firmware). Apart from that, use the [**Other SIM cards**](#other-sim-cards) settings unchanged. |
+| SIM card / operator | Coverage | Technology | PLMN ID | APN | Notes |
+| :------------------ | :------- | :--------- | :------ | :-- | :---- |
+| **Vodafone** (HARDWARIO) | Europe + roaming partners worldwide | NB-IoT, LTE-M | *automatic* | `hardwario` | Per-country PLMN IDs and APNs are listed in [**Vodafone SIM EU28+2**](vodafone-coverage.md). |
+| **Vodafone Czech Republic** | Czech Republic | NB-IoT | `23003` | `hardwario` | |
+| **Vodafone** via Orange Slovakia | Slovakia | LTE-M | `23101` | `hardwario` | Czech Vodafone SIM card roaming onto Orange Slovakia. |
+| **Vodafone United Kingdom** | United Kingdom | NB-IoT | `23415` | `hardwario` | Roaming onto Vodafone UK. |
+| **1NCE** (HARDWARIO) | Non-European countries | NB-IoT, LTE-M | *automatic* | `iot.1nce.net` | Recommended outside Europe. |
+| **Onomondo** | Multi-operator, see [LTE-M](https://onomondo.com/coverage/lte-m/) and [NB-IoT](https://onomondo.com/coverage/nb-iot/) coverage | NB-IoT, LTE-M | *automatic* | `onomondo` | No band or PLMN lock required. |
+| **Slovak Telekom** | Slovakia | NB-IoT | `23102` | `nbiot.telekom.sk` | |
+| **Slovak Telekom** via T-Mobile Austria | Austria | NB-IoT | `23203` | `nbiot.telekom.sk` | Slovak Telekom SIM card roaming onto T-Mobile Austria. |
+| **Slovak Telekom** via T-Mobile Poland | Poland | NB-IoT | `26002` | `nbiot.telekom.sk` | Slovak Telekom SIM card roaming onto T-Mobile Poland. |
+| **Mobily** | Saudi Arabia | NB-IoT | `42003` | `M2M-NB` | |
+| **Vodafone Ukraine** | Ukraine | NB-IoT only | *automatic* | *(empty)* | Requires **Nordic nRF9160** modem firmware **v1.3.7**, see [**Nordic nRF9160 Modem Firmware**](../../firmware-flashing/lte-modem-over-j-link.md#nordic-nrf9160-modem-firmware). Apart from that, use the [**Other SIM cards**](#other-sim-cards) settings unchanged. |
 
 :::note
 

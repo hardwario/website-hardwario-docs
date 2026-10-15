@@ -13,7 +13,7 @@ The app reaches a device over one of two wireless links, depending on the produc
 | Link | Used by | Notes |
 |---|---|---|
 | **NFC** | STICKER | Works even with **no batteries inserted** (NFC energy harvesting), so a device can be prepared before it is installed. Needs an **Android** phone with NFC. |
-| **Bluetooth Low Energy** | CHESTER | Configuration, shell access and firmware updates over a paired Bluetooth connection. |
+| **Bluetooth Low Energy** | CHESTER, FIBER | CHESTER: configuration, shell access and firmware updates over a paired Bluetooth connection. FIBER: gateway setup, see [**FIBER**](/apps/hardwario-manager/fiber). |
 
 ---
 
@@ -22,9 +22,14 @@ The app reaches a device over one of two wireless links, depending on the produc
 | Platform | Download |
 |---|---|
 | **Android** | [**Google Play**](https://play.google.com/store/apps/details?id=com.hardwario.manager) |
-| **iOS** | [**App Store**](https://apps.apple.com/app/id6444803082) |
+| **iOS** | Not in the App Store yet. Ask your HARDWARIO contact for the current iOS build. |
 
 Updates arrive automatically through the store, and your saved devices are kept across updates.
+
+:::caution The App Store listing is an earlier app
+The **HARDWARIO Manager** currently listed in the App Store is the earlier
+generation of the app (version 1.x). It does not match this guide.
+:::
 
 :::info STICKER is configured from Android
 STICKER configuration over NFC is done from an **Android phone with NFC** (most phones from the last few years have it).

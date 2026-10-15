@@ -33,6 +33,8 @@ Both screens use the encrypted channel, so the device must be saved with its
 | **DevEUI** | The device's LoRaWAN identifier |
 | **Health** | A summary of the device's status flags |
 | **Active alarms** | Which alarm rules are currently tripped, see [**Alarm rules**](./alarms.md) |
+| **Counters** | The Hall and input counters |
+| **Last downlink** | Signal strength (RSSI and SNR) of the last message the device received from the network, and how long ago it arrived |
 
 **Advanced** expands further diagnostic detail, such as the firmware build and
 the cause of the last reset. **Read again** repeats the read without leaving the
@@ -42,7 +44,7 @@ screen. Hold the phone against the device again.
 
 ## Read LoRaWAN keys
 
-1. Go to **STICKER → LoRaWAN keys** and choose **Read LoRaWAN keys**.
+1. Go to **STICKER → LoRaWAN → LoRaWAN keys** and choose **Read LoRaWAN keys**.
 2. Hold the phone against the STICKER.
 
 <img src="/img/hw-manager/hw-manager-lrw-keys.png" alt="LoRaWAN keys read over NFC" width="320" />
@@ -53,6 +55,22 @@ What is shown depends on the device's activation mode:
 |---|---|
 | **OTAA** | DevEUI, JoinEUI (AppEUI), AppKey |
 | **ABP** | DevEUI, DevAddr, and the session keys |
+
+---
+
+## Join the network now
+
+A STICKER that is not yet on the network retries the join on its own schedule.
+To make it try straight away, go to **STICKER → LoRaWAN → LoRaWAN join** and hold
+the phone against the device.
+
+<img src="/img/hw-manager/hw-manager-sticker-lorawan.png" alt="The STICKER LoRaWAN menu with LoRaWAN keys and LoRaWAN join" width="320" />
+ Nothing is erased and the device does not
+restart. Use it after registering the device on the network server, so you do
+not have to wait for the next scheduled attempt.
+
+If the device has stale session data (for example after it was moved to another
+network), use **LoRaWAN reset** instead, see [**Reset a device**](./reset.md).
 
 ---
 

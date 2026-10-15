@@ -15,7 +15,7 @@ startu.
 
 Otevřete **HARDWARIO Manager** a zvolte **STICKER**.
 
-<img src="/img/hw-manager/hw-manager-sticker.jpg" alt="Menu STICKER v aplikaci HARDWARIO Manager s položkami Device info, LoRaWAN keys, Configuration, Templates, Tools a Saved STICKERs" width="320" />
+<img src="/img/hw-manager/hw-manager-sticker-menu.png" alt="Menu STICKER v aplikaci HARDWARIO Manager s položkami Device info, Configuration, Sensors, LoRaWAN, Tools a Saved STICKERs" width="320" />
 
 :::info Ke snímkům obrazovky
 Snímky v této sekci pocházejí ze staršího sestavení aplikace, takže několik popisků má
@@ -29,15 +29,16 @@ písmeny. Rozvržení obrazovek ale odpovídá.
 
 | Položka | Co dělá |
 |---|---|
-| **Device info** | Čtení sériového čísla, verze firmwaru, doby běhu a hodin, viz [**Informace o zařízení a klíče LoRaWAN**](./device-info.md) |
-| **LoRaWAN keys** | Čtení DevEUI a klíčů potřebných k registraci zařízení v síti |
-| **Configuration** | Čtení a úprava celé konfigurace zařízení, viz [**Konfigurace**](./configuration.md) |
-| **Templates** | Znovu použitelné konfigurační předvolby, viz [**Šablony**](./templates.md) |
-| **Tools** | Synchronizace času, senzory, historie, resety, viz [**Nástroje**](./tools.md) |
+| **Device info** | Čtení sériového čísla, firmwaru, doby běhu, hodin, baterie, stavu LoRaWAN a aktivních alarmů, viz [**Informace o zařízení a klíče LoRaWAN**](./device-info.md) |
+| **Configuration** | Čtení a úprava celé konfigurace zařízení, zápis bez čtení, načtení ze souboru nebo použití šablony, viz [**Konfigurace**](./configuration.md) a [**Šablony**](./templates.md) |
+| **Sensors** | [**Senzory 1-Wire**](./one-wire-sensors.md), [**Vzorek dat**](./sample-data.md) a [**Historie senzorů**](./sensor-history.md) |
+| **LoRaWAN** | Čtení DevEUI a klíčů potřebných k registraci zařízení v síti a okamžité připojení zařízení k síti, viz [**Informace o zařízení a klíče LoRaWAN**](./device-info.md) |
+| **Tools** | Synchronizace času, kalibrační režim, resety a změny výrobce, viz [**Nástroje**](./tools.md) |
 | **Saved STICKERs** | Spravovaná zařízení a jejich uložené klíče, viz [**Saved STICKERs**](./saved-stickers.md) |
 
-Tlačítkem **Claim a STICKER** dole zařízení zapíšete ke svému účtu ATELOS, aby
-aplikace mohla doplnit jeho klíče. Viz [**Účet ATELOS**](../atelos.md).
+Tlačítkem **Claim a STICKER** dole zařízení nárokujete v ATELOSu jako své, aby
+aplikace mohla doplnit jeho klíče. Zařízení můžete nárokovat ke svému účtu
+ATELOS, nebo bez účtu k tomuto telefonu. Viz [**Účet ATELOS**](../atelos.md).
 
 ---
 

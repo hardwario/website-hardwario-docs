@@ -15,8 +15,9 @@ the device.
 |---|---|
 | **Reboot device** | Restarts the device; keeps all settings and data |
 | **Reset counters** | Zeroes the Hall and input counters |
-| **Device reset** | Resets settings but keeps the LoRaWAN connection. The device stays provisioned |
-| **Factory reset** | Resets settings and drops the LoRaWAN session and keys, so the device re-joins the network. Keeps the device identity |
+| **Device reset** | Resets settings and configuration to defaults (alarm rules included) but keeps the device identity and LoRaWAN keys, so the device stays joined to the network. Then it restarts |
+| **LoRaWAN reset** | Clears the LoRaWAN state (frame counters, DevNonce and the current session) and restarts, so the device joins as if it had never been on the network. Keys and configuration are kept. For re-commissioning after re-keying, or when moving the device to another network |
+| **Factory reset** | Resets settings to defaults and drops the LoRaWAN keys and session, so the device needs new keys before it can join again. Its identity is kept (serial number, secret key, vendor-token, DevEUI and JoinEUI), so the app can still reach it. Then it restarts |
 
 ---
 
@@ -48,8 +49,8 @@ device configuration as well. Plan to re-apply the configuration. A
 :::
 
 :::danger No undo
-A **factory reset** drops the device's LoRaWAN session and keys, so it re-joins
-the network. A **vendor reset** wipes the device back to its serial number and
+A **factory reset** drops the device's LoRaWAN session and keys, so it needs new
+keys before it can join the network again. A **vendor reset** wipes the device back to its serial number and
 vendor token and sets a new secret key. Neither can be undone. Use them only
 when you intend to start from a clean state.
 :::

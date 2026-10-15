@@ -5,8 +5,10 @@ title: Nastavení aplikace
 
 # Nastavení aplikace {#app-settings}
 
-**Settings** otevřete ikonou ozubeného kola v pravém horním rohu jakékoli
-obrazovky.
+Otevřete **menu** tlačítkem v pravém horním rohu jakékoli obrazovky a zvolte
+**Settings**.
+
+<img src="/img/hw-manager/hw-manager-settings.png" alt="Obrazovka Settings se sekcemi Appearance, Language, Security a STICKER change log" width="320" />
 
 ---
 
@@ -16,7 +18,7 @@ Zvolte, jak má aplikace vypadat:
 
 | Volba | Význam |
 |---|---|
-| **System** | Řídí se světlým nebo tmavým režimem telefonu. Výchozí volba. |
+| **System default** | Řídí se světlým nebo tmavým režimem telefonu. Výchozí volba. |
 | **Light** | Vždy světlá. |
 | **Dark** | Vždy tmavá. |
 
@@ -70,13 +72,14 @@ Historie změn zaznamenává u uloženého zařízení každé čtení konfigura
 
 ## Ladicí režim {#debug-mode}
 
-Když **pětkrát** klepnete na logo HARDWARIO ve spodní části obrazovky **Settings**,
-zapnete nebo vypnete ladicí režim (**Debug mode**). Po prvním klepnutí se objeví
-počítadlo, které ukazuje, kolik klepnutí zbývá.
+Když **pětkrát** klepnete na logo HARDWARIO ve spodní části **menu**, zapnete nebo
+vypnete ladicí režim (**Debug mode**). Po prvním klepnutí se objeví počítadlo,
+které ukazuje, kolik klepnutí zbývá.
 
-Ladicí režim přidá do nabídky **Tools** zařízení STICKER položku **NFC Console**
-(nízkoúrovňovou konzoli pro surové příkazy NFC) a pod záhlavím zobrazí tenký
-pásek `debug mode`, abyste vždy věděli, že je zapnutý. Je to diagnostická
-pomůcka; při běžném používání ho nechte vypnutý.
+Ladicí režim přidá do nabídky **Tools** zařízení STICKER položku **Debug tools**
+(**Unclaim**, **Write claim code** a nízkoúrovňovou **NFC Console**, viz
+[**Nástroje**](./sticker/tools.md#debug-tools)) a pod záhlavím zobrazí tenký
+pásek `debug mode`, abyste vždy věděli, že je zapnutý. Je to servisní pomůcka;
+při běžném používání ho nechte vypnutý.
 
 Aplikace si ladicí režim pamatuje, takže zůstane zapnutý, dokud ho nevypnete.

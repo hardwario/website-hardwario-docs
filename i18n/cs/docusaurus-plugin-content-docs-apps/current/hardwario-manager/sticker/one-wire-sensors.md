@@ -10,7 +10,7 @@ ke slotům senzorů v zařízení.
 
 1. Nejprve senzory k zařízení STICKER zapojte: viz
    [**Zapojení vstupů STICKER Input**](/sticker/sticker-input-wiring/external-sensors).
-2. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Tools → 1-Wire sensors**.
+2. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Sensors → 1-Wire sensors**.
 3. Zvolte **Read slots & scan the 1-Wire bus** a přiložte telefon k zařízení.
    Každý nalezený senzor nahlásí svou jedinečnou adresu ROM.
 4. **Přiřaďte** každý senzor k jednomu ze čtyř slotů. Slot můžete **vyprázdnit**

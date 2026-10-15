@@ -12,20 +12,21 @@ zařízení STICKER. Pokud jste aplikaci ještě nenainstalovali, začněte str�
 
 Přejděte na **STICKER → Configuration**.
 
-<img src="/img/hw-manager/hw-manager-configuration.png" alt="Obrazovka Configuration s volbami Read configuration from the device, Scan multiple (batch export), Configure without reading a Configure from file" width="320" />
+<img src="/img/hw-manager/hw-manager-configuration.png" alt="Menu Configuration s volbami Read, Batch export, Write without reading, Configure from file a Templates" width="320" />
 
 | Volba | Co dělá |
 |---|---|
-| **Read configuration from the device** | Přečte konfiguraci zařízení, kterou pak upravíte a zapíšete zpět. Běžný postup. |
-| **Scan multiple (batch export)** | Načte konfigurace mnoha zařízení najednou, viz [**Načtení více zařízení**](./batch-export.md) |
-| **Configure without reading** | Konfiguraci sestavíte sami a zapíšete do zařízení, i do vypnutého, viz [**Konfigurace vypnutého zařízení**](./offline-configuration.md) |
+| **Read** | Přečte konfiguraci zařízení, kterou pak upravíte a zapíšete zpět. Běžný postup. |
+| **Batch export** | Načte konfigurace mnoha zařízení najednou, viz [**Načtení více zařízení**](./batch-export.md) |
+| **Write without reading** | Konfiguraci sestavíte sami a zapíšete do zařízení, i do vypnutého, viz [**Konfigurace vypnutého zařízení**](./offline-configuration.md) |
 | **Configure from file** | Načte konfiguraci, kterou jste si uložili dříve (viz níže) |
+| **Templates** | Znovupoužitelné předlohy konfigurace, viz [**Šablony**](./templates.md) |
 
 ---
 
 ## Čtení a úprava {#read-and-edit}
 
-Zvolte **Read configuration from the device** a držte telefon u zařízení STICKER,
+Zvolte **Read** a držte telefon u zařízení STICKER,
 dokud se konfigurace nepřečte. Pak otevřete sekci, kterou chcete změnit.
 
 <img src="/img/hw-manager/hw-manager-configuration-sticker.png" alt="Sbalené sekce konfigurace s akcemi pro uložení a export pod nimi" width="320" />

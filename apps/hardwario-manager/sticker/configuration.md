@@ -12,20 +12,21 @@ over NFC. If you have not installed the app yet, start with
 
 Go to **STICKER → Configuration**.
 
-<img src="/img/hw-manager/hw-manager-configuration.png" alt="The Configuration screen with Read configuration from the device, Scan multiple (batch export), Configure without reading and Configure from file" width="320" />
+<img src="/img/hw-manager/hw-manager-configuration.png" alt="The Configuration menu with Read, Batch export, Write without reading, Configure from file and Templates" width="320" />
 
-| Entry action | What it does |
+| Entry | What it does |
 |---|---|
-| **Read configuration from the device** | Read what is on a device, then edit and write it back. The usual path. |
-| **Scan multiple (batch export)** | Capture many devices' configurations in one session, see [**Scan multiple devices**](./batch-export.md) |
-| **Configure without reading** | Build a configuration and write it to a device, including a powered-off one, see [**Configure a powered-off device**](./offline-configuration.md) |
+| **Read** | Read what is on a device, then edit and write it back. The usual path. |
+| **Batch export** | Capture many devices' configurations in one session, see [**Scan multiple devices**](./batch-export.md) |
+| **Write without reading** | Build a configuration and write it to a device, including a powered-off one, see [**Configure a powered-off device**](./offline-configuration.md) |
 | **Configure from file** | Load a configuration you saved earlier (see below) |
+| **Templates** | Reusable configuration presets, see [**Templates**](./templates.md) |
 
 ---
 
 ## Read and edit
 
-Choose **Read configuration from the device** and hold the phone against the
+Choose **Read** and hold the phone against the
 STICKER until the configuration is read. Then open the section you want to
 change.
 

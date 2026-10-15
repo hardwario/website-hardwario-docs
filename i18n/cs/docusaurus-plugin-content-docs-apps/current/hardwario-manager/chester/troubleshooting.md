@@ -54,6 +54,7 @@ telefonu (nestačí to udělat jen v aplikaci) a pak se znovu připojte přes QR
 | **Connection lost**, zařízení spojení ukončilo | Zařízení se možná restartovalo (spojení ukončí restart i aktualizace firmwaru). Připojte se znovu. |
 | Zařízení se vypnulo | Zkontrolujte jeho napájení nebo baterii a připojte se znovu. |
 | **No answer from the device** | Držte zařízení blízko telefonu a zkuste to znovu. Pokud ani pak neodpoví, připojte se znovu. |
+| **Disconnected after 30 minutes** | Aplikace ukončí spojení, které se 30 minut nepoužívá. Připojte se znovu na stejné obrazovce a pokračujte. |
 | Telefon má příliš mnoho připojení Bluetooth | Odpojte jiné zařízení a zkuste to znovu. |
 | **The device refused it** | Firmware tuto operaci nepovoluje. Zkontrolujte, že na zařízení běží aktuální firmware CHESTER. |
 | Čtení konfigurace nevrátilo žádná použitelná data | Firmware možná nepodporuje konfigurační příkazy shellu. Viz [**Konfigurace**](./configuration.md). |

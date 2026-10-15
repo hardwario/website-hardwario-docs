@@ -20,12 +20,12 @@ mít nastavený secret key a musí být uložené v telefonu. Viz
 
 ## Sestavení konfigurace a její zápis {#build-a-configuration-and-write-it}
 
-1. Přejděte na **STICKER → Configuration → Configure without reading**.
+1. Přejděte na **STICKER → Configuration → Write without reading**.
 2. Sestavte konfiguraci: buď ji volbou **Apply template** vyplňte z uložené
    šablony, nebo otevřete jednotlivé sekce a hodnoty nastavte ručně.
 3. Klepněte na **Save to device** a přiložte telefon k zařízení STICKER.
 
-<img src="/img/hw-manager/hw-manager-configuration-without-reading.png" alt="Configure without reading: sestavení konfigurace offline s počítadlem velikosti, připravené k zápisu do tagu" width="320" />
+<img src="/img/hw-manager/hw-manager-configuration-without-reading.png" alt="Write without reading: sestavení konfigurace offline s počítadlem velikosti, připravené k zápisu do tagu" width="320" />
 
 Protože se ze zařízení předem nic nečetlo, zapíše se každá nastavená hodnota
 přesně tak, jak je. Není s čím porovnávat, a proto tu chybí i volba
@@ -45,7 +45,7 @@ se v limitu udržíte se šablonou, která obsahuje jen to, co skutečně potře
 ## Hromadné použití šablony offline {#apply-a-template-offline-in-bulk}
 
 Pokud chcete mnoha vypnutým zařízením nastavit totéž, sestavte konfiguraci jednou
-jako šablonu a použijte ji v **STICKER → Templates**:
+jako šablonu a použijte ji v **STICKER → Configuration → Templates**:
 
 1. Otevřete šablonu a zvolte **Apply offline**.
 2. Konfigurace se ze šablony předvyplní: zkontrolujte ji.

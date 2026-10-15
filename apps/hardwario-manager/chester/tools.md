@@ -13,18 +13,22 @@ rather than on its configuration.
 
 | Tool | What it does |
 |---|---|
-| [**Firmware update**](./firmware-update.md) | Flash new firmware over Bluetooth, from a QR code |
-| **Reboot device** | Restart the CHESTER. This drops the connection |
+| [**Firmware update**](./firmware-update.md) | Flash new firmware over Bluetooth, from a QR code, a firmware ID or a file |
+| **Reboot device** | Restart the CHESTER. The app reconnects when it is back up |
 | **Factory reset** | Restore the CHESTER's configuration to factory defaults |
 
 ---
 
 ## Reboot device
 
-Restarts the device. Because the CHESTER drops its Bluetooth link when it
-restarts, the app disconnects. Reconnect from the setup wizard once the device
-is back up, which takes a few seconds. Settings already committed to the device
-survive the reboot; anything changed but not saved does not.
+Restarts the device. The CHESTER drops its Bluetooth link while it restarts, so
+the app waits the reboot out and then reconnects to it by its serial number,
+retrying at growing intervals (30 seconds up to 4 minutes). A banner reports the
+attempt and offers **Cancel**. Settings already committed to the device survive
+the reboot; anything changed but not saved does not.
+
+**Factory reset** restarts the device as well, and the app reconnects the same
+way.
 
 ## Factory reset
 
@@ -36,7 +40,7 @@ Intervals, communication mode, LTE and LoRaWAN settings, and bound BLE tag slots
 all go back to their defaults. Export the configuration first if you may need it
 again. **Share configuration** on the
 [**Configuration**](./configuration.md) screen writes out the whole thing as
-text.
+shell commands you can paste back later.
 :::
 
 If an action fails, the app reports it rather than failing silently, and offers

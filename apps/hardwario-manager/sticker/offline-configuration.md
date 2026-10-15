@@ -20,12 +20,12 @@ has to be provisioned with a secret key and saved on the phone. See
 
 ## Build a configuration and write it
 
-1. Go to **STICKER → Configuration → Configure without reading**.
+1. Go to **STICKER → Configuration → Write without reading**.
 2. Build the configuration: either **Apply template** to fill it from a saved
    preset, or open each section and set the values by hand.
 3. Tap **Save to device** and hold the phone against the STICKER.
 
-<img src="/img/hw-manager/hw-manager-configuration-without-reading.png" alt="Configure without reading: building a configuration offline with a size counter, ready to save to the tag" width="320" />
+<img src="/img/hw-manager/hw-manager-configuration-without-reading.png" alt="Write without reading: building a configuration offline with a size counter, ready to save to the tag" width="320" />
 
 Because nothing was read from the device first, every value you set is written
 as-is. There is nothing to compare against and no **Revert to read values**.
@@ -44,7 +44,7 @@ actually need is the easiest way to stay inside the budget.
 ## Apply a template offline in bulk
 
 To give many powered-off devices the same settings, build the configuration once
-as a template and apply it from **STICKER → Templates**:
+as a template and apply it from **STICKER → Configuration → Templates**:
 
 1. Open the template and choose **Apply offline**.
 2. The configuration is pre-filled from the template: review it.

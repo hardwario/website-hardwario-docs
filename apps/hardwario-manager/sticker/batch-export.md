@@ -13,7 +13,7 @@ together, useful for inventory, audits, and backups before a change.
 ## Capture the devices
 
 1. Open **HARDWARIO Manager** and go to
-   **STICKER → Configuration → Scan multiple (batch export)**.
+   **STICKER → Configuration → Batch export**.
 2. Choose which sections to capture: **LoRaWAN**, **Application**, **Sensors**,
    **Alarms**.
 3. Tap each STICKER in turn. Every device's configuration is captured

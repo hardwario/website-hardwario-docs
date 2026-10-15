@@ -13,7 +13,7 @@ to pro inventuru, audity a zálohu před změnou.
 ## Načtení zařízení {#capture-the-devices}
 
 1. Otevřete **HARDWARIO Manager** a přejděte na
-   **STICKER → Configuration → Scan multiple (batch export)**.
+   **STICKER → Configuration → Batch export**.
 2. Zvolte, které sekce se mají načíst: **LoRaWAN**, **Application**, **Sensors**,
    **Alarms**.
 3. Postupně přiložte telefon ke každému zařízení STICKER. Konfigurace každého

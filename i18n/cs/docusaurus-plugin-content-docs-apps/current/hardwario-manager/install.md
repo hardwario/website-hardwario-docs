@@ -5,8 +5,10 @@ title: Instalace aplikace
 
 # Instalace aplikace HARDWARIO Manager {#install-hardwario-manager}
 
-**HARDWARIO Manager** běží na **Androidu** a **iOS**. O aktuální sestavení pro
-svou platformu požádejte svou kontaktní osobu v HARDWARIO.
+**HARDWARIO Manager** běží na **Androidu** a **iOS**. Aplikace pro Android je na
+[**Google Play**](https://play.google.com/store/apps/details?id=com.hardwario.manager).
+Aplikace pro iOS v App Storu zatím není; o aktuální sestavení pro iOS požádejte
+svou kontaktní osobu v HARDWARIO.
 
 ---
 
@@ -17,7 +19,7 @@ svou platformu požádejte svou kontaktní osobu v HARDWARIO.
 | **Telefon s NFC** | Nutný ke konfiguraci zařízení **STICKER**. NFC má většina telefonů z posledních let. |
 | **Bluetooth** | Nutný k připojení k zařízení **CHESTER**. |
 | **Kamera** | Ke skenování QR kódů: párovacích štítků zařízení CHESTER, odkazů na firmware, kódů pro nárokování zařízení a sdílených šablon. |
-| **Účet ATELOS** | Potřebný k nárokování zařízení a ke stažení jeho uloženého secret key do telefonu. Viz [**Účet ATELOS**](./atelos.md). |
+| **Účet ATELOS** (nepovinný) | Aplikace s ním nárokuje zařízení k vašemu účtu a stáhne jejich uložené secret key do telefonu. Bez účtu lze zařízení nárokovat k samotnému telefonu. Viz [**Účet ATELOS**](./atelos.md). |
 | **Secret key zařízení** | Zařízení STICKER komunikuje šifrovaným kanálem NFC. Když zařízení nárokujete, klíč se vyplní za vás; zadat ho můžete i ručně. |
 
 ---
@@ -37,8 +39,9 @@ nenastavíte. Pro připojení k zařízení CHESTER přes Bluetooth ho ale použ
 
 ## 2. Nainstalujte aplikaci {#2-install-the-app}
 
-Nainstalujte sestavení pro svou platformu a aplikaci otevřete. Uložená zařízení,
-šablony a nastavení zůstanou zachované i po aktualizacích.
+Nainstalujte **HARDWARIO Manager** z Google Play (nebo sestavení pro iOS, které jste
+dostali) a aplikaci otevřete. Uložená zařízení, šablony a nastavení zůstanou
+zachované i po aktualizacích.
 
 ---
 
@@ -48,7 +51,7 @@ Aplikace žádá o každé oprávnění až ve chvíli, kdy ho poprvé potřebuj
 na **Povolit** (nebo **Při používání aplikace**):
 
 - **Kamera**: jen když skenujete QR kód.
-- **Zařízení v okolí / Bluetooth**: jen když se připojujete k zařízení CHESTER.
+- **Zařízení v okolí / Bluetooth**: jen když se připojujete k zařízení CHESTER nebo FIBER nebo hledáte Beacony.
 - **Face ID / biometrika**: jen když si zapnete zámek aplikace v
   [**Nastavení aplikace**](./settings.md).
 
@@ -58,6 +61,9 @@ O oprávnění k NFC aplikace nežádá. NFC zapínáte jen jednou, v kroku 1.
 Na Androidu 12 a novějším potřebuje aplikace pro zařízení v okolí oprávnění
 k **vyhledávání** i k **připojení**. Pokud je odmítnete, obrazovky zařízení
 CHESTER vám nabídnou otevřít nastavení telefonu, kde je můžete udělit.
+
+Na Androidu 11 a starším potřebuje vyhledávání přes Bluetooth navíc zapnutou
+**Polohu** v nastavení telefonu.
 :::
 
 ---

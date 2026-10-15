@@ -10,7 +10,7 @@ Zařízení STICKER umí měření ukládat do vlastní paměti (store-and-forwa
 hodnoty naměřené v době, kdy bylo offline, se neztratí. Uložené záznamy přečtete
 přes NFC.
 
-1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Tools → Sensor history**.
+1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Sensors → Sensor history**.
 2. Přiložte telefon k zařízení STICKER a nehýbejte s ním.
 3. Uložené záznamy se načtou a zobrazí k prohlédnutí.
 
@@ -27,6 +27,10 @@ Obrazovka data přehledně zobrazí, nejde o surový výpis:
 - **souhrn** toho, co se načetlo,
 - **grafy** uložených hodnot,
 - **tabulky po dnech**, které lze rozbalit na jednotlivé záznamy.
+
+**Export CSV** nasdílí načtené záznamy jako tabulku. Pokud jste telefon oddálili
+dřív, než se načetlo všechno, obrazovka uvede, kolik záznamů zatím má; držte
+telefon v klidu a přečtěte zbytek znovu.
 
 Časové značky závisejí na hodinách zařízení. Pokud byl čas zařízení
 synchronizovaný, mají záznamy absolutní časové značky v UTC; pokud ne, zobrazí

@@ -12,7 +12,10 @@ nabídne ji ve dvou zobrazeních: jako průvodce **Quick Set-up** a jako úplný
 nezapíše, dokud je neuložíte.
 
 V záhlaví obrazovky je uvedené zařízení, se kterým pracujete, a akcí sdílení
-v horní liště vyexportujete celou konfiguraci jako text.
+v horní liště vyexportujete celou konfiguraci jako příkazy shellu: jeden řádek
+`<module> config <name> <value>` na každé nastavení, v pořadí podle zařízení,
+včetně přiřazení BLE tagů a s příkazem `config save` na konci. Každý řádek lze
+vložit přímo do [**terminálu**](./terminal.md).
 
 ---
 

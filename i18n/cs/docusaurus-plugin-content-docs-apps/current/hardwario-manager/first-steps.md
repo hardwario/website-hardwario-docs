@@ -13,7 +13,7 @@ Podle produktu komunikuje aplikace se zařízením jedním ze dvou bezdrátovýc
 | Spojení | Používá | Poznámky |
 |---|---|---|
 | **NFC** | STICKER | Funguje i **bez vložených baterií** (zařízení se napájí z pole NFC), takže zařízení můžete připravit ještě před instalací. Vyžaduje telefon s **Androidem** a NFC. |
-| **Bluetooth Low Energy** | CHESTER | Konfigurace, přístup k shellu a aktualizace firmwaru přes spárované připojení Bluetooth. |
+| **Bluetooth Low Energy** | CHESTER, FIBER | CHESTER: konfigurace, přístup k shellu a aktualizace firmwaru přes spárované připojení Bluetooth. FIBER: nastavení brány, viz [**FIBER**](/apps/hardwario-manager/fiber). |
 
 ---
 
@@ -22,9 +22,14 @@ Podle produktu komunikuje aplikace se zařízením jedním ze dvou bezdrátovýc
 | Platforma | Ke stažení |
 |---|---|
 | **Android** | [**Google Play**](https://play.google.com/store/apps/details?id=com.hardwario.manager) |
-| **iOS** | [**App Store**](https://apps.apple.com/app/id6444803082) |
+| **iOS** | Zatím není v App Storu. O aktuální sestavení pro iOS požádejte svou kontaktní osobu v HARDWARIO. |
 
 Aktualizace se instalují automaticky z obchodu s aplikacemi a uložená zařízení při nich zůstávají zachovaná.
+
+:::caution V App Storu je starší aplikace
+Aplikace **HARDWARIO Manager**, kterou App Store nyní nabízí, je předchozí
+generace aplikace (verze 1.x). Tomuto návodu neodpovídá.
+:::
 
 :::info Zařízení STICKER se konfiguruje z Androidu
 Zařízení STICKER se přes NFC konfiguruje z **telefonu s Androidem a NFC** (NFC má většina telefonů z posledních let).

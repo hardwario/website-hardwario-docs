@@ -5,7 +5,10 @@ title: App settings
 
 # App settings
 
-Open **Settings** with the gear icon in the top-right corner of any screen.
+Open the **menu** with the button in the top-right corner of any screen, then
+choose **Settings**.
+
+<img src="/img/hw-manager/hw-manager-settings.png" alt="The Settings screen with Appearance, Language, Security and STICKER change log" width="320" />
 
 ---
 
@@ -15,7 +18,7 @@ Choose how the app looks:
 
 | Option | Effect |
 |---|---|
-| **System** | Follows the phone's light/dark setting. This is the default. |
+| **System default** | Follows the phone's light/dark setting. This is the default. |
 | **Light** | Always light. |
 | **Dark** | Always dark. |
 
@@ -70,13 +73,14 @@ read, export and reapply entries.
 
 ## Debug mode
 
-Tapping the HARDWARIO logo at the bottom of the Settings screen **five times**
-turns **Debug mode** on or off. A counter appears after the first tap to show
-how many taps are left.
+Tapping the HARDWARIO logo at the bottom of the **menu** **five times** turns
+**Debug mode** on or off. A counter appears after the first tap to show how many
+taps are left.
 
-Debug mode adds the **NFC Console** to the STICKER Tools menu (a low-level
-console for raw NFC commands) and shows a thin `debug mode` strip under the
-header so you always know it is on. It is a diagnostic aid; leave it off for
-normal use.
+Debug mode adds **Debug tools** to the STICKER Tools menu (**Unclaim**,
+**Write claim code** and the low-level **NFC Console**, see
+[**Tools**](./sticker/tools.md#debug-tools)) and shows a thin `debug mode` strip
+under the header so you always know it is on. It is a service aid; leave it off
+for normal use.
 
 Debug mode is remembered, so it stays on until you turn it off again.

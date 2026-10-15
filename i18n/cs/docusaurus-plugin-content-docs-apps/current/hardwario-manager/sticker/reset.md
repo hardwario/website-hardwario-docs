@@ -15,8 +15,9 @@ k zařízení.
 |---|---|
 | **Reboot device** | Restartuje zařízení; zachová všechna nastavení i data |
 | **Reset counters** | Vynuluje čítače Hallových spínačů a vstupů |
-| **Device reset** | Obnoví výchozí nastavení, ale zachová připojení LoRaWAN. Zařízení zůstane zprovozněné |
-| **Factory reset** | Obnoví výchozí nastavení a zahodí relaci i klíče LoRaWAN, takže se zařízení k síti připojí znovu. Identita zařízení zůstane zachovaná |
+| **Device reset** | Obnoví výchozí nastavení a konfiguraci (včetně pravidel alarmů), ale zachová identitu zařízení i klíče LoRaWAN, takže zařízení zůstane připojené k síti. Potom se restartuje |
+| **LoRaWAN reset** | Smaže stav LoRaWAN (čítače rámců, DevNonce a aktuální relaci) a restartuje se, takže se zařízení připojí, jako by v síti nikdy nebylo. Klíče i konfigurace zůstanou. Pro nové uvedení do provozu po změně klíčů nebo při přesunu zařízení do jiné sítě |
+| **Factory reset** | Obnoví výchozí nastavení a zahodí klíče i relaci LoRaWAN, takže zařízení potřebuje nové klíče, než se znovu připojí. Identita zařízení zůstane (sériové číslo, secret key, vendor-token, DevEUI a JoinEUI), takže ho aplikace dál najde. Potom se restartuje |
 
 ---
 
@@ -49,8 +50,8 @@ zapsat; se [**šablonou**](./templates.md) je to otázka jednoho kroku.
 :::
 
 :::danger Nevratné operace
-**Factory reset** zahodí relaci a klíče LoRaWAN, takže se zařízení k síti
-připojí znovu. **Vendor reset** vymaže zařízení až na sériové číslo a vendor
+**Factory reset** zahodí relaci a klíče LoRaWAN, takže zařízení potřebuje nové
+klíče, než se k síti znovu připojí. **Vendor reset** vymaže zařízení až na sériové číslo a vendor
 token a nastaví nový secret key. Ani jednu operaci nelze vrátit. Použijte je jen
 tehdy, když skutečně chcete začít z čistého stavu.
 :::

@@ -54,6 +54,7 @@ connect again from the QR code.
 | **Connection lost**. The device closed the link | It may have rebooted; a reboot or a firmware update does this. Reconnect. |
 | The device powered off | Check its power supply or battery, then reconnect. |
 | **No answer from the device** | Keep it close to the phone and try again. If it stays silent, reconnect. |
+| **Disconnected after 30 minutes** | The app drops a link that has not been used for 30 minutes. Reconnect from the same screen to carry on. |
 | The phone has too many Bluetooth connections | Disconnect another device and try again. |
 | **The device refused it** | The firmware does not allow that operation. Check the device runs current CHESTER firmware. |
 | The configuration read came back with nothing usable | The firmware may not support the configuration shell commands. See [**Configuration**](./configuration.md). |

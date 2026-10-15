@@ -78,10 +78,18 @@ const sidebars = {
               },
               collapsed: true,
               items: [
+                'hardwario-manager/sticker/reset',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Sensors',
+              key: 'manager-sticker-sensors',
+              collapsed: true,
+              items: [
                 'hardwario-manager/sticker/one-wire-sensors',
                 'hardwario-manager/sticker/sample-data',
                 'hardwario-manager/sticker/sensor-history',
-                'hardwario-manager/sticker/reset',
               ],
             },
           ],
@@ -127,6 +135,22 @@ const sidebars = {
             'hardwario-manager/chester/troubleshooting',
           ],
         },
+        {
+          type: 'category',
+          label: 'FIBER',
+          link: {
+            type: 'doc',
+            id: 'hardwario-manager/fiber/index',
+          },
+          collapsed: true,
+          items: [
+            'hardwario-manager/fiber/setup',
+            'hardwario-manager/fiber/network',
+            'hardwario-manager/fiber/stickers',
+            'hardwario-manager/fiber/beacons',
+          ],
+        },
+        'hardwario-manager/troubleshooting',
       ],
     },
     {

@@ -12,7 +12,10 @@ Configuration**. Your edits carry between them, and nothing reaches the device
 until you save.
 
 The screen is headed with the device it is working on, and the share action in
-the top bar exports the whole configuration as text.
+the top bar exports the whole configuration as shell commands: one
+`<module> config <name> <value>` line per setting, in the device's own order,
+with the BLE tag bindings included and `config save` at the end. Every line can
+be pasted straight into the [**Terminal**](./terminal.md).
 
 ---
 

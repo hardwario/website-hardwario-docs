@@ -8,7 +8,7 @@ title: Sample sensor data
 Read every sensor on a STICKER right now and see the values, the quickest
 end-to-end test that a device is working.
 
-1. Open **HARDWARIO Manager** and go to **STICKER → Tools → Sample data**.
+1. Open **HARDWARIO Manager** and go to **STICKER → Sensors → Sample data**.
 2. Hold the phone against the STICKER and keep still.
 3. The app reads the sensors and shows the current values.
 

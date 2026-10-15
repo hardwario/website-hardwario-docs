@@ -5,8 +5,10 @@ title: Install the app
 
 # Install HARDWARIO Manager
 
-**HARDWARIO Manager** runs on **Android** and **iOS**. Ask your HARDWARIO
-contact for the current build for your platform.
+**HARDWARIO Manager** runs on **Android** and **iOS**. The Android app is on
+[**Google Play**](https://play.google.com/store/apps/details?id=com.hardwario.manager).
+The iOS app is not in the App Store yet; ask your HARDWARIO contact for the
+current iOS build.
 
 ---
 
@@ -17,7 +19,7 @@ contact for the current build for your platform.
 | **A phone with NFC** | Required to configure a **STICKER**. Most phones from the last few years have it. |
 | **Bluetooth** | Required to connect to a **CHESTER**. |
 | **A camera** | Used to scan QR codes. CHESTER pairing labels, firmware links, device claim codes, and shared templates. |
-| **An ATELOS account** | Needed to claim a device and to pull its stored secret key onto the phone. See [**ATELOS account**](./atelos.md). |
+| **An ATELOS account** (optional) | Lets the app claim devices into your account and pull their stored secret keys onto the phone. Without one, a device can be claimed to the phone itself. See [**ATELOS account**](./atelos.md). |
 | **The device's secret key** | STICKER talks over an encrypted NFC channel. Claiming a device fills the key in for you; you can also enter it by hand. |
 
 ---
@@ -37,8 +39,9 @@ STICKER. It can still be used for CHESTER over Bluetooth.
 
 ## 2. Install the app
 
-Install the build for your platform, then open it. Your saved devices,
-templates and settings are kept across updates.
+Install **HARDWARIO Manager** from Google Play (or the iOS build you were given),
+then open it. Your saved devices, templates and settings are kept across
+updates.
 
 ---
 
@@ -48,7 +51,7 @@ The app asks for a permission the first time it needs one. Tap **Allow** (or
 **While using the app**):
 
 - **Camera**: only when you scan a QR code.
-- **Nearby devices / Bluetooth**: only when you connect to a CHESTER.
+- **Nearby devices / Bluetooth**: only when you connect to a CHESTER or a FIBER, or look for Beacons.
 - **Face ID / biometrics**: only if you switch on the app lock in
   [**App settings**](./settings.md).
 
@@ -58,6 +61,9 @@ There is no permission prompt for NFC. You switch it on once, in step 1.
 On Android 12 and newer the app needs both the **scan** and **connect**
 permissions for nearby devices. If you decline them, the CHESTER screens offer
 to open the phone's settings so you can grant them.
+
+On Android 11 and older, Bluetooth scanning also needs **Location** switched on
+in the phone settings.
 :::
 
 ---

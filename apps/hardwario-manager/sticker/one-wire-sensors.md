@@ -10,7 +10,7 @@ to the device's sensor slots.
 
 1. Wire the sensors to the STICKER first: see
    [**STICKER Input wiring**](/sticker/sticker-input-wiring/external-sensors).
-2. Open **HARDWARIO Manager** and go to **STICKER → Tools → 1-Wire sensors**.
+2. Open **HARDWARIO Manager** and go to **STICKER → Sensors → 1-Wire sensors**.
 3. Choose **Read slots & scan the 1-Wire bus** and hold the phone against the
    device. Each sensor found reports its unique ROM address.
 4. **Assign** each sensor to one of the four slots. You can **clear** a slot, or

@@ -22,10 +22,10 @@ Use the **Serial or name** box to search, and the tag icon to filter, see
 
 Devices reach the list two ways.
 
-**Claim it.** The **Add** screen claims the device against your ATELOS account:
-tap it over NFC, scan its QR code, or enter its details by hand. Claiming brings
-across the device's secret key. It needs an ATELOS login, see
-[**ATELOS account**](../atelos.md).
+**Claim it.** The claim screen reads the device over NFC and claims it in
+ATELOS, either into your ATELOS account or, without signing in, to this phone.
+Claiming brings across the device's secret key, see
+[**ATELOS account**](../atelos.md#claim-a-sticker).
 
 **Import it.** If you already hold the keys (from a colleague's export, a
 spreadsheet, or a shared QR code), use **Import** instead. No account needed;
@@ -51,6 +51,32 @@ Tap a row to open the device.
 The row menu also offers **Generate QR code**, which produces a claim QR
 carrying the serial and secret key so another operator can gain the same access
 to that device.
+
+---
+
+## Hand a device on
+
+To pass a device to someone else (a sale, a hand-over to a customer), open the
+row menu and choose **Unclaim**, then hold the phone against the device. The app
+does three things, in this order:
+
+1. puts the device back into claiming mode, so it can be claimed by tapping,
+2. releases its ownership in ATELOS,
+3. removes it, with its stored key, from this phone.
+
+Keep the phone on the device for a few seconds. The device needs a short pause
+without the NFC field before it accepts the claim code, and the app waits for
+it rather than reporting an error. If the first step fails, nothing is released
+and the device stays yours and on the phone.
+
+The same action is available for the device in your hand under
+**Tools → Debug tools → Unclaim**, see [**Tools**](./tools.md#debug-tools).
+
+:::info A device this phone holds no claim code for
+If the phone has no claim code stored for the device, the confirmation says so:
+should the device fail to go back into claiming mode, the next owner adds it by
+its serial number instead of by tapping.
+:::
 
 ---
 
@@ -84,6 +110,9 @@ Open the **⋮ menu** and choose **Import**:
   continue through a multi-code export.
 - **Import from file**: a CSV or JSON export. See
   [**Import from a file**](./import-file.md) for the file format.
+- **Enter manually**: type the serial number and the secret key (and, if you
+  have it, the vendor-token) of a device whose key you already hold. Nothing is
+  sent to ATELOS; the device is saved on this phone only.
 
 Before anything is written the app confirms what it found, including how many
 devices carry keys and how many new tags will be created. Devices are matched by

@@ -15,7 +15,7 @@ next boot.
 
 Open **HARDWARIO Manager** and choose **STICKER**.
 
-<img src="/img/hw-manager/hw-manager-sticker.jpg" alt="The STICKER menu in HARDWARIO Manager, listing Device info, LoRaWAN keys, Configuration, Templates, Tools and Saved STICKERs" width="320" />
+<img src="/img/hw-manager/hw-manager-sticker-menu.png" alt="The STICKER menu in HARDWARIO Manager, listing Device info, Configuration, Sensors, LoRaWAN, Tools and Saved STICKERs" width="320" />
 
 :::info About the screenshots
 The screenshots in this section come from an earlier build, so a few labels are
@@ -29,16 +29,16 @@ full capitals throughout. The screens themselves are laid out as shown.
 
 | Entry | What it does |
 |---|---|
-| **Device info** | Read the serial number, firmware version, uptime, and clock, see [**Device info and LoRaWAN keys**](./device-info.md) |
-| **LoRaWAN keys** | Read the DevEUI and the keys needed to register the device on a network |
-| **Configuration** | Read and edit the full device configuration, see [**Configuration**](./configuration.md) |
-| **Templates** | Reusable configuration presets, see [**Templates**](./templates.md) |
-| **Tools** | Time sync, sensors, history, resets, see [**Tools**](./tools.md) |
+| **Device info** | Read the serial number, firmware, uptime, clock, battery, LoRaWAN state and active alarms, see [**Device info and LoRaWAN keys**](./device-info.md) |
+| **Configuration** | Read and edit the full device configuration, write it without reading, load it from a file, or apply a template, see [**Configuration**](./configuration.md) and [**Templates**](./templates.md) |
+| **Sensors** | [**1-Wire sensors**](./one-wire-sensors.md), [**Sample data**](./sample-data.md) and [**Sensor history**](./sensor-history.md) |
+| **LoRaWAN** | Read the DevEUI and the keys needed to register the device on a network, and ask the device to join the network now, see [**Device info and LoRaWAN keys**](./device-info.md) |
+| **Tools** | Time sync, calibration mode, resets and vendor changes, see [**Tools**](./tools.md) |
 | **Saved STICKERs** | The devices you manage and their stored keys, see [**Saved STICKERs**](./saved-stickers.md) |
 
-The button at the bottom, **Claim a STICKER**, records a device against your
-ATELOS account so the app can fill in its keys. See
-[**ATELOS account**](../atelos.md).
+The button at the bottom, **Claim a STICKER**, records a device as yours in
+ATELOS so the app can fill in its keys. You can claim it to your ATELOS account
+or, without an account, to this phone. See [**ATELOS account**](../atelos.md).
 
 ---
 

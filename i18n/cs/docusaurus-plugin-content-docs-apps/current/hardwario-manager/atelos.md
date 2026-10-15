@@ -12,6 +12,14 @@ je aplikace nemusí mít uložené jen v telefonu. Po přihlášení může apli
 
 Otevřete na domovské obrazovce dlaždici **ATELOS account**.
 
+:::info Dlaždici účtu nemá každé sestavení
+Dlaždice **ATELOS account** (přihlášení, vytvoření účtu, změna hesla, My devices)
+je jen v sestaveních, která obsahují správu účtu ATELOS; veřejné vydání aplikace
+HARDWARIO Manager ji zatím nemá. Nárokování zařízení STICKER funguje v každém
+sestavení: bez přihlášení zařízení nárokujete k tomuto telefonu, viz
+[**Nárokování zařízení STICKER**](#claim-a-sticker).
+:::
+
 ---
 
 ## Přihlášení {#log-in}
@@ -42,16 +50,21 @@ ATELOS. Jde o jiný seznam než ten, který má aplikace uložený v telefonu.
 
 ## Nárokování zařízení STICKER {#claim-a-sticker}
 
-Nárokováním zařízení zapíšete ke svému účtu ATELOS a aplikace tím získá přístup
-k jeho secret key.
+Nárokováním zařízení zapíšete v ATELOSu jako své a aplikace tím získá přístup
+k jeho secret key. Nárokované zařízení už nikdo jiný nárokovat nemůže.
 
 1. Otevřete **STICKER** a klepněte na **Claim a STICKER** na konci nabídky (nebo
-   otevřete **Saved STICKERs** a přidejte zařízení tam).
-2. Zvolte, jak zařízení identifikovat:
-   - **Tap over NFC**: přiložte telefon k zařízení STICKER.
-   - **Scan QR code**: naskenujte QR kód zařízení pro nárokování.
-   - **Enter manually**: zadejte sériové číslo.
-3. Pokud nejste přihlášení, aplikace nabídne **Log in and claim**.
+   otevřete **Saved STICKERs** a nárokujte zařízení tam).
+2. Zvolte **Tap over NFC** a přiložte telefon k zařízení STICKER. Aplikace přečte
+   jeho sériové číslo a zařízení nárokuje.
+3. Pokud nejste přihlášení, aplikace se zeptá, jak zařízení nárokovat:
+   - **Log in & claim**: k vašemu účtu ATELOS (jen sestavení se správou účtu).
+   - **Stay logged out**: k tomuto telefonu.
+4. Až o to aplikace požádá, přiložte telefon k zařízení ještě jednou, aby se
+   uzavřelo okno pro nárokování.
+
+Zařízení pak najdete v seznamu [**Saved STICKERs**](./sticker/saved-stickers.md)
+i s jeho secret key.
 
 :::info Vendor token se zadává ručně
 Při nárokování se přenese **secret key** zařízení, **vendor token** zatím ne.
@@ -61,7 +74,8 @@ obrazovce s detailem zařízení.
 :::
 
 :::info Přidání zařízení bez nárokování
-Obrazovka **Add** zařízení nárokuje, a proto vyžaduje přihlášení k účtu ATELOS. Pokud
+Obrazovka pro nárokování zařízení registruje v ATELOSu, a proto potřebuje
+spojení s ATELOSem. Pokud
 chcete přidat zařízení, ke kterým už klíče máte (z exportu od kolegy, z CSV nebo
 z QR kódu), použijte místo toho **Saved STICKERs → Import**. Viz
 [**Saved STICKERs**](./sticker/saved-stickers.md).

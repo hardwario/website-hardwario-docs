@@ -11,7 +11,7 @@ mnohokrát**. Šablony obsahují jen nastavení, která lze sdílet; identita a 
 se záměrně vynechávají, takže šablonu můžete bezpečně použít pro více zařízení
 i předat kolegovi.
 
-Otevřete **STICKER → Templates**.
+Otevřete **STICKER → Configuration → Templates**.
 
 <img src="/img/hw-manager/hw-manager-template.png" alt="Seznam šablon" width="320" />
 

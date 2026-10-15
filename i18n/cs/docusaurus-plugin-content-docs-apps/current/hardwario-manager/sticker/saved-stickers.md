@@ -22,11 +22,10 @@ Pole **Serial or name** slouží k vyhledávání, ikona tagu k filtrování, vi
 
 Zařízení můžete do seznamu přidat dvěma způsoby.
 
-**Nárokováním.** Obrazovka **Add** zařízení nárokuje k vašemu účtu ATELOS:
-zařízení načtete přiložením telefonu (NFC), naskenováním QR kódu nebo ručním
-zadáním údajů. Při nárokování se přenese secret key zařízení. Nárokování vyžaduje
-přihlášení k účtu ATELOS, viz
-[**Účet ATELOS**](../atelos.md).
+**Nárokováním.** Obrazovka pro nárokování načte zařízení přes NFC a nárokuje ho
+v ATELOSu, buď k vašemu účtu ATELOS, nebo bez přihlášení k tomuto telefonu. Při
+nárokování se přenese secret key zařízení, viz
+[**Účet ATELOS**](../atelos.md#claim-a-sticker).
 
 **Importem.** Pokud už klíče máte (z exportu od kolegy, z tabulky nebo
 ze sdíleného QR kódu), použijte místo toho **Import**. Účet není potřeba; viz
@@ -52,6 +51,32 @@ Klepnutím na řádek zařízení otevřete.
 Nabídka řádku obsahuje také **Generate QR code**: vytvoří QR kód pro nárokování
 se sériovým číslem a secret key, díky kterému může jiný technik získat
 k zařízení stejný přístup.
+
+---
+
+## Předání zařízení {#hand-a-device-on}
+
+Chcete-li zařízení předat někomu dalšímu (prodej, předání zákazníkovi), otevřete
+nabídku řádku, zvolte **Unclaim** a přiložte telefon k zařízení. Aplikace
+v tomto pořadí:
+
+1. vrátí zařízení do režimu nárokování, aby šlo nárokovat přiložením,
+2. uvolní jeho vlastnictví v ATELOSu,
+3. odebere ho i s uloženým klíčem z tohoto telefonu.
+
+Nechte telefon u zařízení několik sekund. Zařízení potřebuje krátkou pauzu bez
+pole NFC, než přijme kód pro nárokování, a aplikace na ni počká, místo aby
+hlásila chybu. Když selže první krok, nic se neuvolní a zařízení zůstane vaše
+i v telefonu.
+
+Stejnou akci pro zařízení, které držíte v ruce, najdete pod
+**Tools → Debug tools → Unclaim**, viz [**Nástroje**](./tools.md#debug-tools).
+
+:::info Zařízení, ke kterému telefon nemá kód pro nárokování
+Pokud telefon nemá pro zařízení uložený kód pro nárokování, upozorní na to
+potvrzovací dialog: když se zařízení nepodaří vrátit do režimu nárokování, další
+majitel ho přidá podle sériového čísla, ne přiložením.
+:::
 
 ---
 
@@ -85,6 +110,9 @@ Otevřete **menu ⋮** a zvolte **Import**:
   do více kódů pokračujte volbou **Import more**.
 - **Import from file**: export ve formátu CSV nebo JSON. Formát souboru popisuje stránka
   [**Import ze souboru**](./import-file.md).
+- **Enter manually**: zadejte sériové číslo a secret key (případně i vendor-token)
+  zařízení, jehož klíč už máte. Do ATELOSu se nic neposílá, zařízení se uloží
+  jen do tohoto telefonu.
 
 Před zápisem aplikace shrne, co našla, včetně toho, kolik zařízení má klíče a
 kolik nových tagů vznikne. Zařízení se přiřazují podle sériového čísla, takže

@@ -8,7 +8,7 @@ title: Sensor history
 STICKER can store measurements on the device (store-and-forward), so readings
 taken while it was offline are not lost. Read those stored records back over NFC.
 
-1. Open **HARDWARIO Manager** and go to **STICKER → Tools → Sensor history**.
+1. Open **HARDWARIO Manager** and go to **STICKER → Sensors → Sensor history**.
 2. Hold the phone against the STICKER and keep still.
 3. The stored records are read in and shown for review.
 
@@ -24,6 +24,10 @@ The screen is a data view, not a raw dump:
 - a **summary** of what was read,
 - **charts** of the stored values,
 - **per-day tables** you can expand for the individual records.
+
+**Export CSV** shares the records that were read as a spreadsheet. If the phone
+moved away before everything was read, the screen says how many records it has
+so far; hold the phone steady and read again for the rest.
 
 Timestamps depend on the device clock. If the device's time has been
 synchronized, records carry absolute UTC timestamps; if it has not, they are

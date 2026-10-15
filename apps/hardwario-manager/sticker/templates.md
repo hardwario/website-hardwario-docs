@@ -10,7 +10,7 @@ Templates carry only shareable settings; per-device identity and secrets (serial
 number, LoRaWAN keys and EUIs, session keys) are deliberately left out, so a
 template is safe to reuse across devices and safe to hand to a colleague.
 
-Open **STICKER → Templates**.
+Open **STICKER → Configuration → Templates**.
 
 <img src="/img/hw-manager/hw-manager-template.png" alt="The Templates list" width="320" />
 

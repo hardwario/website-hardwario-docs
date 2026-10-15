@@ -27,6 +27,10 @@
     "message": "Nástroje",
     "description": "The label for category 'Tools' in sidebar 'docs'"
   },
+  "sidebar.docs.category.manager-sticker-sensors": {
+    "message": "Senzory",
+    "description": "The label for category 'Sensors' in sidebar 'docs'"
+  },
   "sidebar.docs.category.CHESTER": {
     "message": "CHESTER",
     "description": "The label for category 'CHESTER' in sidebar 'docs'"
@@ -38,6 +42,10 @@
   "sidebar.docs.category.manager-chester-tools": {
     "message": "Nástroje",
     "description": "The label for category 'Tools' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.FIBER": {
+    "message": "FIBER",
+    "description": "The label for category 'FIBER' in sidebar 'docs'"
   },
   "sidebar.docs.category.Creating Dashboard": {
     "message": "Vytvoření dashboardu",

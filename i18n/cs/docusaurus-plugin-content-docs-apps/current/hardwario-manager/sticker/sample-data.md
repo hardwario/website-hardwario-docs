@@ -8,7 +8,7 @@ title: Vzorek dat ze senzorů
 Okamžitě přečtěte všechny senzory zařízení STICKER a zobrazte jejich hodnoty.
 Je to nejrychlejší způsob, jak ověřit funkci zařízení od začátku do konce.
 
-1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Tools → Sample data**.
+1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Sensors → Sample data**.
 2. Přiložte telefon k zařízení STICKER a nehýbejte s ním.
 3. Aplikace přečte senzory a zobrazí aktuální hodnoty.
 

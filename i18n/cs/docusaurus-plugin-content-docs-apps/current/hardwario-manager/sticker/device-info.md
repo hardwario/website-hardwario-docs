@@ -33,6 +33,8 @@ Obě obrazovky používají šifrovaný kanál, takže zařízení musí být ul
 | **DevEUI** | Identifikátor zařízení v síti LoRaWAN |
 | **Health** | Souhrn stavových příznaků zařízení |
 | **Active alarms** | Pravidla alarmů, která jsou právě aktivní, viz [**Pravidla alarmů**](./alarms.md) |
+| **Counters** | Čítače Hallových spínačů a vstupů |
+| **Last downlink** | Síla signálu (RSSI a SNR) poslední zprávy, kterou zařízení přijalo ze sítě, a jak dávno přišla |
 
 **Advanced** rozbalí další diagnostické podrobnosti, například sestavení firmwaru
 a příčinu posledního resetu. **Read again** zopakuje čtení, aniž byste museli
@@ -42,7 +44,7 @@ opustit obrazovku; stačí znovu přiložit telefon k zařízení.
 
 ## Čtení klíčů LoRaWAN {#read-lorawan-keys}
 
-1. Přejděte na **STICKER → LoRaWAN keys** a zvolte **Read LoRaWAN keys**.
+1. Přejděte na **STICKER → LoRaWAN → LoRaWAN keys** a zvolte **Read LoRaWAN keys**.
 2. Přiložte telefon k zařízení STICKER.
 
 <img src="/img/hw-manager/hw-manager-lrw-keys.png" alt="Klíče LoRaWAN přečtené přes NFC" width="320" />
@@ -53,6 +55,22 @@ Co se zobrazí, závisí na režimu aktivace zařízení:
 |---|---|
 | **OTAA** | DevEUI, JoinEUI (AppEUI), AppKey |
 | **ABP** | DevEUI, DevAddr a klíče relace |
+
+---
+
+## Okamžité připojení k síti {#join-the-network-now}
+
+Zařízení STICKER, které ještě není v síti, zkouší připojení podle vlastního
+plánu. Chcete-li, aby to zkusilo hned, přejděte na
+**STICKER → LoRaWAN → LoRaWAN join** a přiložte telefon k zařízení.
+
+<img src="/img/hw-manager/hw-manager-sticker-lorawan.png" alt="Menu LoRaWAN zařízení STICKER s položkami LoRaWAN keys a LoRaWAN join" width="320" />
+ Nic se
+nesmaže a zařízení se nerestartuje. Hodí se to po registraci zařízení na
+síťovém serveru, abyste nemuseli čekat na další plánovaný pokus.
+
+Pokud má zařízení zastaralá data relace (například po přesunu do jiné sítě),
+použijte místo toho **LoRaWAN reset**, viz [**Reset zařízení**](./reset.md).
 
 ---
 

@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect, useId } from 'react';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import ErrorBoundary from '@docusaurus/ErrorBoundary';
 import styles from './styles.module.css';
+import { renderAnswer, prettifyUrl, internalPath, SourceLink, type Source } from './markdown';
 
 // Used only if docusaurus.config.js somehow carries no chatApiUrl. Relative,
 // because the backend is a Worker in this same deployment.
@@ -23,14 +24,6 @@ const HISTORY_TURNS = 4;
 // The cost is that a reload loses a half-typed question. That is what a reload
 // does to every other form on the page too, and it is the behaviour that was
 // asked for.
-
-// The backend now names each source rather than returning a bare URL, so the
-// list can read as page titles instead of paths.
-type Source = {
-  url: string;
-  title?: string;
-  site?: 'docs' | 'www' | 'store';
-};
 
 type Message = {
   role: 'user' | 'assistant';
@@ -105,150 +98,6 @@ function normalizeSources(sources: unknown): Source[] | undefined {
   return out.length ? out : undefined;
 }
 
-// The backend writes bare URLs and no Markdown, because this bubble renders
-// plain text — a Markdown link would show up as literal brackets. Bare URLs are
-// not clickable on their own either, and a raw path is ugly to read, so they are
-// turned into links titled with the page name here.
-//
-// The names come from `sources`, which the backend already sends for the same
-// passages the answer was written from. So the model never has to produce link
-// markup, and cannot get the title wrong.
-//
-// Splitting on a regex and rendering real elements keeps this injection-proof:
-// nothing the model wrote is ever interpreted as markup.
-const URL_IN_TEXT = /(https?:\/\/[^\s<>()[\]]+[^\s<>()[\].,;:!?])/g;
-
-// Last resort for a URL that is not among the sources: "…/sim-card-setup"
-// becomes "sim card setup", which still beats showing the whole path.
-function prettifyUrl(url: string) {
-  const path = url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '');
-  const segments = path.split('/');
-  // ".../apps/thingsboard/index" is the ThingsBoard page, not a page called
-  // "index" — the segment that names it is the directory above.
-  if (segments.length > 1 && segments[segments.length - 1] === 'index') segments.pop();
-  const last = segments.pop() || path;
-  return last.replace(/[-_]+/g, ' ') || path;
-}
-
-// A documentation URL is a page of the site this widget is already on, so it
-// should navigate rather than spawn a tab. Returns the path to route to, or
-// null for anything off-site.
-const DOCS_ORIGIN = 'https://docs.hardwario.com';
-
-function internalPath(url: string): string | null {
-  if (!url.startsWith(`${DOCS_ORIGIN}/`) && url !== DOCS_ORIGIN) return null;
-  return url.slice(DOCS_ORIGIN.length) || '/';
-}
-
-// The widget is mounted in theme/Root, so it survives client-side navigation:
-// following a source changes the page underneath while the conversation stays
-// open. A plain <a> would reload the document and lose it, so documentation
-// links go through Docusaurus's router. Store and website links are a different
-// site and keep opening in a new tab, so leaving the docs is deliberate.
-function SourceLink({
-  url,
-  className,
-  children,
-}: {
-  url: string;
-  className?: string;
-  children: React.ReactNode;
-}) {
-  const path = internalPath(url);
-  if (path) {
-    return (
-      <Link className={className} to={path} title={path}>
-        {children}
-      </Link>
-    );
-  }
-  return (
-    <a className={className} href={url} target="_blank" rel="noopener noreferrer" title={url}>
-      {children}
-    </a>
-  );
-}
-
-// The prompt asks for no Markdown, and the model writes **bold** and "# heading"
-// anyway — often enough that asking harder is not a fix. Handling it here costs
-// less than the literal asterisks and hashes a reader would otherwise see.
-// Emphasis is rendered, heading markers are simply dropped: the bubble is too
-// small for a heading to mean anything, but the line it marks is still wanted.
-// Nothing is ever parsed as HTML.
-// Bold cannot cross a line break. Without that, one unclosed ** swallows the
-// rest of the answer: asked where the newest CHESTER firmware is, the model
-// opened bold on "HARDWARIO Manager" and closed it four lines later on "FOTA",
-// and everything between them — three bullets — rendered as one bold run with
-// the list markup buried inside it.
-const BOLD = /\*\*([^*\n]+)\*\*/g;
-const HEADING_MARKER = /^[ \t]*#{1,6}[ \t]+/gm;
-// Whatever asterisks are left once the balanced pairs are gone: an opener with
-// no closer, which would otherwise show up as literal ** in the bubble.
-const STRAY_ASTERISKS = /\*+/g;
-
-function stripMarkup(text: string) {
-  return text.replace(HEADING_MARKER, '');
-}
-
-function emphasize(text: string, keyPrefix: string) {
-  return text.split(BOLD).map((part, i) =>
-    // The capturing group puts bold runs at the odd indices, same trick as
-    // below — and same reason to derive it from position rather than re-test a
-    // /g regex, whose lastIndex makes .test() alternate.
-    i % 2 === 1 ? (
-      <strong key={`${keyPrefix}b${i}`}>{part}</strong>
-    ) : (
-      part.replace(STRAY_ASTERISKS, '')
-    ),
-  );
-}
-
-// [Common Functionality](https://docs.hardwario.com/...) — the backend now asks
-// the model for these, and adds them itself for page names the model wrote
-// without one, so a page the answer mentions is a page the reader can open from
-// where it is mentioned. Two capturing groups, so split() interleaves in threes.
-//
-// Rendering the label as a React element, never as HTML, is what keeps this
-// injection-proof: bracket text is text whatever it contains.
-const MD_LINK = /\[([^\]\n]+)\]\((https?:\/\/[^\s)]+)\)/g;
-
-function bareUrls(text: string, keyPrefix: string, titleByUrl: Map<string, string>) {
-  // split() with one capturing group interleaves the parts: text, url, text,
-  // url... so the odd indices are the matches. Deriving it from the position
-  // avoids calling .test() on a /g regex, which is stateful through lastIndex
-  // and would return true and false alternately for the same string.
-  return text.split(URL_IN_TEXT).map((part, i) => {
-    if (i % 2 === 0) return emphasize(part, `${keyPrefix}t${i}`);
-    const title = titleByUrl.get(part.replace(/\/+$/, ''));
-    return (
-      <SourceLink key={`${keyPrefix}u${i}`} url={part}>
-        {(title || prettifyUrl(part)).replace(/\s*\|\s*HARDWARIO.*$/i, '')}
-      </SourceLink>
-    );
-  });
-}
-
-function linkify(text: string, sources: Source[] = []) {
-  const titleByUrl = new Map(
-    sources.filter((s) => s.title).map((s) => [s.url.replace(/\/+$/, ''), s.title as string]),
-  );
-
-  // Markdown links first, so the URL inside one is never also matched as a bare
-  // URL. Two capturing groups means the parts run text, label, url, text,
-  // label, url... — the label at 3n+1 and its URL at 3n+2.
-  const parts = stripMarkup(text).split(MD_LINK);
-
-  return parts.map((part, i) => {
-    if (i % 3 === 0) return bareUrls(part, `p${i}`, titleByUrl);
-    if (i % 3 === 2) return null; // the URL — already rendered by its label
-    return (
-      <SourceLink key={`m${i}`} url={parts[i + 1]}>
-        {part}
-      </SourceLink>
-    );
-  });
-}
-
 // Every word the widget says, per locale.
 //
 // Keyed by the locale Docusaurus is rendering, so the chrome matches the page
@@ -287,6 +136,8 @@ const UI = {
     rateUp: 'Helpful',
     rateDown: 'Not helpful',
     rateThanks: 'Thanks for the feedback!',
+    copyCode: 'Copy',
+    copiedCode: 'Copied',
     rateComment: 'What was wrong? (optional)',
     rateCommentSend: 'Send',
     // The comment goes to a Google Form with the question and the answer.
@@ -330,6 +181,8 @@ const UI = {
     rateUp: 'Užitečné',
     rateDown: 'Neužitečné',
     rateThanks: 'Děkujeme za zpětnou vazbu!',
+    copyCode: 'Kopírovat',
+    copiedCode: 'Zkopírováno',
     rateComment: 'Co bylo špatně? (nepovinné)',
     rateCommentSend: 'Odeslat',
     rateCommentHint: 'Neuvádějte osobní údaje.',
@@ -961,7 +814,19 @@ export default function ChatWidget() {
                   ref={isLast ? lastMsgRef : undefined}
                   className={m.role === 'user' ? styles.userMsg : styles.botMsg}
                 >
-                  <p>{linkify(m.content, m.sources)}</p>
+                  {/* The visitor's own words are shown exactly as typed; only
+                      answers are Markdown. */}
+                  {m.role === 'user' ? (
+                    <p>{m.content}</p>
+                  ) : (
+                    <div className={styles.answer}>
+                      {/* A rendering bug must cost the formatting of one
+                          answer, never the documentation page around it. */}
+                      <ErrorBoundary fallback={() => <p>{m.content}</p>}>
+                        <>{renderAnswer(m.content, m.sources, { copy: t.copyCode, copied: t.copiedCode })}</>
+                      </ErrorBoundary>
+                    </div>
+                  )}
                   {primary && (
                     <div className={styles.sources}>
                       {/* One page is what a reader wants after an answer. The

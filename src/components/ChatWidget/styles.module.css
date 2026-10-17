@@ -689,9 +689,117 @@
 }
 
 /* Links the model wrote inline in the answer body. */
-.botMsg p a {
+.botMsg p a,
+.answer a {
   color: var(--ifm-color-primary);
   overflow-wrap: anywhere;
+}
+
+/* The answer is rendered Markdown (see markdown.tsx). Paragraphs keep the
+   bubble's spacing; the last block carries no trailing margin, so the bubble's
+   padding is the only space below the text. Soft line breaks the model wrote
+   inside a paragraph still show as breaks, as they did when the answer was
+   plain text. */
+.answer p {
+  white-space: pre-line;
+}
+
+.answer > :last-child {
+  margin-bottom: 0;
+}
+
+.answer ul,
+.answer ol {
+  margin: 0 0 6px;
+  padding-left: 20px;
+}
+
+.answer li + li {
+  margin-top: 2px;
+}
+
+.answer li > ul,
+.answer li > ol {
+  margin-bottom: 0;
+}
+
+.answer code {
+  font-size: 0.9em;
+  padding: 0.05em 0.3em;
+  overflow-wrap: anywhere;
+}
+
+/* Fenced code blocks (ChatCode in markdown.tsx). The theme's CodeBlock cannot
+   be used here — see there — so this borrows its colours from the theme's
+   variables, which follow light and dark mode on their own. */
+.code {
+  position: relative;
+  margin: 6px 0;
+}
+
+.code pre {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  background: var(--ifm-pre-background);
+  color: var(--ifm-pre-color);
+  /* The bubble is already code-background grey; the border keeps the block
+     from dissolving into it. */
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.answer .code pre code {
+  padding: 0;
+  font-size: inherit;
+  background: none;
+  border: none;
+  overflow-wrap: normal;
+  white-space: pre;
+}
+
+.codeCopy {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.code:hover .codeCopy,
+.codeCopy:focus-visible {
+  opacity: 1;
+}
+
+/* No hover on touch screens, so the button is always there. */
+@media (hover: none) {
+  .codeCopy {
+    opacity: 1;
+  }
+}
+
+.answer blockquote {
+  margin: 0 0 6px;
+  padding-left: 10px;
+  border-left: 3px solid var(--ifm-color-emphasis-300);
+}
+
+.answer table {
+  font-size: 13px;
+  margin: 0 0 6px;
+}
+
+.answer hr {
+  margin: 8px 0;
 }
 
 /* Three dots rising in sequence, in the same bubble the answer will appear in —

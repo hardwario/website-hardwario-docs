@@ -1,7 +1,31 @@
 # Where this stands
 
-Updated 2026-09-01. **Not deployed.** The live chatbot on docs.hardwario.com is
-still the old web-search version.
+Updated 2026-10-17. **Live as Beta v2.0** on docs.hardwario.com, served from
+`docs-chatbot-beta.vercel.app` (repo `Petr-Klinger-1/docs-chatbot`).
+
+## First round of colleague feedback (2026-10-17)
+
+What colleagues hit in the first days, and what was done about each:
+
+| reported | cause | fix |
+|---|---|---|
+| backticks, ```` ``` ```` fences and `- ` bullets shown literally | the widget rendered bold and links only | answers are parsed as CommonMark + GFM and rendered node by node (`ChatWidget/markdown.tsx`), still with no HTML ever interpreted |
+| wrote an e-mail validator in JavaScript "for CHESTER" | the prompt invited general-knowledge answers and had no scope rule | the expansion call also returns `SCOPE: in/out`; out-of-scope questions get a fixed reply without the answering model, and the prompt says the same |
+| "tokeny zdarma" | no limit but the Anthropic budget | per-IP rate limit, 30 questions / 10 min per instance (`RATE_LIMIT_MAX`) |
+| X2 answer linked `ordering-codes#chester-x1` | `split()` packed several short sections into one chunk under the first heading | every section that stands on its own is its own chunk; short fragments join the *next* section and take its heading |
+| "CHESTER and STICKER firmware": STICKER part "not found" | one keyword set, eight places, all taken by CHESTER pages | a question naming several product families gets a share of the eight places per family |
+| "ráda" in one answer, "rád" in the next | the persona had no grammatical gender | Czech self-reference is masculine, as in the fixed wording |
+| CHESTER-M-CV "has the standard battery" | the model inferred what a missing letter means | the prompt forbids inferring from absence |
+
+Not fixable in the chatbot — the documentation has to say it: slot A/B and
+I²C address configuration on most CHESTER-X module pages (only X12 has it), an
+SDK how-to for CHESTER-X0 (pulse counting), what CHESTER-M without `A`/`B`
+means, and a user-facing note that STICKER firmware is updated over SWD only.
+
+`crawl.py` had drifted from `build_index.py`: the GitHub README and release
+notes step (4b) existed only in the generated file, so the next regeneration
+would have silently dropped it. It is now in `build_index.py`, where it
+belongs.
 
 ## What it does now
 

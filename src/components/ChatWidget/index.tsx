@@ -111,7 +111,7 @@ function normalizeSources(sources: unknown): Source[] | undefined {
 const UI = {
   en: {
     title: 'HARDWARIO Docs Assistant',
-    beta: 'Beta v2.0',
+    beta: 'Beta v2.1',
     greeting:
       'Hello! 👋 I am the AI assistant for HARDWARIO technical documentation. ' +
       'I will help you find information about our hardware, software and cloud ' +
@@ -161,7 +161,7 @@ const UI = {
   },
   cs: {
     title: 'HARDWARIO Docs Assistant',
-    beta: 'Beta v2.0',
+    beta: 'Beta v2.1',
     greeting:
       'Dobrý den! 👋 Jsem AI asistent technické dokumentace HARDWARIO. ' +
       'Rychle vám pomůžu najít informace o našem hardwaru, softwaru ' +

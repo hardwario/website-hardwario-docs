@@ -1,6 +1,6 @@
 # Where this stands
 
-Updated 2026-10-17. **Live as Beta v2.0** on docs.hardwario.com, served from
+Updated 2026-10-17. **Live as Beta v2.1** on docs.hardwario.com, served from
 `docs-chatbot-beta.vercel.app` (repo `Petr-Klinger-1/docs-chatbot`).
 
 ## First round of colleague feedback (2026-10-17)

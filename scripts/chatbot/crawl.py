@@ -435,18 +435,33 @@ def split(text):
     firmware build table needed: its rows are just product names, versions and
     hashes, and the only place the word "firmware" appears is the heading above
     them. Without it those rows match no question anyone would think to ask.
+
+    Every section that can stand on its own is its own chunk. Sections used to
+    be packed together up to CHUNK_SIZE under the heading of the first one, so
+    on Ordering Codes the CHESTER-X2 section sat in a chunk headed and anchored
+    "CHESTER-X1" — and an answer about two X2 modules linked #chester-x1. Only
+    a fragment too short to stand alone (a parent heading with no text of its
+    own, a one-line section) is still joined to what follows it, and the joined
+    chunk takes the heading of the section that carries the content: the
+    fragment's words still help the search, but the link goes where the text
+    is.
     """
-    blocks, buf, buf_heading = [], "", ""
+    blocks, pending, pending_heading = [], "", ""
     for block in HEADING.split(text):
-        if buf and len(buf) + len(block) > CHUNK_SIZE:
-            blocks.append((buf_heading, buf.strip()))
-            buf, buf_heading = block, heading_of(block)
+        joined = pending + "\n" + block if pending else block
+        heading = heading_of(block) or pending_heading
+        if len(joined.strip()) < MIN_CHUNK:
+            pending, pending_heading = joined, heading
+            continue
+        blocks.append((heading, joined.strip()))
+        pending, pending_heading = "", ""
+    # A short fragment at the very end belongs to the section before it.
+    if pending.strip():
+        if blocks:
+            heading, last = blocks[-1]
+            blocks[-1] = (heading, last + "\n" + pending.strip())
         else:
-            if not buf:
-                buf_heading = heading_of(block)
-            buf = buf + "\n" + block if buf else block
-    if buf.strip():
-        blocks.append((buf_heading, buf.strip()))
+            blocks.append((pending_heading, pending.strip()))
 
     out = []
     for heading, b in blocks:

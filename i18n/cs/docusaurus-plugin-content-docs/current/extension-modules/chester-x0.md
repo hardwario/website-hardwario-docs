@@ -39,7 +39,7 @@ Každý kanál může sloužit jako:
 
 * Digitální vstup a výstup
 * Analogový vstup a výstup
-* Napěťový vstup 0–26 V**\***
+* Napěťový vstup 0–26 V\*
 * Proudová smyčka 4–20 mA
 * Vstup pro bezpotenciálový kontakt
 * Vstup NPN a PNP

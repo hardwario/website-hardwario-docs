@@ -38,7 +38,7 @@ Examples:
 
 :::
 
-## ** Project YAML **
+## Project YAML {#project-yaml}
 
 The `project.yaml` configuration file serves as the cornerstone for setting up and customizing your project.
 

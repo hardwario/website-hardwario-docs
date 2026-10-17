@@ -38,7 +38,7 @@ Příklady:
 
 :::
 
-## ** Project YAML ** {#project-yaml}
+## Project YAML {#project-yaml}
 
 Konfigurační soubor `project.yaml` je základem nastavení a přizpůsobení projektu.
 

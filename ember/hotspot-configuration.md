@@ -199,7 +199,9 @@ Certificates (Certificate Authority, **EMBER Hotspot** certificate, **EMBER Hots
 :::
 
 ```
-/interface ovpn-client add name=ember-cloud-ovpn certificate=hotspot-01.crt_0 connect-to=<public IPv4 of Cloud Service> port=1194 mode=ip protocol=tcp cipher=aes128 auth=sha256 tls-version=only-1.2 verify-server-certificate=yes use-peer-dns=no add-default-route=no user=hotspot-01
+/interface ovpn-client import-ovpn-configuration file-name=device_<device name>.ovpn ovpn-user=device:<device name> skip-cert-import=no
+/interface ovpn-client set [find name~"ovpn-import"] name=ember-cloud-ovpn cipher=aes256-cbc auth=sha1 use-peer-dns=no
+/interface ovpn-client enable ember-cloud-ovpn
 ```
 
 ### WireGuard
@@ -266,6 +268,7 @@ The **EMBER Hotspot** is secured by a firewall and additional configuration opti
 /interface list member add interface=lte1 list=wan
 /interface list member add interface=bridge1 list=lan
 /interface list member add interface=bridge1 list=management
+/interface list member add interface=ember-cloud-ovpn list=management
 /interface list member add interface=wireguard1 list=management
 ```
 
@@ -301,7 +304,7 @@ The **EMBER Hotspot** is secured by a firewall and additional configuration opti
 /ip service set telnet disabled=yes
 /ip service set ftp disabled=yes
 /ip service set api disabled=yes
-/ip service set api-ssl address=172.31.255.0/24,192.168.16.1/32,192.168.17.1
-/ip service set ssh address=172.31.255.0/24,192.168.16.1/32,192.168.17.1
-/ip service set winbox address=172.31.255.0/24,192.168.16.1/32,192.168.17.1
+/ip service set api-ssl address=172.31.255.0/24,10.43.0.0/16,192.168.17.1
+/ip service set ssh address=172.31.255.0/24,10.43.0.0/16,192.168.17.1
+/ip service set winbox address=172.31.255.0/24,10.43.0.0/16,192.168.17.1
 ```

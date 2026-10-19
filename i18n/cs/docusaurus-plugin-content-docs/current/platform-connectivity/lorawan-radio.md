@@ -153,11 +153,13 @@ Následující tabulka uvádí přehled doporučených konfiguračních parametr
 | **Parametr** | **Hodnota** |
 |----------------|-----------|
 | **General → MAC version** | **LoRaWAN 1.0.4** |
-| **General → Regional parameters revision** | **A** |
+| **General → Regional parameters revision** | **RP002-1.0.3** |
 | **General → ADR algorithm** | **Default ADR algorithm (LoRa only)** |
 | **Join (OTAA/ABP) → Device supports OTAA** | **ON** |
 | **Class-B → Device supports Class-B** | **OFF** |
 | **Class-C → Device supports Class-C** | **OFF** |
+
+Tyto hodnoty odpovídají firmwaru [lora-modem](https://github.com/hardwario/lora-modem) v1.4.1 v modulu LoRaWAN, který implementuje LoRaWAN 1.0.4 a Regional Parameters RP002-1.0.3 (RP2-1.0.3).
 
 :::info
 Pokud si nastavením **ChirpStack** nejste jistí, projděte si návod s podrobným postupem instalace a konfigurace ChirpStack v4: [**Getting Started with ChirpStack v4**](/apps/chirpstack/index#getting-started-with-chirpstack-v4)

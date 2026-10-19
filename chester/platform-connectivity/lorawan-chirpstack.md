@@ -103,11 +103,13 @@ Create a **Device Profile** with the following recommended settings:
 | Parameter | Value |
 |---|---|
 | MAC version | LoRaWAN 1.0.4 |
-| Regional parameters revision | A |
+| Regional parameters revision | RP002-1.0.3 |
 | ADR algorithm | Default ADR algorithm (LoRa only) |
 | Device supports OTAA | ON |
 | Device supports Class-B | OFF |
 | Device supports Class-C | OFF |
+
+These values match the [lora-modem](https://github.com/hardwario/lora-modem) firmware v1.4.1 in the LoRaWAN module, which implements LoRaWAN 1.0.4 and Regional Parameters RP002-1.0.3 (RP2-1.0.3).
 
 ---
 

@@ -525,20 +525,11 @@
   "sticker.historyCalculator.group.w1": {
     "message": "Sloty senzorů 1-Wire"
   },
-  "sticker.historyCalculator.group.counters": {
-    "message": "Impulzní a čítačové vstupy"
-  },
   "sticker.historyCalculator.group.pir": {
     "message": "Detekce pohybu PIR"
   },
-  "sticker.historyCalculator.group.other": {
-    "message": "Barometr, senzor osvětlenosti a akcelerometr"
-  },
   "sticker.historyCalculator.interval": {
     "message": "Interval hlášení"
-  },
-  "sticker.historyCalculator.empty": {
-    "message": "Vyberte aspoň jeden kanál. S prázdnou maskou zařízení STICKER žádnou historii nezaznamenává."
   },
   "sticker.historyCalculator.badInterval": {
     "message": "Zadejte interval hlášení od {min} do {max} sekund."
@@ -555,9 +546,6 @@
   "sticker.historyCalculator.covered": {
     "message": "Pokrytí"
   },
-  "sticker.historyCalculator.mask": {
-    "message": "Maska"
-  },
   "sticker.historyCalculator.wrap": {
     "message": "Po zaplnění bufferu zařízení STICKER najednou smaže nejstarší stránku ({pageRecords}), aby uvolnilo místo. Uložená historie pak pokrývá {range}."
   },
@@ -566,9 +554,6 @@
   },
   "sticker.historyCalculator.copy": {
     "message": "Kopírovat příkazy"
-  },
-  "sticker.historyCalculator.note": {
-    "message": "Velikosti kanálů a rozvržení flash paměti odpovídají firmwaru STICKER v1.4.0."
   },
   "sticker.historyCalculator.records": {
     "message": "{count} záznam|{count} záznamy|{count} záznamu|{count} záznamů",
@@ -606,9 +591,6 @@
   "sticker.historyCalculator.info.w1Temp": {
     "message": "Teplota ze senzoru 1-Wire ve slotu {slot}, například ze sondy DS18B20, ukládaná s krokem 0,01 °C."
   },
-  "sticker.historyCalculator.info.w1Hum": {
-    "message": "Vlhkost ze senzoru 1-Wire ve slotu {slot}. U sond, které měří jen teplotu (například DS18B20), zůstává prázdná."
-  },
   "sticker.historyCalculator.info.hallLeft": {
     "message": "Celkový počet sepnutí levého Hallova spínače, například otevření dveří snímaných magnetem."
   },
@@ -632,5 +614,77 @@
   },
   "sticker.historyCalculator.info.accelMotion": {
     "message": "Celkový počet pohybů zachycených akcelerometrem, počítaný odděleně od senzoru PIR."
+  },
+  "sticker.historyCalculator.emptySelection": {
+    "message": "Vyberte aspoň jeden kanál. Bez vybraného kanálu STICKER historii nezaznamenává."
+  },
+  "sticker.historyCalculator.group.hall": {
+    "message": "Hallovy senzory"
+  },
+  "sticker.historyCalculator.group.inputs": {
+    "message": "Externí vstupy A a B"
+  },
+  "sticker.historyCalculator.group.accel": {
+    "message": "Akcelerometr"
+  },
+  "sticker.historyCalculator.group.supply": {
+    "message": "Baterie"
+  },
+  "sticker.historyCalculator.info.inputState": {
+    "message": "Stav vstupu {input} v digitálním režimu: 1 nebo 0."
+  },
+  "sticker.historyCalculator.info.inputVoltage": {
+    "message": "Napětí na vstupu {input} v analogovém režimu, ukládané s krokem 0,001 V."
+  },
+  "sticker.historyCalculator.info.temperatureBaro": {
+    "message": "Teplota měřená vestavěným barometrem, ukládaná s krokem 0,01 °C."
+  },
+  "sticker.historyCalculator.info.altitude": {
+    "message": "Barometrická nadmořská výška z vestavěného barometru, ukládaná s krokem 1 m."
+  },
+  "sticker.historyCalculator.info.hallLeftState": {
+    "message": "Stav levého Hallova senzoru, který reaguje na magnet: 1 nebo 0."
+  },
+  "sticker.historyCalculator.info.hallRightState": {
+    "message": "Stav pravého Hallova senzoru, který reaguje na magnet: 1 nebo 0."
+  },
+  "sticker.historyCalculator.info.pirMotion": {
+    "message": "1, pokud senzor PIR během intervalu zachytil pohyb, jinak 0."
+  },
+  "sticker.historyCalculator.info.accelMotionFlag": {
+    "message": "1, pokud akcelerometr během intervalu zachytil pohyb, jinak 0."
+  },
+  "sticker.historyCalculator.info.battery": {
+    "message": "Napětí baterie, ukládané s krokem 0,001 V."
+  },
+  "sticker.historyCalculator.info.mpTemperature": {
+    "message": "Teplota ze strojní sondy ve slotu {slot}, ukládaná s krokem 0,01 °C."
+  },
+  "sticker.historyCalculator.info.mpHumidity": {
+    "message": "Relativní vlhkost ze strojní sondy ve slotu {slot}, ukládaná s krokem 0,5 %."
+  },
+  "sticker.historyCalculator.info.mpTemperatureAux": {
+    "message": "Druhá teplota ze strojní sondy ve slotu {slot} (senzor TMP112), ukládaná s krokem 0,01 °C."
+  },
+  "sticker.historyCalculator.info.mpIlluminance": {
+    "message": "Osvětlenost ze strojní sondy ve slotu {slot}, ukládaná s krokem 2 lx."
+  },
+  "sticker.historyCalculator.info.mpMagnetic": {
+    "message": "Magnetické pole ze strojní sondy ve slotu {slot}, ukládané s krokem 0,01 mT."
+  },
+  "sticker.historyCalculator.info.mpTilt": {
+    "message": "Upozornění na náklon ze strojní sondy ve slotu {slot}: 1 nebo 0."
+  },
+  "sticker.historyCalculator.info.mpAccel": {
+    "message": "Zrychlení v ose {axis} ze strojní sondy ve slotu {slot}, ukládané s krokem 0,01 m/s²."
+  },
+  "sticker.historyCalculator.w1Hint": {
+    "message": "Zvolte typ senzoru ve slotu (config sensor1-type … sensor4-type) a zobrazí se jeho kanály."
+  },
+  "sticker.historyCalculator.limit": {
+    "message": "history-channels pojme nejvýše {max} kanálů."
+  },
+  "sticker.historyCalculator.noteVersion": {
+    "message": "Velikosti kanálů a rozložení flash odpovídají firmwaru STICKER {version}."
   }
 }

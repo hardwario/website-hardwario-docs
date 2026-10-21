@@ -15,7 +15,7 @@ Užitečná dokumentace HARDWARIO:
   https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices
 - ChirpStack v4: dekódování dat (ukázka kodeku pro STICKER)  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding
-- Dekodér STICKER: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- Dekodér STICKER: https://github.com/hardwario/sticker-firmware/blob/v2.0.0/app/decoder/ttn.js
 
 :::info
 Než zařízení STICKER zaregistrujete, ujistěte se, že je **ChirpStack v4 nainstalovaný a běží**.
@@ -56,7 +56,7 @@ V ChirpStack v4:
 Dále nastavte tyto parametry:
 - Name: **STICKER-ABP** (nebo vlastní označení zařízení)
 - MAC Version: **LoRaWAN 1.0.4**
-- Region: **EU868** (nebo US915, pokud jste mimo EU)
+- Region: **EU868** (mimo EU **US915**, **AU915** nebo **AS923**; AS923 je ve firmwaru frekvenční plán AS923-1)
 - Expected uplink interval: **X** (podle konfigurace firmwaru zařízení STICKER)
 ![ChirpStack: obecné nastavení profilu](../../../../../sticker/connectivity/images/chripstack-profile-general-abp.png)
 
@@ -64,13 +64,13 @@ Přejděte na záložku **Join (OTAA / ABP)** a zkontrolujte, že je volba **Dev
 ![ChirpStack: profil ABP](../../../../../sticker/connectivity/images/chirpstack-profile-join-abp.png)
 
 Nakonec k profilu zařízení přidejte kodek. Přepněte na záložku Codec, v rozbalovacím seznamu Payload codec zvolte JavaScript functions a do vstupního pole vložte kodek z odkazu níže:
-- https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- https://github.com/hardwario/sticker-firmware/blob/v2.0.0/app/decoder/ttn.js
 ![ChirpStack: nastavení kodeku zařízení](../../../../../sticker/connectivity/images/chirpstack-profile-codec.png)
 
 Profil zařízení uložte kliknutím na **Submit**.
 
 :::tip Generování příkazů přes downlink
-_Kódování příkazů přes downlink přinesl **firmware STICKER v1.4.0** (verze v1.3.x ho nemají)._
+_Kódování příkazů přes downlink přinesl **firmware STICKER v1.4.0** (verze v1.3.x ho nemají). Firmware **v2.0.0** změnil formát pravidel alarmů a přidal příkazy jako `get_settings` a `get_radio_state`, proto používejte kodek z vydání, které běží ve vašich zařízeních._
 
 Tento kodek zároveň **kóduje příkazy pro downlink** (funkcí `encodeDownlink`), takže není potřeba nic dalšího nastavovat. Chcete-li zařízení poslat příkaz, například vynutit odeslání hlášení, změnit nastavení nebo nastavit pravidlo alarmu, zařaďte ho na záložce **Queue** zařízení jako objekt JSON na fPort **85**; ChirpStack z něj kodekem vytvoří bajtový payload. Příkaz sestavíte a jeho podobu v JSON i hex získáte v [**generátoru příkazů přes downlink**](downlink-commands-generator.mdx).
 :::

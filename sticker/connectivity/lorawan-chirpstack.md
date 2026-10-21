@@ -25,7 +25,7 @@ programmer. You hold the phone against the device.
 :::tip First time with the app?
 Work through the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager/first-steps)
 first: installing the app, switching NFC on, and granting the permissions it asks
-for. STICKER is read from an **Android** phone with NFC.
+for. STICKER is read from an **Android** or **iOS** phone with NFC.
 :::
 
 1. **Save the device so the app has its secret key.** STICKER only answers over
@@ -37,8 +37,8 @@ for. STICKER is read from an **Android** phone with NFC.
 3. **Tap the device.** Touch the back of the phone to the STICKER enclosure and
    keep still for a second or two. The NFC antenna is usually near the **top
    back** of the phone; if nothing happens, move the phone slowly around that
-   area. On **iOS** the system scan sheet asks you to lift the phone and tap
-   again partway through. That lift is required. See
+   area. With firmware v2.0.0 the read takes one tap with the phone held still,
+   on Android and iOS alike. See
    [**STICKER over NFC**](/apps/hardwario-manager/sticker) for the full tap
    procedure and what the LED shows during the exchange.
 4. **Record the keys the app shows.** Which ones appear depends on the activation
@@ -69,6 +69,11 @@ When configuring your STICKER **Device Profile** in ChirpStack v4:
 
 - **Codec Driver:** Select **JavaScript** codec and paste the official STICKER decoder script (`ttn.js`).
 - **Bidirectional Capabilities:** The codec automatically parses telemetry uplinks on fPort 2, alarm alerts on fPort 3, and formats remote JSON downlinks on **fPort 85** (see [**Downlink Commands**](downlink-commands.md)).
+- **Answers and announces on fPort 85:** Besides command answers, fPort 85 carries the **Info** and the **settings-info** that the device sends by itself after every boot or join and then every `interval-announce` hours (default 24 h). An answer that does not fit one frame is sent as several pages with the same `seq`; the decoder marks each one with `pages: "i/N"`, and a consumer that needs the whole answer merges the pages by DevEUI, fPort and `seq`.
+
+:::caution Decoder version
+Use the `ttn.js` from the same firmware release as your devices. Firmware v2.0.0 changed the alarm and 1-Wire encodings while the payload version byte stays `0x01`, so a decoder cannot tell the two formats apart by the payload alone. A fleet that mixes v1.4.x and v2.0.0 devices needs a decoder that picks the format by the firmware version reported in the device **Info**.
+:::
 
 ---
 
@@ -80,4 +85,4 @@ When configuring your STICKER **Device Profile** in ChirpStack v4:
 - [ChirpStack v4 Installation Guide](/apps/chirpstack/chirpstack-installation)
 - [ChirpStack End Devices Documentation](/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices)
 - [ChirpStack Payload Decoders Guide](/apps/chirpstack/chirpstack-configuration/chirpstack-decoding)
-- [STICKER Payload Decoder (`ttn.js`) on GitHub](https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js)
+- [STICKER Payload Decoder (`ttn.js`, v2.0.0) on GitHub](https://github.com/hardwario/sticker-firmware/blob/v2.0.0/app/decoder/ttn.js)

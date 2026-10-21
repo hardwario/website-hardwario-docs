@@ -34,19 +34,23 @@ import Image from '@theme/IdealImage';
 
 ## Example JSON Message
 
+A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). Temperature is in °C, humidity in %, pressure in hPa, altitude in m and illuminance in lx. An enabled sensor without a valid reading decodes to `null`; a key that is missing means that sensor is switched off.
+
 <details>
 <summary><b>Show JSON Example</b></summary>
 <p>
 
 ```json
 {
-  "event": "interval",
   "voltage": 3.01,
-  "battery": 98,
-  "temperature": 24.5,
-  "humidity": 48.5,
-  "illuminance": 120,
-  "pressure": 101300
+  "boot": false,
+  "alarm_status": 0,
+  "alarm_status_flags": [],
+  "temperature": 23.65,
+  "humidity": 54,
+  "pressure": 1013.5,
+  "altitude": 321,
+  "illuminance": 500
 }
 ```
 
@@ -57,9 +61,16 @@ import Image from '@theme/IdealImage';
 
 STICKER Clime uses the standard status LED patterns described in [**LED Indication**](/sticker/hardware-description#led-indication). The boot carousel, the status heartbeat every 3 seconds, and the NFC and alarm patterns are identical across all STICKER applications.
 
-Clime measures environmental values rather than discrete inputs, so it normally has no Hall sensors or external inputs configured. In practice this means you will only see the **heartbeat**, the **NFC** patterns and the **red alarm flash** when a temperature or humidity threshold is crossed. The green/orange input activation sequences do not appear on a standard Clime unit.
+Clime measures environmental values rather than discrete inputs, so it normally has no Hall sensors or external inputs configured. In practice this means you will only see the **heartbeat**, the **NFC** patterns and the **red alarm flash** when an alarm rule on one of the measured values is triggered. The green/orange input activation sequences do not appear on a standard Clime unit.
 
 ## Changelog
+
+### 2026-10-19 – v2.0.0
+
+- `cap-sht` switches the onboard temperature/humidity sensor off like every other sensor
+- The barometer's own temperature is a new channel (`temperature-baro`)
+- Temperature, humidity, pressure, illuminance and the barometer temperature can all be used in alarm rules and recorded in the history (`history-channels`)
+- On threshold rules, `dwell` is now a hysteresis band in the channel's units, not seconds
 
 ### 2025-11-23 – v1.0.0
 

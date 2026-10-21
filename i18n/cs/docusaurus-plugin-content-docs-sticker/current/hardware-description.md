@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 STICKER je kompaktní IoT zařízení postavené na **System-on-Chip STM32WL** s integrovaným **rádiem LoRa** a jádrem ARM Cortex-M4F.  
 Napájejí ho dvě baterie AA; zařízení hlídá jejich napětí a úsporně řídí napájení (zvyšující měnič a LDO).
 
-Zařízení obsahuje **paměť a anténu NFC** pro snadnou konfiguraci, a to i bez napájení (sběr energie).
+Zařízení obsahuje **paměť a anténu NFC** pro snadnou konfiguraci z telefonu. Od firmwaru v2.0.0 telefon komunikuje s firmwarem přes schránku (mailbox) čipu NFC, takže zařízení musí být při konfiguraci napájené.
 
 ---
 
@@ -31,8 +31,7 @@ Podle varianty osazení obsahuje zařízení STICKER:
 
 - **Rozhraní SWD:** Fyzické programovací pady SWD pro nahrávání a ladění firmwaru přes J-Link (`make flash`). Bez nich firmware nenahrajete, protože záměrně nemá bootloader ani bezdrátové aktualizace.
 - **Master sběrnice 1-Wire:** Vyhrazené rozhraní 1-Wire pro externí digitální teplotní sondy (například Dallas DS18B20) a senzory HARDWARIO Machine Probe.
-- **Rozhraní S0:** Vstup pro čítání impulzů kompatibilní se standardními výstupy S0 elektroměrů, plynoměrů a vodoměrů.
-- **Měření napětí a průmyslové logické vstupy:** Až 2 digitální vstupy pro průmyslové logické úrovně do 30 V DC, které lze napojit přímo na PLC nebo na stavové výstupy strojů.
+- **Externí vstupy A/B:** Dva vstupy, každý nastavitelný jako **digitální** vstup (průmyslové logické úrovně do 30 V DC pro přímé napojení na PLC nebo na stavové výstupy strojů), **analogový** vstup pro měření napětí 0–24 V, nebo **impulzní** čítač S0 kompatibilní se standardními výstupy S0 elektroměrů, plynoměrů a vodoměrů. Režim nastavíte parametry `cap-gpio-mode inputs` a `cap-gpio-input-a` / `cap-gpio-input-b` (`digital` / `analog` / `pulse`).
 
 Stav zařízení signalizuje **vícebarevná LED (R/G/Y)** (podrobnosti viz [**Signalizace LED**](#led-indication)) a bezdrátovou komunikaci obstarává **vnitřní anténa 868/915 MHz**.
 
@@ -66,7 +65,7 @@ Stav zařízení signalizuje **vícebarevná LED (R/G/Y)** (podrobnosti viz [**S
 Zařízení STICKER má jednu stavovou LED se třemi nezávisle řízenými kanály: **červeným**, **zeleným** a **žlutým**. Firmware rozsvěcí červený a zelený kanál i společně, čímž vzniká **oranžová**, kterou vyhrazuje pro servisní režimy. LED je jediná zpětná vazba, kterou zařízení na místě poskytuje, a podle těchto vzorů nejrychleji poznáte, co zařízení dělá, ještě než se objeví v síti.
 
 :::note
-Vzory a časování níže platí pro **firmware v1.4.0**. Většina stavových bliknutí je kvůli úspoře baterie záměrně velmi krátká, 5 až 10 ms. Čekejte spíš krátký záblesk než zřetelné bliknutí.
+Vzory a časování níže platí pro **firmware v2.0.0**. Většina stavových bliknutí je kvůli úspoře baterie záměrně velmi krátká, 5 až 10 ms. Čekejte spíš krátký záblesk než zřetelné bliknutí.
 :::
 
 ### Startovní sekvence {#boot-sequence}
@@ -81,7 +80,20 @@ Po každém zapnutí proběhne pevná sekvence, která zároveň ověří, že f
 | 4 | *(zhasnuto)* | 0,25 s |
 | 5 | Zelená | 1,5 s |
 
-Sekvence trvá asi 5 sekund. Pokud ho uvidíte nečekaně, zařízení se restartovalo.
+Sekvence trvá asi 3 sekundy. Zařízení během ní dál startuje, takže start nezdržuje, a přiložení telefonu ji přeruší. Pokud ji uvidíte nečekaně, zařízení se restartovalo.
+
+### Slabá baterie při zapnutí {#low-battery-at-power-up}
+
+Při každém zapnutí firmware nejdřív, ještě než spustí cokoli dalšího, změří napětí baterie. Pokud je **nižší než 1,8 V**, zařízení nenastartuje:
+
+| Krok | Vzor |
+|---|---|
+| 1 | Startovní sekvence |
+| 2 | Červené bliknutí každých 200 ms po dobu 5 s |
+| 3 | Červená trvale 1 s |
+| 4 | Zhasnuto |
+
+Zařízení pak zůstane vypnuté, dokud nevyměníte baterie (odpojení a připojení napájení) nebo ho neresetujete signálem NRST; při dalším zapnutí kontrolu provede znovu. Zařízení s vybitým článkem se tak nedostane do smyčky restartů způsobených poklesem napětí.
 
 ### Stavový heartbeat {#status-heartbeat}
 
@@ -91,9 +103,9 @@ Za provozu zařízení signalizuje svůj stav každé **3 sekundy**. Zobrazuje s
 |---|---|---|
 | 1 | Probíhá výměna přes NFC | LED ukazuje [vzory pro NFC](#nfc-interaction) popsané níže |
 | 2 | **Konfiguraci se nepodařilo načíst**: uložené nastavení je poškozené | Červená a žlutá střídavě, dvakrát, po ~60 ms |
-| 3 | **Připojování nebo opětovné připojování** k síti LoRaWAN | Jedno žluté bliknutí a po ~200 ms jedno červené |
-| 4 | **Zhoršené spojení**: kontroly spojení selhávají, ale relace stále trvá | Dvě žlutá bliknutí ~200 ms po sobě |
-| 5 | **Rádio vypnuté** nastavením `radio-mode` | Jedno žluté bliknutí |
+| 3 | **Připojování nebo opětovné připojování** k síti (LoRaWAN nebo P2P) | Jedno žluté bliknutí a po ~200 ms jedno červené |
+| 4 | **Zhoršené spojení** (LoRaWAN nebo P2P): kontroly spojení selhávají, ale relace stále trvá | Dvě žlutá bliknutí ~200 ms po sobě |
+| 5 | **Rádio vypnuté**: `radio-mode off`, P2P bez klíčů nebo nepodporovaný region LoRaWAN | Jedno žluté bliknutí |
 | 6 | **Je aktivní alarm** | Jedno červené bliknutí |
 | 7 | Normální provoz | Jedno zelené bliknutí |
 
@@ -115,14 +127,13 @@ Dokud je telefon přiložený k zařízení, LED krok za krokem ukazuje průběh
 
 | Co se děje | LED |
 |---|---|
-| Telefon je v poli NFC | Zelená, svítí |
-| Zpracovává se příkaz | Rychlé zelené blikání (~90 ms) |
-| **Příkaz odmítnut**: špatný klíč nebo token, zopakovaný nebo poškozený požadavek | Rychlé červené blikání 2 s, pak zhasne |
-| Odpověď je zapsaná a zařízení čeká, až si ji telefon přečte | Zelená **a** žlutá, svítí |
-| Výměna skončila, telefon je oddálený | Zhasnuto |
-| Zařízení konfiguraci úspěšně přijalo | Deset zelených bliknutí, 100 ms svítí / 100 ms zhasnuto |
+| Telefon je v poli NFC, relace ještě nezačala | Zelená, svítí (nejvýš 5 s) |
+| Probíhá relace: výměna příkazů | Zelená, bliká (~90 ms) |
+| Relace skončila, poslední výměna dat se povedla | Zelená **a** žlutá, 2 s |
+| Relace skončila, poslední výměna dat **selhala**: požadavek odmítnut (špatný klíč nebo token, zopakovaný nebo poškozený požadavek; v tom případě se nic nezapíše), nebo se odpověď nedostala do telefonu | Červená, 2 s |
+| Výměna dat skončila | Zhasnuto |
 
-Červené blikání při odmítnutí je dobré znát: bez něj vypadá odmítnutý příkaz pro toho, kdo drží telefon, stejně jako úspěšný.
+Červený výsledek je dobré znát: bez něj vypadá neúspěšná výměna dat pro toho, kdo drží telefon, stejně jako úspěšná. Příkaz, po kterém se zařízení restartuje, nejdřív ukáže svůj výsledek a teprve pak následuje startovní sekvence.
 
 ### Aktivace vstupu {#input-activation}
 
@@ -213,7 +224,7 @@ LED lze ovládat přímo z vývojářské konzole příkazy `ats led`, což se h
 |                   | Rozměry                 | 91 × 36,5 × 33,3 mm                |
 | **Napájení** | Jmenovité napětí článku      | 1,5 V                              |
 |                   | Jmenovitá kapacita baterií  | 3000 mAh                           |
-|                   | Rozsah provozního napětí   | 1,8 V až 3,6 V                     |
+|                   | Rozsah provozního napětí   | 1,8 V až 3,6 V (pod 1,8 V při zapnutí zařízení zůstane vypnuté) |
 |                   | Klidová spotřeba    | < 80 µA                            |
 |                   | Špičková spotřeba    | < 100 mA                           |
 | **Prostředí** | Provozní teplota     | -30 °C až +70 °C                   |

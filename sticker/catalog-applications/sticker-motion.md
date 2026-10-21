@@ -31,20 +31,25 @@ import Image from '@theme/IdealImage';
 
 ## Example JSON Message
 
+A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). `motion_count` counts PIR detections, `accel_motion_count` counts accelerometer motion events, and `orientation` is the position reported by the accelerometer (1–6).
+
 <details>
 <summary><b>Show JSON Example</b></summary>
 <p>
 
 ```json
 {
-  "event": "motion",
   "voltage": 3.01,
-  "battery": 98,
-  "orientation": 1,
-  "acceleration_x": 12,
-  "acceleration_y": -45,
-  "acceleration_z": 1020,
-  "count": 5
+  "boot": false,
+  "alarm_status": 0,
+  "alarm_status_flags": [],
+  "temperature": 23.65,
+  "humidity": 54,
+  "orientation": 2,
+  "motion_count": 5,
+  "accel_motion_count": 3,
+  "hall_left_count": 0,
+  "hall_left_is_active": false
 }
 ```
 
@@ -62,6 +67,12 @@ Motion event blinking is a commissioning aid and **stops one hour after power-up
 :::
 
 ## Changelog
+
+### 2026-10-19 – v2.0.0
+
+- The PIR detector is enabled with `cap-gpio-mode pir`, which replaces the old `cap-pir-detector` flag and is not carried over by the upgrade
+- New alarm rule states for the PIR and the accelerometer: `from 1 to 1` raises one alarm per episode of motion (*motion started*, then *motion ended* once `dwell` seconds pass without an event), `from 0 to 0` reports *stillness* once `dwell` seconds pass without an event (for example a machine that must report when it stops vibrating)
+- A RATE rule on a counter now counts within a window of `dwell` seconds and fires as soon as the count is reached
 
 ### 2025-11-23 – v1.0.0
 

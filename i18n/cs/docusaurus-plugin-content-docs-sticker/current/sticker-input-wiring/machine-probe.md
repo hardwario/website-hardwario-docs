@@ -58,6 +58,24 @@ Sonda se připojuje **třívodičovým kabelem** s tímto zapojením:
 | Data | **DATA** | Datová sběrnice 1-Wire |
 | Plus | **VDD** | Napájení 3,0–5,5 V |
 
+## Použití se STICKER Input {#use-with-sticker-input}
+
+Sondu připojte jako kterýkoli jiný senzor 1-Wire: přepínač DIP S1 v poloze pro 1-Wire a `cap-w1-sensors true` (sloty, rozpoznání sond připojených za chodu a alarm `sensor_mismatch` popisuje stránka [Teplotní sondy 1-Wire](./one-wire-dallas.md)). Ve slotu 1-Wire má sonda typ senzoru **`3`** (`machine-probe`).
+
+Od firmwaru v2.0.0 je každá hodnota sondy samostatný kanál, který lze posílat v telemetrii, ukládat do historie a použít v pravidlech alarmů:
+
+| Kanál | Veličina | Jednotka | Čip |
+| --- | --- | --- | --- |
+| `temperature` | Teplota | °C | SHT30 |
+| `humidity` | Relativní vlhkost | % | SHT30 |
+| `temperature-aux` | Teplota | °C | TMP112 |
+| `illuminance` | Osvětlenost | lx | OPT3001 |
+| `magnetic-field` | Magnetické pole | mT | SI7210 |
+| `tilt` | Upozornění na náklon | true / false | LIS2DH12 |
+| `accel-x`, `accel-y`, `accel-z` | Zrychlení | m/s² | LIS2DH12 |
+
+Sonda, jejíž akcelerometr se nepodaří spustit, dál měří teplotu i ostatní hodnoty.
+
 ## Senzory a čipy na desce {#onboard-sensors-and-chips}
 
 Následující tabulka shrnuje aktivní součástky osazené na desce **MACHINE PROBE R1.3**, včetně jejich funkce a adresy I²C.

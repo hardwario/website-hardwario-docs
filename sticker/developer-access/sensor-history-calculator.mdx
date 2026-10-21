@@ -6,14 +6,15 @@ import StickerHistoryCalculator from '@site/src/components/StickerHistoryCalcula
 
 # Sensor History Calculator
 
-Find out how long STICKER keeps its sensor history. Tick the channels you record and set the report interval: the record size, the number of records the buffer holds and the time they cover update live. The calculation follows the flash layout of **STICKER firmware v1.4.0** and runs entirely in your browser.
+Find out how long STICKER keeps its sensor history. Pick the sensor type of each 1-Wire slot, tick the channels you record and set the report interval: the record size, the number of records the buffer holds and the time they cover update live, together with the shell commands for the selection. The calculation follows the flash layout of **STICKER firmware v2.0.0** and runs entirely in your browser.
 
 <StickerHistoryCalculator />
 
 ## Good to know
 
-- **Changing the channels or the interval starts a new history.** When `history-sensors` or `interval-report` changes, STICKER drops the stored records and starts over, because they no longer match the new record layout or timing. Read the history out before you change either setting.
+- **Changing the channels or the interval starts a new history.** When `history-channels`, the sensor type of a recorded 1-Wire slot or `interval-report` changes, STICKER drops the stored records and starts over, because they no longer match the new record layout or timing. Read the history out before you change any of them.
 - **Old records are dropped a page at a time.** The buffer is split into 16 pages. Once it is full, STICKER erases the oldest page to make room for new records, so right after that the stored history is a sixteenth shorter. Plan with 15/16 of the time covered when you need a guaranteed window.
-- **Missing sensors take no space.** The firmware drops channels for sensors the device doesn't have from the mask, so they don't count toward the record size.
+- **Missing sensors take no space.** The firmware skips channels whose capability is off and channels of 1-Wire slots without a sensor type, so they don't count toward the record size.
+- **At most 24 channels.** `history-channels` holds up to 24 entries.
 
-To turn recording on, read the history out or replay it over LoRaWAN, see [**Sensor History**](sensor-history.md).
+To turn recording on, read the history out or replay it over the radio, see [**Sensor History**](sensor-history.md).

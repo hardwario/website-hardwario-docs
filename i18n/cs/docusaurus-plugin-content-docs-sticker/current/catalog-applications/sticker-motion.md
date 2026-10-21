@@ -31,20 +31,25 @@ import Image from '@theme/IdealImage';
 
 ## Ukázková zpráva JSON {#example-json-message}
 
+Pravidelné hlášení tak, jak ho dekóduje dekodér `ttn.js` z verze v2.0.0 (fPort 2). `motion_count` počítá detekce senzoru PIR, `accel_motion_count` počítá události pohybu z akcelerometru a `orientation` je poloha hlášená akcelerometrem (1–6).
+
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
 <p>
 
 ```json
 {
-  "event": "motion",
   "voltage": 3.01,
-  "battery": 98,
-  "orientation": 1,
-  "acceleration_x": 12,
-  "acceleration_y": -45,
-  "acceleration_z": 1020,
-  "count": 5
+  "boot": false,
+  "alarm_status": 0,
+  "alarm_status_flags": [],
+  "temperature": 23.65,
+  "humidity": 54,
+  "orientation": 2,
+  "motion_count": 5,
+  "accel_motion_count": 3,
+  "hall_left_count": 0,
+  "hall_left_is_active": false
 }
 ```
 
@@ -62,6 +67,12 @@ Blikání při událostech pohybu je pomůcka pro uvádění do provozu a **hodi
 :::
 
 ## Seznam změn {#changelog}
+
+### 2026-10-19 – v2.0.0 {#2026-10-19--v200}
+
+- Detektor PIR se zapíná parametrem `cap-gpio-mode pir`, který nahrazuje dřívější přepínač `cap-pir-detector`; jeho hodnota se při aktualizaci nepřenáší
+- Nové stavy pravidel alarmů pro PIR a akcelerometr: `from 1 to 1` vyvolá jeden alarm za celou epizodu pohybu (*začátek pohybu*, potom *konec pohybu*, jakmile uplyne `dwell` sekund bez události), `from 0 to 0` hlásí *klid*, jakmile uplyne `dwell` sekund bez události (například u stroje, který musí ohlásit, že přestal vibrovat)
+- Pravidlo RATE na čítači nově počítá v okně `dwell` sekund a spustí se hned, jakmile počet dosáhne limitu
 
 ### 2025-11-23 – v1.0.0 {#2025-11-23--v100}
 

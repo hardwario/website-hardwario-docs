@@ -58,6 +58,24 @@ The probe connects with a **three-wire cable** using the following pinout:
 | Data | **DATA** | 1-Wire data bus |
 | Plus | **VDD** | Supply 3.0–5.5 V |
 
+## Use with STICKER Input
+
+Connect the probe like any other 1-Wire sensor: DIP switch S1 in the 1-Wire position and `cap-w1-sensors true` (see [1-Wire temperature probes](./one-wire-dallas.md) for the slots, hot-plug detection and the `sensor_mismatch` alarm). In a 1-Wire slot the probe is sensor type **`3`** (`machine-probe`).
+
+From firmware v2.0.0 every value of the probe is a separate channel, which can be sent in telemetry, recorded in the history and used in alarm rules:
+
+| Channel | Value | Unit | Chip |
+| --- | --- | --- | --- |
+| `temperature` | Temperature | °C | SHT30 |
+| `humidity` | Relative humidity | % | SHT30 |
+| `temperature-aux` | Temperature | °C | TMP112 |
+| `illuminance` | Illuminance | lx | OPT3001 |
+| `magnetic-field` | Magnetic field | mT | SI7210 |
+| `tilt` | Tilt alert | true / false | LIS2DH12 |
+| `accel-x`, `accel-y`, `accel-z` | Acceleration | m/s² | LIS2DH12 |
+
+A probe whose accelerometer fails to start still measures temperature and the other values.
+
 ## Onboard sensors and chips
 
 The following table summarizes the active components fitted on the **MACHINE PROBE R1.3** board, including their function and I²C address.

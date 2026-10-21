@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 STICKER is a compact IoT device built on the **STM32WL System-on-Chip** with an integrated **LoRa radio** and ARM Cortex-M4F core.  
 It is powered by two AA batteries, with battery voltage monitoring and efficient power management (boost converter and LDO).
 
-The device includes **NFC memory and antenna** for simple configuration, even without power (energy harvesting).
+The device includes **NFC memory and antenna** for simple configuration from a phone. Since firmware v2.0.0 the phone talks to the firmware through the NFC chip's mailbox, so the device must be powered while it is configured.
 
 ---
 
@@ -31,8 +31,7 @@ Depending on the specific assembly variant, STICKER includes:
 
 - **SWD Interface:** Physical SWD programming pads for firmware flashing and debugging using J-Link (`make flash`). Required for image flashing as the firmware deliberately omits a bootloader and over-the-air updates.
 - **1-Wire Bus Master:** Dedicated 1-Wire interface supporting external digital temperature probes (e.g., Dallas DS18B20) and HARDWARIO Machine Probe sensors.
-- **S0 Interface:** Pulse counting input compatible with standard S0 outputs from electricity, gas, and water meters.
-- **Voltage Measurement & Industrial Logic Inputs:** Supports up to 2 digital inputs accepting industrial logic up to 30 V DC for direct PLC or machine status integration.
+- **External Inputs A/B:** Two inputs, each configured as a **digital** input (industrial logic up to 30 V DC, for direct PLC or machine status integration), a **0–24 V analog** voltage input, or an **S0 pulse** counter compatible with standard S0 outputs from electricity, gas, and water meters. The mode is set with `cap-gpio-mode inputs` and `cap-gpio-input-a` / `cap-gpio-input-b` (`digital` / `analog` / `pulse`).
 
 Device status is indicated by a **multi-color LED (R/G/Y)** (see [**LED Indication**](#led-indication) for details), and wireless communication is handled via an **internal 868/915 MHz antenna**.
 
@@ -66,7 +65,7 @@ Device status is indicated by a **multi-color LED (R/G/Y)** (see [**LED Indicati
 STICKER has one status LED with three independently driven channels: **red**, **green** and **yellow**. The firmware also lights red and green together to produce **orange**, which it reserves for service modes. The LED is the only feedback the device gives locally, so these patterns are the fastest way to tell what a unit is doing before it appears on the network.
 
 :::note
-The patterns and timings below apply to **firmware v1.4.0**. Most status blinks are deliberately very short, 5 to 10 ms, to save battery. Expect a brief blip rather than a comfortable blink.
+The patterns and timings below apply to **firmware v2.0.0**. Most status blinks are deliberately very short, 5 to 10 ms, to save battery. Expect a brief blip rather than a comfortable blink.
 :::
 
 ### Boot sequence
@@ -81,7 +80,20 @@ Every power-up runs a fixed carousel that also confirms all three channels work:
 | 4 | *(off)* | 0.25 s |
 | 5 | Green | 1.5 s |
 
-The carousel takes about 5 seconds. If you see it unexpectedly, the device has rebooted.
+The carousel takes about 3 seconds. It plays while the device keeps starting up, so it does not delay the boot, and an NFC tap cuts it short. If you see it unexpectedly, the device has rebooted.
+
+### Low battery at power-up
+
+At every power-up the firmware measures the battery before it starts anything else. If the voltage is **below 1.8 V**, the device does not start:
+
+| Step | Pattern |
+|---|---|
+| 1 | The boot carousel |
+| 2 | Red blink every 200 ms for 5 s |
+| 3 | Red, solid, for 1 s |
+| 4 | Off |
+
+The device then stays switched off until the batteries are replaced (a power cycle) or it is reset with NRST, and runs the check again on the next power-up. This keeps a depleted cell from boot-looping on brownout.
 
 ### Status heartbeat
 
@@ -91,9 +103,9 @@ Once running, the device shows its status every **3 seconds**. Only one pattern 
 |---|---|---|
 | 1 | NFC exchange in progress | The LED is handed over to the [NFC patterns](#nfc-interaction) below |
 | 2 | **Configuration could not be loaded**: stored settings are corrupt | Red and yellow alternating, twice, ~60 ms each |
-| 3 | **Joining or rejoining** the LoRaWAN network | One yellow flash, then one red flash ~200 ms later |
-| 4 | **Link degraded**: link checks are failing but the session is still alive | Two yellow flashes, ~200 ms apart |
-| 5 | **Radio switched off** by the `radio-mode` setting | One yellow flash |
+| 3 | **Joining or rejoining** the network (LoRaWAN or P2P) | One yellow flash, then one red flash ~200 ms later |
+| 4 | **Link degraded** (LoRaWAN or P2P): link checks are failing but the session is still alive | Two yellow flashes, ~200 ms apart |
+| 5 | **Radio switched off**: `radio-mode off`, P2P without its keys, or an unsupported LoRaWAN region | One yellow flash |
 | 6 | **An alarm is active** | One red flash |
 | 7 | Normal operation | One green flash |
 
@@ -115,14 +127,13 @@ While a phone is held against the device, the LED tracks the exchange step by st
 
 | What is happening | LED |
 |---|---|
-| Phone detected in the NFC field | Green, solid |
-| Command being processed | Fast green blink (~90 ms) |
-| **Command rejected**: wrong key or token, replayed or malformed request | Fast red blink for 2 s, then off |
-| Reply written, waiting for the phone to read it | Green **and** yellow, solid |
-| Exchange finished, phone removed | Off |
-| Configuration successfully applied | Ten green blinks, 100 ms on / 100 ms off |
+| Phone detected in the NFC field, no session started yet | Green, solid (at most 5 s) |
+| Session running: commands being exchanged | Green, blinking (~90 ms) |
+| Session ended, the last exchange succeeded | Green **and** yellow, 2 s |
+| Session ended, the last exchange **failed**: request refused (wrong key or token, replayed or malformed request; nothing is written then) or its reply did not reach the phone | Red, 2 s |
+| Exchange finished | Off |
 
-The red rejection blink is worth knowing: without it, a refused command looks exactly like a successful one to whoever is holding the phone.
+The red result is worth knowing: without it, a failed exchange looks exactly like a successful one to whoever is holding the phone. A command that reboots the device shows its result first; the boot carousel follows.
 
 ### Input activation
 
@@ -213,7 +224,7 @@ The LED can be driven directly over the developer console with the `ats led` com
 |                   | Dimension                 | 91 × 36.5 × 33.3 mm                |
 | **Power** | Nominal cell voltage      | 1.5 V                              |
 |                   | Nominal battery capacity  | 3000 mAh                           |
-|                   | Operating voltage range   | 1.8 V to 3.6 V                     |
+|                   | Operating voltage range   | 1.8 V to 3.6 V (below 1.8 V at power-up the device stays off) |
 |                   | Idle power consumption    | < 80 µA                            |
 |                   | Peak power consumption    | < 100 mA                           |
 | **Environment** | Operating temperature     | -30 °C to +70 °C                   |

@@ -11,7 +11,7 @@ Tato stránka popisuje, jak **HARDWARIO STICKER** zaregistrovat jako koncové za
 Užitečná dokumentace HARDWARIO:
 - TTS: koncová zařízení  
   https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-end-devices
-- Dekodér STICKER: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- Dekodér STICKER: https://github.com/hardwario/sticker-firmware/blob/v2.0.0/app/decoder/ttn.js
 
 :::info
 Než zařízení STICKER zaregistrujete, ujistěte se, že máte přístup k instanci **The Things Stack** (Cloud, Community nebo Enterprise) a že je brána LoRaWAN připojená a online.
@@ -49,7 +49,7 @@ Ve své aplikaci:
 Zvolte **Enter end device specifics manually**.
 
 V části **End Device Type** nastavte:
-- Frequency plan: zvolte svůj region (například **Europe 863–870 MHz**)
+- Frequency plan: zvolte svůj region (například **Europe 863–870 MHz**). STICKER podporuje EU868, US915, AU915 a AS923 (AS923-1).
 - LoRaWAN version: **LoRaWAN Specification 1.0.4**
 - Regional Parameters version: **RP002 Regional Parameters 1.0.4**
 
@@ -78,14 +78,14 @@ Aby se surové bajty uplinku dekódovaly do čitelných polí JSON, přejděte n
 **Application → (VAŠE_ZAŘÍZENÍ) → Payload formatters → Uplink**
 
 Nastavte typ formátovače na **Custom Javascript formatter** a vložte dekodér STICKER z odkazu níže:
-- https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- https://github.com/hardwario/sticker-firmware/blob/v2.0.0/app/decoder/ttn.js
 
 ![Přidání dekodéru v TTS](../../../../../sticker/connectivity/images/tts-decoder.png)
 
 Klikněte na **Save changes**.
 
 :::tip Generování příkazů přes downlink
-_Kódování příkazů přes downlink přinesl **firmware STICKER v1.4.0** (verze v1.3.x ho nemají)._
+_Kódování příkazů přes downlink přinesl **firmware STICKER v1.4.0** (verze v1.3.x ho nemají). Firmware **v2.0.0** změnil formát pravidel alarmů a přidal příkazy jako `get_settings` a `get_radio_state`, proto používejte kodek z vydání, které běží ve vašich zařízeních._
 
 Tentýž kodek `ttn.js` zároveň **kóduje příkazy pro downlink** (funkcí `encodeDownlink`), takže můžete zařízení posílat příkazy, například vynutit odeslání hlášení, změnit nastavení nebo nastavit pravidlo alarmu. Přidejte stejný soubor ještě jako formátovač **Downlink** v **Application → (VAŠE_ZAŘÍZENÍ) → Payload formatters → Downlink** (Custom Javascript formatter), pak zařaďte příkaz jako objekt JSON na fPort **85** a The Things Stack ho zakóduje do bajtů. Příkaz sestavíte a jeho podobu v JSON i hex získáte v [**generátoru příkazů přes downlink**](downlink-commands-generator.mdx).
 :::

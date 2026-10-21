@@ -34,16 +34,21 @@ workflow. The app itself is documented in full under **APPS**:
   [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)), and
   from then on the app fills the key in automatically.
 
-## Configuring without batteries
+## NFC needs a powered device
 
-STICKER is NFC-ready and can be configured with **no batteries inserted**. The
-field from the phone powers the device long enough to store the settings, which
-it applies on its next boot. This is how a batch of devices is prepared before
-installation, see
-[**Configure a powered-off device**](/apps/hardwario-manager/sticker/offline-configuration).
+Since firmware **v2.0.0**, every phone command goes through the mailbox of the
+STICKER's NFC chip: one tap, phone held still, the same on Android and iOS. The
+mailbox only works while the device runs, so **the batteries must be in**. A
+device with no batteries, or with a dead battery, reads as a blank tag.
+Configuring a device with no batteries inserted is no longer possible.
 
-It is also why an unprovisioned device stays radio-silent until it is given real
-LoRaWAN keys: see [**Features**](features.md).
+To prepare a batch of devices before installation, configure powered units over
+NFC (a [**template**](/apps/hardwario-manager/sticker/templates) gives them all
+the same settings), or provision them over SWD with a J-Link and the
+[**HARDWARIO STICKER Flash Tool**](https://github.com/hardwario/sticker-configuration).
+
+A new device ships radio-silent (`radio-mode off`) and does not transmit until
+the radio is switched on: see [**Features**](features.md).
 
 ---
 

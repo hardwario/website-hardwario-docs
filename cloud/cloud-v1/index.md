@@ -1,13 +1,13 @@
 ---
 slug: /legacy
-title: Legacy (Cloud v1)
-description: "Reference documentation for the older HARDWARIO Cloud v1; for the current platform, see the main HARDWARIO Cloud documentation."
+title: Cloud Legacy
+description: "Reference documentation for the older HARDWARIO Cloud Legacy platform; for the current platform, see the main HARDWARIO Cloud documentation."
 ---
 
-# Legacy – HARDWARIO Cloud v1
+# HARDWARIO Cloud Legacy
 
-Reference documentation for the older **HARDWARIO Cloud v1**. For the current platform, see the
+Reference documentation for the older **HARDWARIO Cloud Legacy** platform ([legacy.hardwario.cloud](https://legacy.hardwario.cloud)). For the current platform, see the
 main [**HARDWARIO Cloud**](/cloud/) documentation.
 
-- [**Introduction**](/cloud/introduction): Cloud v1 introduction, basic features, and security.
-- [**Overview**](/cloud/cloud-v1/overview): Cloud v1 structure: user configuration, groups, callbacks, devices, and messages.
+- [**Introduction**](/cloud/introduction): Cloud Legacy introduction, basic features, and security.
+- [**Overview**](/cloud/cloud-v1/overview): Cloud Legacy structure: user configuration, groups, callbacks, devices, and messages.

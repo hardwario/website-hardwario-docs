@@ -610,7 +610,7 @@ In **HARDWARIO**, we have a calibration kit for **CHESTER Current** made of seve
 
 - **Added**: New variants: **CHESTER Current Z** (with CHESTER-Z1 backup module) and **CHESTER Current 1W** (with external DS18B20 1-Wire temperature sensors)
 - **Added**: LoRaWAN support: single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
-- **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available
+- **Changed**: HARDWARIO Cloud protocol adopted (CBOR encoding, new API endpoints); previous Cloud Legacy firmware remains separately available
 
 :::info
 

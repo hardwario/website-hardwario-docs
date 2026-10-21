@@ -125,7 +125,7 @@ Use the command `hardwario chester lte flash firmware.zip` to flash the modem fi
 
 :::caution
 
-In the Cloud v2, CHESTER will send the codec itself. You don't need to follow this step anymore.
+In HARDWARIO Cloud, CHESTER will send the codec itself. You don't need to follow this step anymore.
 
 :::
 
@@ -137,7 +137,7 @@ If you develop your own firmware and change the codec **YAML** file, the `msg_ke
 
 :::
 
-Working with codecs needs your **API token** to be set in the command itself or in your environment. You get your **API token** in [**HARDWARIO Cloud v1 in your profile**](https://hardwario.cloud/#/profile).
+Working with codecs needs your **API token** to be set in the command itself or in your environment. You get your **API token** in [**HARDWARIO Cloud Legacy in your profile**](https://legacy.hardwario.cloud/#/profile).
 
 ```
 hardwario cloud --token <your_token> commands...

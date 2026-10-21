@@ -39,11 +39,11 @@ See [**Spaces**](spaces.md) for more details.
 
 ## Automatic Codecs
 
-In Cloud v2, device codecs (encoders and decoders) are bundled directly in the firmware and uploaded automatically when the device first connects. There is no need to configure codecs manually.
+In HARDWARIO Cloud, device codecs (encoders and decoders) are bundled directly in the firmware and uploaded automatically when the device first connects. There is no need to configure codecs manually.
 
 ## Reliable Delivery
 
-Cloud v2 together with the **LTE v2** subsystem in CHESTER adds:
+HARDWARIO Cloud together with the **LTE v2** subsystem in CHESTER adds:
 - Automatic packet fragmentation (supports payloads of many kilobytes)
 - Receive acknowledgment with automatic retransmission
 - Message authentication with a 64-bit code based on SHA-256

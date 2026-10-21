@@ -20,7 +20,7 @@ a commit log or a Slack message when the source below exists.
 | `tapper/changelog.md` | TAPPER | [`hardwario/tapper`](https://github.com/hardwario/tapper) — releases |
 | `fiber/changelog.md` | FIBER | **No usable source.** See the note below |
 | `gauger/changelog.md` | GAUGER, the Wi-Fi/Ethernet counter | `gitlab.hardwario.com/softli/collector/firmware` — tags. **Not** `gitlab.hardwario.com/gauger/firmware`, which is the LTE device |
-| `tower/changelog.md` | TOWER | Legacy [`hardwario/twr-sdk`](https://github.com/hardwario/twr-sdk) (dormant since 2023) and the current Rust stack: `tower`, `tower-firmware`, `tower-cli` |
+| `tower/changelog.md` | TOWER | Legacy [`hardwario/twr-sdk`](https://github.com/hardwario/twr-sdk) (dormant since 2023) and the current Rust stack: the [`hardwario/tower`](https://github.com/hardwario/tower) monorepo (releases tagged `cli-v*`) and [`hardwario/tower-bridge`](https://github.com/hardwario/tower-bridge). The former `tower-cli` and `tower-firmware` repos are gone |
 | `ember/changelog.md` | EMBER | External — EMBER runs MikroTik RouterOS, see the [MikroTik changelog](https://mikrotik.com/download/changelogs). Only HARDWARIO-side changes belong here |
 
 Two traps worth stating plainly:
@@ -30,6 +30,9 @@ Two traps worth stating plainly:
   `https://raw.githubusercontent.com/hardwario/sticker-firmware/v1.4.0/doc/version%201.4.md`
   Note the space in the filename. Releases once listed v1.3.4 as newest while
   v1.4.0 was tagged and shipped. If the raw URL resolves, the tag exists.
+  A prepared version can also be renamed before it ships: the `v1.5.0` branch
+  and `doc/version 1.5.md` became v2.0.0 (`doc/version 2.0.md`, PR #502), so
+  never write up an untagged version.
 - **GAUGER is two different devices.** The documented one is the Wi-Fi/Ethernet
   counter, whose firmware is `softli/collector` — the name comes from the
   `"name": "softli-collector-…"` in the `/api/v1/meta` example on the HTTP API
@@ -53,11 +56,12 @@ Two sources look usable and are not:
   "Auto-built aarch64 binary with --features dev-platform". None of that is
   release notes. Leave `fiber/changelog.md` empty until someone writes real
   ones.
-- **TOWER's Rust rewrite.** `tower`, `tower-firmware` and `tower-cli` are a
-  separate, current stack; only `tower-cli` has a release (v1.0.0, 2026-07-02)
-  and it does carry real notes. Whether it belongs in `tower/changelog.md`,
-  which documents the legacy twr-sdk platform, is a product decision — ask
-  before writing it up.
+- **TOWER's Rust rewrite.** The current stack lives in the `hardwario/tower`
+  monorepo (SDK, `tower` CLI, gateway; cli-v1.0.0 and cli-v1.1.0 on
+  2026-10-18) plus the `tower-bridge` app (v1.0.0 and v1.0.1 on 2026-10-19,
+  with real notes). Whether they belong in `tower/changelog.md`, which
+  documents the legacy twr-sdk platform, is a product decision — ask before
+  writing them up.
 
 ### Reading the internal GitLab
 
@@ -165,17 +169,18 @@ npm run build           # both locales; the real gate — it fails on bad anchor
 Commit message: `<product>: Add <version> release`, with a body saying what the
 release does and that both EN and CS were updated.
 
-## State as of 2026-09-07
+## State as of 2026-10-21
 
-Checked against the sources above:
+Checked against the sources above (GitLab not reachable from this run, so the
+GAUGER row is carried over from 2026-09-07):
 
 | Page | Documented | Released | Gap |
 |---|---|---|---|
-| `chester/catalog-applications/` | v4.0.1 (2026-09-07) | v4.0.1 | current |
-| `sticker/` | v1.4.0 | v1.4.0 (2026-08-18) | current |
+| `chester/catalog-applications/` | v4.0.1 (2026-09-07) | v4.0.1 | current; `main` has unreleased commits |
+| `sticker/` | v2.0.0 (2026-10-19) | v2.0.0 (2026-10-19) | current |
 | `tapper/` | v1.2.1 (2025-08-12) | 1.2.1 (2025-08-12) | current |
-| `chester/` platform | 2026-06-24 | — | needs a pass, nothing logged since June |
-| `tower/` | 2025-09-10 | tower-cli v1.0.0 (2026-07-02) | a year stale; the Rust rewrite is not mentioned at all |
+| `chester/` platform | 2026-09-07 | — | current |
+| `tower/` | 2025-09-10 | cli-v1.1.0 (2026-10-18), tower-bridge v1.0.1 (2026-10-19) | Rust stack and TOWER Bridge not mentioned; waiting on the product decision |
 | `fiber/` | nothing logged | — | left empty on purpose, no real notes exist |
 | `gauger/` | v1.6.0 (2025-12-15) | v1.6.0 | filled 2026-09-07 from the GitLab releases, all nine versions |
 | `ember/` | nothing logged | — | correct; RouterOS is MikroTik's changelog |

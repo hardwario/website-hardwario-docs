@@ -1,7 +1,7 @@
 ---
 slug: overview
 title: Přehled
-description: "Struktura starší verze HARDWARIO Cloud v1: konfigurace uživatelů, skupiny, callbacky, zařízení a zprávy."
+description: "Struktura HARDWARIO Cloud Legacy: konfigurace uživatelů, skupiny, callbacky, zařízení a zprávy."
 ---
 import Image from '@theme/IdealImage';
 

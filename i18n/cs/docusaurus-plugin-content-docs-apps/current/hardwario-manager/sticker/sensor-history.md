@@ -40,7 +40,7 @@ viz [**Nástroje**](./tools.md).
 Záznamy se ukládají jen tehdy, když je historie zapnutá. Zapnete ji a kanály
 k ukládání zvolíte v **Configuration → History** (viz
 [**Konfigurace**](./configuration.md)) nebo příkazy shellu
-`config history-enable` / `config history-sensors`, které popisuje stránka
+`config history-enable` / `config history-channels`, které popisuje stránka
 [**Historie senzorů (přístup pro vývojáře)**](/sticker/developer-access/sensor-history).
 
 :::info Firmware v1.4.0

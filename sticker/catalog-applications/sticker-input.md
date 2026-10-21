@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # STICKER Input
 
-**STICKER Input** is a compact, wireless LoRaWAN module for connecting external sensors and reading digital or analog signals. Powered by two AA batteries, it supports 1-Wire temperature probes, voltage and current measurement, and monitoring of digital inputs up to 30 V, making it a versatile tool for industrial and monitoring applications.
+**STICKER Input** is a compact, wireless LoRaWAN module for connecting external sensors and reading digital or analog signals. Powered by two AA batteries, it supports 1-Wire temperature probes and the MACHINE PROBE, and its two external inputs work as digital inputs, 0–24 V analog inputs or S0 pulse counters, making it a versatile tool for industrial and monitoring applications.
 
 ![STICKER Input](images/sticker-input-top.png)
 
@@ -21,7 +21,7 @@ import Image from '@theme/IdealImage';
 ## Typical use cases
 
 #### Smart temperature monitoring
-- Some manufacturing processes require temperature monitoring across extreme ranges that conventional electronics can’t handle. External sensors, like 1-Wire temperature probes, are essential in such cases. A single data line can connect up to 10 sensors, enabling detailed and scalable monitoring.
+- Some manufacturing processes require temperature monitoring across extreme ranges that conventional electronics can’t handle. External sensors, like 1-Wire temperature probes, are essential in such cases. A single data line can connect up to four sensors, enabling detailed and scalable monitoring.
 
 #### Digitizing legacy machines
 - Digitizing older machines can be tricky, even if they still run reliably. Many offer a 24 V digital output, or you can add an inductive sensor near the output mechanism to detect each produced item. This enables simple piece counting via digital signals.
@@ -33,9 +33,11 @@ import Image from '@theme/IdealImage';
 
 Documentation → [**STICKER Input Wiring**](/sticker/sticker-input-wiring/sticker-input-wiring)
 
-Here you can find information about STICKER input wiring, including DIP switch settings and supported modes such as 1-Wire sensors, dry contact inputs, and 0–24 V analog inputs.
+Here you can find information about STICKER input wiring, including DIP switch settings and supported modes such as 1-Wire sensors, dry contact inputs, S0 pulse counters and 0–24 V analog inputs.
 
 ## Example JSON Message
+
+A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). In this example input A is a `digital` input with its pulse count, input B is an `analog` input (voltage in V) and 1-Wire slot 1 holds a Dallas DS18B20 probe. An input in `pulse` mode sends `input_a_count` / `input_b_count` and an `input_a_is_active` / `input_b_is_active` that is always `false`; an `analog` input sends only `input_a_voltage` / `input_b_voltage`.
 
 <details>
 <summary><b>Show JSON Example</b></summary>
@@ -43,14 +45,24 @@ Here you can find information about STICKER input wiring, including DIP switch s
 
 ```json
 {
-  "event": "change",
   "voltage": 3.01,
-  "battery": 98,
-  "orientation": 1,
-  "input_1_state": true,
-  "input_1_count": 120,
-  "input_2_state": false,
-  "input_2_count": 0
+  "boot": false,
+  "alarm_status": 0,
+  "alarm_status_flags": [],
+  "temperature": 23.65,
+  "humidity": 54,
+  "input_a_count": 120,
+  "input_a_is_active": true,
+  "input_b_voltage": 12.35,
+  "w1_sensors": [
+    {
+      "slot": 1,
+      "type": 2,
+      "type_name": "dallas",
+      "values": { "temperature": 21.5 },
+      "units": { "temperature": "degC" }
+    }
+  ]
 }
 ```
 
@@ -70,11 +82,22 @@ Because this application is the one that actually uses the digital inputs and Ha
 
 This makes it possible to verify wiring and DIP switch settings on site without a console or a network connection: trigger the input and watch the order of the two colors.
 
+An input in `pulse` mode (S0) has no state, so counted pulses show only the green-then-orange sequence. The LED blinks at most once every 0.5 s, so fast pulses do not each get a blink of their own. An `analog` input does not blink at all.
+
 :::warning
 Input blinking is a commissioning aid and **stops one hour after power-up**. Counting and reporting continue as normal. Power-cycle the unit if you need the visual confirmation back while testing.
 :::
 
 ## Changelog
+
+### 2026-10-19 – v2.0.0
+
+- `cap-gpio-mode inputs` together with `cap-gpio-input-a` / `cap-gpio-input-b` selects the mode of each external input: `digital`, `analog` or `pulse`; they replace the old `cap-input-a/-b` flags, which are not carried over by the upgrade
+- `analog` measures 0–24 V on the input; the value can be sent in telemetry, recorded in the history and used in threshold alarms
+- `pulse` is a pulse counter for S0 meter outputs (either polarity, 20 ms debounce)
+- Each 1-Wire slot stores the sensor type it expects (`sensor1-type`…`sensor4-type`: `2` Dallas, `3` MACHINE PROBE); a different sensor in the slot raises a `sensor_mismatch` alarm
+- A 1-Wire probe plugged in after power-up into a slot that waits for it (a stored ROM or `sensorN-type`) is found without a reboot: the bus is checked 2 minutes after boot, then after another 5 and 10 minutes, then every 15 minutes
+- Every channel of a 1-Wire probe can be used in alarm rules and recorded in the history; a MACHINE PROBE with a failed accelerometer still measures temperature
 
 ### 2025-11-23 – v1.0.0
 

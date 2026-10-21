@@ -11,7 +11,7 @@ This page explains how to register **HARDWARIO STICKER** as a LoRaWAN end device
 Useful HARDWARIO docs:
 - TTS: End Devices  
   https://docs.hardwario.com/apps/the-things-stack/tts-configuration/tts-end-devices
-- STICKER Decoder: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- STICKER Decoder: https://github.com/hardwario/sticker-firmware/blob/v2.0.0/app/decoder/ttn.js
 
 :::info
 Before registering your STICKER, make sure you have access to a **The Things Stack** deployment (Cloud, Community, or Enterprise) and that a LoRaWAN gateway is connected and online.
@@ -48,7 +48,7 @@ Inside your application:
 Select **Enter end device specifics manually**.
 
 Under **End Device Type**, configure:
-- Frequency plan: select your region (e.g. **Europe 863–870 MHz**)
+- Frequency plan: select your region (e.g. **Europe 863–870 MHz**). STICKER supports EU868, US915, AU915 and AS923 (AS923-1).
 - LoRaWAN version: **LoRaWAN Specification 1.0.4**
 - Regional Parameters version: **RP002 Regional Parameters 1.0.4**
 
@@ -74,14 +74,14 @@ To decode raw uplink bytes into readable JSON fields, navigate to:
 **Application → (YOUR_DEVICE) → Payload formatters → Uplink**
 
 Set the formatter type to **Custom Javascript formatter** and paste the STICKER decoder from the link below:
-- https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- https://github.com/hardwario/sticker-firmware/blob/v2.0.0/app/decoder/ttn.js
 
 ![TTS add decoder](images/tts-decoder.png)
 
 Click **Save changes**.
 
 :::tip Generating downlink commands
-_Downlink command encoding is part of **STICKER firmware v1.4.0** (not in v1.3.x)._
+_Downlink command encoding is part of **STICKER firmware v1.4.0** and later (not in v1.3.x). Firmware **v2.0.0** changed the alarm rule format and added commands such as `get_settings` and `get_radio_state`, so use the codec from the release your devices run._
 
 The same `ttn.js` codec also **encodes downlink commands** (via its `encodeDownlink` function), so you can send commands to the device, for example to force a report, change a setting, or set an alarm rule. Add the same file again as the **Downlink** formatter at **Application → (YOUR_DEVICE) → Payload formatters → Downlink** (Custom Javascript formatter), then queue a command as a JSON object on fPort **85** and The Things Stack encodes it to bytes. Use the [**Downlink Commands Generator**](downlink-commands-generator.mdx) to build a command and get its JSON and hex.
 :::

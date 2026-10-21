@@ -62,7 +62,7 @@ Funkcí upload v **HARDWARIO CLI** můžete firmware nahrát do svého účtu v 
 
 Tajný token pro **HARDWARIO Cloud** musí být v proměnné prostředí `HARDWARIO_CLOUD_TOKEN`, nebo ho předejte v parametru `--token`. Ten musí stát přesně mezi parametry `fw` a `upload`.
 
-Potřebný token najdete v [HARDWARIO Cloud v1 ve svém profilu](https://hardwario.cloud/#/profile) jako `API token`.
+Potřebný token najdete v [HARDWARIO Cloud Legacy ve svém profilu](https://legacy.hardwario.cloud/#/profile) jako `API token`.
 
 :::
 

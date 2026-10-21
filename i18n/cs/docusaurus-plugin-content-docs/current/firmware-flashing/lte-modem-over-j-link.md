@@ -199,7 +199,7 @@ Chcete-li do zařízení **CHESTER** nahrát firmware modemu LTE, postupujte tak
 
    :::info
 
-   Firmware modemu LTE kompatibilní s komunikačním stackem **LTE v1** pro službu **HARDWARIO Cloud v1** je verze [**v1.3.0**](pathname:///download/hio-chester-lte-v1.3.0.zip); stáhněte a nahrajte tu.
+   Firmware modemu LTE kompatibilní s komunikačním stackem **LTE v1** pro službu **HARDWARIO Cloud Legacy** je verze [**v1.3.0**](pathname:///download/hio-chester-lte-v1.3.0.zip); stáhněte a nahrajte tu.
 
    :::
 

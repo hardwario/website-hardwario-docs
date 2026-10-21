@@ -2,7 +2,7 @@
 slug: /introduction
 sidebar_position: 1
 title: Úvod
-description: "HARDWARIO Cloud v1 (starší verze): infrastruktura, která zajišťovala připojení, správu zařízení a přístup k datům pro zařízení HARDWARIO."
+description: "HARDWARIO Cloud Legacy (starší platforma): infrastruktura, která zajišťovala připojení, správu zařízení a přístup k datům pro zařízení HARDWARIO."
 ---
 import Image from '@theme/IdealImage';
 

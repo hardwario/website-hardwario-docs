@@ -389,7 +389,7 @@ Jak tuto funkci zapnout a nastavit, popisuje stránka [**Bluetooth tagy**](ble-t
 
 - **Přidáno**: Nová varianta: **CHESTER Scale Z** s podporou záložního modulu CHESTER-Z1
 - **Přidáno**: Integrace subsystému BLE tagů: bezdrátové měření teploty a vlhkosti tagy Teltonika EYE Sensor
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud v1 zůstává dostupný samostatně
+- **Změněno**: Přechod na protokol HARDWARIO Cloud (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud Legacy zůstává dostupný samostatně
 - **Změněno**: Jediný společný binární soubor firmwaru pro LTE i LoRaWAN; podpora LoRaWAN se dokončuje (plánována pro příští vydání)
 
 :::info

@@ -34,19 +34,23 @@ import Image from '@theme/IdealImage';
 
 ## Ukázková zpráva JSON {#example-json-message}
 
+Pravidelné hlášení tak, jak ho dekóduje dekodér `ttn.js` z verze v2.0.0 (fPort 2). Teplota je v °C, vlhkost v %, tlak v hPa, nadmořská výška v m a osvětlenost v lx. Zapnutý senzor bez platného měření se dekóduje jako `null`; chybějící klíč znamená, že je senzor vypnutý.
+
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
 <p>
 
 ```json
 {
-  "event": "interval",
   "voltage": 3.01,
-  "battery": 98,
-  "temperature": 24.5,
-  "humidity": 48.5,
-  "illuminance": 120,
-  "pressure": 101300
+  "boot": false,
+  "alarm_status": 0,
+  "alarm_status_flags": [],
+  "temperature": 23.65,
+  "humidity": 54,
+  "pressure": 1013.5,
+  "altitude": 321,
+  "illuminance": 500
 }
 ```
 
@@ -57,9 +61,16 @@ import Image from '@theme/IdealImage';
 
 STICKER Clime používá standardní vzory stavové LED popsané v kapitole [**Signalizace LED**](/sticker/hardware-description#led-indication). Startovní sekvence, stavový heartbeat každé 3 sekundy i vzory pro NFC a alarmy jsou u všech aplikací STICKER stejné.
 
-Clime měří hodnoty prostředí, ne diskrétní vstupy, takže obvykle nemá nastavené žádné Hallovy spínače ani externí vstupy. V praxi to znamená, že uvidíte jen **heartbeat**, vzory pro **NFC** a **červené bliknutí alarmu** při překročení prahu teploty nebo vlhkosti. Zeleno-oranžové sekvence aktivace vstupů se na standardním zařízení Clime neobjeví.
+Clime měří hodnoty prostředí, ne diskrétní vstupy, takže obvykle nemá nastavené žádné Hallovy spínače ani externí vstupy. V praxi to znamená, že uvidíte jen **heartbeat**, vzory pro **NFC** a **červené bliknutí alarmu**, když se spustí pravidlo alarmu pro některou z měřených hodnot. Zeleno-oranžové sekvence aktivace vstupů se na standardním zařízení Clime neobjeví.
 
 ## Seznam změn {#changelog}
+
+### 2026-10-19 – v2.0.0 {#2026-10-19--v200}
+
+- Parametr `cap-sht` vypíná vestavěný senzor teploty a vlhkosti stejně jako ostatní senzory
+- Vlastní teplota barometru je nový kanál (`temperature-baro`)
+- Teplotu, vlhkost, tlak, osvětlenost i teplotu barometru lze použít v pravidlech alarmů a ukládat do historie (`history-channels`)
+- U prahových pravidel je `dwell` nově pásmo hystereze v jednotkách daného kanálu, ne v sekundách
 
 ### 2025-11-23 – v1.0.0 {#2025-11-23--v100}
 

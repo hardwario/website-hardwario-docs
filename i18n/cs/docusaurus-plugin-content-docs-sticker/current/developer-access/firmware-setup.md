@@ -7,8 +7,8 @@ import Image from '@theme/IdealImage';
 
 Tento návod popisuje, jak si na svém počítači připravit repozitář firmwaru STICKER, sestavit binární soubory, nahrát image **debug** (ten zapíná interaktivní konzoli shellu) a otevřít konzoli. Odtud začíná práce popsaná v části [**Přístup pro vývojáře**](../developer-mode.md).
 
-:::info Firmware v1.4.0
-Firmware zařízení STICKER je postavený na **Zephyr RTOS**. Návod popisuje přípravu vývojového prostředí (workspace), kompilaci binárních souborů release a debug, nahrání přes SWD a bezpečnostní model.
+:::info Firmware v2.0.0
+Firmware zařízení STICKER je postavený na **Zephyr RTOS**. Návod popisuje přípravu vývojového prostředí (workspace), kompilaci image release, debug a provisioning, nahrání přes SWD a bezpečnostní model. Firmware v2.0.0 se sestavuje proti forku projektu Zephyr od HARDWARIO a po každém `west update` potřebuje aplikovat patch (viz krok 2).
 :::
 
 ---
@@ -50,9 +50,12 @@ pip install west
 ```bash
 west init -m https://github.com/hardwario/sticker-firmware.git
 west update
+west patch apply
 west zephyr-export
 west packages pip --install
 ```
+
+Manifest (`west.yml`) připíná fork projektu Zephyr od HARDWARIO, [**hardwario/sticker-zephyr**](https://github.com/hardwario/sticker-zephyr), na pevnou revizi. `west patch apply` aplikuje patche STICKER na moduly spravované nástrojem West (stack LoRaWAN `loramac-node`). **Spusťte ho znovu po každém `west update`**; bez patche odmítne sestavení s LoRaWAN konfiguraci dokončit.
 
 ### 3. Instalace doplňujících závislostí {#3-install-supporting-dependencies}
 
@@ -81,7 +84,8 @@ cd sticker/app
 | `make flash` | Nahraje zkompilovaný binární soubor do zařízení přes J-Link SWD. |
 | `make clean` | Smaže výstupy sestavení a cache CMake. |
 | `make rttt` | Spustí interaktivní terminálovou konzoli RTT. |
-| `make format` | Naformátuje zdrojový kód pomocí `clang-format`. |
+
+Zdrojový kód naformátujete pomocí `clang-format` příkazem `make format` spuštěným z kořene repozitáře (ne z adresáře `app`).
 
 **Sestavení a nahrání image debug:**
 
@@ -89,6 +93,25 @@ cd sticker/app
 make debug
 make flash
 ```
+
+### Varianty sestavení {#build-variants}
+
+| | Release | Debug | Provisioning |
+|---|---|---|---|
+| Příkaz pro sestavení (v `app`) | `make` | `make debug` | `west build -p always -b sticker -- -DEXTRA_CONF_FILE="debug.conf;provisioning.conf"` |
+| Shell a konzole RTT | ne | ano | ano |
+| Výpis logu | žádný | varování a chyby | žádný |
+| Senzory | všechny | bez 1-Wire, akcelerometru, PIR a bzučáku | všechny |
+| Regiony LoRaWAN | EU868, US915, AU915, AS923 | EU868 | EU868 |
+| Rádio P2P | ano | ne | ne |
+| Historie senzorů | kruhový buffer 32 KB ve flash | kruhový buffer 992 B v RAM, při startu se vyprázdní | minimální buffer v RAM |
+| Řízení spotřeby | zapnuté | vypnuté (automatické uspání po 2 h) | vypnuté (automatické uspání po 2 h) |
+
+- **Release** je produkční image: bez konzole, se všemi senzory a regiony, s rádiem P2P a historií ve flash paměti.
+- **Debug** (`debug.conf`) přidává shell a log přes RTT a dělá jim místo tím, že vynechá některé senzory, rádio P2P a jiné regiony než EU868. Senzor pro testování na stole zapnete na příkazové řádce, například `west build -p always -b sticker -- -DEXTRA_CONF_FILE=debug.conf -DCONFIG_W1=y`. Image debug je blízko limitu flash paměti; pokud se sestavení s dalším podsystémem nevejde, přidejte `-DCONFIG_SHELL_HELP=n`.
+- **Provisioning** (`debug.conf` + `provisioning.conf`) je image pro výrobní linku: se všemi senzory a se shellem pro zápis identity, klíčů a konfigurace, bez výpisu logu. Potom se **bez mazání** nahraje image release, který nastartuje se zapsanými hodnotami. Během zprovoznění nastavte `config radio-mode lorawan` a `settings save`, aby se image release při prvním startu připojil k síti. Oba image sestavte ze stejného commitu, aby se shodovalo rozvržení nastavení.
+
+Každé vydání s tagem na GitHubu obsahuje tři image, `hio-sticker-<version>-release.hex`, `hio-sticker-<version>-debug.hex` a `hio-sticker-<version>-provisioning.hex`, a soubor `SHA256SUMS` pro kontrolu stažených souborů (`sha256sum -c SHA256SUMS`).
 
 :::caution Chraňte úložiště NVS a klíče zařízení
 Příkaz `make flash` spustí standardní `west flash`, který přepíše jen aplikační oddíl flash paměti. **Nikdy nespouštějte úplné smazání čipu** (`west flash --erase` ani J-Link mass erase), protože to vymaže nevolatilní úložiště (NVS) se sériovým číslem, secret key, claim tokenem a přístupovými údaji LoRaWAN.
@@ -104,7 +127,7 @@ Jakmile je nahraný image debug a připojená sonda J-Link, spusťte terminál R
 make rttt
 ```
 
-Otevře se interaktivní příkazový řádek shellu, ve kterém můžete spouštět příkazy `config`, `alarm`, `history`, `clock` a `ats`.
+Otevře se interaktivní příkazový řádek shellu, ve kterém můžete spouštět příkazy `config`, `alarm`, `sensor`, `history`, `clock`, `settings` a `ats`.
 
 :::info Automatické uspání konzole
 V sestavení debug zůstává MCU aktivní, aby konzole RTT pohotově reagovala, a to zvyšuje odběr z baterie. Pokud na konzoli po dobu `CONFIG_APP_DEBUG_AUTOSUSPEND_S` (výchozí: 2 hodiny) neprobíhá žádná aktivita, zařízení přejde do hlubokého spánku. Konzoli znovu zpřístupníte resetem MCU nebo odpojením a připojením napájení. Produkčních sestavení release se to netýká; mezi intervaly měření přecházejí do hlubokého spánku okamžitě.

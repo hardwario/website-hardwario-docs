@@ -44,7 +44,7 @@ Spotřeba zařízení je tak nízká, že při denním odečtu vydrží na bater
 
 Zařízení CHESTER wM-Bus přijímá jen surové hexadecimální telegramy wM-Bus. Data měřičů neinterpretuje ani zařízení, ani HARDWARIO Cloud. Každý měřič wM-Bus kóduje data po svém a telegramy mohou být navíc zašifrované. Dekódování surových hexadecimálních hodnot na smysluplné jednotky je na zákazníkovi nebo integrátorovi. Zašifrované telegramy lze volitelně dešifrovat v cloudu, viz [dešifrovací klíče v HARDWARIO Cloud](#hardwario-cloud--decryption-keys).
 
-Toto zařízení podporuje novější stack **LTEv2** a **HARDWARIO Cloud v2**.
+Toto zařízení podporuje novější stack **LTEv2** a aktuální **HARDWARIO Cloud**.
 
 ## Varianty aplikace {#application-variants}
 
@@ -411,7 +411,7 @@ Každá zpráva JSON pro cloud obsahuje až 20 paketů wM-Bus. Pokud je v zaří
 V této části ukážeme, **jak přidat jednotlivé dešifrovací klíče** do cloudu v sekci **Variables**.  
 
 :::tip
-Pokud si nejste jistí, **jak s cloudem začít**, postupujte podle návodu: [**HARDWARIO Cloud v2**](/cloud/)
+Pokud si nejste jistí, **jak s cloudem začít**, postupujte podle návodu: [**HARDWARIO Cloud**](/cloud/)
 :::
 
 ### Podrobný postup {#step-by-step-instructions}
@@ -455,7 +455,7 @@ Níže uvedené měřiče jsme sami otestovali a zdokumentovali, mimo jiné **vo
 
 - **Opraveno**: Příjem dlouhých paketů wM-Bus (dříve se zkracovaly nebo zahazovaly)
 - **Přidáno**: Podpora bateriové varianty (6× článek D) vedle stávající varianty s napájením DC
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); firmware pro Cloud v1 nebyl pro tuto aplikaci dostupný
+- **Změněno**: Přechod na protokol HARDWARIO Cloud (kódování CBOR, nové endpointy API); firmware pro Cloud Legacy nebyl pro tuto aplikaci dostupný
 
 :::info
 

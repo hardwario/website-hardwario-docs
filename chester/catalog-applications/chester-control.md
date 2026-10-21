@@ -472,6 +472,10 @@ import TabItem from '@theme/TabItem';
 
 ## Changelog
 
+### v4.0.1 – 2026-09-07
+
+- **Fixed**: CHESTER-X0 analog inputs read the neighbouring channel in v4.0.0 (off-by-one in the channel mapping); no configuration change needed
+
 ### v4.0.0 – 2026-08-10
 
 - **Changed**: Lowered maximum 1-Wire thermometer capacity (10 → 5) and soil sensor capacity (10 → 3) to reduce RAM usage
@@ -485,7 +489,7 @@ import TabItem from '@theme/TabItem';
 - **Added**: LoRaWAN support: single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
 - **Added**: Downlink watchdog interval (`downlink-wdg-interval`) to detect loss of cloud communication
 - **Added**: Configurable poll interval (`interval-poll`) for cloud polling frequency
-- **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available
+- **Changed**: HARDWARIO Cloud protocol adopted (CBOR encoding, new API endpoints); previous Cloud Legacy firmware remains separately available
 - **Changed**: Channel modes now explicitly configurable per channel (`channel-mode-1` through `channel-mode-4`)
 
 :::info

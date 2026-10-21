@@ -199,7 +199,7 @@ Follow these steps to flash the LTE modem firmware in the **CHESTER** device:
 
    :::info
 
-   If you are looking for the LTE modem firmware compatible with the **LTE v1** communication stack for the **HARDWARIO Cloud v1** service, you need to download and flash [**v1.3.0**](pathname:///download/hio-chester-lte-v1.3.0.zip).
+   If you are looking for the LTE modem firmware compatible with the **LTE v1** communication stack for the **HARDWARIO Cloud Legacy** service, you need to download and flash [**v1.3.0**](pathname:///download/hio-chester-lte-v1.3.0.zip).
 
    :::
 

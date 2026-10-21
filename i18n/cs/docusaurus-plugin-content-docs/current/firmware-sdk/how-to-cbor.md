@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Jak na: CBOR {#how-to-cbor}
 
-Zařízení **CHESTER** s Cloud v2 kóduje a dekóduje přenášená data ve formátu [**CBOR**](https://cbor.io/). Díky **CBOR** popíšete podobu přenášených dat v souboru **YAML** a v kódu v C pak používáte klíče z tohoto souboru **YAML**.
+Zařízení **CHESTER** s HARDWARIO Cloud kóduje a dekóduje přenášená data ve formátu [**CBOR**](https://cbor.io/). Díky **CBOR** popíšete podobu přenášených dat v souboru **YAML** a v kódu v C pak používáte klíče z tohoto souboru **YAML**.
 
 Na začátku relace pošle cloud ve zprávě **session down** hash kodeku. CHESTER ho porovná s hashem svého kodeku, a pokud je to potřeba, nahraje dekodér zprávou **decoder up** a případně i enkodér zprávou **encoder up**.
 

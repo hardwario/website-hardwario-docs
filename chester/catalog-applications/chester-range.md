@@ -272,7 +272,7 @@ Every available sensor has one aggregated measurement, which contains the minimu
 
 - **Added**: LoRaWAN support: single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
 - **Added**: New variant: **CHESTER Range Z** with CHESTER-Z1 backup module support
-- **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available
+- **Changed**: HARDWARIO Cloud protocol adopted (CBOR encoding, new API endpoints); previous Cloud Legacy firmware remains separately available
 
 :::info
 

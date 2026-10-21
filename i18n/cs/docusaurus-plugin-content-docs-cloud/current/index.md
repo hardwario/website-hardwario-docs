@@ -39,11 +39,11 @@ Podrobnosti najdete na stránce [**Prostory**](spaces.md).
 
 ## Automatické kodeky {#automatic-codecs}
 
-V Cloud v2 jsou kodeky zařízení (enkodéry a dekodéry) obsaženy přímo ve firmwaru a nahrají se automaticky při prvním připojení zařízení. Kodeky není potřeba nastavovat ručně.
+V HARDWARIO Cloud jsou kodeky zařízení (enkodéry a dekodéry) obsaženy přímo ve firmwaru a nahrají se automaticky při prvním připojení zařízení. Kodeky není potřeba nastavovat ručně.
 
 ## Spolehlivé doručení {#reliable-delivery}
 
-Cloud v2 spolu se subsystémem **LTE v2** v zařízení CHESTER přidává:
+HARDWARIO Cloud spolu se subsystémem **LTE v2** v zařízení CHESTER přidává:
 - Automatickou fragmentaci paketů (payload může mít i mnoho kilobajtů)
 - Potvrzování příjmu s automatickým opakovaným odesláním
 - Autentizaci zpráv 64bitovým kódem založeným na SHA-256

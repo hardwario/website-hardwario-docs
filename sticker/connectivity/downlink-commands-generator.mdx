@@ -8,14 +8,14 @@ import Image from '@theme/IdealImage';
 
 # Downlink Commands Generator
 
-Build a STICKER downlink command below. Choose a command, fill in its parameters, and the **JSON** and the **fPort 85** byte payload (hex) update live. The encoding runs entirely in your browser using the firmware's `ttn.js` codec, so nothing is sent anywhere. Remote downlink control is supported from **STICKER firmware v1.4.0**.
+Build a STICKER downlink command below. Choose a command, fill in its parameters, and the **JSON** and the **fPort 85** byte payload (hex) update live. The encoding runs entirely in your browser using the firmware's `ttn.js` codec, so nothing is sent anywhere. The generator encodes the protocol of **STICKER firmware v2.0.0**. Alarm rules built here are 18-byte v2.0.0 rules and are not valid on devices running v1.4.x.
 
 <StickerDownlinkGenerator />
 
 ## How to use it
 
-1. Pick a command. For **Set alarm rules**, choose the slot, source and quantity, set the rule's values, and set **Dwell (s)**, the hold time in seconds that every rule kind takes (0 to 3600, see [**The `dwell` parameter**](../developer-access/alarm-rules.md#the-dwell-parameter)); for **Set configuration parameters**, pick the field and value. The **Custom JSON** option lets you author any command by hand.
-2. Copy the **JSON** if your network server has the STICKER codec installed as the **downlink** payload formatter, then enqueue it on fPort 85.
+1. Pick a command. For **Set alarm rules**, choose the rule (0 to 15), the slot (onboard or 1-Wire slot 1 to 4) and the channel, set the rule's values, and set the **dwell** (see [**The `dwell` parameter**](../developer-access/alarm-rules.md#the-dwell-parameter)). On a threshold rule the dwell is a hysteresis band in the channel's units, at most high − low. On a state rule it is a time in seconds, and on a rate rule the counting window in seconds (0 = the report interval). For **Set configuration parameters**, pick the field and value. The **Custom JSON** option lets you author any command by hand.
+2. Copy the **JSON** if your network server has the STICKER codec installed as the **downlink** payload formatter, then enqueue it on fPort 85. The v2.0.0 `ttn.js` on GitHub cannot encode **Alarm buzzer mode** (`alarm_buzzer_mode`) and **Confirmed alarm uplinks** (`radio_alarm_ack`). The generator's copy of the codec can, so queue these two as hex.
 3. Or copy the **hex** and queue it directly as a downlink byte payload on fPort 85, with no codec.
 
 :::tip Persisting a configuration change

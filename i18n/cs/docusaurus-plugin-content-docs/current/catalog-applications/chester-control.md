@@ -472,6 +472,10 @@ import TabItem from '@theme/TabItem';
 
 ## Seznam změn {#changelog}
 
+### v4.0.1 – 2026-09-07 {#v401--2026-09-07}
+
+- **Opraveno**: Analogové vstupy CHESTER-X0 ve verzi v4.0.0 četly sousední kanál (chyba o jedničku v mapování kanálů); konfiguraci není potřeba měnit
+
 ### v4.0.0 – 2026-08-10 {#v400--2026-08-10}
 
 - **Změněno**: Snížen maximální počet teploměrů 1-Wire (10 → 5) a půdních senzorů (10 → 3) kvůli nižšímu využití RAM
@@ -485,7 +489,7 @@ import TabItem from '@theme/TabItem';
 - **Přidáno**: Podpora LoRaWAN: jediný binární soubor firmwaru pro LTE i LoRaWAN; režim se volí příkazem `app config mode lte` / `app config mode lrw`
 - **Přidáno**: Interval downlink watchdogu (`downlink-wdg-interval`) pro detekci ztráty komunikace s cloudem
 - **Přidáno**: Nastavitelný interval dotazování cloudu (`interval-poll`)
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud v1 zůstává samostatně dostupný
+- **Změněno**: Přechod na protokol HARDWARIO Cloud (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud Legacy zůstává samostatně dostupný
 - **Změněno**: Režim lze nyní nastavit zvlášť pro každý kanál (`channel-mode-1` až `channel-mode-4`)
 
 :::info

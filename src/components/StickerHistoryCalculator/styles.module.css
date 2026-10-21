@@ -87,6 +87,19 @@
   margin-top: 1rem;
 }
 
+.select {
+  padding: 0.25rem 0.4rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.9rem;
+}
+
+.limit {
+  margin-top: 0.6rem;
+}
+
 .input {
   width: 8rem;
   box-sizing: border-box;

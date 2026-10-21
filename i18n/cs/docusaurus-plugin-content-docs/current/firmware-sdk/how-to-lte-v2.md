@@ -6,15 +6,15 @@ import Image from '@theme/IdealImage';
 
 # Jak na: LTE v2 {#how-to-lte-v2}
 
-Tento článek ukazuje, jak převést existující firmware zařízení CHESTER na LTE v2 a [Cloud v2](/cloud/).
+Tento článek ukazuje, jak převést existující firmware zařízení CHESTER na LTE v2 a [HARDWARIO Cloud](/cloud/).
 
 LTE v2 používá novější protokol nad UDP, který podporuje zprávy přes downlink a sám se stará o fragmentaci, potvrzování a autentizaci paketů (autentizačním kódem zprávy založeným na SHA-256). Protokol popisuje stránka [**Protokol zařízení (FLAP)**](/cloud/device-protocol/).
 
-Zprávy přes downlink, včetně konfiguračních, můžete posílat přes API nebo z uživatelského rozhraní HARDWARIO Cloud v2.
+Zprávy přes downlink, včetně konfiguračních, můžete posílat přes API nebo z uživatelského rozhraní HARDWARIO Cloud.
 
 Konfigurační zprávy `app config ...` můžete poslat do každého zařízení s LTE v2. Do aplikace nemusíte nic přidávat, o vše se postará subsystém `ctr_cloud`.
 
-Všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK už jsou převedené na Cloud v2, takže se jimi můžete inspirovat.
+Všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK už jsou převedené na HARDWARIO Cloud, takže se jimi můžete inspirovat.
 
 ## Příklady firmwaru CHESTER LTE v2 {#chester-lte-v2-firmware-examples}
 
@@ -47,7 +47,7 @@ Konfigurace je v aplikaci CHESTER Control definovaná makry: parametry definujet
 
 ### Ostatní katalogové aplikace {#other-catalogue-apps}
 
-Všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK už jsou převedené na Cloud v2, takže se jimi můžete inspirovat. Můžete také použít hotový [**firmware**](/chester/catalog-applications/catalog-applications/#application-firmware).
+Všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK už jsou převedené na HARDWARIO Cloud, takže se jimi můžete inspirovat. Můžete také použít hotový [**firmware**](/chester/catalog-applications/catalog-applications/#application-firmware).
 
 ## Změny pro LTE v2 {#changes-for-lte-v2}
 

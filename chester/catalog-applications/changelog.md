@@ -7,7 +7,7 @@ toc_max_heading_level: 3
 
 # Changelog
 
-This page tracks all notable changes in CHESTER catalog application firmware since **v3.0.0** (Cloud v2 migration).
+This page tracks all notable changes in CHESTER catalog application firmware since **v3.0.0** (migration from Cloud Legacy to the current HARDWARIO Cloud).
 
 :::tip Latest Release
 
@@ -197,22 +197,22 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 - Fixed thermocouple #ifdef guards
 
 ### CHESTER Control
-- Ported to Cloud v2 with project generator
+- Ported to HARDWARIO Cloud with project generator
 - Added X4 line threshold values
 - 6x button press enables X9 outputs
 
 ### CHESTER Current
-- Ported to Cloud v2 with project generator
+- Ported to HARDWARIO Cloud with project generator
 - Added ChirpStack decoder
 
 ### CHESTER Push
-- Ported to Cloud v2 with project generator
+- Ported to HARDWARIO Cloud with project generator
 
 ### CHESTER Range
-- Ported to Cloud v2 with BLE tag support
+- Ported to HARDWARIO Cloud with BLE tag support
 
 ### CHESTER Scale
-- Ported to Cloud v2
+- Ported to HARDWARIO Cloud
 
 ### CHESTER Demo
 - Added network parameters and BLE support
@@ -222,7 +222,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 ## v3.0.0 (2024-07-17)
 
 ### SDK / Common
-- **Major release**: Migration from Cloud v1 to Cloud v2 protocol
+- **Major release**: Migration from the Cloud Legacy protocol to the HARDWARIO Cloud protocol
 - Introduced project generator (`west chester-update`) for variant management
 - Added LTE v2 subsystem with state machine architecture
 - Added GNSS support
@@ -231,9 +231,9 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 - BLE tag subsystem: early scan stop, configurable scan duration
 
 ### CHESTER Clime
-- First application ported to Cloud v2
+- First application ported to HARDWARIO Cloud
 - Added 1-Wire in default variant
 
 ### CHESTER Meteo
-- Ported to Cloud v2
+- Ported to HARDWARIO Cloud
 - Added pyranometer support (Meteo P variant)

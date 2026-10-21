@@ -125,7 +125,7 @@ Firmware modemu nahrajete příkazem `hardwario chester lte flash firmware.zip`.
 
 :::caution
 
-V Cloud v2 posílá zařízení CHESTER kodek samo, takže tento krok už nemusíte dělat.
+V HARDWARIO Cloud posílá zařízení CHESTER kodek samo, takže tento krok už nemusíte dělat.
 
 :::
 
@@ -137,7 +137,7 @@ Pokud vyvíjíte vlastní firmware a měníte soubor **YAML** kodeku, hlavičkov
 
 :::
 
-Pro práci s kodeky musí být **API token** nastavený přímo v příkazu, nebo v proměnné prostředí. **API token** získáte v [**HARDWARIO Cloud v1 ve svém profilu**](https://hardwario.cloud/#/profile).
+Pro práci s kodeky musí být **API token** nastavený přímo v příkazu, nebo v proměnné prostředí. **API token** získáte v [**HARDWARIO Cloud Legacy ve svém profilu**](https://legacy.hardwario.cloud/#/profile).
 
 ```
 hardwario cloud --token <your_token> commands...

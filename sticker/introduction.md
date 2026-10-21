@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # STICKER
 
-**STICKER** is an open IoT platform based on STM32WL with integrated LoRaWAN connectivity and a software-selectable proprietary **LoRa P2P** mode that enables direct links to **HARDWARIO FIBER**. It is a compact, battery-powered device with long lifetime and ready-to-use applications such as STICKER Clime, Input, and Motion.
+**STICKER** is an open IoT platform based on STM32WL with integrated LoRaWAN connectivity and a software-selectable proprietary **LoRa P2P** mode. Since firmware **v2.0.0**, P2P is part of the standard firmware: it talks directly to a **HARDWARIO FIBER** modem and a **ProXimos Hub**, for sites with no LoRaWAN network. It is a compact, battery-powered device with long lifetime and ready-to-use applications such as STICKER Clime, Input, and Motion.
 
 :::tip
 ### To get your STICKER running, read the [**Quick Start Guide**](first-steps)
@@ -36,6 +36,6 @@ import Image from '@theme/IdealImage';
 ## Key Features
 
 * **Ultra Low Power:** Multi-year operation powered by two standard AA batteries with intelligent sleep modes and factory Radio-Silent support.
-* **Flexible Connectivity & NFC:** Long-range LoRaWAN communication combined with encrypted NFC for instant configuration and management.
+* **Flexible Connectivity & NFC:** Long-range LoRaWAN or LoRa P2P communication combined with encrypted NFC for instant configuration and management.
 * **Modular Ecosystem:** Pre-built catalog applications (Clime, Motion, Input) covering diverse environmental and industrial sensing tasks.
-* **Open & Secure Firmware:** Built on Zephyr RTOS with zero remote attack surface (SWD-only flashing, no field bootloader).
+* **Open & Secure Firmware:** Built on Zephyr RTOS with no remote firmware-update path (SWD-only flashing, no field bootloader).

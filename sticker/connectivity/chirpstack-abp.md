@@ -15,7 +15,7 @@ Useful HARDWARIO docs:
   https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices
 - ChirpStack v4: Data Decoding (STICKER codec example)  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-decoding
-- STICKER Decoder: https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- STICKER Decoder: https://github.com/hardwario/sticker-firmware/blob/v2.0.0/app/decoder/ttn.js
 
 :::info
 Before registering your STICKER, make sure **ChirpStack v4 is installed and running**.
@@ -56,7 +56,7 @@ In ChirpStack v4:
 Next, configure the following parameters:
 - Name: **STICKER-ABP** (or your chosen identifier for the device)
 - MAC Version: **LoRaWAN 1.0.4**
-- Region: **EU868** (or US915 if you are outside the EU)
+- Region: **EU868** (or **US915**, **AU915** or **AS923** outside the EU; the firmware's AS923 is the AS923-1 channel plan)
 - Expected uplink interval: **X** (according to your STICKER firmware configuration)
 ![Chirpstack profile general](images/chripstack-profile-general-abp.png)
 
@@ -64,13 +64,13 @@ Go to the **Join (OTAA / ABP)** tab and verify that **Device supports OTAA** is 
 ![Chirpstack profile ABP](images/chirpstack-profile-join-abp.png)
 
 As the final step, add a codec to the device profile. Switch to the Codec tab, select JavaScript functions in the Payload codec dropdown, and paste the codec linked below into the input field:
-- https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js
+- https://github.com/hardwario/sticker-firmware/blob/v2.0.0/app/decoder/ttn.js
 ![Chirpstack create device codec](images/chirpstack-profile-codec.png)
 
 Save the device profile by clicking **Submit**.
 
 :::tip Generating downlink commands
-_Downlink command encoding is part of **STICKER firmware v1.4.0** (not in v1.3.x)._
+_Downlink command encoding is part of **STICKER firmware v1.4.0** and later (not in v1.3.x). Firmware **v2.0.0** changed the alarm rule format and added commands such as `get_settings` and `get_radio_state`, so use the codec from the release your devices run._
 
 This codec also **encodes downlink commands** (via its `encodeDownlink` function), so no extra setup is needed. To send a command to the device, for example to force a report, change a setting, or set an alarm rule, enqueue it on the device's **Queue** tab as a JSON object on fPort **85** and ChirpStack runs the codec to produce the byte payload. Use the [**Downlink Commands Generator**](downlink-commands-generator.mdx) to build a command and get its JSON and hex.
 :::

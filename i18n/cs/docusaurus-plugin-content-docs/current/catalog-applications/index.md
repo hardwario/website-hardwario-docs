@@ -49,13 +49,13 @@ Firmware ke stažení najdete v kapitole [**Firmware aplikací**](#application-f
 :::
 
 
-## Firmware aplikací pro Cloud v2 {#application-firmware}
+## Firmware aplikací pro HARDWARIO Cloud {#application-firmware}
 
-Tento firmware je určený pro komunikaci s novějším [**Cloud v2**](/cloud/).
+Tento firmware je určený pro komunikaci s aktuálním [**HARDWARIO Cloud**](/cloud/).
 
-Pokud jednotka už komunikovala s Cloud v2, stačí aktualizovat jen hlavní [**firmware APP/BLE MCU přes BLE**](../platform-connectivity/hardwario-manager.md#firmware-update).
+Pokud jednotka už komunikovala s HARDWARIO Cloud, stačí aktualizovat jen hlavní [**firmware APP/BLE MCU přes BLE**](../platform-connectivity/hardwario-manager.md#firmware-update).
 
-Pokud se jednotka dříve používala s Cloud v1, musíte nejdřív aktualizovat [**firmware modemu LTE**](../firmware-sdk/how-to-lte-v2.md#flash-lte-modem-firmware).
+Pokud se jednotka dříve používala s Cloud Legacy, musíte nejdřív aktualizovat [**firmware modemu LTE**](../firmware-sdk/how-to-lte-v2.md#flash-lte-modem-firmware).
 
 
 :::info
@@ -108,9 +108,9 @@ Poté změny uložte příkazem `config save`. Zařízení se restartuje a použ
 
 </div>
 
-## Firmware aplikací pro Cloud v1 {#application-firmware-cloud-v1}
+## Firmware aplikací pro Cloud Legacy {#application-firmware-cloud-v1}
 
-Tento firmware je určený pro komunikaci se starším [**Cloud v1**](/cloud/legacy).
+Tento firmware je určený pro komunikaci se starším [**HARDWARIO Cloud Legacy**](/cloud/legacy).
 
 V tabulce níže je přehled dostupných sestavení firmwaru **katalogových aplikací**.
 

@@ -7,7 +7,7 @@ toc_max_heading_level: 3
 
 # Seznam změn {#changelog}
 
-Tato stránka zachycuje všechny významné změny ve firmwaru katalogových aplikací CHESTER od verze **v3.0.0** (migrace na Cloud v2).
+Tato stránka zachycuje všechny významné změny ve firmwaru katalogových aplikací CHESTER od verze **v3.0.0** (migrace z Cloud Legacy na aktuální HARDWARIO Cloud).
 
 :::tip Nejnovější vydání
 
@@ -197,22 +197,22 @@ Doporučujeme vyjít z funkčního workspace ve verzi v3.5.5 a nepřecházet ze 
 - Opraveny podmínky #ifdef pro termočlánek
 
 ### CHESTER Control {#chester-control-4}
-- Portováno na Cloud v2 s generátorem projektů
+- Portováno na HARDWARIO Cloud s generátorem projektů
 - Přidány prahové hodnoty linek X4
 - 6× stisk tlačítka zapne výstupy X9
 
 ### CHESTER Current {#chester-current-1}
-- Portováno na Cloud v2 s generátorem projektů
+- Portováno na HARDWARIO Cloud s generátorem projektů
 - Přidán dekodér pro ChirpStack
 
 ### CHESTER Push {#chester-push}
-- Portováno na Cloud v2 s generátorem projektů
+- Portováno na HARDWARIO Cloud s generátorem projektů
 
 ### CHESTER Range {#chester-range}
-- Portováno na Cloud v2 s podporou BLE tagů
+- Portováno na HARDWARIO Cloud s podporou BLE tagů
 
 ### CHESTER Scale {#chester-scale-2}
-- Portováno na Cloud v2
+- Portováno na HARDWARIO Cloud
 
 ### CHESTER Demo {#chester-demo}
 - Přidány síťové parametry a podpora BLE
@@ -222,7 +222,7 @@ Doporučujeme vyjít z funkčního workspace ve verzi v3.5.5 a nepřecházet ze 
 ## v3.0.0 (2024-07-17) {#v300-2024-07-17}
 
 ### SDK / společné {#sdk--common-7}
-- **Velké vydání**: migrace z protokolu Cloud v1 na Cloud v2
+- **Velké vydání**: migrace z protokolu Cloud Legacy na protokol HARDWARIO Cloud
 - Zaveden generátor projektů (`west chester-update`) pro správu variant
 - Přidán subsystém LTE v2 s architekturou stavového automatu
 - Přidána podpora GNSS
@@ -231,9 +231,9 @@ Doporučujeme vyjít z funkčního workspace ve verzi v3.5.5 a nepřecházet ze 
 - Subsystém BLE tagů: dřívější ukončení skenování, nastavitelná délka skenování
 
 ### CHESTER Clime {#chester-clime-3}
-- První aplikace portovaná na Cloud v2
+- První aplikace portovaná na HARDWARIO Cloud
 - Přidána podpora 1-Wire do výchozí varianty
 
 ### CHESTER Meteo {#chester-meteo-1}
-- Portováno na Cloud v2
+- Portováno na HARDWARIO Cloud
 - Přidána podpora pyranometru (varianta Meteo P)

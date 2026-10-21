@@ -491,7 +491,7 @@ Kvůli omezené velikosti payloadu v LoRaWAN se hodnoty zařízení kódují ve 
 - **Přidáno**: Podpora LoRaWAN: optimalizované binární kódování se sdružováním dat více zařízení pro úsporu přenosového pásma
 - **Přidáno**: Podpora rozhraní RS-232 přes rozšiřující modul CHESTER-X12 (vedle stávajícího RS-485/CHESTER-X2)
 - **Přidáno**: 10 profilů typů zařízení včetně elektroměrů, senzorů prostředí a obecných zařízení Modbus RTU
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); firmware pro Cloud v1 nebyl pro tuto aplikaci k dispozici
+- **Změněno**: Přechod na protokol HARDWARIO Cloud (kódování CBOR, nové endpointy API); firmware pro Cloud Legacy nebyl pro tuto aplikaci k dispozici
 
 :::info
 

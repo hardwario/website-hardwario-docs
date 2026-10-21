@@ -25,7 +25,7 @@ stačí přiložit telefon k zařízení.
 :::tip S aplikací začínáte?
 Projděte si nejdřív [**rychlého průvodce aplikací HARDWARIO Manager**](/apps/hardwario-manager/first-steps):
 instalaci aplikace, zapnutí NFC a udělení oprávnění, o která aplikace požádá.
-STICKER se čte telefonem s **Androidem** a NFC.
+STICKER se čte telefonem s **Androidem** nebo **iOS** a NFC.
 :::
 
 1. **Uložte zařízení, aby aplikace měla jeho secret key.** STICKER odpovídá jen
@@ -36,10 +36,9 @@ STICKER se čte telefonem s **Androidem** a NFC.
 2. **Otevřete STICKER → LoRaWAN keys** a zvolte **Read LoRaWAN keys**.
 3. **Přiložte telefon.** Zadní stranou telefonu se dotkněte krabičky zařízení STICKER a
    vteřinu či dvě se nehýbejte. Anténa NFC bývá u **horní části zadní strany**
-   telefonu; pokud se nic nestane, pomalu telefonem v tom místě pohybujte. Na
-   **iOS** vás systémový dialog skenování v půli vyzve, abyste telefon zvedli a
-   přiložili znovu. Toto zvednutí je nutné. Celý postup přiložení a to, co během
-   výměny ukazuje LED, popisuje [**STICKER přes NFC**](/apps/hardwario-manager/sticker).
+   telefonu; pokud se nic nestane, pomalu telefonem v tom místě pohybujte. S firmwarem
+   v2.0.0 stačí jedno přiložení s telefonem v klidu, na Androidu i na iOS stejně.
+   Celý postup přiložení a to, co během výměny ukazuje LED, popisuje [**STICKER přes NFC**](/apps/hardwario-manager/sticker).
 4. **Zapište si klíče, které aplikace ukáže.** Které to budou, závisí na režimu
    aktivace: **DevEUI**, **JoinEUI (AppEUI)** a **AppKey** pro OTAA, nebo **DevEUI**,
    **DevAddr** a klíče relace pro ABP, viz
@@ -68,6 +67,11 @@ Při registraci koncového zařízení STICKER v TTS:
 
 - **Formátovač uplinku:** V **Payload Formatters → Uplink** přiřaďte oficiální dekodér payloadu STICKER (`ttn.js`). Ten dekóduje standardní data ze senzorů na fPort 2 a systémové a alarmové zprávy na fPort 3.
 - **Formátovač downlinku:** V **Payload Formatters → Downlink** přiřaďte `ttn.js`, aby se payloady v JSON pro správu na dálku kódovaly na **fPort 85** (viz [**Příkazy přes downlink**](downlink-commands.md)).
+- **Odpovědi a ohlášení na fPort 85:** Kromě odpovědí na příkazy nese fPort 85 také **Info** a **settings-info**, které zařízení posílá samo po každém startu nebo připojení k síti a pak každých `interval-announce` hodin (výchozí 24 h). Odpověď, která se nevejde do jednoho rámce, přijde jako několik stránek se stejným `seq`; dekodér každou označí `pages: "i/N"` a kdo potřebuje celou odpověď, spojí stránky podle DevEUI, fPortu a `seq`.
+
+:::caution Verze dekodéru
+Používejte `ttn.js` ze stejného vydání firmwaru, jaké mají vaše zařízení. Firmware v2.0.0 změnil kódování alarmů a 1-Wire, ale bajt verze payloadu zůstal `0x01`, takže dekodér oba formáty podle samotného payloadu nerozliší. Flotila, která kombinuje zařízení s v1.4.x a v2.0.0, potřebuje dekodér, který formát volí podle verze firmwaru hlášené v **Info** zařízení.
+:::
 
 ---
 
@@ -77,4 +81,4 @@ Při registraci koncového zařízení STICKER v TTS:
 - [Rychlý průvodce aplikací HARDWARIO Manager](/apps/hardwario-manager/first-steps)
 - [Čtení informací o zařízení a klíčů LoRaWAN přes NFC](/apps/hardwario-manager/sticker/device-info)
 - [Koncová zařízení v TTS](/apps/the-things-stack/tts-configuration/tts-end-devices)
-- [Dekodér payloadu STICKER (`ttn.js`) na GitHubu](https://github.com/hardwario/sticker-firmware/blob/main/app/decoder/ttn.js)
+- [Dekodér payloadu STICKER (`ttn.js`, v2.0.0) na GitHubu](https://github.com/hardwario/sticker-firmware/blob/v2.0.0/app/decoder/ttn.js)

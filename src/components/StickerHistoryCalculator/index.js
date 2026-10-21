@@ -4,50 +4,86 @@ import {translate} from '@docusaurus/Translate';
 import {usePluralForm} from '@docusaurus/theme-common';
 import styles from './styles.module.css';
 
-// --- History buffer model (app_history.c, boards/sticker/sticker.dts, firmware v1.4.0) ---
+// --- History buffer model (app_history.c, boards/sticker/sticker.dts, firmware v2.0.0) ---
 // The 32 KB history partition is a ring of 16 flash pages of 2 KB. Each page opens with a
-// 32 B header; the rest is programmed in 8 B double words that carry 7 B of record data
-// each, so a page holds (2048 - 32) / 8 * 7 = 1764 B of records. A record never crosses a
-// page boundary and stores values only (its time is buffer start + ordinal * interval).
+// 40 B header; the rest is programmed in 8 B double words that carry 7 B of record data
+// each, so a page holds (2048 - 40) / 8 * 7 = 1757 B of records. A record never crosses a
+// page boundary and stores values only (its time is the page base + ordinal * interval).
+const FIRMWARE = 'v2.0.0';
 const PAGES = 16;
-const PAGE_DATA = 1764;
+const PAGE_DATA = 1757;
 
-// config interval-report: range and default (app_config.c).
+// config history-channels: up to 24 one-byte entries (slot << 5 | channel), 0xff = unused.
+const MAX_ENTRIES = 24;
+const UNUSED = 0xff;
+const entryOf = (slot, ch) => (slot << 5) | ch;
+const slotOf = (entry) => entry >> 5;
+
+// Default selection: onboard temperature + humidity.
+const DEFAULT_ENTRIES = [entryOf(0, 0), entryOf(0, 1)];
+
+// config interval-report: range and default (app_config.yml).
 const INTERVAL_MIN = 60;
 const INTERVAL_MAX = 86400;
 const INTERVAL_DEFAULT = 900;
 
-// config history-sensors default: temperature + humidity.
-const MASK_DEFAULT = 0b11;
+// Motherboard channels (slot 0, app_sensor_types.yaml type 1) with their history encoding
+// size in bytes (u8 = 1, i16/u16 = 2, u32 = 4), grouped for display.
+const MB_CHANNELS = [
+  [0, 'temperature', 2, 'ambient'],
+  [1, 'humidity', 1, 'ambient'],
+  [2, 'pressure', 2, 'ambient'],
+  [3, 'illuminance', 2, 'ambient'],
+  [4, 'temperature-baro', 2, 'ambient'],
+  [21, 'altitude', 2, 'ambient'],
+  [5, 'hall-left-state', 1, 'hall'],
+  [6, 'hall-left-count', 4, 'hall'],
+  [7, 'hall-right-state', 1, 'hall'],
+  [8, 'hall-right-count', 4, 'hall'],
+  [9, 'input-a-state', 1, 'inputs'],
+  [10, 'input-a-count', 4, 'inputs'],
+  [11, 'input-a-voltage', 2, 'inputs'],
+  [12, 'input-b-state', 1, 'inputs'],
+  [13, 'input-b-count', 4, 'inputs'],
+  [14, 'input-b-voltage', 2, 'inputs'],
+  [15, 'pir-motion', 1, 'pir'],
+  [16, 'pir-count', 4, 'pir'],
+  [17, 'accel-motion', 1, 'accel'],
+  [18, 'accel-count', 4, 'accel'],
+  [19, 'accel-orientation', 1, 'accel'],
+  [20, 'battery-voltage', 2, 'supply'],
+].map(([ch, name, size, group]) => ({entry: entryOf(0, ch), name, size, group}));
 
-// Recordable channels in the bit order of the history-sensors mask
-// (enum app_history_sensor), with their stored size in bytes (m_desc).
-const CHANNELS = [
-  ['temperature', 2, 'ambient'],
-  ['humidity', 1, 'ambient'],
-  ['s1-temp', 2, 'w1'],
-  ['s1-hum', 1, 'w1'],
-  ['s2-temp', 2, 'w1'],
-  ['s2-hum', 1, 'w1'],
-  ['s3-temp', 2, 'w1'],
-  ['s3-hum', 1, 'w1'],
-  ['s4-temp', 2, 'w1'],
-  ['s4-hum', 1, 'w1'],
-  ['hall-left', 4, 'counters'],
-  ['hall-right', 4, 'counters'],
-  ['input-a', 4, 'counters'],
-  ['input-b', 4, 'counters'],
-  ['motion', 4, 'pir'],
-  ['pressure', 2, 'other'],
-  ['illuminance', 2, 'other'],
-  ['orientation', 1, 'other'],
-  ['accel-motion', 4, 'other'],
-].map(([name, size, group], bit) => ({name, size, group, bit}));
+const MB_GROUPS = ['ambient', 'hall', 'inputs', 'pir', 'accel', 'supply'];
 
-const GROUPS = ['ambient', 'w1', 'counters', 'pir', 'other'];
+// 1-Wire sensor types (sensorN-type) and their channels with the history size in bytes.
+const W1_TYPES = {
+  2: {name: 'dallas (DS18B20)', channels: [[0, 'temperature', 2]]},
+  3: {
+    name: 'machine-probe',
+    channels: [
+      [0, 'temperature', 2],
+      [1, 'humidity', 1],
+      [2, 'temperature-aux', 2],
+      [3, 'illuminance', 2],
+      [4, 'magnetic-field', 2],
+      [5, 'tilt', 1],
+      [6, 'accel-x', 2],
+      [7, 'accel-y', 2],
+      [8, 'accel-z', 2],
+    ],
+  },
+};
+const W1_SLOTS = [1, 2, 3, 4];
+
+const w1Channels = (slot, type) =>
+  (W1_TYPES[type]?.channels ?? []).map(([ch, name, size]) => ({
+    entry: entryOf(slot, ch), name: `s${slot}-${name}`, base: name, size, slot,
+  }));
 
 const DAY = 86400;
 const round1 = (x) => Math.round(x * 10) / 10;
+const hex2 = (n) => n.toString(16).padStart(2, '0');
 
 const copy = (text) => {
   if (typeof navigator !== 'undefined' && navigator.clipboard) navigator.clipboard.writeText(text);
@@ -64,48 +100,72 @@ function clock(s) {
 export default function StickerHistoryCalculator() {
   const {i18n: {currentLocale}} = useDocusaurusContext();
   const {selectMessage} = usePluralForm();
-  const [mask, setMask] = useState(MASK_DEFAULT);
+  const [entries, setEntries] = useState(DEFAULT_ENTRIES);
+  const [slotTypes, setSlotTypes] = useState([0, 0, 0, 0]);
   const [intervalText, setIntervalText] = useState(String(INTERVAL_DEFAULT));
   const uid = useId();
 
   // What each channel records, shown while the channel is hovered or focused. Resolutions
-  // follow the stored encodings in m_desc (app_history.c).
-  const w1Temp = translate({
-    id: 'sticker.historyCalculator.info.w1Temp',
-    message: 'Temperature from the 1-Wire sensor in slot {slot}, for example a DS18B20 probe, stored in 0.01 °C steps.',
-  });
-  const w1Hum = translate({
-    id: 'sticker.historyCalculator.info.w1Hum',
-    message: 'Humidity from the 1-Wire sensor in slot {slot}. Stays empty for temperature-only probes such as the DS18B20.',
-  });
+  // follow the history encodings in app_sensor_types.yaml.
   const input = translate({
     id: 'sticker.historyCalculator.info.input',
     message: 'Running total of pulses counted on input {input}, for example from an S0 meter output.',
   });
-  const info = {
+  const inputState = translate({
+    id: 'sticker.historyCalculator.info.inputState',
+    message: 'State of input {input} in digital mode: 1 or 0.',
+  });
+  const inputVoltage = translate({
+    id: 'sticker.historyCalculator.info.inputVoltage',
+    message: 'Voltage on input {input} in analog mode, stored in 0.001 V steps.',
+  });
+  const mbInfo = {
     temperature: translate({id: 'sticker.historyCalculator.info.temperature', message: 'Air temperature from the built-in sensor, stored in 0.01 °C steps.'}),
     humidity: translate({id: 'sticker.historyCalculator.info.humidity', message: 'Relative humidity from the built-in sensor, stored in 0.5 % steps.'}),
-    ...Object.fromEntries([1, 2, 3, 4].flatMap((slot) => [
-      [`s${slot}-temp`, w1Temp.replace('{slot}', slot)],
-      [`s${slot}-hum`, w1Hum.replace('{slot}', slot)],
-    ])),
-    'hall-left': translate({id: 'sticker.historyCalculator.info.hallLeft', message: 'Running total of activations of the left Hall sensor, for example door openings detected by a magnet.'}),
-    'hall-right': translate({id: 'sticker.historyCalculator.info.hallRight', message: 'Running total of activations of the right Hall sensor, for example door openings detected by a magnet.'}),
-    'input-a': input.replace('{input}', 'A'),
-    'input-b': input.replace('{input}', 'B'),
-    motion: translate({id: 'sticker.historyCalculator.info.motion', message: 'Running total of motion detections by the PIR sensor.'}),
     pressure: translate({id: 'sticker.historyCalculator.info.pressure', message: 'Atmospheric pressure from the built-in barometer, stored in 0.1 hPa steps.'}),
     illuminance: translate({id: 'sticker.historyCalculator.info.illuminance', message: 'Ambient light from the built-in light sensor, stored in 2 lx steps.'}),
-    orientation: translate({id: 'sticker.historyCalculator.info.orientation', message: 'How the device is oriented, from the accelerometer, as a value from 1 to 6.'}),
-    'accel-motion': translate({id: 'sticker.historyCalculator.info.accelMotion', message: 'Running total of movement events detected by the accelerometer, counted separately from the PIR sensor.'}),
+    'temperature-baro': translate({id: 'sticker.historyCalculator.info.temperatureBaro', message: 'Temperature measured by the built-in barometer, stored in 0.01 °C steps.'}),
+    altitude: translate({id: 'sticker.historyCalculator.info.altitude', message: 'Barometric altitude from the built-in barometer, stored in 1 m steps.'}),
+    'hall-left-state': translate({id: 'sticker.historyCalculator.info.hallLeftState', message: 'State of the left Hall sensor, which reacts to a magnet: 1 or 0.'}),
+    'hall-left-count': translate({id: 'sticker.historyCalculator.info.hallLeft', message: 'Running total of activations of the left Hall sensor, for example door openings detected by a magnet.'}),
+    'hall-right-state': translate({id: 'sticker.historyCalculator.info.hallRightState', message: 'State of the right Hall sensor, which reacts to a magnet: 1 or 0.'}),
+    'hall-right-count': translate({id: 'sticker.historyCalculator.info.hallRight', message: 'Running total of activations of the right Hall sensor, for example door openings detected by a magnet.'}),
+    'input-a-state': inputState.replace('{input}', 'A'),
+    'input-a-count': input.replace('{input}', 'A'),
+    'input-a-voltage': inputVoltage.replace('{input}', 'A'),
+    'input-b-state': inputState.replace('{input}', 'B'),
+    'input-b-count': input.replace('{input}', 'B'),
+    'input-b-voltage': inputVoltage.replace('{input}', 'B'),
+    'pir-motion': translate({id: 'sticker.historyCalculator.info.pirMotion', message: '1 if the PIR sensor detected motion during the interval, otherwise 0.'}),
+    'pir-count': translate({id: 'sticker.historyCalculator.info.motion', message: 'Running total of motion detections by the PIR sensor.'}),
+    'accel-motion': translate({id: 'sticker.historyCalculator.info.accelMotionFlag', message: '1 if the accelerometer detected movement during the interval, otherwise 0.'}),
+    'accel-count': translate({id: 'sticker.historyCalculator.info.accelMotion', message: 'Running total of movement events detected by the accelerometer, counted separately from the PIR sensor.'}),
+    'accel-orientation': translate({id: 'sticker.historyCalculator.info.orientation', message: 'How the device is oriented, from the accelerometer, as a value from 1 to 6.'}),
+    'battery-voltage': translate({id: 'sticker.historyCalculator.info.battery', message: 'Battery voltage, stored in 0.001 V steps.'}),
+  };
+  const w1Info = {
+    dallas: translate({id: 'sticker.historyCalculator.info.w1Temp', message: 'Temperature from the 1-Wire sensor in slot {slot}, for example a DS18B20 probe, stored in 0.01 °C steps.'}),
+    temperature: translate({id: 'sticker.historyCalculator.info.mpTemperature', message: 'Temperature from the machine probe in slot {slot}, stored in 0.01 °C steps.'}),
+    humidity: translate({id: 'sticker.historyCalculator.info.mpHumidity', message: 'Relative humidity from the machine probe in slot {slot}, stored in 0.5 % steps.'}),
+    'temperature-aux': translate({id: 'sticker.historyCalculator.info.mpTemperatureAux', message: 'Second temperature from the machine probe in slot {slot} (TMP112 sensor), stored in 0.01 °C steps.'}),
+    illuminance: translate({id: 'sticker.historyCalculator.info.mpIlluminance', message: 'Ambient light from the machine probe in slot {slot}, stored in 2 lx steps.'}),
+    'magnetic-field': translate({id: 'sticker.historyCalculator.info.mpMagnetic', message: 'Magnetic field from the machine probe in slot {slot}, stored in 0.01 mT steps.'}),
+    tilt: translate({id: 'sticker.historyCalculator.info.mpTilt', message: 'Tilt alert from the machine probe in slot {slot}: 1 or 0.'}),
+    accel: translate({id: 'sticker.historyCalculator.info.mpAccel', message: 'Acceleration along the {axis} axis from the machine probe in slot {slot}, stored in 0.01 m/s² steps.'}),
+  };
+  const w1Text = (c, type) => {
+    const key = type === 2 ? 'dallas' : c.base.startsWith('accel-') ? 'accel' : c.base;
+    return w1Info[key].replace('{slot}', `s${c.slot}`).replace('{axis}', c.base.slice(-1).toUpperCase());
   };
 
   const groupLabels = {
     ambient: translate({id: 'sticker.historyCalculator.group.ambient', message: 'Integrated ambient sensors'}),
-    w1: translate({id: 'sticker.historyCalculator.group.w1', message: '1-Wire sensor slots'}),
-    counters: translate({id: 'sticker.historyCalculator.group.counters', message: 'Pulse and counter inputs'}),
+    hall: translate({id: 'sticker.historyCalculator.group.hall', message: 'Hall sensors'}),
+    inputs: translate({id: 'sticker.historyCalculator.group.inputs', message: 'External inputs A and B'}),
     pir: translate({id: 'sticker.historyCalculator.group.pir', message: 'PIR motion detection'}),
-    other: translate({id: 'sticker.historyCalculator.group.other', message: 'Barometer, light sensor and accelerometer'}),
+    accel: translate({id: 'sticker.historyCalculator.group.accel', message: 'Accelerometer'}),
+    supply: translate({id: 'sticker.historyCalculator.group.supply', message: 'Battery'}),
+    w1: translate({id: 'sticker.historyCalculator.group.w1', message: '1-Wire sensor slots'}),
   };
 
   // Plural messages: "one|other" in English, "one|few|many|other" in Czech.
@@ -133,8 +193,21 @@ export default function StickerHistoryCalculator() {
     return main;
   };
 
-  const toggle = (bit) => setMask((m) => m ^ (1 << bit));
-  const recordSize = CHANNELS.reduce((sum, c) => (mask & (1 << c.bit) ? sum + c.size : sum), 0);
+  // Every channel that can be picked now: the motherboard plus the typed 1-Wire slots.
+  const available = [...MB_CHANNELS, ...W1_SLOTS.flatMap((slot) => w1Channels(slot, slotTypes[slot - 1]))];
+  const sizeOf = new Map(available.map((c) => [c.entry, c.size]));
+
+  const full = entries.length >= MAX_ENTRIES;
+  // The record keeps the order of history-channels, so a new channel is appended.
+  const toggle = (entry) => setEntries((list) =>
+    list.includes(entry) ? list.filter((e) => e !== entry) : list.length < MAX_ENTRIES ? [...list, entry] : list);
+  // A slot's channels depend on its sensor type, so a new type drops the slot's entries.
+  const setSlotType = (slot, type) => {
+    setSlotTypes((types) => types.map((t, i) => (i === slot - 1 ? type : t)));
+    setEntries((list) => list.filter((e) => slotOf(e) !== slot));
+  };
+
+  const recordSize = entries.reduce((sum, e) => sum + (sizeOf.get(e) ?? 0), 0);
   const interval = Number(intervalText);
   const intervalOk = Number.isInteger(interval) && interval >= INTERVAL_MIN && interval <= INTERVAL_MAX;
 
@@ -146,41 +219,81 @@ export default function StickerHistoryCalculator() {
   const lowSeconds = (PAGES - 1) * perPage * interval;
   const range = `${format(round1(lowSeconds / (seconds < 2 * DAY ? 3600 : DAY)))}–${span(seconds)}`;
 
-  const hex = `0x${mask.toString(16).toUpperCase().padStart(4, '0')}`;
+  const hex = [...entries, ...Array(MAX_ENTRIES - entries.length).fill(UNUSED)].map(hex2).join('');
+  const typedSlots = W1_SLOTS.filter((slot) => slotTypes[slot - 1] && entries.some((e) => slotOf(e) === slot));
   const commands = [
+    ...typedSlots.map((slot) => `config sensor${slot}-type ${slotTypes[slot - 1]}`),
+    `config history-channels ${hex}`,
     'config history-enable true',
-    `config history-sensors ${mask}`,
     `config interval-report ${interval}`,
     'settings save',
   ].join('\n');
+
+  const renderChannel = (c, help) => {
+    const checked = entries.includes(c.entry);
+    return (
+      <span key={c.entry} className={styles.channel}>
+        <label className={styles.check}>
+          <input type="checkbox" checked={checked} disabled={!checked && full} onChange={() => toggle(c.entry)}
+            aria-describedby={`${uid}-${c.entry}`} />
+          <code>{c.name}</code>
+          <span className={styles.size}>{c.size} B</span>
+        </label>
+        <span id={`${uid}-${c.entry}`} role="tooltip" className={styles.help}>{help}</span>
+      </span>
+    );
+  };
 
   return (
     <div className={styles.calculator}>
       <fieldset className={styles.fieldset}>
         <legend className={styles.label}>
-          {translate({id: 'sticker.historyCalculator.channels', message: 'Channels'})} (<code>history-sensors</code>)
+          {translate({id: 'sticker.historyCalculator.channels', message: 'Channels'})} (<code>history-channels</code>)
         </legend>
         <div className={styles.hint}>
           {translate({id: 'sticker.historyCalculator.infoHint', message: 'Hover over or focus a channel to see what it records.'})}
         </div>
-        {GROUPS.map((group) => (
+        {MB_GROUPS.map((group) => (
           <div key={group} className={styles.group}>
             <div className={styles.groupLabel}>{groupLabels[group]}</div>
             <div className={styles.inline}>
-              {CHANNELS.filter((c) => c.group === group).map((c) => (
-                <span key={c.name} className={styles.channel}>
-                  <label className={styles.check}>
-                    <input type="checkbox" checked={Boolean(mask & (1 << c.bit))} onChange={() => toggle(c.bit)}
-                      aria-describedby={`${uid}-${c.name}`} />
-                    <code>{c.name}</code>
-                    <span className={styles.size}>{c.size} B</span>
-                  </label>
-                  <span id={`${uid}-${c.name}`} role="tooltip" className={styles.help}>{info[c.name]}</span>
-                </span>
-              ))}
+              {MB_CHANNELS.filter((c) => c.group === group).map((c) => renderChannel(c, mbInfo[c.name]))}
             </div>
           </div>
         ))}
+        <div className={styles.group}>
+          <div className={styles.groupLabel}>{groupLabels.w1}</div>
+          <div className={styles.hint}>
+            {translate({
+              id: 'sticker.historyCalculator.w1Hint',
+              message: 'Pick the sensor type of a slot (config sensor1-type … sensor4-type) to list its channels.',
+            })}
+          </div>
+        </div>
+        {W1_SLOTS.map((slot) => {
+          const type = slotTypes[slot - 1];
+          return (
+            <div key={slot} className={styles.group}>
+              <div className={styles.inline}>
+                <label className={styles.check} htmlFor={`${uid}-slot${slot}`}><code>s{slot}</code></label>
+                <select id={`${uid}-slot${slot}`} className={styles.select} value={type}
+                  onChange={(e) => setSlotType(slot, Number(e.target.value))}>
+                  <option value={0}>none</option>
+                  {Object.entries(W1_TYPES).map(([id, t]) => <option key={id} value={id}>{t.name}</option>)}
+                </select>
+                {w1Channels(slot, type).map((c) => renderChannel(c, w1Text(c, type)))}
+              </div>
+            </div>
+          );
+        })}
+        {full && (
+          <div className={`${styles.hint} ${styles.limit}`}>
+            {translate(
+              {id: 'sticker.historyCalculator.limit', message: 'history-channels holds at most {max} channels.'},
+              {max: MAX_ENTRIES},
+            )}
+          </div>
+        )}
       </fieldset>
 
       <div className={styles.field}>
@@ -197,7 +310,7 @@ export default function StickerHistoryCalculator() {
       <div className={styles.results} aria-live="polite">
         {!recordSize ? (
           <div className={styles.warning}>
-            {translate({id: 'sticker.historyCalculator.empty', message: 'Select at least one channel. With an empty mask, STICKER records no history.'})}
+            {translate({id: 'sticker.historyCalculator.emptySelection', message: 'Select at least one channel. With no channel selected, STICKER records no history.'})}
           </div>
         ) : !intervalOk ? (
           <div className={styles.error}>
@@ -209,6 +322,8 @@ export default function StickerHistoryCalculator() {
         ) : (
           <>
             <dl className={styles.grid}>
+              <dt>{translate({id: 'sticker.historyCalculator.channels', message: 'Channels'})}</dt>
+              <dd>{entries.length} / {MAX_ENTRIES}</dd>
               <dt>{translate({id: 'sticker.historyCalculator.recordSize', message: 'Record size'})}</dt>
               <dd>{recordSize} B</dd>
               <dt>{translate({id: 'sticker.historyCalculator.perPage', message: 'Records per page'})}</dt>
@@ -217,8 +332,6 @@ export default function StickerHistoryCalculator() {
               <dd>{plural(capacity, units.records)}</dd>
               <dt>{translate({id: 'sticker.historyCalculator.covered', message: 'Time covered'})}</dt>
               <dd><strong>{covered(seconds)}</strong></dd>
-              <dt>{translate({id: 'sticker.historyCalculator.mask', message: 'Mask'})}</dt>
-              <dd><code>{mask}</code> ({hex})</dd>
             </dl>
             <p className={styles.wrap}>
               {translate(
@@ -241,7 +354,10 @@ export default function StickerHistoryCalculator() {
       </div>
 
       <p className={styles.note}>
-        {translate({id: 'sticker.historyCalculator.note', message: 'Channel sizes and the flash layout follow STICKER firmware v1.4.0.'})}
+        {translate(
+          {id: 'sticker.historyCalculator.noteVersion', message: 'Channel sizes and the flash layout follow STICKER firmware {version}.'},
+          {version: FIRMWARE},
+        )}
       </p>
     </div>
   );

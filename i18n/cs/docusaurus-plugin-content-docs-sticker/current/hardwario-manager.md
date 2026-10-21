@@ -30,19 +30,26 @@ zařízení STICKER. Úplnou dokumentaci aplikace najdete v sekci **Aplikace**:
 - Telefon s **NFC** a nainstalovanou aplikací. Jak aplikaci nainstalovat a
   zapnout NFC, popisuje stránka [**Instalace aplikace**](/apps/hardwario-manager/install).
 - **Secret key** zařízení. STICKER komunikuje šifrovaným kanálem NFC, takže
-  bez tohoto klíče aplikace nic nepřečte ani nezapíše. Každé zařízení přidáte jen jednou (viz
+  bez tohoto klíče aplikace nepřečte jeho konfiguraci ani klíče a nic nezapíše. Každé zařízení přidáte jen jednou (viz
   [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)) a
   od té doby aplikace klíč doplňuje sama.
 
-## Konfigurace bez baterií {#configuring-without-batteries}
+## NFC funguje jen na zapnutém zařízení {#nfc-needs-a-powered-device}
 
-Zařízení STICKER lze přes NFC nastavit i **bez vložených baterií**. Pole
-z telefonu zařízení napájí dost dlouho na to, aby si nastavení uložilo; použije
-ho při příštím startu. Takto se před instalací připravuje celá série zařízení, viz
-[**Konfigurace vypnutého zařízení**](/apps/hardwario-manager/sticker/offline-configuration).
+Od firmwaru **v2.0.0** procházejí všechny příkazy z telefonu schránkou (mailboxem)
+čipu NFC v zařízení STICKER: jedno přiložení, telefon v klidu, na Androidu i na
+iOS stejně. Schránka funguje jen za běhu zařízení, proto **musí být vložené
+baterie**. Zařízení bez baterií nebo s vybitou baterií se v telefonu ukáže jako
+prázdný tag. Konfigurace bez vložených baterií už není možná.
 
-Proto také nezprovozněné zařízení nevysílá, dokud nedostane skutečné klíče
-LoRaWAN: viz [**Funkce**](features.md).
+Celou sérii zařízení před instalací připravíte tak, že zapnutá zařízení nastavíte
+přes NFC (stejné nastavení pro všechna zajistí
+[**šablona**](/apps/hardwario-manager/sticker/templates)), nebo je zprovozníte
+přes SWD programátorem J-Link a aplikací
+[**HARDWARIO STICKER Flash Tool**](https://github.com/hardwario/sticker-configuration).
+
+Nové zařízení se dodává s vypnutým rádiem (`radio-mode off`) a nevysílá, dokud
+rádio nezapnete: viz [**Funkce**](features.md).
 
 ---
 

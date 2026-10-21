@@ -105,7 +105,7 @@ Pokud se zařízení stále nedaří připojit k síti (hlavně s vlastní SIM k
 
 * **Zkontrolujte režim sítě:** Podle regionu může být potřeba vynutit konkrétní režim, například **NB-IoT** nebo **LTE-M**. Podrobnosti najdete v [**průvodci nastavením SIM karty**](/chester/platform-connectivity/cellular-networks/sim-card-setup).
 * **Zkontrolujte APN/PLMN:** Pokud jste mimo Českou republiku nebo používáte SIM jiného operátora než Vodafone, nastavte správně PLMN a APN podle [**průvodce nastavením SIM karty**](/chester/platform-connectivity/cellular-networks/sim-card-setup), případně se podívejte do přehledu [**konfiguračních parametrů**](/chester/platform-connectivity/cellular-networks/configuration-parameters).
-* **Veřejná IP pro Cloud v2:** S vlastní SIM kartou musíte kvůli kompatibilitě s Cloud v2 nastavit také [**správné parametry IP a portu**](/chester/firmware-sdk/how-to-lte-v2#ip-and-port).
+* **Veřejná IP pro HARDWARIO Cloud:** S vlastní SIM kartou musíte kvůli kompatibilitě s HARDWARIO Cloud nastavit také [**správné parametry IP a portu**](/chester/firmware-sdk/how-to-lte-v2#ip-and-port).
 
 ---
 

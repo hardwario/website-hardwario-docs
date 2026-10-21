@@ -1,7 +1,7 @@
 ---
 slug: overview
 title: Overview
-description: "Structure of the legacy HARDWARIO Cloud v1: user configuration, groups, callbacks, devices and messages."
+description: "Structure of the HARDWARIO Cloud Legacy: user configuration, groups, callbacks, devices and messages."
 ---
 import Image from '@theme/IdealImage';
 

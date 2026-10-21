@@ -62,7 +62,7 @@ You can also use **HARDWARIO CLI** upload function, so the firmware is uploaded 
 
 You must have your **HARDWARIO Cloud** secret token in the environment variable `HARDWARIO_CLOUD_TOKEN`, or you must supply your secret token in the `--token` parameter. This parameter needs to be placed exactly between the `fw` and `upload` parameters.
 
-You find the needed token in [HARDWARIO Cloud v1 in your profile](https://hardwario.cloud/#/profile) as the `API token`.
+You find the needed token in [HARDWARIO Cloud Legacy in your profile](https://legacy.hardwario.cloud/#/profile) as the `API token`.
 
 :::
 

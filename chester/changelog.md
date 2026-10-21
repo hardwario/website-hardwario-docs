@@ -88,11 +88,11 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### 2025-12-08
 
-- **[Apps]** **CHESTER Clime** v3.5.1: new variants SPS30 (particulate matter), Radon, TC (thermocouple); Cloud v2 protocol adopted
+- **[Apps]** **CHESTER Clime** v3.5.1: new variants SPS30 (particulate matter), Radon, TC (thermocouple); HARDWARIO Cloud protocol adopted
 
 ### 2025-12-03
 
-- **[Apps]** **CHESTER Serial** v3.5.0: LoRaWAN support with binary encoding; RS-232 variant added; Cloud v2 protocol
+- **[Apps]** **CHESTER Serial** v3.5.0: LoRaWAN support with binary encoding; RS-232 variant added; HARDWARIO Cloud protocol
 
 ### 2025-11-28
 

@@ -280,7 +280,7 @@ import TabItem from '@theme/TabItem';
 
 - **Přidáno**: Podpora LoRaWAN: jediný binární soubor firmwaru pro LTE i LoRaWAN; režim se volí příkazem `app config mode lte` / `app config mode lrw`
 - **Změněno**: Přepracováno na nový framework LoRaWAN `app_lrw` pokrytý jednotkovými testy
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); firmware pro Cloud v1 je nadále k dispozici samostatně
+- **Změněno**: Přechod na protokol HARDWARIO Cloud (kódování CBOR, nové endpointy API); firmware pro Cloud Legacy je nadále k dispozici samostatně
 
 :::info
 

@@ -491,7 +491,7 @@ Due to LoRaWAN payload size constraints, device values are encoded using **Float
 - **Added**: LoRaWAN support: optimized binary encoding with multi-device packing for bandwidth efficiency
 - **Added**: Support for RS-232 interface via CHESTER-X12 extension module (in addition to existing RS-485/CHESTER-X2)
 - **Added**: 10 device type profiles including energy meters, environmental sensors, and generic Modbus RTU devices
-- **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); Cloud v1 firmware was not available for this application
+- **Changed**: HARDWARIO Cloud protocol adopted (CBOR encoding, new API endpoints); Cloud Legacy firmware was not available for this application
 
 :::info
 

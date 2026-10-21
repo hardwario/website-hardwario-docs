@@ -485,7 +485,7 @@ import TabItem from '@theme/TabItem';
 - **Added**: LoRaWAN support: single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
 - **Added**: Downlink watchdog interval (`downlink-wdg-interval`) to detect loss of cloud communication
 - **Added**: Configurable poll interval (`interval-poll`) for cloud polling frequency
-- **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available
+- **Changed**: HARDWARIO Cloud protocol adopted (CBOR encoding, new API endpoints); previous Cloud Legacy firmware remains separately available
 - **Changed**: Channel modes now explicitly configurable per channel (`channel-mode-1` through `channel-mode-4`)
 
 :::info

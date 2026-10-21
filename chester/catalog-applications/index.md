@@ -49,13 +49,13 @@ Firmwares are located in the [**Application Firmware**](#application-firmware) c
 :::
 
 
-## Application Firmware Cloud v2 {#application-firmware}
+## Application Firmware for HARDWARIO Cloud {#application-firmware}
 
-These firmwares are for newer [**Cloud v2**](/cloud/) communication.
+These firmwares are for communication with the current [**HARDWARIO Cloud**](/cloud/).
 
-If your unit was already communicating with Cloud v2, you can upgrade just main [**APP/BLE MCU firmware over BLE**](../platform-connectivity/hardwario-manager.md#firmware-update).
+If your unit was already communicating with HARDWARIO Cloud, you can upgrade just main [**APP/BLE MCU firmware over BLE**](../platform-connectivity/hardwario-manager.md#firmware-update).
 
-If your unit was previously used with Cloud v1, you have to first upgrade [**LTE modem firmware**](../firmware-sdk/how-to-lte-v2.md#flash-lte-modem-firmware).
+If your unit was previously used with Cloud Legacy, you have to first upgrade [**LTE modem firmware**](../firmware-sdk/how-to-lte-v2.md#flash-lte-modem-firmware).
 
 
 :::info
@@ -108,9 +108,9 @@ Then apply changes by typing `config save`. The device will reboot and use the c
 
 </div>
 
-## Application Firmware Cloud v1
+## Application Firmware for Cloud Legacy {#application-firmware-cloud-v1}
 
-These firmwares are for older [**Cloud v1**](/cloud/legacy) communication.
+These firmwares are for communication with the older [**HARDWARIO Cloud Legacy**](/cloud/legacy).
 
 The table below provides an overview of the available application firmware builds for **catalog applications**.
 

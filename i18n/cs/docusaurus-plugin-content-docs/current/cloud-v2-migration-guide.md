@@ -1,19 +1,19 @@
 ---
 slug: cloud-v2-migration-guide
-title: Průvodce migrací na Cloud v2
-description: "Celý postup migrace z Cloud v1 na Cloud v2 krok za krokem."
+title: Migrace z Cloud Legacy
+description: "Celý postup migrace zařízení CHESTER z HARDWARIO Cloud Legacy na aktuální HARDWARIO Cloud krok za krokem."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Průvodce migrací na Cloud v2 {#cloud-v2-migration-guide}
+# Migrace z Cloud Legacy {#cloud-v2-migration-guide}
 
-Tento článek vás provede celou migrací z Cloud v1 na Cloud v2.
+Tento článek vás provede celou migrací z **HARDWARIO Cloud Legacy** na aktuální **HARDWARIO Cloud**.
 
 ## 1. Aktualizace modemu LTE {#1-update-the-lte-modem}
 
-Návod níže vás provede přípravou softwarových nástrojů a hardwaru pro práci se zařízením CHESTER: instalací a ověřením HARDWARIO Command Line Tools ve virtuálním prostředí Pythonu a připojením programátoru SEGGER J-Link. Hlavně ale popisuje, jak vymazat aplikační firmware, nahrát firmware modemu LTE a aplikační firmware znovu nainstalovat. Bez toho migraci na HARDWARIO Cloud v2 nezahájíte.
+Návod níže vás provede přípravou softwarových nástrojů a hardwaru pro práci se zařízením CHESTER: instalací a ověřením HARDWARIO Command Line Tools ve virtuálním prostředí Pythonu a připojením programátoru SEGGER J-Link. Hlavně ale popisuje, jak vymazat aplikační firmware, nahrát firmware modemu LTE a aplikační firmware znovu nainstalovat. Bez toho migraci na HARDWARIO Cloud nezahájíte.
 
 👉 **Podrobný návod: [https://docs.hardwario.com/chester/firmware-flashing/lte-modem-over-j-link](/chester/firmware-flashing/lte-modem-over-j-link)**
 
@@ -27,9 +27,9 @@ Návod níže ukazuje, jak nahrát aplikační firmware do zařízení CHESTER p
 
 ![CHESTER – držák SIM karty](../../../../chester/images/chester-sim-holder.png)
 
-## 4. Přidání zařízení do Cloud v2 {#4-add-the-device-to-cloud-v2}
+## 4. Přidání zařízení do HARDWARIO Cloud {#4-add-the-device-to-cloud-v2}
 
-#### 1. Přejděte na [HARDWARIO Cloud v2](https://hardwario.cloud/) {#1-go-to-hardwario-cloud-v2}
+#### 1. Přejděte na [HARDWARIO Cloud](https://hardwario.cloud/) {#1-go-to-hardwario-cloud-v2}
 - Otevřete v prohlížeči rozhraní [HARDWARIO Cloud](https://hardwario.cloud/).
 
 #### 2. Vytvořte nový prostor {#2-create-a-new-space}
@@ -62,7 +62,7 @@ Každý tag má **název** a **barvu**.
  ![Cloud – zadání údajů o zařízení](../../../../chester/images/cloud-3.png)
 
 #### 5. Zařízení přidáno {#5-device-added}
-Zařízení je teď **úspěšně přidané** do Cloud v2.
+Zařízení je teď **úspěšně přidané** do HARDWARIO Cloud.
 
 :::info
 Možnosti vizualizace příchozích dat najdete zde:  

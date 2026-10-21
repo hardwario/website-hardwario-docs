@@ -610,7 +610,7 @@ Pro zařízení **CHESTER Current** máme v **HARDWARIO** kalibrační sadu z n�
 
 - **Přidáno**: Nové varianty: **CHESTER Current Z** (se záložním modulem CHESTER-Z1) a **CHESTER Current 1W** (s externími teplotními senzory DS18B20 na sběrnici 1-Wire)
 - **Přidáno**: Podpora LoRaWAN: jediný binární soubor firmwaru pro LTE i LoRaWAN; režim se volí příkazem `app config mode lte` / `app config mode lrw`
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud v1 zůstává k dispozici samostatně
+- **Změněno**: Přechod na protokol HARDWARIO Cloud (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud Legacy zůstává k dispozici samostatně
 
 :::info
 

@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # How to: CBOR
 
-**CHESTER** with Cloud v2 uses [**CBOR**](https://cbor.io/) to encode and decode transmitted data. Thanks to **CBOR**, you can describe what the transmitted data will look like using the **YAML** file, then in your C code, you use the keys from this **YAML** file.
+**CHESTER** with HARDWARIO Cloud uses [**CBOR**](https://cbor.io/) to encode and decode transmitted data. Thanks to **CBOR**, you can describe what the transmitted data will look like using the **YAML** file, then in your C code, you use the keys from this **YAML** file.
 
 In the initial session messages, Cloud sends codec hash in the **session down** message. CHESTER compares the hash with its own codec hash and if needed, it uploads decoder with **decoder up** message and optionally uploads encoder in **encoder up** message.
 

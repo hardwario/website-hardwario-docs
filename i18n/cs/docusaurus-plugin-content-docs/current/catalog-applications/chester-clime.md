@@ -1073,9 +1073,9 @@ Při této konfiguraci obsahuje každá struktura šest agregovaných hodnot. Ka
 - **Přidáno**: Nové varianty: **CHESTER Clime SPS30** (prachové částice: PM1/PM2.5/PM10) a **CHESTER Clime Radon** (koncentrace radonu)
 - **Přidáno**: Nová varianta: **CHESTER Clime TC** pro dva externí termočlánky typu K (přes CHESTER-X3B)
 - **Vylepšeno**: Podpora teploměrů DS18B20 1-Wire, vyšší spolehlivost a čistší obsluha více senzorů
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); varianty pro Cloud v1 zůstávají dostupné v samostatné tabulce firmwaru
+- **Změněno**: Přechod na protokol HARDWARIO Cloud (kódování CBOR, nové endpointy API); varianty pro Cloud Legacy zůstávají dostupné v samostatné tabulce firmwaru
 - **Změněno**: Jediný společný binární soubor firmwaru pro LTE i LoRaWAN; síť se volí příkazem `app config mode lte` / `app config mode lrw`
-- **Odstraněno**: Varianty Clime 1W a Clime 1WH byly vypuštěny ze sestavení firmwaru pro Cloud v2 (pro Cloud v1 zůstávají dostupné)
+- **Odstraněno**: Varianty Clime 1W a Clime 1WH byly vypuštěny ze sestavení firmwaru pro HARDWARIO Cloud (pro Cloud Legacy zůstávají dostupné)
 
 :::info
 

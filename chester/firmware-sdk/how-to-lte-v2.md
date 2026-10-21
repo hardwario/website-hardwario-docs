@@ -6,15 +6,15 @@ import Image from '@theme/IdealImage';
 
 # How to: LTE v2
 
-This article will demonstrate how to upgrade existing CHESTER firmware to the LTE v2 and [Cloud v2](/cloud/).
+This article will demonstrate how to upgrade existing CHESTER firmware to the LTE v2 and [HARDWARIO Cloud](/cloud/).
 
 LTE v2 is using a newer UDP protocol that supports downlink messages and automatically handles fragmentation, confirmation and authentication of the packets with a message authentication code based on SHA-256. The protocol is described in [**Device Protocol (FLAP)**](/cloud/device-protocol/).
 
-Downlink messages or configuration messages can be sent by API or in the HARDWARIO Cloud v2 user interface.
+Downlink messages or configuration messages can be sent by API or in the HARDWARIO Cloud user interface.
 
 Configuration messages `app config ...` can be sent to any device using LTE v2. There is no need to add anything to your application, the `ctr_cloud` subsystem takes care of all.
 
-Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to Cloud v2 and you can take an inspiration.
+Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to HARDWARIO Cloud and you can take an inspiration.
 
 ## CHESTER LTE v2 Firmware Examples
 
@@ -47,7 +47,7 @@ CHESTER Control also contains configuration definitions through macros. So you d
 
 ### Other Catalogue Apps
 
-Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to Cloud v2 and you can take an inspiration. Or use pre-built [**firmware**](/chester/catalog-applications/catalog-applications/#application-firmware)
+Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to HARDWARIO Cloud and you can take an inspiration. Or use pre-built [**firmware**](/chester/catalog-applications/catalog-applications/#application-firmware)
 
 ## Changes for LTE v2
 

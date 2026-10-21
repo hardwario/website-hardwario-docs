@@ -88,11 +88,11 @@ Tato stránka řadí změny na úrovni platformy podle **data**. Poznámky k vyd
 
 ### 2025-12-08 {#2025-12-08}
 
-- **[Apps]** **CHESTER Clime** v3.5.1: nové varianty SPS30 (prachové částice), Radon, TC (termočlánek); přechod na protokol Cloud v2
+- **[Apps]** **CHESTER Clime** v3.5.1: nové varianty SPS30 (prachové částice), Radon, TC (termočlánek); přechod na protokol HARDWARIO Cloud
 
 ### 2025-12-03 {#2025-12-03}
 
-- **[Apps]** **CHESTER Serial** v3.5.0: podpora LoRaWAN s binárním kódováním; přidána varianta RS-232; protokol Cloud v2
+- **[Apps]** **CHESTER Serial** v3.5.0: podpora LoRaWAN s binárním kódováním; přidána varianta RS-232; protokol HARDWARIO Cloud
 
 ### 2025-11-28 {#2025-11-28}
 

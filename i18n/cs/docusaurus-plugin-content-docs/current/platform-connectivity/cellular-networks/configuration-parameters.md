@@ -89,14 +89,14 @@ Pro globální připojení použijte `"157.245.24.13"`.
 
 ---
 
-## Starší verze: konfigurace Cloud v1 {#legacy-cloud-v1-configuration}
+## Konfigurace pro Cloud Legacy {#legacy-cloud-v1-configuration}
 
-Starší firmware pro [HARDWARIO Cloud v1](https://legacy.hardwario.cloud) (obvykle katalogový firmware CHESTER verze 2.x.x) potřebuje u těchto dvou konfiguračních položek jiné hodnoty:
+Firmware pro [HARDWARIO Cloud Legacy](https://legacy.hardwario.cloud) (obvykle katalogový firmware CHESTER verze 2.x.x) potřebuje u těchto dvou konfiguračních položek jiné hodnoty:
 
 - **IP** s SIM kartou Vodafone: `lte config addr 192.168.168.1`
 - **IP** s SIM kartou jiného operátora: `lte config addr 165.227.146.193`
 - **APN**: `lte config apn hardwario.com`
 
-Všimněte si, že APN má příponu `.com` a IP adresa vede na UDP server Cloud v1.
+Všimněte si, že APN má příponu `.com` a IP adresa vede na UDP server Cloud Legacy.
 
 Nezapomeňte **uložit změny konfigurace zadáním `config save`.**

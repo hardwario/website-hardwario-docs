@@ -89,14 +89,14 @@ For global connection use `"157.245.24.13"`
 
 ---
 
-## Legacy: Cloud v1 configuration
+## Cloud Legacy configuration {#legacy-cloud-v1-configuration}
 
-For our legacy [HARDWARIO Cloud v1](https://legacy.hardwario.cloud) firmwares (usually **CHESTER** catalogue firmware version 2.x.x) you need different values for these two config items:
+For our [HARDWARIO Cloud Legacy](https://legacy.hardwario.cloud) firmwares (usually **CHESTER** catalogue firmware version 2.x.x) you need different values for these two config items:
 
 - **IP** with Vodafone SIM card: `lte config addr 192.168.168.1`
 - **IP** with non-Vodafone SIM card: `lte config addr 165.227.146.193`
 - **APN**: `lte config apn hardwario.com`
 
-Notice the APN has a `.com` suffix, and the IP leads to the Cloud v1 UDP server.
+Notice the APN has a `.com` suffix, and the IP leads to the Cloud Legacy UDP server.
 
 Don't forget to **save configuration changes by typing `config save`.**

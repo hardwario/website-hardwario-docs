@@ -605,7 +605,7 @@ Tlak je v **pascalech**.
 
 - **Přidáno**: Podpora půdních senzorů: měření vlhkosti a teploty půdními sondami 1-Wire (`soil_sensors` ve výstupu JSON)
 - **Přidáno**: Nová varianta: **CHESTER Meteo P** se vstupem pro pyranometr k měření intenzity slunečního záření
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud v1 zůstává dostupný samostatně
+- **Změněno**: Přechod na protokol HARDWARIO Cloud (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud Legacy zůstává dostupný samostatně
 
 :::info
 

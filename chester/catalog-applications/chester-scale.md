@@ -389,7 +389,7 @@ Learn how to activate and configure this feature in the [**CHESTER BLE Tag Subsy
 
 - **Added**: New variant: **CHESTER Scale Z** with CHESTER-Z1 backup module support
 - **Added**: BLE tag subsystem integration: wireless temperature and humidity from Teltonika EYE Sensor tags
-- **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available
+- **Changed**: HARDWARIO Cloud protocol adopted (CBOR encoding, new API endpoints); previous Cloud Legacy firmware remains separately available
 - **Changed**: Single combined firmware binary for both LTE and LoRaWAN; LoRaWAN support in progress (planned for next release)
 
 :::info

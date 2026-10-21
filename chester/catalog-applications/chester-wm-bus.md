@@ -44,7 +44,7 @@ The device has a sufficiently low power consumption that it can operate from bat
 
 CHESTER wM-Bus only receives raw hexadecimal wM-Bus telegrams. Neither the device nor HARDWARIO Cloud interprets the meter data. Each wM-Bus meter has its own representation of the encoded data, and the telegrams may also be encrypted. Decoding the raw hexadecimal values into meaningful units is up to the customer or integrator. Encrypted telegrams can optionally be decrypted on the Cloud side, see [HARDWARIO Cloud decryption keys](#hardwario-cloud--decryption-keys).
 
-This device supports the newer **LTEv2** stack and **HARDWARIO Cloud v2**.
+This device supports the newer **LTEv2** stack and the current **HARDWARIO Cloud**.
 
 ## Application Variants
 
@@ -411,7 +411,7 @@ The **received data must therefore be decrypted**, which is done using **decrypt
 In this section, we will show **how to add individual decryption keys** into the Cloud using the **Variables** section.  
 
 :::tip
-If you are not sure how to **get started with the Cloud**, follow this tutorial: [**HARDWARIO Cloud v2**](/cloud/)
+If you are not sure how to **get started with the Cloud**, follow this tutorial: [**HARDWARIO Cloud**](/cloud/)
 :::
 
 ### Step-by-Step Instructions
@@ -455,7 +455,7 @@ The meters listed below are the ones we have tested in-house and documented, inc
 
 - **Fixed**: Receiving of long wM-Bus packets (previously truncated or dropped)
 - **Added**: Battery-powered variant support (6× D-cell) alongside the existing DC-powered variant
-- **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); Cloud v1 firmware was not available for this application
+- **Changed**: HARDWARIO Cloud protocol adopted (CBOR encoding, new API endpoints); Cloud Legacy firmware was not available for this application
 
 :::info
 

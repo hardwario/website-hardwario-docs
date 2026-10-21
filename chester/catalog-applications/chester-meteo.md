@@ -605,7 +605,7 @@ Pressure is in **pascals**.
 
 - **Added**: Soil sensor support: moisture and temperature measurement via 1-Wire soil probes (`soil_sensors` in JSON output)
 - **Added**: New variant: **CHESTER Meteo P** with pyranometer input for solar irradiance measurement
-- **Changed**: Cloud v2 protocol adopted (CBOR encoding, new API endpoints); previous Cloud v1 firmware remains separately available
+- **Changed**: HARDWARIO Cloud protocol adopted (CBOR encoding, new API endpoints); previous Cloud Legacy firmware remains separately available
 
 :::info
 

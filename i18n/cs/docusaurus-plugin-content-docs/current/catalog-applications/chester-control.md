@@ -485,7 +485,7 @@ import TabItem from '@theme/TabItem';
 - **Přidáno**: Podpora LoRaWAN: jediný binární soubor firmwaru pro LTE i LoRaWAN; režim se volí příkazem `app config mode lte` / `app config mode lrw`
 - **Přidáno**: Interval downlink watchdogu (`downlink-wdg-interval`) pro detekci ztráty komunikace s cloudem
 - **Přidáno**: Nastavitelný interval dotazování cloudu (`interval-poll`)
-- **Změněno**: Přechod na protokol Cloud v2 (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud v1 zůstává samostatně dostupný
+- **Změněno**: Přechod na protokol HARDWARIO Cloud (kódování CBOR, nové endpointy API); předchozí firmware pro Cloud Legacy zůstává samostatně dostupný
 - **Změněno**: Režim lze nyní nastavit zvlášť pro každý kanál (`channel-mode-1` až `channel-mode-4`)
 
 :::info

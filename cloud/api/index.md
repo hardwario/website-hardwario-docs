@@ -1,11 +1,11 @@
 ---
 title: REST API
-description: "HARDWARIO Cloud v2 REST API: read devices and messages, manage tags and variables, send downlinks and automate everything the web interface can do."
+description: "HARDWARIO Cloud REST API: read devices and messages, manage tags and variables, send downlinks and automate everything the web interface can do."
 ---
 
 # HARDWARIO Cloud REST API
 
-HARDWARIO Cloud v2 exposes a full REST API for everything you can do in the web
+HARDWARIO Cloud exposes a full REST API for everything you can do in the web
 interface: reading devices and messages, managing tags and variables, sending
 downlinks, and more.
 

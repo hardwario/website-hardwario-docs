@@ -105,7 +105,7 @@ If your device still has trouble connecting to the network (especially when usin
 
 * **Check Network Mode:** You might need to force a specific mode like **NB-IoT** or **LTE-M** based on your region. See the [**SIM Card Setup guide**](/chester/platform-connectivity/cellular-networks/sim-card-setup) for details.
 * **Verify APN/PLMN:** If you are outside the Czech Republic or using a non-Vodafone SIM, follow the [**SIM Card Setup guide**](/chester/platform-connectivity/cellular-networks/sim-card-setup) to configure your PLMN and APN correctly, or see the [**Configuration Parameters**](/chester/platform-connectivity/cellular-networks/configuration-parameters) reference.
-* **Public IP for Cloud v2:** When using your own SIM, you must also set the [**correct IP and Port parameters**](/chester/firmware-sdk/how-to-lte-v2#ip-and-port) for Cloud v2 compatibility.
+* **Public IP for HARDWARIO Cloud:** When using your own SIM, you must also set the [**correct IP and Port parameters**](/chester/firmware-sdk/how-to-lte-v2#ip-and-port) for HARDWARIO Cloud compatibility.
 
 ---
 

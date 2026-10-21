@@ -27,9 +27,7 @@ Firmware source: [hardwario/sticker-firmware](https://github.com/hardwario/stick
 
 The following features and hardware extensions are currently in active development for upcoming releases:
 
-- **[FW] LoRa P2P Communication Mode**: Direct peer-to-peer radio communication support for standalone node-to-node or gateway links without requiring a LoRaWAN Network Server
 - **[FW/HW] Acoustic Buzzer Module**: Hardware expansion support for STICKER Clime and STICKER Input variants (installed in place of the PIR sensor slot; incompatible with STICKER Motion)
-- **[Apps] STICKER Input 0–24 V Analog Support**: Measurement and telemetry support for 0–24 V DC industrial analog voltage signals
 - **[HW/FW] Analog Probe Converter**: Expansion interface module for STICKER Input enabling readout of Pt100, Pt1000, and thermocouple probes
 
 :::
@@ -37,7 +35,26 @@ The following features and hardware extensions are currently in active developme
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware & Applications" default>
 
-### 2026-08-26 – v1.4.0
+### 2026-10-19 – v2.0.0
+
+- **[FW] Breaking release; action required when upgrading from v1.4.x**: update HARDWARIO Manager together with the firmware, switch to the v2.0.0 `ttn.js` decoder (in a mixed fleet pick the decoder by the firmware version in Info), re-provision alarm rules and the history channel selection, re-set `cap-gpio-*` and `radio-link-check-*`, and wipe the old NFC NDEF records once. Stored history starts empty after the upgrade and there is no supported downgrade · [Release notes](https://github.com/hardwario/sticker-firmware/blob/v2.0.0/doc/version%202.0.md) · [GitHub Release](https://github.com/hardwario/sticker-firmware/releases/tag/v2.0.0)
+- **[FW] LoRa P2P radio mode**: `radio-mode p2p` links STICKER to a HARDWARIO FIBER modem / ProXimos Hub over the HARDWARIO TOWER radio protocol (AES-CCM, gateway-acknowledged sends, on-air pairing) with no LoRaWAN network; telemetry, alarms, commands, history and network time work as over LoRaWAN. One firmware image does both radios
+- **[FW] One-tap NFC on Android and iOS**: all phone commands run through the ST25DV fast-transfer mailbox in a single hold; the tag carries no NDEF record, so NFC now needs a powered device (battery-less configuration and Android tap-to-launch were removed)
+- **[FW] Safer claiming**: the claim token is readable only from a powered device while the claim window is open; `claim_done` / `claim_active` close and re-open it
+- **[FW] Configuration announce**: after every boot/join, and every `interval-announce` hours (default 24 h), the device sends its Info plus a settings summary; `get_settings` requests it on demand
+- **[FW] Radio diagnostics and paged answers**: new `get_radio_state` command (link state, SF/DR, TX power, RSSI/SNR, duty cycle); answers and telemetry that do not fit one frame arrive as numbered pages
+- **[FW] LoRaWAN improvements**: AS923 region, fixed data rate with ADR off (`lrw-datarate`), link-loss recovery in about 4–5 h instead of 9–10 h, duty-cycle-aware sending, `DevStatusAns` answered
+- **[FW] Sensor channel model**: every sensor value is a (slot, channel) that can be alarmed and recorded; `history-channels` replaces `history-sensors`; a 1-Wire slot expects a sensor type and raises `sensor_mismatch` otherwise
+- **[FW] Alarm engine updates**: `alarms_replace` rewrites the whole rule table in one message; threshold `dwell` is now a hysteresis in the channel's units; rate rules count within `dwell` seconds; motion-started/ended and stillness rules; alarm state in every telemetry frame; optional confirmed alarms (`radio-alarm-ack`) and buzzer melodies (`alarm-buzzer-mode`)
+- **[FW] GP pins and inputs**: `cap-gpio-mode` and `cap-gpio-input-a/-b` replace the old input/PIR/buzzer capability flags; inputs can be digital, 0–24 V analog or an S0 pulse counter; `cap-sht` turns the onboard temperature/humidity sensor off
+- **[FW] Robustness**: below 1.8 V at boot the device blinks red and switches off instead of boot-looping; a CPU fault reboots at once and is reported in the next Info; history timestamps follow the RTC; a missing reading decodes as `null`; `factory_reset` now also clears pulse counters and history
+- **[FW] Renamed shell parameters**: `lrw-deveui` / `lrw-appkey` → `radio-deveui` / `radio-appkey` (values kept); `lrw-link-check-*` → `radio-link-check-*` (reset to defaults); `ats lrw` → `ats radio`
+- **[FW] Provisioning firmware image**: each release now also ships `hio-sticker-<version>-provisioning.hex`
+- **[Apps] STICKER Input**: 0–24 V analog inputs and S0 pulse counting
+- **[Apps] STICKER Motion**: motion-started/ended and stillness alarm rules
+- **[Apps] STICKER Clime**: all onboard values (incl. barometer temperature) can be alarmed and recorded; the onboard SHT4x can be switched off
+
+### 2026-08-18 – v1.4.0
 
 - **[FW] Remote control over LoRaWAN**: Full configuration, status querying, and control commands over fPort 85 (`set_param`, `get_param`, `get_config`, `get_info`, reset/rejoin) without physical or NFC access
 - **[FW] Device Info on Join**: Automatic diagnostic telemetry uplink (serial, FW version, reset cause, claim token, radio mode, battery voltage) transmitted on every network Join and clock sync
@@ -135,6 +152,6 @@ No hardware revisions have been logged yet. Hardware updates will appear here wh
 
 | Application | Changelog | Last Updated |
 |---|---|---|
-| STICKER Clime | [Changelog](/sticker/catalog-applications/sticker-clime/#changelog) | 2026-08-26 |
-| STICKER Input | [Changelog](/sticker/catalog-applications/sticker-input/#changelog) | 2026-08-26 |
-| STICKER Motion | [Changelog](/sticker/catalog-applications/sticker-motion/#changelog) | 2026-08-26 |
+| STICKER Clime | [Changelog](/sticker/catalog-applications/sticker-clime/#changelog) | 2026-10-21 |
+| STICKER Input | [Changelog](/sticker/catalog-applications/sticker-input/#changelog) | 2026-10-21 |
+| STICKER Motion | [Changelog](/sticker/catalog-applications/sticker-motion/#changelog) | 2026-10-21 |

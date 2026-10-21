@@ -594,6 +594,10 @@ Tlak je v **pascalech**.
 
 ## Seznam změn {#changelog}
 
+### v4.0.1 – 2026-09-07 {#v401--2026-09-07}
+
+- **Opraveno**: Analogové vstupy CHESTER-X0 ve verzi v4.0.0 četly sousední kanál (chyba o jedničku v mapování kanálů); konfiguraci není potřeba měnit
+
 ### v3.5.1 – 2025-12-08 {#v351--2025-12-08}
 
 - **Přidáno**: Nová varianta: **CHESTER Meteo M** (Modbus RTU, podporuje senzory Lambrecht a Sensecap/OPM; typ senzoru se volí parametrem `meteo-type`)

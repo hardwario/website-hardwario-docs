@@ -472,6 +472,10 @@ import TabItem from '@theme/TabItem';
 
 ## Seznam změn {#changelog}
 
+### v4.0.1 – 2026-09-07 {#v401--2026-09-07}
+
+- **Opraveno**: Analogové vstupy CHESTER-X0 ve verzi v4.0.0 četly sousední kanál (chyba o jedničku v mapování kanálů); konfiguraci není potřeba měnit
+
 ### v4.0.0 – 2026-08-10 {#v400--2026-08-10}
 
 - **Změněno**: Snížen maximální počet teploměrů 1-Wire (10 → 5) a půdních senzorů (10 → 3) kvůli nižšímu využití RAM

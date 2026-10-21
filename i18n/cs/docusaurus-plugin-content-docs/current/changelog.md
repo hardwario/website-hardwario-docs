@@ -26,6 +26,22 @@ Tato stránka řadí změny na úrovni platformy podle **data**. Poznámky k vyd
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware a aplikace" default>
 
+### 2026-09-07 {#2026-09-07}
+
+- **[SDK v4.0.1]** Vydáno SDK **v4.0.1**: [vydání na GitHubu](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.1) · [podrobný seznam změn](catalog-applications/changelog.md#v401-2026-09-07)
+- **[FW/SDK]** Opravena regrese analogových vstupů CHESTER-X0 z verze v4.0.0: každý kanál měřil sousední pin (týká se aplikací CHESTER Control a Meteo)
+- **[FW/SDK]** Využití RAM sníženo zhruba o 500 bajtů
+- **[FW/SDK]** Přidán volitelný ladicí subsystém `ctr_trace`
+
+### 2026-08-10 {#2026-08-10}
+
+- **[SDK v4.0.0]** Vydáno SDK **v4.0.0** (nekompatibilní změny): [vydání na GitHubu](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [podrobný seznam změn](catalog-applications/changelog.md#v400-2026-08-10) · [průvodce migrací](/chester/sdk-v4-migration-guide)
+- **[FW/SDK]** Přechod na NCS 3.4: Partition Manager nahradily sysbuild a oddíly v DTS; TinyCrypt odstraněn ve prospěch PSA
+- **[FW/SDK]** Přidán spool zpráv pro cloud (`CONFIG_CTR_CLOUD_SPOOL`), fronta typu store-and-forward, která přečká výpadky uplinku i restarty
+- **[FW/SDK]** Využití RAM optimalizováno zhruba o 17 kB; API sekvenceru `ctr_led` je zastaralé
+- **[Apps]** **CHESTER Control**: snížena kapacita teploměrů 1-Wire (10 → 5) a půdních senzorů (10 → 3)
+- **[Apps]** **CHESTER Serial**: nové ovladače pro střídač SolaX X3-Hybrid G3 a radonovou sondu Piketronic RPP-R
+
 ### 2026-06-22 {#2026-06-22}
 
 - **[SDK v3.5.5]** Vydáno SDK **v3.5.5**: [vydání na GitHubu](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5) · [podrobný seznam změn](catalog-applications/changelog.md#v355-2026-06-22)
@@ -180,9 +196,9 @@ Tabulka níže odkazuje přímo na seznam změn každé katalogové aplikace. Sl
 | Aplikace | Seznam změn | Poslední aktualizace |
 |---|---|---|
 | CHESTER Clime | [Seznam změn](/chester/catalog-applications/chester-clime/#changelog) | 2026-06-24 |
-| CHESTER Control | [Seznam změn](/chester/catalog-applications/chester-control/#changelog) | 2026-06-22 |
+| CHESTER Control | [Seznam změn](/chester/catalog-applications/chester-control/#changelog) | 2026-10-21 |
 | CHESTER Current | [Seznam změn](/chester/catalog-applications/chester-current/#changelog) | 2026-06-24 |
-| CHESTER Meteo | [Seznam změn](/chester/catalog-applications/chester-meteo/#changelog) | 2026-06-24 |
+| CHESTER Meteo | [Seznam změn](/chester/catalog-applications/chester-meteo/#changelog) | 2026-10-21 |
 | CHESTER Motion | [Seznam změn](/chester/catalog-applications/chester-motion/#changelog) | 2026-04-01 |
 | CHESTER Push | [Seznam změn](/chester/catalog-applications/chester-push/#changelog) | 2026-04-01 |
 | CHESTER Range | [Seznam změn](/chester/catalog-applications/chester-range/#changelog) | 2026-04-01 |

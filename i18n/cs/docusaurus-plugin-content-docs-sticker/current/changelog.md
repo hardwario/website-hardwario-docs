@@ -27,9 +27,7 @@ Zdrojový kód firmwaru: [hardwario/sticker-firmware](https://github.com/hardwar
 
 Na následujících funkcích a hardwarových rozšířeních se pro příští vydání aktivně pracuje:
 
-- **[FW] Komunikační režim LoRa P2P**: Přímá rádiová komunikace peer-to-peer mezi uzly nebo s bránou, bez síťového serveru LoRaWAN
 - **[FW/HW] Modul akustického bzučáku**: Hardwarové rozšíření pro varianty STICKER Clime a STICKER Input (osazuje se na místo senzoru PIR, proto ho nelze použít ve variantě STICKER Motion)
-- **[Apps] Podpora analogového vstupu 0–24 V pro STICKER Input**: Měření a telemetrie průmyslových analogových napěťových signálů 0–24 V DC
 - **[HW/FW] Převodník pro analogové sondy**: Rozšiřující modul pro STICKER Input ke čtení sond Pt100, Pt1000 a termočlánků
 
 :::
@@ -37,7 +35,26 @@ Na následujících funkcích a hardwarových rozšířeních se pro příští 
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware a aplikace" default>
 
-### 2026-08-26 – v1.4.0 {#2026-08-26--v140}
+### 2026-10-19 – v2.0.0 {#2026-10-19--v200}
+
+- **[FW] Vydání s nekompatibilními změnami; při přechodu z v1.4.x je potřeba zasáhnout**: spolu s firmwarem aktualizujte HARDWARIO Manager, přejděte na dekodér `ttn.js` z verze v2.0.0 (ve smíšené flotile volte dekodér podle verze firmwaru v Info), znovu nahrajte pravidla alarmů a výběr kanálů historie, znovu nastavte `cap-gpio-*` a `radio-link-check-*` a jednou smažte staré záznamy NDEF v NFC. Uložená historie je po aktualizaci prázdná a návrat na starší verzi není podporovaný · [Poznámky k vydání](https://github.com/hardwario/sticker-firmware/blob/v2.0.0/doc/version%202.0.md) · [vydání na GitHubu](https://github.com/hardwario/sticker-firmware/releases/tag/v2.0.0)
+- **[FW] Rádiový režim LoRa P2P**: `radio-mode p2p` propojí STICKER s modemem HARDWARIO FIBER / ProXimos Hubem přes rádiový protokol HARDWARIO TOWER (AES-CCM, odesílání potvrzované bránou, párování vzduchem) bez sítě LoRaWAN; telemetrie, alarmy, příkazy, historie i síťový čas fungují stejně jako přes LoRaWAN. Oba rádiové režimy zvládá jeden obraz firmwaru
+- **[FW] NFC na jedno přiložení pro Android i iOS**: všechny příkazy z telefonu jdou přes rychlou schránku (mailbox) čipu ST25DV během jednoho přiložení; tag nenese žádný záznam NDEF, takže NFC teď vyžaduje napájené zařízení (konfigurace bez baterií a automatické spuštění aplikace na Androidu byly odstraněny)
+- **[FW] Bezpečnější claiming**: claim token lze přečíst jen z napájeného zařízení, dokud je okno pro claiming otevřené; `claim_done` / `claim_active` ho zavírají a znovu otevírají
+- **[FW] Ohlášení konfigurace**: po každém startu/joinu a každých `interval-announce` hodin (výchozí 24 h) pošle zařízení Info a souhrn nastavení; příkazem `get_settings` si ho lze vyžádat kdykoli
+- **[FW] Diagnostika rádia a stránkované odpovědi**: nový příkaz `get_radio_state` (stav spojení, SF/DR, vysílací výkon, RSSI/SNR, využití duty cycle); odpovědi a telemetrie, které se nevejdou do jednoho rámce, přicházejí jako číslované stránky
+- **[FW] Vylepšení LoRaWAN**: region AS923, pevná přenosová rychlost při vypnutém ADR (`lrw-datarate`), obnova po ztrátě spojení zhruba za 4–5 h místo 9–10 h, odesílání s ohledem na duty cycle, odpověď na `DevStatusAns`
+- **[FW] Model kanálů senzorů**: každá hodnota senzoru je dvojice (slot, kanál), na kterou lze nastavit alarm a kterou lze zaznamenávat; `history-channels` nahrazuje `history-sensors`; slot 1-Wire očekává konkrétní typ senzoru a jinak vyvolá alarm `sensor_mismatch`
+- **[FW] Úpravy alarmového systému**: `alarms_replace` přepíše celou tabulku pravidel jednou zprávou; `dwell` u prahových pravidel je teď hystereze v jednotkách kanálu; pravidla rychlosti počítají v okně `dwell` sekund; pravidla pro začátek/konec pohybu a klid; stav alarmů v každém rámci telemetrie; volitelně potvrzované alarmy (`radio-alarm-ack`) a melodie bzučáku (`alarm-buzzer-mode`)
+- **[FW] Piny GP a vstupy**: `cap-gpio-mode` a `cap-gpio-input-a/-b` nahrazují dřívější příznaky pro vstupy, PIR a bzučák; vstup může být digitální, analogový 0–24 V nebo čítač pulzů S0; `cap-sht` vypíná vestavěný senzor teploty a vlhkosti
+- **[FW] Robustnost**: pod 1,8 V při startu zařízení zabliká červeně a vypne se, místo aby se opakovaně restartovalo; při chybě CPU se okamžitě restartuje a příčinu nahlásí v dalším Info; časová razítka historie se řídí RTC; chybějící hodnota se dekóduje jako `null`; `factory_reset` nově maže i čítače pulzů a historii
+- **[FW] Přejmenované parametry shellu**: `lrw-deveui` / `lrw-appkey` → `radio-deveui` / `radio-appkey` (hodnoty zůstávají); `lrw-link-check-*` → `radio-link-check-*` (vrací se na výchozí hodnoty); `ats lrw` → `ats radio`
+- **[FW] Provisioningový obraz firmwaru**: každé vydání nově obsahuje i `hio-sticker-<verze>-provisioning.hex`
+- **[Apps] STICKER Input**: analogové vstupy 0–24 V a počítání pulzů S0
+- **[Apps] STICKER Motion**: pravidla alarmů pro začátek/konec pohybu a klid
+- **[Apps] STICKER Clime**: na všechny vestavěné hodnoty (včetně teploty z barometru) lze nastavit alarm a zaznamenávat je; vestavěný SHT4x lze vypnout
+
+### 2026-08-18 – v1.4.0 {#2026-08-18--v140}
 
 - **[FW] Ovládání na dálku přes LoRaWAN**: Plná konfigurace, dotazování na stav a řídicí příkazy přes fPort 85 (`set_param`, `get_param`, `get_config`, `get_info`, reset/rejoin) bez fyzického přístupu i bez NFC
 - **[FW] Device Info on Join**: Automatický diagnostický uplink (sériové číslo, verze FW, příčina resetu, claim token, režim rádia, napětí baterie) odeslaný při každém připojení k síti a při synchronizaci hodin
@@ -135,6 +152,6 @@ Zatím nebyly zaznamenány žádné hardwarové revize. Aktualizace hardwaru se 
 
 | Aplikace | Seznam změn | Poslední aktualizace |
 |---|---|---|
-| STICKER Clime | [Seznam změn](/sticker/catalog-applications/sticker-clime/#changelog) | 2026-08-26 |
-| STICKER Input | [Seznam změn](/sticker/catalog-applications/sticker-input/#changelog) | 2026-08-26 |
-| STICKER Motion | [Seznam změn](/sticker/catalog-applications/sticker-motion/#changelog) | 2026-08-26 |
+| STICKER Clime | [Seznam změn](/sticker/catalog-applications/sticker-clime/#changelog) | 2026-10-21 |
+| STICKER Input | [Seznam změn](/sticker/catalog-applications/sticker-input/#changelog) | 2026-10-21 |
+| STICKER Motion | [Seznam změn](/sticker/catalog-applications/sticker-motion/#changelog) | 2026-10-21 |

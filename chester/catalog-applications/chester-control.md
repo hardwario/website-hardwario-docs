@@ -472,6 +472,10 @@ import TabItem from '@theme/TabItem';
 
 ## Changelog
 
+### v4.0.1 – 2026-09-07
+
+- **Fixed**: CHESTER-X0 analog inputs read the neighbouring channel in v4.0.0 (off-by-one in the channel mapping); no configuration change needed
+
 ### v4.0.0 – 2026-08-10
 
 - **Changed**: Lowered maximum 1-Wire thermometer capacity (10 → 5) and soil sensor capacity (10 → 3) to reduce RAM usage

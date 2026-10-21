@@ -594,6 +594,10 @@ Pressure is in **pascals**.
 
 ## Changelog
 
+### v4.0.1 – 2026-09-07
+
+- **Fixed**: CHESTER-X0 analog inputs read the neighbouring channel in v4.0.0 (off-by-one in the channel mapping); no configuration change needed
+
 ### v3.5.1 – 2025-12-08
 
 - **Added**: New variant: **CHESTER Meteo M** (Modbus RTU, supports Lambrecht and Sensecap/OPM sensors; sensor type selectable via `meteo-type`)

@@ -26,6 +26,22 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware & Applications" default>
 
+### 2026-09-07
+
+- **[SDK v4.0.1]** SDK **v4.0.1** released: [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.1) · [Detailed Changelog](catalog-applications/changelog.md#v401-2026-09-07)
+- **[FW/SDK]** Fixed CHESTER-X0 analog input regression from v4.0.0: every channel sampled its neighbouring pin (affects CHESTER Control and Meteo)
+- **[FW/SDK]** Reduced RAM usage by about 500 bytes
+- **[FW/SDK]** Added opt-in debug subsystem `ctr_trace`
+
+### 2026-08-10
+
+- **[SDK v4.0.0]** SDK **v4.0.0** released (breaking): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Detailed Changelog](catalog-applications/changelog.md#v400-2026-08-10) · [Migration guide](/chester/sdk-v4-migration-guide)
+- **[FW/SDK]** Updated to NCS 3.4: sysbuild + DTS partitions replace Partition Manager; TinyCrypt removed in favour of PSA
+- **[FW/SDK]** Added cloud message spool (`CONFIG_CTR_CLOUD_SPOOL`), a store-and-forward queue that survives uplink failures and reboots
+- **[FW/SDK]** Optimized RAM usage by about 17 kB; deprecated the `ctr_led` sequencer API
+- **[Apps]** **CHESTER Control**: lowered 1-Wire thermometer (10 → 5) and soil sensor (10 → 3) capacity
+- **[Apps]** **CHESTER Serial**: new drivers for SolaX X3-Hybrid G3 inverter and Piketronic RPP-R radon probe
+
 ### 2026-06-22
 
 - **[SDK v3.5.5]** SDK **v3.5.5** released: [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5) · [Detailed Changelog](catalog-applications/changelog.md#v355-2026-06-22)
@@ -180,9 +196,9 @@ The table below links directly to the changelog section of each catalog applicat
 | Application | Changelog | Last Updated |
 |---|---|---|
 | CHESTER Clime | [Changelog](/chester/catalog-applications/chester-clime/#changelog) | 2026-06-24 |
-| CHESTER Control | [Changelog](/chester/catalog-applications/chester-control/#changelog) | 2026-06-22 |
+| CHESTER Control | [Changelog](/chester/catalog-applications/chester-control/#changelog) | 2026-10-21 |
 | CHESTER Current | [Changelog](/chester/catalog-applications/chester-current/#changelog) | 2026-06-24 |
-| CHESTER Meteo | [Changelog](/chester/catalog-applications/chester-meteo/#changelog) | 2026-06-24 |
+| CHESTER Meteo | [Changelog](/chester/catalog-applications/chester-meteo/#changelog) | 2026-10-21 |
 | CHESTER Motion | [Changelog](/chester/catalog-applications/chester-motion/#changelog) | 2026-04-01 |
 | CHESTER Push | [Changelog](/chester/catalog-applications/chester-push/#changelog) | 2026-04-01 |
 | CHESTER Range | [Changelog](/chester/catalog-applications/chester-range/#changelog) | 2026-04-01 |

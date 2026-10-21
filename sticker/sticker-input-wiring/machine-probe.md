@@ -66,8 +66,8 @@ From firmware v2.0.0 every value of the probe is a separate channel, which can b
 
 | Channel | Value | Unit | Chip |
 | --- | --- | --- | --- |
-| `temperature` | Temperature | °C | SHT30 |
-| `humidity` | Relative humidity | % | SHT30 |
+| `temperature` | Temperature | °C | SHT30 (or SHT43) |
+| `humidity` | Relative humidity | % | SHT30 (or SHT43) |
 | `temperature-aux` | Temperature | °C | TMP112 |
 | `illuminance` | Illuminance | lx | OPT3001 |
 | `magnetic-field` | Magnetic field | mT | SI7210 |

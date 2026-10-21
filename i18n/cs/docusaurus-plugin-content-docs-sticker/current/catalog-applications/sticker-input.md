@@ -37,7 +37,7 @@ Stránka popisuje zapojení vstupů zařízení STICKER Input včetně nastaven�
 
 ## Ukázková zpráva JSON {#example-json-message}
 
-Pravidelné hlášení tak, jak ho dekóduje dekodér `ttn.js` z verze v2.0.0 (fPort 2). V příkladu je vstup A nastavený jako `digital` i s počtem impulzů, vstup B jako `analog` (napětí ve V) a ve slotu 1-Wire č. 1 je sonda Dallas DS18B20. Vstup v režimu `pulse` posílá jen `input_a_count` / `input_b_count`, jeho hodnota `*_is_active` je vždy `false`.
+Pravidelné hlášení tak, jak ho dekóduje dekodér `ttn.js` z verze v2.0.0 (fPort 2). V příkladu je vstup A nastavený jako `digital` i s počtem impulzů, vstup B jako `analog` (napětí ve V) a ve slotu 1-Wire č. 1 je sonda Dallas DS18B20. Vstup v režimu `pulse` posílá `input_a_count` / `input_b_count` a hodnotu `input_a_is_active` / `input_b_is_active`, která je vždy `false`; vstup v režimu `analog` posílá jen `input_a_voltage` / `input_b_voltage`.
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
@@ -82,7 +82,7 @@ Právě tato aplikace digitální vstupy a Hallovy spínače skutečně využív
 
 Zapojení a nastavení přepínačů DIP tak ověříte přímo na místě, bez konzole a bez připojení k síti: aktivujte vstup a sledujte pořadí obou barev.
 
-Vstup v režimu `pulse` (S0) nemá stav, takže každý započítaný impulz zobrazí jen sekvenci zelená, pak oranžová. Vstup v režimu `analog` nebliká vůbec.
+Vstup v režimu `pulse` (S0) nemá stav, takže započítané impulzy zobrazí jen sekvenci zelená, pak oranžová. LED blikne nejvýš jednou za 0,5 s, takže při rychlých impulzech nedostane každý impulz vlastní bliknutí. Vstup v režimu `analog` nebliká vůbec.
 
 :::warning
 Blikání při aktivaci vstupu je pomůcka pro uvádění do provozu a **skončí hodinu po zapnutí napájení**. Počítání a hlášení pokračují normálně. Pokud vizuální potvrzení při testování potřebujete znovu, odpojte zařízení od napájení a znovu ho připojte.
@@ -96,7 +96,7 @@ Blikání při aktivaci vstupu je pomůcka pro uvádění do provozu a **skonč�
 - Režim `analog` měří na vstupu 0–24 V; hodnotu lze posílat v telemetrii, ukládat do historie a použít v prahových alarmech
 - Režim `pulse` je čítač impulzů pro výstupy S0 měřičů (libovolná polarita, ošetření zákmitů 20 ms)
 - Každý slot 1-Wire si pamatuje očekávaný typ senzoru (`sensor1-type`…`sensor4-type`: `2` Dallas, `3` MACHINE PROBE); jiný senzor ve slotu vyvolá alarm `sensor_mismatch`
-- Sonda 1-Wire připojená až po zapnutí se najde automaticky: sběrnice se kontroluje 2, 5, 10 a 15 minut po startu, potom každých 15 minut
+- Sonda 1-Wire připojená až po zapnutí do slotu, který na ni čeká (má uloženou ROM nebo `sensorN-type`), se najde bez restartu: sběrnice se kontroluje 2 minuty po startu, potom po dalších 5 a 10 minutách a dále každých 15 minut
 - Každý kanál sondy 1-Wire lze použít v pravidlech alarmů a ukládat do historie; MACHINE PROBE s nefunkčním akcelerometrem dál měří teplotu
 
 ### 2025-11-23 – v1.0.0 {#2025-11-23--v100}

@@ -56,7 +56,9 @@ Přes LoRaWAN i P2P přijímá firmware v2.0.0 příkazy `set_param`, `get_param
 
 ## Konfigurace na dálku (`set_param` a `get_param`) {#remote-configuration-setparam--getparam}
 
-Přes rádio může `set_param` zapisovat konfigurační skupiny `application`, `sensors` a `alarms`. Skupinu `lorawan` (klíče, region, ADR, datová rychlost, `radio_mode`) a parametry rádia P2P lze přečíst přes `get_param` / `get_config`, nastavit je ale jde jen přes NFC nebo shell.
+Přes rádio může `set_param` zapisovat konfigurační skupiny `application`, `sensors` a `alarms`, kromě parametrů `calibration` (jen přes NFC nebo shell) a `vendor_reset_allow` (jen přes vendor kanál NFC nebo shell). Skupinu `lorawan` (region, ADR, datová rychlost, `radio_mode`, identifikátory a klíče) lze nastavit jen přes NFC nebo shell a parametry rádia P2P jen v shellu. Přes rádio je přečtete pomocí `get_param` / `get_config`, kromě tajných klíčů (AppKey, NwkKey, NwkSKey, AppSKey), které jdou číst jen přes NFC nebo shell.
+
+Kodek `ttn.js` v2.0.0 na GitHubu neumí z JSON zakódovat pole `alarm_buzzer_mode` a `radio_alarm_ack` ze skupiny `alarms`. Tyto dva parametry posílejte jako hex, například z [**generátoru downlinkových příkazů**](downlink-commands-generator.mdx).
 
 ### Příklady {#examples}
 

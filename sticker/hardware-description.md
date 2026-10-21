@@ -1,14 +1,14 @@
 ---
 slug: hardware-description
 title: Hardware Description
-description: "STICKER is a compact IoT device built on the STM32WL System-on-Chip with an integrated LoRa radio and ARM Cortex-M4F core."
+description: "STICKER is a compact IoT device built on the STM32WL System-on-Chip with an integrated LoRa radio and Arm Cortex-M4 core."
 title_meta: "Hardware Description (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 
 # Hardware Description
 
-STICKER is a compact IoT device built on the **STM32WL System-on-Chip** with an integrated **LoRa radio** and ARM Cortex-M4F core.  
+STICKER is a compact IoT device built on the **STM32WL System-on-Chip** with an integrated **LoRa radio** and Arm Cortex-M4 core.  
 It is powered by two AA batteries, with battery voltage monitoring and efficient power management (boost converter and LDO).
 
 The device includes **NFC memory and antenna** for simple configuration from a phone. Since firmware v2.0.0 the phone talks to the firmware through the NFC chip's mailbox, so the device must be powered while it is configured.
@@ -20,7 +20,7 @@ The device includes **NFC memory and antenna** for simple configuration from a p
 ### Built-in Sensors
 
 Depending on the specific assembly variant, STICKER includes:
-- **Temperature & Humidity:** Sensirion SHT43 sensor for high-accuracy ambient measurement.
+- **Temperature & Humidity:** Sensirion SHT40 sensor for high-accuracy ambient measurement.
 - **Light Intensity:** Texas Instruments OPT3001 ambient light sensor.
 - **Atmospheric Pressure:** NXP MPL3115A2 pressure sensor.
 - **PIR Motion:** Excelitas PYD1698 passive infrared motion sensor for presence detection (up to 5 m, ≥ 50°).
@@ -130,10 +130,10 @@ While a phone is held against the device, the LED tracks the exchange step by st
 | Phone detected in the NFC field, no session started yet | Green, solid (at most 5 s) |
 | Session running: commands being exchanged | Green, blinking (~90 ms) |
 | Session ended, the last exchange succeeded | Green **and** yellow, 2 s |
-| Session ended, the last exchange **failed**: request refused (wrong key or token, replayed or malformed request; nothing is written then) or its reply did not reach the phone | Red, 2 s |
+| Session ended, the last exchange **failed**: request rejected before it ran (wrong key or token, replayed or damaged frame; nothing is written then) or its reply did not reach the phone | Red, 2 s |
 | Exchange finished | Off |
 
-The red result is worth knowing: without it, a failed exchange looks exactly like a successful one to whoever is holding the phone. A command that reboots the device shows its result first; the boot carousel follows.
+The red result is worth knowing: without it, a failed exchange looks exactly like a successful one to whoever is holding the phone. A command that reboots the device shows its result first; the boot carousel follows. A command the device answers with an error (for example a value out of range) still ends green and yellow; the app shows the error.
 
 ### Input activation
 

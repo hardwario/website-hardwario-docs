@@ -17,9 +17,9 @@ Enable the 1-Wire bus with `config cap-w1-sensors true` and keep the input mode 
 
 ## Slots and sensor types
 
-STICKER keeps up to **four** 1-Wire sensors in slots 1–4. A sensor found on the bus is assigned to a free slot automatically, and the slot remembers its ROM and the sensor type it expects: `sensor1-type`…`sensor4-type`, where `2` is a Dallas thermometer and `3` is a [MACHINE PROBE](./machine-probe.md). The type can also be set in advance, before the probe is plugged in.
+STICKER keeps up to **four** 1-Wire sensors in slots 1–4. When the bus is scanned, a sensor that no slot claims is assigned to a free slot automatically, and the slot remembers its ROM and the sensor type it expects: `sensor1-type`…`sensor4-type`, where `2` is a Dallas thermometer and `3` is a [MACHINE PROBE](./machine-probe.md). The type can also be set in advance, before the probe is plugged in. The bus is scanned at boot only when at least one slot is set up (a stored ROM or a `sensorN-type`): on a new unit, set `sensorN-type` in advance, or bind the first probe with the `w1 enroll` shell command and save the settings.
 
-- **Probe plugged in after power-up:** while a slot is waiting for its probe, the bus is checked 2, 5, 10 and 15 minutes after boot, then every 15 minutes. A probe that appears is bound to its slot without a reboot.
+- **Probe plugged in after power-up:** while a slot is waiting for its probe, the bus is checked 2 minutes after boot, then after another 5 and 10 minutes, then every 15 minutes. A probe that appears is bound to its slot without a reboot.
 - **Wrong sensor type:** if the expected sensor is missing and a sensor of another type is on the bus, the slot raises a `sensor_mismatch` alarm. Until the right type is back, the slot's alarm rules are inactive and its values are `null`.
 - **Missing sensor:** a probe that stops answering raises a no-data alarm.
 

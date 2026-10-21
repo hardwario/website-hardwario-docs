@@ -50,7 +50,7 @@ Při čtení přes NFC nese zpráva Info navíc DevEUI a claim token. Údaje o r
 
 ## Testování signalizace LED {#led-signal-testing}
 
-Stavová LED ukazuje heartbeat řazený podle závažnosti (stav připojení k síti, režim rádia, stav alarmu) a jednorázové vzory při interakci (přístup přes NFC, aktivace vstupu). Popis vzorů najdete na stránce [**Popis hardwaru**](hardware-description.md#led-indication).
+Stavová LED ukazuje heartbeat řazený podle závažnosti (stav připojení k síti, režim rádia, stav alarmu) a jednorázové vzory při interakci (přístup přes NFC, aktivace vstupu). Popis vzorů najdete na stránce [**Popis hardwaru**](../hardware-description.md#led-indication).
 
 Podpříkazy `ats led` slouží k testování jednotlivých barevných kanálů při výrobě nebo diagnostické kontrole:
 
@@ -100,7 +100,7 @@ Sestavení debug nabízí příkazy pro vkládání surových příkazů protobu
 | Příkaz | Popis |
 |---|---|
 | `ats cmd lrw <hex>` | Vloží surový binární příkazový rámec do zpracování příkazů z downlinku LoRaWAN. |
-| `ats cmd nfc <hex>` | Vloží surový binární příkazový rámec do zpracování šifrovaných příkazů NFC. |
+| `ats cmd nfc <hex>` | Vloží surový příkaz do zpracování příkazů NFC, jako by dorazil dešifrovaný šifrovaným kanálem NFC. |
 | `ats cmd vnd <hex>` | Vloží surový příkaz do kanálu NFC výrobce. |
 | `ats cmd plain <hex>` | Vloží surový příkaz do nešifrovaného kanálu, který odpovídá jen na `get_basic_info` a `get_claim_info`. |
 | `ats cmd history [<from> [<to>]]` | Spustí stránkované čtení historie jako přes NFC. |

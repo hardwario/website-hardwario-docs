@@ -37,7 +37,7 @@ see [**Tools**](./tools.md).
 Records are only kept when history is turned on. Enable it and choose which
 channels to store under **Configuration → History** (see
 [**Configuration**](./configuration.md)) or over the shell with
-`config history-enable` / `config history-sensors`, described in
+`config history-enable` / `config history-channels`, described in
 [**Sensor History (Developer Access)**](/sticker/developer-access/sensor-history).
 
 :::info Firmware v1.4.0

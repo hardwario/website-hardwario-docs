@@ -36,7 +36,7 @@ Přepínač a konfiguraci firmwaru nastavte vždy společně. Do polohy ON dejte
 
 :::warning
 
-Firmware polohu přepínače DIP nepozná. Pokud je vstup nastavený jako `analog`, ale jeho přepínač je v poloze pro 1-Wire, vstup zůstane nezapojený a naměřené hodnoty nemají smysl: hodnota se hlásí jako `null` a vznikne alarm chybějících dat. Na zařízení, které používá jen 1-Wire, nastavte `cap-gpio-mode none`.
+Firmware polohu přepínače DIP nepozná. Pokud je vstup nastavený jako `analog`, ale jeho přepínač je v poloze pro 1-Wire, vstup zůstane nezapojený a naměřené hodnoty nemají smysl: většina z nich leží mimo rozsah věrohodnosti 0–30 V, takže se hodnota hlásí jako `null` a vznikne alarm chybějících dat, občas ale projde i nesmyslná hodnota. Na zařízení, které používá jen 1-Wire, nastavte `cap-gpio-mode none`.
 
 :::
 
@@ -50,7 +50,7 @@ Zapojení pro 1-Wire (Dallas, ...):
 
 ## Vstup pro bezpotenciálový kontakt {#dry-contact-input}
 Zapojení pro bezpotenciálový kontakt:  
-- Pull-up rezistor 560 kΩ a připojení k zemi přes 33 kΩ.  
+- Pull-up rezistor 560 kΩ k VDD na vstupu; konektor je ke vstupu připojený přes sériový rezistor 33 kΩ (přepínače S1 2+4 pro A, 5+7 pro B).  
 
 ![STICKER bezpotenciálový kontakt](../../../../../sticker/sticker-input-wiring/images/sticker-dry-contact.png)
 

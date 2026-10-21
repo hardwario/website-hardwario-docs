@@ -17,9 +17,9 @@ Sběrnici 1-Wire zapněte příkazem `config cap-w1-sensors true` a režim vstup
 
 ## Sloty a typy senzorů {#slots-and-sensor-types}
 
-STICKER pracuje až se **čtyřmi** senzory 1-Wire ve slotech 1–4. Senzor nalezený na sběrnici se automaticky přiřadí do volného slotu a slot si zapamatuje jeho ROM i očekávaný typ senzoru: `sensor1-type`…`sensor4-type`, kde `2` je teploměr Dallas a `3` je sonda [MACHINE PROBE](./machine-probe.md). Typ lze nastavit i předem, ještě před připojením sondy.
+STICKER pracuje až se **čtyřmi** senzory 1-Wire ve slotech 1–4. Při prohledání sběrnice se senzor, který nepatří žádnému slotu, automaticky přiřadí do volného slotu a slot si zapamatuje jeho ROM i očekávaný typ senzoru: `sensor1-type`…`sensor4-type`, kde `2` je teploměr Dallas a `3` je sonda [MACHINE PROBE](./machine-probe.md). Typ lze nastavit i předem, ještě před připojením sondy. Při startu se sběrnice prohledá jen tehdy, když je nastavený alespoň jeden slot (uložená ROM nebo `sensorN-type`): na novém zařízení nastavte `sensorN-type` předem, nebo první sondu přiřaďte příkazem `w1 enroll` v shellu a nastavení uložte.
 
-- **Sonda připojená až po zapnutí:** dokud slot čeká na svou sondu, sběrnice se kontroluje 2, 5, 10 a 15 minut po startu, potom každých 15 minut. Nalezená sonda se do slotu přiřadí bez restartu.
+- **Sonda připojená až po zapnutí:** dokud slot čeká na svou sondu, sběrnice se kontroluje 2 minuty po startu, potom po dalších 5 a 10 minutách a dále každých 15 minut. Nalezená sonda se do slotu přiřadí bez restartu.
 - **Jiný typ senzoru:** pokud očekávaný senzor chybí a na sběrnici je senzor jiného typu, slot vyvolá alarm `sensor_mismatch`. Dokud se nevrátí správný typ, pravidla alarmů slotu jsou neaktivní a jeho hodnoty jsou `null`.
 - **Chybějící senzor:** sonda, která přestane odpovídat, vyvolá alarm chybějících dat.
 

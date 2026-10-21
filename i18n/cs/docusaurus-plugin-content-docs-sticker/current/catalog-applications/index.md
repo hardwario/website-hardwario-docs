@@ -27,7 +27,7 @@ Zařízení HARDWARIO STICKER je k dispozici ve třech hotových funkčních var
 
 **STICKER Clime** slouží k přesnému sledování mikroklimatu v budovách, skladech a průmyslových objektech.
 
-* **Integrované senzory:** Senzor Sensirion SHT43 (**±0,2 °C** teplota, **±2 %** vlhkost), senzor okolního světla OPT3001 a senzor barometrického tlaku MPL3115A2.
+* **Integrované senzory:** Senzor Sensirion SHT40 (**±0,2 °C** teplota, **±2 %** vlhkost), senzor okolního světla OPT3001 a senzor barometrického tlaku MPL3115A2.
 * **Hlavní přínos:** Úplný přehled o kvalitě prostředí a okolních podmínkách, bez kabelů k externím senzorům.
 * **Novinky ve v2.0:** Teplotu, vlhkost, tlak, osvětlenost i vlastní teplotu barometru lze použít v pravidlech alarmů a ukládat do historie. Vestavěný senzor teploty a vlhkosti se dá vypnout parametrem `cap-sht`. U prahových pravidel je `dwell` nově pásmo hystereze v jednotkách daného kanálu (například °C), ne čas v sekundách.
 
@@ -40,9 +40,9 @@ Zařízení HARDWARIO STICKER je k dispozici ve třech hotových funkčních var
 **STICKER Input** připojuje externí průmyslové senzory, čte čítače impulzů a měří digitální nebo analogové signály.
 
 * **Vstupy a rozhraní:** Svorkovnice pro 2 externí vstupy, z nichž každý lze nastavit jako digitální vstup, analogový vstup 0–24 V nebo čítač impulzů (například z výstupu S0 elektroměru, plynoměru nebo vodoměru), a sběrnice 1-Wire.
-* **Podporované sondy:** Automatická detekce senzorů 1-Wire (Dallas DS18B20) a průmyslových senzorů HARDWARIO Machine Probe.
+* **Podporované sondy:** Až čtyři senzory 1-Wire ve slotech 1–4: teploměry Dallas DS18B20 a průmyslové senzory HARDWARIO Machine Probe.
 * **Hlavní přínos:** Univerzální převodník pro zapojení existující průmyslové infrastruktury a měřičů médií do sítí LoRaWAN.
-* **Novinky ve v2.0:** Analogové měření 0–24 V a počítání impulzů S0 na externích vstupech, očekávaný typ senzoru pro každý slot 1-Wire s alarmem `sensor_mismatch` a rozpoznání sond připojených až po zapnutí.
+* **Novinky ve v2.0:** Analogové měření 0–24 V a počítání impulzů S0 na externích vstupech, očekávaný typ senzoru pro každý slot 1-Wire s alarmem `sensor_mismatch` a rozpoznání sondy připojené až po zapnutí do slotu, který na ni čeká.
 
 → [**Více o STICKER Input**](/sticker/catalog-applications/sticker-input/)
 

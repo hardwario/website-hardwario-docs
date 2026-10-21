@@ -30,7 +30,7 @@ zařízení STICKER. Úplnou dokumentaci aplikace najdete v sekci **Aplikace**:
 - Telefon s **NFC** a nainstalovanou aplikací. Jak aplikaci nainstalovat a
   zapnout NFC, popisuje stránka [**Instalace aplikace**](/apps/hardwario-manager/install).
 - **Secret key** zařízení. STICKER komunikuje šifrovaným kanálem NFC, takže
-  bez tohoto klíče aplikace nic nepřečte ani nezapíše. Každé zařízení přidáte jen jednou (viz
+  bez tohoto klíče aplikace nepřečte jeho konfiguraci ani klíče a nic nezapíše. Každé zařízení přidáte jen jednou (viz
   [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)) a
   od té doby aplikace klíč doplňuje sama.
 

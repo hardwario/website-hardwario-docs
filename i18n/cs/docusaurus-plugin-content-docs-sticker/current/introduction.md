@@ -38,4 +38,4 @@ import Image from '@theme/IdealImage';
 * **Extrémně nízká spotřeba:** Několik let provozu na dvě běžné baterie AA díky inteligentním režimům spánku a režimu Radio-Silent, ve kterém zařízení z výroby nevysílá.
 * **Flexibilní konektivita a NFC:** Komunikace LoRaWAN nebo LoRa P2P na velké vzdálenosti a šifrované NFC pro okamžitou konfiguraci a správu.
 * **Modulární ekosystém:** Hotové katalogové aplikace (Clime, Motion, Input) pro nejrůznější měření prostředí i průmyslových veličin.
-* **Otevřený a bezpečný firmware:** Postavený na Zephyr RTOS, bez vzdálené útočné plochy (nahrávání jen přes SWD, žádný bootloader v nasazených zařízeních).
+* **Otevřený a bezpečný firmware:** Postavený na Zephyr RTOS, bez možnosti vzdálené aktualizace firmwaru (nahrávání jen přes SWD, žádný bootloader v nasazených zařízeních).

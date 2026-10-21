@@ -168,11 +168,12 @@ function stateHint(r, ch) {
 // Enum values are sent as numbers (the proto enum index).
 const GPIO_INPUT_OPTIONS = [['Disabled', 0], ['Digital', 1], ['Analog (0-24 V)', 2], ['Pulse counter', 3]];
 const CONFIG_FIELDS = [
-  {key: 'interval_report', group: 'application', label: 'Report interval (s)', type: 'int', def: '900'},
-  {key: 'interval_sample', group: 'application', label: 'Sample interval (s)', type: 'int', def: '60'},
-  {key: 'interval_announce', group: 'application', label: 'Announce interval (h)', type: 'int', def: '24'},
+  // Integer ranges from app_config.yml (min/max; zero = 0 also accepted, extras.zero_allowed).
+  {key: 'interval_report', group: 'application', label: 'Report interval (s, 60-86400)', type: 'int', def: '900', min: 60, max: 86400},
+  {key: 'interval_sample', group: 'application', label: 'Sample interval (s, 5-3600, 0 = before each report)', type: 'int', def: '60', min: 5, max: 3600, zero: true},
+  {key: 'interval_announce', group: 'application', label: 'Announce interval (h, 1-168, 0 = off)', type: 'int', def: '24', min: 1, max: 168, zero: true},
   {key: 'history_enable', group: 'application', label: 'History enable', type: 'bool', def: true},
-  {key: 'battery_level', group: 'application', label: 'Low-battery threshold (mV)', type: 'int', def: '2400'},
+  {key: 'battery_level', group: 'application', label: 'Low-battery threshold (mV, 1000-3600)', type: 'int', def: '2400', min: 1000, max: 3600},
   {key: 'cap_sht', group: 'sensors', label: 'On-board SHT4x capability', type: 'bool', def: true},
   {key: 'cap_barometer', group: 'sensors', label: 'Barometer capability', type: 'bool', def: true},
   {key: 'cap_light_sensor', group: 'sensors', label: 'Light sensor capability', type: 'bool', def: true},
@@ -184,7 +185,7 @@ const CONFIG_FIELDS = [
   {key: 'cap_gpio_mode', group: 'sensors', label: 'GP pin owner', type: 'enum', def: 0, options: [['None', 0], ['Inputs', 1], ['PIR', 2], ['Buzzer', 3]]},
   {key: 'cap_gpio_input_a', group: 'sensors', label: 'Input A mode', type: 'enum', def: 0, options: GPIO_INPUT_OPTIONS},
   {key: 'cap_gpio_input_b', group: 'sensors', label: 'Input B mode', type: 'enum', def: 0, options: GPIO_INPUT_OPTIONS},
-  {key: 'alarm_limit', group: 'alarms', label: 'Alarm limit (s between alarm uplinks)', type: 'int', def: '10'},
+  {key: 'alarm_limit', group: 'alarms', label: 'Alarm limit (s between alarm uplinks, 0-3600)', type: 'int', def: '10', min: 0, max: 3600},
   {key: 'alarm_buzzer_mode', group: 'alarms', label: 'Alarm buzzer mode', type: 'enum', def: 0, options: [['Off', 0], ['Once', 1], ['Slow (120 s)', 2], ['Normal (30 s)', 3], ['Fast (10 s)', 4], ['Continuous', 5]]},
   {key: 'radio_alarm_ack', group: 'alarms', label: 'Confirmed alarm uplinks', type: 'bool', def: true},
 ];
@@ -359,6 +360,16 @@ export default function StickerDownlinkGenerator() {
       }
       return encodeObject(obj);
     }
+    if (cmd === 'set_param_config') {
+      // The device answers OUT_OF_RANGE outside these limits (app_config_ingest.c).
+      for (const row of cfgRows) {
+        const f = CONFIG_FIELDS.find((x) => x.key === row.key);
+        if (!f || f.type !== 'int' || f.min === undefined) continue;
+        const v = parseFloat(row.value);
+        const ok = Number.isInteger(v) && ((v >= f.min && v <= f.max) || (f.zero && v === 0));
+        if (!ok) return {error: `${f.key} must be ${f.zero ? '0 or ' : ''}${f.min} to ${f.max}, or the device rejects it.`};
+      }
+    }
     if (cmd === 'set_param_alarm') {
       for (const r of aRules) {
         if (r.action !== 'set') continue;
@@ -371,7 +382,7 @@ export default function StickerDownlinkGenerator() {
       if (rep < 0 || rep > 999) return {error: 'Repeat must be 0 to 999 s.'};
     }
     return built ? encodeObject(built) : {error: 'Nothing to encode'};
-  }, [cmd, custom, built, aRules, bRepeat]);
+  }, [cmd, custom, built, aRules, cfgRows, bRepeat]);
 
   return (
     <div className={styles.generator}>

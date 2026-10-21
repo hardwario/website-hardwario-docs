@@ -126,7 +126,7 @@ Tyto parametry platí pro obě rádia.
 
 | Příkaz | Argument | Popis |
 |---|---|---|
-| `config radio-link-check-interval` | `0`-`255` | Každé N-té hlášení je kontrola spojení: v LoRaWAN `LinkCheckReq`, v P2P potvrzovaný telemetrický rámec. `0` = vypnuto. Výchozí `5`. |
+| `config radio-link-check-interval` | `0`-`255` | Každé N-té hlášení je kontrola spojení: v LoRaWAN `LinkCheckReq`; v P2P (kde se potvrzuje každé hlášení) se za kontrolu počítá N-té hlášení. `0` = vypnuto. Výchozí `5`. |
 | `config radio-link-check-fail-rejoin` | `1`-`255` | Počet selhání kontroly spojení, po kterých se spojení naváže znovu (rejoin OTAA v LoRaWAN, nové připojení v P2P). Výchozí `5`. |
 
 ---
@@ -170,7 +170,7 @@ U varianty STICKER Input připojuje přepínač DIP S1 externí svorky ke vstup�
 
 | Příkaz | Argument | Popis |
 |---|---|---|
-| `config accel-motion-sensitivity` | `off` / `low` / `medium` / `high` | Citlivost detekce pohybu akcelerometrem. Výchozí `off`, což akcelerometr vypne. |
+| `config accel-motion-sensitivity` | `off` / `low` / `medium` / `high` | Citlivost detekce pohybu akcelerometrem. Výchozí `off`: detekce pohybu je vypnutá (žádné události `accel-motion` / `accel-count`) a akcelerometr mezi pravidelnými odečty orientace spí v úsporném režimu. |
 
 ---
 
@@ -206,7 +206,7 @@ Tyto parametry určují identitu zařízení, řízení přístupu přes NFC a c
 |---|---|---|
 | `config serial-number` | 10 dekadických číslic | Sériové číslo zařízení. |
 | `config secret-key` | 32 hex číslic | Secret key zařízení, kterým se zabezpečuje lokální kanál NFC pomocí AES-CCM. Číst i zapisovat ho lze jen přes shell. |
-| `config nonce-counter` | Celé číslo | Čítač nonce, který chrání šifrované příkazové kanály NFC a rádia proti opakovanému odeslání (replay). |
+| `config nonce-counter` | Celé číslo | Čítač nonce, který chrání šifrovaný příkazový kanál NFC proti opakovanému odeslání (replay). |
 | `config claim-token` | 32 hex číslic | 128bitový claim token zařízení zapisovatelný jen jednou. Po nastavení při uvedení do provozu už ho nelze změnit a vlastnictví zařízení zůstane vázané k jednomu backendu. |
 | `config vendor-token` | 32 hex číslic | Vendor token zapisovatelný jen jednou, nastavuje se při uvedení do provozu. |
 | `config vendor-reset-allow` | `true` / `false` | Zda zařízení přijme vendor reset. Bezdrátově ho lze změnit jen přes kanál NFC výrobce. Výchozí `true`. |

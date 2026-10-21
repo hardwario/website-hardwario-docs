@@ -26,9 +26,9 @@ Reset ani aktualizace firmwaru nesmí nasazenému zařízení smazat zprovozněn
 | Reset | Co zachovává |
 |---|---|
 | **Restart** | Všechno. Obyčejný restart. |
-| **Device reset** | Identitu zařízení **a celé zprovoznění LoRaWAN** (klíče i relaci): zařízení zůstává zprovozněné a připojené, na výchozí hodnoty se vrací jen konfigurace. **Jen přes NFC nebo shell**. |
+| **Device reset** | Identitu zařízení, **celé zprovoznění LoRaWAN** (klíče i relaci), `radio-mode` s nastavením a spárováním P2P, čítače impulzů a historii senzorů: zařízení zůstává zprovozněné a připojené; ostatní konfigurace a pravidla alarmů se vrátí na výchozí hodnoty. **Jen přes NFC nebo shell**. |
 | **Factory reset** | Pouze identitu zařízení: sériové číslo, vendor token, secret key, nonce, claim token, DevEUI a JoinEUI. **Zahodí relaci a klíče LoRaWAN** i spárování P2P, vrátí `radio-mode` na `off` a **vynuluje čítače impulzů a historii senzorů**. Zařízení pak nevysílá, dokud rádio znovu nenastavíte. **Jen přes NFC nebo shell**. Přes rádiový downlink je odmítnut, protože by zničil právě tu relaci, která je potřeba k jeho potvrzení. |
-| **Vendor reset** | Pouze sériové číslo a vendor token. Konfigurace, klíče LoRaWAN, DevEUI, JoinEUI, claim token, secret key, čítače impulzů i historie se vymažou a jako součást resetu **je nutné zadat nový secret key**. Okno pro claim se zavře; vlastník ho znovu otevře příkazem `claim_active`, který zároveň vytvoří nový claim token. Autorizuje ho vendor token, a to jen přes shell nebo vyhrazený vendor kanál NFC. |
+| **Vendor reset** | Pouze sériové číslo a vendor token (a interní čítač nonce pro NFC). Konfigurace, klíče LoRaWAN, DevEUI, JoinEUI, claim token, secret key, čítače impulzů i historie se vymažou a jako součást resetu **je nutné zadat nový secret key**. Okno pro claim se zavře; vlastník ho znovu otevře příkazem `claim_active`, který zároveň vytvoří nový claim token. Přes NFC ho autorizuje vendor token ve vyhrazeném vendor kanálu; u sestavení debug je dostupný i ze shellu (`settings vendor-reset`). Odmítne se, pokud má zařízení vypnutou politiku `vendor-reset-allow`. |
 | **`settings erase`** | Nic. Vymaže vše včetně sériového čísla. Nouzová cesta zpět k prázdnému zařízení, dostupná jen ze shellu. |
 
 Identita (sériové číslo, secret key, čítač nonce, vendor token) i zprovoznění LoRaWAN mají zaznamenáno, které úrovně resetu je zachovávají. Migrace schématu konfigurace při aktualizaci firmwaru proto chráněné údaje po použití nových výchozích hodnot obnoví.
@@ -38,7 +38,7 @@ Identita (sériové číslo, secret key, čítač nonce, vendor token) i zprovoz
 Vedle secret key má každé zařízení **vendor token**, privilegovaný přístupový údaj vázaný na konkrétní zařízení, který má u sebe jeho vlastník. Každý z obou údajů slouží k něčemu jinému:
 
 - **Secret key** zabezpečuje běžný šifrovaný kanál NFC pro čtení a zápis konfigurace.
-- **Vendor token** autorizuje privilegované operace, na které secret key nestačí: **změnu secret key** (výměnu klíče zařízení) a úroveň **vendor reset** popsanou výše, která vymaže zařízení až na sériové číslo a vendor token a nastaví přitom nový secret key.
+- **Vendor token** autorizuje privilegované operace, na které secret key nestačí: **nastavení nového secret key bez znalosti současného** (například když se klíč ztratí; se současným klíčem jde klíč změnit i běžným kanálem) a úroveň **vendor reset** popsanou výše, která vymaže zařízení až na sériové číslo a vendor token a nastaví přitom nový secret key.
 
 Protože odemyká výměnu klíče a nejhlubší reset, není vendor token pro běžnou konfiguraci vůbec potřeba a má ho jen vlastník zařízení. V aplikaci [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/saved-stickers) se ukládá ke každému zařízení v seznamu **Saved STICKERs** a používá se v nabídce **Tools → Vendor changes**; viz [**Reset zařízení**](/apps/hardwario-manager/sticker/reset).
 
@@ -85,10 +85,10 @@ Sestavení **debug** nechává procesor stále běžet, aby zůstala dostupná k
 
 Firmware dohlíží na rádiové spojení, LoRaWAN i P2P, a z výpadků se zotavuje sám:
 
-- Pravidelně kontroluje spojení (link check), a to s každou N-tou zprávou; N nastavuje `config radio-link-check-interval` (výchozí hodnota 5; `0` kontroly vypíná). V LoRaWAN je kontrolou `LinkCheckReq`, v P2P potvrzovaný rámec s telemetrií. Za úspěšnou kontrolu se počítá i každý ověřený downlink.
-- Jedna chybějící odpověď se toleruje. Opakovaná selhání převedou spojení do stavu zhoršeného spojení, ve kterém je kontrolou spojení každá zpráva.
-- **Žebříček obnovy v LoRaWAN:** ve stavu zhoršeného spojení každá neúspěšná kontrola vrátí vysílací výkon na výchozí (maximální) hodnotu a sníží datovou rychlost o jeden stupeň. Když kontrola na nižší datové rychlosti uspěje, zařízení se vrátí do normálního provozu se stejnou relací. Se zapnutým ADR síť datovou rychlost později zase zvýší.
-- Teprve když žebříček dojde k nejnižší datové rychlosti regionu a selže dalších `config radio-link-check-fail-rejoin` kontrol (výchozí hodnota 5), zařízení spojení naváže znovu: v LoRaWAN přes OTAA **rejoin**, v P2P novým připojením k hubu. Odstup mezi pokusy o rejoin se postupně prodlužuje. S výchozím nastavením (EU868, start na DR5, interval odesílání 900 s) trvá od ztráty spojení do rejoinu zhruba 4–5 hodin.
+- Pravidelně kontroluje spojení (link check), a to s každou N-tou zprávou; N nastavuje `config radio-link-check-interval` (výchozí hodnota 5; `0` kontroly vypíná). V LoRaWAN je kontrolou `LinkCheckReq`. V P2P se potvrzovaně posílá každé hlášení; N-té z nich se počítá jako kontrola spojení (nepotvrzené znamená neúspěšnou kontrolu) a navíc si od Hubu vyžádá údaje o spojení. Za úspěšnou kontrolu se počítá i každý ověřený downlink.
+- Jedna nebo dvě chybějící odpovědi se tolerují. Tři neúspěšné kontroly za sebou převedou spojení do stavu zhoršeného spojení, ve kterém je kontrolou spojení každá zpráva.
+- **Žebříček obnovy v LoRaWAN:** přechod do stavu zhoršeného spojení i každá další neúspěšná kontrola v něm vrátí vysílací výkon na výchozí (maximální) hodnotu a sníží datovou rychlost o jeden stupeň. Když kontrola na nižší datové rychlosti uspěje, zařízení se vrátí do normálního provozu se stejnou relací. Se zapnutým ADR síť datovou rychlost později zase zvýší.
+- Zařízení spojení naváže znovu teprve tehdy, když ve stavu zhoršeného spojení selže `config radio-link-check-fail-rejoin` kontrol (výchozí hodnota 5) a v LoRaWAN zároveň žebříček dojde na dno (nejnižší datová rychlost regionu při výchozím vysílacím výkonu): v LoRaWAN přes OTAA **rejoin**, v P2P novým připojením k hubu (P2P žebříček nemá). Odstup mezi pokusy o rejoin se postupně prodlužuje. S výchozím nastavením (EU868, start na DR5, interval odesílání 900 s) trvá od ztráty spojení do rejoinu zhruba 4–5 hodin.
 - Zařízení v režimu **ABP** se znovu připojit nemohou (join nikdy neprovádějí), proto zůstanou ve stavu zhoršeného spojení a spojení dál kontrolují.
 
 Odstraňuje to dřívější chybu, kdy zařízení mohlo po několika zprávách přestat vysílat.

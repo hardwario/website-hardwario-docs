@@ -37,7 +37,7 @@ Here you can find information about STICKER input wiring, including DIP switch s
 
 ## Example JSON Message
 
-A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). In this example input A is a `digital` input with its pulse count, input B is an `analog` input (voltage in V) and 1-Wire slot 1 holds a Dallas DS18B20 probe. An input in `pulse` mode sends `input_a_count` / `input_b_count` only, its `*_is_active` value is always `false`.
+A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). In this example input A is a `digital` input with its pulse count, input B is an `analog` input (voltage in V) and 1-Wire slot 1 holds a Dallas DS18B20 probe. An input in `pulse` mode sends `input_a_count` / `input_b_count` and an `input_a_is_active` / `input_b_is_active` that is always `false`; an `analog` input sends only `input_a_voltage` / `input_b_voltage`.
 
 <details>
 <summary><b>Show JSON Example</b></summary>
@@ -82,7 +82,7 @@ Because this application is the one that actually uses the digital inputs and Ha
 
 This makes it possible to verify wiring and DIP switch settings on site without a console or a network connection: trigger the input and watch the order of the two colors.
 
-An input in `pulse` mode (S0) has no state, so each counted pulse shows only the green-then-orange sequence. An `analog` input does not blink at all.
+An input in `pulse` mode (S0) has no state, so counted pulses show only the green-then-orange sequence. The LED blinks at most once every 0.5 s, so fast pulses do not each get a blink of their own. An `analog` input does not blink at all.
 
 :::warning
 Input blinking is a commissioning aid and **stops one hour after power-up**. Counting and reporting continue as normal. Power-cycle the unit if you need the visual confirmation back while testing.
@@ -96,7 +96,7 @@ Input blinking is a commissioning aid and **stops one hour after power-up**. Cou
 - `analog` measures 0–24 V on the input; the value can be sent in telemetry, recorded in the history and used in threshold alarms
 - `pulse` is a pulse counter for S0 meter outputs (either polarity, 20 ms debounce)
 - Each 1-Wire slot stores the sensor type it expects (`sensor1-type`…`sensor4-type`: `2` Dallas, `3` MACHINE PROBE); a different sensor in the slot raises a `sensor_mismatch` alarm
-- A 1-Wire probe plugged in after power-up is found automatically: the bus is checked 2, 5, 10 and 15 minutes after boot, then every 15 minutes
+- A 1-Wire probe plugged in after power-up into a slot that waits for it (a stored ROM or `sensorN-type`) is found without a reboot: the bus is checked 2 minutes after boot, then after another 5 and 10 minutes, then every 15 minutes
 - Every channel of a 1-Wire probe can be used in alarm rules and recorded in the history; a MACHINE PROBE with a failed accelerometer still measures temperature
 
 ### 2025-11-23 – v1.0.0

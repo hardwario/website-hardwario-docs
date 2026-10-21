@@ -1,14 +1,14 @@
 ---
 slug: hardware-description
 title: Popis hardwaru
-description: "STICKER je kompaktní IoT zařízení postavené na System-on-Chip STM32WL s integrovaným rádiem LoRa a jádrem ARM Cortex-M4F."
+description: "STICKER je kompaktní IoT zařízení postavené na System-on-Chip STM32WL s integrovaným rádiem LoRa a jádrem Arm Cortex-M4."
 title_meta: "Popis hardwaru (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 
 # Popis hardwaru {#hardware-description}
 
-STICKER je kompaktní IoT zařízení postavené na **System-on-Chip STM32WL** s integrovaným **rádiem LoRa** a jádrem ARM Cortex-M4F.  
+STICKER je kompaktní IoT zařízení postavené na **System-on-Chip STM32WL** s integrovaným **rádiem LoRa** a jádrem Arm Cortex-M4.  
 Napájejí ho dvě baterie AA; zařízení hlídá jejich napětí a úsporně řídí napájení (zvyšující měnič a LDO).
 
 Zařízení obsahuje **paměť a anténu NFC** pro snadnou konfiguraci z telefonu. Od firmwaru v2.0.0 telefon komunikuje s firmwarem přes schránku (mailbox) čipu NFC, takže zařízení musí být při konfiguraci napájené.
@@ -20,7 +20,7 @@ Zařízení obsahuje **paměť a anténu NFC** pro snadnou konfiguraci z telefon
 ### Vestavěné senzory {#built-in-sensors}
 
 Podle varianty osazení obsahuje zařízení STICKER:
-- **Teplota a vlhkost:** Senzor Sensirion SHT43 pro velmi přesné měření prostředí.
+- **Teplota a vlhkost:** Senzor Sensirion SHT40 pro velmi přesné měření prostředí.
 - **Osvětlenost:** Senzor okolního světla Texas Instruments OPT3001.
 - **Atmosférický tlak:** Senzor tlaku NXP MPL3115A2.
 - **Pohyb PIR:** Pasivní infračervený senzor pohybu Excelitas PYD1698 pro detekci přítomnosti (až 5 m, ≥ 50°).
@@ -130,10 +130,10 @@ Dokud je telefon přiložený k zařízení, LED krok za krokem ukazuje průběh
 | Telefon je v poli NFC, relace ještě nezačala | Zelená, svítí (nejvýš 5 s) |
 | Probíhá relace: výměna příkazů | Zelená, bliká (~90 ms) |
 | Relace skončila, poslední výměna dat se povedla | Zelená **a** žlutá, 2 s |
-| Relace skončila, poslední výměna dat **selhala**: požadavek odmítnut (špatný klíč nebo token, zopakovaný nebo poškozený požadavek; v tom případě se nic nezapíše), nebo se odpověď nedostala do telefonu | Červená, 2 s |
+| Relace skončila, poslední výměna dat **selhala**: požadavek odmítnut ještě před provedením (špatný klíč nebo token, zopakovaný nebo poškozený rámec; v tom případě se nic nezapíše), nebo se odpověď nedostala do telefonu | Červená, 2 s |
 | Výměna dat skončila | Zhasnuto |
 
-Červený výsledek je dobré znát: bez něj vypadá neúspěšná výměna dat pro toho, kdo drží telefon, stejně jako úspěšná. Příkaz, po kterém se zařízení restartuje, nejdřív ukáže svůj výsledek a teprve pak následuje startovní sekvence.
+Červený výsledek je dobré znát: bez něj vypadá neúspěšná výměna dat pro toho, kdo drží telefon, stejně jako úspěšná. Příkaz, po kterém se zařízení restartuje, nejdřív ukáže svůj výsledek a teprve pak následuje startovní sekvence. Příkaz, na který zařízení odpoví chybou (například kvůli hodnotě mimo rozsah), skončí zeleně a žlutě; chybu ukáže aplikace.
 
 ### Aktivace vstupu {#input-activation}
 

@@ -17,9 +17,9 @@ Režim LoRa P2P je součástí firmwaru STICKER **v2.0.0**. Stejný obraz firmwa
 ## Hlavní výhody {#key-advantages}
 
 - **Bez infrastruktury LoRaWAN:** Není potřeba brána LoRaWAN ani síťový server (ChirpStack, TTS). Síť řídí ProXimos Hub.
-- **Potvrzované doručení:** Brána potvrzuje rámce přímo na místě. Potvrzovaný rámec se vysílá až třikrát, dokud nepřijde potvrzení (ACK).
+- **Potvrzované doručení:** Brána potvrzuje rámce přímo na místě. Jedno potvrzované odeslání vyšle rámec až třikrát, dokud nepřijde potvrzení (ACK). Bez potvrzení se odeslání po náhodné prodlevě zopakuje ještě nejvýš třikrát.
 - **Stejné funkce jako LoRaWAN:** Telemetrie, alarmy, příkazy přes downlink, stránkované odpovědi, doplnění historie, síťový čas, dohled nad spojením, `get_radio_state` a ohlášení Info + nastavení po startu a každých `interval-announce` hodin.
-- **Šifrování a autentizace:** Každý rámec chrání AES-128-CCM klíčem relace, který se odvodí při připojení k síti.
+- **Šifrování a autentizace:** Každý datový rámec chrání AES-128-CCM klíčem relace, který se odvodí při připojení k síti.
 
 ---
 
@@ -36,7 +36,7 @@ flowchart LR
 
 - **Párování:** Uzel se připojí k síti rádiem. JoinRequest identifikuje uzel jeho DevEUI a je autentizovaný klíči odvozenými z jeho AppKey. Hub odpoví zprávou JoinAccept a obě strany si odvodí nový klíč relace. Spárování se uloží, takže restart nevyžaduje nové připojení.
 - **Rámce:** Rámce TOWER se 14bajtovou hlavičkou a 8bajtovým autentizačním tagem. MTU je 96 B, na užitečná data tedy zbývá 74 B na rámec.
-- **Potvrzované vysílání:** Alarmy (při `radio-alarm-ack true`), odpovědi a rámce historie potvrzuje brána, každé odeslání má až 3 pokusy. Ve firmwaru v2.0.0 se potvrzuje i pravidelná telemetrie.
+- **Potvrzované vysílání:** Alarmy (při `radio-alarm-ack true`), odpovědi a rámce historie potvrzuje brána. Každé odeslání má až 3 vysílání a bez potvrzení se zopakuje nejvýš třikrát. Ve firmwaru v2.0.0 se potvrzuje i každé pravidelné hlášení telemetrie.
 - **Downlinky:** Hub zařadí příkaz pro uzel do fronty a ohlásí ho příznakem PENDING v následujícím potvrzení. Uzel pak nechá přijímač zapnutý, dokud downlink nepřijme. Příkaz tak čeká nejvýš jeden interval hlášení.
 - **Payloady:** Payloady STICKER jsou bajt po bajtu stejné jako payloady na fPortech LoRaWAN (telemetrie 2, alarmy 3, odpovědi 85), takže platí stejné příkazy, dekodér i pravidla stránkování.
 - **Duty cycle:** Uzel si sám hlídá rozpočet vysílacího času v klouzavé hodině podle subpásma EU868, do kterého spadá `p2p-frequency`.
@@ -64,7 +64,7 @@ Při `p2p-modulation lora` jsou ostatní fyzické parametry pevné: šířka pá
 
 ## Konfigurace a správa {#configuration--management}
 
-Parametry rádia P2P se nastavují **jen ve vývojářském shellu přes RTT**, který mají ladicí a produkční (provisioning) obraz firmwaru. Release obraz shell nemá a startuje s hodnotami uloženými v NVS. Přes NFC umí aplikace [**HARDWARIO Manager**](/sticker/hardwario-manager/) přepnout `radio-mode` na `p2p`, parametry `p2p-*` ale nastavit nedokáže. Přes rádio jsou jen ke čtení (vrací je `get_config` / `get_param`), protože jejich změna by přerušila spojení, kterým přišla.
+Parametry rádia P2P lze zapsat **jen ve vývojářském shellu přes RTT**, který mají ladicí a produkční (provisioning) obraz firmwaru. Release obraz shell nemá. Pracuje s hodnotami `p2p-*` uloženými v NVS: s hodnotami, které zapsal ladicí nebo produkční obraz předtím, než se přes něj bez mazání nahrál release obraz, jinak s výchozími hodnotami z tabulky výše. Zařízení s release obrazem proto komunikuje s Hubem na výchozích hodnotách (869,525 MHz, SF7, 14 dBm, `lora`), pokud jeho parametry nebyly nastaveny tímto způsobem, a Hub je potřeba nastavit shodně. Přes NFC umí aplikace [**HARDWARIO Manager**](/sticker/hardwario-manager/) přepnout `radio-mode` na `p2p`, parametry `p2p-*` ale nastavit nedokáže: firmware jejich zápis přes NFC odmítne. Přes NFC i přes rádio jsou jen ke čtení (vrací je `get_config` / `get_param`). Přes rádio by navíc jejich změna přerušila spojení, kterým přišla.
 
 ```bash
 config radio-mode p2p

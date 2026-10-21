@@ -6,7 +6,7 @@ import Image from '@theme/IdealImage';
 
 # Sensor History & Store-and-Forward (`history`)
 
-The **Sensor History Engine** provides store-and-forward functionality for STICKER. When the device loses radio connectivity, sensor readings are continuously buffered into non-volatile flash memory. Once connectivity is restored or requested by the backend, historical data records can be replayed over the radio or read locally over NFC.
+The **Sensor History Engine** provides store-and-forward functionality for STICKER. STICKER records its sensor readings into non-volatile flash memory at every report interval, also while it has no radio connectivity. Once connectivity is restored or requested by the backend, historical data records can be replayed over the radio or read locally over NFC.
 
 Stored records survive battery replacement and power loss. Recording is configured via `config` parameters and managed locally using the `history` shell command (see [**Firmware Setup**](firmware-setup.md)).
 

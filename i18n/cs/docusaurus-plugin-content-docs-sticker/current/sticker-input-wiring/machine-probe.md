@@ -66,8 +66,8 @@ Od firmwaru v2.0.0 je každá hodnota sondy samostatný kanál, který lze posí
 
 | Kanál | Veličina | Jednotka | Čip |
 | --- | --- | --- | --- |
-| `temperature` | Teplota | °C | SHT30 |
-| `humidity` | Relativní vlhkost | % | SHT30 |
+| `temperature` | Teplota | °C | SHT30 (nebo SHT43) |
+| `humidity` | Relativní vlhkost | % | SHT30 (nebo SHT43) |
 | `temperature-aux` | Teplota | °C | TMP112 |
 | `illuminance` | Osvětlenost | lx | OPT3001 |
 | `magnetic-field` | Magnetické pole | mT | SI7210 |

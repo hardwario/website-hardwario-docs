@@ -20,7 +20,7 @@ Parametry zařízení, klíče a aktivaci `radio-mode` nastavíte bezdrátově t
 
 - **Provozní napětí:** Napájení ze dvou baterií AA se širokým rozsahem vstupního napětí **1,8 V až 3,6 V**.
 - **Extrémně nízký klidový proud:** Klidová spotřeba ve spánku **< 80 µA** díky režimům hlubokého spánku Zephyr RTOS na SoC STM32WL.
-- **Dynamické měření napětí:** Napětí baterie se měří pod zátěží při vzorkování senzorů a při vysílání, takže telemetrie je přesná a zařízení může vyvolat **alarm slabé baterie** na **fPort 3**.
+- **Sledování napětí baterie:** Napětí baterie se měří při každém vzorkování senzorů a odesílá se v telemetrii. Když klesne pod práh `battery-level` (výchozí hodnota 2,4 V), zařízení vyvolá **alarm slabé baterie** na **fPort 3**.
 - **Kontrola baterie při zapnutí (v2.0.0+):** Firmware nejdřív, ještě než spustí cokoli dalšího, změří napětí baterie. Pod **1,8 V** zařízení nenastartuje: po startovní sekvenci LED 5 s bliká červeně každých 200 ms, 1 s svítí červeně a zařízení se samo vypne. Vypnuté zůstane, dokud nevyměníte baterie nebo ho neresetujete signálem NRST, takže se zařízení s vybitým článkem už nedostane do smyčky restartů způsobených poklesem napětí.
 
 ---
@@ -30,4 +30,4 @@ Parametry zařízení, klíče a aktivaci `radio-mode` nastavíte bezdrátově t
 Od firmwaru **v1.4.0** se zařízení STICKER dodává z výroby v **režimu Radio-Silent** (`radio-mode off`):
 
 - **Nulové vysílání při přepravě:** Rádio je po vybalení zcela neaktivní, aby se baterie během přepravy nebo skladování nevybíjela marnými pokusy o připojení mimo dosah brány. Vzorkování senzorů a historie přitom běží dál.
-- **Aktivace v terénu:** Vysílání se zapíná až na místě při uvedení do provozu nastavením `radio-mode` na `lorawan` nebo `p2p`, buď přiložením telefonu s aplikací [**HARDWARIO Manager**](/sticker/hardwario-manager/) k zapnutému zařízení, nebo příkazem shellu (`config radio-mode lorawan`). Nový režim začne platit po restartu.
+- **Aktivace v terénu:** Vysílání se zapíná až na místě při uvedení do provozu nastavením `radio-mode` na `lorawan` nebo `p2p`, buď přiložením telefonu s aplikací [**HARDWARIO Manager**](/sticker/hardwario-manager/) k zapnutému zařízení, nebo u sestavení debug přes shell (`config radio-mode lorawan` a pak `settings save`). Nový režim začne platit po restartu.

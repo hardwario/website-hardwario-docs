@@ -38,4 +38,4 @@ import Image from '@theme/IdealImage';
 * **Ultra Low Power:** Multi-year operation powered by two standard AA batteries with intelligent sleep modes and factory Radio-Silent support.
 * **Flexible Connectivity & NFC:** Long-range LoRaWAN or LoRa P2P communication combined with encrypted NFC for instant configuration and management.
 * **Modular Ecosystem:** Pre-built catalog applications (Clime, Motion, Input) covering diverse environmental and industrial sensing tasks.
-* **Open & Secure Firmware:** Built on Zephyr RTOS with zero remote attack surface (SWD-only flashing, no field bootloader).
+* **Open & Secure Firmware:** Built on Zephyr RTOS with no remote firmware-update path (SWD-only flashing, no field bootloader).

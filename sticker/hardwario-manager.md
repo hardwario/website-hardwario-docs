@@ -30,7 +30,7 @@ workflow. The app itself is documented in full under **APPS**:
 - A phone with **NFC**, running the app. Getting it onto the phone and switching
   NFC on is covered in [**Install the app**](/apps/hardwario-manager/install).
 - The device's **secret key**. STICKER talks over an encrypted NFC channel, so
-  the app cannot read or write anything without it. You add each device once (see
+  the app cannot read its configuration or keys, or write anything, without it. You add each device once (see
   [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)), and
   from then on the app fills the key in automatically.
 

@@ -126,7 +126,7 @@ These parameters apply to both radios.
 
 | Command | Argument | Description |
 |---|---|---|
-| `config radio-link-check-interval` | `0`-`255` | Every Nth report is a link check: a LoRaWAN `LinkCheckReq`, or a confirmed telemetry frame on P2P. `0` = disabled. Default `5`. |
+| `config radio-link-check-interval` | `0`-`255` | Every Nth report is a link check: a LoRaWAN `LinkCheckReq`; on P2P (where every report is confirmed) the Nth report counts as the check. `0` = disabled. Default `5`. |
 | `config radio-link-check-fail-rejoin` | `1`-`255` | Link-check failures before the link is re-established (a LoRaWAN OTAA rejoin, a P2P re-join). Default `5`. |
 
 ---
@@ -170,7 +170,7 @@ On STICKER Input, the DIP switch S1 connects the external terminals to the input
 
 | Command | Argument | Description |
 |---|---|---|
-| `config accel-motion-sensitivity` | `off` / `low` / `medium` / `high` | Accelerometer motion-detection sensitivity. Default `off`, which powers the accelerometer down. |
+| `config accel-motion-sensitivity` | `off` / `low` / `medium` / `high` | Accelerometer motion-detection sensitivity. Default `off`: motion detection is off (no `accel-motion` / `accel-count` events), and the accelerometer stays powered down between its periodic orientation readings. |
 
 ---
 
@@ -206,7 +206,7 @@ These parameters manage device identity, NFC access control, and claim provision
 |---|---|---|
 | `config serial-number` | 10 decimal digits | Device serial number. |
 | `config secret-key` | 32 hex digits | Device secret key used to secure the local NFC channel via AES-CCM. Readable/writable over shell only. |
-| `config nonce-counter` | Integer | Anti-replay nonce counter enforced on the encrypted NFC and radio command channels. |
+| `config nonce-counter` | Integer | Anti-replay nonce counter enforced on the encrypted NFC channel. |
 | `config claim-token` | 32 hex digits | 128-bit write-once device claim token. Once set during commissioning, it becomes immutable to lock unit ownership to a backend. |
 | `config vendor-token` | 32 hex digits | Write-once vendor token, set at commissioning. |
 | `config vendor-reset-allow` | `true` / `false` | Whether the device accepts a vendor reset. Over the air it can be changed only over the vendor NFC channel. Default `true`. |

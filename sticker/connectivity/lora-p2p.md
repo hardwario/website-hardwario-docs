@@ -17,9 +17,9 @@ LoRa P2P mode is part of STICKER firmware **v2.0.0**. The same firmware image su
 ## Key Advantages
 
 - **No LoRaWAN infrastructure:** No LoRaWAN gateway and no network server (ChirpStack, TTS). The ProXimos Hub runs the network.
-- **Confirmed delivery:** The gateway acknowledges frames locally. A confirmed frame is sent up to 3 times until its ACK arrives.
+- **Confirmed delivery:** The gateway acknowledges frames locally. A confirmed send is up to 3 transmissions of the frame until its ACK arrives. With no ACK, the send is repeated up to 3 more times after a random back-off.
 - **Same features as LoRaWAN:** Telemetry, alarms, downlink commands, paged answers, history backfill, network time, link supervision, `get_radio_state`, and the Info + settings announce after boot and every `interval-announce` hours.
-- **Encrypted and authenticated:** Every frame is protected with AES-128-CCM under a session key that is derived during the on-air join.
+- **Encrypted and authenticated:** Every data frame is protected with AES-128-CCM under a session key that is derived during the on-air join.
 
 ---
 
@@ -36,7 +36,7 @@ flowchart LR
 
 - **Pairing:** The node joins the network on air. The JoinRequest identifies the node by its DevEUI and is authenticated with keys derived from its AppKey. The Hub answers with a JoinAccept, and both sides derive a fresh session key. The pairing is stored, so a reboot does not cost a new join.
 - **Frames:** TOWER frames with a 14 B header and an 8 B authentication tag. The MTU is 96 B, which leaves 74 B of payload per frame.
-- **Confirmed sends:** Alarms (with `radio-alarm-ack true`), answers and history frames are confirmed by the gateway ACK, up to 3 transmissions per send. In firmware v2.0.0 periodic telemetry is confirmed as well.
+- **Confirmed sends:** Alarms (with `radio-alarm-ack true`), answers and history frames are confirmed by the gateway ACK, up to 3 transmissions per send and up to 3 repeated sends without an ACK. In firmware v2.0.0 every periodic telemetry report is confirmed as well.
 - **Downlinks:** The Hub queues a command for the node and announces it with a PENDING flag in the next ACK. The node keeps its receiver on for that downlink. A command therefore waits at most one report interval.
 - **Payloads:** The STICKER payloads are byte-identical to the LoRaWAN fPort payloads (telemetry 2, alarms 3, answers 85), so the same commands, decoder and paging rules apply.
 - **Duty cycle:** The node keeps its own sliding-hour airtime budget, taken from the EU868 sub-band of `p2p-frequency`.
@@ -64,7 +64,7 @@ With `p2p-modulation lora` the remaining physical parameters are fixed: bandwidt
 
 ## Configuration & Management
 
-The P2P radio parameters are set **only in the RTT developer shell**, which the debug and provisioning images provide. The release image has no shell and boots with the values stored in NVS. Over NFC, [**HARDWARIO Manager**](/sticker/hardwario-manager/) can switch `radio-mode` to `p2p`, but it cannot set the `p2p-*` parameters. Over a radio they are read-only (`get_config` / `get_param` return them), because a change would cut the link that carries it.
+The P2P radio parameters are writable **only in the RTT developer shell**, which the debug and provisioning images provide. The release image has no shell. It runs with the `p2p-*` values stored in NVS: values that a debug or provisioning image wrote before the release image was flashed over it without an erase, or otherwise the defaults in the table above. A device on the release image therefore talks to a Hub on the defaults (869.525 MHz, SF7, 14 dBm, `lora`) unless its parameters were set this way, so set the Hub to match. Over NFC, [**HARDWARIO Manager**](/sticker/hardwario-manager/) can switch `radio-mode` to `p2p`, but it cannot set the `p2p-*` parameters: the firmware rejects them over NFC as not writable. Over NFC and over a radio they are read-only (`get_config` / `get_param` return them). Over a radio, a change would also cut the link that carries it.
 
 ```bash
 config radio-mode p2p

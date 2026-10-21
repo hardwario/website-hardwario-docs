@@ -45,7 +45,7 @@ Rules are held in 16 fixed indexes (`0`-`15`). The index serves as the rule's st
 | `alarm list [<rule>]` | List all rules, or the rule with the given index. |
 | `alarm set <rule> <slot> <channel> <key> <value> ...` | Write a rule to index `<rule>` (`0`-`15`). |
 | `alarm new <slot> <channel> <key> <value> ...` | Write a rule to the first free index. |
-| `alarm clear <rule>` / `alarm clear all` | Delete one rule or all rules. |
+| `alarm clear <rule>` / `alarm clear all` | Delete one rule or all rules. `alarm clear` without an argument also deletes all rules. |
 | `alarm poll` | Force an immediate sample and evaluation of all active rules (useful for bench testing). |
 | `sensor types [<type>]` | List the sensor types and their channels with their numbers and rule kinds. |
 
@@ -121,7 +121,7 @@ The kind comes from the channel. Each kind takes its own keys, given as `<key> <
 
 - **Threshold Rules:** the alarm activates immediately when the value leaves `[lo, hi]`: below `lo` as a LOW alarm, above `hi` as a HIGH alarm. A jump straight to the other side ends the old alarm and starts the new one.
 - **State Rules:** `from != to` is an **edge** (fires once on the transition); `from == to` is a **level** (active while the line equals `to`).
-- **Motion and stillness:** the momentary channels `pir-motion` and `accel-motion` take three shapes. The edge `from 0 to 1` fires on motion. The level `from 1 to 1` is "motion started / ended": the first event activates the alarm, every further event restarts the `dwell` quiet window, and the alarm ends once `dwell` passes with no event. The level `from 0 to 0` is "stillness": it activates once `dwell` passes with no event and ends on the next event, for example for a machine that must report when it stops vibrating.
+- **Motion and stillness:** the momentary channels `pir-motion` and `accel-motion` take three shapes. The edge `from 0 to 1` fires on motion. The level `from 1 to 1` is "motion started / ended": the first event activates the alarm, every further event restarts the `dwell` quiet window, and the alarm ends once `dwell` passes with no event. The level `from 0 to 0` is "stillness": it activates once `dwell` passes with no event and ends on the next event, for example for a machine that must report when it stops vibrating. The accelerometer reports motion events only while `config accel-motion-sensitivity` is not `off`.
 - **Rate Rules:** the alarm fires as soon as the counter rises by at least `hi` within `dwell` seconds. A sustained rate stays one alarm; it ends on the first window that falls short.
 
 ---

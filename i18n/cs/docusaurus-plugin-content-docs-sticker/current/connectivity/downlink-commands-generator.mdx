@@ -15,7 +15,7 @@ Níže si sestavíte příkaz pro zařízení STICKER, který pak pošlete přes
 ## Jak ho používat {#how-to-use-it}
 
 1. Vyberte příkaz. U **Set alarm rules** zvolte pravidlo (0 až 15), slot (deska nebo slot 1-Wire 1 až 4) a kanál, nastavte hodnoty pravidla a **dwell** (viz [**Parametr `dwell`**](../developer-access/alarm-rules.md#the-dwell-parameter)). U prahového pravidla je dwell pásmo hystereze v jednotkách kanálu, nejvýš horní − dolní mez. U stavového pravidla je to čas v sekundách a u pravidla četnosti okno počítání v sekundách (0 = interval hlášení). U **Set configuration parameters** vyberte pole a hodnotu. Ve volbě **Custom JSON** napíšete libovolný příkaz ručně.
-2. Zkopírujte **JSON**, pokud máte na síťovém serveru nainstalovaný kodek STICKER jako formátovač payloadu **downlinku**, a zařaďte ho na fPort 85.
+2. Zkopírujte **JSON**, pokud máte na síťovém serveru nainstalovaný kodek STICKER jako formátovač payloadu **downlinku**, a zařaďte ho na fPort 85. Kodek `ttn.js` v2.0.0 na GitHubu neumí zakódovat **Alarm buzzer mode** (`alarm_buzzer_mode`) a **Confirmed alarm uplinks** (`radio_alarm_ack`). Kopie kodeku v generátoru to umí, proto tyto dva parametry zařaďte jako hex.
 3. Nebo zkopírujte **hex** a zařaďte ho přímo jako bajtový payload downlinku na fPort 85, bez kodeku.
 
 :::tip Uložení změny konfigurace

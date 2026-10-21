@@ -46,7 +46,7 @@ Pravidla se ukládají do 16 pevných indexů (`0`-`15`). Index je stálý ident
 | `alarm list [<rule>]` | Vypíše všechna pravidla, nebo pravidlo se zadaným indexem. |
 | `alarm set <rule> <slot> <channel> <key> <value> ...` | Zapíše pravidlo na index `<rule>` (`0`-`15`). |
 | `alarm new <slot> <channel> <key> <value> ...` | Zapíše pravidlo na první volný index. |
-| `alarm clear <rule>` / `alarm clear all` | Smaže jedno pravidlo nebo všechna pravidla. |
+| `alarm clear <rule>` / `alarm clear all` | Smaže jedno pravidlo nebo všechna pravidla. `alarm clear` bez argumentu také smaže všechna pravidla. |
 | `alarm poll` | Vynutí okamžité vzorkování a vyhodnocení všech aktivních pravidel (hodí se při testování na stole). |
 | `sensor types [<type>]` | Vypíše typy senzorů a jejich kanály s čísly a druhy pravidel. |
 
@@ -122,7 +122,7 @@ Druh pravidla určuje kanál. Každý druh má vlastní klíče, které se zadá
 
 - **Prahová pravidla:** alarm se aktivuje okamžitě, když hodnota opustí `[lo, hi]`: pod `lo` jako alarm LOW, nad `hi` jako alarm HIGH. Když hodnota přeskočí rovnou na druhou stranu, starý alarm skončí a začne nový.
 - **Stavová pravidla:** `from != to` znamená **hranu** (pravidlo se vyvolá jednou při přechodu), `from == to` znamená **úroveň** (pravidlo je aktivní, dokud má linka hodnotu `to`).
-- **Pohyb a klid:** okamžikové kanály `pir-motion` a `accel-motion` přijímají tři tvary. Hrana `from 0 to 1` se vyvolá při pohybu. Úroveň `from 1 to 1` znamená „pohyb začal / skončil“: první událost alarm aktivuje, každá další znovu spustí klidové okno `dwell` a alarm skončí, jakmile `dwell` uplyne bez události. Úroveň `from 0 to 0` znamená „klid“: aktivuje se, jakmile `dwell` uplyne bez události, a skončí při další události, například u stroje, který musí nahlásit, že přestal vibrovat.
+- **Pohyb a klid:** okamžikové kanály `pir-motion` a `accel-motion` přijímají tři tvary. Hrana `from 0 to 1` se vyvolá při pohybu. Úroveň `from 1 to 1` znamená „pohyb začal / skončil“: první událost alarm aktivuje, každá další znovu spustí klidové okno `dwell` a alarm skončí, jakmile `dwell` uplyne bez události. Úroveň `from 0 to 0` znamená „klid“: aktivuje se, jakmile `dwell` uplyne bez události, a skončí při další události, například u stroje, který musí nahlásit, že přestal vibrovat. Akcelerometr hlásí události pohybu jen tehdy, když `config accel-motion-sensitivity` není `off`.
 - **Četnostní pravidla:** alarm se vyvolá, jakmile čítač během `dwell` sekund vzroste aspoň o `hi`. Trvale vysoká četnost zůstává jedním alarmem; skončí v prvním okně, které hodnoty `hi` nedosáhne.
 
 ---

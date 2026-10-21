@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # Historie senzorů a store-and-forward (`history`) {#sensor-history--store-and-forward-history}
 
-**Historie senzorů** (Sensor History Engine) zajišťuje v zařízení STICKER funkci store-and-forward. Když zařízení ztratí rádiové spojení, měření ze senzorů se průběžně ukládají do nevolatilní flash paměti. Po obnovení spojení nebo na žádost backendu lze uložené záznamy znovu odeslat rádiem, případně je přečíst na místě přes NFC.
+**Historie senzorů** (Sensor History Engine) zajišťuje v zařízení STICKER funkci store-and-forward. STICKER ukládá měření ze senzorů do nevolatilní flash paměti v každém intervalu hlášení, a to i bez rádiového spojení. Po obnovení spojení nebo na žádost backendu lze uložené záznamy znovu odeslat rádiem, případně je přečíst na místě přes NFC.
 
 Uložené záznamy přežijí výměnu baterií i ztrátu napájení. Záznam se nastavuje parametry `config` a na místě se spravuje příkazem shellu `history` (viz [**Nastavení firmwaru**](firmware-setup.md)).
 

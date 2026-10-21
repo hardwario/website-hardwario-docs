@@ -19,7 +19,7 @@ Resety tvoří **žebříček podle závažnosti**: každá úroveň zachovává
 | `settings save` | Uloží připravené změny `config` do flash paměti a restartuje zařízení. |
 | `settings device-reset` | Vrátí konfiguraci a pravidla alarmů na výchozí hodnoty; **zachovává identitu zařízení, celé zprovoznění LoRaWAN, čítače impulzů i historii** (zůstává zprovozněné a připojené). |
 | `settings factory-reset` | Vrátí konfiguraci a pravidla alarmů na výchozí hodnoty včetně nastavení rádia a `radio-mode`; zachovává identitu zařízení, DevEUI a JoinEUI. **Zahazuje relaci a klíče rádia** (stav LoRaMac a spárování P2P), takže se zařízení připojí znovu, a **maže čítače impulzů a historii**. |
-| `settings vendor-reset <new-secret-key>` | Vymaže úložiště i historii a ponechá zařízení **jen sériové číslo a vendor token**: smaže claim token, DevEUI a JoinEUI a zavře claim okno. Ve stejném volání vyžaduje nový 32místný hexadecimální `secret_key`. Zařízení příkaz odmítne, pokud má vypnutou politiku `vendor-reset-allow`. |
+| `settings vendor-reset <new-secret-key>` | Vymaže úložiště i historii a ponechá zařízení **jen sériové číslo, čítač nonce a vendor token**: smaže claim token, DevEUI a JoinEUI a zavře claim okno. Ve stejném volání vyžaduje nový 32místný hexadecimální `secret_key`. Zařízení příkaz odmítne, pokud má vypnutou politiku `vendor-reset-allow`. |
 | `settings erase` | Úplné vymazání NVS **včetně identity a přístupových údajů LoRaWAN**. Nevratné a dostupné jen ze shellu. |
 
 ## Úrovně resetu podrobně {#reset-tiers-in-detail}
@@ -33,11 +33,11 @@ Resety tvoří **žebříček podle závažnosti**: každá úroveň zachovává
 | Claim okno | zachová | zachová | → `done` | → `active` |
 | `vendor-reset-allow` | zachová | zachová | výchozí | výchozí |
 | DevEUI, JoinEUI | zachová | zachová | smaže | smaže |
-| Ostatní nastavení a klíče rádia, `radio-mode` | zachová | výchozí | výchozí | výchozí |
-| Zbytek konfigurace, pravidla alarmů | výchozí | výchozí | výchozí | výchozí |
-| Čítače impulzů, historie | zachová | smaže | smaže | smaže čítače |
-| Stav LoRaMac (DevNonce, čítače rámců), spárování P2P | zachová | smaže | smaže | — |
+| Ostatní nastavení a klíče rádia, `radio-mode` (kromě kontrol spojení) | zachová | výchozí | výchozí | výchozí |
+| Zbytek konfigurace (včetně `radio-link-check-interval` / `-fail-rejoin`), pravidla alarmů | výchozí | výchozí | výchozí | výchozí |
+| Čítače impulzů, historie | zachová | smaže | smaže | smaže čítače, historii zachová |
+| Stav LoRaMac (DevNonce, čítače rámců), spárování P2P | zachová | smaže | smaže | smaže |
 
 :::caution Nevratné úrovně
-`settings factory-reset` zahodí klíče rádia (vynutí nové připojení) a smaže čítače i historii; `settings vendor-reset` vymaže všechno kromě sériového čísla a vendor tokenu (a nastaví nový secret key); `settings erase` vrátí zařízení do prázdného stavu bez identity. Žádnou z těchto akcí nelze vzít zpět.
+`settings factory-reset` zahodí klíče rádia (vynutí nové připojení) a smaže čítače i historii; `settings vendor-reset` vymaže všechno kromě sériového čísla, čítače nonce a vendor tokenu (a nastaví nový secret key); `settings erase` vrátí zařízení do prázdného stavu bez identity. Žádnou z těchto akcí nelze vzít zpět.
 :::

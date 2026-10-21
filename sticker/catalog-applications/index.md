@@ -27,7 +27,7 @@ HARDWARIO STICKER is available in three ready-to-use functional variants: **STIC
 
 **STICKER Clime** is designed for precise microclimate monitoring in buildings, warehouses, and industrial facilities.
 
-* **Integrated Sensors:** Sensirion SHT43 sensor (**±0.2 °C** temperature, **±2%** humidity), OPT3001 ambient light sensor, and MPL3115A2 barometric pressure sensor.
+* **Integrated Sensors:** Sensirion SHT40 sensor (**±0.2 °C** temperature, **±2%** humidity), OPT3001 ambient light sensor, and MPL3115A2 barometric pressure sensor.
 * **Key Benefit:** Complete overview of environmental quality and ambient conditions without needing external sensor cables.
 * **v2.0 Enhancements:** Temperature, humidity, pressure, illuminance and the barometer's own temperature can all be used in alarm rules and recorded in the history. The onboard temperature/humidity sensor can be switched off with `cap-sht`. On threshold rules, `dwell` is now a hysteresis band in the channel's units (for example °C), not a time in seconds.
 
@@ -40,9 +40,9 @@ HARDWARIO STICKER is available in three ready-to-use functional variants: **STIC
 **STICKER Input** connects external industrial sensors, reads pulse counters, and measures digital or analog signals.
 
 * **Inputs & Interfaces:** Terminal block for 2 external inputs, each configurable as a digital input, a 0–24 V analog input or a pulse counter (for example the S0 output of an electricity, gas or water meter), and a 1-Wire bus.
-* **Supported Probes:** Automatic discovery of 1-Wire sensors (Dallas DS18B20) and HARDWARIO Machine Probe industrial sensors.
+* **Supported Probes:** Up to four 1-Wire sensors in slots 1–4: Dallas DS18B20 thermometers and HARDWARIO Machine Probe industrial sensors.
 * **Key Benefit:** Universal converter for integrating existing industrial infrastructure and utility meters into LoRaWAN networks.
-* **v2.0 Enhancements:** 0–24 V analog measurement and S0 pulse counting on the external inputs, an expected sensor type per 1-Wire slot with a `sensor_mismatch` alarm, and detection of probes plugged in after power-up.
+* **v2.0 Enhancements:** 0–24 V analog measurement and S0 pulse counting on the external inputs, an expected sensor type per 1-Wire slot with a `sensor_mismatch` alarm, and detection of a probe plugged in after power-up into a slot that waits for it.
 
 → [**More about STICKER Input**](/sticker/catalog-applications/sticker-input/)
 

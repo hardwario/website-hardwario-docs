@@ -50,7 +50,7 @@ Read over NFC, the Info also carries the DevEUI and the claim token. The radio l
 
 ## LED Signal Testing
 
-The status LED operates a severity-ordered heartbeat (network join state, radio mode, alarm status) and one-shot interaction patterns (NFC access, input triggers). See [**Hardware Description**](hardware-description.md#led-indication) for pattern definitions.
+The status LED operates a severity-ordered heartbeat (network join state, radio mode, alarm status) and one-shot interaction patterns (NFC access, input triggers). See [**Hardware Description**](../hardware-description.md#led-indication) for pattern definitions.
 
 Use `ats led` subcommands to test individual color channels during manufacturing or diagnostic inspection:
 
@@ -100,7 +100,7 @@ Debug builds expose raw protobuf command injectors. Responses are output directl
 | Command | Description |
 |---|---|
 | `ats cmd lrw <hex>` | Feed a raw binary command frame into the LoRaWAN downlink command processor. |
-| `ats cmd nfc <hex>` | Feed a raw binary command frame into the encrypted NFC command engine. |
+| `ats cmd nfc <hex>` | Feed a raw command into the NFC command processor, as if it had arrived decrypted over the encrypted NFC channel. |
 | `ats cmd vnd <hex>` | Feed a raw command into the vendor NFC channel. |
 | `ats cmd plain <hex>` | Feed a raw command into the plaintext channel, which answers only `get_basic_info` and `get_claim_info`. |
 | `ats cmd history [<from> [<to>]]` | Run the paged NFC history read. |

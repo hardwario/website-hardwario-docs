@@ -56,7 +56,9 @@ Over LoRaWAN and P2P, firmware v2.0.0 accepts `set_param`, `get_param`, `get_inf
 
 ## Remote Configuration (`set_param` & `get_param`)
 
-Over a radio, `set_param` can write the `application`, `sensors` and `alarms` configuration groups. The `lorawan` group (keys, region, ADR, data rate, `radio_mode`) and the P2P radio parameters can be read with `get_param` / `get_config`, but are set only over NFC or the shell.
+Over a radio, `set_param` can write the `application`, `sensors` and `alarms` configuration groups, except `calibration` (NFC or shell only) and `vendor_reset_allow` (vendor NFC channel or shell only). The `lorawan` group (region, ADR, data rate, `radio_mode`, identifiers and keys) is set only over NFC or the shell, and the P2P radio parameters only in the shell. `get_param` / `get_config` read them back over a radio, except the secret keys (AppKey, NwkKey, NwkSKey, AppSKey), which are readable only over NFC or the shell.
+
+The v2.0.0 `ttn.js` on GitHub cannot encode the `alarms` fields `alarm_buzzer_mode` and `radio_alarm_ack` from JSON. Send these two as hex, for example from the [**Downlink Commands Generator**](downlink-commands-generator.mdx).
 
 ### Examples
 

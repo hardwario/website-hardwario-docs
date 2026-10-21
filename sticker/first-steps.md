@@ -77,7 +77,7 @@ Start with the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager
 :::
 
 1. **Install the app** and switch **NFC** on. STICKER is configured from an Android phone or an iPhone, the same way on both.
-2. **Add the device** to your saved STICKERs, so the app has its **secret key**, because STICKER only answers over an encrypted channel.
+2. **Add the device** to your saved STICKERs, so the app has its **secret key**, because STICKER answers configuration and key requests only over an encrypted channel.
 3. **Read the keys.** Open **STICKER → LoRaWAN keys** and tap the device. Note the **DevEUI**, **JoinEUI (AppEUI)** and **AppKey** for OTAA, or the **DevAddr** and session keys for ABP.
 4. **Write the configuration.** Open **STICKER → Configuration**, set the region, activation mode and keys in the **LoRaWAN** section, switch **`radio-mode`** to LoRaWAN, then tap again to write it back.
 
@@ -97,7 +97,7 @@ Start with the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager
 | LED | Meaning | What to do |
 |---|---|---|
 | **Green and yellow for 2 seconds** | The tap ended and its last exchange succeeded | Nothing. If the write needs a reboot, the boot sequence follows |
-| **Red for 2 seconds** | **The last exchange failed.** The request was refused (wrong **secret key** or token, a replayed or malformed request; nothing is written then), or its reply did not reach the phone | Check the device is saved with the right secret key in [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), then tap again |
+| **Red for 2 seconds** | **The last exchange failed.** The request was rejected before it ran (wrong **secret key** or token, a replayed or damaged frame; nothing is written then), or its reply did not reach the phone. A command the device answers with an error, for example a value out of range, still ends green and yellow; the app shows the error | Check the device is saved with the right secret key in [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), then tap again |
 | Heartbeat changes from **1× yellow** to **yellow + red** | The radio is on and the device is joining | Wait. A join can take several attempts |
 | Heartbeat settles to **1× green** | Joined. The device sends its **Device Info** payload, followed by a **settings-info** uplink with its key settings (both on fPort 85) | Nothing. The device is live |
 
@@ -122,7 +122,7 @@ Start with the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager
 Once registered and connected:
 
 - **Verify Uplinks:** Confirm that the initial **Device Info** uplink (firmware version, battery status, reset cause), the **settings-info** uplink that follows it, and regular sensor data packets arrive at your LNS dashboard. The device re-sends the Device Info and settings-info pair every `interval-announce` hours (default 24 h), so the network keeps an up-to-date copy of its configuration.
-- **Check LED Status:** A single green flash every 3 seconds confirms optimal network link and healthy operation.
+- **Check LED Status:** A single green flash every 3 seconds confirms that the device is joined, its link checks pass and no alarm is active.
 - **Adjust Schedules:** Use NFC via [**HARDWARIO Manager**](/sticker/hardwario-manager/) or LoRaWAN Downlink commands (fPort 85) to fine-tune sampling and uplink intervals.
 
 :::info STICKER Input Wiring
@@ -146,14 +146,14 @@ the **first match wins**, so a more serious condition hides a less serious one.
 
 | LED pattern | What it means | What to do |
 |---|---|---|
+| **Red and yellow alternating, twice** | **Stored configuration could not be loaded**. Identity and provisioning are gone, and the device is running on factory defaults | Re-apply the full configuration over NFC with [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration); if it comes back, the unit needs service |
+| **1× yellow, then 1× red** ~200 ms later | **Joining or rejoining** and getting no answer from the network | Check gateway proximity, frequency plan / region, and that DevEUI, JoinEUI and AppKey match the network server |
+| **2× yellow**, ~200 ms apart | **Link degraded**. Link checks are failing, but the session is still alive | Check gateway coverage and antenna placement; the device recovers on its own once the link returns |
+| **1× yellow** | **Radio switched off**: `radio-mode off` (the factory default), `radio-mode p2p` on a device without its P2P keys (AppKey or DevEUI not set), or a LoRaWAN region this firmware image does not support | Write a LoRaWAN or P2P configuration with the radio enabled (Step 3) |
+| **1× red** | An **alarm is active** | Read the active alarms in [**Device info**](/apps/hardwario-manager/sticker/device-info), then review the [**alarm rules**](developer-access/alarm-rules.md) |
 | **1× green** | Normal operation, joined and healthy | Nothing. This is the target state |
 | **Green, then yellow** | The same, but the unit runs a **debug** firmware build | Expected on development units; flash a release build for deployment |
-| **1× red** | An **alarm is active** | Read the active alarms in [**Device info**](/apps/hardwario-manager/sticker/device-info), then review the [**alarm rules**](developer-access/alarm-rules.md) |
-| **1× yellow** | **Radio switched off**: `radio-mode off` (the factory default), `radio-mode p2p` on a device without its P2P keys (AppKey or DevEUI not set), or a LoRaWAN region this firmware image does not support | Write a LoRaWAN or P2P configuration with the radio enabled (Step 3) |
-| **2× yellow**, ~200 ms apart | **Link degraded**. Link checks are failing, but the session is still alive | Check gateway coverage and antenna placement; the device recovers on its own once the link returns |
-| **1× yellow, then 1× red** ~200 ms later | **Joining or rejoining** and getting no answer from the network | Check gateway proximity, frequency plan / region, and that DevEUI, JoinEUI and AppKey match the network server |
-| **Red and yellow alternating, twice** | **Stored configuration could not be loaded**. Identity and provisioning are gone, and the device is running on factory defaults | Re-apply the full configuration over NFC with [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration); if it comes back, the unit needs service |
-| **Nothing at all** | Either the device is in **deep sleep** (all channels off; expected, not a fault), it has no power, or it **switched itself off** at power-up because the battery was below 1.8 V | If it is not sleeping, check battery polarity and replace the batteries |
+| **Nothing at all** | Either a debug unit is in **deep sleep** (all channels off; expected, not a fault), or the device has no power, or it **switched itself off** at power-up because the battery was below 1.8 V | If it is not sleeping, check battery polarity and replace the batteries |
 
 ### During an NFC tap
 
@@ -165,12 +165,14 @@ step.
 | **Green, solid** (at most 5 s) | Phone detected in the NFC field, no session started yet | Keep the phone still |
 | **Green, blinking** (~90 ms) | Session running: the phone and the device are exchanging commands | Keep the phone still |
 | **Green and yellow, 2 s** | Session ended, the last exchange succeeded | Nothing |
-| **Red, 2 s** | Session ended, the last exchange **failed**: the request was refused (wrong secret key or vendor token, a replayed or malformed request; nothing is written then), or its reply did not reach the phone | Check the device is saved with the right secret key, see [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), then tap again |
+| **Red, 2 s** | Session ended, the last exchange **failed**: the request was rejected before it ran (wrong secret key or vendor token, a replayed or damaged frame; nothing is written then), or its reply did not reach the phone | Check the device is saved with the right secret key, see [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), then tap again |
 | **Off** | Exchange finished | Nothing |
 
 The red result is worth knowing: without it, a failed exchange would look exactly
 like a successful one to whoever is holding the phone. A command that reboots the
 device (save, reset, reboot) shows its result first; the boot sequence follows.
+A command the device answers with an error (for example a value out of range)
+still ends green and yellow; the app shows the error.
 
 ### Boot, inputs and calibration
 

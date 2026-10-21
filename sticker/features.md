@@ -26,9 +26,9 @@ A reset or firmware update must never un-provision a field device beyond the tie
 | Reset | What it keeps |
 |---|---|
 | **Reboot** | Everything. A plain restart. |
-| **Device reset** | Device identity **and the full LoRaWAN provisioning** (keys and session): the device stays provisioned and connected, only the configuration returns to defaults. **NFC/shell only**. |
+| **Device reset** | Device identity, **the full LoRaWAN provisioning** (keys and session), `radio-mode` with the P2P settings and pairing, the pulse counters and the sensor history: the device stays provisioned and connected; the rest of the configuration and the alarm rules return to defaults. **NFC/shell only**. |
 | **Factory reset** | Device identity only: serial number, vendor token, secret key, nonce, claim token, DevEUI and JoinEUI. It **drops the LoRaWAN session and keys** and the P2P pairing, returns `radio-mode` to `off`, and **clears the pulse counters and the sensor history**. The device stays radio-silent until the radio is configured again. **NFC/shell only**. Rejected over a radio downlink, which would destroy the very session needed to confirm it. |
-| **Vendor reset** | Serial number and vendor token only. The configuration, LoRaWAN keys, DevEUI, JoinEUI, claim token, secret key, pulse counters and history are all erased, and a **new secret key must be supplied** as part of the reset. The claim window closes; the owner re-opens it with `claim_active`, which also creates a new claim token. Authorised by the vendor token, over the shell or the dedicated NFC vendor channel only. |
+| **Vendor reset** | Serial number and vendor token only (plus the internal NFC nonce counter). The configuration, LoRaWAN keys, DevEUI, JoinEUI, claim token, secret key, pulse counters and history are all erased, and a **new secret key must be supplied** as part of the reset. The claim window closes; the owner re-opens it with `claim_active`, which also creates a new claim token. Over NFC it is authorised by the vendor token on the dedicated vendor channel; on a debug build the shell offers it too (`settings vendor-reset`). Refused when the device's `vendor-reset-allow` policy is off. |
 | **`settings erase`** | Nothing. A full wipe back to a blank device, including the serial number. A shell-only "return to blank" escape hatch. |
 
 The identity set (serial number, secret key, nonce counter, vendor token) and the LoRaWAN provisioning each record which tiers preserve them, so a config-schema migration on a firmware update restores the protected set after applying new defaults.
@@ -38,7 +38,7 @@ The identity set (serial number, secret key, nonce counter, vendor token) and th
 Alongside the secret key, each device holds a **vendor token**, a privileged, per-device credential kept by the device owner. The two credentials do different jobs:
 
 - The **secret key** secures the everyday encrypted NFC channel used to read and write configuration.
-- The **vendor token** authorizes the privileged operations the secret key cannot: **changing the secret key** (re-keying the device) and the **vendor reset** tier above, which wipes the device back to its serial number and vendor token, setting a new secret key in the process.
+- The **vendor token** authorizes the privileged operations the secret key cannot: **setting a new secret key without knowing the current one** (for example when the key is lost; with the current key, the key can also be changed over the normal channel) and the **vendor reset** tier above, which wipes the device back to its serial number and vendor token, setting a new secret key in the process.
 
 Because it unlocks re-keying and the deepest reset, the vendor token is never needed for routine configuration and is held only by the device owner. In [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/saved-stickers) it is stored per device under **Saved STICKERs** and used under **Tools → Vendor changes**; see the [**Reset guide**](/apps/hardwario-manager/sticker/reset).
 
@@ -85,10 +85,10 @@ A **debug** build keeps the CPU awake so the RTT console stays reachable, which 
 
 The firmware supervises the radio link, LoRaWAN or P2P, and recovers from outages on its own:
 
-- It checks the link periodically: every Nth report, set by `config radio-link-check-interval` (default 5; `0` disables link checks). On LoRaWAN this is a `LinkCheckReq`, on P2P a confirmed telemetry frame. Any authenticated downlink also counts as a successful check.
-- A single missed answer is tolerated. Repeated failures put the link into a degraded state, in which every report carries a link check.
-- **LoRaWAN recovery ladder:** in the degraded state, each failed check restores the default (maximum) TX power and lowers the data rate by one step. A check that succeeds on the lower data rate returns the device to normal operation with the same session. With ADR on, the network raises the data rate again later.
-- Only when the ladder has reached the region's lowest data rate and `config radio-link-check-fail-rejoin` further checks (default 5) have failed does the device re-establish the link: an OTAA **rejoin** on LoRaWAN, a re-join on P2P. Rejoin attempts back off between tries. With the default settings (EU868, starting at DR5, 900 s report interval), link loss to rejoin takes about 4–5 hours.
+- It checks the link periodically: every Nth report, set by `config radio-link-check-interval` (default 5; `0` disables link checks). On LoRaWAN this is a `LinkCheckReq`. On P2P every report is sent confirmed anyway; the Nth one counts as the link check (an unacknowledged one is a failed check) and also asks the Hub for link figures. Any authenticated downlink also counts as a successful check.
+- One or two missed answers are tolerated. Three failed checks in a row put the link into a degraded state, in which every report carries a link check.
+- **LoRaWAN recovery ladder:** entering the degraded state, and each failed check in it, restores the default (maximum) TX power and lowers the data rate by one step. A check that succeeds on the lower data rate returns the device to normal operation with the same session. With ADR on, the network raises the data rate again later.
+- The device re-establishes the link only when `config radio-link-check-fail-rejoin` checks (default 5) have failed in the degraded state and, on LoRaWAN, the ladder has reached its floor (the region's lowest data rate at the default TX power): an OTAA **rejoin** on LoRaWAN, a re-join on P2P (P2P has no ladder). Rejoin attempts back off between tries. With the default settings (EU868, starting at DR5, 900 s report interval), link loss to rejoin takes about 4–5 hours.
 - **ABP** devices cannot rejoin (they never join), so they stay in a degraded state and keep checking the link.
 
 This replaces an earlier failure mode where the device could stop transmitting after a few messages.

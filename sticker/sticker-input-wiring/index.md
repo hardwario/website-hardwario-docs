@@ -36,7 +36,7 @@ Set the switch and the firmware configuration together. Turn ON only the switche
 
 :::warning
 
-The firmware cannot read the DIP switch. If an input is set to `analog` while its switch is in the 1-Wire position, the input floats and the readings are meaningless: the value is reported as `null` and a no-data alarm is raised. On a unit that uses only 1-Wire, set `cap-gpio-mode none`.
+The firmware cannot read the DIP switch. If an input is set to `analog` while its switch is in the 1-Wire position, the input floats and the readings are meaningless: most of them fall outside the 0–30 V plausibility range, so the value is reported as `null` and a no-data alarm is raised, but an occasional wrong value can still get through. On a unit that uses only 1-Wire, set `cap-gpio-mode none`.
 
 :::
 
@@ -50,7 +50,7 @@ Wiring for 1-Wire (Dallas, ...):
 
 ## Dry Contact Input
 Wiring for a dry contact:  
-- 560 kΩ pull-up and grounded through 33 kΩ.  
+- 560 kΩ pull-up to VDD on the input; the connector reaches the input through the 33 kΩ series resistor (S1 switches 2+4 for A, 5+7 for B).  
 
 ![STICKER Dry Contact](images/sticker-dry-contact.png)
 

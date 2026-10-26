@@ -5,7 +5,8 @@
  * order as [items] [color mode toggle] [search bar], which puts the locale
  * dropdown before the theme toggle. We want [GitHub] [theme] [locale] [search],
  * so the localeDropdown item is pulled out of `rightItems` and rendered after
- * the toggle.
+ * the toggle. It also mounts the sliding highlight behind the active left-hand
+ * item (src/components/NavbarActiveIndicator.js).
  *
  * Re-check this file against the upstream source on every Docusaurus major
  * upgrade: node_modules/@docusaurus/theme-classic/src/theme/Navbar/Content/index.tsx
@@ -28,6 +29,7 @@ import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
 import NavbarLogo from '@theme/Navbar/Logo';
 import NavbarSearch from '@theme/Navbar/Search';
 import {useRestoreSidebarState} from '../MobileSidebar/keepOpenAcrossLocales';
+import NavbarActiveIndicator from '../../../components/NavbarActiveIndicator';
 import styles from './styles.module.css';
 
 function useNavbarItems() {
@@ -99,6 +101,7 @@ export default function NavbarContent() {
         <>
           {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
+          <NavbarActiveIndicator />
           <NavbarItems items={leftItems} />
         </>
       }

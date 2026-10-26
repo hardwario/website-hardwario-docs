@@ -1,52 +1,38 @@
 import React from 'react';
+import clsx from 'clsx';
 import {useLocation} from '@docusaurus/router';
 import DropdownNavbarItem from '@theme-original/NavbarItem/DropdownNavbarItem';
 
+// Shows which entry of a dropdown the reader is in, inline after the label
+// ("Products › CHESTER"), and marks the dropdown itself active so it gets the
+// same highlight as a plain navbar link. Styles: .navbar-dropdown-current in
+// src/css/custom.css. Matching uses activeBaseRegex, which also matches the
+// /cs/ prefixed paths.
 export default function DropdownNavbarItemWrapper(props) {
   const {pathname} = useLocation();
-  
-  const activeSubItem = props.items.find(item => {
-    if (item.to && pathname.startsWith(item.to)) return true;
-    if (item.activeBaseRegex && new RegExp(item.activeBaseRegex).test(pathname)) return true;
-    return false;
-  });
 
-  const customLabel = (
-    <span style={{ 
-      position: 'relative', 
-      display: 'inline-block',
-      lineHeight: '2rem' 
-    }}>
-      <span style={{ verticalAlign: 'middle' }}>
-        {props.label}
-      </span>
-      
+  const activeSubItem = props.items.find(
+    (item) => item.activeBaseRegex && new RegExp(item.activeBaseRegex).test(pathname),
+  );
+
+  const label = (
+    <>
+      {props.label}
       {activeSubItem && (
-        <span 
-          className="navbar-custom-sublabel" 
-          style={{ 
-            fontSize: '11px', // O něco větší pro lepší čitelnost stejného fontu
-            fontWeight: 'inherit', // Přebírá tloušťku z hlavního nápisu
-            fontFamily: 'inherit', // Přebírá přesný typ písma
-            color: 'var(--ifm-color-primary)', 
-            whiteSpace: 'nowrap',
-            display: 'flex',
-            alignItems: 'center',
-            textTransform: 'uppercase',
-            lineHeight: '1',
-            letterSpacing: 'inherit' // Přebírá i rozestupy písmen
-          }}>
-          <span style={{ marginRight: '3px', fontSize: '12px' }}>↳</span> 
+        // Keyed by the entry, so a change of entry remounts the span and
+        // replays its fade-in.
+        <span key={activeSubItem.label} className="navbar-dropdown-current">
           {activeSubItem.label}
         </span>
       )}
-    </span>
+    </>
   );
 
   return (
     <DropdownNavbarItem
       {...props}
-      label={customLabel}
+      label={label}
+      className={clsx(props.className, activeSubItem && !props.mobile && 'navbar__link--active')}
     />
   );
 }

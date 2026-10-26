@@ -3,6 +3,14 @@
     "message": "Next",
     "description": "The label for version current"
   },
+  "sidebar.docs.category.User Guide": {
+    "message": "Uživatelská příručka",
+    "description": "The label for category 'User Guide' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Advanced": {
+    "message": "Pokročilé",
+    "description": "The label for category 'Advanced' in sidebar 'docs'"
+  },
   "sidebar.docs.category.Video Tutorials": {
     "message": "Videonávody",
     "description": "The label for category 'Video Tutorials' in sidebar 'docs'"

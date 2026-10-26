@@ -344,6 +344,12 @@
 /download/hio-chester-cert-ec-declaration-of-conformity.pdf  https://www.hardwario.com/resources/declarations/  301
 
 
+# CHESTER: Features stub retired, its content folded into the introduction's
+# Key Features table (2026-10-26)
+/chester/features                                    /chester/                                                       301
+/chester/features/                                   /chester/                                                       301
+
+
 # --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
 # --- every rule after the first splat toward the 100-dynamic-rule limit and
 # --- fails the deploy beyond it; static rules also only win when listed first.

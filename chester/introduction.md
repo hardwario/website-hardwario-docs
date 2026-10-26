@@ -63,7 +63,7 @@ TODO Enable these articles
 
 | Feature | Description |
 |---|---|
-| **Multi-Radio LPWAN** | NB-IoT, LTE-M, LoRaWAN, BLE, and GNSS radio technologies in a single platform. |
+| **Multi-Radio LPWAN** | NB-IoT, LTE-M, LoRaWAN, BLE, and GNSS radio technologies in a single platform: NB-IoT and LTE-M over the Nordic Semiconductor nRF9160, LoRaWAN over the Murata CMWX1ZZABZ-078 module, and BLE over the Nordic Semiconductor nRF52840. |
 | **Catalog Applications** | Ready-to-use firmware for common sensing and control use cases. |
 | **Extension Modules** | Extensible hardware for connecting sensors and external environments. |
 | **HARDWARIO Cloud** | Managed and monitored through the HARDWARIO Cloud platform. |

@@ -54,13 +54,17 @@ const config = {
   // minifier, Lightning CSS, SSG worker threads. The worker threads need the v4
   // flag that drops the legacy postBuild({head}) API, which no plugin here uses;
   // the other v4 flags (CSS cascade layers, storage namespacing) would change
-  // the site and stay off. Two faster options stay off on purpose:
+  // the site and stay off. Three faster options stay off on purpose:
   // - swcHtmlMinimizer: some pages put a raw <p> inside the <b> of a <details>
   //   summary or around a code block (invalid HTML). The SWC HTML minifier then
   //   omits a </p> the browser parser needs, which changed the DOM of 72 built
   //   pages; the default minifier leaves the markup as written.
   // - gitEagerVcs: in a submodule checkout it lost <lastmod> for 481 of 497
   //   sitemap URLs. The default per-file git strategy keeps them.
+  // - rspackPersistentCache: Workers Builds caps the build at 8 GB of RAM and
+  //   killed a cold build (cache not restored) without an error message. With
+  //   the cache on, a cold build of both locales peaks at about 6.6 GB; off,
+  //   about 4.7 GB, in the same build time.
   future: {
     v4: { removeLegacyPostBuildHeadAttribute: true },
     faster: {
@@ -70,7 +74,7 @@ const config = {
       lightningCssMinimizer: true,
       mdxCrossCompilerCache: true,
       rspackBundler: true,
-      rspackPersistentCache: true,
+      rspackPersistentCache: false,
       ssgWorkerThreads: true,
       gitEagerVcs: false,
     },

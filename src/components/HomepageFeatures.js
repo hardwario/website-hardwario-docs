@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import ThemedImage from '@theme/ThemedImage';
 import { translate } from '@docusaurus/Translate';
 import styles from './HomepageFeatures.module.css';
 
@@ -97,7 +98,8 @@ const SmartDevices = [
     title: 'Milesight',
     subtitle: translate({ id: 'home.milesight.subtitle', message: 'LoRaWAN Sensors & Gateways' }),
     link: '/smart-devices/milesight',
-    src: '/img/milesight.webp',
+    src: '/img/milesight-icon.png',
+    icon: true,
     description: translate({
       id: 'home.milesight.description',
       message: 'Wide range of LoRaWAN sensors and gateways for industrial and smart-building deployments.',
@@ -107,7 +109,8 @@ const SmartDevices = [
     title: 'RAKwireless',
     subtitle: translate({ id: 'home.rakwireless.subtitle', message: 'LoRaWAN Gateways' }),
     link: '/smart-devices/rakwireless',
-    src: '/img/rakwireless.svg',
+    src: '/img/rakwireless-icon.svg',
+    icon: true,
     description: translate({
       id: 'home.rakwireless.description',
       message: 'Industrial LoRaWAN gateways and modules for building robust, scalable IoT networks.',
@@ -118,6 +121,7 @@ const SmartDevices = [
     subtitle: translate({ id: 'home.onlogic.subtitle', message: 'Industrial Computers' }),
     link: '/smart-devices/onlogic',
     src: '/img/onlogic.png',
+    icon: true,
     description: translate({
       id: 'home.onlogic.description',
       message: 'Fanless industrial computers engineered for edge computing in harsh environments.',
@@ -128,6 +132,7 @@ const SmartDevices = [
     subtitle: translate({ id: 'home.raspberrypi.subtitle', message: 'Computing Modules' }),
     link: '/smart-devices/raspberry-pi',
     src: '/img/raspberry-pi.webp',
+    icon: true,
     description: translate({
       id: 'home.raspberrypi.description',
       message: 'Compact computing modules for IoT gateways, edge processing, and custom hardware.',
@@ -137,7 +142,9 @@ const SmartDevices = [
     title: 'MikroTik',
     subtitle: translate({ id: 'home.mikrotik.subtitle', message: 'LoRaWAN Networking' }),
     link: '/smart-devices/mikrotik',
-    src: '/img/mikrotik.png',
+    src: '/img/mikrotik-icon.png',
+    icon: true,
+    invertDark: true,
     description: translate({
       id: 'home.mikrotik.description',
       message: 'RouterBOARD-based LoRaWAN gateways and networking equipment for IoT infrastructure.',
@@ -158,6 +165,7 @@ const SmartDevices = [
     subtitle: translate({ id: 'home.nexelec.subtitle', message: 'IoT Safety Sensors' }),
     link: '/smart-devices/nexelec',
     src: '/img/nexelec.svg',
+    invertDark: true,
     description: translate({
       id: 'home.nexelec.description',
       message: 'LoRaWAN-connected fire and CO detection sensors compliant with European safety standards.',
@@ -190,8 +198,9 @@ const CloudAndApps = [
     title: 'ThingsBoard',
     subtitle: translate({ id: 'home.thingsboard.subtitle', message: 'Data Visualization Platform' }),
     link: '/apps/thingsboard/index',
-    src: '/img/thingsboard.svg',
-    imageWide: true,
+    src: '/img/thingsboard-icon.svg',
+    srcDark: '/img/thingsboard-icon-dark.svg',
+    icon: true,
     description: translate({
       id: 'home.thingsboard.description',
       message: 'Open-source IoT platform for data collection, processing, visualization, and device management.',
@@ -201,7 +210,9 @@ const CloudAndApps = [
     title: 'ChirpStack',
     subtitle: translate({ id: 'home.chirpstack.subtitle', message: 'LoRaWAN Network Server' }),
     link: '/apps/chirpstack/index',
-    src: '/img/chirpstack.png',
+    src: '/img/chirpstack-icon.png',
+    icon: true,
+    invertDark: true,
     description: translate({
       id: 'home.chirpstack.description',
       message: 'Open-source LoRaWAN Network Server for connecting and managing LoRaWAN devices.',
@@ -211,7 +222,8 @@ const CloudAndApps = [
     title: 'The Things Stack',
     subtitle: translate({ id: 'home.tts.subtitle', message: 'LoRaWAN Network Solution' }),
     link: '/apps/the-things-stack/index',
-    src: '/img/the-things-stack.svg',
+    src: '/img/the-things-stack-icon.svg',
+    icon: true,
     description: translate({
       id: 'home.tts.description',
       message: 'Enterprise LoRaWAN network server for connecting IoT devices at scale.',
@@ -219,11 +231,25 @@ const CloudAndApps = [
   },
 ];
 
-function ProductCard({ title, subtitle, link, src, imageWide, small, description }) {
+// Brand logos are shown as the brand's icon alone where it has one (`icon`);
+// the card title already names the brand. Dark single-colour artwork either
+// flips in dark mode (`invertDark`) or ships a lighter variant (`srcDark`).
+function ProductCard({ title, subtitle, link, src, srcDark, imageWide, small, icon, invertDark, description }) {
+  const imageClass = [
+    styles.cardImage,
+    imageWide ? styles.cardImageWide : '',
+    small ? styles.cardImageSmall : '',
+    icon ? styles.cardImageIcon : '',
+    invertDark ? styles.cardImageInvertDark : '',
+  ].filter(Boolean).join(' ');
   return (
     <Link to={link} className={styles.card}>
       <div className={`${styles.cardImageWrapper}${small ? ' ' + styles.cardImageWrapperSmall : ''}`}>
-        <img src={src} alt={title} className={[styles.cardImage, imageWide ? styles.cardImageWide : '', small ? styles.cardImageSmall : ''].filter(Boolean).join(' ')} />
+        {srcDark ? (
+          <ThemedImage sources={{ light: src, dark: srcDark }} alt={title} className={imageClass} />
+        ) : (
+          <img src={src} alt={title} className={imageClass} />
+        )}
       </div>
       <div className={styles.cardName}>{title}</div>
       <div className={styles.cardSubtitle}>{subtitle}</div>

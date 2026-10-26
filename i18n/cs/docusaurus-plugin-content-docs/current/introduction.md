@@ -63,7 +63,7 @@ TODO Enable these articles
 
 | Vlastnost | Popis |
 |---|---|
-| **Multi-Radio LPWAN** | Rádiové technologie NB-IoT, LTE-M, LoRaWAN, BLE a GNSS v jedné platformě. |
+| **Multi-Radio LPWAN** | Rádiové technologie NB-IoT, LTE-M, LoRaWAN, BLE a GNSS v jedné platformě: NB-IoT a LTE-M obsluhuje čip Nordic Semiconductor nRF9160, LoRaWAN modul Murata CMWX1ZZABZ-078 a BLE čip Nordic Semiconductor nRF52840. |
 | **Katalogové aplikace** | Hotový firmware pro běžné úlohy měření a řízení. |
 | **Rozšiřující moduly** | Rozšiřitelný hardware pro připojení senzorů a externích prostředí. |
 | **HARDWARIO Cloud** | Správa a monitoring přes platformu HARDWARIO Cloud. |

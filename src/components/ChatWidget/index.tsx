@@ -312,108 +312,60 @@ function ResizeIcon({ expanded }: { expanded: boolean }) {
   );
 }
 
-// The chat mascot: the robot from the brand artwork, redrawn whole, so the
-// launcher shows the same figure as the illustration. Inline rather than an
-// <img> so CSS can reach its parts: the head bobs, the eyes blink, the right
-// arm waves now and then, and the launcher's hover tilts the head. `still`
-// drops every animation hook, for the header, where motion next to text is a
-// distraction; `head` frames just the head and the top of the shoulders, so
-// the header shows a close-up of the same robot rather than a second drawing.
-//
-// Drawn in the illustration's own 2000px coordinates and scaled down by the
-// outer transform, so each part can be checked against the artwork. Strokes are
-// thicker than the artwork's, since they have to survive at 56px.
-//
-// The glow under the face is a wider, translucent copy of the same strokes
-// instead of an SVG filter: a filter needs an id, and two robots on one page
-// would share it.
-const ROBOT_INK = '#2b2f33';
-
-function RobotArm() {
-  // The robot's right arm as it hangs, drawn relative to its shoulder (0, 0) so
-  // the wave can rotate it about that point. The left arm is the same drawing
-  // mirrored.
-  return (
-    <g fill="#e3e8ee" stroke={ROBOT_INK} strokeWidth="26" strokeLinejoin="round">
-      <path d="M0 0C-80-10-145 75-160 195L-145 245C-100 265-40 260-20 245C-10 165 5 75 0 0Z" />
-      {/* Forearm and hand nudged in toward the body: as drawn they stood off
-          it, leaving a gap down the side that made the arms look stuck on.
-          Drawn behind the body, so any overlap tucks under it. */}
-      <g transform="translate(30 0)">
-        <path d="M-170 190C-205 190-235 310-230 450C-210 490-120 500-70 470C-55 350-50 270-55 210C-90 190-140 185-170 190Z" />
-        <path d="M-195 460C-205 530-180 590-130 595L-135 540C-130 510-110 510-100 530L-80 570C-60 550-65 490-75 460Z" />
-      </g>
-    </g>
-  );
-}
-
-function RobotIcon({
+// The assistant: a small robot in the HARDWARIO palette, free-standing rather
+// than inside a button shape, so it reads as a chatbot at a glance. The antenna
+// and the chest light are red nodes like the ones in the circuit mark. Inline
+// rather than an <img> so CSS can reach its parts:
+//   intro  on the page load it floats up, opens its eyes and waves;
+//   idle   it hovers gently over its shadow, blinks now and then, the antenna
+//          sends a signal ring and the chest light breathes;
+//   hover  (launcher) it tilts its head, smiles and waves;
+//   busy   while an answer is being looked up, its eyes scan side to side and
+//          the antenna signals continuously.
+// Colours come from the stylesheet and follow the page theme. `head` frames
+// just the head, for the panel header.
+function RobotMark({
   className,
-  still,
-  head,
   intro,
+  busy,
+  head,
 }: {
   className?: string;
-  still?: boolean;
-  head?: boolean;
   intro?: boolean;
+  busy?: boolean;
+  head?: boolean;
 }) {
-  const a = (name: string) => (still ? undefined : styles[name]);
-  const face = 'M755 560Q807 490 860 560M1070 560Q1122 490 1175 560M870 640Q967 725 1065 640';
-  const svgClass = [className, !still && (intro ? styles.robotIntro : styles.robotBack)]
+  const svgClass = [className, styles.robot, intro && styles.robotIntro, busy && styles.robotBusy]
     .filter(Boolean)
     .join(' ');
   return (
-    <svg className={svgClass} viewBox={head ? '22 3 56 56' : '0 0 100 100'} aria-hidden="true" focusable="false">
-      <g className={a('robotRise')}>
-        <g transform="translate(50 12) scale(0.05) translate(-967 -215)">
-          {/* The waving arm is the one on the viewer's left, which the
-              speech bubble's tail points away from. Unmirrored, a positive
-              rotation still swings it up and outward, so the wave keyframes
-              serve either arm. */}
-          <g transform="translate(600 990)">
-            <g className={a('robotArm')}>
-              <RobotArm />
+    <svg className={svgClass} viewBox={head ? '2 0 44 37' : '0 0 48 64'} aria-hidden="true" focusable="false">
+      {!head && <ellipse className={styles.robotShadow} cx="24" cy="60.5" rx="10" ry="2.2" />}
+      <g className={styles.robotFloat}>
+        {!head && (
+          <g>
+            <g className={styles.robotArmLeft}>
+              <rect className={styles.robotShell} x="8" y="38.5" width="5" height="11" rx="2.5" />
             </g>
-          </g>
-          <g transform="translate(1334 990) scale(-1 1)">
-            <RobotArm />
-          </g>
-          <rect x="825" y="880" width="285" height="60" fill="#6b7680" stroke={ROBOT_INK} strokeWidth="22" />
-          <path
-            d="M967 908C1180 908 1345 960 1345 1150C1345 1450 1170 1690 967 1690C765 1690 590 1450 590 1150C590 960 755 908 967 908Z"
-            fill="#e3e8ee"
-            stroke={ROBOT_INK}
-            strokeWidth="26"
-          />
-          {/* The HARDWARIO mark across the chest: the official artwork from
-              static/img/hardwario-mark.svg (48 x 60), paths unchanged, scaled
-              to fill the chest. Whole and large, it reads as the logo even at
-              launcher size; the earlier hand-drawn trace version was small
-              enough to blur into a red ✕. */}
-          <g transform="translate(799 1020) scale(7)">
-            <path
-              fill="#e30427"
-              d="m5.4,0C2.42,0,0,2.42,0,5.4h0c0,2.28,1.45,4.32,3.6,5.08v13.52c0,.99.81,1.8,1.8,1.8.19,0,.37-.03.55-.09l13.77-4.44c1.02,1.34,2.6,2.12,4.28,2.13,2.98,0,5.4-2.42,5.4-5.4h0c0-2.98-2.42-5.4-5.4-5.4-2.92,0-5.31,2.33-5.39,5.25l-11.41,3.68v-11.05c2.15-.76,3.59-2.79,3.6-5.08C10.8,2.42,8.38,0,5.4,0h0s0,0,0,0Z"
-            />
-            <path
-              fill="#e30427"
-              d="m42.6,60c2.98,0,5.4-2.42,5.4-5.4h0c0-2.28-1.45-4.32-3.6-5.08v-13.52c0-.99-.81-1.8-1.8-1.8-.19,0-.37.03-.55.09l-13.77,4.44c-1.02-1.34-2.6-2.12-4.28-2.13-2.98,0-5.4,2.42-5.4,5.4h0c0,2.98,2.42,5.4,5.4,5.4h0c2.92,0,5.31-2.33,5.39-5.25l11.41-3.68v11.05c-2.15.76-3.59,2.79-3.6,5.08,0,2.98,2.42,5.4,5.4,5.4h0Z"
-            />
-            <path
-              fill="#6b6a6a"
-              d="m42.6,0c-2.98,0-5.4,2.42-5.4,5.4h0c0,2.29,1.44,4.33,3.6,5.09v12.2L4.85,34.29c-.74.24-1.25.93-1.24,1.71v13.51C1.44,50.27,0,52.31,0,54.6c0,2.98,2.42,5.4,5.4,5.4h0c2.98,0,5.4-2.42,5.4-5.4h0c0-2.29-1.44-4.33-3.6-5.09v-12.2l35.95-11.6c.74-.24,1.25-.93,1.25-1.71v-13.52c2.15-.76,3.6-2.8,3.6-5.09C48,2.42,45.58,0,42.6,0h0s0,0,0,0Z"
-            />
-          </g>
-          <g className={a('robotHead')}>
-            <rect x="455" y="440" width="90" height="265" rx="45" fill="#d5dbe2" stroke={ROBOT_INK} strokeWidth="26" />
-            <rect x="1390" y="440" width="90" height="265" rx="45" fill="#d5dbe2" stroke={ROBOT_INK} strokeWidth="26" />
-            <rect x="510" y="215" width="915" height="675" rx="300" fill="#eef1f5" stroke={ROBOT_INK} strokeWidth="26" />
-            <rect x="578" y="318" width="778" height="487" rx="150" fill="#c0272d" stroke={ROBOT_INK} strokeWidth="22" />
-            <g className={a('robotFace')} fill="none" strokeLinecap="round">
-              <path d={face} stroke="#e8fbff" strokeOpacity="0.35" strokeWidth="70" />
-              <path d={face} stroke="#e8fbff" strokeWidth="36" />
+            <g className={styles.robotArmRight}>
+              <rect className={styles.robotShell} x="35" y="38.5" width="5" height="11" rx="2.5" />
             </g>
+            <rect className={styles.robotInk} x="21" y="33.5" width="6" height="4" rx="1" />
+            <rect className={styles.robotShell} x="13" y="36.5" width="22" height="16" rx="6.5" />
+            <circle className={styles.robotChest} cx="24" cy="44.5" r="2.4" />
+          </g>
+        )}
+        <g className={styles.robotHead}>
+          <circle className={styles.robotSignal} cx="24" cy="5" r="2.6" />
+          <path className={styles.robotLine} d="M24 7.6V10.5" />
+          <circle className={styles.robotNode} cx="24" cy="5" r="2.6" />
+          <rect className={styles.robotInk} x="4.2" y="17" width="3.4" height="8.5" rx="1.7" />
+          <rect className={styles.robotInk} x="40.4" y="17" width="3.4" height="8.5" rx="1.7" />
+          <rect className={styles.robotShell} x="7.5" y="10.5" width="33" height="24" rx="8" />
+          <rect className={styles.robotVisor} x="11.5" y="15.3" width="25" height="14.2" rx="5.5" />
+          <g className={styles.robotEyes}>
+            <rect className={styles.robotEye} x="17" y="19.2" width="3.8" height="6.2" rx="1.9" />
+            <rect className={styles.robotEye} x="27.2" y="19.2" width="3.8" height="6.2" rx="1.9" />
           </g>
         </g>
       </g>
@@ -521,9 +473,9 @@ export default function ChatWidget() {
   // Which answers have their extra sources unfolded, by message index.
   const [showAllSources, setShowAllSources] = useState<Record<number, boolean>>({});
   const [teaser, setTeaser] = useState(false);
-  // The robot's entrance (rising into the circle, then a few waves) is for the
+  // The robot's entrance (floating up, waking, waving) is for the
   // page load only. Closing the chat remounts the robot, and replaying the
-  // entrance then left the circle half empty for most of a second.
+  // entrance every time would make the button flicker in and out.
   const [intro, setIntro] = useState(true);
   // Ratings by message index, cleared with the conversation they belong to.
   const [ratings, setRatings] = useState<Record<number, Rating>>({});
@@ -730,10 +682,11 @@ export default function ChatWidget() {
           <div className={styles.header}>
             <div className={styles.headerLeft}>
               {/* The same robot as the launcher button, so the panel is visibly
-                  the thing that was just clicked. Decorative: the title beside
-                  it already names it. */}
+                  the thing that was just clicked. Its eyes scan while an
+                  answer is being looked up. Decorative: the title beside it
+                  already names it. */}
               <span className={styles.headerAvatar}>
-                <RobotIcon className={styles.headerIcon} still head />
+                <RobotMark className={styles.headerIcon} busy={loading} head />
               </span>
               <div className={styles.headerText}>
                 <span className={styles.headerTitle}>{t.title}</span>
@@ -946,7 +899,7 @@ export default function ChatWidget() {
       {teaser && !open && (
         <div className={styles.teaser}>
           {/* The message is itself a way in: clicking it opens the chat, as
-              the robot it points at would. */}
+              the button it points at would. */}
           <button type="button" className={styles.teaserText} onClick={() => setOpen(true)}>
             {t.teaser}
           </button>
@@ -973,7 +926,7 @@ export default function ChatWidget() {
         {open ? (
           <span className={styles.fabX} aria-hidden="true">✕</span>
         ) : (
-          <RobotIcon className={styles.fabIcon} intro={intro} />
+          <RobotMark className={styles.fabIcon} intro={intro} />
         )}
       </button>
     </div>

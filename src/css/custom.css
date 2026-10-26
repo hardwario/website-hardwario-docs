@@ -49,69 +49,123 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   color: rgb(221, 221, 221); /* Slightly different shade for subtitle */
 }
 
-/* Zvýšíme trochu navbar, aby se tam vešly ty "visací" popisky */
-.navbar {
-  min-height: 4.5rem;
-}
-
-/* Zajistíme, aby se položky centrovaly k horní části/středu a neplavaly */
-.navbar__items {
-  align-items: center;
-}
-
-/* Mezera mezi položkami, aby se podnadpisy nepletly do sebe */
-.navbar__item {
-  margin: 0 4px;
-}
-
-/* Skryje podnadpis v mobilním menu, pokud je sekce rozbalená (šipka dole) */
-.menu__list-item:not(.menu__list-item--collapsed) .navbar-custom-sublabel {
-  display: none !important;
-}
-
-/* Volitelné: Úprava pozice v mobilním menu, aby se popisek nekryl s linkou */
-.menu__list-item .navbar-custom-sublabel {
-  position: relative !important; /* V mobilu je lepší relativní pozice */
-  bottom: 0 !important;
-  margin-top: 2px;
-}
-
-/* Na desktopu ale chceme nechat to původní absolutní pozicování */
+/* --- Top navbar ---
+   Every top-level item (plain link or dropdown) is drawn the same way: a
+   rounded pill that tints on hover. The item of the section the reader is in
+   turns brand-red, and a single red pill (src/components/NavbarActiveIndicator)
+   slides behind it from item to item. A dropdown also names the current page's entry inline
+   ("Products › CHESTER", see src/theme/NavbarItem/DropdownNavbarItem), and its
+   caret is a thin chevron instead of Infima's filled triangle. Desktop only:
+   the mobile menu keeps the Infima list look. */
 @media (min-width: 997px) {
-  .navbar-custom-sublabel {
-    position: absolute !important;
-    bottom: -10px !important;
+  .navbar__items:not(.navbar__items--right) > .navbar__item {
+    margin: 0 2px;
   }
-}
 
-/* --- LOGIKA PODPISKU (SUB-LABEL) --- */
+  .navbar__items:not(.navbar__items--right) .navbar__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: var(--ifm-font-weight-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
 
-.navbar-custom-sublabel {
-  /* Zajišťuje, že se použije stejný font jako u .navbar__link */
-  font-family: var(--ifm-font-family-base); 
-}
+  .navbar__items:not(.navbar__items--right) .navbar__link:hover {
+    background: var(--ifm-color-emphasis-200);
+    color: var(--ifm-navbar-link-color);
+  }
 
-/* Desktop: Popisek "visí" pod hlavním textem */
-@media (min-width: 997px) {
-  .navbar-custom-sublabel {
-    position: absolute !important;
-    bottom: -12px !important; /* Mírně posunuto dolů kvůli stejnému fontu */
+  .navbar__items:not(.navbar__items--right) {
+    position: relative;
+  }
+
+  .navbar__items:not(.navbar__items--right) > .navbar__item {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* The pill itself is the indicator element; the active link stays clear. */
+  .navbar__items:not(.navbar__items--right) .navbar__link--active,
+  .navbar__items:not(.navbar__items--right) .navbar__link--active:hover {
+    background: transparent;
+    color: var(--ifm-color-primary);
+  }
+
+  [data-theme='dark'] .navbar__items:not(.navbar__items--right) .navbar__link--active,
+  [data-theme='dark'] .navbar__items:not(.navbar__items--right) .navbar__link--active:hover {
+    color: #ff5a6e;
+  }
+
+  .navbar-active-indicator {
+    display: block;
+    position: absolute;
+    top: 0;
     left: 0;
+    z-index: 0;
+    border-radius: 999px;
+    background: rgba(227, 4, 39, 0.08);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.2s ease;
+  }
+
+  [data-theme='dark'] .navbar-active-indicator {
+    background: rgba(227, 4, 39, 0.16);
+  }
+
+  .navbar .dropdown > .navbar__link::after {
+    content: '';
+    width: 0.4em;
+    height: 0.4em;
+    margin-left: 0.5em;
+    border: solid currentColor;
+    border-width: 0 1.5px 1.5px 0;
+    top: -0.12em;
+    transform: rotate(45deg);
+    opacity: 0.55;
   }
 }
 
-/* Mobil: Popisek je relativně pod textem */
+/* Mobile has no row of items to slide between. */
 @media (max-width: 996px) {
-  .navbar-custom-sublabel {
-    position: relative !important;
-    margin-top: 2px;
-    margin-bottom: 4px;
+  .navbar-active-indicator {
+    display: none;
   }
 }
 
-/* Skrytí popisku při rozbaleném menu v mobilu */
-.menu__list-item:not(.menu__list-item--collapsed) .navbar-custom-sublabel {
-  display: none !important;
+/* "Products › CHESTER": the current section entry inside a dropdown label.
+   Remounted on every change of entry (keyed in the component), so the new
+   name fades in while the pill slides. */
+.navbar-dropdown-current {
+  display: inline-block;
+  animation: navbar-current-in 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 0.4em;
+  font-weight: var(--ifm-font-weight-bold);
+  color: var(--ifm-color-primary);
+}
+
+.navbar-dropdown-current::before {
+  content: '›';
+  margin-right: 0.4em;
+  font-weight: var(--ifm-font-weight-normal);
+  opacity: 0.5;
+}
+
+[data-theme='dark'] .navbar-dropdown-current {
+  color: #ff5a6e;
+}
+
+/* The mobile menu lists the entries right below; the inline name only
+   repeats them once the dropdown is open. */
+.menu__list-item:not(.menu__list-item--collapsed) .navbar-dropdown-current {
+  display: none;
 }
 
 /* Firmware builds table — column width adjustments */
@@ -162,17 +216,16 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   color: var(--ifm-color-primary);
 }
 
-/* Back-to-top sits above the chat launcher instead of under it. Both hug the
-   bottom-right corner, so at the default position the chat button covered it.
-   Half the launcher's size (52px -> 26px), centred on it, with the same gap the
-   chat widget uses between the launcher and its panel. The numbers follow
-   src/components/ChatWidget/styles.module.css: inset 24px (12px on phones),
-   gap 12px (10px on phones). */
+/* Back-to-top sits above the chat robot instead of under it. Both hug the
+   bottom-right corner, so at the default position the robot covered it.
+   Centred over the robot (inset 24px, 60 x 80px; on phones inset 12px,
+   46 x 62px) with an 8px gap. The numbers follow
+   src/components/ChatWidget/styles.module.css. */
 button.theme-back-to-top-button {
   width: 26px;
   height: 26px;
-  right: calc(24px + (52px - 26px) / 2);
-  bottom: calc(24px + 52px + 12px);
+  right: calc(24px + (60px - 26px) / 2);
+  bottom: calc(24px + 80px + 8px);
 }
 
 button.theme-back-to-top-button::after {
@@ -182,7 +235,53 @@ button.theme-back-to-top-button::after {
 
 @media (max-width: 480px) {
   button.theme-back-to-top-button {
-    right: calc(12px + (52px - 26px) / 2);
-    bottom: calc(12px + 52px + 10px);
+    right: calc(12px + (46px - 26px) / 2);
+    bottom: calc(12px + 62px + 8px);
+  }
+}
+
+/* Sidebar section headings ("User Guide" / "Advanced"): non-collapsible
+   top-level categories in the sidebars, styled as plain headings with a rule
+   above. Their pages keep the indentation of top-level items. */
+.menu__list-item.sidebar-section {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+.menu__list-item.sidebar-section > .menu__list-item-collapsible {
+  pointer-events: none;
+}
+
+.menu__list-item.sidebar-section > .menu__list-item-collapsible > .menu__link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+  background: none;
+}
+
+.menu__list-item.sidebar-section > .menu__list {
+  padding-left: 0;
+}
+
+@keyframes navbar-current-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.35em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-active-indicator {
+    transition: none !important;
+  }
+  .navbar-dropdown-current {
+    animation: none;
   }
 }

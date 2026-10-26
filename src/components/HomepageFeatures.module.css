@@ -113,6 +113,17 @@
   max-width: 190px;
 }
 
+/* Brand icon without its wordmark: square-ish artwork, so it is sized by
+   height to sit level with the HARDWARIO marks in the same row. */
+.cardImageIcon {
+  height: 72px;
+  max-height: 72px;
+}
+
+[data-theme='dark'] .cardImageInvertDark {
+  filter: invert(1);
+}
+
 .cardIcon {
   height: 64px;
   width: 64px;

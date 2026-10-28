@@ -88,7 +88,6 @@ To get all available commands just type **`bcf --help`** to your **CLI**
 bcf --help output
 </b>
 </summary>
-<p>
 
   ``` showLineNumbers
   Usage: bcf [OPTIONS] COMMAND [ARGS]...
@@ -118,7 +117,6 @@ bcf --help output
   update   Update list of available firmware.
   ```
 
-</p>
 </details>
 
 :::

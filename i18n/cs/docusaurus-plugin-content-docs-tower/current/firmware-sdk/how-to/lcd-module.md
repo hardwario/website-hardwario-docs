@@ -65,7 +65,6 @@ Tento příklad vypíše na displej text a po stisknutí kteréhokoli tlačítka
 Příklad kódu: LED na modulu LCD
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -106,7 +105,6 @@ Příklad kódu: LED na modulu LCD
   }
   ```
 
-</p>
 </details>
 
 ### Tlačítka LCD {#lcd-buttons}
@@ -127,7 +125,6 @@ Pokud podržíte obě tlačítka, LED budou rychle blikat.
 Příklad kódu: tlačítka modulu LCD
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -165,5 +162,4 @@ Příklad kódu: tlačítka modulu LCD
   }
   ```
 
-</p>
 </details>

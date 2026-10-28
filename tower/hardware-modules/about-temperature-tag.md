@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/temperature-tag.png')} alt="Temperature Tag, a coin-sized board with the TMP112 temperature sensor" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Temperature Tag</b> uses a high-accuracy temperature sensor <b>TMP112</b> with a typical accuracy of <b>±0.1 °C at 25 °C</b>. This sensor is digital and calibrated. It communicates using an <b>I²C bus</b> and features a very low power operation and shutdown mode.
-      </p>
+
     </div>
   </div>
 </div>

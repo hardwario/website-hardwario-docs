@@ -57,7 +57,6 @@ Klikněte na ikonu **Dashboard** nad seznamem zpráv, vložte funkci, která z k
 
 <details>
 <summary><b>Zobrazit příklad</b></summary>
-<p>
 
 ```js
 return {
@@ -66,14 +65,12 @@ return {
 }
 ```
 
-</p>
 </details>
 
 **Příklad: vykreslení všech měření z agregovaného pole**
 
 <details>
 <summary><b>Zobrazit příklad</b></summary>
-<p>
 
 ```js
 const points = message.body?.hygrometer?.temperature?.measurements?.map(m => m.avg);
@@ -83,7 +80,6 @@ return {
 }
 ```
 
-</p>
 </details>
 
 :::info

@@ -38,7 +38,6 @@ In the example below, the relay on the **Relay Module** will turn **On/Off** eve
 Relay Module Pulse Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -67,5 +66,4 @@ Relay Module Pulse Code Example
   }
   ```
 
-</p>
 </details>

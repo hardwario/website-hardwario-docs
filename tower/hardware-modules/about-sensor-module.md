@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/sensor-module.png')} alt="Sensor Module with a five-pole pluggable terminal block for the universal inputs and outputs" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The Sensor Module features up to four universal inputs or outputs on a pluggable terminal block with 1-Wire bus master support. The terminals can be used as both analog and digital input/output. For example, you can connect various external digital, analog or resistive sensors. Also, you can communicate with other devices on a 1-Wire bus.
-      </p>
-      <p>
+
         The terminals are connected to the HARDWARIO TOWER header signals. A is P4/A4/DAC0, B is P5/A5/DAC1 and C is P7/A6.
-      </p>
+
     </div>
   </div>
 </div>

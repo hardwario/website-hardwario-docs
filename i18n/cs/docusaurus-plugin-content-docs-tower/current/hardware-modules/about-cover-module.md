@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/cover-module.png')} alt="Cover Module, jednoduchý černý čelní panel s ventilačními drážkami a čtyřmi montážními otvory" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Cover Module</b> je jednoduchý mechanický díl, který slouží k zakrytí čelní strany elektroniky HARDWARIO (větší formát 88 x 55 mm). <b>Vypadá výborně</b> v kombinaci s některou z našich <a href="https://www.hardwario.store/enclosures/"><b>3D tištěných krabiček</b></a>. Stačí ho spodními kolíky zacvaknout do dutinkové lišty HARDWARIO.
-      </p>
+
     </div>
   </div>
 </div>

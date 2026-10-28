@@ -41,7 +41,6 @@ Pravidelné hlášení tak, jak ho dekóduje dekodér `ttn.js` z verze v2.0.0 (f
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
-<p>
 
 ```json
 {
@@ -66,7 +65,6 @@ Pravidelné hlášení tak, jak ho dekóduje dekodér `ttn.js` z verze v2.0.0 (f
 }
 ```
 
-</p>
 </details>
 
 ## Stavová LED {#status-led}

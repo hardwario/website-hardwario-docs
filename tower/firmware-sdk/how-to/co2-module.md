@@ -26,7 +26,6 @@ The module uses [**infrared light for measurements**](https://en.wikipedia.org/w
 CO₂ Over Radio Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -55,5 +54,4 @@ CO₂ Over Radio Code Example
   }
   ```
 
-</p>
 </details>

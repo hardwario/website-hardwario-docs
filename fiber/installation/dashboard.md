@@ -26,7 +26,6 @@ but not required.
 
    <details>
    <summary><b>Click to expand: full index.html code</b></summary>
-   <p>
 
    ```sh
    cat << 'EOF' > ~/fiber-dashboard/index.html
@@ -283,7 +282,6 @@ but not required.
    EOF
    ```
 
-   </p>
    </details>
 
 1. Fill in your actual SSH username: the page can't detect it from the browser, so bake it in
@@ -308,7 +306,6 @@ but not required.
 
    <details>
    <summary><b>Click to expand: full serve.py code</b></summary>
-   <p>
 
    ```sh
    cat << 'EOF' > ~/fiber-dashboard/serve.py
@@ -409,7 +406,6 @@ but not required.
    EOF
    ```
 
-   </p>
    </details>
 
 1. Run it as a systemd service (root is required to bind port 80 without `setcap`/`authbind`):

@@ -109,9 +109,7 @@ Hodnoty součástek (horní strana):
 
 <details>
 <summary><b>Zobrazit schéma (MACHINE PROBE R1.3)</b></summary>
-<p>
 
 ![MACHINE PROBE R1.3: schéma](../../../../../sticker/sticker-input-wiring/images/machine-probe-schematic.png)
 
-</p>
 </details>

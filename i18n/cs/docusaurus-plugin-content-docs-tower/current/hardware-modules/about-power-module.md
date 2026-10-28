@@ -10,15 +10,13 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/power-module.png')} alt="Power Module s výkonovým relé, souosým DC konektorem a svorkovnicí pro digitální LED pásek" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         K modulu <b>Power Module</b> připojíte napájecí adaptér 5 V DC přes standardní napájecí konektor 2,1 mm. Má <b>výkonové relé</b> (230 V AC / 16 A) pro ovládání spotřebičů a můžete s ním řídit i <b>digitální LED pásek</b> (kompatibilní s WS2812B).
-      </p>
-      <p>
+
         Díky integrovanému regulátoru LDO napájí modul i uzel sady HARDWARIO TOWER Industrial IoT Kit. Regulátor LDO vyrábí ze vstupních 5 V výstupní napětí 3,3 V.
-      </p>
-      <p>
+
         Na spolehlivosti záleží, a proto má vstup napájecího konektoru inteligentní ochranu proti přepětí, podpětí a přepólování. Vstupní napětí tak vždy zůstane ve správných mezích.
-      </p>
+
     </div>
   </div>
 </div>

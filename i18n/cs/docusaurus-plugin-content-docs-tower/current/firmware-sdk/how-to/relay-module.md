@@ -38,7 +38,6 @@ V příkladu níže se relé na modulu **Relay Module** při každém stisknutí
 Příklad kódu: přepínání relé na modulu Relay Module
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -67,5 +66,4 @@ Příklad kódu: přepínání relé na modulu Relay Module
   }
   ```
 
-</p>
 </details>

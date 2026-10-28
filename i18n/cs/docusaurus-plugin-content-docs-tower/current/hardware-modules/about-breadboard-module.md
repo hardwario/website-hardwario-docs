@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/breadboard-module.png')} alt="Breadboard Module s dutinkovými lištami pro moduly a úzkým vývodem pro nepájivé kontaktní pole" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Breadboard Module</b> snadno připojí libovolný modul sady <b>HARDWARIO TOWER Industrial IoT Kit</b> k nepájivému kontaktnímu poli. Díky zúženému vývodu zbývá víc místa pro <b>zapojování a prototypování</b>.
-      </p>
-      <p>
+
         <b>Přesné kolíkové lišty</b> na spodní straně se do <b>kontaktního pole</b> hladce zasunou a nenamáhají jeho dutinky.
-      </p>
+
     </div>
   </div>
 </div>

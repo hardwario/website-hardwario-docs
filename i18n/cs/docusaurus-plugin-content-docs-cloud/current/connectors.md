@@ -121,7 +121,6 @@ Transformační funkce dostane objekt `job` s touto strukturou:
 
 <details>
 <summary><b>Zobrazit strukturu objektu `job`</b></summary>
-<p>
 
 ```json
 {
@@ -152,7 +151,6 @@ Transformační funkce dostane objekt `job` s touto strukturou:
 }
 ```
 
-</p>
 </details>
 
 ## Testování konektoru {#testing-your-connector}

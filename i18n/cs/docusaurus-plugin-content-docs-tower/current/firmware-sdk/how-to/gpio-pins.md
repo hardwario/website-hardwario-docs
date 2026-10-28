@@ -23,7 +23,6 @@ Tento příklad rozsvítí **LED na modulu Core Module**. Běžnější a pohodl
 Příklad kódu: GPIO jako výstup
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -36,7 +35,6 @@ Příklad kódu: GPIO jako výstup
   }
   ```
 
-</p>
 </details>
 
 :::info
@@ -51,7 +49,6 @@ Tento příklad **přečte stav tlačítka** a podle něj **LED zapne, nebo vypn
 Příklad kódu: GPIO jako vstup a výstup
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -78,5 +75,4 @@ Příklad kódu: GPIO jako vstup a výstup
   }
   ```
 
-</p>
 </details>

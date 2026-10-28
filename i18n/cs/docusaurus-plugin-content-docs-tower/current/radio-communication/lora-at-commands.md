@@ -41,7 +41,6 @@ Všechny dostupné příkazy vypíšete příkazem `AT$HELP`. Které příkazy j
 Příklad výstupu AT$HELP
 </b>
 </summary>
-<p>
 
 ```showLineNumbers
 AT$HELP
@@ -73,7 +72,6 @@ AT+CLAC List all available AT commands
 AT$HELP This help
 ```
 
-</p>
 </details>
 
 ### Čtení hodnoty {#read-value}

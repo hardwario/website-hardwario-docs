@@ -38,7 +38,6 @@ This example sets up the RTC to **10.5.2020 18:26:10**.
 RTC Structure Setup Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   struct tm datetime;
@@ -53,7 +52,7 @@ RTC Structure Setup Code Example
 
   twr_rtc_set_datetime(&datetime, 0);
   ```
-</p>
+
 </details>
 
 :::tip
@@ -72,7 +71,6 @@ Year register value 0 stands for 1900 and value 199 stands for 2099.
 RTC Get Datetime Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   struct tm datetime;
@@ -80,7 +78,6 @@ RTC Get Datetime Code Example
   twr_log_debug("$DATE: \"%d-%02d-%02dT%02d:%02d:%02dZ\"", datetime.tm_year, datetime.tm_mon, datetime.tm_mday, datetime.tm_hour, datetime.tm_min, datetime.tm_sec);
   ```
 
-</p>
 </details>
 
 :::tip

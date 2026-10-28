@@ -53,14 +53,12 @@ For example, you can read 8 bits of data from memory address `0x01` over `I2C_0`
 Read 8 bits over I²C Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   uint8_t reg_configuration;
   twr_i2c_memory_read_8b(TWR_I2C_I2C0, 0x48, 0x01, &reg_configuration);
   ```
 
-</p>
 </details>
 
 :::info
@@ -75,7 +73,6 @@ To read more data over **I²C** you have to create a `twr_i2c_memory_transfer_t`
 Read custom number of bits over I²C Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   twr_i2c_memory_transfer_t transfer;
@@ -89,7 +86,6 @@ Read custom number of bits over I²C Code Example
   twr_i2c_memory_read(TWR_I2C_I2C0, &transfer);
   ```
 
-</p>
 </details>
 
 
@@ -114,13 +110,11 @@ For example, you can write 8 bits, `0x81` to be specific, of data to memory addr
 Write 8 bits over I²C Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   twr_i2c_memory_write_8b(TWR_I2C_I2C0, 0x48, 0x01, 0x81);
   ```
 
-</p>
 </details>
 
 :::info
@@ -135,7 +129,6 @@ To write more data over **I²C** you have to create a `twr_i2c_memory_transfer_t
 Write custom number of bits over I²C Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   twr_i2c_memory_transfer_t transfer;
@@ -149,5 +142,4 @@ Write custom number of bits over I²C Code Example
   twr_i2c_memory_read(TWR_I2C_I2C0, &transfer);
   ```
 
-</p>
 </details>

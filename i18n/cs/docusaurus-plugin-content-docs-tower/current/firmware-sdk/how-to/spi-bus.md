@@ -62,7 +62,6 @@ Pak spustíte **blokující přenos** a počkáte, až skončí.
 Příklad kódu: synchronní přenos SPI
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   uint8_t tx_buffer[2] = { 0x20, 0x00 };
@@ -71,7 +70,6 @@ Příklad kódu: synchronní přenos SPI
   twr_spi_transfer(tx_buffer, rx_buffer, sizeof(rx_buffer));
   ```
 
-</p>
 </details>
 
 :::note
@@ -96,7 +94,6 @@ Jde o **neblokující** přenos: po jeho dokončení se **zavolá funkce callbac
 Příklad kódu: asynchronní přenos SPI
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   // In async transmit the buffers must be global or
@@ -125,5 +122,4 @@ Příklad kódu: asynchronní přenos SPI
   }
   ```
 
-</p>
 </details>

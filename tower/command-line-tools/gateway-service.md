@@ -75,7 +75,6 @@ To get all available commands just type **`bcg --help`** to your **CLI**
 bcg --help output
 </b>
 </summary>
-<p>
 
   ``` showLineNumbers
   Usage: bcg [OPTIONS] COMMAND [ARGS]...
@@ -103,7 +102,6 @@ bcg --help output
   help     Show help.
   ```
 
-</p>
 </details>
 
 :::

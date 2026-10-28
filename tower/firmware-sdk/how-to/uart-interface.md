@@ -34,7 +34,6 @@ This writing is blocking, you will have to wait before the write is done.
 Synchronous UART Write Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -47,7 +46,6 @@ Synchronous UART Write Code Example
   }
   ```
 
-</p>
 </details>
 
 
@@ -67,7 +65,6 @@ In this example, we demonstrate just the **async write**.
 Asynchronous UART Write Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -97,7 +94,6 @@ Asynchronous UART Write Code Example
   }
   ```
 
-</p>
 </details>
 
 ## UART Read
@@ -112,7 +108,6 @@ There are again two options to **read received bytes**. You can read data **sync
 Synchronous UART Read Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   void application_task()
@@ -130,7 +125,6 @@ Synchronous UART Read Code Example
   }
   ```
 
-</p>
 </details>
 
 ### Asynchronous Read
@@ -156,7 +150,6 @@ This example is not low power. If you start UART reading with `twr_uart_async_re
 Asynchronous UART Read Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -208,5 +201,4 @@ Asynchronous UART Read Code Example
   }
   ```
 
-</p>
 </details>

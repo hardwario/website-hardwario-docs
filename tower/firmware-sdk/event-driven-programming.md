@@ -34,7 +34,6 @@ The functions must have a **specific signature** for every module and tag, you c
 Button Event Handler Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -81,7 +80,6 @@ Button Event Handler Code Example
   }
   ```
 
-</p>
 </details>
 
 :::info
@@ -98,7 +96,6 @@ Button Event Handler Code Example
 Temperature Sensor Event Handler Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -131,5 +128,4 @@ Temperature Sensor Event Handler Code Example
   }
   ```
 
-</p>
 </details>

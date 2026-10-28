@@ -42,7 +42,6 @@ TWR_MODULE_BATTERY_EVENT_LEVEL_CRITICAL
 Voltage Over USB Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -80,7 +79,6 @@ Voltage Over USB Code Example
   }
   ```
 
-</p>
 </details>
 
 :::info
@@ -97,7 +95,6 @@ Voltage Over USB Code Example
 Voltage Periodically Over Radio Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -137,5 +134,4 @@ Voltage Periodically Over Radio Code Example
 
   ```
 
-</p>
 </details>

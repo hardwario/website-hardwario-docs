@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/barometer-tag.png')} alt="Barometer Tag, a coin-sized board with the MPL3115A2 pressure sensor" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Barometer Tag</b> allows you to measure absolute pressure in the range from <b>20 kPa</b> to <b>110 kPa</b>, or altitude above sea level in meters. It uses a <b>low-power I²C sensor MPL3115A2</b> with an absolute accuracy of ±0.4 kPa. It features a very low active and standby current.
-      </p>
-      <p>
+
         Monitoring of absolute pressure is useful for <b>weather forecast</b> and it is also an important parameter in biometeorology because absolute pressure <b>can affect our health.</b>
-      </p>
+
     </div>
   </div>
 </div>

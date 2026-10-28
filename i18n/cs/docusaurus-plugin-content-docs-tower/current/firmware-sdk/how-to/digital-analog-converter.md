@@ -26,7 +26,6 @@ Oba kanály mohou běžet úplně samostatně s různými vzorkovacími frekvenc
 Příklad kódu: generátor sinusovky
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -84,5 +83,4 @@ Příklad kódu: generátor sinusovky
   }
   ```
 
-</p>
 </details>

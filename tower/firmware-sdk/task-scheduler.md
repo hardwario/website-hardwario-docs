@@ -30,7 +30,6 @@ You can also save the task ID when registering a task. Thanks to this you will b
 Run Task Once Code Example
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -52,7 +51,7 @@ void application_init(void)
     turn_off_lcd_task_id = twr_scheduler_register(disableLCD, NULL, twr_tick_get() + 5000);
 }
 ```
-</p>
+
 </details>
 
 ## Unregistering a Task
@@ -107,7 +106,6 @@ For example, if you want to **turn the LCD on and off after 5 seconds** you can 
 Run Current Task Code Example
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -140,7 +138,6 @@ void application_init(void) {
 }
 ```
 
-</p>
 </details>
 
 :::info
@@ -157,7 +154,6 @@ For example, if you want to **turn the LCD off 5 seconds after pushing a button*
 Run Task From Anywhere Code Example
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -190,5 +186,4 @@ void application_init(void) {
 }
 ```
 
-</p>
 </details>

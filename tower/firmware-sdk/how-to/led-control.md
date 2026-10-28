@@ -22,7 +22,6 @@ In this simple example, the LED will be initialized and then it will blink conti
 Simple Blinking LED Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -36,7 +35,6 @@ Simple Blinking LED Code Example
   }
   ```
 
-</p>
 </details>
 
 :::info
@@ -53,7 +51,6 @@ Also, the LED will blink at the start of the program. This is useful for most fi
 Button Controlled LED Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -83,6 +80,5 @@ Button Controlled LED Code Example
   }
   ```
 
-</p>
 </details>
 

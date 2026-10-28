@@ -58,7 +58,6 @@ Klíče telemetrie často obsahují tečky (například hygrometer.temperature.a
 
 <details>
 <summary><b>Zobrazit skript</b></summary>
-<p>
 
 ```javascript
 // Initialize default values to prevent "is not defined" errors in email templates
@@ -96,7 +95,6 @@ metadata.formattedTime = day + "." + month + "." + year + " " + hours + ":" + mi
 return {msg: msg, metadata: metadata, msgType: msgType};
 ```
 
-</p>
 </details>
 
 * **Spojení:** Spojte uzel Device Filter s tímto uzlem linkou True.
@@ -209,7 +207,6 @@ Upravte stávající skripty prahových filtrů (například `Temperature < 17`)
 
 <details>
 <summary><b>Zobrazit ukázku skriptu</b></summary>
-<p>
 
 ```javascript
 var currentTime = new Date().getTime();
@@ -225,7 +222,6 @@ if (msg['hygrometer.temperature.avg'] < 17) {
 return false; // Do not send email
 ```
 
-</p>
 </details>
 
 *(Tuto logiku použijte u všech prahových filtrů.)*

@@ -57,7 +57,6 @@ Click the **Dashboard** icon above the message list, paste a function that extra
 
 <details>
 <summary><b>Show Example</b></summary>
-<p>
 
 ```js
 return {
@@ -66,14 +65,12 @@ return {
 }
 ```
 
-</p>
 </details>
 
 **Example: plot all measurements from an aggregated array**
 
 <details>
 <summary><b>Show Example</b></summary>
-<p>
 
 ```js
 const points = message.body?.hygrometer?.temperature?.measurements?.map(m => m.avg);
@@ -83,7 +80,6 @@ return {
 }
 ```
 
-</p>
 </details>
 
 :::info

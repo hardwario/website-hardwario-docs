@@ -41,7 +41,6 @@ To list all possible commands use `AT$HELP`. The set of supported commands will 
 AT$HELP Example Output
 </b>
 </summary>
-<p>
 
 ```showLineNumbers
 AT$HELP
@@ -73,7 +72,6 @@ AT+CLAC List all available AT commands
 AT$HELP This help
 ```
 
-</p>
 </details>
 
 ### Read Value

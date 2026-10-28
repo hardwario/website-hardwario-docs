@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/soil-sensor.png')} alt="Soil Moisture Sensor probe with a printed depth scale and a long cable ending in three ferruled wires" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Soil Moisture Sensor</b> is a modern, completely sealed capacitive moisture sensor with a temperature sensor. It is using 1-Wire communication protocol and has 3 wire cable that is 2 meters long. Many sensors can be connected to a single 1-Wire Master. The temperature sensor is located in the top part above the soil. The electronics are completely potted in a sealing compound to withstand all kinds of weather.
-      </p>
-      <p>
+
         The sensor returns soil moisture humidity using relative values. The sensor is very sensitive and you can get a range from 6500 when the sensor is dry and 13000 when the sensor is fully submerged in the water. Measuring is done by two copper strips inside the inner layers of the 4-layer PCB. This way the contacts are not exposed to direct humidity and do not oxidize.
-      </p>
+
     </div>
   </div>
 </div>

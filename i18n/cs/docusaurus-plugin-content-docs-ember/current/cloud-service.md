@@ -141,7 +141,6 @@ Níže je příklad funkce pro **Node-RED** (v jazyce **JavaScript**), která de
 
 <details>
 <summary><b>Zobrazit dekódovací funkci pro Node-RED</b></summary>
-<p>
 
 ```js
 if (msg.payload.applicationName !== 'ember-application-chester-clime') {
@@ -273,7 +272,6 @@ function decode(buffer) {
 }
 ```
 
-</p>
 </details>
 
 Dekódovaná data můžete dále zpracovávat, například je převést na skalární hodnoty nebo k nim přidat atributy. Posledním krokem flow by mělo být doručení dat přes některý běžný konektor, např. požadavkem **HTTPS**.

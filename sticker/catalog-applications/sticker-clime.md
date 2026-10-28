@@ -38,7 +38,6 @@ A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). Temperatu
 
 <details>
 <summary><b>Show JSON Example</b></summary>
-<p>
 
 ```json
 {
@@ -54,7 +53,6 @@ A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). Temperatu
 }
 ```
 
-</p>
 </details>
 
 ## Status LED

@@ -10,15 +10,13 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/lora-module.png')} alt="LoRa Module se stíněným rádiem LoRa a anténním konektorem SMA" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>LoRa Module</b> komunikuje v <b>bezdrátové síti LoRaWAN</b>, tedy v síti určené pro IoT. Zařízení na baterie s ní může posílat data přímo na server i několik let. Modul pracuje na <b>rádiové frekvenci 868 MHz</b>.
-      </p>
-      <p>
+
         Díky specifické zig-zag modulaci může zařízení LoRa komunikovat s bránou na vzdálenost desítek kilometrů.
-      </p>
-      <p>
+
         Síť má široké využití: hodí se hlavně pro měřiče spotřeby energií (např. vodoměry nebo plynoměry), pro senzory prostředí (např. senzor CO₂) a také pro včasné hlášení havárií nebo závad (např. detektor úniku vody).
-      </p>
+
     </div>
   </div>
 </div>

@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/barometer-tag.png')} alt="Barometer Tag, deska velikosti mince se senzorem tlaku MPL3115A2" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Barometer Tag</b> měří absolutní tlak v rozsahu od <b>20 kPa</b> do <b>110 kPa</b>, případně nadmořskou výšku v metrech. Používá <b>senzor MPL3115A2 s nízkou spotřebou a rozhraním I²C</b>, jehož absolutní přesnost je ±0,4 kPa. Má velmi nízký proud v aktivním i pohotovostním režimu.
-      </p>
-      <p>
+
         Sledování absolutního tlaku je užitečné pro <b>předpověď počasí</b> a je také důležitým parametrem v biometeorologii, protože absolutní tlak <b>může ovlivňovat naše zdraví.</b>
-      </p>
+
     </div>
   </div>
 </div>

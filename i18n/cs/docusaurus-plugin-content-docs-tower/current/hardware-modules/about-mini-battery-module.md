@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/mini-battery-module.png')} alt="Pohled na Mini Battery Module shora s vyznačením dvou alkalických článků AAA 1,5 V; držáky jsou na spodní straně" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Mini Battery Module</b> slouží jako zdroj napájení pro <b>jednotky na baterie</b>. Integrovaný zvyšující převodník s nízkou spotřebou dosahuje vynikající účinnosti při napájení <b>ze dvou alkalických článků AAA 1,5 V</b>. Patici má vyvedenou na spodní stranu, takže sestavená jednotka zůstane nízká.
-      </p>
-      <p>
+
         Obvod pro odpojení zátěže umí <b>odpojit baterie, pokud je k systému připojen jakýkoli jiný zdroj napájení</b> (např. síťový adaptér nebo kabel USB). Napětí baterie lze měřit na jednom z analogových vstupů standardizovaného konektoru (<b>P0/A0/TXD0</b>).
-      </p>
+
     </div>
   </div>
 </div>

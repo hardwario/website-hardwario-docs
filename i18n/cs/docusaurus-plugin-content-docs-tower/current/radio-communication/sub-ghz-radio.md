@@ -102,7 +102,6 @@ Hodí se to jen pro zařízení, u kterých nevadí delší prodleva, než se zm
 Příklad kódu: naslouchání spícího uzlu
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 /* Temperature event handler, this will just send the value through the radio *
@@ -134,7 +133,6 @@ void application_init(void)
 }
 ```
 
-</p>
 </details>
 
 ## Parametry rádia {#radio-parameters}

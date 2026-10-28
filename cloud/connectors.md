@@ -121,7 +121,6 @@ The transformation function receives a `job` object with the following structure
 
 <details>
 <summary><b>Show `job` object structure</b></summary>
-<p>
 
 ```json
 {
@@ -152,7 +151,6 @@ The transformation function receives a `job` object with the following structure
 }
 ```
 
-</p>
 </details>
 
 ## Testing Your Connector

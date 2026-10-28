@@ -30,7 +30,6 @@ Při registraci si můžete uložit ID úlohy. S úlohou pak můžete kdykoli d�
 Příklad kódu pro jednorázové spuštění úlohy
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -52,7 +51,7 @@ void application_init(void)
     turn_off_lcd_task_id = twr_scheduler_register(disableLCD, NULL, twr_tick_get() + 5000);
 }
 ```
-</p>
+
 </details>
 
 ## Odregistrování úlohy {#unregistering-a-task}
@@ -107,7 +106,6 @@ Hodí se například tehdy, když chcete **každých 5 sekund přepnout displej 
 Příklad kódu pro spuštění aktuální úlohy
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -140,7 +138,6 @@ void application_init(void) {
 }
 ```
 
-</p>
 </details>
 
 :::info
@@ -157,7 +154,6 @@ Hodí se například tehdy, když chcete **vypnout displej LCD 5 sekund po stisk
 Příklad kódu pro spuštění úlohy odkudkoli
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -190,5 +186,4 @@ void application_init(void) {
 }
 ```
 
-</p>
 </details>

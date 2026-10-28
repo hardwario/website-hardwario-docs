@@ -107,7 +107,6 @@ To get all available commands just type **`bch --help`** to your **CLI**
 bch --help output
 </b>
 </summary>
-<p>
 
   ``` showLineNumbers
   Usage: bch [OPTIONS] COMMAND [ARGS]...
@@ -135,7 +134,6 @@ bch --help output
   sub      Subscribe topic.
   ```
 
-</p>
 </details>
 
 :::

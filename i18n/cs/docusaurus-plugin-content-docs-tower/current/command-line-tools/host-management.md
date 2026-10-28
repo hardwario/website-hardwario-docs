@@ -107,7 +107,6 @@ Všechny dostupné příkazy zobrazíte zadáním **`bch --help`** do příkazov
 Výstup bch --help
 </b>
 </summary>
-<p>
 
   ``` showLineNumbers
   Usage: bch [OPTIONS] COMMAND [ARGS]...
@@ -135,7 +134,6 @@ Výstup bch --help
   sub      Subscribe topic.
   ```
 
-</p>
 </details>
 
 :::

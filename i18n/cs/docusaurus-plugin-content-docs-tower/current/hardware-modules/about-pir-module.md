@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/pir-module.png')} alt="Čelní panel modulu PIR Module s bílou kopulovitou čočkou pasivního infračerveného detektoru pohybu" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>PIR Module</b> je <b>detektor pohybu</b> založený na <b>pasivním infračerveném principu (PIR)</b>. Typicky slouží jako bezdrátový detektor pohybu na stěně nebo na stropě.
-      </p>
-      <p>
+
         Modul je osazen <b>digitálním senzorem s ultranízkou spotřebou</b> z rodiny <b>DigiPyro®</b> společnosti Excelitas.
-      </p>
+
     </div>
   </div>
 </div>

@@ -75,7 +75,6 @@ Všechny dostupné příkazy zobrazíte zadáním **`bcg --help`** do příkazov
 Výstup bcg --help
 </b>
 </summary>
-<p>
 
   ``` showLineNumbers
   Usage: bcg [OPTIONS] COMMAND [ARGS]...
@@ -103,7 +102,6 @@ Výstup bcg --help
   help     Show help.
   ```
 
-</p>
 </details>
 
 :::

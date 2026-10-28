@@ -10,10 +10,10 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/tag-module.png')} alt="Tag Module s dutinkovými lištami a třemi paticemi pro tagy na každé z obou sběrnic I2C" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         K modulu <b>Tag Module</b> připojíte až <b>šest tagů HARDWARIO</b>.
         K dispozici jsou dvě nezávislé sběrnice I²C (<b>I2C0</b> a <b>I2C1</b>), na každé straně jedna.
-      </p>
+
     </div>
   </div>
 </div>

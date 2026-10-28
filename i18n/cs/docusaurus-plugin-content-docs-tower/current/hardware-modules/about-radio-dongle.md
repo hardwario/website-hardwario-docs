@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/radio-dongle.png')} alt="Radio Dongle, černý USB stick s červeným logem HARDWARIO" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         Radio Dongle je hlavním prvkem rádiové sítě HARDWARIO: funguje jako brána pro uzly HARDWARIO. Vypadá jako USB flash disk a zapojíte ho do stolního počítače, do Raspberry Pi nebo do routeru Turris Omnia. Můžete ho brát i jako přístupový bod pro až 32 uzlů HARDWARIO TOWER.
-      </p>
-      <p>
+
         Je plně kompatibilní s modulem Core Module. Má 32bitový mikrokontrolér ARM se 192 kB paměti flash a 20 kB RAM. Kromě integrovaného sub-GHz rádia pro pásmo 868/915 MHz obsahuje také dva bezpečnostní čipy, aby bylo dost místa pro až 32 uzlů HARDWARIO TOWER.
-      </p>
+
     </div>
   </div>
 </div>

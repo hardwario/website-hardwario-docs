@@ -62,7 +62,6 @@ Then you start the **blocking transfer** and you have to wait for it to finish.
 Synchronous SPI Transfer Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   uint8_t tx_buffer[2] = { 0x20, 0x00 };
@@ -71,7 +70,6 @@ Synchronous SPI Transfer Code Example
   twr_spi_transfer(tx_buffer, rx_buffer, sizeof(rx_buffer));
   ```
 
-</p>
 </details>
 
 :::note
@@ -96,7 +94,6 @@ This is a **non-blocking** transfer where the **callback function is called** wh
 Asynchronous SPI Transfer Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   // In async transmit the buffers must be global or
@@ -125,5 +122,4 @@ Asynchronous SPI Transfer Code Example
   }
   ```
 
-</p>
 </details>

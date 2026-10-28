@@ -34,7 +34,6 @@ Funkce musí mít pro každý modul a tag **specifickou signaturu**, kterou najd
 Příklad kódu obslužné funkce události tlačítka
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -81,7 +80,6 @@ Příklad kódu obslužné funkce události tlačítka
   }
   ```
 
-</p>
 </details>
 
 :::info
@@ -98,7 +96,6 @@ Příklad kódu obslužné funkce události tlačítka
 Příklad kódu obslužné funkce události teplotního senzoru
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -131,5 +128,4 @@ Příklad kódu obslužné funkce události teplotního senzoru
   }
   ```
 
-</p>
 </details>

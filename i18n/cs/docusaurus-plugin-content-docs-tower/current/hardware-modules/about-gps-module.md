@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/gps-module.png')} alt="GPS Module s přijímačem u-blox SAM-M8Q pod čtvercovou patch anténou" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>GPS Module</b> určí <b>přesnou polohu</b> vašeho zařízení. Používá modul <b>SAM-M8Q</b> od firmy u-blox a podporuje 3 globální polohové systémy: GPS, Galileo a GLONASS. <b>Přesnost polohy 2,5 m</b> umožňuje kombinace údajů ze všech tří systémů.
-      </p>
+
     </div>
   </div>
 </div>

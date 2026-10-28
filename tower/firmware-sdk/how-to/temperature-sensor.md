@@ -22,7 +22,6 @@ The [**Core Module**](../../hardware-modules/about-core-module.md) comes with an
 Integrated Temperature Sensor Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -60,5 +59,4 @@ Integrated Temperature Sensor Code Example
   }
   ```
 
-</p>
 </details>

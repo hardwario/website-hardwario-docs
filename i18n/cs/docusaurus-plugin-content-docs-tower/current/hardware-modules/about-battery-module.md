@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/battery-module.png')} alt="Pohled na Battery Module zeshora s popsanými konektory; držáky pro čtyři články AAA jsou na spodní straně" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Battery Module</b> slouží jako zdroj napájení pro jednotky na baterie. Integrovaný snižující převodník (buck) s nízkou spotřebou dosahuje vynikající účinnosti při napájení ze <b>čtyř alkalických článků AAA 1,5 V</b>. Má také <b>5pinovou patici, do které připojíte tag HARDWARIO TOWER</b>.
-      </p>
-      <p>
+
         Pokud se baterie AAA pro vaše použití nehodí, využijte <b>externí napěťový vstup</b>, který snese až 10 V. Najdete ho na dvou prostředních pinech, které jsou kompatibilní s oblíbeným <b>konektorem JST pro lithiové baterie</b>.
-      </p>
+
     </div>
   </div>
 </div>

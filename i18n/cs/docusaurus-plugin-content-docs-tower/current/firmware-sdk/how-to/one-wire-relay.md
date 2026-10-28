@@ -24,7 +24,6 @@ Každým stisknutím tlačítka se sepne o jedno relé víc. Když jsou sepnutá
 Příklad kódu
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -74,5 +73,4 @@ Příklad kódu
   }
   ```
 
-</p>
 </details>

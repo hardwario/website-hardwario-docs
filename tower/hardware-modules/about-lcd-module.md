@@ -10,15 +10,13 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/lcd-module.png')} alt="LCD Module with the 1.28-inch Sharp memory display and two push buttons" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The LCD Module uses a unique technology, the so-called memory display developed by Sharp. It provides a resolution of 128 x 128 pixels in a 1.28-inch size. It implements an ultra-low-power display controller, so you can have an active graphical display with a long service time from batteries.
-      </p>
-      <p>
+
         You can control your application using the two buttons located below the LCD screen. The module is also equipped with a gesture sensor (Avago APDS-9960). This circuit, composed of the infrared transmitter and four directional photodiodes responding to different wavelengths, can also be used to measure the light intensity and color or as a proximity sensor.
-      </p>
-      <p>
+
         The LCD Module also includes six RGB LEDs that can be used to indicate the status or as a light alarm.
-      </p>
+
     </div>
   </div>
 </div>

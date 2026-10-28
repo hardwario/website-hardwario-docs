@@ -126,7 +126,6 @@ V režimu LTE se odesílá zpráva CBOR (max. 8 kB) se všemi nasbíranými kart
 
 <details>
 <summary><b>Zobrazit příklad dekódovaného payloadu JSON</b></summary>
-<p>
 
 ```json
 {
@@ -192,7 +191,6 @@ V režimu LTE se odesílá zpráva CBOR (max. 8 kB) se všemi nasbíranými kart
 }
 ```
 
-</p>
 </details>
 
 :::info
@@ -245,7 +243,6 @@ D0 E0 4B 67            # Last read timestamp: 1735905488 (LE)
 
 <details>
 <summary><b>Zobrazit dekodér v JavaScriptu</b></summary>
-<p>
 
 ```javascript
 function decode(payload) {
@@ -282,7 +279,6 @@ function decode(payload) {
 }
 ```
 
-</p>
 </details>
 
 ---

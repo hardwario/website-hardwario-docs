@@ -42,7 +42,6 @@ TWR_MODULE_BATTERY_EVENT_LEVEL_CRITICAL
 Příklad kódu: napětí přes USB
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -80,7 +79,6 @@ Příklad kódu: napětí přes USB
   }
   ```
 
-</p>
 </details>
 
 :::info
@@ -97,7 +95,6 @@ Příklad kódu: napětí přes USB
 Příklad kódu: napětí periodicky přes rádio
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -137,5 +134,4 @@ Příklad kódu: napětí periodicky přes rádio
 
   ```
 
-</p>
 </details>

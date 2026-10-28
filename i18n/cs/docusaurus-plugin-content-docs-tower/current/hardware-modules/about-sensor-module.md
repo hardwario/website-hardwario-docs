@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/sensor-module.png')} alt="Sensor Module s pětipólovou odnímatelnou svorkovnicí pro univerzální vstupy a výstupy" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         Sensor Module má až čtyři univerzální vstupy nebo výstupy na odnímatelné svorkovnici a podporuje režim master na sběrnici 1-Wire. Svorky fungují jako analogové i digitální vstupy a výstupy, takže k nim můžete připojit například různé externí digitální, analogové nebo odporové senzory. Přes sběrnici 1-Wire můžete komunikovat i s dalšími zařízeními.
-      </p>
-      <p>
+
         Svorky jsou připojené k signálům konektoru HARDWARIO TOWER: A je P4/A4/DAC0, B je P5/A5/DAC1 a C je P7/A6.
-      </p>
+
     </div>
   </div>
 </div>

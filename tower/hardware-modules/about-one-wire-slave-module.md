@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/1-wire-module.png')} alt="1-Wire Slave Module with a green terminal block for the 1-Wire bus and two socket headers" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>1-Wire Slave Module</b> allows you to connect I²C devices over a distance of several meters. The I²C protocol is encapsulated in a 1-Wire protocol. The data are protected using <b>16-bit CRC</b>. You can use the <b>Sensor Module</b> to create a 1-Wire bus master.
-      </p>
+
     </div>
   </div>
 </div>

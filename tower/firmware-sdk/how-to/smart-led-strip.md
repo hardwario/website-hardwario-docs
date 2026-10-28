@@ -42,7 +42,6 @@ For the changes to take effect, you have to call `twr_led_strip_write(&led_strip
 Set Few LEDs Code Example
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -71,7 +70,6 @@ void application_init(void)
 }
 ```
 
-</p>
 </details>
 
 :::tip
@@ -98,7 +96,6 @@ If you want to try out these effects, there is a skeleton code for the 144 LEDs 
 LED Strip Effects Skeleton Code Example
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -123,7 +120,6 @@ void application_init(void)
 }
 ```
 
-</p>
 </details>
 
 #### Test Effect
@@ -208,7 +204,6 @@ twr_led_strip_effect_stop(&led_strip);
 Stop LED Strip Effect Code Example
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -238,7 +233,6 @@ void application_init(void)
 }
 ```
 
-</p>
 </details>
 
 

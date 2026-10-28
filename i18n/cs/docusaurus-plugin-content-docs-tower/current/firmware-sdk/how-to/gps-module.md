@@ -27,7 +27,6 @@ Tento příklad pošle funkcí `twr_log` přes UART do počítače datum, čas, 
 Příklad kódu: modul GPS Module
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -122,5 +121,4 @@ Příklad kódu: modul GPS Module
   }
   ```
 
-</p>
 </details>

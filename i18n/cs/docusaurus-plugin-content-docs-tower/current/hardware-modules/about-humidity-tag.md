@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/humidity-tag.png')} alt="Humidity Tag, deska velikosti mince se senzorem vlhkosti SHT20" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         Humidity Tag používá vysoce přesný senzor vlhkosti SHT20 s typickou přesností ±3 % v rozsahu od 20 % do 80 %. Senzor je digitální a kalibrovaný, komunikuje po sběrnici I²C a má velmi nízkou spotřebu a režim vypnutí.
-      </p>
+
     </div>
   </div>
 </div>

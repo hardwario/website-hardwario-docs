@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/relay-module.png')} alt="Relay Module s bistabilním relé a třípólovou svorkovnicí" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Relay Module</b> se hodí ke spínání <b>spotřebičů s malým příkonem</b>, např. LED pásku, chladicího ventilátoru, sirény, bzučáku nebo pohonu garážových vrat. Má <b>bistabilní relé</b> (latching), a proto je vhodný pro zařízení na baterie: relé si jednoduše <b>pamatuje svůj stav</b>.
-      </p>
-      <p>
+
         Energii relé spotřebuje jen při přepnutí. Jakmile se nový stav nastaví, <b>cívku relé už není nutné napájet</b>. Přepnutí signalizuje <b>zelená LED</b> (v softwaru stav <b>TRUE</b>), nebo <b>červená LED</b> (v softwaru stav <b>FALSE</b>).
-      </p>
+
     </div>
   </div>
 </div>

@@ -37,7 +37,6 @@ Pokud tlačítko podržíte 1,5 sekundy, LED na modulu Core Module začne rychle
 Příklad kódu: tlačítko
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -73,5 +72,4 @@ Příklad kódu: tlačítko
   }
   ```
 
-</p>
 </details>

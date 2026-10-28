@@ -88,7 +88,6 @@ Všechny dostupné příkazy zobrazíte zadáním **`bcf --help`** do příkazov
 Výstup bcf --help
 </b>
 </summary>
-<p>
 
   ``` showLineNumbers
   Usage: bcf [OPTIONS] COMMAND [ARGS]...
@@ -118,7 +117,6 @@ Výstup bcf --help
   update   Update list of available firmware.
   ```
 
-</p>
 </details>
 
 :::

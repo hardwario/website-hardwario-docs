@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/mini-battery-module.png')} alt="Mini Battery Module top view marked for two 1.5 V AAA alkaline cells; holders sit on the underside" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Mini Battery Module</b> is designed as a power supply source for <b>battery-operated units</b>. The integrated low-power boost converter provides excellent efficiency <b>from the two AAA 1.5 V Alkaline cells</b>. It features a bottom-entry socket, so the overall profile of the unit you build remains low.
-      </p>
-      <p>
+
         The load disconnect circuit can <b>disconnect the batteries if any other power supply source is connected</b> to the system (e.g. AC adapter or USB cable). The battery voltage can be measured on one of the analog inputs of the standardized header (<b>P0/A0/TXD0</b>).
-      </p>
+
     </div>
   </div>
 </div>

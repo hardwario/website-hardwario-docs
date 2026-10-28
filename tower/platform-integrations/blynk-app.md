@@ -60,7 +60,6 @@ If you don't know what a **Node-RED** is, you can read the [**Desktop Programmin
 Blynk example project flow JSON
 </b>
 </summary>
-<p>
 
 ```json showLineNumbers
 
@@ -334,7 +333,6 @@ Blynk example project flow JSON
 ]
 ```
 
-</p>
 </details>
 
 After the import, you should see this flow.

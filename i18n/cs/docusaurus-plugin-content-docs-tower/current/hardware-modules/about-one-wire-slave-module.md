@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/1-wire-module.png')} alt="1-Wire Slave Module se zelenou svorkovnicí pro sběrnici 1-Wire a dvěma dutinkovými lištami" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>1-Wire Slave Module</b> připojí zařízení I²C na vzdálenost několika metrů. Protokol I²C se přitom zapouzdřuje do protokolu 1-Wire a data chrání <b>16bitový CRC</b>. Master sběrnice 1-Wire vytvoříte modulem <b>Sensor Module</b>.
-      </p>
+
     </div>
   </div>
 </div>

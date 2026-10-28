@@ -27,7 +27,6 @@ This example will send the date, time, position, number of satellites the module
 GPS function Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -122,5 +121,4 @@ GPS function Code Example
   }
   ```
 
-</p>
 </details>

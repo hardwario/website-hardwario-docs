@@ -23,7 +23,6 @@ This example will turn on the **LED on the Core Module**. The usual and more com
 GPIO as Output Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -36,7 +35,6 @@ GPIO as Output Code Example
   }
   ```
 
-</p>
 </details>
 
 :::info
@@ -51,7 +49,6 @@ This example will **read the button state** and based on that the **LED will be 
 GPIO Input and Output Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -78,5 +75,4 @@ GPIO Input and Output Code Example
   }
   ```
 
-</p>
 </details>

@@ -62,7 +62,6 @@ In `nano`, you can save changes by pressing the key combination `Ctrl + O` and e
 Configuration File Snippet
 </b>
 </summary>
-<p>
 
 ```bash
 mqtt:
@@ -141,7 +140,7 @@ points:
     tags:
       id: $.topic[1]
   ```
-</p>
+
 </details>
 
 :::note

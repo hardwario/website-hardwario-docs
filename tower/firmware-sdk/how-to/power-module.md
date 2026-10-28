@@ -32,7 +32,6 @@ To switch the state, we use the [**button**](./push-button.md).
 Power Module Relay Control Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -60,7 +59,6 @@ Power Module Relay Control Code Example
   }
   ```
 
-</p>
 </details>
 
 :::info

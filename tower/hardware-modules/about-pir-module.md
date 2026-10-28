@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/pir-module.png')} alt="PIR Module faceplate with the white dome lens of the passive infrared motion detector" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>PIR Module</b> works as a <b>motion detector</b> operating on a <b>passive infrared (PIR) principle</b>. Typical usage of the PIR Module can be a wireless motion detector located on a wall or ceiling.
-      </p>
-      <p>
+
         The module is equipped with an <b>ultra-low-power digital sensor</b> from <b>Excelitas’ DigiPyro®</b> family.
-      </p>
+
     </div>
   </div>
 </div>

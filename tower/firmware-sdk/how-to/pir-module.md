@@ -35,7 +35,6 @@ This example uses **Medium sensitivity**. When movement is detected, the message
 Motion Detection Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -64,5 +63,4 @@ Motion Detection Code Example
   }
   ```
 
-</p>
 </details>

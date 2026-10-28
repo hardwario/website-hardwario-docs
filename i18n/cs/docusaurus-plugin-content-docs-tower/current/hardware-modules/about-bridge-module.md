@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/bridge-module.png')} alt="Bridge Module s konektorem micro-USB a převodníkem USB-UART pro připojení modulů k USB hostu" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Bridge Module</b> snadno připojí některé moduly nebo tagy TOWER k hostiteli USB, například k Raspberry Pi nebo k libovolnému stolnímu či přenosnému počítači.
-      </p>
-      <p>
+
         Konektor micro-USB <b>slouží ke komunikaci</b> a zároveň <b>napájí</b> modul Bridge Module i periferie k němu připojené.
-      </p>
+
     </div>
   </div>
 </div>

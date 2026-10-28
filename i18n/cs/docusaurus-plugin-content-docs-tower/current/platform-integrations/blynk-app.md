@@ -60,7 +60,6 @@ Pokud nevíte, co je **Node-RED**, můžete si přečíst [**sekci Programován�
 JSON flow ukázkového projektu Blynk
 </b>
 </summary>
-<p>
 
 ```json showLineNumbers
 
@@ -334,7 +333,6 @@ JSON flow ukázkového projektu Blynk
 ]
 ```
 
-</p>
 </details>
 
 Po importu by se měl zobrazit tento flow:

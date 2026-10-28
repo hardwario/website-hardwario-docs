@@ -139,7 +139,6 @@ app config show
 
 <details>
 <summary><b>Show Detailed Description of Commands</b></summary>
-<p>
 
 | Command | Default Value | Description |
 | :--- | :--- | :--- |
@@ -156,7 +155,6 @@ app config show
 | **`config save`** | — | Permanently saves the current configuration to the device's flash memory. |
 | **`app config show`** | — | Prints the currently set values for verification. |
 
-</p>
 </details>
 ---
 

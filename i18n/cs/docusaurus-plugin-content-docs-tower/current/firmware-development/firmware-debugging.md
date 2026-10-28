@@ -34,7 +34,6 @@ Podívejte se také na [**modul SDK twr_log**](https://sdk.hardwario.com/group__
 Příklad kódu pro logování
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -73,7 +72,6 @@ void application_init(void)
 }
 ```
 
-</p>
 </details>
 
 Příklad výstupu:

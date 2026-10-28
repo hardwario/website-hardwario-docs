@@ -305,7 +305,6 @@ Při této konfiguraci obsahuje každá struktura šest agregovaných hodnot. Ka
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
-<p>
 
 ```json
 {
@@ -1031,7 +1030,6 @@ Při této konfiguraci obsahuje každá struktura šest agregovaných hodnot. Ka
 }
 ```
 
-</p>
 </details>
 
   </TabItem>
@@ -1039,7 +1037,6 @@ Při této konfiguraci obsahuje každá struktura šest agregovaných hodnot. Ka
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
-<p>
 
 ```json
 {
@@ -1053,7 +1050,6 @@ Při této konfiguraci obsahuje každá struktura šest agregovaných hodnot. Ka
 }
 ```
 
-</p>
 </details>
 
   </TabItem>

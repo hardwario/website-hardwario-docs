@@ -126,7 +126,6 @@ LTE mode sends a CBOR message (max 8 KB) with all collected cards. The buffer is
 
 <details>
 <summary><b>Show Example Decoded JSON Payload</b></summary>
-<p>
 
 ```json
 {
@@ -192,7 +191,6 @@ LTE mode sends a CBOR message (max 8 KB) with all collected cards. The buffer is
 }
 ```
 
-</p>
 </details>
 
 :::info
@@ -245,7 +243,6 @@ D0 E0 4B 67            # Last read timestamp: 1735905488 (LE)
 
 <details>
 <summary><b>Show JavaScript Decoder</b></summary>
-<p>
 
 ```javascript
 function decode(payload) {
@@ -282,7 +279,6 @@ function decode(payload) {
 }
 ```
 
-</p>
 </details>
 
 ---

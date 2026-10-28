@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/co2-module.png')} alt="CO2 Module s NDIR senzorem oxidu uhličitého SenseAir a záložním superkondenzátorem" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>CO₂ Module</b> je plynový senzor, který měří <b>koncentraci oxidu uhličitého (CO₂)</b> s přesností ±50 ppm. Používá <a href="https://en.wikipedia.org/wiki/Carbon_dioxide_sensor"><b>nedisperzní infračervený (NDIR) senzor</b></a> vyrobený ve Švédsku. Díky <b>nízké spotřebě energie</b> vydrží na baterie celé roky.
-      </p>
-      <p>
+
         <b>Senzor LP8</b> jsme doplnili o obvody pro efektivní správu napájení a <b>komunikaci pouze přes I²C</b>. Modul má také tři 5pinové patice, do kterých <b>připojíte tagy HARDWARIO</b>.
-      </p>
+
     </div>
   </div>
 </div>

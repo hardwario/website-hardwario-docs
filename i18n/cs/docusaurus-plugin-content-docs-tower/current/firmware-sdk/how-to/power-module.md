@@ -32,7 +32,6 @@ Stav pak přepínáme [**tlačítkem**](./push-button.md).
 Příklad kódu: ovládání relé modulu Power Module
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -60,7 +59,6 @@ Příklad kódu: ovládání relé modulu Power Module
   }
   ```
 
-</p>
 </details>
 
 :::info

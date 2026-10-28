@@ -35,7 +35,6 @@ A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). `motion_c
 
 <details>
 <summary><b>Show JSON Example</b></summary>
-<p>
 
 ```json
 {
@@ -53,7 +52,6 @@ A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). `motion_c
 }
 ```
 
-</p>
 </details>
 
 ## Status LED

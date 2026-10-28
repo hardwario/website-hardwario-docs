@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/maxi-base-module.png')} alt="Maxi Base Module, a large green base board with screw terminals and a central module footprint" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>The Maxi Base Module</b> serves as a base for IoT kit assemblies, which you simply place in the Takachi industrial enclosure (IP67).
-      </p>
-      <p>
+
         In addition to connecting <b>any TOWER module</b>, the kit also includes a terminal block for connecting <b>one CHESTER-X module</b> for connecting external sensors, an external button or external power supply.
-      </p>
+
     </div>
   </div>
 </div>

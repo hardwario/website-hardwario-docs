@@ -22,7 +22,6 @@ This is the simplest example with a single connected sensor to the [**Sensor Mod
 Writing a single sensor values to the console Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -54,7 +53,6 @@ Writing a single sensor values to the console Code Example
   }
   ```
 
-</p>
 </details>
 
 :::info
@@ -71,7 +69,6 @@ The example below shows how to work with multiple sensors.
 Multiple Connected Sensors Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -99,5 +96,4 @@ Multiple Connected Sensors Code Example
   }
   ```
 
-</p>
 </details>

@@ -80,6 +80,23 @@ function postFeedback(form: FeedbackForm, values: Partial<Record<FeedbackField, 
   fetch(form.url, { method: 'POST', mode: 'no-cors', body }).catch(() => {});
 }
 
+// Usage counts for the ThingsBoard dashboard: only that it happened, never any
+// text. The backend holds the device token and decides what counts, so this
+// just reports. text/plain keeps it a simple request with no CORS preflight;
+// keepalive lets a rating sent as the tab closes still arrive.
+type UsageEvent = 'chat_opened' | 'rating_up' | 'rating_down';
+
+function reportEvent(apiUrl: string, event: UsageEvent) {
+  const url = apiUrl.replace(/\/api\/chat\/?$/, '/api/event');
+  if (url === apiUrl) return;
+  fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify({ event }),
+    keepalive: true,
+  }).catch(() => {});
+}
+
 // The backend has shipped two shapes for `sources`: a bare URL string per
 // source, and an object carrying the title and site alongside the URL. The
 // deployment this widget talks to still sends strings, and answers cached under
@@ -503,6 +520,7 @@ export default function ChatWidget() {
   // storage, and the two renders have to agree.
   useEffect(() => {
     if (open) {
+      reportEvent(apiUrl, 'chat_opened');
       setIntro(false);
       if (teaser) closeTeaser();
       return;
@@ -529,6 +547,7 @@ export default function ChatWidget() {
     if (!feedbackForm || ratings[i] || !m) return;
     const id = newRatingId();
     setRatings(r => ({ ...r, [i]: { id, value, comment: '', commentSent: false } }));
+    reportEvent(apiUrl, value === 'up' ? 'rating_up' : 'rating_down');
     postFeedback(feedbackForm, {
       id,
       rating: value,

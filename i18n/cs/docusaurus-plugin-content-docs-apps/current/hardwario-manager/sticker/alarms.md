@@ -49,7 +49,7 @@ neobjeví.
 
 ## Kontrola aktivních alarmů {#check-which-alarms-are-active}
 
-V části **STICKER → Device info → Advanced** najdete **Active alarms**, tedy
+V části **STICKER → Device info** najdete **Active alarms**, tedy
 alarmy, které jsou v zařízení právě aktivní. Viz
 [**Informace o zařízení a klíče LoRaWAN**](./device-info.md).
 

@@ -108,4 +108,4 @@ Function `ctr_cloud_send()` now is blocking, so the return code tells you whethe
 
 For Vodafone SIM cards, use APN `hardwario`, IP `192.168.192.4` and port `5002`. Don't use the previous ~~`hardwario.com`~~ APN name.
 
-For the other carriers, the data goes through the public internet, you have to set the server's public IP `20.101.123.47` and port is the same `5002`.
+For the other carriers, the data goes through the public internet, you have to set the server's public IP `157.245.24.13` and port is the same `5002`.

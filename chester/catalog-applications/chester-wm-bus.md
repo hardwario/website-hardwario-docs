@@ -64,7 +64,7 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 
 ### CHESTER wM-Bus DC
 
-Externally powered 230V DC adapter.
+Externally powered from a mains adapter (230 V AC).
 
 The catalog **CHESTER wM-Bus DC** hardware consists of the following ordering codes:
 
@@ -400,7 +400,7 @@ Each JSON cloud message contains up to 20 wM-Bus packets. If CHESTER is configur
 
 ## HARDWARIO Cloud – Decryption Keys
 
-The **transmitted messages from wM-Bus devices are encrypted** to optimize energy consumption during data transmission, which extends the overall battery life.  
+The **transmitted messages from wM-Bus devices are encrypted**.  
 
 The **received data must therefore be decrypted**, which is done using **decryption keys**.  
 

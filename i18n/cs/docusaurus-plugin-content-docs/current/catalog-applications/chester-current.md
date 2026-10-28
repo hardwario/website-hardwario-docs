@@ -68,7 +68,7 @@ Vybrat si můžete až 4 proudové sondy s těmito rozsahy:
 - Maximální proud **1 000 A**
 - Maximální proud **1 500 A**
 
-> **Pozor:** Proudový rozsah je uveden pro stejnosměrný proud. Při návrhu systému pro střídavý proud vynásobte maximální očekávaný střídavý proud koeficientem `1.42` (druhá odmocnina ze dvou) a ověřte, že výsledek nepřekročí rozsah sondy.
+> **Pozor:** Proudový rozsah je uveden pro stejnosměrný proud. Při návrhu systému pro střídavý proud vynásobte maximální očekávaný střídavý proud koeficientem `1.414` (druhá odmocnina ze dvou) a ověřte, že výsledek nepřekročí rozsah sondy.
 
 ## Chování aplikace {#application-behavior}
 
@@ -269,12 +269,12 @@ app config w1-therm-interval-aggreg <1-86400>
 
 Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](/chester/catalog-applications/catalog-applications#application-firmware).
 
-### Firmware v3.5.1 {#firmware-v351}
+### Firmware v4.0.1 {#firmware-v401}
 
 | Varianta | Verze | Odkaz |
 |---------|---------|------|
-| **CHESTER Current** | v3.5.1 | [Stáhnout](https://firmware.hardwario.com/chester/c2ac3f9d94194573b43c56f54962e672) |
-| **CHESTER Current Z** | v3.5.1 | [Stáhnout](https://firmware.hardwario.com/chester/627823995dc34c4a9336d0534ce3e418) |
+| **CHESTER Current** | v4.0.1 | [Stáhnout](https://firmware.hardwario.com/chester/98f42b431dfb4ba681abfea1958f0ef9) |
+| **CHESTER Current Z** | v4.0.1 | [Stáhnout](https://firmware.hardwario.com/chester/bd7bf21e742f4172ae48378ae55a3d6a) |
 
 ## Ukázková zpráva JSON {#example-json-message}
 

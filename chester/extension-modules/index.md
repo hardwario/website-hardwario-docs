@@ -61,12 +61,12 @@ When CHESTER is mounted in the enclosure, you can check the module **"X_"** numb
 
 | Module Name                       | Module Description                                                                                                                                                |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**CHESTER-X0A**](chester-x0.md)  | Up to 4 digital and analog inputs and outputs, 4-20 mA current loop channels, 0-10 V voltage inputs, dry contact, NPN or PNP input, including 5V boost converter. |
-| [**CHESTER-X0B**](chester-x0.md)  | Up to 4 digital and analog inputs and outputs, 4-20 mA current loop channels, 0-10 V voltage inputs, dry contact, NPN or PNP input, without 5V boost converter.   |
+| [**CHESTER-X0A**](chester-x0.md)  | Up to 4 digital and analog inputs and outputs, 4-20 mA current loop channels, 0–26 V voltage inputs, dry contact, NPN or PNP input, including 5V boost converter. |
+| [**CHESTER-X0B**](chester-x0.md)  | Up to 4 digital and analog inputs and outputs, 4-20 mA current loop channels, 0–26 V voltage inputs, dry contact, NPN or PNP input, without 5V boost converter.   |
 | [**CHESTER-X1**](chester-x1.md)   | Up to eight 1-Wire channels (e.g. for Dallas DS18B20 digital temperature sensors)                                                                                 |
 | [**CHESTER-X2**](chester-x2.md)   | Both TTL/UART and RS-485 interface (e.g., for Modbus communication)                                                                                               |
 | [**CHESTER-X3A**](chester-x3.md)  | Up to 2 RTD (resistive temperature devices) sensors, such as Pt 100 and Pt 1000                                                                                   |
-| [**CHESTER-X3B**](chester-x3.md)  | Up to 2 thermocouple channels (type B/C/E/J/K/N/R/S/T)                                                                                                            |
+| [**CHESTER-X3B**](chester-x3.md)  | Up to 2 thermocouple channels (type K; types B/C/E/J/N/R/S/T on request)                                                                                                            |
 | [**CHESTER-X3C**](chester-x3.md)  | Up to 2 load-cell (strain gauge) channels that can be used for weight measurements                                                                                |
 | [**CHESTER-X4**](chester-x4.md)   | DC/DC converter providing power from an external 6-28 VDC line (features input voltage measurement)                                                               |
 | [**CHESTER-X5**](chester-x5.md)   | Two-channel isolated analog inputs for +/- 50 V voltage measurement                                                                                               |
@@ -74,7 +74,7 @@ When CHESTER is mounted in the enclosure, you can check the module **"X_"** numb
 | [**CHESTER-X7**](chester-x7.md)   | 1-channel differential input converter with software-controlled 5V boost converter for current probes and other industrial sensors                                |
 | [**CHESTER-X8**](chester-x8.md)   | Ultra-precise accelerometer                                                                                                                                       |
 | [**CHESTER-X9**](chester-x9.md)   | 4-channel output module with smart protected switch for controlling relays and solenoids                                                                          |
-| [**CHESTER-X10**](chester-x10.md) | DC/DC converter + Li-Po charger providing power from an external 6-30 VDC line (features input voltage measurement)                                               |
+| [**CHESTER-X10**](chester-x10.md) | DC/DC converter + Li-Po charger providing power from an external 6–28 VDC line (features input voltage measurement)                                               |
 | [**CHESTER-X12**](chester-x12.md) | RS-232 serial interface with a dedicated 5-28 VDC power input for industrial serial devices and legacy equipment                                                  |
 | [**CHESTER-X13**](chester-x13.md) | CAN Bus interface with CAN FD support and a built-in step-down converter (up to 28 V)                                                                             |
 | [**CHESTER-X14**](chester-x14.md) | 10/100 Ethernet connectivity with a built-in step-down converter (up to 28 V)                                                                                     |

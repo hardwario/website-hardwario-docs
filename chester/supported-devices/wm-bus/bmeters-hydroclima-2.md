@@ -88,7 +88,7 @@ Here you can manage the list of **wM-Bus addresses** (**add/remove**), adjust sc
 
 ## Message Encryption and Key Management
 
-The **transmitted messages are encrypted** to optimize energy consumption during data transmission, which extends the overall battery life.
+The **transmitted messages are encrypted**.
 
 The **received data must therefore be decrypted**, which is done using **decryption keys**.  
 To achieve this, there are two options:

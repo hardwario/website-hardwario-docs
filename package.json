@@ -33,7 +33,7 @@
     "docusaurus-plugin-image-zoom": "^3.0.1",
     "mdast-util-from-markdown": "^2.1.0",
     "mdast-util-gfm": "^3.1.0",
-    "mermaid": "^11.17.2",
+    "mermaid": "^12.2.0",
     "micromark-extension-gfm": "^3.0.0",
     "prism-react-renderer": "^2.4.1",
     "qrcode": "^1.5.4",

@@ -16,7 +16,7 @@ Pokud chcete do systému získat přístup a prohlížet vizualizace a grafy dat
 :::
 
 :::tip Zařízení z HARDWARIO Cloudu
-S [automatickým připojením](/apps/thingsboard/cloud-connection#automatic-connection) z HARDWARIO Cloudu se vaše zařízení objeví ve vašem účtu ThingsBoard sama - stačí přidat jeden konektor s ID své skupiny zařízení.
+S [automatickým připojením](/apps/thingsboard/cloud-connection#automatic-connection) z HARDWARIO Cloudu se vaše zařízení objeví ve vašem účtu ThingsBoard sama. Stačí přidat jeden konektor s ID své skupiny zařízení.
 :::
 
 ---

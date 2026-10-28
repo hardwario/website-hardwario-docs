@@ -42,7 +42,7 @@ The device group tells ThingsBoard where your devices belong.
    ![Device group details in ThingsBoard with the "Copy entity group Id" button highlighted](images/thingsboard-copy-group-id.png)
 
 :::tip Keep your devices sorted
-The group ID decides where your devices are created. Create a group for each building, site or project, and add one connector per group - each with its own group ID and its own tag (e.g. `thingsboard-warehouse`, `thingsboard-office`). Every device then lands in the right group by itself.
+The group ID decides where your devices are created. Create a group for each building, site or project, and add one connector per group. Give each connector its own group ID and its own tag (e.g. `thingsboard-warehouse`, `thingsboard-office`). Every device then lands in the right group by itself.
 :::
 
 ### Step 2: Get Your Connector Code

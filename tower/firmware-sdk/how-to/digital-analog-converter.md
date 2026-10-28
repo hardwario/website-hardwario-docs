@@ -26,7 +26,6 @@ Both channels can run completely separately with different sample rates.
 Sine Wave Generator Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -84,5 +83,4 @@ Sine Wave Generator Code Example
   }
   ```
 
-</p>
 </details>

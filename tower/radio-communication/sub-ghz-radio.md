@@ -102,7 +102,6 @@ This is usable only for devices that can have a long delay before the change tak
 Sleeping Node Listening Code Example
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 /* Temperature event handler, this will just send the value through the radio *
@@ -134,7 +133,6 @@ void application_init(void)
 }
 ```
 
-</p>
 </details>
 
 ## Radio Parameters

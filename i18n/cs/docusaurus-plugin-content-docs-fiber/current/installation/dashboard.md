@@ -25,7 +25,6 @@ i lokálně, ale není to nutné.
 
    <details>
    <summary><b>Rozbalit: kompletní kód index.html</b></summary>
-   <p>
 
    ```sh
    cat << 'EOF' > ~/fiber-dashboard/index.html
@@ -282,7 +281,6 @@ i lokálně, ale není to nutné.
    EOF
    ```
 
-   </p>
    </details>
 
 1. Doplňte skutečné uživatelské jméno pro SSH. Stránka ho z prohlížeče zjistit nedokáže, proto ho
@@ -307,7 +305,6 @@ i lokálně, ale není to nutné.
 
    <details>
    <summary><b>Rozbalit: kompletní kód serve.py</b></summary>
-   <p>
 
    ```sh
    cat << 'EOF' > ~/fiber-dashboard/serve.py
@@ -408,7 +405,6 @@ i lokálně, ale není to nutné.
    EOF
    ```
 
-   </p>
    </details>
 
 1. Spusťte ho jako službu systemd (bez `setcap`/`authbind` je k naslouchání na portu 80 potřeba root):

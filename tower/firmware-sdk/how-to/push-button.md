@@ -37,7 +37,6 @@ If the button is held for 1.5 seconds, the LED on Core Module will start blinkin
 Push Button Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -73,5 +72,4 @@ Push Button Code Example
   }
   ```
 
-</p>
 </details>

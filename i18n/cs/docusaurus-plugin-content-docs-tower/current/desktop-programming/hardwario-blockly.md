@@ -151,7 +151,6 @@ Tento příklad přidá kategorii **Ultrasound Sensor** s černou barvou (výcho
 Příklad základních kategorií
 </b>
 </summary>
-<p>
 
   ```yml showLineNumbers
   ---
@@ -161,7 +160,6 @@ Příklad základních kategorií
       colour: '#CF0514'
   ```
 
-</p>
 </details>
 
 
@@ -197,7 +195,6 @@ Prvním příkladem je náš předpřipravený modul pro [**Button Module**](htt
 Předpřipravený modul Button
 </b>
 </summary>
-<p>
 
   ```yaml showLineNumbers
   ---
@@ -266,5 +263,4 @@ Předpřipravený modul Button
           - twr_radio_pub_event_count(TWR_RADIO_PUB_EVENT_HOLD_BUTTON, &button_hold_count);
   ```
 
-</p>
 </details>

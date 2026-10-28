@@ -58,5 +58,6 @@ Allow: /
 
 # LLM-friendly content map: https://llmstxt.org/  (see /llms.txt)
 
-# Sitemap
+# Sitemaps: one per locale (Docusaurus emits the cs sitemap under /cs/)
 Sitemap: https://docs.hardwario.com/sitemap.xml
+Sitemap: https://docs.hardwario.com/cs/sitemap.xml

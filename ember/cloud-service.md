@@ -141,7 +141,6 @@ Below is the example of the **Node-RED** function (in **JavaScript**) for decodi
 
 <details>
 <summary><b>Show Node-RED Decoder Function</b></summary>
-<p>
 
 ```js
 if (msg.payload.applicationName !== 'ember-application-chester-clime') {
@@ -273,7 +272,6 @@ function decode(buffer) {
 }
 ```
 
-</p>
 </details>
 
 After decoding, you can further process the data: scalarizing, adding attributes, etc. The last action in the flow should be delivering the data through some common connector, e.g., an **HTTPS** request.

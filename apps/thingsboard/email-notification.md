@@ -58,7 +58,6 @@ Telemetry keys often contain dots (e.g., hygrometer.temperature.avg), which can 
 
 <details>
 <summary><b>Show Script</b></summary>
-<p>
 
 ```javascript
 // Initialize default values to prevent "is not defined" errors in email templates
@@ -96,7 +95,6 @@ metadata.formattedTime = day + "." + month + "." + year + " " + hours + ":" + mi
 return {msg: msg, metadata: metadata, msgType: msgType};
 ```
 
-</p>
 </details>
 
 * **Connection:** Connect the Device Filter node to this node using the True link.
@@ -209,7 +207,6 @@ Update your existing threshold filter scripts (e.g., `Temperature < 17`) to not 
 
 <details>
 <summary><b>Show Script Example</b></summary>
-<p>
 
 ```javascript
 var currentTime = new Date().getTime();
@@ -225,7 +222,6 @@ if (msg['hygrometer.temperature.avg'] < 17) {
 return false; // Do not send email
 ```
 
-</p>
 </details>
 
 *(Apply this logic to all your threshold filters).*

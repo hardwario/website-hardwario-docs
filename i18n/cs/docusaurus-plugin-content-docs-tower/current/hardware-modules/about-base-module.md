@@ -10,15 +10,13 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/base-module.png')} alt="Base Module, zelená deska sloužící jako stojan, s paticí pro modul, prototypovací plochou a gumovými nožičkami" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         Base Module slouží jako <b>mechanický stojan pro jednotky HARDWARIO TOWER</b>. Do standardizované patice na modulu <b>Base Module</b> můžete zapojit kterýkoli modul ze sady <b>HARDWARIO TOWER Industrial IoT Kit</b> kromě modulu Battery Module.
-      </p>
-      <p>
+
         Součástí je také <b>prototypovací plocha pro pájení vlastních obvodů</b>.
-      </p>
-      <p>
+
         Modul můžete postavit na stůl (čtyři gumové nožičky ho drží stabilně), speciálními plastovými klipy ho připevnit na DIN lištu, nebo ho oboustrannou lepicí páskou přilepit na stěnu či jinou svislou plochu.
-      </p>
+
     </div>
   </div>
 </div>

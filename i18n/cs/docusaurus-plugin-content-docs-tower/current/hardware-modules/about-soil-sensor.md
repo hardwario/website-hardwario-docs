@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/soil-sensor.png')} alt="Sonda senzoru půdní vlhkosti s vytištěnou hloubkovou stupnicí a dlouhým kabelem zakončeným třemi vodiči s dutinkami" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Soil Moisture Sensor</b> je moderní, zcela utěsněný kapacitní senzor vlhkosti s teplotním senzorem. Komunikuje protokolem 1-Wire a má 2 metry dlouhý třívodičový kabel. K jednomu masteru 1-Wire lze připojit mnoho senzorů. Teplotní senzor je v horní části nad půdou. Elektronika je celá zalitá těsnicí hmotou, takže odolá jakémukoli počasí.
-      </p>
-      <p>
+
         Senzor vrací vlhkost půdy v relativních hodnotách. Je velmi citlivý: na suchu vrací 6500, plně ponořený ve vodě 13000. Měří dvěma měděnými pásky ve vnitřních vrstvách čtyřvrstvé desky plošných spojů, takže kontakty nejsou vystavené přímé vlhkosti a neoxidují.
-      </p>
+
     </div>
   </div>
 </div>

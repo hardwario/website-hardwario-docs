@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/mini-cover-module.png')} alt="Mini Cover Module, a small plain black face plate with ventilation slots" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The Mini Cover Module is a simple mechanical part that helps to cover the front face of the HARDWARIO TOWER electronics (smaller format 33 x 55 mm).
-      </p>
-      <p>
+
         It looks great when combined with one of our 3D-printed enclosures. You simply snap it in the HARDWARIO TOWER socket header using the bottom pins.
-      </p>
+
     </div>
   </div>
 </div>

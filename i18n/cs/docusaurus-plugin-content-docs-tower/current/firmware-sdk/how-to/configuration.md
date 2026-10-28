@@ -38,7 +38,6 @@ Ve funkci `application_init()` je ukázka, jak použít některé funkce z modul
 Příklad kódu: jednoduchá konfigurace modulu PIR Module
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -70,5 +69,4 @@ Příklad kódu: jednoduchá konfigurace modulu PIR Module
   }
   ```
 
-</p>
 </details>

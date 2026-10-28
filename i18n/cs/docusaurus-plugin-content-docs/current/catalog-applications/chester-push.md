@@ -132,7 +132,6 @@ import TabItem from '@theme/TabItem';
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
-<p>
 
 ```json
 {
@@ -229,7 +228,6 @@ import TabItem from '@theme/TabItem';
 }
 ```
 
-</p>
 </details>
 
   </TabItem>
@@ -237,7 +235,6 @@ import TabItem from '@theme/TabItem';
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
-<p>
 
 ```json
 {
@@ -266,7 +263,6 @@ import TabItem from '@theme/TabItem';
 }
 ```
 
-</p>
 </details>
 
   </TabItem>

@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/compact-split-module.png')} alt="Compact Split Module, holá deska se dvěma sadami popsaných pozic pro konektory modulů" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         S modulem <b>Compact Split Module</b> můžete použít <b>dva vrchní moduly</b> nebo postavit kompaktnější sestavu. Vznikne tak mnohem víc zařízení, která kombinují například <a href="../about-lcd-module"><b>LCD Module</b></a>, <a href="../about-climate-module"><b>Climate Module</b></a>, <a href="../about-pir-module"><b>PIR Module</b></a> a mnoho dalších. Modul také rozdělí sestavu do dvou sloupců, takže postavíte <b>kompaktnější zařízení</b>.
-      </p>
-      <p>
+
         Piny má vyvedené zespodu, a proto je <b>modul tenčí</b>.
-      </p>
+
     </div>
   </div>
 </div>

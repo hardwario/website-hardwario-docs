@@ -16,7 +16,7 @@ If you are interested in gaining access to the system to view data visualization
 :::
 
 :::tip Devices from HARDWARIO Cloud
-With the [automatic connection](/apps/thingsboard/cloud-connection#automatic-connection) from HARDWARIO Cloud, your devices appear in your ThingsBoard account by themselves - you only add one connector with your device group ID.
+With the [automatic connection](/apps/thingsboard/cloud-connection#automatic-connection) from HARDWARIO Cloud, your devices appear in your ThingsBoard account by themselves. You only add one connector with your device group ID.
 :::
 
 ---

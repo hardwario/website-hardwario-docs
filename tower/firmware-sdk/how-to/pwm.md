@@ -44,7 +44,6 @@ Every output has a different **duty cycle**: 180, 210 and 255.
 Run PWM on Pins Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   void application_init()
@@ -63,5 +62,4 @@ Run PWM on Pins Code Example
   }
   ```
 
-</p>
 </details>

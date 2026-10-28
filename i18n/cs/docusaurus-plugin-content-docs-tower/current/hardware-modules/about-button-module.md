@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/button-module.png')} alt="Čelní panel modulu Button Module s jedním velkým kulatým tlačítkem" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Button Module</b> je jednoduchý modul s jedním <b>velkým tlačítkem</b>. Můžete jím spouštět různé akce, např. <b>rozsvítit světlo, odeslat push notifikaci nebo ovládat spotřebič</b>. Je připojený k signálu <b>BOOT</b> na modulu <b>Core Module</b>.
-      </p>
+
     </div>
   </div>
 </div>

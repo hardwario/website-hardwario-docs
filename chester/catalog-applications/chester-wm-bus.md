@@ -311,7 +311,6 @@ Each JSON cloud message contains up to 20 wM-Bus packets. If CHESTER is configur
 
 <details>
 <summary><b>Show JSON Example</b></summary>
-<p>
 
 ```json
 {
@@ -370,7 +369,6 @@ Each JSON cloud message contains up to 20 wM-Bus packets. If CHESTER is configur
 }
 ```
 
-</p>
 </details>
 
   </TabItem>
@@ -378,7 +376,6 @@ Each JSON cloud message contains up to 20 wM-Bus packets. If CHESTER is configur
 
 <details>
 <summary><b>Show JSON Example</b></summary>
-<p>
 
 ```json
 {
@@ -394,7 +391,6 @@ Each JSON cloud message contains up to 20 wM-Bus packets. If CHESTER is configur
 }
 ```
 
-</p>
 </details>
 
   </TabItem>

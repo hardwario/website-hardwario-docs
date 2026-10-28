@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/lux-meter-tag.png')} alt="Lux Meter Tag, deska velikosti mince se senzorem intenzity světla OPT3001" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Lux Meter Tag</b> používá <b>senzor intenzity světla OPT3001</b> s vysokým dynamickým rozsahem, který měří osvětlenost od 0,01 do 83 000 lux. Senzor je digitální a kalibrovaný, komunikuje po sběrnici I²C a má velmi nízkou spotřebu a režim vypnutí.
-      </p>
+
     </div>
   </div>
 </div>

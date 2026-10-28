@@ -144,7 +144,6 @@ Tlak je v **pascalech**.
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
-<p>
 
 ```json
 {
@@ -545,7 +544,6 @@ Tlak je v **pascalech**.
 }
 ```
 
-</p>
 </details>
 
   </TabItem>
@@ -553,7 +551,6 @@ Tlak je v **pascalech**.
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
-<p>
 
 ```json
 {
@@ -584,7 +581,6 @@ Tlak je v **pascalech**.
 }
 ```
 
-</p>
 </details>
 
   </TabItem>

@@ -45,7 +45,6 @@ This is a simple example of printing `Hello world` to the [**LCD Module that is 
 Using GFX with LCD Module Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -65,7 +64,6 @@ Using GFX with LCD Module Code Example
   }
   ```
 
-</p>
 </details>
 
 ### SSD1303 OLED
@@ -82,7 +80,6 @@ This is a similar example to the last one, but here we use the SSD1303 OLED disp
 Using GFX with SSD1303 OLED Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -102,7 +99,6 @@ Using GFX with SSD1303 OLED Code Example
   }
   ```
 
-</p>
 </details>
 
 ### Custom GFX Driver
@@ -139,7 +135,6 @@ void application_init(void)
 Custom GFX Driver Implementation Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   bool led_matrix_is_ready(void *param)
@@ -188,5 +183,4 @@ Custom GFX Driver Implementation Code Example
   }
   ```
 
-</p>
 </details>

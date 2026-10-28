@@ -10,15 +10,13 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/lcd-module.png')} alt="LCD Module s 1,28palcovým paměťovým displejem Sharp a dvěma tlačítky" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         LCD Module používá unikátní technologii, takzvaný paměťový displej od společnosti Sharp. Má rozlišení 128 x 128 pixelů při úhlopříčce 1,28 palce. Řadič displeje má ultranízkou spotřebu, takže aktivní grafický displej vydrží dlouho běžet na baterie.
-      </p>
-      <p>
+
         Aplikaci ovládáte dvěma tlačítky pod displejem. Modul má také senzor gest (Avago APDS-9960). Tento obvod s infračerveným vysílačem a čtyřmi směrovými fotodiodami citlivými na různé vlnové délky umí měřit i intenzitu a barvu světla nebo sloužit jako senzor přiblížení.
-      </p>
-      <p>
+
         LCD Module má také šest LED RGB, které mohou indikovat stav nebo sloužit jako světelný alarm.
-      </p>
+
     </div>
   </div>
 </div>

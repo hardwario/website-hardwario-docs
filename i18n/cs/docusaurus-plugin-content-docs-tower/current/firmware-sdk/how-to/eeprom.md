@@ -59,7 +59,6 @@ hello world!
 Příklad kódu: test EEPROM
 </b>
 </summary>
-<p>
 
 
 
@@ -103,5 +102,4 @@ Příklad kódu: test EEPROM
   }
   ```
 
-</p>
 </details>

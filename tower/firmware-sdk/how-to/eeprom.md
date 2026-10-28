@@ -59,7 +59,6 @@ hello world!
 EEPROM Test Code Example
 </b>
 </summary>
-<p>
 
 
 
@@ -103,5 +102,4 @@ EEPROM Test Code Example
   }
   ```
 
-</p>
 </details>

@@ -62,7 +62,6 @@ V editoru `nano` uložíte změny klávesovou zkratkou `Ctrl + O` a editor ukon�
 Ukázka konfiguračního souboru
 </b>
 </summary>
-<p>
 
 ```bash
 mqtt:
@@ -141,7 +140,7 @@ points:
     tags:
       id: $.topic[1]
   ```
-</p>
+
 </details>
 
 :::note

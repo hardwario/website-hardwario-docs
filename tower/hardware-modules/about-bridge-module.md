@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/bridge-module.png')} alt="Bridge Module with micro-USB connector and USB-UART converter for connecting modules to a USB host" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Bridge Module</b> provides an easy path to connect some of the TOWER modules and/or tags to the USB host like Raspberry Pi or any desktop/laptop computer.
-      </p>
-      <p>
+
         MicroUSB connector not only <b>provides communication link</b> but also <b>delivers power</b> for Bridge Module and peripherals connected to it.
-      </p>
+
     </div>
   </div>
 </div>

@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/climate-module.png')} alt="Climate Module, černá deska s ventilačními otvory nad integrovanými senzory prostředí" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Climate Module</b> obsahuje <b>4 senzory prostředí: teploty, vlhkosti, intenzity osvětlení a atmosférického tlaku</b>. Všechny senzory jsou digitální, mají úsporné provozní režimy a jsou připojené přes <b>sběrnici I²C</b>. Modul se výborně hodí pro <b>monitorování prostředí, meteorologické stanice</b> apod.
-      </p>
+
       <p>
       </p>
     </div>

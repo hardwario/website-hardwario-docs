@@ -65,7 +65,6 @@ This example prints out some text on the screen and lights up LCD LEDs with **bl
 LCD LEDs Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -106,7 +105,6 @@ LCD LEDs Code Example
   }
   ```
 
-</p>
 </details>
 
 ### LCD Buttons
@@ -127,7 +125,6 @@ If you hold both buttons, the LEDs will blink fast.
 LCD Buttons Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -165,5 +162,4 @@ LCD Buttons Code Example
   }
   ```
 
-</p>
 </details>

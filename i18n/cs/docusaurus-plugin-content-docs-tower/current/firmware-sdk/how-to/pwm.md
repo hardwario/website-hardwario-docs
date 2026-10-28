@@ -44,7 +44,6 @@ Každý výstup má jiný **duty cycle**: 180, 210 a 255.
 Ukázka kódu pro spuštění PWM na pinech
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   void application_init()
@@ -63,5 +62,4 @@ Ukázka kódu pro spuštění PWM na pinech
   }
   ```
 
-</p>
 </details>

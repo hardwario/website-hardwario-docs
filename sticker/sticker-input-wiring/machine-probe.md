@@ -109,9 +109,7 @@ Component values (top side):
 
 <details>
 <summary><b>Show schematic (MACHINE PROBE R1.3)</b></summary>
-<p>
 
 ![MACHINE PROBE R1.3: schematic](images/machine-probe-schematic.png)
 
-</p>
 </details>

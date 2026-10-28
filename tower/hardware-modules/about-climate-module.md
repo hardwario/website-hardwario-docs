@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/climate-module.png')} alt="Climate Module, a black board with ventilation slots over its integrated environmental sensors" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Climate Module</b> integrates <b>4 environmental sensors: temperature, humidity, light intensity and atmospheric pressure</b>. All sensors are digital, feature low-power operating modes and connected by using the <b>I²C bus</b>. It is a great product for <b>environmental monitoring, weather stations</b>, etc.
-      </p>
+
       <p>
       </p>
     </div>

@@ -136,7 +136,6 @@ Každý dostupný senzor má jedno agregované měření s minimem, maximem, pr�
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
-<p>
 
 ```json
 {
@@ -251,7 +250,6 @@ Každý dostupný senzor má jedno agregované měření s minimem, maximem, pr�
 }
 ```
 
-</p>
 </details>
 
   </TabItem>

@@ -116,7 +116,7 @@
     "description": "The label of footer link with label=All Legal Documents linking to https://www.hardwario.com/legal/"
   },
   "copyright": {
-    "message": "<nav aria-label=\"Další weby HARDWARIO\" style=\"margin-bottom:8px\"><span class=\"footer-sites-label\">Další weby HARDWARIO:</span> <a href=\"https://www.hardwario.com/\" target=\"_blank\" rel=\"noopener noreferrer\">HARDWARIO.com</a> · <a href=\"https://hardwario.engineering/\" target=\"_blank\" rel=\"noopener noreferrer\">Engineering</a> · <a href=\"https://hardwario.studio/\" target=\"_blank\" rel=\"noopener noreferrer\">Studio</a> · <a href=\"https://hardwario.academy/\" target=\"_blank\" rel=\"noopener noreferrer\">Academy</a></nav>Copyright © 2026 HARDWARIO a.s. | Navrženo a vyrobeno v Evropě.",
+    "message": "<nav aria-label=\"Další weby HARDWARIO\" style=\"margin-bottom:8px\"><span class=\"footer-sites-label\">Další weby HARDWARIO:</span> <a href=\"https://www.hardwario.com/\" target=\"_blank\" rel=\"noopener noreferrer\">HARDWARIO.com</a> · <a href=\"https://hardwario.engineering/\" target=\"_blank\" rel=\"noopener noreferrer\">Engineering</a> · <a href=\"https://hardwario.studio/\" target=\"_blank\" rel=\"noopener noreferrer\">Studio</a> · <a href=\"https://hardwario.academy/\" target=\"_blank\" rel=\"noopener noreferrer\">Academy</a> · <a href=\"https://stem.hardwario.com/\" target=\"_blank\" rel=\"noopener noreferrer\">STEM</a></nav>Copyright © 2026 HARDWARIO a.s. | Navrženo a vyrobeno v Evropě.",
     "description": "The footer copyright"
   },
   "link.item.label.Terms of Sale": {

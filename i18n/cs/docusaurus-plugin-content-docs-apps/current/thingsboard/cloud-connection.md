@@ -42,7 +42,7 @@ Skupina zařízení říká ThingsBoard, kam vaše zařízení patří.
    ![Detail skupiny zařízení v ThingsBoard se zvýrazněným tlačítkem „Copy entity group Id“](../../../../../apps/thingsboard/images/thingsboard-copy-group-id.png)
 
 :::tip Mějte zařízení roztříděná
-ID skupiny určuje, kde se vaše zařízení vytvoří. Vytvořte si skupinu pro každou budovu, lokalitu nebo projekt a pro každou skupinu přidejte jeden konektor - každý s vlastním ID skupiny a vlastním tagem (např. `thingsboard-sklad`, `thingsboard-kancelar`). Každé zařízení pak skončí ve správné skupině samo.
+ID skupiny určuje, kde se vaše zařízení vytvoří. Vytvořte si skupinu pro každou budovu, lokalitu nebo projekt a pro každou skupinu přidejte jeden konektor. Každému konektoru dejte vlastní ID skupiny a vlastní tag (např. `thingsboard-sklad`, `thingsboard-kancelar`). Každé zařízení pak skončí ve správné skupině samo.
 :::
 
 ### Krok 2: Získejte kód konektoru {#step-2-get-your-connector-code}

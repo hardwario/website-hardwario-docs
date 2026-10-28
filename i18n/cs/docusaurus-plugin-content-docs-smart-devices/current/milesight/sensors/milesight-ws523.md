@@ -12,7 +12,7 @@ Milesight WS523 je **chytrá přenosná zásuvka** s **konektivitou LoRaWAN** pr
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '500px', height: '500px' }}>
+      <div style={{ maxWidth: '500px' }}>
         <Image img={require('../../../../../../smart-devices/milesight/sensors/images/ws523.png')} />
       </div>
     </div>

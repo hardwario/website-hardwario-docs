@@ -10,10 +10,10 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/tag-module.png')} alt="Tag Module with socket headers and three tag sockets on each of the two I2C buses" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Tag Module</b> makes it possible to connect up to <b>six HARDWARIO tags</b>.
         There are two independent I²C buses (<b>I2C0</b> and <b>I2C1</b>), one on each side.
-      </p>
+
     </div>
   </div>
 </div>

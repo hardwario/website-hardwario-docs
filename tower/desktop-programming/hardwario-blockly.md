@@ -151,7 +151,6 @@ This example will add the category **Ultrasound Sensor** with black color (defau
 Basic Categories Example
 </b>
 </summary>
-<p>
 
   ```yml showLineNumbers
   ---
@@ -161,7 +160,6 @@ Basic Categories Example
       colour: '#CF0514'
   ```
 
-</p>
 </details>
 
 
@@ -197,7 +195,6 @@ The first example is one of our pre-made modules for the [**Button Module**](htt
 Pre-made button module
 </b>
 </summary>
-<p>
 
   ```yaml showLineNumbers
   ---
@@ -266,5 +263,4 @@ Pre-made button module
           - twr_radio_pub_event_count(TWR_RADIO_PUB_EVENT_HOLD_BUTTON, &button_hold_count);
   ```
 
-</p>
 </details>

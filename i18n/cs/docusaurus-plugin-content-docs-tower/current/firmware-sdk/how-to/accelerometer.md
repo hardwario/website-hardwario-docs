@@ -32,7 +32,6 @@ Dále je potřeba vytvořit instanci struktury `twr_lis2dh12_result_g_t`, do kte
 Příklad kódu: průběžné měření
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -65,7 +64,6 @@ Příklad kódu: průběžné měření
   }
   ```
 
-</p>
 </details>
 
 ## Alarm {#alarm}
@@ -92,7 +90,6 @@ Po nahrání firmwaru zkuste modulem Core Module pohybovat velmi pomalu. V žád
 Příklad kódu: alarm
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -141,5 +138,4 @@ Příklad kódu: alarm
   }
   ```
 
-</p>
 </details>

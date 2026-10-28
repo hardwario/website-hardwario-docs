@@ -34,7 +34,6 @@ Zápis je blokující: program počká, dokud neskončí.
 Příklad kódu: synchronní zápis na UART
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -47,7 +46,6 @@ Příklad kódu: synchronní zápis na UART
   }
   ```
 
-</p>
 </details>
 
 
@@ -67,7 +65,6 @@ V tomto příkladu ukazujeme pouze **asynchronní zápis**.
 Příklad kódu: asynchronní zápis na UART
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -97,7 +94,6 @@ Příklad kódu: asynchronní zápis na UART
   }
   ```
 
-</p>
 </details>
 
 ## Čtení z UART {#uart-read}
@@ -112,7 +108,6 @@ Příklad kódu: asynchronní zápis na UART
 Příklad kódu: synchronní čtení z UART
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   void application_task()
@@ -130,7 +125,6 @@ Příklad kódu: synchronní čtení z UART
   }
   ```
 
-</p>
 </details>
 
 ### Asynchronní čtení {#asynchronous-read}
@@ -156,7 +150,6 @@ Tento příklad nešetří energii. Když spustíte čtení z UART funkcí `twr_
 Příklad kódu: asynchronní čtení z UART
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -208,5 +201,4 @@ Příklad kódu: asynchronní čtení z UART
   }
   ```
 
-</p>
 </details>

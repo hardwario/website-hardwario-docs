@@ -34,7 +34,6 @@ You can visit the [**twr_log SDK Module**](https://sdk.hardwario.com/group__twr_
 Logging Code Example
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -73,7 +72,6 @@ void application_init(void)
 }
 ```
 
-</p>
 </details>
 
 Example of output:

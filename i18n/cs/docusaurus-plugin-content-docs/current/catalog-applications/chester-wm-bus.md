@@ -311,7 +311,6 @@ Každá zpráva JSON pro cloud obsahuje až 20 paketů wM-Bus. Pokud je v zaří
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
-<p>
 
 ```json
 {
@@ -370,7 +369,6 @@ Každá zpráva JSON pro cloud obsahuje až 20 paketů wM-Bus. Pokud je v zaří
 }
 ```
 
-</p>
 </details>
 
   </TabItem>
@@ -378,7 +376,6 @@ Každá zpráva JSON pro cloud obsahuje až 20 paketů wM-Bus. Pokud je v zaří
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
-<p>
 
 ```json
 {
@@ -394,7 +391,6 @@ Každá zpráva JSON pro cloud obsahuje až 20 paketů wM-Bus. Pokud je v zaří
 }
 ```
 
-</p>
 </details>
 
   </TabItem>

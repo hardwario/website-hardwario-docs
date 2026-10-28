@@ -10,15 +10,13 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/encoder-module.png')} alt="Encoder Module with a rotary encoder knob and three TAG I2C0 sockets" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Encoder Module</b> can be useful for controlling your applications. The module is equipped with a high-quality rotary encoder manufactured by <b>Bourns</b> and features high reliability and durability. The rotary encoder is also equipped with a <b>push-button switch</b>.
-      </p>
-      <p>
+
         The rotary encoder has <b>12 positions per revolution</b>. The rotation range is not limited such as with a potentiometer and can be rotated in either direction at any number of revolutions.
-      </p>
-      <p>
+
         The module was designed primarily to complement the <a href="../about-lcd-module"><b>LCD Module</b></a>. A typical application is a wireless thermostat for setting up the temperature by rotating with the encoder or it could be used as a convenient navigation control in the graphical menu.
-      </p>
+
     </div>
   </div>
 </div>

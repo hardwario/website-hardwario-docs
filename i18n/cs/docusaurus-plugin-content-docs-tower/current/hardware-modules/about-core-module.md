@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/core-module.png')} alt="Core Module s mikrokontrolérem STM32, sub-GHz rádiem, konektorem micro-USB a dvěma řadami zdířek" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Core Module</b> je základem každého <b>zařízení TOWER</b>. Má 32bitový mikrokontrolér ARM se 192 kB paměti flash a 20 kB RAM. Kromě integrovaného <b>sub-GHz rádia pro pásmo 868/915 MHz</b> obsahuje také digitální teplotní senzor, 3D akcelerometr a bezpečnostní čip.
-      </p>
+
     </div>
   </div>
 </div>

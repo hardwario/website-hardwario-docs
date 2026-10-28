@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/mini-cover-module.png')} alt="Mini Cover Module, malý jednoduchý černý krycí panel s ventilačními otvory" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         Mini Cover Module je jednoduchý mechanický díl, který zakrývá přední stranu elektroniky HARDWARIO TOWER (menší formát 33 x 55 mm).
-      </p>
-      <p>
+
         Skvěle vypadá v kombinaci s některou z našich 3D tištěných krabiček. Stačí ho spodními piny zacvaknout do dutinkové lišty HARDWARIO TOWER.
-      </p>
+
     </div>
   </div>
 </div>

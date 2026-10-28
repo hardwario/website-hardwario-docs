@@ -66,7 +66,7 @@ Follow the pages below in order:
 ChirpStack, Node-RED, InfluxDB, and Grafana all run **on the device itself**, with no separate
 servers or cloud services required:
 
-<div style={{ width: '600px', margin: '0 auto' }}>
+<div style={{ maxWidth: '600px', margin: '0 auto' }}>
 
 <Image img={require('./fiber-lite/images/data-flow.png')} />
 

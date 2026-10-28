@@ -24,7 +24,6 @@ With every press of the button, one more relay will be activated. When all relay
 Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -74,5 +73,4 @@ Code Example
   }
   ```
 
-</p>
 </details>

@@ -10,15 +10,13 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/encoder-module.png')} alt="Encoder Module s knoflíkem rotačního enkodéru a třemi paticemi TAG I2C0" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Encoder Module</b> se hodí k ovládání vašich aplikací. Má kvalitní rotační enkodér od výrobce <b>Bourns</b> s vysokou spolehlivostí a dlouhou životností. Enkodér má i <b>tlačítkový spínač</b>.
-      </p>
-      <p>
+
         Rotační enkodér má <b>12 pozic na otáčku</b>. Na rozdíl od potenciometru nemá omezený rozsah, takže jím můžete otáčet oběma směry o libovolný počet otáček.
-      </p>
-      <p>
+
         Modul vznikl hlavně jako doplněk k modulu <a href="../about-lcd-module"><b>LCD Module</b></a>. Typicky slouží k nastavení teploty na bezdrátovém termostatu nebo jako pohodlné ovládání grafického menu.
-      </p>
+
     </div>
   </div>
 </div>

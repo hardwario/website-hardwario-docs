@@ -42,7 +42,6 @@ Aby se změny projevily, musíte zavolat `twr_led_strip_write(&led_strip);`. Pok
 Příklad kódu: nastavení několika LED
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -71,7 +70,6 @@ void application_init(void)
 }
 ```
 
-</p>
 </details>
 
 :::tip
@@ -98,7 +96,6 @@ Pokud si chcete efekty vyzkoušet, použijte tuto kostru kódu pro pásek se 144
 Příklad kódu: kostra pro efekty LED pásku
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -123,7 +120,6 @@ void application_init(void)
 }
 ```
 
-</p>
 </details>
 
 #### Efekt Test {#test-effect}
@@ -208,7 +204,6 @@ twr_led_strip_effect_stop(&led_strip);
 Příklad kódu: zastavení efektu LED pásku
 </b>
 </summary>
-<p>
 
 ```c showLineNumbers
 #include <application.h>
@@ -238,5 +233,4 @@ void application_init(void)
 }
 ```
 
-</p>
 </details>

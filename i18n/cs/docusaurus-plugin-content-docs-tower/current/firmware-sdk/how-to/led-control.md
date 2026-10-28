@@ -22,7 +22,6 @@ V tomto jednoduchém příkladu se LED inicializuje a pak bliká po celou dobu b
 Příklad kódu: blikající LED
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -36,7 +35,6 @@ Příklad kódu: blikající LED
   }
   ```
 
-</p>
 </details>
 
 :::info
@@ -53,7 +51,6 @@ Po startu programu LED navíc blikne. To se hodí u většiny firmwarů, protož
 Příklad kódu: LED ovládaná tlačítkem
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -83,5 +80,4 @@ Příklad kódu: LED ovládaná tlačítkem
   }
   ```
 
-</p>
 </details>

@@ -53,14 +53,12 @@ Například můžete přečíst 8 bitů dat z adresy paměti `0x01` přes `I2C_0
 Příklad kódu: čtení 8 bitů přes I²C
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   uint8_t reg_configuration;
   twr_i2c_memory_read_8b(TWR_I2C_I2C0, 0x48, 0x01, &reg_configuration);
   ```
 
-</p>
 </details>
 
 :::info
@@ -75,7 +73,6 @@ Ke čtení většího množství dat přes **I²C** musíte vytvořit strukturu 
 Příklad kódu: čtení libovolného počtu bitů přes I²C
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   twr_i2c_memory_transfer_t transfer;
@@ -89,7 +86,6 @@ Příklad kódu: čtení libovolného počtu bitů přes I²C
   twr_i2c_memory_read(TWR_I2C_I2C0, &transfer);
   ```
 
-</p>
 </details>
 
 
@@ -114,13 +110,11 @@ Například můžete zapsat 8 bitů dat, konkrétně `0x81`, na adresu paměti `
 Příklad kódu: zápis 8 bitů přes I²C
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   twr_i2c_memory_write_8b(TWR_I2C_I2C0, 0x48, 0x01, 0x81);
   ```
 
-</p>
 </details>
 
 :::info
@@ -135,7 +129,6 @@ K zápisu většího množství dat přes **I²C** musíte vytvořit strukturu `
 Příklad kódu: zápis libovolného počtu bitů přes I²C
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   twr_i2c_memory_transfer_t transfer;
@@ -149,5 +142,4 @@ Příklad kódu: zápis libovolného počtu bitů přes I²C
   twr_i2c_memory_read(TWR_I2C_I2C0, &transfer);
   ```
 
-</p>
 </details>

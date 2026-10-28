@@ -12,7 +12,7 @@ Milesight EM500-CO2 je **venkovní senzor prostředí 4 v 1**, který v náročn
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '500px', height: '500px' }}>
+      <div style={{ maxWidth: '500px' }}>
         <Image img={require('../../../../../../smart-devices/milesight/sensors/images/em500-co2.png')} />
       </div>
     </div>

@@ -33,7 +33,6 @@ Vzorkování může být **synchronní**, nebo **asynchronní**.
 Příklad kódu: synchronní vzorkování
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -56,7 +55,6 @@ Příklad kódu: synchronní vzorkování
   }
   ```
 
-</p>
 </details>
 
 ## Asynchronní vzorkování {#asynchronous-sampling}
@@ -75,7 +73,6 @@ Příklad kódu: synchronní vzorkování
 Příklad kódu: asynchronní vzorkování
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -115,5 +112,4 @@ Příklad kódu: asynchronní vzorkování
   }
   ```
 
-</p>
 </details>

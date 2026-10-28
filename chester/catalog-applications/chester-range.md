@@ -136,7 +136,6 @@ Every available sensor has one aggregated measurement, which contains the minimu
 
 <details>
 <summary><b>Show JSON Example</b></summary>
-<p>
 
 ```json
 {
@@ -251,7 +250,6 @@ Every available sensor has one aggregated measurement, which contains the minimu
 }
 ```
 
-</p>
 </details>
 
   </TabItem>

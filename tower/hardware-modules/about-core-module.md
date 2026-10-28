@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/core-module.png')} alt="Core Module with STM32 microcontroller, sub-GHz radio, micro-USB connector, and two socket headers" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Core Module</b> is the key element of every <b>TOWER device</b>. It has a 32-bit ARM microcontroller with 192 kB of flash memory and 20 kB of RAM. Besides the integrated <b>sub-GHz radio for the 868/915 MHz</b> band, it also features a digital temperature sensor, 3D accelerometer, and security chip.
-      </p>
+
     </div>
   </div>
 </div>

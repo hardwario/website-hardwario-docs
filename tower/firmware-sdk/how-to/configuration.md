@@ -38,7 +38,6 @@ In the `application_init()` is some showcase on how to use some of the functions
 Simple PIR Module Configuration Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -70,5 +69,4 @@ Simple PIR Module Configuration Code Example
   }
   ```
 
-</p>
 </details>

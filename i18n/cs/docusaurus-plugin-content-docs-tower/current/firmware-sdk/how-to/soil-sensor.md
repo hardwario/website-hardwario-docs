@@ -22,7 +22,6 @@ Toto je nejjednodušší příklad s jedním senzorem připojeným k modulu [**S
 Příklad kódu: výpis hodnot jednoho senzoru do konzole
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -54,7 +53,6 @@ Příklad kódu: výpis hodnot jednoho senzoru do konzole
   }
   ```
 
-</p>
 </details>
 
 :::info
@@ -71,7 +69,6 @@ Příklad níže ukazuje, jak pracovat s více senzory.
 Příklad kódu: více připojených senzorů
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -99,5 +96,4 @@ Příklad kódu: více připojených senzorů
   }
   ```
 
-</p>
 </details>

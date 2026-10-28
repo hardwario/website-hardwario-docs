@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/battery-module.png')} alt="Battery Module top view with labeled headers; holders for four AAA cells sit on the underside" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Battery Module</b> is designed as a power supply source for the battery-operated units. The integrated low-power buck converter provides excellent efficiency from the <b>four AAA 1.5 V Alkaline cells</b>. It also features an extra <b>5-pin socket where you can connect a HARDWARIO TOWER tag</b>.
-      </p>
-      <p>
+
         If the AAA batteries are not suitable for your application, you can use the <b>external voltage input</b>, which can handle up to 10 V. You can find the external input on the two pins in the middle. These pins are compatible with the popular <b>JST connector used for Lithium batteries</b>.
-      </p>
+
     </div>
   </div>
 </div>

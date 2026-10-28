@@ -38,7 +38,6 @@ Tento příklad nastaví RTC na **10.5.2020 18:26:10**.
 Příklad kódu: nastavení struktury RTC
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   struct tm datetime;
@@ -53,7 +52,7 @@ Příklad kódu: nastavení struktury RTC
 
   twr_rtc_set_datetime(&datetime, 0);
   ```
-</p>
+
 </details>
 
 :::tip
@@ -72,7 +71,6 @@ Hodnota registru roku 0 znamená 1900 a hodnota 199 znamená 2099.
 Příklad kódu: čtení data a času z RTC
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   struct tm datetime;
@@ -80,7 +78,6 @@ Příklad kódu: čtení data a času z RTC
   twr_log_debug("$DATE: \"%d-%02d-%02dT%02d:%02d:%02dZ\"", datetime.tm_year, datetime.tm_mon, datetime.tm_mday, datetime.tm_hour, datetime.tm_min, datetime.tm_sec);
   ```
 
-</p>
 </details>
 
 :::tip

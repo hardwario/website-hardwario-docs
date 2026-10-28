@@ -12,7 +12,7 @@ Milesight WT101 is a **smart radiator thermostat** with **LoRaWAN control** for 
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '500px', height: '500px' }}>
+      <div style={{ maxWidth: '500px' }}>
         <Image img={require('./images/wt101-868m.png')} />
       </div>
     </div>

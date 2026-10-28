@@ -139,7 +139,6 @@ app config show
 
 <details>
 <summary><b>Zobrazit podrobný popis příkazů</b></summary>
-<p>
 
 | Příkaz | Výchozí hodnota | Popis |
 | :--- | :--- | :--- |
@@ -156,7 +155,6 @@ app config show
 | **`config save`** | — | Trvale uloží aktuální konfiguraci do paměti flash zařízení. |
 | **`app config show`** | — | Vypíše aktuální nastavení pro kontrolu. |
 
-</p>
 </details>
 ---
 

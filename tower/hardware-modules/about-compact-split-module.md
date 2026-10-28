@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/compact-split-module.png')} alt="Compact Split Module, a bare board with two sets of labeled module header footprints" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Compact Split Module</b> makes it possible to use <b>two top modules</b> or create more compact designs. Now you can create much more devices that combine for example <a href="../about-lcd-module"><b>LCD Module</b></a>, <a href="../about-climate-module"><b>Climate Module</b></a>, <a href="../about-pir-module"><b>PIR Module</b></a> and many others. You can also use this module to create two stacks of modules and create <b>more compact devices</b>.
-      </p>
-      <p>
+
         This module has bottom entry pins which make the <b>module thinner</b>.
-      </p>
+
     </div>
   </div>
 </div>

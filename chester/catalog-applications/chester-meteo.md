@@ -144,7 +144,6 @@ Pressure is in **pascals**.
 
 <details>
 <summary><b>Show JSON Example</b></summary>
-<p>
 
 ```json
 {
@@ -545,7 +544,6 @@ Pressure is in **pascals**.
 }
 ```
 
-</p>
 </details>
 
   </TabItem>
@@ -553,7 +551,6 @@ Pressure is in **pascals**.
 
 <details>
 <summary><b>Show JSON Example</b></summary>
-<p>
 
 ```json
 {
@@ -584,7 +581,6 @@ Pressure is in **pascals**.
 }
 ```
 
-</p>
 </details>
 
   </TabItem>

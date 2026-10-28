@@ -24,7 +24,7 @@ export default function MetadataWrapper(props: Props): React.JSX.Element {
   // Doc permalinks come without the trailing slash even with trailingSlash: true; the
   // served (and canonical) URL has it, so normalise here to match.
   const withSlash = (path: string): string =>
-    siteConfig.trailingSlash && !/\.[a-z0-9]+$/i.test(path) && !path.endsWith('/') ? path + '/' : path;
+    siteConfig.trailingSlash && !/\.[a-z][a-z0-9]*$/i.test(path) && !path.endsWith('/') ? path + '/' : path;
   const url = origin + withSlash(metadata.permalink);
   const image = (frontMatter as { image?: string }).image;
 

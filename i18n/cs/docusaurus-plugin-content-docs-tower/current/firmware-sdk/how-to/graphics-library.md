@@ -45,7 +45,6 @@ Jednoduchý příklad, který vypíše `Hello world` na [**modul LCD Module ze s
 Příklad kódu: GFX s modulem LCD Module
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -65,7 +64,6 @@ Příklad kódu: GFX s modulem LCD Module
   }
   ```
 
-</p>
 </details>
 
 ### SSD1303 OLED {#ssd1303-oled}
@@ -82,7 +80,6 @@ Příklad je podobný předchozímu, jen text vypisujeme na displej OLED SSD1303
 Příklad kódu: GFX s displejem OLED SSD1303
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -102,7 +99,6 @@ Příklad kódu: GFX s displejem OLED SSD1303
   }
   ```
 
-</p>
 </details>
 
 ### Vlastní GFX driver {#custom-gfx-driver}
@@ -139,7 +135,6 @@ void application_init(void)
 Příklad kódu: implementace vlastního driveru GFX
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   bool led_matrix_is_ready(void *param)
@@ -188,5 +183,4 @@ Příklad kódu: implementace vlastního driveru GFX
   }
   ```
 
-</p>
 </details>

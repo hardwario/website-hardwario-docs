@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/lux-meter-tag.png')} alt="Lux Meter Tag, a coin-sized board with the OPT3001 light-intensity sensor" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Lux Meter Tag</b> uses a high dynamic range <b>light intensity sensor OPT3001</b> that can measure illuminance from 0.01 to 83,000 lux. This sensor is digital and calibrated. It communicates using an I²C bus and features a very low power operation and shutdown mode.
-      </p>
+
     </div>
   </div>
 </div>

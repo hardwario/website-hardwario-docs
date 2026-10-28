@@ -22,7 +22,6 @@ Modul [**Core Module**](../../hardware-modules/about-core-module.md) má integro
 Příklad kódu: integrovaný teplotní senzor
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -60,5 +59,4 @@ Příklad kódu: integrovaný teplotní senzor
   }
   ```
 
-</p>
 </details>

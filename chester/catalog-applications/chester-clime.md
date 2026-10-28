@@ -305,7 +305,6 @@ In each structure with the current configuration, there are six aggregated value
 
 <details>
 <summary><b>Show JSON Example</b></summary>
-<p>
 
 ```json
 {
@@ -1031,7 +1030,6 @@ In each structure with the current configuration, there are six aggregated value
 }
 ```
 
-</p>
 </details>
 
   </TabItem>
@@ -1039,7 +1037,6 @@ In each structure with the current configuration, there are six aggregated value
 
 <details>
 <summary><b>Show JSON Example</b></summary>
-<p>
 
 ```json
 {
@@ -1053,7 +1050,6 @@ In each structure with the current configuration, there are six aggregated value
 }
 ```
 
-</p>
 </details>
 
   </TabItem>

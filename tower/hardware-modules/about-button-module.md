@@ -10,9 +10,9 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('./images/button-module.png')} alt="Button Module faceplate with one big round push button" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         The <b>Button Module</b> is a simple module with one <b>big button</b>. You can use it to trigger various actions, e.g. <b>turn on the light, send a push notification, or control an appliance</b>. It is connected to the <b>BOOT</b> signal on the <b>Core Module</b>.
-      </p>
+
     </div>
   </div>
 </div>

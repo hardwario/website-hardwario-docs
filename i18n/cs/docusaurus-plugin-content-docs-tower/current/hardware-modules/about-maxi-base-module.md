@@ -10,12 +10,11 @@ import Image from '@theme/IdealImage';
       <div><Image img={require('../../../../../tower/hardware-modules/images/maxi-base-module.png')} alt="Maxi Base Module, velká zelená základová deska se šroubovacími svorkovnicemi a středovým místem pro modul" /></div>
     </div>
     <div class="col col--6">
-      <p>
+
         <b>Maxi Base Module</b> slouží jako základna pro sestavy ze sady IoT, které pak jednoduše vložíte do průmyslové krabičky Takachi (IP67).
-      </p>
-      <p>
+
         Kromě <b>libovolného modulu TOWER</b> má i svorkovnici, ke které připojíte <b>jeden modul CHESTER-X</b> pro externí senzory, externí tlačítko nebo externí napájení.
-      </p>
+
     </div>
   </div>
 </div>

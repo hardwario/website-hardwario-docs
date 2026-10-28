@@ -32,7 +32,6 @@ You also have to instantiate a structure `twr_lis2dh12_result_g_t` to store the 
 Continuous Measurement Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -65,7 +64,6 @@ Continuous Measurement Code Example
   }
   ```
 
-</p>
 </details>
 
 ## Alarm
@@ -92,7 +90,6 @@ After flashing, try to move your Core Module very slowly. It will do nothing in 
 Alarm Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -141,5 +138,4 @@ Alarm Code Example
   }
   ```
 
-</p>
 </details>

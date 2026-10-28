@@ -26,7 +26,6 @@ Modul měří pomocí [**infračerveného světla**](https://en.wikipedia.org/wi
 Ukázka kódu: CO₂ přes rádio
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -55,5 +54,4 @@ Ukázka kódu: CO₂ přes rádio
   }
   ```
 
-</p>
 </details>

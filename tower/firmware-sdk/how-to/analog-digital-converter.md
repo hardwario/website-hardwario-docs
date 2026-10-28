@@ -33,7 +33,6 @@ Sampling can be **synchronous** and **asynchronous**.
 Synchronous Sampling Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -56,7 +55,6 @@ Synchronous Sampling Code Example
   }
   ```
 
-</p>
 </details>
 
 ## Asynchronous Sampling
@@ -75,7 +73,6 @@ Synchronous Sampling Code Example
 Asynchronous Sampling Code Example
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -115,5 +112,4 @@ Asynchronous Sampling Code Example
   }
   ```
 
-</p>
 </details>

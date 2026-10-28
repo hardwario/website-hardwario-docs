@@ -35,7 +35,6 @@ Tento příklad používá **střední citlivost**. Při detekci pohybu se do po
 Příklad kódu: detekce pohybu
 </b>
 </summary>
-<p>
 
   ```c showLineNumbers
   #include <application.h>
@@ -64,5 +63,4 @@ Příklad kódu: detekce pohybu
   }
   ```
 
-</p>
 </details>

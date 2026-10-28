@@ -347,6 +347,9 @@ const config = {
             lineColor: '#6b6a6a',
             edgeLabelBackground: '#eef0f3',
           },
+          // Dark mode replaces these colours: src/theme/Mermaid/index.js.
+          // Notes over two actors are as wide as the span between them; a longer
+          // note needs the `:wrap:` prefix (cloud/device-protocol/transfers.md).
         },
       },
       navbar: {

@@ -159,7 +159,7 @@ sequenceDiagram
   Device->>Cloud: n+2 [xxxP]
   Cloud-->>Device: n+3 [FLxx] + data
   Device->>Cloud: n+4 [xxAx]
-  Note over Device,Cloud: No response, the downlink is delivered
+  Note over Device,Cloud:wrap: No response, the downlink is delivered
 ```
 
 ### Scenario D: Single-Fragment Uplink, Multi-Fragment Downlink Waiting
@@ -177,7 +177,7 @@ sequenceDiagram
   Device->>Cloud: n+6 [xxAx]
   Cloud-->>Device: n+7 [xLxx] + data
   Device->>Cloud: n+8 [xxAx]
-  Note over Device,Cloud: No response, the downlink is delivered
+  Note over Device,Cloud:wrap: No response, the downlink is delivered
 ```
 
 ### Scenario E: Poll, No Downlink
@@ -199,7 +199,7 @@ sequenceDiagram
   Device->>Cloud: n [xxxP]
   Cloud-->>Device: n+1 [FLxx] + data
   Device->>Cloud: n+2 [xxAx]
-  Note over Device,Cloud: No response, the downlink is delivered
+  Note over Device,Cloud:wrap: No response, the downlink is delivered
 ```
 
 ### Scenario G: Poll, Two Single-Fragment Downlinks

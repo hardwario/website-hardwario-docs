@@ -80,19 +80,21 @@ function postFeedback(form: FeedbackForm, values: Partial<Record<FeedbackField, 
   fetch(form.url, { method: 'POST', mode: 'no-cors', body }).catch(() => {});
 }
 
-// Usage counts for the ThingsBoard dashboard: only that it happened, never any
-// text. The backend holds the device token and decides what counts, so this
-// just reports. text/plain keeps it a simple request with no CORS preflight;
-// keepalive lets a rating sent as the tab closes still arrive.
-type UsageEvent = 'chat_opened' | 'rating_up' | 'rating_down';
+// Usage for the team's ThingsBoard dashboard: counts, plus the question,
+// answer and comment of a rating for reading there. The backend holds the
+// device token and decides what counts, so this just reports. text/plain keeps
+// it a simple request with no CORS preflight; keepalive lets a rating sent as
+// the tab closes still arrive.
+type UsageEvent = 'chat_opened' | 'rating_up' | 'rating_down' | 'rating_comment';
+type UsageDetails = { id?: string; question?: string; answer?: string; comment?: string };
 
-function reportEvent(apiUrl: string, event: UsageEvent) {
+function reportEvent(apiUrl: string, event: UsageEvent, details: UsageDetails = {}) {
   const url = apiUrl.replace(/\/api\/chat\/?$/, '/api/event');
   if (url === apiUrl) return;
   fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify({ event }),
+    body: JSON.stringify({ event, ...details }),
     keepalive: true,
   }).catch(() => {});
 }
@@ -547,7 +549,11 @@ export default function ChatWidget() {
     if (!feedbackForm || ratings[i] || !m) return;
     const id = newRatingId();
     setRatings(r => ({ ...r, [i]: { id, value, comment: '', commentSent: false } }));
-    reportEvent(apiUrl, value === 'up' ? 'rating_up' : 'rating_down');
+    reportEvent(apiUrl, value === 'up' ? 'rating_up' : 'rating_down', {
+      id,
+      question: m.question ?? '',
+      answer: m.content.slice(0, FEEDBACK_ANSWER_CHARS),
+    });
     postFeedback(feedbackForm, {
       id,
       rating: value,
@@ -567,6 +573,7 @@ export default function ChatWidget() {
     if (!feedbackForm || !r || !comment || r.commentSent) return;
     setRatings(rs => ({ ...rs, [i]: { ...r, commentSent: true } }));
     postFeedback(feedbackForm, { id: r.id, comment: comment.slice(0, 2000) });
+    reportEvent(apiUrl, 'rating_comment', { id: r.id, comment: comment.slice(0, 2000) });
   }
 
   // Two flags, because an element cannot animate out of the DOM. `mounted` is

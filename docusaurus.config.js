@@ -331,6 +331,12 @@ const config = {
       mermaid: {
         theme: { light: 'base', dark: 'base' },
         options: {
+          // Mermaid 12 changed the defaults (ELK layout, the "neo" look, flowchart labels
+          // wrapped at 120 px with a 120 px minimum node width). Keep the Mermaid 11
+          // rendering the diagrams were written for.
+          layout: 'dagre',
+          look: 'classic',
+          flowchart: { wrappingWidth: 200, minNodeWidth: 0 },
           themeVariables: {
             fontFamily: 'inherit',
             primaryColor: '#e8f4ff',

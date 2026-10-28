@@ -35,7 +35,7 @@ For sensor configuration, use the **Milesight ToolBox** mobile application, avai
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '250px', height: '250px' }}>
+      <div style={{ maxWidth: '250px' }}>
         <Image img={require('./images/milesight-toolbox.png')} />
       </div>
     </div>

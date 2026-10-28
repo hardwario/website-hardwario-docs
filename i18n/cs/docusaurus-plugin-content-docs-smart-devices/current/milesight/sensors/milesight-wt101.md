@@ -12,7 +12,7 @@ Milesight WT101 je **chytrá termostatická hlavice** s **ovládáním přes LoR
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '500px', height: '500px' }}>
+      <div style={{ maxWidth: '500px' }}>
         <Image img={require('../../../../../../smart-devices/milesight/sensors/images/wt101-868m.png')} />
       </div>
     </div>

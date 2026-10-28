@@ -12,7 +12,7 @@ Milesight WS101 je **kompaktní chytré tlačítko LoRaWAN napájené z baterie*
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '500px', height: '500px' }}>
+      <div style={{ maxWidth: '500px' }}>
         <Image img={require('../../../../../../smart-devices/milesight/sensors/images/ws101.png')} />
       </div>
     </div>

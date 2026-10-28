@@ -66,7 +66,7 @@ Projděte tyto stránky v uvedeném pořadí:
 ChirpStack, Node-RED, InfluxDB i Grafana běží **přímo na zařízení**, bez samostatných serverů
 a cloudových služeb:
 
-<div style={{ width: '600px', margin: '0 auto' }}>
+<div style={{ maxWidth: '600px', margin: '0 auto' }}>
 
 <Image img={require('../../../../fiber/fiber-lite/images/data-flow.png')} />
 

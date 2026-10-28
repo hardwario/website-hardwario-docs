@@ -12,7 +12,7 @@ Milesight UG63 je **kompaktní brána LoRaWAN®** pro **menší nasazení**. Má
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '500px', height: '500px' }}>
+      <div style={{ maxWidth: '500px' }}>
         <Image img={require('../../../../../../smart-devices/milesight/gateways/images/ug63-868m.png')} />
       </div>
     </div>

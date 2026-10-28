@@ -42,7 +42,7 @@ Pokud aktivní není, přiložte k senzoru **magnet** a probuďte ho tak z reži
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '376px', height: '250px' }}>
+      <div style={{ maxWidth: '376px' }}>
         <Image img={require('../../../../../chester/catalog-applications/images/tag-magnet.png')} alt="K senzoru Teltonika EYE je přiložený magnet, který ho probudí; zelená LED potvrzuje aktivaci" />
       </div>
     </div>

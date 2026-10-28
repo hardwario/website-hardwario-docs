@@ -14,7 +14,7 @@ Připojuje se přes Ethernet a Wi-Fi (volitelně i LTE), takže se hodí do mal�
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '500px', height: '500px' }}>
+      <div style={{ maxWidth: '500px' }}>
         <Image img={require('../../../../../../smart-devices/rakwireless/gateways/images/rak-RAK7268V2.png')} />
       </div>
     </div>

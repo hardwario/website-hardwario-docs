@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '376px', height: '376px' }}>
+      <div style={{ maxWidth: '376px' }}>
         <Image img={require('../../../../../../chester/supported-devices/modbus/images/schneider-electric-iem3000-series.png')} alt="Elektroměr Schneider Electric iEM3255 na DIN lištu s displejem LCD a tlačítky OK, ESC a se šipkou" />
       </div>
     </div>

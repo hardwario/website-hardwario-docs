@@ -42,7 +42,7 @@ If it is not active, touch a **magnet** to the sensor to wake it from hibernatio
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '376px', height: '250px' }}>
+      <div style={{ maxWidth: '376px' }}>
         <Image img={require('./images/tag-magnet.png')} alt="Magnet touched to a Teltonika EYE Sensor to wake it; the green LED confirms activation" />
       </div>
     </div>

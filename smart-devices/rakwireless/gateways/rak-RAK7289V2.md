@@ -14,7 +14,7 @@ It runs on **WisGateOS 2** and supports multi-backhaul connectivity (Ethernet, W
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '500px', height: '500px' }}>
+      <div style={{ maxWidth: '500px' }}>
         <Image img={require('./images/rak-RAK7289V2.png')} />
       </div>
     </div>

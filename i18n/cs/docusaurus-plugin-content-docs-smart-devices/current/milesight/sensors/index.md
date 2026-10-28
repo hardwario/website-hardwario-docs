@@ -35,7 +35,7 @@ Ke konfiguraci senzorů použijte mobilní aplikaci **Milesight ToolBox**, kter�
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div style={{ width: '250px', height: '250px' }}>
+      <div style={{ maxWidth: '250px' }}>
         <Image img={require('../../../../../../smart-devices/milesight/sensors/images/milesight-toolbox.png')} />
       </div>
     </div>

@@ -38,25 +38,27 @@
 .grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
+  /* minmax(0, 1fr): a plain 1fr track grows to the card image's min-content
+     width, which pushed the page wider than the screen on phones and tablets. */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 /* Wide grid for sections with fewer items — max 4 columns but centers nicely */
 .gridWide {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 @media (max-width: 996px) {
   .grid,
   .gridWide {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 480px) {
   .grid,
   .gridWide {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -95,13 +97,13 @@
 
 .cardImage {
   max-height: 168px;
-  max-width: 330px;
+  max-width: min(330px, 100%);
   width: auto;
   object-fit: contain;
 }
 
 .cardImageWide {
-  max-width: 465px;
+  max-width: min(465px, 100%);
 }
 
 .cardImageWrapperSmall {
@@ -110,7 +112,7 @@
 
 .cardImageSmall {
   max-height: 88px;
-  max-width: 190px;
+  max-width: min(190px, 100%);
 }
 
 /* Brand icon without its wordmark: square-ish artwork, so it is sized by

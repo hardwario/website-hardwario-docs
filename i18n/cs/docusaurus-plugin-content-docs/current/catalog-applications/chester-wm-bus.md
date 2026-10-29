@@ -52,7 +52,7 @@ Zařízení **CHESTER wM-Bus** lze objednat v jedné z těchto variant:
 
 ### CHESTER wM-Bus {#chester-wm-bus-1}
 
-Napájení šesti alkalickými články „D“.
+Napájení z primárních článků: jmenovité napětí 3,6 V, kapacita 26 000 mAh.
 
 Hardware katalogové aplikace **CHESTER wM-Bus** tvoří tyto položky (objednací kódy):
 

@@ -52,7 +52,7 @@ This device supports the newer **LTEv2** stack and the current **HARDWARIO Cloud
 
 ### CHESTER wM-Bus
 
-Battery powered with 6 pcs alkaline "D" cells.
+Battery powered from primary cells: 3.6 V nominal, 26 000 mAh.
 
 The catalog **CHESTER wM-Bus** hardware consists of the following ordering codes:
 

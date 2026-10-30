@@ -91,7 +91,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 | 4 | GND | Ground | System ground reference |
 | 5 | RS232 TX | RS-232 | RS-232 transmit data (module output) |
 | 6 | RS232 RX | RS-232 | RS-232 receive data (module input) |
-| 7 | VDD | Power | 3.3 V logic supply from the CHESTER mainboard |
+| 7 | VDD | Power | 3.0 V logic supply from the CHESTER mainboard |
 | 8 | GND | Ground | System ground reference |
 
 :::info

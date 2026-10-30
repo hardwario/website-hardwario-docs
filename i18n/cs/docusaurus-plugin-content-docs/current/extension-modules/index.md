@@ -61,12 +61,12 @@ Je-li zařízení CHESTER v krabičce, můžete po vyjmutí baterie přes malé 
 
 | Název modulu                      | Popis modulu                                                                                                                                                |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**CHESTER-X0A**](chester-x0.md)  | Až 4 digitální a analogové vstupy a výstupy, kanály proudové smyčky 4-20 mA, napěťové vstupy 0-10 V, bezpotenciálový kontakt, vstup NPN nebo PNP, se zvyšujícím měničem 5 V. |
-| [**CHESTER-X0B**](chester-x0.md)  | Až 4 digitální a analogové vstupy a výstupy, kanály proudové smyčky 4-20 mA, napěťové vstupy 0-10 V, bezpotenciálový kontakt, vstup NPN nebo PNP, bez zvyšujícího měniče 5 V.   |
+| [**CHESTER-X0A**](chester-x0.md)  | Až 4 digitální a analogové vstupy a výstupy, kanály proudové smyčky 4-20 mA, napěťové vstupy 0–26 V, bezpotenciálový kontakt, vstup NPN nebo PNP, se zvyšujícím měničem 5 V. |
+| [**CHESTER-X0B**](chester-x0.md)  | Až 4 digitální a analogové vstupy a výstupy, kanály proudové smyčky 4-20 mA, napěťové vstupy 0–26 V, bezpotenciálový kontakt, vstup NPN nebo PNP, bez zvyšujícího měniče 5 V.   |
 | [**CHESTER-X1**](chester-x1.md)   | Až osm kanálů 1-Wire (např. pro digitální teplotní senzory Dallas DS18B20)                                                                                 |
 | [**CHESTER-X2**](chester-x2.md)   | Rozhraní TTL/UART i RS-485 (např. pro komunikaci Modbus)                                                                                               |
 | [**CHESTER-X3A**](chester-x3.md)  | Až 2 senzory RTD (odporové teplotní senzory), například Pt 100 a Pt 1000                                                                                   |
-| [**CHESTER-X3B**](chester-x3.md)  | Až 2 termočlánkové kanály (typ B/C/E/J/K/N/R/S/T)                                                                                                            |
+| [**CHESTER-X3B**](chester-x3.md)  | Až 2 termočlánkové kanály (typ K; typy B/C/E/J/N/R/S/T na vyžádání)                                                                                                            |
 | [**CHESTER-X3C**](chester-x3.md)  | Až 2 kanály pro tenzometrické snímače (load cell) k měření hmotnosti                                                                                |
 | [**CHESTER-X4**](chester-x4.md)   | DC/DC měnič pro napájení z externí linky 6-28 VDC (s měřením vstupního napětí)                                                               |
 | [**CHESTER-X5**](chester-x5.md)   | Dvoukanálové izolované analogové vstupy pro měření napětí +/- 50 V                                                                                               |
@@ -74,7 +74,7 @@ Je-li zařízení CHESTER v krabičce, můžete po vyjmutí baterie přes malé 
 | [**CHESTER-X7**](chester-x7.md)   | Jednokanálový převodník s diferenciálním vstupem a softwarově řízeným zvyšujícím měničem 5 V pro proudové sondy a další průmyslové senzory                                |
 | [**CHESTER-X8**](chester-x8.md)   | Ultrapřesný akcelerometr                                                                                                                                       |
 | [**CHESTER-X9**](chester-x9.md)   | Čtyřkanálový výstupní modul s chytrým chráněným spínačem pro ovládání relé a solenoidů                                                                          |
-| [**CHESTER-X10**](chester-x10.md) | DC/DC měnič + nabíječka Li-Po pro napájení z externí linky 6-30 VDC (s měřením vstupního napětí)                                               |
+| [**CHESTER-X10**](chester-x10.md) | DC/DC měnič + nabíječka Li-Po pro napájení z externí linky 6–28 VDC (s měřením vstupního napětí)                                               |
 | [**CHESTER-X12**](chester-x12.md) | Sériové rozhraní RS-232 s vyhrazeným napájecím vstupem 5-28 VDC pro průmyslová sériová zařízení a starší techniku                                  |
 | [**CHESTER-X13**](chester-x13.md) | Rozhraní sběrnice CAN s podporou CAN FD a vestavěným snižujícím měničem (až 28 V)                                                                             |
 | [**CHESTER-X14**](chester-x14.md) | Připojení Ethernet 10/100 s vestavěným snižujícím měničem (až 28 V)                                                                                     |

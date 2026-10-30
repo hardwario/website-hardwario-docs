@@ -5,6 +5,13 @@ title: Configure a powered-off device
 
 # Configure a powered-off STICKER
 
+:::caution STICKER firmware v1.4.x only
+STICKER firmware **v2.0.0** removed configuration without batteries: NFC works
+only while the device runs, see
+[**NFC needs a powered device**](/sticker/hardwario-manager/#nfc-needs-a-powered-device).
+On v2.0.0 and later, insert the batteries before you write.
+:::
+
 STICKER can be configured with **no batteries inserted**. The NFC field from the
 phone powers the device long enough to store the settings, and the device applies
 them the next time it boots on battery power. This lets you prepare devices

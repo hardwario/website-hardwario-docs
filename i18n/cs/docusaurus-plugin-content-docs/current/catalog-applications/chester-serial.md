@@ -44,7 +44,7 @@ Hardware této aplikace tvoří tyto položky (objednací kódy):
 
 * `CHESTER-M-CGLS`: Standardní základní deska
 * `CHESTER-X2`: Modul rozhraní RS-485
-* `CHESTER-X10`: Externí napájecí vstup (5–28 V DC)
+* `CHESTER-X10`: Externí napájecí vstup (6–28 V DC)
 * `CHESTER-E2-LP`: Krabička s pigtailem SMA
 
 Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).

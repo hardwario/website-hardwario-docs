@@ -44,7 +44,7 @@ The hardware of this application consists of the following ordering codes:
 
 * `CHESTER-M-CGLS`: Standard mainboard
 * `CHESTER-X2`: RS-485 interface module
-* `CHESTER-X10`: External power input (5-28V DC)
+* `CHESTER-X10`: External power input (6–28 V DC)
 * `CHESTER-E2-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.

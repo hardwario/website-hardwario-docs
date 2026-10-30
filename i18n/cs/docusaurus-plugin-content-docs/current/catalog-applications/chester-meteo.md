@@ -597,7 +597,7 @@ Tlak je v **pascalech**.
 ### v3.5.1 – 2025-12-08 {#v351--2025-12-08}
 
 - **Přidáno**: Nová varianta: **CHESTER Meteo M** (Modbus RTU, podporuje senzory Lambrecht a Sensecap/OPM; typ senzoru se volí parametrem `meteo-type`)
-- **Přidáno**: Podpora půdních senzorů: vlhkost a teplota z půdních sond Modbus
+- **Přidáno**: Podpora půdních senzorů: vlhkost a teplota z půdních sond 1-Wire
 - **Přidáno**: Podpora LoRaWAN: jediný binární soubor firmwaru pro LTE i LoRaWAN; režim se volí příkazem `app config mode lte` / `app config mode lrw`
 - **Vylepšeno**: Podpora pyranometru (intenzita slunečního záření)
 

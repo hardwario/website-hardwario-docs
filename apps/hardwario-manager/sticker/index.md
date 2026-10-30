@@ -54,13 +54,14 @@ device's **secret key** before it can read or write. Once a device is saved, the
 app fills the key in automatically. It takes the serial and nonce from the tag
 and looks the key up in your saved list, so most actions need no typing at all.
 
-:::info Android and iOS tap differently
-On **Android** you hold the phone against the device for the whole exchange.
+:::info One tap on Android and iOS
+Since STICKER firmware **v2.0.0** every exchange is one tap with the phone held
+still, the same on Android and iOS.
 
-On **iOS** the whole exchange runs inside one system scan sheet, and the sheet
-asks you to **lift the phone and tap again** partway through. That lift is
-required: it gives the device the field-off moment it needs. Follow the prompts
-on the sheet and keep each tap steady.
+With firmware **v1.4.x**, iOS runs the exchange inside one system scan sheet,
+and the sheet asks you to **lift the phone and tap again** partway through. That
+lift is required there: it gives the device the field-off moment it needs.
+Follow the prompts on the sheet and keep each tap steady.
 :::
 
 ---

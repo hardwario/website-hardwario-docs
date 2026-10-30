@@ -64,7 +64,7 @@ Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 ### CHESTER wM-Bus DC {#chester-wm-bus-dc}
 
-Externí napájení síťovým adaptérem DC (230 V).
+Externí napájení síťovým adaptérem (230 V AC).
 
 Hardware katalogové aplikace **CHESTER wM-Bus DC** tvoří tyto položky (objednací kódy):
 
@@ -400,7 +400,7 @@ Každá zpráva JSON pro cloud obsahuje až 20 paketů wM-Bus. Pokud je v zaří
 
 ## HARDWARIO Cloud – dešifrovací klíče {#hardwario-cloud--decryption-keys}
 
-**Zprávy ze zařízení wM-Bus se přenášejí zašifrované**, aby se při přenosu dat šetřila energie a prodloužila výdrž baterie.  
+**Zprávy ze zařízení wM-Bus se přenášejí zašifrované.**  
 
 **Přijatá data je proto nutné dešifrovat**, k čemuž slouží **dešifrovací klíče**.  
 

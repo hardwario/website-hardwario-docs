@@ -34,7 +34,7 @@ Run the client.
 
 - `-c PATH` `--config PATH` path to the [configuration](#configuration) file
 - `-d` `--debug` show debug output
-- `-h IP` `--host IP` MQTT Broker host
+- `-h IP` `--mqtt IP` MQTT Broker host
 - `-p PORT` `--port PORT` MQTT Broker port
 - `-ca PATH` `--cafile PATH` Path to the CA certificate file
 - `-cert PATH` `--certfile PATH` Path to the client certificate file for use with TLS

@@ -22,14 +22,14 @@ import Image from '@theme/IdealImage';
 
 ## Přehled modulu {#module-overview}
 
-Modul CHESTER-X10 napájí základní desku CHESTER z externí linky **5-28 V DC** připojené na **VIN** a při výpadku tohoto napájení ji udrží v provozu. Snižující měnič **TPS62933** na desce vytváří pevnou větev **5 V**, ze které se napájí základní deska i nabíječka **MCP73833** pro jeden článek Li-Po / Li-Ion. Výstup měniče a baterie jsou na napájení základní desky spojené přes **diodové OR** (Schottkyho diody **PMEG6010ELR**). Dokud je na VIN napětí, běží základní deska z větve 5 V a baterie se nabíjí; když VIN vypadne, baterie napájení plynule převezme. Stejnosměrný vstup chrání Schottkyho dioda (**PMEG060T030ELPEZ**).
+Modul CHESTER-X10 napájí základní desku CHESTER z externí linky **6–28 V DC** připojené na **VIN** a při výpadku tohoto napájení ji udrží v provozu. Snižující měnič **TPS62933** na desce vytváří pevnou větev **5 V**, ze které se napájí základní deska i nabíječka **MCP73833** pro jeden článek Li-Po / Li-Ion. Výstup měniče a baterie jsou na napájení základní desky spojené přes **diodové OR** (Schottkyho diody **PMEG6010ELR**). Dokud je na VIN napětí, běží základní deska z větve 5 V a baterie se nabíjí; když VIN vypadne, baterie napájení plynule převezme. Stejnosměrný vstup chrání Schottkyho dioda (**PMEG060T030ELPEZ**).
 
 12bitový převodník ADC **TLA2024** na desce, čtený po **I²C**, měří přes přesné děliče vstupní napětí (VIN) a napětí baterie (BAT+), takže firmware může sledovat stejnosměrný vstup i stav nabití baterie. Modul se dodává s chráněným jednočlánkovým akumulátorem Li-Po a nabíjí ho proudem **450 mA**.
 
 ## Klíčové vlastnosti {#key-features}
 
 * **Záložní napájení:** Diodové OR mezi stejnosměrným vstupem a baterií udrží základní desku CHESTER napájenou i při výpadku externího zdroje.
-* **Široký stejnosměrný vstup:** Externí napájení **5-28 V DC** na VIN přes snižující měnič TPS62933 na desce.
+* **Široký stejnosměrný vstup:** Externí napájení **6–28 V DC** na VIN přes snižující měnič TPS62933 na desce.
 * **Nabíjení Li-Po:** Nabíječka MCP73833 na desce pro jeden článek Li-Po / Li-Ion proudem 450 mA.
 * **Baterie v balení:** Chráněný jednočlánkový akumulátor Li-Po **3,7 V / 2000 mAh** je součástí balení.
 * **Monitorování napětí na desce:** 12bitový ADC na I²C (TLA2024) měří vstupní napětí a napětí baterie.
@@ -48,7 +48,7 @@ Modul CHESTER-X10 napájí základní desku CHESTER z externí linky **5-28 V DC
 | Parametr | Hodnota |
 | :--- | :--- |
 | **Typ modulu** | Záložní napájení s nabíječkou jednoho článku Li-Po |
-| **Napájecí vstup (VIN)** | 5-28 V DC |
+| **Napájecí vstup (VIN)** | 6–28 V DC |
 | **Napájecí výstup** | Pevných 5 V, napájí základní desku CHESTER |
 | **Typ baterie** | Jeden článek Li-Po / Li-Ion, 3,7 V, s integrovaným ochranným obvodem |
 | **Nabíjecí proud** | 450 mA |
@@ -63,7 +63,7 @@ Modul CHESTER-X10 napájí základní desku CHESTER z externí linky **5-28 V DC
 
 | Součástka | Typové označení | Popis |
 | :--- | :--- | :--- |
-| **Snižující měnič** | TPS62933 | Snižující měnič (step-down), vstup 5-28 V DC, výstup 5 V |
+| **Snižující měnič** | TPS62933 | Snižující měnič (step-down), vstup 6–28 V DC, výstup 5 V |
 | **Nabíječka baterie** | MCP73833 | Lineární nabíječka jednoho článku Li-Po / Li-Ion (450 mA) |
 | **ADC pro monitorování napětí** | TLA2024 | 12bitový 4kanálový ADC na I²C (adresa 0x49); měří VIN a napětí baterie |
 | **Ochrana vstupu** | PMEG060T030ELPEZ / PMEG6010ELR | Schottkyho diody (ochrana vstupu a diodové OR napájecích cest) |
@@ -89,12 +89,12 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | 5 | BAT+ | Baterie | Kladný pól baterie (*) |
 | 6 | GND | Zem | Systémová zem |
 | 7 | GND | Zem | Systémová zem |
-| 8 | VIN | Napájecí vstup | Vstup externího stejnosměrného napájení (5-28 V DC) |
+| 8 | VIN | Napájecí vstup | Vstup externího stejnosměrného napájení (6–28 V DC) |
 
 *Poznámka: Používejte pouze jednočlánkovou baterii Li-Po (nebo Li-Ion) 3,7 V s integrovaným ochranným obvodem. Baterii nezkratujte! Oba piny BAT- i oba piny BAT+ jsou vnitřně spojené (zdvojené kvůli proudové zatížitelnosti).
 
 :::info
-Modul CHESTER-X10 napájí základní desku CHESTER přes slot modulu. Externí napájení **5-28 V DC** na **VIN** (pin 8) vede do snižujícího měniče TPS62933 na desce, jehož pevný výstup **5 V** napájí základní desku a nabíjí baterii připojenou na **BAT+** / **BAT-**. Při výpadku externího napájení drží základní desku v provozu baterie.
+Modul CHESTER-X10 napájí základní desku CHESTER přes slot modulu. Externí napájení **6–28 V DC** na **VIN** (pin 8) vede do snižujícího měniče TPS62933 na desce, jehož pevný výstup **5 V** napájí základní desku a nabíjí baterii připojenou na **BAT+** / **BAT-**. Při výpadku externího napájení drží základní desku v provozu baterie.
 :::
 
 ### Rozhraní k hostu (I²C) {#host-interface-ic}

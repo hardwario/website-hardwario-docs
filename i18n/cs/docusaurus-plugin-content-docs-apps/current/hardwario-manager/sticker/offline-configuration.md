@@ -5,6 +5,13 @@ title: Konfigurace vypnutého zařízení
 
 # Konfigurace vypnutého zařízení STICKER {#configure-a-powered-off-sticker}
 
+:::caution Jen firmware STICKER v1.4.x
+Firmware STICKER **v2.0.0** konfiguraci bez baterií zrušil: NFC funguje jen za
+běhu zařízení, viz
+[**NFC funguje jen na zapnutém zařízení**](/sticker/hardwario-manager/#nfc-needs-a-powered-device).
+Od verze v2.0.0 před zápisem vložte baterie.
+:::
+
 Zařízení STICKER lze konfigurovat **bez vložených baterií**. Pole NFC z telefonu
 zařízení napájí dost dlouho na to, aby si nastavení uložilo, a zařízení ho
 začne používat po dalším startu z baterií. Díky tomu můžete zařízení připravit ještě

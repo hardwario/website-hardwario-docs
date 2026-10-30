@@ -47,7 +47,7 @@ uplinks.
 
 ## Check which alarms are active
 
-**STICKER → Device info → Advanced** lists the **Active alarms** currently
+**STICKER → Device info** lists the **Active alarms** currently
 tripped on the device. See
 [**Device info and LoRaWAN keys**](./device-info.md).
 

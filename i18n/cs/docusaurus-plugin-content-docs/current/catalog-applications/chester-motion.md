@@ -47,7 +47,7 @@ Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 | :--- | :--- |
 | Materiál krabičky | ASA |
 | Rozměry | 130×175×45 mm |
-| Provozní teplota | -20 až +60 °C |
+| Provozní teplota | -30 až +70 °C |
 | Skladovací teplota | -30 až +70 °C |
 | Krytí krabičky | IP67 |
 | Jmenovité napětí baterie | 3,6 V |

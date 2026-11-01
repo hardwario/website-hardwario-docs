@@ -37,7 +37,7 @@ Tento článek uvádí základní parametry platformy CHESTER:
 | Rozměry krabičky               | 130(š) x 175(v) x 45(h) mm | Standardní krabička                                           |
 | Rozměry krabičky               | 200(š) x 280(v) x 45(h) mm | Nosná deska, nízký profil                                     |
 | Rozměry krabičky               | 200(š) x 280(v) x 65(h) mm | Nosná deska, vysoký profil                                    |
-| Rozsah provozních teplot       | -20 až +60 °C              |                                                               |
+| Rozsah provozních teplot       | -30 až +70 °C              |                                                               |
 | Rozsah skladovacích teplot     | -30 až +70 °C              |                                                               |
 | Stupeň krytí                   | IP 67                      | Lze ponořit do hloubky 1 m na 30 minut                        |
 

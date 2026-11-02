@@ -20,6 +20,8 @@ TOWER is currently in **maintenance mode**, receiving only bugfixes and minor im
 - SDK source: [hardwario/twr-sdk](https://github.com/hardwario/twr-sdk)
 - Hardware schematics: [hardwario/twr-hardware](https://github.com/hardwario/twr-hardware)
 - Zephyr port (experimental): [hardwario/twr-zephyr](https://github.com/hardwario/twr-zephyr)
+- `tower` command-line tool and Rust firmware: [hardwario/tower](https://github.com/hardwario/tower)
+- TOWER Bridge desktop app: [hardwario/tower-bridge](https://github.com/hardwario/tower-bridge)
 
 :::
 
@@ -29,6 +31,20 @@ TOWER is currently in **maintenance mode**, receiving only bugfixes and minor im
 
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware & Applications" default>
+
+### 2026-10-23
+
+- **[App]** `tower-bridge` [v1.1.0](https://github.com/hardwario/tower-bridge/releases/tag/v1.1.0): TOWER Bridge now tells you when a newer version is out. Once a day it asks GitHub for the newest release (nothing else is sent) and shows **Update Available** in the tray menu, a banner on the Dashboard and one notification per version. It does not install anything itself; the check can be switched off in *Settings → About*. To update from 1.0.x, quit the app and put the new file in place of the old one; settings and history are kept
+
+### 2026-10-19
+
+- **[App]** `tower-bridge` [v1.0.1](https://github.com/hardwario/tower-bridge/releases/tag/v1.0.1): Fix release for macOS. Notifications work again on current macOS (in 1.0.0 nothing appeared, not even the permission request), and on macOS 13 and newer **Open at Login** registers TOWER Bridge as a login item under its own name instead of a background item listed as "HARDWARIO a.s.". macOS users of 1.0.0 should update
+- **[App]** `tower-bridge` [v1.0.0](https://github.com/hardwario/tower-bridge/releases/tag/v1.0.0): First release of TOWER Bridge, a tray app and command-line tool (`tower-bridge-cli`) for the TOWER Bridge Module on Windows, macOS and Linux, continuing the `enmon` tool. It reads the Climate Module, CO2 Module, GPS Module, Relay Module and the Humidity, Temperature, Lux Meter, Barometer, VOC-LP and NFC Tags; shows a dashboard with history, a data table with CSV and XLSX export, and alerts with notifications; and publishes the readings over MQTT and an optional local REST API, Prometheus metrics and MCP server. The Windows and macOS builds are signed
+
+### 2026-10-18
+
+- **[CLI]** `tower` [cli-v1.1.0](https://github.com/hardwario/tower/releases/tag/cli-v1.1.0): Second release of the command-line tool, the same day as 1.0.0, with matching firmware images. See the [full commit log](https://github.com/hardwario/tower/compare/cli-v1.0.0...cli-v1.1.0)
+- **[CLI]** `tower` [cli-v1.0.0](https://github.com/hardwario/tower/releases/tag/cli-v1.0.0): First release of `tower`, the command-line and terminal tool for the new Rust-based TOWER stack. It decodes the console link of the TOWER firmware (logs, events, shell), flashes, erases, resets and identifies boards over the STM32 UART bootloader, and bridges the radio network to MQTT (`tower gateway`). Builds for Linux (x86_64, ARM64, Raspberry Pi), macOS and Windows. `tower` only talks to firmware built from the same sources: flash the images shipped with the release (`radio_push_button.bin`, `radio_dongle_gateway.bin`, `blinky.bin`) or build from the tag
 
 ### 2025-09-10
 

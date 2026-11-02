@@ -20,6 +20,8 @@ Platforma TOWER je v **režimu údržby**: dostává už jen opravy chyb a drobn
 - Zdrojový kód SDK: [hardwario/twr-sdk](https://github.com/hardwario/twr-sdk)
 - Hardwarová schémata: [hardwario/twr-hardware](https://github.com/hardwario/twr-hardware)
 - Port pro Zephyr (experimentální): [hardwario/twr-zephyr](https://github.com/hardwario/twr-zephyr)
+- Nástroj příkazové řádky `tower` a firmware v Rustu: [hardwario/tower](https://github.com/hardwario/tower)
+- Desktopová aplikace TOWER Bridge: [hardwario/tower-bridge](https://github.com/hardwario/tower-bridge)
 
 :::
 
@@ -29,6 +31,20 @@ Platforma TOWER je v **režimu údržby**: dostává už jen opravy chyb a drobn
 
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware a aplikace" default>
+
+### 2026-10-23 {#2026-10-23}
+
+- **[App]** `tower-bridge` [v1.1.0](https://github.com/hardwario/tower-bridge/releases/tag/v1.1.0): TOWER Bridge nově upozorní na novější verzi. Jednou denně se zeptá GitHubu na nejnovější vydání (nic dalšího neodesílá) a zobrazí **Update Available** v nabídce v oznamovací oblasti, banner na Dashboardu a jedno upozornění pro každou verzi. Sama nic neinstaluje; kontrolu lze vypnout v *Settings → About*. Při přechodu z 1.0.x aplikaci ukončete a nový soubor dejte místo starého; nastavení i historie zůstanou zachovány
+
+### 2026-10-19 {#2026-10-19}
+
+- **[App]** `tower-bridge` [v1.0.1](https://github.com/hardwario/tower-bridge/releases/tag/v1.0.1): Opravné vydání pro macOS. Upozornění na aktuálním macOS opět fungují (ve verzi 1.0.0 se nezobrazovalo nic, ani žádost o oprávnění) a na macOS 13 a novějším **Open at Login** registruje TOWER Bridge jako položku spouštěnou při přihlášení pod vlastním názvem místo položky na pozadí s názvem „HARDWARIO a.s.“. Uživatelé verze 1.0.0 na macOS by měli aktualizovat
+- **[App]** `tower-bridge` [v1.0.0](https://github.com/hardwario/tower-bridge/releases/tag/v1.0.0): První vydání TOWER Bridge, aplikace v oznamovací oblasti a nástroje příkazové řádky (`tower-bridge-cli`) pro modul TOWER Bridge Module na Windows, macOS a Linuxu, navazující na nástroj `enmon`. Čte moduly Climate Module, CO2 Module, GPS Module, Relay Module a tagy Humidity, Temperature, Lux Meter, Barometer, VOC-LP a NFC Tag; nabízí dashboard s historií, tabulku dat s exportem do CSV a XLSX a alarmy s upozorněními; hodnoty publikuje přes MQTT a volitelně přes lokální REST API, metriky Prometheus a server MCP. Sestavení pro Windows a macOS jsou podepsaná
+
+### 2026-10-18 {#2026-10-18}
+
+- **[CLI]** `tower` [cli-v1.1.0](https://github.com/hardwario/tower/releases/tag/cli-v1.1.0): Druhé vydání nástroje příkazové řádky, ve stejný den jako 1.0.0, s odpovídajícími obrazy firmwaru. Viz [úplný seznam commitů](https://github.com/hardwario/tower/compare/cli-v1.0.0...cli-v1.1.0)
+- **[CLI]** `tower` [cli-v1.0.0](https://github.com/hardwario/tower/releases/tag/cli-v1.0.0): První vydání nástroje `tower` pro příkazovou řádku a terminál, určeného pro nový stack TOWER v Rustu. Dekóduje konzolové spojení firmwaru TOWER (logy, události, shell), přes UART bootloader STM32 nahrává firmware, maže, resetuje a identifikuje desky a přemosťuje rádiovou síť do MQTT (`tower gateway`). Sestavení pro Linux (x86_64, ARM64, Raspberry Pi), macOS a Windows. `tower` komunikuje jen s firmwarem sestaveným ze stejných zdrojů: nahrajte obrazy dodané s vydáním (`radio_push_button.bin`, `radio_dongle_gateway.bin`, `blinky.bin`) nebo sestavte firmware z tagu
 
 ### 2025-09-10 {#2025-09-10}
 

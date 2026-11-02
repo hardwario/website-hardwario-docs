@@ -278,7 +278,8 @@ GITHUB_REPOS = [
     "sticker-firmware",
     "sticker-configuration",
     "tapper",
-    "tower-cli",
+    "tower",
+    "tower-bridge",
     "py-hardwario",
     "twr-sdk",
 ]

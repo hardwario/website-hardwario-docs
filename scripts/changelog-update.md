@@ -59,9 +59,10 @@ Two sources look usable and are not:
 - **TOWER's Rust rewrite.** The current stack lives in the `hardwario/tower`
   monorepo (SDK, `tower` CLI, gateway; cli-v1.0.0 and cli-v1.1.0 on
   2026-10-18) plus the `tower-bridge` app (v1.0.0 and v1.0.1 on 2026-10-19,
-  with real notes). Whether they belong in `tower/changelog.md`, which
-  documents the legacy twr-sdk platform, is a product decision — ask before
-  writing them up.
+  with real notes). Decided 2026-11-02: both go in `tower/changelog.md`, in
+  the Firmware & Applications tab, tagged **[CLI]** and **[App]**. The
+  `tower` CLI releases carry no change list, so their entries stay at what
+  the release body says plus a link to the compare view.
 
 ### Reading the internal GitLab
 
@@ -78,8 +79,16 @@ curl -s -H "PRIVATE-TOKEN: $GLTOK" \
 A project path that 301-redirects has been renamed; follow the redirect and use
 the numeric project id it gives you.
 
+If the credential helper asks for OAuth instead (it does from a non-interactive
+shell), a GitLab personal access token works the same way in the
+`PRIVATE-TOKEN` header. To sweep the whole instance rather than the known
+projects, list `projects?order_by=last_activity_at&last_activity_after=<date>`
+and read each one's tags.
+
 GLIDER has no changelog page yet, and `gitlab.hardwario.com/glider/firmware`
 carries no tags. Add the page when the firmware starts tagging releases.
+HARDWARIO Manager (`apps/manager`, documented under `apps/hardwario-manager/`)
+has no changelog page either; its tags (v2.0.0 on 2026-10-16) carry no notes.
 
 ## The check
 
@@ -169,18 +178,18 @@ npm run build           # both locales; the real gate — it fails on bad anchor
 Commit message: `<product>: Add <version> release`, with a body saying what the
 release does and that both EN and CS were updated.
 
-## State as of 2026-10-21
+## State as of 2026-11-02
 
-Checked against the sources above (GitLab not reachable from this run, so the
-GAUGER row is carried over from 2026-09-07):
+Checked against the sources above, the whole GitHub org and the whole GitLab
+instance:
 
 | Page | Documented | Released | Gap |
 |---|---|---|---|
 | `chester/catalog-applications/` | v4.0.1 (2026-09-07) | v4.0.1 | current; `main` has unreleased commits |
-| `sticker/` | v2.0.0 (2026-10-19) | v2.0.0 (2026-10-19) | current |
+| `sticker/` | v2.0.0 (2026-10-19) | v2.0.0 (2026-10-19) | current; `main` matches the tag |
 | `tapper/` | v1.2.1 (2025-08-12) | 1.2.1 (2025-08-12) | current |
-| `chester/` platform | 2026-09-07 | — | current |
-| `tower/` | 2025-09-10 | cli-v1.1.0 (2026-10-18), tower-bridge v1.0.1 (2026-10-19) | Rust stack and TOWER Bridge not mentioned; waiting on the product decision |
+| `chester/` platform | 2026-10-21 | — | current |
+| `tower/` | tower-bridge v1.1.0 (2026-10-23), cli-v1.1.0 (2026-10-18) | same | current |
 | `fiber/` | nothing logged | — | left empty on purpose, no real notes exist |
-| `gauger/` | v1.6.0 (2025-12-15) | v1.6.0 | filled 2026-09-07 from the GitLab releases, all nine versions |
+| `gauger/` | v1.6.0 (2025-12-15) | v1.6.0 | current (GitLab checked 2026-11-02) |
 | `ember/` | nothing logged | — | correct; RouterOS is MikroTik's changelog |

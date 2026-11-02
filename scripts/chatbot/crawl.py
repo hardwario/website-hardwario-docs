@@ -51,10 +51,11 @@ SOURCES = {
     # navigation URLs (e.g. /milesight/p-detection-sensitivity/0-5-mm) — filter
     # permutations, not content. Indexing them would bury the real pages under
     # thousands of near-identical listings that match every query weakly.
-    # sitemap-advisors is a JS quiz with no extractable prose.
+    # sitemap-advisors is a JS quiz with no extractable prose. sitemap-news
+    # was dropped from the store's sitemap index by 2026-11 (404).
     "store": [
         "https://www.hardwario.store/sitemap-{}.xml.gz".format(s)
-        for s in ("products", "manufacturers", "others", "news")
+        for s in ("products", "manufacturers", "others")
     ],
 }
 

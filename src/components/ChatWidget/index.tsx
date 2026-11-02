@@ -35,19 +35,21 @@ type Message = {
   question?: string;
 };
 
-// A rating, per answer. `id` ties the comment that may follow a 👎 to the
-// response the 👎 itself already sent: the form cannot amend a response, so a
-// comment arrives as a second one carrying the same id and no rating.
+// A rating, per answer. `id` ties the comment that may follow to the rating
+// already reported, and `ts` (when the backend stored the rating, from its
+// answer) puts the comment on the same row of the dashboard table.
 type Rating = {
   id: string;
   value: 'up' | 'down';
   comment: string;
   commentSent: boolean;
+  ts?: number;
 };
 
-// Answers can run long; the sheet only needs enough to recognise one. A Sheets
-// cell also tops out at 50 000 characters.
+// Answers can run long; the dashboard only needs enough to recognise one. The
+// backend caps it at the same length.
 const FEEDBACK_ANSWER_CHARS = 4000;
+const FEEDBACK_COMMENT_CHARS = 2000;
 
 function newRatingId(): string {
   try {
@@ -58,45 +60,37 @@ function newRatingId(): string {
   }
 }
 
-// Where ratings go: a Google Form, whose responses land in a linked sheet.
-// `fields` maps each value to the form's question id (entry.N); the ids come
-// from the published form and change only if a question is deleted and
-// re-added. Set in docusaurus.config.js; absent, no rating buttons are shown.
-type FeedbackForm = {
-  url: string;
-  fields: Record<FeedbackField, string>;
-};
-type FeedbackField = 'id' | 'rating' | 'comment' | 'question' | 'answer' | 'sources' | 'page' | 'locale';
-
-// Fire and forget. A form-encoded POST is a "simple" request, so no CORS
-// preflight; Google sends no CORS headers either, so the response is opaque
-// and unread. A failure costs one rating, never the chat.
-function postFeedback(form: FeedbackForm, values: Partial<Record<FeedbackField, string>>) {
-  const body = new URLSearchParams();
-  for (const [field, value] of Object.entries(values)) {
-    const entry = form.fields[field as FeedbackField];
-    if (entry && value) body.append(entry, value);
-  }
-  fetch(form.url, { method: 'POST', mode: 'no-cors', body }).catch(() => {});
-}
-
-// Usage for the team's ThingsBoard dashboard: counts, plus the question,
-// answer and comment of a rating for reading there. The backend holds the
-// device token and decides what counts, so this just reports. text/plain keeps
-// it a simple request with no CORS preflight; keepalive lets a rating sent as
-// the tab closes still arrive.
+// Usage and ratings for the team's ThingsBoard dashboard: counts, plus the
+// question, answer and comment of a rating for reading there. The backend holds
+// the device token and decides what counts, so this just reports. text/plain
+// keeps it a simple request with no CORS preflight; keepalive lets a rating sent
+// as the tab closes still arrive. Fire and forget: a failure costs one rating,
+// never the chat.
 type UsageEvent = 'chat_opened' | 'rating_up' | 'rating_down' | 'rating_comment';
-type UsageDetails = { id?: string; question?: string; answer?: string; comment?: string };
+type UsageDetails = { id?: string; question?: string; answer?: string; comment?: string; ts?: number };
 
-function reportEvent(apiUrl: string, event: UsageEvent, details: UsageDetails = {}) {
+// Resolves to the `ts` a rating was stored at, when the backend says; never
+// rejects.
+async function reportEvent(
+  apiUrl: string,
+  event: UsageEvent,
+  details: UsageDetails = {},
+): Promise<number | undefined> {
   const url = apiUrl.replace(/\/api\/chat\/?$/, '/api/event');
-  if (url === apiUrl) return;
-  fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'text/plain' },
-    body: JSON.stringify({ event, ...details }),
-    keepalive: true,
-  }).catch(() => {});
+  if (url === apiUrl) return undefined;
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ event, ...details }),
+      keepalive: true,
+    });
+    if (res.status !== 200) return undefined;
+    const { ts } = await res.json();
+    return typeof ts === 'number' ? ts : undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 // The backend has shipped two shapes for `sources`: a bare URL string per
@@ -159,7 +153,7 @@ const UI = {
     copiedCode: 'Copied',
     rateComment: 'What was wrong? (optional)',
     rateCommentSend: 'Send',
-    // The comment goes to a Google Form with the question and the answer.
+    // The comment is stored with the question and the answer, for the team.
     rateCommentHint: 'Do not include personal data.',
     teaser: '👋 Hi! Stuck on something? Ask me anything about HARDWARIO devices.',
     teaserClose: 'Hide this message',
@@ -475,9 +469,6 @@ export default function ChatWidget() {
   // The chrome speaks the language of the page it is sitting on.
   const t = textFor(i18n.currentLocale);
   const apiUrl = (siteConfig.customFields?.chatApiUrl as string) || FALLBACK_API_URL;
-  // No URL, no rating buttons: offering a 👍 that goes nowhere would be worse
-  // than not asking.
-  const feedbackForm = siteConfig.customFields?.feedbackForm as FeedbackForm | undefined;
 
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -546,34 +537,29 @@ export default function ChatWidget() {
   // is rated once.
   function rate(i: number, value: Rating['value']) {
     const m = messages[i];
-    if (!feedbackForm || ratings[i] || !m) return;
+    if (ratings[i] || !m) return;
     const id = newRatingId();
     setRatings(r => ({ ...r, [i]: { id, value, comment: '', commentSent: false } }));
     reportEvent(apiUrl, value === 'up' ? 'rating_up' : 'rating_down', {
       id,
       question: m.question ?? '',
       answer: m.content.slice(0, FEEDBACK_ANSWER_CHARS),
-    });
-    postFeedback(feedbackForm, {
-      id,
-      rating: value,
-      question: m.question ?? '',
-      answer: m.content.slice(0, FEEDBACK_ANSWER_CHARS),
-      sources: (m.sources ?? []).slice(0, 3).map(s => s.url).join(' '),
-      // Path only: a query string can carry anything, and the sheet does not
-      // need it to know which page the reader was on.
-      page: window.location.pathname,
-      locale: i18n.currentLocale,
+    }).then(ts => {
+      // Matched by id: by now the conversation may have been cleared.
+      if (ts) setRatings(rs => (rs[i]?.id === id ? { ...rs, [i]: { ...rs[i], ts } } : rs));
     });
   }
 
   function sendComment(i: number) {
     const r = ratings[i];
     const comment = r?.comment.trim();
-    if (!feedbackForm || !r || !comment || r.commentSent) return;
+    if (!r || !comment || r.commentSent) return;
     setRatings(rs => ({ ...rs, [i]: { ...r, commentSent: true } }));
-    postFeedback(feedbackForm, { id: r.id, comment: comment.slice(0, 2000) });
-    reportEvent(apiUrl, 'rating_comment', { id: r.id, comment: comment.slice(0, 2000) });
+    reportEvent(apiUrl, 'rating_comment', {
+      id: r.id,
+      comment: comment.slice(0, FEEDBACK_COMMENT_CHARS),
+      ts: r.ts,
+    });
   }
 
   // Two flags, because an element cannot animate out of the DOM. `mounted` is
@@ -869,7 +855,7 @@ export default function ChatWidget() {
                       )}
                     </div>
                   )}
-                  {feedbackForm && m.role === 'assistant' && m.question && (
+                  {m.role === 'assistant' && m.question && (
                     <Feedback
                       rating={ratings[i]}
                       t={t}

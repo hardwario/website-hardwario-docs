@@ -1219,8 +1219,8 @@
   cursor: default;
 }
 
-/* Under the comment box: the comment lands in a form with the question and
-   answer, so it should carry nothing personal. */
+/* Under the comment box: the comment is stored with the question and answer,
+   so it should carry nothing personal. */
 .feedbackHint {
   width: 100%;
   font-size: 11px;

@@ -12,7 +12,7 @@ title: Piketronic RPP-R Radon Probe
 The Piketronic **RPP-R** is a radon probe that continuously measures radon
 concentration along with the air temperature and humidity inside its measurement
 chamber. It is equipped with an **RS-485 Modbus RTU interface** for reading the
-measured values. This device is supported by the **CHESTER Serial** application.
+measured values. This device is supported by the **CHESTER Serial** application. The [**CHESTER Clime Radon**](../../firmware/chester-clime/chester-clime-radon.md) firmware reads it too and reports the values in its own `radon_probe` structure.
 
 :::info
 

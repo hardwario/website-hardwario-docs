@@ -77,7 +77,7 @@ Use the command `hardwario chester app flash <parameter>` to flash the firmware.
 The `<parameter>` can be:
 
 - A **BIN** or **HEX** file.
-- A unique ID that was sent to you by email or from our [Catalog Application firmwares](../catalog-applications/index.md#application-firmware). It has this format `34677881d57f4b0eb85507f176627bee`.
+- A unique ID that was sent to you by email or from our [Catalog Application firmwares](../firmware/index.md#application-firmware). It has this format `34677881d57f4b0eb85507f176627bee`.
 
 ### Processor Reset
 

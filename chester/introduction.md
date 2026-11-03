@@ -48,7 +48,7 @@ TODO Enable these articles
 -->
 
 * [**Product Certification**](./product-certification.md): Complete reference of product certification.
-* [**Catalog Application Changelog**](catalog-applications/changelog.md): Latest SDK releases, firmware versions, and per-application changes.
+* [**Catalog Application Changelog**](firmware/changelog.md): Latest SDK releases, firmware versions, and per-application changes.
 * [**CHESTER Platform Changelog**](./changelog.md): Complete platform log including SDK changes and hardware revisions.
 
 ## Typical Use Cases

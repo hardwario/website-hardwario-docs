@@ -53,5 +53,5 @@ configuration for you automatically. Adding it yourself can double-apply the cha
 :::
 
 For the full list of configuration parameters see the CHESTER
-[**Default Configuration**](/chester/catalog-applications/common-functionality#default-configuration)
+[**Default Configuration**](/chester/firmware/common-functionality#default-configuration)
 reference; the `app config show` command prints a device's current values.

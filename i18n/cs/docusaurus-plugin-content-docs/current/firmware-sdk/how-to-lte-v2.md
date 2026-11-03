@@ -47,7 +47,7 @@ Konfigurace je v aplikaci CHESTER Control definovaná makry: parametry definujet
 
 ### Ostatní katalogové aplikace {#other-catalogue-apps}
 
-Všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK už jsou převedené na HARDWARIO Cloud, takže se jimi můžete inspirovat. Můžete také použít hotový [**firmware**](/chester/catalog-applications/catalog-applications/#application-firmware).
+Všechny katalogové aplikace ve složce `applications/*` v CHESTER SDK už jsou převedené na HARDWARIO Cloud, takže se jimi můžete inspirovat. Můžete také použít hotový [**firmware**](/chester/firmware/#application-firmware).
 
 ## Změny pro LTE v2 {#changes-for-lte-v2}
 

@@ -14,7 +14,7 @@ Over-The-Air).
 
 Most updates use a **ready-made catalog firmware**, so you don't have to build
 anything yourself. Open the CHESTER
-[**Catalog Applications → Application Firmware**](/chester/catalog-applications/catalog-applications#application-firmware)
+[**Firmware → Application Firmware**](/chester/firmware/#application-firmware)
 table, find your application and variant, and copy its **Identifier** (a value like
 `424ab48d4d9a4b3880bd18faefe4ce0c`).
 

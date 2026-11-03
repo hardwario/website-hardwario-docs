@@ -12,7 +12,7 @@ title: Radonová sonda Piketronic RPP-R
 Piketronic **RPP-R** je radonová sonda, která průběžně měří koncentraci radonu
 a také teplotu a vlhkost vzduchu ve své měřicí komoře. Naměřené hodnoty se
 z ní čtou přes rozhraní **RS-485 Modbus RTU**. Sondu podporuje aplikace
-**CHESTER Serial**.
+**CHESTER Serial**. Číst ji umí i firmware [**CHESTER Clime Radon**](../../firmware/chester-clime/chester-clime-radon.md), který hodnoty odesílá ve vlastní struktuře `radon_probe`.
 
 :::info
 

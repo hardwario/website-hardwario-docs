@@ -34,5 +34,5 @@ Firmware se nahrává přes Bluetooth z **QR kódu, který nese odkaz na firmwar
 Postup, jednotlivé fáze aktualizace a chování při jejím selhání popisuje
 stránka [**Aktualizace firmwaru**](/apps/hardwario-manager/chester/firmware-update).
 
-Pro katalogové aplikace najdete [**hotové binární soubory**](../catalog-applications/index.md#application-firmware);
+Pro katalogové aplikace najdete [**hotové binární soubory**](../firmware/index.md#application-firmware);
 vlastní sestavení dostanete e-mailem jako odkaz.

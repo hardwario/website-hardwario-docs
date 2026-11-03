@@ -48,7 +48,7 @@ TODO Enable these articles
 -->
 
 * [**Certifikace produktů**](./product-certification.md): Kompletní přehled certifikací produktů.
-* [**Seznam změn katalogových aplikací**](catalog-applications/changelog.md): Nejnovější vydání SDK, verze firmwaru a změny jednotlivých aplikací.
+* [**Seznam změn katalogových aplikací**](firmware/changelog.md): Nejnovější vydání SDK, verze firmwaru a změny jednotlivých aplikací.
 * [**Seznam změn platformy CHESTER**](./changelog.md): Úplný seznam změn platformy včetně změn SDK a revizí hardwaru.
 
 ## Typické využití {#typical-use-cases}

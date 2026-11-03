@@ -19,7 +19,7 @@ This article describes the core functionality, hardware description, default con
 Some of the basics are not provided, as they are common for all CHESTER catalog applications. Please see:
 
 - [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
-- [**Common functionality**](/chester/catalog-applications/common-functionality) to know how LED, button and network configuration works.
+- [**Common functionality**](/chester/firmware/common-functionality) to know how LED, button and network configuration works.
 - [**Platform Connectivity**](/chester/category/platform-connectivity) on how to work with the interactive console.
 
 :::
@@ -81,7 +81,7 @@ app config interval-report 1800
 
 ## Firmware
 
-The latest firmware is available in Catalog Applications [Firmware chapter](/chester/catalog-applications/catalog-applications#application-firmware).
+The latest firmware is available in Catalog Applications [Firmware chapter](/chester/firmware/#application-firmware).
 
 ## Example JSON Message
 

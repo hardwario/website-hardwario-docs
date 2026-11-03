@@ -19,7 +19,7 @@ Tento článek popisuje základní funkce katalogové aplikace **CHESTER Input**
 Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Najdete je na těchto stránkách:
 
 - [**První kroky**](/chester/first-steps): jak připojit zařízení ke cloudu.
-- [**Společné funkce**](/chester/catalog-applications/common-functionality): jak fungují LED, tlačítko a nastavení sítě.
+- [**Společné funkce**](/chester/firmware/common-functionality): jak fungují LED, tlačítko a nastavení sítě.
 - [**Konektivita platformy**](/chester/category/platform-connectivity): jak pracovat s interaktivní konzolí.
 
 :::
@@ -280,7 +280,7 @@ app config hygro-interval-aggreg <value>
 
 ## Firmware {#firmware}
 
-Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](/chester/catalog-applications/catalog-applications#application-firmware).
+Nejnovější firmware najdete na stránce Katalogové aplikace v kapitole [Firmware aplikací](/chester/firmware/#application-firmware).
 
 ## Ukázková zpráva JSON {#example-json-message}
 

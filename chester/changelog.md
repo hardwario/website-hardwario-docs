@@ -15,7 +15,7 @@ This page tracks all notable changes across the CHESTER platform, including **fi
 
 :::info
 
-This page tracks platform-level changes by **date**. For versioned SDK release notes and per-application changelogs, see the [**Catalog Application Changelog**](catalog-applications/changelog.md).
+This page tracks platform-level changes by **date**. For versioned SDK release notes and per-application changelogs, see the [**Catalog Application Changelog**](firmware/changelog.md).
 
 :::
 
@@ -28,14 +28,14 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### 2026-09-07
 
-- **[SDK v4.0.1]** SDK **v4.0.1** released: [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.1) · [Detailed Changelog](catalog-applications/changelog.md#v401-2026-09-07)
+- **[SDK v4.0.1]** SDK **v4.0.1** released: [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.1) · [Detailed Changelog](firmware/changelog.md#v401-2026-09-07)
 - **[FW/SDK]** Fixed CHESTER-X0 analog input regression from v4.0.0: every channel sampled its neighbouring pin (affects CHESTER Control and Meteo)
 - **[FW/SDK]** Reduced RAM usage by about 500 bytes
 - **[FW/SDK]** Added opt-in debug subsystem `ctr_trace`
 
 ### 2026-08-10
 
-- **[SDK v4.0.0]** SDK **v4.0.0** released (breaking): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Detailed Changelog](catalog-applications/changelog.md#v400-2026-08-10) · [Migration guide](/chester/sdk-v4-migration-guide)
+- **[SDK v4.0.0]** SDK **v4.0.0** released (breaking): [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.0) · [Detailed Changelog](firmware/changelog.md#v400-2026-08-10) · [Migration guide](/chester/sdk-v4-migration-guide)
 - **[FW/SDK]** Updated to NCS 3.4: sysbuild + DTS partitions replace Partition Manager; TinyCrypt removed in favour of PSA
 - **[FW/SDK]** Added cloud message spool (`CONFIG_CTR_CLOUD_SPOOL`), a store-and-forward queue that survives uplink failures and reboots
 - **[FW/SDK]** Optimized RAM usage by about 17 kB; deprecated the `ctr_led` sequencer API
@@ -44,7 +44,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ### 2026-06-22
 
-- **[SDK v3.5.5]** SDK **v3.5.5** released: [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5) · [Detailed Changelog](catalog-applications/changelog.md#v355-2026-06-22)
+- **[SDK v3.5.5]** SDK **v3.5.5** released: [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5) · [Detailed Changelog](firmware/changelog.md#v355-2026-06-22)
 - **[FW/SDK]** Added RTC sync status API (`ctr_rtc_is_synced`, `ctr_rtc_get_ts_ms`, `ctr_rtc_set_event_cb`)
 - **[FW/SDK]** Fixed power consumption regression on CHESTER board (vbatt removed)
 - **[FW/SDK]** Added TMP112 shutdown and one-shot power modes
@@ -195,13 +195,13 @@ The table below links directly to the changelog section of each catalog applicat
 
 | Application | Changelog | Last Updated |
 |---|---|---|
-| CHESTER Clime | [Changelog](/chester/catalog-applications/chester-clime/#changelog) | 2026-06-24 |
-| CHESTER Control | [Changelog](/chester/catalog-applications/chester-control/#changelog) | 2026-10-21 |
-| CHESTER Current | [Changelog](/chester/catalog-applications/chester-current/#changelog) | 2026-06-24 |
-| CHESTER Meteo | [Changelog](/chester/catalog-applications/chester-meteo/#changelog) | 2026-10-21 |
-| CHESTER Motion | [Changelog](/chester/catalog-applications/chester-motion/#changelog) | 2026-04-01 |
-| CHESTER Push | [Changelog](/chester/catalog-applications/chester-push/#changelog) | 2026-04-01 |
-| CHESTER Range | [Changelog](/chester/catalog-applications/chester-range/#changelog) | 2026-04-01 |
-| CHESTER Scale | [Changelog](/chester/catalog-applications/chester-scale/#changelog) | 2026-06-22 |
-| CHESTER Serial | [Changelog](/chester/catalog-applications/chester-serial/#changelog) | 2026-04-01 |
-| CHESTER wM-Bus | [Changelog](/chester/catalog-applications/chester-wm-bus/#changelog) | 2026-06-24 |
+| CHESTER Clime | [Changelog](/chester/firmware/chester-clime/#changelog) | 2026-06-24 |
+| CHESTER Control | [Changelog](/chester/firmware/chester-control/#changelog) | 2026-10-21 |
+| CHESTER Current | [Changelog](/chester/firmware/chester-current/#changelog) | 2026-06-24 |
+| CHESTER Meteo | [Changelog](/chester/firmware/chester-meteo/#changelog) | 2026-10-21 |
+| CHESTER Motion | [Changelog](/chester/firmware/chester-motion/#changelog) | 2026-04-01 |
+| CHESTER Push | [Changelog](/chester/firmware/chester-push/#changelog) | 2026-04-01 |
+| CHESTER Range | [Changelog](/chester/firmware/chester-range/#changelog) | 2026-04-01 |
+| CHESTER Scale | [Changelog](/chester/firmware/chester-scale/#changelog) | 2026-06-22 |
+| CHESTER Serial | [Changelog](/chester/firmware/chester-serial/#changelog) | 2026-04-01 |
+| CHESTER wM-Bus | [Changelog](/chester/firmware/chester-wm-bus/#changelog) | 2026-06-24 |

@@ -1,0 +1,102 @@
+{
+  "static/img/chester/catalog-applications/chester-clime-iaq.webp": {
+    "artwork": "chester-clime-iaq-right",
+    "file": "chester-clime-iaq-right.png",
+    "sha256": "7662b2efca08b95e3e0f35ee11a0d36bd5d720654a2aebac874ba1552a0cf9b4",
+    "commit": "77c1138",
+    "params": {
+      "width": 800,
+      "format": "webp"
+    }
+  },
+  "static/img/chester/catalog-applications/chester-clime.webp": {
+    "artwork": "chester-clime-right",
+    "file": "chester-clime-right.png",
+    "sha256": "7ff961293625f0a477139d92ee6e05a0d9a61a12f93b560e9c19c8bf7d55fab4",
+    "commit": "77c1138",
+    "params": {
+      "width": 800,
+      "format": "webp"
+    }
+  },
+  "static/img/chester/catalog-applications/chester-control.webp": {
+    "artwork": "chester-control-top",
+    "file": "chester-control-top.png",
+    "sha256": "87a3c1225dd3c6ec1c4b3d245a2ab1ec0062d6a9e3cf58c96e3c0416e51436b9",
+    "commit": "77c1138",
+    "params": {
+      "width": 800,
+      "format": "webp"
+    }
+  },
+  "static/img/chester/catalog-applications/chester-current.webp": {
+    "artwork": "chester-current-current-transformers-isometric",
+    "file": "chester-current-current-transformers-isometric.png",
+    "sha256": "b30ef6fa65c348f8f12aa1634dc7302f720c486ea7e2d4c697b7b8a935026de1",
+    "commit": "77c1138",
+    "params": {
+      "width": 800,
+      "format": "webp"
+    }
+  },
+  "static/img/chester/catalog-applications/chester-meteo.webp": {
+    "artwork": "chester-meteo-right",
+    "file": "chester-meteo-right.png",
+    "sha256": "8a3c003171d5ed64d046a6e847656e98c846c1e28dadca667cd0d5c172f18396",
+    "commit": "77c1138",
+    "params": {
+      "width": 800,
+      "format": "webp"
+    }
+  },
+  "static/img/chester/catalog-applications/chester-motion.webp": {
+    "artwork": "chester-motion-right",
+    "file": "chester-motion-right.png",
+    "sha256": "64033834fb7e098b51aed856f1539d9f887d780c18fe5cade539394627a8fad5",
+    "commit": "77c1138",
+    "params": {
+      "width": 800,
+      "format": "webp"
+    }
+  },
+  "static/img/chester/catalog-applications/chester-push.webp": {
+    "artwork": "chester-push-andon-en-top",
+    "file": "chester-push-andon-en-top.png",
+    "sha256": "cfd3bccad72a15f7bf9ed847ffaa55d054a53b4f1e873ce3cd8ab2613354c3c0",
+    "commit": "77c1138",
+    "params": {
+      "width": 800,
+      "format": "webp"
+    }
+  },
+  "static/img/chester/catalog-applications/chester-range.webp": {
+    "artwork": "chester-range-right",
+    "file": "chester-range-right.png",
+    "sha256": "e83e3671e1432333dc42f634b2c246782c806e6138989c5aba25be988042b5e0",
+    "commit": "77c1138",
+    "params": {
+      "width": 800,
+      "format": "webp"
+    }
+  },
+  "static/img/chester/catalog-applications/chester-scale.webp": {
+    "artwork": "chester-scale-right",
+    "file": "chester-scale-right.png",
+    "sha256": "f379d524c09613232feb7365669e738850a7634373def4d7710b0c358d75d341",
+    "commit": "77c1138",
+    "params": {
+      "width": 800,
+      "format": "webp"
+    }
+  },
+  "static/img/chester/catalog-applications/chester-wm-bus.webp": {
+    "artwork": "chester-wm-bus-left",
+    "file": "chester-wm-bus-left.png",
+    "sha256": "dc79803e53c344ce4831ceb06fb0c1c9eba02273c14127d172d0f63fff35682e",
+    "commit": "77c1138",
+    "params": {
+      "width": 800,
+      "format": "webp"
+    }
+  }
+}

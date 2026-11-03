@@ -113,10 +113,10 @@ If your device still has trouble connecting to the network (especially when usin
 ## Step 5: Check the Status LED
 
 - **Blinking green every 5 seconds** → Connected to HARDWARIO Cloud ✅  
-- **No blinking /** [**other colors**](/chester/catalog-applications/common-functionality/#led-behaviour) → Still connecting or an error occurred. Check SIM, network coverage, or power  
+- **No blinking /** [**other colors**](/chester/firmware/common-functionality/#led-behaviour) → Still connecting or an error occurred. Check SIM, network coverage, or power  
 
 :::info
-For details about all LED color states and meanings, see the [**LED Behaviour documentation**](/chester/catalog-applications/common-functionality/#led-behaviour).
+For details about all LED color states and meanings, see the [**LED Behaviour documentation**](/chester/firmware/common-functionality/#led-behaviour).
 :::
 
 ## Step 6: See Your Data in the Cloud
@@ -168,7 +168,7 @@ You can check it in three ways:
 
 ### Download the Latest Firmware
 You can always find the newest firmware builds here:  
-👉 [**Available Application Firmware Builds**](/chester/catalog-applications/catalog-applications#application-firmware)
+👉 [**Available Application Firmware Builds**](/chester/firmware/#application-firmware)
 
 :::info
  The firmware table is organized by CHESTER type, so make sure to select the correct one for your device.

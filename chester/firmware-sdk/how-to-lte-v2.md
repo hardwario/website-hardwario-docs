@@ -47,7 +47,7 @@ CHESTER Control also contains configuration definitions through macros. So you d
 
 ### Other Catalogue Apps
 
-Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to HARDWARIO Cloud and you can take an inspiration. Or use pre-built [**firmware**](/chester/catalog-applications/catalog-applications/#application-firmware)
+Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to HARDWARIO Cloud and you can take an inspiration. Or use pre-built [**firmware**](/chester/firmware/#application-firmware)
 
 ## Changes for LTE v2
 

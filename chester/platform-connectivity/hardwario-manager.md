@@ -34,5 +34,5 @@ Firmware is flashed over Bluetooth from a **QR code carrying the firmware link**
 See [**Firmware update**](/apps/hardwario-manager/chester/firmware-update) for the
 procedure, the update stages, and what happens when an update fails.
 
-You can find [**pre-built binaries**](../catalog-applications/index.md#application-firmware)
+You can find [**pre-built binaries**](../firmware/index.md#application-firmware)
 for catalog applications; a custom build arrives as a link by e-mail.

@@ -77,7 +77,7 @@ Firmware nahrajete příkazem `hardwario chester app flash <parameter>`.
 Parametr `<parameter>` může být:
 
 - Soubor **BIN** nebo **HEX**.
-- Unikátní ID, které jste dostali e-mailem nebo najdete u [firmwaru katalogových aplikací](../catalog-applications/index.md#application-firmware). Má tento formát: `34677881d57f4b0eb85507f176627bee`.
+- Unikátní ID, které jste dostali e-mailem nebo najdete u [firmwaru katalogových aplikací](../firmware/index.md#application-firmware). Má tento formát: `34677881d57f4b0eb85507f176627bee`.
 
 ### Reset procesoru {#processor-reset}
 

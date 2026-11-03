@@ -16,7 +16,7 @@ Otevřete **CHESTER → Tools → Firmware update**.
 Obrazovka aktualizace načítá image z **QR kódu s odkazem na firmware**.
 Nenajdete tu katalog, pole pro adresu ani výběr souboru. Tento QR kód dostanete
 se svým vlastním sestavením, nebo ho najdete u
-[**hotových binárních souborů**](/chester/catalog-applications/catalog-applications#application-firmware)
+[**hotových binárních souborů**](/chester/firmware/#application-firmware)
 katalogových aplikací.
 :::
 

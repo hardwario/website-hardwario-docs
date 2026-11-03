@@ -14,7 +14,7 @@ Over-The-Air).
 
 Většina aktualizací využívá **hotový katalogový firmware**, takže nemusíte nic
 sestavovat sami. V dokumentaci zařízení CHESTER otevřete tabulku
-[**Katalogové aplikace → Firmware aplikací**](/chester/catalog-applications/catalog-applications#application-firmware),
+[**Firmware → Firmware aplikací**](/chester/firmware/#application-firmware),
 najděte svou aplikaci a variantu a zkopírujte její **Identifier** (například
 `424ab48d4d9a4b3880bd18faefe4ce0c`).
 

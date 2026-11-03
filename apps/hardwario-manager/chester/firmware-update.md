@@ -16,7 +16,7 @@ Open **CHESTER → Tools → Firmware update**.
 The update screen takes its image from a **QR code carrying the firmware link**.
 There is no catalog to browse, no address to type, and no file picker. You get
 that QR with your custom build, or from the
-[**pre-built binaries**](/chester/catalog-applications/catalog-applications#application-firmware)
+[**pre-built binaries**](/chester/firmware/#application-firmware)
 for catalog applications.
 :::
 

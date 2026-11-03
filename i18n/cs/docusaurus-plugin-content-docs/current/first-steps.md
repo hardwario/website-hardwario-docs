@@ -113,10 +113,10 @@ Pokud se zařízení stále nedaří připojit k síti (hlavně s vlastní SIM k
 ## Krok 5: Zkontrolujte stavovou LED {#step-5-check-the-status-led}
 
 - **Zelené bliknutí každých 5 sekund** → připojeno k HARDWARIO Cloud ✅  
-- **Žádné blikání /** [**jiné barvy**](/chester/catalog-applications/common-functionality/#led-behaviour) → stále se připojuje nebo došlo k chybě. Zkontrolujte SIM, pokrytí sítě nebo napájení  
+- **Žádné blikání /** [**jiné barvy**](/chester/firmware/common-functionality/#led-behaviour) → stále se připojuje nebo došlo k chybě. Zkontrolujte SIM, pokrytí sítě nebo napájení  
 
 :::info
-Podrobnosti o všech barevných stavech LED a jejich významu najdete v [**dokumentaci k chování LED**](/chester/catalog-applications/common-functionality/#led-behaviour).
+Podrobnosti o všech barevných stavech LED a jejich významu najdete v [**dokumentaci k chování LED**](/chester/firmware/common-functionality/#led-behaviour).
 :::
 
 ## Krok 6: Podívejte se na data v cloudu {#step-6-see-your-data-in-the-cloud}
@@ -168,7 +168,7 @@ Zkontrolovat ji můžete třemi způsoby:
 
 ### Stažení nejnovějšího firmwaru {#download-the-latest-firmware}
 Nejnovější sestavení firmwaru najdete vždy zde:  
-👉 [**Dostupná sestavení aplikačního firmwaru**](/chester/catalog-applications/catalog-applications#application-firmware)
+👉 [**Dostupná sestavení aplikačního firmwaru**](/chester/firmware/#application-firmware)
 
 :::info
  Tabulka firmwaru je členěná podle typu zařízení CHESTER, vyberte proto ten, který odpovídá vašemu zařízení.

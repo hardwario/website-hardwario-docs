@@ -46,13 +46,13 @@ Při připojení se zařízení EMBER nejdřív zeptá, kam se připojit (`route
 | --- | --- |
 | ChirpStack | v4 (ověřeno 4.19) s regionem EU868 |
 | Gateway Bridge | ChirpStack Gateway Bridge v4 (ověřeno 4.1) jako druhá instance s backendem `basic_station` |
-| EMBER | RouterOS 7.20 nebo novější (ověřeno 7.24.5; starším verzím chybí opravy klienta LNS), karta LoRa s plánem kanálů `eu-868`, přístup přes **WinBox** nebo SSH s právy admin |
+| EMBER | doporučujeme RouterOS 7.20 nebo novější (ověřeno na 7.24.5; starším verzím podle changelogu firmy MikroTik chybí opravy klienta LNS), karta LoRa s plánem kanálů `eu-868`, přístup přes **WinBox** nebo SSH s právy admin |
 | Síť | zařízení EMBER musí mít přístup k serveru na portu TCP 3001 (nebo jiném zvoleném) |
 | Certifikáty (wss, mTLS) | certifikační autorita (CA) a certifikát serveru vydaný na DNS jméno nebo IP adresu, na kterou se brány EMBER připojují |
 | Čas | správný čas na serveru (NTP): bridge podle něj kontroluje platnost certifikátů; NTP doporučujeme i na zařízení EMBER (čas v logu) |
 
 :::caution
-Příkazy pro zařízení EMBER níže jsou pro okno **Terminal** v aplikaci WinBox. Zadávejte je **po jednom řádku** a víceřádkový blok nikdy neposílejte jako jeden příkaz SSH: RouterOS ho pak provede řádek po řádku a řádek, který selže, může nechat kartu LoRa vypnutou.
+Příkazy pro zařízení EMBER níže jsou pro okno **Terminal** v aplikaci WinBox. Zadávejte je **po jednom řádku** a víceřádkový blok nikdy neposílejte jako jeden příkaz SSH: RouterOS ho pak provede řádek po řádku a řádek, který selže, může nechat kartu LoRa vypnutou. Ze stejného důvodu nikdy nezadávejte `disable`, `set` a `enable` na jeden řádek oddělené středníkem (`;`): RouterOS se při první chybě (`Device is busy`) zastaví a karta zůstane vypnutá.
 :::
 
 ---
@@ -152,6 +152,8 @@ Záložka **TLS certificate** u brány v aplikaci ChirpStack:
 ## 5) Nastavte zařízení EMBER (MikroTik RouterOS) {#5-configure-ember-mikrotik-routeros}
 Na zařízení EMBER se založí záznam serveru typu LNS a karta LoRa se na něj přepne. **Kartu a její servery měňte jen při vypnuté kartě.** Po `disable` počkejte, až `/iot lora print detail` ukáže stav `Inactive`, a teprve pak zadejte další příkaz; po `enable` zkontrolujte, že se stav změní na `Active` (když zůstane `Inactive`, pošlete `enable` znovu). Místo `<server>` doplňte DNS jméno nebo IP adresu serveru. Soubory nahrajte v aplikaci WinBox (**Files** → **Upload**; dialogy pro nahrání a import ukazuje návod [The Things Stack](./lorawan-tts.md)).
 
+Před přepnutím si poznamenejte server, který karta používá teď: `:put [/iot lora get [find] servers]` (více serverů vypíše oddělené `;`). Když se EMBER k novému serveru nepřipojí (krok 6), přepněte ho stejným postupem zpět, při vypnuté kartě: `/iot lora disable [find]`, `/iot lora set [find] servers="<old>"` (jméno v uvozovkách, více jmen oddělte čárkami), `/iot lora enable [find]`. Když `disable` selže s hláškou `Plan … not allowed by band`, nic neměňte a postupujte podle části [Špatný region ze serveru](#wrong-region-from-the-server).
+
 **ws:**
 
 ```
@@ -177,18 +179,18 @@ Na zařízení EMBER se založí záznam serveru typu LNS a karta LoRa se na ně
 /certificate import file-name=ca.crt name=server-ca passphrase="" trusted=yes
 /certificate import file-name=tc.crt name=gw-client passphrase=""
 /certificate import file-name=tc.key passphrase=""
-/file remove [find name="tc.key"]
 /certificate print where name="gw-client"
+/file remove [find name="tc.key"]
 /iot lora servers add name=cs-mtls address=<server> protocol=LNS port=3001 ssl=yes certificate=gw-client
 /iot lora disable [find]
 /iot lora set [find] servers=cs-mtls
 /iot lora enable [find]
 ```
 
-- `/certificate print` musí u `gw-client` ukazovat příznaky **KT** (klíč připojen). Bez `K` se EMBER připojí bez certifikátu a server ho odmítne.
+- `/certificate print` musí u `gw-client` ukazovat příznaky **KT** (klíč připojen). Bez `K` se EMBER připojí bez certifikátu a server ho odmítne; v tom případě `gw-client` smažte a certifikát i klíč importujte znovu, ještě než smažete soubor s klíčem.
 - Pole `key` u serveru nechte prázdné: je určené pro jiné síťové servery a ChirpStack ho nepoužívá.
 - Před importem nového klientského certifikátu nesmí na zařízení EMBER zůstat jiný certifikát se stejným EUI ve jméně (CN); viz [Obnova certifikátu brány](#renewing-the-gateway-certificate).
-- Nastavení antény (`antenna=internal-antenna` / `external-antenna`) a plánu kanálů karty (`channel-plan=eu-868`) zůstává podle vaší instalace.
+- Nastavení antény (`antenna=`) a plánu kanálů karty (`channel-plan=eu-868`) zůstává podle vaší instalace.
 
 ---
 
@@ -196,7 +198,7 @@ Na zařízení EMBER se založí záznam serveru typu LNS a karta LoRa se na ně
 Spojení funguje, když EMBER hlásí `forwarder is ready` a ChirpStack ukazuje bránu online s přicházejícími uplinky.
 
 1. Na zařízení EMBER zapněte podrobný log LoRa (jen na dobu ověření): `/system logging add topics=lora,debug action=memory comment=lora-debug`
-2. `/log print where topics~"lora"`: správné připojení vypadá takto: `connecting to …/router-info` → `discovered` → `disconnected` → `connecting to …/gateway/<eui>` → `configured` → `forwarder is ready` (`disconnected` mezi tím je v pořádku).
+2. `/log print where topics~"lora"`: správné připojení projde kroky `connecting to …/router-info` → `discovered` → `disconnected` → `connecting to …/gateway/<eui>` → `configured` → `forwarder is ready` (`disconnected` mezitím je v pořádku).
 3. V řádku `router_config` zkontrolujte `"region":"EU863"`.
 4. `/iot lora print detail`: stav karty je `Active`.
 5. V aplikaci ChirpStack: brána je **online**, **Last seen** se obnovuje (statistiky brány chodí asi každých 30 s) a v grafech brány přibývají přijaté pakety.
@@ -219,15 +221,16 @@ Při správné konfiguraci serveru restart Gateway Bridge zařízení EMBER neva
 ---
 
 ## Obnova certifikátu brány {#renewing-the-gateway-certificate}
-Certifikát obnovte před vypršením. **Na pořadí kroků záleží** a brána je asi 30 sekund offline.
+Certifikát obnovte před vypršením. **Na pořadí kroků záleží** a brána je asi 30 sekund offline. Kroky 2–4 proveďte hned po sobě: po kroku 2 ukazuje záznam serveru na smazaný certifikát, takže znovupřipojení před krokem 4 (restart Gateway Bridge, výpadek napájení) nejspíš selže.
 
 1. V aplikaci ChirpStack vygenerujte nový certifikát (krok 4) a nahrajte `tc.crt` a `tc.key` do zařízení EMBER.
 2. **Nejdřív smažte starý klientský certifikát**: `/certificate remove [find name="gw-client"]` (použijte jméno certifikátu, který je právě v provozu). Jde to i za provozu; běžící spojení zůstane.
-3. Importujte nový certifikát pod novým jménem, potom jeho klíč, a soubor s klíčem smažte:
+3. Importujte nový certifikát pod novým jménem, potom jeho klíč, a zkontrolujte, že `gw-client-2` má příznaky **KT**. Bez `K` ho smažte (`/certificate remove [find name="gw-client-2"]`) a certifikát i klíč importujte znovu. Potom smažte soubor s klíčem:
 
 ```
 /certificate import file-name=tc.crt name=gw-client-2 passphrase=""
 /certificate import file-name=tc.key passphrase=""
+/certificate print where name="gw-client-2"
 /file remove [find name="tc.key"]
 ```
 
@@ -239,7 +242,7 @@ Certifikát obnovte před vypršením. **Na pořadí kroků záleží** a brána
 /iot lora enable [find]
 ```
 
-**Proč na pořadí záleží:** když se nový certifikát importuje, zatímco starý se stejným EUI je ještě na zařízení EMBER, RouterOS 7.24.5 pak podepisuje spojení klíčem starého certifikátu. Server ho odmítne (`invalid signature by the client certificate`) a brána zůstane offline. Náprava: smažte všechny certifikáty s tímto EUI a nový importujte znovu.
+**Proč na pořadí záleží:** když se nový certifikát importuje, zatímco starý se stejným EUI je ještě na zařízení EMBER, RouterOS 7.24.5 pak podepisuje spojení klíčem starého certifikátu. Server ho odmítne (`invalid signature by the client certificate`) a brána zůstane offline. Náprava: celý postup zopakujte od kroku 1 s novým certifikátem (starý soubor s klíčem je už smazaný a ChirpStack klíč ukazuje jen jednou) a v kroku 2 smažte všechny certifikáty, jejichž jméno (CN) je toto EUI (`/certificate print detail` ho ukazuje jako `common-name`, malými písmeny).
 
 Vypršení certifikátu běžící spojení nepřeruší (kontroluje se jen při připojení), brána ale vypadne při nejbližším znovupřipojení. Obnovte ho proto včas i u brány, která zrovna funguje.
 
@@ -263,20 +266,22 @@ Najděte řádek v logu zařízení EMBER (`/log print where topics~"lora"`) neb
 
 | Kde | Řádek v logu (výňatek) | Co znamená | Co udělat |
 | --- | --- | --- | --- |
-| EMBER | `connecting to …/router-info`, ale ne `discovered` | žádné spojení se serverem | adresa, port, firewall, `ssl` |
+| EMBER | `connecting to …/router-info`, ale žádné `discovered` | žádné spojení se serverem | adresa, port, firewall, `ssl` |
+| EMBER | `discovered`, ale žádné `configured` | bridge odmítl datové spojení | jméno certifikátu (CN) = EUI brány, certifikát; důvod je v logu bridge |
+| EMBER | `configured`, ale v aplikaci ChirpStack žádné uplinky | registrace brány, témata MQTT nebo region | viz dva řádky ChirpStack níže a [Špatný region ze serveru](#wrong-region-from-the-server) |
 | EMBER | `socket error on connection [2001]` | na adrese a portu nic neposlouchá | port (3001); běží Gateway Bridge? |
 | EMBER | `socket error on timeout [2001]` | server je nedostupný | adresa, směrování, firewall |
 | EMBER | `socket error on handshake [2001]` | nesedí TLS | `ssl=` musí odpovídat bridge: `yes` pro wss a mTLS, `no` pro ws |
 | EMBER | `ssl: fatal alert handshake (6) [2006]` | EMBER neposlal klientský certifikát | `certificate=` u záznamu serveru, certifikát s příznakem `K` |
 | EMBER | `ssl: fatal alert received (6) [2006]` | server certifikát odmítl | důvod je v logu bridge |
 | EMBER | `certificate CommonName <x> does not match router <eui>` | certifikát jiné brány | certifikát vydaný pro toto EUI |
-| EMBER | `router_config` s jiným regionem než `EU863` | špatný region na bridge | `region="EU868"` na bridge |
+| EMBER | `router_config` (podrobný log) s jiným regionem než `EU863` | špatný region na bridge | `region="EU868"` na bridge |
 | EMBER | `[DEV] Device communication error.` | rádio se nepodařilo přenastavit (vídáno jen po špatném regionu) | opravte region na serveru a EMBER restartujte; kontrola: `forwarder is ready`; prázdné `/iot lora` = restart zařízení EMBER nutný |
 | bridge | `router-info … router_uri=` (prázdné) | jméno certifikátu ≠ EUI brány | certifikát pro tuto bránu |
 | bridge | `client didn't provide a certificate` | EMBER se připojil bez certifikátu | `certificate=` u záznamu serveru, příznak `K` |
 | bridge | `certificate signed by unknown authority` | certifikát z cizí CA | vydejte certifikát na tomto serveru ChirpStack |
 | bridge | `certificate has expired or is not yet valid` | certifikát vypršel nebo nesedí čas serveru | obnova certifikátu, NTP na serveru |
-| bridge | `invalid signature by the client certificate` | klíč nepatří k certifikátu (chyba při obnově) | smažte certifikáty s tímto EUI a importujte znovu |
+| bridge | `invalid signature by the client certificate` | klíč nepatří k certifikátu (chyba při obnově) | nový certifikát, viz [Obnova certifikátu brány](#renewing-the-gateway-certificate) |
 | bridge | `client sent an HTTP request to an HTTPS server` | EMBER má `ssl=no`, bridge používá TLS | `ssl=yes` |
 | bridge | `connection with same gateway id already exists` | znovupřipojení před uzavřením starého spojení | počkejte až 65 s |
 | ChirpStack | `Object does not exist` u brány | brána není zaregistrovaná | přidejte bránu (krok 3) |

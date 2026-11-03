@@ -13,6 +13,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "verify:i18n": "node scripts/verify-i18n.mjs --locale cs",
+    "verify:csp": "node scripts/verify-csp.mjs",
     "test": "node --test scripts/chatbot/worker.test.mjs",
     "chatbot:notebook": "node scripts/chatbot/py2ipynb.mjs",
     "chatbot:crawl": "python scripts/chatbot/crawl.py",
@@ -42,6 +43,7 @@
     "react-player": "^3.4.0"
   },
   "devDependencies": {
+    "@hubpav/hwio-web-worker": "0.7.8",
     "@types/mdast": "^4.0.4",
     "github-slugger": "^2.0.0",
     "wrangler": "^4.146.0"

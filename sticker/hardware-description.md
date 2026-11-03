@@ -227,7 +227,7 @@ The LED can be driven directly over the developer console with the `ats led` com
 |                   | Operating voltage range   | 1.8 V to 3.6 V (below 1.8 V at power-up the device stays off) |
 |                   | Idle power consumption    | < 80 µA                            |
 |                   | Peak power consumption    | < 100 mA                           |
-| **Environment** | Operating temperature     | -30 °C to +70 °C                   |
+| **Environment** | Operating temperature     | -20 °C to +60 °C                   |
 |                   | Storage temperature       | -30 °C to +70 °C                   |
 |                   | Enclosure protection      | IP30                               |
 | **Sensors** | Integrated thermometer: measurement range   | -20 °C to +60 °C     |

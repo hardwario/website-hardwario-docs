@@ -227,7 +227,7 @@ LED lze ovládat přímo z vývojářské konzole příkazy `ats led`, což se h
 |                   | Rozsah provozního napětí   | 1,8 V až 3,6 V (pod 1,8 V při zapnutí zařízení zůstane vypnuté) |
 |                   | Klidová spotřeba    | < 80 µA                            |
 |                   | Špičková spotřeba    | < 100 mA                           |
-| **Prostředí** | Provozní teplota     | -30 °C až +70 °C                   |
+| **Prostředí** | Provozní teplota     | -20 °C až +60 °C                   |
 |                   | Skladovací teplota       | -30 °C až +70 °C                   |
 |                   | Krytí krabičky      | IP30                               |
 | **Senzory** | Integrovaný teploměr: rozsah měření   | -20 °C až +60 °C     |

@@ -108,4 +108,4 @@ Funkce `ctr_cloud_send()` je teď blokující, takže z návratového kódu pozn
 
 Pro SIM karty Vodafone použijte APN `hardwario`, IP `192.168.192.4` a port `5002`. Nepoužívejte předchozí název APN ~~`hardwario.com`~~.
 
-U ostatních operátorů jdou data přes veřejný internet, proto nastavte veřejnou IP adresu serveru `20.101.123.47`; port zůstává stejný (`5002`).
+U ostatních operátorů jdou data přes veřejný internet, proto nastavte veřejnou IP adresu serveru `157.245.24.13`; port zůstává stejný (`5002`).

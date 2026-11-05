@@ -68,7 +68,7 @@ You can choose up to 4 current probes with the following current ranges:
 - Maximum current **1,000 A**
 - Maximum current **1,500 A**
 
-> **Caution:** The current range is specified for the DC. If you design your system for the AC, you have to multiply the maximum expected AC by the coefficient of `1.42` (square root of two) to see if the current probe fits within the limit.
+> **Caution:** The current range is specified for the DC. If you design your system for the AC, you have to multiply the maximum expected AC by the coefficient of `1.414` (square root of two) to see if the current probe fits within the limit.
 
 ## Application Behavior
 
@@ -269,12 +269,12 @@ app config w1-therm-interval-aggreg <1-86400>
 
 The latest firmware is available in Catalog Applications [Firmware chapter](/chester/catalog-applications/catalog-applications#application-firmware).
 
-### Firmware v3.5.1
+### Firmware v4.0.1
 
 | Variant | Version | Link |
 |---------|---------|------|
-| **CHESTER Current** | v3.5.1 | [Download](https://firmware.hardwario.com/chester/c2ac3f9d94194573b43c56f54962e672) |
-| **CHESTER Current Z** | v3.5.1 | [Download](https://firmware.hardwario.com/chester/627823995dc34c4a9336d0534ce3e418) |
+| **CHESTER Current** | v4.0.1 | [Download](https://firmware.hardwario.com/chester/98f42b431dfb4ba681abfea1958f0ef9) |
+| **CHESTER Current Z** | v4.0.1 | [Download](https://firmware.hardwario.com/chester/bd7bf21e742f4172ae48378ae55a3d6a) |
 
 ## Example JSON Message
 

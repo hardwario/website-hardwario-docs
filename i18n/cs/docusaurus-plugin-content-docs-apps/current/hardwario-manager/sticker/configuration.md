@@ -18,7 +18,7 @@ Přejděte na **STICKER → Configuration**.
 |---|---|
 | **Read configuration from the device** | Přečte konfiguraci zařízení, kterou pak upravíte a zapíšete zpět. Běžný postup. |
 | **Scan multiple (batch export)** | Načte konfigurace mnoha zařízení najednou, viz [**Načtení více zařízení**](./batch-export.md) |
-| **Configure without reading** | Konfiguraci sestavíte sami a zapíšete do zařízení, i do vypnutého, viz [**Konfigurace vypnutého zařízení**](./offline-configuration.md) |
+| **Configure without reading** | Konfiguraci sestavíte sami a zapíšete do zařízení, s firmwarem v1.4.x i do vypnutého, viz [**Konfigurace vypnutého zařízení**](./offline-configuration.md) |
 | **Configure from file** | Načte konfiguraci, kterou jste si uložili dříve (viz níže) |
 
 ---

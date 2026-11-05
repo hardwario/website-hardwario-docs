@@ -12,7 +12,7 @@ The app reaches a device over one of two wireless links, depending on the produc
 
 | Link | Used by | Notes |
 |---|---|---|
-| **NFC** | STICKER | Works even with **no batteries inserted** (NFC energy harvesting), so a device can be prepared before it is installed. Needs an **Android** phone with NFC. |
+| **NFC** | STICKER | An **Android** phone or an **iPhone** with NFC. Since STICKER firmware v2.0.0 the device must have its **batteries in**, see [**NFC needs a powered device**](/sticker/hardwario-manager/#nfc-needs-a-powered-device). |
 | **Bluetooth Low Energy** | CHESTER | Configuration, shell access and firmware updates over a paired Bluetooth connection. |
 
 ---
@@ -26,8 +26,8 @@ The app reaches a device over one of two wireless links, depending on the produc
 
 Updates arrive automatically through the store, and your saved devices are kept across updates.
 
-:::info STICKER is configured from Android
-STICKER configuration over NFC is done from an **Android phone with NFC** (most phones from the last few years have it).
+:::info STICKER is configured from Android or iOS
+STICKER configuration over NFC is done from an **Android phone or an iPhone with NFC** (most phones from the last few years have it).
 :::
 
 ---

@@ -17,6 +17,7 @@ const sidebars = {
           collapsed: true,
           items: [
             'lorawan-network-server/lorawan-chirpstack',
+            'lorawan-network-server/lorawan-chirpstack-basics-station',
             'chirpstack/chirpstack-ember',
             'lorawan-network-server/lorawan-tts',
           ],

@@ -116,4 +116,4 @@ Zařízení CHESTER lze napájet z DC linky (nebo napájecího adaptéru) pomoc�
 
 * Krycí modul CHESTER-Z1
 
-  CHESTER-Z1 je DC/DC měnič s napěťovým rozsahem 6–28 VDC + nabíječka lithium-iontových baterií.
+  CHESTER-Z1 je DC/DC měnič s napěťovým rozsahem 6–26 VDC + nabíječka lithium-iontových baterií.

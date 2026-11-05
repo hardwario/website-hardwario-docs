@@ -116,4 +116,4 @@ The CHESTER device can be powered from a DC line (or power adapter) using these 
 
 * Cover module CHESTER-Z1
 
-  CHESTER-Z1 is a DC/DC converter with a voltage range of 6-28 VDC + lithium-ion battery charger.
+  CHESTER-Z1 is a DC/DC converter with a voltage range of 6–26 VDC + lithium-ion battery charger.

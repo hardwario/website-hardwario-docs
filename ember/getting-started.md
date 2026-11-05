@@ -284,7 +284,7 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 - An antenna is connected to the LoRa card: the internal one from the factory, or an external one on **LRW**
 - Power connected (24 V DC or 24 V passive PoE via WAN)
 - Outdoor installation: connectors facing down
-- PC connected to **WAN**, receives DHCP lease, can reach `172.31.255.1` (updated from default)
+- PC connected to a **LAN** port (ether2 or ether3) with a static IP in `172.31.255.0/24`, can reach `172.31.255.1` (updated from default)
 - RouterOS login works (`admin` / `[your-password]`)
 - Initial configuration script completed (Section 3)
 - RouterOS updated to latest version
@@ -301,8 +301,8 @@ Reference: https://docs.hardwario.com/ember/hotspot-configuration/
 ## Troubleshooting (quick)
 
 #### Can't reach `172.31.255.1`
-- Make sure you are plugged into the **WAN** port (not LAN). LAN ports are ether2 and ether3 after running the configuration script.
-- Ensure your PC is set to DHCP (or set a static IP in `172.31.255.0/24`).
+- Make sure you are plugged into a **LAN** port (ether2 or ether3), not WAN. After the configuration script, `172.31.255.1` is on the LAN bridge, and WAN (ether1) is only a DHCP client.
+- Set a static IP in `172.31.255.0/24` on your PC (e.g. `172.31.255.10`): the configuration script does not start a DHCP server.
 - Check the Ethernet link LEDs.
 - If you haven't run the configuration script yet, the default IP might still be `172.31.255.254`.
 

@@ -284,7 +284,7 @@ Viz: https://docs.hardwario.com/ember/hotspot-configuration/
 - Ke kartě LoRa je připojená anténa: vnitřní z výroby, nebo externí na **LRW**
 - Napájení je připojené (24 V DC nebo pasivní PoE 24 V přes WAN)
 - Venkovní instalace: konektory směřují dolů
-- Počítač je připojený k portu **WAN**, dostane adresu z DHCP a dosáhne na `172.31.255.1` (změněno z výchozí hodnoty)
+- Počítač je připojený k portu **LAN** (ether2 nebo ether3) se statickou IP adresou z rozsahu `172.31.255.0/24` a dosáhne na `172.31.255.1` (změněno z výchozí hodnoty)
 - Přihlášení do RouterOS funguje (`admin` / `[vaše-heslo]`)
 - Počáteční konfigurační skript je hotový (krok 3)
 - RouterOS je aktualizovaný na nejnovější verzi
@@ -301,8 +301,8 @@ Viz: https://docs.hardwario.com/ember/hotspot-configuration/
 ## Rychlé řešení problémů {#troubleshooting-quick}
 
 #### Adresa `172.31.255.1` není dostupná {#cant-reach-172312551}
-- Zkontrolujte, že je kabel zapojený do portu **WAN** (ne LAN). Po spuštění konfiguračního skriptu jsou porty LAN ether2 a ether3.
-- Zkontrolujte, že počítač získává adresu přes DHCP (nebo mu nastavte statickou IP adresu z rozsahu `172.31.255.0/24`).
+- Zkontrolujte, že je kabel zapojený do portu **LAN** (ether2 nebo ether3), ne do WAN. Po spuštění konfiguračního skriptu je adresa `172.31.255.1` na mostu LAN a port WAN (ether1) je jen klient DHCP.
+- Nastavte počítači statickou IP adresu z rozsahu `172.31.255.0/24` (např. `172.31.255.10`): konfigurační skript nespouští server DHCP.
 - Zkontrolujte kontrolky linky na ethernetovém portu.
 - Pokud jste ještě nespustili konfigurační skript, výchozí IP adresa může být stále `172.31.255.254`.
 

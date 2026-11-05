@@ -44,7 +44,7 @@ Firmwares are located in the [**Application Firmware**](#application-firmware) c
 - **CHESTER Control** uses CHESTER-X4 module for step-down power supply and digital outputs
 - **CHESTER Push** uses CHESTER-Z1-F which combines backup battery with power supply; can also run from battery only
 - **CHESTER wM-Bus** is available in battery variant (6x D-cells) or DC variant with external 230V adapter
-- **CHESTER Serial** uses CHESTER-X12 (RS-232) or CHESTER-X2 (RS-485) with external power input (5-28V)
+- **CHESTER Serial** uses CHESTER-X12 (RS-232) or CHESTER-X2 (RS-485) with external power input (6-28V)
 
 :::
 

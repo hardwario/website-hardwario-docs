@@ -111,15 +111,7 @@ Doporučujeme vyjít z funkčního workspace ve verzi v3.5.5 a nepřecházet ze 
 
 ---
 
-## v3.5.3 (2026-03-06) {#v353-2026-03-06}
-
-### CHESTER Serial {#chester-serial-1}
-- Přidána nová katalogová aplikace CHESTER Serial
-- Podporuje RS-485 (CHESTER-X2, multi-drop, až 8 zařízení) a RS-232 (CHESTER-X12, bod-bod)
-
----
-
-## v3.5.2 (2026-03-10) {#v352-2026-03-10}
+## v3.5.3 (2026-03-10) {#v353-2026-03-10}
 
 ### SDK / společné {#sdk--common-4}
 - Do všech aplikací přidány příkazy shellu pro I2C, MCUboot a GPIO
@@ -128,6 +120,14 @@ Doporučujeme vyjít z funkčního workspace ve verzi v3.5.5 a nepřecházet ze 
 
 ### GNSS {#gnss}
 - Prioritu inicializace M8 lze nově nastavit v Kconfigu
+
+---
+
+## v3.5.2 (2026-03-06) {#v352-2026-03-06}
+
+### CHESTER Serial {#chester-serial-1}
+- Přidána nová katalogová aplikace CHESTER Serial
+- Podporuje RS-485 (CHESTER-X2, multi-drop, až 8 zařízení) a RS-232 (CHESTER-X12, bod-bod)
 
 ---
 

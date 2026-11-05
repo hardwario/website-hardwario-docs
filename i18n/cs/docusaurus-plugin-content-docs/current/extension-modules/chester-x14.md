@@ -24,14 +24,14 @@ import Image from '@theme/IdealImage';
 
 Modul CHESTER-X14 přidává rozhraní Ethernet 10/100 Mb/s s kontrolérem **W5500**, který má hardwarový zásobník TCP/IP, integruje MAC i PHY a se základní deskou CHESTER komunikuje po **SPI**. Magnetika Ethernetu na desce (**ALANL100X1-DE12DT**) galvanicky odděluje rozhraní a upravuje signál. Diferenciální přijímací a vysílací páry jsou vyvedené na svorkovnici, kam se zapojují jednotlivé vodiče ethernetového kabelu.
 
-Modul může běžet přímo ze základní desky CHESTER. Případně lze na +VIN připojit externí linku 5-28 V DC, která napájí snižující měnič **TPS62933** na desce; jeho pevný výstup **5 V** (+V) pak napájí základní desku CHESTER. Vstup chrání Schottkyho diody (**PMEG6010ELR**). Výstup přerušení signalizuje základní desce CHESTER, že kontrolér Ethernetu potřebuje obsluhu.
+Modul může běžet přímo ze základní desky CHESTER. Případně lze na +VIN připojit externí linku 6-28 V DC, která napájí snižující měnič **TPS62933** na desce; jeho pevný výstup **5 V** (+V) pak napájí základní desku CHESTER. Vstup chrání Schottkyho diody (**PMEG6010ELR**). Výstup přerušení signalizuje základní desce CHESTER, že kontrolér Ethernetu potřebuje obsluhu.
 
 ## Klíčové vlastnosti {#key-features}
 
 * **10/100 Ethernet:** Drátové připojení přes kontrolér W5500 s hardwarovým zásobníkem TCP/IP.
 * **Rozhraní k hostu po SPI:** K základní desce CHESTER se připojuje po SPI.
 * **Integrovaná magnetika a oddělení:** Transformátor Ethernetu na desce (ALANL100X1-DE12DT) zajišťuje galvanické oddělení.
-* **Flexibilní napájení:** Běží ze základní desky CHESTER, nebo z volitelné linky 5-28 V DC na +VIN.
+* **Flexibilní napájení:** Běží ze základní desky CHESTER, nebo z volitelné linky 6-28 V DC na +VIN.
 * **Ochrana vstupu:** Schottkyho diody (PMEG6010ELR) na napájecím vstupu.
 * **Výstup přerušení:** Vyhrazená linka přerušení k základní desce CHESTER.
 * **Stavové LED:** Indikace spojení (zelená) a aktivity (červená), které řídí čip W5500.
@@ -52,7 +52,7 @@ Modul může běžet přímo ze základní desky CHESTER. Případně lze na +VI
 | **Rozhraní k hostu** | SPI |
 | **Magnetika** | Integrovaná (ALANL100X1-DE12DT) |
 | **Galvanické oddělení** | Ano, zajišťuje ho magnetika Ethernetu na desce |
-| **Napájecí vstup (+VIN)** | 5-28 V DC (volitelné externí napájení) |
+| **Napájecí vstup (+VIN)** | 6-28 V DC (volitelné externí napájení) |
 | **Napájecí výstup (+V)** | Pevných 5 V, napájí základní desku CHESTER |
 | **Výstup Ethernetu** | Diferenciální páry Rx/Tx na svorkovnici |
 | **Rozhraní desky** | Půlené prokovené otvory (castellated) na dvou protilehlých hranách, deska je připájená k základní desce CHESTER |
@@ -64,7 +64,7 @@ Modul může běžet přímo ze základní desky CHESTER. Případně lze na +VI
 | :--- | :--- | :--- |
 | **Kontrolér Ethernetu** | W5500 | Vestavný kontrolér Ethernetu s hardwarovým zásobníkem TCP/IP a rozhraním SPI (MAC + PHY) |
 | **Magnetika Ethernetu** | ALANL100X1-DE12DT | Integrovaný LAN transformátor pro rozhraní 10/100 |
-| **Měnič DC-DC** | TPS62933 | Snižující měnič, vstup 5-28 V DC |
+| **Měnič DC-DC** | TPS62933 | Snižující měnič, vstup 6-28 V DC |
 | **Ochrana vstupu** | PMEG6010ELR | Schottkyho diody pro ochranu vstupu |
 
 ## Zapojení pinů {#pin-configuration}
@@ -83,7 +83,7 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | :---: | :--- | :--- | :--- |
 | 1 | INT | Výstup | Výstup přerušení k základní desce CHESTER |
 | 2 | +V | Napájecí výstup | Pevných 5 V ze snižujícího měniče na desce (napájí základní desku CHESTER) |
-| 3 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (5-28 V DC) |
+| 3 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (6-28 V DC) |
 | 4 | GND | Zem | Systémová zem |
 | 5 | Rx- | Ethernet | Přijímací pár (záporný) |
 | 6 | Rx+ | Ethernet | Přijímací pár (kladný) |
@@ -91,7 +91,7 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | 8 | Tx+ | Ethernet | Vysílací pár (kladný) |
 
 :::info
-Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 3) připojené externí napájení **5-28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V** na **+V** (pin 2), kterými se napájí základní deska CHESTER.
+Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 3) připojené externí napájení **6-28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V** na **+V** (pin 2), kterými se napájí základní deska CHESTER.
 :::
 
 ### Rozhraní k hostu (SPI) {#host-interface-spi}

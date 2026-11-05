@@ -42,7 +42,7 @@ These are some typical use cases for **CHESTER-Z1** (more scenarios are possible
 
 * Use-case 1 (CHESTER-Z1):
   * Photovoltaic solar panel or DC power supply with backup for **CHESTER**
-  * System power from **CHESTER-Z1** battery (rechargeable from photovoltaic solar panel or DC power supply 6-28 V)
+  * System power from **CHESTER-Z1** battery (rechargeable from photovoltaic solar panel or DC power supply 6-26 V)
 * Use-case 2 (CHESTER-Z1-X):
   * Single illuminated push-button and acoustic feedback
   * System power from **CHESTER-M** (2x AA cells or **CHESTER-X4**)
@@ -54,7 +54,7 @@ For more details see [**Ordering Codes**](../ordering-codes.md#chester-z).
 
 ## Technical Specification
 
-* Input DC voltage range (VIN): **6-28 VDC**, suitable also for **12-18V solar panel\***
+* Input DC voltage range (VIN): **6-26 VDC**, suitable also for **12-18V solar panel\***
 * Nominal battery voltage: **3.7 V**
 * Battery charging current: **100 mA**
 * Battery idle current consumption **55 μA** (without CHESTER-M)
@@ -85,8 +85,8 @@ Due to the low charging current (100 mA), the charging temperature range is exte
 
 | Position | Name    | Signal Description                  |
 | -------- | ------- | ----------------------------------- |
-| JP1      | VIN     | 6-28 V DC Power Input JST connector |
-| JP2      | VIN     | 6-28 V DC Power Input terminal      |
+| JP1      | VIN     | 6-26 V DC Power Input JST connector |
+| JP2      | VIN     | 6-26 V DC Power Input terminal      |
 | JP4      | SYSTEM  | CHESTER SYSTEM JST connector        |
 | JP5      | SWD     | MCU SWD / debug connector           |
 | BT1      | BATTERY | 18650 Li-Ion battery holder         |

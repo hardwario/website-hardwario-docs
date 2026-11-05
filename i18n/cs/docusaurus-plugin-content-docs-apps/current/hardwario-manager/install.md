@@ -5,8 +5,14 @@ title: Instalace aplikace
 
 # Instalace aplikace HARDWARIO Manager {#install-hardwario-manager}
 
-**HARDWARIO Manager** běží na **Androidu** a **iOS**. O aktuální sestavení pro
-svou platformu požádejte svou kontaktní osobu v HARDWARIO.
+**HARDWARIO Manager** běží na **Androidu** a **iOS**. Nainstalujte ho z obchodu:
+
+| Platforma | Ke stažení |
+|---|---|
+| **Android** | [**Google Play**](https://play.google.com/store/apps/details?id=com.hardwario.manager) |
+| **iOS** | [**App Store**](https://apps.apple.com/app/id6444803082) |
+
+Aktualizace přicházejí automaticky přes obchod.
 
 ---
 

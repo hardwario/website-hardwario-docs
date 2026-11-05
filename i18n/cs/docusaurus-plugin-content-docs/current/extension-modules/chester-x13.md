@@ -24,7 +24,7 @@ import Image from '@theme/IdealImage';
 
 Modul CHESTER-X13 přidává rozhraní **CAN / CAN FD** s externím řadičem CAN **MCP2518FD**, který se základní deskou CHESTER komunikuje po **SPI**. Fyzickou sběrnici budí transceiver **TCAN3413** na desce a linky **CANH** / **CANL** jsou vyvedené na svorkovnici. Zakončovací rezistory sběrnice na desce jsou ve výchozím stavu odpojené, takže modul lze zapojit kamkoli na sběrnici.
 
-Modul může běžet přímo ze základní desky CHESTER. Případně lze na +VIN připojit externí linku 5-28 V DC, která napájí snižující měnič **TPS62933** na desce; jeho pevný výstup **5 V** pak napájí základní desku CHESTER. Vstup chrání Schottkyho diody (**PMEG6010ELR**). Výstup přerušení signalizuje základní desce CHESTER, že řadič CAN potřebuje obsluhu.
+Modul může běžet přímo ze základní desky CHESTER. Případně lze na +VIN připojit externí linku 6-28 V DC, která napájí snižující měnič **TPS62933** na desce; jeho pevný výstup **5 V** pak napájí základní desku CHESTER. Vstup chrání Schottkyho diody (**PMEG6010ELR**). Výstup přerušení signalizuje základní desce CHESTER, že řadič CAN potřebuje obsluhu.
 
 ## Klíčové vlastnosti {#key-features}
 
@@ -32,7 +32,7 @@ Modul může běžet přímo ze základní desky CHESTER. Případně lze na +VI
 * **Rozhraní k hostu po SPI:** K základní desce CHESTER se připojuje po SPI.
 * **Transceiver na desce:** Fyzickou sběrnici CAN budí transceiver TCAN3413.
 * **Volitelné zakončení sběrnice:** Zakončovací rezistor ~120 Ω na desce, ve výchozím stavu odpojený.
-* **Flexibilní napájení:** Běží ze základní desky CHESTER, nebo z volitelné linky 5-28 V DC na +VIN.
+* **Flexibilní napájení:** Běží ze základní desky CHESTER, nebo z volitelné linky 6-28 V DC na +VIN.
 * **Ochrana vstupu:** Schottkyho diody (PMEG6010ELR) na napájecím vstupu.
 * **Výstup přerušení:** Vyhrazená linka přerušení k základní desce CHESTER.
 
@@ -54,7 +54,7 @@ Modul může běžet přímo ze základní desky CHESTER. Případně lze na +VI
 | **Transceiver CAN** | TCAN3413 |
 | **Rozhraní k hostu** | SPI |
 | **Zakončení sběrnice** | ~120 Ω na desce, ve výchozím stavu odpojené |
-| **Napájecí vstup (+VIN)** | 5-28 V DC (volitelné externí napájení) |
+| **Napájecí vstup (+VIN)** | 6-28 V DC (volitelné externí napájení) |
 | **Napájecí výstup (+V)** | Pevných 5 V, napájí základní desku CHESTER |
 | **Výstup sběrnice** | CANH / CANL na svorkovnici |
 | **Rozhraní desky** | Půlené prokovené otvory (castellated) na dvou protilehlých hranách, deska je připájená k základní desce CHESTER |
@@ -66,7 +66,7 @@ Modul může běžet přímo ze základní desky CHESTER. Případně lze na +VI
 | :--- | :--- | :--- |
 | **Řadič CAN** | MCP2518FD | Externí řadič CAN FD s rozhraním SPI |
 | **Transceiver CAN** | TCAN3413 | Transceiver CAN FD (rozhraní k fyzické sběrnici) |
-| **Měnič DC-DC** | TPS62933 | Snižující měnič, vstup 5-28 V DC |
+| **Měnič DC-DC** | TPS62933 | Snižující měnič, vstup 6-28 V DC |
 | **Ochrana vstupu** | PMEG6010ELR | Schottkyho diody pro ochranu vstupu |
 
 ## Zapojení pinů {#pin-configuration}
@@ -90,10 +90,10 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | 5 | RL | Zakončení CAN | Vývod zakončení pro CANL (spojením s CANL zapnete zakončení na desce) |
 | 6 | GND | Zem | Systémová zem |
 | 7 | GND | Zem | Systémová zem |
-| 8 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (5-28 V DC) |
+| 8 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (6-28 V DC) |
 
 :::info
-Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 8) připojené externí napájení **5-28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V**, kterými se napájí základní deska CHESTER.
+Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 8) připojené externí napájení **6-28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V**, kterými se napájí základní deska CHESTER.
 :::
 
 ### Rozhraní k hostu (SPI) {#host-interface-spi}

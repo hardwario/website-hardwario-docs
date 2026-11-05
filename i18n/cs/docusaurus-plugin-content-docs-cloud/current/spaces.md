@@ -67,4 +67,4 @@ Uživatel může být členem více prostorů, v každém s jinou rolí.
 
 Každý prostor má vlastní klíče API pro programový přístup. Klíče platí jen pro daný prostor a přes [REST API](/cloud/api) s nimi můžete vypisovat zařízení, načítat zprávy a odesílat downlinky.
 
-Klíč API vytvoříte v prostoru v **Settings → API Keys**.
+Klíč API vytvoříte v prostoru v položce **API Keys** v levém postranním panelu.

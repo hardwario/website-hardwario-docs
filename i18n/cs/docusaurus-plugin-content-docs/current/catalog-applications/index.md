@@ -44,7 +44,7 @@ Firmware ke stažení najdete v kapitole [**Firmware aplikací**](#application-f
 - **CHESTER Control** používá modul CHESTER-X4 se snižujícím měničem (step-down) a digitálními výstupy
 - **CHESTER Push** používá modul CHESTER-Z1-F, který kombinuje záložní baterii s napájecím zdrojem; zařízení může běžet i jen na baterii
 - **CHESTER wM-Bus** se dodává v bateriové variantě (6× článek D) nebo ve variantě DC s externím adaptérem 230 V
-- **CHESTER Serial** používá modul CHESTER-X12 (RS-232) nebo CHESTER-X2 (RS-485) s externím napájecím vstupem (5–28 V)
+- **CHESTER Serial** používá modul CHESTER-X12 (RS-232) nebo CHESTER-X2 (RS-485) s externím napájecím vstupem (6–28 V)
 
 :::
 

@@ -24,13 +24,13 @@ import Image from '@theme/IdealImage';
 
 Modul CHESTER-X12 přidává sériové rozhraní **RS-232**. Převodník I²C na UART **SC16IS740IPW** se připojuje k základní desce CHESTER po **I²C** a transceiver **MAX3226EEUE+** převádí signály UART na plnohodnotné úrovně RS-232 s ochranou proti ESD ±15 kV. Vysílací a přijímací linka RS-232 jsou vyvedené na svorkovnici.
 
-Modul může běžet přímo ze základní desky CHESTER. Případně lze na **+VIN** připojit externí linku **5–28 V DC**, která napájí snižující měnič **TPS62933** na desce; jeho pevný výstup **5 V** (**+V**) pak napájí základní desku CHESTER. Vstup chrání Schottkyho diody (**PMEG6010ELR**). Vstupní napětí sleduje převodník ADC **TLA2021** na desce, čtený po I²C.
+Modul může běžet přímo ze základní desky CHESTER. Případně lze na **+VIN** připojit externí linku **6–28 V DC**, která napájí snižující měnič **TPS62933** na desce; jeho pevný výstup **5 V** (**+V**) pak napájí základní desku CHESTER. Vstup chrání Schottkyho diody (**PMEG6010ELR**). Vstupní napětí sleduje převodník ADC **TLA2021** na desce, čtený po I²C.
 
 ## Klíčové vlastnosti {#key-features}
 
 * **Rozhraní RS-232:** Plně duplexní sériová linka s plnohodnotnými úrovněmi RS-232 a ochranou proti ESD ±15 kV na vývodech I/O (MAX3226EEUE+).
 * **Převodník I²C na UART:** SC16IS740IPW připojuje UART pro RS-232 ke sběrnici I²C základní desky CHESTER.
-* **Flexibilní napájení:** Běží ze základní desky CHESTER, nebo z volitelné linky 5–28 V DC na +VIN přes snižující měnič na desce (TPS62933).
+* **Flexibilní napájení:** Běží ze základní desky CHESTER, nebo z volitelné linky 6–28 V DC na +VIN přes snižující měnič na desce (TPS62933).
 * **Ochrana vstupu:** Schottkyho diody (PMEG6010ELR) na napájecím vstupu.
 * **Monitorování vstupního napětí:** Převodník ADC na I²C (TLA2021) na desce měří vstupní napětí.
 * **Řízení spotřeby:** Transceiver RS-232 lze signálem FORCEOFF# vypnout a snížit tak spotřebu.
@@ -55,7 +55,7 @@ Modul může běžet přímo ze základní desky CHESTER. Případně lze na **+
 | **Parita** | Žádná, sudá, lichá, mark, space |
 | **Řízení toku** | Softwarové (XON/XOFF) |
 | **Rozhraní k hostu** | I²C |
-| **Napájecí vstup (+VIN)** | 5–28 V DC (volitelné externí napájení) |
+| **Napájecí vstup (+VIN)** | 6–28 V DC (volitelné externí napájení) |
 | **Napájecí výstup (+V)** | Pevných 5 V, napájí základní desku CHESTER |
 | **Monitorování napětí** | 12bitový ADC na I²C (TLA2021) na desce, měří vstupní napětí |
 | **Rozhraní desky** | Půlené prokovené otvory (castellated) na dvou protilehlých hranách, deska je připájená k základní desce CHESTER |
@@ -68,7 +68,7 @@ Modul může běžet přímo ze základní desky CHESTER. Případně lze na **+
 | **Převodník I²C na UART** | SC16IS740IPW | Jeden UART s rozhraním I²C, 64bajtová FIFO |
 | **Transceiver RS-232** | MAX3226EEUE+ | Skutečné úrovně RS-232, ochrana proti ESD ±15 kV |
 | **ADC pro monitorování napětí** | TLA2021 | 12bitový ADC na I²C (adresa 0x49); měří vstupní napětí |
-| **Měnič DC-DC** | TPS62933 | Snižující měnič, vstup 5–28 V DC, výstup 5 V |
+| **Měnič DC-DC** | TPS62933 | Snižující měnič, vstup 6–28 V DC, výstup 5 V |
 | **Ochrana vstupu** | PMEG6010ELR | Schottkyho diody pro ochranu vstupu |
 
 ## Zapojení pinů {#pin-configuration}
@@ -85,7 +85,7 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 
 | Pin | Signál | Typ | Popis |
 | :---: | :--- | :--- | :--- |
-| 1 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (5–28 V DC) |
+| 1 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (6–28 V DC) |
 | 2 | GND | Zem | Systémová zem |
 | 3 | +V | Napájecí výstup | Pevných 5 V ze snižujícího měniče na desce (napájí základní desku CHESTER) |
 | 4 | GND | Zem | Systémová zem |
@@ -95,7 +95,7 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | 8 | GND | Zem | Systémová zem |
 
 :::info
-Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 1) připojené externí napájení **5–28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V** na **+V** (pin 3), kterými se napájí základní deska CHESTER.
+Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 1) připojené externí napájení **6–28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V** na **+V** (pin 3), kterými se napájí základní deska CHESTER.
 :::
 
 :::warning Nutná úprava ochrany proti ESD

@@ -26,7 +26,7 @@ Základy společné pro všechny katalogové aplikace CHESTER tu neopakujeme. Na
 
 ## Přehled aplikace {#application-overview}
 
-Aplikace **CHESTER Counter** počítá impulzy na osmi digitálních vstupech. Vstupy lze připojit k výstupu PLC/senzoru (NPN/PNP), tlačítku, spínači, relé apod. Aplikace počítá celkový počet impulzů a také počet impulzů od posledního hlášení (interval hlášení nastavuje parametr `interval-report`).
+Aplikace **CHESTER Counter** počítá impulzy na čtyřech digitálních vstupech svého modulu CHESTER-X0B. Vstupy lze připojit k výstupu PLC/senzoru (NPN/PNP), tlačítku, spínači, relé apod. Aplikace počítá celkový počet impulzů a také počet impulzů od posledního hlášení (interval hlášení nastavuje parametr `interval-report`).
 
 ## Varianty aplikace {#application-variants}
 

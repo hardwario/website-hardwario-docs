@@ -54,13 +54,14 @@ uložené, aplikace klíč doplní automaticky: z tagu přečte sériové čísl
 a klíč dohledá v seznamu uložených zařízení. U většiny akcí tak nemusíte nic
 psát.
 
-:::info Přiložení na Androidu a iOS se liší
-Na **Androidu** držíte telefon u zařízení po celou dobu komunikace.
+:::info Jedno přiložení na Androidu i iOS
+Od firmwaru STICKER **v2.0.0** proběhne každá komunikace na jedno přiložení
+s telefonem v klidu, na Androidu i na iOS stejně.
 
-Na **iOS** probíhá celá komunikace v jednom systémovém panelu skenování, který vás
-uprostřed vyzve, abyste **telefon oddálili a znovu přiložili**. Oddálení je
-nutné: zařízení potřebuje na okamžik zůstat bez pole NFC. Postupujte podle pokynů
-v panelu a při každém přiložení držte telefon v klidu.
+S firmwarem **v1.4.x** probíhá na iOS celá komunikace v jednom systémovém panelu
+skenování, který vás uprostřed vyzve, abyste **telefon oddálili a znovu
+přiložili**. Oddálení je tam nutné: zařízení potřebuje na okamžik zůstat bez pole
+NFC. Postupujte podle pokynů v panelu a při každém přiložení držte telefon v klidu.
 :::
 
 ---

@@ -22,14 +22,14 @@ The **CHESTER-X10** is a **backup power** extension module with an on-board **si
 
 ## Module Overview
 
-CHESTER-X10 powers the CHESTER mainboard from an external **5-28 VDC** line on **VIN** and keeps it running when that supply fails. The on-board **TPS62933** step-down converter produces a fixed **5 V** rail, which both powers the mainboard and supplies the **MCP73833** charger for a single-cell Li-Po / Li-Ion battery. The step-down output and the battery are **diode-OR'd** (Schottky **PMEG6010ELR**) onto the mainboard's supply, so while VIN is present the mainboard runs from the 5 V rail and the battery charges, and if VIN is lost the battery seamlessly takes over. A Schottky diode (**PMEG060T030ELPEZ**) protects the DC input.
+CHESTER-X10 powers the CHESTER mainboard from an external **6–28 VDC** line on **VIN** and keeps it running when that supply fails. The on-board **TPS62933** step-down converter produces a fixed **5 V** rail, which both powers the mainboard and supplies the **MCP73833** charger for a single-cell Li-Po / Li-Ion battery. The step-down output and the battery are **diode-OR'd** (Schottky **PMEG6010ELR**) onto the mainboard's supply, so while VIN is present the mainboard runs from the 5 V rail and the battery charges, and if VIN is lost the battery seamlessly takes over. A Schottky diode (**PMEG060T030ELPEZ**) protects the DC input.
 
 An on-board **TLA2024** 12-bit ADC, read over **I²C**, measures the input voltage (VIN) and the battery voltage (BAT+) through precision dividers, so firmware can monitor the DC input and the battery state of charge. The module ships with a protected single-cell Li-Po battery and charges it at **450 mA**.
 
 ## Key Features
 
 * **Backup Power:** Diode-OR between the DC input and the battery keeps the CHESTER mainboard powered if the external supply fails.
-* **Wide DC Input:** External **5-28 VDC** on VIN via the on-board TPS62933 step-down converter.
+* **Wide DC Input:** External **6–28 VDC** on VIN via the on-board TPS62933 step-down converter.
 * **Li-Po Charging:** On-board MCP73833 charger for a single-cell Li-Po / Li-Ion battery at 450 mA.
 * **Battery Included:** Protected single-cell **3.7 V / 2000 mAh** Li-Po battery in the box.
 * **On-board Voltage Monitoring:** 12-bit I²C ADC (TLA2024) measures the input and battery voltage.
@@ -48,7 +48,7 @@ An on-board **TLA2024** 12-bit ADC, read over **I²C**, measures the input volta
 | Parameter | Value |
 | :--- | :--- |
 | **Module Type** | Backup power supply with single-cell Li-Po charger |
-| **Power Input (VIN)** | 5-28 VDC |
+| **Power Input (VIN)** | 6–28 VDC |
 | **Power Output** | Fixed 5 V, powers the CHESTER mainboard |
 | **Battery Type** | Single-cell Li-Po / Li-Ion, 3.7 V, with integrated protection circuit |
 | **Charging Current** | 450 mA |
@@ -63,7 +63,7 @@ An on-board **TLA2024** 12-bit ADC, read over **I²C**, measures the input volta
 
 | Component | Part Number | Description |
 | :--- | :--- | :--- |
-| **Step-Down Converter** | TPS62933 | Step-down converter, 5-28 VDC input, 5 V output |
+| **Step-Down Converter** | TPS62933 | Step-down converter, 6–28 VDC input, 5 V output |
 | **Battery Charger** | MCP73833 | Single-cell Li-Po / Li-Ion linear charger (450 mA) |
 | **Voltage-Monitoring ADC** | TLA2024 | 12-bit 4-channel I²C ADC (address 0x49); measures VIN and battery voltage |
 | **Input Protection** | PMEG060T030ELPEZ / PMEG6010ELR | Schottky barrier diodes (input protection and power-path OR-ing) |
@@ -89,12 +89,12 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 | 5 | BAT+ | Battery | Battery positive terminal (*) |
 | 6 | GND | Ground | System ground reference |
 | 7 | GND | Ground | System ground reference |
-| 8 | VIN | Power Input | External DC supply input (5-28 VDC) |
+| 8 | VIN | Power Input | External DC supply input (6–28 VDC) |
 
 *Note: Use only a single-cell 3.7 V Li-Po (or Li-Ion) battery with an integrated protection circuit. Do not short-circuit the battery! The two BAT- and the two BAT+ pins are internally connected (doubled for current capacity).
 
 :::info
-CHESTER-X10 powers the CHESTER mainboard through the module slot. An external **5-28 VDC** supply on **VIN** (Pin 8) feeds the on-board TPS62933 step-down converter, whose fixed **5 V** output powers the mainboard and charges the battery connected to **BAT+** / **BAT-**. If the external supply is lost, the battery keeps the mainboard powered.
+CHESTER-X10 powers the CHESTER mainboard through the module slot. An external **6–28 VDC** supply on **VIN** (Pin 8) feeds the on-board TPS62933 step-down converter, whose fixed **5 V** output powers the mainboard and charges the battery connected to **BAT+** / **BAT-**. If the external supply is lost, the battery keeps the mainboard powered.
 :::
 
 ### Host Interface (I²C)

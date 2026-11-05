@@ -34,7 +34,7 @@ Bez `sudo` nelze použít NetworkManager.
 
 - `-c PATH` `--config PATH` cesta ke [konfiguračnímu](#configuration) souboru
 - `-d` `--debug` zobrazí ladicí výstup
-- `-h IP` `--host IP` hostitel brokeru MQTT
+- `-h IP` `--mqtt IP` hostitel brokeru MQTT
 - `-p PORT` `--port PORT` port brokeru MQTT
 - `-ca PATH` `--cafile PATH` cesta k souboru s certifikátem CA
 - `-cert PATH` `--certfile PATH` cesta k souboru s klientským certifikátem pro TLS

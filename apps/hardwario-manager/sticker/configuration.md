@@ -18,7 +18,7 @@ Go to **STICKER → Configuration**.
 |---|---|
 | **Read configuration from the device** | Read what is on a device, then edit and write it back. The usual path. |
 | **Scan multiple (batch export)** | Capture many devices' configurations in one session, see [**Scan multiple devices**](./batch-export.md) |
-| **Configure without reading** | Build a configuration and write it to a device, including a powered-off one, see [**Configure a powered-off device**](./offline-configuration.md) |
+| **Configure without reading** | Build a configuration and write it to a device, including a powered-off one on firmware v1.4.x, see [**Configure a powered-off device**](./offline-configuration.md) |
 | **Configure from file** | Load a configuration you saved earlier (see below) |
 
 ---

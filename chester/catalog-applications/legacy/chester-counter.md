@@ -26,7 +26,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 ## Application Overview
 
-The application **CHESTER Counter** is used to count pulses on eight digital inputs. They can be connected to a PLC/sensor output (NPN/PNP), push button, switch, relay, etc. The application counts the total number of pulses and also the number of pulses since the last report (configurable using the `interval-report` parameter).
+The application **CHESTER Counter** is used to count pulses on the four digital inputs of its CHESTER-X0B module. They can be connected to a PLC/sensor output (NPN/PNP), push button, switch, relay, etc. The application counts the total number of pulses and also the number of pulses since the last report (configurable using the `interval-report` parameter).
 
 ## Application Variants
 

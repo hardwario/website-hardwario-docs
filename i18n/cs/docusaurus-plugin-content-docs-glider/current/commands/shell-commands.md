@@ -34,7 +34,7 @@ Změny pak uložte do flash paměti:
 AT&W
 ```
 
-…nebo ekvivalentně ze shellu Zephyr restartujte zařízení příkazem `kernel reboot cold`. Hodnoty zapsané přes `<module> config` se při spuštění `&W` uloží automaticky.
+…nebo ekvivalentně ze shellu Zephyr spusťte `config save` (uloží celou konfiguraci a restartuje zařízení). Hodnoty zapsané přes `<module> config` uloží kterýkoli z obou příkazů. Samotný restart (`kernel reboot cold`) je neuloží.
 
 ## `app` – příkazy pro celou aplikaci {#app---application-wide-commands}
 

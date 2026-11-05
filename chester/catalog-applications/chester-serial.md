@@ -67,7 +67,7 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 
 :::caution
 
-**CHESTER Serial** requires an external power supply (5–28 V DC) for continuous operation. Sensors and the serial interface are powered continuously.
+**CHESTER Serial** requires an external power supply (6–28 V DC) for continuous operation. Sensors and the serial interface are powered continuously.
 
 :::
 
@@ -131,7 +131,7 @@ When using LoRaWAN, the application uses adaptive multi-device packing (Protocol
 | **Physical Interface** | RS-232 (Module X12), RS-485 (Module X2) |
 | **Application Protocols** | Transparent (RAW), Modbus RTU |
 | **Cloud Formats** | CBOR (LTE), Optimized Binary (LoRaWAN) |
-| **Power Supply** | External source (5–28V DC) required |
+| **Power Supply** | External source (6–28V DC) required |
 
 ## Default Configuration
 

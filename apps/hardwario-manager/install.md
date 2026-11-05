@@ -5,8 +5,14 @@ title: Install the app
 
 # Install HARDWARIO Manager
 
-**HARDWARIO Manager** runs on **Android** and **iOS**. Ask your HARDWARIO
-contact for the current build for your platform.
+**HARDWARIO Manager** runs on **Android** and **iOS**. Install it from the store:
+
+| Platform | Download |
+|---|---|
+| **Android** | [**Google Play**](https://play.google.com/store/apps/details?id=com.hardwario.manager) |
+| **iOS** | [**App Store**](https://apps.apple.com/app/id6444803082) |
+
+Updates arrive automatically through the store.
 
 ---
 

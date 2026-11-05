@@ -24,13 +24,13 @@ The **CHESTER-X12** is an **RS-232** serial-communication extension module for t
 
 CHESTER-X12 provides an **RS-232** serial interface. An **SC16IS740IPW** I²C-to-UART bridge connects to the CHESTER mainboard over **I²C**, and a **MAX3226EEUE+** transceiver converts the UART signals to true RS-232 levels with ±15 kV ESD protection. The RS-232 transmit and receive lines are brought out to the terminal block.
 
-The module can run directly from the CHESTER mainboard. Alternatively, an external **5–28 VDC** line on **+VIN** feeds the on-board **TPS62933** step-down converter, whose fixed **5 V** output (**+V**) powers the CHESTER mainboard. Schottky diodes (**PMEG6010ELR**) protect the input. An on-board **TLA2021** ADC, read over I²C, monitors the input voltage.
+The module can run directly from the CHESTER mainboard. Alternatively, an external **6–28 VDC** line on **+VIN** feeds the on-board **TPS62933** step-down converter, whose fixed **5 V** output (**+V**) powers the CHESTER mainboard. Schottky diodes (**PMEG6010ELR**) protect the input. An on-board **TLA2021** ADC, read over I²C, monitors the input voltage.
 
 ## Key Features
 
 * **RS-232 Interface:** Full-duplex serial with true RS-232 levels and ±15 kV ESD protection on the I/O pins (MAX3226EEUE+).
 * **I²C-to-UART Bridge:** SC16IS740IPW bridges the RS-232 UART to the CHESTER mainboard's I²C bus.
-* **Flexible Power:** Runs from the CHESTER mainboard, or from an optional 5–28 VDC line on +VIN via the on-board TPS62933 step-down.
+* **Flexible Power:** Runs from the CHESTER mainboard, or from an optional 6–28 VDC line on +VIN via the on-board TPS62933 step-down.
 * **Input Protection:** Schottky diodes (PMEG6010ELR) on the power input.
 * **Input-Voltage Monitoring:** On-board I²C ADC (TLA2021) measures the input voltage.
 * **Low-Power Control:** The RS-232 transceiver can be placed in shutdown via FORCEOFF# for low-power operation.
@@ -55,7 +55,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **Parity** | None, Even, Odd, Mark, Space |
 | **Flow Control** | Software (XON/XOFF) |
 | **Host Interface** | I²C |
-| **Power Input (+VIN)** | 5–28 VDC (optional external supply) |
+| **Power Input (+VIN)** | 6–28 VDC (optional external supply) |
 | **Power Output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
 | **Voltage Monitoring** | On-board 12-bit I²C ADC (TLA2021), measures the input voltage |
 | **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
@@ -68,7 +68,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **I²C-to-UART Bridge** | SC16IS740IPW | Single UART with I²C interface, 64-byte FIFO |
 | **RS-232 Transceiver** | MAX3226EEUE+ | True RS-232 levels, ±15 kV ESD protection |
 | **Voltage-Monitoring ADC** | TLA2021 | 12-bit I²C ADC (address 0x49); measures the input voltage |
-| **DC-DC Converter** | TPS62933 | Step-down converter, 5–28 VDC input, 5 V output |
+| **DC-DC Converter** | TPS62933 | Step-down converter, 6–28 VDC input, 5 V output |
 | **Input Protection** | PMEG6010ELR | Schottky barrier diodes for input protection |
 
 ## Pin Configuration
@@ -85,7 +85,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 
 | Pin | Signal | Type | Description |
 | :---: | :--- | :--- | :--- |
-| 1 | +VIN | Power Input | Optional external DC input to the on-board step-down (5–28 VDC) |
+| 1 | +VIN | Power Input | Optional external DC input to the on-board step-down (6–28 VDC) |
 | 2 | GND | Ground | System ground reference |
 | 3 | +V | Power Output | Fixed 5 V from the on-board step-down (powers the CHESTER mainboard) |
 | 4 | GND | Ground | System ground reference |
@@ -95,7 +95,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 | 8 | GND | Ground | System ground reference |
 
 :::info
-The module can run directly from the CHESTER mainboard. When an external **5–28 VDC** supply is connected to **+VIN** (Pin 1), the on-board TPS62933 step-down converter produces a fixed **5 V** on **+V** (Pin 3), which powers the CHESTER mainboard.
+The module can run directly from the CHESTER mainboard. When an external **6–28 VDC** supply is connected to **+VIN** (Pin 1), the on-board TPS62933 step-down converter produces a fixed **5 V** on **+V** (Pin 3), which powers the CHESTER mainboard.
 :::
 
 :::warning ESD Protection Modification Required

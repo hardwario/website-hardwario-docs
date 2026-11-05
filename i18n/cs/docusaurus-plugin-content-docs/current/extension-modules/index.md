@@ -75,7 +75,7 @@ Je-li zařízení CHESTER v krabičce, můžete po vyjmutí baterie přes malé 
 | [**CHESTER-X8**](chester-x8.md)   | Ultrapřesný akcelerometr                                                                                                                                       |
 | [**CHESTER-X9**](chester-x9.md)   | Čtyřkanálový výstupní modul s chytrým chráněným spínačem pro ovládání relé a solenoidů                                                                          |
 | [**CHESTER-X10**](chester-x10.md) | DC/DC měnič + nabíječka Li-Po pro napájení z externí linky 6–28 VDC (s měřením vstupního napětí)                                               |
-| [**CHESTER-X12**](chester-x12.md) | Sériové rozhraní RS-232 s vyhrazeným napájecím vstupem 5-28 VDC pro průmyslová sériová zařízení a starší techniku                                  |
+| [**CHESTER-X12**](chester-x12.md) | Sériové rozhraní RS-232 s vyhrazeným napájecím vstupem 6-28 VDC pro průmyslová sériová zařízení a starší techniku                                  |
 | [**CHESTER-X13**](chester-x13.md) | Rozhraní sběrnice CAN s podporou CAN FD a vestavěným snižujícím měničem (až 28 V)                                                                             |
 | [**CHESTER-X14**](chester-x14.md) | Připojení Ethernet 10/100 s vestavěným snižujícím měničem (až 28 V)                                                                                     |
 | [**CHESTER-K1**](chester-k1.md)   | Čtyřkanálový převodník s diferenciálním vstupem a softwarově řízeným zvyšujícím měničem 5 V pro proudové sondy a další průmyslové senzory                                |
@@ -88,8 +88,8 @@ Je-li zařízení CHESTER v krabičce, můžete po vyjmutí baterie přes malé 
 | CHESTER-A1A                       | AC/DC měnič pro napájení 110/230 V se dvěma výkonovými relé 230V/16A                                                                                           |
 | CHESTER-G1                        | Osmikanálový galvanicky oddělený vstupní modul s izolovaným DC/DC napájením                                                                                       |
 | CHESTER-S1                        | Modul pro monitorování prostředí se senzory teploty, vlhkosti, oxidu uhličitého (CO2), osvětlenosti, atmosférického tlaku, hluku a pohybu (PIR)            |
-| [**CHESTER-Z1**](chester-z1.md)   | Modul záložního napájení z baterie Li-Ion s DC/DC měničem a nabíječkou, vstup z linky 6-28 VDC nebo 12V solárního panelu                                                               |
-| [**CHESTER-Z1-F**](chester-z1.md) | Modul záložního napájení z baterie Li-Ion s DC/DC měničem a nabíječkou, vstup z linky 6-28 VDC nebo 12V solárního panelu + až 4 RGB podsvícená tlačítka s akustickou zpětnou vazbou |
+| [**CHESTER-Z1**](chester-z1.md)   | Modul záložního napájení z baterie Li-Ion s DC/DC měničem a nabíječkou, vstup z linky 6-26 VDC nebo 12V solárního panelu                                                               |
+| [**CHESTER-Z1-F**](chester-z1.md) | Modul záložního napájení z baterie Li-Ion s DC/DC měničem a nabíječkou, vstup z linky 6-26 VDC nebo 12V solárního panelu + až 4 RGB podsvícená tlačítka s akustickou zpětnou vazbou |
 
 ## Nosné desky {#carrier-boards}
 

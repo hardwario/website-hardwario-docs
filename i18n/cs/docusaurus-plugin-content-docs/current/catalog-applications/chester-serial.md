@@ -67,7 +67,7 @@ Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md).
 
 :::caution
 
-Zařízení **CHESTER Serial** potřebuje pro nepřetržitý provoz externí napájení (5–28 V DC). Senzory i sériové rozhraní jsou napájené trvale.
+Zařízení **CHESTER Serial** potřebuje pro nepřetržitý provoz externí napájení (6–28 V DC). Senzory i sériové rozhraní jsou napájené trvale.
 
 :::
 
@@ -131,7 +131,7 @@ V síti LoRaWAN aplikace adaptivně sdružuje data více zařízení (protokol v
 | **Fyzické rozhraní** | RS-232 (modul X12), RS-485 (modul X2) |
 | **Aplikační protokoly** | Transparentní (RAW), Modbus RTU |
 | **Cloudové formáty** | CBOR (LTE), optimalizovaný binární (LoRaWAN) |
-| **Napájení** | Vyžadován externí zdroj (5–28 V DC) |
+| **Napájení** | Vyžadován externí zdroj (6–28 V DC) |
 
 ## Výchozí konfigurace {#default-configuration}
 

@@ -67,4 +67,4 @@ A user can be a member of multiple spaces with different roles in each.
 
 Each space has its own API keys for programmatic access. API keys are scoped to the space and can be used to list devices, retrieve messages, and send downlinks via the [REST API](/cloud/api).
 
-To create an API key, go to **Settings → API Keys** in your space.
+To create an API key, go to **API Keys** in the left sidebar of your space.

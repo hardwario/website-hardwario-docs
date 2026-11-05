@@ -34,7 +34,7 @@ After making changes, save them to flash:
 AT&W
 ```
 
-…or, equivalently, from the Zephyr shell, reboot with `kernel reboot cold`. Values written via `<module> config` are persisted automatically when `&W` runs.
+…or, equivalently, from the Zephyr shell, run `config save` (saves all configuration and reboots). Values written via `<module> config` are saved by either command. A plain reboot (`kernel reboot cold`) does not save them.
 
 ## `app` - application-wide commands
 

@@ -1,17 +1,18 @@
 ---
 slug: lorawan-chirpstack
-title: ChirpStack v4
-title_meta: "ChirpStack v4 (EMBER)"
+title: "ChirpStack v4: Semtech UDP"
+sidebar_label: Semtech UDP
+title_meta: "ChirpStack v4: Semtech UDP (EMBER)"
 ---
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4 {#chirpstack-v4}
+# ChirpStack v4: Semtech UDP {#chirpstack-v4}
 
-Tento návod ukazuje, jak připojit bránu LoRaWAN **HARDWARIO EMBER** (MikroTik RouterOS) k síťovému serveru **ChirpStack v4**.
+Tento návod ukazuje, jak připojit bránu LoRaWAN **HARDWARIO EMBER** (MikroTik RouterOS) k síťovému serveru **ChirpStack v4** protokolem **Semtech UDP** (packet forwarder). Pro spojení přes TCP zabezpečené TLS nebo klientskými certifikáty (mTLS) použijte místo toho [Basics Station](./lorawan-chirpstack-basics-station.md).
 
 ## Užitečná dokumentace {#useful-docs}
 - Instalace ChirpStack v4 → https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
-- EMBER → ChirpStack: https://docs.hardwario.com/ember/chirpstack/chirpstack-ember/
+- EMBER → ChirpStack: [Brány](/apps/chirpstack/chirpstack-configuration/chirpstack-gateways)
 - Konfigurace hotspotu EMBER (základy RouterOS, sekce LoRaWAN): https://docs.hardwario.com/ember/hotspot-configuration/
 
 :::info

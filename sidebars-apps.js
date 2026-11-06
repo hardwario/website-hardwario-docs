@@ -249,7 +249,16 @@ const sidebars = {
               key: 'chirpstack-configuration',
               collapsed: true,
               items: [
-                'chirpstack/chirpstack-configuration/chirpstack-gateways',
+                {
+                  type: 'category',
+                  label: 'Gateways',
+                  key: 'chirpstack-gateways',
+                  collapsed: true,
+                  items: [
+                    'chirpstack/chirpstack-configuration/chirpstack-gateways',
+                    'chirpstack/chirpstack-configuration/chirpstack-basics-station',
+                  ],
+                },
                 'chirpstack/chirpstack-configuration/chirpstack-end-devices',
                 'chirpstack/chirpstack-configuration/chirpstack-decoding',
               ],

@@ -252,7 +252,7 @@ Tuto možnost doporučujeme, pokud chcete **rychle získat data ze zařízení**
 
 Další zdroje:
 - Přidání brány EMBER do ChirpStack v4 (návod HARDWARIO):  
-  https://docs.hardwario.com/ember/chirpstack/chirpstack-ember/
+  https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-gateways/
 
 - (Volitelně) Instalace ChirpStack v4 (Debian/Ubuntu):  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-installation/

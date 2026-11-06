@@ -170,7 +170,7 @@ Záložka **TLS certificate** u brány v aplikaci ChirpStack:
 
 | Soubor | Co to je | Tajné? |
 | --- | --- | --- |
-| `ca.crt` | CA, která podepisuje certifikáty bran. Do zařízení EMBER se importuje jako důvěryhodná CA **serveru** (`server-ca`), což funguje jen tehdy, když stejná CA podepsala i certifikát serveru (doporučeno v kroku 1). Pokud certifikát serveru pochází z jiné CA, importujte místo `ca.crt` tuto CA | ne |
+| `ca.crt` | CA, která podepisuje certifikáty bran. Do zařízení EMBER se importuje jako důvěryhodná CA **serveru** (`server-ca`), což je správně jen tehdy, když stejná CA podepsala i certifikát serveru (doporučeno v kroku 1; RouterOS 7.24.5 to stejně nekontroluje, viz [Známá omezení](/ember/lorawan-network-server/lorawan-chirpstack-basics-station#known-limitations)). Pokud certifikát serveru pochází z jiné CA, importujte místo `ca.crt` tuto CA | ne |
 | `tc.crt` | certifikát brány | ne |
 | `tc.key` | privátní klíč brány (ECDSA P-256, PKCS#8) | **ano** |
 

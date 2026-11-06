@@ -170,7 +170,7 @@ The **TLS certificate** tab of a gateway in ChirpStack:
 
 | File | What it is | Secret? |
 | --- | --- | --- |
-| `ca.crt` | the CA that signs the gateway certificates. On EMBER, it is imported as the trusted **server** CA (`server-ca`), which works only if the same CA also signed the server certificate (recommended in step 1). If the server certificate comes from another CA, import that CA instead of `ca.crt` | no |
+| `ca.crt` | the CA that signs the gateway certificates. On EMBER, it is imported as the trusted **server** CA (`server-ca`), which is correct only if the same CA also signed the server certificate (recommended in step 1; RouterOS 7.24.5 does not check it anyway, see [Known limitations](/ember/lorawan-network-server/lorawan-chirpstack-basics-station#known-limitations)). If the server certificate comes from another CA, import that CA instead of `ca.crt` | no |
 | `tc.crt` | the gateway certificate | no |
 | `tc.key` | the gateway private key (ECDSA P-256, PKCS#8) | **yes** |
 

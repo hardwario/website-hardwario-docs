@@ -152,7 +152,7 @@ Find the line in the EMBER log (`/log print where topics~"lora"`) and look it up
 | --- | --- | --- | --- |
 | EMBER | `connecting to …/router-info`, but no `discovered` | no connection to the server | address, port, firewall, `ssl` |
 | EMBER | `discovered`, but no `configured` | the bridge refused the data connection | certificate name (CN) = gateway EUI, certificate; the reason is in the bridge log |
-| EMBER | `configured`, but no uplinks in ChirpStack | gateway registration, MQTT topics or region | see the two ChirpStack rows below and [Wrong region from the server](#wrong-region-from-the-server) |
+| EMBER | `configured`, but no uplinks in ChirpStack | gateway registration, MQTT topics or region | see the two ChirpStack rows in [ChirpStack: Troubleshooting by log line](/apps/chirpstack/chirpstack-configuration/chirpstack-basics-station#troubleshooting-by-log-line) and [Wrong region from the server](#wrong-region-from-the-server) |
 | EMBER | `socket error on connection [2001]` | nothing listens on the address and port | port (3001); is the Gateway Bridge running? |
 | EMBER | `socket error on timeout [2001]` | the server cannot be reached | address, routing, firewall |
 | EMBER | `socket error on handshake [2001]` | TLS does not match | `ssl=` must match the bridge: `yes` for wss and mTLS, `no` for ws |

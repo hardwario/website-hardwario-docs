@@ -152,7 +152,7 @@ Najděte řádek v logu zařízení EMBER (`/log print where topics~"lora"`) a v
 | --- | --- | --- | --- |
 | EMBER | `connecting to …/router-info`, ale žádné `discovered` | žádné spojení se serverem | adresa, port, firewall, `ssl` |
 | EMBER | `discovered`, ale žádné `configured` | bridge odmítl datové spojení | jméno certifikátu (CN) = EUI brány, certifikát; důvod je v logu bridge |
-| EMBER | `configured`, ale v aplikaci ChirpStack žádné uplinky | registrace brány, témata MQTT nebo region | viz dva řádky ChirpStack níže a [Špatný region ze serveru](#wrong-region-from-the-server) |
+| EMBER | `configured`, ale v aplikaci ChirpStack žádné uplinky | registrace brány, témata MQTT nebo region | viz dva řádky ChirpStack v [ChirpStack: Řešení problémů podle logu](/apps/chirpstack/chirpstack-configuration/chirpstack-basics-station#troubleshooting-by-log-line) a [Špatný region ze serveru](#wrong-region-from-the-server) |
 | EMBER | `socket error on connection [2001]` | na adrese a portu nic neposlouchá | port (3001); běží Gateway Bridge? |
 | EMBER | `socket error on timeout [2001]` | server je nedostupný | adresa, směrování, firewall |
 | EMBER | `socket error on handshake [2001]` | nesedí TLS | `ssl=` musí odpovídat bridge: `yes` pro wss a mTLS, `no` pro ws |

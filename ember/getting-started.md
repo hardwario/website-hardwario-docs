@@ -252,7 +252,7 @@ Recommended if you want to **get data from devices quickly** and forward it to a
 
 Additional resources:
 - Add EMBER gateway to ChirpStack v4 (HARDWARIO tutorial):  
-  https://docs.hardwario.com/ember/chirpstack/chirpstack-ember/
+  https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-gateways/
 
 - (Optional) Install ChirpStack v4 (Debian/Ubuntu):  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-installation/

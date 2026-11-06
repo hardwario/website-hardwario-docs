@@ -16,9 +16,17 @@ const sidebars = {
           label: 'LoRaWAN Network Server',
           collapsed: true,
           items: [
-            'lorawan-network-server/lorawan-chirpstack',
-            'lorawan-network-server/lorawan-chirpstack-basics-station',
-            'chirpstack/chirpstack-ember',
+            {
+              type: 'category',
+              label: 'ChirpStack v4',
+              // Disambiguates the i18n translation key from the video category below
+              key: 'chirpstack-lns',
+              collapsed: true,
+              items: [
+                'lorawan-network-server/lorawan-chirpstack',
+                'lorawan-network-server/lorawan-chirpstack-basics-station',
+              ],
+            },
             'lorawan-network-server/lorawan-tts',
           ],
         },

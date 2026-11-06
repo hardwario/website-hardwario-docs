@@ -94,5 +94,9 @@
   "sidebar.docs.category.videos-the-things-stack": {
     "message": "The Things Stack",
     "description": "The label for category 'The Things Stack' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.chirpstack-gateways": {
+    "message": "Brány",
+    "description": "The label for category 'Gateways' in sidebar 'docs'"
   }
 }

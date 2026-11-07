@@ -29,16 +29,16 @@ Firmware v4.0.1 hodnotu `meteo-type lambrecht` přijme, podporu meteostanic Lamb
 
 Parametry sběrnice Modbus obsahuje každé sestavení firmwaru CHESTER Meteo, používá je ale jen tento firmware:
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `meteo-type` | `none`, `lambrecht`, `sensecap-s1000`, `sensecap-s500` | `none` | Typ meteostanice; s hodnotou `none` firmware žádnou meteostanici nečte |
-| `meteo-addr` | `<1-247>` | `1` | Adresa meteostanice na sběrnici Modbus |
-| `pm-type` | `none`, `cubic-6303` | `none` | Typ senzoru prachových částic; s hodnotou `none` firmware žádný senzor nečte |
-| `pm-addr` | `<1-247>` | `1` | Adresa senzoru prachových částic na sběrnici Modbus |
-| `modbus-baud` | `<1200-19200>` | `9600` | Přenosová rychlost |
-| `modbus-parity` | `none`, `odd`, `even`, `mark`, `space` | `none` | Parita; fungují jen `none`, `odd` a `even`, s `mark` nebo `space` se rozhraní Modbus nespustí |
-| `modbus-stop-bits` | `0_5`, `1`, `1_5`, `2` | `1` | Uloží se, ale neuplatní: firmware použije 1 stop bit s paritou `odd` nebo `even` a 2 stop bity s `none` |
-| `modbus-addr` | `<1-247>` | `1` | Uloží se, firmware v4.0.1 ho ale nepoužívá; adresy zařízení určují `meteo-addr` a `pm-addr` |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `meteo-type` | Meteo type | `none`, `lambrecht`, `sensecap-s1000`, `sensecap-s500` | `none` | Typ meteostanice; s hodnotou `none` firmware žádnou meteostanici nečte |
+| `meteo-addr` | Meteo addr | `<1-247>` | `1` | Adresa meteostanice na sběrnici Modbus |
+| `pm-type` | Pm type | `none`, `cubic-6303` | `none` | Typ senzoru prachových částic; s hodnotou `none` firmware žádný senzor nečte |
+| `pm-addr` | Pm addr | `<1-247>` | `1` | Adresa senzoru prachových částic na sběrnici Modbus |
+| `modbus-baud` | Modbus baud | `<1200-19200>` | `9600` | Přenosová rychlost |
+| `modbus-parity` | Modbus parity | `none`, `odd`, `even`, `mark`, `space` | `none` | Parita; fungují jen `none`, `odd` a `even`, s `mark` nebo `space` se rozhraní Modbus nespustí |
+| `modbus-stop-bits` | Modbus stop bits | `0_5`, `1`, `1_5`, `2` | `1` | Uloží se, ale neuplatní: firmware použije 1 stop bit s paritou `odd` nebo `even` a 2 stop bity s `none` |
+| `modbus-addr` | Modbus addr | `<1-247>` | `1` | Uloží se, firmware v4.0.1 ho ale nepoužívá; adresy zařízení určují `meteo-addr` a `pm-addr` |
 
 Příklad: `app config meteo-type sensecap-s500` a potom `config save`.
 
@@ -73,13 +73,13 @@ S parametrem `pm-type cubic-6303` obsahuje hlášení navíc strukturu `cubic_pm
 | :--- | :--- | :--- |
 | `tsp` | Celkový polétavý prach (TSP) | µg/m³ |
 | `pm1_0`, `pm2_5`, `pm10` | Prachové částice PM1,0, PM2,5 a PM10 | µg/m³ |
-| `gas_flow` | Průtok plynu, jak ho hlásí senzor | Podle senzoru |
+| `gas_flow` | Průtok vzorkovaného plynu senzorem, jmenovitě 1 L/min | L/min |
 
-Struktura `weather_station` hlavního firmwaru v hlášení zůstává, bez modulu CHESTER-X0 ale neobsahuje platné hodnoty. V režimu LoRaWAN se hodnoty zařízení Modbus neodesílají.
+Struktura `weather_station` hlavního firmwaru v hlášení zůstává, bez modulu CHESTER-X0 ale neobsahuje platné hodnoty. V režimu LoRaWAN se hodnoty zařízení Modbus neodesílají. Každé pole s jednotkou, rozsahem a rozlišením popisuje katalogová stránka v části [**CHESTER Meteo M**](../../catalog-applications/chester-meteo/index.md#data-chester-meteo-m).
 
 :::caution
 
-Firmware v4.0.1 agreguje hodnoty zařízení Modbus v každém intervalu agregace dvakrát. Struktury `sensecap` a `cubic_pm` proto mají za každý interval dvě položky, druhou bez hodnot (`null`), a dekódované časové značky je rozprostřou na dvojnásobek skutečné doby.
+Firmware v4.0.1 čte zařízení Modbus při každém vzorku dvakrát a jejich hodnoty v každém intervalu agregace agreguje dvakrát. Struktury `sensecap` a `cubic_pm` proto mají za každý interval dvě položky, druhou bez hodnot (`null`), a dekódované časové značky je rozprostřou na dvojnásobek skutečné doby. Každý vzorek uloží dvě čtení a interval agregace jich pojme nejvýše 32, proto nastavte `interval-aggreg` na méně než 16násobek `interval-sample`.
 
 :::
 

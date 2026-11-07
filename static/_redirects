@@ -352,16 +352,8 @@
 
 # CHESTER: firmware documentation moved out of Catalog Applications into the
 # new Advanced > Firmware section (2026-10-28)
-/chester/catalog-applications/common-functionality      /chester/firmware/common-functionality/      301
-/chester/catalog-applications/common-functionality/     /chester/firmware/common-functionality/      301
-/chester/catalog-applications/ble-tags                  /chester/firmware/ble-tags/                  301
-/chester/catalog-applications/ble-tags/                 /chester/firmware/ble-tags/                  301
 /chester/catalog-applications/changelog                 /chester/firmware/changelog/                 301
 /chester/catalog-applications/changelog/                /chester/firmware/changelog/                 301
-/cs/chester/catalog-applications/common-functionality   /cs/chester/firmware/common-functionality/   301
-/cs/chester/catalog-applications/common-functionality/  /cs/chester/firmware/common-functionality/   301
-/cs/chester/catalog-applications/ble-tags               /cs/chester/firmware/ble-tags/               301
-/cs/chester/catalog-applications/ble-tags/              /cs/chester/firmware/ble-tags/               301
 /cs/chester/catalog-applications/changelog              /cs/chester/firmware/changelog/              301
 /cs/chester/catalog-applications/changelog/             /cs/chester/firmware/changelog/              301
 

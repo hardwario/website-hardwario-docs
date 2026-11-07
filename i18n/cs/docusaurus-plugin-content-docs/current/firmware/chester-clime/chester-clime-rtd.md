@@ -1,17 +1,17 @@
 ---
 title: CHESTER Clime RTD
-description: "Firmware CHESTER Clime RTD: čím se liší od hlavního firmwaru CHESTER Clime při měření dvěma sondami Pt100 nebo Pt1000 na modulu CHESTER-X3A."
+description: "Firmware CHESTER Clime RTD: čím se liší od hlavního firmwaru CHESTER Clime při měření dvěma sondami Pt1000 na modulu CHESTER-X3A."
 ---
 
 # CHESTER Clime RTD {#chester-clime-rtd}
 
-**CHESTER Clime RTD** je firmware CHESTER Clime sestavený pro dva odporové teploměry (Pt100 nebo Pt1000) na modulu **CHESTER-X3A**. Vše, co tato stránka nezmiňuje, funguje stejně jako u firmwaru [**CHESTER Clime**](index.md).
+**CHESTER Clime RTD** je firmware CHESTER Clime sestavený pro dva odporové teploměry Pt1000 na modulu **CHESTER-X3A**. Vše, co tato stránka nezmiňuje, funguje stejně jako u firmwaru [**CHESTER Clime**](index.md).
 
 ## Rozdíly oproti hlavnímu firmwaru {#differences-from-chester-clime}
 
 ### Hardware {#hardware}
 
-- Přidává modul **CHESTER-X3A** ve slotu A: rozhraní pro dvě sondy Pt100/Pt1000 (viz [**CHESTER-X3A**](../../ordering-codes.md#chester-x3a)).
+- Přidává modul **CHESTER-X3A** ve slotu A: rozhraní pro dvě sondy Pt100/Pt1000, z nichž firmware v4.0.1 čte jen Pt1000 (viz [**CHESTER-X3A**](../../ordering-codes.md#chester-x3a)).
 - Nepodporuje vlhkoměr **CHESTER-S2**.
 
 ### Konfigurační parametry {#configuration-parameters}
@@ -20,58 +20,34 @@ Parametry `hygro-t-alarm-*` nejsou k dispozici. Ostatní parametry jsou stejné.
 
 ### Data {#data}
 
-Hlášení navíc obsahuje hodnoty z obou sond, jednu položku pro každý kanál, a nemá strukturu `hygrometer`.
+Pole struktury `rtd_thermometer` s jednotkami, rozsahy a rozlišením popisuje stránka katalogové aplikace v části [**Odporové teploměry**](../../catalog-applications/chester-clime/index.md#rtd-thermometer).
+
+Hlášení navíc obsahuje strukturu `rtd_thermometer` s jednou položkou pro každý vstup modulu CHESTER-X3A (`channel` 1 a 2) a nemá strukturu `hygrometer`. Přes LoRaWAN přicházejí obě teploty jako `rtd_thermometers`.
+
+Ukázka je zkrácená na dvě agregované hodnoty:
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
 
 ```json
 {
-  "rtd_thermometers": [
+  "rtd_thermometer": [
     {
       "channel": 1,
       "measurements": [
         {
-          "timestamp": 1668857742,
-          "min": 22.18,
-          "max": 22.25,
-          "avg": 22.23,
-          "mdn": 22.25
+          "timestamp": 1793952900,
+          "min": 63.42,
+          "max": 63.81,
+          "avg": 63.6,
+          "mdn": 63.58
         },
         {
-          "timestamp": 1668858042,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858342,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858642,
-          "min": 22.12,
-          "max": 22.18,
-          "avg": 22.17,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858942,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668859242,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
+          "timestamp": 1793953200,
+          "min": 63.37,
+          "max": 63.76,
+          "avg": 63.55,
+          "mdn": 63.54
         }
       ]
     },
@@ -79,46 +55,18 @@ Hlášení navíc obsahuje hodnoty z obou sond, jednu položku pro každý kaná
       "channel": 2,
       "measurements": [
         {
-          "timestamp": 1668857742,
-          "min": 22.18,
-          "max": 22.25,
-          "avg": 22.23,
-          "mdn": 22.25
+          "timestamp": 1793952900,
+          "min": 18.12,
+          "max": 18.2,
+          "avg": 18.16,
+          "mdn": 18.16
         },
         {
-          "timestamp": 1668858042,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858342,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858642,
-          "min": 22.12,
-          "max": 22.18,
-          "avg": 22.17,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858942,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668859242,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
+          "timestamp": 1793953200,
+          "min": 18.09,
+          "max": 18.17,
+          "avg": 18.13,
+          "mdn": 18.13
         }
       ]
     }

@@ -111,13 +111,15 @@ Use the following commands to configure communication parameters via the CHESTER
 #### Configuration of CHESTER
 
 ```
-app config modbus-baud "9600"
-app config modbus-addr "1"
-app config modbus-parity "none"
-app config modbus-stop-bits "1"
-app config em-type "orno"
+app config serial-mode modbus
+app config serial-baudrate 9600
+app config serial-parity none
+app config serial-stop-bits 1
+app config device-0 "or_we_504,1"
 config save
 ```
+
+The commands are for the RS-485 variant of the [**CHESTER Serial**](../../firmware/chester-serial/index.md) firmware. `device-0` is the first device slot; `or_we_504,1` is the device type and the Modbus address of the meter. The serial settings must match the meter. `config save` stores the configuration and restarts the device. More in [**Device Slots**](../../firmware/chester-serial/index.md#device-slots).
 
 ---
 
@@ -143,13 +145,20 @@ Make sure the CHESTER configuration **matches the meter configuration**.
 
 ### Measured Values
 
-| Measured Value | Key / Path |
-|---------------|------------|
-| Voltage       | E_ENERGY_METER.METER_1.VOLTAGE.MEASUREMENTS |
-| Current       | E_ENERGY_METER.METER_1.CURRENT.MEASUREMENTS |
-| Frequency     | E_ENERGY_METER.METER_1.FREQUENCY.MEASUREMENTS |
-| Power         | E_ENERGY_METER.METER_1.POWER.MEASUREMENTS |
-| Power Factor  | E_ENERGY_METER.METER_1.POWER_FACTOR.MEASUREMENTS |
-| Energy In     | E_ENERGY_METER.METER_1.ENERGY_IN.MEASUREMENTS |
+In each report the meter is one entry in the `devices` list, with `type_name` `or_we_504`. Every sample taken since the previous report is one entry in its `data` list, with these keys:
+
+| Measured Value | Key |
+| :--- | :--- |
+| Voltage | `devices[].data[].voltage` |
+| Current | `devices[].data[].current` |
+| Active power | `devices[].data[].power` |
+| Apparent power | `devices[].data[].power_apparent` |
+| Reactive power | `devices[].data[].power_reactive` |
+| Power factor | `devices[].data[].power_factor` |
+| Frequency | `devices[].data[].frequency` |
+| Imported active energy | `devices[].data[].energy_in` |
+
+Units, ranges and resolution of every key are on the [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md#orno-or-we-504) catalog page.
+
 
 ---

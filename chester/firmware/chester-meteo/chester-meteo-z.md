@@ -23,16 +23,16 @@ description: "CHESTER Meteo Z firmware: what it changes against the main CHESTER
 
 Added parameters for the backup module:
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `backup-report-connected` | `true`, `false` | `true` | Report immediately when external power returns |
-| `backup-report-disconnected` | `true`, `false` | `true` | Report immediately when external power fails |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `backup-report-connected` | Backup report connected | `true`, `false` | `true` | Report immediately when external power returns |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | `true` | Report immediately when external power fails |
 
 All other parameters are the same.
 
 ### Data
 
-The report adds a `backup` structure with the external voltage (`line_voltage`) and the backup battery voltage (`batt_voltage`) in volts, the `state` of external power (`connected` or `disconnected`) and its `events` (`connected`, `disconnected`). In LoRaWAN mode, the backup values are not sent.
+The report adds a `backup` structure with the voltage of the DC input (`line_voltage`) and of the backup battery (`batt_voltage`) in mV, the `state` of external power (`connected` or `disconnected`) and its `events` since the previous report (`connected`, `disconnected`). In LoRaWAN mode, the backup values are not sent. Every field, with its unit, range and resolution, is described on the catalog page under [**CHESTER Meteo Z**](../../catalog-applications/chester-meteo/index.md#chester-meteo-z).
 
 <details>
 <summary><b>Show JSON Example</b></summary>
@@ -40,16 +40,16 @@ The report adds a `backup` structure with the external voltage (`line_voltage`) 
 ```json
 {
   "backup": {
-    "line_voltage": 24.21,
-    "batt_voltage": 3.41,
+    "line_voltage": 24209,
+    "batt_voltage": 4090,
     "state": "connected",
     "events": [
       {
-        "timestamp": 1675784338,
+        "timestamp": 1793606224,
         "type": "disconnected"
       },
       {
-        "timestamp": 1675784518,
+        "timestamp": 1793606403,
         "type": "connected"
       }
     ]

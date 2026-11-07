@@ -9,7 +9,7 @@ Firmware **CHESTER Range** měří vzdálenost ultrazvukovým senzorem [MaxBotix
 
 Tato stránka popisuje hlavní firmware. Varianta [**CHESTER Range Z**](chester-range-z.md) pro záložní modul CHESTER-Z má vlastní stránku, která uvádí jen to, co mění.
 
-Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../common-functionality.md). Hardware a varianty produktu najdete na stránce katalogové aplikace [**CHESTER Range**](../../catalog-applications/chester-range/index.md).
+Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md). Hardware a varianty produktu najdete na stránce katalogové aplikace [**CHESTER Range**](../../catalog-applications/chester-range/index.md).
 
 ## Podporovaný hardware {#supported-hardware}
 
@@ -17,7 +17,7 @@ Hlavní firmware podporuje:
 
 - ultrazvukový senzor **MaxBotix MB7066** na modulu **CHESTER-X0** ve slotu A: napájení na kanálu 1, impulzní výstup na kanálu 2 (zapojení najdete na stránce katalogové aplikace [**CHESTER Range**](../../catalog-applications/chester-range/index.md#terminal-blocks))
 - teploměry **DS18B20** 1-Wire, nejvýše deset
-- bluetoothové senzorové tagy (viz [**Tagy BLE**](../ble-tags.md))
+- bluetoothové senzorové tagy (viz [**Tagy BLE**](../../catalog-applications/ble-tags.md))
 
 Hlášení ze záložního modulu **CHESTER-Z** vyžaduje firmware [**CHESTER Range Z**](chester-range-z.md). Zdrojový kód obsahuje i podporu vlhkoměru **CHESTER-S2** s teplotními alarmy (parametry `hygro-t-alarm-*`), žádné sestavení v4.0.1 ji ale nezahrnuje.
 
@@ -33,17 +33,17 @@ Hlášení ze záložního modulu **CHESTER-Z** vyžaduje firmware [**CHESTER Ra
 
 Parametr nastavíte příkazem `app config <parametr> <hodnota>` a změnu uplatníte příkazem `config save`, který konfiguraci uloží a restartuje zařízení. Aktuální hodnoty vypíše příkaz `app config show`.
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Interval vzorkování v sekundách |
-| `interval-aggreg` | `<1-86400>` | `300` | Interval agregace v sekundách |
-| `interval-report` | `<30-86400>` | `1800` | Interval hlášení v sekundách |
-| `interval-poll` | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
-| `downlink-wdg-interval` | `<0-1209600>` | `129600` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Interval vzorkování v sekundách |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | `300` | Interval agregace v sekundách |
+| `interval-report` | Report interval | `<30-86400>` | `1800` | Interval hlášení v sekundách |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | `129600` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
 
 Hlavní firmware nemá parametry závislé na hardwaru; parametry záložního napájení přidává firmware [**CHESTER Range Z**](chester-range-z.md#configuration-parameters).
 
-Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../common-functionality.md#network-mode-configuration).
+Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md#network-mode-configuration).
 
 ## Příkazy {#commands}
 
@@ -65,12 +65,13 @@ Postup nahrání popisuje článek [**Nahrání firmwaru**](../../firmware-flash
 
 ## Ukázková zpráva JSON {#example-json-message}
 
-Ukázka zachycuje hlášení s ultrazvukovým senzorem a dvěma teploměry DS18B20. Každý dostupný senzor má jedno agregované měření s minimem, maximem, průměrem a mediánem:
+Každé pole s jednotkou, rozsahem a rozlišením popisuje stránka katalogové aplikace v části [**Data**](../../catalog-applications/chester-range/index.md#data-over-lte).
+
+Ukázka zachycuje hlášení s ultrazvukovým senzorem a dvěma teploměry DS18B20. Parametr `interval-report` je nastavený na 600 sekund, takže každý seznam `measurements` obsahuje dva intervaly agregace po 300 sekundách, každý s minimem, maximem, průměrem a mediánem:
 
 - `ultrasonic_ranger`: vzdálenost v metrech
 - `w1_thermometers`: jedna položka pro každý teploměr DS18B20
-
-Ukázka pochází ze staršího firmwaru. Firmware v4.0.1 posílá měření vzdálenosti přímo ve struktuře `ultrasonic_ranger` bez úrovně `distance` a strukturu `hygrometer` neposílá, protože modul CHESTER-S2 nepodporuje žádné jeho sestavení.
+- `ble_tags`: prázdný seznam, protože není spárovaný žádný bluetoothový tag
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
@@ -78,34 +79,23 @@ Ukázka pochází ze staršího firmwaru. Firmware v4.0.1 posílá měření vzd
 ```json
 {
   "message": {
-    "version": 1,
-    "sequence": 1,
-    "timestamp": 1685093572
-  },
-  "attribute": {
-    "vendor_name": "HARDWARIO",
-    "product_name": "CHESTER-M",
-    "hw_variant": "CDGLS",
-    "hw_revision": "R3.4",
-    "fw_name": "(unset)",
-    "fw_version": "(unset)",
-    "serial_number": "2159019054"
+    "version": 2,
+    "sequence": 47,
+    "timestamp": 1793945251
   },
   "system": {
-    "uptime": 49,
-    "voltage_rest": null,
-    "voltage_load": null,
-    "current_load": null
+    "uptime": 28233,
+    "voltage_load": 3.56,
+    "voltage_rest": 3.62,
+    "current_load": 35
   },
   "network": {
-    "imei": 351358816140765,
-    "imsi": 901288910018953,
     "parameter": {
       "eest": 7,
       "ecl": 0,
-      "rsrp": -78,
-      "rsrq": -5,
-      "snr": 8,
+      "rsrp": -89,
+      "rsrq": -9,
+      "snr": 6,
       "plmn": 23003,
       "cid": 1011233,
       "band": 20,
@@ -113,62 +103,31 @@ Ukázka pochází ze staršího firmwaru. Firmware v4.0.1 posílá měření vzd
     }
   },
   "thermometer": {
-    "temperature": 24.93
+    "temperature": 11.81
   },
   "accelerometer": {
-    "acceleration_x": 0,
-    "acceleration_y": -0.23,
-    "acceleration_z": 9.65,
+    "accel_x": -0.08,
+    "accel_y": 0.04,
+    "accel_z": 9.77,
     "orientation": 2
-  },
-  "ultrasonic_ranger": {
-    "distance": {
-      "measurements": [
-        {
-          "timestamp": 1685093569,
-          "min": 2.004,
-          "max": 2.009,
-          "avg": 2.008,
-          "mdn": 2.008
-        }
-      ]
-    }
-  },
-  "hygrometer": {
-    "temperature": {
-      "events": [],
-      "measurements": [
-        {
-          "timestamp": 1685093569,
-          "min": 24.9,
-          "max": 25.03,
-          "avg": 24.99,
-          "mdn": 25.01
-        }
-      ]
-    },
-    "humidity": {
-      "measurements": [
-        {
-          "timestamp": 1685093569,
-          "min": 35.18,
-          "max": 35.81,
-          "avg": 35.45,
-          "mdn": 35.36
-        }
-      ]
-    }
   },
   "w1_thermometers": [
     {
       "serial_number": 222768959,
       "measurements": [
         {
-          "timestamp": 1685093569,
-          "min": 24.31,
-          "max": 24.31,
-          "avg": 24.31,
-          "mdn": 24.31
+          "timestamp": 1793944800,
+          "min": 9.81,
+          "max": 9.87,
+          "avg": 9.84,
+          "mdn": 9.81
+        },
+        {
+          "timestamp": 1793945100,
+          "min": 9.75,
+          "max": 9.87,
+          "avg": 9.82,
+          "mdn": 9.81
         }
       ]
     },
@@ -176,15 +135,41 @@ Ukázka pochází ze staršího firmwaru. Firmware v4.0.1 posílá měření vzd
       "serial_number": 222690915,
       "measurements": [
         {
-          "timestamp": 1685093569,
-          "min": 27,
-          "max": 27.43,
-          "avg": 27.22,
-          "mdn": 27.25
+          "timestamp": 1793944800,
+          "min": 10.5,
+          "max": 10.62,
+          "avg": 10.55,
+          "mdn": 10.56
+        },
+        {
+          "timestamp": 1793945100,
+          "min": 10.43,
+          "max": 10.56,
+          "avg": 10.5,
+          "mdn": 10.5
         }
       ]
     }
-  ]
+  ],
+  "ultrasonic_ranger": {
+    "measurements": [
+      {
+        "timestamp": 1793944800,
+        "min": 1.92,
+        "max": 1.95,
+        "avg": 1.93,
+        "mdn": 1.93
+      },
+      {
+        "timestamp": 1793945100,
+        "min": 1.91,
+        "max": 1.94,
+        "avg": 1.92,
+        "mdn": 1.92
+      }
+    ]
+  },
+  "ble_tags": []
 }
 ```
 

@@ -94,7 +94,7 @@ Pokud potřebujete primární (nedobíjecí) články a větší kapacitu, než 
 
   * Osmi držáky baterií velikosti „C“ pro alkalické (alkalicko-manganové) články se jmenovitým napětím 1,5 V a kapacitou 7 700 mAh. Plně osazená sada uchová celkem 74 Wh energie. Vždy dva články jsou zapojené v sérii, takže vzniknou čtyři paralelní větve. Toto řešení se hodí pro projekty s teplotním rozsahem -10 až +50 °C. Tato varianta se vejde do krabičky s nízkým profilem o rozměrech 200 x 280 x 45 mm.
 
-* Rozšiřující modul CHESTER-Z1 s dobíjecí (a vyměnitelnou) lithium-iontovou baterií typu 18650 se jmenovitým napětím 3,7 V a kapacitou 2 000 mAh. Toto řešení se hodí pro projekty, kde je k dispozici síťové napájení (nebo DC linka), ale zařízení musí při výpadku napájení dlouho fungovat dál. Místo napájecího adaptéru nebo DC linky můžete na vstupní svorky modulu CHESTER-Z1 připojit i fotovoltaické panely.
+* Rozšiřující modul CHESTER-Z1 s dobíjecí (a vyměnitelnou) lithium-iontovou baterií typu 18650 se jmenovitým napětím 3,7 V a kapacitou 2 150 mAh. Toto řešení se hodí pro projekty, kde je k dispozici síťové napájení (nebo DC linka), ale zařízení musí při výpadku napájení dlouho fungovat dál. Místo napájecího adaptéru nebo DC linky můžete na vstupní svorky modulu CHESTER-Z1 připojit i fotovoltaické panely.
 
   :::caution
 
@@ -116,4 +116,4 @@ Zařízení CHESTER lze napájet z DC linky (nebo napájecího adaptéru) pomoc�
 
 * Krycí modul CHESTER-Z1
 
-  CHESTER-Z1 je DC/DC měnič s napěťovým rozsahem 6–28 VDC + nabíječka lithium-iontových baterií.
+  CHESTER-Z1 je DC/DC měnič s napěťovým rozsahem 6–26 VDC + nabíječka lithium-iontových baterií.

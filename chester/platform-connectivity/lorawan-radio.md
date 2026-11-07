@@ -24,7 +24,7 @@ This `app mode` configuration is needed currently for these catalog applications
 - [CHESTER Current](/chester/catalog-applications/chester-current)
 - [CHESTER Scale](/chester/catalog-applications/chester-scale)
 - [CHESTER Meteo](/chester/catalog-applications/chester-meteo)
-- [CHESTER Range](/chester/catalog-applications/chester-range)
+- [CHESTER Serial](/chester/catalog-applications/chester-serial)
 
 The default functionality is that a device **does not use any radio** (mode `none`) and you need to set configuration parameter **mode**.
 

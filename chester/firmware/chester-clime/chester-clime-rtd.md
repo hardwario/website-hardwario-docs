@@ -1,17 +1,17 @@
 ---
 title: CHESTER Clime RTD
-description: "CHESTER Clime RTD firmware: what it changes against the main CHESTER Clime firmware for two Pt100 or Pt1000 probes on the CHESTER-X3A module."
+description: "CHESTER Clime RTD firmware: what it changes against the main CHESTER Clime firmware for two Pt1000 probes on the CHESTER-X3A module."
 ---
 
 # CHESTER Clime RTD
 
-**CHESTER Clime RTD** is the CHESTER Clime firmware built for two resistance thermometers (Pt100 or Pt1000) on the **CHESTER-X3A** module. Everything this page does not mention works as described for [**CHESTER Clime**](index.md).
+**CHESTER Clime RTD** is the CHESTER Clime firmware built for two Pt1000 resistance thermometers on the **CHESTER-X3A** module. Everything this page does not mention works as described for [**CHESTER Clime**](index.md).
 
 ## Differences from CHESTER Clime
 
 ### Hardware
 
-- Adds **CHESTER-X3A** in slot A: an interface for two Pt100/Pt1000 probes (see [**CHESTER-X3A**](../../ordering-codes.md#chester-x3a)).
+- Adds **CHESTER-X3A** in slot A: an interface for two Pt100/Pt1000 probes, of which firmware v4.0.1 reads Pt1000 only (see [**CHESTER-X3A**](../../ordering-codes.md#chester-x3a)).
 - Does not support the **CHESTER-S2** hygrometer.
 
 ### Configuration Parameters
@@ -20,58 +20,34 @@ The `hygro-t-alarm-*` parameters are not available. All other parameters are the
 
 ### Data
 
-The report adds the readings of both probes, one entry for each channel, and has no `hygrometer` structure.
+The fields of `rtd_thermometer`, with their units, ranges and resolutions, are described on the catalog page under [**RTD Thermometers**](../../catalog-applications/chester-clime/index.md#rtd-thermometer).
+
+The report adds an `rtd_thermometer` structure with one entry for each input of CHESTER-X3A (`channel` 1 and 2), and has no `hygrometer` structure. Over LoRaWAN the two temperatures come as `rtd_thermometers`.
+
+The example is shortened to two aggregated values:
 
 <details>
 <summary><b>Show JSON Example</b></summary>
 
 ```json
 {
-  "rtd_thermometers": [
+  "rtd_thermometer": [
     {
       "channel": 1,
       "measurements": [
         {
-          "timestamp": 1668857742,
-          "min": 22.18,
-          "max": 22.25,
-          "avg": 22.23,
-          "mdn": 22.25
+          "timestamp": 1793952900,
+          "min": 63.42,
+          "max": 63.81,
+          "avg": 63.6,
+          "mdn": 63.58
         },
         {
-          "timestamp": 1668858042,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858342,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858642,
-          "min": 22.12,
-          "max": 22.18,
-          "avg": 22.17,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858942,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668859242,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
+          "timestamp": 1793953200,
+          "min": 63.37,
+          "max": 63.76,
+          "avg": 63.55,
+          "mdn": 63.54
         }
       ]
     },
@@ -79,46 +55,18 @@ The report adds the readings of both probes, one entry for each channel, and has
       "channel": 2,
       "measurements": [
         {
-          "timestamp": 1668857742,
-          "min": 22.18,
-          "max": 22.25,
-          "avg": 22.23,
-          "mdn": 22.25
+          "timestamp": 1793952900,
+          "min": 18.12,
+          "max": 18.2,
+          "avg": 18.16,
+          "mdn": 18.16
         },
         {
-          "timestamp": 1668858042,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858342,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858642,
-          "min": 22.12,
-          "max": 22.18,
-          "avg": 22.17,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858942,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668859242,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
+          "timestamp": 1793953200,
+          "min": 18.09,
+          "max": 18.17,
+          "avg": 18.13,
+          "mdn": 18.13
         }
       ]
     }

@@ -29,16 +29,16 @@ Firmware v4.0.1 accepts `meteo-type lambrecht`, but its support for Lambrecht st
 
 The Modbus parameters exist in every CHESTER Meteo build, but only this firmware uses them:
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `meteo-type` | `none`, `lambrecht`, `sensecap-s1000`, `sensecap-s500` | `none` | Type of the weather station; with `none`, no station is read |
-| `meteo-addr` | `<1-247>` | `1` | Modbus address of the weather station |
-| `pm-type` | `none`, `cubic-6303` | `none` | Type of the particulate matter sensor; with `none`, no sensor is read |
-| `pm-addr` | `<1-247>` | `1` | Modbus address of the particulate matter sensor |
-| `modbus-baud` | `<1200-19200>` | `9600` | Baud rate |
-| `modbus-parity` | `none`, `odd`, `even`, `mark`, `space` | `none` | Parity; only `none`, `odd` and `even` work, with `mark` or `space` the Modbus interface does not start |
-| `modbus-stop-bits` | `0_5`, `1`, `1_5`, `2` | `1` | Stored but not applied: the firmware uses 1 stop bit with `odd` or `even` parity and 2 stop bits with `none` |
-| `modbus-addr` | `<1-247>` | `1` | Stored, but firmware v4.0.1 does not use it; the device addresses are `meteo-addr` and `pm-addr` |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `meteo-type` | Meteo type | `none`, `lambrecht`, `sensecap-s1000`, `sensecap-s500` | `none` | Type of the weather station; with `none`, no station is read |
+| `meteo-addr` | Meteo addr | `<1-247>` | `1` | Modbus address of the weather station |
+| `pm-type` | Pm type | `none`, `cubic-6303` | `none` | Type of the particulate matter sensor; with `none`, no sensor is read |
+| `pm-addr` | Pm addr | `<1-247>` | `1` | Modbus address of the particulate matter sensor |
+| `modbus-baud` | Modbus baud | `<1200-19200>` | `9600` | Baud rate |
+| `modbus-parity` | Modbus parity | `none`, `odd`, `even`, `mark`, `space` | `none` | Parity; only `none`, `odd` and `even` work, with `mark` or `space` the Modbus interface does not start |
+| `modbus-stop-bits` | Modbus stop bits | `0_5`, `1`, `1_5`, `2` | `1` | Stored but not applied: the firmware uses 1 stop bit with `odd` or `even` parity and 2 stop bits with `none` |
+| `modbus-addr` | Modbus addr | `<1-247>` | `1` | Stored, but firmware v4.0.1 does not use it; the device addresses are `meteo-addr` and `pm-addr` |
 
 Example: `app config meteo-type sensecap-s500`, then `config save`.
 
@@ -73,13 +73,13 @@ With `pm-type cubic-6303`, the report adds a `cubic_pm` structure with the same 
 | :--- | :--- | :--- |
 | `tsp` | Total suspended particles | µg/m³ |
 | `pm1_0`, `pm2_5`, `pm10` | Particulate matter PM1.0, PM2.5 and PM10 | µg/m³ |
-| `gas_flow` | Gas flow reported by the sensor | As reported by the sensor |
+| `gas_flow` | Flow of the sampled gas through the sensor, nominally 1 L/min | L/min |
 
-The `weather_station` structure of the main firmware stays in the report, but without the CHESTER-X0 module it holds no valid readings. In LoRaWAN mode, the Modbus values are not sent.
+The `weather_station` structure of the main firmware stays in the report, but without the CHESTER-X0 module it holds no valid readings. In LoRaWAN mode, the Modbus values are not sent. Every field, with its unit, range and resolution, is described on the catalog page under [**CHESTER Meteo M**](../../catalog-applications/chester-meteo/index.md#data-chester-meteo-m).
 
 :::caution
 
-Firmware v4.0.1 aggregates the Modbus values twice in every aggregation interval. The `sensecap` and `cubic_pm` structures therefore get two entries per interval, the second one without values (`null`), and the decoded timestamps spread them over twice the real time.
+Firmware v4.0.1 reads the Modbus devices twice at every sample and aggregates their values twice in every aggregation interval. The `sensecap` and `cubic_pm` structures therefore get two entries per interval, the second one without values (`null`), and the decoded timestamps spread them over twice the real time. Every sample stores two readings and an aggregation interval holds at most 32, so keep `interval-aggreg` below 16 times `interval-sample`.
 
 :::
 

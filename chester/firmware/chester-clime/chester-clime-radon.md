@@ -18,12 +18,12 @@ description: "CHESTER Clime Radon firmware: what it changes against the main CHE
 
 The `hygro-t-alarm-*` parameters are not available. The Modbus connection of the probe has its own settings, under the `radon config` command:
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `modbus-baud` | `<1200-19200>` | `19200` | Baud rate |
-| `modbus-addr` | `<1-247>` | `1` | Modbus address of the probe |
-| `modbus-parity` | `none`, `odd`, `even` | `even` | Parity |
-| `modbus-stop-bits` | `1`, `2` | `1` | Stop bits |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `modbus-baud` | Modbus baud | `<1200-19200>` | `19200` | Baud rate |
+| `modbus-addr` | Modbus addr | `<1-247>` | `1` | Modbus address of the probe |
+| `modbus-parity` | Modbus parity | `none`, `odd`, `even` | `even` | Parity |
+| `modbus-stop-bits` | Modbus stop bits | `1`, `2` | `1` | Stop bits |
 
 Example: `radon config modbus-addr 2`, then `config save`.
 
@@ -35,14 +35,18 @@ Example: `radon config modbus-addr 2`, then `config save`.
 
 ### Data
 
+The fields of `radon_probe`, with their units, ranges and resolutions, are described on the catalog page under [**Radon Probe**](../../catalog-applications/chester-clime/index.md#radon-probe).
+
 The report adds a `radon_probe` structure, and there is no `hygrometer` structure:
 
 | Key | Value | Unit |
 | :--- | :--- | :--- |
-| `concentration_hourly` | Radon concentration, 1-hour average | Bq/m³ |
-| `concentration_daily` | Radon concentration, 1-day average | Bq/m³ |
+| `concentration_hourly` | Radon concentration, moving average over the last hour; each `measurements` entry has `timestamp` and `value` | Bq/m³ |
+| `concentration_daily` | Radon concentration, moving average over the last day; each `measurements` entry has `timestamp` and `value` | Bq/m³ |
 | `chamber_temperature` | Temperature in the measurement chamber (`min`, `max`, `avg`, `mdn`) | °C |
 | `chamber_humidity` | Humidity in the measurement chamber (`min`, `max`, `avg`, `mdn`) | % |
+
+The concentrations are read from the probe at the end of each aggregation interval. Over LoRaWAN the firmware sends no radon values.
 
 ## Firmware Build
 

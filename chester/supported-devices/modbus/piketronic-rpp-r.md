@@ -124,15 +124,17 @@ humidity, current settings, and the probe's device/firmware/serial identificatio
 
 ### Measured values
 
-Decoder: `com.hardwario.chester.app.serial`. Values appear under the `devices`
-array (`devices → data`).
+HARDWARIO Cloud decodes the report with the decoder `com.hardwario.chester.app.serial`. In each report the probe is one entry in the `devices` list, with `type_name` `piketronic`. Every sample taken since the previous report is one entry in its `data` list, with these keys:
 
-| Measured Value             | Key / Path                              | Unit   |
-|----------------------------|-----------------------------------------|--------|
-| Radon concentration (1 h)  | devices → data → radon_concentration     | Bq/m³  |
-| Radon concentration (1 day)| devices → data → radon_concentration_day | Bq/m³  |
-| Temperature                | devices → data → temperature             | °C     |
-| Humidity                   | devices → data → humidity                | %      |
+| Measured Value | Key |
+| :--- | :--- |
+| Radon concentration, 1-hour moving average | `devices[].data[].radon_concentration` |
+| Radon concentration, 1-day moving average | `devices[].data[].radon_concentration_day` |
+| Temperature | `devices[].data[].temperature` |
+| Humidity | `devices[].data[].humidity` |
+
+Units, ranges and resolution of every key are on the [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md#piketronic-rpp-r) catalog page.
+
 
 :::info
 

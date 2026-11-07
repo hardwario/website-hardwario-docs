@@ -53,5 +53,5 @@ použije a uloží automaticky. Kdybyste ho přidali, mohla by se změna použí
 :::
 
 Úplný seznam konfiguračních parametrů najdete v dokumentaci zařízení CHESTER v části
-[**Výchozí konfigurace**](/chester/firmware/common-functionality#default-configuration);
+[**Výchozí konfigurace**](/chester/catalog-applications/common-functionality#default-configuration);
 příkaz `app config show` vypíše aktuální hodnoty zařízení.

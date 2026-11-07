@@ -24,7 +24,7 @@ The default is that the device uses **no radio at all** (mode `none`), so this s
 - [CHESTER Current](/chester/catalog-applications/chester-current)
 - [CHESTER Scale](/chester/catalog-applications/chester-scale)
 - [CHESTER Meteo](/chester/catalog-applications/chester-meteo)
-- [CHESTER Range](/chester/catalog-applications/chester-range)
+- [CHESTER Serial](/chester/catalog-applications/chester-serial)
 
 Set the `mode` parameter to the network you want to use:
 

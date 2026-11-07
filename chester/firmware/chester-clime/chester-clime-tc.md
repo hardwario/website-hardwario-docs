@@ -20,7 +20,9 @@ The `hygro-t-alarm-*` parameters are not available. All other parameters are the
 
 ### Data
 
-The report adds a `tc_thermometer` structure with one entry for each thermocouple: `channel` and `measurements`, where each measurement has a timestamp and the `min`, `max`, `avg` and `mdn` temperature in °C. There is no `hygrometer` structure.
+The fields of `tc_thermometer`, with their units, ranges and resolutions, are described on the catalog page under [**Thermocouples**](../../catalog-applications/chester-clime/index.md#tc-thermometer).
+
+The report adds a `tc_thermometer` structure with one entry for each thermocouple: `channel` and `measurements`, where each measurement has a timestamp and the `min`, `max`, `avg` and `mdn` temperature in °C. There is no `hygrometer` structure. Over LoRaWAN the two temperatures come as `tc_thermometers`.
 
 ## Firmware Build
 

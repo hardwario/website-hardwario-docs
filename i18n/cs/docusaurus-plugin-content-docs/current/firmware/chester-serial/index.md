@@ -11,7 +11,7 @@ Firmware **CHESTER Serial** udělá ze zařízení CHESTER bránu pro zařízen�
 
 Firmware se sestavuje ve dvou variantách, jedné pro každé sériové rozhraní: [**CHESTER Serial RS-485**](chester-serial-rs485.md) a [**CHESTER Serial RS-232**](chester-serial-rs232.md). Tato stránka popisuje, co mají obě varianty společné; jejich vlastní stránky uvádějí jen to, čím se liší.
 
-Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../common-functionality.md). Hardware a varianty produktu najdete na stránce katalogové aplikace [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md).
+Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md). Hardware a varianty produktu najdete na stránce katalogové aplikace [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md).
 
 ## Podporovaný hardware {#supported-hardware}
 
@@ -19,7 +19,7 @@ Firmware podporuje:
 
 - jeden modul sériového rozhraní ve slotu A: **CHESTER-X2** (RS-485) ve variantě RS-485, nebo **CHESTER-X12** (RS-232) ve variantě RS-232
 - zařízení uvedená v části [Podporovaná zařízení](#supported-devices)
-- bluetoothové senzorové tagy (viz [**Tagy BLE**](../ble-tags.md))
+- bluetoothové senzorové tagy (viz [**Tagy BLE**](../../catalog-applications/ble-tags.md))
 
 ## Podporovaná zařízení {#supported-devices}
 
@@ -30,7 +30,7 @@ Firmware má ovladač pro každé z těchto zařízení. Každé zařízení se 
 | **MicroSENS 180-HS** | `microsens_180hs` | RS-232, vlastní protokol | Koncentrace CO₂ (obj. %), teplota, tlak |
 | [**Promag MF7S**](../../supported-devices/serial-devices/promag-mf7s.md) | `promag_mf7s` | RS-232, vlastní protokol | UID každé karty RFID přiložené ke čtečce |
 | [**Carlo Gavazzi EM1XX**](../../supported-devices/modbus/carlo-gavazzi-em1xx-series.md) | `em1xx,<addr>` | RS-485, Modbus RTU | Jednofázově: napětí, proud, činný, zdánlivý a jalový výkon, účiník, frekvence, odebraná a dodaná energie |
-| [**Carlo Gavazzi EM5XX**](../../supported-devices/modbus/carlo-gavazzi-em5xx-series.md) | `em5xx,<addr>` | RS-485, Modbus RTU | Třífázově: napětí, proud, výkon a účiník po fázích; celkový proud, činný, zdánlivý a jalový výkon, účiník, frekvence, odebraná a dodaná energie |
+| [**Carlo Gavazzi EM5XX**](../../supported-devices/modbus/carlo-gavazzi-em5xx-series.md) | `em5xx,<addr>` | RS-485, Modbus RTU | Třífázově: napětí, proud, výkon a účiník po fázích; proud nulovým vodičem; celkový činný, zdánlivý a jalový výkon, účiník, frekvence, odebraná a dodaná energie |
 | [**ORNO OR-WE-504**](../../supported-devices/modbus/orno-or-we-504.md) | `or_we_504,<addr>` | RS-485, Modbus RTU | Jednofázově: napětí, proud, činný, zdánlivý a jalový výkon, účiník, frekvence, odebraná energie |
 | [**ORNO OR-WE-516**](../../supported-devices/modbus/orno-or-we-516.md) | `or_we_516,<addr>` | RS-485, Modbus RTU | Třífázově: napětí, proud, výkon a účiník po fázích; celkový činný, zdánlivý a jalový výkon, účiník, frekvence, celková, odebraná a dodaná energie |
 | [**Schneider iEM3000**](../../supported-devices/modbus/schneider-electric-iem3xxx-series.md) | `iem3000,<addr>` | RS-485, Modbus RTU | Třífázově: napětí, proud a výkon po fázích; celkový činný, zdánlivý a jalový výkon, účiník, frekvence, odebraná a dodaná energie |
@@ -58,9 +58,10 @@ Firmware přijme i typy `sensecap_s1000` (meteorologický senzor SenseCAP S1000/
 
 - Všechna nastavená zařízení, vnitřní teploměr a akcelerometr se **vzorkují** s nastavitelnou periodou (parametr `interval-sample`), poprvé 10 sekund po startu.
 - Každé zařízení si uchová až 32 vzorků, každý s vlastní časovou značkou. Vzorky nad tento limit se až do dalšího hlášení zahazují.
-- Vzorky se odesílají najednou v intervalu hlášení (parametr `interval-report`), poprvé 30 sekund po startu. Hlášení odcházejí přesně v tomto intervalu, bez náhodného rozptylu popsaného v článku [**Společné funkce**](../common-functionality.md#report-interval-jitter).
+- Vzorky se odesílají najednou v intervalu hlášení (parametr `interval-report`), poprvé 30 sekund po startu. Hlášení odcházejí přesně v tomto intervalu, bez náhodného rozptylu popsaného v článku [**Společné funkce**](../../catalog-applications/common-functionality.md#report-interval-jitter).
 - Když je `interval-report` nastavený na `0`, zařízení po prvním hlášení už pravidelně nehlásí. Data odešle jen na vyžádání (příkazem `send` nebo tlačítkem) a po každém přečtení karty čtečkou Promag MF7S.
 - Bluetoothové tagy se vzorkují se stejnou periodou a jejich hodnoty se agregují v intervalu agregace (parametr `interval-aggreg`): minimum, maximum, průměr a medián.
+- Baterie se měří 60 sekund po startu a pak každých 12 hodin; první hlášení, 30 sekund po startu, nese jako hodnoty baterie `0`.
 
 ### Režim Modbus RTU {#modbus-rtu-mode}
 
@@ -73,7 +74,7 @@ V režimu Modbus (`serial-mode modbus`) pracuje zařízení CHESTER jako Modbus 
 
 ### Transparentní režim {#transparent-mode}
 
-V transparentním režimu (`serial-mode transparent`, výchozí) firmware Modbus nepoužívá. Sériovou linku otevře s nastavenými parametry pro zařízení s vlastním protokolem a pro příkazy `serial`:
+V transparentním režimu (`serial-mode transparent`, výchozí) nese sériová linka místo Modbus RTU vlastní protokol zařízení. Firmware linku otevře s nastavenými parametry pro ovladač zařízení a pro příkazy `serial`:
 
 * Připojit lze jen jedno zařízení (slot `device-0`).
 * Data dekóduje ovladač zařízení a odesílají se jen dekódované hodnoty. Firmware v4.0.1 surová data ze sériové linky do cloudu nepřeposílá.
@@ -92,22 +93,22 @@ V režimu LoRaWAN (`mode lrw`) firmware při každém hlášení odešle jeden u
 
 Parametr nastavíte příkazem `app config <parametr> <hodnota>` a změnu uplatníte příkazem `config save`, který konfiguraci uloží a restartuje zařízení. Aktuální hodnoty vypíše příkaz `app config show`.
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Interval vzorkování v sekundách |
-| `interval-aggreg` | `<1-86400>` | `300` | Interval agregace hodnot z bluetoothových tagů v sekundách |
-| `interval-report` | `<0-86400>` | `1800` | Interval hlášení v sekundách; `0` pravidelná hlášení vypne |
-| `interval-poll` | `<0-86400>` | `0` | Interval dotazování HARDWARIO Cloud na zprávy downlink v sekundách; firmware v4.0.1 hodnotu uloží, ale nepoužívá ji |
-| `serial-mode` | `transparent`, `modbus` | `transparent` | Protokol na sériové lince: vlastní protokol zařízení, nebo Modbus RTU |
-| `serial-baudrate` | `<1200-115200>` | `9600` | Přenosová rychlost |
-| `serial-data-bits` | `<7-9>` | `8` | Počet datových bitů; Modbus RTU používá vždy 8 |
-| `serial-parity` | `none`, `odd`, `even` | `none` | Parita |
-| `serial-stop-bits` | `<1-2>` | `1` | Počet stop bitů |
-| `device-0` až `device-7` | `type[,addr[,timeout]]` | `""` | Zařízení ve slotech 0 až 7, viz [Sloty zařízení](#device-slots) |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Interval vzorkování v sekundách |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | `300` | Interval agregace hodnot z bluetoothových tagů v sekundách |
+| `interval-report` | Report interval | `<0-86400>` | `1800` | Interval hlášení v sekundách; `0` pravidelná hlášení vypne |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | Interval dotazování HARDWARIO Cloud na zprávy downlink v sekundách; firmware v4.0.1 hodnotu uloží, ale nepoužívá ji |
+| `serial-mode` | Serial mode | `transparent`, `modbus` | `transparent` | Protokol na sériové lince: vlastní protokol zařízení, nebo Modbus RTU |
+| `serial-baudrate` | Serial baudrate | `<1200-115200>` | `9600` | Přenosová rychlost |
+| `serial-data-bits` | Serial data bits | `<7-9>` | `8` | Počet datových bitů; Modbus RTU používá vždy 8 |
+| `serial-parity` | Serial parity | `none`, `odd`, `even` | `none` | Parita |
+| `serial-stop-bits` | Serial stop bits | `<1-2>` | `1` | Počet stop bitů |
+| `device-0` až `device-7` | Device 0 až Device 7 | `type[,addr[,timeout]]` | `""` | Zařízení ve slotech 0 až 7, viz [Sloty zařízení](#device-slots) |
 
 Obě varianty mají stejné parametry. Varianta RS-232 přijme jen jedno zařízení, a používá proto jen `device-0`.
 
-Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../common-functionality.md#network-mode-configuration).
+Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md#network-mode-configuration).
 
 ### Sloty zařízení {#device-slots}
 
@@ -184,6 +185,8 @@ Společné sestavení neexistuje: stáhněte nebo sestavte variantu pro své roz
 
 ## Ukázková zpráva JSON {#example-json-message}
 
+Každé pole s jednotkou, rozsahem a rozlišením popisuje stránka katalogové aplikace v části [**Data**](../../catalog-applications/chester-serial/index.md#data-over-lte).
+
 <Tabs>
   <TabItem value="lte" label="LTE">
 
@@ -202,9 +205,9 @@ Hlášení obsahuje v poli `devices` jednu položku pro každý nastavený slot:
 | `piketronic` | `radon_concentration` (Bq/m³, hodinový průměr), `radon_concentration_day` (Bq/m³, denní průměr), `temperature` (°C), `humidity` (%) |
 | `solax_g3` | `pv1_power`, `pv2_power`, `bat_power`, `feedin_power`, `eps_power_l1`, `eps_power_l2`, `eps_power_l3` (W), `bat_temp` (°C), `bat_soc` (%), `feedin_energy` a `consume_energy` (kWh) |
 
-Elektroměry hlásí napětí ve V, proud v A, výkon v kW (zdánlivý výkon v kVA, jalový výkon v kvar), frekvenci v Hz a energii v kWh.
+Elektroměry hlásí napětí ve V, proud v A, výkon v kW (zdánlivý výkon v kVA, jalový výkon v kvar), frekvenci v Hz a energii v kWh. Klíč `current` elektroměru EM5XX nese proud nulovým vodičem (registr `An` elektroměru); proudy jednotlivých fází jsou v `current_l1` až `current_l3`. Klíč `power_factor` elektroměru iEM3000 nese čtyřkvadrantové kódování elektroměru v rozsahu −2 až 2: hodnota od −1 do 1 je přímo účiník; nad 1 je účiník 2 minus hodnota, pod −1 je to −2 minus hodnota.
 
-Ukázka níže pochází ze starší verze firmwaru (`fw_version` `v1.0.0`). Firmware v4.0.1 odesílá klíče uvedené výše, výkon elektroměrů hlásí v kW a v `network` nemá `imei` ani `imsi`.
+Ukázka je hlášení varianty RS-485 s elektroměrem Carlo Gavazzi EM111 ve slotu 0 a průtokoměrem FlowT FT201 ve slotu 1, se dvěma vzorky od každého v odstupu 60 sekund a bez bluetoothových tagů.
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
@@ -212,43 +215,44 @@ Ukázka níže pochází ze starší verze firmwaru (`fw_version` `v1.0.0`). Fir
 ```json
 {
   "message": {
-    "version": 1,
-    "sequence": 42,
-    "timestamp": 1738627200
+    "version": 2,
+    "sequence": 48,
+    "timestamp": 1762430500
   },
   "attribute": {
     "vendor_name": "HARDWARIO",
     "product_name": "CHESTER-M",
     "hw_variant": "CGLS",
     "hw_revision": "R3.4",
-    "fw_version": "v1.0.0",
+    "fw_version": "v4.0.1",
     "serial_number": "2159018267"
   },
   "system": {
-    "uptime": 86400,
-    "voltage_rest": 3.65,
-    "voltage_load": 3.42,
-    "current_load": 28
+    "uptime": 86500,
+    "voltage_rest": 4.71,
+    "voltage_load": 4.66,
+    "current_load": 46
   },
   "network": {
-    "imei": 351358815180770,
-    "imsi": 901288910018982,
     "parameter": {
-      "rsrp": -85,
-      "rsrq": -6,
-      "snr": 12,
+      "eest": 7,
+      "ecl": 0,
+      "rsrp": -89,
+      "rsrq": -10,
+      "snr": 9,
       "plmn": 23003,
       "cid": 939040,
-      "band": 20
+      "band": 20,
+      "earfcn": 6300
     }
   },
   "thermometer": {
-    "temperature": 23.45
+    "temperature": 24.31
   },
   "accelerometer": {
-    "accel_x": 0.012,
-    "accel_y": -0.008,
-    "accel_z": 1.002,
+    "accel_x": 0.12,
+    "accel_y": -0.08,
+    "accel_z": 9.79,
     "orientation": 2
   },
   "devices": [
@@ -259,39 +263,71 @@ Ukázka níže pochází ze starší verze firmwaru (`fw_version` `v1.0.0`). Fir
       "addr": 1,
       "data": [
         {
-          "timestamp": 1738627200,
-          "voltage": 230.5,
-          "current": 5.23,
-          "power": 1198.0,
-          "frequency": 50.01,
-          "energy_in": 12345,
-          "energy_out": 0
+          "timestamp": 1762430410,
+          "voltage": 231.4,
+          "current": 5.132,
+          "power": 1.1875,
+          "power_apparent": 1.1875,
+          "power_reactive": 0.0,
+          "power_factor": 1.0,
+          "frequency": 50.1,
+          "energy_in": 8412.5,
+          "energy_out": 0.0
+        },
+        {
+          "timestamp": 1762430470,
+          "voltage": 230.9,
+          "current": 5.143,
+          "power": 1.1875,
+          "power_apparent": 1.1875,
+          "power_reactive": 0.0,
+          "power_factor": 1.0,
+          "frequency": 49.9,
+          "energy_in": 8412.5,
+          "energy_out": 0.0
         }
       ]
     },
     {
       "device": 1,
-      "type": 8,
-      "type_name": "or_we_516",
+      "type": 12,
+      "type_name": "flowt_ft201",
       "addr": 2,
       "data": [
         {
-          "timestamp": 1738627200,
-          "voltage_l1": 230.1,
-          "voltage_l2": 231.2,
-          "voltage_l3": 229.8,
-          "current_l1": 4.12,
-          "current_l2": 3.89,
-          "current_l3": 4.35,
-          "power_l1": 948.0,
-          "power_l2": 901.2,
-          "power_l3": 996.5,
-          "power_total": 2845.7,
-          "energy": 98765
+          "timestamp": 1762430411,
+          "flow_s": 0.0006,
+          "flow_m": 0.036,
+          "flow_h": 2.16,
+          "velocity": 0.627,
+          "total_positive": 1523.417,
+          "total_negative": 0.016,
+          "total_net": 1523.401,
+          "energy_hot": 41.732,
+          "energy_cold": 0.0,
+          "temp_inlet": 61.23,
+          "temp_outlet": 47.85,
+          "signal_quality": 87
+        },
+        {
+          "timestamp": 1762430471,
+          "flow_s": 0.0005,
+          "flow_m": 0.0354,
+          "flow_h": 2.124,
+          "velocity": 0.6166,
+          "total_positive": 1523.453,
+          "total_negative": 0.016,
+          "total_net": 1523.437,
+          "energy_hot": 41.734,
+          "energy_cold": 0.0,
+          "temp_inlet": 61.19,
+          "temp_outlet": 47.88,
+          "signal_quality": 86
         }
       ]
     }
-  ]
+  ],
+  "ble_tags": []
 }
 ```
 
@@ -300,13 +336,43 @@ Ukázka níže pochází ze starší verze firmwaru (`fw_version` `v1.0.0`). Fir
   </TabItem>
   <TabItem value="lora" label="LoRaWAN">
 
-Zařízení **CHESTER Serial** kóduje payload LoRaWAN binárně a za každé nastavené zařízení odešle jeden uplink. Každý uplink má nejvýše 51 bajtů.
+Zařízení **CHESTER Serial** kóduje payload LoRaWAN binárně a za každé nastavené zařízení odešle jeden uplink. Každý uplink má nejvýše 51 bajtů a nese poslední hodnoty zařízení.
 
-Dekodér pro ChirpStack/TTN je k dispozici v souboru `codec/cs-decoder.js` této aplikace v sadě CHESTER SDK. Vrací systémové hodnoty (`voltage_rest`, `voltage_load`, `current_load`, `orientation`, `therm_temperature`), číslo slotu (`device_index`) a objekt `device` s klíči `type`, `type_name`, `addr`, `valid` a s hodnotami zařízení v `data`.
+Dekodér pro ChirpStack/TTN je k dispozici v souboru `codec/cs-decoder.js` této aplikace v sadě CHESTER SDK. Vrací verzi payloadu (`version`), číslo slotu (`device_index`), systémové hodnoty (`voltage_rest`, `voltage_load`, `current_load`, `orientation`, `therm_temperature`) a objekt `device` s klíči `type`, `addr`, `status`, `valid`, `error`, `type_name` a s hodnotami zařízení v `data`. Ukázka je uplink elektroměru EM111 ve slotu 0:
+
+```json
+{
+  "version": 1,
+  "device_index": 0,
+  "voltage_rest": 4.71,
+  "voltage_load": 4.66,
+  "current_load": 46,
+  "orientation": 2,
+  "therm_temperature": 24.31,
+  "device": {
+    "type": 7,
+    "addr": 1,
+    "status": 1,
+    "valid": true,
+    "error": false,
+    "data": {
+      "voltage": 231.375,
+      "current": 5.1328125,
+      "power": 1.1875,
+      "frequency": 50.09375,
+      "energy_in": 8416,
+      "energy_out": 0
+    },
+    "type_name": "em1xx"
+  }
+}
+```
+
+Firmware v4.0.1 posílá odebranou energii elektroměru ORNO OR-WE-504 vydělenou 1000, tedy v MWh, a jako jeho dodanou energii vždy `0`. Odebranou energii elektroměru ORNO OR-WE-516 vrací dekodér pod klíčem `energy`.
 
 :::info
 
-Kvůli omezené velikosti payloadu v LoRaWAN se hodnoty zařízení kódují ve formátu **Float16** (IEEE 754, poloviční přesnost). Dekodér je převede zpět na běžná čísla. Float16 uchová zhruba tři platné číslice a neumí hodnoty nad 65 504, takže velké součty energie přes LoRaWAN ztrácejí přesnost; hlášení přes LTE odesílají plné hodnoty.
+Kvůli omezené velikosti payloadu v LoRaWAN se hodnoty zařízení kódují ve formátu **Float16** (IEEE 754, poloviční přesnost). Dekodér je převede zpět na běžná čísla. Float16 uchová zhruba tři platné číslice, takže 231,4 V v ukázce přijde jako 231,375 V, a neumí hodnoty nad 65 504: větší součet energie přijde jako nekonečno. Hlášení přes LTE uchovají zhruba sedm platných číslic.
 
 :::
 

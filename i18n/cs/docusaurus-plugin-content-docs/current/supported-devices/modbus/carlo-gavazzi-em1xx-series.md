@@ -5,7 +5,7 @@ title: Carlo Gavazzi řady EM1XX
 
 import Image from '@theme/IdealImage';
 
-[Webové stránky](https://www.gavazziautomation.com/en-global/product/EM111DINAV51XS1X)
+[Webové stránky](https://www.gavazziautomation.com/en-global/product/EM111DINAV81XS1X)
 
 ![Analyzátor energie Carlo Gavazzi EM111](../../../../../../chester/supported-devices/modbus/images/carlo-gavazzi-em111.png)
 
@@ -15,7 +15,7 @@ import Image from '@theme/IdealImage';
 
 :::info
 
-Tento elektroměr **nepotřebuje** k měření proudu žádný **externí senzor**. Proud měří sám, vodiče se do něj zapojují přímo.
+Model **EM111DINAV81XS1X** popsaný na této stránce se zapojuje přímo, do 45 A, a k měření proudu **nepotřebuje** žádný **externí senzor**. Model EM111DINAV51XS1X je jiný: proud měří přes proudový transformátor se sekundárním proudem 5 A.
 
 :::
 
@@ -99,25 +99,35 @@ Parametry komunikace nastavíte v terminálu CHESTER těmito příkazy:
 
 
 ```
-app config modbus-baud "9600"
-app config modbus-addr "1"
-app config modbus-parity "none"
-app config modbus-stop-bits "1"
-app config em-type "g1"
+app config serial-mode modbus
+app config serial-baudrate 9600
+app config serial-parity none
+app config serial-stop-bits 1
+app config device-0 "em1xx,1"
 config save
 ```
+
+Příkazy platí pro variantu RS-485 firmwaru [**CHESTER Serial**](../../firmware/chester-serial/index.md). `device-0` je první slot pro zařízení; `em1xx,1` je typ zařízení a adresa Modbus elektroměru. Nastavení sériové linky musí odpovídat elektroměru. Příkaz `config save` konfiguraci uloží a zařízení restartuje. Podrobnosti najdete v části [**Sloty zařízení**](../../firmware/chester-serial/index.md#device-slots).
 
 ---
 
 ### Měřené hodnoty {#measured-values}
 
-| Měřená hodnota | Klíč / cesta                                   |
-|----------------|----------------------------------------------|
-| Proud        | E_ENERGY_METER.METER_1.CURRENT.MEASUREMENTS  |
-| Napětí        | E_ENERGY_METER.METER_1.VOLTAGE.MEASUREMENTS  |
-| Výkon          | E_ENERGY_METER.METER_1.POWER.MEASUREMENTS    |
-| Frekvence      | E_ENERGY_METER.METER_1.FREQUENCY.MEASUREMENTS|
-| Odebraná energie       | E_ENERGY_METER.METER_1.ENERGY_IN.MEASUREMENTS|
-| Dodaná energie         | E_ENERGY_METER.METER_1.ENERGY_OUT.MEASUREMENTS|
+V každém hlášení je elektroměr jednou položkou seznamu `devices` s hodnotou `type_name` `em1xx`. Každý vzorek odebraný od předchozího hlášení je jednou položkou jeho seznamu `data` s těmito klíči:
+
+| Měřená hodnota | Klíč |
+| :--- | :--- |
+| Napětí | `devices[].data[].voltage` |
+| Proud | `devices[].data[].current` |
+| Činný výkon | `devices[].data[].power` |
+| Zdánlivý výkon | `devices[].data[].power_apparent` |
+| Jalový výkon | `devices[].data[].power_reactive` |
+| Účiník | `devices[].data[].power_factor` |
+| Frekvence | `devices[].data[].frequency` |
+| Odebraná činná energie | `devices[].data[].energy_in` |
+| Dodaná činná energie | `devices[].data[].energy_out` |
+
+Jednotky, rozsahy a rozlišení všech klíčů uvádí katalogová stránka [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md#carlo-gavazzi-em1xx).
+
 
 ---

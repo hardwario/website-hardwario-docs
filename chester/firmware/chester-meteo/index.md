@@ -11,7 +11,7 @@ The **CHESTER Meteo** firmware turns CHESTER into a weather station. It samples 
 
 This page describes the main firmware. Variants built for other hardware have their own pages, which list only what they change: [**CHESTER Meteo Z**](chester-meteo-z.md), [**CHESTER Meteo P**](chester-meteo-p.md) and [**CHESTER Meteo M**](chester-meteo-m.md).
 
-What all catalog applications share (LED, button, network mode, BLE tags and shell commands) is described in [**Common Functionality**](../common-functionality.md). The hardware and the product variants are on the [**CHESTER Meteo**](../../catalog-applications/chester-meteo/index.md) catalog page.
+What all catalog applications share (LED, button, network mode, BLE tags and shell commands) is described in [**Common Functionality**](../../catalog-applications/common-functionality.md). The hardware and the product variants are on the [**CHESTER Meteo**](../../catalog-applications/chester-meteo/index.md) catalog page.
 
 ## Supported Hardware
 
@@ -22,7 +22,7 @@ The main firmware works with:
 - the **CHESTER-S2** external hygrometer (temperature and humidity)
 - **DS18B20** 1-Wire thermometers, up to 10
 - 1-Wire **soil sensors** (temperature and moisture), up to 10
-- Bluetooth sensor tags (see [**BLE Tags**](../ble-tags.md))
+- Bluetooth sensor tags (see [**BLE Tags**](../../catalog-applications/ble-tags.md))
 
 The weather sensors connect to the channels of CHESTER-X0:
 
@@ -37,7 +37,7 @@ The weather sensors connect to the channels of CHESTER-X0:
 
 - All sensors are **sampled** with a configurable period (parameter `interval-sample`).
 - Samples are then **aggregated** in the configurable interval. Minimum, maximum, average, and median are computed from buffered samples for each sensor (parameter `interval-aggreg`).
-- Each aggregated value has its timestamp; the values are sent in a batch every report interval (parameter `interval-report`).
+- Each aggregated value has its timestamp; the values are sent in a batch every report interval (parameter `interval-report`). In firmware v4.0.1 the time between two reports varies at random by up to ±20 %.
 
 The firmware keeps at most 32 samples per aggregation interval and 32 aggregated values per report (16 for Bluetooth tags) and drops readings over these limits. Keep the ratio of `interval-aggreg` to `interval-sample` and of `interval-report` to `interval-aggreg` within them.
 
@@ -49,7 +49,7 @@ With this continuous measurement, you can accurately get minimal, maximal, and a
 
 ### Wind Direction
 
-The wind direction is read at every sample. Each aggregated value is the vector average of the samples in the aggregation interval, in degrees from north (90° is east), so the report has one `value` per interval instead of `min`, `max`, `avg` and `mdn`.
+The wind direction is read at every sample. Each aggregated value is the vector average of the samples in the aggregation interval, in degrees from north (90° is east), so the report has one `value` per interval instead of `min`, `max`, `avg` and `mdn`. If no direction could be read during the interval, firmware v4.0.1 sends `0` instead of `null`.
 
 ### Rainfall
 
@@ -59,33 +59,33 @@ The firmware counts the rain gauge pulses continuously. At every aggregation, it
 
 Set a parameter with `app config <parameter> <value>` and apply the change with `config save`, which stores the configuration and restarts the device. The command `app config show` prints the current values.
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Sampling interval in seconds |
-| `interval-aggreg` | `<1-86400>` | `300` | Aggregation interval in seconds |
-| `interval-report` | `<30-86400>` | `1800` | Report interval in seconds |
-| `interval-poll` | `<0-86400>` | `0` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
-| `downlink-wdg-interval` | `<0-1209600>` | `129600` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off |
-| `event-report-delay` | `<1-86400>` | `1` | Delay between an event and its report in seconds (temperature alarm) |
-| `event-report-rate` | `<1-3600>` | `30` | Event reports per hour at most; periodic reports do not count toward this limit |
-| `hygro_t_alarm_hi_report` | `true`, `false` | `false` | Report when the hygrometer temperature crosses the high threshold |
-| `hygro_t_alarm_hi_thr` | `<-40.0..125.0>` | `0.0` | High temperature threshold in °C |
-| `hygro_t_alarm_hi_hst` | `<0.0..100.0>` | `0.0` | High temperature hysteresis in °C |
-| `hygro_t_alarm_lo_report` | `true`, `false` | `false` | Report when the hygrometer temperature crosses the low threshold |
-| `hygro_t_alarm_lo_thr` | `<-40.0..125.0>` | `0.0` | Low temperature threshold in °C |
-| `hygro_t_alarm_lo_hst` | `<0.0..100.0>` | `0.0` | Low temperature hysteresis in °C |
-| `meteo-type` | `none`, `lambrecht`, `sensecap-s1000`, `sensecap-s500` | `none` | CHESTER Meteo M: type of the Modbus weather station |
-| `meteo-addr` | `<1-247>` | `1` | CHESTER Meteo M: Modbus address of the weather station |
-| `pm-type` | `none`, `cubic-6303` | `none` | CHESTER Meteo M: type of the Modbus particulate matter sensor |
-| `pm-addr` | `<1-247>` | `1` | CHESTER Meteo M: Modbus address of the particulate matter sensor |
-| `modbus-baud` | `<1200-19200>` | `9600` | CHESTER Meteo M: Modbus baud rate |
-| `modbus-parity` | `none`, `odd`, `even`, `mark`, `space` | `none` | CHESTER Meteo M: Modbus parity |
-| `modbus-stop-bits` | `0_5`, `1`, `1_5`, `2` | `1` | CHESTER Meteo M: Modbus stop bits |
-| `modbus-addr` | `<1-247>` | `1` | CHESTER Meteo M: not used by firmware v4.0.1 |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Sampling interval in seconds |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | `300` | Aggregation interval in seconds |
+| `interval-report` | Report interval | `<30-86400>` | `1800` | Report interval in seconds |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | `129600` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off |
+| `event-report-delay` | Event report delay | `<1-86400>` | `1` | Delay between an event and its report in seconds (temperature alarm) |
+| `event-report-rate` | Event report rate | `<1-3600>` | `30` | Event reports per hour at most (firmware v4.0.1 sends up to one more); periodic reports do not count toward this limit |
+| `hygro_t_alarm_hi_report` | Hygro t alarm hi report | `true`, `false` | `false` | Report when the hygrometer temperature crosses the high threshold |
+| `hygro_t_alarm_hi_thr` | Hygro t alarm hi threshold | `<-40.0..125.0>` | `0.0` | High temperature threshold in °C |
+| `hygro_t_alarm_hi_hst` | Hygro t alarm hi hysteresis | `<0.0..100.0>` | `0.0` | High temperature hysteresis in °C |
+| `hygro_t_alarm_lo_report` | Hygro t alarm lo report | `true`, `false` | `false` | Report when the hygrometer temperature crosses the low threshold |
+| `hygro_t_alarm_lo_thr` | Hygro t alarm lo threshold | `<-40.0..125.0>` | `0.0` | Low temperature threshold in °C |
+| `hygro_t_alarm_lo_hst` | Hygro t alarm lo hysteresis | `<0.0..100.0>` | `0.0` | Low temperature hysteresis in °C |
+| `meteo-type` | Meteo type | `none`, `lambrecht`, `sensecap-s1000`, `sensecap-s500` | `none` | CHESTER Meteo M: type of the Modbus weather station |
+| `meteo-addr` | Meteo addr | `<1-247>` | `1` | CHESTER Meteo M: Modbus address of the weather station |
+| `pm-type` | Pm type | `none`, `cubic-6303` | `none` | CHESTER Meteo M: type of the Modbus particulate matter sensor |
+| `pm-addr` | Pm addr | `<1-247>` | `1` | CHESTER Meteo M: Modbus address of the particulate matter sensor |
+| `modbus-baud` | Modbus baud | `<1200-19200>` | `9600` | CHESTER Meteo M: Modbus baud rate |
+| `modbus-parity` | Modbus parity | `none`, `odd`, `even`, `mark`, `space` | `none` | CHESTER Meteo M: Modbus parity |
+| `modbus-stop-bits` | Modbus stop bits | `0_5`, `1`, `1_5`, `2` | `1` | CHESTER Meteo M: Modbus stop bits |
+| `modbus-addr` | Modbus addr | `<1-247>` | `1` | CHESTER Meteo M: not used by firmware v4.0.1 |
 
 The `event-report-*` and `hygro_t_alarm_*` parameters take effect only with the CHESTER-S2 hygrometer. The `meteo-type`, `meteo-addr`, `pm-type`, `pm-addr` and `modbus-*` parameters exist in every CHESTER Meteo build, but only [**CHESTER Meteo M**](chester-meteo-m.md) has the Modbus interface that uses them; its page explains them.
 
-The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../common-functionality.md#network-mode-configuration).
+The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../../catalog-applications/common-functionality.md#network-mode-configuration).
 
 ## Commands
 
@@ -115,16 +115,19 @@ Flashing is described in [**Firmware Flashing**](../../firmware-flashing/index.m
 
 ## Example JSON Message
 
+Every field, with its unit, range and resolution, is described on the catalog page under [**Data**](../../catalog-applications/chester-meteo/index.md#data-over-lte).
+
 <Tabs>
   <TabItem value="lte" label="LTE">
 
-The example shows a report of the main firmware with the weather sensors, the barometer, a CHESTER-S2 hygrometer, a DS18B20 thermometer and a soil sensor:
+The example shows a report of the main firmware v4.0.1 as HARDWARIO Cloud decodes it, with the weather sensors, the barometer, a CHESTER-S2 hygrometer, one DS18B20 thermometer, one soil sensor and no Bluetooth tag:
 
-- `weather_station`: wind speed, wind direction and rainfall
-- `barometer`: atmospheric pressure
-- `hygrometer`: temperature and humidity from CHESTER-S2
+- `weather_station`: wind speed in m/s, wind direction in degrees and rainfall in mm
+- `barometer`: atmospheric pressure in Pa
+- `hygrometer`: temperature and humidity from CHESTER-S2, with the alarm events since the previous report
 - `w1_thermometers`: one entry for each DS18B20 thermometer
 - `soil_sensors`: one entry for each soil sensor, with the temperature in °C and the moisture as a raw value of the sensor
+- `ble_tags`: one entry for each paired Bluetooth tag, an empty list here
 
 Hygrometer **events** are:
 * `alarm_hi_activated`
@@ -132,13 +135,7 @@ Hygrometer **events** are:
 * `alarm_lo_activated`
 * `alarm_lo_deactivated`
 
-With the default configuration, each structure holds six aggregated values; the example has five. Each aggregated value has its timestamp and is computed from multiple samples, and `min`, `max`, `avg`, and `mdn` values are calculated. Wind direction and rainfall have a single `value` for each aggregation interval.
-
-Wind speed is in **meters per second**.
-
-Pressure is in **pascals**.
-
-Rainfall is in **millimeters** and wind direction in **degrees**.
+In the example, `interval-report` is set to `600`, so each `measurements` list has two entries; with the default `1800` it has six. Each entry has its timestamp and the `min`, `max`, `avg` and `mdn` of the samples; wind direction and rainfall have a single `value` for each aggregation interval.
 
 <details>
 <summary><b>Show JSON Example</b></summary>
@@ -147,27 +144,24 @@ Rainfall is in **millimeters** and wind direction in **degrees**.
 {
   "message": {
     "version": 1,
-    "sequence": 1,
-    "timestamp": 1675784614
+    "sequence": 36,
+    "timestamp": 1793606459
+  },
+  "system": {
+    "uptime": 21731,
+    "voltage_rest": 3.61,
+    "voltage_load": 3.57,
+    "current_load": 35
   },
   "attribute": {
     "vendor_name": "HARDWARIO",
     "product_name": "CHESTER-M",
-    "hw_variant": "CDGLS",
-    "hw_revision": "R3.2",
-    "fw_name": "CHESTER Meteo",
-    "fw_version": "v2.0.0",
+    "hw_variant": "BCGLS",
+    "hw_revision": "R3.4",
+    "fw_version": "v4.0.1",
     "serial_number": "2159018267"
   },
-  "system": {
-    "uptime": 361,
-    "voltage_rest": 3.6,
-    "voltage_load": 3.56,
-    "current_load": 35
-  },
   "network": {
-    "imei": 351358815180770,
-    "imsi": 901288910018982,
     "parameter": {
       "eest": 7,
       "ecl": 0,
@@ -181,7 +175,7 @@ Rainfall is in **millimeters** and wind direction in **degrees**.
     }
   },
   "thermometer": {
-    "temperature": 21.37
+    "temperature": 18.37
   },
   "accelerometer": {
     "acceleration_x": -0.23,
@@ -189,341 +183,172 @@ Rainfall is in **millimeters** and wind direction in **degrees**.
     "acceleration_z": 9.49,
     "orientation": 2
   },
-  "weather_station": {
-    "wind_speed": {
+  "w1_thermometers": [
+    {
+      "serial_number": 170694685,
       "measurements": [
         {
-          "timestamp": 1675784338,
-          "min": 0,
-          "max": 4,
-          "avg": 2.78,
-          "mdn": 2.8
+          "timestamp": 1793606112,
+          "min": 17.12,
+          "max": 17.31,
+          "avg": 17.22,
+          "mdn": 17.25
         },
         {
-          "timestamp": 1675784398,
-          "min": 3.91,
-          "max": 4.13,
-          "avg": 4,
-          "mdn": 4
-        },
-        {
-          "timestamp": 1675784458,
-          "min": 3.86,
-          "max": 4.13,
-          "avg": 4.03,
-          "mdn": 4
-        },
-        {
-          "timestamp": 1675784518,
-          "min": 3.86,
-          "max": 4.13,
-          "avg": 4.03,
-          "mdn": 4
-        },
-        {
-          "timestamp": 1675784578,
-          "min": 4,
-          "max": 4.26,
-          "avg": 4.13,
-          "mdn": 4.13
-        }
-      ]
-    },
-    "wind_direction": {
-      "measurements": [
-        {
-          "timestamp": 1675784338,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784398,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784458,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784518,
-          "value": 7
-        },
-        {
-          "timestamp": 1675784578,
-          "value": 45
-        }
-      ]
-    },
-    "rainfall": {
-      "measurements": [
-        {
-          "timestamp": 1675784338,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784398,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784458,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784518,
-          "value": 2.79
-        },
-        {
-          "timestamp": 1675784578,
-          "value": 2.79
+          "timestamp": 1793606412,
+          "min": 17.25,
+          "max": 17.43,
+          "avg": 17.33,
+          "mdn": 17.31
         }
       ]
     }
-  },
+  ],
   "barometer": {
     "pressure": {
       "measurements": [
         {
-          "timestamp": 1675784338,
-          "min": 98070,
-          "max": 98075,
-          "avg": 98072,
-          "mdn": 98073
-        },
-        {
-          "timestamp": 1675784398,
+          "timestamp": 1793606112,
           "min": 98071,
           "max": 98078,
-          "avg": 98072,
+          "avg": 98074,
           "mdn": 98074
         },
         {
-          "timestamp": 1675784458,
-          "min": 98070,
-          "max": 98070,
-          "avg": 98070,
+          "timestamp": 1793606412,
+          "min": 98066,
+          "max": 98073,
+          "avg": 98069,
           "mdn": 98070
-        },
-        {
-          "timestamp": 1675784518,
-          "min": 98071,
-          "max": 98078,
-          "avg": 98072,
-          "mdn": 98074
-        },
-        {
-          "timestamp": 1675784578,
-          "min": 98070,
-          "max": 98075,
-          "avg": 98072,
-          "mdn": 98073
         }
       ]
     }
   },
   "hygrometer": {
     "temperature": {
+      "events": [],
       "measurements": [
         {
-          "timestamp": 1675784338,
-          "min": 21.53,
-          "max": 21.67,
-          "avg": 21.59,
-          "mdn": 21.6
+          "timestamp": 1793606112,
+          "min": 18.04,
+          "max": 18.21,
+          "avg": 18.12,
+          "mdn": 18.11
         },
         {
-          "timestamp": 1675784398,
-          "min": 21.44,
-          "max": 21.56,
-          "avg": 21.51,
-          "mdn": 21.53
-        },
-        {
-          "timestamp": 1675784458,
-          "min": 21.47,
-          "max": 21.67,
-          "avg": 21.53,
-          "mdn": 21.52
-        },
-        {
-          "timestamp": 1675784518,
-          "min": 21.43,
-          "max": 21.58,
-          "avg": 21.49,
-          "mdn": 21.5
-        },
-        {
-          "timestamp": 1675784578,
-          "min": 21.39,
-          "max": 21.57,
-          "avg": 21.47,
-          "mdn": 21.44
+          "timestamp": 1793606412,
+          "min": 18.15,
+          "max": 18.33,
+          "avg": 18.24,
+          "mdn": 18.23
         }
       ]
     },
     "humidity": {
       "measurements": [
         {
-          "timestamp": 1675784338,
-          "min": 38.86,
-          "max": 39.04,
-          "avg": 38.95,
-          "mdn": 38.95
+          "timestamp": 1793606112,
+          "min": 71.12,
+          "max": 71.86,
+          "avg": 71.45,
+          "mdn": 71.41
         },
         {
-          "timestamp": 1675784398,
-          "min": 38.93,
-          "max": 39.14,
-          "avg": 39.04,
-          "mdn": 39.07
-        },
-        {
-          "timestamp": 1675784458,
-          "min": 38.85,
-          "max": 39.15,
-          "avg": 39.02,
-          "mdn": 39.02
-        },
-        {
-          "timestamp": 1675784518,
-          "min": 38.89,
-          "max": 39.15,
-          "avg": 39.08,
-          "mdn": 39.08
-        },
-        {
-          "timestamp": 1675784578,
-          "min": 38.88,
-          "max": 39.11,
-          "avg": 39.02,
-          "mdn": 39.03
+          "timestamp": 1793606412,
+          "min": 70.65,
+          "max": 71.24,
+          "avg": 70.98,
+          "mdn": 71.02
         }
       ]
     }
   },
-  "w1_thermometers": [
-    {
-      "serial_number": 170694685,
-      "measurements": [
-        {
-          "timestamp": 1675784338,
-          "min": 21.93,
-          "max": 22.06,
-          "avg": 22,
-          "mdn": 22
-        },
-        {
-          "timestamp": 1675784398,
-          "min": 22.12,
-          "max": 22.18,
-          "avg": 22.13,
-          "mdn": 22.12
-        },
-        {
-          "timestamp": 1675784458,
-          "min": 22.12,
-          "max": 22.12,
-          "avg": 22.12,
-          "mdn": 22.12
-        },
-        {
-          "timestamp": 1675784518,
-          "min": 22.12,
-          "max": 22.12,
-          "avg": 22.12,
-          "mdn": 22.12
-        },
-        {
-          "timestamp": 1675784578,
-          "min": 22.12,
-          "max": 22.12,
-          "avg": 22.12,
-          "mdn": 22.12
-        }
-      ]
-    }
-  ],
   "soil_sensors": [
     {
       "serial_number": 203181,
       "temperature": {
         "measurements": [
           {
-            "timestamp": 1675784338,
-            "min": 22,
-            "max": 22.06,
-            "avg": 22.03,
-            "mdn": 22.06
+            "timestamp": 1793606112,
+            "min": 15.43,
+            "max": 15.5,
+            "avg": 15.47,
+            "mdn": 15.5
           },
           {
-            "timestamp": 1675784398,
-            "min": 22.06,
-            "max": 22.12,
-            "avg": 22.07,
-            "mdn": 22.06
-          },
-          {
-            "timestamp": 1675784458,
-            "min": 22.06,
-            "max": 22.12,
-            "avg": 22.07,
-            "mdn": 22.06
-          },
-          {
-            "timestamp": 1675784518,
-            "min": 22,
-            "max": 22.06,
-            "avg": 22.03,
-            "mdn": 22.06
-          },
-          {
-            "timestamp": 1675784578,
-            "min": 22,
-            "max": 22.06,
-            "avg": 22.03,
-            "mdn": 22.06
+            "timestamp": 1793606412,
+            "min": 15.5,
+            "max": 15.56,
+            "avg": 15.52,
+            "mdn": 15.5
           }
         ]
       },
       "moisture": {
         "measurements": [
           {
-            "timestamp": 1675784338,
-            "min": 6256,
-            "max": 6288,
-            "avg": 6272,
-            "mdn": 6272
+            "timestamp": 1793606112,
+            "min": 9472,
+            "max": 9488,
+            "avg": 9480,
+            "mdn": 9480
           },
           {
-            "timestamp": 1675784398,
-            "min": 6272,
-            "max": 6288,
-            "avg": 6278,
-            "mdn": 6272
-          },
-          {
-            "timestamp": 1675784458,
-            "min": 6272,
-            "max": 6304,
-            "avg": 6280,
-            "mdn": 6272
-          },
-          {
-            "timestamp": 1675784518,
-            "min": 6256,
-            "max": 6304,
-            "avg": 6268,
-            "mdn": 6272
-          },
-          {
-            "timestamp": 1675784578,
-            "min": 6256,
-            "max": 6304,
-            "avg": 6268,
-            "mdn": 6272
+            "timestamp": 1793606412,
+            "min": 9464,
+            "max": 9488,
+            "avg": 9475,
+            "mdn": 9472
           }
         ]
       }
     }
-  ]
+  ],
+  "ble_tags": [],
+  "weather_station": {
+    "wind_speed": {
+      "measurements": [
+        {
+          "timestamp": 1793606112,
+          "min": 1.33,
+          "max": 3.11,
+          "avg": 2.18,
+          "mdn": 2.07
+        },
+        {
+          "timestamp": 1793606412,
+          "min": 1.56,
+          "max": 3.44,
+          "avg": 2.41,
+          "mdn": 2.33
+        }
+      ]
+    },
+    "wind_direction": {
+      "measurements": [
+        {
+          "timestamp": 1793606112,
+          "value": 202
+        },
+        {
+          "timestamp": 1793606412,
+          "value": 197
+        }
+      ]
+    },
+    "rainfall": {
+      "measurements": [
+        {
+          "timestamp": 1793606112,
+          "value": 0
+        },
+        {
+          "timestamp": 1793606412,
+          "value": 0.27
+        }
+      ]
+    }
+  }
 }
 ```
 
@@ -532,33 +357,30 @@ Rainfall is in **millimeters** and wind direction in **degrees**.
   </TabItem>
   <TabItem value="lora" label="LoRaWAN">
 
+The LoRaWAN decoder of the application turns a message of the same device into these fields. Each value is the last sample, and the pressure is in kPa.
+
 <details>
 <summary><b>Show JSON Example</b></summary>
 
 ```json
 {
-  "voltage_rest": 3.7,
-  "voltage_load": 3.65,
-  "current_load": 18,
+  "voltage_rest": 3.61,
+  "voltage_load": 3.57,
+  "current_load": 35,
   "orientation": 2,
-  "therm_temperature": 19.5,
-  "hygro_temperature": 19.2,
-  "hygro_humidity": 60.5,
-  "wind_speed": 2.5,
-  "wind_direction": 180,
-  "rainfall": 2.0,
-  "barometer": 101325,
-  "w1_thermometers": [18.5, 19.0],
-  "ble_tags": [
-    {
-      "temperature": 20.0,
-      "humidity": 58.0
-    }
-  ],
+  "therm_temperature": 18.37,
+  "wind_speed": 2.33,
+  "wind_direction": 202,
+  "rainfall": 0.27,
+  "hygro_temperature": 18.23,
+  "hygro_humidity": 71,
+  "w1_thermometers": [17.37],
+  "ble_tags": [],
+  "barometer": 98.071,
   "soil_sensors": [
     {
       "temperature": 15.5,
-      "moisture": 450
+      "moisture": 9480
     }
   ]
 }
@@ -578,7 +400,6 @@ Rainfall is in **millimeters** and wind direction in **degrees**.
 ### v3.5.1 – 2025-12-08
 
 - **Added**: New variant: **CHESTER Meteo M** (Modbus RTU, supports Lambrecht and Sensecap/OPM sensors; sensor type selectable via `meteo-type`)
-- **Added**: Soil sensor support: moisture and temperature via Modbus soil probes
 - **Added**: LoRaWAN support: single firmware binary for both LTE and LoRaWAN; mode selectable via `app config mode lte` / `app config mode lrw`
 - **Improved**: Pyranometer (solar irradiance) support
 

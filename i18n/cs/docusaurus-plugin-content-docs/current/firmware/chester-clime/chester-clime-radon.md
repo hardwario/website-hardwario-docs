@@ -18,12 +18,12 @@ description: "Firmware CHESTER Clime Radon: čím se liší od hlavního firmwar
 
 Parametry `hygro-t-alarm-*` nejsou k dispozici. Připojení sondy přes Modbus má vlastní nastavení v příkazu `radon config`:
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `modbus-baud` | `<1200-19200>` | `19200` | Přenosová rychlost |
-| `modbus-addr` | `<1-247>` | `1` | Adresa sondy na sběrnici Modbus |
-| `modbus-parity` | `none`, `odd`, `even` | `even` | Parita |
-| `modbus-stop-bits` | `1`, `2` | `1` | Počet stop bitů |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `modbus-baud` | Modbus baud | `<1200-19200>` | `19200` | Přenosová rychlost |
+| `modbus-addr` | Modbus addr | `<1-247>` | `1` | Adresa sondy na sběrnici Modbus |
+| `modbus-parity` | Modbus parity | `none`, `odd`, `even` | `even` | Parita |
+| `modbus-stop-bits` | Modbus stop bits | `1`, `2` | `1` | Počet stop bitů |
 
 Příklad: `radon config modbus-addr 2` a potom `config save`.
 
@@ -35,14 +35,18 @@ Příklad: `radon config modbus-addr 2` a potom `config save`.
 
 ### Data {#data}
 
+Pole struktury `radon_probe` s jednotkami, rozsahy a rozlišením popisuje stránka katalogové aplikace v části [**Radonová sonda**](../../catalog-applications/chester-clime/index.md#radon-probe).
+
 Hlášení navíc obsahuje strukturu `radon_probe` a nemá strukturu `hygrometer`:
 
 | Klíč | Hodnota | Jednotka |
 | :--- | :--- | :--- |
-| `concentration_hourly` | Koncentrace radonu, hodinový průměr | Bq/m³ |
-| `concentration_daily` | Koncentrace radonu, denní průměr | Bq/m³ |
+| `concentration_hourly` | Koncentrace radonu, klouzavý průměr za poslední hodinu; každá položka v `measurements` má `timestamp` a `value` | Bq/m³ |
+| `concentration_daily` | Koncentrace radonu, klouzavý průměr za poslední den; každá položka v `measurements` má `timestamp` a `value` | Bq/m³ |
 | `chamber_temperature` | Teplota v měřicí komoře (`min`, `max`, `avg`, `mdn`) | °C |
 | `chamber_humidity` | Vlhkost v měřicí komoře (`min`, `max`, `avg`, `mdn`) | % |
+
+Koncentrace se ze sondy čtou na konci každého intervalu agregace. Přes LoRaWAN firmware hodnoty radonu neodesílá.
 
 ## Sestavení firmwaru {#firmware-build}
 

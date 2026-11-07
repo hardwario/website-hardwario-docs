@@ -127,12 +127,11 @@ app config device-0 "or_we_516,1"
 # Configure application behavior and data transmission
 app config mode "lte"
 app config interval-sample 60
-app config interval-aggreg 60
 app config interval-report 30
 
-# Save changes and verify settings
-config save
+# Check the settings, then save them (the device restarts)
 app config show
+config save
 ```
 
 ##### Podrobný popis konfiguračních příkazů {#detailed-description-of-configuration-commands}
@@ -150,10 +149,9 @@ app config show
 | **`app config device-0 "or_we_516,1"`** | `""` | Přidá elektroměr do prvního volného slotu (`device-0`). Formát je `[device_type],[modbus_address]` (typ zařízení a adresa Modbus). |
 | **`app config mode "lte"`** | `"none"` | Určí hlavní komunikační rozhraní zařízení CHESTER, zde modul LTE (NB-IoT/LTE-M). |
 | **`app config interval-sample 60`** | `60` | Jak často (v sekundách) zařízení CHESTER čte z elektroměru aktuální hodnoty. |
-| **`app config interval-aggreg 60`** | `300` | Interval (v sekundách), za který se nasbíraná data agregují (zprůměrují nebo sečtou) do jednoho paketu. |
-| **`app config interval-report 30`** | `1800` | Jak často (v sekundách) zařízení CHESTER odesílá agregovaná data na server nebo do cloudu. |
-| **`config save`** | — | Trvale uloží aktuální konfiguraci do paměti flash zařízení. |
+| **`app config interval-report 30`** | `1800` | Jak často (v sekundách) zařízení CHESTER odesílá do HARDWARIO Cloud vzorky nasbírané od předchozího hlášení. Každý vzorek si ponechá vlastní časovou značku. |
 | **`app config show`** | — | Vypíše aktuální nastavení pro kontrolu. |
+| **`config save`** | — | Trvale uloží aktuální konfiguraci do paměti flash zařízení a zařízení restartuje. |
 
 </details>
 ---
@@ -173,24 +171,25 @@ Nastavení zařízení CHESTER musí odpovídat hodnotám nastaveným v elektrom
 
 ### Měřené hodnoty {#measured-values}
 
-| Měřená hodnota | Klíč / cesta                                 |
-|----------------|----------------------------------------------|
-| Výkon          | E_ENERGY_METER.METER_3.POWER.MEASUREMENTS    |
-| Frekvence      | E_ENERGY_METER.METER_3.FREQUENCY.MEASUREMENTS|
-| Odebraná energie | E_ENERGY_METER.METER_3.ENERGY_IN.MEASUREMENTS|
-| Dodaná energie | E_ENERGY_METER.METER_3.ENERGY_OUT.MEASUREMENTS|
-| Napětí L1      | E_ENERGY_METER.METER_3.VOLTAGE_L1.MEASUREMENTS|
-| Napětí L2      | E_ENERGY_METER.METER_3.VOLTAGE_L2.MEASUREMENTS|
-| Napětí L3      | E_ENERGY_METER.METER_3.VOLTAGE_L3.MEASUREMENTS|
-| Proud L1       | E_ENERGY_METER.METER_3.CURRENT_L1.MEASUREMENTS|
-| Proud L2       | E_ENERGY_METER.METER_3.CURRENT_L2.MEASUREMENTS|
-| Proud L3       | E_ENERGY_METER.METER_3.CURRENT_L3.MEASUREMENTS|
-| Výkon L1       | E_ENERGY_METER.METER_3.POWER_L1.MEASUREMENTS |
-| Výkon L2       | E_ENERGY_METER.METER_3.POWER_L2.MEASUREMENTS |
-| Výkon L3       | E_ENERGY_METER.METER_3.POWER_L3.MEASUREMENTS |
-| Energie L1     | E_ENERGY_METER.METER_3.ENERGY_L1.MEASUREMENTS|
-| Energie L2     | E_ENERGY_METER.METER_3.ENERGY_L2.MEASUREMENTS|
-| Energie L3     | E_ENERGY_METER.METER_3.ENERGY_L3.MEASUREMENTS|
+V každém hlášení je elektroměr jednou položkou seznamu `devices` s hodnotou `type_name` `or_we_516`. Každý vzorek odebraný od předchozího hlášení je jednou položkou jeho seznamu `data` s těmito klíči:
+
+| Měřená hodnota | Klíč |
+| :--- | :--- |
+| Napětí L1, L2, L3 | `devices[].data[].voltage_l1`, `voltage_l2`, `voltage_l3` |
+| Proud L1, L2, L3 | `devices[].data[].current_l1`, `current_l2`, `current_l3` |
+| Činný výkon L1, L2, L3 | `devices[].data[].power_l1`, `power_l2`, `power_l3` |
+| Celkový činný výkon | `devices[].data[].power` |
+| Celkový zdánlivý výkon | `devices[].data[].power_apparent` |
+| Celkový jalový výkon | `devices[].data[].power_reactive` |
+| Celkový účiník | `devices[].data[].power_factor` |
+| Účiník L1, L2, L3 | `devices[].data[].power_factor_l1`, `power_factor_l2`, `power_factor_l3` |
+| Frekvence | `devices[].data[].frequency` |
+| Celková činná energie | `devices[].data[].energy` |
+| Odebraná činná energie | `devices[].data[].energy_in` |
+| Dodaná činná energie | `devices[].data[].energy_out` |
+
+Jednotky, rozsahy a rozlišení všech klíčů uvádí katalogová stránka [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md#orno-or-we-516).
+
 
 
 ---

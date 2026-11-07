@@ -123,13 +123,15 @@ Use the following commands to configure communication parameters via CHESTER Ter
 
 
 ```
-app config modbus-baud "9600"
-app config modbus-addr "1"
-app config modbus-parity "none"
-app config modbus-stop-bits "1"
-app config em-type "g4"
+app config serial-mode modbus
+app config serial-baudrate 9600
+app config serial-parity none
+app config serial-stop-bits 1
+app config device-0 "iem3000,1"
 config save
 ```
+
+The commands are for the RS-485 variant of the [**CHESTER Serial**](../../firmware/chester-serial/index.md) firmware. `device-0` is the first device slot; `iem3000,1` is the device type and the Modbus address of the meter. The serial settings must match the meter. `config save` stores the configuration and restarts the device. More in [**Device Slots**](../../firmware/chester-serial/index.md#device-slots).
 
 ---
 
@@ -149,21 +151,22 @@ config save
 
 ### Measured values
 
-| Measured Value | Key / Path                                   |
-|----------------|----------------------------------------------|
-| Current        | E_ENERGY_METER.METER_4.CURRENT.MEASUREMENTS  |
-| Power          | E_ENERGY_METER.METER_4.POWER.MEASUREMENTS    |
-| Frequency      | E_ENERGY_METER.METER_4.FREQUENCY.MEASUREMENTS|
-| Energy In      | E_ENERGY_METER.METER_4.ENERGY_IN.MEASUREMENTS|
-| Energy Out     | E_ENERGY_METER.METER_4.ENERGY_OUT.MEASUREMENTS|
-| Voltage L1     | E_ENERGY_METER.METER_4.VOLTAGE_L1.MEASUREMENTS|
-| Voltage L2     | E_ENERGY_METER.METER_4.VOLTAGE_L2.MEASUREMENTS|
-| Voltage L3     | E_ENERGY_METER.METER_4.VOLTAGE_L3.MEASUREMENTS|
-| Current L1     | E_ENERGY_METER.METER_4.CURRENT_L1.MEASUREMENTS|
-| Current L2     | E_ENERGY_METER.METER_4.CURRENT_L2.MEASUREMENTS|
-| Current L3     | E_ENERGY_METER.METER_4.CURRENT_L3.MEASUREMENTS|
-| Power L1       | E_ENERGY_METER.METER_4.POWER_L1.MEASUREMENTS |
-| Power L2       | E_ENERGY_METER.METER_4.POWER_L2.MEASUREMENTS |
-| Power L3       | E_ENERGY_METER.METER_4.POWER_L3.MEASUREMENTS |
+In each report the meter is one entry in the `devices` list, with `type_name` `iem3000`. Every sample taken since the previous report is one entry in its `data` list, with these keys:
+
+| Measured Value | Key |
+| :--- | :--- |
+| Voltage L1, L2, L3 | `devices[].data[].voltage_l1`, `voltage_l2`, `voltage_l3` |
+| Current L1, L2, L3 | `devices[].data[].current_l1`, `current_l2`, `current_l3` |
+| Active power L1, L2, L3 | `devices[].data[].power_l1`, `power_l2`, `power_l3` |
+| Total active power | `devices[].data[].power` |
+| Total apparent power | `devices[].data[].power_apparent` |
+| Total reactive power | `devices[].data[].power_reactive` |
+| Total power factor (the meter's four-quadrant encoding, −2 to 2) | `devices[].data[].power_factor` |
+| Frequency | `devices[].data[].frequency` |
+| Imported active energy | `devices[].data[].energy_in` |
+| Exported active energy | `devices[].data[].energy_out` |
+
+Units, ranges and resolution of every key are on the [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md#schneider-iem3000) catalog page.
+
 
 ---

@@ -22,117 +22,26 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'CHESTER Clime',
-              key: 'catalog-chester-clime',
+              label: 'Common Functionality',
               link: {
                 type: 'doc',
-                id: 'catalog-applications/chester-clime/index',
+                id: 'catalog-applications/common-functionality',
               },
               collapsed: true,
               items: [
-                'catalog-applications/chester-clime/chester-clime-z',
-                'catalog-applications/chester-clime/chester-clime-iaq',
-                'catalog-applications/chester-clime/chester-clime-1w',
-                'catalog-applications/chester-clime/chester-clime-1wh',
-                'catalog-applications/chester-clime/chester-clime-rtd',
-                'catalog-applications/chester-clime/chester-clime-tc',
+                'catalog-applications/ble-tags',
               ],
             },
-            {
-              type: 'category',
-              label: 'CHESTER Control',
-              key: 'catalog-chester-control',
-              link: {
-                type: 'doc',
-                id: 'catalog-applications/chester-control/index',
-              },
-              collapsed: true,
-              items: [
-                'catalog-applications/chester-control/chester-control-z',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'CHESTER Current',
-              key: 'catalog-chester-current',
-              link: {
-                type: 'doc',
-                id: 'catalog-applications/chester-current/index',
-              },
-              collapsed: true,
-              items: [
-                'catalog-applications/chester-current/chester-current-z',
-                'catalog-applications/chester-current/chester-current-1w',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'CHESTER Meteo',
-              key: 'catalog-chester-meteo',
-              link: {
-                type: 'doc',
-                id: 'catalog-applications/chester-meteo/index',
-              },
-              collapsed: true,
-              items: [
-                'catalog-applications/chester-meteo/chester-meteo-z',
-              ],
-            },
+            'catalog-applications/chester-clime/index',
+            'catalog-applications/chester-control/index',
+            'catalog-applications/chester-current/index',
+            'catalog-applications/chester-meteo/index',
             'catalog-applications/chester-motion/index',
             'catalog-applications/chester-push/index',
-            {
-              type: 'category',
-              label: 'CHESTER Range',
-              key: 'catalog-chester-range',
-              link: {
-                type: 'doc',
-                id: 'catalog-applications/chester-range/index',
-              },
-              collapsed: true,
-              items: [
-                'catalog-applications/chester-range/chester-range-z',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'CHESTER Scale',
-              key: 'catalog-chester-scale',
-              link: {
-                type: 'doc',
-                id: 'catalog-applications/chester-scale/index',
-              },
-              collapsed: true,
-              items: [
-                'catalog-applications/chester-scale/chester-scale-z',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'CHESTER Serial',
-              key: 'catalog-chester-serial',
-              link: {
-                type: 'doc',
-                id: 'catalog-applications/chester-serial/index',
-              },
-              collapsed: true,
-              items: [
-                'catalog-applications/chester-serial/chester-serial-rs485',
-                'catalog-applications/chester-serial/chester-serial-rs232',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'CHESTER wM-Bus',
-              key: 'catalog-chester-wm-bus',
-              link: {
-                type: 'doc',
-                id: 'catalog-applications/chester-wm-bus/index',
-              },
-              collapsed: true,
-              items: [
-                'catalog-applications/chester-wm-bus/chester-wm-bus-dc',
-              ],
-            },
+            'catalog-applications/chester-range/index',
+            'catalog-applications/chester-scale/index',
+            'catalog-applications/chester-serial/index',
+            'catalog-applications/chester-wm-bus/index',
             {
               type: 'category',
               label: 'Legacy',
@@ -362,19 +271,6 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Common Functionality',
-              link: {
-                type: 'doc',
-                id: 'firmware/common-functionality',
-              },
-              collapsed: true,
-              items: [
-                'firmware/ble-tags',
-                'firmware/changelog',
-              ],
-            },
-            {
-              type: 'category',
               label: 'CHESTER Clime',
               key: 'firmware-chester-clime',
               link: {
@@ -488,6 +384,7 @@ const sidebars = {
               ],
             },
             'firmware/chester-wm-bus/index',
+            'firmware/changelog',
           ],
         },
         {

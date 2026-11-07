@@ -30,7 +30,7 @@ Všechny parametry jsou stejné.
 
 ### Data {#data}
 
-Každý stisk se počítá jako krátký. V hlášeních přes LTE roste `count_click` a všechny události jsou `clicked`; `count_hold` zůstává `0` a událost `held` se neobjeví. Ve zprávách LoRaWAN roste `press_count`, `hold_count` zůstává `0` a `hold_event` je vždy `false`.
+Každý stisk se počítá jako krátký. V hlášeních přes LTE položka stisknutého tlačítka v `buttons` zvýší `count_click` a uvede stisk jako událost `clicked`; `count_hold` zůstává `0` a událost `held` se neobjeví. Ve zprávách LoRaWAN roste `press_count`, `hold_count` zůstává `0` a `hold_event` je vždy `false`. Každé pole s jednotkou, rozsahem a rozlišením popisuje katalogová stránka v části [**CHESTER Push FM**](../../catalog-applications/chester-push/index.md#data-chester-push-fm).
 
 ## Sestavení firmwaru {#firmware-build}
 

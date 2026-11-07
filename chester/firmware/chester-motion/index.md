@@ -7,7 +7,7 @@ description: "Firmware of the CHESTER Motion catalog application: how it counts 
 
 The **CHESTER Motion** firmware turns CHESTER into a directional motion detector. It watches two PIR sensors, counts the detections on each side and the passages in each direction (left to right and right to left), and sends the counts to HARDWARIO Cloud over NB-IoT/LTE.
 
-The firmware has a single build for the whole application. The network mode, the button and the configuration commands that the catalog applications share are described in [**Common Functionality**](../common-functionality.md). The hardware and its technical specification are on the [**CHESTER Motion**](../../catalog-applications/chester-motion/index.md) catalog page.
+The firmware has a single build for the whole application. The network mode, the button and the configuration commands that the catalog applications share are described in [**Common Functionality**](../../catalog-applications/common-functionality.md). The hardware and its technical specification are on the [**CHESTER Motion**](../../catalog-applications/chester-motion/index.md) catalog page.
 
 ## Supported Hardware
 
@@ -46,7 +46,7 @@ The application operates in a three-stage pipeline:
 
 :::info
 
-The report interval has a random jitter of up to ±20 % (see [**Report Interval Jitter**](../common-functionality.md#report-interval-jitter)), so that multiple devices do not transmit simultaneously.
+The report interval has a random jitter of up to ±20 % (see [**Report Interval Jitter**](../../catalog-applications/common-functionality.md#report-interval-jitter)), so that multiple devices do not transmit simultaneously.
 
 :::
 
@@ -57,15 +57,21 @@ The report interval has a random jitter of up to ±20 % (see [**Report Interval 
 The application offers three preset sensitivity modes and one custom mode. Both PIR sensors always use the same settings:
 
 **Low**: Provides highest false alarm resistance with slower detection:
-- `motion-sens`: 32, `motion-blind`: 3 s, `motion-pulse`: 3, `motion-window`: 4 s
+- `motion-sens`: 32, `motion-blind`: 3, `motion-pulse`: 3, `motion-window`: 4 (in the sensors: blind time 2 s, 4 pulses, window 2 s)
 
 **Medium** (default): Balanced ratio between detection speed and false alarm resistance:
-- `motion-sens`: 64, `motion-blind`: 2 s, `motion-pulse`: 2, `motion-window`: 2 s
+- `motion-sens`: 64, `motion-blind`: 2, `motion-pulse`: 2, `motion-window`: 2 (in the sensors: blind time 1.5 s, 3 pulses, window 6 s)
 
-**High**: Fastest detection with highest sensitivity. Single pulse triggers detection immediately. Best for security systems or door sensors where immediate response is required:
-- `motion-sens`: 32, `motion-blind`: 1 s, `motion-pulse`: 1, `motion-window`: 0 s
+**High**: Fastest detection with highest sensitivity. Best for security systems or door sensors where immediate response is required:
+- `motion-sens`: 32, `motion-blind`: 1, `motion-pulse`: 1, `motion-window`: 0 (in the sensors: blind time 1 s, 2 pulses, window 2 s)
 
 **Individual**: Allows manual adjustment of all four parameters for advanced control.
+
+The firmware writes `motion-blind`, `motion-pulse` and `motion-window` unchanged into the configuration register of the PIR sensors, which turn them into times and a pulse count (Excelitas PYQ 1648 datasheet, part no. 7052):
+
+- blind time after a detection = 0.5 s + 0.5 s × `motion-blind`, so 0.5–5.5 s for the values 0–10
+- pulses needed for a detection = 1 + `motion-pulse`, 1 to 4
+- window in which the pulses must come = 2 s + 2 s × `motion-window`, 2–8 s
 
 :::tip
 
@@ -75,7 +81,7 @@ The `motion-sens` parameter is the detection threshold of the PIR sensors. A low
 
 :::caution
 
-The CHESTER-S3 driver passes only the two lowest bits of `motion-pulse` and `motion-window` to the sensors, so values from 4 up wrap around (4 acts as 0, 5 as 1). This applies to the `low` preset too: its window of 4 reaches the sensors as 0.
+The CHESTER-S3 driver passes only the two lowest bits of `motion-pulse` and `motion-window` to the sensors, so values from 4 up wrap around (4 acts as 0, 5 as 1). A single pulse is therefore set with `motion-pulse` 4 or 8. This applies to the `low` preset too: its window of 4 reaches the sensors as 0, a 2 s window.
 
 :::
 
@@ -115,21 +121,21 @@ Each button press is acknowledged with yellow LED flashes corresponding to the n
 
 Set a parameter with `app config <parameter> <value>` and apply the change with `config save`, which stores the configuration and restarts the device. The command `app config show` prints the current values.
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Sampling interval in seconds |
-| `interval-report` | `<30-86400>` | `1800` | Report interval in seconds |
-| `interval-poll` | `<0-86400>` | `0` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
-| `sensitivity` | `low`, `medium`, `high`, `individual` | `medium` | PIR sensitivity preset (see [PIR Sensitivity Modes](#pir-sensitivity-modes)) |
-| `motion-sens` | `<1-255>` | `64` | Detection threshold of the PIR sensors; a lower value is more sensitive |
-| `motion-blind` | `<0-10>` | `2` | Blind time in seconds after a detection, during which further detections are ignored |
-| `motion-pulse` | `<1-10>` | `2` | Minimum number of detection pulses needed to trigger a motion event |
-| `motion-window` | `<0-10>` | `2` | Time window in seconds during which the required pulse count must be recorded |
-| `service-mode-enabled` | `true`, `false` | `false` | Service mode: LED indication of every detection and of the network mode, for installation and testing |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Sampling interval in seconds |
+| `interval-report` | Report interval | `<30-86400>` | `1800` | Report interval in seconds |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
+| `sensitivity` | Sensitivity | `low`, `medium`, `high`, `individual` | `medium` | PIR sensitivity preset (see [PIR Sensitivity Modes](#pir-sensitivity-modes)) |
+| `motion-sens` | Motion sens | `<1-255>` | `64` | Detection threshold of the PIR sensors; a lower value is more sensitive |
+| `motion-blind` | Motion blind | `<0-10>` | `2` | Blind time after a detection, during which further detections are ignored: 0.5 s + 0.5 s × value (default 1.5 s) |
+| `motion-pulse` | Motion pulse | `<1-10>` | `2` | Pulses within the window that trigger a motion event: 1 + value, two lowest bits only (default 3 pulses) |
+| `motion-window` | Motion window | `<0-10>` | `2` | Time window in which the pulses must come: 2 s + 2 s × value, two lowest bits only (default 6 s) |
+| `service-mode-enabled` | Service mode enabled | `true`, `false` | `false` | Service mode: LED indication of every detection and of the network mode, for installation and testing |
 
 The four `motion-*` parameters take effect only with `sensitivity` set to `individual`; in the other modes the preset sets them, and `app config show` does not list them.
 
-The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../common-functionality.md#network-mode-configuration). CHESTER Motion offers only the modes `none` and `lte` and starts in `lte`.
+The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../../catalog-applications/common-functionality.md#network-mode-configuration). CHESTER Motion offers only the modes `none` and `lte` and starts in `lte`.
 
 ## Commands
 
@@ -154,18 +160,22 @@ Flashing is described in [**Firmware Flashing**](../../firmware-flashing/index.m
 
 ## Example JSON Message
 
+Every field, with its unit, range and resolution, is described on the catalog page under [**Data**](../../catalog-applications/chester-motion/index.md#data-over-lte).
+
+The example is shortened to four motion samples; with the default configuration a report carries up to 30.
+
 ```json
 {
   "message": {
     "version": 2,
     "sequence": 42,
-    "timestamp": 1736942400
+    "timestamp": 1793953210
   },
   "system": {
-    "uptime": 86400,
-    "voltage_load": 3.21,
+    "uptime": 86412,
+    "voltage_load": 3.44,
     "voltage_rest": 3.65,
-    "current_load": 38
+    "current_load": 34
   },
   "network": {
     "parameter": {
@@ -197,12 +207,34 @@ Flashing is described in [**Firmware Flashing**](../../firmware-flashing/index.m
       "motion_right": 520
     },
     "samples": [
-      1736942400,
-      [0, 3, 2, 1, 2],
-      [60, 5, 4, 2, 3],
-      [120, 2, 1, 0, 1],
-      [180, 4, 3, 1, 2],
-      [240, 6, 5, 3, 4]
+      {
+        "timestamp": 1793953020,
+        "detect_left": 3,
+        "detect_right": 2,
+        "motion_left": 1,
+        "motion_right": 1
+      },
+      {
+        "timestamp": 1793953080,
+        "detect_left": 5,
+        "detect_right": 4,
+        "motion_left": 2,
+        "motion_right": 2
+      },
+      {
+        "timestamp": 1793953140,
+        "detect_left": 0,
+        "detect_right": 0,
+        "motion_left": 0,
+        "motion_right": 0
+      },
+      {
+        "timestamp": 1793953200,
+        "detect_left": 2,
+        "detect_right": 3,
+        "motion_left": 0,
+        "motion_right": 2
+      }
     ]
   }
 }
@@ -216,12 +248,12 @@ Flashing is described in [**Firmware Flashing**](../../firmware-flashing/index.m
 - **thermometer**: Internal temperature in °C.
 - **accelerometer**: Acceleration in m/s² and orientation.
 - **motion**:
-  - **totalizer**: Event counters since the device started (reports do not reset them).
-  - **samples**: Time-sequence offset encoded array of motion events. The first element is the base timestamp. Each subsequent element is an array: `[offset, detect_left, detect_right, motion_left, motion_right]`, where `offset` is in seconds from the base timestamp.
+  - **totalizer**: Event counters since the device started (reports do not reset them, a restart does).
+  - **samples**: The motion samples since the last successful report, at most 30. Each has a `timestamp` (Unix time, end of the sample interval) and the counts of that interval: `detect_left`, `detect_right`, `motion_left` (passages from right to left) and `motion_right` (passages from left to right).
 
 :::info
 
-Any value may be `null` if the corresponding sensor read failed.
+The values in `system`, `network`, `thermometer` and `accelerometer` are `null` when their reading failed.
 
 :::
 

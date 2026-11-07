@@ -24,7 +24,13 @@ Všechny parametry jsou stejné.
 
 ### Data {#data}
 
-Hlášení navíc obsahuje strukturu `pyranometer` s hodnotami `irradiance_1` (vstup B0) a `irradiance_2` (vstup B1). Každá má `measurements` s časovou značkou a napětím `min`, `max`, `avg` a `mdn` v mV; firmware napětí na intenzitu záření nepřepočítává. V režimu LoRaWAN se hodnoty pyranometru neodesílají.
+Hlášení navíc obsahuje strukturu `pyranometer` s hodnotami `irradiance_1` (vstup B0) a `irradiance_2` (vstup B1). Každá má `measurements` s časovou značkou a napětím `min`, `max`, `avg` a `mdn` v mV, od 0 do 3600 mV (plný rozsah převodníku ADC); firmware napětí na intenzitu záření nepřepočítává. V režimu LoRaWAN se hodnoty pyranometru neodesílají. Každé pole s jednotkou, rozsahem a rozlišením popisuje katalogová stránka v části [**CHESTER Meteo P**](../../catalog-applications/chester-meteo/index.md#data-chester-meteo-p).
+
+:::caution
+
+Firmware v4.0.1 bere referenční časovou značku měření `pyranometer` z poslední agregace hlášení místo z první. Všechny dekódované časové značky se proto opožďují o `interval-aggreg` vynásobený počtem položek zmenšeným o jednu: s výchozími intervaly má hlášení zhruba šest položek a časové značky jsou zhruba o 25 minut pozdější.
+
+:::
 
 ## Sestavení firmwaru {#firmware-build}
 

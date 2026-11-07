@@ -127,12 +127,11 @@ app config device-0 "or_we_516,1"
 # Configure application behavior and data transmission
 app config mode "lte"
 app config interval-sample 60
-app config interval-aggreg 60
 app config interval-report 30
 
-# Save changes and verify settings
-config save
+# Check the settings, then save them (the device restarts)
 app config show
+config save
 ```
 
 ##### Detailed Description of Configuration Commands
@@ -150,10 +149,9 @@ app config show
 | **`app config device-0 "or_we_516,1"`** | `""` | Adds the energy meter to the first available slot (`device-0`). The format is `[device_type],[modbus_address]`. |
 | **`app config mode "lte"`** | `"none"` | Determines the primary communication interface of CHESTER. In this case, the LTE (NB-IoT/LTE-M) module is activated. |
 | **`app config interval-sample 60`** | `60` | Interval (in seconds) determining how often CHESTER polls the energy meter for current values. |
-| **`app config interval-aggreg 60`** | `300` | Interval (in seconds) during which collected data is aggregated (averaged or summed) into a single packet. |
-| **`app config interval-report 30`** | `1800` | Interval (in seconds) determining how often CHESTER sends the aggregated data to the server/cloud. |
-| **`config save`** | — | Permanently saves the current configuration to the device's flash memory. |
+| **`app config interval-report 30`** | `1800` | How often (in seconds) CHESTER sends the samples collected since the previous report to HARDWARIO Cloud. Each sample keeps its own timestamp. |
 | **`app config show`** | — | Prints the currently set values for verification. |
+| **`config save`** | — | Permanently saves the current configuration to the device's flash memory and restarts the device. |
 
 </details>
 ---
@@ -173,24 +171,25 @@ Make sure to match the settings in CHESTER according to the values configured in
 
 ### Measured values
 
-| Measured Value | Key / Path                                   |
-|----------------|----------------------------------------------|
-| Power          | E_ENERGY_METER.METER_3.POWER.MEASUREMENTS    |
-| Frequency      | E_ENERGY_METER.METER_3.FREQUENCY.MEASUREMENTS|
-| Energy In      | E_ENERGY_METER.METER_3.ENERGY_IN.MEASUREMENTS|
-| Energy Out     | E_ENERGY_METER.METER_3.ENERGY_OUT.MEASUREMENTS|
-| Voltage L1     | E_ENERGY_METER.METER_3.VOLTAGE_L1.MEASUREMENTS|
-| Voltage L2     | E_ENERGY_METER.METER_3.VOLTAGE_L2.MEASUREMENTS|
-| Voltage L3     | E_ENERGY_METER.METER_3.VOLTAGE_L3.MEASUREMENTS|
-| Current L1     | E_ENERGY_METER.METER_3.CURRENT_L1.MEASUREMENTS|
-| Current L2     | E_ENERGY_METER.METER_3.CURRENT_L2.MEASUREMENTS|
-| Current L3     | E_ENERGY_METER.METER_3.CURRENT_L3.MEASUREMENTS|
-| Power L1       | E_ENERGY_METER.METER_3.POWER_L1.MEASUREMENTS |
-| Power L2       | E_ENERGY_METER.METER_3.POWER_L2.MEASUREMENTS |
-| Power L3       | E_ENERGY_METER.METER_3.POWER_L3.MEASUREMENTS |
-| Energy L1      | E_ENERGY_METER.METER_3.ENERGY_L1.MEASUREMENTS|
-| Energy L2      | E_ENERGY_METER.METER_3.ENERGY_L2.MEASUREMENTS|
-| Energy L3      | E_ENERGY_METER.METER_3.ENERGY_L3.MEASUREMENTS|
+In each report the meter is one entry in the `devices` list, with `type_name` `or_we_516`. Every sample taken since the previous report is one entry in its `data` list, with these keys:
+
+| Measured Value | Key |
+| :--- | :--- |
+| Voltage L1, L2, L3 | `devices[].data[].voltage_l1`, `voltage_l2`, `voltage_l3` |
+| Current L1, L2, L3 | `devices[].data[].current_l1`, `current_l2`, `current_l3` |
+| Active power L1, L2, L3 | `devices[].data[].power_l1`, `power_l2`, `power_l3` |
+| Total active power | `devices[].data[].power` |
+| Total apparent power | `devices[].data[].power_apparent` |
+| Total reactive power | `devices[].data[].power_reactive` |
+| Total power factor | `devices[].data[].power_factor` |
+| Power factor L1, L2, L3 | `devices[].data[].power_factor_l1`, `power_factor_l2`, `power_factor_l3` |
+| Frequency | `devices[].data[].frequency` |
+| Total active energy | `devices[].data[].energy` |
+| Imported active energy | `devices[].data[].energy_in` |
+| Exported active energy | `devices[].data[].energy_out` |
+
+Units, ranges and resolution of every key are on the [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md#orno-or-we-516) catalog page.
+
 
 
 ---

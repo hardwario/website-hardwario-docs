@@ -23,14 +23,14 @@ description: "CHESTER Control 8Ch Z firmware: what it changes against the main C
 
 ### Configuration Parameters
 
-Added parameters for channels 5 to 8:
+The parameters of channels 5 to 8 exist in every CHESTER Control build, but only this firmware uses them:
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `channel-mode-5` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Mode of channel 5 (CHESTER-X0 in slot B, terminal B2) |
-| `channel-mode-6` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Mode of channel 6 (terminal B4) |
-| `channel-mode-7` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Mode of channel 7 (terminal B5) |
-| `channel-mode-8` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Mode of channel 8 (terminal B7) |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `channel-mode-5` | Channel mode 5 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Mode of channel 5 (CHESTER-X0 in slot B, terminal B2) |
+| `channel-mode-6` | Channel mode 6 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Mode of channel 6 (terminal B4) |
+| `channel-mode-7` | Channel mode 7 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Mode of channel 7 (terminal B5) |
+| `channel-mode-8` | Channel mode 8 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Mode of channel 8 (terminal B7) |
 
 The backup module adds the parameters `backup-report-connected` and `backup-report-disconnected`, as in [**CHESTER Control Z**](chester-control-z.md#configuration-parameters). All other parameters are the same.
 
@@ -43,6 +43,7 @@ The `channel` commands accept the channels 1 to 8.
 - The `trigger`, `counter`, `voltage` and `current` structures also hold channels 5 to 8 (`channel` 5 to 8).
 - The report adds the `backup` structure described for [**CHESTER Control Z**](chester-control-z.md#data).
 - LoRaWAN messages add `inputs_b` with the state of channels 5 to 8, in the same format as `inputs_a`.
+- The eight channels count toward the 51-byte limit of a LoRaWAN message described under [**Data over LoRaWAN**](../../catalog-applications/chester-control/index.md#data-over-lorawan): six channels in the `counter` mode already exceed it.
 
 ## Firmware Build
 

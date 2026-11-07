@@ -42,7 +42,7 @@ Typická využití modulu **CHESTER-Z1** (možné jsou i další scénáře):
 
 * Využití 1 (CHESTER-Z1):
   * Napájení zařízení **CHESTER** z fotovoltaického panelu nebo stejnosměrného zdroje se zálohou
-  * Napájení systému z baterie modulu **CHESTER-Z1** (baterie se dobíjí z fotovoltaického panelu nebo stejnosměrného zdroje 6-28 V)
+  * Napájení systému z baterie modulu **CHESTER-Z1** (baterie se dobíjí z fotovoltaického panelu nebo stejnosměrného zdroje 6-26 V)
 * Využití 2 (CHESTER-Z1-X):
   * Jedno podsvícené tlačítko a akustická zpětná vazba
   * Napájení systému ze základní desky **CHESTER-M** (2 články AA nebo modul **CHESTER-X4**)
@@ -54,7 +54,7 @@ Podrobnosti najdete na stránce [**Objednací kódy**](../ordering-codes.md#ches
 
 ## Technická specifikace {#technical-specification}
 
-* Rozsah vstupního stejnosměrného napětí (VIN): **6-28 VDC**, vhodné i pro **solární panel 12-18 V\***
+* Rozsah vstupního stejnosměrného napětí (VIN): **6-26 VDC**, vhodné i pro **solární panel 12-18 V\***
 * Jmenovité napětí baterie: **3,7 V**
 * Nabíjecí proud baterie: **100 mA**
 * Klidový odběr z baterie **55 μA** (bez desky CHESTER-M)
@@ -85,8 +85,8 @@ Díky nízkému nabíjecímu proudu (100 mA) se rozsah teplot pro nabíjení roz
 
 | Pozice   | Název   | Popis signálu                       |
 | -------- | ------- | ----------------------------------- |
-| JP1      | VIN     | Konektor JST pro stejnosměrné napájení 6-28 V |
-| JP2      | VIN     | Svorkovnice pro stejnosměrné napájení 6-28 V |
+| JP1      | VIN     | Konektor JST pro stejnosměrné napájení 6-26 V |
+| JP2      | VIN     | Svorkovnice pro stejnosměrné napájení 6-26 V |
 | JP4      | SYSTEM  | Konektor JST CHESTER SYSTEM         |
 | JP5      | SWD     | Ladicí konektor SWD mikrokontroléru |
 | BT1      | BATTERY | Držák baterie Li-Ion 18650          |

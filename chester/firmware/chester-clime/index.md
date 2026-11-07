@@ -11,16 +11,17 @@ The **CHESTER Clime** firmware turns CHESTER into an environmental sensor. It sa
 
 This page describes the main firmware. Variants built for other sensors have their own pages, which list only what they change: [**CHESTER Clime IAQ**](chester-clime-iaq.md), [**CHESTER Clime RTD**](chester-clime-rtd.md), [**CHESTER Clime TC**](chester-clime-tc.md), [**CHESTER Clime SPS30**](chester-clime-sps30.md) and [**CHESTER Clime Radon**](chester-clime-radon.md).
 
-What all catalog applications share (LED, button, network mode, BLE tags and shell commands) is described in [**Common Functionality**](../common-functionality.md). The hardware and the product variants are on the [**CHESTER Clime**](../../catalog-applications/chester-clime/index.md) catalog page.
+What all catalog applications share (LED, button, network mode, BLE tags and shell commands) is described in [**Common Functionality**](../../catalog-applications/common-functionality.md). The hardware and the product variants are on the [**CHESTER Clime**](../../catalog-applications/chester-clime/index.md) catalog page.
 
 ## Supported Hardware
 
 The main firmware works with:
 
 - the **CHESTER-S2** external hygrometer (temperature and humidity)
-- **DS18B20** 1-Wire thermometers, several of them on one bus
+- **DS18B20** 1-Wire thermometers, up to 10 on one bus
+- 1-Wire **soil sensors** (soil moisture and temperature), up to 10
 - the **CHESTER-Z** backup module, detected at runtime, so the same firmware runs with or without it
-- Bluetooth sensor tags (see [**BLE Tags**](../ble-tags.md))
+- Bluetooth sensor tags, up to 8 (see [**BLE Tags**](../../catalog-applications/ble-tags.md))
 
 ## Measurement and Behavior
 
@@ -39,28 +40,28 @@ the data buffer might be bigger than the UDP MTU and the packet will not be sent
 
 Set a parameter with `app config <parameter> <value>` and apply the change with `config save`, which stores the configuration and restarts the device. The command `app config show` prints the current values.
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Sampling interval in seconds |
-| `interval-aggreg` | `<1-86400>` | `300` | Aggregation interval in seconds |
-| `interval-report` | `<30-86400>` | `1800` | Report interval in seconds |
-| `interval-poll` | `<0-86400>` | `0` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
-| `downlink-wdg-interval` | `<0-1209600>` | `129600` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off |
-| `send-timeout` | `<1-3600>` | `120` | Send timeout in seconds; firmware v4.0.1 stores the value but does not use it |
-| `event-report-delay` | `<1-86400>` | `1` | Delay between an event and its report in seconds (temperature alarm, backup power change) |
-| `event-report-rate` | `<1-3600>` | `30` | Event reports per hour at most; periodic reports do not count toward this limit |
-| `backup-report-connected` | `true`, `false` | `true` | Report immediately when external power returns |
-| `backup-report-disconnected` | `true`, `false` | `true` | Report immediately when external power fails |
-| `hygro-t-alarm-hi-report` | `true`, `false` | `false` | Report when the hygrometer temperature crosses the high threshold |
-| `hygro-t-alarm-hi-thr` | `<-40.0..125.0>` | `0.0` | High temperature threshold in °C |
-| `hygro-t-alarm-hi-hst` | `<0.0..100.0>` | `0.0` | High temperature hysteresis in °C |
-| `hygro-t-alarm-lo-report` | `true`, `false` | `false` | Report when the hygrometer temperature crosses the low threshold |
-| `hygro-t-alarm-lo-thr` | `<-40.0..125.0>` | `0.0` | Low temperature threshold in °C |
-| `hygro-t-alarm-lo-hst` | `<0.0..100.0>` | `0.0` | Low temperature hysteresis in °C |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Sampling interval in seconds |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | `300` | Aggregation interval in seconds |
+| `interval-report` | Report interval | `<30-86400>` | `1800` | Report interval in seconds |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | `129600` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off |
+| `send-timeout` | Send timeout | `<1-3600>` | `120` | Send timeout in seconds; firmware v4.0.1 stores the value but does not use it |
+| `event-report-delay` | Event report delay | `<1-86400>` | `1` | Delay between an event and its report in seconds (temperature alarm, backup power change) |
+| `event-report-rate` | Event report rate | `<1-3600>` | `30` | Event reports per hour at most (firmware v4.0.1 sends up to one more); periodic reports do not count toward this limit |
+| `backup-report-connected` | Backup report connected | `true`, `false` | `true` | Report immediately when external power returns |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | `true` | Report immediately when external power fails |
+| `hygro-t-alarm-hi-report` | Hygro t alarm hi report | `true`, `false` | `false` | Report when the hygrometer temperature crosses the high threshold |
+| `hygro-t-alarm-hi-thr` | Hygro t alarm hi threshold | `<-40.0..125.0>` | `0.0` | High temperature threshold in °C |
+| `hygro-t-alarm-hi-hst` | Hygro t alarm hi hysteresis | `<0.0..100.0>` | `0.0` | High temperature hysteresis in °C |
+| `hygro-t-alarm-lo-report` | Hygro t alarm lo report | `true`, `false` | `false` | Report when the hygrometer temperature crosses the low threshold |
+| `hygro-t-alarm-lo-thr` | Hygro t alarm lo threshold | `<-40.0..125.0>` | `0.0` | Low temperature threshold in °C |
+| `hygro-t-alarm-lo-hst` | Hygro t alarm lo hysteresis | `<0.0..100.0>` | `0.0` | Low temperature hysteresis in °C |
 
 The event, backup and hygrometer parameters take effect only with the hardware they belong to: `backup-report-*` with CHESTER-Z, `hygro-t-alarm-*` with CHESTER-S2, `event-report-*` with either of them.
 
-The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../common-functionality.md#network-mode-configuration).
+The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../../catalog-applications/common-functionality.md#network-mode-configuration).
 
 ## Commands
 
@@ -82,15 +83,18 @@ Flashing is described in [**Firmware Flashing**](../../firmware-flashing/index.m
 
 ## Example JSON Message
 
+Every field, with its unit, range and resolution, is described on the catalog page under [**Data**](../../catalog-applications/chester-clime/index.md#data-over-lte).
+
 <Tabs>
   <TabItem value="lte" label="LTE">
 
-The example shows a report of the main firmware with a CHESTER-S2 hygrometer, DS18B20 thermometers and the CHESTER-Z backup module:
+The example shows the report that the main firmware sent 1 s after the hygrometer temperature rose above the high alarm threshold of 25.0 °C. The device has a CHESTER-S2 hygrometer, one DS18B20 probe, the CHESTER-Z backup module and one Bluetooth tag, and no soil sensor:
 
-- `hygrometer`: temperature and humidity from CHESTER-S2
-- `w1_thermometers`: one entry for each DS18B20 thermometer
-- `backup`: external and internal voltages, state and events of the backup module
-- `ble_tags`: readings of the paired Bluetooth tags
+- `backup`: voltage of the external power input and of the backup battery, the power state and its events
+- `hygrometer`: temperature and humidity from CHESTER-S2, with the alarm events
+- `w1_thermometers`: one entry for each DS18B20 probe
+- `soil_sensors`: one entry for each soil sensor, empty here
+- `ble_tags`: readings of the enrolled Bluetooth tags
 
 Backup **events** are:
 * `connected`
@@ -102,7 +106,7 @@ Hygrometer **events** are:
 * `alarm_lo_activated`
 * `alarm_lo_deactivated`
 
-In each structure with the current configuration, there are six aggregated values. Each aggregated value has its timestamp and is computed from multiple samples, and `min`, `max`, `avg`, and `mdn` values are calculated.
+The example is shortened to two aggregated values per sensor; with the default configuration a report carries about six. Each aggregated value has its timestamp and the `min`, `max`, `avg` and `mdn` of the samples.
 
 <details>
 <summary><b>Show JSON Example</b></summary>
@@ -110,39 +114,23 @@ In each structure with the current configuration, there are six aggregated value
 ```json
 {
   "message": {
-    "version": 1,
-    "sequence": 0,
-    "timestamp": 1668859482
-  },
-  "attribute": {
-    "vendor_name": "HARDWARIO",
-    "product_name": "CHESTER-M",
-    "hw_variant": "CGLS",
-    "hw_revision": "R3.2",
-    "fw_name": "CHESTER Clime",
-    "fw_version": "v1.4.0",
-    "serial_number": "2159018267"
+    "version": 2,
+    "sequence": 37,
+    "timestamp": 1793953302
   },
   "system": {
-    "uptime": 680967,
-    "voltage_rest": 3.7,
-    "voltage_load": 3.66,
-    "current_load": 36
+    "uptime": 67324,
+    "voltage_rest": 3.61,
+    "voltage_load": 3.52,
+    "current_load": 35
   },
   "backup": {
-      "line_voltage": 24.01,
-      "batt_voltage": 4.09,
-      "state": "connected",
-      "events": [
-          {
-              "timestamp": 1668858942,
-              "type": "connected"
-          }
-      ]
+    "line_voltage": 23.98,
+    "batt_voltage": 4.12,
+    "state": "connected",
+    "events": []
   },
   "network": {
-    "imei": 351358815180770,
-    "imsi": 901288910018982,
     "parameter": {
       "eest": 7,
       "ecl": 0,
@@ -156,111 +144,55 @@ In each structure with the current configuration, there are six aggregated value
     }
   },
   "thermometer": {
-    "temperature": 22.18
+    "temperature": 24.31
   },
   "accelerometer": {
-    "acceleration_x": 0.07,
-    "acceleration_y": -0.16,
-    "acceleration_z": 9.65,
+    "accel_x": 0.07,
+    "accel_y": -0.16,
+    "accel_z": 9.65,
     "orientation": 2
   },
   "hygrometer": {
     "temperature": {
       "events": [
         {
-          "timestamp": 1668858343,
-          "type": "alarm_lo_deactivated",
-          "value": 20.94
+          "timestamp": 1793953301,
+          "type": "alarm_hi_activated",
+          "value": 25.04
         }
       ],
       "measurements": [
         {
-          "timestamp": 1668857742,
-          "min": 22.07,
-          "max": 22.25,
-          "avg": 22.17,
-          "mdn": 22.16
+          "timestamp": 1793952900,
+          "min": 24.58,
+          "max": 24.77,
+          "avg": 24.66,
+          "mdn": 24.65
         },
         {
-          "timestamp": 1668858042,
-          "min": 22.05,
-          "max": 22.23,
-          "avg": 22.15,
-          "mdn": 22.15
-        },
-        {
-          "timestamp": 1668858342,
-          "min": 22.04,
-          "max": 22.16,
-          "avg": 22.09,
-          "mdn": 22.07
-        },
-        {
-          "timestamp": 1668858642,
-          "min": 22.08,
-          "max": 22.19,
-          "avg": 22.11,
-          "mdn": 22.09
-        },
-        {
-          "timestamp": 1668858942,
-          "min": 22.07,
-          "max": 22.16,
-          "avg": 22.12,
-          "mdn": 22.12
-        },
-        {
-          "timestamp": 1668859242,
-          "min": 22.07,
-          "max": 22.15,
-          "avg": 22.12,
-          "mdn": 22.14
+          "timestamp": 1793953200,
+          "min": 24.79,
+          "max": 24.97,
+          "avg": 24.88,
+          "mdn": 24.89
         }
       ]
     },
     "humidity": {
       "measurements": [
         {
-          "timestamp": 1668857742,
-          "min": 54.78,
-          "max": 55.31,
-          "avg": 55.1,
-          "mdn": 55.12
+          "timestamp": 1793952900,
+          "min": 41.22,
+          "max": 42.05,
+          "avg": 41.63,
+          "mdn": 41.6
         },
         {
-          "timestamp": 1668858042,
-          "min": 55.12,
-          "max": 56.16,
-          "avg": 55.55,
-          "mdn": 55.52
-        },
-        {
-          "timestamp": 1668858342,
-          "min": 55.24,
-          "max": 55.56,
-          "avg": 55.41,
-          "mdn": 55.4
-        },
-        {
-          "timestamp": 1668858642,
-          "min": 54.89,
-          "max": 56.03,
-          "avg": 55.33,
-          "mdn": 55.2
-        },
-        {
-          "timestamp": 1668858942,
-          "min": 54.75,
-          "max": 56.73,
-          "avg": 55.39,
-          "mdn": 54.98
-        },
-        {
-          "timestamp": 1668859242,
-          "min": 54.91,
-          "max": 55.83,
-          "avg": 55.26,
-          "mdn": 55.18
+          "timestamp": 1793953200,
+          "min": 40.87,
+          "max": 41.41,
+          "avg": 41.12,
+          "mdn": 41.09
         }
       ]
     }
@@ -270,129 +202,61 @@ In each structure with the current configuration, there are six aggregated value
       "serial_number": 170787196,
       "measurements": [
         {
-          "timestamp": 1668857742,
-          "min": 22.18,
-          "max": 22.25,
-          "avg": 22.23,
-          "mdn": 22.25
+          "timestamp": 1793952900,
+          "min": 4.12,
+          "max": 4.31,
+          "avg": 4.2,
+          "mdn": 4.18
         },
         {
-          "timestamp": 1668858042,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858342,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858642,
-          "min": 22.12,
-          "max": 22.18,
-          "avg": 22.17,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668858942,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
-        },
-        {
-          "timestamp": 1668859242,
-          "min": 22.18,
-          "max": 22.18,
-          "avg": 22.18,
-          "mdn": 22.18
+          "timestamp": 1793953200,
+          "min": 4.06,
+          "max": 4.25,
+          "avg": 4.15,
+          "mdn": 4.12
         }
       ]
     }
   ],
+  "soil_sensors": [],
   "ble_tags": [
     {
-      "addr": "1234567890AB",
-      "rssi": -81,
-      "voltage": 3.11,
-      "humidity": {
-        "measurements": [
-          {
-            "timestamp": 1668857742,
-            "min": 54.78,
-            "max": 55.31,
-            "avg": 55.1,
-            "mdn": 55.12
-          },
-          {
-            "timestamp": 1668858042,
-            "min": 55.12,
-            "max": 56.16,
-            "avg": 55.55,
-            "mdn": 55.52
-          }
-        ]
-      },
+      "addr": "7cd9f413e360",
+      "rssi": -76,
+      "voltage": 3.01,
       "temperature": {
         "measurements": [
           {
-            "timestamp": 1668857742,
-            "min": 22.18,
-            "max": 22.25,
-            "avg": 22.23,
-            "mdn": 22.25
+            "timestamp": 1793952900,
+            "min": 21.75,
+            "max": 21.94,
+            "avg": 21.84,
+            "mdn": 21.81
           },
           {
-            "timestamp": 1668858042,
-            "min": 22.18,
-            "max": 22.18,
-            "avg": 22.18,
-            "mdn": 22.18
-          }
-        ]
-      }
-    },
-    {
-      "addr": "BA0987654321",
-      "rssi": -77,
-      "voltage": 3.11,
-      "humidity": {
-        "measurements": [
-          {
-            "timestamp": 1668857742,
-            "min": 54.78,
-            "max": 55.31,
-            "avg": 55.1,
-            "mdn": 55.12
-          },
-          {
-            "timestamp": 1668858042,
-            "min": 55.12,
-            "max": 56.16,
-            "avg": 55.55,
-            "mdn": 55.52
+            "timestamp": 1793953200,
+            "min": 21.81,
+            "max": 22.06,
+            "avg": 21.93,
+            "mdn": 21.94
           }
         ]
       },
-      "temperature": {
+      "humidity": {
         "measurements": [
           {
-            "timestamp": 1668857742,
-            "min": 22.18,
-            "max": 22.25,
-            "avg": 22.23,
-            "mdn": 22.25
+            "timestamp": 1793952900,
+            "min": 47,
+            "max": 48,
+            "avg": 47.6,
+            "mdn": 48
           },
           {
-            "timestamp": 1668858042,
-            "min": 22.18,
-            "max": 22.18,
-            "avg": 22.18,
-            "mdn": 22.18
+            "timestamp": 1793953200,
+            "min": 47,
+            "max": 48,
+            "avg": 47.4,
+            "mdn": 47
           }
         ]
       }
@@ -406,18 +270,30 @@ In each structure with the current configuration, there are six aggregated value
   </TabItem>
   <TabItem value="lora" label="LoRaWAN">
 
+The uplink carries the latest sample of each sensor of the same device. `w1_thermometers`, `ble_tags` and `soil_sensors` are lists with one value or entry for each probe, tag or sensor.
+
 <details>
 <summary><b>Show JSON Example</b></summary>
 
 ```json
 {
-  "voltage_rest": 3.65,
-  "voltage_load": 3.6,
-  "current_load": 15,
+  "voltage_rest": 3.612,
+  "voltage_load": 3.524,
+  "current_load": 35,
   "orientation": 2,
-  "therm_temperature": 22.4,
-  "hygro_temperature": 22.3,
-  "hygro_humidity": 45.1
+  "therm_temperature": 24.31,
+  "hygro_temperature": 25.04,
+  "hygro_humidity": 40.5,
+  "w1_thermometers": [
+    4.12
+  ],
+  "ble_tags": [
+    {
+      "temperature": 21.94,
+      "humidity": 47
+    }
+  ],
+  "soil_sensors": []
 }
 ```
 

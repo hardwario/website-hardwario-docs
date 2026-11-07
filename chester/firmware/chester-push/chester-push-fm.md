@@ -30,7 +30,7 @@ All parameters are the same.
 
 ### Data
 
-Every press counts as a short press. In LTE reports, `count_click` grows and every event is `clicked`; `count_hold` stays `0` and no `held` event appears. In LoRaWAN messages, `press_count` grows, `hold_count` stays `0` and `hold_event` is always `false`.
+Every press counts as a short press. In LTE reports, the `buttons` entry of the pressed button increases `count_click` and lists the press as a `clicked` event; `count_hold` stays `0` and no `held` event appears. In LoRaWAN messages, `press_count` grows, `hold_count` stays `0` and `hold_event` is always `false`. Every field, with its unit, range and resolution, is described on the catalog page under [**CHESTER Push FM**](../../catalog-applications/chester-push/index.md#data-chester-push-fm).
 
 ## Firmware Build
 

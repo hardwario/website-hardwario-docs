@@ -11,7 +11,7 @@ Firmware **CHESTER Meteo** udělá ze zařízení CHESTER meteostanici. Vzorkuje
 
 Tato stránka popisuje hlavní firmware. Varianty sestavené pro jiný hardware mají vlastní stránky, které uvádějí jen to, co mění: [**CHESTER Meteo Z**](chester-meteo-z.md), [**CHESTER Meteo P**](chester-meteo-p.md) a [**CHESTER Meteo M**](chester-meteo-m.md).
 
-Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../common-functionality.md). Hardware a varianty produktu najdete na stránce katalogové aplikace [**CHESTER Meteo**](../../catalog-applications/chester-meteo/index.md).
+Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md). Hardware a varianty produktu najdete na stránce katalogové aplikace [**CHESTER Meteo**](../../catalog-applications/chester-meteo/index.md).
 
 ## Podporovaný hardware {#supported-hardware}
 
@@ -22,7 +22,7 @@ Hlavní firmware podporuje:
 - externí vlhkoměr **CHESTER-S2** (teplota a vlhkost)
 - teploměry **DS18B20** 1-Wire, nejvýše 10
 - **půdní senzory** 1-Wire (teplota a vlhkost půdy), nejvýše 10
-- bluetoothové senzorové tagy (viz [**Tagy BLE**](../ble-tags.md))
+- bluetoothové senzorové tagy (viz [**Tagy BLE**](../../catalog-applications/ble-tags.md))
 
 Meteorologické senzory se připojují ke kanálům modulu CHESTER-X0:
 
@@ -37,7 +37,7 @@ Meteorologické senzory se připojují ke kanálům modulu CHESTER-X0:
 
 - Všechny senzory se **vzorkují** s nastavitelnou periodou (parametr `interval-sample`).
 - Vzorky se pak **agregují** v nastavitelném intervalu: z uložených vzorků se pro každý senzor spočítá minimum, maximum, průměr a medián (parametr `interval-aggreg`).
-- Každá agregovaná hodnota má svou časovou značku; hodnoty se odesílají v dávkách v intervalu hlášení (parametr `interval-report`).
+- Každá agregovaná hodnota má svou časovou značku; hodnoty se odesílají v dávkách v intervalu hlášení (parametr `interval-report`). Ve firmwaru v4.0.1 se doba mezi dvěma hlášeními náhodně mění až o ±20 %.
 
 Firmware uchová nejvýše 32 vzorků za interval agregace a 32 agregovaných hodnot za hlášení (u bluetoothových tagů 16), hodnoty nad tyto limity zahodí. Poměr `interval-aggreg` k `interval-sample` a `interval-report` k `interval-aggreg` proto držte v těchto mezích.
 
@@ -49,7 +49,7 @@ Díky nepřetržitému měření dává každá agregace přesnou minimální, m
 
 ### Směr větru {#wind-direction}
 
-Směr větru se čte při každém vzorku. Každá agregovaná hodnota je vektorový průměr vzorků z intervalu agregace ve stupních od severu (90° je východ), takže hlášení má za každý interval jedinou hodnotu `value` místo `min`, `max`, `avg` a `mdn`.
+Směr větru se čte při každém vzorku. Každá agregovaná hodnota je vektorový průměr vzorků z intervalu agregace ve stupních od severu (90° je východ), takže hlášení má za každý interval jedinou hodnotu `value` místo `min`, `max`, `avg` a `mdn`. Pokud se během intervalu nepodařilo směr přečíst, firmware v4.0.1 pošle místo `null` hodnotu `0`.
 
 ### Srážky {#rainfall}
 
@@ -59,33 +59,33 @@ Firmware čítá impulzy srážkoměru nepřetržitě. Při každé agregaci ulo
 
 Parametr nastavíte příkazem `app config <parametr> <hodnota>` a změnu uplatníte příkazem `config save`, který konfiguraci uloží a restartuje zařízení. Aktuální hodnoty vypíše příkaz `app config show`.
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Interval vzorkování v sekundách |
-| `interval-aggreg` | `<1-86400>` | `300` | Interval agregace v sekundách |
-| `interval-report` | `<30-86400>` | `1800` | Interval hlášení v sekundách |
-| `interval-poll` | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
-| `downlink-wdg-interval` | `<0-1209600>` | `129600` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
-| `event-report-delay` | `<1-86400>` | `1` | Prodleva mezi událostí a hlášením v sekundách (teplotní alarm) |
-| `event-report-rate` | `<1-3600>` | `30` | Nejvyšší počet hlášení událostí za hodinu; pravidelná hlášení se do limitu nepočítají |
-| `hygro_t_alarm_hi_report` | `true`, `false` | `false` | Hlásit, když teplota na vlhkoměru překročí horní prahovou hodnotu |
-| `hygro_t_alarm_hi_thr` | `<-40.0..125.0>` | `0.0` | Horní prahová hodnota teploty v °C |
-| `hygro_t_alarm_hi_hst` | `<0.0..100.0>` | `0.0` | Hystereze horní prahové hodnoty v °C |
-| `hygro_t_alarm_lo_report` | `true`, `false` | `false` | Hlásit, když teplota na vlhkoměru klesne pod dolní prahovou hodnotu |
-| `hygro_t_alarm_lo_thr` | `<-40.0..125.0>` | `0.0` | Dolní prahová hodnota teploty v °C |
-| `hygro_t_alarm_lo_hst` | `<0.0..100.0>` | `0.0` | Hystereze dolní prahové hodnoty v °C |
-| `meteo-type` | `none`, `lambrecht`, `sensecap-s1000`, `sensecap-s500` | `none` | CHESTER Meteo M: typ meteostanice na sběrnici Modbus |
-| `meteo-addr` | `<1-247>` | `1` | CHESTER Meteo M: adresa meteostanice na sběrnici Modbus |
-| `pm-type` | `none`, `cubic-6303` | `none` | CHESTER Meteo M: typ senzoru prachových částic na sběrnici Modbus |
-| `pm-addr` | `<1-247>` | `1` | CHESTER Meteo M: adresa senzoru prachových částic na sběrnici Modbus |
-| `modbus-baud` | `<1200-19200>` | `9600` | CHESTER Meteo M: přenosová rychlost sběrnice Modbus |
-| `modbus-parity` | `none`, `odd`, `even`, `mark`, `space` | `none` | CHESTER Meteo M: parita sběrnice Modbus |
-| `modbus-stop-bits` | `0_5`, `1`, `1_5`, `2` | `1` | CHESTER Meteo M: počet stop bitů sběrnice Modbus |
-| `modbus-addr` | `<1-247>` | `1` | CHESTER Meteo M: firmware v4.0.1 ho nepoužívá |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Interval vzorkování v sekundách |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | `300` | Interval agregace v sekundách |
+| `interval-report` | Report interval | `<30-86400>` | `1800` | Interval hlášení v sekundách |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | `129600` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
+| `event-report-delay` | Event report delay | `<1-86400>` | `1` | Prodleva mezi událostí a hlášením v sekundách (teplotní alarm) |
+| `event-report-rate` | Event report rate | `<1-3600>` | `30` | Nejvyšší počet hlášení událostí za hodinu (firmware v4.0.1 jich pošle až o jedno víc); pravidelná hlášení se do limitu nepočítají |
+| `hygro_t_alarm_hi_report` | Hygro t alarm hi report | `true`, `false` | `false` | Hlásit, když teplota na vlhkoměru překročí horní prahovou hodnotu |
+| `hygro_t_alarm_hi_thr` | Hygro t alarm hi threshold | `<-40.0..125.0>` | `0.0` | Horní prahová hodnota teploty v °C |
+| `hygro_t_alarm_hi_hst` | Hygro t alarm hi hysteresis | `<0.0..100.0>` | `0.0` | Hystereze horní prahové hodnoty v °C |
+| `hygro_t_alarm_lo_report` | Hygro t alarm lo report | `true`, `false` | `false` | Hlásit, když teplota na vlhkoměru klesne pod dolní prahovou hodnotu |
+| `hygro_t_alarm_lo_thr` | Hygro t alarm lo threshold | `<-40.0..125.0>` | `0.0` | Dolní prahová hodnota teploty v °C |
+| `hygro_t_alarm_lo_hst` | Hygro t alarm lo hysteresis | `<0.0..100.0>` | `0.0` | Hystereze dolní prahové hodnoty v °C |
+| `meteo-type` | Meteo type | `none`, `lambrecht`, `sensecap-s1000`, `sensecap-s500` | `none` | CHESTER Meteo M: typ meteostanice na sběrnici Modbus |
+| `meteo-addr` | Meteo addr | `<1-247>` | `1` | CHESTER Meteo M: adresa meteostanice na sběrnici Modbus |
+| `pm-type` | Pm type | `none`, `cubic-6303` | `none` | CHESTER Meteo M: typ senzoru prachových částic na sběrnici Modbus |
+| `pm-addr` | Pm addr | `<1-247>` | `1` | CHESTER Meteo M: adresa senzoru prachových částic na sběrnici Modbus |
+| `modbus-baud` | Modbus baud | `<1200-19200>` | `9600` | CHESTER Meteo M: přenosová rychlost sběrnice Modbus |
+| `modbus-parity` | Modbus parity | `none`, `odd`, `even`, `mark`, `space` | `none` | CHESTER Meteo M: parita sběrnice Modbus |
+| `modbus-stop-bits` | Modbus stop bits | `0_5`, `1`, `1_5`, `2` | `1` | CHESTER Meteo M: počet stop bitů sběrnice Modbus |
+| `modbus-addr` | Modbus addr | `<1-247>` | `1` | CHESTER Meteo M: firmware v4.0.1 ho nepoužívá |
 
 Parametry `event-report-*` a `hygro_t_alarm_*` se uplatní jen s vlhkoměrem CHESTER-S2. Parametry `meteo-type`, `meteo-addr`, `pm-type`, `pm-addr` a `modbus-*` obsahuje každé sestavení firmwaru CHESTER Meteo, rozhraní Modbus, které je používá, má ale jen varianta [**CHESTER Meteo M**](chester-meteo-m.md); vysvětluje je její stránka.
 
-Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../common-functionality.md#network-mode-configuration).
+Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md#network-mode-configuration).
 
 ## Příkazy {#commands}
 
@@ -115,16 +115,19 @@ Postup nahrání popisuje článek [**Nahrání firmwaru**](../../firmware-flash
 
 ## Ukázková zpráva JSON {#example-json-message}
 
+Každé pole s jednotkou, rozsahem a rozlišením popisuje katalogová stránka v části [**Data**](../../catalog-applications/chester-meteo/index.md#data-over-lte).
+
 <Tabs>
   <TabItem value="lte" label="LTE">
 
-Ukázka zachycuje hlášení hlavního firmwaru s meteorologickými senzory, barometrem, vlhkoměrem CHESTER-S2, teploměrem DS18B20 a půdním senzorem:
+Ukázka zachycuje hlášení hlavního firmwaru v4.0.1 tak, jak ho dekóduje HARDWARIO Cloud, s meteorologickými senzory, barometrem, vlhkoměrem CHESTER-S2, jedním teploměrem DS18B20, jedním půdním senzorem a bez bluetoothového tagu:
 
-- `weather_station`: rychlost a směr větru a srážky
-- `barometer`: atmosférický tlak
-- `hygrometer`: teplota a vlhkost z modulu CHESTER-S2
+- `weather_station`: rychlost větru v m/s, směr větru ve stupních a srážky v mm
+- `barometer`: atmosférický tlak v Pa
+- `hygrometer`: teplota a vlhkost z modulu CHESTER-S2 s událostmi alarmu od předchozího hlášení
 - `w1_thermometers`: jedna položka pro každý teploměr DS18B20
 - `soil_sensors`: jedna položka pro každý půdní senzor, s teplotou v °C a vlhkostí jako surovou hodnotou senzoru
+- `ble_tags`: jedna položka pro každý spárovaný bluetoothový tag, v ukázce prázdný seznam
 
 **Události** vlhkoměru:
 * `alarm_hi_activated`
@@ -132,13 +135,7 @@ Ukázka zachycuje hlášení hlavního firmwaru s meteorologickými senzory, bar
 * `alarm_lo_activated`
 * `alarm_lo_deactivated`
 
-Ve výchozí konfiguraci obsahuje každá struktura šest agregovaných hodnot, ukázka jich má pět. Každá z nich má svou časovou značku a hodnoty `min`, `max`, `avg` a `mdn` vypočtené z několika vzorků. Směr větru a srážky mají za každý interval agregace jedinou hodnotu `value`.
-
-Rychlost větru je v **metrech za sekundu**.
-
-Tlak je v **pascalech**.
-
-Srážky jsou v **milimetrech** a směr větru ve **stupních**.
+V ukázce je `interval-report` nastavený na `600`, takže každý seznam `measurements` má dvě položky; s výchozí hodnotou `1800` jich má šest. Každá položka má svou časovou značku a hodnoty `min`, `max`, `avg` a `mdn` ze vzorků; směr větru a srážky mají za každý interval agregace jedinou hodnotu `value`.
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
@@ -147,27 +144,24 @@ Srážky jsou v **milimetrech** a směr větru ve **stupních**.
 {
   "message": {
     "version": 1,
-    "sequence": 1,
-    "timestamp": 1675784614
+    "sequence": 36,
+    "timestamp": 1793606459
+  },
+  "system": {
+    "uptime": 21731,
+    "voltage_rest": 3.61,
+    "voltage_load": 3.57,
+    "current_load": 35
   },
   "attribute": {
     "vendor_name": "HARDWARIO",
     "product_name": "CHESTER-M",
-    "hw_variant": "CDGLS",
-    "hw_revision": "R3.2",
-    "fw_name": "CHESTER Meteo",
-    "fw_version": "v2.0.0",
+    "hw_variant": "BCGLS",
+    "hw_revision": "R3.4",
+    "fw_version": "v4.0.1",
     "serial_number": "2159018267"
   },
-  "system": {
-    "uptime": 361,
-    "voltage_rest": 3.6,
-    "voltage_load": 3.56,
-    "current_load": 35
-  },
   "network": {
-    "imei": 351358815180770,
-    "imsi": 901288910018982,
     "parameter": {
       "eest": 7,
       "ecl": 0,
@@ -181,7 +175,7 @@ Srážky jsou v **milimetrech** a směr větru ve **stupních**.
     }
   },
   "thermometer": {
-    "temperature": 21.37
+    "temperature": 18.37
   },
   "accelerometer": {
     "acceleration_x": -0.23,
@@ -189,341 +183,172 @@ Srážky jsou v **milimetrech** a směr větru ve **stupních**.
     "acceleration_z": 9.49,
     "orientation": 2
   },
-  "weather_station": {
-    "wind_speed": {
+  "w1_thermometers": [
+    {
+      "serial_number": 170694685,
       "measurements": [
         {
-          "timestamp": 1675784338,
-          "min": 0,
-          "max": 4,
-          "avg": 2.78,
-          "mdn": 2.8
+          "timestamp": 1793606112,
+          "min": 17.12,
+          "max": 17.31,
+          "avg": 17.22,
+          "mdn": 17.25
         },
         {
-          "timestamp": 1675784398,
-          "min": 3.91,
-          "max": 4.13,
-          "avg": 4,
-          "mdn": 4
-        },
-        {
-          "timestamp": 1675784458,
-          "min": 3.86,
-          "max": 4.13,
-          "avg": 4.03,
-          "mdn": 4
-        },
-        {
-          "timestamp": 1675784518,
-          "min": 3.86,
-          "max": 4.13,
-          "avg": 4.03,
-          "mdn": 4
-        },
-        {
-          "timestamp": 1675784578,
-          "min": 4,
-          "max": 4.26,
-          "avg": 4.13,
-          "mdn": 4.13
-        }
-      ]
-    },
-    "wind_direction": {
-      "measurements": [
-        {
-          "timestamp": 1675784338,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784398,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784458,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784518,
-          "value": 7
-        },
-        {
-          "timestamp": 1675784578,
-          "value": 45
-        }
-      ]
-    },
-    "rainfall": {
-      "measurements": [
-        {
-          "timestamp": 1675784338,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784398,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784458,
-          "value": 0
-        },
-        {
-          "timestamp": 1675784518,
-          "value": 2.79
-        },
-        {
-          "timestamp": 1675784578,
-          "value": 2.79
+          "timestamp": 1793606412,
+          "min": 17.25,
+          "max": 17.43,
+          "avg": 17.33,
+          "mdn": 17.31
         }
       ]
     }
-  },
+  ],
   "barometer": {
     "pressure": {
       "measurements": [
         {
-          "timestamp": 1675784338,
-          "min": 98070,
-          "max": 98075,
-          "avg": 98072,
-          "mdn": 98073
-        },
-        {
-          "timestamp": 1675784398,
+          "timestamp": 1793606112,
           "min": 98071,
           "max": 98078,
-          "avg": 98072,
+          "avg": 98074,
           "mdn": 98074
         },
         {
-          "timestamp": 1675784458,
-          "min": 98070,
-          "max": 98070,
-          "avg": 98070,
+          "timestamp": 1793606412,
+          "min": 98066,
+          "max": 98073,
+          "avg": 98069,
           "mdn": 98070
-        },
-        {
-          "timestamp": 1675784518,
-          "min": 98071,
-          "max": 98078,
-          "avg": 98072,
-          "mdn": 98074
-        },
-        {
-          "timestamp": 1675784578,
-          "min": 98070,
-          "max": 98075,
-          "avg": 98072,
-          "mdn": 98073
         }
       ]
     }
   },
   "hygrometer": {
     "temperature": {
+      "events": [],
       "measurements": [
         {
-          "timestamp": 1675784338,
-          "min": 21.53,
-          "max": 21.67,
-          "avg": 21.59,
-          "mdn": 21.6
+          "timestamp": 1793606112,
+          "min": 18.04,
+          "max": 18.21,
+          "avg": 18.12,
+          "mdn": 18.11
         },
         {
-          "timestamp": 1675784398,
-          "min": 21.44,
-          "max": 21.56,
-          "avg": 21.51,
-          "mdn": 21.53
-        },
-        {
-          "timestamp": 1675784458,
-          "min": 21.47,
-          "max": 21.67,
-          "avg": 21.53,
-          "mdn": 21.52
-        },
-        {
-          "timestamp": 1675784518,
-          "min": 21.43,
-          "max": 21.58,
-          "avg": 21.49,
-          "mdn": 21.5
-        },
-        {
-          "timestamp": 1675784578,
-          "min": 21.39,
-          "max": 21.57,
-          "avg": 21.47,
-          "mdn": 21.44
+          "timestamp": 1793606412,
+          "min": 18.15,
+          "max": 18.33,
+          "avg": 18.24,
+          "mdn": 18.23
         }
       ]
     },
     "humidity": {
       "measurements": [
         {
-          "timestamp": 1675784338,
-          "min": 38.86,
-          "max": 39.04,
-          "avg": 38.95,
-          "mdn": 38.95
+          "timestamp": 1793606112,
+          "min": 71.12,
+          "max": 71.86,
+          "avg": 71.45,
+          "mdn": 71.41
         },
         {
-          "timestamp": 1675784398,
-          "min": 38.93,
-          "max": 39.14,
-          "avg": 39.04,
-          "mdn": 39.07
-        },
-        {
-          "timestamp": 1675784458,
-          "min": 38.85,
-          "max": 39.15,
-          "avg": 39.02,
-          "mdn": 39.02
-        },
-        {
-          "timestamp": 1675784518,
-          "min": 38.89,
-          "max": 39.15,
-          "avg": 39.08,
-          "mdn": 39.08
-        },
-        {
-          "timestamp": 1675784578,
-          "min": 38.88,
-          "max": 39.11,
-          "avg": 39.02,
-          "mdn": 39.03
+          "timestamp": 1793606412,
+          "min": 70.65,
+          "max": 71.24,
+          "avg": 70.98,
+          "mdn": 71.02
         }
       ]
     }
   },
-  "w1_thermometers": [
-    {
-      "serial_number": 170694685,
-      "measurements": [
-        {
-          "timestamp": 1675784338,
-          "min": 21.93,
-          "max": 22.06,
-          "avg": 22,
-          "mdn": 22
-        },
-        {
-          "timestamp": 1675784398,
-          "min": 22.12,
-          "max": 22.18,
-          "avg": 22.13,
-          "mdn": 22.12
-        },
-        {
-          "timestamp": 1675784458,
-          "min": 22.12,
-          "max": 22.12,
-          "avg": 22.12,
-          "mdn": 22.12
-        },
-        {
-          "timestamp": 1675784518,
-          "min": 22.12,
-          "max": 22.12,
-          "avg": 22.12,
-          "mdn": 22.12
-        },
-        {
-          "timestamp": 1675784578,
-          "min": 22.12,
-          "max": 22.12,
-          "avg": 22.12,
-          "mdn": 22.12
-        }
-      ]
-    }
-  ],
   "soil_sensors": [
     {
       "serial_number": 203181,
       "temperature": {
         "measurements": [
           {
-            "timestamp": 1675784338,
-            "min": 22,
-            "max": 22.06,
-            "avg": 22.03,
-            "mdn": 22.06
+            "timestamp": 1793606112,
+            "min": 15.43,
+            "max": 15.5,
+            "avg": 15.47,
+            "mdn": 15.5
           },
           {
-            "timestamp": 1675784398,
-            "min": 22.06,
-            "max": 22.12,
-            "avg": 22.07,
-            "mdn": 22.06
-          },
-          {
-            "timestamp": 1675784458,
-            "min": 22.06,
-            "max": 22.12,
-            "avg": 22.07,
-            "mdn": 22.06
-          },
-          {
-            "timestamp": 1675784518,
-            "min": 22,
-            "max": 22.06,
-            "avg": 22.03,
-            "mdn": 22.06
-          },
-          {
-            "timestamp": 1675784578,
-            "min": 22,
-            "max": 22.06,
-            "avg": 22.03,
-            "mdn": 22.06
+            "timestamp": 1793606412,
+            "min": 15.5,
+            "max": 15.56,
+            "avg": 15.52,
+            "mdn": 15.5
           }
         ]
       },
       "moisture": {
         "measurements": [
           {
-            "timestamp": 1675784338,
-            "min": 6256,
-            "max": 6288,
-            "avg": 6272,
-            "mdn": 6272
+            "timestamp": 1793606112,
+            "min": 9472,
+            "max": 9488,
+            "avg": 9480,
+            "mdn": 9480
           },
           {
-            "timestamp": 1675784398,
-            "min": 6272,
-            "max": 6288,
-            "avg": 6278,
-            "mdn": 6272
-          },
-          {
-            "timestamp": 1675784458,
-            "min": 6272,
-            "max": 6304,
-            "avg": 6280,
-            "mdn": 6272
-          },
-          {
-            "timestamp": 1675784518,
-            "min": 6256,
-            "max": 6304,
-            "avg": 6268,
-            "mdn": 6272
-          },
-          {
-            "timestamp": 1675784578,
-            "min": 6256,
-            "max": 6304,
-            "avg": 6268,
-            "mdn": 6272
+            "timestamp": 1793606412,
+            "min": 9464,
+            "max": 9488,
+            "avg": 9475,
+            "mdn": 9472
           }
         ]
       }
     }
-  ]
+  ],
+  "ble_tags": [],
+  "weather_station": {
+    "wind_speed": {
+      "measurements": [
+        {
+          "timestamp": 1793606112,
+          "min": 1.33,
+          "max": 3.11,
+          "avg": 2.18,
+          "mdn": 2.07
+        },
+        {
+          "timestamp": 1793606412,
+          "min": 1.56,
+          "max": 3.44,
+          "avg": 2.41,
+          "mdn": 2.33
+        }
+      ]
+    },
+    "wind_direction": {
+      "measurements": [
+        {
+          "timestamp": 1793606112,
+          "value": 202
+        },
+        {
+          "timestamp": 1793606412,
+          "value": 197
+        }
+      ]
+    },
+    "rainfall": {
+      "measurements": [
+        {
+          "timestamp": 1793606112,
+          "value": 0
+        },
+        {
+          "timestamp": 1793606412,
+          "value": 0.27
+        }
+      ]
+    }
+  }
 }
 ```
 
@@ -532,33 +357,30 @@ Srážky jsou v **milimetrech** a směr větru ve **stupních**.
   </TabItem>
   <TabItem value="lora" label="LoRaWAN">
 
+Dekodér LoRaWAN aplikace převede zprávu téhož zařízení na tato pole. Každá hodnota je poslední vzorek a tlak je v kPa.
+
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
 
 ```json
 {
-  "voltage_rest": 3.7,
-  "voltage_load": 3.65,
-  "current_load": 18,
+  "voltage_rest": 3.61,
+  "voltage_load": 3.57,
+  "current_load": 35,
   "orientation": 2,
-  "therm_temperature": 19.5,
-  "hygro_temperature": 19.2,
-  "hygro_humidity": 60.5,
-  "wind_speed": 2.5,
-  "wind_direction": 180,
-  "rainfall": 2.0,
-  "barometer": 101325,
-  "w1_thermometers": [18.5, 19.0],
-  "ble_tags": [
-    {
-      "temperature": 20.0,
-      "humidity": 58.0
-    }
-  ],
+  "therm_temperature": 18.37,
+  "wind_speed": 2.33,
+  "wind_direction": 202,
+  "rainfall": 0.27,
+  "hygro_temperature": 18.23,
+  "hygro_humidity": 71,
+  "w1_thermometers": [17.37],
+  "ble_tags": [],
+  "barometer": 98.071,
   "soil_sensors": [
     {
       "temperature": 15.5,
-      "moisture": 450
+      "moisture": 9480
     }
   ]
 }
@@ -578,7 +400,6 @@ Srážky jsou v **milimetrech** a směr větru ve **stupních**.
 ### v3.5.1 – 2025-12-08 {#v351--2025-12-08}
 
 - **Přidáno**: Nová varianta: **CHESTER Meteo M** (Modbus RTU, podporuje senzory Lambrecht a Sensecap/OPM; typ senzoru se volí parametrem `meteo-type`)
-- **Přidáno**: Podpora půdních senzorů: vlhkost a teplota z půdních sond Modbus
 - **Přidáno**: Podpora LoRaWAN: jediný binární soubor firmwaru pro LTE i LoRaWAN; režim se volí příkazem `app config mode lte` / `app config mode lrw`
 - **Vylepšeno**: Podpora pyranometru (intenzita slunečního záření)
 

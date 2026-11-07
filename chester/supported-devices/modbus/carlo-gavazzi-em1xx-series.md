@@ -5,7 +5,7 @@ title: Carlo Gavazzi EM1XX Series
 
 import Image from '@theme/IdealImage';
 
-[Website](https://www.gavazziautomation.com/en-global/product/EM111DINAV51XS1X)
+[Website](https://www.gavazziautomation.com/en-global/product/EM111DINAV81XS1X)
 
 ![Carlo Gavazzi - EM111](images/carlo-gavazzi-em111.png)
 
@@ -15,7 +15,7 @@ The EM1xx series includes compact and user-friendly energy analyzers designed fo
 
 :::info
 
-This energy meter **does not require** any **external sensor** for current measurement. It features built-in measurement capability through direct connection.
+The **EM111DINAV81XS1X** described on this page connects directly, up to 45 A, and **does not require** any **external sensor** for current measurement. The EM111DINAV51XS1X model is different: it measures through a current transformer with a 5 A secondary.
 
 :::
 
@@ -99,25 +99,35 @@ Use the following commands to configure communication parameters via CHESTER Ter
 
 
 ```
-app config modbus-baud "9600"
-app config modbus-addr "1"
-app config modbus-parity "none"
-app config modbus-stop-bits "1"
-app config em-type "g1"
+app config serial-mode modbus
+app config serial-baudrate 9600
+app config serial-parity none
+app config serial-stop-bits 1
+app config device-0 "em1xx,1"
 config save
 ```
+
+The commands are for the RS-485 variant of the [**CHESTER Serial**](../../firmware/chester-serial/index.md) firmware. `device-0` is the first device slot; `em1xx,1` is the device type and the Modbus address of the meter. The serial settings must match the meter. `config save` stores the configuration and restarts the device. More in [**Device Slots**](../../firmware/chester-serial/index.md#device-slots).
 
 ---
 
 ### Measured values
 
-| Measured Value | Key / Path                                   |
-|----------------|----------------------------------------------|
-| Current        | E_ENERGY_METER.METER_1.CURRENT.MEASUREMENTS  |
-| Voltage        | E_ENERGY_METER.METER_1.VOLTAGE.MEASUREMENTS  |
-| Power          | E_ENERGY_METER.METER_1.POWER.MEASUREMENTS    |
-| Frequency      | E_ENERGY_METER.METER_1.FREQUENCY.MEASUREMENTS|
-| Energy In      | E_ENERGY_METER.METER_1.ENERGY_IN.MEASUREMENTS|
-| Energy Out     | E_ENERGY_METER.METER_1.ENERGY_OUT.MEASUREMENTS|
+In each report the meter is one entry in the `devices` list, with `type_name` `em1xx`. Every sample taken since the previous report is one entry in its `data` list, with these keys:
+
+| Measured Value | Key |
+| :--- | :--- |
+| Voltage | `devices[].data[].voltage` |
+| Current | `devices[].data[].current` |
+| Active power | `devices[].data[].power` |
+| Apparent power | `devices[].data[].power_apparent` |
+| Reactive power | `devices[].data[].power_reactive` |
+| Power factor | `devices[].data[].power_factor` |
+| Frequency | `devices[].data[].frequency` |
+| Imported active energy | `devices[].data[].energy_in` |
+| Exported active energy | `devices[].data[].energy_out` |
+
+Units, ranges and resolution of every key are on the [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md#carlo-gavazzi-em1xx) catalog page.
+
 
 ---

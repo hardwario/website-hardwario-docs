@@ -11,7 +11,7 @@ Firmware **CHESTER Current** udělá ze zařízení CHESTER měřič proudu. Mě
 
 Tato stránka popisuje hlavní firmware. Varianta sestavená pro záložní modul CHESTER-Z1 má vlastní stránku, která uvádí jen to, co mění: [**CHESTER Current Z**](chester-current-z.md).
 
-Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../common-functionality.md). Hardware, proudové sondy a varianty produktu najdete na stránce katalogové aplikace [**CHESTER Current**](../../catalog-applications/chester-current/index.md).
+Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md). Hardware, proudové sondy a varianty produktu najdete na stránce katalogové aplikace [**CHESTER Current**](../../catalog-applications/chester-current/index.md).
 
 ## Podporovaný hardware {#supported-hardware}
 
@@ -19,7 +19,7 @@ Hlavní firmware podporuje:
 
 - modul **CHESTER-K1**: čtyři diferenciální vstupy a zvyšující měnič 5 V pro proudové sondy (viz [**CHESTER-K1**](../../ordering-codes.md#chester-k1))
 - teploměry **DS18B20** 1-Wire, nejvýše 10
-- bluetoothové senzorové tagy (viz [**Tagy BLE**](../ble-tags.md))
+- bluetoothové senzorové tagy (viz [**Tagy BLE**](../../catalog-applications/ble-tags.md))
 
 Záložní modul **CHESTER-Z1** hlavní firmware nepodporuje; s ním použijte sestavení [**CHESTER Current Z**](chester-current-z.md).
 
@@ -42,28 +42,28 @@ Teploměry DS18B20 se vzorkují každých `w1-therm-interval-sample` sekund a ag
 
 Vnitřní teploměr a akcelerometr se čtou každých 60 sekund a hlášení nese jejich poslední hodnoty. Bluetoothové tagy se vzorkují každých `interval-sample` sekund a agregují každých `interval-aggreg` sekund.
 
-Hlášení se odesílá každých `interval-report` sekund. Firmware CHESTER Current v4.0.1 nezapíná náhodný [**rozptyl intervalu hlášení**](../common-functionality.md#report-interval-jitter), takže hlášení chodí v pevném intervalu.
+Hlášení se odesílá každých `interval-report` sekund. Firmware CHESTER Current v4.0.1 nezapíná náhodný [**rozptyl intervalu hlášení**](../../catalog-applications/common-functionality.md#report-interval-jitter), takže hlášení chodí v pevném intervalu.
 
 ## Konfigurační parametry {#configuration-parameters}
 
 Parametr nastavíte příkazem `app config <parametr> <hodnota>` a změnu uplatníte příkazem `config save`, který konfiguraci uloží a restartuje zařízení. Aktuální hodnoty vypíše příkaz `app config show`.
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Interval vzorkování analogových kanálů a tagů BLE v sekundách |
-| `interval-aggreg` | `<1-86400>` | `300` | Interval agregace analogových kanálů a tagů BLE v sekundách |
-| `interval-report` | `<30-86400>` | `900` | Interval hlášení v sekundách |
-| `interval-poll` | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
-| `downlink-wdg-interval` | `<0-1209600>` | `129600` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
-| `channel-active-1` až `channel-active-4` | `true`, `false` | `false` | Měřit a hlásit kanál |
-| `channel-differential-1` až `channel-differential-4` | `true`, `false` | `false` | Měřit kanál v diferenciálním režimu místo režimu single-ended |
-| `channel-calib-x0-1` až `channel-calib-x0-4` | `<-1000000.0..1000000.0>` | `0.0` | Kalibrační bod 0: surová hodnota v mV |
-| `channel-calib-x1-1` až `channel-calib-x1-4` | `<-1000000.0..1000000.0>` | `0.0` | Kalibrační bod 1: surová hodnota v mV |
-| `channel-calib-y0-1` až `channel-calib-y0-4` | `<-1000000.0..1000000.0>` | `0.0` | Kalibrační bod 0: skutečná hodnota (například v A) |
-| `channel-calib-y1-1` až `channel-calib-y1-4` | `<-1000000.0..1000000.0>` | `0.0` | Kalibrační bod 1: skutečná hodnota |
-| `channel-calib-mode-1` až `channel-calib-mode-4` | `mean`, `rms` | `rms` | Surová hodnota, kterou kalibrace převádí (viz tabulka níže) |
-| `w1-therm-interval-sample` | `<1-86400>` | `60` | Interval vzorkování teploměrů DS18B20 v sekundách |
-| `w1-therm-interval-aggreg` | `<1-86400>` | `300` | Interval agregace teploměrů DS18B20 v sekundách |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Interval vzorkování analogových kanálů a tagů BLE v sekundách |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | `300` | Interval agregace analogových kanálů a tagů BLE v sekundách |
+| `interval-report` | Report interval | `<30-86400>` | `900` | Interval hlášení v sekundách |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | `129600` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
+| `channel-active-1` až `channel-active-4` | Channel active 1 až Channel active 4 | `true`, `false` | `false` | Měřit a hlásit kanál |
+| `channel-differential-1` až `channel-differential-4` | Channel differential 1 až Channel differential 4 | `true`, `false` | `false` | Měřit kanál v diferenciálním režimu místo režimu single-ended |
+| `channel-calib-x0-1` až `channel-calib-x0-4` | Channel calib x0 1 až Channel calib x0 4 | `<-1000000.0..1000000.0>` | `0.0` | Kalibrační bod 0: surová hodnota v mV |
+| `channel-calib-x1-1` až `channel-calib-x1-4` | Channel calib x1 1 až Channel calib x1 4 | `<-1000000.0..1000000.0>` | `0.0` | Kalibrační bod 1: surová hodnota v mV |
+| `channel-calib-y0-1` až `channel-calib-y0-4` | Channel calib y0 1 až Channel calib y0 4 | `<-1000000.0..1000000.0>` | `0.0` | Kalibrační bod 0: skutečná hodnota (například v A) |
+| `channel-calib-y1-1` až `channel-calib-y1-4` | Channel calib y1 1 až Channel calib y1 4 | `<-1000000.0..1000000.0>` | `0.0` | Kalibrační bod 1: skutečná hodnota |
+| `channel-calib-mode-1` až `channel-calib-mode-4` | Channel calib mode 1 až Channel calib mode 4 | `mean`, `rms` | `rms` | Surová hodnota, kterou kalibrace převádí (viz tabulka níže) |
+| `w1-therm-interval-sample` | W1 therm interval sample | `<1-86400>` | `60` | Interval vzorkování teploměrů DS18B20 v sekundách |
+| `w1-therm-interval-aggreg` | W1 therm interval aggreg | `<1-86400>` | `300` | Interval agregace teploměrů DS18B20 v sekundách |
 
 Kalibrační režim určuje, kterou surovou hodnotu kalibrace převádí:
 
@@ -74,7 +74,7 @@ Kalibrační režim určuje, kterou surovou hodnotu kalibrace převádí:
 
 Parametry `channel-*` patří ke čtyřem vstupům modulu CHESTER-K1 a parametry `w1-therm-*` k teploměrům DS18B20. Parametry záložního modulu přidává sestavení [**CHESTER Current Z**](chester-current-z.md).
 
-Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../common-functionality.md#network-mode-configuration).
+Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md#network-mode-configuration).
 
 ## Příkazy {#commands}
 
@@ -96,7 +96,7 @@ Příkazy `current` ukládají kalibraci okamžitě; nepotřebují `config save`
 
 :::danger
 
-Při aktualizaci firmwaru z verze **v1.x.x** na verzi **v2.0.0 a novější** je nutné [**zálohovat konfiguraci**](../common-functionality.md#configuration-backup), u zařízení **CHESTER Current** včetně kalibračních dat.
+Při aktualizaci firmwaru z verze **v1.x.x** na verzi **v2.0.0 a novější** je nutné [**zálohovat konfiguraci**](../../catalog-applications/common-functionality.md#configuration-backup), u zařízení **CHESTER Current** včetně kalibračních dat.
 
 :::
 
@@ -225,7 +225,7 @@ Channel 1 calibration: x0=1.20 y0=0.00, x1=71.50 y1=10.00, mode=rms
 
 #### Reset kalibrace {#reset-calibration}
 
-Kalibraci vymažete a vrátíte se k surovému výstupu v mV takto:
+Následující příkaz nastaví všechny čtyři kalibrační body na `0`. Kanál pak nemá kalibrovanou hodnotu (v hlášení `null`); jeho surové hodnoty se odesílají dál:
 
 ```
 current channel-1 calib reset
@@ -318,10 +318,12 @@ Postup nahrání popisuje článek [**Nahrání firmwaru**](../../firmware-flash
 
 ## Ukázková zpráva JSON {#example-json-message}
 
+Každé pole včetně jednotky, rozsahu a rozlišení popisuje katalogová stránka v části [**Data**](../../catalog-applications/chester-current/index.md#data-over-lte).
+
 <Tabs>
   <TabItem value="lte" label="LTE">
 
-Ukázka zachycuje hlášení hlavního firmwaru s aktivním kanálem 1. Seznam `analog_channels` má jednu položku pro každý aktivní kanál. Hlášení dále nese seznam `w1_thermometers` s klíči `serial_number` a `measurements` pro každý teploměr DS18B20 a seznam `ble_tags` s bluetoothovými tagy.
+Ukázka zachycuje hlášení hlavního firmwaru s výchozími intervaly: kanál 1 je aktivní a zkalibrovaný pro proudovou sondu (`x0` = 1,20 mV pro 0 A, `x1` = 71,50 mV pro 10 A, režim `rms`); zařízení má připojený jeden teploměr DS18B20 a jeden bluetoothový tag. Seznam `analog_channels` má jednu položku pro každý aktivní kanál a každý seznam `measurements` jednu položku pro každý interval agregace od předchozího hlášení.
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
@@ -330,14 +332,14 @@ Ukázka zachycuje hlášení hlavního firmwaru s aktivním kanálem 1. Seznam `
 {
   "message": {
     "version": 1,
-    "sequence": 42,
-    "timestamp": 1738627200
+    "sequence": 96,
+    "timestamp": 1793961010
   },
   "system": {
-    "uptime": 86400,
+    "uptime": 86410,
     "voltage_rest": 3.65,
     "voltage_load": 3.42,
-    "current_load": 28
+    "current_load": 34
   },
   "network": {
     "parameter": {
@@ -347,7 +349,7 @@ Ukázka zachycuje hlášení hlavního firmwaru s aktivním kanálem 1. Seznam `
       "rsrq": -10,
       "snr": 12,
       "plmn": 23003,
-      "cid": 1234567,
+      "cid": 26853412,
       "band": 20,
       "earfcn": 6300
     }
@@ -366,21 +368,55 @@ Ukázka zachycuje hlášení hlavního firmwaru s aktivním kanálem 1. Seznam `
       "channel": 1,
       "raw_rms": {
         "measurements": [
-          { "timestamp": 1738626600, "min": 70.12, "max": 72.45, "avg": 71.28, "mdn": 71.30 },
-          { "timestamp": 1738626900, "min": 69.88, "max": 73.01, "avg": 71.45, "mdn": 71.42 }
+          { "timestamp": 1793960400, "min": 70.12, "max": 72.45, "avg": 71.28, "mdn": 71.3 },
+          { "timestamp": 1793960700, "min": 69.88, "max": 73.01, "avg": 71.45, "mdn": 71.42 },
+          { "timestamp": 1793961000, "min": 70.4, "max": 72.1, "avg": 71.12, "mdn": 71.09 }
         ]
       },
       "raw_mean": {
         "measurements": [
-          { "timestamp": 1738626600, "min": 49.50, "max": 51.20, "avg": 50.35, "mdn": 50.32 },
-          { "timestamp": 1738626900, "min": 49.22, "max": 51.55, "avg": 50.38, "mdn": 50.40 }
+          { "timestamp": 1793960400, "min": -0.42, "max": 0.61, "avg": 0.08, "mdn": 0.07 },
+          { "timestamp": 1793960700, "min": -0.55, "max": 0.48, "avg": -0.03, "mdn": -0.02 },
+          { "timestamp": 1793961000, "min": -0.37, "max": 0.52, "avg": 0.05, "mdn": 0.06 }
         ]
       },
       "calibration": {
         "mode": "rms",
         "measurements": [
-          { "timestamp": 1738626600, "min": 9.85, "max": 10.18, "avg": 10.01, "mdn": 10.02 },
-          { "timestamp": 1738626900, "min": 9.82, "max": 10.25, "avg": 10.03, "mdn": 10.04 }
+          { "timestamp": 1793960400, "min": 9.8, "max": 10.13, "avg": 9.96, "mdn": 9.97 },
+          { "timestamp": 1793960700, "min": 9.76, "max": 10.21, "avg": 9.99, "mdn": 9.98 },
+          { "timestamp": 1793961000, "min": 9.84, "max": 10.08, "avg": 9.94, "mdn": 9.94 }
+        ]
+      }
+    }
+  ],
+  "w1_thermometers": [
+    {
+      "serial_number": 1207863897645,
+      "measurements": [
+        { "timestamp": 1793960400, "min": 21.06, "max": 21.12, "avg": 21.1, "mdn": 21.12 },
+        { "timestamp": 1793960700, "min": 21.12, "max": 21.18, "avg": 21.15, "mdn": 21.12 },
+        { "timestamp": 1793961000, "min": 21.18, "max": 21.25, "avg": 21.22, "mdn": 21.25 }
+      ]
+    }
+  ],
+  "ble_tags": [
+    {
+      "addr": "7cd9f413e360",
+      "rssi": -77,
+      "voltage": 3.03,
+      "temperature": {
+        "measurements": [
+          { "timestamp": 1793960400, "min": 22.31, "max": 22.38, "avg": 22.34, "mdn": 22.35 },
+          { "timestamp": 1793960700, "min": 22.36, "max": 22.44, "avg": 22.4, "mdn": 22.41 },
+          { "timestamp": 1793961000, "min": 22.4, "max": 22.47, "avg": 22.44, "mdn": 22.45 }
+        ]
+      },
+      "humidity": {
+        "measurements": [
+          { "timestamp": 1793960400, "min": 45, "max": 46, "avg": 45.6, "mdn": 46 },
+          { "timestamp": 1793960700, "min": 46, "max": 47, "avg": 46.4, "mdn": 46 },
+          { "timestamp": 1793961000, "min": 46, "max": 47, "avg": 46.8, "mdn": 47 }
         ]
       }
     }
@@ -402,14 +438,14 @@ Struktura payloadu pro analogové kanály se ve verzi **v3.5.1** změnila:
   </TabItem>
   <TabItem value="lora" label="LoRaWAN">
 
-Zařízení **CHESTER Current** kóduje payload LoRaWAN binárně. Příklad uplinku firmwaru v4.0.1 s aktivním kanálem 1 a bez teploměru DS18B20:
+Zařízení **CHESTER Current** kóduje payload LoRaWAN binárně. Příklad uplinku firmwaru v4.0.1 ze stejného zařízení s aktivním kanálem 1 a jedním teploměrem DS18B20. Uplink nese poslední vzorek každé hodnoty, ne agregovaná měření.
 
 **Hlavička:** `0x2F 0x00` (bity: BATT=1, ACCEL=1, THERM=1, W1=1, BACKUP=0, CH1=1)
 
 **Surové bajty (hex):**
 
 ```
-2F 00 45 0E 5A 0D 1C 02 29 09 00 78 54 48 52 00 49
+2F 00 45 0E 5A 0D 22 02 29 09 01 4D 08 71 54 00 30 F8 48
 ```
 
 **Dekódované hodnoty:**
@@ -417,19 +453,41 @@ Zařízení **CHESTER Current** kóduje payload LoRaWAN binárně. Příklad upl
 | Offset | Bajty | Pole | Hodnota |
 | :--- | :--- | :--- | :--- |
 | 0–1 | `2F 00` | Hlavička | 0x002F (BATT + ACCEL + THERM + W1 + CH1) |
-| 2–3 | `45 0E` | voltage_rest | 3653 mV |
-| 4–5 | `5A 0D` | voltage_load | 3418 mV |
-| 6 | `1C` | current_load | 28 mA |
-| 7 | `02` | orientation | 2 |
-| 8–9 | `29 09` | temperature | 23,45 °C (2345 / 100) |
-| 10 | `00` | w1_count | 0 teploměrů |
-| 11–12 | `78 54` | ch1_rms | 71,5 mV (float16) |
-| 13–14 | `48 52` | ch1_mean | 50,25 mV (float16) |
-| 15–16 | `00 49` | ch1_calib | 10,0 A (float16) |
+| 2–3 | `45 0E` | `voltage_rest` | 3653 mV |
+| 4–5 | `5A 0D` | `voltage_load` | 3418 mV |
+| 6 | `22` | `current_load` | 34 mA |
+| 7 | `02` | `orientation` | 2 |
+| 8–9 | `29 09` | `therm_temperature` | 23,45 °C (2345 / 100) |
+| 10 | `01` | Počet teploměrů DS18B20 | 1 |
+| 11–12 | `4D 08` | `w1_thermometers` | 21,25 °C (2125 / 100) |
+| 13–14 | `71 54` | `raw_rms` kanálu 1 | 71,0625 mV (float16) |
+| 15–16 | `00 30` | `raw_mean` kanálu 1 | 0,125 mV (float16) |
+| 17–18 | `F8 48` | `calibrated` kanálu 1 | 9,9375 A (float16) |
 
-**Celkem:** 17 bajtů
+**Celkem:** 19 bajtů
 
-Firmware v4.0.1 nastavuje příznaky BATT, ACCEL, THERM a W1 vždy. Každý teploměr DS18B20 přidá za bajt s počtem dva bajty (teplota × 100) a každý další aktivní kanál šest bajtů.
+Dekodér pro ChirpStack a TTN (soubor `codec/cs-decoder.js` aplikace v CHESTER SDK) vrátí:
+
+```json
+{
+  "voltage_rest": 3.653,
+  "voltage_load": 3.418,
+  "current_load": 34,
+  "orientation": 2,
+  "therm_temperature": 23.45,
+  "w1_thermometers": [21.25],
+  "analog_channels": [
+    {
+      "channel": 1,
+      "raw_rms": 71.0625,
+      "raw_mean": 0.125,
+      "calibrated": 9.9375
+    }
+  ]
+}
+```
+
+Firmware v4.0.1 nastavuje příznaky BATT, ACCEL, THERM a W1 vždy. Každý teploměr DS18B20 přidá za bajt s počtem dva bajty (teplota × 100) a každý další aktivní kanál šest bajtů. Uplink pojme nejvýše 51 bajtů; hlášení, které se nevejde, se neodešle.
 
   </TabItem>
 </Tabs>

@@ -11,7 +11,7 @@ The **CHESTER Current** firmware turns CHESTER into a current meter. It measures
 
 This page describes the main firmware. The variant built for the CHESTER-Z1 backup module has its own page, which lists only what it changes: [**CHESTER Current Z**](chester-current-z.md).
 
-What all catalog applications share (LED, button, network mode, BLE tags and shell commands) is described in [**Common Functionality**](../common-functionality.md). The hardware, the current probes and the product variants are on the [**CHESTER Current**](../../catalog-applications/chester-current/index.md) catalog page.
+What all catalog applications share (LED, button, network mode, BLE tags and shell commands) is described in [**Common Functionality**](../../catalog-applications/common-functionality.md). The hardware, the current probes and the product variants are on the [**CHESTER Current**](../../catalog-applications/chester-current/index.md) catalog page.
 
 ## Supported Hardware
 
@@ -19,7 +19,7 @@ The main firmware works with:
 
 - the **CHESTER-K1** module: four differential inputs and a 5 V boost converter for the current probes (see [**CHESTER-K1**](../../ordering-codes.md#chester-k1))
 - **DS18B20** 1-Wire thermometers, up to 10 of them
-- Bluetooth sensor tags (see [**BLE Tags**](../ble-tags.md))
+- Bluetooth sensor tags (see [**BLE Tags**](../../catalog-applications/ble-tags.md))
 
 The main firmware does not support the **CHESTER-Z1** backup module; use the [**CHESTER Current Z**](chester-current-z.md) build with it.
 
@@ -42,28 +42,28 @@ DS18B20 thermometers are sampled every `w1-therm-interval-sample` seconds and ag
 
 The internal thermometer and the accelerometer are read every 60 seconds, and the report carries their last values. Bluetooth tags are sampled every `interval-sample` seconds and aggregated every `interval-aggreg` seconds.
 
-The report is sent every `interval-report` seconds. Firmware v4.0.1 of CHESTER Current does not enable the random [**report interval jitter**](../common-functionality.md#report-interval-jitter), so the reports keep a fixed period.
+The report is sent every `interval-report` seconds. Firmware v4.0.1 of CHESTER Current does not enable the random [**report interval jitter**](../../catalog-applications/common-functionality.md#report-interval-jitter), so the reports keep a fixed period.
 
 ## Configuration Parameters
 
 Set a parameter with `app config <parameter> <value>` and apply the change with `config save`, which stores the configuration and restarts the device. The command `app config show` prints the current values.
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Sampling interval of the analog channels and BLE tags in seconds |
-| `interval-aggreg` | `<1-86400>` | `300` | Aggregation interval of the analog channels and BLE tags in seconds |
-| `interval-report` | `<30-86400>` | `900` | Report interval in seconds |
-| `interval-poll` | `<0-86400>` | `0` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
-| `downlink-wdg-interval` | `<0-1209600>` | `129600` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off |
-| `channel-active-1` to `channel-active-4` | `true`, `false` | `false` | Measure and report the channel |
-| `channel-differential-1` to `channel-differential-4` | `true`, `false` | `false` | Measure the channel in the differential mode instead of the single-ended mode |
-| `channel-calib-x0-1` to `channel-calib-x0-4` | `<-1000000.0..1000000.0>` | `0.0` | Calibration point 0: raw value in mV |
-| `channel-calib-x1-1` to `channel-calib-x1-4` | `<-1000000.0..1000000.0>` | `0.0` | Calibration point 1: raw value in mV |
-| `channel-calib-y0-1` to `channel-calib-y0-4` | `<-1000000.0..1000000.0>` | `0.0` | Calibration point 0: real value (for example in A) |
-| `channel-calib-y1-1` to `channel-calib-y1-4` | `<-1000000.0..1000000.0>` | `0.0` | Calibration point 1: real value |
-| `channel-calib-mode-1` to `channel-calib-mode-4` | `mean`, `rms` | `rms` | Raw value the calibration converts (see the table below) |
-| `w1-therm-interval-sample` | `<1-86400>` | `60` | Sampling interval of the DS18B20 thermometers in seconds |
-| `w1-therm-interval-aggreg` | `<1-86400>` | `300` | Aggregation interval of the DS18B20 thermometers in seconds |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Sampling interval of the analog channels and BLE tags in seconds |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | `300` | Aggregation interval of the analog channels and BLE tags in seconds |
+| `interval-report` | Report interval | `<30-86400>` | `900` | Report interval in seconds |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | `129600` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off |
+| `channel-active-1` to `channel-active-4` | Channel active 1 to Channel active 4 | `true`, `false` | `false` | Measure and report the channel |
+| `channel-differential-1` to `channel-differential-4` | Channel differential 1 to Channel differential 4 | `true`, `false` | `false` | Measure the channel in the differential mode instead of the single-ended mode |
+| `channel-calib-x0-1` to `channel-calib-x0-4` | Channel calib x0 1 to Channel calib x0 4 | `<-1000000.0..1000000.0>` | `0.0` | Calibration point 0: raw value in mV |
+| `channel-calib-x1-1` to `channel-calib-x1-4` | Channel calib x1 1 to Channel calib x1 4 | `<-1000000.0..1000000.0>` | `0.0` | Calibration point 1: raw value in mV |
+| `channel-calib-y0-1` to `channel-calib-y0-4` | Channel calib y0 1 to Channel calib y0 4 | `<-1000000.0..1000000.0>` | `0.0` | Calibration point 0: real value (for example in A) |
+| `channel-calib-y1-1` to `channel-calib-y1-4` | Channel calib y1 1 to Channel calib y1 4 | `<-1000000.0..1000000.0>` | `0.0` | Calibration point 1: real value |
+| `channel-calib-mode-1` to `channel-calib-mode-4` | Channel calib mode 1 to Channel calib mode 4 | `mean`, `rms` | `rms` | Raw value the calibration converts (see the table below) |
+| `w1-therm-interval-sample` | W1 therm interval sample | `<1-86400>` | `60` | Sampling interval of the DS18B20 thermometers in seconds |
+| `w1-therm-interval-aggreg` | W1 therm interval aggreg | `<1-86400>` | `300` | Aggregation interval of the DS18B20 thermometers in seconds |
 
 The calibration mode selects the raw value that the calibration converts:
 
@@ -74,7 +74,7 @@ The calibration mode selects the raw value that the calibration converts:
 
 The `channel-*` parameters belong to the four inputs of CHESTER-K1 and the `w1-therm-*` parameters to DS18B20 thermometers. The backup module parameters are added by the [**CHESTER Current Z**](chester-current-z.md) build.
 
-The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../common-functionality.md#network-mode-configuration).
+The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../../catalog-applications/common-functionality.md#network-mode-configuration).
 
 ## Commands
 
@@ -96,7 +96,7 @@ The `current` commands store the calibration immediately; they need no `config s
 
 :::danger
 
-When upgrading firmware from **v1.x.x** to version **v2.0.0 and newer**, it is necessary to [**back up the configuration**](../common-functionality.md#configuration-backup), including the calibration data of **CHESTER Current**.
+When upgrading firmware from **v1.x.x** to version **v2.0.0 and newer**, it is necessary to [**back up the configuration**](../../catalog-applications/common-functionality.md#configuration-backup), including the calibration data of **CHESTER Current**.
 
 :::
 
@@ -225,7 +225,7 @@ Channel 1 calibration: x0=1.20 y0=0.00, x1=71.50 y1=10.00, mode=rms
 
 #### Reset Calibration
 
-To clear calibration and return to raw mV output:
+The following command sets all four calibration points to `0`. The channel then has no calibrated value (`null` in the report); its raw values are still sent:
 
 ```
 current channel-1 calib reset
@@ -318,10 +318,12 @@ Flashing is described in [**Firmware Flashing**](../../firmware-flashing/index.m
 
 ## Example JSON Message
 
+Every field, with its unit, range and resolution, is described on the catalog page under [**Data**](../../catalog-applications/chester-current/index.md#data-over-lte).
+
 <Tabs>
   <TabItem value="lte" label="LTE">
 
-The example shows a report of the main firmware with channel 1 active. The `analog_channels` list has one entry for each active channel. The report also carries the `w1_thermometers` list, with the `serial_number` and the `measurements` of each DS18B20 thermometer, and the `ble_tags` list of the Bluetooth tags.
+The example shows a report of the main firmware with the default intervals: channel 1 is active and calibrated for a current probe (`x0` = 1.20 mV for 0 A, `x1` = 71.50 mV for 10 A, mode `rms`), and one DS18B20 thermometer and one Bluetooth tag are connected. The `analog_channels` list has one entry for each active channel, and each `measurements` list has one entry for each aggregation interval since the previous report.
 
 <details>
 <summary><b>Show JSON Example</b></summary>
@@ -330,14 +332,14 @@ The example shows a report of the main firmware with channel 1 active. The `anal
 {
   "message": {
     "version": 1,
-    "sequence": 42,
-    "timestamp": 1738627200
+    "sequence": 96,
+    "timestamp": 1793961010
   },
   "system": {
-    "uptime": 86400,
+    "uptime": 86410,
     "voltage_rest": 3.65,
     "voltage_load": 3.42,
-    "current_load": 28
+    "current_load": 34
   },
   "network": {
     "parameter": {
@@ -347,7 +349,7 @@ The example shows a report of the main firmware with channel 1 active. The `anal
       "rsrq": -10,
       "snr": 12,
       "plmn": 23003,
-      "cid": 1234567,
+      "cid": 26853412,
       "band": 20,
       "earfcn": 6300
     }
@@ -366,21 +368,55 @@ The example shows a report of the main firmware with channel 1 active. The `anal
       "channel": 1,
       "raw_rms": {
         "measurements": [
-          { "timestamp": 1738626600, "min": 70.12, "max": 72.45, "avg": 71.28, "mdn": 71.30 },
-          { "timestamp": 1738626900, "min": 69.88, "max": 73.01, "avg": 71.45, "mdn": 71.42 }
+          { "timestamp": 1793960400, "min": 70.12, "max": 72.45, "avg": 71.28, "mdn": 71.3 },
+          { "timestamp": 1793960700, "min": 69.88, "max": 73.01, "avg": 71.45, "mdn": 71.42 },
+          { "timestamp": 1793961000, "min": 70.4, "max": 72.1, "avg": 71.12, "mdn": 71.09 }
         ]
       },
       "raw_mean": {
         "measurements": [
-          { "timestamp": 1738626600, "min": 49.50, "max": 51.20, "avg": 50.35, "mdn": 50.32 },
-          { "timestamp": 1738626900, "min": 49.22, "max": 51.55, "avg": 50.38, "mdn": 50.40 }
+          { "timestamp": 1793960400, "min": -0.42, "max": 0.61, "avg": 0.08, "mdn": 0.07 },
+          { "timestamp": 1793960700, "min": -0.55, "max": 0.48, "avg": -0.03, "mdn": -0.02 },
+          { "timestamp": 1793961000, "min": -0.37, "max": 0.52, "avg": 0.05, "mdn": 0.06 }
         ]
       },
       "calibration": {
         "mode": "rms",
         "measurements": [
-          { "timestamp": 1738626600, "min": 9.85, "max": 10.18, "avg": 10.01, "mdn": 10.02 },
-          { "timestamp": 1738626900, "min": 9.82, "max": 10.25, "avg": 10.03, "mdn": 10.04 }
+          { "timestamp": 1793960400, "min": 9.8, "max": 10.13, "avg": 9.96, "mdn": 9.97 },
+          { "timestamp": 1793960700, "min": 9.76, "max": 10.21, "avg": 9.99, "mdn": 9.98 },
+          { "timestamp": 1793961000, "min": 9.84, "max": 10.08, "avg": 9.94, "mdn": 9.94 }
+        ]
+      }
+    }
+  ],
+  "w1_thermometers": [
+    {
+      "serial_number": 1207863897645,
+      "measurements": [
+        { "timestamp": 1793960400, "min": 21.06, "max": 21.12, "avg": 21.1, "mdn": 21.12 },
+        { "timestamp": 1793960700, "min": 21.12, "max": 21.18, "avg": 21.15, "mdn": 21.12 },
+        { "timestamp": 1793961000, "min": 21.18, "max": 21.25, "avg": 21.22, "mdn": 21.25 }
+      ]
+    }
+  ],
+  "ble_tags": [
+    {
+      "addr": "7cd9f413e360",
+      "rssi": -77,
+      "voltage": 3.03,
+      "temperature": {
+        "measurements": [
+          { "timestamp": 1793960400, "min": 22.31, "max": 22.38, "avg": 22.34, "mdn": 22.35 },
+          { "timestamp": 1793960700, "min": 22.36, "max": 22.44, "avg": 22.4, "mdn": 22.41 },
+          { "timestamp": 1793961000, "min": 22.4, "max": 22.47, "avg": 22.44, "mdn": 22.45 }
+        ]
+      },
+      "humidity": {
+        "measurements": [
+          { "timestamp": 1793960400, "min": 45, "max": 46, "avg": 45.6, "mdn": 46 },
+          { "timestamp": 1793960700, "min": 46, "max": 47, "avg": 46.4, "mdn": 46 },
+          { "timestamp": 1793961000, "min": 46, "max": 47, "avg": 46.8, "mdn": 47 }
         ]
       }
     }
@@ -402,14 +438,14 @@ The payload structure for analog channels has changed in **v3.5.1**:
   </TabItem>
   <TabItem value="lora" label="LoRaWAN">
 
-**CHESTER Current** supports binary LoRaWAN payload encoding. Example of a firmware v4.0.1 uplink with channel 1 active and no DS18B20 thermometer:
+**CHESTER Current** supports binary LoRaWAN payload encoding. Example of a firmware v4.0.1 uplink from the same device, with channel 1 active and one DS18B20 thermometer. An uplink carries the last sample of each value, not the aggregated measurements.
 
 **Header:** `0x2F 0x00` (bits: BATT=1, ACCEL=1, THERM=1, W1=1, BACKUP=0, CH1=1)
 
 **Raw bytes (hex):**
 
 ```
-2F 00 45 0E 5A 0D 1C 02 29 09 00 78 54 48 52 00 49
+2F 00 45 0E 5A 0D 22 02 29 09 01 4D 08 71 54 00 30 F8 48
 ```
 
 **Decoded:**
@@ -417,19 +453,41 @@ The payload structure for analog channels has changed in **v3.5.1**:
 | Offset | Bytes | Field | Value |
 | :--- | :--- | :--- | :--- |
 | 0–1 | `2F 00` | Header | 0x002F (BATT + ACCEL + THERM + W1 + CH1) |
-| 2–3 | `45 0E` | voltage_rest | 3653 mV |
-| 4–5 | `5A 0D` | voltage_load | 3418 mV |
-| 6 | `1C` | current_load | 28 mA |
-| 7 | `02` | orientation | 2 |
-| 8–9 | `29 09` | temperature | 23.45 °C (2345 / 100) |
-| 10 | `00` | w1_count | 0 thermometers |
-| 11–12 | `78 54` | ch1_rms | 71.5 mV (float16) |
-| 13–14 | `48 52` | ch1_mean | 50.25 mV (float16) |
-| 15–16 | `00 49` | ch1_calib | 10.0 A (float16) |
+| 2–3 | `45 0E` | `voltage_rest` | 3653 mV |
+| 4–5 | `5A 0D` | `voltage_load` | 3418 mV |
+| 6 | `22` | `current_load` | 34 mA |
+| 7 | `02` | `orientation` | 2 |
+| 8–9 | `29 09` | `therm_temperature` | 23.45 °C (2345 / 100) |
+| 10 | `01` | Number of DS18B20 thermometers | 1 |
+| 11–12 | `4D 08` | `w1_thermometers` | 21.25 °C (2125 / 100) |
+| 13–14 | `71 54` | `raw_rms` of channel 1 | 71.0625 mV (float16) |
+| 15–16 | `00 30` | `raw_mean` of channel 1 | 0.125 mV (float16) |
+| 17–18 | `F8 48` | `calibrated` of channel 1 | 9.9375 A (float16) |
 
-**Total:** 17 bytes
+**Total:** 19 bytes
 
-Firmware v4.0.1 always sets the BATT, ACCEL, THERM and W1 flags. Each DS18B20 thermometer adds two bytes (temperature × 100) after the count byte, and each further active channel adds six bytes.
+The ChirpStack/TTN decoder (`codec/cs-decoder.js` of the application in the CHESTER SDK) returns:
+
+```json
+{
+  "voltage_rest": 3.653,
+  "voltage_load": 3.418,
+  "current_load": 34,
+  "orientation": 2,
+  "therm_temperature": 23.45,
+  "w1_thermometers": [21.25],
+  "analog_channels": [
+    {
+      "channel": 1,
+      "raw_rms": 71.0625,
+      "raw_mean": 0.125,
+      "calibrated": 9.9375
+    }
+  ]
+}
+```
+
+Firmware v4.0.1 always sets the BATT, ACCEL, THERM and W1 flags. Each DS18B20 thermometer adds two bytes (temperature × 100) after the count byte, and each further active channel adds six bytes. An uplink holds at most 51 bytes; a report that does not fit is not sent.
 
   </TabItem>
 </Tabs>

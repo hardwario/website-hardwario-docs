@@ -24,7 +24,13 @@ All parameters are the same.
 
 ### Data
 
-The report adds a `pyranometer` structure with `irradiance_1` (input B0) and `irradiance_2` (input B1). Each has `measurements` with a timestamp and the `min`, `max`, `avg` and `mdn` voltage in mV; the firmware does not convert the voltage to irradiance. In LoRaWAN mode, the pyranometer values are not sent.
+The report adds a `pyranometer` structure with `irradiance_1` (input B0) and `irradiance_2` (input B1). Each has `measurements` with a timestamp and the `min`, `max`, `avg` and `mdn` voltage in mV, from 0 to 3600 mV (the full scale of the ADC); the firmware does not convert the voltage to irradiance. In LoRaWAN mode, the pyranometer values are not sent. Every field, with its unit, range and resolution, is described on the catalog page under [**CHESTER Meteo P**](../../catalog-applications/chester-meteo/index.md#data-chester-meteo-p).
+
+:::caution
+
+Firmware v4.0.1 takes the reference timestamp of the `pyranometer` measurements from the last aggregation of the report instead of the first. All decoded timestamps are therefore late by `interval-aggreg` times one less than the number of entries: with the default intervals, a report has about six entries and the timestamps are about 25 minutes late.
+
+:::
 
 ## Firmware Build
 

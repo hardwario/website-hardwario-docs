@@ -420,6 +420,54 @@ Na desku CHESTER-M lze osadit jen jeden kus tohoto modulu.
 | `CHESTER-X10:A` |
 | `CHESTER-X10:B` |
 
+### CHESTER-X12: Rozhraní RS-232 {#chester-x12}
+
+**Formát:** `CHESTER-X12[:{A|B}]`
+
+**Legenda:**
+
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
+
+**Dostupné varianty:**
+
+| Objednací kód   |
+| :-------------- |
+| `CHESTER-X12:A` |
+| `CHESTER-X12:B` |
+
+### CHESTER-X13: Rozhraní CAN Bus {#chester-x13}
+
+**Formát:** `CHESTER-X13[:{A|B}]`
+
+**Legenda:**
+
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
+
+**Dostupné varianty:**
+
+| Objednací kód   |
+| :-------------- |
+| `CHESTER-X13:A` |
+| `CHESTER-X13:B` |
+
+### CHESTER-X14: Rozhraní Ethernet {#chester-x14}
+
+**Formát:** `CHESTER-X14[:{A|B}]`
+
+**Legenda:**
+
+* `:A` = Rozšiřující modul nastavený pro slot „A“ na zadní straně
+* `:B` = Rozšiřující modul nastavený pro slot „B“ na zadní straně
+
+**Dostupné varianty:**
+
+| Objednací kód   |
+| :-------------- |
+| `CHESTER-X14:A` |
+| `CHESTER-X14:B` |
+
 ## Krabičky {#enclosures}
 
 Více podrobností a výkresy najdete v článku [Krabičky](hardware-description/enclosures.md#list-of-enclosures).
@@ -445,6 +493,7 @@ Více podrobností a výkresy najdete v článku [Krabičky](hardware-descriptio
 | CHESTER-E17-P | CHESTER s C1 (Ekoterm)         |         |
 | CHESTER-E18-P | CHESTER s C2 (Axilera)         |         |
 | CHESTER-E19-P | CHESTER s B1 (wM-Bus)          |         |
+| CHESTER-E23-P | CHESTER Motion                 | S3      |
 
 ## Další příslušenství {#other-accessories}
 

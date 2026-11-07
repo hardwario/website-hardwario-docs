@@ -11,7 +11,7 @@ Firmware **CHESTER Push** udělá ze zařízení CHESTER tlačítkový terminál
 
 Tato stránka popisuje hlavní firmware. Sestavení [**CHESTER Push FM**](chester-push-fm.md) mění jen to, jak se rozsvěcují LED tlačítek, a jeho stránka uvádí jen tento rozdíl.
 
-Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../common-functionality.md). Hardware a šablonu krabičky najdete na stránce katalogové aplikace [**CHESTER Push**](../../catalog-applications/chester-push/index.md).
+Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md). Hardware a šablonu krabičky najdete na stránce katalogové aplikace [**CHESTER Push**](../../catalog-applications/chester-push/index.md).
 
 ## Podporovaný hardware {#supported-hardware}
 
@@ -19,18 +19,18 @@ Firmware podporuje:
 
 - modul [**CHESTER-Z1**](../../extension-modules/chester-z1.md), bez kterého firmware nefunguje; nese až pět tlačítek s LED, zvukový bzučák, vstup DC a záložní baterii Li-Ion
 - teploměr a akcelerometr na základní desce
-- bluetoothové senzorové tagy (viz [**Tagy BLE**](../ble-tags.md)); jejich hodnoty se odesílají jen v hlášeních přes LTE
+- bluetoothové senzorové tagy (viz [**Tagy BLE**](../../catalog-applications/ble-tags.md)); jejich hodnoty se odesílají jen v hlášeních přes LTE
 
 Tlačítka se v datech jmenují `button_x` (prostřední tlačítko) a `button_1` až `button_4`. Která z nich zařízení má, určuje objednací kód modulu CHESTER-Z1 (viz [**Objednací kódy**](../../ordering-codes.md#chester-z)).
 
 ## Měření a chování {#measurement-and-behavior}
 
 - Stisk tlačítka se **hlásí okamžitě**: zařízení počká `event-report-delay` sekund, aby se stisky krátce po sobě dostaly do jednoho hlášení, a pak hlášení odešle.
-- Za hodinu odejde nejvýše `event-report-rate` hlášení událostí. Limit šetří baterii zařízení a snižuje objem přenášených dat; události nad limit počkají na další pravidelné hlášení a pravidelná hlášení se do limitu nepočítají.
+- Za hodinu odejde nejvýše `event-report-rate` hlášení událostí (firmware v4.0.1 jich pošle až o jedno víc). Limit šetří baterii zařízení a snižuje objem přenášených dat; události nad limit počkají na další pravidelné hlášení a pravidelná hlášení se do limitu nepočítají.
 - Firmware rozliší **krátký stisk** (`clicked`) a **dlouhý stisk** (`held`). Každé hlášení obsahuje pro každé tlačítko čítače krátkých a dlouhých stisků od spuštění zařízení a události tlačítka od předchozího hlášení s jejich časovými značkami.
 - Hlášení obsahuje nejvýše 8 událostí na tlačítko. Další stisky téhož tlačítka před příštím hlášením se nezapočítají.
 - Teploměr, akcelerometr a napětí na modulu CHESTER-Z1 se vzorkují každou minutu, napájecí napětí základní desky každých 12 hodin. Bluetoothové tagy se vzorkují každých `interval-sample` sekund a agregují každých `interval-aggreg` sekund.
-- Pravidelné hlášení odchází každých `interval-report` sekund, bez náhodného rozptylu popsaného v článku [**Společné funkce**](../common-functionality.md#report-interval-jitter).
+- Pravidelné hlášení odchází každých `interval-report` sekund, bez náhodného rozptylu popsaného v článku [**Společné funkce**](../../catalog-applications/common-functionality.md#report-interval-jitter).
 - Když externí napájení modulu CHESTER-Z1 vypadne nebo se obnoví, zařízení to okamžitě nahlásí (parametry `backup-report-*`), takže zařízení CHESTER Push může sledovat i výpadky napájení.
 
 ### Chování LED {#led-behavior}
@@ -52,21 +52,21 @@ Sestavení [**CHESTER Push FM**](chester-push-fm.md) rozsvěcuje LED jinak.
 
 Parametr nastavíte příkazem `app config <parametr> <hodnota>` a změnu uplatníte příkazem `config save`, který konfiguraci uloží a restartuje zařízení. Aktuální hodnoty vypíše příkaz `app config show`.
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Interval vzorkování bluetoothových tagů v sekundách |
-| `interval-aggreg` | `<1-86400>` | `300` | Interval agregace vzorků z bluetoothových tagů v sekundách |
-| `interval-report` | `<30-86400>` | `1800` | Interval hlášení v sekundách |
-| `interval-poll` | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
-| `downlink-wdg-interval` | `<0-1209600>` | `129600` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
-| `event-report-delay` | `<1-86400>` | `1` | Prodleva mezi událostí a hlášením v sekundách (stisk tlačítka, změna záložního napájení) |
-| `event-report-rate` | `<1-3600>` | `30` | Nejvyšší počet hlášení událostí za hodinu; pravidelná hlášení se do limitu nepočítají |
-| `backup-report-connected` | `true`, `false` | `true` | Hlásit okamžitě obnovení externího napájení |
-| `backup-report-disconnected` | `true`, `false` | `true` | Hlásit okamžitě výpadek externího napájení |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Interval vzorkování bluetoothových tagů v sekundách |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | `300` | Interval agregace vzorků z bluetoothových tagů v sekundách |
+| `interval-report` | Report interval | `<30-86400>` | `1800` | Interval hlášení v sekundách |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | `129600` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
+| `event-report-delay` | Event report delay | `<1-86400>` | `1` | Prodleva mezi událostí a hlášením v sekundách (stisk tlačítka, změna záložního napájení) |
+| `event-report-rate` | Event report rate | `<1-3600>` | `30` | Nejvyšší počet hlášení událostí za hodinu (firmware v4.0.1 jich pošle až o jedno víc); pravidelná hlášení se do limitu nepočítají |
+| `backup-report-connected` | Backup report connected | `true`, `false` | `true` | Hlásit okamžitě obnovení externího napájení |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | `true` | Hlásit okamžitě výpadek externího napájení |
 
 Parametry `interval-sample` a `interval-aggreg` se uplatní jen s bluetoothovými tagy; teploměr a akcelerometr se vzorkují každou minutu bez ohledu na ně.
 
-Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../common-functionality.md#network-mode-configuration).
+Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md#network-mode-configuration).
 
 ## Příkazy {#commands}
 
@@ -87,13 +87,16 @@ Postup nahrání popisuje článek [**Nahrání firmwaru**](../../firmware-flash
 
 ## Ukázková zpráva JSON {#example-json-message}
 
+Každé pole s jednotkou, rozsahem a rozlišením popisuje katalogová stránka v části [**Data**](../../catalog-applications/chester-push/index.md#data-over-lte).
+
 <Tabs>
   <TabItem value="lte" label="LTE">
 
-Ukázka zachycuje hlášení hlavního firmwaru:
+Ukázka zachycuje hlášení hlavního firmwaru v4.0.1 tak, jak ho dekóduje HARDWARIO Cloud. Hlášení odešlo po dlouhém stisku tlačítka `button_2`, s připojeným externím napájením a bez bluetoothového tagu:
 
-- `backup`: napětí na vstupu DC, napětí baterie, stav a události napájecího vstupu modulu CHESTER-Z1
-- `button_x` a `button_1` až `button_4`: pro každé tlačítko čítače krátkých (`count_click`) a dlouhých (`count_hold`) stisků a události od předchozího hlášení
+- `backup`: napětí na vstupu DC a napětí baterie modulu CHESTER-Z1 v mV, stav externího napájení a jeho události od předchozího hlášení
+- `buttons`: jedna položka pro každou pozici tlačítka, `button_x` a `button_1` až `button_4`, s čítači krátkých (`count_click`) a dlouhých (`count_hold`) stisků od spuštění zařízení; `events` se objeví jen u tlačítka stisknutého od předchozího hlášení
+- `ble_tags`: jedna položka pro každý spárovaný bluetoothový tag, v ukázce prázdný seznam
 
 **Události** tlačítek:
 * `clicked`
@@ -110,38 +113,24 @@ Ukázka zachycuje hlášení hlavního firmwaru:
 {
   "message": {
     "version": 1,
-    "sequence": 1,
-    "timestamp": 1672910024
+    "sequence": 57,
+    "timestamp": 1793610878
   },
   "attribute": {
     "vendor_name": "HARDWARIO",
     "product_name": "CHESTER-M",
-    "hw_variant": "CDGLS",
-    "hw_revision": "R3.2",
-    "fw_name": "CHESTER Push",
-    "fw_version": "v1.4.0",
+    "hw_variant": "CGLS",
+    "hw_revision": "R3.4",
+    "fw_version": "v4.0.1",
     "serial_number": "2159018247"
   },
   "system": {
-    "uptime": 173,
-    "voltage_rest": 3.96,
-    "voltage_load": 3.86,
-    "current_load": 38
-  },
-  "backup": {
-    "line_voltage": 0.01,
-    "batt_voltage": 3.43,
-    "state": "disconnected",
-    "events": [
-      {
-        "timestamp": 1672910010,
-        "type": "disconnected"
-      }
-    ]
+    "uptime": 98436,
+    "voltage_rest": 4.31,
+    "voltage_load": 4.27,
+    "current_load": 42
   },
   "network": {
-    "imei": 351358815178303,
-    "imsi": 901288003957939,
     "parameter": {
       "eest": 7,
       "ecl": 0,
@@ -155,49 +144,54 @@ Ukázka zachycuje hlášení hlavního firmwaru:
     }
   },
   "thermometer": {
-    "temperature": 21.56
+    "temperature": 22.56
   },
   "accelerometer": {
-    "acceleration_x": -0.31,
-    "acceleration_y": 0.15,
-    "acceleration_z": 9.88,
+    "accel_x": -0.31,
+    "accel_y": 0.15,
+    "accel_z": 9.88,
     "orientation": 2
   },
-  "button_x": {
-    "count_click": 0,
-    "count_hold": 0,
+  "backup": {
+    "line_voltage": 23952,
+    "batt_voltage": 4118,
+    "state": "connected",
     "events": []
   },
-  "button_1": {
-    "count_click": 3,
-    "count_hold": 1,
-    "events": [
-      {
-        "timestamp": 1672910020,
-        "type": "held"
-      }
-    ]
-  },
-  "button_2": {
-    "count_click": 12,
-    "count_hold": 0,
-    "events": [
-      {
-        "timestamp": 1672910023,
-        "type": "clicked"
-      }
-    ]
-  },
-  "button_3": {
-    "count_click": 0,
-    "count_hold": 0,
-    "events": []
-  },
-  "button_4": {
-    "count_click": 0,
-    "count_hold": 0,
-    "events": []
-  }
+  "buttons": [
+    {
+      "button": "button_x",
+      "count_click": 0,
+      "count_hold": 0
+    },
+    {
+      "button": "button_1",
+      "count_click": 3,
+      "count_hold": 0
+    },
+    {
+      "button": "button_2",
+      "count_click": 12,
+      "count_hold": 1,
+      "events": [
+        {
+          "timestamp": 1793610877,
+          "type": "held"
+        }
+      ]
+    },
+    {
+      "button": "button_3",
+      "count_click": 0,
+      "count_hold": 0
+    },
+    {
+      "button": "button_4",
+      "count_click": 0,
+      "count_hold": 0
+    }
+  ],
+  "ble_tags": []
 }
 ```
 
@@ -206,30 +200,50 @@ Ukázka zachycuje hlášení hlavního firmwaru:
   </TabItem>
   <TabItem value="lora" label="LoRaWAN">
 
+Dekodér LoRaWAN aplikace převede zprávu odeslanou ve stejný okamžik na tato pole: čítače a příznaky stisku každého tlačítka, napětí záložního modulu ve voltech a `backup_state` jako text.
+
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
 
 ```json
 {
-  "voltage_rest": 3.8,
-  "voltage_load": 3.75,
-  "current_load": 15,
-  "orientation": 1,
-  "therm_temperature": 22.5,
+  "voltage_rest": 4.31,
+  "voltage_load": 4.27,
+  "current_load": 42,
+  "orientation": 2,
+  "therm_temperature": 22.56,
   "backup": {
-    "line_voltage": 24.0,
-    "battery_voltage": 4.1,
-    "backup_state": true
+    "line_voltage": 23.952,
+    "battery_voltage": 4.118,
+    "backup_state": "connected"
   },
   "button_x": {
-    "press_count": 42,
-    "hold_count": 3,
-    "press_event": true,
+    "press_count": 0,
+    "hold_count": 0,
+    "press_event": false,
     "hold_event": false
   },
   "button_1": {
-    "press_count": 10,
+    "press_count": 3,
+    "hold_count": 0,
+    "press_event": false,
+    "hold_event": false
+  },
+  "button_2": {
+    "press_count": 12,
     "hold_count": 1,
+    "press_event": false,
+    "hold_event": true
+  },
+  "button_3": {
+    "press_count": 0,
+    "hold_count": 0,
+    "press_event": false,
+    "hold_event": false
+  },
+  "button_4": {
+    "press_count": 0,
+    "hold_count": 0,
     "press_event": false,
     "hold_event": false
   }

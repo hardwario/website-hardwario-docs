@@ -14,15 +14,15 @@ Firmware některých katalogových aplikací umí komunikovat přes síť NB-IoT
 
 Nastavení `app mode` je zatím potřeba u těchto katalogových aplikací:
 
-- [CHESTER Clime](chester-clime/index.md)
-- [CHESTER Control](chester-control/index.md)
-- [CHESTER Push](chester-push/index.md)
-- [CHESTER Current](chester-current/index.md)
-- [CHESTER Scale](chester-scale/index.md)
-- [CHESTER Meteo](chester-meteo/index.md)
-- [CHESTER Serial](chester-serial/index.md)
+- [CHESTER Clime](../firmware/chester-clime/index.md)
+- [CHESTER Control](../firmware/chester-control/index.md)
+- [CHESTER Push](../firmware/chester-push/index.md)
+- [CHESTER Current](../firmware/chester-current/index.md)
+- [CHESTER Scale](../firmware/chester-scale/index.md)
+- [CHESTER Meteo](../firmware/chester-meteo/index.md)
+- [CHESTER Serial](../firmware/chester-serial/index.md)
 
-Aplikace [CHESTER Demo](chester-demo/index.md), [CHESTER Motion](chester-motion/index.md), [CHESTER Range](chester-range/index.md) a [CHESTER wM-Bus](chester-wm-bus/index.md) komunikují jen přes NB-IoT/LTE a startují v režimu `lte`, takže u nich režim nastavovat nemusíte.
+Aplikace [CHESTER Demo](../firmware/chester-demo/index.md), [CHESTER Motion](../firmware/chester-motion/index.md), [CHESTER Range](../firmware/chester-range/index.md) a [CHESTER wM-Bus](../firmware/chester-wm-bus/index.md) komunikují jen přes NB-IoT/LTE a startují v režimu `lte`, takže u nich režim nastavovat nemusíte.
 
 Ve výchozím stavu zařízení **nepoužívá žádné rádio** (režim `none`) a je potřeba nastavit konfigurační parametr **mode**.
 
@@ -89,18 +89,71 @@ Příkaz `config save` se z cloudu neposílá.
 
 Většina firmwaru katalogových aplikací má tyto konfigurační parametry společné. Stránka každého firmwaru uvádí všechny parametry svého sestavení i s výchozími hodnotami, které se mezi aplikacemi liší: například `interval-report` je u aplikací CHESTER Current a CHESTER Scale 900 s, jinde 1800 s.
 
-| Parametr | Hodnoty | Význam | Kde |
-| :--- | :--- | :--- | :--- |
-| `mode` | `none`, `lte`, `lrw` | Síť: žádná, NB-IoT/LTE nebo LoRaWAN (viz [Konfigurace režimu sítě](#network-mode-configuration)) | Každý firmware; Demo, Motion, Range a wM-Bus nabízejí jen `none` a `lte` |
-| `interval-sample` | `<1-86400>` | Interval vzorkování v sekundách | Každý firmware kromě Control a wM-Bus |
-| `interval-aggreg` | `<1-86400>` | Interval agregace v sekundách; počítá se za něj minimum, maximum, průměr a medián | Každý firmware kromě Control, Motion a wM-Bus |
-| `interval-report` | `<30-86400>` | Interval hlášení v sekundách | Každý firmware kromě wM-Bus; Serial přijme i `0` |
-| `interval-poll` | `<0-86400>` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne | Každý firmware kromě wM-Bus, který má vlastní `poll-interval`; Serial hodnotu uloží, ale nepoužívá |
-| `downlink-wdg-interval` | `<0-1209600>` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne | Každý firmware kromě Demo, Motion a Serial |
-| `event-report-delay` | `<1-86400>` | Prodleva mezi událostí a hlášením v sekundách | Firmware, který hlásí události (alarmy, vstupy, záložní napájení) |
-| `event-report-rate` | `<1-3600>` | Nejvyšší počet hlášení událostí za hodinu; pravidelná hlášení se do limitu nepočítají | Firmware, který hlásí události |
-| `backup-report-connected` | `true`, `false` | Hlásit okamžitě obnovení externího napájení | Sestavení s modulem CHESTER-Z nebo CHESTER-X10 |
-| `backup-report-disconnected` | `true`, `false` | Hlásit okamžitě výpadek externího napájení | Sestavení s modulem CHESTER-Z nebo CHESTER-X10 |
+Sloupec **HARDWARIO Manager** uvádí název, pod kterým parametr zobrazuje aplikace HARDWARIO Manager; aplikace názvy parametrů zobrazuje anglicky.
+
+| Parametr | HARDWARIO Manager | Hodnoty | Význam | Kde |
+| :--- | :--- | :--- | :--- | :--- |
+| `mode` | Mode | `none`, `lte`, `lrw` | Síť: žádná, NB-IoT/LTE nebo LoRaWAN (viz [Konfigurace režimu sítě](#network-mode-configuration)) | Každý firmware; Demo, Motion, Range a wM-Bus nabízejí jen `none` a `lte` |
+| `interval-sample` | Sample interval | `<1-86400>` | Interval vzorkování v sekundách | Každý firmware kromě Control a wM-Bus |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | Interval agregace v sekundách; počítá se za něj minimum, maximum, průměr a medián | Každý firmware kromě Control, Motion a wM-Bus |
+| `interval-report` | Report interval | `<30-86400>` | Interval hlášení v sekundách | Každý firmware kromě wM-Bus; Serial přijme i `0` |
+| `interval-poll` | Poll interval | `<0-86400>` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne | Každý firmware kromě wM-Bus, který má vlastní `poll-interval`; Serial hodnotu uloží, ale nepoužívá |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne | Každý firmware kromě Demo, Motion a Serial |
+| `event-report-delay` | Event report delay | `<1-86400>` | Prodleva mezi událostí a hlášením v sekundách | Firmware, který hlásí události (alarmy, vstupy, záložní napájení) |
+| `event-report-rate` | Event report rate | `<1-3600>` | Nejvyšší počet hlášení událostí za hodinu (firmware v4.0.1 jich pošle až o jedno víc); pravidelná hlášení se do limitu nepočítají | Firmware, který hlásí události |
+| `backup-report-connected` | Backup report connected | `true`, `false` | Hlásit okamžitě obnovení externího napájení | Sestavení s modulem CHESTER-Z nebo CHESTER-X10 |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | Hlásit okamžitě výpadek externího napájení | Sestavení s modulem CHESTER-Z nebo CHESTER-X10 |
+
+## Společná data {#common-data}
+
+Tyto hodnoty odesílá každá katalogová aplikace CHESTER. Stránka každé aplikace popisuje jen to, co aplikace odesílá navíc (viz [Katalogové aplikace](index.md)).
+
+### Přes NB-IoT/LTE {#common-data-lte}
+
+Každé hlášení obsahuje tyto struktury:
+
+| Klíč | Význam | Jednotka | Rozsah | Rozlišení |
+| :--- | :--- | :--- | :--- | :--- |
+| `message.version` | Verze formátu zprávy: `2` u aplikací CHESTER Clime, CHESTER Motion, CHESTER Range a CHESTER Serial, `1` u aplikací CHESTER Control, CHESTER Current, CHESTER Meteo, CHESTER Push a CHESTER Scale | | `1`, `2` | |
+| `message.sequence` | Počítadlo zpráv, po restartu začíná od 0 | | 0–4294967295 | 1 |
+| `message.timestamp` | Čas hlášení (unixový čas) | s | | 1 s |
+| `system.uptime` | Doba od startu zařízení | s | | 1 s |
+| `system.voltage_rest` | Napětí baterie bez zátěže | V | 2,0–5,25 | 0,01 V |
+| `system.voltage_load` | Napětí baterie pod testovací zátěží | V | 2,0–5,25 | 0,01 V |
+| `system.current_load` | Proud testovací zátěží 100 Ω, dopočítaný z `voltage_load` | mA | 20–52 | 1 mA |
+| `network.parameter.eest` | Odhad energetické náročnosti spojení LTE; vyšší hodnota znamená menší spotřebu na přenos | | 5–9 | 1 |
+| `network.parameter.ecl` | Úroveň rozšíření pokrytí (coverage enhancement) | | 0–2 | 1 |
+| `network.parameter.rsrp` | Výkon přijímaného referenčního signálu (RSRP) | dBm | přibližně −157 až −44 | 1 dBm |
+| `network.parameter.rsrq` | Kvalita přijímaného referenčního signálu (RSRQ) | dB | přibližně −19 až −3 | 1 dB |
+| `network.parameter.snr` | Odstup signálu od šumu | dB | přibližně −24 až 25 | 1 dB |
+| `network.parameter.plmn` | Kód operátora (MCC a MNC), například `23003` | | | |
+| `network.parameter.cid` | Identifikátor buňky | | | |
+| `network.parameter.band` | Pásmo LTE | | | |
+| `network.parameter.earfcn` | Číslo kanálu (EARFCN) | | | |
+| `thermometer.temperature` | Teplota uvnitř krabičky (TMP112 na základní desce) | °C | −40 až 125 | 0,01 °C |
+| `accelerometer.accel_x`, `accel_y`, `accel_z` | Zrychlení v jednotlivých osách (LIS2DH12, rozsah ±4 g) | m/s² | −39,2 až 39,2 | 0,01 m/s² |
+| `accelerometer.orientation` | Orientace zařízení | | 1–6 | |
+
+Hodnoty sítě pocházejí z vyhodnocení spojení v modemu (`%CONEVAL`) a odesílají se jen v režimu NB-IoT/LTE.
+
+Hodnoty baterie ve struktuře `system` se měří 60 s po startu a pak každých 12 hodin. Struktury `thermometer` a `accelerometer` obsahují poslední vzorek.
+
+Dvě aplikace odesílají tytéž hodnoty pod jinými klíči:
+
+- Aplikace CHESTER Meteo odesílá zrychlení jako `accelerometer.acceleration_x`, `acceleration_y` a `acceleration_z`.
+- Aplikace CHESTER wM-Bus odesílá místo struktury `message` klíče `frame.protocol` (hodnota `3`), `frame.sequence` a `frame.timestamp`, místo `system.uptime` klíč `state.uptime` a hodnoty baterie ve struktuře `battery` (`battery.voltage_rest`, `battery.voltage_load` a `battery.current_load`) místo ve struktuře `system`.
+
+### Přes LoRaWAN {#common-data-lorawan}
+
+Aplikace s podporou LoRaWAN (CHESTER Clime, CHESTER Control, CHESTER Current, CHESTER Meteo, CHESTER Push, CHESTER Scale a CHESTER Serial) posílají v každé zprávě tato pole, jak je vrací dekodér HARDWARIO Cloud:
+
+| Klíč | Význam | Jednotka | Rozsah | Rozlišení |
+| :--- | :--- | :--- | :--- | :--- |
+| `voltage_rest` | Napětí baterie bez zátěže | V | 2,0–5,25 | 0,001 V |
+| `voltage_load` | Napětí baterie pod testovací zátěží | V | 2,0–5,25 | 0,001 V |
+| `current_load` | Proud testovací zátěží 100 Ω, dopočítaný z `voltage_load` | mA | 20–52 | 1 mA |
+| `orientation` | Orientace zařízení | | 1–6 | |
+| `therm_temperature` | Teplota uvnitř krabičky (TMP112 na základní desce) | °C | −40 až 125 | 0,01 °C |
 
 ## Detekce CHESTER-Z za běhu {#runtime-chester-z-detection}
 
@@ -112,7 +165,7 @@ Od firmwaru **v3.5.4** umí některé aplikace rozpoznat záložní modul CHESTE
 
 Aplikace s detekcí CHESTER-Z za běhu:
 
-- [CHESTER Clime](chester-clime/index.md)
+- [CHESTER Clime](../firmware/chester-clime/index.md)
 
 :::note
 Ostatní aplikace dostanou detekci modulu Z za běhu postupně v dalších verzích firmwaru.
@@ -137,7 +190,7 @@ Jak tuto funkci zapnout a nastavit, popisuje stránka [**Bluetooth tagy**](ble-t
 
 ## Rozptyl intervalu hlášení {#report-interval-jitter}
 
-Firmware CHESTER Clime, CHESTER Demo, CHESTER Motion, CHESTER Range a CHESTER Scale přidává k pravidelnému odesílání dat v intervalu `interval-report` záměrný rozptyl (jitter). Když je blízko sebe hodně zařízení CHESTER se stejným intervalem, díky rozptylu nevysílají všechna ve stejnou chvíli. Rozptyl je náhodný v rozsahu ±20 % hodnoty `interval-report`. Aplikace CHESTER Control, CHESTER Current, CHESTER Meteo, CHESTER Push, CHESTER Serial a CHESTER wM-Bus odesílají v pevném intervalu.
+Firmware CHESTER Clime, CHESTER Control, CHESTER Demo, CHESTER Meteo, CHESTER Motion, CHESTER Range a CHESTER Scale přidává k pravidelnému odesílání dat v intervalu `interval-report` záměrný rozptyl (jitter). Když je blízko sebe hodně zařízení CHESTER se stejným intervalem, díky rozptylu nevysílají všechna ve stejnou chvíli. Rozptyl je náhodný v rozsahu ±20 % hodnoty `interval-report`. Aplikace CHESTER Current, CHESTER Push a CHESTER Serial odesílají v pevném intervalu. Aplikace CHESTER wM-Bus parametr `interval-report` nemá: data z měřičů odešle na konci každého skenování.
 
 Je-li například `interval-report` nastavený na 100 sekund, může mezi dvěma pravidelnými zprávami uplynout 80 (-20 %) až 120 (+20 %) sekund.
 

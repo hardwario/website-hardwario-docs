@@ -25,27 +25,47 @@ description: "Firmware CHESTER Current Z: čím se liší od hlavního firmwaru 
 
 Přidané parametry pro záložní modul:
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `event-report-delay` | `<1-86400>` | `1` | Prodleva mezi změnou napájení a hlášením v sekundách |
-| `event-report-rate` | `<1-3600>` | `30` | Nejvyšší počet hlášení událostí za hodinu; pravidelná hlášení se do limitu nepočítají |
-| `backup-report-connected` | `true`, `false` | `true` | Hlásit okamžitě obnovení externího napájení |
-| `backup-report-disconnected` | `true`, `false` | `true` | Hlásit okamžitě výpadek externího napájení |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `event-report-delay` | Event report delay | `<1-86400>` | `1` | Prodleva mezi změnou napájení a hlášením v sekundách |
+| `event-report-rate` | Event report rate | `<1-3600>` | `30` | Nejvyšší počet hlášení událostí za hodinu (firmware v4.0.1 jich pošle až o jedno víc); pravidelná hlášení se do limitu nepočítají |
+| `backup-report-connected` | Backup report connected | `true`, `false` | `true` | Hlásit okamžitě obnovení externího napájení |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | `true` | Hlásit okamžitě výpadek externího napájení |
 
 Ostatní parametry jsou stejné.
 
 ### Data {#data}
 
-Hlášení navíc obsahuje strukturu `backup`:
+Hlášení navíc obsahuje strukturu `backup`. Každé pole včetně jednotky, rozsahu a rozlišení popisuje katalogová stránka v části [**CHESTER Current Z**](../../catalog-applications/chester-current/index.md#chester-current-z).
 
 | Klíč | Hodnota |
 | :--- | :--- |
 | `line_voltage` | Napětí externího vstupu DC ve V |
 | `batt_voltage` | Napětí záložní baterie ve V |
 | `state` | `connected`, když je externí napájení připojené, jinak `disconnected` |
-| `events` | Změny napájení od posledního hlášení, každá s klíči `timestamp` a `type` (`connected`, `disconnected`) |
+| `events` | Změny napájení od posledního hlášení (nejvýše 32), každá s klíči `timestamp` a `type` (`connected`, `disconnected`) |
 
-V režimu LoRaWAN má hlavička nastavený příznak BACKUP (bit 4) a payload navíc obsahuje externí napětí a napětí baterie v mV (po 2 bajtech) a stav (1 bajt), a to mezi teploměry 1-Wire a kanály.
+V režimu LoRaWAN má hlavička nastavený příznak BACKUP (bit 4) a payload navíc obsahuje externí napětí a napětí baterie v mV (po 2 bajtech) a stav (1 bajt), a to mezi teploměry 1-Wire a kanály. Dekodér je vrací jako `backup.line_voltage` a `backup.battery_voltage` ve V a `backup.backup_state` (`connected`, `disconnected`).
+
+Ukázka zachycuje strukturu `backup` v hlášení, které následuje po obnovení externího napájení:
+
+<details>
+<summary><b>Zobrazit ukázku JSON</b></summary>
+
+```json
+{
+  "backup": {
+    "line_voltage": 24.01,
+    "batt_voltage": 4.09,
+    "state": "connected",
+    "events": [
+      { "timestamp": 1793960915, "type": "connected" }
+    ]
+  }
+}
+```
+
+</details>
 
 ## Sestavení firmwaru {#firmware-build}
 

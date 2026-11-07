@@ -16,7 +16,7 @@ description: "Firmware CHESTER Scale Z: čím se liší od hlavního firmwaru CH
 
 ### Chování {#behavior}
 
-* Aktuální **napětí baterie** a **napětí externího zdroje DC** se posílají v každém hlášení.
+* Aktuální **napětí baterie** a **napětí externího zdroje DC** se posílají v každém hlášení přes LTE.
 * Při změně na napájecím vstupu DC se uloží časová značka změny spolu se stavem **connected**/**disconnected**. Události se ukládají do bufferu (nejvýše 32) a odešlou se nejpozději s pravidelným hlášením (parametr `interval-report`).
 * Změny napájecího vstupu DC do stavu **connected** (parametr `backup-report-connected`) nebo **disconnected** (parametr `backup-report-disconnected`) lze volitelně hlásit **okamžitě** nebo s nastavitelným **zpožděním** (parametr `event-report-delay`), aby se do hlášení vešlo i více změn krátce po sobě.
 * Maximální počet hlášení událostí za hodinu lze nastavit (parametr `event-report-rate`). Pravidelná hlášení podle parametru `interval-report` se do něj nepočítají.
@@ -25,18 +25,20 @@ description: "Firmware CHESTER Scale Z: čím se liší od hlavního firmwaru CH
 
 Přidané parametry pro záložní modul:
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `event-report-delay` | `<1-86400>` | `1` | Prodleva mezi změnou napájení a hlášením v sekundách |
-| `event-report-rate` | `<1-3600>` | `30` | Nejvyšší počet hlášení událostí za hodinu; pravidelná hlášení se do limitu nepočítají |
-| `backup-report-connected` | `true`, `false` | `true` | Hlásit okamžitě obnovení externího napájení |
-| `backup-report-disconnected` | `true`, `false` | `true` | Hlásit okamžitě výpadek externího napájení |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `event-report-delay` | Event report delay | `<1-86400>` | `1` | Prodleva mezi změnou napájení a hlášením v sekundách |
+| `event-report-rate` | Event report rate | `<1-3600>` | `30` | Nejvyšší počet hlášení událostí za hodinu (firmware v4.0.1 jich pošle až o jedno víc); pravidelná hlášení se do limitu nepočítají |
+| `backup-report-connected` | Backup report connected | `true`, `false` | `true` | Hlásit okamžitě obnovení externího napájení |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | `true` | Hlásit okamžitě výpadek externího napájení |
 
 Ostatní parametry jsou stejné.
 
 ### Data {#data}
 
-Hlášení navíc obsahuje strukturu `backup` s napětím externího vstupu DC (`line_voltage`) a záložní baterie (`batt_voltage`) v mV, stavem `state` (`connected` nebo `disconnected`) a událostmi `events` od posledního hlášení, každou s klíči `timestamp` a `type` (`connected`, `disconnected`). Uplinky LoRaWAN data záložního napájení nenesou.
+Hlášení navíc obsahuje strukturu `backup` s napětím externího vstupu DC (`line_voltage`) a záložní baterie (`batt_voltage`) v mV, stavem `state` (`connected` nebo `disconnected`) a událostmi `events` od posledního hlášení (nejvýše 32), každou s klíči `timestamp` a `type` (`connected`, `disconnected`). Firmware CHESTER Current Z posílá stejná napětí ve V. Uplinky LoRaWAN data záložního napájení nenesou. Každé pole včetně jednotky, rozsahu a rozlišení popisuje katalogová stránka v části [**CHESTER Scale Z**](../../catalog-applications/chester-scale/index.md#chester-scale-z).
+
+Ukázka zachycuje strukturu `backup` v hlášení, které následuje po obnovení externího napájení:
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
@@ -47,7 +49,9 @@ Hlášení navíc obsahuje strukturu `backup` s napětím externího vstupu DC (
     "line_voltage": 24010,
     "batt_voltage": 4090,
     "state": "connected",
-    "events": []
+    "events": [
+      { "timestamp": 1793960915, "type": "connected" }
+    ]
   }
 }
 ```

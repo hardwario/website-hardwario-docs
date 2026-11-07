@@ -7,7 +7,7 @@ description: "Firmware CHESTER Demo: minimální aplikace pro NB-IoT/LTE, která
 
 Firmware **CHESTER Demo** je minimální aplikace pro HARDWARIO Cloud. Čte teploměr, akcelerometr a baterii zařízení CHESTER, hodnoty odesílá přes NB-IoT/LTE a podle zprávy downlink přepíná LED. Stránku katalogové aplikace nemá; jeho zdrojový kód najdete v CHESTER SDK v adresáři [`applications/demo`](https://github.com/hardwario/chester-sdk/tree/v4.0.1/applications/demo).
 
-LED, tlačítko a příkazy konzole fungují tak, jak popisuje článek [**Společné funkce**](../common-functionality.md).
+LED, tlačítko a příkazy konzole fungují tak, jak popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md).
 
 ## Podporovaný hardware {#supported-hardware}
 
@@ -17,7 +17,7 @@ Firmwaru stačí základní deska **CHESTER-M** s modemem NB-IoT/LTE (viz [**CHE
 
 - Teploměr a akcelerometr se **vzorkují** v intervalu vzorkování (parametr `interval-sample`). Hlášení obsahuje poslední vzorek; firmware neagreguje.
 - Napětí baterie v klidu a pod zátěží a zátěžový proud se měří 60 sekund po startu a potom každých 12 hodin.
-- Hlášení se odesílá v intervalu hlášení (parametr `interval-report`) s náhodným [**rozptylem intervalu hlášení**](../common-functionality.md#report-interval-jitter).
+- Hlášení se odesílá v intervalu hlášení (parametr `interval-report`) s náhodným [**rozptylem intervalu hlášení**](../../catalog-applications/common-functionality.md#report-interval-jitter).
 - Zařízení se ve výchozím nastavení ptá HARDWARIO Cloud na zprávy downlink každých 60 sekund (parametr `interval-poll`).
 - Příkaz `gnss start` spustí přijímač GNSS. Firmware každou aktualizaci polohy zapíše do logu, polohu ale neodesílá.
 
@@ -36,14 +36,14 @@ Firmwaru stačí základní deska **CHESTER-M** s modemem NB-IoT/LTE (viz [**CHE
 
 Parametr nastavíte příkazem `app config <parametr> <hodnota>` a změnu uplatníte příkazem `config save`, který konfiguraci uloží a restartuje zařízení. Aktuální hodnoty vypíše příkaz `app config show`.
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Interval vzorkování v sekundách |
-| `interval-aggreg` | `<1-86400>` | `300` | Interval agregace v sekundách; firmware v4.0.1 hodnotu uloží, ale nepoužívá ji |
-| `interval-report` | `<30-86400>` | `1800` | Interval hlášení v sekundách |
-| `interval-poll` | `<0-86400>` | `60` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Interval vzorkování v sekundách |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | `300` | Interval agregace v sekundách; firmware v4.0.1 hodnotu uloží, ale nepoužívá ji |
+| `interval-report` | Report interval | `<30-86400>` | `1800` | Interval hlášení v sekundách |
+| `interval-poll` | Poll interval | `<0-86400>` | `60` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
 
-Síťový režim (`app config mode`) popisuje článek [**Společné funkce**](../common-functionality.md#network-mode-configuration). Firmware CHESTER Demo nabízí jen režimy `none` a `lte` a startuje v režimu `lte`.
+Síťový režim (`app config mode`) popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md#network-mode-configuration). Firmware CHESTER Demo nabízí jen režimy `none` a `lte` a startuje v režimu `lte`.
 
 ## Příkazy {#commands}
 

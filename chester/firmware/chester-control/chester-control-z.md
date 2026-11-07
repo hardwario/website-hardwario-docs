@@ -30,16 +30,29 @@ The backup module reports the state of the backup battery and of the external DC
 
 Added parameters for the backup module:
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `backup-report-connected` | `true`, `false` | `true` | Report immediately when external power returns |
-| `backup-report-disconnected` | `true`, `false` | `true` | Report immediately when external power fails |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `backup-report-connected` | Backup report connected | `true`, `false` | `true` | Report immediately when external power returns |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | `true` | Report immediately when external power fails |
 
 The `event-report-delay` and `event-report-rate` parameters also apply to the backup power events. All other parameters are the same.
 
 ### Data
 
-The report adds a `backup` structure with the external line voltage (`line_voltage`), the backup battery voltage (`batt_voltage`), the power `state` (`connected` or `disconnected`) and the power `events`. LoRaWAN messages do not carry the backup data.
+The report adds a `backup` structure with the voltage of the external DC input (`line_voltage`) and of the backup battery (`batt_voltage`) in volts, the power `state` (`connected` or `disconnected`) and the power `events` since the previous report. The decoder of this firmware does not split `events` into entries, so HARDWARIO Cloud shows a list of numbers: the Unix time of the first change, then two numbers for each change, its offset from that time in seconds and `1` (connected) or `0` (disconnected). In this example, external power failed and returned 95 seconds later:
+
+```json
+{
+  "backup": {
+    "line_voltage": 24.02,
+    "batt_voltage": 4.11,
+    "state": "connected",
+    "events": [1793944910, 0, 0, 95, 1]
+  }
+}
+```
+
+The ranges and resolutions are described on the catalog page under [**CHESTER Control Z**](../../catalog-applications/chester-control/index.md#chester-control-z). LoRaWAN messages do not carry the backup data.
 
 ## Firmware Build
 

@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 **CHESTER SDK Project Generator** spravuje **varianty** katalogových aplikací a generuje jejich konfiguraci ze souboru **YAML**. Jednotlivé varianty najdete v souborech `project.yaml`.
 
-Soubory projektu pak aktualizujete příkazem `west chester-update --variant "CHESTER Clime 1W"` a projekt znovu zkompilujete příkazem `west build`.
+Soubory projektu pak aktualizujete příkazem `west chester-update --variant "CHESTER Clime IAQ"` a projekt znovu zkompilujete příkazem `west build`.
 
 ## Příkaz WEST {#west-command}
 
@@ -22,7 +22,7 @@ Soubory projektu pak aktualizujete příkazem `west chester-update --variant "CH
 
 Příklady:
 
-`west chester-update clime --variant chester-clime-z`
+`west chester-update clime --variant chester-clime-iaq`
 
 `west chester-update clime --variant chester-clime-rtd --version v3.2.1`
 

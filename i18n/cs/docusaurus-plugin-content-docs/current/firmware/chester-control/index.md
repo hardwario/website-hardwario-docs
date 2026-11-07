@@ -11,7 +11,7 @@ Firmware **CHESTER Control** měří a sleduje analogové a digitální vstupy. 
 
 Tato stránka popisuje hlavní firmware. Varianty sestavené pro jiný hardware mají vlastní stránky, které uvádějí jen to, co mění: [**CHESTER Control Z**](chester-control-z.md) a [**CHESTER Control 8Ch Z**](chester-control-8ch-z.md).
 
-Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../common-functionality.md). Hardware a varianty produktu najdete na stránce katalogové aplikace [**CHESTER Control**](../../catalog-applications/chester-control/index.md).
+Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim, tagy BLE a příkazy konzole), popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md). Hardware a varianty produktu najdete na stránce katalogové aplikace [**CHESTER Control**](../../catalog-applications/chester-control/index.md).
 
 ## Podporovaný hardware {#supported-hardware}
 
@@ -21,7 +21,7 @@ Hlavní firmware podporuje:
 - modul **CHESTER-X4** ve slotu B: čtyři výstupy spínané z HARDWARIO Cloud (viz [**CHESTER-X4**](../../extension-modules/chester-x4.md))
 - teploměry **DS18B20** 1-Wire, nejvýše pět
 - půdní senzory 1-Wire, které měří teplotu a vlhkost, nejvýše tři
-- bluetoothové senzorové tagy (viz [**Tagy BLE**](../ble-tags.md))
+- bluetoothové senzorové tagy (viz [**Tagy BLE**](../../catalog-applications/ble-tags.md))
 
 Hlášení ze záložního modulu **CHESTER-Z** vyžaduje firmware [**CHESTER Control Z**](chester-control-z.md) nebo [**CHESTER Control 8Ch Z**](chester-control-8ch-z.md). Zdrojový kód obsahuje i podporu vlhkoměru **CHESTER-S2** s vlastními intervaly vzorkování a agregace (`hygro-interval-sample`, `hygro-interval-aggreg`), žádné sestavení v4.0.1 ji ale nezahrnuje.
 
@@ -32,7 +32,7 @@ Hlášení ze záložního modulu **CHESTER-Z** vyžaduje firmware [**CHESTER Co
 - Mezi dvěma hlášeními si každý kanál typu trigger uchová nejvýše 128 událostí a každý kanál typu counter, voltage a current nejvýše 64 agregovaných hodnot; další se až do příštího hlášení zahazují.
 - Teploměry DS18B20 a půdní senzory se vzorkují a agregují podle parametrů `w1-therm-interval-sample` a `w1-therm-interval-aggreg`, bluetoothové tagy podle parametrů `analog-interval-sample` a `analog-interval-aggreg`.
 - Žlutá LED krátce blikne při každé změně vstupu trigger a při každém započítaném impulzu, nejvýše pětkrát za sekundu. Bliká 30 minut od první změny, pak přestane a znovu začne až s první změnou po 30 minutách bez aktivity na vstupech. Při instalaci tak snadno zkontrolujete zapojení.
-- Tlačítko funguje podle článku [**Společné funkce**](../common-functionality.md#button-behaviour) se dvěma rozdíly: dva stisky místo vzorkování požádají HARDWARIO Cloud o zprávy downlink a šest stisků zapne všechny čtyři výstupy modulu CHESTER-X4.
+- Tlačítko funguje podle článku [**Společné funkce**](../../catalog-applications/common-functionality.md#button-behaviour) se dvěma rozdíly: dva stisky místo vzorkování požádají HARDWARIO Cloud o zprávy downlink a šest stisků zapne všechny čtyři výstupy modulu CHESTER-X4.
 
 ### Trigger {#trigger}
 
@@ -70,7 +70,7 @@ Vstup **counter** lze připojit k výstupu PLC/senzoru (NPN/PNP), tlačítku, sp
 
 ### Voltage {#voltage}
 
-Vstup **voltage** měří napětí v rozsahu **0–28 V** (pokrývá standard **0–10 V**).
+Vstup **voltage** měří napětí v rozsahu **0–26 V** (pokrývá standard **0–10 V**).
 
 * Napětí se pravidelně vzorkuje (parametr `analog-interval-sample`) a naměřené hodnoty se ukládají do **bufferu vzorků**.
 
@@ -111,36 +111,36 @@ Zařízení se HARDWARIO Cloud ptá na zprávy downlink každých `interval-poll
 
 Parametr nastavíte příkazem `app config <parametr> <hodnota>` a změnu uplatníte příkazem `config save`, který konfiguraci uloží a restartuje zařízení. Aktuální hodnoty vypíše příkaz `app config show`.
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `interval-report` | `<30-86400>` | `1800` | Interval hlášení v sekundách |
-| `interval-poll` | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
-| `downlink-wdg-interval` | `<0-1209600>` | `129600` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
-| `event-report-delay` | `<1-86400>` | `5` | Prodleva mezi událostí na vstupu trigger a hlášením v sekundách; změny, které přijdou během prodlevy, se odešlou ve stejném hlášení |
-| `event-report-rate` | `<1-3600>` | `30` | Nejvyšší počet hlášení událostí za hodinu; pravidelná hlášení se do limitu nepočítají |
-| `channel-mode-1` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 1 (modul CHESTER-X0 ve slotu A, svorka A2) |
-| `channel-mode-2` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 2 (svorka A4) |
-| `channel-mode-3` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 3 (svorka A5) |
-| `channel-mode-4` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 4 (svorka A7) |
-| `trigger-input-type` | `npn`, `pnp` | `npn` | Vstupní logika kanálů typu trigger |
-| `counter-input-type` | `npn`, `pnp` | `npn` | Vstupní logika kanálů typu counter |
-| `trigger-duration-active` | `<0-60000>` | `100` | Minimální trvání aktivní úrovně na vstupu trigger v milisekundách |
-| `trigger-duration-inactive` | `<0-60000>` | `100` | Minimální trvání neaktivní úrovně na vstupu trigger v milisekundách |
-| `trigger-cooldown-time` | `<0-60000>` | `10` | Prodleva po přerušení od vstupu trigger v milisekundách |
-| `trigger-report-active` | `true`, `false` | `false` | Hlásit okamžitě, když vstup trigger přejde do stavu active |
-| `trigger-report-inactive` | `true`, `false` | `false` | Hlásit okamžitě, když vstup trigger přejde do stavu inactive |
-| `counter-interval-aggreg` | `<1-86400>` | `300` | Interval agregace kanálů typu counter v sekundách |
-| `counter-duration-active` | `<0-60000>` | `2` | Minimální trvání aktivní úrovně na vstupu counter v milisekundách |
-| `counter-duration-inactive` | `<0-60000>` | `2` | Minimální trvání neaktivní úrovně na vstupu counter v milisekundách |
-| `counter-cooldown-time` | `<0-60000>` | `10` | Prodleva po přerušení od vstupu counter v milisekundách |
-| `analog-interval-sample` | `<1-86400>` | `60` | Interval vzorkování kanálů typu voltage a current a bluetoothových tagů v sekundách |
-| `analog-interval-aggreg` | `<1-86400>` | `300` | Interval agregace kanálů typu voltage a current a bluetoothových tagů v sekundách |
-| `w1-therm-interval-sample` | `<1-86400>` | `60` | Interval vzorkování teploměrů DS18B20 a půdních senzorů v sekundách |
-| `w1-therm-interval-aggreg` | `<1-86400>` | `300` | Interval agregace teploměrů DS18B20 a půdních senzorů v sekundách |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-report` | Report interval | `<30-86400>` | `1800` | Interval hlášení v sekundách |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | `129600` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
+| `event-report-delay` | Event report delay | `<1-86400>` | `5` | Prodleva mezi událostí na vstupu trigger a hlášením v sekundách; změny, které přijdou během prodlevy, se odešlou ve stejném hlášení |
+| `event-report-rate` | Event report rate | `<1-3600>` | `30` | Nejvyšší počet hlášení událostí za hodinu (firmware v4.0.1 jich pošle až o jedno víc); pravidelná hlášení se do limitu nepočítají |
+| `channel-mode-1` | Channel mode 1 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 1 (modul CHESTER-X0 ve slotu A, svorka A2) |
+| `channel-mode-2` | Channel mode 2 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 2 (svorka A4) |
+| `channel-mode-3` | Channel mode 3 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 3 (svorka A5) |
+| `channel-mode-4` | Channel mode 4 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 4 (svorka A7) |
+| `trigger-input-type` | Trigger input type | `npn`, `pnp` | `npn` | Vstupní logika kanálů typu trigger |
+| `counter-input-type` | Counter input type | `npn`, `pnp` | `npn` | Vstupní logika kanálů typu counter |
+| `trigger-duration-active` | Trigger duration active | `<0-60000>` | `100` | Minimální trvání aktivní úrovně na vstupu trigger v milisekundách |
+| `trigger-duration-inactive` | Trigger duration inactive | `<0-60000>` | `100` | Minimální trvání neaktivní úrovně na vstupu trigger v milisekundách |
+| `trigger-cooldown-time` | Trigger cooldown time | `<0-60000>` | `10` | Prodleva po přerušení od vstupu trigger v milisekundách |
+| `trigger-report-active` | Trigger report active | `true`, `false` | `false` | Hlásit okamžitě, když vstup trigger přejde do stavu active |
+| `trigger-report-inactive` | Trigger report inactive | `true`, `false` | `false` | Hlásit okamžitě, když vstup trigger přejde do stavu inactive |
+| `counter-interval-aggreg` | Counter interval aggreg | `<1-86400>` | `300` | Interval agregace kanálů typu counter v sekundách |
+| `counter-duration-active` | Counter duration active | `<0-60000>` | `2` | Minimální trvání aktivní úrovně na vstupu counter v milisekundách |
+| `counter-duration-inactive` | Counter duration inactive | `<0-60000>` | `2` | Minimální trvání neaktivní úrovně na vstupu counter v milisekundách |
+| `counter-cooldown-time` | Counter cooldown time | `<0-60000>` | `10` | Prodleva po přerušení od vstupu counter v milisekundách |
+| `analog-interval-sample` | Analog interval sample | `<1-86400>` | `60` | Interval vzorkování kanálů typu voltage a current a bluetoothových tagů v sekundách |
+| `analog-interval-aggreg` | Analog interval aggreg | `<1-86400>` | `300` | Interval agregace kanálů typu voltage a current a bluetoothových tagů v sekundách |
+| `w1-therm-interval-sample` | W1 therm interval sample | `<1-86400>` | `60` | Interval vzorkování teploměrů DS18B20 a půdních senzorů v sekundách |
+| `w1-therm-interval-aggreg` | W1 therm interval aggreg | `<1-86400>` | `300` | Interval agregace teploměrů DS18B20 a půdních senzorů v sekundách |
 
-Parametry pro trigger, counter a analogové vstupy se uplatní jen u kanálů v odpovídajícím režimu. Firmware [**CHESTER Control 8Ch Z**](chester-control-8ch-z.md) přidává parametry `channel-mode-5` až `channel-mode-8` pro druhý modul CHESTER-X0 ve slotu B. Parametry `w1-therm-*` se uplatní jen s připojenými teploměry DS18B20 nebo půdními senzory.
+Parametry pro trigger, counter a analogové vstupy se uplatní jen u kanálů v odpovídajícím režimu. Parametry `channel-mode-5` až `channel-mode-8` jsou v každém sestavení firmwaru CHESTER Control, uplatní se ale jen ve firmwaru [**CHESTER Control 8Ch Z**](chester-control-8ch-z.md) s druhým modulem CHESTER-X0 ve slotu B. Parametry `w1-therm-*` se uplatní jen s připojenými teploměry DS18B20 nebo půdními senzory.
 
-Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../common-functionality.md#network-mode-configuration).
+Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md#network-mode-configuration).
 
 ## Příkazy {#commands}
 
@@ -165,129 +165,239 @@ Postup nahrání popisuje článek [**Nahrání firmwaru**](../../firmware-flash
 
 ## Ukázková zpráva JSON {#example-json-message}
 
+Každé pole s jednotkou, rozsahem a rozlišením popisuje stránka katalogové aplikace v části [**Data**](../../catalog-applications/chester-control/index.md#data-over-lte).
+
 <Tabs>
   <TabItem value="lte" label="LTE">
 
-Ukázka zachycuje hlášení s jedním kanálem v každém režimu:
+Ukázka zachycuje hlášení s jedním kanálem v každém režimu, jedním teploměrem DS18B20, jedním půdním senzorem a jedním bluetoothovým tagem. Parametr `interval-report` je nastavený na 600 sekund, takže každý seznam `measurements` obsahuje dva intervaly agregace po 300 sekundách:
 
 - `trigger`: kanál, jeho aktuální stav `state` a události na vstupu `events` (`activated`, `deactivated`) s časovými značkami
 - `counter`: kanál, celkový počet impulzů `value`, počet impulzů od posledního hlášení `delta` a agregovaná měření `measurements` s hodnotami `value` a `delta` za každý interval agregace
 - `voltage` a `current`: kanál a agregovaná měření `measurements` s hodnotami `min`, `max`, `avg` a `mdn` ve V a mA
 
-Teploměry DS18B20, půdní senzory a bluetoothové tagy přidávají struktury `w1_thermometers`, `soil_sensors` a `ble_tags`.
-
-Firmware v4.0.1 se od ukázky liší ve dvou bodech: každé hlášení obsahuje i strukturu `system` s dobou běhu, napětím baterie v klidu a při zátěži a proudem při zátěži a struktura `network` nese místo `imei` a `imsi` parametry připojení LTE v položce `parameter`.
+Seznamy `w1_thermometers`, `soil_sensors` a `ble_tags` jsou v každém hlášení; bez těchto senzorů jsou prázdné.
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
 
 ```json
 {
-    "accelerometer": {
-        "accel_x": 0,
-        "accel_y": 0,
-        "accel_z": 9.57,
-        "orientation": 2
-    },
-    "counter": [
+  "message": {
+    "version": 1,
+    "sequence": 47,
+    "timestamp": 1793945251
+  },
+  "system": {
+    "uptime": 28233,
+    "voltage_rest": 3.61,
+    "voltage_load": 3.55,
+    "current_load": 35
+  },
+  "network": {
+    "parameter": {
+      "eest": 7,
+      "ecl": 0,
+      "rsrp": -89,
+      "rsrq": -9,
+      "snr": 6,
+      "plmn": 23003,
+      "cid": 1011233,
+      "band": 20,
+      "earfcn": 6447
+    }
+  },
+  "thermometer": {
+    "temperature": 22.75
+  },
+  "accelerometer": {
+    "accel_x": 0.04,
+    "accel_y": -0.12,
+    "accel_z": 9.79,
+    "orientation": 2
+  },
+  "trigger": [
+    {
+      "channel": 1,
+      "state": "inactive",
+      "events": [
         {
-            "channel": 2,
-            "delta": 5,
-            "measurements": [
-                {
-                    "timestamp": 1705328041,
-                    "value": 4,
-                    "delta": 2
-                },
-                {
-                    "timestamp": 1705328341,
-                    "value": 7,
-                    "delta": 3
-                }
-            ],
-            "value": 7
-        }
-    ],
-    "current": [
+          "timestamp": 1793944905,
+          "type": "activated"
+        },
         {
-            "channel": 4,
-            "measurements": [
-                {
-                    "avg": 2,
-                    "max": 5.03,
-                    "mdn": 0,
-                    "min": 0,
-                    "timestamp": 1705328341
-                }
-            ]
+          "timestamp": 1793944968,
+          "type": "deactivated"
         }
-    ],
-    "message": {
-        "sequence": 1,
-        "timestamp": 1705328341,
-        "version": 1
-    },
-    "network": {
-        "imei": 351358816128174,
-        "imsi": 901288910100358
-    },
-    "thermometer": {
-        "temperature": 22.75
-    },
-    "trigger": [
+      ]
+    }
+  ],
+  "counter": [
+    {
+      "channel": 2,
+      "value": 1250,
+      "delta": 37,
+      "measurements": [
         {
-            "channel": 1,
-            "events": [
-                {
-                    "timestamp": 1705328233,
-                    "type": "activated"
-                },
-                {
-                    "timestamp": 1705328233,
-                    "type": "deactivated"
-                },
-                {
-                    "timestamp": 1705328233,
-                    "type": "activated"
-                },
-                {
-                    "timestamp": 1705328233,
-                    "type": "deactivated"
-                },
-                {
-                    "timestamp": 1705328234,
-                    "type": "activated"
-                },
-                {
-                    "timestamp": 1705328234,
-                    "type": "deactivated"
-                },
-                {
-                    "timestamp": 1705328234,
-                    "type": "activated"
-                },
-                {
-                    "timestamp": 1705328235,
-                    "type": "deactivated"
-                }
-            ],
-            "state": "inactive"
-        }
-    ],
-    "voltage": [
+          "timestamp": 1793944800,
+          "value": 1228,
+          "delta": 15
+        },
         {
-            "channel": 3,
-            "measurements": [
-                {
-                    "avg": 0.27,
-                    "max": 1.35,
-                    "mdn": 0,
-                    "min": 0,
-                    "timestamp": 1705328341
-                }
-            ]
+          "timestamp": 1793945100,
+          "value": 1246,
+          "delta": 18
         }
-    ]
+      ]
+    }
+  ],
+  "voltage": [
+    {
+      "channel": 3,
+      "measurements": [
+        {
+          "timestamp": 1793944800,
+          "min": 4.81,
+          "max": 4.95,
+          "avg": 4.88,
+          "mdn": 4.87
+        },
+        {
+          "timestamp": 1793945100,
+          "min": 4.84,
+          "max": 5.02,
+          "avg": 4.93,
+          "mdn": 4.92
+        }
+      ]
+    }
+  ],
+  "current": [
+    {
+      "channel": 4,
+      "measurements": [
+        {
+          "timestamp": 1793944800,
+          "min": 12.04,
+          "max": 12.31,
+          "avg": 12.18,
+          "mdn": 12.17
+        },
+        {
+          "timestamp": 1793945100,
+          "min": 12.1,
+          "max": 12.42,
+          "avg": 12.25,
+          "mdn": 12.24
+        }
+      ]
+    }
+  ],
+  "w1_thermometers": [
+    {
+      "serial_number": 222768959,
+      "measurements": [
+        {
+          "timestamp": 1793944800,
+          "min": 18.25,
+          "max": 18.37,
+          "avg": 18.31,
+          "mdn": 18.31
+        },
+        {
+          "timestamp": 1793945100,
+          "min": 18.31,
+          "max": 18.5,
+          "avg": 18.42,
+          "mdn": 18.43
+        }
+      ]
+    }
+  ],
+  "soil_sensors": [
+    {
+      "serial_number": 205416739,
+      "temperature": {
+        "measurements": [
+          {
+            "timestamp": 1793944800,
+            "min": 14.62,
+            "max": 14.75,
+            "avg": 14.69,
+            "mdn": 14.68
+          },
+          {
+            "timestamp": 1793945100,
+            "min": 14.68,
+            "max": 14.81,
+            "avg": 14.74,
+            "mdn": 14.75
+          }
+        ]
+      },
+      "moisture": {
+        "measurements": [
+          {
+            "timestamp": 1793944800,
+            "min": 9612,
+            "max": 9640,
+            "avg": 9625,
+            "mdn": 9624
+          },
+          {
+            "timestamp": 1793945100,
+            "min": 9608,
+            "max": 9633,
+            "avg": 9619,
+            "mdn": 9618
+          }
+        ]
+      }
+    }
+  ],
+  "ble_tags": [
+    {
+      "addr": "c4f312a85b7e",
+      "rssi": -71,
+      "voltage": 2.98,
+      "temperature": {
+        "measurements": [
+          {
+            "timestamp": 1793944800,
+            "min": 21.35,
+            "max": 21.6,
+            "avg": 21.47,
+            "mdn": 21.46
+          },
+          {
+            "timestamp": 1793945100,
+            "min": 21.41,
+            "max": 21.68,
+            "avg": 21.55,
+            "mdn": 21.54
+          }
+        ]
+      },
+      "humidity": {
+        "measurements": [
+          {
+            "timestamp": 1793944800,
+            "min": 41,
+            "max": 43,
+            "avg": 42.2,
+            "mdn": 42
+          },
+          {
+            "timestamp": 1793945100,
+            "min": 42,
+            "max": 43,
+            "avg": 42.6,
+            "mdn": 43
+          }
+        ]
+      }
+    }
+  ]
 }
 ```
 
@@ -312,14 +422,14 @@ Data půdních senzorů se přes LoRaWAN neposílají.
 {
   "voltage_rest": 3.7,
   "voltage_load": 3.65,
-  "current_load": 20,
+  "current_load": 36,
   "orientation": 2,
   "therm_temperature": 23.5,
-  "w1_thermometers": [22.1, 22.3],
+  "w1_thermometers": [22.06, 22.31],
   "ble_tags": [
     {
       "temperature": 21.5,
-      "humidity": 55.0
+      "humidity": 55
     }
   ],
   "inputs_a": [

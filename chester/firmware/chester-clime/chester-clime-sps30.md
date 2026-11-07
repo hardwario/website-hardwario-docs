@@ -20,12 +20,16 @@ The `hygro-t-alarm-*` parameters are not available. All other parameters are the
 
 ### Data
 
+The fields of `sps30`, with their units, ranges and resolutions, are described on the catalog page under [**Particulate Matter Sensor**](../../catalog-applications/chester-clime/index.md#sps30).
+
 The report adds an `sps30` structure, and there is no `hygrometer` structure. Each value in it has `measurements` with a timestamp and the `min`, `max`, `avg` and `mdn` values:
 
 | Key | Value | Unit |
 | :--- | :--- | :--- |
 | `pm1`, `pm2_5`, `pm4`, `pm10` | Mass concentration of particles up to 1, 2.5, 4 and 10 µm | µg/m³ |
 | `num_pm0_5`, `num_pm1`, `num_pm2_5`, `num_pm4`, `num_pm10` | Number concentration of particles up to 0.5, 1, 2.5, 4 and 10 µm | #/cm³ |
+
+Over LoRaWAN the firmware sends no SPS30 values.
 
 ## Firmware Build
 

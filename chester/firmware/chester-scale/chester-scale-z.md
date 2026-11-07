@@ -16,7 +16,7 @@ description: "CHESTER Scale Z firmware: what it changes against the main CHESTER
 
 ### Behavior
 
-* The current **battery voltage** and **external DC voltage** are sent in every report.
+* The current **battery voltage** and **external DC voltage** are sent in every LTE report.
 * When the DC power input changes, the timestamp of the change event is stored together with the **connected**/**disconnected** state. The events are buffered (up to 32) and sent at the latest with the regular report (parameter `interval-report`).
 * Optionally, DC power input changes to the **connected** (parameter `backup-report-connected`) or **disconnected** (parameter `backup-report-disconnected`) states can be reported **immediately** or with a configurable **delay** (parameter `event-report-delay`), so that further changes arriving shortly after the first one go into the same report.
 * The maximum number of event reports per hour is configurable (parameter `event-report-rate`). The regular reports set by `interval-report` do not count toward it.
@@ -25,18 +25,20 @@ description: "CHESTER Scale Z firmware: what it changes against the main CHESTER
 
 Added parameters for the backup module:
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `event-report-delay` | `<1-86400>` | `1` | Delay between a power change and its report in seconds |
-| `event-report-rate` | `<1-3600>` | `30` | Event reports per hour at most; periodic reports do not count toward this limit |
-| `backup-report-connected` | `true`, `false` | `true` | Report immediately when external power returns |
-| `backup-report-disconnected` | `true`, `false` | `true` | Report immediately when external power fails |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `event-report-delay` | Event report delay | `<1-86400>` | `1` | Delay between a power change and its report in seconds |
+| `event-report-rate` | Event report rate | `<1-3600>` | `30` | Event reports per hour at most (firmware v4.0.1 sends up to one more); periodic reports do not count toward this limit |
+| `backup-report-connected` | Backup report connected | `true`, `false` | `true` | Report immediately when external power returns |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | `true` | Report immediately when external power fails |
 
 All other parameters are the same.
 
 ### Data
 
-The report adds a `backup` structure with the voltages of the external DC input (`line_voltage`) and of the backup battery (`batt_voltage`) in mV, the `state` (`connected` or `disconnected`) and the `events` since the last report, each with `timestamp` and `type` (`connected`, `disconnected`). LoRaWAN uplinks carry no backup data.
+The report adds a `backup` structure with the voltages of the external DC input (`line_voltage`) and of the backup battery (`batt_voltage`) in mV, the `state` (`connected` or `disconnected`) and the `events` since the last report (up to 32), each with `timestamp` and `type` (`connected`, `disconnected`). CHESTER Current Z sends the same voltages in V. LoRaWAN uplinks carry no backup data. Every field, with its unit, range and resolution, is described on the catalog page under [**CHESTER Scale Z**](../../catalog-applications/chester-scale/index.md#chester-scale-z).
+
+The example shows the `backup` structure of the report that follows the return of external power:
 
 <details>
 <summary><b>Show JSON Example</b></summary>
@@ -47,7 +49,9 @@ The report adds a `backup` structure with the voltages of the external DC input 
     "line_voltage": 24010,
     "batt_voltage": 4090,
     "state": "connected",
-    "events": []
+    "events": [
+      { "timestamp": 1793960915, "type": "connected" }
+    ]
   }
 }
 ```

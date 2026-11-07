@@ -123,13 +123,15 @@ Parametry komunikace nastavíte v terminálu CHESTER těmito příkazy:
 
 
 ```
-app config modbus-baud "9600"
-app config modbus-addr "1"
-app config modbus-parity "none"
-app config modbus-stop-bits "1"
-app config em-type "g4"
+app config serial-mode modbus
+app config serial-baudrate 9600
+app config serial-parity none
+app config serial-stop-bits 1
+app config device-0 "iem3000,1"
 config save
 ```
+
+Příkazy platí pro variantu RS-485 firmwaru [**CHESTER Serial**](../../firmware/chester-serial/index.md). `device-0` je první slot pro zařízení; `iem3000,1` je typ zařízení a adresa Modbus elektroměru. Nastavení sériové linky musí odpovídat elektroměru. Příkaz `config save` konfiguraci uloží a zařízení restartuje. Podrobnosti najdete v části [**Sloty zařízení**](../../firmware/chester-serial/index.md#device-slots).
 
 ---
 
@@ -149,21 +151,22 @@ config save
 
 ### Měřené hodnoty {#measured-values}
 
-| Měřená hodnota | Klíč / cesta                                 |
-|----------------|----------------------------------------------|
-| Proud          | E_ENERGY_METER.METER_4.CURRENT.MEASUREMENTS  |
-| Výkon          | E_ENERGY_METER.METER_4.POWER.MEASUREMENTS    |
-| Frekvence      | E_ENERGY_METER.METER_4.FREQUENCY.MEASUREMENTS|
-| Odebraná energie | E_ENERGY_METER.METER_4.ENERGY_IN.MEASUREMENTS|
-| Dodaná energie | E_ENERGY_METER.METER_4.ENERGY_OUT.MEASUREMENTS|
-| Napětí L1      | E_ENERGY_METER.METER_4.VOLTAGE_L1.MEASUREMENTS|
-| Napětí L2      | E_ENERGY_METER.METER_4.VOLTAGE_L2.MEASUREMENTS|
-| Napětí L3      | E_ENERGY_METER.METER_4.VOLTAGE_L3.MEASUREMENTS|
-| Proud L1       | E_ENERGY_METER.METER_4.CURRENT_L1.MEASUREMENTS|
-| Proud L2       | E_ENERGY_METER.METER_4.CURRENT_L2.MEASUREMENTS|
-| Proud L3       | E_ENERGY_METER.METER_4.CURRENT_L3.MEASUREMENTS|
-| Výkon L1       | E_ENERGY_METER.METER_4.POWER_L1.MEASUREMENTS |
-| Výkon L2       | E_ENERGY_METER.METER_4.POWER_L2.MEASUREMENTS |
-| Výkon L3       | E_ENERGY_METER.METER_4.POWER_L3.MEASUREMENTS |
+V každém hlášení je elektroměr jednou položkou seznamu `devices` s hodnotou `type_name` `iem3000`. Každý vzorek odebraný od předchozího hlášení je jednou položkou jeho seznamu `data` s těmito klíči:
+
+| Měřená hodnota | Klíč |
+| :--- | :--- |
+| Napětí L1, L2, L3 | `devices[].data[].voltage_l1`, `voltage_l2`, `voltage_l3` |
+| Proud L1, L2, L3 | `devices[].data[].current_l1`, `current_l2`, `current_l3` |
+| Činný výkon L1, L2, L3 | `devices[].data[].power_l1`, `power_l2`, `power_l3` |
+| Celkový činný výkon | `devices[].data[].power` |
+| Celkový zdánlivý výkon | `devices[].data[].power_apparent` |
+| Celkový jalový výkon | `devices[].data[].power_reactive` |
+| Celkový účiník (čtyřkvadrantové kódování elektroměru, −2 až 2) | `devices[].data[].power_factor` |
+| Frekvence | `devices[].data[].frequency` |
+| Odebraná činná energie | `devices[].data[].energy_in` |
+| Dodaná činná energie | `devices[].data[].energy_out` |
+
+Jednotky, rozsahy a rozlišení všech klíčů uvádí katalogová stránka [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md#schneider-iem3000).
+
 
 ---

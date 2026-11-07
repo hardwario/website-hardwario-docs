@@ -7,7 +7,7 @@ description: "CHESTER Demo firmware: a minimal NB-IoT/LTE application that repor
 
 The **CHESTER Demo** firmware is a minimal application for HARDWARIO Cloud. It reads the thermometer, the accelerometer and the battery of CHESTER, sends the values over NB-IoT/LTE and sets the LEDs from a downlink message. It has no catalog application page; its source code is in the CHESTER SDK, in [`applications/demo`](https://github.com/hardwario/chester-sdk/tree/v4.0.1/applications/demo).
 
-The LED, the button and the shell commands work as described in [**Common Functionality**](../common-functionality.md).
+The LED, the button and the shell commands work as described in [**Common Functionality**](../../catalog-applications/common-functionality.md).
 
 ## Supported Hardware
 
@@ -17,7 +17,7 @@ The firmware needs only the **CHESTER-M** mainboard with the NB-IoT/LTE modem (s
 
 - The thermometer and the accelerometer are **sampled** every sample interval (parameter `interval-sample`). The report carries the latest sample; the firmware does not aggregate.
 - The battery voltage at rest and under load and the load current are measured 60 seconds after start and then every 12 hours.
-- A report is sent every report interval (parameter `interval-report`), shifted by the random [**report interval jitter**](../common-functionality.md#report-interval-jitter).
+- A report is sent every report interval (parameter `interval-report`), shifted by the random [**report interval jitter**](../../catalog-applications/common-functionality.md#report-interval-jitter).
 - The device asks HARDWARIO Cloud for downlink messages every 60 seconds by default (parameter `interval-poll`).
 - The command `gnss start` starts the GNSS receiver. The firmware writes each position update to the log; it does not send the position.
 
@@ -36,14 +36,14 @@ A [**data downlink**](/cloud/downlink/data) from HARDWARIO Cloud switches the LE
 
 Set a parameter with `app config <parameter> <value>` and apply the change with `config save`, which stores the configuration and restarts the device. The command `app config show` prints the current values.
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Sampling interval in seconds |
-| `interval-aggreg` | `<1-86400>` | `300` | Aggregation interval in seconds; firmware v4.0.1 stores the value but does not use it |
-| `interval-report` | `<30-86400>` | `1800` | Report interval in seconds |
-| `interval-poll` | `<0-86400>` | `60` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Sampling interval in seconds |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | `300` | Aggregation interval in seconds; firmware v4.0.1 stores the value but does not use it |
+| `interval-report` | Report interval | `<30-86400>` | `1800` | Report interval in seconds |
+| `interval-poll` | Poll interval | `<0-86400>` | `60` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
 
-The network mode (`app config mode`) is described in [**Common Functionality**](../common-functionality.md#network-mode-configuration). CHESTER Demo offers only `none` and `lte` and starts in `lte`.
+The network mode (`app config mode`) is described in [**Common Functionality**](../../catalog-applications/common-functionality.md#network-mode-configuration). CHESTER Demo offers only `none` and `lte` and starts in `lte`.
 
 ## Commands
 

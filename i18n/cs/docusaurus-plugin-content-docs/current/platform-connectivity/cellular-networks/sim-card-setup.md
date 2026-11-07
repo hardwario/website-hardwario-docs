@@ -24,7 +24,7 @@ Ve výchozím stavu zařízení **nepoužívá žádné rádio** (režim `none`)
 - [CHESTER Current](/chester/catalog-applications/chester-current)
 - [CHESTER Scale](/chester/catalog-applications/chester-scale)
 - [CHESTER Meteo](/chester/catalog-applications/chester-meteo)
-- [CHESTER Range](/chester/catalog-applications/chester-range)
+- [CHESTER Serial](/chester/catalog-applications/chester-serial)
 
 Nastavte parametr `mode` na síť, kterou chcete použít:
 

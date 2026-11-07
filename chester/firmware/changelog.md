@@ -111,15 +111,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 
 ---
 
-## v3.5.3 (2026-03-06)
-
-### CHESTER Serial
-- Added CHESTER Serial as a new catalog application
-- Supports RS-485 (CHESTER-X2, multi-drop, up to 8 devices) and RS-232 (CHESTER-X12, point-to-point)
-
----
-
-## v3.5.2 (2026-03-10)
+## v3.5.3 (2026-03-10)
 
 ### SDK / Common
 - Added I2C, MCUboot, and GPIO shell commands to all applications
@@ -128,6 +120,14 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 
 ### GNSS
 - Added configurable M8 initialization priority via Kconfig
+
+---
+
+## v3.5.2 (2026-03-06)
+
+### CHESTER Serial
+- Added CHESTER Serial as a new catalog application
+- Supports RS-485 (CHESTER-X2, multi-drop, up to 8 devices) and RS-232 (CHESTER-X12, point-to-point)
 
 ---
 

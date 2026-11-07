@@ -17,7 +17,7 @@ Tento článek popisuje takzvané **katalogové aplikace** pro platformu **CHEST
 
 Jak jednotlivé katalogové aplikace fungují, zjistíte po kliknutí na název aplikace v tabulce níže.
 
-Funkce společné všem aplikacím popisuje samostatný článek [**Společné funkce**](../firmware/common-functionality.md).
+Funkce společné všem aplikacím popisuje samostatný článek [**Společné funkce**](common-functionality.md).
 
 Firmware ke stažení, konfigurační parametry a formát dat najdete v sekci [**Firmware**](../firmware/index.md).
 
@@ -43,7 +43,7 @@ Firmware ke stažení, konfigurační parametry a formát dat najdete v sekci [*
 - Varianta **CHESTER Clime IAQ** používá pro externí napájení modul CHESTER-X10 (6–28 V)
 - **CHESTER Control** používá modul CHESTER-X4 se snižujícím měničem (step-down) a digitálními výstupy
 - **CHESTER Push** používá modul CHESTER-Z1-F, který kombinuje záložní baterii s napájecím zdrojem; zařízení může běžet i jen na baterii
-- **CHESTER wM-Bus** se dodává v bateriové variantě (6× článek D) nebo ve variantě DC s externím adaptérem 230 V
-- **CHESTER Serial** používá modul CHESTER-X12 (RS-232) nebo CHESTER-X2 (RS-485) s externím napájecím vstupem (5–28 V)
+- **CHESTER wM-Bus** se dodává v bateriové variantě (primární články, jmenovité napětí 3,6 V, 26 000 mAh) nebo ve variantě DC s externím síťovým adaptérem (230 V AC)
+- **CHESTER Serial** používá modul CHESTER-X12 (RS-232) nebo CHESTER-X2 (RS-485) s externím napájecím vstupem (6–28 V)
 
 :::

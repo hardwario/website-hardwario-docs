@@ -7,7 +7,7 @@ description: "Firmware katalogové aplikace CHESTER Motion: jak počítá průch
 
 Firmware **CHESTER Motion** udělá ze zařízení CHESTER detektor pohybu, který rozpozná i jeho směr. Sleduje dva senzory PIR, počítá detekce na každé straně a průchody v každém směru (zleva doprava a zprava doleva) a počty odesílá do HARDWARIO Cloud přes NB-IoT/LTE.
 
-Firmware má pro celou aplikaci jediné sestavení. Síťový režim, tlačítko a konfigurační příkazy, které mají katalogové aplikace společné, popisuje článek [**Společné funkce**](../common-functionality.md). Hardware a jeho technickou specifikaci najdete na stránce katalogové aplikace [**CHESTER Motion**](../../catalog-applications/chester-motion/index.md).
+Firmware má pro celou aplikaci jediné sestavení. Síťový režim, tlačítko a konfigurační příkazy, které mají katalogové aplikace společné, popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md). Hardware a jeho technickou specifikaci najdete na stránce katalogové aplikace [**CHESTER Motion**](../../catalog-applications/chester-motion/index.md).
 
 ## Podporovaný hardware {#supported-hardware}
 
@@ -46,7 +46,7 @@ Aplikace zpracovává data ve třech fázích:
 
 :::info
 
-Interval hlášení má náhodný rozptyl až ±20 % (viz [**Rozptyl intervalu hlášení**](../common-functionality.md#report-interval-jitter)), aby více zařízení nevysílalo současně.
+Interval hlášení má náhodný rozptyl až ±20 % (viz [**Rozptyl intervalu hlášení**](../../catalog-applications/common-functionality.md#report-interval-jitter)), aby více zařízení nevysílalo současně.
 
 :::
 
@@ -57,15 +57,21 @@ Interval hlášení má náhodný rozptyl až ±20 % (viz [**Rozptyl intervalu h
 Aplikace nabízí tři přednastavené režimy citlivosti a jeden vlastní režim. Oba senzory PIR mají vždy stejné nastavení:
 
 **Low**: nejvyšší odolnost proti falešným poplachům za cenu pomalejší detekce:
-- `motion-sens`: 32, `motion-blind`: 3 s, `motion-pulse`: 3, `motion-window`: 4 s
+- `motion-sens`: 32, `motion-blind`: 3, `motion-pulse`: 3, `motion-window`: 4 (v senzorech: slepá doba 2 s, 4 impulzy, okno 2 s)
 
 **Medium** (výchozí): vyvážený poměr mezi rychlostí detekce a odolností proti falešným poplachům:
-- `motion-sens`: 64, `motion-blind`: 2 s, `motion-pulse`: 2, `motion-window`: 2 s
+- `motion-sens`: 64, `motion-blind`: 2, `motion-pulse`: 2, `motion-window`: 2 (v senzorech: slepá doba 1,5 s, 3 impulzy, okno 6 s)
 
-**High**: nejrychlejší detekce s nejvyšší citlivostí. Detekci okamžitě spustí jediný impulz. Hodí se pro zabezpečovací systémy nebo dveřní senzory, kde je potřeba okamžitá reakce:
-- `motion-sens`: 32, `motion-blind`: 1 s, `motion-pulse`: 1, `motion-window`: 0 s
+**High**: nejrychlejší detekce s nejvyšší citlivostí. Hodí se pro zabezpečovací systémy nebo dveřní senzory, kde je potřeba okamžitá reakce:
+- `motion-sens`: 32, `motion-blind`: 1, `motion-pulse`: 1, `motion-window`: 0 (v senzorech: slepá doba 1 s, 2 impulzy, okno 2 s)
 
 **Individual**: ruční nastavení všech čtyř parametrů pro pokročilé ladění.
+
+Firmware zapisuje hodnoty `motion-blind`, `motion-pulse` a `motion-window` beze změny do konfiguračního registru senzorů PIR a ty z nich odvodí časy a počet impulzů (datasheet Excelitas PYQ 1648, číslo dílu 7052):
+
+- slepá doba po detekci = 0,5 s + 0,5 s × `motion-blind`, tedy 0,5–5,5 s pro hodnoty 0–10
+- počet impulzů potřebný k detekci = 1 + `motion-pulse`, 1 až 4
+- okno, během kterého musí impulzy přijít = 2 s + 2 s × `motion-window`, 2–8 s
 
 :::tip
 
@@ -75,7 +81,7 @@ Parametr `motion-sens` je prahová hodnota detekce senzorů PIR. Čím nižší 
 
 :::caution
 
-Ovladač modulu CHESTER-S3 předává senzorům jen dva nejnižší bity parametrů `motion-pulse` a `motion-window`, takže hodnoty od 4 výš přetečou (4 funguje jako 0, 5 jako 1). Týká se to i předvolby `low`: její okno 4 dorazí do senzorů jako 0.
+Ovladač modulu CHESTER-S3 předává senzorům jen dva nejnižší bity parametrů `motion-pulse` a `motion-window`, takže hodnoty od 4 výš přetečou (4 funguje jako 0, 5 jako 1). Jediný impulz proto nastavíte hodnotou `motion-pulse` 4 nebo 8. Týká se to i předvolby `low`: její okno 4 dorazí do senzorů jako 0, tedy okno 2 s.
 
 :::
 
@@ -115,21 +121,21 @@ Zařízení každý stisk potvrdí žlutou LED, která blikne tolikrát, kolik k
 
 Parametr nastavíte příkazem `app config <parametr> <hodnota>` a změnu uplatníte příkazem `config save`, který konfiguraci uloží a restartuje zařízení. Aktuální hodnoty vypíše příkaz `app config show`.
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Interval vzorkování v sekundách |
-| `interval-report` | `<30-86400>` | `1800` | Interval hlášení v sekundách |
-| `interval-poll` | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
-| `sensitivity` | `low`, `medium`, `high`, `individual` | `medium` | Předvolba citlivosti PIR (viz [Režimy citlivosti PIR](#pir-sensitivity-modes)) |
-| `motion-sens` | `<1-255>` | `64` | Prahová hodnota detekce senzorů PIR; nižší hodnota znamená vyšší citlivost |
-| `motion-blind` | `<0-10>` | `2` | Slepá doba v sekundách po detekci, během které se další detekce ignorují |
-| `motion-pulse` | `<1-10>` | `2` | Minimální počet detekčních impulzů, který spustí událost pohybu |
-| `motion-window` | `<0-10>` | `2` | Časové okno v sekundách, během kterého musí přijít požadovaný počet impulzů |
-| `service-mode-enabled` | `true`, `false` | `false` | Servisní režim: indikace každé detekce a síťového režimu na LED pro instalaci a testování |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Interval vzorkování v sekundách |
+| `interval-report` | Report interval | `<30-86400>` | `1800` | Interval hlášení v sekundách |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách; `0` dotazování vypne |
+| `sensitivity` | Sensitivity | `low`, `medium`, `high`, `individual` | `medium` | Předvolba citlivosti PIR (viz [Režimy citlivosti PIR](#pir-sensitivity-modes)) |
+| `motion-sens` | Motion sens | `<1-255>` | `64` | Prahová hodnota detekce senzorů PIR; nižší hodnota znamená vyšší citlivost |
+| `motion-blind` | Motion blind | `<0-10>` | `2` | Slepá doba po detekci, během které se další detekce ignorují: 0,5 s + 0,5 s × hodnota (výchozí 1,5 s) |
+| `motion-pulse` | Motion pulse | `<1-10>` | `2` | Počet impulzů v okně, který spustí událost pohybu: 1 + hodnota, platí jen dva nejnižší bity (výchozí 3 impulzy) |
+| `motion-window` | Motion window | `<0-10>` | `2` | Časové okno, během kterého musí impulzy přijít: 2 s + 2 s × hodnota, platí jen dva nejnižší bity (výchozí 6 s) |
+| `service-mode-enabled` | Service mode enabled | `true`, `false` | `false` | Servisní režim: indikace každé detekce a síťového režimu na LED pro instalaci a testování |
 
 Čtyři parametry `motion-*` platí jen tehdy, když je `sensitivity` nastavené na `individual`; v ostatních režimech je nastaví zvolená předvolba a příkaz `app config show` je nevypisuje.
 
-Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../common-functionality.md#network-mode-configuration). Aplikace CHESTER Motion nabízí jen režimy `none` a `lte` a startuje v režimu `lte`.
+Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md#network-mode-configuration). Aplikace CHESTER Motion nabízí jen režimy `none` a `lte` a startuje v režimu `lte`.
 
 ## Příkazy {#commands}
 
@@ -154,18 +160,22 @@ Postup nahrání popisuje článek [**Nahrání firmwaru**](../../firmware-flash
 
 ## Ukázková zpráva JSON {#example-json-message}
 
+Všechna pole s jednotkami, rozsahy a rozlišením popisuje stránka katalogové aplikace v části [**Data**](../../catalog-applications/chester-motion/index.md#data-over-lte).
+
+Ukázka je zkrácená na čtyři vzorky pohybu; ve výchozí konfiguraci jich hlášení nese až 30.
+
 ```json
 {
   "message": {
     "version": 2,
     "sequence": 42,
-    "timestamp": 1736942400
+    "timestamp": 1793953210
   },
   "system": {
-    "uptime": 86400,
-    "voltage_load": 3.21,
+    "uptime": 86412,
+    "voltage_load": 3.44,
     "voltage_rest": 3.65,
-    "current_load": 38
+    "current_load": 34
   },
   "network": {
     "parameter": {
@@ -197,12 +207,34 @@ Postup nahrání popisuje článek [**Nahrání firmwaru**](../../firmware-flash
       "motion_right": 520
     },
     "samples": [
-      1736942400,
-      [0, 3, 2, 1, 2],
-      [60, 5, 4, 2, 3],
-      [120, 2, 1, 0, 1],
-      [180, 4, 3, 1, 2],
-      [240, 6, 5, 3, 4]
+      {
+        "timestamp": 1793953020,
+        "detect_left": 3,
+        "detect_right": 2,
+        "motion_left": 1,
+        "motion_right": 1
+      },
+      {
+        "timestamp": 1793953080,
+        "detect_left": 5,
+        "detect_right": 4,
+        "motion_left": 2,
+        "motion_right": 2
+      },
+      {
+        "timestamp": 1793953140,
+        "detect_left": 0,
+        "detect_right": 0,
+        "motion_left": 0,
+        "motion_right": 0
+      },
+      {
+        "timestamp": 1793953200,
+        "detect_left": 2,
+        "detect_right": 3,
+        "motion_left": 0,
+        "motion_right": 2
+      }
     ]
   }
 }
@@ -216,12 +248,12 @@ Postup nahrání popisuje článek [**Nahrání firmwaru**](../../firmware-flash
 - **thermometer**: Vnitřní teplota v °C.
 - **accelerometer**: Zrychlení v m/s² a orientace.
 - **motion**:
-  - **totalizer**: Čítače událostí od startu zařízení (hlášení je nenulují).
-  - **samples**: Pole událostí pohybu s časy zakódovanými jako offsety. První prvek je výchozí časová značka, každý další prvek je pole: `[offset, detect_left, detect_right, motion_left, motion_right]`, kde `offset` je počet sekund od výchozí časové značky.
+  - **totalizer**: Čítače událostí od startu zařízení (hlášení je nenulují, restart ano).
+  - **samples**: Vzorky pohybu od posledního úspěšného hlášení, nejvýše 30. Každý má časovou značku `timestamp` (unixový čas konce intervalu vzorku) a počty za tento interval: `detect_left`, `detect_right`, `motion_left` (průchody zprava doleva) a `motion_right` (průchody zleva doprava).
 
 :::info
 
-Kterákoli hodnota může být `null`, pokud se čtení příslušného senzoru nezdařilo.
+Hodnoty ve strukturách `system`, `network`, `thermometer` a `accelerometer` jsou `null`, když se jejich čtení nezdařilo.
 
 :::
 

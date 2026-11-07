@@ -111,13 +111,15 @@ Parametry komunikace nastavíte v terminálu CHESTER těmito příkazy:
 #### Konfigurace zařízení CHESTER {#configuration-of-chester}
 
 ```
-app config modbus-baud "9600"
-app config modbus-addr "1"
-app config modbus-parity "none"
-app config modbus-stop-bits "1"
-app config em-type "orno"
+app config serial-mode modbus
+app config serial-baudrate 9600
+app config serial-parity none
+app config serial-stop-bits 1
+app config device-0 "or_we_504,1"
 config save
 ```
+
+Příkazy platí pro variantu RS-485 firmwaru [**CHESTER Serial**](../../firmware/chester-serial/index.md). `device-0` je první slot pro zařízení; `or_we_504,1` je typ zařízení a adresa Modbus elektroměru. Nastavení sériové linky musí odpovídat elektroměru. Příkaz `config save` konfiguraci uloží a zařízení restartuje. Podrobnosti najdete v části [**Sloty zařízení**](../../firmware/chester-serial/index.md#device-slots).
 
 ---
 
@@ -143,13 +145,20 @@ Konfigurace zařízení CHESTER musí **odpovídat konfiguraci elektroměru**.
 
 ### Měřené hodnoty {#measured-values}
 
-| Měřená hodnota | Klíč / cesta |
-|---------------|------------|
-| Napětí        | E_ENERGY_METER.METER_1.VOLTAGE.MEASUREMENTS |
-| Proud         | E_ENERGY_METER.METER_1.CURRENT.MEASUREMENTS |
-| Frekvence     | E_ENERGY_METER.METER_1.FREQUENCY.MEASUREMENTS |
-| Výkon         | E_ENERGY_METER.METER_1.POWER.MEASUREMENTS |
-| Účiník        | E_ENERGY_METER.METER_1.POWER_FACTOR.MEASUREMENTS |
-| Odebraná energie | E_ENERGY_METER.METER_1.ENERGY_IN.MEASUREMENTS |
+V každém hlášení je elektroměr jednou položkou seznamu `devices` s hodnotou `type_name` `or_we_504`. Každý vzorek odebraný od předchozího hlášení je jednou položkou jeho seznamu `data` s těmito klíči:
+
+| Měřená hodnota | Klíč |
+| :--- | :--- |
+| Napětí | `devices[].data[].voltage` |
+| Proud | `devices[].data[].current` |
+| Činný výkon | `devices[].data[].power` |
+| Zdánlivý výkon | `devices[].data[].power_apparent` |
+| Jalový výkon | `devices[].data[].power_reactive` |
+| Účiník | `devices[].data[].power_factor` |
+| Frekvence | `devices[].data[].frequency` |
+| Odebraná činná energie | `devices[].data[].energy_in` |
+
+Jednotky, rozsahy a rozlišení všech klíčů uvádí katalogová stránka [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md#orno-or-we-504).
+
 
 ---

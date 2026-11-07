@@ -19,14 +19,14 @@ This article describes the core functionality, hardware description, default con
 Some of the basics are not provided, as they are common for all CHESTER catalog applications. Please see:
 
 - [**Getting started**](/chester/first-steps) on how to connect device to Cloud.
-- [**Common functionality**](/chester/firmware/common-functionality) to know how LED, button and network configuration works.
+- [**Common functionality**](/chester/catalog-applications/common-functionality) to know how LED, button and network configuration works.
 - [**Platform Connectivity**](/chester/category/platform-connectivity) on how to work with the interactive console.
 
 :::
 
 ## Application Overview
 
-The application **CHESTER Counter** is used to count pulses on eight digital inputs. They can be connected to a PLC/sensor output (NPN/PNP), push button, switch, relay, etc. The application counts the total number of pulses and also the number of pulses since the last report (configurable using the `interval-report` parameter).
+The application **CHESTER Counter** is used to count pulses on the four digital inputs of its CHESTER-X0B module. They can be connected to a PLC/sensor output (NPN/PNP), push button, switch, relay, etc. The application counts the total number of pulses and also the number of pulses since the last report (configurable using the `interval-report` parameter).
 
 ## Application Variants
 

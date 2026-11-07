@@ -7,9 +7,9 @@ description: "Firmware katalogové aplikace CHESTER wM-Bus: skenování, seznam 
 
 Firmware **CHESTER wM-Bus** udělá ze zařízení CHESTER bránu Wireless M-Bus. V naplánovaných skenováních naslouchá měřičům wM-Bus, sbírá jejich surové telegramy a odesílá je do HARDWARIO Cloud přes NB-IoT/LTE-M. Zařízení data měřičů nedekóduje; telegramy může na požádání dešifrovat a dekódovat HARDWARIO Cloud (viz [**Konfigurace dekódování v cloudu**](#cloud-decode-configuration)).
 
-Firmware má jediné sestavení: používá ho bateriové zařízení CHESTER wM-Bus i varianta [**CHESTER wM-Bus DC**](../../catalog-applications/chester-wm-bus/chester-wm-bus-dc.md).
+Firmware má jediné sestavení: používá ho bateriové zařízení CHESTER wM-Bus i varianta [**CHESTER wM-Bus DC**](../../catalog-applications/chester-wm-bus/index.md#chester-wm-bus-dc).
 
-Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim a příkazy konzole), popisuje článek [**Společné funkce**](../common-functionality.md). Hardware a varianty produktu najdete na stránce katalogové aplikace [**CHESTER wM-Bus**](../../catalog-applications/chester-wm-bus/index.md).
+Co mají všechny katalogové aplikace společné (LED, tlačítko, síťový režim a příkazy konzole), popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md). Hardware a varianty produktu najdete na stránce katalogové aplikace [**CHESTER wM-Bus**](../../catalog-applications/chester-wm-bus/index.md).
 
 ## Podporovaný hardware {#supported-hardware}
 
@@ -17,7 +17,7 @@ Firmware podporuje:
 
 - nosnou desku **CHESTER-B1** s rádiem wM-Bus a dvěma anténami (viz [**Objednací kódy**](../../ordering-codes.md#chester-b1))
 - měřiče wM-Bus libovolného výrobce, které vysílají v režimu **T1** nebo **C1** (viz [**Otestované senzory wM-Bus**](../../supported-devices/wm-bus.md))
-- napájení šesti alkalickými články D nebo externím adaptérem 230 V
+- napájení z primárních článků (jmenovité napětí 3,6 V, kapacita 26 000 mAh) nebo z externího adaptéru 230 V. Doporučené jsou dva lithiové články Saft LSH 20 (velikost D, 3,6 V).
 
 ## Skenování a chování {#scanning-and-behavior}
 
@@ -29,7 +29,7 @@ Zařízení může podle nastavení skenovat zařízení wM-Bus periodicky, denn
 - Od každého měřiče ze seznamu si zařízení ponechá první paket, který během skenování přijme; pakety ostatních měřičů ignoruje.
 - Bez seznamu adres si zařízení ponechá první paket od každého měřiče, který zachytí, a skenování vždy trvá celý `scan-timeout`.
 - Během skenování žlutá LED blikne každé 2 sekundy (dvakrát po sobě, když naslouchá druhá anténa). Při odesílání dat se na půl sekundy rozsvítí červená LED.
-- Dva stisky tlačítka na základní desce spustí skenování, tři stisky ukončí probíhající skenování, jako by uplynul `scan-timeout`. Jeden stisk a čtyři nebo pět stisků fungují tak, jak popisuje článek [**Společné funkce**](../common-functionality.md#button-behaviour).
+- Dva stisky tlačítka na základní desce spustí skenování, tři stisky ukončí probíhající skenování, jako by uplynul `scan-timeout`. Jeden stisk a čtyři nebo pět stisků fungují tak, jak popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md#button-behaviour).
 
 ## Konfigurační parametry {#configuration-parameters}
 
@@ -41,22 +41,22 @@ Příkaz `config save` je potřeba jen při konfiguraci přes Bluetooth nebo J-L
 
 :::
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `scan-timeout` | `<1-86400>` | `130` | Nejdelší doba skenování jednou anténou v sekundách |
-| `scan-interval` | `<30-604800>` | `600` | Doba mezi začátky dvou skenování v sekundách v režimu skenování `interval` |
-| `scan-hour` | `<0-23>` | `12` | Hodina (UTC), kdy začíná denní, týdenní a měsíční skenování |
-| `scan-weekday` | `<0-6>` | `3` | Den v týdnu pro týdenní skenování: `1` je pondělí, `6` sobota |
-| `scan-day` | `<1-31>` | `15` | Den v měsíci pro měsíční skenování |
-| `scan-mode` | `off`, `interval`, `daily`, `weekly`, `monthly` | `off` | Kdy se skenování spouští: nikdy samo, v pevném intervalu, nebo jednou denně, týdně či měsíčně (viz [**Konfigurace skenování**](#scan-configuration)) |
-| `scan-ant` | `single`, `dual` | `single` | S hodnotou `dual` se skenování zopakuje druhou anténou, pokud první anténa nezachytila všechny adresy |
-| `poll-interval` | `<5-1209600>` | `28800` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách |
-| `downlink-wdg-interval` | `<0-1209600>` | `172800` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
-| `cloud-decode` | `true`, `false` | `false` | Telegramy dekóduje HARDWARIO Cloud (viz [**Konfigurace dekódování v cloudu**](#cloud-decode-configuration)) |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `scan-timeout` | Scan timeout | `<1-86400>` | `130` | Nejdelší doba skenování jednou anténou v sekundách |
+| `scan-interval` | Scan interval | `<30-604800>` | `600` | Doba mezi začátky dvou skenování v sekundách v režimu skenování `interval` |
+| `scan-hour` | Scan hour | `<0-23>` | `12` | Hodina (UTC), kdy začíná denní, týdenní a měsíční skenování |
+| `scan-weekday` | Scan weekday | `<0-6>` | `3` | Den v týdnu pro týdenní skenování: `1` je pondělí, `6` sobota |
+| `scan-day` | Scan day | `<1-31>` | `15` | Den v měsíci pro měsíční skenování |
+| `scan-mode` | Scan mode | `off`, `interval`, `daily`, `weekly`, `monthly` | `off` | Kdy se skenování spouští: nikdy samo, v pevném intervalu, nebo jednou denně, týdně či měsíčně (viz [**Konfigurace skenování**](#scan-configuration)) |
+| `scan-ant` | Scan ant | `single`, `dual` | `single` | S hodnotou `dual` se skenování zopakuje druhou anténou, pokud první anténa nezachytila všechny adresy |
+| `poll-interval` | Poll interval | `<5-1209600>` | `28800` | Jak často se zařízení ptá HARDWARIO Cloud na zprávy downlink, v sekundách |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | `172800` | V režimu LTE se zařízení restartuje, když se s HARDWARIO Cloud nespojí déle než tento počet sekund; `0` hlídání vypne |
+| `cloud-decode` | Cloud decode | `true`, `false` | `false` | Telegramy dekóduje HARDWARIO Cloud (viz [**Konfigurace dekódování v cloudu**](#cloud-decode-configuration)) |
 
 Parametry jsou stejné pro bateriové zařízení i pro variantu CHESTER wM-Bus DC.
 
-Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../common-functionality.md#network-mode-configuration). Zařízení CHESTER wM-Bus startuje v režimu `lte`.
+Síťový režim (`app config mode`) a nastavení sítě popisuje článek [**Společné funkce**](../../catalog-applications/common-functionality.md#network-mode-configuration). Zařízení CHESTER wM-Bus startuje v režimu `lte`.
 
 ### Konfigurace seznamu adres {#address-list-configuration}
 
@@ -115,9 +115,9 @@ Hodí se k ověření toku dat a ke kontrole, zda senzory správně vysílají.
 
 `app config cloud-decode false/true`
 
-- `false`: zprávy se odesílají v surovém (binárním) formátu.
-- `true`: cloud dekóduje zprávy do čitelného formátu (JSON).
-  Pokud jsou zprávy zašifrované, použije se dešifrovací klíč ze sekce **Variables** (viz [**dešifrovací klíče**](#hardwario-cloud--decryption-keys)).
+- `false`: hlášení nese surové telegramy: `packets` obsahuje každý telegram hexadecimálně (`data`) se silou signálu (`rssi`).
+- `true`: HARDWARIO Cloud telegramy dekóduje a dekódované hodnoty zobrazí v `packets`.
+  Pokud jsou telegramy zašifrované, cloud použije dešifrovací klíč ze sekce **Variables** (viz [**dešifrovací klíče**](#hardwario-cloud--decryption-keys)).
 
 ### Konfigurace skenování {#scan-configuration}
 
@@ -243,7 +243,7 @@ app config address add 222222
 
 ## HARDWARIO Cloud – dešifrovací klíče {#hardwario-cloud--decryption-keys}
 
-**Zprávy ze zařízení wM-Bus se přenášejí zašifrované**, aby se při přenosu dat šetřila energie a prodloužila výdrž baterie.
+**Zprávy ze zařízení wM-Bus se přenášejí zašifrované.**
 
 **Přijatá data je proto nutné dešifrovat**, k čemuž slouží **dešifrovací klíče**.
 
@@ -293,75 +293,77 @@ Postup nahrání popisuje článek [**Nahrání firmwaru**](../../firmware-flash
 
 ## Ukázková zpráva JSON {#example-json-message}
 
-Tato ukázka **JSON** obsahuje surová data ze dvou senzorů wM-Bus.
+Každé pole s jednotkou, rozsahem a rozlišením popisuje stránka katalogové aplikace v části [**Data**](../../catalog-applications/chester-wm-bus/index.md#data-over-lte).
 
-Každá zpráva JSON pro cloud obsahuje až 20 paketů wM-Bus. Pokud je v zařízení CHESTER nastaveno více než 20 zařízení wM-Bus, surové pakety se rozdělí do více zpráv JSON.
+Ukázka je hlášení ze skenování, které zachytilo telegramy obou měřičů ze seznamu adres.
+
+Každé hlášení nese až 20 telegramů. Když jich skenování zachytí víc, rozdělí se do více hlášení.
 
 Struktura `wmbus` obsahuje:
 
-- `cycle`: pořadové číslo skenování od spuštění zařízení
-- `devices`: počet adres v seznamu (bez seznamu počet zachycených měřičů)
-- `received`: počet paketů přijatých při skenování
-- `part`: pořadí této zprávy, když se pakety z jednoho skenování rozdělí do více zpráv, počínaje `0`
 - `scan_time`: doba skenování v sekundách
-- `packets`: surové telegramy (`data`, hexadecimálně) se silou signálu (`rssi`, dBm)
+- `received`: počet měřičů, od kterých skenování přijalo telegram
+- `devices`: počet adres v seznamu (bez seznamu počet zachycených měřičů)
+- `cycle`: pořadové číslo skenování od spuštění zařízení
+- `part`: pořadí tohoto hlášení, když se telegramy z jednoho skenování rozdělí do více hlášení, počínaje `0`
+- `packets`: surové telegramy (`data`, hexadecimálně, od pole délky, bez bajtů CRC) se silou signálu (`rssi`, dBm); s nastavením `cloud-decode` na `true` tu HARDWARIO Cloud místo nich zobrazí dekódované hodnoty měřičů
 
 <details>
 <summary><b>Zobrazit ukázku JSON</b></summary>
 
 ```json
 {
-    "accelerometer": {
-        "accel_x": 0.22,
-        "accel_y": 0.07,
-        "accel_z": 9.42,
-        "orientation": 2
-    },
-    "battery": {
-        "current_load": null,
-        "voltage_load": null,
-        "voltage_rest": null
-    },
     "frame": {
         "protocol": 3,
-        "sequence": 0,
-        "timestamp": 1698660040
+        "sequence": 27,
+        "timestamp": 1762430712
+    },
+    "state": {
+        "uptime": 1296131
+    },
+    "battery": {
+        "voltage_rest": 3.65,
+        "voltage_load": 3.61,
+        "current_load": 36
     },
     "network": {
         "parameter": {
-            "band": 1184866148,
-            "cid": 248833,
-            "earfcn": -2121962691,
-            "ecl": 536882852,
-            "eest": 0,
-            "plmn": 536882852,
-            "rsrp": 384479,
-            "rsrq": 508,
-            "snr": 0
+            "eest": 8,
+            "ecl": 0,
+            "rsrp": -95,
+            "rsrq": -11,
+            "snr": 6,
+            "plmn": 23003,
+            "cid": 1036050,
+            "band": 20,
+            "earfcn": 6300
         }
     },
-    "state": {
-        "uptime": 47
-    },
     "thermometer": {
-        "temperature": 22.31
+        "temperature": 21.06
+    },
+    "accelerometer": {
+        "accel_x": 0.22,
+        "accel_y": 0.07,
+        "accel_z": 9.78,
+        "orientation": 2
     },
     "wmbus": {
-        "cycle": 1,
+        "scan_time": 37,
+        "received": 2,
         "devices": 2,
+        "cycle": 14,
+        "part": 0,
         "packets": [
             {
                 "data": "32446850003076816980a0919f2b06007007000061087c08000000000000000000000000010101020100000000000000000000",
-                "rssi": -65
+                "rssi": -71
             },
             {
-                "data": "32446850003076816980a0919f2b06007007000061087c08000000000000000000000000010101020100000000000000000000",
-                "rssi": -72
+                "data": "32446850152904766980a0919f2b0600700700005e087c08000000000000000000000000010101020100000000000000000000",
+                "rssi": -84
             }
-        ],
-        "part": 0,
-        "received": 2,
-        "scan_time": 17
+        ]
     }
 }
 ```

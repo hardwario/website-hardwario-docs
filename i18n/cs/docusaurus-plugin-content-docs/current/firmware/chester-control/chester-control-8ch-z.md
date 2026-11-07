@@ -23,14 +23,14 @@ description: "Firmware CHESTER Control 8Ch Z: čím se liší od hlavního firmw
 
 ### Konfigurační parametry {#configuration-parameters}
 
-Přidané parametry pro kanály 5 až 8:
+Parametry kanálů 5 až 8 jsou v každém sestavení firmwaru CHESTER Control, používá je ale jen tento firmware:
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `channel-mode-5` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 5 (modul CHESTER-X0 ve slotu B, svorka B2) |
-| `channel-mode-6` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 6 (svorka B4) |
-| `channel-mode-7` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 7 (svorka B5) |
-| `channel-mode-8` | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 8 (svorka B7) |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `channel-mode-5` | Channel mode 5 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 5 (modul CHESTER-X0 ve slotu B, svorka B2) |
+| `channel-mode-6` | Channel mode 6 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 6 (svorka B4) |
+| `channel-mode-7` | Channel mode 7 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 7 (svorka B5) |
+| `channel-mode-8` | Channel mode 8 | `disabled`, `trigger`, `counter`, `voltage`, `current` | `disabled` | Režim kanálu 8 (svorka B7) |
 
 Záložní modul přidává parametry `backup-report-connected` a `backup-report-disconnected`, stejně jako ve firmwaru [**CHESTER Control Z**](chester-control-z.md#configuration-parameters). Ostatní parametry jsou stejné.
 
@@ -43,6 +43,7 @@ Příkazy `channel` přijímají kanály 1 až 8.
 - Struktury `trigger`, `counter`, `voltage` a `current` obsahují i kanály 5 až 8 (`channel` 5 až 8).
 - Hlášení navíc obsahuje strukturu `backup` popsanou u firmwaru [**CHESTER Control Z**](chester-control-z.md#data).
 - Zprávy LoRaWAN navíc obsahují `inputs_b` se stavem kanálů 5 až 8 ve stejném formátu jako `inputs_a`.
+- Osm kanálů se započítává do limitu 51 bajtů zprávy LoRaWAN popsaného v části [**Data přes LoRaWAN**](../../catalog-applications/chester-control/index.md#data-over-lorawan): šest kanálů v režimu `counter` ho už překročí.
 
 ## Sestavení firmwaru {#firmware-build}
 

@@ -23,18 +23,40 @@ description: "CHESTER Range Z firmware: what it changes against the main CHESTER
 
 Added parameters:
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `event-report-delay` | `<1-86400>` | `1` | Delay between a power change and its report in seconds |
-| `event-report-rate` | `<1-3600>` | `30` | Event reports per hour at most; periodic reports do not count toward this limit |
-| `backup-report-connected` | `true`, `false` | `true` | Report immediately when external power returns |
-| `backup-report-disconnected` | `true`, `false` | `true` | Report immediately when external power fails |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `event-report-delay` | Event report delay | `<1-86400>` | `1` | Delay between a power change and its report in seconds |
+| `event-report-rate` | Event report rate | `<1-3600>` | `30` | Event reports per hour at most (firmware v4.0.1 sends up to one more); periodic reports do not count toward this limit |
+| `backup-report-connected` | Backup report connected | `true`, `false` | `true` | Report immediately when external power returns |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | `true` | Report immediately when external power fails |
 
 All other parameters are the same.
 
 ### Data
 
-The report adds a `backup` structure with the external line voltage (`line_voltage`), the backup battery voltage (`batt_voltage`), the power `state` (`connected` or `disconnected`) and the power events.
+The report adds a `backup` structure with the voltage of the external DC input (`line_voltage`) and of the backup battery (`batt_voltage`) in volts, the power `state` (`connected` or `disconnected`) and the power `events` since the previous report, each with its `timestamp` and `type` (`connected` or `disconnected`). In this example, external power failed and returned 95 seconds later:
+
+```json
+{
+  "backup": {
+    "line_voltage": 24.02,
+    "batt_voltage": 4.11,
+    "state": "connected",
+    "events": [
+      {
+        "timestamp": 1793944910,
+        "type": "disconnected"
+      },
+      {
+        "timestamp": 1793945005,
+        "type": "connected"
+      }
+    ]
+  }
+}
+```
+
+The ranges and resolutions are described on the catalog page under [**CHESTER Range Z**](../../catalog-applications/chester-range/index.md#chester-range-z).
 
 ## Firmware Build
 

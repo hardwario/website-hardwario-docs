@@ -14,15 +14,15 @@ Some catalog firmwares can use either an NB-IoT/LTE or a LoRaWAN network. After 
 
 This `app mode` configuration is needed currently for these catalog applications:
 
-- [CHESTER Clime](chester-clime/index.md)
-- [CHESTER Control](chester-control/index.md)
-- [CHESTER Push](chester-push/index.md)
-- [CHESTER Current](chester-current/index.md)
-- [CHESTER Scale](chester-scale/index.md)
-- [CHESTER Meteo](chester-meteo/index.md)
-- [CHESTER Serial](chester-serial/index.md)
+- [CHESTER Clime](../firmware/chester-clime/index.md)
+- [CHESTER Control](../firmware/chester-control/index.md)
+- [CHESTER Push](../firmware/chester-push/index.md)
+- [CHESTER Current](../firmware/chester-current/index.md)
+- [CHESTER Scale](../firmware/chester-scale/index.md)
+- [CHESTER Meteo](../firmware/chester-meteo/index.md)
+- [CHESTER Serial](../firmware/chester-serial/index.md)
 
-[CHESTER Demo](chester-demo/index.md), [CHESTER Motion](chester-motion/index.md), [CHESTER Range](chester-range/index.md) and [CHESTER wM-Bus](chester-wm-bus/index.md) communicate over NB-IoT/LTE only and start in the `lte` mode, so they need no mode setting.
+[CHESTER Demo](../firmware/chester-demo/index.md), [CHESTER Motion](../firmware/chester-motion/index.md), [CHESTER Range](../firmware/chester-range/index.md) and [CHESTER wM-Bus](../firmware/chester-wm-bus/index.md) communicate over NB-IoT/LTE only and start in the `lte` mode, so they need no mode setting.
 
 The default functionality is that a device **does not use any radio** (mode `none`) and you need to set configuration parameter **mode**.
 
@@ -89,18 +89,71 @@ In cloud you don't send the `config save` command.
 
 Most catalog firmware shares these configuration parameters. Each firmware page lists all parameters of its build with their defaults, which differ between applications: for example, `interval-report` is 900 s in CHESTER Current and CHESTER Scale and 1800 s elsewhere.
 
-| Parameter | Values | Meaning | Where |
-| :--- | :--- | :--- | :--- |
-| `mode` | `none`, `lte`, `lrw` | Network: none, NB-IoT/LTE or LoRaWAN (see [Network Mode Configuration](#network-mode-configuration)) | Every firmware; Demo, Motion, Range and wM-Bus offer only `none` and `lte` |
-| `interval-sample` | `<1-86400>` | Sampling interval in seconds | Every firmware except Control and wM-Bus |
-| `interval-aggreg` | `<1-86400>` | Aggregation interval in seconds; the minimum, maximum, average and median are computed over it | Every firmware except Control, Motion and wM-Bus |
-| `interval-report` | `<30-86400>` | Report interval in seconds | Every firmware except wM-Bus; Serial also accepts `0` |
-| `interval-poll` | `<0-86400>` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off | Every firmware except wM-Bus, which has its own `poll-interval`; Serial stores the value but does not use it |
-| `downlink-wdg-interval` | `<0-1209600>` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off | Every firmware except Demo, Motion and Serial |
-| `event-report-delay` | `<1-86400>` | Delay between an event and its report in seconds | Firmware that reports events (alarms, inputs, backup power) |
-| `event-report-rate` | `<1-3600>` | Event reports per hour at most; periodic reports do not count toward this limit | Firmware that reports events |
-| `backup-report-connected` | `true`, `false` | Report immediately when external power returns | Builds with CHESTER-Z or CHESTER-X10 |
-| `backup-report-disconnected` | `true`, `false` | Report immediately when external power fails | Builds with CHESTER-Z or CHESTER-X10 |
+The **HARDWARIO Manager** column gives the name under which the HARDWARIO Manager app shows the parameter.
+
+| Parameter | HARDWARIO Manager | Values | Meaning | Where |
+| :--- | :--- | :--- | :--- | :--- |
+| `mode` | Mode | `none`, `lte`, `lrw` | Network: none, NB-IoT/LTE or LoRaWAN (see [Network Mode Configuration](#network-mode-configuration)) | Every firmware; Demo, Motion, Range and wM-Bus offer only `none` and `lte` |
+| `interval-sample` | Sample interval | `<1-86400>` | Sampling interval in seconds | Every firmware except Control and wM-Bus |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | Aggregation interval in seconds; the minimum, maximum, average and median are computed over it | Every firmware except Control, Motion and wM-Bus |
+| `interval-report` | Report interval | `<30-86400>` | Report interval in seconds | Every firmware except wM-Bus; Serial also accepts `0` |
+| `interval-poll` | Poll interval | `<0-86400>` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off | Every firmware except wM-Bus, which has its own `poll-interval`; Serial stores the value but does not use it |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off | Every firmware except Demo, Motion and Serial |
+| `event-report-delay` | Event report delay | `<1-86400>` | Delay between an event and its report in seconds | Firmware that reports events (alarms, inputs, backup power) |
+| `event-report-rate` | Event report rate | `<1-3600>` | Event reports per hour at most (firmware v4.0.1 sends up to one more); periodic reports do not count toward this limit | Firmware that reports events |
+| `backup-report-connected` | Backup report connected | `true`, `false` | Report immediately when external power returns | Builds with CHESTER-Z or CHESTER-X10 |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | Report immediately when external power fails | Builds with CHESTER-Z or CHESTER-X10 |
+
+## Common Data {#common-data}
+
+Every CHESTER catalog application sends these values. The page of each application describes only what that application sends in addition (see [Catalog Applications](index.md)).
+
+### Over NB-IoT/LTE {#common-data-lte}
+
+Every report carries these structures:
+
+| Key | Meaning | Unit | Range | Resolution |
+| :--- | :--- | :--- | :--- | :--- |
+| `message.version` | Version of the message format: `2` for CHESTER Clime, CHESTER Motion, CHESTER Range and CHESTER Serial, `1` for CHESTER Control, CHESTER Current, CHESTER Meteo, CHESTER Push and CHESTER Scale | | `1`, `2` | |
+| `message.sequence` | Message counter, starts at 0 after a restart | | 0–4294967295 | 1 |
+| `message.timestamp` | Time of the report (Unix time) | s | | 1 s |
+| `system.uptime` | Time since the device started | s | | 1 s |
+| `system.voltage_rest` | Battery voltage without load | V | 2.0–5.25 | 0.01 V |
+| `system.voltage_load` | Battery voltage under the test load | V | 2.0–5.25 | 0.01 V |
+| `system.current_load` | Current through the 100 Ω test load, computed from `voltage_load` | mA | 20–52 | 1 mA |
+| `network.parameter.eest` | Energy estimate of the LTE connection; higher means less energy per transmission | | 5–9 | 1 |
+| `network.parameter.ecl` | Coverage enhancement level | | 0–2 | 1 |
+| `network.parameter.rsrp` | Reference signal received power | dBm | about −157 to −44 | 1 dBm |
+| `network.parameter.rsrq` | Reference signal received quality | dB | about −19 to −3 | 1 dB |
+| `network.parameter.snr` | Signal-to-noise ratio | dB | about −24 to 25 | 1 dB |
+| `network.parameter.plmn` | Operator code (MCC and MNC), e.g. `23003` | | | |
+| `network.parameter.cid` | Cell ID | | | |
+| `network.parameter.band` | LTE band | | | |
+| `network.parameter.earfcn` | Channel number (EARFCN) | | | |
+| `thermometer.temperature` | Temperature inside the enclosure (TMP112 on the mainboard) | °C | −40 to 125 | 0.01 °C |
+| `accelerometer.accel_x`, `accel_y`, `accel_z` | Acceleration along each axis (LIS2DH12, ±4 g range) | m/s² | −39.2 to 39.2 | 0.01 m/s² |
+| `accelerometer.orientation` | Orientation of the device | | 1–6 | |
+
+The network values come from the modem's connection evaluation (`%CONEVAL`) and are sent only in NB-IoT/LTE mode.
+
+The battery values in `system` are measured 60 s after start and then every 12 hours. `thermometer` and `accelerometer` hold the last sample.
+
+Two applications send the same values under other keys:
+
+- CHESTER Meteo sends the acceleration as `accelerometer.acceleration_x`, `acceleration_y` and `acceleration_z`.
+- CHESTER wM-Bus sends `frame.protocol` (value `3`), `frame.sequence` and `frame.timestamp` instead of `message`, `state.uptime` instead of `system.uptime`, and the battery values in `battery` (`battery.voltage_rest`, `battery.voltage_load` and `battery.current_load`) instead of `system`.
+
+### Over LoRaWAN {#common-data-lorawan}
+
+The applications with LoRaWAN (CHESTER Clime, CHESTER Control, CHESTER Current, CHESTER Meteo, CHESTER Push, CHESTER Scale and CHESTER Serial) send these fields in every uplink, as the HARDWARIO Cloud decoder outputs them:
+
+| Key | Meaning | Unit | Range | Resolution |
+| :--- | :--- | :--- | :--- | :--- |
+| `voltage_rest` | Battery voltage without load | V | 2.0–5.25 | 0.001 V |
+| `voltage_load` | Battery voltage under the test load | V | 2.0–5.25 | 0.001 V |
+| `current_load` | Current through the 100 Ω test load, computed from `voltage_load` | mA | 20–52 | 1 mA |
+| `orientation` | Orientation of the device | | 1–6 | |
+| `therm_temperature` | Temperature inside the enclosure (TMP112 on the mainboard) | °C | −40 to 125 | 0.01 °C |
 
 ## Runtime CHESTER-Z Detection
 
@@ -112,7 +165,7 @@ Starting from firmware **v3.5.4**, some applications support **runtime detection
 
 Applications with runtime CHESTER-Z detection:
 
-- [CHESTER Clime](chester-clime/index.md)
+- [CHESTER Clime](../firmware/chester-clime/index.md)
 
 :::note
 Other applications will gradually adopt runtime Z detection in future firmware releases.
@@ -137,7 +190,7 @@ Learn how to activate and configure this feature in the [**CHESTER BLE Tag Subsy
 
 ## Report Interval Jitter
 
-The CHESTER Clime, CHESTER Demo, CHESTER Motion, CHESTER Range and CHESTER Scale firmware adds intentional jitter to the periodic sending of data with `interval-report`. This is used in case a lot of CHESTERs are placed near each other, so they don't transmit at the same time if they have set the same interval. This jitter is random in the range of ±20 % of `interval-report`. CHESTER Control, CHESTER Current, CHESTER Meteo, CHESTER Push, CHESTER Serial and CHESTER wM-Bus send at the fixed interval.
+The CHESTER Clime, CHESTER Control, CHESTER Demo, CHESTER Meteo, CHESTER Motion, CHESTER Range and CHESTER Scale firmware adds intentional jitter to the periodic sending of data with `interval-report`. This is used in case a lot of CHESTERs are placed near each other, so they don't transmit at the same time if they have set the same interval. This jitter is random in the range of ±20 % of `interval-report`. CHESTER Current, CHESTER Push and CHESTER Serial send at the fixed interval. CHESTER wM-Bus has no `interval-report`: it sends the meter data at the end of each scan.
 
 For example, if `interval-report` is set to 100 seconds, you can receive periodic data where two messages have a time difference from 80 (-20%) to 120 (+20%) seconds.
 

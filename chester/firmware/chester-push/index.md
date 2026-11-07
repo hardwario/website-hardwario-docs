@@ -11,7 +11,7 @@ The **CHESTER Push** firmware turns CHESTER into a push-button terminal. It repo
 
 This page describes the main firmware. The [**CHESTER Push FM**](chester-push-fm.md) build changes only how the button LEDs light up, and its page lists only that.
 
-What all catalog applications share (LED, button, network mode, BLE tags and shell commands) is described in [**Common Functionality**](../common-functionality.md). The hardware and the enclosure template are on the [**CHESTER Push**](../../catalog-applications/chester-push/index.md) catalog page.
+What all catalog applications share (LED, button, network mode, BLE tags and shell commands) is described in [**Common Functionality**](../../catalog-applications/common-functionality.md). The hardware and the enclosure template are on the [**CHESTER Push**](../../catalog-applications/chester-push/index.md) catalog page.
 
 ## Supported Hardware
 
@@ -19,18 +19,18 @@ The firmware works with:
 
 - the [**CHESTER-Z1**](../../extension-modules/chester-z1.md) module, which the firmware needs: up to five push buttons with LEDs, the acoustic buzzer, the DC input and the Li-Ion backup battery
 - the thermometer and the accelerometer on the mainboard
-- Bluetooth sensor tags (see [**BLE Tags**](../ble-tags.md)); their readings go only into LTE reports
+- Bluetooth sensor tags (see [**BLE Tags**](../../catalog-applications/ble-tags.md)); their readings go only into LTE reports
 
 In the data, the buttons are `button_x` (the center button) and `button_1` to `button_4`. Which of them are fitted depends on the CHESTER-Z1 ordering code (see [**Ordering Codes**](../../ordering-codes.md#chester-z)).
 
 ## Measurement and Behavior
 
 - A button press is **reported at once**: the device waits `event-report-delay` seconds, so that presses close together go into one report, and then sends the report.
-- At most `event-report-rate` event reports go out per hour. The limit saves the battery and the amount of transferred data; events over it wait for the next periodic report, and periodic reports do not count toward it.
+- At most `event-report-rate` event reports go out per hour (firmware v4.0.1 sends up to one more). The limit saves the battery and the amount of transferred data; events over it wait for the next periodic report, and periodic reports do not count toward it.
 - The firmware tells a **short press** (`clicked`) from a **long press** (`held`). Every report carries, for each button, the counters of short and long presses since the device started and the button events since the previous report with their timestamps.
 - A report lists at most 8 events per button. Further presses of that button before the next report are not counted.
 - The thermometer, the accelerometer and the voltages on CHESTER-Z1 are sampled every minute, the mainboard supply voltage every 12 hours. Bluetooth tags are sampled every `interval-sample` seconds and aggregated every `interval-aggreg` seconds.
-- The periodic report goes out every `interval-report` seconds, without the random jitter described in [**Common Functionality**](../common-functionality.md#report-interval-jitter).
+- The periodic report goes out every `interval-report` seconds, without the random jitter described in [**Common Functionality**](../../catalog-applications/common-functionality.md#report-interval-jitter).
 - When external power on CHESTER-Z1 fails or returns, the device reports it at once (parameters `backup-report-*`), so CHESTER Push can also monitor power outages.
 
 ### LED Behavior
@@ -52,21 +52,21 @@ The [**CHESTER Push FM**](chester-push-fm.md) build lights the LEDs differently.
 
 Set a parameter with `app config <parameter> <value>` and apply the change with `config save`, which stores the configuration and restarts the device. The command `app config show` prints the current values.
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `interval-sample` | `<1-86400>` | `60` | Sampling interval of the Bluetooth tags in seconds |
-| `interval-aggreg` | `<1-86400>` | `300` | Aggregation interval of the Bluetooth tag samples in seconds |
-| `interval-report` | `<30-86400>` | `1800` | Report interval in seconds |
-| `interval-poll` | `<0-86400>` | `0` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
-| `downlink-wdg-interval` | `<0-1209600>` | `129600` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off |
-| `event-report-delay` | `<1-86400>` | `1` | Delay between an event and its report in seconds (button press, backup power change) |
-| `event-report-rate` | `<1-3600>` | `30` | Event reports per hour at most; periodic reports do not count toward this limit |
-| `backup-report-connected` | `true`, `false` | `true` | Report immediately when external power returns |
-| `backup-report-disconnected` | `true`, `false` | `true` | Report immediately when external power fails |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `interval-sample` | Sample interval | `<1-86400>` | `60` | Sampling interval of the Bluetooth tags in seconds |
+| `interval-aggreg` | Aggregation interval | `<1-86400>` | `300` | Aggregation interval of the Bluetooth tag samples in seconds |
+| `interval-report` | Report interval | `<30-86400>` | `1800` | Report interval in seconds |
+| `interval-poll` | Poll interval | `<0-86400>` | `0` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds; `0` turns polling off |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | `129600` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off |
+| `event-report-delay` | Event report delay | `<1-86400>` | `1` | Delay between an event and its report in seconds (button press, backup power change) |
+| `event-report-rate` | Event report rate | `<1-3600>` | `30` | Event reports per hour at most (firmware v4.0.1 sends up to one more); periodic reports do not count toward this limit |
+| `backup-report-connected` | Backup report connected | `true`, `false` | `true` | Report immediately when external power returns |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | `true` | Report immediately when external power fails |
 
 The `interval-sample` and `interval-aggreg` parameters take effect only with Bluetooth tags; the thermometer and the accelerometer are sampled every minute regardless of them.
 
-The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../common-functionality.md#network-mode-configuration).
+The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../../catalog-applications/common-functionality.md#network-mode-configuration).
 
 ## Commands
 
@@ -87,13 +87,16 @@ Flashing is described in [**Firmware Flashing**](../../firmware-flashing/index.m
 
 ## Example JSON Message
 
+Every field, with its unit, range and resolution, is described on the catalog page under [**Data**](../../catalog-applications/chester-push/index.md#data-over-lte).
+
 <Tabs>
   <TabItem value="lte" label="LTE">
 
-The example shows a report of the main firmware:
+The example shows a report of the main firmware v4.0.1 as HARDWARIO Cloud decodes it. The report went out after a long press of `button_2`, with external power connected and no Bluetooth tag:
 
-- `backup`: DC input voltage, battery voltage, state and events of the CHESTER-Z1 power input
-- `button_x` and `button_1` to `button_4`: for each button, the counters of short (`count_click`) and long (`count_hold`) presses and the events since the previous report
+- `backup`: DC input voltage and battery voltage of CHESTER-Z1 in mV, the state of external power and its events since the previous report
+- `buttons`: one entry for each button position, `button_x` and `button_1` to `button_4`, with the counters of short (`count_click`) and long (`count_hold`) presses since the device started; `events` appears only for a button pressed since the previous report
+- `ble_tags`: one entry for each paired Bluetooth tag, an empty list here
 
 Button **events** are:
 * `clicked`
@@ -110,38 +113,24 @@ Backup **events** are:
 {
   "message": {
     "version": 1,
-    "sequence": 1,
-    "timestamp": 1672910024
+    "sequence": 57,
+    "timestamp": 1793610878
   },
   "attribute": {
     "vendor_name": "HARDWARIO",
     "product_name": "CHESTER-M",
-    "hw_variant": "CDGLS",
-    "hw_revision": "R3.2",
-    "fw_name": "CHESTER Push",
-    "fw_version": "v1.4.0",
+    "hw_variant": "CGLS",
+    "hw_revision": "R3.4",
+    "fw_version": "v4.0.1",
     "serial_number": "2159018247"
   },
   "system": {
-    "uptime": 173,
-    "voltage_rest": 3.96,
-    "voltage_load": 3.86,
-    "current_load": 38
-  },
-  "backup": {
-    "line_voltage": 0.01,
-    "batt_voltage": 3.43,
-    "state": "disconnected",
-    "events": [
-      {
-        "timestamp": 1672910010,
-        "type": "disconnected"
-      }
-    ]
+    "uptime": 98436,
+    "voltage_rest": 4.31,
+    "voltage_load": 4.27,
+    "current_load": 42
   },
   "network": {
-    "imei": 351358815178303,
-    "imsi": 901288003957939,
     "parameter": {
       "eest": 7,
       "ecl": 0,
@@ -155,49 +144,54 @@ Backup **events** are:
     }
   },
   "thermometer": {
-    "temperature": 21.56
+    "temperature": 22.56
   },
   "accelerometer": {
-    "acceleration_x": -0.31,
-    "acceleration_y": 0.15,
-    "acceleration_z": 9.88,
+    "accel_x": -0.31,
+    "accel_y": 0.15,
+    "accel_z": 9.88,
     "orientation": 2
   },
-  "button_x": {
-    "count_click": 0,
-    "count_hold": 0,
+  "backup": {
+    "line_voltage": 23952,
+    "batt_voltage": 4118,
+    "state": "connected",
     "events": []
   },
-  "button_1": {
-    "count_click": 3,
-    "count_hold": 1,
-    "events": [
-      {
-        "timestamp": 1672910020,
-        "type": "held"
-      }
-    ]
-  },
-  "button_2": {
-    "count_click": 12,
-    "count_hold": 0,
-    "events": [
-      {
-        "timestamp": 1672910023,
-        "type": "clicked"
-      }
-    ]
-  },
-  "button_3": {
-    "count_click": 0,
-    "count_hold": 0,
-    "events": []
-  },
-  "button_4": {
-    "count_click": 0,
-    "count_hold": 0,
-    "events": []
-  }
+  "buttons": [
+    {
+      "button": "button_x",
+      "count_click": 0,
+      "count_hold": 0
+    },
+    {
+      "button": "button_1",
+      "count_click": 3,
+      "count_hold": 0
+    },
+    {
+      "button": "button_2",
+      "count_click": 12,
+      "count_hold": 1,
+      "events": [
+        {
+          "timestamp": 1793610877,
+          "type": "held"
+        }
+      ]
+    },
+    {
+      "button": "button_3",
+      "count_click": 0,
+      "count_hold": 0
+    },
+    {
+      "button": "button_4",
+      "count_click": 0,
+      "count_hold": 0
+    }
+  ],
+  "ble_tags": []
 }
 ```
 
@@ -206,30 +200,50 @@ Backup **events** are:
   </TabItem>
   <TabItem value="lora" label="LoRaWAN">
 
+The LoRaWAN decoder of the application turns a message sent at the same moment into these fields: the counters and press flags of every button, the backup voltages in V and `backup_state` as a string.
+
 <details>
 <summary><b>Show JSON Example</b></summary>
 
 ```json
 {
-  "voltage_rest": 3.8,
-  "voltage_load": 3.75,
-  "current_load": 15,
-  "orientation": 1,
-  "therm_temperature": 22.5,
+  "voltage_rest": 4.31,
+  "voltage_load": 4.27,
+  "current_load": 42,
+  "orientation": 2,
+  "therm_temperature": 22.56,
   "backup": {
-    "line_voltage": 24.0,
-    "battery_voltage": 4.1,
-    "backup_state": true
+    "line_voltage": 23.952,
+    "battery_voltage": 4.118,
+    "backup_state": "connected"
   },
   "button_x": {
-    "press_count": 42,
-    "hold_count": 3,
-    "press_event": true,
+    "press_count": 0,
+    "hold_count": 0,
+    "press_event": false,
     "hold_event": false
   },
   "button_1": {
-    "press_count": 10,
+    "press_count": 3,
+    "hold_count": 0,
+    "press_event": false,
+    "hold_event": false
+  },
+  "button_2": {
+    "press_count": 12,
     "hold_count": 1,
+    "press_event": false,
+    "hold_event": true
+  },
+  "button_3": {
+    "press_count": 0,
+    "hold_count": 0,
+    "press_event": false,
+    "hold_event": false
+  },
+  "button_4": {
+    "press_count": 0,
+    "hold_count": 0,
     "press_event": false,
     "hold_event": false
   }

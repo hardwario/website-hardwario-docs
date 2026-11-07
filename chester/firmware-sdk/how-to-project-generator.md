@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 The **CHESTER SDK Project Generator** manages **variants** of catalog applications and generates their configuration from a **YAML** file. You can look at `project.yaml` files to see different variants.
 
-Then you call `west chester-update --variant "CHESTER Clime 1W"` to update project files, then you call `west build` to recompile project.
+Then you call `west chester-update --variant "CHESTER Clime IAQ"` to update project files, then you call `west build` to recompile project.
 
 ## WEST Command
 
@@ -22,7 +22,7 @@ Then you call `west chester-update --variant "CHESTER Clime 1W"` to update proje
 
 Examples:
 
-`west chester-update clime --variant chester-clime-z`
+`west chester-update clime --variant chester-clime-iaq`
 
 `west chester-update clime --variant chester-clime-rtd --version v3.2.1`
 

@@ -20,7 +20,9 @@ Parametry `hygro-t-alarm-*` nejsou k dispozici. Ostatní parametry jsou stejné.
 
 ### Data {#data}
 
-Hlášení navíc obsahuje strukturu `tc_thermometer` s jednou položkou pro každý termočlánek: `channel` a `measurements`, kde každé měření má časovou značku a teplotu `min`, `max`, `avg` a `mdn` v °C. Struktura `hygrometer` v hlášení není.
+Pole struktury `tc_thermometer` s jednotkami, rozsahy a rozlišením popisuje stránka katalogové aplikace v části [**Termočlánky**](../../catalog-applications/chester-clime/index.md#tc-thermometer).
+
+Hlášení navíc obsahuje strukturu `tc_thermometer` s jednou položkou pro každý termočlánek: `channel` a `measurements`, kde každé měření má časovou značku a teplotu `min`, `max`, `avg` a `mdn` v °C. Struktura `hygrometer` v hlášení není. Přes LoRaWAN přicházejí obě teploty jako `tc_thermometers`.
 
 ## Sestavení firmwaru {#firmware-build}
 

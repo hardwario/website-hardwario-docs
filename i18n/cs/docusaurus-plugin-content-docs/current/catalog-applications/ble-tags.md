@@ -43,7 +43,7 @@ Pokud aktivní není, přiložte k senzoru **magnet** a probuďte ho tak z reži
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '376px' }}>
-        <Image img={require('../../../../../chester/firmware/images/tag-magnet.png')} alt="K senzoru Teltonika EYE je přiložený magnet, který ho probudí; zelená LED potvrzuje aktivaci" />
+        <Image img={require('../../../../../chester/catalog-applications/images/tag-magnet.png')} alt="K senzoru Teltonika EYE je přiložený magnet, který ho probudí; zelená LED potvrzuje aktivaci" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -159,7 +159,7 @@ PIN můžete později změnit v nastavení zařízení.
   <div class="row">
     <div class="col col--5">
       <div>
-        <Image img={require('../../../../../chester/firmware/images/ble-app-settings.png')} width={200} height={200} alt="Přehled zařízení v aplikaci EYE s hodnotami ze senzoru, stavem firmwaru a tlačítkem CONFIGURE" />
+        <Image img={require('../../../../../chester/catalog-applications/images/ble-app-settings.png')} width={200} height={200} alt="Přehled zařízení v aplikaci EYE s hodnotami ze senzoru, stavem firmwaru a tlačítkem CONFIGURE" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -177,7 +177,7 @@ Data se s ní přenášejí stabilně, senzor vysílá dost často na to, aby ho
   <div class="row">
     <div class="col col--5">
       <div>
-        <Image img={require('../../../../../chester/firmware/images/ble-settings.png')} width={200} height={200} alt="Konfigurační obrazovka aplikace EYE: vysílací výkon 4 dBm, interval vysílání 10 s, paket Sensors, aktivní teplota a vlhkost" />
+        <Image img={require('../../../../../chester/catalog-applications/images/ble-settings.png')} width={200} height={200} alt="Konfigurační obrazovka aplikace EYE: vysílací výkon 4 dBm, interval vysílání 10 s, paket Sensors, aktivní teplota a vlhkost" />
       </div>
     </div>
     <div class="col col--24"></div>

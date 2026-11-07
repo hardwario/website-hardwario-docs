@@ -88,7 +88,7 @@ Správu seznamu **adres wM-Bus** (**přidávání a odebírání**), nastavení 
 
 ## Šifrování zpráv a správa klíčů {#message-encryption-and-key-management}
 
-**Odesílané zprávy jsou šifrované**, aby se při přenosu dat šetřila energie a prodloužila výdrž baterie.
+**Odesílané zprávy jsou šifrované.**
 
 **Přijatá data je proto nutné dešifrovat** pomocí **dešifrovacích klíčů**.  
 Máte dvě možnosti:

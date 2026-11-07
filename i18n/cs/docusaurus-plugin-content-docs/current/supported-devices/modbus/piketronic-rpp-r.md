@@ -124,15 +124,17 @@ aktuální nastavení a identifikaci sondy (zařízení, firmware, sériové č�
 
 ### Měřené hodnoty {#measured-values}
 
-Dekodér: `com.hardwario.chester.app.serial`. Hodnoty se zobrazují v poli `devices`
-(`devices → data`).
+HARDWARIO Cloud hlášení dekóduje dekodérem `com.hardwario.chester.app.serial`. V každém hlášení je sonda jednou položkou seznamu `devices` s hodnotou `type_name` `piketronic`. Každý vzorek odebraný od předchozího hlášení je jednou položkou jeho seznamu `data` s těmito klíči:
 
-| Měřená hodnota             | Klíč / cesta                            | Jednotka |
-|----------------------------|-----------------------------------------|--------|
-| Koncentrace radonu (1 h)   | devices → data → radon_concentration     | Bq/m³  |
-| Koncentrace radonu (1 den) | devices → data → radon_concentration_day | Bq/m³  |
-| Teplota                    | devices → data → temperature             | °C     |
-| Vlhkost                    | devices → data → humidity                | %      |
+| Měřená hodnota | Klíč |
+| :--- | :--- |
+| Koncentrace radonu, klouzavý průměr za 1 hodinu | `devices[].data[].radon_concentration` |
+| Koncentrace radonu, klouzavý průměr za 1 den | `devices[].data[].radon_concentration_day` |
+| Teplota | `devices[].data[].temperature` |
+| Vlhkost | `devices[].data[].humidity` |
+
+Jednotky, rozsahy a rozlišení všech klíčů uvádí katalogová stránka [**CHESTER Serial**](../../catalog-applications/chester-serial/index.md#piketronic-rpp-r).
+
 
 :::info
 

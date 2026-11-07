@@ -25,27 +25,47 @@ description: "CHESTER Current Z firmware: what it changes against the main CHEST
 
 Added parameters for the backup module:
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `event-report-delay` | `<1-86400>` | `1` | Delay between a power change and its report in seconds |
-| `event-report-rate` | `<1-3600>` | `30` | Event reports per hour at most; periodic reports do not count toward this limit |
-| `backup-report-connected` | `true`, `false` | `true` | Report immediately when external power returns |
-| `backup-report-disconnected` | `true`, `false` | `true` | Report immediately when external power fails |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `event-report-delay` | Event report delay | `<1-86400>` | `1` | Delay between a power change and its report in seconds |
+| `event-report-rate` | Event report rate | `<1-3600>` | `30` | Event reports per hour at most (firmware v4.0.1 sends up to one more); periodic reports do not count toward this limit |
+| `backup-report-connected` | Backup report connected | `true`, `false` | `true` | Report immediately when external power returns |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | `true` | Report immediately when external power fails |
 
 All other parameters are the same.
 
 ### Data
 
-The report adds a `backup` structure:
+The report adds a `backup` structure. Every field, with its unit, range and resolution, is described on the catalog page under [**CHESTER Current Z**](../../catalog-applications/chester-current/index.md#chester-current-z).
 
 | Key | Value |
 | :--- | :--- |
 | `line_voltage` | Voltage of the external DC input in V |
 | `batt_voltage` | Voltage of the backup battery in V |
 | `state` | `connected` when external power is present, otherwise `disconnected` |
-| `events` | Power changes since the last report, each with `timestamp` and `type` (`connected`, `disconnected`) |
+| `events` | Power changes since the last report (up to 32), each with `timestamp` and `type` (`connected`, `disconnected`) |
 
-In LoRaWAN mode, the header has the BACKUP flag (bit 4) set, and the payload adds the external voltage and the battery voltage in mV (2 bytes each) and the state (1 byte) between the 1-Wire thermometers and the channels.
+In LoRaWAN mode, the header has the BACKUP flag (bit 4) set, and the payload adds the external voltage and the battery voltage in mV (2 bytes each) and the state (1 byte) between the 1-Wire thermometers and the channels. The decoder returns them as `backup.line_voltage` and `backup.battery_voltage` in V and `backup.backup_state` (`connected`, `disconnected`).
+
+The example shows the `backup` structure of the report that follows the return of external power:
+
+<details>
+<summary><b>Show JSON Example</b></summary>
+
+```json
+{
+  "backup": {
+    "line_voltage": 24.01,
+    "batt_voltage": 4.09,
+    "state": "connected",
+    "events": [
+      { "timestamp": 1793960915, "type": "connected" }
+    ]
+  }
+}
+```
+
+</details>
 
 ## Firmware Build
 

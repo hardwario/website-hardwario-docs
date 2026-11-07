@@ -420,6 +420,54 @@ Only a single instance of this module can be installed on CHESTER-M.
 | `CHESTER-X10:A` |
 | `CHESTER-X10:B` |
 
+### CHESTER-X12: RS-232 Interface {#chester-x12}
+
+**Format:** `CHESTER-X12[:{A|B}]`
+
+**Legend:**
+
+* `:A` = Expansion module configured for backside slot "A" position
+* `:B` = Expansion module configured for backside slot "B" position
+
+**Available parts:**
+
+| Ordering Code   |
+| :-------------- |
+| `CHESTER-X12:A` |
+| `CHESTER-X12:B` |
+
+### CHESTER-X13: CAN Bus Interface {#chester-x13}
+
+**Format:** `CHESTER-X13[:{A|B}]`
+
+**Legend:**
+
+* `:A` = Expansion module configured for backside slot "A" position
+* `:B` = Expansion module configured for backside slot "B" position
+
+**Available parts:**
+
+| Ordering Code   |
+| :-------------- |
+| `CHESTER-X13:A` |
+| `CHESTER-X13:B` |
+
+### CHESTER-X14: Ethernet Interface {#chester-x14}
+
+**Format:** `CHESTER-X14[:{A|B}]`
+
+**Legend:**
+
+* `:A` = Expansion module configured for backside slot "A" position
+* `:B` = Expansion module configured for backside slot "B" position
+
+**Available parts:**
+
+| Ordering Code   |
+| :-------------- |
+| `CHESTER-X14:A` |
+| `CHESTER-X14:B` |
+
 ## Enclosures
 
 For more details and drawings, see [Enclosures](hardware-description/enclosures.md#list-of-enclosures) article.
@@ -445,6 +493,7 @@ For more details and drawings, see [Enclosures](hardware-description/enclosures.
 | CHESTER-E17-P | CHESTER with C1 (Ekoterm)      |         |
 | CHESTER-E18-P | CHESTER with C2 (Axilera)      |         |
 | CHESTER-E19-P | CHESTER with B1 (wM-Bus)       |         |
+| CHESTER-E23-P | CHESTER Motion                 | S3      |
 
 ## Other Accessories
 

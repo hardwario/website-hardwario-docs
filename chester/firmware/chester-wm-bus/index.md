@@ -7,9 +7,9 @@ description: "Firmware of the CHESTER wM-Bus catalog application: scanning, the 
 
 The **CHESTER wM-Bus** firmware turns CHESTER into a Wireless M-Bus gateway. In scheduled scans it listens for wM-Bus meters, collects their raw telegrams and sends them to HARDWARIO Cloud over NB-IoT/LTE-M. The device does not decode the meter data; HARDWARIO Cloud can decrypt and decode the telegrams on request (see [**Cloud Decode Configuration**](#cloud-decode-configuration)).
 
-The firmware has a single build: the battery-powered CHESTER wM-Bus and [**CHESTER wM-Bus DC**](../../catalog-applications/chester-wm-bus/chester-wm-bus-dc.md) both run it.
+The firmware has a single build: the battery-powered CHESTER wM-Bus and [**CHESTER wM-Bus DC**](../../catalog-applications/chester-wm-bus/index.md#chester-wm-bus-dc) both run it.
 
-What all catalog applications share (LED, button, network mode and shell commands) is described in [**Common Functionality**](../common-functionality.md). The hardware and the product variants are on the [**CHESTER wM-Bus**](../../catalog-applications/chester-wm-bus/index.md) catalog page.
+What all catalog applications share (LED, button, network mode and shell commands) is described in [**Common Functionality**](../../catalog-applications/common-functionality.md). The hardware and the product variants are on the [**CHESTER wM-Bus**](../../catalog-applications/chester-wm-bus/index.md) catalog page.
 
 ## Supported Hardware
 
@@ -17,7 +17,7 @@ The firmware works with:
 
 - the **CHESTER-B1** carrier board with the wM-Bus radio and two antennas (see [**Ordering Codes**](../../ordering-codes.md#chester-b1))
 - wM-Bus meters of any manufacturer that transmit in the **T1** or **C1** mode (see [**Tested wM-Bus Sensors**](../../supported-devices/wm-bus.md))
-- power from six alkaline D cells or from an external 230 V adapter
+- power from primary cells, 3.6 V nominal, 26 000 mAh, or from an external 230 V adapter. The recommended cells are two Saft LSH 20 lithium cells (size D, 3.6 V).
 
 ## Scanning and Behavior
 
@@ -29,7 +29,7 @@ The device has adjustable parameters where it can scan wM-Bus devices periodical
 - From each meter on the list, the device keeps the first packet it receives in the scan; packets from other meters are ignored.
 - Without an address list, the device keeps the first packet from every meter it hears, and the scan always runs for the full `scan-timeout`.
 - During a scan, the yellow LED blinks every 2 seconds (twice in a row while the second antenna listens). The red LED lights up for half a second when the data go out.
-- Two presses of the mainboard button start a scan, and three presses end the running scan as if `scan-timeout` had expired. One, four and five presses work as described in [**Common Functionality**](../common-functionality.md#button-behaviour).
+- Two presses of the mainboard button start a scan, and three presses end the running scan as if `scan-timeout` had expired. One, four and five presses work as described in [**Common Functionality**](../../catalog-applications/common-functionality.md#button-behaviour).
 
 ## Configuration Parameters
 
@@ -41,22 +41,22 @@ The `config save` command is needed only when you configure the device over Blue
 
 :::
 
-| Parameter | Values | Default | Meaning |
-| :--- | :--- | :--- | :--- |
-| `scan-timeout` | `<1-86400>` | `130` | Longest duration of a scan with one antenna in seconds |
-| `scan-interval` | `<30-604800>` | `600` | Time between the starts of two scans in seconds, in the `interval` scan mode |
-| `scan-hour` | `<0-23>` | `12` | Hour (UTC) at which the daily, weekly and monthly scans start |
-| `scan-weekday` | `<0-6>` | `3` | Day of the week for the weekly scan: `1` is Monday, `6` is Saturday |
-| `scan-day` | `<1-31>` | `15` | Day of the month for the monthly scan |
-| `scan-mode` | `off`, `interval`, `daily`, `weekly`, `monthly` | `off` | When scans start: never by themselves, in a fixed interval, or once a day, week or month (see [**Scan Configuration**](#scan-configuration)) |
-| `scan-ant` | `single`, `dual` | `single` | With `dual`, the scan is repeated with the second antenna when the first one did not receive every address |
-| `poll-interval` | `<5-1209600>` | `28800` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds |
-| `downlink-wdg-interval` | `<0-1209600>` | `172800` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off |
-| `cloud-decode` | `true`, `false` | `false` | HARDWARIO Cloud decodes the telegrams (see [**Cloud Decode Configuration**](#cloud-decode-configuration)) |
+| Parameter | HARDWARIO Manager | Values | Default | Meaning |
+| :--- | :--- | :--- | :--- | :--- |
+| `scan-timeout` | Scan timeout | `<1-86400>` | `130` | Longest duration of a scan with one antenna in seconds |
+| `scan-interval` | Scan interval | `<30-604800>` | `600` | Time between the starts of two scans in seconds, in the `interval` scan mode |
+| `scan-hour` | Scan hour | `<0-23>` | `12` | Hour (UTC) at which the daily, weekly and monthly scans start |
+| `scan-weekday` | Scan weekday | `<0-6>` | `3` | Day of the week for the weekly scan: `1` is Monday, `6` is Saturday |
+| `scan-day` | Scan day | `<1-31>` | `15` | Day of the month for the monthly scan |
+| `scan-mode` | Scan mode | `off`, `interval`, `daily`, `weekly`, `monthly` | `off` | When scans start: never by themselves, in a fixed interval, or once a day, week or month (see [**Scan Configuration**](#scan-configuration)) |
+| `scan-ant` | Scan ant | `single`, `dual` | `single` | With `dual`, the scan is repeated with the second antenna when the first one did not receive every address |
+| `poll-interval` | Poll interval | `<5-1209600>` | `28800` | How often the device asks HARDWARIO Cloud for downlink messages, in seconds |
+| `downlink-wdg-interval` | Downlink wdg interval | `<0-1209600>` | `172800` | In LTE mode, the device restarts when it has not reached HARDWARIO Cloud for this many seconds; `0` turns the watchdog off |
+| `cloud-decode` | Cloud decode | `true`, `false` | `false` | HARDWARIO Cloud decodes the telegrams (see [**Cloud Decode Configuration**](#cloud-decode-configuration)) |
 
 The parameters are the same for the battery-powered device and for CHESTER wM-Bus DC.
 
-The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../common-functionality.md#network-mode-configuration). CHESTER wM-Bus starts in the `lte` mode.
+The network mode (`app config mode`) and the network settings are described in [**Common Functionality**](../../catalog-applications/common-functionality.md#network-mode-configuration). CHESTER wM-Bus starts in the `lte` mode.
 
 ### Address List Configuration
 
@@ -115,9 +115,9 @@ Useful to verify the data flow and check if sensors are sending data correctly.
 
 `app config cloud-decode false/true`
 
-- `false`: messages are sent in raw (binary) format.
-- `true`: the cloud decodes messages into a readable (JSON) format.
-  If the messages are encrypted, the decryption key from **Variables** is used (see [**decryption keys**](#hardwario-cloud--decryption-keys)).
+- `false`: the report carries the raw telegrams: `packets` holds each telegram in hexadecimal (`data`) with its signal strength (`rssi`).
+- `true`: HARDWARIO Cloud decodes the telegrams and shows the decoded values in `packets`.
+  If the telegrams are encrypted, the cloud uses the decryption key from **Variables** (see [**decryption keys**](#hardwario-cloud--decryption-keys)).
 
 ### Scan Configuration
 
@@ -243,7 +243,7 @@ app config address add 222222
 
 ## HARDWARIO Cloud – Decryption Keys
 
-The **transmitted messages from wM-Bus devices are encrypted** to optimize energy consumption during data transmission, which extends the overall battery life.
+The **transmitted messages from wM-Bus devices are encrypted**.
 
 The **received data must therefore be decrypted**, which is done using **decryption keys**.
 
@@ -293,75 +293,77 @@ Flashing is described in [**Firmware Flashing**](../../firmware-flashing/index.m
 
 ## Example JSON Message
 
-In this example **JSON** you can see raw data from two wM-Bus sensors.
+Every field, with its unit, range and resolution, is described on the catalog page under [**Data**](../../catalog-applications/chester-wm-bus/index.md#data-over-lte).
 
-Each JSON cloud message contains up to 20 wM-Bus packets. If CHESTER is configured for more than 20 devices, then the raw wM-Bus packets are split to multiple JSON messages.
+The example is the report of a scan that received the telegrams of both meters on the address list.
+
+Each report carries up to 20 telegrams. When a scan receives more, they are split into several reports.
 
 The `wmbus` structure holds:
 
-- `cycle`: number of the scan since the device started
-- `devices`: number of addresses on the list (without a list, the number of meters heard)
-- `received`: number of packets received in the scan
-- `part`: index of this message when the packets of one scan are split into several messages, starting at `0`
 - `scan_time`: duration of the scan in seconds
-- `packets`: the raw telegrams (`data`, hexadecimal) with their signal strength (`rssi`, dBm)
+- `received`: number of meters whose telegram the scan received
+- `devices`: number of addresses on the list (without a list, the number of meters heard)
+- `cycle`: number of the scan since the device started
+- `part`: index of this report when the telegrams of one scan are split into several reports, starting at `0`
+- `packets`: the raw telegrams (`data`, hexadecimal, from the length field on, without the CRC bytes) with their signal strength (`rssi`, dBm); with `cloud-decode` set to `true`, HARDWARIO Cloud shows the decoded values of the meters here instead
 
 <details>
 <summary><b>Show JSON Example</b></summary>
 
 ```json
 {
-    "accelerometer": {
-        "accel_x": 0.22,
-        "accel_y": 0.07,
-        "accel_z": 9.42,
-        "orientation": 2
-    },
-    "battery": {
-        "current_load": null,
-        "voltage_load": null,
-        "voltage_rest": null
-    },
     "frame": {
         "protocol": 3,
-        "sequence": 0,
-        "timestamp": 1698660040
+        "sequence": 27,
+        "timestamp": 1762430712
+    },
+    "state": {
+        "uptime": 1296131
+    },
+    "battery": {
+        "voltage_rest": 3.65,
+        "voltage_load": 3.61,
+        "current_load": 36
     },
     "network": {
         "parameter": {
-            "band": 1184866148,
-            "cid": 248833,
-            "earfcn": -2121962691,
-            "ecl": 536882852,
-            "eest": 0,
-            "plmn": 536882852,
-            "rsrp": 384479,
-            "rsrq": 508,
-            "snr": 0
+            "eest": 8,
+            "ecl": 0,
+            "rsrp": -95,
+            "rsrq": -11,
+            "snr": 6,
+            "plmn": 23003,
+            "cid": 1036050,
+            "band": 20,
+            "earfcn": 6300
         }
     },
-    "state": {
-        "uptime": 47
-    },
     "thermometer": {
-        "temperature": 22.31
+        "temperature": 21.06
+    },
+    "accelerometer": {
+        "accel_x": 0.22,
+        "accel_y": 0.07,
+        "accel_z": 9.78,
+        "orientation": 2
     },
     "wmbus": {
-        "cycle": 1,
+        "scan_time": 37,
+        "received": 2,
         "devices": 2,
+        "cycle": 14,
+        "part": 0,
         "packets": [
             {
                 "data": "32446850003076816980a0919f2b06007007000061087c08000000000000000000000000010101020100000000000000000000",
-                "rssi": -65
+                "rssi": -71
             },
             {
-                "data": "32446850003076816980a0919f2b06007007000061087c08000000000000000000000000010101020100000000000000000000",
-                "rssi": -72
+                "data": "32446850152904766980a0919f2b0600700700005e087c08000000000000000000000000010101020100000000000000000000",
+                "rssi": -84
             }
-        ],
-        "part": 0,
-        "received": 2,
-        "scan_time": 17
+        ]
     }
 }
 ```

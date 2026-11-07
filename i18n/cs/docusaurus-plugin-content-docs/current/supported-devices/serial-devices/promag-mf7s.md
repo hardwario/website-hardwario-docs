@@ -49,7 +49,7 @@ app config serial-stop-bits 1
 app config device-0 promag_mf7s
 app config mode lte
 app config interval-report 0
-app config save
+config save
 ```
 
 #### Přehled parametrů {#parameter-reference}
@@ -78,10 +78,10 @@ Pokud je `interval-report > 0`, karty se hromadí v bufferu (max. 32) a odesíla
 #### Načtení verze firmwaru čtečky {#read-reader-firmware-version}
 
 ```
-device promag_mf7s firmware
+device promag_mf7s read_info
 ```
 
-Výstup: `Firmware: MF7S-1.0`
+Vypíše verzi firmwaru a název čtečky.
 
 #### Signalizace (LED a zvuk) {#notifications-led--sound}
 
@@ -113,7 +113,7 @@ Sampling finished (total reads: 2)
 ```
 device sample 0        # Show device status at index 0
 device list            # List configured devices
-app send               # Force immediate data send
+send                   # Force immediate data send
 ```
 
 ---
@@ -139,14 +139,14 @@ V režimu LTE se odesílá zpráva CBOR (max. 8 kB) se všemi nasbíranými kart
     "product_name": "CHESTER-M",
     "hw_variant": "CDGLS",
     "hw_revision": "R3.4",
-    "fw_version": "v3.5.1",
+    "fw_version": "v4.0.1",
     "serial_number": "2159019335"
   },
   "system": {
     "uptime": 3600,
     "voltage_rest": 3.65,
     "voltage_load": 3.42,
-    "current_load": 38
+    "current_load": 34
   },
   "network": {
     "parameter": {
@@ -165,9 +165,9 @@ V režimu LTE se odesílá zpráva CBOR (max. 8 kB) se všemi nasbíranými kart
     "temperature": 23.45
   },
   "accelerometer": {
-    "accel_x": 0.01,
-    "accel_y": -0.02,
-    "accel_z": 1.00,
+    "accel_x": 0.12,
+    "accel_y": -0.2,
+    "accel_z": 9.81,
     "orientation": 2
   },
   "devices": [
@@ -228,14 +228,14 @@ Offset  Size  Field
 
 ```
 10                     # Header: version=1, device_idx=0
-0E 0F D2 0D 26         # Battery: rest=3650mV, load=3421mV, current=38mA
+42 0E 5D 0D 22         # Battery: rest=3650mV, load=3421mV, current=34mA
 02                     # Accelerometer: orientation=2
 29 09                  # Thermometer: 2345 → 23.45°C
 0B                     # Device type: 11 (promag_mf7s)
 00                     # Address: 0
 01                     # Status: valid
 12 34 56 78            # Card UID: 0x12345678 (BE)
-D0 E0 4B 67            # Last read timestamp: 1735905488 (LE)
+D0 D0 77 67            # Last read timestamp: 1735905488 (LE)
 02 00                  # Total reads: 2
 ```
 
@@ -291,7 +291,7 @@ function decode(payload) {
 app config device-0 promag_mf7s
 app config mode lte
 app config interval-report 0
-app config save
+config save
 ```
 
 Každá karta se odešle **okamžitě** po přiložení.
@@ -302,7 +302,7 @@ Každá karta se odešle **okamžitě** po přiložení.
 app config device-0 promag_mf7s
 app config mode lte
 app config interval-report 900
-app config save
+config save
 ```
 
 Karty se hromadí v bufferu (max. 32) a odesílají se **každých 15 minut**.
@@ -312,7 +312,7 @@ Karty se hromadí v bufferu (max. 32) a odesílají se **každých 15 minut**.
 ```
 app config device-0 promag_mf7s
 app config mode lrw
-app config save
+config save
 ```
 
 Každá karta se odešle **okamžitě** jako binární zpráva (22 bajtů). Zpráva vždy obsahuje **poslední přiloženou kartu** a celkový počet načtení.

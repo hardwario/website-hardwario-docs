@@ -43,10 +43,6 @@
     "message": "Starší aplikace",
     "description": "The label for category 'Legacy' in sidebar 'docs'"
   },
-  "sidebar.docs.category.catalog-chester-clime": {
-    "message": "CHESTER Clime",
-    "description": "The label for category 'CHESTER Clime' in sidebar 'docs'"
-  },
   "sidebar.docs.category.Firmware": {
     "message": "Firmware",
     "description": "The label for category 'Firmware' in sidebar 'docs'"
@@ -54,34 +50,6 @@
   "sidebar.docs.category.firmware-chester-clime": {
     "message": "CHESTER Clime",
     "description": "The label for category 'CHESTER Clime' in sidebar 'docs'"
-  },
-  "sidebar.docs.category.catalog-chester-control": {
-    "message": "CHESTER Control",
-    "description": "The label for category 'CHESTER Control' in sidebar 'docs'"
-  },
-  "sidebar.docs.category.catalog-chester-current": {
-    "message": "CHESTER Current",
-    "description": "The label for category 'CHESTER Current' in sidebar 'docs'"
-  },
-  "sidebar.docs.category.catalog-chester-meteo": {
-    "message": "CHESTER Meteo",
-    "description": "The label for category 'CHESTER Meteo' in sidebar 'docs'"
-  },
-  "sidebar.docs.category.catalog-chester-range": {
-    "message": "CHESTER Range",
-    "description": "The label for category 'CHESTER Range' in sidebar 'docs'"
-  },
-  "sidebar.docs.category.catalog-chester-scale": {
-    "message": "CHESTER Scale",
-    "description": "The label for category 'CHESTER Scale' in sidebar 'docs'"
-  },
-  "sidebar.docs.category.catalog-chester-serial": {
-    "message": "CHESTER Serial",
-    "description": "The label for category 'CHESTER Serial' in sidebar 'docs'"
-  },
-  "sidebar.docs.category.catalog-chester-wm-bus": {
-    "message": "CHESTER wM-Bus",
-    "description": "The label for category 'CHESTER wM-Bus' in sidebar 'docs'"
   },
   "sidebar.docs.category.firmware-chester-control": {
     "message": "CHESTER Control",

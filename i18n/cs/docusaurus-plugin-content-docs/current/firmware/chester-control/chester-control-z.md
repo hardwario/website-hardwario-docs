@@ -30,16 +30,29 @@ Záložní modul hlásí stav záložní baterie a externího napájení DC:
 
 Přidané parametry pro záložní modul:
 
-| Parametr | Hodnoty | Výchozí | Význam |
-| :--- | :--- | :--- | :--- |
-| `backup-report-connected` | `true`, `false` | `true` | Hlásit okamžitě obnovení externího napájení |
-| `backup-report-disconnected` | `true`, `false` | `true` | Hlásit okamžitě výpadek externího napájení |
+| Parametr | HARDWARIO Manager | Hodnoty | Výchozí | Význam |
+| :--- | :--- | :--- | :--- | :--- |
+| `backup-report-connected` | Backup report connected | `true`, `false` | `true` | Hlásit okamžitě obnovení externího napájení |
+| `backup-report-disconnected` | Backup report disconnected | `true`, `false` | `true` | Hlásit okamžitě výpadek externího napájení |
 
 Parametry `event-report-delay` a `event-report-rate` platí i pro události záložního napájení. Ostatní parametry jsou stejné.
 
 ### Data {#data}
 
-Hlášení navíc obsahuje strukturu `backup` s napětím externího napájení (`line_voltage`), napětím záložní baterie (`batt_voltage`), stavem napájení `state` (`connected` nebo `disconnected`) a událostmi napájení `events`. Zprávy LoRaWAN data záložního modulu neobsahují.
+Hlášení navíc obsahuje strukturu `backup` s napětím externího vstupu DC (`line_voltage`) a záložní baterie (`batt_voltage`) ve voltech, stavem napájení `state` (`connected` nebo `disconnected`) a událostmi napájení `events` od předchozího hlášení. Dekodér tohoto firmwaru seznam `events` nerozkládá na jednotlivé položky, takže HARDWARIO Cloud zobrazí seznam čísel: unixový čas první změny a pak dvě čísla pro každou změnu, její odstup od tohoto času v sekundách a `1` (připojeno) nebo `0` (odpojeno). V této ukázce externí napájení vypadlo a o 95 sekund později se obnovilo:
+
+```json
+{
+  "backup": {
+    "line_voltage": 24.02,
+    "batt_voltage": 4.11,
+    "state": "connected",
+    "events": [1793944910, 0, 0, 95, 1]
+  }
+}
+```
+
+Rozsahy a rozlišení popisuje stránka katalogové aplikace v části [**CHESTER Control Z**](../../catalog-applications/chester-control/index.md#chester-control-z). Zprávy LoRaWAN data záložního modulu neobsahují.
 
 ## Sestavení firmwaru {#firmware-build}
 

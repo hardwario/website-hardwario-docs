@@ -17,7 +17,7 @@ The **catalog applications** also serve as a great starting point for your own f
 
 For details on how each catalog application works, click on the application name in the table below.
 
-Common features are described in the special [**Common Functionality**](../firmware/common-functionality.md) article.
+Common features are described in the special [**Common Functionality**](common-functionality.md) article.
 
 Firmware downloads, configuration parameters and data formats are in the [**Firmware**](../firmware/index.md) section.
 
@@ -43,7 +43,7 @@ Firmware downloads, configuration parameters and data formats are in the [**Firm
 - **CHESTER Clime IAQ** variant uses CHESTER-X10 for external power input (6–28 V)
 - **CHESTER Control** uses CHESTER-X4 module for step-down power supply and digital outputs
 - **CHESTER Push** uses CHESTER-Z1-F which combines backup battery with power supply; can also run from battery only
-- **CHESTER wM-Bus** is available in battery variant (6× D cell) or DC variant with an external 230 V adapter
-- **CHESTER Serial** uses CHESTER-X12 (RS-232) or CHESTER-X2 (RS-485) with external power input (5–28 V)
+- **CHESTER wM-Bus** is available in a battery variant (primary cells, 3.6 V nominal, 26 000 mAh) or a DC variant with an external mains adapter (230 V AC)
+- **CHESTER Serial** uses CHESTER-X12 (RS-232) or CHESTER-X2 (RS-485) with external power input (6–28 V)
 
 :::

@@ -20,12 +20,16 @@ Parametry `hygro-t-alarm-*` nejsou k dispozici. Ostatní parametry jsou stejné.
 
 ### Data {#data}
 
+Pole struktury `sps30` s jednotkami, rozsahy a rozlišením popisuje stránka katalogové aplikace v části [**Senzor prachových částic**](../../catalog-applications/chester-clime/index.md#sps30).
+
 Hlášení navíc obsahuje strukturu `sps30` a nemá strukturu `hygrometer`. Každá hodnota v ní má `measurements` s časovou značkou a hodnotami `min`, `max`, `avg` a `mdn`:
 
 | Klíč | Hodnota | Jednotka |
 | :--- | :--- | :--- |
 | `pm1`, `pm2_5`, `pm4`, `pm10` | Hmotnostní koncentrace částic do 1; 2,5; 4 a 10 µm | µg/m³ |
 | `num_pm0_5`, `num_pm1`, `num_pm2_5`, `num_pm4`, `num_pm10` | Početní koncentrace částic do 0,5; 1; 2,5; 4 a 10 µm | #/cm³ |
+
+Přes LoRaWAN firmware hodnoty senzoru SPS30 neodesílá.
 
 ## Sestavení firmwaru {#firmware-build}
 

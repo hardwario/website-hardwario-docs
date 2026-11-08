@@ -1,6 +1,7 @@
 ---
 slug: firmware-tool
 title: Nástroj pro nahrávání firmwaru
+description: "Instalace nástroje bcf přes pip, vyhledání firmwaru TOWER a jeho nahrání z GitHubu nebo lokálního souboru do modulu Core Module či zařízení Radio Dongle."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

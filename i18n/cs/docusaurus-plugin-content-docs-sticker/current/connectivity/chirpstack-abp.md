@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-abp
 title: ChirpStack v4 – ABP
+description: "Registrace zařízení STICKER v ChirpStack v4 přes ABP: DevAddr, NwkSKey a AppSKey, profil zařízení a aplikace, aktivace zařízení a kontrola uplinků."
 ---
 import Image from '@theme/IdealImage';
 

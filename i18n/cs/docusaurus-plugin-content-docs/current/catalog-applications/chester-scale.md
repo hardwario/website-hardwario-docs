@@ -1,6 +1,7 @@
 ---
 slug: chester-scale
 title: CHESTER Scale
+description: "Katalogová aplikace CHESTER Scale: hmotnost až ze čtyř kanálů tenzometrických snímačů na modulech CHESTER-X3C, varianta Scale Z se zálohou, příkazy a JSON."
 ---
 import Image from '@theme/IdealImage';
 

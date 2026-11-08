@@ -1,6 +1,7 @@
 ---
 slug: orno-or-we-504
 title: ORNO OR-WE-504
+description: "Připojení jednofázového elektroměru ORNO OR-WE-504 k zařízení CHESTER přes RS-485 Modbus RTU: zapojení a nastavení v softwaru ORNO nebo terminálu CHESTER."
 ---
 
 import Image from '@theme/IdealImage';

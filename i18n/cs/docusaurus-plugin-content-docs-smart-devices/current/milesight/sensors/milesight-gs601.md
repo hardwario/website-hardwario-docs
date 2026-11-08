@@ -1,6 +1,7 @@
 ---
 slug: milesight-gs601
 title: GS601
+description: "Stropní detektor vapování a kouře Milesight GS601, který měří i PM, TVOC, teplotu a vlhkost: klíče LoRaWAN třídy C, dekodéry a technické parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight GS601 je **stropní detektor vapování a kouře** pro **nekuřácká 
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/gs601.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/gs601.png')} alt="Senzor Milesight GS601" />
       </div>
     </div>
     <div class="col col--24"></div>

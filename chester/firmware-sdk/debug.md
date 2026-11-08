@@ -1,6 +1,7 @@
 ---
 slug: debug
 title: Debug
+description: "Debug CHESTER firmware with nRF Connect for VS Code: debug build, single stepping, shell over RTT, threads, and keeping the UICR region intact."
 ---
 import Image from '@theme/IdealImage';
 

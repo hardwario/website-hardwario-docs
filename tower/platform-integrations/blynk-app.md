@@ -1,6 +1,7 @@
 ---
 slug: blynk-app
 title: Blynk Mobile and Web Application
+description: "Connect TOWER to the Blynk mobile app via Node-RED on HARDWARIO Raspbian to switch a relay and LED strip and chart temperature, with an importable flow."
 ---
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'

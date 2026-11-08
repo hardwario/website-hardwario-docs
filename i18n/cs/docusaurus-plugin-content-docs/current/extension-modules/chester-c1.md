@@ -1,6 +1,7 @@
 ---
 slug: chester-c1
 title: CHESTER-C1 (I/O deska s relé)
+description: "Nosná deska CHESTER-C1 pro CHESTER-M: čtyři vstupy, dvě výkonová relé, RS-485, dvě svorkovnice 1-Wire, vstup 8–36 V DC a držáky baterií 3,6 V velikosti C."
 ---
 import Image from '@theme/IdealImage';
 

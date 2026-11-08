@@ -1,6 +1,7 @@
 ---
 slug: chester-connect-phone
 title: Jak připojit zařízení CHESTER k telefonu
+description: "Videonávod: spárování zařízení CHESTER s telefonem přes Bluetooth v aplikaci HARDWARIO Manager pomocí passkey z QR kódu a odeslání příkazů shellu."
 ---
 
 import Image from '@theme/IdealImage';

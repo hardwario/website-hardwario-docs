@@ -1,6 +1,7 @@
 ---
 slug: tts-end-devices
 title: Koncová zařízení
+description: "Vytvoření aplikace v The Things Stack a registrace koncových zařízení LoRaWAN z Device Repository nebo ručně pomocí DevEUI, JoinEUI a AppKey."
 title_meta: "Koncová zařízení (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';

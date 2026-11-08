@@ -1,6 +1,7 @@
 ---
 slug: chester-range
 title: CHESTER Range
+description: "Katalogová aplikace CHESTER Range: vzdálenost z ultrazvukového senzoru MaxBotix MB7066 na modulu CHESTER-X0A, teplota, vlhkost, varianta Range Z a JSON."
 ---
 import Image from '@theme/IdealImage';
 

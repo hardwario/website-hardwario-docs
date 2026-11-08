@@ -1,6 +1,7 @@
 ---
 slug: notifications-manager
 title: Notifications
+description: "Create email or SMS alert rules in the ThingsBoard Notification Rules Manager: pick devices and variables, then set a threshold, duration and cooldown."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: about-lcd-module
 title: O modulu LCD Module
+description: "LCD Module pro TOWER: úsporný paměťový displej Sharp 1,28 palce s rozlišením 128 x 128 pixelů, dvě tlačítka, senzor gest APDS-9960 a šest LED RGB."
 ---
 import Image from '@theme/IdealImage';
 

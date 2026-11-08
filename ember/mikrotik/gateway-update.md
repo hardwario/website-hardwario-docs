@@ -1,6 +1,7 @@
 ---
 slug: gateway-update
 title: Gateway Update
+description: "Update the RouterOS packages and RouterBOARD firmware of a MikroTik LoRa gateway in Winbox 4, then reboot and check that both versions match."
 ---
 import Image from '@theme/IdealImage';
 

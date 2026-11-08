@@ -1,6 +1,7 @@
 ---
 slug: about-power-module
 title: About Power Module
+description: "TOWER Power Module with a 5 V DC jack input, a 230 V AC / 16 A relay, a WS2812B-compatible LED strip output, a 3.3 V LDO and input voltage protection."
 ---
 import Image from '@theme/IdealImage';
 

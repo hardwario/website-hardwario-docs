@@ -1,6 +1,7 @@
 ---
 slug: milesight-ft101
 title: FT101
+description: "Tester sítí LoRaWAN Milesight FT101: získání klíčů, registrace na síťovém serveru, testy RSSI/SNR, mapování pokrytí a skenování šumu s vyhodnocením."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight FT101 je **přenosný tester sítí LoRaWAN®** pro **posouzení a opt
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/utility/images/ft101.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/utility/images/ft101.png')} alt="Milesight Field Tester FT101" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -1,6 +1,7 @@
 ---
 slug: chester-x0
 title: CHESTER-X0 (4-ch input)
+description: "CHESTER-X0 four-channel I/O module, X0A with 5 V boost or X0B without: 0–26 V, 4–20 mA, dry contact, NPN and PNP inputs, SDK modes and pinout."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: how-to-lte-v2
 title: "How to: LTE v2"
+description: "Upgrade CHESTER firmware to LTE v2 and HARDWARIO Cloud: LTE modem v1.7.0, ctr_cloud instead of ctr_lte, hierarchical CBOR codecs, APN, IP address and port."
 ---
 import Image from '@theme/IdealImage';
 

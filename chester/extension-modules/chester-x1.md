@@ -1,6 +1,7 @@
 ---
 slug: chester-x1
 title: CHESTER-X1 (8-ch 1-Wire)
+description: "CHESTER-X1 extension module with 8 independent 1-Wire channels on the DS2482S-800+ for sensors such as DS18B20, including parasitic power from a 5 V boost."
 ---
 import Image from '@theme/IdealImage';
 

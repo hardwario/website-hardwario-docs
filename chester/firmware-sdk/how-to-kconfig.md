@@ -1,6 +1,7 @@
 ---
 slug: how-to-kconfig
 title: "How to: Kconfig"
+description: "Define a custom Kconfig option in a CHESTER application, enable or disable it in prj.conf, and inspect the generated macros in autoconf.h."
 ---
 import Image from '@theme/IdealImage';
 

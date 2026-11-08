@@ -1,6 +1,7 @@
 ---
 slug: device-info
 title: Device info and LoRaWAN keys
+description: "Read a STICKER's serial number, firmware, battery and active alarms over NFC, and collect its OTAA or ABP LoRaWAN keys to share as JSON, CSV or a QR code."
 ---
 
 # Read device info and LoRaWAN keys

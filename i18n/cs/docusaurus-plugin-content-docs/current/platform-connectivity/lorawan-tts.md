@@ -1,6 +1,7 @@
 ---
 slug: lorawan-tts
 title: The Things Stack
+description: "Registrace zařízení CHESTER v síťovém serveru LoRaWAN The Things Stack (TTS): přihlašovací údaje, režim LoRaWAN, OTAA, aplikace a dekodér payloadu."
 title_meta: "The Things Stack (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

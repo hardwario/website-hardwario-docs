@@ -1,6 +1,7 @@
 ---
 slug: bmeters-rfm-tx1.1
 title: BMeters RFM-TX1.1
+description: "Program the BMeters RFM-TX1.1 radio module for GSD8-RFM water meters with BMetering Software, mount it and map its wM-Bus address to CHESTER."
 ---
 import Image from '@theme/IdealImage';
 

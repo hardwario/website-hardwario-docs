@@ -1,6 +1,7 @@
 ---
 slug: about-mini-battery-module
 title: O modulu Mini Battery Module
+description: "Mini Battery Module pro TOWER: napájení ze dvou článků AAA přes zvyšující měnič TPS61099 (3,1 V), odpojení baterií a měření jejich napětí na vstupu A0."
 ---
 import Image from '@theme/IdealImage';
 
@@ -11,7 +12,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
 
-        <b>Mini Battery Module</b> slouží jako zdroj napájení pro <b>jednotky na baterie</b>. Integrovaný zvyšující převodník s nízkou spotřebou dosahuje vynikající účinnosti při napájení <b>ze dvou alkalických článků AAA 1,5 V</b>. Patici má vyvedenou na spodní stranu, takže sestavená jednotka zůstane nízká.
+        <b>Mini Battery Module</b> slouží jako zdroj napájení pro <b>jednotky na baterie</b>. Integrovaný zvyšující měnič s nízkou spotřebou dosahuje vynikající účinnosti při napájení <b>ze dvou alkalických článků AAA 1,5 V</b>. Patici má vyvedenou na spodní stranu, takže sestavená jednotka zůstane nízká.
 
         Obvod pro odpojení zátěže umí <b>odpojit baterie, pokud je k systému připojen jakýkoli jiný zdroj napájení</b> (např. síťový adaptér nebo kabel USB). Napětí baterie lze měřit na jednom z analogových vstupů standardizovaného konektoru (<b>P0/A0/TXD0</b>).
 
@@ -26,7 +27,7 @@ Pokud má zařízení vydržet ještě déle a nezáleží vám na rozměrech, p
 :::
 
 ## Vlastnosti {#features}
-- Vysoce účinný **DC/DC převodník TPS61099 (TI)**
+- Vysoce účinný **DC/DC měnič TPS61099 (TI)**
 - Velmi nízký klidový proud &lt;5 μA
 - Účinnost až 93 % při 10 mA
 - Doporučené typy baterií:

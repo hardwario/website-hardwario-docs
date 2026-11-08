@@ -31,6 +31,17 @@
 /search*
   X-Robots-Tag: noindex
 
+/cs/search*
+  X-Robots-Tag: noindex
+
+# The FIBER display guide is a stub until its MQTT API is documented (owner 2026-11-08): keep it out of
+# search until then, and drop these rules (and the sitemap ignorePatterns entries) when the guide is written.
+/fiber/fiber-hardware-guides/using-the-display*
+  X-Robots-Tag: noindex
+
+/cs/fiber/fiber-hardware-guides/using-the-display*
+  X-Robots-Tag: noindex
+
 # Security response headers for every route (HTML + assets).
 # Content-Security-Policy-Report-Only (from 2026-11-02): violations are reported
 # to /csp-report, which the Worker logs to Workers Logs (filter kind = csp-report);

@@ -1,6 +1,7 @@
 ---
 slug: milesight-em500
 title: EM500
+description: "Venkovní senzor Milesight EM500-CO2 pro měření CO₂ (NDIR), teploty, vlhkosti a barometrického tlaku: klíče LoRaWAN 1.0.3, dekodéry a technické parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight EM500-CO2 je **venkovní senzor prostředí 4 v 1**, který v náročn
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/em500-co2.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/em500-co2.png')} alt="Senzor Milesight EM500-CO2" />
       </div>
     </div>
     <div class="col col--24"></div>

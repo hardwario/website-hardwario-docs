@@ -1,6 +1,7 @@
 ---
 slug: chester-counter
 title: CHESTER Counter
+description: "Legacy CHESTER Counter application, replaced by CHESTER Control: pulse counting on four CHESTER-X0B inputs, Counter Z backup variant and JSON messages."
 ---
 import Image from '@theme/IdealImage';
 

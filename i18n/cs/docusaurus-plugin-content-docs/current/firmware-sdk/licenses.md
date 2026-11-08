@@ -1,6 +1,7 @@
 ---
 slug: licenses
 title: Licence
+description: "Licenční podmínky CHESTER SDK (LicenseRef-HARDWARIO-5-Clause, jen pro hardware HARDWARIO), identifikátory SPDX a licenční přehled z nástroje ncs-sbom."
 ---
 import Image from '@theme/IdealImage';
 

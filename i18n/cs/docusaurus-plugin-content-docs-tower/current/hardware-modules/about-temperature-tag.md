@@ -1,6 +1,7 @@
 ---
 slug: about-temperature-tag
 title: O tagu Temperature Tag
+description: "Temperature Tag pro TOWER se senzorem TI TMP112 na sběrnici I²C: typická přesnost ±0,1 °C při 25 °C, 12bitové rozlišení a aktivní proud 7 µA."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: milesight-am319
 title: AM319
+description: "Senzor kvality vnitřního ovzduší Milesight AM319 s devíti parametry včetně PM2.5/PM10 a HCHO nebo O₃: klíče LoRaWAN třídy C, dekodéry a parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight AM319 je **senzor kvality vnitřního ovzduší**, který měří **de
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../../smart-devices/milesight/sensors/milesight-am300/images/am319-868m.png')} />
+        <Image img={require('../../../../../../../smart-devices/milesight/sensors/milesight-am300/images/am319-868m.png')} alt="Senzor Milesight AM319" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -86,7 +87,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 ## Napájení {#power-supply}
 | Typ    | Hodnota            |
 |--------|--------------------|
-| Napájení | USB-C nebo baterie |
+| Napájení | USB-C |
 
 ---
 

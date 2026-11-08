@@ -1,5 +1,6 @@
 ---
 title: Instalace ChirpStack
+description: "Instalace ChirpStack v4 (SQLite) s Mosquitto a Redis na zařízení FIBER z podepsaného repozitáře APT a konfigurace s náhodným tajným klíčem API."
 ---
 
 # Instalace ChirpStack {#install-chirpstack}

@@ -1,6 +1,7 @@
 ---
 slug: machine-probe
 title: MACHINE PROBE
+description: "MACHINE PROBE v1.3 for STICKER Input and CHESTER: temperature, humidity, light, magnetic field and acceleration over 1-Wire, its wiring and channels."
 ---
 
 # MACHINE PROBE (v1.3)

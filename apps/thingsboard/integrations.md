@@ -1,6 +1,7 @@
 ---
 slug: integrations
 title: Integrations
+description: "Integrations for HARDWARIO ThingsBoard: connect a ChirpStack network server to map LoRaWAN devices, show their telemetry and send downlink commands."
 title_meta: "Integrations (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';

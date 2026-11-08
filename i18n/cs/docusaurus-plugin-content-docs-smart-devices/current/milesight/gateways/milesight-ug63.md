@@ -1,6 +1,7 @@
 ---
 slug: milesight-ug63
 title: UG63
+description: "Kompaktní brána LoRaWAN Milesight UG63: nastavení přes Wi-Fi, připojení WAN a přeposílání paketů na vestavěný NS, ChirpStack v4 nebo The Things Stack."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight UG63 je **kompaktní brána LoRaWAN®** pro **menší nasazení**. Má
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/gateways/images/ug63-868m.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/gateways/images/ug63-868m.png')} alt="Brána Milesight UG63-868M" />
       </div>
     </div>
     <div class="col col--24"></div>

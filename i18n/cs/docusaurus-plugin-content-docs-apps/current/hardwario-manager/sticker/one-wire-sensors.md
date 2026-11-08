@@ -1,6 +1,7 @@
 ---
 slug: one-wire-sensors
 title: Senzory 1-Wire
+description: "Načtení sběrnice 1-Wire zařízení STICKER Input přes NFC a přiřazení externích teplotních senzorů do čtyř slotů, které určují kanál LoRaWAN každého čidla."
 ---
 
 # Nastavení senzorů 1-Wire {#set-up-1-wire-sensors}

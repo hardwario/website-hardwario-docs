@@ -1,6 +1,7 @@
 ---
 slug: first-steps
 title: Rychlý průvodce
+description: "Aplikaci HARDWARIO Manager nainstalujete do telefonu s Androidem nebo iOS, zapnete NFC (STICKER) nebo Bluetooth (CHESTER) a připojíte první zařízení."
 title_meta: "Rychlý průvodce (HARDWARIO Manager)"
 ---
 

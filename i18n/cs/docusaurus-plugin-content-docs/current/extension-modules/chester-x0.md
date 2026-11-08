@@ -1,6 +1,7 @@
 ---
 slug: chester-x0
 title: CHESTER-X0 (4kanálový vstup)
+description: "Čtyřkanálový modul I/O CHESTER-X0, varianta X0A s měničem 5 V nebo X0B bez něj: vstupy 0–26 V, 4–20 mA, bezpotenciálový kontakt, NPN a PNP a režimy v SDK."
 ---
 import Image from '@theme/IdealImage';
 

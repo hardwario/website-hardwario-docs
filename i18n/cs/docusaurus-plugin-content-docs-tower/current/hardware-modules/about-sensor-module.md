@@ -1,6 +1,7 @@
 ---
 slug: about-sensor-module
 title: O modulu Sensor Module
+description: "Sensor Module pro TOWER: až čtyři analogové či digitální vstupy a výstupy na odnímatelné svorkovnici, master sběrnice 1-Wire a volitelný pull-up rezistor."
 ---
 import Image from '@theme/IdealImage';
 

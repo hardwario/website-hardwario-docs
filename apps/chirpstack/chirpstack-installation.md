@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-installation
 title: Installation
+description: "Install ChirpStack v4 and its Gateway Bridge on Debian or Ubuntu with PostgreSQL, Redis and Mosquitto, enable EU868 and open the web interface."
 title_meta: "Installation (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';

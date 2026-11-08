@@ -1,6 +1,7 @@
 ---
 slug: mikrotik-configuration
 title: Konfigurace brány EMBER
+description: "Videonávod ke konfiguraci rozhraní LoRa na bráně EMBER (MikroTik) přes WebFig, aby se připojila k serveru LoRaWAN a přijímala data."
 ---
 
 import Image from '@theme/IdealImage';

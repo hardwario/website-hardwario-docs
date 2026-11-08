@@ -1,6 +1,7 @@
 ---
 slug: build-and-deploy
 title: Build and Deploy
+description: "Build CHESTER firmware with west build, stamp it with FW_NAME and FW_VERSION, and upload it to HARDWARIO Cloud with the HARDWARIO CLI to share by QR code."
 ---
 import Image from '@theme/IdealImage';
 

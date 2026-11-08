@@ -1,6 +1,7 @@
 ---
 slug: application-customization
 title: Přizpůsobení aplikace
+description: "Úprava katalogové aplikace ve vlastním forku CHESTER SDK v Gitu a průběžné přebírání novinek ze SDK pomocí git rebase."
 ---
 import Image from '@theme/IdealImage';
 

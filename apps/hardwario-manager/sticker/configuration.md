@@ -1,6 +1,7 @@
 ---
 slug: configuration
 title: Configuration
+description: "Read, edit and write a STICKER configuration over NFC in HARDWARIO Manager: LoRaWAN, intervals, sensors, history and alarms, plus file export and import."
 title_meta: "Configuration (HARDWARIO Manager for STICKER)"
 ---
 

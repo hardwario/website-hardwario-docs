@@ -1,6 +1,7 @@
 ---
 slug: saved-stickers
 title: Saved STICKERs
+description: "Saved STICKERs keeps the secret key and vendor-token of each device in HARDWARIO Manager: claim or import devices and export them by QR code, JSON or CSV."
 ---
 
 # Saved STICKERs

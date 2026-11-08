@@ -1,6 +1,7 @@
 ---
 slug: firmware-management
 title: Správa firmwaru
+description: "Firmware zařízení GAUGER: aktualizace na dálku (OTA) z webového rozhraní a návrat k předchozí nebo tovární verzi, i z chybového stavu tlačítkem USER."
 ---
 
 # Správa firmwaru {#firmware-management}

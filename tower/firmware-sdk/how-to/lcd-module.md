@@ -1,6 +1,7 @@
 ---
 slug: how-to-lcd-module
 title: "How To: LCD Module"
+description: "Program the TOWER LCD Module in the SDK: power it off to save battery, drive its six RGB LEDs, read its two buttons and draw with the GFX library."
 ---
 import Image from '@theme/IdealImage';
 

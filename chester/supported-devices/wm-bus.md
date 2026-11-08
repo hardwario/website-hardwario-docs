@@ -1,6 +1,7 @@
 ---
 slug: wm-bus_sensors
 title: wM-Bus Sensors
+description: "CHESTER wM-Bus works as a pass-thru gateway for any T1 or C1 wM-Bus meter; see the BMeters and Zenner meters we have tested and documented."
 ---
 
 import Image from '@theme/IdealImage';

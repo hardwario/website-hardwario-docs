@@ -1,6 +1,7 @@
 ---
 slug: tags
 title: Organize devices with tags
+description: "Label saved STICKER devices with colored tags by site, customer or floor in HARDWARIO Manager, manage the tag registry and filter the device list by tag."
 ---
 
 # Organize saved devices with tags

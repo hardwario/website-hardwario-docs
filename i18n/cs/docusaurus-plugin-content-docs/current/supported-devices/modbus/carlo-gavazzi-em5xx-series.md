@@ -1,6 +1,7 @@
 ---
 slug: carlo-gavazzi-em5xx-series
 title: Carlo Gavazzi řady EM5XX
+description: "Připojení analyzátoru energie Carlo Gavazzi EM5xx (EM530) s rozevíracím proudovým transformátorem k zařízení CHESTER přes Modbus a nastavení převodu CT."
 ---
 
 import Image from '@theme/IdealImage';

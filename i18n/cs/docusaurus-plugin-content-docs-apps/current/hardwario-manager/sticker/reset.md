@@ -1,6 +1,7 @@
 ---
 slug: reset
 title: Reset zařízení
+description: "Resety zařízení STICKER v aplikaci HARDWARIO Manager od restartu po tovární reset a změna secret key či vendor reset ověřený vendor tokenem."
 ---
 
 # Reset zařízení STICKER {#reset-a-sticker}

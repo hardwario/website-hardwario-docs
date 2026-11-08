@@ -1,6 +1,7 @@
 ---
 slug: schneider-electric-iem3xxx-series
 title: Schneider Electric řady iEM3xxx
+description: "Připojení elektroměru Schneider Electric iEM3xxx (iEM3250) s proudovým transformátorem k zařízení CHESTER přes Modbus: zapojení, převod CT a konfigurace."
 ---
 
 import Image from '@theme/IdealImage';

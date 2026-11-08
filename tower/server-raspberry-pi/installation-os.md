@@ -1,6 +1,7 @@
 ---
 slug: installation-os
 title: Pre-Installed Image
+description: "Flash HARDWARIO Raspbian to a microSD card with Raspberry Pi Imager, set hostname, SSH and Wi-Fi, open the server in a browser and fix pairing issues."
 ---
 import Image from '@theme/IdealImage';
 

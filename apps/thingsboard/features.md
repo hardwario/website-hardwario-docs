@@ -1,6 +1,7 @@
 ---
 slug: features
 title: Features
+description: "Key features of HARDWARIO ThingsBoard: assets, notification rules, email notifications, scheduled PDF reports, dashboard embedding and the Rule Engine."
 title_meta: "Features (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';

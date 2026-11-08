@@ -1,6 +1,7 @@
 ﻿---
 slug: general-configuration
 title: General Configuration
+description: "Video on configuring Milesight devices over NFC from a mobile phone in the Milesight ToolBox app; the Milesight FT101 field tester can do the same."
 ---
 import Image from '@theme/IdealImage';
 import Link from '@docusaurus/Link';

@@ -1,6 +1,7 @@
 ---
 slug: power-profiler-kit-ii
 title: Power Profiler Kit II
+description: "Napájení zařízení CHESTER z Power Profiler Kit II od Nordic Semiconductor a měření odběru: nRF Connect for Desktop, zapojení PPK2, 3600 mV a záznam dat."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

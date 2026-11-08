@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-vs135
 title: VS135
+description: "Milesight VS135 AI ToF people counting sensor with up to 4 zones: LoRaWAN Class C join keys, payload decoder links and technical specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight VS135 is an **AI-powered ToF (Time-of-Flight) people counting sensor**
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/vs135.png')} />
+        <Image img={require('./images/vs135.png')} alt="Milesight Sensor VS135" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -1,5 +1,6 @@
 ---
 title: Tagy
+description: "Vytvoření tagu s názvem a barvou v hex přes API HARDWARIO Cloud a jeho přiřazení k zařízením, aby jejich zprávy přeposílal konektor."
 title_meta: "Tagy (HARDWARIO Cloud API)"
 ---
 

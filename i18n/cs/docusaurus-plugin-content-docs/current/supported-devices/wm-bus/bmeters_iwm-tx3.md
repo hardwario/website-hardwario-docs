@@ -1,6 +1,7 @@
 ---
 slug: bmeters_iwm-tx3
 title: BMeters IWM-TX3
+description: "Konfigurace rádiového modulu BMeters IWM-TX3 pro vodoměry GMDM-I, GMB-I, GMB-RP-I a CPR-M3-I přes NFC a přiřazení adresy wM-Bus k zařízení CHESTER."
 ---
 import Image from '@theme/IdealImage';
 

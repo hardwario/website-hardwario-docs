@@ -1,6 +1,7 @@
 ---
 slug: chester-pair-tag
 title: How to pair Bluetooth tag with CHESTER
+description: "Video tutorial: pair up to eight Bluetooth tags with CHESTER in the HARDWARIO Manager console with tag enroll or a manual MAC address, then read them."
 ---
 
 import Image from '@theme/IdealImage';

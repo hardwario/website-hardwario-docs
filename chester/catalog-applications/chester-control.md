@@ -1,6 +1,7 @@
 ---
 slug: chester-control
 title: CHESTER Control
+description: "CHESTER Control catalog application: trigger, pulse counter, 0–28 V and 0–24 mA inputs, plus four 6–28 V outputs switched remotely by a downlink."
 ---
 import Image from '@theme/IdealImage';
 

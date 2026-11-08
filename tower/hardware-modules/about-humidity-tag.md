@@ -1,6 +1,7 @@
 ---
 slug: about-humidity-tag
 title: About Humidity Tag
+description: "TOWER Humidity Tag with the calibrated Sensirion SHT20 sensor on the I²C bus, measuring relative humidity from 0 to 100 % at an operating current of 10 µA."
 ---
 import Image from '@theme/IdealImage';
 
@@ -11,7 +12,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
 
-        The Humidity Tag uses a high-accuracy humidity sensor SHT20 with a typical accuracy of ±3 % from 20 % to 80 %. This sensor is digital and calibrated. It communicates using an I²C bus and features a very low power operation and shutdown mode.
+        The Humidity Tag uses a high-accuracy humidity sensor SHT20 with a typical accuracy of ±2 % from 20 % to 80 %. This sensor is digital and calibrated. It communicates using an I²C bus and features a very low power operation and shutdown mode.
 
     </div>
   </div>

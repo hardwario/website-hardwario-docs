@@ -1,6 +1,7 @@
 ---
 slug: chester-input
 title: CHESTER Input
+description: "Legacy CHESTER Input application, replaced by CHESTER Control: trigger, counter, voltage and current inputs, Input Z and ZH variants and JSON messages."
 ---
 import Image from '@theme/IdealImage';
 

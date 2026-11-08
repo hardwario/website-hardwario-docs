@@ -1,3 +1,7 @@
+---
+description: "Katalogová aplikace CHESTER Current: střídavý i stejnosměrný proud až na 4 kanálech s klešťovými sondami, varianty, konfigurace, zprávy JSON a kalibrace."
+---
+
 # CHESTER Current {#chester-current}
 
 Tento článek popisuje základní funkce katalogové aplikace **CHESTER Current**, její hardware, výchozí konfiguraci, ukázkovou zprávu JSON a kalibraci kanálů.

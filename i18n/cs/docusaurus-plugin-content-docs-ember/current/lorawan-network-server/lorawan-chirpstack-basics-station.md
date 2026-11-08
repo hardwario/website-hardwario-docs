@@ -1,6 +1,7 @@
 ---
 slug: lorawan-chirpstack-basics-station
 title: "ChirpStack v4: Basics Station a mTLS"
+description: "Připojení brány EMBER k ChirpStack v4 přes LoRa Basics Station (ws, wss nebo mTLS): příkazy RouterOS, ověření spojení, obnova certifikátu a hlášení v logu."
 sidebar_label: Basics Station
 title_meta: "ChirpStack v4: Basics Station a mTLS (EMBER)"
 ---

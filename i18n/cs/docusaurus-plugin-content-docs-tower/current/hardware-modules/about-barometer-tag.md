@@ -1,6 +1,7 @@
 ---
 slug: about-barometer-tag
 title: O tagu Barometer Tag
+description: "Barometer Tag pro TOWER se senzorem NXP MPL3115A2 na sběrnici I²C měří absolutní tlak od 20 do 110 kPa nebo nadmořskou výšku s přesností ±0,4 kPa."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,5 +1,6 @@
 ---
 title: Údržba
+description: "Uložení a reset konfigurace zařízení STICKER příkazem shellu settings: zápis změn do flash paměti a jednotlivé úrovně resetu od restartu po úplné smazání."
 ---
 
 # Údržba (`settings`) {#maintenance-settings}

@@ -1,5 +1,6 @@
 ---
 title: Sensor Interfaces
+description: "FIBER sensor interfaces: eight isolated 1-Wire ports with per-channel LEDs, an 868/915 MHz LoRa-capable radio for STICKER nodes and a backlit LCD."
 ---
 
 # Sensor Interfaces

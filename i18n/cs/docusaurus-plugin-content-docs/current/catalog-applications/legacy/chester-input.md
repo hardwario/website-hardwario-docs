@@ -1,6 +1,7 @@
 ---
 slug: chester-input
 title: CHESTER Input
+description: "Starší aplikace CHESTER Input, nahrazená aplikací CHESTER Control: vstupy trigger, counter, napětí a proud, varianty Input Z a ZH a zprávy JSON."
 ---
 import Image from '@theme/IdealImage';
 

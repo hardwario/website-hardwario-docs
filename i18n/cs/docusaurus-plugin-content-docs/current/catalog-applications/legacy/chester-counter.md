@@ -1,6 +1,7 @@
 ---
 slug: chester-counter
 title: CHESTER Counter
+description: "Starší aplikace CHESTER Counter, nahrazená aplikací CHESTER Control: čítání impulzů na čtyřech vstupech modulu CHESTER-X0B, varianta Counter Z a JSON."
 ---
 import Image from '@theme/IdealImage';
 

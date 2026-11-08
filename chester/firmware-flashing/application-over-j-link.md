@@ -1,6 +1,7 @@
 ---
 slug: application-over-j-link
 title: Application over J-Link
+description: "Flash CHESTER application firmware with a SEGGER J-Link on the APP connector using HARDWARIO Command Line Tools, from a HEX file or a firmware unique ID."
 title_meta: "Application over J-Link (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

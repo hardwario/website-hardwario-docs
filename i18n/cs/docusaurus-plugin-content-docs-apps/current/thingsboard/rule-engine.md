@@ -1,6 +1,7 @@
 ---
 slug: rule-engine
 title: Rule Engine
+description: "Rule Engine v ThingsBoard pro výpočty, alarmy a volání API: vytvoření vlastního Rule Chain a jeho bezpečné připojení k Root Rule Chain."
 ---
 
 import Image from '@theme/IdealImage';

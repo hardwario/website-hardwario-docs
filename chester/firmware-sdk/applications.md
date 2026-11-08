@@ -1,6 +1,7 @@
 ---
 slug: applications
 title: Applications
+description: "Source code structure of the CHESTER catalog applications: project files, application flow, and how to add a sensor or a shell config option."
 ---
 import Image from '@theme/IdealImage';
 

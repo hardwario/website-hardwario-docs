@@ -1,6 +1,7 @@
 ---
 slug: sensor-history
 title: Historie senzorů
+description: "Přes NFC po stránkách přečtete měření, která zařízení STICKER uložilo offline, a zobrazíte je jako souhrn, grafy a denní tabulky (od firmwaru v1.4.0)."
 title_meta: "Historie senzorů (HARDWARIO Manager pro STICKER)"
 ---
 

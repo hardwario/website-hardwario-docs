@@ -1,6 +1,7 @@
 ---
 slug: about-sensor-module
 title: About Sensor Module
+description: "TOWER Sensor Module with up to four universal analog or digital inputs and outputs on a pluggable terminal block, 1-Wire master and selectable pull-ups."
 ---
 import Image from '@theme/IdealImage';
 

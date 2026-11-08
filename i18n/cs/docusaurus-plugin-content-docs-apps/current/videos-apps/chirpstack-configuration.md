@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-configuration
 title: Konfigurace
+description: "Videonávod ke konfiguraci ChirpStack v4: přidání bran, vytvoření profilů zařízení, registrace zařízení a dekódování jejich payloadů."
 title_meta: "Konfigurace (videonávody)"
 ---
 

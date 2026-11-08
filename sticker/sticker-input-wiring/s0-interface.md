@@ -1,6 +1,7 @@
 ---
 slug: s0-interface
 title: S0 interface (pulse output)
+description: "Count S0 pulses from electricity, gas, water and heat meters with STICKER Input: DIP switch wiring, the pulse input mode, debouncing and RATE alarm rules."
 ---
 
 # S0 interface (pulse output)

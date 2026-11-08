@@ -1,6 +1,7 @@
 ---
 slug: chester-x2
 title: CHESTER-X2 (Serial comm)
+description: "CHESTER-X2 serial communication module with TTL/UART and RS-485 interfaces, for example for Modbus, with terminal pinout, schematic and drawing."
 ---
 import Image from '@theme/IdealImage';
 

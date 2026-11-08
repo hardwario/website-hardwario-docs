@@ -1,6 +1,7 @@
 ---
 slug: build-and-deploy
 title: Sestavení a nasazení
+description: "Sestavení firmwaru zařízení CHESTER příkazem west build, název a verze ve FW_NAME a FW_VERSION a nahrání do HARDWARIO Cloud nástrojem HARDWARIO CLI."
 ---
 import Image from '@theme/IdealImage';
 

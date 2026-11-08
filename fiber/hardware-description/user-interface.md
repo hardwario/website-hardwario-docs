@@ -1,5 +1,6 @@
 ---
 title: User Interface
+description: "Local user interface of FIBER: a backlit graphical LCD with real-time sensor values, navigation buttons, a status LED per 1-Wire port and a buzzer."
 ---
 
 # User Interface

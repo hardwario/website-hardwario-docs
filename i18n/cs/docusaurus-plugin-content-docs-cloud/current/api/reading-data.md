@@ -1,5 +1,6 @@
 ---
 title: Čtení dat
+description: "Čtení dat přes API HARDWARIO Cloud: výpis prostorů a zařízení, filtrování zpráv podle typu, směru a času, poslední hodnota a stránkování výsledků."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

@@ -1,6 +1,7 @@
 ---
 slug: how-to-lcd-module
 title: "Jak na: LCD Module"
+description: "Programování modulu LCD Module v SDK pro TOWER: vypínání kvůli výdrži baterie, ovládání šesti LED RGB a dvou tlačítek a kreslení knihovnou GFX."
 ---
 import Image from '@theme/IdealImage';
 

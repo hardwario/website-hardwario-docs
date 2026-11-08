@@ -1,5 +1,6 @@
 ---
 title: AT Console (USB-C)
+description: "Talk to GLIDER over USB-C with AT commands: Linux serial port access, west serial-console in a Python virtualenv, basic AT commands and troubleshooting."
 sidebar_position: 2
 ---
 import Image from '@theme/IdealImage';

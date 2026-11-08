@@ -1,6 +1,7 @@
 ---
 slug: saved-stickers
 title: Saved STICKERs
+description: "Seznam Saved STICKERs v aplikaci HARDWARIO Manager uchovává secret key a vendor token zařízení: nárokování, import a export přes QR kód, JSON nebo CSV."
 ---
 
 # Saved STICKERs {#saved-stickers}

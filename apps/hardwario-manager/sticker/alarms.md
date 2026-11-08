@@ -1,6 +1,7 @@
 ---
 slug: alarms
 title: Alarm rules
+description: "Set up to 16 STICKER alarm rules in HARDWARIO Manager: threshold, state or rate rules with hysteresis, friendly slot names and a check of active alarms."
 ---
 
 # Set up alarm rules

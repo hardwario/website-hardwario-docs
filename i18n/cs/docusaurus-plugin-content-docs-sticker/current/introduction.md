@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # STICKER {#sticker}
 
-**STICKER** je otevřená IoT platforma postavená na STM32WL. Má integrovanou konektivitu LoRaWAN a softwarově volitelný proprietární režim **LoRa P2P**. Od firmwaru **v2.0.0** je režim P2P součástí standardního firmwaru: zařízení v něm komunikuje přímo s modemem **HARDWARIO FIBER** a s **ProXimos Hubem**, takže se hodí i tam, kde není síť LoRaWAN. Je to kompaktní zařízení na baterie s dlouhou výdrží a s hotovými aplikacemi, jako jsou STICKER Clime, Input a Motion.
+**STICKER** je otevřená IoT platforma postavená na STM32WL. Má integrovanou konektivitu LoRaWAN a softwarově volitelný proprietární režim **LoRa P2P**. Od firmwaru **v2.0.0** je režim P2P součástí standardního firmwaru: zařízení v něm komunikuje přímo s modemem **HARDWARIO FIBER** a se zařízením **ProXimos Hub**, takže se hodí i tam, kde není síť LoRaWAN. Je to kompaktní zařízení na baterie s dlouhou výdrží a s hotovými aplikacemi, jako jsou STICKER Clime, Input a Motion.
 
 :::tip
 ### Jak zařízení STICKER zprovoznit, popisuje [**Rychlý průvodce**](first-steps) {#to-get-your-sticker-running-read-the-quick-start-guide}

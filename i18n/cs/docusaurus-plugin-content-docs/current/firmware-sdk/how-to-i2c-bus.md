@@ -1,6 +1,7 @@
 ---
 slug: how-to-i2c-bus
 title: "Jak na: sběrnice I²C"
+description: "Čtení a zápis registrů cílových zařízení I²C z firmwaru zařízení CHESTER přes I²C API systému Zephyr a sken sběrnice příkazem shellu i2c scan."
 ---
 import Image from '@theme/IdealImage';
 

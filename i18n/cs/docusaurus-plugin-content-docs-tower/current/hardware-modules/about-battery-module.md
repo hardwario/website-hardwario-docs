@@ -1,6 +1,7 @@
 ---
 slug: about-battery-module
 title: O modulu Battery Module
+description: "Battery Module pro TOWER: napájení ze čtyř článků AAA přes snižující měnič TPS62745 (3,1 V), externí vstup do 10 V a doplňková patice pro tag."
 ---
 import Image from '@theme/IdealImage';
 
@@ -11,7 +12,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
 
-        <b>Battery Module</b> slouží jako zdroj napájení pro jednotky na baterie. Integrovaný snižující převodník (buck) s nízkou spotřebou dosahuje vynikající účinnosti při napájení ze <b>čtyř alkalických článků AAA 1,5 V</b>. Má také <b>5pinovou patici, do které připojíte tag HARDWARIO TOWER</b>.
+        <b>Battery Module</b> slouží jako zdroj napájení pro jednotky na baterie. Integrovaný snižující měnič (buck) s nízkou spotřebou dosahuje vynikající účinnosti při napájení ze <b>čtyř alkalických článků AAA 1,5 V</b>. Má také <b>5pinovou patici, do které připojíte tag HARDWARIO TOWER</b>.
 
         Pokud se baterie AAA pro vaše použití nehodí, využijte <b>externí napěťový vstup</b>, který snese až 10 V. Najdete ho na dvou prostředních pinech, které jsou kompatibilní s oblíbeným <b>konektorem JST pro lithiové baterie</b>.
 
@@ -27,7 +28,7 @@ Se **2 bateriemi** ovšem vydrží kratší dobu.
 :::
 
 ## Vlastnosti {#features}
-- Vysoce účinný snižující převodník (buck) **TPS62745 (TI)**
+- Vysoce účinný snižující měnič (buck) **TPS62745 (TI)**
 - Extrémně nízký klidový proud: 400 nA
 - Doporučené typy baterií:
   - **4x AAA 1,5 V alkalické**

@@ -1,6 +1,7 @@
 ---
 slug: offline-configuration
 title: Configure a powered-off device
+description: "Write a configuration over NFC to a STICKER without batteries (firmware v1.4.x only), watch the size counter and verify the write before installing."
 ---
 
 # Configure a powered-off STICKER

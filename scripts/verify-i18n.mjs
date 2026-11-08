@@ -81,7 +81,9 @@ const sameWwwPage = (url, locale) =>
 
 const frontMatterSlug = (text) => (text.match(/^slug:\s*(.+)$/m) || [])[1];
 
-const frontMatter = (text) => {
+const frontMatter = (raw) => {
+  // Some sources (the smart-devices pages) start with a UTF-8 byte order mark; Docusaurus reads past it.
+  const text = raw.replace(/^\uFEFF/, '');
   if (!text.startsWith('---')) return '';
   const end = text.indexOf('\n---', 3);
   return end < 0 ? '' : text.slice(3, end);

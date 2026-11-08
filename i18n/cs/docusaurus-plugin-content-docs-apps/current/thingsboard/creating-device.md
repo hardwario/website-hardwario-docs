@@ -1,6 +1,7 @@
 ---
 slug: creating-device
 title: Zařízení
+description: "Přidání nového zařízení v ThingsBoard z nabídky Entities, vyplnění názvu, labelu a popisu a zobrazení jeho atributů a poslední telemetrie."
 title_meta: "Zařízení (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';

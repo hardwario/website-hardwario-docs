@@ -1,6 +1,7 @@
 ---
 slug: about-pir-module
 title: O modulu PIR Module
+description: "PIR Module pro TOWER, pasivní infračervený detektor pohybu se senzorem Excelitas PYQ-1648-7053, detekčním úhlem 98°, dosahem 5 m a spotřebou asi 3 μA."
 ---
 import Image from '@theme/IdealImage';
 

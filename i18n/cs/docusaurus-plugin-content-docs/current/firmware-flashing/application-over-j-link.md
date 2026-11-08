@@ -1,6 +1,7 @@
 ---
 slug: application-over-j-link
 title: Aplikace přes J-Link
+description: "Nahrání firmwaru aplikace do zařízení CHESTER přes SEGGER J-Link a konektor APP nástrojem HARDWARIO CLI, ze souboru HEX nebo podle unikátního ID."
 title_meta: "Aplikace přes J-Link (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

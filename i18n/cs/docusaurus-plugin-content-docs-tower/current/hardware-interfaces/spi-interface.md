@@ -1,6 +1,7 @@
 ---
 slug: spi-interface
 title: Rozhraní SPI
+description: "Sběrnice SPI na platformě TOWER: signály SCK, MOSI, MISO a NSS, jejich piny P12 až P15 na modulu Core Module a LCD Module jako příklad periferie na SPI."
 ---
 import Image from '@theme/IdealImage';
 

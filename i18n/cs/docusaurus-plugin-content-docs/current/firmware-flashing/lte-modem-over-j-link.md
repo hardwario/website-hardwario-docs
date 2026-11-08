@@ -1,6 +1,7 @@
 ---
 slug: lte-modem-over-j-link
 title: Modem LTE přes J-Link
+description: "Nahrání firmwaru modemu LTE v1.7.0 do zařízení CHESTER přes SEGGER J-Link a HARDWARIO CLI, případně firmwaru Nordic nRF9160, když ho SIM karta vyžaduje."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

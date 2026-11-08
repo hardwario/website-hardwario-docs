@@ -1,6 +1,7 @@
 ---
 slug: thingsboard-new-device
 title: New Device
+description: "Video tutorial on creating a new device in ThingsBoard, filling in its details and reaching its telemetry from the device list."
 ---
 
 import Image from '@theme/IdealImage';

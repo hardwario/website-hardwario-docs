@@ -1,6 +1,7 @@
 ---
 slug: antenna-gain
 title: "Antenna Gain & Output Power"
+description: "Set antenna-gain on a MikroTik LoRa gateway (R11e-LR8G, wAP LR8G) to the antenna gain minus cable loss so radiated power stays within the EU868 EIRP limit."
 ---
 
 # Antenna Gain & Output Power

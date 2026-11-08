@@ -1,5 +1,6 @@
 ---
 title: RTT Console (J-Link)
+description: "Attach to GLIDER with a Segger J-Link over RTT for the Zephyr shell and live firmware logs: prerequisites, SWD wiring, the rttt CLI and troubleshooting."
 sidebar_position: 1
 ---
 import Image from '@theme/IdealImage';

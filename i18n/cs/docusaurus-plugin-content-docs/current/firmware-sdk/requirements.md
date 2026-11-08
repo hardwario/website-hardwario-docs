@@ -1,6 +1,7 @@
 ---
 slug: requirements
 title: Požadavky
+description: "Vybavení a systém pro vývoj s CHESTER SDK: deska CHESTER DevKit, SEGGER J-Link Compact Plus, Power Profiler Kit 2 a Ubuntu, macOS nebo Windows."
 ---
 import Image from '@theme/IdealImage';
 

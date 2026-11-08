@@ -1,6 +1,7 @@
 ---
 slug: chester-serial
 title: CHESTER Serial
+description: "CHESTER Serial catalog application: RS-485 Modbus RTU master for up to 8 devices or an RS-232 link, 11 device types, transparent mode and LoRaWAN packing."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: about-soil-sensor
 title: O senzoru Soil Sensor
+description: "Soil Moisture Sensor pro TOWER: utěsněný kapacitní senzor vlhkosti půdy s teploměrem TMP112 na kabelu 1-Wire (2 m), zapojení a knihovna pro Arduino."
 ---
 import Image from '@theme/IdealImage';
 

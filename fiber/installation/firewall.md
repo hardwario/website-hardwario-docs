@@ -1,5 +1,6 @@
 ---
 title: Firewall
+description: "Set up the ufw firewall on FIBER: allow SSH first, open the ChirpStack, Node-RED, dashboard, InfluxDB and Grafana ports to your LAN subnet, then enable it."
 ---
 
 # Firewall

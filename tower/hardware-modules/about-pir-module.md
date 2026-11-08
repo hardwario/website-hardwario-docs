@@ -1,6 +1,7 @@
 ---
 slug: about-pir-module
 title: About PIR Module
+description: "TOWER PIR Module, a passive infrared motion detector with the Excelitas PYQ-1648-7053 sensor, 98° detection angle, 5 m range and about 3 μA consumption."
 ---
 import Image from '@theme/IdealImage';
 

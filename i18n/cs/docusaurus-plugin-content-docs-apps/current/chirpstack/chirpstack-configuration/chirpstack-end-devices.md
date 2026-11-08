@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-end-devices
 title: Koncová zařízení
+description: "Vytvoření profilů zařízení v ChirpStack v4 s příklady pro zařízení CHESTER a STICKER, přidání koncových zařízení do aplikace a zadání aktivačních klíčů."
 title_meta: "Koncová zařízení (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';

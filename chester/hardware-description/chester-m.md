@@ -1,6 +1,7 @@
 ---
 slug: chester-m
 title: CHESTER-M Mainboard
+description: "CHESTER-M mainboard: block diagram, 2.0–5.25 V operating range and idle currents, terminal block solder bridges, slot A and B signals and R3.4 schematics."
 ---
 import Image from '@theme/IdealImage';
 

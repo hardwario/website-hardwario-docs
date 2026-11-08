@@ -1,6 +1,7 @@
 ---
 slug: application-over-bluetooth
 title: Application over Bluetooth
+description: "Update CHESTER application firmware over Bluetooth in the HARDWARIO Manager phone app; if CHESTER does not appear over Bluetooth, use J-Link instead."
 ---
 import Image from '@theme/IdealImage';
 

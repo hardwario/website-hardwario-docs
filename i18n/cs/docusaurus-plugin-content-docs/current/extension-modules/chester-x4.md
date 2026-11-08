@@ -1,6 +1,7 @@
 ---
 slug: chester-x4
 title: CHESTER-X4 (step-down, 4 kanály)
+description: "Modul CHESTER-X4 se snižujícím měničem z externího napájení 6–28 V DC, měřením vstupního napětí a čtyřmi spínači P-MOS s vratnými pojistkami PTC."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: downlink-commands
 title: Downlink Commands
+description: "STICKER remote management on fPort 85: action commands, set_param and get_param configuration, 18-byte alarm rules and history replay, as JSON or raw hex."
 ---
 import Image from '@theme/IdealImage';
 

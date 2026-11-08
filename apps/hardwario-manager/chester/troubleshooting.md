@@ -1,6 +1,7 @@
 ---
 slug: troubleshooting
 title: Troubleshooting
+description: "Fix CHESTER Bluetooth problems in HARDWARIO Manager: what each scan, pairing, connection and download error means and what to do about it."
 title_meta: "Troubleshooting (HARDWARIO Manager for CHESTER)"
 ---
 

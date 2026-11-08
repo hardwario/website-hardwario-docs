@@ -1,6 +1,7 @@
 ---
 slug: debug
 title: Ladění
+description: "Ladění firmwaru zařízení CHESTER v rozšíření nRF Connect for VS Code: sestavení pro ladění, krokování, shell přes RTT, vlákna a ochrana oblasti UICR."
 ---
 import Image from '@theme/IdealImage';
 

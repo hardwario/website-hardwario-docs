@@ -1,6 +1,7 @@
 ---
 slug: about-one-wire-slave-module
 title: About 1-Wire Slave Module
+description: "TOWER 1-Wire Slave Module links I²C devices several meters away over 1-Wire via a Maxim DS28E17 bridge with 16-bit CRC, with the Sensor Module as master."
 ---
 import Image from '@theme/IdealImage';
 

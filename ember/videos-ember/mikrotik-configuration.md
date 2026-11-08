@@ -1,6 +1,7 @@
 ---
 slug: mikrotik-configuration
 title: Configuring EMBER Gateway
+description: "Video tutorial on configuring the LoRa interface of the EMBER MikroTik gateway in WebFig so it can connect to a LoRaWAN server."
 ---
 
 import Image from '@theme/IdealImage';

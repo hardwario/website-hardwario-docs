@@ -1,5 +1,6 @@
 ---
 title: Konzole RTT (J-Link)
+description: "Připojení k zařízení GLIDER sondou Segger J-Link přes RTT: shell Zephyr, průběžné logy firmwaru, zapojení SWD, nástroj rttt a řešení problémů."
 sidebar_position: 1
 ---
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: chester-z1
 title: CHESTER-Z1 (baterie, tlačítka, LED)
+description: "Modul CHESTER-Z1 pod horním krytem: záložní baterie Li-Ion 18650, vstup 6–26 V DC nebo ze solárního panelu, podsvícená tlačítka a bzučák ovládané přes I²C."
 ---
 import Image from '@theme/IdealImage';
 

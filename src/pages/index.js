@@ -2,16 +2,23 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import { translate } from '@docusaurus/Translate';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Head from '@docusaurus/Head';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 
+// The full name of the site: the homepage heading and title. Every other page ends its title with the short
+// site title "HARDWARIO Docs" (docusaurus.config.js).
+const heading = () =>
+  translate({
+    id: 'home.heading',
+    message: 'HARDWARIO Documentation',
+  });
+
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
+        <h1 className="hero__title">{heading()}</h1>
         {/* siteConfig.tagline is not localized by Docusaurus, so the subtitle
             goes through translate() instead. The message has to be the literal
             English string — write-translations extracts it statically and would
@@ -29,14 +36,16 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
       description={translate({
         id: 'home.metaDescription',
-        message: 'Technical Resources for Products and Services',
+        message: 'Documentation for HARDWARIO devices and HARDWARIO Cloud: CHESTER, STICKER, EMBER, FIBER, GAUGER and TOWER, with firmware, APIs and integration guides.',
       })}>
+      <Head>
+        <title>{heading()}</title>
+        <meta property="og:title" content={heading()} />
+      </Head>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

@@ -1,6 +1,7 @@
 ---
 slug: about-lux-meter-tag
 title: O tagu Lux Meter Tag
+description: "Lux Meter Tag pro TOWER se senzorem okolního světla TI OPT3001 na sběrnici I²C měří osvětlenost od 0,01 do 83 000 lux při aktivním proudu 1,8 µA."
 ---
 import Image from '@theme/IdealImage';
 

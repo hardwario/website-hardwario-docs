@@ -1,6 +1,7 @@
 ---
 slug: about-co2-module
 title: O modulu CO₂ Module
+description: "CO₂ Module pro TOWER se senzorem NDIR SenseAir LP8: rozsah 0 až 10 000 ppm, přesnost ±50 ppm, pouze rozhraní I²C a provoz na baterie po celé roky."
 ---
 import Image from '@theme/IdealImage';
 

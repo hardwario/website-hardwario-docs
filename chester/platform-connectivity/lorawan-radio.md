@@ -1,6 +1,7 @@
 ---
 slug: lorawan-radio
 title: LoRaWAN Networks
+description: "LoRaWAN on CHESTER with the Murata CMWX1ZZABZ-078 module: switch the network mode, set OTAA or ABP keys, and decode data in ChirpStack or Node-RED."
 ---
 import Image from '@theme/IdealImage';
 

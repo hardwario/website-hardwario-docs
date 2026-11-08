@@ -1,6 +1,7 @@
 ---
 slug: about-core-module
 title: O modulu Core Module
+description: "Core Module pro TOWER: MCU STM32L083CZ, rádio SPIRIT1 pro 868/915 MHz, akcelerometr, teplotní senzor, bezpečnostní čip, pinout a proudové limity pinů."
 ---
 import Image from '@theme/IdealImage';
 

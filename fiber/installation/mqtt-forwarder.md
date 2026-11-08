@@ -1,5 +1,6 @@
 ---
 title: Install ChirpStack MQTT Forwarder
+description: "Install the ChirpStack MQTT Forwarder on FIBER to link Concentratord with the local MQTT broker, write its config with the eu868 topic prefix and start it."
 ---
 
 # Install ChirpStack MQTT Forwarder

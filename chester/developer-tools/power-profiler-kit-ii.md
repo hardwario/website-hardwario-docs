@@ -1,6 +1,7 @@
 ---
 slug: power-profiler-kit-ii
 title: Power Profiler Kit II
+description: "Power CHESTER from the Nordic Power Profiler Kit II and measure its current: nRF Connect for Desktop, PPK2 wiring, a 3600 mV supply and data capture."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

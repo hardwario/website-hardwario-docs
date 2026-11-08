@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-am308
 title: AM308(L)
+description: "Milesight AM308 and AM308L indoor sensors that add PM2.5 and PM10 to the AM307 set, with or without an E-Ink display: LoRaWAN keys, decoders and specs."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ Milesight AM308 and AM308L are **indoor ambience monitoring sensors** that measu
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/am319-868m.png')} />
+        <Image img={require('./images/am319-868m.png')} alt="Milesight AM300 series sensor" />
       </div>
     </div>
     <div class="col col--24"></div>

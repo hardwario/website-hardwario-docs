@@ -1,6 +1,7 @@
 ---
 slug: about-compact-split-module
 title: About Compact Split Module
+description: "TOWER Compact Split Module: a thinner board with bottom-entry pins for two top modules or two stacks; it cannot connect directly to the Battery Module."
 ---
 import Image from '@theme/IdealImage';
 

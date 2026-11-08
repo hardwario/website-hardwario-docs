@@ -1,6 +1,7 @@
 ---
 slug: zenner-c5-isf
 title: Zenner C5-ISF
+description: "Měřič tepelné energie Zenner zelsius C5-ISF se zařízením CHESTER wM-Bus: kde najít adresu wM-Bus, jak ji přiřadit a jak zadat dešifrovací klíče."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: configuration
 title: Configuration
+description: "Configure a CHESTER in HARDWARIO Manager: Quick Set-up for intervals and LTE or LoRaWAN, Advanced Configuration for all parameters, and saving."
 title_meta: "Configuration (HARDWARIO Manager for CHESTER)"
 ---
 

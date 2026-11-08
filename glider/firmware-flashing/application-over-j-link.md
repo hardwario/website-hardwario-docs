@@ -1,6 +1,7 @@
 ---
 slug: application-over-j-link
 title: Application over J-Link
+description: "Flash GLIDER application firmware with west flash over a SEGGER J-Link probe on SWD, the fast path for development, without MCUboot rollback."
 title_meta: "Application over J-Link (GLIDER)"
 ---
 import Image from '@theme/IdealImage';

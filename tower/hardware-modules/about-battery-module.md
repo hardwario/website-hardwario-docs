@@ -1,6 +1,7 @@
 ---
 slug: about-battery-module
 title: About Battery Module
+description: "TOWER Battery Module powers a unit from four AAA cells via a TPS62745 buck converter at 3.1 V, with an external input up to 10 V and an extra tag socket."
 ---
 import Image from '@theme/IdealImage';
 

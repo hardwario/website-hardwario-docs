@@ -1,5 +1,6 @@
 ---
 title: Instalace Node-RED
+description: "Instalace Node-RED na zařízení FIBER, credentialSecret a heslo v adminAuth, uzel pro InfluxDB a flow, který ukládá uplinky z ChirpStack do InfluxDB."
 ---
 
 # Instalace Node-RED {#install-node-red}

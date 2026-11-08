@@ -1,6 +1,7 @@
 ---
 slug: milesight-am307
 title: AM307
+description: "Vnitřní senzor Milesight AM307 s displejem E-Ink pro sedm parametrů včetně CO₂, TVOC a pohybu (PIR): klíče LoRaWAN třídy A, dekodéry a parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight AM307 je **senzor pro monitorování vnitřního prostředí**, který
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../../smart-devices/milesight/sensors/milesight-am300/images/am319-868m.png')} />
+        <Image img={require('../../../../../../../smart-devices/milesight/sensors/milesight-am300/images/am319-868m.png')} alt="Senzor Milesight řady AM300" />
       </div>
     </div>
     <div class="col col--24"></div>

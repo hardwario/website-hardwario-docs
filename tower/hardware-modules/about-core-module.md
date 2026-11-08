@@ -1,6 +1,7 @@
 ---
 slug: about-core-module
 title: About Core Module
+description: "TOWER Core Module with an STM32L083CZ MCU, 868/915 MHz SPIRIT1 radio, accelerometer, temperature sensor and security chip, plus pinout and current limits."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: email-notification
 title: Email Notifications
+description: "Build a ThingsBoard rule chain that emails temperature and humidity threshold alerts with the device label and CET time, and throttles repeated emails."
 ---
 import Image from '@theme/IdealImage';
 

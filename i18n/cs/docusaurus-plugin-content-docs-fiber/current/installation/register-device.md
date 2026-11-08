@@ -1,5 +1,6 @@
 ---
 title: Registrace brány a zařízení
+description: "Registrace brány, profilu zařízení, aplikace a zařízení s OTAA v rozhraní ChirpStack na zařízení FIBER a kontrola připojení v záložce LoRaWAN frames."
 ---
 
 # Registrace brány a zařízení {#register-a-gateway-and-a-device}

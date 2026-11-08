@@ -1,7 +1,7 @@
 ---
 slug: tts-gateways
 title: Adding Gateways
-title_meta: "Adding Gateways (The Things Stack video tutorial)"
+title_meta: "The Things Stack: Adding Gateways (video)"
 ---
 
 import Image from '@theme/IdealImage';

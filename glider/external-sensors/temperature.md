@@ -1,5 +1,6 @@
 ---
 title: Temperature Sensors
+description: "Connect up to 8 DS18B20 1-Wire thermometers to the W1 and W2 ports of GLIDER, scan and bind them to slots, read temperatures and tie them to alarms."
 sidebar_position: 1
 ---
 import Image from '@theme/IdealImage';

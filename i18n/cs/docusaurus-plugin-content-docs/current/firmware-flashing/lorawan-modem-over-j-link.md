@@ -1,6 +1,7 @@
 ---
 slug: lorawan-modem-over-j-link
 title: Modem LoRaWAN přes J-Link
+description: "Nahrání firmwaru v1.4.1 do modemu LoRaWAN zařízení CHESTER programátorem SEGGER J-Link přes konektor LRW a následné vypnutí a zapnutí napájení."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

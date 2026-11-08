@@ -1,5 +1,6 @@
 ---
 title: Příkazy shellu
+description: "Příkazy shellu Zephyr zařízení GLIDER přes RTT nebo AT$SHELL: společná syntaxe config a příkazy app, inputs, therm, alarm, modbus a led s příklady."
 sidebar_position: 2
 title_meta: "Příkazy shellu (GLIDER)"
 ---

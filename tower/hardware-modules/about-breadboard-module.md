@@ -1,6 +1,7 @@
 ---
 slug: about-breadboard-module
 title: About Breadboard Module
+description: "TOWER Breadboard Module, a narrow 114 x 33 mm breakout with precision pin headers that plugs any HARDWARIO TOWER module into a breadboard."
 ---
 import Image from '@theme/IdealImage';
 

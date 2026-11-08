@@ -1,6 +1,7 @@
 ---
 slug: command-line-tools
 title: Nástroje pro příkazovou řádku
+description: "HARDWARIO CLI pro zařízení CHESTER: instalace přes pip, nahrání firmwaru aplikace a modemů LTE a LoRaWAN, interaktivní konzole, blok PIB a cloudové kodeky."
 title_meta: "Nástroje pro příkazovou řádku (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

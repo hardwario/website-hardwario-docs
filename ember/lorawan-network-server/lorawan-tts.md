@@ -1,6 +1,7 @@
 ---
 slug: lorawan-tts
 title: The Things Stack
+description: "Connect the HARDWARIO EMBER gateway to The Things Stack: register it with CUPS and LNS API keys, import the root CA in RouterOS and check live data."
 title_meta: "The Things Stack (EMBER)"
 ---
 import Image from '@theme/IdealImage';

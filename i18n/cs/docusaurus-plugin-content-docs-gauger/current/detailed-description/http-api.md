@@ -1,6 +1,7 @@
 ---
 slug: http-api
 title: HTTP API
+description: "HTTP API zařízení GAUGER na portu 80: Basic Auth, odpovědi v JSON a endpointy pro konfiguraci, nahrání a návrat firmwaru, restart, reset a metadata."
 ---
 
 # HTTP API {#http-api}

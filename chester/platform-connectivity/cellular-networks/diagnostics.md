@@ -1,6 +1,7 @@
 ---
 slug: diagnostics
 title: Diagnostics and Troubleshooting
+description: "Troubleshoot a CHESTER that does not register on a cellular network: check lte state, then scan visible operators with AT%COPS over J-Link RTT."
 ---
 import Image from '@theme/IdealImage';
 

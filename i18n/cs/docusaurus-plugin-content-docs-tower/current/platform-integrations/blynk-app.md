@@ -1,6 +1,7 @@
 ---
 slug: blynk-app
 title: Mobilní a webová aplikace Blynk
+description: "Propojení platformy TOWER s aplikací Blynk přes Node-RED na systému HARDWARIO Raspbian: spínání relé a LED pásku, grafy teploty a hotový flow k importu."
 ---
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'

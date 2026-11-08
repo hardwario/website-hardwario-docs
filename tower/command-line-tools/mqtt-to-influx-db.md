@@ -1,6 +1,7 @@
 ---
 slug: mqtt-to-influx-db
 title: MQTT Storage
+description: "Install mqtt2influxdb to store TOWER sensor data from MQTT topics in InfluxDB, write its YAML configuration, test it and run it as a PM2 service."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

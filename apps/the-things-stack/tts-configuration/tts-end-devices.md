@@ -1,6 +1,7 @@
 ---
 slug: tts-end-devices
 title: End Devices
+description: "Create an application in The Things Stack and register LoRaWAN end devices from the Device Repository or manually with DevEUI, JoinEUI and AppKey."
 title_meta: "End Devices (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';

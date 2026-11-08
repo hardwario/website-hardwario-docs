@@ -1,6 +1,7 @@
 ---
 slug: lorawan-tts
 title: The Things Stack
+description: "Connect STICKER to The Things Stack: read its LoRaWAN keys over NFC in HARDWARIO Manager, choose OTAA or ABP and assign the ttn.js payload formatters."
 title_meta: "The Things Stack (STICKER)"
 ---
 import Image from '@theme/IdealImage';

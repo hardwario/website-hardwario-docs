@@ -1,6 +1,7 @@
 ---
 slug: change-log
 title: Historie změn zařízení
+description: "Historie změn zařízení STICKER v aplikaci HARDWARIO Manager: zapnutí, záznamy čtení a zápisů, obnovení dřívější konfigurace a export či smazání záznamů."
 ---
 
 # Zobrazení historie změn zařízení {#view-a-devices-change-log}

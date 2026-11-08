@@ -1,6 +1,7 @@
 ---
 slug: sensor-history
 title: Sensor history
+description: "Read the measurements a STICKER stored while offline over NFC, page by page, as a summary, charts and per-day tables (firmware v1.4.0 or newer)."
 ---
 
 # Read sensor history

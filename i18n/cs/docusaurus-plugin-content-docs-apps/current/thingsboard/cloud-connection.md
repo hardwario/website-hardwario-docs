@@ -1,6 +1,7 @@
 ---
 slug: cloud-connection
 title: Cloud
+description: "Připojení HARDWARIO Cloud k ThingsBoard: zařízení automaticky přes jeden konektor s tagem a ID skupiny zařízení, nebo ručně s access tokenem v labelu."
 ---
 import Image from '@theme/IdealImage';
 import ThingsBoardConnector from '@site/src/components/ThingsBoardConnector';
@@ -8,7 +9,7 @@ import EditCodeBlock from '../../../../../apps/thingsboard/edit-code-block.js';
 
 # Připojení k HARDWARIO Cloud {#connecting-to-the-hardwario-cloud}
 
-Zařízení z HARDWARIO Cloudu dostanete do ThingsBoard dvěma způsoby:
+Zařízení z HARDWARIO Cloud dostanete do ThingsBoard dvěma způsoby:
 
 - **[Automatické připojení](#automatic-connection)** (doporučeno): přidáte jeden konektor a každé otagované zařízení se samo vytvoří ve vaší skupině zařízení.
 - **[Ruční připojení](#manual-connection)**: pro zařízení, která už v ThingsBoard existují.
@@ -73,12 +74,12 @@ S **další zprávou** každého otagovaného zařízení se zařízení objeví
 |---|---|
 | **Název zařízení** | `chester-<sériové číslo>`, např. `chester-2159012345` |
 | **Label** | sériové číslo |
-| **Atributy** | název zařízení z HARDWARIO Cloudu, výrobek, verze firmwaru, IMEI, ICCID, konfigurace zařízení, sériová čísla BLE tagů |
+| **Atributy** | název zařízení z HARDWARIO Cloud, výrobek, verze firmwaru, IMEI, ICCID, konfigurace zařízení, sériová čísla BLE tagů |
 | **Telemetrie** | všechna měření s původními časy, zaokrouhlená na dvě desetinná místa; BLE tagy jako `ble_tags.0.…`, `ble_tags.1.…` |
 
 Každá další zpráva už jen přidává nová data. Zařízení se hlásí ve svém intervalu, takže se může objevit až za jeden interval.
 
-- **Přejmenování zařízení** v HARDWARIO Cloudu změní jen atribut s jeho názvem. Zařízení si ponechá název, label i historii.
+- **Přejmenování zařízení** v HARDWARIO Cloud změní jen atribut s jeho názvem. Zařízení si ponechá název, label i historii.
 - **Další zařízení později:** stačí je otagovat tagem `thingsboard`.
 - **Jiná skupina:** vložte do konektoru ID nové skupiny. Zařízení se tam přesunou s další zprávou.
 - **Zastavení dat:** odeberte tag `thingsboard`. Zařízení i jeho historie v ThingsBoard zůstanou.

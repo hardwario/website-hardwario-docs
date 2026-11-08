@@ -1,6 +1,7 @@
 ---
 slug: installation-on-windows
 title: Instalace na Windows
+description: "Instalace CHESTER SDK ve Windows 10 a 11: Python, balíčky Chocolatey, pracovní prostor West v cestě bez mezer, sestavení a nahrání ukázky blinky."
 ---
 import Image from '@theme/IdealImage';
 

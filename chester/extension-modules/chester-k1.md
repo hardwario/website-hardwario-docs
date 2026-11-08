@@ -1,6 +1,7 @@
 ---
 slug: chester-k1
 title: CHESTER-K1 (4-ch diff input)
+description: "CHESTER-K1 four-channel differential input module that occupies slots A and B: terminal pinout, current transformer wire colors and schematics."
 ---
 import Image from '@theme/IdealImage';
 

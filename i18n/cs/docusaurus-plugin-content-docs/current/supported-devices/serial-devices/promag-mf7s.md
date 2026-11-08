@@ -1,6 +1,7 @@
 ---
 slug: promag-mf7s
 title: Promag MF7S
+description: "Čtečka RFID Promag MF7S s aplikací CHESTER Serial na modulu CHESTER-X12-A (RS-232): čtení UID karet, konfigurace, příkazy shellu a payloady LTE a LoRaWAN."
 ---
 
 import Image from '@theme/IdealImage';

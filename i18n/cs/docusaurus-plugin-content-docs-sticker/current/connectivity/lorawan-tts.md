@@ -1,6 +1,7 @@
 ---
 slug: lorawan-tts
 title: The Things Stack
+description: "Zařízení STICKER v The Things Stack: načtení klíčů LoRaWAN přes NFC v aplikaci HARDWARIO Manager, volba OTAA nebo ABP a formátovače payloadu ttn.js."
 title_meta: "The Things Stack (STICKER)"
 ---
 import Image from '@theme/IdealImage';

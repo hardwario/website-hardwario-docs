@@ -1,5 +1,6 @@
 ---
 title: Konzole AT (USB-C)
+description: "Konzole AT zařízení GLIDER přes USB-C: přístup k sériovému portu v Linuxu, west serial-console ve virtualenv Pythonu, příkazy AT a řešení problémů."
 sidebar_position: 2
 ---
 import Image from '@theme/IdealImage';

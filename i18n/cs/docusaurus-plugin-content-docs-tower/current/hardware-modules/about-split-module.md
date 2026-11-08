@@ -1,6 +1,7 @@
 ---
 slug: about-split-module
 title: O modulu Split Module
+description: "Split Module pro TOWER: dva vrchní moduly v jedné sestavě nebo dva kompaktní sloupce, konektory pro dva tagy a rozdíl oproti modulu Compact Split Module."
 ---
 import Image from '@theme/IdealImage';
 

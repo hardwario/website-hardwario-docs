@@ -1,30 +1,39 @@
 # HARDWARIO Documentation
 
-> Technical documentation for HARDWARIO products and services: hardware,
-> firmware, APIs, integrations and guides for the company's industrial /
-> wireless IoT (LPWAN: NB-IoT, LTE-M, LoRaWAN) platform. Published by
-> HARDWARIO a.s., a Czech IoT manufacturer based in Liberec. English. Welcomes
-> AI crawlers; the full page list is in the sitemap below.
+> Technical documentation for HARDWARIO devices, firmware and HARDWARIO Cloud:
+> hardware descriptions, configuration, firmware development, APIs and
+> integration guides for LTE-M, NB-IoT and LoRaWAN. Published by HARDWARIO a.s.
+> (Liberec, Czech Republic), which designs and manufactures the devices that
+> bring industrial assets online. In English and Czech (/cs/, same paths).
+> Welcomes AI crawlers; the full page list is in the sitemaps below.
 
-## Documentation
+## Devices and cloud
 
-- [Documentation home](https://docs.hardwario.com/): entry point to all product and service documentation
-- [CHESTER](https://docs.hardwario.com/chester/): configurable industrial IoT gateway documentation
-- [STICKER](https://docs.hardwario.com/sticker/): compact LoRaWAN sensor-platform documentation
-- [EMBER](https://docs.hardwario.com/ember/): LoRaWAN gateway documentation
-- [TOWER](https://docs.hardwario.com/tower/): modular IoT platform documentation
-- [HARDWARIO Cloud](https://docs.hardwario.com/cloud/): device and data service documentation
-- [Applications](https://docs.hardwario.com/apps/): integration guides for third-party IoT applications
-- [Smart devices](https://docs.hardwario.com/smart-devices/): supported third-party sensors, gateways and industrial computers
-- [Sitemap](https://docs.hardwario.com/sitemap.xml): complete, machine-readable list of every documentation page
-- [Search](https://docs.hardwario.com/search): full-text search across the docs
+- [Documentation home](https://docs.hardwario.com/): entry point to the documentation of every device and service
+- [CHESTER](https://docs.hardwario.com/chester/): reads sensors, meters and machines and reports over LTE-M, NB-IoT or LoRaWAN; catalog applications, extension modules and the firmware SDK
+- [STICKER](https://docs.hardwario.com/sticker/): battery sensor for climate, inputs or motion that reports over LoRaWAN or to FIBER and is set up from a phone over NFC
+- [EMBER](https://docs.hardwario.com/ember/): IP67 LoRaWAN gateway on the MikroTik platform, with ChirpStack or The Things Stack
+- [FIBER](https://docs.hardwario.com/fiber/): embedded Linux device that reads 1-Wire probes and STICKER sensors over its own radio and sends the readings over MQTT; also FIBER Lite
+- [GAUGER](https://docs.hardwario.com/gauger/): counts pulses on four galvanically separated inputs and serves the counts over Modbus TCP and a REST API
+- [GLIDER](https://docs.hardwario.com/glider/): compact LTE-M and NB-IoT device built on the Nordic nRF9151
+- [TAPPER](https://docs.hardwario.com/tapper/): NFC tag reader on a Raspberry Pi Zero 2 W with the PN532 module
+- [TOWER](https://docs.hardwario.com/tower/): modular IoT kit used for teaching (HARDWARIO Academy)
+- [HARDWARIO Cloud](https://docs.hardwario.com/cloud/): receives CHESTER messages, updates firmware over the air and passes the data on through webhooks and a REST API
+- [Applications](https://docs.hardwario.com/apps/): HARDWARIO Manager and integration guides for ChirpStack, The Things Stack and ThingsBoard
+- [Smart devices](https://docs.hardwario.com/smart-devices/): supported third-party sensors, meters, gateways and industrial computers (Milesight, RAKwireless, MikroTik, Carlo Gavazzi, Nexelec, OnLogic, Raspberry Pi)
+
+## Site files
+
+- [English sitemap](https://docs.hardwario.com/sitemap.xml): every English page
+- [Czech sitemap](https://docs.hardwario.com/cs/sitemap.xml): every Czech page
+- [Search](https://docs.hardwario.com/search/): full-text search across the docs
 
 ## More from HARDWARIO
 
-- [HARDWARIO a.s.](https://www.hardwario.com): company site with products, solutions and services
-- [HARDWARIO STEM](https://stem.hardwario.com): STEM learning platform for schools
-- [HARDWARIO Academy](https://hardwario.academy): teaching IoT in practice with the TOWER kit
-- [HARDWARIO Store](https://www.hardwario.store): shop for HARDWARIO products
+- [HARDWARIO](https://www.hardwario.com/): our devices, the applications built on them and HARDWARIO Cloud
+- [HARDWARIO Store](https://www.hardwario.store/): devices with prices and availability
+- [HARDWARIO Academy](https://hardwario.academy/): IoT lessons for schools on TOWER
+- [HARDWARIO STEM](https://stem.hardwario.com/): courses and teaching materials for TOWER
 
 ## Contact
 

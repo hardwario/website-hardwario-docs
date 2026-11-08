@@ -1,6 +1,7 @@
 ---
 slug: about-climate-module
 title: O modulu Climate Module
+description: "Climate Module pro TOWER: čtyři digitální senzory na sběrnici I²C pro teplotu, vlhkost, intenzitu osvětlení a atmosférický tlak a odkazy na jejich SDK."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: alarms
 title: Pravidla alarmů
+description: "Až 16 pravidel alarmů zařízení STICKER v aplikaci HARDWARIO Manager: prahová, stavová a četnostní pravidla s hysterezí, názvy slotů a aktivní alarmy."
 title_meta: "Pravidla alarmů (HARDWARIO Manager pro STICKER)"
 ---
 

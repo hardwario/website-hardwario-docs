@@ -1,6 +1,7 @@
 ---
 slug: common-functionality
 title: Společné funkce
+description: "Společné chování katalogových aplikací CHESTER: režim LTE nebo LoRaWAN, tlačítko, LED, reset konfigurace, rozptyl intervalu hlášení a diagnostické příkazy."
 ---
 import Image from '@theme/IdealImage';
 

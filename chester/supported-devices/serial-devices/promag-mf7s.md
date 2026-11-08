@@ -1,6 +1,7 @@
 ---
 slug: promag-mf7s
 title: Promag MF7S
+description: "Read card UIDs from a Promag MF7S RFID reader with CHESTER Serial over RS-232 on CHESTER-X12-A: configuration, shell commands and LTE or LoRaWAN payloads."
 ---
 
 import Image from '@theme/IdealImage';

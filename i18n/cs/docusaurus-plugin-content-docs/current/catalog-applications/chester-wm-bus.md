@@ -1,6 +1,7 @@
 ---
 slug: chester-wm-bus
 title: CHESTER wM-Bus
+description: "Katalogová aplikace CHESTER wM-Bus: na baterie nebo ze sítě, skenování periodické až měsíční se dvěma anténami, registrace adres a dekódování v cloudu."
 ---
 import Image from '@theme/IdealImage';
 

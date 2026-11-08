@@ -1,6 +1,7 @@
 ---
 slug: chester-z-over-j-link
 title: CHESTER-Z1 přes J-Link
+description: "Nahrání firmwaru v1.4.0 do modulu CHESTER-Z1 programátorem SEGGER J-Link přes 9pinový konektor SWD na desce v horním krytu, bez demontáže desky."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,7 @@
 ---
 slug: satellite-connectivity
 title: Satellite Connectivity
+description: "Satellite connectivity for CHESTER is set up per project; contact ask@hardwario.com to confirm availability, integration scope and regional limits."
 ---
 import Image from '@theme/IdealImage';
 

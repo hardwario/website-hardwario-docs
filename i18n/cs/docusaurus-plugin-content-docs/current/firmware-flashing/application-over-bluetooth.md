@@ -1,6 +1,7 @@
 ---
 slug: application-over-bluetooth
 title: Aplikace přes Bluetooth
+description: "Aktualizace firmwaru aplikace v zařízení CHESTER přes Bluetooth z telefonu v aplikaci HARDWARIO Manager; když zařízení není vidět, použijte J-Link."
 ---
 import Image from '@theme/IdealImage';
 

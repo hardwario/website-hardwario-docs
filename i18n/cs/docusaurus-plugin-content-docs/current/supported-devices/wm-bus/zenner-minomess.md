@@ -1,6 +1,7 @@
 ---
 slug: zenner-minomess
 title: Zenner Minomess
+description: "Vodoměr Zenner Minomess se zařízením CHESTER wM-Bus: adresa wM-Bus na displeji vodoměru, její přiřazení k zařízení CHESTER a dešifrovací klíče."
 ---
 import Image from '@theme/IdealImage';
 

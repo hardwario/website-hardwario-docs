@@ -1,6 +1,7 @@
 ---
 slug: firmware-update
 title: Firmware update
+description: "Flash CHESTER firmware over Bluetooth from a QR code in HARDWARIO Manager: SHA-256 check, update stages and a safe return to the previous firmware."
 ---
 
 # Update CHESTER firmware over Bluetooth

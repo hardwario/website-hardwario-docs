@@ -1,6 +1,7 @@
 ---
 slug: lorawan-chirpstack
 title: "ChirpStack v4: Semtech UDP"
+description: "Connect the HARDWARIO EMBER gateway to ChirpStack v4 over Semtech UDP: add the server on port 1700 in RouterOS and register the Gateway ID."
 sidebar_label: Semtech UDP
 title_meta: "ChirpStack v4: Semtech UDP (EMBER)"
 ---

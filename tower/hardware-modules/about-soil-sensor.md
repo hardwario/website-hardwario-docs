@@ -1,6 +1,7 @@
 ---
 slug: about-soil-sensor
 title: About Soil Sensor
+description: "TOWER Soil Moisture Sensor: a sealed capacitive probe with a TMP112 temperature sensor on a 2 m 1-Wire cable, Sensor Module wiring and an Arduino library."
 ---
 import Image from '@theme/IdealImage';
 

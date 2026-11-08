@@ -1,6 +1,7 @@
 ---
 slug: chester-wm-bus
 title: CHESTER wM-Bus
+description: "CHESTER wM-Bus catalog application: battery or mains-powered variant, periodic to monthly scans with two antennas, address enrollment and cloud decoding."
 ---
 import Image from '@theme/IdealImage';
 

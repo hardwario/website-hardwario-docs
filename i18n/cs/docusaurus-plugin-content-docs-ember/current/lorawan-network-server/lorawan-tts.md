@@ -1,6 +1,7 @@
 ---
 slug: lorawan-tts
 title: The Things Stack
+description: "Připojení brány HARDWARIO EMBER k The Things Stack: registrace brány s klíči API pro CUPS a LNS, import kořenového certifikátu v RouterOS a kontrola dat."
 title_meta: "The Things Stack (EMBER)"
 ---
 import Image from '@theme/IdealImage';

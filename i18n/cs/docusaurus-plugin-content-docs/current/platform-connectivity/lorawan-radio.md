@@ -1,6 +1,7 @@
 ---
 slug: lorawan-radio
 title: Sítě LoRaWAN
+description: "LoRaWAN v zařízení CHESTER s modulem Murata CMWX1ZZABZ-078: přepnutí režimu sítě, klíče pro OTAA nebo ABP a dekodéry pro ChirpStack a Node-RED."
 ---
 import Image from '@theme/IdealImage';
 

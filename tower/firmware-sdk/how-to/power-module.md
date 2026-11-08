@@ -1,6 +1,7 @@
 ---
 slug: how-to-power-module
 title: "How To: Power Module"
+description: "Switch the 230 V / 16 A relay of the TOWER Power Module from the SDK, with a C example that toggles it by button; the WS2812B LED strip has its own guide."
 ---
 import Image from '@theme/IdealImage';
 

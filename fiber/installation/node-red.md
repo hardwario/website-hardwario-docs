@@ -1,5 +1,6 @@
 ---
 title: Install Node-RED
+description: "Install Node-RED on FIBER, set a credential secret and adminAuth password, add the InfluxDB node and build a flow storing ChirpStack uplinks in InfluxDB."
 ---
 
 # Install Node-RED

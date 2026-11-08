@@ -1,7 +1,8 @@
 ---
 slug: chester-cloud
 title: How to add CHESTER to Cloud
-title_meta: "How to add CHESTER to Cloud (CHESTER video tutorials)"
+description: "Video tutorial: add CHESTER to HARDWARIO Cloud by scanning its QR code with your phone, set a comment and space tags, and view the device messages."
+title_meta: "Adding CHESTER to the Cloud (CHESTER videos)"
 ---
 
 import Image from '@theme/IdealImage';

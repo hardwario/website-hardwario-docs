@@ -1,6 +1,7 @@
 ---
 slug: changelog
 title: Changelog
+description: "Release notes for the CHESTER SDK and catalog application firmware since v3.0.0: NCS and Zephyr versions, changes per application and upgrade notes."
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 ---

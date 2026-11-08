@@ -1,5 +1,6 @@
 ---
 title: Sending Downlinks
+description: "Send downlinks with the HARDWARIO Cloud API: app config commands, shell commands or a JSON data object, queued until the device next boots, sends or polls."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

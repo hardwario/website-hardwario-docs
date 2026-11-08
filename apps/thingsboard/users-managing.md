@@ -1,6 +1,7 @@
 ---
 slug: users-managing
 title: User Management
+description: "Control what ThingsBoard customer users can see and do with Group and Generic roles, user groups and shared device groups."
 ---
 
 import Image from '@theme/IdealImage';

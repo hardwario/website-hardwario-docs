@@ -1,6 +1,7 @@
 ---
 slug: lorawan-chirpstack
 title: ChirpStack v4
+description: "Connect CHESTER to LoRaWAN on ChirpStack v4: read its credentials, set up OTAA, create a device profile, register the device and add a payload decoder."
 title_meta: "ChirpStack v4 (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

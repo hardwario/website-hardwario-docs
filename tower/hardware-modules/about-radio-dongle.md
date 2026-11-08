@@ -1,6 +1,7 @@
 ---
 slug: about-radio-dongle
 title: About Radio Dongle
+description: "Radio Dongle, the USB gateway of the HARDWARIO radio network for up to 32 TOWER nodes, with an STM32L083CZ MCU, 868/915 MHz radio and dual security chip."
 ---
 import Image from '@theme/IdealImage';
 

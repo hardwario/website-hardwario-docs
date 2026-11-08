@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-integration
 title: ChirpStack
+description: "Connect HARDWARIO ThingsBoard to the ChirpStack MQTT broker over TLS on port 8883 with CA and client certificates, and subscribe to uplink events."
 title_meta: "ChirpStack Integration (ThingsBoard)"
 ---
 

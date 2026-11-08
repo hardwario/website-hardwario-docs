@@ -1,6 +1,7 @@
 ---
 slug: external-sensors
 title: External Sensor Support
+description: "External sensors for STICKER Input: the MACHINE PROBE, 1-Wire (Dallas) temperature probes and the S0 pulse output of energy and flow meters."
 ---
 
 # External Sensor Support

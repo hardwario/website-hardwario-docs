@@ -1,6 +1,7 @@
 ---
 slug: external-sensors
 title: Podpora externích senzorů
+description: "Přehled externích senzorů pro zařízení STICKER Input: sonda MACHINE PROBE, teplotní sondy 1-Wire (Dallas) a impulzní výstup S0 měřičů energií a průtoku."
 ---
 
 # Podpora externích senzorů {#external-sensor-support}

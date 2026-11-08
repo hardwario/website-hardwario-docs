@@ -1,6 +1,7 @@
 ---
 slug: lorawan-chirpstack-basics-station
 title: "ChirpStack v4: Basics Station and mTLS"
+description: "Connect the EMBER gateway to ChirpStack v4 over LoRa Basics Station with ws, wss or mTLS: RouterOS commands, checks, certificate renewal and log lines."
 sidebar_label: Basics Station
 title_meta: "ChirpStack v4: Basics Station and mTLS (EMBER)"
 ---

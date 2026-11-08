@@ -1,6 +1,7 @@
 ---
 slug: creating-dashboard
 title: Dashboardy
+description: "Vytvoření dashboardu v ThingsBoard, zobrazení proměnné widgetem Label & Value Card a graf telemetrie ve widgetu Line Chart s jednou či více řadami."
 ---
 import Image from '@theme/IdealImage';
 

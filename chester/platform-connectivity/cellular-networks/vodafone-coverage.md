@@ -1,6 +1,7 @@
 ---
 slug: vodafone-coverage
 title: Vodafone SIM EU28+2
+description: "Known-working NB-IoT and LTE-M roaming partners, PLMN IDs and APN by country for the Vodafone SIM card from HARDWARIO; not a full coverage list."
 ---
 import Image from '@theme/IdealImage';
 

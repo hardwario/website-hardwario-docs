@@ -1,6 +1,7 @@
 ---
 slug: about-one-wire-slave-module
 title: O modulu 1-Wire Slave Module
+description: "1-Wire Slave Module pro TOWER připojí zařízení I²C na několik metrů po sběrnici 1-Wire přes most Maxim DS28E17 s 16bitovým CRC; masterem je Sensor Module."
 ---
 import Image from '@theme/IdealImage';
 

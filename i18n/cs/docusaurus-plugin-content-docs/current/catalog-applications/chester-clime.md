@@ -1,6 +1,7 @@
 ---
 slug: chester-clime
 title: CHESTER Clime
+description: "Katalogová aplikace CHESTER Clime: teplota a vlhkost, varianty IAQ, 1-Wire, RTD a s termočlánky, alarmy vlhkoměru, prahy CO₂ a ukázková zpráva JSON."
 ---
 import Image from '@theme/IdealImage';
 

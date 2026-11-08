@@ -1,6 +1,7 @@
 ---
 slug: sample-data
 title: Sample sensor data
+description: "Read all STICKER sensors with one NFC tap in HARDWARIO Manager and send a LoRaWAN uplink at once, an end-to-end test from sensor to network server."
 ---
 
 # Sample sensor data

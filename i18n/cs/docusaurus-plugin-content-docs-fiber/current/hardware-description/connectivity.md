@@ -1,5 +1,6 @@
 ---
 title: Konektivita
+description: "Komunikační rozhraní zařízení FIBER: Ethernet, Wi-Fi, Bluetooth Low Energy, volitelně LTE Cat 4 a rádio ISM 868/915 MHz pro bezdrátové senzory STICKER."
 ---
 
 # Konektivita {#connectivity}

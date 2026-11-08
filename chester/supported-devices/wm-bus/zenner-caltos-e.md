@@ -1,6 +1,7 @@
 ---
 slug: zenner-caltos-e
 title: Zenner caltos-E
+description: "Read the Zenner caltos-E heat cost allocator with CHESTER wM-Bus: find the address at the bottom of the device, map it to CHESTER and decrypt the data."
 ---
 import Image from '@theme/IdealImage';
 

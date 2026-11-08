@@ -1,6 +1,7 @@
 ---
 slug: bmeters_iwm-tx3
 title: BMeters IWM-TX3
+description: "Configure the BMeters IWM-TX3 radio module for GMDM-I, GMB-I, GMB-RP-I and CPR-M3-I water meters over NFC and map its wM-Bus address to CHESTER."
 ---
 import Image from '@theme/IdealImage';
 

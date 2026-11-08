@@ -1,6 +1,7 @@
 ---
 slug: schneider-electric-iem3xxx-series
 title: Schneider Electric iEM3xxx Series
+description: "Connect a Schneider Electric iEM3xxx MID energy meter (iEM3250) with a current transformer to CHESTER over Modbus: wiring, CT ratio and configuration."
 ---
 
 import Image from '@theme/IdealImage';

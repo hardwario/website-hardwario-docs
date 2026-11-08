@@ -1,5 +1,6 @@
 ---
 title: Data
+description: "Downlink typu data z HARDWARIO Cloud pošle zařízení objekt JSON k ovládání výstupů či změně požadované hodnoty; příklad pro čtyři výstupy CHESTER Control."
 ---
 
 # Data {#data}

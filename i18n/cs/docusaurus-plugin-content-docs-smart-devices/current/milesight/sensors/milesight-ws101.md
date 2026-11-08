@@ -1,6 +1,7 @@
 ---
 slug: milesight-ws101
 title: WS101
+description: "Chytré tlačítko Milesight WS101 s krátkým, dlouhým i dvojitým stiskem a komunikací D2D: klíče LoRaWAN třídy A, odkazy na dekodéry a technické parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight WS101 je **kompaktní chytré tlačítko LoRaWAN napájené z baterie*
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/ws101.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/ws101.png')} alt="Senzor Milesight WS101" />
       </div>
     </div>
     <div class="col col--24"></div>

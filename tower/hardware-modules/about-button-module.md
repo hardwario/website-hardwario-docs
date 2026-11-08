@@ -1,6 +1,7 @@
 ---
 slug: about-button-module
 title: About Button Module
+description: "TOWER Button Module with one large push button on the BOOT signal of the Core Module, rated for over one million clicks, with schematics and SDK links."
 ---
 import Image from '@theme/IdealImage';
 

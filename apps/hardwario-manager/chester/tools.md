@@ -1,6 +1,7 @@
 ---
 slug: tools
 title: Tools
+description: "CHESTER Tools in HARDWARIO Manager: a firmware update from a QR code, a device reboot, and a factory reset that returns the configuration to its defaults."
 title_meta: "Tools (HARDWARIO Manager for CHESTER)"
 ---
 

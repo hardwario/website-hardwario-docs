@@ -1,6 +1,7 @@
 ---
 slug: about-lux-meter-tag
 title: About Lux Meter Tag
+description: "TOWER Lux Meter Tag with the TI OPT3001 ambient light sensor on I²C, measuring illuminance from 0.01 to 83,000 lux at 1.8 µA active current."
 ---
 import Image from '@theme/IdealImage';
 

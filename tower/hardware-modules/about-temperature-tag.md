@@ -1,6 +1,7 @@
 ---
 slug: about-temperature-tag
 title: About Temperature Tag
+description: "TOWER Temperature Tag with the TI TMP112 sensor on the I²C bus: ±0.1 °C typical accuracy at 25 °C, 12-bit resolution and 7 µA active current."
 ---
 import Image from '@theme/IdealImage';
 

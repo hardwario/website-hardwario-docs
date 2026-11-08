@@ -219,6 +219,7 @@ const sidebars = {
           label: 'Hardware Description',
           link: {
             type: 'generated-index',
+            title: 'CHESTER Hardware Description',
             description: 'CHESTER hardware, enclosure, connector, bus, and extension-module documentation.',
           },
           collapsed: true,

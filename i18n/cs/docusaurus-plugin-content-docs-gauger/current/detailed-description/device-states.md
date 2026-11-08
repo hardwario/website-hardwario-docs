@@ -1,6 +1,7 @@
 ---
 slug: device-states
 title: Stavy zařízení
+description: "Stavy zařízení GAUGER podle zelené stavové LED: při inicializaci trvale svítí, za běhu krátce bliká a v chybovém stavu bliká v intervalu 500 ms."
 ---
 
 # Stavy zařízení {#device-states}

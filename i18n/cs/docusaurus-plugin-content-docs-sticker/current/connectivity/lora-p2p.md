@@ -1,6 +1,7 @@
 ---
 slug: lora-p2p
 title: Režim LoRa P2P
+description: "Režim LoRa P2P firmwaru STICKER v2.0.0: síť bez serveru LoRaWAN řídí ProXimos Hub přes modem FIBER a rádiový protokol TOWER."
 ---
 import Image from '@theme/IdealImage';
 
@@ -10,7 +11,7 @@ import Image from '@theme/IdealImage';
 Režim LoRa P2P je součástí firmwaru STICKER **v2.0.0**. Stejný obraz firmwaru umí LoRaWAN i P2P; zařízení si jeden z nich zvolí při startu podle parametru `radio-mode`.
 :::
 
-**LoRa P2P** je druhý režim rádia pro lokality bez sítě LoRaWAN. STICKER nepotřebuje síťový server LoRaWAN (LNS). Spáruje se s **ProXimos Hubem** přes modem **HARDWARIO FIBER** a komunikuje **rádiovým protokolem HARDWARIO TOWER** přes LoRa.
+**LoRa P2P** je druhý režim rádia pro lokality bez sítě LoRaWAN. STICKER nepotřebuje síťový server LoRaWAN (LNS). Spáruje se se zařízením **ProXimos Hub** přes modem **HARDWARIO FIBER** a komunikuje **rádiovým protokolem HARDWARIO TOWER** přes LoRa.
 
 ---
 

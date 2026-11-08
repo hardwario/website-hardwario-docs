@@ -1,6 +1,7 @@
 ---
 slug: milesight-ws523
 title: WS523
+description: "Chytrá zásuvka Milesight WS523 se spínáním podle plánu a měřením spotřeby: klíče LoRaWAN třídy C, odkazy na dekodéry a technické parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight WS523 je **chytrá přenosná zásuvka** s **konektivitou LoRaWAN** pr
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/ws523.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/ws523.png')} alt="Senzor Milesight WS523" />
       </div>
     </div>
     <div class="col col--24"></div>

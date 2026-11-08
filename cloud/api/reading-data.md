@@ -1,5 +1,6 @@
 ---
 title: Reading Data
+description: "Read data with the HARDWARIO Cloud API: list spaces and devices, filter a device's messages by type, direction and time, get the latest value and paginate."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

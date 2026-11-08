@@ -1,6 +1,7 @@
 ---
 slug: firmware-tool
 title: Firmware Flashing Tool
+description: "Install the bcf Firmware Flashing Tool with pip, then list, search and flash TOWER firmware from GitHub or a local file to the Core Module or Radio Dongle."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

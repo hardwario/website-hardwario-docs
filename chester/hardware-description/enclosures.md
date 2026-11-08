@@ -1,6 +1,7 @@
 ---
 slug: enclosures
 title: Enclosures
+description: "CHESTER enclosures: the IP67 standard housing of 130x175x45 mm in two colors, mounting options, and ordering codes CHESTER-E1 to E19 with drawings."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-gateways
 title: "Brány: Semtech UDP"
+description: "Připojení brány k ChirpStack v4 nešifrovaným protokolem Semtech UDP na portu 1700: backend Gateway Bridge, firewall, přidání brány a kontrola Last seen."
 sidebar_label: Semtech UDP
 title_meta: "Brány: Semtech UDP (ChirpStack)"
 ---

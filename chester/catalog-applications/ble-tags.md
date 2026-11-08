@@ -1,6 +1,7 @@
 ---
 slug: ble-tags
 title: Bluetooth Tags
+description: "Pair up to eight Teltonika EYE Sensor Bluetooth tags with CHESTER for temperature and humidity: enable the subsystem, enroll tags, use the EYE App."
 ---
 
 import Image from '@theme/IdealImage';

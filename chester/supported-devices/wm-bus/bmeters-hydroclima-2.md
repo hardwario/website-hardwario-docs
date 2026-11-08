@@ -1,6 +1,7 @@
 ---
 slug: bmeters-hydroclima-2
 title: BMeters Hydroclima 2
+description: "Read the BMeters Hydroclima 2 heat cost allocator with CHESTER wM-Bus: radio configuration in BMetering Software, address location and decryption keys."
 ---
 import Image from '@theme/IdealImage';
 

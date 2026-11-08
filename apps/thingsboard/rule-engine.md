@@ -1,6 +1,7 @@
 ---
 slug: rule-engine
 title: Rule Engine
+description: "Use the ThingsBoard Rule Engine for calculations, alarms and API calls, build a custom rule chain and attach it safely to the Root Rule Chain."
 ---
 
 import Image from '@theme/IdealImage';

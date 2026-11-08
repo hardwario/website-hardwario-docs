@@ -1,6 +1,7 @@
 ---
 slug: milesight-am308
 title: AM308(L)
+description: "Vnitřní senzory Milesight AM308 a AM308L, které oproti AM307 měří i PM2.5 a PM10, s displejem E-Ink i bez něj: klíče LoRaWAN, dekodéry a parametry."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ Milesight AM308 a AM308L jsou **senzory pro monitorování vnitřního prostřed
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../../smart-devices/milesight/sensors/milesight-am300/images/am319-868m.png')} />
+        <Image img={require('../../../../../../../smart-devices/milesight/sensors/milesight-am300/images/am319-868m.png')} alt="Senzor Milesight řady AM300" />
       </div>
     </div>
     <div class="col col--24"></div>

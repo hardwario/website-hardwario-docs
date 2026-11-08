@@ -1,7 +1,8 @@
 ---
 slug: chirpstack-devices
 title: Přidání koncových zařízení
-title_meta: "Přidání koncových zařízení (videonávod ChirpStack)"
+description: "Videonávod k vytvoření profilů zařízení v ChirpStack v4 a přidání koncových zařízení, jako je CHESTER nebo STICKER, do sítě LoRaWAN."
+title_meta: "ChirpStack: přidání koncových zařízení (video)"
 ---
 
 import Image from '@theme/IdealImage';

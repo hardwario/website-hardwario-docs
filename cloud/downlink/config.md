@@ -1,5 +1,6 @@
 ---
 title: Config
+description: "Reconfigure CHESTER from HARDWARIO Cloud with a config downlink of app config commands in text or JSON, applied at the next uplink, never with config save."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

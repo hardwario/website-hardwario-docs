@@ -1,6 +1,7 @@
 ---
 slug: about-barometer-tag
 title: About Barometer Tag
+description: "TOWER Barometer Tag with the NXP MPL3115A2 sensor on I²C, measuring absolute pressure from 20 to 110 kPa or altitude at an absolute accuracy of ±0.4 kPa."
 ---
 import Image from '@theme/IdealImage';
 

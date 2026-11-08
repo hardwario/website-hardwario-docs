@@ -1,6 +1,7 @@
 ---
 slug: requirements
 title: Requirements
+description: "Hardware and OS for CHESTER SDK development: CHESTER DevKit, SEGGER J-Link Compact Plus, Power Profiler Kit 2 and Ubuntu, macOS or Windows."
 ---
 import Image from '@theme/IdealImage';
 

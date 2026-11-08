@@ -1,6 +1,7 @@
 ---
 slug: sticker-input
 title: STICKER Input
+description: "STICKER Input, modul LoRaWAN pro sondy 1-Wire se dvěma vstupy (digitální, analogový 0–24 V, impulzní S0): typické využití, zpráva JSON a stavová LED."
 ---
 import Image from '@theme/IdealImage';
 

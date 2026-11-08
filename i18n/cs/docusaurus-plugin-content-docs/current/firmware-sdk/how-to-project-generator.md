@@ -1,6 +1,7 @@
 ---
 slug: how-to-project-generator
 title: "Jak na: Project Generator"
+description: "CHESTER SDK Project Generator: varianty a funkce katalogových aplikací v souboru project.yaml a generování souborů projektu příkazem west chester-update."
 ---
 import Image from '@theme/IdealImage';
 

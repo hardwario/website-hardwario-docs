@@ -1,6 +1,7 @@
 ---
 slug: j-link-installation
 title: Instalace J-Link
+description: "Instalace nRF Command Line Tools se softwarem SEGGER J-Link a připojení programátoru J-Link k zařízení CHESTER přes adaptér Cortex-M a 10pinový kabel SWD."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: chester-u1-module
 title: CHESTER-U1 Module
+description: "CHESTER-U1 packs the CHESTER-M mainboard into a 38x38 mm module for your own two-layer carrier board: properties, KiCad library, schematics and CHESTER-C4."
 ---
 import Image from '@theme/IdealImage';
 

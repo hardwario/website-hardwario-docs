@@ -1,6 +1,7 @@
 ---
 slug: carlo-gavazzi-em1xx-series
 title: Carlo Gavazzi EM1XX Series
+description: "Connect a Carlo Gavazzi EM1xx single-phase energy analyzer (EM111) to CHESTER over Modbus: direct wiring, RS-485 link, configuration and measured values."
 ---
 
 import Image from '@theme/IdealImage';

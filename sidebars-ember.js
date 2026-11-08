@@ -37,7 +37,8 @@ const sidebars = {
           label: 'Video Tutorials',
           link: {
             type: 'generated-index',
-            description: 'Video guides for configuring and using EMBER.',
+            title: 'EMBER Video Tutorials',
+            description: 'Video guides for EMBER: setting up the LoRa interface in MikroTik RouterOS, updating RouterOS and connecting the gateway to ChirpStack.',
           },
           collapsed: true,
           items: [

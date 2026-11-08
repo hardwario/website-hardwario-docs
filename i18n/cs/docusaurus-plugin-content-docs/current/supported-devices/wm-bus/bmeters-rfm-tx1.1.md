@@ -1,6 +1,7 @@
 ---
 slug: bmeters-rfm-tx1.1
 title: BMeters RFM-TX1.1
+description: "Rádiový modul BMeters RFM-TX1.1 pro vodoměry GSD8-RFM: konfigurace v BMetering Software, montáž na vodoměr a přiřazení adresy wM-Bus k zařízení CHESTER."
 ---
 import Image from '@theme/IdealImage';
 

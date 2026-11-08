@@ -1,6 +1,7 @@
 ---
 slug: samples
 title: Samples
+description: "Overview of the CHESTER SDK samples for extension modules, sensors, BLE, LTE, LoRaWAN and GNSS; each one is a separate project to build and flash."
 ---
 import Image from '@theme/IdealImage';
 

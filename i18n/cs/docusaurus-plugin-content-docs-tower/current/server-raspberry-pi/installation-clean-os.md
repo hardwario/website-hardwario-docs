@@ -1,6 +1,7 @@
 ---
 slug: installation-clean-os
 title: Čistá instalace
+description: "Instalace nástrojů TOWER na Raspberry Pi OS ručně či skriptem: Mosquitto, Node-RED v PM2, nástroje HARDWARIO CLI, pravidla udev a brána pro Radio Dongle."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: installation-on-macos
 title: Instalace na macOS
+description: "Instalace CHESTER SDK v systému macOS 12 a 13: Homebrew, virtuální prostředí Pythonu a nástroj West, na závěr sestavení a nahrání ukázky blinky."
 ---
 import Image from '@theme/IdealImage';
 

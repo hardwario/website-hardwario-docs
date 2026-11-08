@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-otaa
 title: ChirpStack v4 – OTAA
+description: "Register STICKER in ChirpStack v4 with OTAA: the DevEUI, JoinEUI and AppKey, a device profile and application, the payload decoder and uplink checks."
 ---
 import Image from '@theme/IdealImage';
 

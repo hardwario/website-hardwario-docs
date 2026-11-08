@@ -1,6 +1,7 @@
 ---
 slug: satellite-connectivity
 title: Satelitní konektivita
+description: "Satelitní konektivitu pro zařízení CHESTER řešíme pro každý projekt zvlášť; dostupnost a rozsah integrace si ověřte na ask@hardwario.com."
 ---
 import Image from '@theme/IdealImage';
 

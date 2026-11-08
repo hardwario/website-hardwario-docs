@@ -1,6 +1,7 @@
 ---
 slug: how-to-project-generator
 title: "How to: Project Generator"
+description: "Use the CHESTER SDK Project Generator to define catalog application variants and features in project.yaml and generate the files with west chester-update."
 ---
 import Image from '@theme/IdealImage';
 

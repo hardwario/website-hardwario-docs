@@ -1,6 +1,7 @@
 ---
 slug: configuration-reset
 title: Reset konfigurace
+description: "Obnovení výchozí konfigurace zařízení GAUGER tlačítkem Factory Reset ve webovém rozhraní nebo tlačítky USER a RESET; čítače se nulují zvlášť."
 ---
 
 # Reset konfigurace {#configuration-reset}

@@ -1,6 +1,7 @@
 ---
 slug: chester-c5
 title: CHESTER-C5 (koncentrátor 1-Wire)
+description: "Nosná deska CHESTER-C5 pro modul CHESTER-U1: brána NB-IoT a LTE-M pro senzory 1-Wire s 8 kanály, vstup 6–28 V DC nebo ze solárního panelu a záloha Li-Ion."
 ---
 import Image from '@theme/IdealImage';
 

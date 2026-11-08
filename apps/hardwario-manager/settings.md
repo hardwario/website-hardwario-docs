@@ -1,6 +1,7 @@
 ---
 slug: settings
 title: App settings
+description: "HARDWARIO Manager settings: light or dark appearance, English or Czech, a Face ID or passcode app lock, STICKER change log retention and debug mode."
 ---
 
 # App settings

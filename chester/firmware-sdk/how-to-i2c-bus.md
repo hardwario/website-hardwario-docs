@@ -1,6 +1,7 @@
 ---
 slug: how-to-i2c-bus
 title: "How to: I²C Bus"
+description: "Read and write registers of I²C target devices from CHESTER firmware with the Zephyr I²C API, and scan the bus with the i2c scan shell command."
 ---
 import Image from '@theme/IdealImage';
 

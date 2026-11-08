@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-ember
 title: Přidání do ChirpStack v4
+description: "Videonávod k připojení brány LoRaWAN HARDWARIO EMBER k serveru ChirpStack v4 a jejímu přidání do vaší sítě LoRaWAN."
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: chester-m
 title: Základní deska CHESTER-M
+description: "Základní deska CHESTER-M: blokové schéma, provozní napětí 2,0–5,25 V a klidové odběry, pájené propojky svorkovnic, signály slotů A a B a schéma R3.4."
 ---
 import Image from '@theme/IdealImage';
 

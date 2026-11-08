@@ -1,7 +1,7 @@
 ---
 slug: tts-end-devices
 title: Adding End Devices
-title_meta: "Adding End Devices (The Things Stack video tutorial)"
+title_meta: "The Things Stack: Adding End Devices (video)"
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: lorawan-tts
 title: The Things Stack
+description: "Connect CHESTER to The Things Stack (TTS): LoRaWAN credentials, LoRaWAN mode, OTAA setup, application and end device registration, payload decoder."
 title_meta: "The Things Stack (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

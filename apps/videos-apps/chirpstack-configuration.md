@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-configuration
 title: Configuration
+description: "Video tutorial on configuring ChirpStack v4: add gateways, create device profiles, register devices and decode their payloads."
 title_meta: "Configuration (video tutorials)"
 ---
 

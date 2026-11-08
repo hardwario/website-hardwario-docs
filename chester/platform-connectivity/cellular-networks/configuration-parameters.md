@@ -1,6 +1,7 @@
 ---
 slug: configuration-parameters
 title: Configuration Parameters
+description: "Reference of every CHESTER lte config parameter: antenna, network mode, band lock, PLMN, APN, authentication, credentials and static IP address."
 ---
 import Image from '@theme/IdealImage';
 

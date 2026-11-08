@@ -1,5 +1,6 @@
 ---
 title: Data
+description: "Send a JSON data downlink from HARDWARIO Cloud to control outputs or change a setpoint, with an example for the four outputs of CHESTER Control."
 ---
 
 # Data

@@ -1,6 +1,7 @@
 ---
 slug: batch-export
 title: Scan multiple devices
+description: "Tap many STICKER devices in one HARDWARIO Manager session to capture their configurations and export them together as JSON or CSV for inventory or backup."
 ---
 
 # Scan multiple STICKERs (batch export)

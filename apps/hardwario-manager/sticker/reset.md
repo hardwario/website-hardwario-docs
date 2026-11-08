@@ -1,6 +1,7 @@
 ---
 slug: reset
 title: Reset a device
+description: "STICKER resets in HARDWARIO Manager from reboot to factory reset, plus a secret key change and a vendor reset authorized by the vendor-token."
 ---
 
 # Reset a STICKER

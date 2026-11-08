@@ -1,6 +1,7 @@
 ---
 slug: hardwario-terminal
 title: HARDWARIO Terminal
+description: "HARDWARIO Terminal connects to CHESTER over Bluetooth right in Google Chrome, with no software to install: pairing, quick commands and remote sessions."
 ---
 import Image from '@theme/IdealImage';
 

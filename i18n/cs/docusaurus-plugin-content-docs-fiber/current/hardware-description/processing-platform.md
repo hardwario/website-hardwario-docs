@@ -1,5 +1,6 @@
 ---
 title: Výpočetní platforma
+description: "FIBER stojí na modulu Raspberry Pi Compute Module 4: čtyřjádrový Cortex-A72 na 1,8 GHz, 1–8 GB RAM, 8–32 GB eMMC a varianty pro průmyslový teplotní rozsah."
 ---
 
 # Výpočetní platforma {#processing-platform}

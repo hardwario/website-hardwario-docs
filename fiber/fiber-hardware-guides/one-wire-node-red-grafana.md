@@ -1,5 +1,6 @@
 ---
 title: Reading 1-Wire Sensors into Grafana
+description: "Read DS18B20 probes on the eight 1-Wire ports of FIBER from Linux sysfs, then store them in InfluxDB with a Node-RED exec flow and graph them in Grafana."
 ---
 
 # Reading 1-Wire Sensors into Grafana

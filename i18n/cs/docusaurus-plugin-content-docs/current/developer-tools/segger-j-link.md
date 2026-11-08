@@ -1,6 +1,7 @@
 ---
 slug: segger-j-link
 title: SEGGER J-Link
+description: "SEGGER J-Link pro zařízení CHESTER: potřebné vybavení, ovladače J-Link a HARDWARIO Command Line Tools a připojení kabelu SWD k portům APP, LTE a LRW."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

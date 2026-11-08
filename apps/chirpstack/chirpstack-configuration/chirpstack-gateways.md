@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-gateways
 title: "Gateways: Semtech UDP"
+description: "Connect a gateway to ChirpStack v4 over unencrypted Semtech UDP on port 1700: Gateway Bridge backend, firewall, adding the gateway and checking Last seen."
 sidebar_label: Semtech UDP
 title_meta: "Gateways: Semtech UDP (ChirpStack)"
 ---

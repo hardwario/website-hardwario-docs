@@ -1,6 +1,7 @@
 ---
 slug: enclosures
 title: Krabičky
+description: "Krabičky pro zařízení CHESTER: standardní krabička 130x175x45 mm s krytím IP67 ve dvou barvách, montáž a objednací kódy CHESTER-E1 až E19 s výkresy."
 ---
 import Image from '@theme/IdealImage';
 

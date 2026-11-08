@@ -1,6 +1,7 @@
 ---
 slug: about-radio-dongle
 title: O zařízení Radio Dongle
+description: "Radio Dongle, brána USB rádiové sítě HARDWARIO pro až 32 uzlů TOWER, s MCU STM32L083CZ, rádiem pro 868/915 MHz a dvojitým bezpečnostním čipem."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: initial-configuration
 title: Počáteční konfigurace
+description: "První připojení k zařízení GAUGER přes Ethernet na 192.168.255.1 nebo přes Wi-Fi na 192.168.254.1 a volby konfigurace s klíči JSON a výchozími hodnotami."
 ---
 
 # Počáteční konfigurace {#initial-configuration}

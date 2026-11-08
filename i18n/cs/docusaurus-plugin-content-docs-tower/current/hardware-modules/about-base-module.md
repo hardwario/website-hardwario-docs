@@ -1,6 +1,7 @@
 ---
 slug: about-base-module
 title: O modulu Base Module
+description: "Base Module, stojan pro jednotky HARDWARIO TOWER s paticí pro modul, prototypovací plochou pro pájení, gumovými nožičkami a volitelnými klipy na DIN lištu."
 ---
 import Image from '@theme/IdealImage';
 

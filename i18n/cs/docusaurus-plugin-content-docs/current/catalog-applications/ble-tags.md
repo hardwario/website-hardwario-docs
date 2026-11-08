@@ -1,6 +1,7 @@
 ---
 slug: ble-tags
 title: Bluetooth tagy
+description: "Připojení až osmi Bluetooth tagů Teltonika EYE Sensor (teplota a vlhkost) k zařízení CHESTER: zapnutí subsystému, registrace a nastavení v aplikaci EYE."
 ---
 
 import Image from '@theme/IdealImage';

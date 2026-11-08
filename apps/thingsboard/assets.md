@@ -1,6 +1,7 @@
 ---
 slug: assets
 title: Assets
+description: "Create ThingsBoard assets for buildings, floors or zones, link devices to them through relations and share them with sub-customers."
 ---
 
 import Image from '@theme/IdealImage';

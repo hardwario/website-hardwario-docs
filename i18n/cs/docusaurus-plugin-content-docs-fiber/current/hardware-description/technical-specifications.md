@@ -1,5 +1,6 @@
 ---
 title: Technické specifikace
+description: "Technické specifikace zařízení FIBER: PoE se záložní baterií Li-Ion 3,6 V, vstup 36 V až 57 V, osm portů 1-Wire, 175 × 120 × 35 mm, –20 °C až +60 °C."
 ---
 
 # Technické specifikace {#technical-specifications}

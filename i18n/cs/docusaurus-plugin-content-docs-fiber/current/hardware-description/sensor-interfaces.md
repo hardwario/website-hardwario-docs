@@ -1,5 +1,6 @@
 ---
 title: Rozhraní pro senzory
+description: "Rozhraní pro senzory zařízení FIBER: osm izolovaných portů 1-Wire s LED pro každý kanál, rádio 868/915 MHz s LoRa pro uzly STICKER a podsvícený LCD."
 ---
 
 # Rozhraní pro senzory {#sensor-interfaces}

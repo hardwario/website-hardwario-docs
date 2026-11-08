@@ -1,6 +1,7 @@
 ---
 slug: tower-vscode-extension
 title: TOWER VSCode Extension
+description: "Install the HARDWARIO TOWER extension for Visual Studio Code and the tools it needs: CMake, Ninja, arm-none-eabi-gcc 12.2 or newer and git."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

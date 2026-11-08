@@ -1,6 +1,7 @@
 ---
 slug: bmeters_iwm-tx5
 title: BMeters IWM-TX5
+description: "Konfigurace rádiového modulu BMeters IWM-TX5 pro vodoměry GSD8-I přes NFC v aplikaci B METERS NFC Config a přiřazení adresy wM-Bus k zařízení CHESTER."
 ---
 import Image from '@theme/IdealImage';
 

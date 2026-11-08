@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-integration
 title: ChirpStack
+description: "Připojení platformy HARDWARIO ThingsBoard k brokeru MQTT serveru ChirpStack přes TLS na portu 8883 s certifikátem CA a klientským certifikátem."
 title_meta: "Integrace ChirpStack (ThingsBoard)"
 ---
 

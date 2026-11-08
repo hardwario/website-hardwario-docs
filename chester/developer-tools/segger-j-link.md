@@ -1,6 +1,7 @@
 ---
 slug: segger-j-link
 title: SEGGER J-Link
+description: "Set up SEGGER J-Link for CHESTER: required hardware, J-Link drivers and HARDWARIO Command Line Tools, and the SWD cable on the APP, LTE and LRW ports."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

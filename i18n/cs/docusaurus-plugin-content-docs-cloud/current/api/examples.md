@@ -1,5 +1,6 @@
 ---
 title: Příklady
+description: "Příklad pro API HARDWARIO Cloud v cURL, Pythonu a Node.js, který vypíše nejnovější zprávu s daty ze všech zařízení v prostoru, a reference Swagger."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

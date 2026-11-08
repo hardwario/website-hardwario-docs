@@ -1,6 +1,7 @@
 ---
 slug: carlo-gavazzi-em1xx-series
 title: Carlo Gavazzi řady EM1XX
+description: "Připojení jednofázového analyzátoru energie Carlo Gavazzi řady EM1xx (EM111) k zařízení CHESTER přes Modbus: přímé zapojení, nastavení a měřené hodnoty."
 ---
 
 import Image from '@theme/IdealImage';

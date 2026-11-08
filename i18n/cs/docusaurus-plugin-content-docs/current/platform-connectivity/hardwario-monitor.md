@@ -1,6 +1,7 @@
 ---
 slug: hardwario-monitor
 title: HARDWARIO Monitor
+description: "Počítačová aplikace HARDWARIO Monitor pro CHESTER: konzole přes J-Link RTT s dávkami příkazů, shell přes Bluetooth, nahrání firmwaru podle ID a logy."
 ---
 import Image from '@theme/IdealImage';
 

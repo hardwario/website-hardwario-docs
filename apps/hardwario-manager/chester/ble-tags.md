@@ -1,6 +1,7 @@
 ---
 slug: ble-tags
 title: BLE tags
+description: "Bind external Bluetooth sensor tags to CHESTER slots in HARDWARIO Manager, see their temperature, battery voltage and signal, and save or clear the slots."
 ---
 
 # Bind BLE sensor tags

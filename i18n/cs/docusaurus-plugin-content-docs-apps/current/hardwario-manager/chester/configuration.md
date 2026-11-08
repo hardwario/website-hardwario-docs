@@ -1,6 +1,7 @@
 ---
 slug: configuration
 title: Konfigurace
+description: "Konfigurace zařízení CHESTER v aplikaci HARDWARIO Manager: intervaly a LTE či LoRaWAN v Quick Set-up, všechny parametry v Advanced Configuration a uložení."
 title_meta: "Konfigurace (HARDWARIO Manager pro CHESTER)"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Install Grafana
+description: "Install Grafana on FIBER or FIBER Lite from the Grafana APT repository, change the default admin password and add InfluxDB as a data source."
 ---
 
 # Install Grafana

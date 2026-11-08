@@ -1,6 +1,7 @@
 ---
 slug: bmeters-hydrocal-m4
 title: BMeters Hydrocal M4
+description: "Configure the BMeters Hydrocal M4 heat meter over NFC with the B METERS NFC Config app on Android and map its wM-Bus address to CHESTER."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: chester-scale
 title: CHESTER Scale
+description: "CHESTER Scale catalog application: weight from up to four load cell channels on CHESTER-X3C modules, the Scale Z backup variant, channel commands and JSON."
 ---
 import Image from '@theme/IdealImage';
 

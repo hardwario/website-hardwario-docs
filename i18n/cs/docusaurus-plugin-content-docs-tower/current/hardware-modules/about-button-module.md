@@ -1,6 +1,7 @@
 ---
 slug: about-button-module
 title: O modulu Button Module
+description: "Button Module pro TOWER: velké tlačítko na signálu BOOT modulu Core Module se životností přes jeden milion stisků, schéma a odkazy na SDK."
 ---
 import Image from '@theme/IdealImage';
 

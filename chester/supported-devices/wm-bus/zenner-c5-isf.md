@@ -1,6 +1,7 @@
 ---
 slug: zenner-c5-isf
 title: Zenner C5-ISF
+description: "Read the Zenner zelsius C5-ISF thermal energy meter with CHESTER wM-Bus: where to find its wM-Bus address, address mapping and decryption keys."
 ---
 import Image from '@theme/IdealImage';
 

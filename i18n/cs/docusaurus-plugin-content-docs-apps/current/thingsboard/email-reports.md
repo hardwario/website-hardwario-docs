@@ -1,6 +1,7 @@
 ---
 slug: email-reports
 title: Reporty
+description: "Automatické reporty v PDF v ThingsBoard: šablona reportu, šablona e-mailové notifikace a plánovač, který report pravidelně rozesílá příjemcům."
 ---
 import Image from '@theme/IdealImage';
 

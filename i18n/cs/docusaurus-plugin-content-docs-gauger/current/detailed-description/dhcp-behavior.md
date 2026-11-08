@@ -1,6 +1,7 @@
 ---
 slug: dhcp-behavior
 title: Chování DHCP
+description: "Pokud je DHCP zapnuté, pracuje zařízení GAUGER na Ethernetu a v režimu Wi-Fi Station jako klient DHCP a v režimu Wi-Fi Access Point jako server."
 ---
 
 # Chování DHCP {#dhcp-behavior}

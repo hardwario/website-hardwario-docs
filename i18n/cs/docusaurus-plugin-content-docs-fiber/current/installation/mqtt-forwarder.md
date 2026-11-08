@@ -1,5 +1,6 @@
 ---
 title: Instalace ChirpStack MQTT Forwarder
+description: "Instalace ChirpStack MQTT Forwarder na zařízení FIBER: propojení Concentratord s místním brokerem MQTT, konfigurace s prefixem topiců eu868 a spuštění."
 ---
 
 # Instalace ChirpStack MQTT Forwarder {#install-chirpstack-mqtt-forwarder}

@@ -1,6 +1,7 @@
 ---
 slug: topics-reference
 title: Topics Reference
+description: "TOWER MQTT topics: node topics for firmware, battery, sensors, relays, LED, button, PIR, LED strip and LCD, and gateway topics for pairing and aliases."
 ---
 import Image from '@theme/IdealImage';
 

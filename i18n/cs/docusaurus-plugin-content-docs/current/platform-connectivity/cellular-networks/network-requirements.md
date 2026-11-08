@@ -1,6 +1,7 @@
 ---
 slug: network-requirements
 title: Požadavky na síť
+description: "Co zařízení CHESTER v mobilní síti podporuje (pásma LTE-M a NB-IoT, APN, PLMN, roaming, PSM) a co si před nasazením potvrdit u operátora."
 ---
 import Image from '@theme/IdealImage';
 

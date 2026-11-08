@@ -1,6 +1,7 @@
 ---
 slug: cloud-connection
 title: Cloud
+description: "Bring HARDWARIO Cloud devices into ThingsBoard automatically with one tagged connector and your device group ID, or manually with an access token label."
 ---
 import Image from '@theme/IdealImage';
 import ThingsBoardConnector from '@site/src/components/ThingsBoardConnector';

@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-basics-station
 title: "Basics Station a mTLS"
+description: "Server ChirpStack v4 pro brány s LoRa Basics Station (ws, wss, mTLS): Gateway Bridge s backendem basic_station, CA pro certifikáty bran a chyby v logu."
 sidebar_label: Basics Station
 title_meta: "Basics Station a mTLS (ChirpStack)"
 ---

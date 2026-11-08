@@ -1,6 +1,7 @@
 ---
 slug: embedding-dashboards
 title: Embedding Dashboards
+description: "Embed a public ThingsBoard dashboard or a single widget in a web page or Docusaurus (MDX) with an iframe, with recommended heights and JSX syntax."
 ---
 import Image from '@theme/IdealImage';
 

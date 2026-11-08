@@ -1,6 +1,7 @@
 ---
 slug: installation-on-windows
 title: Installation on Windows
+description: "Install the CHESTER SDK on Windows 10 or 11: Python, Chocolatey packages, a West workspace in a path without spaces, then build and flash blinky."
 ---
 import Image from '@theme/IdealImage';
 

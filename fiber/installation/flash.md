@@ -1,5 +1,6 @@
 ---
 title: Flash Raspberry Pi OS
+description: "Flash Raspberry Pi OS Lite (64-bit) with Raspberry Pi Imager: on FIBER via the BOOT jumper and rpiboot, on a microSD card for FIBER Lite."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -164,26 +165,26 @@ the screenshot shows.
 
 1. In the **OS** step, select **Raspberry Pi OS (other)**.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-choose-os.png')} />
+   <Image img={require('../fiber-lite/images/rpi-imager-choose-os.png')} alt="Raspberry Pi Imager: choosing Raspberry Pi OS (other) in the OS step" />
 
 1. Select **Raspberry Pi OS Lite (64-bit)**.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-choose-os-lite.png')} />
+   <Image img={require('../fiber-lite/images/rpi-imager-choose-os-lite.png')} alt="Raspberry Pi Imager: choosing Raspberry Pi OS Lite (64-bit)" />
 
 1. In the **Storage** step, select the microSD card for the FIBER Lite device.
 
 1. In the **Customisation** step (gear icon, or Ctrl+Shift+X), enter a hostname for your FIBER
    Lite device (e.g. `fiber-lite`).
 
-   <Image img={require('../fiber-lite/images/rpi-imager-hostname.png')} />
+   <Image img={require('../fiber-lite/images/rpi-imager-hostname.png')} alt="Raspberry Pi Imager: entering the hostname of the FIBER Lite device" />
 
 1. In the **Localisation** section, select your location, time zone, and keyboard layout.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-localisation.png')} />
+   <Image img={require('../fiber-lite/images/rpi-imager-localisation.png')} alt="Raspberry Pi Imager: location, time zone and keyboard layout" />
 
 1. In the **User** section, enter a username and password.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-user.png')} />
+   <Image img={require('../fiber-lite/images/rpi-imager-user.png')} alt="Raspberry Pi Imager: username and password" />
 
    :::tip
 
@@ -201,23 +202,23 @@ the screenshot shows.
 1. Optional: in the **Wi-Fi** section, enter your wireless network's SSID and password as a LAN
    fallback.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-wifi.png')} />
+   <Image img={require('../fiber-lite/images/rpi-imager-wifi.png')} alt="Raspberry Pi Imager: optional Wi-Fi network as a LAN fallback" />
 
 1. In the **Remote access** section, enable **SSH** and select your preferred authentication
    method.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-ssh.png')} />
+   <Image img={require('../fiber-lite/images/rpi-imager-ssh.png')} alt="Raspberry Pi Imager: enabling SSH in the Remote access section" />
 
 1. Optional: in the **Raspberry Pi Connect** section, you can enable remote access via Raspberry
    Pi Connect. For this guide, we leave it disabled.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-connect.png')} />
+   <Image img={require('../fiber-lite/images/rpi-imager-connect.png')} alt="Raspberry Pi Imager: Raspberry Pi Connect left disabled" />
 
 1. Review the summary and click **WRITE** to start flashing, then confirm the warning dialog.
 
 1. Wait for the writing process to complete.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-writing.png')} />
+   <Image img={require('../fiber-lite/images/rpi-imager-writing.png')} alt="Raspberry Pi Imager writing the image to the microSD card" />
 
 1. When writing completes, insert the microSD card into the FIBER Lite device and power it on.
 

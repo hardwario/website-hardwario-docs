@@ -1,6 +1,7 @@
 ---
 slug: milesight-em400
 title: EM400
+description: "Ultrazvukový senzor vzdálenosti Milesight EM400-MUD (3–450 cm) pro parkoviště, odpadové nádoby a měření hladiny: klíče LoRaWAN 1.0.3, dekodéry a parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight EM400-MUD je **multifunkční ultrazvukový senzor vzdálenosti** pro 
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/em400-mud.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/em400-mud.png')} alt="Senzor Milesight EM400-MUD" />
       </div>
     </div>
     <div class="col col--24"></div>

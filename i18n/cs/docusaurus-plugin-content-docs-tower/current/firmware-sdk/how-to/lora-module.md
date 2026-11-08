@@ -1,6 +1,7 @@
 ---
 slug: how-to-lora-module
 title: "Jak na: LoRa Module"
+description: "Odesílání zpráv ze zařízení TOWER přes LoRa s modulem LoRa Module: cesta přes bránu a backend (např. The Things Network) na server a příklad na GitHubu."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: downlink-commands
 title: Příkazy přes downlink
+description: "Správa zařízení STICKER na dálku přes fPort 85: akční příkazy, set_param a get_param, 18bajtová pravidla alarmů a vyžádání historie, v JSON nebo hex."
 ---
 import Image from '@theme/IdealImage';
 

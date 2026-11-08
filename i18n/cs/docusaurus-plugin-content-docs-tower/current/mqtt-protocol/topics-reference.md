@@ -1,6 +1,7 @@
 ---
 slug: topics-reference
 title: Přehled topiců
+description: "Přehled topiců MQTT pro TOWER: topicy uzlů pro firmware, baterii, senzory, relé, LED, tlačítko, PIR, LED pásek a LCD a topicy brány pro párování a aliasy."
 ---
 import Image from '@theme/IdealImage';
 

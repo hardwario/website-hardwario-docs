@@ -1,6 +1,7 @@
 ---
 slug: s0-interface
 title: Rozhraní S0 (impulzní výstup)
+description: "Čítání impulzů S0 z elektroměrů, plynoměrů, vodoměrů a měřičů tepla zařízením STICKER Input: zapojení, režim vstupu pulse a četnostní pravidla alarmů."
 ---
 
 # Rozhraní S0 (impulzní výstup) {#s0-interface-pulse-output}

@@ -1,6 +1,7 @@
 ---
 slug: hardwario-monitor
 title: HARDWARIO Monitor
+description: "HARDWARIO Monitor desktop app for CHESTER: J-Link RTT console with batch commands, Bluetooth shell, firmware flashing by unique ID and log file locations."
 ---
 import Image from '@theme/IdealImage';
 

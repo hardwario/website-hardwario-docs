@@ -1,6 +1,7 @@
 ---
 slug: about-humidity-tag
 title: O tagu Humidity Tag
+description: "Humidity Tag pro TOWER měří relativní vlhkost v rozsahu 0 až 100 % kalibrovaným senzorem Sensirion SHT20 na sběrnici I²C při provozním proudu 10 µA."
 ---
 import Image from '@theme/IdealImage';
 
@@ -11,7 +12,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
 
-        Humidity Tag používá vysoce přesný senzor vlhkosti SHT20 s typickou přesností ±3 % v rozsahu od 20 % do 80 %. Senzor je digitální a kalibrovaný, komunikuje po sběrnici I²C a má velmi nízkou spotřebu a režim vypnutí.
+        Humidity Tag používá vysoce přesný senzor vlhkosti SHT20 s typickou přesností ±2 % v rozsahu od 20 % do 80 %. Senzor je digitální a kalibrovaný, komunikuje po sběrnici I²C a má velmi nízkou spotřebu a režim vypnutí.
 
     </div>
   </div>

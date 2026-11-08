@@ -1,6 +1,7 @@
 ---
 slug: sticker-motion
 title: STICKER Motion
+description: "STICKER Motion, a LoRaWAN PIR motion detector on two AA batteries: use cases, example JSON with motion counts and orientation, status LED and changelog."
 ---
 import Image from '@theme/IdealImage';
 

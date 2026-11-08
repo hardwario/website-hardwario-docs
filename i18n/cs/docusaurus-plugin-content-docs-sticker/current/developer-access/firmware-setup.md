@@ -1,5 +1,6 @@
 ---
 title: Nastavení firmwaru
+description: "Příprava workspace firmwaru STICKER (West, Zephyr), sestavení image release, debug a provisioning, nahrání sondou J-Link přes SWD a otevření konzole."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: chester-x3
 title: CHESTER-X3 (přesný ADC)
+description: "Přesné moduly ADC CHESTER-X3: X3A pro dva odporové senzory Pt 100 nebo Pt 1000, X3B pro dva termočlánky typu K a X3C pro dva tenzometrické snímače."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: installation-os
 title: Předinstalovaný obraz
+description: "Nahrání HARDWARIO Raspbian na kartu microSD: Raspberry Pi Imager, název hostitele, SSH a Wi-Fi, otevření serveru v prohlížeči a řešení potíží s párováním."
 ---
 import Image from '@theme/IdealImage';
 

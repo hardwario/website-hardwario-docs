@@ -1,6 +1,7 @@
 ---
 slug: creating-dashboard
 title: Dashboards
+description: "Create a ThingsBoard dashboard, show one variable with the Label & Value Card widget and plot telemetry in a Line Chart with one or more series."
 ---
 import Image from '@theme/IdealImage';
 

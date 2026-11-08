@@ -1,6 +1,7 @@
 ---
 slug: i2c-address-space
 title: Adresní prostor I²C
+description: "Mapa 7bitových adres I²C základní desky CHESTER, rozšiřujících modulů a příslušenství včetně adres ve slotech A a B pro kontrolu kolizí nových periferií."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: terminal
 title: Terminal
+description: "Use the CHESTER shell from your phone over Bluetooth in HARDWARIO Manager, with command suggestions learned from the device and scrollback kept per device."
 ---
 
 # CHESTER Terminal

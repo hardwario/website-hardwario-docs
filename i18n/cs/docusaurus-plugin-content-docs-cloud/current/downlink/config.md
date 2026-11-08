@@ -1,5 +1,6 @@
 ---
 title: Konfigurace
+description: "Konfigurace zařízení CHESTER z HARDWARIO Cloud downlinkem config: příkazy app config v textu nebo JSON platí od příštího uplinku, bez config save."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

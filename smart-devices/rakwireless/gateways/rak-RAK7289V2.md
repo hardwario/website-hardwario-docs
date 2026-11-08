@@ -1,6 +1,7 @@
 ﻿---
 slug: rak-RAK7289V2
 title: RAK7289V2
+description: "RAKwireless RAK7289V2 WisGate Edge Pro outdoor IP67 LoRaWAN gateway: antennas and PoE, first access, WAN setup and Basics Station for The Things Stack."
 ---
 
 import Image from '@theme/IdealImage';
@@ -15,7 +16,7 @@ It runs on **WisGateOS 2** and supports multi-backhaul connectivity (Ethernet, W
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/rak-RAK7289V2.png')} />
+        <Image img={require('./images/rak-RAK7289V2.png')} alt="RAK7289V2 WisGate Edge Pro" />
       </div>
     </div>
     <div class="col col--24"></div>

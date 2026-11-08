@@ -1,6 +1,7 @@
 ---
 slug: chester-k1
 title: CHESTER-K1 (4kanálový diferenciální vstup)
+description: "Čtyřkanálový modul CHESTER-K1 s diferenciálními vstupy, který zabírá sloty A i B: zapojení svorkovnic, barvy vodičů proudového transformátoru a schéma."
 ---
 import Image from '@theme/IdealImage';
 

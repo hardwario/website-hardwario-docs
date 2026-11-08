@@ -1,6 +1,7 @@
 ---
 slug: connector-description
 title: Popis konektorů
+description: "Konektory zařízení GAUGER: svorkovnice pro redundantní napájení a čtyři digitální vstupy, Ethernet RJ-45, anténní konektor SMA, Mini USB-B a 10pinový JTAG."
 ---
 
 # Popis konektorů {#connector-description}

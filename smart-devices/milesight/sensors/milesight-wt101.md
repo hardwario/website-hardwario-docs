@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-wt101
 title: WT101
+description: "Milesight WT101 radiator thermostat with open window detection: LoRaWAN OTAA join keys, payload decoder links and technical specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight WT101 is a **smart radiator thermostat** with **LoRaWAN control** for 
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/wt101-868m.png')} />
+        <Image img={require('./images/wt101-868m.png')} alt="Milesight Sensor WT101" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -21,6 +21,8 @@ const sidebars = {
               label: 'Troubleshooting',
               link: {
                 type: 'generated-index',
+                title: 'FIBER Lite Troubleshooting',
+                description: 'Fixes for FIBER Lite: refused or denied SSH connections, the RTC EREMOTEIO error and a concentrator that never shows a gateway ID.',
               },
               collapsed: true,
               items: [
@@ -82,6 +84,7 @@ const sidebars = {
           label: 'Hardware Description',
           link: {
             type: 'generated-index',
+            title: 'FIBER Hardware Description',
             description: 'FIBER processing platform, sensor interfaces, connectivity, and technical specifications.',
           },
           collapsed: true,

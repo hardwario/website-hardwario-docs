@@ -1,6 +1,7 @@
 ---
 slug: about-encoder-module
 title: About Encoder Module
+description: "TOWER Encoder Module: Bourns PEC12R rotary encoder with 12 positions per revolution and a push button, three tag sockets, made to pair with the LCD Module."
 ---
 import Image from '@theme/IdealImage';
 

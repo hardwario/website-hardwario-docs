@@ -1,5 +1,6 @@
 ---
 title: Install ChirpStack Concentratord
+description: "Install ChirpStack Concentratord for the RAK5146 LoRa concentrator, over USB on FIBER or over SPI on a RAK2287 HAT on FIBER Lite, and read the gateway ID."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

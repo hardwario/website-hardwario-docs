@@ -1,5 +1,6 @@
 ---
 title: Register a Gateway and a Device
+description: "Register a gateway, device profile, application and OTAA device in the ChirpStack UI on FIBER and watch the join in the LoRaWAN frames tab."
 ---
 
 # Register a Gateway and a Device

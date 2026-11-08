@@ -1,6 +1,7 @@
 ---
 slug: bmeters-hydroclima-2
 title: BMeters Hydroclima 2
+description: "Indikátor topných nákladů BMeters Hydroclima 2 se zařízením CHESTER wM-Bus: konfigurace v BMetering Software, umístění adresy a dešifrovací klíče."
 ---
 import Image from '@theme/IdealImage';
 

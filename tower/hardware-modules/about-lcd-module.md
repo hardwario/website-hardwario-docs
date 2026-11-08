@@ -1,6 +1,7 @@
 ---
 slug: about-lcd-module
 title: About LCD Module
+description: "TOWER LCD Module with an ultra-low-power 1.28-inch 128 x 128 Sharp memory display, two buttons, an APDS-9960 gesture sensor and six RGB LEDs."
 ---
 import Image from '@theme/IdealImage';
 

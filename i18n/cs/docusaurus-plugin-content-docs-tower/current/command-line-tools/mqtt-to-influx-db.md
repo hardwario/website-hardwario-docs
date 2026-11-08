@@ -1,6 +1,7 @@
 ---
 slug: mqtt-to-influx-db
 title: Ukládání zpráv MQTT
+description: "Instalace nástroje mqtt2influxdb, který ukládá data senzorů TOWER z topiců MQTT do InfluxDB: konfigurace v YAML, test a spuštění jako služby v PM2."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

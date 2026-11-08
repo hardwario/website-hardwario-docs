@@ -1,5 +1,6 @@
 ---
 title: Authentication
+description: "Authenticate HARDWARIO Cloud API requests with the X-API-KEY header: create a space-scoped key, limit it to devices with tags and keep it secret."
 ---
 
 # Authentication

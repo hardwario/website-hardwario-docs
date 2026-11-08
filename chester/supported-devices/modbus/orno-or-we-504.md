@@ -1,6 +1,7 @@
 ---
 slug: orno-or-we-504
 title: ORNO OR-WE-504
+description: "Connect the ORNO OR-WE-504 single-phase energy meter to CHESTER over RS-485 Modbus RTU: wiring and setup in the ORNO software or the CHESTER Terminal."
 ---
 
 import Image from '@theme/IdealImage';

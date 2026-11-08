@@ -1,6 +1,7 @@
 ---
 slug: install
 title: Instalace aplikace
+description: "Instalace aplikace HARDWARIO Manager z Google Play nebo App Store, co k ní potřebujete (NFC, Bluetooth, kamera, účet ATELOS, secret key) a oprávnění."
 ---
 
 # Instalace aplikace HARDWARIO Manager {#install-hardwario-manager}

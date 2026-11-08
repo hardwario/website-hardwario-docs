@@ -1,6 +1,7 @@
 ---
 slug: tools
 title: Nástroje
+description: "Nástroje pro STICKER v aplikaci HARDWARIO Manager: synchronizace hodin, kalibrační režim, senzory 1-Wire, vzorek dat, historie senzorů a resety."
 title_meta: "Nástroje (HARDWARIO Manager pro STICKER)"
 ---
 

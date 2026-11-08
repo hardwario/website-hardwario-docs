@@ -1,5 +1,6 @@
 ---
 title: Variables
+description: "Store device variables like a location or calibration offset through the HARDWARIO Cloud API for connector transformations, then filter, edit or lock them."
 title_meta: "Variables (HARDWARIO Cloud API)"
 ---
 

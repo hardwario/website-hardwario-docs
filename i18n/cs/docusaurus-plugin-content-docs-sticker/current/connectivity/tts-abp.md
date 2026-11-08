@@ -1,6 +1,7 @@
 ---
 slug: tts-abp
 title: The Things Stack – ABP
+description: "Registrace zařízení STICKER v The Things Stack přes ABP: DevAddr, NwkSKey a AppSKey, koncové zařízení, formátovač payloadu ttn.js a kontrola uplinků."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: about-lora-module
 title: O modulu LoRa Module
+description: "LoRa Module připojí zařízení TOWER k síti LoRaWAN na 868 MHz: modul Murata CMWX1ZZABZ-078, příkazy AT přes UART, anténa SMA a pohotovostní spotřeba 2 μA."
 ---
 import Image from '@theme/IdealImage';
 

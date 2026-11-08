@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-devices
 title: Adding End Devices
+description: "Video tutorial on creating device profiles in ChirpStack v4 and adding end devices such as CHESTER or STICKER to a LoRaWAN network."
 title_meta: "Adding End Devices (ChirpStack video tutorial)"
 ---
 

@@ -15,8 +15,8 @@ import Image from '@theme/IdealImage';
 Pokud chcete do systému získat přístup a prohlížet vizualizace a grafy dat ze svých zařízení HARDWARIO, napište prosím na **ask@hardwario.com**.
 :::
 
-:::tip Zařízení z HARDWARIO Cloudu
-S [automatickým připojením](/apps/thingsboard/cloud-connection#automatic-connection) z HARDWARIO Cloudu se vaše zařízení objeví ve vašem účtu ThingsBoard sama. Stačí přidat jeden konektor s ID své skupiny zařízení.
+:::tip Zařízení z HARDWARIO Cloud
+S [automatickým připojením](/apps/thingsboard/cloud-connection#automatic-connection) z HARDWARIO Cloud se vaše zařízení objeví ve vašem účtu ThingsBoard sama. Stačí přidat jeden konektor s ID své skupiny zařízení.
 :::
 
 ---

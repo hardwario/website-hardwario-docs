@@ -1,6 +1,7 @@
 ---
 slug: piketronic-rpp-r
 title: Radonová sonda Piketronic RPP-R
+description: "Připojení radonové sondy Piketronic RPP-R přes RS-485 Modbus RTU k zařízení CHESTER s aplikací CHESTER Serial a čtení radonu, teploty a vlhkosti."
 ---
 
 [Webové stránky](https://www.piketronic.cz/)

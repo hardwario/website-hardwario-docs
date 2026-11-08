@@ -1,6 +1,7 @@
 ---
 slug: bmeters_iwm-tx5
 title: BMeters IWM-TX5
+description: "Configure the BMeters IWM-TX5 radio module for GSD8-I water meters over NFC with the B METERS NFC Config app and map its wM-Bus address to CHESTER."
 ---
 import Image from '@theme/IdealImage';
 

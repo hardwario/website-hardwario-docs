@@ -1,6 +1,7 @@
 ---
 slug: milesight-vs373
 title: VS373
+description: "Radarový senzor detekce pádů Milesight VS373 (60 GHz) pro péči o seniory: klíče LoRaWAN třídy C, odkazy na dekodéry payloadu a technické parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight VS373 je **bezkontaktní senzor detekce pádů** pro **péči o senior
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/vs373.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/vs373.png')} alt="Senzor Milesight VS373" />
       </div>
     </div>
     <div class="col col--24"></div>

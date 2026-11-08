@@ -1,6 +1,7 @@
 ---
 slug: carlo-gavazzi-em5xx-series
 title: Carlo Gavazzi EM5XX Series
+description: "Connect a Carlo Gavazzi EM5xx energy analyzer (EM530) with a split-core CT to CHESTER over Modbus: wiring, CT ratio, configuration and measured values."
 ---
 
 import Image from '@theme/IdealImage';

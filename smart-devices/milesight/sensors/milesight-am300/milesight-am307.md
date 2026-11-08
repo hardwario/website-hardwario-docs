@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-am307
 title: AM307
+description: "Milesight AM307 indoor sensor with E-Ink display for seven parameters including CO₂, TVOC and PIR: LoRaWAN Class A keys, decoders and specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight AM307 is an **indoor ambience monitoring sensor** that measures **seve
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/am319-868m.png')} />
+        <Image img={require('./images/am319-868m.png')} alt="Milesight AM300 series sensor" />
       </div>
     </div>
     <div class="col col--24"></div>

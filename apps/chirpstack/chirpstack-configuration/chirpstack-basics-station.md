@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-basics-station
 title: "Basics Station and mTLS"
+description: "Set up ChirpStack v4 for LoRa Basics Station gateways over ws, wss or mTLS: a basic_station Gateway Bridge, a CA for gateway certificates and log errors."
 sidebar_label: Basics Station
 title_meta: "Basics Station and mTLS (ChirpStack)"
 ---

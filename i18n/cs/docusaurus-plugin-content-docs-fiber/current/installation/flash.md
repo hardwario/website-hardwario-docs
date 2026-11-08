@@ -1,5 +1,6 @@
 ---
 title: Nahrání Raspberry Pi OS
+description: "Nahrání Raspberry Pi OS Lite (64-bit) nástrojem Raspberry Pi Imager: na zařízení FIBER přes propojku BOOT a rpiboot, pro FIBER Lite na kartu microSD."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -163,26 +164,26 @@ používejte hodnoty pro FIBER Lite uvedené v krocích níže.
 
 1. V kroku **OS** vyberte **Raspberry Pi OS (other)**.
 
-   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-choose-os.png')} />
+   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-choose-os.png')} alt="Raspberry Pi Imager: výběr Raspberry Pi OS (other) v kroku OS" />
 
 1. Vyberte **Raspberry Pi OS Lite (64-bit)**.
 
-   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-choose-os-lite.png')} />
+   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-choose-os-lite.png')} alt="Raspberry Pi Imager: výběr Raspberry Pi OS Lite (64-bit)" />
 
 1. V kroku **Storage** vyberte kartu microSD pro zařízení FIBER Lite.
 
 1. V kroku **Customisation** (ikona ozubeného kola nebo Ctrl+Shift+X) zadejte název hostitele zařízení
    FIBER Lite (např. `fiber-lite`).
 
-   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-hostname.png')} />
+   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-hostname.png')} alt="Raspberry Pi Imager: zadání názvu hostitele zařízení FIBER Lite" />
 
 1. V sekci **Localisation** vyberte svou lokalitu, časové pásmo a rozložení klávesnice.
 
-   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-localisation.png')} />
+   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-localisation.png')} alt="Raspberry Pi Imager: lokalita, časové pásmo a rozložení klávesnice" />
 
 1. V sekci **User** zadejte uživatelské jméno a heslo.
 
-   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-user.png')} />
+   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-user.png')} alt="Raspberry Pi Imager: uživatelské jméno a heslo" />
 
    :::tip
 
@@ -200,23 +201,23 @@ používejte hodnoty pro FIBER Lite uvedené v krocích níže.
 1. Volitelně: v sekci **Wi-Fi** zadejte SSID a heslo své bezdrátové sítě jako záložní připojení
    k LAN.
 
-   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-wifi.png')} />
+   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-wifi.png')} alt="Raspberry Pi Imager: volitelná síť Wi-Fi jako záložní připojení k LAN" />
 
 1. V sekci **Remote access** zapněte **SSH** a vyberte preferovaný způsob
    autentizace.
 
-   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-ssh.png')} />
+   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-ssh.png')} alt="Raspberry Pi Imager: zapnutí SSH v sekci Remote access" />
 
 1. Volitelně: v sekci **Raspberry Pi Connect** můžete povolit vzdálený přístup přes Raspberry
    Pi Connect. V tomto návodu ho necháváme vypnutý.
 
-   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-connect.png')} />
+   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-connect.png')} alt="Raspberry Pi Imager: vypnutá služba Raspberry Pi Connect" />
 
 1. Zkontrolujte souhrn, spusťte zápis tlačítkem **WRITE** a potvrďte varovný dialog.
 
 1. Počkejte na dokončení zápisu.
 
-   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-writing.png')} />
+   <Image img={require('../../../../../fiber/installation/../fiber-lite/images/rpi-imager-writing.png')} alt="Raspberry Pi Imager zapisuje obraz na kartu microSD" />
 
 1. Po dokončení zápisu vložte kartu microSD do zařízení FIBER Lite a zařízení zapněte.
 

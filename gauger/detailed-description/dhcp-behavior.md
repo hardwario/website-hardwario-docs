@@ -1,6 +1,7 @@
 ---
 slug: dhcp-behavior
 title: DHCP Behavior
+description: "With DHCP enabled, GAUGER is a DHCP client on Ethernet and in Wi-Fi station mode and a DHCP server on its Wi-Fi access point."
 ---
 
 # DHCP Behavior

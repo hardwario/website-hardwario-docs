@@ -1,6 +1,7 @@
 ---
 slug: how-to-pwm
 title: "Jak na: PWM"
+description: "PWM na devíti pinech modulu TOWER Core Module: nastavení střídy (duty cycle) od 0 do 255 v SDK a příklad v jazyce C pro výstupy P6, P7 a P8."
 ---
 import Image from '@theme/IdealImage';
 

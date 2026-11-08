@@ -1,6 +1,7 @@
 ---
 slug: thingsboard-dashboard
 title: Základní dashboard
+description: "Videonávod k sestavení základního dashboardu v ThingsBoard s jednoduchým zobrazením proměnné a grafem dat ze zařízení v reálném čase."
 ---
 
 import Image from '@theme/IdealImage';

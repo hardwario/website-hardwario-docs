@@ -68,7 +68,7 @@ a cloudových služeb:
 
 <div style={{ maxWidth: '600px', margin: '0 auto' }}>
 
-<Image img={require('../../../../fiber/fiber-lite/images/data-flow.png')} />
+<Image img={require('../../../../fiber/fiber-lite/images/data-flow.png')} alt="Tok dat zařízení FIBER Lite: ChirpStack, Node-RED, InfluxDB a Grafana přímo na zařízení" />
 
 </div>
 

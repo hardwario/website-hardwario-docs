@@ -1,6 +1,7 @@
 ---
 slug: ble-tags
 title: Tagy BLE
+description: "Senzorové tagy Bluetooth ve slotech zařízení CHESTER v aplikaci HARDWARIO Manager: přiřazení tagu, jeho teplota, napětí baterie a signál a uvolnění slotů."
 ---
 
 # Přiřazení senzorových tagů BLE {#bind-ble-sensor-tags}

@@ -1,6 +1,7 @@
 ---
 slug: application-customization
 title: Application Customization
+description: "Customize a CHESTER catalog application in your own Git fork of the CHESTER SDK and keep it current by rebasing onto the upstream main branch."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: atelos
 title: ATELOS account
+description: "Sign in to the ATELOS production cloud in HARDWARIO Manager to load your devices with their secret keys and claim a STICKER by NFC, QR code or serial."
 ---
 
 # ATELOS account

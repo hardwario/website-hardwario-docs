@@ -1,6 +1,7 @@
 ---
 slug: wm-bus_sensors
 title: Senzory wM-Bus
+description: "CHESTER wM-Bus funguje jako průchozí brána pro všechny měřiče wM-Bus tříd T1 a C1; přehled měřičů BMeters a Zenner, které jsme otestovali a zdokumentovali."
 ---
 
 import Image from '@theme/IdealImage';

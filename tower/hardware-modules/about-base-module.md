@@ -1,6 +1,7 @@
 ---
 slug: about-base-module
 title: About Base Module
+description: "TOWER Base Module, a stand for HARDWARIO TOWER units with a module socket, a prototyping area for soldering, rubber feet and optional DIN rail clips."
 ---
 import Image from '@theme/IdealImage';
 

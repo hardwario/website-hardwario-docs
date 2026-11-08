@@ -1,6 +1,7 @@
 ---
 slug: alarm-rules
 title: Pravidla alarmů
+description: "Systém alarmů zařízení STICKER: prahová, stavová a četnostní pravidla pro slot a kanál, pohyb a klid, parametr dwell, systémové alarmy, uplinky na fPort 3."
 title_meta: "Pravidla alarmů (STICKER)"
 ---
 import Image from '@theme/IdealImage';
@@ -61,7 +62,7 @@ Pravidla se ukládají do 16 pevných indexů (`0`-`15`). Index je stálý ident
 
 ### Kanály {#channels}
 
-Kanál se zadává názvem nebo číslem; seznam vypíše `sensor types`. Kanály označené „—“ nemohou být cílem pravidla.
+Kanál se zadává názvem nebo číslem; seznam vypíše `sensor types`. Kanály označené „–“ nemohou být cílem pravidla.
 
 **Základní deska (`mb`)**
 
@@ -86,9 +87,9 @@ Kanál se zadává názvem nebo číslem; seznam vypíše `sensor types`. Kanál
 | 16 | `pir-count` | četnostní | události | `cap-gpio-mode pir` |
 | 17 | `accel-motion` | stavový (okamžikový) | 0/1 | `cap-accelerometer` |
 | 18 | `accel-count` | četnostní | události | `cap-accelerometer` |
-| 19 | `accel-orientation` | — | 1–6 | `cap-accelerometer` |
-| 20 | `battery-voltage` | — (jen alarm slabé baterie) | V | vždy |
-| 21 | `altitude` | — | m | `cap-barometer` |
+| 19 | `accel-orientation` | – | 1–6 | `cap-accelerometer` |
+| 20 | `battery-voltage` | – (jen alarm slabé baterie) | V | vždy |
+| 21 | `altitude` | – | m | `cap-barometer` |
 
 **1-Wire `dallas` (DS18B20, typ `2`)**
 

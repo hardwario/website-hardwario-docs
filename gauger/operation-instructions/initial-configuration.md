@@ -1,6 +1,7 @@
 ---
 slug: initial-configuration
 title: Initial Configuration
+description: "Connect to a new GAUGER over Ethernet at 192.168.255.1 or its Wi-Fi access point at 192.168.254.1, with every configuration option, JSON key and default."
 ---
 
 # Initial Configuration

@@ -1,5 +1,6 @@
 ---
 title: Connectivity
+description: "FIBER communication interfaces: Ethernet, Wi-Fi, Bluetooth Low Energy, optional LTE Cat 4 and an 868/915 MHz ISM radio for STICKER wireless sensors."
 ---
 
 # Connectivity

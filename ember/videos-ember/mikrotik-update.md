@@ -1,6 +1,7 @@
 ---
 slug: mikrotik-update
 title: Updating EMBER Gateway
+description: "Video tutorial on updating the RouterOS packages and RouterBOARD firmware of the EMBER MikroTik gateway through the WebFig interface."
 ---
 
 import Image from '@theme/IdealImage';

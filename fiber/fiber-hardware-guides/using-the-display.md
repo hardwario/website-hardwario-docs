@@ -1,5 +1,6 @@
 ---
 title: Using the Display
+description: "The backlit LCD of FIBER runs over SPI6 under the FIBER application, not a Linux framebuffer, so the guide to custom screen content is still pending."
 ---
 
 # Using the Display

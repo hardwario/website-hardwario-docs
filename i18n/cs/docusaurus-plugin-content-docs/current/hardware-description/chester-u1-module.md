@@ -1,6 +1,7 @@
 ---
 slug: chester-u1-module
 title: Modul CHESTER-U1
+description: "Modul CHESTER-U1 je deska CHESTER-M zmenšená na 38x38 mm pro vlastní dvouvrstvou nosnou desku: vlastnosti, knihovna KiCad, schéma a deska CHESTER-C4."
 ---
 import Image from '@theme/IdealImage';
 

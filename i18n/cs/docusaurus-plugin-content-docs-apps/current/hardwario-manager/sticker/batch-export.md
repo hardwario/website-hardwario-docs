@@ -1,6 +1,7 @@
 ---
 slug: batch-export
 title: Načtení více zařízení
+description: "Hromadné načtení konfigurace mnoha zařízení STICKER v jedné relaci aplikace HARDWARIO Manager a společný export do JSON nebo CSV pro inventuru či zálohu."
 ---
 
 # Načtení více zařízení STICKER (hromadný export) {#scan-multiple-stickers-batch-export}

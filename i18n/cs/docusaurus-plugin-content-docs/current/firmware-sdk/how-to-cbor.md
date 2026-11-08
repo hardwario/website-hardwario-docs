@@ -1,6 +1,7 @@
 ---
 slug: how-to-cbor
 title: "Jak na: CBOR"
+description: "Kódování dat ze zařízení CHESTER pro HARDWARIO Cloud ve formátu CBOR: popis zprávy v souboru YAML a vygenerované klíče z app_codec.h v kódu v C."
 ---
 import Image from '@theme/IdealImage';
 

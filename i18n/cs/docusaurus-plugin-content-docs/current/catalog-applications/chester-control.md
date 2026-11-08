@@ -1,6 +1,7 @@
 ---
 slug: chester-control
 title: CHESTER Control
+description: "Katalogová aplikace CHESTER Control: vstup trigger, čítač impulzů, vstupy 0–28 V a 0–24 mA a čtyři výstupy 6–28 V ovládané na dálku přes downlink."
 ---
 import Image from '@theme/IdealImage';
 

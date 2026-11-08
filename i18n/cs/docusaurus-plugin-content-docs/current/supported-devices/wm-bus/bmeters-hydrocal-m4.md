@@ -1,6 +1,7 @@
 ---
 slug: bmeters-hydrocal-m4
 title: BMeters Hydrocal M4
+description: "Konfigurace měřiče tepla BMeters Hydrocal M4 přes NFC v aplikaci B METERS NFC Config pro Android a přiřazení jeho adresy wM-Bus k zařízení CHESTER."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: about-mini-battery-module
 title: About Mini Battery Module
+description: "TOWER Mini Battery Module powers a unit from two AAA cells via a TPS61099 boost converter at 3.1 V, with battery disconnect and voltage measurement on A0."
 ---
 import Image from '@theme/IdealImage';
 

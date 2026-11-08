@@ -1,6 +1,7 @@
 ---
 slug: configuration-reset
 title: Configuration Reset
+description: "Reset GAUGER to its default configuration with the Factory Reset button in the Web UI or the USER and RESET buttons; counters are reset separately."
 ---
 
 # Configuration Reset

@@ -1,6 +1,7 @@
 ---
 slug: task-scheduler
 title: Task Scheduler
+description: "How the TOWER SDK scheduler runs short non-blocking tasks without an RTOS: register and unregister tasks, plan them to run again, with C examples."
 ---
 import Image from '@theme/IdealImage';
 

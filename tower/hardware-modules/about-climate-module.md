@@ -1,6 +1,7 @@
 ---
 slug: about-climate-module
 title: About Climate Module
+description: "TOWER Climate Module with four digital I²C sensors for temperature, humidity, light intensity and atmospheric pressure, and SDK links for each sensor."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: winbox4-installation
 title: Instalace Winbox 4
+description: "Stažení programu Winbox 4 z webu MikroTik pro 64bitové Windows nebo Linux, rozbalení archivu zip a první spuštění aplikace WinBox."
 ---
 
 # Instalace Winbox 4 {#winbox-4-installation}

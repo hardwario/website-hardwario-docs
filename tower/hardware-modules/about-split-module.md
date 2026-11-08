@@ -1,6 +1,7 @@
 ---
 slug: about-split-module
 title: About Split Module
+description: "TOWER Split Module for two top modules in one device or two compact stacks, with two tag connectors, and how it differs from the Compact Split Module."
 ---
 import Image from '@theme/IdealImage';
 

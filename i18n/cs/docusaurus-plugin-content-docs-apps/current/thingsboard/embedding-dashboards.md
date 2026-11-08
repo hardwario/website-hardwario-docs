@@ -1,6 +1,7 @@
 ---
 slug: embedding-dashboards
 title: Vkládání dashboardů
+description: "Vložení veřejného dashboardu ThingsBoard nebo jednoho widgetu do webové stránky či do Docusaurus (MDX) prvkem iframe, s doporučenou výškou a syntaxí JSX."
 ---
 import Image from '@theme/IdealImage';
 

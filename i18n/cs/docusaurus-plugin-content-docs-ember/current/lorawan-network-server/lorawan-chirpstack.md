@@ -1,6 +1,7 @@
 ---
 slug: lorawan-chirpstack
 title: "ChirpStack v4: Semtech UDP"
+description: "Připojení brány HARDWARIO EMBER k serveru ChirpStack v4 přes Semtech UDP: přidání serveru s portem 1700 v RouterOS a registrace Gateway ID v ChirpStack."
 sidebar_label: Semtech UDP
 title_meta: "ChirpStack v4: Semtech UDP (EMBER)"
 ---

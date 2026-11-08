@@ -1,6 +1,7 @@
 ---
 slug: chester-x2
 title: CHESTER-X2 (sériová komunikace)
+description: "Rozšiřující modul CHESTER-X2 pro sériovou komunikaci s rozhraním TTL/UART a RS-485, například pro Modbus, se zapojením svorkovnice, schématem a výkresem."
 ---
 import Image from '@theme/IdealImage';
 

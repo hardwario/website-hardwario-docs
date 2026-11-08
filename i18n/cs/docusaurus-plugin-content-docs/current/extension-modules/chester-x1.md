@@ -1,6 +1,7 @@
 ---
 slug: chester-x1
 title: CHESTER-X1 (8kanálový 1-Wire)
+description: "Rozšiřující modul CHESTER-X1 s 8 nezávislými kanály 1-Wire (DS2482S-800+) pro senzory jako DS18B20, včetně parazitního napájení ze zvyšujícího měniče 5 V."
 ---
 import Image from '@theme/IdealImage';
 

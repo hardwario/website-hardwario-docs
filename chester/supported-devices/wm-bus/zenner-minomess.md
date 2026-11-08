@@ -1,6 +1,7 @@
 ---
 slug: zenner-minomess
 title: Zenner Minomess
+description: "Read the Zenner Minomess water meter with CHESTER wM-Bus: find the wM-Bus address on its display, map it to CHESTER and set up decryption keys."
 ---
 import Image from '@theme/IdealImage';
 

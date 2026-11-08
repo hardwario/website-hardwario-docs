@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-em500
 title: EM500
+description: "Milesight EM500-CO2 outdoor sensor for NDIR CO₂, temperature, humidity and pressure: LoRaWAN 1.0.3 join keys, payload decoders and specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight EM500-CO2 is a **4-in-1 outdoor environmental monitoring sensor** desi
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/em500-co2.png')} />
+        <Image img={require('./images/em500-co2.png')} alt="Milesight Sensor EM500-CO2" />
       </div>
     </div>
     <div class="col col--24"></div>

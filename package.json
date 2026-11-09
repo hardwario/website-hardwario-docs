@@ -34,19 +34,19 @@
     "docusaurus-plugin-image-zoom": "^3.0.1",
     "mdast-util-from-markdown": "^2.1.0",
     "mdast-util-gfm": "^3.1.0",
-    "mermaid": "^12.2.0",
+    "mermaid": "^12.3.0",
     "micromark-extension-gfm": "^3.0.0",
     "prism-react-renderer": "^2.4.1",
     "qrcode": "^1.5.4",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "react-player": "^3.4.0"
   },
   "devDependencies": {
     "@hubpav/hwio-web-worker": "0.10.7",
     "@types/mdast": "^4.0.4",
     "github-slugger": "^2.0.0",
-    "wrangler": "^4.146.0"
+    "wrangler": "^4.159.0"
   },
   "browserslist": {
     "production": [

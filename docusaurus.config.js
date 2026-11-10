@@ -313,6 +313,9 @@ const config = {
         disableInDev: false,
       },
     ],
+    // WebP sources for <Image img={require('x.webp')} />: the plugin above resizes PNG and
+    // JPEG only. See the file, and scripts/optimize-images.mjs for which format to use.
+    require.resolve('./src/plugins/webp-image-size'),
     require.resolve('docusaurus-plugin-image-zoom'),
   ],
 

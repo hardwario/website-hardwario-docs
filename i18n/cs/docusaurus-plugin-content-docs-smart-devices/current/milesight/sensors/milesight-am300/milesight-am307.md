@@ -14,7 +14,7 @@ Milesight AM307 je **senzor pro monitorování vnitřního prostředí**, který
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../../smart-devices/milesight/sensors/milesight-am300/images/am319-868m.png')} alt="Senzor Milesight řady AM300" />
+        <Image img={require('../../../../../../../smart-devices/milesight/sensors/milesight-am300/images/am319-868m.webp')} alt="Senzor Milesight řady AM300" />
       </div>
     </div>
     <div class="col col--24"></div>

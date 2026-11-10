@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/soil-sensor.png')} alt="Sonda senzoru půdní vlhkosti s vytištěnou hloubkovou stupnicí a dlouhým kabelem zakončeným třemi vodiči s dutinkami" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/soil-sensor.webp')} alt="Sonda senzoru půdní vlhkosti s vytištěnou hloubkovou stupnicí a dlouhým kabelem zakončeným třemi vodiči s dutinkami" /></div>
     </div>
     <div class="col col--6">
 
@@ -36,7 +36,7 @@ K dispozici je také [**Arduino knihovna pro Soil Sensor**](https://github.com/h
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/soil-sensor-connection.png')} alt="Návod na zapojení: černý vodič GND, červený VDD a žlutý datový vodič senzoru půdní vlhkosti na Sensor Module R1.1 a R1.0" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/soil-sensor-connection.jpg')} alt="Návod na zapojení: černý vodič GND, červený VDD a žlutý datový vodič senzoru půdní vlhkosti na Sensor Module R1.1 a R1.0" /></div>
     </div>
     <div class="col col--6">
       <p>

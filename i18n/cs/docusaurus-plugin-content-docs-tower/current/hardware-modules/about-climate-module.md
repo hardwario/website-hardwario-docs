@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/climate-module.png')} alt="Climate Module, černá deska s ventilačními otvory nad integrovanými senzory prostředí" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/climate-module.webp')} alt="Climate Module, černá deska s ventilačními otvory nad integrovanými senzory prostředí" /></div>
     </div>
     <div class="col col--6">
 

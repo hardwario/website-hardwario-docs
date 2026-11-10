@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/bridge-module.png')} alt="Bridge Module s konektorem micro-USB a převodníkem USB-UART pro připojení modulů k USB hostu" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/bridge-module.webp')} alt="Bridge Module s konektorem micro-USB a převodníkem USB-UART pro připojení modulů k USB hostu" /></div>
     </div>
     <div class="col col--6">
 

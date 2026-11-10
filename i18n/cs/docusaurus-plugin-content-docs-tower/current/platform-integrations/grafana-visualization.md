@@ -16,7 +16,7 @@ Můžete použít náš [**předinstalovaný obraz**](../server-raspberry-pi/ins
 
 [**Grafana**](https://grafana.com) je otevřená platforma pro analýzu a monitoring dat. Vytvoříte v ní vzhledné dashboardy, ze kterých rychle vyčtete, co vaše senzory naměřily.
 
-<Image img={require('../../../../../tower/platform-integrations/images/grafana-for-visualization-grafana.png')} alt="Dashboard climate-station v Grafaně s ukazateli a grafy teploty, vlhkosti, osvětlenosti a tlaku" />
+<Image img={require('../../../../../tower/platform-integrations/images/grafana-for-visualization-grafana.webp')} alt="Dashboard climate-station v Grafaně s ukazateli a grafy teploty, vlhkosti, osvětlenosti a tlaku" />
 
 ## Instalace Grafany {#install-grafana}
 
@@ -233,4 +233,4 @@ Zvolte **Add Data Source** a vyplňte údaje:
 
 #### Příklad výstupu projektů [**Wireless Climate Monitor**](https://www.hackster.io/jakub-smejkal/radio-climate-monitor-96de57) a [**Wireless CO2 Monitor**](https://www.hackster.io/jakub-smejkal/radio-co2-monitor-311d2c) {#example-output-for-wireless-climate-monitor-and-wireless-co2-monitor-projects}
 
-<Image img={require('../../../../../tower/platform-integrations/images/grafana-dashboard.png')} alt="Naimportovaný dashboard se statistikami climate a CO2 monitoru s grafy teploty a vlhkosti" />
+<Image img={require('../../../../../tower/platform-integrations/images/grafana-dashboard.webp')} alt="Naimportovaný dashboard se statistikami climate a CO2 monitoru s grafy teploty a vlhkosti" />

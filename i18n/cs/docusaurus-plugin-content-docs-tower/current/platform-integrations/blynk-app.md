@@ -365,7 +365,7 @@ Po naskenování QR kódu by aplikace měla zobrazit widgety rozmístěné takto
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/platform-integrations/images/blynk-example-widget-showcase.png')} alt="Dashboard wireless-led-strip v Blynk s posuvníky, tlačítky V3-V6 a výběrem barvy LED pásku" /></div>
+      <div><Image img={require('../../../../../tower/platform-integrations/images/blynk-example-widget-showcase.jpg')} alt="Dashboard wireless-led-strip v Blynk s posuvníky, tlačítky V3-V6 a výběrem barvy LED pásku" /></div>
     </div>
     <div class="col col--6">
     </div>

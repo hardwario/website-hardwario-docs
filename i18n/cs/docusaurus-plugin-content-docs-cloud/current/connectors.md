@@ -82,7 +82,7 @@ Na stránce s detailem konektoru klikněte na **EDIT**. Editor má tři záložk
 
 Otevřete záložku **PLAYGROUND**. Funkci napište v prostředním panelu; levý panel zobrazuje skutečnou **zprávu ze zařízení (Input)** a pravý panel **požadavek, který by se odeslal (Output)**, průběžně aktualizovaný během psaní. V polích **Select device** a **Select message type** vyberete pro náhled skutečná data. Během úprav se žádný požadavek HTTP neodesílá.
 
-![Záložka PLAYGROUND: vstupní zpráva vlevo, transformační funkce v prostředku a výsledný výstupní požadavek vpravo](../../../../cloud/images/connector-test-playground.png)
+![Záložka PLAYGROUND: vstupní zpráva vlevo, transformační funkce v prostředku a výsledný výstupní požadavek vpravo](../../../../cloud/images/connector-test-playground.webp)
 
 ```js
 function main(job) {
@@ -175,7 +175,7 @@ Nejrychleji ověříte, že se konektor opravdu spouští, a uvidíte přesně, 
    }
    ```
 
-   ![PLAYGROUND konektoru s transformační funkcí nasměrovanou na URL webhook.site a výsledným výstupním požadavkem](../../../../cloud/images/connector-playground.png)
+   ![PLAYGROUND konektoru s transformační funkcí nasměrovanou na URL webhook.site a výsledným výstupním požadavkem](../../../../cloud/images/connector-playground.webp)
 
    Zkontrolujte, že **Tags** a **Triggers** konektoru odpovídají zařízení (např. spouštěč `data`).
 
@@ -183,7 +183,7 @@ Nejrychleji ověříte, že se konektor opravdu spouští, a uvidíte přesně, 
 
 4. **Zkontrolujte výsledek.** Vraťte se na webhook.site: požadavek se objeví ve schránce vlevo. Kliknutím na něj zobrazíte **metodu**, **hlavičky** a **tělo JSON**, které cloud odeslal. Když požadavek dorazí, máte potvrzeno, že konektor funguje od začátku do konce.
 
-   ![webhook.site s přijatým požadavkem POST, jeho hlavičkami a tělem JSON](../../../../cloud/images/connector-webhook-received.png)
+   ![webhook.site s přijatým požadavkem POST, jeho hlavičkami a tělem JSON](../../../../cloud/images/connector-webhook-received.webp)
 
 :::tip
 Upravte transformační funkci, znovu vyvolejte zprávu a v reálném čase uvidíte, jak se změny projeví. Až budete spokojení, nahraďte URL webhook.site svým skutečným endpointem.

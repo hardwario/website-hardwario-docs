@@ -11,7 +11,7 @@ This article describes the **CHESTER-C1** carrier board.
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/chester-c1-top.png')} alt="CHESTER-C1 carrier board with two power relays, C-cell battery holder, and green terminal blocks along the bottom" /></div>
+      <div><Image img={require('./images/chester-c1-top.webp')} alt="CHESTER-C1 carrier board with two power relays, C-cell battery holder, and green terminal blocks along the bottom" /></div>
     </div>
     <div class="col col--10">
     </div>

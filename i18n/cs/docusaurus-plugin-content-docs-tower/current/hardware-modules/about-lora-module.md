@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/lora-module.png')} alt="LoRa Module se stíněným rádiem LoRa a anténním konektorem SMA" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/lora-module.webp')} alt="LoRa Module se stíněným rádiem LoRa a anténním konektorem SMA" /></div>
     </div>
     <div class="col col--6">
 

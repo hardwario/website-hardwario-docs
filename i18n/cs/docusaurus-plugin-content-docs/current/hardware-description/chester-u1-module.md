@@ -22,7 +22,7 @@ Místo abyste do zařízení **CHESTER-M** vkládali rozšiřující moduly, nav
 - Má **držák nano SIM karty** přímo na desce
 - Stačí připojit **baterii** a **anténu u.FL**
 
-![Rozložení CHESTER-U1](../../../../../chester/hardware-description/images/chester-u1-description.png)
+![Rozložení CHESTER-U1](../../../../../chester/hardware-description/images/chester-u1-description.webp)
 
 ## Knihovna E-CAD {#e-cad-library}
 
@@ -64,10 +64,10 @@ Jednou z nich je **CHESTER-C4**: má slot pro dva [**rozšiřující moduly**](.
 
 ### Spodní strana {#bottom-side}
 
-![Spodní strana CHESTER-C4](../../../../../chester/hardware-description/images/chester-c4-bottom.png)
+![Spodní strana CHESTER-C4](../../../../../chester/hardware-description/images/chester-c4-bottom.webp)
 
 ### Horní strana {#top-side}
 
 Varianta s článkem „D“.
 
-![Horní strana CHESTER-C4](../../../../../chester/hardware-description/images/chester-c4-d-top-white.png)
+![Horní strana CHESTER-C4](../../../../../chester/hardware-description/images/chester-c4-d-top-white.webp)

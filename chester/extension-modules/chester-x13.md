@@ -13,7 +13,7 @@ The **CHESTER-X13** is a **CAN Bus** extension module with **CAN FD** support fo
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('./images/chester-x13-top.png')} alt="3D render of the red CHESTER-X13 R1.2 board showing the MCP2518FD CAN controller, the 20 MHz crystal, the TCAN3413 transceiver, and the step-down inductor"/></div>
+<div><Image img={require('./images/chester-x13-top.webp')} alt="3D render of the red CHESTER-X13 R1.2 board showing the MCP2518FD CAN controller, the 20 MHz crystal, the TCAN3413 transceiver, and the step-down inductor"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -145,13 +145,13 @@ The CHESTER-X13 module can be used with various CHESTER mainboard configurations
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x13-cgls.png)
+![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x13-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x13-c4.png)
+![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x13-c4.webp)
 
 </div>
 </div>

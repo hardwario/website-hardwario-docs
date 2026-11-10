@@ -13,7 +13,7 @@ The **CHESTER-X7** is an **analog input** extension module for the CHESTER platf
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('./images/chester-x7-top.png')} alt="Top view of the CHESTER-X7 board showing the OPA4387 input amplifier and the boost-converter and LDO circuitry"/></div>
+<div><Image img={require('./images/chester-x7-top.webp')} alt="Top view of the CHESTER-X7 board showing the OPA4387 input amplifier and the boost-converter and LDO circuitry"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -127,13 +127,13 @@ The CHESTER-X7 module can be used with various CHESTER mainboard configurations.
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x7-cgls.png)
+![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x7-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x7-c4.png)
+![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x7-c4.webp)
 
 </div>
 </div>

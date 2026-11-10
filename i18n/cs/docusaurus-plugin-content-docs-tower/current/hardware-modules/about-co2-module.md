@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/co2-module.png')} alt="CO2 Module s NDIR senzorem oxidu uhličitého SenseAir a záložním superkondenzátorem" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/co2-module.webp')} alt="CO2 Module s NDIR senzorem oxidu uhličitého SenseAir a záložním superkondenzátorem" /></div>
     </div>
     <div class="col col--6">
 

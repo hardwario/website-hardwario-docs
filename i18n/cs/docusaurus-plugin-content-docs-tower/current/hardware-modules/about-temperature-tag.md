@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/temperature-tag.png')} alt="Temperature Tag, deska velikosti mince s teplotním senzorem TMP112" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/temperature-tag.webp')} alt="Temperature Tag, deska velikosti mince s teplotním senzorem TMP112" /></div>
     </div>
     <div class="col col--6">
 

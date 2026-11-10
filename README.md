@@ -52,6 +52,10 @@ website-admin repo for the multi-instance details.
   (`onBrokenLinks: 'throw'`).
 - Images live in `static/`, referenced as `/img/…`; the ideal-image and
   image-zoom plugins handle optimization and click-to-zoom.
+- Image formats: save a photograph as JPEG and a transparent cut-out as WebP,
+  not as PNG (a PNG photo ships megabytes). `node scripts/optimize-images.mjs`
+  lists the images over the size thresholds; `--write` converts them and
+  updates the references in both languages.
 - Match the existing technical, concise style and consistent product terminology.
 
 ### Adding a new product doc set

@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/humidity-tag.png')} alt="Humidity Tag, deska velikosti mince se senzorem vlhkosti SHT20" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/humidity-tag.webp')} alt="Humidity Tag, deska velikosti mince se senzorem vlhkosti SHT20" /></div>
     </div>
     <div class="col col--6">
 

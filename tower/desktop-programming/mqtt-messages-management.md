@@ -25,7 +25,7 @@ If you don't know much about MQTT protocol and MQTT messages, you can visit an [
 
 By default, the messages that will show up will be just from **HARDWARIO TOWER devices**.
 
-<Image img={require('./images/messages-tab.png')} alt="Messages tab listing incoming thermometer MQTT messages, with Publish and Subscribed topics sections below" />
+<Image img={require('./images/messages-tab.webp')} alt="Messages tab listing incoming thermometer MQTT messages, with Publish and Subscribed topics sections below" />
 
 ### Messages
 The main part of this tab is at the top where all the messages are shown.

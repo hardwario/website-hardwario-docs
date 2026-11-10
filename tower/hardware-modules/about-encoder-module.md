@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/encoder-module.png')} alt="Encoder Module with a rotary encoder knob and three TAG I2C0 sockets" /></div>
+      <div><Image img={require('./images/encoder-module.webp')} alt="Encoder Module with a rotary encoder knob and three TAG I2C0 sockets" /></div>
     </div>
     <div class="col col--6">
 

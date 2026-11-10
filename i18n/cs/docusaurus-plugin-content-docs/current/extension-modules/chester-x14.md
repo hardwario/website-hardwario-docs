@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('../../../../../chester/extension-modules/images/chester-x14-top.png')} alt="3D model červené desky CHESTER-X14 R1.0 s kontrolérem W5500 v pouzdře QFP, magnetikou Ethernetu, krystalem 25 MHz a tlumivkou snižujícího měniče"/></div>
+<div><Image img={require('../../../../../chester/extension-modules/images/chester-x14-top.webp')} alt="3D model červené desky CHESTER-X14 R1.0 s kontrolérem W5500 v pouzdře QFP, magnetikou Ethernetu, krystalem 25 MHz a tlumivkou snižujícího měniče"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -156,13 +156,13 @@ Modul CHESTER-X14 lze použít s různými konfiguracemi základních desek CHES
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![Základní deska CHESTER-M CGLS s baterií velikosti D, superkondenzátory a svorkovnicemi A/B](../../../../../chester/extension-modules/images/chester-x14-cgls.png)
+![Základní deska CHESTER-M CGLS s baterií velikosti D, superkondenzátory a svorkovnicemi A/B](../../../../../chester/extension-modules/images/chester-x14-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![Nosná deska CHESTER-C4, modrá deska s dvojitým držákem baterií velikosti D a svorkovnicemi](../../../../../chester/extension-modules/images/chester-x14-c4.png)
+![Nosná deska CHESTER-C4, modrá deska s dvojitým držákem baterií velikosti D a svorkovnicemi](../../../../../chester/extension-modules/images/chester-x14-c4.webp)
 
 </div>
 </div>

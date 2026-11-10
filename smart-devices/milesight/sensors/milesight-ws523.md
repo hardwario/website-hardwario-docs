@@ -14,7 +14,7 @@ Milesight WS523 is a **smart portable socket** with **LoRaWAN connectivity** des
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/ws523.png')} alt="Milesight Sensor WS523" />
+        <Image img={require('./images/ws523.webp')} alt="Milesight Sensor WS523" />
       </div>
     </div>
     <div class="col col--24"></div>

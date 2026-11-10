@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/temperature-tag.png')} alt="Temperature Tag, a coin-sized board with the TMP112 temperature sensor" /></div>
+      <div><Image img={require('./images/temperature-tag.webp')} alt="Temperature Tag, a coin-sized board with the TMP112 temperature sensor" /></div>
     </div>
     <div class="col col--6">
 

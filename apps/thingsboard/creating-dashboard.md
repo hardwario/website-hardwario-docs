@@ -38,12 +38,12 @@ In this guide, you will learn how to create a dashboard, add a simple variable d
 
    2. A **Widgets Bundles** menu will appear.  
 
-![Widgets Bundles](images/thingsboard-variable-1.png)
+![Widgets Bundles](images/thingsboard-variable-1.webp)
 
    3. For a simple variable display, choose the **Cards** widget bundle.  
    4. From the available options, select **Label & Value Card**.  
 
-![Widgets Cards](images/thingsboard-variable-2.png)
+![Widgets Cards](images/thingsboard-variable-2.webp)
 
    5. A configuration window will open:  
       - Choose the **device** and the **variable** you want to display.  
@@ -75,7 +75,7 @@ In this guide, you will learn how to create a dashboard, add a simple variable d
 
    2. A **Widgets Bundles** menu will appear.  
 
-![Widgets Bundles](images/thingsboard-chart-1.png)
+![Widgets Bundles](images/thingsboard-chart-1.webp)
 
    3. For a simple line chart, choose the **Charts** widget bundle.  
    4. From the available options, select **Line Chart**.  

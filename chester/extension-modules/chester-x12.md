@@ -13,7 +13,7 @@ The **CHESTER-X12** is an **RS-232** serial-communication extension module for t
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('./images/chester-x12-top.png')} alt="Top view of the red CHESTER-X12 board showing the SC16IS740IPW I²C-to-UART bridge, the MAX3226 RS-232 transceiver, the step-down inductor and crystal, and the ADR address solder bridge"/></div>
+<div><Image img={require('./images/chester-x12-top.webp')} alt="Top view of the red CHESTER-X12 board showing the SC16IS740IPW I²C-to-UART bridge, the MAX3226 RS-232 transceiver, the step-down inductor and crystal, and the ADR address solder bridge"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -103,7 +103,7 @@ The RS-232 transceiver uses negative voltage levels. CHESTER must have modified 
 
 <div style={{ maxWidth: '500px' }}>
 
-![TVS Diodes Location](images/chester-x12-tvs-modification.png)
+![TVS Diodes Location](images/chester-x12-tvs-modification.webp)
 
 </div>
 :::
@@ -147,13 +147,13 @@ The CHESTER-X12 module can be used with various CHESTER mainboard configurations
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x12-cgls.png)
+![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x12-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x12-c4.png)
+![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x12-c4.webp)
 
 </div>
 </div>

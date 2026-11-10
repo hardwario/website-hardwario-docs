@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/chester-k1-top.png')} alt="CHESTER-K1 extension module, a red PCB with operational amplifiers and castellated edges for both slots" /></div>
+      <div><Image img={require('./images/chester-k1-top.webp')} alt="CHESTER-K1 extension module, a red PCB with operational amplifiers and castellated edges for both slots" /></div>
     </div>
     <div class="col col--10">
     </div>
@@ -20,7 +20,7 @@ import Image from '@theme/IdealImage';
 
 ## CHESTER Pin Configuration Diagram
 
-<Image img={require('./images/tb-chester-k1.png')} alt="CHESTER-K1 terminal blocks: slot A carries GND, INP1, INM1, VOUT1, GND, INP2, INM2, VOUT2; slot B the same for channels 3 and 4" />
+<Image img={require('./images/tb-chester-k1.webp')} alt="CHESTER-K1 terminal blocks: slot A carries GND, INP1, INM1, VOUT1, GND, INP2, INM2, VOUT2; slot B the same for channels 3 and 4" />
 
 <br />
 

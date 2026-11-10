@@ -13,7 +13,7 @@ The **CHESTER-X6** is a **HARDWARIO S-Wire bus** extension module for the CHESTE
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('./images/chester-x6-top.png')} alt="Top view of the CHESTER-X6 board showing the SC16IS740 UART bridge, the TCA9534A expander, and the 5 V boost converter"/></div>
+<div><Image img={require('./images/chester-x6-top.webp')} alt="Top view of the CHESTER-X6 board showing the SC16IS740 UART bridge, the TCA9534A expander, and the 5 V boost converter"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -123,13 +123,13 @@ The CHESTER-X6 module can be used with various CHESTER mainboard configurations.
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x6-cgls.png)
+![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x6-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x6-c4.png)
+![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x6-c4.webp)
 
 </div>
 </div>

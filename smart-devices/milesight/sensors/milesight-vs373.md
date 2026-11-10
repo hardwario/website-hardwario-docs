@@ -14,7 +14,7 @@ Milesight VS373 is a **non-contact fall detection sensor** designed for **elderl
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/vs373.png')} alt="Milesight Sensor VS373" />
+        <Image img={require('./images/vs373.webp')} alt="Milesight Sensor VS373" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -43,7 +43,7 @@ Stav zařízení signalizuje **vícebarevná LED (R/G/Y)** (podrobnosti viz [**S
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../sticker/images/block-diagram-sticker.png')} alt="Blokové schéma zařízení STICKER: SoC LoRa STM32WLE5CC se senzory, pamětí NFC, napájením ze 2× AA a stavovou LED" />
+        <Image img={require('../../../../sticker/images/block-diagram-sticker.webp')} alt="Blokové schéma zařízení STICKER: SoC LoRa STM32WLE5CC se senzory, pamětí NFC, napájením ze 2× AA a stavovou LED" />
       </div>
     </div>
     <div class="col col--24">
@@ -56,7 +56,7 @@ Stav zařízení signalizuje **vícebarevná LED (R/G/Y)** (podrobnosti viz [**S
 
 ### Architektura konfigurace přes NFC {#nfc-configuration-architecture}
 
-![Architektura konfigurace zařízení STICKER přes NFC](../../../../sticker/images/sticker-nfc.drawio.png)
+![Architektura konfigurace zařízení STICKER přes NFC](../../../../sticker/images/sticker-nfc.drawio.webp)
 
 ---
 

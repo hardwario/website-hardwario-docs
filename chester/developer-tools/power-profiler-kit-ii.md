@@ -75,7 +75,7 @@ After clicking at **Open** button, you should see a window similar to this one:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/nrf-connect-plain.png')} alt="Power Profiler app main window before a device is connected, with an empty measurement chart"/></div>
+      <div><Image img={require('./images/nrf-connect-plain.webp')} alt="Power Profiler app main window before a device is connected, with an empty measurement chart"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -156,7 +156,7 @@ When you click **Start** to capture data, your **PPK2** will start pulsing in co
 <div class="container">
     <div class="row">
     <div class="col col--12">
-      <div><Image img={require('./images/nrf-connect-running.png')} alt="Power Profiler capturing data, showing current-consumption spikes and average/max values of the window"/></div>
+      <div><Image img={require('./images/nrf-connect-running.webp')} alt="Power Profiler capturing data, showing current-consumption spikes and average/max values of the window"/></div>
     </div>
     <div class="col col--2">
     </div>

@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../chester/catalog-applications/images/chester-wm-bus.png')} width={376} height={376} alt="Brána CHESTER wM-Bus v bílé krabičce na stěnu se dvěma externími anténami" />
+        <Image img={require('../../../../../chester/catalog-applications/images/chester-wm-bus.webp')} width={376} height={376} alt="Brána CHESTER wM-Bus v bílé krabičce na stěnu se dvěma externími anténami" />
       </div>
     </div>
     <div class="col col--24"></div>

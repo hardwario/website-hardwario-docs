@@ -14,7 +14,7 @@ Milesight VS373 je **bezkontaktní senzor detekce pádů** pro **péči o senior
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/vs373.png')} alt="Senzor Milesight VS373" />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/vs373.webp')} alt="Senzor Milesight VS373" />
       </div>
     </div>
     <div class="col col--24"></div>

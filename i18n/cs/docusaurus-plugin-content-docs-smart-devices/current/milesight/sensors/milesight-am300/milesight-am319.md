@@ -14,7 +14,7 @@ Milesight AM319 je **senzor kvality vnitřního ovzduší**, který měří **de
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../../smart-devices/milesight/sensors/milesight-am300/images/am319-868m.png')} alt="Senzor Milesight AM319" />
+        <Image img={require('../../../../../../../smart-devices/milesight/sensors/milesight-am300/images/am319-868m.webp')} alt="Senzor Milesight AM319" />
       </div>
     </div>
     <div class="col col--24"></div>

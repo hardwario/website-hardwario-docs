@@ -13,7 +13,7 @@ The **CHESTER-X9** is a **4-channel low-side switch** output module for the CHES
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('./images/chester-x9-top.png')} alt="Top view of the CHESTER-X9 board showing the four NCV8412ASTT1G low-side switch ICs"/></div>
+<div><Image img={require('./images/chester-x9-top.webp')} alt="Top view of the CHESTER-X9 board showing the four NCV8412ASTT1G low-side switch ICs"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -130,13 +130,13 @@ The CHESTER-X9 module can be used with various CHESTER mainboard configurations.
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x9-cgls.png)
+![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x9-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x9-c4.png)
+![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x9-c4.webp)
 
 </div>
 </div>

@@ -23,7 +23,7 @@ You can visit the separate chapter to learn more [**About Core Module**](./about
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('./images/core-module-pinout.png')} alt="Core Module pinout diagram with pins 1-28 color-coded as GND, power, control, GPIO, ADC, serial, and DAC" /></div>
+      <div><Image img={require('./images/core-module-pinout.webp')} alt="Core Module pinout diagram with pins 1-28 color-coded as GND, power, control, GPIO, ADC, serial, and DAC" /></div>
     </div>
     <div class="col col--0">
     </div>

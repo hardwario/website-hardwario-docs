@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/maxi-base-module.png')} alt="Maxi Base Module, velká zelená základová deska se šroubovacími svorkovnicemi a středovým místem pro modul" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/maxi-base-module.webp')} alt="Maxi Base Module, velká zelená základová deska se šroubovacími svorkovnicemi a středovým místem pro modul" /></div>
     </div>
     <div class="col col--6">
 

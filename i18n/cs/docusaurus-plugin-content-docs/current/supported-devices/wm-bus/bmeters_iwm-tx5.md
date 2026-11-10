@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx5.png')} width={376} height={376} alt="Bílý rádiový modul wM-Bus BMeters IWM-TX5 se štítkem s čárovým kódem a značkou NFC" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx5.webp')} width={376} height={376} alt="Bílý rádiový modul wM-Bus BMeters IWM-TX5 se štítkem s čárovým kódem a značkou NFC" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -87,7 +87,7 @@ Nastavte tyto položky:
 
 Vodoměr je teď nastavený.
 
-![Data načtená v konfigurační aplikaci](../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx5-data.png)
+![Data načtená v konfigurační aplikaci](../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx5-data.webp)
 
 ## Konfigurace adresy wM-Bus {#wireless-m-bus-address-configuration}
 
@@ -99,7 +99,7 @@ Adresa (8 číslic) je **uprostřed pod čárovým kódem** za **značkou CE**, 
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx5.png')} width={376} height={376} alt="IWM-TX5 s vyznačenou osmimístnou adresou wM-Bus pod čárovým kódem za značkou CE" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx5.webp')} width={376} height={376} alt="IWM-TX5 s vyznačenou osmimístnou adresou wM-Bus pod čárovým kódem za značkou CE" />
       </div>
     </div>
     <div class="col col--24"></div>

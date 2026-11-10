@@ -149,7 +149,7 @@ Více o této konzoli se dozvíte v kapitole [**Konzole TOWER**](./hardwario-tow
 
 :::
 
-<Image img={require('../../../../../tower/firmware-development/images/code-console-debug-example.png')} alt="Záložka konzole TOWER ve VS Code streamující řádky logu aplikace s časovými značkami a naměřenou teplotou" />
+<Image img={require('../../../../../tower/firmware-development/images/code-console-debug-example.webp')} alt="Záložka konzole TOWER ve VS Code streamující řádky logu aplikace s časovými značkami a naměřenou teplotou" />
 <br />
 
 :::tip

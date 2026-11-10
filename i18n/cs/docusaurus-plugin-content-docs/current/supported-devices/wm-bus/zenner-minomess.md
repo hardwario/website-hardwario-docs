@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/zenner-minomess.png')} width={376} height={376} alt="Vodoměr Zenner Minomess s válečkovým počítadlem a označením wM-Bus na čelní straně" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/zenner-minomess.webp')} width={376} height={376} alt="Vodoměr Zenner Minomess s válečkovým počítadlem a označením wM-Bus na čelní straně" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -42,7 +42,7 @@ Adresa (8 číslic) se zobrazuje **na displeji zařízení vlevo od jednotky m³
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/zenner-minomess.png')} width={376} height={376} alt="Číselník vodoměru Minomess s osmimístnou adresou wM-Bus vyznačenou na displeji vlevo od jednotky m3" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/zenner-minomess.webp')} width={376} height={376} alt="Číselník vodoměru Minomess s osmimístnou adresou wM-Bus vyznačenou na displeji vlevo od jednotky m3" />
       </div>
     </div>
     <div class="col col--24"></div>

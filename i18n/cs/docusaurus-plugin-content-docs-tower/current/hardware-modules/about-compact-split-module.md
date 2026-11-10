@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/compact-split-module.png')} alt="Compact Split Module, holá deska se dvěma sadami popsaných pozic pro konektory modulů" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/compact-split-module.webp')} alt="Compact Split Module, holá deska se dvěma sadami popsaných pozic pro konektory modulů" /></div>
     </div>
     <div class="col col--6">
 

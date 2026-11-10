@@ -92,7 +92,7 @@ Po otevření aplikace byste v seznamu měli vidět své zařízení **EMBER**.
 - Pokud je v seznamu více zařízení, podívejte se na desku EMBER. Na její levé straně jsou dva ethernetové konektory se štítkem. Na štítku najděte **MAC adresu**, tedy řetězec číslic a písmen za textem **E01** (například **E01: 48:A5:8A:4F:17:A6**).
 - Vraťte se do aplikace **Winbox** a najděte zařízení s **odpovídající MAC adresou**. Vyberte ho kliknutím v seznamu.
 - Zkontrolujte, že je **propojka** na desce **vyjmutá**. Kde propojka je, ukazuje obrázek níže.
-![Propojka, ethernetové porty a reset na zařízení EMBER](../../../../ember/images/ember-jumper-eth-ports.png)
+![Propojka, ethernetové porty a reset na zařízení EMBER](../../../../ember/images/ember-jumper-eth-ports.webp)
 
 **Hlavní dokumentace (doporučený začátek):**
 - Konfigurace zařízení EMBER Hotspot a lokální přístup:  
@@ -175,7 +175,7 @@ Vypne úvodní poznámku při přihlášení.
 
 #### Kontrola a instalace aktualizací RouterOS {#checks-for-routeros-updates-and-installs-if-available}
 - V levém panelu otevřete **System → Packages → Check for Updates**. V novém okně zkontrolujte, zda se verze shodují. Pokud ne, klikněte na **Download&Install** a několik minut počkejte.
-![EMBER: aktualizace RouterOS](../../../../ember/images/ember-update-routeros.png)
+![EMBER: aktualizace RouterOS](../../../../ember/images/ember-update-routeros.webp)
 
 ---
 

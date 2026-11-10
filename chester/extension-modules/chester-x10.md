@@ -13,7 +13,7 @@ The **CHESTER-X10** is a **backup power** extension module with an on-board **si
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('./images/chester-x10-top.png')} alt="Photo of the red CHESTER-X10 board showing the step-down inductor, the MCP73833 charger, the TLA2024 ADC, and the Schottky power-path diodes"/></div>
+<div><Image img={require('./images/chester-x10-top.webp')} alt="Photo of the red CHESTER-X10 board showing the step-down inductor, the MCP73833 charger, the TLA2024 ADC, and the Schottky power-path diodes"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -132,13 +132,13 @@ The CHESTER-X10 module can be used with various CHESTER mainboard configurations
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x10-cgls.png)
+![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x10-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x10-c4.png)
+![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x10-c4.webp)
 
 </div>
 </div>

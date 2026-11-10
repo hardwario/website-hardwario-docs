@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/battery-module.png')} alt="Battery Module top view with labeled headers; holders for four AAA cells sit on the underside" /></div>
+      <div><Image img={require('./images/battery-module.webp')} alt="Battery Module top view with labeled headers; holders for four AAA cells sit on the underside" /></div>
     </div>
     <div class="col col--6">
 

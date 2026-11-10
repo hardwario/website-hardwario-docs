@@ -90,7 +90,7 @@ Nástroj umí **průběžně zobrazovat vygenerovaný kód v C**, který přesn�
 
 Základní firmware tak můžete poskládat z bloků a kód pak dokončit v editoru [**HARDWARIO Code**](../firmware-development/about-hardwario-code.md).
 
-<Image img={require('../../../../../tower/desktop-programming/images/blockly-code.png')} alt="Pracovní plocha Blockly se zapnutou funkcí Show Code: vygenerovaný kód v C se zobrazuje vedle bloků" />
+<Image img={require('../../../../../tower/desktop-programming/images/blockly-code.webp')} alt="Pracovní plocha Blockly se zapnutou funkcí Show Code: vygenerovaný kód v C se zobrazuje vedle bloků" />
 
 ### Kompilace a nahrání firmwaru {#compiling-and-flashing}
 

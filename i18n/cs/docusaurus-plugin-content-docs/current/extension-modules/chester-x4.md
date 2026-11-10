@@ -12,7 +12,7 @@ Tento článek popisuje rozšiřující modul CHESTER-X4.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../chester/extension-modules/images/chester-x4-top.png')} alt="Pohled shora na modul CHESTER-X4 se snižujícím měničem TPS62175"/></div>
+      <div><Image img={require('../../../../../chester/extension-modules/images/chester-x4-top.webp')} alt="Pohled shora na modul CHESTER-X4 se snižujícím měničem TPS62175"/></div>
     </div>
     <div class="col col--10">
     </div>

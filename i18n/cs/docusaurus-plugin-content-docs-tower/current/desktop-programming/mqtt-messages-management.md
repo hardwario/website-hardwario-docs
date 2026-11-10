@@ -25,7 +25,7 @@ Pokud o protokolu MQTT a zprávách MQTT moc nevíte, podívejte se do [**sekce 
 
 Ve výchozím nastavení se zobrazují jen zprávy ze **zařízení HARDWARIO TOWER**.
 
-<Image img={require('../../../../../tower/desktop-programming/images/messages-tab.png')} alt="Záložka Messages s výpisem příchozích zpráv MQTT z teploměru a sekcemi Publish a Subscribed topics níže" />
+<Image img={require('../../../../../tower/desktop-programming/images/messages-tab.webp')} alt="Záložka Messages s výpisem příchozích zpráv MQTT z teploměru a sekcemi Publish a Subscribed topics níže" />
 
 ### Zprávy {#messages}
 Hlavní část záložky je nahoře: zobrazují se tu všechny zprávy.

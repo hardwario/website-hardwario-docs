@@ -82,7 +82,7 @@ On the connector's detail page, click **EDIT**. The editor has three tabs: **DET
 
 Open the **PLAYGROUND** tab. Write the function in the middle pane; the left pane shows a real device **message (Input)** and the right pane shows the **request that would be sent (Output)**, updated live as you type. Use **Select device** and **Select message type** to preview against real data. No HTTP request is sent while you edit.
 
-![The PLAYGROUND tab: the Input message on the left, the transformation function in the middle, and the resulting Output request on the right](images/connector-test-playground.png)
+![The PLAYGROUND tab: the Input message on the left, the transformation function in the middle, and the resulting Output request on the right](images/connector-test-playground.webp)
 
 ```js
 function main(job) {
@@ -175,7 +175,7 @@ The quickest way to confirm a connector actually fires, and to see exactly what 
    }
    ```
 
-   ![The connector PLAYGROUND with the transformation function pointed at the webhook.site URL and the resulting Output request](images/connector-playground.png)
+   ![The connector PLAYGROUND with the transformation function pointed at the webhook.site URL and the resulting Output request](images/connector-playground.webp)
 
    Make sure the connector's **Tags** and **Triggers** match your device (e.g. the `data` trigger).
 
@@ -183,7 +183,7 @@ The quickest way to confirm a connector actually fires, and to see exactly what 
 
 4. **Check the result.** Go back to webhook.site: the request appears in the inbox on the left. Click it to inspect the **method**, **headers**, and **JSON body** the Cloud sent. Seeing it arrive confirms your connector works end to end.
 
-   ![webhook.site showing a received POST request with its headers and JSON body](images/connector-webhook-received.png)
+   ![webhook.site showing a received POST request with its headers and JSON body](images/connector-webhook-received.webp)
 
 :::tip
 Edit the transformation function and trigger again to watch your changes land in real time. When you're happy, swap the webhook.site URL for your real endpoint.

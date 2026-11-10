@@ -12,7 +12,7 @@ This article describes the CHESTER-X2 extension module.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x2-top.png')} alt="Top view of the red CHESTER-X2 R3.0 extension module board" /></div>
+      <div><Image img={require('./images/chester-x2-top.webp')} alt="Top view of the red CHESTER-X2 R3.0 extension module board" /></div>
     </div>
     <div class="col col--10">
     </div>

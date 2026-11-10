@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/lcd-module.png')} alt="LCD Module s 1,28palcovým paměťovým displejem Sharp a dvěma tlačítky" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/lcd-module.webp')} alt="LCD Module s 1,28palcovým paměťovým displejem Sharp a dvěma tlačítky" /></div>
     </div>
     <div class="col col--6">
 

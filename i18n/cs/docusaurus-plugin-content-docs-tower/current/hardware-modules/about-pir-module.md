@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/pir-module.png')} alt="Čelní panel modulu PIR Module s bílou kopulovitou čočkou pasivního infračerveného detektoru pohybu" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/pir-module.webp')} alt="Čelní panel modulu PIR Module s bílou kopulovitou čočkou pasivního infračerveného detektoru pohybu" /></div>
     </div>
     <div class="col col--6">
 

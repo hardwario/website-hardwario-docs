@@ -44,7 +44,7 @@ If it is not active, touch a **magnet** to the sensor to wake it from hibernatio
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '376px' }}>
-        <Image img={require('./images/tag-magnet.png')} alt="Magnet touched to a Teltonika EYE Sensor to wake it; the green LED confirms activation" />
+        <Image img={require('./images/tag-magnet.jpg')} alt="Magnet touched to a Teltonika EYE Sensor to wake it; the green LED confirms activation" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -160,7 +160,7 @@ This PIN can be changed later in the device settings.
   <div class="row">
     <div class="col col--5">
       <div>
-        <Image img={require('./images/ble-app-settings.png')} width={200} height={200} alt="EYE App device overview showing sensor readings, firmware status, and the CONFIGURE button" />
+        <Image img={require('./images/ble-app-settings.jpg')} width={200} height={200} alt="EYE App device overview showing sensor readings, firmware status, and the CONFIGURE button" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -178,7 +178,7 @@ This setup ensures stable data transmission, adequate advertising frequency for 
   <div class="row">
     <div class="col col--5">
       <div>
-        <Image img={require('./images/ble-settings.png')} width={200} height={200} alt="EYE App configuration screen: Tx power 4 dBm, 10 s advertising interval, Sensors packet, temperature and humidity active" />
+        <Image img={require('./images/ble-settings.jpg')} width={200} height={200} alt="EYE App configuration screen: Tx power 4 dBm, 10 s advertising interval, Sensors packet, temperature and humidity active" />
       </div>
     </div>
     <div class="col col--24"></div>

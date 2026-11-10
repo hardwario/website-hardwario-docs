@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/1-wire-module.png')} alt="1-Wire Slave Module se zelenou svorkovnicí pro sběrnici 1-Wire a dvěma dutinkovými lištami" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/1-wire-module.webp')} alt="1-Wire Slave Module se zelenou svorkovnicí pro sběrnici 1-Wire a dvěma dutinkovými lištami" /></div>
     </div>
     <div class="col col--6">
 

@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--2">
-      <div><Image img={require('../../../../../chester/hardware-description/images/chester-m-enclosure.png')} alt="Základní deska CHESTER-M s baterií a svorkovnicemi namontovaná v bílé krabičce"/></div>
+      <div><Image img={require('../../../../../chester/hardware-description/images/chester-m-enclosure.webp')} alt="Základní deska CHESTER-M s baterií a svorkovnicemi namontovaná v bílé krabičce"/></div>
     </div>
     <div class="col col--10">
     CHESTER-M je univerzální základní deska s konektivitou LPWAN, kterou lze doplnit rozšiřujícími moduly <b>X</b>.
@@ -73,7 +73,7 @@ se zduplikují na 8pinové svorkovnice.
 
 Pozor, **pájené propojky** jsou na spodní straně PCB. Modré obdélníky propojek **vpravo** na obrázku níže proto ve skutečnosti připojují signály k **levým** 8pinovým svorkovnicím TB1 a TB2 (při pohledu na PCB zpředu).
 
-![Spodní strana PCB s vyznačenými pájenými propojkami 1-Wire VDD a DQ a propojkami GND](../../../../../chester/hardware-description/images/solder-bridges.png)
+![Spodní strana PCB s vyznačenými pájenými propojkami 1-Wire VDD a DQ a propojkami GND](../../../../../chester/hardware-description/images/solder-bridges.webp)
 
 Obrázek ukazuje zapojení svorkovnic:
 

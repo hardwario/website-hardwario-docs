@@ -21,7 +21,7 @@ Pokud potřebujete jinou verzi nebo si chcete prohlédnout samotnou aplikaci, po
 Vždy je k dispozici **instalační balíček** i samotný **spustitelný soubor**. Je na vás, který si stáhnete, oba by měly fungovat stejně.
 
 :::
-<Image img={require('../../../../../tower/desktop-programming/images/playground-download.png')} alt="Stránka pro stažení HARDWARIO Playground s možnostmi instalátoru pro Windows a přenosného spustitelného souboru" />
+<Image img={require('../../../../../tower/desktop-programming/images/playground-download.webp')} alt="Stránka pro stažení HARDWARIO Playground s možnostmi instalátoru pro Windows a přenosného spustitelného souboru" />
 
 ## Instalace {#installation}
 

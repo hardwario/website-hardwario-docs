@@ -12,7 +12,7 @@ This article describes the CHESTER-X3A, CHESTER-X3B and CHESTER-X3C extension mo
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x3-top.png')} alt="Top view of the CHESTER-X3 module with two ADS122C precision ADCs"/></div>
+      <div><Image img={require('./images/chester-x3-top.webp')} alt="Top view of the CHESTER-X3 module with two ADS122C precision ADCs"/></div>
     </div>
     <div class="col col--10">
     </div>

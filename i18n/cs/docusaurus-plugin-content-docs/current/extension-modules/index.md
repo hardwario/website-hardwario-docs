@@ -33,7 +33,7 @@ Modulární je i vývoj v CHESTER-SDK: každý modul má vlastní ovladač pro Z
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('../../../../../chester/extension-modules/images/explode-view.png')} alt="Rozložený pohled na CHESTER: kryty krabičky, základní deska s baterií a dva červené rozšiřující moduly na zadní straně"/></div>
+      <div><Image img={require('../../../../../chester/extension-modules/images/explode-view.webp')} alt="Rozložený pohled na CHESTER: kryty krabičky, základní deska s baterií a dva červené rozšiřující moduly na zadní straně"/></div>
     </div>
     <div class="col col--8">
     </div>
@@ -51,7 +51,7 @@ Je-li zařízení CHESTER v krabičce, můžete po vyjmutí baterie přes malé 
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('../../../../../chester/extension-modules/images/documentation-top.png')} alt="Nákres CHESTER-M: svorkovnice TB1/TB2 slotu A modře, svorkovnice TB5/TB6 slotu B zeleně, kontrolní otvory oranžově"/></div>
+      <div><Image img={require('../../../../../chester/extension-modules/images/documentation-top.webp')} alt="Nákres CHESTER-M: svorkovnice TB1/TB2 slotu A modře, svorkovnice TB5/TB6 slotu B zeleně, kontrolní otvory oranžově"/></div>
     </div>
     <div class="col col--8">
     </div>

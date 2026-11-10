@@ -12,7 +12,7 @@ GLIDER is built around the **Nordic nRF9151** system-in-package, a Cortex-M33 mi
 
 ## Block diagram 
 
-![Diagram of GLIDER](images/hardwario-glider-wireless-diagram.png)
+![Diagram of GLIDER](images/hardwario-glider-wireless-diagram.webp)
 
 ## Microcontroller
 

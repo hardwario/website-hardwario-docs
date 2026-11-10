@@ -12,7 +12,7 @@ This article describes the CHESTER-X1 extension module.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x1-top.png')} alt="CHESTER-X1 module, a red PCB with the DS2482-800 1-Wire master IC and channels CH1-CH8 marked along the bottom" /></div>
+      <div><Image img={require('./images/chester-x1-top.webp')} alt="CHESTER-X1 module, a red PCB with the DS2482-800 1-Wire master IC and channels CH1-CH8 marked along the bottom" /></div>
     </div>
     <div class="col col--10">
     </div>

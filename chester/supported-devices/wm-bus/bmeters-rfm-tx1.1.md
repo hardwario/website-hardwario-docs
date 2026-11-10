@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-rfm-tx1.1.png')} width={376} height={376} alt="Round white BMeters RFM-TX1.1 radio module for GSD8-RFM water meters" />
+        <Image img={require('./images/bmeters-rfm-tx1.1.webp')} width={376} height={376} alt="Round white BMeters RFM-TX1.1 radio module for GSD8-RFM water meters" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -46,7 +46,7 @@ The device is delivered **pre-configured**, but it can be reprogrammed and custo
 7. Verify in the **reading software** that data collection is correct and that no alarms are active.  
 8. (Optional) To prevent tampering, insert the **orange seal** into the two small holes on the left side of the module and apply an **adhesive seal**.  
 
-![BMeters RFM-TX1.1 - Installation](images/bmeters-rfm-tx1.1-installation.png)
+![BMeters RFM-TX1.1 - Installation](images/bmeters-rfm-tx1.1-installation.webp)
 
 ## Wireless M-Bus Address Configuration
 
@@ -58,7 +58,7 @@ The address is located on the **left side below the barcode**, as shown in the i
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-rfm-tx1.1.png')} width={376} height={376} alt="RFM-TX1.1 with the 8-digit wM-Bus address outlined to the left below the barcode" />
+        <Image img={require('./images/bmeters-rfm-tx1.1.webp')} width={376} height={376} alt="RFM-TX1.1 with the 8-digit wM-Bus address outlined to the left below the barcode" />
       </div>
     </div>
     <div class="col col--24"></div>

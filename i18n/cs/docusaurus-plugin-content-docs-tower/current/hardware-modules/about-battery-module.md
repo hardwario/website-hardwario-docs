@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/battery-module.png')} alt="Pohled na Battery Module zeshora s popsanými konektory; držáky pro čtyři články AAA jsou na spodní straně" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/battery-module.webp')} alt="Pohled na Battery Module zeshora s popsanými konektory; držáky pro čtyři články AAA jsou na spodní straně" /></div>
     </div>
     <div class="col col--6">
 

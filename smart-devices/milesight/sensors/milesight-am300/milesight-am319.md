@@ -14,7 +14,7 @@ Milesight AM319 is an **indoor air quality sensor** that measures **nine paramet
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/am319-868m.png')} alt="Milesight Sensor AM319" />
+        <Image img={require('./images/am319-868m.webp')} alt="Milesight Sensor AM319" />
       </div>
     </div>
     <div class="col col--24"></div>

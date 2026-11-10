@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '376px' }}>
-        <Image img={require('./images/carlo-gavazzi-em5xx.png')} alt="Carlo Gavazzi EM530 DIN-rail energy analyzer with LCD showing energy and power readings" />
+        <Image img={require('./images/carlo-gavazzi-em5xx.webp')} alt="Carlo Gavazzi EM530 DIN-rail energy analyzer with LCD showing energy and power readings" />
       </div>
     </div>
     <div class="col col--24"></div>

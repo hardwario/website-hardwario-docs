@@ -12,7 +12,7 @@ Tento článek popisuje rozšiřující moduly CHESTER-X3A, CHESTER-X3B a CHESTE
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../chester/extension-modules/images/chester-x3-top.png')} alt="Modul CHESTER-X3 shora se dvěma přesnými převodníky ADC ADS122C"/></div>
+      <div><Image img={require('../../../../../chester/extension-modules/images/chester-x3-top.webp')} alt="Modul CHESTER-X3 shora se dvěma přesnými převodníky ADC ADS122C"/></div>
     </div>
     <div class="col col--10">
     </div>

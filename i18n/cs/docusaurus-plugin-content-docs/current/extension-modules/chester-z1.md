@@ -11,7 +11,7 @@ Tento článek popisuje rozšiřující modul **CHESTER-Z1**, který se montuje 
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('../../../../../chester/extension-modules/images/chester-z-top.png')} alt="Pohled shora na desku CHESTER-Z s držákem baterie 18650, bzučákem, tlačítkem bypass a konektory VIN a SYSTEM"/></div>
+      <div><Image img={require('../../../../../chester/extension-modules/images/chester-z-top.webp')} alt="Pohled shora na desku CHESTER-Z s držákem baterie 18650, bzučákem, tlačítkem bypass a konektory VIN a SYSTEM"/></div>
     </div>
     <div class="col col--10">
     </div>

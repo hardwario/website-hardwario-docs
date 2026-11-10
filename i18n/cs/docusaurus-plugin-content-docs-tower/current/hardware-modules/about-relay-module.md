@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/relay-module.png')} alt="Relay Module s bistabilním relé a třípólovou svorkovnicí" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/relay-module.webp')} alt="Relay Module s bistabilním relé a třípólovou svorkovnicí" /></div>
     </div>
     <div class="col col--6">
 

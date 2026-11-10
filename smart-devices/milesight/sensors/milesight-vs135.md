@@ -14,7 +14,7 @@ Milesight VS135 is an **AI-powered ToF (Time-of-Flight) people counting sensor**
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/vs135.png')} alt="Milesight Sensor VS135" />
+        <Image img={require('./images/vs135.webp')} alt="Milesight Sensor VS135" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -35,7 +35,7 @@ node-red-contrib-homekit-bridged
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('../../../../../tower/platform-integrations/images/node-red-pallete.png')} alt="Správce palety Node-RED se zvýrazněným node-red-contrib-homekit-bridged připraveným k instalaci" /></div>
+      <div><Image img={require('../../../../../tower/platform-integrations/images/node-red-pallete.webp')} alt="Správce palety Node-RED se zvýrazněným node-red-contrib-homekit-bridged připraveným k instalaci" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -71,7 +71,7 @@ Když se objeví zpráva s názvem Installing **'node-red-contrib-homekit-bridge
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('../../../../../tower/platform-integrations/images/playgroud-flash-firmware.png')} alt="Záložka Firmware v aplikaci Playground s vybraným hardwario/bcf-radio-push-button a tlačítkem Flash firmware" /></div>
+      <div><Image img={require('../../../../../tower/platform-integrations/images/playgroud-flash-firmware.webp')} alt="Záložka Firmware v aplikaci Playground s vybraným hardwario/bcf-radio-push-button a tlačítkem Flash firmware" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -199,7 +199,7 @@ Na další obrazovce vyberte **Přesto přidat**. Na obrazovce pro zadání kód
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('../../../../../tower/platform-integrations/images/homekit-and-siri-iphones-screens-1.png')} alt="Aplikace Domácnost na iPhonu: Přidat příslušenství, skener nastavovacího kódu HomeKit a nalezený most v okolí" /></div>
+      <div><Image img={require('../../../../../tower/platform-integrations/images/homekit-and-siri-iphones-screens-1.jpg')} alt="Aplikace Domácnost na iPhonu: Přidat příslušenství, skener nastavovacího kódu HomeKit a nalezený most v okolí" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -213,7 +213,7 @@ Teď už jen nastavte, kde se most a teplotní senzor nacházejí.
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('../../../../../tower/platform-integrations/images/homekit-and-siri-iphones-screens-2.png')} alt="Nastavení v aplikaci Domácnost přiřazující most a teplotní senzor do místností; senzor se poté zobrazí v Domácnosti" /></div>
+      <div><Image img={require('../../../../../tower/platform-integrations/images/homekit-and-siri-iphones-screens-2.jpg')} alt="Nastavení v aplikaci Domácnost přiřazující most a teplotní senzor do místností; senzor se poté zobrazí v Domácnosti" /></div>
     </div>
     <div class="col col--1">
     </div>
@@ -233,7 +233,7 @@ Na teplotu z modulu **Core Module**, který jsme právě nastavili, se tedy sta�
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('../../../../../tower/platform-integrations/images/homekit-and-siri-iphones-screens-siri.png')} alt="Siri odpovídá na dotaz na teplotu v ložnici hodnotou 26 stupňů Celsia" /></div>
+      <div><Image img={require('../../../../../tower/platform-integrations/images/homekit-and-siri-iphones-screens-siri.webp')} alt="Siri odpovídá na dotaz na teplotu v ložnici hodnotou 26 stupňů Celsia" /></div>
     </div>
     <div class="col col--1">
     </div>

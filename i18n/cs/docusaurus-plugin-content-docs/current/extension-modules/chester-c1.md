@@ -11,7 +11,7 @@ Tento článek popisuje nosnou desku **CHESTER-C1**.
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('../../../../../chester/extension-modules/images/chester-c1-top.png')} alt="Nosná deska CHESTER-C1 se dvěma výkonovými relé, držákem baterie velikosti C a zelenými svorkovnicemi podél spodní hrany" /></div>
+      <div><Image img={require('../../../../../chester/extension-modules/images/chester-c1-top.webp')} alt="Nosná deska CHESTER-C1 se dvěma výkonovými relé, držákem baterie velikosti C a zelenými svorkovnicemi podél spodní hrany" /></div>
     </div>
     <div class="col col--10">
     </div>

@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--2">
-      <div><Image img={require('./images/chester-m-enclosure.png')} alt="CHESTER-M mainboard with battery and terminal blocks mounted in its white enclosure"/></div>
+      <div><Image img={require('./images/chester-m-enclosure.webp')} alt="CHESTER-M mainboard with battery and terminal blocks mounted in its white enclosure"/></div>
     </div>
     <div class="col col--10">
     CHESTER-M is a versatile mainboard with LPWAN connectivity, extendable with <b>X</b> extension modules.
@@ -73,7 +73,7 @@ block are duplicated to the 8-pin terminal blocks.
 
 Please note that the **solder bridges** are on the bottom side of the PCB. So in the picture below the blue solder bridge rectangles **on the right** of the PCB actually connect signals **to the left** 8-pin terminal blocks TB1 and TB2 when looking at the front of the PCB.
 
-![Bottom of the PCB with the 1-Wire VDD and DQ solder bridges and the GND bridges highlighted](images/solder-bridges.png)
+![Bottom of the PCB with the 1-Wire VDD and DQ solder bridges and the GND bridges highlighted](images/solder-bridges.webp)
 
 This picture shows the terminal blocks connection:
 

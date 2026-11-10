@@ -12,7 +12,7 @@ Tento článek popisuje rozšiřující modul CHESTER-X1.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../chester/extension-modules/images/chester-x1-top.png')} alt="Modul CHESTER-X1, červená deska s obvodem DS2482-800 (master 1-Wire) a kanály CH1-CH8 označenými podél spodní hrany" /></div>
+      <div><Image img={require('../../../../../chester/extension-modules/images/chester-x1-top.webp')} alt="Modul CHESTER-X1, červená deska s obvodem DS2482-800 (master 1-Wire) a kanály CH1-CH8 označenými podél spodní hrany" /></div>
     </div>
     <div class="col col--10">
     </div>

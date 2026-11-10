@@ -12,7 +12,7 @@ Zařízení GLIDER je postavené na modulu SiP (system-in-package) **Nordic nRF9
 
 ## Blokové schéma {#block-diagram}
 
-![Schéma zařízení GLIDER](../../../../glider/images/hardwario-glider-wireless-diagram.png)
+![Schéma zařízení GLIDER](../../../../glider/images/hardwario-glider-wireless-diagram.webp)
 
 ## Mikrokontrolér {#microcontroller}
 

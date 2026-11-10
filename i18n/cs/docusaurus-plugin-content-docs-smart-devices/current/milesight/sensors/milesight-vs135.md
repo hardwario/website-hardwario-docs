@@ -14,7 +14,7 @@ Milesight VS135 je **senzor pro počítání osob s technologií ToF (Time-of-Fl
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/vs135.png')} alt="Senzor Milesight VS135" />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/vs135.webp')} alt="Senzor Milesight VS135" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -68,31 +68,31 @@ activation step.
 
 1. In the **Device** step, select **Raspberry Pi 4** (this includes Compute Module 4).
 
-   <Image img={require('../images/rpi-imager-select-device.png')} alt="Raspberry Pi Imager Device step with Raspberry Pi 4 selected in the device list" />
+   <Image img={require('../images/rpi-imager-select-device.jpg')} alt="Raspberry Pi Imager Device step with Raspberry Pi 4 selected in the device list" />
 
 1. In the **OS** step, select **Raspberry Pi OS (other)**.
 
-   <Image img={require('../images/rpi-imager-choose-os.png')} alt="Raspberry Pi Imager OS step with the Raspberry Pi OS (other) category selected" />
+   <Image img={require('../images/rpi-imager-choose-os.jpg')} alt="Raspberry Pi Imager OS step with the Raspberry Pi OS (other) category selected" />
 
 1. Select **Raspberry Pi OS Lite (64-bit)**.
 
-   <Image img={require('../images/rpi-imager-choose-os-lite.png')} alt="Raspberry Pi Imager OS list with Raspberry Pi OS Lite (64-bit) selected" />
+   <Image img={require('../images/rpi-imager-choose-os-lite.jpg')} alt="Raspberry Pi Imager OS list with Raspberry Pi OS Lite (64-bit) selected" />
 
 1. In the **Storage** step, select the **FIBER** device (shown as **RPi-MSD-0001 Media**).
 
-   <Image img={require('../images/rpi-imager-select-storage.png')} alt="Raspberry Pi Imager Storage step with the RPi-MSD-0001 Media USB device selected" />
+   <Image img={require('../images/rpi-imager-select-storage.jpg')} alt="Raspberry Pi Imager Storage step with the RPi-MSD-0001 Media USB device selected" />
 
 1. In the **Customisation** step, enter a hostname for your **FIBER** device (e.g. `fiber`).
 
-   <Image img={require('../images/rpi-imager-hostname.png')} alt="Raspberry Pi Imager Customisation step with the hostname field set to fiber" />
+   <Image img={require('../images/rpi-imager-hostname.jpg')} alt="Raspberry Pi Imager Customisation step with the hostname field set to fiber" />
 
 1. In the **Localisation** section, select your location, time zone, and keyboard layout.
 
-   <Image img={require('../images/rpi-imager-localisation.png')} alt="Raspberry Pi Imager Localisation section with capital city, time zone, and keyboard layout selectors" />
+   <Image img={require('../images/rpi-imager-localisation.jpg')} alt="Raspberry Pi Imager Localisation section with capital city, time zone, and keyboard layout selectors" />
 
 1. In the **User** section, enter a username and password.
 
-   <Image img={require('../images/rpi-imager-user.png')} alt="Raspberry Pi Imager User section with the username fiber and password fields filled in" />
+   <Image img={require('../images/rpi-imager-user.jpg')} alt="Raspberry Pi Imager User section with the username fiber and password fields filled in" />
 
    :::tip
 
@@ -108,27 +108,27 @@ activation step.
 
 1. Optional: In the **Wi-Fi** section, enter your wireless network's SSID and password.
 
-   <Image img={require('../images/rpi-imager-wifi.png')} alt="Raspberry Pi Imager Wi-Fi section with SSID, password, and confirm password fields for a secure network" />
+   <Image img={require('../images/rpi-imager-wifi.jpg')} alt="Raspberry Pi Imager Wi-Fi section with SSID, password, and confirm password fields for a secure network" />
 
 1. In the **Remote access** section, enable **SSH** and select your preferred authentication method.
 
-   <Image img={require('../images/rpi-imager-ssh.png')} alt="Raspberry Pi Imager SSH authentication section with Enable SSH on and password authentication selected" />
+   <Image img={require('../images/rpi-imager-ssh.jpg')} alt="Raspberry Pi Imager SSH authentication section with Enable SSH on and password authentication selected" />
 
 1. Optional: In the **Raspberry Pi Connect** section, you can enable remote access via Raspberry Pi Connect. For this guide, we leave it disabled.
 
-   <Image img={require('../images/rpi-imager-connect.png')} alt="Raspberry Pi Imager Raspberry Pi Connect section with the enable toggle left off" />
+   <Image img={require('../images/rpi-imager-connect.jpg')} alt="Raspberry Pi Imager Raspberry Pi Connect section with the enable toggle left off" />
 
 1. Review the summary and click **WRITE** to start the flashing process.
 
-   <Image img={require('../images/rpi-imager-summary.png')} alt="Raspberry Pi Imager Write image summary listing device, OS, storage, and customisations before writing" />
+   <Image img={require('../images/rpi-imager-summary.jpg')} alt="Raspberry Pi Imager Write image summary listing device, OS, storage, and customisations before writing" />
 
 1. Confirm the warning dialog by clicking **I UNDERSTAND, ERASE AND WRITE**.
 
-   <Image img={require('../images/rpi-imager-confirm.png')} alt="Raspberry Pi Imager warning dialog with the I UNDERSTAND, ERASE AND WRITE confirmation button" />
+   <Image img={require('../images/rpi-imager-confirm.jpg')} alt="Raspberry Pi Imager warning dialog with the I UNDERSTAND, ERASE AND WRITE confirmation button" />
 
 1. Wait for the writing process to complete.
 
-   <Image img={require('../images/rpi-imager-writing.png')} alt="Raspberry Pi Imager writing the OS image to the storage device with a progress bar" />
+   <Image img={require('../images/rpi-imager-writing.jpg')} alt="Raspberry Pi Imager writing the OS image to the storage device with a progress bar" />
 
 1. When finished, press the **RESET** button on the **TARGET** (located next to the USB connector).
 
@@ -165,26 +165,26 @@ the screenshot shows.
 
 1. In the **OS** step, select **Raspberry Pi OS (other)**.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-choose-os.png')} alt="Raspberry Pi Imager: choosing Raspberry Pi OS (other) in the OS step" />
+   <Image img={require('../fiber-lite/images/rpi-imager-choose-os.jpg')} alt="Raspberry Pi Imager: choosing Raspberry Pi OS (other) in the OS step" />
 
 1. Select **Raspberry Pi OS Lite (64-bit)**.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-choose-os-lite.png')} alt="Raspberry Pi Imager: choosing Raspberry Pi OS Lite (64-bit)" />
+   <Image img={require('../fiber-lite/images/rpi-imager-choose-os-lite.jpg')} alt="Raspberry Pi Imager: choosing Raspberry Pi OS Lite (64-bit)" />
 
 1. In the **Storage** step, select the microSD card for the FIBER Lite device.
 
 1. In the **Customisation** step (gear icon, or Ctrl+Shift+X), enter a hostname for your FIBER
    Lite device (e.g. `fiber-lite`).
 
-   <Image img={require('../fiber-lite/images/rpi-imager-hostname.png')} alt="Raspberry Pi Imager: entering the hostname of the FIBER Lite device" />
+   <Image img={require('../fiber-lite/images/rpi-imager-hostname.jpg')} alt="Raspberry Pi Imager: entering the hostname of the FIBER Lite device" />
 
 1. In the **Localisation** section, select your location, time zone, and keyboard layout.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-localisation.png')} alt="Raspberry Pi Imager: location, time zone and keyboard layout" />
+   <Image img={require('../fiber-lite/images/rpi-imager-localisation.jpg')} alt="Raspberry Pi Imager: location, time zone and keyboard layout" />
 
 1. In the **User** section, enter a username and password.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-user.png')} alt="Raspberry Pi Imager: username and password" />
+   <Image img={require('../fiber-lite/images/rpi-imager-user.jpg')} alt="Raspberry Pi Imager: username and password" />
 
    :::tip
 
@@ -202,23 +202,23 @@ the screenshot shows.
 1. Optional: in the **Wi-Fi** section, enter your wireless network's SSID and password as a LAN
    fallback.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-wifi.png')} alt="Raspberry Pi Imager: optional Wi-Fi network as a LAN fallback" />
+   <Image img={require('../fiber-lite/images/rpi-imager-wifi.jpg')} alt="Raspberry Pi Imager: optional Wi-Fi network as a LAN fallback" />
 
 1. In the **Remote access** section, enable **SSH** and select your preferred authentication
    method.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-ssh.png')} alt="Raspberry Pi Imager: enabling SSH in the Remote access section" />
+   <Image img={require('../fiber-lite/images/rpi-imager-ssh.jpg')} alt="Raspberry Pi Imager: enabling SSH in the Remote access section" />
 
 1. Optional: in the **Raspberry Pi Connect** section, you can enable remote access via Raspberry
    Pi Connect. For this guide, we leave it disabled.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-connect.png')} alt="Raspberry Pi Imager: Raspberry Pi Connect left disabled" />
+   <Image img={require('../fiber-lite/images/rpi-imager-connect.jpg')} alt="Raspberry Pi Imager: Raspberry Pi Connect left disabled" />
 
 1. Review the summary and click **WRITE** to start flashing, then confirm the warning dialog.
 
 1. Wait for the writing process to complete.
 
-   <Image img={require('../fiber-lite/images/rpi-imager-writing.png')} alt="Raspberry Pi Imager writing the image to the microSD card" />
+   <Image img={require('../fiber-lite/images/rpi-imager-writing.jpg')} alt="Raspberry Pi Imager writing the image to the microSD card" />
 
 1. When writing completes, insert the microSD card into the FIBER Lite device and power it on.
 

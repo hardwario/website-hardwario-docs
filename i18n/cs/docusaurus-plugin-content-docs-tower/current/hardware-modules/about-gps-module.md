@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/gps-module.png')} alt="GPS Module s přijímačem u-blox SAM-M8Q pod čtvercovou patch anténou" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/gps-module.webp')} alt="GPS Module s přijímačem u-blox SAM-M8Q pod čtvercovou patch anténou" /></div>
     </div>
     <div class="col col--6">
 

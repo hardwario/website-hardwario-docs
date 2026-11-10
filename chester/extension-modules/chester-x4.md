@@ -12,7 +12,7 @@ This article describes the CHESTER-X4 extension module.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x4-top.png')} alt="Top view of the CHESTER-X4 module with the TPS62175 step-down converter"/></div>
+      <div><Image img={require('./images/chester-x4-top.webp')} alt="Top view of the CHESTER-X4 module with the TPS62175 step-down converter"/></div>
     </div>
     <div class="col col--10">
     </div>

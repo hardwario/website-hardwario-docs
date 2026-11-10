@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/sensor-module.png')} alt="Sensor Module with a five-pole pluggable terminal block for the universal inputs and outputs" /></div>
+      <div><Image img={require('./images/sensor-module.webp')} alt="Sensor Module with a five-pole pluggable terminal block for the universal inputs and outputs" /></div>
     </div>
     <div class="col col--6">
 

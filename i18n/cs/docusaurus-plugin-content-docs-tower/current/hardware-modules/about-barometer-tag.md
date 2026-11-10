@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/barometer-tag.png')} alt="Barometer Tag, deska velikosti mince se senzorem tlaku MPL3115A2" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/barometer-tag.webp')} alt="Barometer Tag, deska velikosti mince se senzorem tlaku MPL3115A2" /></div>
     </div>
     <div class="col col--6">
 

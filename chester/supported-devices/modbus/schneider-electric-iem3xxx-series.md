@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '376px' }}>
-        <Image img={require('./images/schneider-electric-iem3000-series.png')} alt="Schneider Electric iEM3255 DIN-rail energy meter with LCD and OK, ESC, arrow buttons" />
+        <Image img={require('./images/schneider-electric-iem3000-series.webp')} alt="Schneider Electric iEM3255 DIN-rail energy meter with LCD and OK, ESC, arrow buttons" />
       </div>
     </div>
     <div class="col col--24"></div>

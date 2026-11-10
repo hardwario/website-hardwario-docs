@@ -13,7 +13,7 @@ The **CHESTER-X14** is a wired **10/100 Ethernet** extension module for the CHES
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('./images/chester-x14-top.png')} alt="3D render of the red CHESTER-X14 R1.0 board showing the W5500 QFP controller, the Ethernet magnetics module, the 25 MHz crystal, and the step-down inductor"/></div>
+<div><Image img={require('./images/chester-x14-top.webp')} alt="3D render of the red CHESTER-X14 R1.0 board showing the W5500 QFP controller, the Ethernet magnetics module, the 25 MHz crystal, and the step-down inductor"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -156,13 +156,13 @@ The CHESTER-X14 module can be used with various CHESTER mainboard configurations
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x14-cgls.png)
+![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x14-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x14-c4.png)
+![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x14-c4.webp)
 
 </div>
 </div>

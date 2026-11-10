@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/barometer-tag.png')} alt="Barometer Tag, a coin-sized board with the MPL3115A2 pressure sensor" /></div>
+      <div><Image img={require('./images/barometer-tag.webp')} alt="Barometer Tag, a coin-sized board with the MPL3115A2 pressure sensor" /></div>
     </div>
     <div class="col col--6">
 

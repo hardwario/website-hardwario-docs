@@ -75,7 +75,7 @@ Po kliknutí na tlačítko **Open** byste měli vidět okno podobné tomuto:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('../../../../../chester/developer-tools/images/nrf-connect-plain.png')} alt="Hlavní okno aplikace Power Profiler před připojením zařízení, s prázdným grafem měření"/></div>
+      <div><Image img={require('../../../../../chester/developer-tools/images/nrf-connect-plain.webp')} alt="Hlavní okno aplikace Power Profiler před připojením zařízení, s prázdným grafem měření"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -156,7 +156,7 @@ Po kliknutí na **Start** se spustí záznam dat: **PPK2** začne pulzovat barvo
 <div class="container">
     <div class="row">
     <div class="col col--12">
-      <div><Image img={require('../../../../../chester/developer-tools/images/nrf-connect-running.png')} alt="Power Profiler zaznamenávající data, se špičkami spotřeby proudu a průměrnými/maximálními hodnotami okna"/></div>
+      <div><Image img={require('../../../../../chester/developer-tools/images/nrf-connect-running.webp')} alt="Power Profiler zaznamenávající data, se špičkami spotřeby proudu a průměrnými/maximálními hodnotami okna"/></div>
     </div>
     <div class="col col--2">
     </div>

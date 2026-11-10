@@ -155,6 +155,8 @@ function otherMentions(image) {
       if (at === -1) break;
       from = at + name.length;
       const token = pathToken(text, at, name.length);
+      // A longer file name that merely ends with this one names another file.
+      if (path.basename(token) !== name) continue;
       if (known.has(`${file}\n${token}`)) continue;
       const target = resolveToken(file, token);
       if (target !== image && fs.existsSync(target)) continue;
@@ -354,6 +356,7 @@ for (const p of todo) {
       if (at === -1) break;
       from = at + name.length;
       const token = pathToken(text, at, name.length);
+      if (path.basename(token) !== name) continue;
       const target = resolveToken(file, token);
       if (target !== p.image && fs.existsSync(target)) continue;
       left.push(`${rel(file)}: ${token}`);

@@ -43,7 +43,7 @@
     "react-player": "^3.4.0"
   },
   "devDependencies": {
-    "@hubpav/hwio-web-worker": "0.10.7",
+    "@hubpav/hwio-web-worker": "0.10.9",
     "@types/mdast": "^4.0.4",
     "github-slugger": "^2.0.0",
     "wrangler": "^4.159.0"

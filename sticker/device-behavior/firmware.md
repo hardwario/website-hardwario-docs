@@ -14,13 +14,11 @@ This page shows how to find out which firmware a STICKER runs and how to update 
 - **On request:** queue the `get_info` downlink `08032200` on fPort 85. The device answers with an Info uplink after its next uplink.
 - **HARDWARIO Manager:** read the device info over NFC, see [**Device info and LoRaWAN keys**](/apps/hardwario-manager/sticker/device-info).
 
-An installed device should run the release image: its Info shows `build_type_name` `main` and `debug` `false`. A debug image keeps the processor awake for its shell, which drains the batteries.
-
 ## Update the firmware
 
-You can update the firmware only with a J-Link debug probe connected to the programming pads (SWD) of the device. There is no update over the radio or over NFC, so every update needs physical access to the device. The tools and steps are in [**Firmware setup**](../developer-access/firmware-setup.md).
+You can update the firmware only with a J-Link programmer connected to the programming pads of the device. There is no update over the radio or over NFC, so every update needs physical access to the device. The tools and steps are in [**Firmware setup**](../developer-access/firmware-setup.md).
 
-Flashing without erasing the chip keeps the settings, keys and counters. A debug or provisioning image overwrites the stored sensor history, so read out the history you need before you flash.
+Flashing without erasing the chip keeps the settings, keys and counters. Read out the sensor history you need before you update.
 
 :::caution Never erase the whole chip
 A chip erase (mass erase) deletes the serial number, the secret key and the LoRaWAN keys. HARDWARIO Manager can then no longer talk to the device.
@@ -28,9 +26,7 @@ A chip erase (mass erase) deletes the serial number, the secret key and the LoRa
 
 ## Release files
 
-Every [**GitHub release**](https://github.com/hardwario/sticker-firmware/releases) contains three firmware images and a checksum file:
+Every [**GitHub release**](https://github.com/hardwario/sticker-firmware/releases) contains firmware images and a checksum file. For installed devices use:
 
-- the **release** image for installed devices
-- the **debug** image with the shell, for diagnostics
-- the **provisioning** image for production
+- the **release** image
 - `SHA256SUMS`, to check a download with `sha256sum -c SHA256SUMS`

@@ -1,7 +1,7 @@
 ---
 slug: configuration
 title: Konfigurace
-description: Jak zařízení STICKER nastavit přes NFC, downlinkem nebo v shellu, kdy se změna projeví a co s nastavením udělá reset.
+description: Jak zařízení STICKER nastavit přes NFC nebo downlinkem, kdy se změna projeví a co s nastavením udělá reset.
 ---
 import LedPattern from '@site/src/components/LedPattern';
 
@@ -9,15 +9,14 @@ import LedPattern from '@site/src/components/LedPattern';
 
 Zařízení STICKER nemá tlačítka ani displej. Na této stránce zjistíte, jak ho nastavit, kdy se změna projeví a co s nastavením udělá reset.
 
-## Tři způsoby konfigurace {#three-ways-to-configure}
+## Dva způsoby konfigurace {#two-ways-to-configure}
 
 | Způsob | Co potřebujete | Co můžete změnit |
 |---|---|---|
 | Aplikace [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration) přes NFC | Telefon s NFC a secret key zařízení | Všechna nastavení včetně LoRaWAN, ale ne parametry rádia pro LoRa P2P |
 | [**Downlink**](downlinks.md), tedy zpráva ze síťového serveru | Funkční připojení k síti | Většinu nastavení, například intervaly, senzory a pravidla alarmů, ale žádná síťová nastavení |
-| Shell | [**Sestavení debug**](firmware.md) a sonda J-Link | Všechna nastavení |
 
-Standardně se používá NFC. V nainstalovaných zařízeních běží sestavení release, které shell nemá.
+Standardně se používá NFC.
 
 ## Kdy se změna projeví {#when-a-change-takes-effect}
 

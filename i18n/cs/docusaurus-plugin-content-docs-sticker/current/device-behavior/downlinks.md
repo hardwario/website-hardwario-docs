@@ -29,7 +29,7 @@ Příkazy, které by mohly zařízení odříznout od sítě nebo prozradit jeho
 - nulovat čítače, znovu připojit zařízení k síti nebo seřídit hodiny (`reset_counters`, `lrw_join`, `clock_sync`)
 - hned změřit a odeslat hodnoty, prohledat sběrnici 1-Wire, přehrát melodii bzučáku nebo vyčíst historii (`sample`, `force_send`, `w1_scan`, `buzzer_play`, `req_history`)
 
-**Jen přes NFC** (nebo v shellu) fungují:
+**Jen přes NFC** fungují:
 
 - reset zařízení a obnovení továrního nastavení (`device_reset`, `factory_reset`)
 - reset LoRaWAN (`lrw_reset`)

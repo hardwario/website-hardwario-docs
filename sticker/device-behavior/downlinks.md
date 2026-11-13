@@ -29,7 +29,7 @@ Commands that could cut the device off the network or reveal its secrets work on
 - reset counters, join again or sync the clock (`reset_counters`, `lrw_join`, `clock_sync`)
 - measure and send now, scan the 1-Wire bus, play the buzzer or replay the history (`sample`, `force_send`, `w1_scan`, `buzzer_play`, `req_history`)
 
-**Only over NFC** (or the shell):
+**Only over NFC:**
 
 - device reset and factory reset (`device_reset`, `factory_reset`)
 - LoRaWAN reset (`lrw_reset`)

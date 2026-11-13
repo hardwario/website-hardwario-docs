@@ -71,24 +71,13 @@ Příklad: průtokoměr na vstupu A nesmí za 15 s dodat 100 impulzů. Alarm za
 
 - **HARDWARIO Manager:** **Configuration → Alarms**, viz [**Pravidla alarmů**](/apps/hardwario-manager/sticker/alarms) v průvodci aplikací HARDWARIO Manager.
 - **Downlink** (zpráva ze sítě do zařízení): příkaz `set_param` s pravidly `alarm_0` až `alarm_15`. Příkaz za vás sestaví [**Generátor příkazů přes downlink**](../connectivity/downlink-commands-generator.mdx).
-- **Shell:** příkazy `alarm`, viz [**Pravidla alarmů**](../developer-access/alarm-rules.md).
 
-Pravidlo poslané downlinkem nebo přes NFC platí hned, ale restart přežije, až když ho uložíte. Při uložení se zařízení restartuje. Pravidla nastavená v shellu se ukládají okamžitě.
+Pravidlo poslané downlinkem nebo přes NFC platí hned, ale restart přežije, až když ho uložíte. Při uložení se zařízení restartuje.
 
 <details>
-<summary><b>Příklady v podobě příkazů</b></summary>
+<summary><b>Teplotní příklad jako downlink</b></summary>
 
-V shellu zapíšete tři příklady jako pravidla 0 až 2 pro základní desku zařízení STICKER (`mb`) takto:
-
-```text
-alarm set 0 mb temperature lo 5 hi 30 dwell 1
-alarm set 1 mb input-a-state from 1 to 1 dwell 5
-alarm set 2 mb input-a-count hi 100 dwell 15
-```
-
-Parametr `dwell` je podle druhu pravidla hystereze, doba trvání stavu nebo okno pro počítání.
-
-V downlinku má teplotní pravidlo podobu 18bajtové hodnoty `0300000100000000a0400000f0410000803f`. Jako JSON na fPort 85 (port LoRaWAN pro příkazy) ho zapíšete jako pravidlo 0 a uložíte takto:
+Teplotní pravidlo z prvního příkladu má v downlinku podobu 18bajtové hodnoty `0300000100000000a0400000f0410000803f`. Jako JSON na fPort 85 (port LoRaWAN pro příkazy) ho zapíšete jako pravidlo 0 a uložíte takto:
 
 ```json
 { "seq": 1, "command": "set_param", "set_param": { "alarms": { "alarm_0": "0300000100000000a0400000f0410000803f" }, "save": true } }

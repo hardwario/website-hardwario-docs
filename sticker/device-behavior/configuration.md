@@ -1,7 +1,7 @@
 ---
 slug: configuration
 title: Configuration
-description: How to configure STICKER over NFC, by downlink or on the shell, when a change takes effect and what a reset does to the settings.
+description: How to configure STICKER over NFC or by downlink, when a change takes effect and what a reset does to the settings.
 ---
 import LedPattern from '@site/src/components/LedPattern';
 
@@ -9,15 +9,14 @@ import LedPattern from '@site/src/components/LedPattern';
 
 STICKER has no buttons and no display. This page shows the ways to configure it, when a change takes effect and what a reset does to the settings.
 
-## Three ways to configure
+## Two ways to configure
 
 | Way | What you need | What it can change |
 |---|---|---|
 | [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration) over NFC | A phone with NFC and the secret key of the device | All settings, including the LoRaWAN setup, but not the LoRa P2P radio settings |
 | [**Downlink**](downlinks.md), a message from the network server | A working network connection | Most settings, such as intervals, sensors and alarm rules, but no network settings |
-| Shell | A [**debug build**](firmware.md) and a J-Link probe | All settings |
 
-NFC is the standard way. Installed devices run the release build, which has no shell.
+NFC is the standard way.
 
 ## When a change takes effect
 

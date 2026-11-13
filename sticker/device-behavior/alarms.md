@@ -71,24 +71,13 @@ Example: a flow meter on input A must not deliver 100 pulses within 15 s. The a
 
 - **HARDWARIO Manager:** **Configuration → Alarms**, see [**Alarm rules**](/apps/hardwario-manager/sticker/alarms) in the HARDWARIO Manager guide.
 - **Downlink** (a message from the network to the device): the `set_param` command with the rules `alarm_0` to `alarm_15`, built for you by the [**Downlink commands generator**](../connectivity/downlink-commands-generator.mdx).
-- **Shell:** the `alarm` commands, see [**Alarm rules**](../developer-access/alarm-rules.md).
 
-A rule sent over a downlink or NFC works at once, but it survives a restart only after you save it. Saving restarts the device. Rules set in the shell are saved at once.
+A rule sent over a downlink or NFC works at once, but it survives a restart only after you save it. Saving restarts the device.
 
 <details>
-<summary><b>The examples as rule commands</b></summary>
+<summary><b>The temperature example as a downlink</b></summary>
 
-The three examples in the shell, as rules 0 to 2 on the STICKER board (`mb`):
-
-```text
-alarm set 0 mb temperature lo 5 hi 30 dwell 1
-alarm set 1 mb input-a-state from 1 to 1 dwell 5
-alarm set 2 mb input-a-count hi 100 dwell 15
-```
-
-`dwell` is the hysteresis, the hold time or the counting window, depending on the kind of rule.
-
-Over a downlink, the temperature rule is the 18-byte value `0300000100000000a0400000f0410000803f`. As JSON on fPort 85 (the LoRaWAN port for commands), written as rule 0 and saved:
+Over a downlink, the temperature rule from the first example is the 18-byte value `0300000100000000a0400000f0410000803f`. As JSON on fPort 85 (the LoRaWAN port for commands), written as rule 0 and saved:
 
 ```json
 { "seq": 1, "command": "set_param", "set_param": { "alarms": { "alarm_0": "0300000100000000a0400000f0410000803f" }, "save": true } }

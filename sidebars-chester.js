@@ -232,6 +232,18 @@ const sidebars = {
         'power-management',
         'platform-connectivity/satellite-connectivity',
         {
+          type: 'doc',
+          id: 'platform-security/index',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Development',
+      className: 'sidebar-section',
+      collapsible: false,
+      items: [
+        {
           type: 'category',
           label: 'Firmware Flashing',
           link: {
@@ -298,18 +310,22 @@ const sidebars = {
             'firmware-sdk/licenses',
           ],
         },
-        {
-          type: 'doc',
-          id: 'platform-security/index',
-        },
-        'product-certification',
-        'ordering-codes',
       ],
     },
     {
-      type: 'doc',
-      id: 'changelog',
-      label: 'Changelog',
+      type: 'category',
+      label: 'Other',
+      className: 'sidebar-section',
+      collapsible: false,
+      items: [
+        'product-certification',
+        'ordering-codes',
+        {
+          type: 'doc',
+          id: 'changelog',
+          label: 'Changelog',
+        },
+      ],
     },
   ],
 };

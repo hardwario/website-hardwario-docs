@@ -110,6 +110,26 @@ const sidebars = {
       className: 'sidebar-section',
       collapsible: false,
       items: [
+        {
+          type: 'category',
+          label: 'Hardware Description',
+          link: {
+            type: 'doc',
+            id: 'hardware-description',
+          },
+          collapsed: true,
+          items: [
+            'power-management',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Development',
+      className: 'sidebar-section',
+      collapsible: false,
+      items: [
         'connectivity/downlink-commands',
         {
           type: 'category',
@@ -130,25 +150,21 @@ const sidebars = {
             'developer-access/diagnostics',
           ],
         },
-        {
-          type: 'category',
-          label: 'Hardware Description',
-          link: {
-            type: 'doc',
-            id: 'hardware-description',
-          },
-          collapsed: true,
-          items: [
-            'power-management',
-          ],
-        },
-        'ordering-codes',
       ],
     },
     {
-      type: 'doc',
-      id: 'changelog',
-      label: 'Changelog',
+      type: 'category',
+      label: 'Other',
+      className: 'sidebar-section',
+      collapsible: false,
+      items: [
+        'ordering-codes',
+        {
+          type: 'doc',
+          id: 'changelog',
+          label: 'Changelog',
+        },
+      ],
     },
   ],
 };

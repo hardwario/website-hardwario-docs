@@ -74,13 +74,21 @@ const sidebars = {
             'mikrotik/winbox-setup',
           ],
         },
-        'ordering-codes',
       ],
     },
     {
-      type: 'doc',
-      id: 'changelog',
-      label: 'Changelog',
+      type: 'category',
+      label: 'Other',
+      className: 'sidebar-section',
+      collapsible: false,
+      items: [
+        'ordering-codes',
+        {
+          type: 'doc',
+          id: 'changelog',
+          label: 'Changelog',
+        },
+      ],
     },
   ],
 };

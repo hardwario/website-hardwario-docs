@@ -11,6 +11,10 @@
     "message": "Pokročilé",
     "description": "The label for category 'Advanced' in sidebar 'docs'"
   },
+  "sidebar.docs.category.Development": {
+    "message": "Vývoj",
+    "description": "The label for category 'Development' in sidebar 'docs'"
+  },
   "sidebar.docs.category.Console Access": {
     "message": "Přístup ke konzoli",
     "description": "The label for category 'Console Access' in sidebar 'docs'"

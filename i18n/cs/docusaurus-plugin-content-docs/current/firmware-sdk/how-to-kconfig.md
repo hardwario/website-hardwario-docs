@@ -1,6 +1,7 @@
 ---
 slug: how-to-kconfig
 title: "Jak na: Kconfig"
+description: "Vlastní volba Kconfig v aplikaci pro zařízení CHESTER: definice v souboru Kconfig, zapnutí nebo vypnutí v prj.conf a vygenerovaná makra v autoconf.h."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: enclosures
 title: Enclosures
+description: "CHESTER enclosures: the IP67 standard housing of 130x175x45 mm in two colors, mounting options, and ordering codes CHESTER-E1 to E19 with drawings."
 ---
 import Image from '@theme/IdealImage';
 
@@ -137,20 +138,20 @@ See `1`-`F` or `X` explanation in [CHESTER-Z1 Ordering Codes](../ordering-codes.
 
 ### CHESTER-E16-P
 
-![Dimensioned drawing of the CHESTER-E16-P bottom base with machined hole positions](images/chester-e16-p-hwe036-bottom-base.png)
-![Dimensioned drawing of the CHESTER-E16-P top cover with machined hole positions](images/chester-e16-p-hwe036-top-cover.png)
+![Dimensioned drawing of the CHESTER-E16-P bottom base with machined hole positions](images/chester-e16-p-hwe036-bottom-base.webp)
+![Dimensioned drawing of the CHESTER-E16-P top cover with machined hole positions](images/chester-e16-p-hwe036-top-cover.webp)
 
 ### CHESTER-E17-P
 
-![Dimensioned drawing of the larger CHESTER-E17-P bottom base with milled connector openings in the side walls](images/chester-e17-p-hwe037-bottom-base.png)
-![Dimensioned drawing of the CHESTER-E17-P top cover with machined hole positions](images/chester-e17-p-hwe037-top-cover.png)
+![Dimensioned drawing of the larger CHESTER-E17-P bottom base with milled connector openings in the side walls](images/chester-e17-p-hwe037-bottom-base.webp)
+![Dimensioned drawing of the CHESTER-E17-P top cover with machined hole positions](images/chester-e17-p-hwe037-top-cover.webp)
 
 ### CHESTER-E18-P
 
-![Dimensioned drawing of the larger CHESTER-E18-P bottom base with machined hole positions](images/chester-e18-p-hwe038-bottom-base.png)
-![Dimensioned drawing of the CHESTER-E18-P top cover with machined hole positions](images/chester-e18-p-hwe038-top-cover.png)
+![Dimensioned drawing of the larger CHESTER-E18-P bottom base with machined hole positions](images/chester-e18-p-hwe038-bottom-base.webp)
+![Dimensioned drawing of the CHESTER-E18-P top cover with machined hole positions](images/chester-e18-p-hwe038-top-cover.webp)
 
 ### CHESTER-E19-P
 
-![Dimensioned drawing of the larger CHESTER-E19-P bottom base with machined hole positions](images/chester-e19-p-hwe039-bottom-base.png)
-![Dimensioned drawing of the CHESTER-E19-P top cover with machined hole positions](images/chester-e19-p-hwe039-top-cover.png)
+![Dimensioned drawing of the larger CHESTER-E19-P bottom base with machined hole positions](images/chester-e19-p-hwe039-bottom-base.webp)
+![Dimensioned drawing of the CHESTER-E19-P top cover with machined hole positions](images/chester-e19-p-hwe039-top-cover.webp)

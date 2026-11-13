@@ -1,6 +1,7 @@
 ---
 slug: orno-or-we-516
 title: ORNO OR-WE-516
+description: "Connect the ORNO OR-WE-516 three-phase MID energy meter to CHESTER over RS-485 Modbus: wiring, single-phase option, configuration and measured values."
 ---
 
 import Image from '@theme/IdealImage';

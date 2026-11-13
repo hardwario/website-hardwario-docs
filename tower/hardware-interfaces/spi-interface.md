@@ -1,6 +1,7 @@
 ---
 slug: spi-interface
 title: SPI Interface
+description: "The SPI bus on TOWER: the SCK, MOSI, MISO and NSS signals and their Core Module pins P12 to P15, with the LCD Module as an example of an SPI peripheral."
 ---
 import Image from '@theme/IdealImage';
 

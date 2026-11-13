@@ -1,6 +1,7 @@
 ---
 slug: chester-update-phone
 title: How to update CHESTER with phone
+description: "Video tutorial: update CHESTER firmware from your phone in the HARDWARIO Manager app by scanning the firmware QR code, then check the new version."
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: chester-meteo
 title: CHESTER Meteo
+description: "Katalogová aplikace CHESTER Meteo: rychlost a směr větru, srážky, atmosférický tlak, teplota a vlhkost, agregované jako minimum, maximum, průměr a medián."
 ---
 import Image from '@theme/IdealImage';
 

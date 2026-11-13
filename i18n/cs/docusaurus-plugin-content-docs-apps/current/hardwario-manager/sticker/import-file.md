@@ -1,6 +1,7 @@
 ---
 slug: import-file
 title: Import ze souboru
+description: "Import seznamu zařízení STICKER do aplikace HARDWARIO Manager z CSV nebo JSON: vzory souborů, pole serial, secret_key, vendor_key a tags a časté chyby CSV."
 ---
 
 # Import zařízení STICKER ze souboru CSV nebo JSON {#import-stickers-from-a-csv-or-json-file}

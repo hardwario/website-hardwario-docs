@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-decoding
 title: Dekódování dat
+description: "Videonávod k dekódování payloadů LoRaWAN v ChirpStack v4 a zobrazení dekódovaných dat v událostech aplikace."
 title_meta: "Dekódování dat (videonávody)"
 ---
 

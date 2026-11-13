@@ -1,6 +1,7 @@
 ---
 slug: templates
 title: Šablony
+description: "Konfigurační šablony pro STICKER v aplikaci HARDWARIO Manager: vytvoření ze zařízení, ručně, z hexu nebo QR kódu, použití přes NFC či offline a sdílení."
 ---
 
 # Šablony: vytvoření, sdílení, úprava a použití {#templates-create-share-edit-and-apply}

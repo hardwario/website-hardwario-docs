@@ -1,6 +1,7 @@
 ---
 slug: power-supply
 title: Power Supply
+description: "Powering GAUGER from the Mini USB-B connector or the 9–28 V terminal block pins, and which source takes priority when both are connected."
 ---
 
 # Power Supply

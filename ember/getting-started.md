@@ -92,7 +92,7 @@ After opening the application, look at the list where you should see your **EMBE
 - If there is more than one device, look at the EMBER board. On its left side there are two ethernet connectors with a sticker on them. On the sticker, find the **MAC address**, a combination of numbers and letters after the text **E01** (for example: **E01: 48:A5:8A:4F:17:A6**).
 - Go back to **Winbox** and find the device with the **matching MAC address**. Click on the device in the list to select it.
 - Make sure the **jumper** on the board is **removed**. The location of the jumper is shown in the picture below.
-![EMBER jumper, ethernet ports and reset](images/ember-jumper-eth-ports.png)
+![EMBER jumper, ethernet ports and reset](images/ember-jumper-eth-ports.webp)
 
 **Main documentation (recommended start):**
 - EMBER Hotspot configuration & local access:  
@@ -175,7 +175,7 @@ Turns off the login note.
 
 #### Checks for RouterOS updates and installs if available
 - In the left panel **System → Packages → Check for Updates**. A new window will open, check if the versions match. If not, click **Download&Install** and wait a few minutes.
-![EMBER RouterOS update](images/ember-update-routeros.png)
+![EMBER RouterOS update](images/ember-update-routeros.webp)
 
 ---
 
@@ -252,7 +252,7 @@ Recommended if you want to **get data from devices quickly** and forward it to a
 
 Additional resources:
 - Add EMBER gateway to ChirpStack v4 (HARDWARIO tutorial):  
-  https://docs.hardwario.com/ember/chirpstack/chirpstack-ember/
+  https://docs.hardwario.com/apps/chirpstack/chirpstack-configuration/chirpstack-gateways/
 
 - (Optional) Install ChirpStack v4 (Debian/Ubuntu):  
   https://docs.hardwario.com/apps/chirpstack/chirpstack-installation/

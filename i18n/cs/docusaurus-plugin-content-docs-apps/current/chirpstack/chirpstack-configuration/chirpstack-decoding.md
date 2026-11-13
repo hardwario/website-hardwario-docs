@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-decoding
 title: Dekódování dat
+description: "Nastavení kodeku payloadu (JavaScript) v profilu zařízení ChirpStack v4, upravitelný dekodér uplinků pro STICKER a kontrola dekódovaných dat v Events."
 title_meta: "Dekódování dat (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';

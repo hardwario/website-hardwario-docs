@@ -1,6 +1,7 @@
 ---
 slug: serial_sensors
 title: Sériová zařízení
+description: "Sériová zařízení otestovaná se zařízením CHESTER a jejich základní konfigurace: čtečka RFID Promag MF7S připojená přes RS-232 k variantě CHESTER Serial."
 ---
 
 import Image from '@theme/IdealImage';

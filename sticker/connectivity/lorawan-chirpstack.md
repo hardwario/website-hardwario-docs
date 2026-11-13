@@ -1,6 +1,7 @@
 ---
 slug: lorawan-chirpstack
 title: ChirpStack v4
+description: "Connect STICKER to ChirpStack v4: read its LoRaWAN keys over NFC in HARDWARIO Manager, choose OTAA or ABP and set up the device profile and ttn.js codec."
 title_meta: "ChirpStack v4 (STICKER)"
 ---
 import Image from '@theme/IdealImage';

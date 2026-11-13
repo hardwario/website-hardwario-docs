@@ -1,6 +1,7 @@
 ---
 slug: users
 title: Přidávání uživatelů
+description: "Nové uživatelské účty v ThingsBoard: přiřazení zákazníka a uživatelské skupiny, aktivační odkaz e-mailem nebo ručně a změna vlastního hesla v účtu."
 ---
 
 import Image from '@theme/IdealImage';

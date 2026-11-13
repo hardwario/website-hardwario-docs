@@ -1,13 +1,14 @@
 ---
 slug: about-radio-dongle
 title: About Radio Dongle
+description: "Radio Dongle, the USB gateway of the HARDWARIO radio network for up to 32 TOWER nodes, with an STM32L083CZ MCU, 868/915 MHz radio and dual security chip."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/radio-dongle.png')} alt="Radio Dongle, a black USB stick with a red HARDWARIO label" /></div>
+      <div><Image img={require('./images/radio-dongle.webp')} alt="Radio Dongle, a black USB stick with a red HARDWARIO label" /></div>
     </div>
     <div class="col col--6">
 

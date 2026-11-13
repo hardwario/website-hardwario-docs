@@ -1,45 +1,59 @@
 ---
 slug: chirpstack-gateways
-title: Gateways
-title_meta: "Gateways (ChirpStack)"
+title: "Gateways: Semtech UDP"
+description: "Connect a gateway to ChirpStack v4 over unencrypted Semtech UDP on port 1700: Gateway Bridge backend, firewall, adding the gateway and checking Last seen."
+sidebar_label: Semtech UDP
+title_meta: "Gateways: Semtech UDP (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 
-# Gateways Configuration Guide
+# Gateways: Semtech UDP {#gateways-semtech-udp}
 
-This tutorial guides you through the process of adding and configuring a gateway in ChirpStack v4.
+This guide shows how to connect a gateway to **ChirpStack v4** with the **Semtech UDP** packet forwarder protocol and how to add the gateway in ChirpStack. Semtech UDP is easy to set up, but the traffic between the gateway and the server is neither encrypted nor authenticated. For an encrypted connection with gateway certificates, use [Basics Station](./chirpstack-basics-station.md) instead.
+
+## How it works {#how-it-works}
+The gateway sends the received LoRaWAN packets as UDP datagrams to the **ChirpStack Gateway Bridge**, by default to port **1700**. The bridge passes them over MQTT to ChirpStack, and downlinks travel the same way back. In chirpstack-docker, a Gateway Bridge with the `semtech_udp` backend runs by default, so no server configuration is needed for EU868.
+
+```toml
+[backend]
+type="semtech_udp"
+
+  [backend.semtech_udp]
+  udp_bind="0.0.0.0:1700"
+```
+
+- Open **UDP port 1700** in the firewall for the network the gateways send from.
+- The MQTT topics of the bridge (e.g. `eu868/gateway/…`) must match the region on the ChirpStack server.
 
 ---
 
-From the left navigation menu, under tenant, select **Gateways** and then click the **Add Gateway** button in the top right.  
+## Add the gateway in ChirpStack {#add-the-gateway-in-chirpstack}
+From the left navigation menu, under tenant, select **Gateways** and then click the **Add Gateway** button in the top right.
 
-A form will appear where you can enter gateway information such as:  
-- **Name**  
-- **Gateway ID**  
-- **Stats Interval**  
+A form will appear where you can enter gateway information such as:
+- **Name**
+- **Gateway ID**
+- **Stats Interval**
 
-Once completed, click **Submit**.  
+Once completed, click **Submit**.
 
 ![ChirpStack v4 - Gateways](images/chirpstack-tutorial-1.png)
 
 :::info
-If you are using our **EMBER gateway**, the **Gateway ID** can be found in the **MikroTik software** under **LoRa → Devices**.  
+If you are using our **EMBER gateway**, the **Gateway ID** can be found in the **MikroTik software** under **LoRa → Devices**.
 :::
 
 ---
 
-## EMBER Gateways – MikroTik Software  
+## Configure the gateway {#configure-the-gateway}
+Point the gateway's packet forwarder to the address of the server and UDP port 1700 (up and down).
 
-If you are using our **EMBER** as the gateway, all of its configuration must be done directly in the **MikroTik system**.
-Once configured, the gateway should become visible and ready to connect with the ChirpStack system.
+- EMBER: [ChirpStack v4: Semtech UDP](/ember/lorawan-network-server/lorawan-chirpstack)
+- Updating EMBER RouterOS: [Gateway update](/ember/mikrotik/gateway-update)
 
+Once connected, the gateway shows **Last seen** in ChirpStack, and its charts show received packets.
 
-Here is the link to the **step-by-step guide** for **updating the gateway via MikroTik**:
-https://docs.hardwario.com/ember/mikrotik/gateway-update
-
-
-
-## Video Tutorial
+## Video Tutorial {#video-tutorial}
 
 :::tip
 If you need further assistance or a visual demonstration of the process described in this guide, consult the [**Video Guide**](/apps/videos-apps/chirpstack-ember).

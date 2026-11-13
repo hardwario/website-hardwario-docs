@@ -1,6 +1,7 @@
 ---
 slug: configuration-parameters
 title: Konfigurační parametry
+description: "Přehled všech parametrů lte config zařízení CHESTER: anténa, režim sítě, uzamčení pásem, PLMN, APN, ověřování, přihlašovací údaje a statická IP adresa."
 ---
 import Image from '@theme/IdealImage';
 

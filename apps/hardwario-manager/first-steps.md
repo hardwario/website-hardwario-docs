@@ -1,6 +1,7 @@
 ---
 slug: first-steps
 title: Quick Start Guide
+description: "Install HARDWARIO Manager on Android or iOS, turn on NFC for STICKER or Bluetooth for CHESTER, and connect to your first device."
 title_meta: "Quick Start Guide (HARDWARIO Manager)"
 ---
 

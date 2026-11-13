@@ -1,6 +1,7 @@
 ---
 slug: how-to-cbor
 title: "How to: CBOR"
+description: "Encode CHESTER data for HARDWARIO Cloud with CBOR: describe the message in a YAML codec file and use the keys generated in app_codec.h in your C code."
 ---
 import Image from '@theme/IdealImage';
 

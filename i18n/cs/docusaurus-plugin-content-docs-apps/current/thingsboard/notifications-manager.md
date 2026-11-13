@@ -1,6 +1,7 @@
 ---
 slug: notifications-manager
 title: Notifikace
+description: "Upozornění e-mailem nebo SMS ve Správci pravidel notifikací v ThingsBoard: výběr zařízení a proměnných, limit a nastavení Duration a Cooldown."
 ---
 import Image from '@theme/IdealImage';
 

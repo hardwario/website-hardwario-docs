@@ -1,5 +1,6 @@
 ---
 title: Autentizace
+description: "Autentizace požadavků na API HARDWARIO Cloud hlavičkou X-API-KEY: vytvoření klíče API pro prostor, omezení na zařízení pomocí tagů a bezpečné uložení."
 ---
 
 # Autentizace {#authentication}

@@ -1,6 +1,7 @@
 ---
 slug: how-to-analog-digital-converter
 title: "Jak na: Analogově-digitální převodník"
+description: "Měření napětí na vstupech A0 až A5 analogově-digitálním převodníkem v SDK pro TOWER: 16bitová hodnota nebo volty, synchronní a asynchronní vzorkování."
 ---
 import Image from '@theme/IdealImage';
 

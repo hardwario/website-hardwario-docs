@@ -1,6 +1,7 @@
 ---
 slug: application-over-at
 title: Application over USB-C
+description: "Update GLIDER firmware over USB-C without a debug probe: convert zephyr.signed.bin with west bin-to-at, stream it to the AT console and confirm with AT$FW."
 ---
 import Image from '@theme/IdealImage';
 

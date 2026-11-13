@@ -1,6 +1,7 @@
 ---
 slug: how-to-lora-module
 title: "How To: LoRa Module"
+description: "Send TOWER messages over LoRa with the LoRa Module: how a gateway and a backend such as The Things Network pass them to your server, plus a GitHub example."
 ---
 import Image from '@theme/IdealImage';
 

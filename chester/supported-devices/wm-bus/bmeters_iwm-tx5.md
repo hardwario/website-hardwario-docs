@@ -1,6 +1,7 @@
 ---
 slug: bmeters_iwm-tx5
 title: BMeters IWM-TX5
+description: "Configure the BMeters IWM-TX5 radio module for GSD8-I water meters over NFC with the B METERS NFC Config app and map its wM-Bus address to CHESTER."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-iwm-tx5.png')} width={376} height={376} alt="White BMeters IWM-TX5 wM-Bus radio module with barcode label and NFC mark" />
+        <Image img={require('./images/bmeters-iwm-tx5.webp')} width={376} height={376} alt="White BMeters IWM-TX5 wM-Bus radio module with barcode label and NFC mark" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -86,7 +87,7 @@ Adjust the following settings:
 
 Your water meter is now successfully configured.
 
-![Read data via config](images/bmeters-iwm-tx5-data.png)
+![Read data via config](images/bmeters-iwm-tx5-data.webp)
 
 ## Wireless M-Bus Address Configuration
 
@@ -98,7 +99,7 @@ The address is located **in the center below the barcode**, after the **CE mark*
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-iwm-tx5.png')} width={376} height={376} alt="IWM-TX5 with the 8-digit wM-Bus address outlined below the barcode after the CE mark" />
+        <Image img={require('./images/bmeters-iwm-tx5.webp')} width={376} height={376} alt="IWM-TX5 with the 8-digit wM-Bus address outlined below the barcode after the CE mark" />
       </div>
     </div>
     <div class="col col--24"></div>

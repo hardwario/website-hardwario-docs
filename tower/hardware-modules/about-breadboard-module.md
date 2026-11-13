@@ -1,13 +1,14 @@
 ---
 slug: about-breadboard-module
 title: About Breadboard Module
+description: "TOWER Breadboard Module, a narrow 114 x 33 mm breakout with precision pin headers that plugs any HARDWARIO TOWER module into a breadboard."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/breadboard-module.png')} alt="Breadboard Module with module socket headers and a narrow breakout for a solderless breadboard" /></div>
+      <div><Image img={require('./images/breadboard-module.webp')} alt="Breadboard Module with module socket headers and a narrow breakout for a solderless breadboard" /></div>
     </div>
     <div class="col col--6">
 

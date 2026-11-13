@@ -1,6 +1,7 @@
 ---
 slug: zenner-caltos-e
 title: Zenner caltos-E
+description: "Indikátor topných nákladů Zenner caltos-E se zařízením CHESTER wM-Bus: adresa ve spodní části přístroje, její přiřazení a dešifrování přijatých dat."
 ---
 import Image from '@theme/IdealImage';
 

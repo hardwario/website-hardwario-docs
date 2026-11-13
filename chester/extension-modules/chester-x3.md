@@ -1,6 +1,7 @@
 ---
 slug: chester-x3
 title: CHESTER-X3 (Precision ADC)
+description: "CHESTER-X3 precision ADC modules: X3A for two Pt 100 or Pt 1000 RTD sensors, X3B for two type K thermocouples, X3C for two load cells, with pinout."
 ---
 import Image from '@theme/IdealImage';
 
@@ -11,7 +12,7 @@ This article describes the CHESTER-X3A, CHESTER-X3B and CHESTER-X3C extension mo
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x3-top.png')} alt="Top view of the CHESTER-X3 module with two ADS122C precision ADCs"/></div>
+      <div><Image img={require('./images/chester-x3-top.webp')} alt="Top view of the CHESTER-X3 module with two ADS122C precision ADCs"/></div>
     </div>
     <div class="col col--10">
     </div>

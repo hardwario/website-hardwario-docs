@@ -1,5 +1,6 @@
 ---
 title: Examples
+description: "HARDWARIO Cloud API example in cURL, Python and Node.js printing the latest data message of every device in a space, and the Swagger reference."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

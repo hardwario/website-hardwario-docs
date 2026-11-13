@@ -1,7 +1,7 @@
 ---
 slug: features
 title: Features
-description: "This page describes notable behaviors of the STICKER firmware: how the device manages power, keeps its radio connection (LoRaWAN or P2P) healthy, and protects stored data."
+description: "STICKER firmware behavior: reset ladder and vendor token, radio-silent mode, low-battery shutdown, LoRaWAN and P2P link recovery and the real-time clock."
 title_meta: "Features (STICKER)"
 ---
 import Image from '@theme/IdealImage';

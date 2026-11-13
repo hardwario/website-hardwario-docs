@@ -1,6 +1,7 @@
 ---
 slug: assets
 title: Assety
+description: "Assety v ThingsBoard pro budovy, podlaží nebo zóny: vytvoření assetu, propojení se zařízeními přes relace a sdílení s podřízenými zákazníky."
 ---
 
 import Image from '@theme/IdealImage';

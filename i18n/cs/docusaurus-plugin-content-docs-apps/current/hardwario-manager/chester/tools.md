@@ -1,6 +1,7 @@
 ---
 slug: tools
 title: Nástroje
+description: "Nástroje pro CHESTER v aplikaci HARDWARIO Manager: aktualizace firmwaru z QR kódu, restart zařízení a obnovení výchozí konfigurace továrním resetem."
 title_meta: "Nástroje (HARDWARIO Manager pro CHESTER)"
 ---
 

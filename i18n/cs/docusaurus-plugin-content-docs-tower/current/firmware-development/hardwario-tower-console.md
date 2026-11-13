@@ -1,6 +1,7 @@
 ---
 slug: hardwario-tower-console
 title: Konzole TOWER
+description: "Čtení logů ze zařízení v konzoli HARDWARIO TOWER aplikace HARDWARIO Code: vymazání a uložení logu, připojení, restart zařízení a vstup pro příkazy AT."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,13 +1,14 @@
 ---
 slug: about-cover-module
 title: About Cover Module
+description: "TOWER Cover Module, a snap-in face plate for 88 x 55 mm HARDWARIO electronics in 3D-printed enclosures, with the Mini Cover Module for smaller builds."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/cover-module.png')} alt="Cover Module, a plain black face plate with ventilation slots and four mounting holes" /></div>
+      <div><Image img={require('./images/cover-module.webp')} alt="Cover Module, a plain black face plate with ventilation slots and four mounting holes" /></div>
     </div>
     <div class="col col--6">
 

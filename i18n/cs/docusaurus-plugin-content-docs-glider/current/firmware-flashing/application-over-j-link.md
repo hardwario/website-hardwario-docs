@@ -1,6 +1,7 @@
 ---
 slug: application-over-j-link
 title: Aplikace přes J-Link
+description: "Rychlé nahrání aplikačního firmwaru do zařízení GLIDER příkazem west flash sondou SEGGER J-Link přes SWD při vývoji, bez možnosti rollbacku MCUboot."
 title_meta: "Aplikace přes J-Link (GLIDER)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: bmeters_iwm-tx3
 title: BMeters IWM-TX3
+description: "Configure the BMeters IWM-TX3 radio module for GMDM-I, GMB-I, GMB-RP-I and CPR-M3-I water meters over NFC and map its wM-Bus address to CHESTER."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-iwm-tx3.png')} width={376} height={376} alt="White BMeters IWM-TX3 wM-Bus radio module for water meters" />
+        <Image img={require('./images/bmeters-iwm-tx3.webp')} width={376} height={376} alt="White BMeters IWM-TX3 wM-Bus radio module for water meters" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -86,7 +87,7 @@ Adjust the following settings:
 
 Your water meter is now successfully configured.
 
-![Read data via config](images/bmeters-iwm-tx3-data.png)
+![Read data via config](images/bmeters-iwm-tx3-data.webp)
 
 ---
 
@@ -100,7 +101,7 @@ The address is located **in the center above the barcode**, following the letter
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-iwm-tx3.png')} width={376} height={376} alt="IWM-TX3 with the 8-digit wM-Bus address after SN outlined above the barcode" />
+        <Image img={require('./images/bmeters-iwm-tx3.webp')} width={376} height={376} alt="IWM-TX3 with the 8-digit wM-Bus address after SN outlined above the barcode" />
       </div>
     </div>
     <div class="col col--24"></div>

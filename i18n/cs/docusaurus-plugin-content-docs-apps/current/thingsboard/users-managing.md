@@ -1,6 +1,7 @@
 ---
 slug: users-managing
 title: Správa uživatelů
+description: "Co uživatelé zákazníka v ThingsBoard vidí a smějí dělat: role typu Group a Generic, uživatelské skupiny a sdílení skupin zařízení."
 ---
 
 import Image from '@theme/IdealImage';

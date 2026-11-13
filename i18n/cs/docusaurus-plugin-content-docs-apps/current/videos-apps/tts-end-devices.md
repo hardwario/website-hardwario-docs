@@ -1,7 +1,7 @@
 ---
 slug: tts-end-devices
 title: Přidání koncových zařízení
-title_meta: "Přidání koncových zařízení (videonávod The Things Stack)"
+title_meta: "The Things Stack: koncová zařízení (video)"
 ---
 
 import Image from '@theme/IdealImage';

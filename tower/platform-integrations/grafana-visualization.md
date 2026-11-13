@@ -16,7 +16,7 @@ You can use our [**Pre-Installed Image**](../server-raspberry-pi/installation-os
 
 [**Grafana**](https://grafana.com) is an open platform for beautiful analytics and monitoring. It allows you to create nice-looking dashboards that will give you quick insights into your sensor data.
 
-<Image img={require('./images/grafana-for-visualization-grafana.png')} alt="Grafana climate-station dashboard with gauges and graphs for temperature, humidity, illuminance, and pressure" />
+<Image img={require('./images/grafana-for-visualization-grafana.webp')} alt="Grafana climate-station dashboard with gauges and graphs for temperature, humidity, illuminance, and pressure" />
 
 ## Install Grafana
 
@@ -233,6 +233,6 @@ Select **Add Data Source** and fill in the data
 
 #### Example output for [**Wireless Climate Monitor**](https://www.hackster.io/jakub-smejkal/radio-climate-monitor-96de57) and [**Wireless CO2 Monitor**](https://www.hackster.io/jakub-smejkal/radio-co2-monitor-311d2c) projects
 
-<Image img={require('./images/grafana-dashboard.png')} alt="Imported dashboard showing climate and CO2 monitor stats with temperature and humidity graphs" />
+<Image img={require('./images/grafana-dashboard.webp')} alt="Imported dashboard showing climate and CO2 monitor stats with temperature and humidity graphs" />
 
 

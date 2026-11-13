@@ -1,5 +1,6 @@
 ---
 title: Čtení senzorů 1-Wire do Grafany
+description: "Sondy DS18B20 na osmi portech 1-Wire zařízení FIBER: čtení ze sysfs v Linuxu, zápis do InfluxDB přes flow s uzlem exec v Node-RED a grafy v Grafaně."
 ---
 
 # Čtení senzorů 1-Wire do Grafany {#reading-1-wire-sensors-into-grafana}

@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('../../../../../chester/extension-modules/images/chester-x12-top.png')} alt="Pohled na červenou desku CHESTER-X12 shora s převodníkem I²C na UART SC16IS740IPW, transceiverem RS-232 MAX3226, tlumivkou snižujícího měniče, krystalem a pájecí propojkou adresy ADR"/></div>
+<div><Image img={require('../../../../../chester/extension-modules/images/chester-x12-top.webp')} alt="Pohled na červenou desku CHESTER-X12 shora s převodníkem I²C na UART SC16IS740IPW, transceiverem RS-232 MAX3226, tlumivkou snižujícího měniče, krystalem a pájecí propojkou adresy ADR"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -103,7 +103,7 @@ Transceiver RS-232 používá záporné napěťové úrovně. Zařízení CHESTE
 
 <div style={{ maxWidth: '500px' }}>
 
-![Umístění diod TVS](../../../../../chester/extension-modules/images/chester-x12-tvs-modification.png)
+![Umístění diod TVS](../../../../../chester/extension-modules/images/chester-x12-tvs-modification.webp)
 
 </div>
 :::
@@ -147,13 +147,13 @@ Modul CHESTER-X12 lze použít s různými konfiguracemi základních desek CHES
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![Základní deska CHESTER-M CGLS s baterií velikosti D, superkondenzátory a svorkovnicemi A/B](../../../../../chester/extension-modules/images/chester-x12-cgls.png)
+![Základní deska CHESTER-M CGLS s baterií velikosti D, superkondenzátory a svorkovnicemi A/B](../../../../../chester/extension-modules/images/chester-x12-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![Nosná deska CHESTER-C4, modrá deska s dvojitým držákem baterií velikosti D a svorkovnicemi](../../../../../chester/extension-modules/images/chester-x12-c4.png)
+![Nosná deska CHESTER-C4, modrá deska s dvojitým držákem baterií velikosti D a svorkovnicemi](../../../../../chester/extension-modules/images/chester-x12-c4.webp)
 
 </div>
 </div>

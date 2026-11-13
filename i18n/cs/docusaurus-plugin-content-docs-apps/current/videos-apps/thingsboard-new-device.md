@@ -1,6 +1,7 @@
 ---
 slug: thingsboard-new-device
 title: Nové zařízení
+description: "Videonávod k vytvoření nového zařízení v ThingsBoard, vyplnění jeho údajů a zobrazení jeho telemetrie ze seznamu zařízení."
 ---
 
 import Image from '@theme/IdealImage';

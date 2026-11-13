@@ -1,6 +1,7 @@
 ---
 slug: import-file
 title: Import from a file
+description: "Import a STICKER list into HARDWARIO Manager from CSV or JSON: ready templates, the serial, secret_key, vendor_key and tags fields, and CSV pitfalls."
 ---
 
 # Import STICKERs from a CSV or JSON file

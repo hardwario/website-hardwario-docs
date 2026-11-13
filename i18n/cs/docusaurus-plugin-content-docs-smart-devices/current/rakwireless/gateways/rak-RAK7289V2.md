@@ -1,6 +1,7 @@
 ---
 slug: rak-RAK7289V2
 title: RAK7289V2
+description: "Venkovní brána LoRaWAN RAKwireless RAK7289V2 WisGate Edge Pro (IP67): antény a PoE, první přístup, nastavení WAN a Basics Station pro The Things Stack."
 ---
 
 import Image from '@theme/IdealImage';
@@ -15,7 +16,7 @@ Běží na systému **WisGateOS 2** a k internetu se může připojit několika 
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/rakwireless/gateways/images/rak-RAK7289V2.png')} />
+        <Image img={require('../../../../../../smart-devices/rakwireless/gateways/images/rak-RAK7289V2.webp')} alt="RAK7289V2 WisGate Edge Pro" />
       </div>
     </div>
     <div class="col col--24"></div>

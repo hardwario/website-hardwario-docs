@@ -1,6 +1,7 @@
 ---
 slug: one-wire-dallas
 title: 1-Wire temperature probes (Dallas)
+description: "Wire DS18B20 1-Wire (Dallas) temperature probes to STICKER Input: DIP switch S1 positions, enabling the bus, the four sensor slots and the probe alarms."
 ---
 
 # 1-Wire temperature probes (Dallas)

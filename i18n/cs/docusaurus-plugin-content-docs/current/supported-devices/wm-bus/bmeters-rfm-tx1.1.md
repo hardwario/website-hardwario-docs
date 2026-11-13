@@ -1,6 +1,7 @@
 ---
 slug: bmeters-rfm-tx1.1
 title: BMeters RFM-TX1.1
+description: "Rádiový modul BMeters RFM-TX1.1 pro vodoměry GSD8-RFM: konfigurace v BMetering Software, montáž na vodoměr a přiřazení adresy wM-Bus k zařízení CHESTER."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-rfm-tx1.1.png')} width={376} height={376} alt="Kulatý bílý rádiový modul BMeters RFM-TX1.1 pro vodoměry GSD8-RFM" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-rfm-tx1.1.webp')} width={376} height={376} alt="Kulatý bílý rádiový modul BMeters RFM-TX1.1 pro vodoměry GSD8-RFM" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -45,7 +46,7 @@ Zařízení se dodává **předkonfigurované**, ale v programu [**BMetering Sof
 7. V **odečítacím softwaru** ověřte, že se data sbírají správně a že není aktivní žádný alarm.  
 8. (Volitelně) Proti neoprávněné manipulaci vložte **oranžovou plombu** do dvou malých otvorů na levé straně modulu a nalepte **samolepicí plombu**.  
 
-![Montáž modulu BMeters RFM-TX1.1](../../../../../../chester/supported-devices/wm-bus/images/bmeters-rfm-tx1.1-installation.png)
+![Montáž modulu BMeters RFM-TX1.1](../../../../../../chester/supported-devices/wm-bus/images/bmeters-rfm-tx1.1-installation.webp)
 
 ## Konfigurace adresy wM-Bus {#wireless-m-bus-address-configuration}
 
@@ -57,7 +58,7 @@ Adresa (8 číslic) je **vlevo pod čárovým kódem**, viz obrázek níže.
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-rfm-tx1.1.png')} width={376} height={376} alt="RFM-TX1.1 s vyznačenou osmimístnou adresou wM-Bus vlevo pod čárovým kódem" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-rfm-tx1.1.webp')} width={376} height={376} alt="RFM-TX1.1 s vyznačenou osmimístnou adresou wM-Bus vlevo pod čárovým kódem" />
       </div>
     </div>
     <div class="col col--24"></div>

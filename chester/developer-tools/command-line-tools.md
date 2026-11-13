@@ -1,6 +1,7 @@
 ---
 slug: command-line-tools
 title: Command Line Tools
+description: "Install the HARDWARIO CLI with pip to flash CHESTER application, LTE and LoRaWAN modem firmware, open the console, read the PIB and manage codecs."
 title_meta: "Command Line Tools (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

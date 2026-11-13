@@ -1,6 +1,7 @@
 ---
 slug: segger-j-link
 title: SEGGER J-Link
+description: "Set up SEGGER J-Link for CHESTER: required hardware, J-Link drivers and HARDWARIO Command Line Tools, and the SWD cable on the APP, LTE and LRW ports."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -137,7 +138,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/chester-app-flash-jlink-olimex-white.png')} alt="SEGGER J-Link PLUS Compact with Olimex adapter and ribbon cable connected to the APP port on the CHESTER mainboard"/></div>
+      <div><Image img={require('./images/chester-app-flash-jlink-olimex-white.jpg')} alt="SEGGER J-Link PLUS Compact with Olimex adapter and ribbon cable connected to the APP port on the CHESTER mainboard"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -148,7 +149,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/chester-segger-app.png')} alt="Close-up of the CHESTER mainboard with the ribbon cable plugged into the APP debug header on the left edge"/></div>
+      <div><Image img={require('./images/chester-segger-app.jpg')} alt="Close-up of the CHESTER mainboard with the ribbon cable plugged into the APP debug header on the left edge"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -161,7 +162,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/chester-lte-flash-jlink-olimex-white.png')} alt="SEGGER J-Link PLUS Compact with Olimex adapter and ribbon cable connected to the LTE port on the CHESTER mainboard"/></div>
+      <div><Image img={require('./images/chester-lte-flash-jlink-olimex-white.jpg')} alt="SEGGER J-Link PLUS Compact with Olimex adapter and ribbon cable connected to the LTE port on the CHESTER mainboard"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -172,7 +173,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/chester-segger-lte.png')} alt="Close-up of the CHESTER mainboard with the ribbon cable plugged into the LTE debug header on the right side"/></div>
+      <div><Image img={require('./images/chester-segger-lte.jpg')} alt="Close-up of the CHESTER mainboard with the ribbon cable plugged into the LTE debug header on the right side"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -185,7 +186,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/chester-lrw-flash-jlink-olimex-white.png')} alt="SEGGER J-Link PLUS Compact with Olimex adapter and ribbon cable connected to the LRW port on the CHESTER mainboard"/></div>
+      <div><Image img={require('./images/chester-lrw-flash-jlink-olimex-white.jpg')} alt="SEGGER J-Link PLUS Compact with Olimex adapter and ribbon cable connected to the LRW port on the CHESTER mainboard"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -196,7 +197,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('./images/chester-segger-lrw.png')} alt="Close-up of the CHESTER mainboard with the ribbon cable plugged into the LRW debug header"/></div>
+      <div><Image img={require('./images/chester-segger-lrw.jpg')} alt="Close-up of the CHESTER mainboard with the ribbon cable plugged into the LRW debug header"/></div>
     </div>
     <div class="col col--2">
     </div>

@@ -1,5 +1,6 @@
 ---
 title: Odesílání downlinků
+description: "Odesílání downlinků přes API HARDWARIO Cloud: příkazy app config, příkazy shellu nebo objekt JSON s daty, které čekají ve frontě, dokud se zařízení neozve."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

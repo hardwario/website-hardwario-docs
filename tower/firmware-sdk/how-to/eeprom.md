@@ -1,6 +1,7 @@
 ---
 slug: how-to-eeprom
 title: "How To: EEPROM"
+description: "Keep data through power loss in the 6 KB EEPROM of the TOWER Core Module: size query, read and write example, write cycle limit and safe address range."
 ---
 import Image from '@theme/IdealImage';
 

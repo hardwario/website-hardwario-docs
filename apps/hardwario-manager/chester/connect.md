@@ -1,6 +1,7 @@
 ---
 slug: connect
 title: Connect and pair
+description: "Pair a CHESTER in HARDWARIO Manager from its label QR code, which looks up the passkey, or from a nearby-device scan, and reconnect from Recent devices."
 ---
 
 # Connect to a CHESTER

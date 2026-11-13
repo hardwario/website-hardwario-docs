@@ -1,6 +1,7 @@
 ---
 slug: creating-device
 title: Devices
+description: "Add a new device in ThingsBoard from the Entities menu, fill in its name, label and description, then view its attributes and latest telemetry."
 title_meta: "Devices (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: chester-c5
 title: CHESTER-C5 (1-Wire collector)
+description: "CHESTER-C5 carrier board for CHESTER-U1: an NB-IoT and LTE-M gateway for 1-Wire sensor arrays, 8 channels, 6–28 V DC or solar input and Li-Ion backup."
 ---
 import Image from '@theme/IdealImage';
 

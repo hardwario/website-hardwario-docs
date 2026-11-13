@@ -1,7 +1,7 @@
 ---
 slug: server-raspberry-pi
 title: Server na Raspberry Pi
-title_meta: "Server na Raspberry Pi (HARDWARIO TOWER, první kroky)"
+title_meta: "Server na Raspberry Pi (TOWER, první kroky)"
 ---
 import Image from '@theme/IdealImage';
 

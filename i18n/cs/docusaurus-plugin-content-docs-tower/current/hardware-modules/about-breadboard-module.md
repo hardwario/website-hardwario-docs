@@ -1,13 +1,14 @@
 ---
 slug: about-breadboard-module
 title: O modulu Breadboard Module
+description: "Breadboard Module pro TOWER: úzký adaptér 114 x 33 mm s přesnými kolíkovými lištami pro zapojení modulů HARDWARIO TOWER do nepájivého kontaktního pole."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/breadboard-module.png')} alt="Breadboard Module s dutinkovými lištami pro moduly a úzkým vývodem pro nepájivé kontaktní pole" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/breadboard-module.webp')} alt="Breadboard Module s dutinkovými lištami pro moduly a úzkým vývodem pro nepájivé kontaktní pole" /></div>
     </div>
     <div class="col col--6">
 

@@ -1,6 +1,7 @@
 ---
 slug: shared-sessions
 title: Share a terminal session
+description: "Share a CHESTER terminal session from HARDWARIO Manager by link and Session ID, or join one, so a colleague can watch and run commands remotely."
 ---
 
 # Share a terminal session

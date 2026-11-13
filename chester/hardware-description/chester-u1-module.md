@@ -1,6 +1,7 @@
 ---
 slug: chester-u1-module
 title: CHESTER-U1 Module
+description: "CHESTER-U1 packs the CHESTER-M mainboard into a 38x38 mm module for your own two-layer carrier board: properties, KiCad library, schematics and CHESTER-C4."
 ---
 import Image from '@theme/IdealImage';
 
@@ -21,7 +22,7 @@ Instead of using **CHESTER-M** and putting extension modules in it, you design a
 - Contains a **nano SIM card holder** onboard
 - Connect just a **battery** and **u.FL antenna**
 
-![CHESTER-U1 layout](images/chester-u1-description.png)
+![CHESTER-U1 layout](images/chester-u1-description.webp)
 
 ## E-CAD Library
 
@@ -63,10 +64,10 @@ One of the carrier boards is **CHESTER-C4**, it contains a slot for two [**exten
 
 ### Bottom Side
 
-![CHESTER-C4 bottom](images/chester-c4-bottom.png)
+![CHESTER-C4 bottom](images/chester-c4-bottom.webp)
 
 ### Top Side
 
 With "D" cell option.
 
-![CHESTER-C4 top](images/chester-c4-d-top-white.png)
+![CHESTER-C4 top](images/chester-c4-d-top-white.webp)

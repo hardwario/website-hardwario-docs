@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-decoding
 title: Decoding Data
+description: "Video tutorial on decoding LoRaWAN payloads in ChirpStack v4 and checking the decoded values in the application events."
 ---
 
 import Image from '@theme/IdealImage';

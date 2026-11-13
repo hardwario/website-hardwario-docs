@@ -1,6 +1,7 @@
 ---
 slug: sticker-motion
 title: STICKER Motion
+description: "STICKER Motion, detektor pohybu LoRaWAN se senzorem PIR na dvě baterie AA: typické využití, ukázková zpráva JSON s počty pohybů, stavová LED a seznam změn."
 ---
 import Image from '@theme/IdealImage';
 

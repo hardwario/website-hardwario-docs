@@ -1,5 +1,6 @@
 ---
 title: Install InfluxDB
+description: "Install InfluxDB 2.x and its CLI on FIBER or FIBER Lite after checking the InfluxData GPG key, then create the organization, bucket and API token."
 ---
 
 # Install InfluxDB

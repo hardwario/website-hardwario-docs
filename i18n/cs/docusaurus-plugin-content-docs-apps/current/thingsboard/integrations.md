@@ -1,6 +1,7 @@
 ---
 slug: integrations
 title: Integrace
+description: "Integrace platformy HARDWARIO ThingsBoard se síťovým serverem ChirpStack: mapování zařízení LoRaWAN, zobrazení jejich telemetrie a příkazy přes downlink."
 title_meta: "Integrace (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';

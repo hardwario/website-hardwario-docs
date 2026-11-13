@@ -1,6 +1,7 @@
 ---
 slug: sensor-history
 title: Historie senzorů
+description: "Historie senzorů zařízení STICKER se store-and-forward: výběr kanálů, příkaz shellu history, opětovné odeslání přes rádio, čtení přes NFC a buffer 32 KB."
 title_meta: "Historie senzorů (STICKER)"
 ---
 import Image from '@theme/IdealImage';

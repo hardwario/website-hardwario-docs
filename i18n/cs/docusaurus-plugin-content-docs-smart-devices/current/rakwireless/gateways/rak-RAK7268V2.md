@@ -1,6 +1,7 @@
 ---
 slug: rak-RAK7268V2
 title: RAK7268V2
+description: "Vnitřní brána LoRaWAN RAKwireless RAK7268V2 WisGate Edge Lite 2: první přístup, heslo root, nastavení WAN i LTE a Basics Station pro The Things Stack."
 ---
 
 import Image from '@theme/IdealImage';
@@ -15,7 +16,7 @@ Připojuje se přes Ethernet a Wi-Fi (volitelně i LTE), takže se hodí do mal�
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/rakwireless/gateways/images/rak-RAK7268V2.png')} />
+        <Image img={require('../../../../../../smart-devices/rakwireless/gateways/images/rak-RAK7268V2.png')} alt="RAK7268V2 WisGate Edge Lite 2" />
       </div>
     </div>
     <div class="col col--24"></div>

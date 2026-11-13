@@ -1,6 +1,7 @@
 ---
 slug: connect
 title: Připojení a párování
+description: "Spárování zařízení CHESTER v aplikaci HARDWARIO Manager přes QR kód na štítku s passkey nebo hledáním v okolí a opětovné připojení z Recent devices."
 ---
 
 # Připojení k zařízení CHESTER {#connect-to-a-chester}

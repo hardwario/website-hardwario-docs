@@ -1,13 +1,14 @@
 ---
 slug: about-co2-module
 title: O modulu CO₂ Module
+description: "CO₂ Module pro TOWER se senzorem NDIR SenseAir LP8: rozsah 0 až 10 000 ppm, přesnost ±50 ppm, pouze rozhraní I²C a provoz na baterie po celé roky."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/co2-module.png')} alt="CO2 Module s NDIR senzorem oxidu uhličitého SenseAir a záložním superkondenzátorem" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/co2-module.webp')} alt="CO2 Module s NDIR senzorem oxidu uhličitého SenseAir a záložním superkondenzátorem" /></div>
     </div>
     <div class="col col--6">
 

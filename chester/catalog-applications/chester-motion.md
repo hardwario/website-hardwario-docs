@@ -1,6 +1,7 @@
 ---
 slug: chester-motion
 title: CHESTER Motion
+description: "CHESTER Motion catalog application: two PIR sensors on CHESTER-S3 detect the direction of passage; sensitivity presets, service mode and button actions."
 ---
 import Image from '@theme/IdealImage';
 

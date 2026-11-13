@@ -1,6 +1,7 @@
 ---
 slug: troubleshooting
 title: Řešení problémů
+description: "Řešení problémů s Bluetooth u zařízení CHESTER v aplikaci HARDWARIO Manager: co znamenají chyby hledání, párování, spojení a stahování a co dělat."
 title_meta: "Řešení problémů (HARDWARIO Manager pro CHESTER)"
 ---
 

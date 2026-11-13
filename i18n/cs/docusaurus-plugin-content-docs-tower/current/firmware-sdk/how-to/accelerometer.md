@@ -1,6 +1,7 @@
 ---
 slug: how-to-accelerometer
 title: "Jak na: Akcelerometr"
+description: "Práce s akcelerometrem LIS2DH12 modulu TOWER Core Module v SDK: průběžné měření zrychlení a alarm při pohybu pomocí přerušení, s příklady v C."
 ---
 import Image from '@theme/IdealImage';
 

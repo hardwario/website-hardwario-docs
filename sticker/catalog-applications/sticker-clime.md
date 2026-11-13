@@ -1,6 +1,7 @@
 ---
 slug: sticker-clime
 title: STICKER Clime
+description: "STICKER Clime, a LoRaWAN sensor on two AA batteries for temperature, humidity, pressure and illuminance: use cases, example JSON, status LED and changelog."
 ---
 import Image from '@theme/IdealImage';
 

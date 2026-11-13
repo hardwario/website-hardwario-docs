@@ -1,6 +1,7 @@
 ---
 slug: tower-vscode-extension
 title: Rozšíření TOWER pro VSCode
+description: "Instalace rozšíření HARDWARIO TOWER do Visual Studio Code a nástrojů, které potřebuje: CMake, Ninja, arm-none-eabi-gcc 12.2 nebo novější a git."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

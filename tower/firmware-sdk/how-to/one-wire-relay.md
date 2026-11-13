@@ -1,6 +1,7 @@
 ---
 slug: how-to-one-wire-relay
 title: "How To: 1-Wire Relay"
+description: "Control relay modules on the 1-Wire bus, for example from Denkovi, with the twr_onewire_relay SDK module, in a C example driven by the Core Module button."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-ws523
 title: WS523
+description: "Milesight WS523 LoRaWAN smart socket with scheduled switching and power metering: Class C join keys, payload decoder links and specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight WS523 is a **smart portable socket** with **LoRaWAN connectivity** des
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/ws523.png')} />
+        <Image img={require('./images/ws523.webp')} alt="Milesight Sensor WS523" />
       </div>
     </div>
     <div class="col col--24"></div>

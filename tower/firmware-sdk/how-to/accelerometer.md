@@ -1,6 +1,7 @@
 ---
 slug: how-to-accelerometer
 title: "How To: Accelerometer"
+description: "Read the TOWER Core Module's LIS2DH12 accelerometer via the SDK: continuous acceleration measurement or an interrupt-driven motion alarm, with C examples."
 ---
 import Image from '@theme/IdealImage';
 

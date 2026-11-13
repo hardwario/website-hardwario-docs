@@ -1,5 +1,6 @@
 ---
 title: Proměnné
+description: "Proměnné zařízení přes API HARDWARIO Cloud: umístění nebo kalibrační offset pro transformace v konektorech, jejich filtrování, úpravy a uzamčení."
 title_meta: "Proměnné (HARDWARIO Cloud API)"
 ---
 

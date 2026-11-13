@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-ws303
 title: WS303
+description: "Milesight WS303 water leak detector (IP67, triggers from 0.5 mm): LoRaWAN OTAA join keys, payload decoder links and technical specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight WS303 is a **smart water leak detector** with **two stainless steel pr
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/ws303-868m.png')} />
+        <Image img={require('./images/ws303-868m.png')} alt="Milesight Sensor WS303" />
       </div>
     </div>
     <div class="col col--24"></div>

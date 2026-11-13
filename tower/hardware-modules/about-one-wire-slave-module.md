@@ -1,13 +1,14 @@
 ---
 slug: about-one-wire-slave-module
 title: About 1-Wire Slave Module
+description: "TOWER 1-Wire Slave Module links I²C devices several meters away over 1-Wire via a Maxim DS28E17 bridge with 16-bit CRC, with the Sensor Module as master."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/1-wire-module.png')} alt="1-Wire Slave Module with a green terminal block for the 1-Wire bus and two socket headers" /></div>
+      <div><Image img={require('./images/1-wire-module.webp')} alt="1-Wire Slave Module with a green terminal block for the 1-Wire bus and two socket headers" /></div>
     </div>
     <div class="col col--6">
 

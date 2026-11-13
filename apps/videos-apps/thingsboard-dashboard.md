@@ -1,6 +1,7 @@
 ---
 slug: thingsboard-dashboard
 title: Basic Dashboard
+description: "Video tutorial on building a basic ThingsBoard dashboard with a simple variable display and a chart that shows device data in real time."
 ---
 
 import Image from '@theme/IdealImage';

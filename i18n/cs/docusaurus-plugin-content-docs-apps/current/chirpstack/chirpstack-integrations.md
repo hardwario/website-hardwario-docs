@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-integrations
 title: Integrace
+description: "Záložka Integrations v aplikaci ChirpStack v4, přes kterou posíláte data ze zařízení do vizualizačních platforem, externích služeb nebo vlastního API."
 title_meta: "Integrace (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';

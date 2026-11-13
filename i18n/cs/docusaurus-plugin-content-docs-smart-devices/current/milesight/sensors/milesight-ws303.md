@@ -1,6 +1,7 @@
 ---
 slug: milesight-ws303
 title: WS303
+description: "Detektor úniku vody Milesight WS303 (IP67, reaguje od 0,5 mm): klíče pro připojení OTAA do sítě LoRaWAN, odkazy na dekodéry a technické parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight WS303 je **chytrý detektor úniku vody** se **dvěma sondami z nerezo
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/ws303-868m.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/ws303-868m.png')} alt="Senzor Milesight WS303" />
       </div>
     </div>
     <div class="col col--24"></div>

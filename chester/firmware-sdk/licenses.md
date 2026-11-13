@@ -1,6 +1,7 @@
 ---
 slug: licenses
 title: Licenses
+description: "CHESTER SDK license terms (LicenseRef-HARDWARIO-5-Clause, use with HARDWARIO hardware only), SPDX identifiers and license reports made with ncs-sbom."
 ---
 import Image from '@theme/IdealImage';
 

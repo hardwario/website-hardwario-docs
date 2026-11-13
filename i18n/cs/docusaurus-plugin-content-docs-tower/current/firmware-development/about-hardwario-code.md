@@ -1,6 +1,7 @@
 ---
 slug: about-hardwario-code
 title: O aplikaci HARDWARIO Code
+description: "Instalace aplikace HARDWARIO Code, upravené verze Visual Studio Code se všemi nástroji pro vývoj firmwaru TOWER, ve Windows, Linuxu a macOS."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

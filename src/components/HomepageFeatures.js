@@ -234,7 +234,13 @@ const CloudAndApps = [
 // Brand logos are shown as the brand's icon alone where it has one (`icon`);
 // the card title already names the brand. Dark single-colour artwork either
 // flips in dark mode (`invertDark`) or ships a lighter variant (`srcDark`).
-function ProductCard({ title, subtitle, link, src, srcDark, imageWide, small, icon, invertDark, description }) {
+// The first row of the first section is what a visitor sees on arrival: those images load at once
+// and with priority (one of them is the page's largest paint). Every other card image waits until
+// it comes near the viewport; the wrapper has a fixed height, so nothing moves when it arrives.
+function ProductCard({ title, subtitle, link, src, srcDark, imageWide, small, icon, invertDark, description, eager }) {
+  const loadingProps = eager
+    ? { loading: 'eager', fetchPriority: 'high', decoding: 'async' }
+    : { loading: 'lazy', decoding: 'async' };
   const imageClass = [
     styles.cardImage,
     imageWide ? styles.cardImageWide : '',
@@ -246,9 +252,9 @@ function ProductCard({ title, subtitle, link, src, srcDark, imageWide, small, ic
     <Link to={link} className={styles.card}>
       <div className={`${styles.cardImageWrapper}${small ? ' ' + styles.cardImageWrapperSmall : ''}`}>
         {srcDark ? (
-          <ThemedImage sources={{ light: src, dark: srcDark }} alt={title} className={imageClass} />
+          <ThemedImage sources={{ light: src, dark: srcDark }} alt={title} className={imageClass} {...loadingProps} />
         ) : (
-          <img src={src} alt={title} className={imageClass} />
+          <img src={src} alt={title} className={imageClass} {...loadingProps} />
         )}
       </div>
       <div className={styles.cardName}>{title}</div>
@@ -258,7 +264,7 @@ function ProductCard({ title, subtitle, link, src, srcDark, imageWide, small, ic
   );
 }
 
-function Section({ label, items, gridClass, smallImages }) {
+function Section({ label, items, gridClass, smallImages, eagerCards = 0 }) {
   return (
     <section className={styles.section}>
       <div className={styles.sectionHeader}>
@@ -266,7 +272,7 @@ function Section({ label, items, gridClass, smallImages }) {
       </div>
       <div className={`${styles.grid} ${gridClass || ''}`}>
         {items.map((item, idx) => (
-          <ProductCard key={idx} {...item} small={smallImages} />
+          <ProductCard key={idx} {...item} small={smallImages} eager={idx < eagerCards} />
         ))}
       </div>
     </section>
@@ -280,6 +286,7 @@ export default function HomepageFeatures() {
         <Section
           label={translate({ id: 'home.section.products', message: 'Products' })}
           items={OurProducts}
+          eagerCards={4}
         />
         <Section
           label={translate({ id: 'home.section.smartDevices', message: 'Smart Devices' })}

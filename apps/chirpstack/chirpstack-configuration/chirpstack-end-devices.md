@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-end-devices
 title: End Devices
+description: "Create device profiles in ChirpStack v4 with examples for CHESTER and STICKER, add end devices to an application and enter their activation keys."
 title_meta: "End Devices (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';

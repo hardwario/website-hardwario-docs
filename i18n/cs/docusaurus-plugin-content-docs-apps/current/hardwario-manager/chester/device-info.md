@@ -1,6 +1,7 @@
 ---
 slug: device-info
 title: Informace o zařízení
+description: "Údaje zařízení CHESTER v aplikaci HARDWARIO Manager: uptime, hardware a firmware, sériové číslo, claim token, passkey Bluetooth a uložení konfigurace."
 ---
 
 # Informace o zařízení CHESTER {#chester-device-info}

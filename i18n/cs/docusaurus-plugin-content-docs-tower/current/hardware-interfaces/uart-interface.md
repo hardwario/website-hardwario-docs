@@ -1,6 +1,7 @@
 ---
 slug: uart-interface
 title: Rozhraní UART
+description: "Rozhraní UART na platformě TOWER: kanály UART0 až UART2, rychlost, datové, paritní a stop bity (např. 8N1) a logování na UART2 rychlostí 115200."
 ---
 import Image from '@theme/IdealImage';
 

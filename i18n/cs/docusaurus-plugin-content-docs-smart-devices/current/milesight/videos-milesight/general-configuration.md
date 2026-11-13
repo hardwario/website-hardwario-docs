@@ -1,6 +1,7 @@
 ---
 slug: general-configuration
 title: Obecná konfigurace
+description: "Videonávod ke konfiguraci zařízení Milesight přes NFC z mobilního telefonu v aplikaci Milesight ToolBox; konfigurovat lze i testerem Milesight FT101."
 ---
 import Image from '@theme/IdealImage';
 import Link from '@docusaurus/Link';

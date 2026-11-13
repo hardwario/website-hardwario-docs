@@ -1,5 +1,6 @@
 ---
 title: Dashboard
+description: "Set up the dashboard on port 80 of FIBER or FIBER Lite: tiles for ChirpStack, Node-RED, InfluxDB and Grafana, live system metrics and SSH access."
 ---
 
 # Dashboard

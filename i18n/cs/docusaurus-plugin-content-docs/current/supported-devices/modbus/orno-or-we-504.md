@@ -1,6 +1,7 @@
 ---
 slug: orno-or-we-504
 title: ORNO OR-WE-504
+description: "Připojení jednofázového elektroměru ORNO OR-WE-504 k zařízení CHESTER přes RS-485 Modbus RTU: zapojení a nastavení v softwaru ORNO nebo terminálu CHESTER."
 ---
 
 import Image from '@theme/IdealImage';
@@ -37,7 +38,7 @@ Proud i napětí měří přímo vlastními obvody.
 
 #### Schéma zapojení (OR-WE-504) {#connection-diagram-or-we-504}
 
-![Schéma zapojení elektroměru ORNO OR-WE-504](../../../../../../chester/supported-devices/modbus/images/orno-or-we-504-connection-diagram.png)
+![Schéma zapojení elektroměru ORNO OR-WE-504](../../../../../../chester/supported-devices/modbus/images/orno-or-we-504-connection-diagram.webp)
 
 :::info
 
@@ -59,7 +60,7 @@ Nulový vodič lze připojit buď přímo ke **svorce N** elektroměru, nebo na 
 
 #### Schéma zapojení (OR-WE-504) {#connection-diagram-or-we-504-1}
 
-![Zapojení komunikace Modbus elektroměru ORNO OR-WE-504](../../../../../../chester/supported-devices/modbus/images/orno-or-we-504-modbus.png)
+![Zapojení komunikace Modbus elektroměru ORNO OR-WE-504](../../../../../../chester/supported-devices/modbus/images/orno-or-we-504-modbus.webp)
 
 :::info
 

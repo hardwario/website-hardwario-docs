@@ -28,8 +28,12 @@
     "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
   },
   "sidebar.docs.category.Video Tutorials.link.generated-index.description": {
-    "message": "Videonávody pro nastavení a používání zařízení EMBER.",
+    "message": "Videonávody pro EMBER: nastavení rozhraní LoRa v MikroTik RouterOS, aktualizace RouterOS a připojení brány k serveru ChirpStack.",
     "description": "The generated-index page description for category 'Video Tutorials' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Video Tutorials.link.generated-index.title": {
+    "message": "Videonávody EMBER",
+    "description": "The generated-index page title for category 'Video Tutorials' in sidebar 'docs'"
   },
   "sidebar.docs.category.ChirpStack v4": {
     "message": "ChirpStack v4",
@@ -42,5 +46,9 @@
   "sidebar.docs.doc.Changelog": {
     "message": "Seznam změn",
     "description": "The label for the doc item 'Changelog' in sidebar 'docs', linking to the doc changelog"
+  },
+  "sidebar.docs.category.chirpstack-lns": {
+    "message": "ChirpStack v4",
+    "description": "The label for category 'ChirpStack v4' in sidebar 'docs'"
   }
 }

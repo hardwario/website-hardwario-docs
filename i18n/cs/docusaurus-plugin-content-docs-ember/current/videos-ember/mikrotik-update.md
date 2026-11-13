@@ -1,6 +1,7 @@
 ---
 slug: mikrotik-update
 title: Aktualizace brány EMBER
+description: "Videonávod k aktualizaci balíčků RouterOS a firmwaru RouterBOARD na bráně EMBER (MikroTik) přes rozhraní WebFig."
 ---
 
 import Image from '@theme/IdealImage';

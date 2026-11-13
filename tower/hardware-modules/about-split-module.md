@@ -1,13 +1,14 @@
 ---
 slug: about-split-module
 title: About Split Module
+description: "TOWER Split Module for two top modules in one device or two compact stacks, with two tag connectors, and how it differs from the Compact Split Module."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/split-module.png')} alt="Split Module, a green board with two sets of socket headers for two top modules" /></div>
+      <div><Image img={require('./images/split-module.webp')} alt="Split Module, a green board with two sets of socket headers for two top modules" /></div>
     </div>
     <div class="col col--6">
 

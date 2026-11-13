@@ -1,6 +1,7 @@
 ---
 slug: lora-p2p
 title: LoRa P2P Mode
+description: "LoRa P2P mode of STICKER firmware v2.0.0: a ProXimos Hub runs the network through a FIBER modem over the TOWER radio protocol, with no LoRaWAN server."
 ---
 import Image from '@theme/IdealImage';
 

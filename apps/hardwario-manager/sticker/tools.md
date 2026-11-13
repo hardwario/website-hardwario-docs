@@ -1,6 +1,7 @@
 ---
 slug: tools
 title: Tools
+description: "STICKER Tools in HARDWARIO Manager: sync the device clock, start calibration mode, and reach 1-Wire setup, sample data, sensor history and resets."
 title_meta: "Tools (HARDWARIO Manager for STICKER)"
 ---
 

@@ -1,6 +1,7 @@
 ---
 slug: zenner-c5-isf
 title: Zenner C5-ISF
+description: "Měřič tepelné energie Zenner zelsius C5-ISF se zařízením CHESTER wM-Bus: kde najít adresu wM-Bus, jak ji přiřadit a jak zadat dešifrovací klíče."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/zenner-c5-isf.png')} width={376} height={376} alt="Měřič tepelné energie Zenner zelsius C5-ISF s LCD displejem a jednovtokovým průtokovým senzorem z mosazi" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/zenner-c5-isf.webp')} width={376} height={376} alt="Měřič tepelné energie Zenner zelsius C5-ISF s LCD displejem a jednovtokovým průtokovým senzorem z mosazi" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -41,7 +42,7 @@ Adresa (8 číslic) je **uprostřed pod čárovým kódem** a tvoří ji **posle
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/zenner-c5-isf.png')} width={376} height={376} alt="C5-ISF s vyznačenými posledními dvěma čtveřicemi číslic sériového čísla, které tvoří adresu wM-Bus" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/zenner-c5-isf.webp')} width={376} height={376} alt="C5-ISF s vyznačenými posledními dvěma čtveřicemi číslic sériového čísla, které tvoří adresu wM-Bus" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -1,6 +1,7 @@
 ---
 slug: chester-clime
 title: CHESTER Clime
+description: "CHESTER Clime catalog application: temperature and humidity, IAQ, 1-Wire, RTD and thermocouple variants, hygrometer alarms, CO₂ thresholds and JSON."
 ---
 import Image from '@theme/IdealImage';
 

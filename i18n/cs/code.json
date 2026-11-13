@@ -513,8 +513,11 @@
   "home.tagline": {
     "message": "Technické podklady k produktům a službám"
   },
+  "home.heading": {
+    "message": "Dokumentace HARDWARIO"
+  },
   "home.metaDescription": {
-    "message": "Technická dokumentace produktů a služeb"
+    "message": "Dokumentace k zařízením HARDWARIO a HARDWARIO Cloud: CHESTER, STICKER, EMBER, FIBER, GAUGER a TOWER, s firmwarem, API a návody k integraci."
   },
   "sticker.historyCalculator.channels": {
     "message": "Kanály"

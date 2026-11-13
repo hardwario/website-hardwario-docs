@@ -1,6 +1,7 @@
 ---
 slug: enclosures
 title: Krabičky
+description: "Krabičky pro zařízení CHESTER: standardní krabička 130x175x45 mm s krytím IP67 ve dvou barvách, montáž a objednací kódy CHESTER-E1 až E19 s výkresy."
 ---
 import Image from '@theme/IdealImage';
 
@@ -137,20 +138,20 @@ Vysvětlení `1`-`F` nebo `X` najdete v [objednacích kódech CHESTER-Z1](../ord
 
 ### CHESTER-E16-P {#chester-e16-p}
 
-![Kótovaný výkres spodní části CHESTER-E16-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e16-p-hwe036-bottom-base.png)
-![Kótovaný výkres horního krytu CHESTER-E16-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e16-p-hwe036-top-cover.png)
+![Kótovaný výkres spodní části CHESTER-E16-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e16-p-hwe036-bottom-base.webp)
+![Kótovaný výkres horního krytu CHESTER-E16-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e16-p-hwe036-top-cover.webp)
 
 ### CHESTER-E17-P {#chester-e17-p}
 
-![Kótovaný výkres větší spodní části CHESTER-E17-P s frézovanými otvory pro konektory v bočních stěnách](../../../../../chester/hardware-description/images/chester-e17-p-hwe037-bottom-base.png)
-![Kótovaný výkres horního krytu CHESTER-E17-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e17-p-hwe037-top-cover.png)
+![Kótovaný výkres větší spodní části CHESTER-E17-P s frézovanými otvory pro konektory v bočních stěnách](../../../../../chester/hardware-description/images/chester-e17-p-hwe037-bottom-base.webp)
+![Kótovaný výkres horního krytu CHESTER-E17-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e17-p-hwe037-top-cover.webp)
 
 ### CHESTER-E18-P {#chester-e18-p}
 
-![Kótovaný výkres větší spodní části CHESTER-E18-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e18-p-hwe038-bottom-base.png)
-![Kótovaný výkres horního krytu CHESTER-E18-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e18-p-hwe038-top-cover.png)
+![Kótovaný výkres větší spodní části CHESTER-E18-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e18-p-hwe038-bottom-base.webp)
+![Kótovaný výkres horního krytu CHESTER-E18-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e18-p-hwe038-top-cover.webp)
 
 ### CHESTER-E19-P {#chester-e19-p}
 
-![Kótovaný výkres větší spodní části CHESTER-E19-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e19-p-hwe039-bottom-base.png)
-![Kótovaný výkres horního krytu CHESTER-E19-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e19-p-hwe039-top-cover.png)
+![Kótovaný výkres větší spodní části CHESTER-E19-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e19-p-hwe039-bottom-base.webp)
+![Kótovaný výkres horního krytu CHESTER-E19-P s pozicemi obráběných otvorů](../../../../../chester/hardware-description/images/chester-e19-p-hwe039-top-cover.webp)

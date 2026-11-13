@@ -1,5 +1,6 @@
 ---
 title: Teplotní senzory
+description: "Připojte až 8 teploměrů DS18B20 přes 1-Wire k portům W1 a W2 zařízení GLIDER, přiřaďte je ke slotům, čtěte teplotu a navažte na ně alarmy."
 sidebar_position: 1
 ---
 import Image from '@theme/IdealImage';

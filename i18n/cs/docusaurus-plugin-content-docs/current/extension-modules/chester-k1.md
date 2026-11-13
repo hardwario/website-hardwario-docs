@@ -1,6 +1,7 @@
 ---
 slug: chester-k1
 title: CHESTER-K1 (4kanálový diferenciální vstup)
+description: "Čtyřkanálový modul CHESTER-K1 s diferenciálními vstupy, který zabírá sloty A i B: zapojení svorkovnic, barvy vodičů proudového transformátoru a schéma."
 ---
 import Image from '@theme/IdealImage';
 
@@ -9,7 +10,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('../../../../../chester/extension-modules/images/chester-k1-top.png')} alt="Rozšiřující modul CHESTER-K1, červená deska s operačními zesilovači a půlenými prokovenými otvory (castellated) pro oba sloty" /></div>
+      <div><Image img={require('../../../../../chester/extension-modules/images/chester-k1-top.webp')} alt="Rozšiřující modul CHESTER-K1, červená deska s operačními zesilovači a půlenými prokovenými otvory (castellated) pro oba sloty" /></div>
     </div>
     <div class="col col--10">
     </div>
@@ -19,7 +20,7 @@ import Image from '@theme/IdealImage';
 
 ## Schéma zapojení pinů zařízení CHESTER {#chester-pin-configuration-diagram}
 
-<Image img={require('../../../../../chester/extension-modules/images/tb-chester-k1.png')} alt="Svorkovnice modulu CHESTER-K1: slot A obsahuje GND, INP1, INM1, VOUT1, GND, INP2, INM2, VOUT2; slot B totéž pro kanály 3 a 4" />
+<Image img={require('../../../../../chester/extension-modules/images/tb-chester-k1.webp')} alt="Svorkovnice modulu CHESTER-K1: slot A obsahuje GND, INP1, INM1, VOUT1, GND, INP2, INM2, VOUT2; slot B totéž pro kanály 3 a 4" />
 
 <br />
 

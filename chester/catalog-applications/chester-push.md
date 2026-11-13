@@ -1,6 +1,7 @@
 ---
 slug: chester-push
 title: CHESTER Push
+description: "CHESTER Push catalog application: push buttons with LED and buzzer feedback, short and long presses, CHESTER-Z1-F with Li-Ion battery, and Flip Mode."
 ---
 import Image from '@theme/IdealImage';
 

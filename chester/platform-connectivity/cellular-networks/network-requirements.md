@@ -1,6 +1,7 @@
 ---
 slug: network-requirements
 title: Network Requirements
+description: "Check a cellular network before deploying CHESTER: supported LTE-M and NB-IoT bands, APN, PLMN, roaming and PSM, plus a checklist for your operator."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-ug63
 title: UG63
+description: "Milesight UG63 compact LoRaWAN gateway: first setup over Wi-Fi, WAN settings and packet forwarding to the embedded NS, ChirpStack v4 or The Things Stack."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight UG63 is a **compact LoRaWAN® gateway** designed for **small-scale dep
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/ug63-868m.png')} />
+        <Image img={require('./images/ug63-868m.png')} alt="Milesight Gateway UG63-868M" />
       </div>
     </div>
     <div class="col col--24"></div>

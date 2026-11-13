@@ -13,7 +13,7 @@ The **CHESTER-X5** is a **2-channel isolated voltage-input** extension module fo
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('./images/chester-x5-top.png')} alt="Top view of the CHESTER-X5 board showing the two AMC3330 isolated amplifiers and the ADS122C04 ADC"/></div>
+<div><Image img={require('./images/chester-x5-top.webp')} alt="Top view of the CHESTER-X5 board showing the two AMC3330 isolated amplifiers and the ADS122C04 ADC"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -133,13 +133,13 @@ The CHESTER-X5 module can be used with various CHESTER mainboard configurations.
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x5-cgls.png)
+![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x5-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x5-c4.png)
+![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x5-c4.webp)
 
 </div>
 </div>

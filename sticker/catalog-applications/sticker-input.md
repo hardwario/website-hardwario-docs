@@ -1,6 +1,7 @@
 ---
 slug: sticker-input
 title: STICKER Input
+description: "STICKER Input, a LoRaWAN module for 1-Wire probes with two digital, 0–24 V analog or S0 pulse inputs: use cases, example JSON, status LED and changelog."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,13 +1,14 @@
 ---
 slug: about-relay-module
 title: O modulu Relay Module
+description: "Relay Module pro TOWER: bistabilní relé pro zátěže do 60 W (12 V DC / 5 A, 24 V DC / 2,5 A), řízení po sběrnici I²C, schéma a odkazy na SDK."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/relay-module.png')} alt="Relay Module s bistabilním relé a třípólovou svorkovnicí" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/relay-module.webp')} alt="Relay Module s bistabilním relé a třípólovou svorkovnicí" /></div>
     </div>
     <div class="col col--6">
 

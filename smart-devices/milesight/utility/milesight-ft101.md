@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-ft101
 title: FT101
+description: "Milesight FT101 LoRaWAN field tester: retrieve its keys, register it on a network server, run RSSI/SNR, coverage and noise scan tests and read the results."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight FT101 is a **portable LoRaWAN® network testing device** designed for 
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/ft101.png')} />
+        <Image img={require('./images/ft101.png')} alt="Milesight Field Tester FT101" />
       </div>
     </div>
     <div class="col col--24"></div>

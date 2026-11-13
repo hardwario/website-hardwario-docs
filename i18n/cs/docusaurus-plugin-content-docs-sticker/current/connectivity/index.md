@@ -23,7 +23,7 @@ Bez ohledu na zvolený protokol konektivity lze stav rádia i klíče nastavit b
 | **Topologie** | Hvězda hvězd (uzel → brána → LNS) | Hvězda (uzel → modem HARDWARIO FIBER → ProXimos Hub) |
 | **Rádiový protokol** | MAC LoRaWAN 1.0.4, Class A | Rádiový protokol HARDWARIO TOWER (rámce AES-CCM, potvrzení od brány) |
 | **Downlinky a správa** | Downlinky Class A na fPort 85 | Brána je ohlásí v potvrzení (ACK), stejné příkazy jako na fPort 85 |
-| **Nejlépe se hodí pro** | Cloudové platformy, podnikové IoT pro více klientů | Izolované lokality bez pokrytí LoRaWAN, privátní sítě na místě s ProXimos Hubem |
+| **Nejlépe se hodí pro** | Cloudové platformy, podnikové IoT pro více klientů | Izolované lokality bez pokrytí LoRaWAN, privátní sítě na místě se zařízením ProXimos Hub |
 
 ---
 
@@ -37,6 +37,6 @@ Standardní provoz LoRaWAN Class A s aktivací OTAA/ABP, šifrovanou telemetrií
 - **[Příkazy přes downlink](./downlink-commands.md)**: Přehled nastavení parametrů na dálku přes fPort 85.
 
 ### LoRa P2P (peer-to-peer) {#lora-p2p-peer-to-peer}
-Druhý režim rádia, dostupný od firmwaru v2.0.0, pro lokality bez sítě LoRaWAN. STICKER se spáruje s ProXimos Hubem přes modem HARDWARIO FIBER a komunikuje rádiovým protokolem HARDWARIO TOWER, s potvrzováním od brány, downlinky, síťovým časem a dohledem nad spojením. Telemetrie, alarmy, příkazy i historie fungují stejně jako přes LoRaWAN.
+Druhý režim rádia, dostupný od firmwaru v2.0.0, pro lokality bez sítě LoRaWAN. STICKER se spáruje se zařízením ProXimos Hub přes modem HARDWARIO FIBER a komunikuje rádiovým protokolem HARDWARIO TOWER, s potvrzováním od brány, downlinky, síťovým časem a dohledem nad spojením. Telemetrie, alarmy, příkazy i historie fungují stejně jako přes LoRaWAN.
 
 - **[Průvodce LoRa P2P](./lora-p2p.md)**: Architektura, parametry rádia a konfigurace.

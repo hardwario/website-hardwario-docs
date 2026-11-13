@@ -1,6 +1,7 @@
 ---
 slug: milesight-ug65
 title: UG65
+description: "Poloprůmyslová brána LoRaWAN Milesight UG65: první přihlášení, nastavení názvu hostitele, času i Wi-Fi a připojení k The Things Stack přes CUPS."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight UG65 je **poloprůmyslová brána LoRaWAN®** s **čipsetem SX1302** a
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/gateways/images/ug65-868m.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/gateways/images/ug65-868m.png')} alt="Brána Milesight UG65-868M" />
       </div>
     </div>
     <div class="col col--24"></div>

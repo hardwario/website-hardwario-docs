@@ -1,6 +1,7 @@
 ---
 slug: application-over-at
 title: Aplikace přes USB-C
+description: "Firmware zařízení GLIDER přes USB-C bez ladicí sondy: převod zephyr.signed.bin příkazem west bin-to-at, odeslání do konzole AT a potvrzení přes AT$FW."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,5 +1,6 @@
 ---
 title: Instalace InfluxDB
+description: "Nainstalujte InfluxDB 2.x s nástrojem CLI na zařízení FIBER nebo FIBER Lite po ověření klíče GPG od InfluxData a vytvořte organizaci, bucket a token API."
 ---
 
 # Instalace InfluxDB {#install-influxdb}

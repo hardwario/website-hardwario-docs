@@ -1,6 +1,7 @@
 ---
 slug: chester-x0
 title: CHESTER-X0 (4kanálový vstup)
+description: "Čtyřkanálový modul I/O CHESTER-X0, varianta X0A s měničem 5 V nebo X0B bez něj: vstupy 0–26 V, 4–20 mA, bezpotenciálový kontakt, NPN a PNP a režimy v SDK."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ Tento článek popisuje rozšiřující modul CHESTER-X0 se čtyřmi vstupně-v�
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../chester/extension-modules/images/chester-x0a-top.png')} alt="Modul CHESTER-X0A, červená deska s osazeným zvyšujícím měničem v levém horním rohu" /></div>
+      <div><Image img={require('../../../../../chester/extension-modules/images/chester-x0a-top.webp')} alt="Modul CHESTER-X0A, červená deska s osazeným zvyšujícím měničem v levém horním rohu" /></div>
     </div>
     <div class="col col--10">
     </div>
@@ -25,7 +26,7 @@ Tento článek popisuje rozšiřující modul CHESTER-X0 se čtyřmi vstupně-v�
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../chester/extension-modules/images/chester-x0b-top.png')} alt="Modul CHESTER-X0B, červená deska s neosazenou pozicí zvyšujícího měniče, místo něj s pájenými propojkami" /></div>
+      <div><Image img={require('../../../../../chester/extension-modules/images/chester-x0b-top.webp')} alt="Modul CHESTER-X0B, červená deska s neosazenou pozicí zvyšujícího měniče, místo něj s pájenými propojkami" /></div>
     </div>
     <div class="col col--10">
     </div>

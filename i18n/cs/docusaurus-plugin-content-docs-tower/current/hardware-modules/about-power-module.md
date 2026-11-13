@@ -1,13 +1,14 @@
 ---
 slug: about-power-module
 title: O modulu Power Module
+description: "Power Module pro TOWER: vstup 5 V DC (konektor 2,1 mm), relé 230 V AC / 16 A, výstup pro LED pásek kompatibilní s WS2812B, LDO 3,3 V a ochrany vstupu."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/power-module.png')} alt="Power Module s výkonovým relé, souosým DC konektorem a svorkovnicí pro digitální LED pásek" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/power-module.webp')} alt="Power Module s výkonovým relé, souosým DC konektorem a svorkovnicí pro digitální LED pásek" /></div>
     </div>
     <div class="col col--6">
 

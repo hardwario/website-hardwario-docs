@@ -1,6 +1,7 @@
 ---
 slug: bmeters_iwm-tx3
 title: BMeters IWM-TX3
+description: "Konfigurace rádiového modulu BMeters IWM-TX3 pro vodoměry GMDM-I, GMB-I, GMB-RP-I a CPR-M3-I přes NFC a přiřazení adresy wM-Bus k zařízení CHESTER."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx3.png')} width={376} height={376} alt="Bílý rádiový modul wM-Bus BMeters IWM-TX3 pro vodoměry" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx3.webp')} width={376} height={376} alt="Bílý rádiový modul wM-Bus BMeters IWM-TX3 pro vodoměry" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -86,7 +87,7 @@ Nastavte tyto položky:
 
 Vodoměr je teď nastavený.
 
-![Data načtená v konfigurační aplikaci](../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx3-data.png)
+![Data načtená v konfigurační aplikaci](../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx3-data.webp)
 
 ---
 
@@ -100,7 +101,7 @@ Adresa (8 číslic) je **uprostřed nad čárovým kódem** za písmeny **SN** (
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx3.png')} width={376} height={376} alt="IWM-TX3 s vyznačenou osmimístnou adresou wM-Bus za SN nad čárovým kódem" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-iwm-tx3.webp')} width={376} height={376} alt="IWM-TX3 s vyznačenou osmimístnou adresou wM-Bus za SN nad čárovým kódem" />
       </div>
     </div>
     <div class="col col--24"></div>

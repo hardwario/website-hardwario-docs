@@ -1,6 +1,7 @@
 ---
 slug: installation-on-ubuntu
 title: Instalace na Ubuntu
+description: "Instalace CHESTER SDK v Ubuntu 22.04 LTS: pravidla udev, balíčky APT, virtuální prostředí Pythonu, pracovní prostor West a sestavení ukázky blinky."
 ---
 import Image from '@theme/IdealImage';
 

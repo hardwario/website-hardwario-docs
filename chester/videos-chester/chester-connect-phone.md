@@ -1,6 +1,7 @@
 ---
 slug: chester-connect-phone
 title: How to connect CHESTER to your phone
+description: "Video tutorial: pair CHESTER with your phone over Bluetooth in the HARDWARIO Manager app using the passkey from the QR code, then send shell commands."
 ---
 
 import Image from '@theme/IdealImage';

@@ -1,6 +1,7 @@
 ---
 slug: schneider-electric-iem3xxx-series
 title: Schneider Electric řady iEM3xxx
+description: "Připojení elektroměru Schneider Electric iEM3xxx (iEM3250) s proudovým transformátorem k zařízení CHESTER přes Modbus: zapojení, převod CT a konfigurace."
 ---
 
 import Image from '@theme/IdealImage';
@@ -11,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '376px' }}>
-        <Image img={require('../../../../../../chester/supported-devices/modbus/images/schneider-electric-iem3000-series.png')} alt="Elektroměr Schneider Electric iEM3255 na DIN lištu s displejem LCD a tlačítky OK, ESC a se šipkou" />
+        <Image img={require('../../../../../../chester/supported-devices/modbus/images/schneider-electric-iem3000-series.webp')} alt="Elektroměr Schneider Electric iEM3255 na DIN lištu s displejem LCD a tlačítky OK, ESC a se šipkou" />
       </div>
     </div>
     <div class="col col--24"></div>

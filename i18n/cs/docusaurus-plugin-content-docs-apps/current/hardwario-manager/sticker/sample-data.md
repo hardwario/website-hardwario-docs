@@ -1,6 +1,7 @@
 ---
 slug: sample-data
 title: Vzorek dat ze senzorů
+description: "Jedním přiložením telefonu přečtete všechny senzory zařízení STICKER a odešlete uplink LoRaWAN, čímž ověříte cestu od senzoru k síťovému serveru."
 ---
 
 # Vzorek dat ze senzorů {#sample-sensor-data}

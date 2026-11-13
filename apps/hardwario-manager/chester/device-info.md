@@ -1,6 +1,7 @@
 ---
 slug: device-info
 title: Device info
+description: "CHESTER Device info in HARDWARIO Manager: uptime, hardware and firmware versions, serial number, claim token, Bluetooth passkey and Save configuration."
 ---
 
 # CHESTER device info

@@ -68,7 +68,7 @@ servers or cloud services required:
 
 <div style={{ maxWidth: '600px', margin: '0 auto' }}>
 
-<Image img={require('./fiber-lite/images/data-flow.png')} />
+<Image img={require('./fiber-lite/images/data-flow.webp')} alt="FIBER Lite data flow: ChirpStack, Node-RED, InfluxDB and Grafana on the device" />
 
 </div>
 

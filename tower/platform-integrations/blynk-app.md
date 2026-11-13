@@ -1,6 +1,7 @@
 ---
 slug: blynk-app
 title: Blynk Mobile and Web Application
+description: "Connect TOWER to the Blynk mobile app via Node-RED on HARDWARIO Raspbian to switch a relay and LED strip and chart temperature, with an importable flow."
 ---
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'
@@ -364,7 +365,7 @@ After you scan the QR code in the app, you should see widgets positioned like th
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/blynk-example-widget-showcase.png')} alt="Blynk wireless-led-strip dashboard with sliders, V3-V6 buttons, and an LED strip color picker" /></div>
+      <div><Image img={require('./images/blynk-example-widget-showcase.jpg')} alt="Blynk wireless-led-strip dashboard with sliders, V3-V6 buttons, and an LED strip color picker" /></div>
     </div>
     <div class="col col--6">
     </div>

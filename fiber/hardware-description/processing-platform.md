@@ -1,5 +1,6 @@
 ---
 title: Processing Platform
+description: "FIBER is built on the Raspberry Pi Compute Module 4: quad-core Cortex-A72 at 1.8 GHz, 1–8 GB RAM, 8–32 GB eMMC and industrial temperature options."
 ---
 
 # Processing Platform

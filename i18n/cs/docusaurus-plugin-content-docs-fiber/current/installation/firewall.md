@@ -1,5 +1,6 @@
 ---
 title: Firewall
+description: "Firewall ufw na zařízení FIBER: SSH povolené před zapnutím, porty ChirpStack, Node-RED, dashboardu, InfluxDB a Grafany otevřené jen pro vaši podsíť LAN."
 ---
 
 # Firewall {#firewall}

@@ -27,6 +27,14 @@
     "message": "Řešení problémů",
     "description": "The label for category 'Troubleshooting' in sidebar 'docs'"
   },
+  "sidebar.docs.category.Troubleshooting.link.generated-index.title": {
+    "message": "Řešení problémů FIBER Lite",
+    "description": "The generated-index page title for category 'Troubleshooting' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Troubleshooting.link.generated-index.description": {
+    "message": "Řešení problémů zařízení FIBER Lite: odmítnuté nebo zamítnuté připojení SSH, chyba RTC EREMOTEIO a koncentrátor, který nezobrazí ID brány.",
+    "description": "The generated-index page description for category 'Troubleshooting' in sidebar 'docs'"
+  },
   "sidebar.docs.category.FIBER Hardware Guides": {
     "message": "Návody k hardwaru FIBER",
     "description": "The label for category 'FIBER Hardware Guides' in sidebar 'docs'"
@@ -42,6 +50,10 @@
   "sidebar.docs.category.Hardware Description.link.generated-index.description": {
     "message": "Výpočetní platforma FIBER, rozhraní pro senzory, konektivita a technické parametry.",
     "description": "The generated-index page description for category 'Hardware Description' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Hardware Description.link.generated-index.title": {
+    "message": "Popis hardwaru FIBER",
+    "description": "The generated-index page title for category 'Hardware Description' in sidebar 'docs'"
   },
   "sidebar.docs.doc.Changelog": {
     "message": "Seznam změn",

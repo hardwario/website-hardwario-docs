@@ -1,6 +1,7 @@
 ---
 slug: tags
 title: Organizace zařízení tagy
+description: "Barevné tagy pro uložená zařízení STICKER v aplikaci HARDWARIO Manager: označení podle lokality, zákazníka či podlaží, správa tagů a filtrování seznamu."
 ---
 
 # Organizace uložených zařízení tagy {#organise-saved-devices-with-tags}

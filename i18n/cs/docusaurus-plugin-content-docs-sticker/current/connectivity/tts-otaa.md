@@ -1,6 +1,7 @@
 ---
 slug: tts-otaa
 title: The Things Stack – OTAA
+description: "Registrace zařízení STICKER v The Things Stack přes OTAA: DevEUI, JoinEUI a AppKey, koncové zařízení, formátovač payloadu ttn.js a kontrola uplinků."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: hardwario-monitor
 title: HARDWARIO Monitor
+description: "Počítačová aplikace HARDWARIO Monitor pro CHESTER: konzole přes J-Link RTT s dávkami příkazů, shell přes Bluetooth, nahrání firmwaru podle ID a logy."
 ---
 import Image from '@theme/IdealImage';
 
@@ -13,7 +14,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('../../../../../chester/platform-connectivity/images/hardwario-monitor.png')} alt="Okno aplikace HARDWARIO Monitor s panely Interactive shell a Device Log a volbami Console, Bluetooth, Flash na levé straně" /></div>
+      <div><Image img={require('../../../../../chester/platform-connectivity/images/hardwario-monitor.webp')} alt="Okno aplikace HARDWARIO Monitor s panely Interactive shell a Device Log a volbami Console, Bluetooth, Flash na levé straně" /></div>
     </div>
     <div class="col col--12">
     </div>

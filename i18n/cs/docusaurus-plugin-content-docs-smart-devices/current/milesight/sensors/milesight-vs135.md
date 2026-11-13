@@ -1,6 +1,7 @@
 ---
 slug: milesight-vs135
 title: VS135
+description: "Senzor Milesight VS135 pro počítání osob (ToF s AI, až 4 zóny): klíče LoRaWAN třídy C, odkazy na dekodéry payloadu a technické parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight VS135 je **senzor pro počítání osob s technologií ToF (Time-of-Fl
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/vs135.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/vs135.webp')} alt="Senzor Milesight VS135" />
       </div>
     </div>
     <div class="col col--24"></div>

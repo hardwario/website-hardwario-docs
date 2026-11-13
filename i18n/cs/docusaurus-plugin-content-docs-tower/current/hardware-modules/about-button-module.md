@@ -1,13 +1,14 @@
 ---
 slug: about-button-module
 title: O modulu Button Module
+description: "Button Module pro TOWER: velké tlačítko na signálu BOOT modulu Core Module se životností přes jeden milion stisků, schéma a odkazy na SDK."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/button-module.png')} alt="Čelní panel modulu Button Module s jedním velkým kulatým tlačítkem" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/button-module.webp')} alt="Čelní panel modulu Button Module s jedním velkým kulatým tlačítkem" /></div>
     </div>
     <div class="col col--6">
 

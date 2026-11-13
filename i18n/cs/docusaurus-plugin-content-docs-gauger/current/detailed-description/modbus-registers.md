@@ -1,6 +1,7 @@
 ---
 slug: modbus-registers
 title: Registry Modbus
+description: "Registry Modbus TCP zařízení GAUGER: dvanáct registrů typu holding (45301–45312, FC03) s počty aktivací a deaktivací a se stavem každého ze čtyř vstupů."
 ---
 
 # Registry Modbus {#modbus-registers}

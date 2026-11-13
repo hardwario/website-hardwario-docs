@@ -1,6 +1,7 @@
 ---
 slug: tts-gateways
 title: Gateways
+description: "Register a gateway in The Things Stack: Gateway EUI, Europe 868.1 MHz frequency plan, CUPS and LNS API keys, and why a deleted gateway ID stays reserved."
 title_meta: "Gateways (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';

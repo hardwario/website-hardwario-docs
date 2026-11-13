@@ -1,6 +1,7 @@
 ---
 slug: sim-card-setup
 title: SIM Card Setup
+description: "Get CHESTER onto a cellular network: select the radio mode, apply the settings for a Vodafone, 1NCE or other SIM card, and verify the registration."
 ---
 import Image from '@theme/IdealImage';
 

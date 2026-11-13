@@ -1,6 +1,7 @@
 ---
 slug: change-log
 title: Device change log
+description: "Turn on the STICKER change log in HARDWARIO Manager, browse each recorded read and write, restore an earlier configuration, and export or delete logs."
 ---
 
 # View a device's change log

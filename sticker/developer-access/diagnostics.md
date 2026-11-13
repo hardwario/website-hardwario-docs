@@ -1,5 +1,6 @@
 ---
 title: Diagnostics
+description: "STICKER ats diagnostic commands: device and provisioning info, sensor and LED tests, LoRaWAN and P2P radio diagnostics, the claim window and bench tools."
 ---
 import Image from '@theme/IdealImage';
 

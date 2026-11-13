@@ -1,6 +1,7 @@
 ---
 slug: installation-on-macos
 title: Installation on macOS
+description: "Install the CHESTER SDK on macOS 12 or 13 with Homebrew, a Python virtual environment and West, then build and flash the blinky sample."
 ---
 import Image from '@theme/IdealImage';
 

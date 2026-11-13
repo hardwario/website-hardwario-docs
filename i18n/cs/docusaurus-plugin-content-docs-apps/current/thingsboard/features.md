@@ -1,6 +1,7 @@
 ---
 slug: features
 title: Funkce
+description: "Funkce platformy HARDWARIO ThingsBoard: assety, pravidla notifikací, e-mailové notifikace, plánované reporty v PDF, vkládání dashboardů a Rule Engine."
 title_meta: "Funkce (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';

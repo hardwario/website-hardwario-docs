@@ -1,6 +1,7 @@
 ---
 slug: machine-probe
 title: MACHINE PROBE
+description: "Sonda MACHINE PROBE v1.3 pro STICKER Input a CHESTER: teplota, vlhkost, osvětlenost, magnetické pole a zrychlení přes 1-Wire, zapojení a kanály."
 ---
 
 # MACHINE PROBE (v1.3) {#machine-probe-v13}

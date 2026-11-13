@@ -1,6 +1,7 @@
 ---
 slug: how-to-lte-v2
 title: "Jak na: LTE v2"
+description: "Převod firmwaru zařízení CHESTER na LTE v2 a HARDWARIO Cloud: modem LTE v1.7.0, ctr_cloud místo ctr_lte, hierarchické kodeky CBOR, APN, IP adresa a port."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,13 +1,14 @@
 ---
 slug: about-gps-module
 title: O modulu GPS Module
+description: "GPS Module pro TOWER s přijímačem u-blox SAM-M8Q pro GPS, Galileo a GLONASS, přesností polohy 2,5 m CEP, rozhraním I²C a vestavěnou anténou."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/gps-module.png')} alt="GPS Module s přijímačem u-blox SAM-M8Q pod čtvercovou patch anténou" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/gps-module.webp')} alt="GPS Module s přijímačem u-blox SAM-M8Q pod čtvercovou patch anténou" /></div>
     </div>
     <div class="col col--6">
 

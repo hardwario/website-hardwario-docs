@@ -1,6 +1,7 @@
 ---
 slug: configuration
 title: Configuration
+description: "STICKER config shell command for firmware v2.0.0: intervals, LoRaWAN and P2P radio, GP pins, 1-Wire slots, pulse counters, alarms and NFC security."
 title_meta: "Configuration (STICKER)"
 ---
 import Image from '@theme/IdealImage';

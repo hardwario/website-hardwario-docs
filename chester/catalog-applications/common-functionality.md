@@ -1,6 +1,7 @@
 ---
 slug: common-functionality
 title: Common Functionality
+description: "Behavior shared by CHESTER catalog applications: LTE or LoRaWAN mode, button, LEDs, configuration reset, report interval jitter and diagnostic commands."
 ---
 import Image from '@theme/IdealImage';
 

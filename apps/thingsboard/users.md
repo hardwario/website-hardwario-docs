@@ -1,6 +1,7 @@
 ---
 slug: users
 title: Adding Users
+description: "Create ThingsBoard user accounts, assign their customer and user group, send or display activation links, and change your own password under Account."
 ---
 
 import Image from '@theme/IdealImage';

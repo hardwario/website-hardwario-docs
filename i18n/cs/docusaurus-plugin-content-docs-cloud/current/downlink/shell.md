@@ -1,5 +1,6 @@
 ---
 title: Příkazy shellu
+description: "Příkazy shellu pro zařízení CHESTER naplánujete v konzoli HARDWARIO Cloud a odpovědi přečtete později; užitečné jsou třeba info show a app config show."
 title_meta: "Příkazy shellu (HARDWARIO Cloud)"
 ---
 

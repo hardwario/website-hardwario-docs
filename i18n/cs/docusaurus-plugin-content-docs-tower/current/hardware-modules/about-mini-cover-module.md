@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/mini-cover-module.png')} alt="Mini Cover Module, malý jednoduchý černý krycí panel s ventilačními otvory" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/mini-cover-module.webp')} alt="Mini Cover Module, malý jednoduchý černý krycí panel s ventilačními otvory" /></div>
     </div>
     <div class="col col--6">
 

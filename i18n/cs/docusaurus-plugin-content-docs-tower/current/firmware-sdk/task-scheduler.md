@@ -1,6 +1,7 @@
 ---
 slug: task-scheduler
 title: Plánovač úloh
+description: "Jak plánovač úloh v SDK pro TOWER spouští krátké neblokující úlohy bez RTOS: registrace a odregistrování úlohy, její opakované plánování a příklady v C."
 ---
 import Image from '@theme/IdealImage';
 

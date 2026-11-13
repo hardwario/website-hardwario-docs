@@ -1,6 +1,7 @@
 ---
 slug: applications
 title: Aplikace
+description: "Struktura zdrojového kódu katalogových aplikací CHESTER: soubory projektu, průběh aplikace a přidání senzoru nebo konfigurační volby do shellu."
 ---
 import Image from '@theme/IdealImage';
 

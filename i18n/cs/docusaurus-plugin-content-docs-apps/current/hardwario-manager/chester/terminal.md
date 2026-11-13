@@ -1,6 +1,7 @@
 ---
 slug: terminal
 title: Terminál
+description: "Shell zařízení CHESTER v telefonu přes Bluetooth v aplikaci HARDWARIO Manager: návrhy příkazů podle firmwaru a historie výstupu pro každé zařízení."
 ---
 
 # Terminál zařízení CHESTER {#chester-terminal}

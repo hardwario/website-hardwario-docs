@@ -66,4 +66,4 @@ LoRaWAN používá topologii **„hvězda hvězd“** (star-of-stars), kde se ko
 
 ### Topologie sítě LoRaWAN {#lorawan-network-topology}
 
-![Topologie sítě LoRaWAN](../../../../../apps/chirpstack/images/lora-example.png)
+![Topologie sítě LoRaWAN](../../../../../apps/chirpstack/images/lora-example.webp)

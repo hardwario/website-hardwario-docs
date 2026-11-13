@@ -1,6 +1,7 @@
 ---
 slug: device-discovery
 title: Vyhledání zařízení
+description: "Zařízení GAUGER s adresou z DHCP najdete podle broadcastových paketů UDP na portu 53914 nebo podle názvu hostitele v administraci routeru."
 ---
 
 # Vyhledání zařízení {#device-discovery}

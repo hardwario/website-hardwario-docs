@@ -1,6 +1,7 @@
 ---
 slug: bmeters-hydrocal-m4
 title: BMeters Hydrocal M4
+description: "Konfigurace měřiče tepla BMeters Hydrocal M4 přes NFC v aplikaci B METERS NFC Config pro Android a přiřazení jeho adresy wM-Bus k zařízení CHESTER."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-hydrocal-m4.png')} width={376} height={376} alt="Měřič tepla BMeters Hydrocal M4 s LCD displejem, červenými tlačítky a mosazným tělem průtokoměru" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-hydrocal-m4.webp')} width={376} height={376} alt="Měřič tepla BMeters Hydrocal M4 s LCD displejem, červenými tlačítky a mosazným tělem průtokoměru" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -102,7 +103,7 @@ Adresa (8 číslic) je **vlevo pod čárovým kódem**, viz obrázek níže.
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-hydrocal-m4.png')} width={376} height={376} alt="Štítek měřiče Hydrocal M4 s vyznačenou osmimístnou adresou wM-Bus vlevo pod čárovým kódem" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-hydrocal-m4.webp')} width={376} height={376} alt="Štítek měřiče Hydrocal M4 s vyznačenou osmimístnou adresou wM-Bus vlevo pod čárovým kódem" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -1,5 +1,6 @@
 ---
 title: Příkazy AT
+description: "Všechny příkazy AT firmwaru GLIDER v konzoli USB-C: syntaxe ATCI, informace o zařízení, AT$CONFIG, aktualizace firmwaru AT$FW, chybové kódy a AT$SHELL."
 sidebar_position: 1
 ---
 import Image from '@theme/IdealImage';

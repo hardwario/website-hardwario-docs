@@ -1,6 +1,7 @@
 ---
 slug: carlo-gavazzi-em5xx-series
 title: Carlo Gavazzi řady EM5XX
+description: "Připojení analyzátoru energie Carlo Gavazzi EM5xx (EM530) s rozevíracím proudovým transformátorem k zařízení CHESTER přes Modbus a nastavení převodu CT."
 ---
 
 import Image from '@theme/IdealImage';
@@ -12,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '376px' }}>
-        <Image img={require('../../../../../../chester/supported-devices/modbus/images/carlo-gavazzi-em5xx.png')} alt="Analyzátor energie Carlo Gavazzi EM530 na DIN lištu s LCD zobrazujícím hodnoty energie a výkonu" />
+        <Image img={require('../../../../../../chester/supported-devices/modbus/images/carlo-gavazzi-em5xx.webp')} alt="Analyzátor energie Carlo Gavazzi EM530 na DIN lištu s LCD zobrazujícím hodnoty energie a výkonu" />
       </div>
     </div>
     <div class="col col--24"></div>

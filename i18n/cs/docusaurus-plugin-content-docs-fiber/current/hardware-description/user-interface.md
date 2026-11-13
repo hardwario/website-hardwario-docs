@@ -1,5 +1,6 @@
 ---
 title: Uživatelské rozhraní
+description: "Místní ovládání zařízení FIBER: podsvícený LCD s hodnotami senzorů v reálném čase, navigační tlačítka, stavová LED u každého portu 1-Wire a bzučák."
 ---
 
 # Uživatelské rozhraní {#user-interface}

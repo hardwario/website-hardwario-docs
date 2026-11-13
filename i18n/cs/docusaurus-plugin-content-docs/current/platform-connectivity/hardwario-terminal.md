@@ -1,6 +1,7 @@
 ---
 slug: hardwario-terminal
 title: HARDWARIO Terminal
+description: "HARDWARIO Terminal v prohlížeči Google Chrome: připojení k zařízení CHESTER přes Bluetooth bez instalace softwaru, rychlé příkazy a vzdálené relace."
 ---
 import Image from '@theme/IdealImage';
 

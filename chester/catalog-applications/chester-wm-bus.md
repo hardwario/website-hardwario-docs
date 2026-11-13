@@ -1,6 +1,7 @@
 ---
 slug: chester-wm-bus
 title: CHESTER wM-Bus
+description: "CHESTER wM-Bus catalog application: battery or mains-powered variant, periodic to monthly scans with two antennas, address enrollment and cloud decoding."
 ---
 import Image from '@theme/IdealImage';
 
@@ -10,7 +11,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/chester-wm-bus.png')} width={376} height={376} alt="CHESTER wM-Bus gateway in a white wall-mount enclosure with two external antennas" />
+        <Image img={require('./images/chester-wm-bus.webp')} width={376} height={376} alt="CHESTER wM-Bus gateway in a white wall-mount enclosure with two external antennas" />
       </div>
     </div>
     <div class="col col--24"></div>

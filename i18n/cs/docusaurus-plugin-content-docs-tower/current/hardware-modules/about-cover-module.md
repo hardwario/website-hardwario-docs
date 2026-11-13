@@ -1,13 +1,14 @@
 ---
 slug: about-cover-module
 title: O modulu Cover Module
+description: "Cover Module pro TOWER zakryje čelní stranu elektroniky HARDWARIO formátu 88 x 55 mm v 3D tištěné krabičce; pro menší sestavy slouží Mini Cover Module."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/cover-module.png')} alt="Cover Module, jednoduchý černý čelní panel s ventilačními drážkami a čtyřmi montážními otvory" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/cover-module.webp')} alt="Cover Module, jednoduchý černý čelní panel s ventilačními drážkami a čtyřmi montážními otvory" /></div>
     </div>
     <div class="col col--6">
 

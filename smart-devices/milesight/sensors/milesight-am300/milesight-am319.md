@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-am319
 title: AM319
+description: "Milesight AM319 indoor air quality sensor with nine parameters including PM2.5/PM10 and HCHO or O₃: LoRaWAN Class C keys, decoders and specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight AM319 is an **indoor air quality sensor** that measures **nine paramet
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/am319-868m.png')} />
+        <Image img={require('./images/am319-868m.webp')} alt="Milesight Sensor AM319" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -86,7 +87,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 ## Power supply
 | Type   | Value              |
 |--------|--------------------|
-| Power  | USB-C or battery   |
+| Power  | USB-C              |
 
 ---
 

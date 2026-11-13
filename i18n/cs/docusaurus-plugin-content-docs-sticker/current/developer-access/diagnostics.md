@@ -1,5 +1,6 @@
 ---
 title: Diagnostika
+description: "Diagnostické příkazy ats zařízení STICKER: informace o zařízení, test senzorů a LED, diagnostika rádia LoRaWAN a P2P, claim okno a nástroje pro testování."
 ---
 import Image from '@theme/IdealImage';
 

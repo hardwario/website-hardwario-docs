@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-abp
 title: ChirpStack v4 – ABP
+description: "Register STICKER in ChirpStack v4 with ABP: the DevAddr, NwkSKey and AppSKey, a device profile and application, device activation and uplink checks."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,5 +1,6 @@
 ---
 title: Konfigurace hardwaru
+description: "Sběrnice I2C a hodiny reálného času: overlay RTC PCF85063A na zařízení FIBER (CM4), vestavěné RTC u FIBER Lite a kontrola příkazem hwclock."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

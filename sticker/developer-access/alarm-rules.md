@@ -1,6 +1,7 @@
 ---
 slug: alarm-rules
 title: Alarm Rules
+description: "STICKER alarm engine: threshold, state and rate rules per slot and channel, motion and stillness, the dwell parameter, system alarms and fPort 3 uplinks."
 ---
 import Image from '@theme/IdealImage';
 
@@ -60,7 +61,7 @@ Rules are held in 16 fixed indexes (`0`-`15`). The index serves as the rule's st
 
 ### Channels
 
-A channel is given by its name or its number; `sensor types` prints the list. Channels marked "—" cannot be a rule target.
+A channel is given by its name or its number; `sensor types` prints the list. Channels marked "–" cannot be a rule target.
 
 **Motherboard (`mb`)**
 
@@ -85,9 +86,9 @@ A channel is given by its name or its number; `sensor types` prints the list. Ch
 | 16 | `pir-count` | rate | events | `cap-gpio-mode pir` |
 | 17 | `accel-motion` | state (momentary) | 0/1 | `cap-accelerometer` |
 | 18 | `accel-count` | rate | events | `cap-accelerometer` |
-| 19 | `accel-orientation` | — | 1–6 | `cap-accelerometer` |
-| 20 | `battery-voltage` | — (low-battery alarm only) | V | always |
-| 21 | `altitude` | — | m | `cap-barometer` |
+| 19 | `accel-orientation` | – | 1–6 | `cap-accelerometer` |
+| 20 | `battery-voltage` | – (low-battery alarm only) | V | always |
+| 21 | `altitude` | – | m | `cap-barometer` |
 
 **1-Wire `dallas` (DS18B20, type `2`)**
 

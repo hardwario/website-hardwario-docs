@@ -1,6 +1,7 @@
 ---
 slug: offline-configuration
 title: Konfigurace vypnutého zařízení
+description: "Zápis konfigurace přes NFC do zařízení STICKER bez baterií (jen firmware v1.4.x), hlídání počítadla velikosti a ověření zápisu před instalací zařízení."
 ---
 
 # Konfigurace vypnutého zařízení STICKER {#configure-a-powered-off-sticker}

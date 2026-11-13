@@ -1,13 +1,14 @@
 ---
 slug: about-sensor-module
 title: About Sensor Module
+description: "TOWER Sensor Module with up to four universal analog or digital inputs and outputs on a pluggable terminal block, 1-Wire master and selectable pull-ups."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/sensor-module.png')} alt="Sensor Module with a five-pole pluggable terminal block for the universal inputs and outputs" /></div>
+      <div><Image img={require('./images/sensor-module.webp')} alt="Sensor Module with a five-pole pluggable terminal block for the universal inputs and outputs" /></div>
     </div>
     <div class="col col--6">
 

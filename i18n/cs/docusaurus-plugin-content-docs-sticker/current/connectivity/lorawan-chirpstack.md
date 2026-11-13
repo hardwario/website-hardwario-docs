@@ -1,6 +1,7 @@
 ---
 slug: lorawan-chirpstack
 title: ChirpStack v4
+description: "Zařízení STICKER v ChirpStack v4: načtení klíčů LoRaWAN přes NFC v aplikaci HARDWARIO Manager, volba OTAA nebo ABP a profil zařízení s kodekem ttn.js."
 title_meta: "ChirpStack v4 (STICKER)"
 ---
 import Image from '@theme/IdealImage';

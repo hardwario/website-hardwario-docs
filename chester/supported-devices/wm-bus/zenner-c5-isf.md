@@ -1,6 +1,7 @@
 ---
 slug: zenner-c5-isf
 title: Zenner C5-ISF
+description: "Read the Zenner zelsius C5-ISF thermal energy meter with CHESTER wM-Bus: where to find its wM-Bus address, address mapping and decryption keys."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/zenner-c5-isf.png')} width={376} height={376} alt="Zenner zelsius C5-ISF thermal energy meter with LCD and brass single-jet flow sensor" />
+        <Image img={require('./images/zenner-c5-isf.webp')} width={376} height={376} alt="Zenner zelsius C5-ISF thermal energy meter with LCD and brass single-jet flow sensor" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -41,7 +42,7 @@ The address is located **in the center below the barcode** and consists of the *
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/zenner-c5-isf.png')} width={376} height={376} alt="C5-ISF with the last two four-digit groups of the serial outlined as the wM-Bus address" />
+        <Image img={require('./images/zenner-c5-isf.webp')} width={376} height={376} alt="C5-ISF with the last two four-digit groups of the serial outlined as the wM-Bus address" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -1,6 +1,7 @@
 ---
 slug: configuration
 title: Konfigurace
+description: "Příkaz shellu config pro firmware STICKER v2.0.0: intervaly, rádio LoRaWAN a P2P, piny GP, sloty 1-Wire, čítače impulzů, alarmy a zabezpečení NFC."
 title_meta: "Konfigurace (STICKER)"
 ---
 import Image from '@theme/IdealImage';

@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 
 **HARDWARIO Cloud** je infrastruktura, která zajišťuje připojení zařízení IoT HARDWARIO, slouží k jejich správě a zpřístupňuje přenášená data přes REST API nebo callbacky.
 
-<Image img={require('../../../../../cloud/cloud-v1/images/hardwario-cloud.png')} alt="Diagram: zařízení CHESTER se připojuje k HARDWARIO Cloud přes LTE-M/NB-IoT/LoRaWAN; data proudí přes webhook a REST API do integrací"/><br/>
+<Image img={require('../../../../../cloud/cloud-v1/images/hardwario-cloud.webp')} alt="Diagram: zařízení CHESTER se připojuje k HARDWARIO Cloud přes LTE-M/NB-IoT/LoRaWAN; data proudí přes webhook a REST API do integrací"/><br/>
 
 1. Základní vlastnosti platformy **HARDWARIO Cloud** popisuje kapitola:<br/>
    [**Základní vlastnosti**](#basic-features)

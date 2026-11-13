@@ -1,6 +1,7 @@
 ---
 slug: sensor-history
 title: Sensor History
+description: "STICKER store-and-forward sensor history: selecting recorded channels, the history shell command, replay over the radio, NFC readout and the 32 KB buffer."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: milesight-ug65
 title: UG65
+description: "Milesight UG65 semi-industrial LoRaWAN gateway: first login, hostname, time and Wi-Fi settings, and the CUPS connection to The Things Stack."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight UG65 is a **semi-industrial LoRaWAN® gateway** powered by the **SX130
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/ug65-868m.png')} />
+        <Image img={require('./images/ug65-868m.png')} alt="Milesight Gateway UG65-868M" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -1,6 +1,7 @@
 ---
 slug: milesight-ws201
 title: WS201
+description: "Senzor zaplnění Milesight WS201 s měřením ToF (1–55 cm): klíče pro připojení OTAA do sítě LoRaWAN, odkazy na dekodéry a technické parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight WS201 je **bezdrátový senzor zaplnění**, který pro vysokou přesn
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/ws201-868m.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/ws201-868m.png')} alt="Senzor Milesight WS201" />
       </div>
     </div>
     <div class="col col--24"></div>

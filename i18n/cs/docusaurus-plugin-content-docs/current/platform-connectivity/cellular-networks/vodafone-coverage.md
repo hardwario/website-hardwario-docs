@@ -1,6 +1,7 @@
 ---
 slug: vodafone-coverage
 title: Vodafone SIM EU28+2
+description: "Ověřené roamingové sítě NB-IoT a LTE-M podle zemí, kódy PLMN a APN pro SIM kartu Vodafone od HARDWARIO; nejde o úplný seznam pokrytí."
 ---
 import Image from '@theme/IdealImage';
 

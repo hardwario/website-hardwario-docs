@@ -1,6 +1,7 @@
 ---
 slug: chester-motion
 title: CHESTER Motion
+description: "Katalogová aplikace CHESTER Motion: dva senzory PIR na desce CHESTER-S3 rozliší směr průchodu; předvolby citlivosti, servisní režim a akce tlačítka."
 ---
 import Image from '@theme/IdealImage';
 

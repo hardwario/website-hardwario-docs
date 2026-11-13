@@ -90,7 +90,7 @@ This tool provides the possibility to **show live-generated C code** that is ide
 
 Thanks to this, you can create some basic firmware with the use of blocks, then take the code and finalize it in the [**HARDWARIO Code**](../firmware-development/about-hardwario-code.md).
 
-<Image img={require('./images/blockly-code.png')} alt="Blockly workspace with Show Code enabled: the generated C code appears next to the blocks" />
+<Image img={require('./images/blockly-code.webp')} alt="Blockly workspace with Show Code enabled: the generated C code appears next to the blocks" />
 
 ### Compiling and Flashing
 

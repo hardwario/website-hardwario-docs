@@ -1,6 +1,7 @@
 ---
 slug: public-link
 title: Public Link
+description: "Share a ThingsBoard dashboard through a read-only public link by making its device group and dashboard group public, sub-customers included."
 ---
 
 import Image from '@theme/IdealImage';

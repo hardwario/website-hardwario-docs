@@ -1,6 +1,7 @@
 ---
 slug: serial_sensors
 title: Serial Devices
+description: "Serial devices tested with CHESTER and their basic configuration: the Promag MF7S RFID reader, connected over RS-232 with the CHESTER Serial variant."
 ---
 
 import Image from '@theme/IdealImage';

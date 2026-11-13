@@ -1,6 +1,7 @@
 ---
 slug: gateway-update
 title: Aktualizace brány
+description: "Aktualizace balíčků RouterOS a firmwaru RouterBOARD brány MikroTik v aplikaci Winbox 4, restart pro nahrání firmwaru a kontrola, že se verze shodují."
 ---
 import Image from '@theme/IdealImage';
 

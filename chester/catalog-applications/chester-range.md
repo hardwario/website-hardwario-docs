@@ -1,6 +1,7 @@
 ---
 slug: chester-range
 title: CHESTER Range
+description: "CHESTER Range catalog application: distance from a MaxBotix MB7066 ultrasonic sensor on CHESTER-X0A, temperature, humidity, Range Z variant and JSON."
 ---
 import Image from '@theme/IdealImage';
 

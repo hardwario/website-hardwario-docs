@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-installation
 title: Instalace
+description: "Instalace ChirpStack v4 a Gateway Bridge v systému Debian/Ubuntu s PostgreSQL, Redis a Mosquitto, zapnutí regionu EU868 a přístup do webového rozhraní."
 title_meta: "Instalace (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';

@@ -79,6 +79,10 @@
     "message": "Dokumentace k hardwaru, krabičce, konektorům, sběrnicím a rozšiřujícím modulům zařízení CHESTER.",
     "description": "The generated-index page description for category 'Hardware Description' in sidebar 'docs'"
   },
+  "sidebar.docs.category.Hardware Description.link.generated-index.title": {
+    "message": "Popis hardwaru CHESTER",
+    "description": "The generated-index page title for category 'Hardware Description' in sidebar 'docs'"
+  },
   "sidebar.docs.category.Firmware Flashing": {
     "message": "Nahrání firmwaru",
     "description": "The label for category 'Firmware Flashing' in sidebar 'docs'"

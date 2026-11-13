@@ -1,6 +1,7 @@
 ---
 slug: milesight-wt101
 title: WT101
+description: "Termostatická hlavice Milesight WT101 s detekcí otevřeného okna: klíče pro připojení OTAA do sítě LoRaWAN, odkazy na dekodéry a technické parametry."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight WT101 je **chytrá termostatická hlavice** s **ovládáním přes LoR
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/wt101-868m.png')} />
+        <Image img={require('../../../../../../smart-devices/milesight/sensors/images/wt101-868m.png')} alt="Senzor Milesight WT101" />
       </div>
     </div>
     <div class="col col--24"></div>

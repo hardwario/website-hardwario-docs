@@ -1,13 +1,14 @@
 ---
 slug: about-co2-module
 title: About CO₂ Module
+description: "TOWER CO₂ Module with a SenseAir LP8 NDIR sensor: 0 to 10 000 ppm range, ±50 ppm accuracy, I²C-only interface and years of battery operation."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/co2-module.png')} alt="CO2 Module with the SenseAir NDIR carbon-dioxide sensor and a backup supercapacitor" /></div>
+      <div><Image img={require('./images/co2-module.webp')} alt="CO2 Module with the SenseAir NDIR carbon-dioxide sensor and a backup supercapacitor" /></div>
     </div>
     <div class="col col--6">
 

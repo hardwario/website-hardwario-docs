@@ -1,5 +1,6 @@
 ---
 title: Hodiny reálného času
+description: "Hodiny reálného času zařízení STICKER: čas ze sítě LoRaWAN nebo P2P, synchronizace z telefonu přes NFC, příkaz clock_sync a příkazy shellu clock."
 ---
 import Image from '@theme/IdealImage';
 

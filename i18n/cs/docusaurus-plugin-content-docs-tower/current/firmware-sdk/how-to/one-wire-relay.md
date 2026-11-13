@@ -1,6 +1,7 @@
 ---
 slug: how-to-one-wire-relay
 title: "Jak na: 1-Wire relé"
+description: "Ovládání reléových modulů na sběrnici 1-Wire (např. od firmy Denkovi) modulem SDK twr_onewire_relay a příklad v C s tlačítkem modulu Core Module."
 ---
 import Image from '@theme/IdealImage';
 

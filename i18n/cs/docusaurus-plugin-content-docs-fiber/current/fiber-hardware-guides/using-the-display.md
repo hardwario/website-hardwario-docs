@@ -1,5 +1,6 @@
 ---
 title: Používání displeje
+description: "Podsvícený LCD zařízení FIBER řídí přes SPI6 aplikace FIBER, ne linuxový framebuffer; návod k zobrazení vlastního obsahu se proto teprve připravuje."
 ---
 
 # Používání displeje {#using-the-display}

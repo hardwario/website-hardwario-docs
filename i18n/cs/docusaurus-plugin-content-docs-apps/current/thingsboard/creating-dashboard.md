@@ -1,6 +1,7 @@
 ---
 slug: creating-dashboard
 title: Dashboardy
+description: "Vytvoření dashboardu v ThingsBoard, zobrazení proměnné widgetem Label & Value Card a graf telemetrie ve widgetu Line Chart s jednou či více řadami."
 ---
 import Image from '@theme/IdealImage';
 
@@ -37,12 +38,12 @@ V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobra
 
    2. Objeví se menu **Widgets Bundles**.  
 
-![Widgets Bundles](../../../../../apps/thingsboard/images/thingsboard-variable-1.png)
+![Widgets Bundles](../../../../../apps/thingsboard/images/thingsboard-variable-1.webp)
 
    3. Pro jednoduché zobrazení proměnné zvolte sadu widgetů **Cards**.  
    4. Z dostupných možností vyberte **Label & Value Card**.  
 
-![Widgety Cards](../../../../../apps/thingsboard/images/thingsboard-variable-2.png)
+![Widgety Cards](../../../../../apps/thingsboard/images/thingsboard-variable-2.webp)
 
    5. Otevře se konfigurační okno:  
       - Zvolte **zařízení** a **proměnnou**, kterou chcete zobrazit.  
@@ -74,7 +75,7 @@ V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobra
 
    2. Objeví se menu **Widgets Bundles**.  
 
-![Widgets Bundles](../../../../../apps/thingsboard/images/thingsboard-chart-1.png)
+![Widgets Bundles](../../../../../apps/thingsboard/images/thingsboard-chart-1.webp)
 
    3. Pro jednoduchý spojnicový graf zvolte sadu widgetů **Charts**.  
    4. Z dostupných možností vyberte **Line Chart**.  

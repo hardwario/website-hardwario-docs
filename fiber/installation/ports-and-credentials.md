@@ -1,5 +1,6 @@
 ---
 title: Ports & Default Credentials
+description: "Ports, URLs and default logins of the SSH, ChirpStack, Node-RED, MQTT, InfluxDB, Grafana and dashboard services on FIBER; change ChirpStack's admin/admin."
 ---
 
 # Ports & Default Credentials

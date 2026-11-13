@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-ws201
 title: WS201
+description: "Milesight WS201 fill level sensor with ToF measurement (1–55 cm): LoRaWAN OTAA join keys, payload decoder links and technical specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight WS201 is a **wireless fill level monitoring sensor** using **ToF (Time
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/ws201-868m.png')} />
+        <Image img={require('./images/ws201-868m.png')} alt="Milesight Sensor WS201" />
       </div>
     </div>
     <div class="col col--24"></div>

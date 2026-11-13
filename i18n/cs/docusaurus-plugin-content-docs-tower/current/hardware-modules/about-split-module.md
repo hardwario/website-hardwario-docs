@@ -1,13 +1,14 @@
 ---
 slug: about-split-module
 title: O modulu Split Module
+description: "Split Module pro TOWER: dva vrchní moduly v jedné sestavě nebo dva kompaktní sloupce, konektory pro dva tagy a rozdíl oproti modulu Compact Split Module."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/split-module.png')} alt="Split Module, zelená deska se dvěma sadami dutinkových lišt pro dva vrchní moduly" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/split-module.webp')} alt="Split Module, zelená deska se dvěma sadami dutinkových lišt pro dva vrchní moduly" /></div>
     </div>
     <div class="col col--6">
 

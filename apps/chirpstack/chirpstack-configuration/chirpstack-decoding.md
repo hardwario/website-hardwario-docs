@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-decoding
 title: Data Decoding
+description: "Add a JavaScript payload codec to a ChirpStack v4 device profile, with an editable STICKER uplink decoder, and check the decoded data in Events."
 ---
 import Image from '@theme/IdealImage';
 

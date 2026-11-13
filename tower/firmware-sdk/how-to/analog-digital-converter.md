@@ -1,6 +1,7 @@
 ---
 slug: how-to-analog-digital-converter
 title: "How To: Analog/Digital Converter"
+description: "Read voltage on inputs A0 to A5 with the TOWER SDK analog-to-digital converter, as a 16-bit value or volts, with synchronous or asynchronous sampling."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,5 +1,6 @@
 ---
 title: Aktualizace systému
+description: "Po nahrání systému aktualizujte Raspberry Pi OS na zařízení FIBER: seznam balíčků příkazem apt update, všechny balíčky příkazem apt upgrade a pak restart."
 ---
 
 # Aktualizace systému {#update-system}

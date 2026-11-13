@@ -1,6 +1,7 @@
 ---
 slug: orno-or-we-516
 title: ORNO OR-WE-516
+description: "Připojení třífázového elektroměru ORNO OR-WE-516 s certifikací MID k zařízení CHESTER přes RS-485 Modbus: zapojení, konfigurační příkazy a měřené hodnoty."
 ---
 
 import Image from '@theme/IdealImage';

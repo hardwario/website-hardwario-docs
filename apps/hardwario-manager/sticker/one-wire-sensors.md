@@ -1,6 +1,7 @@
 ---
 slug: one-wire-sensors
 title: 1-Wire sensors
+description: "Scan the 1-Wire bus of a STICKER Input over NFC and assign external temperature sensors to its four slots, which set the LoRaWAN channel of each probe."
 ---
 
 # Set up 1-Wire sensors

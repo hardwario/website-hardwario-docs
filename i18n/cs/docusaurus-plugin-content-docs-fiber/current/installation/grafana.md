@@ -1,5 +1,6 @@
 ---
 title: Instalace Grafany
+description: "Nainstalujte Grafanu na zařízení FIBER nebo FIBER Lite z repozitáře APT, změňte výchozí heslo administrátora a přidejte InfluxDB jako datový zdroj."
 ---
 
 # Instalace Grafany {#install-grafana}

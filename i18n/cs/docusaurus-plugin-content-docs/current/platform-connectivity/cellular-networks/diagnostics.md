@@ -1,6 +1,7 @@
 ---
 slug: diagnostics
 title: Diagnostika a řešení problémů
+description: "Řešení problémů, když se zařízení CHESTER nezaregistruje do mobilní sítě: kontrola lte state a sken viditelných operátorů příkazem AT%COPS přes J-Link RTT."
 ---
 import Image from '@theme/IdealImage';
 

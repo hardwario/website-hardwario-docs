@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-gs601
 title: GS601
+description: "Milesight GS601 ceiling vape and smoke detector with PM, TVOC, temperature and humidity sensing: LoRaWAN Class C keys, decoders and specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight GS601 is a **ceiling-mounted vape and smoke detector** designed for **
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/gs601.png')} />
+        <Image img={require('./images/gs601.png')} alt="Milesight Sensor GS601" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -1,6 +1,7 @@
 ---
 slug: how-to-power-module
 title: "Jak na: Power Module"
+description: "Ovládání relé 230 V / 16 A modulu Power Module pro TOWER v SDK s příkladem v C, který ho přepíná tlačítkem; LED pásek WS2812B má vlastní návod."
 ---
 import Image from '@theme/IdealImage';
 

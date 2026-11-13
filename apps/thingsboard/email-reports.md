@@ -1,6 +1,7 @@
 ---
 slug: email-reports
 title: Reports
+description: "Set up scheduled PDF reports in ThingsBoard: design a report template, write the email notification template and schedule delivery to recipients."
 ---
 import Image from '@theme/IdealImage';
 

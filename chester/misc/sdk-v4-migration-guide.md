@@ -1,6 +1,7 @@
 ---
 slug: /sdk-v4-migration-guide
 title: SDK v4.0.0 Migration Guide
+description: "Upgrade to CHESTER SDK v4.0.0 on nRF Connect SDK v3.4: update the workspace and Zephyr SDK, then move out-of-tree apps to sysbuild and DTS partitions."
 ---
 
 # CHESTER SDK v4.0.0 migration guide

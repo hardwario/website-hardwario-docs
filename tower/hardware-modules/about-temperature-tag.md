@@ -1,13 +1,14 @@
 ---
 slug: about-temperature-tag
 title: About Temperature Tag
+description: "TOWER Temperature Tag with the TI TMP112 sensor on the I²C bus: ±0.1 °C typical accuracy at 25 °C, 12-bit resolution and 7 µA active current."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/temperature-tag.png')} alt="Temperature Tag, a coin-sized board with the TMP112 temperature sensor" /></div>
+      <div><Image img={require('./images/temperature-tag.webp')} alt="Temperature Tag, a coin-sized board with the TMP112 temperature sensor" /></div>
     </div>
     <div class="col col--6">
 

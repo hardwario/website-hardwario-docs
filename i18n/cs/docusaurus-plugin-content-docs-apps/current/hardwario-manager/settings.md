@@ -1,6 +1,7 @@
 ---
 slug: settings
 title: Nastavení aplikace
+description: "Nastavení aplikace HARDWARIO Manager: světlý či tmavý vzhled, angličtina nebo čeština, zámek přes Face ID či kód, historie změn STICKER a ladicí režim."
 ---
 
 # Nastavení aplikace {#app-settings}

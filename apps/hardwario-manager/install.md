@@ -1,6 +1,7 @@
 ---
 slug: install
 title: Install the app
+description: "Get HARDWARIO Manager from Google Play or the App Store, check what you need (NFC, Bluetooth, camera, ATELOS account, secret key) and allow permissions."
 ---
 
 # Install HARDWARIO Manager

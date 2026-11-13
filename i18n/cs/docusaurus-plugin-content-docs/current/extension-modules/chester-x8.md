@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('../../../../../chester/extension-modules/images/chester-x8-top.png')} alt="Pohled na desku CHESTER-X8 shora s tříosým akcelerometrem MEMS ADXL355"/></div>
+<div><Image img={require('../../../../../chester/extension-modules/images/chester-x8-top.webp')} alt="Pohled na desku CHESTER-X8 shora s tříosým akcelerometrem MEMS ADXL355"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -134,13 +134,13 @@ Modul CHESTER-X8 lze použít s různými konfiguracemi základních desek CHEST
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![Základní deska CHESTER-M CGLS s baterií velikosti D, superkondenzátory a svorkovnicemi A/B](../../../../../chester/extension-modules/images/chester-x8-cgls.png)
+![Základní deska CHESTER-M CGLS s baterií velikosti D, superkondenzátory a svorkovnicemi A/B](../../../../../chester/extension-modules/images/chester-x8-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![Nosná deska CHESTER-C4, modrá deska s dvojitým držákem baterií velikosti D a svorkovnicemi](../../../../../chester/extension-modules/images/chester-x8-c4.png)
+![Nosná deska CHESTER-C4, modrá deska s dvojitým držákem baterií velikosti D a svorkovnicemi](../../../../../chester/extension-modules/images/chester-x8-c4.webp)
 
 </div>
 </div>

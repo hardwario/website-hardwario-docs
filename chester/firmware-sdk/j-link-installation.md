@@ -1,6 +1,7 @@
 ---
 slug: j-link-installation
 title: J-Link Installation
+description: "Install nRF Command Line Tools with the SEGGER J-Link software pack, then connect J-Link to CHESTER through the Cortex-M adapter and the 10-pin SWD cable."
 ---
 import Image from '@theme/IdealImage';
 

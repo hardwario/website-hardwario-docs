@@ -1,5 +1,6 @@
 ---
 title: Real-time Clock
+description: "How STICKER keeps its real-time clock: network time over LoRaWAN or P2P, sync from a phone over NFC, the clock_sync command and the clock shell commands."
 ---
 import Image from '@theme/IdealImage';
 

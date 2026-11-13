@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-ember
 title: Adding to ChirpStack v4
+description: "Video tutorial on connecting the HARDWARIO EMBER LoRaWAN gateway to ChirpStack v4 and adding it to your LoRaWAN network."
 ---
 
 import Image from '@theme/IdealImage';

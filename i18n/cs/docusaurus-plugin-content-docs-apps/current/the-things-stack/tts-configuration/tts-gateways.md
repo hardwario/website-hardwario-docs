@@ -1,6 +1,7 @@
 ---
 slug: tts-gateways
 title: Brány
+description: "Registrace brány v The Things Stack: Gateway EUI, frekvenční plán Europe 868.1 MHz, klíče API pro CUPS a LNS a proč ID smazané brány zůstává rezervované."
 title_meta: "Brány (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';

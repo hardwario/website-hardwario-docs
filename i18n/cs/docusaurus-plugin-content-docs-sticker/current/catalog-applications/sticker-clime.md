@@ -1,6 +1,7 @@
 ---
 slug: sticker-clime
 title: STICKER Clime
+description: "STICKER Clime, senzor LoRaWAN na dvě baterie AA pro teplotu, vlhkost, tlak a osvětlenost: typické využití, ukázková zpráva JSON, stavová LED a seznam změn."
 ---
 import Image from '@theme/IdealImage';
 

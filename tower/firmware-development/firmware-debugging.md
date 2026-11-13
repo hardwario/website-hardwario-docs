@@ -149,7 +149,7 @@ To learn more about this console you can visit [**HARDWARIO TOWER Console chapte
 
 :::
 
-<Image img={require('./images/code-console-debug-example.png')} alt="TOWER console tab in VS Code streaming application log lines with timestamps and a temperature reading" />
+<Image img={require('./images/code-console-debug-example.webp')} alt="TOWER console tab in VS Code streaming application log lines with timestamps and a temperature reading" />
 <br />
 
 :::tip

@@ -1,6 +1,7 @@
 ---
 slug: piketronic-rpp-r
 title: Piketronic RPP-R Radon Probe
+description: "Connect the Piketronic RPP-R radon probe to CHESTER Serial over RS-485 Modbus RTU and read radon concentration, temperature and humidity."
 ---
 
 [Website](https://www.piketronic.cz/)

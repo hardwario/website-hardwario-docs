@@ -1,6 +1,7 @@
 ---
 slug: atelos
 title: Účet ATELOS
+description: "Přihlášení do cloudu ATELOS v aplikaci HARDWARIO Manager: načtení zařízení se secret key a nárokování zařízení STICKER přes NFC, QR kód či sériové číslo."
 ---
 
 # Účet ATELOS {#atelos-account}

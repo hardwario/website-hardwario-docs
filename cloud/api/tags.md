@@ -1,5 +1,6 @@
 ---
 title: Tags
+description: "Create tags with a name and hex color through the HARDWARIO Cloud API and assign them to devices so that connectors forward their messages."
 title_meta: "Tags (HARDWARIO Cloud API)"
 ---
 

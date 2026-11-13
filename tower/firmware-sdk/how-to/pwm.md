@@ -1,6 +1,7 @@
 ---
 slug: how-to-pwm
 title: "How To: PWM"
+description: "Generate PWM on the nine PWM-capable pins of the TOWER Core Module, set the duty cycle from 0 to 255 in the SDK and try a C example on P6, P7 and P8."
 ---
 import Image from '@theme/IdealImage';
 

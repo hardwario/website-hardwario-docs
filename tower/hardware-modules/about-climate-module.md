@@ -1,13 +1,14 @@
 ---
 slug: about-climate-module
 title: About Climate Module
+description: "TOWER Climate Module with four digital I²C sensors for temperature, humidity, light intensity and atmospheric pressure, and SDK links for each sensor."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/climate-module.png')} alt="Climate Module, a black board with ventilation slots over its integrated environmental sensors" /></div>
+      <div><Image img={require('./images/climate-module.webp')} alt="Climate Module, a black board with ventilation slots over its integrated environmental sensors" /></div>
     </div>
     <div class="col col--6">
 

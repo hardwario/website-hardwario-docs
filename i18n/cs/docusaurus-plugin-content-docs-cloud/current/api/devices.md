@@ -1,5 +1,6 @@
 ---
 title: Správa zařízení
+description: "Zakládání zařízení se sériovým číslem a claim tokenem přes API HARDWARIO Cloud, jejich úpravy, počet a mazání, i hromadně z vlastního systému."
 ---
 
 # Správa zařízení {#managing-devices}

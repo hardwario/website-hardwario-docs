@@ -1,6 +1,7 @@
 ---
 slug: shared-sessions
 title: Sdílení relace terminálu
+description: "Relaci terminálu zařízení CHESTER sdílíte v aplikaci HARDWARIO Manager odkazem a Session ID, nebo se k cizí relaci připojíte a zadáváte příkazy na dálku."
 ---
 
 # Sdílení relace terminálu {#share-a-terminal-session}

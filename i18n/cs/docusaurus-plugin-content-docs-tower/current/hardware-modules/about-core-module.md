@@ -1,13 +1,14 @@
 ---
 slug: about-core-module
 title: O modulu Core Module
+description: "Core Module pro TOWER: MCU STM32L083CZ, rádio SPIRIT1 pro 868/915 MHz, akcelerometr, teplotní senzor, bezpečnostní čip, pinout a proudové limity pinů."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/core-module.png')} alt="Core Module s mikrokontrolérem STM32, sub-GHz rádiem, konektorem micro-USB a dvěma řadami zdířek" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/core-module.webp')} alt="Core Module s mikrokontrolérem STM32, sub-GHz rádiem, konektorem micro-USB a dvěma řadami zdířek" /></div>
     </div>
     <div class="col col--6">
 
@@ -49,7 +50,7 @@ Maximální proud pro **všechny GPIO dohromady je 90 mA**.
 <div class="container">
   <div class="row">
     <div class="col col--10">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/core-module-pinout.png')} alt="Schéma vývodů modulu Core Module s piny 1–28 barevně rozlišenými jako GND, napájení, řízení, GPIO, ADC, sériová linka a DAC" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/core-module-pinout.webp')} alt="Schéma vývodů modulu Core Module s piny 1–28 barevně rozlišenými jako GND, napájení, řízení, GPIO, ADC, sériová linka a DAC" /></div>
     </div>
     <div class="col col--0">
     </div>

@@ -1,6 +1,7 @@
 ---
 slug: chester-x4
 title: CHESTER-X4 (Step-down 4-ch)
+description: "CHESTER-X4 module: a step-down converter from an external 6–28 V DC line, input voltage measurement and four P-MOS outputs with resettable PTC fuses."
 ---
 import Image from '@theme/IdealImage';
 
@@ -11,7 +12,7 @@ This article describes the CHESTER-X4 extension module.
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x4-top.png')} alt="Top view of the CHESTER-X4 module with the TPS62175 step-down converter"/></div>
+      <div><Image img={require('./images/chester-x4-top.webp')} alt="Top view of the CHESTER-X4 module with the TPS62175 step-down converter"/></div>
     </div>
     <div class="col col--10">
     </div>

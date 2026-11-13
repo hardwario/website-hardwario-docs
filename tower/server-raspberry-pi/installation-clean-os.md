@@ -1,6 +1,7 @@
 ---
 slug: installation-clean-os
 title: Clean Installation
+description: "Install the TOWER tools on Raspberry Pi OS by hand or by script: Mosquitto, Node-RED under PM2, HARDWARIO CLI tools, udev rules, Radio Dongle gateway."
 ---
 import Image from '@theme/IdealImage';
 

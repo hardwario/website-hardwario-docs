@@ -1,6 +1,7 @@
 ---
 slug: thingsboard-cloud-connection
 title: Připojení ke cloudu
+description: "Videonávod k propojení HARDWARIO Cloud s platformou ThingsBoard: vytvoření konektoru a transformace dat, která pak do platformy přicházejí automaticky."
 ---
 
 import Image from '@theme/IdealImage';

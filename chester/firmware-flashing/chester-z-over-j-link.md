@@ -1,6 +1,7 @@
 ---
 slug: chester-z-over-j-link
 title: CHESTER-Z1 over J-Link
+description: "Flash CHESTER-Z1 firmware v1.4.0 with SEGGER J-Link through the 9-pin SWD connector of the board in the top cover, without removing the board."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

@@ -253,6 +253,8 @@
 /ember/chirpstack-v4-installation/                   /apps/chirpstack/chirpstack-installation/                       301
 /ember/initial-configuration                         /ember/first-steps/                                             301
 /ember/initial-configuration/                        /ember/first-steps/                                             301
+/ember/chirpstack/chirpstack-ember                   /apps/chirpstack/chirpstack-configuration/chirpstack-gateways/  301
+/ember/chirpstack/chirpstack-ember/                  /apps/chirpstack/chirpstack-configuration/chirpstack-gateways/  301
 
 # sticker: old ChirpStack stub
 /sticker/chirpstack                                  /sticker/connectivity/lorawan-chirpstack/             301

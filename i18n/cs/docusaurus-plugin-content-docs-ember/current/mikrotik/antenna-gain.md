@@ -1,6 +1,7 @@
 ---
 slug: antenna-gain
 title: "Zisk antény a výstupní výkon"
+description: "Nastavení antenna-gain na bráně LoRa MikroTik (R11e-LR8G, wAP LR8G) na zisk antény mínus ztráty kabelu, aby vyzářený výkon nepřekročil limit EIRP v EU868."
 ---
 
 # Zisk antény a výstupní výkon {#antenna-gain--output-power}

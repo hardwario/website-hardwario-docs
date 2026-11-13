@@ -1,13 +1,14 @@
 ---
 slug: about-compact-split-module
 title: O modulu Compact Split Module
+description: "Compact Split Module pro TOWER: tenčí deska s piny zespodu pro dva vrchní moduly nebo dva sloupce, kterou nelze připojit přímo k modulu Battery Module."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/compact-split-module.png')} alt="Compact Split Module, holá deska se dvěma sadami popsaných pozic pro konektory modulů" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/compact-split-module.webp')} alt="Compact Split Module, holá deska se dvěma sadami popsaných pozic pro konektory modulů" /></div>
     </div>
     <div class="col col--6">
 

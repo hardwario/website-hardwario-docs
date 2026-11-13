@@ -1,6 +1,7 @@
 ---
 slug: /sdk-v4-migration-guide
 title: Průvodce migrací na SDK v4.0.0
+description: "Přechod na CHESTER SDK v4.0.0 s nRF Connect SDK v3.4: aktualizace workspace a Zephyr SDK, převod aplikací mimo repozitář SDK na sysbuild a oddíly v DTS."
 ---
 
 # Průvodce migrací na CHESTER SDK v4.0.0 {#chester-sdk-v400-migration-guide}

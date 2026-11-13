@@ -23,7 +23,7 @@ Více informací najdete v samostatné kapitole [**O modulu Core Module**](./abo
 <div class="container">
   <div class="row">
     <div class="col col--9">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/core-module-pinout.png')} alt="Schéma pinoutu modulu Core Module s piny 1–28 barevně rozlišenými jako GND, napájení, řízení, GPIO, ADC, sériová linka a DAC" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/core-module-pinout.webp')} alt="Schéma pinoutu modulu Core Module s piny 1–28 barevně rozlišenými jako GND, napájení, řízení, GPIO, ADC, sériová linka a DAC" /></div>
     </div>
     <div class="col col--0">
     </div>

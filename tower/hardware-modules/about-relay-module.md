@@ -1,13 +1,14 @@
 ---
 slug: about-relay-module
 title: About Relay Module
+description: "TOWER Relay Module: a bistable (latching) relay for loads up to 60 W at 12 V DC / 5 A or 24 V DC / 2.5 A, I²C control, schematics and SDK links."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/relay-module.png')} alt="Relay Module with a bistable relay and a three-pole terminal block" /></div>
+      <div><Image img={require('./images/relay-module.webp')} alt="Relay Module with a bistable relay and a three-pole terminal block" /></div>
     </div>
     <div class="col col--6">
 

@@ -1,6 +1,7 @@
 ---
 slug: samples
 title: Ukázky
+description: "Přehled ukázek v CHESTER SDK pro rozšiřující moduly, senzory, BLE, LTE, LoRaWAN a GNSS; každá je samostatný projekt, který sestavíte a nahrajete."
 ---
 import Image from '@theme/IdealImage';
 

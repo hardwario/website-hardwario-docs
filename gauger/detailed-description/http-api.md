@@ -1,6 +1,7 @@
 ---
 slug: http-api
 title: HTTP API
+description: "GAUGER HTTP API on port 80: Basic Auth, JSON responses and endpoints for configuration, OTA firmware upload, rollback, reboot, resets and device metadata."
 ---
 
 # HTTP API

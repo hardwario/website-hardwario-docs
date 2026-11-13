@@ -1,6 +1,7 @@
 ---
 slug: installation-on-ubuntu
 title: Installation on Ubuntu
+description: "Install the CHESTER SDK on Ubuntu 22.04 LTS: udev rules, APT packages, a Python virtual environment and West workspace, then build and flash blinky."
 ---
 import Image from '@theme/IdealImage';
 

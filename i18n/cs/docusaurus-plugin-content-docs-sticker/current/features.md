@@ -1,7 +1,7 @@
 ---
 slug: features
 title: Funkce
-description: "Tato stránka popisuje důležité chování firmwaru STICKER: jak zařízení hospodaří s energií, udržuje rádiové spojení (LoRaWAN nebo P2P) a chrání uložená data."
+description: "Funkce firmwaru STICKER: žebříček resetů, vendor token, režim radio-silent, vypnutí při slabé baterii, obnova spojení LoRaWAN i P2P a hodiny reálného času."
 title_meta: "Funkce (STICKER)"
 ---
 import Image from '@theme/IdealImage';

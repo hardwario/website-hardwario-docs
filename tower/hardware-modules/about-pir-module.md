@@ -1,13 +1,14 @@
 ---
 slug: about-pir-module
 title: About PIR Module
+description: "TOWER PIR Module, a passive infrared motion detector with the Excelitas PYQ-1648-7053 sensor, 98° detection angle, 5 m range and about 3 μA consumption."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/pir-module.png')} alt="PIR Module faceplate with the white dome lens of the passive infrared motion detector" /></div>
+      <div><Image img={require('./images/pir-module.webp')} alt="PIR Module faceplate with the white dome lens of the passive infrared motion detector" /></div>
     </div>
     <div class="col col--6">
 

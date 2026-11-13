@@ -1,13 +1,14 @@
 ---
 slug: about-barometer-tag
 title: O tagu Barometer Tag
+description: "Barometer Tag pro TOWER se senzorem NXP MPL3115A2 na sběrnici I²C měří absolutní tlak od 20 do 110 kPa nebo nadmořskou výšku s přesností ±0,4 kPa."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/barometer-tag.png')} alt="Barometer Tag, deska velikosti mince se senzorem tlaku MPL3115A2" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/barometer-tag.webp')} alt="Barometer Tag, deska velikosti mince se senzorem tlaku MPL3115A2" /></div>
     </div>
     <div class="col col--6">
 

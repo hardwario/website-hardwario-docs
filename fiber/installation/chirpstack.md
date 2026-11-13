@@ -1,5 +1,6 @@
 ---
 title: Install ChirpStack
+description: "Install ChirpStack v4 (SQLite) on FIBER with Mosquitto and Redis from the signed APT repository and write chirpstack.toml with a random API secret."
 ---
 
 # Install ChirpStack

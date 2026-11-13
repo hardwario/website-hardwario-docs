@@ -1,13 +1,14 @@
 ---
 slug: about-lux-meter-tag
 title: About Lux Meter Tag
+description: "TOWER Lux Meter Tag with the TI OPT3001 ambient light sensor on I²C, measuring illuminance from 0.01 to 83,000 lux at 1.8 µA active current."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/lux-meter-tag.png')} alt="Lux Meter Tag, a coin-sized board with the OPT3001 light-intensity sensor" /></div>
+      <div><Image img={require('./images/lux-meter-tag.webp')} alt="Lux Meter Tag, a coin-sized board with the OPT3001 light-intensity sensor" /></div>
     </div>
     <div class="col col--6">
 

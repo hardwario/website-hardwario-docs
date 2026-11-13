@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-em400
 title: EM400
+description: "Milesight EM400-MUD ultrasonic distance sensor (3–450 cm) for parking, bins and level monitoring: LoRaWAN 1.0.3 keys, decoders and specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight EM400-MUD is a **multifunctional ultrasonic distance sensor** designed
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/em400-mud.png')} />
+        <Image img={require('./images/em400-mud.png')} alt="Milesight Sensor EM400-MUD" />
       </div>
     </div>
     <div class="col col--24"></div>

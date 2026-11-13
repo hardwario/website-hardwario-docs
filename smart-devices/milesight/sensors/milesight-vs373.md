@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-vs373
 title: VS373
+description: "Milesight VS373 60 GHz mmWave radar fall detection sensor for elderly care: LoRaWAN Class C join keys, payload decoder links and technical specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight VS373 is a **non-contact fall detection sensor** designed for **elderl
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/vs373.png')} />
+        <Image img={require('./images/vs373.webp')} alt="Milesight Sensor VS373" />
       </div>
     </div>
     <div class="col col--24"></div>

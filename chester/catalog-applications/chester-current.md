@@ -1,3 +1,7 @@
+---
+description: "CHESTER Current catalog application: AC and DC current on up to 4 channels with clip-on probes, variants, configuration, JSON messages and calibration."
+---
+
 # CHESTER Current
 
 This article describes the core functionality, hardware description, default configuration, example JSON message, and channel calibration of the catalog application **CHESTER Current**.

@@ -1,6 +1,7 @@
 ---
 slug: one-wire-dallas
 title: Teplotní sondy 1-Wire (Dallas)
+description: "Teplotní sondy 1-Wire (Dallas) DS18B20 na zařízení STICKER Input: přepínač DIP S1, zapnutí sběrnice, čtyři sloty senzorů a alarmy při výpadku sondy."
 ---
 
 # Teplotní sondy 1-Wire (Dallas) {#1-wire-temperature-probes-dallas}

@@ -1,17 +1,19 @@
 ---
 slug: lorawan-chirpstack
-title: ChirpStack v4
-title_meta: "ChirpStack v4 (EMBER)"
+title: "ChirpStack v4: Semtech UDP"
+description: "Connect the HARDWARIO EMBER gateway to ChirpStack v4 over Semtech UDP: add the server on port 1700 in RouterOS and register the Gateway ID."
+sidebar_label: Semtech UDP
+title_meta: "ChirpStack v4: Semtech UDP (EMBER)"
 ---
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4
+# ChirpStack v4: Semtech UDP
 
-This guide shows how to connect the **HARDWARIO EMBER** LoRaWAN gateway (MikroTik RouterOS) to a **ChirpStack v4** network server.
+This guide shows how to connect the **HARDWARIO EMBER** LoRaWAN gateway (MikroTik RouterOS) to a **ChirpStack v4** network server with the **Semtech UDP** packet forwarder protocol. For a TCP connection secured with TLS or client certificates (mTLS), use [Basics Station](./lorawan-chirpstack-basics-station.md) instead.
 
 ## Useful docs
 - ChirpStack v4 Installation → https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
-- EMBER → ChirpStack: https://docs.hardwario.com/ember/chirpstack/chirpstack-ember/
+- Adding a gateway in ChirpStack: [Gateways](/apps/chirpstack/chirpstack-configuration/chirpstack-gateways)
 - EMBER hotspot configuration (RouterOS basics, LoRaWAN section): https://docs.hardwario.com/ember/hotspot-configuration/
 
 :::info

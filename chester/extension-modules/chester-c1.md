@@ -1,6 +1,7 @@
 ---
 slug: chester-c1
 title: CHESTER-C1 (I/O board w/ relay)
+description: "CHESTER-C1 carrier board for CHESTER-M: four inputs, two power relays, RS-485, two 1-Wire terminals, 8–36 V DC input and 3.6 V C-cell battery holders."
 ---
 import Image from '@theme/IdealImage';
 
@@ -10,7 +11,7 @@ This article describes the **CHESTER-C1** carrier board.
 <div class="container">
   <div class="row">
     <div class="col col--8">
-      <div><Image img={require('./images/chester-c1-top.png')} alt="CHESTER-C1 carrier board with two power relays, C-cell battery holder, and green terminal blocks along the bottom" /></div>
+      <div><Image img={require('./images/chester-c1-top.webp')} alt="CHESTER-C1 carrier board with two power relays, C-cell battery holder, and green terminal blocks along the bottom" /></div>
     </div>
     <div class="col col--10">
     </div>

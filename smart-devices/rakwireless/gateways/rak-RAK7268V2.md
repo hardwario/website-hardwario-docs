@@ -1,6 +1,7 @@
 ﻿---
 slug: rak-RAK7268V2
 title: RAK7268V2
+description: "RAKwireless RAK7268V2 WisGate Edge Lite 2 indoor LoRaWAN gateway: first access, root password, WAN and LTE setup and Basics Station for The Things Stack."
 ---
 
 import Image from '@theme/IdealImage';
@@ -15,7 +16,7 @@ It supports Ethernet and Wi-Fi connectivity (and optional LTE), making it a vers
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/rak-RAK7268V2.png')} />
+        <Image img={require('./images/rak-RAK7268V2.png')} alt="RAK7268V2 WisGate Edge Lite 2" />
       </div>
     </div>
     <div class="col col--24"></div>

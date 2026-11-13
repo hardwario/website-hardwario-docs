@@ -1,6 +1,7 @@
 ---
 slug: firmware-management
 title: Firmware Management
+description: "GAUGER firmware: over-the-air update from the Web UI and rollback to the previous or factory version, also from the error state with the USER button."
 ---
 
 # Firmware Management

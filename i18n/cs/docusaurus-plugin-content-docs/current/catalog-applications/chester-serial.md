@@ -1,6 +1,7 @@
 ---
 slug: chester-serial
 title: CHESTER Serial
+description: "Aplikace CHESTER Serial: master Modbus RTU na RS-485 až pro 8 zařízení nebo spoj RS-232, 11 typů zařízení, transparentní režim a sdružování dat v LoRaWAN."
 ---
 import Image from '@theme/IdealImage';
 

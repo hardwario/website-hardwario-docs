@@ -1,6 +1,7 @@
 ---
 slug: power-supply
 title: Napájení
+description: "Napájení zařízení GAUGER přes konektor Mini USB-B nebo napájecí piny svorkovnice (9–28 V); při připojení obou zdrojů mají přednost piny."
 ---
 
 # Napájení {#power-supply}

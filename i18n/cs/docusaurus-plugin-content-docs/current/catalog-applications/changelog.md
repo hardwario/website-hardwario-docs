@@ -1,6 +1,7 @@
 ---
 slug: changelog
 title: Seznam změn
+description: "Poznámky k vydání CHESTER SDK a firmwaru katalogových aplikací od verze v3.0.0: verze NCS a Zephyr, změny jednotlivých aplikací a pokyny k aktualizaci."
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 ---

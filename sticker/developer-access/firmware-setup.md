@@ -1,5 +1,6 @@
 ---
 title: Firmware Setup
+description: "Set up the STICKER firmware workspace with West and Zephyr, build release, debug and provisioning images, flash over SWD with J-Link and open the console."
 ---
 import Image from '@theme/IdealImage';
 

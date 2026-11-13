@@ -1,5 +1,6 @@
 ---
 title: Maintenance
+description: "Save or reset STICKER configuration with the settings shell command: writing config changes to flash and each reset tier from reboot to a full erase."
 ---
 
 # Maintenance (`settings`)

@@ -1,13 +1,14 @@
 ---
 slug: about-lora-module
 title: About LoRa Module
+description: "TOWER LoRa Module for LoRaWAN at 868 MHz, built on the Murata CMWX1ZZABZ-078 with UART and AT commands, an SMA antenna and 2 μA standby consumption."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/lora-module.png')} alt="LoRa Module with a shielded LoRa radio and an SMA antenna connector" /></div>
+      <div><Image img={require('./images/lora-module.webp')} alt="LoRa Module with a shielded LoRa radio and an SMA antenna connector" /></div>
     </div>
     <div class="col col--6">
 

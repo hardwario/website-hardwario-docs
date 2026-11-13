@@ -1,6 +1,7 @@
 ---
 slug: firmware-update
 title: Aktualizace firmwaru
+description: "Nahrání firmwaru do zařízení CHESTER přes Bluetooth z QR kódu v aplikaci HARDWARIO Manager: kontrola SHA-256, fáze aktualizace a bezpečný návrat při chybě."
 ---
 
 # Aktualizace firmwaru zařízení CHESTER přes Bluetooth {#update-chester-firmware-over-bluetooth}

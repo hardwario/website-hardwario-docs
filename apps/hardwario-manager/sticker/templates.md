@@ -1,6 +1,7 @@
 ---
 slug: templates
 title: Templates
+description: "Create STICKER configuration templates in HARDWARIO Manager from a device, by hand, hex or QR code, then apply them over NFC or offline and share them."
 ---
 
 # Templates: create, share, edit, and apply

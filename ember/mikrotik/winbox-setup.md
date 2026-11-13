@@ -1,6 +1,7 @@
 ---
 slug: winbox4-installation
 title: Winbox 4 Installation
+description: "Download Winbox 4 from the MikroTik site and run it on 64-bit Windows or Linux: extract the zip archive and start the WinBox application."
 ---
 
 # Winbox 4 Installation

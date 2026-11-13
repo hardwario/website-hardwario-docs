@@ -1,6 +1,7 @@
 ---
 slug: lte-modem-over-j-link
 title: LTE Modem over J-Link
+description: "Flash LTE modem firmware v1.7.0 into CHESTER with SEGGER J-Link and the HARDWARIO CLI, or the Nordic nRF9160 modem firmware when a SIM card requires it."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

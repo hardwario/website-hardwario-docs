@@ -1,6 +1,7 @@
 ---
 slug: chester-push
 title: CHESTER Push
+description: "Katalogová aplikace CHESTER Push: tlačítka s potvrzením LED a bzučákem, krátký a dlouhý stisk, modul CHESTER-Z1-F s baterií Li-Ion a varianta Flip Mode."
 ---
 import Image from '@theme/IdealImage';
 

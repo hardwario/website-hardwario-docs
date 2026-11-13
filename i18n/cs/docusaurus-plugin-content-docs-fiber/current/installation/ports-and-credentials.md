@@ -1,5 +1,6 @@
 ---
 title: Porty a výchozí přihlašovací údaje
+description: "Porty, URL a výchozí přihlášení pro SSH, ChirpStack, Node-RED, MQTT, InfluxDB, Grafanu a dashboard zařízení FIBER; změňte heslo admin/admin v ChirpStack."
 ---
 
 # Porty a výchozí přihlašovací údaje {#ports--default-credentials}

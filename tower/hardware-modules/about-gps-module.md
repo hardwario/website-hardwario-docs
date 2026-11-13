@@ -1,17 +1,18 @@
 ---
 slug: about-gps-module
 title: About GPS Module
+description: "TOWER GPS Module with the u-blox SAM-M8Q receiver for GPS, Galileo and GLONASS, 2.5 m CEP position accuracy, an I²C interface and an embedded antenna."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/gps-module.png')} alt="GPS Module with the u-blox SAM-M8Q receiver under a square patch antenna" /></div>
+      <div><Image img={require('./images/gps-module.webp')} alt="GPS Module with the u-blox SAM-M8Q receiver under a square patch antenna" /></div>
     </div>
     <div class="col col--6">
 
-        The <b>GPS Module</b> allows you to know the <b>exact position</b> of your device. It is using the <b>SAM-M8Q</b> module from ublox. It understands 3 global positioning standards GPS, Galileo and GLONASS. The <b>2.5m position accuracy</b> is possible thanks to combining positions from all three standards together.
+        The <b>GPS Module</b> allows you to know the <b>exact position</b> of your device. It is using the <b>SAM-M8Q</b> module from u-blox. It understands 3 global positioning standards GPS, Galileo and GLONASS. The <b>2.5m position accuracy</b> is possible thanks to combining positions from all three standards together.
 
     </div>
   </div>

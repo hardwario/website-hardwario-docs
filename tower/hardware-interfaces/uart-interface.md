@@ -1,6 +1,7 @@
 ---
 slug: uart-interface
 title: UART Interface
+description: "UART on TOWER: the three channels UART0 to UART2, baud rate, data, parity and stop bit settings such as 8N1, and logging on UART2 at 115200 baud."
 ---
 import Image from '@theme/IdealImage';
 

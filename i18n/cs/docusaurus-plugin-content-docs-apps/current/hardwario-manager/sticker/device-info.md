@@ -1,6 +1,7 @@
 ---
 slug: device-info
 title: Informace o zařízení a klíče LoRaWAN
+description: "Přes NFC přečtete sériové číslo, firmware, baterii a aktivní alarmy zařízení STICKER a jeho klíče LoRaWAN (OTAA, ABP) sdílíte jako JSON, CSV či QR kód."
 ---
 
 # Čtení informací o zařízení a klíčů LoRaWAN {#read-device-info-and-lorawan-keys}

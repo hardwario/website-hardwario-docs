@@ -1,6 +1,7 @@
 ---
 slug: chester-z1
 title: CHESTER-Z1 (Batt. Button LED)
+description: "CHESTER-Z1 top-cover module: 18650 Li-Ion backup battery, 6–26 V DC or solar input, illuminated buttons and a buzzer, controlled over I²C."
 ---
 import Image from '@theme/IdealImage';
 
@@ -10,7 +11,7 @@ This article describes the **CHESTER-Z1** top-cover extension module.
 <div class="container">
   <div class="row">
     <div class="col col--5">
-      <div><Image img={require('./images/chester-z-top.png')} alt="Top view of the CHESTER-Z board with 18650 battery holder, buzzer, bypass button, VIN and SYSTEM connectors"/></div>
+      <div><Image img={require('./images/chester-z-top.webp')} alt="Top view of the CHESTER-Z board with 18650 battery holder, buzzer, bypass button, VIN and SYSTEM connectors"/></div>
     </div>
     <div class="col col--10">
     </div>

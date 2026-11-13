@@ -1,13 +1,14 @@
 ---
 slug: about-encoder-module
 title: O modulu Encoder Module
+description: "Encoder Module pro TOWER: rotační enkodér Bourns PEC12R s 12 pozicemi na otáčku a tlačítkem, tři patice pro tagy; doplňuje hlavně modul LCD Module."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/encoder-module.png')} alt="Encoder Module s knoflíkem rotačního enkodéru a třemi paticemi TAG I2C0" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/encoder-module.webp')} alt="Encoder Module s knoflíkem rotačního enkodéru a třemi paticemi TAG I2C0" /></div>
     </div>
     <div class="col col--6">
 

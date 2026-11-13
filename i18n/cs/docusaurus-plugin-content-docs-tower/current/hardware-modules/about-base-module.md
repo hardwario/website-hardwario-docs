@@ -1,13 +1,14 @@
 ---
 slug: about-base-module
 title: O modulu Base Module
+description: "Base Module, stojan pro jednotky HARDWARIO TOWER s paticí pro modul, prototypovací plochou pro pájení, gumovými nožičkami a volitelnými klipy na DIN lištu."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('../../../../../tower/hardware-modules/images/base-module.png')} alt="Base Module, zelená deska sloužící jako stojan, s paticí pro modul, prototypovací plochou a gumovými nožičkami" /></div>
+      <div><Image img={require('../../../../../tower/hardware-modules/images/base-module.webp')} alt="Base Module, zelená deska sloužící jako stojan, s paticí pro modul, prototypovací plochou a gumovými nožičkami" /></div>
     </div>
     <div class="col col--6">
 

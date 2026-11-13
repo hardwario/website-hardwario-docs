@@ -1,6 +1,7 @@
 ---
 slug: bluetooth-low-energy
 title: Bluetooth Low Energy
+description: "CHESTER has a Bluetooth Low Energy radio that advertises its name and HSN; connect with HARDWARIO Manager on a phone or HARDWARIO Monitor on a computer."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: email-notification
 title: E-mailové notifikace
+description: "Vlastní Rule Chain v ThingsBoard, která e-mailem hlásí překročení limitů teploty a vlhkosti s labelem zařízení a časem CET a omezuje opakované e-maily."
 ---
 import Image from '@theme/IdealImage';
 

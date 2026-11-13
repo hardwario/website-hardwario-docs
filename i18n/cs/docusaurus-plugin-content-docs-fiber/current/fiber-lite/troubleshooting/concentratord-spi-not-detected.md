@@ -1,6 +1,7 @@
 ---
 slug: concentratord-spi-not-detected
 title: Koncentrátor FIBER Lite nikdy nezobrazí Gateway ID
+title_meta: "FIBER Lite: koncentrátor nezobrazí Gateway ID"
 ---
 
 **Příznak:** na zařízení FIBER Lite (SPI/RAK2287) logy vlastní služby koncentrátoru nikdy nevypíšou

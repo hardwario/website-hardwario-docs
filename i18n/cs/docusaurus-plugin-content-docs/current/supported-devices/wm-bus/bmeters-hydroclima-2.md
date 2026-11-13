@@ -1,6 +1,7 @@
 ---
 slug: bmeters-hydroclima-2
 title: BMeters Hydroclima 2
+description: "Indikátor topných nákladů BMeters Hydroclima 2 se zařízením CHESTER wM-Bus: konfigurace v BMetering Software, umístění adresy a dešifrovací klíče."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-hydroclima-2.png')} width={376} height={376} alt="Bílý indikátor topných nákladů BMeters Hydroclima 2 s čárovým kódem, displejem a tlačítkem" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-hydroclima-2.webp')} width={376} height={376} alt="Bílý indikátor topných nákladů BMeters Hydroclima 2 s čárovým kódem, displejem a tlačítkem" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -56,7 +57,7 @@ Adresa (8 číslic) je **nad čárovým kódem a pod displejem**, viz obrázek n
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-hydroclima-2.png')} width={376} height={376} alt="Hydroclima 2 s vyznačenou osmimístnou adresou wM-Bus vedle čárového kódu nad displejem" />
+        <Image img={require('../../../../../../chester/supported-devices/wm-bus/images/bmeters-hydroclima-2.webp')} width={376} height={376} alt="Hydroclima 2 s vyznačenou osmimístnou adresou wM-Bus vedle čárového kódu nad displejem" />
       </div>
     </div>
     <div class="col col--24"></div>

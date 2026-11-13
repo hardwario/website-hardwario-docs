@@ -1,13 +1,14 @@
 ---
 slug: about-encoder-module
 title: About Encoder Module
+description: "TOWER Encoder Module: Bourns PEC12R rotary encoder with 12 positions per revolution and a push button, three tag sockets, made to pair with the LCD Module."
 ---
 import Image from '@theme/IdealImage';
 
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/encoder-module.png')} alt="Encoder Module with a rotary encoder knob and three TAG I2C0 sockets" /></div>
+      <div><Image img={require('./images/encoder-module.webp')} alt="Encoder Module with a rotary encoder knob and three TAG I2C0 sockets" /></div>
     </div>
     <div class="col col--6">
 

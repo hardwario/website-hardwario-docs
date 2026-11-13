@@ -1,6 +1,7 @@
 ---
 slug: i2c-address-space
 title: I²C Address Space
+description: "7-bit I²C address map of the CHESTER mainboard, extension modules and accessories, with slot A and B addresses, to check new peripherals for collisions."
 ---
 import Image from '@theme/IdealImage';
 

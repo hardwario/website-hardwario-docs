@@ -1,6 +1,7 @@
 ---
 slug: sim-card-setup
 title: Nastavení SIM karty
+description: "Připojení zařízení CHESTER k mobilní síti: volba režimu rádia, nastavení pro SIM kartu Vodafone, 1NCE nebo jinou a ověření registrace v síti."
 ---
 import Image from '@theme/IdealImage';
 

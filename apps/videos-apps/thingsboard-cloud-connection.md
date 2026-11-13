@@ -1,6 +1,7 @@
 ---
 slug: thingsboard-cloud-connection
 title: Cloud Connection
+description: "Video tutorial on sending HARDWARIO Cloud data to ThingsBoard: create a connector, transform the data and let it flow into the platform automatically."
 ---
 
 import Image from '@theme/IdealImage';

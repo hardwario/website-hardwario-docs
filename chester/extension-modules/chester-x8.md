@@ -13,7 +13,7 @@ The **CHESTER-X8** is a precision **3-axis accelerometer** extension module for 
 <div class="container">
 <div class="row">
 <div class="col col--4">
-<div><Image img={require('./images/chester-x8-top.png')} alt="Top view of the CHESTER-X8 board showing the ADXL355 3-axis MEMS accelerometer"/></div>
+<div><Image img={require('./images/chester-x8-top.webp')} alt="Top view of the CHESTER-X8 board showing the ADXL355 3-axis MEMS accelerometer"/></div>
 </div>
 <div class="col col--10">
 </div>
@@ -134,13 +134,13 @@ The CHESTER-X8 module can be used with various CHESTER mainboard configurations.
 <div class="col col--6">
 <h4>CHESTER-M (CGLS)</h4>
 
-![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x8-cgls.png)
+![CHESTER-M CGLS mainboard with D-cell battery, supercapacitors, and A/B terminal blocks](images/chester-x8-cgls.webp)
 
 </div>
 <div class="col col--6">
 <h4>CHESTER-C4</h4>
 
-![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x8-c4.png)
+![CHESTER-C4 carrier board, a blue PCB with dual D-cell battery holder and terminal blocks](images/chester-x8-c4.webp)
 
 </div>
 </div>

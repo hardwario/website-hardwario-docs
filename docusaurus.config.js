@@ -11,14 +11,17 @@ const youtubeFacade = require('./src/remark/youtube-facade');
 
 // The site title ends every <title> and og:title, and code.json cannot reach
 // it, so it is picked per locale below. Docusaurus sets the variable for each
-// locale it builds (and for `start --locale`).
+// locale it builds (and for `start --locale`). It is the short name "HARDWARIO
+// Docs" in both languages (owner 2026-11-08), so page titles fit the 65
+// characters search results show; the homepage heading keeps the full name
+// (`home.heading` in src/pages/index.js).
 const SITE_TEXT = {
   en: {
-    title: 'HARDWARIO Documentation',
+    title: 'HARDWARIO Docs',
     tagline: 'Technical Resources for Products and Services',
   },
   cs: {
-    title: 'Dokumentace HARDWARIO',
+    title: 'HARDWARIO Docs',
     tagline: 'Technické podklady k produktům a službám',
   },
 };
@@ -97,17 +100,21 @@ const config = {
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Organization',
+        // The same entity as the Organization on www.hardwario.com (same @id and description).
+        '@id': 'https://www.hardwario.com/#organization',
         name: 'HARDWARIO',
         legalName: 'HARDWARIO a.s.',
         url: 'https://www.hardwario.com',
         logo: 'https://docs.hardwario.com/img/logo.svg',
         description:
-          'Czech manufacturer of industrial / wireless IoT (LPWAN) hardware and software.',
+          'HARDWARIO designs and manufactures the devices that bring industrial assets online: more than 40 people in Liberec and 7 000+ devices in 30+ countries.',
         address: { '@type': 'PostalAddress', addressCountry: 'CZ' },
         areaServed: 'Europe',
         sameAs: [
           'https://www.linkedin.com/company/hardwario/',
-          'https://twitter.com/hardwario_en',
+          'https://x.com/hardwario_en',
+          'https://x.com/hardwario_cz',
+          'https://www.instagram.com/hardwario/',
           'https://www.youtube.com/c/hardwario',
           'https://github.com/hardwario',
         ],
@@ -157,7 +164,11 @@ const config = {
           changefreq: 'weekly',
           priority: 0.5,
           // Both spellings: the site emits trailing-slash URLs, so the crawlable path is /search/.
-          ignorePatterns: ['/search', '/search/', '/search/**'],
+          ignorePatterns: [
+            '/search', '/search/', '/search/**', '/cs/search', '/cs/search/', '/cs/search/**',
+            // The FIBER display guide is a stub until its MQTT API is documented (noindex in static/_headers too).
+            '/fiber/fiber-hardware-guides/using-the-display/', '/cs/fiber/fiber-hardware-guides/using-the-display/',
+          ],
           filename: 'sitemap.xml',
         },
       }),
@@ -302,6 +313,9 @@ const config = {
         disableInDev: false,
       },
     ],
+    // WebP sources for <Image img={require('x.webp')} />: the plugin above resizes PNG and
+    // JPEG only. See the file, and scripts/optimize-images.mjs for which format to use.
+    require.resolve('./src/plugins/webp-image-size'),
     require.resolve('docusaurus-plugin-image-zoom'),
   ],
 

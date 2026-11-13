@@ -1,6 +1,7 @@
 ---
 slug: configuration
 title: Konfigurace
+description: "Čtení, úprava a zápis konfigurace zařízení STICKER přes NFC v aplikaci HARDWARIO Manager: LoRaWAN, intervaly, senzory, historie, alarmy, export a import."
 title_meta: "Konfigurace (HARDWARIO Manager pro STICKER)"
 ---
 

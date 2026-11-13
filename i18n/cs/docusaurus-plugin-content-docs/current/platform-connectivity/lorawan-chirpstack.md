@@ -1,6 +1,7 @@
 ---
 slug: lorawan-chirpstack
 title: ChirpStack v4
+description: "Připojení zařízení CHESTER k síti LoRaWAN se serverem ChirpStack v4: přihlašovací údaje, nastavení OTAA, profil zařízení, registrace a dekodér payloadu."
 title_meta: "ChirpStack v4 (CHESTER)"
 ---
 import Image from '@theme/IdealImage';

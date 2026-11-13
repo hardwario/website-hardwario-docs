@@ -1,5 +1,6 @@
 ---
 title: Dashboard
+description: "Nastavte dashboard na portu 80 zařízení FIBER nebo FIBER Lite: dlaždice pro ChirpStack, Node-RED, InfluxDB a Grafanu, systémové metriky a přístup SSH."
 ---
 
 # Dashboard {#dashboard}

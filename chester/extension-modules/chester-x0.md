@@ -1,6 +1,7 @@
 ---
 slug: chester-x0
 title: CHESTER-X0 (4-ch input)
+description: "CHESTER-X0 four-channel I/O module, X0A with 5 V boost or X0B without: 0–26 V, 4–20 mA, dry contact, NPN and PNP inputs, SDK modes and pinout."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ This article describes the CHESTER-X0 four-channel I/O extension module. Two var
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x0a-top.png')} alt="CHESTER-X0A module, a red PCB with boost converter fitted in the top-left corner" /></div>
+      <div><Image img={require('./images/chester-x0a-top.webp')} alt="CHESTER-X0A module, a red PCB with boost converter fitted in the top-left corner" /></div>
     </div>
     <div class="col col--10">
     </div>
@@ -25,7 +26,7 @@ This article describes the CHESTER-X0 four-channel I/O extension module. Two var
 <div class="container">
   <div class="row">
     <div class="col col--4">
-      <div><Image img={require('./images/chester-x0b-top.png')} alt="CHESTER-X0B module, a red PCB with the boost-converter position unpopulated and solder bridges instead" /></div>
+      <div><Image img={require('./images/chester-x0b-top.webp')} alt="CHESTER-X0B module, a red PCB with the boost-converter position unpopulated and solder bridges instead" /></div>
     </div>
     <div class="col col--10">
     </div>

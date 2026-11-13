@@ -1,6 +1,7 @@
 ---
 slug: how-to-eeprom
 title: "Jak na: EEPROM"
+description: "Ukládání dat do 6 KB EEPROM modulu TOWER Core Module, která je uchová i bez napájení: velikost, příklad čtení a zápisu, limit cyklů a bezpečné adresy."
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,7 @@
 ---
 slug: bmeters-hydroclima-2
 title: BMeters Hydroclima 2
+description: "Read the BMeters Hydroclima 2 heat cost allocator with CHESTER wM-Bus: radio configuration in BMetering Software, address location and decryption keys."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +13,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-hydroclima-2.png')} width={376} height={376} alt="White BMeters Hydroclima 2 heat cost allocator with barcode, display, and button" />
+        <Image img={require('./images/bmeters-hydroclima-2.webp')} width={376} height={376} alt="White BMeters Hydroclima 2 heat cost allocator with barcode, display, and button" />
       </div>
     </div>
     <div class="col col--24"></div>
@@ -56,7 +57,7 @@ The address is located **above the barcode and below the display**, as shown in 
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/bmeters-hydroclima-2.png')} width={376} height={376} alt="Hydroclima 2 with the 8-digit wM-Bus address outlined next to the barcode above the display" />
+        <Image img={require('./images/bmeters-hydroclima-2.webp')} width={376} height={376} alt="Hydroclima 2 with the 8-digit wM-Bus address outlined next to the barcode above the display" />
       </div>
     </div>
     <div class="col col--24"></div>

@@ -1,6 +1,7 @@
 ---
 slug: segger-j-link
 title: SEGGER J-Link
+description: "SEGGER J-Link pro zařízení CHESTER: potřebné vybavení, ovladače J-Link a HARDWARIO Command Line Tools a připojení kabelu SWD k portům APP, LTE a LRW."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -137,7 +138,7 @@ Budete potřebovat tento hardware a software:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('../../../../../chester/developer-tools/images/chester-app-flash-jlink-olimex-white.png')} alt="SEGGER J-Link PLUS Compact s adaptérem Olimex a plochým kabelem připojený k portu APP na základní desce zařízení CHESTER"/></div>
+      <div><Image img={require('../../../../../chester/developer-tools/images/chester-app-flash-jlink-olimex-white.jpg')} alt="SEGGER J-Link PLUS Compact s adaptérem Olimex a plochým kabelem připojený k portu APP na základní desce zařízení CHESTER"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -148,7 +149,7 @@ Budete potřebovat tento hardware a software:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-app.png')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do ladicího konektoru APP na levém okraji"/></div>
+      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-app.jpg')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do ladicího konektoru APP na levém okraji"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -161,7 +162,7 @@ Budete potřebovat tento hardware a software:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('../../../../../chester/developer-tools/images/chester-lte-flash-jlink-olimex-white.png')} alt="SEGGER J-Link PLUS Compact s adaptérem Olimex a plochým kabelem připojený k portu LTE na základní desce zařízení CHESTER"/></div>
+      <div><Image img={require('../../../../../chester/developer-tools/images/chester-lte-flash-jlink-olimex-white.jpg')} alt="SEGGER J-Link PLUS Compact s adaptérem Olimex a plochým kabelem připojený k portu LTE na základní desce zařízení CHESTER"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -172,7 +173,7 @@ Budete potřebovat tento hardware a software:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-lte.png')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do ladicího konektoru LTE na pravé straně"/></div>
+      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-lte.jpg')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do ladicího konektoru LTE na pravé straně"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -185,7 +186,7 @@ Budete potřebovat tento hardware a software:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('../../../../../chester/developer-tools/images/chester-lrw-flash-jlink-olimex-white.png')} alt="SEGGER J-Link PLUS Compact s adaptérem Olimex a plochým kabelem připojený k portu LRW na základní desce zařízení CHESTER"/></div>
+      <div><Image img={require('../../../../../chester/developer-tools/images/chester-lrw-flash-jlink-olimex-white.jpg')} alt="SEGGER J-Link PLUS Compact s adaptérem Olimex a plochým kabelem připojený k portu LRW na základní desce zařízení CHESTER"/></div>
     </div>
     <div class="col col--2">
     </div>
@@ -196,7 +197,7 @@ Budete potřebovat tento hardware a software:
 <div class="container">
     <div class="row">
     <div class="col col--10">
-      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-lrw.png')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do ladicího konektoru LRW"/></div>
+      <div><Image img={require('../../../../../chester/developer-tools/images/chester-segger-lrw.jpg')} alt="Detail základní desky zařízení CHESTER s plochým kabelem zapojeným do ladicího konektoru LRW"/></div>
     </div>
     <div class="col col--2">
     </div>

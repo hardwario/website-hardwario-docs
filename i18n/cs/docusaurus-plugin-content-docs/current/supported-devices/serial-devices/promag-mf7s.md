@@ -1,6 +1,7 @@
 ---
 slug: promag-mf7s
 title: Promag MF7S
+description: "Čtečka RFID Promag MF7S s aplikací CHESTER Serial na modulu CHESTER-X12-A (RS-232): čtení UID karet, konfigurace, příkazy shellu a payloady LTE a LoRaWAN."
 ---
 
 import Image from '@theme/IdealImage';
@@ -11,7 +12,7 @@ import Image from '@theme/IdealImage';
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('../../../../../../chester/supported-devices/serial-devices/images/promag-rf7s.png')} width={376} height={376} alt="Černá čtečka karet RFID Promag MF7S s připojeným kabelem" />
+        <Image img={require('../../../../../../chester/supported-devices/serial-devices/images/promag-rf7s.jpg')} width={376} height={376} alt="Černá čtečka karet RFID Promag MF7S s připojeným kabelem" />
       </div>
     </div>
     <div class="col col--24"></div>

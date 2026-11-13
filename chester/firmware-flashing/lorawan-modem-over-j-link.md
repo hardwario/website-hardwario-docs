@@ -1,6 +1,7 @@
 ---
 slug: lorawan-modem-over-j-link
 title: LoRaWAN Modem over J-Link
+description: "Flash LoRaWAN modem firmware v1.4.1 into CHESTER with SEGGER J-Link on the LRW connector, then power-cycle the device to avoid undefined modem operation."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

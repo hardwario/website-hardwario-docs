@@ -1,6 +1,7 @@
 ---
 slug: modbus-registers
 title: Modbus Registers
+description: "GAUGER Modbus TCP register map: twelve holding registers (45301–45312, FC03) with activation and deactivation counts and the state of all four inputs."
 ---
 
 # Modbus Registers

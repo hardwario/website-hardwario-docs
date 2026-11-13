@@ -1,6 +1,7 @@
 ﻿---
 slug: milesight-ws101
 title: WS101
+description: "Milesight WS101 smart button with short, long and double press actions and D2D: LoRaWAN Class A join keys, payload decoder links and specifications."
 ---
 
 import Image from '@theme/IdealImage';
@@ -13,7 +14,7 @@ Milesight WS101 is a **compact, battery-powered LoRaWAN smart button** designed 
   <div class="row">
     <div class="col col--8">
       <div style={{ maxWidth: '500px' }}>
-        <Image img={require('./images/ws101.png')} />
+        <Image img={require('./images/ws101.png')} alt="Milesight Sensor WS101" />
       </div>
     </div>
     <div class="col col--24"></div>

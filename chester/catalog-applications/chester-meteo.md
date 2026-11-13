@@ -1,6 +1,7 @@
 ---
 slug: chester-meteo
 title: CHESTER Meteo
+description: "CHESTER Meteo catalog application: wind speed and direction, rainfall, pressure, temperature and humidity, aggregated as min, max, average and median."
 ---
 import Image from '@theme/IdealImage';
 

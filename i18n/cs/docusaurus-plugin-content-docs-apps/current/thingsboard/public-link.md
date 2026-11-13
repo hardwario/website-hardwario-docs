@@ -1,6 +1,7 @@
 ---
 slug: public-link
 title: Veřejný odkaz
+description: "Sdílení dashboardu ThingsBoard veřejným odkazem jen pro čtení: zveřejnění skupiny zařízení a skupiny dashboardů, i u podřízených zákazníků."
 ---
 
 import Image from '@theme/IdealImage';

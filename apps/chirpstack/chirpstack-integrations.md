@@ -1,6 +1,7 @@
 ---
 slug: chirpstack-integrations
 title: Integrations
+description: "Find the Integrations tab of a ChirpStack v4 application and choose how device data goes on to visualization platforms, external services or custom APIs."
 title_meta: "Integrations (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';

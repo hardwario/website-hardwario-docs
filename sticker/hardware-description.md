@@ -43,7 +43,7 @@ Device status is indicated by a **multi-color LED (R/G/Y)** (see [**LED Indicati
   <div class="row">
     <div class="col col--8">
       <div>
-        <Image img={require('./images/block-diagram-sticker.png')} alt="STICKER block diagram: STM32WLE5CC LoRa SoC with sensors, NFC memory, 2x AA power chain, and status LED" />
+        <Image img={require('./images/block-diagram-sticker.webp')} alt="STICKER block diagram: STM32WLE5CC LoRa SoC with sensors, NFC memory, 2x AA power chain, and status LED" />
       </div>
     </div>
     <div class="col col--24">
@@ -56,7 +56,7 @@ Device status is indicated by a **multi-color LED (R/G/Y)** (see [**LED Indicati
 
 ### NFC Configuration Architecture
 
-![STICKER - NFC Configuration Architecture](images/sticker-nfc.drawio.png)
+![STICKER - NFC Configuration Architecture](images/sticker-nfc.drawio.webp)
 
 ---
 

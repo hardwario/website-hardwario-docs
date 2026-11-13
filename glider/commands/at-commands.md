@@ -1,5 +1,6 @@
 ---
 title: AT Commands
+description: "Every AT command of the GLIDER firmware on the USB-C console: ATCI syntax, device info, AT$CONFIG, AT$FW firmware update, error codes and AT$SHELL."
 sidebar_position: 1
 ---
 import Image from '@theme/IdealImage';

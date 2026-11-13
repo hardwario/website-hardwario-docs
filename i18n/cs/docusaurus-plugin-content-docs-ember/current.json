@@ -11,6 +11,10 @@
     "message": "Pokročilé",
     "description": "The label for category 'Advanced' in sidebar 'docs'"
   },
+  "sidebar.docs.category.Other": {
+    "message": "Ostatní",
+    "description": "The label for category 'Other' in sidebar 'docs'"
+  },
   "sidebar.docs.category.LoRaWAN Network Server": {
     "message": "Síťový server LoRaWAN",
     "description": "The label for category 'LoRaWAN Network Server' in sidebar 'docs'"

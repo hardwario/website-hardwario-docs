@@ -22,14 +22,30 @@ const sidebars = {
       collapsible: false,
       items: [
         'security',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Development',
+      className: 'sidebar-section',
+      collapsible: false,
+      items: [
         'tls-setup',
         'api-spec',
       ],
     },
     {
-      type: 'doc',
-      id: 'changelog',
-      label: 'Changelog',
+      type: 'category',
+      label: 'Other',
+      className: 'sidebar-section',
+      collapsible: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'changelog',
+          label: 'Changelog',
+        },
+      ],
     },
   ],
 };

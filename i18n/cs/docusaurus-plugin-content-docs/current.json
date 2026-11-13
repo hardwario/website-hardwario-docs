@@ -11,6 +11,14 @@
     "message": "Pokročilé",
     "description": "The label for category 'Advanced' in sidebar 'docs'"
   },
+  "sidebar.docs.category.Development": {
+    "message": "Vývoj",
+    "description": "The label for category 'Development' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Other": {
+    "message": "Ostatní",
+    "description": "The label for category 'Other' in sidebar 'docs'"
+  },
   "sidebar.docs.category.Video Tutorials": {
     "message": "Videonávody",
     "description": "The label for category 'Video Tutorials' in sidebar 'docs'"

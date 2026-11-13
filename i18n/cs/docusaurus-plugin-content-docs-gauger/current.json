@@ -11,6 +11,10 @@
     "message": "Pokročilé",
     "description": "The label for category 'Advanced' in sidebar 'docs'"
   },
+  "sidebar.docs.category.Other": {
+    "message": "Ostatní",
+    "description": "The label for category 'Other' in sidebar 'docs'"
+  },
   "sidebar.docs.category.Detailed Description": {
     "message": "Podrobný popis",
     "description": "The label for category 'Detailed Description' in sidebar 'docs'"

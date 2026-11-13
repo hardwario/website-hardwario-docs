@@ -101,9 +101,17 @@ const sidebars = {
       ],
     },
     {
-      type: 'doc',
-      id: 'changelog',
-      label: 'Changelog',
+      type: 'category',
+      label: 'Other',
+      className: 'sidebar-section',
+      collapsible: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'changelog',
+          label: 'Changelog',
+        },
+      ],
     },
   ],
 };

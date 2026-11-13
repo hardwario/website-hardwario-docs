@@ -1,0 +1,31 @@
+.pattern {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 0.45rem;
+  vertical-align: -0.1em;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.red {
+  background: #e5484d;
+}
+
+.yellow {
+  background: #f5c400;
+}
+
+.green {
+  background: #30a46c;
+}
+
+.orange {
+  background: #f76b15;
+}

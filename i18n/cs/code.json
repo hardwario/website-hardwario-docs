@@ -689,5 +689,446 @@
   },
   "sticker.historyCalculator.noteVersion": {
     "message": "Velikosti kanálů a rozložení flash odpovídají firmwaru STICKER {version}."
+  },
+  "sticker.downlinkGenerator.slot.onboard": {
+    "message": "Senzory na desce"
+  },
+  "sticker.downlinkGenerator.slot.w1": {
+    "message": "Slot 1-Wire {n} (s{n})"
+  },
+  "sticker.downlinkGenerator.sensorType.dallas": {
+    "message": "Dallas (DS18B20)"
+  },
+  "sticker.downlinkGenerator.sensorType.machineProbe": {
+    "message": "Machine Probe"
+  },
+  "sticker.downlinkGenerator.channel.temperatureChip": {
+    "message": "Teplota ({chip})"
+  },
+  "sticker.downlinkGenerator.channel.humidity": {
+    "message": "Relativní vlhkost ({chip})"
+  },
+  "sticker.downlinkGenerator.channel.illuminance": {
+    "message": "Osvětlenost (OPT3001)"
+  },
+  "sticker.downlinkGenerator.channel.inputState": {
+    "message": "Vstup {input}: stav"
+  },
+  "sticker.downlinkGenerator.channel.inputCount": {
+    "message": "Vstup {input}: počet impulzů"
+  },
+  "sticker.downlinkGenerator.channel.inputVoltage": {
+    "message": "Vstup {input}: napětí"
+  },
+  "sticker.downlinkGenerator.channel.acceleration": {
+    "message": "Zrychlení v ose {axis} (LIS2DH12)"
+  },
+  "sticker.downlinkGenerator.channel.pressure": {
+    "message": "Tlak (MPL3115A2)"
+  },
+  "sticker.downlinkGenerator.channel.hallLeftState": {
+    "message": "Levý Hallův spínač: stav"
+  },
+  "sticker.downlinkGenerator.channel.hallLeftCount": {
+    "message": "Levý Hallův spínač: počet impulzů"
+  },
+  "sticker.downlinkGenerator.channel.hallRightState": {
+    "message": "Pravý Hallův spínač: stav"
+  },
+  "sticker.downlinkGenerator.channel.hallRightCount": {
+    "message": "Pravý Hallův spínač: počet impulzů"
+  },
+  "sticker.downlinkGenerator.channel.pirMotion": {
+    "message": "PIR: pohyb"
+  },
+  "sticker.downlinkGenerator.channel.pirCount": {
+    "message": "PIR: počet pohybů"
+  },
+  "sticker.downlinkGenerator.channel.accelMotion": {
+    "message": "Akcelerometr: pohyb"
+  },
+  "sticker.downlinkGenerator.channel.accelCount": {
+    "message": "Akcelerometr: počet pohybů"
+  },
+  "sticker.downlinkGenerator.channel.temperature": {
+    "message": "Teplota"
+  },
+  "sticker.downlinkGenerator.channel.magneticField": {
+    "message": "Magnetické pole (Si7210)"
+  },
+  "sticker.downlinkGenerator.channel.tilt": {
+    "message": "Upozornění na náklon (LIS2DH12)"
+  },
+  "sticker.downlinkGenerator.error.noChannel": {
+    "message": "musí být vybraný kanál"
+  },
+  "sticker.downlinkGenerator.error.highLow": {
+    "message": "horní mez musí být větší než dolní mez"
+  },
+  "sticker.downlinkGenerator.error.hysteresis": {
+    "message": "hystereze musí být 0 až horní − dolní mez"
+  },
+  "sticker.downlinkGenerator.error.count": {
+    "message": "počet událostí v okně musí být 0 nebo víc"
+  },
+  "sticker.downlinkGenerator.error.window": {
+    "message": "okno počítání musí být 0 až {max} s"
+  },
+  "sticker.downlinkGenerator.error.dwell": {
+    "message": "prodleva musí být 0 až {max} s"
+  },
+  "sticker.downlinkGenerator.hint.threshold": {
+    "message": "Pásmo necitlivosti v jednotkách kanálu. Alarm se aktivuje, jakmile hodnota opustí rozsah mezi dolní a horní mezí, a zruší se, až hodnota klesne pod horní mez − hysterezi nebo vystoupí nad dolní mez + hysterezi (0 = zruší se hned po návratu do rozsahu)."
+  },
+  "sticker.downlinkGenerator.hint.rate": {
+    "message": "Délka okna v sekundách (0 = interval hlášení). Alarm se aktivuje, jakmile čítač během jednoho okna vzroste o zadaný počet událostí; trvale vysoká četnost zůstane jedním alarmem."
+  },
+  "sticker.downlinkGenerator.hint.motion": {
+    "message": "Stav pohybu: první událost alarm aktivuje (pohyb začal) a po zadaném počtu sekund bez události se alarm zruší (pohyb skončil)."
+  },
+  "sticker.downlinkGenerator.hint.stillness": {
+    "message": "Klid: alarm se aktivuje (pohyb ustal) po zadaném počtu sekund bez události a další událost ho zruší (pohyb se obnovil)."
+  },
+  "sticker.downlinkGenerator.hint.momentaryEdge": {
+    "message": "Pravidlo se vyvolá při každé události a pak čeká zadaný počet sekund, než se může vyvolat znovu."
+  },
+  "sticker.downlinkGenerator.hint.level": {
+    "message": "Doba v sekundách, po kterou musí linka zůstat ve stavu „Do“, než se alarm aktivuje (0 = okamžitě)."
+  },
+  "sticker.downlinkGenerator.hint.edge": {
+    "message": "Doba v sekundách, po kterou musí linka po přechodu zůstat ve stavu „Do“, než se alarm aktivuje; alarm pak zůstane stejně dlouho aktivní, než se může aktivovat znovu (0 = okamžitě)."
+  },
+  "sticker.downlinkGenerator.state.motion": {
+    "message": "pohyb začal / skončil"
+  },
+  "sticker.downlinkGenerator.state.stillness": {
+    "message": "klid (bez pohybu po dobu prodlevy)"
+  },
+  "sticker.downlinkGenerator.state.momentaryEdge": {
+    "message": "hrana (vyvolá se při každé události)"
+  },
+  "sticker.downlinkGenerator.state.level": {
+    "message": "úroveň (aktivní, dokud je linka ve stavu „Do“)"
+  },
+  "sticker.downlinkGenerator.state.edge": {
+    "message": "hrana (vyvolá se při tomto přechodu)"
+  },
+  "sticker.downlinkGenerator.option.off": {
+    "message": "Vypnuto"
+  },
+  "sticker.downlinkGenerator.option.disabled": {
+    "message": "Vypnuto"
+  },
+  "sticker.downlinkGenerator.option.digital": {
+    "message": "Digitální"
+  },
+  "sticker.downlinkGenerator.option.analog": {
+    "message": "Analogový (0–24 V)"
+  },
+  "sticker.downlinkGenerator.option.pulseCounter": {
+    "message": "Čítač impulzů"
+  },
+  "sticker.downlinkGenerator.config.intervalReport": {
+    "message": "Interval hlášení (s, 60–86400)"
+  },
+  "sticker.downlinkGenerator.config.intervalSample": {
+    "message": "Interval vzorkování (s, 5–3600, 0 = před každým hlášením)"
+  },
+  "sticker.downlinkGenerator.config.intervalAnnounce": {
+    "message": "Interval opakovaného ohlášení (h, 1–168, 0 = vypnuto)"
+  },
+  "sticker.downlinkGenerator.config.historyEnable": {
+    "message": "Zapnutí historie"
+  },
+  "sticker.downlinkGenerator.config.batteryLevel": {
+    "message": "Práh slabé baterie (mV, 1000–3600)"
+  },
+  "sticker.downlinkGenerator.config.capSht": {
+    "message": "Schopnost: SHT4x na desce"
+  },
+  "sticker.downlinkGenerator.config.capBarometer": {
+    "message": "Schopnost: barometr"
+  },
+  "sticker.downlinkGenerator.config.capLightSensor": {
+    "message": "Schopnost: senzor světla"
+  },
+  "sticker.downlinkGenerator.config.capAccelerometer": {
+    "message": "Schopnost: akcelerometr"
+  },
+  "sticker.downlinkGenerator.config.motionSensitivity": {
+    "message": "Citlivost detekce pohybu"
+  },
+  "sticker.downlinkGenerator.option.low": {
+    "message": "Nízká"
+  },
+  "sticker.downlinkGenerator.option.medium": {
+    "message": "Střední"
+  },
+  "sticker.downlinkGenerator.option.high": {
+    "message": "Vysoká"
+  },
+  "sticker.downlinkGenerator.config.capHallLeft": {
+    "message": "Schopnost: levý Hallův spínač"
+  },
+  "sticker.downlinkGenerator.config.capHallRight": {
+    "message": "Schopnost: pravý Hallův spínač"
+  },
+  "sticker.downlinkGenerator.config.capW1Sensors": {
+    "message": "Schopnost: senzory 1-Wire"
+  },
+  "sticker.downlinkGenerator.config.gpioMode": {
+    "message": "Vlastník pinů GP"
+  },
+  "sticker.downlinkGenerator.option.none": {
+    "message": "Žádný"
+  },
+  "sticker.downlinkGenerator.option.inputs": {
+    "message": "Vstupy"
+  },
+  "sticker.downlinkGenerator.option.pir": {
+    "message": "PIR"
+  },
+  "sticker.downlinkGenerator.option.buzzer": {
+    "message": "Bzučák"
+  },
+  "sticker.downlinkGenerator.config.inputMode": {
+    "message": "Režim vstupu {input}"
+  },
+  "sticker.downlinkGenerator.config.alarmLimit": {
+    "message": "Limit alarmů (s mezi alarmovými uplinky, 0–3600)"
+  },
+  "sticker.downlinkGenerator.config.alarmBuzzerMode": {
+    "message": "Režim bzučáku při alarmu"
+  },
+  "sticker.downlinkGenerator.option.once": {
+    "message": "Jednou"
+  },
+  "sticker.downlinkGenerator.option.slow": {
+    "message": "Pomalu (120 s)"
+  },
+  "sticker.downlinkGenerator.option.normal": {
+    "message": "Normálně (30 s)"
+  },
+  "sticker.downlinkGenerator.option.fast": {
+    "message": "Rychle (10 s)"
+  },
+  "sticker.downlinkGenerator.option.continuous": {
+    "message": "Nepřetržitě"
+  },
+  "sticker.downlinkGenerator.config.radioAlarmAck": {
+    "message": "Potvrzované alarmové uplinky"
+  },
+  "sticker.downlinkGenerator.command.getInfo": {
+    "message": "Vyžádat informace o zařízení"
+  },
+  "sticker.downlinkGenerator.command.getSettings": {
+    "message": "Vyžádat klíčová nastavení"
+  },
+  "sticker.downlinkGenerator.command.getRadioState": {
+    "message": "Vyžádat stav rádia"
+  },
+  "sticker.downlinkGenerator.command.getConfig": {
+    "message": "Vyžádat výpis konfigurace"
+  },
+  "sticker.downlinkGenerator.command.forceSend": {
+    "message": "Odeslat hlášení ihned"
+  },
+  "sticker.downlinkGenerator.command.sample": {
+    "message": "Změřit senzory ihned"
+  },
+  "sticker.downlinkGenerator.command.w1Scan": {
+    "message": "Prohledat sběrnici 1-Wire"
+  },
+  "sticker.downlinkGenerator.command.clockSync": {
+    "message": "Synchronizovat hodiny"
+  },
+  "sticker.downlinkGenerator.command.lrwJoin": {
+    "message": "Vynutit opětovné připojení"
+  },
+  "sticker.downlinkGenerator.command.settingsSave": {
+    "message": "Uložit konfiguraci (s restartem)"
+  },
+  "sticker.downlinkGenerator.command.reboot": {
+    "message": "Restartovat"
+  },
+  "sticker.downlinkGenerator.melody.stop": {
+    "message": "Zastavit"
+  },
+  "sticker.downlinkGenerator.melody.info": {
+    "message": "Informace"
+  },
+  "sticker.downlinkGenerator.melody.warning": {
+    "message": "Varování"
+  },
+  "sticker.downlinkGenerator.melody.alarm": {
+    "message": "Alarm"
+  },
+  "sticker.downlinkGenerator.error.encoding": {
+    "message": "Kódování selhalo: {message}"
+  },
+  "sticker.downlinkGenerator.error.json": {
+    "message": "Neplatný JSON: {message}"
+  },
+  "sticker.downlinkGenerator.error.rangeZero": {
+    "message": "Hodnota {key} musí být 0 nebo {min} až {max}, jinak ji zařízení odmítne."
+  },
+  "sticker.downlinkGenerator.error.range": {
+    "message": "Hodnota {key} musí být {min} až {max}, jinak ji zařízení odmítne."
+  },
+  "sticker.downlinkGenerator.error.rule": {
+    "message": "Pravidlo {rule}: {error}, jinak zařízení pravidlo odmítne."
+  },
+  "sticker.downlinkGenerator.error.repeat": {
+    "message": "Interval opakování musí být 0 až 999 s."
+  },
+  "sticker.downlinkGenerator.error.nothing": {
+    "message": "Není co kódovat"
+  },
+  "sticker.downlinkGenerator.button.remove": {
+    "message": "Odebrat"
+  },
+  "sticker.downlinkGenerator.label.command": {
+    "message": "Příkaz"
+  },
+  "sticker.downlinkGenerator.group.actions": {
+    "message": "Akce"
+  },
+  "sticker.downlinkGenerator.group.parameters": {
+    "message": "Parametry"
+  },
+  "sticker.downlinkGenerator.command.setConfig": {
+    "message": "Nastavit konfigurační parametry"
+  },
+  "sticker.downlinkGenerator.command.setAlarms": {
+    "message": "Nastavit pravidla alarmů"
+  },
+  "sticker.downlinkGenerator.command.resetCounters": {
+    "message": "Vynulovat čítače"
+  },
+  "sticker.downlinkGenerator.command.reqHistory": {
+    "message": "Vyžádat historii"
+  },
+  "sticker.downlinkGenerator.command.buzzerPlay": {
+    "message": "Přehrát melodii bzučáku"
+  },
+  "sticker.downlinkGenerator.group.advanced": {
+    "message": "Pokročilé"
+  },
+  "sticker.downlinkGenerator.command.custom": {
+    "message": "Vlastní JSON"
+  },
+  "sticker.downlinkGenerator.label.seq": {
+    "message": "Pořadové číslo (vrátí se v odpovědi)"
+  },
+  "sticker.downlinkGenerator.label.parameters": {
+    "message": "Parametry"
+  },
+  "sticker.downlinkGenerator.button.addParameter": {
+    "message": "+ Přidat parametr"
+  },
+  "sticker.downlinkGenerator.label.alarmRules": {
+    "message": "Pravidla alarmů"
+  },
+  "sticker.downlinkGenerator.label.rule": {
+    "message": "Pravidlo (0–15)"
+  },
+  "sticker.downlinkGenerator.label.action": {
+    "message": "Akce"
+  },
+  "sticker.downlinkGenerator.option.setRule": {
+    "message": "Nastavit pravidlo"
+  },
+  "sticker.downlinkGenerator.option.clearRule": {
+    "message": "Smazat pravidlo"
+  },
+  "sticker.downlinkGenerator.label.slot": {
+    "message": "Slot"
+  },
+  "sticker.downlinkGenerator.label.sensorType": {
+    "message": "Typ senzoru"
+  },
+  "sticker.downlinkGenerator.label.channel": {
+    "message": "Kanál"
+  },
+  "sticker.downlinkGenerator.label.enabled": {
+    "message": "Zapnuto"
+  },
+  "sticker.downlinkGenerator.label.low": {
+    "message": "Dolní mez ({unit})"
+  },
+  "sticker.downlinkGenerator.label.high": {
+    "message": "Horní mez ({unit})"
+  },
+  "sticker.downlinkGenerator.label.from": {
+    "message": "Z"
+  },
+  "sticker.downlinkGenerator.label.to": {
+    "message": "Do"
+  },
+  "sticker.downlinkGenerator.label.eventsPerWindow": {
+    "message": "Počet událostí v okně"
+  },
+  "sticker.downlinkGenerator.label.hysteresis": {
+    "message": "Hystereze ({unit})"
+  },
+  "sticker.downlinkGenerator.label.window": {
+    "message": "Okno počítání (s)"
+  },
+  "sticker.downlinkGenerator.label.dwell": {
+    "message": "Prodleva (s)"
+  },
+  "sticker.downlinkGenerator.button.addRule": {
+    "message": "+ Přidat pravidlo alarmu"
+  },
+  "sticker.downlinkGenerator.label.replaceAll": {
+    "message": "Nahradit celou tabulku alarmů: smaže všechna pravidla, která tu nejsou uvedená (přidá {code}; pokud tabulku posíláte v několika downlincích, použijte tuto volbu jen v první zprávě)"
+  },
+  "sticker.downlinkGenerator.label.counters": {
+    "message": "Čítače k vynulování"
+  },
+  "sticker.downlinkGenerator.label.hallLeft": {
+    "message": "Levý Hallův spínač"
+  },
+  "sticker.downlinkGenerator.label.hallRight": {
+    "message": "Pravý Hallův spínač"
+  },
+  "sticker.downlinkGenerator.label.input": {
+    "message": "Vstup {input}"
+  },
+  "sticker.downlinkGenerator.label.fromUnix": {
+    "message": "Od (unixový čas, s)"
+  },
+  "sticker.downlinkGenerator.label.toUnix": {
+    "message": "Do (unixový čas, s)"
+  },
+  "sticker.downlinkGenerator.label.melody": {
+    "message": "Melodie"
+  },
+  "sticker.downlinkGenerator.label.repeat": {
+    "message": "Opakovat každých (s, 0 = jednou)"
+  },
+  "sticker.downlinkGenerator.hint.buzzer": {
+    "message": "Vyžaduje variantu s bzučákem a parametr {code} nastavený na „Bzučák“. Volba „Zastavit“ zruší i opakovanou melodii."
+  },
+  "sticker.downlinkGenerator.label.jsonCommand": {
+    "message": "Příkaz JSON"
+  },
+  "sticker.downlinkGenerator.label.saveAfter": {
+    "message": "Uložit a restartovat po provedení změn (přidá {code})"
+  },
+  "sticker.downlinkGenerator.button.copyJson": {
+    "message": "Kopírovat JSON"
+  },
+  "sticker.downlinkGenerator.button.copyHex": {
+    "message": "Kopírovat hex"
+  },
+  "sticker.downlinkGenerator.emptyPayload": {
+    "message": "(prázdný payload)"
+  },
+  "sticker.downlinkGenerator.warnings": {
+    "message": "Varování: {warnings}"
+  },
+  "sticker.downlinkGenerator.note": {
+    "message": "Kódování probíhá ve vašem prohlížeči pomocí kodeku STICKER {codec} ve verzi pro firmware {version}. Hex zařaďte na fPort 85, nebo pošlete JSON, pokud máte kodek nainstalovaný jako formátovač payloadu downlinku."
   }
 }

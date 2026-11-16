@@ -689,5 +689,155 @@
   },
   "sticker.historyCalculator.noteVersion": {
     "message": "Velikosti kanálů a rozložení flash odpovídají firmwaru STICKER {version}."
+  },
+  "sticker.deviceBehavior.led.red": {
+    "message": "červená"
+  },
+  "sticker.deviceBehavior.led.yellow": {
+    "message": "žlutá"
+  },
+  "sticker.deviceBehavior.led.green": {
+    "message": "zelená"
+  },
+  "sticker.deviceBehavior.led.orange": {
+    "message": "oranžová"
+  },
+  "sticker.deviceBehavior.led.label": {
+    "message": "LED: {colors}"
+  },
+  "sticker.deviceBehavior.states.ariaLabel": {
+    "message": "Stavy zařízení STICKER a jejich signalizace LED"
+  },
+  "sticker.deviceBehavior.states.normal": {
+    "message": "Běžný provoz"
+  },
+  "sticker.deviceBehavior.states.other": {
+    "message": "Další stavy"
+  },
+  "sticker.deviceBehavior.states.every3s": {
+    "message": "každé 3 s"
+  },
+  "sticker.deviceBehavior.states.startup.title": {
+    "message": "Start"
+  },
+  "sticker.deviceBehavior.states.startup.text": {
+    "message": "Jednou rozsvítí červenou, žlutou a zelenou a pak se připojí k síti."
+  },
+  "sticker.deviceBehavior.states.startup.timing": {
+    "message": "jednou, asi 3 s"
+  },
+  "sticker.deviceBehavior.states.joining.title": {
+    "message": "Připojování"
+  },
+  "sticker.deviceBehavior.states.joining.text": {
+    "message": "Zatím není v síti. Další pokus asi za 1 min, pak s delšími pauzami až do 1 h."
+  },
+  "sticker.deviceBehavior.states.connected.title": {
+    "message": "Připojeno"
+  },
+  "sticker.deviceBehavior.states.connected.text": {
+    "message": "Vše funguje. Ve výchozím nastavení posílá data každých 15 min."
+  },
+  "sticker.deviceBehavior.states.weak.title": {
+    "message": "Slabý signál"
+  },
+  "sticker.deviceBehavior.states.weak.text": {
+    "message": "Stále je připojené, ale síť přestala odpovídat. Zkouší odolnější přenosovou rychlost."
+  },
+  "sticker.deviceBehavior.states.rejoin": {
+    "message": "Když se signál nezlepší, zařízení se k síti připojí znovu, asi 4–5 h po ztrátě spojení."
+  },
+  "sticker.deviceBehavior.states.radioOff.title": {
+    "message": "Rádio vypnuté"
+  },
+  "sticker.deviceBehavior.states.radioOff.text": {
+    "message": "Měří, ale nic neposílá. Rádio zapněte v aplikaci HARDWARIO Manager."
+  },
+  "sticker.deviceBehavior.states.alarm.title": {
+    "message": "Aktivní alarm"
+  },
+  "sticker.deviceBehavior.states.alarm.text": {
+    "message": "Velmi krátké červené bliknutí, jen ve stavu Připojeno."
+  },
+  "sticker.deviceBehavior.states.battery.title": {
+    "message": "Vybité baterie"
+  },
+  "sticker.deviceBehavior.states.battery.text": {
+    "message": "Pod 1,8 V při startu 5 s bliká červeně a vypne se. Vyměňte baterie."
+  },
+  "sticker.deviceBehavior.states.calibration.title": {
+    "message": "Kalibrace"
+  },
+  "sticker.deviceBehavior.states.calibration.text": {
+    "message": "Servisní testovací režim. Trvá 120 min, pak se zařízení restartuje."
+  },
+  "sticker.deviceBehavior.states.calibration.timing": {
+    "message": "každou sekundu"
+  },
+  "sticker.deviceBehavior.timeline.messages.ariaLabel": {
+    "message": "Co STICKER posílá po zapnutí"
+  },
+  "sticker.deviceBehavior.timeline.messages.powerUp.title": {
+    "message": "Zapnutí"
+  },
+  "sticker.deviceBehavior.timeline.messages.powerUp.text": {
+    "message": "Startovní sekvence, asi 3 s"
+  },
+  "sticker.deviceBehavior.timeline.messages.join.title": {
+    "message": "Připojení"
+  },
+  "sticker.deviceBehavior.timeline.messages.join.text": {
+    "message": "Připojí se k síti"
+  },
+  "sticker.deviceBehavior.timeline.messages.info.title": {
+    "message": "Info a nastavení"
+  },
+  "sticker.deviceBehavior.timeline.messages.info.text": {
+    "message": "Po každém připojení"
+  },
+  "sticker.deviceBehavior.timeline.messages.telemetry.title": {
+    "message": "Telemetrie"
+  },
+  "sticker.deviceBehavior.timeline.messages.telemetry.text": {
+    "message": "Ve výchozím nastavení každých 15 min"
+  },
+  "sticker.deviceBehavior.timeline.messages.daily.title": {
+    "message": "Info a nastavení"
+  },
+  "sticker.deviceBehavior.timeline.messages.daily.text": {
+    "message": "Znovu každých 24 h"
+  },
+  "sticker.deviceBehavior.timeline.linkLoss.ariaLabel": {
+    "message": "Co STICKER dělá, když ztratí rádiové spojení"
+  },
+  "sticker.deviceBehavior.timeline.linkLoss.lost.title": {
+    "message": "Ztráta spojení"
+  },
+  "sticker.deviceBehavior.timeline.linkLoss.lost.text": {
+    "message": "Brána zařízení přestane slyšet"
+  },
+  "sticker.deviceBehavior.timeline.linkLoss.checks.title": {
+    "message": "Kontroly selhávají"
+  },
+  "sticker.deviceBehavior.timeline.linkLoss.checks.text": {
+    "message": "Kontrolu spojení nese každé 5. hlášení"
+  },
+  "sticker.deviceBehavior.timeline.linkLoss.weak.title": {
+    "message": "Slabý signál"
+  },
+  "sticker.deviceBehavior.timeline.linkLoss.weak.text": {
+    "message": "Po 3 neúspěšných kontrolách zkusí pomalejší a odolnější přenos"
+  },
+  "sticker.deviceBehavior.timeline.linkLoss.rejoin.title": {
+    "message": "Nové připojení"
+  },
+  "sticker.deviceBehavior.timeline.linkLoss.rejoin.text": {
+    "message": "Asi 4–5 h po ztrátě spojení"
+  },
+  "sticker.deviceBehavior.timeline.linkLoss.back.title": {
+    "message": "Připojeno"
+  },
+  "sticker.deviceBehavior.timeline.linkLoss.back.text": {
+    "message": "Data zase přicházejí"
   }
 }

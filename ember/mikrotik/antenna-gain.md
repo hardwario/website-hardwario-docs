@@ -10,11 +10,16 @@ This page explains how transmit (TX) power works on a MikroTik LoRa gateway
 (R11e-LR8G / wAP LR8G kit) and how to configure the `antenna-gain` setting so the
 gateway stays within the legal radiated-power limit (EIRP).
 
-:::warning Read this before attaching an external antenna
+:::danger Read this before attaching an external antenna
 There is **no "TX power" setting on the gateway**. The card's only RF control is
 `antenna-gain`, and its factory default is `0`. If you attach an antenna with gain
 and leave the default, the gateway will radiate **above** the intended power and can
 exceed the legal EIRP limit.
+
+- **Check which antenna is connected.** On EMBER, if you fitted an **external antenna**, make sure it is connected
+  whenever the gateway is powered. Transmitting with nothing connected can **damage the LoRa card**.
+- **Double-check the value you enter.** A value lower than the gain of the antenna in use can make the gateway
+  radiate **above the legal EIRP limit**. A higher value only lowers the range.
 :::
 
 ---

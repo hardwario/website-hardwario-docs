@@ -11,14 +11,14 @@ import Image from '@theme/IdealImage';
 **EMBER** je průmyslová platforma LoRaWAN, která přenáší a zpracovává měřené hodnoty ze senzorů a řídí akční členy v průmyslových areálech. Každou lokalitu tvoří venkovní brána **EMBER Hotspot**, zařízení LoRaWAN (například **CHESTER**), páteřní připojení **LTE** přes **Onomondo** a síťový server LoRaWAN (**ChirpStack** nebo **The Things Stack**; provozuje ho buď sám zákazník, nebo **HARDWARIO** jako spravovanou službu) s **Node-RED** pro low-code integrace přes REST. Data tak můžete vizualizovat a zpracovávat v cloudu i na vlastních serverech (on-premise).
 
 :::tip
-### Než zařízení EMBER zprovozníte, přečtěte si [**Rychlého průvodce**](getting-started.md) {#to-get-your-ember-running-read-the-quick-start-guide}
+### Než zařízení EMBER zprovozníte, přečtěte si [**První kroky**](getting-started.md) {#to-get-your-ember-running-read-the-first-steps}
 :::
 
 <img src="/img/ember-top.webp" data-zoom-src="/img/ember-top.webp" width="540" alt="EMBER" />
 
 ## Rychlé odkazy {#quick-links}
 
-* [**Rychlý průvodce**](getting-started.md): Návod k nastavení krok za krokem.
+* [**První kroky**](getting-started.md): Zapojení, přihlášení a připojení zařízení EMBER.
 * [**Konfigurace hotspotu**](hotspot-configuration.md): Koncept systému, konfigurace RouterOS, IP adresy a VPN tunely.
 * [**Spravovaný síťový server**](cloud-service.md): ChirpStack a Node-RED jako spravovaná služba, kterou provozuje HARDWARIO.
 * [**Popis hardwaru**](hardware-description.md): Hlavní části a parametry zařízení EMBER Hotspot.

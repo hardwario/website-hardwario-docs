@@ -19,6 +19,10 @@
     "message": "Síťový server LoRaWAN",
     "description": "The label for category 'LoRaWAN Network Server' in sidebar 'docs'"
   },
+  "sidebar.docs.category.Setup": {
+    "message": "Nastavení",
+    "description": "The label for category 'Setup' in sidebar 'docs'"
+  },
   "sidebar.docs.category.MikroTik": {
     "message": "MikroTik",
     "description": "The label for category 'MikroTik' in sidebar 'docs'"

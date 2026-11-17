@@ -11,14 +11,14 @@ import Image from '@theme/IdealImage';
 **EMBER** is an industrial LoRaWAN platform that transmits and processes measured sensor values and controls actuators across industrial sites. Each site combines an outdoor **EMBER Hotspot** gateway with LoRaWAN devices such as **CHESTER**, **LTE** backhaul via **Onomondo**, and a **LoRaWAN Network Server** (**ChirpStack** or **The Things Stack**, either self-hosted by the customer or operated by **HARDWARIO** as a managed service) with **Node-RED** for low-code REST integrations, so data can be visualized and processed either in the cloud or on-premise.
 
 :::tip
-### To get your EMBER running, read the [**Quick Start Guide**](getting-started.md)
+### To get your EMBER running, read the [**First Steps**](getting-started.md)
 :::
 
 <img src="/img/ember-top.webp" data-zoom-src="/img/ember-top.webp" width="540" alt="EMBER" />
 
 ## Quick Links
 
-* [**Quick Start Guide**](getting-started.md): Step-by-step setup guide.
+* [**First Steps**](getting-started.md): Power up, log in and connect your EMBER.
 * [**Hotspot Configuration**](hotspot-configuration.md): System concept, RouterOS configuration, IP addresses, and VPN tunnels.
 * [**Managed Network Server**](cloud-service.md): ChirpStack and Node-RED operated by HARDWARIO as a managed service.
 * [**Hardware Description**](hardware-description.md): Main parts and parameters of the EMBER Hotspot.

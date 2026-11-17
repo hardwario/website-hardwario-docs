@@ -10,11 +10,16 @@ Tato stránka vysvětluje, jak funguje vysílací (TX) výkon u brány LoRa od s
 (R11e-LR8G / wAP LR8G kit) a jak nastavit parametr `antenna-gain`, aby brána
 zůstala v zákonném limitu vyzářeného výkonu (EIRP).
 
-:::warning Přečtěte si to dřív, než připojíte externí anténu
+:::danger Přečtěte si to dřív, než připojíte externí anténu
 Brána **nemá žádné nastavení „TX power“**. Jediným nastavením RF na kartě je
 `antenna-gain` a jeho výchozí hodnota z výroby je `0`. Pokud připojíte anténu se ziskem
 a výchozí hodnotu ponecháte, brána bude vyzařovat **vyšší** výkon, než má, a může
 překročit zákonný limit EIRP.
+
+- **Zkontrolujte, která anténa je připojená.** Pokud jste u zařízení EMBER namontovali **externí anténu**, ověřte,
+  že je připojená po celou dobu, kdy je brána zapnutá. Vysílání bez připojené antény může **poškodit kartu LoRa**.
+- **Pečlivě zkontrolujte zadanou hodnotu.** Hodnota nižší, než je zisk použité antény, může způsobit, že brána
+  překročí **zákonný limit EIRP**. Vyšší hodnota jen sníží dosah.
 :::
 
 ---

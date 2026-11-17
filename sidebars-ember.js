@@ -16,6 +16,7 @@ const sidebars = {
           label: 'LoRaWAN Network Server',
           collapsed: true,
           items: [
+            'cloud-service',
             {
               type: 'category',
               label: 'ChirpStack v4',
@@ -30,8 +31,17 @@ const sidebars = {
             'lorawan-network-server/lorawan-tts',
           ],
         },
+        {
+          type: 'category',
+          label: 'MikroTik',
+          collapsed: true,
+          items: [
+            'mikrotik/gateway-update',
+            'mikrotik/antenna-gain',
+            'mikrotik/winbox-setup',
+          ],
+        },
         'hotspot-configuration',
-        'cloud-service',
         {
           type: 'category',
           label: 'Video Tutorials',
@@ -72,17 +82,17 @@ const sidebars = {
       className: 'sidebar-section',
       collapsible: false,
       items: [
-        'hardware-description',
         {
           type: 'category',
-          label: 'MikroTik',
+          label: 'Setup',
           collapsed: true,
           items: [
-            'mikrotik/gateway-update',
-            'mikrotik/antenna-gain',
-            'mikrotik/winbox-setup',
+            'hardware-setup',
+            'automated-setup',
+            'manual-setup',
           ],
         },
+        'hardware-description',
       ],
     },
     {

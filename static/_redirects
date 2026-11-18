@@ -240,6 +240,12 @@
 /apps/thingsboard/users-managing/-cz                  /apps/thingsboard/users-managing                               301
 /apps/thingsboard/users-managing/-cz/                 /apps/thingsboard/users-managing                               301
 
+# apps/thingsboard: restructured to mirror the HARDWARIO Dashboards video series (2026-11)
+/apps/thingsboard/creating-device                    /apps/thingsboard/devices/                                      301
+/apps/thingsboard/creating-device/                   /apps/thingsboard/devices/                                      301
+/cs/apps/thingsboard/creating-device                 /cs/apps/thingsboard/devices/                                   301
+/cs/apps/thingsboard/creating-device/                /cs/apps/thingsboard/devices/                                   301
+
 # chester: old getting-started page + platform-connectivity stub
 /chester/getting-started                             /chester/first-steps/                                           301
 /chester/getting-started/                            /chester/first-steps/                                           301

@@ -1,114 +1,100 @@
 ---
 slug: creating-dashboard
-title: Dashboardy
-description: "Vytvoření dashboardu v ThingsBoard, zobrazení proměnné widgetem Label & Value Card a graf telemetrie ve widgetu Line Chart s jednou či více řadami."
+title: První dashboard
+description: "Vytvořte dashboard v HARDWARIO Dashboards, přidejte widget Value card s živou hodnotou, upravte jeho velikost a dashboard uložte."
+title_meta: "První dashboard (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';
 
-# Vytváření dashboardů {#creating-dashboards}
+# První dashboard {#your-first-dashboard}
 
-V tomto návodu se naučíte, jak vytvořit dashboard, přidat jednoduché zobrazení proměnné a vytvořit základní graf. Data ze zařízení tak budete vizualizovat a sledovat v reálném čase.
+V tomto návodu vytvoříte dashboard a přidáte na něj kartu, která ukazuje živou hodnotu ze zařízení. Potom můžete pokračovat [grafy](/apps/thingsboard/charts).
 
----
-
-## Krok 1: Jak vytvořit dashboard {#step-1-how-to-create-a-dashboard}
-
-   1. Otevřete **levou navigační lištu**.  
-   2. Klikněte na položku **Dashboards**.  
-   3. Vpravo nahoře klikněte na **tlačítko ➕**, kterým přidáte nový dashboard.  
-   4. Zvolte **Create new dashboard**.  
-
-![Vytvoření nového dashboardu (1)](../../../../../apps/thingsboard/images/thingsboard-dashboards-1.png)
-
-   5. Zadejte **Title, Description, Image** a další potřebné údaje.  
-   6. Klikněte na **Add**.  
-
-![Vytvoření nového dashboardu (2)](../../../../../apps/thingsboard/images/thingsboard-dashboards-2.png)
-
-   7. Otevře se nově vytvořený dashboard.  
+Než začnete, zařízení by mělo být [připojené](/apps/thingsboard/cloud-connection) a jeho hodnoty by se měly objevovat v **Latest telemetry** (viz [Správa zařízení](/apps/thingsboard/devices#check-the-device-data)).
 
 ---
 
-## Krok 2: Jak vytvořit jednoduché zobrazení proměnné {#step-2-how-to-create-a-simple-variable-display}
+## Krok 1: Vytvořte dashboard {#step-1-create-the-dashboard}
 
-   1. V dashboardu klikněte na tlačítko **+ Add new widget**.  
-      - Případně můžete použít volbu **+ Add widget** v horní liště. 
+1. V levém menu otevřete **Dashboards**.
+2. Vpravo nahoře klikněte na **Add dashboard** a zvolte **Create new dashboard**.
 
-![Přidání nového widgetu](../../../../../apps/thingsboard/images/thingsboard-variable-0.png)
+   ![Seznam dashboardů s otevřenou nabídkou Add dashboard s volbami Create new dashboard a Import dashboard](../../../../../apps/thingsboard/images/dashboard-add-menu.jpg)
 
-   2. Objeví se menu **Widgets Bundles**.  
+3. Zadejte **Title**, například *Warehouse*. Ostatní pole jsou nepovinná. Klikněte na **Add**.
 
-![Widgets Bundles](../../../../../apps/thingsboard/images/thingsboard-variable-1.webp)
+   ![Dialog Add dashboard s vyplněným názvem Warehouse](../../../../../apps/thingsboard/images/dashboard-add-dialog.jpg)
 
-   3. Pro jednoduché zobrazení proměnné zvolte sadu widgetů **Cards**.  
-   4. Z dostupných možností vyberte **Label & Value Card**.  
+Nový dashboard se otevře v **režimu úprav**, připravený na první widget.
 
-![Widgety Cards](../../../../../apps/thingsboard/images/thingsboard-variable-2.webp)
-
-   5. Otevře se konfigurační okno:  
-      - Zvolte **zařízení** a **proměnnou**, kterou chcete zobrazit.  
-      - Upravte vzhled widgetu (label, barvu, ikonu a další).  
-   6. Po dokončení klikněte na **Add**. 
-
-![Konfigurační okno widgetu](../../../../../apps/thingsboard/images/thingsboard-variable-3.png)
-
-   7. Widget se objeví na dashboardu.  
-
-![Widget na dashboardu](../../../../../apps/thingsboard/images/thingsboard-variable-4.png)
-
-   8. Velikost widgetu změníte tažením za jeho rohy.  
-
-![Změna velikosti widgetu](../../../../../apps/thingsboard/images/thingsboard-variable-5.png)
-
-   9.  Widget znovu upravíte tak, že na něj najedete myší a kliknete vpravo nahoře na **ikonu tužky**.  
-
-![Opětovná úprava widgetu](../../../../../apps/thingsboard/images/thingsboard-variable-6.png)
+![Prázdný dashboard v režimu úprav s tlačítkem Add new widget uprostřed a lištou úprav nahoře](../../../../../apps/thingsboard/images/dashboard-edit-empty.jpg)
 
 ---
 
-## Krok 3: Jak vytvořit jednoduchý graf {#step-3-how-to-create-a-simple-chart}
+## Krok 2: Přidejte kartu s živou hodnotou {#step-2-add-a-card-with-a-live-value}
 
-   1. V dashboardu klikněte na tlačítko **+ Add new widget**.  
-      - Případně použijte volbu **+ Add widget** v horní liště.  
+1. Klikněte na **Add new widget** uprostřed (nebo na **Add widget** v horní liště).
+2. Otevře se seznam balíčků widgetů. Zvolte **Cards**.
 
-![Přidání nového widgetu](../../../../../apps/thingsboard/images/thingsboard-chart-0.png)
+   ![Panel Select widgets bundle s balíčky Charts, Cards, Maps, Analogue gauges a dalšími](../../../../../apps/thingsboard/images/dashboard-widget-bundles.jpg)
 
-   2. Objeví se menu **Widgets Bundles**.  
+3. Zvolte **Value card**. Ukazuje jednu hodnotu, která se aktualizuje v reálném čase.
 
-![Widgets Bundles](../../../../../apps/thingsboard/images/thingsboard-chart-1.webp)
+   ![Balíček Cards s widgety Value card, Horizontal value card, Label & value card a dalšími](../../../../../apps/thingsboard/images/dashboard-cards-bundle.jpg)
 
-   3. Pro jednoduchý spojnicový graf zvolte sadu widgetů **Charts**.  
-   4. Z dostupných možností vyberte **Line Chart**.  
+4. V sekci **Datasource** napište do pole **Device** název zařízení a vyberte ho.
+5. V poli **Data key** odeberte výchozí klíč `temperature`, klikněte do pole a vyberte hodnotu, kterou chcete zobrazit, například `hygrometer.temperature.measurements.avg`. Můžete napsat část názvu a vyhledat ji.
+6. V sekci **Appearance** nastavte:
+   - **Label**: text nad hodnotou, například *Chladírna A*,
+   - **Value**: jednotku (například `°C`) a počet desetinných míst (**decimals**),
+   - případně **Icon** a barvy.
+7. Klikněte na **Add**.
 
-![Widgety Charts](../../../../../apps/thingsboard/images/thingsboard-chart-2.png)
+![Nastavení widgetu Value card: zařízení (1), datový klíč (2), label Cold room A (3) a jednotka s jedním desetinným místem (4)](../../../../../apps/thingsboard/images/dashboard-value-card-config.jpg)
 
-   5. Otevře se konfigurační okno:  
-      - Pod **Series → Key** zvolte **zdroj dat** a **proměnnou**, kterou chcete zobrazit.  
-      - Upravte vzhled widgetu (label, jednotky, barvu, počet desetinných míst a další).  
-      - Chcete-li přidat více proměnných, klikněte na **Add Series**.  
-      - Sjeďte níž a nastavte **osy Y, legendu a další vlastnosti grafu**.  
-   6. Po dokončení klikněte na **Add**.  
+Karta se objeví na dashboardu a ukazuje poslední hodnotu s časem poslední aktualizace.
 
-![Konfigurační okno widgetu](../../../../../apps/thingsboard/images/thingsboard-chart-3.png)
+![Dashboard v režimu úprav s kartou Cold room A, která ukazuje 4.1 °C](../../../../../apps/thingsboard/images/dashboard-value-card-result.jpg)
 
-   7. Graf se objeví na dashboardu.  
+---
 
-![Widget na dashboardu](../../../../../apps/thingsboard/images/thingsboard-chart-4.png)
+## Krok 3: Uspořádejte dashboard {#step-3-arrange-the-dashboard}
 
-   8. Velikost grafu změníte tažením za jeho rohy.  
+- **Velikost** widgetu změníte tažením za jeho pravý dolní roh.
+- **Přesunete** ho tažením.
+- **Upravíte** ho tak, že na něj najedete myší a kliknete na **ikonu tužky** v jeho pravém horním rohu.
+- **Zkopírujete** ho pravým kliknutím a volbou **Copy**, potom pravým kliknutím na volné místo a volbou **Paste**. V kopii změňte jen datový klíč, třeba na vlhkost. Je to rychlejší než začínat znovu.
 
-![Změna velikosti widgetu](../../../../../apps/thingsboard/images/thingsboard-chart-5.png)
+---
 
-   9.  Graf znovu upravíte tak, že na něj najedete myší a kliknete vpravo nahoře na **ikonu tužky**.  
-   
-![Opětovná úprava widgetu](../../../../../apps/thingsboard/images/thingsboard-chart-6.png)
+## Krok 4: Uložte {#step-4-save}
 
-### Ukázka vytvořeného dashboardu {#example-of-a-created-dashboard}
+Vpravo nahoře klikněte na **Save**. Dashboard opustí režim úprav. Karta se teď aktualizuje pokaždé, když zařízení pošle nová data.
 
-![Ukázka vytvořeného dashboardu](../../../../../apps/thingsboard/images/thingsboard-dashboard.png)
+Pokud budete chtít dashboard později upravit, otevřete ho a v horní liště klikněte na **Edit mode**.
 
-## Videonávod {#video-tutorial}
+![Uložený dashboard s tlačítkem Edit mode v horní liště vedle časového okna](../../../../../apps/thingsboard/images/dashboard-view-mode.jpg)
 
-:::tip
-Pokud potřebujete další pomoc nebo vizuální ukázku postupu popsaného v tomto návodu, podívejte se na [videonávod](/apps/videos-apps/thingsboard-dashboard).
+:::tip Hodnota je prázdná?
+Zkontrolujte, že jste vybrali správné zařízení a klíč: otevřete zařízení a porovnejte to s jeho **Latest telemetry**. Grafy navíc závisí na [časovém okně](/apps/thingsboard/time-window).
+:::
+
+---
+
+## Ukázka {#example}
+
+Hotový dashboard může kombinovat karty s hodnotami, grafy, mapu a tabulku:
+
+![Dashboard Warehouse overview se čtyřmi kartami s hodnotami, mapou lokalit a grafem teplot dvou chladíren](../../../../../apps/thingsboard/images/dashboard-example-overview.jpg)
+
+---
+
+## Další kroky {#next-steps}
+
+- [Grafy a jejich vzhled](/apps/thingsboard/charts): přidejte graf s historií.
+- [Časové okno](/apps/thingsboard/time-window): zvolte, jaké období dashboard ukazuje.
+- [Veřejný odkaz](/apps/thingsboard/public-link): nasdílejte dashboard.
+
+:::info Dokumentace ThingsBoard
+HARDWARIO Dashboards jsou postavené na platformě ThingsBoard. Podrobnosti najdete v oficiální dokumentaci ThingsBoard (anglicky): [Dashboards](https://thingsboard.io/docs/pe/user-guide/dashboards/).
 :::

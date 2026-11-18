@@ -1,42 +1,37 @@
 ---
 slug: features
-title: Features
-description: "Key features of HARDWARIO ThingsBoard: assets, notification rules, email notifications, scheduled PDF reports, dashboard embedding and the Rule Engine."
-title_meta: "Features (ThingsBoard)"
+title: Advanced
+description: "Advanced features of HARDWARIO Dashboards: assets, the Rule Engine and integrations."
+title_meta: "Advanced (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';
 
-# Features
+# Advanced
 
-ThingsBoard offers advanced tools for organizing your IoT infrastructure, automating workflows, and delivering reports to your customers. This section covers the key capabilities available on the HARDWARIO ThingsBoard platform.
+When your devices, dashboards, sharing and users are in place (see the [step-by-step guides](/apps/thingsboard/index#step-by-step)), these tools help you organize larger projects, automate workflows and deliver reports to your customers.
+
+:::tip We'll do it for you
+Some of these features need technical setup. If you'd rather not do it yourself, write to us at [ask@hardwario.com](mailto:ask@hardwario.com).
+:::
 
 ---
 
 ## [Assets](/apps/thingsboard/assets)
 
-Assets are logical containers that represent real-world objects (buildings, floors, zones, or equipment) in your ThingsBoard environment. Unlike devices (which represent physical hardware), assets let you build a structured hierarchy that makes access control, dashboard abstraction, and scaling significantly easier.
+Assets are logical containers that represent real-world objects (buildings, floors, zones or equipment) in HARDWARIO Dashboards. Unlike devices (which represent physical hardware), assets let you build a structured hierarchy that makes access control, dashboard abstraction, and scaling significantly easier.
 
 **Use assets when you need to:**
 - Create multi-level hierarchies (e.g. Region → City → Building → Floor)
 - Group multiple sensors under a single logical entity
 - Share access to a set of devices with a customer through a single asset
 
----
-
-## [Notification Rules](/apps/thingsboard/notifications-manager)
-
-The Notification Rules Manager is a no-code dashboard for setting up threshold-based alerts. Define conditions for your telemetry data and get notified by email or SMS whenever those thresholds are crossed, with no programming required.
-
-**Use notification rules when you need to:**
-- Get alerted when a sensor value exceeds a defined limit
-- Monitor multiple devices from a single rule
-- Control alert frequency with duration and cooldown settings
+{/* Hidden for now (2026-11-18): email notifications and scheduled reports
 
 ---
 
-## [Email Notifications](/apps/thingsboard/email-notification)
+## [Email notifications](/apps/thingsboard/email-notification)
 
-For more advanced notification scenarios, ThingsBoard's Rule Engine lets you build fully custom email notification chains using JavaScript. This approach gives you complete control over device filtering, data formatting, and rate limiting.
+For notification scenarios beyond the [Notification rules](/apps/thingsboard/notifications-manager), the Rule Engine lets you build fully custom email notification chains using JavaScript. This approach gives you complete control over device filtering, data formatting, and rate limiting.
 
 **Use this approach when you need to:**
 - Filter notifications by device label or custom attributes
@@ -45,7 +40,7 @@ For more advanced notification scenarios, ThingsBoard's Rule Engine lets you bui
 
 ---
 
-## [Scheduled Reports](/apps/thingsboard/email-reports)
+## [Scheduled reports](/apps/thingsboard/email-reports)
 
 Automatically generate and send periodic PDF reports to your customers on a defined schedule. Reports are built in a visual layout designer and delivered via a configurable email template, completely hands-free once set up.
 
@@ -54,22 +49,13 @@ Automatically generate and send periodic PDF reports to your customers on a defi
 - Include charts and tables from multiple devices in a single PDF document
 - Automate recurring reporting without manual work
 
----
-
-## [Embedding Dashboards](/apps/thingsboard/embedding-dashboards)
-
-Embed public ThingsBoard dashboards directly into external web applications using a simple `iframe`. The approach is optimized for React-based documentation frameworks like Docusaurus (MDX), so your live charts render right inside your own pages.
-
-**Use dashboard embedding when you need to:**
-- Display live telemetry and charts inside an external website or documentation page
-- Share a read-only dashboard without requiring viewers to log in
-- Integrate ThingsBoard visuals into a Docusaurus (MDX) project with the correct JSX syntax
+*/}
 
 ---
 
 ## [Rule Engine](/apps/thingsboard/rule-engine)
 
-The Rule Engine is ThingsBoard's core automation system. It processes every incoming message from your devices using a visual node-based editor, giving you full control over data transformation, alarm management, and third-party integrations.
+The Rule Engine is the core automation system of HARDWARIO Dashboards. It processes every incoming message from your devices using a visual node-based editor, giving you full control over data transformation, alarm management, and third-party integrations.
 
 **Use the Rule Engine when you need to:**
 - Transform or calculate values from incoming telemetry (e.g. unit conversions, multi-phase sums)
@@ -79,4 +65,14 @@ The Rule Engine is ThingsBoard's core automation system. It processes every inco
 
 :::caution
 When editing the Root Rule Chain, always preserve the **Save Timeseries** and **Save Client Attributes** nodes. Removing them will stop all data from being saved to the database. See the [Rule Engine](/apps/thingsboard/rule-engine) guide for safe editing practices.
+:::
+
+---
+
+## [Integrations](/apps/thingsboard/integrations)
+
+Connect HARDWARIO Dashboards to other systems, for example a [ChirpStack](/apps/thingsboard/chirpstack-integration) LoRaWAN network server.
+
+:::info ThingsBoard documentation
+HARDWARIO Dashboards is built on ThingsBoard. More details in the official ThingsBoard documentation: [ThingsBoard PE documentation](https://thingsboard.io/docs/pe/).
 :::

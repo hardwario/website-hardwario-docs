@@ -1,27 +1,48 @@
 ---
 slug: index
-title: ThingsBoard
-description: "ThingsBoard is an open-source IoT platform that helps businesses connect devices, collect data, and turn it into clear, useful insights."
+title: HARDWARIO Dashboards
+description: "HARDWARIO Dashboards turns data from your HARDWARIO devices into live dashboards, charts, shared links and alerts. Start here: what it does, how to sign in and the step-by-step path."
+title_meta: "HARDWARIO Dashboards (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';
 
-# ThingsBoard
+# HARDWARIO Dashboards
 
-[**ThingsBoard**](https://app.hardwario.cloud/) is an open-source IoT platform that helps businesses connect devices, collect data, and turn it into clear, useful insights. With ready-to-use dashboards, alerts, and automation tools, it makes it easy to monitor operations, improve efficiency, and scale IoT projects without deep technical expertise.
+**HARDWARIO Dashboards** shows the data from your HARDWARIO devices in live dashboards. You see current values and history in charts, share dashboards with your customers, put them on your website and get alerts when a value crosses a limit.
 
-:::info
-**System Access:** You can log in to the HARDWARIO ThingsBoard platform at **https://app.hardwario.cloud/**.
+HARDWARIO Dashboards is built on the open-source IoT platform [ThingsBoard](https://thingsboard.io/), so you may come across that name in the interface and in the platform's own documentation.
 
-If you are interested in gaining access to the system to view data visualizations and graphs from your HARDWARIO devices, please contact **ask@hardwario.com**.
-:::
+:::info Sign in
+HARDWARIO Dashboards runs at **[app.hardwario.cloud](https://app.hardwario.cloud/)**.
 
-:::tip Devices from HARDWARIO Cloud
-With the [automatic connection](/apps/thingsboard/cloud-connection#automatic-connection) from HARDWARIO Cloud, your devices appear in your ThingsBoard account by themselves. You only add one connector with your device group ID.
+Don't have an account yet? Write to us at **[ask@hardwario.com](mailto:ask@hardwario.com)**. We'll set it up and help you connect your devices.
 :::
 
 ---
 
-## Example of an IoT Data Dashboard
+## How it works
+
+```mermaid
+flowchart LR
+  Device([HARDWARIO device]) -->|data| Cloud[(HARDWARIO Cloud)]
+  Cloud -->|connector| HD[(HARDWARIO Dashboards)]
+  HD --> Dash[Dashboards & charts]
+  HD --> Share[Public link & website]
+  HD --> Alert[Notifications]
+  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  class Cloud hero;
+  class HD hero;
+```
+
+1. Your devices send data to **HARDWARIO Cloud**.
+2. A **connector** in HARDWARIO Cloud forwards the data to HARDWARIO Dashboards. With the [automatic connection](/apps/thingsboard/cloud-connection#automatic-connection), each device appears in your account by itself.
+3. In HARDWARIO Dashboards, you **show** the data in dashboards, **share** them and **watch** them with notifications.
+
+---
+
+## Example dashboard
+
+This is a live public dashboard, embedded right in this page:
 
 import ThingsBoardDashboard from '@site/src/components/ThingsBoardDashboard';
 
@@ -29,72 +50,57 @@ import ThingsBoardDashboard from '@site/src/components/ThingsBoardDashboard';
 
 ---
 
-## Getting Started
+## Step by step
 
-Follow these steps to set up ThingsBoard and start monitoring your devices from scratch.
+The guides follow the order in which you set things up, from connecting the first device to an alert in your inbox. Each guide has a matching episode in our video series.
 
----
+### Getting started
 
-### 1. Create a Device in ThingsBoard
+| # | Guide | What you will do |
+|---|---|---|
+| 01 | **Overview** (this page) | See what HARDWARIO Dashboards can do and how to sign in. |
+| 02 | [Connect devices](/apps/thingsboard/cloud-connection) | Add one connector, and your devices appear by themselves. **Recommended.** |
+| 03 | [Manual connection](/apps/thingsboard/manual-connection) | Connect a device that already exists, using its access token. |
+| 04 | [Managing devices](/apps/thingsboard/devices) | Give devices readable labels, sort them into groups and check their data. |
 
-Start by logging into [ThingsBoard](https://app.hardwario.cloud/) and creating a new device.
-This device will act as the endpoint that receives and stores data sent from HARDWARIO Cloud.
+### Dashboards
 
-👉 [Adding a New Device](/apps/thingsboard/creating-device)
+| # | Guide | What you will do |
+|---|---|---|
+| 05 | [Your first dashboard](/apps/thingsboard/creating-dashboard) | Create a dashboard and add a card with a live value. |
+| 06 | [Charts & styling](/apps/thingsboard/charts) | Add a chart with more values, a second axis, a limit line and a legend. |
+| 07 | [Time window](/apps/thingsboard/time-window) | Choose which period the dashboard shows and save it as the default. |
 
----
+### Sharing
 
-### 2. Connect to HARDWARIO Cloud
+| # | Guide | What you will do |
+|---|---|---|
+| 08 | [Public link](/apps/thingsboard/public-link) | Share a read-only dashboard with anyone, no login needed. |
+| 09 | [Embedding dashboards](/apps/thingsboard/embedding-dashboards) | Put a dashboard or a single chart on your website. |
 
-Go to [HARDWARIO Cloud](https://hardwario.cloud/) and set up a Connector that points to your ThingsBoard device.
-This connector will securely transmit your device data from HARDWARIO Cloud to ThingsBoard.
+### Users & access
 
-👉 [Connecting to ThingsBoard](/apps/thingsboard/cloud-connection)
+| # | Guide | What you will do |
+|---|---|---|
+| 10 | [Groups, roles & permissions](/apps/thingsboard/users-managing) | Decide exactly which users see which devices and dashboards. |
+| 11 | [Adding users](/apps/thingsboard/users) | Create an account and invite a user. |
 
----
+### Notifications
 
-### 3. Create a Dashboard
-
-Once the connection is established and data is flowing, create a dashboard in ThingsBoard.
-Add widgets such as cards, charts, and gauges to visualize your data in real time.
-
-👉 [Creating a Dashboard](/apps/thingsboard/creating-dashboard)
-
----
-
-### 4. Set Up User Roles and Groups
-
-ThingsBoard lets you precisely control what each user can see and do.
-Define roles with specific permissions and organize users into groups tied to their devices and dashboards.
-
-👉 [User Management](/apps/thingsboard/users-managing)
-
----
-
-### 5. Add Users
-
-Create user accounts, assign them to groups, and send activation links so your customers can log in and access their dashboards.
-
-👉 [Adding Users](/apps/thingsboard/users)
+| # | Guide | What you will do |
+|---|---|---|
+| 12 | [Notification rules](/apps/thingsboard/notifications-manager) | Get an e-mail or SMS when a value crosses a limit. No code needed. |
 
 ---
 
-### 6. Share a Dashboard via Public Link
+## Advanced
 
-Generate a read-only public URL for any dashboard and share it with clients or stakeholders, with no login required.
+When the basics are in place, see [Advanced](/apps/thingsboard/features) for [assets](/apps/thingsboard/assets) (building → floor → room), the [Rule Engine](/apps/thingsboard/rule-engine) and [integrations](/apps/thingsboard/integrations) such as ChirpStack.
 
-👉 [Public Link](/apps/thingsboard/public-link)
+:::tip We'll do it for you
+If you get stuck, or would rather not set it up yourself, write to us at **[ask@hardwario.com](mailto:ask@hardwario.com)**. We'll set everything up for you.
+:::
 
----
-
-## Features
-
-ThingsBoard offers a range of advanced features for organizing your data, automating workflows, and delivering reports. See the [Features](/apps/thingsboard/features) section for a full overview.
-
-| Feature | Description |
-|---------|-------------|
-| [Assets](/apps/thingsboard/assets) | Organize devices into logical hierarchies (buildings, floors, zones) to simplify access control and dashboard abstraction. |
-| [Notification Rules](/apps/thingsboard/notifications-manager) | Set up threshold-based email and SMS alerts without writing code, directly from a dashboard widget. |
-| [Email Notifications](/apps/thingsboard/email-notification) | Build custom Rule Chains to send conditional email alerts with formatted data and configurable rate limiting. |
-| [Scheduled Reports](/apps/thingsboard/email-reports) | Automatically generate and deliver periodic PDF reports to customers on a defined schedule. |
-| [Rule Engine](/apps/thingsboard/rule-engine) | Visual programming for data transformation, alarm management, third-party integrations, and device automation. |
+:::info ThingsBoard documentation
+HARDWARIO Dashboards is built on ThingsBoard. More details in the official ThingsBoard documentation: [ThingsBoard PE documentation](https://thingsboard.io/docs/pe/).
+:::

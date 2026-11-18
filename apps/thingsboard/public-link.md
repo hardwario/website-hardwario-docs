@@ -1,23 +1,41 @@
 ---
 slug: public-link
-title: Public Link
-description: "Share a ThingsBoard dashboard through a read-only public link by making its device group and dashboard group public, sub-customers included."
+title: Public link
+description: "Share a HARDWARIO Dashboards dashboard through a read-only public link by making its device group and dashboard group public, stop sharing, and handle sub-customers."
+title_meta: "Public link (HARDWARIO Dashboards)"
 ---
 
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# How to Create a Read-Only Public Link
+# Public link
 
-This tutorial explains how to share a ThingsBoard dashboard via a public URL. This allows external users to view the dashboard and its telemetry data without needing a ThingsBoard account. By default, this public access is strictly **read-only**, ensuring your data remains secure.
+A public link lets anyone open a dashboard in their browser **without an account**, for example your customers, a presentation or a TV screen in your office. The link is **read-only**: nobody can change anything.
+
+:::info One rule
+For a public dashboard to show data, **both the dashboard and the devices behind it must be public**. You make public a whole **group**: a dashboard group and a device group.
+:::
+
+```mermaid
+flowchart LR
+  DG[Public device group] --> D[Public dashboard group]
+  D --> L([Public link])
+  L --> V[Anyone with the link<br/>read-only]
+  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  class L hero;
+```
+
+:::caution
+Anyone who has the link sees the data. Don't share a link to a dashboard with sensitive data.
+:::
 
 ---
 
 :::info
-#### ⚠️ Important Note: Working with Sub-customers
+#### ⚠️ Important note: Working with sub-customers
 
-If you are configuring this public link for a specific sub-customer, you might not see their specific Device or Dashboard groups while logged in as a Tenant Administrator. 
+If you are configuring this public link for a specific sub-customer, you might not see their Device or Dashboard groups while logged in as a Tenant Administrator. 
 
 To resolve this, you must log in as a **Customer Administrator** for that specific customer:
 1. **Navigate** to **Customers** in the left menu.
@@ -28,53 +46,53 @@ To resolve this, you must log in as a **Customer Administrator** for that specif
 :::
 ---
 
-## Step 1: Make the Device Group Public
+## Step 1: Make the device group public
 
 For the dashboard to display data properly, the public user needs read access to the devices feeding the dashboard. 
 
 **(Optional) How to create a new Device Group:**
 If you do not have a specific group yet, you can create one:
 1. **Navigate** to **Devices -> Groups** in the left-hand menu.
-2. **Click** the **"+"** (plus) icon in the top right corner.
+2. **Click** **Add entity group** in the top-right corner.
 3. **Enter** a name for your new group and click **Add**.
 
 **Make the Device Group public:**
 1. **Navigate** to **Devices -> Groups** in the left-hand menu.
 
-![Devices list with the Groups tab highlighted in the top bar](images/public-link-3.png)
+![Devices list with the Groups tab highlighted in the top bar](images/public-link-3.jpg)
 
 2. **Locate** the Device Group containing the devices you want to display on the dashboard.
    > **Tip:** You can use a custom group, or you can use the default **"All"** group. If you make the "All" group public, any new devices added to this customer in the future will automatically become visible to the public link without requiring further configuration.
-3. **Click** the **Share icon** (the icon with three connected dots) on the right side of the group's row. **Alternatively**, click the arrow/edit icon on the row and select **"Make entity group public"**.
-4. **Result:** ThingsBoard will automatically assign read-only permissions for this device group to the system's public user.
+3. **Click** the **Share icon** (the icon with three connected dots) on the right side of the group's row. **Alternatively**, open the group, click the **pencil icon** next to its name and click **Make entity group public**.
+4. **Result:** The group is now public and read-only. Its **Public** checkbox is ticked.
 
-![Device groups list with the share icon of the All group circled and its Make public tooltip shown](images/public-link-4.png)
+![Device groups list with the share icon of the All group circled and its Make public tooltip shown](images/public-link-4.jpg)
 
 ---
 
-## Step 2: Make the Dashboard Group Public
+## Step 2: Make the dashboard group public
 
 Next, you need to share the dashboard itself.
 
 **(Optional) How to create a new Dashboard Group:**
 If you do not have a specific group for your dashboards yet:
 1. **Navigate** to **Dashboards -> Groups** in the left-hand menu.
-2. **Click** the **"+"** (plus) icon in the top right corner.
+2. **Click** **Add entity group** in the top-right corner.
 3. **Enter** a name for your new group and click **Add**.
 
 **Make the Dashboard Group public:**
 1. **Navigate** to **Dashboards -> Groups** in the left-hand menu.
 
-![Dashboards list with the Groups tab highlighted in the top bar](images/public-link-1.png)
+![Dashboards list with the Groups tab highlighted in the top bar](images/public-link-1.jpg)
 
 2. **Locate** the Dashboard Group that contains the dashboard you want to share.
-3. **Click** the **Share icon** (the icon with three connected dots) on the right side of the group's row. **Alternatively**, click the arrow/edit icon on the row and select **"Make entity group public"**.
+3. **Click** the **Share icon** (the icon with three connected dots) on the right side of the group's row. **Alternatively**, open the group, click the **pencil icon** next to its name and click **Make entity group public**.
 
-![Dashboard groups list with the share icon of the All group circled and its Make public tooltip shown](images/public-link-2.png)
+![Dashboard groups list with the share icon of the All group circled and its Make public tooltip shown](images/public-link-2.jpg)
 
 ---
 
-## Step 3: Obtain the Public Link
+## Step 3: Obtain the public link
 
 Now that both the devices and the dashboard are public, you can generate and share the working URL.
 
@@ -86,10 +104,22 @@ Now that both the devices and the dashboard are public, you can generate and sha
 
 You can now send this link to your clients or users. Anyone with this link can view the dashboard and its real-time data directly in their browser without needing to log in.
 
-![Dashboard group content with the chain-link icon circled; its Public dashboard link tooltip copies the URL](images/public-link-5.png)
+![Dashboard group content with the chain-link icon circled; its Public dashboard link tooltip copies the URL](images/public-link-5.jpg)
 
 
-## 💡 Pro Tip: How to Get the Link Without Logging in as a Sub-customer
+## Stop sharing {#stop-sharing}
+
+To stop sharing, make the groups private again: on the **Groups** tab, click the **Make private** icon (the curved arrow) in the row of the dashboard group, and do the same for the device group. The public link stops working.
+
+![Dashboard groups list with the Make private tooltip on the public Warehouse dashboards group](images/public-link-make-private.jpg)
+
+:::tip
+A group can contain more dashboards or devices than the one you want to share. Make public only a group that contains nothing else you would not show. If needed, create a separate group just for sharing, for example *Public*.
+:::
+
+---
+
+## 💡 Pro tip: How to get the link without logging in as a sub-customer
 
 If you are operating at the parent customer level (Tenant Administrator) and want to grab the public link without the hassle of logging in as the sub-customer's administrator, you can use this shortcut:
 
@@ -98,8 +128,19 @@ If you are operating at the parent customer level (Tenant Administrator) and wan
 3. **Find** the **Groups** column in the row of that dashboard.
 4. **Click** directly on the name of the group in that column.
 
-![Main Dashboards list with an arrow pointing to the Public group name in the sub-customer dashboard's Groups column](images/public-link-6.png)
+![Main Dashboards list with an arrow pointing to the Public group name in the sub-customer dashboard's Groups column](images/public-link-6.jpg)
 
 5. **Result:** This will redirect you straight to the group's content page. From here, you can easily click the **Chain link icon (🔗)** to copy the public link, just as described in [**Step 3**](#step-3-obtain-the-public-link) above. 
 
-![Dashboard group content with the chain-link icon circled; its Public dashboard link tooltip copies the URL](images/public-link-5.png)
+![Dashboard group content with the chain-link icon circled; its Public dashboard link tooltip copies the URL](images/public-link-5.jpg)
+
+---
+
+## Next steps
+
+- [Embedding dashboards](/apps/thingsboard/embedding-dashboards): put the public dashboard on your website.
+- [Time window](/apps/thingsboard/time-window#save-the-default-time-window): set which period visitors see first.
+
+:::info ThingsBoard documentation
+HARDWARIO Dashboards is built on ThingsBoard. More details in the official ThingsBoard documentation: [Make dashboard public](https://thingsboard.io/docs/pe/user-guide/dashboards/#make-dashboard-public) · [Public entity groups](https://thingsboard.io/docs/pe/user-guide/groups/#make-group-public-or-private).
+:::

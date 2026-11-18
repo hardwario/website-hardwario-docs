@@ -18,7 +18,7 @@ Zde najdete podrobné návody a videonávody, které vám pomohou nastavit zař�
 
 | Téma                                       | Podrobný návod                          | Videonávod                              |
 |--------------------------------------------|-----------------------------------------|-----------------------------------------|
-| **Jak vytvořit nové zařízení**     | [Návod](/apps/thingsboard/creating-device) | [Video](/apps/videos-apps/thingsboard-new-device) |
+| **Jak vytvořit nové zařízení**     | [Návod](/apps/thingsboard/devices) | [Video](/apps/videos-apps/thingsboard-new-device) |
 | **Jak se připojit k HARDWARIO Cloud**           | [Návod](/apps/thingsboard/cloud-connection) | [Video](/apps/videos-apps/thingsboard-cloud-connection) |
 | **Jak vytvořit základní dashboard**     | [Návod](/apps/thingsboard/creating-dashboard) | [Video](/apps/videos-apps/thingsboard-dashboard) |
 

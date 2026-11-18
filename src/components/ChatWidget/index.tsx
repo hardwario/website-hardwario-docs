@@ -167,9 +167,12 @@ const UI = {
       'The documentation assistant ran into an error and is unavailable. Please use the ' +
       'search at the top of the page, or write to ask@hardwario.com.',
     sites: { docs: 'Documentation', www: 'hardwario.com', store: 'Store' },
-    // Under the input: where a question goes, and the privacy policy in the
-    // reader's language.
-    privacy: 'Your questions are sent to an external AI service to generate the answer. Privacy:',
+    // Under the input: where a question goes, that it is kept, and the privacy
+    // policy in the reader's language. Every question and answer is stored for
+    // the team (docs-chatbot, question_sent), so the line has to say so.
+    privacy:
+      'Your questions are sent to an external AI service to generate the answer, and we store ' +
+      'questions and answers to improve the documentation. Do not include personal data. Privacy:',
     privacyUrl: 'https://www.hardwario.com/legal/privacy/',
   },
   cs: {
@@ -215,6 +218,7 @@ const UI = {
     sites: { docs: 'Dokumentace', www: 'hardwario.com', store: 'E-shop' },
     privacy:
       'Vaše dotazy se odesílají externí službě umělé inteligence, která generuje odpověď. ' +
+      'Dotazy a odpovědi ukládáme, abychom mohli zlepšovat dokumentaci. Neuvádějte osobní údaje. ' +
       'Ochrana osobních údajů:',
     privacyUrl: 'https://www.hardwario.com/cs/legal/privacy/',
   },

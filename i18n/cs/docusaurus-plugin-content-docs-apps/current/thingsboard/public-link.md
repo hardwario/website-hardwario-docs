@@ -19,9 +19,9 @@ Aby veřejný dashboard ukazoval data, musí být veřejný **dashboard i zaří
 
 ```mermaid
 flowchart LR
-  DG[Veřejná skupina zařízení] --> D[Veřejná skupina dashboardů]
-  D --> L([Veřejný odkaz])
-  L --> V[Kdokoli s odkazem<br/>jen pro čtení]
+  DG[Public device group] --> D[Public dashboard group]
+  D --> L([Public link])
+  L --> V[Anyone with the link<br/>read-only]
   classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
   class L hero;
 ```

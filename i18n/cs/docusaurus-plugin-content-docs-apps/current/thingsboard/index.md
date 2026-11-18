@@ -1,7 +1,7 @@
 ---
 slug: index
 title: HARDWARIO Dashboards
-description: "HARDWARIO Dashboards promění data z vašich zařízení HARDWARIO v živé dashboardy, grafy, sdílené odkazy a upozornění. Začněte tady: co umí, jak se přihlásit a návody krok za krokem."
+description: "HARDWARIO Dashboards promění data ze zařízení HARDWARIO v živé dashboardy, grafy, sdílené odkazy a upozornění. Co umí, přihlášení a návody krok za krokem."
 title_meta: "HARDWARIO Dashboards (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';
@@ -24,11 +24,11 @@ Ještě nemáte účet? Napište nám na **[ask@hardwario.com](mailto:ask@hardwa
 
 ```mermaid
 flowchart LR
-  Device([Zařízení HARDWARIO]) -->|data| Cloud[(HARDWARIO Cloud)]
-  Cloud -->|konektor| HD[(HARDWARIO Dashboards)]
-  HD --> Dash[Dashboardy a grafy]
-  HD --> Share[Veřejný odkaz a web]
-  HD --> Alert[Notifikace]
+  Device([HARDWARIO device]) -->|data| Cloud[(HARDWARIO Cloud)]
+  Cloud -->|connector| HD[(HARDWARIO Dashboards)]
+  HD --> Dash[Dashboards & charts]
+  HD --> Share[Public link & website]
+  HD --> Alert[Notifications]
   classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
   class Cloud hero;
   class HD hero;

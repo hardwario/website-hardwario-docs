@@ -1,7 +1,7 @@
 ---
 slug: users-managing
 title: Skupiny, role a oprávnění
-description: "Přesně určete, kteří uživatelé uvidí která zařízení a dashboardy v HARDWARIO Dashboards: uživatelské skupiny, role typu Group a Generic a sdílené skupiny zařízení a dashboardů."
+description: "Kdo uvidí která zařízení a dashboardy v HARDWARIO Dashboards: uživatelské skupiny, role typu Group a Generic a sdílené skupiny zařízení a dashboardů."
 title_meta: "Skupiny, role a oprávnění (HARDWARIO Dashboards)"
 ---
 
@@ -25,9 +25,9 @@ Propojíte je jedním pravidlem: **tato skupina uživatelů** má **tuto roli** 
 
 ```mermaid
 flowchart LR
-  U[Skupina uživatelů<br/>Warehouse team] -->|role: Read only| D[Skupina zařízení<br/>Warehouse]
-  U -->|role: Read only| DB[Skupina dashboardů<br/>Warehouse dashboards]
-  U -->|role: Edit profile| P[Vlastní účet]
+  U[User group<br/>Warehouse team] -->|role: Read only| D[Device group<br/>Warehouse]
+  U -->|role: Read only| DB[Dashboard group<br/>Warehouse dashboards]
+  U -->|role: Edit profile| P[Own account]
   classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
   class U hero;
 ```

@@ -1,7 +1,7 @@
 ---
 slug: time-window
 title: Časové okno
-description: "Zvolte, jaké období grafy v HARDWARIO Dashboards ukazují: realtime nebo historie, agregace, výchozí časové okno uložené s dashboardem a samostatné časové okno pro jeden widget."
+description: "Jaké období grafy v HARDWARIO Dashboards ukazují: realtime nebo historie, agregace, výchozí časové okno dashboardu a vlastní časové okno pro jeden widget."
 title_meta: "Časové okno (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';

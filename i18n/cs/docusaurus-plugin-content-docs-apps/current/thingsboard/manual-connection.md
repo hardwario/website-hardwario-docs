@@ -1,7 +1,7 @@
 ---
 slug: manual-connection
 title: Ruční připojení
-description: "Připojení zařízení, které už v HARDWARIO Dashboards existuje: vytvoříte ho, zkopírujete access token a data pošlete konektorem z HARDWARIO Cloud s transformační funkcí."
+description: "Připojení zařízení, které už v HARDWARIO Dashboards existuje: zkopírujete access token a data pošlete konektorem z HARDWARIO Cloud s transformační funkcí."
 title_meta: "Ruční připojení (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';
@@ -17,8 +17,8 @@ Při ručním připojení má každé zařízení v HARDWARIO Dashboards svůj *
 
 ```mermaid
 flowchart LR
-  Device([Zařízení]) -->|uplink| Cloud[(HARDWARIO Cloud)]
-  Cloud -->|konektor + access token| HD[(HARDWARIO Dashboards)]
+  Device([Device]) -->|uplink| Cloud[(HARDWARIO Cloud)]
+  Cloud -->|connector + access token| HD[(HARDWARIO Dashboards)]
   classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
   class Cloud hero;
   class HD hero;

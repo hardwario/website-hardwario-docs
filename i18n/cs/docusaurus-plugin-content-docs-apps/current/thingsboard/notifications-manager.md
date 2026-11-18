@@ -102,7 +102,7 @@ Kliknutím na klíč ho přidáte jako štítek. Už přidané klíče jsou ozna
 Napište název klíče přímo do pole a stiskněte **Enter** nebo klikněte na **+ Add**. To se hodí u zařízení, která ještě žádnou telemetrii neposlala.
 
 :::caution Důležité
-Název proměnné musí přesně odpovídat telemetrickému klíči, jak ho zařízení posílá (rozlišují se velká a malá písmena). Dostupné klíče najdete v HARDWARIO Dashboards v detailu zařízení na záložce *Latest Telemetry*.
+Název proměnné musí přesně odpovídat telemetrickému klíči, jak ho zařízení posílá (rozlišují se velká a malá písmena). Dostupné klíče najdete v HARDWARIO Dashboards v detailu zařízení na záložce *Latest telemetry* (viz [Správa zařízení](/apps/thingsboard/devices#check-the-device-data)).
 :::
 
 ### Krok 3: Nastavte podmínku {#step-3-set-the-condition}

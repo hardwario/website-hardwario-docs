@@ -1,7 +1,7 @@
 ---
 slug: cloud-connection
 title: Připojení zařízení
-description: "Automatické připojení zařízení z HARDWARIO Cloud do HARDWARIO Dashboards: přidáte jeden konektor s tagem a ID skupiny zařízení a každé otagované zařízení se objeví samo."
+description: "Automatické připojení zařízení z HARDWARIO Cloud do HARDWARIO Dashboards: jeden konektor s tagem a ID skupiny a každé otagované zařízení se objeví samo."
 title_meta: "Připojení zařízení z HARDWARIO Cloud (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';

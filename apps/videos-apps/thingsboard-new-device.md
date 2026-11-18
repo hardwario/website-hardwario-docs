@@ -32,4 +32,4 @@ In this guide, you will learn how to create a new device in ThingsBoard and mana
 </div>
 
 
-👉 **Step-by-Step Text Guide: https://docs.hardwario.com/apps/thingsboard/creating-device**
+👉 **Step-by-Step Text Guide: https://docs.hardwario.com/apps/thingsboard/devices**

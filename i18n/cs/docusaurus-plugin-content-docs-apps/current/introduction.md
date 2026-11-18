@@ -2,7 +2,7 @@
 slug: /
 title: Aplikace
 title_meta: "Aplikace a integrace"
-description: "Aplikace HARDWARIO: HARDWARIO Manager pro nastavení zařízení STICKER a CHESTER v terénu a návody na integraci s ThingsBoard, ChirpStack a The Things Stack."
+description: "Aplikace HARDWARIO: HARDWARIO Manager pro nastavení zařízení STICKER a CHESTER v terénu a návody na integraci s HARDWARIO Dashboards, ChirpStack a The Things Stack."
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
@@ -23,6 +23,6 @@ Tyto aplikace vizualizují a zpracovávají data ze zařízení HARDWARIO. Tabul
 
 | Platforma | Web | Obtížnost | Popis |
 |----------|-----|------------|-------------|
-| **[ThingsBoard](/apps/thingsboard/index)** | [Web](https://thingsboard.hardwario.com/) | Střední | Open-source IoT platforma pro správu zařízení, vlastní dashboardy a automatizaci. |
+| **[HARDWARIO Dashboards](/apps/thingsboard/index)** | [Web](https://app.hardwario.cloud/) | Střední | Živé dashboardy, grafy, sdílené odkazy a upozornění pro data z vašich zařízení (postaveno na ThingsBoard). |
 | **[The Things Stack](/apps/the-things-stack/index)** | [Web](https://www.thethingsindustries.com/docs/) | Střední | Profesionální server LoRaWAN® pro bezpečné a spolehlivé připojení a správu IoT zařízení. |
 | **[ChirpStack](/apps/chirpstack/index)** | [Web](https://www.chirpstack.io/) | Pokročilá | Open-source server LoRaWAN pro vytvoření a správu privátních sítí IoT. |

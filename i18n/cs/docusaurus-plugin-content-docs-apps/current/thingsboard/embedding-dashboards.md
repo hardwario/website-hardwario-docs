@@ -1,19 +1,20 @@
 ---
 slug: embedding-dashboards
 title: Vkládání dashboardů
-description: "Vložení veřejného dashboardu ThingsBoard nebo jednoho widgetu do webové stránky či do Docusaurus (MDX) prvkem iframe, s doporučenou výškou a syntaxí JSX."
+description: "Vložení veřejného dashboardu HARDWARIO Dashboards nebo jednoho grafu na váš web prvkem iframe: čisté HTML, WordPress a Docusaurus (MDX)."
+title_meta: "Vložení dashboardu do webu (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';
 
 # Vkládání dashboardů {#embedding-dashboards}
 
-Tento návod vás provede vložením dashboardů ThingsBoard do externích webových aplikací. Postup je optimalizovaný pro dokumentační frameworky založené na Reactu, jako je Docusaurus (MDX), ale stejné řešení s prvkem `iframe` funguje na jakékoli stránce HTML.
+Živý dashboard, nebo jen jeden graf, můžete vložit přímo do svého webu. Stačí krátký kód, prvek `iframe`, s [veřejným odkazem](/apps/thingsboard/public-link) dashboardu. Funguje to na jakémkoli webu: čisté HTML, WordPress, Docusaurus a další.
 
 ---
 
 ## Předpoklad: veřejný přístup {#prerequisites-public-access}
 
-Než začnete cokoli vkládat, musí být dashboard **a jeho zdroje dat** veřejně přístupné. Pokud tento krok vynecháte, návštěvníci uvidí místo grafů přihlašovací obrazovku ThingsBoard.
+Než začnete cokoli vkládat, musí být dashboard **a jeho zdroje dat** veřejně přístupné. Pokud tento krok vynecháte, návštěvníci uvidí místo grafů přihlašovací obrazovku.
 
 Ve zkratce potřebujete:
 1. Zveřejnit **skupinu dashboardů**.
@@ -40,17 +41,23 @@ Podrobné pokyny, jak takový odkaz získat, najdete v návodu [**Veřejný odka
 
 ### Krok 2: Přidejte kód iframe {#step-2-insert-the-embed-code}
 
-Do souboru dokumentace vložte následující `iframe`.
+Do své stránky vložte následující kód, jako `src` použijte svůj veřejný odkaz:
 
-```jsx
+```html
 <iframe
   src="https://app.hardwario.cloud/dashboard/<DASHBOARD_ID>?publicId=<PUBLIC_ID>"
   width="100%"
-  height="800px"
-  frameBorder="0"
-  allowFullScreen
-/>
+  height="800"
+  frameborder="0"
+  allowfullscreen
+></iframe>
 ```
+
+Uložte stránku a otevřete ji: živý dashboard je teď součástí vašeho webu.
+
+**WordPress:** v editoru stránky přidejte blok **Vlastní HTML** (Custom HTML) a vložte do něj stejný kód.
+
+**Docusaurus nebo jiný web s MDX:** použijte zápis kódu v JSX, viz [Docusaurus (MDX)](#formatting-rules-for-docusaurus-mdx) níže.
 
 :::tip
 U celých dashboardů doporučujeme výšku `800px`, aby se obsah uvnitř rámu zbytečně neposouval. Díky `width="100%"` se dashboard správně přizpůsobí šířce obrazovky počítače.
@@ -60,7 +67,7 @@ U celých dashboardů doporučujeme výšku `800px`, aby se obsah uvnitř rámu 
 
 ## Vložení jednoho widgetu {#embedding-a-single-widget}
 
-Někdy chcete zobrazit jen **jeden graf nebo widget**, ne celý dashboard. ThingsBoard zatím pro jednotlivý widget samostatnou veřejnou URL nenabízí, proto doporučujeme:
+Někdy chcete zobrazit jen **jeden graf nebo widget**, ne celý dashboard. Pro jednotlivý widget samostatný veřejný odkaz neexistuje, proto doporučujeme:
 
 > **Vytvořte pro každý widget, který chcete vložit, samostatný dashboard.**
 
@@ -71,25 +78,35 @@ V praxi:
 
 Protože dashboard obsahuje jen jeden widget, můžete použít **menší výšku**, aby se do stránky úhledně vešel:
 
-```jsx
+```html
 <iframe
   src="https://app.hardwario.cloud/dashboard/<DASHBOARD_ID>?publicId=<PUBLIC_ID>"
   width="100%"
-  height="400px"
-  frameBorder="0"
-  allowFullScreen
-/>
+  height="400"
+  frameborder="0"
+  allowfullscreen
+></iframe>
 ```
 
 :::tip
-Hodnotu `height` přizpůsobte widgetu. U jednoho grafu obvykle dobře funguje `300–450px`. Samostatný dashboard pro každý widget je nejčistší způsob, jak vkládat jednotlivé grafy, dokud ThingsBoard nenabídne veřejné odkazy přímo na jednotlivé widgety.
+Hodnotu `height` přizpůsobte widgetu. U jednoho grafu obvykle dobře funguje `300–450px`. Samostatný dashboard pro každý widget je nejčistší způsob, jak vkládat jednotlivé grafy.
 :::
 
 ---
 
 ## Pravidla formátování pro Docusaurus (MDX) {#formatting-rules-for-docusaurus-mdx}
 
-Pokud používáte Docusaurus nebo jiný framework založený na MDX, může prosté HTML rozbít sestavení nebo se vykreslit špatně. Vždy se držte těchto dvou pravidel.
+Pokud používáte Docusaurus nebo jiný framework založený na MDX, může prosté HTML rozbít sestavení nebo se vykreslit špatně. Použijte tento zápis kódu a držte se těchto dvou pravidel:
+
+```jsx
+<iframe
+  src="https://app.hardwario.cloud/dashboard/<DASHBOARD_ID>?publicId=<PUBLIC_ID>"
+  width="100%"
+  height="800px"
+  frameBorder="0"
+  allowFullScreen
+/>
+```
 
 ### 1. Používejte atributy v camelCase {#1-use-camelcase-attributes}
 
@@ -120,4 +137,12 @@ The following text starts here, after an empty line.
 
 :::caution
 Zapomenuté atributy v camelCase nebo chybějící prázdné řádky kolem bloku jsou nejčastější příčinou, proč sestavení v Docusaurus při vkládání dashboardů selže.
+:::
+
+:::tip Výchozí časové okno
+Návštěvníci uvidí **výchozí časové okno** dashboardu. Jak ho změnit, popisuje [Časové okno](/apps/thingsboard/time-window#save-the-default-time-window).
+:::
+
+:::info Dokumentace ThingsBoard
+HARDWARIO Dashboards jsou postavené na platformě ThingsBoard. Podrobnosti najdete v oficiální dokumentaci ThingsBoard (anglicky): [Make dashboard public](https://thingsboard.io/docs/pe/user-guide/dashboards/#make-dashboard-public).
 :::

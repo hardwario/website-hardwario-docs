@@ -396,7 +396,7 @@ const config = {
             position: 'left',
             items: [
               { to: '/apps/hardwario-manager', label: 'HARDWARIO Manager', activeBaseRegex: `/apps/hardwario-manager(/|$)` },
-              { to: '/apps/thingsboard/index', label: 'ThingsBoard', activeBaseRegex: `/apps/thingsboard/` },
+              { to: '/apps/thingsboard/index', label: 'HARDWARIO Dashboards', activeBaseRegex: `/apps/thingsboard/` },
               { to: '/apps/chirpstack/index', label: 'ChirpStack', activeBaseRegex: `/apps/chirpstack/` },
               { to: '/apps/the-things-stack/index', label: 'The Things Stack', activeBaseRegex: `/apps/the-things-stack/` },
               { to: '/apps/videos-apps/videos-apps', label: 'Video Tutorials', activeBaseRegex: `/apps/videos-apps/` },

@@ -1,7 +1,8 @@
 ---
 slug: email-reports
+unlisted: true
 title: Reporty
-description: "Automatické reporty v PDF v ThingsBoard: šablona reportu, šablona e-mailové notifikace a plánovač, který report pravidelně rozesílá příjemcům."
+description: "Automatické reporty v PDF v HARDWARIO Dashboards: šablona reportu, šablona e-mailové notifikace a plánovač, který report pravidelně rozesílá příjemcům."
 ---
 import Image from '@theme/IdealImage';
 
@@ -37,7 +38,7 @@ Aby se report dostal k zákazníkům, připravíme text e-mailu, ke kterému se 
 6. Vyplňte obsah e-mailu:
    * **Subject:** například `Měsíční report monitoringu - %d{MMMM yyyy}`.
    * **Body:** Napište doprovodný text, který zákazník v e-mailu uvidí. Můžete použít prostý text nebo formátování HTML (odrážky, tučný text a další).
-   * *Poznámka:* ThingsBoard k této e-mailové šabloně automaticky přiloží vygenerovaný soubor PDF, když ji plánovač spustí.
+   * *Poznámka:* Platforma k této e-mailové šabloně automaticky přiloží vygenerovaný soubor PDF, když ji plánovač spustí.
 7. Uložte šablonu.
 
 :::info
@@ -65,3 +66,7 @@ Teď předchozí kroky propojíme a určíme, kdy a komu se má report posílat.
 :::
 
 **Hotovo.** Systém teď bude každý měsíc automaticky vytvářet PDF podle vašeho návrhu, přikládat ho k připravenému e-mailu a odesílat určeným příjemcům.
+
+:::info Dokumentace ThingsBoard
+HARDWARIO Dashboards jsou postavené na platformě ThingsBoard. Podrobnosti najdete v oficiální dokumentaci ThingsBoard (anglicky): [Reporting](https://thingsboard.io/docs/pe/user-guide/reporting/getting-started/).
+:::

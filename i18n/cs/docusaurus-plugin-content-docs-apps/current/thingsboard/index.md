@@ -1,27 +1,48 @@
 ---
 slug: index
-title: ThingsBoard
-description: "ThingsBoard je open-source platforma pro IoT, která pomáhá připojovat zařízení, sbírat data a proměnit je v přehledné a užitečné informace."
+title: HARDWARIO Dashboards
+description: "HARDWARIO Dashboards promění data z vašich zařízení HARDWARIO v živé dashboardy, grafy, sdílené odkazy a upozornění. Začněte tady: co umí, jak se přihlásit a návody krok za krokem."
+title_meta: "HARDWARIO Dashboards (ThingsBoard)"
 ---
 import Image from '@theme/IdealImage';
 
-# ThingsBoard {#thingsboard}
+# HARDWARIO Dashboards {#hardwario-dashboards}
 
-[**ThingsBoard**](https://app.hardwario.cloud/) je open-source IoT platforma, která firmám pomáhá připojovat zařízení, sbírat data a přeměňovat je na přehledné a užitečné informace. S připravenými dashboardy, upozorněními a nástroji pro automatizaci snadno sledujete provoz, zvýšíte efektivitu a rozšíříte IoT projekty i bez hlubokých technických znalostí.
+**HARDWARIO Dashboards** zobrazuje data z vašich zařízení HARDWARIO v živých dashboardech. Vidíte aktuální hodnoty i historii v grafech, dashboardy sdílíte se svými zákazníky, vložíte je na svůj web a dostanete upozornění, když hodnota překročí limit.
 
-:::info
-**Přístup do systému:** Do platformy HARDWARIO ThingsBoard se můžete přihlásit na **https://app.hardwario.cloud/**.
+HARDWARIO Dashboards je postavený na open-source IoT platformě [ThingsBoard](https://thingsboard.io/), proto se s tímto názvem můžete setkat v rozhraní i v dokumentaci samotné platformy.
 
-Pokud chcete do systému získat přístup a prohlížet vizualizace a grafy dat ze svých zařízení HARDWARIO, napište prosím na **ask@hardwario.com**.
-:::
+:::info Přihlášení
+HARDWARIO Dashboards běží na adrese **[app.hardwario.cloud](https://app.hardwario.cloud/)**.
 
-:::tip Zařízení z HARDWARIO Cloud
-S [automatickým připojením](/apps/thingsboard/cloud-connection#automatic-connection) z HARDWARIO Cloud se vaše zařízení objeví ve vašem účtu ThingsBoard sama. Stačí přidat jeden konektor s ID své skupiny zařízení.
+Ještě nemáte účet? Napište nám na **[ask@hardwario.com](mailto:ask@hardwario.com)**. Účet vám založíme a pomůžeme s připojením zařízení.
 :::
 
 ---
 
-## Ukázka dashboardu s IoT daty {#example-of-an-iot-data-dashboard}
+## Jak to funguje {#how-it-works}
+
+```mermaid
+flowchart LR
+  Device([Zařízení HARDWARIO]) -->|data| Cloud[(HARDWARIO Cloud)]
+  Cloud -->|konektor| HD[(HARDWARIO Dashboards)]
+  HD --> Dash[Dashboardy a grafy]
+  HD --> Share[Veřejný odkaz a web]
+  HD --> Alert[Notifikace]
+  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  class Cloud hero;
+  class HD hero;
+```
+
+1. Vaše zařízení posílají data do **HARDWARIO Cloud**.
+2. **Konektor** v HARDWARIO Cloud data předává do HARDWARIO Dashboards. S [automatickým připojením](/apps/thingsboard/cloud-connection#automatic-connection) se každé zařízení ve vašem účtu objeví samo.
+3. V HARDWARIO Dashboards data **zobrazíte** v dashboardech, **sdílíte** je a **hlídáte** pomocí notifikací.
+
+---
+
+## Ukázkový dashboard {#example-dashboard}
+
+Toto je živý veřejný dashboard vložený přímo do této stránky:
 
 import ThingsBoardDashboard from '@site/src/components/ThingsBoardDashboard';
 
@@ -29,72 +50,57 @@ import ThingsBoardDashboard from '@site/src/components/ThingsBoardDashboard';
 
 ---
 
-## První kroky {#getting-started}
+## Krok za krokem {#step-by-step}
 
-Podle následujících kroků nastavíte ThingsBoard od začátku a začnete sledovat svá zařízení.
+Návody jdou v pořadí, v jakém vše nastavujete: od připojení prvního zařízení až po upozornění ve vaší e-mailové schránce. Ke každému návodu existuje díl naší video série.
 
----
+### Začínáme {#getting-started}
 
-### 1. Vytvoření zařízení v ThingsBoard {#1-create-a-device-in-thingsboard}
+| # | Návod | Co uděláte |
+|---|---|---|
+| 01 | **Přehled** (tato stránka) | Zjistíte, co HARDWARIO Dashboards umí a jak se přihlásit. |
+| 02 | [Připojení zařízení](/apps/thingsboard/cloud-connection) | Přidáte jeden konektor a zařízení se objeví sama. **Doporučeno.** |
+| 03 | [Ruční připojení](/apps/thingsboard/manual-connection) | Připojíte zařízení, které už existuje, pomocí jeho access tokenu. |
+| 04 | [Správa zařízení](/apps/thingsboard/devices) | Dáte zařízením srozumitelné názvy, roztřídíte je do skupin a zkontrolujete jejich data. |
 
-Přihlaste se do [ThingsBoard](https://app.hardwario.cloud/) a vytvořte nové zařízení.
-Toto zařízení bude fungovat jako koncový bod, který přijímá a ukládá data odesílaná z HARDWARIO Cloud.
+### Dashboardy {#dashboards}
 
-👉 [Přidání nového zařízení](/apps/thingsboard/creating-device)
+| # | Návod | Co uděláte |
+|---|---|---|
+| 05 | [První dashboard](/apps/thingsboard/creating-dashboard) | Vytvoříte dashboard a přidáte kartu s živou hodnotou. |
+| 06 | [Grafy a jejich vzhled](/apps/thingsboard/charts) | Přidáte graf s více hodnotami, druhou osou, limitní čarou a legendou. |
+| 07 | [Časové okno](/apps/thingsboard/time-window) | Zvolíte, jaké období dashboard ukazuje, a uložíte ho jako výchozí. |
 
----
+### Sdílení {#sharing}
 
-### 2. Připojení k HARDWARIO Cloud {#2-connect-to-hardwario-cloud}
+| # | Návod | Co uděláte |
+|---|---|---|
+| 08 | [Veřejný odkaz](/apps/thingsboard/public-link) | Nasdílíte dashboard komukoli jen pro čtení, bez přihlášení. |
+| 09 | [Vložení dashboardu do webu](/apps/thingsboard/embedding-dashboards) | Dáte dashboard nebo jeden graf na svůj web. |
 
-Přejděte do [HARDWARIO Cloud](https://hardwario.cloud/) a nastavte konektor, který bude směřovat na vaše zařízení v ThingsBoard.
-Konektor pak bezpečně přenáší data ze zařízení z HARDWARIO Cloud do ThingsBoard.
+### Uživatelé a přístup {#users--access}
 
-👉 [Připojení k ThingsBoard](/apps/thingsboard/cloud-connection)
+| # | Návod | Co uděláte |
+|---|---|---|
+| 10 | [Skupiny, role a oprávnění](/apps/thingsboard/users-managing) | Přesně určíte, kteří uživatelé vidí která zařízení a dashboardy. |
+| 11 | [Přidání uživatelů](/apps/thingsboard/users) | Založíte účet a pozvete uživatele. |
 
----
+### Notifikace {#notifications}
 
-### 3. Vytvoření dashboardu {#3-create-a-dashboard}
-
-Jakmile spojení funguje a data přicházejí, vytvořte v ThingsBoard dashboard.
-Přidejte do něj widgety, například karty, grafy a ukazatele, a sledujte data v reálném čase.
-
-👉 [Vytvoření dashboardu](/apps/thingsboard/creating-dashboard)
-
----
-
-### 4. Nastavení uživatelských rolí a skupin {#4-set-up-user-roles-and-groups}
-
-V ThingsBoard přesně určíte, co smí který uživatel vidět a dělat.
-Vytvořte role s konkrétními oprávněními a rozdělte uživatele do skupin, ke kterým patří jejich zařízení a dashboardy.
-
-👉 [Správa uživatelů](/apps/thingsboard/users-managing)
-
----
-
-### 5. Přidání uživatelů {#5-add-users}
-
-Vytvořte uživatelské účty, přiřaďte je do skupin a odešlete aktivační odkazy, aby se zákazníci mohli přihlásit ke svým dashboardům.
-
-👉 [Přidání uživatelů](/apps/thingsboard/users)
+| # | Návod | Co uděláte |
+|---|---|---|
+| 12 | [Pravidla notifikací](/apps/thingsboard/notifications-manager) | Dostanete e-mail nebo SMS, když hodnota překročí limit. Bez programování. |
 
 ---
 
-### 6. Sdílení dashboardu přes veřejný odkaz {#6-share-a-dashboard-via-public-link}
+## Pokročilé {#advanced}
 
-Vygenerujte pro jakýkoli dashboard veřejnou URL adresu pouze pro čtení a sdílejte ji se zákazníky nebo partnery; přihlášení není potřeba.
+Až budete mít základy hotové, v sekci [Pokročilé](/apps/thingsboard/features) najdete [assety](/apps/thingsboard/assets) (budova → patro → místnost), [Rule Engine](/apps/thingsboard/rule-engine) a [integrace](/apps/thingsboard/integrations), například ChirpStack.
 
-👉 [Veřejný odkaz](/apps/thingsboard/public-link)
+:::tip Nastavíme to za vás
+Pokud si nevíte rady nebo to nechcete nastavovat sami, napište nám na **[ask@hardwario.com](mailto:ask@hardwario.com)**. Vše nastavíme za vás.
+:::
 
----
-
-## Funkce {#features}
-
-ThingsBoard nabízí řadu pokročilých funkcí pro organizaci dat, automatizaci procesů a doručování reportů. Kompletní přehled najdete v sekci [Funkce](/apps/thingsboard/features).
-
-| Funkce | Popis |
-|---------|-------------|
-| [Assety](/apps/thingsboard/assets) | Uspořádejte zařízení do logických hierarchií (budovy, podlaží, zóny) pro snazší řízení přístupu a abstrakci dashboardů. |
-| [Pravidla notifikací](/apps/thingsboard/notifications-manager) | Nastavte e-mailová a SMS upozornění při překročení limitů, bez programování a přímo z widgetu na dashboardu. |
-| [E-mailové notifikace](/apps/thingsboard/email-notification) | Ve vlastních řetězcích pravidel (Rule Chains) odesílejte podmíněná e-mailová upozornění s formátovanými daty a nastavitelným omezením četnosti. |
-| [Plánované reporty](/apps/thingsboard/email-reports) | Pravidelné reporty v PDF se automaticky vytvoří a odešlou zákazníkům podle nastaveného plánu. |
-| [Rule Engine](/apps/thingsboard/rule-engine) | Vizuální programování pro transformaci dat, správu alarmů, integrace třetích stran a automatizaci zařízení. |
+:::info Dokumentace ThingsBoard
+HARDWARIO Dashboards jsou postavené na platformě ThingsBoard. Podrobnosti najdete v oficiální dokumentaci ThingsBoard (anglicky): [ThingsBoard PE documentation](https://thingsboard.io/docs/pe/).
+:::

@@ -137,7 +137,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ThingsBoard',
+          label: 'HARDWARIO Dashboards',
           key: 'thingsboard',
           link: {
             type: 'doc',
@@ -145,15 +145,53 @@ const sidebars = {
           },
           collapsed: true,
           items: [
-            'thingsboard/users',
-            'thingsboard/cloud-connection',
-            'thingsboard/creating-dashboard',
-            'thingsboard/creating-device',
-            'thingsboard/public-link',
-            'thingsboard/users-managing',
             {
               type: 'category',
-              label: 'Features',
+              label: 'Getting started',
+              key: 'thingsboard-getting-started',
+              collapsed: true,
+              items: [
+                'thingsboard/cloud-connection',
+                'thingsboard/manual-connection',
+                'thingsboard/devices',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Dashboards',
+              key: 'thingsboard-dashboards',
+              collapsed: true,
+              items: [
+                'thingsboard/creating-dashboard',
+                'thingsboard/charts',
+                'thingsboard/time-window',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Sharing',
+              key: 'thingsboard-sharing',
+              collapsed: true,
+              items: [
+                'thingsboard/public-link',
+                'thingsboard/embedding-dashboards',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Users & access',
+              key: 'thingsboard-users',
+              collapsed: true,
+              items: [
+                'thingsboard/users-managing',
+                'thingsboard/users',
+              ],
+            },
+            'thingsboard/notifications-manager',
+            {
+              type: 'category',
+              label: 'Advanced',
+              key: 'thingsboard-advanced',
               link: {
                 type: 'doc',
                 id: 'thingsboard/features',
@@ -161,23 +199,22 @@ const sidebars = {
               collapsed: true,
               items: [
                 'thingsboard/assets',
-                'thingsboard/notifications-manager',
-                'thingsboard/email-notification',
-                'thingsboard/email-reports',
+                // Hidden for now (2026-11-18), pages kept as unlisted:
+                // 'thingsboard/email-notification',
+                // 'thingsboard/email-reports',
                 'thingsboard/rule-engine',
-                'thingsboard/embedding-dashboards',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Integrations',
-              link: {
-                type: 'doc',
-                id: 'thingsboard/integrations',
-              },
-              collapsed: true,
-              items: [
-                'thingsboard/chirpstack-integration',
+                {
+                  type: 'category',
+                  label: 'Integrations',
+                  link: {
+                    type: 'doc',
+                    id: 'thingsboard/integrations',
+                  },
+                  collapsed: true,
+                  items: [
+                    'thingsboard/chirpstack-integration',
+                  ],
+                },
               ],
             },
           ],
@@ -193,7 +230,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ThingsBoard',
+              label: 'HARDWARIO Dashboards',
               key: 'videos-thingsboard',
               collapsed: true,
               items: [

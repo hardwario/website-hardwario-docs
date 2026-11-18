@@ -32,4 +32,4 @@ V tomto návodu se naučíte, jak v platformě ThingsBoard vytvořit nové zař�
 </div>
 
 
-👉 **Textový návod krok za krokem: https://docs.hardwario.com/apps/thingsboard/creating-device**
+👉 **Textový návod krok za krokem: https://docs.hardwario.com/apps/thingsboard/devices**

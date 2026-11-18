@@ -195,15 +195,13 @@ const CloudAndApps = [
     }),
   },
   {
-    title: 'ThingsBoard',
+    title: 'HARDWARIO Dashboards',
     subtitle: translate({ id: 'home.thingsboard.subtitle', message: 'Data Visualization Platform' }),
     link: '/apps/thingsboard/index',
-    src: '/img/thingsboard-icon.svg',
-    srcDark: '/img/thingsboard-icon-dark.svg',
-    icon: true,
+    src: '/img/hardwario-dashboards-icon.svg',
     description: translate({
       id: 'home.thingsboard.description',
-      message: 'Open-source IoT platform for data collection, processing, visualization, and device management.',
+      message: 'Live dashboards, charts, shared links and alerts for the data from your HARDWARIO devices.',
     }),
   },
   {

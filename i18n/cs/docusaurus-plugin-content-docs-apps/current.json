@@ -52,12 +52,28 @@
     "description": "The label for category 'Creating Dashboard' in sidebar 'docs'"
   },
   "sidebar.docs.category.thingsboard": {
-    "message": "ThingsBoard",
-    "description": "The label for category 'ThingsBoard' in sidebar 'docs'"
+    "message": "HARDWARIO Dashboards",
+    "description": "The label for category 'HARDWARIO Dashboards' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Features": {
-    "message": "Funkce",
-    "description": "The label for category 'Features' in sidebar 'docs'"
+  "sidebar.docs.category.thingsboard-getting-started": {
+    "message": "Začínáme",
+    "description": "The label for category 'Getting started' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.thingsboard-dashboards": {
+    "message": "Dashboardy",
+    "description": "The label for category 'Dashboards' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.thingsboard-sharing": {
+    "message": "Sdílení",
+    "description": "The label for category 'Sharing' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.thingsboard-users": {
+    "message": "Uživatelé a přístup",
+    "description": "The label for category 'Users & access' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.thingsboard-advanced": {
+    "message": "Pokročilé",
+    "description": "The label for category 'Advanced' in sidebar 'docs'"
   },
   "sidebar.docs.category.Integrations": {
     "message": "Integrace",
@@ -84,8 +100,8 @@
     "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
   },
   "sidebar.docs.category.videos-thingsboard": {
-    "message": "ThingsBoard",
-    "description": "The label for category 'ThingsBoard' in sidebar 'docs'"
+    "message": "HARDWARIO Dashboards",
+    "description": "The label for category 'HARDWARIO Dashboards' in sidebar 'docs'"
   },
   "sidebar.docs.category.ChirpStack v4": {
     "message": "ChirpStack v4",

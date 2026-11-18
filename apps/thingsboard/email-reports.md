@@ -1,22 +1,23 @@
 ---
 slug: email-reports
+unlisted: true
 title: Reports
-description: "Set up scheduled PDF reports in ThingsBoard: design a report template, write the email notification template and schedule delivery to recipients."
+description: "Set up scheduled PDF reports in HARDWARIO Dashboards: design a report template, write the email notification template and schedule delivery to recipients."
 ---
 import Image from '@theme/IdealImage';
 
-# Setting Up Email Reports
+# Setting up email reports
 
-This guide walks you through the complete setup of automated PDF reports using the **Reporting** module. The process consists of three main steps: creating the report layout, preparing the email message, and configuring the scheduler.
+This guide walks you through the complete setup of automated PDF reports using the **Reporting** module. The process consists of three main steps: creating the report layout, preparing the email message and configuring the scheduler.
 
-## Step 1: Create a Report Template
+## Step 1: Create a report template
 First, we need to define how the resulting PDF will look and what data it will contain.
 
 1. Navigate to **Reporting** -> **Overview** (or **Templates**) in the left main menu.
 2. Click the **+ Add report template** button in the top right corner and select **Create new report template**.
 3. Enter a name for the template (e.g., *General Monthly Report*) and leave the format as **PDF**.
 4. You are now in the visual Report Builder. Drag and drop components from the left panel:
-   * **Text & Content:** For adding headers, titles, and footers (Markdown is supported).
+   * **Text & Content:** For adding headers, titles and footers (Markdown is supported).
    * **Charts:** To insert graphs. In the chart settings, select the target devices and the time window (e.g., *Previous month*).
    * **Tables:** To insert data tables. *Tip: If you want to merge data from multiple devices into a single row, make sure to enable data aggregation (e.g., 1 Day) in the table settings.*
 5. Once you are satisfied with the layout, click **Save** / **Apply** to store the template.
@@ -26,7 +27,7 @@ First, we need to define how the resulting PDF will look and what data it will c
 [ThingsBoard Reporting Key Concepts](https://thingsboard.io/docs/pe/user-guide/reporting/reporting-key-concepts/)
 :::
 
-## Step 2: Create a Notification Template
+## Step 2: Create a notification template
 To send the report to customers, we must create the email text that will accompany the PDF attachment.
 
 1. Navigate to **Notification center** -> **Templates** in the left menu.
@@ -37,7 +38,7 @@ To send the report to customers, we must create the email text that will accompa
 6. Fill in the email content:
    * **Subject:** e.g., `Monthly Monitoring Report - %d{MMMM yyyy}`.
    * **Body:** Write the accompanying text the customer will see in the email. You can use plain text or HTML formatting (bullet points, bold text, etc.).
-   * *Note:* ThingsBoard will automatically attach the generated PDF file to this email template when triggered by the scheduler.
+   * *Note:* The platform automatically attaches the generated PDF file to this email template when triggered by the scheduler.
 7. Save the template.
 
 :::info
@@ -45,7 +46,7 @@ To send the report to customers, we must create the email text that will accompa
 [ThingsBoard Notification Templates](https://thingsboard.io/docs/pe/user-guide/notifications/#templates)
 :::
 
-## Step 3: Schedule the Automated Delivery
+## Step 3: Schedule the automated delivery
 Now we need to combine the previous steps and tell the system when and to whom the report should be sent.
 
 1. Go back to the **Reporting** section in the left menu and click on **Scheduling reports**.
@@ -56,7 +57,7 @@ Now we need to combine the previous steps and tell the system when and to whom t
 4. Go to the **Schedule** settings:
    * Select the correct timezone.
    * Set the repeat interval: for monthly reports, schedule it to run on the 1st day of every month at your preferred time (e.g., 01:00 AM).
-5. In the **Recipients** / **Targets** section, define who will receive the email. You can select specific Users, Customers, or enter direct email addresses.
+5. In the **Recipients** / **Targets** section, define who will receive the email. You can select specific Users, Customers or enter direct email addresses.
 6. Save the schedule.
 
 :::info
@@ -64,4 +65,8 @@ Now we need to combine the previous steps and tell the system when and to whom t
 [ThingsBoard Scheduler](https://thingsboard.io/docs/pe/user-guide/scheduler/)
 :::
 
-**Done.** The system will now automatically generate the PDF based on your design every month, attach it to the prepared email, and send it to the specified recipients.
+**Done.** The system will now automatically generate the PDF based on your design every month, attach it to the prepared email and send it to the specified recipients.
+
+:::info ThingsBoard documentation
+HARDWARIO Dashboards is built on ThingsBoard. More details in the official ThingsBoard documentation: [Reporting](https://thingsboard.io/docs/pe/user-guide/reporting/getting-started/).
+:::

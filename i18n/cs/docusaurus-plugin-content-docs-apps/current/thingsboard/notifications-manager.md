@@ -1,7 +1,7 @@
 ---
 slug: notifications-manager
 title: Notifikace
-description: "Upozornění e-mailem nebo SMS ve Správci pravidel notifikací v ThingsBoard: výběr zařízení a proměnných, limit a nastavení Duration a Cooldown."
+description: "Upozornění e-mailem nebo SMS ve Správci pravidel notifikací v HARDWARIO Dashboards: výběr zařízení a proměnných, limit a nastavení Duration a Cooldown."
 ---
 import Image from '@theme/IdealImage';
 
@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 **Správce pravidel notifikací** je nástroj pro nastavení automatických upozornění podle dat ze zařízení IoT (senzorů, měřičů a dalších). Přesně v něm určíte podmínky, za kterých dostanete e-mail nebo SMS, například když teplota překročí zadanou hodnotu, vlhkost klesne pod limit nebo zařízení nahlásí neočekávanou hodnotu.
 
 :::info Příklad použití
-Zákazník provozující sklady chce dostat upozornění, když teplota v některém skladu překročí 28 °C. Vytvoří pravidlo: *Device = Warehouse_Sensor_A, Variable = temperature, Condition = > 28, Recipient = manager@company.com*. Od té chvíle se e-mail odesílá automaticky vždy, když senzor naměří víc než 28 °C.
+Zákazník provozující sklady chce dostat upozornění, když teplota v některém skladu překročí 28 °C. Vytvoří pravidlo: *Device = Warehouse_Sensor_A, Variable = temperature, Condition = > 28, Recipient = manager@company.com*. Od té chvíle se e-mail odesílá automaticky vždy, když senzor naměří víc než 28 °C.
 :::
 
 ---
@@ -19,7 +19,10 @@ Zákazník provozující sklady chce dostat upozornění, když teplota v někte
 
 1. Přihlaste se do platformy na **app.hardwario.cloud** svým e-mailem a heslem.
 2. V levém navigačním menu klikněte na **Notifications**.
-3. Otevře se dashboard **Notification Rules Manager**. Pokud jste tu poprvé, tabulka pravidel bude prázdná.
+3. Otevře se stránka **Notifications**. Ukazuje notifikace odeslané za posledních 24 hodin, 7 dní nebo 30 dní; tlačítkem **Notification Filter** seznam zúžíte.
+4. Kliknutím na **Manage rules** otevřete svá pravidla. Tlačítko **Notifications** na stejném místě vás vrátí zpět.
+
+![Stránka Notifications se seznamem odeslaných notifikací a zvýrazněným tlačítkem Manage rules](../../../../../apps/thingsboard/images/notifications-manager-0.jpg)
 
 :::caution Poznámka
 Položka menu **Notifications** je vidět jen zákazníkům, kterým byl k tomuto dashboardu udělen přístup. Pokud ji nevidíte, obraťte se na administrátora platformy.
@@ -42,25 +45,31 @@ Pokud jste Customer User a potřebujete pravidlo změnit, obraťte se na svého 
 
 ## Přehled rozhraní {#interface-overview}
 
-![Prázdný widget Notification Rules Manager s vyhledávacím polem a tlačítkem Add Rule v záhlaví](../../../../../apps/thingsboard/images/notifications-manager-1.png)
+![Prázdný přehled pravidel se zvýrazněnou ikonou Add Rule (+) vpravo nahoře](../../../../../apps/thingsboard/images/notifications-manager-1.jpg)
 
 ### Vysvětlení sloupců tabulky {#table-columns-explained}
 
 | Sloupec | Popis |
 |--------|-------------|
+| **Name** | Název pravidla. |
 | **Device(s)** | První sledované zařízení. Pokud je jich víc, objeví se odznak **+N more**. Najetím myší zobrazíte celý seznam. |
 | **Customer** | Zákazník nebo zákazníci, kterým zařízení patří (zobrazuje se, když existují podřízení zákazníci). Pokud zařízení patří více zákazníkům, zobrazí se první s **+N more**. |
 | **Variable(s)** | Sledované telemetrické klíče. |
 | **Condition** | Spouštěcí podmínka a prah, plus odznaky Duration/Cooldown, pokud jsou nastavené. |
 | **Recipients** | Počet a typ příjemců (e-mail nebo SMS). Najetím myší zobrazíte seznam. |
 | **Enabled** | Přepínač, kterým pravidlo zapnete nebo vypnete, aniž byste ho smazali. |
-| **Actions** | **Edit** · **Copy** · **Delete** |
+| **Actions** | Ikony **Edit** (tužka) · **Copy** · **Delete** (koš) |
 
 ---
 
 ## Vytvoření nového pravidla {#creating-a-new-rule}
 
-Klikněte na **+ Add Rule** v pravém horním rohu widgetu. Pod záhlavím se otevře formulář pravidla.
+Klikněte vpravo nahoře na ikonu **+** (Add Rule). Otevře se formulář **New Rule**.
+
+### Název a typ upozornění {#name-and-alert-type}
+
+- **Notification name**: název, podle kterého pravidlo později najdete, například *Teplota chladírny*.
+- **Alert when**: **Telemetry value** (výchozí) hlídá hodnotu, jak popisují kroky níže. **No data (device offline)** vás upozorní, když zařízení přestane posílat data.
 
 ### Krok 1: Vyberte zařízení {#step-1-select-devices}
 
@@ -93,7 +102,7 @@ Kliknutím na klíč ho přidáte jako štítek. Už přidané klíče jsou ozna
 Napište název klíče přímo do pole a stiskněte **Enter** nebo klikněte na **+ Add**. To se hodí u zařízení, která ještě žádnou telemetrii neposlala.
 
 :::caution Důležité
-Název proměnné musí přesně odpovídat telemetrickému klíči, jak ho zařízení posílá (rozlišují se velká a malá písmena). Dostupné klíče najdete v ThingsBoard v detailu zařízení na záložce *Latest Telemetry*.
+Název proměnné musí přesně odpovídat telemetrickému klíči, jak ho zařízení posílá (rozlišují se velká a malá písmena). Dostupné klíče najdete v HARDWARIO Dashboards v detailu zařízení na záložce *Latest Telemetry*.
 :::
 
 ### Krok 3: Nastavte podmínku {#step-3-set-the-condition}
@@ -115,10 +124,13 @@ Blok **TIMING** obsahuje dvě volitelná pole pro jemnější řízení. Pro vý
 |-------|-------------|---------|
 | **Duration (min)** | Podmínka musí být splněná nepřerušeně tolik minut, než se notifikace odešle. Odfiltruje krátké špičky. | 0 = poslat okamžitě |
 | **Cooldown (min)** | Minimální doba mezi dvěma notifikacemi tohoto pravidla. Zabrání zahlcení notifikacemi. | 0 = bez omezení |
+| **Notify only once until the value is back to normal** | Pošle jednu notifikaci, když hodnota překročí limit. Další přijde až poté, co se hodnota vrátí do limitu a znovu ho překročí. Cooldown se nepoužije. | vypnuto |
 
 ### Krok 5: Přidejte příjemce {#step-5-add-recipients}
 
 **Notification type**: V sekci **NOTIFICATION TYPE** zvolte **Email** nebo **SMS**. Objeví se odpovídající pole pro příjemce.
+
+**Email subject** a **Message template** jsou nepovinné. Nechte je prázdné pro výchozí zprávu, nebo si sestavte vlastní se zástupnými poli `{deviceName}`, `{variable}`, `{value}`, `{operator}` a `{threshold}`.
 
 **Příjemci e-mailu:**
 1. Do pole *user@example.com* napište e-mailovou adresu.
@@ -143,7 +155,7 @@ Jakmile jsou vyplněná všechna povinná pole, klikněte na **Save Rule**. Prav
 - Alespoň jeden příjemce (e-mail nebo SMS)
 :::
 
-![Formulář New Rule se sekcemi zařízení, proměnných, podmínky, časování, typu notifikace, šablony zprávy a příjemců](../../../../../apps/thingsboard/images/notifications-manager-2.png)
+![Formulář New Rule s vyplněnými sekcemi zařízení (1), proměnných (2), podmínky (3) a časování (4)](../../../../../apps/thingsboard/images/notifications-manager-2.jpg)
 
 ---
 
@@ -151,11 +163,11 @@ Jakmile jsou vyplněná všechna povinná pole, klikněte na **Save Rule**. Prav
 
 ### Úprava pravidla {#editing-a-rule}
 
-U pravidla, které chcete změnit, klikněte na **Edit**. Otevře se formulář s předvyplněnými hodnotami. Upravte hodnoty a klikněte na **Save Rule**.
+U pravidla, které chcete změnit, klikněte na **ikonu tužky** (Edit). Otevře se formulář s předvyplněnými hodnotami. Upravte hodnoty a klikněte na **Save Rule**.
 
 ### Kopírování pravidla {#copying-a-rule}
 
-Klikněte na **Copy**. Otevře se formulář nového pravidla se stejnými hodnotami jako originál. Upravte, co potřebujete (například jiný prah nebo zařízení), a uložte.
+Klikněte na ikonu **Copy**. Otevře se formulář nového pravidla se stejnými hodnotami jako originál. Upravte, co potřebujete (například jiný prah nebo zařízení), a uložte.
 
 :::tip
 Kopírování se hodí, když chcete podobné pravidlo pro jiné zařízení nebo prah, aniž byste všechno vyplňovali od začátku.
@@ -163,7 +175,7 @@ Kopírování se hodí, když chcete podobné pravidlo pro jiné zařízení neb
 
 ### Smazání pravidla {#deleting-a-rule}
 
-Klikněte na **Delete**. Objeví se potvrzovací dialog. Po potvrzení se pravidlo trvale odstraní ze všech zařízení, kde bylo uložené.
+Klikněte na **ikonu koše** (Delete). Objeví se potvrzovací dialog. Po potvrzení se pravidlo trvale odstraní ze všech zařízení, kde bylo uložené.
 
 :::caution Varování
 Smazání je trvalé a nelze ho vzít zpět. Pokud chcete notifikace jen dočasně zastavit, použijte místo toho přepínač **Enabled**.
@@ -173,7 +185,7 @@ Smazání je trvalé a nelze ho vzít zpět. Pokud chcete notifikace jen dočasn
 
 Každé pravidlo má ve sloupci **Enabled** přepínač. Jeho vypnutím pravidlo deaktivujete: žádné notifikace se nebudou posílat, ale pravidlo zůstane uložené a lze ho kdykoli znovu zapnout.
 
-![Tabulka pravidel se dvěma teplotními pravidly, zaškrtávacími políčky Enabled a akčními tlačítky Edit, Copy a Delete](../../../../../apps/thingsboard/images/notifications-manager-3.png)
+![Tabulka pravidel s pravidlem Cold room temperature (1), jeho přepínačem Enabled a ikonami Edit, Copy a Delete (2)](../../../../../apps/thingsboard/images/notifications-manager-3.jpg)
 
 ---
 
@@ -181,7 +193,7 @@ Každé pravidlo má ve sloupci **Enabled** přepínač. Jeho vypnutím pravidlo
 
 ### Vyhledávání {#search}
 
-Použijte pole *Search rules...* v pravém horním rohu. Výsledky se průběžně aktualizují a hledá se ve všech polích (název zařízení, proměnná, příjemce a další).
+Klikněte na **ikonu vyhledávání** vpravo nahoře. Výsledky se průběžně aktualizují a hledá se ve všech polích (název zařízení, proměnná, příjemce a další).
 
 ### Filtr zákazníka {#customer-filter}
 
@@ -232,7 +244,7 @@ Použijte přepínač jazyka v pravém horním rohu widgetu. Volba se ukládá k
 Pravidlo se odstraní ze všech zařízení, kde bylo uložené. Tuto akci nelze vzít zpět.
 
 **Jak zjistím, které telemetrické klíče zařízení posílá?**  
-Otevřete v platformě ThingsBoard detail zařízení (sekce *Devices*) a klikněte na záložku *Latest Telemetry*. Jsou tam vypsané všechny klíče i jejich aktuální hodnoty.
+Otevřete v HARDWARIO Dashboards detail zařízení (sekce *Devices*) a klikněte na záložku *Latest Telemetry*. Jsou tam vypsané všechny klíče i jejich aktuální hodnoty.
 
 **Mohu nastavit pravidlo pro zařízení podřízeného zákazníka?**  
 Ano. Pokud spravujete podřízené zákazníky, zvolte příslušného zákazníka filtrem v horní liště. Při vytváření pravidla se pak zobrazí jen zařízení tohoto zákazníka.
@@ -242,3 +254,7 @@ Ukazuje počet a typ příjemců daného pravidla. Najetím myší na odznak zob
 
 **Jak poznám, že se pravidlo spustilo?**  
 Dostanete e-mail nebo SMS podle nastavení. Notifikace obsahuje název zařízení, proměnnou, naměřenou hodnotu a podmínku, která byla splněna.
+
+:::info Dokumentace ThingsBoard
+HARDWARIO Dashboards jsou postavené na platformě ThingsBoard. Podrobnosti najdete v oficiální dokumentaci ThingsBoard (anglicky): [Notification center](https://thingsboard.io/docs/pe/user-guide/notifications/).
+:::

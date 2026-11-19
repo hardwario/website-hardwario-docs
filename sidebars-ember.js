@@ -16,7 +16,6 @@ const sidebars = {
           label: 'LoRaWAN Network Server',
           collapsed: true,
           items: [
-            'cloud-service',
             {
               type: 'category',
               label: 'ChirpStack v4',
@@ -41,7 +40,18 @@ const sidebars = {
             'mikrotik/winbox-setup',
           ],
         },
-        'hotspot-configuration',
+        {
+          type: 'category',
+          label: 'Hotspot Configuration',
+          link: {type: 'doc', id: 'hotspot-configuration'},
+          collapsed: true,
+          items: [
+            'cloud-service',
+            'hotspot-configuration/interface-configuration',
+            'hotspot-configuration/lorawan',
+            'hotspot-configuration/securing-access',
+          ],
+        },
         {
           type: 'category',
           label: 'Video Tutorials',

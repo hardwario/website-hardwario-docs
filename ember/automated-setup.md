@@ -124,7 +124,7 @@ The setup is done when the log shows a line starting with **ember-first-steps: D
 
 The LoRa interface itself, including the antenna selection and the `antenna-gain` value for the
 antenna in use, is set together with your backend in Step 3. See
-[Hotspot Configuration → LoRaWAN](hotspot-configuration.md#lorawan) and
+[Hotspot Configuration → LoRaWAN](hotspot-configuration/lorawan.md) and
 [Antenna Gain & Output Power](mikrotik/antenna-gain.md).
 
 ---
@@ -156,7 +156,7 @@ HARDWARIO can operate the LoRaWAN Network Server for you as a fully **managed se
 It is designed for a fast start without the need to run your own infrastructure.
 
 What the service typically provides:
-- **ChirpStack**: LoRaWAN Network Server  
+- **The Things Stack**: LoRaWAN Network Server  
 - **Node-RED**: data processing, payload decoding, and forwarding  
 - Preconfigured connectivity between the gateway, LNS, and integrations
 
@@ -170,9 +170,6 @@ Recommended if you want to **get data from devices quickly** and forward it to a
 
 - Web portal (service management):  
   https://docs.hardwario.com/ember/cloud-service/#web-management
-
-- ChirpStack in the managed service:  
-  https://docs.hardwario.com/ember/cloud-service/#chirpstack-lorawan-server
 
 - Node-RED in the managed service:  
   https://docs.hardwario.com/ember/cloud-service/#node-red-application
@@ -210,7 +207,7 @@ Key note from the official Hotspot Configuration:
 - If you **do not use the HARDWARIO managed service**, use **your LoRaWAN server IP address**
   and you **don't need to configure VPN tunnels**.
 
-Reference: https://docs.hardwario.com/ember/hotspot-configuration/
+Reference: https://docs.hardwario.com/ember/hotspot-configuration/lorawan/
 
 ---
 

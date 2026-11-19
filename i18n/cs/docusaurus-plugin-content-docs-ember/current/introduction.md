@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # EMBER {#ember}
 
-**EMBER** je průmyslová platforma LoRaWAN, která přenáší a zpracovává měřené hodnoty ze senzorů a řídí akční členy v průmyslových areálech. Každou lokalitu tvoří venkovní brána **EMBER Hotspot**, zařízení LoRaWAN (například **CHESTER**), páteřní připojení **LTE** přes **Onomondo** a síťový server LoRaWAN (**ChirpStack** nebo **The Things Stack**; provozuje ho buď sám zákazník, nebo **HARDWARIO** jako spravovanou službu) s **Node-RED** pro low-code integrace přes REST. Data tak můžete vizualizovat a zpracovávat v cloudu i na vlastních serverech (on-premise).
+**EMBER** je průmyslová platforma LoRaWAN, která přenáší a zpracovává měřené hodnoty ze senzorů a řídí akční členy v průmyslových areálech. Každou lokalitu tvoří venkovní brána **EMBER Hotspot**, zařízení LoRaWAN (například **CHESTER**), páteřní připojení **LTE** přes **Onomondo** a síťový server LoRaWAN (**ChirpStack** nebo **The Things Stack** na vlastním serveru zákazníka, nebo **The Things Stack** jako spravovaná služba **HARDWARIO**) s **Node-RED** pro low-code integrace přes REST. Data tak můžete vizualizovat a zpracovávat v cloudu i na vlastních serverech (on-premise).
 
 :::tip
 ### Než zařízení EMBER zprovozníte, přečtěte si [**První kroky**](getting-started.md) {#to-get-your-ember-running-read-the-first-steps}
@@ -20,7 +20,7 @@ import Image from '@theme/IdealImage';
 
 * [**První kroky**](getting-started.md): Zapojení, přihlášení a připojení zařízení EMBER.
 * [**Konfigurace hotspotu**](hotspot-configuration.md): Koncept systému, konfigurace RouterOS, IP adresy a VPN tunely.
-* [**Spravovaný síťový server**](cloud-service.md): ChirpStack a Node-RED jako spravovaná služba, kterou provozuje HARDWARIO.
+* [**Spravovaný síťový server**](cloud-service.md): The Things Stack a Node-RED jako spravovaná služba, kterou provozuje HARDWARIO.
 * [**Popis hardwaru**](hardware-description.md): Hlavní části a parametry zařízení EMBER Hotspot.
 * [**Objednací kódy**](ordering-codes.md): Kompletní přehled objednacích kódů produktů.
 * [**Seznam změn**](changelog): Nejnovější změny firmwaru a platformy.
@@ -39,7 +39,7 @@ import Image from '@theme/IdealImage';
 |---|---|
 | **Průmyslový hotspot LoRaWAN** | Vodotěsná venkovní brána postavená na platformě MikroTik RBM33G. |
 | **LTE backhaul** | Integrované mobilní připojení přes Onomondo. |
-| **Síťový server LoRaWAN** | ChirpStack nebo The Things Stack. Na vlastním serveru, nebo jako spravovaná služba HARDWARIO s Node-RED, vzdálenou konfigurací a monitoringem. |
+| **Síťový server LoRaWAN** | ChirpStack nebo The Things Stack na vlastním serveru, nebo The Things Stack jako spravovaná služba HARDWARIO s Node-RED, vzdálenou konfigurací a monitoringem. |
 | **Volitelné služby HARDWARIO** | SIM karta s konektivitou pro páteřní připojení LTE, spravovaný síťový server a bezpečný vzdálený přístup přes OpenVPN. |
 | **Redundantní nasazení** | Konfigurace lokalit pro pokrytí s vysokou dostupností. |
 | **Bezpečné VPN tunely** | Nezávislé tunely pro data LoRaWAN a pro vzdálenou správu. |

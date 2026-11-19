@@ -156,7 +156,7 @@ Spusťte ho stisknutím **Enter**.
 
 Samotné rozhraní LoRa včetně volby `antenna=uFL` a hodnoty `antenna-gain` pro připojenou
 anténu nastavíte spolu s backendem v kroku 3, viz
-[Konfigurace hotspotu → LoRaWAN](hotspot-configuration.md#lorawan) a
+[Konfigurace hotspotu → LoRaWAN](hotspot-configuration/lorawan.md) a
 [Zisk antény a výstupní výkon](mikrotik/antenna-gain.md).
 
 ---
@@ -188,7 +188,7 @@ HARDWARIO může síťový server LoRaWAN provozovat za vás jako plně **spravo
 Služba je určená pro rychlý start bez vlastní infrastruktury.
 
 Služba obvykle zahrnuje:
-- **ChirpStack**: síťový server LoRaWAN  
+- **The Things Stack**: síťový server LoRaWAN  
 - **Node-RED**: zpracování dat, dekódování payloadu a přeposílání  
 - Předem nastavené propojení brány, LNS a integrací
 
@@ -202,9 +202,6 @@ Tuto možnost doporučujeme, pokud chcete **rychle získat data ze zařízení**
 
 - Webový portál (správa služby):  
   https://docs.hardwario.com/ember/cloud-service/#web-management
-
-- ChirpStack ve spravované službě:  
-  https://docs.hardwario.com/ember/cloud-service/#chirpstack-lorawan-server
 
 - Node-RED ve spravované službě:  
   https://docs.hardwario.com/ember/cloud-service/#node-red-application
@@ -242,7 +239,7 @@ Důležitá poznámka ze stránky Konfigurace hotspotu:
 - Pokud **nepoužíváte spravovanou službu HARDWARIO**, zadejte **IP adresu svého serveru LoRaWAN**;
   **VPN tunely pak konfigurovat nemusíte**.
 
-Viz: https://docs.hardwario.com/ember/hotspot-configuration/
+Viz: https://docs.hardwario.com/ember/hotspot-configuration/lorawan/
 
 ---
 

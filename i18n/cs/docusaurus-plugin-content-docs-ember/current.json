@@ -54,5 +54,9 @@
   "sidebar.docs.category.chirpstack-lns": {
     "message": "ChirpStack v4",
     "description": "The label for category 'ChirpStack v4' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Hotspot Configuration": {
+    "message": "Konfigurace hotspotu",
+    "description": "The label for category 'Hotspot Configuration' in sidebar 'docs'"
   }
 }

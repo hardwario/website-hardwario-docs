@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="300" viewBox="0 0 1060 300" font-family="Inter, Arial, Helvetica, sans-serif">
+<rect width="1060" height="300" rx="12" fill="#ffffff"/>
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#ED1C24"/></marker></defs>
+<rect x="25" y="40" width="310" height="70" rx="10" fill="#f6f6f8" stroke="#c9c9d3" stroke-width="2"/>
+<circle cx="51" cy="75.0" r="14" fill="#252532"/>
+<text x="51" y="80.0" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">1</text>
+<text x="77" y="81.0" font-size="14" font-family="Roboto Mono, DejaVu Sans Mono, monospace" font-weight="400" fill="#252532">connecting to …/router-info</text>
+<line x1="341" y1="75.0" x2="372" y2="75.0" stroke="#ED1C24" stroke-width="3" marker-end="url(#a)"/>
+<rect x="380" y="40" width="310" height="70" rx="10" fill="#f6f6f8" stroke="#c9c9d3" stroke-width="2"/>
+<circle cx="406" cy="75.0" r="14" fill="#252532"/>
+<text x="406" y="80.0" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">2</text>
+<text x="432" y="81.0" font-size="14" font-family="Roboto Mono, DejaVu Sans Mono, monospace" font-weight="400" fill="#252532">discovered</text>
+<line x1="696" y1="75.0" x2="727" y2="75.0" stroke="#ED1C24" stroke-width="3" marker-end="url(#a)"/>
+<rect x="735" y="40" width="310" height="70" rx="10" fill="#f6f6f8" stroke="#c9c9d3" stroke-width="2"/>
+<circle cx="761" cy="75.0" r="14" fill="#252532"/>
+<text x="761" y="80.0" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">3</text>
+<text x="787" y="81.0" font-size="14" font-family="Roboto Mono, DejaVu Sans Mono, monospace" font-weight="400" fill="#252532">disconnected</text>
+<text x="1045" y="132" text-anchor="end" font-size="14" fill="#5b5b6b">this one is normal</text>
+<rect x="25" y="175" width="310" height="70" rx="10" fill="#f6f6f8" stroke="#c9c9d3" stroke-width="2"/>
+<circle cx="51" cy="210.0" r="14" fill="#252532"/>
+<text x="51" y="215.0" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">4</text>
+<text x="77" y="216.0" font-size="14" font-family="Roboto Mono, DejaVu Sans Mono, monospace" font-weight="400" fill="#252532">connecting to …/gateway/&lt;eui&gt;</text>
+<line x1="341" y1="210.0" x2="372" y2="210.0" stroke="#ED1C24" stroke-width="3" marker-end="url(#a)"/>
+<rect x="380" y="175" width="310" height="70" rx="10" fill="#f6f6f8" stroke="#c9c9d3" stroke-width="2"/>
+<circle cx="406" cy="210.0" r="14" fill="#252532"/>
+<text x="406" y="215.0" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">5</text>
+<text x="432" y="216.0" font-size="14" font-family="Roboto Mono, DejaVu Sans Mono, monospace" font-weight="400" fill="#252532">configured</text>
+<line x1="696" y1="210.0" x2="727" y2="210.0" stroke="#ED1C24" stroke-width="3" marker-end="url(#a)"/>
+<rect x="735" y="175" width="310" height="70" rx="10" fill="#f6f6f8" stroke="#2E7D4F" stroke-width="3"/>
+<circle cx="761" cy="210.0" r="14" fill="#2E7D4F"/>
+<text x="761" y="215.0" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">6</text>
+<text x="787" y="216.0" font-size="14" font-family="Roboto Mono, DejaVu Sans Mono, monospace" font-weight="700" fill="#2E7D4F">forwarder is ready</text>
+<text x="1045" y="267" text-anchor="end" font-size="14" fill="#2E7D4F">connected</text>
+<path d="M890.0,114 L890.0,148.5 L180.0,148.5 L180.0,167" fill="none" stroke="#ED1C24" stroke-width="3" marker-end="url(#a)"/>
+</svg>

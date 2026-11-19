@@ -69,10 +69,7 @@ Zisk antény volte podle konkrétního nasazení, ne podle pravidla „větší 
 Brána LoRa od MikroTik si vysílací výkon **nenastavuje** sama. Hodnota přichází ze
 síťového serveru LoRaWAN a brána jen kompenzuje zisk antény:
 
-```
-radio output (at the connector) = server_value − antenna-gain
-radiated EIRP                    = radio output + antenna gain − cable loss
-```
+![Jak se nastavuje vysílací výkon: server požaduje 27 dBm EIRP, EMBER odečte antenna-gain, kabel ztratí 2 dB a anténa přidá svůj zisk](../../../../../ember/mikrotik/images/tx-power-chain.svg)
 
 - **`server_value`**: vysílací výkon, který požaduje síťový server, v dBm EIRP
   (pole `txpk.powe` protokolu Semtech UDP). V ChirpStack je to `downlink_tx_power` v
@@ -126,7 +123,8 @@ V novějších sestaveních RouterOS může být menu `/iot lora` místo `/lora`
 | Anténa | Zisk | Hodnota `antenna-gain` |
 | --- | --- | --- |
 | Vestavěná anténa zařízení wAP LR8G kit (868 MHz) | 2 dBi | `2` |
-| Sada všesměrové antény LoRa od MikroTik (`TOF-0809-...`) | 6,5 dBi | `6.5` |
+| Všesměrová anténa MikroTik 868 Omni (`868_Omni_antenna`) | 6,5 dBi | `6.5` |
+| Sada všesměrové antény LoRa od MikroTik (`TOF-0809-7V-S1`, už se nevyrábí) | 6,5 dBi | `6.5` |
 | Jiná externí anténa | viz její katalogový list | dBi antény − ztráty na kabelu |
 
 U zařízení **EMBER** musí hodnota odpovídat anténě, která je ke kartě LoRa skutečně připojená: buď

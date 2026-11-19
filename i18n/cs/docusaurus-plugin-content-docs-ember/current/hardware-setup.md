@@ -41,7 +41,7 @@ Popis hardwaru: https://docs.hardwario.com/ember/hardware-description/
 #### Rychlé odkazy {#quick-links}
 - Produktová stránka EMBER (produktový list + přehled): https://www.hardwario.com/products/ember/
 - Konfigurace hotspotu (IP adresa LAN, přihlášení, skript RouterOS): https://docs.hardwario.com/ember/hotspot-configuration/
-- Spravovaný síťový server (ChirpStack + Node-RED, provozuje HARDWARIO): https://docs.hardwario.com/ember/cloud-service/
+- Spravovaný síťový server (The Things Stack + Node-RED, provozuje HARDWARIO): https://docs.hardwario.com/ember/cloud-service/
 
 ---
 

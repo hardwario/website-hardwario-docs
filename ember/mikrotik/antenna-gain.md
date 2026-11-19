@@ -69,10 +69,7 @@ Match the antenna's gain to the deployment, not just to "more range = better."
 A MikroTik LoRa gateway does **not** set its own transmit power. The value comes from
 the LoRaWAN Network Server and the gateway only compensates for the antenna:
 
-```
-radio output (at the connector) = server_value − antenna-gain
-radiated EIRP                    = radio output + antenna gain − cable loss
-```
+![How TX power is set: the server asks for 27 dBm EIRP, EMBER subtracts antenna-gain, the cable loses 2 dB and the antenna adds its gain back](images/tx-power-chain.svg)
 
 - **`server_value`**: the TX power the Network Server requests, in dBm EIRP
   (Semtech UDP `txpk.powe` field). In ChirpStack this is `downlink_tx_power` in the
@@ -126,7 +123,8 @@ On newer RouterOS builds the menu may be `/iot lora` instead of `/lora`. If `/lo
 | Antenna | Gain | `antenna-gain` value |
 | --- | --- | --- |
 | wAP LR8G kit built-in antenna (868 MHz) | 2 dBi | `2` |
-| MikroTik omni LoRa antenna kit (`TOF-0809-...`) | 6.5 dBi | `6.5` |
+| MikroTik 868 Omni antenna (`868_Omni_antenna`) | 6.5 dBi | `6.5` |
+| MikroTik omni LoRa antenna kit (`TOF-0809-7V-S1`, discontinued) | 6.5 dBi | `6.5` |
 | Other external antenna | see its datasheet | antenna dBi − cable loss |
 
 On **EMBER** the value has to match whichever antenna is actually connected to the LoRa card: the

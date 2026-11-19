@@ -230,6 +230,10 @@
     } on-error={}
     :local mac ""
     :do { :set mac [/interface ethernet get [find where default-name="ether1"] mac-address] } on-error={}
+    :local lmac ""
+    :do { :set lmac [/interface bridge get [find where name="bridge0"] mac-address] } on-error={}
+    :if ([:len $mac] = 0) do={ :set mac "(could not be read)" }
+    :if ([:len $lmac] = 0) do={ :set lmac "(could not be read)" }
     :local wan "none yet"
     :do { :local a [/ip dhcp-client get [find where interface="ether1"] address]; :if ([:len $a] > 0) do={ :set wan $a } } on-error={}
     :local iotv ""
@@ -260,7 +264,7 @@
     :if ((!$pwOk) && (!$pwOld)) do={
       :set t ($t . "Login" . $nl . "  User: admin" . $nl . "  Password: not in this file; the one shown in the terminal at the start of the setup" . $nl . $nl)
     }
-    :set t ($t . "Unit" . $nl . "  Model: " . [/system routerboard get model] . $nl . "  Serial number: " . [/system routerboard get serial-number] . $nl . "  MAC address (ether1): " . $mac . $nl . "  Identity: " . [/system identity get name] . $nl . $nl)
+    :set t ($t . "Unit" . $nl . "  Model: " . [/system routerboard get model] . $nl . "  Serial number: " . [/system routerboard get serial-number] . $nl . "  MAC address WAN ether1 (Winbox from your network): " . $mac . $nl . "  MAC address LAN ether2/ether3 (Winbox by cable): " . $lmac . $nl . "  Identity: " . [/system identity get name] . $nl . $nl)
     :set t ($t . "Software" . $nl . "  RouterOS: " . [/system resource get version] . " (update channel " . [/system package update get channel] . ")" . $nl . "  RouterBOARD firmware: " . $cur . $nl . "  iot package: " . $iotv . $nl . $nl)
     :set t ($t . "Network" . $nl . "  WAN ether1: DHCP client, address " . $wan . $nl . "  LAN bridge0 (ether2, ether3): 172.31.255.1/24, no DHCP server: set a static IP in 172.31.255.0/24 on your PC" . $nl . $nl)
     :set t ($t . "LoRa" . $nl . $lora . $nl . "LTE" . $nl . $lte . $nl)

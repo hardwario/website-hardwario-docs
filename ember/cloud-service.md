@@ -1,17 +1,17 @@
 ---
 slug: cloud-service
 title: Managed Network Server
-description: "Managed LoRaWAN network server for EMBER: HARDWARIO can host ChirpStack or The Things Stack for you as an alternative to self-hosting."
+description: "Managed LoRaWAN network server for EMBER: HARDWARIO can host The Things Stack for you as an alternative to self-hosting."
 ---
 import Image from '@theme/IdealImage';
 
 # Managed Network Server
 
-The LoRaWAN Network Server for **EMBER** (**ChirpStack** or **The Things Stack**) can be either self-hosted on your own infrastructure (see [**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) and [**The Things Stack**](lorawan-network-server/lorawan-tts.md)) or operated by **HARDWARIO** as a managed service. This page describes the managed service. Besides the managed network server, **HARDWARIO** optionally provides a SIM card with connectivity for the **LTE** backhaul and secure remote access via **OpenVPN**.
+The LoRaWAN Network Server for **EMBER** (**ChirpStack** or **The Things Stack**) can be either self-hosted on your own infrastructure (see [**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) and [**The Things Stack**](lorawan-network-server/lorawan-tts.md)) or operated by **HARDWARIO** as a managed service with **The Things Stack**. This page describes the managed service. Besides the managed network server, **HARDWARIO** optionally provides a SIM card with connectivity for the **LTE** backhaul and secure remote access via **OpenVPN**.
 
 To get the managed service, you need to have at least one **EMBER Hotspot**.
 
-With this service, you get your own instance of [**ChirpStack**](https://www.chirpstack.io/) and [**Node-RED**](https://nodered.org/) accessible through the web management UI.
+With this service, you get your own instance of **The Things Stack** and [**Node-RED**](https://nodered.org/). **Node-RED** is accessible through the web management UI.
 
 Access is secured by the **HTTPS/TLSv1.3** protocol, and the user identity is created in the managed service by the **HARDWARIO** team during service setup.
 
@@ -19,7 +19,7 @@ You do not need any specialized software on your PC/mobile to manage the service
 
 ## Web Management
 
-The web management provides access to **ChirpStack** and **Node-RED** applications through the **Teleport** service.
+The web management provides access to the **Node-RED** application through the **Teleport** service.
 
 :::caution
 
@@ -43,67 +43,11 @@ You need one of those methods for multifactor authentication:
 
 * **FIDO2**: universal 2nd Factor (**U2F**) passwordless (e.g., **YubiKey Bio Series**)
 
-The services mentioned below are accessible through the **Applications** menu item. The services are identified by these abbreviations:
-
-* `cs`: **ChirpStack** application
+The service mentioned below is accessible through the **Applications** menu item. It is identified by this abbreviation:
 
 * `nr`: **Node-RED** application
 
 To access the specific service, click on the **LAUNCH** button.
-
-## ChirpStack LoRaWAN Server
-
-The **Teleport** service will bring the user to the following URL:
-
-```
-https://ember-<customer identifier>-<service index>-cs.tp.hardwario.com/
-```
-
-These are the default login credentials:
-
-* Username: `admin`
-
-* Password: `admin`
-
-:::tip
-
-You do not need to change them, because you are identified and authenticated by logging into the **Teleport** web user interface.
-
-:::
-
-### LoRaWAN Gateways
-
-List of all **EMBER Hotspots** with the **Last seen** value and activity overview.
-
-### LoRaWAN Applications
-
-In this section, the user can define the method to pass data from the **LoRaWAN** devices to **LoRaWAN** applications (which can be the user's endpoints).
-
-Each application encapsulates a list of **LoRaWAN** devices (e.g. **CHESTER**).
-
-You can check the **LoRaWAN** activity for any **CHESTER** device.
-
-Every **CHESTER** device has to be registered in the **Application** section.
-
-The recommended option is to use the **ABP** method (Activation By Personalization). For this method, the user will need to specify (or generate) the following parameters:
-
-* **Device EUI**: also referred to as `DevEUI`
-
-* **Network session key**: also referred to as `NwkSKey`
-
-* **Application session key**: also referred to as `AppSKey`
-
-:::tip
-
-In **ChirpStack**, the **ABP** method is used when the user does not enable the `Device supports OTAA` checkbox under the specific device profile.
-
-:::
-
-:::caution
-
-For security reasons, the **ABP** method is suitable for the LoRaWAN devices where reboots are not expected.
-
-:::
 
 ## Node-RED Application
 
@@ -115,17 +59,11 @@ https://ember-<customer identifier>-<service index>-nr.tp.hardwario.com/
 
 Data are passed from the **LoRaWAN** server to **Node-RED** by **Mosquitto** (the **MQTT** server). The MQTT server is provided by the managed service at `localhost:1883`.
 
-The uplink data are published using this topic:
-
-```
-application/+/device/+/event/up
-```
-
 The data processing flow in the **Node-RED** application starts with the **MQTT** message.
 
 :::tip
 
-In **Node-RED**, use the `mqtt client` node to subscribe to the above topic.
+In **Node-RED**, use the `mqtt in` node to subscribe to the uplink data.
 
 :::
 
@@ -133,146 +71,9 @@ After the **MQTT** message is received, the device payload data needs to be deco
 
 :::caution
 
-While it is possible to decode the payload in the **ChirpStack** directly, we recommend doing that later in **Node-RED** where the user has a full-featured **Node.js** library for binary buffer parsing and a more robust **JavaScript** interpreter with advanced debugging tools.
+While it is possible to decode the payload in the **LoRaWAN** server directly, we recommend doing that later in **Node-RED** where the user has a full-featured **Node.js** library for binary buffer parsing and a more robust **JavaScript** interpreter with advanced debugging tools.
 
 :::
-
-Below is the example of the **Node-RED** function (in **JavaScript**) for decoding the **Base64** payload provided by **ChirpStack** in the **MQTT** message:
-
-<details>
-<summary><b>Show Node-RED Decoder Function</b></summary>
-
-```js
-if (msg.payload.applicationName !== 'ember-application-chester-clime') {
-    return null;
-}
-
-if (typeof msg.payload.data === 'string') {
-    msg.payload.data = decode(Buffer.from(msg.payload.data, 'base64'));
-}
-
-return msg;
-
-function decode(buffer) {
-    let data = {};
-
-    let offset = 0;
-
-    let header = buffer.readUInt8(0);
-    offset += 1;
-
-    if ((header & 0x01) !== 0) {
-        data.voltage_rest = buffer.readUInt16LE(offset);
-        offset += 2;
-
-        data.voltage_load = buffer.readUInt16LE(offset);
-        offset += 2;
-
-        data.current_load = buffer.readUInt8(offset);
-        offset += 1;
-
-        if (data.voltage_rest === 0xffff) {
-            data.voltage_rest = null;
-        } else {
-            data.voltage_rest = data.voltage_rest / 1000;
-        }
-
-        if (data.voltage_load === 0xffff) {
-            data.voltage_load = null;
-        } else {
-            data.voltage_load = data.voltage_load / 1000;
-        }
-
-        if (data.current_load === 0xff) {
-            data.current_load = null;
-        }
-    }
-
-    if ((header & 0x02) !== 0) {
-        data.orientation = buffer.readUInt8(offset);
-        offset += 1;
-
-        if (data.orientation === 0xff) {
-            data.orientation = null;
-        }
-    }
-
-    if ((header & 0x04) !== 0) {
-        data.therm_temperature = buffer.readInt16LE(offset);
-        offset += 2;
-
-        if (data.therm_temperature === 0x7fff) {
-            data.therm_temperature = null;
-        } else {
-            data.therm_temperature = data.therm_temperature / 100;
-        }
-    }
-
-    if ((header & 0x10) !== 0) {
-        data.hygro_temperature = buffer.readInt16LE(offset);
-        offset += 2;
-
-        data.hygro_humidity = buffer.readUInt8(offset);
-        offset += 1;
-
-        if (data.hygro_temperature === 0x7fff) {
-            data.hygro_temperature = null;
-        } else {
-            data.hygro_temperature = data.hygro_temperature / 100;
-        }
-
-        if (data.hygro_humidity === 0xff) {
-            data.hygro_humidity = null;
-        } else {
-            data.hygro_humidity = data.hygro_humidity / 2;
-        }
-    }
-
-    if ((header & 0x20) !== 0) {
-        data.w1_thermometers = [];
-
-        let count = buffer.readUInt8(offset);
-        offset += 1;
-
-        for (let i = 0; i < count; i++) {
-            let t = buffer.readInt16LE(offset);
-            offset += 2;
-
-            if (t === 0x7fff) {
-                t = null;
-            } else {
-                t = t / 100;
-            }
-
-            data.w1_thermometers.push(t);
-        }
-    }
-
-    if ((header & 0x40) !== 0) {
-        data.rtd_thermometers = [];
-
-        let count = buffer.readUInt8(offset);
-        offset += 1;
-
-        for (let i = 0; i < count; i++) {
-            let t = buffer.readInt16LE(offset);
-            offset += 2;
-
-            if (t === 0x7fff) {
-                t = null;
-            } else {
-                t = t / 100;
-            }
-
-            data.rtd_thermometers.push(t);
-        }
-    }
-
-    return data;
-}
-```
-
-</details>
 
 After decoding, you can further process the data: scalarizing, adding attributes, etc. The last action in the flow should be delivering the data through some common connector, e.g., an **HTTPS** request.
 

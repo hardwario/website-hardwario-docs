@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" font-family="Inter, Arial, Helvetica, sans-serif">
+<rect width="1000" height="360" rx="12" fill="#ffffff"/>
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#ED1C24"/></marker></defs>
+<rect x="25" y="40" width="220" height="110" rx="10" fill="#f6f6f8" stroke="#c9c9d3" stroke-width="2"/>
+<text x="135.0" y="88" text-anchor="middle" font-size="22" font-weight="700" fill="#252532">EMBER</text>
+<text x="135.0" y="118" text-anchor="middle" font-size="15" fill="#5b5b6b">LoRa card, Basics Station</text>
+<line x1="253" y1="95.0" x2="385" y2="95.0" stroke="#ED1C24" stroke-width="3" marker-end="url(#a)"/>
+<text x="319.0" y="81.0" text-anchor="middle" font-size="16" font-weight="700" fill="#252532">TCP 3001</text>
+<text x="319.0" y="123.0" text-anchor="middle" font-size="14" fill="#5b5b6b">ws / wss / mTLS</text>
+<rect x="395" y="40" width="220" height="110" rx="10" fill="#f6f6f8" stroke="#c9c9d3" stroke-width="2"/>
+<text x="505.0" y="88" text-anchor="middle" font-size="22" font-weight="700" fill="#252532">Gateway Bridge</text>
+<text x="505.0" y="118" text-anchor="middle" font-size="15" fill="#5b5b6b">Basics Station backend</text>
+<line x1="623" y1="95.0" x2="755" y2="95.0" stroke="#ED1C24" stroke-width="3" marker-end="url(#a)"/>
+<text x="689.0" y="81.0" text-anchor="middle" font-size="16" font-weight="700" fill="#252532">MQTT</text>
+<rect x="765" y="40" width="220" height="110" rx="10" fill="#f6f6f8" stroke="#c9c9d3" stroke-width="2"/>
+<text x="875.0" y="88" text-anchor="middle" font-size="22" font-weight="700" fill="#252532">ChirpStack</text>
+<text x="875.0" y="118" text-anchor="middle" font-size="15" fill="#5b5b6b">network server</text>
+<text x="30.0" y="191" font-size="15" font-weight="700" fill="#5b5b6b">Security level of the EMBER connection</text>
+<rect x="30.0" y="205" width="300" height="120" rx="10" fill="#f6f6f8" stroke="#c9c9d3" stroke-width="2"/>
+<text x="50.0" y="241" font-size="22" font-weight="700" fill="#252532">ws</text>
+<text x="92.0" y="241" font-size="14" fill="#5b5b6b">WebSocket</text>
+<text x="50.0" y="273" font-size="16" fill="#252532">not encrypted</text>
+<text x="50.0" y="297" font-size="16" fill="#252532">closed network only</text>
+<rect x="350.0" y="205" width="300" height="120" rx="10" fill="#f6f6f8" stroke="#c9c9d3" stroke-width="2"/>
+<text x="370.0" y="241" font-size="22" font-weight="700" fill="#252532">wss</text>
+<text x="426.0" y="241" font-size="14" fill="#5b5b6b">WebSocket over TLS</text>
+<text x="370.0" y="273" font-size="16" fill="#252532">encrypted</text>
+<rect x="670.0" y="205" width="300" height="120" rx="10" fill="#f6f6f8" stroke="#ED1C24" stroke-width="3"/>
+<text x="690.0" y="241" font-size="22" font-weight="700" fill="#ED1C24">mTLS</text>
+<text x="760.0" y="241" font-size="14" fill="#5b5b6b">TLS + gateway certificate</text>
+<text x="690.0" y="273" font-size="16" fill="#252532">encrypted, the gateway</text>
+<text x="690.0" y="297" font-size="16" fill="#252532">proves its identity</text>
+<rect x="848.0" y="193" width="110" height="24" rx="12" fill="#ED1C24"/>
+<text x="903.0" y="210" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">for production</text>
+</svg>

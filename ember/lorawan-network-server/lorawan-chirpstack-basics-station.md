@@ -5,10 +5,22 @@ description: "Connect the EMBER gateway to ChirpStack v4 over LoRa Basics Statio
 sidebar_label: Basics Station
 title_meta: "ChirpStack v4: Basics Station and mTLS (EMBER)"
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # ChirpStack v4: Basics Station and mTLS {#chirpstack-v4-basics-station-and-mtls}
 
-This guide shows how to connect the **HARDWARIO EMBER** LoRaWAN gateway (MikroTik RouterOS) to a **ChirpStack v4** network server with the **LoRa Basics Station** protocol (LNS) instead of the UDP packet forwarder, at three security levels. For production, use **mTLS**: every gateway proves itself with its own certificate. The server side (Gateway Bridge, certificate authority, gateway registration and certificate) is described in [ChirpStack: Basics Station and mTLS](/apps/chirpstack/chirpstack-configuration/chirpstack-basics-station). **Set up the server first**, then continue here.
+This guide connects the **HARDWARIO EMBER** LoRaWAN gateway (MikroTik RouterOS) to a **ChirpStack v4** network server with the **LoRa Basics Station** protocol (LNS) instead of the UDP packet forwarder.
+
+![EMBER connects to the ChirpStack Gateway Bridge on TCP port 3001 with ws, wss or mTLS, and the bridge passes the data to ChirpStack over MQTT. mTLS is the level for production.](images/basics-station-path.svg)
+
+:::tip Set up the server first
+The server side (Gateway Bridge, certificate authority, gateway registration and certificate) is described in [ChirpStack: Basics Station and mTLS](/apps/chirpstack/chirpstack-configuration/chirpstack-basics-station). Do that first, then continue here.
+:::
+
+## Choose the security level {#choose-the-security-level}
+
+For production, use **mTLS**: every gateway proves itself with its own certificate.
 
 | Mode | Connection | Who proves their identity |
 | --- | --- | --- |
@@ -18,17 +30,11 @@ This guide shows how to connect the **HARDWARIO EMBER** LoRaWAN gateway (MikroTi
 
 The procedure was tested with EMBER on RouterOS 7.24.5 (LoRa card R11e-LR8G, firmware 1.4.4) against ChirpStack 4.19 with ChirpStack Gateway Bridge 4.1: OTAA join, uplinks and downlinks with a HARDWARIO STICKER, and every case in which mTLS must refuse a gateway.
 
-## Useful docs {#useful-docs}
-- Server setup: [ChirpStack: Basics Station and mTLS](/apps/chirpstack/chirpstack-configuration/chirpstack-basics-station)
-- EMBER with ChirpStack over UDP: [ChirpStack v4](./lorawan-chirpstack.md)
-- EMBER hotspot configuration (RouterOS basics): [Hotspot Configuration](../hotspot-configuration.md)
+## Before you start {#prerequisites}
 
-## Prerequisites {#prerequisites}
-
-| Area | Requirement |
-| --- | --- |
-| EMBER | RouterOS 7.20 or newer recommended (tested on 7.24.5; according to the MikroTik changelog, older versions lack fixes for the LNS client), LoRa card with the `eu-868` channel plan, access through **WinBox** or SSH as admin |
-| Network | EMBER must reach the server on TCP port 3001 (or the port you choose) |
+- **EMBER:** RouterOS 7.20 or newer recommended (tested on 7.24.5; according to the MikroTik changelog, older versions lack fixes for the LNS client), LoRa card with the `eu-868` channel plan, access through **WinBox** or SSH as admin.
+- **Network:** EMBER must reach the server on TCP port 3001 (or the port you choose).
+- **Files from the server setup:** `ca.crt` (the CA that signed the server certificate) for wss and mTLS, and `tc.crt` + `tc.key` (the gateway certificate) for mTLS.
 
 :::caution
 The EMBER commands below are for the WinBox **Terminal**. Enter them **one line at a time** and never send a multi-line block as a single SSH command: RouterOS then runs it line by line, and a line that fails can leave the LoRa card disabled. For the same reason, never chain `disable`, `set` and `enable` on one line separated by `;`: RouterOS stops at the first error (`Device is busy`), and the card stays disabled.
@@ -37,30 +43,38 @@ The EMBER commands below are for the WinBox **Terminal**. Enter them **one line 
 ---
 
 ## 1) Configure EMBER (MikroTik RouterOS) {#1-configure-ember-mikrotik-routeros}
-EMBER gets a server entry of the LNS type, and the LoRa card is switched to it. **Change the card and its servers only while the card is disabled.** After `disable`, wait until `/iot lora print detail` shows the status `Inactive` before the next command; after `enable`, check that it changes to `Active` (send `enable` again if it stays `Inactive`). Replace `<server>` with the DNS name or IP address of the server. Upload files in WinBox → **Files** → **Upload** (the upload and import dialogs are shown in [The Things Stack](./lorawan-tts.md)).
 
-Before you switch, note the server the card uses now: `:put [/iot lora get [find] servers]` (several servers are printed separated by `;`). If EMBER does not connect to the new server (step 2), switch back the same way, with the card disabled: `/iot lora disable [find]`, `/iot lora set [find] servers="<old>"` (the name in quotes, several names separated by commas), `/iot lora enable [find]`. If `disable` fails with `Plan … not allowed by band`, do not change anything and follow [Wrong region from the server](#wrong-region-from-the-server).
+### Note the current server {#note-the-current-server}
 
-**ws:**
+Before you switch, note the server the card uses now: `:put [/iot lora get [find] servers]` (several servers are printed separated by `;`).
 
-```
-/iot lora servers add name=cs-ws address=<server> protocol=LNS port=3001 ssl=no
-/iot lora disable [find]
-/iot lora set [find] servers=cs-ws
-/iot lora enable [find]
-```
+<details>
+<summary>If EMBER does not connect to the new server: switch back</summary>
 
-**wss**: upload `ca.crt` (the CA that signed the server certificate) to EMBER, then:
+If the check in [step 2](#2-verify) fails, switch back the same way, with the card disabled: `/iot lora disable [find]`, `/iot lora set [find] servers="<old>"` (the name in quotes, several names separated by commas), `/iot lora enable [find]`. If `disable` fails with `Plan … not allowed by band`, do not change anything and follow [Wrong region from the server](#wrong-region-from-the-server).
 
-```
-/certificate import file-name=ca.crt name=server-ca passphrase="" trusted=yes
-/iot lora servers add name=cs-wss address=<server> protocol=LNS port=3001 ssl=yes
-/iot lora disable [find]
-/iot lora set [find] servers=cs-wss
-/iot lora enable [find]
-```
+</details>
 
-**mTLS**: upload `ca.crt`, `tc.crt` and `tc.key`. Import the certificate first and the key second (RouterOS attaches the key to the certificate, which gets the `K` flag), then delete the key file:
+### Upload the files {#upload-the-files}
+
+For **wss** and **mTLS**, upload the files in WinBox → **Files** → **Upload**: `ca.crt` for wss; `ca.crt`, `tc.crt` and `tc.key` for mTLS. **ws** needs no files.
+
+![WinBox: Files, Upload](images/ember-upload-file.png)
+
+The certificate import dialog is shown in [The Things Stack](./lorawan-tts.md).
+
+### Switch the LoRa card to the server {#switch-the-lora-card-to-the-server}
+
+EMBER gets a server entry of the LNS type, and the LoRa card is switched to it. **Change the card and its servers only while the card is disabled.** After `disable`, wait until `/iot lora print detail` shows the status `Inactive` before the next command; after `enable`, check that it changes to `Active` (send `enable` again if it stays `Inactive`). You can also see the status in WinBox → **IoT** → **LoRa**.
+
+![WinBox: IoT, LoRa, the LoRa card with its status](images/ember-disable-lrw-card.png)
+
+Replace `<server>` with the DNS name or IP address of the server.
+
+<Tabs groupId="basics-station-mode" defaultValue="mtls">
+<TabItem value="mtls" label="mTLS (for production)">
+
+Import the certificate first and the key second (RouterOS attaches the key to the certificate, which gets the `K` flag), then delete the key file:
 
 ```
 /certificate import file-name=ca.crt name=server-ca passphrase="" trusted=yes
@@ -77,12 +91,40 @@ Before you switch, note the server the card uses now: `:put [/iot lora get [find
 - `/certificate print` must show the flags **KT** for `gw-client` (key attached). Without `K`, EMBER connects without a certificate and the server refuses it; in that case, remove `gw-client` and import the certificate and the key again before you delete the key file.
 - Leave the server's `key` field empty: it is meant for other network servers, and ChirpStack does not use it.
 - Before you import a new client certificate, EMBER must not hold another certificate with the same EUI as its name (CN); see [Renewing the gateway certificate](#renewing-the-gateway-certificate).
-- The antenna setting (`antenna=`) and the card's channel plan (`channel-plan=eu-868`) stay as your installation needs them.
+
+</TabItem>
+<TabItem value="wss" label="wss">
+
+```
+/certificate import file-name=ca.crt name=server-ca passphrase="" trusted=yes
+/iot lora servers add name=cs-wss address=<server> protocol=LNS port=3001 ssl=yes
+/iot lora disable [find]
+/iot lora set [find] servers=cs-wss
+/iot lora enable [find]
+```
+
+</TabItem>
+<TabItem value="ws" label="ws">
+
+```
+/iot lora servers add name=cs-ws address=<server> protocol=LNS port=3001 ssl=no
+/iot lora disable [find]
+/iot lora set [find] servers=cs-ws
+/iot lora enable [find]
+```
+
+</TabItem>
+</Tabs>
+
+The antenna setting (`antenna=`) and the card's channel plan (`channel-plan=eu-868`) stay as your installation needs them.
 
 ---
 
 ## 2) Verify {#2-verify}
-The connection works when EMBER reports `forwarder is ready` and ChirpStack shows the gateway online with uplinks coming in.
+
+The connection works when EMBER reports `forwarder is ready` and ChirpStack shows the gateway online with uplinks coming in. A good connection goes through these log lines:
+
+![EMBER log of a good connection: 1 connecting to …/router-info, 2 discovered, 3 disconnected (normal), 4 connecting to …/gateway/ with the gateway EUI, 5 configured, 6 forwarder is ready](images/basics-station-log.svg)
 
 1. On EMBER, turn on the detailed LoRa log (only while you verify): `/system logging add topics=lora,debug action=memory comment=lora-debug`
 2. `/log print where topics~"lora"`: a good connection goes `connecting to …/router-info` → `discovered` → `disconnected` → `connecting to …/gateway/<eui>` → `configured` → `forwarder is ready` (the `disconnected` in between is normal).
@@ -96,19 +138,13 @@ The card status `Starting` means EMBER has not connected to the server yet (addr
 
 ---
 
-## Wrong region from the server {#wrong-region-from-the-server}
-If the Gateway Bridge ever sent EMBER a frequency plan other than EU868 (a wrong `region` setting), the LoRa service of EMBER stays unstable until EMBER is rebooted: the card cannot be disabled, and it may drop out on the next connection (`[DEV] Device communication error.`, the card disappears from `/iot lora`).
-
-1. Set `region="EU868"` on the Gateway Bridge and restart the bridge.
-2. Reboot EMBER once (`/system reboot`).
-3. Verify the connection as in step 2.
-
-With a correct server configuration, a Gateway Bridge restart does not harm EMBER: it reconnects in about 15 seconds.
-
----
-
 ## Renewing the gateway certificate {#renewing-the-gateway-certificate}
-Renew the certificate before it expires. **The order of the steps matters**, and the gateway is offline for about 30 seconds. Do steps 2–4 in one sitting: after step 2, the server entry points at a deleted certificate, so a reconnection before step 4 (a Gateway Bridge restart, a power cut) will most likely fail.
+
+Renew the certificate before it expires. The gateway is offline for about 30 seconds.
+
+:::danger The order of the steps matters
+Delete the old client certificate **before** you import the new one, and do steps 2–4 in one sitting: after step 2, the server entry points at a deleted certificate, so a reconnection before step 4 (a Gateway Bridge restart, a power cut) will most likely fail.
+:::
 
 1. Generate a new certificate in ChirpStack ([Gateway certificate](/apps/chirpstack/chirpstack-configuration/chirpstack-basics-station#4-gateway-certificate-mtls-only)) and upload `tc.crt` and `tc.key` to EMBER.
 2. **Delete the old client certificate first**: `/certificate remove [find name="gw-client"]` (use the name of the certificate in use). This works while the gateway is running; the open connection stays up.
@@ -129,9 +165,28 @@ Renew the certificate before it expires. **The order of the steps matters**, and
 /iot lora enable [find]
 ```
 
-**Why the order matters:** if the new certificate is imported while the old one with the same EUI is still on EMBER, RouterOS 7.24.5 then signs the connection with the key of the old certificate. The server refuses it (`invalid signature by the client certificate`), and the gateway stays offline. To fix it, repeat this procedure from step 1 with a new certificate (the old key file is already deleted, and ChirpStack shows a key only once), and in step 2 delete every certificate whose name (CN) is this EUI (`/certificate print detail` shows it as `common-name`, in lower case).
+<details>
+<summary>Why the order matters</summary>
+
+If the new certificate is imported while the old one with the same EUI is still on EMBER, RouterOS 7.24.5 then signs the connection with the key of the old certificate. The server refuses it (`invalid signature by the client certificate`), and the gateway stays offline. To fix it, repeat this procedure from step 1 with a new certificate (the old key file is already deleted, and ChirpStack shows a key only once), and in step 2 delete every certificate whose name (CN) is this EUI (`/certificate print detail` shows it as `common-name`, in lower case).
+
+</details>
 
 An expiring certificate does not cut a running connection (it is checked only when connecting), but the gateway drops out at the next reconnection. Renew it in time even on a gateway that works right now.
+
+---
+
+## Wrong region from the server {#wrong-region-from-the-server}
+
+:::warning
+If the Gateway Bridge ever sent EMBER a frequency plan other than EU868 (a wrong `region` setting), the LoRa service of EMBER stays unstable until EMBER is rebooted: the card cannot be disabled, and it may drop out on the next connection (`[DEV] Device communication error.`, the card disappears from `/iot lora`).
+:::
+
+1. Set `region="EU868"` on the Gateway Bridge and restart the bridge.
+2. Reboot EMBER once (`/system reboot`).
+3. Verify the connection as in [step 2](#2-verify).
+
+With a correct server configuration, a Gateway Bridge restart does not harm EMBER: it reconnects in about 15 seconds.
 
 ---
 
@@ -164,3 +219,8 @@ Find the line in the EMBER log (`/log print where topics~"lora"`) and look it up
 | EMBER | `[DEV] Device communication error.` | the radio could not be reconfigured (seen only after a wrong region) | fix the region on the server and reboot EMBER; check for `forwarder is ready`; an empty `/iot lora` = EMBER must be rebooted |
 
 Lines from the Gateway Bridge and ChirpStack logs are explained in [ChirpStack: Troubleshooting by log line](/apps/chirpstack/chirpstack-configuration/chirpstack-basics-station#troubleshooting-by-log-line).
+
+## Useful docs {#useful-docs}
+- Server setup: [ChirpStack: Basics Station and mTLS](/apps/chirpstack/chirpstack-configuration/chirpstack-basics-station)
+- EMBER with ChirpStack over UDP: [ChirpStack v4](./lorawan-chirpstack.md)
+- EMBER hotspot configuration (RouterOS basics): [Hotspot Configuration](../hotspot-configuration.md)

@@ -39,7 +39,7 @@ off, because no alarm goes out then.
 4. Set the condition and the hold time, then **Save**.
 5. Tap **Save to device**.
 
-<img src="/img/hw-manager/hw-manager-alarm-add.png" alt="The New alarm screen with Built-in sensors and Temperature selected, Alarm type: threshold (analog band), a Lower limit of 2 °C, an Upper limit of 8 °C, a Delay before firing of 300 s and the Save button" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-alarm-add.png" alt="The New alarm screen with Built-in sensors and Temperature selected, Alarm type: threshold (analog band), a Lower limit of 2 °C, an Upper limit of 8 °C, a Delay before firing of 300 s and the Save button" width="320" />
 
 | Alarm type | Condition | Hold time |
 |---|---|---|

@@ -14,7 +14,7 @@ are not, the app reports that the device did not power up its NFC.
 
 Open **HARDWARIO Manager** and choose **STICKER**.
 
-<img src="/img/hw-manager/hw-manager-sticker.png" alt="The STICKER menu in HARDWARIO Manager, listing Device info, Configuration, Sensors, Radio, Tools and Saved STICKER devices, with the Claim a STICKER button at the bottom" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-sticker.png" alt="The STICKER menu in HARDWARIO Manager, listing Device info, Configuration, Sensors, Radio, Tools and Saved STICKER devices, with the Claim a STICKER button at the bottom" width="320" />
 
 ---
 

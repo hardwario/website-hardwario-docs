@@ -29,7 +29,7 @@ See [**App settings**](../settings.md).
    Each is stamped with its date, time, and which sections it covers
    (**Radio**, **Application**, **Sensors**, **Alarms**).
 
-<img src="/img/hw-manager/hw-manager-sticker-log.png" alt="A saved device's screen scrolled to the Change log, with a recorded read selected and its actions" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-sticker-log.png" alt="A saved device's screen scrolled to the Change log, with a recorded read selected and its actions" width="320" />
 
 A write from **Batch write** or **Configure from file** records only the
 values it wrote, not the whole form.
@@ -59,4 +59,4 @@ From the **⋮ menu** on the **Saved STICKER devices** list you can
 **Export logs** or **Delete all logs** across every device at once. Deleting
 keeps the devices and their keys.
 
-<img src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="The Saved STICKER devices overflow menu with Tags, Import, Export, Export logs, Delete all logs and Delete" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="The Saved STICKER devices overflow menu with Tags, Import, Export, Export logs, Delete all logs and Delete" width="320" />

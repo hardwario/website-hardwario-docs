@@ -15,7 +15,7 @@ zpět přes NFC.
 2. Přiložte telefon k zařízení STICKER a nehýbejte s ním.
 3. Aplikace uložené záznamy načte a zobrazí.
 
-<img src="/img/hw-manager/hw-manager-sensor-history.png" alt="Obrazovka Historie senzorů po načtení: souhrn uložené historie s 12 záznamy, intervalem 15 min, časovým rozsahem a 2 kanály a pod ním graf teploty" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-sensor-history.png" alt="Obrazovka Historie senzorů po načtení: souhrn uložené historie s 15 záznamy, intervalem 15 min, časovým rozsahem a 2 kanály a pod ním graf teploty" width="320" />
 
 Velká vyrovnávací paměť se přenáší po několika stránkách. Aplikace je čte jednu
 za druhou, dokud držíte telefon v klidu, a ukazuje průběh. Pokud se čtení
@@ -41,7 +41,7 @@ synchronizován, mají záznamy absolutní časové značky v UTC; pokud ne, jso
 seskupené jako *Den 1*, *Den 2* a tak dál, relativně k okamžiku čtení. Hodiny
 nastavíte přes **Nástroje → Synchronizovat čas**, viz [**Nástroje**](./tools.md).
 
-<img src="/img/hw-manager/hw-manager-sensor-history-table.png" alt="Rozbalená tabulka Den 1 s 12 záznamy: čas relativně k okamžiku čtení, teplota ve °C a vlhkost v %" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-sensor-history-table.png" alt="Rozbalená tabulka Den 1 s 15 záznamy: čas relativně k okamžiku čtení, teplota ve °C a vlhkost v %" width="320" />
 
 ---
 
@@ -55,7 +55,7 @@ ukládané kanály v **Konfigurace → Historie** (viz
 Sekce **Historie** také odhadne, kolik času se pro zvolené kanály a interval
 odesílání do paměti vejde.
 
-<img src="/img/hw-manager/hw-manager-configuration-history.png" alt="Sekce Historie v konfiguraci: zapnutá historie store-and-forward, teplota a vlhkost vybrané jako zaznamenávané kanály a odhad zhruba 3 měsíců historie" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-configuration-history.png" alt="Sekce Historie v konfiguraci: zapnutá historie store-and-forward, teplota a vlhkost vybrané jako zaznamenávané kanály a odhad zhruba 3 měsíců historie" width="320" />
 
 Když zařízení nemá žádné záznamy, obrazovka řekne, o který případ jde:
 

@@ -13,7 +13,7 @@ obrazovky na přístupové údaje nemusí ptát.
 Otevřete **STICKER → Uložená zařízení STICKER**. V nadpisu vidíte počet
 zařízení.
 
-<img src="/img/hw-manager/hw-manager-saved-stickers.png" alt="Seznam Uložená zařízení STICKER s vyhledávacím polem Sériové číslo nebo název, filtrem štítků, barevnými štítky na řádcích a tlačítkem Nárokovat STICKER" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-saved-stickers.png" alt="Seznam Uložená zařízení STICKER s vyhledávacím polem Sériové číslo nebo název, filtrem štítků, barevnými štítky na řádcích a tlačítkem Nárokovat STICKER" width="320" />
 
 Pole **Sériové číslo nebo název** slouží k vyhledávání, ikona štítku
 k filtrování, viz [**Organizace zařízení štítky**](./tags.md).
@@ -40,7 +40,7 @@ potřeba; viz [Import zařízení](#import-devices).
 
 Klepnutím na řádek zařízení otevřete.
 
-<img src="/img/hw-manager/hw-manager-sticker-info.png" alt="Obrazovka uloženého zařízení s názvem, sériovým číslem, skrytým tajným klíčem s tlačítky pro zobrazení, kopírování a změnu, skrytým vendor-tokenem s tlačítky pro zobrazení a kopírování, štítky a historií změn" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-sticker-info.png" alt="Obrazovka uloženého zařízení s názvem, sériovým číslem, skrytým tajným klíčem s tlačítky pro zobrazení, kopírování a změnu, skrytým vendor-tokenem s tlačítky pro zobrazení a kopírování, štítky a historií změn" width="320" />
 
 | Pole | Poznámky |
 |---|---|
@@ -74,7 +74,7 @@ vrátila do režimu nárokování pro dalšího vlastníka.
 
 Otevřete **nabídku ⋮** v seznamu a zvolte **Exportovat**.
 
-<img src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="Nabídka ⋮ seznamu Uložená zařízení STICKER s volbami Štítky, Importovat, Exportovat, Exportovat protokoly, Smazat všechny protokoly a Smazat" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-saved-sticker-more.png" alt="Nabídka ⋮ seznamu Uložená zařízení STICKER s volbami Štítky, Importovat, Exportovat, Exportovat protokoly, Smazat všechny protokoly a Smazat" width="320" />
 
 Vyberte zařízení k exportu a pak zvolte, co má export obsahovat a kam ho odeslat:
 

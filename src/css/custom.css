@@ -202,6 +202,13 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   height: auto;
 }
 
+/* HARDWARIO Manager app screenshots on the STICKER pages: a thin rounded frame,
+   so the app's white screen stands apart from the page in both themes. */
+.app-screenshot {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+}
+
 /* WCAG AA contrast (Lighthouse 2026-09-05): the brand red fails on the dark footer
    (2.4:1 on #303846) and on the active breadcrumb chip (4.3:1 on #f2f2f2), so the
    footer's cross-site links use the footer link colour and the current-page

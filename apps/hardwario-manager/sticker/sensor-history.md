@@ -13,7 +13,7 @@ taken while it was offline are not lost. Read those stored records back over NFC
 2. Hold the phone against the STICKER and keep still.
 3. The stored records are read in and shown for review.
 
-<img src="/img/hw-manager/hw-manager-sensor-history.png" alt="The Sensor history screen after a read: the Stored history summary with 12 records, a 15 min interval, the time span and 2 channels, and the Temperature chart below it" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-sensor-history.png" alt="The Sensor history screen after a read: the Stored history summary with 12 records, a 15 min interval, the time span and 2 channels, and the Temperature chart below it" width="320" />
 
 A large buffer is transferred in several pages. The app reads them one after
 another while you hold the phone still and shows the progress. If the read is
@@ -38,7 +38,7 @@ synchronized, records carry absolute UTC timestamps; if it has not, they are
 grouped as *Day 1*, *Day 2* and so on, relative to the read. Use
 **Tools → Sync time** to set the clock, see [**Tools**](./tools.md).
 
-<img src="/img/hw-manager/hw-manager-sensor-history-table.png" alt="The expanded Day 1 table with 12 records: time relative to the read, temperature in °C and humidity in %" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-sensor-history-table.png" alt="The expanded Day 1 table with 12 records: time relative to the read, temperature in °C and humidity in %" width="320" />
 
 ---
 
@@ -52,7 +52,7 @@ channels to store under **Configuration → History** (see
 The **History** section also estimates how much time fits in the buffer for the
 channels and report interval you pick.
 
-<img src="/img/hw-manager/hw-manager-configuration-history.png" alt="The History section of the configuration: Store-and-forward history switched on, Temperature and Humidity selected as recorded channels, and the estimate About 3 months of history" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-configuration-history.png" alt="The History section of the configuration: Store-and-forward history switched on, Temperature and Humidity selected as recorded channels, and the estimate About 3 months of history" width="320" />
 
 If the device has no records, the screen tells you which case it is:
 

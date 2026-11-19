@@ -17,7 +17,7 @@ to the device's four sensor slots.
 4. Put each sensor in a slot (see below).
 5. Tap **Save to device** and hold the phone against the STICKER again.
 
-<img src="/img/hw-manager/hw-manager-1w-sensors.png" alt="The 1-Wire sensors screen with the 1-Wire bus switched on, the hint to long-press a sensor and drop it on a slot, and the four slots, all empty" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-1w-sensors.png" alt="The 1-Wire sensors screen with the 1-Wire bus switched on, the hint to long-press a sensor and drop it on a slot, and the four slots, all empty" width="320" />
 
 The **1-Wire bus** switch at the top turns the bus and the reading of the slots
 on or off. With the bus off, the screen shows only the switch.

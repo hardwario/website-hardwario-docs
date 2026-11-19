@@ -13,7 +13,7 @@ over NFC. If you have not installed the app yet, start with
 
 Go to **STICKER → Configuration**.
 
-<img src="/img/hw-manager/hw-manager-configuration.png" alt="The Configuration menu with Read, Batch export, Batch write, Configure from file and Templates" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-configuration.png" alt="The Configuration menu with Read, Batch export, Batch write, Configure from file and Templates" width="320" />
 
 | Entry | What it does |
 |---|---|
@@ -31,7 +31,7 @@ Choose **Read** and hold the phone against the STICKER until the configuration
 is read. The form is headed by the device it came from (STICKER and its serial
 number). Open the section you want to change.
 
-<img src="/img/hw-manager/hw-manager-configuration-sticker.png" alt="A read configuration: the sections Radio, Measurement & reporting, Sensors, History and Alarms, collapsed, with Save to device pinned below" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-configuration-sticker.png" alt="A read configuration: the sections Radio, Measurement & reporting, Sensors, History and Alarms, collapsed, with Save to device pinned below" width="320" />
 
 | Section | Covers |
 |---|---|
@@ -68,7 +68,7 @@ Edit what you need, then tap **Save to device** and hold the phone against the
 STICKER again. The app confirms with **Configuration saved**: the device
 restarts and applies the new configuration.
 
-<img src="/img/hw-manager/hw-manager-configuration-sticker-revert.png" alt="A read configuration with the Radio section open and More actions expanded: Save to device, Apply template, Save as template and Export config to file" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-configuration-sticker-revert.png" alt="A read configuration with the Radio section open and More actions expanded: Save to device, Apply template, Save as template and Export config to file" width="320" />
 
 A value out of range is reported under its section's title, and the write
 waits until you fix it; **Show** jumps to the first one.

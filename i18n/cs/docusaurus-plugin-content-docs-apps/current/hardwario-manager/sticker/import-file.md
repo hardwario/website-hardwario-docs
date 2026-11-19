@@ -196,7 +196,7 @@ Nejvýše 2 MB, tedy tisíce řádků; skutečný seznam se k limitu ani nepřib
 3. Otevřete **menu ⋮**, zvolte **Importovat**, pak **Importovat ze souboru**
    a vyberte soubor `.csv` nebo `.json`.
 
-<img src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="Nabídka ⋮ seznamu Uložená zařízení STICKER s položkami Štítky, Importovat, Exportovat, Exportovat protokoly, Smazat všechny protokoly a Smazat" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-saved-sticker-more.png" alt="Nabídka ⋮ seznamu Uložená zařízení STICKER s položkami Štítky, Importovat, Exportovat, Exportovat protokoly, Smazat všechny protokoly a Smazat" width="320" />
 
 Před zápisem aplikace shrne, co našla: kolik zařízení se naimportuje, kolik
 z nich má secret key, kolik nových tagů vznikne a které řádky musela přeskočit.

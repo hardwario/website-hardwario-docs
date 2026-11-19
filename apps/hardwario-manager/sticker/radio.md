@@ -34,7 +34,7 @@ STICKER runs one radio at a time. A device from the factory has its radio
    against the device again. The button stays disabled until you pick a mode
    other than the current one.
 
-<img src="/img/hw-manager/hw-manager-radio-mode.png" alt="The Radio mode screen: the help line, Link: Reconnecting, the LoRaWAN card marked Current and checked, the P2P and Off cards, and the Save radio mode button" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-radio-mode.png" alt="The Radio mode screen: the help line, Link: Reconnecting, the LoRaWAN card marked Current and checked, the P2P and Off cards, and the Save radio mode button" width="320" />
 
 | Mode | What the app says |
 |---|---|
@@ -67,7 +67,7 @@ Read the keys you need to register the device on a network server.
    **Read radio link keys**.
 2. Hold the phone against the STICKER.
 
-<img src="/img/hw-manager/hw-manager-radio-link-keys.png" alt="The Radio link keys screen for one STICKER in OTAA activation: SN, Activation, DevEUI, JoinEUI and AppKey, with the Share, Scan next STICKER and Clear all buttons" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-radio-link-keys.png" alt="The Radio link keys screen for one STICKER in OTAA activation: SN, Activation, DevEUI, JoinEUI and AppKey, with the Share, Scan next STICKER and Clear all buttons" width="320" />
 
 The card shows the serial number (**SN**), the **Activation** and the keys that
 apply to the device:
@@ -101,7 +101,7 @@ Choose **Share** (with several devices, **Share all**) and pick a format:
 
 With several devices captured, every option exports all of them at once.
 
-<img src="/img/hw-manager/hw-manager-radio-link-keys-share.png" alt="The share sheet of Radio link keys with Share as JSON, Share as CSV and Share as text" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-radio-link-keys-share.png" alt="The share sheet of Radio link keys with Share as JSON, Share as CSV and Share as text" width="320" />
 
 Use the keys to register the device in
 [**ChirpStack**](/sticker/connectivity/lorawan-chirpstack) or

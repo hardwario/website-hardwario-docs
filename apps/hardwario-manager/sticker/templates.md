@@ -13,7 +13,7 @@ template is safe to reuse across devices and safe to hand to a colleague.
 
 Open **STICKER → Configuration → Templates**.
 
-<img src="/img/hw-manager/hw-manager-template.png" alt="The Templates list with a saved template, the sections it sets and the STICKER it came from, and the Add template button" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-template.png" alt="The Templates list with a saved template, the sections it sets and the STICKER it came from, and the Add template button" width="320" />
 
 ---
 
@@ -21,7 +21,7 @@ Open **STICKER → Configuration → Templates**.
 
 Choose **Add template** and pick a source:
 
-<img src="/img/hw-manager/hw-manager-template-add.png" alt="New template: From a device, Create manually, From hex and From QR code" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-template-add.png" alt="New template: From a device, Create manually, From hex and From QR code" width="320" />
 
 | Source | Use it when |
 |---|---|
@@ -33,7 +33,7 @@ Choose **Add template** and pick a source:
 Building one **manually**, give it a name and set values in any category. A
 category left empty is not saved, so a template carries only what you chose.
 
-<img src="/img/hw-manager/hw-manager-template-create.png" alt="Building a template manually: the name field and the sections Radio, Measurement & reporting, Sensors, History and Alarms" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-template-create.png" alt="Building a template manually: the name field and the sections Radio, Measurement & reporting, Sensors, History and Alarms" width="320" />
 
 You can also save the configuration you are currently editing with
 **More actions → Save as template** on the Configuration screen, or build one in
@@ -53,7 +53,7 @@ up again.
 
 Open a template and choose **Edit values**.
 
-<img src="/img/hw-manager/hw-manager-template-edit.png" alt="Editing a template's values, with the Measurement & reporting section open and the report interval set to 15 min" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-template-edit.png" alt="Editing a template's values, with the Measurement & reporting section open and the report interval set to 15 min" width="320" />
 
 **Rename** and **Delete** are in the same menu.
 
@@ -77,7 +77,7 @@ Open a template and choose **Share** to produce a **QR code** and a **hex
 string**; **Copy hex** puts the string on the clipboard. Anyone can load it back
 with **Add template → From QR code** or **From hex**.
 
-<img src="/img/hw-manager/hw-manager-template-share-qr.png" alt="Sharing a template as a QR code and a hex string, with Copy hex" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-template-share-qr.png" alt="Sharing a template as a QR code and a hex string, with Copy hex" width="320" />
 
 A template that is too large to fit in a QR code is offered as hex only.
 

@@ -9,6 +9,8 @@ description: "HARDWARIO Manager settings: light or dark appearance, English or C
 Tap the **menu** button (☰) in the top-right corner of any screen and choose
 **Settings**.
 
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-app-menu.png" alt="The app menu with Settings at the top, the External links Cloud, Documentation, Homepage and Support, and the app version at the bottom" width="320" />
+
 ---
 
 ## Appearance
@@ -32,6 +34,8 @@ Choose how the app looks:
 | **Čeština** | Always Czech. |
 
 The change applies immediately. You do not need to restart the app.
+
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-settings.png" alt="The Settings screen with Appearance (System default, Light, Dark), Language (System default, English, Čeština) and the start of Security" width="320" />
 
 ---
 
@@ -63,6 +67,8 @@ logging (existing logs are kept).*
 | **30 days** | The default. |
 | **60 days** | |
 | **90 days** | |
+
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-settings-change-log.png" alt="Settings scrolled down: Security with the Face ID or passcode lock switched off, and STICKER change log with Off, 30 days (selected), 60 days and 90 days" width="320" />
 
 The change log records every configuration read and every successful write for a
 saved device. See [**Device change log**](./sticker/change-log.md) for how to

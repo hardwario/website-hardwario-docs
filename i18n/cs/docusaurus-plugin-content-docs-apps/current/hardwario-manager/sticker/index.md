@@ -14,7 +14,7 @@ nejsou, aplikace ohlásí, že zařízení nezapnulo NFC.
 
 Otevřete **HARDWARIO Manager** a zvolte **STICKER**.
 
-<img src="/img/hw-manager/hw-manager-sticker.png" alt="Menu STICKER v aplikaci HARDWARIO Manager s položkami Informace o zařízení, Konfigurace, Senzory, Rádio, Nástroje a Uložená zařízení STICKER a s tlačítkem Nárokovat STICKER dole" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-sticker.png" alt="Menu STICKER v aplikaci HARDWARIO Manager s položkami Informace o zařízení, Konfigurace, Senzory, Rádio, Nástroje a Uložená zařízení STICKER a s tlačítkem Nárokovat STICKER dole" width="320" />
 
 ---
 

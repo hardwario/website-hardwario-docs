@@ -18,7 +18,7 @@ ke čtyřem slotům senzorů v zařízení.
 4. Každý senzor umístěte do slotu (viz níže).
 5. Klepněte na **Uložit do zařízení** a znovu přiložte telefon k zařízení STICKER.
 
-<img src="/img/hw-manager/hw-manager-1w-sensors.png" alt="Obrazovka Senzory 1-Wire se zapnutou sběrnicí 1-Wire, nápovědou k přesunu senzoru podržením a přetažením a čtyřmi sloty, všemi prázdnými" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-1w-sensors.png" alt="Obrazovka Senzory 1-Wire se zapnutou sběrnicí 1-Wire, nápovědou k přesunu senzoru podržením a přetažením a čtyřmi sloty, všemi prázdnými" width="320" />
 
 Přepínač **Sběrnice 1-Wire** nahoře zapíná a vypíná sběrnici i čtení senzorů ve
 slotech. Při vypnuté sběrnici obrazovka ukazuje jen tento přepínač.

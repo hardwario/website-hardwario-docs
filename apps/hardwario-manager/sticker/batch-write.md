@@ -23,7 +23,7 @@ which it takes from your [**Saved STICKER devices**](./saved-stickers.md) list.
 3. Optionally, fill the form from a saved preset: **More actions → Apply
    template**, see [**Templates**](./templates.md).
 
-<img src="/img/hw-manager/hw-manager-batch-write.png" alt="The Batch write form with the Measurement & reporting section open: Report interval and Sample interval both read Unchanged, and Write to devices is pinned below" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-batch-write.png" alt="The Batch write form with the Measurement & reporting section open: Report interval and Sample interval both read Unchanged, and Write to devices is pinned below" width="320" />
 
 The header shows **New configuration**, or the serial number of the last
 STICKER the app read; the form itself starts empty either way. Every field starts as **Unchanged**: numbers and keys open empty, and switches

@@ -33,7 +33,7 @@ authenticated by the device's **vendor-token** rather than its secret key, which
 is why they are kept apart from the reset ladder above. Only whoever holds the
 vendor-token can run them.
 
-<img src="/img/hw-manager/hw-manager-vendor-changes.png" alt="Vendor changes, offering Change secret key and Vendor reset" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-vendor-changes.png" alt="Vendor changes, offering Change secret key and Vendor reset" width="320" />
 
 | Operation | What it does |
 |---|---|

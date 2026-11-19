@@ -191,7 +191,7 @@ lines are skipped, and a trailing newline is optional.
 3. Open the **⋮ menu**, choose **Import**, then **Import from file**, and pick
    your `.csv` or `.json`.
 
-<img src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="The Saved STICKER devices overflow menu with Tags, Import, Export, Export logs, Delete all logs and Delete" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="The Saved STICKER devices overflow menu with Tags, Import, Export, Export logs, Delete all logs and Delete" width="320" />
 
 Before anything is written the app confirms what it found: how many devices will
 be imported, how many of them carry a secret key, how many new tags will be

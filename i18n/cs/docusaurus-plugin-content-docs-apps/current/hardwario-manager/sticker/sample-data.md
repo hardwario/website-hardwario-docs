@@ -13,7 +13,7 @@ Rychleji neověříte, že zařízení funguje celou cestou.
 2. Přiložte telefon k zařízení STICKER a nehýbejte s ním.
 3. Aplikace přečte senzory a ukáže aktuální hodnoty.
 
-<img src="/img/hw-manager/hw-manager-sample.png" alt="Data odečtená přes NFC: upozornění, že hodnoty byly zároveň odeslány rádiem, teplota a vlhkost, skupina Zařízení s napájecím napětím a tlačítko Odečíst znovu" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-sample.png" alt="Data odečtená přes NFC: upozornění, že hodnoty byly zároveň odeslány rádiem, teplota a vlhkost, skupina Zařízení s napájecím napětím a tlačítko Odečíst znovu" width="320" />
 
 Hodnoty jsou seskupené: nejdřív měření (teplota, vlhkost a další zapnuté
 senzory), pak **Zařízení** (napájecí napětí a podobně), **Čítače** a **1-Wire**

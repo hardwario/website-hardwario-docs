@@ -63,8 +63,10 @@ píšou tučně a přesně v tom znění, které ukazuje aplikace v češtině:
   v repozitáři aplikace). České stránky citují její české popisky doslova, včetně
   velkých písmen a nepřesností: **Uložená zařízení STICKER**, **Šablony**,
   **Informace o zařízení**, **Rádio → Klíče rádiového spojení**. Anglické stránky
-  citují `app_en.arb`. Snímky obrazovky jsou anglické a sdílejí je obě jazykové
-  verze.
+  citují `app_en.arb`. Snímky obrazovky stránek STICKER a Nastavení aplikace jsou pro každý jazyk
+  zvlášť: české stránky používají snímky české verze aplikace ze
+  `static/img/hw-manager/cs/`, anglické stránky ze `static/img/hw-manager/`.
+  Stránky CHESTER zatím sdílejí anglické snímky.
 - Aplikace bez české lokalizace (cloudové rozhraní) se nepřekládají a popisky
   zůstávají v původním znění: **Send Test Mail**.
 

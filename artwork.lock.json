@@ -1,4 +1,344 @@
 {
+  "static/img/hw-manager/cs/hw-manager-1w-sensors.png": {
+    "artwork": "hardwario-manager-sticker-1-wire-slots-cs",
+    "file": "hardwario-manager-sticker-1-wire-slots-cs.png",
+    "sha256": "e559a04055acb2bdbf00db70a2307bed86e2cc14e611915184cef25406638326",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-alarm-add.png": {
+    "artwork": "hardwario-manager-sticker-alarm-add-cs",
+    "file": "hardwario-manager-sticker-alarm-add-cs.png",
+    "sha256": "1d51d1a0d8f50bf178da835f6b5d215c11c89e86f9d038fbf55413f9cd392a87",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-app-menu.png": {
+    "artwork": "hardwario-manager-app-menu-cs",
+    "file": "hardwario-manager-app-menu-cs.png",
+    "sha256": "c42fa337a53d34c0462d8bc1ecab1af175139b59dabd0cce6c65b57f690eef73",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-batch-config-export-as.png": {
+    "artwork": "hardwario-manager-sticker-batch-export-share-cs",
+    "file": "hardwario-manager-sticker-batch-export-share-cs.png",
+    "sha256": "0d7ee8971128e944f747d995d4a5f8f835ddf417df74fd00b801e1a0773f6fc4",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-batch-config-export.png": {
+    "artwork": "hardwario-manager-sticker-batch-export-cs",
+    "file": "hardwario-manager-sticker-batch-export-cs.png",
+    "sha256": "61582e82e5dbf177416731e73940a1ab126ebeba4e9a9ec6341fb7769f664366",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-batch-write.png": {
+    "artwork": "hardwario-manager-sticker-batch-write-cs",
+    "file": "hardwario-manager-sticker-batch-write-cs.png",
+    "sha256": "d755e2809054d1e9148b44dfe3b0a894dbd17f9a46614bcb876a70deace40baf",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-configuration-history.png": {
+    "artwork": "hardwario-manager-sticker-configuration-history-cs",
+    "file": "hardwario-manager-sticker-configuration-history-cs.png",
+    "sha256": "d700bf71683f56196926268c4f1986d69727b57db3bc06bac4e27e81c6e7c3b2",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-configuration-sticker-revert.png": {
+    "artwork": "hardwario-manager-sticker-configuration-more-actions-cs",
+    "file": "hardwario-manager-sticker-configuration-more-actions-cs.png",
+    "sha256": "8c17f859881008c7a3974f05d2a7c61e01328ea48f65d63ff29e95e3a0705e64",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-configuration-sticker.png": {
+    "artwork": "hardwario-manager-sticker-configuration-read-cs",
+    "file": "hardwario-manager-sticker-configuration-read-cs.png",
+    "sha256": "7f6735d11cb9edbc94957b1ccde3b3bc75e75a051a4cadae7f4bb52b79bd6fd9",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-configuration.png": {
+    "artwork": "hardwario-manager-sticker-configuration-menu-cs",
+    "file": "hardwario-manager-sticker-configuration-menu-cs.png",
+    "sha256": "8b72ddf3b547d02a2561e78455e273f4ffb5f118daa22ea4507267d27b8d620c",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-device-info.png": {
+    "artwork": "hardwario-manager-sticker-device-info-cs",
+    "file": "hardwario-manager-sticker-device-info-cs.png",
+    "sha256": "b056d8a38f255318d725d9dd653b7a59828163896c0f115c7794e49d0f797c19",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-radio-link-keys-share.png": {
+    "artwork": "hardwario-manager-sticker-radio-link-keys-share-cs",
+    "file": "hardwario-manager-sticker-radio-link-keys-share-cs.png",
+    "sha256": "88a92560ba9a349b3836f6f4fd3990ae395f81a84c6d32fdbe151168cca27924",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-radio-link-keys.png": {
+    "artwork": "hardwario-manager-sticker-radio-link-keys-cs",
+    "file": "hardwario-manager-sticker-radio-link-keys-cs.png",
+    "sha256": "a11d89d49db2c9d21748da8aaa95580f6ffe7dc6fe385bfe46ce475b525982c6",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-radio-mode.png": {
+    "artwork": "hardwario-manager-sticker-radio-mode-cs",
+    "file": "hardwario-manager-sticker-radio-mode-cs.png",
+    "sha256": "aea770e6a7f5e830810482a889bd04d11e2231b242e76584b534e1126df437ab",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-sample.png": {
+    "artwork": "hardwario-manager-sticker-sample-data-cs",
+    "file": "hardwario-manager-sticker-sample-data-cs.png",
+    "sha256": "f6db97683d2512bd090a1b7a8394797c6e5e0c558eeabc9282f47f4716230fd5",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-saved-sticker-more.png": {
+    "artwork": "hardwario-manager-sticker-saved-devices-menu-cs",
+    "file": "hardwario-manager-sticker-saved-devices-menu-cs.png",
+    "sha256": "477c4f73b668ad3870110cc1e5a5713fe36d7e1ddf80f8078337c92d49d573ad",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-saved-stickers.png": {
+    "artwork": "hardwario-manager-sticker-saved-devices-cs",
+    "file": "hardwario-manager-sticker-saved-devices-cs.png",
+    "sha256": "c93a763d73b1397ee4913ded68b9b24359e63f2efc22b1a67abc9de8868501b0",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-sensor-history-table.png": {
+    "artwork": "hardwario-manager-sticker-sensor-history-table-cs",
+    "file": "hardwario-manager-sticker-sensor-history-table-cs.png",
+    "sha256": "d6c0ddce01c2eb88aca61ad7273f481228d9b12682f25199766a3330e8ae4163",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-sensor-history.png": {
+    "artwork": "hardwario-manager-sticker-sensor-history-cs",
+    "file": "hardwario-manager-sticker-sensor-history-cs.png",
+    "sha256": "58abb669c32e63c0096c486d7abdc95165a8a9993ed311a69cd3baf48961afe7",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-settings-change-log.png": {
+    "artwork": "hardwario-manager-settings-change-log-cs",
+    "file": "hardwario-manager-settings-change-log-cs.png",
+    "sha256": "cec5600f8c63f0a63a2f9213fc76abb9b86f43cd6cdb6d95d7369f047db4c4b0",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-settings.png": {
+    "artwork": "hardwario-manager-settings-cs",
+    "file": "hardwario-manager-settings-cs.png",
+    "sha256": "6b26237c9c9a9b5407b8e81a203d1bafd9bcedfab5d4112eef59b5d510a3b1fa",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-sticker-info.png": {
+    "artwork": "hardwario-manager-sticker-saved-device-detail-cs",
+    "file": "hardwario-manager-sticker-saved-device-detail-cs.png",
+    "sha256": "da695bddfa707a6b89cf12a1d5bbb53641d321ac78e8b103b276abc8c5321756",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-sticker-log.png": {
+    "artwork": "hardwario-manager-sticker-change-log-cs",
+    "file": "hardwario-manager-sticker-change-log-cs.png",
+    "sha256": "8913ab4d35bdce9f4f5b905fd31b52b1474bc3edaa14be32cf261d237fc700da",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-sticker-tags.png": {
+    "artwork": "hardwario-manager-sticker-edit-tags-cs",
+    "file": "hardwario-manager-sticker-edit-tags-cs.png",
+    "sha256": "3de614092d41cb8beffa7e838e6663266be85db39e6ca9500bbc21c0372f18c6",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-sticker.png": {
+    "artwork": "hardwario-manager-sticker-menu-cs",
+    "file": "hardwario-manager-sticker-menu-cs.png",
+    "sha256": "9cc9ac242cff7bcd5938e2f35fbfff62efad8de4cf9c8b5e7426b1ef09b59bab",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-tag-filter.png": {
+    "artwork": "hardwario-manager-sticker-tag-filter-cs",
+    "file": "hardwario-manager-sticker-tag-filter-cs.png",
+    "sha256": "003d6e7048fd950e64d045fddb9a180179082b6d497a4c3b87aa7bc60df16247",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-tags-color.png": {
+    "artwork": "hardwario-manager-sticker-tag-color-cs",
+    "file": "hardwario-manager-sticker-tag-color-cs.png",
+    "sha256": "444fb7e5f661aa64e449b15986390efc31072f691fba5ab3783218d136f571d1",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-tags.png": {
+    "artwork": "hardwario-manager-sticker-tags-cs",
+    "file": "hardwario-manager-sticker-tags-cs.png",
+    "sha256": "f11e4484a58ead94ebf77569ee1834e4b88c2c2292dadc4127e324a6fa2cc0dd",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-template-add.png": {
+    "artwork": "hardwario-manager-sticker-template-add-cs",
+    "file": "hardwario-manager-sticker-template-add-cs.png",
+    "sha256": "23278b1ac6e2790cb695c246e911b2121530b9532f312a0ab3d1c9d81b45641d",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-template-create.png": {
+    "artwork": "hardwario-manager-sticker-template-create-cs",
+    "file": "hardwario-manager-sticker-template-create-cs.png",
+    "sha256": "997a7a36f21f8b173a29c149d54c3093b8a64215654f7edcd7fa89663fc0ab7a",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-template-edit.png": {
+    "artwork": "hardwario-manager-sticker-template-edit-cs",
+    "file": "hardwario-manager-sticker-template-edit-cs.png",
+    "sha256": "6189cdc79a87235ff813900c2118e006f91cfc669eb47cc15ce16ecc82554a4e",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-template-share-qr.png": {
+    "artwork": "hardwario-manager-sticker-template-share-qr-cs",
+    "file": "hardwario-manager-sticker-template-share-qr-cs.png",
+    "sha256": "d478418066bcf6e19b5bd3b79afff3dfb70a4ecc50c1f31816cb0b5fb198740b",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-template.png": {
+    "artwork": "hardwario-manager-sticker-templates-cs",
+    "file": "hardwario-manager-sticker-templates-cs.png",
+    "sha256": "a3240f4d9f5cfbcb0c76298fb4e91ed8239726e630ebb327bbd6d21a2d024096",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-vendor-changes.png": {
+    "artwork": "hardwario-manager-sticker-vendor-changes-cs",
+    "file": "hardwario-manager-sticker-vendor-changes-cs.png",
+    "sha256": "5a65cb351a44fe1cf3e0c0cd349a0d147903a34da8e2e56d65f160b5b0f0ecf7",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
   "static/img/hw-manager/hw-manager-1w-sensors.png": {
     "artwork": "hardwario-manager-sticker-1-wire-slots",
     "file": "hardwario-manager-sticker-1-wire-slots.png",
@@ -13,6 +353,16 @@
     "artwork": "hardwario-manager-sticker-alarm-add",
     "file": "hardwario-manager-sticker-alarm-add.png",
     "sha256": "ec0e270353ef64c7f7c8dcbac1d4eb826b84eca3311f1f0ba03da8b13caa4095",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-app-menu.png": {
+    "artwork": "hardwario-manager-app-menu",
+    "file": "hardwario-manager-app-menu.png",
+    "sha256": "5fbf3fe821c1e7bb17fa574be270bca3a5ed7cbe73d96619d49614c777f7f3fb",
     "commit": "77c1138",
     "params": {
       "width": 720,
@@ -179,6 +529,26 @@
       "format": "png"
     }
   },
+  "static/img/hw-manager/hw-manager-settings-change-log.png": {
+    "artwork": "hardwario-manager-settings-change-log",
+    "file": "hardwario-manager-settings-change-log.png",
+    "sha256": "d79882141a254fe57993d59a81e81db4f62f8b9235deb267b51feae8ee08323a",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-settings.png": {
+    "artwork": "hardwario-manager-settings",
+    "file": "hardwario-manager-settings.png",
+    "sha256": "b74da2c087b8fe23f2b4173ea99c61b6dd66b0ae947e4cbba1f4b558b49d97af",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
   "static/img/hw-manager/hw-manager-sticker-info.png": {
     "artwork": "hardwario-manager-sticker-saved-device-detail",
     "file": "hardwario-manager-sticker-saved-device-detail.png",
@@ -252,7 +622,7 @@
   "static/img/hw-manager/hw-manager-template-add.png": {
     "artwork": "hardwario-manager-sticker-template-add",
     "file": "hardwario-manager-sticker-template-add.png",
-    "sha256": "8af3a4daed588122151780763baedc17f634f3453e51b54e01b9dd14efdb204d",
+    "sha256": "ce931549a6bd48db8e9251cc478e20334da38713b045825eec60b9f767956802",
     "commit": "77c1138",
     "params": {
       "width": 720,

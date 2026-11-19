@@ -21,7 +21,7 @@ to pro inventuru, audity a zálohu před změnou.
    zařízení STICKER. Konfigurace každého zařízení se při přiložení načte a počet
    (například **Zachyceno: 2**) roste.
 
-<img src="/img/hw-manager/hw-manager-batch-config-export.png" alt="Hromadný export s vybranými sekcemi Rádio, Aplikace, Senzory a Alarmy, jedním zachyceným zařízením STICKER s tlačítkem Odebrat a tlačítkem Exportovat vše" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-batch-config-export.png" alt="Hromadný export s vybranými sekcemi Rádio, Aplikace, Senzory a Alarmy, jedním zachyceným zařízením STICKER s tlačítkem Odebrat a tlačítkem Exportovat vše" width="320" />
 
 Skener se po každém zařízení sám znovu aktivuje, takže můžete projít celou
 přepravku zařízení, aniž byste mezi přiloženími sahali na obrazovku. Když
@@ -35,7 +35,7 @@ a duplikát nevznikne; tlačítkem **Odebrat** zařízení ze sady odeberete.
 Až budete mít všechno načtené, zvolte **Exportovat vše** (tlačítko ukazuje
 počet) a vyberte formát.
 
-<img src="/img/hw-manager/hw-manager-batch-config-export-as.png" alt="Exportovat vše: Sdílet jako JSON nebo Sdílet jako CSV" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-batch-config-export-as.png" alt="Exportovat vše: Sdílet jako JSON nebo Sdílet jako CSV" width="320" />
 
 | Formát | Výsledek |
 |---|---|

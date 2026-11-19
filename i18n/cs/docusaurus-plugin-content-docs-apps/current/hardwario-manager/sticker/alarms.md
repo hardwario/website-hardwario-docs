@@ -41,7 +41,7 @@ skryté, protože žádný alarm tehdy neodchází.
 4. Nastavte podmínku a dobu držení a klepněte na **Uložit**.
 5. Klepněte na **Uložit do zařízení**.
 
-<img src="/img/hw-manager/hw-manager-alarm-add.png" alt="Obrazovka Nový alarm s vybranými vestavěnými senzory a teplotou, typem alarmu práh (analogové pásmo), dolní mezí 2 °C, horní mezí 8 °C, zpožděním před spuštěním 300 s a tlačítkem Uložit" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-alarm-add.png" alt="Obrazovka Nový alarm s vybranými vestavěnými senzory a teplotou, typem alarmu práh (analogové pásmo), dolní mezí 2 °C, horní mezí 8 °C, zpožděním před spuštěním 300 s a tlačítkem Uložit" width="320" />
 
 | Typ alarmu | Podmínka | Doba držení |
 |---|---|---|

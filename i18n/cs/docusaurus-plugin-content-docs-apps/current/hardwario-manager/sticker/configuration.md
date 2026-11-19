@@ -13,7 +13,7 @@ zařízení STICKER. Pokud jste aplikaci ještě nenainstalovali, začněte str�
 
 Přejděte na **STICKER → Konfigurace**.
 
-<img src="/img/hw-manager/hw-manager-configuration.png" alt="Nabídka Konfigurace s položkami Načíst, Hromadný export, Hromadný zápis, Konfigurovat ze souboru a Šablony" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-configuration.png" alt="Nabídka Konfigurace s položkami Načíst, Hromadný export, Hromadný zápis, Konfigurovat ze souboru a Šablony" width="320" />
 
 | Položka | Co dělá |
 |---|---|
@@ -31,7 +31,7 @@ Zvolte **Načíst** a držte telefon u zařízení STICKER, dokud se konfigurace
 nepřečte. V záhlaví formuláře je zařízení, ze kterého pochází (STICKER a jeho
 sériové číslo). Pak otevřete sekci, kterou chcete změnit.
 
-<img src="/img/hw-manager/hw-manager-configuration-sticker.png" alt="Přečtená konfigurace: sbalené sekce Rádio, Měření a hlášení, Senzory, Historie a Alarmy, pod nimi připnuté tlačítko Uložit do zařízení" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-configuration-sticker.png" alt="Přečtená konfigurace: sbalené sekce Rádio, Měření a hlášení, Senzory, Historie a Alarmy, pod nimi připnuté tlačítko Uložit do zařízení" width="320" />
 
 | Sekce | Obsah |
 |---|---|
@@ -68,7 +68,7 @@ Upravte, co potřebujete, pak klepněte na **Uložit do zařízení** a znovu
 přiložte telefon k zařízení STICKER. Aplikace zápis potvrdí hlášením
 **Konfigurace uložena**: zařízení se restartuje a novou konfiguraci použije.
 
-<img src="/img/hw-manager/hw-manager-configuration-sticker-revert.png" alt="Přečtená konfigurace s otevřenou sekcí Rádio a rozbalenou nabídkou Více akcí: Uložit do zařízení, Použít šablonu, Uložit jako šablonu a Exportovat konfiguraci do souboru" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-configuration-sticker-revert.png" alt="Přečtená konfigurace s otevřenou sekcí Rádio a rozbalenou nabídkou Více akcí: Uložit do zařízení, Použít šablonu, Uložit jako šablonu a Exportovat konfiguraci do souboru" width="320" />
 
 Hodnotu mimo rozsah aplikace ohlásí pod názvem sekce a se zápisem počká, dokud
 ji neopravíte; **Zobrazit** přejde na první takovou hodnotu.

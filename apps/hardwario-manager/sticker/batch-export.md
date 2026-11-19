@@ -21,7 +21,7 @@ together, useful for inventory, audits, and backups before a change.
    Every device's configuration is captured as you tap it, and the count
    (**2 captured**, for example) grows.
 
-<img src="/img/hw-manager/hw-manager-batch-config-export.png" alt="Batch export with the sections Radio, Application, Sensors and Alarms chosen, one STICKER captured with Remove, and Export all" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-batch-config-export.png" alt="Batch export with the sections Radio, Application, Sensors and Alarms chosen, one STICKER captured with Remove, and Export all" width="320" />
 
 The scanner re-arms itself after each device, so you can work through a tray
 without touching the screen between taps. Tapping a device you have already
@@ -35,7 +35,7 @@ one from the set.
 When you have scanned everything, choose **Export all** (the button shows the
 count) and pick a format.
 
-<img src="/img/hw-manager/hw-manager-batch-config-export-as.png" alt="Export all: Share as JSON or Share as CSV" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-batch-config-export-as.png" alt="Export all: Share as JSON or Share as CSV" width="320" />
 
 | Format | Result |
 |---|---|

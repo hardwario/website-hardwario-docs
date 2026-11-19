@@ -34,7 +34,7 @@ a nevysílá nic, dokud nezvolíte režim.
    přiložte telefon k zařízení. Tlačítko je aktivní, až když vyberete jiný než
    aktuální režim.
 
-<img src="/img/hw-manager/hw-manager-radio-mode.png" alt="Obrazovka Režim rádia: úvodní text, Spojení: Znovu se připojuje, karta LoRaWAN označená jako Aktuální a zaškrtnutá, karty P2P a Vypnuto a tlačítko Uložit režim rádia" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-radio-mode.png" alt="Obrazovka Režim rádia: úvodní text, Spojení: Znovu se připojuje, karta LoRaWAN označená jako Aktuální a zaškrtnutá, karty P2P a Vypnuto a tlačítko Uložit režim rádia" width="320" />
 
 | Režim | Co říká aplikace |
 |---|---|
@@ -68,7 +68,7 @@ Přečtěte klíče, které potřebujete k registraci zařízení na síťovém 
    **Načíst klíče rádiového spojení**.
 2. Přiložte telefon k zařízení STICKER.
 
-<img src="/img/hw-manager/hw-manager-radio-link-keys.png" alt="Obrazovka Klíče rádiového spojení pro jedno zařízení STICKER s aktivací OTAA: SN, Aktivace, DevEUI, JoinEUI a AppKey a tlačítka Sdílet, Naskenovat další STICKER a Vymazat vše" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-radio-link-keys.png" alt="Obrazovka Klíče rádiového spojení pro jedno zařízení STICKER s aktivací OTAA: SN, Aktivace, DevEUI, JoinEUI a AppKey a tlačítka Sdílet, Naskenovat další STICKER a Vymazat vše" width="320" />
 
 Karta ukazuje sériové číslo (**SN**), **Aktivaci** a klíče, které pro zařízení
 platí:
@@ -102,7 +102,7 @@ Zvolte **Sdílet** (u více zařízení **Sdílet vše**) a vyberte formát:
 
 Když máte přečtených více zařízení, každá volba exportuje všechna najednou.
 
-<img src="/img/hw-manager/hw-manager-radio-link-keys-share.png" alt="Nabídka sdílení klíčů rádiového spojení s volbami Sdílet jako JSON, Sdílet jako CSV a Sdílet jako text" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-radio-link-keys-share.png" alt="Nabídka sdílení klíčů rádiového spojení s volbami Sdílet jako JSON, Sdílet jako CSV a Sdílet jako text" width="320" />
 
 Klíče pak použijte k registraci zařízení na síťovém serveru
 [**ChirpStack**](/sticker/connectivity/lorawan-chirpstack) nebo

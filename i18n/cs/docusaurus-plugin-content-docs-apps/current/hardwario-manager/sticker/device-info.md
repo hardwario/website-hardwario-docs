@@ -22,7 +22,7 @@ alarmy, stav a stav rádiového spojení.
 1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Informace o zařízení**.
 2. Přiložte telefon k zařízení STICKER a nehýbejte s ním.
 
-<img src="/img/hw-manager/hw-manager-device-info.png" alt="Informace o zařízení přečtené přes NFC: nahoře STICKER a sériové číslo, pod tím Firmware, Doba provozu, Baterie, Aktivní alarmy, Stav a Rádio, sbalená sekce Pokročilé a tlačítko Číst znovu" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-device-info.png" alt="Informace o zařízení přečtené přes NFC: nahoře STICKER a sériové číslo, pod tím Firmware, Doba provozu, Baterie, Aktivní alarmy, Stav a Rádio, sbalená sekce Pokročilé a tlačítko Číst znovu" width="320" />
 
 Obrazovka začíná nápisem **STICKER** a sériovým číslem, tedy číslem vytištěným
 na zařízení. Pod ním jsou řádky:

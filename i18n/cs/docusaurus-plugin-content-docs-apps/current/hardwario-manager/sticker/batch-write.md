@@ -25,7 +25,7 @@ secret key, který si vezme ze seznamu
 3. Formulář můžete také vyplnit z uložené předvolby: **Více akcí → Použít
    šablonu**, viz [**Šablony**](./templates.md).
 
-<img src="/img/hw-manager/hw-manager-batch-write.png" alt="Formulář Hromadný zápis s otevřenou sekcí Měření a hlášení: interval hlášení i interval měření ukazují Beze změny a dole je připnuté tlačítko Zapsat do zařízení" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-batch-write.png" alt="Formulář Hromadný zápis s otevřenou sekcí Měření a hlášení: interval hlášení i interval měření ukazují Beze změny a dole je připnuté tlačítko Zapsat do zařízení" width="320" />
 
 V záhlaví formuláře stojí **Nová konfigurace**, nebo sériové číslo zařízení
 STICKER, které aplikace četla naposledy; formulář sám je v obou případech prázdný. Každé pole začíná hodnotou **Beze změny**: čísla a klíče jsou prázdné

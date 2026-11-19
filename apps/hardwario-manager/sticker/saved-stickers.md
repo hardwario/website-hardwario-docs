@@ -13,7 +13,7 @@ without asking you for credentials.
 Open **STICKER → Saved STICKER devices**. The title shows how many devices you
 have.
 
-<img src="/img/hw-manager/hw-manager-saved-stickers.png" alt="The Saved STICKER devices list with the Serial or name search box, the tag filter, color-coded tags on each row and the Claim STICKER button" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-saved-stickers.png" alt="The Saved STICKER devices list with the Serial or name search box, the tag filter, color-coded tags on each row and the Claim STICKER button" width="320" />
 
 Use the **Serial or name** box to search, and the tag icon to filter, see
 [**Organize devices with tags**](./tags.md).
@@ -39,7 +39,7 @@ account is needed; see [Import devices](#import-devices).
 
 Tap a row to open the device.
 
-<img src="/img/hw-manager/hw-manager-sticker-info.png" alt="A saved device's screen showing name, serial number, the hidden secret key with reveal, copy and change buttons, the hidden vendor-token with reveal and copy buttons, tags and change log" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-sticker-info.png" alt="A saved device's screen showing name, serial number, the hidden secret key with reveal, copy and change buttons, the hidden vendor-token with reveal and copy buttons, tags and change log" width="320" />
 
 | Field | Notes |
 |---|---|
@@ -73,7 +73,7 @@ claiming mode for the next owner.
 
 Open the **⋮ menu** on the list and choose **Export**.
 
-<img src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="The Saved STICKER devices overflow menu with Tags, Import, Export, Export logs, Delete all logs and Delete" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="The Saved STICKER devices overflow menu with Tags, Import, Export, Export logs, Delete all logs and Delete" width="320" />
 
 Select the devices to export, then choose what to include and where to send it:
 

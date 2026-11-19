@@ -29,7 +29,7 @@ Viz [**Nastavení aplikace**](../settings.md).
    U každé je uvedené datum, čas a sekce, které zahrnuje (**Rádio**,
    **Aplikace**, **Senzory**, **Alarmy**).
 
-<img src="/img/hw-manager/hw-manager-sticker-log.png" alt="Obrazovka uloženého zařízení posunutá na Historii změn s vybraným zaznamenaným čtením a jeho akcemi" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-sticker-log.png" alt="Obrazovka uloženého zařízení posunutá na Historii změn s vybraným zaznamenaným čtením a jeho akcemi" width="320" />
 
 Zápis přes **Hromadný zápis** nebo **Konfigurovat ze souboru** zaznamená jen
 hodnoty, které zapsal, ne celý formulář.
@@ -59,4 +59,4 @@ V **nabídce ⋮** seznamu **Uložená zařízení STICKER** můžete historii v
 zařízení najednou exportovat (**Exportovat protokoly**) nebo smazat (**Smazat
 všechny protokoly**). Zařízení i jejich klíče přitom zůstanou.
 
-<img src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="Nabídka ⋮ seznamu Uložená zařízení STICKER s volbami Štítky, Importovat, Exportovat, Exportovat protokoly, Smazat všechny protokoly a Smazat" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-saved-sticker-more.png" alt="Nabídka ⋮ seznamu Uložená zařízení STICKER s volbami Štítky, Importovat, Exportovat, Exportovat protokoly, Smazat všechny protokoly a Smazat" width="320" />

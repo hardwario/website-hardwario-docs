@@ -13,7 +13,7 @@ end-to-end test that a device is working.
 2. Hold the phone against the STICKER and keep still.
 3. The app reads the sensors and shows the current values.
 
-<img src="/img/hw-manager/hw-manager-sample.png" alt="Sample data read over NFC: the note that the readings were also sent over the radio, temperature and humidity, the Device group with the supply voltage, and the Sample again button" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-sample.png" alt="Sample data read over NFC: the note that the readings were also sent over the radio, temperature and humidity, the Device group with the supply voltage, and the Sample again button" width="320" />
 
 The values are grouped: the measurements first (temperature, humidity and the
 other enabled sensors), then **Device** (supply voltage and the like),

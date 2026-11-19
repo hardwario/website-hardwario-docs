@@ -9,6 +9,8 @@ description: "Nastavení aplikace HARDWARIO Manager: světlý či tmavý vzhled,
 Na kterékoli obrazovce klepněte na tlačítko **nabídky** (☰) v pravém horním rohu
 a zvolte **Nastavení**.
 
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-app-menu.png" alt="Nabídka aplikace s položkou Nastavení nahoře, externími odkazy Cloud, Dokumentace, Domovská stránka a Podpora a verzí aplikace dole" width="320" />
+
 ---
 
 ## Vzhled {#appearance}
@@ -32,6 +34,8 @@ Zvolte, jak má aplikace vypadat:
 | **Čeština** | Vždy česky. |
 
 Změna se projeví okamžitě. Aplikaci není potřeba restartovat.
+
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-settings.png" alt="Obrazovka Nastavení se skupinami Vzhled (Výchozí nastavení systému, Světlý, Tmavý), Jazyk (Výchozí nastavení systému, English, Čeština) a začátkem skupiny Zabezpečení" width="320" />
 
 ---
 
@@ -62,6 +66,8 @@ Vypnuto zastaví protokolování (existující protokoly zůstanou zachovány).*
 | **30 dní** | Výchozí. |
 | **60 dní** | |
 | **90 dní** | |
+
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-settings-change-log.png" alt="Nastavení posunuté níž: Zabezpečení s vypnutým zámkem přes Face ID nebo kód a Protokol změn STICKER s volbami Vypnuto, 30 dní (vybráno), 60 dní a 90 dní" width="320" />
 
 Historie změn zaznamenává u uloženého zařízení každé čtení konfigurace a každý
 úspěšný zápis. Jak záznamy číst, exportovat a znovu použít, popisuje stránka

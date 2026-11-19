@@ -22,7 +22,7 @@ The read uses the encrypted channel, so the device must be saved with its
 1. Open **HARDWARIO Manager** and go to **STICKER → Device info**.
 2. Hold the phone against the STICKER and keep still.
 
-<img src="/img/hw-manager/hw-manager-device-info.png" alt="Device info read over NFC: STICKER and its serial number at the top, then Firmware, Uptime, Battery, Active alarms, Health and Radio, the collapsed Advanced section and the Read again button" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-device-info.png" alt="Device info read over NFC: STICKER and its serial number at the top, then Firmware, Uptime, Battery, Active alarms, Health and Radio, the collapsed Advanced section and the Read again button" width="320" />
 
 The screen opens with **STICKER** and the serial number, the number printed on
 the device. Below it:

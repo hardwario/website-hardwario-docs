@@ -14,7 +14,7 @@ i předat kolegovi.
 
 Otevřete **STICKER → Konfigurace → Šablony**.
 
-<img src="/img/hw-manager/hw-manager-template.png" alt="Seznam šablon s uloženou šablonou, sekcemi, které nastavuje, a zařízením STICKER, ze kterého pochází, a tlačítko Přidat šablonu" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-template.png" alt="Seznam šablon s uloženou šablonou a sekcemi, které nastavuje, a tlačítko Přidat šablonu" width="320" />
 
 ---
 
@@ -22,7 +22,7 @@ Otevřete **STICKER → Konfigurace → Šablony**.
 
 Zvolte **Přidat šablonu** a vyberte zdroj:
 
-<img src="/img/hw-manager/hw-manager-template-add.png" alt="Nová šablona: Ze zařízení, Vytvořit ručně, Z hex a Z QR kódu" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-template-add.png" alt="Nová šablona: Ze zařízení, Vytvořit ručně, Z hex a Z QR kódu" width="320" />
 
 | Zdroj | Použijte, když |
 |---|---|
@@ -34,7 +34,7 @@ Zvolte **Přidat šablonu** a vyberte zdroj:
 Když šablonu vytváříte **ručně**, pojmenujte ji a nastavte hodnoty v libovolné kategorii.
 Prázdná kategorie se neuloží, takže šablona obsahuje jen to, co jste nastavili.
 
-<img src="/img/hw-manager/hw-manager-template-create.png" alt="Ruční sestavení šablony: pole pro název a sekce Rádio, Měření a hlášení, Senzory, Historie a Alarmy" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-template-create.png" alt="Ruční sestavení šablony: pole pro název a sekce Rádio, Měření a hlášení, Senzory, Historie a Alarmy" width="320" />
 
 Šablonu můžete také uložit z právě upravované konfigurace volbou
 **Více akcí → Uložit jako šablonu** na obrazovce Konfigurace, nebo ji sestavit
@@ -54,7 +54,7 @@ a proto se odstraní; nastavte je znovu.
 
 Otevřete šablonu a zvolte **Upravit hodnoty**.
 
-<img src="/img/hw-manager/hw-manager-template-edit.png" alt="Úprava hodnot šablony s otevřenou sekcí Měření a hlášení a intervalem hlášení 15 min" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-template-edit.png" alt="Úprava hodnot šablony s otevřenou sekcí Měření a hlášení a intervalem hlášení 15 min" width="320" />
 
 **Přejmenovat** a **Smazat** jsou ve stejné nabídce.
 
@@ -78,7 +78,7 @@ Otevřete šablonu a zvolte **Sdílet**; vznikne **QR kód** a **hexadecimální
 řetězec**. **Kopírovat hex** vloží řetězec do schránky. Kdokoli šablonu načte
 zpět volbou **Přidat šablonu → Z QR kódu** nebo **Z hex**.
 
-<img src="/img/hw-manager/hw-manager-template-share-qr.png" alt="Sdílení šablony jako QR kódu a hexadecimálního řetězce s tlačítkem Kopírovat hex" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-template-share-qr.png" alt="Sdílení šablony jako QR kódu a hexadecimálního řetězce s tlačítkem Kopírovat hex" width="320" />
 
 Šablona, která se do QR kódu nevejde, se nabídne jen jako hexadecimální řetězec.
 

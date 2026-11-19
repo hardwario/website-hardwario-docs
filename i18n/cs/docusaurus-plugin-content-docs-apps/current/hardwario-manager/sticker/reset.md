@@ -32,7 +32,7 @@ Dvě další operace najdete v nabídce **STICKER → Nástroje → Změny výro
 Ověřují se **vendor-tokenem** zařízení, ne jeho tajným klíčem, a proto jsou
 oddělené od resetů výše. Spustit je může jen ten, kdo vendor-token má.
 
-<img src="/img/hw-manager/hw-manager-vendor-changes.png" alt="Změny výrobce s volbami Změnit tajný klíč a Reset výrobce" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-vendor-changes.png" alt="Změny výrobce s volbami Změnit tajný klíč a Reset výrobce" width="320" />
 
 | Operace | Co dělá |
 |---|---|

@@ -123,8 +123,7 @@ V novějších sestaveních RouterOS může být menu `/iot lora` místo `/lora`
 | Anténa | Zisk | Hodnota `antenna-gain` |
 | --- | --- | --- |
 | Vestavěná anténa zařízení wAP LR8G kit (868 MHz) | 2 dBi | `2` |
-| Všesměrová anténa MikroTik 868 Omni (`868_Omni_antenna`) | 6,5 dBi | `6.5` |
-| Sada všesměrové antény LoRa od MikroTik (`TOF-0809-7V-S1`, už se nevyrábí) | 6,5 dBi | `6.5` |
+| Sada všesměrové antény LoRa od MikroTik (`TOF-0809-...`) | 6,5 dBi | `6.5` |
 | Jiná externí anténa | viz její katalogový list | dBi antény − ztráty na kabelu |
 
 U zařízení **EMBER** musí hodnota odpovídat anténě, která je ke kartě LoRa skutečně připojená: buď

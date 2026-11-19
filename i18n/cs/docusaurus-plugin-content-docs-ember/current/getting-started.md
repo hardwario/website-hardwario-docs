@@ -21,11 +21,11 @@ Nastavujete EMBER, které ještě nastavené není, například po resetu? Viz [
   kontrolovat nemusíte. Jen pokud chcete použít externí anténu, viz
   [Přechod na externí anténu](hardware-description.md#switching-to-an-external-antenna).
 - **SIM karta** (jen EMBER s modemem LTE): pokud uvnitř není SIM karta, vložte svou ještě před zapnutím: otevřete
-  krabičku a zasuňte SIM kartu (velikost mini-SIM) do slotu pro SIM pod kartou LTE, kam ukazuje šipka. Žádné
-  šrouby povolovat nemusíte. Krabičku pečlivě zavřete, závisí na tom její krytí **IP67**. Kromě montáže externí antény je
+  krabičku a zasuňte SIM kartu (velikost mini-SIM) do slotu pro SIM pod deskou, kam ukazuje šipka (u horní
+  karty, modemu LTE). Žádné šrouby povolovat nemusíte. Krabičku pečlivě zavřete, závisí na tom její krytí **IP67**. Kromě montáže externí antény je
   SIM karta jediný důvod krabičku otevírat.
 
-  ![EMBER otevřený shora: slot pro SIM je pod kartou LTE (orámovaná), šipka ukazuje, kam se SIM karta zasouvá](../../../../ember/images/ember-sim-slot.webp)
+  ![Deska zařízení EMBER: SIM karta se zasouvá pod desku ze strany, kam ukazuje šipka, u horního slotu pro kartu](../../../../ember/images/ember-sim-slot.webp)
 
 - **Napájení:** adaptér 24 V DC, napájecí zdroj 24 V DC, nebo pasivní PoE 24 V DC přes port **WAN**. Více informací:
   [Možnosti napájení](hardware-description.md#power-supply-options).

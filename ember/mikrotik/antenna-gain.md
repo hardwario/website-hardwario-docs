@@ -123,8 +123,7 @@ On newer RouterOS builds the menu may be `/iot lora` instead of `/lora`. If `/lo
 | Antenna | Gain | `antenna-gain` value |
 | --- | --- | --- |
 | wAP LR8G kit built-in antenna (868 MHz) | 2 dBi | `2` |
-| MikroTik 868 Omni antenna (`868_Omni_antenna`) | 6.5 dBi | `6.5` |
-| MikroTik omni LoRa antenna kit (`TOF-0809-7V-S1`, discontinued) | 6.5 dBi | `6.5` |
+| MikroTik omni LoRa antenna kit (`TOF-0809-...`) | 6.5 dBi | `6.5` |
 | Other external antenna | see its datasheet | antenna dBi − cable loss |
 
 On **EMBER** the value has to match whichever antenna is actually connected to the LoRa card: the

@@ -21,11 +21,11 @@ Setting up an EMBER that is not set up yet, for example after a reset? See [Auto
   is nothing to attach or check. Only if you want to use an external antenna, see
   [Switching to an external antenna](hardware-description.md#switching-to-an-external-antenna).
 - **SIM card** (EMBER with the LTE modem only): if there is no SIM card inside, insert your own before you power
-  EMBER up: open the enclosure and push the SIM card (mini-SIM size) into the SIM slot under the LTE card, where the
-  arrow shows. You don't need to remove any screws. Close the enclosure carefully, its **IP67** rating depends on the
+  EMBER up: open the enclosure and push the SIM card (mini-SIM size) into the SIM slot beneath the board, where the
+  arrow shows (level with the upper card, the LTE modem). You don't need to remove any screws. Close the enclosure carefully, its **IP67** rating depends on the
   seal. Apart from fitting an external antenna, the SIM card is the only reason to open the enclosure.
 
-  ![EMBER opened from the top: the SIM slot is under the LTE card (outlined), the arrow shows where the SIM card goes in](images/ember-sim-slot.webp)
+  ![EMBER board: the SIM card slides beneath the board from the side where the arrow shows, level with the upper card slot](images/ember-sim-slot.webp)
 
 - **Power:** 24 V DC adapter, 24 V DC power supply, or 24 V DC passive PoE through the **WAN** port. More details:
   [Power Supply Options](hardware-description.md#power-supply-options).

@@ -358,6 +358,19 @@
 /chester/features/                                   /chester/                                                       301
 
 
+# HARDWARIO Manager 2.1.1 removed the STICKER offline configuration page;
+# its successor for writing many devices is Batch write (2026-11-19)
+/apps/hardwario-manager/sticker/offline-configuration        /apps/hardwario-manager/sticker/batch-write/        301
+/apps/hardwario-manager/sticker/offline-configuration/       /apps/hardwario-manager/sticker/batch-write/        301
+/cs/apps/hardwario-manager/sticker/offline-configuration     /cs/apps/hardwario-manager/sticker/batch-write/     301
+/cs/apps/hardwario-manager/sticker/offline-configuration/    /cs/apps/hardwario-manager/sticker/batch-write/     301
+# HARDWARIO Manager 2.1.1 shows no ATELOS account; its page was removed (2026-11-19)
+/apps/hardwario-manager/atelos                               /apps/hardwario-manager/                            301
+/apps/hardwario-manager/atelos/                              /apps/hardwario-manager/                            301
+/cs/apps/hardwario-manager/atelos                            /cs/apps/hardwario-manager/                         301
+/cs/apps/hardwario-manager/atelos/                           /cs/apps/hardwario-manager/                         301
+
+
 # --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
 # --- every rule after the first splat toward the 100-dynamic-rule limit and
 # --- fails the deploy beyond it; static rules also only win when listed first.

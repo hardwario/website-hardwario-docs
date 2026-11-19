@@ -21,7 +21,7 @@ Zařízení hledá sondy na sběrnici:
 
 - **při startu,** pokud je některý slot nastavený, tedy má uloženou sondu nebo očekávaný typ sondy (`sensor1-type` až `sensor4-type`);
 - **na pozadí,** dokud některý nastavený slot čeká na svou sondu: asi 2, 7, 17 a 32 min po startu, potom každých 15 min;
-- **když sloty přečtete** v aplikaci HARDWARIO Manager (**Tools → 1-Wire sensors**) nebo pošlete příkaz `w1_scan`.
+- **když sloty přečtete** v aplikaci HARDWARIO Manager (**Senzory → Senzory 1-Wire**) nebo pošlete příkaz `w1_scan`.
 
 Zařízení nalezenou sondu použije hned, bez restartu. Novou sondu, která nepatří žádnému slotu, zařadí do nejnižšího volného slotu. Aby tam zůstala i po restartu, uložte nastavení.
 
@@ -45,10 +45,10 @@ Nová sonda má jiné sériové číslo, a proto ji zařízení nikdy samo neza�
 Chcete-li novou sondu zařadit do slotu té staré, aby její hodnoty měly dál stejný název, postupujte takto:
 
 1. Připojte novou sondu ke vstupu, na kterém byla ta stará.
-2. V aplikaci HARDWARIO Manager otevřete **STICKER → Tools → 1-Wire sensors**, zvolte **Read slots & scan the 1-Wire bus** a přiložte telefon k zařízení.
-3. Přiřaďte novou sondu ke slotu té staré. Sondy od sebe rozlišíte tak, že jednu zahřejete v ruce a sledujete, která hodnota se mění.
-4. Vyprázdněte všechny sloty, ve kterých už žádná sonda není.
-5. Zvolte **Save to device** a přiložte telefon k zařízení. Zařízení sloty uloží a restartuje se.
+2. V aplikaci HARDWARIO Manager otevřete **STICKER → Senzory → Senzory 1-Wire**, zvolte **Načíst sloty a prohledat sběrnici 1-Wire** a přiložte telefon k zařízení.
+3. Novou sondu přetáhněte na slot té staré (podržte na ní prst a pusťte ji nad slotem), nebo použijte tlačítko **Přiřadit**. Sondy od sebe rozlišíte tak, že jednu zahřejete v ruce, zvolíte **Načíst a znovu prohledat** a klepnutím na každou sondu porovnáte její hodnoty.
+4. Ve všech slotech, ve kterých už žádná sonda není, zvolte **Vymazat slot**.
+5. Zvolte **Uložit do zařízení** a přiložte telefon k zařízení. Zařízení sloty uloží a restartuje se.
 6. Zkontrolujte, že další uplink Info ukazuje slot ve stavu `ok` a že telemetrie obsahuje jeho hodnoty.
 
 Pokud je nová sonda jiného typu, nastavte pravidla alarmů slotu znovu, protože pravidla pro starý typ zůstanou neaktivní. Pokud historie ukládá hodnoty tohoto slotu, začne znovu od začátku.

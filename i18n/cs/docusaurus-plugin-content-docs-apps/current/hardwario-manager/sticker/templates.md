@@ -1,7 +1,7 @@
 ---
 slug: templates
 title: Šablony
-description: "Konfigurační šablony pro STICKER v aplikaci HARDWARIO Manager: vytvoření ze zařízení, ručně, z hexu nebo QR kódu, použití přes NFC či offline a sdílení."
+description: "Konfigurační šablony pro STICKER v aplikaci HARDWARIO Manager: vytvoření ze zařízení, ručně, z hexu či QR kódu, použití přes NFC či hromadným zápisem, sdílení."
 ---
 
 # Šablony: vytvoření, sdílení, úprava a použití {#templates-create-share-edit-and-apply}
@@ -12,71 +12,75 @@ mnohokrát**. Šablony obsahují jen nastavení, která lze sdílet; identita a 
 se záměrně vynechávají, takže šablonu můžete bezpečně použít pro více zařízení
 i předat kolegovi.
 
-Otevřete **STICKER → Templates**.
+Otevřete **STICKER → Konfigurace → Šablony**.
 
-<img src="/img/hw-manager/hw-manager-template.png" alt="Seznam šablon" width="320" />
+<img src="/img/hw-manager/hw-manager-template.png" alt="Seznam šablon s uloženou šablonou, sekcemi, které nastavuje, a zařízením STICKER, ze kterého pochází, a tlačítko Přidat šablonu" width="320" />
 
 ---
 
 ## Vytvoření šablony {#create-a-template}
 
-Zvolte **Add template** a vyberte zdroj:
+Zvolte **Přidat šablonu** a vyberte zdroj:
 
-<img src="/img/hw-manager/hw-manager-template-add.png" alt="Vytvoření nové šablony: volba zdroje" width="320" />
+<img src="/img/hw-manager/hw-manager-template-add.png" alt="Nová šablona: Ze zařízení, Vytvořit ručně, Z hex a Z QR kódu" width="320" />
 
 | Zdroj | Použijte, když |
 |---|---|
-| **From a device** | Máte zařízení už nastavené tak, jak chcete |
-| **Create manually** | Sestavujete předvolbu od začátku |
-| **From hex** | Někdo vám poslal šablonu jako hexadecimální řetězec |
-| **From QR code** | Někdo vám šablonu sdílel jako QR kód |
+| **Ze zařízení** | Máte zařízení už nastavené tak, jak chcete |
+| **Vytvořit ručně** | Sestavujete předvolbu od začátku |
+| **Z hex** | Někdo vám poslal šablonu jako hexadecimální řetězec |
+| **Z QR kódu** | Někdo vám šablonu sdílel jako QR kód |
 
 Když šablonu vytváříte **ručně**, pojmenujte ji a nastavte hodnoty v libovolné kategorii.
 Prázdná kategorie se neuloží, takže šablona obsahuje jen to, co jste nastavili.
 
-<img src="/img/hw-manager/hw-manager-template-create.png" alt="Ruční sestavení šablony" width="320" />
+<img src="/img/hw-manager/hw-manager-template-create.png" alt="Ruční sestavení šablony: pole pro název a sekce Rádio, Měření a hlášení, Senzory, Historie a Alarmy" width="320" />
 
 Šablonu můžete také uložit z právě upravované konfigurace volbou
-**Configuration → Save as template**, nebo ji sestavit v prohlížeči
-v [**Generátoru šablon**](./template-generator.mdx).
+**Více akcí → Uložit jako šablonu** na obrazovce Konfigurace, nebo ji sestavit
+v prohlížeči v [**Generátoru konfiguračních šablon**](./template-generator.mdx).
+
+:::info Starší šablony se převádějí
+Šablona vytvořená pro firmware v1.4 (kód sdílený ze starší verze aplikace nebo
+šablona z Generátoru konfiguračních šablon) se při načtení převede pro firmware v2.0.0.
+Formulář, na který ji použijete, pod nadpisem **Převedeno pro firmware 2.0**
+uvede, co se změnilo. Pravidla alarmů ze staršího firmwaru převést nelze,
+a proto se odstraní; nastavte je znovu.
+:::
 
 ---
 
 ## Úprava šablony {#edit-a-template}
 
-Otevřete šablonu a zvolte **Edit values**.
+Otevřete šablonu a zvolte **Upravit hodnoty**.
 
-<img src="/img/hw-manager/hw-manager-template-edit.png" alt="Úprava hodnot šablony" width="320" />
+<img src="/img/hw-manager/hw-manager-template-edit.png" alt="Úprava hodnot šablony s otevřenou sekcí Měření a hlášení a intervalem hlášení 15 min" width="320" />
 
-**Rename** a **Delete** jsou ve stejné nabídce.
+**Přejmenovat** a **Smazat** jsou ve stejné nabídce.
 
 ---
 
 ## Použití šablony {#apply-a-template}
 
-Otevřete šablonu a zvolte, jak ji zapsat:
+Otevřete šablonu a zvolte **Použít přes NFC**: aplikace přečte zařízení,
+vyplní formulář ze šablony, vy ho zkontrolujete a zapíšete tlačítkem **Uložit
+do zařízení**.
 
-| Akce | Co se stane |
-|---|---|
-| **Apply over NFC** | Přečte zařízení, zobrazí výsledné změny ke kontrole a pak zapíše |
-| **Apply offline** | Hromadný zápis do vypnutých zařízení, viz [**Konfigurace vypnutého zařízení**](./offline-configuration.md) |
-
-Při offline použití se konfigurace ze šablony předvyplní. Zkontrolujte ji a pak zvolte
-**Write to tag**.
-
-<img src="/img/hw-manager/hw-manager-template-offline.png" alt="Offline použití šablony: předvyplněná, připravená ke kontrole a zápisu do tagu" width="320" />
+Pokud chcete stejnou šablonu použít pro mnoho zařízení, otevřete
+[**Hromadný zápis**](./batch-write.md), zvolte **Více akcí → Použít šablonu**,
+pak **Zapsat do zařízení** a přikládejte telefon k jednomu zařízení za druhým.
 
 ---
 
 ## Sdílení šablony {#share-a-template}
 
-Otevřete šablonu a zvolte **Share**; vznikne **QR kód** a **hexadecimální
-řetězec**. **Copy hex** vloží řetězec do schránky. Kdokoli šablonu načte zpět
-volbou **Add template → From QR code** nebo **From hex**.
+Otevřete šablonu a zvolte **Sdílet**; vznikne **QR kód** a **hexadecimální
+řetězec**. **Kopírovat hex** vloží řetězec do schránky. Kdokoli šablonu načte
+zpět volbou **Přidat šablonu → Z QR kódu** nebo **Z hex**.
 
-<img src="/img/hw-manager/hw-manager-template-share-qr.png" alt="Sdílení šablony jako QR kódu a hexadecimálního řetězce" width="320" />
+<img src="/img/hw-manager/hw-manager-template-share-qr.png" alt="Sdílení šablony jako QR kódu a hexadecimálního řetězce s tlačítkem Kopírovat hex" width="320" />
 
 Šablona, která se do QR kódu nevejde, se nabídne jen jako hexadecimální řetězec.
 
-Když importujete šablonu se stejným názvem, jaký už máte, aplikace se zeptá, jestli ji chcete
-nahradit (**Replace**).
+Když šablonu importujete nebo přejmenujete na název, který už používáte,
+aplikace se zeptá, jestli stávající šablonu chcete nahradit (**Nahradit**).

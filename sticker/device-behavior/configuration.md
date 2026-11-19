@@ -38,7 +38,7 @@ NFC is the standard way.
 
 ## Security
 
-Every STICKER has its own secret key, which you add to HARDWARIO Manager once per device, see [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers). Commands and answers are encrypted, so without the key a phone can neither read nor change the configuration.
+Every STICKER has its own secret key, which you add to HARDWARIO Manager once per device, see [**Saved STICKER devices**](/apps/hardwario-manager/sticker/saved-stickers). Commands and answers are encrypted, so without the key a phone can neither read nor change the configuration.
 
 ## Main settings and defaults
 

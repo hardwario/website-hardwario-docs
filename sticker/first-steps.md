@@ -77,9 +77,9 @@ Start with the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager
 :::
 
 1. **Install the app** and switch **NFC** on. STICKER is configured from an Android phone or an iPhone, the same way on both.
-2. **Add the device** to your saved STICKERs, so the app has its **secret key**, because STICKER answers configuration and key requests only over an encrypted channel.
-3. **Read the keys.** Open **STICKER → LoRaWAN keys** and tap the device. Note the **DevEUI**, **JoinEUI (AppEUI)** and **AppKey** for OTAA, or the **DevAddr** and session keys for ABP.
-4. **Write the configuration.** Open **STICKER → Configuration**, set the region, activation mode and keys in the **LoRaWAN** section, switch **`radio-mode`** to LoRaWAN, then tap again to write it back.
+2. **Add the device** to your **Saved STICKER devices**, so the app has its **secret key**, because STICKER answers configuration and key requests only over an encrypted channel.
+3. **Read the keys.** Open **STICKER → Radio → Radio link keys**, choose **Read radio link keys** and tap the device. Note the **DevEUI**, **JoinEUI (AppEUI)** and **AppKey** for OTAA, or the **DevAddr** and session keys for ABP.
+4. **Write the configuration.** Open **STICKER → Configuration → Read** and tap the device. In the **Radio** section set **Radio mode** to LoRaWAN first: the region, activation and key fields stay hidden while the radio is off. Then set the region, activation mode and keys, choose **Save to device** and tap again.
 
 ### Where each step is documented
 
@@ -87,8 +87,9 @@ Start with the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager
 |---|---|
 | Installing the app and switching NFC on | [**Install the app**](/apps/hardwario-manager/install) |
 | Holding the phone right (one tap, phone held still) | [**STICKER over NFC**](/apps/hardwario-manager/sticker) |
-| Adding a device and its secret key | [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers) |
-| Reading device info and LoRaWAN keys | [**Device info and LoRaWAN keys**](/apps/hardwario-manager/sticker/device-info) |
+| Adding a device and its secret key | [**Saved STICKER devices**](/apps/hardwario-manager/sticker/saved-stickers) |
+| Reading device info | [**Device info**](/apps/hardwario-manager/sticker/device-info) |
+| Switching the radio on and reading the radio link keys | [**Radio**](/apps/hardwario-manager/sticker/radio) |
 | Reading, editing and writing the configuration | [**Configuration**](/apps/hardwario-manager/sticker/configuration) |
 | Giving a whole batch the same settings | [**Templates**](/apps/hardwario-manager/sticker/templates) |
 
@@ -97,7 +98,7 @@ Start with the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager
 | LED | Meaning | What to do |
 |---|---|---|
 | **Green and yellow for 2 seconds** | The tap ended and its last exchange succeeded | Nothing. If the write needs a reboot, the boot sequence follows |
-| **Red for 2 seconds** | **The last exchange failed.** The request was rejected before it ran (wrong **secret key** or token, a replayed or damaged frame; nothing is written then), or its reply did not reach the phone. A command the device answers with an error, for example a value out of range, still ends green and yellow; the app shows the error | Check the device is saved with the right secret key in [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), then tap again |
+| **Red for 2 seconds** | **The last exchange failed.** The request was rejected before it ran (wrong **secret key** or token, a replayed or damaged frame; nothing is written then), or its reply did not reach the phone. A command the device answers with an error, for example a value out of range, still ends green and yellow; the app shows the error | Check the device is saved with the right secret key in [**Saved STICKER devices**](/apps/hardwario-manager/sticker/saved-stickers), then tap again |
 | Heartbeat changes from **1× yellow** to **yellow + red** | The radio is on and the device is joining | Wait. A join can take several attempts |
 | Heartbeat settles to **1× green** | Joined. The device sends its **Device Info** payload, followed by a **settings-info** uplink with its key settings (both on fPort 85) | Nothing. The device is live |
 
@@ -165,7 +166,7 @@ step.
 | **Green, solid** (at most 5 s) | Phone detected in the NFC field, no session started yet | Keep the phone still |
 | **Green, blinking** (~90 ms) | Session running: the phone and the device are exchanging commands | Keep the phone still |
 | **Green and yellow, 2 s** | Session ended, the last exchange succeeded | Nothing |
-| **Red, 2 s** | Session ended, the last exchange **failed**: the request was rejected before it ran (wrong secret key or vendor token, a replayed or damaged frame; nothing is written then), or its reply did not reach the phone | Check the device is saved with the right secret key, see [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), then tap again |
+| **Red, 2 s** | Session ended, the last exchange **failed**: the request was rejected before it ran (wrong secret key or vendor token, a replayed or damaged frame; nothing is written then), or its reply did not reach the phone | Check the device is saved with the right secret key, see [**Saved STICKER devices**](/apps/hardwario-manager/sticker/saved-stickers), then tap again |
 | **Off** | Exchange finished | Nothing |
 
 The red result is worth knowing: without it, a failed exchange would look exactly

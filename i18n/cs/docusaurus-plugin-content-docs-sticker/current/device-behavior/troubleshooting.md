@@ -15,7 +15,7 @@ Začněte tím, co vidíte. Každá odpověď uvádí obvyklou příčinu i ře�
 
 Po skončení startovní sekvence sledujte LED ještě 10 s.
 
-- <LedPattern pattern="yellow" /> **Jedno krátké žluté bliknutí každé 3 s:** rádio je vypnuté. Zařízení měří, ale nic neposílá. V aplikaci HARDWARIO Manager rádio zapněte a nastavení uložte. Zařízení se restartuje a připojí k síti.
+- <LedPattern pattern="yellow" /> **Jedno krátké žluté bliknutí každé 3 s:** rádio je vypnuté. Zařízení měří, ale nic neposílá. V aplikaci HARDWARIO Manager rádio zapněte (**STICKER → Rádio → Režim rádia**) a nastavení uložte. Zařízení se restartuje a připojí k síti.
 - <LedPattern pattern="yellow red" /> **Žluté a červené bliknutí každé 3 s:** zařízení se snaží připojit k síti, ale nedostává odpověď. Zkontrolujte, že je zařízení na síťovém serveru zaregistrované se správnými klíči a regionem, že je v dosahu brána a že v regionech US915 a AU915 brána přijímá na stejném sub-bandu jako zařízení (`lrw-sub-band`, výchozí 2). Pokusy o připojení postupně řídnou až na jeden za hodinu, proto zařízení po opravě restartujte, aby se připojilo hned.
 - **LED vůbec nesvítí:** baterie jsou vybité nebo obráceně vložené, případně byly při startu už tak slabé, že se zařízení samo vypnulo. Vložte nové baterie.
 

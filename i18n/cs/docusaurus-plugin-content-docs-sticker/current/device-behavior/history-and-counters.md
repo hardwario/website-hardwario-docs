@@ -13,7 +13,7 @@ Tato stránka popisuje, jak zařízení STICKER ukládá historii senzorů a č�
 Historie senzorů uchovává naměřené hodnoty přímo v zařízení, takže po výpadku rádiového spojení můžete chybějící data doplnit.
 
 - **Jeden záznam na každé hlášení:** zařízení uloží jeden záznam v každém intervalu hlášení (`interval-report`, výchozí 15 min), a to i bez připojení k síti.
-- **Ve výchozím nastavení vypnutá:** zapněte ukládání historie (`history-enable`) a nastavení uložte, například v aplikaci HARDWARIO Manager v části **Configuration → History**.
+- **Ve výchozím nastavení vypnutá:** zapněte ukládání historie (`history-enable`) a nastavení uložte, například v aplikaci HARDWARIO Manager v části **Konfigurace → Historie**.
 - **Kanály si vyberete sami** (`history-channels`): až 24 hodnot, včetně sond 1-Wire, čítačů a napětí na vstupech. Ve výchozím nastavení se ukládají teplota a vlhkost z vestavěného senzoru.
 - **Jen naměřené hodnoty:** alarmy ani změny nastavení se do historie neukládají. Chybějící hodnota, například z odpojené sondy, se v historii objeví jako `null`.
 
@@ -51,7 +51,7 @@ Zařízení historii nikdy neposílá samo. Vyčtete ji přes rádio nebo přes 
 - Najednou může běžet jen jedno vyčítání. Když se spojení přeruší, pošlete požadavek znovu.
 - Telemetrie (pravidelná hlášení s naměřenými hodnotami) čeká, dokud vyčítání neskončí. Alarmové reporty nečekají.
 
-**Přes NFC** historii vyčtete v aplikaci HARDWARIO Manager v části **Tools → Sensor history**, a to i s vypnutým rádiem. Podrobnosti najdete na stránce [**Historie senzorů**](/apps/hardwario-manager/sticker/sensor-history) v průvodci aplikací HARDWARIO Manager.
+**Přes NFC** historii vyčtete v aplikaci HARDWARIO Manager v části **Senzory → Historie senzorů**, a to i s vypnutým rádiem. Podrobnosti najdete na stránce [**Historie senzorů**](/apps/hardwario-manager/sticker/sensor-history) v průvodci aplikací HARDWARIO Manager.
 
 <details>
 <summary><b>Příklady downlinků</b></summary>
@@ -77,7 +77,7 @@ Zařízení STICKER počítá sepnutí svých Hallových spínačů a vstupů. V
 - **Počty pohybů ze senzoru PIR a z akcelerometru** se neukládají a po každém restartu začínají od nuly.
 - **Přetečení:** po hodnotě 4 294 967 295 začne čítač znovu od 0. Backend, který počítá spotřebu z rozdílů, musí zvládnout přetečení i reset čítačů.
 
-Čítače Hallových spínačů a vstupů vynulujete v aplikaci HARDWARIO Manager volbou **Tools → Reset → Reset counters** nebo příkazem `reset_counters`. Reset čítačů platí hned, bez restartu.
+Čítače Hallových spínačů a vstupů vynulujete v aplikaci HARDWARIO Manager volbou **Nástroje → Reset → Vynulovat čítače** nebo příkazem `reset_counters`. Reset čítačů platí hned, bez restartu.
 
 ## Co se kdy zachová {#what-survives-what}
 

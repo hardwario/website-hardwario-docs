@@ -77,9 +77,9 @@ Začněte [**rychlým průvodcem aplikace HARDWARIO Manager**](/apps/hardwario-m
 :::
 
 1. **Nainstalujte aplikaci** a zapněte **NFC**. STICKER se konfiguruje z telefonu s Androidem i z iPhonu, na obou stejně.
-2. **Přidejte zařízení** do seznamu **Saved STICKERs**, aby aplikace znala jeho **secret key**. STICKER totiž na požadavky na konfiguraci a klíče odpovídá jen šifrovaným kanálem.
-3. **Přečtěte klíče.** Otevřete **STICKER → LoRaWAN keys** a přiložte telefon k zařízení. Zapište si **DevEUI**, **JoinEUI (AppEUI)** a **AppKey** pro OTAA, nebo **DevAddr** a klíče relace pro ABP.
-4. **Zapište konfiguraci.** Otevřete **STICKER → Configuration**, v sekci **LoRaWAN** nastavte region, režim aktivace a klíče, přepněte **`radio-mode`** na LoRaWAN a dalším přiložením konfiguraci zapište zpět.
+2. **Přidejte zařízení** do seznamu **Uložená zařízení STICKER**, aby aplikace znala jeho **secret key**. STICKER totiž na požadavky na konfiguraci a klíče odpovídá jen šifrovaným kanálem.
+3. **Přečtěte klíče.** Otevřete **STICKER → Rádio → Klíče rádiového spojení**, zvolte **Načíst klíče rádiového spojení** a přiložte telefon k zařízení. Zapište si **DevEUI**, **JoinEUI (AppEUI)** a **AppKey** pro OTAA, nebo **DevAddr** a klíče relace pro ABP.
+4. **Zapište konfiguraci.** Otevřete **STICKER → Konfigurace → Načíst** a přiložte telefon k zařízení. V sekci **Rádio** nejdřív přepněte **Režim rádia** na LoRaWAN: dokud je rádio vypnuté, pole pro region, aktivaci a klíče aplikace nezobrazí. Potom nastavte region, režim aktivace a klíče, zvolte **Uložit do zařízení** a telefon přiložte znovu.
 
 ### Kde je který krok popsaný {#where-each-step-is-documented}
 
@@ -87,8 +87,9 @@ Začněte [**rychlým průvodcem aplikace HARDWARIO Manager**](/apps/hardwario-m
 |---|---|
 | Instalace aplikace a zapnutí NFC | [**Instalace aplikace**](/apps/hardwario-manager/install) |
 | Správné držení telefonu (jedno přiložení, telefon v klidu) | [**STICKER přes NFC**](/apps/hardwario-manager/sticker) |
-| Přidání zařízení a jeho secret key | [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers) |
-| Čtení informací o zařízení a klíčů LoRaWAN | [**Informace o zařízení a klíče LoRaWAN**](/apps/hardwario-manager/sticker/device-info) |
+| Přidání zařízení a jeho secret key | [**Uložená zařízení STICKER**](/apps/hardwario-manager/sticker/saved-stickers) |
+| Čtení informací o zařízení | [**Informace o zařízení**](/apps/hardwario-manager/sticker/device-info) |
+| Zapnutí rádia a čtení klíčů rádiového spojení | [**Rádio**](/apps/hardwario-manager/sticker/radio) |
 | Čtení, úprava a zápis konfigurace | [**Konfigurace**](/apps/hardwario-manager/sticker/configuration) |
 | Stejné nastavení pro celou sérii zařízení | [**Šablony**](/apps/hardwario-manager/sticker/templates) |
 
@@ -97,7 +98,7 @@ Začněte [**rychlým průvodcem aplikace HARDWARIO Manager**](/apps/hardwario-m
 | LED | Význam | Co dělat |
 |---|---|---|
 | **Zelená a žlutá na 2 sekundy** | Přiložení skončilo a jeho poslední výměna dat se povedla | Nic. Pokud zápis vyžaduje restart, následuje startovní sekvence |
-| **Červená na 2 sekundy** | **Poslední výměna dat selhala.** Požadavek byl odmítnut ještě před provedením (špatný **secret key** nebo token, zopakovaný nebo poškozený rámec; v tom případě se nic nezapíše), nebo se odpověď nedostala do telefonu. Příkaz, na který zařízení odpoví chybou, například kvůli hodnotě mimo rozsah, skončí zeleně a žlutě; chybu ukáže aplikace | Zkontrolujte, že je zařízení v seznamu [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers) uložené se správným secret key, a přiložte telefon znovu |
+| **Červená na 2 sekundy** | **Poslední výměna dat selhala.** Požadavek byl odmítnut ještě před provedením (špatný **secret key** nebo token, zopakovaný nebo poškozený rámec; v tom případě se nic nezapíše), nebo se odpověď nedostala do telefonu. Příkaz, na který zařízení odpoví chybou, například kvůli hodnotě mimo rozsah, skončí zeleně a žlutě; chybu ukáže aplikace | Zkontrolujte, že je zařízení v seznamu [**Uložená zařízení STICKER**](/apps/hardwario-manager/sticker/saved-stickers) uložené se správným secret key, a přiložte telefon znovu |
 | Heartbeat se změní z **1× žluté** na **žlutou + červenou** | Rádio je zapnuté a zařízení se připojuje | Počkejte. Připojení může trvat i několik pokusů |
 | Heartbeat se ustálí na **1× zelené** | Připojeno. Zařízení odešle payload **Device Info** a po něm uplink **settings-info** se svým hlavním nastavením (oba na fPort 85) | Nic. Zařízení je v provozu |
 
@@ -150,7 +151,7 @@ Vždy se ukáže jen jeden vzor. Firmware tyto stavy kontroluje v uvedeném poř
 | **1× žlutá, pak 1× červená** ~200 ms poté | **Připojuje se nebo znovu připojuje** a od sítě nedostává odpověď | Zkontrolujte blízkost brány, frekvenční plán / region a shodu DevEUI, JoinEUI a AppKey se síťovým serverem |
 | **2× žlutá**, ~200 ms od sebe | **Zhoršené spojení**. Kontroly spojení selhávají, ale relace stále trvá | Zkontrolujte pokrytí bránou a umístění antény; jakmile se spojení obnoví, zařízení se zotaví samo |
 | **1× žlutá** | **Rádio vypnuté**: `radio-mode off` (výchozí stav z výroby), `radio-mode p2p` na zařízení bez klíčů pro P2P (nenastavený AppKey nebo DevEUI), nebo region LoRaWAN, který tento obraz firmwaru nepodporuje | Zapište konfiguraci LoRaWAN nebo P2P se zapnutým rádiem (krok 3) |
-| **1× červená** | **Je aktivní alarm** | Aktivní alarmy přečtete na obrazovce [**Device info**](/apps/hardwario-manager/sticker/device-info), pak projděte [**pravidla alarmů**](developer-access/alarm-rules.md) |
+| **1× červená** | **Je aktivní alarm** | Aktivní alarmy přečtete na obrazovce [**Informace o zařízení**](/apps/hardwario-manager/sticker/device-info), pak projděte [**pravidla alarmů**](developer-access/alarm-rules.md) |
 | **1× zelená** | Normální provoz, připojeno a v pořádku | Nic. To je cílový stav |
 | **Zelená, pak žlutá** | Totéž, ale v zařízení běží sestavení firmwaru **debug** | U vývojových kusů je to v pořádku; pro nasazení nahrajte sestavení release |
 | **Vůbec nic** | Buď je kus s firmwarem debug v **hlubokém spánku** (všechny kanály zhasnuté; je to očekávané, nejde o závadu), nebo zařízení nemá napájení, nebo se při zapnutí **samo vypnulo**, protože napětí baterie bylo pod 1,8 V | Pokud nespí, zkontrolujte polaritu baterií a vyměňte je |
@@ -165,7 +166,7 @@ dat.
 | **Zelená, svítí** (nejvýš 5 s) | Telefon je v poli NFC, relace ještě nezačala | Nehýbejte telefonem |
 | **Zelená, bliká** (~90 ms) | Probíhá relace: telefon a zařízení si vyměňují příkazy | Nehýbejte telefonem |
 | **Zelená a žlutá, 2 s** | Relace skončila, poslední výměna dat se povedla | Nic |
-| **Červená, 2 s** | Relace skončila, poslední výměna dat **selhala**: požadavek byl odmítnut ještě před provedením (špatný secret key nebo vendor token, zopakovaný nebo poškozený rámec; v tom případě se nic nezapíše), nebo se odpověď nedostala do telefonu | Zkontrolujte, že je zařízení uložené se správným secret key, viz [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers), a přiložte telefon znovu |
+| **Červená, 2 s** | Relace skončila, poslední výměna dat **selhala**: požadavek byl odmítnut ještě před provedením (špatný secret key nebo vendor token, zopakovaný nebo poškozený rámec; v tom případě se nic nezapíše), nebo se odpověď nedostala do telefonu | Zkontrolujte, že je zařízení uložené se správným secret key, viz [**Uložená zařízení STICKER**](/apps/hardwario-manager/sticker/saved-stickers), a přiložte telefon znovu |
 | **Zhasnuto** | Výměna dat skončila | Nic |
 
 Červený výsledek je dobré znát: bez něj by neúspěšná výměna dat vypadala pro

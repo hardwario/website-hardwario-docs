@@ -839,5 +839,446 @@
   },
   "sticker.deviceBehavior.timeline.linkLoss.back.text": {
     "message": "Data zase přicházejí"
+  },
+  "sticker.templateGenerator.group.lorawan": {
+    "message": "Základní nastavení LoRaWAN"
+  },
+  "sticker.templateGenerator.group.application": {
+    "message": "Aplikace"
+  },
+  "sticker.templateGenerator.group.sensors": {
+    "message": "Senzory"
+  },
+  "sticker.templateGenerator.group.alarms": {
+    "message": "Alarmy"
+  },
+  "sticker.templateGenerator.field.region": {
+    "message": "Region"
+  },
+  "sticker.templateGenerator.field.region.help": {
+    "message": "Rádiový region pásma LoRaWAN: EU868, US915 nebo AU915."
+  },
+  "sticker.templateGenerator.field.sub_band": {
+    "message": "Podpásmo"
+  },
+  "sticker.templateGenerator.field.sub_band.help": {
+    "message": "Podpásmo US915/AU915. 0 až 8 (výchozí 2); 0 zapne všechny kanály."
+  },
+  "sticker.templateGenerator.field.network": {
+    "message": "Síť"
+  },
+  "sticker.templateGenerator.field.network.help": {
+    "message": "Synchronizační slovo LoRaWAN: veřejná (PUBLIC) nebo privátní (PRIVATE) síť."
+  },
+  "sticker.templateGenerator.field.activation": {
+    "message": "Aktivace"
+  },
+  "sticker.templateGenerator.field.activation.help": {
+    "message": "Způsob připojení: bezdrátová aktivace (OTAA) nebo aktivace personalizací (ABP)."
+  },
+  "sticker.templateGenerator.field.interval_sample": {
+    "message": "Interval vzorkování"
+  },
+  "sticker.templateGenerator.field.interval_sample.help": {
+    "message": "Jak často zařízení měří. 5 až 3600 s, nebo 0 pro jeden vzorek těsně před každým hlášením."
+  },
+  "sticker.templateGenerator.field.interval_report": {
+    "message": "Interval hlášení"
+  },
+  "sticker.templateGenerator.field.interval_report.help": {
+    "message": "Jak často zařízení odesílá uplink. 60 až 86400 s (výchozí 900)."
+  },
+  "sticker.templateGenerator.field.history_enable": {
+    "message": "Záznam historie senzorů"
+  },
+  "sticker.templateGenerator.field.history_enable.help": {
+    "message": "Store-and-forward: ukládá naměřené hodnoty do flash paměti, aby je bylo možné odeslat později. Ve výchozím stavu vypnuto."
+  },
+  "sticker.templateGenerator.field.history_sensors.help": {
+    "message": "Které kanály se při zapnuté historii zaznamenávají (výchozí teplota a vlhkost). Kanál, jehož senzor je vypnutý, se nezaznamenává."
+  },
+  "sticker.templateGenerator.field.battery_level": {
+    "message": "Práh slabé baterie"
+  },
+  "sticker.templateGenerator.field.battery_level.help": {
+    "message": "Napětí, pod kterým se spustí alarm slabé baterie, v milivoltech (výchozí 2400 = 2,4 V)."
+  },
+  "sticker.templateGenerator.field.vendor_reset_allow": {
+    "message": "Povolit reset výrobce"
+  },
+  "sticker.templateGenerator.field.vendor_reset_allow.help": {
+    "message": "Povolí na tomto zařízení reset výrobce pomocí vendor-tokenu. Ve výchozím stavu zapnuto."
+  },
+  "sticker.templateGenerator.field.calibration": {
+    "message": "Režim kalibrace"
+  },
+  "sticker.templateGenerator.field.calibration.help": {
+    "message": "Tovární režim kalibrace. Při běžném provozu ho nechte vypnutý."
+  },
+  "sticker.templateGenerator.field.cap_hall_left": {
+    "message": "Levý Hallův senzor"
+  },
+  "sticker.templateGenerator.field.cap_hall_left.help": {
+    "message": "Zapne levý Hallův senzor."
+  },
+  "sticker.templateGenerator.field.cap_hall_right": {
+    "message": "Pravý Hallův senzor"
+  },
+  "sticker.templateGenerator.field.cap_hall_right.help": {
+    "message": "Zapne pravý Hallův senzor."
+  },
+  "sticker.templateGenerator.field.cap_input_a": {
+    "message": "Vstup A"
+  },
+  "sticker.templateGenerator.field.cap_input_a.help": {
+    "message": "Zapne vstup A."
+  },
+  "sticker.templateGenerator.field.cap_input_b": {
+    "message": "Vstup B"
+  },
+  "sticker.templateGenerator.field.cap_input_b.help": {
+    "message": "Zapne vstup B."
+  },
+  "sticker.templateGenerator.field.cap_light_sensor": {
+    "message": "Senzor světla"
+  },
+  "sticker.templateGenerator.field.cap_light_sensor.help": {
+    "message": "Zapne senzor světla."
+  },
+  "sticker.templateGenerator.field.cap_barometer": {
+    "message": "Barometr"
+  },
+  "sticker.templateGenerator.field.cap_barometer.help": {
+    "message": "Zapne barometr."
+  },
+  "sticker.templateGenerator.field.cap_pir_detector": {
+    "message": "PIR detektor"
+  },
+  "sticker.templateGenerator.field.cap_pir_detector.help": {
+    "message": "Zapne PIR detektor."
+  },
+  "sticker.templateGenerator.field.cap_w1_sensors": {
+    "message": "Sběrnice 1-Wire"
+  },
+  "sticker.templateGenerator.field.cap_w1_sensors.help": {
+    "message": "Zapne sběrnici 1-Wire a automatickou detekci sond."
+  },
+  "sticker.templateGenerator.field.cap_accelerometer": {
+    "message": "Akcelerometr"
+  },
+  "sticker.templateGenerator.field.cap_accelerometer.help": {
+    "message": "Zapne akcelerometr."
+  },
+  "sticker.templateGenerator.field.accel_motion_sensitivity": {
+    "message": "Citlivost na pohyb"
+  },
+  "sticker.templateGenerator.field.accel_motion_sensitivity.help": {
+    "message": "Detekce pohybu akcelerometrem: OFF (vypnuto), LOW, MEDIUM nebo HIGH."
+  },
+  "sticker.templateGenerator.field.hall_left_counter": {
+    "message": "Čítač levého Hallova senzoru"
+  },
+  "sticker.templateGenerator.field.hall_left_counter.help": {
+    "message": "Zapne čítání impulzů levého Hallova senzoru."
+  },
+  "sticker.templateGenerator.field.hall_right_counter": {
+    "message": "Čítač pravého Hallova senzoru"
+  },
+  "sticker.templateGenerator.field.hall_right_counter.help": {
+    "message": "Zapne čítání impulzů pravého Hallova senzoru."
+  },
+  "sticker.templateGenerator.field.input_a_counter": {
+    "message": "Čítač vstupu A"
+  },
+  "sticker.templateGenerator.field.input_a_counter.help": {
+    "message": "Zapne čítání impulzů na vstupu A."
+  },
+  "sticker.templateGenerator.field.input_b_counter": {
+    "message": "Čítač vstupu B"
+  },
+  "sticker.templateGenerator.field.input_b_counter.help": {
+    "message": "Zapne čítání impulzů na vstupu B."
+  },
+  "sticker.templateGenerator.field.alarm_limit": {
+    "message": "Limit alarmů"
+  },
+  "sticker.templateGenerator.field.alarm_limit.help": {
+    "message": "Nejkratší doba mezi dvěma uplinky s alarmem v sekundách. 0 až 3600 s; 0 limit vypne."
+  },
+  "sticker.templateGenerator.field.alarm_notif_time": {
+    "message": "Doba signalizace alarmu"
+  },
+  "sticker.templateGenerator.field.alarm_notif_time.help": {
+    "message": "Jak dlouho po spuštění alarmu svítí červená LED. 1 až 60 s (výchozí 10)."
+  },
+  "sticker.templateGenerator.channel.0": {
+    "message": "Teplota"
+  },
+  "sticker.templateGenerator.channel.1": {
+    "message": "Vlhkost"
+  },
+  "sticker.templateGenerator.channel.2": {
+    "message": "Slot 1 teplota"
+  },
+  "sticker.templateGenerator.channel.3": {
+    "message": "Slot 1 vlhkost"
+  },
+  "sticker.templateGenerator.channel.4": {
+    "message": "Slot 2 teplota"
+  },
+  "sticker.templateGenerator.channel.5": {
+    "message": "Slot 2 vlhkost"
+  },
+  "sticker.templateGenerator.channel.6": {
+    "message": "Slot 3 teplota"
+  },
+  "sticker.templateGenerator.channel.7": {
+    "message": "Slot 3 vlhkost"
+  },
+  "sticker.templateGenerator.channel.8": {
+    "message": "Slot 4 teplota"
+  },
+  "sticker.templateGenerator.channel.9": {
+    "message": "Slot 4 vlhkost"
+  },
+  "sticker.templateGenerator.channel.10": {
+    "message": "Levý Hallův senzor"
+  },
+  "sticker.templateGenerator.channel.11": {
+    "message": "Pravý Hallův senzor"
+  },
+  "sticker.templateGenerator.channel.12": {
+    "message": "Vstup A"
+  },
+  "sticker.templateGenerator.channel.13": {
+    "message": "Vstup B"
+  },
+  "sticker.templateGenerator.channel.14": {
+    "message": "Pohyb (PIR)"
+  },
+  "sticker.templateGenerator.channel.15": {
+    "message": "Tlak"
+  },
+  "sticker.templateGenerator.channel.16": {
+    "message": "Osvětlenost"
+  },
+  "sticker.templateGenerator.channel.17": {
+    "message": "Orientace"
+  },
+  "sticker.templateGenerator.channel.18": {
+    "message": "Pohyb (akcelerometr)"
+  },
+  "sticker.templateGenerator.source.onboard": {
+    "message": "Na desce"
+  },
+  "sticker.templateGenerator.source.s1": {
+    "message": "Slot 1-Wire 1"
+  },
+  "sticker.templateGenerator.source.s2": {
+    "message": "Slot 1-Wire 2"
+  },
+  "sticker.templateGenerator.source.s3": {
+    "message": "Slot 1-Wire 3"
+  },
+  "sticker.templateGenerator.source.s4": {
+    "message": "Slot 1-Wire 4"
+  },
+  "sticker.templateGenerator.source.hall-left": {
+    "message": "Levý Hallův senzor"
+  },
+  "sticker.templateGenerator.source.hall-right": {
+    "message": "Pravý Hallův senzor"
+  },
+  "sticker.templateGenerator.source.input-a": {
+    "message": "Vstup A"
+  },
+  "sticker.templateGenerator.source.input-b": {
+    "message": "Vstup B"
+  },
+  "sticker.templateGenerator.source.pir": {
+    "message": "PIR"
+  },
+  "sticker.templateGenerator.source.accel": {
+    "message": "Akcelerometr"
+  },
+  "sticker.templateGenerator.quantity.temperature": {
+    "message": "Teplota"
+  },
+  "sticker.templateGenerator.quantity.humidity": {
+    "message": "Vlhkost"
+  },
+  "sticker.templateGenerator.quantity.pressure": {
+    "message": "Tlak"
+  },
+  "sticker.templateGenerator.quantity.illuminance": {
+    "message": "Osvětlenost"
+  },
+  "sticker.templateGenerator.quantity.magnetic-field": {
+    "message": "Magnetické pole"
+  },
+  "sticker.templateGenerator.quantity.tilt": {
+    "message": "Náklon"
+  },
+  "sticker.templateGenerator.quantity.state": {
+    "message": "Stav"
+  },
+  "sticker.templateGenerator.quantity.count": {
+    "message": "Počet"
+  },
+  "sticker.templateGenerator.on": {
+    "message": "zapnuto"
+  },
+  "sticker.templateGenerator.off": {
+    "message": "vypnuto"
+  },
+  "sticker.templateGenerator.range": {
+    "message": "{min} až {max}{unit}"
+  },
+  "sticker.templateGenerator.rangeOrZero": {
+    "message": "{min} až {max}{unit}, nebo 0"
+  },
+  "sticker.templateGenerator.issue.empty": {
+    "message": "zadejte hodnotu"
+  },
+  "sticker.templateGenerator.issue.digits": {
+    "message": "jen číslice"
+  },
+  "sticker.templateGenerator.issue.range": {
+    "message": "musí být {range}"
+  },
+  "sticker.templateGenerator.toolbar.hint": {
+    "message": "Otevřete sekci a zaškrtněte nastavení, která má šablona obsahovat. Když na nastavení najedete myší nebo na něj přesunete fokus, zobrazí se, k čemu slouží a jaké hodnoty jsou povolené."
+  },
+  "sticker.templateGenerator.clearAll": {
+    "message": "Vymazat vše"
+  },
+  "sticker.templateGenerator.rules": {
+    "message": "Pravidla alarmů"
+  },
+  "sticker.templateGenerator.rules.none": {
+    "message": "Zatím žádné pravidlo alarmu. Přidejte ho a šablona ho bude obsahovat."
+  },
+  "sticker.templateGenerator.rules.add": {
+    "message": "+ Přidat pravidlo alarmu"
+  },
+  "sticker.templateGenerator.rule.slot": {
+    "message": "Slot (0–15)"
+  },
+  "sticker.templateGenerator.rule.action": {
+    "message": "Akce"
+  },
+  "sticker.templateGenerator.rule.action.set": {
+    "message": "Nastavit pravidlo"
+  },
+  "sticker.templateGenerator.rule.action.clear": {
+    "message": "Vymazat slot"
+  },
+  "sticker.templateGenerator.rule.remove": {
+    "message": "Odebrat"
+  },
+  "sticker.templateGenerator.rule.source": {
+    "message": "Zdroj"
+  },
+  "sticker.templateGenerator.rule.quantity": {
+    "message": "Veličina"
+  },
+  "sticker.templateGenerator.rule.enabled": {
+    "message": "Zapnuto"
+  },
+  "sticker.templateGenerator.rule.low": {
+    "message": "Dolní mez"
+  },
+  "sticker.templateGenerator.rule.high": {
+    "message": "Horní mez"
+  },
+  "sticker.templateGenerator.rule.from": {
+    "message": "Z"
+  },
+  "sticker.templateGenerator.rule.to": {
+    "message": "Na"
+  },
+  "sticker.templateGenerator.rule.level": {
+    "message": "úroveň (aktivní, dokud je linka ve stavu Na)"
+  },
+  "sticker.templateGenerator.rule.edge": {
+    "message": "hrana (spustí se při tomto přechodu)"
+  },
+  "sticker.templateGenerator.rule.count": {
+    "message": "Událostí za interval hlášení"
+  },
+  "sticker.templateGenerator.rule.dwell": {
+    "message": "Doba držení (s)"
+  },
+  "sticker.templateGenerator.rule.dwellRange": {
+    "message": "musí být 0 až {max} s"
+  },
+  "sticker.templateGenerator.dwell.threshold": {
+    "message": "Kolik sekund musí hodnota zůstat mimo rozsah od dolní do horní meze, než se alarm spustí (0 = okamžitě)."
+  },
+  "sticker.templateGenerator.dwell.count": {
+    "message": "Kolik sekund po spuštění musí uplynout, než se alarm může spustit znovu."
+  },
+  "sticker.templateGenerator.dwell.event": {
+    "message": "Spustí se při každé události a pak čeká tento počet sekund, než se může spustit znovu."
+  },
+  "sticker.templateGenerator.dwell.level": {
+    "message": "Kolik sekund musí linka zůstat ve stavu Na, než se alarm spustí (0 = okamžitě)."
+  },
+  "sticker.templateGenerator.dwell.edge": {
+    "message": "Kolik sekund musí linka po přechodu zůstat ve stavu Na, než se alarm spustí; stejně dlouho pak zůstane aktivní, než se může spustit znovu (0 = okamžitě)."
+  },
+  "sticker.templateGenerator.output.hex": {
+    "message": "Hex AppConfigMessage · {n} B"
+  },
+  "sticker.templateGenerator.output.copy": {
+    "message": "Kopírovat hex"
+  },
+  "sticker.templateGenerator.output.none": {
+    "message": "(není vybráno žádné nastavení)"
+  },
+  "sticker.templateGenerator.output.json": {
+    "message": "Šablona (JSON)"
+  },
+  "sticker.templateGenerator.qr.label": {
+    "message": "QR kód (obsahuje hexadecimální řetězec)"
+  },
+  "sticker.templateGenerator.qr.error": {
+    "message": "Chyba QR kódu: {reason}"
+  },
+  "sticker.templateGenerator.qr.alt": {
+    "message": "QR kód šablony"
+  },
+  "sticker.templateGenerator.qr.download": {
+    "message": "Stáhnout PNG"
+  },
+  "sticker.templateGenerator.qr.none": {
+    "message": "Vyberte alespoň jedno nastavení a vygeneruje se QR kód."
+  },
+  "sticker.templateGenerator.read.label": {
+    "message": "Načíst šablonu z hexu"
+  },
+  "sticker.templateGenerator.read.placeholder": {
+    "message": "Vložte hexadecimální řetězec AppConfigMessage a načtěte ho do formuláře výše"
+  },
+  "sticker.templateGenerator.read.hint": {
+    "message": "Nahradí aktuální výběr. Nastavení mimo tento formulář se ignorují."
+  },
+  "sticker.templateGenerator.read.load": {
+    "message": "Načíst šablonu"
+  },
+  "sticker.templateGenerator.load.ok": {
+    "message": "Načteno {n} B. Sekce s hodnotami jsou níže rozbalené."
+  },
+  "sticker.templateGenerator.load.empty": {
+    "message": "Načteno {n} B, ale formulář v nich nenašel žádné nastavení."
+  },
+  "sticker.templateGenerator.load.error": {
+    "message": "Dekódování selhalo: {reason}"
+  },
+  "sticker.templateGenerator.note": {
+    "message": "Toto je {plaintext} konfigurační šablona (protobuf {message}). Na produkčním zařízení ji aplikace HARDWARIO Manager před zápisem přes NFC zašifruje pro konkrétní zařízení."
+  },
+  "sticker.templateGenerator.note.plaintext": {
+    "message": "nešifrovaná"
   }
 }

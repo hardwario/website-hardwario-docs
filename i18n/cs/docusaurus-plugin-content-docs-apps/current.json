@@ -19,9 +19,13 @@
     "message": "STICKER",
     "description": "The label for category 'STICKER' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Saved STICKERs": {
-    "message": "Saved STICKERs",
-    "description": "The label for category 'Saved STICKERs' in sidebar 'docs'"
+  "sidebar.docs.category.manager-sticker-saved": {
+    "message": "Uložená zařízení STICKER",
+    "description": "The label for category 'Saved STICKER devices' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.manager-sticker-sensors": {
+    "message": "Senzory",
+    "description": "The label for category 'Sensors' in sidebar 'docs'"
   },
   "sidebar.docs.category.manager-sticker-configuration": {
     "message": "Konfigurace",

@@ -1,13 +1,13 @@
 ---
 slug: settings
 title: Nastavení aplikace
-description: "Nastavení aplikace HARDWARIO Manager: světlý či tmavý vzhled, angličtina nebo čeština, zámek přes Face ID či kód, historie změn STICKER a ladicí režim."
+description: "Nastavení aplikace HARDWARIO Manager: světlý či tmavý vzhled, angličtina nebo čeština, zámek přes Face ID či kód, protokol změn STICKER a režim ladění."
 ---
 
 # Nastavení aplikace {#app-settings}
 
-**Settings** otevřete ikonou ozubeného kola v pravém horním rohu jakékoli
-obrazovky.
+Na kterékoli obrazovce klepněte na tlačítko **nabídky** (☰) v pravém horním rohu
+a zvolte **Nastavení**.
 
 ---
 
@@ -17,9 +17,9 @@ Zvolte, jak má aplikace vypadat:
 
 | Volba | Význam |
 |---|---|
-| **System** | Řídí se světlým nebo tmavým režimem telefonu. Výchozí volba. |
-| **Light** | Vždy světlá. |
-| **Dark** | Vždy tmavá. |
+| **Výchozí nastavení systému** | Řídí se světlým nebo tmavým režimem telefonu. Výchozí volba. |
+| **Světlý** | Vždy světlý vzhled. |
+| **Tmavý** | Vždy tmavý vzhled. |
 
 ---
 
@@ -27,7 +27,7 @@ Zvolte, jak má aplikace vypadat:
 
 | Volba | Význam |
 |---|---|
-| **System default** | Řídí se jazykem telefonu. Výchozí volba. |
+| **Výchozí nastavení systému** | Řídí se jazykem telefonu. Výchozí volba. |
 | **English** | Vždy anglicky. |
 | **Čeština** | Vždy česky. |
 
@@ -37,8 +37,8 @@ Změna se projeví okamžitě. Aplikaci není potřeba restartovat.
 
 ## Zabezpečení {#security}
 
-**Lock app with Face ID / passcode**: *Vyžadovat autentizaci při spuštění a při
-návratu do aplikace.* Ve výchozím stavu vypnuto.
+**Zamknout aplikaci pomocí Face ID / kódu**: *Vyžadovat ověření při spuštění
+a návratu do aplikace.* Ve výchozím stavu vypnuto.
 
 Když je volba zapnutá, aplikace při každém otevření i při každém návratu z jiné
 aplikace vyžaduje biometrické ověření nebo kód zařízení. Po zapnutí se aplikace
@@ -51,17 +51,17 @@ se normálně.
 
 ---
 
-## Historie změn STICKER {#sticker-change-log}
+## Protokol změn STICKER {#sticker-change-log}
 
-*Jak dlouho uchovávat historii změn konfigurace u každého uloženého zařízení
-STICKER. Volba Off zaznamenávání zastaví (dosavadní záznamy zůstanou).*
+*Jak dlouho uchovávat historii změn konfigurace pro každý uložený STICKER.
+Vypnuto zastaví protokolování (existující protokoly zůstanou zachovány).*
 
 | Volba | Význam |
 |---|---|
-| **Off** | Zaznamenávání se zastaví. Dosavadní záznamy zůstanou. |
-| **30 days** | Výchozí. |
-| **60 days** | |
-| **90 days** | |
+| **Vypnuto** | Zaznamenávání se zastaví. Dosavadní záznamy zůstanou. |
+| **30 dní** | Výchozí. |
+| **60 dní** | |
+| **90 dní** | |
 
 Historie změn zaznamenává u uloženého zařízení každé čtení konfigurace a každý
 úspěšný zápis. Jak záznamy číst, exportovat a znovu použít, popisuje stránka
@@ -69,15 +69,32 @@ Historie změn zaznamenává u uloženého zařízení každé čtení konfigura
 
 ---
 
-## Ladicí režim {#debug-mode}
+## Režim ladění {#debug-mode}
 
-Když **pětkrát** klepnete na logo HARDWARIO ve spodní části obrazovky **Settings**,
-zapnete nebo vypnete ladicí režim (**Debug mode**). Po prvním klepnutí se objeví
-počítadlo, které ukazuje, kolik klepnutí zbývá.
+Když **pětkrát** klepnete na logo HARDWARIO dole v nabídce aplikace, zapnete
+nebo vypnete režim ladění. Po prvním klepnutí se objeví počítadlo, které
+ukazuje, kolik klepnutí zbývá.
 
-Ladicí režim přidá do nabídky **Tools** zařízení STICKER položku **NFC Console**
-(nízkoúrovňovou konzoli pro surové příkazy NFC) a pod záhlavím zobrazí tenký
-pásek `debug mode`, abyste vždy věděli, že je zapnutý. Je to diagnostická
-pomůcka; při běžném používání ho nechte vypnutý.
+Dokud je režim ladění zapnutý, aplikace pod záhlavím zobrazuje tenký pásek
+`režim ladění`, abyste vždy věděli, že je zapnutý, a přidá:
 
-Aplikace si ladicí režim pamatuje, takže zůstane zapnutý, dokud ho nevypnete.
+- do nabídky **Nástroje** zařízení STICKER položku **Nástroje pro ladění**:
+  **Zrušit nárok**, **Zapsat kód pro nárokování** a **NFC konzole**,
+  nízkoúrovňovou konzoli pro surové příkazy NFC. Viz
+  [**Nástroje**](./sticker/tools.md#debug-tools).
+- do nastavení sekci **NFC přenos STICKER**, popsanou níže.
+
+Je to diagnostická pomůcka; při běžném používání ho nechte vypnutý. Aplikace si
+režim ladění pamatuje, takže zůstane zapnutý, dokud ho nevypnete.
+
+---
+
+## NFC přenos STICKER {#sticker-nfc-transport}
+
+Sekce **NFC přenos STICKER · režim ladění** se v nastavení objeví, jen když je
+zapnutý režim ladění. Určuje, jak aplikace se zařízením STICKER komunikuje přes
+NFC:
+
+| Volba | Význam |
+|---|---|
+| **Mailbox** | *Výchozí.* Pro každé zařízení STICKER s firmwarem v2.0.0 nebo novějším. |

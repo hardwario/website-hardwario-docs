@@ -20,7 +20,7 @@ Režim rádia (`radio-mode`) určuje, jestli a jak zařízení STICKER posílá 
 | **LoRaWAN** | Posílá data přes síť LoRaWAN v regionu, který nastavíte: EU868, US915, AU915 nebo AS923. |
 | **LoRa P2P** | Posílá data přímo do hubu ProXimos, bez sítě LoRaWAN. |
 
-Režim rádia nastavíte přes NFC v aplikaci [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration). Nový režim začne platit po uložení, při kterém se zařízení restartuje. Downlink (zpráva ze sítě do zařízení) nemůže změnit režim rádia ani žádné jiné síťové nastavení.
+Režim rádia nastavíte přes NFC v aplikaci HARDWARIO Manager v části **STICKER → Rádio → Režim rádia**, viz [**Rádio**](/apps/hardwario-manager/sticker/radio). Nový režim začne platit po uložení, při kterém se zařízení restartuje. Downlink (zpráva ze sítě do zařízení) nemůže změnit režim rádia ani žádné jiné síťové nastavení.
 
 ## Připojování k síti {#joining-the-network}
 

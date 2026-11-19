@@ -1,7 +1,7 @@
 ---
 slug: lorawan-chirpstack
 title: ChirpStack v4
-description: "Zařízení STICKER v ChirpStack v4: načtení klíčů LoRaWAN přes NFC v aplikaci HARDWARIO Manager, volba OTAA nebo ABP a profil zařízení s kodekem ttn.js."
+description: "Zařízení STICKER v ChirpStack v4: načtení klíčů rádiového spojení přes NFC v aplikaci HARDWARIO Manager, volba OTAA nebo ABP a profil zařízení s kodekem ttn.js."
 title_meta: "ChirpStack v4 (STICKER)"
 ---
 import Image from '@theme/IdealImage';
@@ -32,9 +32,9 @@ STICKER se čte telefonem s **Androidem** nebo **iOS** a NFC.
 1. **Uložte zařízení, aby aplikace měla jeho secret key.** STICKER odpovídá jen
    šifrovaným kanálem, takže bez klíče aplikace nic nepřečte. Každé zařízení přidáte
    jen jednou (viz
-   [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)) a od té
+   [**Uložená zařízení STICKER**](/apps/hardwario-manager/sticker/saved-stickers)) a od té
    doby aplikace klíč doplňuje sama.
-2. **Otevřete STICKER → LoRaWAN keys** a zvolte **Read LoRaWAN keys**.
+2. **Otevřete STICKER → Rádio → Klíče rádiového spojení** a zvolte **Načíst klíče rádiového spojení**.
 3. **Přiložte telefon.** Zadní stranou telefonu se dotkněte krabičky zařízení STICKER a
    vteřinu či dvě se nehýbejte. Anténa NFC bývá u **horní části zadní strany**
    telefonu; pokud se nic nestane, pomalu telefonem v tom místě pohybujte. S firmwarem
@@ -43,11 +43,11 @@ STICKER se čte telefonem s **Androidem** nebo **iOS** a NFC.
 4. **Zapište si klíče, které aplikace ukáže.** Které to budou, závisí na režimu
    aktivace: **DevEUI**, **JoinEUI (AppEUI)** a **AppKey** pro OTAA, nebo **DevEUI**,
    **DevAddr** a klíče relace pro ABP, viz
-   [**Informace o zařízení a klíče LoRaWAN**](/apps/hardwario-manager/sticker/device-info).
-5. **Zkontrolujte, že je rádio zapnuté.** V **STICKER → Configuration** musí být
-   v sekci LoRaWAN parametr **`radio-mode`** nastavený na LoRaWAN, aby se zařízení
-   po registraci začalo připojovat k síti; z výroby se totiž dodává s vypnutým rádiem. Viz
-   [**Konfigurace**](/apps/hardwario-manager/sticker/configuration) a
+   [**Rádio**](/apps/hardwario-manager/sticker/radio).
+5. **Zkontrolujte, že je rádio zapnuté.** V **STICKER → Rádio → Režim rádia** (nebo
+   v sekci **Rádio** v konfiguraci) musí být **Režim rádia** nastavený na LoRaWAN, aby se
+   zařízení po registraci začalo připojovat k síti; z výroby se totiž dodává s vypnutým rádiem. Viz
+   [**Rádio**](/apps/hardwario-manager/sticker/radio) a
    [**Šablony**](/apps/hardwario-manager/sticker/templates), pokud chcete celé sérii
    zařízení nastavit totéž.
 
@@ -80,7 +80,7 @@ Používejte `ttn.js` ze stejného vydání firmwaru, jaké mají vaše zaříze
 
 - [HARDWARIO Manager a STICKER](/sticker/hardwario-manager/)
 - [Rychlý průvodce aplikací HARDWARIO Manager](/apps/hardwario-manager/first-steps)
-- [Čtení informací o zařízení a klíčů LoRaWAN přes NFC](/apps/hardwario-manager/sticker/device-info)
+- [Čtení klíčů rádiového spojení přes NFC](/apps/hardwario-manager/sticker/radio)
 - [Instalace ChirpStack v4](/apps/chirpstack/chirpstack-installation)
 - [Koncová zařízení v ChirpStack](/apps/chirpstack/chirpstack-configuration/chirpstack-end-devices)
 - [Dekodéry payloadu v ChirpStack](/apps/chirpstack/chirpstack-configuration/chirpstack-decoding)

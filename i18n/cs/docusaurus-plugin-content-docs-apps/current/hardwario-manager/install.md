@@ -1,7 +1,7 @@
 ---
 slug: install
 title: Instalace aplikace
-description: "Instalace aplikace HARDWARIO Manager z Google Play nebo App Store, co k ní potřebujete (NFC, Bluetooth, kamera, účet ATELOS, secret key) a oprávnění."
+description: "Instalace aplikace HARDWARIO Manager z Google Play nebo App Store, co k ní potřebujete (NFC, Bluetooth, kamera, tajný klíč) a oprávnění."
 ---
 
 # Instalace aplikace HARDWARIO Manager {#install-hardwario-manager}
@@ -21,11 +21,10 @@ Aktualizace přicházejí automaticky přes obchod.
 
 | Co | K čemu |
 |---|---|
-| **Telefon s NFC** | Nutný ke konfiguraci zařízení **STICKER**. NFC má většina telefonů z posledních let. |
+| **Telefon s NFC** | Nutný ke konfiguraci zařízení **STICKER** (firmware v2.0.0 nebo novější, vložené baterie). NFC má většina telefonů z posledních let. |
 | **Bluetooth** | Nutný k připojení k zařízení **CHESTER**. |
 | **Kamera** | Ke skenování QR kódů: párovacích štítků zařízení CHESTER, odkazů na firmware, kódů pro nárokování zařízení a sdílených šablon. |
-| **Účet ATELOS** | Potřebný k nárokování zařízení a ke stažení jeho uloženého secret key do telefonu. Viz [**Účet ATELOS**](./atelos.md). |
-| **Secret key zařízení** | Zařízení STICKER komunikuje šifrovaným kanálem NFC. Když zařízení nárokujete, klíč se vyplní za vás; zadat ho můžete i ručně. |
+| **Tajný klíč zařízení** | Zařízení STICKER komunikuje šifrovaným kanálem NFC. Když zařízení nárokujete, klíč se vyplní za vás; zadat ho můžete i ručně. |
 
 ---
 

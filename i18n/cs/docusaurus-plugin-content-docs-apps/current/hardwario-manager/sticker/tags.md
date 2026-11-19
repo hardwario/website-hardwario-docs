@@ -1,55 +1,59 @@
 ---
 slug: tags
-title: Organizace zařízení tagy
-description: "Barevné tagy pro uložená zařízení STICKER v aplikaci HARDWARIO Manager: označení podle lokality, zákazníka či podlaží, správa tagů a filtrování seznamu."
+title: Organizace zařízení štítky
+description: "Uložená zařízení STICKER označíte v aplikaci HARDWARIO Manager barevnými štítky podle lokality, zákazníka či patra a podle štítků je filtrujete."
 ---
 
-# Organizace uložených zařízení tagy {#organise-saved-devices-with-tags}
+# Organizace uložených zařízení štítky {#organize-saved-devices-with-tags}
 
-Pomocí tagů zařízení v seznamu uložených zařízení označíte a vyfiltrujete,
-například podle lokality, zákazníka, podlaží nebo stavu nasazení. Zařízení může
-mít libovolný počet tagů a každý tag má vlastní barvu.
-
----
-
-## Označení zařízení tagem {#tag-a-device}
-
-1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Saved STICKERs**.
-2. Na řádku zařízení nebo v jeho detailu (**Detail**) zvolte **Edit tags**.
-3. Vyberte existující tagy nebo vytvořte nový a potvrďte.
-
-<img src="/img/hw-manager/hw-manager-sticker-tags.png" alt="Úprava tagů jednoho uloženého zařízení" width="320" />
+Štítky označují a filtrují zařízení v seznamu uložených zařízení, například podle
+lokality, zákazníka, patra nebo fáze nasazení. Zařízení může mít libovolný počet
+štítků a každý štítek má vlastní barvu.
 
 ---
 
-## Správa registru tagů {#manage-the-tag-registry}
+## Označení zařízení štítkem {#tag-a-device}
 
-Otevřete **menu ⋮** v seznamu Saved STICKERs a zvolte **Tags**.
+1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Uložená zařízení STICKER**.
+2. V nabídce řádku zařízení zvolte **Upravit štítky**, nebo na řádek klepněte
+   a na obrazovce zařízení rozbalte **Štítky**.
+3. Vyberte existující štítky nebo napište nový a zvolte **Vytvořit „…“**, pak
+   potvrďte tlačítkem **Hotovo**.
 
-<img src="/img/hw-manager/hw-manager-tags.png" alt="Nabídka ⋮ seznamu Saved STICKERs s volbami Tags, Import, Export, Export logs, Delete all logs a Delete" width="320" />
+<img src="/img/hw-manager/hw-manager-sticker-tags.png" alt="Úprava štítků jednoho uloženého zařízení s vybranými štítky jako barevnými čipy a polem Přidat štítek" width="320" />
 
-Registr platí pro celý seznam: tagy můžete **přidávat**, **přejmenovávat**,
+---
+
+## Správa registru štítků {#manage-the-tag-registry}
+
+V **nabídce ⋮** seznamu Uložená zařízení STICKER zvolte **Štítky**.
+
+<img src="/img/hw-manager/hw-manager-tags.png" alt="Registr Štítky s barvou každého štítku a počtem zařízení, která ho nesou, a tlačítkem Přidat štítek" width="320" />
+
+Registr platí pro celý seznam: štítky můžete **přidávat**, **přejmenovávat**,
 **přebarvovat** a **mazat** a u každého vidíte, kolik zařízení ho používá.
-Přejmenování nebo změna barvy tagu se projeví na všech zařízeních najednou.
+Přejmenování nebo nová barva se projeví na všech zařízeních najednou. Smazaný
+štítek zmizí ze zařízení, jinak se zařízení nezmění.
 
-<img src="/img/hw-manager/hw-manager-tags-color.png" alt="Volba nové barvy tagu v registru tagů" width="320" />
+<img src="/img/hw-manager/hw-manager-tags-color.png" alt="Volba nové barvy štítku v registru štítků" width="320" />
 
 ---
 
-## Filtrování podle tagu {#filter-by-tag}
+## Filtrování podle štítku {#filter-by-tag}
 
-V seznamu **Saved STICKERs** klepněte na **ikonu tagu** a vyberte jeden nebo více
-tagů; zobrazí se jen zařízení, která je mají. Odznak na ikoně ukazuje počet
-aktivních filtrů, volbou **Clear** je všechny zrušíte.
+Zpět v seznamu **Uložená zařízení STICKER** klepněte na **ikonu štítku**
+(**Filtrovat podle štítku**) a vyberte jeden nebo více štítků; zobrazí se jen
+odpovídající zařízení. Odznak na ikoně ukazuje počet aktivních filtrů a volba
+**Vymazat** je všechny zruší.
 
-<img src="/img/hw-manager/hw-manager-tag-filter.png" alt="Filtrování seznamu Saved STICKERs podle tagu s jedním aktivním filtrem a akcí Clear" width="320" />
+<img src="/img/hw-manager/hw-manager-tag-filter.png" alt="Filtrování seznamu Uložená zařízení STICKER podle štítku s jedním aktivním filtrem a volbou Vymazat" width="320" />
 
-Filtr lze kombinovat s vyhledávacím polem **Serial or name**: seznam nejdřív
-zúžíte podle tagu a pak hledáte ve výsledku.
+Filtr funguje společně s vyhledávacím polem **Sériové číslo nebo název**, takže
+můžete zúžit seznam podle štítku a pak hledat ve výsledku.
 
-:::info Tagy jsou součástí exportu
-Tagy nejsou tajné, takže je exporty mohou obsahovat. Při exportu zaškrtněte
-**Include tags** a do CSV se přidá sloupec s tagy; při importu se tyto tagy přidají
-k odpovídajícím sériovým číslům a tagy, které ještě neexistují, se vytvoří. Viz
-[**Saved STICKERs**](./saved-stickers.md).
+:::info Štítky se exportují se zařízeními
+Štítky nejsou tajné, takže se exportují spolu se zařízeními. Když při exportu
+zaškrtnete **Zahrnout štítky**, přibude v CSV sloupec se štítky; import je pak
+k odpovídajícím sériovým číslům přidá a chybějící štítky založí. Viz
+[**Uložená zařízení STICKER**](./saved-stickers.md).
 :::

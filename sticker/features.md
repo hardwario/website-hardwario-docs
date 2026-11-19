@@ -40,7 +40,7 @@ Alongside the secret key, each device holds a **vendor token**, a privileged, pe
 - The **secret key** secures the everyday encrypted NFC channel used to read and write configuration.
 - The **vendor token** authorizes the privileged operations the secret key cannot: **setting a new secret key without knowing the current one** (for example when the key is lost; with the current key, the key can also be changed over the normal channel) and the **vendor reset** tier above, which wipes the device back to its serial number and vendor token, setting a new secret key in the process.
 
-Because it unlocks re-keying and the deepest reset, the vendor token is never needed for routine configuration and is held only by the device owner. In [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/saved-stickers) it is stored per device under **Saved STICKERs** and used under **Tools → Vendor changes**; see the [**Reset guide**](/apps/hardwario-manager/sticker/reset).
+Because it unlocks re-keying and the deepest reset, the vendor token is never needed for routine configuration and is held only by the device owner. In [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/saved-stickers) it is stored per device under **Saved STICKER devices** and used under **Tools → Vendor changes**; see the [**Reset guide**](/apps/hardwario-manager/sticker/reset).
 
 ### Pulse counters persist across power loss
 

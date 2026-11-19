@@ -38,7 +38,7 @@ Standardně se používá NFC.
 
 ## Zabezpečení {#security}
 
-Každé zařízení STICKER má vlastní secret key. Do aplikace HARDWARIO Manager ho u každého zařízení přidáte jen jednou, viz [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers). Příkazy i odpovědi jsou šifrované, takže bez klíče telefon konfiguraci nepřečte ani nezmění.
+Každé zařízení STICKER má vlastní secret key. Do aplikace HARDWARIO Manager ho u každého zařízení přidáte jen jednou, viz [**Uložená zařízení STICKER**](/apps/hardwario-manager/sticker/saved-stickers). Příkazy i odpovědi jsou šifrované, takže bez klíče telefon konfiguraci nepřečte ani nezmění.
 
 ## Hlavní nastavení a výchozí hodnoty {#main-settings-and-defaults}
 

@@ -1,5 +1,6 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import QRCode from 'qrcode';
+import Translate, {translate} from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
 // Builds the plaintext AppConfigMessage protobuf that the STICKER NFC config
@@ -10,7 +11,13 @@ import styles from './styles.module.css';
 // Only ticked fields are encoded (proto3 `optional` = explicit presence).
 //
 // The bytes produced here are the *plaintext* template. On a production device
-// the NFC Configurator wraps them in the per-device AES-CCM frame.
+// HARDWARIO Manager wraps them in the per-device AES-CCM frame.
+
+// UI strings go through Docusaurus translate(); the Czech messages live in
+// i18n/cs/code.json under sticker.templateGenerator.*. Labels and help texts of the
+// tables below are keyed by field key (field.<key>, field.<key>.help), channel bit,
+// source and quantity id, so the English tables stay the source of the messages.
+const t = (id, message, values) => translate({id: 'sticker.templateGenerator.' + id, message}, values);
 
 // --- LoRaWAN basics (AppConfigMessage.Lorawan, field 5) ---
 const LORAWAN = [
@@ -174,11 +181,11 @@ const dwellOk = (v) => num(v) >= 0 && num(v) <= DWELL_MAX;
 
 // What dwell does for the rule's kind (eval_threshold/eval_state/eval_count in app_alarm.c).
 function dwellHint(r, q) {
-  if (q.kind === 'threshold') return 'Seconds the value must stay outside Low to High before the alarm fires (0 = immediately).';
-  if (q.kind === 'count') return 'Seconds after firing before the alarm can fire again.';
-  if (r.source === 'pir' || r.source === 'accel') return 'Fires on each event, then waits this many seconds before it can fire again.';
-  if (r.from === r.to) return 'Seconds the line must stay at To before the alarm fires (0 = immediately).';
-  return 'Seconds the line must stay at To after the transition before the alarm fires; it then stays active as long before it can fire again (0 = immediately).';
+  if (q.kind === 'threshold') return t('dwell.threshold', 'Seconds the value must stay outside Low to High before the alarm fires (0 = immediately).');
+  if (q.kind === 'count') return t('dwell.count', 'Seconds after firing before the alarm can fire again.');
+  if (r.source === 'pir' || r.source === 'accel') return t('dwell.event', 'Fires on each event, then waits this many seconds before it can fire again.');
+  if (r.from === r.to) return t('dwell.level', 'Seconds the line must stay at To before the alarm fires (0 = immediately).');
+  return t('dwell.edge', 'Seconds the line must stay at To after the transition before the alarm fires; it then stays active as long before it can fire again (0 = immediately).');
 }
 
 const DEFAULT_RULE = {
@@ -364,7 +371,9 @@ const copy = (text) => {
 // Allowed-range text for a numeric field, e.g. "5 to 3600 s, or 0".
 function rangeText(f) {
   const unit = f.unit ? ' ' + f.unit : '';
-  return `${f.min} to ${f.max}${unit}${f.zeroOk ? ', or 0' : ''}`;
+  return f.zeroOk
+    ? t('rangeOrZero', '{min} to {max}{unit}, or 0', {min: f.min, max: f.max, unit})
+    : t('range', '{min} to {max}{unit}', {min: f.min, max: f.max, unit});
 }
 
 // Validate a ticked field. Returns null when valid, or {text, block} where
@@ -372,12 +381,12 @@ function rangeText(f) {
 function fieldIssue(f, value) {
   if (f.type === 'uint32') {
     const s = String(value ?? '').trim();
-    if (s === '') return {text: 'enter a value', block: true};
-    if (!/^\d+$/.test(s)) return {text: 'digits only', block: true};
+    if (s === '') return {text: t('issue.empty', 'enter a value'), block: true};
+    if (!/^\d+$/.test(s)) return {text: t('issue.digits', 'digits only'), block: true};
     const v = Number(s);
     const ok = (f.zeroOk && v === 0) ||
       ((f.min === undefined || v >= f.min) && (f.max === undefined || v <= f.max));
-    if (!ok) return {text: 'must be ' + rangeText(f), block: true};
+    if (!ok) return {text: t('issue.range', 'must be {range}', {range: rangeText(f)}), block: true};
     return null;
   }
   return null;
@@ -390,8 +399,8 @@ function renderValue(f, cell, onChange) {
     return (
       <select className={styles.select} value={String(cell.value)}
         onChange={(e) => onChange({value: e.target.value === 'true'})}>
-        <option value="true">on</option>
-        <option value="false">off</option>
+        <option value="true">{t('on', 'on')}</option>
+        <option value="false">{t('off', 'off')}</option>
       </select>
     );
   }
@@ -411,7 +420,7 @@ function renderValue(f, cell, onChange) {
           <label key={bit} style={{display: 'inline-flex', alignItems: 'center', gap: '0.3rem', fontWeight: 'normal', fontSize: '0.85em'}}>
             <input type="checkbox" checked={(mask & (1 << bit)) !== 0}
               onChange={(e) => onChange({value: (e.target.checked ? (mask | (1 << bit)) : (mask & ~(1 << bit))) >>> 0})} />
-            {label}
+            {t('channel.' + bit, label)}
           </label>
         ))}
       </div>
@@ -436,14 +445,14 @@ function FieldRow({f, cell, onChange}) {
       <div className={styles.rowMain}>
         <label className={styles.check}>
           <input type="checkbox" checked={cell.on} onChange={(e) => onChange({on: e.target.checked})} />
-          <span className={styles.rowLabel}>{f.label}</span>
+          <span className={styles.rowLabel}>{f.label && t('field.' + f.key, f.label)}</span>
         </label>
         <div className={cell.on ? styles.val : `${styles.val} ${styles.dim}`}>
           {renderValue(f, cell, onChange)}
           {issue && <span className={issue.block ? styles.fieldErr : styles.fieldWarn}>{issue.text}</span>}
         </div>
       </div>
-      {f.help && <div className={styles.help}>{f.help}</div>}
+      {f.help && <div className={styles.help}>{t('field.' + f.key + '.help', f.help)}</div>}
     </div>
   );
 }
@@ -588,24 +597,24 @@ export default function StickerTemplateGenerator() {
       setLoadMsg({
         ok: true,
         text: any
-          ? `Loaded ${n} byte(s). Sections with values are expanded below.`
-          : `Loaded ${n} byte(s), but no settings recognized by this form.`,
+          ? t('load.ok', 'Loaded {n} byte(s). Sections with values are expanded below.', {n})
+          : t('load.empty', 'Loaded {n} byte(s), but no settings recognized by this form.', {n}),
       });
     } catch (e) {
-      setLoadMsg({ok: false, text: 'Could not decode: ' + e.message});
+      setLoadMsg({ok: false, text: t('load.error', 'Could not decode: {reason}', {reason: e.message})});
     }
   };
 
   return (
     <div className={styles.generator}>
       <div className={styles.toolbar}>
-        <span className={styles.hint}>Open a section and tick the settings to include. Hover or focus a setting to see what it does and its allowed values.</span>
-        <button type="button" className={styles.button} onClick={clearAll}>Clear all</button>
+        <span className={styles.hint}>{t('toolbar.hint', 'Open a section and tick the settings to include. Hover or focus a setting to see what it does and its allowed values.')}</span>
+        <button type="button" className={styles.button} onClick={clearAll}>{t('clearAll', 'Clear all')}</button>
       </div>
 
       {GENERIC_GROUPS.map((g) => (
         <details key={g.key} className={styles.group} open={!!open[g.key]} onToggle={onToggle(g.key)}>
-          <summary className={styles.groupTitle}>{g.label}</summary>
+          <summary className={styles.groupTitle}>{t('group.' + g.key, g.label)}</summary>
           <div className={styles.groupBody}>
             {g.fields.map((f) => (
               <FieldRow key={f.key} f={f} cell={model[g.key][f.key]}
@@ -616,7 +625,7 @@ export default function StickerTemplateGenerator() {
       ))}
 
       <details className={styles.group} open={!!open.alarms} onToggle={onToggle('alarms')}>
-        <summary className={styles.groupTitle}>Alarms</summary>
+        <summary className={styles.groupTitle}>{t('group.alarms', 'Alarms')}</summary>
         <div className={styles.groupBody}>
           {ALARM_SCALARS.map((f) => (
             <FieldRow key={f.key} f={f} cell={model.alarms[f.key]}
@@ -624,9 +633,9 @@ export default function StickerTemplateGenerator() {
           ))}
 
           <div className={styles.field}>
-            <label className={styles.label}>Alarm rules</label>
+            <label className={styles.label}>{t('rules', 'Alarm rules')}</label>
             {aRules.length === 0 && (
-              <div className={styles.hint}>No alarm rule yet. Add one to include it in the template.</div>
+              <div className={styles.hint}>{t('rules.none', 'No alarm rule yet. Add one to include it in the template.')}</div>
             )}
             {aRules.map((r, i) => {
               const valid = validQuantityIds(r.source);
@@ -635,62 +644,62 @@ export default function StickerTemplateGenerator() {
                 <div key={i} className={styles.rule}>
                   <div className={styles.inline}>
                     <div>
-                      <label className={styles.label}>Slot (0-15)</label>
+                      <label className={styles.label}>{t('rule.slot', 'Slot (0-15)')}</label>
                       <input className={styles.inputSm} type="number" min="0" max="15" value={r.slot}
                         onChange={(e) => updRule(i, {slot: e.target.value})} />
                     </div>
                     <div>
-                      <label className={styles.label}>Action</label>
+                      <label className={styles.label}>{t('rule.action', 'Action')}</label>
                       <select className={styles.select} value={r.action} onChange={(e) => updRule(i, {action: e.target.value})}>
-                        <option value="set">Set rule</option>
-                        <option value="clear">Clear slot</option>
+                        <option value="set">{t('rule.action.set', 'Set rule')}</option>
+                        <option value="clear">{t('rule.action.clear', 'Clear slot')}</option>
                       </select>
                     </div>
-                    <button type="button" className={styles.remove} onClick={() => rmRule(i)}>Remove</button>
+                    <button type="button" className={styles.remove} onClick={() => rmRule(i)}>{t('rule.remove', 'Remove')}</button>
                   </div>
                   {r.action === 'set' && (
                     <>
                       <div className={styles.inline}>
                         <div>
-                          <label className={styles.label}>Source</label>
+                          <label className={styles.label}>{t('rule.source', 'Source')}</label>
                           <select className={styles.select} value={r.source} onChange={(e) => setRuleSource(i, e.target.value)}>
-                            {SOURCES.map((s) => <option key={s.id} value={s.id}>{s.label}</option>)}
+                            {SOURCES.map((s) => <option key={s.id} value={s.id}>{t('source.' + s.id, s.label)}</option>)}
                           </select>
                         </div>
                         <div>
-                          <label className={styles.label}>Quantity</label>
+                          <label className={styles.label}>{t('rule.quantity', 'Quantity')}</label>
                           <select className={styles.select} value={r.quantity} onChange={(e) => updRule(i, {quantity: e.target.value})}>
-                            {QUANTITIES.filter((x) => valid.includes(x.id)).map((x) => <option key={x.id} value={x.id}>{x.label}</option>)}
+                            {QUANTITIES.filter((x) => valid.includes(x.id)).map((x) => <option key={x.id} value={x.id}>{t('quantity.' + x.id, x.label)}</option>)}
                           </select>
                         </div>
                         <label className={styles.check}>
-                          <input type="checkbox" checked={r.enabled} onChange={(e) => updRule(i, {enabled: e.target.checked})} /> Enabled
+                          <input type="checkbox" checked={r.enabled} onChange={(e) => updRule(i, {enabled: e.target.checked})} /> {t('rule.enabled', 'Enabled')}
                         </label>
                       </div>
                       {q.kind === 'threshold' && (
                         <div className={styles.inline}>
-                          <div><label className={styles.label}>Low</label><input className={styles.inputSm} type="number" value={r.lo} onChange={(e) => updRule(i, {lo: e.target.value})} /></div>
-                          <div><label className={styles.label}>High</label><input className={styles.inputSm} type="number" value={r.hi} onChange={(e) => updRule(i, {hi: e.target.value})} /></div>
+                          <div><label className={styles.label}>{t('rule.low', 'Low')}</label><input className={styles.inputSm} type="number" value={r.lo} onChange={(e) => updRule(i, {lo: e.target.value})} /></div>
+                          <div><label className={styles.label}>{t('rule.high', 'High')}</label><input className={styles.inputSm} type="number" value={r.hi} onChange={(e) => updRule(i, {hi: e.target.value})} /></div>
                         </div>
                       )}
                       {q.kind === 'state' && (
                         <div className={styles.inline}>
-                          <div><label className={styles.label}>From</label><select className={styles.inputSm} value={r.from} onChange={(e) => updRule(i, {from: e.target.value})}><option value="0">0</option><option value="1">1</option></select></div>
-                          <div><label className={styles.label}>To</label><select className={styles.inputSm} value={r.to} onChange={(e) => updRule(i, {to: e.target.value})}><option value="0">0</option><option value="1">1</option></select></div>
-                          <span className={styles.hint}>{r.from === r.to ? 'level (active while line = To)' : 'edge (fires on this transition)'}</span>
+                          <div><label className={styles.label}>{t('rule.from', 'From')}</label><select className={styles.inputSm} value={r.from} onChange={(e) => updRule(i, {from: e.target.value})}><option value="0">0</option><option value="1">1</option></select></div>
+                          <div><label className={styles.label}>{t('rule.to', 'To')}</label><select className={styles.inputSm} value={r.to} onChange={(e) => updRule(i, {to: e.target.value})}><option value="0">0</option><option value="1">1</option></select></div>
+                          <span className={styles.hint}>{r.from === r.to ? t('rule.level', 'level (active while line = To)') : t('rule.edge', 'edge (fires on this transition)')}</span>
                         </div>
                       )}
                       {q.kind === 'count' && (
                         <div className={styles.inline}>
-                          <div><label className={styles.label}>Events per report interval</label><input className={styles.inputSm} type="number" value={r.count} onChange={(e) => updRule(i, {count: e.target.value})} /></div>
+                          <div><label className={styles.label}>{t('rule.count', 'Events per report interval')}</label><input className={styles.inputSm} type="number" value={r.count} onChange={(e) => updRule(i, {count: e.target.value})} /></div>
                         </div>
                       )}
                       <div className={styles.inline}>
                         <div>
-                          <label className={styles.label}>Dwell (s)</label>
+                          <label className={styles.label}>{t('rule.dwell', 'Dwell (s)')}</label>
                           <input className={styles.inputSm} type="number" min="0" max={DWELL_MAX} value={r.dwell}
                             onChange={(e) => updRule(i, {dwell: e.target.value})} />
-                          {!dwellOk(r.dwell) && <span className={styles.fieldErr}>must be 0 to {DWELL_MAX} s</span>}
+                          {!dwellOk(r.dwell) && <span className={styles.fieldErr}>{t('rule.dwellRange', 'must be 0 to {max} s', {max: DWELL_MAX})}</span>}
                         </div>
                         <span className={`${styles.hint} ${styles.dwellHint}`}>{dwellHint(r, q)}</span>
                       </div>
@@ -699,7 +708,7 @@ export default function StickerTemplateGenerator() {
                 </div>
               );
             })}
-            <button type="button" className={styles.button} onClick={addRule}>+ Add alarm rule</button>
+            <button type="button" className={styles.button} onClick={addRule}>{t('rules.add', '+ Add alarm rule')}</button>
           </div>
         </div>
       </details>
@@ -710,43 +719,43 @@ export default function StickerTemplateGenerator() {
         ) : (
           <>
             <div className={styles.outputHead}>
-              <span className={styles.port}>AppConfigMessage hex &middot; {byteLen} byte(s)</span>
-              <button type="button" className={styles.button} onClick={() => copy(hex)} disabled={!hex}>Copy hex</button>
+              <span className={styles.port}>{t('output.hex', 'AppConfigMessage hex · {n} byte(s)', {n: byteLen})}</span>
+              <button type="button" className={styles.button} onClick={() => copy(hex)} disabled={!hex}>{t('output.copy', 'Copy hex')}</button>
             </div>
-            <code className={styles.hex}>{hex || '(no settings selected)'}</code>
+            <code className={styles.hex}>{hex || t('output.none', '(no settings selected)')}</code>
           </>
         )}
       </div>
 
       <details className={styles.group}>
-        <summary className={styles.groupTitle}>Template (JSON)</summary>
+        <summary className={styles.groupTitle}>{t('output.json', 'Template (JSON)')}</summary>
         <div className={styles.groupBody}>
-          <code className={styles.code}>{json && json !== '{}' ? json : '(no settings selected)'}</code>
+          <code className={styles.code}>{json && json !== '{}' ? json : t('output.none', '(no settings selected)')}</code>
         </div>
       </details>
 
       <div className={styles.field}>
-        <label className={styles.label}>QR code (carries the hex string)</label>
+        <label className={styles.label}>{t('qr.label', 'QR code (carries the hex string)')}</label>
         {qrErr ? (
-          <div className={styles.error}>QR error: {qrErr}</div>
+          <div className={styles.error}>{t('qr.error', 'QR error: {reason}', {reason: qrErr})}</div>
         ) : qr ? (
           <div className={styles.qrWrap}>
-            <img className={styles.qr} src={qr} alt="Template QR code" width={240} height={240} />
-            <a className={styles.button} href={qr} download="sticker-template.png">Download PNG</a>
+            <img className={styles.qr} src={qr} alt={t('qr.alt', 'Template QR code')} width={240} height={240} />
+            <a className={styles.button} href={qr} download="sticker-template.png">{t('qr.download', 'Download PNG')}</a>
           </div>
         ) : (
-          <span className={styles.hint}>Select at least one setting to generate a QR code.</span>
+          <span className={styles.hint}>{t('qr.none', 'Select at least one setting to generate a QR code.')}</span>
         )}
       </div>
 
       <div className={styles.field}>
-        <label className={styles.label} htmlFor="stg-hexin">Read a template from hex</label>
+        <label className={styles.label} htmlFor="stg-hexin">{t('read.label', 'Read a template from hex')}</label>
         <textarea id="stg-hexin" className={styles.textarea} rows={3} spellCheck={false}
-          placeholder="Paste an AppConfigMessage hex string to load it into the form above"
+          placeholder={t('read.placeholder', 'Paste an AppConfigMessage hex string to load it into the form above')}
           value={hexIn} onChange={(e) => setHexIn(e.target.value)} />
         <div className={styles.outputHead}>
-          <span className={styles.hint}>Replaces the current selection. Settings outside this form are ignored.</span>
-          <button type="button" className={styles.button} onClick={loadFromHex} disabled={!hexIn.trim()}>Load template</button>
+          <span className={styles.hint}>{t('read.hint', 'Replaces the current selection. Settings outside this form are ignored.')}</span>
+          <button type="button" className={styles.button} onClick={loadFromHex} disabled={!hexIn.trim()}>{t('read.load', 'Load template')}</button>
         </div>
         {loadMsg && (
           <div className={loadMsg.ok ? styles.warning : styles.error}>{loadMsg.text}</div>
@@ -754,8 +763,14 @@ export default function StickerTemplateGenerator() {
       </div>
 
       <p className={styles.note}>
-        This is the <strong>plaintext</strong> config template (an <code>AppConfigMessage</code> protobuf).
-        On a production device the NFC Configurator encrypts it per device before writing it over NFC.
+        <Translate
+          id="sticker.templateGenerator.note"
+          values={{
+            plaintext: <strong>{t('note.plaintext', 'plaintext')}</strong>,
+            message: <code>AppConfigMessage</code>,
+          }}>
+          {'This is the {plaintext} config template (an {message} protobuf). On a production device HARDWARIO Manager encrypts it per device before writing it over NFC.'}
+        </Translate>
       </p>
     </div>
   );

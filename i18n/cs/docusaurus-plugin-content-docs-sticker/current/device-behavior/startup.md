@@ -33,7 +33,7 @@ Pokud tabulka neuvádí jinak, LED opakuje svůj vzor každé 3 s. Většina bl
 | <LedPattern pattern="green yellow" /> 2 s | **NFC:** přenos dat proběhl v pořádku. |
 | <LedPattern pattern="red" /> 2 s | **NFC:** přenos dat se nepovedl. |
 
-Rádio zapnete v aplikaci [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration): zvolte režim rádia a zadejte síťová nastavení. Stavy Připojování a Slabý signál podrobně popisuje stránka [**Připojení k síti**](network-connection.md).
+Rádio zapnete v aplikaci HARDWARIO Manager: režim rádia zvolíte v části **STICKER → Rádio → Režim rádia** (viz [**Rádio**](/apps/hardwario-manager/sticker/radio)) a síťová nastavení zadáte v její [**konfiguraci**](/apps/hardwario-manager/sticker/configuration). Stavy Připojování a Slabý signál podrobně popisuje stránka [**Připojení k síti**](network-connection.md).
 
 ## Slabá baterie při startu {#low-battery-at-startup}
 
@@ -47,7 +47,7 @@ Zařízení se samo vypnulo a zůstane vypnuté, i když se baterie zotaví. Chc
 
 Kalibrační režim je servisní režim pro testy ve výrobě a pro běžné používání není určený.
 
-- **Jak se spustí:** přiložením magnetů k oběma Hallovým spínačům při startu zařízení nebo volbou **Tools → Calibration mode** v aplikaci HARDWARIO Manager.
+- **Jak se spustí:** přiložením magnetů k oběma Hallovým spínačům při startu zařízení nebo volbou **Nástroje → Režim kalibrace** v aplikaci HARDWARIO Manager.
 - **Co uvidíte:** pět rychlých oranžových bliknutí, potom každou sekundu krátké oranžové bliknutí.
 - **Co dělá:** každých 30 s odešle hodnoty ze senzorů, pokud režim rádia není nastavený na Vypnuto. Běžná hlášení, alarmy, historie senzorů a NFC jsou vypnuté.
 - **Jak skončí:** po 120 min se zařízení restartuje do běžného provozu. Dřív režim ukončíte tak, že baterie vyjmete a znovu vložíte.

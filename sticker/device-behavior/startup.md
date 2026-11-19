@@ -33,7 +33,7 @@ Unless the table says otherwise, the LED repeats its pattern every 3 s. Most fl
 | <LedPattern pattern="green yellow" /> 2 s | **NFC:** exchange worked. |
 | <LedPattern pattern="red" /> 2 s | **NFC:** exchange failed. |
 
-To switch the radio on, set the radio mode and the network settings in [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration). Joining and Weak signal are explained in [**Network connection**](network-connection.md).
+To switch the radio on, set the radio mode in HARDWARIO Manager (**STICKER → Radio → Radio mode**, see [**Radio**](/apps/hardwario-manager/sticker/radio)) and the network settings in its [**configuration**](/apps/hardwario-manager/sticker/configuration). Joining and Weak signal are explained in [**Network connection**](network-connection.md).
 
 ## Low battery at startup
 

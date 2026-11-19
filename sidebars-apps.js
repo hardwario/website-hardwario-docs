@@ -22,7 +22,6 @@ const sidebars = {
             'hardwario-manager/first-steps',
             'hardwario-manager/install',
             'hardwario-manager/settings',
-            'hardwario-manager/atelos',
             {
               type: 'category',
               label: 'STICKER',
@@ -32,20 +31,6 @@ const sidebars = {
               },
               collapsed: true,
               items: [
-                {
-                  type: 'category',
-                  label: 'Saved STICKERs',
-                  link: {
-                    type: 'doc',
-                    id: 'hardwario-manager/sticker/saved-stickers',
-                  },
-                  collapsed: true,
-                  items: [
-                    'hardwario-manager/sticker/import-file',
-                    'hardwario-manager/sticker/tags',
-                    'hardwario-manager/sticker/change-log',
-                  ],
-                },
                 'hardwario-manager/sticker/device-info',
                 {
                   type: 'category',
@@ -57,23 +42,35 @@ const sidebars = {
                   },
                   collapsed: true,
                   items: [
-                    'hardwario-manager/sticker/alarms',
-                    'hardwario-manager/sticker/offline-configuration',
                     'hardwario-manager/sticker/batch-export',
+                    'hardwario-manager/sticker/batch-write',
+                    {
+                      type: 'category',
+                      label: 'Templates',
+                      link: {
+                        type: 'doc',
+                        id: 'hardwario-manager/sticker/templates',
+                      },
+                      collapsed: true,
+                      items: [
+                        'hardwario-manager/sticker/template-generator',
+                      ],
+                    },
+                    'hardwario-manager/sticker/alarms',
                   ],
                 },
                 {
                   type: 'category',
-                  label: 'Templates',
-                  link: {
-                    type: 'doc',
-                    id: 'hardwario-manager/sticker/templates',
-                  },
+                  label: 'Sensors',
+                  key: 'manager-sticker-sensors',
                   collapsed: true,
                   items: [
-                    'hardwario-manager/sticker/template-generator',
+                    'hardwario-manager/sticker/one-wire-sensors',
+                    'hardwario-manager/sticker/sample-data',
+                    'hardwario-manager/sticker/sensor-history',
                   ],
                 },
+                'hardwario-manager/sticker/radio',
                 {
                   type: 'category',
                   label: 'Tools',
@@ -84,10 +81,22 @@ const sidebars = {
                   },
                   collapsed: true,
                   items: [
-                    'hardwario-manager/sticker/one-wire-sensors',
-                    'hardwario-manager/sticker/sample-data',
-                    'hardwario-manager/sticker/sensor-history',
                     'hardwario-manager/sticker/reset',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Saved STICKER devices',
+                  key: 'manager-sticker-saved',
+                  link: {
+                    type: 'doc',
+                    id: 'hardwario-manager/sticker/saved-stickers',
+                  },
+                  collapsed: true,
+                  items: [
+                    'hardwario-manager/sticker/import-file',
+                    'hardwario-manager/sticker/tags',
+                    'hardwario-manager/sticker/change-log',
                   ],
                 },
               ],

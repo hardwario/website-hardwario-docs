@@ -56,10 +56,17 @@ jak je zařízení nebo aplikace opravdu zobrazuje (`WiFi:` ve výpisu GAUGERu,
 
 ## Popisky rozhraní aplikací
 
-Mobilní ani cloudová aplikace nemá českou lokalizaci, takže **popisky, které
-uživatel vidí na obrazovce, se nepřekládají** — čtenář musí v návodu najít přesně
-to, co má v telefonu. Píšou se tučně a v původním znění: **Saved STICKERs**,
-**Templates**, **Device info**, **Send Test Mail**.
+Čtenář musí v návodu najít přesně to, co vidí na obrazovce. Popisky se proto
+píšou tučně a přesně v tom znění, které ukazuje aplikace v češtině:
+
+- **HARDWARIO Manager** má od verze 2.1.1 českou lokalizaci (`lib/l10n/app_cs.arb`
+  v repozitáři aplikace). České stránky citují její české popisky doslova, včetně
+  velkých písmen a nepřesností: **Uložená zařízení STICKER**, **Šablony**,
+  **Informace o zařízení**, **Rádio → Klíče rádiového spojení**. Anglické stránky
+  citují `app_en.arb`. Snímky obrazovky jsou anglické a sdílejí je obě jazykové
+  verze.
+- Aplikace bez české lokalizace (cloudové rozhraní) se nepřekládají a popisky
+  zůstávají v původním znění: **Send Test Mail**.
 
 Neplatí to pro *názvy sekcí dokumentace*: ty přeložené jsou (kategorie
 `Administration` je v české navigaci **Správa**), takže odkaz do nich musí

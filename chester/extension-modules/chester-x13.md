@@ -79,21 +79,21 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 
 ### CHESTER-X13 Connector Pinout
 
-![CHESTER-X13 terminal block pinout: INT, RH, CANH, CANL, RL, GND, GND, +VIN on pins 1-8](images/tb-chester-x13.png)
+![CHESTER-X13 terminal block pinout: +VIN, GND, GND, RL, CANL, CANH, RH, INT on pins 1-8](images/tb-chester-x13.png)
 
 | Pin | Signal | Type | Description |
 | :---: | :--- | :--- | :--- |
-| 1 | INT | Output | Interrupt output to the CHESTER mainboard |
-| 2 | RH | CAN Termination | Termination tap for CANH (connect to CANH to enable the on-board termination) |
-| 3 | CANH | CAN Bus | CAN bus line, high |
-| 4 | CANL | CAN Bus | CAN bus line, low |
-| 5 | RL | CAN Termination | Termination tap for CANL (connect to CANL to enable the on-board termination) |
-| 6 | GND | Ground | System ground reference |
-| 7 | GND | Ground | System ground reference |
-| 8 | +VIN | Power Input | Optional external DC input to the on-board step-down (6-28 VDC) |
+| 1 | +VIN | Power Input | Optional external DC input to the on-board step-down (6-28 VDC) |
+| 2 | GND | Ground | System ground reference |
+| 3 | GND | Ground | System ground reference |
+| 4 | RL | CAN Termination | Termination tap for CANL (connect to CANL to enable the on-board termination) |
+| 5 | CANL | CAN Bus | CAN bus line, low |
+| 6 | CANH | CAN Bus | CAN bus line, high |
+| 7 | RH | CAN Termination | Termination tap for CANH (connect to CANH to enable the on-board termination) |
+| 8 | INT | Output | Interrupt output to the CHESTER mainboard |
 
 :::info
-The module can run directly from the CHESTER mainboard. When an external **6-28 VDC** supply is connected to **+VIN** (Pin 8), the on-board TPS62933 step-down converter produces a fixed **5 V** that powers the CHESTER mainboard.
+The module can run directly from the CHESTER mainboard. When an external **6-28 VDC** supply is connected to **+VIN** (Pin 1), the on-board TPS62933 step-down converter produces a fixed **5 V** that powers the CHESTER mainboard.
 :::
 
 ### Host Interface (SPI)
@@ -107,27 +107,27 @@ Unlike most CHESTER-X modules (which use **I²C**), CHESTER-X13 communicates wit
 | GP2 | MISO | SDO |
 | GP3 | CS | NCS |
 
-The MCP2518FD interrupt output (INT) is routed to the module's **INT** terminal (pin 1). See the [Interrupt Pin](#interrupt-pin) subsection below.
+The MCP2518FD interrupt output (INT) is routed to the module's **INT** terminal (pin 8). See the [Interrupt Pin](#interrupt-pin) subsection below.
 
 ### Interrupt Pin
 
-The MCP2518FD signals events (such as a received CAN frame) on its interrupt output, which is brought out to the module's **INT** terminal (pin 1). This interrupt **must be wired to the CHESTER mainboard's INT terminal** so the mainboard can detect it. On the **CHESTER-M CGLS** mainboard, add a jumper wire from the extension module's terminal block to the mainboard's INT terminal. The wiring below is shown for a module in **slot B**; a module in another slot connects to that slot's INT terminal the same way.
+The MCP2518FD signals events (such as a received CAN frame) on its interrupt output, which is brought out to the module's **INT** terminal (pin 8). This interrupt **must be wired to the CHESTER mainboard's INT terminal** so the mainboard can detect it. On the **CHESTER-M CGLS** mainboard, add a jumper wire from the extension module's terminal block to the mainboard's INT terminal. The wiring below is shown for a module in **slot B**; a module in another slot connects to that slot's INT terminal the same way.
 
 ![CHESTER mainboard drawing with a wire linking the slot B INT terminal to the module interrupt pin](images/int-pin.png)
 
-* Example: interrupt wiring for a module in slot B (CHESTER-M CGLS).
+* Example: interrupt wiring for a module in slot B (CHESTER-M CGLS): the module INT (pin 8) appears on terminal **B8**.
 
 ## CAN Bus Connection
 
-The CAN bus is wired directly to the terminal-block pins **CANH** (pin 3) and **CANL** (pin 4). Use **twisted-pair** cable with a **120 Ω** characteristic impedance, wire the bus as a **linear (daisy-chain) topology** (avoid star layouts and long stubs), and keep any untwisted wiring at the terminal block **as short as possible**.
+The CAN bus is wired directly to the terminal-block pins **CANH** (pin 6) and **CANL** (pin 5). Use **twisted-pair** cable with a **120 Ω** characteristic impedance, wire the bus as a **linear (daisy-chain) topology** (avoid star layouts and long stubs), and keep any untwisted wiring at the terminal block **as short as possible**.
 
-The CAN interface is **not galvanically isolated**, so all nodes must share a common ground reference. Connect the bus **GND** to one of the terminal-block GND pins (pin 6 or 7).
+The CAN interface is **not galvanically isolated**, so all nodes must share a common ground reference. Connect the bus **GND** to one of the terminal-block GND pins (pin 2 or 3).
 
 ### Termination Resistors
 
 A CAN bus must be terminated with a **120 Ω** resistor between CANH and CANL at **both physical ends** of the bus. CHESTER-X13 provides an on-board termination that is **disconnected by default** (a node in the middle of the bus must not be terminated).
 
-Enable it **only when the module sits at the end of the bus** by connecting **CANH to RH** (pin 3 to pin 2) and **CANL to RL** (pin 4 to pin 5) on the terminal block.
+Enable it **only when the module sits at the end of the bus** by connecting **CANH to RH** (pin 6 to pin 7) and **CANL to RL** (pin 5 to pin 4) on the terminal block.
 
 ### Enclosure Feed-Through
 

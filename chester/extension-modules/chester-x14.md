@@ -77,21 +77,21 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 
 ### CHESTER-X14 Connector Pinout
 
-![CHESTER-X14 terminal block pinout: INT, +V, +VIN, GND, Rx-, Rx+, Tx-, Tx+ on pins 1-8](images/tb-chester-x14.png)
+![CHESTER-X14 terminal block pinout: Tx+, Tx-, Rx+, Rx-, GND, +VIN, +V, INT on pins 1-8](images/tb-chester-x14.png)
 
 | Pin | Signal | Type | Description |
 | :---: | :--- | :--- | :--- |
-| 1 | INT | Output | Interrupt output to the CHESTER mainboard |
-| 2 | +V | Power Output | Fixed 5 V from the on-board step-down (powers the CHESTER mainboard) |
-| 3 | +VIN | Power Input | Optional external DC input to the on-board step-down (6-28 VDC) |
-| 4 | GND | Ground | System ground reference |
-| 5 | Rx- | Ethernet | Receive pair (negative) |
-| 6 | Rx+ | Ethernet | Receive pair (positive) |
-| 7 | Tx- | Ethernet | Transmit pair (negative) |
-| 8 | Tx+ | Ethernet | Transmit pair (positive) |
+| 1 | Tx+ | Ethernet | Transmit pair (positive) |
+| 2 | Tx- | Ethernet | Transmit pair (negative) |
+| 3 | Rx+ | Ethernet | Receive pair (positive) |
+| 4 | Rx- | Ethernet | Receive pair (negative) |
+| 5 | GND | Ground | System ground reference |
+| 6 | +VIN | Power Input | Optional external DC input to the on-board step-down (6-28 VDC) |
+| 7 | +V | Power Output | Fixed 5 V from the on-board step-down (powers the CHESTER mainboard) |
+| 8 | INT | Output | Interrupt output to the CHESTER mainboard |
 
 :::info
-The module can run directly from the CHESTER mainboard. When an external **6-28 VDC** supply is connected to **+VIN** (Pin 3), the on-board TPS62933 step-down converter produces a fixed **5 V** on **+V** (Pin 2), which powers the CHESTER mainboard.
+The module can run directly from the CHESTER mainboard. When an external **6-28 VDC** supply is connected to **+VIN** (Pin 6), the on-board TPS62933 step-down converter produces a fixed **5 V** on **+V** (Pin 7), which powers the CHESTER mainboard.
 :::
 
 ### Host Interface (SPI)
@@ -105,15 +105,15 @@ Unlike most CHESTER-X modules (which use **I²C**), CHESTER-X14 communicates wit
 | GP2 | SCLK | ETH_SCLK |
 | GP3 | CS | ETH_CS |
 
-The W5500 interrupt output (INTn) is routed to the module's **INT** terminal (pin 1). See the [Interrupt Pin](#interrupt-pin) subsection below.
+The W5500 interrupt output (INTn) is routed to the module's **INT** terminal (pin 8). See the [Interrupt Pin](#interrupt-pin) subsection below.
 
 ### Interrupt Pin
 
-The W5500 signals events (such as an incoming packet) on its interrupt output, which is brought out to the module's **INT** terminal (pin 1). This interrupt **must be wired to the CHESTER mainboard's INT terminal** so the mainboard can detect it. On the **CHESTER-M CGLS** mainboard, add a jumper wire from the extension module's terminal block to the mainboard's INT terminal. The wiring below is shown for a module in **slot B**; a module in another slot connects to that slot's INT terminal the same way.
+The W5500 signals events (such as an incoming packet) on its interrupt output, which is brought out to the module's **INT** terminal (pin 8). This interrupt **must be wired to the CHESTER mainboard's INT terminal** so the mainboard can detect it. On the **CHESTER-M CGLS** mainboard, add a jumper wire from the extension module's terminal block to the mainboard's INT terminal. The wiring below is shown for a module in **slot B**; a module in another slot connects to that slot's INT terminal the same way.
 
 ![CHESTER mainboard drawing with a wire linking the slot B INT terminal to the module interrupt pin](images/int-pin.png)
 
-* Example: interrupt wiring for a module in slot B (CHESTER-M CGLS).
+* Example: interrupt wiring for a module in slot B (CHESTER-M CGLS): the module INT (pin 8) appears on terminal **B8**.
 
 ## Ethernet Connection
 
@@ -125,11 +125,11 @@ Wire the Ethernet cable to the terminal block as shown below. The RJ-45 pin and 
 
 | RJ-45 pin | Wire (T568B) | Ethernet signal | CHESTER-X14 pin |
 | :---: | :--- | :--- | :---: |
-| 1 | White/orange | ETH_TD+ (Tx+) | 8 |
-| 2 | Orange | ETH_TD- (Tx-) | 7 |
-| 3 | White/green | ETH_RD+ (Rx+) | 6 |
-| 6 | Green | ETH_RD- (Rx-) | 5 |
-| 8 | Brown | ETH_GND (GND) | 4 |
+| 1 | White/orange | ETH_TD+ (Tx+) | 1 |
+| 2 | Orange | ETH_TD- (Tx-) | 2 |
+| 3 | White/green | ETH_RD+ (Rx+) | 3 |
+| 6 | Green | ETH_RD- (Rx-) | 4 |
+| 8 | Brown | ETH_GND (GND) | 5 |
 
 ### Enclosure Feed-Through
 

@@ -42,7 +42,7 @@ flowchart LR
 
 ## Example dashboard
 
-This is a live public dashboard, embedded right in this page:
+This is an interactive example dashboard with sample data, embedded right in this page:
 
 import ThingsBoardDashboard from '@site/src/components/ThingsBoardDashboard';
 

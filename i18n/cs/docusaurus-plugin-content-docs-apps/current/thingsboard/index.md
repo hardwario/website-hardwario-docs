@@ -42,7 +42,7 @@ flowchart LR
 
 ## Ukázkový dashboard {#example-dashboard}
 
-Toto je živý veřejný dashboard vložený přímo do této stránky:
+Toto je interaktivní ukázkový dashboard s ukázkovými daty, vložený přímo do této stránky:
 
 import ThingsBoardDashboard from '@site/src/components/ThingsBoardDashboard';
 

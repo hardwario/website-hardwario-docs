@@ -8,8 +8,7 @@ const SRC = 'https://app.hardwario.cloud/dashboard/15bcc940-5504-11f1-b26d-7f43a
 // and is scaled down to fit, so ThingsBoard never switches to its narrow mobile layout.
 const WIDTH = 1600;
 const HEIGHT = 900;
-// Inline, the bottom of the dashboard is cut off a little.
-const INLINE_HEIGHT = 880;
+const INLINE_HEIGHT = 900;
 
 function LiveDashboard() {
   const containerRef = useRef(null);
@@ -148,19 +147,19 @@ function LiveDashboard() {
   );
 }
 
-// The live dashboard connects to app.hardwario.cloud, so it waits behind a click
+// The dashboard connects to app.hardwario.cloud, so it waits behind a click
 // like the videos do: the page itself makes no request there. The poster has the
 // dashboard's inline proportions, so loading it hardly moves the page.
 const TEXT = {
   en: {
-    caption: 'Load the live dashboard',
-    label: 'Load the live dashboard (ThingsBoard example)',
-    notice: 'Loading the live dashboard connects to app.hardwario.cloud.',
+    caption: 'Load the example dashboard',
+    label: 'Load the interactive example dashboard',
+    notice: 'Loading the dashboard connects to app.hardwario.cloud.',
   },
   cs: {
-    caption: 'Načíst živý dashboard',
-    label: 'Načíst živý dashboard (ukázka ThingsBoard)',
-    notice: 'Načtení živého dashboardu se připojí k app.hardwario.cloud.',
+    caption: 'Načíst ukázkový dashboard',
+    label: 'Načíst interaktivní ukázkový dashboard',
+    notice: 'Načtení dashboardu se připojí k app.hardwario.cloud.',
   },
 };
 

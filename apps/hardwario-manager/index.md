@@ -9,8 +9,8 @@ description: "HARDWARIO Manager is the mobile app for setting up and managing HA
 **HARDWARIO Manager** is the mobile app for setting up and managing HARDWARIO
 devices in the field. It is one app for the whole ecosystem: hold the phone
 against a **STICKER** to configure it over NFC, or connect to a **CHESTER** over
-Bluetooth to read its state, edit its configuration, run shell commands, and
-update its firmware.
+Bluetooth to read its state, edit its configuration, run shell commands, bind
+BLE sensor tags and update its firmware.
 
 The app runs on **Android and iOS**, in **English and Czech**.
 
@@ -21,7 +21,7 @@ The app runs on **Android and iOS**, in **English and Czech**.
 | Device | How the phone talks to it | What the app can do |
 |---|---|---|
 | **STICKER** | NFC. Hold the phone against the device | Read device info, read and write the full configuration (one device at a time or in a batch), build and apply configuration templates, manage sensors and alarms, read stored measurements, switch the radio mode and read the radio link keys, reset the device, and keep a list of the devices you manage |
-| **CHESTER** | Bluetooth Low Energy | Read device information, edit the configuration, open a shell terminal, share that terminal with a colleague, update the firmware, and reboot the device |
+| **CHESTER** | Bluetooth Low Energy | Read device information, edit the configuration (a quick setup or every parameter), open a shell terminal and share it with a colleague, bind external BLE sensor tags, update the firmware from a QR code, an ID or a file, reboot the device and reset its configuration to factory defaults |
 
 STICKER needs its **batteries in** while you configure it, and firmware v2.0.0
 or newer. See [**STICKER**](./sticker/index.md).

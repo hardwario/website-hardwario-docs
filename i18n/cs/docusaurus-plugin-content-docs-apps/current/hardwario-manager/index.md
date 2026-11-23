@@ -9,8 +9,8 @@ description: "HARDWARIO Manager je mobilní aplikace pro nastavení a správu za
 **HARDWARIO Manager** je mobilní aplikace pro nastavování a správu zařízení
 HARDWARIO v terénu. Jedna aplikace pokryje celý ekosystém: zařízení **STICKER**
 nastavíte přes NFC přiložením telefonu, k zařízení **CHESTER** se připojíte přes
-Bluetooth a přečtete jeho stav, upravíte konfiguraci, spustíte příkazy shellu
-a aktualizujete firmware.
+Bluetooth a přečtete jeho stav, upravíte konfiguraci, spustíte příkazy shellu,
+přiřadíte mu senzorové tagy BLE a aktualizujete firmware.
 
 Aplikace je k dispozici pro **Android a iOS**, v **angličtině a češtině**.
 
@@ -21,7 +21,7 @@ Aplikace je k dispozici pro **Android a iOS**, v **angličtině a češtině**.
 | Zařízení | Jak s ním telefon komunikuje | Co aplikace umí |
 |---|---|---|
 | **STICKER** | NFC: přiložením telefonu k zařízení | Přečíst informace o zařízení, přečíst a zapsat celou konfiguraci (do jednoho zařízení nebo hromadně), vytvářet a používat konfigurační šablony, spravovat senzory a alarmy, přečíst uložená měření, přepnout režim rádia a přečíst klíče rádiového spojení, resetovat zařízení a vést seznam zařízení, která spravujete |
-| **CHESTER** | Bluetooth Low Energy | Přečíst informace o zařízení, upravit konfiguraci, otevřít terminál shellu, sdílet terminál s kolegou, aktualizovat firmware a restartovat zařízení |
+| **CHESTER** | Bluetooth Low Energy | Přečíst informace o zařízení, upravit konfiguraci (rychlým nastavením nebo po jednotlivých parametrech), otevřít terminál shellu a sdílet ho s kolegou, přiřadit externí senzorové tagy BLE, aktualizovat firmware z QR kódu, podle ID nebo ze souboru, restartovat zařízení a vrátit jeho konfiguraci do továrního nastavení |
 
 Zařízení STICKER musí mít při konfiguraci **vložené baterie** a firmware v2.0.0
 nebo novější. Viz [**STICKER**](./sticker/index.md).

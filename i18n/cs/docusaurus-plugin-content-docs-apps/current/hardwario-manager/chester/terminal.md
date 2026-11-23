@@ -9,20 +9,22 @@ description: "Shell zařízení CHESTER v telefonu přes Bluetooth v aplikaci HA
 Terminál zpřístupní shell zařízení přes Bluetooth přímo v telefonu. Je to tatáž
 konzole, ke které byste se jinak připojili kabelem.
 
-Otevřete **CHESTER → Open Terminal**. Prázdný terminál napovídá, kde začít: zadejte příkaz, například `help` nebo `config show`.
+Otevřete **CHESTER → Terminál**. Prázdný terminál napovídá, kde začít:
+*Napište příkaz níže, zkuste třeba „help“ nebo „config show“.*
 
 ---
 
 ## Spouštění příkazů {#running-commands}
 
-Napište příkaz do pole **Enter a shell command** a odešlete ho. Příkaz se do
+Napište příkaz do pole **Zadejte příkaz shellu** a odešlete ho. Příkaz se do
 logu vypíše jako `$ command` a pod ním se v bloku s neproporcionálním písmem
 zobrazí nezměněný výstup zařízení. Výstup lze označit a zkopírovat.
 
-<img src="/img/hw-manager/hw-manager-chester-terminal.png" alt="Terminál zařízení CHESTER s výstupem příkazu config show a tlačítky s návrhy příkazů nad vstupním polem" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-chester-terminal.png" alt="Terminál zařízení CHESTER s příkazem a výstupem zařízení a se vstupním polem Zadejte příkaz shellu dole" width="320" />
 
-Pokud se příkaz nepodaří odeslat, zapíše se chyba přímo do logu jako řádek
-`[error]`, takže v záznamu toho, co se stalo, nic nechybí.
+Pokud se příkaz nepodaří odeslat, zapíše se chyba přímo do logu: řádek
+`[error]` s popisem, co se stalo, a za ním řádek `[detail]` s původním chybovým
+hlášením. V záznamu toho, co se stalo, tak nic nechybí.
 
 ---
 
@@ -33,11 +35,11 @@ Terminál nehádá, ale zjistí si sadu příkazů přímo od zařízení:
 - při otevření si aplikace na pozadí vyžádá od zařízení seznam jeho příkazů;
 - jakmile dopíšete první slovo, zjistí si podpříkazy daného příkazu.
 
-Odpovídající návrhy se zobrazí jako tlačítka nad vstupním polem. Klepnutím na
-návrh se **vyplní vstupní pole**. Příkaz se tím nikdy nespustí, odesíláte ho vždy
-sami.
+Ani jeden z těchto dotazů se v logu neobjeví. Odpovídající návrhy se zobrazí
+jako tlačítka nad vstupním polem. Klepnutím na návrh se **vyplní vstupní pole**.
+Příkaz se tím nikdy nespustí, odesíláte ho vždy sami.
 
-<img src="/img/hw-manager/hw-manager-chester-terminal-help.png" alt="Terminál po spuštění help se seznamem skupin příkazů daného zařízení" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-chester-terminal-help.png" alt="Terminál s rozepsaným příkazem a tlačítky s návrhy nad vstupním polem" width="320" />
 
 Když spustíte `help` sami, vypíše se tentýž seznam, ze kterého návrhy čerpají:
 skupiny příkazů, které tento firmware nabízí, každá s jednořádkovým popisem.
@@ -50,9 +52,9 @@ odpojení se smažou.
 ## Historie výpisu {#scrollback}
 
 Log se ukládá **pro každé zařízení zvlášť**, takže po opětovném připojení
-k zařízení CHESTER uvidíte, co jste s ním dělali naposledy. Když se posunete
-nahoru, objeví se tlačítko pro přechod na konec; po odeslání příkazu se výpis
-vrátí na nejnovější výstup.
+k zařízení CHESTER uvidíte, co jste s ním dělali naposledy. Terminál se otevře
+na nejnovějším výstupu. Když se posunete nahoru, objeví se tlačítko **Přejít
+dolů**; po odeslání příkazu se výpis vrátí na nejnovější výstup.
 
 Pokud zařízení obrazovku vymaže samo, vymaže se s ní i log.
 
@@ -60,14 +62,15 @@ Pokud zařízení obrazovku vymaže samo, vymaže se s ní i log.
 
 ## Sdílení relace {#sharing-the-session}
 
-Akcí v horní liště terminál nasdílíte někomu dalšímu, kdo pak může zařízení
-sledovat a ovládat z prohlížeče. Viz
-[**Sdílení relace terminálu**](./shared-sessions.md).
+Tlačítkem v horní liště (**Sdílet tuto relaci**) terminál nasdílíte někomu
+dalšímu, kdo pak může zařízení sledovat a ovládat z prohlížeče nebo z aplikace.
+Viz [**Sdílení relace terminálu**](./shared-sessions.md).
 
 ---
 
 :::tip Jak změny zachovat
-Nastavení změněná ze shellu jsou jen v pracovní paměti zařízení. Uložte je volbou
-**Device info → Save configuration**, aby vydržela i restart, viz
-[**Informace o zařízení**](./device-info.md).
+Nastavení změněná ze shellu jsou jen v pracovní paměti zařízení, dokud
+nespustíte `config save`. Tento příkaz je uloží, aby vydržela i restart,
+a zařízení restartuje, čímž se Bluetooth spojení přeruší. Stejně se ukládají
+i změny provedené v sekci [**Konfigurace**](./configuration.md).
 :::

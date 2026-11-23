@@ -59,6 +59,236 @@
       "format": "png"
     }
   },
+  "static/img/hw-manager/cs/hw-manager-chester-advanced-application.png": {
+    "artwork": "hardwario-manager-chester-advanced-application-cs",
+    "file": "hardwario-manager-chester-advanced-application-cs.png",
+    "sha256": "fb1730d634c797291d0be892f83e81bec3322a50abf5c4ecfcc1a2677c3090a4",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-advanced.png": {
+    "artwork": "hardwario-manager-chester-advanced-cs",
+    "file": "hardwario-manager-chester-advanced-cs.png",
+    "sha256": "ff0273c1d618409c501e9ea8843123098bcb85457ffcef2ef14b149c7ae5ac80",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-ble-tags-nearby.png": {
+    "artwork": "hardwario-manager-chester-ble-tags-nearby-cs",
+    "file": "hardwario-manager-chester-ble-tags-nearby-cs.png",
+    "sha256": "3c6229a9df7099a4da04785eaae49278a0c953f16f8ca4538a1243da5401edf4",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-ble-tags.png": {
+    "artwork": "hardwario-manager-chester-ble-tags-cs",
+    "file": "hardwario-manager-chester-ble-tags-cs.png",
+    "sha256": "4ec5fadf13d87e073b315559ef549e2c0a731d89a1e0b74f2f7d2a3c37de5b07",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-configuration-lorawan.png": {
+    "artwork": "hardwario-manager-chester-configuration-lorawan-cs",
+    "file": "hardwario-manager-chester-configuration-lorawan-cs.png",
+    "sha256": "394b362c170b8540c33f38b443a14e5daea561f89f9ee8ac7ad5cad42ceac3a6",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-configuration-lte.png": {
+    "artwork": "hardwario-manager-chester-configuration-lte-cs",
+    "file": "hardwario-manager-chester-configuration-lte-cs.png",
+    "sha256": "337786ec2d83d3b5ee7b4f68ab7a4ca23d2731d97849efd8c2fd12acbf138b7b",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-configuration.png": {
+    "artwork": "hardwario-manager-chester-configuration-cs",
+    "file": "hardwario-manager-chester-configuration-cs.png",
+    "sha256": "b9af4eafefcf59462e07c406b402670c97bcaca990486ec368a139bbd328e8d5",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-connect.png": {
+    "artwork": "hardwario-manager-chester-connect-cs",
+    "file": "hardwario-manager-chester-connect-cs.png",
+    "sha256": "8a409a85e8c24675808dd27a0aced734a3b7cf7820cee27f617b5c65e1bb5d35",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-device-info.png": {
+    "artwork": "hardwario-manager-chester-device-info-cs",
+    "file": "hardwario-manager-chester-device-info-cs.png",
+    "sha256": "9fcfa73b5a07f76671f278151caa44d74c79e7ace1a4895ff285b6b6a4da7a05",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-firmware-done.png": {
+    "artwork": "hardwario-manager-chester-firmware-done-cs",
+    "file": "hardwario-manager-chester-firmware-done-cs.png",
+    "sha256": "69f7a4df7a495e32127cc739629418f84bf238a68b19e8cb09530492c897c1a1",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-firmware-progress.png": {
+    "artwork": "hardwario-manager-chester-firmware-progress-cs",
+    "file": "hardwario-manager-chester-firmware-progress-cs.png",
+    "sha256": "093495c27b6f1bd905738071a49cc9a43f872ad50c20b004708f808e1ef6ed55",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-firmware-ready.png": {
+    "artwork": "hardwario-manager-chester-firmware-ready-cs",
+    "file": "hardwario-manager-chester-firmware-ready-cs.png",
+    "sha256": "5bc9507efa9103b12356bf9c10021d1864b84e5063457a6434f7e07825ee90c8",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-firmware-update.png": {
+    "artwork": "hardwario-manager-chester-firmware-update-cs",
+    "file": "hardwario-manager-chester-firmware-update-cs.png",
+    "sha256": "21a7392443926855007eac15f018ce97f473533534bd3b65c79e1b50f2066ea5",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-join-session.png": {
+    "artwork": "hardwario-manager-chester-join-session-cs",
+    "file": "hardwario-manager-chester-join-session-cs.png",
+    "sha256": "5cb0459b2c56fc79466d697154e5edf6075ba1fb199817a1e31cd1eeaba1a063",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-menu.png": {
+    "artwork": "hardwario-manager-chester-menu-cs",
+    "file": "hardwario-manager-chester-menu-cs.png",
+    "sha256": "e86b237f09e175fda8ff156042e5ced33f7bf3a8f73efd4d99d063ff510aef3a",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-reboot.png": {
+    "artwork": "hardwario-manager-chester-reboot-cs",
+    "file": "hardwario-manager-chester-reboot-cs.png",
+    "sha256": "a2748ebac876bd8595fa03c52c8b0c45e94374bf95db2427ddf1c1071f752142",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-reconnect.png": {
+    "artwork": "hardwario-manager-chester-reconnect-cs",
+    "file": "hardwario-manager-chester-reconnect-cs.png",
+    "sha256": "aae317af4f6e34187ba64c1ab810f4c484ef5664bade7f59fcaa97e1810571f0",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-scan.png": {
+    "artwork": "hardwario-manager-chester-scan-cs",
+    "file": "hardwario-manager-chester-scan-cs.png",
+    "sha256": "b9b123e46227765b0b83790240c974270c2cdf664d6d905191ce853695ccdc0d",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-session-viewer.png": {
+    "artwork": "hardwario-manager-chester-session-viewer-cs",
+    "file": "hardwario-manager-chester-session-viewer-cs.png",
+    "sha256": "930494b9c473e41e70428032fa05e93b29ec54cd981801516dc6d2d406846fef",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-share-session.png": {
+    "artwork": "hardwario-manager-chester-share-session-cs",
+    "file": "hardwario-manager-chester-share-session-cs.png",
+    "sha256": "f40f802e4e03ba1a288138bddc70730db9afece03ddde2787ec3afd916e3240e",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-terminal-help.png": {
+    "artwork": "hardwario-manager-chester-terminal-help-cs",
+    "file": "hardwario-manager-chester-terminal-help-cs.png",
+    "sha256": "57229d7c675641f60add779dfe807ac4d124b64e83702e7e3a68d25819f778d6",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-terminal.png": {
+    "artwork": "hardwario-manager-chester-terminal-cs",
+    "file": "hardwario-manager-chester-terminal-cs.png",
+    "sha256": "ac21fef5234fbfc19e4a220b1df307dec0e3f80023a95d7f6dc0ee3dc7584938",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/cs/hw-manager-chester-tools.png": {
+    "artwork": "hardwario-manager-chester-tools-cs",
+    "file": "hardwario-manager-chester-tools-cs.png",
+    "sha256": "50174d28f88ed9749e5326ad2ea1fc27f0bf8f5b7449f520c204fd2b334d68e9",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
   "static/img/hw-manager/cs/hw-manager-configuration-history.png": {
     "artwork": "hardwario-manager-sticker-configuration-history-cs",
     "file": "hardwario-manager-sticker-configuration-history-cs.png",
@@ -393,6 +623,236 @@
     "artwork": "hardwario-manager-sticker-batch-write",
     "file": "hardwario-manager-sticker-batch-write.png",
     "sha256": "c7903f94cd3c62c694f45c98a94eccd92f4cef0d23b73ad82b4a1f9e3f47224c",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-advanced-application.png": {
+    "artwork": "hardwario-manager-chester-advanced-application",
+    "file": "hardwario-manager-chester-advanced-application.png",
+    "sha256": "f7ebb8d3a9fb91934c531f52a7bb10ff9dd3b756cad770110dd9b289c8deb7a9",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-advanced.png": {
+    "artwork": "hardwario-manager-chester-advanced",
+    "file": "hardwario-manager-chester-advanced.png",
+    "sha256": "42d7fa2f66dfa8a0e5e49fdbc52508dfcbc5356362a53f0514ff35bb8d4c0a31",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-ble-tags-nearby.png": {
+    "artwork": "hardwario-manager-chester-ble-tags-nearby",
+    "file": "hardwario-manager-chester-ble-tags-nearby.png",
+    "sha256": "0fb738c0a78cc485472d56ce846e61f287bee81c081a5942c35ed79290b2380d",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-ble-tags.png": {
+    "artwork": "hardwario-manager-chester-ble-tags",
+    "file": "hardwario-manager-chester-ble-tags.png",
+    "sha256": "c0db4d706ffbd8271333ec78695abcbe1d5739ee674559afd3078c9f4f7cdba3",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-configuration-lorawan.png": {
+    "artwork": "hardwario-manager-chester-configuration-lorawan",
+    "file": "hardwario-manager-chester-configuration-lorawan.png",
+    "sha256": "6aab3b5e831a8de668a1c9f5abe7d160023bcf3d835f40ab8c0a269ab68860c4",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-configuration-lte.png": {
+    "artwork": "hardwario-manager-chester-configuration-lte",
+    "file": "hardwario-manager-chester-configuration-lte.png",
+    "sha256": "3281b6e254a4b700dec9558380bbf5ab1c69ffef665f09c4c2d97cb453edfd99",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-configuration.png": {
+    "artwork": "hardwario-manager-chester-configuration",
+    "file": "hardwario-manager-chester-configuration.png",
+    "sha256": "ba80f243154d1d51adeb46d03314884b46a232e52ab27b19917fe4648b5239c4",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-connect.png": {
+    "artwork": "hardwario-manager-chester-connect",
+    "file": "hardwario-manager-chester-connect.png",
+    "sha256": "f07a0173bdc166291c2cfaa562ef5e21cfe13873078fdb74d7aa3645072b7412",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-device-info.png": {
+    "artwork": "hardwario-manager-chester-device-info",
+    "file": "hardwario-manager-chester-device-info.png",
+    "sha256": "6189ab56341d227b0904057feaaac0ee1f7a7fb04ec3661909761411f8dccf71",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-firmware-done.png": {
+    "artwork": "hardwario-manager-chester-firmware-done",
+    "file": "hardwario-manager-chester-firmware-done.png",
+    "sha256": "c3b18c66da3d720882d0dd1de1705b3f563fa356c607d3f48d42e4789535eaed",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-firmware-progress.png": {
+    "artwork": "hardwario-manager-chester-firmware-progress",
+    "file": "hardwario-manager-chester-firmware-progress.png",
+    "sha256": "765284bd93acd82bec477a3110cc630e9bc4134997a8f139a786415a79284432",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-firmware-ready.png": {
+    "artwork": "hardwario-manager-chester-firmware-ready",
+    "file": "hardwario-manager-chester-firmware-ready.png",
+    "sha256": "b02c98c09e70b7731e8665d35739fd9959bc776515ca7f00ef89249b8f3cb02b",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-firmware-update.png": {
+    "artwork": "hardwario-manager-chester-firmware-update",
+    "file": "hardwario-manager-chester-firmware-update.png",
+    "sha256": "ed559b8528832ad5d70a9c2c2c97c88c3ebac34e016542a6c1dbb69a56c5e876",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-join-session.png": {
+    "artwork": "hardwario-manager-chester-join-session",
+    "file": "hardwario-manager-chester-join-session.png",
+    "sha256": "e9df08a8da74fe257d3714c4ade7778acab08db8b5014a5a7f8ecf3632a021d8",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-menu.png": {
+    "artwork": "hardwario-manager-chester-menu",
+    "file": "hardwario-manager-chester-menu.png",
+    "sha256": "8f9d50c753fe2da0a7df70c928554989e171bdc42667e2f4bcd73cb26704e354",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-reboot.png": {
+    "artwork": "hardwario-manager-chester-reboot",
+    "file": "hardwario-manager-chester-reboot.png",
+    "sha256": "4911320972c41d2d29bf1b686920d3c84e5e05c96a9f1c1606ee646bcd5c1adb",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-reconnect.png": {
+    "artwork": "hardwario-manager-chester-reconnect",
+    "file": "hardwario-manager-chester-reconnect.png",
+    "sha256": "882e4c3243ac885c4b61d042bda15e964af652189ff94dae7b6ba4f1472914c6",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-scan.png": {
+    "artwork": "hardwario-manager-chester-scan",
+    "file": "hardwario-manager-chester-scan.png",
+    "sha256": "fc316c564cd09fd0f75df0cb6b374013f5ec668ffbe12fd3c259ea7484765b97",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-session-viewer.png": {
+    "artwork": "hardwario-manager-chester-session-viewer",
+    "file": "hardwario-manager-chester-session-viewer.png",
+    "sha256": "bd388b8fb0a79e46955deb96aa886c1425aff22c7f38811649f79a31f1a43a79",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-share-session.png": {
+    "artwork": "hardwario-manager-chester-share-session",
+    "file": "hardwario-manager-chester-share-session.png",
+    "sha256": "5f897eb25468b015de6cbc9f5df8c23e72699d941f906f027463177f20a05a17",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-terminal-help.png": {
+    "artwork": "hardwario-manager-chester-terminal-help",
+    "file": "hardwario-manager-chester-terminal-help.png",
+    "sha256": "5a87a2fa0780126fd62c3003a1ef2b5e57d3969a29a41a0d131170307dba316a",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-terminal.png": {
+    "artwork": "hardwario-manager-chester-terminal",
+    "file": "hardwario-manager-chester-terminal.png",
+    "sha256": "a86a977c206c0b2b0da75871a8f46d52aa154727d13bddf748044ee3f5537945",
+    "commit": "77c1138",
+    "params": {
+      "width": 720,
+      "format": "png"
+    }
+  },
+  "static/img/hw-manager/hw-manager-chester-tools.png": {
+    "artwork": "hardwario-manager-chester-tools",
+    "file": "hardwario-manager-chester-tools.png",
+    "sha256": "9a7f547fe86ac971df15f8fa8172d1f8aabd5d18577ce15a59e881c50fa36017",
     "commit": "77c1138",
     "params": {
       "width": 720,

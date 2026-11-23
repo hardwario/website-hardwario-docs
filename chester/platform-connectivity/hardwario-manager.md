@@ -1,7 +1,7 @@
 ---
 slug: hardwario-manager
 title: HARDWARIO Manager
-description: "Manage CHESTER over Bluetooth Low Energy in the HARDWARIO Manager app, with links to pairing, configuration, terminal, BLE tags and QR firmware updates."
+description: "Manage CHESTER over Bluetooth Low Energy in the HARDWARIO Manager app, with links to pairing, configuration, terminal, BLE tags and firmware updates."
 title_meta: "HARDWARIO Manager (CHESTER)"
 ---
 
@@ -16,7 +16,7 @@ The app is documented in full under **APPS**:
 - [**HARDWARIO Manager**](/apps/hardwario-manager): what the app does, and how to install it
 - [**CHESTER over Bluetooth**](/apps/hardwario-manager/chester): the CHESTER section
 - [**Connect and pair**](/apps/hardwario-manager/chester/connect): scanning the device QR code, the passkey, and pairing
-- [**Device info**](/apps/hardwario-manager/chester/device-info): serial number, firmware, uptime, and the device controls
+- [**Device info**](/apps/hardwario-manager/chester/device-info): serial number, firmware, uptime, the Bluetooth passkey and the claim token
 - [**Configuration**](/apps/hardwario-manager/chester/configuration): the guided and full configuration views
 - [**Terminal**](/apps/hardwario-manager/chester/terminal): the device shell over Bluetooth
 - [**Tools**](/apps/hardwario-manager/chester/tools): firmware update, reboot, factory reset
@@ -31,7 +31,8 @@ there.
 
 ## Firmware Update {#firmware-update}
 
-Firmware is flashed over Bluetooth from a **QR code carrying the firmware link**.
+Firmware is flashed over Bluetooth from a **firmware QR code**, a **firmware ID**
+or an `app_update.bin` file already on the phone.
 See [**Firmware update**](/apps/hardwario-manager/chester/firmware-update) for the
 procedure, the update stages, and what happens when an update fails.
 

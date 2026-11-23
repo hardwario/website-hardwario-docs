@@ -9,39 +9,53 @@ title_meta: "CHESTER (HARDWARIO Manager)"
 
 CHESTER is managed over **Bluetooth Low Energy**. Connect the phone to a device
 and you can read its state, edit its configuration, drive its shell, bind
-external BLE sensor tags, update its firmware, and reboot it.
+external BLE sensor tags, update its firmware, reboot it and reset its
+configuration to factory defaults.
 
-Open **HARDWARIO Manager** and choose **CHESTER**.
-
-<img src="/img/hw-manager/hw-manager-chester-menu.png" alt="The CHESTER screen with a connected device card above Device info, Configuration, Open Terminal, Tools and BLE tags" width="320" />
+Open **HARDWARIO Manager** and choose **CHESTER**. Until a device is connected,
+the app shows **Connect to CHESTER**, see [**Connect and pair**](./connect.md).
 
 ---
 
 ## The menu
 
+Once a device is connected, the screen is titled with the device it is attached
+to, for example **CHESTER 2159019023**, and lists what you can do with it.
+
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-chester-menu.png" alt="The CHESTER menu titled CHESTER and the serial number, listing Device info, Configuration, Terminal, Tools and BLE tags, with the Disconnect button at the bottom" width="320" />
+
 | Entry | What it does |
 |---|---|
 | [**Device info**](./device-info.md) | Serial, firmware, uptime and device controls |
 | [**Configuration**](./configuration.md) | Read and edit the device configuration |
-| [**Open Terminal**](./terminal.md) | Send shell commands over the device console |
+| [**Terminal**](./terminal.md) | Send shell commands over the device console |
 | [**Tools**](./tools.md) | Firmware update, reboot, factory reset |
 | [**BLE tags**](./ble-tags.md) | Bind external BLE sensor tags to slots and read their values |
 
+**Disconnect** at the bottom of the screen ends the connection. The app returns
+to **Connect to CHESTER**, where you can reach another device.
+
 ---
 
-## The connected device card
+## How long the connection lasts
 
-Above the menu, **Connected CHESTER** names the device you are attached to.
-Its arrow expands a summary (firmware, serial number, BLE address and uptime,
-**as of the last connection**), and **Disconnect** closes the link.
+The app holds **one** CHESTER connection at a time. It stays up while you move
+around the app: you can go back to the home screen, or to the STICKER pages,
+and find the CHESTER still connected when you return.
 
-<img src="/img/hw-manager/hw-manager-chester-connected-details.png" alt="The connected CHESTER card expanded, showing firmware, serial, BLE address and uptime, with a Disconnect action" width="320" />
+The connection ends when:
 
-:::info One device at a time, and only while the screen is open
-The app holds **one** CHESTER connection, and it belongs to the CHESTER screen.
-Leaving that screen disconnects the device. To reconnect, the setup wizard offers
-the device again under **Recent devices**.
-:::
+- you tap **Disconnect**;
+- the device goes away, for example when it restarts or moves out of range;
+- 30 minutes pass without the app talking to the device.
+
+After the 30 minutes, **Connect to CHESTER** explains what happened with the
+notice **Disconnected after 30 minutes**. Reconnect from there.
+
+When the app restarts the device itself (after a configuration save, a reboot or
+a factory reset), it waits for the device to come back and reconnects on its
+own. See [**Configuration**](./configuration.md#saving) and
+[**Tools**](./tools.md).
 
 ---
 
@@ -50,7 +64,8 @@ the device again under **Recent devices**.
 - Bluetooth must be on, and the app needs the **nearby devices** permission,
   see [**Install the app**](../install.md).
 - Pairing uses the 6-digit **passkey** tied to the device. Scanning the QR code
-  on the CHESTER label is the path that fetches it for you.
+  on the CHESTER label is the path that fetches it for you, so the phone needs
+  an internet connection for that first pairing.
 - Keep the phone near the device. Most connection problems are range or a stale
   pairing, see [**Troubleshooting**](./troubleshooting.md).
 

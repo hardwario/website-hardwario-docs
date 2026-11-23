@@ -1,19 +1,21 @@
 ---
 slug: shared-sessions
 title: Sdílení relace terminálu
-description: "Relaci terminálu zařízení CHESTER sdílíte v aplikaci HARDWARIO Manager odkazem a Session ID, nebo se k cizí relaci připojíte a zadáváte příkazy na dálku."
+description: "Sdílení terminálu zařízení CHESTER z aplikace HARDWARIO Manager odkazem a ID relace, nebo připojení k cizí relaci, aby kolega mohl zařízení ovládat na dálku."
 ---
 
 # Sdílení relace terminálu {#share-a-terminal-session}
 
-Sdílená relace zpřístupní přes odkaz konzoli zařízení CHESTER, ke kterému jste
-připojeni. Kolega (třeba podpora HARDWARIO) pak vidí výstup a může zadávat
-příkazy ze svého prohlížeče nebo telefonu, zatímco zařízení máte u sebe vy.
+Sdílená relace zpřístupní konzoli připojeného zařízení CHESTER přes odkaz, takže
+kolega (například podpora HARDWARIO) může ve svém prohlížeči nebo telefonu
+sledovat výstup a spouštět příkazy, zatímco zařízení máte u sebe vy. Relace běží
+přes relay HARDWARIO Terminal na adrese `terminal.hardwario.com`, takže obě
+strany potřebují připojení k internetu.
 
 :::danger Kdo má odkaz, ovládá zařízení
-Sdílená relace **nemá heslo**. Kdo odkaz otevře, může připojené zařízení CHESTER
-**sledovat i ovládat**. Odkaz sdílejte jen s lidmi, kterým důvěřujete, a jakmile
-skončíte, sdílení ukončete.
+Sdílená relace **nemá heslo**. Kdokoli otevře odkaz nebo zadá ID relace, může
+připojené zařízení CHESTER **sledovat i ovládat**. Sdílejte ji jen s lidmi,
+kterým důvěřujete, a sdílení ukončete, jakmile skončíte.
 :::
 
 ---
@@ -21,15 +23,22 @@ skončíte, sdílení ukončete.
 ## Sdílení vlastní relace {#share-your-session}
 
 1. Připojte se k zařízení CHESTER a otevřete [**Terminál**](./terminal.md).
-2. Použijte akci sdílení v horní liště.
-3. Panel zobrazí číselné **Session ID**, odkaz a aktuální stav:
-   *Connecting…*, *Waiting for viewers* nebo počet připojených diváků.
-4. Odkaz pošlete přes **Copy link** nebo **Share**.
+2. Klepněte na tlačítko v horní liště, **Sdílet tuto relaci**.
+3. Otevře se panel s výše uvedeným varováním, **ID relace** (číslo s nejvýš šesti
+   číslicemi) a odkazem, spolu s aktuálním stavem: **Připojování…**,
+   **Čeká se na diváky**, nebo počet diváků, například **1 divák**.
+4. Odkaz pošlete tlačítkem **Kopírovat odkaz** nebo **Sdílet**, případně
+   nadiktujte ID relace.
 
-Dokud relace běží, má ikona sdílení jinou barvu, aby bylo jasné, že je zařízení
-zpřístupněné.
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-chester-share-session.png" alt="Panel sdílení nad terminálem: varování, že kdokoli s odkazem může CHESTER vidět a ovládat, ID relace se stavem Čeká se na diváky, odkaz a tlačítka Kopírovat odkaz a Sdílet" width="320" />
 
-**Stop sharing** relaci ukončí. Ukončí se také, když opustíte obrazovku terminálu.
+Dokud relace běží, ukazuje tlačítko v horní liště jinou ikonu a jeho popisek se
+změní na **Relace sdílena – klepnutím zobrazíte odkaz**; klepnutím panel znovu
+otevřete. Řádek nad konzolí stav zopakuje, například
+**Sdíleno · Čeká se na diváky**, takže vidíte, že se může někdo dívat.
+
+**Ukončit sdílení** dole v panelu relaci ukončí. Relace skončí i tehdy, když
+obrazovku Terminál opustíte.
 
 ---
 
@@ -38,25 +47,32 @@ zpřístupněné.
 K připojení nepotřebujete vlastní zařízení.
 
 1. Otevřete **HARDWARIO Manager → CHESTER**.
-2. V průvodci nastavením zvolte **Join a shared session**.
-3. Zadejte číselné **Session ID**, které vám poslal hostitel, a zvolte **Join**.
+2. Na obrazovce **Připojit k CHESTER** zvolte **Připojit se ke sdílené relaci**.
+3. Zadejte číselné **ID relace**, které vám hostitel dal, a zvolte **Připojit**.
 
-<img src="/img/hw-manager/hw-manager-chester-join-session.png" alt="Obrazovka Join session s polem Session ID, tlačítkem Join a pod nimi adresou přenosového serveru" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-chester-join-session.png" alt="Obrazovka Připojit se k relaci s pokyny, polem ID relace, tlačítkem Připojit a adresou relay pod nimi" width="320" />
 
-Na obrazovce je uvedený přenosový server (**relay**), přes který relace běží, takže
-ještě před připojením vidíte, kudy provoz konzole půjde.
+Obrazovka uvádí relay, přes který relace běží, **Relay:**
+`https://terminal.hardwario.com`, takže ještě před připojením víte, kudy provoz
+konzole poteče. Připojit se tu můžete i k relaci sdílené z HARDWARIO Terminal
+v prohlížeči.
 
-Divák vidí výstup konzole hostitele a má vstupní pole pro spouštění příkazů na
-jeho zařízení. Stavový řádek ukazuje, co hostitel dělá: jestli je připojený,
-teprve připojuje zařízení, nebo zatím neposlal žádný výstup.
+Po připojení obrazovka ukazuje výstup konzole hostitele a vstupní pole pro
+spouštění příkazů na jeho zařízení, **Spustit příkaz na hostiteli**. Stavový
+řádek říká, co hostitel dělá: **Hostitel připojen**, **Hostitel připojuje
+zařízení…** nebo **Čekání, až hostitel připojí zařízení…**, a vedle něj je ID
+relace.
 
-**Leave** vás od relace odpojí. Pokud hostitel sdílení ukončí, zobrazí se o tom
-upozornění a vstupní pole se zablokuje.
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-chester-session-viewer.png" alt="Připojená relace: stav Hostitel připojen s ID relace, výstup konzole hostitele a dole pole Spustit příkaz na hostiteli, v horní liště Opustit" width="320" />
+
+**Opustit** v horní liště ukončí relaci na vaší straně. Pokud hostitel sdílení
+ukončí, stavový řádek se změní na **Relace ukončena**, upozornění oznámí
+**Hostitel ukončil sdílení této relace.** a vstupní pole se zablokuje.
 
 ---
 
 ## Co se přes odkaz přenáší {#what-travels-over-the-link}
 
 Relace přenáší konzoli: odeslané příkazy a vrácený výstup. Cokoli byste viděli
-v terminálu, vidí i divák, včetně hodnot vypsaných příkazem `config show`. Mějte
-to na paměti, než budete sdílet relaci se zařízením, které má produkční klíče.
+v terminálu, uvidí i divák, včetně hodnot vypsaných příkazem `config show`.
+Myslete na to, než budete sdílet relaci zařízení, které obsahuje produkční klíče.

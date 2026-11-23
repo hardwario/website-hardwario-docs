@@ -50,9 +50,8 @@ dohledá v seznamu uložených zařízení. U většiny akcí tak nemusíte nic 
 :::info Firmware v2.0.0 nebo novější
 Každá komunikace proběhne na jedno přiložení s telefonem v klidu, na Androidu
 i na iOS stejně. HARDWARIO Manager pracuje s firmwarem STICKER **v2.0.0**
-a novějším. U zařízení s firmwarem **v1.4.x** aplikace ohlásí *Tento STICKER má
-firmware starší než 1.5.0, který už tato aplikace nepodporuje*: nechte mu
-aktualizovat firmware.
+a novějším. U zařízení s firmwarem **v1.4.x** aplikace ohlásí, že jeho firmware už
+nepodporuje: nechte mu aktualizovat firmware na v2.0.0 nebo novější.
 :::
 
 ---
@@ -73,6 +72,6 @@ zařízeními není, aplikace neskončí chybou, ale ukáže obrazovku
 | Zařízení STICKER nejde přečíst | Zkontrolujte, že je NFC zapnuté a nepřekáží silný obal. Přiložte horní část zadní strany telefonu naplocho k zařízení a několik sekund s ním nehýbejte. |
 | *STICKER nepřijal příkaz* | Tajný klíč uložený pro toto sériové číslo je pravděpodobně špatný. Zkontrolujte ho v seznamu [**Uložená zařízení STICKER**](./saved-stickers.md) a zkuste to znovu. |
 | *Tento STICKER nezapnul NFC* | Baterie chybí nebo je vybitá. Vložte nabitou baterii a zkuste to znovu. |
-| *Tento STICKER má firmware starší než 1.5.0* | Zařízení má firmware v1.4.x, který aplikace už nepodporuje. Nechte mu aktualizovat firmware na v2.0.0 nebo novější. |
+| Aplikace hlásí, že firmware už nepodporuje | Zařízení má firmware v1.4.x, který aplikace už nepodporuje. Nechte mu aktualizovat firmware na v2.0.0 nebo novější. |
 | Konfigurace je příliš velká | Snižte počet nastavení. Během úprav aplikace ukazuje velikost konfigurace vzhledem k limitu zařízení. |
 | Po **Připojení k radiové síti** nepřichází odezva | Otevřete **Informace o zařízení**: řádek **Rádio** ukazuje *Připojování*, dokud zařízení čeká, a *V pořádku*, jakmile ho síť přijme. Pokud zůstane na *Připojování*, zkontrolujte klíče, region a profil zařízení na svém síťovém serveru. |

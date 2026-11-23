@@ -87,9 +87,9 @@
     "message": "HARDWARIO Manager",
     "description": "Navbar item with label HARDWARIO Manager"
   },
-  "item.label.ThingsBoard": {
-    "message": "ThingsBoard",
-    "description": "Navbar item with label ThingsBoard"
+  "item.label.HARDWARIO Dashboards": {
+    "message": "HARDWARIO Dashboards",
+    "description": "Navbar item with label HARDWARIO Dashboards"
   },
   "item.label.ChirpStack": {
     "message": "ChirpStack",

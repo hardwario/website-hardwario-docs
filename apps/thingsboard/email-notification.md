@@ -1,32 +1,33 @@
 ---
 slug: email-notification
-title: Email Notifications
-description: "Build a ThingsBoard rule chain that emails temperature and humidity threshold alerts with the device label and CET time, and throttles repeated emails."
+unlisted: true
+title: Email notifications
+description: "Build a rule chain in HARDWARIO Dashboards that emails temperature and humidity threshold alerts with the device label and CET time, and throttles repeated emails."
 ---
 import Image from '@theme/IdealImage';
 
-# Setting Up Email Notifications
+# Setting up email notifications
 
-## Example Overview
+## Example overview
 In this tutorial, we will build a custom Rule Chain that monitors telemetry data (temperature and humidity) from specific devices (e.g., "Library" and "Archive"). When the values cross predefined thresholds, the system will trigger an email notification. 
 
 We will also extract the device's assigned "Label" to use in the email text, and we will use a script to convert the default Unix timestamp into a human-readable Central European Time (CET) format. 
 
 Here is what the final notification Rule Chain will look like:
 
-![Notification Rule Chain: labels and device filter feed four threshold scripts, each building Email Info for one Send Email node](images/email-notification-1.png)
+![Start of the example rule chain: Input, Adding Labels, Device Filter and the Temperature & Humidity script that feeds the threshold filters](images/email-notification-1.jpg)
 
 ---
 
 ## Prerequisites
-Before you begin, ensure that your ThingsBoard instance has an outgoing SMTP server configured. Go to **Settings** -> **Outgoing Mail** and configure your SMTP credentials. You can use the "Send Test Mail" button to verify it works.
+Before you begin, ensure that your HARDWARIO Dashboards tenant has an outgoing SMTP server configured. Go to **Settings** -> **Outgoing Mail** and configure your SMTP credentials. You can use the "Send Test Mail" button to verify it works.
 
 ---
 
-## Step-by-Step Guide
+## Step-by-step guide
 
-### Step 1: Enrichment: Originator Fields (Adding Labels)
-By default, ThingsBoard does not pass the "Label" of a device into the rule engine metadata. We need to fetch it first so we can use it in our scripts and emails.
+### Step 1: Enrichment: Originator fields (adding labels)
+By default, the platform does not pass the "Label" of a device into the rule engine metadata. We need to fetch it first so we can use it in our scripts and emails.
 * **Node Type:** `Enrichment` -> `originator fields`
 * **Name:** Adding Labels
 * **Configuration:** Click "Add mapping".  
@@ -34,7 +35,7 @@ By default, ThingsBoard does not pass the "Label" of a device into the rule engi
   * Target key: `deviceLabel`  
   * Add mapped originator fields to: `Metadata`
 
-### Step 2: Filter: Script (Device Filter)
+### Step 2: Filter: Script (device filter)
 We only want to process alerts for specific devices based on their labels.
 * **Node Type:** `Filter` -> `script`
 * **Name:** Device Filter
@@ -49,7 +50,7 @@ return deviceLabel === '2159020251' || deviceLabel === '2159020252';
 
 * **Connection:** Connect the Adding Labels node to this node using the Success link.
 
-### Step 3: Transformation: Script (Formatting Data)
+### Step 3: Transformation: Script (formatting data)
 Telemetry keys often contain dots (e.g., hygrometer.temperature.avg), which can break the default email templating. Also, the default timestamp is in Unix milliseconds (UTC). This script extracts the values safely and formats the time to a readable format (adding 1 hour for CET).
 
 * **Node Type:** `Transformation` -> `script`
@@ -100,7 +101,7 @@ return {msg: msg, metadata: metadata, msgType: msgType};
 
 * **Connection:** Connect the Device Filter node to this node using the True link.
 
-### Step 4: Filter: Script (Threshold Filters)
+### Step 4: Filter: Script (threshold filters)
 Now we split the flow based on specific conditions. Create a filter for each condition. For example, to check for low temperature:
 
 * **Node Type:** `Filter` -> `script`
@@ -114,7 +115,7 @@ return msg['hygrometer.temperature.avg'] < 17;
 
 * **Connection:** Connect the Temperature & Humidity Formatting node to all your threshold filters using Success links.
 
-### Step 5: Transformation: To Email (Email Info)
+### Step 5: Transformation: To email (email info)
 This node constructs the actual email subject and body. You can choose whether to send a simple Plain Text email or a formatted HTML email. Create one for each threshold filter.
 
 * **Node Type:** `Transformation` -> `to email`
@@ -125,7 +126,7 @@ This node constructs the actual email subject and body. You can choose whether t
 
 **Option A: Plain Text Email**
 If you want a simple email without any special formatting, select Plain Text. Line breaks (pressing Enter) will work naturally.
-* **Mail body type:** Select `Plain Text` (or uncheck the HTML option depending on your ThingsBoard version)
+* **Mail body type:** Select `Plain Text` (or uncheck the HTML option depending on the platform version)
 * **Body:**
 ```text
 Hello, measured values in your facility have exceeded the defined limits:
@@ -159,7 +160,7 @@ Your HARDWARIO IoT Team
 
 * **Connection:** Connect your respective threshold filter (e.g., Temperature < 17) to this node using the True link.
 
-### Step 6: Action: Send Email
+### Step 6: Action: Send email
 This is the final execution node that communicates with your SMTP server to dispatch the constructed emails.
 
 * **Node Type:** `Action` -> `send email`
@@ -168,7 +169,7 @@ This is the final execution node that communicates with your SMTP server to disp
 * **Connection:** Connect all your Email Info nodes to this single Send Email node using Success links.
 
 ### Step 7: Connecting to the Root Rule Chain
-Your custom notification Rule Chain is now fully built, but ThingsBoard doesn't know it should route incoming telemetry to it. We need to link it inside the main Root Rule Chain.
+Your custom notification Rule Chain is now fully built, but the platform doesn't know it should route incoming telemetry to it. We need to link it inside the main Root Rule Chain.
 
 1. Go to **Rule Chains** and open your **Root Rule Chain** (the default chain that handles all incoming messages).
 2. Locate the **Message Type Switch** node.
@@ -180,11 +181,11 @@ Your custom notification Rule Chain is now fully built, but ThingsBoard doesn't 
 8. Click the **Apply changes** button (the checkmark in the bottom right corner).
 
 Here is how the connection in the Root Rule Chain should look:
-*(The data will now successfully flow from the device, save to the database, and proceed to your custom email notification chain.)*
+*(The data will now successfully flow from the device, save to the database and proceed to your custom email notification chain.)*
 
-![Root Rule Chain detail: the Save Timeseries node linked with a Success connection to the email notifications rule chain node](images/email-notification-2.png)
+![Root Rule Chain detail: the Save Timeseries node linked with a Success connection to the email notifications rule chain node](images/email-notification-2.jpg)
 
-## Limiting Email Frequency
+## Limiting email frequency
 
 If a device continuously sends data that exceeds the threshold (e.g., every 15 minutes), the setup above would send an email every 15 minutes. To prevent email spam, we can implement a mechanism to record the time of the last sent email and block further emails until a specific time interval (e.g., 24 hours) has passed.
 
@@ -192,16 +193,16 @@ This involves modifying the Rule Chain to read a server attribute (`lastEmailTim
 
 Here is the modified flow:
 
-![Modified Rule Chain: Get Last Email Time feeds the threshold filters; each True branch also saves the last email timestamp attribute](images/email-notification-3.png)
+![Modified rule chain: Get Last Email Time feeds the threshold filters; each True branch also saves the last email timestamp attribute](images/email-notification-3.jpg)
 
-### Step 1: Read the Last Email Time
+### Step 1: Read the last email time
 Add a node at the very beginning of the flow (before your threshold filters) to retrieve the timestamp of the last sent email.
 * **Node Type:** `Enrichment` -> `originator attributes`
 * **Name:** Get Last Email Time
 * **Server attributes:** Add `lastEmailTime`
 * **Connection:** Connect this node to the start of your threshold filters (e.g., replacing the connection from your previous formatting nodes).
 
-### Step 2: Modify the Threshold Filters to Check the Time
+### Step 2: Modify the threshold filters to check the time
 Update your existing threshold filter scripts (e.g., `Temperature < 17`) to not only check the telemetry value but also verify if the required time delay has elapsed since `lastEmailTime`.
 * **Node Type:** `Filter` -> `script`
 * **Code Example (Checking for a 24-hour delay = 86400000 milliseconds):**
@@ -227,7 +228,7 @@ return false; // Do not send email
 
 *(Apply this logic to all your threshold filters).*
 
-### Step 3: Prepare the New Timestamp
+### Step 3: Prepare the new timestamp
 If the filter passes (an email should be sent), we need to create a new message to save the current time back to the device's server attributes. We must route the flow in two directions: one to send the email, and one to update the attribute.
 * **Node Type:** `Transformation` -> `script`
 * **Name:** Prepare Timestamp: [Condition Name] (e.g., Prepare Timestamp: Temp < 17)
@@ -243,9 +244,13 @@ return {msg: newMsg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};
 
 * **Connection:** Connect the specific threshold filter (e.g., `Temperature < 17`) to this node using the **True** link.
 
-### Step 4: Save the New Timestamp
+### Step 4: Save the new timestamp
 Finally, use an action node to save the new timestamp as a server attribute so it can be read during the next telemetry update.
 * **Node Type:** `Action` -> `save attributes`
 * **Name:** Save Last Email Time
 * **Scope:** Server attributes
 * **Connection:** Connect the "Prepare Timestamp" node to this node using the **Success** link.
+
+:::info ThingsBoard documentation
+HARDWARIO Dashboards is built on ThingsBoard. More details in the official ThingsBoard documentation: [Send email node](https://thingsboard.io/docs/pe/reference/rule-engine/nodes/external/send-email/).
+:::

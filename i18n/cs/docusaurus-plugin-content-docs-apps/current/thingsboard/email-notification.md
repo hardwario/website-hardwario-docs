@@ -1,7 +1,8 @@
 ---
 slug: email-notification
+unlisted: true
 title: E-mailové notifikace
-description: "Vlastní Rule Chain v ThingsBoard, která e-mailem hlásí překročení limitů teploty a vlhkosti s labelem zařízení a časem CET a omezuje opakované e-maily."
+description: "Vlastní Rule Chain v HARDWARIO Dashboards, která e-mailem hlásí překročení limitů teploty a vlhkosti s labelem zařízení a časem CET a omezuje opakované e-maily."
 ---
 import Image from '@theme/IdealImage';
 
@@ -14,19 +15,19 @@ Do textu e-mailu také doplníme „Label“ přiřazený zařízení a skriptem
 
 Takto bude výsledná notifikační Rule Chain vypadat:
 
-![Notifikační Rule Chain: labely a filtr zařízení vedou do čtyř prahových skriptů, každý sestavuje Email Info pro jeden uzel Send Email](../../../../../apps/thingsboard/images/email-notification-1.png)
+![Začátek ukázkového Rule Chainu: Input, Adding Labels, Device Filter a skript Temperature & Humidity, který vede do prahových filtrů](../../../../../apps/thingsboard/images/email-notification-1.jpg)
 
 ---
 
 ## Předpoklady {#prerequisites}
-Instance ThingsBoard musí mít nastavený odchozí server SMTP. Přejděte na **Settings** -> **Outgoing Mail** a zadejte přihlašovací údaje k SMTP. Tlačítkem „Send Test Mail“ ověříte, že nastavení funguje.
+Váš tenant v HARDWARIO Dashboards musí mít nastavený odchozí server SMTP. Přejděte na **Settings** -> **Outgoing Mail** a zadejte přihlašovací údaje k SMTP. Tlačítkem „Send Test Mail“ ověříte, že nastavení funguje.
 
 ---
 
 ## Návod krok za krokem {#step-by-step-guide}
 
-### Krok 1: Enrichment: Originator Fields (přidání labelů) {#step-1-enrichment-originator-fields-adding-labels}
-ThingsBoard ve výchozím stavu nepředává „Label“ zařízení do metadat rule enginu. Nejdřív ho proto načteme, abychom ho mohli použít ve skriptech a e-mailech.
+### Krok 1: Enrichment: Originator fields (přidání labelů) {#step-1-enrichment-originator-fields-adding-labels}
+Platforma ve výchozím stavu nepředává „Label“ zařízení do metadat rule enginu. Nejdřív ho proto načteme, abychom ho mohli použít ve skriptech a e-mailech.
 * **Typ uzlu:** `Enrichment` -> `originator fields`
 * **Název:** Adding Labels
 * **Konfigurace:** Klikněte na „Add mapping“.  
@@ -114,7 +115,7 @@ return msg['hygrometer.temperature.avg'] < 17;
 
 * **Spojení:** Spojte uzel Temperature & Humidity Formatting se všemi prahovými filtry linkami Success.
 
-### Krok 5: Transformation: To Email (Email Info) {#step-5-transformation-to-email-email-info}
+### Krok 5: Transformation: To email (email info) {#step-5-transformation-to-email-email-info}
 Tento uzel sestaví předmět a tělo e-mailu. Můžete poslat jednoduchý e-mail v prostém textu, nebo e-mail formátovaný v HTML. Pro každý prahový filtr vytvořte jeden takový uzel.
 
 * **Typ uzlu:** `Transformation` -> `to email`
@@ -125,7 +126,7 @@ Tento uzel sestaví předmět a tělo e-mailu. Můžete poslat jednoduchý e-mai
 
 **Varianta A: e-mail v prostém textu**
 Pokud chcete jednoduchý e-mail bez zvláštního formátování, zvolte Plain Text. Zalomení řádků (klávesou Enter) se zachová.
-* **Mail body type:** Zvolte `Plain Text` (nebo podle verze ThingsBoard odškrtněte volbu HTML)
+* **Mail body type:** Zvolte `Plain Text` (nebo podle verze platformy odškrtněte volbu HTML)
 * **Body:**
 ```text
 Hello, measured values in your facility have exceeded the defined limits:
@@ -159,7 +160,7 @@ Your HARDWARIO IoT Team
 
 * **Spojení:** Spojte příslušný prahový filtr (například Temperature < 17) s tímto uzlem linkou True.
 
-### Krok 6: Action: Send Email {#step-6-action-send-email}
+### Krok 6: Action: Send email {#step-6-action-send-email}
 Tento poslední uzel předá sestavené e-maily serveru SMTP k odeslání.
 
 * **Typ uzlu:** `Action` -> `send email`
@@ -168,7 +169,7 @@ Tento poslední uzel předá sestavené e-maily serveru SMTP k odeslání.
 * **Spojení:** Spojte všechny uzly Email Info s tímto jediným uzlem Send Email linkami Success.
 
 ### Krok 7: Napojení na Root Rule Chain {#step-7-connecting-to-the-root-rule-chain}
-Vlastní notifikační Rule Chain je hotová, ThingsBoard ale zatím neví, že do ní má posílat příchozí telemetrii. Proto ji napojíme do hlavní Root Rule Chain.
+Vlastní notifikační Rule Chain je hotová, platforma ale zatím neví, že do ní má posílat příchozí telemetrii. Proto ji napojíme do hlavní Root Rule Chain.
 
 1. Přejděte na **Rule Chains** a otevřete svou **Root Rule Chain** (výchozí řetězec, který obsluhuje všechny příchozí zprávy).
 2. Najděte uzel **Message Type Switch**.
@@ -182,7 +183,7 @@ Vlastní notifikační Rule Chain je hotová, ThingsBoard ale zatím neví, že 
 Takto má spojení v Root Rule Chain vypadat:
 *(Data teď ze zařízení potečou do databáze a odtud dál do vlastního řetězce e-mailových notifikací.)*
 
-![Detail Root Rule Chain: uzel Save Timeseries spojený linkou Success s uzlem rule chain pro e-mailové notifikace](../../../../../apps/thingsboard/images/email-notification-2.png)
+![Detail Root Rule Chain: uzel Save Timeseries spojený linkou Success s uzlem rule chain pro e-mailové notifikace](../../../../../apps/thingsboard/images/email-notification-2.jpg)
 
 ## Omezení četnosti e-mailů {#limiting-email-frequency}
 
@@ -192,7 +193,7 @@ Rule Chain proto upravíme tak, aby načítala serverový atribut (`lastEmailTim
 
 Takto vypadá upravený tok:
 
-![Upravená Rule Chain: Get Last Email Time vede do prahových filtrů; každá větev True navíc ukládá atribut s časem posledního e-mailu](../../../../../apps/thingsboard/images/email-notification-3.png)
+![Upravený Rule Chain: Get Last Email Time vede do prahových filtrů; každá větev True navíc ukládá atribut s časem posledního e-mailu](../../../../../apps/thingsboard/images/email-notification-3.jpg)
 
 ### Krok 1: Přečtěte čas posledního e-mailu {#step-1-read-the-last-email-time}
 Na úplný začátek toku (před prahové filtry) přidejte uzel, který načte timestamp posledního odeslaného e-mailu.
@@ -249,3 +250,7 @@ Nakonec akčním uzlem uložte nový timestamp jako serverový atribut, aby se d
 * **Název:** Save Last Email Time
 * **Scope:** Server attributes
 * **Spojení:** Spojte uzel „Prepare Timestamp“ s tímto uzlem linkou **Success**.
+
+:::info Dokumentace ThingsBoard
+HARDWARIO Dashboards jsou postavené na platformě ThingsBoard. Podrobnosti najdete v oficiální dokumentaci ThingsBoard (anglicky): [Send email node](https://thingsboard.io/docs/pe/reference/rule-engine/nodes/external/send-email/).
+:::

@@ -33,6 +33,16 @@ const sidebars = {
       className: 'sidebar-section',
       collapsible: false,
       items: [
+        'payload',
+        'hardware-description',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Development',
+      className: 'sidebar-section',
+      collapsible: false,
+      items: [
         {
           type: 'category',
           label: 'Console Access',
@@ -59,8 +69,6 @@ const sidebars = {
             'commands/shell-commands',
           ],
         },
-        'payload',
-        'hardware-description',
         {
           type: 'category',
           label: 'Firmware Flashing',

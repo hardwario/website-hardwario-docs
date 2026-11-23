@@ -1,42 +1,37 @@
 ---
 slug: features
-title: Funkce
-description: "Funkce platformy HARDWARIO ThingsBoard: assety, pravidla notifikací, e-mailové notifikace, plánované reporty v PDF, vkládání dashboardů a Rule Engine."
-title_meta: "Funkce (ThingsBoard)"
+title: Pokročilé
+description: "Pokročilé funkce HARDWARIO Dashboards: assety, Rule Engine a integrace."
+title_meta: "Pokročilé (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';
 
-# Funkce {#features}
+# Pokročilé {#advanced}
 
-ThingsBoard nabízí pokročilé nástroje pro uspořádání infrastruktury IoT, automatizaci procesů a doručování reportů zákazníkům. Tato sekce popisuje hlavní funkce platformy HARDWARIO ThingsBoard.
+Až budete mít zařízení, dashboardy, sdílení a uživatele nastavené (viz [návody krok za krokem](/apps/thingsboard/index#step-by-step)), tyto nástroje vám pomohou uspořádat větší projekty, automatizovat procesy a doručovat reporty zákazníkům.
+
+:::tip Nastavíme to za vás
+Některé z těchto funkcí vyžadují technické nastavení. Pokud ho nechcete dělat sami, napište nám na [ask@hardwario.com](mailto:ask@hardwario.com).
+:::
 
 ---
 
 ## [Assety](/apps/thingsboard/assets) {#assets}
 
-Assety jsou v ThingsBoard logické kontejnery, které představují skutečné objekty (budovy, podlaží, zóny nebo vybavení). Na rozdíl od zařízení, která představují fyzický hardware, z assetů sestavíte strukturovanou hierarchii, která výrazně usnadní řízení přístupu, abstrakci dashboardů i škálování.
+Assety jsou v HARDWARIO Dashboards logické kontejnery, které představují skutečné objekty (budovy, podlaží, zóny nebo vybavení). Na rozdíl od zařízení, která představují fyzický hardware, z assetů sestavíte strukturovanou hierarchii, která výrazně usnadní řízení přístupu, abstrakci dashboardů i škálování.
 
 **Assety použijte, když potřebujete:**
 - Vytvořit víceúrovňové hierarchie (například region → město → budova → podlaží)
 - Sdružit více senzorů pod jednu logickou entitu
 - Zpřístupnit zákazníkovi skupinu zařízení přes jediný asset
 
----
-
-## [Pravidla notifikací](/apps/thingsboard/notifications-manager) {#notification-rules}
-
-Správce pravidel notifikací (Notification Rules Manager) je dashboard, ve kterém bez programování nastavíte upozornění při překročení limitů. Určíte podmínky pro telemetrická data a při každém překročení limitu dostanete upozornění e-mailem nebo SMS.
-
-**Pravidla notifikací použijte, když potřebujete:**
-- Dostat upozornění, když hodnota senzoru překročí nastavený limit
-- Sledovat jedním pravidlem víc zařízení
-- Řídit četnost upozornění nastavením doby trvání a ochranné prodlevy (cooldown)
+{/* Hidden for now (2026-11-18): email notifications and scheduled reports
 
 ---
 
 ## [E-mailové notifikace](/apps/thingsboard/email-notification) {#email-notifications}
 
-Pro pokročilejší scénáře můžete v Rule Engine platformy ThingsBoard sestavit zcela vlastní řetězce e-mailových notifikací v JavaScriptu. Máte tak plnou kontrolu nad filtrováním zařízení, formátováním dat i omezením četnosti.
+Pro scénáře nad rámec [pravidel notifikací](/apps/thingsboard/notifications-manager) můžete v Rule Engine sestavit zcela vlastní řetězce e-mailových notifikací v JavaScriptu. Máte tak plnou kontrolu nad filtrováním zařízení, formátováním dat i omezením četnosti.
 
 **Tento přístup použijte, když potřebujete:**
 - Filtrovat notifikace podle labelu zařízení nebo vlastních atributů
@@ -54,22 +49,13 @@ Pravidelné reporty v PDF se zákazníkům automaticky vytvářejí a posílají
 - Zahrnout do jednoho PDF dokumentu grafy a tabulky z více zařízení
 - Automatizovat opakované reportování bez ruční práce
 
----
-
-## [Vkládání dashboardů](/apps/thingsboard/embedding-dashboards) {#embedding-dashboards}
-
-Veřejné dashboardy ThingsBoard vložíte přímo do externích webových aplikací pomocí jednoduchého prvku `iframe`. Postup je optimalizovaný pro dokumentační frameworky založené na Reactu, jako je Docusaurus (MDX), takže se živé grafy vykreslí přímo na vašich stránkách.
-
-**Vkládání dashboardů použijte, když potřebujete:**
-- Zobrazit živou telemetrii a grafy v externím webu nebo na stránce dokumentace
-- Sdílet dashboard jen pro čtení, aniž by se návštěvníci museli přihlašovat
-- Integrovat vizuály ThingsBoard do projektu Docusaurus (MDX) se správnou syntaxí JSX
+*/}
 
 ---
 
 ## [Rule Engine](/apps/thingsboard/rule-engine) {#rule-engine}
 
-Rule Engine je jádro automatizace v platformě ThingsBoard. Každou příchozí zprávu ze zařízení zpracuje podle pravidel, která sestavíte z uzlů ve vizuálním editoru, takže máte plnou kontrolu nad transformací dat, správou alarmů a integracemi třetích stran.
+Rule Engine je jádro automatizace v HARDWARIO Dashboards. Každou příchozí zprávu ze zařízení zpracuje podle pravidel, která sestavíte z uzlů ve vizuálním editoru, takže máte plnou kontrolu nad transformací dat, správou alarmů a integracemi třetích stran.
 
 **Rule Engine použijte, když potřebujete:**
 - Transformovat nebo počítat hodnoty z příchozí telemetrie (například převody jednotek, součty fází)
@@ -79,4 +65,14 @@ Rule Engine je jádro automatizace v platformě ThingsBoard. Každou příchozí
 
 :::caution
 Při úpravách Root Rule Chain vždy zachovejte uzly **Save Timeseries** a **Save Client Attributes**. Pokud je odstraníte, přestanou se do databáze ukládat jakákoli data. Bezpečné postupy úprav najdete v návodu [Rule Engine](/apps/thingsboard/rule-engine).
+:::
+
+---
+
+## [Integrace](/apps/thingsboard/integrations) {#integrations}
+
+Propojte HARDWARIO Dashboards s dalšími systémy, například se síťovým serverem LoRaWAN [ChirpStack](/apps/thingsboard/chirpstack-integration).
+
+:::info Dokumentace ThingsBoard
+HARDWARIO Dashboards jsou postavené na platformě ThingsBoard. Podrobnosti najdete v oficiální dokumentaci ThingsBoard (anglicky): [ThingsBoard PE documentation](https://thingsboard.io/docs/pe/).
 :::

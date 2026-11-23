@@ -1,7 +1,7 @@
 ---
 slug: notifications-manager
 title: Notifications
-description: "Create email or SMS alert rules in the ThingsBoard Notification Rules Manager: pick devices and variables, then set a threshold, duration and cooldown."
+description: "Create email or SMS alert rules in the HARDWARIO Dashboards Notification Rules Manager: pick devices and variables, then set a threshold, duration and cooldown."
 ---
 import Image from '@theme/IdealImage';
 
@@ -10,16 +10,19 @@ import Image from '@theme/IdealImage';
 The **Notification Rules Manager** is a tool for setting up automatic alerts based on data from your IoT devices (sensors, meters, etc.). It lets you define precise conditions under which you receive an e-mail or SMS, for example when temperature exceeds a set value, humidity drops below a threshold, or a device reports an unexpected reading.
 
 :::info Example use case
-A customer operating warehouses wants to be notified when the temperature in any warehouse exceeds 28 °C. They create a rule: *Device = Warehouse_Sensor_A, Variable = temperature, Condition = > 28, Recipient = manager@company.com*. From that point on, an e-mail is sent automatically whenever the sensor reads above 28 °C.
+A customer operating warehouses wants to be notified when the temperature in any warehouse exceeds 28 °C. They create a rule: *Device = Warehouse_Sensor_A, Variable = temperature, Condition = > 28, Recipient = manager@company.com*. From that point on, an e-mail is sent automatically whenever the sensor reads above 28 °C.
 :::
 
 ---
 
-## Logging In and Accessing the Dashboard
+## Logging in and accessing the dashboard
 
 1. Log in to the platform at **app.hardwario.cloud** with your e-mail and password.
 2. In the left navigation menu, click **Notifications**.
-3. The **Notification Rules Manager** dashboard opens. If this is your first visit, the rules table will be empty.
+3. The **Notifications** page opens. It lists the notifications sent in the last 24 hours, 7 days or 30 days; **Notification Filter** narrows the list down.
+4. Click **Manage rules** to open your rules. The **Notifications** button in the same place takes you back.
+
+![Notifications page with the list of sent notifications and the Manage rules button highlighted](images/notifications-manager-0.jpg)
 
 :::caution Note
 The **Notifications** menu item is only visible to customers who have been granted access to this dashboard. If you cannot see it, please contact your platform administrator.
@@ -27,7 +30,7 @@ The **Notifications** menu item is only visible to customers who have been grant
 
 ---
 
-## Access Levels
+## Access levels
 
 | Role | Access |
 |------|--------|
@@ -40,29 +43,35 @@ If you are a Customer User and need to modify a rule, contact your Customer Admi
 
 ---
 
-## Interface Overview
+## Interface overview
 
-![Empty Notification Rules Manager widget with the search field and the Add Rule button in the header](images/notifications-manager-1.png)
+![Empty rules view with the Add Rule icon (+) highlighted in the top-right corner](images/notifications-manager-1.jpg)
 
-### Table Columns Explained
+### Table columns explained
 
 | Column | Description |
 |--------|-------------|
+| **Name** | The name of the rule. |
 | **Device(s)** | The first monitored device. If there are more, a **+N more** badge appears. Hover to see the full list. |
 | **Customer** | The customer(s) the devices belong to (shown when sub-customers exist). If devices span multiple customers, shows the first one with **+N more**. |
 | **Variable(s)** | The telemetry key(s) being watched. |
 | **Condition** | The trigger condition and threshold, plus Duration/Cooldown badges if set. |
 | **Recipients** | Number and type of recipients (email or SMS). Hover to see the list. |
 | **Enabled** | Toggle to enable/disable the rule without deleting it. |
-| **Actions** | **Edit** · **Copy** · **Delete** |
+| **Actions** | Icons for **Edit** (pencil) · **Copy** · **Delete** (trash) |
 
 ---
 
-## Creating a New Rule
+## Creating a new rule
 
-Click **+ Add Rule** in the top-right corner of the widget. The rule form opens below the header.
+Click the **+** icon (Add Rule) in the top-right corner. The **New Rule** form opens.
 
-### Step 1: Select Devices
+### Name and alert type
+
+- **Notification name**: a name that helps you find the rule later, for example *Cold room temperature*.
+- **Alert when**: **Telemetry value** (the default) watches a value, as described in the steps below. **No data (device offline)** alerts you when a device stops sending data.
+
+### Step 1: Select devices
 
 In the **DEVICES** section, select the device(s) this rule should monitor. A single rule can watch multiple devices at the same time.
 
@@ -75,7 +84,7 @@ In the **DEVICES** section, select the device(s) this rule should monitor. A sin
 Adding multiple devices means the rule will be evaluated for *each* device independently. A notification fires whenever *any* of the selected devices meets the condition.
 :::
 
-### Step 2: Select Variables
+### Step 2: Select variables
 
 In the **VARIABLES** section, select or type the telemetry key(s) to monitor.
 
@@ -93,10 +102,10 @@ Click a key to add it as a tag. Already-added keys are marked with ✓ and canno
 Type any key name directly in the field and press **Enter** or click **+ Add**. This is useful for devices that have not yet sent any telemetry.
 
 :::caution Important
-The variable name must match the telemetry key exactly as sent by the device (case-sensitive). To verify available keys, open the device in ThingsBoard → *Latest Telemetry* tab.
+The variable name must match the telemetry key exactly as sent by the device (case-sensitive). To verify available keys, open the device in HARDWARIO Dashboards → *Latest telemetry* tab (see [Managing devices](/apps/thingsboard/devices#check-the-device-data)).
 :::
 
-### Step 3: Set the Condition
+### Step 3: Set the condition
 
 In the **CONDITION** block, define when the notification should fire.
 
@@ -107,7 +116,7 @@ In the **CONDITION** block, define when the notification should fire.
 
 Example: *Operator = > greater than, Threshold = 28* means: "Send a notification when the variable value exceeds 28."
 
-### Step 4: Configure Timing
+### Step 4: Configure timing
 
 The **TIMING** block contains two optional fields for fine-grained control. Leave them at 0 for default behaviour.
 
@@ -115,10 +124,13 @@ The **TIMING** block contains two optional fields for fine-grained control. Leav
 |-------|-------------|---------|
 | **Duration (min)** | The condition must be met continuously for this many minutes before a notification is sent. Eliminates short spikes. | 0 = send immediately |
 | **Cooldown (min)** | Minimum time between two notifications for this rule. Prevents notification flooding. | 0 = no limit |
+| **Notify only once until the value is back to normal** | Sends one notification when the value crosses the limit. The next one is sent only after the value has returned within the limit and crossed it again. The cooldown is not used. | off |
 
-### Step 5: Add Recipients
+### Step 5: Add recipients
 
 **Notification type**: Select **Email** or **SMS** in the **NOTIFICATION TYPE** section. The appropriate recipient field will appear.
+
+**Email subject** and **Message template** are optional. Leave them empty for the default message, or build your own with the placeholders `{deviceName}`, `{variable}`, `{value}`, `{operator}` and `{threshold}`.
 
 **Email recipients:**
 1. Type an e-mail address in the *user@example.com* field.
@@ -132,7 +144,7 @@ Enter a phone number in international format: `+420600123456`. Adding works the 
 You can add any number of recipients to one rule. The notification is sent to all of them simultaneously.
 :::
 
-### Step 6: Save the Rule
+### Step 6: Save the rule
 
 Once all required fields are filled in, click **Save Rule**. The rule is saved immediately and starts being evaluated in an enabled state. It appears in the rules table.
 
@@ -143,47 +155,47 @@ Once all required fields are filled in, click **Save Rule**. The rule is saved i
 - At least one recipient (e-mail or SMS)
 :::
 
-![New Rule form with devices, variables, condition, timing, notification type, message template, and recipients sections](images/notifications-manager-2.png)
+![New Rule form with the devices (1), variables (2), condition (3) and timing (4) sections filled in](images/notifications-manager-2.jpg)
 
 ---
 
-## Managing Existing Rules
+## Managing existing rules
 
-### Editing a Rule
+### Editing a rule
 
-Click **Edit** on the rule you want to change. The form opens with pre-filled values. Make your changes and click **Save Rule**.
+Click the **pencil icon** (Edit) on the rule you want to change. The form opens with pre-filled values. Make your changes and click **Save Rule**.
 
-### Copying a Rule
+### Copying a rule
 
-Click **Copy**. A new rule form opens with the same values as the original. Adjust what you need (e.g. different threshold or device) and save.
+Click the **Copy** icon. A new rule form opens with the same values as the original. Adjust what you need (e.g. different threshold or device) and save.
 
 :::tip
 Copying is ideal when you want a similar rule for a different device or threshold, without filling in everything from scratch.
 :::
 
-### Deleting a Rule
+### Deleting a rule
 
-Click **Delete**. A confirmation dialog appears. Once confirmed, the rule is permanently removed from all devices it was saved on.
+Click the **trash icon** (Delete). A confirmation dialog appears. Once confirmed, the rule is permanently removed from all devices it was saved on.
 
 :::caution Warning
 Deletion is permanent and cannot be undone. If you only want to temporarily stop notifications, use the **Enabled** toggle instead.
 :::
 
-### Enabling / Disabling a Rule
+### Enabling / disabling a rule
 
 Each rule has a toggle switch in the **Enabled** column. Switching it off deactivates the rule: no notifications will be sent, but the rule remains saved and can be re-enabled at any time.
 
-![Rules table with two temperature rules, Enabled checkboxes, and Edit, Copy, and Delete action buttons](images/notifications-manager-3.png)
+![Rules table with the Cold room temperature rule (1), its Enabled toggle and the Edit, Copy and Delete icons (2)](images/notifications-manager-3.jpg)
 
 ---
 
-## Filtering and Sorting Rules
+## Filtering and sorting rules
 
 ### Search
 
-Use the *Search rules...* field in the top-right corner. Results update in real time across all fields (device name, variable, recipient, etc.).
+Click the **search icon** in the top-right corner. Results update in real time across all fields (device name, variable, recipient, etc.).
 
-### Customer Filter
+### Customer filter
 
 If your organisation manages sub-customers, a dropdown filter appears in the top bar. Selecting a customer shows only rules for devices belonging to that customer.
 
@@ -199,7 +211,7 @@ Click any sortable column header to sort. Click again to reverse the order. An a
 
 ---
 
-## Understanding Duration and Cooldown
+## Understanding duration and cooldown
 
 | Setting | What it does | When to use it |
 |---------|-------------|----------------|
@@ -212,7 +224,7 @@ If you are unsure, set **Duration = 0** and **Cooldown = 30**. Notifications fir
 
 ---
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 **I did not receive a notification even though the condition should have been met. What should I check?**
 - Is the rule enabled? Check the **Enabled** toggle in the table.
@@ -232,7 +244,7 @@ Use the language selector in the top-right corner of the widget. Your choice is 
 The rule is removed from all devices it was saved on. This action is irreversible.
 
 **How do I find out which telemetry keys my device sends?**  
-Open the device detail in ThingsBoard (section *Devices*), then click the *Latest Telemetry* tab. All keys and their current values are listed there.
+Open the device detail in HARDWARIO Dashboards (section *Devices*), then click the *Latest Telemetry* tab. All keys and their current values are listed there.
 
 **Can I set a rule for a sub-customer's device?**  
 Yes. If you manage sub-customers, select the relevant customer using the filter in the top bar. Only that customer's devices will be shown when creating a rule.
@@ -242,3 +254,7 @@ It shows the number and type of recipients for that rule. Hover over the badge t
 
 **How do I know if a rule fired?**  
 You will receive an e-mail or SMS as configured. The notification contains the device name, variable, measured value and the condition that was triggered.
+
+:::info ThingsBoard documentation
+HARDWARIO Dashboards is built on ThingsBoard. More details in the official ThingsBoard documentation: [Notification center](https://thingsboard.io/docs/pe/user-guide/notifications/).
+:::

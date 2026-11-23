@@ -92,7 +92,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Advanced',
+      label: 'Development',
       className: 'sidebar-section',
       collapsible: false,
       items: [

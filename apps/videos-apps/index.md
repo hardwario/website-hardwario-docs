@@ -18,7 +18,7 @@ Here you can find step-by-step guides and video tutorials that will help you set
 
 | Tutorial                                   | Step-by-step guide                     | Video tutorial                         |
 |--------------------------------------------|-----------------------------------------|-----------------------------------------|
-| **How to Create a New Device**     | [Guide](/apps/thingsboard/creating-device) | [Video](/apps/videos-apps/thingsboard-new-device) |
+| **How to Create a New Device**     | [Guide](/apps/thingsboard/devices) | [Video](/apps/videos-apps/thingsboard-new-device) |
 | **How to Connect to the HARDWARIO Cloud**           | [Guide](/apps/thingsboard/cloud-connection) | [Video](/apps/videos-apps/thingsboard-cloud-connection) |
 | **How to Create a Basic Dashboard**     | [Guide](/apps/thingsboard/creating-dashboard) | [Video](/apps/videos-apps/thingsboard-dashboard) |
 

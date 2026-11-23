@@ -1,19 +1,19 @@
 ---
 slug: chirpstack-integration
 title: ChirpStack
-description: "Connect HARDWARIO ThingsBoard to the ChirpStack MQTT broker over TLS on port 8883 with CA and client certificates, and subscribe to uplink events."
-title_meta: "ChirpStack Integration (ThingsBoard)"
+description: "Connect HARDWARIO Dashboards to the ChirpStack MQTT broker over TLS on port 8883 with CA and client certificates, and subscribe to uplink events."
+title_meta: "ChirpStack integration (HARDWARIO Dashboards)"
 ---
 
 import Image from '@theme/IdealImage';
 
-# ChirpStack MQTT Integration via TLS
+# ChirpStack MQTT integration via TLS
 
-This guide explains how to connect your HARDWARIO ThingsBoard platform to a ChirpStack MQTT broker over an encrypted TLS connection. This method uses a generic MQTT integration, which ensures secure data transmission using client-side certificates.
+This guide explains how to connect HARDWARIO Dashboards to a ChirpStack MQTT broker over an encrypted TLS connection. This method uses a generic MQTT integration, which ensures secure data transmission using client-side certificates.
 
 ## Prerequisites
 
-Before configuring the integration in ThingsBoard, ensure you have successfully generated and downloaded the following three files from the ChirpStack UI (under **Applications** -> **Integrations** -> **MQTT Certificate**):
+Before configuring the integration in HARDWARIO Dashboards, ensure you have successfully generated and downloaded the following three files from the ChirpStack UI (under **Applications** -> **Integrations** -> **MQTT Certificate**):
 
 * **CA Certificate** (`ca.pem`)
 * **TLS Certificate** (`client-cert.pem`)
@@ -23,16 +23,16 @@ Before configuring the integration in ThingsBoard, ensure you have successfully 
 
 ---
 
-## Configuration Steps in ThingsBoard
+## Configuration steps in HARDWARIO Dashboards {#configuration-steps-in-thingsboard}
 
 Follow these steps to set up the secure MQTT integration:
 
-### 1. Create Integration
-1.  Log in to your ThingsBoard instance.
+### 1. Create integration
+1.  Log in to [HARDWARIO Dashboards](https://app.hardwario.cloud/) as a tenant administrator.
 2.  Navigate to **Integrations** in the left-hand menu.
 3.  Click **Add integration** and select **MQTT** as the type.
 
-### 2. Connection Settings
+### 2. Connection settings
 In the **Connection** tab, configure the following parameters:
 
 | Field | Value |
@@ -42,28 +42,32 @@ In the **Connection** tab, configure the following parameters:
 | **Enable SSL/TLS** | Enabled |
 | **Credentials type** | PEM (certificate based) |
 
-### 3. Credential Upload
+### 3. Credential upload
 Upload the three files obtained from the ChirpStack UI into the corresponding fields:
 
 * **CA certificate:** Upload `ca.pem`.
 * **Certificate:** Upload `client-cert.pem`.
 * **Private key:** Upload `client-key.pem`.
 
-### 4. Topic Configuration
+### 4. Topic configuration
 Set the **Topic filter** to receive uplink data from your devices:
 `application/+/device/+/event/up`
 
 ---
 
-## Verification & Troubleshooting
+## Verification & troubleshooting
 
-Once saved, ThingsBoard will establish a secure MQTT connection over TLS. The broker will authenticate the connection using the client certificate signed by your ChirpStack CA. 
+Once saved, HARDWARIO Dashboards establishes a secure MQTT connection over TLS. The broker will authenticate the connection using the client certificate signed by your ChirpStack CA. 
 
 ### How to verify:
-* **Integration Logs:** Navigate to the **Logs** tab of your integration in ThingsBoard. If the configuration is correct, you should see successful connection events.
+* **Integration Logs:** Navigate to the **Logs** tab of your integration. If the configuration is correct, you should see successful connection events.
 * **Server-side check:** If the connection fails, verify that your Mosquitto server is actively listening on port 8883 by running this command on your server: 
     `ss -tlnp | grep mosquitto`
 
 ### Common pitfalls:
 * **Certificate Mismatch:** Ensure you did not swap the `Certificate` and `Private key` files.
 * **JSON Format:** If you see the connection as "active" but no data is arriving, double-check that your ChirpStack MQTT integration settings have `json=true` enabled.
+
+:::info ThingsBoard documentation
+HARDWARIO Dashboards is built on ThingsBoard. More details in the official ThingsBoard documentation: [ChirpStack integration](https://thingsboard.io/docs/pe/user-guide/integrations/chirpstack/).
+:::

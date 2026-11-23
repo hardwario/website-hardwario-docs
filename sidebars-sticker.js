@@ -102,11 +102,54 @@ const sidebars = {
             'connectivity/lora-p2p',
           ],
         },
+        {
+          type: 'category',
+          label: 'Device behavior',
+          link: {
+            type: 'doc',
+            id: 'device-behavior/index',
+          },
+          collapsed: true,
+          items: [
+            'device-behavior/startup',
+            'device-behavior/network-connection',
+            'device-behavior/messages',
+            'device-behavior/downlinks',
+            'device-behavior/history-and-counters',
+            'device-behavior/alarms',
+            'device-behavior/one-wire',
+            'device-behavior/configuration',
+            'device-behavior/battery',
+            'device-behavior/payload',
+            'device-behavior/firmware',
+            'device-behavior/troubleshooting',
+          ],
+        },
       ],
     },
     {
       type: 'category',
       label: 'Advanced',
+      className: 'sidebar-section',
+      collapsible: false,
+      items: [
+        {
+          type: 'category',
+          label: 'Hardware Description',
+          link: {
+            type: 'doc',
+            id: 'hardware-description',
+          },
+          collapsed: true,
+          items: [
+            'power-management',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Development',
       className: 'sidebar-section',
       collapsible: false,
       items: [
@@ -130,25 +173,21 @@ const sidebars = {
             'developer-access/diagnostics',
           ],
         },
-        {
-          type: 'category',
-          label: 'Hardware Description',
-          link: {
-            type: 'doc',
-            id: 'hardware-description',
-          },
-          collapsed: true,
-          items: [
-            'power-management',
-          ],
-        },
-        'ordering-codes',
       ],
     },
     {
-      type: 'doc',
-      id: 'changelog',
-      label: 'Changelog',
+      type: 'category',
+      label: 'Other',
+      className: 'sidebar-section',
+      collapsible: false,
+      items: [
+        'ordering-codes',
+        {
+          type: 'doc',
+          id: 'changelog',
+          label: 'Changelog',
+        },
+      ],
     },
   ],
 };

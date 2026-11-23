@@ -1,14 +1,14 @@
 ---
 slug: assets
 title: Assety
-description: "Assety v ThingsBoard pro budovy, podlaží nebo zóny: vytvoření assetu, propojení se zařízeními přes relace a sdílení s podřízenými zákazníky."
+description: "Assety v HARDWARIO Dashboards pro budovy, podlaží nebo zóny: vytvoření assetu, propojení se zařízeními přes relace a sdílení s podřízenými zákazníky."
 ---
 
 import Image from '@theme/IdealImage';
 
 # Assety {#assets}
 
-Assety jsou v ThingsBoard logické kontejnery, které představují skutečné objekty (budovy, podlaží, zóny nebo vybavení). Na rozdíl od zařízení, která představují fyzický hardware odesílající data, slouží assety k uspořádání celé struktury projektu a určují, jak se data a přístupová práva rozdělují mezi zákazníky.
+Assety jsou v HARDWARIO Dashboards logické kontejnery, které představují skutečné objekty (budovy, podlaží, zóny nebo vybavení). Na rozdíl od zařízení, která představují fyzický hardware odesílající data, slouží assety k uspořádání celé struktury projektu a určují, jak se data a přístupová práva rozdělují mezi zákazníky.
 
 ---
 
@@ -26,36 +26,36 @@ Assety jsou v ThingsBoard logické kontejnery, které představují skutečné o
 
 ### Krok 1: Přihlaste se {#step-1-log-in}
 
-Přihlaste se do platformy ThingsBoard jako *Customer Administrator*.
+Přihlaste se do HARDWARIO Dashboards jako *Customer Administrator*.
 
 ### Krok 2: Přejděte na Assets {#step-2-navigate-to-assets}
 
-V levém navigačním menu přejděte na **Entities** → **Assets**.
+V levém menu otevřete **Devices & assets → Assets** (správci tenantu **Entities → Assets**).
 
 ### Krok 3: Přidejte nový asset {#step-3-add-a-new-asset}
 
-Klikněte vpravo nahoře na ikonu **„+“** a zvolte **Add new asset**.
+Vpravo nahoře klikněte na **Add asset** a zvolte **Add new asset**.
 
-![Prázdný seznam Assets v platformě ThingsBoard se šipkou na ikonu plus pro přidání nového assetu](../../../../../apps/thingsboard/images/assets-1.png)
+![Prázdný seznam Assets se zvýrazněným tlačítkem Add asset](../../../../../apps/thingsboard/images/assets-1.jpg)
 
 ### Krok 4: Vyplňte údaje {#step-4-fill-in-the-details}
 
 Zadejte informace o assetu:
-- **Name:** Název assetu (například *Komplex Barrandov*).
+- **Name** (1): Název assetu (například *Sklad Praha*).
 - **Asset Profile:** Zvolte profil (výchozí je *default*). Profily určují pravidla zpracování dat.
-- **Label:** Volitelný label pro přehlednější uspořádání a filtrování.
+- **Label** (2): Volitelný label pro přehlednější uspořádání a filtrování.
 
-![Dialog Add asset s poli name, label, výchozím profilem assetu a vlastníkem, se šipkou na tlačítko Add](../../../../../apps/thingsboard/images/assets-2.png)
+![Dialog Add asset se zvýrazněnými poli Name (1), Label (2) a tlačítkem Add (3)](../../../../../apps/thingsboard/images/assets-2.jpg)
 
 ### Krok 5: Uložte {#step-5-save}
 
-Klikněte na **Add**. Tím je asset vytvořený.
+Klikněte na **Add** (3). Tím je asset vytvořený.
 
 ### Krok 6: Přidejte relace (volitelně) {#step-6-add-relations-optional}
 
 Na záložce **Relations** můžete vytvořit relace k zařízením nebo k nadřazeným assetům (například relaci „Contains“ směřující dolů k senzorům).
 
-![Dialog Add relation na záložce Relations assetu s typem relace Contains a zařízením zvoleným jako cílová entita](../../../../../apps/thingsboard/images/assets-3.png)
+![Dialog Add relation s typem relace Contains (1) a zařízením zvoleným jako cílová entita (2)](../../../../../apps/thingsboard/images/assets-3.jpg)
 
 ---
 
@@ -69,7 +69,7 @@ Do assetů můžete pomocí relací „vložit“ různá zařízení. Napříkl
 
 ### Sdílení se zákazníky {#sharing-with-customers}
 
-Pokud máte podřízeného zákazníka (Customer), můžete s ním sdílet celý asset. Uživatelé tohoto zákazníka pak v ThingsBoard automaticky uvidí tento asset i všechno, co je s ním propojené.
+Pokud máte podřízeného zákazníka (Customer), můžete s ním sdílet celý asset. Uživatelé tohoto zákazníka pak automaticky uvidí tento asset i všechno, co je s ním propojené.
 
 ### Dynamické pohledy dashboardu {#dynamic-dashboard-views}
 
@@ -77,3 +77,7 @@ Díky této struktuře můžete pro všechny zákazníky vytvořit **jediný uni
 - **Zákazník A** se přihlásí a ve výběru zdroje (například ve widgetu *Entities Hierarchy*) vidí jen své vlastní assety a zařízení, která jsou k nim přiřazená.
 - **Zákazník B** se přihlásí do úplně stejného dashboardu, ale vidí zcela jiná data (jen svoje).
 - **Nadřazený zákazník nebo tenant admin**, který má přístup ke všemu, vidí ve stejném dashboardu celý strom všech zákazníků a všech assetů, což se hodí pro celkový přehled a údržbu.
+
+:::info Dokumentace ThingsBoard
+HARDWARIO Dashboards jsou postavené na platformě ThingsBoard. Podrobnosti najdete v oficiální dokumentaci ThingsBoard (anglicky): [Assets](https://thingsboard.io/docs/pe/user-guide/assets/).
+:::

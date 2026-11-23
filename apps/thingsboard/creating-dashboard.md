@@ -1,115 +1,100 @@
 ---
 slug: creating-dashboard
-title: Dashboards
-description: "Create a ThingsBoard dashboard, show one variable with the Label & Value Card widget and plot telemetry in a Line Chart with one or more series."
+title: Your first dashboard
+description: "Create a dashboard in HARDWARIO Dashboards, add a Value card with a live value, resize it and save the dashboard."
+title_meta: "Your first dashboard (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';
 
-# Creating Dashboards
+# Your first dashboard
 
-In this guide, you will learn how to create a dashboard, add a simple variable display, and build a basic chart. This will allow you to visualize and monitor your device data in real time.
+In this guide, you'll create a dashboard and add a card that shows a live value from your device. Then you can continue with [charts](/apps/thingsboard/charts).
 
----
-
-## Step 1: How to Create a Dashboard
-
-   1. Navigate to the **left navigation bar**.  
-   2. Click on the **Dashboards** tab.  
-   3. In the top right corner, click the **➕ button** to add a new dashboard.  
-   4. Select **Create new dashboard**.  
-
-![Create new dashboard - 1](images/thingsboard-dashboards-1.png)
-
-   5. Enter the **Title, Description, Image**, and any other required details.  
-   6. Click **Add**.  
-
-![Create new dashboard - 2](images/thingsboard-dashboards-2.png)
-
-   7. You will be redirected to your newly created dashboard.  
+Before you start, your device should be [connected](/apps/thingsboard/cloud-connection) and its values should appear in **Latest telemetry** (see [Managing devices](/apps/thingsboard/devices#check-the-device-data)).
 
 ---
 
-## Step 2: How to Create a Simple Variable Display
+## Step 1: Create the dashboard
 
-   1. Inside your dashboard, click on the **+ Add new widget** button.  
-      - Alternatively, you can use the **+ Add widget** option in the top menu bar. 
+1. Open **Dashboards** in the left menu.
+2. Click **Add dashboard** in the top-right corner and choose **Create new dashboard**.
 
-![Add new widget](images/thingsboard-variable-0.png)
+   ![Dashboards list with the Add dashboard menu open, offering Create new dashboard and Import dashboard](images/dashboard-add-menu.jpg)
 
-   2. A **Widgets Bundles** menu will appear.  
+3. Enter a **Title**, for example *Warehouse*. The other fields are optional. Click **Add**.
 
-![Widgets Bundles](images/thingsboard-variable-1.webp)
+   ![Add dashboard dialog with the title Warehouse filled in](images/dashboard-add-dialog.jpg)
 
-   3. For a simple variable display, choose the **Cards** widget bundle.  
-   4. From the available options, select **Label & Value Card**.  
+The new dashboard opens in **edit mode**, ready for its first widget.
 
-![Widgets Cards](images/thingsboard-variable-2.webp)
-
-   5. A configuration window will open:  
-      - Choose the **device** and the **variable** you want to display.  
-      - Customize the widget’s appearance (label, color, icon, etc.).  
-   6. Once finished, click **Add**. 
-
-![Widgets configuration window](images/thingsboard-variable-3.png)
-
-   7. The widget will now appear on your dashboard.  
-
-![Widget on dashboard](images/thingsboard-variable-4.png)
-
-   8. Resize the widget by dragging its corners.  
-
-![Resize the widget](images/thingsboard-variable-5.png)
-
-   9.  Re-edit the widget by hovering over it and clicking the **pencil icon** in the top right corner.  
-
-![Re-edit the widget](images/thingsboard-variable-6.png)
+![Empty dashboard in edit mode with the Add new widget button in the middle and the edit toolbar at the top](images/dashboard-edit-empty.jpg)
 
 ---
 
-## Step 3: How to Create a Simple Chart
+## Step 2: Add a card with a live value
 
-   1. Inside your dashboard, click on the **+ Add new widget** button.  
-      - Alternatively, use the **+ Add widget** option in the top menu bar.  
+1. Click **Add new widget** in the middle (or **Add widget** in the top bar).
+2. A list of widget bundles opens. Choose **Cards**.
 
-![Add new widget](images/thingsboard-chart-0.png)
+   ![Select widgets bundle panel with Charts, Cards, Maps, Analogue gauges and other bundles](images/dashboard-widget-bundles.jpg)
 
-   2. A **Widgets Bundles** menu will appear.  
+3. Choose **Value card**. It shows one value that updates in real time.
 
-![Widgets Bundles](images/thingsboard-chart-1.webp)
+   ![Cards bundle with Value card, Horizontal value card, Label & value card and other cards](images/dashboard-cards-bundle.jpg)
 
-   3. For a simple line chart, choose the **Charts** widget bundle.  
-   4. From the available options, select **Line Chart**.  
+4. Under **Datasource**, type the device name in **Device** and pick your device.
+5. In **Data key**, remove the default `temperature` key, click the field and pick the value you want, for example `hygrometer.temperature.measurements.avg`. You can type part of the name to search.
+6. Under **Appearance**, set:
+   - **Label**: the text above the value, for example *Cold room A*,
+   - **Value**: the unit (for example `°C`) and the number of **decimals**,
+   - **Icon** and colors, if you want.
+7. Click **Add**.
 
-![Widgets Charts](images/thingsboard-chart-2.png)
+![Value card settings: the device (1), the data key (2), the label Cold room A (3) and the unit with one decimal (4)](images/dashboard-value-card-config.jpg)
 
-   5. A configuration window will open:  
-      - Select the **data source** and the **variable** you want to display under **Series → Key**.  
-      - Customize the widget’s appearance (label, units, color, decimals, etc.).  
-      - To add multiple variables, click **Add Series**.  
-      - Scroll down to configure **Y-axes, legend, and other chart settings**.  
-   6. Once finished, click **Add**.  
+The card appears on the dashboard and shows the latest value with the time of the last update.
 
-![Widgets configuration window](images/thingsboard-chart-3.png)
+![Dashboard in edit mode with the Cold room A value card showing 4.1 °C](images/dashboard-value-card-result.jpg)
 
-   7. The chart will now appear on your dashboard.  
+---
 
-![Widget on dashboard](images/thingsboard-chart-4.png)
+## Step 3: Arrange the dashboard
 
-   8. Resize the chart by dragging its corners.  
+- **Resize** a widget by dragging its bottom-right corner.
+- **Move** a widget by dragging it.
+- **Edit** a widget: hover over it and click the **pencil icon** in its top-right corner.
+- **Copy** a widget: right-click it and choose **Copy**, then right-click an empty space and choose **Paste**. In the copy, change only the data key, for example to humidity. It's faster than starting again.
 
-![Resize the widget](images/thingsboard-chart-5.png)
+---
 
-   9.  Re-edit the chart by hovering over it and clicking the **pencil icon** in the top right corner.  
-   
-![Re-edit the widget](images/thingsboard-chart-6.png)
+## Step 4: Save
 
-### Example of a Created Dashboard
+Click **Save** in the top-right corner. The dashboard leaves edit mode. The card now updates every time your device sends new data.
 
-![Example of a Created Dashboard](images/thingsboard-dashboard.png)
+To change the dashboard later, open it and click **Edit mode** in the top bar.
 
-## Video Tutorial
+![Saved dashboard with the Edit mode button in the top bar next to the time window](images/dashboard-view-mode.jpg)
 
-:::tip
-If you need further assistance or a visual demonstration of the process described in this guide, consult the [Video Guide](/apps/videos-apps/thingsboard-dashboard).
+:::tip The value is empty?
+Check that you picked the right device and key: open the device and compare with its **Latest telemetry**. Charts also depend on the [time window](/apps/thingsboard/time-window).
 :::
 
+---
+
+## Example
+
+A finished dashboard can combine value cards, charts, a map and a table:
+
+![Warehouse overview dashboard with four value cards, a map of sites and a temperature chart of two cold rooms](images/dashboard-example-overview.jpg)
+
+---
+
+## Next steps
+
+- [Charts & styling](/apps/thingsboard/charts): add a chart with history.
+- [Time window](/apps/thingsboard/time-window): choose which period the dashboard shows.
+- [Public link](/apps/thingsboard/public-link): share the dashboard.
+
+:::info ThingsBoard documentation
+HARDWARIO Dashboards is built on ThingsBoard. More details in the official ThingsBoard documentation: [Dashboards](https://thingsboard.io/docs/pe/user-guide/dashboards/).
+:::

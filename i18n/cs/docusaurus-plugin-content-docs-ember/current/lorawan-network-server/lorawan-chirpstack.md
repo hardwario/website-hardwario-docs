@@ -14,7 +14,7 @@ Tento návod ukazuje, jak připojit bránu LoRaWAN **HARDWARIO EMBER** (MikroTik
 ## Užitečná dokumentace {#useful-docs}
 - Instalace ChirpStack v4 → https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
 - EMBER → ChirpStack: [Brány](/apps/chirpstack/chirpstack-configuration/chirpstack-gateways)
-- Konfigurace hotspotu EMBER (základy RouterOS, sekce LoRaWAN): https://docs.hardwario.com/ember/hotspot-configuration/
+- Konfigurace hotspotu EMBER (LoRaWAN): https://docs.hardwario.com/ember/hotspot-configuration/lorawan/
 
 :::info
 Než začnete konfigurovat bránu HARDWARIO EMBER, ověřte, že je **ChirpStack v4 nainstalovaný a spuštěný**.

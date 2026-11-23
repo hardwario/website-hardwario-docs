@@ -30,8 +30,28 @@ const sidebars = {
             'lorawan-network-server/lorawan-tts',
           ],
         },
-        'hotspot-configuration',
-        'cloud-service',
+        {
+          type: 'category',
+          label: 'MikroTik',
+          collapsed: true,
+          items: [
+            'mikrotik/gateway-update',
+            'mikrotik/antenna-gain',
+            'mikrotik/winbox-setup',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Hotspot Configuration',
+          link: {type: 'doc', id: 'hotspot-configuration'},
+          collapsed: true,
+          items: [
+            'cloud-service',
+            'hotspot-configuration/interface-configuration',
+            'hotspot-configuration/lorawan',
+            'hotspot-configuration/securing-access',
+          ],
+        },
         {
           type: 'category',
           label: 'Video Tutorials',
@@ -72,17 +92,17 @@ const sidebars = {
       className: 'sidebar-section',
       collapsible: false,
       items: [
-        'hardware-description',
         {
           type: 'category',
-          label: 'MikroTik',
+          label: 'Setup',
           collapsed: true,
           items: [
-            'mikrotik/gateway-update',
-            'mikrotik/antenna-gain',
-            'mikrotik/winbox-setup',
+            'hardware-setup',
+            'automated-setup',
+            'manual-setup',
           ],
         },
+        'hardware-description',
       ],
     },
     {

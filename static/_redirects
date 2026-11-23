@@ -145,8 +145,8 @@
 /ember/getting-started/                              /ember/first-steps/                                             301
 /ember/chirpstack/chirpstack-installation            /apps/chirpstack/chirpstack-installation/                       301
 /ember/chirpstack/chirpstack-installation/           /apps/chirpstack/chirpstack-installation/                       301
-/ember/mikrotik/gateway-configuration                /ember/first-steps/                                             301
-/ember/mikrotik/gateway-configuration/               /ember/first-steps/                                             301
+/ember/mikrotik/gateway-configuration                /ember/hardware-setup/                                          301
+/ember/mikrotik/gateway-configuration/               /ember/hardware-setup/                                          301
 
 # FIBER docs restructured (project-structure/troubleshooting retired -> section index)
 /fiber/installation/-setup                            /fiber/installation                                            301
@@ -257,8 +257,8 @@
 /ember/chirpstack/index/                             /apps/chirpstack/index/                                        301
 /ember/chirpstack-v4-installation                    /apps/chirpstack/chirpstack-installation/                       301
 /ember/chirpstack-v4-installation/                   /apps/chirpstack/chirpstack-installation/                       301
-/ember/initial-configuration                         /ember/first-steps/                                             301
-/ember/initial-configuration/                        /ember/first-steps/                                             301
+/ember/initial-configuration                         /ember/hardware-setup/                                          301
+/ember/initial-configuration/                        /ember/hardware-setup/                                          301
 /ember/chirpstack/chirpstack-ember                   /apps/chirpstack/chirpstack-configuration/chirpstack-gateways/  301
 /ember/chirpstack/chirpstack-ember/                  /apps/chirpstack/chirpstack-configuration/chirpstack-gateways/  301
 

@@ -133,6 +133,139 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   }
 }
 
+/* Narrow desktop, 997 to 1365 px. The row needs about 1,210 px on the
+   homepage and up to about 1,450 px on a page whose dropdown names a long
+   entry (Czech "Aplikace › HARDWARIO Manager"). In a narrower window the
+   items used to shrink onto the logo, wrap onto two lines and run into the
+   right side. Now the brand keeps its size, no label wraps, and this gives
+   way instead:
+   - below 1366 px: the search field takes the room that is left, from its
+     usual 12.5rem down to 6rem. On a page whose dropdown names its entry, the
+     keyboard hint in the search field and the GitHub link go before that
+     (the link stays reachable by keyboard, see below);
+   - below 1280 px: the hint and the GitHub link go on every page, the pills
+     sit closer together and get slightly tighter padding and letter-spacing;
+   - below 1140 px: the entry name in the dropdown label ("› CHESTER") goes;
+     the red pill stays on the item.
+   1280 and 1140 are where the widest row (Czech, HARDWARIO Manager) stops
+   fitting, measured in Chromium on macOS, plus 17 px for a classic scrollbar
+   and a few pixels of reserve. From 1366 px up nothing here applies. */
+@media (min-width: 997px) and (max-width: 1365px) {
+  /* The left side is as wide as its items and never narrower; the right side
+     takes the rest, and only its search field may shrink. */
+  .navbar__inner {
+    flex-wrap: nowrap;
+  }
+
+  .navbar__items:not(.navbar__items--right) {
+    flex: 1 0 auto;
+  }
+
+  .navbar__items--right {
+    flex-shrink: 1;
+  }
+
+  .navbar__brand,
+  .navbar__items--right > * {
+    flex-shrink: 0;
+  }
+
+  .navbar__items .navbar__link {
+    white-space: nowrap;
+  }
+
+  /* The search field itself becomes the flexible item of the right side. The
+     margin is the space the wrapper and the field had before it (0.75rem +
+     1rem). The span is the wrapper the search script puts around the input
+     once it has loaded. */
+  .navbar__items--right > [class*='navbarSearchContainer'] {
+    display: contents;
+  }
+
+  .navbar .navbar__search {
+    flex: 0 1 12.5rem;
+    min-width: 6rem;
+    margin-left: 1.75rem;
+  }
+
+  .navbar__search > span,
+  .navbar__search .navbar__search-input {
+    width: 100%;
+  }
+
+  /* The hint and the GitHub link, here on a page whose dropdown names its
+     entry and below 1280 px on every page (same two rules there). The
+     footer's GitHub link goes to the organisation, not to this repository,
+     so the link only leaves the row: it is clipped away until it gets
+     keyboard focus and then shows right under the end of the bar. */
+  .navbar:has(.navbar-dropdown-current) .navbar__search kbd {
+    display: none;
+  }
+
+  .navbar:has(.navbar-dropdown-current) .navbar__items--right > .navbar__link[href^='https://github.com/'] {
+    position: absolute;
+    clip-path: inset(50%);
+  }
+
+  .navbar .navbar__items--right > .navbar__link[href^='https://github.com/']:focus {
+    top: 100%;
+    right: var(--ifm-navbar-padding-horizontal);
+    clip-path: none;
+    background: var(--ifm-navbar-background-color);
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1279px) {
+  .navbar__search kbd {
+    display: none;
+  }
+
+  .navbar__items--right > .navbar__link[href^='https://github.com/'] {
+    position: absolute;
+    clip-path: inset(50%);
+  }
+
+  .navbar__brand {
+    margin-right: 0.5rem;
+  }
+
+  .navbar__logo {
+    margin-right: 0.25rem;
+  }
+
+  /* Infima's 0.75rem around every dropdown (the language switch too) is what
+     keeps the pills apart. */
+  .navbar__items > .navbar__item.dropdown {
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+  }
+
+  .navbar__items:not(.navbar__items--right) > .navbar__item {
+    margin: 0 1px;
+  }
+
+  .navbar__items:not(.navbar__items--right) .navbar__link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    letter-spacing: 0.03em;
+  }
+
+  .navbar .navbar__search {
+    margin-left: 1.25rem;
+  }
+
+  /* Keeps the last pill and the theme switch apart when the row is full. */
+  .navbar__items--right {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1139px) {
+  .navbar__link .navbar-dropdown-current {
+    display: none;
+  }
+}
+
 /* Mobile has no row of items to slide between. */
 @media (max-width: 996px) {
   .navbar-active-indicator {

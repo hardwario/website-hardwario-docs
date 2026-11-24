@@ -17,7 +17,7 @@ Two formats work, and both do the same thing:
 - **JSON**: for a list produced by another system or a script.
 
 An import writes only to your saved list, see
-[**Saved STICKERs**](./saved-stickers.md).
+[**Saved STICKER devices**](./saved-stickers.md).
 
 ---
 
@@ -187,18 +187,19 @@ lines are skipped, and a trailing newline is optional.
 
 1. Put the file where the phone can reach it: mail it to yourself, or copy it
    into the phone's **Downloads**, Google Drive, iCloud Drive, and so on.
-2. Open **HARDWARIO Manager** and go to **STICKER → Saved STICKERs**.
+2. Open **HARDWARIO Manager** and go to **STICKER → Saved STICKER devices**.
 3. Open the **⋮ menu**, choose **Import**, then **Import from file**, and pick
    your `.csv` or `.json`.
 
-<img src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="The Saved STICKERs overflow menu with Tags, Import, Export, Export logs, Delete all logs and Delete" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="The Saved STICKER devices overflow menu with Tags, Import, Export, Export logs, Delete all logs and Delete" width="320" />
 
 Before anything is written the app confirms what it found: how many devices will
 be imported, how many of them carry a secret key, how many new tags will be
 created, and every row it had to skip. Tap **Import** to commit.
 
-The other entry in that menu, **Import from QR code**, does the same job for up
-to 8 devices at a time without a file, for a list shared from another phone.
+The same menu offers **Import from QR code**, which does the same job for up to
+8 devices at a time without a file, for a list shared from another phone, and
+**Enter manually**, for typing in one device's serial number and secret key.
 
 ---
 
@@ -213,29 +214,29 @@ to 8 devices at a time without a file, for a list shared from another phone.
 - **Keys go into the phone's secure storage** (Keychain or Keystore), never into
   the plain list, the same as a hand-typed key.
 - **The devices themselves are not touched.** An import changes only what the
-  phone knows; nothing is written to any STICKER, and no ATELOS vault is
-  modified.
+  phone knows; nothing is written to any STICKER.
 
 ---
 
 ## If a row is skipped
 
-The confirmation dialog lists a note for every row it could not take. These
-notes are shown in English in all app languages.
+The confirmation dialog lists a note for every row it could not take. The notes
+appear in the app's language; the English wording is:
 
 | Note | What happened | Fix |
 |---|---|---|
 | `No "serial" column in the header row.` | The header has no `serial` column. Nearly always a semicolon-separated CSV. | See rule 1 above. |
 | `The file has no rows.` | The file is empty, or has only blank lines. | Check you exported the right sheet. |
-| `Row N: skipped — invalid serial "…"` | That row's serial is not a plain number greater than zero (spaces, thousands separators, letters, `0`). | Write the serial as bare digits. Row `N` counts the header as row 1. |
-| `Row N: skipped — duplicate serial …` | The same serial appears twice in the file; the later row is dropped. | Remove the duplicate, or merge the two rows, since the first one wins. |
-| `Serial S: secret key ignored — must be 32 hex digits.` | The key is not 16 bytes of hex. The device still imports, without a key. | Check for a truncated or partially pasted key. |
-| `Serial S: secret key ignored — an all-zero key …` | The key is all zeros, the firmware's unset value. The device still imports, without a key. | Leave the cell empty instead, or get the real key. |
-| `Serial S: vendor key ignored — must be 32 hex digits.` | The same, for the vendor-token. | Leave it empty unless your supplier gave you one. |
+| `Row N: skipped, invalid serial "…".` | That row's serial is not a plain number greater than zero (spaces, thousands separators, letters, `0`). | Write the serial as bare digits. Row `N` counts the header as row 1. |
+| `Row N: skipped, duplicate serial …` | The same serial appears twice in the file; the later row is dropped. | Remove the duplicate, or merge the two rows, since the first one wins. |
+| `Serial S: secret key ignored. It must be 32 hex digits.` | The key is not 16 bytes of hex. The device still imports, without a key. | Check for a truncated or partially pasted key. |
+| `Serial S: secret key ignored. An all-zero key …` | The key is all zeros, the firmware's unset value. The device still imports, without a key. | Leave the cell empty instead, or get the real key. |
+| `Serial S: vendor key ignored. It must be 32 hex digits.` | The same, for the vendor-token. | Leave it empty unless your supplier gave you one. |
 | `Not valid JSON.` | The `.json` file does not parse, usually a trailing comma or a missing bracket. | Paste it into any JSON validator. |
-| `JSON is not a list of STICKERs.` | The JSON is a single object rather than an array. | Wrap it in `[ … ]`, or use `{"stickers": [ … ]}`. |
+| `JSON is not a list of STICKER devices.` | The JSON is a single object rather than an array. | Wrap it in `[ … ]`, or use `{"stickers": [ … ]}`. |
 | `Skipped an entry with no serial.` | A JSON object without a `serial` field. | Add the serial. |
-| `That file is too large to import …` | Over the 2 MB limit. | Split the file. |
+| `Skipped duplicate serial …` | The same serial appears twice in a JSON file; the later entry is dropped. | Remove the duplicate, or merge the two entries, since the first one wins. |
+| `That file is too large to import (… MB; the limit is 2 MB).` | Over the 2 MB limit. | Split the file. |
 
 ---
 
@@ -244,8 +245,8 @@ notes are shown in English in all app languages.
 If one device is already saved, the app can produce a correctly shaped file for
 you to fill in: **⋮ menu → Export**, select the devices, optionally switch on
 **Include vendor token** and **Include tags**, then **Share as CSV** or
-**Share as JSON**. See [**Saved STICKERs**](./saved-stickers.md) for the export
-options.
+**Share as JSON**. See [**Saved STICKER devices**](./saved-stickers.md) for the
+export options.
 
 What comes out is exactly what the importer reads back, so it is the safest
 starting point, and it makes moving a list between two phones a two-step job.

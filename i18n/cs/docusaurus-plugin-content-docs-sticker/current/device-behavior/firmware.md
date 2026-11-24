@@ -12,7 +12,7 @@ Tato stránka ukazuje, jak zjistit, jaký firmware v zařízení STICKER běží
 
 - **Uplink Info:** zařízení posílá uplink Info (informace o zařízení) na fPort 85 po každém připojení k síti a pak ve výchozím nastavení každých 24 h. Verzi ukazuje dekódované pole `fw_version`, například `"2.0.0"`.
 - **Na vyžádání:** zařaďte na fPort 85 downlink `08032200`, tedy příkaz `get_info`. Zařízení po svém dalším uplinku odpoví uplinkem Info.
-- **HARDWARIO Manager:** přečtěte informace o zařízení přes NFC, viz [**Informace o zařízení a klíče LoRaWAN**](/apps/hardwario-manager/sticker/device-info).
+- **HARDWARIO Manager:** přečtěte informace o zařízení přes NFC, viz [**Informace o zařízení**](/apps/hardwario-manager/sticker/device-info).
 
 ## Jak aktualizovat firmware {#update-the-firmware}
 

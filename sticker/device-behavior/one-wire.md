@@ -21,7 +21,7 @@ STICKER looks for probes on the bus:
 
 - **at startup,** if a slot is set up with a stored probe or an expected probe type (`sensor1-type` to `sensor4-type`);
 - **in the background,** while a set-up slot waits for its probe: about 2, 7, 17 and 32 min after startup, then every 15 min;
-- **when you read the slots** in HARDWARIO Manager (**Tools → 1-Wire sensors**) or send the `w1_scan` command.
+- **when you read the slots** in HARDWARIO Manager (**Sensors → 1-Wire sensors**) or send the `w1_scan` command.
 
 A probe that STICKER finds is used at once, without a restart. A new probe that no slot claims goes into the lowest free slot; save the settings to keep it there after a restart.
 
@@ -45,8 +45,8 @@ A new probe has a different serial number, so STICKER never moves it into the sl
 To put the new probe into the old slot, so that its values keep their name:
 
 1. Plug the new probe into the input of the old one.
-2. In HARDWARIO Manager go to **STICKER → Tools → 1-Wire sensors**, choose **Read slots & scan the 1-Wire bus** and hold the phone to the device.
-3. Assign the new probe to the slot of the old one. To tell probes apart, warm one in your hand and watch which reading moves.
+2. In HARDWARIO Manager go to **STICKER → Sensors → 1-Wire sensors**, choose **Read slots & scan the 1-Wire bus** and hold the phone to the device.
+3. Drag the new probe onto the slot of the old one (long-press it, then drop it on the slot), or use **Assign**. To tell probes apart, warm one in your hand, choose **Read & scan again** and tap each probe to compare its values.
 4. Clear every slot that no longer has a probe.
 5. Choose **Save to device** and hold the phone to the device. STICKER saves the slots and restarts.
 6. Check that the next Info uplink shows the slot as `ok` and that telemetry has its values.

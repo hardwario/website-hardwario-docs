@@ -12,7 +12,7 @@ This page shows how to find out which firmware a STICKER runs and how to update 
 
 - **Info uplink:** the device sends its Info uplink (device information) on fPort 85 after every join and then every 24 h by default. The decoded field `fw_version` shows the version, for example `"2.0.0"`.
 - **On request:** queue the `get_info` downlink `08032200` on fPort 85. The device answers with an Info uplink after its next uplink.
-- **HARDWARIO Manager:** read the device info over NFC, see [**Device info and LoRaWAN keys**](/apps/hardwario-manager/sticker/device-info).
+- **HARDWARIO Manager:** read the device info over NFC, see [**Device info**](/apps/hardwario-manager/sticker/device-info).
 
 ## Update the firmware
 

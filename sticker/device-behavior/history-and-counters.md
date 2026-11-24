@@ -46,7 +46,7 @@ STICKER never sends its history by itself. You read it over the radio or over NF
 - One readout runs at a time. If the connection drops, send the request again.
 - Telemetry (the regular measurement messages) waits until the readout ends. Alarm reports do not wait.
 
-**Over NFC,** HARDWARIO Manager reads the history under **Tools → Sensor history**, even with the radio off. See [**Sensor history**](/apps/hardwario-manager/sticker/sensor-history) in the HARDWARIO Manager guide.
+**Over NFC,** HARDWARIO Manager reads the history under **Sensors → Sensor history**, even with the radio off. See [**Sensor history**](/apps/hardwario-manager/sticker/sensor-history) in the HARDWARIO Manager guide.
 
 <details>
 <summary><b>Example downlinks</b></summary>

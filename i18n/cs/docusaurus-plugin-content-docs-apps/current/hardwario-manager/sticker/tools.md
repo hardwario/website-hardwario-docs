@@ -1,50 +1,61 @@
 ---
 slug: tools
 title: Nástroje
-description: "Nástroje pro STICKER v aplikaci HARDWARIO Manager: synchronizace hodin, kalibrační režim, senzory 1-Wire, vzorek dat, historie senzorů a resety."
+description: "Nástroje pro STICKER v aplikaci HARDWARIO Manager: synchronizace hodin, kalibrační režim, resety zařízení a změny výrobce."
 title_meta: "Nástroje (HARDWARIO Manager pro STICKER)"
 ---
 
 # Nástroje {#tools}
 
-**STICKER → Tools** sdružuje akce, které pracují se zařízením přímo, ne přes jeho
-konfiguraci.
+V nabídce **STICKER → Nástroje** jsou akce, které pracují se zařízením přímo,
+ne přes jeho konfiguraci.
 
 | Nástroj | Co dělá |
 |---|---|
-| **Sync time** | Nastaví hodiny zařízení podle telefonu |
-| [**1-Wire sensors**](./one-wire-sensors.md) | Prohledá sběrnici 1-Wire a přiřadí senzory ke slotům |
-| [**Sample data**](./sample-data.md) | Okamžitě přečte všechny senzory a hodnoty odešle |
-| [**Sensor history**](./sensor-history.md) | Přečte měření, která zařízení uložilo dříve |
-| **Calibration mode** | Restartuje zařízení do servisního režimu kalibrace senzorů |
-| [**Reset**](./reset.md) | Resety od prostého restartu až po factory reset |
-| **Vendor changes** | Změní secret key nebo provede vendor reset, viz [**Reset zařízení**](./reset.md) |
+| **Synchronizovat čas** | Nastaví hodiny zařízení podle telefonu |
+| **Režim kalibrace** | Restartuje zařízení do servisního režimu kalibrace senzorů |
+| [**Reset**](./reset.md) | Restart, vynulování čítačů nebo reset zařízení, jeho relace LoRaWAN či celé konfigurace |
+| [**Změny výrobce**](./reset.md#vendor-changes) | Změna tajného klíče nebo reset výrobce, ověřené vendor-tokenem zařízení |
+
+Akce se senzory (**1-Wire senzory**, [**Odečíst data**](./sample-data.md)
+a [**Historie senzorů**](./sensor-history.md)) najdete v nabídce
+**STICKER → Senzory**, akce s rádiem v nabídce
+[**STICKER → Rádio**](./radio.md).
 
 ---
 
-## Sync time {#sync-time}
+## Synchronizovat čas {#sync-time}
 
-Zvolte **Sync time** a přiložte telefon k zařízení STICKER. Hodiny zařízení se
-nastaví podle telefonu.
+Zvolte **Synchronizovat čas** a přiložte telefon k zařízení STICKER. Hodiny
+zařízení se nastaví podle telefonu v čase UTC a aplikace to potvrdí hlášením
+**Čas synchronizován**.
 
 Teprve se synchronizovanými hodinami mají uložená měření absolutní časové
 značky. Bez nich [**Historie senzorů**](./sensor-history.md) uvádí čas záznamů
-jen relativně k okamžiku čtení.
+jen relativně k okamžiku čtení a **Informace o zařízení** ukazují stavový
+příznak **Čas nesynchronizován**.
 
 ---
 
-## Calibration mode {#calibration-mode}
+## Režim kalibrace {#calibration-mode}
 
-Zvolte **Calibration mode** a přiložte telefon k zařízení STICKER. Zařízení se
-restartuje do servisního režimu kalibrace senzorů.
+Zvolte **Režim kalibrace**, potvrďte a přiložte telefon k zařízení STICKER.
+Zařízení se restartuje do servisního režimu kalibrace senzorů: přes LoRaWAN
+posílá živé hodnoty senzorů a běžné odesílání pozastaví až asi na 2 hodiny.
+Při dalším startu režim samo ukončí.
 
-Jde o servisní akci pro kalibraci senzoru podle reference. Zařízení se potom
-vrátí do běžného provozu.
+Jde o servisní akci pro kalibraci senzoru podle reference.
 
 ---
 
-## NFC Console {#nfc-console}
+## Nástroje pro ladění {#debug-tools}
 
-Pokud je zapnutý [**ladicí režim**](../settings.md) (**Debug mode**), obsahuje
-nabídka Tools navíc **NFC Console**, nízkoúrovňovou konzoli pro surové příkazy NFC
-určenou k diagnostice. Pro běžnou konfiguraci ji nepotřebujete.
+Pokud je zapnutý [**režim ladění**](../settings.md#debug-mode), obsahuje
+nabídka Nástroje navíc **Nástroje pro ladění**. Slouží k diagnostice a opravám,
+pro běžnou konfiguraci je nepotřebujete:
+
+| Nástroj | Co dělá |
+|---|---|
+| **Zrušit nárok** | Uvolní zařízení, ke kterému přiložíte telefon, aby si ho mohl nárokovat někdo jiný, stejně jako **Zrušit nárok** v seznamu [**Uložená zařízení STICKER**](./saved-stickers.md) |
+| **Zapsat kód pro nárokování** | Zapíše kód pro nárokování zpět do zařízení, jehož kód byl nahrazen |
+| **NFC konzole** | Nízkoúrovňová konzole pro surové příkazy NFC |

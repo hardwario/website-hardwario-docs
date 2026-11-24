@@ -1,85 +1,94 @@
 ---
 slug: device-info
-title: Informace o zařízení a klíče LoRaWAN
-description: "Přes NFC přečtete sériové číslo, firmware, baterii a aktivní alarmy zařízení STICKER a jeho klíče LoRaWAN (OTAA, ABP) sdílíte jako JSON, CSV či QR kód."
+title: Informace o zařízení
+description: "Přes NFC přečtete firmware, dobu provozu, baterii, aktivní alarmy, stavové příznaky a stav rádia zařízení STICKER."
 ---
 
-# Čtení informací o zařízení a klíčů LoRaWAN {#read-device-info-and-lorawan-keys}
+# Informace o zařízení {#device-info}
 
-Přes NFC během několika sekund přečtete identifikační údaje zařízení STICKER
-a klíče LoRaWAN, které potřebujete k jeho registraci v síti.
+**Informace o zařízení** přečtou přes NFC během několika sekund stav zařízení
+STICKER: jaký firmware běží, jak dlouho je zařízení v provozu, jeho baterii,
+alarmy, stav a stav rádiového spojení.
 
 :::info Zařízení nejdřív uložte
-Obě obrazovky používají šifrovaný kanál, takže zařízení musí být uložené se svým
-**secret key**. Viz [**Saved STICKERs**](./saved-stickers.md).
+Čtení používá šifrovaný kanál, takže zařízení musí být uložené se svým
+**tajným klíčem**. Viz [**Uložená zařízení STICKER**](./saved-stickers.md).
 :::
 
 ---
 
 ## Čtení informací o zařízení {#read-device-info}
 
-1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Device info**.
+1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Informace o zařízení**.
 2. Přiložte telefon k zařízení STICKER a nehýbejte s ním.
 
-<img src="/img/hw-manager/hw-manager-device-info.png" alt="Informace o zařízení přečtené přes NFC se sériovým číslem, firmwarem, časem a dobou běhu" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-device-info.png" alt="Informace o zařízení přečtené přes NFC: nahoře STICKER a sériové číslo, pod tím Firmware, Doba provozu, Baterie, Aktivní alarmy, Stav a Rádio, sbalená sekce Pokročilé a tlačítko Číst znovu" width="320" />
 
-| Pole | Význam |
+Obrazovka začíná nápisem **STICKER** a sériovým číslem, tedy číslem vytištěným
+na zařízení. Pod ním jsou řádky:
+
+| Řádek | Význam |
 |---|---|
-| **Serial number** | Identita zařízení |
-| **Firmware** | Běžící verze firmwaru |
-| **Time (UTC)** | Hodiny zařízení |
-| **Uptime** | Doba od posledního startu |
-| **Battery** | Naměřené napájecí napětí |
-| **LoRaWAN** | Stav připojení LoRaWAN |
-| **DevEUI** | Identifikátor zařízení v síti LoRaWAN |
-| **Health** | Souhrn stavových příznaků zařízení |
-| **Active alarms** | Pravidla alarmů, která jsou právě aktivní, viz [**Pravidla alarmů**](./alarms.md) |
+| **Firmware** | Běžící verze firmwaru, u ladicího sestavení s *(debug)* |
+| **Doba provozu** | Doba od posledního startu |
+| **Baterie** | Naměřené napájecí napětí. Zobrazí se, když ho zařízení hlásí |
+| **Aktivní alarmy** | *Žádné*, nebo počet spuštěných pravidel alarmů; klepnutím je vypíšete, viz [**Pravidla alarmů**](./alarms.md) |
+| **Stav** | *OK*, když zařízení nehlásí žádný problém, jinak počet nastavených příznaků; klepnutím je vypíšete |
+| **Rádio** | Stav rádiového spojení, viz [**Stavy rádia**](#radio-states) |
+| **Senzory 1-Wire** | *OK*, nebo kolik slotů potřebuje pozornost; klepnutím zobrazíte jednotlivé sloty. Zobrazí se, když jsou sloty 1-Wire nastavené |
+| **Poslední pád** | Proč firmware naposledy spadl. Zobrazí se jen po pádu |
 
-**Advanced** rozbalí další diagnostické podrobnosti, například sestavení firmwaru
-a příčinu posledního resetu. **Read again** zopakuje čtení, aniž byste museli
-opustit obrazovku; stačí znovu přiložit telefon k zařízení.
+**Pokročilé** rozbalí diagnostické podrobnosti:
 
----
-
-## Čtení klíčů LoRaWAN {#read-lorawan-keys}
-
-1. Přejděte na **STICKER → LoRaWAN keys** a zvolte **Read LoRaWAN keys**.
-2. Přiložte telefon k zařízení STICKER.
-
-<img src="/img/hw-manager/hw-manager-lrw-keys.png" alt="Klíče LoRaWAN přečtené přes NFC" width="320" />
-
-Co se zobrazí, závisí na režimu aktivace zařízení:
-
-| Režim | Zobrazené klíče |
+| Řádek | Význam |
 |---|---|
-| **OTAA** | DevEUI, JoinEUI (AppEUI), AppKey |
-| **ABP** | DevEUI, DevAddr a klíče relace |
+| **Poslední downlink** | Síla signálu, poměr signálu k šumu a stáří posledního downlinku, pokud zařízení nějaký přijalo |
+| **Čas (UTC)** | Hodiny zařízení; *nenastaveno*, dokud čas nesynchronizujete, viz [**Nástroje**](./tools.md) |
+| **DevEUI** | Identifikátor zařízení v rádiové síti |
+| **Sestavení** | Sestavení firmwaru, například *main* nebo *custom* |
+| **Příčina resetu** | Proč se zařízení naposledy restartovalo |
+
+**Číst znovu** zopakuje čtení, aniž byste opustili obrazovku. Stačí znovu
+přiložit telefon k zařízení.
+
+Pokud má zařízení firmware starší než v2.0.0, obrazovka přidá upozornění:
+*Aktualizace tohoto zařízení na firmware 2.0 smaže uloženou historii a zneplatní
+pravidla alarmů.*
 
 ---
 
-## Načtení několika zařízení najednou {#read-several-devices-in-one-session}
+## Stavy rádia {#radio-states}
 
-Obrazovka předchozí čtení nepřepíše, ale vede si seznam. Tlačítkem **Scan next
-STICKER** přidáte další zařízení, mezi načtenými zařízeními přecházíte stránkováním
-a volbou **Clear all** začnete znovu. Takto rychle posbíráte klíče celé série
-zařízení ještě před jejich registrací.
+Řádek **Rádio** ukazuje, co dělá rádiové spojení. Zeleně svítí jen
+**V pořádku**.
+
+| Stav | Význam |
+|---|---|
+| **V pořádku** | Zařízení je v síti a kontroly spojení procházejí |
+| **Připojování** | Zařízení se pokouší připojit k síti |
+| **Znovu se připojuje** | Zařízení ztratilo síť a připojuje se znovu |
+| **Varování (kontrola spojení selhává)** | Zařízení je připojené, ale síť přestala odpovídat na kontroly spojení |
+| **Nečinné** | Rádio je zapnuté, ale nevysílá |
+| **Vypnuto (rádio mlčí)** | Rádio je v konfiguraci vypnuté a zařízení nic nevysílá |
+| **Vypnuto** | Rádio je vypnuté, například v **Režimu rádia** nebo po obnovení továrního nastavení |
+
+Jak rádio zapnout nebo spustit připojení k síti, popisuje stránka
+[**Rádio**](./radio.md).
 
 ---
 
-## Sdílení klíčů {#share-the-keys}
+## Stavové příznaky {#health-flags}
 
-Klíče můžete sdílet jako **JSON**, **CSV**, **text** nebo **QR kód**, případně
-je zkopírovat volbou **Copy JSON to clipboard**. Když je načtených více zařízení,
-akce sdílení zahrnou všechna a **Share all** je vyexportuje společně.
+Když řádek **Stav** ukazuje příznaky, klepnutím zjistíte které. Jejich názvy
+pocházejí z hlášení samotného zařízení:
 
-<img src="/img/hw-manager/hw-manager-lrw-keys-share.png" alt="Sdílení klíčů LoRaWAN jako JSON, CSV, text nebo QR kód" width="320" />
+| Příznak | Význam |
+|---|---|
+| **Slabá baterie** | Zařízení hlásí slabou baterii. Věřte tomu víc než napětí, protože firmware článek zná |
+| **Čas nesynchronizován** | Hodiny nejsou nastavené, viz [**Nástroje**](./tools.md) |
+| **Historie nefunguje** | Historie senzorů se nezaznamenává |
+| **NFC nefunguje**, **NFC mailbox nefunguje** | Selhala část rozhraní NFC |
+| **Sběrnice I2C zaseknutá** | Vnitřní sběrnice senzorů se zasekla |
+| **Okno pro nárokování otevřeno** | Zařízení čeká na nárokování |
 
-Použijte je k registraci zařízení v
-[**ChirpStack**](/sticker/connectivity/lorawan-chirpstack) nebo
-[**The Things Stack**](/sticker/connectivity/lorawan-tts).
-
-:::caution Export klíčů je úplný
-Na rozdíl od exportu konfigurace export klíčů LoRaWAN nic neodstraňuje. AppKey
-i klíče relace jsou v něm celé, aby se soubor dal použít k registraci zařízení.
-Zacházejte s ním podle toho a dávejte pozor, kde QR kód zobrazujete.
-:::
+Problémy s rádiem tu nenajdete: ukazuje je řádek **Rádio**.

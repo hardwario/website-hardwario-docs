@@ -1,67 +1,64 @@
 ---
 slug: device-info
 title: Informace o zařízení
-description: "Údaje zařízení CHESTER v aplikaci HARDWARIO Manager: uptime, hardware a firmware, sériové číslo, claim token, passkey Bluetooth a uložení konfigurace."
+description: "Informace o zařízení CHESTER v aplikaci HARDWARIO Manager: firmware, doba provozu, výrobce, adresa a passkey Bluetooth, hardware a token pro nárokování."
 ---
 
 # Informace o zařízení CHESTER {#chester-device-info}
 
-Po připojení zařízení otevřete **CHESTER → Device info**. Nahoře je **Uptime**,
-který se průběžně aktualizuje; pod ním jsou identifikační údaje zařízení.
+Jakmile je zařízení připojené, otevřete **CHESTER → Informace o zařízení**.
+Obrazovka se stejným názvem ukazuje, za co se zařízení vydává a jak dlouho
+je v provozu.
 
-<img src="/img/hw-manager/hw-manager-chester-device-info.png" alt="Obrazovka CHESTER Device Info s dobou běhu, výrobcem, produktem, hardwarovou variantou a revizí, firmwarem, sériovým číslem, claim tokenem, adresou Bluetooth a passkey" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-chester-device-info.png" alt="Obrazovka Informace o zařízení: nahoře název produktu a sériové číslo, pod nimi Firmware, Název firmwaru, Doba provozu, Výrobce, Adresa Bluetooth, skrytý Passkey Bluetooth, Hardware, Revize a skrytý Token pro nárokování, dole tlačítko Sdílet" width="320" />
 
 ---
 
 ## Co se zobrazuje {#what-is-shown}
 
-| Pole | Význam |
-|---|---|
-| **Uptime** | Doba od posledního startu zařízení, průběžně aktualizovaná |
-| **Vendor name** | Výrobce |
-| **Product name** | Produkt |
-| **Hardware variant** | Kód varianty této jednotky |
-| **Hardware revision** | Revize desky |
-| **Firmware name** | Název aplikace ve firmwaru. Starší firmware ho nemusí hlásit |
-| **Firmware version** | Běžící verze |
-| **Serial number** | Identita zařízení |
-| **Claim token** | Token používaný k nárokování zařízení |
-| **Bluetooth address** | Adresa BLE zařízení |
-| **Bluetooth passkey** | Šestimístný párovací passkey |
+Obrazovku otevírá název produktu a sériové číslo. Pod nimi jsou řádky:
 
-Pole, která zařízení nehlásí, se nezobrazí vůbec, ani jako prázdná. Každou
-hodnotu lze označit a zkopírovat.
+| Řádek | Význam |
+|---|---|
+| **Firmware** | Běžící verze firmwaru |
+| **Název firmwaru** | Aplikace ve firmwaru. Starší firmware ho nemusí hlásit |
+| **Doba provozu** | Doba od posledního startu zařízení, průběžně aktualizovaná. Do příchodu první hodnoty drží místo pomlčka |
+| **Výrobce** | Výrobce zařízení |
+| **Adresa Bluetooth** | Adresa BLE zařízení |
+| **Passkey Bluetooth** | Passkey, se kterým se telefon páruje; skrytý, dokud ho nezobrazíte |
+| **Hardware** | Varianta hardwaru, tedy celý objednací kód tohoto kusu |
+| **Revize** | Revize desky |
+| **Token pro nárokování** | Token, kterým se zařízení nárokuje; skrytý, dokud ho nezobrazíte |
+
+Řádky, které zařízení nehlásí, se vynechají, místo aby zůstaly prázdné. Hodnoty
+můžete označit a zkopírovat, skryté až po zobrazení.
+
+Passkey a token pro nárokování se zobrazují jako tečky, protože na tuto obrazovku
+se často dívá i někdo přes rameno. Tlačítko s okem vedle každého z nich
+(**Zobrazit**, pak **Skrýt**) hodnotu ukáže nebo skryje. Tlačítko kopírování
+vedle tokenu (**Kopírovat token pro nárokování**) token zkopíruje, i když je
+skrytý, a právě to potřebujete při vkládání do formuláře pro nárokování.
 
 ---
 
 ## Kopírování a sdílení {#copy-or-share-it}
 
-Akce v horní liště vytvoří tentýž blok textu: název zařízení a pod ním jeden
-řádek `Label: hodnota` na každé pole:
+**Sdílet** dole na obrazovce otevře nabídku sdílení telefonu s názvem zařízení
+a pod ním jedním řádkem `Label: value` pro každý údaj. Takhle nejrychleji
+pošlete identitu zařízení podpoře.
 
-- **Copy device info** ho vloží do schránky.
-- **Share device info** otevře panel sdílení telefonu.
-
-Je to nejrychlejší způsob, jak poslat identitu zařízení podpoře.
+:::caution Sdílený text obsahuje tajné údaje
+Sdílený text obsahuje řádky **Passkey Bluetooth** a **Token pro nárokování**
+v čitelné podobě, i když jsou na obrazovce skryté. Kdo ho přečte, může se se zařízením
+spárovat nebo si ho nárokovat. Posílejte ho jen lidem, kterým důvěřujete, nebo
+tyto dva řádky před odesláním smažte.
+:::
 
 ---
 
 ## Ovládání zařízení {#device-controls}
 
-V menu je tato obrazovka popsaná jako *sériové číslo, firmware, doba běhu
-a ovládání zařízení*. Ovládací prvky jsou pod seznamem polí. **Save configuration**
-uloží aktuální nastavení zařízení do jeho paměti, takže vydrží i restart.
-
-Restart zařízení a obnovení výchozího nastavení z výroby najdete na stránce
-[**Nástroje**](./tools.md).
-
-Ovládací prvky jsou neaktivní, dokud aplikace komunikuje se zařízením. Pokud akce
-selže, aplikace to oznámí a nabídne volbu **Details**, která zobrazí původní chybu
-s tlačítkem **Copy**.
-
-:::info Save configuration vs. uložení z obrazovky konfigurace
-**Save configuration** tady uloží aktuální nastavení zařízení. Je to stejný
-krok, který za vás po zapsání úprav udělá obrazovka
-[**Konfigurace**](./configuration.md). Použijte ho, když jste nastavení změnili
-v [**Terminálu**](./terminal.md) a chcete, aby zůstalo zachované.
-:::
+Tato obrazovka jen čte. Akce, které zařízení mění, najdete v sekci
+[**Nástroje**](./tools.md): restart, obnovení tovární konfigurace
+a aktualizaci firmwaru. Změny konfigurace se ukládají v sekci
+[**Konfigurace**](./configuration.md).

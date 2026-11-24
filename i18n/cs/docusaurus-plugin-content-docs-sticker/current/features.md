@@ -40,7 +40,7 @@ Vedle secret key má každé zařízení **vendor token**, privilegovaný přís
 - **Secret key** zabezpečuje běžný šifrovaný kanál NFC pro čtení a zápis konfigurace.
 - **Vendor token** autorizuje privilegované operace, na které secret key nestačí: **nastavení nového secret key bez znalosti současného** (například když se klíč ztratí; se současným klíčem jde klíč změnit i běžným kanálem) a úroveň **vendor reset** popsanou výše, která vymaže zařízení až na sériové číslo a vendor token a nastaví přitom nový secret key.
 
-Protože odemyká výměnu klíče a nejhlubší reset, není vendor token pro běžnou konfiguraci vůbec potřeba a má ho jen vlastník zařízení. V aplikaci [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/saved-stickers) se ukládá ke každému zařízení v seznamu **Saved STICKERs** a používá se v nabídce **Tools → Vendor changes**; viz [**Reset zařízení**](/apps/hardwario-manager/sticker/reset).
+Protože odemyká výměnu klíče a nejhlubší reset, není vendor token pro běžnou konfiguraci vůbec potřeba a má ho jen vlastník zařízení. V aplikaci [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/saved-stickers) se ukládá ke každému zařízení v seznamu **Uložená zařízení STICKER** a používá se v nabídce **Nástroje → Změny výrobce**; viz [**Reset zařízení**](/apps/hardwario-manager/sticker/reset).
 
 ### Čítače impulzů přežijí ztrátu napájení {#pulse-counters-persist-across-power-loss}
 

@@ -24,7 +24,7 @@ The RTC can be synchronized through three independent methods:
    - After the first network time, the device re-synchronizes about once a week to correct clock drift during long-term field deployment.
 
 2. **Encrypted NFC Local Sync:**
-   - When configured using the **HARDWARIO Manager** app on a smartphone, the phone's system time can automatically update and set the STICKER RTC over NFC.
+   - In the **HARDWARIO Manager** app, **STICKER → Tools → Sync time** sets the STICKER RTC from the phone's time over NFC.
 
 3. **Remote & Shell Commands:**
    - Time can be queried or manually updated using developer shell commands, or remotely with the `clock_sync` command on **fPort 85** over a radio or NFC.

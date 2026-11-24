@@ -20,7 +20,7 @@ The radio mode (`radio-mode`) decides whether and how STICKER sends data:
 | **LoRaWAN** | Sends over a LoRaWAN network in the region you set: EU868, US915, AU915 or AS923. |
 | **LoRa P2P** | Sends directly to a ProXimos Hub, without a LoRaWAN network. |
 
-Set the radio mode over NFC in [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration). It takes effect after you save, which restarts the device. A downlink (a message from the network to the device) cannot change it or any other network setting.
+Set the radio mode over NFC in HARDWARIO Manager under **STICKER → Radio → Radio mode**, see [**Radio**](/apps/hardwario-manager/sticker/radio). It takes effect after you save, which restarts the device. A downlink (a message from the network to the device) cannot change it or any other network setting.
 
 ## Joining the network
 

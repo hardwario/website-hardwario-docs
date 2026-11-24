@@ -1,29 +1,36 @@
 ---
 slug: sample-data
-title: Vzorek dat ze senzorů
-description: "Jedním přiložením telefonu přečtete všechny senzory zařízení STICKER a odešlete uplink LoRaWAN, čímž ověříte cestu od senzoru k síťovému serveru."
+title: Odečet dat ze senzorů
+description: "Jedním přiložením přes NFC přečtete v aplikaci HARDWARIO Manager všechny senzory zařízení STICKER a hodnoty zároveň odešlete rádiem, rychlý test celé cesty."
 ---
 
-# Vzorek dat ze senzorů {#sample-sensor-data}
+# Odečet dat ze senzorů {#sample-sensor-data}
 
-Okamžitě přečtěte všechny senzory zařízení STICKER a zobrazte jejich hodnoty.
-Je to nejrychlejší způsob, jak ověřit funkci zařízení od začátku do konce.
+Okamžitě přečtěte všechny senzory zařízení STICKER a podívejte se na hodnoty.
+Rychleji neověříte, že zařízení funguje celou cestou.
 
-1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Tools → Sample data**.
+1. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Senzory → Odečíst data**.
 2. Přiložte telefon k zařízení STICKER a nehýbejte s ním.
-3. Aplikace přečte senzory a zobrazí aktuální hodnoty.
+3. Aplikace přečte senzory a ukáže aktuální hodnoty.
 
-<img src="/img/hw-manager/hw-manager-sample.png" alt="Hodnoty senzorů přečtené přes NFC a odeslané přes LoRaWAN" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-sample.png" alt="Data odečtená přes NFC: upozornění, že hodnoty byly zároveň odeslány rádiem, teplota a vlhkost, skupina Zařízení s napájecím napětím a tlačítko Odečíst znovu" width="320" />
 
-:::info Vzorkování zároveň odešle uplink
-U zařízení STICKER firmware v jednom kroku senzory přečte **a** hodnoty odešle,
-takže vzniká i **uplink přes LoRaWAN**. Čtení jen přes NFC bez odeslání
-neexistuje. Aplikace ukáže, jestli bylo odeslání doručeno, takže jedním
-přiložením ověříte celou cestu od senzoru k síťovému serveru.
+Hodnoty jsou seskupené: nejdřív měření (teplota, vlhkost a další zapnuté
+senzory), pak **Zařízení** (napájecí napětí a podobně), **Čítače** a **1-Wire**
+s jedním řádkem na slot. Hodnotu hlásí jen zapnuté senzory; pokud nehlásí žádný,
+obrazovka napíše *Zařízení nenahlásilo žádné hodnoty senzorů.*
+
+:::info Odečet zároveň odešle uplink
+Zařízení STICKER čte senzory **a** odesílá hodnoty v jediném kroku firmwaru,
+proto obrazovka uvádí: *Naměřené hodnoty byly zároveň odeslány rádiem.* Uplink
+jde přes LoRaWAN nebo P2P podle [**režimu rádia**](./radio.md), ve kterém
+zařízení běží. Aplikace hlásí, že hodnoty odešly, ne že je síť přijala; to
+ověříte na svém síťovém serveru.
 :::
 
-Vzorkování trvá déle než většina akcí přes NFC, protože se čeká na senzory a na
-rádio. Držte telefon u zařízení, dokud se výsledek neobjeví.
+Odečet trvá déle než většina akcí přes NFC, protože čeká na senzory i na rádio.
+Držte telefon u zařízení, dokud se neobjeví výsledek. **Odečíst znovu** provede
+další měření.
 
-Hodnoty, které zařízení uložilo dříve, přečtete na stránce
-[**Historie senzorů**](./sensor-history.md).
+Pokud chcete místo nového měření přečíst hodnoty, které zařízení uložilo dříve,
+použijte [**Historii senzorů**](./sensor-history.md).

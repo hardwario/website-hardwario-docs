@@ -31,7 +31,7 @@ workflow. The app itself is documented in full under **APPS**:
   NFC on is covered in [**Install the app**](/apps/hardwario-manager/install).
 - The device's **secret key**. STICKER talks over an encrypted NFC channel, so
   the app cannot read its configuration or keys, or write anything, without it. You add each device once (see
-  [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)), and
+  [**Saved STICKER devices**](/apps/hardwario-manager/sticker/saved-stickers)), and
   from then on the app fills the key in automatically.
 
 ## NFC needs a powered device
@@ -56,11 +56,13 @@ the radio is switched on: see [**Features**](features.md).
 
 | Task | Where it is documented |
 |---|---|
-| Read the serial number, firmware, and the LoRaWAN keys needed to register the device | [**Device info and LoRaWAN keys**](/apps/hardwario-manager/sticker/device-info) |
-| Read and edit the full configuration: intervals, sensors, history, LoRaWAN | [**Configuration**](/apps/hardwario-manager/sticker/configuration) |
+| Read the serial number, firmware, battery and radio state | [**Device info**](/apps/hardwario-manager/sticker/device-info) |
+| Switch the radio on (LoRaWAN or P2P), read the keys needed to register the device, join the network | [**Radio**](/apps/hardwario-manager/sticker/radio) |
+| Read and edit the full configuration: radio, measurement and reporting, sensors, history, alarms | [**Configuration**](/apps/hardwario-manager/sticker/configuration) |
 | Set threshold, state, and rate alarms | [**Alarm rules**](/apps/hardwario-manager/sticker/alarms) |
 | Give many devices the same settings | [**Templates**](/apps/hardwario-manager/sticker/templates) |
-| Capture a whole fleet's configuration in one session | [**Scan multiple devices**](/apps/hardwario-manager/sticker/batch-export) |
+| Set a few values once and write them to device after device | [**Batch write**](/apps/hardwario-manager/sticker/batch-write) |
+| Capture a whole fleet's configuration in one session | [**Batch export**](/apps/hardwario-manager/sticker/batch-export) |
 | Assign external 1-Wire probes to their slots | [**1-Wire sensors**](/apps/hardwario-manager/sticker/one-wire-sensors) |
 | Test a device end to end | [**Sample sensor data**](/apps/hardwario-manager/sticker/sample-data) |
 | Read measurements stored on the device | [**Sensor history**](/apps/hardwario-manager/sticker/sensor-history) |

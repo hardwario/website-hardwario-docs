@@ -17,7 +17,7 @@ Podporované jsou dva formáty se stejným výsledkem:
 - **JSON**: pro seznam vytvořený jiným systémem nebo skriptem.
 
 Import zapisuje jen do seznamu uložených zařízení, viz
-[**Saved STICKERs**](./saved-stickers.md).
+[**Uložená zařízení STICKER**](./saved-stickers.md).
 
 ---
 
@@ -132,7 +132,7 @@ CSV* jako oddělovač **středníky**:
 serial;name;secret_key          ← the app will NOT read this
 ```
 
-Import pak selže s hlášením `No "serial" column in the header row.` Před importem
+Import pak selže s hlášením `V hlavičce chybí sloupec "serial".` Před importem
 soubor otevřete v libovolném textovém editoru a zkontrolujte, že první řádek zní
 `serial,name,secret_key` s **čárkami**.
 
@@ -192,18 +192,20 @@ Nejvýše 2 MB, tedy tisíce řádků; skutečný seznam se k limitu ani nepřib
 1. Uložte soubor tam, kde ho telefon najde: pošlete si ho e-mailem nebo ho
    zkopírujte do složky se staženými soubory (**Downloads**), na Google Drive,
    iCloud Drive a podobně.
-2. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Saved STICKERs**.
-3. Otevřete **menu ⋮**, zvolte **Import**, pak **Import from file** a vyberte
-   soubor `.csv` nebo `.json`.
+2. Otevřete **HARDWARIO Manager** a přejděte na **STICKER → Uložená zařízení STICKER**.
+3. Otevřete **menu ⋮**, zvolte **Importovat**, pak **Importovat ze souboru**
+   a vyberte soubor `.csv` nebo `.json`.
 
-<img src="/img/hw-manager/hw-manager-saved-sticker-more.png" alt="Nabídka ⋮ seznamu Saved STICKERs s volbami Tags, Import, Export, Export logs, Delete all logs a Delete" width="320" />
+<img className="app-screenshot" src="/img/hw-manager/cs/hw-manager-saved-sticker-more.png" alt="Nabídka ⋮ seznamu Uložená zařízení STICKER s položkami Štítky, Importovat, Exportovat, Exportovat protokoly, Smazat všechny protokoly a Smazat" width="320" />
 
 Před zápisem aplikace shrne, co našla: kolik zařízení se naimportuje, kolik
 z nich má secret key, kolik nových tagů vznikne a které řádky musela přeskočit.
-Import potvrdíte klepnutím na **Import**.
+Import potvrdíte klepnutím na **Importovat**.
 
-Druhá položka této nabídky, **Import from QR code**, slouží ke stejnému účelu bez
-souboru: přenese až 8 zařízení najednou ze seznamu sdíleného z jiného telefonu.
+Stejná nabídka obsahuje také **Importovat z QR kódu**, která slouží ke stejnému
+účelu bez souboru a přenese až 8 zařízení najednou ze seznamu sdíleného z jiného
+telefonu, a **Zadat ručně**, kde zadáte sériové číslo a secret key jednoho
+zařízení.
 
 ---
 
@@ -218,38 +220,39 @@ souboru: přenese až 8 zařízení najednou ze seznamu sdíleného z jiného te
 - **Klíče se ukládají do zabezpečeného úložiště telefonu** (Keychain nebo
   Keystore), nikdy do běžného seznamu, stejně jako ručně zadaný klíč.
 - **Samotných zařízení se import nedotkne.** Mění jen údaje v telefonu; do
-  žádného zařízení STICKER se nic nezapíše a žádný trezor ATELOS se nezmění.
+  žádného zařízení STICKER se nic nezapíše.
 
 ---
 
 ## Když se řádek přeskočí {#if-a-row-is-skipped}
 
-Potvrzovací dialog vypíše poznámku ke každému řádku, který nešlo načíst. Tyto
-poznámky se ve všech jazycích aplikace zobrazují anglicky.
+Potvrzovací dialog vypíše poznámku ke každému řádku, který nešlo načíst.
+Poznámky se zobrazují v jazyce aplikace; v češtině znějí takto:
 
 | Poznámka | Co se stalo | Náprava |
 |---|---|---|
-| `No "serial" column in the header row.` | Hlavička nemá sloupec `serial`. Téměř vždy CSV oddělené středníky. | Viz pravidlo 1 výše. |
-| `The file has no rows.` | Soubor je prázdný, nebo má jen prázdné řádky. | Zkontrolujte, že jste vyexportovali správný list. |
-| `Row N: skipped — invalid serial "…"` | Sériové číslo v tomto řádku není prosté číslo větší než nula (mezery, oddělovače tisíců, písmena, `0`). | Zapište sériové číslo jen číslicemi. Číslo řádku `N` počítá hlavičku jako řádek 1. |
-| `Row N: skipped — duplicate serial …` | Stejné sériové číslo je v souboru dvakrát; pozdější řádek se zahodí. | Duplikát odstraňte, nebo oba řádky slučte, protože platí první. |
-| `Serial S: secret key ignored — must be 32 hex digits.` | Klíč nemá 16 bajtů v hexadecimálním zápisu. Zařízení se naimportuje, jen bez klíče. | Zkontrolujte, jestli klíč není zkrácený nebo vložený jen částečně. |
-| `Serial S: secret key ignored — an all-zero key …` | Klíč je celý z nul, což je nenastavená hodnota firmwaru. Zařízení se naimportuje, jen bez klíče. | Nechte buňku prázdnou, nebo si opatřete skutečný klíč. |
-| `Serial S: vendor key ignored — must be 32 hex digits.` | Totéž pro vendor token. | Nechte ho prázdný, pokud vám ho dodavatel nedal. |
-| `Not valid JSON.` | Soubor `.json` nejde zpracovat, obvykle kvůli čárce navíc na konci nebo chybějící závorce. | Zkontrolujte ho libovolným validátorem JSON. |
-| `JSON is not a list of STICKERs.` | JSON je jediný objekt, ne pole. | Zabalte ho do `[ … ]`, nebo použijte `{"stickers": [ … ]}`. |
-| `Skipped an entry with no serial.` | Objekt JSON bez pole `serial`. | Doplňte sériové číslo. |
-| `That file is too large to import …` | Soubor překračuje limit 2 MB. | Soubor rozdělte. |
+| `V hlavičce chybí sloupec "serial".` | Hlavička nemá sloupec `serial`. Téměř vždy CSV oddělené středníky. | Viz pravidlo 1 výše. |
+| `Soubor nemá žádné řádky.` | Soubor je prázdný, nebo má jen prázdné řádky. | Zkontrolujte, že jste vyexportovali správný list. |
+| `Řádek N: přeskočen, neplatné sériové číslo "…".` | Sériové číslo v tomto řádku není prosté číslo větší než nula (mezery, oddělovače tisíců, písmena, `0`). | Zapište sériové číslo jen číslicemi. Číslo řádku `N` počítá hlavičku jako řádek 1. |
+| `Řádek N: přeskočen, duplicitní sériové číslo …` | Stejné sériové číslo je v souboru dvakrát; pozdější řádek se zahodí. | Duplikát odstraňte, nebo oba řádky slučte, protože platí první. |
+| `Sériové číslo S: tajný klíč ignorován, musí mít 32 hex číslic.` | Klíč nemá 16 bajtů v hexadecimálním zápisu. Zařízení se naimportuje, jen bez klíče. | Zkontrolujte, jestli klíč není zkrácený nebo vložený jen částečně. |
+| `Sériové číslo S: tajný klíč ignorován. Samé nuly …` | Klíč je celý z nul, což je nenastavená hodnota firmwaru. Zařízení se naimportuje, jen bez klíče. | Nechte buňku prázdnou, nebo si opatřete skutečný klíč. |
+| `Sériové číslo S: vendor klíč ignorován, musí mít 32 hex číslic.` | Totéž pro vendor token. | Nechte ho prázdný, pokud vám ho dodavatel nedal. |
+| `Neplatný JSON.` | Soubor `.json` nejde zpracovat, obvykle kvůli čárce navíc na konci nebo chybějící závorce. | Zkontrolujte ho libovolným validátorem JSON. |
+| `JSON není seznam zařízení STICKER.` | JSON je jediný objekt, ne pole. | Zabalte ho do `[ … ]`, nebo použijte `{"stickers": [ … ]}`. |
+| `Přeskočena položka bez sériového čísla.` | Objekt JSON bez pole `serial`. | Doplňte sériové číslo. |
+| `Přeskočeno duplicitní sériové číslo …` | Stejné sériové číslo je v souboru JSON dvakrát; pozdější položka se zahodí. | Duplikát odstraňte, nebo obě položky slučte, protože platí první. |
+| `Soubor je pro import příliš velký (… MB; limit je 2 MB).` | Soubor překračuje limit 2 MB. | Soubor rozdělte. |
 
 ---
 
 ## Vzor přímo z aplikace {#a-template-straight-from-the-app}
 
 Pokud už máte uložené aspoň jedno zařízení, aplikace vám vytvoří soubor ve
-správném formátu, který stačí vyplnit: **menu ⋮ → Export**, vyberte zařízení,
-případně zapněte **Include vendor token** a **Include tags** a zvolte
-**Share as CSV** nebo **Share as JSON**. Možnosti exportu popisuje stránka
-[**Saved STICKERs**](./saved-stickers.md).
+správném formátu, který stačí vyplnit: **menu ⋮ → Exportovat**, vyberte zařízení,
+případně zapněte **Zahrnout vendor token** a **Zahrnout štítky** a zvolte
+**Sdílet jako CSV** nebo **Sdílet jako JSON**. Možnosti exportu popisuje stránka
+[**Uložená zařízení STICKER**](./saved-stickers.md).
 
 Výsledný soubor má přesně ten formát, který import čte, takže je to nejbezpečnější
 výchozí bod. Přesun seznamu mezi dvěma telefony tak zvládnete ve dvou krocích.

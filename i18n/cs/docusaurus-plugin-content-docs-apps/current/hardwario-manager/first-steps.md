@@ -13,7 +13,7 @@ Podle produktu komunikuje aplikace se zařízením jedním ze dvou bezdrátovýc
 
 | Spojení | Používá | Poznámky |
 |---|---|---|
-| **NFC** | STICKER | Telefon s **Androidem** nebo **iPhone** s NFC. Od firmwaru STICKER v2.0.0 musí mít zařízení **vložené baterie**, viz [**NFC funguje jen na zapnutém zařízení**](/sticker/hardwario-manager/#nfc-needs-a-powered-device). |
+| **NFC** | STICKER | Telefon s **Androidem** nebo **iPhone** s NFC. Zařízení STICKER potřebuje firmware v2.0.0 nebo novější a **vložené baterie**, viz [**NFC funguje jen na zapnutém zařízení**](/sticker/hardwario-manager/#nfc-needs-a-powered-device). |
 | **Bluetooth Low Energy** | CHESTER | Konfigurace, přístup k shellu a aktualizace firmwaru přes spárované připojení Bluetooth. |
 
 ---

@@ -31,7 +31,7 @@ zařízení STICKER. Úplnou dokumentaci aplikace najdete v sekci **Aplikace**:
   zapnout NFC, popisuje stránka [**Instalace aplikace**](/apps/hardwario-manager/install).
 - **Secret key** zařízení. STICKER komunikuje šifrovaným kanálem NFC, takže
   bez tohoto klíče aplikace nepřečte jeho konfiguraci ani klíče a nic nezapíše. Každé zařízení přidáte jen jednou (viz
-  [**Saved STICKERs**](/apps/hardwario-manager/sticker/saved-stickers)) a
+  [**Uložená zařízení STICKER**](/apps/hardwario-manager/sticker/saved-stickers)) a
   od té doby aplikace klíč doplňuje sama.
 
 ## NFC funguje jen na zapnutém zařízení {#nfc-needs-a-powered-device}
@@ -57,11 +57,13 @@ rádio nezapnete: viz [**Funkce**](features.md).
 
 | Úkol | Kde je popsaný |
 |---|---|
-| Přečíst sériové číslo, verzi firmwaru a klíče LoRaWAN potřebné k registraci zařízení | [**Informace o zařízení a klíče LoRaWAN**](/apps/hardwario-manager/sticker/device-info) |
-| Přečíst a upravit celou konfiguraci: intervaly, senzory, historii, LoRaWAN | [**Konfigurace**](/apps/hardwario-manager/sticker/configuration) |
+| Přečíst sériové číslo, verzi firmwaru, stav baterie a rádia | [**Informace o zařízení**](/apps/hardwario-manager/sticker/device-info) |
+| Zapnout rádio (LoRaWAN nebo P2P), přečíst klíče potřebné k registraci zařízení, připojit ho k síti | [**Rádio**](/apps/hardwario-manager/sticker/radio) |
+| Přečíst a upravit celou konfiguraci: rádio, měření a hlášení, senzory, historii, alarmy | [**Konfigurace**](/apps/hardwario-manager/sticker/configuration) |
 | Nastavit prahové, stavové a četnostní alarmy | [**Pravidla alarmů**](/apps/hardwario-manager/sticker/alarms) |
 | Nastavit více zařízením stejnou konfiguraci | [**Šablony**](/apps/hardwario-manager/sticker/templates) |
-| Načíst konfiguraci všech zařízení najednou | [**Načtení více zařízení**](/apps/hardwario-manager/sticker/batch-export) |
+| Nastavit několik hodnot jednou a zapsat je postupně do více zařízení | [**Hromadný zápis**](/apps/hardwario-manager/sticker/batch-write) |
+| Načíst konfiguraci všech zařízení najednou | [**Hromadný export**](/apps/hardwario-manager/sticker/batch-export) |
 | Přiřadit externí sondy 1-Wire ke slotům | [**Senzory 1-Wire**](/apps/hardwario-manager/sticker/one-wire-sensors) |
 | Otestovat celou cestu dat od senzoru po síťový server | [**Vzorek dat ze senzorů**](/apps/hardwario-manager/sticker/sample-data) |
 | Přečíst měření uložená v zařízení | [**Historie senzorů**](/apps/hardwario-manager/sticker/sensor-history) |

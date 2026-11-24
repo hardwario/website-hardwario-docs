@@ -15,7 +15,7 @@ Start from what you see. Each answer names the usual cause and what to do, and l
 
 Watch the LED for 10 s after the boot sequence ends.
 
-- <LedPattern pattern="yellow" /> **One short yellow flash every 3 s:** the radio is off. The device measures but sends nothing. Switch the radio on in HARDWARIO Manager and save; the device restarts and joins.
+- <LedPattern pattern="yellow" /> **One short yellow flash every 3 s:** the radio is off. The device measures but sends nothing. Switch the radio on in HARDWARIO Manager (**STICKER → Radio → Radio mode**) and save; the device restarts and joins.
 - <LedPattern pattern="yellow red" /> **Yellow and red every 3 s:** the device tries to join but gets no answer. Check that the device is registered in the network server with the right keys and region, that a gateway is in range and, for US915 and AU915, that the gateway listens on the sub-band of the device (`lrw-sub-band`, default 2). Join attempts slow down to once an hour, so after a fix restart the device to join at once.
 - **No light at all:** the batteries are flat or inserted the wrong way, or the battery was too low at startup and the device switched itself off. Insert fresh batteries.
 

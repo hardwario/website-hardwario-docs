@@ -6,8 +6,8 @@ description: "Build a STICKER NFC configuration template (intervals, LoRaWAN bas
 import StickerTemplateGenerator from '@site/src/components/StickerTemplateGenerator';
 
 
-:::info Firmware v1.4.0
-Building NFC config templates for intervals, LoRaWAN basics and sensors also applies to v1.3.x. The **alarm-rule slots** and the template's `AppConfigMessage` wire format (renumbered protobuf fields, native-bytes encoding) target **STICKER firmware v1.4.0**.
+:::caution HARDWARIO Manager converts these templates
+HARDWARIO Manager works with STICKER firmware v2.0.0 and newer. When you load a template from this page into the app (**Add template → From hex** or **From QR code**), the app converts it for firmware v2.0.0: the old sensor and history settings are moved to their v2.0.0 equivalents, and the **alarm rules are removed**, because rules from older firmware can't be converted. Set alarm rules up in the app instead, see [**Alarm rules**](./alarms.md).
 :::
 
 # Configuration Template Generator
@@ -20,7 +20,7 @@ Only ticked settings are encoded, so a template carries just what you choose and
 
 ## How to use it
 
-1. **Open a section** (LoRaWAN basics, Interval, Sensors or Alarms; they are collapsed by default) and tick the settings you want. Hover or focus a setting to see a short clue with its meaning and allowed values.
+1. **Open a section** (LoRaWAN basics, Application, Sensors or Alarms; they are collapsed by default) and tick the settings you want. Hover or focus a setting to see a short clue with its meaning and allowed values.
 2. Numbers are range-checked (for example sample interval 5 to 3600 s, report interval 60 to 86400 s); an out-of-range value is flagged and left out of the payload until you correct it.
 3. For **Alarms**, click **+ Add alarm rule** to add a slot (up to 16), then choose its source and quantity, set the rule's values, and set **Dwell (s)**, the hold time in seconds that every rule kind takes (0 to 3600, see [**The `dwell` parameter**](/sticker/developer-access/alarm-rules#the-dwell-parameter)). A rule with a dwell out of that range is flagged and left out of the payload until you correct it. Use **Remove** to drop a rule, or set **Action** to *Clear slot* to wipe that slot on the device. With no rules added, the template carries no alarms.
 4. Copy the **hex** string, or use the **QR code** (it carries the same hex), to store or share the template.
@@ -36,4 +36,4 @@ The bytes shown here are the **unencrypted** `AppConfigMessage`. On a normal dev
 - **Alarm rules** are encoded into the same 17-byte packed slots used by the [**Downlink Commands Generator**](/sticker/connectivity/downlink-commands-generator) and the `alarm` shell command; here you build them with the rule editor instead of pasting hex.
 :::
 
-For the full list of configurable parameters and their meaning, see [**Configuration parameters**](/sticker/developer-access/configuration). To load a finished template into the app and write it to a device, see [**Templates**](./templates.md) and [**Install the app**](../install.md).
+For the full list of configurable parameters and their meaning, see [**Configuration parameters**](/sticker/developer-access/configuration). To load a finished template into the app and write it to a device, see [**Templates**](./templates.md) and [**Install the app**](../install.md); keep the conversion above in mind.

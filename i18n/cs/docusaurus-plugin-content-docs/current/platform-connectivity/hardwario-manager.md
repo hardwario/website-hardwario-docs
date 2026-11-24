@@ -1,7 +1,7 @@
 ---
 slug: hardwario-manager
 title: HARDWARIO Manager
-description: "Správa zařízení CHESTER přes Bluetooth Low Energy aplikací HARDWARIO Manager s odkazy na párování, konfiguraci, terminál, tagy BLE a aktualizace firmwaru."
+description: "Správa zařízení CHESTER přes Bluetooth Low Energy aplikací HARDWARIO Manager s odkazy na párování, konfiguraci, terminál, BLE tagy a aktualizace firmwaru."
 title_meta: "HARDWARIO Manager (CHESTER)"
 ---
 
@@ -16,11 +16,11 @@ konfiguraci, používat shell, aktualizovat firmware a zařízení restartovat.
 - [**HARDWARIO Manager**](/apps/hardwario-manager): co aplikace umí a jak ji nainstalovat
 - [**CHESTER přes Bluetooth**](/apps/hardwario-manager/chester): sekce CHESTER
 - [**Připojení a párování**](/apps/hardwario-manager/chester/connect): naskenování QR kódu zařízení, passkey a párování
-- [**Informace o zařízení**](/apps/hardwario-manager/chester/device-info): sériové číslo, firmware, doba běhu a ovládací prvky zařízení
+- [**Informace o zařízení**](/apps/hardwario-manager/chester/device-info): sériové číslo, firmware, doba provozu, passkey Bluetooth a token pro nárokování
 - [**Konfigurace**](/apps/hardwario-manager/chester/configuration): konfigurace s průvodcem a úplné zobrazení konfigurace
 - [**Terminál**](/apps/hardwario-manager/chester/terminal): shell zařízení přes Bluetooth
 - [**Nástroje**](/apps/hardwario-manager/chester/tools): aktualizace firmwaru, restart, tovární nastavení
-- [**Tagy BLE**](/apps/hardwario-manager/chester/ble-tags): přiřazení externích senzorových tagů BLE ke slotům
+- [**BLE tagy**](/apps/hardwario-manager/chester/ble-tags): přiřazení externích senzorových BLE tagů ke slotům
 - [**Řešení problémů**](/apps/hardwario-manager/chester/troubleshooting): problémy s připojením, párováním a aktualizací
 
 :::info Které verze se to týká
@@ -31,7 +31,8 @@ lišit.
 
 ## Aktualizace firmwaru {#firmware-update}
 
-Firmware se nahrává přes Bluetooth z **QR kódu, který nese odkaz na firmware**.
+Firmware se nahrává přes Bluetooth z **QR kódu firmwaru**, podle **ID firmwaru**
+nebo ze souboru `app_update.bin` uloženého v telefonu.
 Postup, jednotlivé fáze aktualizace a chování při jejím selhání popisuje
 stránka [**Aktualizace firmwaru**](/apps/hardwario-manager/chester/firmware-update).
 

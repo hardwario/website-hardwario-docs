@@ -1,7 +1,7 @@
 ---
 slug: install
 title: Install the app
-description: "Get HARDWARIO Manager from Google Play or the App Store, check what you need (NFC, Bluetooth, camera, ATELOS account, secret key) and allow permissions."
+description: "Get HARDWARIO Manager from Google Play or the App Store, check what you need (NFC, Bluetooth, camera, secret key) and allow permissions."
 ---
 
 # Install HARDWARIO Manager
@@ -21,10 +21,9 @@ Updates arrive automatically through the store.
 
 | Item | Why |
 |---|---|
-| **A phone with NFC** | Required to configure a **STICKER**. Most phones from the last few years have it. |
+| **A phone with NFC** | Required to configure a **STICKER** (firmware v2.0.0 or newer, batteries in). Most phones from the last few years have it. |
 | **Bluetooth** | Required to connect to a **CHESTER**. |
-| **A camera** | Used to scan QR codes. CHESTER pairing labels, firmware links, device claim codes, and shared templates. |
-| **An ATELOS account** | Needed to claim a device and to pull its stored secret key onto the phone. See [**ATELOS account**](./atelos.md). |
+| **A camera** | Used to scan QR codes: CHESTER labels for pairing, firmware links, BLE tag labels, device claim codes and shared templates. |
 | **The device's secret key** | STICKER talks over an encrypted NFC channel. Claiming a device fills the key in for you; you can also enter it by hand. |
 
 ---
@@ -63,8 +62,9 @@ There is no permission prompt for NFC. You switch it on once, in step 1.
 
 :::info Bluetooth permissions on Android
 On Android 12 and newer the app needs both the **scan** and **connect**
-permissions for nearby devices. If you decline them, the CHESTER screens offer
-to open the phone's settings so you can grant them.
+permissions for nearby devices. If you decline them, the CHESTER screens say
+the permission is needed and offer **Try again**. Once the phone stops asking,
+they offer **Open settings** instead, where you grant the permission yourself.
 :::
 
 ---

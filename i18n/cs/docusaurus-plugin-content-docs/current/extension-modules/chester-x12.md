@@ -81,21 +81,21 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 
 ### Zapojení konektoru CHESTER-X12 {#chester-x12-connector-pinout}
 
-![Zapojení svorkovnice CHESTER-X12](../../../../../chester/extension-modules/images/tb-chester-x12.png)
+![Zapojení svorkovnice CHESTER-X12: GND, VDD, RS232 RX, RS232 TX, GND, +V, GND, +VIN na pinech 1-8](../../../../../chester/extension-modules/images/tb-chester-x12.png)
 
 | Pin | Signál | Typ | Popis |
 | :---: | :--- | :--- | :--- |
-| 1 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (6–28 V DC) |
-| 2 | GND | Zem | Systémová zem |
-| 3 | +V | Napájecí výstup | Pevných 5 V ze snižujícího měniče na desce (napájí základní desku CHESTER) |
-| 4 | GND | Zem | Systémová zem |
-| 5 | RS232 TX | RS-232 | Vysílaná data RS-232 (výstup modulu) |
-| 6 | RS232 RX | RS-232 | Přijímaná data RS-232 (vstup modulu) |
-| 7 | VDD | Napájení | Napájení logiky 3,0 V ze základní desky CHESTER |
-| 8 | GND | Zem | Systémová zem |
+| 1 | GND | Zem | Systémová zem |
+| 2 | VDD | Napájení | Napájení logiky 3,0 V ze základní desky CHESTER |
+| 3 | RS232 RX | RS-232 | Přijímaná data RS-232 (vstup modulu) |
+| 4 | RS232 TX | RS-232 | Vysílaná data RS-232 (výstup modulu) |
+| 5 | GND | Zem | Systémová zem |
+| 6 | +V | Napájecí výstup | Pevných 5 V ze snižujícího měniče na desce (napájí základní desku CHESTER) |
+| 7 | GND | Zem | Systémová zem |
+| 8 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (6–28 V DC) |
 
 :::info
-Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 1) připojené externí napájení **6–28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V** na **+V** (pin 3), kterými se napájí základní deska CHESTER.
+Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 8) připojené externí napájení **6–28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V** na **+V** (pin 6), kterými se napájí základní deska CHESTER.
 :::
 
 :::warning Nutná úprava ochrany proti ESD
@@ -127,7 +127,7 @@ Vstup FORCEON transceiveru je trvale ve vysoké úrovni, takže firmware může 
 
 ## Připojení RS-232 {#rs-232-connection}
 
-Sériové zařízení zapojte do svorkovnice: **RS232 TX** (pin 5), **RS232 RX** (pin 6) a společnou zem **GND** (pin 2, 4 nebo 8). Vyvedené jsou pouze datové linky pro vysílání a příjem; linky hardwarového řízení toku (RTS/CTS) konektor nemá.
+Sériové zařízení zapojte do svorkovnice: **RS232 TX** (pin 4), **RS232 RX** (pin 3) a společnou zem **GND** (pin 1, 5 nebo 7). Vyvedené jsou pouze datové linky pro vysílání a příjem; linky hardwarového řízení toku (RTS/CTS) konektor nemá.
 
 Rozhraní RS-232 **není galvanicky oddělené**, takže sériové zařízení a zařízení CHESTER musí mít společnou zem.
 

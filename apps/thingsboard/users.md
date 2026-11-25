@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
 In this guide, you will learn how to create new user accounts, send activation links, and manage login credentials in HARDWARIO Dashboards.
 
 :::tip First the groups
-The user group decides what the user will see. Set up the group and its permissions first, see [Groups, roles & permissions](/apps/thingsboard/users-managing). Otherwise a new user sees either everything or nothing.
+The user group decides what the user will see. Set up the group and its roles first, see [Groups, roles & permissions](/apps/thingsboard/users-managing). Your account already has four ready-made roles for this. Otherwise a new user sees either everything or nothing.
 :::
 
 ---

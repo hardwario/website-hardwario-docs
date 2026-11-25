@@ -1,61 +1,52 @@
 ---
 slug: rule-engine
 title: Rule Engine
-description: "Use the Rule Engine of HARDWARIO Dashboards for calculations, alarms and API calls, build a custom rule chain and attach it safely to the Root Rule Chain."
+description: "What the Rule Engine in HARDWARIO Dashboards does, what HARDWARIO can build with it (calculations, alarms, integrations) and how to request it."
 ---
-
-import Image from '@theme/IdealImage';
 
 # Rule Engine
 
-The Rule Engine is the visual programming system of HARDWARIO Dashboards for processing incoming device messages. A **Rule Chain** is a graph or flowchart that defines the logic of how messages (telemetry, attributes, events) should be processed. It consists of **Nodes**, building blocks that perform a specific action (e.g., saving to a database, sending an email), and **Relations**, connections between nodes that determine the data flow direction based on the outcome (*Success*, *Failure*, *True*, *False*).
+The Rule Engine processes every message that your devices send to HARDWARIO Dashboards. It works in **rule chains**: flowcharts made of nodes, where each node does one step, for example a calculation, a check against a limit, an alarm, an e-mail, or a call to another system. The data from your devices passes through these steps before it is saved and shown on your dashboards.
 
 ---
 
-## Use cases
+## Who sets it up
 
-The Rule Engine intercepts all communication between devices and the server, allowing you to build automation on top of this data. The most common use cases include:
+In HARDWARIO Dashboards, rule chains are set up and maintained by **HARDWARIO**. Your account does not have a Rule chains section: rule chains run for the whole platform, and a mistake in them could stop data from being saved.
 
-- **Data Transformation and Math Calculations:** Using a *Script* node (JavaScript), you can convert temperatures from Fahrenheit to Celsius, sum up power consumption from multiple phases into a single variable, or filter out erroneous values (e.g., ignoring temperature readings above 1000 °C).
-- **Triggering and Managing Alarms:** You can continuously monitor incoming telemetry. If a value exceeds a defined threshold, the system can automatically create an alarm (using the *Create Alarm* node). Once values return to normal, the alarm can be cleared automatically (*Clear Alarm*).
-- **Custom Events and Notifications:** Sending system alerts (push notifications to a mobile app) or dispatching emails and SMS messages to administrators when a device disconnects.
-- **Third-Party Integrations (External APIs):** The *REST API Call* node allows you to push sensor data to your own external systems (ERP, CRM) or fetch supplementary data, such as weather forecasts.
-- **RPC (Remote Procedure Call) Processing:** Reacting to commands sent from a dashboard (e.g., a user clicks an "Open Valve" button, and the Rule Chain ensures this command is securely routed and delivered to the hardware).
+You describe what you need, and we build, test and connect the rule chain for you.
 
 ---
 
-## How to create a custom Rule Chain
+## What we can build for you
 
-1. **Navigate** to the **Rule Chains** section in the left-hand menu.
-2. **Click the "+" icon** in the top right corner and select **Create new rule chain**.
-3. **Name it** (e.g., *Crane Temperature Processing*) and save it.
-4. Click on its name to open the **Rule Engine editor** (the visual canvas).
-5. In the left panel, you will find the node library. **Drag and drop** the desired node (e.g., *Filter -> Script*) onto the canvas.
-6. Double-click the node to configure its logic (e.g., write a JavaScript snippet: `return msg.temperature > 50;`).
-7. **Connect the nodes:** Click the gray dot on the edge of the first node and drag a line to the second node. The system will prompt you to select the relation type (e.g., *True* if the temperature exceeded 50).
-8. After finishing your edits, **always click the checkmark icon (Apply changes)** in the bottom right corner to save and deploy the chain.
+- **Calculations and conversions:** unit conversions, sums of several phases or sensors, differences, consumption per hour or day, values derived from a calibration table.
+- **Data cleaning:** ignore obviously wrong readings (for example a temperature of 1000 °C), smooth noisy values, or keep only selected values.
+- **Alarms:** create an alarm when a value crosses a limit or a device stops sending data, and clear it automatically when the value is back to normal. Alarms can depend on more than one value or device.
+- **Notifications:** e-mail, SMS or mobile push for situations that the [Notifications](/apps/thingsboard/notifications-manager) page does not cover, for example messages that combine several devices, or a daily summary.
+- **Integrations with other systems:** send data to your ERP, CRM or database over REST API, MQTT or a webhook, or bring in data from outside, such as a weather forecast or prices.
+- **Device commands:** forward a command from a dashboard button (for example "open the valve") to the device, or send commands on a schedule or when a condition is met.
+- **Extra information on data:** add the location, customer, building or limits stored on the device to each message, so that dashboards and reports can use them.
 
 ---
 
-## ⚠️ Working with the Root Rule Chain
+## How it works
 
-When a tenant is created, a **Root Rule Chain** is automatically generated. This acts as the main entry gateway: **every single message from every device passes through this rule chain first**.
+1. **Tell us what you need**, for example "send an SMS to the service team when the temperature in the cold room stays above 8 °C for 15 minutes". Write to [ask@hardwario.com](mailto:ask@hardwario.com) or to your HARDWARIO contact.
+2. **We confirm the solution:** which devices and values it uses, who gets which messages, and anything that has to be added to the devices or dashboards.
+3. **We build it in a separate rule chain** just for your devices and test it on real data.
+4. **We connect it after your data is saved.** Your measurements are always stored first, so a custom rule never puts your data at risk.
+5. **Changes later:** new limits, recipients or devices are a short request to us.
 
-### What to be careful about
+---
 
-1. **Never delete the "Save Timeseries" and "Save Client Attributes" nodes:** These nodes are responsible for actually writing your sensor data into the database. If you accidentally delete them or break the routing path to them, your devices will appear online, but **no data will show up on your dashboards** because it is not being saved.
-2. **Do not overload the Root Rule Chain with complex scripts:** If you make a mistake in a JavaScript node within the Root Rule Chain (e.g., creating an infinite loop or a syntax error), you risk blocking data storage for absolutely all devices in your system.
+## What you can set up yourself
 
-### Best practice: Safe editing
+Some things do not need a rule chain, and you can do them directly in your account:
 
-To avoid breaking core data storage, follow this procedure (Encapsulation):
-
-1. Do not edit your custom logic directly inside the *Root Rule Chain*.
-2. Create a new, separate Rule Chain (e.g., *Crane Alarms*), as described above. Build and test all your calculations, emails, and alarms safely inside this isolated chain.
-3. Then, go to the *Root Rule Chain*, take a **Rule Chain** node (from the *Flow* category), and connect it right after the `Save Timeseries` node using a **Success** relation.
-4. In the configuration of this new node, select your newly created *Crane Alarms* rule chain.
-
-This way, data is safely saved to the database first, and only then is a copy forwarded to your custom chain where you can experiment without risking the stability of the entire system.
+- **Notifications** when a value crosses a limit or a device stops sending data: see [Notifications](/apps/thingsboard/notifications-manager).
+- **Dashboards** for your devices: see [Your first dashboard](/apps/thingsboard/creating-dashboard).
+- **Users and access:** see [Groups, roles & permissions](/apps/thingsboard/users-managing).
 
 :::info ThingsBoard documentation
 HARDWARIO Dashboards is built on ThingsBoard. More details in the official ThingsBoard documentation: [Rule engine](https://thingsboard.io/docs/pe/user-guide/rule-engine/).

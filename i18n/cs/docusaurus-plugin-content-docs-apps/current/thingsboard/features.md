@@ -55,17 +55,15 @@ Pravidelné reporty v PDF se zákazníkům automaticky vytvářejí a posílají
 
 ## [Rule Engine](/apps/thingsboard/rule-engine) {#rule-engine}
 
-Rule Engine je jádro automatizace v HARDWARIO Dashboards. Každou příchozí zprávu ze zařízení zpracuje podle pravidel, která sestavíte z uzlů ve vizuálním editoru, takže máte plnou kontrolu nad transformací dat, správou alarmů a integracemi třetích stran.
+Rule Engine zpracovává každou zprávu ze zařízení: výpočty, alarmy, notifikace, napojení na jiné systémy a příkazy pro zařízení. Rule chainy nastavuje **HARDWARIO**: napište nám, co potřebujete, a postavíme to.
 
-**Rule Engine použijte, když potřebujete:**
-- Transformovat nebo počítat hodnoty z příchozí telemetrie (například převody jednotek, součty fází)
-- Vytvářet a automaticky rušit alarmy podle prahových podmínek
-- Posílat data do externích systémů voláním REST API
-- Směrovat a zpracovávat příkazy pro zařízení (RPC)
+**Typické požadavky:**
+- Výpočty a převody jednotek (například součty fází, spotřeba za den)
+- Alarmy, které se samy vytvoří a zruší podle limitů
+- Odesílání dat do vašeho ERP, CRM nebo databáze
+- Příkazy z tlačítka na dashboardu do zařízení
 
-:::caution
-Při úpravách Root Rule Chain vždy zachovejte uzly **Save Timeseries** a **Save Client Attributes**. Pokud je odstraníte, přestanou se do databáze ukládat jakákoli data. Bezpečné postupy úprav najdete v návodu [Rule Engine](/apps/thingsboard/rule-engine).
-:::
+Všechny možnosti a postup najdete na stránce [Rule Engine](/apps/thingsboard/rule-engine).
 
 ---
 

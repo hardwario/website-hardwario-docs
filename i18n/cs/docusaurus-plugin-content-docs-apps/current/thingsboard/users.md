@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
 V tomto návodu se naučíte, jak v HARDWARIO Dashboards vytvářet nové uživatelské účty, posílat aktivační odkazy a spravovat přihlašovací údaje.
 
 :::tip Nejdřív skupiny
-Co uživatel uvidí, určuje jeho uživatelská skupina. Skupinu a její oprávnění proto nastavte jako první, viz [Skupiny, role a oprávnění](/apps/thingsboard/users-managing). Jinak nový uživatel uvidí buď všechno, nebo nic.
+Co uživatel uvidí, určuje jeho uživatelská skupina. Skupinu a její role proto nastavte jako první, viz [Skupiny, role a oprávnění](/apps/thingsboard/users-managing). Čtyři role máte v účtu už připravené. Jinak nový uživatel uvidí buď všechno, nebo nic.
 :::
 
 ---

@@ -55,17 +55,15 @@ Automatically generate and send periodic PDF reports to your customers on a defi
 
 ## [Rule Engine](/apps/thingsboard/rule-engine)
 
-The Rule Engine is the core automation system of HARDWARIO Dashboards. It processes every incoming message from your devices using a visual node-based editor, giving you full control over data transformation, alarm management, and third-party integrations.
+The Rule Engine processes every message from your devices: calculations, alarms, notifications, integrations with other systems and device commands. Rule chains are set up by **HARDWARIO**: tell us what you need and we build it for you.
 
-**Use the Rule Engine when you need to:**
-- Transform or calculate values from incoming telemetry (e.g. unit conversions, multi-phase sums)
-- Create and automatically clear alarms based on threshold conditions
-- Push data to external systems via REST API calls
-- Route and process device commands (RPC)
+**Typical requests:**
+- Calculations and unit conversions (e.g. multi-phase sums, consumption per day)
+- Alarms that create and clear themselves based on limits
+- Sending data to your ERP, CRM or database
+- Commands from a dashboard button to the device
 
-:::caution
-When editing the Root Rule Chain, always preserve the **Save Timeseries** and **Save Client Attributes** nodes. Removing them will stop all data from being saved to the database. See the [Rule Engine](/apps/thingsboard/rule-engine) guide for safe editing practices.
-:::
+See [Rule Engine](/apps/thingsboard/rule-engine) for all options and how it works.
 
 ---
 

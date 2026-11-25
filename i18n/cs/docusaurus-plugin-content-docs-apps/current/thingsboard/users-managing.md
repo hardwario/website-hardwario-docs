@@ -1,7 +1,7 @@
 ---
 slug: users-managing
 title: Skupiny, role a oprávnění
-description: "Kdo uvidí která zařízení a dashboardy v HARDWARIO Dashboards: uživatelské skupiny, role typu Group a Generic a sdílené skupiny zařízení a dashboardů."
+description: "Kdo uvidí která zařízení a dashboardy v HARDWARIO Dashboards: čtyři připravené role, uživatelské skupiny a sdílené skupiny zařízení a dashboardů."
 title_meta: "Skupiny, role a oprávnění (HARDWARIO Dashboards)"
 ---
 
@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # Skupiny, role a oprávnění {#groups-roles--permissions}
 
-V HARDWARIO Dashboards přesně určíte, **co každý uživatel vidí a co smí dělat**. Zákazník vidí jen svá zařízení a dashboardy, váš servisní tým vidí a upravuje víc.
+V HARDWARIO Dashboards přesně určíte, **co každý uživatel vidí a co smí dělat**. Někteří kolegové vidí všechna vaše zařízení, jiní jen jednu pobočku a administrátor může spravovat všechno.
 
 ## Jak to funguje {#how-it-works}
 
@@ -21,134 +21,152 @@ Všechno stojí na **skupinách**:
 - **Zařízení** a **dashboardy** jsou roztříděny do **skupin zařízení** a **skupin dashboardů**.
 - **Role** je sada oprávnění, například *jen pro čtení*.
 
-Propojíte je jedním pravidlem: **tato skupina uživatelů** má **tuto roli** na **tuto skupinu zařízení** a **tuto skupinu dashboardů**.
+Propojíte je jedním pravidlem: **tato skupina uživatelů** má **tuto roli**, případně jen na **tuto skupinu zařízení** a **tuto skupinu dashboardů**.
 
 ```mermaid
 flowchart LR
-  U[User group<br/>Warehouse team] -->|role: Read only| D[Device group<br/>Warehouse]
-  U -->|role: Read only| DB[Dashboard group<br/>Warehouse dashboards]
-  U -->|role: Edit profile| P[Own account]
+  U[User group<br/>Warehouse team] -->|Read only selected group| D[Device group<br/>Warehouse]
+  U -->|Read only selected group| DB[Dashboard group<br/>Warehouse dashboards]
+  U -->|Edit profile required with Group roles| P[Own account]
   classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
   class U hero;
 ```
 
-Kroky níže to nastaví: nejdřív role, potom skupinu uživatelů a nakonec oprávnění. Zařízení a dashboardy byste už měli mít ve skupinách, viz [Roztřiďte zařízení do skupin](/apps/thingsboard/devices#device-groups).
+---
+
+## Připravené role {#roles-ready-for-you}
+
+Ve vašem účtu jsou připravené čtyři role, žádnou nemusíte vytvářet. Najdete je v **Security → Roles**.
+
+| Role | Typ | Co umožňuje |
+|---|---|---|
+| **Read only (all devices)** | Generic | Vidí všechna vaše zařízení, assety a dashboardy, mění si vlastní profil a heslo. |
+| **Admin** | Generic | Spravuje zařízení, dashboardy, skupiny, uživatele a role, mění si vlastní profil a heslo. |
+| **Read only (selected group)** | Group | Vidí jen tu skupinu zařízení nebo dashboardů, ke které roli přiřadíte. |
+| **Edit profile (required with Group roles)** | Generic | Základní role: změna vlastního profilu a hesla. Potřebují ji uživatelé, kteří mají jen role typu Group, jinak si nezmění heslo. |
+
+- Role typu **Generic** platí pro všechno ve vašem účtu. Použijte ji, když má uživatel vidět všechna zařízení.
+- Role typu **Group** platí jen pro skupinu, kterou zvolíte při přidání role do uživatelské skupiny. Použijte ji, když má uživatel vidět jen některá zařízení.
+
+:::tip
+Nové účty HARDWARIO Dashboards dostanou tyto čtyři role automaticky.
+:::
 
 ---
 
-## Krok 1: Vytvoření uživatelských rolí {#step-1-creating-user-roles}
+## Které role použít {#which-roles-to-use}
 
-Nejdřív vytvořte role, které fungují jako sady oprávnění.
+| Uživatel má… | Přidejte do uživatelské skupiny role |
+|---|---|
+| vidět všechna zařízení a dashboardy | **Read only (all devices)** |
+| vidět jen některá zařízení | **Read only (selected group)** na skupinu zařízení, **Read only (selected group)** na skupinu dashboardů a **Edit profile (required with Group roles)** |
+| spravovat zařízení, dashboardy a uživatele | **Admin** |
 
-1.  V levém menu přejděte do sekce **Security** (poslední položka).
-2.  Rozbalte ji a zvolte **Roles**.
-3.  Novou roli vytvoříte kliknutím na **Add role** vpravo nahoře.
-4.  Zadejte **Role Name**, **Description** a zvolte **Role Type**.
-
-![Dialog Add Role s vyplněným názvem role a otevřenou nabídkou Role type s volbami Generic a Group](../../../../../apps/thingsboard/images/roles-2.jpg)
-
-### Rozdíl mezi typy rolí: {#difference-between-role-types}
-* **Group:** U tohoto typu určujete jen operace (například čtení, zápis), které uživatel může provádět. Tato role se ke konkrétní entitě (zařízení, dashboardu a podobně) váže až později, při nastavování uživatelských skupin.
-
-  Pro roli jen pro čtení povolte **Read**, **Read Attributes** a **Read Telemetry**. Bez posledních dvou uživatelé zařízení uvidí, ale jejich data ne.
-* **Generic:** Tady přesně určíte, co uživatel smí a nesmí globálně dělat. Pozor: Pokud tu povolíte přístup k „Devices“, uvidí uživatel **všechna zařízení** daného zákazníka, ne jen konkrétní skupinu.
-
-<Tabs>
-  <TabItem value="lte" label="Group">
-![Dialog Add Role typu Group, kde Permissions obsahují jen povolené operace, zde Read](../../../../../apps/thingsboard/images/roles-3.jpg)
-  </TabItem>
-  <TabItem value="lora" label="Generic">
-![Dialog Add Role typu Generic s oprávněními po zdrojích: Device s Read a Write, Dashboard s All](../../../../../apps/thingsboard/images/roles-6.jpg)
-  </TabItem>
-</Tabs>
-
-**Důležité (správa vlastního profilu):**
-U uživatelů s omezeným přístupem doporučujeme vytvořit roli typu **Generic**, kde pro zdroj **Profile** povolíte operaci **All**. Když tuto roli přidáte do uživatelské skupiny, uživatelé si budou moci sami změnit heslo a údaje účtu.
-
-![Role Generic Edit Profile s operací All nad zdrojem Profile, aby si uživatelé mohli spravovat vlastní účet](../../../../../apps/thingsboard/images/roles-6.jpg)
+Váš účet má také dvě výchozí uživatelské skupiny: *Customer Administrators* (plný přístup) a *Customer Users*. Pro uživatele, kteří mají vidět jen některá zařízení, vytvořte vlastní uživatelskou skupinu podle kroků níže.
 
 ---
 
-## Krok 2: Vytvoření uživatelských skupin {#step-2-creating-user-groups}
+## Krok 1: Připravte skupiny zařízení a dashboardů {#step-1-prepare-device-and-dashboard-groups}
 
-Dále vytvořte skupiny, kterým přiřadíte výše vytvořené role.
+Chcete-li uživateli ukázat jen některá zařízení, musí být zařízení a jejich dashboardy ve skupinách. Pokud má uživatel vidět všechno, tento krok přeskočte.
+
+### Vytvoření skupiny zařízení {#creating-a-device-group}
+1. V levém menu přejděte do **Devices & assets → Devices** (správci tenantu **Entities → Devices**).
+2. Přepněte na záložku **Groups**.
+3. Klikněte vpravo nahoře na **Add entity group**.
+4. Zadejte **Name** a **Description** skupiny a uložte ji.
+
+### Přidání zařízení do skupiny {#adding-devices-to-the-group}
+1. Otevřete novou skupinu zařízení.
+2. Zařízení přidáte akcí **Add to group**, viz [Přidejte zařízení do skupiny](/apps/thingsboard/devices#add-devices-to-a-group). Jedno zařízení může být v několika skupinách současně.
+
+Stejně vytvořte **skupinu dashboardů** v **Dashboards → Groups** a vložte do ní dashboardy pro tyto uživatele.
+
+---
+
+## Krok 2: Vytvořte uživatelskou skupinu {#step-2-create-a-user-group}
 
 1.  Přejděte do sekce **Users** a zvolte záložku **Groups**.
-2.  Uvidíte výchozí skupiny: *Customer Administrators* (plný přístup) a *Customer Users* (přístup ke všemu jen pro čtení).
-3.  Klikněte vpravo nahoře na **Add entity group** a zadejte název a popis.
+2.  Klikněte vpravo nahoře na **Add entity group** a zadejte název a popis.
 
 ![Dialog Add entity group nad seznamem uživatelských skupin s vyplněným názvem skupiny a viditelnými výchozími skupinami v pozadí](../../../../../apps/thingsboard/images/groups-2.jpg)
 
-4.  Kliknutím novou skupinu otevřete a potom klikněte na **ikonu tužky** vedle jejího názvu, otevře se detail skupiny.
-5.  Přejděte na záložku **Roles** (1).
+3.  Kliknutím novou skupinu otevřete a potom klikněte na **ikonu tužky** vedle jejího názvu, otevře se detail skupiny.
+4.  Přejděte na záložku **Roles** (1).
 
 ![Panel s detailem uživatelské skupiny otevřený na záložce Roles s prázdnou tabulkou User group roles a ikonou plus](../../../../../apps/thingsboard/images/groups-4.jpg)
 
-### Přidání oprávnění do skupiny: {#adding-permissions-to-the-group}
-1.  Klikněte na **ikonu plus (+)** (2) nad tabulkou.
-2.  Zvolte **Role Type** a konkrétní roli.
-3.  Pokud jste zvolili typ role **Group**, musíte také určit:
-    * **Group Owner:** Obvykle vy sami nebo konkrétní zákazník.
-    * **Type:** Určete, na co pravidla platí (například *Device* nebo *Dashboard*).
-    * **Entity Group:** Konkrétní skupina entit, ke které má uživatel mít přístup.
+---
+
+## Krok 3: Přidejte role do uživatelské skupiny {#step-3-add-roles-to-the-user-group}
+
+Přidejte role podle tabulky [Které role použít](#which-roles-to-use). Pro každou klikněte na **ikonu plus (+)** (2) nad tabulkou.
+
+### Role typu Group (jen některá zařízení) {#a-group-role-only-some-devices}
+1.  **Role Type** nastavte na *Group* a zvolte **Read only (selected group)**.
+2.  **Group Owner:** vaše firma.
+3.  **Type:** *Device*.
+4.  **Entity Group:** skupina zařízení z kroku 1.
+5.  Klikněte na **Add**.
+6.  Zopakujte s **Type** *Dashboard* a vaší skupinou dashboardů, aby uživatelé viděli i dashboardy.
 
 ![Dialog Add group permission s typem role Group, rolí, vlastníkem skupiny, typem Device a vybranou skupinou entit](../../../../../apps/thingsboard/images/groups-6.jpg)
 
-:::info
-**Skupiny entit** musíte mít připravené předem, zařízení nebo dashboardy tedy už musí být uspořádané do skupin. V tomto kroku tyto skupiny spárujete s uživatelskou skupinou. Vytváření skupin zařízení a dashboardů je podobné jako vytváření uživatelských skupin.
-:::
-
-Pokud přidáváte roli typu **Generic** (třeba roli pro úpravu profilu), stačí zvolit samotnou roli a ta pak platí globálně pro oprávnění účtu uživatele.
+### Role typu Generic {#a-generic-role}
+**Role Type** nastavte na *Generic*, zvolte roli (například **Edit profile (required with Group roles)** nebo **Read only (all devices)**) a klikněte na **Add**. Nic dalšího není potřeba, role typu Generic platí pro celý účet.
 
 ![Dialog Add group permission s typem role Generic, kde je potřeba zvolit jen samotnou roli](../../../../../apps/thingsboard/images/groups-7.jpg)
 
+:::tip
+Jednu skupinu zařízení můžete sdílet s více uživatelskými skupinami. Stejná zařízení tak může vidět tým pobočky (jen pro čtení) i váš servisní tým (Admin).
+:::
+
 ---
 
-## Krok 3: Přidání uživatelů do skupiny {#step-3-adding-users-to-the-group}
+## Krok 4: Přidejte uživatele do skupiny {#step-4-add-users-to-the-group}
 
-Uživatele do nově nastavené skupiny můžete přidat dvěma způsoby:
-
-1.  **Noví uživatelé:** Otevřete skupinu a vpravo nahoře klikněte na **Add user**.
+1.  **Noví uživatelé:** Otevřete skupinu a vpravo nahoře klikněte na **Add user**. Více v [Přidání uživatelů](/apps/thingsboard/users).
 
 ![Otevřená uživatelská skupina Warehouse team se zvýrazněným tlačítkem Add user](../../../../../apps/thingsboard/images/groups-3.jpg)
 
-
-
-2.  **Existující uživatelé:** * Přejděte do hlavní sekce **Users** -> **Users**.
+2.  **Existující uživatelé:**
+    * Přejděte do hlavní sekce **Users** -> **Users**.
     * Klikněte na konkrétního uživatele.
     * Na záložce **Details** klikněte na tlačítko **Manage owner and groups**.
     * Zvolte požadovanou uživatelskou skupinu a klikněte na **Update**.
 
 ![Dialog Manage owner and groups v detailu uživatele s otevřeným seznamem skupin entit pro výběr uživatelské skupiny](../../../../../apps/thingsboard/images/user-2.jpg)
 
+Uživatel získá oprávnění skupiny hned. U samotného uživatele se nic nastavovat nemusí.
+
 ---
 
-## Krok 4: Vytváření a sdílení skupin zařízení {#step-4-creating-and-sharing-device-groups}
+## Volitelně: Vytvořte vlastní roli {#optional-create-your-own-role}
 
-Jak už zaznělo v předchozích krocích, chcete-li uživatelům zpřístupnit jen konkrétní zařízení, a ne všechno, použijte **skupiny zařízení**. Struktura v HARDWARIO Dashboards je pružná: jednu skupinu zařízení můžete sdílet s více uživatelskými skupinami (například aby stejná zařízení viděl koncový zákazník i váš interní servisní tým).
+Pokud žádná ze čtyř rolí nesedí, **Admin** může vytvořit novou, třeba roli, která smí měnit i nastavení zařízení.
 
-### Vytvoření skupiny zařízení {#creating-a-device-group}
-1. V levém menu přejděte do **Devices & assets → Devices** (správci tenantu **Entities → Devices**).
-2. Přepněte na záložku **Groups**.
-3. Kliknutím na **Add entity group** vpravo nahoře vytvořte novou skupinu.
-4. Zadejte **Name** a **Description** skupiny a uložte ji.
+1.  Přejděte do **Security → Roles**.
+2.  Klikněte vpravo nahoře na **Add role**.
+3.  Zadejte **Role Name**, **Description** a zvolte **Role Type**.
 
-### Přidání zařízení do skupiny {#adding-devices-to-the-group}
-1. Nově vytvořenou skupinu zařízení otevřete kliknutím.
-2. Uvnitř skupiny přejděte na záložku **Entities**.
-3. Zařízení přidáte akcí **Add to group**, viz [Přidejte zařízení do skupiny](/apps/thingsboard/devices#add-devices-to-a-group). *(Poznámka: Jedno zařízení může patřit do několika skupin současně.)*
+![Dialog Add Role s vyplněným názvem role a otevřenou nabídkou Role type s volbami Generic a Group](../../../../../apps/thingsboard/images/roles-2.jpg)
 
-### Sdílení skupiny zařízení s uživateli {#sharing-the-device-group-with-users}
-Jakmile skupina obsahuje zařízení, zpřístupněte ji uživatelům: propojte ji s uživatelskými skupinami z kroku 2.
+* **Group:** Určujete jen operace (například čtení, zápis). Ke skupině zařízení nebo dashboardů se role váže až při přidání do uživatelské skupiny.
 
-1. Vraťte se na **Users** -> **Groups** a otevřete příslušnou uživatelskou skupinu.
-2. Přejděte na záložku **Roles** a klikněte na **ikonu plus (+)**.
-3. Zvolte typ role **Group** (například roli, která dává přístup jen pro čtení, nebo pro čtení i zápis).
-4. Nastavte **Type** na *Device* a zvolte nově vytvořenou **skupinu entit** (skupinu zařízení).
-5. Klikněte na **Add**.
+  Pro roli jen pro čtení povolte **Read**, **Read Attributes** a **Read Telemetry**. Bez posledních dvou uživatelé zařízení uvidí, ale jejich data ne.
+* **Generic:** Oprávnění určujete po zdrojích (Device, Dashboard, Profile…). Pokud tu povolíte *Device*, uvidí uživatel **všechna zařízení** ve vašem účtu, ne jen jednu skupinu.
 
-:::tip
-Sdílení můžete zopakovat pro libovolný počet uživatelských skupin. Tutéž skupinu zařízení můžete současně sdílet se zákazníkem A (s právy jen pro čtení) i se svým servisním týmem (s plnými právy).
+<Tabs>
+  <TabItem value="group" label="Group">
+![Dialog Add Role typu Group, kde Permissions obsahují jen povolené operace, zde Read](../../../../../apps/thingsboard/images/roles-3.jpg)
+  </TabItem>
+  <TabItem value="generic" label="Generic">
+![Dialog Add Role typu Generic s oprávněními po zdrojích: Device s Read a Write, Dashboard s All](../../../../../apps/thingsboard/images/roles-6.jpg)
+  </TabItem>
+</Tabs>
+
+:::warning
+Uživatelé, kteří mají jen roli typu Group, si nemohou změnit heslo. Do jejich uživatelské skupiny vždy přidejte i **Edit profile (required with Group roles)** (nebo vlastní roli typu Generic s **Profile → All**).
 :::
 
 ---

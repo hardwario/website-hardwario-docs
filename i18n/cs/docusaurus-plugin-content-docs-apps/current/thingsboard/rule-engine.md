@@ -1,7 +1,7 @@
 ---
 slug: rule-engine
 title: Rule Engine
-description: "Co dělá Rule Engine v HARDWARIO Dashboards, co pro vás s ním HARDWARIO může postavit (výpočty, alarmy, integrace, příkazy pro zařízení) a jak probíhá nastavení vlastního rule chainu."
+description: "Co dělá Rule Engine v HARDWARIO Dashboards, co s ním pro vás HARDWARIO postaví (výpočty, alarmy, integrace) a jak o to požádat."
 ---
 
 # Rule Engine {#rule-engine}

@@ -1,7 +1,7 @@
 ---
 slug: users-managing
 title: Groups, roles & permissions
-description: "Decide exactly which users see which devices and dashboards in HARDWARIO Dashboards: the four ready-made roles, user groups, and shared device and dashboard groups."
+description: "Decide which users see which devices and dashboards in HARDWARIO Dashboards: four ready-made roles, user groups and shared device groups."
 title_meta: "Groups, roles & permissions (HARDWARIO Dashboards)"
 ---
 

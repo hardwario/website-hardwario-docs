@@ -1,7 +1,7 @@
 ---
 slug: rule-engine
 title: Rule Engine
-description: "What the Rule Engine of HARDWARIO Dashboards does, what HARDWARIO can build for you with it (calculations, alarms, integrations, device commands) and how a custom rule chain is set up."
+description: "What the Rule Engine in HARDWARIO Dashboards does, what HARDWARIO can build with it (calculations, alarms, integrations) and how to request it."
 ---
 
 # Rule Engine

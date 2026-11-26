@@ -6,7 +6,7 @@ title_meta: "Command Line Tools (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 
-# HARDWARIO command line tools
+# HARDWARIO Command Line Tools
 
 :::caution
 

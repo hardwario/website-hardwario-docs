@@ -6,7 +6,7 @@ description: "TAPPER client command line usage: the commands, options and argume
 
 import Image from '@theme/IdealImage';
 
-# TAPPER client CLI usage
+# TAPPER Client CLI usage
 
 ## Commands
 

@@ -7,7 +7,7 @@ title_meta: "Installation (TAPPER)"
 
 import Image from '@theme/IdealImage';
 
-# TAPPER client installation
+# TAPPER Client installation
 
 Basic installation of the TAPPER client application.
 
@@ -146,7 +146,7 @@ The **Raspberry Pi Imager** lets you do this within [OS Customization](https://w
 
 1. Both interfaces are under the **Interface** option.
 
-### Install TAPPER client
+### Install TAPPER Client
 
 Install the TAPPER client Python package:
 

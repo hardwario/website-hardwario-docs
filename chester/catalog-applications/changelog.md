@@ -63,7 +63,7 @@ This breaking release brings all the improvements and fixes from the latest vers
 
 - Lowered 1-Wire thermometer (10 -> 5) and soil-sensor (10 -> 3) capacity.
 
-### CHESTER serial
+### CHESTER Serial
 
 - New drivers: SolaX X3-Hybrid G3 inverter; Piketronic RPP-R radon probe.
 
@@ -126,7 +126,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 
 ## v3.5.2 (2026-03-06)
 
-### CHESTER serial
+### CHESTER Serial
 - Added CHESTER Serial as a new catalog application
 - Supports RS-485 (CHESTER-X2, multi-drop, up to 8 devices) and RS-232 (CHESTER-X12, point-to-point)
 

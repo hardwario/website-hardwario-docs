@@ -1,11 +1,11 @@
 ---
 slug: chester-serial
-title: CHESTER serial
+title: CHESTER Serial
 description: "CHESTER Serial catalog application: RS-485 Modbus RTU master for up to 8 devices or an RS-232 link, 11 device types, transparent mode and LoRaWAN packing."
 ---
 import Image from '@theme/IdealImage';
 
-# CHESTER serial
+# CHESTER Serial
 
 This article describes the core functionality, hardware description, default configuration, and example **JSON** message of the catalog application **CHESTER Serial**.
 
@@ -33,7 +33,7 @@ It supports 11 device types including energy meters, environmental sensors, and 
 
 **CHESTER Serial** can be ordered in one of these variants:
 
-### CHESTER serial RS-485 {#chester-serial-rs-485}
+### CHESTER Serial RS-485 {#chester-serial-rs-485}
 
 This variant is equipped with the **CHESTER-X2** extension module. It is designed for standard industrial bus communication where multiple devices are connected in a daisy-chain topology.
 
@@ -50,7 +50,7 @@ The hardware of this application consists of the following ordering codes:
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
-### CHESTER serial RS-232 {#chester-serial-rs-232}
+### CHESTER Serial RS-232 {#chester-serial-rs-232}
 
 This variant is equipped with the **CHESTER-X12** extension module. It is intended for point-to-point communication with a single peripheral device, legacy equipment, or sensors requiring a direct serial link.
 

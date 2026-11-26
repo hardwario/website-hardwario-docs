@@ -118,7 +118,7 @@ twr_log_error("Log");
 ```
 
 
-## Read logs with HARDWARIO code
+## Read logs with HARDWARIO Code
 
 :::info
 

@@ -214,7 +214,7 @@ If you want to have your custom `launch.json` you can go to the **Run and Debug*
     }
 }
 ```
-#### Press attach debugger in the HARDWARIO extension command palette
+#### Press Attach Debugger in the HARDWARIO extension command palette
 
 You can use this option if you don’t want to worry about `launch.json` or any other options mentioned before. Just select the **HARDWARIO logo on the side panel** and select **Attach Debugger** or **Build + Flash (Debugger)** option.
 

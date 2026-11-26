@@ -1,7 +1,7 @@
 ---
 slug: manual-connection
 title: Manual connection
-description: "Connect a device that already exists in HARDWARIO Dashboards: create it, copy its access token, and send its data with a HARDWARIO Cloud connector and a transformation function."
+description: "Connect a device with your own data format or names in HARDWARIO Dashboards: create it, copy its access token, and send its data with a HARDWARIO Cloud connector and a transformation function."
 title_meta: "Manual connection (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';
@@ -10,7 +10,7 @@ import EditCodeBlock from './edit-code-block.js';
 # Manual connection
 
 :::tip Most devices don't need this
-The [automatic connection](/apps/thingsboard/cloud-connection) is simpler: you add one connector and every tagged device appears by itself. Use the manual connection when you want **your own device settings or data format**, for example a device profile with alarm rules, or for devices that **already exist** in HARDWARIO Dashboards.
+The [automatic connection](/apps/thingsboard/cloud-connection) is simpler: you add one connector and every tagged device appears by itself. Use the manual connection when you need a **custom data format** or **your own names** in HARDWARIO Dashboards, for example your own telemetry keys, a device profile with alarm rules, or a device that already exists there.
 :::
 
 With the manual connection, each device in HARDWARIO Dashboards has an **access token**. A connector in HARDWARIO Cloud reads the token from a device label and sends the device's data to it.
@@ -30,7 +30,7 @@ flowchart LR
 
 Skip this step if the device already exists in HARDWARIO Dashboards.
 
-1. Open **Devices & assets → Devices** (**Entities → Devices** for tenant administrators), click **Add device** in the top-right corner and choose **Add new device**.
+1. Open **Devices** (**Entities → Devices** for tenant administrators), click **Add device** in the top-right corner and choose **Add new device**.
 
    ![Devices list with the Add device menu open and Add new device highlighted](images/devices-add-menu.jpg)
 

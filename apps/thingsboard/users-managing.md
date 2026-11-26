@@ -71,7 +71,7 @@ Your account also has two default user groups: *Customer Administrators* (full a
 To show a user only some devices, the devices and their dashboards must be in groups. Skip this step if the user should see everything.
 
 ### Creating a device group {#creating-a-device-group}
-1. Go to **Devices & assets → Devices** in the left menu (**Entities → Devices** for tenant administrators).
+1. Go to **Devices** in the left menu (**Entities → Devices** for tenant administrators).
 2. Switch to the **Groups** tab.
 3. Click **Add entity group** in the top-right corner.
 4. Enter a **Name** and **Description** for the group, then save it.

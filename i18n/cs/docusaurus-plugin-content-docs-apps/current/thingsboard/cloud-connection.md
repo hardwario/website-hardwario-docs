@@ -12,7 +12,7 @@ import ThingsBoardConnector from '@site/src/components/ThingsBoardConnector';
 Zařízení z HARDWARIO Cloud dostanete do HARDWARIO Dashboards dvěma způsoby:
 
 - **[Automatické připojení](#automatic-connection)** (doporučeno, tato stránka): přidáte jeden konektor a každé otagované zařízení se samo vytvoří ve vaší skupině zařízení.
-- **[Ruční připojení](/apps/thingsboard/manual-connection)**: pro zařízení, která už v HARDWARIO Dashboards existují.
+- **[Ruční připojení](/apps/thingsboard/manual-connection)**: když potřebujete vlastní formát dat nebo vlastní názvy v HARDWARIO Dashboards.
 
 ---
 
@@ -36,7 +36,7 @@ Potřebujete účet v HARDWARIO Dashboards. Pokud ho ještě nemáte, napište n
 
 Skupina zařízení říká HARDWARIO Dashboards, kam vaše zařízení patří.
 
-1. Přihlaste se do [HARDWARIO Dashboards](https://app.hardwario.cloud), otevřete **Devices & assets → Devices** (správci tenantu **Entities → Devices**) a přepněte na záložku **Groups**.
+1. Přihlaste se do [HARDWARIO Dashboards](https://app.hardwario.cloud), otevřete **Devices** (správci tenantu **Entities → Devices**) a přepněte na záložku **Groups**.
 2. Kliknutím otevřete skupinu, do které chcete zařízení přidávat. Pokud skupiny nepoužíváte, zvolte **All**, nebo si nejdřív [vytvořte novou skupinu](/apps/thingsboard/devices#device-groups).
 3. Klikněte na **ikonu tužky** (Entity group details) vedle názvu skupiny (1) a potom na **Copy entity group Id** (2).
 

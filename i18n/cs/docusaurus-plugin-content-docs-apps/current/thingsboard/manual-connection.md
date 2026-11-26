@@ -1,7 +1,7 @@
 ---
 slug: manual-connection
 title: Ruční připojení
-description: "Připojení zařízení, které už v HARDWARIO Dashboards existuje: zkopírujete access token a data pošlete konektorem z HARDWARIO Cloud s transformační funkcí."
+description: "Připojení zařízení s vlastním formátem dat nebo vlastními názvy v HARDWARIO Dashboards: zkopírujete access token a data pošlete konektorem z HARDWARIO Cloud s transformační funkcí."
 title_meta: "Ruční připojení (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';
@@ -10,7 +10,7 @@ import EditCodeBlock from '../../../../../apps/thingsboard/edit-code-block.js';
 # Ruční připojení {#manual-connection}
 
 :::tip Většina zařízení to nepotřebuje
-[Automatické připojení](/apps/thingsboard/cloud-connection) je jednodušší: přidáte jeden konektor a každé otagované zařízení se objeví samo. Ruční připojení použijte, když chcete **vlastní nastavení zařízení nebo formát dat**, třeba profil zařízení s pravidly alarmů, nebo pro zařízení, která už v HARDWARIO Dashboards **existují**.
+[Automatické připojení](/apps/thingsboard/cloud-connection) je jednodušší: přidáte jeden konektor a každé otagované zařízení se objeví samo. Ruční připojení použijte, když potřebujete **vlastní formát dat** nebo **vlastní názvy** v HARDWARIO Dashboards, třeba vlastní klíče telemetrie, profil zařízení s pravidly alarmů, nebo zařízení, které tam už existuje.
 :::
 
 Při ručním připojení má každé zařízení v HARDWARIO Dashboards svůj **access token**. Konektor v HARDWARIO Cloud si token přečte z labelu zařízení a pošle na něj data zařízení.
@@ -30,7 +30,7 @@ flowchart LR
 
 Pokud zařízení v HARDWARIO Dashboards už existuje, tento krok přeskočte.
 
-1. Otevřete **Devices & assets → Devices** (správci tenantu **Entities → Devices**) vpravo nahoře klikněte na **Add device** a zvolte **Add new device**.
+1. Otevřete **Devices** (správci tenantu **Entities → Devices**) vpravo nahoře klikněte na **Add device** a zvolte **Add new device**.
 
    ![Seznam zařízení s otevřenou nabídkou Add device a zvýrazněnou volbou Add new device](../../../../../apps/thingsboard/images/devices-add-menu.jpg)
 

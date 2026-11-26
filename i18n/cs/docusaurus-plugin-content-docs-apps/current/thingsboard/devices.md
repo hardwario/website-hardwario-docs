@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 
 Jakmile máte zařízení [připojená](/apps/thingsboard/cloud-connection), tento návod ukáže, jak jim dát srozumitelné názvy, zkontrolovat jejich data, roztřídit je do skupin a bezpečně je smazat.
 
-Zařízení najdete v levém menu pod **Devices & assets → Devices**. Správci tenantu je najdou pod **Entities → Devices**.
+Zařízení najdete v levém menu pod **Devices**. Správci tenantu je najdou pod **Entities → Devices**.
 
 ![Seznam zařízení s otevřeným detailem jednoho zařízení vpravo](../../../../../apps/thingsboard/images/devices-details.jpg)
 

@@ -71,7 +71,7 @@ Váš účet má také dvě výchozí uživatelské skupiny: *Customer Administr
 Chcete-li uživateli ukázat jen některá zařízení, musí být zařízení a jejich dashboardy ve skupinách. Pokud má uživatel vidět všechno, tento krok přeskočte.
 
 ### Vytvoření skupiny zařízení {#creating-a-device-group}
-1. V levém menu přejděte do **Devices & assets → Devices** (správci tenantu **Entities → Devices**).
+1. V levém menu přejděte do **Devices** (správci tenantu **Entities → Devices**).
 2. Přepněte na záložku **Groups**.
 3. Klikněte vpravo nahoře na **Add entity group**.
 4. Zadejte **Name** a **Description** skupiny a uložte ji.

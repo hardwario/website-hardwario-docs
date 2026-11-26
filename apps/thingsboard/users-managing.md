@@ -28,7 +28,7 @@ flowchart LR
   U[User group<br/>Warehouse team] -->|Read only selected group| D[Device group<br/>Warehouse]
   U -->|Read only selected group| DB[Dashboard group<br/>Warehouse dashboards]
   U -->|Edit profile required with Group roles| P[Own account]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class U hero;
 ```
 

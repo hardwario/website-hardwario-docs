@@ -22,7 +22,7 @@ flowchart LR
   Cloud -->|tag match| C2[Connector 2]
   C1 -->|HTTP POST| Backend[Your backend]
   C2 -->|HTTP POST| Viz["Grafana / Ubidots / …"]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class Cloud hero;
 ```
 

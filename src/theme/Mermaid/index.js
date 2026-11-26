@@ -14,24 +14,49 @@ import styles from './styles.module.css';
 // on light boxes, message text dark on the dark page). These values replace the
 // light ones in dark mode; the rest of the component is the original.
 const DARK_THEME_VARIABLES = {
+  // Brand dark mode (proposal): the #16161D ground, Ink nodes with the dark
+  // Hairline, Mist zones and notes, White type, light-gray wires.
   darkMode: true,
-  background: '#1b1b1d',
-  primaryColor: '#0d2b45',
-  primaryBorderColor: '#009cfa',
-  primaryTextColor: '#e3e3e3',
-  secondaryColor: '#2b2e35',
-  tertiaryColor: '#1b1b1d',
+  background: '#16161d',
+  primaryColor: '#252532',
+  primaryBorderColor: '#3b3b46',
+  primaryTextColor: '#ffffff',
+  secondaryColor: '#2e2e3a',
+  tertiaryColor: '#16161d',
   lineColor: '#a3a7ae',
-  textColor: '#e3e3e3',
-  edgeLabelBackground: '#1b1b1d',
+  textColor: '#ffffff',
+  edgeLabelBackground: '#16161d',
+  clusterBkg: '#2e2e3a',
+  clusterBorder: '#2e2e3a',
+  actorBkg: '#252532',
+  actorBorder: '#3b3b46',
+  actorTextColor: '#ffffff',
+  actorLineColor: '#3b3b46',
   signalColor: '#a3a7ae',
-  signalTextColor: '#e3e3e3',
-  labelTextColor: '#e3e3e3',
-  loopTextColor: '#e3e3e3',
-  noteBkgColor: '#3d3519',
-  noteBorderColor: '#b39b3e',
-  noteTextColor: '#f2ead0',
+  signalTextColor: '#ffffff',
+  labelBoxBkgColor: '#2e2e3a',
+  labelBoxBorderColor: '#3b3b46',
+  labelTextColor: '#ffffff',
+  loopTextColor: '#ffffff',
+  noteBkgColor: '#2e2e3a',
+  noteBorderColor: '#3b3b46',
+  noteTextColor: '#ffffff',
+  activationBkgColor: '#2e2e3a',
+  activationBorderColor: '#3b3b46',
 };
+
+// The key node (`class X hero`) gets the brand's gradient frame, Red to Sky.
+// Mermaid cannot fill a stroke with a gradient, so the gradient is added to the
+// rendered SVG here and styles.module.css points the hero frame at it. Every
+// diagram carries the same definition, so the shared id is harmless.
+const KEY_FRAME_DEFS =
+  '<defs><linearGradient id="hw-key-frame" x1="0" y1="0" x2="1" y2="0">' +
+  '<stop offset="0" stop-color="#e30427"/><stop offset="1" stop-color="#009cfa"/>' +
+  '</linearGradient></defs>';
+
+function withKeyFrame(svg) {
+  return svg.replace(/(<svg\b[^>]*>)/, `$1${KEY_FRAME_DEFS}`);
+}
 
 function useColorModeMermaidConfig() {
   const config = useMermaidConfig();
@@ -56,7 +81,7 @@ function MermaidRenderResult({renderResult}) {
       ref={ref}
       className={`${MermaidContainerClassName} ${styles.container}`}
       // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{__html: renderResult.svg}}
+      dangerouslySetInnerHTML={{__html: withKeyFrame(renderResult.svg)}}
     />
   );
 }

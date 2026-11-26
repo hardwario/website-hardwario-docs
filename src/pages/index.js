@@ -27,7 +27,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">
           {translate({
             id: 'home.tagline',
-            message: 'Technical Resources for Products and Services',
+            message: 'Technical resources for products and services',
           })}
         </p>
       </div>

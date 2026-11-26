@@ -29,7 +29,7 @@ flowchart LR
   HD --> Dash[Dashboards & charts]
   HD --> Share[Public link & website]
   HD --> Alert[Notifications]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class Cloud hero;
   class HD hero;
 ```

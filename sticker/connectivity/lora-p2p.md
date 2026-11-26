@@ -31,7 +31,7 @@ flowchart LR
   S1([STICKER]) -->|TOWER over LoRa| GW[HARDWARIO FIBER modem]
   S2([STICKER]) -->|TOWER over LoRa| GW
   GW --> HUB[ProXimos Hub]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class GW hero;
 ```
 

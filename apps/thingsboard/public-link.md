@@ -22,7 +22,7 @@ flowchart LR
   DG[Public device group] --> D[Public dashboard group]
   D --> L([Public link])
   L --> V[Anyone with the link<br/>read-only]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class L hero;
 ```
 

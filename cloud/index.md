@@ -29,7 +29,7 @@ flowchart LR
   Cloud -->|Connector| System[Your system]
   Cloud --> Web[Web interface]
   Cloud --> API[REST API]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class Cloud hero;
 ```
 

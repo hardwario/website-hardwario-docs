@@ -19,7 +19,7 @@ With the manual connection, each device in HARDWARIO Dashboards has an **access 
 flowchart LR
   Device([Device]) -->|uplink| Cloud[(HARDWARIO Cloud)]
   Cloud -->|connector + access token| HD[(HARDWARIO Dashboards)]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class Cloud hero;
   class HD hero;
 ```

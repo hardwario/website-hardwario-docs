@@ -86,34 +86,34 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Protocol | LoRaWAN® |
 | Frequency | IN865 / RU864 / EU868 |
-| Tx Power | 16 dBm (868 MHz) |
+| Tx power | 16 dBm (868 MHz) |
 | Sensitivity | -137 dBm |
 | Mode | OTAA / ABP Class A |
-| **Valve Control** | |
+| **Valve control** | |
 | Actuator | Stepping Motor |
-| Default Fitting | M30 × 1.5 mm |
-| Optional Adapters | RA, RAV, RAVL, Giacomini, M28 (Comap, Herz, TA) |
-| Advanced Features | Auto temperature control, Heat plans, Freeze protection, Open-window detection, Tamper alarm |
-| **Temperature Sensor** | |
+| Default fitting | M30 × 1.5 mm |
+| Optional adapters | RA, RAV, RAVL, Giacomini, M28 (Comap, Herz, TA) |
+| Advanced features | Auto temperature control, Heat plans, Freeze protection, Open-window detection, Tamper alarm |
+| **Temperature sensor** | |
 | Type | NTC |
-| Range | -20°C ~ +60°C |
-| Accuracy | ±0.5°C (0–50°C) |
-| Resolution | 0.1°C |
+| Range | -20 °C ~ +60 °C |
+| Accuracy | ±0.5 °C (0–50 °C) |
+| Resolution | 0.1 °C |
 | **Others** | |
 | Display | LED display (white light) |
 | Buttons | Control knob, Calibration/Tamper (internal), Reset (internal) |
 | Software | NFC App / Downlink |
-| Advanced Features | Child lock, External sensor mode, FUOTA |
-| **Physical Characteristics** | |
-| Power Supply | 2 × AA Li-FeS2 (3000 mAh total) |
-| Battery Life | approx. 5–8 years (depending on SF) |
-| Operating Temp | -20°C ~ +60°C |
-| Storage Temp | -40°C ~ +70°C (without battery) |
-| Humidity | 0–95% RH (non-condensing) |
-| Ingress Protection | IP30 |
+| Advanced features | Child lock, External sensor mode, FUOTA |
+| **Physical characteristics** | |
+| Power supply | 2 × AA Li-FeS2 (3000 mAh total) |
+| Battery life | approx. 5–8 years (depending on SF) |
+| Operating temp | -20 °C ~ +60 °C |
+| Storage temp | -40 °C ~ +70 °C (without battery) |
+| Humidity | 0–95 % RH (non-condensing) |
+| Ingress protection | IP30 |
 | Dimensions | Φ52 × 90 mm |
 | Weight | 170 g (with batteries) |
 | Material | Stainless + ABS, White |

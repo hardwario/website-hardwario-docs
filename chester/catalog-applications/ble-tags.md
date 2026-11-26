@@ -212,7 +212,7 @@ Check the **RSSI** value in the output:
 
 ## 7. Measured parameters
 
-| Measured Quantity       | Description                                                  |
+| Measured quantity       | Description                                                  |
 |-------------------------|--------------------------------------------------------------|
 | Temperature             | Ambient temperature of the sensor’s environment.|
 | Humidity                | Relative humidity of the surrounding air. |

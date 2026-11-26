@@ -85,11 +85,11 @@ Je-li zařízení CHESTER v krabičce, můžete po vyjmutí baterie přes malé 
 | Název modulu                      | Popis modulu                                                                                                                                                  |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CHESTER-A1                        | AC/DC měnič pro napájení 110/230 V                                                                                                          |
-| CHESTER-A1A                       | AC/DC měnič pro napájení 110/230 V se dvěma výkonovými relé 230V/16A                                                                                           |
+| CHESTER-A1A                       | AC/DC měnič pro napájení 110/230 V se dvěma výkonovými relé 230 V/16A                                                                                           |
 | CHESTER-G1                        | Osmikanálový galvanicky oddělený vstupní modul s izolovaným DC/DC napájením                                                                                       |
 | CHESTER-S1                        | Modul pro monitorování prostředí se senzory teploty, vlhkosti, oxidu uhličitého (CO2), osvětlenosti, atmosférického tlaku, hluku a pohybu (PIR)            |
-| [**CHESTER-Z1**](chester-z1.md)   | Modul záložního napájení z baterie Li-Ion s DC/DC měničem a nabíječkou, vstup z linky 6-26 VDC nebo 12V solárního panelu                                                               |
-| [**CHESTER-Z1-F**](chester-z1.md) | Modul záložního napájení z baterie Li-Ion s DC/DC měničem a nabíječkou, vstup z linky 6-26 VDC nebo 12V solárního panelu + až 4 RGB podsvícená tlačítka s akustickou zpětnou vazbou |
+| [**CHESTER-Z1**](chester-z1.md)   | Modul záložního napájení z baterie Li-Ion s DC/DC měničem a nabíječkou, vstup z linky 6-26 VDC nebo 12 V solárního panelu                                                               |
+| [**CHESTER-Z1-F**](chester-z1.md) | Modul záložního napájení z baterie Li-Ion s DC/DC měničem a nabíječkou, vstup z linky 6-26 VDC nebo 12 V solárního panelu + až 4 RGB podsvícená tlačítka s akustickou zpětnou vazbou |
 
 ## Nosné desky {#carrier-boards}
 
@@ -104,7 +104,7 @@ Tyto nosné desky vyžadují větší krabičku.
 | CHESTER-B1                      | Držáky pro až 6 baterií velikosti D nebo 8 baterií velikosti C + LED mimo základní desku                                                                                     |
 | CHESTER-B1-W                    | Držáky pro až 6 baterií velikosti D nebo 8 baterií velikosti C + LED mimo základní desku + bezdrátový M-Bus (wM-Bus)                                                           |
 | [**CHESTER-C1**](chester-c1.md) | Deska rozhraní s DC/DC měničem, 2 výkonovými relé, svorkami 1-Wire, 4 digitálními/analogovými vstupy a rozhraním RS-485 + držák pro 4 baterie velikosti C          |
-| [**CHESTER-C5**](chester-c5.md) | Zakázková nosná deska pro modul CHESTER-U1 s až 16 kanály 1-Wire, záložním napájením z baterie Li-Ion, DC/DC měničem a nabíječkou, vstupem z linky 6-28 VDC nebo 12V solárního panelu a podporou QWIIC OLED |
+| [**CHESTER-C5**](chester-c5.md) | Zakázková nosná deska pro modul CHESTER-U1 s až 16 kanály 1-Wire, záložním napájením z baterie Li-Ion, DC/DC měničem a nabíječkou, vstupem z linky 6-28 VDC nebo 12 V solárního panelu a podporou QWIIC OLED |
 
 :::caution
 

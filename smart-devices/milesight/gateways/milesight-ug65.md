@@ -142,7 +142,7 @@ If the gateway is powered via the RJ45 Ethernet cable with PoE, **do not connect
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Hardware System** | |
+| **Hardware system** | |
 | CPU | Quad-core 1.5 GHz ARM Cortex-A53 |
 | Memory | 512 MB DDR4 |
 | Flash | 8 GB eMMC |
@@ -150,32 +150,32 @@ If the gateway is powered via the RJ45 Ethernet cable with PoE, **do not connect
 | Channels | 8 (half/full duplex) |
 | Antennas | 2 × Internal + 1 × N-Female external |
 | Frequency | CN470 / IN865 / EU868 / RU864 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 27 dBm |
+| Tx power | 27 dBm |
 | Sensitivity | -140 dBm @292bps |
 | Protocols | V1.0 / V1.0.2 Class A/B/C |
-| Supported Devices | approx. 2 000 (10 min uplink) |
+| Supported devices | approx. 2 000 (10 min uplink) |
 | Features | Packet filter, Noise analyzer, Retransmission, FUOTA, Multicast |
 | **Interfaces** | |
 | Ethernet | 1 × RJ45 (10/100/1000 Mbps, PoE) |
 | Wi-Fi | 802.11 b/g/n (2.4 GHz) |
 | Cellular (opt.) | 4G LTE |
 | USB | 1 × USB-C (power/console) |
-| Reset Button | Yes |
+| Reset button | Yes |
 | LEDs | Power, Status, LoRa, Wi-Fi, LTE, ETH |
 | **Network** | |
 | Protocols | MQTT, HTTP(S), Modbus TCP, BACnet/IP, VPN (IPSec, OpenVPN, WireGuard…) |
 | Management | Web, CLI, SNMP, API, DeviceHub |
 | Reliability | WAN failover |
 | **Power** | |
-| Supply | DC 9–24 V / PoE / 5V USB-C |
+| Supply | DC 9–24 V / PoE / 5 V USB-C |
 | Consumption | 2.9 W typ., 4.2 W max |
-| **Physical Characteristics** | |
+| **Physical characteristics** | |
 | Dimensions | 180 × 110 × 55.5 mm |
 | Weight | 548 g |
 | Housing | PC+ABS, White/Black |
-| Ingress Protection | IP65 |
+| Ingress protection | IP65 |
 | Installation | Desktop, Wall, Pole |
-| Operating Temp | -40°C ~ +70°C |
-| Humidity | 0–95% RH (non-cond.) |
+| Operating temp | -40 °C ~ +70 °C |
+| Humidity | 0–95 % RH (non-cond.) |
 | **Approvals** | CE, FCC, Telec, JATE, RCM, RoHS |
 

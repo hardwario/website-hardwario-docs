@@ -38,7 +38,7 @@ Zařízení se konfiguruje přes vestavěné webové rozhraní a ovládat ho lze
 |---|---|
 | **Galvanicky oddělené vstupy** | Až čtyři izolované digitální vstupy pro čítání impulzů. |
 | **Připojení přes Ethernet** | Drátová síť 10/100 Base-T. |
-| **Připojení přes Wi-Fi** | 2,4GHz Wi-Fi (802.11 b/g/n). |
+| **Připojení přes Wi-Fi** | 2,4 GHz Wi-Fi (802.11 b/g/n). |
 | **Montáž na DIN lištu** | Průmyslová krabička na DIN lištu. |
 | **Server Modbus TCP** | Čtení stavů čítačů přes Modbus TCP. |
 | **Webová konfigurace** | Vestavěné webové rozhraní pro konfiguraci. |

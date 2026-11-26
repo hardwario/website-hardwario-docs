@@ -62,7 +62,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 #### Example of installation: Split core current transformer CTA6X200A5A
 
 
-| **Carlo Gavazzi Energy Analyzer EM530** | **Split Core Current Transformer CTA6X200A5A** |
+| **Carlo Gavazzi Energy Analyzer EM530** | **Split core current transformer CTA6X200A5A** |
 |----------------------------------------|-----------------------------------------------|
 | Pin 13                                 | **K**                                         |
 | Pin 14                                 | **L**                                         |
@@ -114,7 +114,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 #### Default Modbus communication configuration
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Address | Baud rate | Parity | Stop bit |
 |---------|-----------|--------|-----------|
 | 1       | 9.6k      | None   | 1         |
 
@@ -167,7 +167,7 @@ After exceeding 1 kWh, the CT ratio becomes **permanently locked** and **cannot 
 
 ### Measured values
 
-| Measured Value | Key / Path                                   |
+| Measured value | Key / path                                   |
 |----------------|----------------------------------------------|
 | Current        | E_ENERGY_METER.METER_2.CURRENT.MEASUREMENTS  |
 | Voltage        | E_ENERGY_METER.METER_2.VOLTAGE.MEASUREMENTS  |

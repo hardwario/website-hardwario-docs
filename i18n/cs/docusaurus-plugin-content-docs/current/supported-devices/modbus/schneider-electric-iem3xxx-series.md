@@ -75,7 +75,7 @@ Tento elektroměr **vyžaduje** k měření proudu **externí senzor**, napřík
 |---------------------------|--------------------|
 | Pin D0/-                     | Pin 6 (A−)      |
 | Pin D1/+                    | Pin 7 (B+)        |
-| Pin 0V                    | Pin 1 (GND)        |
+| Pin 0 V                    | Pin 1 (GND)        |
 
 #### Komunikace Modbus (iEM3250) {#modbus-communication-iem3250}
 

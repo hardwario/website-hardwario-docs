@@ -47,21 +47,21 @@ An on-board **TLA2024** 12-bit ADC, read over **I²C**, measures the input volta
 
 | Parameter | Value |
 | :--- | :--- |
-| **Module Type** | Backup power supply with single-cell Li-Po charger |
-| **Power Input (VIN)** | 6–28 VDC |
-| **Power Output** | Fixed 5 V, powers the CHESTER mainboard |
-| **Battery Type** | Single-cell Li-Po / Li-Ion, 3.7 V, with integrated protection circuit |
-| **Charging Current** | 450 mA |
-| **Min. Recommended Battery Capacity** | 1000 mAh |
-| **Voltage Monitoring** | On-board 12-bit I²C ADC (TLA2024), measures VIN and battery voltage |
-| **Host Interface** | I²C |
-| **Included Battery** | LP103454-PCM-LD, 3.7 V / 2000 mAh (56.0 × 34.5 × 10.3 mm) |
-| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
-| **Hardware Revision** | R1.1 |
+| **Module type** | Backup power supply with single-cell Li-Po charger |
+| **Power input (VIN)** | 6–28 VDC |
+| **Power output** | Fixed 5 V, powers the CHESTER mainboard |
+| **Battery type** | Single-cell Li-Po / Li-Ion, 3.7 V, with integrated protection circuit |
+| **Charging current** | 450 mA |
+| **Min. recommended battery capacity** | 1000 mAh |
+| **Voltage monitoring** | On-board 12-bit I²C ADC (TLA2024), measures VIN and battery voltage |
+| **Host interface** | I²C |
+| **Included battery** | LP103454-PCM-LD, 3.7 V / 2000 mAh (56.0 × 34.5 × 10.3 mm) |
+| **Board interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
+| **Hardware revision** | R1.1 |
 
 ## Key components
 
-| Component | Part Number | Description |
+| Component | Part number | Description |
 | :--- | :--- | :--- |
 | **Step-Down Converter** | TPS62933 | Step-down converter, 6–28 VDC input, 5 V output |
 | **Battery Charger** | MCP73833 | Single-cell Li-Po / Li-Ion linear charger (450 mA) |
@@ -91,7 +91,9 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 | 7 | GND | Ground | System ground reference |
 | 8 | VIN | Power Input | External DC supply input (6–28 VDC) |
 
-*Note: Use only a single-cell 3.7 V Li-Po (or Li-Ion) battery with an integrated protection circuit. Do not short-circuit the battery. The two BAT- and the two BAT+ pins are internally connected (doubled for current capacity).
+:::caution
+Use only a single-cell 3.7 V Li-Po (or Li-Ion) battery with an integrated protection circuit. Do not short-circuit the battery. The two BAT- and the two BAT+ pins are internally connected (doubled for current capacity).
+:::
 
 :::info
 CHESTER-X10 powers the CHESTER mainboard through the module slot. An external **6–28 VDC** supply on **VIN** (Pin 8) feeds the on-board TPS62933 step-down converter, whose fixed **5 V** output powers the mainboard and charges the battery connected to **BAT+** / **BAT-**. If the external supply is lost, the battery keeps the mainboard powered.

@@ -22,7 +22,7 @@ For technical details, see the [**Hardware Description**](/sticker/hardware-desc
 
 #### You will need
 - **STICKER device** (Clime / Input / Motion variant)
-- **2× AA batteries** (1.5V alkaline or lithium)
+- **2× AA batteries** (1.5 V alkaline or lithium)
 - A **LoRaWAN Gateway** within range
 - A **LoRaWAN Network Server** (ChirpStack / TTS / custom LNS)
 - A smartphone with **NFC** and the [**HARDWARIO Manager**](/sticker/hardwario-manager/) app installed

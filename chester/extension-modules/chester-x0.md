@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 # CHESTER-X0
 
 This article describes the CHESTER-X0 four-channel I/O extension module. Two variants are available:
-* CHESTER-X0**A** including 5.0V boost converter
+* CHESTER-X0**A** including 5.0 V boost converter
 
 <div class="container">
   <div class="row">
@@ -21,7 +21,7 @@ This article describes the CHESTER-X0 four-channel I/O extension module. Two var
 </div>
 <br />
 
-* CHESTER-X0**B** without 5.0V boost converter
+* CHESTER-X0**B** without 5.0 V boost converter
 
 <div class="container">
   <div class="row">
@@ -62,11 +62,11 @@ Depending on the application these configuration options are available for each 
 * Enable pull-up resistor 330 kΩ (PUX)
 * Enable pull-down resistor 249 Ω (PDX)
 * Enable voltage divider (gain 1/11) (100 kΩ, 10 kΩ) (CLX)
-* Enable 5V boost converter (CHESTER-X0A only) (ONX)
+* Enable 5 V boost converter (CHESTER-X0A only) (ONX)
 
 This picture shows the electric circuit of each channel:
 
-![Single-channel circuit: CHX input with varistor, PUX pull-up, PDX pull-down, CLX divider, and ONX 5V switch to GPX/AX](images/sc-chester-x0.png)
+![Single-channel circuit: CHX input with varistor, PUX pull-up, PDX pull-down, CLX divider, and ONX 5 V switch to GPX/AX](images/sc-chester-x0.png)
 
 ## Configuration table
 
@@ -93,7 +93,7 @@ However, this is just to understand the modes. You only need to know which mode 
 
 ## Pin configuration and functions
 
-| Position | Signal Name | Signal Description       |
+| Position | Signal name | Signal description       |
 | -------- | ----------- | ------------------------ |
 | 1        | VDD         | System VDD rail 3.0 V    |
 | 2        | CH1         | Channel 1                |
@@ -102,9 +102,11 @@ However, this is just to understand the modes. You only need to know which mode 
 | 5        | CH3         | Channel 3                |
 | 6        | GND         | System ground signal     |
 | 7        | CH4         | Channel 4                |
-| 8        | +V          | System positive rail (*) |
+| 8        | +V          | System positive rail |
 
-*Note: The system positive rail voltage depends on CHESTER power supply option.
+:::note
+The system positive rail (+V) voltage depends on the CHESTER power supply option.
+:::
 
 ## Schematic diagram
 

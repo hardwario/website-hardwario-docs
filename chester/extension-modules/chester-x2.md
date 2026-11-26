@@ -30,7 +30,7 @@ CHESTER-X2 provides TTL/UART interface and RS-485 interface (e.g., for Modbus co
 
 ## Pin configuration and functions
 
-| Position | Signal Name | Signal Description       |
+| Position | Signal name | Signal description       |
 | -------- | ----------- | ------------------------ |
 | 1        | GND         | System ground signal     |
 | 2        | VDD         | System VDD rail 3.0 V    |
@@ -39,9 +39,11 @@ CHESTER-X2 provides TTL/UART interface and RS-485 interface (e.g., for Modbus co
 | 5        | EN          | Enable input             |
 | 6        | B           | Bus input/output         |
 | 7        | A           | Bus input/output         |
-| 8        | +V          | System positive rail (*) |
+| 8        | +V          | System positive rail |
 
-*Note: The system positive rail voltage depends on CHESTER power supply option.
+:::note
+The system positive rail (+V) voltage depends on the CHESTER power supply option.
+:::
 
 ## Schematic diagram
 

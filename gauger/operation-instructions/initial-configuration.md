@@ -14,7 +14,7 @@ Connecting through Wi-Fi is done by connecting to the device’s Access Point. T
 
 ## Configuration options
 
-| Name                     | JSON Key                      | Type    | Default Value | Description                               |
+| Name                     | JSON Key                      | Type    | Default value | Description                               |
 | :----------------------- | :---------------------------- | :------ | :------------ | :---------------------------------------- |
 | Device name              | `device_name`                 | String  |               | Hostname of the device                    |
 | Password                 | `password`                    | String  |               | Password for the Web UI                   |

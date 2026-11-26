@@ -44,12 +44,12 @@ It runs on **WisGateOS 2** and supports multi-backhaul connectivity (Ethernet, W
 | **Model** | RAK7289V2 |
 | **LoRa Channels** | 8 or 16 Channels |
 | **Frequency** | EU868 (supports other regions) |
-| **Power Supply** | **PoE (802.3af/at)** (48V) |
-| **Power Consumption** | Max 12 W |
+| **Power supply** | **PoE (802.3af/at)** (48 V) |
+| **Power consumption** | Max 12 W |
 | **Connectivity** | Ethernet, Wi-Fi, LTE Cat 4 |
 | **Antennas** | External N-Type connectors (LoRa, LTE, GPS) |
-| **Operating Temp.** | -40°C to +65°C |
-| **Ingress Protection** | IP67 |
+| **Operating temp.** | -40 °C to +65 °C |
+| **Ingress protection** | IP67 |
 
 ---
 

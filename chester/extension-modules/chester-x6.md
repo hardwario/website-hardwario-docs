@@ -45,19 +45,19 @@ An on-board boost converter (**TPS61099**) generates the regulated **5 V** that 
 
 | Parameter | Value |
 | :--- | :--- |
-| **Module Type** | HARDWARIO S-Wire bus interface |
-| **Peripheral Interface** | S-Wire (3-wire: +5 V, GND, DATA) |
-| **Data Line** | Single half-duplex DATA line, ESD-protected |
-| **Host Interface** | I²C (UART bridge 0x4D + GPIO expander 0x39) |
-| **Peripheral Power** | Regulated 5.0 V (on-board boost), switchable over I²C |
+| **Module type** | HARDWARIO S-Wire bus interface |
+| **Peripheral interface** | S-Wire (3-wire: +5 V, GND, DATA) |
+| **Data line** | Single half-duplex DATA line, ESD-protected |
+| **Host interface** | I²C (UART bridge 0x4D + GPIO expander 0x39) |
+| **Peripheral power** | Regulated 5.0 V (on-board boost), switchable over I²C |
 | **UART Bridge** | SC16IS740IPW (13.56 MHz) |
-| **Logic Supply (VDD)** | 3.0 V |
-| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
-| **Hardware Revision** | R1.0 |
+| **Logic supply (VDD)** | 3.0 V |
+| **Board interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
+| **Hardware revision** | R1.0 |
 
 ## Key components
 
-| Component | Part Number | Description |
+| Component | Part number | Description |
 | :--- | :--- | :--- |
 | **I²C-to-UART Bridge** | SC16IS740IPW | Single UART with I²C interface (address 0x4D); the S-Wire UART engine |
 | **GPIO Expander** | TCA9534APW | I²C GPIO expander (address 0x39); switches the 5 V boost, resets the bridge, and handles its interrupt |
@@ -73,17 +73,17 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 
 ### CHESTER-X6 connector pinout
 
-![CHESTER-X6 terminal block pinout: +V, +5V, GND, DATA, DATA, GND, +5V, +V on pins 1-8](images/tb-chester-x6.png)
+![CHESTER-X6 terminal block pinout: +V, +5 V, GND, DATA, DATA, GND, +5 V, +V on pins 1-8](images/tb-chester-x6.png)
 
 | Pin | Signal | Type | Description |
 | :---: | :--- | :--- | :--- |
 | 1 | +V | Power | System positive rail (depends on the CHESTER power-supply option) |
-| 2 | +5V | Power Output | Regulated 5.0 V peripheral supply (from the on-board boost) |
+| 2 | +5 V | Power Output | Regulated 5.0 V peripheral supply (from the on-board boost) |
 | 3 | GND | Ground | System ground reference |
 | 4 | DATA | S-Wire | S-Wire data line |
 | 5 | DATA | S-Wire | S-Wire data line (same net as pin 4) |
 | 6 | GND | Ground | System ground reference |
-| 7 | +5V | Power Output | Regulated 5.0 V peripheral supply (same net as pin 2) |
+| 7 | +5 V | Power Output | Regulated 5.0 V peripheral supply (same net as pin 2) |
 | 8 | +V | Power | System positive rail (same net as pin 1) |
 
 :::info
@@ -103,7 +103,7 @@ All S-Wire traffic is carried over the UART bridge, and peripheral power, reset,
 
 ## S-Wire connection
 
-Wire each S-Wire peripheral to the terminal block: **DATA** (pin 4 or 5), **+5V** (pin 2 or 7) for power, and **GND** (pin 3 or 6). Because the DATA, +5 V, +V, and GND pins are mirrored across the block, peripherals can be **daisy-chained**: wire one peripheral to pins 1–4 and another to pins 5–8, or loop the bus through.
+Wire each S-Wire peripheral to the terminal block: **DATA** (pin 4 or 5), **+5 V** (pin 2 or 7) for power, and **GND** (pin 3 or 6). Because the DATA, +5 V, +V, and GND pins are mirrored across the block, peripherals can be **daisy-chained**: wire one peripheral to pins 1–4 and another to pins 5–8, or loop the bus through.
 
 All peripherals must share a common **GND** with the module. Enable the 5 V supply over I²C (via the expander) before communicating with the peripherals.
 

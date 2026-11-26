@@ -87,9 +87,9 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Type   | Value              |
 |--------|--------------------|
 | Battery | 4 × 2700 mAh ER14505 Li-SOCl2 (replaceable) |
-| USB Power | 5V/1A via Type-C |
-| Battery Life (AM308) | Over 1 year (10 min interval @ 25°C) |
-| Battery Life (AM308L) | Around 1.5 years (10 min interval @ 25°C) |
+| USB Power | 5 V/1A via Type-C |
+| Battery life (AM308) | Over 1 year (10 min interval @ 25 °C) |
+| Battery life (AM308L) | Around 1.5 years (10 min interval @ 25 °C) |
 
 ---
 
@@ -97,33 +97,33 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Technology | LoRaWAN® |
 | Antenna | Internal Antennas |
 | Frequency | CN470 / RU864 / IN865 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Tx power | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Sensitivity | -137 dBm @300bps |
 | Mode | OTAA / ABP Class A |
 | **Sensors** | |
-| Temperature | −20 to +60 °C, Accuracy ±0.2°C, Resolution 0.1°C |
-| Humidity | 0–100 % RH, Accuracy ±2% RH, Resolution 0.5% |
+| Temperature | −20 to +60 °C, Accuracy ±0.2 °C, Resolution 0.1 °C |
+| Humidity | 0–100 % RH, Accuracy ±2 % RH, Resolution 0.5 % |
 | Motion (PIR) | 80° H, 55° V, max 5m, Status: Vacant/Occupied |
 | Light | 0–60000 Lux (6 levels) |
 | TVOC | IAQ rating 1.00–5.00, Accuracy ±1, Resolution 0.01 |
-| Barometric Pressure | 260–1260 hPa, Accuracy ±0.5 hPa, Resolution 0.1 hPa |
-| CO₂ | 400–5000 ppm, Accuracy ±(50 ppm + 5%) |
+| Barometric pressure | 260–1260 hPa, Accuracy ±0.5 hPa, Resolution 0.1 hPa |
+| CO₂ | 400–5000 ppm, Accuracy ±(50 ppm + 5 %) |
 | PM2.5 & PM10 | 0–1000 μg/m³, Accuracy ±10 μg/m³ (0–100 μg/m³) |
-| **Interfaces & Display** | |
+| **Interfaces & display** | |
 | Display | 4.2" E-Ink (AM308 only, not on AM308L) |
 | Buttons | Power + Reset |
 | LED & Buzzer | Status LED + Alarm buzzer |
 | USB | Type-C (power/config/console) |
 | **Software** | NFC / USB configuration, thresholds, calibration, data storage (18k entries) |
-| **Physical Characteristics** | |
-| Power Supply | 4 × ER14505 batteries or 5V/1A (USB-C) |
-| Operating Temp | -20°C ~ +60°C (E-Ink: 0°C–40°C for AM308) |
-| Relative Humidity | 10–90 % (non-condensing) |
-| Ingress Protection | IP30 |
+| **Physical characteristics** | |
+| Power supply | 4 × ER14505 batteries or 5 V/1A (USB-C) |
+| Operating temp | -20 °C ~ +60 °C (E-Ink: 0 °C–40 °C for AM308) |
+| Relative humidity | 10–90 % (non-condensing) |
+| Ingress protection | IP30 |
 | Housing | ABS, White |
 | Dimensions | 100.8 × 114 × 22 mm (3.97 × 4.49 × 0.87 in) |
 | Weight | 148 g |

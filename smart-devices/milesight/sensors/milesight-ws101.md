@@ -88,31 +88,31 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Technology | LoRaWAN®, Milesight D2D |
 | Antenna | Internal |
 | Frequency | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Tx power | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Sensitivity | -137 dBm @300bps |
 | Mode | OTAA / ABP Class A |
-| **Button Functions** | |
-| Button Types | 1× External Button, 1× Power/Reset Button (internal) |
-| Press Actions | Short press, long press, double press |
-| Response Time | Less than 1 second |
-| User Defined Actions | All press actions can be customized |
+| **Button functions** | |
+| Button types | 1× External Button, 1× Power/Reset Button (internal) |
+| Press actions | Short press, long press, double press |
+| Response time | Less than 1 second |
+| User defined actions | All press actions can be customized |
 | **Indicators** | |
 | LED | 1× LED indicator |
 | Buzzer | Yes |
 | **Features** | |
 | Configuration | NFC / Downlink |
 | D2D Communication | Direct device-to-device without gateway |
-| Advanced Features | Panic button, scene control, automation triggers |
-| **Physical Characteristics** | |
-| Power Supply | 1 × ER14335 (1650 mAh) |
-| Battery Life | Over 5 years (10 presses per day) |
-| Operating Temp | -20°C ~ +60°C |
-| Humidity | ≤90% RH (non-condensing) |
-| Ingress Protection | IP30 |
+| Advanced features | Panic button, scene control, automation triggers |
+| **Physical characteristics** | |
+| Power supply | 1 × ER14335 (1650 mAh) |
+| Battery life | Over 5 years (10 presses per day) |
+| Operating temp | -20 °C ~ +60 °C |
+| Humidity | ≤90 % RH (non-condensing) |
+| Ingress protection | IP30 |
 | Dimensions | 50 × 50 × 18 mm |
 | Weight | 38.8 g (with battery) |
 | Material | ABS+PC |

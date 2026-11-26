@@ -48,21 +48,21 @@ In addition to the on-board accelerometer, the module's terminal block **breaks 
 
 | Parameter | Value |
 | :--- | :--- |
-| **Module Type** | Precision 3-axis accelerometer |
+| **Module type** | Precision 3-axis accelerometer |
 | **Accelerometer** | ADXL355 (3-axis MEMS) |
-| **Measurement Ranges** | ±2 g, ±4 g, ±8 g |
+| **Measurement ranges** | ±2 g, ±4 g, ±8 g |
 | **Resolution** | Up to 3.9 μg/LSB (at the ±2 g range) |
-| **Host Interface** | I²C |
+| **Host interface** | I²C |
 | **I²C Address** | 0x1D (fixed; ASEL tied low) |
-| **Interrupt Lines** | INT1 → GP0/A0, INT2 → GP1/A1 |
-| **User Digital I/O** | DIO1 (GP2/A2), DIO2 (GP3/A3), on the terminal block |
-| **Logic Supply (VDD)** | 3.0 V |
-| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
-| **Hardware Revision** | R1.0 |
+| **Interrupt lines** | INT1 → GP0/A0, INT2 → GP1/A1 |
+| **User digital I/O** | DIO1 (GP2/A2), DIO2 (GP3/A3), on the terminal block |
+| **Logic supply (VDD)** | 3.0 V |
+| **Board interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
+| **Hardware revision** | R1.0 |
 
 ## Key components
 
-| Component | Part Number | Description |
+| Component | Part number | Description |
 | :--- | :--- | :--- |
 | **Accelerometer** | ADXL355 | Low-noise, low-drift 3-axis MEMS accelerometer with a digital interface (used here in I²C mode) |
 

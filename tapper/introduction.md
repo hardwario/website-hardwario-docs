@@ -32,7 +32,7 @@ import Image from '@theme/IdealImage';
 
 | Feature | Description |
 |---|---|
-| **NFC Tag Detection** | Verified with MIFARE Classic 1k tags. |
-| **Secure MQTT Communication** | Reliable messaging with TLS support. |
-| **Tamper Detection** | Mechanical switch detects enclosure tampering. |
-| **Visual & Acoustic Feedback** | Integrated RGB LED and buzzer for status indication. |
+| **NFC Tag detection** | Verified with MIFARE Classic 1k tags. |
+| **Secure MQTT communication** | Reliable messaging with TLS support. |
+| **Tamper detection** | Mechanical switch detects enclosure tampering. |
+| **Visual & acoustic feedback** | Integrated RGB LED and buzzer for status indication. |

@@ -73,17 +73,17 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 
 ### Zapojení konektoru CHESTER-X6 {#chester-x6-connector-pinout}
 
-![Zapojení svorkovnice CHESTER-X6: +V, +5V, GND, DATA, DATA, GND, +5V, +V na pinech 1-8](../../../../../chester/extension-modules/images/tb-chester-x6.png)
+![Zapojení svorkovnice CHESTER-X6: +V, +5 V, GND, DATA, DATA, GND, +5 V, +V na pinech 1-8](../../../../../chester/extension-modules/images/tb-chester-x6.png)
 
 | Pin | Signál | Typ | Popis |
 | :---: | :--- | :--- | :--- |
 | 1 | +V | Napájení | Systémová kladná větev (napětí závisí na variantě napájení zařízení CHESTER) |
-| 2 | +5V | Napájecí výstup | Stabilizované napájení periferií 5,0 V (ze zvyšujícího měniče na desce) |
+| 2 | +5 V | Napájecí výstup | Stabilizované napájení periferií 5,0 V (ze zvyšujícího měniče na desce) |
 | 3 | GND | Zem | Systémová zem |
 | 4 | DATA | S-Wire | Datová linka S-Wire |
 | 5 | DATA | S-Wire | Datová linka S-Wire (stejná síť jako pin 4) |
 | 6 | GND | Zem | Systémová zem |
-| 7 | +5V | Napájecí výstup | Stabilizované napájení periferií 5,0 V (stejná síť jako pin 2) |
+| 7 | +5 V | Napájecí výstup | Stabilizované napájení periferií 5,0 V (stejná síť jako pin 2) |
 | 8 | +V | Napájení | Systémová kladná větev (stejná síť jako pin 1) |
 
 :::info
@@ -103,7 +103,7 @@ Veškerý provoz S-Wire jde přes převodník UART, napájení periferií, reset
 
 ## Připojení S-Wire {#s-wire-connection}
 
-Každou periferii S-Wire zapojte do svorkovnice: **DATA** (pin 4 nebo 5), **+5V** (pin 2 nebo 7) pro napájení a **GND** (pin 3 nebo 6). Protože jsou piny DATA, +5 V, +V a GND na svorkovnici zrcadlené, lze periferie **řetězit**: jednu zapojíte na piny 1–4 a druhou na piny 5–8, nebo sběrnici provlečete dál.
+Každou periferii S-Wire zapojte do svorkovnice: **DATA** (pin 4 nebo 5), **+5 V** (pin 2 nebo 7) pro napájení a **GND** (pin 3 nebo 6). Protože jsou piny DATA, +5 V, +V a GND na svorkovnici zrcadlené, lze periferie **řetězit**: jednu zapojíte na piny 1–4 a druhou na piny 5–8, nebo sběrnici provlečete dál.
 
 Všechny periferie musí mít s modulem společnou zem **GND**. Než začnete s periferiemi komunikovat, zapněte po I²C (přes expandér) napájení 5 V.
 

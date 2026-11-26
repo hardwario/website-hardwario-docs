@@ -32,7 +32,7 @@ Each of the four outputs has a resettable PTC fuse protection (femtoSMDC005F). E
 
 ## Pin configuration and functions
 
-| Position | Signal Name | Signal Description                    |
+| Position | Signal name | Signal description                    |
 | -------- | ----------- | ------------------------------------- |
 | 1        | GND         | System ground signal                  |
 | 2        | CH1         | Channel 1 voltage output switch       |
@@ -41,7 +41,7 @@ Each of the four outputs has a resettable PTC fuse protection (femtoSMDC005F). E
 | 5        | CH4         | Channel 4 voltage output switch       |
 | 6        | GND         | System ground signal                  |
 | 7        | GND         | System ground signal                  |
-| 8        | VIN         | DC power supply voltage input (6-28V) |
+| 8        | VIN         | DC power supply voltage input (6-28 V) |
 
 ## Schematic diagram
 

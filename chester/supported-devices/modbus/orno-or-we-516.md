@@ -141,7 +141,7 @@ app config show
 <details>
 <summary><b>Show Detailed Description of Commands</b></summary>
 
-| Command | Default Value | Description |
+| Command | Default value | Description |
 | :--- | :--- | :--- |
 | **`app config serial-mode "modbus"`** | `"transparent"` | Switches the built-in serial line from transparent mode to Modbus RTU master mode. |
 | **`app config serial-baudrate 9600`** | `9600` | Sets the communication speed (Baud rate). It must match the settings on the energy meter's display. |
@@ -161,7 +161,7 @@ app config show
 
 ### Default Modbus communication configuration
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Address | Baud rate | Parity | Stop bit |
 |---------|-----------|--------|-----------|
 | 1       | 9.6k      | Even   | 1         |
 
@@ -174,7 +174,7 @@ Make sure to match the settings in CHESTER according to the values configured in
 
 ### Measured values
 
-| Measured Value | Key / Path                                   |
+| Measured value | Key / path                                   |
 |----------------|----------------------------------------------|
 | Power          | E_ENERGY_METER.METER_3.POWER.MEASUREMENTS    |
 | Frequency      | E_ENERGY_METER.METER_3.FREQUENCY.MEASUREMENTS|

@@ -37,9 +37,9 @@ import Image from '@theme/IdealImage';
 
 | Feature | Description |
 |---|---|
-| **Industrial LoRaWAN Hotspot** | Waterproof outdoor gateway built on the MikroTik RBM33G platform. |
+| **Industrial LoRaWAN hotspot** | Waterproof outdoor gateway built on the MikroTik RBM33G platform. |
 | **LTE Backhaul** | Integrated cellular connectivity via Onomondo. |
-| **LoRaWAN Network Server** | ChirpStack or The Things Stack. Self-hosted or operated by HARDWARIO as a managed service, with Node-RED, remote configuration, and monitoring. |
-| **Optional HARDWARIO Services** | SIM card with connectivity for the LTE backhaul, managed network server, and secure remote access via OpenVPN. |
-| **Redundant Deployments** | Site configurations for high-availability coverage. |
-| **Secure VPN Tunnels** | Independent tunnels for LoRaWAN data and remote management. |
+| **LoRaWAN network server** | ChirpStack or The Things Stack. Self-hosted or operated by HARDWARIO as a managed service, with Node-RED, remote configuration, and monitoring. |
+| **Optional HARDWARIO services** | SIM card with connectivity for the LTE backhaul, managed network server, and secure remote access via OpenVPN. |
+| **Redundant deployments** | Site configurations for high-availability coverage. |
+| **Secure VPN tunnels** | Independent tunnels for LoRaWAN data and remote management. |

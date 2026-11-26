@@ -167,7 +167,7 @@ Pokud bránu napájíte přes ethernetový kabel RJ45 s PoE, **nepřipojujte k n
 | Správa | Web, CLI, SNMP, API, DeviceHub |
 | Spolehlivost | Záložní WAN (failover) |
 | **Napájení** | |
-| Zdroj | DC 9–24 V / PoE / 5V USB-C |
+| Zdroj | DC 9–24 V / PoE / 5 V USB-C |
 | Spotřeba | 2,9 W typ., 4,2 W max |
 | **Fyzické vlastnosti** | |
 | Rozměry | 180 × 110 × 55,5 mm |
@@ -175,6 +175,6 @@ Pokud bránu napájíte přes ethernetový kabel RJ45 s PoE, **nepřipojujte k n
 | Kryt | PC+ABS, bílá/černá |
 | Krytí | IP65 |
 | Instalace | Na stůl, na zeď, na sloup |
-| Provozní teplota | -40°C ~ +70°C |
-| Vlhkost | 0–95% RH (nekondenzující) |
+| Provozní teplota | -40 °C ~ +70 °C |
+| Vlhkost | 0–95 % RH (nekondenzující) |
 | **Certifikace** | CE, FCC, Telec, JATE, RCM, RoHS |

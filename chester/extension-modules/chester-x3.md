@@ -44,7 +44,7 @@ CHESTER-X3C provides 2 inputs for load cells (strain gauges) that can be used fo
 
 ## Pin configuration and functions
 
-| Position | Signal Name | Signal Description                |
+| Position | Signal name | Signal description                |
 | -------- | ----------- | --------------------------------- |
 | 1        | CH1P        | Channel 1: sensor positive supply |
 | 2        | CH1A        | Channel 1: sensor input A         |

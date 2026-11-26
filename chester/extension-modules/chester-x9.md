@@ -46,21 +46,21 @@ Each switch is driven **directly by one of the CHESTER-X GPIO pins** (GP0–GP3)
 
 | Parameter | Value |
 | :--- | :--- |
-| **Module Type** | 4-channel low-side switch output |
+| **Module type** | 4-channel low-side switch output |
 | **Channels** | 4 (CH1–CH4), independently controlled |
-| **Switch Device** | NCV8412ASTT1G (one per channel) |
-| **Switching Type** | Low-side (channel output switched to GND) |
-| **Load Supply Voltage** | 3–28 VDC (external), per channel |
-| **Continuous Load Current** | 2 A per channel |
-| **Peak Current Limit** | 5 A per channel |
+| **Switch device** | NCV8412ASTT1G (one per channel) |
+| **Switching type** | Low-side (channel output switched to GND) |
+| **Load supply voltage** | 3–28 VDC (external), per channel |
+| **Continuous load current** | 2 A per channel |
+| **Peak current limit** | 5 A per channel |
 | **Control** | Direct GPIO (GP0–GP3) |
-| **Host Interface** | None (no I²C/SPI device; direct GPIO control) |
-| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
-| **Hardware Revision** | R1.0 |
+| **Host interface** | None (no I²C/SPI device; direct GPIO control) |
+| **Board interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
+| **Hardware revision** | R1.0 |
 
 ## Key components
 
-| Component | Part Number | Description |
+| Component | Part number | Description |
 | :--- | :--- | :--- |
 | **Low-Side Switch (×4)** | NCV8412ASTT1G | Self-protected low-side switch with current limiting, thermal shutdown, integrated inductive clamp, and ESD protection; one per channel |
 

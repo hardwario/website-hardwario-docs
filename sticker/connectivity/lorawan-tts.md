@@ -57,7 +57,7 @@ for. STICKER is read from an **Android** or **iOS** phone with NFC.
 
 ## Select activation method
 
-| Activation Mode | Description | Required Credentials |
+| Activation mode | Description | Required credentials |
 |---|---|---|
 | **[OTAA (Over-The-Air Activation)](./tts-otaa.md)** *(Recommended)* | Dynamic session key negotiation on Join. Ensures maximum security. | **DevEUI**, **JoinEUI (AppEUI)**, **AppKey** |
 | **[ABP (Activation by Personalization)](./tts-abp.md)** | Pre-assigned static session keys. Skips the Join procedure entirely. | **DevAddr**, **NwkSKey**, **AppSKey** |

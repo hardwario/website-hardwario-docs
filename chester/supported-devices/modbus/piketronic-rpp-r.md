@@ -63,7 +63,7 @@ switch in the **down** position means logical `0`.
 
 #### Speed and parity (switch block `RATE`, switches 4-3-2-1)
 
-| RATE (4 3 2 1) | Baud Rate | Parity | Stop Bit |
+| RATE (4 3 2 1) | Baud rate | Parity | Stop bit |
 |----------------|-----------|--------|----------|
 | 0 0 0 0        | 19.2k     | Even   | 1        |
 | 0 0 0 1        | 9.6k      | Even   | 1        |
@@ -83,7 +83,7 @@ switch in the **down** position means logical `0`.
 
 ### Default Modbus communication configuration
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Address | Baud rate | Parity | Stop bit |
 |---------|-----------|--------|----------|
 | 1       | 19.2k     | Even   | 1        |
 
@@ -128,7 +128,7 @@ humidity, current settings, and the probe's device/firmware/serial identificatio
 Decoder: `com.hardwario.chester.app.serial`. Values appear under the `devices`
 array (`devices → data`).
 
-| Measured Value             | Key / Path                              | Unit   |
+| Measured value             | Key / path                              | Unit   |
 |----------------------------|-----------------------------------------|--------|
 | Radon concentration (1 h)  | devices → data → radon_concentration     | Bq/m³  |
 | Radon concentration (1 day)| devices → data → radon_concentration_day | Bq/m³  |

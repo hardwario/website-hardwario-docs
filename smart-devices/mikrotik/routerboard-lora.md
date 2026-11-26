@@ -15,8 +15,8 @@ The **MikroTik RouterBOARD LoRa** is a compact LoRaWAN gateway combining MikroTi
 | Parameter | Value |
 |---|---|
 | LoRa Channels | 8-channel (SX1301 or SX1302 concentrator) |
-| Frequency Bands | EU868, US915 (model-dependent) |
-| Network Software | RouterOS (MikroTik), Semtech UDP Packet Forwarder |
+| Frequency bands | EU868, US915 (model-dependent) |
+| Network software | RouterOS (MikroTik), Semtech UDP Packet Forwarder |
 | LAN Interface | 1× Gigabit Ethernet |
 | Power | PoE (802.3af) or DC |
 | Mounting | Compact desktop/DIN-rail |

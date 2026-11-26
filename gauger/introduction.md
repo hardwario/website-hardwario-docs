@@ -36,11 +36,11 @@ The device hosts a web-based user interface used for its configuration. It can a
 
 | Feature | Description |
 |---|---|
-| **Galvanically Separated Inputs** | Up to four isolated digital pulse-counting inputs. |
-| **Ethernet Connectivity** | 10/100 Base-T wired networking. |
-| **Wi-Fi Connectivity** | 2.4GHz Wi-Fi (802.11 b/g/n). |
-| **DIN Rail Mount** | Industrial DIN rail enclosure. |
-| **Modbus TCP Server** | Read counter values over Modbus TCP. |
-| **Web Configuration** | Built-in configuration web site. |
+| **Galvanically separated inputs** | Up to four isolated digital pulse-counting inputs. |
+| **Ethernet connectivity** | 10/100 Base-T wired networking. |
+| **Wi-Fi Connectivity** | 2.4 GHz Wi-Fi (802.11 b/g/n). |
+| **DIN rail mount** | Industrial DIN rail enclosure. |
+| **Modbus TCP server** | Read counter values over Modbus TCP. |
+| **Web configuration** | Built-in configuration web site. |
 | **HTTP API** | HTTP-based configuration API. |
 | **OTA Updates** | Over-the-air firmware update functionality. |

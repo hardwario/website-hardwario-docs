@@ -131,7 +131,7 @@ The kind comes from the channel. Each kind takes its own keys, given as `<key> <
 
 The optional **`dwell`** (default `0`) filters noise and chatter. Its meaning depends on the rule kind: on threshold rules it is a value in the channel's unit, on the other kinds a time in seconds (`0`-`3600`).
 
-| Rule Kind | `dwell` Behavior |
+| Rule kind | `dwell` Behavior |
 |---|---|
 | **Threshold** | Deadband (hysteresis) in the channel's units. A HIGH alarm clears once the value drops below `hi - dwell`, a LOW alarm once it rises above `lo + dwell`; between the limit and the deadband edge the alarm holds. `0` clears on re-entering the band. Valid range `0` to `hi - lo`. |
 | **State (Edge)** | The transition must hold for `dwell` seconds before the rule fires. Once fired, the rule waits `dwell` seconds before it can fire again. |

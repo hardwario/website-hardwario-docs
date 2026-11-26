@@ -193,7 +193,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 The table below links directly to the changelog section of each catalog application. The **Last Updated** column reflects when the changelog was last reviewed and updated in this documentation.
 
-| Application | Changelog | Last Updated |
+| Application | Changelog | Last updated |
 |---|---|---|
 | CHESTER Clime | [Changelog](/chester/catalog-applications/chester-clime/#changelog) | 2026-06-24 |
 | CHESTER Control | [Changelog](/chester/catalog-applications/chester-control/#changelog) | 2026-10-21 |

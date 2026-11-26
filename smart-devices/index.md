@@ -8,7 +8,7 @@ description: "Overview of third-party devices and hardware available through the
 
 Overview of third-party devices and hardware available through the HARDWARIO ecosystem and the [HARDWARIO Store](https://www.hardwario.store/cz/smart-devices).
 
-| Brand | Category | Key Products |
+| Brand | Category | Key products |
 |---|---|---|
 | [Milesight](/smart-devices/milesight) | LoRaWAN Sensors & Gateways | [AM319](/smart-devices/milesight/sensors/milesight-am300/milesight-am319), [EM400](/smart-devices/milesight/sensors/milesight-em400), [EM500](/smart-devices/milesight/sensors/milesight-em500), [UG63](/smart-devices/milesight/gateways/milesight-ug63), [UG65](/smart-devices/milesight/gateways/milesight-ug65) |
 | [RAKwireless](/smart-devices/rakwireless) | LoRaWAN Gateways | [RAK7268V2](/smart-devices/rakwireless/gateways/rak-RAK7268V2), [RAK7289V2](/smart-devices/rakwireless/gateways/rak-RAK7289V2) |

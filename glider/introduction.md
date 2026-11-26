@@ -39,10 +39,10 @@ import Image from '@theme/IdealImage';
 
 | Feature | Description |
 |---|---|
-| **Cellular Connectivity** | Compact LTE-M / NB-IoT built on the Nordic nRF9151. |
+| **Cellular connectivity** | Compact LTE-M / NB-IoT built on the Nordic nRF9151. |
 | **Long-Term Monitoring** | Low-power tracking of temperature, pulse counters, and dry-contact events. |
-| **Modbus RTU Support** | Native integration with industrial Modbus RTU sensors. |
-| **HARDWARIO Cloud Ready** | Ships preconfigured to connect straight to HARDWARIO Cloud. |
+| **Modbus RTU support** | Native integration with industrial Modbus RTU sensors. |
+| **HARDWARIO Cloud ready** | Ships preconfigured to connect straight to HARDWARIO Cloud. |
 | **USB-C / J-Link Consoles** | Configurable and diagnosable over either console. |
 
 

@@ -36,7 +36,7 @@ Each product lists available parts, i.e. which parts are standard and usually im
 
 **Available parts:**
 
-| Ordering Code     | Ordering Code      | Ordering Code      |
+| Ordering code     | Ordering code      | Ordering code      |
 | :---------------- | :----------------- | :----------------- |
 | `CHESTER-M-EL`    | `CHESTER-M-BEL`    | `CHESTER-M-AEL`    |
 | `CHESTER-M-CS`    | `CHESTER-M-BCS`    | `CHESTER-M-ACS`    |
@@ -76,7 +76,7 @@ The lux meter and hygrometer are always included. In the case of the "N" version
 
 **Available parts:**
 
-| Ordering Code      |
+| Ordering code      |
 | :----------------- |
 | `CHESTER-S1-BCMP`  |
 | `CHESTER-S1-BCMPT` |
@@ -112,7 +112,7 @@ An acoustic beeper is installed only if any of the pushbuttons are present.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-Z1`   |
 | `CHESTER-Z1-F` |
@@ -134,7 +134,7 @@ An acoustic beeper is installed only if any of the pushbuttons are present.
 
 **Available parts:**
 
-| Ordering Code    |
+| Ordering code    |
 | :--------------- |
 | `CHESTER-B1-AC`  |
 | `CHESTER-B1-AD`  |
@@ -153,7 +153,7 @@ An acoustic beeper is installed only if any of the pushbuttons are present.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-C1`   |
 | `CHESTER-C1-R` |
@@ -183,7 +183,7 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code            |
+| Ordering code            |
 | :----------------------- |
 | `CHESTER-K1-1C-2C-3C-4C` |
 | `CHESTER-K1-1C-2C-3C-4V` |
@@ -202,7 +202,7 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X0A:A` |
 | `CHESTER-X0A:B` |
@@ -218,7 +218,7 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X0B:A` |
 | `CHESTER-X0B:B` |
@@ -235,7 +235,7 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code    |
+| Ordering code    |
 | :--------------- |
 | `CHESTER-X1:A`   |
 | `CHESTER-X1:B`   |
@@ -253,7 +253,7 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X2:A` |
 | `CHESTER-X2:B` |
@@ -269,7 +269,7 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X3A:A` |
 | `CHESTER-X3A:B` |
@@ -285,7 +285,7 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X3B:A` |
 | `CHESTER-X3B:B` |
@@ -301,7 +301,7 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X3C:A` |
 | `CHESTER-X3C:B` |
@@ -323,7 +323,7 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X4:A` |
 | `CHESTER-X4:B` |
@@ -345,7 +345,7 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X6:A` |
 | `CHESTER-X6:B` |
@@ -361,7 +361,7 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X7:A` |
 | `CHESTER-X7:B` |
@@ -383,7 +383,7 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X8:A` |
 | `CHESTER-X8:B` |
@@ -399,7 +399,7 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X9:A` |
 | `CHESTER-X9:B` |
@@ -415,7 +415,7 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X10:A` |
 | `CHESTER-X10:B` |
@@ -424,7 +424,7 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 For more details and drawings, see [Enclosures](hardware-description/enclosures.md#list-of-enclosures) article.
 
-| Ordering Code | Application                    | Note    |
+| Ordering code | Application                    | Note    |
 | ------------- | ------------------------------ | ------- |
 | CHESTER-E1-P  | CHESTER Clime                  |         |
 | CHESTER-E2-P  | CHESTER Counter                |         |
@@ -460,6 +460,6 @@ This product connects to the system I²C bus on CHESTER-M via the 5-pin JST conn
 
 **Available parts:**
 
-| Ordering Code |
+| Ordering code |
 | :------------ |
 | `CHESTER-S2`  |

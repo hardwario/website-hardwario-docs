@@ -99,9 +99,9 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Pokročilé funkce | automatická regulace teploty, topné plány, ochrana proti zamrznutí, detekce otevřeného okna, alarm neoprávněné manipulace |
 | **Teplotní senzor** | |
 | Typ | NTC |
-| Rozsah | -20°C ~ +60°C |
-| Přesnost | ±0,5°C (0–50°C) |
-| Rozlišení | 0,1°C |
+| Rozsah | -20 °C ~ +60 °C |
+| Přesnost | ±0,5 °C (0–50 °C) |
+| Rozlišení | 0,1 °C |
 | **Ostatní** | |
 | Displej | LED displej (bílé světlo) |
 | Tlačítka | ovládací kolečko, kalibrace / ochrana proti manipulaci (vnitřní), reset (vnitřní) |
@@ -110,8 +110,8 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | **Fyzické vlastnosti** | |
 | Napájení | 2 × AA Li-FeS2 (celkem 3000 mAh) |
 | Výdrž baterie | přibližně 5–8 let (podle SF) |
-| Provozní teplota | -20°C ~ +60°C |
-| Skladovací teplota | -40°C ~ +70°C (bez baterie) |
+| Provozní teplota | -20 °C ~ +60 °C |
+| Skladovací teplota | -40 °C ~ +70 °C (bez baterie) |
 | Vlhkost | 0–95 % RH (nekondenzující) |
 | Krytí | IP30 |
 | Rozměry | Φ52 × 90 mm |

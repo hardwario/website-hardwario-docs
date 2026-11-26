@@ -55,17 +55,17 @@ For more details see [**Ordering Codes**](../ordering-codes.md#chester-z).
 
 ## Technical specification
 
-* Input DC voltage range (VIN): **6-26 VDC**, suitable also for **12-18V solar panel\***
+* Input DC voltage range (VIN): **6-26 VDC**, suitable also for **12-18 V solar panel\***
 * Nominal battery voltage: **3.7 V**
 * Battery charging current: **100 mA**
 * Battery idle current consumption **55 μA** (without CHESTER-M)
 * Recommended battery type for outdoor use: Samsung ICR18650-22P**
-* Operating temperature: **-40 to +70°C** (without Li-Ion Battery)
-* Storage temperature: **-40 to +85°C** (without Li-Ion Battery)
+* Operating temperature: **-40 to +70 °C** (without Li-Ion Battery)
+* Storage temperature: **-40 to +85 °C** (without Li-Ion Battery)
 
 _\*Optimal photovoltaic solar panel for CHESTER: 12 V / 10 W_
 
-_\** Appropriate for solar panel application, charging temperature range -20 to +45°C, discharging -20 to +70°C_
+_\** Appropriate for solar panel application, charging temperature range -20 to +45 °C, discharging -20 to +70°C_
 
 ## Battery charger and protection circuit
 **CHESTER-Z1** implements the MCP73833 charger IC and the AP9101C protection IC protecting the battery by detecting overcharge voltage, overdischarge voltage, overcharge/discharge current.
@@ -76,7 +76,7 @@ For the initial start powered from the battery without a DC input power supply, 
 
 :::
 
-Due to the low charging current (100 mA), the charging temperature range is extended to -20 to +45°C. Optimal Li-Ion battery type for low temperature outdoor application is Samsung ICR18650-22P.
+Due to the low charging current (100 mA), the charging temperature range is extended to -20 to +45 °C. Optimal Li-Ion battery type for low temperature outdoor application is Samsung ICR18650-22P.
 
 ## Module drawing
 
@@ -84,7 +84,7 @@ Due to the low charging current (100 mA), the charging temperature range is exte
 
 ## Input / output and functions
 
-| Position | Name    | Signal Description                  |
+| Position | Name    | Signal description                  |
 | -------- | ------- | ----------------------------------- |
 | JP1      | VIN     | 6-26 V DC Power Input JST connector |
 | JP2      | VIN     | 6-26 V DC Power Input terminal      |

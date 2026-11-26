@@ -90,7 +90,7 @@ The application operates in a three-stage pipeline:
 
 :::info
 
-A random jitter of 0-20% is added to the report interval to prevent multiple devices from transmitting simultaneously.
+A random jitter of 0-20 % is added to the report interval to prevent multiple devices from transmitting simultaneously.
 
 :::
 

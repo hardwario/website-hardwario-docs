@@ -19,7 +19,7 @@ Naše dokumentace pokrývá tyto produkty Milesight:
 
 * **Senzory prostředí (řada AM/EM):** Pokročilá zařízení, která sledují kvalitu vnitřního ovzduší (IAQ), teplotu, vlhkost, CO2 a obsazenost. Mnoho modelů má displej e-Ink, který data přehledně zobrazuje přímo na místě.
 * **Brány LoRaWAN (řada UG):** Robustní vnitřní i venkovní brány, které propojují senzory s cloudem. Mají vestavěný síťový server a vysoký výpočetní výkon.
-* **Kontroléry IoT (řada UC):** Zařízení, která do sítí LoRaWAN připojí starší senzory a akční členy (4-20mA, Modbus RS-485, GPIO).
+* **Kontroléry IoT (řada UC):** Zařízení, která do sítí LoRaWAN připojí starší senzory a akční členy (4-20 mA, Modbus RS-485, GPIO).
 
 ### Proč zvolit Milesight? {#why-choose-milesight}
 

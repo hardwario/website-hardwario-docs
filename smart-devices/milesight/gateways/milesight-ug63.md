@@ -146,7 +146,7 @@ This built-in network server allows you to manage sensors directly through the g
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Hardware System** | |
+| **Hardware system** | |
 | CPU | Dual-core 240 MHz, 32-bit Xtensa® LX7 |
 | Memory | 8 MB PSRAM |
 | Flash | 16 MB |
@@ -154,11 +154,11 @@ This built-in network server allows you to manage sensors directly through the g
 | Channels | 8 (half-duplex) |
 | Antenna | 1 × External |
 | Frequency | CN470 / IN865 / EU868 / RU864 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | Max. 27 dBm |
+| Tx power | Max. 27 dBm |
 | Sensitivity | -140 dBm @292bps |
 | Protocol | V1.0.3 Class A/C |
-| Supported Devices | approx. 2 000 |
-| Advanced Features | Packet filter, Retransmission |
+| Supported devices | approx. 2 000 |
+| Advanced features | Packet filter, Retransmission |
 | **Interfaces** | |
 | Ethernet | 1 × RJ45 (10/100 Mbps, Auto) |
 | Cellular (opt.) | 4G LTE Cat1/GSM |
@@ -167,17 +167,17 @@ This built-in network server allows you to manage sensors directly through the g
 | Buttons | Reset |
 | LED | System, LTE |
 | **Network** | HTTP(S), MQTT, VPN, OpenVPN client |
-| Config/Update | Web, API, DeviceHub |
+| Config/update | Web, API, DeviceHub |
 | **Power** | |
-| Supply | 5V/2A (USB-C) / 5–12V DC / PoE splitter |
+| Supply | 5 V/2A (USB-C) / 5–12 V DC / PoE splitter |
 | Consumption | 1.3 W typ., 3.1 W max |
-| **Physical Characteristics** | |
+| **Physical characteristics** | |
 | Dimensions | Ø115 × 21 mm (excl. antenna) |
 | Weight | 140 g (non-cellular), 158 g (cellular) |
 | Housing | PC+ABS, White |
-| Ingress Protection | IP30 |
+| Ingress protection | IP30 |
 | Installation | Desktop / Wall / Ceiling |
-| Operating Temp | -20°C ~ +50°C |
-| Humidity | 0–95% RH (non-cond.) |
+| Operating temp | -20 °C ~ +50 °C |
+| Humidity | 0–95 % RH (non-cond.) |
 | **Approvals** | CE, FCC |
 

@@ -95,33 +95,33 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Technology | LoRaWAN® |
 | Antenna | Internal Antennas |
 | Frequency | CN470 / RU864 / IN865 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Tx power | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Sensitivity | -137 dBm @300bps |
 | Mode | OTAA / ABP Class C |
 | **Sensors** | |
-| Temperature | −20 to +60 °C, Accuracy ±0.2–0.3 °C, Resolution 0.1°C |
-| Humidity | 0–100 % RH, Accuracy ±2% RH, Resolution 0.5% |
+| Temperature | −20 to +60 °C, Accuracy ±0.2–0.3 °C, Resolution 0.1 °C |
+| Humidity | 0–100 % RH, Accuracy ±2 % RH, Resolution 0.5 % |
 | Motion (PIR) | 80° H, 55° V, max 5m |
 | Light | 0–60000 Lux (6 levels) |
 | TVOC | IAQ rating 1–5 or 0–2000 μg/m³ |
-| Barometric Pressure | 260–1260 hPa, Accuracy ±0.5 hPa |
-| CO₂ | 400–2000 ppm, Accuracy ±(50 ppm + 5%) |
+| Barometric pressure | 260–1260 hPa, Accuracy ±0.5 hPa |
+| CO₂ | 400–2000 ppm, Accuracy ±(50 ppm + 5 %) |
 | PM2.5 & PM10 | 0–1000 μg/m³, ±10 μg/m³ (0–100) |
-| Formaldehyde (HCHO) | 0–1.25 mg/m³, Accuracy ±10% |
-| Ozone (O₃) | 0–10 ppm, Accuracy ±5% FS |
-| **Interfaces & Display** | |
+| Formaldehyde (HCHO) | 0–1.25 mg/m³, Accuracy ±10 % |
+| Ozone (O₃) | 0–10 ppm, Accuracy ±5 % FS |
+| **Interfaces & display** | |
 | Display | 4.2" E-Ink |
 | Buttons | Power + Reset |
 | LED & Buzzer | Status LED + Alarm buzzer |
 | USB | Type-C (power/config/console) |
 | **Software** | NFC / USB configuration, thresholds, calibration, data storage (18k entries) |
-| **Physical Characteristics** | |
-| Power Supply | 5V/1A (USB-C) |
-| Operating Temp | -20°C ~ +60°C (E-Ink: 0°C–40°C) |
+| **Physical characteristics** | |
+| Power supply | 5 V/1A (USB-C) |
+| Operating temp | -20 °C ~ +60 °C (E-Ink: 0 °C–40 °C) |
 | Housing | ABS, White |
 | Dimensions | 100.8 × 114 × 22 mm |
 | Weight | 148 g |

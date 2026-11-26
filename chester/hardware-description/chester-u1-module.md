@@ -7,7 +7,7 @@ import Image from '@theme/IdealImage';
 
 # CHESTER-U1 module
 
-**CHESTER-U1** is a cost-optimized **CHESTER-M** mainboard compressed to the **small 38x38mm module**.
+**CHESTER-U1** is a cost-optimized **CHESTER-M** mainboard compressed to the **small 38x38 mm module**.
 
 Instead of using **CHESTER-M** and putting extension modules in it, you design a two-layer carrier board and put **CHESTER-U1** in it.
 

@@ -84,7 +84,7 @@ The hardware of this application consists of the following ordering codes:
 
 * `CHESTER-M-BCGLS`: Standard mainboard
 * `CHESTER-S1-BCMP`: Integrated multi-sensor
-* `CHESTER-X10`: External power 6-28V with Li-Ion battery
+* `CHESTER-X10`: External power 6-28 V with Li-Ion battery
 * `CHESTER-E7-LP`: Enclosure with SMA pigtail
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
@@ -1072,7 +1072,7 @@ In each structure with the current configuration, there are six aggregated value
 - **Improved**: DS18B20 1-Wire thermometer support, with improved reliability and cleaner multi-sensor handling
 - **Changed**: HARDWARIO Cloud protocol adopted (CBOR encoding, new API endpoints); Cloud Legacy variants remain available in a separate firmware table
 - **Changed**: Single combined firmware binary for both LTE and LoRaWAN; network selected via `app config mode lte` / `app config mode lrw`
-- **Removed**: Clime 1W and Clime 1WH variants dropped from HARDWARIO Cloud firmware builds (remain available under Cloud Legacy)
+- **Removed**: Clime 1 W and Clime 1WH variants dropped from HARDWARIO Cloud firmware builds (remain available under Cloud Legacy)
 
 :::info
 

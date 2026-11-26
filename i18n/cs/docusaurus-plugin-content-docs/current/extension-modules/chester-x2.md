@@ -39,9 +39,11 @@ Modul CHESTER-X2 nabízí rozhraní TTL/UART a RS-485 (např. pro komunikaci Mod
 | 5        | EN          | Povolovací vstup         |
 | 6        | B           | Vstup/výstup sběrnice    |
 | 7        | A           | Vstup/výstup sběrnice    |
-| 8        | +V          | Systémová kladná větev (*) |
+| 8        | +V          | Systémová kladná větev |
 
-*Poznámka: Napětí systémové kladné větve závisí na variantě napájení zařízení CHESTER.
+:::note
+Napětí systémové kladné větve závisí na variantě napájení zařízení CHESTER.
+:::
 
 ## Schéma zapojení {#schematic-diagram}
 

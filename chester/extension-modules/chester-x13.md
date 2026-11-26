@@ -48,21 +48,21 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 
 | Parameter | Value |
 | :--- | :--- |
-| **Interface Type** | CAN / CAN FD |
-| **Bit Rate** | Up to 1 Mbit/s (classic CAN), up to 5 Mbit/s (CAN FD) |
+| **Interface type** | CAN / CAN FD |
+| **Bit rate** | Up to 1 Mbit/s (classic CAN), up to 5 Mbit/s (CAN FD) |
 | **CAN Controller** | MCP2518FD (external, SPI) |
 | **CAN Transceiver** | TCAN3413 |
-| **Host Interface** | SPI |
-| **Bus Termination** | On-board approx. 120 Ω, disconnected by default |
-| **Power Input (+VIN)** | 6-28 VDC (optional external supply) |
-| **Power Output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
-| **Bus Output** | CANH / CANL on the terminal block |
-| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
-| **Hardware Revision** | R1.2 |
+| **Host interface** | SPI |
+| **Bus termination** | On-board approx. 120 Ω, disconnected by default |
+| **Power input (+VIN)** | 6-28 VDC (optional external supply) |
+| **Power output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
+| **Bus output** | CANH / CANL on the terminal block |
+| **Board interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
+| **Hardware revision** | R1.2 |
 
 ## Key components
 
-| Component | Part Number | Description |
+| Component | Part number | Description |
 | :--- | :--- | :--- |
 | **CAN Controller** | MCP2518FD | External CAN FD controller with SPI interface |
 | **CAN Transceiver** | TCAN3413 | CAN FD transceiver (physical bus interface) |

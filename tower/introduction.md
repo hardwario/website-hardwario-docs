@@ -42,8 +42,8 @@ It is used in industrial applications, STEM education, and hobby projects (home 
 
 | Feature | Description |
 |---|---|
-| **Modular Hardware** | Snap-together Tags and Modules for sensors and actuators. |
+| **Modular hardware** | Snap-together Tags and Modules for sensors and actuators. |
 | **Open-Source & Open-Hardware** | Fully open platform, free to inspect and extend. |
-| **Wireless Sub-GHz Radio** | Communication between modules without wiring. |
+| **Wireless sub-GHz radio** | Communication between modules without wiring. |
 | **Ultra-Low-Power Design** | Long battery life for wireless nodes. |
-| **Broad Applicability** | Suitable for industrial, STEM education, and hobby projects. |
+| **Broad applicability** | Suitable for industrial, STEM education, and hobby projects. |

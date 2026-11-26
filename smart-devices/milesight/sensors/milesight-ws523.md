@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # Milesight sensor WS523
 
-Milesight WS523 is a **smart portable socket** with **LoRaWAN connectivity** designed for **remote control and power consumption monitoring**. It enables **scheduled on/off control** of electronic devices, tracks **power consumption** (voltage, current, active power, power factor), and features **overcurrent/overload protection**. With **±3% measurement accuracy**, **NFC configuration**, and support for multiple socket types (US, EU, AU, UK, CN), it's ideal for energy management, smart homes, and building automation applications.
+Milesight WS523 is a **smart portable socket** with **LoRaWAN connectivity** designed for **remote control and power consumption monitoring**. It enables **scheduled on/off control** of electronic devices, tracks **power consumption** (voltage, current, active power, power factor), and features **overcurrent/overload protection**. With **±3 % measurement accuracy**, **NFC configuration**, and support for multiple socket types (US, EU, AU, UK, CN), it's ideal for energy management, smart homes, and building automation applications.
 
 <div class="container">
   <div class="row">
@@ -88,33 +88,33 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Technology | LoRaWAN® |
 | Antenna | Internal |
 | Frequency | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Tx power | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Sensitivity | -137 dBm @300bps |
 | Mode | OTAA / ABP Class C |
-| **Power Monitoring** | |
-| Voltage Measurement | VAC |
-| Current Measurement | mA |
-| Active Power | W |
-| Power Factor | % |
-| Power Consumption | kWh |
-| Measurement Accuracy | Typical ±3%, Maximum ±5% |
-| **Load Capacity** | |
-| Socket Types | US-15A / EU-16A / AU-10A / UK-13A / CN versions |
-| Operating Voltage | 100-250 VAC, 50-60 Hz |
-| Max Load | 10A-16A (depending on version) |
+| **Power monitoring** | |
+| Voltage measurement | VAC |
+| Current measurement | mA |
+| Active power | W |
+| Power factor | % |
+| Power consumption | kWh |
+| Measurement accuracy | Typical ±3 %, Maximum ±5 % |
+| **Load capacity** | |
+| Socket types | US-15A / EU-16A / AU-10A / UK-13A / CN versions |
+| Operating voltage | 100-250 VAC, 50-60 Hz |
+| Max load | 10A-16A (depending on version) |
 | **Features** | |
-| Remote Control | On/off switching via app/downlink |
+| Remote control | On/off switching via app/downlink |
 | Scheduling | Time-based automated switching |
 | Protection | Overcurrent/overload protection |
 | Configuration | NFC / Downlink |
-| **Physical Characteristics** | |
-| Power Supply | 100-250 VAC mains power |
-| Operating Temp | -20°C ~ +60°C |
-| Ingress Protection | IP20 |
+| **Physical characteristics** | |
+| Power supply | 100-250 VAC mains power |
+| Operating temp | -20 °C ~ +60 °C |
+| Ingress protection | IP20 |
 | Dimensions | 110 × 62.3 × 34.6 mm |
 | Weight | 117.5 g |
 | Material | Polycarbonate (UL94 V0) |

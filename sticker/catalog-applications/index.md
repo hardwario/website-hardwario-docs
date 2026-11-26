@@ -13,7 +13,7 @@ HARDWARIO STICKER is available in three ready-to-use functional variants: **STIC
 
 ## Variant comparison
 
-| Variant | Primary Purpose | Integrated Sensors / Inputs | External Expansion | Key Use Cases |
+| Variant | Primary purpose | Integrated sensors / inputs | External expansion | Key use cases |
 |---|---|---|---|---|
 | [**STICKER Clime**](/sticker/catalog-applications/sticker-clime/) | Environmental monitoring | Temperature, Relative Humidity, Ambient Light, Barometric Pressure | – | Indoor climate tracking, cold supply chain, greenhouses, cleanrooms |
 | [**STICKER Input**](/sticker/catalog-applications/sticker-input/) | Industrial & probe interface | Temperature, Relative Humidity, 2× external inputs (each digital, 0–24 V analog or S0 pulse counter) | 1-Wire bus (Dallas, Machine Probe), S0 pulse counters | Energy meter reading, machine status, industrial PLC monitoring |
@@ -27,7 +27,7 @@ HARDWARIO STICKER is available in three ready-to-use functional variants: **STIC
 
 **STICKER Clime** is designed for precise microclimate monitoring in buildings, warehouses, and industrial facilities.
 
-* **Integrated Sensors:** Sensirion SHT40 sensor (**±0.2 °C** temperature, **±2%** humidity), OPT3001 ambient light sensor, and MPL3115A2 barometric pressure sensor.
+* **Integrated Sensors:** Sensirion SHT40 sensor (**±0.2 °C** temperature, **±2 %** humidity), OPT3001 ambient light sensor, and MPL3115A2 barometric pressure sensor.
 * **Key Benefit:** Complete overview of environmental quality and ambient conditions without needing external sensor cables.
 * **v2.0 Enhancements:** Temperature, humidity, pressure, illuminance and the barometer's own temperature can all be used in alarm rules and recorded in the history. The onboard temperature/humidity sensor can be switched off with `cap-sht`. On threshold rules, `dwell` is now a hysteresis band in the channel's units (for example °C), not a time in seconds.
 

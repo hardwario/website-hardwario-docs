@@ -22,7 +22,7 @@ Tento článek popisuje rozšiřující modul CHESTER-X1.
 
 ## Přehled modulu {#module-overview}
 
-Modul CHESTER-X1 má 8 nezávislých kanálů 1-Wire, ke kterým připojíte digitální senzory (např. Dallas DS18B20) nebo jakékoli jiné periferie 1-Wire. Rozhraní obstarává obvod Maxim DS2482S-800+ a zvyšující měnič 5 V, takže modul podporuje i 5V periferie 1-Wire.
+Modul CHESTER-X1 má 8 nezávislých kanálů 1-Wire, ke kterým připojíte digitální senzory (např. Dallas DS18B20) nebo jakékoli jiné periferie 1-Wire. Rozhraní obstarává obvod Maxim DS2482S-800+ a zvyšující měnič 5 V, takže modul podporuje i 5 V periferie 1-Wire.
 
 ## Schéma zapojení pinů zařízení CHESTER {#chester-pin-configuration-diagram}
 

@@ -44,7 +44,7 @@ Běží na systému **WisGateOS 2** a k internetu se může připojit několika 
 | **Model** | RAK7289V2 |
 | **Kanály LoRa** | 8 nebo 16 kanálů |
 | **Frekvence** | EU868 (podporuje i další regiony) |
-| **Napájení** | **PoE (802.3af/at)** (48V) |
+| **Napájení** | **PoE (802.3af/at)** (48 V) |
 | **Příkon** | max. 12 W |
 | **Konektivita** | Ethernet, Wi-Fi, LTE Cat 4 |
 | **Antény** | Externí konektory typu N (LoRa, LTE, GPS) |

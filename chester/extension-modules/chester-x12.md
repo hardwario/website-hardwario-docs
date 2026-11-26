@@ -47,23 +47,23 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 
 | Parameter | Value |
 | :--- | :--- |
-| **Interface Type** | RS-232 |
+| **Interface type** | RS-232 |
 | **Protocol** | Full-duplex asynchronous serial |
-| **Baud Rate** | Up to 250 kbps (transceiver limit) / 3 Mbps (bridge limit) |
-| **Data Bits** | 5, 6, 7, 8 |
-| **Stop Bits** | 1, 1.5, 2 |
+| **Baud rate** | Up to 250 kbps (transceiver limit) / 3 Mbps (bridge limit) |
+| **Data bits** | 5, 6, 7, 8 |
+| **Stop bits** | 1, 1.5, 2 |
 | **Parity** | None, Even, Odd, Mark, Space |
-| **Flow Control** | Software (XON/XOFF) |
-| **Host Interface** | I²C |
-| **Power Input (+VIN)** | 6–28 VDC (optional external supply) |
-| **Power Output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
-| **Voltage Monitoring** | On-board 12-bit I²C ADC (TLA2021), measures the input voltage |
-| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
-| **Hardware Revision** | R1.2 |
+| **Flow control** | Software (XON/XOFF) |
+| **Host interface** | I²C |
+| **Power input (+VIN)** | 6–28 VDC (optional external supply) |
+| **Power output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
+| **Voltage monitoring** | On-board 12-bit I²C ADC (TLA2021), measures the input voltage |
+| **Board interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
+| **Hardware revision** | R1.2 |
 
 ## Key components
 
-| Component | Part Number | Description |
+| Component | Part number | Description |
 | :--- | :--- | :--- |
 | **I²C-to-UART Bridge** | SC16IS740IPW | Single UART with I²C interface, 64-byte FIFO |
 | **RS-232 Transceiver** | MAX3226EEUE+ | True RS-232 levels, ±15 kV ESD protection |

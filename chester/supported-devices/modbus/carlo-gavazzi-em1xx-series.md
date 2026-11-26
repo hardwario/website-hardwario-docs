@@ -88,7 +88,7 @@ If long presses don’t respond, try pressing the `◄` **(Left)** button closer
 
 #### Default Modbus communication configuration
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Address | Baud rate | Parity | Stop bit |
 |---------|-----------|--------|-----------|
 | 1       | 9.6k      | None   | 1         |
 
@@ -112,7 +112,7 @@ config save
 
 ### Measured values
 
-| Measured Value | Key / Path                                   |
+| Measured value | Key / path                                   |
 |----------------|----------------------------------------------|
 | Current        | E_ENERGY_METER.METER_1.CURRENT.MEASUREMENTS  |
 | Voltage        | E_ENERGY_METER.METER_1.VOLTAGE.MEASUREMENTS  |

@@ -52,7 +52,7 @@ Firmware v2.0.0 switched P2P to the TOWER protocol with no fallback. Nodes and t
 
 Both the node and the Hub must use the same radio parameters. P2P has no ADR, no power control and no SF change: every parameter is fixed per network.
 
-| Parameter | Default Value | Description |
+| Parameter | Default value | Description |
 |---|---|---|
 | **`p2p-frequency`** | `869525000` (869.525 MHz) | Carrier frequency in Hz, 863–870 MHz (EU868 band only). One channel for uplink, ACK and downlink. |
 | **`p2p-spreading-factor`** | `7` | Spreading factor 6–12. Higher means longer range and longer airtime. |

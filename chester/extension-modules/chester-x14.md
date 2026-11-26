@@ -47,20 +47,20 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 
 | Parameter | Value |
 | :--- | :--- |
-| **Interface Type** | 10/100 Mbps Ethernet |
-| **Ethernet Controller** | W5500 (hardwired TCP/IP, integrated MAC + PHY) |
-| **Host Interface** | SPI |
+| **Interface type** | 10/100 Mbps Ethernet |
+| **Ethernet controller** | W5500 (hardwired TCP/IP, integrated MAC + PHY) |
+| **Host interface** | SPI |
 | **Magnetics** | Integrated (ALANL100X1-DE12DT) |
-| **Galvanic Isolation** | Yes, from the on-board Ethernet magnetics |
-| **Power Input (+VIN)** | 6-28 VDC (optional external supply) |
-| **Power Output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
-| **Ethernet Output** | Differential Rx/Tx pairs on the terminal block |
-| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
-| **Hardware Revision** | R1.0 |
+| **Galvanic isolation** | Yes, from the on-board Ethernet magnetics |
+| **Power input (+VIN)** | 6-28 VDC (optional external supply) |
+| **Power output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
+| **Ethernet output** | Differential Rx/Tx pairs on the terminal block |
+| **Board interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
+| **Hardware revision** | R1.0 |
 
 ## Key components
 
-| Component | Part Number | Description |
+| Component | Part number | Description |
 | :--- | :--- | :--- |
 | **Ethernet Controller** | W5500 | Hardwired TCP/IP embedded Ethernet controller with SPI interface (MAC + PHY) |
 | **Ethernet Magnetics** | ALANL100X1-DE12DT | Integrated LAN transformer for the 10/100 interface |

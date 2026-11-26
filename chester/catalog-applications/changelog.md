@@ -145,7 +145,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 ### CHESTER Clime
 - New variants: SPS30 (particulate matter), Radon, TC (thermocouple)
 - Enabled DS18B20 (1-Wire) temperature sensors for all variants
-- Removed legacy Clime 1W and Clime 1WH variants (merged into base)
+- Removed legacy Clime 1 W and Clime 1WH variants (merged into base)
 - Merged Radon application into Clime as a variant
 - Added soil sensor LoRaWAN encoding
 - Added downlink watchdog

@@ -124,7 +124,7 @@ config save
 
 ### Default Modbus communication configuration
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Address | Baud rate | Parity | Stop bit |
 |--------|-----------|--------|----------|
 | 1      | 9.6k      | None   | 1        |
 
@@ -144,7 +144,7 @@ Make sure the CHESTER configuration **matches the meter configuration**.
 
 ### Measured values
 
-| Measured Value | Key / Path |
+| Measured value | Key / path |
 |---------------|------------|
 | Voltage       | E_ENERGY_METER.METER_1.VOLTAGE.MEASUREMENTS |
 | Current       | E_ENERGY_METER.METER_1.CURRENT.MEASUREMENTS |

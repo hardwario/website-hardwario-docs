@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 Modul Power Module nabízí dvě funkce:
 
 - Ovládání výkonných spotřebičů robustním relé (230 V / 16 A)
-- Připojení 5V adresovatelných LED (**WS2812B**) a jejich ovládání.
+- Připojení 5 V adresovatelných LED (**WS2812B**) a jejich ovládání.
 
 :::note
 

@@ -124,7 +124,7 @@ Learn how to activate and configure this feature in the [**CHESTER BLE Tag Subsy
 
 The periodic sending of data with `interval-report` has intentional jitter. This is used in case a lot of CHESTER devices are placed near each other, so they don't transmit at the same time if they have set the same interval. This jitter is random in the range of ±20 % of `interval-report`.
 
-For example, if `interval-report` is set to 100 seconds, you can receive periodic data where two messages have a time difference from 80 (-20%) to 120 (+20%) seconds.
+For example, if `interval-report` is set to 100 seconds, you can receive periodic data where two messages have a time difference from 80 (-20 %) to 120 (+20 %) seconds.
 
 In applications where there are multiple aggregated values, this jitter has a side-effect that sometimes you can see fewer or more aggregated values than expected. The missing values are not lost, they will be sent correctly in the next message.
 

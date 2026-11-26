@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # Milesight sensor VS373
 
-Milesight VS373 is a **non-contact fall detection sensor** designed for **elderly care and healthcare facilities**. It employs advanced **4D 60-GHz millimeter-wave radar technology** combined with **AI algorithms** to detect falls and abnormal movements with **up to 99% accuracy**. The sensor provides **24/7 monitoring** in dark and humid environments, offers **complete privacy protection** without image capture, and features **IP65 waterproof rating**. It supports multiple detection functions including bed presence, room occupancy, motionless detection, and breathing monitoring.
+Milesight VS373 is a **non-contact fall detection sensor** designed for **elderly care and healthcare facilities**. It employs advanced **4D 60-GHz millimeter-wave radar technology** combined with **AI algorithms** to detect falls and abnormal movements with **up to 99 % accuracy**. The sensor provides **24/7 monitoring** in dark and humid environments, offers **complete privacy protection** without image capture, and features **IP65 waterproof rating**. It supports multiple detection functions including bed presence, room occupancy, motionless detection, and breathing monitoring.
 
 <div class="container">
   <div class="row">
@@ -80,7 +80,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 ## Power supply
 | Type   | Value                      |
 |--------|----------------------------|
-| Power  | DC 5V/3A via USB Type-C    |
+| Power  | DC 5 V/3A via USB Type-C    |
 
 ---
 
@@ -88,33 +88,33 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Technology | LoRaWAN®, Milesight D2D, Wi-Fi 2.4 GHz |
 | Antenna | Internal |
 | Frequency | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Tx power | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Sensitivity | -137 dBm @300bps |
 | Mode | OTAA / ABP Class C |
-| **Radar Detection** | |
+| **Radar detection** | |
 | Technology | 4D 60-GHz mmWave Radar |
 | Transceiver | 24 transmitters, 22 receivers |
-| Field of View | 70° H × 140° V |
-| Detection Range | 2m×2m to 4m×5m (within 2.3-3m height) |
-| Fall Detection Accuracy | Up to 99% |
-| **Detection Functions** | |
-| Primary Features | Fall detection, bed presence, room occupancy |
-| Advanced Features | Motionless detection, breathing detection, bed exit alerts |
+| Field of view | 70° H × 140° V |
+| Detection range | 2m×2m to 4m×5m (within 2.3-3m height) |
+| Fall detection accuracy | Up to 99 % |
+| **Detection functions** | |
+| Primary features | Fall detection, bed presence, room occupancy |
+| Advanced features | Motionless detection, breathing detection, bed exit alerts |
 | **Interfaces** | |
-| Digital Output | 1× (60V/1A) |
+| Digital output | 1× (60 V/1A) |
 | Buttons | 1× Reset, 1× Multi-function |
 | Indicators | Multi-color LED, Buzzer |
 | Configuration | NFC / Downlink |
-| **Physical Characteristics** | |
-| Power Supply | DC 5V/3A (USB Type-C) |
-| Power Consumption | Max 9.5W |
-| Operating Temp | 0°C ~ +50°C |
-| Humidity | 0%–95% RH (non-condensing) |
-| Ingress Protection | IP65 |
+| **Physical characteristics** | |
+| Power supply | DC 5 V/3A (USB Type-C) |
+| Power consumption | Max 9.5 W |
+| Operating temp | 0 °C ~ +50 °C |
+| Humidity | 0 %–95 % RH (non-condensing) |
+| Ingress protection | IP65 |
 | Dimensions | 114 × 84 × 15 mm |
 | Weight | 214.5 g |
 | Material | ABS+PC |

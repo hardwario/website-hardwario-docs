@@ -65,7 +65,7 @@ This signal is physically split into two parts:
 Possible power source modules at this moment are **Power Module** and **Core Module (when connected to USB)**. If stacked, the **lowest one** takes priority and by this logic, there are **two possibilities**:
 
 - **Core Module on top of Power Module**, TOWER is **powered from Power Module**
-- **Core Module below Power Module**, TOWER is **powered from USB (speaking about 3.3V VDD)**
+- **Core Module below Power Module**, TOWER is **powered from USB (speaking about 3.3 V VDD)**
 
 :::caution
 

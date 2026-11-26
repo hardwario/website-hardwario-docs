@@ -48,10 +48,10 @@ This V2 model runs on the **WisGateOS 2**, which offers a more modern interface,
 | **Model** | RAK7268V2 |
 | **LoRa Channels** | 8 Channels |
 | **Frequency** | EU868 (supports other regions) |
-| **Power Supply** | 12 V DC (Power Adapter) or **PoE (802.3af)** |
+| **Power supply** | 12 V DC (Power Adapter) or **PoE (802.3af)** |
 | **Network** | Ethernet, Wi-Fi (802.11b/g/n) |
 | **Cellular** | Optional (LTE Cat 4), *check specific SKU* |
-| **Operating Temp.** | -10°C to +55°C |
+| **Operating temp.** | -10 °C to +55 °C |
 | **Dimensions** | 166 x 129 x 43 mm |
 | **IP Rating** | IP30 (Indoor use only) |
 

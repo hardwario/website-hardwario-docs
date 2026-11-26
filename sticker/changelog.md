@@ -150,7 +150,7 @@ No hardware revisions have been logged yet. Hardware updates will appear here wh
 
 ## Catalog application changelogs
 
-| Application | Changelog | Last Updated |
+| Application | Changelog | Last updated |
 |---|---|---|
 | STICKER Clime | [Changelog](/sticker/catalog-applications/sticker-clime/#changelog) | 2026-10-21 |
 | STICKER Input | [Changelog](/sticker/catalog-applications/sticker-input/#changelog) | 2026-10-21 |

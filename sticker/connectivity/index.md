@@ -19,11 +19,11 @@ Regardless of the chosen connectivity protocol, radio state and credentials can 
 
 | Feature | LoRaWAN | LoRa P2P |
 |---|---|---|
-| **Network Server (LNS)** | Required (ChirpStack, TTS, etc.) | None. A ProXimos Hub runs the network instead |
+| **Network server (LNS)** | Required (ChirpStack, TTS, etc.) | None. A ProXimos Hub runs the network instead |
 | **Topology** | Star-of-stars (Node → Gateway → LNS) | Star (Node → HARDWARIO FIBER modem → ProXimos Hub) |
 | **Radio protocol** | LoRaWAN 1.0.4 MAC, Class A | HARDWARIO TOWER radio protocol (AES-CCM frames, gateway ACKs) |
 | **Downlinks & management** | Class A downlinks on fPort 85 | Announced in the gateway ACK, same commands as on fPort 85 |
-| **Best Used For** | Cloud platforms, multi-tenant enterprise IoT | Isolated sites without LoRaWAN coverage, private on-premise networks with a ProXimos Hub |
+| **Best used for** | Cloud platforms, multi-tenant enterprise IoT | Isolated sites without LoRaWAN coverage, private on-premise networks with a ProXimos Hub |
 
 ---
 

@@ -5,7 +5,7 @@ description: "Ports, URLs and default logins of the SSH, ChirpStack, Node-RED, M
 
 # Ports & default credentials
 
-| Service | Port | URL | Default Login |
+| Service | Port | URL | Default login |
 |---|---|---|---|
 | SSH | 22 | `ssh <user>@[TARGET IP ADDRESS]` | set in Raspberry Pi Imager |
 | ChirpStack | 8080 | `http://[TARGET IP ADDRESS]:8080/` | `admin` / `admin` |

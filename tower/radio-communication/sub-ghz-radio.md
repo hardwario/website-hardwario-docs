@@ -139,13 +139,13 @@ void application_init(void)
 
 | Parameter                        | Value     |
 | :------------------------------- | :-------- |
-| Communication Frequency (Europe) | 868.0 MHz |
+| Communication frequency (Europe) | 868.0 MHz |
 | Communication frequency (U.S.)   | 915.0 MHz |
-| Modulation Type                  | GFSK      |
-| Modulation Rate                  | 19.2 kbps |
-| TX Frequency Deviation           | 20 kHz    |
-| TX Transmit Power                | 11.6 dBm  |
-| RX Filter Bandwidth              | 100 kHz   |
+| Modulation type                  | GFSK      |
+| Modulation rate                  | 19.2 kbps |
+| TX frequency deviation           | 20 kHz    |
+| TX transmit power                | 11.6 dBm  |
+| RX filter bandwidth              | 100 kHz   |
 
 
 ## Packet structure

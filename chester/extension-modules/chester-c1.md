@@ -27,7 +27,7 @@ This article describes the **CHESTER-C1** carrier board.
 - RS-485 interfaces terminal
 - Two 1-Wire terminals
 - DC/DC converter
-- Battery holder for 4x C-cell sized 3.6V batteries
+- Battery holder for 4x C-cell sized 3.6 V batteries
 
 **CHESTER-C1** fits with the Takachi WP20-28-5Cx enclosure.
 
@@ -49,7 +49,7 @@ For more details see [**Ordering Codes**](../ordering-codes.md#chester-m).
 
 ## Inputs and outputs overview
 
-| Position | Name      | Signal Description                      |
+| Position | Name      | Signal description                      |
 | -------- | --------- | --------------------------------------- |
 | JP16     | VIN POWER | DC power supply input (VIN 8-36 V)      |
 | JP8      | RELAY 1   | Relay 1 power output                    |
@@ -101,6 +101,6 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 
 ![CHESTER-C1 schematic sheet 1: X0 and X2 mainboard connectors, 1-Wire, SYSTEM, RS-485, relays, M-Bus, and I2C](images/hio-chester-c1-r1.1-1.png)
 ![CHESTER-C1 schematic sheet 2: TCA9534A GPIO expander, RGY LED, and relay driver circuits](images/hio-chester-c1-r1.1-2.png)
-![CHESTER-C1 schematic sheet 3: battery C-cell/D-cell wiring, power input, and 5V step-down converter](images/hio-chester-c1-r1.1-3.png)
+![CHESTER-C1 schematic sheet 3: battery C-cell/D-cell wiring, power input, and 5 V step-down converter](images/hio-chester-c1-r1.1-3.png)
 
 

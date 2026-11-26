@@ -34,7 +34,7 @@ After adding gateways, the next step is to create device profiles in ChirpStack.
 
 If you are using CHESTER or STICKER as an end device, you can find examples of device profile configurations in the following links:
 
-| **Device** | **Documentation Link** |
+| **Device** | **Documentation link** |
 |-------------|-------------------------|
 | **CHESTER** | https://docs.hardwario.com/chester/platform-connectivity/lorawan-radio#chirpstack-configuration |
 | **STICKER** | https://docs.hardwario.com/sticker/connectivity/lorawan-chirpstack |

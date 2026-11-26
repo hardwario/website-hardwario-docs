@@ -87,14 +87,14 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Protocol | LoRaWAN® |
 | Antenna | Internal |
 | Frequency | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Tx power | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Sensitivity | -132 dBm @300bps |
 | Mode | OTAA / ABP Class A |
-| **Distance Measurement** | |
+| **Distance measurement** | |
 | Principle | Time-of-Flight (ToF) |
 | Range | 1–55 cm |
 | Accuracy | ±1 cm |
@@ -104,13 +104,13 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Button | Reset (internal) |
 | LED | Indicator (internal) |
 | Configuration | NFC App / Downlink |
-| Advanced Features | Threshold alarm, Hibernate mode |
-| **Physical Characteristics** | |
-| Power Supply | 1 × CR2450 (590 mAh) |
-| Battery Life | approx. 2–3 years (depending on SF & region) |
-| Operating Temp | -10°C ~ +60°C |
-| Humidity | 0–95% RH (non-condensing) |
-| Ingress Protection | IP30 |
+| Advanced features | Threshold alarm, Hibernate mode |
+| **Physical characteristics** | |
+| Power supply | 1 × CR2450 (590 mAh) |
+| Battery life | approx. 2–3 years (depending on SF & region) |
+| Operating temp | -10 °C ~ +60 °C |
+| Humidity | 0–95 % RH (non-condensing) |
+| Ingress protection | IP30 |
 | Dimensions | 66 × 38 × 12 mm |
 | Weight | 24.7 g (incl. battery) |
 | Material | ABS+PC (flame retardant), White |

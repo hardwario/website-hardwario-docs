@@ -23,10 +23,10 @@ import Image from '@theme/IdealImage';
 - Position accuracy 2.5m CEP
 - Communication over **I²C bus**
 - Embedded antenna
-- Current consumption 26mA in operation
+- Current consumption 26 mA in operation
 - Integrated power switch for **low power operation**
 - Cold start 26s, Aided start 2s
-- Operating voltage range: 2.7V to 3.6V
+- Operating voltage range: 2.7 V to 3.6 V
 - Operating temperature range: -40 to 85 °C
 
 ## References

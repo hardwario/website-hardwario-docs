@@ -1,6 +1,6 @@
 ---
 slug: chester-x5
-title: CHESTER-X5 (2-ch isol 50V input)
+title: CHESTER-X5 (2-ch isol 50 V input)
 description: "Two-channel isolated voltage-input extension module for CHESTER that measures ±50 V per channel through a reinforced isolated amplifier."
 keywords: [CHESTER-X5, isolated input, isolated voltage measurement, 50V, AMC3330, ADS122C04, 24-bit ADC, reinforced isolation, I2C, galvanic isolation, CHESTER]
 ---
@@ -22,7 +22,7 @@ The **CHESTER-X5** is a **2-channel isolated voltage-input** extension module fo
 
 ## Module overview
 
-CHESTER-X5 provides **two isolated voltage inputs**, each measuring **−50 V to +50 V**. Each channel uses a reinforced isolated amplifier (**AMC3330**) with an integrated isolated DC-DC converter, so the input is **galvanically isolated** from the CHESTER electronics and from the other channel. A precision 0.1% resistor divider scales the ±50 V input to the amplifier, and its differential output is digitized by a shared 24-bit **ADS122C04** I²C ADC, channel 1 on AIN0/AIN1 and channel 2 on AIN2/AIN3.
+CHESTER-X5 provides **two isolated voltage inputs**, each measuring **−50 V to +50 V**. Each channel uses a reinforced isolated amplifier (**AMC3330**) with an integrated isolated DC-DC converter, so the input is **galvanically isolated** from the CHESTER electronics and from the other channel. A precision 0.1 % resistor divider scales the ±50 V input to the amplifier, and its differential output is digitized by a shared 24-bit **ADS122C04** I²C ADC, channel 1 on AIN0/AIN1 and channel 2 on AIN2/AIN3.
 
 Each channel's isolated amplifier is powered through its own load switch (**TPS22917**), so firmware can enable the channels independently and keep them off when idle to save energy. The ADC signals new samples on its data-ready line, which is routed to the slot's GP0 pin.
 
@@ -30,7 +30,7 @@ Each channel's isolated amplifier is powered through its own load switch (**TPS2
 
 * **Two Isolated Inputs:** Two independent voltage channels, each with reinforced galvanic isolation.
 * **±50 V Range:** Each channel measures −50 V to +50 V.
-* **Precision Acquisition:** AMC3330 isolated amplifiers with 0.1% input dividers and a 24-bit ADS122C04 ADC.
+* **Precision Acquisition:** AMC3330 isolated amplifiers with 0.1 % input dividers and a 24-bit ADS122C04 ADC.
 * **I²C Interface:** The ADC is read over I²C; data-ready is signalled on GP0/A0.
 * **Per-Channel Power Switching:** Each channel is powered through its own load switch (enabled via GP2 for channel 1, GP1 for channel 2) for low-power operation.
 
@@ -46,22 +46,22 @@ Each channel's isolated amplifier is powered through its own load switch (**TPS2
 
 | Parameter | Value |
 | :--- | :--- |
-| **Module Type** | 2-channel isolated voltage input |
+| **Module type** | 2-channel isolated voltage input |
 | **Channels** | 2 (independent), reinforced galvanic isolation |
-| **Input Range** | −50 V to +50 V per channel |
-| **Isolated Amplifier** | AMC3330DWE (integrated isolated DC-DC), one per channel |
+| **Input range** | −50 V to +50 V per channel |
+| **Isolated amplifier** | AMC3330DWE (integrated isolated DC-DC), one per channel |
 | **ADC** | ADS122C04 (24-bit, 4-channel, I²C) |
-| **Channel Mapping** | Ch1 → AIN0/AIN1, Ch2 → AIN2/AIN3 |
-| **Host Interface** | I²C; data-ready (DRDY) on GP0/A0 |
+| **Channel mapping** | Ch1 → AIN0/AIN1, Ch2 → AIN2/AIN3 |
+| **Host interface** | I²C; data-ready (DRDY) on GP0/A0 |
 | **I²C Address** | 0x40 (default); 0x41 via solder bridge S1 |
-| **Channel Power Enable** | GP2/A2 (channel 1), GP1/A1 (channel 2) |
-| **Logic Supply (VDD)** | 3.0 V |
-| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
-| **Hardware Revision** | R2.1 |
+| **Channel power enable** | GP2/A2 (channel 1), GP1/A1 (channel 2) |
+| **Logic supply (VDD)** | 3.0 V |
+| **Board interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
+| **Hardware revision** | R2.1 |
 
 ## Key components
 
-| Component | Part Number | Description |
+| Component | Part number | Description |
 | :--- | :--- | :--- |
 | **Isolated Amplifier (×2)** | AMC3330DWE | Reinforced isolated amplifier with integrated isolated DC-DC; one per channel |
 | **ADC** | ADS122C04IPW | 24-bit 4-channel I²C ADC digitizing both channels |

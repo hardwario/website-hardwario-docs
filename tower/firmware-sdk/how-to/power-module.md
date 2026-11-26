@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 The power module provides two features:
 
 - Control high power device with robust relay (230 V / 16 A)
-- Connect 5V addressable LEDs (**WS2812B**) and control them.
+- Connect 5 V addressable LEDs (**WS2812B**) and control them.
 
 :::note
 

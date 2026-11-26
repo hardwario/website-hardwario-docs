@@ -32,7 +32,7 @@ The module also generates a regulated **5.0 V output** (VOUT) to power the conne
 * **Voltage Input:** One single-ended 0–28 V input (VIN), precision-divided for the CHESTER ADC.
 * **Analog Interface:** Signals are read directly on the CHESTER analog inputs (A0/A1/A2), no I²C or SPI needed.
 * **Switchable Probe Power:** Regulated 5.0 V output (VOUT) to power the probes, enabled via GP3/A3.
-* **Precision Analog:** Zero-drift OPA4387 op-amp and 0.1% resistors for accurate, low-drift measurements.
+* **Precision Analog:** Zero-drift OPA4387 op-amp and 0.1 % resistors for accurate, low-drift measurements.
 
 ## Typical applications
 
@@ -46,19 +46,19 @@ The module also generates a regulated **5.0 V output** (VOUT) to power the conne
 
 | Parameter | Value |
 | :--- | :--- |
-| **Module Type** | Analog input front-end (differential + voltage) |
-| **Differential Input** | INP/INM, buffered by OPA4387, read on A0/A1 |
-| **Voltage Input (VIN)** | 0–28 V single-ended, precision-divided, read on A2 |
-| **Probe Power Output (VOUT)** | Regulated 5.0 V (boost + LDO), enabled via GP3/A3 |
-| **Host Interface** | Analog (CHESTER ADC on A0/A1/A2); no I²C/SPI |
+| **Module type** | Analog input front-end (differential + voltage) |
+| **Differential input** | INP/INM, buffered by OPA4387, read on A0/A1 |
+| **Voltage input (VIN)** | 0–28 V single-ended, precision-divided, read on A2 |
+| **Probe power output (VOUT)** | Regulated 5.0 V (boost + LDO), enabled via GP3/A3 |
+| **Host interface** | Analog (CHESTER ADC on A0/A1/A2); no I²C/SPI |
 | **Control** | GP3/A3 enables the 5.0 V probe-power output |
-| **Logic Supply (VDD)** | 3.0 V |
-| **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
-| **Hardware Revision** | R2.1 |
+| **Logic supply (VDD)** | 3.0 V |
+| **Board interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
+| **Hardware revision** | R2.1 |
 
 ## Key components
 
-| Component | Part Number | Description |
+| Component | Part number | Description |
 | :--- | :--- | :--- |
 | **Boost Converter** | TPS61099YFF | Step-up converter generating the intermediate 5.5 V rail from +V |
 | **LDO Regulator** | TPS7A2050PDBVR | Low-noise 5.0 V LDO producing the VOUT probe supply |

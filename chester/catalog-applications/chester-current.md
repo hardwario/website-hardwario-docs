@@ -237,7 +237,7 @@ Command to set **calibration mode** on the channel `n` (index 1-4):
 app config channel-calib-mode-<n> <avg/rms>
 ```
 
-| Mode | Description | Use Case |
+| Mode | Description | Use case |
 |------|-------------|----------|
 | `avg` | Mean (average) value | DC signals, slow-changing values |
 | `rms` | Root Mean Square | AC signals, current transformers |

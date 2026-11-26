@@ -132,7 +132,7 @@ To start capturing some data, you have to:
 
 1. Select mode in which you want to operate.
 
-1. Set supply voltage to **3600mV**
+1. Set supply voltage to **3600 mV**
 
 1. Enable power to the output
 

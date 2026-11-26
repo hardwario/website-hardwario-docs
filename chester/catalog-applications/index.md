@@ -23,7 +23,7 @@ Firmwares are located in the [**Application Firmware**](#application-firmware) c
 
 
 
-| Application | Application Goal | LoRaWAN | BLE Tags | Backup Module (Z1) | 1-Wire (DS18B20) | External Power Supply |
+| Application | Application goal | LoRaWAN | BLE Tags | Backup module (Z1) | 1-Wire (DS18B20) | External power supply |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | [**CHESTER Clime**](chester-clime.md) | Temperature, humidity, IAQ sensing | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> |
 | [**CHESTER Control**](chester-control.md) | 4ch input/output control | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> |
@@ -40,11 +40,11 @@ Firmwares are located in the [**Application Firmware**](#application-firmware) c
 
 :::info
 
-- **CHESTER Clime IAQ** variant uses CHESTER-X10 for external power input (6-28V)
+- **CHESTER Clime IAQ** variant uses CHESTER-X10 for external power input (6-28 V)
 - **CHESTER Control** uses CHESTER-X4 module for step-down power supply and digital outputs
 - **CHESTER Push** uses CHESTER-Z1-F which combines backup battery with power supply; can also run from battery only
-- **CHESTER wM-Bus** is available in battery variant (6x D-cells) or DC variant with external 230V adapter
-- **CHESTER Serial** uses CHESTER-X12 (RS-232) or CHESTER-X2 (RS-485) with external power input (6-28V)
+- **CHESTER wM-Bus** is available in battery variant (6x D-cells) or DC variant with external 230 V adapter
+- **CHESTER Serial** uses CHESTER-X12 (RS-232) or CHESTER-X2 (RS-485) with external power input (6-28 V)
 
 :::
 

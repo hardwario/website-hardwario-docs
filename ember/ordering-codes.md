@@ -40,7 +40,7 @@ Order them separately, and note that fitting one means opening the enclosure. Se
 
 **Available parts:**
 
-| Ordering Code    |
+| Ordering code    |
 | :--------------- |
 | `EMBER-H1-8`     |
 | `EMBER-H1-9`     |

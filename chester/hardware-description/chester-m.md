@@ -81,7 +81,7 @@ This picture shows the terminal blocks connection:
 
 This table shows the connection of 1-Wire to terminal blocks and JST 8-pin connectors:
 
-| Terminal BLOCK Position | Signal Name | Signal Description   |
+| Terminal BLOCK position | Signal name | Signal description   |
 | :---------------------: | :---------: | :------------------- |
 |        A1 or B1         |    `GND`    | System ground signal |
 |        A2 or B2         |    `DQ`     | 1-Wire Data          |
@@ -114,7 +114,7 @@ The following table lists the signals in the left-to-right order when you flip t
 
 :::
 
-| Position | Signal Name | Signal Description     | Connection on nRF52840 |
+| Position | Signal name | Signal description     | Connection on nRF52840 |
 | :------: | :---------: | :--------------------- | :--------------------: |
 |    1     |    `+V`     | System positive rail   |           -            |
 |    2     |   `GP3A`    | General purpose I/O    |      `P0.31/AIN7`      |
@@ -134,7 +134,7 @@ The following table lists the signals in the left-to-right order when you flip t
 
 :::
 
-| Position | Signal Name | Signal Description     | Connection on nRF52840 |
+| Position | Signal name | Signal description     | Connection on nRF52840 |
 | :------: | :---------: | :--------------------- | :--------------------: |
 |    1     |    `+V`     | System positive rail   |           -            |
 |    2     |   `GP3B`    | General purpose I/O    |      `P0.05/AIN3`      |

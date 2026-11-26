@@ -91,7 +91,9 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 | 7 | GND | Zem | Systémová zem |
 | 8 | VIN | Napájecí vstup | Vstup externího stejnosměrného napájení (6–28 V DC) |
 
-*Poznámka: Používejte pouze jednočlánkovou baterii Li-Po (nebo Li-Ion) 3,7 V s integrovaným ochranným obvodem. Baterii nezkratujte. Oba piny BAT- i oba piny BAT+ jsou vnitřně spojené (zdvojené kvůli proudové zatížitelnosti).
+:::caution
+Používejte pouze jednočlánkovou baterii Li-Po (nebo Li-Ion) 3,7 V s integrovaným ochranným obvodem. Baterii nezkratujte. Oba piny BAT- i oba piny BAT+ jsou vnitřně spojené (zdvojené kvůli proudové zatížitelnosti).
+:::
 
 :::info
 Modul CHESTER-X10 napájí základní desku CHESTER přes slot modulu. Externí napájení **6–28 V DC** na **VIN** (pin 8) vede do snižujícího měniče TPS62933 na desce, jehož pevný výstup **5 V** napájí základní desku a nabíjí baterii připojenou na **BAT+** / **BAT-**. Při výpadku externího napájení drží základní desku v provozu baterie.

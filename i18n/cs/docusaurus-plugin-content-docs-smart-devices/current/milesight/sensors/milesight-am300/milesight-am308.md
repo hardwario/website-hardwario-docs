@@ -87,9 +87,9 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Typ    | Hodnota            |
 |--------|--------------------|
 | Baterie | 4 × 2700 mAh ER14505 Li-SOCl2 (vyměnitelné) |
-| Napájení USB | 5V/1A přes Type-C |
-| Výdrž baterie (AM308) | Více než 1 rok (interval 10 min při 25°C) |
-| Výdrž baterie (AM308L) | Přibližně 1,5 roku (interval 10 min při 25°C) |
+| Napájení USB | 5 V/1A přes Type-C |
+| Výdrž baterie (AM308) | Více než 1 rok (interval 10 min při 25 °C) |
+| Výdrž baterie (AM308L) | Přibližně 1,5 roku (interval 10 min při 25 °C) |
 
 ---
 
@@ -101,17 +101,17 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Technologie | LoRaWAN® |
 | Anténa | Interní antény |
 | Frekvence | CN470 / RU864 / IN865 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Vysílací výkon | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Vysílací výkon | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class A |
 | **Senzory** | |
-| Teplota | −20 až +60 °C, přesnost ±0,2°C, rozlišení 0,1°C |
-| Vlhkost | 0–100 % RH, přesnost ±2% RH, rozlišení 0,5% |
+| Teplota | −20 až +60 °C, přesnost ±0,2 °C, rozlišení 0,1 °C |
+| Vlhkost | 0–100 % RH, přesnost ±2 % RH, rozlišení 0,5 % |
 | Pohyb (PIR) | 80° H, 55° V, max 5m, stav: neobsazeno/obsazeno |
 | Osvětlenost | 0–60000 Lux (6 úrovní) |
 | TVOC | Index IAQ 1,00–5,00, přesnost ±1, rozlišení 0,01 |
 | Barometrický tlak | 260–1260 hPa, přesnost ±0,5 hPa, rozlišení 0,1 hPa |
-| CO₂ | 400–5000 ppm, přesnost ±(50 ppm + 5%) |
+| CO₂ | 400–5000 ppm, přesnost ±(50 ppm + 5 %) |
 | PM2.5 a PM10 | 0–1000 μg/m³, přesnost ±10 μg/m³ (0–100 μg/m³) |
 | **Rozhraní a displej** | |
 | Displej | 4,2" E-Ink (pouze AM308, není u AM308L) |
@@ -120,8 +120,8 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | USB | Type-C (napájení/konfigurace/konzole) |
 | **Software** | Konfigurace přes NFC / USB, prahové hodnoty, kalibrace, ukládání dat (18 000 záznamů) |
 | **Fyzické vlastnosti** | |
-| Napájení | 4 × baterie ER14505 nebo 5V/1A (USB-C) |
-| Provozní teplota | -20°C ~ +60°C (E-Ink: 0°C–40°C u AM308) |
+| Napájení | 4 × baterie ER14505 nebo 5 V/1A (USB-C) |
+| Provozní teplota | -20 °C ~ +60 °C (E-Ink: 0 °C–40 °C u AM308) |
 | Relativní vlhkost | 10–90 % (bez kondenzace) |
 | Krytí | IP30 |
 | Kryt | ABS, bílý |

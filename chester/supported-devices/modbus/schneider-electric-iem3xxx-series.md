@@ -56,7 +56,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 #### Example of installation: Carlo Gavazzi AC current transformer CTD-1X 100 5A XXX
 
 
-| **Schneider Electric Energy Analyzer iEM3250** | **Carlo Gavazzi AC Current Transformer CTD-1X 100 5A XXX** |
+| **Schneider Electric Energy Analyzer iEM3250** | **Carlo Gavazzi AC current transformer CTD-1X 100 5A XXX** |
 |----------------------------------------|-----------------------------------------------|
 | Pin S1                                 | **S1 (K)**                                         |
 | Pin S2                                | **S2 (L)**                                         |
@@ -75,7 +75,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 |---------------------------|--------------------|
 | Pin D0/-                     | Pin 6 (A−)      |
 | Pin D1/+                    | Pin 7 (B+)        |
-| Pin 0V                    | Pin 1 (GND)        |
+| Pin 0 V                    | Pin 1 (GND)        |
 
 #### Modbus communication (iEM3250)
 
@@ -112,7 +112,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 #### Default Modbus communication configuration
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Address | Baud rate | Parity | Stop bit |
 |---------|-----------|--------|-----------|
 | 1       | 9.6k      | None   | 1         |
 
@@ -150,7 +150,7 @@ config save
 
 ### Measured values
 
-| Measured Value | Key / Path                                   |
+| Measured value | Key / path                                   |
 |----------------|----------------------------------------------|
 | Current        | E_ENERGY_METER.METER_4.CURRENT.MEASUREMENTS  |
 | Power          | E_ENERGY_METER.METER_4.POWER.MEASUREMENTS    |

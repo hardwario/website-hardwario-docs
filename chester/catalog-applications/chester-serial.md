@@ -76,7 +76,7 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 
 The firmware includes native support for the following devices:
 
-| Device | Type String | Interface | Measurements |
+| Device | Type string | Interface | Measurements |
 | :--- | :--- | :--- | :--- |
 | **MicroSENS 180-HS** | `microsens_180hs` | RS-232 (ASCII) | CO2 (Vol.-%), Temperature, Pressure |
 | **SenseCAP S1000 / S500** | `sensecap_s1000` | RS-485 Modbus | Temperature, Humidity, Pressure, Light, Wind |
@@ -128,11 +128,11 @@ When using LoRaWAN, the application uses adaptive multi-device packing (Protocol
 
 | Feature | Value |
 | :--- | :--- |
-| **Operating System** | Zephyr RTOS |
-| **Physical Interface** | RS-232 (Module X12), RS-485 (Module X2) |
-| **Application Protocols** | Transparent (RAW), Modbus RTU |
-| **Cloud Formats** | CBOR (LTE), Optimized Binary (LoRaWAN) |
-| **Power Supply** | External source (6–28V DC) required |
+| **Operating system** | Zephyr RTOS |
+| **Physical interface** | RS-232 (Module X12), RS-485 (Module X2) |
+| **Application protocols** | Transparent (RAW), Modbus RTU |
+| **Cloud formats** | CBOR (LTE), Optimized Binary (LoRaWAN) |
+| **Power supply** | External source (6–28 V DC) required |
 
 ## Default configuration
 

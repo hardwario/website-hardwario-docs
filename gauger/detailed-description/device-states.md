@@ -16,7 +16,7 @@ If the device encounters an error, most likely during initialization (there are 
 
 Table of LED behavior per state:
 
-| LED State      | Device State   |
+| LED State      | Device state   |
 | :------------- | :------------- |
 | on             | initialization |
 | short blinks   | running        |

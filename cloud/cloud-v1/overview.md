@@ -5,7 +5,7 @@ description: "Structure of the HARDWARIO Cloud Legacy: user configuration, group
 ---
 import Image from '@theme/IdealImage';
 
-# CLOUD Overview
+# CLOUD overview
 
 [**HARDWARIO Cloud**](https://hardwario.cloud) lets users manage their devices.
 

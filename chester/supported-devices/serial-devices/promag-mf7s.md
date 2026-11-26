@@ -6,7 +6,7 @@ description: "Read card UIDs from a Promag MF7S RFID reader with CHESTER Serial 
 
 import Image from '@theme/IdealImage';
 
-# Promag MF7S RFID Reader
+# Promag MF7S RFID reader
 
 <div class="container">
   <div class="row">
@@ -39,7 +39,7 @@ The **Promag MF7S** is an RFID card reader that communicates via **RS-232** (192
 
 ### Configuration
 
-#### Shell Commands
+#### Shell commands
 
 ```
 app config serial-mode transparent
@@ -53,7 +53,7 @@ app config interval-report 0
 app config save
 ```
 
-#### Parameter Reference
+#### Parameter reference
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|
@@ -63,7 +63,7 @@ app config save
 | `mode` | `lte` or `lrw` | Communication mode |
 | `interval-report` | `0` | Event-driven = immediate send on card detection |
 
-#### Event-Driven Mode (`interval-report = 0`)
+#### Event-driven mode (`interval-report = 0`)
 
 When `interval-report` is set to **0**, CHESTER sends data **immediately** after a card is presented:
 
@@ -74,9 +74,9 @@ When `interval-report > 0`, cards accumulate in the buffer (max 32) and are sent
 
 ---
 
-### Shell Commands – Driver
+### Shell commands – driver
 
-#### Read Reader Firmware Version
+#### Read reader firmware version
 
 ```
 device promag_mf7s firmware
@@ -84,7 +84,7 @@ device promag_mf7s firmware
 
 Output: `Firmware: MF7S-1.0`
 
-#### Notifications (LED + Sound)
+#### Notifications (LED + sound)
 
 ```
 device promag_mf7s notify
@@ -92,7 +92,7 @@ device promag_mf7s notify
 
 Performs the sequence: green LED on/off → red LED on/off → triple beep (high, medium, low).
 
-#### Sampling Mode (Interactive Detection)
+#### Sampling mode (interactive detection)
 
 ```
 device promag_mf7s sampling [timeout_s]
@@ -109,7 +109,7 @@ Card UID: AABBCCDD (dec: 2864434397)
 Sampling finished (total reads: 2)
 ```
 
-#### Other Commands
+#### Other commands
 
 ```
 device sample 0        # Show device status at index 0
@@ -123,7 +123,7 @@ app send               # Force immediate data send
 
 LTE mode sends a CBOR message (max 8 KB) with all collected cards. The buffer is cleared after a successful send.
 
-#### Example Decoded JSON Payload
+#### Example decoded JSON payload
 
 <details>
 <summary><b>Show Example Decoded JSON Payload</b></summary>
@@ -202,11 +202,11 @@ LTE mode sends a CBOR message (max 8 KB) with all collected cards. The buffer is
 
 ---
 
-### Payload – LoRaWAN (Binary)
+### Payload – LoRaWAN (binary)
 
 LoRaWAN sends a compact binary message (max 51 bytes). Each message contains **one device**.
 
-#### Payload Structure (22 bytes)
+#### Payload structure (22 bytes)
 
 ```
 Offset  Size  Field
@@ -225,7 +225,7 @@ Offset  Size  Field
 
 **Total size: 22 bytes**
 
-#### Example Payload (hex)
+#### Example payload (hex)
 
 ```
 10                     # Header: version=1, device_idx=0
@@ -284,9 +284,9 @@ function decode(payload) {
 
 ---
 
-### Typical Use Cases
+### Typical use cases
 
-#### Access Control / Attendance System (Immediate Send)
+#### Access control / attendance system (immediate send)
 
 ```
 app config device-0 promag_mf7s
@@ -297,7 +297,7 @@ app config save
 
 Each card is sent **immediately** after being presented.
 
-#### Data Collection with Periodic Upload (Battery Saving)
+#### Data collection with periodic upload (battery saving)
 
 ```
 app config device-0 promag_mf7s
@@ -308,7 +308,7 @@ app config save
 
 Cards accumulate in the buffer (max 32) and are sent **every 15 minutes**.
 
-#### LoRaWAN Mode
+#### LoRaWAN mode
 
 ```
 app config device-0 promag_mf7s

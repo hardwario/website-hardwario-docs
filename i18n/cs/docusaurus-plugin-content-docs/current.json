@@ -3,7 +3,7 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.docs.category.User Guide": {
+  "sidebar.docs.category.User guide": {
     "message": "Uživatelská příručka",
     "description": "The label for category 'User Guide' in sidebar 'docs'"
   },
@@ -19,11 +19,11 @@
     "message": "Ostatní",
     "description": "The label for category 'Other' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Video Tutorials": {
+  "sidebar.docs.category.Video tutorials": {
     "message": "Videonávody",
     "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Platform Connectivity": {
+  "sidebar.docs.category.Platform connectivity": {
     "message": "Konektivita platformy",
     "description": "The label for category 'Platform Connectivity' in sidebar 'docs'"
   },
@@ -31,19 +31,19 @@
     "message": "Dokumentace ke konektivitě, správě zařízení, mobilním a satelitním sítím a síťování zařízení CHESTER.",
     "description": "The generated-index page description for category 'Platform Connectivity' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Mobile Networks": {
+  "sidebar.docs.category.Mobile networks": {
     "message": "Mobilní sítě",
     "description": "The label for category 'Mobile Networks' in sidebar 'docs'"
   },
-  "sidebar.docs.category.LoRaWAN Radio": {
+  "sidebar.docs.category.LoRaWAN radio": {
     "message": "Rádio LoRaWAN",
     "description": "The label for category 'LoRaWAN Radio' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Catalog Applications": {
+  "sidebar.docs.category.Catalog applications": {
     "message": "Katalogové aplikace",
     "description": "The label for category 'Catalog Applications' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Common Functionality": {
+  "sidebar.docs.category.Common functionality": {
     "message": "Společné funkce",
     "description": "The label for category 'Common Functionality' in sidebar 'docs'"
   },
@@ -51,27 +51,27 @@
     "message": "Starší aplikace",
     "description": "The label for category 'Legacy' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Extension Modules": {
+  "sidebar.docs.category.Extension modules": {
     "message": "Rozšiřující moduly",
     "description": "The label for category 'Extension Modules' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Supported Sensors": {
+  "sidebar.docs.category.Supported sensors": {
     "message": "Podporované senzory",
     "description": "The label for category 'Supported Sensors' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Modbus Devices": {
+  "sidebar.docs.category.Modbus devices": {
     "message": "Zařízení Modbus",
     "description": "The label for category 'Modbus Devices' in sidebar 'docs'"
   },
-  "sidebar.docs.category.wM-Bus Devices": {
+  "sidebar.docs.category.wM-Bus devices": {
     "message": "Zařízení wM-Bus",
     "description": "The label for category 'wM-Bus Devices' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Serial Devices": {
+  "sidebar.docs.category.Serial devices": {
     "message": "Sériová zařízení",
     "description": "The label for category 'Serial Devices' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Hardware Description": {
+  "sidebar.docs.category.Hardware description": {
     "message": "Popis hardwaru",
     "description": "The label for category 'Hardware Description' in sidebar 'docs'"
   },
@@ -83,11 +83,11 @@
     "message": "Popis hardwaru CHESTER",
     "description": "The generated-index page title for category 'Hardware Description' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Firmware Flashing": {
+  "sidebar.docs.category.Firmware flashing": {
     "message": "Nahrání firmwaru",
     "description": "The label for category 'Firmware Flashing' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Developer Tools": {
+  "sidebar.docs.category.Developer tools": {
     "message": "Nástroje pro vývojáře",
     "description": "The label for category 'Developer Tools' in sidebar 'docs'"
   },
@@ -103,11 +103,11 @@
     "message": "Zprovozněte firmwarové SDK pro CHESTER a sestavte zákaznické aplikace.",
     "description": "The generated-index page description for category 'Firmware SDK' in sidebar 'docs'"
   },
-  "sidebar.docs.link.Git Repository": {
+  "sidebar.docs.link.Git repository": {
     "message": "Git repozitář",
     "description": "The label for link 'Git Repository' in sidebar 'docs', linking to 'https://github.com/hardwario/chester-sdk'"
   },
-  "sidebar.docs.link.API Reference": {
+  "sidebar.docs.link.API reference": {
     "message": "Reference API",
     "description": "The label for link 'API Reference' in sidebar 'docs', linking to 'https://hardwario.github.io/chester-sdk'"
   },

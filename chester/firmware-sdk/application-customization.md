@@ -1,15 +1,15 @@
 ---
 slug: application-customization
-title: Application Customization
+title: Application customization
 description: "Customize a CHESTER catalog application in your own Git fork of the CHESTER SDK and keep it current by rebasing onto the upstream main branch."
 ---
 import Image from '@theme/IdealImage';
 
-# Application Customization
+# Application customization
 
 This article explains workflow when you need to modify the existing catalog application in the **CHESTER SDK**. There are multiple ways how a developer can do this, but the goal of this article is to demonstrate a process that provides low friction when the developer needs to keep pace with the **CHESTER SDK** updates.
 
-## Creating Application Fork
+## Creating application fork
 
 This chapter will guide you through the process of how to create a **fork of the catalog application**. As an example, we will use the catalog application **CHESTER Current**, but the process can be applied to anything in the **CHESTER SDK**. Feel free to enhance the in-tree drivers.
 
@@ -99,7 +99,7 @@ Below is the minimized set of commands that is extracted from the **CHESTER SDK*
 
 At this point, in your **local** repository (on the disk) and your **Git** server, you will have the `main` branch that copies the `main` branch from the **CHESTER SDK** hosted on **GitHub** from **HARDWARIO**. Also, you will have your new **Git** branch with the requested changes on your **Git** remote, referred to as `origin`.
 
-## Updating Your Application
+## Updating your application
 
 You are advised to regularly synchronize your custom application changes to the latest version of the **CHESTER SDK**. The following steps will guide you through the update procedure.
 

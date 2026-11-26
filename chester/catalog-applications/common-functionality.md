@@ -1,15 +1,15 @@
 ---
 slug: common-functionality
-title: Common Functionality
+title: Common functionality
 description: "Behavior shared by CHESTER catalog applications: LTE or LoRaWAN mode, button, LEDs, configuration reset, report interval jitter and diagnostic commands."
 ---
 import Image from '@theme/IdealImage';
 
-# Common Functionality
+# Common functionality
 
 The **catalog applications** share common functionality. For example the button behaviour or the way settings are handled.
 
-## Network Mode Configuration
+## Network mode configuration
 
 Some catalog firmwares can use either an NB-IoT/LTE or a LoRaWAN network. After power-up, such firmware does not send data, the **LED is blinking yellow** and you need to configure the correct radio mode.
 
@@ -33,12 +33,12 @@ The default functionality is that a device **does not use any radio** (mode `non
 
 Then apply changes by typing `config save`. The device will reboot and use the correct network.
 
-### Default LTE Mode
+### Default LTE mode
 
 Starting from firmware **v3.5.0**, the default LTE mode has been changed to **LTE-M with NB-IoT fallback** (`lte-m,nb-iot`). This means the device will first try to connect using LTE-M and fall back to NB-IoT if LTE-M is not available.
 
 
-## Button Behaviour
+## Button behaviour
 
 Applications define actions for the mainboard button. The actions are chosen based on the number of consecutive presses of the button. Before an action is executed, **CHESTER** will blink the orange LED once for each button press, indicating the amount of consecutive presses. The actions are:
 
@@ -50,13 +50,13 @@ Applications define actions for the mainboard button. The actions are chosen bas
 |         4         | Reboot the device                           |
 |         5         | Turn on the load LED for 2 minutes          |
 
-## LED Behaviour
+## LED behaviour
 
 When **CHESTER** is powered on, the LED will be lit red until the application is initialized. Then **CHESTER** will blink the green LED every five seconds to indicate the app is running.
 
 If the **LED is blinking yellow**, you need to configure [which radio to use](#network-mode-configuration).
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -87,7 +87,7 @@ Resetting the configuration will also reset the connection parameters for LTE an
 You might also change configuration remotely over HARDWARIO Cloud using [**Config downlink command**](/cloud/downlink/config).
 In cloud you don't send the `config save` command.
 
-## Runtime CHESTER-Z Detection
+## Runtime CHESTER-Z detection
 
 Starting from firmware **v3.5.4**, some applications support **runtime detection** of the CHESTER-Z backup module. This means a single firmware binary works both with and without the CHESTER-Z module installed.
 
@@ -103,7 +103,7 @@ Applications with runtime CHESTER-Z detection:
 Other applications will gradually adopt runtime Z detection in future firmware releases.
 :::
 
-## Cloud Metrics
+## Cloud metrics
 
 The `cloud` shell command group provides diagnostic information about cloud communication. Use `cloud metrics` to display communication statistics:
 
@@ -113,24 +113,24 @@ cloud metrics
 
 This shows uplink/downlink message counts, fragment counts, error counts with timestamps, and timestamps of last successful operations. This is useful for diagnosing connectivity issues in the field.
 
-## BLE Tag Subsystem
+## BLE tag subsystem
 
 :::info
 **CHESTER** also supports integration with **Bluetooth tags** (Teltonika EYE Sensor subsystem) for wireless temperature and humidity monitoring.  
 Learn how to activate and configure this feature in the [**CHESTER BLE Tag Subsystem** documentation](ble-tags.md).
 :::
 
-## Report Interval Jitter
+## Report interval jitter
 
-The periodic sending of data with `interval-report` has intentional jitter. This is used in case a lot of CHESTERs are placed near each other, so they don't transmit at the same time if they have set the same interval. This jitter is random in the range of ±20 % of `interval-report`.
+The periodic sending of data with `interval-report` has intentional jitter. This is used in case a lot of CHESTER devices are placed near each other, so they don't transmit at the same time if they have set the same interval. This jitter is random in the range of ±20 % of `interval-report`.
 
-For example, if `interval-report` is set to 100 seconds, you can receive periodic data where two messages have a time difference from 80 (-20%) to 120 (+20%) seconds.
+For example, if `interval-report` is set to 100 seconds, you can receive periodic data where two messages have a time difference from 80 (-20 %) to 120 (+20 %) seconds.
 
 In applications where there are multiple aggregated values, this jitter has a side-effect that sometimes you can see fewer or more aggregated values than expected. The missing values are not lost, they will be sent correctly in the next message.
 
 This jitter is not applied to **events** like button presses or input changes. They report immediately.
 
-## Shell Commands
+## Shell commands
 
 Apart from the commands mentioned above, the shell offers many more commands. They can be listed using the `help` command.
 

@@ -1,12 +1,12 @@
 ---
-title: Shell Commands
+title: Shell commands
 description: "GLIDER Zephyr shell commands over RTT or AT$SHELL: the shared config syntax and the app, inputs, therm, alarm, modbus and led commands with examples."
 sidebar_position: 2
 title_meta: "Shell Commands (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Shell Commands Reference
+# Shell commands reference
 
 GLIDER runs a full **Zephyr shell** that exposes application-level commands for every subsystem. The shell is reachable through:
 

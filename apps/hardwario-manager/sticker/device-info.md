@@ -1,12 +1,12 @@
 ---
 slug: device-info
 title: Device info
-description: "Read a STICKER's firmware, uptime, battery, active alarms, health flags and radio state over NFC in HARDWARIO Manager."
+description: "Read the STICKER firmware, uptime, battery, active alarms, health flags and radio state over NFC in HARDWARIO Manager."
 ---
 
 # Device info
 
-**Device info** reads a STICKER's state over NFC in a few seconds: which
+**Device info** reads the state of a STICKER over NFC in a few seconds: which
 firmware it runs, how long it has been up, its battery, its alarms, its health
 and the state of its radio link.
 

@@ -8,7 +8,7 @@ description: "A Connector is a webhook that the Cloud calls every time a device 
 
 A **Connector** is a webhook that the Cloud calls every time a device sends an uplink message. Connectors are the primary way to push data from HARDWARIO Cloud to your own system, database, or third-party service.
 
-## How Connectors Work
+## How connectors work
 
 1. A device sends an uplink message to the Cloud
 2. The Cloud finds all connectors that share a **tag** with the device
@@ -22,11 +22,11 @@ flowchart LR
   Cloud -->|tag match| C2[Connector 2]
   C1 -->|HTTP POST| Backend[Your backend]
   C2 -->|HTTP POST| Viz["Grafana / Ubidots / …"]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class Cloud hero;
 ```
 
-## Creating a Connector
+## Creating a connector
 
 1. Open **Connectors** in the left sidebar, then click **+ NEW CONNECTOR**.
 
@@ -68,7 +68,7 @@ Select which message types trigger the connector:
 | `stats` | Internal Cloud statistics |
 | `codec` | Encoder/decoder key updates |
 
-## The Transformation Function
+## The transformation function
 
 Every connector runs a JavaScript function that receives a `job` object and returns the HTTP request to make. This lets you reshape the payload, add authentication headers, or filter messages.
 
@@ -115,7 +115,7 @@ function main(job) {
 
 When the function is ready, click **SAVE**.
 
-### The `job` Object
+### The `job` object
 
 The transformation function receives a `job` object with the following structure:
 
@@ -153,7 +153,7 @@ The transformation function receives a `job` object with the following structure
 
 </details>
 
-## Testing Your Connector
+## Testing your connector
 
 The quickest way to confirm a connector actually fires, and to see exactly what it sends, is to point it at a free, temporary receiver such as [**webhook.site**](https://webhook.site). No backend of your own required. (The PLAYGROUND above tests your function's *output*; this tests the real HTTP *delivery*.)
 
@@ -195,7 +195,7 @@ webhook.site URLs are **public**, so use only test data while testing, and switc
 
 **Other receivers** you can use the same way: [requestinspector.com](https://requestinspector.com/) (instant public endpoint), [ngrok.com](https://ngrok.com/) (tunnel to a server on your machine), [tailscale.com](https://tailscale.com/) (private network with a public funnel).
 
-## Retry Policy
+## Retry policy
 
 If the HTTP request fails (non-2xx response or timeout), the Cloud retries automatically. The default retry schedule (in seconds):
 

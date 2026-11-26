@@ -32,7 +32,7 @@ flowchart TD
   Devices([LoRaWAN devices]) <--> Radio[LoRa radio] <--> EMBER[EMBER gateway]
   EMBER <--> WS["WebSocket<br/>ws / wss / mTLS, TCP 3001"] <--> Bridge[ChirpStack Gateway Bridge<br/>basic_station backend]
   Bridge <--> MQTT["MQTT<br/>eu868/gateway/EUI/…"] <--> CS[(ChirpStack v4)]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   classDef link fill:#8080801f,stroke:#80808066,stroke-width:1px,font-size:13px;
   class EMBER hero;
   class Radio,WS,MQTT link;
@@ -49,7 +49,7 @@ When it connects, EMBER first asks where to connect (`router-info`), and the bri
 | ChirpStack | v4 (tested 4.19) with the EU868 region |
 | Gateway Bridge | ChirpStack Gateway Bridge v4 (tested 4.1) as a second instance with the `basic_station` backend |
 | Network | EMBER must reach the server on TCP port 3001 (or the port you choose) |
-| Certificates (wss, mTLS) | a certificate authority (CA) and a server certificate issued for the DNS name or IP address the EMBERs connect to |
+| Certificates (wss, mTLS) | a certificate authority (CA) and a server certificate issued for the DNS name or IP address the EMBER gateways connect to |
 | Time | correct time on the server (NTP): the bridge checks certificate validity against it; NTP on EMBER is recommended too (log timestamps) |
 
 ---
@@ -116,13 +116,13 @@ state_topic_template="eu868/gateway/{{ .GatewayID }}/state/{{ .StateType }}"
 command_topic_template="eu868/gateway/{{ .GatewayID }}/command/#"
 ```
 
-- The **server certificate** (`tls_cert`) must contain the DNS name or IP address the EMBERs use in its SAN. The simplest way is to sign it with the same CA as the gateway certificates (step 2).
+- The **server certificate** (`tls_cert`) must contain the DNS name or IP address the EMBER gateways use in its SAN. The simplest way is to sign it with the same CA as the gateway certificates (step 2).
 - **With `ca_cert` set**, the bridge requires a client certificate signed by this CA whose name (CN) is exactly the gateway EUI.
-- Open port 3001 in the firewall for the network the EMBERs connect from.
+- Open port 3001 in the firewall for the network the EMBER gateways connect from.
 - **Restart the bridge at a quiet time**: every restart reconnects all gateways (see [Known limitations](#known-limitations)).
 
 :::warning
-The bridge that EMBERs connect to must have `region="EU868"`. EMBER accepts even a frequency plan outside its band (seen with US915); it then looks online, receives nothing, and its LoRa service stays unstable until EMBER is rebooted. See [Wrong region from the server](/ember/lorawan-network-server/lorawan-chirpstack-basics-station#wrong-region-from-the-server).
+The bridge that EMBER gateways connect to must have `region="EU868"`. EMBER accepts even a frequency plan outside its band (seen with US915); it then looks online, receives nothing, and its LoRa service stays unstable until EMBER is rebooted. See [Wrong region from the server](/ember/lorawan-network-server/lorawan-chirpstack-basics-station#wrong-region-from-the-server).
 :::
 
 ---

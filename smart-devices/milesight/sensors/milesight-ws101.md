@@ -6,7 +6,7 @@ description: "Milesight WS101 smart button with short, long and double press act
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor WS101
+# Milesight sensor WS101
 
 Milesight WS101 is a **compact, battery-powered LoRaWAN smart button** designed for **wireless control, triggering actions, and sending alarms**. It supports **multiple press actions** (short, long, and double press) with **response time less than 1 second**. The button features **ultra-low power consumption** with **battery life over 5 years**, **NFC configuration**, and **Milesight D2D communication** capability. With its **portable design** and **IP30 rating**, it's ideal for smart homes, offices, hotels, schools, and emergency panic button applications.
 
@@ -22,7 +22,7 @@ Milesight WS101 is a **compact, battery-powered LoRaWAN smart button** designed 
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | https://www.hardwario.store/p/milesight-ws101                        |
@@ -39,7 +39,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -59,7 +59,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -68,7 +68,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/ws-series/ws101/ws101-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -84,35 +84,35 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Technology | LoRaWAN®, Milesight D2D |
 | Antenna | Internal |
 | Frequency | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Tx power | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Sensitivity | -137 dBm @300bps |
 | Mode | OTAA / ABP Class A |
-| **Button Functions** | |
-| Button Types | 1× External Button, 1× Power/Reset Button (internal) |
-| Press Actions | Short press, long press, double press |
-| Response Time | Less than 1 second |
-| User Defined Actions | All press actions can be customized |
+| **Button functions** | |
+| Button types | 1× External Button, 1× Power/Reset Button (internal) |
+| Press actions | Short press, long press, double press |
+| Response time | Less than 1 second |
+| User defined actions | All press actions can be customized |
 | **Indicators** | |
 | LED | 1× LED indicator |
 | Buzzer | Yes |
 | **Features** | |
 | Configuration | NFC / Downlink |
 | D2D Communication | Direct device-to-device without gateway |
-| Advanced Features | Panic button, scene control, automation triggers |
-| **Physical Characteristics** | |
-| Power Supply | 1 × ER14335 (1650 mAh) |
-| Battery Life | Over 5 years (10 presses per day) |
-| Operating Temp | -20°C ~ +60°C |
-| Humidity | ≤90% RH (non-condensing) |
-| Ingress Protection | IP30 |
+| Advanced features | Panic button, scene control, automation triggers |
+| **Physical characteristics** | |
+| Power supply | 1 × ER14335 (1650 mAh) |
+| Battery life | Over 5 years (10 presses per day) |
+| Operating temp | -20 °C ~ +60 °C |
+| Humidity | ≤90 % RH (non-condensing) |
+| Ingress protection | IP30 |
 | Dimensions | 50 × 50 × 18 mm |
 | Weight | 38.8 g (with battery) |
 | Material | ABS+PC |

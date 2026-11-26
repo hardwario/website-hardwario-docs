@@ -1,6 +1,6 @@
 ---
 slug: /sdk-v4-migration-guide
-title: SDK v4.0.0 Migration Guide
+title: SDK v4.0.0 migration guide
 description: "Upgrade to CHESTER SDK v4.0.0 on nRF Connect SDK v3.4: update the workspace and Zephyr SDK, then move out-of-tree apps to sysbuild and DTS partitions."
 ---
 
@@ -65,7 +65,7 @@ The board's default DTS layout (`boards/hardwario/chester/chester_nrf52840.dts`)
 
 ## 2. Remaining source & Kconfig changes
 
-### 2a. Remove stale Kconfig (grep the whole app tree, not just `prj.conf`)
+### 2a. remove stale Kconfig (grep the whole app tree, not just `prj.conf`)
 
 TinyCrypt was removed in NCS 3.0; the BLE host uses PSA Crypto now.
 
@@ -77,7 +77,7 @@ TinyCrypt was removed in NCS 3.0; the BLE host uses PSA Crypto now.
 
 For generator-based apps, remove the `subsystem-tinycrypt*` features / `extras:` lines from `project.yaml` and regenerate, **or** delete the three lines from `prj.conf` by hand (not both). Apps that only use `CONFIG_CTR_CLOUD` / `CONFIG_CTR_BLE` get the PSA migration for free.
 
-### 2b. Conditional – apply only if the feature is used
+### 2b. conditional – apply only if the feature is used
 
 | If you…                                        | Change |
 |------------------------------------------------|--------|

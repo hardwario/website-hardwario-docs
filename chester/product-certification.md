@@ -1,15 +1,15 @@
 ---
 slug: product-certification
-title: Product Certification
+title: Product certification
 description: "Product certifications available for the CHESTER platform and where to find the declarations of conformity."
 ---
 import Image from '@theme/IdealImage';
 
-# Product Certification
+# Product certification
 
 This article provides information on the available **CHESTER** product certification.
 
-## CE (RED) Certification
+## CE (RED) certification
 
 **EU and UK Declarations of Conformity**
 * The current declaration of every CHESTER product, in all EU languages and for the UK, is published on the [**Declarations of Conformity**](https://www.hardwario.com/resources/declarations/) page.
@@ -56,7 +56,7 @@ This article provides information on the available **CHESTER** product certifica
 * `ETSI EN 300 220-1 V3.1.1 (2017-02)`
 * `ETSI EN 300 220-2 V3.1.1 (2017-02)`
 
-## FCC Certification
+## FCC certification
 
 **FCC Test Report for Radiated Emissions**
 * [**Download**](pathname:///download/hio-chester-cert-chtew22090080-fcc-sdoc.pdf) (CHTEW22090080)
@@ -120,7 +120,7 @@ This article provides information on the available **CHESTER** product certifica
   * CMWX1ZZABZ-078 (Murata)<br/>FCC ID: `VPYCMABZ`
   * nRF9160-SICA-B1A-R7 (Nordic)<br/>FCC ID: `2ANPO00NRF9160`
 
-## RoHS and WEEE Certification
+## RoHS and WEEE certification
 
 **RoHS Certificate (TVOC)**
 * [**Download**](pathname:///download/hio-chester-cert-rohs-ctc2206002801-tvoc.pdf) (CTC2206002801)

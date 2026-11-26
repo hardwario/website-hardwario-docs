@@ -1,10 +1,10 @@
 ---
 slug: modbus-registers
-title: Modbus Registers
+title: Modbus registers
 description: "GAUGER Modbus TCP register map: twelve holding registers (45301–45312, FC03) with activation and deactivation counts and the state of all four inputs."
 ---
 
-# Modbus Registers
+# Modbus registers
 
 The counted data can be read out from the device through Modbus TCP. There are twelve holding registers in total. Two of them count each channel: one holds the number of activations, the other one the number of deactivations. A further register per channel holds the current state of the input.
 

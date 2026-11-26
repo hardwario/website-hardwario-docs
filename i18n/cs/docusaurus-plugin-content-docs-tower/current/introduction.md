@@ -6,13 +6,14 @@ description: "TOWER, srdce HARDWARIO Academy, je modulární bezdrátová platfo
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # TOWER {#tower}
 
 **TOWER** je modulární bezdrátová platforma IoT s otevřeným softwarem i hardwarem (open source, open hardware) pro rychlé prototypování a nasazení.
 Používá se v průmyslu, ve výuce STEM a v hobby projektech (domácí automatizace, zahradničení, osvětlení, escape roomy atd.).
 
-<img src="/img/tower.webp" data-zoom-src="/img/tower.webp" width="540" alt="TOWER" />
+<ProductSpin product="tower" variants={[{id: "push", label: "TOWER Starter – Push kit"}]} frames={24} width={308} ratio={600 / 720} caption="Na ukázce: TOWER Starter – Push kit (studiové fotky)" />
 
 ## Rychlé odkazy {#quick-links}
 

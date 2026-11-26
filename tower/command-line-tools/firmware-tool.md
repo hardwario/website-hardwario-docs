@@ -1,6 +1,6 @@
 ---
 slug: firmware-tool
-title: Firmware Flashing Tool
+title: Firmware flashing tool
 description: "Install the bcf Firmware Flashing Tool with pip, then list, search and flash TOWER firmware from GitHub or a local file to the Core Module or Radio Dongle."
 ---
 import Image from '@theme/IdealImage';
@@ -122,7 +122,7 @@ bcf --help output
 
 :::
 
-## Workflow Example
+## Workflow example
 
 #### Update the list of firmware from [our GitHub](https://github.com/orgs/hardwario/repositories?q=twr-&type=all&language=&sort=)
 
@@ -170,7 +170,7 @@ bcf flash --device /dev/ttyUSB0 hardwario/twr-radio-push-button:latest
 
 :::
 
-## More About Firmware Flashing Tool
+## More about firmware flashing tool
 
 You can use **Firmware Flashing Tool** for logging messages from the device. Visit [**Development With Command Line Tools chapter**](../firmware-development/development-with-cli-tools.md) to get more info about this.
 

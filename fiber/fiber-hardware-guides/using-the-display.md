@@ -1,13 +1,13 @@
 ---
-title: Using the Display
+title: Using the display
 description: "The backlit LCD of FIBER runs over SPI6 under the FIBER application, not a Linux framebuffer, so the guide to custom screen content is still pending."
 ---
 
-# Using the Display
+# Using the display
 
 **FIBER only**: FIBER Lite has no display (see [What's Different](/fiber/fiber-lite/introduction#whats-different)).
 
-This guide covers putting your own content on FIBER's backlit LCD.
+This guide covers putting your own content on the backlit FIBER LCD.
 
 :::danger
 

@@ -1,6 +1,6 @@
 ---
 slug: lora-at-commands
-title: LoRa AT Commands Configuration
+title: LoRa AT commands configuration
 ---
 import Image from '@theme/IdealImage';
 
@@ -14,7 +14,7 @@ These commands apply to all firmware in the [**HARDWARIO Playground**](../deskto
 
 :::
 
-## LoRa Configuration
+## LoRa configuration
 
 The LoRa module can be configured with **AT commands** sent to the [**Core Module**](../hardware-modules/about-core-module.md) over a USB virtual serial port.
 
@@ -31,7 +31,7 @@ Parameters for the configuration are:
 - **8 data bits, 1 stop bit, no parity** (8N1)
 - `CR+LF` as the **end-of-line** sequence for both transmit and receive
 
-## About AT Commands
+## About AT commands
 
 To list all possible commands use `AT$HELP`. The set of supported commands will depend on your firmware version.
 
@@ -74,7 +74,7 @@ AT$HELP This help
 
 </details>
 
-### Read Value
+### Read value
 
 To read the value of a variable, you just have to append the question mark `?` to the end of the **corresponding AT command**
 
@@ -88,7 +88,7 @@ The current value of the variable will be shown in the terminal
 APPSKEY: BF22C15EB89237A65DAABB05B2C91EB4
 ```
 
-### Update Value
+### Update value
 
 To update the value of the variable use the following syntax of a variable followed by `=` and the desired value
 
@@ -102,7 +102,7 @@ You can use [**online key generators**](https://loratools.nl/#/keys) for testing
 
 :::
 
-## OTAA - Over-the-Air Activation
+## OTAA - over-the-air activation
 
 OTAA means that the session keys (the ones with **S** in the name) are generated in the LoRa network during **JOIN**. The keys are then automatically transferred to your LoRa module.
 
@@ -158,7 +158,7 @@ Note that the **OK** response to **JOIN** command does not mean that the join wa
 
 :::
 
-## ABP - Activation by Personalization
+## ABP - activation by personalization
 
 **ABP** means that you set up session keys manually. `AT$MODE` has to be **set to 0 (ABP)**, which is the default setting after a LoRa module power reset.
 

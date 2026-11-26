@@ -92,7 +92,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Technologie | LoRaWAN®, Milesight D2D |
 | Anténa | Interní |
 | Frekvence | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Vysílací výkon | 16 dBm (868MHz) / 20 dBm (915MHz) / 19 dBm (470MHz) |
+| Vysílací výkon | 16 dBm (868 MHz) / 20 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class A |
 | **Detekce úniku** | |
@@ -104,7 +104,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Pokročilé funkce | D2D Controller, alarm při úniku vody |
 | **Fyzické vlastnosti** | |
 | Napájení | 1 × CR2450 (590 mAh) |
-| Výdrž baterie | ~5,7 roku (typické použití, 25 °C) |
+| Výdrž baterie | přibližně 5,7 roku (typické použití, 25 °C) |
 | Provozní teplota | -10 °C ~ +60 °C |
 | Vlhkost | 0 %–100 % RH (nekondenzující) |
 | Krytí | IP67 |

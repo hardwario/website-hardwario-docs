@@ -114,7 +114,7 @@ Sledujte **Network Status** v horní liště domovské obrazovky.
 ### Testovací funkce {#testing-features}
 
 - Několik testovacích režimů: kvalita signálu (RSSI/SNR), mapování pokrytí, skenování šumu, ping-pong simulace
-- Výsledky testů se ukládají do 64GB interního úložiště
+- Výsledky testů se ukládají do 64 GB interního úložiště
 - Exportovat je lze přes USB Type-C nebo na kartu microSD (až 256 GB)
 - Když vložíte **kartu microSD**, výsledky měření se automaticky ukládají do souboru CSV pro analýzu na počítači
 
@@ -147,18 +147,18 @@ Do testeru můžete nainstalovat aplikaci **Milesight ToolBox** a vestavěnou **
 |------------------|--------------------------|
 | Verze LoRaWAN    | 1.0.3                    |
 | Režim            | OTAA / ABP               |
-| Citlivost        | -137 dBm @ 125kHz, SF=12 |
-| Tx Power         | 19 dBm (470MHz) / 16 dBm (868MHz) / 22 dBm (915MHz) |
+| Citlivost        | -137 dBm @ 125 kHz, SF=12 |
+| Tx Power         | 19 dBm (470 MHz) / 16 dBm (868 MHz) / 22 dBm (915 MHz) |
 
 ---
 
 ## Napájení {#power-supply}
 | Typ    | Hodnota                                      |
 |--------|----------------------------------------------|
-| Napájení | 4,3V/4300mAh dobíjecí lithium-iontová baterie |
-| Nabíjení | 5V ⎓ 2A přes USB Type-C                     |
-| Aktivní provoz | ~8 hodin nepřetržitého provozu         |
-| Pohotovostní režim | >300 hodin (~7 dní)                  |
+| Napájení | 4,3 V/4300 mAh dobíjecí lithium-iontová baterie |
+| Nabíjení | 5 V ⎓ 2A přes USB Type-C                     |
+| Aktivní provoz | přibližně 8 hodin nepřetržitého provozu         |
+| Pohotovostní režim | >300 hodin (přibližně 7 dní)                  |
 
 ---
 
@@ -168,20 +168,20 @@ Do testeru můžete nainstalovat aplikaci **Milesight ToolBox** a vestavěnou **
 |---------------|-----------|
 | **Bezdrátový přenos** | |
 | Protokol | LoRaWAN® V1.0.3 |
-| Anténa | 1× konektor SMA female 50Ω (externí) |
+| Anténa | 1× konektor SMA female 50 Ω (externí) |
 | Frekvence | CN470 / IN865 / EU868 / RU864 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 19 dBm (470MHz) / 16 dBm (868MHz) / 22 dBm (915MHz) |
-| Citlivost | -137 dBm @ 125kHz, SF=12 |
+| Tx Power | 19 dBm (470 MHz) / 16 dBm (868 MHz) / 22 dBm (915 MHz) |
+| Citlivost | -137 dBm @ 125 kHz, SF=12 |
 | **Konektivita** | |
-| Wi-Fi | 802.11 b/g/n (2,4GHz), 802.11 a/n/ac (5GHz) |
+| Wi-Fi | 802.11 b/g/n (2,4 GHz), 802.11 a/n/ac (5 GHz) |
 | Bluetooth | 4.0 (BLE) |
 | GPS/GNSS | GPS / GLONASS / Beidou / Galileo |
 | **Displej a rozhraní** | |
 | Obrazovka | 5,72" TP LCD dotyková obrazovka, rozlišení 1440 × 720 |
 | Operační systém | Android 12.0 |
 | Procesor | Osmijádrový MTK6762, 2 GHz |
-| Paměť | 4GB RAM + 64GB ROM |
-| Rozšíření úložiště | microSD až 256GB |
+| Paměť | 4 GB RAM + 64 GB ROM |
+| Rozšíření úložiště | microSD až 256 GB |
 | **Konfigurace** | |
 | NFC | ISO/IEC 14443A, čtecí vzdálenost 1-3 cm |
 | USB | Type-C (USB 3.0) pro napájení a data |
@@ -190,11 +190,11 @@ Do testeru můžete nainstalovat aplikaci **Milesight ToolBox** a vestavěnou **
 | Geolokace | GPS záznam testovacích bodů |
 | Reporty | Rozsáhlé možnosti exportu |
 | **Fyzické vlastnosti** | |
-| Napájení | 4,3V/4300mAh Li-ion dobíjecí |
-| Výdrž baterie | ~8 hodin aktivně / >300 hodin v pohotovosti |
-| Provozní teplota | -10°C ~ +50°C |
-| Skladovací teplota | -20°C ~ +60°C |
-| Vlhkost | 95% RH (nekondenzující) |
+| Napájení | 4,3 V/4300 mAh Li-ion dobíjecí |
+| Výdrž baterie | přibližně 8 hodin aktivně / >300 hodin v pohotovosti |
+| Provozní teplota | -10 °C ~ +50 °C |
+| Skladovací teplota | -20 °C ~ +60 °C |
+| Vlhkost | 95 % RH (nekondenzující) |
 | Krytí | IP65 |
 | Rozměry | 178 × 83 × 17 mm |
 | Hmotnost | 242 g (bez antény) |

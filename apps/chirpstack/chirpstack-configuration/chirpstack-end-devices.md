@@ -1,18 +1,18 @@
 ---
 slug: chirpstack-end-devices
-title: End Devices
+title: End devices
 description: "Create device profiles in ChirpStack v4 with examples for CHESTER and STICKER, add end devices to an application and enter their activation keys."
 title_meta: "End Devices (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 
-# End Devices Configuration Guide
+# End devices configuration guide
 
 This tutorial guides you through the process of creating device profiles and adding end devices in ChirpStack v4.
 
 ---
 
-## 1. Device Profiles  
+## 1. Device profiles  
 
 After adding gateways, the next step is to create device profiles in ChirpStack.  
 
@@ -34,14 +34,14 @@ After adding gateways, the next step is to create device profiles in ChirpStack.
 
 If you are using CHESTER or STICKER as an end device, you can find examples of device profile configurations in the following links:
 
-| **Device** | **Documentation Link** |
+| **Device** | **Documentation link** |
 |-------------|-------------------------|
 | **CHESTER** | https://docs.hardwario.com/chester/platform-connectivity/lorawan-radio#chirpstack-configuration |
 | **STICKER** | https://docs.hardwario.com/sticker/connectivity/lorawan-chirpstack |
 
 ---
 
-## 2. Applications – Adding End Devices  
+## 2. Applications – adding end devices  
 
 Next, create an application:  
 
@@ -68,7 +68,7 @@ Finally, click **(Re)activate Device**.
 
 ![ChirpStack v4 - Device activation](images/chirpstack-tutorial-13.png)
 
-## Video Tutorial
+## Video tutorial
 
 :::tip
 If you need further assistance or a visual demonstration of the process described in this guide, consult the [**Video Guide**](/apps/videos-apps/chirpstack-devices).

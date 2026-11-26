@@ -6,7 +6,7 @@ const sidebars = {
     'index',
     {
       type: 'category',
-      label: 'User Guide',
+      label: 'User guide',
       className: 'sidebar-section',
       collapsible: false,
       items: [
@@ -20,7 +20,7 @@ const sidebars = {
             {
               type: 'doc',
               id: 'devices',
-              label: 'Device Management',
+              label: 'Device management',
             },
             'bulk-actions',
             {
@@ -78,7 +78,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Video Tutorials',
+          label: 'Video tutorials',
           link: {
             type: 'doc',
             id: 'videos-cloud/index',
@@ -115,7 +115,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Device Protocol',
+          label: 'Device protocol',
           link: {
             type: 'doc',
             id: 'device-protocol/index',

@@ -126,9 +126,8 @@ const UI = {
     title: 'HARDWARIO Docs Assistant',
     beta: 'Beta v2.1',
     greeting:
-      'Hello! 👋 I am the AI assistant for HARDWARIO technical documentation. ' +
-      'I will help you find information about our hardware, software and cloud ' +
-      'solutions quickly. What can I help you with today?',
+      'I answer questions from the HARDWARIO documentation: devices, firmware and ' +
+      'HARDWARIO Cloud. What are you working on?',
     // Three things the corpus genuinely answers well, spread across product,
     // firmware and integration so the trio does not read as one question asked
     // three ways. Each was checked against the live backend: an opener that
@@ -148,14 +147,14 @@ const UI = {
     launch: 'Ask about the documentation',
     rateUp: 'Helpful',
     rateDown: 'Not helpful',
-    rateThanks: 'Thanks for the feedback!',
+    rateThanks: 'Thanks for the feedback.',
     copyCode: 'Copy',
     copiedCode: 'Copied',
     rateComment: 'What was wrong? (optional)',
     rateCommentSend: 'Send',
     // The comment is stored with the question and the answer, for the team.
     rateCommentHint: 'Do not include personal data.',
-    teaser: '👋 Hi! Stuck on something? Ask me anything about HARDWARIO devices.',
+    teaser: 'Questions about HARDWARIO devices? Ask the documentation assistant.',
     teaserClose: 'Hide this message',
     launchClose: 'Close the documentation assistant',
     hideSources: 'Hide the other pages',
@@ -166,7 +165,7 @@ const UI = {
     paused:
       'The documentation assistant ran into an error and is unavailable. Please use the ' +
       'search at the top of the page, or write to ask@hardwario.com.',
-    sites: { docs: 'Documentation', www: 'hardwario.com', store: 'Store' },
+    sites: { docs: 'Documentation', www: 'hardwario.com', store: 'HARDWARIO Store' },
     // Under the input: where a question goes, that it is kept, and the privacy
     // policy in the reader's language. Every question and answer is stored for
     // the team (docs-chatbot, question_sent), so the line has to say so.
@@ -179,9 +178,8 @@ const UI = {
     title: 'HARDWARIO Docs Assistant',
     beta: 'Beta v2.1',
     greeting:
-      'Dobrý den! 👋 Jsem AI asistent technické dokumentace HARDWARIO. ' +
-      'Rychle vám pomůžu najít informace o našem hardwaru, softwaru ' +
-      'a cloudových řešeních. S čím vám dnes mohu pomoci?',
+      'Odpovídám na dotazy z dokumentace HARDWARIO: zařízení, firmware ' +
+      'a HARDWARIO Cloud. Na čem pracujete?',
     suggestions: [
       'Co je platforma CHESTER?',
       'Jak nahrát firmware do zařízení CHESTER nebo STICKER?',
@@ -196,13 +194,13 @@ const UI = {
     launch: 'Zeptejte se na dokumentaci',
     rateUp: 'Užitečné',
     rateDown: 'Neužitečné',
-    rateThanks: 'Děkujeme za zpětnou vazbu!',
+    rateThanks: 'Děkujeme za zpětnou vazbu.',
     copyCode: 'Kopírovat',
     copiedCode: 'Zkopírováno',
     rateComment: 'Co bylo špatně? (nepovinné)',
     rateCommentSend: 'Odeslat',
     rateCommentHint: 'Neuvádějte osobní údaje.',
-    teaser: '👋 Dobrý den! Potřebujete poradit? Zeptejte se mě na cokoli o zařízeních HARDWARIO.',
+    teaser: 'Máte dotaz k zařízením HARDWARIO? Zeptejte se asistenta dokumentace.',
     teaserClose: 'Skrýt tuto zprávu',
     launchClose: 'Zavřít asistenta dokumentace',
     hideSources: 'Skrýt ostatní stránky',
@@ -215,7 +213,7 @@ const UI = {
     paused:
       'Asistent dokumentace narazil na chybu a není dostupný. Použijte prosím hledání ' +
       'v horní části stránky, nebo nám napište na ask@hardwario.com.',
-    sites: { docs: 'Dokumentace', www: 'hardwario.com', store: 'E-shop' },
+    sites: { docs: 'Dokumentace', www: 'hardwario.com', store: 'HARDWARIO Store' },
     privacy:
       'Vaše dotazy se odesílají externí službě umělé inteligence, která generuje odpověď. ' +
       'Dotazy a odpovědi ukládáme, abychom mohli zlepšovat dokumentaci. Neuvádějte osobní údaje. ' +
@@ -735,7 +733,7 @@ export default function ChatWidget() {
                 <ResizeIcon expanded={expanded} />
               </button>
               <button className={styles.close} onClick={close} title={t.close}>
-                ✕
+                <svg className={styles.lucide} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
               </button>
             </div>
           </div>
@@ -900,7 +898,7 @@ export default function ChatWidget() {
               aria-describedby={privacyId}
             />
             <button onClick={() => send()} disabled={loading || !input.trim()}>
-              ➤
+              <svg className={styles.lucide} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z" /><path d="M6 12h16" /></svg>
             </button>
           </div>
           <p id={privacyId} className={styles.privacy}>
@@ -926,7 +924,7 @@ export default function ChatWidget() {
             title={t.teaserClose}
             aria-label={t.teaserClose}
           >
-            ✕
+            <svg className={styles.lucide} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
           </button>
         </div>
       )}
@@ -940,7 +938,7 @@ export default function ChatWidget() {
         aria-label={open ? t.launchClose : t.launch}
       >
         {open ? (
-          <span className={styles.fabX} aria-hidden="true">✕</span>
+          <span className={styles.fabX} aria-hidden="true"><svg className={styles.lucide} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></span>
         ) : (
           <RobotMark className={styles.fabIcon} intro={intro} />
         )}

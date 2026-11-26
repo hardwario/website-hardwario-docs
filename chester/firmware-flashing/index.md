@@ -1,12 +1,12 @@
 ---
 slug: firmware-flashing
-title: Firmware Flashing
+title: Firmware flashing
 description: "How to update the firmware of the CHESTER mainboard components: application, LTE modem, LoRaWAN modem and CHESTER-Z over J-Link or Bluetooth."
 title_meta: "Firmware Flashing (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Firmware Flashing
+# Firmware flashing
 
 :::tip
 
@@ -28,7 +28,7 @@ On the CHESTER mainboard, there are several devices with user-upgradeable firmwa
 
    The LoRaWAN device modem is located in the top right corner of the mainboard (below the LTE modem). The modem comes in form of a module from Murata, type CMWX1ZZABZ-078. The module encapsulates a radio chip from Semtech, type SX1276, and a microcontroller from STMicroelectronics, type STM32L072CZ. Flashing can be done using J-Link through the SWD connector labeled as `LRW`.
 
-## Extension Modules
+## Extension modules
 
 Apart from the mainboard itself, these are the other devices with the firmware in the CHESTER ecosystem:
 

@@ -1,50 +1,50 @@
 ---
 slug: cloud-v2-migration-guide
-title: Migration from Cloud Legacy
+title: Migration from Cloud legacy
 description: "This article walks you through the complete migration of a CHESTER device from HARDWARIO Cloud Legacy to the current HARDWARIO Cloud."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Migration from Cloud Legacy {#cloud-v2-migration-guide}
+# Migration from Cloud legacy {#cloud-v2-migration-guide}
 
 This article walks you through the complete migration process from **HARDWARIO Cloud Legacy** to the current **HARDWARIO Cloud**.
 
-## 1. Update the LTE Modem
+## 1. Update the LTE modem
 
 In this guide, you will set up the required software tools and hardware to work with the CHESTER device. It explains how to install and verify the HARDWARIO Command Line Tools in a Python virtual environment and how to connect the SEGGER J-Link programmer. Mainly, it walks you through erasing the application firmware, flashing the LTE modem firmware, and then reinstalling the application firmware, which is required to begin migration to HARDWARIO Cloud.
 
 👉 **Step-by-Step guide: [https://docs.hardwario.com/chester/firmware-flashing/lte-modem-over-j-link](/chester/firmware-flashing/lte-modem-over-j-link)**
 
-## 2. Flash the Application
+## 2. Flash the application
 
 In this guide, you will learn how to flash application firmware to the CHESTER device using the SEGGER J-Link programmer. It explains the required hardware and software setup, including installing Python, creating a virtual environment, and installing the HARDWARIO Command Line Tools. Mainly, it shows how to connect the J-Link, and then flash the application firmware either from a HEX file or directly using a 128-bit unique ID.
 
 👉 **Step-by-Step guide: [https://docs.hardwario.com/chester/firmware-flashing/application-over-j-link](/chester/firmware-flashing/application-over-j-link)**
 
-## 3. Insert the SIM Card
+## 3. Insert the SIM card
 
 ![CHESTER - SIM card holder](images/chester-sim-holder.png)
 
-## 4. Add the Device to HARDWARIO Cloud {#4-add-the-device-to-cloud-v2}
+## 4. Add the device to HARDWARIO Cloud {#4-add-the-device-to-cloud-v2}
 
 #### 1. Go to [HARDWARIO Cloud](https://hardwario.cloud/) {#1-go-to-hardwario-cloud-v2}
 - Open the [HARDWARIO Cloud](https://hardwario.cloud/) interface in your browser.
 
-#### 2. Create a New Space
+#### 2. Create a new space
 - First, you need to create a new Space.
 Click the button in the top-right corner labeled + NEW SPACE.
 
 ![Cloud - Create a New Space](images/cloud-0.png)
 
-#### 3. Create a New Device
+#### 3. Create a new device
 - Once the Space is created, you can add a new device.
 Click the button in the top-right corner labeled + NEW DEVICE.
 
 ![Cloud - Create a New Device](images/cloud-2.png)
 
-#### 4. Enter Device Details
+#### 4. Enter device details
 
 - Name
 - Serial Number
@@ -61,7 +61,7 @@ Each tag has a **name** and **color**.
 
  ![Cloud - Enter Device Details](images/cloud-3.png)
 
-#### 5. Device Added
+#### 5. Device added
 Your device is now **successfully added** to HARDWARIO Cloud.
 
 :::info

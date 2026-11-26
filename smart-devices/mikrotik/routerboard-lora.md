@@ -10,19 +10,19 @@ description: MikroTik RouterBOARD-based LoRaWAN gateway with integrated LoRa con
 
 The **MikroTik RouterBOARD LoRa** is a compact LoRaWAN gateway combining MikroTik's RouterOS networking platform with an integrated LoRa concentrator card. It supports 8-channel LoRaWAN reception and standard Semtech packet forwarder software.
 
-## Key Specifications
+## Key specifications
 
 | Parameter | Value |
 |---|---|
 | LoRa Channels | 8-channel (SX1301 or SX1302 concentrator) |
-| Frequency Bands | EU868, US915 (model-dependent) |
-| Network Software | RouterOS (MikroTik), Semtech UDP Packet Forwarder |
+| Frequency bands | EU868, US915 (model-dependent) |
+| Network software | RouterOS (MikroTik), Semtech UDP Packet Forwarder |
 | LAN Interface | 1× Gigabit Ethernet |
 | Power | PoE (802.3af) or DC |
 | Mounting | Compact desktop/DIN-rail |
 | Protocols | UDP Packet Forwarder, Basics Station |
 
-## HARDWARIO Integration
+## HARDWARIO integration
 
 The RouterBOARD LoRa gateway connects CHESTER and STICKER devices to LoRaWAN Network Servers:
 

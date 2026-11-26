@@ -1,6 +1,6 @@
 ---
 slug: index
-title: Milesight - Gateways
+title: Milesight - gateways
 description: "Milesight LoRaWAN gateways tested by HARDWARIO, with reference resources and the supported network server options."
 ---
 
@@ -13,7 +13,7 @@ Here is a list of tested **Milesight gateways** by HARDWARIO with reference reso
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 To operate your LoRaWAN device, you can choose between two supported network server platforms. Both solutions allow you to manage gateways, register end devices, configure profiles, and process payload data.
 

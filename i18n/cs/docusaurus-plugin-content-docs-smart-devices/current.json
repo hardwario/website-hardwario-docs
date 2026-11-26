@@ -23,7 +23,7 @@
     "message": "Pomocná zařízení",
     "description": "The label for category 'Utility' in sidebar 'smartDevicesSidebar'"
   },
-  "sidebar.smartDevicesSidebar.category.Video Tutorials": {
+  "sidebar.smartDevicesSidebar.category.Video tutorials": {
     "message": "Videonávody",
     "description": "The label for category 'Video Tutorials' in sidebar 'smartDevicesSidebar'"
   },

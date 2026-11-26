@@ -4,7 +4,7 @@ title: Terminal
 description: "Use the CHESTER shell from your phone over Bluetooth in HARDWARIO Manager, with command suggestions learned from the device and scrollback kept per device."
 ---
 
-# CHESTER Terminal
+# CHESTER terminal
 
 The terminal gives you the device's shell over Bluetooth, the same console you
 would reach over a cable, from the phone.

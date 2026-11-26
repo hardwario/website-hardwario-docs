@@ -1,6 +1,6 @@
 ---
 slug: how-to-eeprom
-title: "How To: EEPROM"
+title: "How to: EEPROM"
 description: "Keep data through power loss in the 6 KB EEPROM of the TOWER Core Module: size query, read and write example, write cycle limit and safe address range."
 ---
 import Image from '@theme/IdealImage';
@@ -20,10 +20,10 @@ Reading from the EEPROM does not count, so it is completely **safe to read** fro
 - [**EEPROM SDK Module**](https://sdk.hardwario.com/group__twr__eeprom.html)
 - GitHub Repository Example
 
-### EEPROM Size
+### EEPROM size
 [**TOWER Core Module**](../../hardware-modules/about-core-module.md) has 6 KB EEPROM included. In case you need to find this value out inside your code, there is a function for this inside the SDK: `size_t twr_eeprom_get_size(void)`
 
-## Read/Write Example
+## Read/write example
 
 :::info
 

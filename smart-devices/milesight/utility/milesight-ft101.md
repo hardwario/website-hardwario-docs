@@ -6,7 +6,7 @@ description: "Milesight FT101 LoRaWAN field tester: retrieve its keys, register 
 
 import Image from '@theme/IdealImage';
 
-# Milesight Field Tester FT101
+# Milesight field tester FT101
 
 Milesight FT101 is a **portable LoRaWAN® network testing device** designed for **signal assessment and optimization**. It features an **octa-core processor running Android 12.0**, supports **all standard LoRaWAN® frequency bands**, and provides **up to 8 hours of continuous operation**. The device is ideal for evaluating network quality, identifying optimal deployment locations, and comprehensive **field testing of LoRaWAN networks**.
 
@@ -22,7 +22,7 @@ Milesight FT101 is a **portable LoRaWAN® network testing device** designed for 
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | https://www.hardwario.store/p/milesight-ft101                        |
@@ -32,7 +32,7 @@ Milesight FT101 is a **portable LoRaWAN® network testing device** designed for 
 
 ---
 
-## Retrieving Device Keys
+## Retrieving device keys
 
 First, identify the unique identification credentials of your FT101.
 
@@ -51,7 +51,7 @@ The **AppEUI** (Join EUI) is fixed: **24E124C0002A0001**
 
 ---
 
-## Device Configuration
+## Device configuration
 
 Before connecting to the network, ensure the local settings are correct.
 
@@ -66,11 +66,11 @@ Before connecting to the network, ensure the local settings are correct.
 
 ---
 
-## LNS Registration (Server-Side)
+## LNS registration (server-side)
 
 This process occurs within your LoRaWAN Network Server interface (e.g., TTN, ChirpStack, or Milesight IoT Cloud).
 
-### Registration Steps
+### Registration steps
 
 1. **Create Application**: Create a folder or container (e.g., "Field_Testing")
 2. **Add Device**:
@@ -88,7 +88,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Network Activation (Join)
+## Network activation (join)
 
 Monitor the **Network Status** in the top bar of the home screen.
 
@@ -101,7 +101,7 @@ Monitor the **Network Status** in the top bar of the home screen.
 
 ---
 
-## Core Functions
+## Core functions
 
 | Function | Description | Objective |
 |----------|-------------|-----------|
@@ -111,16 +111,16 @@ Monitor the **Network Status** in the top bar of the home screen.
 | **Coverage Mapping** | GPS-tracked signal quality mapping | Identifying optimal deployment locations |
 | **Ping-pong Simulation** | Simulates bidirectional communication | Testing downlink capabilities |
 
-### Testing Features
+### Testing features
 
 - Multiple testing modes: signal quality (RSSI/SNR), coverage mapping, noise scanning, ping-pong simulation
-- Test results stored on 64GB internal storage
-- Exportable via USB Type-C or microSD card (up to 256GB)
+- Test results stored on 64 GB internal storage
+- Exportable via USB Type-C or microSD card (up to 256 GB)
 - Insert a **microSD card** to automatically save measurement results to a CSV file for PC analysis
 
 ---
 
-## Interpreting Noise Scan Results
+## Interpreting noise scan results
 
 A lower RSSI value (more negative) indicates a cleaner environment.
 
@@ -132,7 +132,7 @@ A lower RSSI value (more negative) indicates a cleaner environment.
 
 ---
 
-## Additional Capabilities
+## Additional capabilities
 
 **Milesight ToolBox** can be installed to configure other Milesight sensors via built-in **NFC reader** (ISO/IEC 14443A, 1-3 cm reading distance).
 
@@ -142,60 +142,60 @@ A lower RSSI value (more negative) indicates a cleaner environment.
 
 ---
 
-## LoRaWAN Configuration
+## LoRaWAN configuration
 | Parameter        | Value                    |
 |------------------|--------------------------|
 | LoRaWAN version  | 1.0.3                    |
 | Mode             | OTAA / ABP               |
-| Sensitivity      | -137 dBm @ 125kHz, SF=12 |
-| Tx Power         | 19 dBm (470MHz) / 16 dBm (868MHz) / 22 dBm (915MHz) |
+| Sensitivity      | -137 dBm @ 125 kHz, SF=12 |
+| Tx power         | 19 dBm (470 MHz) / 16 dBm (868 MHz) / 22 dBm (915 MHz) |
 
 ---
 
-## Power Supply
+## Power supply
 | Type   | Value                                        |
 |--------|----------------------------------------------|
-| Power  | 4.3V/4300mAh lithium-ion rechargeable battery |
-| Charging | 5V ⎓ 2A via USB Type-C                      |
-| Active use | ~8 hours continuous operation              |
-| Standby | >300 hours (~7 days)                         |
+| Power  | 4.3 V/4300 mAh lithium-ion rechargeable battery |
+| Charging | 5 V ⎓ 2A via USB Type-C                      |
+| Active use | approx. 8 hours continuous operation              |
+| Standby | >300 hours (approx. 7 days)                         |
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Protocol | LoRaWAN® V1.0.3 |
-| Antenna | 1× 50Ω SMA female connector (external) |
+| Antenna | 1× 50 Ω SMA female connector (external) |
 | Frequency | CN470 / IN865 / EU868 / RU864 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 19 dBm (470MHz) / 16 dBm (868MHz) / 22 dBm (915MHz) |
-| Sensitivity | -137 dBm @ 125kHz, SF=12 |
+| Tx power | 19 dBm (470 MHz) / 16 dBm (868 MHz) / 22 dBm (915 MHz) |
+| Sensitivity | -137 dBm @ 125 kHz, SF=12 |
 | **Connectivity** | |
-| Wi-Fi | 802.11 b/g/n (2.4GHz), 802.11 a/n/ac (5GHz) |
+| Wi-Fi | 802.11 b/g/n (2.4 GHz), 802.11 a/n/ac (5 GHz) |
 | Bluetooth | 4.0 (BLE) |
 | GPS/GNSS | GPS / GLONASS / Beidou / Galileo |
-| **Display & Interface** | |
+| **Display & interface** | |
 | Screen | 5.72" TP LCD Touch Screen, 1440 × 720 resolution |
-| Operating System | Android 12.0 |
+| Operating system | Android 12.0 |
 | Processor | Octa-core MTK6762, 2 GHz |
-| Memory | 4GB RAM + 64GB ROM |
-| Storage Expansion | microSD up to 256GB |
+| Memory | 4 GB RAM + 64 GB ROM |
+| Storage expansion | microSD up to 256 GB |
 | **Configuration** | |
 | NFC | ISO/IEC 14443A, 1-3 cm reading distance |
 | USB | Type-C (USB 3.0) for power and data |
 | **Features** | |
-| Testing Modes | Signal quality (RSSI/SNR), Coverage mapping, SF analysis, Noise scanning, Ping-pong simulation |
+| Testing modes | Signal quality (RSSI/SNR), Coverage mapping, SF analysis, Noise scanning, Ping-pong simulation |
 | Geolocation | GPS recording of test points |
 | Reports | Comprehensive export capabilities |
-| **Physical Characteristics** | |
-| Power Supply | 4.3V/4300mAh Li-ion rechargeable |
-| Battery Life | ~8 hours active / >300 hours standby |
-| Operating Temp | -10°C ~ +50°C |
-| Storage Temp | -20°C ~ +60°C |
-| Humidity | 95% RH (non-condensing) |
-| Ingress Protection | IP65 |
+| **Physical characteristics** | |
+| Power supply | 4.3 V/4300 mAh Li-ion rechargeable |
+| Battery life | approx. 8 hours active / >300 hours standby |
+| Operating temp | -10 °C ~ +50 °C |
+| Storage temp | -20 °C ~ +60 °C |
+| Humidity | 95 % RH (non-condensing) |
+| Ingress protection | IP65 |
 | Dimensions | 178 × 83 × 17 mm |
 | Weight | 242 g (without antenna) |
 | **Approvals** | CE, FCC, RoHS |

@@ -1,6 +1,6 @@
 ---
 slug: node-red-programming
-title: Node-RED Programming
+title: Node-RED programming
 ---
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'
@@ -16,7 +16,7 @@ We can't cover everything about this tool in this tutorial so if you want to lea
 :::
 
 
-## Functions Tab
+## Functions tab
 
 You should see a screen that looks like this
 
@@ -58,7 +58,7 @@ To learn about the next tab visit [**Data Visualization**](./data-visualization.
 
 :::
 
-## Video Tutorial
+## Video tutorial
 
 If you prefer a video guide, you can watch this video for the older Playground version, but it works the same.
 

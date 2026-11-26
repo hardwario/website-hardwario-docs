@@ -25,7 +25,7 @@ Share it only with people you trust.
 
 ---
 
-## Quick Set-up
+## Quick set-up
 
 The form is headed with the device it is working on, for example **CHESTER
 2159019023**. Sections appear only if the device actually has them.

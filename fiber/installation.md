@@ -61,7 +61,7 @@ Follow the pages below in order:
 1. [**Firewall**](/fiber/installation/firewall/)
 1. [**Ports & Default Credentials**](/fiber/installation/ports-and-credentials/)
 
-## Data Flow
+## Data flow
 
 ChirpStack, Node-RED, InfluxDB, and Grafana all run **on the device itself**, with no separate
 servers or cloud services required:

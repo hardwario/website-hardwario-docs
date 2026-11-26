@@ -153,7 +153,7 @@ Pokud bránu napájíte přes ethernetový kabel RJ45 s PoE, **nepřipojujte k n
 | Vysílací výkon | 27 dBm |
 | Citlivost | -140 dBm @292bps |
 | Protokoly | V1.0 / V1.0.2 Class A/B/C |
-| Podporovaná zařízení | ~2000 (uplink 10 min) |
+| Podporovaná zařízení | přibližně 2 000 (uplink 10 min) |
 | Funkce | Filtr paketů, analyzátor šumu, retransmise, FUOTA, multicast |
 | **Rozhraní** | |
 | Ethernet | 1 × RJ45 (10/100/1000 Mbps, PoE) |
@@ -167,7 +167,7 @@ Pokud bránu napájíte přes ethernetový kabel RJ45 s PoE, **nepřipojujte k n
 | Správa | Web, CLI, SNMP, API, DeviceHub |
 | Spolehlivost | Záložní WAN (failover) |
 | **Napájení** | |
-| Zdroj | DC 9–24 V / PoE / 5V USB-C |
+| Zdroj | DC 9–24 V / PoE / 5 V USB-C |
 | Spotřeba | 2,9 W typ., 4,2 W max |
 | **Fyzické vlastnosti** | |
 | Rozměry | 180 × 110 × 55,5 mm |
@@ -175,6 +175,6 @@ Pokud bránu napájíte přes ethernetový kabel RJ45 s PoE, **nepřipojujte k n
 | Kryt | PC+ABS, bílá/černá |
 | Krytí | IP65 |
 | Instalace | Na stůl, na zeď, na sloup |
-| Provozní teplota | -40°C ~ +70°C |
-| Vlhkost | 0–95% RH (nekondenzující) |
+| Provozní teplota | -40 °C ~ +70 °C |
+| Vlhkost | 0–95 % RH (nekondenzující) |
 | **Certifikace** | CE, FCC, Telec, JATE, RCM, RoHS |

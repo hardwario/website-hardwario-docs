@@ -5,6 +5,7 @@ description: "FIBER je robustní průmyslové zařízení IoT postavené na plat
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # FIBER {#fiber}
 
@@ -23,7 +24,7 @@ Skutečné rozdíly jsou jen v hardwaru (FIBER Lite nemá displej ani senzory 1-
 
 Díky modulární a otevřené architektuře podporuje zařízení **FIBER** standardní distribuce **Raspberry Pi OS** i **vlastní linuxové image sestavené pomocí Yocto**, takže ho lze použít jako předem nakonfigurované měřicí zařízení i jako vývojovou platformu. Zařízení je určené pro nasazení v průmyslovém a komerčním prostředí. Nabízí bezdrátové i drátové komunikační kanály pro spolehlivý sběr dat ze senzorů, lokální vizualizaci na integrovaném displeji a odolné síťové připojení přes **Ethernet**, **Wi-Fi** nebo volitelně **LTE**.
 
-<img src="/img/fiber.webp" data-zoom-src="/img/fiber.webp" width="540" alt="FIBER" />
+<ProductSpin product="fiber" variants={[{id: "basic", label: "FIBER"}]} width={446} ratio={1157 / 960} caption="Na ukázce: FIBER" />
 
 ## Rychlé odkazy {#quick-links}
 

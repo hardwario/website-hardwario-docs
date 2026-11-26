@@ -4,7 +4,7 @@ title: Import from a file
 description: "Import a STICKER list into HARDWARIO Manager from CSV or JSON: ready templates, the serial, secret_key, vendor_key and tags fields, and CSV pitfalls."
 ---
 
-# Import STICKERs from a CSV or JSON file
+# Import STICKER devices from a CSV or JSON file
 
 If your devices are already listed somewhere (a supplier's spreadsheet, an
 export from another system, a table you keep yourself), you can load that list
@@ -253,7 +253,7 @@ starting point, and it makes moving a list between two phones a two-step job.
 
 :::caution Keep the file safe
 A file that contains `secret_key` values is as sensitive as the devices
-themselves: anyone holding it can reconfigure those STICKERs. Send it the way
+themselves: anyone holding it can reconfigure those STICKER devices. Send it the way
 you would send a password, and delete it from Downloads and from your mail once
 the import is done. To share only *which* devices exist, export without keys.
 Leave the `secret_key` column empty.

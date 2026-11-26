@@ -16,7 +16,7 @@ import Image from '@theme/IdealImage';
 
 <img src="/img/glider.webp" data-zoom-src="/img/glider.webp" width="540" alt="GLIDER" />
 
-## Quick Links
+## Quick links
 
 * [**Quick Start Guide**](first-steps.md): Step-by-step setup guide.
 * [**HARDWARIO Cloud Setup**](cloud-setup.md): Pair the device with the platform.
@@ -28,21 +28,21 @@ import Image from '@theme/IdealImage';
 * [**Commands**](category/commands): What commands the device understands.
 * [**CBOR Payload**](payload.md): How the device encodes the data it sends to the cloud.
 
-## Typical Use Cases
+## Typical use cases
 
 - Remote temperature monitoring in cold chains, warehouses, or greenhouses
 - Utility metering via pulse counting (water, gas, electricity)
 - Door, window, or other dry-contact event logging
 - Integrating Modbus RTU industrial sensors into HARDWARIO Cloud
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|
-| **Cellular Connectivity** | Compact LTE-M / NB-IoT built on the Nordic nRF9151. |
+| **Cellular connectivity** | Compact LTE-M / NB-IoT built on the Nordic nRF9151. |
 | **Long-Term Monitoring** | Low-power tracking of temperature, pulse counters, and dry-contact events. |
-| **Modbus RTU Support** | Native integration with industrial Modbus RTU sensors. |
-| **HARDWARIO Cloud Ready** | Ships preconfigured to connect straight to HARDWARIO Cloud. |
+| **Modbus RTU support** | Native integration with industrial Modbus RTU sensors. |
+| **HARDWARIO Cloud ready** | Ships preconfigured to connect straight to HARDWARIO Cloud. |
 | **USB-C / J-Link Consoles** | Configurable and diagnosable over either console. |
 
 

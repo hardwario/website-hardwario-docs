@@ -6,7 +6,7 @@ const sidebars = {
     'introduction',
     {
       type: 'category',
-      label: 'User Guide',
+      label: 'User guide',
       className: 'sidebar-section',
       collapsible: false,
       items: [
@@ -36,7 +36,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'FIBER Hardware Guides',
+          label: 'FIBER hardware guides',
           link: {
             type: 'generated-index',
             description: 'Guides for the hardware only FIBER (CM4) has: the display and 1-Wire sensors.',
@@ -81,7 +81,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Hardware Description',
+          label: 'Hardware description',
           link: {
             type: 'generated-index',
             title: 'FIBER Hardware Description',

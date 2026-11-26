@@ -1,6 +1,6 @@
 ---
 slug: task-scheduler
-title: Task Scheduler
+title: Task scheduler
 description: "How the TOWER SDK scheduler runs short non-blocking tasks without an RTOS: register and unregister tasks, plan them to run again, with C examples."
 ---
 import Image from '@theme/IdealImage';
@@ -13,7 +13,7 @@ It is important to **not block the task** but do the necessary operation quickly
 - [**Scheduler SDK Module**](https://sdk.hardwario.com/group__twr__scheduler.html)
 - [**GitHub Repository Example**](https://github.com/hardwario/twr-sdk/blob/master/_examples/scheduler-advanced/application.c)
 
-## Registering a Task
+## Registering a task
 
 The first thing you will probably run into when working with **Scheduler** is registering a simple task to be run in ***x second(s) from now***.
 
@@ -55,13 +55,13 @@ void application_init(void)
 
 </details>
 
-## Unregistering a Task
+## Unregistering a task
 
 To unregister a task from the **scheduler** (for example when it is not needed to be run anymore) you have to use the `void twr_scheduler_unregister(twr_scheduler_task_id_t task_id)` function.
 
 This takes **ID** of the to-be-unregistered task as a parameter.
 
-## Planning to Run Registered Task
+## Planning to run registered task
 
 If you register a task with third parameter as any value, the task will be run **exactly once** after the given time.
 

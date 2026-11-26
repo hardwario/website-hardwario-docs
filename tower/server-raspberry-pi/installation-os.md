@@ -1,6 +1,6 @@
 ---
 slug: installation-os
-title: Pre-Installed Image
+title: Pre-installed image
 description: "Flash HARDWARIO Raspbian to a microSD card with Raspberry Pi Imager, set hostname, SSH and Wi-Fi, open the server in a browser and fix pairing issues."
 ---
 import Image from '@theme/IdealImage';
@@ -68,7 +68,7 @@ After that, you are ready to start using your server.
 
 :::
 
-## Connect to Server
+## Connect to server
 
 Now that you have your server up and running you can open a **web browser on your computer** and connect to it.
 

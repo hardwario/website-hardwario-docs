@@ -1,6 +1,6 @@
 ---
 slug: how-to-lora-module
-title: "How To: LoRa Module"
+title: "How to: LoRa Module"
 description: "Send TOWER messages over LoRa with the LoRa Module: how a gateway and a backend such as The Things Network pass them to your server, plus a GitHub example."
 ---
 import Image from '@theme/IdealImage';
@@ -13,7 +13,7 @@ The most used community LoRa backends are [**The Things Network**](https://www.t
 - [**LoRa SDK Module**](https://sdk.hardwario.com/group__twr__module__gps.html)
 - [**GitHub Repository Example**](https://github.com/hardwario/twr-lora-push-button/blob/main/src/application.c)
 
-## How Does it Work?
+## How does it work?
 - The message is sent from the device
 - LoRa gateway receives the message which is processed by the backend
 - Backend resends the message to your server

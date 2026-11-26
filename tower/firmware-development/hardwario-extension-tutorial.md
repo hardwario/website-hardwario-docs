@@ -1,6 +1,6 @@
 ---
 slug: hardwario-extension-tutorial
-title: TOWER Extension Tutorial
+title: TOWER extension tutorial
 ---
 import Image from '@theme/IdealImage';
 
@@ -54,7 +54,7 @@ In both modes, you should see the **HARDWARIO logo on the side panel**.
   </div>
   </div>
 
-## Basic Mode
+## Basic mode
 
 If you didn’t open a folder with HARDWARIO TOWER firmware the extension will activate but **will provide fewer options**.
 
@@ -62,13 +62,13 @@ You will get access to some basic commands that will lead you to our websites an
 
 You can use these commands to get started with the firmware development.
 
-### From Skeleton Project…
+### From skeleton project…
 
 You will be prompted to select a folder where the [**twr-skeleton firmware**](https://github.com/hardwario/twr-skeleton) should be cloned (**A new folder for the firmware will be created**).
 
 After you select the folder you **should name your firmware folder** so you don’t have some collisions with other firmware folders.
 
-### From Existing Project…
+### From existing project…
 
 You will be provided with a list of existing firmware for HARDWARIO TOWER available on our [**GitHub**](https://github.com/hardwario). You can select any of them based on the **name** and **description** of the firmware.
 
@@ -80,7 +80,7 @@ After you clone the firmware the window will be **reopened with the firmware fol
 
 :::
 
-## Firmware Mode
+## Firmware mode
 
 :::tip
 
@@ -108,7 +108,7 @@ There are other icons that you can use which will be described later, with the *
 
 :::
 
-### Build + Flash (Console)
+### Build + flash (console)
 
 This command will do the **whole cycle** that you can use while developing. It will **build the firmware**, **flash it** to the selected device and then **attach the console** for the device to see the log messages.
 
@@ -124,7 +124,7 @@ There is a separate chapter for the [**TOWER Console**](./hardwario-tower-consol
 
 :::
 
-### Build + Flash (Debugger)
+### Build + flash (debugger)
 
 :::caution
 
@@ -134,19 +134,19 @@ You will need a [**JLink Probe**](https://www.segger.com/products/debug-probes/j
 
 This command will not attach the console like the **previous one** but will instead try to attach it to the **JLink debugger** for some **advanced debugging**. You can read more about JLink debugging in the [**Advanced Debugging chapter**](./advanced-debugging.md).
 
-### Clean All Outputs
+### Clean all outputs
 
 This command will clean all the outputs so you can recompile **everything from scratch**.
 
-### Build Firmware
+### Build firmware
 
 This command will run **CMake** and **ninja** on the code. You can check if you have some **errors** or **warnings** in the code before you flash it into the device.
 
-### Flash Firmware
+### Flash firmware
 
 This command will **flash** the firmware onto the **selected device**. It will also run the **build command** in case you didn’t do that before or forgot to rebuild the changes.
 
-### Attach Console
+### Attach console
 
 This command will attach the console to the **selected device** so you can view the **log messages**.
 
@@ -156,7 +156,7 @@ There is a separate chapter for the [**TOWER Console**](./hardwario-tower-consol
 
 :::
 
-### Attach Debugger
+### Attach debugger
 
 :::caution
 
@@ -189,7 +189,7 @@ If you want to just run the debug and not change anything in the `launch.json` y
   </div>
   </div>
 
-#### Go to the Run and Debug and create `launch.json`
+#### Go to the run and debug and create `launch.json`
 
 If you want to have your custom `launch.json` you can go to the **Run and Debug** window on the **side panel** and **click create a launch.json** file and select TOWER Debugger, or add this configuration to an existing one.
 
@@ -214,7 +214,7 @@ If you want to have your custom `launch.json` you can go to the **Run and Debug*
     }
 }
 ```
-#### Press Attach Debugger in the HARDWARIO Extension command palette
+#### Press Attach Debugger in the HARDWARIO extension command palette
 
 You can use this option if you don’t want to worry about `launch.json` or any other options mentioned before. Just select the **HARDWARIO logo on the side panel** and select **Attach Debugger** or **Build + Flash (Debugger)** option.
 

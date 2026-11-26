@@ -31,7 +31,7 @@ https://docs.hardwario.com/apps/chirpstack/chirpstack-installation
 
 ---
 
-## 1) Get the Gateway ID (EUI-64) from EMBER
+## 1) Get the gateway ID (EUI-64) from EMBER
 On MikroTik RouterOS, the gateway EUI is shown as **Gateway ID**:
 
 - **IoT → LoRa → Devices → Gateway ID**

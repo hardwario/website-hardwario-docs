@@ -20,17 +20,17 @@ This article describes the CHESTER-X1 extension module.
 </div>
 <br />
 
-## Module Overview
+## Module overview
 
-CHESTER-X1 provides 8 independent 1-Wire channels for connecting digital sensors (e.g. Dallas DS18B20) or any other 1-Wire peripherals. The module implements the Maxim DS2482S-800+ interface and also a 5V boost converter to support 5V 1-Wire peripherals.
+CHESTER-X1 provides 8 independent 1-Wire channels for connecting digital sensors (e.g. Dallas DS18B20) or any other 1-Wire peripherals. The module implements the Maxim DS2482S-800+ interface and also a 5 V boost converter to support 5 V 1-Wire peripherals.
 
-## CHESTER Pin Configuration Diagram
+## CHESTER pin configuration diagram
 
 ![CHESTER-X1 terminal block pinout: pins 1-8 map to 1-Wire channels CH1-CH8](images/tb-chester-x1.png)
 
-## Pin Configuration and Functions
+## Pin configuration and functions
 
-| Position | Signal Name | Signal Description |
+| Position | Signal name | Signal description |
 | -------- | ----------- | ------------------ |
 | 1        | CH1         | Channel 1          |
 | 2        | CH2         | Channel 2          |
@@ -41,9 +41,9 @@ CHESTER-X1 provides 8 independent 1-Wire channels for connecting digital sensors
 | 7        | CH7         | Channel 7          |
 | 8        | CH8         | Channel 8          |
 
-## 1-Wire Parasitic Power Connection
+## 1-Wire parasitic power connection
 
-CHESTER-X1 supports connection using the parasitic powering method. In that case, only 2 wires are necessary. In the parasitic mode, the 5.0V power supply is used. The standard 3-wire connection powered from VDD supports only 3.0V peripherals. This figure shows parasitic and standard powering method:
+CHESTER-X1 supports connection using the parasitic powering method. In that case, only 2 wires are necessary. In the parasitic mode, the 5.0 V power supply is used. The standard 3-wire connection powered from VDD supports only 3.0 V peripherals. This figure shows parasitic and standard powering method:
 
 ![Wiring comparison: 2-wire parasitic power with sensor VDD tied to GND versus 3-wire standard power from VDD](images/sc-chester-x1.png)
 
@@ -57,6 +57,6 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 ![CHESTER-X1 schematic sheet 1: DS2482S-800 1-Wire master with solder-bridge routing of IO0-IO7 to channels CH1-CH8](images/hio-chester-x1-r3.2-1.png)
 ![CHESTER-X1 schematic sheet 2: 5.76 V boost converter, 5.0 V LDO, and I2C level shifters](images/hio-chester-x1-r3.2-2.png)
 
-## Module Drawing
+## Module drawing
 
 ![CHESTER-X1 board outline with edge signals: +V, GP0/A0, SDA, SCL, VDD, GND on top and CH8-CH1 on bottom](images/pc-chester-x1.png)

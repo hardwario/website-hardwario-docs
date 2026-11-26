@@ -1,10 +1,10 @@
 ---
 slug: device-discovery
-title: Device Discovery
+title: Device discovery
 description: "Find a GAUGER with a DHCP-assigned IP address by listening for its UDP broadcast on port 53914, or by its hostname in your router's admin interface."
 ---
 
-# Device Discovery
+# Device discovery
 
 If you set up the device to receive its IP address through DHCP, the assigned address will probably not be known to you. To find the device, you can listen for UDP broadcast packets on the port 53914. Every few seconds, the device will broadcast a packet with the following content:
 

@@ -6,7 +6,7 @@ const sidebars = {
     'introduction',
     {
       type: 'category',
-      label: 'User Guide',
+      label: 'User guide',
       className: 'sidebar-section',
       collapsible: false,
       items: [
@@ -230,7 +230,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Video Tutorials',
+          label: 'Video tutorials',
           link: {
             type: 'doc',
             id: 'videos-apps/index',

@@ -17,7 +17,7 @@ The printed [**CHESTER manual**](https://www.hardwario.com/resources/manuals/#ch
 
 ---
 
-## Step 1: Create a HARDWARIO Cloud Account
+## Step 1: Create a HARDWARIO Cloud account
 
 1. Go to [**https://hardwario.cloud**](https://hardwario.cloud)  
 2. Click **SIGN UP**  
@@ -32,7 +32,7 @@ For improved security, we recommend authenticating via **Google** or **Microsoft
 
 ---
 
-## Step 2: Create Your Space
+## Step 2: Create your space
 
 1. In the top-right corner, click **SPACES → NEW SPACE**  
 2. Name your space (for example: `my-home`, `office-sensors`, `warehouse`)  
@@ -44,7 +44,7 @@ Please follow our [**Naming Conventions**](/cloud/#naming-conventions) when crea
 
 ---
 
-## Step 3: Add a Device
+## Step 3: Add a device
 
 1. Select your **Space**  
 2. Go to **DEVICES → +NEW DEVICE**  
@@ -79,7 +79,7 @@ Or check out our **video tutorial** on how to add your CHESTER device to the Clo
 
 ---
 
-## Step 4: Power Up Your CHESTER
+## Step 4: Power up your CHESTER
 
 :::caution
 > **Important:** Add the device to the Cloud **before powering it up.**  
@@ -99,7 +99,7 @@ Or check out our **video tutorial** on how to add your CHESTER device to the Clo
 
 ---
 
-### Network Mode & Connectivity Troubleshooting
+### Network mode & connectivity troubleshooting
 
 If your device still has trouble connecting to the network (especially when using your own SIM card or roaming):
 
@@ -110,7 +110,7 @@ If your device still has trouble connecting to the network (especially when usin
 ---
 
 
-## Step 5: Check the Status LED
+## Step 5: Check the status LED
 
 - **Blinking green every 5 seconds** → Connected to HARDWARIO Cloud ✅  
 - **No blinking /** [**other colors**](/chester/catalog-applications/common-functionality/#led-behaviour) → Still connecting or an error occurred. Check SIM, network coverage, or power  
@@ -119,7 +119,7 @@ If your device still has trouble connecting to the network (especially when usin
 For details about all LED color states and meanings, see the [**LED Behaviour documentation**](/chester/catalog-applications/common-functionality/#led-behaviour).
 :::
 
-## Step 6: See Your Data in the Cloud
+## Step 6: See your data in the Cloud
 
 1. In [**HARDWARIO Cloud**](https://hardwario.cloud), open **DEVICES**  
 2. Click the **chat icon** next to your device  
@@ -127,7 +127,7 @@ For details about all LED color states and meanings, see the [**LED Behaviour do
 
 ---
 
-## Step 7: Configure Your Device
+## Step 7: Configure your device
 
 Once connected, you can:
 
@@ -138,11 +138,11 @@ Once connected, you can:
 
 ---
 
-## Step 8: Check and Update CHESTER Firmware
+## Step 8: Check and update CHESTER firmware
 
 It’s always a good idea to make sure your CHESTER is running the **latest firmware version**.
 
-### Check Firmware Version
+### Check firmware version
 You can check it in three ways:
 
 1. **Using** [**HARDWARIO Manager (mobile app)**](/chester/platform-connectivity/hardwario-manager)
@@ -166,7 +166,7 @@ You can check it in three ways:
      ```
    - You'll see firmware and application details in the terminal
 
-### Download the Latest Firmware
+### Download the latest firmware
 You can always find the newest firmware builds here:  
 👉 [**Available Application Firmware Builds**](/chester/catalog-applications/catalog-applications#application-firmware)
 
@@ -174,7 +174,7 @@ You can always find the newest firmware builds here:
  The firmware table is organized by CHESTER type, so make sure to select the correct one for your device.
 :::
 
-### Update Firmware
+### Update firmware
 If a newer version is available, you can update it using one of these methods:
 
 1. **Update via HARDWARIO Manager (mobile app)**
@@ -190,14 +190,14 @@ If a newer version is available, you can update it using one of these methods:
 
 ---
 
-✅ **That’s it!**  
+✅ **Done.**  
 Your CHESTER is now connected, configured, and up to date, ready to collect and send data to the cloud.
 
 ---
 
-## Step 9: Explore Applications and Integrations
+## Step 9: Explore applications and integrations
 
-Your CHESTER can do much more than just send data!  
+CHESTER can do more than send data.  
 You can extend its functionality using [**HARDWARIO Applications**](/apps/), ready-made modules and tools that help you:
 
 - 📊 **Visualize your data** using dashboards and charts  

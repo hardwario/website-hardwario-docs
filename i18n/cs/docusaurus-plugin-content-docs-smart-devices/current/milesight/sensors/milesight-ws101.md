@@ -92,7 +92,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Technologie | LoRaWAN®, Milesight D2D |
 | Anténa | Interní |
 | Frekvence | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Vysílací výkon | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Vysílací výkon | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class A |
 | **Funkce tlačítka** | |
@@ -110,8 +110,8 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | **Fyzické vlastnosti** | |
 | Napájení | 1 × ER14335 (1650 mAh) |
 | Výdrž baterie | Více než 5 let (10 stisků denně) |
-| Provozní teplota | -20°C ~ +60°C |
-| Vlhkost | ≤90% RH (nekondenzující) |
+| Provozní teplota | -20 °C ~ +60 °C |
+| Vlhkost | ≤90 % RH (nekondenzující) |
 | Krytí | IP30 |
 | Rozměry | 50 × 50 × 18 mm |
 | Hmotnost | 38,8 g (s baterií) |

@@ -6,14 +6,14 @@ const sidebars = {
     'introduction',
     {
       type: 'category',
-      label: 'User Guide',
+      label: 'User guide',
       className: 'sidebar-section',
       collapsible: false,
       items: [
         'getting-started',
         {
           type: 'category',
-          label: 'LoRaWAN Network Server',
+          label: 'LoRaWAN network server',
           collapsed: true,
           items: [
             {
@@ -34,7 +34,7 @@ const sidebars = {
         'cloud-service',
         {
           type: 'category',
-          label: 'Video Tutorials',
+          label: 'Video tutorials',
           link: {
             type: 'generated-index',
             title: 'EMBER Video Tutorials',

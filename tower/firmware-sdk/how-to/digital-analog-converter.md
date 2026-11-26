@@ -1,6 +1,6 @@
 ---
 slug: how-to-digital-analog-converter
-title: "How To: Digital/Analog Converter"
+title: "How to: Digital/analog converter"
 ---
 import Image from '@theme/IdealImage';
 

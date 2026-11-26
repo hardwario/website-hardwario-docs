@@ -1,6 +1,6 @@
 ---
 slug: how-to-i2c-bus
-title: "How To: I²C Bus"
+title: "How to: I²C bus"
 ---
 import Image from '@theme/IdealImage';
 
@@ -26,7 +26,7 @@ This chapter goes over some code examples of how to use I²C API. To read more a
 
 To start working with **I²C** you always have to initialize it before you start working with it.
 
-For example `twr_i2c_init(TWR_I2C_I2C0, TWR_I2C_SPEED_400_KHZ);` will initialize **I2C_0** with the speed of **400kHz**.
+For example `twr_i2c_init(TWR_I2C_I2C0, TWR_I2C_SPEED_400_KHZ);` will initialize **I2C_0** with the speed of **400 kHz**.
 
 :::
 

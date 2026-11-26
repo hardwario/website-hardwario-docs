@@ -3,7 +3,7 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.docs.category.User Guide": {
+  "sidebar.docs.category.User guide": {
     "message": "Uživatelská příručka",
     "description": "The label for category 'User Guide' in sidebar 'docs'"
   },
@@ -35,7 +35,7 @@
     "message": "Řešení problémů zařízení FIBER Lite: odmítnuté nebo zamítnuté připojení SSH, chyba RTC EREMOTEIO a koncentrátor, který nezobrazí ID brány.",
     "description": "The generated-index page description for category 'Troubleshooting' in sidebar 'docs'"
   },
-  "sidebar.docs.category.FIBER Hardware Guides": {
+  "sidebar.docs.category.FIBER hardware guides": {
     "message": "Návody k hardwaru FIBER",
     "description": "The label for category 'FIBER Hardware Guides' in sidebar 'docs'"
   },
@@ -43,7 +43,7 @@
     "message": "Návody k hardwaru, který má jen FIBER (CM4): displej a senzory 1-Wire.",
     "description": "The generated-index page description for category 'FIBER Hardware Guides' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Hardware Description": {
+  "sidebar.docs.category.Hardware description": {
     "message": "Popis hardwaru",
     "description": "The label for category 'Hardware Description' in sidebar 'docs'"
   },

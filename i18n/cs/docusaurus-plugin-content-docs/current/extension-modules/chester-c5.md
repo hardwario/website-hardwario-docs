@@ -10,7 +10,7 @@ Tento článek popisuje nosnou desku **CHESTER-C5**.
 
 ## Přehled modulu {#module-overview}
 
-**CHESTER-C5** je zakázková nosná deska pro modul **CHESTER-U1**, navržená jako brána **NB-IoT / LTE-M** pro připojení většího počtu **senzorů 1-Wire** (např. DS18B20). Má záložní baterii Li-Ion a snižující měnič DC/DC, který ji napájí z externí linky 6-28 VDC (VIN) nebo z 12V solárního panelu. Deska měří vstupní stejnosměrné napětí a přes rozhraní QWIIC k ní lze připojit displej OLED.
+**CHESTER-C5** je zakázková nosná deska pro modul **CHESTER-U1**, navržená jako brána **NB-IoT / LTE-M** pro připojení většího počtu **senzorů 1-Wire** (např. DS18B20). Má záložní baterii Li-Ion a snižující měnič DC/DC, který ji napájí z externí linky 6-28 VDC (VIN) nebo z 12 V solárního panelu. Deska měří vstupní stejnosměrné napětí a přes rozhraní QWIIC k ní lze připojit displej OLED.
 
 Obvod Maxim DS2482S-800+ na desce poskytuje 8 nezávislých kanálů 1-Wire ve slotu CHESTER-X A. Do slotu B lze osadit modul CHESTER-X1 s dalšími 8 kanály 1-Wire nebo jakýkoli jiný modul CHESTER-X.
 

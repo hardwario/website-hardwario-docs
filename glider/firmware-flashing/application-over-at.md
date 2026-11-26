@@ -53,5 +53,5 @@ You must send `AT$FW="confirm"` after the reboot. If you skip this step, the dev
 :::
 
 :::info
-If you already have GLIDER's build output sitting in `build/`, you can skip `--input-file`, because `west bin-to-at` finds `zephyr.signed.bin` automatically.
+If you already have the GLIDER build output sitting in `build/`, you can skip `--input-file`, because `west bin-to-at` finds `zephyr.signed.bin` automatically.
 :::

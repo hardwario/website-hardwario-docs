@@ -29,7 +29,7 @@ flowchart LR
   HD --> Dash[Dashboards & charts]
   HD --> Share[Public link & website]
   HD --> Alert[Notifications]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class Cloud hero;
   class HD hero;
 ```
@@ -60,7 +60,7 @@ The guides follow the order in which you set things up, from connecting the firs
 |---|---|---|
 | 01 | **Overview** (this page) | See what HARDWARIO Dashboards can do and how to sign in. |
 | 02 | [Connect devices](/apps/thingsboard/cloud-connection) | Add one connector, and your devices appear by themselves. **Recommended.** |
-| 03 | [Manual connection](/apps/thingsboard/manual-connection) | Connect a device that already exists, using its access token. |
+| 03 | [Manual connection](/apps/thingsboard/manual-connection) | Use your own data format and names, with an access token. |
 | 04 | [Managing devices](/apps/thingsboard/devices) | Give devices readable labels, sort them into groups and check their data. |
 
 ### Dashboards

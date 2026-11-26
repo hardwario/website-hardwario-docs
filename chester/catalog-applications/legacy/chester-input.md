@@ -26,7 +26,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 :::
 
 
-## Application Overview
+## Application overview
 
 The application **CHESTER Input** is used to measure and observe analog and digital inputs. The sampled analog values are aggregated, the aggregate measurements are buffered, and scheduled for later data transfer in the form of buffered data altogether with the timestamp annotations. Also, the changes on digital input (type **trigger**) can be tracked with the type of change and timestamp. The buffering strategy allows a higher number of events to be recorded while conserving data bandwidth and power required for data transfer.
 
@@ -41,7 +41,7 @@ The application **CHESTER Input** is used to measure and observe analog and digi
 
 All these inputs and their options are explained in more detail in the article [**Input Parameters and Behavior**](#input-parameters-and-behavior).
 
-## Application Variants
+## Application variants
 
 **CHESTER Input** can be ordered in one of these variants:
 
@@ -87,7 +87,7 @@ See [**Ordering Codes**](/chester/ordering-codes) for more details.
 
 Firmware build shield options: `ctr_ds18b20 ctr_lte ctr_x0_a ctr_z ctr_s2`
 
-## Input Parameters and Behavior
+## Input parameters and behavior
 
 For the wiring diagram to **CHESTER Input**, please follow the [**terminal block description**](/chester/extension-modules/chester-x0) of the **CHESTER-X0** extension module.
 The extension module **CHESTER-X0** is installed in the left slot **A**, so you have to use the corresponding terminals **A1** to **A8**.
@@ -158,7 +158,7 @@ The optional hygrometer in the **CHESTER Input** application represents an exter
 
 * Each **measurement** has an associated timestamp. The buffer **measurements** are transferred as time-series data regularly (parameter `interval-report`).
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -185,7 +185,7 @@ app config hygro-interval-sample 60
 app config hygro-interval-aggreg 300
 ```
 
-## Specific Commands
+## Specific commands
 
 :::info
 
@@ -283,7 +283,7 @@ app config hygro-interval-aggreg <value>
 
 The latest firmware is available in Catalog Applications [Firmware chapter](/chester/catalog-applications/catalog-applications#application-firmware).
 
-## Example JSON Message
+## Example JSON message
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

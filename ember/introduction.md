@@ -5,6 +5,7 @@ sidebar_label: Introduction
 description: "EMBER is an industrial LoRaWAN platform that transmits and processes measured sensor values and controls actuators across industrial sites."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # EMBER
 
@@ -14,9 +15,9 @@ import Image from '@theme/IdealImage';
 ### To get your EMBER running, read the [**Quick Start Guide**](getting-started.md)
 :::
 
-<img src="/img/ember-top.webp" data-zoom-src="/img/ember-top.webp" width="540" alt="EMBER" />
+<ProductSpin product="ember" variants={[{id: "basic", label: "EMBER"}]} width={349} ratio={906 / 960} caption="Shown: EMBER, connectors facing down as mounted" />
 
-## Quick Links
+## Quick links
 
 * [**Quick Start Guide**](getting-started.md): Step-by-step setup guide.
 * [**Hotspot Configuration**](hotspot-configuration.md): System concept, RouterOS configuration, IP addresses, and VPN tunnels.
@@ -26,20 +27,20 @@ import Image from '@theme/IdealImage';
 * [**Changelog**](changelog): Latest firmware and platform changes.
 * [**Video Tutorials**](category/video-tutorials): Short videos on ChirpStack and MikroTik setup.
 
-## Typical Use Cases
+## Typical use cases
 
 - Industrial IoT deployments across factories and campuses
 - Commercial environments needing reliable LoRaWAN coverage
 - Home automation systems
 - Reliable LoRaWAN infrastructure management at scale
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|
-| **Industrial LoRaWAN Hotspot** | Waterproof outdoor gateway built on the MikroTik RBM33G platform. |
+| **Industrial LoRaWAN hotspot** | Waterproof outdoor gateway built on the MikroTik RBM33G platform. |
 | **LTE Backhaul** | Integrated cellular connectivity via Onomondo. |
-| **LoRaWAN Network Server** | ChirpStack or The Things Stack. Self-hosted or operated by HARDWARIO as a managed service, with Node-RED, remote configuration, and monitoring. |
-| **Optional HARDWARIO Services** | SIM card with connectivity for the LTE backhaul, managed network server, and secure remote access via OpenVPN. |
-| **Redundant Deployments** | Site configurations for high-availability coverage. |
-| **Secure VPN Tunnels** | Independent tunnels for LoRaWAN data and remote management. |
+| **LoRaWAN network server** | ChirpStack or The Things Stack. Self-hosted or operated by HARDWARIO as a managed service, with Node-RED, remote configuration, and monitoring. |
+| **Optional HARDWARIO services** | SIM card with connectivity for the LTE backhaul, managed network server, and secure remote access via OpenVPN. |
+| **Redundant deployments** | Site configurations for high-availability coverage. |
+| **Secure VPN tunnels** | Independent tunnels for LoRaWAN data and remote management. |

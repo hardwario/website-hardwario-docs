@@ -97,7 +97,7 @@ Notes:
 
 ---
 
-## 4) ChirpStack – Device Profile for CHESTER
+## 4) ChirpStack – device profile for CHESTER
 
 Create a **Device Profile** with the following recommended settings:
 
@@ -114,7 +114,7 @@ These values match the [lora-modem](https://github.com/hardwario/lora-modem) fir
 
 ---
 
-## 5) ChirpStack – Application and device registration
+## 5) ChirpStack – application and device registration
 
 ### 5.1 Create an application
 

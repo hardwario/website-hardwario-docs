@@ -14,7 +14,7 @@ Follow these steps to set it up and start viewing your live data in **HARDWARIO 
 
 ---
 
-## Step 1: Create a HARDWARIO Cloud Account
+## Step 1: Create a HARDWARIO Cloud account
 
 1. Go to [**https://hardwario.cloud**](https://hardwario.cloud)
 2. Click **SIGN UP**
@@ -29,7 +29,7 @@ For improved security, we recommend authenticating via **Google** or **Microsoft
 
 ---
 
-## Step 2: Create Your Space
+## Step 2: Create your space
 
 1. In the top-right corner, click **SPACES → NEW SPACE**
 2. Name your space (for example: `my-home`, `office-sensors`, `warehouse`)
@@ -41,7 +41,7 @@ Please follow our [**Naming Conventions**](/cloud/#naming-conventions) when crea
 
 ---
 
-## Step 3: Add a Device
+## Step 3: Add a device
 
 1. Select your **Space**
 2. Go to **DEVICES → +NEW DEVICE**
@@ -70,7 +70,7 @@ You can find more in-depth information about the **HARDWARIO Cloud** here:
 
 ---
 
-## Step 4: Power Up Your GLIDER
+## Step 4: Power up your GLIDER
 
 :::caution
 > **Important:** Add the device to the Cloud **before powering it up.**
@@ -94,7 +94,7 @@ If the device does not come online, try one of these quick actions:
 
 ---
 
-#### Network Mode & Connectivity Troubleshooting
+#### Network mode & connectivity troubleshooting
 
 If your device still has trouble connecting to the network (especially when using your own SIM card or roaming):
 
@@ -104,7 +104,7 @@ If your device still has trouble connecting to the network (especially when usin
 
 ---
 
-## Step 5: Check the Status LED
+## Step 5: Check the status LED
 
 GLIDER has three on-board status LEDs (red, green, yellow). Their behaviour is intentionally minimal to save power:
 
@@ -124,7 +124,7 @@ You can also manually toggle the LEDs from any console via the `led` shell comma
 
 ---
 
-## Step 6: See Your Data in the Cloud
+## Step 6: See your data in the Cloud
 
 1. In [**HARDWARIO Cloud**](https://hardwario.cloud), open **DEVICES**
 2. Click the **chat icon** next to your device
@@ -139,7 +139,7 @@ For an explanation of the payload structure, see [**CBOR Payload**](payload.md).
 
 ---
 
-## Step 7: Configure Your Device
+## Step 7: Configure your device
 
 Once connected, you can:
 
@@ -166,11 +166,11 @@ For the full reference, see [**Configuration**](configuration.md) and the [**She
 
 ---
 
-## Step 8: Check and Update GLIDER Firmware
+## Step 8: Check and update GLIDER firmware
 
 It's always a good idea to make sure your GLIDER is running the **latest firmware version**.
 
-### Check Firmware Version
+### Check firmware version
 
 You can check it in two ways:
 
@@ -188,7 +188,7 @@ You can check it in two ways:
  info show
  ```
 
-### Update Firmware
+### Update firmware
 
 If a newer version is available, you can update GLIDER in two ways:
 
@@ -202,14 +202,14 @@ For an overview of both methods see the [**Firmware Flashing**](firmware-flashin
 
 ---
 
- **That's it!**
+ **Done.**
 Your GLIDER is now connected, configured, and up to date, ready to collect and send data to the cloud.
 
 ---
 
-## Step 9: Explore Applications and Integrations
+## Step 9: Explore applications and integrations
 
-Your GLIDER can do much more than just send data!
+GLIDER can do more than send data.
 You can extend its functionality using [**HARDWARIO Applications**](/apps/), ready-made modules and tools that help you:
 
 - **Visualize your data** using dashboards and charts

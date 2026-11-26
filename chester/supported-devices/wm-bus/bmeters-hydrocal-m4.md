@@ -27,13 +27,13 @@ Compact heat/BTU meter capable of measuring the amount of energy used for heatin
 
 ## Configuration
 
-### Configuration Guide for Hydrocal M4 Thermal energy meter via NFC
+### Configuration guide for Hydrocal M4 thermal energy meter via NFC
 
 This guide describes the steps to configure a Hydrocal M4 thermal energy meter using an Android smartphone.
 
 ---
 
-### Step 1: Install the Configuration App
+### Step 1: Install the configuration app
 
 Download the **B METERS NFC Config** application from the Google Play Store:
 
@@ -45,7 +45,7 @@ You can scan the QR code below to go directly to the app:
 
 ---
 
-### Step 2: Connect to the Meter
+### Step 2: Connect to the meter
 
 1. Enable **NFC** on your Android device.
 2. Open the **B METERS NFC Config** app.
@@ -53,14 +53,14 @@ You can scan the QR code below to go directly to the app:
 
 ---
 
-### Step 3: Select Device Type
+### Step 3: Select device type
 
 From the list of available devices, select:
 - **HYDROCAL-M4**
 
 ---
 
-### Step 4: Configure Sensor Parameters
+### Step 4: Configure sensor parameters
 
 Adjust the following settings:
 
@@ -78,7 +78,7 @@ Adjust the following settings:
 
 ---
 
-### Step 5: Write Configuration to Meter
+### Step 5: Write configuration to meter
 
 1. Bring your phone close to the NFC tag again.
 2. Tap the **Write** button.
@@ -86,16 +86,16 @@ Adjust the following settings:
 
 ---
 
-### Step 6: Verify Settings
+### Step 6: Verify settings
 
 1. Tap the **Read** button.
 2. Check that the configured values match what was written.
 
 Your meter is now successfully configured.
 
-## Wireless M-Bus Address Configuration
+## Wireless M-Bus address configuration
 
-### Where to Find the Address on the Device
+### Where to find the address on the device
 
 The address is located on the **left side below the barcode**, as shown in the image below (8 digits).  
 
@@ -113,7 +113,7 @@ The address is located on the **left side below the barcode**, as shown in the i
 
 ---
 
-### Mapping the wM-Bus Address to CHESTER
+### Mapping the wM-Bus address to CHESTER
 
 The mapping must be carried out using the **CHESTER Terminal**, for example with:  
 
@@ -123,7 +123,7 @@ The mapping must be carried out using the **CHESTER Terminal**, for example with
 
 ---
 
-### Managing and Adding wM-Bus Device Addresses in CHESTER
+### Managing and adding wM-Bus device addresses in CHESTER
 
 Here you can manage the list of **wM-Bus addresses** (**add/remove**), adjust scan settings, and review example configurations for typical setups.  
 
@@ -133,7 +133,7 @@ Here you can manage the list of **wM-Bus addresses** (**add/remove**), adjust sc
 
 ---
 
-## Message Encryption and Key Management
+## Message encryption and key management
 
 The **transmitted messages are encrypted**.
 

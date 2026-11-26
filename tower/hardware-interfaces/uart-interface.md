@@ -1,6 +1,6 @@
 ---
 slug: uart-interface
-title: UART Interface
+title: UART interface
 description: "UART on TOWER: the three channels UART0 to UART2, baud rate, data, parity and stop bit settings such as 8N1, and logging on UART2 at 115200 baud."
 ---
 import Image from '@theme/IdealImage';
@@ -21,7 +21,7 @@ If you want to know more about [**UART there is an article about it**](https://w
 
 TOWER has 3 UART channels, **UART0** **UART1** **UART2**, you can read where to find them in the [**Header Pinout chapter**](../hardware-modules/header-pinout.md).
 
-## UART Setup
+## UART setup
 
 As the UART channel does not have a clock signal that would synchronize the communication you have to set up both communicating devices so they are synchronized and know how to transmit and receive data.
 

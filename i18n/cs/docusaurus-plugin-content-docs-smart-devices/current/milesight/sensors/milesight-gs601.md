@@ -80,7 +80,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 ## Napájení {#power-supply}
 | Typ    | Hodnota                        |
 |--------|--------------------------------|
-| Napájení | 5V/1A USB Type-C nebo PoE splitter |
+| Napájení | 5 V/1A USB Type-C nebo PoE splitter |
 
 ---
 
@@ -92,7 +92,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Technologie | LoRaWAN® |
 | Anténa | Interní |
 | Frekvence | RU864 / IN865 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Vysílací výkon | 16 dBm (868MHz) / 22 dBm (915MHz) |
+| Vysílací výkon | 16 dBm (868 MHz) / 22 dBm (915 MHz) |
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class C |
 | **Detekce vapování/kouře** | |
@@ -101,23 +101,23 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Přesnost | ±10 |
 | Detekuje | Elektronické cigarety, klasické cigarety, marihuana |
 | **Senzory prostředí** | |
-| Teplota | -20°C ~ +60°C, přesnost ±0,2°C |
-| Vlhkost | 0% ~ 100% RH, přesnost ±2% |
+| Teplota | -20 °C ~ +60 °C, přesnost ±0,2 °C |
+| Vlhkost | 0–100 % RH, přesnost ±2 % |
 | Prachové částice | PM1.0, PM2.5, PM10 (0-1000 μg/m³) |
 | TVOC | 0-2000 μg/m³ |
 | **Upozornění a indikace** | |
 | Bzučák | Ano, 70 dB |
 | LED indikátory | Vizuální indikace stavu |
 | Detekce manipulace | Vibrační senzor |
-| Požární alarm | Podle teploty (sledování v rozsahu 20-60°C) |
+| Požární alarm | Podle teploty (sledování v rozsahu 20-60 °C) |
 | **Funkce** | |
 | Konfigurace | NFC / downlink |
 | Pokročilé funkce | Ochrana proti manipulaci, nastavitelný bzučák, FUOTA |
 | Odolnost vůči vodě a plynům | Brání planým poplachům |
 | **Fyzické vlastnosti** | |
-| Napájení | 5V/1A USB Type-C nebo PoE splitter |
-| Provozní teplota | -5°C ~ +45°C |
-| Vlhkost | 0%–95% RH (nekondenzující) |
+| Napájení | 5 V/1A USB Type-C nebo PoE splitter |
+| Provozní teplota | -5°C ~ +45 °C |
+| Vlhkost | 0 %–95 % RH (nekondenzující) |
 | Krytí | IP30 |
 | Rozměry | Ø128 × 40 mm |
 | Hmotnost | 178,6 g |

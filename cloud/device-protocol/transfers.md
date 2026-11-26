@@ -1,14 +1,14 @@
 ---
 slug: transfers
-title: FLAP Packets and Transfers
+title: FLAP packets and transfers
 description: "The FLAP packet header with its flags and sequence number, and how FLAP fragments, acknowledges and polls, with diagrams of every scenario."
 ---
 
-# FLAP Packets and Transfers
+# FLAP packets and transfers
 
 The FLAP packet is the protocol unit exchanged between the device and the Cloud. It is never sent on its own: on the way it always travels inside a [**MAC envelope**](mac-envelope.md) or a [**DTLS envelope**](dtls-envelope.md). All multi-byte fields are **big-endian**.
 
-## FLAP Packet
+## FLAP packet
 
 ```
 +-------------+----------------------+
@@ -22,7 +22,7 @@ The FLAP packet is the protocol unit exchanged between the device and the Cloud.
 | **Header** | 2 B | Flags and sequence number, see [**FLAP Header**](#flap-header) |
 | **Data** | 0 to n B | One fragment of a message, see [**Message Types**](messages.md) |
 
-### FLAP Header
+### FLAP header
 
 The header is one 16-bit big-endian value:
 
@@ -39,7 +39,7 @@ The header is one 16-bit big-endian value:
 
 The 12-bit **sequence number** is described in [**Sequence Number**](#sequence-number).
 
-### Flag Notation
+### Flag notation
 
 In logs and in this documentation, the flags are written as four characters in the order `FLAP`, with `x` for a flag that is not set. For example `[FLxx]` is a single-fragment message and `[xxAP]` is an acknowledgement with the Poll flag.
 
@@ -51,7 +51,7 @@ In logs and in this documentation, the flags are written as four characters in t
 | `0x2004` | `[xxAx]` | 4 | Acknowledgement |
 | `0x0000` | `[xxxx]` | 0 | Reset request from the Cloud, see [**Reset**](#reset) |
 
-## Sequence Number
+## Sequence number
 
 The device and the Cloud share **one sequence counter**. Every packet, in either direction, carries the sequence number of the previous packet plus one:
 
@@ -66,7 +66,7 @@ The value `0` is reserved: a packet with the sequence number `0` starts a new ex
 
 The device checks that every response carries the sequence number of its request plus one. If it does not, the device starts over with the sequence number `0`.
 
-## Uplink Transfer
+## Uplink transfer
 
 The device splits a message into fragments and sends them in order:
 
@@ -75,7 +75,7 @@ The device splits a message into fragments and sends them in order:
 - When the last fragment is acknowledged and a downlink is waiting, the acknowledgement is `[xxAP]`.
 - Fragments never carry the A or P flag. To poll, the device sends a separate packet without data.
 
-## Downlink Transfer
+## Downlink transfer
 
 The device fetches downlinks by **polling**:
 
@@ -103,19 +103,19 @@ A device that receives a reset packet sets its sequence number to `0` and sends 
 
 A packet with a sequence number behind the expected value is ignored.
 
-## Retransmission and Duplicates
+## Retransmission and duplicates
 
 The Cloud never sends a packet on its own, so retransmission is the responsibility of the device. When a response does not arrive in time, the device can:
 
 - **Repeat the packet.** The device sends the identical packet again (same sequence number, flags and data). The Cloud recognises it as a duplicate of the last packet and answers **every second** duplicate with the response it sent before, so the device should repeat at least twice. This matters with RAI, where the device can receive a response only right after it sends something.
 - **Start over.** The device gives up the transfer and sends the message again with the sequence number `0`. The CHESTER SDK works this way: it waits 5 seconds for each response and starts over on any failure.
 
-## Size Limits
+## Size limits
 
 - The data of one FLAP packet must fit into one UDP datagram together with the envelope. The datagram limit is 508 bytes today. The maximum fragment size therefore depends on the envelope, see [**MAC Envelope**](mac-envelope.md#size-limits) and [**DTLS Envelope**](dtls-envelope.md#size-limits).
 - A message reassembled from fragments carries a value of at most 16383 bytes.
 
-## Invalid Packets
+## Invalid packets
 
 The Cloud does not respond to a FLAP packet shorter than 2 bytes, a packet with the A flag that carries data, or a packet whose flags do not fit the current state of the transfer. Packets rejected by the envelope never reach this layer.
 
@@ -123,7 +123,7 @@ The Cloud does not respond to a FLAP packet shorter than 2 bytes, a packet with 
 
 The diagrams below show every combination of uplink and downlink. `n` is the current value of the sequence counter.
 
-### Scenario A: Single-Fragment Uplink, No Downlink
+### Scenario A: Single-fragment uplink, no downlink
 
 ```mermaid
 sequenceDiagram
@@ -134,7 +134,7 @@ sequenceDiagram
   Note over Device,Cloud: The next packet from the device carries n+2
 ```
 
-### Scenario B: Multi-Fragment Uplink, No Downlink
+### Scenario B: Multi-fragment uplink, no downlink
 
 ```mermaid
 sequenceDiagram
@@ -148,7 +148,7 @@ sequenceDiagram
   Cloud-->>Device: n+5 [xxAx]
 ```
 
-### Scenario C: Single-Fragment Uplink, Single-Fragment Downlink Waiting
+### Scenario C: Single-fragment uplink, single-fragment downlink waiting
 
 ```mermaid
 sequenceDiagram
@@ -162,7 +162,7 @@ sequenceDiagram
   Note over Device,Cloud:wrap: No response, the downlink is delivered
 ```
 
-### Scenario D: Single-Fragment Uplink, Multi-Fragment Downlink Waiting
+### Scenario D: Single-fragment uplink, multi-fragment downlink waiting
 
 ```mermaid
 sequenceDiagram
@@ -180,7 +180,7 @@ sequenceDiagram
   Note over Device,Cloud:wrap: No response, the downlink is delivered
 ```
 
-### Scenario E: Poll, No Downlink
+### Scenario E: Poll, no downlink
 
 ```mermaid
 sequenceDiagram
@@ -190,7 +190,7 @@ sequenceDiagram
   Cloud-->>Device: n+1 [FLxx] without data
 ```
 
-### Scenario F: Poll, Single-Fragment Downlink
+### Scenario F: Poll, single-fragment downlink
 
 ```mermaid
 sequenceDiagram
@@ -202,7 +202,7 @@ sequenceDiagram
   Note over Device,Cloud:wrap: No response, the downlink is delivered
 ```
 
-### Scenario G: Poll, Two Single-Fragment Downlinks
+### Scenario G: Poll, two single-fragment downlinks
 
 ```mermaid
 sequenceDiagram

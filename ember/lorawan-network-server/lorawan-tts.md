@@ -22,7 +22,7 @@ This guide shows how to connect the **HARDWARIO EMBER** LoRaWAN gateway (MikroTi
 
 ---
 
-## 1) Get the Gateway EUI (EUI-64)
+## 1) Get the gateway EUI (EUI-64)
 On MikroTik RouterOS, the gateway EUI is shown as **Gateway ID**:
 
 - **IoT → LoRa → Devices → Gateway ID**
@@ -52,7 +52,7 @@ In the left panel, open **IoT**→ **LoRa**. Click the line in the list and choo
 You’ll use the downloaded keys in RouterOS.
 
 
-### CUPS (Configuration & Update Server)
+### CUPS (configuration & update server)
 - Protocol: **CUPS**
 - Port: **443**
 - Set the CUPS key (from the downloaded `cups.key` file)
@@ -78,7 +78,7 @@ In the left panel, open **Files**→ **Upload** and choose file "ca.pem".
 In the left panel, open **System**→ **Certificates**→ **Import**. Click on dropdown arrow, select file "ca.pem" and click at **Import**.
 ![EMBER import TTS certificate](images/ember-import-certificate.png)
 
-### Select Network server
+### Select network server
 You need to select a network server.
 
 - In the left panel, open **IoT → LoRa** click on the device. A new window will show, click **+** to select TTS server, after that click **OK**.

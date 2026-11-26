@@ -1,6 +1,6 @@
 ---
 slug: how-to-led-control
-title: "How To: LED Control"
+title: "How to: LED control"
 ---
 import Image from '@theme/IdealImage';
 

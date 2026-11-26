@@ -1,11 +1,11 @@
 ---
 slug: configuration-parameters
-title: Configuration Parameters
+title: Configuration parameters
 description: "Reference of every CHESTER lte config parameter: antenna, network mode, band lock, PLMN, APN, authentication, credentials and static IP address."
 ---
 import Image from '@theme/IdealImage';
 
-# Configuration Parameters
+# Configuration parameters
 
 This chapter describes every `lte config` parameter, the values it accepts and when to change it. For ready-made settings per SIM card provider, see [**SIM Card Setup**](sim-card-setup.md).
 
@@ -13,7 +13,7 @@ All parameters are displayed with `lte config show` and stored with `config save
 
 ---
 
-### `antenna` – Antenna Type
+### `antenna` – antenna type
 Defines the type of antenna connected to the device:
 
 - `internal`: Use the built-in antenna.
@@ -21,7 +21,7 @@ Defines the type of antenna connected to the device:
 
 ---
 
-### `mode` – Network Mode Selection
+### `mode` – network mode selection
 Specifies the preferred network connectivity modes and their priority:
 
 - `lte-m,nb-iot`: Prefer **LTE-M**, fallback to NB-IoT.
@@ -33,7 +33,7 @@ Specifies the preferred network connectivity modes and their priority:
 
 ---
 
-### `bands` – Frequency Band Lock
+### `bands` – frequency band lock
 Restricts the modem to a subset of the supported frequency bands:
 
 - Leave empty (`""`) to let the modem **scan all supported bands**. This is the default and the recommended setting.
@@ -43,7 +43,7 @@ Locking the bands shortens the initial network search, but the device will **not
 
 ---
 
-### `network` – PLMN Selection
+### `network` – PLMN selection
 Forces registration to a specific operator, identified by its **PLMN ID** (MCC + MNC, for example `23003`):
 
 - Leave empty (`""`) for **automatic** operator selection. This is the default.
@@ -53,7 +53,7 @@ The PLMN IDs of the roaming partners used by the **HARDWARIO** Vodafone SIM card
 
 ---
 
-### `apn` – Network APN (Access Point Name)
+### `apn` – network APN (access point name)
 Defines the APN required to connect to the mobile network:
 
 - The **APN** is provided by the **SIM card provider**.
@@ -61,7 +61,7 @@ Defines the APN required to connect to the mobile network:
 
 ---
 
-### `auth` – Authentication Method
+### `auth` – authentication method
 Defines the method of APN authentication:
 
 - `"none"`: No authentication.
@@ -72,25 +72,25 @@ Defines the method of APN authentication:
 
 ---
 
-### `username` – APN Username
+### `username` – APN username
 The username used for APN authentication.  
 Leave empty (`""`) if authentication is not required.
 
 ---
 
-### `password` – APN Password
+### `password` – APN password
 The password used for APN authentication.  
 Leave empty (`""`) if authentication is not required.
 
 ---
 
-### `addr` – Static IP Address
+### `addr` – static IP address
 Specifies the static IP address assigned to the LTE network interface.
 For global connection use `"157.245.24.13"`
 
 ---
 
-## Cloud Legacy configuration {#legacy-cloud-v1-configuration}
+## Cloud legacy configuration {#legacy-cloud-v1-configuration}
 
 For our [HARDWARIO Cloud Legacy](https://legacy.hardwario.cloud) firmwares (usually **CHESTER** catalogue firmware version 2.x.x) you need different values for these two config items:
 

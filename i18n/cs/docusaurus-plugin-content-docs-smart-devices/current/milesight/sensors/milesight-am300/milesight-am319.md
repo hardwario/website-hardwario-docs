@@ -99,20 +99,20 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Technologie | LoRaWAN® |
 | Anténa | Interní antény |
 | Frekvence | CN470 / RU864 / IN865 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Vysílací výkon | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Vysílací výkon | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class C |
 | **Senzory** | |
-| Teplota | -20°C ~ 60°C, přesnost ±0,2~0,3°C, rozlišení 0,1°C |
-| Vlhkost | 0% ~ 100% RH, přesnost ±2% RH, rozlišení 0,5% |
+| Teplota | −20 až +60 °C, přesnost ±0,2–0,3 °C, rozlišení 0,1 °C |
+| Vlhkost | 0–100 % RH, přesnost ±2 % RH, rozlišení 0,5 % |
 | Pohyb (PIR) | 80° H, 55° V, max 5m |
 | Osvětlenost | 0–60000 Lux (6 úrovní) |
 | TVOC | Index IAQ 1–5 nebo 0–2000 μg/m³ |
 | Barometrický tlak | 260–1260 hPa, přesnost ±0,5 hPa |
-| CO₂ | 400–2000 ppm, přesnost ±(50 ppm + 5%) |
+| CO₂ | 400–2000 ppm, přesnost ±(50 ppm + 5 %) |
 | PM2.5 a PM10 | 0–1000 μg/m³, ±10 μg/m³ (0–100) |
-| Formaldehyd (HCHO) | 0–1,25 mg/m³, přesnost ±10% |
-| Ozon (O₃) | 0–10 ppm, přesnost ±5% FS |
+| Formaldehyd (HCHO) | 0–1,25 mg/m³, přesnost ±10 % |
+| Ozon (O₃) | 0–10 ppm, přesnost ±5 % FS |
 | **Rozhraní a displej** | |
 | Displej | 4,2" E-Ink |
 | Tlačítka | Power + Reset |
@@ -120,8 +120,8 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | USB | Type-C (napájení/konfigurace/konzole) |
 | **Software** | Konfigurace přes NFC / USB, prahové hodnoty, kalibrace, ukládání dat (18 000 záznamů) |
 | **Fyzické vlastnosti** | |
-| Napájení | 5V/1A (USB-C) |
-| Provozní teplota | -20°C ~ +60°C (E-Ink: 0°C–40°C) |
+| Napájení | 5 V/1A (USB-C) |
+| Provozní teplota | -20 °C ~ +60 °C (E-Ink: 0 °C–40 °C) |
 | Kryt | ABS, bílý |
 | Rozměry | 100,8 × 114 × 22 mm |
 | Hmotnost | 148 g |

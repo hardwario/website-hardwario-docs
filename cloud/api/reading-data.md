@@ -1,11 +1,11 @@
 ---
-title: Reading Data
+title: Reading data
 description: "Read data with the HARDWARIO Cloud API: list spaces and devices, filter a device's messages by type, direction and time, get the latest value and paginate."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Reading Data
+# Reading data
 
 Most resources live under a Space: `/v2/spaces/{space_id}/…`. Every example needs an
 `<api-key>` (see [**Authentication**](authentication.md)) and a `<space-id>`.

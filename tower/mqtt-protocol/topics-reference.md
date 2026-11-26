@@ -1,11 +1,11 @@
 ---
 slug: topics-reference
-title: Topics Reference
+title: Topics reference
 description: "TOWER MQTT topics: node topics for firmware, battery, sensors, relays, LED, button, PIR, LED strip and LCD, and gateway topics for pairing and aliases."
 ---
 import Image from '@theme/IdealImage';
 
-## Node Topics
+## Node topics
 
 ### Firmware
 
@@ -71,7 +71,7 @@ Only allowed values for payload are `true/false`.
 |     Button Hold      |  `node/{id}/push-button/-/hold-count`   |
 | Button Hold Duration | `node/{id}/push-button/-/hold-duration` |
 
-### PIR Motion Detector
+### PIR motion detector
 
 |        Explanation        |          MQTT Topic           |
 | :-----------------------: | :---------------------------: |
@@ -81,7 +81,7 @@ Only allowed values for payload are `true/false`.
 
 |                Explanation                |        MQTT Topic / explanation         | Example                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | :---------------------------------------: | :-------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|           Set brightness 0-100%           | `node/{id}/led-strip/-/brightness/set`  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|           Set brightness 0-100 %           | `node/{id}/led-strip/-/brightness/set`  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Set color *#250000* or RGBW *#250000(80)* |    `node/{id}/led-strip/-/color/set`    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |      Set compound(part of LED Strip)      |  `node/{id}/led-strip/-/compound/set`   | `[20, "#ff0000", 20, "#00ff00"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |                Set effect                 |   `node/{id}/led-strip/-/effect/set`    | <ul><li>`{"type":"test"}`</li><li>`{"type":"rainbow", "wait":50}`</li><li>`{"type":"rainbow-cycle", "wait":50}`</li><li>`{"type":"theater-chase-rainbow", "wait":50}`</li><li>`{"type":"color-wipe", "wait":50, "color":"#800000"}`</li><li>`{"type":"theater-chase", "wait":50, "color":"#008000"}`</li><li>`{"type":"stroboscope", "wait":50, "color":"#0000ff"}`</li><li>`{"type":"icicle", "wait":50, "color":"#ff0000"}`</li><li>`{"type":"pulse-color", "wait":200, "color":"#ff0000"}`</li></ul> |
@@ -97,7 +97,7 @@ Only allowed values for payload are `true/false`.
 |  Write Text  | `node/{id}/lcd/-/text/set`                   | `{"x": 5, "y": 10, "text": "HARDWARIO"}` |
 
 
-## Gateway Topics
+## Gateway topics
 
 :::tip
 
@@ -119,7 +119,7 @@ Only allowed values for payload are `true/false`.
 |      List       |  `gateway/{id}/nodes/get`  | `gateway/{id}/nodes` `[{"id": "a7c8b05762dd", "alias": "generic-node:0"},  {"id": "836d1983718a", "alias": "lcd-thermostat:0"}]` |
 | Purge All Nodes | `gateway/{id}/nodes/purge` |                                                    `gateway/{id}/nodes` `[]`                                                     |
 
-### Manual Add/Remove
+### Manual add/remove
 
 | Explanation |                MQTT Topic                 |              Response               |
 | :---------: | :---------------------------------------: | :---------------------------------: |

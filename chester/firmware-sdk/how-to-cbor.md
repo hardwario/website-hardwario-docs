@@ -109,7 +109,7 @@ Output **JSON** will be:
 "backup_state": "active"
 ```
 
-### Time Series Period
+### Time series period
 
 **Time Series Period (TSP)** efficiently encodes value or multiple values with the timestamps. In the **CHESTER**, you only send reference **timestamp**, **period** and **values**. The decoder automatically adds an absolute timestamp to each value.
 
@@ -160,7 +160,7 @@ measurements_val:
 
 Notice that in the JSON the timestamp for each sample is absolute. It is computed from the reference timestamp 16793217**60** of the first sample; then next sample has a timestamp bigger by 30 seconds 16793217**90**.
 
-### Time Series Offset
+### Time series offset
 
 **Time Series Offset (TSO)** is similar to the previous **Time Series Period (TSP)**. However, the time between samples is not periodic, and every sample has its own offset relative to the previous one.
 

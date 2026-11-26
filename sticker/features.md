@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 This page describes **STICKER firmware v2.0.0**. Most of these features were introduced in v1.4.0 and extended in v2.0.0.
 :::
 
-# Firmware Features
+# Firmware features
 
 This page describes notable behaviors of the STICKER firmware: how the device manages power, keeps its radio connection (LoRaWAN or P2P) healthy, and protects stored data. For the shell commands and configuration parameters that control these behaviors, see [**Developer Access**](developer-mode.md).
 
@@ -21,7 +21,7 @@ This page describes notable behaviors of the STICKER firmware: how the device ma
 
 ### The reset ladder – identity preserved by tier
 
-A reset or firmware update must never un-provision a field device beyond the tier you explicitly ask for. STICKER's resets form a **severity ladder**; each tier keeps a strict subset of the one above it:
+A reset or firmware update must never un-provision a field device beyond the tier you explicitly ask for. The STICKER resets form a **severity ladder**; each tier keeps a strict subset of the one above it:
 
 | Reset | What it keeps |
 |---|---|

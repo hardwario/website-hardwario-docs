@@ -29,7 +29,7 @@ import Image from '@theme/IdealImage';
 - Detection angle: 98° (horizontally and vertically)
 - Maximal detection range: 5m
 - Power consumption: approx. 3μA
-- Operating voltage range: 2.5V to 3.6V
+- Operating voltage range: 2.5 V to 3.6 V
 - Operating temperature range: -20 to 70 °C
 - Dimensions: 33 x 55 mm
 

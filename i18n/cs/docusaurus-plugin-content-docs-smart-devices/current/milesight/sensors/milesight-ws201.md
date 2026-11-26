@@ -91,7 +91,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Protokol | LoRaWAN® |
 | Anténa | Interní |
 | Frekvence | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Vysílací výkon | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Vysílací výkon | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Citlivost | -132 dBm @300bps |
 | Režim | OTAA / ABP Class A |
 | **Měření vzdálenosti** | |
@@ -107,8 +107,8 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Pokročilé funkce | Alarm při překročení prahu, režim hibernace |
 | **Fyzické vlastnosti** | |
 | Napájení | 1 × CR2450 (590 mAh) |
-| Výdrž baterie | ~2–3 roky (v závislosti na SF a regionu) |
-| Provozní teplota | -10°C ~ +60°C |
+| Výdrž baterie | přibližně 2–3 roky (v závislosti na SF a regionu) |
+| Provozní teplota | -10 °C ~ +60 °C |
 | Vlhkost | 0–95 % RH (bez kondenzace) |
 | Krytí | IP30 |
 | Rozměry | 66 × 38 × 12 mm |

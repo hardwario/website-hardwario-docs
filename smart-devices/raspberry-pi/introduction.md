@@ -12,13 +12,13 @@ description: "Raspberry Pi produces affordable, compact computing modules and si
 
 The **Compute Module 4 (CM4)** is a compact system-on-module designed for integration into custom hardware. Unlike consumer Raspberry Pi boards, the CM4 is built for industrial and commercial product development.
 
-## Key Products
+## Key products
 
 | Product | Description |
 |---|---|
 | [**CM4108016**](/smart-devices/raspberry-pi/cm4) | Compute Module 4 with 8 GB RAM and 16 GB eMMC flash. Broadcom BCM2711 quad-core Cortex-A72 @ 1.5 GHz, Wi-Fi, and Bluetooth included. |
 
-## Typical Use Cases with HARDWARIO
+## Typical use cases with HARDWARIO
 
 - **Gateway software host**: Running HARDWARIO Cloud Connector, Node-RED, or custom integrations.
 - **Local dashboard**: Hosting a local web dashboard or HMI for monitoring HARDWARIO sensor data.

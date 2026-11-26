@@ -75,7 +75,7 @@ const OurProducts = [
     title: 'TAPPER',
     subtitle: translate({ id: 'home.tapper.subtitle', message: 'NFC Tag Reader' }),
     link: '/tapper/',
-    src: '/img/tapper.webp',
+    src: '/img/tapper-product.webp',
     description: translate({
       id: 'home.tapper.description',
       message: 'NFC tag reader using Raspberry Pi Zero 2 W and PN532 for secure tag verification over MQTT.',

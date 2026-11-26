@@ -1,6 +1,6 @@
 ---
 slug: index
-title: Milesight - Utility Devices
+title: Milesight - utility devices
 description: "Milesight utility devices tested by HARDWARIO, with reference resources for each device."
 ---
 
@@ -14,7 +14,7 @@ Here is a list of tested **Milesight Utility Devices** by HARDWARIO with referen
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 To operate your LoRaWAN device, you can choose between two supported network server platforms. Both solutions allow you to manage gateways, register end devices, configure profiles, and process payload data.
 

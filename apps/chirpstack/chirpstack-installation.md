@@ -6,7 +6,7 @@ title_meta: "Installation (ChirpStack)"
 ---
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4 Installation Guide
+# ChirpStack v4 installation guide
 
 This guide outlines the installation process of **ChirpStack v4** on a **Debian/Ubuntu system**. It covers installing the required dependencies, configuring the ChirpStack server, and enabling communication with gateways. Follow the instructions step by step for a smooth installation process.
 
@@ -24,7 +24,7 @@ sudo apt update && sudo apt upgrade -y
 
 ## Procedure
 
-### Install Required Dependencies
+### Install required dependencies
 
 Install `Mosquitto`, `Redis`, and `PostgreSQL`, which are essential for ChirpStack's operation:
 
@@ -37,7 +37,7 @@ redis-tools \
 postgresql
 ```
 
-### Configure PostgreSQL Database
+### Configure PostgreSQL database
 
 1. Log in to the `PostgreSQL CLI` (command-line interface) and create a dedicated role and database for ChirpStack:
 
@@ -65,7 +65,7 @@ postgresql
   
   :::
 
-### Add ChirpStack Repository
+### Add ChirpStack repository
 
 Standard Repository Setup (Recommended by ChirpStack Documentation):
 
@@ -101,7 +101,7 @@ Update the package list and install the `ChirpStack server` and `Gateway Bridge`
 sudo apt install chirpstack chirpstack-gateway-bridge
 ```
 
-### Generate a Secret Key
+### Generate a secret key
 
 Generate a unique secret key for securing API and login tokens. Make sure to copy the generated key for use in the configuration:
 
@@ -150,7 +150,7 @@ openssl rand -base64 32
    command_topic_template="eu868/gateway/{{ .GatewayID }}/command/#"
    ```
 
-### Verify Host Configuration
+### Verify host configuration
 
 Ensure `127.0.0.1` is mapped to localhost:
 
@@ -168,7 +168,7 @@ If missing, add the following line to file `/etc/hosts`:
 echo "127.0.0.1 localhost" | sudo tee -a /etc/hosts
 ```
 
-### Start and Enable ChirpStack Services
+### Start and enable ChirpStack services
 
 Start and enable the ChirpStack and **Gateway Bridge** services:
 
@@ -179,7 +179,7 @@ sudo systemctl start chirpstack-gateway-bridge
 sudo systemctl enable chirpstack-gateway-bridge
 ```
 
-### Verify Service Status
+### Verify service status
 
 Check the logs to ensure that the services are running correctly:
 
@@ -204,9 +204,9 @@ Mainly for testing and debug purposes
   ```
 ---
 
-## Post-Installation Checklist
+## Post-installation checklist
 
-### Access the ChirpStack Web Interface
+### Access the ChirpStack web interface
 
 1. After starting the ChirpStack service, access the web interface using a web browser at:
 
@@ -233,7 +233,7 @@ Mainly for testing and debug purposes
    Username: `admin`  
    Password: `admin`
 
-### Verify LoRaWAN Gateway Connection
+### Verify LoRaWAN gateway connection
 
 To confirm that your **LoRaWAN** gateway is connected and operational:
 

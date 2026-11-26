@@ -5,6 +5,7 @@ sidebar_label: Introduction
 description: "STICKER is an open IoT platform on STM32WL with LoRaWAN connectivity and a software-selectable LoRa P2P mode, configured over NFC with HARDWARIO Manager."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # STICKER
 
@@ -14,9 +15,9 @@ import Image from '@theme/IdealImage';
 ### To get your STICKER running, read the [**Quick Start Guide**](first-steps)
 :::
 
-<img src="/img/sticker.webp" data-zoom-src="/img/sticker.webp" width="540" alt="STICKER catalog" />
+<ProductSpin product="sticker" variants={[{id: "clime", label: "STICKER Clime"}]} caption="Shown: STICKER Clime" />
 
-## Quick Links
+## Quick links
 
 * [**Quick Start Guide**](first-steps): Step-by-step setup guide.
 * [**Buy STICKER**](https://www.hardwario.store/sticker): Purchase from our store.
@@ -25,7 +26,7 @@ import Image from '@theme/IdealImage';
 * [**Official Product Page**](https://www.hardwario.com/products/sticker/): Features and overview.
 * [**Changelog**](changelog): Latest SDK releases, firmware versions, and per-application changes.
 
-## Typical Use Cases
+## Typical use cases
 
 - Track and maintain optimal temperature conditions in various rooms for comfort and energy efficiency
 - Ensure precise temperature control and monitoring during critical manufacturing operations
@@ -33,7 +34,7 @@ import Image from '@theme/IdealImage';
 - Monitor and regulate temperature to create ideal growing conditions for plants in greenhouses
 - Integrate with PLCs or standalone sensors to gather essential data for manufacturing and industrial processes
 
-## Key Features
+## Key features
 
 * **Ultra Low Power:** Multi-year operation powered by two standard AA batteries with intelligent sleep modes and factory Radio-Silent support.
 * **Flexible Connectivity & NFC:** Long-range LoRaWAN or LoRa P2P communication combined with encrypted NFC for instant configuration and management.

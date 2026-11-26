@@ -1,5 +1,5 @@
 ---
-title: HARDWARIO Cloud Setup
+title: HARDWARIO Cloud setup
 sidebar_position: 3
 description: "Connect GLIDER to HARDWARIO Cloud: the device ships ready for the Cloud, so registering it in the web interface with its two identifiers is all it takes."
 ---
@@ -26,7 +26,7 @@ If you do not have a console set up yet, follow one of these first:
 - [**AT Console (USB-C)**](console/usb-at.md): recommended for first-time provisioning.
 :::
 
-## Step 1 - Read the serial number and claim token
+## Step 1 - read the serial number and claim token
 
 #### Using the RTT console (Zephyr shell)
 
@@ -60,7 +60,7 @@ $INFO: "claim-token","ab01ad36ab1234567890abcdef..."
 
 Write down the values for **`serial-number`** and **`claim-token`**. You need both in the next step.
 
-## Step 2 - Create the device in HARDWARIO Cloud
+## Step 2 - create the device in HARDWARIO Cloud
 
 1. Sign in at [https://cloud.hardwario.com](https://cloud.hardwario.com).
 2. Open the **space** you want the device to live in (or create a new one).
@@ -73,7 +73,7 @@ Write down the values for **`serial-number`** and **`claim-token`**. You need bo
 
 The device now appears in your space.
 
-## Step 3 - Verify that data arrives
+## Step 3 - verify that data arrives
 
 1. Open the new device in the cloud UI.
 2. Navigate to **Show device messages**.

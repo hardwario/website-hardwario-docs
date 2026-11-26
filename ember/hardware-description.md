@@ -1,25 +1,25 @@
 ---
 slug: hardware-description
-title: Hardware Description
+title: Hardware description
 description: "This article describes the hardware configuration of the EMBER Hotspot."
 title_meta: "Hardware Description (EMBER)"
 ---
 
-# Hardware Description
+# Hardware description
 
 This article describes the **hardware configuration of the EMBER Hotspot**.
 
-## EMBER Hotspot Overview
+## EMBER hotspot overview
 
 The **EMBER Hotspot** is based on the **RBM33G** platform from **MikroTik**.  
 It is equipped with a **LoRaWAN** card and can optionally include an **LTE modem**.
 
 The enclosure and connectors are **water-proof and dust-proof**, providing **IP67** protection.
 
-### Connector Layout
+### Connector layout
 ![EMBER Connector Label](./images/ember-connector-label-r2.png)
 
-## External Connectors & Antennas
+## External connectors & antennas
 
 The device is equipped with high-quality connectors for power, networking, and wireless communication.
 
@@ -62,12 +62,12 @@ amplifier.
 If you have the enclosure open and need to tell the cards apart: the **LoRa card has a single u.FL
 connector** (`RFIO`), while the **LTE card has two** (`MAIN` and `AUX`).
 
-### Power and Data
+### Power and data
 - **DC IN:** Circular industrial connector for external 24 V DC power supply.
 - **LAN (Ethernet):** Used for local configuration, device management, and troubleshooting.
 - **WAN (Ethernet + PoE):** Primary interface for internet connectivity. This port also supports **Passive PoE IN** for powering the device.
 
-## Network Interfaces
+## Network interfaces
 
 The **EMBER Hotspot** provides two metallic **RJ45 Ethernet ports** (10/100/1000 Mbit/s) hidden behind waterproof cable glands:
 
@@ -80,7 +80,7 @@ The **EMBER Hotspot** provides two metallic **RJ45 Ethernet ports** (10/100/1000
   - Internet connectivity to the cloud
   - Used for PoE power input
 
-## Power Supply Options
+## Power supply options
 
 The device can be powered by:
 

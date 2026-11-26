@@ -4,20 +4,107 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* --- Brand (HARDWARIO Brand Guidelines HBG.261028.01) ---
+   Type: Inter for everything, Roboto Mono for code; Arial is the fallback.
+   Both are self-hosted (variable fonts, latin + latin-ext for Czech), so the
+   site makes no request to Google Fonts and the CSP font-src 'self' holds.
+   Licenses: src/css/fonts/OFL-*.txt. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('./fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('./fonts/inter-latin-ext-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url('./fonts/roboto-mono-latin-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url('./fonts/roboto-mono-latin-ext-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Colors: Red marks (active section, accents), Blue is for links, Ink is the
+   text. The Red shades come from the brand's Red ramp; the old values were a
+   leftover teal from the Docusaurus template. */
 :root {
-  --ifm-color-primary: rgba(227, 4, 39, 1);
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-font-family-base: 'Inter', Arial, sans-serif;
+  --ifm-heading-font-family: 'Inter', Arial, sans-serif;
+  --ifm-font-family-monospace: 'Roboto Mono', SFMono-Regular, Menlo, Consolas, monospace;
+  --ifm-heading-font-weight: 600; /* web headings in Semibold; h1 is Bold below */
+
+  --ifm-color-primary: #e30427; /* Red */
+  --ifm-color-primary-dark: #cc0423;
+  --ifm-color-primary-darker: #c10321;
+  --ifm-color-primary-darkest: #9e0219;
+  --ifm-color-primary-light: #f50a30;
+  --ifm-color-primary-lighter: #ff3a55;
+  --ifm-color-primary-lightest: #ff5c70;
+
+  --ifm-font-color-base: #252532; /* Ink */
+  --ifm-heading-color: #252532;
+  --ifm-link-color: #016ad4; /* Blue */
+  --ifm-link-hover-color: #06367a; /* Navy */
+  --ifm-footer-background-color: #252532; /* Ink */
   --ifm-code-font-size: 95%;
 }
 
+/* Dark mode (brand proposal): near-black ground, Ink surfaces, the light red
+   for accents and Sky for links. */
+[data-theme='dark'] {
+  --ifm-background-color: #16161d;
+  --ifm-background-surface-color: #252532;
+  --ifm-navbar-background-color: #16161d;
+  --ifm-footer-background-color: #252532;
+  --ifm-font-color-base: #ffffff;
+  --ifm-heading-color: #ffffff;
+  --ifm-color-primary: #f43f5e; /* light red */
+  --ifm-color-primary-dark: #f22a4c;
+  --ifm-color-primary-darker: #f11f43;
+  --ifm-color-primary-darkest: #d60d30;
+  --ifm-color-primary-light: #f65470;
+  --ifm-color-primary-lighter: #f75f79;
+  --ifm-color-primary-lightest: #f98094;
+  --ifm-link-color: #009cfa; /* Sky */
+  --ifm-link-hover-color: #4dbbff;
+}
+
+.markdown h1,
+h1 {
+  font-weight: 700;
+}
+
+/* Tabular figures in tables, so number columns line up. */
+table {
+  font-variant-numeric: tabular-nums;
+}
+
+/* A highlighted code line: a light Blue tint in light mode (the old Ink bar made
+   the light code theme's dark text unreadable), Ink in dark mode. */
 .docusaurus-highlight-code-line {
-  background-color: rgb(37, 37, 50);
+  background-color: rgba(1, 106, 212, 0.1);
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
@@ -68,8 +155,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
     padding: 0.35rem 0.75rem;
     border-radius: 999px;
     font-size: 0.85rem;
-    font-weight: var(--ifm-font-weight-semibold);
-    letter-spacing: 0.06em;
+    font-weight: 700; /* brand: caps labels Bold, tracked 0.07 em */
+    letter-spacing: 0.07em;
     text-transform: uppercase;
     transition: background-color 0.15s ease, color 0.15s ease;
   }
@@ -97,7 +184,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
   [data-theme='dark'] .navbar__items:not(.navbar__items--right) .navbar__link--active,
   [data-theme='dark'] .navbar__items:not(.navbar__items--right) .navbar__link--active:hover {
-    color: #ff5a6e;
+    color: var(--ifm-color-primary);
   }
 
   .navbar-active-indicator {
@@ -107,7 +194,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
     left: 0;
     z-index: 0;
     border-radius: 999px;
-    background: rgba(227, 4, 39, 0.08);
+    /* 4 % keeps the Red text at 4.5:1 on the pill (8 % gave 4.2:1). */
+    background: rgba(227, 4, 39, 0.04);
     opacity: 0;
     pointer-events: none;
     transition:
@@ -117,7 +205,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   }
 
   [data-theme='dark'] .navbar-active-indicator {
-    background: rgba(227, 4, 39, 0.16);
+    background: rgba(244, 63, 94, 0.12);
   }
 
   .navbar .dropdown > .navbar__link::after {
@@ -159,7 +247,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 [data-theme='dark'] .navbar-dropdown-current {
-  color: #ff5a6e;
+  color: var(--ifm-color-primary);
 }
 
 /* The mobile menu lists the entries right below; the inline name only
@@ -210,7 +298,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 /* WCAG AA contrast (Lighthouse 2026-09-05): the brand red fails on the dark footer
-   (2.4:1 on #303846) and on the active breadcrumb chip (4.3:1 on #f2f2f2), so the
+   (2.4:1 on the old #303846; the footer is Ink now) and on the active breadcrumb chip (4.3:1 on #f2f2f2), so the
    footer's cross-site links use the footer link colour and the current-page
    breadcrumb uses the base text colour. Hover keeps the brand red. */
 :root {
@@ -263,9 +351,9 @@ button.theme-back-to-top-button::after {
 .menu__list-item.sidebar-section > .menu__list-item-collapsible > .menu__link {
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--ifm-color-emphasis-600);
+  color: #6b6a6a; /* Gray, 5.3:1; the Infima grey was 3.0:1 */
   background: none;
 }
 
@@ -291,4 +379,117 @@ button.theme-back-to-top-button::after {
   .navbar-dropdown-current {
     animation: none;
   }
+}
+
+/* --- Brand: navbar, sidebar and search (HBG.261028.01) --- */
+
+/* The logo keeps its clear space X (half the symbol height, 16 px) above and
+   below: a 32 px logo in a 64 px bar. */
+:root {
+  --ifm-navbar-height: 4rem;
+}
+
+/* Right-hand navbar links (GitHub, language): Regular; Inter has no 500 in
+   the brand's three weights. */
+.navbar__items--right .navbar__link {
+  font-weight: 400;
+}
+
+/* Sidebar: Ink items in Regular with text line spacing; the current page in
+   Red with a Red marker (Red on White, 4.8:1, instead of Red on a grey chip,
+   4.3:1); its parent categories in Ink Semibold, so Red stays the one mark. */
+:root {
+  --ifm-menu-color: #252532;
+  --ifm-menu-color-active: #e30427;
+  --ifm-menu-color-background-active: transparent;
+}
+
+[data-theme='dark'] {
+  --ifm-menu-color: #ffffff;
+  --ifm-menu-color-active: #f43f5e;
+}
+
+.theme-doc-sidebar-menu .menu__link {
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.theme-doc-sidebar-menu .menu__link--sublist.menu__link--active,
+.theme-doc-sidebar-menu .menu__list-item-collapsible--active > .menu__link {
+  color: var(--ifm-menu-color);
+  font-weight: 600;
+}
+
+.theme-doc-sidebar-menu .menu__list-item-collapsible--active {
+  background: transparent;
+}
+
+.theme-doc-sidebar-menu .menu__link--active:not(.menu__link--sublist) {
+  background: transparent;
+  box-shadow: inset 2px 0 0 var(--ifm-menu-color-active);
+  border-radius: 0 var(--ifm-menu-link-border-radius, 0.25rem) var(--ifm-menu-link-border-radius, 0.25rem) 0;
+}
+
+/* The section headings (USER GUIDE, ADVANCED) are categories too, but never
+   carry the "you are here" marker. */
+.theme-doc-sidebar-menu .menu__list-item.sidebar-section > .menu__list-item-collapsible > .menu__link {
+  box-shadow: none;
+  font-weight: 700;
+}
+
+[data-theme='dark'] .menu__list-item.sidebar-section > .menu__list-item-collapsible > .menu__link {
+  color: #d1d5db; /* light gray */
+}
+
+/* Search: Inter (inputs do not inherit it), Panel field, Gray placeholder
+   (4.9:1 on Panel; it was 1.5:1). */
+.navbar__search-input,
+.navbar input[type='search'] {
+  font-family: inherit;
+  background-color: #f5f5f5;
+  color: #252532;
+}
+
+.navbar__search-input::placeholder,
+.navbar input[type='search']::placeholder {
+  color: #6b6a6a;
+  opacity: 1;
+}
+
+[data-theme='dark'] .navbar__search-input,
+[data-theme='dark'] .navbar input[type='search'] {
+  background-color: #252532;
+  color: #ffffff;
+}
+
+[data-theme='dark'] .navbar__search-input::placeholder,
+[data-theme='dark'] .navbar input[type='search']::placeholder {
+  color: #d1d5db;
+}
+
+/* Icons: Lucide (src/components/Lucide.js, src/theme/Icon/*) in Navy; White
+   or light gray on dark grounds. The search field's magnifier is Infima's
+   background icon, so it is swapped for Lucide's "search" here. */
+.navbar .lucide {
+  color: #06367a;
+}
+
+[data-theme='dark'] .navbar .lucide {
+  color: #d1d5db;
+}
+
+/* The search plugin draws its own magnifier SVG: its shapes are hidden and the
+   Lucide "search" icon is painted through a mask in the icon colour. */
+.navbar svg[class*='searchIcon'] > * {
+  display: none;
+}
+
+.navbar svg[class*='searchIcon'] {
+  background-color: #06367a;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>') center / contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>') center / contain no-repeat;
+}
+
+[data-theme='dark'] .navbar svg[class*='searchIcon'] {
+  background-color: #d1d5db;
 }

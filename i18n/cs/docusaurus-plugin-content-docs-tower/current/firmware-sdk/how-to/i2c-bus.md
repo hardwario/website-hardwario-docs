@@ -26,7 +26,7 @@ Tato kapitola na příkladech kódu ukazuje, jak API pro I²C používat. Více 
 
 Než se sběrnicí **I²C** začnete pracovat, musíte ji vždy inicializovat.
 
-Například `twr_i2c_init(TWR_I2C_I2C0, TWR_I2C_SPEED_400_KHZ);` inicializuje **I2C_0** na rychlost **400kHz**.
+Například `twr_i2c_init(TWR_I2C_I2C0, TWR_I2C_SPEED_400_KHZ);` inicializuje **I2C_0** na rychlost **400 kHz**.
 
 :::
 

@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 This **article** defines the requirements if you want to start development with the CHESTER SDK.
 
-## Hardware Setup
+## Hardware setup
 
 * Development board CHESTER DevKit
 

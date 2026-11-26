@@ -1,6 +1,6 @@
 ---
 slug: how-to-gfx-graphics-library
-title: "How To: Graphics Library"
+title: "How to: Graphics library"
 ---
 import Image from '@theme/IdealImage';
 
@@ -101,7 +101,7 @@ Using GFX with SSD1303 OLED Code Example
 
 </details>
 
-### Custom GFX Driver
+### Custom GFX driver
 
 :::info
 

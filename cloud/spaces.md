@@ -13,7 +13,7 @@ Typical use cases:
 - One space per **project** or environment (e.g. `myproject-dev`, `myproject-prod`)
 - A personal space for development and testing
 
-## Space Types
+## Space types
 
 | Type | Description |
 |---|---|
@@ -22,7 +22,7 @@ Typical use cases:
 | **default** | Standard space type for customer deployments |
 | **premium** | Space with extended limits or features |
 
-## Creating a Space
+## Creating a space
 
 1. In the top-right corner, open **SPACES** and click **+ NEW SPACE**.
 
@@ -34,7 +34,7 @@ Typical use cases:
 
 The new space appears in your space switcher immediately.
 
-## Space Overview
+## Space overview
 
 When you open a space, the left sidebar shows all available sections:
 
@@ -63,7 +63,7 @@ A user can be a member of multiple spaces with different roles in each.
 
 :::
 
-## API Keys
+## API keys
 
 Each space has its own API keys for programmatic access. API keys are scoped to the space and can be used to list devices, retrieve messages, and send downlinks via the [REST API](/cloud/api).
 

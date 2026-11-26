@@ -1,19 +1,19 @@
 ---
 slug: sticker-input-wiring
-title: STICKER Input Wiring
+title: STICKER Input wiring
 sidebar_label: Wiring
 description: "Wiring guide for STICKER Input: DIP switch settings and connections for 1-Wire, pulse, contact and analog inputs, with diagrams."
 ---
 import Image from '@theme/IdealImage';
 
-# STICKER Input Wiring
+# STICKER Input wiring
 
-## DIP Switch Legend
+## DIP switch legend
 
 - |🟥←| **ON**: DIP switch in the ON position (red)
 - |→⬛| **OFF**: DIP switch in the OFF position (black)
 
-## DIP Switch S1 Settings
+## DIP switch S1 settings
 
 The external connector reaches the inputs or the 1-Wire bus only through the 8-way DIP switch **S1** of STICKER Input. Switches 1–4 belong to input **A** (`DQ1`), switches 5–8 to input **B** (`DQ2`):
 
@@ -40,7 +40,7 @@ The firmware cannot read the DIP switch. If an input is set to `analog` while it
 
 :::
 
-## 1-Wire Input
+## 1-Wire input
 Wiring for 1-Wire (Dallas, ...):
 - DIP switches enable the data lines (DQ1/DQ2).
 
@@ -48,7 +48,7 @@ Wiring for 1-Wire (Dallas, ...):
 
 ---
 
-## Dry Contact Input
+## Dry contact input
 Wiring for a dry contact:  
 - 560 kΩ pull-up to VDD on the input; the connector reaches the input through the 33 kΩ series resistor (S1 switches 2+4 for A, 5+7 for B).  
 
@@ -56,13 +56,13 @@ Wiring for a dry contact:
 
 ---
 
-## Analog Input (0–24 V)
+## Analog input (0–24 V)
 Analog input 0–24 V:  
 - Divider 1 kΩ / 33 kΩ.
 
 ![STICKER Analog Input](images/sticker-analog-input.png)
 
-## S0 Sensor {#so-sensor}
+## S0 sensor {#so-sensor}
 
 S0 pulse output of an energy or utility meter, counted with `cap-gpio-input-x pulse`. For the configuration and counting behavior see [S0 interface](./s0-interface.md).
 

@@ -52,8 +52,8 @@ dále na horizontu.
 
 | Zisk antény | Vertikální vyzařovací úhel | Vhodné pro |
 | --- | --- | --- |
-| Nízký (~0–2 dBi) | Široký | Zařízení poblíž / v různých výškách, např. uvnitř budov, vícepatrové objekty |
-| Vyšší (~6+ dBi) | Užší | Venkovní spoje na velkou vzdálenost, zařízení zhruba v úrovni brány nebo pod ní, rozmístěná horizontálně |
+| Nízký (přibližně 0–2 dBi) | Široký | Zařízení poblíž / v různých výškách, např. uvnitř budov, vícepatrové objekty |
+| Vyšší (přibližně 6 dBi a víc) | Užší | Venkovní spoje na velkou vzdálenost, zařízení zhruba v úrovni brány nebo pod ní, rozmístěná horizontálně |
 
 Zisk antény volte podle konkrétního nasazení, ne podle pravidla „větší dosah = lepší“.
 

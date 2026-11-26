@@ -1,16 +1,16 @@
 ---
-title: Ports & Default Credentials
+title: Ports & default credentials
 description: "Ports, URLs and default logins of the SSH, ChirpStack, Node-RED, MQTT, InfluxDB, Grafana and dashboard services on FIBER; change ChirpStack's admin/admin."
 ---
 
-# Ports & Default Credentials
+# Ports & default credentials
 
-| Service | Port | URL | Default Login |
+| Service | Port | URL | Default login |
 |---|---|---|---|
 | SSH | 22 | `ssh <user>@[TARGET IP ADDRESS]` | set in Raspberry Pi Imager |
 | ChirpStack | 8080 | `http://[TARGET IP ADDRESS]:8080/` | `admin` / `admin` |
 | Node-RED | 1880 | `http://[TARGET IP ADDRESS]:1880/` | none by default; `adminAuth` if hardened |
-| Mosquitto (MQTT) | 1883 | internal only (`localhost`) | — |
+| Mosquitto (MQTT) | 1883 | internal only (`localhost`) | – |
 | Dashboard | 80 | `http://[TARGET IP ADDRESS]/` | none (no authentication) |
 | InfluxDB | 8086 | `http://[TARGET IP ADDRESS]:8086/` | set during installation (`influx setup`) |
 | Grafana | 3000 | `http://[TARGET IP ADDRESS]:3000/` | set during installation (changed from `admin`/`admin`) |

@@ -1,10 +1,10 @@
 ---
 slug: connector-description
-title: Connector Description
+title: Connector description
 description: "GAUGER connectors: terminal blocks for redundant power and four digital inputs, RJ-45 Ethernet, SMA antenna, Mini USB-B and the 10-pin JTAG header."
 ---
 
-# Connector Description
+# Connector description
 
 The device has two terminal blocks. The first one contains two redundant pairs of power supply pins. The second one is for connecting the digital inputs. It has a total of eight pins, a positive and a ground pin for each input.
 

@@ -15,9 +15,9 @@ Zařízení HARDWARIO STICKER je k dispozici ve třech hotových funkčních var
 
 | Varianta | Hlavní účel | Integrované senzory / vstupy | Externí rozšíření | Klíčová použití |
 |---|---|---|---|---|
-| [**STICKER Clime**](/sticker/catalog-applications/sticker-clime/) | Monitorování prostředí | Teplota, relativní vlhkost, osvětlenost, barometrický tlak | — | Sledování klimatu v interiéru, chladový řetězec, skleníky, čisté prostory |
+| [**STICKER Clime**](/sticker/catalog-applications/sticker-clime/) | Monitorování prostředí | Teplota, relativní vlhkost, osvětlenost, barometrický tlak | – | Sledování klimatu v interiéru, chladový řetězec, skleníky, čisté prostory |
 | [**STICKER Input**](/sticker/catalog-applications/sticker-input/) | Rozhraní pro průmyslová zařízení a sondy | Teplota, relativní vlhkost, 2× externí vstup (každý digitální, analogový 0–24 V nebo čítač impulzů S0) | Sběrnice 1-Wire (Dallas, Machine Probe), čítače impulzů S0 | Odečet měřičů energií, stav stroje, sledování průmyslových PLC |
-| [**STICKER Motion**](/sticker/catalog-applications/sticker-motion/) | Detekce přítomnosti a pohybu | Detektor pohybu PIR, tříosý akcelerometr, dva Hallovy spínače | — | Zabezpečení budov, obsazenost prostor, monitorování dveří, pohyb majetku |
+| [**STICKER Motion**](/sticker/catalog-applications/sticker-motion/) | Detekce přítomnosti a pohybu | Detektor pohybu PIR, tříosý akcelerometr, dva Hallovy spínače | – | Zabezpečení budov, obsazenost prostor, monitorování dveří, pohyb majetku |
 
 ---
 

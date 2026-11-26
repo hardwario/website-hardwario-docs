@@ -1,6 +1,6 @@
 ---
 slug: how-to-gpio-pins
-title: "How To: GPIO Pins"
+title: "How to: GPIO pins"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,16 +1,16 @@
 ---
 slug: bulk-actions
-title: Bulk Actions
+title: Bulk actions
 description: "Bulk actions in HARDWARIO Cloud configure or manage many CHESTER devices at once when a fleet should share the same settings."
 ---
 
-# Bulk Actions
+# Bulk actions
 
 **Bulk Actions** let you configure or manage **many devices at once** instead of one at a time,
 handy when you roll out a fleet of CHESTER devices that should share the same configuration, firmware,
 tags, or labels.
 
-## Selecting Devices
+## Selecting devices
 
 On the **Devices** page, tick the checkbox next to each device you want to include (or the header
 checkbox to select them all). The **BULK ACTIONS** button shows how many devices are selected. Click
@@ -18,7 +18,7 @@ it to open the Bulk Actions dialog.
 
 ![Devices page with three devices selected and the BULK ACTIONS button active](images/bulk-actions.png)
 
-## Running an Action
+## Running an action
 
 The dialog shows the number of **selected devices** and offers five tabs, one per kind of action.
 Tick **Save as batch (track progress)** to record the operation as a batch so you can follow its

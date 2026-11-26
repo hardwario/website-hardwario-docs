@@ -1,11 +1,11 @@
 ---
 slug: catalog-applications
-title: Catalog Applications
+title: Catalog applications
 description: "Catalog applications are ready-made CHESTER firmware for common use cases: what each one does, which hardware it needs and how its data looks."
 ---
 import Image from '@theme/IdealImage';
 
-# Catalog Applications
+# Catalog applications
 
 This article provides information on the so-called **catalog application** for the **CHESTER** platform.
 
@@ -13,7 +13,7 @@ This article provides information on the so-called **catalog application** for t
 
 The **catalog applications** also serve as a great starting point for your own firmware application.
 
-## Application List
+## Application list
 
 For details on how each catalog application works, click on the application name in the table below.
 
@@ -23,7 +23,7 @@ Firmwares are located in the [**Application Firmware**](#application-firmware) c
 
 
 
-| Application | Application Goal | LoRaWAN | BLE Tags | Backup Module (Z1) | 1-Wire (DS18B20) | External Power Supply |
+| Application | Application goal | LoRaWAN | BLE Tags | Backup module (Z1) | 1-Wire (DS18B20) | External power supply |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | [**CHESTER Clime**](chester-clime.md) | Temperature, humidity, IAQ sensing | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> |
 | [**CHESTER Control**](chester-control.md) | 4ch input/output control | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> | <img src="/img/check.png" width="27" data-zoomable="false" alt="Supported" /> |
@@ -40,16 +40,16 @@ Firmwares are located in the [**Application Firmware**](#application-firmware) c
 
 :::info
 
-- **CHESTER Clime IAQ** variant uses CHESTER-X10 for external power input (6-28V)
+- **CHESTER Clime IAQ** variant uses CHESTER-X10 for external power input (6-28 V)
 - **CHESTER Control** uses CHESTER-X4 module for step-down power supply and digital outputs
 - **CHESTER Push** uses CHESTER-Z1-F which combines backup battery with power supply; can also run from battery only
-- **CHESTER wM-Bus** is available in battery variant (6x D-cells) or DC variant with external 230V adapter
-- **CHESTER Serial** uses CHESTER-X12 (RS-232) or CHESTER-X2 (RS-485) with external power input (6-28V)
+- **CHESTER wM-Bus** is available in battery variant (6x D-cells) or DC variant with external 230 V adapter
+- **CHESTER Serial** uses CHESTER-X12 (RS-232) or CHESTER-X2 (RS-485) with external power input (6-28 V)
 
 :::
 
 
-## Application Firmware for HARDWARIO Cloud {#application-firmware}
+## Application firmware for HARDWARIO Cloud {#application-firmware}
 
 These firmwares are for communication with the current [**HARDWARIO Cloud**](/cloud/).
 
@@ -71,7 +71,7 @@ Then apply changes by typing `config save`. The device will reboot and use the c
 
 :::
 
-#### Available Application Firmware Builds
+#### Available application firmware builds
 
 *SDK **v4.0.1** · NCS **3.4.1** · Zephyr **4.4.2** · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.1)*
 
@@ -108,7 +108,7 @@ Then apply changes by typing `config save`. The device will reboot and use the c
 
 </div>
 
-## Application Firmware for Cloud Legacy {#application-firmware-cloud-v1}
+## Application firmware for Cloud legacy {#application-firmware-cloud-v1}
 
 These firmwares are for communication with the older [**HARDWARIO Cloud Legacy**](/cloud/legacy).
 

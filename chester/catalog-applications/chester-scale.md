@@ -19,7 +19,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 :::
 
-## Application Overview
+## Application overview
 
 **CHESTER Scale** is designed for wireless weight measurement using load cells. The application supports connecting multiple weight probes (up to 4 channels) and provides real-time weight data transmission via NB-IoT/LTE-M or LoRaWAN networks.
 
@@ -29,7 +29,7 @@ The device is ideal for:
 - **Livestock weight monitoring**: Optimize feeding schedules and track animal health
 - **Agricultural applications**: Beehive monitoring, feed storage, etc.
 
-## Application Variants
+## Application variants
 
 **CHESTER Scale** can be ordered in one of these variants:
 
@@ -66,16 +66,16 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 
 Firmware build variant: `west chester-update scale --variant "CHESTER Scale Z"`
 
-## Measurement and Behavior
+## Measurement and behavior
 
-### Weight Measurement
+### Weight measurement
 
 - Weight sensors are **sampled** with a configurable period (parameter `interval-sample`).
 - Samples are then **aggregated** in the configurable interval (parameter `interval-aggreg`). Minimum, maximum, average, and median are computed from buffered samples for each channel.
 - Each aggregated value has its timestamp; the values are sent in a batch every report interval (parameter `interval-report`).
 - The `weight-measurement-interval` parameter controls how often the weight measurement cycle runs.
 
-### Channel Configuration
+### Channel configuration
 
 The application supports up to 4 weight measurement channels:
 - **Channel A1** and **Channel A2** on slot A
@@ -92,7 +92,7 @@ Each channel can be individually enabled or disabled.
 * Optionally, DC power input changes can be reported **immediately** or with a configurable **delay** (parameter `event-report-delay`).
 * The maximum number of reports per hour is configurable (parameter `event-report-rate`).
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -116,7 +116,7 @@ app config backup-report-connected true
 app config backup-report-disconnected true
 ```
 
-## Specific Commands
+## Specific commands
 
 :::info
 
@@ -138,7 +138,7 @@ Command to set **report interval** in seconds:
 app config interval-report <30-86400>
 ```
 
-### Sampling and Aggregation
+### Sampling and aggregation
 
 Command to set **sample interval** in seconds:
 
@@ -158,7 +158,7 @@ Command to set **weight measurement interval** in seconds:
 app config weight-measurement-interval <30-86400>
 ```
 
-### Channel Activation
+### Channel activation
 
 Command to **enable/disable** channel A1:
 
@@ -214,7 +214,7 @@ app config backup-report-disconnected <true/false>
 
 The latest firmware is available in the Catalog Applications [Firmware chapter](index.md#application-firmware).
 
-## Example JSON Message
+## Example JSON message
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -367,7 +367,7 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-## BLE Tag Subsystem
+## BLE tag subsystem
 
 :::info
 **CHESTER Scale** also supports integration with **Bluetooth tags** (Teltonika EYE Sensor subsystem) for wireless temperature and humidity monitoring.

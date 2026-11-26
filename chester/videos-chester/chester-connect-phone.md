@@ -6,7 +6,7 @@ description: "Video tutorial: pair CHESTER with your phone over Bluetooth in the
 
 import Image from '@theme/IdealImage';
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you’ll learn how to connect your CHESTER device to your phone using the HARDWARIO Manager app. Follow simple steps to pair via Bluetooth and access all device information and tools.
 
@@ -30,7 +30,7 @@ In this guide, you’ll learn how to connect your CHESTER device to your phone u
 </div>
 
 
-## Step-by-Step Text Guide
+## Step-by-step text guide
 
 1. Take your phone and open the Camera app.
 

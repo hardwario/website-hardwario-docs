@@ -1,6 +1,6 @@
 ---
 slug: data-visualization
-title: Data Visualization
+title: Data visualization
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +12,7 @@ The **Dashboard Tab** needs the Node-RED set up correctly to work. If you don't 
 
 :::
 
-## Dashboard Tab
+## Dashboard tab
 
 On this tab, you can display **gauges**, **graphs**, **buttons** and **other widgets**. This can be used for home automation visualization and control.
 

@@ -1,6 +1,6 @@
 ---
 slug: /tls-setup
-title: MQTT TLS Setup
+title: MQTT TLS setup
 description: "This guide provides all the information needed to make TLS work with self-signed certificates."
 ---
 
@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 
 This guide provides all the information needed to make TLS work with self-signed certificates.
 
-## Certificate Authority
+## Certificate authority
 
 First, we need to set up the certificate authority.
 
@@ -47,7 +47,7 @@ Sign the CSR with your CA key.
 openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 365 -extfile v3.ext
 ```
 
-### Mosquitto Setup
+### Mosquitto setup
 
 We also need to configure Mosquitto to actually use these certificates and keys.
 

@@ -102,9 +102,11 @@ Tabulka ale slouží jen k pochopení režimů. Stačí znát režim uvedený ve
 | 5        | CH3         | Kanál 3                  |
 | 6        | GND         | Systémová zem            |
 | 7        | CH4         | Kanál 4                  |
-| 8        | +V          | Systémová kladná větev (*) |
+| 8        | +V          | Systémová kladná větev |
 
-*Poznámka: Napětí systémové kladné větve závisí na variantě napájení zařízení CHESTER.
+:::note
+Napětí systémové kladné větve závisí na variantě napájení zařízení CHESTER.
+:::
 
 ## Schéma zapojení {#schematic-diagram}
 

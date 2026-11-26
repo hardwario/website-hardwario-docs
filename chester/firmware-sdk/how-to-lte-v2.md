@@ -17,7 +17,7 @@ Configuration messages `app config ...` can be sent to any device using LTE v2. 
 
 Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to HARDWARIO Cloud and you can take an inspiration.
 
-## CHESTER LTE v2 Firmware Examples
+## CHESTER LTE v2 firmware examples
 
 ### Demo
 
@@ -46,24 +46,24 @@ The project also contains [example scripts](https://github.com/hardwario/chester
 
 CHESTER Control also contains configuration definitions through macros. So you define config parameters only in `app_config.h` file and settings, shell, and help commands are generated with macros.
 
-### Other Catalogue Apps
+### Other catalogue apps
 
 Currently all the catalog applications in CHESTER SDK `applications/*` folder are already migrated to HARDWARIO Cloud and you can take an inspiration. Or use pre-built [**firmware**](/chester/catalog-applications/catalog-applications/#application-firmware)
 
 ## Changes for LTE v2
 
-### Flash LTE Modem Firmware
+### Flash LTE modem firmware
 
 You need to update the LTE modem to the `v1.7.0` or higher. This firmware is not backward compatible with `v1.3.0` that is only for older LTE v1.
 
 Follow the [LTE Modem over J-Link](../firmware-flashing/lte-modem-over-j-link.md) article and [download firmware v1.7.0](pathname:///download/hio-chester-lte-v1.7.0.zip).
 
-### Project Configuration
+### Project configuration
 In file `prj.conf` add `CONFIG_CTR_CLOUD=y`.
 
 In file `CMakeLists.txt` change shield from `ctr_lte` to `ctr_lte_v2`.
 
-### Decoders and Encoders
+### Decoders and encoders
 
 :::info
 
@@ -97,7 +97,7 @@ Optionally you can:
 - Set polling interval by `ctr_cloud_set_pull_interval()` which defines how often CHESTER automatically asks Cloud for queued downlink messages.
 - Use `ctr_cloud_wait_initialized(K_FOREVER)` that will stop the main task until the cloud connection is established and all codecs and configuration is sent.
 
-### Send Data
+### Send data
 
 Instead of ~~`ctr_lte_send()`~~ now call `ctr_cloud_send()`. Include new `#include <chester/ctr_cloud.h>`
 
@@ -105,7 +105,7 @@ In the Demo project, we also removed `app_send.c` file, because it only created 
 
 Function `ctr_cloud_send()` now is blocking, so the return code tells you whether the data was sent successfully or not. No callback is needed now, which also added another asynchronous complexity.
 
-### IP and Port
+### IP and port
 
 For Vodafone SIM cards, use APN `hardwario`, IP `192.168.192.4` and port `5002`. Don't use the previous ~~`hardwario.com`~~ APN name.
 

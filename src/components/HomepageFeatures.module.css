@@ -28,7 +28,7 @@
   font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.07em; /* brand: caps labels 0.07 em, never over 0.1 em */
   color: var(--ifm-color-primary);
   white-space: nowrap;
 }

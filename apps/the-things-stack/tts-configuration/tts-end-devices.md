@@ -1,18 +1,18 @@
 ---
 slug: tts-end-devices
-title: End Devices
+title: End devices
 description: "Create an application in The Things Stack and register LoRaWAN end devices from the Device Repository or manually with DevEUI, JoinEUI and AppKey."
 title_meta: "End Devices (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';
 
-# End Devices Configuration Guide
+# End devices configuration guide
 
 This tutorial guides you through the process of creating device profiles and adding end devices in The Things Stack.
 
 ---
 
-## Creating an Application
+## Creating an application
 
 1. On the **Home** tab, click **Create application**.  
    - If you are on a different tab, click the blue **+ Add** button in the top right and choose **Add application**.
@@ -31,7 +31,7 @@ This tutorial guides you through the process of creating device profiles and add
 
 ---
 
-## Registering End Devices
+## Registering end devices
 
 In The Things Stack, end devices can be registered in two ways:
 - Using a predefined device from the LoRaWAN Device Repository
@@ -39,7 +39,7 @@ In The Things Stack, end devices can be registered in two ways:
 
 ---
 
-### Predefined Devices
+### Predefined devices
 
 1. Inside the application, click the blue **+ Register end device** button.  
    - Alternatively, click **+ Add** and choose **Register end device in an application**.
@@ -73,7 +73,7 @@ This method is recommended whenever the device is available in the LoRaWAN Devic
 
 ---
 
-### Manual Configuration
+### Manual configuration
 
 This method is used when the device is **not available** in the LoRaWAN Device Repository or when **full manual control** over device parameters is required.
 
@@ -83,7 +83,7 @@ This method is used when the device is **not available** in the LoRaWAN Device R
 
 ---
 
-#### End Device Type
+#### End device type
 
 3. Configure the basic LoRaWAN parameters:
 
@@ -100,7 +100,7 @@ This method is used when the device is **not available** in the LoRaWAN Device R
 
 ---
 
-#### Provisioning Information
+#### Provisioning information
 
 4. Enter the **JoinEUI (AppEUI)** of the device.
 
@@ -109,7 +109,7 @@ This method is used when the device is **not available** in the LoRaWAN Device R
 
 ---
 
-#### Device Identifiers
+#### Device identifiers
 
 6. Fill in the remaining required identifiers:
 
@@ -128,11 +128,11 @@ This method is used when the device is **not available** in the LoRaWAN Device R
 
 ---
 
-## End Device Ready
+## End device ready
 
 Your end device is now registered and ready to communicate with The Things Stack.
 
-## Video Tutorial
+## Video tutorial
 
 :::tip
 If you need **further assistance** or a visual walkthrough, consult the  

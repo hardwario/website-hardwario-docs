@@ -1,6 +1,6 @@
 ---
 slug: chester-x2
-title: CHESTER-X2 (Serial comm)
+title: CHESTER-X2 (serial comm)
 description: "CHESTER-X2 serial communication module with TTL/UART and RS-485 interfaces, for example for Modbus, with terminal pinout, schematic and drawing."
 ---
 import Image from '@theme/IdealImage';
@@ -20,17 +20,17 @@ This article describes the CHESTER-X2 extension module.
 </div>
 <br />
 
-## Module Overview
+## Module overview
 
 CHESTER-X2 provides TTL/UART interface and RS-485 interface (e.g., for Modbus communication).
 
-## CHESTER Pin Configuration Diagram
+## CHESTER pin configuration diagram
 
 ![CHESTER-X2 terminal block pinout: GND, VDD, RX, TX, EN, B, A, +V on pins 1-8](images/tb-chester-x2.png)
 
-## Pin Configuration and Functions
+## Pin configuration and functions
 
-| Position | Signal Name | Signal Description       |
+| Position | Signal name | Signal description       |
 | -------- | ----------- | ------------------------ |
 | 1        | GND         | System ground signal     |
 | 2        | VDD         | System VDD rail 3.0 V    |
@@ -39,9 +39,11 @@ CHESTER-X2 provides TTL/UART interface and RS-485 interface (e.g., for Modbus co
 | 5        | EN          | Enable input             |
 | 6        | B           | Bus input/output         |
 | 7        | A           | Bus input/output         |
-| 8        | +V          | System positive rail (*) |
+| 8        | +V          | System positive rail |
 
-*Note: The system positive rail voltage depends on CHESTER power supply option.
+:::note
+The system positive rail (+V) voltage depends on the CHESTER power supply option.
+:::
 
 ## Schematic diagram
 
@@ -52,6 +54,6 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 
 ![Schematic of CHESTER-X2 with SC16IS740 UART bridge and THVD1450 RS-485 transceiver](images/hio-chester-x2-r3.0-1.png)
 
-## Module Drawing
+## Module drawing
 
 ![CHESTER-X2 R3.0 board layout drawing with component placement and edge pin labels](images/pc-chester-x2.png)

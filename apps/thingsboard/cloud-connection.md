@@ -12,7 +12,7 @@ import ThingsBoardConnector from '@site/src/components/ThingsBoardConnector';
 There are two ways to get your devices from HARDWARIO Cloud into HARDWARIO Dashboards:
 
 - **[Automatic connection](#automatic-connection)** (recommended, this page): you add one connector, and every tagged device creates itself in your device group.
-- **[Manual connection](/apps/thingsboard/manual-connection)**: for devices that already exist in HARDWARIO Dashboards.
+- **[Manual connection](/apps/thingsboard/manual-connection)**: when you need a custom data format or your own names in HARDWARIO Dashboards.
 
 ---
 
@@ -25,7 +25,7 @@ flowchart LR
   Device([Device]) -->|uplink| Cloud[(HARDWARIO Cloud)]
   Cloud -->|connector + your group ID| TB[(HARDWARIO Dashboards)]
   TB -->|first message| New[Device created<br/>in your group]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class Cloud hero;
   class TB hero;
 ```
@@ -36,7 +36,7 @@ You need a HARDWARIO Dashboards account. If you do not have one yet, contact us 
 
 The device group tells HARDWARIO Dashboards where your devices belong.
 
-1. Sign in to [HARDWARIO Dashboards](https://app.hardwario.cloud), open **Devices & assets → Devices** (**Entities → Devices** for tenant administrators) and switch to the **Groups** tab.
+1. Sign in to [HARDWARIO Dashboards](https://app.hardwario.cloud), open **Devices** (**Entities → Devices** for tenant administrators) and switch to the **Groups** tab.
 2. Click the group you want the devices in to open it. Choose **All** if you do not use groups, or [create a new group](/apps/thingsboard/devices#device-groups) first.
 3. Click the **pencil icon** (Entity group details) next to the group name (1), then **Copy entity group Id** (2).
 

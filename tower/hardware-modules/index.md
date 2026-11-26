@@ -1,5 +1,5 @@
 ---
-title: Hardware Modules
+title: Hardware modules
 description: "Overview of the HARDWARIO TOWER hardware modules and tags: Core Module, sensor and relay modules, power, display, radio and 1-Wire modules."
 ---
 import Image from '@theme/IdealImage';

@@ -1,19 +1,19 @@
 ---
 slug: ble-tags
-title: Bluetooth Tags
+title: Bluetooth tags
 description: "Pair up to eight Teltonika EYE Sensor Bluetooth tags with CHESTER for temperature and humidity: enable the subsystem, enroll tags, use the EYE App."
 ---
 
 import Image from '@theme/IdealImage';
 
-# CHESTER BLE Tag Subsystem
+# CHESTER BLE tag subsystem
 
 The **CHESTER** platform includes a dedicated **Teltonika EYE Sensor subsystem**, enabling seamless integration with up to eight Bluetooth tags for monitoring temperature and humidity.  
 This subsystem provides reliable wireless environmental sensing for a wide range of applications.
 
 ---
 
-## 1. Activating the Subsystem
+## 1. Activating the subsystem
 
 To activate the **Teltonika EYE Sensor subsystem**, run the following command:
 
@@ -33,7 +33,7 @@ device restart
 
 ---
 
-## 2. Tag Activation
+## 2. Tag activation
 
 :::info
 **The packaged sensor should come activated.**  
@@ -55,7 +55,7 @@ If it is not active, touch a **magnet** to the sensor to wake it from hibernatio
 
 ---
 
-## 3. Enrolling Tags
+## 3. Enrolling tags
 
 Before the sensors can be used, they must first be **enrolled** by the device.
 
@@ -94,11 +94,11 @@ tag list
 
 ---
 
-## 4. Manual Tag Management
+## 4. Manual tag management
 
 Instead of using automatic enrollment, you can manually add or remove tags by their **MAC address**.
 
-### Add a Tag
+### Add a tag
 
 To manually add a tag, run:
 
@@ -112,7 +112,7 @@ Example:
 tag config devices add 7cd9f413e360
 ```
 
-### Remove a Tag
+### Remove a tag
 
 To remove a previously added tag, run:
 
@@ -134,12 +134,12 @@ config save
 
 ---
 
-## 5. Configuring via EYE App
+## 5. Configuring via EYE app
 
 The tags can be configured using the [**Teltonika EYE App**](https://wiki.teltonika-gps.com/view/EYE_SENSOR_/_BTSMP1#EYE_App_Configuration).  
 We strongly recommend updating the firmware, as the default version does not allow some advanced settings.
 
-### How to Configure
+### How to configure
 
 1. Open the **EYE App** and select the device from the list.  
 2. Tap the **CONFIGURE** button to open the device settings screen.  
@@ -154,7 +154,7 @@ Accessing the configuration requires a PIN code.
 This PIN can be changed later in the device settings. 
 :::
 
-#### Teltonika EYE App – Device Overview
+#### Teltonika EYE app – device overview
 
 <div class="container">
   <div class="row">
@@ -167,12 +167,12 @@ This PIN can be changed later in the device settings.
   </div>
 </div>
 
-### Recommended Configuration
+### Recommended configuration
 
 The following configuration is recommended for optimal communication performance and power efficiency when using Teltonika EYE Sensors with the CHESTER BLE Tag Subsystem.
 This setup ensures stable data transmission, adequate advertising frequency for reliable sensor discovery, and balanced power consumption.
 
-#### Teltonika EYE App – Device Configuration
+#### Teltonika EYE app – device configuration
 
 <div class="container">
   <div class="row">
@@ -186,7 +186,7 @@ This setup ensures stable data transmission, adequate advertising frequency for 
 </div>
 
 
-#### Configuration Settings Table
+#### Configuration settings table
 
 | **Setting**           | **Value**             |
 | --------------------- | --------------------- |
@@ -197,7 +197,7 @@ This setup ensures stable data transmission, adequate advertising frequency for 
 
 ---
 
-## 6. Signal Testing
+## 6. Signal testing
 
 The effective communication range between **CHESTER** and the Teltonika sensors depends on the **signal power configuration** of the tag.
 
@@ -210,9 +210,9 @@ tag read
 Check the **RSSI** value in the output:
 - If the signal is **lower than -85 dBm**, consider increasing the tag’s power level for better stability.
 
-## 7. Measured Parameters
+## 7. Measured parameters
 
-| Measured Quantity       | Description                                                  |
+| Measured quantity       | Description                                                  |
 |-------------------------|--------------------------------------------------------------|
 | Temperature             | Ambient temperature of the sensor’s environment.|
 | Humidity                | Relative humidity of the surrounding air. |

@@ -1,6 +1,6 @@
 ---
 slug: how-to-accelerometer
-title: "How To: Accelerometer"
+title: "How to: Accelerometer"
 description: "Read the TOWER Core Module's LIS2DH12 accelerometer via the SDK: continuous acceleration measurement or an interrupt-driven motion alarm, with C examples."
 ---
 import Image from '@theme/IdealImage';
@@ -15,7 +15,7 @@ You have two options for how to use the accelerometer:
   - **Continuous measurement of acceleration**
   - **Alarm, which triggers the event handler if defined conditions occur**
 
-## Continuous Measurement
+## Continuous measurement
 
 This can be achieved by setting the update interval in your code with function `twr_lis2dh12_set_update_interval`, which takes the pointer to instantiated accelerometer and time between measurements in milliseconds as parameters.
 

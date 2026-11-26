@@ -1,6 +1,6 @@
 ---
 slug: playground-installation
-title: Playground Installation
+title: Playground installation
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,6 @@
 ---
 slug: piketronic-rpp-r
-title: Piketronic RPP-R Radon Probe
+title: Piketronic RPP-R radon probe
 description: "Connect the Piketronic RPP-R radon probe to CHESTER Serial over RS-485 Modbus RTU and read radon concentration, temperature and humidity."
 ---
 
@@ -25,9 +25,9 @@ reading more frequently returns the same value.
 
 ---
 
-### Modbus Communication
+### Modbus communication
 
-#### Example of Modbus Communication Installation: Piketronic RPP-R
+#### Example of Modbus communication installation: Piketronic RPP-R
 
 The RPP-R has a 4-pin connector labelled **B RxTx-**, **A RxTx+**, **GND**, **VCC**.
 
@@ -40,7 +40,7 @@ The RPP-R has a 4-pin connector labelled **B RxTx-**, **A RxTx+**, **GND**, **VC
 
 :::info
 
-The probe needs a supply on **VCC**. It can be powered from CHESTER's dedicated power
+The probe needs a supply on **VCC**. It can be powered from the dedicated CHESTER power
 output (VIN) **if** the voltage and current match the RPP-R's requirement. Confirm
 the probe's supply voltage first; otherwise use a separate external supply. RS-485
 A/B labelling varies between manufacturers; if no data is received, swap the **A**
@@ -50,7 +50,7 @@ and **B** lines.
 
 ---
 
-### Browsing and Configuration
+### Browsing and configuration
 
 The RPP-R has **no display or buttons**. Its Modbus address and serial parameters
 are set with two DIP-switch blocks on the probe. **The probe must be restarted
@@ -63,7 +63,7 @@ switch in the **down** position means logical `0`.
 
 #### Speed and parity (switch block `RATE`, switches 4-3-2-1)
 
-| RATE (4 3 2 1) | Baud Rate | Parity | Stop Bit |
+| RATE (4 3 2 1) | Baud rate | Parity | Stop bit |
 |----------------|-----------|--------|----------|
 | 0 0 0 0        | 19.2k     | Even   | 1        |
 | 0 0 0 1        | 9.6k      | Even   | 1        |
@@ -81,9 +81,9 @@ switch in the **down** position means logical `0`.
 
 ---
 
-### Default Modbus Communication Configuration
+### Default Modbus communication configuration
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Address | Baud rate | Parity | Stop bit |
 |---------|-----------|--------|----------|
 | 1       | 19.2k     | Even   | 1        |
 
@@ -96,7 +96,7 @@ CHESTER to match the switches actually configured on the probe.
 
 ---
 
-### Modbus Communication Configuration for CHESTER
+### Modbus communication configuration for CHESTER
 
 Use the following commands to configure the CHESTER Serial application via the
 CHESTER Terminal. The probe is added as a Modbus device of type `piketronic`.
@@ -128,7 +128,7 @@ humidity, current settings, and the probe's device/firmware/serial identificatio
 Decoder: `com.hardwario.chester.app.serial`. Values appear under the `devices`
 array (`devices → data`).
 
-| Measured Value             | Key / Path                              | Unit   |
+| Measured value             | Key / path                              | Unit   |
 |----------------------------|-----------------------------------------|--------|
 | Radon concentration (1 h)  | devices → data → radon_concentration     | Bq/m³  |
 | Radon concentration (1 day)| devices → data → radon_concentration_day | Bq/m³  |

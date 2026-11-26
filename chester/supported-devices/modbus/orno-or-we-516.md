@@ -22,9 +22,9 @@ This energy meter **does not require** any **external sensor** for current measu
 
  ---
 
-### Power Installation
+### Power installation
 
-#### Example of Installation: ORNO Energy Analyzer - OR-WE-516
+#### Example of installation: ORNO Energy Analyzer - OR-WE-516
 
 | **ORNO Energy Analyzer OR-WE-516** | |
 |----------------------------------------|-----------------------------------------------|
@@ -36,7 +36,7 @@ This energy meter **does not require** any **external sensor** for current measu
 | Pin 4                                  | **L2 (OUT)**                                  |
 | Pin 6                                  | **L3 (OUT)**                                  |
 
-#### Connection Diagram (OR-WE-516)
+#### Connection diagram (OR-WE-516)
 
 ![ORNO Energy Analyzer - OR-WE-516 - Connection Diagram ](images/orno-or-we-516-connection-diagram.png)
 
@@ -48,9 +48,9 @@ In this case, it is also possible to connect the energy analyzer in single-phase
 
 ---
 
-### Modbus Communication
+### Modbus communication
 
-#### Example of Modbus Communication Installation: ORNO Energy Analyzer - OR-WE-516
+#### Example of Modbus communication installation: ORNO Energy Analyzer - OR-WE-516
 
 | **ORNO Energy Analyzer OR-WE-516** | **CHESTER Modbus** |
 |---------------------------|--------------------|
@@ -58,13 +58,13 @@ In this case, it is also possible to connect the energy analyzer in single-phase
 | Pin 21                    | Pin 7 (A)          |
 
 
-#### Connection Diagram (OR-WE-516)
+#### Connection diagram (OR-WE-516)
 
 ![ORNO Energy Analyzer - OR-WE-516 - Modbus Communication ](images/orno-or-we-516-modbus.png)
 
 ---
 
-### Browsing and Configuration Buttons
+### Browsing and configuration buttons
 
 * `➡️` **Right button**
     * Navigate right in the menu
@@ -74,14 +74,14 @@ In this case, it is also possible to connect the energy analyzer in single-phase
 
 ---
 
-### Modbus Communication Configuration
+### Modbus communication configuration
 
 
 You can edit the communication settings of the ORNO energy meter using one of the following methods:
 
 
 
-#### 1. Using the Official ORNO Software
+#### 1. Using the official ORNO software
 
 Communication parameters can be configured directly via the official software provided by ORNO.  
 The configuration tool can be downloaded here:  
@@ -96,7 +96,7 @@ Then, connect the RS-485 side of the converter to the energy meter’s communica
 
 
 
-#### 2. Using the CHESTER Terminal
+#### 2. Using the CHESTER terminal
 
 There are multiple options to access the terminal:
 
@@ -105,7 +105,7 @@ There are multiple options to access the terminal:
 - Use the **Google Chrome terminal** at **[terminal.hardwario.com](https://terminal.hardwario.com/)**
 
 
-#### Modbus Communication Configuration for CHESTER
+#### Modbus communication configuration for CHESTER
 
 Use the following commands to configure communication parameters via CHESTER Terminal:
 
@@ -136,12 +136,12 @@ config save
 app config show
 ```
 
-##### Detailed Description of Configuration Commands
+##### Detailed description of configuration commands
 
 <details>
 <summary><b>Show Detailed Description of Commands</b></summary>
 
-| Command | Default Value | Description |
+| Command | Default value | Description |
 | :--- | :--- | :--- |
 | **`app config serial-mode "modbus"`** | `"transparent"` | Switches the built-in serial line from transparent mode to Modbus RTU master mode. |
 | **`app config serial-baudrate 9600`** | `9600` | Sets the communication speed (Baud rate). It must match the settings on the energy meter's display. |
@@ -153,15 +153,15 @@ app config show
 | **`app config interval-sample 60`** | `60` | Interval (in seconds) determining how often CHESTER polls the energy meter for current values. |
 | **`app config interval-aggreg 60`** | `300` | Interval (in seconds) during which collected data is aggregated (averaged or summed) into a single packet. |
 | **`app config interval-report 30`** | `1800` | Interval (in seconds) determining how often CHESTER sends the aggregated data to the server/cloud. |
-| **`config save`** | — | Permanently saves the current configuration to the device's flash memory. |
-| **`app config show`** | — | Prints the currently set values for verification. |
+| **`config save`** | – | Permanently saves the current configuration to the device's flash memory. |
+| **`app config show`** | – | Prints the currently set values for verification. |
 
 </details>
 ---
 
-### Default Modbus Communication Configuration
+### Default Modbus communication configuration
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Address | Baud rate | Parity | Stop bit |
 |---------|-----------|--------|-----------|
 | 1       | 9.6k      | Even   | 1         |
 
@@ -174,7 +174,7 @@ Make sure to match the settings in CHESTER according to the values configured in
 
 ### Measured values
 
-| Measured Value | Key / Path                                   |
+| Measured value | Key / path                                   |
 |----------------|----------------------------------------------|
 | Power          | E_ENERGY_METER.METER_3.POWER.MEASUREMENTS    |
 | Frequency      | E_ENERGY_METER.METER_3.FREQUENCY.MEASUREMENTS|

@@ -6,7 +6,7 @@ description: "Milesight AM307 indoor sensor with E-Ink display for seven paramet
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor AM307
+# Milesight sensor AM307
 
 Milesight AM307 is an **indoor ambience monitoring sensor** that measures **seven parameters**: temperature, humidity, motion (PIR), light, CO₂, TVOC, and barometric pressure. It displays results on a **4.2" E-Ink screen** with clear indicators and transmits data via **LoRaWAN Class A** technology for long-range, low-power communication.
 
@@ -28,7 +28,7 @@ Milesight AM307 is an **indoor ambience monitoring sensor** that measures **seve
 [**AM319**](milesight-am319.md): the most advanced version with additional HCHO or O₃ measurement; must be powered by USB (no batteries).
 :::
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | Not yet available                      |
@@ -45,7 +45,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -66,7 +66,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -75,7 +75,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/am-series/am307/am307-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -88,41 +88,41 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Type   | Value              |
 |--------|--------------------|
 | Battery | 4 × 2700 mAh ER14505 Li-SOCl2 (replaceable) |
-| USB Power | 5V/1A via Type-C |
-| Battery Life | Over 1 year (10 min interval @ 25°C) |
+| USB Power | 5 V/1A via Type-C |
+| Battery life | Over 1 year (10 min interval @ 25 °C) |
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Technology | LoRaWAN® |
 | Antenna | Internal Antennas |
 | Frequency | CN470 / RU864 / IN865 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Tx power | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Sensitivity | -137 dBm @300bps |
 | Mode | OTAA / ABP Class A |
 | **Sensors** | |
-| Temperature | -20°C ~ 60°C, Accuracy ±0.2°C, Resolution 0.1°C |
-| Humidity | 0% ~ 100% RH, Accuracy ±2% RH, Resolution 0.5% |
+| Temperature | −20 to +60 °C, Accuracy ±0.2 °C, Resolution 0.1 °C |
+| Humidity | 0–100 % RH, Accuracy ±2 % RH, Resolution 0.5 % |
 | Motion (PIR) | 80° H, 55° V, max 5m, Status: Vacant/Occupied |
 | Light | 0–60000 Lux (6 levels) |
 | TVOC | IAQ rating 1.00–5.00, Accuracy ±1, Resolution 0.01 |
-| Barometric Pressure | 260–1260 hPa, Accuracy ±0.5 hPa, Resolution 0.1 hPa |
-| CO₂ | 400–5000 ppm, Accuracy ±(50 ppm + 5%) |
-| **Interfaces & Display** | |
+| Barometric pressure | 260–1260 hPa, Accuracy ±0.5 hPa, Resolution 0.1 hPa |
+| CO₂ | 400–5000 ppm, Accuracy ±(50 ppm + 5 %) |
+| **Interfaces & display** | |
 | Display | 4.2" E-Ink |
 | Buttons | Power + Reset |
 | LED & Buzzer | Status LED + Alarm buzzer |
 | USB | Type-C (power/config/console) |
 | **Software** | NFC / USB configuration, thresholds, calibration, data storage (18k entries) |
-| **Physical Characteristics** | |
-| Power Supply | 4 × ER14505 batteries or 5V/1A (USB-C) |
-| Operating Temp | -20°C ~ +60°C (E-Ink: 0°C–40°C) |
-| Relative Humidity | 10% ~ 90% (non-condensing) |
-| Ingress Protection | IP30 |
+| **Physical characteristics** | |
+| Power supply | 4 × ER14505 batteries or 5 V/1A (USB-C) |
+| Operating temp | -20 °C ~ +60 °C (E-Ink: 0 °C–40 °C) |
+| Relative humidity | 10–90 % (non-condensing) |
+| Ingress protection | IP30 |
 | Housing | ABS, White |
 | Dimensions | 100.8 × 114 × 22 mm (3.97 × 4.49 × 0.87 in) |
 | Weight | 148 g |

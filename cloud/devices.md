@@ -9,7 +9,7 @@ title_meta: "Devices (HARDWARIO Cloud)"
 
 The **Devices** page lists all IoT devices registered in your space. Each device corresponds to a physical CHESTER (or other HARDWARIO device) and has its own identity, status, and configuration.
 
-## Adding a Device
+## Adding a device
 
 :::tip Video Tutorial
 
@@ -19,11 +19,11 @@ Watch [**How to add CHESTER to Cloud**](/cloud/videos-cloud/cloud-chester-add/) 
 
 Click **+ NEW DEVICE** in the top-right corner. You can provision a device in two ways:
 
-### Scan QR Code
+### Scan QR code
 
 Click **SCAN DEVICE** to open the camera scanner. Point it at the QR code on the device label. The scanner fills in the **Serial Number (HSN)** and **Claim Token** automatically.
 
-### Manual Entry
+### Manual entry
 
 Fill in the fields manually:
 
@@ -41,7 +41,7 @@ Create at least one [Tag](tags.md) and assign it to the device and a [Connector]
 
 :::
 
-## Device List
+## Device list
 
 The device list shows a summary for each device:
 
@@ -52,7 +52,7 @@ The device list shows a summary for each device:
 
 Click a device row to open its detail page.
 
-## Device Detail
+## Device detail
 
 ### Overview
 

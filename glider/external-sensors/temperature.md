@@ -1,11 +1,11 @@
 ---
-title: Temperature Sensors
+title: Temperature sensors
 description: "Connect up to 8 DS18B20 1-Wire thermometers to the W1 and W2 ports of GLIDER, scan and bind them to slots, read temperatures and tie them to alarms."
 sidebar_position: 1
 ---
 import Image from '@theme/IdealImage';
 
-# External Temperature Sensors (1-Wire / DS18B20)
+# External temperature sensors (1-Wire / DS18B20)
 
 GLIDER supports up to **8 DS18B20** digital thermometers connected over the **1-Wire** bus. The sensors connect to one of the two 1-Wire ports on the GLIDER terminal block (**W1** or **W2**).
 
@@ -36,7 +36,7 @@ Standard HARDWARIO DS18B20 cable assemblies have three wires:
 Both ports share the same logical 1-Wire bus inside GLIDER. The 8 logical "slots" the firmware tracks are independent of which physical port the probe is plugged into. Bind by ROM code, not by port.
 :::
 
-## Step 1 - Wire the probes
+## Step 1 - wire the probes
 
 1. Power the GLIDER **off** before wiring.
 2. Strip the three wires of each DS18B20 cable and connect them to either `W1` or `W2` as shown above.
@@ -44,7 +44,7 @@ Both ports share the same logical 1-Wire bus inside GLIDER. The 8 logical "slots
 
 You may mix probes across `W1` and `W2` freely, because both ports drive the same bus. The 8 slots are software-defined and bind to the **ROM serial number** of each DS18B20.
 
-## Step 2 - Scan the bus
+## Step 2 - scan the bus
 
 Once the device is powered, ask the firmware to discover the connected sensors.
 
@@ -92,7 +92,7 @@ To also **delete** slots whose ROM codes are no longer on the bus:
 therm scan --clear-missing
 ```
 
-## Step 3 - Read a temperature
+## Step 3 - read a temperature
 
 Once a sensor is bound to a slot, read its temperature with:
 
@@ -115,7 +115,7 @@ Slot 2: 24.62 °C
 
 The temperature is reported in **°C with 0.01 °C resolution**. Unsuccessful reads (probe disconnected, CRC error, …) return `NaN` and are sent as `null` in the cloud payload.
 
-## Step 4 - Inspect slot state
+## Step 4 - inspect slot state
 
 ```text
 therm state

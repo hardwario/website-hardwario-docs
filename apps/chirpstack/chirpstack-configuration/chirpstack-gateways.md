@@ -53,7 +53,7 @@ Point the gateway's packet forwarder to the address of the server and UDP port 1
 
 Once connected, the gateway shows **Last seen** in ChirpStack, and its charts show received packets.
 
-## Video Tutorial {#video-tutorial}
+## Video tutorial {#video-tutorial}
 
 :::tip
 If you need further assistance or a visual demonstration of the process described in this guide, consult the [**Video Guide**](/apps/videos-apps/chirpstack-ember).

@@ -12,13 +12,13 @@ description: "Nexelec is a French manufacturer of connected safety sensors for f
 
 Nexelec sensors use **LoRaWAN** connectivity to deliver certified fire and CO detection to building management systems, enabling remote monitoring and alarm management at scale.
 
-## Key Products
+## Key products
 
 | Product | Description |
 |---|---|
 | [**ORIGIN+**](/smart-devices/nexelec/origin-plus) | Multi-sensor LoRaWAN fire detector combining smoke detection (EN 14604), heat detection, and CO detection in a single device. NF and CE certified. 10-year battery life. |
 
-## Typical Use Cases with HARDWARIO
+## Typical use cases with HARDWARIO
 
 - **Building fire safety monitoring**: Deploying ORIGIN+ detectors across multiple floors and receiving alarms via LoRaWAN to a network server connected to HARDWARIO Cloud.
 - **Facility management**: Centralizing fire detector status, battery levels, and alarm history in a single dashboard.

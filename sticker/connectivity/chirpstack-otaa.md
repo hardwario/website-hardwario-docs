@@ -47,7 +47,7 @@ You will need:
 
 ---
 
-## 2) Create a Device Profile for STICKER (recommended)
+## 2) Create a device profile for STICKER (recommended)
 
 In ChirpStack v4:  
 **Tenant → Device Profiles → Add Device Profile**
@@ -77,7 +77,7 @@ This codec also **encodes downlink commands** (via its `encodeDownlink` function
 
 ---
 
-## 3) Create an Application in ChirpStack
+## 3) Create an application in ChirpStack
 
 
 

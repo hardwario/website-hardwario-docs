@@ -6,9 +6,9 @@ description: "Milesight EM400-MUD ultrasonic distance sensor (3–450 cm) for pa
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor EM400-MUD
+# Milesight sensor EM400-MUD
 
-Milesight EM400-MUD is a **multifunctional ultrasonic distance sensor** designed for **smart parking**, **waste management**, and **level monitoring**. It features **60° beam angle** with **detection range of 3–450 cm** and **high accuracy** of ± (1+0.3%×S) cm. The sensor offers **three operational modes** (Standard, Bin, and Parking Lot), **IP67-rated enclosure**, **ultra-long battery life up to 10 years**, and supports **LoRaWAN**, **NB-IoT**, and **Cat M** connectivity.
+Milesight EM400-MUD is a **multifunctional ultrasonic distance sensor** designed for **smart parking**, **waste management**, and **level monitoring**. It features **60° beam angle** with **detection range of 3–450 cm** and **high accuracy** of ± (1+0.3 %×S) cm. The sensor offers **three operational modes** (Standard, Bin, and Parking Lot), **IP67-rated enclosure**, **ultra-long battery life up to 10 years**, and supports **LoRaWAN**, **NB-IoT**, and **Cat M** connectivity.
 
 <div class="container">
   <div class="row">
@@ -26,7 +26,7 @@ Milesight EM400-MUD is a **multifunctional ultrasonic distance sensor** designed
 The EM400 series includes multiple variants: **EM400-TLD** (ToF Laser), **EM400-UDL** (Ultrasonic), and **EM400-MUD** (Multifunctional Ultrasonic). This documentation focuses on the EM400-MUD model.
 :::
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | Not yet available                                                     |
@@ -43,7 +43,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -64,7 +64,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -73,7 +73,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em400-mud/em400-mud-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -89,36 +89,36 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Technology | LoRaWAN®, NB-IoT, Cat M |
 | Antenna | Internal |
 | Frequency | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 16 dBm (868MHz) / 20 dBm (915MHz) / 19 dBm (470MHz) |
+| Tx power | 16 dBm (868 MHz) / 20 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Sensitivity | -137 dBm @300bps |
 | Mode | OTAA / ABP Class A |
-| **Distance Measurement** | |
+| **Distance measurement** | |
 | Technology | Ultrasonic |
-| Detection Range | 3–450 cm |
-| Accuracy | ± (1+0.3%×S) cm where S = distance (-15–60°C) |
+| Detection range | 3–450 cm |
+| Accuracy | ± (1+0.3 %×S) cm where S = distance (-15–60 °C) |
 | Resolution | 1 mm |
-| Beam Angle | 60° |
-| **Additional Sensors** | |
-| Temperature | -40°C ~ +125°C, Resolution 0.1°C (NTC thermistor) |
+| Beam angle | 60° |
+| **Additional sensors** | |
+| Temperature | -40 °C ~ +125 °C, Resolution 0.1 °C (NTC thermistor) |
 | Accelerometer | 3-axis (tilt detection) |
 | **Features** | |
 | Modes | Standard Mode, Bin Mode, Parking Lot Mode (LoRaWAN only) |
-| Advanced Features | Level monitoring, parking detection, waste management |
+| Advanced features | Level monitoring, parking detection, waste management |
 | Configuration | NFC / Downlink |
-| **Physical Characteristics** | |
-| Power Supply | 2 × ER26500 (9000 mAh each) |
-| Battery Life | >10 years (Standard/Bin mode); 5 years (Parking mode, 12 daily triggers) |
-| Operating Temp | -30°C ~ +70°C |
-| Humidity | 0%–95% RH (non-condensing) |
-| Ingress Protection | IP67 |
+| **Physical characteristics** | |
+| Power supply | 2 × ER26500 (9000 mAh each) |
+| Battery life | >10 years (Standard/Bin mode); 5 years (Parking mode, 12 daily triggers) |
+| Operating temp | -30 °C ~ +70 °C |
+| Humidity | 0 %–95 % RH (non-condensing) |
+| Ingress protection | IP67 |
 | Dimensions | 118 × 65 × 32.5 mm |
 | Weight | 181.4 g (with batteries) |
 | Material | ABS+PC (UL94 V0), Black-gray |

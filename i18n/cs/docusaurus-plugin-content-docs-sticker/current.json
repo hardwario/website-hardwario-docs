@@ -3,7 +3,7 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.docs.category.User Guide": {
+  "sidebar.docs.category.User guide": {
     "message": "Uživatelská příručka",
     "description": "The label for category 'User Guide' in sidebar 'docs'"
   },
@@ -19,7 +19,7 @@
     "message": "Ostatní",
     "description": "The label for category 'Other' in sidebar 'docs'"
   },
-  "sidebar.docs.category.STICKER Variants": {
+  "sidebar.docs.category.STICKER variants": {
     "message": "Varianty STICKER",
     "description": "The label for category 'STICKER Variants' in sidebar 'docs'"
   },
@@ -27,7 +27,7 @@
     "message": "STICKER Input",
     "description": "The label for category 'STICKER Input' in sidebar 'docs'"
   },
-  "sidebar.docs.category.External Sensor Support": {
+  "sidebar.docs.category.External Sensor support": {
     "message": "Podpora externích senzorů",
     "description": "The label for category 'External Sensor Support' in sidebar 'docs'"
   },
@@ -51,11 +51,11 @@
     "message": "The Things Stack",
     "description": "The label for category 'The Things Stack' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Developer Access": {
+  "sidebar.docs.category.Developer access": {
     "message": "Přístup pro vývojáře",
     "description": "The label for category 'Developer Access' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Hardware Description": {
+  "sidebar.docs.category.Hardware description": {
     "message": "Popis hardwaru",
     "description": "The label for category 'Hardware Description' in sidebar 'docs'"
   },

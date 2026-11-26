@@ -3,7 +3,7 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.docs.category.User Guide": {
+  "sidebar.docs.category.User guide": {
     "message": "Uživatelská příručka",
     "description": "The label for category 'User Guide' in sidebar 'docs'"
   },
@@ -19,7 +19,7 @@
     "message": "Ostatní",
     "description": "The label for category 'Other' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Getting Started": {
+  "sidebar.docs.category.Getting started": {
     "message": "První kroky",
     "description": "The label for category 'Getting Started' in sidebar 'docs'"
   },
@@ -27,7 +27,7 @@
     "message": "Seznamte se s architekturou HARDWARIO TOWER, principy návrhu, programováním a dalšími zdroji.",
     "description": "The generated-index page description for category 'Getting Started' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Desktop Programming": {
+  "sidebar.docs.category.Desktop programming": {
     "message": "Programování na počítači",
     "description": "The label for category 'Desktop Programming' in sidebar 'docs'"
   },
@@ -39,11 +39,11 @@
     "message": "Server na Raspberry Pi",
     "description": "The label for category 'Server on Raspberry Pi' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Command Line Tools": {
+  "sidebar.docs.category.Command line tools": {
     "message": "Nástroje příkazové řádky",
     "description": "The label for category 'Command Line Tools' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Firmware Development": {
+  "sidebar.docs.category.Firmware development": {
     "message": "Vývoj firmwaru",
     "description": "The label for category 'Firmware Development' in sidebar 'docs'"
   },
@@ -51,15 +51,15 @@
     "message": "Firmware SDK",
     "description": "The label for category 'Firmware SDK' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Radio Communication": {
+  "sidebar.docs.category.Radio communication": {
     "message": "Rádiová komunikace",
     "description": "The label for category 'Radio Communication' in sidebar 'docs'"
   },
-  "sidebar.docs.category.MQTT Protocol": {
+  "sidebar.docs.category.MQTT protocol": {
     "message": "Protokol MQTT",
     "description": "The label for category 'MQTT Protocol' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Platform Integrations": {
+  "sidebar.docs.category.Platform integrations": {
     "message": "Integrace platforem",
     "description": "The label for category 'Platform Integrations' in sidebar 'docs'"
   },
@@ -67,11 +67,11 @@
     "message": "Propojte HARDWARIO TOWER s vizualizačními, automatizačními a dalšími službami IoT.",
     "description": "The generated-index page description for category 'Platform Integrations' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Hardware Modules": {
+  "sidebar.docs.category.Hardware modules": {
     "message": "Hardwarové moduly",
     "description": "The label for category 'Hardware Modules' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Hardware Interfaces": {
+  "sidebar.docs.category.Hardware interfaces": {
     "message": "Hardwarová rozhraní",
     "description": "The label for category 'Hardware Interfaces' in sidebar 'docs'"
   },
@@ -79,7 +79,7 @@
     "message": "Elektrická a softwarová rozhraní dostupná na modulech HARDWARIO TOWER.",
     "description": "The generated-index page description for category 'Hardware Interfaces' in sidebar 'docs'"
   },
-  "sidebar.docs.link.Step-by-Step Projects": {
+  "sidebar.docs.link.Step-by-step projects": {
     "message": "Projekty krok za krokem",
     "description": "The label for link 'Step-by-Step Projects' in sidebar 'docs', linking to 'https://www.hackster.io/hardwario/projects'"
   },

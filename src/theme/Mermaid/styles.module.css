@@ -5,3 +5,9 @@
 .container > svg {
   max-width: 100%;
 }
+
+/* The key node: a 1.5 px gradient frame (the gradient is defined in index.js). */
+.container :global(.node.hero) :is(rect, polygon, path, circle, ellipse) {
+  stroke: url(#hw-key-frame) !important;
+  stroke-width: 1.5px !important;
+}

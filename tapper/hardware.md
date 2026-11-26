@@ -1,17 +1,17 @@
 ---
 slug: /hardware
-title: Hardware Description
+title: Hardware description
 description: "TAPPER hardware description: Raspberry Pi Zero 2 W, the PN532 NFC module, enclosure and connections."
 title_meta: "Hardware Description (TAPPER)"
 ---
 
 import Image from '@theme/IdealImage';
 
-# TAPPER Hardware Description
+# TAPPER hardware description
 
 In this article, you will find the details about the TAPPER hardware configuration.
 
-## Basic Parameters
+## Basic parameters
 
 | **Electrical**                       |                           |
 | :----------------------------------- | ------------------------: |
@@ -32,7 +32,7 @@ In this article, you will find the details about the TAPPER hardware configurati
 | Enclosure colour                     |    traffic white RAL 9016 |
 | Operation temperature                |          -20 °C to +60 °C |
 
-## Schematic Diagram
+## Schematic diagram
 
 - [Schematic R1.1 (PDF)](pathname:///tapper/media/hio-tapper-r1.1-schematic.pdf)
 
@@ -40,7 +40,7 @@ In this article, you will find the details about the TAPPER hardware configurati
 
 ![TAPPER R1.1 power schematic: 10-30 V input via terminal block or DC jack, L6981CDR buck converter producing 5 V](images/hio-tapper-r1.1-schematic-1.png)
 
-### Raspberry Pi + PN532 Breakout Board
+### Raspberry Pi + PN532 breakout board
 
 ![TAPPER R1.1 schematic: Raspberry Pi Zero 2 W GPIO wiring to the PN532 breakout board over SPI](images/hio-tapper-r1.1-schematic-2.png)
 

@@ -1,11 +1,11 @@
 ---
 slug: chirpstack-decoding
-title: Data Decoding
+title: Data decoding
 description: "Add a JavaScript payload codec to a ChirpStack v4 device profile, with an editable STICKER uplink decoder, and check the decoded data in Events."
 ---
 import Image from '@theme/IdealImage';
 
-# Data Decoding
+# Data decoding
 
 This tutorial guides you through the process of configuring payload codecs in ChirpStack v4 so that your LoRaWAN data can be properly decoded and viewed.
 
@@ -20,13 +20,13 @@ For **STICKER**, choose **JavaScript functions** as the payload codec, then clic
 
 ![ChirpStack v4 - Payload codec](images/chirpstack-tutorial-17.png)
 
-#### Viewing Decoded Data  
+#### Viewing decoded data  
 
 1. Navigate to **Applications → Events**.  
 2. Select **Up** to view uplink messages.  
 3. You will now see **decoded data**.  
 
-#### Example of Codec (STICKER)
+#### Example of codec (STICKER)
 
 import EditCodeBlock from './edit-code-block.js';
 
@@ -155,7 +155,7 @@ function encodeDownlink(input) {
 `} />
 
 
-## Video Tutorial
+## Video tutorial
 
 :::tip
 If you need further assistance or a visual demonstration of the process described in this guide, consult the [**Video Guide**](/apps/videos-apps/chirpstack-decoding).

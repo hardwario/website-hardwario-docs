@@ -1,14 +1,14 @@
 ---
 slug: mikrotik-update
-title: Updating EMBER Gateway
+title: Updating EMBER gateway
 description: "Video tutorial on updating the RouterOS packages and RouterBOARD firmware of the EMBER MikroTik gateway through the WebFig interface."
 ---
 
 import Image from '@theme/IdealImage';
 
-# MikroTik - How to update a Gateway
+# MikroTik - how to update a gateway
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you will learn how to update the RouterOS packages and RouterBOARD firmware on your MikroTik gateway using the WebFig interface. Keeping your system up to date ensures optimal performance, stability, and compatibility with the latest features.
 

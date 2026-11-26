@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 
 ![STICKER Clime](images/sticker-clime-top.png)
 
-## Quick Links
+## Quick links
 
 * [**Getting Started Guide**](/sticker/first-steps): Step-by-step setup guide.
 * [**Buy STICKER Clime**](https://www.hardwario.store/p/sticker-clime): Purchase from our store.
@@ -33,7 +33,7 @@ import Image from '@theme/IdealImage';
 
 - With rising global temperatures and more climate extremes, maintaining stable conditions in hospital rooms is critical. A failing air conditioner, or even an open window, can put patients at risk. Temperature and humidity sensors in each room enable early warnings and better care.
 
-## Example JSON Message
+## Example JSON message
 
 A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). Temperature is in °C, humidity in %, pressure in hPa, altitude in m and illuminance in lx. An enabled sensor without a valid reading decodes to `null`; a key that is missing means that sensor is switched off.
 

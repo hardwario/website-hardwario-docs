@@ -1,10 +1,10 @@
 ---
 slug: firmware-management
-title: Firmware Management
+title: Firmware management
 description: "GAUGER firmware: over-the-air update from the Web UI and rollback to the previous or factory version, also from the error state with the USER button."
 ---
 
-# Firmware Management
+# Firmware management
 
 The device has remote over-the-air firmware update functionality. It can be triggered by pressing the **Upload Firmware** button in the System section of the Web UI. After the firmware is uploaded, the device will reboot so the change can take place. You can verify the upload by checking the version and firmware name fields in the table in the Status tab.
 

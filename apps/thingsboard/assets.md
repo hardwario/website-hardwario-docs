@@ -30,7 +30,7 @@ Log in to HARDWARIO Dashboards as a *Customer Administrator*.
 
 ### Step 2: Navigate to assets
 
-In the left menu, open **Devices & assets → Assets** (**Entities → Assets** for tenant administrators).
+In the left menu, open **Assets** (**Entities → Assets** for tenant administrators).
 
 ### Step 3: Add a new asset
 

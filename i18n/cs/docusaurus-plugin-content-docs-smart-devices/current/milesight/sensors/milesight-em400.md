@@ -97,17 +97,17 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Technologie | LoRaWAN®, NB-IoT, Cat M |
 | Anténa | Interní |
 | Frekvence | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Vysílací výkon | 16 dBm (868MHz) / 20 dBm (915MHz) / 19 dBm (470MHz) |
+| Vysílací výkon | 16 dBm (868 MHz) / 20 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class A |
 | **Měření vzdálenosti** | |
 | Technologie | Ultrazvuk |
 | Detekční rozsah | 3–450 cm |
-| Přesnost | ± (1+0,3%×S) cm, kde S = vzdálenost (-15–60°C) |
+| Přesnost | ± (1+0,3 %×S) cm, kde S = vzdálenost (-15–60 °C) |
 | Rozlišení | 1 mm |
 | Úhel svazku | 60° |
 | **Další senzory** | |
-| Teplota | -40°C ~ +125°C, rozlišení 0,1°C (NTC termistor) |
+| Teplota | -40 °C ~ +125 °C, rozlišení 0,1 °C (NTC termistor) |
 | Akcelerometr | Tříosý (detekce náklonu) |
 | **Funkce** | |
 | Režimy | Standard Mode, Bin Mode, Parking Lot Mode (pouze LoRaWAN) |
@@ -116,8 +116,8 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | **Fyzické vlastnosti** | |
 | Napájení | 2 × ER26500 (9000 mAh každá) |
 | Výdrž baterie | >10 let (režim Standard/Bin); 5 let (režim Parking, 12 sepnutí denně) |
-| Provozní teplota | -30°C ~ +70°C |
-| Vlhkost | 0%–95% RH (nekondenzující) |
+| Provozní teplota | -30 °C ~ +70 °C |
+| Vlhkost | 0 %–95 % RH (nekondenzující) |
 | Krytí | IP67 |
 | Rozměry | 118 × 65 × 32,5 mm |
 | Hmotnost | 181,4 g (s bateriemi) |

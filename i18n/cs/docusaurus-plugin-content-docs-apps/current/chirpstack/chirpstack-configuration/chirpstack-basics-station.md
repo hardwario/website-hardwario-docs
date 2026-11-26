@@ -32,7 +32,7 @@ flowchart TD
   Devices([LoRaWAN devices]) <--> Radio[LoRa radio] <--> EMBER[EMBER gateway]
   EMBER <--> WS["WebSocket<br/>ws / wss / mTLS, TCP 3001"] <--> Bridge[ChirpStack Gateway Bridge<br/>basic_station backend]
   Bridge <--> MQTT["MQTT<br/>eu868/gateway/EUI/…"] <--> CS[(ChirpStack v4)]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   classDef link fill:#8080801f,stroke:#80808066,stroke-width:1px,font-size:13px;
   class EMBER hero;
   class Radio,WS,MQTT link;

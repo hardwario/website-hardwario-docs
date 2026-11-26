@@ -1,6 +1,6 @@
 ---
 slug: ssh-connection-refused
-title: SSH Connection Refused
+title: SSH connection refused
 ---
 
 If `ssh <user>@<ip>` fails with **"Connection refused"** rather than a password prompt, the SSH

@@ -61,7 +61,7 @@ When an alarm starts or ends, STICKER also sends an alarm report and an extra te
 
 ## Time synchronization
 
-STICKER's clock dates the sensor history and the alarm events. The device asks the network for the time after the join and then every 7 days, with a small request on a normal uplink, so you will not see a separate time message.
+The STICKER clock dates the sensor history and the alarm events. The device asks the network for the time after the join and then every 7 days, with a small request on a normal uplink, so you will not see a separate time message.
 
 - To sync the clock now, send the `clock_sync` command. The device answers with an Info uplink once the time has arrived.
 - Over NFC, HARDWARIO Manager can set the clock to the time of the phone.

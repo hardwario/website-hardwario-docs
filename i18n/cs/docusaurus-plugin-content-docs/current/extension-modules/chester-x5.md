@@ -81,14 +81,14 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 
 | Pin | Signál | Typ | Popis |
 | :---: | :--- | :--- | :--- |
-| 1 | DNC | — | Nezapojovat (izolační odstup) |
+| 1 | DNC | – | Nezapojovat (izolační odstup) |
 | 2 | INP1 | Izolovaný vstup | Kladný vstup kanálu 1 |
 | 3 | INM1 | Izolovaný vstup | Záporný vstup kanálu 1 |
-| 4 | DNC | — | Nezapojovat (izolační odstup) |
-| 5 | DNC | — | Nezapojovat (izolační odstup) |
+| 4 | DNC | – | Nezapojovat (izolační odstup) |
+| 5 | DNC | – | Nezapojovat (izolační odstup) |
 | 6 | INM2 | Izolovaný vstup | Záporný vstup kanálu 2 |
 | 7 | INP2 | Izolovaný vstup | Kladný vstup kanálu 2 |
-| 8 | DNC | — | Nezapojovat (izolační odstup) |
+| 8 | DNC | – | Nezapojovat (izolační odstup) |
 
 :::info
 Každý kanál měří **−50 V až +50 V** a je **galvanicky oddělený** od elektroniky zařízení CHESTER i od druhého kanálu. Piny **DNC** (1, 4, 5, 8) nejsou nikam připojené. Nic na ně nezapojujte: vytvářejí odstup, který zachovává izolaci mezi kanály a logickou stranou.

@@ -1,7 +1,7 @@
 ---
 slug: manual-connection
 title: Manual connection
-description: "Connect a device that already exists in HARDWARIO Dashboards: create it, copy its access token, and send its data with a HARDWARIO Cloud connector and a transformation function."
+description: "Connect a device with your own data format or names to HARDWARIO Dashboards: copy its access token and send its data with a HARDWARIO Cloud connector."
 title_meta: "Manual connection (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';
@@ -10,7 +10,7 @@ import EditCodeBlock from './edit-code-block.js';
 # Manual connection
 
 :::tip Most devices don't need this
-The [automatic connection](/apps/thingsboard/cloud-connection) is simpler: you add one connector and every tagged device appears by itself. Use the manual connection only for devices that **already exist** in HARDWARIO Dashboards, or when you need your own data format.
+The [automatic connection](/apps/thingsboard/cloud-connection) is simpler: you add one connector and every tagged device appears by itself. Use the manual connection when you need a **custom data format** or **your own names** in HARDWARIO Dashboards, for example your own telemetry keys, a device profile with alarm rules, or a device that already exists there.
 :::
 
 With the manual connection, each device in HARDWARIO Dashboards has an **access token**. A connector in HARDWARIO Cloud reads the token from a device label and sends the device's data to it.
@@ -19,7 +19,7 @@ With the manual connection, each device in HARDWARIO Dashboards has an **access 
 flowchart LR
   Device([Device]) -->|uplink| Cloud[(HARDWARIO Cloud)]
   Cloud -->|connector + access token| HD[(HARDWARIO Dashboards)]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class Cloud hero;
   class HD hero;
 ```
@@ -30,7 +30,7 @@ flowchart LR
 
 Skip this step if the device already exists in HARDWARIO Dashboards.
 
-1. Open **Devices & assets → Devices** (**Entities → Devices** for tenant administrators), click **Add device** in the top-right corner and choose **Add new device**.
+1. Open **Devices** (**Entities → Devices** for tenant administrators), click **Add device** in the top-right corner and choose **Add new device**.
 
    ![Devices list with the Add device menu open and Add new device highlighted](images/devices-add-menu.jpg)
 

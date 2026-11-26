@@ -1,12 +1,12 @@
 ---
 slug: wm-bus_sensors
-title: wM-Bus Sensors
+title: wM-Bus sensors
 description: "CHESTER wM-Bus works as a pass-thru gateway for any T1 or C1 wM-Bus meter; see the BMeters and Zenner meters we have tested and documented."
 ---
 
 import Image from '@theme/IdealImage';
 
-# wM-Bus Sensors
+# wM-Bus sensors
 
 **CHESTER wM-Bus supports all wM-Bus meters of the T1 and C1 classes, regardless of manufacturer.** It works as a **pass-thru gateway**: it forwards the received telegrams as they are, and the decoding into meaningful units happens in the end IoT application.
 

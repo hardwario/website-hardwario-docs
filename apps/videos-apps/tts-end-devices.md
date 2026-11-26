@@ -1,14 +1,14 @@
 ---
 slug: tts-end-devices
-title: Adding End Devices
+title: Adding end devices
 title_meta: "The Things Stack: Adding End Devices (video)"
 ---
 
 import Image from '@theme/IdealImage';
 
-# The Things Stack - How to Add End Devices to a LoRaWAN Network {#the-things-stack--how-to-add-end-devices-to-a-lorawan-network}
+# The Things Stack - how to add end devices to a LoRaWAN network {#the-things-stack--how-to-add-end-devices-to-a-lorawan-network}
 
-## Tutorial Overview
+## Tutorial overview
 
 This tutorial explains how to create an application and register end devices in The Things Stack, including selecting a registration method, entering all required identifiers, and preparing the device for use.
 

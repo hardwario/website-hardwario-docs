@@ -79,7 +79,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 ## Napájení {#power-supply}
 | Typ    | Hodnota                 |
 |--------|-------------------------|
-| Napájení | 802.3at PoE+ nebo 12V/2A  |
+| Napájení | 802.3at PoE+ nebo 12 V/2A  |
 
 ---
 
@@ -91,7 +91,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Technologie | LoRaWAN®, Ethernet, 4G LTE, Wi-Fi HaLow |
 | Anténa | Interní |
 | Frekvence | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Vysílací výkon | 16 dBm (868MHz) / 20 dBm (915MHz) / 19 dBm (470MHz) |
+| Vysílací výkon | 16 dBm (868 MHz) / 20 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class C |
 | **Detekce** | |
@@ -100,7 +100,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Montážní výška | ≤3,5 m (standardní); ≤6,5 m (vysoké stropy) |
 | Zorné pole | 98° H × 80° V (standardní); 60° H × 45° V (vysoké stropy) |
 | Přesnost vzdálenosti | ±3,5 cm (standardní); ±6,5 cm (vysoké stropy) |
-| Přesnost | 99,8% |
+| Přesnost | 99,8 % |
 | Světelný paprsek ToF | 940nm (neviditelné infračervené záření) |
 | **Funkce** | |
 | Zóny počítání | až 4 vlastní zóny |
@@ -109,10 +109,10 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Lokální úložiště | až 1 milion datových záznamů |
 | Spojení více zařízení | až 8 jednotek |
 | **Fyzické vlastnosti** | |
-| Napájení | 802.3at PoE+ nebo 12V/2A DC |
+| Napájení | 802.3at PoE+ nebo 12 V/2A DC |
 | Spotřeba | průměrně 7–10 W, max 15–24 W |
 | Provozní teplota | -20 °C ~ +50 °C |
-| Vlhkost | 0%–95% RH (bez kondenzace) |
+| Vlhkost | 0 %–95 % RH (bez kondenzace) |
 | Krytí | IP65 |
 | Rozměry | 200 × 35 × 85 mm |
 | Hmotnost | 419 g (verze PoE) |

@@ -29,7 +29,7 @@ flowchart LR
   HD --> Dash[Dashboards & charts]
   HD --> Share[Public link & website]
   HD --> Alert[Notifications]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class Cloud hero;
   class HD hero;
 ```
@@ -60,7 +60,7 @@ Návody jdou v pořadí, v jakém vše nastavujete: od připojení prvního zař
 |---|---|---|
 | 01 | **Přehled** (tato stránka) | Zjistíte, co HARDWARIO Dashboards umí a jak se přihlásit. |
 | 02 | [Připojení zařízení](/apps/thingsboard/cloud-connection) | Přidáte jeden konektor a zařízení se objeví sama. **Doporučeno.** |
-| 03 | [Ruční připojení](/apps/thingsboard/manual-connection) | Připojíte zařízení, které už existuje, pomocí jeho access tokenu. |
+| 03 | [Ruční připojení](/apps/thingsboard/manual-connection) | Vlastní formát dat a názvy, pomocí access tokenu. |
 | 04 | [Správa zařízení](/apps/thingsboard/devices) | Dáte zařízením srozumitelné názvy, roztřídíte je do skupin a zkontrolujete jejich data. |
 
 ### Dashboardy {#dashboards}

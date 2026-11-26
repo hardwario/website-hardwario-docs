@@ -1,6 +1,6 @@
 ---
 slug: carlo-gavazzi-em1xx-series
-title: Carlo Gavazzi EM1XX Series
+title: Carlo Gavazzi EM1XX series
 description: "Connect a Carlo Gavazzi EM1xx single-phase energy analyzer (EM111) to CHESTER over Modbus: direct wiring, RS-485 link, configuration and measured values."
 ---
 
@@ -22,9 +22,9 @@ This energy meter **does not require** any **external sensor** for current measu
 
  ---
 
-### Power Installation
+### Power installation
 
-#### Example of Installation: Carlo Gavazzi Energy Analyzer EM111
+#### Example of installation: Carlo Gavazzi Energy Analyzer EM111
 
 | **Carlo Gavazzi Energy Analyzer EM111** | |
 |----------------------------------------|-----------------------------------------------|
@@ -33,15 +33,15 @@ This energy meter **does not require** any **external sensor** for current measu
 | Pin N (left)                                | **N (IN)**                                         |
 | Pin N (right)                                | **N (OUT)**                                         |
 
-#### Connection Diagram (EM111)
+#### Connection diagram (EM111)
 
 ![Wiring diagram of the EM111 single-phase connection with L1 and N through terminals 1, 2 and N](images/carlo-gavazzi-em111-power.png)
 
 ---
 
-### Modbus Communication
+### Modbus communication
 
-#### Example of Modbus Communication Installation: Carlo Gavazzi Energy Analyzer EM111
+#### Example of Modbus communication installation: Carlo Gavazzi Energy Analyzer EM111
 
 | **Carlo Gavazzi Energy Analyzer EM111** | **CHESTER Modbus** |
 |---------------------------|--------------------|
@@ -55,7 +55,7 @@ This energy meter **does not require** any **external sensor** for current measu
 
 ---
 
-### Browsing and Configuration Buttons
+### Browsing and configuration buttons
 
 * `◄` **Left button**
     1. Navigation through the menu
@@ -67,7 +67,7 @@ This energy meter **does not require** any **external sensor** for current measu
     2. Increasing the value
 ---
 
-### Modbus Communication Configuration for Energy Analyzer
+### Modbus communication configuration for Energy Analyzer
 
 1. Press and hold the `◄` **(Left)** button for 1.5 seconds.  
 2. The screen will display `PASS`.  
@@ -86,15 +86,15 @@ If long presses don’t respond, try pressing the `◄` **(Left)** button closer
 :::
 
 
-#### Default Modbus Communication Configuration
+#### Default Modbus communication configuration
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Address | Baud rate | Parity | Stop bit |
 |---------|-----------|--------|-----------|
 | 1       | 9.6k      | None   | 1         |
 
 ---
 
-### Modbus Communication Configuration for CHESTER
+### Modbus communication configuration for CHESTER
 
 Use the following commands to configure communication parameters via CHESTER Terminal:
 
@@ -112,7 +112,7 @@ config save
 
 ### Measured values
 
-| Measured Value | Key / Path                                   |
+| Measured value | Key / path                                   |
 |----------------|----------------------------------------------|
 | Current        | E_ENERGY_METER.METER_1.CURRENT.MEASUREMENTS  |
 | Voltage        | E_ENERGY_METER.METER_1.VOLTAGE.MEASUREMENTS  |

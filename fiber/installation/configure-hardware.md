@@ -1,11 +1,11 @@
 ---
-title: Configure Hardware
+title: Configure hardware
 description: "Enable the I2C bus and set up the real-time clock: the PCF85063A RTC overlay on FIBER (CM4), the built-in RTC on FIBER Lite, then a check with hwclock."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Configure Hardware
+# Configure hardware
 
 This section configures the I2C bus and real-time clock (RTC) on the device. **The RTC steps
 below differ between the two variants**, so pick the tab that matches your device when you reach

@@ -1,9 +1,9 @@
 ---
-title: Device Protocol (FLAP)
+title: Device protocol (FLAP)
 description: "FLAP is the UDP protocol HARDWARIO devices use to talk to HARDWARIO Cloud over LTE, with a message authentication code or DTLS."
 ---
 
-# Device Protocol (FLAP)
+# Device protocol (FLAP)
 
 HARDWARIO devices with a cellular modem (for example **CHESTER** and **GLIDER**) talk to **HARDWARIO Cloud** over UDP using **FLAP**. FLAP is a lightweight request and response protocol designed for cellular IoT: it keeps the overhead low, needs only a few packets per exchange and works with the power saving features of LTE-M and NB-IoT (PSM, RAI).
 
@@ -15,7 +15,7 @@ This section is a technical reference of the wire protocol for firmware develope
 
 :::
 
-## Design Principles
+## Design principles
 
 - **The device always speaks first.** The Cloud only responds and never sends a packet on its own. This works behind carrier NAT and with PSM, where the device cannot be reached between its transmissions.
 - **One packet, one response.** Every packet from the device is answered by at most one packet from the Cloud.
@@ -23,7 +23,7 @@ This section is a technical reference of the wire protocol for firmware develope
 - **Acknowledgement.** Every fragment is acknowledged, and a sequence number detects lost and duplicated packets.
 - **Downlink by polling.** The Cloud tells the device that a downlink is waiting, and the device fetches it with a poll packet.
 
-## Protocol Layers
+## Protocol layers
 
 FLAP itself is only the packet: a 2-byte header with the flags and the sequence number, followed by one fragment of a message. On the way between the device and the Cloud, every FLAP packet is wrapped in one of two cryptographic **envelopes**:
 
@@ -48,7 +48,7 @@ flowchart TB
 | **Envelope** | MAC envelope or DTLS envelope, protects the FLAP packet on the way | [**MAC Envelope**](mac-envelope.md), [**DTLS Envelope**](dtls-envelope.md) |
 | **Transport** | One UDP datagram carries one enveloped FLAP packet | This page |
 
-## Envelopes and Ports
+## Envelopes and ports
 
 | Envelope | Device setting | UDP port | Authentication and authorization | Integrity | Encryption | Used by |
 |---|---|---|---|---|---|---|

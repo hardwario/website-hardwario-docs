@@ -1,6 +1,6 @@
 ---
 slug: changelog
-title: EMBER Changelog
+title: EMBER changelog
 toc_min_heading_level: 2
 toc_max_heading_level: 2
 description: "All notable changes to the EMBER platform, including firmware and hardware, with tabs to filter by change category."
@@ -9,7 +9,7 @@ description: "All notable changes to the EMBER platform, including firmware and 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# EMBER Changelog
+# EMBER changelog
 
 This page tracks all notable changes across the EMBER platform, including **firmware** and **hardware**. Use the tabs below to filter by change category.
 
@@ -23,7 +23,7 @@ For RouterOS release notes, refer to [MikroTik Changelog](https://mikrotik.com/d
 
 ---
 
-## General Platform Updates
+## General platform updates
 
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware & Applications" default>

@@ -1,12 +1,12 @@
 ---
 slug: ordering-codes
-title: Ordering Codes
+title: Ordering codes
 description: "This article defines all possible ordering codes for the CHESTER ecosystem."
 title_meta: "Ordering Codes (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Ordering Codes
+# Ordering codes
 
 This article defines all possible ordering codes for the **CHESTER** ecosystem. The order specifications must be fully compliant with the part numbers stated below.
 
@@ -16,9 +16,9 @@ Each product lists available parts, i.e. which parts are standard and usually im
 
 :::
 
-## Mainboard Modules
+## Mainboard modules
 
-### CHESTER-M: Standard Mainboard {#chester-m}
+### CHESTER-M: Standard mainboard {#chester-m}
 
 **Format:** `CHESTER-M-[A][B][C][D][E][G][L][N][S][V]`
 
@@ -36,7 +36,7 @@ Each product lists available parts, i.e. which parts are standard and usually im
 
 **Available parts:**
 
-| Ordering Code     | Ordering Code      | Ordering Code      |
+| Ordering code     | Ordering code      | Ordering code      |
 | :---------------- | :----------------- | :----------------- |
 | `CHESTER-M-EL`    | `CHESTER-M-BEL`    | `CHESTER-M-AEL`    |
 | `CHESTER-M-CS`    | `CHESTER-M-BCS`    | `CHESTER-M-ACS`    |
@@ -47,9 +47,9 @@ Each product lists available parts, i.e. which parts are standard and usually im
 | `CHESTER-M-CGLS`  | `CHESTER-M-BCGLS`  | `CHESTER-M-ACGLS`  |
 | `CHESTER-M-CDGLS` | `CHESTER-M-BCDGLS` | `CHESTER-M-ACDGLS` |
 
-## Cover Modules
+## Cover modules
 
-### CHESTER-S1: Integrated Multi-Sensor {#chester-s1}
+### CHESTER-S1: Integrated multi-sensor {#chester-s1}
 
 **Format:** `CHESTER-S1-[B][C][M][N][P][T]`
 
@@ -76,14 +76,14 @@ The lux meter and hygrometer are always included. In the case of the "N" version
 
 **Available parts:**
 
-| Ordering Code      |
+| Ordering code      |
 | :----------------- |
 | `CHESTER-S1-BCMP`  |
 | `CHESTER-S1-BCMPT` |
 | `CHESTER-S1-N`     |
 | `CHESTER-S1-NP`    |
 
-### CHESTER-Z1: Backup + Push-buttons {#chester-z}
+### CHESTER-Z1: Backup + push-buttons {#chester-z}
 
 :::caution
 
@@ -112,13 +112,13 @@ An acoustic beeper is installed only if any of the pushbuttons are present.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-Z1`   |
 | `CHESTER-Z1-F` |
 | `CHESTER-Z1-X` |
 
-## Carrier Boards
+## Carrier boards
 
 ### CHESTER-B1: Batteries + wM-Bus {#chester-b1}
 
@@ -134,7 +134,7 @@ An acoustic beeper is installed only if any of the pushbuttons are present.
 
 **Available parts:**
 
-| Ordering Code    |
+| Ordering code    |
 | :--------------- |
 | `CHESTER-B1-AC`  |
 | `CHESTER-B1-AD`  |
@@ -143,7 +143,7 @@ An acoustic beeper is installed only if any of the pushbuttons are present.
 | `CHESTER-B1-DL`  |
 | `CHESTER-B1-DLW` |
 
-### CHESTER-C1: Interfaces + Control {#chester-c1}
+### CHESTER-C1: Interfaces + control {#chester-c1}
 
 **Format:** `CHESTER-C1-[R]`
 
@@ -153,14 +153,14 @@ An acoustic beeper is installed only if any of the pushbuttons are present.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-C1`   |
 | `CHESTER-C1-R` |
 
-## Backside Modules
+## Backside modules
 
-### CHESTER-K1: 4x Diff. Input + 5 V Boost {#chester-k1}
+### CHESTER-K1: 4x diff. input + 5 V boost {#chester-k1}
 
 **Format:** `CHESTER-K1-[1{C|V}]-[2{C|V}]-[3{C|V}]-[4{C|V}]`
 
@@ -183,7 +183,7 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code            |
+| Ordering code            |
 | :----------------------- |
 | `CHESTER-K1-1C-2C-3C-4C` |
 | `CHESTER-K1-1C-2C-3C-4V` |
@@ -191,7 +191,7 @@ This expansion module occupies both backside slots "A" and "B".
 | `CHESTER-K1-1C-2V-3V-4V` |
 | `CHESTER-K1-1V-2V-3V-4V` |
 
-### CHESTER-X0A: 4x Input w/ 5 V Boost {#chester-x0a}
+### CHESTER-X0A: 4x input w/ 5 V boost {#chester-x0a}
 
 **Format:** `CHESTER-X0A[:{A|B}]`
 
@@ -202,12 +202,12 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X0A:A` |
 | `CHESTER-X0A:B` |
 
-### CHESTER-X0B: 4x Input w/o 5 V Boost {#chester-x0b}
+### CHESTER-X0B: 4x input w/o 5 V boost {#chester-x0b}
 
 **Format:** `CHESTER-X0B[:{A|B}]`
 
@@ -218,12 +218,12 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X0B:A` |
 | `CHESTER-X0B:B` |
 
-### CHESTER-X1: 8x 1-Wire Bus Driver {#chester-x1}
+### CHESTER-X1: 8x 1-Wire bus driver {#chester-x1}
 
 **Format:** `CHESTER-X1-[G][:{A|B}]`
 
@@ -235,14 +235,14 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code    |
+| Ordering code    |
 | :--------------- |
 | `CHESTER-X1:A`   |
 | `CHESTER-X1:B`   |
 | `CHESTER-X1-G:A` |
 | `CHESTER-X1-G:B` |
 
-### CHESTER-X2: UART/RS-485 Interface {#chester-x2}
+### CHESTER-X2: UART/RS-485 interface {#chester-x2}
 
 **Format:** `CHESTER-X2[:{A|B}]`
 
@@ -253,12 +253,12 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X2:A` |
 | `CHESTER-X2:B` |
 
-### CHESTER-X3A: 2x Pt100/Pt1000 Interface {#chester-x3a}
+### CHESTER-X3A: 2x Pt100/Pt1000 interface {#chester-x3a}
 
 **Format:** `CHESTER-X3A[:{A|B}]`
 
@@ -269,12 +269,12 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X3A:A` |
 | `CHESTER-X3A:B` |
 
-### CHESTER-X3B: 2x Thermocouple Interface {#chester-x3b}
+### CHESTER-X3B: 2x thermocouple interface {#chester-x3b}
 
 **Format:** `CHESTER-X3B[:{A|B}]`
 
@@ -285,12 +285,12 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X3B:A` |
 | `CHESTER-X3B:B` |
 
-### CHESTER-X3C: 2x Load Cell Interface {#chester-x3c}
+### CHESTER-X3C: 2x load cell interface {#chester-x3c}
 
 **Format:** `CHESTER-X3C[:{A|B}]`
 
@@ -301,12 +301,12 @@ This expansion module occupies both backside slots "A" and "B".
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X3C:A` |
 | `CHESTER-X3C:B` |
 
-### CHESTER-X4: 28 V Buck + 4x P Switch {#chester-x4}
+### CHESTER-X4: 28 V buck + 4x P switch {#chester-x4}
 
 :::info
 
@@ -323,12 +323,12 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X4:A` |
 | `CHESTER-X4:B` |
 
-### CHESTER-X6: S-Wire Bus + 5 V Boost {#chester-x6}
+### CHESTER-X6: S-Wire bus + 5 V boost {#chester-x6}
 
 :::info
 
@@ -345,12 +345,12 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X6:A` |
 | `CHESTER-X6:B` |
 
-### CHESTER-X7: 1x Diff. Input + 5 V Boost {#chester-x7}
+### CHESTER-X7: 1x diff. input + 5 V boost {#chester-x7}
 
 **Format:** `CHESTER-X7[:{A|B}]`
 
@@ -361,12 +361,12 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X7:A` |
 | `CHESTER-X7:B` |
 
-### CHESTER-X8: Ultra-Precise Accelerometer {#chester-x8}
+### CHESTER-X8: Ultra-precise accelerometer {#chester-x8}
 
 :::info
 
@@ -383,12 +383,12 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X8:A` |
 | `CHESTER-X8:B` |
 
-### CHESTER-X9: 4x Protected N Switch {#chester-x9}
+### CHESTER-X9: 4x protected N switch {#chester-x9}
 
 **Format:** `CHESTER-X9[:{A|B}]`
 
@@ -399,12 +399,12 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code  |
+| Ordering code  |
 | :------------- |
 | `CHESTER-X9:A` |
 | `CHESTER-X9:B` |
 
-### CHESTER-X10: 28 V Buck + Li-Po Charger {#chester-x10}
+### CHESTER-X10: 28 V buck + Li-Po charger {#chester-x10}
 
 **Format:** `CHESTER-X10[:{A|B}]`
 
@@ -415,7 +415,7 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 **Available parts:**
 
-| Ordering Code   |
+| Ordering code   |
 | :-------------- |
 | `CHESTER-X10:A` |
 | `CHESTER-X10:B` |
@@ -424,7 +424,7 @@ Only a single instance of this module can be installed on CHESTER-M.
 
 For more details and drawings, see [Enclosures](hardware-description/enclosures.md#list-of-enclosures) article.
 
-| Ordering Code | Application                    | Note    |
+| Ordering code | Application                    | Note    |
 | ------------- | ------------------------------ | ------- |
 | CHESTER-E1-P  | CHESTER Clime                  |         |
 | CHESTER-E2-P  | CHESTER Counter                |         |
@@ -446,9 +446,9 @@ For more details and drawings, see [Enclosures](hardware-description/enclosures.
 | CHESTER-E18-P | CHESTER with C2 (Axilera)      |         |
 | CHESTER-E19-P | CHESTER with B1 (wM-Bus)       |         |
 
-## Other Accessories
+## Other accessories
 
-### CHESTER-S2: External Hygrometer {#chester-s2}
+### CHESTER-S2: External hygrometer {#chester-s2}
 
 **Format:** `CHESTER-S2`
 
@@ -460,6 +460,6 @@ This product connects to the system I²C bus on CHESTER-M via the 5-pin JST conn
 
 **Available parts:**
 
-| Ordering Code |
+| Ordering code |
 | :------------ |
 | `CHESTER-S2`  |

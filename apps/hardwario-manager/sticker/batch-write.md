@@ -5,7 +5,7 @@ description: "Set STICKER configuration values once in HARDWARIO Manager and wri
 title_meta: "Batch write (HARDWARIO Manager for STICKER)"
 ---
 
-# Write the same settings to many STICKERs
+# Write the same settings to many STICKER devices
 
 **Batch write** gives a set of devices the same values in one session: you set
 the values once, then tap one STICKER after another. Only the values you change

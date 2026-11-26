@@ -1,6 +1,6 @@
 ---
 slug: useful-resources
-title: Useful Resources
+title: Useful resources
 ---
 import Image from '@theme/IdealImage';
 

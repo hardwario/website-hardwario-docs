@@ -9,7 +9,7 @@ import Image from '@theme/IdealImage';
 
 # How to add CHESTER to Cloud
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you’ll learn how to add your CHESTER device to HARDWARIO Cloud. You’ll scan the QR code to fill in device details automatically, set tags or comments, and create the device in your Cloud space to view its messages.
 
@@ -33,7 +33,7 @@ In this guide, you’ll learn how to add your CHESTER device to HARDWARIO Cloud.
 </div>
 
 
-## Step-by-Step Text Guide
+## Step-by-step text guide
 
 1. Take your phone and log in to HARDWARIO Cloud.
 

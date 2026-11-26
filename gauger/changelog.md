@@ -1,6 +1,6 @@
 ---
 slug: changelog
-title: GAUGER Changelog
+title: GAUGER changelog
 toc_min_heading_level: 2
 toc_max_heading_level: 2
 description: "All notable changes to the GAUGER platform, including firmware and hardware, with tabs to filter by change category."
@@ -9,19 +9,19 @@ description: "All notable changes to the GAUGER platform, including firmware and
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# GAUGER Changelog
+# GAUGER changelog
 
 This page tracks all notable changes across the GAUGER platform, including **firmware** and **hardware**. Use the tabs below to filter by change category.
 
 :::info
 
-GAUGER firmware is managed through HARDWARIO's internal release process (OTA updates via the device web interface). There is currently no public firmware repository for GAUGER.
+GAUGER firmware is managed through the HARDWARIO internal release process (OTA updates via the device web interface). There is currently no public firmware repository for GAUGER.
 
 :::
 
 ---
 
-## General Platform Updates
+## General platform updates
 
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware & Applications" default>

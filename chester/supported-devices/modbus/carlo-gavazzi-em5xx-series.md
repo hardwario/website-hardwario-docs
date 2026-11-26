@@ -1,6 +1,6 @@
 ---
 slug: carlo-gavazzi-em5xx-series
-title: Carlo Gavazzi EM5XX Series
+title: Carlo Gavazzi EM5XX series
 description: "Connect a Carlo Gavazzi EM5xx energy analyzer (EM530) with a split-core CT to CHESTER over Modbus: wiring, CT ratio, configuration and measured values."
 ---
 
@@ -35,9 +35,9 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
  ---
 
-### Power Installation
+### Power installation
 
-#### Example of Installation: Carlo Gavazzi Energy Analyzer EM530
+#### Example of installation: Carlo Gavazzi Energy Analyzer EM530
 
 | **Carlo Gavazzi Energy Analyzer EM530** | |
 |----------------------------------------|-----------------------------------------------|
@@ -52,31 +52,31 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 :::
 
-#### Connection Diagram (EM530)
+#### Connection diagram (EM530)
 
 ![Carlo Gavazzi - EM530 - Connection Diagram](images/cg-em530.png)
 
  ---
-### Sensor Installation
+### Sensor installation
 
-#### Example of Installation: Split Core Current Transformer CTA6X200A5A
+#### Example of installation: Split core current transformer CTA6X200A5A
 
 
-| **Carlo Gavazzi Energy Analyzer EM530** | **Split Core Current Transformer CTA6X200A5A** |
+| **Carlo Gavazzi Energy Analyzer EM530** | **Split core current transformer CTA6X200A5A** |
 |----------------------------------------|-----------------------------------------------|
 | Pin 13                                 | **K**                                         |
 | Pin 14                                 | **L**                                         |
 
 
-#### Connection Diagram (CTA6X200A5A)
+#### Connection diagram (CTA6X200A5A)
 
 ![Carlo Gavazzi - CTA6X200A5A - Connection Diagram ](images/cta6x200a5a.png)
 
 ---
 
-### Modbus Communication
+### Modbus communication
 
-#### Example of Modbus Communication Installation: Carlo Gavazzi Energy Analyzer EM530
+#### Example of Modbus communication installation: Carlo Gavazzi Energy Analyzer EM530
 
 | **Carlo Gavazzi Energy Analyzer EM530** | **CHESTER Modbus** |
 |---------------------------|--------------------|
@@ -90,7 +90,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 ---
 
-### Browsing and Configuration Buttons
+### Browsing and configuration buttons
 
 * `▲` **Up button**
     1. Navigation through the menu
@@ -105,22 +105,22 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 ---
 
-### Modbus Communication Configuration for Energy Analyzer
+### Modbus communication configuration for Energy Analyzer
 
 1. Press the **Select** button to open the menu.  
 2. Use the **Select** button to choose the **Setting** option.  
 3. Use the **Up/Down** buttons to select the menu item: `r5485`.  
 4. Enter the configuration values according to the table below.
 
-#### Default Modbus Communication Configuration
+#### Default Modbus communication configuration
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Address | Baud rate | Parity | Stop bit |
 |---------|-----------|--------|-----------|
 | 1       | 9.6k      | None   | 1         |
 
 ---
 
-### Modbus Communication Configuration for CHESTER
+### Modbus communication configuration for CHESTER
 
 Use the following commands to configure communication parameters via CHESTER Terminal:
 
@@ -136,7 +136,7 @@ config save
 
 ---
 
-### CT Ratio Configuration
+### CT ratio configuration
 
 1. Press the **Select** button to open the menu.  
 2. Use the **Select** button to choose the **Reset** option.  
@@ -151,7 +151,7 @@ The CT ratio can be changed **only before** the device registers **1 kWh** of ac
 After exceeding 1 kWh, the CT ratio becomes **permanently locked** and **cannot be modified**, even with a factory reset or MID reset.  
 :::
 
-### Example of CT Ratio Selection
+### Example of CT ratio selection
 
 **Carlo Gavazzi Split Core Current Transformer CTA6X200A5A**
 
@@ -167,7 +167,7 @@ After exceeding 1 kWh, the CT ratio becomes **permanently locked** and **cannot 
 
 ### Measured values
 
-| Measured Value | Key / Path                                   |
+| Measured value | Key / path                                   |
 |----------------|----------------------------------------------|
 | Current        | E_ENERGY_METER.METER_2.CURRENT.MEASUREMENTS  |
 | Voltage        | E_ENERGY_METER.METER_2.VOLTAGE.MEASUREMENTS  |

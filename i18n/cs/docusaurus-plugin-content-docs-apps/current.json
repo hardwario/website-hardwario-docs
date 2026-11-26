@@ -3,7 +3,7 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.docs.category.User Guide": {
+  "sidebar.docs.category.User guide": {
     "message": "Uživatelská příručka",
     "description": "The label for category 'User Guide' in sidebar 'docs'"
   },
@@ -99,7 +99,7 @@
     "message": "Konfigurace",
     "description": "The label for category 'Configuration' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Video Tutorials": {
+  "sidebar.docs.category.Video tutorials": {
     "message": "Videonávody",
     "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
   },

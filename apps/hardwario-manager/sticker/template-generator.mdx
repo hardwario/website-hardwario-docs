@@ -1,6 +1,6 @@
 ---
 slug: template-generator
-title: Template Generator
+title: Template generator
 description: "Build a STICKER NFC configuration template (intervals, LoRaWAN basics, sensors, alarm rules) as hex and QR code, or decode an existing one."
 ---
 import StickerTemplateGenerator from '@site/src/components/StickerTemplateGenerator';
@@ -10,7 +10,7 @@ import StickerTemplateGenerator from '@site/src/components/StickerTemplateGenera
 HARDWARIO Manager works with STICKER firmware v2.0.0 and newer. When you load a template from this page into the app (**Add template → From hex** or **From QR code**), the app converts it for firmware v2.0.0: the old sensor and history settings are moved to their v2.0.0 equivalents, and the **alarm rules are removed**, because rules from older firmware can't be converted. Set alarm rules up in the app instead, see [**Alarm rules**](./alarms.md).
 :::
 
-# Configuration Template Generator
+# Configuration template generator
 
 Build a STICKER configuration **template** below: open a section, tick the settings you want, set their values, and the tool encodes them into the `AppConfigMessage` payload the device ingests over NFC. The result is shown as a **hex** string and a **QR code**, and you can paste an existing template's hex back in to decode it into the form.
 

@@ -12,7 +12,7 @@ description: "Carlo Gavazzi is a Swiss manufacturer specializing in energy measu
 
 Carlo Gavazzi **EM series** energy meters deliver precise, certified power measurements and can be integrated with HARDWARIO devices for energy monitoring applications using Modbus RTU.
 
-## Key Products
+## Key products
 
 | Product | Description |
 |---|---|
@@ -20,7 +20,7 @@ Carlo Gavazzi **EM series** energy meters deliver precise, certified power measu
 | [**EM530**](/smart-devices/carlo-gavazzi/em530) | Three-phase energy meter with external current transformers. 5 A CT input. Modbus RTU output. |
 | [**EM540**](/smart-devices/carlo-gavazzi/em540) | Three-phase energy meter, direct connection up to 65 A. MID certified. Modbus RTU output. |
 
-## Typical Use Cases with HARDWARIO
+## Typical use cases with HARDWARIO
 
 - **Energy monitoring**: Connecting EM-series meters to a **GAUGER** or **CHESTER** device via Modbus RTU to read power consumption data and send it to HARDWARIO Cloud.
 - **Submetering**: Monitoring energy usage per circuit, machine, or floor in commercial buildings.

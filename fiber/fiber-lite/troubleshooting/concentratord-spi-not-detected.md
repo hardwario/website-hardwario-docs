@@ -1,6 +1,6 @@
 ---
 slug: concentratord-spi-not-detected
-title: FIBER Lite Concentrator Never Shows a Gateway ID
+title: FIBER Lite concentrator never shows a gateway ID
 ---
 
 **Symptom:** on FIBER Lite (SPI/RAK2287), the concentrator's own service logs never print a
@@ -11,7 +11,7 @@ range.
 Work through these in order. The first two are by far the most common, and both look like broken
 hardware while being pure configuration.
 
-## 1. The daemon hangs on "Opening SPI communication interface"
+## 1. The daemon hangs on "opening SPI communication interface"
 
 Check where the service actually stops:
 

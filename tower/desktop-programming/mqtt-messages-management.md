@@ -1,6 +1,6 @@
 ---
 slug: mqtt-messages-management
-title: MQTT Messages Management
+title: MQTT messages management
 ---
 import Image from '@theme/IdealImage';
 
@@ -13,7 +13,7 @@ In this chapter, we will go over the **Messages Tab** of Playground.
 
 :::
 
-## Messages Tab
+## Messages tab
 
 In this tab, you can view all the messages from your paired devices or just any other MQTT message if you like.
 

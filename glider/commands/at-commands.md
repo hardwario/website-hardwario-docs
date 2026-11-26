@@ -1,11 +1,11 @@
 ---
-title: AT Commands
+title: AT commands
 description: "Every AT command of the GLIDER firmware on the USB-C console: ATCI syntax, device info, AT$CONFIG, AT$FW firmware update, error codes and AT$SHELL."
 sidebar_position: 1
 ---
 import Image from '@theme/IdealImage';
 
-# AT Commands Reference
+# AT commands reference
 
 This page lists every AT command implemented by the GLIDER firmware. AT commands are issued through the [**USB-C console**](../console/usb-at.md).
 
@@ -13,7 +13,7 @@ This page lists every AT command implemented by the GLIDER firmware. AT commands
 Looking for the Zephyr shell counterparts (used via J-Link, or via `AT$SHELL="…"` from the AT console)? See the [**Shell Commands**](shell-commands.md) page.
 :::
 
-The parser is HARDWARIO's **ATCI** (AT Command Interpreter). Every command starts with the `AT` prefix; some accept four different operations described below.
+The parser is the HARDWARIO **ATCI** (AT Command Interpreter). Every command starts with the `AT` prefix; some accept four different operations described below.
 
 ## 1. ATCI syntax
 

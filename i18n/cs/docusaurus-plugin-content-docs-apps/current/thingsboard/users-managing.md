@@ -28,7 +28,7 @@ flowchart LR
   U[User group<br/>Warehouse team] -->|Read only selected group| D[Device group<br/>Warehouse]
   U -->|Read only selected group| DB[Dashboard group<br/>Warehouse dashboards]
   U -->|Edit profile required with Group roles| P[Own account]
-  classDef hero fill:#009cfa,stroke:#016ad4,stroke-width:2px,color:#ffffff;
+  classDef hero stroke-width:1.5px;
   class U hero;
 ```
 
@@ -71,7 +71,7 @@ Váš účet má také dvě výchozí uživatelské skupiny: *Customer Administr
 Chcete-li uživateli ukázat jen některá zařízení, musí být zařízení a jejich dashboardy ve skupinách. Pokud má uživatel vidět všechno, tento krok přeskočte.
 
 ### Vytvoření skupiny zařízení {#creating-a-device-group}
-1. V levém menu přejděte do **Devices & assets → Devices** (správci tenantu **Entities → Devices**).
+1. V levém menu přejděte do **Devices** (správci tenantu **Entities → Devices**).
 2. Přepněte na záložku **Groups**.
 3. Klikněte vpravo nahoře na **Add entity group**.
 4. Zadejte **Name** a **Description** skupiny a uložte ji.

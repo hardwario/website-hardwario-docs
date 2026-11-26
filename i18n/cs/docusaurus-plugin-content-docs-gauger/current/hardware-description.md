@@ -11,14 +11,14 @@ title_meta: "Popis hardwaru (GAUGER)"
 
 | **Elektrické parametry**  |                  |
 | :------------------------ | ---------------: |
-| Minimální napájecí napětí |               9V |
-| Maximální napájecí napětí |              28V |
-| Maximální vstupní napětí  |              60V |
-| Prahové vstupní napětí    |              12V |
-| Typický příkon            |               1W |
-| Maximální příkon          |              24W |
+| Minimální napájecí napětí |               9 V |
+| Maximální napájecí napětí |              28 V |
+| Maximální vstupní napětí  |              60 V |
+| Prahové vstupní napětí    |              12 V |
+| Typický příkon            |               1 W |
+| Maximální příkon          |              24 W |
 | **Mechanické parametry**  |                  |
-| Rozměry krabičky          |       80x90x33mm |
+| Rozměry krabičky          |       80x90x33 mm |
 | Materiál krabičky         |              ABS |
 | Provozní teplota          | -20 °C až +70 °C |
 | **Vstupy**                |                  |

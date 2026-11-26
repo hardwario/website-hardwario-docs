@@ -1,9 +1,9 @@
 ---
-title: Managing Devices
+title: Managing devices
 description: "Create devices by serial number and claim token through the HARDWARIO Cloud API, then update, count or delete them, also in bulk from your own system."
 ---
 
-# Managing Devices
+# Managing devices
 
 Create, update, and remove devices programmatically, handy for onboarding many
 devices from your own system.

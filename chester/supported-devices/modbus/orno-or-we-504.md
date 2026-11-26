@@ -26,9 +26,9 @@ Current and voltage are measured directly via internal circuitry.
 
 ---
 
-### Power Installation
+### Power installation
 
-#### Example of Installation: ORNO Energy Analyzer - OR-WE-504
+#### Example of installation: ORNO Energy Analyzer - OR-WE-504
 
 | **ORNO Energy Analyzer OR-WE-504** | |
 |-------------------------------------|----------------|
@@ -36,7 +36,7 @@ Current and voltage are measured directly via internal circuitry.
 | Pin N                               | **N (IN)**     |
 | Pin 3                               | **L (OUT)**    |
 
-#### Connection Diagram (OR-WE-504)
+#### Connection diagram (OR-WE-504)
 
 ![ORNO Energy Analyzer - OR-WE-504 - Connection Diagram](images/orno-or-we-504-connection-diagram.webp)
 
@@ -48,9 +48,9 @@ The neutral conductor can be connected either directly to the meter’s **N term
 
 ---
 
-### Modbus Communication
+### Modbus communication
 
-#### Example of Modbus Communication Installation: ORNO Energy Analyzer - OR-WE-504
+#### Example of Modbus communication installation: ORNO Energy Analyzer - OR-WE-504
 
 | **ORNO Energy Analyzer OR-WE-504** | **CHESTER Modbus** |
 |-------------------------------------|--------------------|
@@ -58,7 +58,7 @@ The neutral conductor can be connected either directly to the meter’s **N term
 | Pin 25                              | Pin 6 (B)          |
 | Pin 24 (optional)                  | GND (optional)    |
 
-#### Connection Diagram (OR-WE-504)
+#### Connection diagram (OR-WE-504)
 
 ![ORNO Energy Analyzer - OR-WE-504 - Modbus Communication](images/orno-or-we-504-modbus.webp)
 
@@ -70,13 +70,13 @@ If the RS-485 converter does not support a GND terminal, **Pin 24 does not need 
 
 ---
 
-### Modbus Communication Configuration
+### Modbus communication configuration
 
 The communication parameters of the OR-WE-504 can be configured using one of the following methods.
 
 ---
 
-#### 1. Using the Official ORNO Software
+#### 1. Using the official ORNO software
 
 Communication parameters can be configured via the official ORNO configuration software.
 
@@ -95,7 +95,7 @@ Connect the RS-485 lines to the energy meter:
 
 ---
 
-#### 2. Using the CHESTER Terminal
+#### 2. Using the CHESTER terminal
 
 You can access the CHESTER Terminal using one of the following options:
 
@@ -105,7 +105,7 @@ You can access the CHESTER Terminal using one of the following options:
 
 ---
 
-#### Modbus Communication Configuration for CHESTER
+#### Modbus communication configuration for CHESTER
 
 Use the following commands to configure communication parameters via the CHESTER Terminal:
 
@@ -122,9 +122,9 @@ config save
 
 ---
 
-### Default Modbus Communication Configuration
+### Default Modbus communication configuration
 
-| Address | Baud Rate | Parity | Stop Bit |
+| Address | Baud rate | Parity | Stop bit |
 |--------|-----------|--------|----------|
 | 1      | 9.6k      | None   | 1        |
 
@@ -142,9 +142,9 @@ Make sure the CHESTER configuration **matches the meter configuration**.
 
 ---
 
-### Measured Values
+### Measured values
 
-| Measured Value | Key / Path |
+| Measured value | Key / path |
 |---------------|------------|
 | Voltage       | E_ENERGY_METER.METER_1.VOLTAGE.MEASUREMENTS |
 | Current       | E_ENERGY_METER.METER_1.CURRENT.MEASUREMENTS |

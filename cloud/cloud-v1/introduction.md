@@ -6,7 +6,7 @@ description: "HARDWARIO Cloud Legacy: the infrastructure that provided IoT conne
 ---
 import Image from '@theme/IdealImage';
 
-# CLOUD Introduction
+# CLOUD introduction
 
 The **HARDWARIO Cloud** is an infrastructure that provides IoT connectivity and enables the management of HARDWARIO IoT devices and provides access to the transmitted device data via REST APIs or callbacks.
 
@@ -21,7 +21,7 @@ The **HARDWARIO Cloud** is an infrastructure that provides IoT connectivity and 
 1. To learn about cloud integration options, follow the chapter:<br/>
    [**Cloud Integrations**](#cloud-integrations)
 
-## Basic Features
+## Basic features
 
 * The incoming connections are encapsulated in so-called sessions, which are established from the devices. The sessions are unique and fully traceable in the communication logs.
 
@@ -39,7 +39,7 @@ The **HARDWARIO Cloud** is an infrastructure that provides IoT connectivity and 
 
 * All components run in isolated **Docker** containers (bootstrapped by **Docker Compose**).
 
-## Security Precautions
+## Security precautions
 
 - Communication between the device and server uses a proven **DTLS** socket implementation (v1.2) in the **PSK mode**.
 
@@ -59,7 +59,7 @@ The **HARDWARIO Cloud** is an infrastructure that provides IoT connectivity and 
 
 - Every HARDWARIO team member is required to use password managers together with 2FA wherever possible. Authentication via trusted identity providers, such as Google, Microsoft, etc., is preferred.
 
-## Cloud Integrations
+## Cloud integrations
 
 ### Callbacks
 

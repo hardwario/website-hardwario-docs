@@ -29,7 +29,7 @@ If you want your device to last even longer and don't care about the footprint, 
 ## Features
 - Highly efficient **DC/DC converter TPS61099 (TI)**
 - Very low quiescent current &lt;5 μA
-- Efficiency up to 93% at 10 mA
+- Efficiency up to 93 % at 10 mA
 - Recommended types of batteries:
   - **2x AAA 1.5 V Alkaline**
   - **2x AAA Eneloop NiMH**

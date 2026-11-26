@@ -1,16 +1,16 @@
 ---
 slug: platform-security
-title: Platform Security
-sidebar_label: Platform Security
+title: Platform security
+sidebar_label: Platform security
 description: "Basic security overview of the CHESTER platform: physical security, Bluetooth, LTE and IPsec, device communication and HARDWARIO Cloud."
 ---
 import Image from '@theme/IdealImage';
 
-# Platform Security
+# Platform security
 
 This article provides a basic security overview of the **CHESTER** platform. The article is split into multiple chapters, which describe individual domains.
 
-## Physical Security
+## Physical security
 
 For the **CHESTER** hardware device itself, this domain is solely the customer's responsibility. However, the cryptographic keys (e.g., for the **SIM card**) are protected by smartcard platform chips.
 
@@ -20,7 +20,7 @@ The **CHESTER mainboard** integrates the **MEMS accelerometer** that can report 
 
 :::
 
-## Bluetooth Radio
+## Bluetooth radio
 
 The **CHESTER** platform uses a certified **Bluetooth Low Energy** (BLE) stack from **Nordic Semiconductor** using their **SoftDevice** implementation. The utilized **System-on-Chip** (nRF52840) supports the BLE specification version 5.3. Access to all exposed Bluetooth **services** and **characteristics** is protected (encrypted and authenticated link) by the standard Bluetooth security mechanisms.
 
@@ -32,7 +32,7 @@ The **Bluetooth stack** in the firmware implementation is optional and can be ea
 
 :::
 
-## LTE Connectivity
+## LTE connectivity
 
 The security of the LTE link is provided through the standard mechanism in the **Evolved Packet System** (EPS). The details of the EPS specification can be found in the **3GPP LTE Release 13**.
 
@@ -46,7 +46,7 @@ Although the devices share the same network IP space, the devices cannot communi
 
 :::
 
-## Vodafone IPsec Tunnel
+## Vodafone IPsec tunnel
 
 Connectivity between **Evolved Packet System** (EPS) and **HARDWARIO Cloud** is secured by the **IPsec** tunnel. The **IPsec** tunnel is defined by the **IETF** standards and uses strong cryptography.
 
@@ -54,11 +54,11 @@ The **re-keying** interval of the established tunnel is less than **60 minutes**
 
 The **IPsec** tunnel uses IKEv2 (`aes256-sha256-modp2048`).
 
-## Device Communication
+## Device communication
 
 **CHESTER** communicates with **HARDWARIO Cloud** using the **FLAP** protocol over UDP. Every FLAP packet travels in a **MAC envelope** with a 64-bit message authentication code (MAC) based on SHA-256 and keyed with the unique **claim token** of the device, so a packet cannot be forged or modified on the way. The MAC envelope does not encrypt the data: confidentiality is provided by the private APN with the IPsec tunnel described above. Devices built on the nRF9151 can also use the **DTLS 1.2** envelope with a pre-shared key instead. See [**FLAP MAC Envelope**](/cloud/device-protocol/mac-envelope) and [**FLAP DTLS Envelope**](/cloud/device-protocol/dtls-envelope).
 
-## HARDWARIO Cloud Security
+## HARDWARIO Cloud security
 
 The **HARDWARIO Cloud** infrastructure operates in the data centers of the **DigitalOcean** cloud provider. All infrastructure runs on the **Ubuntu LTS** Linux server distribution. The **HARDWARIO** team performs regular security audits and maintenance of the complete infrastructure.
 
@@ -66,7 +66,7 @@ The complete cloud infrastructure is architected in a way that tends to eliminat
 
 The messages are processed by the **data streaming service**, which enhances data delivery reliability.
 
-## Customer Infrastructure
+## Customer infrastructure
 
 **HARDWARIO Cloud** provides three services to access device data/device management features:
 

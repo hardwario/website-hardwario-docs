@@ -1,6 +1,6 @@
 ---
 slug: sub-ghz-radio
-title: Sub-GHz Radio
+title: Sub-GHz radio
 ---
 import Image from '@theme/IdealImage';
 
@@ -14,7 +14,7 @@ The radio frequency **868 MHz (for Europe)** or **915 MHz (for the U.S.)** allow
 
 :::
 
-## Communication Range
+## Communication range
 
 We have done several radio communication tests. We claim, that from a single point, you are typically able to provide full-house radio coverage.
 
@@ -36,7 +36,7 @@ On the other hand, if the radio communication range is not sufficient, the netwo
 
 :::
 
-## Radio Topology
+## Radio topology
 
 TOWER supports only **star network topology**. Such configuration offers high reliability, easy troubleshooting and deterministic service time from batteries.
 
@@ -51,7 +51,7 @@ To read more about how to pair nodes, you can visit the [**Radio Network Managem
 
 :::
 
-## Radio Power Management
+## Radio power management
 
 As the gateway is powered all the time it always listens for the messages. Thanks to this it should be no problem for the node to send a message to the gateway.
 
@@ -135,20 +135,20 @@ void application_init(void)
 
 </details>
 
-## Radio Parameters
+## Radio parameters
 
 | Parameter                        | Value     |
 | :------------------------------- | :-------- |
-| Communication Frequency (Europe) | 868.0 MHz |
+| Communication frequency (Europe) | 868.0 MHz |
 | Communication frequency (U.S.)   | 915.0 MHz |
-| Modulation Type                  | GFSK      |
-| Modulation Rate                  | 19.2 kbps |
-| TX Frequency Deviation           | 20 kHz    |
-| TX Transmit Power                | 11.6 dBm  |
-| RX Filter Bandwidth              | 100 kHz   |
+| Modulation type                  | GFSK      |
+| Modulation rate                  | 19.2 kbps |
+| TX frequency deviation           | 20 kHz    |
+| TX transmit power                | 11.6 dBm  |
+| RX filter bandwidth              | 100 kHz   |
 
 
-## Packet Structure
+## Packet structure
 
 | PRE(4) | SYN(4) | LEN(1) | DST(1) | DATA(0..60) | CRC(2) |
 | :----- | :----- | :----- | :----- | :---------- | :----- |

@@ -76,7 +76,7 @@ for (const d of devices) {
 </TabItem>
 </Tabs>
 
-## Full Reference
+## Full reference
 
 The [**Swagger documentation**](https://api.hardwario.cloud/v2/documentation/) lists
 every endpoint (spaces, devices, messages, connectors, tags, variables, firmware,

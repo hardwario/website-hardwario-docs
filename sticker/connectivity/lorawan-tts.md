@@ -17,7 +17,7 @@ import Image from '@theme/IdealImage';
 
 ---
 
-## Device Credentials & NFC Extraction
+## Device credentials & NFC extraction
 
 Before registering a STICKER unit in The Things Stack, read its factory keys over NFC with
 [**HARDWARIO Manager**](/apps/hardwario-manager). There is no cable and no
@@ -55,16 +55,16 @@ for. STICKER is read from an **Android** or **iOS** phone with NFC.
 
 ---
 
-## Select Activation Method
+## Select activation method
 
-| Activation Mode | Description | Required Credentials |
+| Activation mode | Description | Required credentials |
 |---|---|---|
 | **[OTAA (Over-The-Air Activation)](./tts-otaa.md)** *(Recommended)* | Dynamic session key negotiation on Join. Ensures maximum security. | **DevEUI**, **JoinEUI (AppEUI)**, **AppKey** |
 | **[ABP (Activation by Personalization)](./tts-abp.md)** | Pre-assigned static session keys. Skips the Join procedure entirely. | **DevAddr**, **NwkSKey**, **AppSKey** |
 
 ---
 
-## Payload Formatter & Downlink Configuration
+## Payload formatter & downlink configuration
 
 When registering your STICKER end device in TTS:
 
@@ -78,7 +78,7 @@ Use the `ttn.js` from the same firmware release as your devices. Firmware v2.0.0
 
 ---
 
-## Useful Links
+## Useful links
 
 - [HARDWARIO Manager and STICKER](/sticker/hardwario-manager/)
 - [HARDWARIO Manager Quick Start Guide](/apps/hardwario-manager/first-steps)

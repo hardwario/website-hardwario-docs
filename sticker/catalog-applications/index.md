@@ -1,33 +1,33 @@
 ---
 slug: catalog-applications
-title: STICKER Variants
+title: STICKER variants
 description: "HARDWARIO STICKER is available in three ready-to-use functional variants: STICKER Clime, STICKER Input, and STICKER Motion."
 ---
 import Image from '@theme/IdealImage';
 
-# STICKER Variants
+# STICKER variants
 
 HARDWARIO STICKER is available in three ready-to-use functional variants: **STICKER Clime**, **STICKER Input**, and **STICKER Motion**. All variants share the common STM32WL platform, multi-year battery operation powered by 2× AA cells, encrypted NFC configuration, and full remote management over LoRaWAN (fPort 85) or LoRa P2P.
 
 ---
 
-## Variant Comparison
+## Variant comparison
 
-| Variant | Primary Purpose | Integrated Sensors / Inputs | External Expansion | Key Use Cases |
+| Variant | Primary purpose | Integrated sensors / inputs | External expansion | Key use cases |
 |---|---|---|---|---|
-| [**STICKER Clime**](/sticker/catalog-applications/sticker-clime/) | Environmental monitoring | Temperature, Relative Humidity, Ambient Light, Barometric Pressure | — | Indoor climate tracking, cold supply chain, greenhouses, cleanrooms |
+| [**STICKER Clime**](/sticker/catalog-applications/sticker-clime/) | Environmental monitoring | Temperature, Relative Humidity, Ambient Light, Barometric Pressure | – | Indoor climate tracking, cold supply chain, greenhouses, cleanrooms |
 | [**STICKER Input**](/sticker/catalog-applications/sticker-input/) | Industrial & probe interface | Temperature, Relative Humidity, 2× external inputs (each digital, 0–24 V analog or S0 pulse counter) | 1-Wire bus (Dallas, Machine Probe), S0 pulse counters | Energy meter reading, machine status, industrial PLC monitoring |
-| [**STICKER Motion**](/sticker/catalog-applications/sticker-motion/) | Presence & motion tracking | PIR motion detector, 3-axis Accelerometer, Dual Hall-effect switches | — | Building security, space occupancy, door monitoring, asset movement |
+| [**STICKER Motion**](/sticker/catalog-applications/sticker-motion/) | Presence & motion tracking | PIR motion detector, 3-axis Accelerometer, Dual Hall-effect switches | – | Building security, space occupancy, door monitoring, asset movement |
 
 ---
 
-## Overview of Variants
+## Overview of variants
 
 ### STICKER Clime
 
 **STICKER Clime** is designed for precise microclimate monitoring in buildings, warehouses, and industrial facilities.
 
-* **Integrated Sensors:** Sensirion SHT40 sensor (**±0.2 °C** temperature, **±2%** humidity), OPT3001 ambient light sensor, and MPL3115A2 barometric pressure sensor.
+* **Integrated Sensors:** Sensirion SHT40 sensor (**±0.2 °C** temperature, **±2 %** humidity), OPT3001 ambient light sensor, and MPL3115A2 barometric pressure sensor.
 * **Key Benefit:** Complete overview of environmental quality and ambient conditions without needing external sensor cables.
 * **v2.0 Enhancements:** Temperature, humidity, pressure, illuminance and the barometer's own temperature can all be used in alarm rules and recorded in the history. The onboard temperature/humidity sensor can be switched off with `cap-sht`. On threshold rules, `dwell` is now a hysteresis band in the channel's units (for example °C), not a time in seconds.
 

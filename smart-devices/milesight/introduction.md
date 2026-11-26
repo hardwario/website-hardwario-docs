@@ -13,15 +13,15 @@ import Image from '@theme/IdealImage';
 
 Milesight is particularly renowned for its **LoRaWAN®** product line, which stands out for its industrial reliability combined with a sleek, modern design suitable for office and commercial environments.
 
-### Key Product Categories
+### Key product categories
 
 The Milesight portfolio covered in our documentation includes:
 
 * **Environmental Sensors (AM/EM Series):** Advanced devices for monitoring Indoor Air Quality (IAQ), temperature, humidity, CO2, and occupancy. Many models feature e-Ink screens for clear local data visualization.
 * **LoRaWAN Gateways (UG Series):** robust indoor and outdoor gateways that serve as the bridge between sensors and the cloud, featuring embedded network servers and high processing capability.
-* **IoT Controllers (UC Series):** Devices designed to bridge legacy sensors and actuators (4-20mA, Modbus RS-485, GPIO) to LoRaWAN networks.
+* **IoT Controllers (UC Series):** Devices designed to bridge legacy sensors and actuators (4-20 mA, Modbus RS-485, GPIO) to LoRaWAN networks.
 
-### Why Choose Milesight?
+### Why choose Milesight?
 
 * **User-Friendly Configuration:** Most sensors support **NFC configuration**, allowing for rapid deployment using a smartphone app without opening the device enclosure.
 * **Premium Design:** Unlike typical "industrial-looking" hardware, Milesight sensors (especially the AM series) are designed to blend seamlessly into modern smart buildings and offices.

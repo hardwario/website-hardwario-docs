@@ -3,7 +3,7 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.docs.category.User Guide": {
+  "sidebar.docs.category.User guide": {
     "message": "Uživatelská příručka",
     "description": "The label for category 'User Guide' in sidebar 'docs'"
   },
@@ -15,7 +15,7 @@
     "message": "Ostatní",
     "description": "The label for category 'Other' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Detailed Description": {
+  "sidebar.docs.category.Detailed description": {
     "message": "Podrobný popis",
     "description": "The label for category 'Detailed Description' in sidebar 'docs'"
   },
@@ -23,7 +23,7 @@
     "message": "Podrobná dokumentace ke konektorům, provozním stavům, komunikaci a napájení zařízení GAUGER.",
     "description": "The generated-index page description for category 'Detailed Description' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Operation Instructions": {
+  "sidebar.docs.category.Operation instructions": {
     "message": "Návod k obsluze",
     "description": "The label for category 'Operation Instructions' in sidebar 'docs'"
   },

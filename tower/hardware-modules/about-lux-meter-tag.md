@@ -1,7 +1,7 @@
 ---
 slug: about-lux-meter-tag
 title: About Lux Meter Tag
-description: "TOWER Lux Meter Tag with the TI OPT3001 ambient light sensor on I²C, measuring illuminance from 0.01 to 83,000 lux at 1.8 µA active current."
+description: "TOWER Lux Meter Tag with the TI OPT3001 ambient light sensor on I²C, measuring illuminance from 0.01 to 83 000 lux at 1.8 µA active current."
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +12,7 @@ import Image from '@theme/IdealImage';
     </div>
     <div class="col col--6">
 
-        The <b>Lux Meter Tag</b> uses a high dynamic range <b>light intensity sensor OPT3001</b> that can measure illuminance from 0.01 to 83,000 lux. This sensor is digital and calibrated. It communicates using an I²C bus and features a very low power operation and shutdown mode.
+        The <b>Lux Meter Tag</b> uses a high dynamic range <b>light intensity sensor OPT3001</b> that can measure illuminance from 0.01 to 83 000 lux. This sensor is digital and calibrated. It communicates using an I²C bus and features a very low power operation and shutdown mode.
 
     </div>
   </div>
@@ -27,7 +27,7 @@ You can use the sensor to **detect day and night** or it could be used as auxili
 ## Features
 - Digital ambient **light sensor OPT3001 (TI)**
 - Communication using the **I²C bus**
-- Measures in the range from **0.01 to 83,000 lux**
+- Measures in the range from **0.01 to 83 000 lux**
 - 23-bit effective dynamic range
 - Optional interrupt output
 - Power consumption:

@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage';
 
 Once your devices are [connected](/apps/thingsboard/cloud-connection), this guide shows you how to give them readable names, check their data, sort them into groups and delete them safely.
 
-You find your devices under **Devices & assets → Devices** in the left menu. Tenant administrators find them under **Entities → Devices**.
+You find your devices under **Devices** in the left menu. Tenant administrators find them under **Entities → Devices**.
 
 ![Devices list with the details of one device open on the right](images/devices-details.jpg)
 

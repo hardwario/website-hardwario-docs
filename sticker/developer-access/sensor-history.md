@@ -1,11 +1,11 @@
 ---
 slug: sensor-history
-title: Sensor History
+title: Sensor history
 description: "STICKER store-and-forward sensor history: selecting recorded channels, the history shell command, replay over the radio, NFC readout and the 32 KB buffer."
 ---
 import Image from '@theme/IdealImage';
 
-# Sensor History & Store-and-Forward (`history`)
+# Sensor history & store-and-forward (`history`)
 
 The **Sensor History Engine** provides store-and-forward functionality for STICKER. STICKER records its sensor readings into non-volatile flash memory at every report interval, also while it has no radio connectivity. Once connectivity is restored or requested by the backend, historical data records can be replayed over the radio or read locally over NFC.
 
@@ -36,7 +36,7 @@ The `history sensors` command below selects channels by name, which is usually e
 
 One record is stored per report interval (`interval-report`). It holds the latest sensor sample, taken on the `interval-sample` schedule (or just before the report when `interval-sample` is `0`), see [**Configuration**](configuration.md). The [**Sensor History Calculator**](sensor-history-calculator.mdx) shows how long the buffer lasts for a given channel selection and interval.
 
-### Recordable Channels
+### Recordable channels
 
 Every channel of the motherboard and of each 1-Wire slot with a sensor type can be recorded. In the shell, motherboard channels use their plain names (`temperature`, `pressure`, `input-a-voltage`, …) and 1-Wire channels carry the slot prefix (`s1-temperature`, `s2-humidity`, …).
 
@@ -46,7 +46,7 @@ Every channel of the motherboard and of each 1-Wire slot with a sensor type can 
 
 ---
 
-## Shell Commands (`history`)
+## Shell commands (`history`)
 
 | Command | Description |
 |---|---|
@@ -63,7 +63,7 @@ Every channel of the motherboard and of each 1-Wire slot with a sensor type can 
 
 ---
 
-## Replaying & Retrieving History
+## Replaying & retrieving history
 
 Data stored in the history buffer can be retrieved through two interfaces:
 
@@ -74,7 +74,7 @@ Each history frame carries its own `time_synced` flag: records captured before t
 
 ---
 
-## Storage & Ring Buffer Capacity
+## Storage & ring buffer capacity
 
 History records are stored in a dedicated **32 KB flash ring partition**, strictly isolated from system configuration and radio credentials. The ring consists of 16 pages of 2 KB; each page starts with a 40 B header and holds **1,757 B** of records.
 
@@ -84,7 +84,7 @@ Memory footprint varies by selected channel size:
 - Counters (Hall switches, inputs, PIR and accelerometer motion counts): 4 bytes each
 
 **Capacity Estimate:**
-For the default configuration (temperature + humidity, 3 B per record), a page holds 585 records and the 32 KB buffer **9,360 records**, representing about **97 days of offline logging** at the default 15-minute report interval. For other channels and intervals, use the [**Sensor History Calculator**](sensor-history-calculator.mdx).
+For the default configuration (temperature + humidity, 3 B per record), a page holds 585 records and the 32 KB buffer **9 360 records**, representing about **97 days of offline logging** at the default 15-minute report interval. For other channels and intervals, use the [**Sensor History Calculator**](sensor-history-calculator.mdx).
 
 :::caution When the history starts over
 - **Upgrade from v1.4.x:** firmware v2.0.0 does not read the history pages of v1.4.x, so the ring **starts empty** after the upgrade. Read out what you need before upgrading. There is no supported downgrade from v2.0.0.

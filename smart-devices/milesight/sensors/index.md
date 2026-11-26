@@ -1,6 +1,6 @@
 ---
 slug: index
-title: Milesight - Sensors
+title: Milesight - sensors
 description: "Milesight LoRaWAN sensors tested by HARDWARIO, with reference resources for each device."
 ---
 
@@ -62,7 +62,7 @@ https://docs.hardwario.com/smart-devices/milesight/videos-milesight/general-conf
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 To operate your LoRaWAN device, you can choose between two supported network server platforms. Both solutions allow you to manage gateways, register end devices, configure profiles, and process payload data.
 

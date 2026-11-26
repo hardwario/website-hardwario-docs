@@ -6,13 +6,13 @@ title_meta: "Gateways (The Things Stack)"
 ---
 import Image from '@theme/IdealImage';
 
-# Gateways Configuration Guide
+# Gateways configuration guide
 
 This tutorial guides you through the process of adding and configuring a gateway in The Things Stack.
 
 ---
 
-## Creating a New Gateway
+## Creating a new gateway
 
 1. On the **Home** tab, click **Register gateway**.  
    - If you are on a different tab, click the blue **+ Add** button in the top right and choose **Add new gateway**.
@@ -43,7 +43,7 @@ This tutorial guides you through the process of adding and configuring a gateway
 
 ---
 
-## Downloading API Keys
+## Downloading API keys
 
 A window titled **Download gateway API keys** will appear.
 
@@ -63,11 +63,11 @@ After downloading:
 
 ---
 
-## Gateway Ready
+## Gateway ready
 
 Your gateway is now ready to use, and you can begin connecting individual end devices.
 
-## Removing Gateway
+## Removing gateway
 
 When deleting a gateway in The Things Stack, its **Gateway ID is not fully removed from the server**. Even though the gateway disappears from the console, the ID remains reserved in the backend.  
 This means it is **not possible to create a new gateway with the same ID** unless the ID is manually released.
@@ -75,7 +75,7 @@ This means it is **not possible to create a new gateway with the same ID** unles
 Only a **system administrator** has the rights to free or purge the gateway ID from the server.  
 For regular users, the only available solution is to **create the gateway again using a new, different ID**.
 
-## Video Tutorial
+## Video tutorial
 
 :::tip
 If you need **further assistance** or a visual demonstration of the process described in this guide, consult the [**Video Guide**](/apps/videos-apps/tts-gateways).

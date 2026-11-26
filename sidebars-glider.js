@@ -6,7 +6,7 @@ const sidebars = {
     'introduction',
     {
       type: 'category',
-      label: 'User Guide',
+      label: 'User guide',
       className: 'sidebar-section',
       collapsible: false,
       items: [
@@ -14,7 +14,7 @@ const sidebars = {
         'cloud-setup',
         {
           type: 'category',
-          label: 'External Sensors',
+          label: 'External sensors',
           link: {
             type: 'doc',
             id: 'external-sensors/index',
@@ -45,7 +45,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Console Access',
+          label: 'Console access',
           link: {
             type: 'generated-index',
             description: 'Access the GLIDER console over USB or RTT with J-Link.',
@@ -71,7 +71,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Firmware Flashing',
+          label: 'Firmware flashing',
           link: {
             type: 'doc',
             id: 'firmware-flashing/index',

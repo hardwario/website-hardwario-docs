@@ -1,9 +1,9 @@
 ---
-title: Processing Platform
+title: Processing platform
 description: "FIBER is built on the Raspberry Pi Compute Module 4: quad-core Cortex-A72 at 1.8 GHz, 1–8 GB RAM, 8–32 GB eMMC and industrial temperature options."
 ---
 
-# Processing Platform
+# Processing platform
 
 **FIBER** is built on the **Raspberry Pi Compute Module 4 (CM4)**, providing a reliable ARM-based processing platform with extensive Linux ecosystem support. This enables long-term maintenance, broad application compatibility, and flexibility in custom firmware development.
 

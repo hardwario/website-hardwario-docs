@@ -79,7 +79,7 @@ Notes:
 
 ---
 
-## 4) The Things Stack – Create application
+## 4) The Things Stack – create application
 
 1. Go to **Home**
 2. Click **Create application**
@@ -91,7 +91,7 @@ Notes:
 
 ---
 
-## 5) The Things Stack – Register CHESTER end device
+## 5) The Things Stack – register CHESTER end device
 
 1. Inside the application click **+ Register end device**
 2. Choose **Enter the device manually**

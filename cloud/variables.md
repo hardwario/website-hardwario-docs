@@ -10,9 +10,9 @@ In the Variables section, you can upload **decryption keys** used to decode data
 
 ---
 
-## Setting Up Decryption Keys
+## Setting up decryption keys
 
-### Step-by-Step Instructions
+### Step-by-step instructions
 
 1. In the left sidebar, select **Variables**.  
 2. Click the **+ NEW VARIABLE** button in the top-right corner.  

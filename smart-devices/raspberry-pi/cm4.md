@@ -10,7 +10,7 @@ description: Raspberry Pi Compute Module 4, a compact system-on-module for IoT g
 
 The **Compute Module 4 (CM4)** is a compact, industrial-grade system-on-module from [Raspberry Pi](https://www.raspberrypi.com/). Unlike the standard Raspberry Pi boards, the CM4 is designed for integration into custom carrier boards and embedded products.
 
-## Key Specifications
+## Key specifications
 
 | Parameter | Value |
 |---|---|
@@ -19,14 +19,14 @@ The **Compute Module 4 (CM4)** is a compact, industrial-grade system-on-module f
 | Flash | 0 / 8 / 16 / 32 GB eMMC (or eMMC-less for SD card) |
 | Wireless | 802.11b/g/n/ac Wi-Fi, Bluetooth 5.0 (on wireless variants) |
 | Interfaces | PCIe Gen 2 × 1, USB 2.0, HDMI 2.0 × 2, CSI, DSI, 28× GPIO |
-| Form Factor | 55 × 31 mm, dual 100-pin high-density connectors |
-| Operating Temp. | 0 °C to 85 °C |
+| Form factor | 55 × 31 mm, dual 100-pin high-density connectors |
+| Operating temp. | 0 °C to 85 °C |
 
 ### CM4108016
 
 The variant sold in the HARDWARIO Store is the **CM4108016**, with 8 GB RAM, 16 GB eMMC, Wi-Fi and Bluetooth.
 
-## HARDWARIO Integration
+## HARDWARIO integration
 
 The CM4 is used in HARDWARIO ecosystems for:
 

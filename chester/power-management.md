@@ -1,12 +1,12 @@
 ---
 slug: power-management
-title: Power Management
+title: Power management
 description: "Power management options for CHESTER: battery packs, external supply, idle current, sleep modes and how to estimate battery life."
 title_meta: "Power Management (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Power Management
+# Power management
 
 This article provides useful information about various power management options for CHESTER, which is a low-power device with a typical idle current in the range of 100-200 µA. Therefore, it can be powered by batteries in many applications for 3+ years.
 
@@ -16,7 +16,7 @@ As CHESTER is a generic platform with a vast range of applications running on it
 
 :::
 
-## Battery Options
+## Battery options
 
 When a long battery lifespan or outdoor use (wide operational temperature range) is required, the proper battery chemistry selection is crucial. We have designed CHESTER to be compatible with the LiSoCl<sub>2</sub> chemistry. This type of battery provides the highest energy density among lithium batteries, a negligible self-discharge current (i.e. how much percentage of the capacity is lost when the battery is left on the shelf), and works in the temperature range from -60 to +85 °C (the figures have been taken from the Saft LS 26500 datasheet).
 
@@ -34,13 +34,13 @@ In your projects, do not forget to consider battery replacement cost, both the a
 
 :::
 
-## Integrated Battery Source
+## Integrated battery source
 
 CHESTER mainboard (CHESTER-M) is provided in 3 variants from the battery holder perspective:
 
 1. Fitted with one battery holder of the size "C".
 
-   This variant is used together with the primary cell Saft LS 26500 (chemistry LiSoCl<sub>2</sub>) with a nominal voltage of 3.6 V and cell capacity of 7,700 mAh. The cell provides total energy storage of 27 Wh.
+   This variant is used together with the primary cell Saft LS 26500 (chemistry LiSoCl<sub>2</sub>) with a nominal voltage of 3.6 V and cell capacity of 7 700 mAh. The cell provides total energy storage of 27 Wh.
 
    :::tip
 
@@ -50,7 +50,7 @@ CHESTER mainboard (CHESTER-M) is provided in 3 variants from the battery holder 
 
 1. Fitted with two battery holders of the size "AA".
 
-   This variant is used together with the primary cell Saft LS 14500 (chemistry LiSoCl<sub>2</sub>) with a nominal voltage of 3.6 V and cell capacity of 2,600 mAh. The cells are connected in parallel and the total energy storage is 18 Wh. The advantage of this variant is its thinner height profile.
+   This variant is used together with the primary cell Saft LS 14500 (chemistry LiSoCl<sub>2</sub>) with a nominal voltage of 3.6 V and cell capacity of 2 600 mAh. The cells are connected in parallel and the total energy storage is 18 Wh. The advantage of this variant is its thinner height profile.
 
    :::tip
 
@@ -62,13 +62,13 @@ CHESTER mainboard (CHESTER-M) is provided in 3 variants from the battery holder 
 
    This variant is applicable when used together with external power sources provided from extension modules such as CHESTER-Z1, CHESTER-X4, CHESTER-X10, or carrier board CHESTER-B1.
 
-## Battery Extension Modules
+## Battery extension modules
 
 If you need to use primary (non-rechargeable) cells and more battery capacity than the options mentioned in the previous section, you can use these expansion modules:
 
 * The CHESTER-B1 expansion module (in the carrier board format) can be fitted with:
 
-  * Six battery holders of size "D" for primary cell Saft LS 33600 (chemistry LiSoCl<sub>2</sub>) with a nominal voltage of 3.6 V and cell capacity of 17,000 mAh. All cells installed will provide total energy storage of 367 Wh. This variant fits in a high-profile enclosure with dimensions of 200 x 280 x 65 mm.
+  * Six battery holders of size "D" for primary cell Saft LS 33600 (chemistry LiSoCl<sub>2</sub>) with a nominal voltage of 3.6 V and cell capacity of 17 000 mAh. All cells installed will provide total energy storage of 367 Wh. This variant fits in a high-profile enclosure with dimensions of 200 x 280 x 65 mm.
 
     :::caution
 
@@ -76,7 +76,7 @@ If you need to use primary (non-rechargeable) cells and more battery capacity th
 
     :::
 
-  * Eight battery holders of size "C" for primary cell Saft LS 26500 (chemistry LiSoCl<sub>2</sub>) with a nominal voltage of 3.6 V and cell capacity of 7,700 mAh. All cells installed will provide total energy storage of 201 Wh. This variant fits in a low-profile enclosure with dimensions of 200 x 280 x 45 mm.
+  * Eight battery holders of size "C" for primary cell Saft LS 26500 (chemistry LiSoCl<sub>2</sub>) with a nominal voltage of 3.6 V and cell capacity of 7 700 mAh. All cells installed will provide total energy storage of 201 Wh. This variant fits in a low-profile enclosure with dimensions of 200 x 280 x 45 mm.
 
     :::caution
 
@@ -84,7 +84,7 @@ If you need to use primary (non-rechargeable) cells and more battery capacity th
 
     :::
 
-  * Six battery holders of size "D" for alkaline cells (alkaline-manganese dioxide) with a nominal voltage of 1.5 V and cell capacity of 17,000 mAh. All cells installed will provide total energy of 122 Wh. In this configuration, there are always two cells in series, making three parallel connections. This solution is suitable for projects with a temperature range of -10 to +50 °C. This variant fits in a high-profile enclosure with dimensions of 200 x 280 x 65 mm.
+  * Six battery holders of size "D" for alkaline cells (alkaline-manganese dioxide) with a nominal voltage of 1.5 V and cell capacity of 17 000 mAh. All cells installed will provide total energy of 122 Wh. In this configuration, there are always two cells in series, making three parallel connections. This solution is suitable for projects with a temperature range of -10 to +50 °C. This variant fits in a high-profile enclosure with dimensions of 200 x 280 x 65 mm.
 
     :::caution
 
@@ -92,9 +92,9 @@ If you need to use primary (non-rechargeable) cells and more battery capacity th
 
     :::
 
-  * Eight battery holders of size "C" for alkaline cells (alkaline-manganese dioxide) with a nominal voltage of 1.5 V and cell capacity of 7,700 mAh. All cells installed will provide total energy of 74 Wh. In this configuration, there are always two cells in series, making four parallel connections. This solution is suitable for projects with a temperature range of -10 to +50 °C. This variant fits in a low-profile enclosure with dimensions of 200 x 280 x 45 mm.
+  * Eight battery holders of size "C" for alkaline cells (alkaline-manganese dioxide) with a nominal voltage of 1.5 V and cell capacity of 7 700 mAh. All cells installed will provide total energy of 74 Wh. In this configuration, there are always two cells in series, making four parallel connections. This solution is suitable for projects with a temperature range of -10 to +50 °C. This variant fits in a low-profile enclosure with dimensions of 200 x 280 x 45 mm.
 
-* The CHESTER-Z1 expansion module with a rechargeable (and replaceable) lithium-ion battery (type 18650) with a nominal voltage of 3.7 V and a capacity of 2,150 mAh. This solution is suitable for projects where mains power (or DC line) is available, but long-term device operation is required in the event of a power failure. Alternatively, you can connect photovoltaic solar panels to the CHESTER-Z1 input terminals instead of the power adapter or DC line voltage.
+* The CHESTER-Z1 expansion module with a rechargeable (and replaceable) lithium-ion battery (type 18650) with a nominal voltage of 3.7 V and a capacity of 2 150 mAh. This solution is suitable for projects where mains power (or DC line) is available, but long-term device operation is required in the event of a power failure. Alternatively, you can connect photovoltaic solar panels to the CHESTER-Z1 input terminals instead of the power adapter or DC line voltage.
 
   :::caution
 
@@ -102,7 +102,7 @@ If you need to use primary (non-rechargeable) cells and more battery capacity th
 
   :::
 
-## External Power Sources
+## External power sources
 
 The CHESTER device can be powered from a DC line (or power adapter) using these modules:
 

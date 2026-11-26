@@ -83,14 +83,14 @@ Následující tabulka shrnuje aktivní součástky osazené na desce **MACHINE 
 
 | Označení | Čip | Funkce | Adresa I²C |
 | --- | --- | --- | --- |
-| U2 | DS28E17Q+ | Převodník 1-Wire → I²C (obsluhuje veškerou komunikaci sondy) | — |
+| U2 | DS28E17Q+ | Převodník 1-Wire → I²C (obsluhuje veškerou komunikaci sondy) | – |
 | U4 | SHT30-DIS-B2.5KS | Senzor teploty a vlhkosti | 0x45 |
 | U6 | LIS2DH12TR | Akcelerometr / senzor pohybu | 0x19 |
 | U3 | TMP112AID | Digitální senzor teploty | 0x48 |
 | U7 | OPT3001DNP | Digitální senzor okolního světla | 0x44 |
 | U8 | SI7210-B-03-IV | Hallův senzor / magnetometr | 0x32 |
 | U5 | M24C04-FMH6TG | Paměť EEPROM | 0x50 |
-| U1 | TPS7A05285PDB | Lineární regulátor (LDO) | — |
+| U1 | TPS7A05285PDB | Lineární regulátor (LDO) | – |
 
 :::note
 

@@ -1,13 +1,13 @@
 ---
 slug: videos-cloud
-title: Video Tutorials
+title: Video tutorials
 description: "Here you can find step-by-step guides and video tutorials that will support you in configuring and managing your devices within the HARDWARIO Cloud."
 title_meta: "HARDWARIO Cloud Video Tutorials"
 ---
 
 import Image from '@theme/IdealImage';
 
-# Video Tutorials
+# Video tutorials
 
 Here you can find step-by-step guides and video tutorials that will support you in configuring and managing your devices within the HARDWARIO Cloud.
 

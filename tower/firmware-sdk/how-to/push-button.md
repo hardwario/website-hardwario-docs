@@ -1,6 +1,6 @@
 ---
 slug: how-to-push-button
-title: "How To: Push Button"
+title: "How to: Push button"
 ---
 import Image from '@theme/IdealImage';
 

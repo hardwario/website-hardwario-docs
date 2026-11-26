@@ -20,7 +20,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 :::
 
 
-## Application Overview
+## Application overview
 
 **CHESTER Push** has push buttons on the enclosure. The application immediately sends data when any of the push buttons are pressed. For bulk orders, the number of buttons can be configured. An off-the-shelf configuration provides four push buttons on the left side. Alternatively, we can deliver a single push-button version (in the enclosure center). Also, upon a customer's request, we can customize the enclosure printing, and provide various text labels (or symbols) next to each of the push buttons.
 
@@ -32,7 +32,7 @@ The **CHESTER Push** application integrates a **CHESTER-Z1-F** extension module 
 
 **CHESTER Push** also reports temperature and device orientation (using the built-in accelerometer). All these values are provided in every message sent from the device.
 
-### LED Behaviour
+### LED behaviour
 
 The application signals push-button events on LEDs in two different ways and customers can specify which firmware variant better suits their needs.
 
@@ -56,7 +56,7 @@ The application signals push-button events on LEDs in two different ways and cus
 
   :::
 
-## Hardware Description {#chester-push}
+## Hardware description {#chester-push}
 
 The catalog application **CHESTER Push** hardware consists of the following ordering codes:
 
@@ -64,11 +64,11 @@ The catalog application **CHESTER Push** hardware consists of the following orde
 * `CHESTER-Z1-F`: Four push buttons (see [**Ordering Codes**](../ordering-codes.md#chester-z) for more variants)
 * `CHESTER-E2-LP`: Enclosure with light pipe and SMA antenna pigtail
 
-## Enclosure Template
+## Enclosure template
 
 You can use a [**front cover template**](pathname:///download/hio-enclosure-4push-130x175-cmyk.pdf) for your custom enclosure design.
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -80,7 +80,7 @@ app config backup-report-connected false
 app config backup-report-disconnected false
 ```
 
-## Specific Commands
+## Specific commands
 
 :::info
 
@@ -123,7 +123,7 @@ app config backup-report-disconnected false
 
 The latest firmware is available in Catalog Applications [Firmware chapter](index.md#application-firmware).
 
-## Example JSON Message
+## Example JSON message
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

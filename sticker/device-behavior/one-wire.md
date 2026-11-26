@@ -53,7 +53,7 @@ To put the new probe into the old slot, so that its values keep their name:
 
 If the new probe is of another type, set up the alarm rules of the slot again, because rules for the old type stay inactive. If the slot is recorded in the history, the history starts again.
 
-## Slot states in the Info uplink
+## Slot states in the info uplink
 
 The Info uplink shows the state of each slot:
 

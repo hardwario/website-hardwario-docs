@@ -5,7 +5,7 @@ description: "Create email or SMS alert rules in the HARDWARIO Dashboards Notifi
 ---
 import Image from '@theme/IdealImage';
 
-# Notification Rules Manager
+# Notification rules manager
 
 The **Notification Rules Manager** is a tool for setting up automatic alerts based on data from your IoT devices (sensors, meters, etc.). It lets you define precise conditions under which you receive an e-mail or SMS, for example when temperature exceeds a set value, humidity drops below a threshold, or a device reports an unexpected reading.
 

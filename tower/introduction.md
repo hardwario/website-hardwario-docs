@@ -6,15 +6,16 @@ sidebar_label: Introduction
 description: "TOWER is a modular, wireless, open-source and open-hardware IoT platform for rapid prototyping and deployment, at the heart of HARDWARIO Academy."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # TOWER
 
 **TOWER** is a modular, wireless, open-source/open-hardware IoT platform for rapid prototyping and deployment.
 It is used in industrial applications, STEM education, and hobby projects (home automation, gardening, lighting, escape rooms, etc.).
 
-<img src="/img/tower.webp" data-zoom-src="/img/tower.webp" width="540" alt="TOWER" />
+<ProductSpin product="tower" variants={[{id: "push", label: "TOWER Starter – Push kit"}]} frames={24} width={308} ratio={600 / 720} caption="Shown: TOWER Starter – Push kit (studio photos)" />
 
-## Quick Links
+## Quick links
 
 * [**Getting Started**](category/getting-started): Start with the TOWER platform from scratch.
 * [**Desktop Programming**](category/desktop-programming): Quick start with TOWER and your first project.
@@ -30,7 +31,7 @@ It is used in industrial applications, STEM education, and hobby projects (home 
 * [**Hardware Interfaces**](category/hardware-interfaces): Hardware layers, not only between the TOWER modules.
 * [**Changelog**](changelog): Latest firmware and platform changes.
 
-## Typical Use Cases
+## Typical use cases
 
 - Home automation, prototyping, and educational projects
 - Environmental monitoring (climate, air quality, soil conditions)
@@ -38,12 +39,12 @@ It is used in industrial applications, STEM education, and hobby projects (home 
 - Motion detection and button-based control systems
 - CO2 and air quality monitoring
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|
-| **Modular Hardware** | Snap-together Tags and Modules for sensors and actuators. |
+| **Modular hardware** | Snap-together Tags and Modules for sensors and actuators. |
 | **Open-Source & Open-Hardware** | Fully open platform, free to inspect and extend. |
-| **Wireless Sub-GHz Radio** | Communication between modules without wiring. |
+| **Wireless sub-GHz radio** | Communication between modules without wiring. |
 | **Ultra-Low-Power Design** | Long battery life for wireless nodes. |
-| **Broad Applicability** | Suitable for industrial, STEM education, and hobby projects. |
+| **Broad applicability** | Suitable for industrial, STEM education, and hobby projects. |

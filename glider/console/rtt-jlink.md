@@ -1,11 +1,11 @@
 ---
-title: RTT Console (J-Link)
+title: RTT console (J-Link)
 description: "Attach to GLIDER with a Segger J-Link over RTT for the Zephyr shell and live firmware logs: prerequisites, SWD wiring, the rttt CLI and troubleshooting."
 sidebar_position: 1
 ---
 import Image from '@theme/IdealImage';
 
-# RTT Console over J-Link
+# RTT console over J-Link
 
 :::tip
 The RTT console gives you the **Zephyr shell** plus a live firmware log stream, so it is the recommended console for **development and debugging**. For day-to-day configuration, use the [**AT Console over USB-C**](usb-at.md) instead. It requires no special hardware.

@@ -15,7 +15,7 @@ The [**HARDWARIO Terminal**](https://terminal.hardwario.com/) is a Google Chrome
 
 ---
 
-## HARDWARIO Google Chrome Terminal App Tutorial
+## HARDWARIO Google Chrome terminal app tutorial
 
 
 
@@ -49,7 +49,7 @@ To get started, you need to establish a Bluetooth connection between your comput
 
 ---
 
-## 2. Quick Commands
+## 2. Quick commands
 
 On the right side of the interface, you will see a panel dedicated to **Quick Commands**. These are the most frequently used CHESTER commands, allowing you to send them with a single click instead of typing them manually into the terminal. This makes controlling the device much faster and easier.
 
@@ -65,7 +65,7 @@ Here is a breakdown of the default Quick Commands:
 
 ---
 
-## 3. Custom Quick Commands
+## 3. Custom quick commands
 
 The terminal allows you to create your own personalized Quick Commands for actions you perform frequently.
 
@@ -80,11 +80,11 @@ The terminal allows you to create your own personalized Quick Commands for actio
 
 ---
 
-## 4. Remote Session
+## 4. Remote session
 
 A major advantage of the HARDWARIO Terminal App is the **Remote Session** feature. This allows you to grant access to your device to someone far away (such as HARDWARIO Support) without them needing a direct Bluetooth connection. Only you need to be physically connected via Bluetooth; you can then share a Session ID to let them control the CHESTER remotely.
 
-### Creating a Session (Allowing Remote Access)
+### Creating a session (allowing remote access)
 * **Step 1:** Click the **Create Session** button in the top right corner of the terminal interface.
 * **Step 2:** The session will be generated immediately. 
 * **Step 3:** Share the generated **Session ID** with the person you want to grant access to. You can also use the **Copy Link** button to send them a direct URL.
@@ -92,7 +92,7 @@ A major advantage of the HARDWARIO Terminal App is the **Remote Session** featur
 
 ![Remote-session controls and generated Session ID](images/hardwario-terminal-4.png)
 
-### Joining a Session (Connecting Remotely)
+### Joining a session (connecting remotely)
 * **Step 1:** Click the **Join Session** button in the top right corner.
 * **Step 2:** Enter the **Session ID** provided by the user who is physically connected to the device via Bluetooth.
 * **Step 3:** Once successfully connected, you can control the device remotely. The terminal output is synchronized, meaning both you and the host user will see all executed commands and their responses in real-time.

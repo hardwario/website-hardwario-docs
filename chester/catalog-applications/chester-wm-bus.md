@@ -29,7 +29,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 :::
 
 
-## Application Overview
+## Application overview
 
 **CHESTER wM-Bus** is a **Wireless M-Bus** gateway. It **supports all wM-Bus meters of the T1 and C1 classes, regardless of manufacturer**, and works as a **pass-thru gateway**: the decoding of the received telegrams into meaningful units happens in the end IoT application.
 
@@ -47,7 +47,7 @@ CHESTER wM-Bus only receives raw hexadecimal wM-Bus telegrams. Neither the devic
 
 This device supports the newer **LTEv2** stack and the current **HARDWARIO Cloud**.
 
-## Application Variants
+## Application variants
 
 **CHESTER wM-Bus** can be ordered in one of these variants:
 
@@ -75,13 +75,13 @@ The catalog **CHESTER wM-Bus DC** hardware consists of the following ordering co
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
-## Scanning and Behavior
+## Scanning and behavior
 
 Addresses of the wM-Bus devices and device mode could be imported and reconfigured over the cloud.
 
 The device has adjustable parameters where it can scan wM-Bus devices periodically, daily, weekly or monthly. The scan time and other parameters can also be set.
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -104,7 +104,7 @@ app config address count 1
 app config address add 81763000
 ```
 
-## Specific Commands
+## Specific commands
 
 :::info
 
@@ -119,7 +119,7 @@ This is not needed if you apply commands in a batch over the cloud.
 
 :::
 
-### Address List Configuration
+### Address list configuration
 
 `wm scan`
 
@@ -163,7 +163,7 @@ Useful to verify the data flow and check if sensors are sending data correctly.
 **Behavior without addresses** → If no addresses are configured, the device scans all available devices and sends all their data to the cloud.
 :::
 
-### Cloud Decode Configuration
+### Cloud decode configuration
 
 `app config cloud-decode false/true`
 
@@ -172,7 +172,7 @@ Useful to verify the data flow and check if sensors are sending data correctly.
   If the messages are encrypted, the decryption key from **Variables** is used.
 
 
-### Scan Configuration
+### Scan configuration
 
 Scanning indicates the time during which CHESTER captures wM-Bus packets. The scan method is set by the `scan-mode` parameter.
 
@@ -216,13 +216,13 @@ Specifies the day of the month when scanning 1-28 during the monthly scan
 
 After completing the configuration, you need to confirm everything.
 
-## Example Configurations
+## Example configurations
 
 When configuring over BLE, you need to apply the configuration changes with the `config save` command; otherwise the configuration is not applied.
 
 When configuring over [Cloud config downlink commands](/cloud/downlink/config), don't add the `config save` command; it is applied automatically.
 
-### Interval and wM-Bus Packets Every 2 Minutes
+### Interval and wM-Bus packets every 2 minutes
 
 wM-Bus devices send a packet every 2 minutes.
 We want to use only one antenna.
@@ -239,7 +239,7 @@ app config address add 111111
 app config address add 222222
 ```
 
-### Interval and wM-Bus Packets Every 2 minutes, Two Antennas
+### Interval and wM-Bus packets every 2 minutes, two antennas
 
 wM-Bus devices send a packet every 2 minutes.
 We want to use both antennas for better reception, each oriented differently to change polarity.
@@ -256,7 +256,7 @@ app config address add 111111
 app config address add 222222
 ```
 
-### Interval and wM-Bus Packets Sending Every Hour
+### Interval and wM-Bus packets sending every hour
 
 wM-Bus devices send a packet every 1 hour.
 We want to use only one antenna.
@@ -298,7 +298,7 @@ app config address add 222222
 
 The latest firmware is available in Catalog Applications [Firmware chapter](index.md#application-firmware).
 
-## Example JSON Message
+## Example JSON message
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -399,7 +399,7 @@ Each JSON cloud message contains up to 20 wM-Bus packets. If CHESTER is configur
 
 
 
-## HARDWARIO Cloud – Decryption Keys
+## HARDWARIO Cloud – decryption keys
 
 The **transmitted messages from wM-Bus devices are encrypted**.  
 
@@ -411,7 +411,7 @@ In this section, we will show **how to add individual decryption keys** into the
 If you are not sure how to **get started with the Cloud**, follow this tutorial: [**HARDWARIO Cloud**](/cloud/)
 :::
 
-### Step-by-Step Instructions
+### Step-by-step instructions
 
 1. In the left sidebar, select **Variables**.  
 2. Click the **+ NEW VARIABLE** button in the top-right corner.  
@@ -427,7 +427,7 @@ If you are not sure how to **get started with the Cloud**, follow this tutorial:
 There is also the option to take the incoming data from the Cloud and **manually decrypt** it using the **online tool**: [https://wmbusmeters.org/](https://wmbusmeters.org/).  
 :::
 
-## Supported wM-Bus Sensors
+## Supported wM-Bus sensors
 
 **CHESTER wM-Bus receives packets from any wM-Bus meter transmitting in the T1 or C1 mode, regardless of manufacturer.** There is no compatibility list to check your meters against.
 

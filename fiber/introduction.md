@@ -5,6 +5,7 @@ sidebar_label: Introduction
 description: "FIBER is a robust industrial IoT device built on an embedded Linux platform and designed for Industrial IoT applications."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # FIBER
 
@@ -23,15 +24,15 @@ sensors on FIBER Lite), see [**FIBER Lite**](fiber-lite/introduction) in the sid
 
 Thanks to its modular and open architecture, **FIBER** supports standard **Raspberry Pi OS** distributions as well as **custom Linux images built with Yocto**, making it usable as a preconfigured measurement appliance or as a development platform. Designed for deployment in industrial and commercial environments, the device provides wireless and wired communication channels for reliable sensor acquisition, local visualization on its integrated display, and robust network connectivity through **Ethernet**, **Wi-Fi**, or optional **LTE**.
 
-<img src="/img/fiber.webp" data-zoom-src="/img/fiber.webp" width="540" alt="FIBER" />
+<ProductSpin product="fiber" variants={[{id: "basic", label: "FIBER"}]} width={446} ratio={1157 / 960} caption="Shown: FIBER" />
 
-## Quick Links
+## Quick links
 
 * [**Installation**](installation): Bootstrap and configure the Linux system on FIBER.
 * [**Hardware Description**](category/hardware-description): Processing platform, sensor interfaces, connectivity, and full technical specifications.
 * [**Changelog**](changelog): Latest firmware and platform changes.
 
-## Typical Use Cases
+## Typical use cases
 
 - Hospital environmental monitoring across wards, pharmacies, and storage
 - Pharmaceutical cold-chain monitoring with logged temperature history and excursion alerts
@@ -40,16 +41,16 @@ Thanks to its modular and open architecture, **FIBER** supports standard **Raspb
 - Energy infrastructure temperature monitoring (transformers, switchgear)
 - Manufacturing: multi-point process temperature monitoring across production lines
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|
-| **Embedded Linux Platform** | Compatible with Raspberry Pi OS or custom Yocto-based images. |
-| **Hybrid Sensor Integration** | Wireless sensors in the 868/915 MHz ISM bands plus 8 fully independent 1-Wire ports for wired sensors. |
+| **Embedded Linux platform** | Compatible with Raspberry Pi OS or custom Yocto-based images. |
+| **Hybrid sensor integration** | Wireless sensors in the 868/915 MHz ISM bands plus 8 fully independent 1-Wire ports for wired sensors. |
 | **Industrial-Grade Design** | –20 °C to +60 °C operating range, built around the Compute Module 4 for long-term reliability. |
-| **Flexible Connectivity** | Ethernet, Wi-Fi, BLE, or optional LTE Cat 4 module. |
-| **Local Visualization & Diagnostics** | Backlit LCD, per-channel status LEDs, and an integrated acoustic buzzer. |
+| **Flexible connectivity** | Ethernet, Wi-Fi, BLE, or optional LTE Cat 4 module. |
+| **Local visualization & diagnostics** | Backlit LCD, per-channel status LEDs, and an integrated acoustic buzzer. |
 | **Power-over-Ethernet** | PoE powered, with an onboard Li-Ion backup battery. |
-| **Full Root Linux Access** | Docker support for custom firmware and application development. |
+| **Full root Linux access** | Docker support for custom firmware and application development. |
 | **Secure MQTT** | MQTT protocol with TLS encryption for secure data transmission. |
-| **Open Data Destinations** | Data streams to your own systems. The open Linux platform can run essentially any protocol your project needs. |
+| **Open data destinations** | Data streams to your own systems. The open Linux platform can run essentially any protocol your project needs. |

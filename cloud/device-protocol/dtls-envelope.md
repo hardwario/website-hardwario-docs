@@ -1,10 +1,10 @@
 ---
 slug: dtls-envelope
-title: FLAP DTLS Envelope
+title: FLAP DTLS envelope
 description: "The DTLS envelope of FLAP: DTLS 1.2 with a pre-shared key, the PSK identity, the handshake and how to set up DTLS for a device."
 ---
 
-# FLAP DTLS Envelope
+# FLAP DTLS envelope
 
 In the DTLS envelope (device setting `flap-dtls`), [**FLAP packets**](transfers.md#flap-packet) travel inside a **DTLS 1.2** session (RFC 6347) authenticated with a **pre-shared key** (PSK). The PSK authenticates the device and authorizes it to act as the device registered in HARDWARIO Cloud. DTLS encrypts the packets, protects their integrity and protects them against replay.
 
@@ -25,7 +25,7 @@ The DTLS envelope is currently available only on devices built on the **nRF9151*
 
 :::
 
-## DTLS Parameters
+## DTLS parameters
 
 | Parameter | Value |
 |---|---|
@@ -39,7 +39,7 @@ The DTLS envelope is currently available only on devices built on the **nRF9151*
 | **Connection ID** | Supported (RFC 9146), 4 bytes |
 | **Idle timeout** | 24 hours |
 
-### Cipher Suite
+### Cipher suite
 
 `TLS_PSK_WITH_AES_128_CCM_8` is supported both by the DTLS implementation of the nRF9151 modem and by the DTLS implementation of the Cloud. Its overhead per record is also small and fixed, so the size of a fragment is predictable (see [**Size Limits**](#size-limits)). That is why the Cloud offers only this suite.
 
@@ -68,7 +68,7 @@ sequenceDiagram
 
 The Cloud looks up the PSK by the identity from ClientKeyExchange. An unknown identity or a wrong PSK ends the handshake. After the handshake, the FLAP exchange works exactly as described in [**Transfers**](transfers.md).
 
-## Size Limits
+## Size limits
 
 The size of a fragment follows from the size of the datagram and the overhead of the envelope:
 
@@ -85,7 +85,7 @@ The cipher suite is fixed, so the DTLS record overhead is fixed and small: the r
 
 The 508-byte datagram is a conservative limit that crosses any IPv4 path without fragmentation. Where the path MTU allows larger datagrams, the fragment size can grow accordingly, up to the maximum UDP payload.
 
-## Setting Up DTLS
+## Setting up DTLS
 
 The same PSK must be stored in HARDWARIO Cloud and in the device.
 
@@ -118,7 +118,7 @@ config save
 
 The PSK is written into the secure credential storage of the modem. The device reconnects and opens a DTLS session with the Cloud on the next transmission. All cloud settings of the device are listed in [**Device Settings**](#device-settings).
 
-## Device Settings
+## Device settings
 
 Devices built on the nRF9151 select the envelope and the server with the `cloud config` shell command. `cloud config show` lists all cloud settings. The settings that apply to the DTLS envelope:
 

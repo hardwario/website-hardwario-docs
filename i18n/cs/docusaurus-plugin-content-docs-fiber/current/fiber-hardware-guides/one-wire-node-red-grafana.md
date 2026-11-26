@@ -88,7 +88,7 @@ nesmyslná a je třeba ji zahodit, ne započítat do průměru.
 
 :::note
 
-Čtení těchto souborů spustí na sběrnici převod, který trvá až ~750 ms na senzor. Aplikace
+Čtení těchto souborů spustí na sběrnici převod, který trvá až přibližně 750 ms na senzor. Aplikace
 FIBER už tytéž sondy vzorkuje každé 2 sekundy, takže vlastní dotazy omezte.
 Několik sekund mezi čteními bohatě stačí a sběrnice tak zůstane volná pro aplikaci,
 která řídí alarmy.

@@ -29,7 +29,7 @@ You can use the **West** utility `ncs-sbom` (provided by the **nRF Connect SDK**
 
 Depending on your configuration, the report is generated in **HTML** or **SPDX**, or in both formats. See the [**Software Bill of Materials**](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/scripts/west_commands/sbom/README.html#west-sbom) documentation for more information.
 
-## License Statement
+## License statement
 
 This is the content of the `LICENSE` file found in the **CHESTER SDK** directory:
 

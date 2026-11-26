@@ -30,7 +30,7 @@ Přihlaste se do HARDWARIO Dashboards jako *Customer Administrator*.
 
 ### Krok 2: Přejděte na Assets {#step-2-navigate-to-assets}
 
-V levém menu otevřete **Devices & assets → Assets** (správci tenantu **Entities → Assets**).
+V levém menu otevřete **Assets** (správci tenantu **Entities → Assets**).
 
 ### Krok 3: Přidejte nový asset {#step-3-add-a-new-asset}
 

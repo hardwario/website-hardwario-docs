@@ -1,10 +1,10 @@
 ---
 slug: device-states
-title: Device States
+title: Device states
 description: "GAUGER device states shown by the green status LED: steady on during initialization, short blinks while running and 500 ms blinking in the error state."
 ---
 
-# Device States
+# Device states
 
 Through its runtime, the device can get into multiple states, each of which is indicated by the green status LED.
 
@@ -16,7 +16,7 @@ If the device encounters an error, most likely during initialization (there are 
 
 Table of LED behavior per state:
 
-| LED State      | Device State   |
+| LED State      | Device state   |
 | :------------- | :------------- |
 | on             | initialization |
 | short blinks   | running        |

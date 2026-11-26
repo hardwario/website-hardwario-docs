@@ -145,7 +145,7 @@ Doporučujeme vyjít z funkčního workspace ve verzi v3.5.5 a nepřecházet ze 
 ### CHESTER Clime {#chester-clime-1}
 - Nové varianty: SPS30 (prachové částice), Radon, TC (termočlánek)
 - Teplotní senzory DS18B20 (1-Wire) zapnuty ve všech variantách
-- Odstraněny starší varianty Clime 1W a Clime 1WH (sloučeny do základní varianty)
+- Odstraněny starší varianty Clime 1 W a Clime 1WH (sloučeny do základní varianty)
 - Aplikace Radon sloučena do Clime jako varianta
 - Přidáno kódování dat půdních senzorů pro LoRaWAN
 - Přidán watchdog pro downlink

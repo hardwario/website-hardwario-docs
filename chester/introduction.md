@@ -5,6 +5,7 @@ sidebar_label: Introduction
 description: "HARDWARIO CHESTER is a configurable low-power IoT LPWAN platform for remote monitoring over LTE-M, NB-IoT and LoRaWAN, extensible with plug-in modules."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # CHESTER
 
@@ -14,9 +15,9 @@ import Image from '@theme/IdealImage';
 ### To get your CHESTER running, read the [**Quick Start Guide**](first-steps.md)
 :::
 
-<img src="/img/chester.webp" data-zoom-src="/img/chester.webp" width="540" alt="CHESTER" />
+<ProductSpin product="chester" variants={[{id: "basic", label: "CHESTER"}]} width={236} ratio={613 / 960} caption="Shown: CHESTER in the basic enclosure" />
 
-## Quick Links
+## Quick links
 
 * [**Quick Start Guide**](first-steps.md): Step-by-step setup guide.
 * [**Platform Connectivity**](category/platform-connectivity): Configure and manage the platform.
@@ -51,7 +52,7 @@ TODO Enable these articles
 * [**Catalog Application Changelog**](catalog-applications/changelog.md): Latest SDK releases, firmware versions, and per-application changes.
 * [**CHESTER Platform Changelog**](./changelog.md): Complete platform log including SDK changes and hardware revisions.
 
-## Typical Use Cases
+## Typical use cases
 
 - Remote monitoring systems in places without standard power or internet
 - Asset tracking and condition monitoring across LoRaWAN networks
@@ -59,12 +60,12 @@ TODO Enable these articles
 - Industrial automation solutions
 - Reliable deployment in harsh, rugged environments
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|
 | **Multi-Radio LPWAN** | NB-IoT, LTE-M, LoRaWAN, BLE, and GNSS radio technologies in a single platform: NB-IoT and LTE-M over the Nordic Semiconductor nRF9160, LoRaWAN over the Murata CMWX1ZZABZ-078 module, and BLE over the Nordic Semiconductor nRF52840. |
-| **Catalog Applications** | Ready-to-use firmware for common sensing and control use cases. |
-| **Extension Modules** | Extensible hardware for connecting sensors and external environments. |
+| **Catalog applications** | Ready-to-use firmware for common sensing and control use cases. |
+| **Extension modules** | Extensible hardware for connecting sensors and external environments. |
 | **HARDWARIO Cloud** | Managed and monitored through the HARDWARIO Cloud platform. |
 | **Firmware SDK** | Open SDK for building fully custom applications. |

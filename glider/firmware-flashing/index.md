@@ -1,12 +1,12 @@
 ---
 slug: firmware-flashing
-title: Firmware Flashing
+title: Firmware flashing
 description: "How to update GLIDER firmware: the two supported methods and what each one needs."
 title_meta: "Firmware Flashing (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Firmware Flashing
+# Firmware flashing
 
 GLIDER firmware can be updated in two ways:
 

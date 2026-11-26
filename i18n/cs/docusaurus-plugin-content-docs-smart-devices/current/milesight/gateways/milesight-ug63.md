@@ -157,7 +157,7 @@ Ve vestavěném síťovém serveru spravujete senzory přímo z webového rozhra
 | Vysílací výkon | Max. 27 dBm |
 | Citlivost | -140 dBm @292bps |
 | Protokol | V1.0.3 Class A/C |
-| Podporovaná zařízení | ~2000 |
+| Podporovaná zařízení | přibližně 2 000 |
 | Pokročilé funkce | Filtrování paketů, retransmise |
 | **Rozhraní** | |
 | Ethernet | 1 × RJ45 (10/100 Mbps, Auto) |
@@ -169,7 +169,7 @@ Ve vestavěném síťovém serveru spravujete senzory přímo z webového rozhra
 | **Síť** | HTTP(S), MQTT, VPN, OpenVPN klient |
 | Konfigurace/aktualizace | Web, API, DeviceHub |
 | **Napájení** | |
-| Zdroj | 5V/2A (USB-C) / 5–12V DC / PoE splitter |
+| Zdroj | 5 V/2A (USB-C) / 5–12 V DC / PoE splitter |
 | Spotřeba | 1,3 W typ., 3,1 W max |
 | **Fyzické vlastnosti** | |
 | Rozměry | Ø115 × 21 mm (bez antény) |
@@ -177,6 +177,6 @@ Ve vestavěném síťovém serveru spravujete senzory přímo z webového rozhra
 | Materiál krytu | PC+ABS, bílá |
 | Krytí | IP30 |
 | Instalace | Na stůl / na stěnu / na strop |
-| Provozní teplota | -20°C ~ +50°C |
-| Vlhkost | 0–95% RH (nekondenzující) |
+| Provozní teplota | -20 °C ~ +50 °C |
+| Vlhkost | 0–95 % RH (nekondenzující) |
 | **Certifikace** | CE, FCC |

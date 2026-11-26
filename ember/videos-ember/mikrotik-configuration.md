@@ -1,14 +1,14 @@
 ---
 slug: mikrotik-configuration
-title: Configuring EMBER Gateway
+title: Configuring EMBER gateway
 description: "Video tutorial on configuring the LoRa interface of the EMBER MikroTik gateway in WebFig so it can connect to a LoRaWAN server."
 ---
 
 import Image from '@theme/IdealImage';
 
-# MikroTik - How to configure a Gateway
+# MikroTik - how to configure a gateway
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you will learn how to configure the LoRa interface on a MikroTik gateway using the WebFig interface. Following these steps will prepare your gateway to connect to a LoRaWAN server and start receiving data from end devices.
 

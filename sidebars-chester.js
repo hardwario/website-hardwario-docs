@@ -6,14 +6,14 @@ const sidebars = {
     'introduction',
     {
       type: 'category',
-      label: 'User Guide',
+      label: 'User guide',
       className: 'sidebar-section',
       collapsible: false,
       items: [
         'first-steps',
         {
           type: 'category',
-          label: 'Catalog Applications',
+          label: 'Catalog applications',
           link: {
             type: 'doc',
             id: 'catalog-applications/index',
@@ -22,7 +22,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Common Functionality',
+              label: 'Common functionality',
               link: {
                 type: 'doc',
                 id: 'catalog-applications/common-functionality',
@@ -56,7 +56,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Platform Connectivity',
+          label: 'Platform connectivity',
           link: {
             type: 'generated-index',
             description: 'CHESTER connectivity, device-management, cellular, satellite, and networking documentation.',
@@ -68,7 +68,7 @@ const sidebars = {
             'platform-connectivity/hardwario-terminal',
             {
               type: 'category',
-              label: 'Mobile Networks',
+              label: 'Mobile networks',
               link: {
                 type: 'doc',
                 id: 'platform-connectivity/cellular-networks/index',
@@ -84,7 +84,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'LoRaWAN Radio',
+              label: 'LoRaWAN radio',
               link: {
                 type: 'doc',
                 id: 'platform-connectivity/lorawan-radio',
@@ -100,7 +100,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Supported Sensors',
+          label: 'Supported sensors',
           link: {
             type: 'doc',
             id: 'supported-devices/index',
@@ -113,7 +113,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Modbus Devices',
+              label: 'Modbus devices',
               link: {
                 type: 'doc',
                 id: 'supported-devices/modbus',
@@ -130,7 +130,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'wM-Bus Devices',
+              label: 'wM-Bus devices',
               link: {
                 type: 'doc',
                 id: 'supported-devices/wm-bus',
@@ -149,7 +149,7 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Serial Devices',
+              label: 'Serial devices',
               link: {
                 type: 'doc',
                 id: 'supported-devices/serial',
@@ -163,7 +163,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Video Tutorials',
+          label: 'Video tutorials',
           link: {
             type: 'doc',
             id: 'videos-chester/index',
@@ -187,7 +187,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Extension Modules',
+          label: 'Extension modules',
           link: {
             type: 'doc',
             id: 'extension-modules/index',
@@ -216,7 +216,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Hardware Description',
+          label: 'Hardware description',
           link: {
             type: 'generated-index',
             title: 'CHESTER Hardware Description',
@@ -246,7 +246,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Firmware Flashing',
+          label: 'Firmware flashing',
           link: {
             type: 'doc',
             id: 'firmware-flashing/index',
@@ -262,7 +262,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Developer Tools',
+          label: 'Developer tools',
           link: {
             type: 'generated-index',
             description: 'Tools for configuring, flashing, profiling, and developing with CHESTER.',
@@ -300,12 +300,12 @@ const sidebars = {
             'firmware-sdk/how-to-project-generator',
             {
               type: 'link',
-              label: 'Git Repository',
+              label: 'Git repository',
               href: 'https://github.com/hardwario/chester-sdk',
             },
             {
               type: 'link',
-              label: 'API Reference',
+              label: 'API reference',
               href: 'https://hardwario.github.io/chester-sdk',
             },
             'firmware-sdk/licenses',

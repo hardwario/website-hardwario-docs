@@ -25,11 +25,11 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 :::
 
-## Application Overview
+## Application overview
 
 The application **CHESTER Counter** is used to count pulses on the four digital inputs of its CHESTER-X0B module. They can be connected to a PLC/sensor output (NPN/PNP), push button, switch, relay, etc. The application counts the total number of pulses and also the number of pulses since the last report (configurable using the `interval-report` parameter).
 
-## Application Variants
+## Application variants
 
 **CHESTER Counter** can be ordered in one of these variants:
 
@@ -71,7 +71,7 @@ Firmware build shield options: `ctr_lte ctr_x0_a ctr_z`
 
 * The maximum number of reports per hour is configurable (parameter `event-report-rate`). The event throttling limits communication bandwidth and preserves the battery lifespan.
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -84,7 +84,7 @@ app config interval-report 1800
 
 The latest firmware is available in Catalog Applications [Firmware chapter](/chester/catalog-applications/catalog-applications#application-firmware).
 
-## Example JSON Message
+## Example JSON message
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

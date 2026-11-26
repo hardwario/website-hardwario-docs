@@ -6,9 +6,9 @@ description: "Video tutorial on connecting the HARDWARIO EMBER LoRaWAN gateway t
 
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4 - How to Add EMBER to a LoRaWAN Network
+# ChirpStack v4 - how to add EMBER to a LoRaWAN network
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you’ll learn how to connect your EMBER gateway to ChirpStack v4.
 

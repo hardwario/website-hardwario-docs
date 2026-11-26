@@ -6,9 +6,9 @@ description: "Milesight EM500-CO2 outdoor sensor for NDIR CO₂, temperature, hu
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor EM500-CO2
+# Milesight sensor EM500-CO2
 
-Milesight EM500-CO2 is a **4-in-1 outdoor environmental monitoring sensor** designed for **measuring CO₂ levels alongside environmental conditions** in harsh settings. It features **NDIR CO₂ sensor** with **400-5,000 ppm range**, integrated **temperature, humidity, and barometric pressure sensors**, **IP65-rated enclosure**, and **10-year battery life**. With **LoRaWAN connectivity** and **NFC configuration**, it's ideal for greenhouse monitoring, building ventilation, fruit storage, and forest fire detection.
+Milesight EM500-CO2 is a **4-in-1 outdoor environmental monitoring sensor** designed for **measuring CO₂ levels alongside environmental conditions** in harsh settings. It features **NDIR CO₂ sensor** with **400-5 000 ppm range**, integrated **temperature, humidity, and barometric pressure sensors**, **IP65-rated enclosure**, and **10-year battery life**. With **LoRaWAN connectivity** and **NFC configuration**, it's ideal for greenhouse monitoring, building ventilation, fruit storage, and forest fire detection.
 
 <div class="container">
   <div class="row">
@@ -26,7 +26,7 @@ Milesight EM500-CO2 is a **4-in-1 outdoor environmental monitoring sensor** desi
 The EM500 series includes multiple variants: **EM500-SWL** (Water Level), **EM500-PP** (Pipe Pressure), **EM500-LGT** (Light), **EM500-PT100** (Temperature), **EM500-CO2** (CO₂), **EM500-SMTC** (Soil Moisture), and more. This documentation focuses on the EM500-CO2 model.
 :::
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | Not yet available                                                     |
@@ -43,7 +43,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -64,7 +64,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -73,7 +73,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em500-co2/em500-co2-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -89,45 +89,45 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
-| **Wireless Transmission** | |
+| **Wireless transmission** | |
 | Technology | LoRaWAN® |
 | Antenna | Internal |
 | Frequency | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Tx Power | 16–20 dBm (varies by frequency) |
+| Tx power | 16–20 dBm (varies by frequency) |
 | Sensitivity | -137 dBm @300bps |
 | Mode | OTAA / ABP Class A |
 | Range | Up to 2 km (urban); 15 km (rural) |
 | **CO₂ Measurement** | |
-| Sensor Type | NDIR (Non-Dispersive Infrared) |
-| Measurement Range | 400–5,000 ppm |
-| Accuracy | ± (30 ppm + 3% of reading) (0–50°C, 0–85% RH) |
+| Sensor type | NDIR (Non-Dispersive Infrared) |
+| Measurement range | 400–5 000 ppm |
+| Accuracy | ± (30 ppm + 3 % of reading) (0–50 °C, 0–85 % RH) |
 | Resolution | 1 ppm |
-| **Temperature Sensor** | |
-| Range | -30°C ~ +70°C |
-| Accuracy | ±0.3°C (0–70°C); ±0.6°C (-30–0°C) |
-| Resolution | 0.1°C |
-| **Humidity Sensor** | |
-| Range | 0–100% RH |
-| Accuracy | ±3% (10–90% RH); ±5% (outside range) |
-| Resolution | 0.5% RH |
-| **Barometric Pressure** | |
-| Range | 300–1,100 hPa |
+| **Temperature sensor** | |
+| Range | -30 °C ~ +70 °C |
+| Accuracy | ±0.3 °C (0–70 °C); ±0.6 °C (-30–0 °C) |
+| Resolution | 0.1 °C |
+| **Humidity sensor** | |
+| Range | 0–100 % RH |
+| Accuracy | ±3 % (10–90 % RH); ±5 % (outside range) |
+| Resolution | 0.5 % RH |
+| **Barometric pressure** | |
+| Range | 300–1 100 hPa |
 | Accuracy | ±1 hPa |
 | Resolution | 0.1 hPa |
 | **Features** | |
-| Data Storage | 1,000 entries |
+| Data storage | 1 000 entries |
 | Configuration | NFC / Downlink |
-| Advanced Features | Threshold alarms, data retransmission, calibration |
-| **Physical Characteristics** | |
-| Power Supply | 1 × ER34615 (19000 mAh) |
-| Battery Life | ~10 years (10-min interval, 25°C) |
-| Operating Temp | -30°C ~ +70°C |
-| Humidity | 0%–95% RH (non-condensing) |
-| Ingress Protection | IP65 |
+| Advanced features | Threshold alarms, data retransmission, calibration |
+| **Physical characteristics** | |
+| Power supply | 1 × ER34615 (19000 mAh) |
+| Battery life | approx. 10 years (10-min interval, 25 °C) |
+| Operating temp | -30 °C ~ +70 °C |
+| Humidity | 0 %–95 % RH (non-condensing) |
+| Ingress protection | IP65 |
 | Dimensions | 147.9 × 71 × 69.5 mm |
 | Weight | 434.7 g (with battery and bracket) |
 | Material | ABS+PC, Grey |

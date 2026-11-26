@@ -15,7 +15,7 @@ Before you begin, make sure you comply with the article [**Requirements**](./req
 
 :::
 
-## Installation Steps
+## Installation steps
 
 The installation steps are split into multiple sections. In the end, you will be able to build the `blinky` sample from the **CHESTER SDK**.
 
@@ -35,7 +35,7 @@ Ensure the Windows installer can modify the `PATH` variable so the **Python** ex
 
 :::
 
-### Install Package Manager
+### Install package manager
 
 :::tip
 
@@ -87,7 +87,7 @@ You can skip this step if you already have **Chocolatey** installed on your syst
 
    :::
 
-### Install Packages
+### Install packages
 
 1. Open the **Windows PowerShell** application with administrator rights.
 
@@ -117,7 +117,7 @@ You can skip this step if you already have **Chocolatey** installed on your syst
 
 1. Close the **Windows Powershell** application.
 
-## Create Application
+## Create application
 
 :::caution
 
@@ -227,7 +227,7 @@ Do not use a folder that has spaces anywhere in the path.
    west sdk install -t arm-zephyr-eabi
    ```
 
-## Test Build and Flash
+## Test build and flash
 
 1. Go to the `blinky` sample directory:
 

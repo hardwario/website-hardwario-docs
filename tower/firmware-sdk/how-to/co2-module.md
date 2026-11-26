@@ -1,6 +1,6 @@
 ---
 slug: how-to-co2-module
-title: "How To: CO₂ Module"
+title: "How to: CO₂ Module"
 ---
 import Image from '@theme/IdealImage';
 

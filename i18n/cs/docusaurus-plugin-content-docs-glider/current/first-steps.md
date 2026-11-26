@@ -202,7 +202,7 @@ Přehled obou metod najdete na stránce [**Nahrání firmwaru**](firmware-flashi
 
 ---
 
- **A je to!**
+ **Hotovo.**
 Zařízení GLIDER je teď připojené, nakonfigurované a aktuální a může sbírat a odesílat data do cloudu.
 
 ---

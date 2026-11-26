@@ -1,11 +1,11 @@
 ---
-title: Sending Downlinks
+title: Sending downlinks
 description: "Send downlinks with the HARDWARIO Cloud API: app config commands, shell commands or a JSON data object, queued until the device next boots, sends or polls."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Sending Downlinks
+# Sending downlinks
 
 You can command devices over the API too. A downlink is **queued** and delivered
 the next time the device boots, sends an uplink, or polls the Cloud, so the

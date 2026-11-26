@@ -15,11 +15,11 @@ Before you begin, make sure you comply with the article [**Requirements**](./req
 
 :::
 
-## Installation Steps
+## Installation steps
 
 The installation steps are split into multiple sections. In the end, you will be able to build the `blinky` sample from the **CHESTER SDK**.
 
-### Update Your System
+### Update your system
 
 1. Open the **Terminal** application.
 
@@ -41,7 +41,7 @@ The installation steps are split into multiple sections. In the end, you will be
    sudo reboot
    ```
 
-### Set Up Device Rules
+### Set up device rules
 
 1. Open the **Terminal** application.
 
@@ -63,7 +63,7 @@ The installation steps are split into multiple sections. In the end, you will be
    rm nrf-udev_1.0.1-all.deb
    ```
 
-### Install Packages
+### Install packages
 
 Install the following **APT** packages:
 
@@ -77,7 +77,7 @@ Install the **python3-venv** package:
 sudo apt install python3-venv
 ```
 
-## Create Application
+## Create application
 
 1. Create the directory for your application and switch to it:
 
@@ -157,7 +157,7 @@ sudo apt install python3-venv
    west sdk install -t arm-zephyr-eabi
    ```
 
-## Test Build and Flash
+## Test build and flash
 
 1. Go to the `blinky` sample directory:
 

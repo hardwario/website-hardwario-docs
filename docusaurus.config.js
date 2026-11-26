@@ -18,7 +18,7 @@ const youtubeFacade = require('./src/remark/youtube-facade');
 const SITE_TEXT = {
   en: {
     title: 'HARDWARIO Docs',
-    tagline: 'Technical Resources for Products and Services',
+    tagline: 'Technical resources for products and services',
   },
   cs: {
     title: 'HARDWARIO Docs',
@@ -37,7 +37,7 @@ function legalLinks(locale) {
     { label: 'Terms of Sale', href: `${www}/legal/terms-of-sale/` },
     { label: 'Cookie Policy', href: `${www}/legal/cookies/` },
     { label: 'Recycling', href: `${www}/legal/take-back/` },
-    { label: 'All Legal Documents', href: `${www}/legal/` },
+    { label: 'All legal documents', href: `${www}/legal/` },
   ];
 }
 
@@ -332,15 +332,37 @@ const config = {
           layout: 'dagre',
           look: 'classic',
           flowchart: { wrappingWidth: 200, minNodeWidth: 0 },
+          // Brand block-diagram style (HBG.261028.01, chapter 06): White nodes with a
+          // Hairline frame, Ink type, Gray wires, Panel zones (subgraphs) and notes.
+          // The part HARDWARIO provides takes `class X hero`: the gradient frame,
+          // drawn by src/theme/Mermaid (one per diagram, never more than two).
           themeVariables: {
             fontFamily: 'inherit',
-            primaryColor: '#e8f4ff',
-            primaryBorderColor: '#009cfa',
+            primaryColor: '#ffffff',
+            primaryBorderColor: '#dcdcdc',
             primaryTextColor: '#252532',
-            secondaryColor: '#eef0f3',
+            secondaryColor: '#f5f5f5',
             tertiaryColor: '#ffffff',
             lineColor: '#6b6a6a',
-            edgeLabelBackground: '#eef0f3',
+            textColor: '#252532',
+            edgeLabelBackground: '#ffffff',
+            clusterBkg: '#f5f5f5',
+            clusterBorder: '#f5f5f5',
+            actorBkg: '#ffffff',
+            actorBorder: '#dcdcdc',
+            actorTextColor: '#252532',
+            actorLineColor: '#dcdcdc',
+            signalColor: '#6b6a6a',
+            signalTextColor: '#252532',
+            labelBoxBkgColor: '#f5f5f5',
+            labelBoxBorderColor: '#dcdcdc',
+            labelTextColor: '#252532',
+            loopTextColor: '#252532',
+            noteBkgColor: '#f5f5f5',
+            noteBorderColor: '#dcdcdc',
+            noteTextColor: '#252532',
+            activationBkgColor: '#f5f5f5',
+            activationBorderColor: '#dcdcdc',
           },
           // Dark mode replaces these colours: src/theme/Mermaid/index.js.
           // Notes over two actors are as wide as the span between them; a longer
@@ -371,7 +393,7 @@ const config = {
           },
           // 2) SMART DEVICES (podmenu)
           {
-            label: 'Smart Devices',
+            label: 'Smart devices',
             position: 'left',
             items: [
               { to: '/smart-devices/milesight', label: 'Milesight', activeBaseRegex: `/smart-devices/milesight` },
@@ -399,7 +421,7 @@ const config = {
               { to: '/apps/thingsboard/index', label: 'HARDWARIO Dashboards', activeBaseRegex: `/apps/thingsboard/` },
               { to: '/apps/chirpstack/index', label: 'ChirpStack', activeBaseRegex: `/apps/chirpstack/` },
               { to: '/apps/the-things-stack/index', label: 'The Things Stack', activeBaseRegex: `/apps/the-things-stack/` },
-              { to: '/apps/videos-apps/videos-apps', label: 'Video Tutorials', activeBaseRegex: `/apps/videos-apps/` },
+              { to: '/apps/videos-apps/videos-apps', label: 'Video tutorials', activeBaseRegex: `/apps/videos-apps/` },
             ],
           },
           {
@@ -439,9 +461,9 @@ const config = {
           {
             title: 'Branches',
             items: [
-              { label: 'HARDWARIO a.s. – Czech Republic', href: 'https://maps.app.goo.gl/uwNsT2fuUmTaoXc48' },
-              { label: 'HARDWARIO LLC – United States', href: 'https://www.google.com/maps/search/?api=1&query=440+N+Wolfe+Rd%2C+Sunnyvale%2C+CA+94085' },
-              { label: 'HARDWARIO LTD – United Kingdom', href: 'https://maps.app.goo.gl/BPVS4T61Ao1h5HVJ9' },
+              { label: 'HARDWARIO a.s., Czech Republic', href: 'https://maps.app.goo.gl/uwNsT2fuUmTaoXc48' },
+              { label: 'HARDWARIO LLC, United States', href: 'https://www.google.com/maps/search/?api=1&query=440+N+Wolfe+Rd%2C+Sunnyvale%2C+CA+94085' },
+              { label: 'HARDWARIO LTD, United Kingdom', href: 'https://maps.app.goo.gl/BPVS4T61Ao1h5HVJ9' },
             ],
           },
           {
@@ -451,7 +473,7 @@ const config = {
               { label: 'Solutions', href: 'https://www.hardwario.com/solutions/' },
               { label: 'Customers', href: 'https://www.hardwario.com/customers/' },
               { label: 'Resources', href: 'https://www.hardwario.com/resources/' },
-              { label: 'Online Store', href: 'https://www.hardwario.store/' },
+              { label: 'HARDWARIO Store', href: 'https://www.hardwario.store/' },
             ],
           },
           {
@@ -483,7 +505,7 @@ const config = {
             items: legalLinks('en'),
           },
         ],
-        copyright: `<nav aria-label="Other HARDWARIO websites" style="margin-bottom:8px"><span class="footer-sites-label">Other HARDWARIO websites:</span> <a href="https://www.hardwario.com/" target="_blank" rel="noopener noreferrer">HARDWARIO.com</a> · <a href="https://hardwario.engineering/" target="_blank" rel="noopener noreferrer">Engineering</a> · <a href="https://hardwario.studio/" target="_blank" rel="noopener noreferrer">Studio</a> · <a href="https://hardwario.academy/" target="_blank" rel="noopener noreferrer">Academy</a> · <a href="https://stem.hardwario.com/" target="_blank" rel="noopener noreferrer">STEM</a></nav>Copyright © ${new Date().getFullYear()} HARDWARIO a.s. | Designed and built in Europe.`,
+        copyright: `<nav aria-label="Other HARDWARIO websites" style="margin-bottom:8px"><span class="footer-sites-label">Other HARDWARIO websites:</span> <a href="https://www.hardwario.com/" target="_blank" rel="noopener noreferrer">www.hardwario.com</a> · <a href="https://hardwario.engineering/" target="_blank" rel="noopener noreferrer">Engineering</a> · <a href="https://hardwario.studio/" target="_blank" rel="noopener noreferrer">Studio</a> · <a href="https://hardwario.academy/" target="_blank" rel="noopener noreferrer">Academy</a> · <a href="https://stem.hardwario.com/" target="_blank" rel="noopener noreferrer">STEM</a></nav>Copyright © ${new Date().getFullYear()} HARDWARIO a.s. | Designed and built in Europe.`,
       },
       docs: {
         sidebar: { hideable: true },

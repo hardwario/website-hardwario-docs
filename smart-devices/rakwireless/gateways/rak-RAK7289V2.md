@@ -6,7 +6,7 @@ description: "RAKwireless RAK7289V2 WisGate Edge Pro outdoor IP67 LoRaWAN gatewa
 
 import Image from '@theme/IdealImage';
 
-# RAK7289V2 WisGate Edge Pro
+# RAK7289V2 WisGate edge pro
 
 The **RAK7289V2 WisGate Edge Pro** is an industrial-grade outdoor LoRaWAN® gateway. Designed for high reliability, it is housed in an IP67 enclosure, making it suitable for harsh environments and tower deployments.
 
@@ -26,7 +26,7 @@ It runs on **WisGateOS 2** and supports multi-backhaul connectivity (Ethernet, W
 
 ---
 
-## Key Features
+## Key features
 
 * **Industrial Design:** IP67 waterproof aluminum enclosure.
 * **Channels:** 8 or 16 Channels (depending on the model).
@@ -37,47 +37,47 @@ It runs on **WisGateOS 2** and supports multi-backhaul connectivity (Ethernet, W
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | Feature | Specification |
 | :--- | :--- |
 | **Model** | RAK7289V2 |
 | **LoRa Channels** | 8 or 16 Channels |
 | **Frequency** | EU868 (supports other regions) |
-| **Power Supply** | **PoE (802.3af/at)** (48V) |
-| **Power Consumption** | Max 12 W |
+| **Power supply** | **PoE (802.3af/at)** (48 V) |
+| **Power consumption** | Max 12 W |
 | **Connectivity** | Ethernet, Wi-Fi, LTE Cat 4 |
 | **Antennas** | External N-Type connectors (LoRa, LTE, GPS) |
-| **Operating Temp.** | -40°C to +65°C |
-| **Ingress Protection** | IP67 |
+| **Operating temp.** | -40 °C to +65 °C |
+| **Ingress protection** | IP67 |
 
 ---
 
 ## Quick Start Guide
 
-### 1. Hardware Setup
+### 1. Hardware setup
 1.  **Antennas:** Connect the LoRa, LTE, and GPS antennas **before** powering on the device to avoid damage.
 2.  **SIM Card:** If using cellular, insert the SIM card into the slot inside the waterproof cap.
 3.  **Mounting:** Use the included kit to mount the gateway on a pole or wall.
 
-### 2. Power On
+### 2. Power on
 * Connect an Ethernet cable from the **PoE injector** (included) to the **ETH** port on the gateway.
 * The device will boot up.
 
-### 3. Accessing the Gateway
+### 3. Accessing the gateway
 
 You can connect to the gateway's local Web UI using one of two methods:
 
-#### Wi-Fi AP Mode (Default)
+#### Wi-fi AP mode (default)
 1. Connect your PC to the Wi-Fi SSID: `RAK7289CV2_XXXX` (where XXXX are the last bytes of the MAC address).
 2. No password is required.
 3. Open a web browser and go to `192.168.230.1`.
 
-#### Ethernet Mode
+#### Ethernet mode
 1. Connect the gateway's **ETH** port directly to your PC.
 2. Set your PC to a static IP (e.g., `169.254.15.100`) to match the gateway's fallback IP (`169.254.15.1`).
 
-### 4. Setting the Mandatory Password
+### 4. Setting the mandatory password
 
 When you first access the gateway, you are required to set a password for the **root** user. The password must meet these criteria:
 
@@ -90,7 +90,7 @@ When you first access the gateway, you are required to set a password for the **
 Once the password is set, you will be redirected to the **Dashboard**, where you will define your country and region. Copy the **16-character Gateway EUI** displayed there. You will need it for network server registration.
 :::
 
-### 5. Internet Connectivity
+### 5. Internet connectivity
 
 Before the gateway can communicate with a network server, it needs an internet connection. Navigate to **Network > WAN**:
 
@@ -106,11 +106,11 @@ If you are not using a SIM card, disable the cellular interface to prevent `SIM_
 
 ---
 
-## Configuring Work Modes
+## Configuring work modes
 
 The gateway supports multiple LoRaWAN work modes. Navigate to **LoRa > Configuration** to select your preferred mode:
 
-### Basics Station (Recommended for TTS)
+### Basics Station (recommended for TTS)
 
 Select **Basics Station** to connect to The Things Stack:
 
@@ -121,14 +121,14 @@ Select **Basics Station** to connect to The Things Stack:
 | **Trust (CA Certificate)** | Upload the [ISRG Root X1 .pem](https://letsencrypt.org/certs/isrgrootx1.pem) file |
 | **Client Token** | Paste your TTS API Key |
 
-### Other Available Work Modes
+### Other available work modes
 
 * **Packet Forwarder:** Used for legacy Semtech UDP or ChirpStack MQTT connections.
 * **Built-in Network Server:** Allows the gateway to act as its own standalone LNS (ChirpStack).
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see [**LoRaWAN Network Options**](/smart-devices/rakwireless/gateways/index#lorawan-network-options)
 

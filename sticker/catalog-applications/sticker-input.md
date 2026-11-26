@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 
 ![STICKER Input](images/sticker-input-top.png)
 
-## Quick Links
+## Quick links
 
 * [**Getting Started Guide**](/sticker/first-steps): Step-by-step setup guide.
 * [**Buy STICKER Input**](https://www.hardwario.store/p/sticker-input): Purchase from our store.
@@ -30,13 +30,13 @@ import Image from '@theme/IdealImage';
 #### Smart open/close detection
 - Door and window detection isn’t just for security: it’s also key for smart heating and cooling. Traditional systems can be costly due to strict certification standards. STICKER Input offers a simple and affordable alternative with a built-in magnetic field sensor or digital inputs for standard switches.
 
-## Configuration and Wiring of External Inputs
+## Configuration and wiring of external inputs
 
 Documentation → [**STICKER Input Wiring**](/sticker/sticker-input-wiring/sticker-input-wiring)
 
 Here you can find information about STICKER input wiring, including DIP switch settings and supported modes such as 1-Wire sensors, dry contact inputs, S0 pulse counters and 0–24 V analog inputs.
 
-## Example JSON Message
+## Example JSON message
 
 A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). In this example input A is a `digital` input with its pulse count, input B is an `analog` input (voltage in V) and 1-Wire slot 1 holds a Dallas DS18B20 probe. An input in `pulse` mode sends `input_a_count` / `input_b_count` and an `input_a_is_active` / `input_b_is_active` that is always `false`; an `analog` input sends only `input_a_voltage` / `input_b_voltage`.
 

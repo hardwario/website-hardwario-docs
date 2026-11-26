@@ -1,11 +1,11 @@
 ---
 slug: i2c-address-space
-title: I²C Address Space
+title: I²C address space
 description: "7-bit I²C address map of the CHESTER mainboard, extension modules and accessories, with slot A and B addresses, to check new peripherals for collisions."
 ---
 import Image from '@theme/IdealImage';
 
-# I²C Address Space
+# I²C address space
 
 This article provides an overview of the 7-bit address allocation on the I²C bus.
 
@@ -17,7 +17,7 @@ Typically, you will not need to search for the I²C addresses while working with
 
 :::
 
-## Allocation Table
+## Allocation table
 
 | Block          | Address | Device          | Remark                             |
 | :------------- | :-----: | :-------------- | :--------------------------------- |

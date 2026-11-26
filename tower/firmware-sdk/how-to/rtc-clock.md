@@ -1,6 +1,6 @@
 ---
 slug: how-to-rtc-clock
-title: "How To: RTC Clock"
+title: "How to: RTC clock"
 ---
 import Image from '@theme/IdealImage';
 
@@ -18,13 +18,13 @@ You can save **date** and **time** into its hardware registers and the clock is 
 - [**RTC SDK Module**](https://sdk.hardwario.com/group__twr__onewire__relay.html)
 - [**GitHub Repository Example**](https://github.com/hardwario/twr-lcd-clock-with-stopwatch/blob/main/src/application.c)
 
-## RTC Structure
+## RTC structure
 
 RTC library uses standard [**C language structure for time**](https://www.tutorialspoint.com/c_standard_library/time_h.htm).
 
 It contains **seconds**, **minutes**, **hours**, **day**, **month**, **year**. If you read the RTC then the **timestamp** is filled with the proper UNIX timestamp.
 
-## Set Date and Time
+## Set date and time
 
 :::info
 
@@ -63,7 +63,7 @@ Year register value 0 stands for 1900 and value 199 stands for 2099.
 
 :::
 
-## Get Date and Time
+## Get date and time
 
 <details>
 <summary>

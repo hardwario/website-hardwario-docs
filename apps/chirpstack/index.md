@@ -11,13 +11,13 @@ ChirpStack is an open-source solution for building private or public [**LoRaWAN 
 
 ---
 
-## Example of a Dashboard Overview {#example-of-an-dashboard-overview}
+## Example of a dashboard overview {#example-of-an-dashboard-overview}
 
 ![ChirpStack Dashboard Overview](images/chirpstack-dashboard.png)
 
 ---
 
-## Getting Started with ChirpStack v4
+## Getting started with ChirpStack v4
 
 This article walks you through the process of installing and configuring ChirpStack v4 for use with HARDWARIO devices.  
 
@@ -43,27 +43,27 @@ In this guide, you will configure ChirpStack v4 by adding gateways, registering 
 
 ---
 
-## LoRaWAN Network 
+## LoRaWAN network 
 LoRaWAN is a **low-power, wide-area network (LPWAN) protocol** built on top of the LoRa modulation. It is specifically designed for Internet of Things (IoT) applications. LoRa modulation is based on chirp spread spectrum (CSS), which enables **long-range connectivity**, **resistance to interference**, and **operation with very low power consumption**.  
 
 ---
 
-### Devices and Gateways  
+### Devices and gateways  
 End devices, such as **sensors or actuators**, are typically battery-powered and communicate using LoRa modulation. These devices transmit messages using an **ALOHA-based protocol**, meaning they send data whenever they need to, and any **gateway** within range can receive it. Gateways then act as **packet forwarders**, relaying received messages over IP (via Ethernet, Wi-Fi, or cellular) to the network server.  
 
-### Network Server  
+### Network server  
 The **Network Server** is the central intelligence of a LoRaWAN network. It:  
 - Authenticates and manages devices.  
 - Deduplicates messages when several gateways receive the same transmission.  
 - Determines the best gateway path for downlinks.  
 - Enforces **end-to-end security** using AES-128 encryption.  
 
-### Application Layer  
+### Application layer  
 After processing, the Network Server forwards the messages to the **Application Server**. Here the data can be **visualized on dashboards**, **integrated into cloud applications**, or used to trigger **automation workflows**.  
 
-### Topology and Use Cases  
+### Topology and use cases  
 LoRaWAN follows a **star-of-stars topology**, where end devices connect to multiple gateways, and those gateways are connected to a central server. This architecture is ideal for applications that require **long range**, **low power consumption**, and **small, infrequent messages**. Typical use cases include **smart agriculture, smart cities, asset tracking, utility metering, and industrial monitoring**.  
 
-### LoRaWAN Network Topology
+### LoRaWAN network topology
 
 ![LoRaWAN Network Topology](images/lora-example.webp)

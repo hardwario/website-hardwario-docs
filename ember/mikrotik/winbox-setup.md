@@ -1,10 +1,10 @@
 ---
 slug: winbox4-installation
-title: Winbox 4 Installation
+title: Winbox 4 installation
 description: "Download Winbox 4 from the MikroTik site and run it on 64-bit Windows or Linux: extract the zip archive and start the WinBox application."
 ---
 
-# Winbox 4 Installation
+# Winbox 4 installation
 
 This step-by-step guide explains how to install Winbox 4 on Windows and Linux.
 
@@ -24,7 +24,7 @@ On the page, click **Windows (64-bit)**. This will download a `.zip` file.
 
 ---
 
-### 2. Extract the Archive
+### 2. Extract the archive
 
 Open the folder where the file was downloaded. Right-click on the file and click **Extract All**.
 
@@ -59,7 +59,7 @@ On the page, click **Linux (64-bit)**. This will download a `.zip` file. Make su
 
 ---
 
-### 2. Extract the Archive
+### 2. Extract the archive
 
 Right-click on the downloaded **WinBox_Linux.zip** file and select **Extract Here**, or **Extract to…** if you want to place it in a specific folder.
 

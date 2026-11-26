@@ -1,10 +1,10 @@
 ---
-title: Shell Commands
+title: Shell commands
 description: "Schedule shell commands for CHESTER in the HARDWARIO Cloud shell console and read the responses later; useful ones include info show and app config show."
 title_meta: "Shell Commands (HARDWARIO Cloud)"
 ---
 
-# Shell Commands
+# Shell commands
 
 In the messages or device detail, click the **shell** icon to open the shell console.
 

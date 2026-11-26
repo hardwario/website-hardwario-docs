@@ -102,9 +102,9 @@ Za provozu zařízení signalizuje svůj stav každé **3 sekundy**. Zobrazuje s
 | Priorita | Stav zařízení | Vzor LED |
 |---|---|---|
 | 1 | Probíhá výměna přes NFC | LED ukazuje [vzory pro NFC](#nfc-interaction) popsané níže |
-| 2 | **Konfiguraci se nepodařilo načíst**: uložené nastavení je poškozené | Červená a žlutá střídavě, dvakrát, po ~60 ms |
-| 3 | **Připojování nebo opětovné připojování** k síti (LoRaWAN nebo P2P) | Jedno žluté bliknutí a po ~200 ms jedno červené |
-| 4 | **Zhoršené spojení** (LoRaWAN nebo P2P): kontroly spojení selhávají, ale relace stále trvá | Dvě žlutá bliknutí ~200 ms po sobě |
+| 2 | **Konfiguraci se nepodařilo načíst**: uložené nastavení je poškozené | Červená a žlutá střídavě, dvakrát, po přibližně 60 ms |
+| 3 | **Připojování nebo opětovné připojování** k síti (LoRaWAN nebo P2P) | Jedno žluté bliknutí a po přibližně 200 ms jedno červené |
+| 4 | **Zhoršené spojení** (LoRaWAN nebo P2P): kontroly spojení selhávají, ale relace stále trvá | Dvě žlutá bliknutí přibližně 200 ms po sobě |
 | 5 | **Rádio vypnuté**: `radio-mode off`, P2P bez klíčů nebo nepodporovaný region LoRaWAN | Jedno žluté bliknutí |
 | 6 | **Je aktivní alarm** | Jedno červené bliknutí |
 | 7 | Normální provoz | Jedno zelené bliknutí |
@@ -128,7 +128,7 @@ Dokud je telefon přiložený k zařízení, LED krok za krokem ukazuje průběh
 | Co se děje | LED |
 |---|---|
 | Telefon je v poli NFC, relace ještě nezačala | Zelená, svítí (nejvýš 5 s) |
-| Probíhá relace: výměna příkazů | Zelená, bliká (~90 ms) |
+| Probíhá relace: výměna příkazů | Zelená, bliká (přibližně 90 ms) |
 | Relace skončila, poslední výměna dat se povedla | Zelená **a** žlutá, 2 s |
 | Relace skončila, poslední výměna dat **selhala**: požadavek odmítnut ještě před provedením (špatný klíč nebo token, zopakovaný nebo poškozený rámec; v tom případě se nic nezapíše), nebo se odpověď nedostala do telefonu | Červená, 2 s |
 | Výměna dat skončila | Zhasnuto |

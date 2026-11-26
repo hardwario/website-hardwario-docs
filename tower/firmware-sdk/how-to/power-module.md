@@ -1,6 +1,6 @@
 ---
 slug: how-to-power-module
-title: "How To: Power Module"
+title: "How to: Power Module"
 description: "Switch the 230 V / 16 A relay of the TOWER Power Module from the SDK, with a C example that toggles it by button; the WS2812B LED strip has its own guide."
 ---
 import Image from '@theme/IdealImage';
@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 The power module provides two features:
 
 - Control high power device with robust relay (230 V / 16 A)
-- Connect 5V addressable LEDs (**WS2812B**) and control them.
+- Connect 5 V addressable LEDs (**WS2812B**) and control them.
 
 :::note
 

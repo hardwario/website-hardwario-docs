@@ -1,6 +1,6 @@
 ---
 slug: rtc-remoteio-error
-title: RTC -EREMOTEIO Error
+title: RTC -EREMOTEIO error
 ---
 
 **Symptom:** `dmesg` shows `rtc-pcf85063 ...: error -EREMOTEIO: RTC chip is not present`.

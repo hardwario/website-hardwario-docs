@@ -20,11 +20,11 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 :::
 
 
-## Application Overview
+## Application overview
 
 **CHESTER Range** measures distance using the [MaxBotix MB7066](https://www.hardwario.store/p/ultrasonic-sensor) ultrasonic sensor. It can also measure temperature using the DS18B20 one-wire sensor and humidity using **CHESTER-S2**.
 
-## Application Variants
+## Application variants
 
 **CHESTER Range** can be ordered in one of these variants:
 
@@ -54,13 +54,13 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 
 Firmware build variant: `west chester-update range --variant "CHESTER Range Z"`
 
-## Measurement and Behavior
+## Measurement and behavior
 
 - All sensors are **sampled** with a configurable period (parameter `interval-sample`).
 - Samples are then **aggregated** in the configurable interval. Minimum, maximum, average, and median are computed from buffered samples for each sensor (parameter `interval-aggreg`).
 - Each aggregated value has its timestamp; the values are sent in a batch every report interval (parameter `interval-report`).
 
-## Terminal Blocks
+## Terminal blocks
 
 Connect the sensor to the **left terminal block A**
 
@@ -73,7 +73,7 @@ Connect the sensor to the **left terminal block A**
 ![CHESTER-X0 terminal block pinout: VDD, CH1, GND, CH2, CH3, GND, CH4, +V](../extension-modules/images/tb-chester-x0.png)
 
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -83,7 +83,7 @@ app config interval-aggreg 300
 app config interval-report 1800
 ```
 
-## Specific Commands
+## Specific commands
 
 :::info
 
@@ -123,7 +123,7 @@ aggreg
 
 The latest firmware is available in Catalog Applications [Firmware chapter](index.md#application-firmware).
 
-## Example JSON Message
+## Example JSON message
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

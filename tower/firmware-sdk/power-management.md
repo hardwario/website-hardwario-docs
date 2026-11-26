@@ -1,6 +1,6 @@
 ---
 slug: power-management
-title: Power Management
+title: Power management
 title_meta: "Power Management (HARDWARIO TOWER)"
 ---
 import Image from '@theme/IdealImage';
@@ -25,7 +25,7 @@ For example, this allows the [**Core Module**](../hardware-modules/about-core-mo
 
 :::
 
-## Power Management Explanation
+## Power management explanation
 
 The **TOWER** header has two signals for system power distribution:
 
@@ -60,12 +60,12 @@ This signal is physically split into two parts:
   - This signal is on the **top side of the module (the side with the sockets)** and it is chained to the **VDD_OFF_IN** signal of the module above the given one.
   - Each **power source module** (except the battery) provides a **VDD_OFF_OUT** signal on **the top side** of the module, indicating to other modules **it does provide power**.
 
-## Connection Example
+## Connection example
 
 Possible power source modules at this moment are **Power Module** and **Core Module (when connected to USB)**. If stacked, the **lowest one** takes priority and by this logic, there are **two possibilities**:
 
 - **Core Module on top of Power Module**, TOWER is **powered from Power Module**
-- **Core Module below Power Module**, TOWER is **powered from USB (speaking about 3.3V VDD)**
+- **Core Module below Power Module**, TOWER is **powered from USB (speaking about 3.3 V VDD)**
 
 :::caution
 
@@ -73,7 +73,7 @@ You should be wary of this, in case you are trying to build a device that includ
 
 :::
 
-## Circuits Examples
+## Circuits examples
 
 :::info
 

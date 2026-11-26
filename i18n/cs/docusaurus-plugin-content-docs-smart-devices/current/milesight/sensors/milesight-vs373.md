@@ -80,7 +80,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 ## Napájení {#power-supply}
 | Typ    | Hodnota                    |
 |--------|----------------------------|
-| Napájení | DC 5V/3A přes USB Type-C |
+| Napájení | DC 5 V/3A přes USB Type-C |
 
 ---
 
@@ -92,7 +92,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Technologie | LoRaWAN®, Milesight D2D, Wi-Fi 2,4 GHz |
 | Anténa | Interní |
 | Frekvence | CN470 / IN865 / RU864 / EU868 / US915 / AU915 / KR920 / AS923-1&2&3&4 |
-| Vysílací výkon | 16 dBm (868MHz) / 22 dBm (915MHz) / 19 dBm (470MHz) |
+| Vysílací výkon | 16 dBm (868 MHz) / 22 dBm (915 MHz) / 19 dBm (470 MHz) |
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class C |
 | **Radarová detekce** | |
@@ -105,14 +105,14 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Základní funkce | Detekce pádu, přítomnost v posteli, obsazenost místnosti |
 | Pokročilé funkce | Detekce nehybnosti, detekce dýchání, upozornění na opuštění postele |
 | **Rozhraní** | |
-| Digitální výstup | 1× (60V/1A) |
+| Digitální výstup | 1× (60 V/1A) |
 | Tlačítka | 1× Reset, 1× multifunkční |
 | Indikace | Vícebarevná LED, bzučák |
 | Konfigurace | NFC / downlink |
 | **Fyzické vlastnosti** | |
-| Napájení | DC 5V/3A (USB Type-C) |
+| Napájení | DC 5 V/3A (USB Type-C) |
 | Spotřeba | Max 9,5 W |
-| Provozní teplota | 0°C ~ +50°C |
+| Provozní teplota | 0 °C ~ +50 °C |
 | Vlhkost | 0 %–95 % RH (nekondenzující) |
 | Krytí | IP65 |
 | Rozměry | 114 × 84 × 15 mm |

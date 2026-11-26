@@ -1,11 +1,11 @@
 ---
 slug: build-and-deploy
-title: Build and Deploy
+title: Build and deploy
 description: "Build CHESTER firmware with west build, stamp it with FW_NAME and FW_VERSION, and upload it to HARDWARIO Cloud with the HARDWARIO CLI to share by QR code."
 ---
 import Image from '@theme/IdealImage';
 
-# Build and Deploy
+# Build and deploy
 
 This article will explain how to build, deploy and upload an application firmware to the **HARDWARIO Cloud**.
 
@@ -55,7 +55,7 @@ project(input)
 
 :::
 
-## Firmware Upload
+## Firmware upload
 
 You can also use **HARDWARIO CLI** upload function, so the firmware is uploaded to your **HARDWARIO Cloud** account, and you can share firmware with your customers with a **QR Code**, **URL**, or by **e-mail**.
 

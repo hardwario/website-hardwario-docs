@@ -1,6 +1,6 @@
 ---
 slug: how-to-smart-led-strip
-title: "How To: Smart LED Strip"
+title: "How to: Smart LED Strip"
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,7 +12,7 @@ You need to use a [**Power Module**](../../hardware-modules/about-power-module.m
 - [**LED Strip SDK Module**](https://sdk.hardwario.com/twr__led__strip_8h_source.html)
 - [**GitHub Repository Example**](https://github.com/hardwario/twr-sdk/blob/master/_examples/led-strip/application.c)
 
-## Available Colors
+## Available colors
 
 LEDs featured [**on our strip**](https://www.hardwario.store/p/led-strip-rgbw-1m) are RGBW. This means they include a separate light source for **Red**, **Green**, **Blue** and **White** (warm white) colors.
 
@@ -78,7 +78,7 @@ You can limit maximum brightness of the entire led strip with function `twr_led_
 
 :::
 
-### LED Strip Effects
+### LED Strip effects
 
 There are several effect functions available.
 
@@ -122,7 +122,7 @@ void application_init(void)
 
 </details>
 
-#### Test Effect
+#### Test effect
 
 This is a simple effect that you can just use to check if all the colors of the LED strip work well.
 
@@ -130,7 +130,7 @@ This is a simple effect that you can just use to check if all the colors of the 
 twr_led_strip_effect_test(&led_strip);
 ```
 
-#### Rainbow Effect
+#### Rainbow effect
 
 The LED strip will light up in the color of a rainbow and will fluently change these colors in circles (what ends on one side of the strip starts on the other side).
 
@@ -150,7 +150,7 @@ There is also a function `twr_led_strip_effect_rainbow(&led_strip, 100);` which 
 
 :::
 
-#### Color Wipe Effect
+#### Color wipe effect
 
 Fills the entire strip pixel by pixel with one color.
 
@@ -164,7 +164,7 @@ The first parameter takes color in hex format (this particular is red color) and
 
 :::
 
-#### Theater Effect
+#### Theater effect
 
 Cause the LEDs to switch in the pattern shown below: `-` means that LED is off, `X` means that LED is on.
 
@@ -182,15 +182,15 @@ The first parameter is a color in hex format (stored in `uint32_t`), and the sec
 
 :::
 
-#### Stroboscope Effect
+#### Stroboscope effect
 
-#### ICicle Effect
+#### ICicle effect
 
-#### Pulse Color Effect
+#### Pulse color effect
 
-#### Thermometer Effect
+#### Thermometer effect
 
-#### Effect Stop
+#### Effect stop
 
 You can easily stop the effect with this function:
 

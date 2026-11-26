@@ -1,14 +1,14 @@
 ---
 slug: tts-gateways
-title: Adding Gateways
+title: Adding gateways
 title_meta: "The Things Stack: Adding Gateways (video)"
 ---
 
 import Image from '@theme/IdealImage';
 
-# The Things Stack - How to Add a Gateway to a LoRaWAN Network {#the-things-stack---how-to-add-gateway-to-a-lorawan-network}
+# The Things Stack - how to add a gateway to a LoRaWAN network {#the-things-stack---how-to-add-gateway-to-a-lorawan-network}
 
-## Tutorial Overview
+## Tutorial overview
 
 This tutorial explains how to register and configure a new gateway in The Things Stack, including entering the Gateway EUI, setting essential parameters, generating and downloading API keys, and preparing the gateway for use.
 

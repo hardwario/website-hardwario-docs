@@ -1072,7 +1072,7 @@ Při této konfiguraci obsahuje každá struktura šest agregovaných hodnot. Ka
 - **Vylepšeno**: Podpora teploměrů DS18B20 1-Wire, vyšší spolehlivost a čistší obsluha více senzorů
 - **Změněno**: Přechod na protokol HARDWARIO Cloud (kódování CBOR, nové endpointy API); varianty pro Cloud Legacy zůstávají dostupné v samostatné tabulce firmwaru
 - **Změněno**: Jediný společný binární soubor firmwaru pro LTE i LoRaWAN; síť se volí příkazem `app config mode lte` / `app config mode lrw`
-- **Odstraněno**: Varianty Clime 1W a Clime 1WH byly vypuštěny ze sestavení firmwaru pro HARDWARIO Cloud (pro Cloud Legacy zůstávají dostupné)
+- **Odstraněno**: Varianty Clime 1 W a Clime 1WH byly vypuštěny ze sestavení firmwaru pro HARDWARIO Cloud (pro Cloud Legacy zůstávají dostupné)
 
 :::info
 

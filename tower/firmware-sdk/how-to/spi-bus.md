@@ -1,6 +1,6 @@
 ---
 slug: how-to-spi-bus
-title: "How To: SPI Bus"
+title: "How to: SPI bus"
 ---
 import Image from '@theme/IdealImage';
 
@@ -14,7 +14,7 @@ This chapter goes over how to use TOWER SPI SDK Module if you want to read about
 - [**SPI SDK Module**](https://sdk.hardwario.com/group__twr__spi.html)
 - GitHub Repository Example
 
-## SPI Speed
+## SPI speed
 
 You can choose from **several communication speeds**.
 
@@ -32,7 +32,7 @@ TWR_SPI_SPEED_8_MHZ
 TWR_SPI_SPEED_16_MHZ
 ```
 
-## SPI Mode
+## SPI mode
 
 Clock polarity and clock phase define when the output data is valid. Whether it's on the rising or falling edge.
 
@@ -45,7 +45,7 @@ TWR_SPI_MODE_2 // SPI mode of operation is 2 (CPOL = 1, CPHA = 0)
 TWR_SPI_MODE_3 // SPI mode of operation is 3 (CPOL = 1, CPHA = 1)
 ```
 
-## Transmitting and Receiving Data Examples
+## Transmitting and receiving data examples
 
 ### Synchronous transfer
 :::info

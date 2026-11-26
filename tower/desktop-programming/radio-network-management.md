@@ -1,12 +1,12 @@
 ---
 slug: radio-network-management
-title: Radio Network Management
+title: Radio network management
 ---
 import Image from '@theme/IdealImage';
 import ReactPlayer from 'react-player'
 
 In this chapter, we will go over the **Devices Tab** of Playground.
-## Devices Tab
+## Devices tab
 
 On this tab, you can connect to the **Radio Dongle**.
 
@@ -36,7 +36,7 @@ You can change the **device alias** with the **Rename** button next to it but th
 
 :::
 
-### Pairing New Devices
+### Pairing new devices
 
 - Disconnect power from the device (remove **batteries** or [**Battery Module**](../hardware-modules/about-battery-module.md), disconnect the USB cable, remove DC jack from [**Power Module**](../hardware-modules/about-power-module.md))
 - Click on the **Start pairing** button (it should **turn red**)
@@ -49,7 +49,7 @@ To learn about the next tab visit [**MQTT Messages Management**](./mqtt-messages
 
 :::
 
-## Video Tutorial
+## Video tutorial
 
 If you prefer a video guide, you can watch this video for the older Playground version, but it works the same.
 

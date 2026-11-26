@@ -64,7 +64,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Video Tutorials',
+          label: 'Video tutorials',
           collapsed: true,
           items: [
             'milesight/videos-milesight/general-configuration',

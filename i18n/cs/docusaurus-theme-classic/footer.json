@@ -19,17 +19,17 @@
     "message": "Právní informace",
     "description": "The title of the footer links column with title=Legal in the footer"
   },
-  "link.item.label.HARDWARIO a.s. – Czech Republic": {
-    "message": "HARDWARIO a.s. – Česká republika",
-    "description": "The label of footer link with label=HARDWARIO a.s. – Czech Republic linking to https://maps.app.goo.gl/uwNsT2fuUmTaoXc48"
+  "link.item.label.HARDWARIO a.s., Czech Republic": {
+    "message": "HARDWARIO a.s., Česká republika",
+    "description": "The label of footer link with label=HARDWARIO a.s., Czech Republic linking to https://maps.app.goo.gl/uwNsT2fuUmTaoXc48"
   },
-  "link.item.label.HARDWARIO LLC – United States": {
-    "message": "HARDWARIO LLC – Spojené státy",
-    "description": "The label of footer link with label=HARDWARIO LLC – United States linking to https://www.google.com/maps/search/?api=1&query=440+N+Wolfe+Rd%2C+Sunnyvale%2C+CA+94085"
+  "link.item.label.HARDWARIO LLC, United States": {
+    "message": "HARDWARIO LLC, Spojené státy",
+    "description": "The label of footer link with label=HARDWARIO LLC, United States linking to https://www.google.com/maps/search/?api=1&query=440+N+Wolfe+Rd%2C+Sunnyvale%2C+CA+94085"
   },
-  "link.item.label.HARDWARIO LTD – United Kingdom": {
-    "message": "HARDWARIO LTD – Spojené království",
-    "description": "The label of footer link with label=HARDWARIO LTD – United Kingdom linking to https://maps.app.goo.gl/BPVS4T61Ao1h5HVJ9"
+  "link.item.label.HARDWARIO LTD, United Kingdom": {
+    "message": "HARDWARIO LTD, Spojené království",
+    "description": "The label of footer link with label=HARDWARIO LTD, United Kingdom linking to https://maps.app.goo.gl/BPVS4T61Ao1h5HVJ9"
   },
   "link.item.label.Products": {
     "message": "Produkty",
@@ -47,9 +47,9 @@
     "message": "Materiály ke stažení",
     "description": "The label of footer link with label=Resources linking to https://www.hardwario.com/resources/"
   },
-  "link.item.label.Online Store": {
-    "message": "E-shop",
-    "description": "The label of footer link with label=Online Store linking to https://www.hardwario.store/"
+  "link.item.label.HARDWARIO Store": {
+    "message": "HARDWARIO Store",
+    "description": "The label of footer link with label=HARDWARIO Store linking to https://www.hardwario.store/"
   },
   "link.item.label.LinkedIn": {
     "message": "LinkedIn",
@@ -111,12 +111,12 @@
     "message": "Recyklace",
     "description": "The label of footer link with label=Recycling linking to https://www.hardwario.com/legal/take-back/"
   },
-  "link.item.label.All Legal Documents": {
+  "link.item.label.All legal documents": {
     "message": "Všechny právní dokumenty",
-    "description": "The label of footer link with label=All Legal Documents linking to https://www.hardwario.com/legal/"
+    "description": "The label of footer link with label=All legal documents linking to https://www.hardwario.com/legal/"
   },
   "copyright": {
-    "message": "<nav aria-label=\"Další weby HARDWARIO\" style=\"margin-bottom:8px\"><span class=\"footer-sites-label\">Další weby HARDWARIO:</span> <a href=\"https://www.hardwario.com/\" target=\"_blank\" rel=\"noopener noreferrer\">HARDWARIO.com</a> · <a href=\"https://hardwario.engineering/\" target=\"_blank\" rel=\"noopener noreferrer\">Engineering</a> · <a href=\"https://hardwario.studio/\" target=\"_blank\" rel=\"noopener noreferrer\">Studio</a> · <a href=\"https://hardwario.academy/\" target=\"_blank\" rel=\"noopener noreferrer\">Academy</a> · <a href=\"https://stem.hardwario.com/\" target=\"_blank\" rel=\"noopener noreferrer\">STEM</a></nav>Copyright © 2026 HARDWARIO a.s. | Navrženo a vyrobeno v Evropě.",
+    "message": "<nav aria-label=\"Další weby HARDWARIO\" style=\"margin-bottom:8px\"><span class=\"footer-sites-label\">Další weby HARDWARIO:</span> <a href=\"https://www.hardwario.com/\" target=\"_blank\" rel=\"noopener noreferrer\">www.hardwario.com</a> · <a href=\"https://hardwario.engineering/\" target=\"_blank\" rel=\"noopener noreferrer\">Engineering</a> · <a href=\"https://hardwario.studio/\" target=\"_blank\" rel=\"noopener noreferrer\">Studio</a> · <a href=\"https://hardwario.academy/\" target=\"_blank\" rel=\"noopener noreferrer\">Academy</a> · <a href=\"https://stem.hardwario.com/\" target=\"_blank\" rel=\"noopener noreferrer\">STEM</a></nav>Copyright © 2026 HARDWARIO a.s. | Navrženo a vyrobeno v Evropě.",
     "description": "The footer copyright"
   },
   "link.item.label.Terms of Sale": {

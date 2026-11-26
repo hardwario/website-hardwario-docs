@@ -1,6 +1,6 @@
 ---
 slug: host-management
-title: Host Management
+title: Host management
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -138,7 +138,7 @@ bch --help output
 
 :::
 
-## Usage Example
+## Usage example
 
 :::info
 
@@ -152,7 +152,7 @@ You need to run `mosquitto` and `bcg --device YOUR_RADIO_DONGLE` in another term
 bch sub
 ```
 
-#### If you have [your own server](../server-raspberry-pi/index.md), you can run following command with a server hostname or IP Address (example is `hub.local`)
+#### If you have [your own server](../server-raspberry-pi/index.md), you can run following command with a server hostname or IP address (example is `hub.local`)
 
 ```
 bch -H hub.local sub

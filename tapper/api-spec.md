@@ -1,12 +1,12 @@
 ---
 slug: /api-spec
-title: MQTT API Specification
+title: MQTT API specification
 description: "TAPPER can communicate over MQTT using JSON messages."
 ---
 
 import Image from '@theme/IdealImage';
 
-# MQTT API Specification
+# MQTT API specification
 
 TAPPER can communicate over MQTT using JSON messages.
 

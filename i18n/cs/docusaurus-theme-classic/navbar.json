@@ -7,9 +7,9 @@
     "message": "Produkty",
     "description": "Navbar item with label Products"
   },
-  "item.label.Smart Devices": {
+  "item.label.Smart devices": {
     "message": "Chytrá zařízení",
-    "description": "Navbar item with label Smart Devices"
+    "description": "Navbar item with label Smart devices"
   },
   "item.label.Cloud": {
     "message": "Cloud",
@@ -99,8 +99,8 @@
     "message": "The Things Stack",
     "description": "Navbar item with label The Things Stack"
   },
-  "item.label.Video Tutorials": {
+  "item.label.Video tutorials": {
     "message": "Videonávody",
-    "description": "Navbar item with label Video Tutorials"
+    "description": "Navbar item with label Video tutorials"
   }
 }

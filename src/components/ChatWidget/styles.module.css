@@ -58,7 +58,7 @@
 }
 
 .teaserText:hover {
-  color: var(--ifm-color-primary);
+  color: var(--ifm-link-color);
 }
 
 .teaserClose {
@@ -134,7 +134,7 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: var(--ifm-color-primary);
+  background: #252532; /* Ink */
   color: #fff;
   font-size: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -142,7 +142,15 @@
 }
 
 .fabOpen:hover {
-  background: #b80320;
+  background: #06367a; /* Navy */
+}
+
+[data-theme='dark'] .fabOpen {
+  background: #3b3b46;
+}
+
+[data-theme='dark'] .fabOpen:hover {
+  background: #016ad4;
 }
 
 /* The ✕ turns in as the robot leaves. */
@@ -452,7 +460,10 @@
 }
 
 .header {
-  background: var(--ifm-color-primary);
+  /* The brand band: the gradient, Red to Sky, with White type on its left part.
+     The buttons sit on the light (Sky) end, so they get the rounded Ink tint at
+     40 % the brand uses for small type there (HBG.261028.01, The gradient). */
+  background: linear-gradient(90deg, #e30427, #009cfa);
   color: #fff;
   padding: 14px 16px;
   display: flex;
@@ -512,7 +523,7 @@
 }
 
 .headerBeta {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.2;
   opacity: 0.85;
@@ -521,6 +532,9 @@
 /* Resize and close travel together on the right. Without this the title would
    squash them on a narrow panel. */
 .headerActions {
+  background: rgba(37, 37, 50, 0.4);
+  border-radius: 8px;
+  padding: 1px;
   display: flex;
   align-items: center;
   gap: 2px;
@@ -605,7 +619,7 @@
 
 .userMsg {
   align-self: flex-end;
-  background: var(--ifm-color-primary);
+  background: #016ad4; /* Blue: White on Blue 5.2:1 */
   color: #fff;
   border-radius: 12px 12px 2px 12px;
   padding: 10px 14px;
@@ -619,7 +633,7 @@
 
 .botMsg {
   align-self: flex-start;
-  background: var(--ifm-code-background);
+  background: #f5f5f5; /* Panel */
   border-radius: 12px 12px 12px 2px;
   padding: 10px 14px;
   max-width: 90%;
@@ -766,7 +780,7 @@
   border: 1px solid var(--ifm-toc-border-color);
   border-radius: 999px;
   background: var(--ifm-background-surface-color);
-  font-size: 11.5px;
+  font-size: 12px;
   line-height: 1.35;
   text-decoration: none;
   color: var(--ifm-font-color-base);
@@ -783,7 +797,7 @@
 }
 
 .sourceChipSite {
-  font-size: 9.5px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -798,7 +812,7 @@
 }
 
 .sourceChipArrow {
-  font-size: 10px;
+  font-size: 12px;
   opacity: 0.5;
 }
 
@@ -879,7 +893,7 @@
   top: 4px;
   right: 4px;
   padding: 2px 8px;
-  font-size: 11px;
+  font-size: 12px;
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 4px;
   background: var(--ifm-background-surface-color);
@@ -982,11 +996,12 @@
 .suggestion {
   max-width: 100%;
   padding: 6px 11px;
-  border: 1px solid var(--ifm-color-primary);
+  border: 1px solid var(--ifm-link-color);
   border-radius: 999px;
   background: transparent;
-  color: var(--ifm-color-primary);
-  font-size: 12px;
+  color: var(--ifm-link-color);
+  font: inherit;
+  font-size: 13px;
   line-height: 1.35;
   text-align: left;
   cursor: pointer;
@@ -995,7 +1010,7 @@
 
 .suggestion:hover:not(:disabled),
 .suggestion:focus-visible:not(:disabled) {
-  background: var(--ifm-color-primary);
+  background: var(--ifm-link-color);
   color: #fff;
   transform: translateY(-1px);
 }
@@ -1028,6 +1043,7 @@
   border: 1px solid var(--ifm-toc-border-color);
   border-radius: 8px;
   padding: 8px 12px;
+  font: inherit;
   font-size: 14px;
   /* NOT --ifm-background-color: Infima defines that as `transparent` in the light
      theme, which made the panel see-through. --ifm-background-surface-color is
@@ -1038,11 +1054,13 @@
 }
 
 .inputRow input:focus {
-  border-color: var(--ifm-color-primary);
+  border-color: var(--ifm-link-color);
 }
 
 .inputRow button {
-  background: var(--ifm-color-primary);
+  display: flex;
+  align-items: center;
+  background: #016ad4; /* Blue */
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -1053,7 +1071,7 @@
 }
 
 .inputRow button:hover:not(:disabled) {
-  background: #b80320;
+  background: #06367a; /* Navy */
 }
 
 .inputRow button:disabled {
@@ -1070,7 +1088,7 @@
 .privacy {
   margin: 0;
   padding: 0 12px 10px;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.4;
   color: var(--ifm-color-emphasis-700);
   flex-shrink: 0;
@@ -1223,6 +1241,23 @@
    so it should carry nothing personal. */
 .feedbackHint {
   width: 100%;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--ifm-color-emphasis-700);
+}
+
+/* Brand: Inter everywhere. Buttons and inputs do not inherit the page font by
+   default, so they fell back to Arial. */
+.wrapper :is(button, input, textarea) {
+  font-family: inherit;
+}
+
+/* Lucide icons (x, send-horizontal) in place of the ✕ and ➤ glyphs. */
+.lucide {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+[data-theme='dark'] .botMsg {
+  background: #2e2e3a; /* Mist */
 }

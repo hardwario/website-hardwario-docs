@@ -155,8 +155,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
     padding: 0.35rem 0.75rem;
     border-radius: 999px;
     font-size: 0.85rem;
-    font-weight: var(--ifm-font-weight-semibold);
-    letter-spacing: 0.06em;
+    font-weight: 700; /* brand: caps labels Bold, tracked 0.07 em */
+    letter-spacing: 0.07em;
     text-transform: uppercase;
     transition: background-color 0.15s ease, color 0.15s ease;
   }
@@ -194,7 +194,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
     left: 0;
     z-index: 0;
     border-radius: 999px;
-    background: rgba(227, 4, 39, 0.08);
+    /* 4 % keeps the Red text at 4.5:1 on the pill (8 % gave 4.2:1). */
+    background: rgba(227, 4, 39, 0.04);
     opacity: 0;
     pointer-events: none;
     transition:
@@ -204,7 +205,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   }
 
   [data-theme='dark'] .navbar-active-indicator {
-    background: rgba(227, 4, 39, 0.16);
+    background: rgba(244, 63, 94, 0.12);
   }
 
   .navbar .dropdown > .navbar__link::after {
@@ -350,9 +351,9 @@ button.theme-back-to-top-button::after {
 .menu__list-item.sidebar-section > .menu__list-item-collapsible > .menu__link {
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--ifm-color-emphasis-600);
+  color: #6b6a6a; /* Gray, 5.3:1; the Infima grey was 3.0:1 */
   background: none;
 }
 
@@ -378,4 +379,90 @@ button.theme-back-to-top-button::after {
   .navbar-dropdown-current {
     animation: none;
   }
+}
+
+/* --- Brand: navbar, sidebar and search (HBG.261028.01) --- */
+
+/* The logo keeps its clear space X (half the symbol height, 16 px) above and
+   below: a 32 px logo in a 64 px bar. */
+:root {
+  --ifm-navbar-height: 4rem;
+}
+
+/* Right-hand navbar links (GitHub, language): Regular; Inter has no 500 in
+   the brand's three weights. */
+.navbar__items--right .navbar__link {
+  font-weight: 400;
+}
+
+/* Sidebar: Ink items in Regular with text line spacing; the current page in
+   Red with a Red marker (Red on White, 4.8:1, instead of Red on a grey chip,
+   4.3:1); its parent categories in Ink Semibold, so Red stays the one mark. */
+:root {
+  --ifm-menu-color: #252532;
+  --ifm-menu-color-active: #e30427;
+  --ifm-menu-color-background-active: transparent;
+}
+
+[data-theme='dark'] {
+  --ifm-menu-color: #ffffff;
+  --ifm-menu-color-active: #f43f5e;
+}
+
+.theme-doc-sidebar-menu .menu__link {
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.theme-doc-sidebar-menu .menu__link--sublist.menu__link--active,
+.theme-doc-sidebar-menu .menu__list-item-collapsible--active > .menu__link {
+  color: var(--ifm-menu-color);
+  font-weight: 600;
+}
+
+.theme-doc-sidebar-menu .menu__list-item-collapsible--active {
+  background: transparent;
+}
+
+.theme-doc-sidebar-menu .menu__link--active:not(.menu__link--sublist) {
+  background: transparent;
+  box-shadow: inset 2px 0 0 var(--ifm-menu-color-active);
+  border-radius: 0 var(--ifm-menu-link-border-radius, 0.25rem) var(--ifm-menu-link-border-radius, 0.25rem) 0;
+}
+
+/* The section headings (USER GUIDE, ADVANCED) are categories too, but never
+   carry the "you are here" marker. */
+.theme-doc-sidebar-menu .menu__list-item.sidebar-section > .menu__list-item-collapsible > .menu__link {
+  box-shadow: none;
+  font-weight: 700;
+}
+
+[data-theme='dark'] .menu__list-item.sidebar-section > .menu__list-item-collapsible > .menu__link {
+  color: #d1d5db; /* light gray */
+}
+
+/* Search: Inter (inputs do not inherit it), Panel field, Gray placeholder
+   (4.9:1 on Panel; it was 1.5:1). */
+.navbar__search-input,
+.navbar input[type='search'] {
+  font-family: inherit;
+  background-color: #f5f5f5;
+  color: #252532;
+}
+
+.navbar__search-input::placeholder,
+.navbar input[type='search']::placeholder {
+  color: #6b6a6a;
+  opacity: 1;
+}
+
+[data-theme='dark'] .navbar__search-input,
+[data-theme='dark'] .navbar input[type='search'] {
+  background-color: #252532;
+  color: #ffffff;
+}
+
+[data-theme='dark'] .navbar__search-input::placeholder,
+[data-theme='dark'] .navbar input[type='search']::placeholder {
+  color: #d1d5db;
 }

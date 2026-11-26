@@ -393,7 +393,7 @@ const config = {
           },
           // 2) SMART DEVICES (podmenu)
           {
-            label: 'Smart Devices',
+            label: 'Smart devices',
             position: 'left',
             items: [
               { to: '/smart-devices/milesight', label: 'Milesight', activeBaseRegex: `/smart-devices/milesight` },
@@ -421,7 +421,7 @@ const config = {
               { to: '/apps/thingsboard/index', label: 'HARDWARIO Dashboards', activeBaseRegex: `/apps/thingsboard/` },
               { to: '/apps/chirpstack/index', label: 'ChirpStack', activeBaseRegex: `/apps/chirpstack/` },
               { to: '/apps/the-things-stack/index', label: 'The Things Stack', activeBaseRegex: `/apps/the-things-stack/` },
-              { to: '/apps/videos-apps/videos-apps', label: 'Video Tutorials', activeBaseRegex: `/apps/videos-apps/` },
+              { to: '/apps/videos-apps/videos-apps', label: 'Video tutorials', activeBaseRegex: `/apps/videos-apps/` },
             ],
           },
           {

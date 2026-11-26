@@ -1,7 +1,7 @@
 ---
 slug: manual-connection
 title: Manual connection
-description: "Connect a device with your own data format or names in HARDWARIO Dashboards: create it, copy its access token, and send its data with a HARDWARIO Cloud connector and a transformation function."
+description: "Connect a device with your own data format or names to HARDWARIO Dashboards: copy its access token and send its data with a HARDWARIO Cloud connector."
 title_meta: "Manual connection (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';

@@ -1,7 +1,7 @@
 ---
 slug: manual-connection
 title: Ruční připojení
-description: "Připojení zařízení s vlastním formátem dat nebo vlastními názvy v HARDWARIO Dashboards: zkopírujete access token a data pošlete konektorem z HARDWARIO Cloud s transformační funkcí."
+description: "Zařízení s vlastním formátem dat nebo vlastními názvy připojíte k HARDWARIO Dashboards přes jeho access token a konektor v HARDWARIO Cloud."
 title_meta: "Ruční připojení (HARDWARIO Dashboards)"
 ---
 import Image from '@theme/IdealImage';

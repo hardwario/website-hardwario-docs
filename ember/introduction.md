@@ -5,6 +5,7 @@ sidebar_label: Introduction
 description: "EMBER is an industrial LoRaWAN platform that transmits and processes measured sensor values and controls actuators across industrial sites."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # EMBER
 
@@ -14,7 +15,7 @@ import Image from '@theme/IdealImage';
 ### To get your EMBER running, read the [**Quick Start Guide**](getting-started.md)
 :::
 
-<img src="/img/ember-top.webp" data-zoom-src="/img/ember-top.webp" width="540" alt="EMBER" />
+<ProductSpin product="ember" variants={[{id: "basic", label: "EMBER"}]} width={349} ratio={906 / 960} caption="Shown: EMBER, connectors facing down as mounted" />
 
 ## Quick links
 

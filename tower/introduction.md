@@ -6,13 +6,14 @@ sidebar_label: Introduction
 description: "TOWER is a modular, wireless, open-source and open-hardware IoT platform for rapid prototyping and deployment, at the heart of HARDWARIO Academy."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # TOWER
 
 **TOWER** is a modular, wireless, open-source/open-hardware IoT platform for rapid prototyping and deployment.
 It is used in industrial applications, STEM education, and hobby projects (home automation, gardening, lighting, escape rooms, etc.).
 
-<img src="/img/tower.webp" data-zoom-src="/img/tower.webp" width="540" alt="TOWER" />
+<ProductSpin product="tower" variants={[{id: "push", label: "TOWER Starter – Push kit"}]} frames={24} width={308} ratio={600 / 720} caption="Shown: TOWER Starter – Push kit (studio photos)" />
 
 ## Quick links
 

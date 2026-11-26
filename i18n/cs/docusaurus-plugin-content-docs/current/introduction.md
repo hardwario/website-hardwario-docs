@@ -5,6 +5,7 @@ description: "HARDWARIO CHESTER je konfigurovatelná platforma IoT LPWAN s nízk
 sidebar_label: Úvod
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # CHESTER {#chester}
 
@@ -14,7 +15,7 @@ import Image from '@theme/IdealImage';
 ### Než zařízení CHESTER uvedete do provozu, přečtěte si [**Rychlého průvodce**](first-steps.md) {#to-get-your-chester-running-read-the-quick-start-guide}
 :::
 
-<img src="/img/chester.webp" data-zoom-src="/img/chester.webp" width="540" alt="CHESTER" />
+<ProductSpin product="chester" variants={[{id: "basic", label: "CHESTER"}]} width={236} ratio={613 / 960} caption="Na ukázce: CHESTER v základní krabičce" />
 
 ## Rychlé odkazy {#quick-links}
 

@@ -5,6 +5,7 @@ sidebar_label: Introduction
 description: "FIBER is a robust industrial IoT device built on an embedded Linux platform and designed for Industrial IoT applications."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # FIBER
 
@@ -23,7 +24,7 @@ sensors on FIBER Lite), see [**FIBER Lite**](fiber-lite/introduction) in the sid
 
 Thanks to its modular and open architecture, **FIBER** supports standard **Raspberry Pi OS** distributions as well as **custom Linux images built with Yocto**, making it usable as a preconfigured measurement appliance or as a development platform. Designed for deployment in industrial and commercial environments, the device provides wireless and wired communication channels for reliable sensor acquisition, local visualization on its integrated display, and robust network connectivity through **Ethernet**, **Wi-Fi**, or optional **LTE**.
 
-<img src="/img/fiber.webp" data-zoom-src="/img/fiber.webp" width="540" alt="FIBER" />
+<ProductSpin product="fiber" variants={[{id: "basic", label: "FIBER"}]} width={446} ratio={1157 / 960} caption="Shown: FIBER" />
 
 ## Quick links
 

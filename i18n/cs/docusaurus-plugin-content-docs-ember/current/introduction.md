@@ -5,6 +5,7 @@ sidebar_label: Úvod
 description: "EMBER je průmyslová platforma LoRaWAN, která přenáší a zpracovává hodnoty ze senzorů a řídí akční členy v průmyslových areálech."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # EMBER {#ember}
 
@@ -14,7 +15,7 @@ import Image from '@theme/IdealImage';
 ### Než zařízení EMBER zprovozníte, přečtěte si [**Rychlého průvodce**](getting-started.md) {#to-get-your-ember-running-read-the-quick-start-guide}
 :::
 
-<img src="/img/ember-top.webp" data-zoom-src="/img/ember-top.webp" width="540" alt="EMBER" />
+<ProductSpin product="ember" variants={[{id: "basic", label: "EMBER"}]} width={349} ratio={906 / 960} caption="Na ukázce: EMBER, konektory dolů jako při montáži" />
 
 ## Rychlé odkazy {#quick-links}
 

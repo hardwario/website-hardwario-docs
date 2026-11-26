@@ -5,6 +5,7 @@ sidebar_label: Introduction
 description: "STICKER is an open IoT platform on STM32WL with LoRaWAN connectivity and a software-selectable LoRa P2P mode, configured over NFC with HARDWARIO Manager."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # STICKER
 
@@ -14,7 +15,7 @@ import Image from '@theme/IdealImage';
 ### To get your STICKER running, read the [**Quick Start Guide**](first-steps)
 :::
 
-<img src="/img/sticker.webp" data-zoom-src="/img/sticker.webp" width="540" alt="STICKER catalog" />
+<ProductSpin product="sticker" variants={[{id: "clime", label: "STICKER Clime"}]} caption="Shown: STICKER Clime" />
 
 ## Quick links
 

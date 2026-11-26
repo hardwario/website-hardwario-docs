@@ -5,6 +5,7 @@ sidebar_label: Úvod
 description: "STICKER je otevřená IoT platforma na STM32WL s LoRaWAN a volitelným režimem LoRa P2P, která se nastavuje přes NFC v aplikaci HARDWARIO Manager."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # STICKER {#sticker}
 
@@ -14,7 +15,7 @@ import Image from '@theme/IdealImage';
 ### Jak zařízení STICKER zprovoznit, popisuje [**Rychlý průvodce**](first-steps) {#to-get-your-sticker-running-read-the-quick-start-guide}
 :::
 
-<img src="/img/sticker.webp" data-zoom-src="/img/sticker.webp" width="540" alt="Varianty zařízení STICKER" />
+<ProductSpin product="sticker" variants={[{id: "clime", label: "STICKER Clime"}]} caption="Na ukázce: STICKER Clime" />
 
 ## Rychlé odkazy {#quick-links}
 

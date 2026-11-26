@@ -5,6 +5,7 @@ sidebar_label: Introduction
 description: "HARDWARIO CHESTER is a configurable low-power IoT LPWAN platform for remote monitoring over LTE-M, NB-IoT and LoRaWAN, extensible with plug-in modules."
 ---
 import Image from '@theme/IdealImage';
+import ProductSpin from '@site/src/components/ProductSpin';
 
 # CHESTER
 
@@ -14,7 +15,7 @@ import Image from '@theme/IdealImage';
 ### To get your CHESTER running, read the [**Quick Start Guide**](first-steps.md)
 :::
 
-<img src="/img/chester.webp" data-zoom-src="/img/chester.webp" width="540" alt="CHESTER" />
+<ProductSpin product="chester" variants={[{id: "basic", label: "CHESTER"}]} width={236} ratio={613 / 960} caption="Shown: CHESTER in the basic enclosure" />
 
 ## Quick links
 

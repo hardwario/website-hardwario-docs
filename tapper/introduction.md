@@ -11,6 +11,8 @@ import Image from '@theme/IdealImage';
 
 **TAPPER** is a secure NFC tag reader powered by a Raspberry Pi Zero 2 W and the PN532 module. It was designed to communicate over MQTT for systems requiring reliable tag verification.
 
+<img src="/img/tapper-product.webp" data-zoom-src="/img/tapper-product.webp" width="240" alt="TAPPER" />
+
 ## Quick links
 
 * [**Client Installation**](installation): Install the TAPPER client on TAPPER.

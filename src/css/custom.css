@@ -466,3 +466,30 @@ button.theme-back-to-top-button::after {
 [data-theme='dark'] .navbar input[type='search']::placeholder {
   color: #d1d5db;
 }
+
+/* Icons: Lucide (src/components/Lucide.js, src/theme/Icon/*) in Navy; White
+   or light gray on dark grounds. The search field's magnifier is Infima's
+   background icon, so it is swapped for Lucide's "search" here. */
+.navbar .lucide {
+  color: #06367a;
+}
+
+[data-theme='dark'] .navbar .lucide {
+  color: #d1d5db;
+}
+
+/* The search plugin draws its own magnifier SVG: its shapes are hidden and the
+   Lucide "search" icon is painted through a mask in the icon colour. */
+.navbar svg[class*='searchIcon'] > * {
+  display: none;
+}
+
+.navbar svg[class*='searchIcon'] {
+  background-color: #06367a;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>') center / contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>') center / contain no-repeat;
+}
+
+[data-theme='dark'] .navbar svg[class*='searchIcon'] {
+  background-color: #d1d5db;
+}

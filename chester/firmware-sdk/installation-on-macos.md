@@ -15,11 +15,11 @@ Before you begin, make sure you comply with the article [Requirements](./require
 
 :::
 
-## Installation Steps
+## Installation steps
 
 The installation steps are split into multiple sections. In the end, you will be able to build the `blinky` sample from the **CHESTER SDK**.
 
-### Install Package Manager
+### Install package manager
 
 :::tip
 
@@ -41,7 +41,7 @@ You can skip this step if you already have **Homebrew** installed on your system
    sudo reboot
    ```
 
-### Install Packages
+### Install packages
 
 Install the following **Homebrew** packages:
 
@@ -49,7 +49,7 @@ Install the following **Homebrew** packages:
 brew install cmake ninja gperf python3 ccache qemu dtc wget libmagic
 ```
 
-## Create Application
+## Create application
 
 1. Create the directory for your application and switch to it:
 
@@ -129,7 +129,7 @@ brew install cmake ninja gperf python3 ccache qemu dtc wget libmagic
    west sdk install -t arm-zephyr-eabi
    ```
 
-## Test Build and Flash
+## Test build and flash
 
 1. Go to the `blinky` sample directory:
 

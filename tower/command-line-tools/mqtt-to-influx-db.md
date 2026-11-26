@@ -1,6 +1,6 @@
 ---
 slug: mqtt-to-influx-db
-title: MQTT Storage
+title: MQTT storage
 description: "Install mqtt2influxdb to store TOWER sensor data from MQTT topics in InfluxDB, write its YAML configuration, test it and run it as a PM2 service."
 ---
 import Image from '@theme/IdealImage';
@@ -31,7 +31,7 @@ You need [**Python**](https://www.python.org/downloads/) and [**pip**](https://w
 
 :::
 
-## Set Up MQTT to InfluxDB
+## Set up MQTT to InfluxDB
 
 To install `mqtt2influxdb` you will just need to put the next command to your command line
 

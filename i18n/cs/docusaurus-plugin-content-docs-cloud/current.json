@@ -3,7 +3,7 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.docs.category.User Guide": {
+  "sidebar.docs.category.User guide": {
     "message": "Uživatelská příručka",
     "description": "The label for category 'User Guide' in sidebar 'docs'"
   },
@@ -35,7 +35,7 @@
     "message": "REST API",
     "description": "The label for category 'REST API' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Device Protocol": {
+  "sidebar.docs.category.Device protocol": {
     "message": "Protokol zařízení",
     "description": "The label for category 'Device Protocol' in sidebar 'docs'"
   },
@@ -47,11 +47,11 @@
     "message": "Technická reference",
     "description": "The label for category 'Technical Reference' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Video Tutorials": {
+  "sidebar.docs.category.Video tutorials": {
     "message": "Videonávody",
     "description": "The label for category 'Video Tutorials' in sidebar 'docs'"
   },
-  "sidebar.docs.doc.Device Management": {
+  "sidebar.docs.doc.Device management": {
     "message": "Správa zařízení",
     "description": "The label for the doc item 'Device Management' in sidebar 'docs', linking to the doc devices"
   },

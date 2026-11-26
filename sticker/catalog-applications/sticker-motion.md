@@ -11,7 +11,7 @@ import Image from '@theme/IdealImage';
 
 ![STICKER Motion](images/sticker-motion-top.png)
 
-## Quick Links
+## Quick links
 
 * [**Getting Started Guide**](/sticker/first-steps): Step-by-step setup guide.
 * [**Buy STICKER Motion**](https://www.hardwario.store/p/sticker-motion): Purchase from our store.
@@ -30,7 +30,7 @@ import Image from '@theme/IdealImage';
 #### Smarter comfort in busy spaces
 - The average person gives off about 100 W of heat. In places with high foot traffic, like waiting rooms, monitoring motion, temperature, and humidity helps maintain comfort and efficiency. STICKER Motion captures all three for smarter climate control.
 
-## Example JSON Message
+## Example JSON message
 
 A periodic report as decoded by the v2.0.0 `ttn.js` decoder (fPort 2). `motion_count` counts PIR detections, `accel_motion_count` counts accelerometer motion events, and `orientation` is the position reported by the accelerometer (1–6).
 

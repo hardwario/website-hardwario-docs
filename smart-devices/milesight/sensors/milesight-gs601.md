@@ -6,7 +6,7 @@ description: "Milesight GS601 ceiling vape and smoke detector with PM, TVOC, tem
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor GS601
+# Milesight sensor GS601
 
 Milesight GS601 is a **ceiling-mounted vape and smoke detector** designed for **smoke-free environments** including schools, apartments, hotels, and stairwells. It uses **laser scattering technology** to detect e-cigarettes, traditional cigarettes, and marijuana with **high accuracy**, while also monitoring **temperature**, **humidity**, **particulate matter** (PM1.0/2.5/10), and **TVOC**. The sensor features **anti-tamper protection**, **real-time alerts** via buzzer (70 dB) and LED indicators, **IP30 rating**, and **LoRaWAN Class C** connectivity for comprehensive air quality monitoring and enforcement.
 
@@ -22,7 +22,7 @@ Milesight GS601 is a **ceiling-mounted vape and smoke detector** designed for **
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | https://www.hardwario.store/p/milesight-gs601                        |
@@ -39,7 +39,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -59,7 +59,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -68,7 +68,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/gs-series/gs601/gs601-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -84,7 +84,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
@@ -102,7 +102,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Detection Capability | E-cigarettes, traditional cigarettes, marijuana |
 | **Environmental Sensors** | |
 | Temperature | -20°C ~ +60°C, Accuracy ±0.2°C |
-| Humidity | 0% ~ 100% RH, Accuracy ±2% |
+| Humidity | 0–100 % RH, Accuracy ±2% |
 | Particulate Matter | PM1.0, PM2.5, PM10 (0-1000 μg/m³) |
 | TVOC | 0-2000 μg/m³ |
 | **Alerts & Indicators** | |

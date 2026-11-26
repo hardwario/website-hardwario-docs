@@ -1,6 +1,6 @@
 ---
 slug: how-to-i2c-bus
-title: "How To: I²C Bus"
+title: "How to: I²C bus"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,14 +1,14 @@
 ---
 slug: thingsboard-new-device
-title: New Device
+title: New device
 description: "Video tutorial on creating a new device in ThingsBoard, filling in its details and reaching its telemetry from the device list."
 ---
 
 import Image from '@theme/IdealImage';
 
-# ThingsBoard – How to Create a New Device
+# ThingsBoard – how to create a new device
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you will learn how to create a new device in ThingsBoard and manage its details. Once created, the device will appear in your list and provide access to telemetry data.
 

@@ -1,12 +1,12 @@
 ---
-title: Hardware Description
+title: Hardware description
 sidebar_position: 6
 description: "GLIDER is built around the Nordic nRF9151 system-in-package, a Cortex-M33 microcontroller with an integrated LTE-M / NB-IoT cellular modem."
 title_meta: "Hardware Description (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Hardware Description
+# Hardware description
 
 GLIDER is built around the **Nordic nRF9151** system-in-package, a Cortex-M33 microcontroller with an integrated LTE-M / NB-IoT cellular modem. This page summarises the technical details that matter when integrating, wiring or extending the device.
 
@@ -117,7 +117,7 @@ Two electrically equivalent ports on the screw terminal, both driven by the same
 
 ## Firmware
 
-GLIDER firmware is built on **Zephyr / nRF Connect SDK** with HARDWARIO's **HIO SDK** on top, which provides the cloud client, configuration framework, button handling, edge detection and the ATCI interpreter.
+GLIDER firmware is built on **Zephyr / nRF Connect SDK** with the HARDWARIO **HIO SDK** on top, which provides the cloud client, configuration framework, button handling, edge detection and the ATCI interpreter.
 
 Build command:
 

@@ -22,7 +22,7 @@ You can also place the CHESTER device in an alternative enclosure. HARDWARIO pro
 
 :::
 
-## List of Enclosures
+## List of enclosures
 
 | Ordering Code                   | Application                    | Drawings                                                                                            | Dimensions   | Note    |
 | ------------------------------- | ------------------------------ | --------------------------------------------------------------------------------------------------- | ------------ | ------- |
@@ -46,7 +46,7 @@ You can also place the CHESTER device in an alternative enclosure. HARDWARIO pro
 | [CHESTER-E18-P](#chester-e18-p) | CHESTER with C2 (Axilera)      | [PDF, DWG](https://drive.google.com/drive/folders/1D8MeBiICB2iXXC_zgE-sge7DPjEI6qyb)                | 200x280x65mm |         |
 | [CHESTER-E19-P](#chester-e19-p) | CHESTER with B1 (wM-Bus)       | [PDF, DWG](https://drive.google.com/drive/folders/1pQctIJO7f_oHARnR08PQ1EmMJraEvYvr)                | 200x280x65mm |         |
 
-## Ordering Codes
+## Ordering codes
 
 Suffix explanation:
 

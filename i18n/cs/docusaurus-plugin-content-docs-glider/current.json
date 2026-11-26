@@ -3,7 +3,7 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.docs.category.User Guide": {
+  "sidebar.docs.category.User guide": {
     "message": "Uživatelská příručka",
     "description": "The label for category 'User Guide' in sidebar 'docs'"
   },
@@ -15,7 +15,7 @@
     "message": "Vývoj",
     "description": "The label for category 'Development' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Console Access": {
+  "sidebar.docs.category.Console access": {
     "message": "Přístup ke konzoli",
     "description": "The label for category 'Console Access' in sidebar 'docs'"
   },
@@ -23,7 +23,7 @@
     "message": "Přístup ke konzoli zařízení GLIDER přes USB nebo přes RTT se sondou J-Link.",
     "description": "The generated-index page description for category 'Console Access' in sidebar 'docs'"
   },
-  "sidebar.docs.category.External Sensors": {
+  "sidebar.docs.category.External sensors": {
     "message": "Externí senzory",
     "description": "The label for category 'External Sensors' in sidebar 'docs'"
   },
@@ -35,7 +35,7 @@
     "message": "Přehled příkazů AT a příkazů shellu zařízení GLIDER.",
     "description": "The generated-index page description for category 'Commands' in sidebar 'docs'"
   },
-  "sidebar.docs.category.Firmware Flashing": {
+  "sidebar.docs.category.Firmware flashing": {
     "message": "Nahrání firmwaru",
     "description": "The label for category 'Firmware Flashing' in sidebar 'docs'"
   }

@@ -1,6 +1,6 @@
 ---
 slug: changelog
-title: TOWER Changelog
+title: TOWER changelog
 toc_min_heading_level: 2
 toc_max_heading_level: 2
 description: "This page tracks all notable changes across the TOWER platform, including firmware / SDK and hardware modules."
@@ -9,7 +9,7 @@ description: "This page tracks all notable changes across the TOWER platform, in
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# TOWER Changelog
+# TOWER changelog
 
 This page tracks all notable changes across the TOWER platform, including **firmware / SDK** and **hardware modules**. Use the tabs below to filter by change category.
 
@@ -27,7 +27,7 @@ TOWER is currently in **maintenance mode**, receiving only bugfixes and minor im
 
 ---
 
-## General Platform Updates
+## General platform updates
 
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware & Applications" default>

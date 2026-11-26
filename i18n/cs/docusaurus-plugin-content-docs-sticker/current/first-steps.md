@@ -148,8 +148,8 @@ Vždy se ukáže jen jeden vzor. Firmware tyto stavy kontroluje v uvedeném poř
 | Vzor LED | Co znamená | Co dělat |
 |---|---|---|
 | **Červená a žlutá střídavě, dvakrát** | **Uloženou konfiguraci nešlo načíst**. Identita i zprovoznění jsou pryč a zařízení běží na výchozích hodnotách z výroby | Zapište celou konfiguraci znovu přes NFC v aplikaci [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration); pokud se stav opakuje, zařízení potřebuje servis |
-| **1× žlutá, pak 1× červená** ~200 ms poté | **Připojuje se nebo znovu připojuje** a od sítě nedostává odpověď | Zkontrolujte blízkost brány, frekvenční plán / region a shodu DevEUI, JoinEUI a AppKey se síťovým serverem |
-| **2× žlutá**, ~200 ms od sebe | **Zhoršené spojení**. Kontroly spojení selhávají, ale relace stále trvá | Zkontrolujte pokrytí bránou a umístění antény; jakmile se spojení obnoví, zařízení se zotaví samo |
+| **1× žlutá, pak 1× červená** přibližně 200 ms poté | **Připojuje se nebo znovu připojuje** a od sítě nedostává odpověď | Zkontrolujte blízkost brány, frekvenční plán / region a shodu DevEUI, JoinEUI a AppKey se síťovým serverem |
+| **2× žlutá**, přibližně 200 ms od sebe | **Zhoršené spojení**. Kontroly spojení selhávají, ale relace stále trvá | Zkontrolujte pokrytí bránou a umístění antény; jakmile se spojení obnoví, zařízení se zotaví samo |
 | **1× žlutá** | **Rádio vypnuté**: `radio-mode off` (výchozí stav z výroby), `radio-mode p2p` na zařízení bez klíčů pro P2P (nenastavený AppKey nebo DevEUI), nebo region LoRaWAN, který tento obraz firmwaru nepodporuje | Zapište konfiguraci LoRaWAN nebo P2P se zapnutým rádiem (krok 3) |
 | **1× červená** | **Je aktivní alarm** | Aktivní alarmy přečtete na obrazovce [**Informace o zařízení**](/apps/hardwario-manager/sticker/device-info), pak projděte [**pravidla alarmů**](developer-access/alarm-rules.md) |
 | **1× zelená** | Normální provoz, připojeno a v pořádku | Nic. To je cílový stav |
@@ -164,7 +164,7 @@ dat.
 | LED | Co znamená | Co dělat |
 |---|---|---|
 | **Zelená, svítí** (nejvýš 5 s) | Telefon je v poli NFC, relace ještě nezačala | Nehýbejte telefonem |
-| **Zelená, bliká** (~90 ms) | Probíhá relace: telefon a zařízení si vyměňují příkazy | Nehýbejte telefonem |
+| **Zelená, bliká** (přibližně 90 ms) | Probíhá relace: telefon a zařízení si vyměňují příkazy | Nehýbejte telefonem |
 | **Zelená a žlutá, 2 s** | Relace skončila, poslední výměna dat se povedla | Nic |
 | **Červená, 2 s** | Relace skončila, poslední výměna dat **selhala**: požadavek byl odmítnut ještě před provedením (špatný secret key nebo vendor token, zopakovaný nebo poškozený rámec; v tom případě se nic nezapíše), nebo se odpověď nedostala do telefonu | Zkontrolujte, že je zařízení uložené se správným secret key, viz [**Uložená zařízení STICKER**](/apps/hardwario-manager/sticker/saved-stickers), a přiložte telefon znovu |
 | **Zhasnuto** | Výměna dat skončila | Nic |
@@ -179,7 +179,7 @@ kvůli hodnotě mimo rozsah), skončí zeleně a žlutě; chybu ukáže aplikace
 
 | Kdy | Vzor LED | Co znamená |
 |---|---|---|
-| Zapnutí | **Červená 0,5 s → žlutá 0,5 s → zelená 1,5 s** (celkem ~3 s) | Normální start; zároveň ukazuje, že fungují všechny tři kanály. Zařízení během sekvence dál startuje, takže ho nezdržuje. Pokud sekvenci uvidíte nečekaně, zařízení se restartovalo |
+| Zapnutí | **Červená 0,5 s → žlutá 0,5 s → zelená 1,5 s** (celkem přibližně 3 s) | Normální start; zároveň ukazuje, že fungují všechny tři kanály. Zařízení během sekvence dál startuje, takže ho nezdržuje. Pokud sekvenci uvidíte nečekaně, zařízení se restartovalo |
 | Zapnutí s baterií pod 1,8 V | **Startovní sekvence, pak 5 s červené blikání každých 200 ms, 1 s trvale červená, pak zhasne** | Baterie je vybitá. Zařízení se samo vypne a zůstane vypnuté, dokud baterie nevyměníte nebo zařízení neresetujete signálem NRST |
 | Vstup se aktivuje | **Zelená, pak oranžová**. Každá 50 ms | Sepnul vstup zařízení STICKER Input nebo Hallův spínač |
 | Vstup se vrátí do klidu | **Oranžová, pak zelená**. Každá 50 ms | Tentýž vstup zase rozepnul |

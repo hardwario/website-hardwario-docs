@@ -19,7 +19,7 @@ This article describes the **CHESTER-C1** carrier board.
 </div>
 <br />
 
-## Module Overview
+## Module overview
 
 **CHESTER-C1** is a carrier board for **CHESTER-M** implementing:
 - 4x digital/analog inputs terminal
@@ -31,7 +31,7 @@ This article describes the **CHESTER-C1** carrier board.
 
 **CHESTER-C1** fits with the Takachi WP20-28-5Cx enclosure.
 
-## Technical Specification
+## Technical specification
 
 * Input DC voltage range (VIN): **8-36 V**
 * Supported C size battery: 1 x **Saft LSH14** or 1 x **Saft LS26500\***
@@ -67,29 +67,29 @@ _\* CHESTER-X SLOT A is by default occupied with integrated module CHESTER-X1_
 
 _\** Use the BYPASS BUTTON to initiate start from the battery without DC input power supply_
 
-## Pinout Description
+## Pinout description
 
-### Block A Connectors
+### Block A connectors
 
 ![Block A connector pinout, pins 1-8: +V, A, B, EN, TX, RX, VDD, GND](images/block-a.png)
 
-### 1-Wire Connectors
+### 1-Wire connectors
 
 ![1-Wire connector pinout, pins 1-3: VDD, DQ, GND](images/1-wire.png)
 
-### I2C Connector
+### I2C connector
 
 ![I2C connector pinout, pins 1-5: INT, SDA, SCL, VDD, GND](images/i2c.png)
 
-### SYSTEM Connector
+### SYSTEM connector
 
 ![SYSTEM connector pinout, pins 1-7: NC, +V, GND, VDD, SCL, SDA, INT](images/system.png)
 
-### Block B Connectors
+### Block B connectors
 
 ![Block B connector pinout, pins 1-8: +V, DI2, GND, DI1, AI2, GND, AI1, VDD](images/block-b.png)
 
-## Schematic Diagram
+## Schematic diagram
 
 A schematic diagram is useful if you program low-level hardware-related code or if you're just curious about how the system is designed.
 

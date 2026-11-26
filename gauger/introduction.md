@@ -17,7 +17,7 @@ The device hosts a web-based user interface used for its configuration. It can a
 
 <img src="/img/gauger-intro.webp" data-zoom-src="/img/gauger-intro.webp" width="540" alt="GAUGER" />
 
-## Quick Links
+## Quick links
 
 * [**Initial Configuration**](operation-instructions/initial-configuration.md): Connect to and set up your GAUGER for the first time.
 * [**Hardware Description**](hardware-description.md): Electrical, physical, and input specifications.
@@ -25,14 +25,14 @@ The device hosts a web-based user interface used for its configuration. It can a
 * [**Operation Instructions**](category/operation-instructions): Configuration reset, device discovery, firmware management.
 * [**Changelog**](changelog): Latest firmware and platform changes.
 
-## Typical Use Cases
+## Typical use cases
 
 - Water flow and gas consumption metering in hard-to-reach places
 - People counting via infrared gates at transition or transport stations
 - Device RPM and production line yield tracking
 - Industrial IoT sensing in buildings and urban areas
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|

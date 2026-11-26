@@ -7,7 +7,7 @@ title_meta: "Installation (TAPPER)"
 
 import Image from '@theme/IdealImage';
 
-# TAPPER Client Installation
+# TAPPER client installation
 
 Basic installation of the TAPPER client application.
 
@@ -138,7 +138,7 @@ The **Raspberry Pi Imager** lets you do this within [OS Customization](https://w
 
        `source ~/.bashrc`
 
-### Enable SPI and Serial Port
+### Enable SPI and serial port
 
 1. Enable the serial port and SPI interfaces:
 
@@ -146,7 +146,7 @@ The **Raspberry Pi Imager** lets you do this within [OS Customization](https://w
 
 1. Both interfaces are under the **Interface** option.
 
-### Install TAPPER Client
+### Install TAPPER client
 
 Install the TAPPER client Python package:
 

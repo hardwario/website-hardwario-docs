@@ -10,7 +10,7 @@ If you want to use the JLink probe to do some advanced debugging, you can [**rea
 
 :::
 
-## Starting Simple
+## Starting simple
 
 The easiest way to debug and also the way how all the things started was just to print out whatever you consider important to know.
 
@@ -20,7 +20,7 @@ We will use the serial port to print the information over USB into the connected
 
 The [**Core Module**](../hardware-modules/about-core-module.md) has an integrated FTDI chip connected to the UART2. You do not need to use a separate serial converter, just connect the USB cable to your computer.
 
-## Logging Example
+## Logging example
 
 :::note
 
@@ -85,7 +85,7 @@ Example of output:
 # 13.64 <I> Button event handler - event: 1
 ```
 
-### Colored Logs
+### Colored logs
 
 :::info
 
@@ -118,7 +118,7 @@ twr_log_error("Log");
 ```
 
 
-## Read Logs With HARDWARIO Code
+## Read logs with HARDWARIO code
 
 :::info
 

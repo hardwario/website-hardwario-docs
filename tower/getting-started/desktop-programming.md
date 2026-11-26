@@ -1,6 +1,6 @@
 ---
 slug: desktop-programming
-title: Desktop Programming
+title: Desktop programming
 title_meta: "Desktop Programming (TOWER, getting started)"
 ---
 import Image from '@theme/IdealImage';

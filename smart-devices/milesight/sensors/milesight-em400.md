@@ -6,7 +6,7 @@ description: "Milesight EM400-MUD ultrasonic distance sensor (3–450 cm) for pa
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor EM400-MUD
+# Milesight sensor EM400-MUD
 
 Milesight EM400-MUD is a **multifunctional ultrasonic distance sensor** designed for **smart parking**, **waste management**, and **level monitoring**. It features **60° beam angle** with **detection range of 3–450 cm** and **high accuracy** of ± (1+0.3%×S) cm. The sensor offers **three operational modes** (Standard, Bin, and Parking Lot), **IP67-rated enclosure**, **ultra-long battery life up to 10 years**, and supports **LoRaWAN**, **NB-IoT**, and **Cat M** connectivity.
 
@@ -26,7 +26,7 @@ Milesight EM400-MUD is a **multifunctional ultrasonic distance sensor** designed
 The EM400 series includes multiple variants: **EM400-TLD** (ToF Laser), **EM400-UDL** (Ultrasonic), and **EM400-MUD** (Multifunctional Ultrasonic). This documentation focuses on the EM400-MUD model.
 :::
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | Not yet available                                                     |
@@ -43,7 +43,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -64,7 +64,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -73,7 +73,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/em-series/em400-mud/em400-mud-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -89,7 +89,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|

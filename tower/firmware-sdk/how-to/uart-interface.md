@@ -1,6 +1,6 @@
 ---
 slug: how-to-uart-interface
-title: "How To: UART Interface"
+title: "How to: UART interface"
 ---
 import Image from '@theme/IdealImage';
 
@@ -12,9 +12,9 @@ Please refer to the module drawing pinout where you find the signal's positions.
 - [**UART SDK Module**](https://sdk.hardwario.com/group__twr__uart.html)
 - GitHub Repository Example
 
-## UART Write
+## UART write
 
-### Synchronous Write
+### Synchronous write
 
 Function `twr_uart_write` needs to know how **many bytes to send**. That’s why you need to use `sizeof(uart_tx)`.
 
@@ -49,7 +49,7 @@ Synchronous UART Write Code Example
 </details>
 
 
-### Asynchronous Write
+### Asynchronous write
 
 :::info
 
@@ -96,11 +96,11 @@ Asynchronous UART Write Code Example
 
 </details>
 
-## UART Read
+## UART read
 
 There are again two options to **read received bytes**. You can read data **synchronously** in your task, or **asynchronously** using callbacks.
 
-### Synchronous Read
+### Synchronous read
 
 <details>
 <summary>
@@ -127,7 +127,7 @@ Synchronous UART Read Code Example
 
 </details>
 
-### Asynchronous Read
+### Asynchronous read
 
 :::info
 

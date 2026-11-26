@@ -6,7 +6,7 @@ description: "Milesight FT101 LoRaWAN field tester: retrieve its keys, register 
 
 import Image from '@theme/IdealImage';
 
-# Milesight Field Tester FT101
+# Milesight field tester FT101
 
 Milesight FT101 is a **portable LoRaWAN® network testing device** designed for **signal assessment and optimization**. It features an **octa-core processor running Android 12.0**, supports **all standard LoRaWAN® frequency bands**, and provides **up to 8 hours of continuous operation**. The device is ideal for evaluating network quality, identifying optimal deployment locations, and comprehensive **field testing of LoRaWAN networks**.
 
@@ -22,7 +22,7 @@ Milesight FT101 is a **portable LoRaWAN® network testing device** designed for 
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | https://www.hardwario.store/p/milesight-ft101                        |
@@ -32,7 +32,7 @@ Milesight FT101 is a **portable LoRaWAN® network testing device** designed for 
 
 ---
 
-## Retrieving Device Keys
+## Retrieving device keys
 
 First, identify the unique identification credentials of your FT101.
 
@@ -51,7 +51,7 @@ The **AppEUI** (Join EUI) is fixed: **24E124C0002A0001**
 
 ---
 
-## Device Configuration
+## Device configuration
 
 Before connecting to the network, ensure the local settings are correct.
 
@@ -66,11 +66,11 @@ Before connecting to the network, ensure the local settings are correct.
 
 ---
 
-## LNS Registration (Server-Side)
+## LNS registration (server-side)
 
 This process occurs within your LoRaWAN Network Server interface (e.g., TTN, ChirpStack, or Milesight IoT Cloud).
 
-### Registration Steps
+### Registration steps
 
 1. **Create Application**: Create a folder or container (e.g., "Field_Testing")
 2. **Add Device**:
@@ -88,7 +88,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Network Activation (Join)
+## Network activation (join)
 
 Monitor the **Network Status** in the top bar of the home screen.
 
@@ -101,7 +101,7 @@ Monitor the **Network Status** in the top bar of the home screen.
 
 ---
 
-## Core Functions
+## Core functions
 
 | Function | Description | Objective |
 |----------|-------------|-----------|
@@ -111,7 +111,7 @@ Monitor the **Network Status** in the top bar of the home screen.
 | **Coverage Mapping** | GPS-tracked signal quality mapping | Identifying optimal deployment locations |
 | **Ping-pong Simulation** | Simulates bidirectional communication | Testing downlink capabilities |
 
-### Testing Features
+### Testing features
 
 - Multiple testing modes: signal quality (RSSI/SNR), coverage mapping, noise scanning, ping-pong simulation
 - Test results stored on 64GB internal storage
@@ -120,7 +120,7 @@ Monitor the **Network Status** in the top bar of the home screen.
 
 ---
 
-## Interpreting Noise Scan Results
+## Interpreting noise scan results
 
 A lower RSSI value (more negative) indicates a cleaner environment.
 
@@ -132,7 +132,7 @@ A lower RSSI value (more negative) indicates a cleaner environment.
 
 ---
 
-## Additional Capabilities
+## Additional capabilities
 
 **Milesight ToolBox** can be installed to configure other Milesight sensors via built-in **NFC reader** (ISO/IEC 14443A, 1-3 cm reading distance).
 
@@ -142,7 +142,7 @@ A lower RSSI value (more negative) indicates a cleaner environment.
 
 ---
 
-## LoRaWAN Configuration
+## LoRaWAN configuration
 | Parameter        | Value                    |
 |------------------|--------------------------|
 | LoRaWAN version  | 1.0.3                    |
@@ -152,17 +152,17 @@ A lower RSSI value (more negative) indicates a cleaner environment.
 
 ---
 
-## Power Supply
+## Power supply
 | Type   | Value                                        |
 |--------|----------------------------------------------|
 | Power  | 4.3V/4300mAh lithium-ion rechargeable battery |
 | Charging | 5V ⎓ 2A via USB Type-C                      |
-| Active use | ~8 hours continuous operation              |
-| Standby | >300 hours (~7 days)                         |
+| Active use | approx. 8 hours continuous operation              |
+| Standby | >300 hours (approx. 7 days)                         |
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
@@ -191,7 +191,7 @@ A lower RSSI value (more negative) indicates a cleaner environment.
 | Reports | Comprehensive export capabilities |
 | **Physical Characteristics** | |
 | Power Supply | 4.3V/4300mAh Li-ion rechargeable |
-| Battery Life | ~8 hours active / >300 hours standby |
+| Battery Life | approx. 8 hours active / >300 hours standby |
 | Operating Temp | -10°C ~ +50°C |
 | Storage Temp | -20°C ~ +60°C |
 | Humidity | 95% RH (non-condensing) |

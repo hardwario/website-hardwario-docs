@@ -1,16 +1,16 @@
 ---
 slug: firmware
 title: Firmware
-description: "You can update a CHESTER's firmware remotely from the Cloud, over the air, with no physical access to the device."
+description: "You can update the CHESTER firmware remotely from the Cloud, over the air, with no physical access to the device."
 ---
 
-# Firmware Updates
+# Firmware updates
 
-You can update a CHESTER's firmware remotely from the Cloud, over the air, with no
+You can update the CHESTER firmware remotely from the Cloud, over the air, with no
 physical access to the device. Such updates are also called **FOTA** (Firmware
 Over-The-Air).
 
-## 1. Get the firmware Identifier
+## 1. Get the firmware identifier
 
 Most updates use a **ready-made catalog firmware**, so you don't have to build
 anything yourself. Open the CHESTER

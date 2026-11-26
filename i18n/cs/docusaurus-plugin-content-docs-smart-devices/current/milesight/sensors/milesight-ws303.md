@@ -104,7 +104,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Pokročilé funkce | D2D Controller, alarm při úniku vody |
 | **Fyzické vlastnosti** | |
 | Napájení | 1 × CR2450 (590 mAh) |
-| Výdrž baterie | ~5,7 roku (typické použití, 25 °C) |
+| Výdrž baterie | přibližně 5,7 roku (typické použití, 25 °C) |
 | Provozní teplota | -10 °C ~ +60 °C |
 | Vlhkost | 0 %–100 % RH (nekondenzující) |
 | Krytí | IP67 |

@@ -29,7 +29,7 @@ older version installed, its CHESTER screens will differ from what is described
 there.
 :::
 
-## Firmware Update {#firmware-update}
+## Firmware update {#firmware-update}
 
 Firmware is flashed over Bluetooth from a **firmware QR code**, a **firmware ID**
 or an `app_update.bin` file already on the phone.

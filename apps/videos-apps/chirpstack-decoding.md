@@ -1,14 +1,14 @@
 ---
 slug: chirpstack-decoding
-title: Decoding Data
+title: Decoding data
 description: "Video tutorial on decoding LoRaWAN payloads in ChirpStack v4 and checking the decoded values in the application events."
 ---
 
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4 - How to Decode Incoming LoRaWAN Data
+# ChirpStack v4 - how to decode incoming LoRaWAN data
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you’ll learn how to decode LoRaWAN payloads in ChirpStack v4 and view the decoded data in the application events.
 

@@ -1,6 +1,6 @@
 ---
 slug: how-to-lcd-module
-title: "How To: LCD Module"
+title: "How to: LCD Module"
 description: "Program the TOWER LCD Module in the SDK: power it off to save battery, drive its six RGB LEDs, read its two buttons and draw with the GFX library."
 ---
 import Image from '@theme/IdealImage';
@@ -21,7 +21,7 @@ Most of the LCD functions use the GFX library internally so you can as well use 
 
 All you need to do to work with the LCD is to do the initialization, after that, you can start using the GFX library.
 
-## LCD Module Power
+## LCD Module power
 The module can be switched **on** and **off** for power saving (mostly used to prolong battery life when used).
 
 There are two functions available for the power management
@@ -108,7 +108,7 @@ LCD LEDs Code Example
 
 </details>
 
-### LCD Buttons
+### LCD buttons
 
 :::info
 

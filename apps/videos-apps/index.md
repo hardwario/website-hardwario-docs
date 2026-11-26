@@ -1,12 +1,12 @@
 ---
 slug: videos-apps
-title: Video Tutorials
+title: Video tutorials
 description: "Video tutorials and step-by-step guides for deploying HARDWARIO devices with HARDWARIO Manager, ThingsBoard and LoRaWAN network servers."
 ---
 
 import Image from '@theme/IdealImage';
 
-# Video Tutorials
+# Video tutorials
 
 On this page, you will find a comprehensive repository of technical guides and video tutorials designed to assist with the end-to-end deployment of HARDWARIO solutions, from low-level device provisioning and gateway configuration to secure data integration with external IoT platforms and visualization dashboards.
 

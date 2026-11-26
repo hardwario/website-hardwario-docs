@@ -1,6 +1,6 @@
 ---
 slug: chester-x13
-title: CHESTER-X13 (CAN Bus)
+title: CHESTER-X13 (CAN bus)
 description: CAN and CAN FD extension module for the CHESTER platform, based on the MCP2518FD controller and TCAN3413 transceiver, with on-board bus termination.
 keywords: [CHESTER-X13, CAN, CAN FD, CAN Bus, CANbus, MCP2518FD, TCAN3413, SPI, bus termination, wired connectivity, CHESTER]
 ---
@@ -20,23 +20,23 @@ The **CHESTER-X13** is a **CAN Bus** extension module with **CAN FD** support fo
 </div>
 </div>
 
-## Module Overview
+## Module overview
 
 CHESTER-X13 provides a **CAN / CAN FD** interface based on the **MCP2518FD** external CAN controller, which communicates with the CHESTER mainboard over **SPI**. An on-board **TCAN3413** transceiver drives the physical bus, and the **CANH** / **CANL** lines are brought out to the terminal block. On-board bus-termination resistors are provided but disconnected by default, so the module can sit anywhere on the bus.
 
 The module can run directly from the CHESTER mainboard. Alternatively, an external 6-28 VDC line on +VIN feeds the on-board **TPS62933** step-down converter, whose fixed **5 V** output powers the CHESTER mainboard. Schottky diodes (**PMEG6010ELR**) protect the input. An interrupt output signals the CHESTER mainboard when the CAN controller requires attention.
 
-## Key Features
+## Key features
 
 * **CAN & CAN FD:** Wired connectivity based on the MCP2518FD CAN controller.
 * **SPI Host Interface:** Connects to the CHESTER mainboard over SPI.
 * **On-board Transceiver:** TCAN3413 transceiver drives the physical CAN bus.
-* **Selectable Bus Termination:** On-board ~120 Ω termination, disconnected by default.
+* **Selectable Bus Termination:** On-board approx. 120 Ω termination, disconnected by default.
 * **Flexible Power:** Runs from the CHESTER mainboard, or from an optional 6-28 VDC line on +VIN.
 * **Input Protection:** Schottky diodes (PMEG6010ELR) on the power input.
 * **Interrupt Output:** Dedicated interrupt line to the CHESTER mainboard.
 
-## Typical Applications
+## Typical applications
 
 * **Industrial CAN Networks:** Connecting CHESTER to a CAN / CAN FD bus.
 * **Machinery & Equipment Monitoring:** Reading data from equipment that exposes a CAN interface.
@@ -44,7 +44,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 * **Energy & Power Systems:** Monitoring generators, inverters, and battery systems with a CAN interface.
 * **Retrofit Data Acquisition:** Tapping data from an existing CAN bus.
 
-## Technical Specifications
+## Technical specifications
 
 | Parameter | Value |
 | :--- | :--- |
@@ -53,14 +53,14 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **CAN Controller** | MCP2518FD (external, SPI) |
 | **CAN Transceiver** | TCAN3413 |
 | **Host Interface** | SPI |
-| **Bus Termination** | On-board ~120 Ω, disconnected by default |
+| **Bus Termination** | On-board approx. 120 Ω, disconnected by default |
 | **Power Input (+VIN)** | 6-28 VDC (optional external supply) |
 | **Power Output (+V)** | Fixed 5 V, powers the CHESTER mainboard |
 | **Bus Output** | CANH / CANL on the terminal block |
 | **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.2 |
 
-## Key Components
+## Key components
 
 | Component | Part Number | Description |
 | :--- | :--- | :--- |
@@ -69,7 +69,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **DC-DC Converter** | TPS62933 | Step-down converter, 6-28 VDC input |
 | **Input Protection** | PMEG6010ELR | Schottky barrier diodes for input protection |
 
-## Pin Configuration
+## Pin configuration
 
 The module uses a standardized header layout compatible with CHESTER extension slots.
 
@@ -77,7 +77,7 @@ The module uses a standardized header layout compatible with CHESTER extension s
 The pin configuration shown is for the CHESTER-M CGLS mainboard.
 :::
 
-### CHESTER-X13 Connector Pinout
+### CHESTER-X13 connector pinout
 
 ![CHESTER-X13 terminal block pinout: INT, RH, CANH, CANL, RL, GND, GND, +VIN on pins 1-8](images/tb-chester-x13.png)
 
@@ -96,7 +96,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 The module can run directly from the CHESTER mainboard. When an external **6-28 VDC** supply is connected to **+VIN** (Pin 8), the on-board TPS62933 step-down converter produces a fixed **5 V** that powers the CHESTER mainboard.
 :::
 
-### Host Interface (SPI)
+### Host interface (SPI)
 
 Unlike most CHESTER-X modules (which use **I²C**), CHESTER-X13 communicates with the CHESTER mainboard over **SPI**. The MCP2518FD controller is driven through the module slot's GP pins:
 
@@ -109,7 +109,7 @@ Unlike most CHESTER-X modules (which use **I²C**), CHESTER-X13 communicates wit
 
 The MCP2518FD interrupt output (INT) is routed to the module's **INT** terminal (pin 1). See the [Interrupt Pin](#interrupt-pin) subsection below.
 
-### Interrupt Pin
+### Interrupt pin
 
 The MCP2518FD signals events (such as a received CAN frame) on its interrupt output, which is brought out to the module's **INT** terminal (pin 1). This interrupt **must be wired to the CHESTER mainboard's INT terminal** so the mainboard can detect it. On the **CHESTER-M CGLS** mainboard, add a jumper wire from the extension module's terminal block to the mainboard's INT terminal. The wiring below is shown for a module in **slot B**; a module in another slot connects to that slot's INT terminal the same way.
 
@@ -117,26 +117,26 @@ The MCP2518FD signals events (such as a received CAN frame) on its interrupt out
 
 * Example: interrupt wiring for a module in slot B (CHESTER-M CGLS).
 
-## CAN Bus Connection
+## CAN bus connection
 
 The CAN bus is wired directly to the terminal-block pins **CANH** (pin 3) and **CANL** (pin 4). Use **twisted-pair** cable with a **120 Ω** characteristic impedance, wire the bus as a **linear (daisy-chain) topology** (avoid star layouts and long stubs), and keep any untwisted wiring at the terminal block **as short as possible**.
 
 The CAN interface is **not galvanically isolated**, so all nodes must share a common ground reference. Connect the bus **GND** to one of the terminal-block GND pins (pin 6 or 7).
 
-### Termination Resistors
+### Termination resistors
 
 A CAN bus must be terminated with a **120 Ω** resistor between CANH and CANL at **both physical ends** of the bus. CHESTER-X13 provides an on-board termination that is **disconnected by default** (a node in the middle of the bus must not be terminated).
 
 Enable it **only when the module sits at the end of the bus** by connecting **CANH to RH** (pin 3 to pin 2) and **CANL to RL** (pin 4 to pin 5) on the terminal block.
 
-### Enclosure Feed-Through
+### Enclosure feed-through
 
 Two options bring the CAN cable into the enclosure:
 
 - **Cable gland (default):** route the CAN conductors through a cable gland in the enclosure wall and wire them to the terminal block.
 - **Panel-mount connector (on request):** an external connector in the enclosure wall lets the user plug in the CAN cable, with no loose wiring inside. Available on request.
 
-## Compatible CHESTER Configurations
+## Compatible CHESTER configurations
 
 The CHESTER-X13 module can be used with various CHESTER mainboard configurations. Below are examples of compatible setups:
 
@@ -163,14 +163,14 @@ CHESTER-X13 can be used as part of the CHESTER SDK using the `ctr_x13_a` and `ct
 
 - [Example SDK usage](https://github.com/hardwario/chester-sdk/tree/main/samples/chester_x13)
 
-## Schematic Diagrams
+## Schematic diagrams
 
 The complete schematic, covering the main page, the CAN interface, and the power supply, is available as a PDF:
 
 - [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x13-r1.2.pdf)
 - [Interactive CHESTER-X13 browser](pathname:///download/ibom/hio-chester-x13-r1.2.html)
 
-## Module Drawing
+## Module drawing
 
 <div style={{ maxWidth: '500px' }}>
 

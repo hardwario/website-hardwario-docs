@@ -31,7 +31,7 @@ Modul může běžet přímo ze základní desky CHESTER. Případně lze na +VI
 * **CAN a CAN FD:** Drátové připojení s řadičem CAN MCP2518FD.
 * **Rozhraní k hostu po SPI:** K základní desce CHESTER se připojuje po SPI.
 * **Transceiver na desce:** Fyzickou sběrnici CAN budí transceiver TCAN3413.
-* **Volitelné zakončení sběrnice:** Zakončovací rezistor ~120 Ω na desce, ve výchozím stavu odpojený.
+* **Volitelné zakončení sběrnice:** Zakončovací rezistor přibližně 120 Ω na desce, ve výchozím stavu odpojený.
 * **Flexibilní napájení:** Běží ze základní desky CHESTER, nebo z volitelné linky 6-28 V DC na +VIN.
 * **Ochrana vstupu:** Schottkyho diody (PMEG6010ELR) na napájecím vstupu.
 * **Výstup přerušení:** Vyhrazená linka přerušení k základní desce CHESTER.
@@ -53,7 +53,7 @@ Modul může běžet přímo ze základní desky CHESTER. Případně lze na +VI
 | **Řadič CAN** | MCP2518FD (externí, SPI) |
 | **Transceiver CAN** | TCAN3413 |
 | **Rozhraní k hostu** | SPI |
-| **Zakončení sběrnice** | ~120 Ω na desce, ve výchozím stavu odpojené |
+| **Zakončení sběrnice** | přibližně 120 Ω na desce, ve výchozím stavu odpojené |
 | **Napájecí vstup (+VIN)** | 6-28 V DC (volitelné externí napájení) |
 | **Napájecí výstup (+V)** | Pevných 5 V, napájí základní desku CHESTER |
 | **Výstup sběrnice** | CANH / CANL na svorkovnici |

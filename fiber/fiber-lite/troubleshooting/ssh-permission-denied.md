@@ -1,6 +1,6 @@
 ---
 slug: ssh-permission-denied
-title: SSH Permission Denied
+title: SSH permission denied
 ---
 
 If SSH is reachable (you get a password prompt) but the password you set in Imager is always

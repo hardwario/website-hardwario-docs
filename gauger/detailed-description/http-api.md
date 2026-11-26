@@ -28,7 +28,7 @@ Example of a successful request:
 }
 ```
 
-## HTTP Endpoints
+## HTTP endpoints
 
 ### GET `/api/v1/ping`
 

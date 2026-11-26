@@ -18,14 +18,14 @@ Key changes in **STICKER firmware v2.0.0**:
 
 ---
 
-## Device & Provisioning Info
+## Device & provisioning info
 
 | Command | Description |
 |---|---|
 | `ats device info` | Print the firmware version, build type (release or debug), serial number, uptime, radio state, last downlink RSSI/SNR, spreading factor / data rate and TX power, radio link and traffic counters, battery voltage, reset cause, last CPU fault (after a fault reboot), device status flags, NFC mailbox availability, wall-clock time, DevEUI, the secret key (masked) and the claim token. |
 | `ats device reboot` | Issue a cold system reboot. |
 
-### Info and Settings Announce
+### Info and settings announce
 STICKER sends an **Info uplink** on fPort 85 after every boot and join (on LoRaWAN and P2P), as the answer to a `clock_sync` command, and again every `interval-announce` hours (default 24 h). After boot, join and the periodic announce, the Info is followed by a **settings-info** uplink with the key settings: the intervals, `history-enable`, every capability flag and the detected 1-Wire sensor types. The Info includes:
 - Serial number, firmware version and build type
 - Uptime and wall-clock time
@@ -38,7 +38,7 @@ Read over NFC, the Info also carries the DevEUI and the claim token. The radio l
 
 ---
 
-## Sensor Subsystem Testing
+## Sensor subsystem testing
 
 | Command | Description |
 |---|---|
@@ -49,7 +49,7 @@ Read over NFC, the Info also carries the DevEUI and the claim token. The radio l
 
 ---
 
-## LED Signal Testing
+## LED signal testing
 
 The status LED operates a severity-ordered heartbeat (network join state, radio mode, alarm status) and one-shot interaction patterns (NFC access, input triggers). See [**Hardware Description**](../hardware-description.md#led-indication) for pattern definitions.
 
@@ -62,7 +62,7 @@ Use `ats led` subcommands to test individual color channels during manufacturing
 
 ---
 
-## Radio Diagnostics
+## Radio diagnostics
 
 `ats radio` works with the radio selected by `radio-mode`. Some subcommands exist only for one radio stack.
 
@@ -82,7 +82,7 @@ The P2P subcommands are available only in builds that include both the P2P radio
 
 ---
 
-## Claim Window
+## Claim window
 
 | Command | Description |
 |---|---|
@@ -94,7 +94,7 @@ See [**NFC Mailbox and Claim Window**](configuration.md#nfc-mailbox-and-claim-wi
 
 ---
 
-## Command Injection and Bench Tools (Debug Builds)
+## Command injection and bench tools (debug builds)
 
 Debug builds expose raw protobuf command injectors. Responses are output directly to the console as hex strings. Deferred hardware actions (reboot, factory reset) are validated but suppressed during shell injection.
 

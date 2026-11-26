@@ -1,11 +1,11 @@
 ---
 slug: alarm-rules
-title: Alarm Rules
+title: Alarm rules
 description: "STICKER alarm engine: threshold, state and rate rules per slot and channel, motion and stillness, the dwell parameter, system alarms and fPort 3 uplinks."
 ---
 import Image from '@theme/IdealImage';
 
-# Alarm Engine & Rules (`alarm`)
+# Alarm engine & rules (`alarm`)
 
 The STICKER Alarm Engine continuously evaluates sensor measurements and system states against active rules. When a rule condition is met or cleared, an alarm uplink is sent on **fPort 3**, over LoRaWAN or P2P.
 
@@ -19,7 +19,7 @@ Alarm rules from v1.4.x are **not migrated**. After the upgrade the old rules ar
 
 ---
 
-## Alarm Uplinks and Rate Limiting
+## Alarm uplinks and rate limiting
 
 | Command | Argument | Description |
 |---|---|---|
@@ -29,7 +29,7 @@ Alarm rules from v1.4.x are **not migrated**. After the upgrade the old rules ar
 - **Confirmed alarms:** with `config radio-alarm-ack true`, alarm uplinks are confirmed on both radios and repeated up to 3 times (see [**Configuration**](configuration.md#alarms-buzzer-and-battery)).
 - **Buzzer:** on the buzzer variant, `config alarm-buzzer-mode` plays a melody while an alarm is active.
 
-### Built-in System Alarms
+### Built-in system alarms
 In addition to the configured rules, the firmware raises these alarms by itself:
 - **Low-Battery Alarm:** the battery voltage drops below `config battery-level` (default `2400` mV). It clears once the voltage recovers 0.3 V above the threshold.
 - **No-Data Alarm:** a sensor that should report stops delivering values. A single failed read of an onboard sensor keeps the previous value and raises nothing. On a 1-Wire sensor, a silent chip raises one alarm on its first channel; when the whole sensor stops answering, one alarm for the whole device replaces them.
@@ -37,7 +37,7 @@ In addition to the configured rules, the firmware raises these alarms by itself:
 
 ---
 
-## Dynamic Alarm Rules
+## Dynamic alarm rules
 
 Rules are held in 16 fixed indexes (`0`-`15`). The index serves as the rule's stable identifier, and several rules (e.g., warning vs. critical levels) can watch the same channel.
 
@@ -110,7 +110,7 @@ A channel is given by its name or its number; `sensor types` prints the list. Ch
 | 7 | `accel-y` | threshold | m/s² |
 | 8 | `accel-z` | threshold | m/s² |
 
-### Rule Kinds
+### Rule kinds
 
 The kind comes from the channel. Each kind takes its own keys, given as `<key> <value>` pairs:
 
@@ -127,7 +127,7 @@ The kind comes from the channel. Each kind takes its own keys, given as `<key> <
 
 ---
 
-## The `dwell` Parameter
+## The `dwell` parameter
 
 The optional **`dwell`** (default `0`) filters noise and chatter. Its meaning depends on the rule kind: on threshold rules it is a value in the channel's unit, on the other kinds a time in seconds (`0`-`3600`).
 
@@ -141,7 +141,7 @@ The optional **`dwell`** (default `0`) filters noise and chatter. Its meaning de
 
 ---
 
-## Command Examples
+## Command examples
 
 ```
 sensor types motherboard                          # List the motherboard channels

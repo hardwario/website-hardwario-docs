@@ -12,13 +12,13 @@ description: "OnLogic designs and manufactures industrial computers engineered f
 
 OnLogic hardware is used in HARDWARIO projects as **edge computing nodes**, combining local data processing, protocol translation, and cloud connectivity in demanding industrial conditions.
 
-## Key Products
+## Key products
 
 | Product | Description |
 |---|---|
 | [**CL210G-10**](/smart-devices/onlogic/cl210g-10) | Compact fanless industrial computer with dual LAN, designed for 24/7 industrial operation. Supports a wide input voltage range and extended temperature operation. |
 
-## Typical Use Cases with HARDWARIO
+## Typical use cases with HARDWARIO
 
 - **Edge gateway**: Running HARDWARIO Cloud Connector or custom middleware alongside CHESTER or TOWER deployments.
 - **Local data processing**: Aggregating sensor data from LoRaWAN or BLE devices and running local analytics.

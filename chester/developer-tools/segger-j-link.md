@@ -133,7 +133,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
    hardwario.common v1.7.2
    hardwario.hardwario v1.3.1
    ```
-## SEGGER J-Link to APP Port Connection
+## SEGGER J-Link to APP port connection
 
 <div class="container">
     <div class="row">
@@ -157,7 +157,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
 </div>
 <br />
 
-## SEGGER J-Link to LTE Port Connection
+## SEGGER J-Link to LTE port connection
 
 <div class="container">
     <div class="row">
@@ -181,7 +181,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
 </div>
 <br />
 
-## SEGGER J-Link to LRW Port Connection
+## SEGGER J-Link to LRW port connection
 
 <div class="container">
     <div class="row">

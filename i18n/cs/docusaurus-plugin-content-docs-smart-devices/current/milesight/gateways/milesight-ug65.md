@@ -153,7 +153,7 @@ Pokud bránu napájíte přes ethernetový kabel RJ45 s PoE, **nepřipojujte k n
 | Vysílací výkon | 27 dBm |
 | Citlivost | -140 dBm @292bps |
 | Protokoly | V1.0 / V1.0.2 Class A/B/C |
-| Podporovaná zařízení | ~2000 (uplink 10 min) |
+| Podporovaná zařízení | přibližně 2 000 (uplink 10 min) |
 | Funkce | Filtr paketů, analyzátor šumu, retransmise, FUOTA, multicast |
 | **Rozhraní** | |
 | Ethernet | 1 × RJ45 (10/100/1000 Mbps, PoE) |

@@ -1,10 +1,10 @@
 ---
 slug: antenna-gain
-title: "Antenna Gain & Output Power"
+title: "Antenna gain & output power"
 description: "Set antenna-gain on a MikroTik LoRa gateway (R11e-LR8G, wAP LR8G) to the antenna gain minus cable loss so radiated power stays within the EU868 EIRP limit."
 ---
 
-# Antenna Gain & Output Power
+# Antenna gain & output power
 
 This page explains how transmit (TX) power works on a MikroTik LoRa gateway
 (R11e-LR8G / wAP LR8G kit) and how to configure the `antenna-gain` setting so the
@@ -52,8 +52,8 @@ away on the horizon.
 
 | Antenna gain | Vertical beamwidth | Best for |
 | --- | --- | --- |
-| Low (~0–2 dBi) | Wide | Devices close by / at many different heights, e.g. indoors, multi-floor buildings |
-| Higher (~6+ dBi) | Narrower | Long-range outdoor links, devices roughly level with or below the gateway, spread horizontally |
+| Low (approx. 0–2 dBi) | Wide | Devices close by / at many different heights, e.g. indoors, multi-floor buildings |
+| Higher (approx. 6 dBi and up) | Narrower | Long-range outdoor links, devices roughly level with or below the gateway, spread horizontally |
 
 Match the antenna's gain to the deployment, not just to "more range = better."
 

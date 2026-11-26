@@ -1,6 +1,6 @@
 ---
 slug: blynk-app
-title: Blynk Mobile and Web Application
+title: Blynk mobile and web application
 description: "Connect TOWER to the Blynk mobile app via Node-RED on HARDWARIO Raspbian to switch a relay and LED strip and chart temperature, with an importable flow."
 ---
 import Image from '@theme/IdealImage';
@@ -27,7 +27,7 @@ You should start by downloading the **Blynk app** and creating the account
 - [**Google Play**](https://play.google.com/store/apps/details?id=cloud.blynk)
 
 
-## Node-RED Setup
+## Node-RED setup
 
 In Node-RED, install the Blynk package `node-red-contrib-blynk-ws` if you cannot see Blynk nodes.
 
@@ -37,13 +37,13 @@ In Node-RED, install the Blynk package `node-red-contrib-blynk-ws` if you cannot
 
 :::
 
-### Video Tutorial
+### Video tutorial
 
 If you prefer a video guide, you can watch this video for the older Playground version, but it works the same.
 
 <ReactPlayer controls src='https://youtu.be/cVC_tFuCYTM' />
 
-## ZeRGBA to hex RGB values - Example
+## ZeRGBA to hex RGB values - example
 
 Blynk color values need to be transformed to **proper hexadecimal RGB string**. You can use the function block in the Node-RED and paste the code below. Remember to configure **ZeRGBa to MERGE mode** and the range of values has to be set for all three channels to **0–255**.
 

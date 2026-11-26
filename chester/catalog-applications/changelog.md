@@ -30,7 +30,7 @@ This changelog covers **SDK version releases** and catalog application changes. 
 
 This version fixes a bug affecting the `ctr_adc` subsystem. The bug applies to any v4.0.0 firmware that reads CHESTER X0 analog inputs, namely CHESTER **Control** and **Meteo**. Updating to v4.0.1 fixes the issue; no configuration changes are required.
 
-### SDK / Common
+### SDK / common
 
 - Fixed CHESTER-X0 analog input regression introduced in v4.0.0: an off-by-one in the channel mapping made every channel sample its neighbouring pin
 - Reduced RAM usage by about 500 bytes
@@ -44,7 +44,7 @@ This version fixes a bug affecting the `ctr_adc` subsystem. The bug applies to a
 
 This breaking release brings all the improvements and fixes from the latest versions of Zephyr and nRF Connect SDK as well as other minor improvements in the SDK itself.
 
-### SDK / Common
+### SDK / common
 
 - Updated NCS to v3.4.
   - Switched from Partition Manager to **sysbuild + DTS partitions**.
@@ -55,7 +55,7 @@ This breaking release brings all the improvements and fixes from the latest vers
 - Optimized RAM usage, saving about 17 kB.
 - Added `tag read all [timeout]` shell command
 
-### Cloud Subsystem {#chester-cloud}
+### Cloud subsystem {#chester-cloud}
 
 - Added **message spool** (`CONFIG_CTR_CLOUD_SPOOL`), a store-and-forward queue backed by LittleFS, so messages survive uplink failures and reboots.
 
@@ -63,11 +63,11 @@ This breaking release brings all the improvements and fixes from the latest vers
 
 - Lowered 1-Wire thermometer (10 -> 5) and soil-sensor (10 -> 3) capacity.
 
-### CHESTER Serial
+### CHESTER serial
 
 - New drivers: SolaX X3-Hybrid G3 inverter; Piketronic RPP-R radon probe.
 
-### Update Guide
+### Update guide
 
 This release is not backwards compatible and may require code changes to work. The [v4.0.0 migration guide](/chester/sdk-v4-migration-guide) is the complete procedure. It covers updating `west.yml` and the toolchain, converting the application to sysbuild, and all required source and Kconfig changes, and ends with a checklist.
 
@@ -79,7 +79,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 
 *NCS **2.9.0** · Zephyr **3.7.99** · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v3.5.5)*
 
-### SDK / Common
+### SDK / common
 - LED blink changed to non-blocking, rate-limited approach: prevents blocking during blink sequences
 - LoRaWAN payload for 8-channel X0 variant split into two messages to comply with 51-byte payload limit
 - Added RTC sync status API: `ctr_rtc_is_synced()`, `ctr_rtc_get_ts_ms()`, `ctr_rtc_set_event_cb()`
@@ -98,7 +98,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 
 ## v3.5.4 (2026-04-14)
 
-### SDK / Common
+### SDK / common
 - Added runtime CHESTER-Z detection: single firmware works with or without Z module
 - Added shell command for 1-Wire (W1) bus scanning
 - Deploy script updated with CLI arguments and complete app list
@@ -114,7 +114,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 
 ## v3.5.3 (2026-03-10)
 
-### SDK / Common
+### SDK / common
 - Added I2C, MCUboot, and GPIO shell commands to all applications
 - Changed default LTE mode to `lte-m,nb-iot` (automatic NB-IoT fallback)
 - Moved CHESTER Counter and CHESTER Signal to `_legacy` folder
@@ -126,7 +126,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 
 ## v3.5.2 (2026-03-06)
 
-### CHESTER Serial
+### CHESTER serial
 - Added CHESTER Serial as a new catalog application
 - Supports RS-485 (CHESTER-X2, multi-drop, up to 8 devices) and RS-232 (CHESTER-X12, point-to-point)
 
@@ -134,7 +134,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 
 ## v3.5.1 (2025-12-08)
 
-### SDK / Common
+### SDK / common
 - Cloud metrics API added: exposes uplink/downlink counters, errors, and diagnostics
 - Soft timeout support for cloud send/downlink operations
 - Dangerous config commands filtered from cloud downloads
@@ -185,7 +185,7 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 
 ## v3.3.0 (2025-07-14)
 
-### SDK / Common
+### SDK / common
 - Updated all catalog apps to v3.3.0
 - BLE tag subsystem improvements: increased tag slots to 32, reduced RAM impact, improved enroll behavior
 - Configuration subsystem: added factory reset, HEX config item, per-item parse callback
@@ -215,14 +215,14 @@ We recommend starting from a working v3.5.5 workspace rather than jumping an old
 ### CHESTER Scale
 - Ported to HARDWARIO Cloud
 
-### CHESTER Demo
+### CHESTER demo
 - Added network parameters and BLE support
 
 ---
 
 ## v3.0.0 (2024-07-17)
 
-### SDK / Common
+### SDK / common
 - **Major release**: Migration from the Cloud Legacy protocol to the HARDWARIO Cloud protocol
 - Introduced project generator (`west chester-update`) for variant management
 - Added LTE v2 subsystem with state machine architecture

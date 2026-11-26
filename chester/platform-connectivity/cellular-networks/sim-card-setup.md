@@ -1,11 +1,11 @@
 ---
 slug: sim-card-setup
-title: SIM Card Setup
+title: SIM card setup
 description: "Get CHESTER onto a cellular network: select the radio mode, apply the settings for a Vodafone, 1NCE or other SIM card, and verify the registration."
 ---
 import Image from '@theme/IdealImage';
 
-# SIM Card Setup
+# SIM card setup
 
 This chapter takes a device from the box to a registered network connection. Follow it in order: set the radio mode first, then apply the settings for your SIM card, then verify the result.
 
@@ -13,7 +13,7 @@ Every configuration change must be confirmed with `config save`, which stores th
 
 ---
 
-## Step 1 - Select the radio mode
+## Step 1 - select the radio mode
 
 Some catalog firmwares can use either a cellular (NB-IoT/LTE-M) or a LoRaWAN network. After power-up such a firmware does **not** send any data, the **LED is blinking yellow**, and the radio mode has to be selected first.
 
@@ -47,7 +47,7 @@ The device reboots and starts using the selected network.
 
 ---
 
-## Step 2 - Apply the settings for your SIM card
+## Step 2 - apply the settings for your SIM card
 
 Pick the section matching your SIM card. If a parameter is left **empty**, the device performs **auto-configuration** based on the available hardware and the network environment.
 
@@ -152,7 +152,7 @@ Roaming partners and shared networks change over time, so a working combination 
 
 ---
 
-## Step 3 - Verify your settings
+## Step 3 - verify your settings
 
 Display the current configuration:
 

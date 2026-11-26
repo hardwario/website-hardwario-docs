@@ -9,7 +9,7 @@ you can control it using Siri.
 
 :::info
 
-At the end of the article, you will ask Siri for the temperature in your bedroom and she will tell you back the temperature from your HARDWARIO temperature sensor!
+At the end of the article, you will ask Siri for the temperature in your bedroom and she will tell you back the temperature from your HARDWARIO temperature sensor.
 
 :::
 
@@ -59,9 +59,9 @@ When a message with the title Installing **'node-red-contrib-homekit-bridged'** 
   </div>
 </div>
 
-## Connect Hardware
+## Connect hardware
 
-#### Flash Firmware
+#### Flash firmware
 
 - Open [**HARDWARIO Playground**](../desktop-programming/about-playground.md) on your computer.
 - Connect [**Core Module**](../hardware-modules/about-core-module.md) to computer via micro USB cable.
@@ -78,7 +78,7 @@ When a message with the title Installing **'node-red-contrib-homekit-bridged'** 
   </div>
 </div>
 
-#### Pair the Device
+#### Pair the device
 
 Open **HARDWARIO Hub** page in the browser, same as in the chapter **Installation** and select the **Devices** tab in the side menu and click on **Start pairing** button.
 
@@ -92,7 +92,7 @@ Open **HARDWARIO Hub** page in the browser, same as in the chapter **Installatio
   </div>
 </div>
 
-#### Assemble the Device
+#### Assemble the device
 
 Now unplug the **Core Module** from the computer and connect it to the [**Battery Module**](../hardware-modules/about-battery-module.md).
 
@@ -112,7 +112,7 @@ You should see the device now (it should be paired). You can look at the **Messa
 
 ## Connect it all together
 
-#### Open the **Functions tab** in the side menu. Open the **Hamburger menu**, select **Import > Clipboard** and paste the following code
+#### Open the **functions tab** in the side menu. open the **hamburger menu**, select **import > clipboard** and paste the following code
 
 ```json
     [{"id":"c10a49.8c0905b8","type":"mqtt in","z":"2c41a2bd.aa36ae","name":"Temperature from Core Module","topic":"node/push-button:0/thermometer/0:1/temperature","qos":"2","broker":"29fba84a.b2af58","x":230,"y":180,"wires":[["d7033322.3f2d5"]]},{"id":"d7033322.3f2d5","type":"template","z":"2c41a2bd.aa36ae","name":"Convert payload to HomeKit JSON format","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"{\n\"CurrentTemperature\": \"{{payload}}\"\n}","output":"str","x":600,"y":180,"wires":[[]]},{"id":"29fba84a.b2af58","type":"mqtt-broker","z":"","broker":"127.0.0.1","port":"1883","clientid":"","usetls":false,"compatmode":true,"keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","willTopic":"","willQos":"0","willPayload":""}]
@@ -158,7 +158,7 @@ The imported flow should look like the following
   </div>
 </div>
 
-#### Setup the Bridge
+#### Setup the bridge
 
 :::info
 
@@ -178,7 +178,7 @@ Click on the **little pencil icon** next to the bridge part of the setting and f
   </div>
 </div>
 
-#### Fill in the rest of the settings according to the screenshot below. Click Done and then Deploy
+#### Fill in the rest of the settings according to the screenshot below. click done and then deploy
 
 <div class="container">
   <div class="row">

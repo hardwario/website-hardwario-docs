@@ -1,12 +1,12 @@
 ---
 slug: ordering-codes
-title: Ordering Codes
+title: Ordering codes
 description: "All possible ordering codes for the EMBER ecosystem; an order must match the part numbers stated below exactly."
 title_meta: "Ordering Codes (EMBER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Ordering Codes
+# Ordering codes
 
 This article defines all possible ordering codes for the **EMBER** ecosystem. The order specifications must be fully compliant with the part numbers stated below.
 
@@ -16,7 +16,7 @@ Each product lists available parts, i.e. which parts are standard and usually im
 
 :::
 
-## EMBER Hotspot
+## EMBER hotspot
 
 :::info
 

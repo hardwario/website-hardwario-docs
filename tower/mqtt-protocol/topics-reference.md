@@ -1,11 +1,11 @@
 ---
 slug: topics-reference
-title: Topics Reference
+title: Topics reference
 description: "TOWER MQTT topics: node topics for firmware, battery, sensors, relays, LED, button, PIR, LED strip and LCD, and gateway topics for pairing and aliases."
 ---
 import Image from '@theme/IdealImage';
 
-## Node Topics
+## Node topics
 
 ### Firmware
 
@@ -71,7 +71,7 @@ Only allowed values for payload are `true/false`.
 |     Button Hold      |  `node/{id}/push-button/-/hold-count`   |
 | Button Hold Duration | `node/{id}/push-button/-/hold-duration` |
 
-### PIR Motion Detector
+### PIR motion detector
 
 |        Explanation        |          MQTT Topic           |
 | :-----------------------: | :---------------------------: |
@@ -97,7 +97,7 @@ Only allowed values for payload are `true/false`.
 |  Write Text  | `node/{id}/lcd/-/text/set`                   | `{"x": 5, "y": 10, "text": "HARDWARIO"}` |
 
 
-## Gateway Topics
+## Gateway topics
 
 :::tip
 
@@ -119,7 +119,7 @@ Only allowed values for payload are `true/false`.
 |      List       |  `gateway/{id}/nodes/get`  | `gateway/{id}/nodes` `[{"id": "a7c8b05762dd", "alias": "generic-node:0"},  {"id": "836d1983718a", "alias": "lcd-thermostat:0"}]` |
 | Purge All Nodes | `gateway/{id}/nodes/purge` |                                                    `gateway/{id}/nodes` `[]`                                                     |
 
-### Manual Add/Remove
+### Manual add/remove
 
 | Explanation |                MQTT Topic                 |              Response               |
 | :---------: | :---------------------------------------: | :---------------------------------: |

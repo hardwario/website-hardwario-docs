@@ -1,14 +1,14 @@
 ---
 slug: thingsboard-dashboard
-title: Basic Dashboard
+title: Basic dashboard
 description: "Video tutorial on building a basic ThingsBoard dashboard with a simple variable display and a chart that shows device data in real time."
 ---
 
 import Image from '@theme/IdealImage';
 
-# ThingsBoard – How to Create a Basic Dashboard
+# ThingsBoard – how to create a basic dashboard
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you will learn how to create a dashboard, add a simple variable display, and build a basic chart. This will allow you to visualize and monitor your device data in real time.
 

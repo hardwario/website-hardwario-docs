@@ -1,6 +1,6 @@
 ---
 slug: how-to-pwm
-title: "How To: PWM"
+title: "How to: PWM"
 description: "Generate PWM on the nine PWM-capable pins of the TOWER Core Module, set the duty cycle from 0 to 255 in the SDK and try a C example on P6, P7 and P8."
 ---
 import Image from '@theme/IdealImage';
@@ -26,7 +26,7 @@ Please check the **Core Module pinout** to see which pins **allow PWM**.
 - [**PWM SDK Module**](https://sdk.hardwario.com/group__twr__pwm.html)
 - GitHub Repository Example
 
-## Duty Cycle
+## Duty cycle
 
 The duty cycle stands for how long should the pin be in the HIGH state, by changing this number you will achieve different analog-like outputs.
 

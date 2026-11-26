@@ -23,7 +23,7 @@ You can probably fix the issue on hand just by **restarting Playground**.
 
 We used [**Google Blockly**](https://developers.google.com/blockly) to create our implementation of a **No-Code/Low-Code environment for TOWER**.
 
-## Blockly Environment
+## Blockly environment
 
 This is the main feature of this tool. It provides an environment for programming with colorful blocks without the need to write a single line of code.
 
@@ -43,7 +43,7 @@ There is a difference between a classic project and an example. You can't save a
 
 :::
 
-### Project Structure
+### Project structure
 
 Working with blockly is pretty straightforward but we had to make some changes.
 
@@ -65,7 +65,7 @@ On the left side of the screen. This has all the categories available for you an
 
 We made it a little bit simpler by showing only those categories that are initialized. So if you don't see some category in the toolbox, go into the **Initialization** category and initialize it with the use of an appropriate block.
 
-#### Bottom Panel
+#### Bottom panel
 
 At the bottom of the page. This is where you can find some additional controls for blockly.
 
@@ -84,7 +84,7 @@ To make your project work you have to add the **Application Initialization** blo
 
 :::
 
-### Live Code Generation
+### Live code generation
 
 This tool provides the possibility to **show live-generated C code** that is identical to the blocks in the workspace.
 
@@ -92,7 +92,7 @@ Thanks to this, you can create some basic firmware with the use of blocks, then 
 
 <Image img={require('./images/blockly-code.webp')} alt="Blockly workspace with Show Code enabled: the generated C code appears next to the blocks" />
 
-### Compiling and Flashing
+### Compiling and flashing
 
 :::caution
 
@@ -108,7 +108,7 @@ More about flashing in the [**Firmware Flashing chapter**](./firmware-flashing.m
 
 :::
 
-## Other Features (ADVANCED)
+## Other features (ADVANCED)
 
 :::tip
 
@@ -127,7 +127,7 @@ To open your user folder, click on **Open Projects Folder** in Blockly index or 
 If you want to distribute your projects or created blocks you can just copy the user folder from your filesystem, compress it to for example zip file and send it.
 On the other side, the user can just unzip it to their user folder and then reload Blockly in Playground.
 
-### Blocks Generation
+### Blocks generation
 
 To access this feature click on the **Go to Blocks Creator** button at the Blockly index.
 

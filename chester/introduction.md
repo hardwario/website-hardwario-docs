@@ -16,7 +16,7 @@ import Image from '@theme/IdealImage';
 
 <img src="/img/chester.webp" data-zoom-src="/img/chester.webp" width="540" alt="CHESTER" />
 
-## Quick Links
+## Quick links
 
 * [**Quick Start Guide**](first-steps.md): Step-by-step setup guide.
 * [**Platform Connectivity**](category/platform-connectivity): Configure and manage the platform.
@@ -51,7 +51,7 @@ TODO Enable these articles
 * [**Catalog Application Changelog**](catalog-applications/changelog.md): Latest SDK releases, firmware versions, and per-application changes.
 * [**CHESTER Platform Changelog**](./changelog.md): Complete platform log including SDK changes and hardware revisions.
 
-## Typical Use Cases
+## Typical use cases
 
 - Remote monitoring systems in places without standard power or internet
 - Asset tracking and condition monitoring across LoRaWAN networks
@@ -59,7 +59,7 @@ TODO Enable these articles
 - Industrial automation solutions
 - Reliable deployment in harsh, rugged environments
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|

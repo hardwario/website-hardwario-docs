@@ -1,6 +1,6 @@
 ---
 slug: first-steps
-title: Getting Started
+title: Getting started
 description: "Welcome to the HARDWARIO Cloud, the platform where your devices are managed and where your live data lands."
 title_meta: "Getting Started (HARDWARIO Cloud)"
 ---
@@ -11,7 +11,7 @@ Welcome to the **HARDWARIO Cloud**, the platform where your devices are managed 
 data lands. Follow these steps to create an account, register your first device, and start working
 with its messages.
 
-## Step 1: Create a HARDWARIO Cloud Account
+## Step 1: Create a HARDWARIO Cloud account
 
 1. Go to [**https://hardwario.cloud**](https://hardwario.cloud)
 2. Click **SIGN UP**
@@ -24,7 +24,7 @@ with its messages.
 For improved security, we recommend authenticating via **Google** or **Microsoft**.
 :::
 
-## Step 2: Create Your Space
+## Step 2: Create your space
 
 1. In the top-right corner, click **SPACES → NEW SPACE**.
 
@@ -36,7 +36,7 @@ For improved security, we recommend authenticating via **Google** or **Microsoft
 
 3. This is where your devices will live. See [**Spaces**](/cloud/spaces) for details.
 
-## Step 3: Add a Device
+## Step 3: Add a device
 
 1. Select your **Space**.
 2. Go to **DEVICES → +NEW DEVICE**.
@@ -49,7 +49,7 @@ For improved security, we recommend authenticating via **Google** or **Microsoft
 
 4. Save it: your device is now **registered in the Cloud**. See [**Devices**](/cloud/devices) for everything you can do next.
 
-## Step 4: See Your Data
+## Step 4: See your data
 
 Once the device is powered up and connected, its uplinks appear in the Cloud.
 
@@ -59,20 +59,20 @@ Once the device is powered up and connected, its uplinks appear in the Cloud.
 
 ![MESSAGES view showing a device's uplink message expanded with its decoded JSON payload](images/messages.png)
 
-## Step 5: Act on Your Devices
+## Step 5: Act on your devices
 
 The Cloud is bidirectional: send configuration, data, or shell commands back with a
 [**Downlink**](/cloud/downlink), and push new [**Firmware**](/cloud/firmware) over the air.
 
-## Step 6: Integrate With Your Systems
+## Step 6: Integrate with your systems
 
 Route your data out of the Cloud with [**Connectors**](/cloud/connectors) (webhooks), or query it
 programmatically with the [**REST API**](/cloud/api).
 
-## Step 7: Manage Access
+## Step 7: Manage access
 
 Invite teammates and control who can see and change your Space under [**Users**](/cloud/users).
 
-## Next Steps
+## Next steps
 
 Browse the full [**HARDWARIO Cloud documentation**](/cloud/) for details on every feature.

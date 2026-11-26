@@ -1,6 +1,6 @@
 ---
 slug: how-to-temperature-sensor
-title: "How To: Temperature Sensor"
+title: "How to: Temperature Sensor"
 ---
 import Image from '@theme/IdealImage';
 

@@ -1,6 +1,6 @@
 ---
 slug: firmware-quick-start
-title: Firmware Quick Start
+title: Firmware quick start
 ---
 import Image from '@theme/IdealImage';
 
@@ -48,7 +48,7 @@ You can select **From Existing Project...** instead of **From Skeleton Project..
 
 :::
 
-## Project Structure
+## Project structure
 
 This is the file structure of the **twr-skeleton project** that you just cloned. It is a Git-initialized repository ready to be used *out of the box*.
 
@@ -93,7 +93,7 @@ If you want to see some firmware examples, you can visit our [**GitHub**](https:
 
 :::
 
-## Development Cycle
+## Development cycle
 
 Normally, the development cycle is the repetition of the **following 3 steps**:
 
@@ -103,7 +103,7 @@ Normally, the development cycle is the repetition of the **following 3 steps**:
 - Test your firmware
   - If you need to debug your application, please follow the [**Debugging chapter**](./firmware-debugging.md).
 
-## Programming Language
+## Programming language
 
 Firmware is implemented in **pure C language**, which is an industrially accepted language for embedded and low-power devices.
 

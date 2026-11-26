@@ -1,11 +1,11 @@
 ---
 slug: messages
-title: FLAP Message Types
+title: FLAP message types
 title_meta: "Message Types (FLAP)"
 description: "FLAP message types and their payloads: session, time, configuration, codecs, data, shell commands and firmware updates."
 ---
 
-# FLAP Message Types
+# FLAP message types
 
 A **message** is reassembled from the data of all fragments of one transfer (see [**Transfers**](transfers.md)). Its first byte is the message type, the rest is the value:
 
@@ -18,7 +18,7 @@ A **message** is reassembled from the data of all fragments of one transfer (see
 
 Most values are [**CBOR**](https://cbor.io/) maps with small integer keys. The Cloud ignores a message with an unknown type or an invalid value and does not acknowledge it.
 
-## Message Types
+## Message types
 
 | Type | Name | Direction | Value |
 |---|---|---|---|
@@ -39,7 +39,7 @@ Most values are [**CBOR**](https://cbor.io/) maps with small integer keys. The C
 | `0x88` | DOWNLOAD_FIRMWARE | Downlink | CBOR map with a firmware chunk |
 | `0xFF` | REQUEST_REBOOT | Downlink | Reserved |
 
-## Session Start
+## Session start
 
 After the device connects to the network, it opens a session before it sends any data:
 
@@ -97,7 +97,7 @@ The FLAP headers of the first five packets are `c000`, `3001`, `1002`, `c003` an
 | 5 | Device ID in HARDWARIO Cloud | Text |
 | 6 | Device name in HARDWARIO Cloud | Text |
 
-## Codecs and Data
+## Codecs and data
 
 A **decoder** converts CBOR data from the device into JSON, an **encoder** converts JSON downlinks into CBOR. Both are built into the firmware and uploaded automatically during the session start, so the Cloud always decodes data with the codec of the firmware that sent it.
 
@@ -117,11 +117,11 @@ The Cloud checks the hash of an uploaded codec. UPLOAD_DATA and DOWNLOAD_DATA st
 
 **DOWNLOAD_CONFIG** carries configuration commands, see [**Config downlink**](../downlink/config.md). The device runs them, saves the configuration and reboots.
 
-## Shell Commands
+## Shell commands
 
 **DOWNLOAD_SHELL** is a CBOR map with an array of commands (key 0) and a 16-byte message ID (key 1). The device runs the commands and answers with **UPLOAD_SHELL**: a CBOR map with an array of results (key 0) and the same message ID (key 1). Each result contains the command (key 0), its return code if it is not zero (key 1) and an array of output lines (key 2). See [**Shell downlink**](../downlink/shell.md).
 
-## Firmware Update
+## Firmware update
 
 Firmware updates over the air use **UPLOAD_FIRMWARE** and **DOWNLOAD_FIRMWARE**:
 

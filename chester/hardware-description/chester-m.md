@@ -1,6 +1,6 @@
 ---
 slug: chester-m
-title: CHESTER-M Mainboard
+title: CHESTER-M mainboard
 description: "CHESTER-M mainboard: block diagram, 2.0–5.25 V operating range and idle currents, terminal block solder bridges, slot A and B signals and R3.4 schematics."
 ---
 import Image from '@theme/IdealImage';
@@ -19,12 +19,12 @@ import Image from '@theme/IdealImage';
 </div>
 <br />
 
-## Block Diagram
+## Block diagram
 
 ![CHESTER-M block diagram: nRF52840 MCU with BLE, LTE and LoRa modems, GNSS, sensors, power, and expansion ports](images/block-diagram.png)
 
 
-## Basic Parameters
+## Basic parameters
 
 This article provides basic parameters of the CHESTER platform:
 
@@ -49,14 +49,14 @@ The parameters provided above might be affected by the specific hardware configu
 :::
 
 
-## Connector Description
+## Connector description
 
-### Terminal Blocks Description
+### Terminal blocks description
 
 The terminal block signals are defined by placing extension **X** modules on the backside of the CHESTER mainboard.
 You can find more information in the [Backside Modules](../extension-modules/index.md#backside-modules) chapter.
 
-### Terminal Block Solder Bridges
+### Terminal block solder bridges
 
 When there are no extension modules in slot A or B, the 8-pin terminal blocks can be configured using solder bridges.
 
@@ -92,7 +92,7 @@ This table shows the connection of 1-Wire to terminal blocks and JST 8-pin conne
 |        A7 or B7         | `NC or GND` | Not connected or GND |
 |        A8 or B8         | `NC or GND` | Not connected or GND |
 
-### Backside Module
+### Backside module
 
 This section provides information on signal mapping for the two backside slots (A and B) on the **CHESTER** mainboard.
 
@@ -106,7 +106,7 @@ The backside slots use two rows of signals:
 
   This signal row (with eight 2.54 mm distanced pins) directly connects to the terminal blocks, and their meaning is module-specific.
 
-#### Top Row Signals (Slot A)
+#### Top row signals (slot A)
 
 :::caution
 
@@ -126,7 +126,7 @@ The following table lists the signals in the left-to-right order when you flip t
 |    8     |    `VDD`    | System VDD rail        |           -            |
 |    9     |    `GND`    | System ground signal   |           -            |
 
-#### Top Row Signals (Slot B)
+#### Top row signals (slot B)
 
 :::caution
 
@@ -147,7 +147,7 @@ The following table lists the signals in the left-to-right order when you flip t
 |    9     |    `GND`    | System ground signal   |           -            |
 
 
-## Schematic Diagram
+## Schematic diagram
 
 A schematic diagram is useful if you program low-level hardware-related code or if you're just curious about how the system is designed.
 
@@ -176,7 +176,7 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 ![Schematic 7/7: button, tamper, SYSTEM, I2C, QWIIC, and 1-Wire connectors with ESD protection](images/hio-chester-m-7.png)
 
 
-## Layout Placement
+## Layout placement
 
 - [Interactive PCB connector, part, testpoint and signal browser R3.4](pathname:///download/ibom/chester-m-r3.4.html)
 

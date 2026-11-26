@@ -34,7 +34,7 @@ The aluminum knob on the photo is not a part of the module and is sold as an [**
 - Integrated **push-button switch**
 - 3x connector for TOWER Tags
 - Operating temperature range: -20 to 70 °C
-- Minimum lifetime: **30,000 revolution cycles**
+- Minimum lifetime: **30 000 revolution cycles**
 - Dimensions: 88 x 55 mm
 
 ## References

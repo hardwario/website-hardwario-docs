@@ -1,11 +1,11 @@
 ---
 slug: how-to-i2c-bus
-title: "How to: I²C Bus"
+title: "How to: I²C bus"
 description: "Read and write registers of I²C target devices from CHESTER firmware with the Zephyr I²C API, and scan the bus with the i2c scan shell command."
 ---
 import Image from '@theme/IdealImage';
 
-# How to: I²C Bus
+# How to: I²C bus
 
 This article will demonstrate how to interface I²C target devices (CHESTER is I²C controller on the bus).
 
@@ -17,7 +17,7 @@ However, for simple proof-of-concept purposes, the following guide can be used.
 
 :::
 
-## Code Example
+## Code example
 
 Enable the I²C bus in the file `prj.conf`:
 
@@ -85,7 +85,7 @@ static int write(uint8_t devaddr, uint8_t regaddr, uint8_t regval)
 }
 ```
 
-## I²C Scan {#i2c-scan}
+## I²C scan {#i2c-scan}
 
 You can use a shell command `i2c scan i2c@40003000` to do an I²C bus scan.
 

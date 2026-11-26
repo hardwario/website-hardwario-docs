@@ -1,6 +1,6 @@
 ---
 slug: usb-interface
-title: USB Interface
+title: USB interface
 description: USB connectivity options for the HARDWARIO TOWER Core Module, Radio Dongle, and Bridge Module.
 ---
 

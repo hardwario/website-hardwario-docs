@@ -1,11 +1,11 @@
 ---
 slug: lora-p2p
-title: LoRa P2P Mode
+title: LoRa P2P mode
 description: "LoRa P2P mode of STICKER firmware v2.0.0: a ProXimos Hub runs the network through a FIBER modem over the TOWER radio protocol, with no LoRaWAN server."
 ---
 import Image from '@theme/IdealImage';
 
-# LoRa P2P (Peer-to-Peer) Mode
+# LoRa P2P (peer-to-peer) mode
 
 :::info Available since firmware v2.0.0
 LoRa P2P mode is part of STICKER firmware **v2.0.0**. The same firmware image supports both LoRaWAN and P2P; the device selects one at boot from `radio-mode`.
@@ -15,7 +15,7 @@ LoRa P2P mode is part of STICKER firmware **v2.0.0**. The same firmware image su
 
 ---
 
-## Key Advantages
+## Key advantages
 
 - **No LoRaWAN infrastructure:** No LoRaWAN gateway and no network server (ChirpStack, TTS). The ProXimos Hub runs the network.
 - **Confirmed delivery:** The gateway acknowledges frames locally. A confirmed send is up to 3 transmissions of the frame until its ACK arrives. With no ACK, the send is repeated up to 3 more times after a random back-off.
@@ -24,7 +24,7 @@ LoRa P2P mode is part of STICKER firmware **v2.0.0**. The same firmware image su
 
 ---
 
-## Architecture & Topology
+## Architecture & topology
 
 ```mermaid
 flowchart LR
@@ -48,7 +48,7 @@ Firmware v2.0.0 switched P2P to the TOWER protocol with no fallback. Nodes and t
 
 ---
 
-## Radio Parameters
+## Radio parameters
 
 Both the node and the Hub must use the same radio parameters. P2P has no ADR, no power control and no SF change: every parameter is fixed per network.
 
@@ -57,13 +57,13 @@ Both the node and the Hub must use the same radio parameters. P2P has no ADR, no
 | **`p2p-frequency`** | `869525000` (869.525 MHz) | Carrier frequency in Hz, 863–870 MHz (EU868 band only). One channel for uplink, ACK and downlink. |
 | **`p2p-spreading-factor`** | `7` | Spreading factor 6–12. Higher means longer range and longer airtime. |
 | **`p2p-tx-power`** | `14` | TX power 2–14 dBm, unless the Hub assigns one in the JoinAccept. |
-| **`p2p-modulation`** | `lora` | `lora` for the ProXimos Hub. `fsk` selects the TOWER GFSK physical layer for a stock HARDWARIO TOWER gateway (pairs through TOWER's own pairing). |
+| **`p2p-modulation`** | `lora` | `lora` for the ProXimos Hub. `fsk` selects the TOWER GFSK physical layer for a stock HARDWARIO TOWER gateway (pairs through the TOWER pairing). |
 
 With `p2p-modulation lora` the remaining physical parameters are fixed: bandwidth 125 kHz, coding rate 4/5, preamble 8 symbols, explicit header, CRC on.
 
 ---
 
-## Configuration & Management
+## Configuration & management
 
 The P2P radio parameters are writable **only in the RTT developer shell**, which the debug and provisioning images provide. The release image has no shell. It runs with the `p2p-*` values stored in NVS: values that a debug or provisioning image wrote before the release image was flashed over it without an erase, or otherwise the defaults in the table above. A device on the release image therefore talks to a Hub on the defaults (869.525 MHz, SF7, 14 dBm, `lora`) unless its parameters were set this way, so set the Hub to match. Over NFC, [**HARDWARIO Manager**](/sticker/hardwario-manager/) can switch `radio-mode` to `p2p` (**STICKER → Radio → Radio mode → P2P**; it refuses while the DevEUI or AppKey is all zero), but it cannot set the `p2p-*` parameters: the firmware rejects them over NFC as not writable. Over NFC and over a radio they are read-only (`get_config` / `get_param` return them). Over a radio, a change would also cut the link that carries it.
 

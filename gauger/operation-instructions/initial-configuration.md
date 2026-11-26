@@ -1,10 +1,10 @@
 ---
 slug: initial-configuration
-title: Initial Configuration
+title: Initial configuration
 description: "Connect to a new GAUGER over Ethernet at 192.168.255.1 or its Wi-Fi access point at 192.168.254.1, with every configuration option, JSON key and default."
 ---
 
-# Initial Configuration
+# Initial configuration
 
 After first powering up the device, connect to the device.
 
@@ -12,7 +12,7 @@ Connecting through Ethernet is done by plugging in the cable and configuring you
 
 Connecting through Wi-Fi is done by connecting to the device’s Access Point. The SSID is in the following format: `hardwario-gauger-IDIDIDIDIDID`. The default password is `12345678`. After connecting to the Wi-Fi network, you will automatically be assigned an IP address. Then you can access the device at `192.168.254.1`.
 
-## Configuration Options
+## Configuration options
 
 | Name                     | JSON Key                      | Type    | Default Value | Description                               |
 | :----------------------- | :---------------------------- | :------ | :------------ | :---------------------------------------- |

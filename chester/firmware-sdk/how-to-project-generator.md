@@ -1,17 +1,17 @@
 ---
 slug: how-to-project-generator
-title: "How to: Project Generator"
+title: "How to: Project generator"
 description: "Use the CHESTER SDK Project Generator to define catalog application variants and features in project.yaml and generate the files with west chester-update."
 ---
 import Image from '@theme/IdealImage';
 
-# How to: Project Generator
+# How to: Project generator
 
 The **CHESTER SDK Project Generator** manages **variants** of catalog applications and generates their configuration from a **YAML** file. You can look at `project.yaml` files to see different variants.
 
 Then you call `west chester-update --variant "CHESTER Clime 1W"` to update project files, then you call `west build` to recompile project.
 
-## WEST Command
+## WEST command
 
 `west chester-update <name>` Generate files based on project.yaml features.
 
@@ -45,7 +45,7 @@ The `project.yaml` configuration file serves as the cornerstone for setting up a
 
 This comprehensive guide outlines the step-by-step process to effectively configure your project using the provided YAML structure.
 
-### Project Information
+### Project information
 
 Enter essential project details as outlined in the YAML configuration.
 ```yaml
@@ -69,7 +69,7 @@ It can be used in the project using:
 // Your code
 #endif /* defined(CONFIG_VARIANT_<VARIANT-NAME>) */
 ```
-### Feature Specification
+### Feature specification
 
 This section outlines the available features or subsystems that can be included in the project configuration. Each feature represents a specific functionality or component that can be integrated into the project.
 
@@ -138,7 +138,7 @@ features:
 - hardware-chester-z
 ```
 
-#### Custom Feature
+#### Custom feature
 
 Refers to a feature that a customer can add based on specific requirements. Example:
 ```yaml
@@ -157,7 +157,7 @@ These features will enable the necessary configurations on: `app.overlay`, `Kcon
 
 File `features.h` is included during compilation automatically and it is not needed to include it by `#include` anywhere.
 
-#### Config Options
+#### Config options
 Each config option allows for specific parameter settings, enabling precise control and customization of the application's behavior. These are then generated to `app_config.c` and `app_config.h`.
 
 - **Type: int**
@@ -390,7 +390,7 @@ struct app_config {
     int int_array_name[4];
 };
 ```
-### Preserved Code Blocks
+### Preserved code blocks
 
 Sections of generated files that are designated to remain unchanged during updates are called preserved code blocks. In `prj.conf` the `config` block is preserved, so put any non-default `CONFIG_*` options of your project there:
 ```conf

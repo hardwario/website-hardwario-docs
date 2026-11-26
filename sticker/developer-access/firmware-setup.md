@@ -1,10 +1,10 @@
 ---
-title: Firmware Setup
+title: Firmware setup
 description: "Set up the STICKER firmware workspace with West and Zephyr, build release, debug and provisioning images, flash over SWD with J-Link and open the console."
 ---
 import Image from '@theme/IdealImage';
 
-# Firmware Setup
+# Firmware setup
 
 Set up the STICKER firmware repository locally, build binaries, flash a **debug** image (which enables the interactive shell console), and open the console. This is the entry point for the [**Developer Access**](../developer-mode.md) workflow.
 
@@ -14,7 +14,7 @@ STICKER firmware is built on **Zephyr RTOS**. This guide covers setting up the d
 
 ---
 
-## Security Model & Firmware Architecture
+## Security model & firmware architecture
 
 STICKER uses a **flat application image** linked directly from the base of flash memory:
 - **No Remote Bootloader or FUOTA:** The device does not include MCUboot or a DFU partition. There is no over-the-air (FUOTA) or NFC firmware update capability. The legacy `enter_dfu` command was deliberately removed.
@@ -23,7 +23,7 @@ STICKER uses a **flat application image** linked directly from the base of flash
 
 ---
 
-## What You Need
+## What you need
 
 - **STICKER device** with physical SWD access.
 - **SEGGER J-Link debug probe** (SWD connection) for flashing and RTT console output.
@@ -32,11 +32,11 @@ STICKER uses a **flat application image** linked directly from the base of flash
 
 ---
 
-## Local Development Workspace Setup
+## Local development workspace setup
 
 The firmware repository is hosted at [**github.com/hardwario/sticker-firmware**](https://github.com/hardwario/sticker-firmware) and managed using **West** (the Zephyr meta-tool).
 
-### 1. Create a Workspace & Virtual Environment
+### 1. Create a workspace & virtual environment
 
 ```bash
 mkdir sticker && cd sticker
@@ -46,7 +46,7 @@ pip install --upgrade pip
 pip install west
 ```
 
-### 2. Fetch Firmware & Zephyr SDK Modules
+### 2. Fetch firmware & Zephyr SDK modules
 
 ```bash
 west init -m https://github.com/hardwario/sticker-firmware.git
@@ -56,9 +56,9 @@ west zephyr-export
 west packages pip --install
 ```
 
-The manifest (`west.yml`) pins HARDWARIO's Zephyr fork, [**hardwario/sticker-zephyr**](https://github.com/hardwario/sticker-zephyr), at a fixed revision. `west patch apply` applies the STICKER patches to the west-managed modules (the `loramac-node` LoRaWAN stack). **Run it again after every `west update`**; a LoRaWAN build refuses to configure while the patch is missing.
+The manifest (`west.yml`) pins the HARDWARIO Zephyr fork, [**hardwario/sticker-zephyr**](https://github.com/hardwario/sticker-zephyr), at a fixed revision. `west patch apply` applies the STICKER patches to the west-managed modules (the `loramac-node` LoRaWAN stack). **Run it again after every `west update`**; a LoRaWAN build refuses to configure while the patch is missing.
 
-### 3. Install Supporting Dependencies
+### 3. Install supporting dependencies
 
 ```bash
 pip install rttt
@@ -68,7 +68,7 @@ west sdk install
 
 ---
 
-## Building and Flashing
+## Building and flashing
 
 All compilation and flashing commands are executed from the `app` directory of the firmware workspace:
 
@@ -76,7 +76,7 @@ All compilation and flashing commands are executed from the `app` directory of t
 cd sticker/app
 ```
 
-### Build Targets
+### Build targets
 
 | Command | Description |
 |---|---|
@@ -95,7 +95,7 @@ make debug
 make flash
 ```
 
-### Build Variants
+### Build variants
 
 | | Release | Debug | Provisioning |
 |---|---|---|---|
@@ -120,7 +120,7 @@ Every tagged release on GitHub ships the three images, `hio-sticker-<version>-re
 
 ---
 
-## Opening the Console
+## Opening the console
 
 Once a debug image is flashed and the J-Link probe is attached, start the RTT terminal from the `app` directory:
 

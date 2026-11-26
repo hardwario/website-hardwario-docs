@@ -1,6 +1,6 @@
 ---
 slug: hardwario-tower-console
-title: TOWER Console
+title: TOWER console
 description: "Read device logs in the HARDWARIO TOWER Console of HARDWARIO Code: clear and save the log, connect, restart the device and send input such as AT commands."
 ---
 import Image from '@theme/IdealImage';

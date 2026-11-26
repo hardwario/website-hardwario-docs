@@ -102,7 +102,7 @@ Create a **dashboard group** the same way under **Dashboards → Groups** and pu
 
 Add the roles from [Which roles to use](#which-roles-to-use). Click the **plus (+) icon** (2) above the table for each one.
 
-### A Group role (only some devices)
+### A group role (only some devices)
 1.  Set **Role Type** to *Group* and pick **Read only (selected group)**.
 2.  **Group Owner:** your company.
 3.  **Type:** *Device*.
@@ -112,7 +112,7 @@ Add the roles from [Which roles to use](#which-roles-to-use). Click the **plus (
 
 ![Add group permission dialog with a Group role type, the role, group owner, Device type, and entity group selected](images/groups-6.jpg)
 
-### A Generic role
+### A generic role
 Set **Role Type** to *Generic*, pick the role (for example **Edit profile (required with Group roles)** or **Read only (all devices)**) and click **Add**. Nothing else is needed, a Generic role applies to the whole account.
 
 ![Add group permission dialog with a Generic role type where only the role itself needs to be selected](images/groups-7.jpg)

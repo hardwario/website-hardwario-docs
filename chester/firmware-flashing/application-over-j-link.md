@@ -114,7 +114,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
    hardwario.hardwario v1.2.0
    ```
 
-## Flashing Procedure
+## Flashing procedure
 
 Before you start, check that you have the application HEX file downloaded to your system; or have the firmware 128-bit unique ID available.
 

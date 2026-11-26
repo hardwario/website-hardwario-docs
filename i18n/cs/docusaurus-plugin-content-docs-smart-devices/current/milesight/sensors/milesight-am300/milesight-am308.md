@@ -105,8 +105,8 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class A |
 | **Senzory** | |
-| Teplota | -20°C ~ 60°C, přesnost ±0,2°C, rozlišení 0,1°C |
-| Vlhkost | 0% ~ 100% RH, přesnost ±2% RH, rozlišení 0,5% |
+| Teplota | −20 až +60 °C, přesnost ±0,2°C, rozlišení 0,1°C |
+| Vlhkost | 0–100 % RH, přesnost ±2% RH, rozlišení 0,5% |
 | Pohyb (PIR) | 80° H, 55° V, max 5m, stav: neobsazeno/obsazeno |
 | Osvětlenost | 0–60000 Lux (6 úrovní) |
 | TVOC | Index IAQ 1,00–5,00, přesnost ±1, rozlišení 0,01 |
@@ -122,7 +122,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | **Fyzické vlastnosti** | |
 | Napájení | 4 × baterie ER14505 nebo 5V/1A (USB-C) |
 | Provozní teplota | -20°C ~ +60°C (E-Ink: 0°C–40°C u AM308) |
-| Relativní vlhkost | 10% ~ 90% (bez kondenzace) |
+| Relativní vlhkost | 10–90 % (bez kondenzace) |
 | Krytí | IP30 |
 | Kryt | ABS, bílý |
 | Rozměry | 100,8 × 114 × 22 mm (3,97 × 4,49 × 0,87 in) |

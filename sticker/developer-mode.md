@@ -1,15 +1,15 @@
 ---
 slug: developer-mode
-title: Developer Access
+title: Developer access
 description: "Developer access to STICKER: the debug firmware build adds an interactive shell over RTT for development and diagnostics on the Zephyr RTOS platform."
 ---
 import Image from '@theme/IdealImage';
 
-# Developer Access (Debug Mode)
+# Developer access (debug mode)
 
 STICKER is an **open platform** built on the Zephyr RTOS. A **debug build** of the firmware adds an interactive shell console over RTT, which developers use to configure the device and run diagnostics directly over a debug connection.
 
-## Debug Mode
+## Debug mode
 
 The STICKER can be delivered in **Debug Mode**, which is intended primarily for developers. In this configuration, the device is supplied in an open state, allowing direct access for development, so you can explore, modify, and extend its functionality.
 

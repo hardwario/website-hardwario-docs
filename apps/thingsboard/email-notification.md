@@ -168,7 +168,7 @@ This is the final execution node that communicates with your SMTP server to disp
 * **Configuration:** Leave as default (it uses the System SMTP settings).
 * **Connection:** Connect all your Email Info nodes to this single Send Email node using Success links.
 
-### Step 7: Connecting to the Root Rule Chain
+### Step 7: Connecting to the root rule chain
 Your custom notification Rule Chain is now fully built, but the platform doesn't know it should route incoming telemetry to it. We need to link it inside the main Root Rule Chain.
 
 1. Go to **Rule Chains** and open your **Root Rule Chain** (the default chain that handles all incoming messages).

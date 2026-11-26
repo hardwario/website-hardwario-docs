@@ -1,6 +1,6 @@
 ---
 slug: changelog
-title: TAPPER Changelog
+title: TAPPER changelog
 toc_min_heading_level: 2
 toc_max_heading_level: 2
 description: "All notable changes to the TAPPER platform, including firmware and hardware, with tabs to filter by change category."
@@ -9,7 +9,7 @@ description: "All notable changes to the TAPPER platform, including firmware and
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# TAPPER Changelog
+# TAPPER changelog
 
 This page tracks all notable changes across the TAPPER platform, including **firmware** and **hardware**. Use the tabs below to filter by change category.
 
@@ -21,7 +21,7 @@ Firmware source: [hardwario/tapper](https://github.com/hardwario/tapper) on GitH
 
 ---
 
-## General Platform Updates
+## General platform updates
 
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware & Applications" default>

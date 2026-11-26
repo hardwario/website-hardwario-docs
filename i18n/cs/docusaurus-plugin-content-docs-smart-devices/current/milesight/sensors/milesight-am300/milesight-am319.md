@@ -103,8 +103,8 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Citlivost | -137 dBm @300bps |
 | Režim | OTAA / ABP Class C |
 | **Senzory** | |
-| Teplota | -20°C ~ 60°C, přesnost ±0,2~0,3°C, rozlišení 0,1°C |
-| Vlhkost | 0% ~ 100% RH, přesnost ±2% RH, rozlišení 0,5% |
+| Teplota | −20 až +60 °C, přesnost ±0,2–0,3 °C, rozlišení 0,1°C |
+| Vlhkost | 0–100 % RH, přesnost ±2% RH, rozlišení 0,5% |
 | Pohyb (PIR) | 80° H, 55° V, max 5m |
 | Osvětlenost | 0–60000 Lux (6 úrovní) |
 | TVOC | Index IAQ 1–5 nebo 0–2000 μg/m³ |

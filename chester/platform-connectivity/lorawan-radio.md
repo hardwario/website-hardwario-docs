@@ -1,6 +1,6 @@
 ---
 slug: lorawan-radio
-title: LoRaWAN Networks
+title: LoRaWAN networks
 description: "LoRaWAN on CHESTER with the Murata CMWX1ZZABZ-078 module: switch the network mode, set OTAA or ABP keys, and decode data in ChirpStack or Node-RED."
 ---
 import Image from '@theme/IdealImage';
@@ -13,7 +13,7 @@ The standard **CMWX1ZZABZ-078** module from **Murata** uses LoRaWAN standard 1.0
 
 ---
 
-## Network Mode Configuration
+## Network mode configuration
 
 Some catalog firmwares allow configuration to use NB-IoT/LTE or LoRaWAN network. This firmware after power-up is not sending data, the **LED is blinking yellow** and you need to configure correct radio mode.
 
@@ -36,7 +36,7 @@ Then apply changes by typing `config save`. The device will reboot and use the c
 
 ---
 
-## EMBER LoRaWAN Gateway
+## EMBER LoRaWAN gateway
 
 We also offer **LoRaWAN gateway EMBER** ([EMBER docs](/ember/), [EMBER e-shop](https://www.hardwario.store/ember/)). This gateway can manage LoRaWAN communication with CHESTER and network software could be running in our HARDWARIO Cloud, or completely in your infrastructure. LoRaWAN network is very flexible, reliable with long range and we use it in big factories or large open areas.
 
@@ -44,7 +44,7 @@ EMBER is using [CHIRPSTACK](https://www.chirpstack.io/) and [Node-RED](https://n
 
 ---
 
-## CHESTER LoRaWAN Configuration
+## CHESTER LoRaWAN configuration
 
 Here are example configuration parameters that CHESTER supports. You can use these tools to configure network keys and configuration:
 - [HARDWARIO Manager](../platform-connectivity/hardwario-manager.md)
@@ -82,7 +82,7 @@ lrw config appskey 00000000000000000000000000000000
 
 To see the difference between OTAA and ABP we suggest reading [The Things Industries ABP vs OTAA article](https://www.thethingsindustries.com/docs/devices/abp-vs-otaa/).
 
-### OTAA Configuration
+### OTAA configuration
 
 Keys are exchanged automatically during **Join** process when the CHESTER boots up.
 This configuration is easiest to set-up and use.
@@ -107,7 +107,7 @@ lrw config appkey "<your-appkey>"
 config save
 ```
 
-### ABP Configuration
+### ABP configuration
 
 Keys are entered manually. In some cases, this is a better solution in fixed installation when the device signal is on the edge.
 We use this configuration with **ADR** (Adaptive Data Rate) disabled so the network has a fixed communication speed.
@@ -147,7 +147,7 @@ config save
 
 Note, that lower data rate means a lower payload that can reach [as low as 51 bytes](https://www.thethingsnetwork.org/docs/lorawan/regional-parameters/#eu863-870-maximum-payload-size). This is 51 bytes for a complete LoRaWAN packet, not only your useful payload.
 
-### CHIRPSTACK Configuration 
+### CHIRPSTACK configuration 
 
 The following table provides a summary of the recommended configuration parameters for CHESTER devices within the ChirpStack v4 environment.
 
@@ -166,7 +166,7 @@ These values match the [lora-modem](https://github.com/hardwario/lora-modem) fir
 If you are unsure about the **ChirpStack setup** or **configuration**, please refer to the following guide, which provides detailed instructions for installing and configuring ChirpStack v4: [**Getting Started with ChirpStack v4**](/apps/chirpstack/index#getting-started-with-chirpstack-v4)
 :::
 
-## Decoders and Codecs
+## Decoders and codecs
 
 To correctly decode RAW binary data you have to use a decoder that outputs values with JSON.
 
@@ -177,11 +177,11 @@ It contains files:
 - [cs-decoder.js](https://github.com/hardwario/chester-sdk/blob/main/applications/clime/codec/cs-decoder.js): CHIRPSTACK decoder
 - [nr-decoder.js](https://github.com/hardwario/chester-sdk/blob/main/applications/clime/codec/nr-decoder.js): Node-RED decoder
 
-### CHIRPSTACK Decoder
+### CHIRPSTACK decoder
 
 You can set the decoder in Device-profile in the **Codec** tab.
 
-### Node-RED Decoder
+### Node-RED decoder
 
 For Node-RED we use connecting directly to the CHIRPSTACK MQTT broker with an MQTT in node that has the MQTT topic set to `application/<application-id>/device/+/event/up`.
 
@@ -191,7 +191,7 @@ Replace the `<application-id>` with your application ID. In older CHIRPSTACK it 
 
 ## Troubleshooting
 
-### Public vs Private Network
+### Public vs private network
 
 LoRaWAN network can be set to be private or public. It doesn't mean that the network is visible or not. It simply means that radio packets are using different preamble.
 

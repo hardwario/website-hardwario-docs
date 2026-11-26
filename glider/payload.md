@@ -1,11 +1,11 @@
 ---
-title: CBOR Payload
+title: CBOR payload
 sidebar_position: 7
 description: "GLIDER reports measurements to HARDWARIO Cloud using the CBOR binary format (RFC 8949)."
 ---
 import Image from '@theme/IdealImage';
 
-# CBOR Payload Structure
+# CBOR payload structure
 
 GLIDER reports measurements to **HARDWARIO Cloud** using the **CBOR** binary format (RFC 8949). To keep messages small, the schema uses **numeric keys** rather than strings, so every payload typically fits in **70 to 150 bytes** on the wire.
 
@@ -76,7 +76,7 @@ CBOR key: `9`.
 | :--- | :--- | :--- |
 | `events` | TSO list | Alarm activation / deactivation events accumulated since the last successful uplink. The buffer is cleared after the send. |
 
-#### `events` - Time-Series Object (TSO) format
+#### `events` - time-series object (TSO) format
 
 The `events` value is a **flat list** in this order:
 
@@ -180,7 +180,7 @@ inputs:
  events: []
 ```
 
-On the wire this payload is **~95 bytes** of CBOR.
+On the wire this payload is **approx. 95 bytes** of CBOR.
 
 ## Codec hash
 

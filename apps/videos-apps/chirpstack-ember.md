@@ -1,14 +1,14 @@
 ---
 slug: chirpstack-ember
-title: Adding Gateways
+title: Adding gateways
 title_meta: "Adding Gateways (ChirpStack video tutorial)"
 ---
 
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4 - How to Add a Gateway to a LoRaWAN Network {#chirpstack-v4---how-to-add-gateway-to-a-lorawan-network}
+# ChirpStack v4 - how to add a gateway to a LoRaWAN network {#chirpstack-v4---how-to-add-gateway-to-a-lorawan-network}
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you’ll learn how to connect your gateway to ChirpStack v4.
 

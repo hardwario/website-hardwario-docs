@@ -6,7 +6,7 @@ description: "Video tutorial: pair up to eight Bluetooth tags with CHESTER in th
 
 import Image from '@theme/IdealImage';
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you’ll learn how to pair and manage up to eight tags with your CHESTER device. We’ll show you how to enroll, verify, and read data from tags directly in the HARDWARIO Manager console.
 
@@ -30,7 +30,7 @@ In this guide, you’ll learn how to pair and manage up to eight tags with your 
 </div>
 
 
-## Step-by-Step Text Guide
+## Step-by-step text guide
 
 1. Take CHESTER and connect using the HARDWARIO Manager app.
 

@@ -6,13 +6,13 @@ const sidebars = {
     'introduction',
     {
       type: 'category',
-      label: 'User Guide',
+      label: 'User guide',
       className: 'sidebar-section',
       collapsible: false,
       items: [
         {
           type: 'category',
-          label: 'Getting Started',
+          label: 'Getting started',
           link: {
             type: 'generated-index',
             description: 'Start with the HARDWARIO TOWER architecture, design principles, programming, and resources.',
@@ -28,7 +28,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Desktop Programming',
+          label: 'Desktop programming',
           link: {
             type: 'generated-index',
             description: 'Install and use HARDWARIO Playground for radio, MQTT, Node-RED, dashboards, and firmware flashing.',
@@ -61,7 +61,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Platform Integrations',
+          label: 'Platform integrations',
           link: {
             type: 'generated-index',
             description: 'Connect HARDWARIO TOWER with visualization, automation, and third-party IoT services.',
@@ -75,7 +75,7 @@ const sidebars = {
         },
         {
           type: 'link',
-          label: 'Step-by-Step Projects',
+          label: 'Step-by-step projects',
           href: 'https://www.hackster.io/hardwario/projects',
         },
       ],
@@ -88,7 +88,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Radio Communication',
+          label: 'Radio communication',
           link: {
             type: 'doc',
             id: 'radio-communication/index',
@@ -102,7 +102,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Hardware Modules',
+          label: 'Hardware modules',
           link: {
             type: 'doc',
             id: 'hardware-modules/index',
@@ -144,7 +144,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Hardware Interfaces',
+          label: 'Hardware interfaces',
           link: {
             type: 'generated-index',
             description: 'Electrical and software interfaces available on HARDWARIO TOWER modules.',
@@ -168,7 +168,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Command Line Tools',
+          label: 'Command line tools',
           link: {
             type: 'doc',
             id: 'command-line-tools/index',
@@ -183,7 +183,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Firmware Development',
+          label: 'Firmware development',
           link: {
             type: 'doc',
             id: 'firmware-development/index',
@@ -242,7 +242,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'MQTT Protocol',
+          label: 'MQTT protocol',
           link: {
             type: 'doc',
             id: 'mqtt-protocol/index',

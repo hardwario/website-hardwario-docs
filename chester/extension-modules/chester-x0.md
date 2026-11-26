@@ -34,7 +34,7 @@ This article describes the CHESTER-X0 four-channel I/O extension module. Two var
 </div>
 <br />
 
-## Module Overview
+## Module overview
 
 Each channel can be used for these applications:
 
@@ -50,12 +50,12 @@ Each channel can be used for these applications:
 
 _\* The CHESTER-M mainboard has TVS protection on the Ax and Bx terminal block pins that starts to protect GPIO above 28 V. Theoretically, you can measure voltages higher than 26 V, but the protection distorts the measurements, or you need to request the board without these TVS diodes or remove them._
 
-## Electrical Specification
+## Electrical specification
 
 * Continuous output current: 50 mA
 * Peak output current limit: 150 mA
 
-## Channel Schematic Diagram
+## Channel schematic diagram
 
 Depending on the application these configuration options are available for each channel:
 
@@ -68,7 +68,7 @@ This picture shows the electric circuit of each channel:
 
 ![Single-channel circuit: CHX input with varistor, PUX pull-up, PDX pull-down, CLX divider, and ONX 5V switch to GPX/AX](images/sc-chester-x0.png)
 
-## Configuration Table
+## Configuration table
 
 The configuration depends on the application.
 
@@ -87,11 +87,11 @@ However, this is just to understand the modes. You only need to know which mode 
 | Digital input        |     |     |     |     | `CTR_X0_MODE_DEFAULT`    |
 | Digital output       |     |     |     |     | `CTR_X0_MODE_DEFAULT`    |
 
-## CHESTER Pin Configuration Diagram
+## CHESTER pin configuration diagram
 
 ![CHESTER-X0 terminal block pinout, pins 1-8: VDD, CH1, GND, CH2, CH3, GND, CH4, +V](images/tb-chester-x0.png)
 
-## Pin Configuration and Functions
+## Pin configuration and functions
 
 | Position | Signal Name | Signal Description       |
 | -------- | ----------- | ------------------------ |
@@ -117,7 +117,7 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 ![CHESTER-X0 schematic sheet 2: configuration switch circuits for channels 1 and 2](images/hio-chester-x0-r2.0-2.png)
 ![CHESTER-X0 schematic sheet 3: configuration switch circuits for channels 3 and 4](images/hio-chester-x0-r2.0-3.png)
 
-## Module Drawing
+## Module drawing
 ![CHESTER-X0 board outline with edge signals: +V, GP0-GP3, SDA, SCL, VDD, GND on top; +V, CH1-CH4, GND, VDD on bottom](images/pc-chester-x0.png)
 
 ## CHESTER SDK

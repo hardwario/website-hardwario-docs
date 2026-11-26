@@ -1,11 +1,11 @@
 ---
 slug: gateway-update
-title: Gateway Update
+title: Gateway update
 description: "Update the RouterOS packages and RouterBOARD firmware of a MikroTik LoRa gateway in Winbox 4, then reboot and check that both versions match."
 ---
 import Image from '@theme/IdealImage';
 
-# MikroTik Gateway Update
+# MikroTik gateway update
 
 This guide walks you through updating RouterOS packages and the RouterBOARD (firmware/“BIOS”) using the Winbox 4.
 
@@ -16,14 +16,14 @@ This guide walks you through updating RouterOS packages and the RouterBOARD (fir
 
 ---
 
-## 1. Update RouterOS Software
+## 1. Update RouterOS software
 
 In the left panel **System → Packages → Check for Updates**. A new window will open, check if the versions match. If not, click **Download&Install** and wait a few minutes.
 ![EMBER RouterOS update](images/ember-update-routeros.png)
 
 ---
 
-## 2. Update RouterBOARD (Firmware/“BIOS”)
+## 2. Update RouterBOARD (firmware/“BIOS”)
 
 1. In the left menu, open **System → RouterBOARD**.
 2. Compare **Current Firmware** with **Upgrade Firmware**.
@@ -33,7 +33,7 @@ In the left panel **System → Packages → Check for Updates**. A new window wi
 
 ---
 
-## 3. Reboot to Apply Firmware
+## 3. Reboot to apply firmware
 
 1. In the left menu, open **System → Reboot**.
 2. Confirm the reboot to apply the RouterBOARD firmware upgrade.
@@ -47,7 +47,7 @@ In the left panel **System → Packages → Check for Updates**. A new window wi
 
 ---
 
-## 4. Verify the Update
+## 4. Verify the update
 
 1. **System → Packages**:  
    - Click **Check For Updates**: it should now report **up to date** (both versions should match).

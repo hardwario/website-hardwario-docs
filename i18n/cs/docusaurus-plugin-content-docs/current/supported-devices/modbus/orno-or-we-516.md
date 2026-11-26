@@ -153,8 +153,8 @@ app config show
 | **`app config interval-sample 60`** | `60` | Jak často (v sekundách) zařízení CHESTER čte z elektroměru aktuální hodnoty. |
 | **`app config interval-aggreg 60`** | `300` | Interval (v sekundách), za který se nasbíraná data agregují (zprůměrují nebo sečtou) do jednoho paketu. |
 | **`app config interval-report 30`** | `1800` | Jak často (v sekundách) zařízení CHESTER odesílá agregovaná data na server nebo do cloudu. |
-| **`config save`** | — | Trvale uloží aktuální konfiguraci do paměti flash zařízení. |
-| **`app config show`** | — | Vypíše aktuální nastavení pro kontrolu. |
+| **`config save`** | – | Trvale uloží aktuální konfiguraci do paměti flash zařízení. |
+| **`app config show`** | – | Vypíše aktuální nastavení pro kontrolu. |
 
 </details>
 ---

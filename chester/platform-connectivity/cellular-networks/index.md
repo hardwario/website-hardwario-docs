@@ -1,10 +1,10 @@
 ---
-title: Mobile Networks
+title: Mobile networks
 description: "The CHESTER platform supports LTE-M and NB-IoT cellular technologies using the nRF9160 System-in-Package from Nordic Semiconductor."
 ---
 import Image from '@theme/IdealImage';
 
-# Mobile Networks
+# Mobile networks
 
 The **CHESTER** platform supports **LTE-M** and **NB-IoT** cellular technologies using the **nRF9160** System-in-Package from **Nordic Semiconductor**.
 

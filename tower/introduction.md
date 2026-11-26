@@ -14,7 +14,7 @@ It is used in industrial applications, STEM education, and hobby projects (home 
 
 <img src="/img/tower.webp" data-zoom-src="/img/tower.webp" width="540" alt="TOWER" />
 
-## Quick Links
+## Quick links
 
 * [**Getting Started**](category/getting-started): Start with the TOWER platform from scratch.
 * [**Desktop Programming**](category/desktop-programming): Quick start with TOWER and your first project.
@@ -30,7 +30,7 @@ It is used in industrial applications, STEM education, and hobby projects (home 
 * [**Hardware Interfaces**](category/hardware-interfaces): Hardware layers, not only between the TOWER modules.
 * [**Changelog**](changelog): Latest firmware and platform changes.
 
-## Typical Use Cases
+## Typical use cases
 
 - Home automation, prototyping, and educational projects
 - Environmental monitoring (climate, air quality, soil conditions)
@@ -38,7 +38,7 @@ It is used in industrial applications, STEM education, and hobby projects (home 
 - Motion detection and button-based control systems
 - CO2 and air quality monitoring
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|

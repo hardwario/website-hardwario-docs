@@ -1,6 +1,6 @@
 ---
 slug: how-to-analog-digital-converter
-title: "How To: Analog/Digital Converter"
+title: "How to: Analog/digital converter"
 description: "Read voltage on inputs A0 to A5 with the TOWER SDK analog-to-digital converter, as a 16-bit value or volts, with synchronous or asynchronous sampling."
 ---
 import Image from '@theme/IdealImage';
@@ -11,7 +11,7 @@ Analog to digital converter can measure the voltage on one of the six inputs **`
 - [**ADC SDK Module**](https://sdk.hardwario.com/group__twr__adc.html)
 - GitHub Repository Example
 
-## Sampling Types
+## Sampling types
 
 Each channel can be configured to a **different resolution and oversampling**.
 
@@ -20,7 +20,7 @@ In asynchronous mode, you can also get the value directly in volts in the **floa
 
 Sampling can be **synchronous** and **asynchronous**.
 
-## Synchronous Sampling
+## Synchronous sampling
 
 :::info
 
@@ -58,7 +58,7 @@ Synchronous Sampling Code Example
 
 </details>
 
-## Asynchronous Sampling
+## Asynchronous sampling
 
 :::info
 

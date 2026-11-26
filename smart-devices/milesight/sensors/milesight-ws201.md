@@ -6,7 +6,7 @@ description: "Milesight WS201 fill level sensor with ToF measurement (1–55 cm)
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor WS201
+# Milesight sensor WS201
 
 Milesight WS201 is a **wireless fill level monitoring sensor** using **ToF (Time-of-Flight) technology** for high accuracy. It supports **LoRaWAN connectivity** with remote management in the Milesight IoT Cloud, operates for **up to 2 years on a coin cell battery**, and is ideal for **public facility maintenance**.
 
@@ -22,7 +22,7 @@ Milesight WS201 is a **wireless fill level monitoring sensor** using **ToF (Time
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | Not yet available                                                     |
@@ -39,7 +39,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -58,7 +58,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -67,7 +67,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/ws-series/ws201/ws201-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -83,7 +83,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
@@ -107,7 +107,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Advanced Features | Threshold alarm, Hibernate mode |
 | **Physical Characteristics** | |
 | Power Supply | 1 × CR2450 (590 mAh) |
-| Battery Life | ~2–3 years (depending on SF & region) |
+| Battery Life | approx. 2–3 years (depending on SF & region) |
 | Operating Temp | -10°C ~ +60°C |
 | Humidity | 0–95% RH (non-condensing) |
 | Ingress Protection | IP30 |

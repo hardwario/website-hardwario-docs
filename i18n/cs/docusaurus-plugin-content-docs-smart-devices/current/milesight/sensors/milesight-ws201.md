@@ -107,7 +107,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Pokročilé funkce | Alarm při překročení prahu, režim hibernace |
 | **Fyzické vlastnosti** | |
 | Napájení | 1 × CR2450 (590 mAh) |
-| Výdrž baterie | ~2–3 roky (v závislosti na SF a regionu) |
+| Výdrž baterie | přibližně 2–3 roky (v závislosti na SF a regionu) |
 | Provozní teplota | -10°C ~ +60°C |
 | Vlhkost | 0–95 % RH (bez kondenzace) |
 | Krytí | IP30 |

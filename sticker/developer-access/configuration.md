@@ -36,7 +36,7 @@ While this page documents interactive shell commands (`config`) accessed via an 
 
 ---
 
-## Command Syntax
+## Command syntax
 
 ```text
 config <subcommand> [value]
@@ -57,7 +57,7 @@ A `config` write updates the setting in RAM and takes effect immediately, but it
 
 ---
 
-## Sampling and Reporting Intervals
+## Sampling and reporting intervals
 
 | Command | Argument | Description |
 |---|---|---|
@@ -74,7 +74,7 @@ settings save
 
 ---
 
-## Radio Settings
+## Radio settings
 
 | Command | Argument | Description |
 |---|---|---|
@@ -121,7 +121,7 @@ With `radio-mode p2p`, STICKER talks directly to a HARDWARIO FIBER modem and a P
 | `config p2p-tx-power` | `2`-`14` (dBm) | TX power. Default `14`. |
 | `config p2p-modulation` | `lora` / `fsk` | Modulation. `fsk` works toward a stock TOWER gateway. Switching between `lora` and `fsk` pairs the node afresh. Default `lora`. |
 
-### Link Supervision
+### Link supervision
 
 These parameters apply to both radios.
 
@@ -132,7 +132,7 @@ These parameters apply to both radios.
 
 ---
 
-## Sensors and Capabilities
+## Sensors and capabilities
 
 **Capability flags** tell the firmware which hardware is present on a given variant. They are normally set during factory provisioning and should not be changed in the field.
 
@@ -146,7 +146,7 @@ These parameters apply to both radios.
 | `config cap-hall-left` | `true` / `false` | Hall left sensor present. |
 | `config cap-hall-right` | `true` / `false` | Hall right sensor present. |
 
-### GP Pins (Inputs, PIR, Buzzer)
+### GP pins (inputs, PIR, buzzer)
 
 The GP_A and GP_B pins serve the external inputs A and B, the PIR motion detector or the buzzer variant. One parameter picks the owner, so a pin conflict cannot be stored.
 
@@ -160,14 +160,14 @@ The GP_A and GP_B pins serve the external inputs A and B, the PIR motion detecto
 On STICKER Input, the DIP switch S1 connects the external terminals to the inputs or to the 1-Wire bus. The firmware cannot read the switch, so the input mode and the switch position must match. An `analog` input with the switch in the 1-Wire position reads a floating pin. See [**STICKER Input Wiring**](../sticker-input-wiring/index.md).
 :::
 
-### 1-Wire Slots
+### 1-Wire slots
 
 | Command | Argument | Description |
 |---|---|---|
 | `config sensor1-rom` ... `config sensor4-rom` | 16 hex digits | ROM serial of the 1-Wire sensor bound to slot 1-4. All-zero = empty slot. Normally set by `w1 enroll` or by auto-enroll. |
 | `config sensor1-type` ... `config sensor4-type` | `0` / `2` / `3` | Sensor type the slot expects: `0` none, `2` dallas (DS18B20), `3` machine probe. Set when a sensor is enrolled, or in advance during provisioning. If a sensor of another type shows up in the slot, STICKER raises a `sensor_mismatch` alarm and the slot's alarm rules stop. |
 
-### Sensor Settings
+### Sensor settings
 
 | Command | Argument | Description |
 |---|---|---|
@@ -175,7 +175,7 @@ On STICKER Input, the DIP switch S1 connects the external terminals to the input
 
 ---
 
-## Pulse Counters
+## Pulse counters
 
 | Command | Argument | Description |
 |---|---|---|
@@ -188,7 +188,7 @@ For wiring details (DIP switches, 1-Wire, dry contact, analog), see [**STICKER I
 
 ---
 
-## Alarms, Buzzer and Battery
+## Alarms, buzzer and battery
 
 | Command | Argument | Description |
 |---|---|---|
@@ -199,7 +199,7 @@ For wiring details (DIP switches, 1-Wire, dry contact, analog), see [**STICKER I
 
 ---
 
-## Device Identity & NFC Security Architecture
+## Device identity & NFC security architecture
 
 These parameters manage device identity, NFC access control, and claim provisioning. They are set during factory provisioning and should not be altered in standard operation.
 
@@ -213,7 +213,7 @@ These parameters manage device identity, NFC access control, and claim provision
 | `config vendor-reset-allow` | `true` / `false` | Whether the device accepts a vendor reset. Over the air it can be changed only over the vendor NFC channel. Default `true`. |
 | `config calibration` | `true` / `false` | Enable calibration mode (factory use). |
 
-### NFC Mailbox and Claim Window
+### NFC mailbox and claim window
 
 From firmware v2.0.0, the phone talks to STICKER through the **Fast Transfer Mode mailbox** of the ST25DV NFC chip:
 

@@ -1,6 +1,6 @@
 ---
 slug: schneider-electric-iem3xxx-series
-title: Schneider Electric iEM3xxx Series
+title: Schneider Electric iEM3xxx series
 description: "Connect a Schneider Electric iEM3xxx MID energy meter (iEM3250) with a current transformer to CHESTER over Modbus: wiring, CT ratio and configuration."
 ---
 
@@ -32,9 +32,9 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
  ---
 
-### Power Installation
+### Power installation
 
-#### Example of Installation: Schneider Electric Energy Analyzer iEM3250
+#### Example of installation: Schneider Electric Energy Analyzer iEM3250
 
 | **Schneider Electric Energy Analyzer iEM3250** | |
 |----------------------------------------|-----------------------------------------------|
@@ -51,9 +51,9 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 ---
 
-### Sensor Installation
+### Sensor installation
 
-#### Example of Installation: Carlo Gavazzi AC Current Transformer CTD-1X 100 5A XXX
+#### Example of installation: Carlo Gavazzi AC current transformer CTD-1X 100 5A XXX
 
 
 | **Schneider Electric Energy Analyzer iEM3250** | **Carlo Gavazzi AC Current Transformer CTD-1X 100 5A XXX** |
@@ -61,15 +61,15 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 | Pin S1                                 | **S1 (K)**                                         |
 | Pin S2                                | **S2 (L)**                                         |
 
-#### Connection Diagram (iEM3250)
+#### Connection diagram (iEM3250)
 
 ![Connection Diagram (iEM3250)](images/connection-diagram-iem3250.png)
 
 ---
 
-### Modbus Communication
+### Modbus communication
 
-#### Example of Modbus Communication Installation: Schneider Electric Energy Analyzer iEM3250
+#### Example of Modbus communication installation: Schneider Electric Energy Analyzer iEM3250
 
 | **Schneider Electric Energy Analyzer iEM3250** | **CHESTER Modbus** |
 |---------------------------|--------------------|
@@ -83,7 +83,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 ---
 
-### Browsing and Configuration
+### Browsing and configuration
 
 * `▼` **Arrow button**
     1. Navigation through the menu
@@ -95,7 +95,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 ---
 
-### Modbus Communication and CT Ratio Configuration for Energy Analyzer
+### Modbus communication and CT ratio configuration for Energy Analyzer
 
 1. Press and hold the `OK` and `ESC` buttons until the password prompt appears.  
 2. Enter the password using the `▼` (**Arrow button**) button. (Default password for new meters is `0010`.)  
@@ -110,7 +110,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 7. Continue using the `▼` (**Arrow button**) button to scroll to the end of the menu.  
 8. At the `Exit Config` option, press the `OK` button to confirm and save the settings.
 
-#### Default Modbus Communication Configuration
+#### Default Modbus communication configuration
 
 | Address | Baud Rate | Parity | Stop Bit |
 |---------|-----------|--------|-----------|
@@ -118,7 +118,7 @@ This energy meter **requires** the use of an **external sensor**, such as a curr
 
 ---
 
-### Modbus Communication Configuration for CHESTER
+### Modbus communication configuration for CHESTER
 
 Use the following commands to configure communication parameters via CHESTER Terminal:
 
@@ -134,7 +134,7 @@ config save
 
 ---
 
-### Example of CT Ratio Selection
+### Example of CT ratio selection
 
 **Carlo Gavazzi AC Current Transformer CTD-1X 100 5A XXX**
 

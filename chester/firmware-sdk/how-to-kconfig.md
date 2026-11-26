@@ -15,7 +15,7 @@ This article will demonstrate how to use **Kconfig** in your project.
 
 :::
 
-## Custom Options
+## Custom options
 
 You can define your custom **Kconfig** option in your application by creating the `Kconfig` file in the application root directory.
 

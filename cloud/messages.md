@@ -11,7 +11,7 @@ The **Messages** page shows all messages exchanged between devices and the Cloud
 - **Left sidebar → Messages**: shows messages from all devices in the space
 - **Device detail → Messages tab**: shows messages for that specific device only
 
-## Message Types
+## Message types
 
 | Type | Direction | Description |
 |---|---|---|
@@ -23,7 +23,7 @@ The **Messages** page shows all messages exchanged between devices and the Cloud
 | **shell** | down | Shell commands scheduled for the device |
 | **firmware** | down | FOTA firmware update packets |
 
-## Downlink States
+## Downlink states
 
 Downlink messages (direction: `down`) have a delivery state:
 
@@ -41,13 +41,13 @@ By default the list shows messages from the **last 10 days**. Use the filter bar
 - **Type**: filter by message type (data, session, config, …)
 - **Direction**: uplink only, downlink only, or both
 
-## Viewing a Message
+## Viewing a message
 
 - Click the **arrow icon** on a message row for a quick JSON preview inline
 - Click the **ⓘ icon** to open the full message detail
 - Click the **compare icon** on two messages to see a diff of their JSON bodies
 
-## Basic Dashboard
+## Basic dashboard
 
 The dashboard is a **debugging tool** that lets you plot values from messages using a small JavaScript function.
 

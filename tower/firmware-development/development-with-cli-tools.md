@@ -1,6 +1,6 @@
 ---
 slug: development-cli-tools
-title: Development With Command Line Tools
+title: Development with command line tools
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';

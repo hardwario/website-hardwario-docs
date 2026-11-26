@@ -1,9 +1,9 @@
 ---
-title: Acoustic & Visual Signaling
+title: Acoustic & visual signaling
 description: "Acoustic and visual signaling on FIBER: a piezo buzzer for alerts and diagnostic feedback and a status LED on each 1-Wire input."
 ---
 
-# Acoustic & Visual Signaling
+# Acoustic & visual signaling
 
 * **Piezo buzzer** for alerts or diagnostic feedback
 * **Status LEDs** for each 1-Wire input, providing immediate hardware-level insight

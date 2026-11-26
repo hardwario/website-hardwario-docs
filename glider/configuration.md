@@ -6,7 +6,7 @@ title_meta: "Configuration (GLIDER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Configuration Reference
+# Configuration reference
 
 GLIDER stores configuration in non-volatile memory (NVS), so settings survive power cycles and reboots. You can change configuration through either console:
 

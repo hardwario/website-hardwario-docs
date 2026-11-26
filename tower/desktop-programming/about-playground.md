@@ -1,6 +1,6 @@
 ---
 slug: about-playground
-title: About Playground
+title: About playground
 ---
 import Image from '@theme/IdealImage';
 

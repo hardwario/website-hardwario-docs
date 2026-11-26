@@ -180,7 +180,7 @@ inputs:
  events: []
 ```
 
-Při přenosu má tento payload v CBOR **~95 bajtů**.
+Při přenosu má tento payload v CBOR **přibližně 95 bajtů**.
 
 ## Hash kodeku {#codec-hash}
 

@@ -1,6 +1,6 @@
 ---
 slug: lora-wan-radio
-title: LoRaWAN Radio
+title: LoRaWAN radio
 ---
 import Image from '@theme/IdealImage';
 

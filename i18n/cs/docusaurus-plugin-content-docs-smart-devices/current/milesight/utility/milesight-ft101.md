@@ -157,8 +157,8 @@ Do testeru můžete nainstalovat aplikaci **Milesight ToolBox** a vestavěnou **
 |--------|----------------------------------------------|
 | Napájení | 4,3V/4300mAh dobíjecí lithium-iontová baterie |
 | Nabíjení | 5V ⎓ 2A přes USB Type-C                     |
-| Aktivní provoz | ~8 hodin nepřetržitého provozu         |
-| Pohotovostní režim | >300 hodin (~7 dní)                  |
+| Aktivní provoz | přibližně 8 hodin nepřetržitého provozu         |
+| Pohotovostní režim | >300 hodin (přibližně 7 dní)                  |
 
 ---
 
@@ -191,7 +191,7 @@ Do testeru můžete nainstalovat aplikaci **Milesight ToolBox** a vestavěnou **
 | Reporty | Rozsáhlé možnosti exportu |
 | **Fyzické vlastnosti** | |
 | Napájení | 4,3V/4300mAh Li-ion dobíjecí |
-| Výdrž baterie | ~8 hodin aktivně / >300 hodin v pohotovosti |
+| Výdrž baterie | přibližně 8 hodin aktivně / >300 hodin v pohotovosti |
 | Provozní teplota | -10°C ~ +50°C |
 | Skladovací teplota | -20°C ~ +60°C |
 | Vlhkost | 95% RH (nekondenzující) |

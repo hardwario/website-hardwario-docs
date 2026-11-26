@@ -1,6 +1,6 @@
 ---
 slug: grafana-visualization
-title: Grafana Visualization
+title: Grafana visualization
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -58,12 +58,12 @@ curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
   </TabItem>
   </Tabs>
 
-#### Install the InfluxDB Package
+#### Install the InfluxDB package
 ```bash
 sudo apt update && sudo apt install influxdb
 ```
 
-#### Start the InfluxDB Service to test it
+#### Start the InfluxDB service to test it
 ```bash
 sudo systemctl start influxdb
 ```
@@ -74,7 +74,7 @@ After you tested the InfluxDB, you can move to [**Grafana**](https://grafana.com
 
 :::
 
-#### Install Grafana Dependencies
+#### Install Grafana dependencies
 ```bash
 sudo apt install adduser libfontconfig -y
 ```
@@ -111,7 +111,7 @@ sudo apt install adduser libfontconfig -y
   </TabItem>
 </Tabs>
 
-#### Enable Grafana on Boot
+#### Enable Grafana on boot
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable grafana-server
@@ -137,7 +137,7 @@ First, you will need to install [**InfluxDB**](https://www.influxdata.com).
 
 :::
 
-#### Install InfluxDB and Enable It
+#### Install InfluxDB and enable it
 
 ```bash
 brew install influxdb
@@ -150,7 +150,7 @@ After you installed InfluxDB, you can move to [**Grafana**](https://grafana.com)
 
 :::
 
-#### Install Grafana and Enable It
+#### Install Grafana and enable it
 
 ```bash
 brew install grafana
@@ -181,7 +181,7 @@ To make this part work without any additional configuration you need to follow t
 
 :::
 
-#### Create a Data Source
+#### Create a data source
 
 Select **Add Data Source** and fill in the data
 

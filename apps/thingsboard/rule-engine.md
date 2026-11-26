@@ -1,10 +1,10 @@
 ---
 slug: rule-engine
-title: Rule Engine
+title: Rule engine
 description: "What the Rule Engine in HARDWARIO Dashboards does, what HARDWARIO can build with it (calculations, alarms, integrations) and how to request it."
 ---
 
-# Rule Engine
+# Rule engine
 
 The Rule Engine processes every message that your devices send to HARDWARIO Dashboards. It works in **rule chains**: flowcharts made of nodes, where each node does one step, for example a calculation, a check against a limit, an alarm, an e-mail, or a call to another system. The data from your devices passes through these steps before it is saved and shown on your dashboards.
 

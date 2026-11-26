@@ -6,7 +6,7 @@ description: "Milesight VS373 60 GHz mmWave radar fall detection sensor for elde
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor VS373
+# Milesight sensor VS373
 
 Milesight VS373 is a **non-contact fall detection sensor** designed for **elderly care and healthcare facilities**. It employs advanced **4D 60-GHz millimeter-wave radar technology** combined with **AI algorithms** to detect falls and abnormal movements with **up to 99% accuracy**. The sensor provides **24/7 monitoring** in dark and humid environments, offers **complete privacy protection** without image capture, and features **IP65 waterproof rating**. It supports multiple detection functions including bed presence, room occupancy, motionless detection, and breathing monitoring.
 
@@ -22,7 +22,7 @@ Milesight VS373 is a **non-contact fall detection sensor** designed for **elderl
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | https://www.hardwario.store/p/milesight-vs373                        |
@@ -39,7 +39,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -59,7 +59,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -68,7 +68,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/vs-series/vs373/vs373-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -84,7 +84,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|

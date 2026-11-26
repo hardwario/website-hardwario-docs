@@ -6,7 +6,7 @@ description: "Video on configuring Milesight devices over NFC from a mobile phon
 import Image from '@theme/IdealImage';
 import Link from '@docusaurus/Link';
 
-# Milesight - General Configuration
+# Milesight - general configuration
 
 This video focuses on **device configuration via NFC using a mobile phone** and the [**Milesight ToolBox**](/smart-devices/milesight/sensors/index/#general-configuration) application.
 

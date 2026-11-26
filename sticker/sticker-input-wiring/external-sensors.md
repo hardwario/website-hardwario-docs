@@ -1,10 +1,10 @@
 ---
 slug: external-sensors
-title: External Sensor Support
+title: External sensor support
 description: "External sensors for STICKER Input: the MACHINE PROBE, 1-Wire (Dallas) temperature probes and the S0 pulse output of energy and flow meters."
 ---
 
-# External Sensor Support
+# External sensor support
 
 **STICKER Input** can be extended with external sensors and probes connected through its input interface. This allows the module to handle demanding measurement tasks where a quantity needs to be sensed away from the unit itself, for example temperature and humidity directly on a machine, vibration and motion, or pulse counting from industrial meters.
 

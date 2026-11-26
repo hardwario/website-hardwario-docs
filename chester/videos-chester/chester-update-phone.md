@@ -6,7 +6,7 @@ description: "Video tutorial: update CHESTER firmware from your phone in the HAR
 
 import Image from '@theme/IdealImage';
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you’ll learn how to easily update your CHESTER firmware using the HARDWARIO Manager app. Scan a QR code, start the update, and verify that your device is running the latest version.
 
@@ -30,7 +30,7 @@ In this guide, you’ll learn how to easily update your CHESTER firmware using t
 </div>
 
 
-## Step-by-Step Text Guide
+## Step-by-step text guide
 
 1. Take your CHESTER and connect using the HARDWARIO Manager app.
 

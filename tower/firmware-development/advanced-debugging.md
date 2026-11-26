@@ -1,6 +1,6 @@
 ---
 slug: advanced-debugging
-title: Advanced Debugging
+title: Advanced debugging
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,7 @@ If you have a [**JLink probe**](https://www.segger.com/products/debug-probes/j-l
 
 There is a little difference between installation with the Portable version and the standalone extension.
 
-## Debugging with Portable Version
+## Debugging with portable version
 
 If you downloaded our [**HARDWARIO Code**](./about-hardwario-code.md#installation), you should have all the required dependencies in the `/data` (Windows/Linux) or `code-portable-data` (macOS) folder.
 
@@ -26,7 +26,7 @@ The only thing that you will need to install is JLink drivers if you don’t hav
 
 :::
 
-### Driver Installation
+### Driver installation
 
 <Tabs groupId="operating-system">
 <TabItem value="windows" label="Windows" default>
@@ -62,6 +62,6 @@ There are no additional steps needed.
 </TabItem>
 </Tabs>
 
-## Debugging with Visual Studio Code Extension
+## Debugging with Visual Studio Code extension
 
 If you did choose to use your own **Visual Studio Code** with [**our extension installed**](./tower-vscode-extension.md) you will have to follow the [**JLink installation for your system**](https://eclipse-embed-cdt.github.io/debug/jlink/install/).

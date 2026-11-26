@@ -6,7 +6,7 @@ description: "RAKwireless RAK7268V2 WisGate Edge Lite 2 indoor LoRaWAN gateway: 
 
 import Image from '@theme/IdealImage';
 
-# RAK7268V2 WisGate Edge Lite 2
+# RAK7268V2 WisGate edge Lite 2
 
 The **RAK7268V2 WisGate Edge Lite 2** is a full 8-channel indoor LoRaWAN® gateway based on the latest **WisGateOS 2**. It is designed for smart building, smart office, and other indoor IoT applications. 
 
@@ -30,7 +30,7 @@ This V2 model runs on the **WisGateOS 2**, which offers a more modern interface,
 
 ---
 
-## Key Features
+## Key features
 
 * **8 Channels:** Full LoRaWAN support.
 * **Connectivity:** 10/100M Ethernet (PoE) and 2.4 GHz Wi-Fi (AP/Client).
@@ -41,7 +41,7 @@ This V2 model runs on the **WisGateOS 2**, which offers a more modern interface,
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | Feature | Specification |
 | :--- | :--- |
@@ -59,25 +59,25 @@ This V2 model runs on the **WisGateOS 2**, which offers a more modern interface,
 
 ## Quick Start Guide
 
-### 1. Power On
+### 1. Power on
 You can power the gateway using:
 * The provided **12 V DC adapter**.
 * An Ethernet cable connected to a **PoE injector** or PoE switch (IEEE 802.3af).
 
-### 2. Accessing the Gateway
+### 2. Accessing the gateway
 
 You can connect to the gateway's local Web UI using one of two methods:
 
-#### Wi-Fi AP Mode (Default)
+#### Wi-fi AP mode (default)
 1. Connect your PC to the Wi-Fi SSID: `RAK7268CV2_XXXX` (where XXXX are the last bytes of the MAC address).
 2. No password is required.
 3. Open a web browser and go to `192.168.230.1`.
 
-#### Ethernet Mode
+#### Ethernet mode
 1. Connect the gateway's **ETH** port directly to your PC.
 2. Set your PC to a static IP (e.g., `169.254.15.100`) to match the gateway's fallback IP (`169.254.15.1`).
 
-### 3. Setting the Mandatory Password
+### 3. Setting the mandatory password
 
 When you first access the gateway, you are required to set a password for the **root** user. The password must meet these criteria:
 
@@ -90,7 +90,7 @@ When you first access the gateway, you are required to set a password for the **
 Once the password is set, you will be redirected to the **Dashboard**, where you will define your country and region. Copy the **16-character Gateway EUI** displayed there. You will need it for network server registration.
 :::
 
-### 4. Internet Connectivity
+### 4. Internet connectivity
 
 Before the gateway can communicate with a network server, it needs an internet connection. Navigate to **Network > WAN**:
 
@@ -107,11 +107,11 @@ If you are not using a SIM card, disable the cellular interface to prevent `SIM_
 
 ---
 
-## Configuring Work Modes
+## Configuring work modes
 
 The gateway supports multiple LoRaWAN work modes. Navigate to **LoRa > Configuration** to select your preferred mode:
 
-### Basics Station (Recommended for TTS)
+### Basics Station (recommended for TTS)
 
 Select **Basics Station** to connect to The Things Stack:
 
@@ -122,14 +122,14 @@ Select **Basics Station** to connect to The Things Stack:
 | **Trust (CA Certificate)** | Upload the [ISRG Root X1 .pem](https://letsencrypt.org/certs/isrgrootx1.pem) file |
 | **Client Token** | Paste your TTS API Key |
 
-### Other Available Work Modes
+### Other available work modes
 
 * **Packet Forwarder:** Used for legacy Semtech UDP or ChirpStack MQTT connections.
 * **Built-in Network Server:** Allows the gateway to act as its own standalone LNS (ChirpStack).
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see [**LoRaWAN Network Options**](/smart-devices/rakwireless/gateways/index#lorawan-network-options)
 

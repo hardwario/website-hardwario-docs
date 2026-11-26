@@ -1,5 +1,5 @@
 ---
-title: Command Line Tools
+title: Command line tools
 description: "We developed several Command Line Tools to make it possible to work with HARDWARIO TOWER even without GUI applications."
 title_meta: "Command Line Tools (HARDWARIO TOWER)"
 ---

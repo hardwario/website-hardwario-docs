@@ -7,7 +7,7 @@ title_meta: "Configuration (HARDWARIO Manager for STICKER)"
 
 # Configure a STICKER
 
-This guide walks through reading, editing and writing a STICKER's configuration
+This guide walks through reading, editing and writing the configuration of a STICKER
 over NFC. If you have not installed the app yet, start with
 [**Install the app**](../install.md).
 

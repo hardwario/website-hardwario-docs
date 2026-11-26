@@ -6,7 +6,7 @@ description: "Milesight WS523 LoRaWAN smart socket with scheduled switching and 
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor WS523
+# Milesight sensor WS523
 
 Milesight WS523 is a **smart portable socket** with **LoRaWAN connectivity** designed for **remote control and power consumption monitoring**. It enables **scheduled on/off control** of electronic devices, tracks **power consumption** (voltage, current, active power, power factor), and features **overcurrent/overload protection**. With **±3% measurement accuracy**, **NFC configuration**, and support for multiple socket types (US, EU, AU, UK, CN), it's ideal for energy management, smart homes, and building automation applications.
 
@@ -22,7 +22,7 @@ Milesight WS523 is a **smart portable socket** with **LoRaWAN connectivity** des
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | https://www.hardwario.store/p/milesight-ws523                        |
@@ -39,7 +39,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -59,7 +59,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -68,7 +68,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/ws-series/ws523/ws523-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -84,7 +84,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|

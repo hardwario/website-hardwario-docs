@@ -20,13 +20,13 @@ The **CHESTER-X12** is an **RS-232** serial-communication extension module for t
 </div>
 </div>
 
-## Module Overview
+## Module overview
 
 CHESTER-X12 provides an **RS-232** serial interface. An **SC16IS740IPW** I²C-to-UART bridge connects to the CHESTER mainboard over **I²C**, and a **MAX3226EEUE+** transceiver converts the UART signals to true RS-232 levels with ±15 kV ESD protection. The RS-232 transmit and receive lines are brought out to the terminal block.
 
 The module can run directly from the CHESTER mainboard. Alternatively, an external **6–28 VDC** line on **+VIN** feeds the on-board **TPS62933** step-down converter, whose fixed **5 V** output (**+V**) powers the CHESTER mainboard. Schottky diodes (**PMEG6010ELR**) protect the input. An on-board **TLA2021** ADC, read over I²C, monitors the input voltage.
 
-## Key Features
+## Key features
 
 * **RS-232 Interface:** Full-duplex serial with true RS-232 levels and ±15 kV ESD protection on the I/O pins (MAX3226EEUE+).
 * **I²C-to-UART Bridge:** SC16IS740IPW bridges the RS-232 UART to the CHESTER mainboard's I²C bus.
@@ -35,7 +35,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 * **Input-Voltage Monitoring:** On-board I²C ADC (TLA2021) measures the input voltage.
 * **Low-Power Control:** The RS-232 transceiver can be placed in shutdown via FORCEOFF# for low-power operation.
 
-## Typical Applications
+## Typical applications
 
 * **Industrial Sensors:** Connection to sensors and controllers through the CHESTER platform.
 * **Legacy Equipment:** Integration with existing RS-232 devices.
@@ -43,7 +43,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 * **Commercial:** Point-of-Sale (POS) terminals and barcode scanners.
 * **Utilities:** Serial console access and laboratory equipment interfaces.
 
-## Technical Specifications
+## Technical specifications
 
 | Parameter | Value |
 | :--- | :--- |
@@ -61,7 +61,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.2 |
 
-## Key Components
+## Key components
 
 | Component | Part Number | Description |
 | :--- | :--- | :--- |
@@ -71,7 +71,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **DC-DC Converter** | TPS62933 | Step-down converter, 6–28 VDC input, 5 V output |
 | **Input Protection** | PMEG6010ELR | Schottky barrier diodes for input protection |
 
-## Pin Configuration
+## Pin configuration
 
 The module uses a standardized header layout compatible with CHESTER extension slots.
 
@@ -79,7 +79,7 @@ The module uses a standardized header layout compatible with CHESTER extension s
 The pin configuration shown is for the CHESTER-M CGLS mainboard.
 :::
 
-### CHESTER-X12 Connector Pinout
+### CHESTER-X12 connector pinout
 
 ![CHESTER-X12 terminal block pinout: GND, VDD, RS232 RX, RS232 TX, GND, +V, GND, +VIN on pins 1-8](images/tb-chester-x12.png)
 
@@ -108,7 +108,7 @@ The RS-232 transceiver uses negative voltage levels. CHESTER must have modified 
 </div>
 :::
 
-### Host Interface (I²C)
+### Host interface (I²C)
 
 CHESTER-X12 communicates with the CHESTER mainboard over the standard **I²C** bus. Two devices sit on the bus: the **SC16IS740IPW** UART bridge and a **TLA2021** voltage-monitoring ADC.
 
@@ -125,20 +125,20 @@ Besides SDA/SCL, the module uses the slot's GP pins:
 
 The transceiver's FORCEON input is tied high, so firmware can place the RS-232 transceiver into a low-power shutdown state by asserting **FORCEOFF#** (GP3/A3).
 
-## RS-232 Connection
+## RS-232 connection
 
 Wire the serial device to the terminal block: **RS232 TX** (Pin 4), **RS232 RX** (Pin 3), and a common **GND** (Pin 1, 5, or 7). Only the transmit and receive data lines are brought out. No hardware handshaking (RTS/CTS) lines are available on the connector.
 
 The RS-232 interface is **not galvanically isolated**, so the serial device and the CHESTER node must share a common ground reference.
 
-### Enclosure Feed-Through
+### Enclosure feed-through
 
 Two options bring the serial cable into the enclosure:
 
 - **Cable gland (default):** route the RS-232 conductors through a cable gland in the enclosure wall and wire them to the terminal block.
 - **Panel-mount connector (on request):** an external connector in the enclosure wall lets the user plug in the serial cable, with no loose wiring inside. Available on request.
 
-## Compatible CHESTER Configurations
+## Compatible CHESTER configurations
 
 The CHESTER-X12 module can be used with various CHESTER mainboard configurations. Below are examples of compatible setups:
 
@@ -165,14 +165,14 @@ CHESTER-X12 can be used as part of the CHESTER SDK using the `ctr_x12_a` and `ct
 
 - [Example SDK usage](https://github.com/hardwario/chester-sdk/tree/main/samples/chester_x12_loop)
 
-## Schematic Diagrams
+## Schematic diagrams
 
 The complete schematic, covering the main page, the interface, and the power supply, is available as a PDF:
 
 - [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x12-r1.2.pdf)
 - [Interactive CHESTER-X12 browser](pathname:///download/ibom/hio-chester-x12-r1.2.html)
 
-## Module Drawing
+## Module drawing
 
 <div style={{ maxWidth: '500px' }}>
 

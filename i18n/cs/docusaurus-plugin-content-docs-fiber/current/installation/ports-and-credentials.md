@@ -10,7 +10,7 @@ description: "Porty, URL a výchozí přihlášení pro SSH, ChirpStack, Node-RE
 | SSH | 22 | `ssh <user>@[TARGET IP ADDRESS]` | nastaveno v Raspberry Pi Imager |
 | ChirpStack | 8080 | `http://[TARGET IP ADDRESS]:8080/` | `admin` / `admin` |
 | Node-RED | 1880 | `http://[TARGET IP ADDRESS]:1880/` | ve výchozím stavu žádné; po zabezpečení `adminAuth` |
-| Mosquitto (MQTT) | 1883 | pouze interně (`localhost`) | — |
+| Mosquitto (MQTT) | 1883 | pouze interně (`localhost`) | – |
 | Dashboard | 80 | `http://[TARGET IP ADDRESS]/` | žádné (bez autentizace) |
 | InfluxDB | 8086 | `http://[TARGET IP ADDRESS]:8086/` | nastaveno během instalace (`influx setup`) |
 | Grafana | 3000 | `http://[TARGET IP ADDRESS]:3000/` | nastaveno během instalace (změněno z `admin`/`admin`) |

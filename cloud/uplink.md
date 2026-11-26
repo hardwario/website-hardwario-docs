@@ -10,7 +10,7 @@ An **uplink** is a message sent **from the device to the Cloud**, the counterpar
 [**downlink**](/cloud/downlink). Uplinks carry the data a CHESTER reports: sensor measurements, along
 with status, session, and codec information.
 
-## Reporting Schedule
+## Reporting schedule
 
 A device reports on a schedule set by its configuration:
 
@@ -20,14 +20,14 @@ A device reports on a schedule set by its configuration:
 
 You can change these remotely with a [**Config downlink**](/cloud/downlink/config).
 
-## Payload and Decoding
+## Payload and decoding
 
 To save power and airtime, a device encodes its data compactly (**CBOR**) using its **codec**. The
 Cloud decodes it into readable JSON with the matching decoder, which the device uploads automatically
 whenever its codec changes. The decoded JSON is what you see and inspect in the device's
 [**Messages**](/cloud/messages).
 
-## Message Types
+## Message types
 
 Uplink messages have the direction **up**. For the full list of message types (Data, Session, Config,
 Encoder, Decoder, …) and how to browse and filter them, see the [**Messages**](/cloud/messages) page.

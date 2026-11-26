@@ -11,7 +11,7 @@ This article describes the core functionality, hardware description, default con
 > - [**Common functionality**](/chester/catalog-applications/common-functionality) to know how LED, button and network configuration works.
 > - [**Platform Connectivity**](/chester/category/platform-connectivity) on how to work with the interactive console.
 
-## Application Overview
+## Application overview
 
 The application primarily targets non-invasive current measuring using the so-called **DC Current "Transformer"** (DCCT). It can measure up to 4 channels of both AC and DC currents. The current probes are clips around the measured line, which convert the magnetic flux (proportional to the electrical current) to a differential output voltage.
 
@@ -19,7 +19,7 @@ The application primarily targets non-invasive current measuring using the so-ca
 
 Apart from the current measurements, the device can be configured (on demand) to measure up to 4 voltage channels (in single-ended mode). It can combine both current and voltage measurements (the total number of channels never exceeds number 4).
 
-## Application Variants
+## Application variants
 
 **CHESTER Current** can be ordered in one of these variants:
 
@@ -69,12 +69,12 @@ You can choose up to 4 current probes with the following current ranges:
 - Maximum current **10 A**
 - Maximum current **100 A**
 - Maximum current **300 A**
-- Maximum current **1,000 A**
-- Maximum current **1,500 A**
+- Maximum current **1 000 A**
+- Maximum current **1 500 A**
 
 > **Caution:** The current range is specified for the DC. If you design your system for the AC, you have to multiply the maximum expected AC by the coefficient of `1.414` (square root of two) to see if the current probe fits within the limit.
 
-## Application Behavior
+## Application behavior
 
 For the wiring diagram to **CHESTER Current**, please follow the [**terminal block description**](/chester/extension-modules/chester-k1) of the **CHESTER-K1** extension module. The extension module **CHESTER-K1** uses both slots **A** and **B**. So you use the corresponding terminals **A1** to **A8** and **B1** to **B8**.
 
@@ -95,7 +95,7 @@ For the wiring diagram to **CHESTER Current**, please follow the [**terminal blo
 
 > **Caution:** The next report interval is calculated at the beginning of the transmission cycle as the `interval-report` parameter (specified in seconds) ±20 % spread. This spread is intentionally random to avoid transmission aliasing for multiple devices operating in the same place (e.g., powered from a local DC line). If such a spread was not implemented, the device transmission could synchronously overlap.
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -142,7 +142,7 @@ app config w1-therm-interval-aggreg 300
 app config mode "lte"
 ```
 
-## Specific Commands
+## Specific commands
 
 > **Info:** You can easily explore the whole command tree structure. Start with the `help` command.
 
@@ -193,7 +193,7 @@ app config backup-report-connected <true/false>
 app config backup-report-disconnected <true/false>
 ```
 
-### Analog Channels
+### Analog channels
 
 Command to **enable/disable** channel `n` (index 1-4):
 
@@ -242,7 +242,7 @@ app config channel-calib-mode-<n> <avg/rms>
 | `avg` | Mean (average) value | DC signals, slow-changing values |
 | `rms` | Root Mean Square | AC signals, current transformers |
 
-### Channel Commands
+### Channel commands
 
 The following shell commands allow interactive calibration and reading of channels. Where `<n>` is channel number 1-4.
 
@@ -255,7 +255,7 @@ The following shell commands allow interactive calibration and reading of channe
 | `current channel-<n> calib reset` | Reset calibration to defaults |
 | `current channel-<n> calib mode [avg\|rms]` | Get/set calibration mode |
 
-### 1-Wire Thermometer
+### 1-Wire thermometer
 
 Command to set **1-Wire thermometer sample interval** in seconds:
 
@@ -280,7 +280,7 @@ The latest firmware is available in Catalog Applications [Firmware chapter](/che
 | **CHESTER Current** | v4.0.1 | [Download](https://firmware.hardwario.com/chester/98f42b431dfb4ba681abfea1958f0ef9) |
 | **CHESTER Current Z** | v4.0.1 | [Download](https://firmware.hardwario.com/chester/bd7bf21e742f4172ae48378ae55a3d6a) |
 
-## Example JSON Message
+## Example JSON message
 
 ### LTE
 
@@ -386,13 +386,13 @@ The latest firmware is available in Catalog Applications [Firmware chapter](/che
 
 **Total:** 15 bytes
 
-## Channel Calibration
+## Channel calibration
 
 > **Danger:** When upgrading firmware from **v1.x.x** to version **v2.0.0 and newer**, it is necessary to [**backup configuration**](/chester/catalog-applications/common-functionality#configuration-backup). In the case of using **CHESTER Current** also calibration data.
 
 > **Caution:** The following section is provided only for reference. Usually, the **CHESTER Current** devices are ordered altogether with the current probes, and **HARDWARIO** does the channel calibration for their customers in such a case.
 
-### Calibration System Overview
+### Calibration system overview
 
 The calibration system uses **two-point linear interpolation** to convert raw mV readings to calibrated values (e.g., Amps, Watts, or any physical unit).
 
@@ -405,7 +405,7 @@ The calibration system uses **two-point linear interpolation** to convert raw mV
 > - `y0`, `y1` = Real physical values at calibration points
 > - `raw` = Current raw mV reading
 
-### Configuration Parameters
+### Configuration parameters
 
 | Parameter | Type | Range | Default | Description |
 |-----------|------|-------|---------|-------------|
@@ -417,7 +417,7 @@ The calibration system uses **two-point linear interpolation** to convert raw mV
 | `channel-calib-y1-<1..4>` | float | -10000..10000 | 0.00 | Real value at point 1 |
 | `channel-calib-mode-<1..4>` | enum | avg/rms | rms | Calibration mode |
 
-### Calibration Procedure
+### Calibration procedure
 
 #### Prerequisites
 
@@ -425,15 +425,15 @@ The calibration system uses **two-point linear interpolation** to convert raw mV
 2. Connect to CHESTER via RTT shell or USB console
 3. Have a reference measurement device ready (multimeter, clamp meter)
 
-#### Step-by-Step Calibration
+#### Step-by-step calibration
 
-##### 1. Enable the Channel
+##### 1. Enable the channel
 
 ```
 app config channel-active-1 true
 ```
 
-##### 2. Set Calibration Mode
+##### 2. Set calibration mode
 
 Choose `rms` for AC current transformers or `avg` for DC sensors:
 
@@ -441,7 +441,7 @@ Choose `rms` for AC current transformers or `avg` for DC sensors:
 current channel-1 calib mode rms
 ```
 
-##### 3. Verify Raw Reading
+##### 3. Verify raw reading
 
 Read the current raw mV value:
 
@@ -455,7 +455,7 @@ Output example:
 Channel 1: avg=0.5 rms=1.2 mV (mode=rms, no calibration)
 ```
 
-##### 4. Calibration Point 0 (Zero/Low Point)
+##### 4. Calibration point 0 (zero/low point)
 
 Apply a known **low** current (e.g., 0 A) and set the calibration:
 
@@ -471,7 +471,7 @@ Output:
 Channel 1: avg=0.5 rms=1.2 (using rms), point 0 set (x0=1.20, y0=0.00)
 ```
 
-##### 5. Calibration Point 1 (High Point)
+##### 5. Calibration point 1 (high point)
 
 Apply a known **high** current (e.g., 10 A) and set the calibration:
 
@@ -487,7 +487,7 @@ Output:
 Channel 1: avg=50.3 rms=71.5 (using rms), point 1 set (x1=71.50, y1=10.00)
 ```
 
-##### 6. Verify Calibration
+##### 6. Verify calibration
 
 Read the channel to see calibrated output:
 
@@ -501,7 +501,7 @@ Output:
 Channel 1: avg=50.3 rms=71.5 mV (mode=rms, calibrated: 10.00)
 ```
 
-##### 7. Show Calibration Parameters
+##### 7. Show calibration parameters
 
 ```
 current channel-1 calib show
@@ -513,18 +513,18 @@ Output:
 Channel 1 calibration: x0=1.20 y0=0.00, x1=71.50 y1=10.00, mode=rms
 ```
 
-#### Reset Calibration
+#### Reset calibration
 
 To clear calibration and return to raw mV output:
 
 ```
 current channel-1 calib reset
 ```
-### Hall Effect Sensor Calibration
+### Hall effect sensor calibration
 
 This section describes how to configure the current measurement firmware for Hall effect sensors (e.g., **YHDC HSTS30**). To ensure accurate readings, the system must be configured for linear approximation and differential input mode.
 
-#### Calibration Logic
+#### Calibration logic
 
 A standard sensor (300 A / 2.5 V ± 0.625 V) uses a 2.5 V reference center. At a nominal current of 300 A, the output voltage swings by 625 mV from that center.
 
@@ -536,7 +536,7 @@ By enabling **Differential Mode** (measuring INP against INM, where INM is the s
 Sensitivity = 625 mV / 300 A = 2.0833 mV/A
 ```
 
-#### Theoretical Parameters
+#### Theoretical parameters
 
 The CHESTER firmware uses two points [x, y] to define the linear scaling, where **x** is voltage (mV) and **y** is the physical value (A).
 
@@ -553,7 +553,7 @@ Ensure the physical values on the sensor label match the theoretical values abov
 
 :::
 
-#### CLI Configuration Commands
+#### CLI configuration commands
 
 Replace `<n>` with the target channel number (1–4):
 
@@ -577,11 +577,11 @@ If your sensor has a different rating (e.g., 100 A / 1 V), you must update `x1` 
 
 :::
 
-### Legacy Calibration Method
+### Legacy calibration method
 
 In **HARDWARIO**, we have a calibration kit for **CHESTER Current** made of several air-core coils with 10/50/100 turns.
 
-#### Example Current Calibration (Legacy)
+#### Example current calibration (legacy)
 
 1. Measure the **zero-current offsets** and write them for each channel as the `x0` parameter.
 

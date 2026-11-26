@@ -8,7 +8,7 @@ description: "HARDWARIO Cloud is a device management platform for CHESTER and ot
 
 [**HARDWARIO Cloud**](https://hardwario.cloud/) is a device management platform for CHESTER and other HARDWARIO IoT devices. It provides a web interface and REST API for managing devices, receiving messages, configuring devices remotely, and pushing firmware updates over the air.
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|
@@ -21,7 +21,7 @@ description: "HARDWARIO Cloud is a device management platform for CHESTER and ot
 | **Firmware** | Push firmware updates over the air (FOTA) |
 | **API** | Full REST API access with API keys |
 
-## How It Works
+## How it works
 
 ```mermaid
 flowchart LR
@@ -37,11 +37,11 @@ All devices belong to a **Space**. A space is the top-level container for everyt
 
 See [**Spaces**](spaces.md) for more details.
 
-## Automatic Codecs
+## Automatic codecs
 
 In HARDWARIO Cloud, device codecs (encoders and decoders) are bundled directly in the firmware and uploaded automatically when the device first connects. There is no need to configure codecs manually.
 
-## Reliable Delivery
+## Reliable delivery
 
 HARDWARIO Cloud together with the **LTE v2** subsystem in CHESTER adds:
 - Automatic packet fragmentation (supports payloads of many kilobytes)
@@ -56,7 +56,7 @@ For information on how to use or upgrade CHESTER firmware to LTE v2, see [How To
 
 :::
 
-## Naming Conventions
+## Naming conventions
 
 Names for spaces, devices, tags and connectors follow the same rules:
 

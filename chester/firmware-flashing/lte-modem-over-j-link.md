@@ -1,13 +1,13 @@
 ---
 slug: lte-modem-over-j-link
-title: LTE Modem over J-Link
+title: LTE modem over J-Link
 description: "Flash LTE modem firmware v1.7.0 into CHESTER with SEGGER J-Link and the HARDWARIO CLI, or the Nordic nRF9160 modem firmware when a SIM card requires it."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# LTE Modem over J-Link
+# LTE modem over J-Link
 
 This article describes how to flash the LTE modem firmware in **CHESTER** using **SEGGER J-Link**.
 
@@ -154,7 +154,7 @@ You can install **HARDWARIO Command Line Tools** with these steps:
    hardwario.hardwario v1.2.0
    ```
 
-## Flashing Procedure
+## Flashing procedure
 
 Follow these steps to flash the LTE modem firmware in the **CHESTER** device:
 
@@ -222,7 +222,7 @@ Follow these steps to flash the LTE modem firmware in the **CHESTER** device:
 
 1. Disconnect the **SEGGER J-Link** adapter.
 
-## Nordic nRF9160 Modem Firmware
+## Nordic nRF9160 modem firmware
 
 The procedure above flashes the **HARDWARIO LTE modem firmware**, the communication stack that connects **CHESTER** to **HARDWARIO Cloud**. That is a different image from the **Nordic modem firmware** (the baseband image, distributed as `mfw_nrf9160_*.zip`), which is the low-level cellular firmware of the **nRF9160** SiP itself. The two images are flashed independently and with different commands.
 

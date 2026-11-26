@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 # CHESTER-C5
 This article describes the **CHESTER-C5** carrier board.
 
-## Module Overview
+## Module overview
 
 **CHESTER-C5** is a custom carrier board for **CHESTER-U1** designed as an **NB-IoT / LTE-M** gateway for connecting arrays of **1-Wire sensors** (e.g. DS18B20). It is equipped with a Lithium-Ion battery backup and implements a step-down DC/DC converter providing power from an external 6-28 VDC line (VIN) or a 12V solar panel. It can measure the input DC voltage, and the QWIIC interface can be used for connecting an OLED display.
 
@@ -16,7 +16,7 @@ The board implements the Maxim DS2482S-800+ providing 8 independent 1-Wire chann
 
 **CHESTER-C5** fits with the Polycase WH-04-02 enclosure.
 
-## Technical Specification
+## Technical specification
 
 * Input DC voltage range (VIN): **6-28 VDC**, suitable also for **12-18V solar panels\***
 * Nominal battery voltage: **3.7 V**
@@ -82,21 +82,21 @@ _\* CHESTER-X SLOT A is by default occupied with integrated module CHESTER-X1_
 
 _\** Use the BYPASS BUTTON to initiate start from the battery without DC input power_
 
-## Pinout Description
+## Pinout description
 
-### BT/LED Connector
+### BT/LED connector
 
 ![BT/LED connector pinout, pins 1-4: VDD, LED EXT, GND, BTN EXT](images/btn-ext.png)
 
-### SYSTEM Connector
+### SYSTEM connector
 
 ![SYSTEM connector pinout, pins 1-7: NC, +V, GND, VDD, SCL, SDA, INT](images/system.png)
 
-### BATTERY Connector
+### BATTERY connector
 
 ![BATTERY connector pinout, pins 1-2: +BATT EXT, GND](images/batt.png)
 
-### 1-Wire RJ-45 Connectors
+### 1-Wire RJ-45 connectors
 
 ![RJ-45 pinouts: JP12 carries 1-Wire channels A1-A4, JP13 carries A5-A8, each alternating with GND](images/rj-45.png)
 

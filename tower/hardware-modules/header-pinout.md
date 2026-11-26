@@ -1,6 +1,6 @@
 ---
 slug: header-pinout
-title: Header Pinout
+title: Header pinout
 ---
 import Image from '@theme/IdealImage';
 
@@ -30,13 +30,13 @@ You can visit the separate chapter to learn more [**About Core Module**](./about
   </div>
 </div>
 
-## Eagle Footprint Library
+## Eagle footprint library
 
 You can download the [**TOWER library for Eagle EDA**](https://github.com/hardwario/twr-hardware/tree/master/lbr) software which contains **Standard Module** and **Cloony** format.
 
-## Module Drawing And Pinout
+## Module drawing and pinout
 
-### Module Format
+### Module format
 
 Format **Module** defines
 
@@ -69,7 +69,7 @@ Format **Module** defines
   </div>
 </div>
 
-### Module Signals
+### Module signals
 
 This is a summary of basic peripherals available on the module header
 
@@ -120,9 +120,9 @@ Do not connect anything on the **VDD_OFF** and **BAT_OFF** signals unless you ar
 
 :::
 
-## Tag Drawing And Pinout
+## Tag drawing and pinout
 
-### Tag Format
+### Tag format
 
 The primary purpose of **tag format** is to provide signal break-out for [**I²C peripheral**](../hardware-interfaces/i2c-bus.md) in a compact form factor.
 It can be anything I²C-related, e.g. **sensors**, **memories**, **RTCs**, etc.
@@ -143,7 +143,7 @@ Format **Tag** defines
   </div>
 </div>
 
-### Tag Signals
+### Tag signals
 
 The following table defines signal assignment on the tag header:
 

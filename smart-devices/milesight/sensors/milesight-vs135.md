@@ -6,7 +6,7 @@ description: "Milesight VS135 AI ToF people counting sensor with up to 4 zones: 
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor VS135
+# Milesight sensor VS135
 
 Milesight VS135 is an **AI-powered ToF (Time-of-Flight) people counting sensor** that delivers **99.8% accurate occupancy detection** with full privacy protection. It features **bi-directional counting**, supports up to **4 custom zones**, and offers advanced analytics including **dwell time analysis**, **heat maps**, and **group counting**. With its **IP65 rating** and multiple connectivity options including **LoRaWAN**, **Ethernet**, **4G LTE**, and **Wi-Fi HaLow**, it's ideal for retail, office, and building management applications.
 
@@ -22,7 +22,7 @@ Milesight VS135 is an **AI-powered ToF (Time-of-Flight) people counting sensor**
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | https://www.hardwario.store/p/milesight-vs135                        |
@@ -39,7 +39,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -58,7 +58,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -67,7 +67,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/vs-series/vs135/vs135-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -83,7 +83,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|

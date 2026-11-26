@@ -19,11 +19,11 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 :::
 
-## Application Overview
+## Application overview
 
 **CHESTER Clime** is an environmental sensor that samples, aggregates, and sends measured variables.
 
-## Application Variants
+## Application variants
 
 **CHESTER Clime** can be ordered in one of these variants:
 
@@ -148,7 +148,7 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 
 Firmware build variant: `west chester-update clime --variant "CHESTER Clime TC"`
 
-## Measurement and Behavior
+## Measurement and behavior
 
 - All sensors are **sampled** with a configurable period (parameter `interval-sample`).
 - Samples are then **aggregated** in the configurable interval. Minimum, maximum, average, and median are computed from buffered samples for each sensor (parameter `interval-aggreg`).
@@ -165,7 +165,7 @@ When equipped with **CHESTER-S1**, the device also has a push button. When the b
 
 Also, the button on the optional **CHESTER-S1** by its color reports the state of the CO₂ by **green** (levels are ok), **orange** (warning) and **red** (alarm) thresholds. The button blinks shortly every 5 seconds when powered from a battery and it is permanently on when external power on X10 is applied. Threshold **levels** and **hysteresis** are **configurable**.
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -208,7 +208,7 @@ app config backup-report-connected true
 app config backup-report-disconnected true
 ```
 
-## Specific Commands
+## Specific commands
 
 :::info
 
@@ -277,7 +277,7 @@ app config event-report-rate <1-3600>
 
 The latest firmware is available in the Catalog Applications [Firmware chapter](index.md#application-firmware).
 
-## Example JSON Message
+## Example JSON message
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

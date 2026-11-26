@@ -20,13 +20,13 @@ The **CHESTER-X14** is a wired **10/100 Ethernet** extension module for the CHES
 </div>
 </div>
 
-## Module Overview
+## Module overview
 
 CHESTER-X14 provides a 10/100 Mbps Ethernet interface based on the **W5500** hardwired TCP/IP controller, which integrates the MAC and PHY and communicates with the CHESTER mainboard over **SPI**. On-board Ethernet magnetics (**ALANL100X1-DE12DT**) provide galvanic isolation and signal conditioning. The differential receive/transmit pairs are brought out to the terminal block, where the individual Ethernet conductors are connected.
 
 The module can run directly from the CHESTER mainboard. Alternatively, an external 6-28 VDC line on +VIN feeds the on-board **TPS62933** step-down converter, whose fixed **5 V** output (+V) powers the CHESTER mainboard. Schottky diodes (**PMEG6010ELR**) protect the input. An interrupt output signals the CHESTER mainboard when the Ethernet controller requires attention.
 
-## Key Features
+## Key features
 
 * **10/100 Ethernet:** Wired connectivity based on the W5500 hardwired TCP/IP controller.
 * **SPI Host Interface:** Connects to the CHESTER mainboard over SPI.
@@ -36,14 +36,14 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 * **Interrupt Output:** Dedicated interrupt line to the CHESTER mainboard.
 * **Status LEDs:** Link (green) and activity (red) indicators driven by the W5500.
 
-## Typical Applications
+## Typical applications
 
 * **Fixed-line Connectivity:** Wired Ethernet where cellular coverage is unavailable or undesirable.
 * **Industrial Networks:** Connecting CHESTER to a local industrial LAN.
 * **Building Automation:** Wired backbone for building and facility monitoring.
 * **Gateways:** Wired uplink for data-collection nodes.
 
-## Technical Specifications
+## Technical specifications
 
 | Parameter | Value |
 | :--- | :--- |
@@ -58,7 +58,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.0 |
 
-## Key Components
+## Key components
 
 | Component | Part Number | Description |
 | :--- | :--- | :--- |
@@ -67,7 +67,7 @@ The module can run directly from the CHESTER mainboard. Alternatively, an extern
 | **DC-DC Converter** | TPS62933 | Step-down converter, 6-28 VDC input |
 | **Input Protection** | PMEG6010ELR | Schottky barrier diodes for input protection |
 
-## Pin Configuration
+## Pin configuration
 
 The module uses a standardized header layout compatible with CHESTER extension slots.
 
@@ -75,7 +75,7 @@ The module uses a standardized header layout compatible with CHESTER extension s
 The pin configuration shown is for the CHESTER-M CGLS mainboard.
 :::
 
-### CHESTER-X14 Connector Pinout
+### CHESTER-X14 connector pinout
 
 ![CHESTER-X14 terminal block pinout: INT, +V, +VIN, GND, Rx-, Rx+, Tx-, Tx+ on pins 1-8](images/tb-chester-x14.png)
 
@@ -94,7 +94,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 The module can run directly from the CHESTER mainboard. When an external **6-28 VDC** supply is connected to **+VIN** (Pin 3), the on-board TPS62933 step-down converter produces a fixed **5 V** on **+V** (Pin 2), which powers the CHESTER mainboard.
 :::
 
-### Host Interface (SPI)
+### Host interface (SPI)
 
 Unlike most CHESTER-X modules (which use **I²C**), CHESTER-X14 communicates with the CHESTER mainboard over **SPI**. The W5500 controller is driven through the module slot's GP pins:
 
@@ -107,7 +107,7 @@ Unlike most CHESTER-X modules (which use **I²C**), CHESTER-X14 communicates wit
 
 The W5500 interrupt output (INTn) is routed to the module's **INT** terminal (pin 1). See the [Interrupt Pin](#interrupt-pin) subsection below.
 
-### Interrupt Pin
+### Interrupt pin
 
 The W5500 signals events (such as an incoming packet) on its interrupt output, which is brought out to the module's **INT** terminal (pin 1). This interrupt **must be wired to the CHESTER mainboard's INT terminal** so the mainboard can detect it. On the **CHESTER-M CGLS** mainboard, add a jumper wire from the extension module's terminal block to the mainboard's INT terminal. The wiring below is shown for a module in **slot B**; a module in another slot connects to that slot's INT terminal the same way.
 
@@ -115,7 +115,7 @@ The W5500 signals events (such as an incoming packet) on its interrupt output, w
 
 * Example: interrupt wiring for a module in slot B (CHESTER-M CGLS).
 
-## Ethernet Connection
+## Ethernet connection
 
 The Ethernet magnetics are located on the module, so the individual Ethernet conductors are wired directly to the terminal-block pins (**Rx-**, **Rx+**, **Tx-**, **Tx+**). **No external magnetics are required**, because the on-board magnetics also provide **galvanic isolation** of the Ethernet interface.
 
@@ -131,7 +131,7 @@ Wire the Ethernet cable to the terminal block as shown below. The RJ-45 pin and 
 | 6 | Green | ETH_RD- (Rx-) | 5 |
 | 8 | Brown | ETH_GND (GND) | 4 |
 
-### Enclosure Feed-Through
+### Enclosure feed-through
 
 Two options bring the Ethernet cable into the enclosure:
 
@@ -147,7 +147,7 @@ Two status LEDs sit under the **HARDWARIO.COM** silkscreen in the top-left corne
 | **LED1** | ACTLED | Red | Ethernet activity: toggles when frames are transmitted or received |
 | **LED2** | LINKLED | Green | Ethernet link: lit when a link is established with the network |
 
-## Compatible CHESTER Configurations
+## Compatible CHESTER configurations
 
 The CHESTER-X14 module can be used with various CHESTER mainboard configurations. Below are examples of compatible setups:
 
@@ -174,14 +174,14 @@ CHESTER-X14 can be used as part of the CHESTER SDK using the `ctr_x14_a` and `ct
 
 - [Example SDK usage](https://github.com/hardwario/chester-sdk/tree/main/samples/chester_x14)
 
-## Schematic Diagrams
+## Schematic diagrams
 
 The complete schematic, covering the main page, the Ethernet interface, and the power supply, is available as a PDF:
 
 - [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x14-r1.0.pdf)
 - [Interactive CHESTER-X14 browser](pathname:///download/ibom/hio-chester-x14-r1.0.html)
 
-## Module Drawing
+## Module drawing
 
 <div style={{ maxWidth: '500px' }}>
 

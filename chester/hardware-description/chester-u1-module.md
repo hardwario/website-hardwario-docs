@@ -1,11 +1,11 @@
 ---
 slug: chester-u1-module
-title: CHESTER-U1 Module
+title: CHESTER-U1 module
 description: "CHESTER-U1 packs the CHESTER-M mainboard into a 38x38 mm module for your own two-layer carrier board: properties, KiCad library, schematics and CHESTER-C4."
 ---
 import Image from '@theme/IdealImage';
 
-# CHESTER-U1 Module
+# CHESTER-U1 module
 
 **CHESTER-U1** is a cost-optimized **CHESTER-M** mainboard compressed to the **small 38x38mm module**.
 
@@ -24,7 +24,7 @@ Instead of using **CHESTER-M** and putting extension modules in it, you design a
 
 ![CHESTER-U1 layout](images/chester-u1-description.webp)
 
-## E-CAD Library
+## E-CAD library
 
 HARDWARIO can provide ECAD footprints for your integration.
 
@@ -56,17 +56,17 @@ In this view, the signals are placed exactly as you look at the module from the 
 ### Power
 ![Schematic 4/4: TPS61023 boost converter, LDO, power LED, load switching, and TLA2021 ADC](images/hio-chester-u1-r1.1-4.png)
 
-## CHESTER-C4 Carrier Board
+## CHESTER-C4 carrier board
 
 We have carrier boards that can be used directly in your product with **CHESTER-U1** or you can base your own design on them. **Get in touch with us, we can provide you with more information.**
 
 One of the carrier boards is **CHESTER-C4**, it contains a slot for two [**extension modules**](../extension-modules/index.md) and can have multiple battery or external power options.
 
-### Bottom Side
+### Bottom side
 
 ![CHESTER-C4 bottom](images/chester-c4-bottom.webp)
 
-### Top Side
+### Top side
 
 With "D" cell option.
 

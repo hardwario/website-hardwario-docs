@@ -1,11 +1,11 @@
 ---
 slug: extension-modules
-title: Extension Modules
+title: Extension modules
 description: "The CHESTER mainboard interfaces and the CHESTER-X extension modules that add sensor inputs, I/O, power and connectivity options."
 ---
 import Image from '@theme/IdealImage';
 
-# Extension Modules
+# Extension modules
 
 The CHESTER mainboard (CHESTER-M) includes these integrated interfaces and peripherals:
 
@@ -25,7 +25,7 @@ On the CHESTER DevKit variant, it is possible to install extension modules desig
 
 :::
 
-## Backside Modules
+## Backside modules
 
 Backside modules (red modules in the picture below) further extend CHESTER functionality with more interfaces.
 This extension is modular also in CHESTER-SDK development where each module has its own ZephyrRTOS driver for easy integration.
@@ -80,7 +80,7 @@ When CHESTER is mounted in the enclosure, you can check the module **"X_"** numb
 | [**CHESTER-X14**](chester-x14.md) | 10/100 Ethernet connectivity with a built-in step-down converter (up to 28 V)                                                                                     |
 | [**CHESTER-K1**](chester-k1.md)   | 4-channel differential input converter with software-controlled 5V boost converter for current probes and other industrial sensors                                |
 
-## Cover Modules
+## Cover modules
 
 | Module Name                       | Module Description                                                                                                                                                  |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -91,7 +91,7 @@ When CHESTER is mounted in the enclosure, you can check the module **"X_"** numb
 | [**CHESTER-Z1**](chester-z1.md)   | Li-Ion battery backup module with DC/DC converter and charger, 6-26 VDC line or 12V solar panel input                                                               |
 | [**CHESTER-Z1-F**](chester-z1.md) | Li-Ion battery backup module with DC/DC converter and charger, 6-26 VDC line or 12V solar panel input + up to 4 RGB illuminated push-buttons with acoustic feedback |
 
-## Carrier Boards
+## Carrier boards
 
 :::info
 

@@ -1,14 +1,14 @@
 ---
 slug: thingsboard-cloud-connection
-title: Cloud Connection
+title: Cloud connection
 description: "Video tutorial on sending HARDWARIO Cloud data to ThingsBoard: create a connector, transform the data and let it flow into the platform automatically."
 ---
 
 import Image from '@theme/IdealImage';
 
-# ThingsBoard – How to Connect to the HARDWARIO Cloud
+# ThingsBoard – how to connect to the HARDWARIO Cloud
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you will learn how to connect your devices to HARDWARIO Cloud by creating a new connector, transforming your data, and sending it to ThingsBoard. By the end, your data will flow automatically into the platform.
 

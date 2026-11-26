@@ -1,10 +1,10 @@
 ---
 slug: /
-title: Smart Devices
+title: Smart devices
 description: "Overview of third-party devices and hardware available through the HARDWARIO ecosystem and the HARDWARIO Store."
 ---
 
-# Smart Devices
+# Smart devices
 
 Overview of third-party devices and hardware available through the HARDWARIO ecosystem and the [HARDWARIO Store](https://www.hardwario.store/cz/smart-devices).
 

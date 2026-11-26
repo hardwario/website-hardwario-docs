@@ -1,6 +1,6 @@
 ---
 slug: login-guide
-title: Login Guide
+title: Login guide
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -35,7 +35,7 @@ You will be looking for a device with a specific **hostname** like **raspberry.l
 
 :::
 
-## Connect With PuTTY
+## Connect with PuTTY
 
 You can use **PuTTY**, which is an application that allows you to connect to a remote terminal via SSH and other means.
 
@@ -64,7 +64,7 @@ You should be logged in to your Raspberry Pi. We recommend [**changing the passw
 
 :::
 
-## Connect With Terminal
+## Connect with terminal
 
 On all systems, you can open the integrated terminal and connect with the ``ssh`` command.
 
@@ -106,11 +106,11 @@ You should be logged in to your Raspberry Pi. We recommend [**changing the passw
 
 :::
 
-## Change the Password
+## Change the password
 
 You should always **change the default password**. You can do that simply by running ``passwd`` command in the terminal.
 
-## Update the System
+## Update the system
 
 For reasons of security and stability, it is important to keep the system up to date.
 The system consists of packages and you can update them with the following command:

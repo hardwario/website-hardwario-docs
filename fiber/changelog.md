@@ -1,6 +1,6 @@
 ---
 slug: changelog
-title: FIBER Changelog
+title: FIBER changelog
 toc_min_heading_level: 2
 toc_max_heading_level: 2
 description: "All notable changes to the FIBER platform, including firmware and hardware, with tabs to filter by change category."
@@ -9,19 +9,19 @@ description: "All notable changes to the FIBER platform, including firmware and 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# FIBER Changelog
+# FIBER changelog
 
 This page tracks all notable changes across the FIBER platform, including **firmware** and **hardware**. Use the tabs below to filter by change category.
 
 :::info
 
-FIBER is based on **Raspberry Pi Compute Module 4** running Linux. Firmware and software updates are managed through HARDWARIO's internal release process. There is currently no public firmware repository for FIBER.
+FIBER is based on **Raspberry Pi Compute Module 4** running Linux. Firmware and software updates are managed through the HARDWARIO internal release process. There is currently no public firmware repository for FIBER.
 
 :::
 
 ---
 
-## General Platform Updates
+## General platform updates
 
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware & Applications" default>

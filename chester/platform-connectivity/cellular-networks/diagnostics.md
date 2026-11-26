@@ -1,11 +1,11 @@
 ---
 slug: diagnostics
-title: Diagnostics and Troubleshooting
+title: Diagnostics and troubleshooting
 description: "Troubleshoot a CHESTER that does not register on a cellular network: check lte state, then scan visible operators with AT%COPS over J-Link RTT."
 ---
 import Image from '@theme/IdealImage';
 
-# Diagnostics and Troubleshooting
+# Diagnostics and troubleshooting
 
 If a device does not reach a registered state, work through this order:
 
@@ -18,7 +18,7 @@ The network scan is the only method that tells you what is genuinely available a
 
 ---
 
-## List Available Networks
+## List available networks
 
 You can use CHESTER to scan for networks it can see. This is mainly for troubleshooting purposes.
 You have to use a J-Link RTT connection with [HARDWARIO CLI](../../developer-tools/command-line-tools.md); this doesn't work with a BLE connection.
@@ -52,7 +52,7 @@ config save
 
 :::
 
-Response will be in application log during several minutes (e.g. ~3 minutes with usual bandlock for Bands 2, 4, 5, 8, 12, 20, 28) in the form like:
+Response will be in application log during several minutes (e.g. approx. 3 minutes with usual bandlock for Bands 2, 4, 5, 8, 12, 20, 28) in the form like:
 
 `%COPS: (2,"","","26201",7),(1,"","","26202",7)`
 

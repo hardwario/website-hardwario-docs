@@ -1,12 +1,12 @@
 ---
 slug: hardware-description
-title: Hardware Description
+title: Hardware description
 description: "STICKER is a compact IoT device built on the STM32WL System-on-Chip with an integrated LoRa radio and Arm Cortex-M4 core."
 title_meta: "Hardware Description (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Hardware Description
+# Hardware description
 
 STICKER is a compact IoT device built on the **STM32WL System-on-Chip** with an integrated **LoRa radio** and Arm Cortex-M4 core.  
 It is powered by two AA batteries, with battery voltage monitoring and efficient power management (boost converter and LDO).
@@ -15,9 +15,9 @@ The device includes **NFC memory and antenna** for simple configuration from a p
 
 ---
 
-## Sensors & Peripherals
+## Sensors & peripherals
 
-### Built-in Sensors
+### Built-in sensors
 
 Depending on the specific assembly variant, STICKER includes:
 - **Temperature & Humidity:** Sensirion SHT40 sensor for high-accuracy ambient measurement.
@@ -27,7 +27,7 @@ Depending on the specific assembly variant, STICKER includes:
 - **3-axis Accelerometer:** STMicroelectronics LIS2DH12 accelerometer for tilt, vibration, and orientation tracking.
 - **Door Opening Detection:** Dual Allegro A1266 Hall-effect sensors.
 
-### Physical Interfaces & External Connectivity
+### Physical interfaces & external connectivity
 
 - **SWD Interface:** Physical SWD programming pads for firmware flashing and debugging using J-Link (`make flash`). Required for image flashing as the firmware deliberately omits a bootloader and over-the-air updates.
 - **1-Wire Bus Master:** Dedicated 1-Wire interface supporting external digital temperature probes (e.g., Dallas DS18B20) and HARDWARIO Machine Probe sensors.
@@ -37,7 +37,7 @@ Device status is indicated by a **multi-color LED (R/G/Y)** (see [**LED Indicati
 
 ---
 
-## Block Diagram
+## Block diagram
 
 <div class="container">
   <div class="row">
@@ -54,13 +54,13 @@ Device status is indicated by a **multi-color LED (R/G/Y)** (see [**LED Indicati
 
 ---
 
-### NFC Configuration Architecture
+### NFC configuration architecture
 
 ![STICKER - NFC Configuration Architecture](images/sticker-nfc.drawio.webp)
 
 ---
 
-## LED Indication
+## LED indication
 
 STICKER has one status LED with three independently driven channels: **red**, **green** and **yellow**. The firmware also lights red and green together to produce **orange**, which it reserves for service modes. The LED is the only feedback the device gives locally, so these patterns are the fastest way to tell what a unit is doing before it appears on the network.
 
@@ -102,9 +102,9 @@ Once running, the device shows its status every **3 seconds**. Only one pattern 
 | Priority | Device state | LED pattern |
 |---|---|---|
 | 1 | NFC exchange in progress | The LED is handed over to the [NFC patterns](#nfc-interaction) below |
-| 2 | **Configuration could not be loaded**: stored settings are corrupt | Red and yellow alternating, twice, ~60 ms each |
-| 3 | **Joining or rejoining** the network (LoRaWAN or P2P) | One yellow flash, then one red flash ~200 ms later |
-| 4 | **Link degraded** (LoRaWAN or P2P): link checks are failing but the session is still alive | Two yellow flashes, ~200 ms apart |
+| 2 | **Configuration could not be loaded**: stored settings are corrupt | Red and yellow alternating, twice, approx. 60 ms each |
+| 3 | **Joining or rejoining** the network (LoRaWAN or P2P) | One yellow flash, then one red flash approx. 200 ms later |
+| 4 | **Link degraded** (LoRaWAN or P2P): link checks are failing but the session is still alive | Two yellow flashes, approx. 200 ms apart |
 | 5 | **Radio switched off**: `radio-mode off`, P2P without its keys, or an unsupported LoRaWAN region | One yellow flash |
 | 6 | **An alarm is active** | One red flash |
 | 7 | Normal operation | One green flash |
@@ -128,7 +128,7 @@ While a phone is held against the device, the LED tracks the exchange step by st
 | What is happening | LED |
 |---|---|
 | Phone detected in the NFC field, no session started yet | Green, solid (at most 5 s) |
-| Session running: commands being exchanged | Green, blinking (~90 ms) |
+| Session running: commands being exchanged | Green, blinking (approx. 90 ms) |
 | Session ended, the last exchange succeeded | Green **and** yellow, 2 s |
 | Session ended, the last exchange **failed**: request rejected before it ran (wrong key or token, replayed or damaged frame; nothing is written then) or its reply did not reach the phone | Red, 2 s |
 | Exchange finished | Off |
@@ -173,21 +173,21 @@ The LED can be driven directly over the developer console with the `ats led` com
 
 ## Overview
 
-#### STICKER Clime - Enclosure, Mainboard, and Battery Holder
+#### STICKER Clime - enclosure, mainboard, and battery holder
 
 ![STICKER Clime](images/sticker-clime-overview.png)
 
-#### STICKER Input - Enclosure, Mainboard, and Battery Holder
+#### STICKER Input - enclosure, mainboard, and battery holder
 
 ![STICKER Input](images/sticker-input-overview.png)
 
-#### STICKER Motion - Enclosure, Mainboard, and Battery Holder
+#### STICKER Motion - enclosure, mainboard, and battery holder
 
 ![STICKER Motion](images/sticker-motion-overview.png)
 
 ---
 
-## Hardware Schematics
+## Hardware schematics
 
 ### Power
 
@@ -216,7 +216,7 @@ The LED can be driven directly over the developer console with the `ats led` com
 
 ---
 
-## Technical Specification
+## Technical specification
 
 | **Category** | **Parameter** | **Value** |
 |-------------------|---------------------------|------------------------------------|

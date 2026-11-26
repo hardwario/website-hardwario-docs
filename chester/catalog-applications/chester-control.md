@@ -19,7 +19,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 :::
 
-## Application Overview
+## Application overview
 
 The application **CHESTER Control** is used to measure and observe analog and digital inputs. The sampled analog values are aggregated, the aggregate measurements are buffered, and scheduled for later data transfer in the form of buffered data altogether with the timestamp annotations. Also, the changes on digital input (type **trigger**) can be tracked with the type of change and timestamp. The buffering strategy allows a higher number of events to be recorded while conserving data bandwidth and power required for data transfer.
 
@@ -36,7 +36,7 @@ All these inputs and their options are explained in more detail in the article [
 
 Additionally, **CHESTER Control** allows remote control of 4 digital (6-28 V) outputs.
 
-## Application Variants
+## Application variants
 
 **CHESTER Control** can be ordered in one of these variants:
 
@@ -66,7 +66,7 @@ The catalog **CHESTER Control Z** hardware consists of the following ordering co
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
-## Terminal Blocks
+## Terminal blocks
 
 | CHESTER-X0B in left slot A (signals A1–A8) | CHESTER-X4 in right slot B (signals B1–B8)                                                 |
 | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -74,7 +74,7 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 |                                             | Use **CH1** to **CH4** outputs, which supply voltage from **VIN** when the output is enabled |
 | ![CHESTER-X0 terminal block pinout: VDD, CH1, GND, CH2, CH3, GND, CH4, +V](../extension-modules/images/tb-chester-x0.png) | ![CHESTER-X4 terminal block pinout: GND, CH1, CH2, CH3, CH4, GND, GND, VIN](../extension-modules/images/tb-chester-x4.png)                                                  |
 
-## Input Parameters and Behavior
+## Input parameters and behavior
 
 For the wiring diagram of **CHESTER Control**, please follow the [**terminal block description**](../extension-modules/chester-x0.md) of the **CHESTER-X0** extension module.
 The extension module **CHESTER-X0** is installed in the left slot **A**, so you have to use the corresponding terminals **A1** to **A8**.
@@ -145,7 +145,7 @@ The optional hygrometer in the **CHESTER Control** application represents an ext
 
 * Each **measurement** has an associated timestamp. The buffer **measurements** are transferred as time-series data regularly (parameter `interval-report`).
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -177,7 +177,7 @@ app config w1-therm-interval-aggreg 300
 app config mode "lte"
 ```
 
-## Specific Commands
+## Specific commands
 
 :::info
 
@@ -271,7 +271,7 @@ app config hygro-interval-sample <value>
 app config hygro-interval-aggreg <value>
 ```
 
-## Output Control
+## Output control
 
 Please see the Cloud documentation, specifically [Downlink data](/cloud/downlink) and [API examples](/cloud/downlink).
 
@@ -291,7 +291,7 @@ The JSON doesn't have to contain the output state of all four outputs. You send 
 The device is polling the Cloud in an interval set by `interval-poll` parameter and if a new downlink control message is in the Cloud queue, it is sent to the device and output or multiple outputs are changed.
 
 
-## Example JSON Message
+## Example JSON message
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

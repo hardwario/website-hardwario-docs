@@ -1,7 +1,7 @@
 ---
 slug: m-bus_sensors
-title: M-Bus Sensors
-sidebar_label: M-Bus Devices
+title: M-Bus sensors
+sidebar_label: M-Bus devices
 ---
 
 import Image from '@theme/IdealImage';
@@ -10,7 +10,7 @@ This page summarizes the M-Bus interface and the configuration concepts used
 with CHESTER.
 
 
-## M-Bus (Meter-Bus) Communication Overview
+## M-Bus (meter-bus) communication overview
 
 ![M-Bus Architecture](images/m-bus-topology.png)
 
@@ -24,15 +24,15 @@ M-Bus is commonly used in building automation and smart metering systems, where 
 
 ---
 
-## Hardware Requirements
+## Hardware requirements
 
-### Bus Topology
+### Bus topology
 - **Two-wire bus** (non-polarized)
 - Supports long cable lengths (up to 350 meters depending on baud rate and cable type)
 
-### Voltage and Power
+### Voltage and power
 - **Nominal bus voltage**: 24 V DC
-- **Typical current draw per slave**: ~1.5 mA
+- **Typical current draw per slave**: approx. 1.5 mA
 - The master must provide sufficient power for all connected devices
 - Some M-Bus masters can support up to 250 slaves depending on the power budget and driver capacity
 
@@ -43,7 +43,7 @@ M-Bus is commonly used in building automation and smart metering systems, where 
 
 ---
 
-## Data Format
+## Data format
 
 M-Bus communication is defined in layers:
 
@@ -51,7 +51,7 @@ M-Bus communication is defined in layers:
 - **Link Layer**: Defines addressing, frame formats, and error detection
 - **Application Layer (EN 13757-3)**: Defines the structure and encoding of data
 
-### Message Structure
+### Message structure
 M-Bus messages are composed of:
 - Start byte
 - Control field
@@ -61,7 +61,7 @@ M-Bus messages are composed of:
 - Checksum
 - Stop byte
 
-### Data Encoding
+### Data encoding
 Data values are transmitted in a binary format using VIF (Value Information Field) and DIF (Data Information Field) descriptors. These specify the type, unit, and scale of the measurement.
 
 Example:
@@ -69,7 +69,7 @@ Example:
 - VIF = kilowatt-hours (kWh)  
 - Value = `00071F` (hex) → 182.3 kWh
 
-### Example Output (Parsed JSON)
+### Example output (parsed JSON)
 ```json
 {
   "device_id": "MBUS-12345678",

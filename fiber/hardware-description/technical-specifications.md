@@ -1,9 +1,9 @@
 ---
-title: Technical Specifications
+title: Technical specifications
 description: "FIBER technical specifications: PoE with a 3.6 V Li-Ion backup battery, 36 V to 57 V DC input, eight 1-Wire ports, 175 × 120 × 35 mm, –20 °C to +60 °C."
 ---
 
-# Technical Specifications
+# Technical specifications
 
 | Category                  | Specification                             |
 | ------------------------- | ----------------------------------------- |

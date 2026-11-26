@@ -1,12 +1,12 @@
 ---
 slug: power-management
-title: Power Management
+title: Power management
 description: "STICKER is engineered for ultra-low power operation to enable multi-year field deployments without external power supplies."
 title_meta: "Power Management (STICKER)"
 ---
 import Image from '@theme/IdealImage';
 
-# Power Management
+# Power management
 
 STICKER is engineered for ultra-low power operation to enable multi-year field deployments without external power supplies. It is powered by **2× standard AA batteries** (1.5 V alkaline or lithium cells).
 
@@ -16,7 +16,7 @@ Device parameters, keys, and `radio-mode` activation are managed wirelessly usin
 
 ---
 
-## Battery Architecture & Power Monitoring
+## Battery architecture & power monitoring
 
 - **Operating Voltage:** Powered by 2× AA batteries with a wide input voltage range of **1.8 V to 3.6 V**.
 - **Ultra-Low Idle Current:** Achieves an idle sleep consumption of **< 80 µA** using Zephyr RTOS deep-sleep states on the STM32WL SoC.
@@ -25,7 +25,7 @@ Device parameters, keys, and `radio-mode` activation are managed wirelessly usin
 
 ---
 
-## Factory Default: Radio-Silent Mode (v1.4.0+)
+## Factory default: Radio-silent mode (v1.4.0+)
 
 Starting with firmware **v1.4.0**, STICKER ships from the factory in **Radio-Silent Mode** (`radio-mode off`):
 

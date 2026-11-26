@@ -10,7 +10,7 @@ description: Nexelec ORIGIN+ multi-sensor LoRaWAN fire detector with smoke, heat
 
 The **ORIGIN+** is a multi-sensor LoRaWAN fire detector from [Nexelec](https://nexelec.fr/), combining smoke, heat, and CO detection in a single certified device. It is designed for building fire safety monitoring with remote alarm management via LoRaWAN.
 
-## Key Specifications
+## Key specifications
 
 | Parameter | Value |
 |---|---|
@@ -22,7 +22,7 @@ The **ORIGIN+** is a multi-sensor LoRaWAN fire detector from [Nexelec](https://n
 | Mounting | Ceiling-mount (magnetic or screw) |
 | Dimensions | Compact round form factor |
 
-## LoRaWAN Data
+## LoRaWAN data
 
 The ORIGIN+ sends uplinks on alarm events and periodic status reports containing:
 
@@ -31,7 +31,7 @@ The ORIGIN+ sends uplinks on alarm events and periodic status reports containing
 - **Self-test result**: Periodic automatic self-test status
 - **Temperature**: Ambient temperature reading
 
-## HARDWARIO Integration
+## HARDWARIO integration
 
 The ORIGIN+ integrates with HARDWARIO deployments via LoRaWAN:
 

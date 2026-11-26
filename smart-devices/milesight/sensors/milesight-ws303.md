@@ -6,7 +6,7 @@ description: "Milesight WS303 water leak detector (IP67, triggers from 0.5 mm): 
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor WS303
+# Milesight sensor WS303
 
 Milesight WS303 is a **smart water leak detector** with **two stainless steel probes** that detect water as low as 0.5 mm. It features a **built-in buzzer** for local alerts, sends notifications through **LoRaWAN**, and offers up to **5 years of battery life**. Its **compact IP67 design** allows installation even in hard-to-reach places.
 
@@ -22,7 +22,7 @@ Milesight WS303 is a **smart water leak detector** with **two stainless steel pr
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | https://www.hardwario.store/p/milesight-ws303                        |
@@ -39,7 +39,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -59,7 +59,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 ---
 
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -68,7 +68,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/ws-series/ws303/ws303-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -84,7 +84,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
@@ -104,7 +104,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Advanced Features | D2D Controller, Water Leakage Alarm |
 | **Physical Characteristics** | |
 | Power Supply | 1 × CR2450 (590 mAh) |
-| Battery Life | ~5.7 years (typical use, 25°C) |
+| Battery Life | approx. 5.7 years (typical use, 25°C) |
 | Operating Temp | -10°C ~ +60°C |
 | Humidity | 0%–100% RH (non-condensing) |
 | Ingress Protection | IP67 |

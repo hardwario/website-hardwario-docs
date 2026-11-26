@@ -1,11 +1,11 @@
 ---
 slug: network-requirements
-title: Network Requirements
+title: Network requirements
 description: "Check a cellular network before deploying CHESTER: supported LTE-M and NB-IoT bands, APN, PLMN, roaming and PSM, plus a checklist for your operator."
 ---
 import Image from '@theme/IdealImage';
 
-# Network Requirements
+# Network requirements
 
 Before deploying **CHESTER** on a network you have not tested before, compare what the device supports with what the local operator actually provides. The two lists below are meant to be used together: the first one states the device capabilities, the second one is a checklist you can forward to your SIM card provider or mobile operator.
 
@@ -13,7 +13,7 @@ If you are using a **HARDWARIO** Vodafone or 1NCE SIM card, this has already bee
 
 ---
 
-## What the Device Supports
+## What the device supports
 
 | Capability | CHESTER support |
 | :------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,7 +28,7 @@ If you are using a **HARDWARIO** Vodafone or 1NCE SIM card, this has already bee
 
 ---
 
-## What to Confirm with Your Operator
+## What to confirm with your operator
 
 Each answer below maps directly to one of the [configuration parameters](configuration-parameters.md) described in the previous chapter.
 

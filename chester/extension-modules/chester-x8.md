@@ -1,6 +1,6 @@
 ---
 slug: chester-x8
-title: CHESTER-X8 (Precision accel)
+title: CHESTER-X8 (precision accel)
 description: "Precision 3-axis accelerometer extension module for CHESTER, based on the low-noise ADXL355 MEMS accelerometer on I²C."
 keywords: [CHESTER-X8, accelerometer, 3-axis, ADXL355, MEMS, vibration, tilt, inclination, I2C, tamper detection, CHESTER]
 ---
@@ -20,13 +20,13 @@ The **CHESTER-X8** is a precision **3-axis accelerometer** extension module for 
 </div>
 </div>
 
-## Module Overview
+## Module overview
 
 CHESTER-X8 measures acceleration on three axes with the **ADXL355** low-noise, low-drift MEMS accelerometer. It offers selectable **±2 g / ±4 g / ±8 g** ranges and a resolution of up to **3.9 μg/LSB** (at the ±2 g range), with a low zero-g offset. The ADXL355 connects to the CHESTER mainboard over **I²C** at the fixed address **0x1D**; its two interrupt outputs (INT1, INT2) are routed to the slot's GP0 and GP1 pins.
 
 In addition to the on-board accelerometer, the module's terminal block **breaks out** the I²C bus (SCL/SDA), two user GPIO lines (DIO1, DIO2), and the power rails (VDD 3.0 V, +V, GND). This lets you attach external I²C devices on the same bus or use the two GPIO lines directly. The module has no on-board voltage regulator. It runs from the CHESTER rails.
 
-## Key Features
+## Key features
 
 * **Precision 3-Axis Accelerometer:** ADXL355 low-noise, low-drift MEMS sensor.
 * **Selectable Ranges:** ±2 g, ±4 g, and ±8 g.
@@ -35,7 +35,7 @@ In addition to the on-board accelerometer, the module's terminal block **breaks 
 * **I²C & GPIO Breakout:** The terminal block exposes the I²C bus, two GPIO (DIO1/DIO2), and power for expansion.
 * **No External Supply Needed:** Runs directly from the CHESTER rails (VDD 3.0 V).
 
-## Typical Applications
+## Typical applications
 
 * **Tilt & Inclination Sensing:** Measuring angle and orientation.
 * **Vibration Monitoring:** Detecting and characterizing vibration.
@@ -44,7 +44,7 @@ In addition to the on-board accelerometer, the module's terminal block **breaks 
 * **Seismic & Geotechnical Sensing:** Capturing low-amplitude, low-frequency motion.
 * **Tamper & Movement Detection:** Detecting manipulation or movement of the device and its carrier board.
 
-## Technical Specifications
+## Technical specifications
 
 | Parameter | Value |
 | :--- | :--- |
@@ -60,13 +60,13 @@ In addition to the on-board accelerometer, the module's terminal block **breaks 
 | **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.0 |
 
-## Key Components
+## Key components
 
 | Component | Part Number | Description |
 | :--- | :--- | :--- |
 | **Accelerometer** | ADXL355 | Low-noise, low-drift 3-axis MEMS accelerometer with a digital interface (used here in I²C mode) |
 
-## Pin Configuration
+## Pin configuration
 
 The module uses a standardized header layout compatible with CHESTER extension slots.
 
@@ -74,7 +74,7 @@ The module uses a standardized header layout compatible with CHESTER extension s
 The pin configuration shown is for the CHESTER-M CGLS mainboard.
 :::
 
-### CHESTER-X8 Connector Pinout
+### CHESTER-X8 connector pinout
 
 ![CHESTER-X8 terminal block pinout: VDD, GND, DIO1, SCL, SDA, DIO2, GND, +V on pins 1-8](images/tb-chester-x8.png)
 
@@ -93,7 +93,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 `VDD` is the 3.0 V logic rail; `+V` is the system positive rail and its voltage depends on the CHESTER power-supply option. Besides powering the on-board ADXL355, the terminal block also breaks out the **I²C bus** (SCL/SDA) and two user **GPIO** (DIO1, DIO2) for expansion.
 :::
 
-### Host Interface (I²C)
+### Host interface (I²C)
 
 CHESTER-X8 communicates with the CHESTER mainboard over the standard **I²C** bus. The on-board **ADXL355** accelerometer sits at the fixed I²C address **0x1D** (the ASEL strap is tied low). The same I²C bus is exposed on the terminal block (SCL/SDA), so external I²C devices can share it. Just avoid a second device at address 0x1D.
 
@@ -108,7 +108,7 @@ The module uses the slot's GP pins as follows:
 
 The ADXL355 data-ready output (DRDY) is not brought out; use the INT1/INT2 lines (GP0/GP1) for interrupt-driven sampling.
 
-## Terminal Block and Expansion
+## Terminal block and expansion
 
 Besides carrying the on-board accelerometer, the terminal block breaks out the I²C bus, two GPIO lines, and the power rails, so CHESTER-X8 can also serve as a small expansion header:
 
@@ -118,14 +118,14 @@ Besides carrying the on-board accelerometer, the terminal block breaks out the I
 
 All externally connected devices must share a common **GND** with the module.
 
-### Enclosure Feed-Through
+### Enclosure feed-through
 
 Two options bring the wiring into the enclosure:
 
 - **Cable gland (default):** route the conductors through a cable gland in the enclosure wall and wire them to the terminal block.
 - **Panel-mount connector (on request):** an external connector in the enclosure wall lets the user plug in the cable, with no loose wiring inside. Available on request.
 
-## Compatible CHESTER Configurations
+## Compatible CHESTER configurations
 
 The CHESTER-X8 module can be used with various CHESTER mainboard configurations. Below are examples of compatible setups:
 
@@ -146,14 +146,14 @@ The CHESTER-X8 module can be used with various CHESTER mainboard configurations.
 </div>
 </div>
 
-## Schematic Diagrams
+## Schematic diagrams
 
 The complete schematic, showing the ADXL355 accelerometer, its I²C interface and interrupt routing, and the terminal-block breakout, is available as a PDF:
 
 - [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x8-r1.0.pdf)
 - [Interactive CHESTER-X8 browser](pathname:///download/ibom/hio-chester-x8-r1.0.html)
 
-## Module Drawing
+## Module drawing
 
 <div style={{ maxWidth: '500px' }}>
 

@@ -1,7 +1,7 @@
 ---
 slug: radio
 title: Radio
-description: "Switch a STICKER's radio between Off, LoRaWAN and P2P, read and share its radio link keys and start a network join over NFC in HARDWARIO Manager."
+description: "Switch the STICKER radio between Off, LoRaWAN and P2P, read and share its radio link keys and start a network join over NFC in HARDWARIO Manager."
 title_meta: "Radio (HARDWARIO Manager for STICKER)"
 ---
 
@@ -54,7 +54,7 @@ Saving restarts the device in the new mode, and the app confirms with
   [**Configuration**](./configuration.md) first.
 
 When you pick **P2P**, a note reminds you that the P2P frequency and spreading
-factor must match the FIBER's. The defaults do; they can be changed only from
+factor must match the FIBER settings. The defaults do; they can be changed only from
 the device shell.
 
 ---

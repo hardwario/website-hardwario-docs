@@ -20,7 +20,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 :::
 
 
-## Application Overview
+## Application overview
 
 **CHESTER Meteo** is a wind and environmental sensor that samples, aggregates, and sends measured variables.
 
@@ -32,7 +32,7 @@ The catalog application **CHESTER Meteo** measures:
 - Temperature (°C)
 - Humidity (%RH)
 
-## Application Variants
+## Application variants
 
 **CHESTER Meteo** can be ordered in one of these variants:
 
@@ -65,7 +65,7 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 
 Firmware build variant: `west chester-update meteo --variant "CHESTER Meteo Z"`
 
-## Measurement and Behavior
+## Measurement and behavior
 
 - All sensors are **sampled** with a configurable period (parameter `interval-sample`).
 - Samples are then **aggregated** in the configurable interval. Minimum, maximum, average, and median are computed from buffered samples for each sensor (parameter `interval-aggreg`).
@@ -77,7 +77,7 @@ Wind speed is measured continuously between samples (`interval-sample`). Every w
 
 With this continuous measurement, you can accurately get minimal, maximal, and average wind speed from every aggregation.
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -87,7 +87,7 @@ app config interval-aggreg 300
 app config interval-report 1800
 ```
 
-## Specific Commands
+## Specific commands
 
 :::info
 
@@ -129,7 +129,7 @@ meteo read ctr_meteo_a
 
 The latest firmware is available in Catalog Applications [Firmware chapter](index.md#application-firmware).
 
-## Example JSON Message
+## Example JSON message
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

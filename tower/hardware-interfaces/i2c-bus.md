@@ -1,6 +1,6 @@
 ---
 slug: i2c-bus
-title: "I²C Bus"
+title: "I²C bus"
 ---
 import Image from '@theme/IdealImage';
 
@@ -25,13 +25,13 @@ Examples of I²C bus usage in TOWER:
 - [**Humidity Tag**](../hardware-modules/about-humidity-tag.md)
 - [**Climate Module**](../hardware-modules/about-climate-module.md)
 
-## I²C Buses on the Core Module
+## I²C buses on the Core Module
 There are two buses on the **Core Module**. They are called:
 
 - `TWR_I2C_I2C0`: Using `SDA0` and `SCL0` (17, 18) pins in the **bottom right corner** of the Core Module
 - `TWR_I2C_I2C1`: Using `SDA1` and `SCL1` (27, 28) pins in the **top right corner** of the Core Module
 
-## TOWER I²C Address Space
+## TOWER I²C address space
 
 The following table lists the I²C addresses used across the TOWER
 

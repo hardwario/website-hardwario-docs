@@ -6,13 +6,13 @@ const sidebars = {
     'introduction',
     {
       type: 'category',
-      label: 'User Guide',
+      label: 'User guide',
       className: 'sidebar-section',
       collapsible: false,
       items: [
         {
           type: 'category',
-          label: 'Operation Instructions',
+          label: 'Operation instructions',
           link: {
             type: 'generated-index',
             description: 'Instructions for configuring, resetting, updating, and operating GAUGER.',
@@ -37,7 +37,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Detailed Description',
+          label: 'Detailed description',
           link: {
             type: 'generated-index',
             description: 'Detailed GAUGER connector, operating-state, communication, and power documentation.',

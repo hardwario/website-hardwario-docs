@@ -16,7 +16,7 @@ import Image from '@theme/IdealImage';
 
 <img src="/img/ember-top.webp" data-zoom-src="/img/ember-top.webp" width="540" alt="EMBER" />
 
-## Quick Links
+## Quick links
 
 * [**Quick Start Guide**](getting-started.md): Step-by-step setup guide.
 * [**Hotspot Configuration**](hotspot-configuration.md): System concept, RouterOS configuration, IP addresses, and VPN tunnels.
@@ -26,14 +26,14 @@ import Image from '@theme/IdealImage';
 * [**Changelog**](changelog): Latest firmware and platform changes.
 * [**Video Tutorials**](category/video-tutorials): Short videos on ChirpStack and MikroTik setup.
 
-## Typical Use Cases
+## Typical use cases
 
 - Industrial IoT deployments across factories and campuses
 - Commercial environments needing reliable LoRaWAN coverage
 - Home automation systems
 - Reliable LoRaWAN infrastructure management at scale
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|

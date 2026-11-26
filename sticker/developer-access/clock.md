@@ -1,10 +1,10 @@
 ---
-title: Real-time Clock
+title: Real-time clock
 description: "How STICKER keeps its real-time clock: network time over LoRaWAN or P2P, sync from a phone over NFC, the clock_sync command and the clock shell commands."
 ---
 import Image from '@theme/IdealImage';
 
-# Real-time Clock (`clock`)
+# Real-time clock (`clock`)
 
 STICKER maintains accurate wall-clock time via an internal Real-Time Clock (RTC). Wall-clock time is required for precise timestamping of [**Sensor History**](sensor-history.md) log records, [**Alarm Rules**](alarm-rules.md) event triggers, and network status messages.
 
@@ -14,7 +14,7 @@ In **STICKER firmware v2.0.0**, the network time comes from either radio (LoRaWA
 
 ---
 
-## Time Synchronization Mechanisms
+## Time synchronization mechanisms
 
 The RTC can be synchronized through three independent methods:
 
@@ -34,7 +34,7 @@ A time outside the accepted window (2024-01-01 to 2099-01-01) is rejected, whate
 
 ---
 
-## Developer Shell Commands (`clock`)
+## Developer shell commands (`clock`)
 
 Developer shell commands allow inspecting and managing the RTC directly (see [**Firmware Setup**](firmware-setup.md) for opening the console):
 

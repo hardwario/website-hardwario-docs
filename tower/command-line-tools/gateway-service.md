@@ -1,6 +1,6 @@
 ---
 slug: gateway-service
-title: Gateway Service
+title: Gateway service
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
@@ -106,5 +106,5 @@ bcg --help output
 
 :::
 
-## Usage Example
+## Usage example
 

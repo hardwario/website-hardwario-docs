@@ -1,12 +1,12 @@
 ---
 slug: command-line-tools
-title: Command Line Tools
+title: Command line tools
 description: "Install the HARDWARIO CLI with pip to flash CHESTER application, LTE and LoRaWAN modem firmware, open the console, read the PIB and manage codecs."
 title_meta: "Command Line Tools (CHESTER)"
 ---
 import Image from '@theme/IdealImage';
 
-# HARDWARIO Command Line Tools
+# HARDWARIO command line tools
 
 :::caution
 
@@ -61,17 +61,17 @@ hardwario.cloud v1.4.1
 hardwario.common v1.7.2
 ```
 
-## APP/BLE Application Firmware
+## APP/BLE application firmware
 
 Connect J-Link to the [APP SWD Port](segger-j-link.md#segger-j-link-to-app-port-connection).
 
 In this chapter, we use the `hardwario chester app` commands. If you type the previous command, the tool will show you all the possible commands so you can explore the options.
 
-### Interactive Console
+### Interactive console
 
 Use the command `hardwario chester app console` to open the interactive terminal.
 
-### Image Flashing
+### Image flashing
 
 Use the command `hardwario chester app flash <parameter>` to flash the firmware.
 
@@ -80,11 +80,11 @@ The `<parameter>` can be:
 - A **BIN** or **HEX** file.
 - A unique ID that was sent to you by email or from our [Catalog Application firmwares](../catalog-applications/index.md#application-firmware). It has this format `34677881d57f4b0eb85507f176627bee`.
 
-### Processor Reset
+### Processor reset
 
 Use the command `hardwario chester app reset` to reset the firmware.
 
-### Product Information Block
+### Product information block
 
 PIB is a separate UICR flash block in NRF52 memory that contains factory-programmed device information.
 
@@ -102,27 +102,27 @@ BLE passkey: 275889
 
 You can also use the `write` command in case you delete the PIB by mistake. The tool will ask you for every parameter. You can find the original parameters in the last **JSON** message in the **HARDWARIO Cloud**.
 
-## LTE Modem Firmware
+## LTE modem firmware
 
 Connect J-Link to the [LTE SWD Port](segger-j-link.md#segger-j-link-to-lte-port-connection).
 
-### Image Flashing
+### Image flashing
 
 Use the command `hardwario chester lte flash firmware.zip` to flash the modem firmware.
 
-### Flash Erasing
+### Flash erasing
 
-### Processor Reset
+### Processor reset
 
-## LoRaWAN Modem Firmware
+## LoRaWAN modem firmware
 
-### Image Flashing
+### Image flashing
 
-### Flash Erasing
+### Flash erasing
 
-### Processor Reset
+### Processor reset
 
-## Cloud Codec Commands
+## Cloud codec commands
 
 :::caution
 
@@ -171,7 +171,7 @@ Commands:
   upload  Upload codec.
 ```
 
-### Create a Codec
+### Create a codec
 
 ```
 hardwario cloud codec create --name chester-input-z
@@ -179,7 +179,7 @@ hardwario cloud codec create --name chester-input-z
 
 The cloud will reply to you with a **codec ID**. Please save it somewhere; we will need it in the next commands.
 
-### Attach a Codec
+### Attach a codec
 
 We attach the newly created **codec** to the **group**. Go to the **HARDWARIO Cloud** group and copy the **group ID** from the **URL** or from the **group detail page**.
 
@@ -187,7 +187,7 @@ We attach the newly created **codec** to the **group**. Go to the **HARDWARIO Cl
 hardwario cloud codec attach --id <codec-id> --group-id <group-id>
 ```
 
-### Upload a Codec
+### Upload a codec
 
 The final step is uploading the codec.
 
@@ -197,7 +197,7 @@ hardwario cloud codec upload --id <codec-id> --decoder-type cbor --decoder codec
 
 In case you update your **YAML** file and regenerate the `msg_key.h`, all you need to do is **repeat only this step again**.
 
-## Command Aliases
+## Command aliases
 
 If you develop and iterate quite frequently, you might find these command aliases useful. Add them to your terminal init script.
 

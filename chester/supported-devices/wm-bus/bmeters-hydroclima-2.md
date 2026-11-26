@@ -34,7 +34,7 @@ The device is delivered **pre-configured**, but it can be reprogrammed and custo
 
 :::
 
-### Configuration Procedure
+### Configuration procedure
 
 Programming and configuration of the device is carried out by radio, using an [**RFM-RX2 receiver**](https://www.bmeters.com/en/products/rfm-rx2/) and [**BMetering Software**](http://keygenerator.bmetering.com/API/DownloadBMetering). 
 
@@ -47,9 +47,9 @@ the message “rF”.
 The configuration of the allocator is described in the
 **BMetering software user manual**.
 
-## Wireless M-Bus Address Configuration
+## Wireless M-Bus address configuration
 
-### Where to Find the Address on the Device
+### Where to find the address on the device
 
 The address is located **above the barcode and below the display**, as shown in the image below (8 digits).  
 
@@ -67,7 +67,7 @@ The address is located **above the barcode and below the display**, as shown in 
 
 ---
 
-### Mapping the wM-Bus Address to CHESTER
+### Mapping the wM-Bus address to CHESTER
 
 The mapping must be carried out using the **CHESTER Terminal**, for example with:  
 
@@ -77,7 +77,7 @@ The mapping must be carried out using the **CHESTER Terminal**, for example with
 
 ---
 
-### Managing and Adding wM-Bus Device Addresses in CHESTER
+### Managing and adding wM-Bus device addresses in CHESTER
 
 Here you can manage the list of **wM-Bus addresses** (**add/remove**), adjust scan settings, and review example configurations for typical setups.  
 
@@ -87,7 +87,7 @@ Here you can manage the list of **wM-Bus addresses** (**add/remove**), adjust sc
 
 ---
 
-## Message Encryption and Key Management
+## Message encryption and key management
 
 The **transmitted messages are encrypted**.
 

@@ -124,7 +124,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Rozšířené funkce | Alarmy podle prahových hodnot, opakovaný přenos dat, kalibrace |
 | **Fyzické vlastnosti** | |
 | Napájení | 1 × ER34615 (19000 mAh) |
-| Výdrž baterie | ~10 let (interval 10 min, 25 °C) |
+| Výdrž baterie | přibližně 10 let (interval 10 min, 25 °C) |
 | Provozní teplota | -30 °C ~ +70 °C |
 | Vlhkost | 0 %–95 % RH (nekondenzující) |
 | Krytí | IP65 |

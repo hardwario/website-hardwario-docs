@@ -25,13 +25,13 @@ Thanks to its modular and open architecture, **FIBER** supports standard **Raspb
 
 <img src="/img/fiber.webp" data-zoom-src="/img/fiber.webp" width="540" alt="FIBER" />
 
-## Quick Links
+## Quick links
 
 * [**Installation**](installation): Bootstrap and configure the Linux system on FIBER.
 * [**Hardware Description**](category/hardware-description): Processing platform, sensor interfaces, connectivity, and full technical specifications.
 * [**Changelog**](changelog): Latest firmware and platform changes.
 
-## Typical Use Cases
+## Typical use cases
 
 - Hospital environmental monitoring across wards, pharmacies, and storage
 - Pharmaceutical cold-chain monitoring with logged temperature history and excursion alerts
@@ -40,7 +40,7 @@ Thanks to its modular and open architecture, **FIBER** supports standard **Raspb
 - Energy infrastructure temperature monitoring (transformers, switchgear)
 - Manufacturing: multi-point process temperature monitoring across production lines
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|

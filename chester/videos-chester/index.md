@@ -1,13 +1,13 @@
 ---
 slug: videos-chester
-title: Video Tutorials
+title: Video tutorials
 description: "Step-by-step guides and video tutorials for setting up and using a CHESTER device."
 title_meta: "Video Tutorials (CHESTER video tutorials)"
 ---
 
 import Image from '@theme/IdealImage';
 
-# Video Tutorials
+# Video tutorials
 
 Here you can find step-by-step guides and video tutorials to help you set up and use your CHESTER device.
 

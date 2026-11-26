@@ -1,6 +1,6 @@
 ---
 slug: system-basics
-title: System Basics
+title: System basics
 ---
 import Image from '@theme/IdealImage';
 
@@ -42,7 +42,7 @@ You will be able to assemble your hardware similarly as you do with the LEGO® b
 
 An equal level of modularity has been also taken on the software level. Either on a device side, anyone can master creating the firmware with the properly documented APIs and examples, or the distributed system approach of MQTT messages on the side of the hub.
 
-## Low-Power
+## Low-power
 
 From the very beginning, HARDWARIO TOWER has been optimized for long service time from batteries. Most devices can operate without a need for battery replacement for more than 2 years.
 
@@ -56,7 +56,7 @@ In every TOWER device, you will also find a special hardware security element, t
 
 We all know that the “security by obscurity” approach does not work in long term and still, you will find it in so many proprietary products.
 
-## System Concept
+## System concept
 
 <Image img={require('./images/system-concept.png')} alt="System concept: TOWER nodes link by 868/915 MHz radio to a gateway, hub services, cloud platforms, and user apps" />
 

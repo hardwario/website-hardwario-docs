@@ -40,7 +40,7 @@ apply to you: no BOOT jumper, no `rpiboot`, no PoE adapter on your board. Skip s
 
 ---
 
-## Step 2: Install the Software Stack
+## Step 2: Install the software stack
 
 ```sh
 ssh fiber@<TARGET IP ADDRESS>
@@ -60,16 +60,16 @@ Then, in order (see [Installation](/fiber/installation/) for the full commands a
 
 ---
 
-## Step 3: Register a Gateway and a Device
+## Step 3: Register a gateway and a device
 
 Nothing joins the network until a gateway and a device are registered in ChirpStack. See
 [Register a Gateway and a Device](/fiber/installation/register-device/) for the full UI
 walkthrough: add the gateway using the ID from the Concentratord logs, create a device profile
-and application, then add your STICKER or CHESTER's DevEUI and OTAA keys.
+and application, then add the DevEUI of your STICKER or CHESTER and OTAA keys.
 
 ---
 
-## Step 4: Power On Your Test Device
+## Step 4: Power on your test device
 
 Power on the physical LoRaWAN device. Watch ChirpStack's **LoRaWAN frames** tab (live view). A
 join-request followed by a join-accept should appear within seconds if the gateway is in range
@@ -81,7 +81,7 @@ registration.
 
 ---
 
-## Step 5: Access Your Services
+## Step 5: Access your services
 
 | Service | URL |
 |---|---|
@@ -100,12 +100,12 @@ network. Nothing in the install steps rotates it automatically.
 
 ---
 
-✅ **That's it!**
+✅ **Done.**
 Your FIBER is flashed, running ChirpStack, and receiving real LoRaWAN uplinks.
 
 ---
 
-## FIBER Lite Variant
+## FIBER Lite variant
 
 **FIBER Lite** (Raspberry Pi 5) runs the exact same software stack as FIBER: ChirpStack,
 Node-RED, InfluxDB, Grafana, and the Dashboard are all installed the same way, no extra steps.

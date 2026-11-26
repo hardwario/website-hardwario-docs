@@ -83,14 +83,14 @@ The following table summarizes the active components fitted on the **MACHINE PRO
 
 | Reference | Chip | Function | I²C address |
 | --- | --- | --- | --- |
-| U2 | DS28E17Q+ | 1-Wire → I²C bridge (handles all probe communication) | — |
+| U2 | DS28E17Q+ | 1-Wire → I²C bridge (handles all probe communication) | – |
 | U4 | SHT30-DIS-B2.5KS | Temperature and humidity sensor | 0x45 |
 | U6 | LIS2DH12TR | Accelerometer / motion sensor | 0x19 |
 | U3 | TMP112AID | Digital temperature sensor | 0x48 |
 | U7 | OPT3001DNP | Digital ambient light sensor | 0x44 |
 | U8 | SI7210-B-03-IV | Hall sensor / magnetometer | 0x32 |
 | U5 | M24C04-FMH6TG | EEPROM memory | 0x50 |
-| U1 | TPS7A05285PDB | Linear regulator (LDO) | — |
+| U1 | TPS7A05285PDB | Linear regulator (LDO) | – |
 
 :::note
 

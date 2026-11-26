@@ -6,7 +6,7 @@ description: "Milesight WT101 radiator thermostat with open window detection: Lo
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor WT101
+# Milesight sensor WT101
 
 Milesight WT101 is a **smart radiator thermostat** with **LoRaWAN control** for efficient heating management. It integrates a **high-accuracy temperature sensor (±0.5 °C)**, supports **up to 16 heating schedules**, and includes safety features like **open window detection and child lock**.
 
@@ -22,7 +22,7 @@ Milesight WT101 is a **smart radiator thermostat** with **LoRaWAN control** for 
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | https://www.hardwario.store/p/milesight-wt101                        |
@@ -39,7 +39,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -58,7 +58,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -67,7 +67,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/wt-series/wt101/wt101-codec.json) |
 
 :::info 
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device’s binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -82,7 +82,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
@@ -109,7 +109,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Advanced Features | Child lock, External sensor mode, FUOTA |
 | **Physical Characteristics** | |
 | Power Supply | 2 × AA Li-FeS2 (3000 mAh total) |
-| Battery Life | ~5–8 years (depending on SF) |
+| Battery Life | approx. 5–8 years (depending on SF) |
 | Operating Temp | -20°C ~ +60°C |
 | Storage Temp | -40°C ~ +70°C (without battery) |
 | Humidity | 0–95% RH (non-condensing) |

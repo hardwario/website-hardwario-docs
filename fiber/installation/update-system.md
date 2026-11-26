@@ -1,9 +1,9 @@
 ---
-title: Update System
+title: Update system
 description: "After flashing, bring Raspberry Pi OS on FIBER up to date: refresh the package list with apt update, upgrade all packages with apt upgrade and reboot."
 ---
 
-# Update System
+# Update system
 
 1. Update the package list to get information on the newest versions of packages:
 

@@ -1,6 +1,6 @@
 ---
 slug: how-to-battery-module
-title: "How To: Battery Module"
+title: "How to: Battery Module"
 ---
 import Image from '@theme/IdealImage';
 
@@ -13,7 +13,7 @@ With this module, you can check the battery voltage (**manually** or **periodica
 - [**Battery SDK Module**](https://sdk.hardwario.com/group__twr__module__battery.html)
 - GitHub Repository Example
 
-## Battery Module Thresholds
+## Battery Module thresholds
 
 SDK offers two voltage level **thresholds**:
 

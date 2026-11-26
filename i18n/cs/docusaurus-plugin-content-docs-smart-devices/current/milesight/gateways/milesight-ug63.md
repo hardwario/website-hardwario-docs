@@ -157,7 +157,7 @@ Ve vestavěném síťovém serveru spravujete senzory přímo z webového rozhra
 | Vysílací výkon | Max. 27 dBm |
 | Citlivost | -140 dBm @292bps |
 | Protokol | V1.0.3 Class A/C |
-| Podporovaná zařízení | ~2000 |
+| Podporovaná zařízení | přibližně 2 000 |
 | Pokročilé funkce | Filtrování paketů, retransmise |
 | **Rozhraní** | |
 | Ethernet | 1 × RJ45 (10/100 Mbps, Auto) |

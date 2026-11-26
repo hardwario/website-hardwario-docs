@@ -23,7 +23,7 @@ The reset ladder was introduced in firmware v1.4.0. In **STICKER firmware v2.0.0
 | `settings vendor-reset <new-secret-key>` | Erase storage + history and re-provision to **serial number, nonce counter and vendor token only**: wipes the claim token, DevEUI and JoinEUI and closes the claim window. Requires a new 32-hex-digit `secret_key` in the same call. Refused when the device's `vendor-reset-allow` policy is off. |
 | `settings erase` | Full NVS wipe, **including identity and LoRaWAN credentials**. Destructive and shell-only. |
 
-## Reset Tiers in Detail
+## Reset tiers in detail
 
 | | `device-reset` | `factory-reset` | `vendor-reset` | `settings erase` |
 |---|---|---|---|---|

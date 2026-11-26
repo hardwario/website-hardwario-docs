@@ -1,6 +1,6 @@
 ---
 slug: chester-x4
-title: CHESTER-X4 (Step-down 4-ch)
+title: CHESTER-X4 (step-down 4-ch)
 description: "CHESTER-X4 module: a step-down converter from an external 6–28 V DC line, input voltage measurement and four P-MOS outputs with resettable PTC fuses."
 ---
 import Image from '@theme/IdealImage';
@@ -20,17 +20,17 @@ This article describes the CHESTER-X4 extension module.
 </div>
 <br />
 
-## Module Overview
+## Module overview
 CHESTER-X4 implements a step-down DC/DC converter providing power from an external 6-28 VDC line (VIN). It also allows input voltage measurement. The module also has 4 P-MOS switches for supplying independent loads from the VIN voltage input.
 
-## Output Protection
+## Output protection
 Each of the four outputs has a resettable PTC fuse protection (femtoSMDC005F). Each output can **reliably supply 50 mA of constant current**. The trip current is around 150 mA.
 
-## CHESTER Pin Configuration Diagram
+## CHESTER pin configuration diagram
 
 ![Terminal block pins 1–8 mapped to GND, CH1, CH2, CH3, CH4, GND, GND, VIN](images/tb-chester-x4.png)
 
-## Pin Configuration and Functions
+## Pin configuration and functions
 
 | Position | Signal Name | Signal Description                    |
 | -------- | ----------- | ------------------------------------- |
@@ -52,6 +52,6 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 
 ![CHESTER-X4 R3.1 schematic: TPS62175 step-down converter, TLA2021 ADC, and four fused P-MOS output switches](images/hio-chester-x4-r3.1-1.png)
 
-## Module Drawing
+## Module drawing
 
 ![CHESTER-X4 placement drawing with slot signals on top and VIN, GND, and CH1–CH4 terminals on bottom](images/pc-chester-x4.png)

@@ -12,29 +12,29 @@ This page helps you **power up, provision, and activate** your STICKER device an
 
 ---
 
-## Before You Start
+## Before you start
 
-#### What STICKER Is
+#### What STICKER is
 
 **STICKER** is an open IoT platform based on the STM32WL SoC with integrated LoRaWAN connectivity and software-selectable proprietary **LoRa P2P** mode. It is a compact, battery-powered sensor platform built on Zephyr RTOS, running catalog applications like STICKER Clime, Input, and Motion.
 
 For technical details, see the [**Hardware Description**](/sticker/hardware-description/).
 
-#### You Will Need
+#### You will need
 - **STICKER device** (Clime / Input / Motion variant)
 - **2× AA batteries** (1.5V alkaline or lithium)
 - A **LoRaWAN Gateway** within range
 - A **LoRaWAN Network Server** (ChirpStack / TTS / custom LNS)
 - A smartphone with **NFC** and the [**HARDWARIO Manager**](/sticker/hardwario-manager/) app installed
 
-#### Useful Links
+#### Useful links
 - NFC Mobile App Guide: [**HARDWARIO Manager**](/sticker/hardwario-manager/)
 - STICKER Decoder for firmware v2.0.0: [ttn.js on GitHub](https://github.com/hardwario/sticker-firmware/blob/v2.0.0/app/decoder/ttn.js). The v2.0.0 payload format differs from v1.4.x, so a fleet that mixes both versions must pick the decoder by the firmware version the device reports in its Device Info, not by the payload
 - HARDWARIO Datasheets Hub: [hardwario.com/resources/datasheets](https://www.hardwario.com/resources/datasheets)
 
 ---
 
-## Step 1: Identify Your STICKER Variant
+## Step 1: Identify your STICKER variant
 
 STICKER comes pre-flashed with one of the catalog applications:
 
@@ -47,7 +47,7 @@ STICKER comes pre-flashed with one of the catalog applications:
 
 ---
 
-## Step 2: Power Up & Understand Factory Defaults (v1.4.0+)
+## Step 2: Power up & understand factory defaults (v1.4.0+)
 
 1. **Open the enclosure** and insert two AA batteries according to the polarity markings.
 2. Observe the **LED Boot Sequence**: Red (0.5 s) → Yellow (0.5 s) → Green (1.5 s).
@@ -60,7 +60,7 @@ Starting with firmware **v1.4.0**, STICKER ships with the radio switched off (`r
 
 ---
 
-## Step 3: Configure & Activate via NFC
+## Step 3: Configure & activate via NFC
 
 STICKER is configured by **holding the phone against it**, with no cable, no
 programmer, no desktop software. One tap does a full read or write: hold the
@@ -104,7 +104,7 @@ Start with the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager
 
 ---
 
-## Step 4: Register on your LoRaWAN Network Server
+## Step 4: Register on your LoRaWAN network server
 
 ### ChirpStack v4
 1. Register the device using the DevEUI, JoinEUI, and AppKey obtained via [**HARDWARIO Manager**](/sticker/hardwario-manager/).
@@ -118,7 +118,7 @@ Start with the [**HARDWARIO Manager Quick Start Guide**](/apps/hardwario-manager
 
 ---
 
-## Step 5: Post-Commissioning Verification
+## Step 5: Post-commissioning verification
 
 Once registered and connected:
 
@@ -132,7 +132,7 @@ If using **STICKER Input**, review the terminal block and DIP switch instruction
 
 ---
 
-## Troubleshooting Checklist
+## Troubleshooting checklist
 
 The LED is the only feedback STICKER gives locally, so it is the fastest way to
 tell what a unit is doing. The tables below list every pattern in **firmware
@@ -148,8 +148,8 @@ the **first match wins**, so a more serious condition hides a less serious one.
 | LED pattern | What it means | What to do |
 |---|---|---|
 | **Red and yellow alternating, twice** | **Stored configuration could not be loaded**. Identity and provisioning are gone, and the device is running on factory defaults | Re-apply the full configuration over NFC with [**HARDWARIO Manager**](/apps/hardwario-manager/sticker/configuration); if it comes back, the unit needs service |
-| **1× yellow, then 1× red** ~200 ms later | **Joining or rejoining** and getting no answer from the network | Check gateway proximity, frequency plan / region, and that DevEUI, JoinEUI and AppKey match the network server |
-| **2× yellow**, ~200 ms apart | **Link degraded**. Link checks are failing, but the session is still alive | Check gateway coverage and antenna placement; the device recovers on its own once the link returns |
+| **1× yellow, then 1× red** approx. 200 ms later | **Joining or rejoining** and getting no answer from the network | Check gateway proximity, frequency plan / region, and that DevEUI, JoinEUI and AppKey match the network server |
+| **2× yellow**, approx. 200 ms apart | **Link degraded**. Link checks are failing, but the session is still alive | Check gateway coverage and antenna placement; the device recovers on its own once the link returns |
 | **1× yellow** | **Radio switched off**: `radio-mode off` (the factory default), `radio-mode p2p` on a device without its P2P keys (AppKey or DevEUI not set), or a LoRaWAN region this firmware image does not support | Write a LoRaWAN or P2P configuration with the radio enabled (Step 3) |
 | **1× red** | An **alarm is active** | Read the active alarms in [**Device info**](/apps/hardwario-manager/sticker/device-info), then review the [**alarm rules**](developer-access/alarm-rules.md) |
 | **1× green** | Normal operation, joined and healthy | Nothing. This is the target state |
@@ -164,7 +164,7 @@ step.
 | LED | What it means | What to do |
 |---|---|---|
 | **Green, solid** (at most 5 s) | Phone detected in the NFC field, no session started yet | Keep the phone still |
-| **Green, blinking** (~90 ms) | Session running: the phone and the device are exchanging commands | Keep the phone still |
+| **Green, blinking** (approx. 90 ms) | Session running: the phone and the device are exchanging commands | Keep the phone still |
 | **Green and yellow, 2 s** | Session ended, the last exchange succeeded | Nothing |
 | **Red, 2 s** | Session ended, the last exchange **failed**: the request was rejected before it ran (wrong secret key or vendor token, a replayed or damaged frame; nothing is written then), or its reply did not reach the phone | Check the device is saved with the right secret key, see [**Saved STICKER devices**](/apps/hardwario-manager/sticker/saved-stickers), then tap again |
 | **Off** | Exchange finished | Nothing |
@@ -179,7 +179,7 @@ still ends green and yellow; the app shows the error.
 
 | When | LED pattern | What it means |
 |---|---|---|
-| Power-up | **Red 0.5 s → yellow 0.5 s → green 1.5 s** (~3 s carousel) | Normal boot; it also proves all three channels work. The device keeps starting up while it plays, so it does not delay the boot. Seeing it unexpectedly means the device rebooted |
+| Power-up | **Red 0.5 s → yellow 0.5 s → green 1.5 s** (approx. 3 s carousel) | Normal boot; it also proves all three channels work. The device keeps starting up while it plays, so it does not delay the boot. Seeing it unexpectedly means the device rebooted |
 | Power-up with the battery below 1.8 V | **Carousel, then a red blink every 200 ms for 5 s, 1 s solid red, then off** | The battery is depleted. The device switches itself off and stays off until the batteries are replaced or it is reset with NRST |
 | Input becomes active | **Green, then orange**. 50 ms each | An input on STICKER Input, or a Hall sensor, switched on |
 | Input returns to inactive | **Orange, then green**. 50 ms each | The same input switched off again |

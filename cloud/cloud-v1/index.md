@@ -1,10 +1,10 @@
 ---
 slug: /legacy
-title: Cloud Legacy
+title: Cloud legacy
 description: "Reference documentation for the older HARDWARIO Cloud Legacy platform; for the current platform, see the main HARDWARIO Cloud documentation."
 ---
 
-# HARDWARIO Cloud Legacy
+# HARDWARIO Cloud legacy
 
 Reference documentation for the older **HARDWARIO Cloud Legacy** platform ([legacy.hardwario.cloud](https://legacy.hardwario.cloud)). For the current platform, see the
 main [**HARDWARIO Cloud**](/cloud/) documentation.

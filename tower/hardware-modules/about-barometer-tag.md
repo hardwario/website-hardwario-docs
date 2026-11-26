@@ -24,7 +24,7 @@ import Image from '@theme/IdealImage';
 - Absolute pressure sensor **MPL3115A2 (NXP)**
 - The sensor only needs an I²C bus
 - Pressure range: from 20 kPa to 110 kPa
-- Altitude range: from -698 to 11,775 m
+- Altitude range: from -698 to 11 775 m
 - Absolute accuracy: ±0.4 kPa
 - Optional interrupt output
 - Power consumption:

@@ -20,13 +20,13 @@ The **CHESTER-X9** is a **4-channel low-side switch** output module for the CHES
 </div>
 </div>
 
-## Module Overview
+## Module overview
 
 CHESTER-X9 switches up to four external loads to ground. Each channel is a self-protected **NCV8412ASTT1G** low-side switch (U1–U4): the channel output is pulled to **GND** when the channel is turned on, and left open (high-impedance) when it is off. Every channel is **current-limited**, so an overload or short circuit is contained without damaging the module.
 
 Each switch is driven **directly by one of the CHESTER-X GPIO pins** (GP0–GP3). CHESTER-X9 has no I²C or SPI controller of its own. The load and its supply are entirely external: the load is wired between an external DC source (3–28 V) and a channel output, and the external source ground is tied to the module ground. The module does not supply power to the load or to the CHESTER mainboard.
 
-## Key Features
+## Key features
 
 * **4 Independent Channels:** Four low-side switches (CH1–CH4), each controlled separately.
 * **Self-Protected Switches:** NCV8412ASTT1G with per-channel current limiting, thermal shutdown, and ESD protection.
@@ -35,14 +35,14 @@ Each switch is driven **directly by one of the CHESTER-X GPIO pins** (GP0–GP3)
 * **Direct GPIO Control:** Each channel is driven straight from a CHESTER-X GP pin, no I²C/SPI required.
 * **High Current:** 2 A continuous and up to a 5 A current limit per channel.
 
-## Typical Applications
+## Typical applications
 
 * **Actuator & Relay Control:** Switching relays, contactors, solenoids, and valves.
 * **Signalling:** Driving lamps, beacons, and buzzers.
 * **Load Enable / Power Gating:** Turning external DC loads on and off under firmware control.
 * **General Digital Outputs:** Any low-side on/off output within the voltage and current limits.
 
-## Technical Specifications
+## Technical specifications
 
 | Parameter | Value |
 | :--- | :--- |
@@ -58,13 +58,13 @@ Each switch is driven **directly by one of the CHESTER-X GPIO pins** (GP0–GP3)
 | **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R1.0 |
 
-## Key Components
+## Key components
 
 | Component | Part Number | Description |
 | :--- | :--- | :--- |
 | **Low-Side Switch (×4)** | NCV8412ASTT1G | Self-protected low-side switch with current limiting, thermal shutdown, integrated inductive clamp, and ESD protection; one per channel |
 
-## Pin Configuration
+## Pin configuration
 
 The module uses a standardized header layout compatible with CHESTER extension slots.
 
@@ -72,7 +72,7 @@ The module uses a standardized header layout compatible with CHESTER extension s
 The pin configuration shown is for the CHESTER-M CGLS mainboard.
 :::
 
-### CHESTER-X9 Connector Pinout
+### CHESTER-X9 connector pinout
 
 ![CHESTER-X9 terminal block pinout: GND, CH1, GND, CH2, GND, CH3, GND, CH4 on pins 1-8](images/tb-chester-x9.png)
 
@@ -91,7 +91,7 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 CHESTER-X9 does not power the load or the CHESTER mainboard. Each channel only switches its output to **GND**; the load is powered from an external **3–28 VDC** source (see [Switch and Load Connection](#switch-and-load-connection) below).
 :::
 
-### Channel Control (GPIO)
+### Channel control (GPIO)
 
 Unlike most CHESTER-X modules (which use **I²C** or **SPI**), CHESTER-X9 is controlled **directly through the module slot's GPIO pins**. Each GP pin drives the gate of one low-side switch, so asserting a GP pin turns that channel on (connects its output to GND):
 
@@ -104,7 +104,7 @@ Unlike most CHESTER-X modules (which use **I²C** or **SPI**), CHESTER-X9 is con
 
 The slot also carries the I²C bus (SDA/SCL), but CHESTER-X9 uses no I²C device. All four channels are switched by the GP pins alone.
 
-## Switch and Load Connection
+## Switch and load connection
 
 Each load is wired between the **external DC source (+)** and a **channel output** (CH1–CH4); the channel's low-side switch then completes the circuit to **GND** when it is turned on. The external source ground **must** be connected to one of the module's **GND** terminals so the module and the external supply share a common ground reference.
 
@@ -114,14 +114,14 @@ Each load is wired between the **external DC source (+)** and a **channel output
 CHESTER-X9 has **no external freewheeling (flyback) diode**. The NCV8412ASTT1G integrates a drain-to-gate active clamp that absorbs the turn-off energy of **moderate** inductive loads (small relays, solenoids, valves), so they can be switched directly. For **large inductances, high currents, or fast repetitive switching**, add an external freewheeling diode across the load to keep the switch within its clamp-energy rating.
 :::
 
-### Enclosure Feed-Through
+### Enclosure feed-through
 
 Two options bring the load cable into the enclosure:
 
 - **Cable gland (default):** route the load conductors through a cable gland in the enclosure wall and wire them to the terminal block.
 - **Panel-mount connector (on request):** an external connector in the enclosure wall lets the user plug in the load cable, with no loose wiring inside. Available on request.
 
-## Compatible CHESTER Configurations
+## Compatible CHESTER configurations
 
 The CHESTER-X9 module can be used with various CHESTER mainboard configurations. Below are examples of compatible setups:
 
@@ -148,14 +148,14 @@ CHESTER-X9 can be used as part of the CHESTER SDK using the `ctr_x9_a` and `ctr_
 
 - [Example SDK usage](https://github.com/hardwario/chester-sdk/tree/main/samples/chester_x9)
 
-## Schematic Diagrams
+## Schematic diagrams
 
 The complete schematic, showing the four NCV8412ASTT1G low-side switches and the connector mapping, is available as a PDF:
 
 - [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x9-r1.0.pdf)
 - [Interactive CHESTER-X9 browser](pathname:///download/ibom/hio-chester-x9-r1.0.html)
 
-## Module Drawing
+## Module drawing
 
 <div style={{ maxWidth: '500px' }}>
 

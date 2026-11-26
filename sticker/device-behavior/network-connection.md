@@ -41,7 +41,7 @@ The status LED shows the connection state every 3 s:
 
 ## When the link is lost
 
-The network does not confirm STICKER's reports, so the device checks the link itself: every 5th report carries a link check, which the network answers if a gateway heard it. Any downlink also proves that the link works.
+The network does not confirm the STICKER reports, so the device checks the link itself: every 5th report carries a link check, which the network answers if a gateway heard it. Any downlink also proves that the link works.
 
 <StickerTimeline variant="link-loss" />
 

@@ -6,7 +6,7 @@ description: "Milesight UG63 compact LoRaWAN gateway: first setup over Wi-Fi, WA
 
 import Image from '@theme/IdealImage';
 
-# Milesight Gateway UG63-868M
+# Milesight gateway UG63-868M
 
 Milesight UG63 is a **compact LoRaWAN® gateway** designed for **small-scale deployments** with **8-channel support** and up to **2000 end-nodes**. It provides **Ethernet and 4G LTE backhaul**, easy **Wi-Fi configuration**, and ensures **cost-effective network coverage**.  
 
@@ -22,7 +22,7 @@ Milesight UG63 is a **compact LoRaWAN® gateway** designed for **small-scale dep
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | Not yet available                                                     |
@@ -64,7 +64,7 @@ Milesight UG63 is a **compact LoRaWAN® gateway** designed for **small-scale dep
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/gateways/index#lorawan-network-options)
 
@@ -74,7 +74,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 Choose one of the following options based on your setup:
 
-### Option 1: Embedded NS (Standalone)
+### Option 1: Embedded NS (standalone)
 **Best for:** Users without external application server
 
 | Setting | Value |
@@ -84,7 +84,7 @@ Choose one of the following options based on your setup:
 
 This built-in network server allows you to manage sensors directly through the gateway's web interface.
 
-### Option 2: ChirpStack v4 (Local Server)
+### Option 2: ChirpStack v4 (local server)
 **Best for:** Users with local ChirpStack installation
 
 | Setting      | Value |
@@ -142,7 +142,7 @@ This built-in network server allows you to manage sensors directly through the g
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
@@ -157,7 +157,7 @@ This built-in network server allows you to manage sensors directly through the g
 | Tx Power | Max. 27 dBm |
 | Sensitivity | -140 dBm @292bps |
 | Protocol | V1.0.3 Class A/C |
-| Supported Devices | ~2000 |
+| Supported Devices | approx. 2 000 |
 | Advanced Features | Packet filter, Retransmission |
 | **Interfaces** | |
 | Ethernet | 1 × RJ45 (10/100 Mbps, Auto) |

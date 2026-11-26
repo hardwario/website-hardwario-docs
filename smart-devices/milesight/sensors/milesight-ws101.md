@@ -6,7 +6,7 @@ description: "Milesight WS101 smart button with short, long and double press act
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor WS101
+# Milesight sensor WS101
 
 Milesight WS101 is a **compact, battery-powered LoRaWAN smart button** designed for **wireless control, triggering actions, and sending alarms**. It supports **multiple press actions** (short, long, and double press) with **response time less than 1 second**. The button features **ultra-low power consumption** with **battery life over 5 years**, **NFC configuration**, and **Milesight D2D communication** capability. With its **portable design** and **IP30 rating**, it's ideal for smart homes, offices, hotels, schools, and emergency panic button applications.
 
@@ -22,7 +22,7 @@ Milesight WS101 is a **compact, battery-powered LoRaWAN smart button** designed 
 </div>
 <br />
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | https://www.hardwario.store/p/milesight-ws101                        |
@@ -39,7 +39,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -59,7 +59,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -68,7 +68,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/ws-series/ws101/ws101-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -84,7 +84,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|

@@ -1,13 +1,13 @@
 ---
-title: Reading 1-Wire Sensors into Grafana
+title: Reading 1-Wire sensors into Grafana
 description: "Read DS18B20 probes on the eight 1-Wire ports of FIBER from Linux sysfs, then store them in InfluxDB with a Node-RED exec flow and graph them in Grafana."
 ---
 
-# Reading 1-Wire Sensors into Grafana
+# Reading 1-Wire sensors into Grafana
 
 **FIBER only**: FIBER Lite has no 1-Wire hub (see [What's Different](/fiber/fiber-lite/introduction#whats-different)).
 
-FIBER's eight isolated 1-Wire ports appear in Linux as eight independent bus masters, so a probe
+The eight isolated 1-Wire ports of FIBER appear in Linux as eight independent bus masters, so a probe
 on port 3 is visible at a different path than one on port 5. Reading them needs no driver setup
 and no configuration, because the kernel already exposes them.
 
@@ -88,7 +88,7 @@ garbage and must be discarded, not averaged in.
 
 :::note
 
-Reading these files triggers a conversion on the bus, which takes up to ~750 ms per sensor. The
+Reading these files triggers a conversion on the bus, which takes up to approx. 750 ms per sensor. The
 FIBER application is already sampling the same probes every 2 seconds, so keep any polling of
 your own modest. A few seconds between reads is plenty, and it keeps the bus free for the
 application that drives the alarms.

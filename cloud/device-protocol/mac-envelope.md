@@ -1,10 +1,10 @@
 ---
 slug: mac-envelope
-title: FLAP MAC Envelope
+title: FLAP MAC envelope
 description: "The MAC envelope of FLAP: a 64-bit message authentication code keyed with the claim token, the serial number, raw and base64 format and security properties."
 ---
 
-# FLAP MAC Envelope
+# FLAP MAC envelope
 
 The MAC envelope (device setting `flap-hash`) protects a [**FLAP packet**](transfers.md#flap-packet) with a 64-bit **message authentication code** (MAC) keyed with the claim token of the device, and identifies the device by its serial number. All multi-byte fields are **big-endian**.
 
@@ -29,7 +29,7 @@ The Cloud answers in the same envelope. It carries the serial number of the devi
 | Raw | 5002 | Devices built on the nRF9160 or nRF9151 |
 | Base64 | 5003 | CHESTER (nRF9160) |
 
-## Message Authentication Code
+## Message authentication code
 
 The MAC tag protects the integrity and authenticity of the serial number and the FLAP packet. It is a **secret-prefix MAC** over SHA-256 whose 256-bit output is truncated to 64 bits by XOR folding:
 
@@ -60,7 +60,7 @@ On port 5002 the MAC envelope is sent raw, as binary data. On port 5003 the whol
 
 The base64 format is used only by CHESTER, whose nRF9160 modem is controlled by AT commands. In the AT data mode, the sequence `+++` ends the data, so binary data that happens to contain it would be cut off. CHESTER therefore sends each datagram as the string parameter of `AT#XSEND`, which carries ASCII text only, and base64 makes the binary envelope safe to carry as text.
 
-## Security Properties
+## Security properties
 
 - **Authentication and authorization.** Only a sender that knows the claim token is accepted as the device with this serial number, and only the Cloud that knows it can answer the device.
 - **Integrity.** Without the claim token, nobody can create a new packet or modify an existing one so that the Cloud or the device accepts it. The chance of guessing a valid tag is 1 in 2<sup>64</sup> per attempt.
@@ -68,7 +68,7 @@ The base64 format is used only by CHESTER, whose nRF9160 modem is controlled by 
 - **No encryption.** The data travels in plain text. Where confidentiality is required, use a private APN with an IPsec tunnel (see [**Platform Security**](/chester/platform-security/platform-security)) or the [**DTLS envelope**](dtls-envelope.md).
 - **Keep the claim token secret.** It is both the proof of ownership when the device is added to the Cloud and the MAC key.
 
-## Size Limits
+## Size limits
 
 | Format | Maximum datagram | Data per downlink fragment |
 |---|---|---|
@@ -78,7 +78,7 @@ The base64 format is used only by CHESTER, whose nRF9160 modem is controlled by 
 - A device should keep its uplink datagrams within 508 bytes as well. CHESTER sends at most 360 bytes of data per fragment as base64.
 - The Cloud accepts datagrams of up to 1024 bytes. A longer datagram is truncated and fails verification.
 
-## Device Settings
+## Device settings
 
 Devices built on the nRF9151 select the envelope and the server with the `cloud config` shell command. `cloud config show` lists all cloud settings. The settings that apply to the MAC envelope:
 
@@ -101,7 +101,7 @@ config save
 
 CHESTER always uses the MAC envelope as base64 text. Its port (5003 by default) is set when the firmware is built, and its server address with `lte config addr`.
 
-## Invalid Envelopes
+## Invalid envelopes
 
 The Cloud does not respond to invalid base64, an envelope shorter than 14 bytes, the serial number 0 or a serial number unknown to the Cloud.
 

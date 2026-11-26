@@ -1,6 +1,6 @@
 ---
 slug: index
-title: RAKwireless - Gateways
+title: RAKwireless - gateways
 description: "RAKwireless LoRaWAN gateways tested by HARDWARIO, with reference resources for each device."
 ---
 
@@ -15,7 +15,7 @@ Here is a list of **RAKwireless gateways** tested by HARDWARIO, with reference r
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 To operate your LoRaWAN device, you can choose between two supported network server platforms. Both solutions allow you to manage gateways, register end devices, configure profiles, and process payload data.
 
@@ -23,7 +23,7 @@ To operate your LoRaWAN device, you can choose between two supported network ser
 
 A cloud-based LoRaWAN Network Server suitable for both small and large deployments.
 
-#### Gateway Registration on TTS
+#### Gateway registration on TTS
 
 1. Log in to your TTS Console (e.g., `hardwario-com.eu1.cloud.thethings.industries`).
 2. Go to **Gateways → Register gateway**.
@@ -52,7 +52,7 @@ Click **Register gateway** and **download both API keys** (CUPS + LNS).
 
 5. A new window will appear. Click **Download LNS key**, then **Download CUPS key** to save both API keys to your device. Once both files are downloaded, click **I have downloaded the keys**.
 ![TTS Download API Keys](images/tts-api-keys.png)
-#### Gateway Configuration
+#### Gateway configuration
 
 On your RAK gateway, navigate to **LoRa → Configuration** and select **Basics Station** as **Work mode**.
 - Make sure the **Frequency Plan** and **Country** match your regional settings.
@@ -74,7 +74,7 @@ Click on **Configure Basics Station server setup** and fill in the following fie
 
 An open-source LoRaWAN Network Server ideal for on-premise or private network installations.
 
-#### Gateway Registration on ChirpStack
+#### Gateway registration on ChirpStack
 1. In **ChirpStack v4**, open **Tenant → Gateways**.
 2. Click **Add Gateway**.
 ![Rak ChirpStack add Gateway](images/chirpstack-add-gateway.png)
@@ -85,7 +85,7 @@ An open-source LoRaWAN Network Server ideal for on-premise or private network in
 4. Click **Submit**.
 ![Rak ChirpStack config](images/chirpstack-config-gateway.png)
 
-#### Gateway Configuration
+#### Gateway configuration
 On your RAK gateway, navigate to **LoRa → Configuration** and select **Packet forwarder** as **Work mode**.
 - Make sure the **Frequency Plan** and **Country** match your regional settings.
 Select **Semtech UDP GWMP Protocol** as Protocol.
@@ -99,7 +99,7 @@ In **UDP Protocol parameters** category fill in the following fields:
 
 ---
 
-## OpenVPN Configuration
+## OpenVPN configuration
 
 To configure a secure OpenVPN connection on your RAK gateway, follow these steps:
 

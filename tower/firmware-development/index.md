@@ -1,5 +1,5 @@
 ---
-title: Firmware Development
+title: Firmware development
 description: "This section focuses on how to start developing your firmware for HARDWARIO TOWER devices."
 ---
 import Image from '@theme/IdealImage';

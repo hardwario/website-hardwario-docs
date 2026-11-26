@@ -20,7 +20,7 @@ the Lite variant, which comes down to hardware. See [**Introduction**](/fiber/) 
 [**Hardware Description**](/fiber/category/hardware-description) for everything else FIBER
 already covers.
 
-## What's Different
+## What's different
 
 | | FIBER (CM4) | FIBER Lite (Pi 5) |
 |---|---|---|
@@ -36,7 +36,7 @@ already covers.
 See [Data Flow](/fiber/installation#data-flow) on the Installation landing page for how the
 shared software stack fits together. It's identical on both variants.
 
-## Bill of Materials (FIBER Lite specific)
+## Bill of materials (FIBER Lite specific)
 
 | Component | Notes |
 |---|---|

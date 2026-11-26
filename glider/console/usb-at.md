@@ -1,11 +1,11 @@
 ---
-title: AT Console (USB-C)
+title: AT console (USB-C)
 description: "Talk to GLIDER over USB-C with AT commands: Linux serial port access, west serial-console in a Python virtualenv, basic AT commands and troubleshooting."
 sidebar_position: 2
 ---
 import Image from '@theme/IdealImage';
 
-# AT Console over USB-C
+# AT console over USB-C
 
 This page shows you how to communicate with GLIDER through its **USB-C** connector using **AT commands**. The AT console is the recommended interface for everyday work (provisioning, configuration, firmware updates) and requires no special debug hardware.
 
@@ -81,7 +81,7 @@ If you see errors instead, the issue is hardware-side (wrong cable, faulty conne
 
 The recommended way to install the HARDWARIO command-line tools is inside a Python **virtualenv**. This isolates the packages from your system Python and works on every modern Linux distribution.
 
-#### Step 1 - Verify `python3-venv` is installed
+#### Step 1 - verify `python3-venv` is installed
 
 ```bash
 dpkg -l python3-venv | tail -1
@@ -94,7 +94,7 @@ If it is missing:
 sudo apt install python3-venv
 ```
 
-#### Step 2 - Create the virtualenv
+#### Step 2 - create the virtualenv
 
 Inside your project folder:
 
@@ -102,7 +102,7 @@ Inside your project folder:
 python3 -m venv .venv
 ```
 
-#### Step 3 - Activate the virtualenv
+#### Step 3 - activate the virtualenv
 
 ```bash
 source .venv/bin/activate
@@ -110,7 +110,7 @@ source .venv/bin/activate
 
 Your shell prompt should now be prefixed with `(.venv)`.
 
-#### Step 4 - Install the required packages
+#### Step 4 - install the required packages
 
 ```bash
 pip install --upgrade pip
@@ -126,7 +126,7 @@ What you just installed:
 | `loguru` | Structured logging |
 | `rttt` | HARDWARIO console UI library that parses the `@LOG:` framing |
 
-#### Step 5 - Verify the installation
+#### Step 5 - verify the installation
 
 ```bash
 west --version

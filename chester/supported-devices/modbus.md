@@ -1,12 +1,12 @@
 ---
 slug: modbus_sensors
-title: Modbus Sensors
+title: Modbus sensors
 description: "Modbus devices tested with CHESTER: energy meters from Carlo Gavazzi, ORNO and Schneider Electric for CHESTER Energy and the Piketronic RPP-R radon probe."
 ---
 
 import Image from '@theme/IdealImage';
 
-# Modbus Sensors
+# Modbus sensors
 
 Here is a list of sensors tested by HARDWARIO, with their basic configuration:
 

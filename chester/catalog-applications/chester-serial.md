@@ -1,11 +1,11 @@
 ---
 slug: chester-serial
-title: CHESTER Serial
+title: CHESTER serial
 description: "CHESTER Serial catalog application: RS-485 Modbus RTU master for up to 8 devices or an RS-232 link, 11 device types, transparent mode and LoRaWAN packing."
 ---
 import Image from '@theme/IdealImage';
 
-# CHESTER Serial
+# CHESTER serial
 
 This article describes the core functionality, hardware description, default configuration, and example **JSON** message of the catalog application **CHESTER Serial**.
 
@@ -19,7 +19,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 :::
 
-## Application Overview
+## Application overview
 
 **CHESTER Serial** is a universal application for industrial serial communications. It works as a flexible gateway for integrating industrial devices (sensors, energy meters) into the cloud via LTE-M/NB-IoT or LoRaWAN.
 
@@ -29,11 +29,11 @@ The application supports two communication interfaces, depending on the installe
 
 It supports 11 device types including energy meters, environmental sensors, and generic Modbus devices. Data is transmitted via LTE (CBOR encoding) or LoRaWAN (optimized binary encoding with multi-device packing).
 
-## Application Variants
+## Application variants
 
 **CHESTER Serial** can be ordered in one of these variants:
 
-### CHESTER Serial RS-485 {#chester-serial-rs-485}
+### CHESTER serial RS-485 {#chester-serial-rs-485}
 
 This variant is equipped with the **CHESTER-X2** extension module. It is designed for standard industrial bus communication where multiple devices are connected in a daisy-chain topology.
 
@@ -50,7 +50,7 @@ The hardware of this application consists of the following ordering codes:
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
-### CHESTER Serial RS-232 {#chester-serial-rs-232}
+### CHESTER serial RS-232 {#chester-serial-rs-232}
 
 This variant is equipped with the **CHESTER-X12** extension module. It is intended for point-to-point communication with a single peripheral device, legacy equipment, or sensors requiring a direct serial link.
 
@@ -72,7 +72,7 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 
 :::
 
-## Supported Devices
+## Supported devices
 
 The firmware includes native support for the following devices:
 
@@ -96,9 +96,9 @@ You can also use short aliases for some device types: `microsens`, `sensecap`, `
 
 :::
 
-## Application Behavior
+## Application behavior
 
-### Modbus RTU Mode
+### Modbus RTU mode
 
 In Modbus mode, CHESTER acts as the Modbus RTU Master and periodically polls all configured slave devices:
 
@@ -107,7 +107,7 @@ In Modbus mode, CHESTER acts as the Modbus RTU Master and periodically polls all
 * Up to **8 devices** can be configured simultaneously on the RS-485 bus.
 * Supported Modbus functions: FC01, FC02, FC03, FC04, FC05, FC06, FC0F, and FC10.
 
-### Transparent Mode
+### Transparent mode
 
 In Transparent mode, CHESTER acts as a bidirectional bridge between the serial port and the cloud:
 
@@ -115,7 +115,7 @@ In Transparent mode, CHESTER acts as a bidirectional bridge between the serial p
 * Only one device can be connected (`device-0` slot only).
 * Useful for debugging, legacy equipment, or non-standard protocols.
 
-### LoRaWAN Multi-Device Packing
+### LoRaWAN multi-device packing
 
 When using LoRaWAN, the application uses adaptive multi-device packing (Protocol v2) to optimize airtime:
 
@@ -124,7 +124,7 @@ When using LoRaWAN, the application uses adaptive multi-device packing (Protocol
 * First uplink contains system data (battery, temperature, accelerometer) plus device data.
 * Subsequent uplinks contain only device data.
 
-## Technical Specifications
+## Technical specifications
 
 | Feature | Value |
 | :--- | :--- |
@@ -134,7 +134,7 @@ When using LoRaWAN, the application uses adaptive multi-device packing (Protocol
 | **Cloud Formats** | CBOR (LTE), Optimized Binary (LoRaWAN) |
 | **Power Supply** | External source (6–28V DC) required |
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -159,7 +159,7 @@ app config device-6
 app config device-7
 ```
 
-## Specific Commands
+## Specific commands
 
 :::info
 
@@ -173,7 +173,7 @@ To apply a new configuration, you need to call `config save`, which applies the 
 
 :::
 
-### Action Commands
+### Action commands
 
 Command to **trigger sample** immediately (and store the result in the sample buffer):
 
@@ -187,7 +187,7 @@ Command to **send data** immediately:
 send
 ```
 
-### Network Mode
+### Network mode
 
 Command to set the **communication mode**:
 
@@ -221,7 +221,7 @@ Command to set **LTE polling interval** in seconds (0 = disabled):
 app config interval-poll <0-86400>
 ```
 
-### Serial Line
+### Serial line
 
 Command to set **serial operating mode**:
 
@@ -253,7 +253,7 @@ Command to set **stop bits**:
 app config serial-stop-bits <1-2>
 ```
 
-### Device Configuration
+### Device configuration
 
 Configure device slots 0–7 using the format `type[,addr[,timeout]]`:
 
@@ -292,7 +292,7 @@ In Modbus mode, the Modbus slave address is required for all devices. In Transpa
 
 :::
 
-### Modbus Commands
+### Modbus commands
 
 Read Modbus registers from a slave device:
 
@@ -312,7 +312,7 @@ Sample the configured Modbus device:
 modbus sample
 ```
 
-### Serial Commands
+### Serial commands
 
 Send hex data on the serial line and wait for a response:
 
@@ -326,7 +326,7 @@ Read data from the serial RX buffer:
 serial recv [timeout_s]
 ```
 
-### Device Commands
+### Device commands
 
 List all configured devices:
 
@@ -361,7 +361,7 @@ device iem3000 <subcommand>
 
 The latest firmware is available in the Catalog Applications [Firmware chapter](index.md#application-firmware).
 
-## Example JSON Message
+## Example JSON message
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

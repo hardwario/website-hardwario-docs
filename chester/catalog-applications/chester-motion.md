@@ -19,7 +19,7 @@ Some of the basics are not provided, as they are common for all CHESTER catalog 
 
 :::
 
-## Application Overview
+## Application overview
 
 **CHESTER Motion** is a directional motion detection device that uses dual PIR sensors to detect and track movement direction (left-to-right and right-to-left). The application counts motion events with direction information, and sends aggregated telemetry data via LTE to the HARDWARIO Cloud.
 
@@ -31,7 +31,7 @@ Typical use cases:
 - Enhance security and optimize operations by monitoring human presence in various environments
 - Facilitate easy installation in remote or difficult-to-access locations due to its wireless design and battery longevity
 
-## Hardware Description {#chester-motion}
+## Hardware description {#chester-motion}
 
 The hardware of this application consists of the following ordering codes:
 
@@ -42,7 +42,7 @@ The hardware of this application consists of the following ordering codes:
 
 See [**Ordering Codes**](../ordering-codes.md) for more details.
 
-### Technical Specification
+### Technical specification
 
 | Parameter | Value |
 | :--- | :--- |
@@ -56,14 +56,14 @@ See [**Ordering Codes**](../ordering-codes.md) for more details.
 | Idle power consumption | < 180 µA |
 | Peak power consumption | < 250 mA |
 
-### PIR Sensor (CHESTER-S3)
+### PIR sensor (CHESTER-S3)
 
 | Parameter | Value |
 | :--- | :--- |
 | Detection range | Up to 3 meters |
 | Measurement angle | Max 80° |
 
-## Measurement and Behavior
+## Measurement and behavior
 
 The application operates in a three-stage pipeline:
 
@@ -96,7 +96,7 @@ A random jitter of 0-20% is added to the report interval to prevent multiple dev
 
 - Motion detection sensitivity can be configured using preset modes (**low**, **medium**, **high**) or **individual** custom parameters.
 
-### PIR Sensitivity Modes
+### PIR sensitivity modes
 
 The application offers three preset sensitivity modes and one custom mode:
 
@@ -117,7 +117,7 @@ The `motion-sens` parameter controls how strongly the sensor reacts to input. Hi
 
 :::
 
-### LED Behavior
+### LED behavior
 
 | LED | Condition | Behavior |
 | :--- | :--- | :--- |
@@ -135,7 +135,7 @@ Service mode LED indicators are only active when `service-mode-enabled` is set t
 
 :::
 
-### Button Behavior
+### Button behavior
 
 The INT button supports multi-click actions:
 
@@ -149,7 +149,7 @@ The INT button supports multi-click actions:
 
 Each button press is acknowledged with yellow LED flashes corresponding to the number of detected clicks.
 
-## Default Configuration
+## Default configuration
 
 This is the default configuration (printed using the `app config show` command):
 
@@ -166,7 +166,7 @@ app config service-mode-enabled false
 app config mode lte
 ```
 
-## Specific Commands
+## Specific commands
 
 :::info
 
@@ -246,7 +246,7 @@ Command to enable/disable **service mode** for real-time motion monitoring:
 app config service-mode-enabled <true|false>
 ```
 
-### Action Commands
+### Action commands
 
 Sample all sensors immediately:
 
@@ -276,7 +276,7 @@ motion samples
 
 The latest firmware is available in the Catalog Applications [Firmware chapter](index.md#application-firmware).
 
-## Example JSON Message
+## Example JSON message
 
 ```json
 {
@@ -332,7 +332,7 @@ The latest firmware is available in the Catalog Applications [Firmware chapter](
 }
 ```
 
-### Message Fields Description
+### Message fields description
 
 - **message**: Metadata (version, sequence, timestamp).
 - **system**: Power status (uptime, voltage, current).

@@ -6,7 +6,7 @@ description: "Milesight AM319 indoor air quality sensor with nine parameters inc
 
 import Image from '@theme/IdealImage';
 
-# Milesight Sensor AM319
+# Milesight sensor AM319
 
 Milesight AM319 is an **indoor air quality sensor** that measures **nine parameters** including temperature, humidity, CO₂, and particulate matter. It displays results on a **4.2" E-Ink screen** with clear indicators and transmits data via **LoRaWAN technology** for long-range, low-power communication.
 
@@ -28,7 +28,7 @@ Milesight AM319 is an **indoor air quality sensor** that measures **nine paramet
 [**AM319**](milesight-am319.md): the most advanced version with additional HCHO or O₃ measurement; must be powered by USB (no batteries).
 :::
 
-## Integration Links
+## Integration links
 | Resource        | Link                                                                 |
 |-----------------|----------------------------------------------------------------------|
 | HARDWARIO Store | https://www.hardwario.store/p/milesight-am319                        |
@@ -45,7 +45,7 @@ For sensor configuration instructions, see 👉 [**General configuration**](/sma
 
 ---
 
-## LoRaWAN Network Options
+## LoRaWAN network options
 
 For information about supported LoRaWAN network server platforms, see 👉[**LoRaWAN Network Options**](/smart-devices/milesight/sensors/index#lorawan-network-options)
 
@@ -66,7 +66,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Data Encoding & Decoding
+## Data encoding & decoding
 
 | Type | GitHub Link |
 |------|--------------|
@@ -75,7 +75,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Codec | [View codec](https://github.com/Milesight-IoT/SensorDecoders/blob/main/am-series/am319-hcho/am319-hcho-codec.json) |
 
 :::info
-### Terminology Overview
+### Terminology overview
 **Decoder** -> Converts the device's binary payload into readable JSON.<br />
 **Encoder** -> Converts JSON commands into binary payload for downlinks.<br />
 **Codec** -> Defines the rules for decoding and encoding (structure, fields, ports) used by network servers.
@@ -91,7 +91,7 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 
 ---
 
-## Technical Specifications
+## Technical specifications
 
 | **Parameter** | **Value** |
 |---------------|-----------|
@@ -103,8 +103,8 @@ For information about supported LoRaWAN network server platforms, see 👉[**LoR
 | Sensitivity | -137 dBm @300bps |
 | Mode | OTAA / ABP Class C |
 | **Sensors** | |
-| Temperature | -20°C ~ 60°C, Accuracy ±0.2~0.3°C, Resolution 0.1°C |
-| Humidity | 0% ~ 100% RH, Accuracy ±2% RH, Resolution 0.5% |
+| Temperature | −20 to +60 °C, Accuracy ±0.2–0.3 °C, Resolution 0.1°C |
+| Humidity | 0–100 % RH, Accuracy ±2% RH, Resolution 0.5% |
 | Motion (PIR) | 80° H, 55° V, max 5m |
 | Light | 0–60000 Lux (6 levels) |
 | TVOC | IAQ rating 1–5 or 0–2000 μg/m³ |

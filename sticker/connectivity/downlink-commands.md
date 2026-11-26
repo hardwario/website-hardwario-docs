@@ -1,11 +1,11 @@
 ---
 slug: downlink-commands
-title: Downlink Commands
+title: Downlink commands
 description: "STICKER remote management on fPort 85: action commands, set_param and get_param configuration, 18-byte alarm rules and history replay, as JSON or raw hex."
 ---
 import Image from '@theme/IdealImage';
 
-# Downlink Commands & Remote Management (`fPort 85`)
+# Downlink commands & remote management (`fPort 85`)
 
 STICKER processes remote commands received as LoRaWAN **downlinks on fPort 85** and returns response messages on **fPort 85**. In [**LoRa P2P**](./lora-p2p.md) mode the same commands and answers travel through the ProXimos Hub.
 
@@ -30,7 +30,7 @@ Parameters updated remotely via `set_param` take effect immediately in RAM. Howe
 
 ---
 
-## Action Commands (No Parameters)
+## Action commands (no parameters)
 
 Action commands execute system operations, trigger diagnostic reports, or ask for the device state.
 
@@ -55,7 +55,7 @@ Over LoRaWAN and P2P, firmware v2.0.0 accepts `set_param`, `get_param`, `get_inf
 
 ---
 
-## Remote Configuration (`set_param` & `get_param`)
+## Remote configuration (`set_param` & `get_param`)
 
 Over a radio, `set_param` can write the `application`, `sensors` and `alarms` configuration groups, except `calibration` (NFC or shell only) and `vendor_reset_allow` (vendor NFC channel or shell only). The `lorawan` group (region, ADR, data rate, `radio_mode`, identifiers and keys) is set only over NFC or the shell, and the P2P radio parameters only in the shell. `get_param` / `get_config` read them back over a radio, except the secret keys (AppKey, NwkKey, NwkSKey, AppSKey), which are readable only over NFC or the shell.
 
@@ -105,11 +105,11 @@ The v2.0.0 `ttn.js` on GitHub cannot encode the `alarms` fields `alarm_buzzer_mo
 
 ---
 
-## Dynamic Alarm Rules (`alarms`)
+## Dynamic alarm rules (`alarms`)
 
 Alarm rules can be updated over the air. Up to 16 rules (`alarm_0` to `alarm_15`) can be populated. Each rule watches one value, addressed by its **slot** (where the sensor sits) and **channel** (which value of that sensor). Active alarms send immediate uplink alerts on **fPort 3**.
 
-### Rule Layout (18 bytes)
+### Rule layout (18 bytes)
 
 Each `alarm_N` value is an 18-byte blob, written as a hex string in JSON:
 
@@ -167,7 +167,7 @@ If a table is split over several downlinks, set `alarms_replace` on the first me
 
 ---
 
-## Remote History Replay (`req_history`)
+## Remote history replay (`req_history`)
 
 To retrieve offline sensor logs buffered in flash memory during network outages, issue a `req_history` downlink specifying the desired Unix timestamp window. STICKER will stream the stored readings back as sequential `history_frame` pages on **fPort 85**, all with the request's `seq`.
 
@@ -181,7 +181,7 @@ To retrieve offline sensor logs buffered in flash memory during network outages,
 
 ---
 
-## Network Server Downlink Setup
+## Network server downlink setup
 
 - **ChirpStack v4:** Navigate to **Device → Queue**, select **fPort 85**. Enqueue either the raw hexadecimal payload or the structured JSON object (when using the device profile codec).
 - **The Things Stack (TTS):** Navigate to **Device → Messaging → Downlink**, set **fPort 85**. Paste the hex bytes directly or insert the JSON payload if the codec is assigned as the downlink payload formatter.

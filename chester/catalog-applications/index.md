@@ -1,11 +1,11 @@
 ---
 slug: catalog-applications
-title: Catalog Applications
+title: Catalog applications
 description: "Catalog applications are ready-made CHESTER firmware for common use cases: what each one does, which hardware it needs and how its data looks."
 ---
 import Image from '@theme/IdealImage';
 
-# Catalog Applications
+# Catalog applications
 
 This article provides information on the so-called **catalog application** for the **CHESTER** platform.
 
@@ -13,7 +13,7 @@ This article provides information on the so-called **catalog application** for t
 
 The **catalog applications** also serve as a great starting point for your own firmware application.
 
-## Application List
+## Application list
 
 For details on how each catalog application works, click on the application name in the table below.
 
@@ -49,7 +49,7 @@ Firmwares are located in the [**Application Firmware**](#application-firmware) c
 :::
 
 
-## Application Firmware for HARDWARIO Cloud {#application-firmware}
+## Application firmware for HARDWARIO Cloud {#application-firmware}
 
 These firmwares are for communication with the current [**HARDWARIO Cloud**](/cloud/).
 
@@ -71,7 +71,7 @@ Then apply changes by typing `config save`. The device will reboot and use the c
 
 :::
 
-#### Available Application Firmware Builds
+#### Available application firmware builds
 
 *SDK **v4.0.1** · NCS **3.4.1** · Zephyr **4.4.2** · [GitHub Release](https://github.com/hardwario/chester-sdk/releases/tag/v4.0.1)*
 
@@ -108,7 +108,7 @@ Then apply changes by typing `config save`. The device will reboot and use the c
 
 </div>
 
-## Application Firmware for Cloud Legacy {#application-firmware-cloud-v1}
+## Application firmware for Cloud legacy {#application-firmware-cloud-v1}
 
 These firmwares are for communication with the older [**HARDWARIO Cloud Legacy**](/cloud/legacy).
 

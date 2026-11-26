@@ -1,13 +1,13 @@
 ---
 slug: lorawan-modem-over-j-link
-title: LoRaWAN Modem over J-Link
+title: LoRaWAN modem over J-Link
 description: "Flash LoRaWAN modem firmware v1.4.1 into CHESTER with SEGGER J-Link on the LRW connector, then power-cycle the device to avoid undefined modem operation."
 ---
 import Image from '@theme/IdealImage';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# LoRaWAN Modem over J-Link
+# LoRaWAN modem over J-Link
 
 This article will describe how to flash the LoRaWAN modem firmware in CHESTER using SEGGER J-Link.
 
@@ -89,7 +89,7 @@ You can install **SEGGER J-Link Software and Documentation Pack** with these ste
 
 </Tabs>
 
-## Flashing Procedure
+## Flashing procedure
 
 Follow these steps to flash the LoRaWAN modem firmware in the CHESTER device:
 

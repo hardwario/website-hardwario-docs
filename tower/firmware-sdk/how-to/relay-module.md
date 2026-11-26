@@ -1,6 +1,6 @@
 ---
 slug: how-to-relay-module
-title: "How To: Relay Module"
+title: "How to: Relay Module"
 ---
 import Image from '@theme/IdealImage';
 

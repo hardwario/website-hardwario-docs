@@ -1,12 +1,12 @@
 ---
 slug: /usage
-title: Client Usage
+title: Client usage
 description: "TAPPER client command line usage: the commands, options and arguments for operating the NFC reader from the shell."
 ---
 
 import Image from '@theme/IdealImage';
 
-# TAPPER Client CLI Usage
+# TAPPER client CLI usage
 
 ## Commands
 
@@ -42,7 +42,7 @@ Run the client.
 - `--legacy` for use with legacy R1.0 hardware
 - `--help` display help
 
-#### Peripherals Behavior
+#### Peripherals behavior
 
 **LED**
 
@@ -93,7 +93,7 @@ See [MQTT TLS Setup](/tapper/tls-setup/)
 
 :::
 
-### Wi-Fi
+### Wi-fi
 
 - Wi-Fi can be set up either in static or in dynamic mode.
 

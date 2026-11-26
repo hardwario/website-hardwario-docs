@@ -13,7 +13,7 @@ import Image from '@theme/IdealImage';
 
 RAKwireless is widely recognized for its robust **LoRaWAN®** infrastructure products, modular node systems (WisBlock), and developer-friendly ecosystem. Their products are designed to support everything from rapid prototyping to mass commercial deployment in harsh industrial environments.
 
-### Key Product Categories
+### Key product categories
 
 The RAKwireless portfolio integrated into our documentation covers:
 
@@ -21,7 +21,7 @@ The RAKwireless portfolio integrated into our documentation covers:
 * **Sensors & End Nodes:** Ready-to-use sensors for environmental monitoring, tracking, and smart metering.
 * **Modular IoT (WisBlock):** A modular system that allows users to build custom sensor nodes by clicking together processing, sensing, and communication blocks like LEGO®.
 
-### Why Choose RAKwireless?
+### Why choose RAKwireless?
 
 * **Developer Centric:** Extensive documentation, open-source libraries, and active community support.
 * **Scalability:** Seamless transition from a WisBlock prototype to a finished commercial product inside an industrial enclosure.

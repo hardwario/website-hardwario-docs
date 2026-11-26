@@ -1,6 +1,6 @@
 ---
 slug: changelog
-title: CHESTER Changelog
+title: CHESTER changelog
 toc_min_heading_level: 2
 toc_max_heading_level: 2
 description: "This page tracks all notable changes across the CHESTER platform, including firmware, hardware, and catalog applications."
@@ -9,7 +9,7 @@ description: "This page tracks all notable changes across the CHESTER platform, 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# CHESTER Changelog
+# CHESTER changelog
 
 This page tracks all notable changes across the CHESTER platform, including **firmware**, **hardware**, and **catalog applications**. Use the tabs below to filter by change category.
 
@@ -21,7 +21,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ---
 
-## General Platform Updates
+## General platform updates
 
 <Tabs groupId="changelog-category">
 <TabItem value="all" label="Firmware & Applications" default>
@@ -189,7 +189,7 @@ This page tracks platform-level changes by **date**. For versioned SDK release n
 
 ---
 
-## Catalog Application Changelogs
+## Catalog application changelogs
 
 The table below links directly to the changelog section of each catalog application. The **Last Updated** column reflects when the changelog was last reviewed and updated in this documentation.
 

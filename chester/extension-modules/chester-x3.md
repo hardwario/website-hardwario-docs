@@ -1,6 +1,6 @@
 ---
 slug: chester-x3
-title: CHESTER-X3 (Precision ADC)
+title: CHESTER-X3 (precision ADC)
 description: "CHESTER-X3 precision ADC modules: X3A for two Pt 100 or Pt 1000 RTD sensors, X3B for two type K thermocouples, X3C for two load cells, with pinout."
 ---
 import Image from '@theme/IdealImage';
@@ -20,11 +20,11 @@ This article describes the CHESTER-X3A, CHESTER-X3B and CHESTER-X3C extension mo
 </div>
 <br />
 
-## CHESTER-X3A Module Overview
+## CHESTER-X3A module overview
 
 CHESTER-X3A provides 2 inputs for RTD (resistive temperature devices) sensors, such as Pt 100 and Pt 1000. Each input supports a 4-wire sensor connection to improve the accuracy.
 
-## CHESTER-X3B Module Overview
+## CHESTER-X3B module overview
 
 CHESTER-X3B allows connecting 2 type-K thermocouples (types B/C/E/J/N/R/S/T support on request) using a 2-wire sensor connection.
 
@@ -34,15 +34,15 @@ If X3B is in the **slot A**, then you have to use terminals **A2(-)** and **A3(+
 The second sensor connects to **CH2A(-)** and **CH2B(+)**.
 If X3B is in the **slot A**, then you have to use terminals **A6(-)** and **A7(+)**.
 
-## CHESTER-X3C Module Overview
+## CHESTER-X3C module overview
 
 CHESTER-X3C provides 2 inputs for load cells (strain gauges) that can be used for weight measurements. Each channel uses a 4-wire connection.
 
-## CHESTER Pin Configuration Diagram
+## CHESTER pin configuration diagram
 
 ![Terminal block pins 1–8 mapped to signals CH1P, CH1A, CH1B, CH1M, CH2P, CH2A, CH2B, CH2M](images/tb-chester-x3.png)
 
-## Pin Configuration and Functions
+## Pin configuration and functions
 
 | Position | Signal Name | Signal Description                |
 | -------- | ----------- | --------------------------------- |
@@ -64,6 +64,6 @@ A schematic diagram is useful if you program low-level hardware-related code or 
 
 ![CHESTER-X3 R3.2 schematic: two ADS122C04 ADC channels with input filtering and I2C interface](images/hio-chester-x3-r3.2-1.png)
 
-## Module Drawing
+## Module drawing
 
 ![CHESTER-X3 placement drawing with slot signals on top and channel terminals CH1P–CH2M on bottom](images/pc-chester-x3.png)

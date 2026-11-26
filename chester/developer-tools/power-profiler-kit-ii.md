@@ -83,7 +83,7 @@ After clicking at **Open** button, you should see a window similar to this one:
 </div>
 <br />
 
-## Basic Usage
+## Basic usage
 
 You will need the following hardware to connect **CHESTER** device to **PPK2**:
 
@@ -96,7 +96,7 @@ Please connect power cable from **PPK2** to **CHESTER** device.
 
 :::caution
 
-Please make sure that power cable is in **PPK2** connected same way as on the picture!
+Connect the power cable to the **PPK2** as shown in the picture.
 
 :::
 
@@ -164,7 +164,7 @@ When you click **Start** to capture data, your **PPK2** will start pulsing in co
 </div>
 <br />
 
-## Video Tutorial
+## Video tutorial
 
 Here is short video tutorial on **how to use Power Profiler Kit II** from **Nordic Semiconductor**.
 

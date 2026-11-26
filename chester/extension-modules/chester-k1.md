@@ -18,7 +18,7 @@ import Image from '@theme/IdealImage';
 </div>
 <br />
 
-## CHESTER Pin Configuration Diagram
+## CHESTER pin configuration diagram
 
 <Image img={require('./images/tb-chester-k1.webp')} alt="CHESTER-K1 terminal blocks: slot A carries GND, INP1, INM1, VOUT1, GND, INP2, INM2, VOUT2; slot B the same for channels 3 and 4" />
 
@@ -26,7 +26,7 @@ import Image from '@theme/IdealImage';
 
 The extension module **CHESTER-K1** uses both slots **A** and **B**. So you use the corresponding terminals **A1** to **A8** (left terminal block in the picture above) and **B1** to **B8** (right terminal block in the picture above).
 
-## Current Transformer Signals
+## Current transformer signals
 
 | Signal | Wire color |
 | ------ | ---------- |

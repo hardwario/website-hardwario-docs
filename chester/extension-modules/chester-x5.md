@@ -20,13 +20,13 @@ The **CHESTER-X5** is a **2-channel isolated voltage-input** extension module fo
 </div>
 </div>
 
-## Module Overview
+## Module overview
 
 CHESTER-X5 provides **two isolated voltage inputs**, each measuring **−50 V to +50 V**. Each channel uses a reinforced isolated amplifier (**AMC3330**) with an integrated isolated DC-DC converter, so the input is **galvanically isolated** from the CHESTER electronics and from the other channel. A precision 0.1% resistor divider scales the ±50 V input to the amplifier, and its differential output is digitized by a shared 24-bit **ADS122C04** I²C ADC, channel 1 on AIN0/AIN1 and channel 2 on AIN2/AIN3.
 
 Each channel's isolated amplifier is powered through its own load switch (**TPS22917**), so firmware can enable the channels independently and keep them off when idle to save energy. The ADC signals new samples on its data-ready line, which is routed to the slot's GP0 pin.
 
-## Key Features
+## Key features
 
 * **Two Isolated Inputs:** Two independent voltage channels, each with reinforced galvanic isolation.
 * **±50 V Range:** Each channel measures −50 V to +50 V.
@@ -34,7 +34,7 @@ Each channel's isolated amplifier is powered through its own load switch (**TPS2
 * **I²C Interface:** The ADC is read over I²C; data-ready is signalled on GP0/A0.
 * **Per-Channel Power Switching:** Each channel is powered through its own load switch (enabled via GP2 for channel 1, GP1 for channel 2) for low-power operation.
 
-## Typical Applications
+## Typical applications
 
 * **Isolated Voltage Measurement:** Measuring voltages that must be galvanically separated from the logic.
 * **Floating / High-Side Voltages:** Measuring signals that are not referenced to the system ground.
@@ -42,7 +42,7 @@ Each channel's isolated amplifier is powered through its own load switch (**TPS2
 * **Industrial Signal Measurement:** Industrial voltages where isolation is required for safety or accuracy.
 * **Ground-Loop-Free Measurement:** Avoiding ground loops between the measured circuit and the CHESTER node.
 
-## Technical Specifications
+## Technical specifications
 
 | Parameter | Value |
 | :--- | :--- |
@@ -59,7 +59,7 @@ Each channel's isolated amplifier is powered through its own load switch (**TPS2
 | **Board Interface** | Castellated holes on two opposite edges, soldered to the CHESTER mainboard |
 | **Hardware Revision** | R2.1 |
 
-## Key Components
+## Key components
 
 | Component | Part Number | Description |
 | :--- | :--- | :--- |
@@ -67,7 +67,7 @@ Each channel's isolated amplifier is powered through its own load switch (**TPS2
 | **ADC** | ADS122C04IPW | 24-bit 4-channel I²C ADC digitizing both channels |
 | **Load Switch (×2)** | TPS22917DBV | Per-channel power switch for the isolated amplifiers |
 
-## Pin Configuration
+## Pin configuration
 
 The module uses a standardized header layout compatible with CHESTER extension slots.
 
@@ -75,26 +75,26 @@ The module uses a standardized header layout compatible with CHESTER extension s
 The pin configuration shown is for the CHESTER-M CGLS mainboard.
 :::
 
-### CHESTER-X5 Connector Pinout
+### CHESTER-X5 connector pinout
 
 ![CHESTER-X5 terminal block pinout: INP1 on pin 2, INM1 on pin 3, INM2 on pin 6, INP2 on pin 7; pins 1, 4, 5, 8 do not connect](images/tb-chester-x5.png)
 
 | Pin | Signal | Type | Description |
 | :---: | :--- | :--- | :--- |
-| 1 | DNC | — | Do not connect (isolation spacing) |
+| 1 | DNC | – | Do not connect (isolation spacing) |
 | 2 | INP1 | Isolated Input | Channel 1 positive input |
 | 3 | INM1 | Isolated Input | Channel 1 negative input |
-| 4 | DNC | — | Do not connect (isolation spacing) |
-| 5 | DNC | — | Do not connect (isolation spacing) |
+| 4 | DNC | – | Do not connect (isolation spacing) |
+| 5 | DNC | – | Do not connect (isolation spacing) |
 | 6 | INM2 | Isolated Input | Channel 2 negative input |
 | 7 | INP2 | Isolated Input | Channel 2 positive input |
-| 8 | DNC | — | Do not connect (isolation spacing) |
+| 8 | DNC | – | Do not connect (isolation spacing) |
 
 :::info
 Each channel measures **−50 V to +50 V** and is **galvanically isolated** from the CHESTER electronics and from the other channel. The **DNC** pins (1, 4, 5, 8) have nothing connected. Leave them unconnected; they provide spacing that preserves the isolation between the channels and the logic side.
 :::
 
-### Host Interface (I²C)
+### Host interface (I²C)
 
 CHESTER-X5 is read over the standard **I²C** bus through the on-board **ADS122C04** ADC, which digitizes both isolated channels (channel 1 on AIN0/AIN1, channel 2 on AIN2/AIN3). The slot pins are used as follows:
 
@@ -107,7 +107,7 @@ CHESTER-X5 is read over the standard **I²C** bus through the on-board **ADS122C
 
 The ADC's I²C address is **0x40** by default; setting solder bridge **S1** changes it to **0x41**, so two CHESTER-X5 modules can be used on one CHESTER without a conflict. GP3/A3 is not used.
 
-## Input Connection
+## Input connection
 
 Connect the voltage source for **channel 1** to **INP1** (pin 2) and **INM1** (pin 3), and for **channel 2** to **INP2** (pin 7) and **INM2** (pin 6).
 
@@ -117,14 +117,14 @@ Because the inputs are galvanically isolated, the measured circuit does **not** 
 Do not exceed the **−50 V to +50 V** input range on either channel.
 :::
 
-### Enclosure Feed-Through
+### Enclosure feed-through
 
 Two options bring the input wiring into the enclosure:
 
 - **Cable gland (default):** route the conductors through a cable gland in the enclosure wall and wire them to the terminal block.
 - **Panel-mount connector (on request):** an external connector in the enclosure wall lets the user plug in the cable, with no loose wiring inside. Available on request.
 
-## Compatible CHESTER Configurations
+## Compatible CHESTER configurations
 
 The CHESTER-X5 module can be used with various CHESTER mainboard configurations. Below are examples of compatible setups:
 
@@ -145,14 +145,14 @@ The CHESTER-X5 module can be used with various CHESTER mainboard configurations.
 </div>
 </div>
 
-## Schematic Diagrams
+## Schematic diagrams
 
 The complete schematic (the two AMC3330 isolated input channels, their TPS22917 load switches, and the ADS122C04 ADC) is available as a PDF:
 
 - [Schematic (PDF)](pathname:///chester/extension-modules/schematics/hio-chester-x5-r2.1.pdf)
 - [Interactive CHESTER-X5 browser](pathname:///download/ibom/hio-chester-x5-r2.1.html)
 
-## Module Drawing
+## Module drawing
 
 <div style={{ maxWidth: '500px' }}>
 

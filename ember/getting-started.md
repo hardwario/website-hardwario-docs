@@ -8,7 +8,7 @@ import Image from '@theme/IdealImage';
 
 # EMBER Quick Start Guide
 
-Welcome! This page helps you **power up** your HARDWARIO **EMBER** and choose what to do next:
+This page helps you **power up** your HARDWARIO **EMBER** and choose what to do next:
 - Run a **managed LoRaWAN backend** operated by HARDWARIO (ChirpStack + Node-RED)
 - Connect EMBER to your own **ChirpStack**
 - Connect EMBER to **The Things Stack (TTS)**
@@ -100,9 +100,9 @@ After opening the application, look at the list where you should see your **EMBE
 
 ---
 
-## Step 3: Initial RouterOS Configuration Script
+## Step 3: Initial RouterOS configuration script
 
-### 3.1 Set Password
+### 3.1 Set password
 **Open a New Terminal window** (or connect via SSH to your EMBER at `172.31.255.254`):
 
 ![Winbox 4 Open new Terminal](images/winbox-open-terminal.png)    
@@ -125,7 +125,7 @@ Fill the box:
 
 ![Winbox 4 New password](images/winbox-change-pass-2.png)
 
-### 3.2 Run Base Configuration
+### 3.2 Run base configuration
 Then paste the following script, or you can do it manually.
 
 ```routeros
@@ -140,7 +140,7 @@ Then paste the following script, or you can do it manually.
 Press **Enter** to execute the script.
 Now you need to update RouterOS. Go to [Checks for RouterOS updates and installs if available.](#checks-for-routeros-updates-and-installs-if-available).
 
-#### Manual Setup:
+#### Manual setup:
 Sets the system identity to "ember".
 - **System → Identity** change your identity to **ember** and click **OK**.
 ![EMBER change identity](images/ember-change-identity.png)
@@ -179,13 +179,13 @@ Turns off the login note.
 
 ---
 
-### 3.3 Install IoT Package
+### 3.3 Install IoT package
 After reconnecting, go to the left panel **System → Packages → Check for Updates**. At the list, find **iot**, click on it. In the right panel, click **Enable** and then **Apply Changes**. A new window will open, click **OK** and wait a few seconds.
 ![EMBER IoT package install](images/ember-install-iot-package.png)
 
 ---
 
-### 3.4 Configure LoRa Interface and Update Bootloader
+### 3.4 Configure LoRa interface and update bootloader
 
 After reconnecting following the reboot, paste this script in the terminal to configure the LoRa interface:
 
@@ -268,7 +268,7 @@ Additional resources:
 
 ---
 
-### Self-Hosted LoRaWAN Server
+### Self-hosted LoRaWAN server
 If you already run another LoRaWAN server, you can set EMBER to forward packets to your server.
 
 Key note from the official Hotspot Configuration:

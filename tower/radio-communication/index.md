@@ -1,5 +1,5 @@
 ---
-title: Radio Communication
+title: Radio communication
 description: "Radio communication in HARDWARIO TOWER: the integrated sub-GHz radio with the Radio Dongle, or LoRaWAN with the LoRa Module."
 ---
 import Image from '@theme/IdealImage';

@@ -16,7 +16,7 @@ import Image from '@theme/IdealImage';
 
 <img src="/img/glider.webp" data-zoom-src="/img/glider.webp" width="540" alt="GLIDER" />
 
-## Quick Links
+## Quick links
 
 * [**Quick Start Guide**](first-steps.md): Step-by-step setup guide.
 * [**HARDWARIO Cloud Setup**](cloud-setup.md): Pair the device with the platform.
@@ -28,14 +28,14 @@ import Image from '@theme/IdealImage';
 * [**Commands**](category/commands): What commands the device understands.
 * [**CBOR Payload**](payload.md): How the device encodes the data it sends to the cloud.
 
-## Typical Use Cases
+## Typical use cases
 
 - Remote temperature monitoring in cold chains, warehouses, or greenhouses
 - Utility metering via pulse counting (water, gas, electricity)
 - Door, window, or other dry-contact event logging
 - Integrating Modbus RTU industrial sensors into HARDWARIO Cloud
 
-## Key Features
+## Key features
 
 | Feature | Description |
 |---|---|

@@ -1,6 +1,6 @@
 ---
 slug: chester-z1
-title: CHESTER-Z1 (Batt. Button LED)
+title: CHESTER-Z1 (batt. button LED)
 description: "CHESTER-Z1 top-cover module: 18650 Li-Ion backup battery, 6–26 V DC or solar input, illuminated buttons and a buzzer, controlled over I²C."
 ---
 import Image from '@theme/IdealImage';
@@ -19,7 +19,7 @@ This article describes the **CHESTER-Z1** top-cover extension module.
 </div>
 <br />
 
-## Module Overview
+## Module overview
 
 **CHESTER-Z1** combines a rechargeable Lithium-Ion battery backup, wide supply voltage input, and an optional human-machine interface (HMI) with illuminated push buttons and acoustic feedback. Primarily, it is used with **CHESTER-M** (mainboard), but it can also be used with [**HARDWARIO TOWER**](/tower/) and 3rd party ecosystems such as **Raspberry Pi**, **Arduino**, **ESP**, etc. The module is installed below the top cover of the Takachi WP13-18 series enclosure.
 
@@ -53,7 +53,7 @@ These are some typical use cases for **CHESTER-Z1** (more scenarios are possible
 
 For more details see [**Ordering Codes**](../ordering-codes.md#chester-z).
 
-## Technical Specification
+## Technical specification
 
 * Input DC voltage range (VIN): **6-26 VDC**, suitable also for **12-18V solar panel\***
 * Nominal battery voltage: **3.7 V**
@@ -78,11 +78,11 @@ For the initial start powered from the battery without a DC input power supply, 
 
 Due to the low charging current (100 mA), the charging temperature range is extended to -20 to +45°C. Optimal Li-Ion battery type for low temperature outdoor application is Samsung ICR18650-22P.
 
-## Module Drawing
+## Module drawing
 
 ![CHESTER-Z1 board drawing locating battery holder BT1, bypass button S6, VIN inputs JP1/JP2, and SYSTEM connector](images/chester-z1.png)
 
-## Input / Output and Functions
+## Input / output and functions
 
 | Position | Name    | Signal Description                  |
 | -------- | ------- | ----------------------------------- |
@@ -95,14 +95,14 @@ Due to the low charging current (100 mA), the charging temperature range is exte
 
 _\* Use the BYPASS BUTTON to initiate start from the battery without DC input power supply_
 
-## SYSTEM Connector Pinout Description
+## SYSTEM connector pinout description
 
 ![SYSTEM connector pins 1–7 mapped to NC, +V, GND, VDD, SCL, SDA, INT](images/system.png)
 
-## Block Diagram
+## Block diagram
 ![Block diagram: protected DC input, regulators, Li-Ion charger and protection, Cortex-M0+ MCU, HMI, system connector](images/chester-z-block-diagram.png)
 
-## Schematic Diagram
+## Schematic diagram
 
 A schematic diagram is useful if you program low-level hardware-related code or if you're just curious about how the system is designed.
 

@@ -1,6 +1,6 @@
 ---
 slug: about-hardwario-code
-title: About HARDWARIO Code
+title: About HARDWARIO code
 description: "Install HARDWARIO Code, a modified Visual Studio Code that includes every tool needed for TOWER firmware development, on Windows, Linux or macOS."
 ---
 import Image from '@theme/IdealImage';

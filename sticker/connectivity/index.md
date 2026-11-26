@@ -1,11 +1,11 @@
 ---
 slug: /connectivity
-title: Connectivity Overview
+title: Connectivity overview
 description: "HARDWARIO STICKER supports multiple wireless communication protocols, allowing you to select the optimal radio architecture for your deployment requirements."
 ---
 import Image from '@theme/IdealImage';
 
-# Connectivity Overview
+# Connectivity overview
 
 HARDWARIO STICKER supports multiple wireless communication protocols, allowing you to select the optimal radio architecture for your deployment requirements.
 
@@ -15,7 +15,7 @@ Regardless of the chosen connectivity protocol, radio state and credentials can 
 
 ---
 
-## Protocol Comparison
+## Protocol comparison
 
 | Feature | LoRaWAN | LoRa P2P |
 |---|---|---|
@@ -27,16 +27,16 @@ Regardless of the chosen connectivity protocol, radio state and credentials can 
 
 ---
 
-## Available Protocols
+## Available protocols
 
-### LoRaWAN Integration
+### LoRaWAN integration
 Standard LoRaWAN Class A operation with OTAA/ABP activation, encrypted telemetry, and remote management over fPort 85. Regions EU868, US915, AU915 and AS923 (AS923-1). The data rate is either managed by ADR or, with ADR off, fixed with `lrw-datarate` (`dr0` to `dr7`). Answers that do not fit one frame are split into pages that the device sends by itself, and `get_radio_state` reports the link state and radio diagnostics.
 
 - **[ChirpStack v4 Integration](./lorawan-chirpstack.md)**: Setup guide for self-hosted ChirpStack LNS deployments.
 - **[The Things Stack Integration](./lorawan-tts.md)**: Setup guide for TTS Cloud and Community Edition.
 - **[Downlink Commands](./downlink-commands.md)**: Reference guide for remote parameter configuration over fPort 85.
 
-### LoRa P2P (Peer-to-Peer)
+### LoRa P2P (peer-to-peer)
 Second radio mode, available since firmware v2.0.0, for sites without a LoRaWAN network. STICKER pairs with a ProXimos Hub through a HARDWARIO FIBER modem and talks the HARDWARIO TOWER radio protocol, with gateway acknowledgements, downlinks, network time and link supervision. Telemetry, alarms, commands and history work as over LoRaWAN.
 
 - **[LoRa P2P Guide](./lora-p2p.md)**: Architecture, radio parameters, and configuration.

@@ -1,6 +1,6 @@
 ---
 slug: firmware-flashing
-title: Firmware Flashing
+title: Firmware flashing
 title_meta: "Firmware Flashing (HARDWARIO TOWER)"
 ---
 import Image from '@theme/IdealImage';
@@ -8,7 +8,7 @@ import ReactPlayer from 'react-player'
 
 This chapter focuses on the **Firmware Tab** of Playground.
 
-## Firmware Tab
+## Firmware tab
 
 This tab allows you to **flash pre-compiled firmware** for all HARDWARIO projects from our [**GitHub**](https://github.com/orgs/hardwario/repositories).
 
@@ -32,7 +32,7 @@ If you are flashing **Radio Dongle** make sure that you have it **Disconnected**
 
 <Image img={require('./images/playground-firmware.png')} alt="Firmware tab with a firmware selected, device dropdown, and the red Flash firmware button" />
 
-## Video Tutorial
+## Video tutorial
 
 If you prefer a video guide, you can watch this video for the older Playground version, but it works the same.
 

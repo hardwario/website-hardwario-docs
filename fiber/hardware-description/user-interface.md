@@ -1,13 +1,13 @@
 ---
-title: User Interface
+title: User interface
 description: "Local user interface of FIBER: a backlit graphical LCD with real-time sensor values, navigation buttons, a status LED per 1-Wire port and a buzzer."
 ---
 
-# User Interface
+# User interface
 
 **FIBER** offers several local interfaces designed for clarity and quick diagnostics:
 
-### LCD Display
+### LCD display
 
 * Backlit graphical display
 * Shows real-time sensor values and device diagnostics
@@ -22,7 +22,7 @@ description: "Local user interface of FIBER: a backlit graphical LCD with real-t
 * One LED per 1-Wire port
 * Visual feedback for sensor presence, activity, and errors
 
-### Acoustic Buzzer
+### Acoustic buzzer
 
 * Provides audible alerts
 * Useful for alarms or feedback during configuration

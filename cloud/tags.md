@@ -9,7 +9,7 @@ title_meta: "Tags (HARDWARIO Cloud)"
 
 Tags are **named labels with a color** that you assign to both devices and connectors. They are the glue that connects devices to connectors: a message from a device is forwarded only to connectors that share at least one tag with that device.
 
-## Why Tags?
+## Why tags?
 
 Tags let you route messages flexibly without hardcoding device IDs anywhere:
 
@@ -17,7 +17,7 @@ Tags let you route messages flexibly without hardcoding device IDs anywhere:
 - Many devices → one connector (assign the same tag to all of them)
 - Separate environments: `production` tag vs `dev` tag, each connected to a different endpoint
 
-## Creating a Tag
+## Creating a tag
 
 1. Open **Tags** in the left sidebar and click **+&nbsp;NEW TAG**.
 
@@ -31,7 +31,7 @@ Tags let you route messages flexibly without hardcoding device IDs anywhere:
 
    </div>
 
-## Assigning Tags
+## Assigning tags
 
 Tags can be assigned in two places:
 
@@ -40,7 +40,7 @@ Tags can be assigned in two places:
 
 A device with no tags assigned will not trigger any connector.
 
-## Access Type
+## Access type
 
 Tags have an `access_type` field:
 
@@ -49,7 +49,7 @@ Tags have an `access_type` field:
 | `write` | Full access. Tag can be used for both reading messages and sending downlinks |
 | `read` | Read-only. Tag can receive messages but cannot be used for downlinks |
 
-## Example Setup
+## Example setup
 
 ```
 Tag: "temperature-sensors"

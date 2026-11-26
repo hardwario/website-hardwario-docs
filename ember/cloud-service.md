@@ -1,11 +1,11 @@
 ---
 slug: cloud-service
-title: Managed Network Server
+title: Managed network server
 description: "Managed LoRaWAN network server for EMBER: HARDWARIO can host ChirpStack or The Things Stack for you as an alternative to self-hosting."
 ---
 import Image from '@theme/IdealImage';
 
-# Managed Network Server
+# Managed network server
 
 The LoRaWAN Network Server for **EMBER** (**ChirpStack** or **The Things Stack**) can be either self-hosted on your own infrastructure (see [**ChirpStack**](lorawan-network-server/lorawan-chirpstack.md) and [**The Things Stack**](lorawan-network-server/lorawan-tts.md)) or operated by **HARDWARIO** as a managed service. This page describes the managed service. Besides the managed network server, **HARDWARIO** optionally provides a SIM card with connectivity for the **LTE** backhaul and secure remote access via **OpenVPN**.
 
@@ -17,7 +17,7 @@ Access is secured by the **HTTPS/TLSv1.3** protocol, and the user identity is cr
 
 You do not need any specialized software on your PC/mobile to manage the service. An up-to-date web browser is sufficient.
 
-## Web Management
+## Web management
 
 The web management provides access to **ChirpStack** and **Node-RED** applications through the **Teleport** service.
 
@@ -51,7 +51,7 @@ The services mentioned below are accessible through the **Applications** menu it
 
 To access the specific service, click on the **LAUNCH** button.
 
-## ChirpStack LoRaWAN Server
+## ChirpStack LoRaWAN server
 
 The **Teleport** service will bring the user to the following URL:
 
@@ -71,11 +71,11 @@ You do not need to change them, because you are identified and authenticated by 
 
 :::
 
-### LoRaWAN Gateways
+### LoRaWAN gateways
 
 List of all **EMBER Hotspots** with the **Last seen** value and activity overview.
 
-### LoRaWAN Applications
+### LoRaWAN applications
 
 In this section, the user can define the method to pass data from the **LoRaWAN** devices to **LoRaWAN** applications (which can be the user's endpoints).
 
@@ -105,7 +105,7 @@ For security reasons, the **ABP** method is suitable for the LoRaWAN devices whe
 
 :::
 
-## Node-RED Application
+## Node-RED application
 
 The **Teleport** service will bring the user to the following URL:
 
@@ -278,7 +278,7 @@ After decoding, you can further process the data: scalarizing, adding attributes
 
 To tune and troubleshoot flow, you can use the `debug` node and the console view in **Node-RED**.
 
-### Integration Examples
+### Integration examples
 
 Data can be passed to any service via the Internet for processing, e.g., visualization, data storage, and integration with business applications.
 

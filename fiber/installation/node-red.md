@@ -33,7 +33,7 @@ description: "Install Node-RED on FIBER, set a credential secret and adminAuth p
 
 1. Now, you can access **Node-RED** at this address: `http://[TARGET IP ADDRESS]:1880/`
 
-## Hardening & Data Flow
+## Hardening & data flow
 
 1. Set an explicit credential-encryption secret. Without this, Node-RED regenerates a new one on
    every restart and any stored flow credentials become unrecoverable. In

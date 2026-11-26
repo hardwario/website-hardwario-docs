@@ -4,7 +4,7 @@ title: Scan multiple devices
 description: "Tap many STICKER devices in one HARDWARIO Manager session to capture their configurations and export them together as JSON or CSV for inventory or backup."
 ---
 
-# Scan multiple STICKERs (batch export)
+# Scan multiple STICKER devices (batch export)
 
 Capture the configuration of many devices in one session and export them
 together, useful for inventory, audits, and backups before a change.

@@ -7,9 +7,9 @@ title_meta: "Configuration (video tutorials)"
 
 import Image from '@theme/IdealImage';
 
-# ChirpStack v4 - Configuration
+# ChirpStack v4 - configuration
 
-## Tutorial Overview
+## Tutorial overview
 
 In this guide, you’ll learn how to add gateways, create device profiles, register devices and decode payloads in ChirpStack v4.
 

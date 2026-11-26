@@ -6,7 +6,7 @@ const sidebars = {
     'introduction',
     {
       type: 'category',
-      label: 'User Guide',
+      label: 'User guide',
       className: 'sidebar-section',
       collapsible: false,
       items: [
@@ -17,7 +17,7 @@ const sidebars = {
         'hardwario-manager',
         {
           type: 'category',
-          label: 'STICKER Variants',
+          label: 'STICKER variants',
           link: {
             type: 'doc',
             id: 'catalog-applications/index',
@@ -40,7 +40,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'External Sensor Support',
+                  label: 'External Sensor support',
                   link: {
                     type: 'doc',
                     id: 'sticker-input-wiring/external-sensors',
@@ -135,7 +135,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Hardware Description',
+          label: 'Hardware description',
           link: {
             type: 'doc',
             id: 'hardware-description',
@@ -156,7 +156,7 @@ const sidebars = {
         'connectivity/downlink-commands',
         {
           type: 'category',
-          label: 'Developer Access',
+          label: 'Developer access',
           link: {
             type: 'doc',
             id: 'developer-mode',

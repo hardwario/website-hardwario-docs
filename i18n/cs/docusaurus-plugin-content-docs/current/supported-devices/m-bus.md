@@ -32,7 +32,7 @@ M-Bus je běžný v automatizaci budov a v systémech chytrého měření, kde s
 
 ### Napětí a napájení {#voltage-and-power}
 - **Jmenovité napětí sběrnice**: 24 V DC
-- **Typický odběr jednoho podřízeného zařízení**: ~1,5 mA
+- **Typický odběr jednoho podřízeného zařízení**: přibližně 1,5 mA
 - Master musí mít dost výkonu, aby napájel všechna připojená zařízení
 - Některé mastery M-Bus obslouží až 250 podřízených zařízení, podle dostupného výkonu a kapacity budiče
 

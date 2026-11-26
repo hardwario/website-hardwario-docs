@@ -102,7 +102,7 @@ Přehled podporovaných platforem síťových serverů LoRaWAN najdete v části
 | Detekuje | Elektronické cigarety, klasické cigarety, marihuana |
 | **Senzory prostředí** | |
 | Teplota | -20°C ~ +60°C, přesnost ±0,2°C |
-| Vlhkost | 0% ~ 100% RH, přesnost ±2% |
+| Vlhkost | 0–100 % RH, přesnost ±2% |
 | Prachové částice | PM1.0, PM2.5, PM10 (0-1000 μg/m³) |
 | TVOC | 0-2000 μg/m³ |
 | **Upozornění a indikace** | |

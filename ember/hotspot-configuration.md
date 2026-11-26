@@ -1,15 +1,15 @@
 ---
 slug: hotspot-configuration
-title: Hotspot Configuration
+title: Hotspot configuration
 description: "Details of the EMBER Hotspot configuration, which is defined by the RouterOS configuration script."
 ---
 import Image from '@theme/IdealImage';
 
-# Hotspot Configuration
+# Hotspot configuration
 
 In this article, you will find details on the EMBER Hotspot configuration. It is defined by the [**RouterOS configuration script**](https://help.mikrotik.com/docs/display/ROS/Getting+started).
 
-## System Concept
+## System concept
 
 There is at least one site for **EMBER** service, but you can use several network server instances and several sites.
 
@@ -29,7 +29,7 @@ The redundant site configuration comes with a minimum of two **EMBER Hotspot** u
 
 :::
 
-## IP Addresses
+## IP addresses
 
 These are the interfaces to which **IP** addresses apply:
 
@@ -67,7 +67,7 @@ The management is available through these services:
 
 The access is limited from the **LAN** IP network `172.31.255.0/24` and the managed service VPN endpoints `192.168.16.1` + `192.168.17.1`.
 
-## VPN Tunnels
+## VPN tunnels
 
 The HARDWARIO [managed service](cloud-service.md) is interconnected with all **EMBER Hotspot** units by two independent VPN tunnels over the **LTE** internet connectivity:
 
@@ -75,13 +75,13 @@ The HARDWARIO [managed service](cloud-service.md) is interconnected with all **E
 
 * **WireGuard**: UDP-based VPN for remote management of **EMBER Hotspot**
 
-## Protocol Basis
+## Protocol basis
 
 The supported **LoRaWAN** protocol is based on the [**LoRaWAN specification**](https://lora-alliance.org/about-lorawan/).
 
 The supported **LTE** connectivity is based on **3GPP** specifications.
 
-## Naming Convention
+## Naming convention
 
 The **EMBER Hotspot** name is a compound of the customer identifier + managed service index + **EMBER Hotspot** index.
 
@@ -114,7 +114,7 @@ upgrade. An interrupted upgrade can leave the modem in an unusable state.
 :::
 
 ![LTE update](./images/ember-update-lte.png)
-## Interface Configuration
+## Interface configuration
 
 ### LAN
 
@@ -144,7 +144,7 @@ Replace `internet` with the **APN** provided by your mobile carrier.
 
 :::
 
-#### SIM PIN Unlock
+#### SIM PIN unlock
 
 If the **SIM** card requires a **PIN** code, unlock it with:
 
@@ -254,11 +254,11 @@ In case you do not use the HARDWARIO managed service, you have to use your **LoR
     - The `Gateway EUI` (labeled as `Gateway ID` on RouterOS under `LoRa` > `Devices` > `gateway`)
     - Frequency (according to the device's location)
 
-## Securing Access
+## Securing access
 
 The **EMBER Hotspot** is secured by a firewall and additional configuration options based on [**this MikroTik article**](https://help.mikrotik.com/docs/display/ROS/Securing+your+router).
 
-### Interface Lists
+### Interface lists
 
 ```
 /interface list add name=wan

@@ -1,6 +1,6 @@
 ---
 slug: event-driven-programming
-title: Event-driven Programming
+title: Event-driven programming
 ---
 import Image from '@theme/IdealImage';
 
@@ -14,7 +14,7 @@ For example, you can set up an event that will be called each time that somethin
 
 :::
 
-## Example of Event-Driven Programming
+## Example of event-driven programming
 
 You need to set the event handler, which is a specific function that will be called when some event occurs.
 

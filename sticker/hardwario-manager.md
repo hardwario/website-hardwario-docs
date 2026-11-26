@@ -37,7 +37,7 @@ workflow. The app itself is documented in full under **APPS**:
 ## NFC needs a powered device
 
 Since firmware **v2.0.0**, every phone command goes through the mailbox of the
-STICKER's NFC chip: one tap, phone held still, the same on Android and iOS. The
+the STICKER NFC chip: one tap, phone held still, the same on Android and iOS. The
 mailbox only works while the device runs, so **the batteries must be in**. A
 device with no batteries, or with a dead battery, reads as a blank tag.
 Configuring a device with no batteries inserted is no longer possible.

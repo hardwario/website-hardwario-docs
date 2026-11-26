@@ -1,6 +1,6 @@
 ---
 slug: changelog
-title: STICKER Changelog
+title: STICKER changelog
 toc_min_heading_level: 2
 toc_max_heading_level: 2
 description: "This page tracks all notable changes across the STICKER platform, including firmware and catalog applications."
@@ -9,7 +9,7 @@ description: "This page tracks all notable changes across the STICKER platform, 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# STICKER Changelog
+# STICKER changelog
 
 This page tracks all notable changes across the STICKER platform, including **firmware** and **catalog applications**. Use the tabs below to filter by change category.
 
@@ -21,7 +21,7 @@ Firmware source: [hardwario/sticker-firmware](https://github.com/hardwario/stick
 
 ---
 
-## General Platform Updates
+## General platform updates
 
 :::info Upcoming Platform Updates
 
@@ -148,7 +148,7 @@ No hardware revisions have been logged yet. Hardware updates will appear here wh
 
 ---
 
-## Catalog Application Changelogs
+## Catalog application changelogs
 
 | Application | Changelog | Last Updated |
 |---|---|---|

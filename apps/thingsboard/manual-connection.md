@@ -10,7 +10,7 @@ import EditCodeBlock from './edit-code-block.js';
 # Manual connection
 
 :::tip Most devices don't need this
-The [automatic connection](/apps/thingsboard/cloud-connection) is simpler: you add one connector and every tagged device appears by itself. Use the manual connection only for devices that **already exist** in HARDWARIO Dashboards, or when you need your own data format.
+The [automatic connection](/apps/thingsboard/cloud-connection) is simpler: you add one connector and every tagged device appears by itself. Use the manual connection when you want **your own device settings or data format**, for example a device profile with alarm rules, or for devices that **already exist** in HARDWARIO Dashboards.
 :::
 
 With the manual connection, each device in HARDWARIO Dashboards has an **access token**. A connector in HARDWARIO Cloud reads the token from a device label and sends the device's data to it.

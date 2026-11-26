@@ -10,7 +10,7 @@ import EditCodeBlock from '../../../../../apps/thingsboard/edit-code-block.js';
 # Ruční připojení {#manual-connection}
 
 :::tip Většina zařízení to nepotřebuje
-[Automatické připojení](/apps/thingsboard/cloud-connection) je jednodušší: přidáte jeden konektor a každé otagované zařízení se objeví samo. Ruční připojení použijte jen pro zařízení, která už v HARDWARIO Dashboards **existují**, nebo když potřebujete vlastní formát dat.
+[Automatické připojení](/apps/thingsboard/cloud-connection) je jednodušší: přidáte jeden konektor a každé otagované zařízení se objeví samo. Ruční připojení použijte, když chcete **vlastní nastavení zařízení nebo formát dat**, třeba profil zařízení s pravidly alarmů, nebo pro zařízení, která už v HARDWARIO Dashboards **existují**.
 :::
 
 Při ručním připojení má každé zařízení v HARDWARIO Dashboards svůj **access token**. Konektor v HARDWARIO Cloud si token přečte z labelu zařízení a pošle na něj data zařízení.

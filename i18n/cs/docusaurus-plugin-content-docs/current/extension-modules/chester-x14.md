@@ -77,21 +77,21 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 
 ### Zapojení konektoru CHESTER-X14 {#chester-x14-connector-pinout}
 
-![Zapojení svorkovnice CHESTER-X14: Tx+, Tx-, Rx+, Rx-, GND, +VIN, +V, INT na pinech 1-8](../../../../../chester/extension-modules/images/tb-chester-x14.png)
+![Zapojení svorkovnice CHESTER-X14: INT, +V, +VIN, GND, Rx-, Rx+, Tx-, Tx+ na pinech 1-8](../../../../../chester/extension-modules/images/tb-chester-x14.png)
 
 | Pin | Signál | Typ | Popis |
 | :---: | :--- | :--- | :--- |
-| 1 | Tx+ | Ethernet | Vysílací pár (kladný) |
-| 2 | Tx- | Ethernet | Vysílací pár (záporný) |
-| 3 | Rx+ | Ethernet | Přijímací pár (kladný) |
-| 4 | Rx- | Ethernet | Přijímací pár (záporný) |
-| 5 | GND | Zem | Systémová zem |
-| 6 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (6-28 V DC) |
-| 7 | +V | Napájecí výstup | Pevných 5 V ze snižujícího měniče na desce (napájí základní desku CHESTER) |
-| 8 | INT | Výstup | Výstup přerušení k základní desce CHESTER |
+| 1 | INT | Výstup | Výstup přerušení k základní desce CHESTER |
+| 2 | +V | Napájecí výstup | Pevných 5 V ze snižujícího měniče na desce (napájí základní desku CHESTER) |
+| 3 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (6-28 V DC) |
+| 4 | GND | Zem | Systémová zem |
+| 5 | Rx- | Ethernet | Přijímací pár (záporný) |
+| 6 | Rx+ | Ethernet | Přijímací pár (kladný) |
+| 7 | Tx- | Ethernet | Vysílací pár (záporný) |
+| 8 | Tx+ | Ethernet | Vysílací pár (kladný) |
 
 :::info
-Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 6) připojené externí napájení **6-28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V** na **+V** (pin 7), kterými se napájí základní deska CHESTER.
+Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 3) připojené externí napájení **6-28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V** na **+V** (pin 2), kterými se napájí základní deska CHESTER.
 :::
 
 ### Rozhraní k hostu (SPI) {#host-interface-spi}
@@ -105,15 +105,15 @@ Na rozdíl od většiny modulů CHESTER-X (které používají **I²C**) komunik
 | GP2 | SCLK | ETH_SCLK |
 | GP3 | CS | ETH_CS |
 
-Výstup přerušení (INTn) čipu W5500 je vyvedený na svorku **INT** modulu (pin 8). Viz podsekce [Pin přerušení](#interrupt-pin) níže.
+Výstup přerušení (INTn) čipu W5500 je vyvedený na svorku **INT** modulu (pin 1). Viz podsekce [Pin přerušení](#interrupt-pin) níže.
 
 ### Pin přerušení {#interrupt-pin}
 
-Kontrolér W5500 signalizuje události (například příchozí paket) na svém výstupu přerušení, který je vyvedený na svorku **INT** modulu (pin 8). Toto přerušení **musí být propojené se svorkou INT základní desky CHESTER**, aby ho deska mohla zaznamenat. Na základní desce **CHESTER-M CGLS** přidejte propojovací vodič ze svorkovnice rozšiřujícího modulu na svorku INT základní desky. Zapojení níže je znázorněné pro modul ve **slotu B**; modul v jiném slotu se stejným způsobem připojí ke svorce INT daného slotu.
+Kontrolér W5500 signalizuje události (například příchozí paket) na svém výstupu přerušení, který je vyvedený na svorku **INT** modulu (pin 1). Toto přerušení **musí být propojené se svorkou INT základní desky CHESTER**, aby ho deska mohla zaznamenat. Na základní desce **CHESTER-M CGLS** přidejte propojovací vodič ze svorkovnice rozšiřujícího modulu na svorku INT základní desky. Zapojení níže je znázorněné pro modul ve **slotu B**; modul v jiném slotu se stejným způsobem připojí ke svorce INT daného slotu.
 
 ![Nákres základní desky CHESTER s vodičem, který spojuje svorku INT slotu B s pinem přerušení modulu](../../../../../chester/extension-modules/images/int-pin.png)
 
-* Příklad: zapojení přerušení pro modul ve slotu B (CHESTER-M CGLS): INT modulu (pin 8) je na svorce **B8**.
+* Příklad: zapojení přerušení pro modul ve slotu B (CHESTER-M CGLS).
 
 ## Připojení Ethernetu {#ethernet-connection}
 
@@ -125,11 +125,11 @@ Ethernetový kabel zapojte do svorkovnice podle tabulky níže. Pin RJ-45 a barv
 
 | Pin RJ-45 | Vodič (T568B) | Signál Ethernetu | Pin CHESTER-X14 |
 | :---: | :--- | :--- | :---: |
-| 1 | Bílo-oranžový | ETH_TD+ (Tx+) | 1 |
-| 2 | Oranžový | ETH_TD- (Tx-) | 2 |
-| 3 | Bílo-zelený | ETH_RD+ (Rx+) | 3 |
-| 6 | Zelený | ETH_RD- (Rx-) | 4 |
-| 8 | Hnědý | ETH_GND (GND) | 5 |
+| 1 | Bílo-oranžový | ETH_TD+ (Tx+) | 8 |
+| 2 | Oranžový | ETH_TD- (Tx-) | 7 |
+| 3 | Bílo-zelený | ETH_RD+ (Rx+) | 6 |
+| 6 | Zelený | ETH_RD- (Rx-) | 5 |
+| 8 | Hnědý | ETH_GND (GND) | 4 |
 
 ### Průchod krabičkou {#enclosure-feed-through}
 

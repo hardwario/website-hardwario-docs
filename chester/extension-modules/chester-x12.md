@@ -81,21 +81,21 @@ The pin configuration shown is for the CHESTER-M CGLS mainboard.
 
 ### CHESTER-X12 Connector Pinout
 
-![CHESTER-X12 terminal block pinout](images/tb-chester-x12.png)
+![CHESTER-X12 terminal block pinout: GND, VDD, RS232 RX, RS232 TX, GND, +V, GND, +VIN on pins 1-8](images/tb-chester-x12.png)
 
 | Pin | Signal | Type | Description |
 | :---: | :--- | :--- | :--- |
-| 1 | +VIN | Power Input | Optional external DC input to the on-board step-down (6–28 VDC) |
-| 2 | GND | Ground | System ground reference |
-| 3 | +V | Power Output | Fixed 5 V from the on-board step-down (powers the CHESTER mainboard) |
-| 4 | GND | Ground | System ground reference |
-| 5 | RS232 TX | RS-232 | RS-232 transmit data (module output) |
-| 6 | RS232 RX | RS-232 | RS-232 receive data (module input) |
-| 7 | VDD | Power | 3.0 V logic supply from the CHESTER mainboard |
-| 8 | GND | Ground | System ground reference |
+| 1 | GND | Ground | System ground reference |
+| 2 | VDD | Power | 3.0 V logic supply from the CHESTER mainboard |
+| 3 | RS232 RX | RS-232 | RS-232 receive data (module input) |
+| 4 | RS232 TX | RS-232 | RS-232 transmit data (module output) |
+| 5 | GND | Ground | System ground reference |
+| 6 | +V | Power Output | Fixed 5 V from the on-board step-down (powers the CHESTER mainboard) |
+| 7 | GND | Ground | System ground reference |
+| 8 | +VIN | Power Input | Optional external DC input to the on-board step-down (6–28 VDC) |
 
 :::info
-The module can run directly from the CHESTER mainboard. When an external **6–28 VDC** supply is connected to **+VIN** (Pin 1), the on-board TPS62933 step-down converter produces a fixed **5 V** on **+V** (Pin 3), which powers the CHESTER mainboard.
+The module can run directly from the CHESTER mainboard. When an external **6–28 VDC** supply is connected to **+VIN** (Pin 8), the on-board TPS62933 step-down converter produces a fixed **5 V** on **+V** (Pin 6), which powers the CHESTER mainboard.
 :::
 
 :::warning ESD Protection Modification Required
@@ -127,7 +127,7 @@ The transceiver's FORCEON input is tied high, so firmware can place the RS-232 t
 
 ## RS-232 Connection
 
-Wire the serial device to the terminal block: **RS232 TX** (Pin 5), **RS232 RX** (Pin 6), and a common **GND** (Pin 2, 4, or 8). Only the transmit and receive data lines are brought out. No hardware handshaking (RTS/CTS) lines are available on the connector.
+Wire the serial device to the terminal block: **RS232 TX** (Pin 4), **RS232 RX** (Pin 3), and a common **GND** (Pin 1, 5, or 7). Only the transmit and receive data lines are brought out. No hardware handshaking (RTS/CTS) lines are available on the connector.
 
 The RS-232 interface is **not galvanically isolated**, so the serial device and the CHESTER node must share a common ground reference.
 

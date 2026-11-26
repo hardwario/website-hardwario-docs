@@ -79,21 +79,21 @@ Zobrazené zapojení pinů platí pro základní desku CHESTER-M CGLS.
 
 ### Zapojení konektoru CHESTER-X13 {#chester-x13-connector-pinout}
 
-![Zapojení svorkovnice CHESTER-X13: +VIN, GND, GND, RL, CANL, CANH, RH, INT na pinech 1-8](../../../../../chester/extension-modules/images/tb-chester-x13.png)
+![Zapojení svorkovnice CHESTER-X13: INT, RH, CANH, CANL, RL, GND, GND, +VIN na pinech 1-8](../../../../../chester/extension-modules/images/tb-chester-x13.png)
 
 | Pin | Signál | Typ | Popis |
 | :---: | :--- | :--- | :--- |
-| 1 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (6-28 V DC) |
-| 2 | GND | Zem | Systémová zem |
-| 3 | GND | Zem | Systémová zem |
-| 4 | RL | Zakončení CAN | Vývod zakončení pro CANL (spojením s CANL zapnete zakončení na desce) |
-| 5 | CANL | Sběrnice CAN | Linka sběrnice CAN, low |
-| 6 | CANH | Sběrnice CAN | Linka sběrnice CAN, high |
-| 7 | RH | Zakončení CAN | Vývod zakončení pro CANH (spojením s CANH zapnete zakončení na desce) |
-| 8 | INT | Výstup | Výstup přerušení k základní desce CHESTER |
+| 1 | INT | Výstup | Výstup přerušení k základní desce CHESTER |
+| 2 | RH | Zakončení CAN | Vývod zakončení pro CANH (spojením s CANH zapnete zakončení na desce) |
+| 3 | CANH | Sběrnice CAN | Linka sběrnice CAN, high |
+| 4 | CANL | Sběrnice CAN | Linka sběrnice CAN, low |
+| 5 | RL | Zakončení CAN | Vývod zakončení pro CANL (spojením s CANL zapnete zakončení na desce) |
+| 6 | GND | Zem | Systémová zem |
+| 7 | GND | Zem | Systémová zem |
+| 8 | +VIN | Napájecí vstup | Volitelný externí stejnosměrný vstup do snižujícího měniče na desce (6-28 V DC) |
 
 :::info
-Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 1) připojené externí napájení **6-28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V**, kterými se napájí základní deska CHESTER.
+Modul může běžet přímo ze základní desky CHESTER. Když je na **+VIN** (pin 8) připojené externí napájení **6-28 V DC**, vytváří snižující měnič TPS62933 na desce pevných **5 V**, kterými se napájí základní deska CHESTER.
 :::
 
 ### Rozhraní k hostu (SPI) {#host-interface-spi}
@@ -107,27 +107,27 @@ Na rozdíl od většiny modulů CHESTER-X (které používají **I²C**) komunik
 | GP2 | MISO | SDO |
 | GP3 | CS | NCS |
 
-Výstup přerušení (INT) čipu MCP2518FD je vyvedený na svorku **INT** modulu (pin 8). Viz podsekce [Pin přerušení](#interrupt-pin) níže.
+Výstup přerušení (INT) čipu MCP2518FD je vyvedený na svorku **INT** modulu (pin 1). Viz podsekce [Pin přerušení](#interrupt-pin) níže.
 
 ### Pin přerušení {#interrupt-pin}
 
-Řadič MCP2518FD signalizuje události (například přijatý rámec CAN) na svém výstupu přerušení, který je vyvedený na svorku **INT** modulu (pin 8). Toto přerušení **musí být propojené se svorkou INT základní desky CHESTER**, aby ho deska mohla zaznamenat. Na základní desce **CHESTER-M CGLS** přidejte propojovací vodič ze svorkovnice rozšiřujícího modulu na svorku INT základní desky. Zapojení níže je znázorněné pro modul ve **slotu B**; modul v jiném slotu se stejným způsobem připojí ke svorce INT daného slotu.
+Řadič MCP2518FD signalizuje události (například přijatý rámec CAN) na svém výstupu přerušení, který je vyvedený na svorku **INT** modulu (pin 1). Toto přerušení **musí být propojené se svorkou INT základní desky CHESTER**, aby ho deska mohla zaznamenat. Na základní desce **CHESTER-M CGLS** přidejte propojovací vodič ze svorkovnice rozšiřujícího modulu na svorku INT základní desky. Zapojení níže je znázorněné pro modul ve **slotu B**; modul v jiném slotu se stejným způsobem připojí ke svorce INT daného slotu.
 
 ![Nákres základní desky CHESTER s vodičem, který spojuje svorku INT slotu B s pinem přerušení modulu](../../../../../chester/extension-modules/images/int-pin.png)
 
-* Příklad: zapojení přerušení pro modul ve slotu B (CHESTER-M CGLS): INT modulu (pin 8) je na svorce **B8**.
+* Příklad: zapojení přerušení pro modul ve slotu B (CHESTER-M CGLS).
 
 ## Připojení sběrnice CAN {#can-bus-connection}
 
-Sběrnice CAN se zapojuje přímo na piny svorkovnice **CANH** (pin 6) a **CANL** (pin 5). Použijte **kroucenou dvojlinku** s charakteristickou impedancí **120 Ω**, sběrnici veďte v **lineární (řetězové) topologii** (vyhněte se hvězdicovému rozvržení a dlouhým odbočkám) a nekroucenou část kabeláže u svorkovnice udržujte **co nejkratší**.
+Sběrnice CAN se zapojuje přímo na piny svorkovnice **CANH** (pin 3) a **CANL** (pin 4). Použijte **kroucenou dvojlinku** s charakteristickou impedancí **120 Ω**, sběrnici veďte v **lineární (řetězové) topologii** (vyhněte se hvězdicovému rozvržení a dlouhým odbočkám) a nekroucenou část kabeláže u svorkovnice udržujte **co nejkratší**.
 
-Rozhraní CAN **není galvanicky oddělené**, takže všechny uzly sběrnice musí mít společnou zem. Zem sběrnice **GND** připojte na jeden z pinů GND svorkovnice (pin 2 nebo 3).
+Rozhraní CAN **není galvanicky oddělené**, takže všechny uzly sběrnice musí mít společnou zem. Zem sběrnice **GND** připojte na jeden z pinů GND svorkovnice (pin 6 nebo 7).
 
 ### Zakončovací rezistory {#termination-resistors}
 
 Sběrnice CAN musí být na **obou fyzických koncích** zakončená rezistorem **120 Ω** mezi CANH a CANL. Modul CHESTER-X13 má zakončovací rezistor na desce, který je ve výchozím stavu **odpojený** (uzel uprostřed sběrnice zakončený být nesmí).
 
-Připojte ho **jen tehdy, když je modul na konci sběrnice**: na svorkovnici spojte **CANH s RH** (pin 6 s pinem 7) a **CANL s RL** (pin 5 s pinem 4).
+Připojte ho **jen tehdy, když je modul na konci sběrnice**: na svorkovnici spojte **CANH s RH** (pin 3 s pinem 2) a **CANL s RL** (pin 4 s pinem 5).
 
 ### Průchod krabičkou {#enclosure-feed-through}
 

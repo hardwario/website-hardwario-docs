@@ -36,14 +36,14 @@ This article describes the CHESTER-X0 four-channel I/O extension module. Two var
 
 ## Module overview
 
-Each channel can be used for these applications:
+Each of the four channels can be configured as one of the following (one function per channel at a time):
 
-* Digital input and output
-* Analog input and output
+* Digital input or output
+* Analog input or output
 * Voltage input 0–26 V\*
 * Current loop 4–20 mA
 * Dry contact input
-* NPN and PNP input
+* NPN or PNP input
 * Power output
   * **X0A** with boost converter: 5 V
   * **X0B** w/o boost converter: standard 3.0 V (VDD solder bridge) or on request V+ battery rail (V+ solder bridge)

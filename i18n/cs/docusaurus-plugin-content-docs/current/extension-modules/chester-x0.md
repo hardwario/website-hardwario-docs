@@ -36,14 +36,14 @@ Tento článek popisuje rozšiřující modul CHESTER-X0 se čtyřmi vstupně-v�
 
 ## Přehled modulu {#module-overview}
 
-Každý kanál může sloužit jako:
+Každý ze čtyř kanálů lze nastavit na jednu z těchto funkcí (kanál má vždy jen jednu):
 
-* Digitální vstup a výstup
-* Analogový vstup a výstup
+* Digitální vstup nebo výstup
+* Analogový vstup nebo výstup
 * Napěťový vstup 0–26 V\*
 * Proudová smyčka 4–20 mA
 * Vstup pro bezpotenciálový kontakt
-* Vstup NPN a PNP
+* Vstup NPN nebo PNP
 * Napájecí výstup
   * **X0A** se zvyšujícím měničem: 5 V
   * **X0B** bez zvyšujícího měniče: standardní 3,0 V (pájená propojka VDD) nebo na vyžádání bateriová větev V+ (pájená propojka V+)

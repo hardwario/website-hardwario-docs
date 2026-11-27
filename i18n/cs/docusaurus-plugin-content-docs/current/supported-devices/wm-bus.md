@@ -31,3 +31,5 @@ Seznam níže proto není výčtem kompatibilních měřičů. Obsahuje měřič
 | Zenner C5-ISF        | Měřič tepelné energie | [Dokumentace](./wm-bus/zenner-c5-isf.md) · [Web](https://zenner.com/products/wmz_zelsius_c5_isf-2/) |
 | Zenner caltos-E | Indikátor topných nákladů  | [Dokumentace](./wm-bus/zenner-caltos-e.md) · [Web](https://zenner.com/products/hkv_caltos_e/) |
 | Zenner Minomess | Vodoměr           | [Dokumentace](./wm-bus/zenner-minomess.md) · [Web](https://zenner.com/products/wwz_minomess_lorawan_wm-bus-2/) |
+
+Celý dálkový odečet od měřidla po rozúčtovací systém a termín EU 1. ledna 2027 popisuje stránka [Dálkový odečet měřidel](https://www.hardwario.com/cs/applications/remote-meter-reading/) na hardwario.com.

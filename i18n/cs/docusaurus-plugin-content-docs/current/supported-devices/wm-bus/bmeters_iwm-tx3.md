@@ -140,3 +140,5 @@ Máte dvě možnosti:
 
 - [**HARDWARIO Cloud**](/chester/catalog-applications/chester-wm-bus#hardwario-cloud--decryption-keys): návod, jak zadávat a spravovat dešifrovací klíče
 - [**Dešifrovací stránka**](https://wmbusmeters.org/): online nástroj pro ruční dešifrování a analýzu dat
+
+Celý dálkový odečet od měřidla po rozúčtovací systém a termín EU 1. ledna 2027 popisuje stránka [Dálkový odečet měřidel](https://www.hardwario.com/cs/applications/remote-meter-reading/) na hardwario.com.

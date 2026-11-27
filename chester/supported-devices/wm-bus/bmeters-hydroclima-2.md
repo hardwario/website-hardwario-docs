@@ -97,3 +97,4 @@ To achieve this, there are two options:
 - [**HARDWARIO Cloud**](/chester/catalog-applications/chester-wm-bus#hardwario-cloud--decryption-keys): tutorial on how to enter and manage decryption keys  
 - [**Decryption page**](https://wmbusmeters.org/): online tool for manual data decryption and analysis  
 
+For the whole picture, from the meter to the billing system and the EU deadline of 1 January 2027, see [Remote meter reading](https://www.hardwario.com/applications/remote-meter-reading/) on hardwario.com.

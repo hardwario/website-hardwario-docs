@@ -31,3 +31,5 @@ The list below is therefore not a compatibility list. It contains the meters we 
 | Zenner C5-ISF        | Thermal energy meter | [Documentation](./wm-bus/zenner-c5-isf.md) · [Web](https://zenner.com/products/wmz_zelsius_c5_isf-2/) |
 | Zenner caltos-E | Heat cost allocator  | [Documentation](./wm-bus/zenner-caltos-e.md) · [Web](https://zenner.com/products/hkv_caltos_e/) |
 | Zenner Minomess | Water meter          | [Documentation](./wm-bus/zenner-minomess.md) · [Web](https://zenner.com/products/wwz_minomess_lorawan_wm-bus-2/) |
+
+For the whole picture, from the meter to the billing system and the EU deadline of 1 January 2027, see [Remote meter reading](https://www.hardwario.com/applications/remote-meter-reading/) on hardwario.com.

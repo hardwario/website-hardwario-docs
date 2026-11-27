@@ -130,8 +130,8 @@
 # platform-management section renamed platform-connectivity
 
 # Crawled .md-suffixed strays
-/chester/platform-connectivity/cellular-networks/.md  /chester/platform-connectivity/cellular-networks               301
-/chester/firmware-sdk/how-to-lte-v2/.md               /chester/firmware-sdk/how-to-lte-v2                            301
+/chester/platform-connectivity/cellular-networks/.md  /chester/platform-connectivity/cellular-networks/              301
+/chester/firmware-sdk/how-to-lte-v2/.md               /chester/firmware-sdk/how-to-lte-v2/                           301
 
 # Cloud v2 docs superseded by the current /cloud/ instance
 /cloud/cloud-v2                                      /cloud/                                                        301
@@ -149,8 +149,8 @@
 /ember/mikrotik/gateway-configuration/               /ember/first-steps/                                             301
 
 # FIBER docs restructured (project-structure/troubleshooting retired -> section index)
-/fiber/installation/-setup                            /fiber/installation                                            301
-/fiber/installation/-setup/                           /fiber/installation                                            301
+/fiber/installation/-setup                            /fiber/installation/                                           301
+/fiber/installation/-setup/                           /fiber/installation/                                           301
 /fiber/configuration                                 /fiber/installation/                                            301
 /fiber/configuration/                                /fiber/installation/                                            301
 /fiber/project-structure                             /fiber/                                                        301
@@ -231,14 +231,14 @@
 # apps/thingsboard: superseded / Czech-only drafts
 /apps/thingsboard/notifications                      /apps/thingsboard/notifications-manager/                        301
 /apps/thingsboard/notifications/                     /apps/thingsboard/notifications-manager/                        301
-/apps/thingsboard/public-link/-cz                     /apps/thingsboard/public-link                                  301
-/apps/thingsboard/public-link/-cz/                    /apps/thingsboard/public-link                                  301
+/apps/thingsboard/public-link/-cz                     /apps/thingsboard/public-link/                                 301
+/apps/thingsboard/public-link/-cz/                    /apps/thingsboard/public-link/                                 301
 /apps/thingsboard/user-groups                        /apps/thingsboard/users-managing/                               301
 /apps/thingsboard/user-groups/                       /apps/thingsboard/users-managing/                               301
 /apps/thingsboard/user-roles                         /apps/thingsboard/users-managing/                               301
 /apps/thingsboard/user-roles/                        /apps/thingsboard/users-managing/                               301
-/apps/thingsboard/users-managing/-cz                  /apps/thingsboard/users-managing                               301
-/apps/thingsboard/users-managing/-cz/                 /apps/thingsboard/users-managing                               301
+/apps/thingsboard/users-managing/-cz                  /apps/thingsboard/users-managing/                              301
+/apps/thingsboard/users-managing/-cz/                 /apps/thingsboard/users-managing/                              301
 
 # apps/thingsboard: restructured to mirror the HARDWARIO Dashboards video series (2026-11)
 /apps/thingsboard/creating-device                    /apps/thingsboard/devices/                                      301
@@ -371,6 +371,282 @@
 /cs/apps/hardwario-manager/atelos/                           /cs/apps/hardwario-manager/                         301
 
 
+# --- Search Console 404s (2026-11-27). URLs Google still requests that ended in a
+# --- 404; each lands on its successor or, for removed content, the nearest live
+# --- section index (owner policy 2026-07-04). Every target verified 200 in build/.
+# Milesight and RAKwireless docs moved under /smart-devices/ (children kept their slugs;
+# the splats at the end send any other old child to the vendor index)
+/milesight                                                   /smart-devices/milesight/                                    301
+/milesight/                                                  /smart-devices/milesight/                                    301
+/milesight/gateways/index                                    /smart-devices/milesight/gateways/index/                     301
+/milesight/gateways/index/                                   /smart-devices/milesight/gateways/index/                     301
+/milesight/gateways/milesight-ug63                           /smart-devices/milesight/gateways/milesight-ug63/            301
+/milesight/gateways/milesight-ug63/                          /smart-devices/milesight/gateways/milesight-ug63/            301
+/milesight/gateways/milesight-ug65                           /smart-devices/milesight/gateways/milesight-ug65/            301
+/milesight/gateways/milesight-ug65/                          /smart-devices/milesight/gateways/milesight-ug65/            301
+/milesight/sensors/index                                     /smart-devices/milesight/sensors/index/                      301
+/milesight/sensors/index/                                    /smart-devices/milesight/sensors/index/                      301
+/milesight/sensors/milesight-am300/milesight-am307           /smart-devices/milesight/sensors/milesight-am300/milesight-am307/ 301
+/milesight/sensors/milesight-am300/milesight-am307/          /smart-devices/milesight/sensors/milesight-am300/milesight-am307/ 301
+/milesight/sensors/milesight-am300/milesight-am308           /smart-devices/milesight/sensors/milesight-am300/milesight-am308/ 301
+/milesight/sensors/milesight-am300/milesight-am308/          /smart-devices/milesight/sensors/milesight-am300/milesight-am308/ 301
+/milesight/sensors/milesight-am300/milesight-am319           /smart-devices/milesight/sensors/milesight-am300/milesight-am319/ 301
+/milesight/sensors/milesight-am300/milesight-am319/          /smart-devices/milesight/sensors/milesight-am300/milesight-am319/ 301
+/milesight/sensors/milesight-em400                           /smart-devices/milesight/sensors/milesight-em400/            301
+/milesight/sensors/milesight-em400/                          /smart-devices/milesight/sensors/milesight-em400/            301
+/milesight/sensors/milesight-em500                           /smart-devices/milesight/sensors/milesight-em500/            301
+/milesight/sensors/milesight-em500/                          /smart-devices/milesight/sensors/milesight-em500/            301
+/milesight/sensors/milesight-gs601                           /smart-devices/milesight/sensors/milesight-gs601/            301
+/milesight/sensors/milesight-gs601/                          /smart-devices/milesight/sensors/milesight-gs601/            301
+/milesight/sensors/milesight-vs135                           /smart-devices/milesight/sensors/milesight-vs135/            301
+/milesight/sensors/milesight-vs135/                          /smart-devices/milesight/sensors/milesight-vs135/            301
+/milesight/sensors/milesight-ws101                           /smart-devices/milesight/sensors/milesight-ws101/            301
+/milesight/sensors/milesight-ws101/                          /smart-devices/milesight/sensors/milesight-ws101/            301
+/milesight/sensors/milesight-ws201                           /smart-devices/milesight/sensors/milesight-ws201/            301
+/milesight/sensors/milesight-ws201/                          /smart-devices/milesight/sensors/milesight-ws201/            301
+/milesight/sensors/milesight-ws523                           /smart-devices/milesight/sensors/milesight-ws523/            301
+/milesight/sensors/milesight-ws523/                          /smart-devices/milesight/sensors/milesight-ws523/            301
+/milesight/sensors/milesight-wt101                           /smart-devices/milesight/sensors/milesight-wt101/            301
+/milesight/sensors/milesight-wt101/                          /smart-devices/milesight/sensors/milesight-wt101/            301
+/milesight/utility/index                                     /smart-devices/milesight/utility/index/                      301
+/milesight/utility/index/                                    /smart-devices/milesight/utility/index/                      301
+/milesight/utility/milesight-ft101                           /smart-devices/milesight/utility/milesight-ft101/            301
+/milesight/utility/milesight-ft101/                          /smart-devices/milesight/utility/milesight-ft101/            301
+/milesight/videos-milesight/general-configuration            /smart-devices/milesight/videos-milesight/general-configuration/ 301
+/milesight/videos-milesight/general-configuration/           /smart-devices/milesight/videos-milesight/general-configuration/ 301
+/rakwireless                                                 /smart-devices/rakwireless/                                  301
+/rakwireless/                                                /smart-devices/rakwireless/                                  301
+/rakwireless/gateways/index                                  /smart-devices/rakwireless/gateways/index/                   301
+/rakwireless/gateways/index/                                 /smart-devices/rakwireless/gateways/index/                   301
+# STICKER: the LoRaWAN network server section is now Connectivity (same child slugs)
+/sticker/lorawan-network-server                              /sticker/connectivity/                                       301
+/sticker/lorawan-network-server/                             /sticker/connectivity/                                       301
+/sticker/lorawan-network-server/chirpstack-abp               /sticker/connectivity/chirpstack-abp/                        301
+/sticker/lorawan-network-server/chirpstack-abp/              /sticker/connectivity/chirpstack-abp/                        301
+/sticker/lorawan-network-server/chirpstack-otaa              /sticker/connectivity/chirpstack-otaa/                       301
+/sticker/lorawan-network-server/chirpstack-otaa/             /sticker/connectivity/chirpstack-otaa/                       301
+/sticker/lorawan-network-server/downlink-commands-generator  /sticker/connectivity/downlink-commands-generator/           301
+/sticker/lorawan-network-server/downlink-commands-generator/ /sticker/connectivity/downlink-commands-generator/           301
+/sticker/lorawan-network-server/downlink-commands            /sticker/connectivity/downlink-commands/                     301
+/sticker/lorawan-network-server/downlink-commands/           /sticker/connectivity/downlink-commands/                     301
+/sticker/lorawan-network-server/lora-p2p                     /sticker/connectivity/lora-p2p/                              301
+/sticker/lorawan-network-server/lora-p2p/                    /sticker/connectivity/lora-p2p/                              301
+/sticker/lorawan-network-server/lorawan-chirpstack           /sticker/connectivity/lorawan-chirpstack/                    301
+/sticker/lorawan-network-server/lorawan-chirpstack/          /sticker/connectivity/lorawan-chirpstack/                    301
+/sticker/lorawan-network-server/lorawan-tts                  /sticker/connectivity/lorawan-tts/                           301
+/sticker/lorawan-network-server/lorawan-tts/                 /sticker/connectivity/lorawan-tts/                           301
+/sticker/lorawan-network-server/tts-abp                      /sticker/connectivity/tts-abp/                               301
+/sticker/lorawan-network-server/tts-abp/                     /sticker/connectivity/tts-abp/                               301
+/sticker/lorawan-network-server/tts-otaa                     /sticker/connectivity/tts-otaa/                              301
+/sticker/lorawan-network-server/tts-otaa/                    /sticker/connectivity/tts-otaa/                              301
+# STICKER: the top-level Configuration page moved under Device behavior
+/sticker/configuration                                       /sticker/device-behavior/configuration/                      301
+/sticker/configuration/                                      /sticker/device-behavior/configuration/                      301
+# FIBER Lite moved from its own /fiber-lite/ instance into the FIBER docs
+/fiber-lite                                                  /fiber/fiber-lite/introduction/                              301
+/fiber-lite/                                                 /fiber/fiber-lite/introduction/                              301
+/fiber-lite/introduction                                     /fiber/fiber-lite/introduction/                              301
+/fiber-lite/introduction/                                    /fiber/fiber-lite/introduction/                              301
+/fiber-lite/installation                                     /fiber/fiber-lite/introduction/                              301
+/fiber-lite/installation/                                    /fiber/fiber-lite/introduction/                              301
+/fiber-lite/troubleshooting                                  /fiber/category/troubleshooting/                             301
+/fiber-lite/troubleshooting/                                 /fiber/category/troubleshooting/                             301
+/fiber-lite/category/troubleshooting                         /fiber/category/troubleshooting/                             301
+/fiber-lite/category/troubleshooting/                        /fiber/category/troubleshooting/                             301
+/fiber-lite/troubleshooting/concentratord-spi-not-detected   /fiber/fiber-lite/troubleshooting/concentratord-spi-not-detected/ 301
+/fiber-lite/troubleshooting/concentratord-spi-not-detected/  /fiber/fiber-lite/troubleshooting/concentratord-spi-not-detected/ 301
+/fiber-lite/troubleshooting/rtc-remoteio-error               /fiber/fiber-lite/troubleshooting/rtc-remoteio-error/        301
+/fiber-lite/troubleshooting/rtc-remoteio-error/              /fiber/fiber-lite/troubleshooting/rtc-remoteio-error/        301
+/fiber-lite/troubleshooting/ssh-connection-refused           /fiber/fiber-lite/troubleshooting/ssh-connection-refused/    301
+/fiber-lite/troubleshooting/ssh-connection-refused/          /fiber/fiber-lite/troubleshooting/ssh-connection-refused/    301
+/fiber-lite/troubleshooting/ssh-permission-denied            /fiber/fiber-lite/troubleshooting/ssh-permission-denied/     301
+/fiber-lite/troubleshooting/ssh-permission-denied/           /fiber/fiber-lite/troubleshooting/ssh-permission-denied/     301
+/fiber-lite/troubleshooting/docker-compose-plugin-not-found  /fiber/category/troubleshooting/                             301
+/fiber-lite/troubleshooting/docker-compose-plugin-not-found/ /fiber/category/troubleshooting/                             301
+/fiber-lite/troubleshooting/nodered-installer-404            /fiber/category/troubleshooting/                             301
+/fiber-lite/troubleshooting/nodered-installer-404/           /fiber/category/troubleshooting/                             301
+# FIBER: the hardware description is a category now (the bare page is gone, children live)
+/fiber/hardware-description                                  /fiber/category/hardware-description/                        301
+/fiber/hardware-description/                                 /fiber/category/hardware-description/                        301
+# Ubidots documentation removed: its videos go to the APPS video index
+/apps/videos-apps/ubidots-cloud-connection                   /apps/videos-apps/videos-apps/                               301
+/apps/videos-apps/ubidots-cloud-connection/                  /apps/videos-apps/videos-apps/                               301
+/apps/videos-apps/ubidots-dashboard                          /apps/videos-apps/videos-apps/                               301
+/apps/videos-apps/ubidots-dashboard/                         /apps/videos-apps/videos-apps/                               301
+/apps/videos-apps/ubidots-new-device                         /apps/videos-apps/videos-apps/                               301
+/apps/videos-apps/ubidots-new-device/                        /apps/videos-apps/videos-apps/                               301
+# CHESTER: malformed category path, and cloud pages that live in the Cloud docs
+/chester/catalog-applications/category/platform-connectivity /chester/category/platform-connectivity/                     301
+/chester/catalog-applications/category/platform-connectivity/ /chester/category/platform-connectivity/                     301
+/cs/chester/catalog-applications/category/platform-connectivity /cs/chester/category/platform-connectivity/                  301
+/cs/chester/catalog-applications/category/platform-connectivity/ /cs/chester/category/platform-connectivity/                  301
+/chester/cloud/downlink                                      /cloud/downlink/                                             301
+/chester/cloud/downlink/                                     /cloud/downlink/                                             301
+/chester/cloud/downlink/config                               /cloud/downlink/config/                                      301
+/chester/cloud/downlink/config/                              /cloud/downlink/config/                                      301
+/cs/chester/cloud/downlink                                   /cs/cloud/downlink/                                          301
+/cs/chester/cloud/downlink/                                  /cs/cloud/downlink/                                          301
+/cs/chester/cloud/downlink/config                            /cs/cloud/downlink/config/                                   301
+/cs/chester/cloud/downlink/config/                           /cs/cloud/downlink/config/                                   301
+# Cloud: the v1 category became one overview page
+/cloud/category/cloud-v1                                     /cloud/cloud-v1/overview/                                    301
+/cloud/category/cloud-v1/                                    /cloud/cloud-v1/overview/                                    301
+/cs/cloud/category/cloud-v1                                  /cs/cloud/cloud-v1/overview/                                 301
+/cs/cloud/category/cloud-v1/                                 /cs/cloud/cloud-v1/overview/                                 301
+# Czech twins of English moves that had no /cs/ rule
+/cs/chester/features                                         /cs/chester/                                                 301
+/cs/chester/features/                                        /cs/chester/                                                 301
+/cs/cloud/fota                                               /cs/cloud/firmware/                                          301
+/cs/cloud/fota/                                              /cs/cloud/firmware/                                          301
+/cs/ember/chirpstack/chirpstack-ember                        /cs/apps/chirpstack/chirpstack-configuration/chirpstack-gateways/ 301
+/cs/ember/chirpstack/chirpstack-ember/                       /cs/apps/chirpstack/chirpstack-configuration/chirpstack-gateways/ 301
+/cs/download/hio-chester-cert-ec-declaration-of-conformity.pdf https://www.hardwario.com/cs/resources/declarations/         301
+# Junk paths from scraped links (the edge encodes them before matching)
+/$                                                           /                                                            301
+/%24                                                         /                                                            301
+/&                                                           /                                                            301
+/%26                                                         /                                                            301
+
+# --- Docusaurus hashed file URLs (/assets/files/<name>-<hash>.<ext>). The docs used
+# --- to import these files, so their URL changed with every edit; they now link the
+# --- stable paths in static/ (pathname:///…), which these rules point at. Both
+# --- locales, with and without the stray trailing slash Google also requests.
+/assets/files/OR-WE-516_program-ea55726c2e77096a2324795c49330257.7z /chester/supported-devices/modbus/OR-WE-516_program.7z       301
+/assets/files/OR-WE-516_program-ea55726c2e77096a2324795c49330257.7z/ /chester/supported-devices/modbus/OR-WE-516_program.7z       301
+/cs/assets/files/OR-WE-516_program-ea55726c2e77096a2324795c49330257.7z /chester/supported-devices/modbus/OR-WE-516_program.7z       301
+/cs/assets/files/OR-WE-516_program-ea55726c2e77096a2324795c49330257.7z/ /chester/supported-devices/modbus/OR-WE-516_program.7z       301
+/assets/files/antenna-aa546dd5156af105b2dfc8e05c55d022.pdf   /sticker/hardware-diagrams/antenna.pdf                       301
+/assets/files/antenna-aa546dd5156af105b2dfc8e05c55d022.pdf/  /sticker/hardware-diagrams/antenna.pdf                       301
+/cs/assets/files/antenna-aa546dd5156af105b2dfc8e05c55d022.pdf /sticker/hardware-diagrams/antenna.pdf                       301
+/cs/assets/files/antenna-aa546dd5156af105b2dfc8e05c55d022.pdf/ /sticker/hardware-diagrams/antenna.pdf                       301
+/assets/files/hio-chester-c1-r1.1-93bc1eeadcfc3efe03dcf95fba65d483.pdf /chester/extension-modules/schematics/hio-chester-c1-r1.1.pdf 301
+/assets/files/hio-chester-c1-r1.1-93bc1eeadcfc3efe03dcf95fba65d483.pdf/ /chester/extension-modules/schematics/hio-chester-c1-r1.1.pdf 301
+/cs/assets/files/hio-chester-c1-r1.1-93bc1eeadcfc3efe03dcf95fba65d483.pdf /chester/extension-modules/schematics/hio-chester-c1-r1.1.pdf 301
+/cs/assets/files/hio-chester-c1-r1.1-93bc1eeadcfc3efe03dcf95fba65d483.pdf/ /chester/extension-modules/schematics/hio-chester-c1-r1.1.pdf 301
+/assets/files/hio-chester-c5-r1.1-ce0104ee504e7b00b74e3bd1478daddc.pdf /chester/extension-modules/schematics/hio-chester-c5-r1.1.pdf 301
+/assets/files/hio-chester-c5-r1.1-ce0104ee504e7b00b74e3bd1478daddc.pdf/ /chester/extension-modules/schematics/hio-chester-c5-r1.1.pdf 301
+/cs/assets/files/hio-chester-c5-r1.1-ce0104ee504e7b00b74e3bd1478daddc.pdf /chester/extension-modules/schematics/hio-chester-c5-r1.1.pdf 301
+/cs/assets/files/hio-chester-c5-r1.1-ce0104ee504e7b00b74e3bd1478daddc.pdf/ /chester/extension-modules/schematics/hio-chester-c5-r1.1.pdf 301
+/assets/files/hio-chester-k1-r1.4-ea5a5f0b5a40ae6c3cda663470b2fd34.pdf /chester/extension-modules/schematics/hio-chester-k1-r1.4.pdf 301
+/assets/files/hio-chester-k1-r1.4-ea5a5f0b5a40ae6c3cda663470b2fd34.pdf/ /chester/extension-modules/schematics/hio-chester-k1-r1.4.pdf 301
+/cs/assets/files/hio-chester-k1-r1.4-ea5a5f0b5a40ae6c3cda663470b2fd34.pdf /chester/extension-modules/schematics/hio-chester-k1-r1.4.pdf 301
+/cs/assets/files/hio-chester-k1-r1.4-ea5a5f0b5a40ae6c3cda663470b2fd34.pdf/ /chester/extension-modules/schematics/hio-chester-k1-r1.4.pdf 301
+/assets/files/hio-chester-m-r3.4-3f576211e409eb65c523ab4ba9ff1948.pdf /chester/hardware-description/hio-chester-m-r3.4.pdf         301
+/assets/files/hio-chester-m-r3.4-3f576211e409eb65c523ab4ba9ff1948.pdf/ /chester/hardware-description/hio-chester-m-r3.4.pdf         301
+/cs/assets/files/hio-chester-m-r3.4-3f576211e409eb65c523ab4ba9ff1948.pdf /chester/hardware-description/hio-chester-m-r3.4.pdf         301
+/cs/assets/files/hio-chester-m-r3.4-3f576211e409eb65c523ab4ba9ff1948.pdf/ /chester/hardware-description/hio-chester-m-r3.4.pdf         301
+/assets/files/hio-chester-u1-r1.1-79ac37af9c8a7c41728c5dc3b5286431.pdf /chester/hardware-description/hio-chester-u1-r1.1.pdf        301
+/assets/files/hio-chester-u1-r1.1-79ac37af9c8a7c41728c5dc3b5286431.pdf/ /chester/hardware-description/hio-chester-u1-r1.1.pdf        301
+/cs/assets/files/hio-chester-u1-r1.1-79ac37af9c8a7c41728c5dc3b5286431.pdf /chester/hardware-description/hio-chester-u1-r1.1.pdf        301
+/cs/assets/files/hio-chester-u1-r1.1-79ac37af9c8a7c41728c5dc3b5286431.pdf/ /chester/hardware-description/hio-chester-u1-r1.1.pdf        301
+/assets/files/hio-chester-x0-r2.0-83f97defade1996236d8c7e7c831cb77.pdf /chester/extension-modules/schematics/hio-chester-x0-r2.0.pdf 301
+/assets/files/hio-chester-x0-r2.0-83f97defade1996236d8c7e7c831cb77.pdf/ /chester/extension-modules/schematics/hio-chester-x0-r2.0.pdf 301
+/cs/assets/files/hio-chester-x0-r2.0-83f97defade1996236d8c7e7c831cb77.pdf /chester/extension-modules/schematics/hio-chester-x0-r2.0.pdf 301
+/cs/assets/files/hio-chester-x0-r2.0-83f97defade1996236d8c7e7c831cb77.pdf/ /chester/extension-modules/schematics/hio-chester-x0-r2.0.pdf 301
+/assets/files/hio-chester-x1-r3.2-50b804f4c234ea0bc016a28930625cc8.pdf /chester/extension-modules/schematics/hio-chester-x1-r3.2.pdf 301
+/assets/files/hio-chester-x1-r3.2-50b804f4c234ea0bc016a28930625cc8.pdf/ /chester/extension-modules/schematics/hio-chester-x1-r3.2.pdf 301
+/cs/assets/files/hio-chester-x1-r3.2-50b804f4c234ea0bc016a28930625cc8.pdf /chester/extension-modules/schematics/hio-chester-x1-r3.2.pdf 301
+/cs/assets/files/hio-chester-x1-r3.2-50b804f4c234ea0bc016a28930625cc8.pdf/ /chester/extension-modules/schematics/hio-chester-x1-r3.2.pdf 301
+/assets/files/hio-chester-x10-r1.1-411c173b755d6f46867c5e44391ca90e.pdf /chester/extension-modules/schematics/hio-chester-x10-r1.1.pdf 301
+/assets/files/hio-chester-x10-r1.1-411c173b755d6f46867c5e44391ca90e.pdf/ /chester/extension-modules/schematics/hio-chester-x10-r1.1.pdf 301
+/cs/assets/files/hio-chester-x10-r1.1-411c173b755d6f46867c5e44391ca90e.pdf /chester/extension-modules/schematics/hio-chester-x10-r1.1.pdf 301
+/cs/assets/files/hio-chester-x10-r1.1-411c173b755d6f46867c5e44391ca90e.pdf/ /chester/extension-modules/schematics/hio-chester-x10-r1.1.pdf 301
+/assets/files/hio-chester-x12-r1.1-8663aff907dd858225fc9fb703de4f00.pdf /chester/extension-modules/chester-x12/                      301
+/assets/files/hio-chester-x12-r1.1-8663aff907dd858225fc9fb703de4f00.pdf/ /chester/extension-modules/chester-x12/                      301
+/cs/assets/files/hio-chester-x12-r1.1-8663aff907dd858225fc9fb703de4f00.pdf /chester/extension-modules/chester-x12/                      301
+/cs/assets/files/hio-chester-x12-r1.1-8663aff907dd858225fc9fb703de4f00.pdf/ /chester/extension-modules/chester-x12/                      301
+/assets/files/hio-chester-x12-r1.2-780dc34682659d1b66247f7a3a20c71d.pdf /chester/extension-modules/schematics/hio-chester-x12-r1.2.pdf 301
+/assets/files/hio-chester-x12-r1.2-780dc34682659d1b66247f7a3a20c71d.pdf/ /chester/extension-modules/schematics/hio-chester-x12-r1.2.pdf 301
+/cs/assets/files/hio-chester-x12-r1.2-780dc34682659d1b66247f7a3a20c71d.pdf /chester/extension-modules/schematics/hio-chester-x12-r1.2.pdf 301
+/cs/assets/files/hio-chester-x12-r1.2-780dc34682659d1b66247f7a3a20c71d.pdf/ /chester/extension-modules/schematics/hio-chester-x12-r1.2.pdf 301
+/assets/files/hio-chester-x13-r1.2-92cab18ed646c2041eb631146ade505c.pdf /chester/extension-modules/schematics/hio-chester-x13-r1.2.pdf 301
+/assets/files/hio-chester-x13-r1.2-92cab18ed646c2041eb631146ade505c.pdf/ /chester/extension-modules/schematics/hio-chester-x13-r1.2.pdf 301
+/cs/assets/files/hio-chester-x13-r1.2-92cab18ed646c2041eb631146ade505c.pdf /chester/extension-modules/schematics/hio-chester-x13-r1.2.pdf 301
+/cs/assets/files/hio-chester-x13-r1.2-92cab18ed646c2041eb631146ade505c.pdf/ /chester/extension-modules/schematics/hio-chester-x13-r1.2.pdf 301
+/assets/files/hio-chester-x14-r1.0-17a363d1ea13bc2f7efa23890b6e88c1.pdf /chester/extension-modules/schematics/hio-chester-x14-r1.0.pdf 301
+/assets/files/hio-chester-x14-r1.0-17a363d1ea13bc2f7efa23890b6e88c1.pdf/ /chester/extension-modules/schematics/hio-chester-x14-r1.0.pdf 301
+/cs/assets/files/hio-chester-x14-r1.0-17a363d1ea13bc2f7efa23890b6e88c1.pdf /chester/extension-modules/schematics/hio-chester-x14-r1.0.pdf 301
+/cs/assets/files/hio-chester-x14-r1.0-17a363d1ea13bc2f7efa23890b6e88c1.pdf/ /chester/extension-modules/schematics/hio-chester-x14-r1.0.pdf 301
+/assets/files/hio-chester-x2-r3.0-1b64956eeeaf5acecbf192c7d94f60a6.pdf /chester/extension-modules/schematics/hio-chester-x2-r3.0.pdf 301
+/assets/files/hio-chester-x2-r3.0-1b64956eeeaf5acecbf192c7d94f60a6.pdf/ /chester/extension-modules/schematics/hio-chester-x2-r3.0.pdf 301
+/cs/assets/files/hio-chester-x2-r3.0-1b64956eeeaf5acecbf192c7d94f60a6.pdf /chester/extension-modules/schematics/hio-chester-x2-r3.0.pdf 301
+/cs/assets/files/hio-chester-x2-r3.0-1b64956eeeaf5acecbf192c7d94f60a6.pdf/ /chester/extension-modules/schematics/hio-chester-x2-r3.0.pdf 301
+/assets/files/hio-chester-x3-r3.2-078eeb28fce812817cfb93436d550bc2.pdf /chester/extension-modules/schematics/hio-chester-x3-r3.2.pdf 301
+/assets/files/hio-chester-x3-r3.2-078eeb28fce812817cfb93436d550bc2.pdf/ /chester/extension-modules/schematics/hio-chester-x3-r3.2.pdf 301
+/cs/assets/files/hio-chester-x3-r3.2-078eeb28fce812817cfb93436d550bc2.pdf /chester/extension-modules/schematics/hio-chester-x3-r3.2.pdf 301
+/cs/assets/files/hio-chester-x3-r3.2-078eeb28fce812817cfb93436d550bc2.pdf/ /chester/extension-modules/schematics/hio-chester-x3-r3.2.pdf 301
+/assets/files/hio-chester-x4-r3.1-a7dac5a9acbac5c3fde22a32caebe42a.pdf /chester/extension-modules/schematics/hio-chester-x4-r3.1.pdf 301
+/assets/files/hio-chester-x4-r3.1-a7dac5a9acbac5c3fde22a32caebe42a.pdf/ /chester/extension-modules/schematics/hio-chester-x4-r3.1.pdf 301
+/cs/assets/files/hio-chester-x4-r3.1-a7dac5a9acbac5c3fde22a32caebe42a.pdf /chester/extension-modules/schematics/hio-chester-x4-r3.1.pdf 301
+/cs/assets/files/hio-chester-x4-r3.1-a7dac5a9acbac5c3fde22a32caebe42a.pdf/ /chester/extension-modules/schematics/hio-chester-x4-r3.1.pdf 301
+/assets/files/hio-chester-x5-r2.1-839e8bbde9e5046bccf9d6b8699186f7.pdf /chester/extension-modules/schematics/hio-chester-x5-r2.1.pdf 301
+/assets/files/hio-chester-x5-r2.1-839e8bbde9e5046bccf9d6b8699186f7.pdf/ /chester/extension-modules/schematics/hio-chester-x5-r2.1.pdf 301
+/cs/assets/files/hio-chester-x5-r2.1-839e8bbde9e5046bccf9d6b8699186f7.pdf /chester/extension-modules/schematics/hio-chester-x5-r2.1.pdf 301
+/cs/assets/files/hio-chester-x5-r2.1-839e8bbde9e5046bccf9d6b8699186f7.pdf/ /chester/extension-modules/schematics/hio-chester-x5-r2.1.pdf 301
+/assets/files/hio-chester-x6-r1.0-bb977761095e3bd59f49c48a11c40072.pdf /chester/extension-modules/schematics/hio-chester-x6-r1.0.pdf 301
+/assets/files/hio-chester-x6-r1.0-bb977761095e3bd59f49c48a11c40072.pdf/ /chester/extension-modules/schematics/hio-chester-x6-r1.0.pdf 301
+/cs/assets/files/hio-chester-x6-r1.0-bb977761095e3bd59f49c48a11c40072.pdf /chester/extension-modules/schematics/hio-chester-x6-r1.0.pdf 301
+/cs/assets/files/hio-chester-x6-r1.0-bb977761095e3bd59f49c48a11c40072.pdf/ /chester/extension-modules/schematics/hio-chester-x6-r1.0.pdf 301
+/assets/files/hio-chester-x7-r2.1-96859022410e41e0e65d015ea936a69c.pdf /chester/extension-modules/schematics/hio-chester-x7-r2.1.pdf 301
+/assets/files/hio-chester-x7-r2.1-96859022410e41e0e65d015ea936a69c.pdf/ /chester/extension-modules/schematics/hio-chester-x7-r2.1.pdf 301
+/cs/assets/files/hio-chester-x7-r2.1-96859022410e41e0e65d015ea936a69c.pdf /chester/extension-modules/schematics/hio-chester-x7-r2.1.pdf 301
+/cs/assets/files/hio-chester-x7-r2.1-96859022410e41e0e65d015ea936a69c.pdf/ /chester/extension-modules/schematics/hio-chester-x7-r2.1.pdf 301
+/assets/files/hio-chester-x8-r1.0-c43e56845b49667220d240f91fb16335.pdf /chester/extension-modules/schematics/hio-chester-x8-r1.0.pdf 301
+/assets/files/hio-chester-x8-r1.0-c43e56845b49667220d240f91fb16335.pdf/ /chester/extension-modules/schematics/hio-chester-x8-r1.0.pdf 301
+/cs/assets/files/hio-chester-x8-r1.0-c43e56845b49667220d240f91fb16335.pdf /chester/extension-modules/schematics/hio-chester-x8-r1.0.pdf 301
+/cs/assets/files/hio-chester-x8-r1.0-c43e56845b49667220d240f91fb16335.pdf/ /chester/extension-modules/schematics/hio-chester-x8-r1.0.pdf 301
+/assets/files/hio-chester-x9-r1.0-ba4a1fa985c207d3aa50fed2e60e03c0.pdf /chester/extension-modules/schematics/hio-chester-x9-r1.0.pdf 301
+/assets/files/hio-chester-x9-r1.0-ba4a1fa985c207d3aa50fed2e60e03c0.pdf/ /chester/extension-modules/schematics/hio-chester-x9-r1.0.pdf 301
+/cs/assets/files/hio-chester-x9-r1.0-ba4a1fa985c207d3aa50fed2e60e03c0.pdf /chester/extension-modules/schematics/hio-chester-x9-r1.0.pdf 301
+/cs/assets/files/hio-chester-x9-r1.0-ba4a1fa985c207d3aa50fed2e60e03c0.pdf/ /chester/extension-modules/schematics/hio-chester-x9-r1.0.pdf 301
+/assets/files/hio-chester-z1-r2.1-2fbcbc318345e6dd3ad25513d63009ea.pdf /chester/extension-modules/schematics/hio-chester-z1-r2.1.pdf 301
+/assets/files/hio-chester-z1-r2.1-2fbcbc318345e6dd3ad25513d63009ea.pdf/ /chester/extension-modules/schematics/hio-chester-z1-r2.1.pdf 301
+/cs/assets/files/hio-chester-z1-r2.1-2fbcbc318345e6dd3ad25513d63009ea.pdf /chester/extension-modules/schematics/hio-chester-z1-r2.1.pdf 301
+/cs/assets/files/hio-chester-z1-r2.1-2fbcbc318345e6dd3ad25513d63009ea.pdf/ /chester/extension-modules/schematics/hio-chester-z1-r2.1.pdf 301
+/assets/files/hio-tapper-r1.1-schematic-2417ee92425506421ccdbff651c94abc.pdf /tapper/media/hio-tapper-r1.1-schematic.pdf                  301
+/assets/files/hio-tapper-r1.1-schematic-2417ee92425506421ccdbff651c94abc.pdf/ /tapper/media/hio-tapper-r1.1-schematic.pdf                  301
+/cs/assets/files/hio-tapper-r1.1-schematic-2417ee92425506421ccdbff651c94abc.pdf /tapper/media/hio-tapper-r1.1-schematic.pdf                  301
+/cs/assets/files/hio-tapper-r1.1-schematic-2417ee92425506421ccdbff651c94abc.pdf/ /tapper/media/hio-tapper-r1.1-schematic.pdf                  301
+/assets/files/mcu-f7745b17982fcc5838d65131556289ab.pdf       /sticker/hardware-diagrams/mcu.pdf                           301
+/assets/files/mcu-f7745b17982fcc5838d65131556289ab.pdf/      /sticker/hardware-diagrams/mcu.pdf                           301
+/cs/assets/files/mcu-f7745b17982fcc5838d65131556289ab.pdf    /sticker/hardware-diagrams/mcu.pdf                           301
+/cs/assets/files/mcu-f7745b17982fcc5838d65131556289ab.pdf/   /sticker/hardware-diagrams/mcu.pdf                           301
+/assets/files/nfc-2040b045120c642d26a914da6a7ae54e.pdf       /sticker/hardware-diagrams/nfc.pdf                           301
+/assets/files/nfc-2040b045120c642d26a914da6a7ae54e.pdf/      /sticker/hardware-diagrams/nfc.pdf                           301
+/cs/assets/files/nfc-2040b045120c642d26a914da6a7ae54e.pdf    /sticker/hardware-diagrams/nfc.pdf                           301
+/cs/assets/files/nfc-2040b045120c642d26a914da6a7ae54e.pdf/   /sticker/hardware-diagrams/nfc.pdf                           301
+/assets/files/sensors-25b348d0da0de01523d48690feedbd39.pdf   /sticker/hardware-diagrams/sensors.pdf                       301
+/assets/files/sensors-25b348d0da0de01523d48690feedbd39.pdf/  /sticker/hardware-diagrams/sensors.pdf                       301
+/cs/assets/files/sensors-25b348d0da0de01523d48690feedbd39.pdf /sticker/hardware-diagrams/sensors.pdf                       301
+/cs/assets/files/sensors-25b348d0da0de01523d48690feedbd39.pdf/ /sticker/hardware-diagrams/sensors.pdf                       301
+
+# --- Docusaurus copies static/ into every locale, so each download also answered under
+# --- /cs/ and Google reported the pair as duplicates. The English path is the one copy;
+# --- the /cs/ one 301s to it. Folders that hold only files use a splat at the end of
+# --- the file; these files share a folder with doc pages, so they are listed one by one.
+/cs/chester/hardware-description/hio-chester-m-r3.4.pdf      /chester/hardware-description/hio-chester-m-r3.4.pdf         301
+/cs/chester/hardware-description/hio-chester-u1-r1.1.pdf     /chester/hardware-description/hio-chester-u1-r1.1.pdf        301
+/cs/chester/supported-devices/modbus/OR-WE-516_program.7z    /chester/supported-devices/modbus/OR-WE-516_program.7z       301
+/cs/tower/platform-integrations/dashboard.json               /tower/platform-integrations/dashboard.json                  301
+# Czech pages link the board viewers with .html: send that spelling straight to the clean URL
+/cs/download/ibom/chester-m-r3.4.html                        /download/ibom/chester-m-r3.4                                301
+/cs/download/ibom/hio-chester-k1-r1.4.html                   /download/ibom/hio-chester-k1-r1.4                           301
+/cs/download/ibom/hio-chester-x0-r2.0.html                   /download/ibom/hio-chester-x0-r2.0                           301
+/cs/download/ibom/hio-chester-x1-r3.2.html                   /download/ibom/hio-chester-x1-r3.2                           301
+/cs/download/ibom/hio-chester-x10-r1.1.html                  /download/ibom/hio-chester-x10-r1.1                          301
+/cs/download/ibom/hio-chester-x12-r1.2.html                  /download/ibom/hio-chester-x12-r1.2                          301
+/cs/download/ibom/hio-chester-x13-r1.2.html                  /download/ibom/hio-chester-x13-r1.2                          301
+/cs/download/ibom/hio-chester-x14-r1.0.html                  /download/ibom/hio-chester-x14-r1.0                          301
+/cs/download/ibom/hio-chester-x2-r3.0.html                   /download/ibom/hio-chester-x2-r3.0                           301
+/cs/download/ibom/hio-chester-x3-r3.2.html                   /download/ibom/hio-chester-x3-r3.2                           301
+/cs/download/ibom/hio-chester-x4-r3.1.html                   /download/ibom/hio-chester-x4-r3.1                           301
+/cs/download/ibom/hio-chester-x5-r2.1.html                   /download/ibom/hio-chester-x5-r2.1                           301
+/cs/download/ibom/hio-chester-x6-r1.0.html                   /download/ibom/hio-chester-x6-r1.0                           301
+/cs/download/ibom/hio-chester-x7-r2.1.html                   /download/ibom/hio-chester-x7-r2.1                           301
+/cs/download/ibom/hio-chester-x8-r1.0.html                   /download/ibom/hio-chester-x8-r1.0                           301
+/cs/download/ibom/hio-chester-x9-r1.0.html                   /download/ibom/hio-chester-x9-r1.0                           301
+
+
 # --- Dynamic rules (splats) — MUST stay after all static rules: wrangler counts
 # --- every rule after the first splat toward the 100-dynamic-rule limit and
 # --- fails the deploy beyond it; static rules also only win when listed first.
@@ -379,3 +655,15 @@
 /chester/platform-management/*                       /chester/platform-connectivity/:splat                          301
 /cloud/cloud-v2/*                                    /cloud/:splat                                                  301
 /apps/ubidots/*                                      /apps/                                                        301
+
+# Old sections whose children all moved (statics above map each live child; anything
+# else lands on the section index, never on a 404)
+/milesight/*                                                 /smart-devices/milesight/                                    301
+/rakwireless/*                                               /smart-devices/rakwireless/                                  301
+/sticker/lorawan-network-server/*                            /sticker/connectivity/                                       301
+/fiber-lite/*                                                /fiber/fiber-lite/introduction/                              301
+# /cs/ copies of static files in folders that hold nothing else (see the note above)
+/cs/download/*                                               /download/:splat                                             301
+/cs/chester/extension-modules/schematics/*                   /chester/extension-modules/schematics/:splat                 301
+/cs/sticker/hardware-diagrams/*                              /sticker/hardware-diagrams/:splat                            301
+/cs/tapper/media/*                                           /tapper/media/:splat                                         301

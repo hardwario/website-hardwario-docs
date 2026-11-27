@@ -61,8 +61,8 @@ Je-li zařízení CHESTER v krabičce, můžete po vyjmutí baterie přes malé 
 
 | Název modulu                      | Popis modulu                                                                                                                                                |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**CHESTER-X0A**](chester-x0.md)  | Až 4 digitální a analogové vstupy a výstupy, kanály proudové smyčky 4-20 mA, napěťové vstupy 0–26 V, bezpotenciálový kontakt, vstup NPN nebo PNP, se zvyšujícím měničem 5 V. |
-| [**CHESTER-X0B**](chester-x0.md)  | Až 4 digitální a analogové vstupy a výstupy, kanály proudové smyčky 4-20 mA, napěťové vstupy 0–26 V, bezpotenciálový kontakt, vstup NPN nebo PNP, bez zvyšujícího měniče 5 V.   |
+| [**CHESTER-X0A**](chester-x0.md)  | 4 kanály, každý lze nastavit jako digitální nebo analogový vstup či výstup, proudovou smyčku 4–20 mA, napěťový vstup 0–26 V, bezpotenciálový kontakt nebo vstup NPN/PNP; se zvyšujícím měničem 5 V. |
+| [**CHESTER-X0B**](chester-x0.md)  | 4 kanály, každý lze nastavit jako digitální nebo analogový vstup či výstup, proudovou smyčku 4–20 mA, napěťový vstup 0–26 V, bezpotenciálový kontakt nebo vstup NPN/PNP; bez zvyšujícího měniče 5 V.   |
 | [**CHESTER-X1**](chester-x1.md)   | Až osm kanálů 1-Wire (např. pro digitální teplotní senzory Dallas DS18B20)                                                                                 |
 | [**CHESTER-X2**](chester-x2.md)   | Rozhraní TTL/UART i RS-485 (např. pro komunikaci Modbus)                                                                                               |
 | [**CHESTER-X3A**](chester-x3.md)  | Až 2 senzory RTD (odporové teplotní senzory), například Pt 100 a Pt 1000                                                                                   |
@@ -104,6 +104,7 @@ Tyto nosné desky vyžadují větší krabičku.
 | CHESTER-B1                      | Držáky pro až 6 baterií velikosti D nebo 8 baterií velikosti C + LED mimo základní desku                                                                                     |
 | CHESTER-B1-W                    | Držáky pro až 6 baterií velikosti D nebo 8 baterií velikosti C + LED mimo základní desku + bezdrátový M-Bus (wM-Bus)                                                           |
 | [**CHESTER-C1**](chester-c1.md) | Deska rozhraní s DC/DC měničem, 2 výkonovými relé, svorkami 1-Wire, 4 digitálními/analogovými vstupy a rozhraním RS-485 + držák pro 4 baterie velikosti C          |
+| [**CHESTER-C4**](../hardware-description/chester-u1-module.md#chester-c4-carrier-board) | Nosná deska pro modul CHESTER-U1 se sloty pro dva zadní rozšiřující moduly a několika variantami bateriového nebo externího napájení |
 | [**CHESTER-C5**](chester-c5.md) | Zakázková nosná deska pro modul CHESTER-U1 s až 16 kanály 1-Wire, záložním napájením z baterie Li-Ion, DC/DC měničem a nabíječkou, vstupem z linky 6-28 VDC nebo 12 V solárního panelu a podporou QWIIC OLED |
 
 :::caution

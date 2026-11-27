@@ -61,8 +61,8 @@ When CHESTER is mounted in the enclosure, you can check the module **"X_"** numb
 
 | Module name                       | Module description                                                                                                                                                |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**CHESTER-X0A**](chester-x0.md)  | Up to 4 digital and analog inputs and outputs, 4-20 mA current loop channels, 0–26 V voltage inputs, dry contact, NPN or PNP input, including 5 V boost converter. |
-| [**CHESTER-X0B**](chester-x0.md)  | Up to 4 digital and analog inputs and outputs, 4-20 mA current loop channels, 0–26 V voltage inputs, dry contact, NPN or PNP input, without 5 V boost converter.   |
+| [**CHESTER-X0A**](chester-x0.md)  | 4 channels, each configurable as a digital or analog input or output, 4–20 mA current loop, 0–26 V voltage input, dry contact, or NPN/PNP input; including 5 V boost converter. |
+| [**CHESTER-X0B**](chester-x0.md)  | 4 channels, each configurable as a digital or analog input or output, 4–20 mA current loop, 0–26 V voltage input, dry contact, or NPN/PNP input; without 5 V boost converter.   |
 | [**CHESTER-X1**](chester-x1.md)   | Up to eight 1-Wire channels (e.g. for Dallas DS18B20 digital temperature sensors)                                                                                 |
 | [**CHESTER-X2**](chester-x2.md)   | Both TTL/UART and RS-485 interface (e.g., for Modbus communication)                                                                                               |
 | [**CHESTER-X3A**](chester-x3.md)  | Up to 2 RTD (resistive temperature devices) sensors, such as Pt 100 and Pt 1000                                                                                   |
@@ -104,6 +104,7 @@ These carrier boards require a larger enclosure.
 | CHESTER-B1                      | Battery holders for up to either 6x D-cell or 8x C-cell sized batteries + off-mainboard LED                                                                                     |
 | CHESTER-B1-W                    | Battery holders for up to either 6x D-cell or 8x C-cell sized batteries + off-mainboard LED + wireless M-Bus (wM-Bus)                                                           |
 | [**CHESTER-C1**](chester-c1.md) | Interface board with DC/DC converter, 2x power relay, 1-Wire terminals, 4x digital/analog inputs, and RS-485 interfaces + battery holder for 4x C-cell sized batteries          |
+| [**CHESTER-C4**](../hardware-description/chester-u1-module.md#chester-c4-carrier-board) | Carrier board for the CHESTER-U1 with slots for two backside extension modules and several battery or external power options |
 | [**CHESTER-C5**](chester-c5.md) | Custom carrier board for the CHESTER-U1 with up to 16-ch 1-Wire, Li-Ion battery backup, DC/DC converter and charger, 6-28 VDC line or 12 V solar panel input, QWIIC OLED support |
 
 :::caution

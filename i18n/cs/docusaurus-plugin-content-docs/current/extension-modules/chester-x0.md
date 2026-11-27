@@ -38,8 +38,8 @@ Tento článek popisuje rozšiřující modul CHESTER-X0 se čtyřmi vstupně-v�
 
 Každý ze čtyř kanálů lze nastavit na jednu z těchto funkcí (kanál má vždy jen jednu):
 
-* Digitální vstup nebo výstup
-* Analogový vstup nebo výstup
+* Digitální vstup nebo výstup\*\*
+* Analogový vstup nebo výstup\*\*
 * Napěťový vstup 0–26 V\*
 * Proudová smyčka 4–20 mA
 * Vstup pro bezpotenciálový kontakt
@@ -50,10 +50,13 @@ Každý ze čtyř kanálů lze nastavit na jednu z těchto funkcí (kanál má v
 
 _\* Základní deska CHESTER-M má na pinech svorkovnic Ax a Bx ochranné diody TVS, které začínají chránit GPIO nad 28 V. Teoreticky lze měřit i napětí vyšší než 26 V, ochrana ale měření zkresluje; jinak je nutné si diody TVS vyžádat neosazené, nebo je odstranit._
 
+_\*\* Výstup jen na úrovni signálu: pin procesoru budí kanál přes sériový rezistor 100 kΩ, takže výstup stačí jen pro vysokoimpedanční vstupy (nejvýš desítky µA). Relé, LED ani jinou zátěž nesepne; k tomu použijte napájecí výstup nebo výstupní modul [**CHESTER-X9**](chester-x9.md). Analogový výstup vzniká pomocí PWM (procesor nemá DAC) a vyhlazuje ho RC filtr na modulu (100 kΩ / 1 nF). SDK nemá samostatný výstupní režim; pin ovládá vaše aplikace v režimu `CTR_X0_MODE_DEFAULT` (viz `ctr_x0_get_spec`)._
+
 ## Elektrická specifikace {#electrical-specification}
 
-* Trvalý výstupní proud: 50 mA
-* Omezení špičkového výstupního proudu: 150 mA
+* Napájecí výstup (ONx), trvalý proud: 50 mA
+* Napájecí výstup (ONx), omezení špičkového proudu: 150 mA
+* Digitální a analogový výstup: jen úroveň signálu, sériový rezistor 100 kΩ
 
 ## Schéma zapojení kanálu {#channel-schematic-diagram}
 
@@ -83,9 +86,9 @@ Tabulka ale slouží jen k pochopení režimů. Stačí znát režim uvedený ve
 | Vstup PNP            |     |     | ✅   |     | `CTR_X0_MODE_PNP_INPUT`  |
 | Proudová smyčka 4–20 mA |     | ✅   | ✅   |     | `CTR_X0_MODE_CL_INPUT`   |
 | Zdroj napájení       |     |     |     | ✅   | `CTR_X0_MODE_PWR_SOURCE` |
-| Analogový výstup 0-VDD |     |     |     |     | `CTR_X0_MODE_DEFAULT`    |
+| Analogový výstup 0–VDD (PWM, úroveň signálu) |     |     |     |     | `CTR_X0_MODE_DEFAULT`    |
 | Digitální vstup      |     |     |     |     | `CTR_X0_MODE_DEFAULT`    |
-| Digitální výstup     |     |     |     |     | `CTR_X0_MODE_DEFAULT`    |
+| Digitální výstup (úroveň signálu) |     |     |     |     | `CTR_X0_MODE_DEFAULT`    |
 
 ## Schéma zapojení pinů zařízení CHESTER {#chester-pin-configuration-diagram}
 

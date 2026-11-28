@@ -297,18 +297,35 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   border-radius: 12px;
 }
 
-/* WCAG AA contrast (Lighthouse 2026-09-05): the brand red fails on the dark footer
-   (2.4:1 on the old #303846; the footer is Ink now) and on the active breadcrumb chip (4.3:1 on #f2f2f2), so the
-   footer's cross-site links use the footer link colour and the current-page
-   breadcrumb uses the base text colour. Hover keeps the brand red. */
+/* WCAG AA contrast (Lighthouse 2026-09-05): the current-page breadcrumb uses the base text colour
+   (the brand red is 4.3:1 on the active chip). */
 :root {
   --ifm-breadcrumb-color-active: var(--ifm-font-color-base);
 }
-.footer--dark .footer__copyright a {
-  color: var(--ifm-footer-link-color);
+/* Closing bar (owner, 2026-11-28, as the HWioFooter bar on the other HARDWARIO sites): the cross-site
+   links and the copyright on Navy along the bottom edge, full width; the site names in White (11.6:1),
+   the label and the copyright at 80 % (7.9:1). The logo stays above it on the footer ground: the
+   Reversed logo's Red does not read on Navy. Hover underlines instead of turning red. */
+.footer {
+  padding-bottom: 0;
+}
+.footer__copyright {
+  margin-top: 1.5rem;
+  padding: 1.25rem 0;
+  background: #06367a;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  box-shadow: 0 0 0 100vmax #06367a;
+  clip-path: inset(0 -100vmax);
+}
+.footer--dark .footer__copyright a,
+.footer--dark .footer__copyright a:hover {
+  color: #ffffff;
+  font-weight: 600;
 }
 .footer--dark .footer__copyright a:hover {
-  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* Back-to-top sits above the chat robot instead of under it. Both hug the

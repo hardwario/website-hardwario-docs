@@ -457,10 +457,10 @@ const config = {
       },
       footer: {
         style: 'dark',
-        // The Reversed HARDWARIO logo (Red and White), the version the Brand Guidelines give for
-        // Ink (HBG.261028.01, chapter 02); the same master file as the design-system footer.
+        // The Reversed HARDWARIO Docs lockup (Red and White), the version the Brand Guidelines give for
+        // dark grounds (HBG.261028.01, chapter 02); each site shows its own lockup (owner, 2026-11-28).
         // Without href the logo links to the locale's home page.
-        logo: { alt: 'HARDWARIO', src: 'img/hardwario-logo-reversed.svg', width: 183, height: 40 },
+        logo: { alt: 'HARDWARIO Docs', src: 'img/hardwario-docs-logo-reversed.svg', width: 255, height: 40 },
         links: [
           {
             title: 'Branches',

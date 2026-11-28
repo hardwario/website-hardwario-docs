@@ -1,4 +1,13 @@
 {
+  "static/img/hardwario-docs-logo-reversed.svg": {
+    "artwork": "hardwario-docs-logo",
+    "file": "hardwario-docs-logo-reversed.svg",
+    "sha256": "c842ef253061bbbbf1b5034d172314b5b6c7aebff591bb5fe7c59ef3f0bbce32",
+    "commit": "2dc04f6",
+    "params": {
+      "format": "svg"
+    }
+  },
   "static/img/hw-manager/cs/hw-manager-1w-sensors.png": {
     "artwork": "hardwario-manager-sticker-1-wire-slots-cs",
     "file": "hardwario-manager-sticker-1-wire-slots-cs.png",

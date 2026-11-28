@@ -457,6 +457,10 @@ const config = {
       },
       footer: {
         style: 'dark',
+        // The Reversed HARDWARIO logo (Red and White), the version the Brand Guidelines give for
+        // Ink (HBG.261028.01, chapter 02); the same master file as the design-system footer.
+        // Without href the logo links to the locale's home page.
+        logo: { alt: 'HARDWARIO', src: 'img/hardwario-logo-reversed.svg', width: 183, height: 40 },
         links: [
           {
             title: 'Branches',
